@@ -238,18 +238,13 @@ document.getElementById('apply-form').addEventListener('submit', function(e) {
 
   fetch(CONTRIB_APPLY_URL, {
     method: 'POST',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify({ name: name, role: role, region: region, area: area, message: message })
   })
-  .then(function(r) { return r.json(); })
-  .then(function(data) {
-    if (data.ok) {
-      document.getElementById('apply-form').style.display = 'none';
-      document.getElementById('ap-success').style.display = 'block';
-    } else {
-      btn.disabled = false;
-      btn.textContent = 'Submit Application →';
-    }
+  .then(function() {
+    document.getElementById('apply-form').style.display = 'none';
+    document.getElementById('ap-success').style.display = 'block';
   })
   .catch(function() {
     btn.disabled = false;
