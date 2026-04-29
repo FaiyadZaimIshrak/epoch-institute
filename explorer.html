@@ -998,7 +998,8 @@ document.getElementById("info-share-li").addEventListener("click", () => {
   window.open("https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fthe-epoch-institute.org", "_blank");
 });
 
-document.getElementById("export-btn").addEventListener("click", () => {
+const exportBtnEl = document.getElementById("export-btn");
+if (exportBtnEl) exportBtnEl.addEventListener("click", () => {
   const svgEl = document.querySelector("#chart svg");
   if (!svgEl) return;
   const serializer = new XMLSerializer();
