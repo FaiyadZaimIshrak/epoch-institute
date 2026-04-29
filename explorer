@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Empire Explorer — The Epoch Institute</title>
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
@@ -522,12 +522,11 @@ function showTooltip(event, d) {
   const pts = getPointsInRange(d);
   const mouseX = xScale.invert(d3.pointer(event, g.node())[0]);
   const closest = pts.reduce((a,b) => Math.abs(b[0]-mouseX) < Math.abs(a[0]-mouseX) ? b : a);
-  const T = TRANSLATIONS[currentLang];
   tooltip.innerHTML = `
     <div class="tip-empire">${d.name}</div>
     <div class="tip-region">${d.region}</div>
-    <div class="tip-row"><span>${T.tip_year}</span><span class="tip-val">${formatYear(closest[0])}</span></div>
-    <div class="tip-row"><span>${T.tip_power}</span><span class="tip-val">${closest[1].toFixed(1)}</span></div>
+    <div class="tip-row"><span>Year</span><span class="tip-val">${formatYear(closest[0])}</span></div>
+    <div class="tip-row"><span>Power Score</span><span class="tip-val">${closest[1].toFixed(1)}</span></div>
   `;
   tooltip.classList.add("visible");
   const tx = Math.min(mx + 14, window.innerWidth - 240);
@@ -692,10 +691,10 @@ function render() {
   svg.selectAll(".axis-label-y").remove();
   svg.append("text").attr("class","axis-label axis-label-x")
     .attr("x", margin.left + innerW/2).attr("y", H - 4)
-    .attr("text-anchor","middle").text(TRANSLATIONS[currentLang].axis_year);
+    .attr("text-anchor","middle").text("YEAR");
   svg.append("text").attr("class","axis-label axis-label-y")
     .attr("transform",`translate(10,${margin.top + innerH/2}) rotate(-90)`)
-    .attr("text-anchor","middle").text(TRANSLATIONS[currentLang].axis_power);
+    .attr("text-anchor","middle").text("POWER SCORE (0–10)");
 
   eraBandsG.selectAll("*").remove();
   const [ed0, ed1] = getEffectiveDomain();
@@ -998,31 +997,6 @@ document.getElementById("info-share-li").addEventListener("click", () => {
   window.open("https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fthe-epoch-institute.org", "_blank");
 });
 
-const exportBtnEl = document.getElementById("export-btn");
-if (exportBtnEl) exportBtnEl.addEventListener("click", () => {
-  const svgEl = document.querySelector("#chart svg");
-  if (!svgEl) return;
-  const serializer = new XMLSerializer();
-  let svgStr = serializer.serializeToString(svgEl);
-  svgStr = svgStr.replace("<svg", `<svg style="background:${getComputedStyle(document.documentElement).getPropertyValue("--bg").trim()}"`);
-  const blob = new Blob([svgStr], {type:"image/svg+xml"});
-  const url = URL.createObjectURL(blob);
-  const img = new Image();
-  img.onload = () => {
-    const canvas = document.createElement("canvas");
-    canvas.width = svgEl.clientWidth * 2;
-    canvas.height = svgEl.clientHeight * 2;
-    const ctx = canvas.getContext("2d");
-    ctx.scale(2,2);
-    ctx.drawImage(img, 0, 0);
-    URL.revokeObjectURL(url);
-    const a = document.createElement("a");
-    a.download = "epoch-institute-chart.png";
-    a.href = canvas.toDataURL("image/png");
-    a.click();
-  };
-  img.src = url;
-});
 
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") {

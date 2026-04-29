@@ -347,17 +347,6 @@
   }
   .nav-toggle-btn:hover { border-color: var(--gold); color: var(--gold); }
 
-  /* ── Bangla mode font ── */
-  body.bangla-mode,
-  body.bangla-mode .hero-tagline,
-  body.bangla-mode .hero-mission,
-  body.bangla-mode .explorer-description,
-  body.bangla-mode .guide-body,
-  body.bangla-mode .footer-link,
-  body.bangla-mode .footer-brand-tag {
-    font-family: 'Hind Siliguri', sans-serif;
-  }
-
   /* ── Zoom-out button ── */
   .zoom-reset-btn {
     position: absolute;
@@ -708,29 +697,6 @@
     transition: color 0.2s;
   }
   .nav-link:hover { color: var(--gold); }
-  .nav-discord-btn {
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    color: var(--gold);
-    text-decoration: none;
-    border: 0.5px solid rgba(201,168,76,0.5);
-    padding: 5px 12px;
-    border-radius: 4px;
-    transition: background 0.2s;
-    white-space: nowrap;
-  }
-  .nav-discord-btn:hover { background: rgba(201,168,76,0.10); }
-  /* In dropdown, override padding/border so it looks consistent */
-  .nav-dropdown-link.nav-discord-btn {
-    color: var(--gold);
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-radius: 0;
-    padding: 16px 24px;
-  }
-
   /* ── Hero section ── */
   .hero {
     min-height: 100vh;
@@ -1554,6 +1520,75 @@
   }
   .opinion-item { animation: cardFadeIn 0.35s cubic-bezier(0.22,1,0.36,1) both; }
   .blog-card    { animation: cardFadeIn 0.35s cubic-bezier(0.22,1,0.36,1) both; }
+
+  /* ── Page transitions ── */
+  @keyframes pageFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  body.page-entering {
+    animation: pageFadeIn 0.38s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  body.page-leaving {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    pointer-events: none;
+  }
+
+  /* ── Discord CTA section ── */
+  .discord-cta-section {
+    margin: 48px 40px 0;
+    padding: 40px 48px;
+    border: 0.5px solid rgba(201,168,76,0.4);
+    background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+  }
+  .discord-cta-left { flex: 1; min-width: 200px; }
+  .discord-cta-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 10px;
+  }
+  .discord-cta-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    letter-spacing: 0.06em;
+    color: var(--gold-light);
+    margin: 0 0 10px;
+  }
+  .discord-cta-desc {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .discord-cta-btn {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--gold);
+    border: none;
+    padding: 14px 32px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .discord-cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
 
   /* ── Mobile ── */
   @media (max-width: 768px) {

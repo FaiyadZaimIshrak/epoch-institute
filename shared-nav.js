@@ -30,20 +30,6 @@ function isValidEmail(v) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
 }
 
-// ── Language ──────────────────────────────────────────────────────────────────
-function applyLang(lang) {
-  currentLang = lang;
-  const T = TRANSLATIONS[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.dataset.i18n;
-    if (!T || T[key] === undefined) return;
-    if (el.tagName === 'INPUT') el.placeholder = T[key];
-    else el.textContent = T[key];
-  });
-  document.body.classList.toggle('bangla-mode', lang === 'bn');
-  localStorage.setItem('epoch-lang', lang);
-}
-
 // ── initNav(activePage) ───────────────────────────────────────────────────────
 function initNav(activePage) {
 
@@ -63,12 +49,9 @@ function initNav(activePage) {
     <a href="/contributors.html" class="nav-link"${activeStyle('contributors')} id="nav-contributors-link">Contributors</a>
     <a href="/dataset.html" class="nav-link"${activeStyle('dataset')} id="nav-dataset-link">Dataset</a>
     <a href="/community.html" class="nav-link"${activeStyle('community')} id="nav-community-link" data-i18n="nav_community">Community</a>
-    <a href="/explorer.html" class="nav-link"${activeStyle('explorer')} id="nav-explorer-link" data-i18n="nav_explorer">Explorer</a>
-    <a href="https://discord.gg/DmjwDbkW" class="nav-discord-btn" target="_blank" rel="noopener">Community →</a>
+    <a href="/explorer.html" class="nav-link"${activeStyle('explorer')} id="nav-explorer-link">Explorer</a>
   </div>
   <div class="nav-toggles">
-    <button class="nav-toggle-btn" id="export-btn" title="Export PNG" data-i18n="export_btn"${activePage !== 'explorer' ? ' style="display:none"' : ''}>&#x2193; PNG</button>
-    <button class="nav-toggle-btn" id="lang-toggle" title="Language">বাং</button>
     <button class="nav-toggle-btn" id="theme-toggle" title="Toggle theme">&#x2600;</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">&#x2630;</button>
   </div>
@@ -80,7 +63,6 @@ function initNav(activePage) {
     <a href="/dataset.html" class="nav-dropdown-link" id="mob-dataset">Dataset</a>
     <a href="/community.html" class="nav-dropdown-link" id="mob-community">Community</a>
     <a href="/explorer.html" class="nav-dropdown-link" id="mob-explorer">Explorer</a>
-    <a href="https://discord.gg/DmjwDbkW" class="nav-dropdown-link nav-discord-btn" target="_blank" rel="noopener">Community →</a>
   </div>
 </nav>`;
 
@@ -164,12 +146,20 @@ function initNav(activePage) {
     localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark');
   });
 
-  // ── Language toggle ─────────────────────────────────────────────────────────
-  const savedLang = localStorage.getItem('epoch-lang');
-  if (savedLang && savedLang !== 'en') applyLang(savedLang);
-  document.getElementById('lang-toggle').addEventListener('click', () => {
-    applyLang(currentLang === 'en' ? 'bn' : 'en');
-    document.getElementById('lang-toggle').textContent = currentLang === 'bn' ? 'EN' : 'বাং';
+  // ── Page transitions ────────────────────────────────────────────────────────
+  document.body.classList.add('page-entering');
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href]');
+    if (!a || a.target === '_blank') return;
+    try {
+      const dest = new URL(a.href, location.href);
+      if (dest.origin !== location.origin) return;
+      if (dest.pathname === location.pathname && dest.hash) return;
+      e.preventDefault();
+      const href = a.href;
+      document.body.classList.add('page-leaving');
+      setTimeout(() => { window.location.href = href; }, 180);
+    } catch(e) {}
   });
 
   // ── Hamburger ───────────────────────────────────────────────────────────────

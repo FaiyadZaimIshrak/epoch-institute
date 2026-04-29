@@ -3649,39 +3649,10 @@ const TRANSLATIONS = {
     footer_hint:"Hover over a line to inspect · Click to isolate · Use region tabs or era selector to filter",
     footer_copy:"© 2025 The Epoch Institute", brand_tag:"Historical & Societal Research",
     zoom_out:"← Zoom Out",
-    events:"Events", export_btn:"↓ PNG"
-  },
-  bn: {
-    nav_research:"গবেষণা", nav_community:"সম্প্রদায়", nav_explorer:"অন্বেষণ",
-    hero_tagline:"সভ্যতার নিদর্শন বিশ্লেষণ করে বর্তমানকে আলোকিত করা।",
-    hero_mission:"দ্য এপক ইনস্টিটিউট নিরপেক্ষতা ও কৌতূহলের সাথে মানব সভ্যতা গবেষণা করে — সাম্রাজ্যের উত্থান ও পতন অধ্যয়ন করে, ঐতিহাসিক ঘটনার বাস্তব প্রভাব পরীক্ষা করে এবং অতীত কীভাবে আধুনিক সমাজকে রূপ দেয় তা অনুসন্ধান করে। ইতিহাস একটি বন্ধ বই নয়; এটি আমাদের চারপাশের সবকিছুর ভিত্তি।",
-    hero_cta:"প্রকল্পগুলো দেখুন →",
-    exp_label:"ইন্টারেক্টিভ অন্বেষণকারী", exp_title:"সাম্রাজ্যের উত্থান ও পতন",
-    exp_desc:"নব্বইটি সভ্যতা। পাঁচ সহস্রাব্দ। প্রতিটি পথ তার নিজস্ব শীর্ষ অনুযায়ী স্কেল করা — যাতে আপনি পরম আকার নয়, একটি সভ্যতার গল্পের আকৃতি তুলনা করতে পারেন।",
-    tab_all:"সব অঞ্চল", tab_ane:"প্রাচীন মধ্যপ্রাচ্য", tab_ena:"মিশর ও উ. আফ্রিকা",
-    tab_ssa:"সাহারা-দক্ষিণ আফ্রিকা", tab_eur:"ইউরোপ", tab_isl:"ইসলামি ও মধ্যপ্রাচ্য",
-    tab_cea:"মধ্য ও পূর্ব এশিয়া", tab_sea:"দক্ষিণ ও দক্ষিণ-পূর্ব এশিয়া", tab_ame:"আমেরিকাস",
-    era_placeholder:"— যুগ বেছে নিন —", era_all:"সম্পূর্ণ সময়রেখা",
-    era_ancient:"প্রাচীন (২৭০০–৫০০ খ্রিপূ)", era_classical:"ধ্রুপদী (৫০০ খ্রিপূ–৫০০ খ্রি)",
-    era_medieval:"মধ্যযুগীয় (৫০০–১৪০০ খ্রি)", era_earlymodern:"প্রারম্ভিক আধুনিক (১৪০০–১৮০০)",
-    era_modern:"আধুনিক (১৮০০–১৯৮০)",
-    labels:"লেবেল", search_placeholder:"সাম্রাজ্য খুঁজুন…",
-    tip_year:"বছর", tip_power:"ক্ষমতা স্কোর",
-    axis_year:"বছর", axis_power:"ক্ষমতা স্কোর (০–১০)",
-    guide_title:"অন্বেষণ শুরু করুন",
-    guide_body:"সময়ের সাথে সভ্যতার গতিপথ দেখতে উপরে একটি অঞ্চল এবং একটি যুগ বেছে নিন।",
-    guide_step1:"① অঞ্চল বেছে নিন", guide_step2:"② যুগ বেছে নিন", guide_step3:"③ অন্বেষণ করুন",
-    footer_research:"গবেষণা", footer_community:"সম্প্রদায়", footer_about:"পরিচিতি",
-    footer_explorer_link:"সাম্রাজ্য অন্বেষণকারী", footer_methodology:"পদ্ধতি", footer_sources:"তথ্যসূত্র",
-    footer_join:"ইনস্টিটিউটে যোগ দিন", footer_newsletter:"নিউজলেটার", footer_discussion:"আলোচনা",
-    footer_mission:"আমাদের লক্ষ্য", footer_contact:"যোগাযোগ",
-    footer_hint:"পরিদর্শন করতে লাইনের উপর হোভার করুন · বিচ্ছিন্ন করতে ক্লিক করুন",
-    footer_copy:"© ২০২৫ দ্য ইপক ইনস্টিটিউট", brand_tag:"ঐতিহাসিক ও সামাজিক গবেষণা",
-    zoom_out:"← জুম আউট",
-    events:"ঘটনা", export_btn:"↓ PNG"
+    events:"Events"
   }
 };
-let currentLang = "en";
+const currentLang = "en";
 
 // Assign colors
 let regionColorIdx = {};

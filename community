@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Community — The Epoch Institute</title>
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 /* ── Section management ── */
 .comm-section { display: none; min-height: 100vh; }
@@ -134,6 +134,7 @@
 
 /* ── Drop zone ── */
 .drop-zone {
+  position: relative;
   border: 1px dashed var(--border); border-radius: 6px;
   padding: 32px 24px; text-align: center; cursor: pointer;
   transition: border-color 0.2s, background 0.2s; margin-bottom: 16px;
@@ -209,6 +210,16 @@
     <p class="explorer-label">COMMUNITY</p>
     <h2 class="explorer-title">The Epoch Community</h2>
     <p class="explorer-description">A space for readers, researchers, and thinkers to read, write, and reflect on history and its implications.</p>
+  </div>
+
+  <!-- Discord CTA -->
+  <div class="discord-cta-section">
+    <div class="discord-cta-left">
+      <p class="discord-cta-label">◆ Join the Conversation</p>
+      <h3 class="discord-cta-title">Discuss History on Discord</h3>
+      <p class="discord-cta-desc">Connect with historians, researchers, and curious minds. Share insights, debate ideas, and explore civilisational history together.</p>
+    </div>
+    <a href="https://discord.gg/DmjwDbkW" class="discord-cta-btn" target="_blank" rel="noopener">Join on Discord →</a>
   </div>
 
   <!-- Newsletter -->
