@@ -238,7 +238,7 @@ document.getElementById('apply-form').addEventListener('submit', function(e) {
 
   fetch(CONTRIB_APPLY_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify({ name: name, role: role, region: region, area: area, message: message })
   })
   .then(function(r) { return r.json(); })
