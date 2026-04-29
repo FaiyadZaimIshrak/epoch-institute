@@ -133,8 +133,8 @@
         <textarea class="form-input form-textarea" id="ap-message" placeholder="Tell us a little about yourself and your interest…"></textarea>
       </div>
       <button type="submit" class="form-submit" id="ap-submit">Submit Application →</button>
-      <p class="form-success" id="ap-success" style="display:none;">Thank you — your application has been received. We'll be in touch shortly.</p>
     </form>
+    <p class="form-success" id="ap-success" style="display:none;">Thank you — your application has been received. We'll be in touch shortly.</p>
   </div>
 </div>
 
@@ -143,9 +143,11 @@
 <script>
 // ── Contributors loader ───────────────────────────────────────────────────────
 (function() {
-  var loading = document.getElementById('contributors-loading');
-  var grid    = document.getElementById('contributors-grid');
-  var empty   = document.getElementById('contributors-empty');
+  var loading   = document.getElementById('contributors-loading');
+  var grid      = document.getElementById('contributors-grid');
+  var empty     = document.getElementById('contributors-empty');
+  var CACHE_KEY = 'epoch_contributors';
+  var CACHE_TTL = 24 * 60 * 60 * 1000;
 
   function initials(name) {
     return (name || '?').split(' ').slice(0, 2).map(function(w) { return w[0]; }).join('');
@@ -159,36 +161,44 @@
       var avatarHtml = c.photoUrl
         ? '<img src="' + escHtml(c.photoUrl) + '" alt="' + escHtml(c.name || '') + '" onerror="this.style.display=\'none\'">'
         : escHtml(initials(c.name));
+      var regionLine = (c.flag || c.region)
+        ? '<p class="contributor-role" style="opacity:0.6;margin-top:2px;">' + escHtml((c.flag ? c.flag + ' ' : '') + (c.region || '')) + '</p>'
+        : '';
       return '<div class="contributor-card" style="transition-delay:' + (i * 0.05) + 's">' +
         '<div class="contributor-avatar">' + avatarHtml + '</div>' +
         '<p class="contributor-name">' + escHtml(c.name || 'Anonymous') + '</p>' +
         '<p class="contributor-role">' + escHtml(c.role || c.profession || 'Contributor') + '</p>' +
-        (c.bio ? '<p class="contributor-bio">' + escHtml(c.bio) + '</p>' : '') +
+        regionLine +
+        (c.area ? '<p class="contributor-bio">' + escHtml(c.area) + '</p>' : '') +
       '</div>';
     }).join('');
 
-    // Animate cards into view using IntersectionObserver
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.1 });
-
-    grid.querySelectorAll('.contributor-card').forEach(function(card) {
-      observer.observe(card);
-    });
+    grid.querySelectorAll('.contributor-card').forEach(function(card) { observer.observe(card); });
   }
 
-  if (typeof CONTRIB_URL === 'undefined' || !CONTRIB_URL || CONTRIB_URL.includes('PASTE')) {
+  if (typeof CONTRIB_URL === 'undefined' || !CONTRIB_URL) {
     loading.style.display = 'none';
     empty.style.display = 'block';
     return;
   }
 
-  jsonp(CONTRIB_URL + '?action=contributors', renderContributors);
+  try {
+    var cached = localStorage.getItem(CACHE_KEY);
+    if (cached) {
+      var obj = JSON.parse(cached);
+      if (Date.now() - obj.ts < CACHE_TTL) { renderContributors(obj.data); return; }
+    }
+  } catch(e) {}
+
+  jsonp(CONTRIB_URL + '?action=contributors', function(list) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: list })); } catch(e) {}
+    renderContributors(list);
+  });
 })();
 
 initNav('contributors');
