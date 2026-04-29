@@ -6,3 +6,4 @@ deployment:
     - /bin/cp index about research research-series profiles community contributors dataset explorer $DEPLOYPATH
     - /bin/cp -R empire $DEPLOYPATH
     - /bin/cp -R logos $DEPLOYPATH
+    - /bin/rm -f ${DEPLOYPATH}index.html ${DEPLOYPATH}about.html ${DEPLOYPATH}research.html ${DEPLOYPATH}research-series.html ${DEPLOYPATH}profiles.html ${DEPLOYPATH}community.html ${DEPLOYPATH}contributors.html ${DEPLOYPATH}dataset.html ${DEPLOYPATH}explorer.html
