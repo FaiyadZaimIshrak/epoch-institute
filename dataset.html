@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Dataset — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Download the Epoch Institute's empire trajectory dataset — 94 civilisations, five millennia of normalised power scores. Free to use under CC BY 4.0.">
+<meta property="og:title" content="Open Dataset — The Epoch Institute">
+<meta property="og:description" content="94 civilisations, five millennia of data. Free for academic and research use under Creative Commons Attribution 4.0.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/dataset.html">
+<link rel="canonical" href="https://the-epoch-institute.org/dataset.html">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<style>
+#dataset { min-height: 100vh; padding-top: 100px; }
+.dataset-description {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  color: var(--text); line-height: 1.75; max-width: 720px; margin: 0 0 36px;
+}
+.dataset-btn-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  justify-content: center; margin-bottom: 32px;
+}
+.dataset-cite-box {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 8px; padding: 16px; max-width: 640px; width: 100%;
+  text-align: left; margin-bottom: 16px;
+}
+.dataset-cite-label {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 8px;
+}
+.dataset-cite-text {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 14px;
+  color: var(--text); line-height: 1.6; margin: 0 0 12px;
+}
+.dataset-licence {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.dataset-licence-badge {
+  border: 0.5px solid var(--border); border-radius: 20px;
+  padding: 3px 10px; font-size: 11px; color: var(--muted);
+  text-decoration: none; transition: border-color 0.2s, color 0.2s;
+}
+.dataset-licence-badge:hover { border-color: var(--gold); color: var(--gold); }
+.dataset-licence-note {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 13px;
+  color: var(--muted); max-width: 480px; line-height: 1.5; margin: 0;
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<section id="dataset" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+  <span class="hero-ornament"></span>
+  <h2 class="research-title">Open Dataset</h2>
+  <p class="research-subtitle">Empire Trajectory Data — Freely Available for Research</p>
+  <p class="dataset-description">The Epoch Institute's empire trajectory dataset covers 94 civilisations across five millennia, from ancient Mesopotamia to the modern era. Each entry includes normalised power scores across six dimensions — territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach — plotted across each empire's full lifespan. The dataset is freely available for academic, educational, and research use under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+  <div class="dataset-btn-row">
+    <button class="hero-cta" id="dataset-csv-btn">Download CSV →</button>
+    <button class="hero-cta" id="dataset-json-btn">Download JSON →</button>
+  </div>
+  <div class="dataset-cite-box">
+    <span class="dataset-cite-label">How to cite this dataset</span>
+    <p class="dataset-cite-text">The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset.html</p>
+    <button class="detail-cite-btn" id="dataset-copy-cite-btn">Copy citation →</button>
+  </div>
+  <div class="dataset-licence">
+    <a class="dataset-licence-badge" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>
+    <p class="dataset-licence-note">You are free to share and adapt this data for any purpose, provided you give appropriate credit to The Epoch Institute.</p>
+  </div>
+</section>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+// ── Download helpers ──────────────────────────────────────────────────────────
+function _triggerDownload(content, filename, mimeType) {
+  var blob = new Blob([content], { type: mimeType });
+  var url  = URL.createObjectURL(blob);
+  var a    = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function() { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
+}
+
+function downloadEmpireCSV() {
+  var maxPts  = Math.max.apply(null, EMPIRES.map(function(e) { return e.points.length; }));
+  var headers = ['name', 'region', 'start_year', 'end_year', 'peak_year', 'duration'];
+  for (var i = 0; i < maxPts; i++) headers.push('t_' + i);
+
+  var rows = EMPIRES.map(function(emp) {
+    var pts      = emp.points;
+    var startYear = pts[0][0];
+    var endYear   = pts[pts.length - 1][0];
+    var peakPt    = pts.reduce(function(m, p) { return p[1] >= m[1] ? p : m; });
+    var duration  = Math.round(endYear - startYear);
+    var row = [
+      '"' + String(emp.name).replace(/"/g, '""') + '"',
+      '"' + String(emp.region).replace(/"/g, '""') + '"',
+      startYear, endYear, peakPt[0], duration
+    ];
+    for (var j = 0; j < maxPts; j++) row.push(pts[j] !== undefined ? pts[j][1] : '');
+    return row.join(',');
+  });
+
+  _triggerDownload([headers.join(',')].concat(rows).join('\n'),
+    'epoch-institute-empire-dataset.csv', 'text/csv');
+}
+
+function downloadEmpireJSON() {
+  var obj = {
+    source:        'The Epoch Institute',
+    url:           'https://the-epoch-institute.org',
+    licence:       'CC BY 4.0',
+    retrieved:     new Date().toISOString().split('T')[0],
+    total_empires: EMPIRES.length,
+    empires:       EMPIRES
+  };
+  _triggerDownload(JSON.stringify(obj, null, 2),
+    'epoch-institute-empire-dataset.json', 'application/json');
+}
+
+document.getElementById('dataset-csv-btn').addEventListener('click', downloadEmpireCSV);
+document.getElementById('dataset-json-btn').addEventListener('click', downloadEmpireJSON);
+
+document.getElementById('dataset-copy-cite-btn').addEventListener('click', function() {
+  var text = 'The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset.html';
+  var btn  = this;
+  navigator.clipboard.writeText(text).then(function() {
+    var orig = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    btn.style.color = 'var(--gold)';
+    setTimeout(function() { btn.textContent = orig; btn.style.color = ''; }, 1800);
+  });
+});
+
+initNav('dataset');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Series — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Thematic essay series from The Epoch Institute exploring the structural forces behind civilisational rise and collapse.">
+<meta property="og:title" content="Research Series — The Epoch Institute">
+<meta property="og:description" content="Thematic essays on administrative architecture, economic networks, military innovation, cultural diffusion, and civilisational collapse.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/research-series.html">
+<link rel="canonical" href="https://the-epoch-institute.org/research-series.html">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<style>
+#research-series { min-height: 100vh; padding-top: 100px; }
+.series-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px; padding: 0 40px 48px; max-width: 1200px; margin: 0 auto;
+}
+.series-card {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 6px; padding: 32px 28px; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.series-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.04); }
+.series-number {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7;
+}
+.series-title {
+  font-family: 'Cinzel', serif; font-size: clamp(14px, 1.8vw, 18px);
+  color: var(--gold-light); letter-spacing: 0.04em; margin: 0; line-height: 1.4;
+}
+.series-subtitle {
+  font-family: 'Crimson Pro', Georgia, serif; font-style: italic;
+  font-size: 14px; color: var(--muted); margin: 0;
+}
+.series-desc {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  color: var(--text); line-height: 1.7; margin: 0; opacity: 0.85;
+}
+.series-cta {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin-top: auto;
+  padding-top: 8px; border-top: 0.5px solid var(--border); transition: color 0.2s;
+}
+.series-card:hover .series-cta { color: var(--gold); }
+.series-status {
+  display: inline-block; font-family: 'Cinzel', serif; font-size: 8px;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px;
+  border: 0.5px solid var(--border); border-radius: 2px; color: var(--muted);
+}
+.series-status.available { border-color: rgba(201,168,76,0.4); color: var(--gold); opacity: 0.8; }
+
+/* ── Series detail view ── */
+#series-detail { display: none; min-height: 100vh; padding-top: 60px; }
+.series-detail-inner { max-width: 860px; margin: 0 auto; padding: 40px 40px 80px; }
+.series-detail-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 0.5px solid var(--border); }
+.series-detail-number {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin: 0 0 10px;
+}
+.series-detail-title {
+  font-family: 'Cinzel', serif; font-size: clamp(20px, 3vw, 32px);
+  color: var(--gold-light); letter-spacing: 0.05em; margin: 0 0 8px; line-height: 1.3;
+}
+.series-detail-subtitle {
+  font-family: 'Crimson Pro', Georgia, serif; font-style: italic;
+  font-size: 17px; color: var(--muted); margin: 0;
+}
+.series-detail-body {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 16px;
+  color: var(--text); line-height: 1.85;
+}
+.series-detail-body p { margin: 0 0 20px; }
+.series-detail-body p:last-child { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .series-grid { grid-template-columns: 1fr; padding: 0 16px 32px; }
+  .series-detail-inner { padding: 24px 16px 48px; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<!-- Gallery view -->
+<section id="research-series">
+  <span class="hero-ornament"></span>
+  <h2 class="research-title">Research Series</h2>
+  <p class="research-subtitle">Thematic essays examining the structural forces behind civilisational rise and collapse.</p>
+
+  <div class="series-grid">
+
+    <div class="series-card" onclick="openSeriesDetail('series-01')">
+      <div>
+        <span class="series-number">Series 01</span>
+        <span class="series-status available" style="margin-left:10px;">Available</span>
+      </div>
+      <h3 class="series-title">The Architecture of Power</h3>
+      <p class="series-subtitle">How Empires Build the Structures That Sustain Them</p>
+      <p class="series-desc">An examination of the administrative, legal, and infrastructural systems that allowed large-scale polities to persist — and why their absence almost always preceded collapse.</p>
+      <span class="series-cta">Read Series →</span>
+    </div>
+
+    <div class="series-card" onclick="openSeriesDetail('series-02')">
+      <div>
+        <span class="series-number">Series 02</span>
+        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+      </div>
+      <h3 class="series-title">Trade and Territory</h3>
+      <p class="series-subtitle">Economic Networks Across the Ancient and Medieval World</p>
+      <p class="series-desc">A study of how control over trade routes, currency systems, and agricultural surplus shaped imperial ambition — and how economic disruption so often proved fatal to imperial order.</p>
+      <span class="series-cta">Coming Soon</span>
+    </div>
+
+    <div class="series-card" onclick="openSeriesDetail('series-03')">
+      <div>
+        <span class="series-number">Series 03</span>
+        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+      </div>
+      <h3 class="series-title">The Collapse Problem</h3>
+      <p class="series-subtitle">Common Patterns in Imperial Decline Across Five Millennia</p>
+      <p class="series-desc">Why do empires fall? Comparing the trajectories of the Western Roman Empire, the Abbasid Caliphate, the Mongol Empire, and others to identify recurring structural vulnerabilities.</p>
+      <span class="series-cta">Coming Soon</span>
+    </div>
+
+    <div class="series-card" onclick="openSeriesDetail('series-04')">
+      <div>
+        <span class="series-number">Series 04</span>
+        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+      </div>
+      <h3 class="series-title">Cross-Cultural Exchange</h3>
+      <p class="series-subtitle">How Empires Spread — and Were Changed by — Ideas and Culture</p>
+      <p class="series-desc">From Hellenisation to the Islamic Golden Age to the Columbian Exchange, this series explores the two-way nature of cultural contact under imperial conditions and its lasting consequences.</p>
+      <span class="series-cta">Coming Soon</span>
+    </div>
+
+    <div class="series-card" onclick="openSeriesDetail('series-05')">
+      <div>
+        <span class="series-number">Series 05</span>
+        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+      </div>
+      <h3 class="series-title">The Military Revolution</h3>
+      <p class="series-subtitle">Technology, Tactics, and the Shifting Balance of Power</p>
+      <p class="series-desc">How advances in military technology — the stirrup, gunpowder, the warship — reshaped the competitive landscape between polities and enabled otherwise peripheral states to become world powers.</p>
+      <span class="series-cta">Coming Soon</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Series detail view -->
+<div id="series-detail">
+  <button class="explorer-back-btn" id="series-detail-back" style="margin:32px 0 0 40px;">← Research Series</button>
+  <div class="series-detail-inner">
+    <div class="series-detail-header">
+      <p class="series-detail-number" id="series-detail-number"></p>
+      <h2 class="series-detail-title" id="series-detail-title"></h2>
+      <p class="series-detail-subtitle" id="series-detail-subtitle"></p>
+    </div>
+    <div class="series-detail-body" id="series-detail-body"></div>
+  </div>
+</div>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+var SERIES_DATA = {
+  'series-01': {
+    number: 'Series 01',
+    title: 'The Architecture of Power',
+    subtitle: 'How Empires Build the Structures That Sustain Them',
+    body: [
+      'What distinguishes an empire from a merely large kingdom? Size is the obvious answer — but size alone cannot explain the longevity of the Roman Empire, the administrative resilience of the Achaemenid Persians, or the remarkable coherence of the Han Chinese state across centuries of turbulence. The more fundamental answer lies in architecture: the deliberate construction of systems — legal, bureaucratic, infrastructural, and fiscal — that allow a polity to govern territory far beyond the reach of any single ruler.',
+      'The Achaemenid model established one of history\'s first truly multi-ethnic administrative frameworks. Cyrus and Darius understood that a conquered people who retained their customs, their temples, and their local governance structures were far less likely to revolt than a people stripped of identity. The satrapal system — provincial governors operating under central oversight, with standardised coinage, a Royal Road enabling rapid communication, and a sophisticated census system — allowed Persia to govern from the Aegean to the Indus without the constant military presence that a cruder empire would have required.',
+      'The Roman Empire refined this insight over centuries. At its height, Roman administration had produced a legal system so internally consistent that it could adjudicate disputes between parties who had never seen Rome, in languages Rome\'s founders could not have imagined. The legions built roads; the roads enabled commerce; commerce filled the treasury; the treasury paid the legions. The system was self-reinforcing so long as its key nodes — the tax base, the military, the administrative class — remained functional.',
+      'What is striking about imperial collapse, viewed through this lens, is how often it begins not with dramatic military defeat but with the quiet erosion of these structural systems. The Western Roman Empire did not fall in a single catastrophic moment. It degraded: tax receipts fell as the rural population contracted and elites found means of avoiding the fiscal system; the army professionalised but shrank and relied increasingly on federates whose loyalty was conditional; the roads went unrepaired; the legal system fragmented into local custom. By the time the last Western emperor was deposed in 476 CE, the administrative architecture of empire had already largely ceased to function.',
+      'This pattern — structural erosion preceding visible political collapse — recurs with striking regularity. The Abbasid Caliphate\'s true decline began not with the Mongol sack of Baghdad in 1258 but with the transfer of real power to Turkish military commanders in the 860s and the resulting fiscal fragmentation of the 870s and 880s. The Mughal Empire\'s administrative coherence had already begun to unravel under Aurangzeb\'s ideological rigidities before the Maratha confederacy and Nadir Shah\'s invasion completed the fracture.',
+      'The lesson for the historian — and perhaps for the student of contemporary institutions — is that the most important question about any large-scale political structure is not how powerful it appears at its peak, but how robust its underlying architecture is to perturbation. Empires that invested in systems — in law, in roads, in fiscal administration, in the cultivation of a competent bureaucratic class — tended to last longer and recover more readily from crisis than those that relied on the personal authority of a gifted ruler. Personal authority is non-transferable. Institutions, when well-designed, outlast the individuals who build them.',
+      'The Epoch Institute\'s empire trajectory data reflects this directly. Empires that achieved high scores across multiple dimensions simultaneously — territory, governance, economic output — consistently showed longer periods of sustained power than those that achieved high scores on a single dimension. Military dominance without administrative depth is a different, and more fragile, kind of power. The architecture of power is not glamorous. But it is durable.'
+    ]
+  },
+  'series-02': { number: 'Series 02', title: 'Trade and Territory', subtitle: 'Economic Networks Across the Ancient and Medieval World', body: ['This series is in preparation. Check back soon.'] },
+  'series-03': { number: 'Series 03', title: 'The Collapse Problem', subtitle: 'Common Patterns in Imperial Decline Across Five Millennia', body: ['This series is in preparation. Check back soon.'] },
+  'series-04': { number: 'Series 04', title: 'Cross-Cultural Exchange', subtitle: 'How Empires Spread — and Were Changed by — Ideas and Culture', body: ['This series is in preparation. Check back soon.'] },
+  'series-05': { number: 'Series 05', title: 'The Military Revolution', subtitle: 'Technology, Tactics, and the Shifting Balance of Power', body: ['This series is in preparation. Check back soon.'] }
+};
+
+function openSeriesDetail(id) {
+  var s = SERIES_DATA[id];
+  if (!s) return;
+  document.getElementById('series-detail-number').textContent   = s.number;
+  document.getElementById('series-detail-title').textContent    = s.title;
+  document.getElementById('series-detail-subtitle').textContent = s.subtitle;
+  document.getElementById('series-detail-body').innerHTML = s.body.map(function(p) {
+    return '<p>' + escHtml(p) + '</p>';
+  }).join('');
+  document.getElementById('research-series').style.display = 'none';
+  document.getElementById('series-detail').style.display   = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.getElementById('series-detail-back').addEventListener('click', function() {
+  document.getElementById('series-detail').style.display   = 'none';
+  document.getElementById('research-series').style.display = '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+initNav('series');
+</script>
+
+</body>
+</html>

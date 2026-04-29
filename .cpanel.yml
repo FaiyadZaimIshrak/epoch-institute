@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/YOURUSERNAME/public_html/
+    - /bin/cp -R *.html *.css *.js .htaccess $DEPLOYPATH
+    - /bin/cp -R empire $DEPLOYPATH
+    - /bin/cp -R logos $DEPLOYPATH

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contributors — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Meet the researchers, historians, and writers who contribute to The Epoch Institute. Learn how to join our growing community of contributors.">
+<meta property="og:title" content="Contributors — The Epoch Institute">
+<meta property="og:description" content="Researchers, historians, and writers shaping the study of civilisational history at The Epoch Institute.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/contributors.html">
+<link rel="canonical" href="https://the-epoch-institute.org/contributors.html">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<style>
+#contributors { min-height: 100vh; padding-top: 100px; }
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; padding: 0 40px 48px; max-width: 1200px; margin: 0 auto;
+}
+.contributor-card {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 6px; padding: 24px 20px; text-align: center;
+  transition: border-color 0.2s;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.2s;
+}
+.contributor-card.visible { opacity: 1; transform: translateY(0); }
+.contributor-card:hover { border-color: var(--gold); }
+.contributor-avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--border); margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cinzel', serif; font-size: 22px; color: var(--gold); opacity: 0.7;
+  overflow: hidden;
+}
+.contributor-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.contributor-name {
+  font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.06em;
+  color: var(--gold-light); margin: 0 0 4px;
+}
+.contributor-role {
+  font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 8px;
+}
+.contributor-bio {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 13px;
+  color: var(--text); line-height: 1.6; opacity: 0.8;
+}
+.contributors-loading {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.12em;
+  color: var(--muted); opacity: 0.5; text-align: center; padding: 48px 0;
+}
+.contributors-empty {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  color: var(--muted); text-align: center; padding: 32px 0; opacity: 0.6;
+}
+.join-band {
+  background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 100%);
+  border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
+  padding: 60px 40px; text-align: center; margin: 0 0 48px;
+}
+.join-band-title {
+  font-family: 'Cinzel', serif; font-size: clamp(16px, 2.5vw, 22px);
+  letter-spacing: 0.08em; color: var(--gold-light); margin: 0 0 16px;
+}
+.join-band-desc {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 16px;
+  color: var(--text); line-height: 1.75; max-width: 600px;
+  margin: 0 auto 28px; opacity: 0.85;
+}
+@media (max-width: 600px) {
+  .contributors-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); padding: 0 16px 32px; }
+  .join-band { padding: 40px 16px; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<section id="contributors">
+  <span class="hero-ornament"></span>
+  <h2 class="research-title">Our Contributors</h2>
+  <p class="research-subtitle">Researchers, historians, and writers shaping the study of civilisational history.</p>
+
+  <p class="contributors-loading" id="contributors-loading">Loading contributors…</p>
+  <div class="contributors-grid" id="contributors-grid" style="display:none;"></div>
+  <p class="contributors-empty" id="contributors-empty" style="display:none;">No contributors listed yet.</p>
+
+  <div class="join-band">
+    <h3 class="join-band-title">Join the Institute</h3>
+    <p class="join-band-desc">Are you a historian, researcher, or writer with a passion for civilisational history? We welcome contributors of all backgrounds — academic, independent, and student alike. If you would like to contribute research, profiles, or essays, reach out to us.</p>
+    <a href="mailto:research@the-epoch-institute.org?subject=Contributor%20Application&body=Please%20tell%20us%20about%20yourself%20and%20your%20area%20of%20interest%3A" class="hero-cta">Apply to Contribute →</a>
+  </div>
+</section>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+// ── Contributors loader ───────────────────────────────────────────────────────
+(function() {
+  var loading = document.getElementById('contributors-loading');
+  var grid    = document.getElementById('contributors-grid');
+  var empty   = document.getElementById('contributors-empty');
+
+  function initials(name) {
+    return (name || '?').split(' ').slice(0, 2).map(function(w) { return w[0]; }).join('');
+  }
+
+  function renderContributors(list) {
+    loading.style.display = 'none';
+    if (!list || !list.length) { empty.style.display = 'block'; return; }
+    grid.style.display = 'grid';
+    grid.innerHTML = list.map(function(c, i) {
+      var avatarHtml = c.photoUrl
+        ? '<img src="' + escHtml(c.photoUrl) + '" alt="' + escHtml(c.name || '') + '" onerror="this.style.display=\'none\'">'
+        : escHtml(initials(c.name));
+      return '<div class="contributor-card" style="transition-delay:' + (i * 0.05) + 's">' +
+        '<div class="contributor-avatar">' + avatarHtml + '</div>' +
+        '<p class="contributor-name">' + escHtml(c.name || 'Anonymous') + '</p>' +
+        '<p class="contributor-role">' + escHtml(c.role || c.profession || 'Contributor') + '</p>' +
+        (c.bio ? '<p class="contributor-bio">' + escHtml(c.bio) + '</p>' : '') +
+      '</div>';
+    }).join('');
+
+    // Animate cards into view using IntersectionObserver
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    grid.querySelectorAll('.contributor-card').forEach(function(card) {
+      observer.observe(card);
+    });
+  }
+
+  if (typeof CONTRIB_URL === 'undefined' || !CONTRIB_URL || CONTRIB_URL.includes('PASTE')) {
+    loading.style.display = 'none';
+    empty.style.display = 'block';
+    return;
+  }
+
+  jsonp(CONTRIB_URL + '?action=contributors', renderContributors);
+})();
+
+initNav('contributors');
+</script>
+
+</body>
+</html>

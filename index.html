@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
+<meta property="og:title" content="The Epoch Institute">
+<meta property="og:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org">
+<link rel="canonical" href="https://the-epoch-institute.org">
+<meta property="og:image" content="https://the-epoch-institute.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Epoch Institute">
+<meta name="twitter:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
+<meta name="twitter:site" content="@EpochInstitute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Epoch Institute",
+  "url": "https://the-epoch-institute.org",
+  "description": "The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.",
+  "email": "research@the-epoch-institute.org",
+  "foundingDate": "2024",
+  "knowsAbout": [
+    "World history",
+    "Civilisational analysis",
+    "Empire studies",
+    "Historical data visualisation"
+  ],
+  "sameAs": []
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<!-- Announcements -->
+<section id="announcements">
+  <div class="announcements-inner">
+    <div class="announcements-hd">
+      <span class="announcements-label">Announcements</span>
+      <span class="announcements-live-dot"></span>
+    </div>
+    <div class="announcements-grid" id="announcements-grid">
+      <p class="announcements-loading" id="announcements-loading">Loading…</p>
+    </div>
+    <p class="announcements-empty" id="announcements-empty" style="display:none;">No announcements at this time.</p>
+  </div>
+</section>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <span class="hero-ornament"></span>
+  <h1 class="hero-title">THE EPOCH INSTITUTE</h1>
+  <span class="hero-ornament"></span>
+  <p class="hero-tagline" data-i18n="hero_tagline">Understanding civilizational patterns to illuminate the present.</p>
+  <p class="hero-mission" data-i18n="hero_mission">The Epoch Institute researches human civilization with objectivity and curiosity — studying the rise and fall of empires, examining the real-time implications of historical events, and tracing how the past shapes modern society. We make the story of humanity not just informative, but compelling. History is not a closed book; it is the foundation of everything around us.</p>
+
+  <a href="/explorer.html" class="hero-cta">Explore the Data →</a>
+  <a href="/research.html" class="hero-secondary-cta">Browse Research Projects →</a>
+
+  <div id="tih-card" class="tih-card" style="display:none;">
+    <div class="tih-date-row">
+      <span class="tih-date" id="tih-date"></span>
+      <span class="tih-region" id="tih-region"></span>
+    </div>
+    <p class="tih-title" id="tih-title"></p>
+    <p class="tih-year" id="tih-year"></p>
+    <div class="tih-actions">
+      <a href="#" class="tih-link" id="tih-empire-link" style="display:none;">Related empire →</a>
+      <a href="#" class="tih-link" id="tih-share-link">Share →</a>
+    </div>
+  </div>
+
+  <span class="scroll-indicator"></span>
+</section>
+
+<!-- Article modal (used by announcements) -->
+<div id="article-modal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="article-modal-title">
+  <div class="modal-box article-modal-box">
+    <button class="modal-close" id="article-modal-close" aria-label="Close">✕</button>
+    <div class="article-modal-header">
+      <p class="article-modal-meta" id="article-modal-meta"></p>
+      <h3 class="modal-title" id="article-modal-title" style="margin:0;padding:0;border:none;"></h3>
+    </div>
+    <iframe id="article-modal-frame" class="article-modal-frame" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+initNav('home');
+
+// ── Article modal (announcements) ─────────────────────────────────────────────
+function openAnnouncementModal(fileId, name) {
+  document.getElementById('article-modal-title').textContent = name;
+  document.getElementById('article-modal-meta').textContent = 'Announcement';
+  document.getElementById('article-modal-frame').src =
+    'https://drive.google.com/file/d/' + fileId + '/preview';
+  const overlay = document.getElementById('article-modal');
+  overlay.classList.remove('closing');
+  overlay.style.display = 'flex';
+  overlay.offsetHeight;
+  overlay.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+(function() {
+  const close = document.getElementById('article-modal-close');
+  const overlay = document.getElementById('article-modal');
+  function closeModal() {
+    overlay.classList.remove('is-open');
+    overlay.classList.add('closing');
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      overlay.classList.remove('closing');
+      document.body.style.overflow = '';
+      document.getElementById('article-modal-frame').src = '';
+    }, 220);
+  }
+  close.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+})();
+
+// ── Announcements ─────────────────────────────────────────────────────────────
+function loadAnnouncements() {
+  if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
+    document.getElementById('announcements').style.display = 'none';
+    return;
+  }
+  fetch(EPOCH_API_URL + '?action=announcements&callback=_')
+    .then(r => r.text())
+    .then(text => {
+      const items = JSON.parse(text.replace(/^_\(/, '').replace(/\)[\s]*$/, ''));
+      renderAnnouncements(Array.isArray(items) ? items : []);
+    })
+    .catch(() => renderAnnouncements([]));
+}
+
+function renderAnnouncements(items) {
+  const section = document.getElementById('announcements');
+  const grid    = document.getElementById('announcements-grid');
+  const empty   = document.getElementById('announcements-empty');
+
+  if (!items.length) {
+    section.style.display = 'none';
+    return;
+  }
+
+  section.style.display = '';
+  empty.style.display = 'none';
+  grid.innerHTML = items.map(item => {
+    const isImg = /\.(png|jpe?g|gif|webp)$/i.test(item.name) || /^image\//.test(item.mimeType);
+    const typeLabel = isImg ? 'Image Notice' : 'Document Notice';
+    const imgHtml = isImg
+      ? `<img class="announcement-card-img" src="https://lh3.googleusercontent.com/d/${item.id}" alt="${escHtml(item.name)}" loading="lazy">`
+      : `<div class="announcement-card-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--gold);opacity:0.35;">📄</div>`;
+    return `<div class="announcement-card" onclick="openAnnouncementModal('${item.id}','${escHtml(item.name).replace(/'/g,"\\'")}')">
+      ${imgHtml}
+      <div class="announcement-card-body">
+        <span class="announcement-card-type">${typeLabel}</span>
+        <span class="announcement-card-name">${escHtml(item.name.replace(/\.[^.]+$/, ''))}</span>
+        <span class="announcement-card-cta">View →</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+loadAnnouncements();
+setInterval(loadAnnouncements, 5 * 60 * 1000);
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) loadAnnouncements();
+});
+
+// ── Today in History ──────────────────────────────────────────────────────────
+(function() {
+  const keys = Object.keys(TODAY_IN_HISTORY);
+
+  function dayOfYear(mm, dd) {
+    const months = [0,31,28,31,30,31,30,31,31,30,31,30,31];
+    let d = dd;
+    for (let i = 1; i < mm; i++) d += months[i];
+    return d;
+  }
+
+  const now      = new Date();
+  const todayMM  = String(now.getMonth() + 1).padStart(2, '0');
+  const todayDD  = String(now.getDate()).padStart(2, '0');
+  const todayKey = todayMM + '-' + todayDD;
+  const todayDoy = dayOfYear(+todayMM, +todayDD);
+
+  let entry = null, matchKey = null, exact = false;
+
+  if (TODAY_IN_HISTORY[todayKey]) {
+    entry = TODAY_IN_HISTORY[todayKey];
+    matchKey = todayKey;
+    exact = true;
+  } else {
+    let best = Infinity;
+    keys.forEach(k => {
+      const [mm, dd] = k.split('-').map(Number);
+      let dist = Math.abs(dayOfYear(mm, dd) - todayDoy);
+      dist = Math.min(dist, 365 - dist);
+      if (dist < best && dist <= 15) { best = dist; matchKey = k; }
+    });
+    if (matchKey) entry = TODAY_IN_HISTORY[matchKey];
+  }
+
+  if (!entry) return;
+
+  const regionNames = {
+    EU: 'Europe', AS: 'Asia', AM: 'Americas', AF: 'Africa',
+    ME: 'Middle East', BD: 'Bangladesh', GL: 'Global'
+  };
+
+  const card     = document.getElementById('tih-card');
+  const dateEl   = document.getElementById('tih-date');
+  const regionEl = document.getElementById('tih-region');
+  const titleEl  = document.getElementById('tih-title');
+  const yearEl   = document.getElementById('tih-year');
+  const empireEl = document.getElementById('tih-empire-link');
+  const shareEl  = document.getElementById('tih-share-link');
+
+  const [emm, edd] = matchKey.split('-');
+  const dispDate = new Date(2000, +emm - 1, +edd)
+    .toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+
+  if (!exact) {
+    dateEl.textContent = 'On ' + dispDate + ' •';
+    dateEl.style.opacity = '0.6';
+  } else {
+    dateEl.textContent = 'Today in History · ' + dispDate;
+  }
+
+  regionEl.textContent = regionNames[entry.region] || entry.region;
+  titleEl.textContent  = entry.title;
+  yearEl.textContent   = entry.year;
+
+  if (entry.empire) {
+    empireEl.style.display = '';
+    empireEl.href = '/explorer.html#//' + encodeURIComponent(entry.empire);
+  }
+
+  const tweetText = encodeURIComponent(
+    'On this day in history: ' + entry.title + ' (' + entry.year + ') via @EpochInstitute https://the-epoch-institute.org #history #epoch'
+  );
+  shareEl.href   = 'https://twitter.com/intent/tweet?text=' + tweetText;
+  shareEl.target = '_blank';
+  shareEl.rel    = 'noopener';
+
+  card.style.display = '';
+})();
+</script>
+</body>
+</html>

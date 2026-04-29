@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empire Profiles — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Detailed profiles of 94 civilisations — foundation, economy, military, governance, global impact, and decline, illustrated with historical emblems.">
+<meta property="og:title" content="Empire Profiles — The Epoch Institute">
+<meta property="og:description" content="Explore detailed chronicles of 94 civilisations across five millennia of human history.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/profiles.html">
+<link rel="canonical" href="https://the-epoch-institute.org/profiles.html">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ── Profile search ── */
+.profile-search-wrap {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 40px 24px; max-width: 540px; margin: 0;
+}
+.profile-search-input {
+  flex: 1; background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 3px; padding: 9px 14px;
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.06em;
+  color: var(--text); outline: none; transition: border-color 0.2s;
+}
+.profile-search-input::placeholder { color: var(--muted); opacity: 0.5; }
+.profile-search-input:focus { border-color: var(--gold); }
+.profile-search-clear {
+  background: none; border: none; cursor: pointer;
+  font-size: 14px; color: var(--muted); padding: 0 4px;
+  display: none; transition: color 0.2s;
+}
+.profile-search-clear:hover { color: var(--gold); }
+.profile-search-empty {
+  padding: 0 40px 32px;
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  color: var(--muted); opacity: 0.65;
+}
+@media (max-width: 600px) {
+  .profile-search-wrap { padding: 0 16px 20px; }
+  .profile-search-empty { padding: 0 16px 24px; }
+}
+
+/* ── Profiles page layout ── */
+#profiles { min-height: 100vh; }
+#profiles .explorer-header { padding-top: 100px; }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<div id="profiles">
+
+  <div class="explorer-header">
+    <p class="explorer-label">HISTORICAL RECORDS</p>
+    <h2 class="explorer-title">Empire Profile &amp; Summary</h2>
+    <p class="explorer-description">Detailed chronicles of 94 civilisations across five millennia — select an empire to explore its founding, society, military, governance, global influence, and fall.</p>
+  </div>
+
+  <!-- Profile search -->
+  <div class="profile-search-wrap" id="profile-search-wrap">
+    <input type="text" class="profile-search-input" id="profile-search" placeholder="Search empires…" autocomplete="off">
+    <button class="profile-search-clear" id="profile-search-clear" aria-label="Clear search">✕</button>
+  </div>
+  <div class="profile-search-empty" id="profile-search-empty" style="display:none;">
+    No empires match your search.
+  </div>
+
+  <!-- Compare area -->
+  <div id="compare-area">
+    <div class="compare-toggle-row">
+      <button class="compare-toggle-btn" id="compare-toggle-btn">⇄ Compare Empires</button>
+    </div>
+    <div id="compare-panel" class="compare-panel" aria-live="polite">
+      <p class="compare-hint" id="compare-hint">Click any two empire cards below to compare their profiles side by side.</p>
+      <div class="compare-slots">
+        <div class="compare-slot compare-slot-empty" id="compare-slot-a">
+          <span class="compare-slot-placeholder">Select Empire A</span>
+        </div>
+        <div class="compare-divider"><span class="compare-vs">vs</span></div>
+        <div class="compare-slot compare-slot-empty" id="compare-slot-b">
+          <span class="compare-slot-placeholder">Select Empire B</span>
+        </div>
+      </div>
+      <div class="compare-actions" id="compare-actions" style="display:none;">
+        <button class="compare-share-btn" id="compare-share-btn">Share this comparison →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery (built by buildProfileGallery) -->
+  <div id="profile-gallery"></div>
+
+</div>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+// ── Era classifier ────────────────────────────────────────────────────────────
+function getEmpireEra(empire) {
+  var peak = empire.points.reduce(function(m, p) { return p[1] >= m[1] ? p : m; });
+  var y = peak[0];
+  if (y <= -500) return 'ancient';
+  if (y <= 500)  return 'classical';
+  if (y <= 1400) return 'medieval';
+  if (y <= 1800) return 'early-modern';
+  return 'modern';
+}
+
+// ── Navigate to empire detail page ───────────────────────────────────────────
+function openEmpireDetail(name) {
+  window.location.href = '/empire/' + toSlug(name) + '.html';
+}
+
+// ── Build era-grouped gallery ─────────────────────────────────────────────────
+function buildProfileGallery() {
+  var gallery = document.getElementById('profile-gallery');
+  if (gallery.dataset.built) return;
+  gallery.dataset.built = '1';
+
+  var groups = {};
+  ERA_ORDER.forEach(function(e) { groups[e] = []; });
+  EMPIRES.forEach(function(emp) { groups[getEmpireEra(emp)].push(emp); });
+
+  gallery.innerHTML = ERA_ORDER.map(function(eraKey) {
+    var emps = groups[eraKey];
+    if (!emps.length) return '';
+    return '<div class="profile-era-group" data-era="' + eraKey + '">' +
+      '<p class="profile-era-title">' + ERA_LABELS[eraKey] + '</p>' +
+      '<div class="profile-thumb-grid">' +
+        emps.map(function(emp) {
+          var safeName = emp.name.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+          var safeJs   = emp.name.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+          return '<div class="empire-thumb" data-name="' + safeName + '" onclick="openEmpireDetail(\'' + safeJs + '\')">' +
+            '<img class="thumb-logo" src="logos/' + encodeURIComponent(emp.name) + '.png" alt="' + safeName + '" ' +
+              'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+            '<div class="thumb-logo-fallback" style="display:none">🏛</div>' +
+            '<span class="thumb-name">' + safeName + '</span>' +
+          '</div>';
+        }).join('') +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+// ── Profile search IIFE ───────────────────────────────────────────────────────
+(function() {
+  var searchInput = document.getElementById('profile-search');
+  var clearBtn    = document.getElementById('profile-search-clear');
+  var emptyState  = document.getElementById('profile-search-empty');
+
+  function filterGallery(query) {
+    var q = query.toLowerCase().trim();
+    var gallery = document.getElementById('profile-gallery');
+    var thumbs  = gallery.querySelectorAll('.empire-thumb');
+    var hasVisible = false;
+
+    thumbs.forEach(function(thumb) {
+      var name = (thumb.dataset.name || '').toLowerCase();
+      var visible = !q || name.indexOf(q) !== -1;
+      thumb.style.display = visible ? '' : 'none';
+      if (visible) hasVisible = true;
+    });
+
+    // Show/hide era group headers based on whether any empires are visible within
+    gallery.querySelectorAll('.profile-era-group').forEach(function(group) {
+      var anyVisible = Array.from(group.querySelectorAll('.empire-thumb')).some(function(t) {
+        return t.style.display !== 'none';
+      });
+      group.style.display = anyVisible ? '' : 'none';
+    });
+
+    emptyState.style.display = (!hasVisible && q) ? 'block' : 'none';
+    clearBtn.style.display = q ? 'block' : 'none';
+  }
+
+  searchInput.addEventListener('input', function() { filterGallery(this.value); });
+  clearBtn.addEventListener('click', function() {
+    searchInput.value = '';
+    filterGallery('');
+    searchInput.focus();
+  });
+})();
+
+// ── Empire Comparison IIFE ───────────────────────────────────────────────────
+(function() {
+  var _compareMode = false;
+  var _slotA = null, _slotB = null;
+
+  var panel      = document.getElementById('compare-panel');
+  var toggleBtn  = document.getElementById('compare-toggle-btn');
+  var actions    = document.getElementById('compare-actions');
+  var shareBtn   = document.getElementById('compare-share-btn');
+  var profilesEl = document.getElementById('profiles');
+  var hint       = document.getElementById('compare-hint');
+
+  function stripTags(s) { return (s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
+
+  function truncateText(text, charLimit) {
+    if (text.length <= charLimit) return { out: text, hasMore: false };
+    var cut = text.lastIndexOf(' ', charLimit);
+    var at = cut > 20 ? cut : charLimit;
+    return { out: text.slice(0, at) + '…', hasMore: true };
+  }
+
+  function empireStats(name) {
+    var emp = EMPIRES.find(function(e) { return e.name === name; });
+    if (!emp) return { peak: '—', duration: '—', period: '—' };
+    var pts    = emp.points;
+    var startY = Math.round(pts[0][0]);
+    var endY   = Math.round(pts[pts.length - 1][0]);
+    var peakPt = pts.reduce(function(m, p) { return p[1] >= m[1] ? p : m; });
+    var peakY  = Math.round(peakPt[0]);
+    var dur    = Math.abs(Math.round(endY - startY));
+    function fmt(y) { return y < 0 ? Math.abs(y) + ' BCE' : y + ' CE'; }
+    return { peak: fmt(peakY), duration: dur + ' yrs', period: fmt(startY) + ' – ' + fmt(endY) };
+  }
+
+  function renderSlot(slotId, name) {
+    var slotEl = document.getElementById(slotId);
+    if (!name) {
+      var label = slotId === 'compare-slot-a' ? 'Select Empire A' : 'Select Empire B';
+      slotEl.className = 'compare-slot compare-slot-empty';
+      slotEl.innerHTML = '<span class="compare-slot-placeholder">' + label + '</span>';
+      return;
+    }
+    var emp     = EMPIRES.find(function(e) { return e.name === name; }) || {};
+    var profile = EMPIRE_PROFILES[name] || {};
+    var stats   = empireStats(name);
+    var sectionKeys = [
+      ['foundation', 'Foundation'], ['socioeconomy', 'Socioeconomy'], ['military', 'Military'],
+      ['governance', 'Governance &amp; Law'], ['impact', 'Global &amp; Regional Impact'], ['decline', 'Decline &amp; Fall']
+    ];
+    var sectionsHtml = sectionKeys.map(function(pair) {
+      var key   = pair[0], label = pair[1];
+      var raw   = stripTags(profile[key] || '');
+      var res   = truncateText(raw, 400);
+      var uid   = slotId + '-' + key;
+      return '<div class="compare-section-block">' +
+        '<p class="compare-section-title">' + label + '</p>' +
+        '<p class="compare-section-body" id="csb-' + uid + '">' +
+          (raw ? escHtml(res.out) : '<em>Coming soon.</em>') +
+        '</p>' +
+        (res.hasMore && raw ? '<button class="compare-read-more" data-slot="' + slotId + '" data-key="' + key + '" data-uid="' + uid + '">Read more →</button>' : '') +
+      '</div>';
+    }).join('');
+
+    slotEl.className = 'compare-slot compare-slot-filled';
+    slotEl.innerHTML =
+      '<div class="compare-slot-header">' +
+        '<div>' +
+          '<p class="compare-slot-region">' + escHtml(emp.region || '') + '</p>' +
+          '<h3 class="compare-slot-name">' + escHtml(name) + '</h3>' +
+        '</div>' +
+        '<button class="compare-slot-remove" data-slot="' + slotId + '" aria-label="Remove ' + escHtml(name) + '">✕</button>' +
+      '</div>' +
+      '<div class="compare-slot-stats">' +
+        '<div class="compare-stat-item"><span class="compare-stat-label">Peak</span><span class="compare-stat-val">' + stats.peak + '</span></div>' +
+        '<div class="compare-stat-item"><span class="compare-stat-label">Duration</span><span class="compare-stat-val">' + stats.duration + '</span></div>' +
+        '<div class="compare-stat-item"><span class="compare-stat-label">Period</span><span class="compare-stat-val">' + stats.period + '</span></div>' +
+      '</div>' +
+      sectionsHtml +
+      '<button class="compare-view-btn" data-empire="' + escHtml(name) + '">View Full Profile →</button>';
+  }
+
+  function updatePanel() {
+    var bothFilled = _slotA && _slotB;
+    actions.style.display = bothFilled ? 'block' : 'none';
+    hint.style.display    = (!_slotA && !_slotB) ? 'block' : 'none';
+  }
+
+  function addToCompare(name) {
+    if (!_slotA) {
+      _slotA = name; renderSlot('compare-slot-a', _slotA);
+    } else if (!_slotB && _slotA !== name) {
+      _slotB = name; renderSlot('compare-slot-b', _slotB);
+    } else if (_slotA === name || _slotB === name) {
+      return;
+    } else {
+      _slotA = name; renderSlot('compare-slot-a', _slotA);
+    }
+    updatePanel();
+  }
+
+  function enterCompareMode() {
+    _compareMode = true;
+    profilesEl.classList.add('compare-mode');
+    panel.classList.add('open');
+    toggleBtn.classList.add('active');
+    toggleBtn.textContent = '✕ Exit Compare';
+  }
+
+  function exitCompareMode() {
+    _compareMode = false; _slotA = null; _slotB = null;
+    profilesEl.classList.remove('compare-mode');
+    panel.classList.remove('open');
+    toggleBtn.classList.remove('active');
+    toggleBtn.textContent = '⇄ Compare Empires';
+    renderSlot('compare-slot-a', null);
+    renderSlot('compare-slot-b', null);
+    updatePanel();
+  }
+
+  toggleBtn.addEventListener('click', function() {
+    if (_compareMode) exitCompareMode(); else enterCompareMode();
+  });
+
+  panel.addEventListener('click', function(e) {
+    var removeBtn = e.target.closest('.compare-slot-remove');
+    if (removeBtn) {
+      if (removeBtn.dataset.slot === 'compare-slot-a') { _slotA = null; renderSlot('compare-slot-a', null); }
+      else { _slotB = null; renderSlot('compare-slot-b', null); }
+      updatePanel();
+      return;
+    }
+    var readMore = e.target.closest('.compare-read-more');
+    if (readMore) {
+      var uid     = readMore.dataset.uid;
+      var key     = readMore.dataset.key;
+      var slot    = readMore.dataset.slot;
+      var name    = slot === 'compare-slot-a' ? _slotA : _slotB;
+      var profile = EMPIRE_PROFILES[name] || {};
+      var bodyEl  = document.getElementById('csb-' + uid);
+      if (bodyEl) { bodyEl.textContent = stripTags(profile[key] || ''); }
+      readMore.remove();
+      return;
+    }
+    var viewBtn = e.target.closest('.compare-view-btn');
+    if (viewBtn) {
+      window.location.href = '/empire/' + toSlug(viewBtn.dataset.empire) + '.html';
+    }
+  });
+
+  shareBtn.addEventListener('click', function() {
+    if (!_slotA || !_slotB) return;
+    var text = encodeURIComponent('Comparing ' + _slotA + ' vs ' + _slotB + ' on The Epoch Institute — interactive civilisational research. https://the-epoch-institute.org #history #empires #EpochInstitute');
+    window.open('https://twitter.com/intent/tweet?text=' + text, '_blank');
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && _compareMode) exitCompareMode();
+  });
+
+  // Intercept openEmpireDetail: in compare mode → add to slot; otherwise → navigate
+  var _origOpenEmpireDetail = openEmpireDetail;
+  window.openEmpireDetail = function(name) {
+    if (_compareMode) { addToCompare(name); return; }
+    _origOpenEmpireDetail(name);
+  };
+})();
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+initNav('profiles');
+buildProfileGallery();
+</script>
+
+</body>
+</html>

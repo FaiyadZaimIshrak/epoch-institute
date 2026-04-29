@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+.error-page {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 40px 24px;
+}
+.error-code {
+  font-family: 'Cinzel', serif; font-size: clamp(64px, 12vw, 120px);
+  color: var(--gold); opacity: 0.15; letter-spacing: 0.06em;
+  line-height: 1; margin: 0;
+}
+.error-title {
+  font-family: 'Cinzel', serif; font-size: clamp(14px, 2.5vw, 20px);
+  letter-spacing: 0.1em; color: var(--gold-light); margin: 16px 0 12px;
+}
+.error-desc {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 16px;
+  color: var(--muted); line-height: 1.7; max-width: 480px;
+  margin: 0 auto 36px;
+}
+.error-links {
+  display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+}
+.error-link {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); text-decoration: none;
+  border: 0.5px solid var(--border); padding: 10px 20px; border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.error-link:hover { border-color: var(--gold); color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div class="error-page">
+  <p class="error-code">404</p>
+  <h1 class="error-title">Page Not Found</h1>
+  <p class="error-desc">The page you're looking for may have moved, been renamed, or no longer exists. Try one of these destinations:</p>
+  <div class="error-links">
+    <a href="/" class="error-link">Home</a>
+    <a href="/research.html" class="error-link">Research</a>
+    <a href="/explorer.html" class="error-link">Explorer</a>
+    <a href="/profiles.html" class="error-link">Profiles</a>
+    <a href="/community.html" class="error-link">Community</a>
+    <a href="/about.html" class="error-link">About</a>
+  </div>
+</div>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+initNav('');
+</script>
+
+</body>
+</html>

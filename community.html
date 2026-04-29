@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The Epoch Community — read articles, share opinions, and contribute to the study of civilisational history.">
+<meta property="og:title" content="Community — The Epoch Institute">
+<meta property="og:description" content="A space for readers, researchers, and thinkers to read, write, and reflect on history and its implications.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/community.html">
+<link rel="canonical" href="https://the-epoch-institute.org/community.html">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ── Section management ── */
+.comm-section { display: none; min-height: 100vh; }
+.comm-section.active { display: block; }
+@keyframes sectionSlideIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section-enter { animation: sectionSlideIn 0.4s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+/* ── Community page layout ── */
+#community-page { padding-top: 100px; }
+.community-section { padding: 40px 40px 0; max-width: 1100px; margin: 0 auto; }
+.community-section-hd { margin-bottom: 28px; }
+.community-section-title {
+  font-family: 'Cinzel', serif; font-size: clamp(14px, 2vw, 19px);
+  letter-spacing: 0.06em; color: var(--gold-light); margin: 0 0 8px;
+}
+.community-section-sub {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  color: var(--muted); line-height: 1.65; margin: 0; max-width: 600px;
+}
+.community-share-band {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 100%);
+  border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
+  padding: 40px; margin: 40px 0 0; max-width: none;
+}
+
+/* ── Blog grid ── */
+.blog-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px;
+}
+.blog-card {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 6px; padding: 24px 20px; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  display: flex; flex-direction: column; gap: 8px;
+  animation: cardFadeIn 0.35s cubic-bezier(0.22,1,0.36,1) both;
+}
+@keyframes cardFadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.blog-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.04); }
+.blog-card-tag {
+  font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.8;
+}
+.blog-card-title {
+  font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.04em;
+  color: var(--gold-light); margin: 0; line-height: 1.5;
+}
+.blog-card-excerpt {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 14px;
+  color: var(--muted); opacity: 0.75; line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.blog-card-meta {
+  font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.08em;
+  color: var(--muted); opacity: 0.6; margin-top: auto;
+}
+.blog-loading, .opinions-loading {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.12em;
+  color: var(--muted); opacity: 0.5; padding: 24px 0; text-align: center;
+}
+.blog-empty, .opinions-empty {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  color: var(--muted); opacity: 0.6; text-align: center; padding: 16px 0;
+}
+.blog-see-more {
+  display: block; margin: 16px auto 0;
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+  background: none; border: 1px solid var(--border);
+  padding: 10px 28px; cursor: pointer; transition: border-color 0.2s, color 0.2s;
+}
+.blog-see-more:hover { border-color: var(--gold); }
+
+/* ── Opinions list ── */
+.opinion-item {
+  border-bottom: 1px solid var(--border); padding: 20px 0;
+  display: flex; flex-direction: column; gap: 8px;
+  animation: cardFadeIn 0.35s cubic-bezier(0.22,1,0.36,1) both;
+}
+.opinion-item:last-child { border-bottom: none; }
+.opinion-item-name {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.85;
+}
+.opinion-item-text {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 16px;
+  color: var(--text); line-height: 1.7; font-style: italic;
+}
+.opinion-item-date {
+  font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.08em;
+  color: var(--muted); opacity: 0.6;
+}
+
+/* ── Newsletter ── */
+.newsletter-form { display: flex; gap: 8px; align-items: flex-start; flex-wrap: wrap; }
+.newsletter-form .form-input { flex: 1; min-width: 180px; }
+
+/* ── Sub-section pages ── */
+.community-page-inner { max-width: 860px; margin: 0 auto; padding: 0 40px 48px; }
+.opinions-pagination {
+  display: flex; justify-content: center; gap: 8px;
+  padding: 24px 0 40px; flex-wrap: wrap;
+}
+.pagination-btn {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
+  padding: 8px 16px; border: 1px solid var(--border);
+  background: none; color: var(--muted); cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.pagination-btn:hover { border-color: var(--gold); color: var(--gold); }
+.pagination-btn.active { border-color: var(--gold); color: var(--gold); }
+
+/* ── Drop zone ── */
+.drop-zone {
+  border: 1px dashed var(--border); border-radius: 6px;
+  padding: 32px 24px; text-align: center; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s; margin-bottom: 16px;
+}
+.drop-zone.dragover { border-color: var(--gold); background: rgba(201,168,76,0.06); }
+.drop-zone-label {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+}
+.drop-zone-sub {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 13px;
+  color: var(--muted); opacity: 0.6; margin-top: 6px;
+}
+.drop-zone-file {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.06em;
+  color: var(--gold); margin-top: 8px;
+}
+
+/* ── Article detail ── */
+#article-detail .profile-detail-inner { padding-top: 40px; }
+
+/* ── Share modal ── */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+  display: none; align-items: center; justify-content: center;
+  z-index: 9000; backdrop-filter: blur(4px); padding: 16px;
+}
+.modal-overlay.is-open { display: flex; }
+.modal-box {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 8px; padding: 40px; max-width: 600px; width: 100%;
+  max-height: 90vh; overflow-y: auto; position: relative;
+}
+.modal-close {
+  position: absolute; top: 16px; right: 20px;
+  background: none; border: none; cursor: pointer;
+  font-size: 18px; color: var(--muted); transition: color 0.2s;
+}
+.modal-close:hover { color: var(--gold); }
+.modal-title {
+  font-family: 'Cinzel', serif; font-size: 16px; letter-spacing: 0.08em;
+  color: var(--gold-light); margin: 0 0 28px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .community-section { padding: 32px 16px 0; }
+  .community-share-band { flex-direction: column; padding: 32px 16px; }
+  .community-page-inner { padding: 0 16px 32px; }
+  .opinions-pagination { padding: 16px 0 28px; }
+  .pagination-btn { font-size: 8px; padding: 7px 12px; }
+}
+@media (max-width: 480px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<!-- ── Main community page ── -->
+<div id="community-page" class="comm-section active">
+
+  <div class="explorer-header" style="padding-top:100px;">
+    <p class="explorer-label">COMMUNITY</p>
+    <h2 class="explorer-title">The Epoch Community</h2>
+    <p class="explorer-description">A space for readers, researchers, and thinkers to read, write, and reflect on history and its implications.</p>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="community-share-band" id="newsletter-band">
+    <div class="share-band-text">
+      <h3 class="community-section-title">Stay Informed</h3>
+      <p class="community-section-sub">Receive our monthly digest — new empire profiles, research updates, and historical analysis.</p>
+    </div>
+    <div id="newsletter-form-wrap">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <input class="form-input" id="nl-email" type="email" placeholder="your@email.com" autocomplete="email">
+        <button type="submit" class="form-submit" style="white-space:nowrap;">Subscribe →</button>
+      </form>
+      <p class="form-success" id="nl-success" style="display:none;">Thank you — we'll be in touch.</p>
+    </div>
+  </div>
+
+  <!-- Blogs -->
+  <div class="community-section" id="community-blogs">
+    <div class="community-section-hd">
+      <h3 class="community-section-title">Articles</h3>
+      <p class="community-section-sub">Essays and research submitted by our community of historians, researchers, and curious minds.</p>
+    </div>
+    <div class="blog-grid" id="blog-grid"></div>
+    <p class="blog-loading" id="blog-loading">Loading articles…</p>
+    <p class="blog-empty" id="blog-empty" style="display:none;">No articles yet — be the first to submit.</p>
+    <button class="blog-see-more" id="blog-see-more" style="display:none;">See All Articles →</button>
+  </div>
+
+  <!-- Community opinions display -->
+  <div class="community-section" id="community-opinions-display" style="margin-top:40px;">
+    <div class="community-section-hd">
+      <h3 class="community-section-title">Community Opinions</h3>
+      <p class="community-section-sub">Voices from our readers — unfiltered perspectives on history, society, and civilisation.</p>
+    </div>
+    <div id="opinions-list"></div>
+    <p class="opinions-loading" id="opinions-loading">Loading opinions…</p>
+    <p class="opinions-empty" id="opinions-empty" style="display:none;">No opinions yet — share yours below.</p>
+    <button class="blog-see-more" id="opinions-view-more" style="display:none;">View More Opinions →</button>
+  </div>
+
+  <!-- Share Your Thoughts -->
+  <div class="community-share-band" style="margin-top:40px;">
+    <div class="share-band-text">
+      <h3 class="community-section-title">Share Your Thoughts</h3>
+      <p class="community-section-sub">Have a perspective on history, society, or civilisation? We'd love to feature your writing.</p>
+    </div>
+    <button class="hero-cta" id="open-share-btn">Submit Your Article →</button>
+  </div>
+
+  <!-- Opinion form -->
+  <div class="community-section" id="community-opinion" style="padding-bottom:60px;">
+    <div class="community-section-hd" style="margin-top:40px;">
+      <h3 class="community-section-title">Your Opinion</h3>
+      <p class="community-section-sub">Share a quick thought — no article needed.</p>
+    </div>
+    <form class="modal-form" id="opinion-form" novalidate style="max-width:600px;">
+      <div class="form-row">
+        <label class="form-label">Name <span class="form-required">*</span></label>
+        <input class="form-input" id="op-name" type="text" placeholder="Your name" required>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Your Opinion <span class="form-required">*</span></label>
+        <textarea class="form-input form-textarea" id="op-text" placeholder="Write your thoughts here…" required style="min-height:120px;"></textarea>
+      </div>
+      <button type="submit" class="form-submit">Submit Opinion</button>
+      <p class="form-success" id="op-success" style="display:none;">Thank you — your opinion has been received.</p>
+    </form>
+  </div>
+
+</div>
+
+<!-- ── Opinions full page ── -->
+<div id="opinions-page" class="comm-section">
+  <button class="explorer-back-btn" id="opinions-page-back" style="margin:80px 0 0 40px;">← Community</button>
+  <div class="explorer-header">
+    <p class="explorer-label">COMMUNITY</p>
+    <h2 class="explorer-title">Community Opinions</h2>
+    <p class="explorer-description">Unfiltered perspectives from our readers on history, society, and civilisation.</p>
+  </div>
+  <div class="community-page-inner">
+    <div id="opinions-page-list"></div>
+    <div class="opinions-pagination" id="opinions-pagination"></div>
+  </div>
+</div>
+
+<!-- ── Articles full page ── -->
+<div id="articles-page" class="comm-section">
+  <button class="explorer-back-btn" id="articles-page-back" style="margin:80px 0 0 40px;">← Community</button>
+  <div class="explorer-header">
+    <p class="explorer-label">COMMUNITY</p>
+    <h2 class="explorer-title">Community Articles</h2>
+    <p class="explorer-description">Essays and research from historians, students, and curious minds.</p>
+  </div>
+  <div class="community-section">
+    <div class="blog-grid" id="articles-page-grid"></div>
+    <p class="blog-empty" id="articles-page-empty" style="display:none;">No articles yet.</p>
+    <div class="opinions-pagination" id="articles-pagination"></div>
+  </div>
+</div>
+
+<!-- ── Article detail ── -->
+<div id="article-detail" class="comm-section">
+  <button class="explorer-back-btn" id="article-detail-back" style="margin:80px 0 0 40px;">← Articles</button>
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header" style="border-bottom:1px solid var(--border);margin-bottom:36px;padding-bottom:28px;">
+      <div>
+        <p class="profile-detail-region" id="article-detail-meta"></p>
+        <h2 class="profile-detail-name" id="article-detail-title"></h2>
+      </div>
+    </div>
+    <div id="article-detail-body" class="profile-section-body"></div>
+    <button class="profile-back-gallery-btn bottom" id="article-detail-back-bottom">← Articles</button>
+  </div>
+</div>
+
+<!-- ── Share / Submit Article Modal ── -->
+<div id="share-modal" class="modal-overlay" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="share-modal-close" aria-label="Close">✕</button>
+    <h3 class="modal-title">Submit Your Article</h3>
+    <form class="modal-form" id="share-form" novalidate>
+      <div class="form-row">
+        <label class="form-label">Name <span class="form-required">*</span></label>
+        <input class="form-input" id="sf-name" type="text" placeholder="Your full name" required>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Profession <span class="form-required">*</span></label>
+        <select class="form-input form-select" id="sf-profession" required>
+          <option value="">Select your profession…</option>
+          <option value="Healthcare Professional">Healthcare Professional</option>
+          <option value="Engineering Professional">Engineering Professional</option>
+          <option value="Public Service">Public Service</option>
+          <option value="Private Service">Private Service</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Student">Student</option>
+          <option value="Researcher">Researcher</option>
+          <option value="Academic">Academic</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-row" id="sf-affil-row" style="display:none;">
+        <label class="form-label">Institute / Organisation <span class="form-required" id="sf-affil-star">*</span></label>
+        <input class="form-input" id="sf-affil" type="text" placeholder="e.g. University of Dhaka">
+      </div>
+      <div class="form-row">
+        <label class="form-label">Email <span class="form-required">*</span></label>
+        <input class="form-input" id="sf-email" type="email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Article (DOCX) <span class="form-required">*</span></label>
+        <div class="drop-zone" id="drop-zone">
+          <p class="drop-zone-label">Drag &amp; drop your .docx file here</p>
+          <p class="drop-zone-sub">or click to browse</p>
+          <p class="drop-zone-file" id="drop-zone-filename" style="display:none;"></p>
+          <input type="file" id="sf-file" accept=".docx" style="position:absolute;inset:0;opacity:0;cursor:pointer;">
+        </div>
+      </div>
+      <button type="submit" class="form-submit">Submit →</button>
+      <p class="form-success" id="sf-success" style="display:none;">Thank you! We'll review your submission and be in touch.</p>
+    </form>
+  </div>
+</div>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+// ── Section management ────────────────────────────────────────────────────────
+var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];
+
+function showCommSection(id) {
+  ALL_COMM_SECTIONS.forEach(function(s) {
+    var el = document.getElementById(s);
+    if (!el) return;
+    if (s === id) {
+      el.classList.add('active');
+      el.classList.remove('section-enter');
+      el.offsetHeight; // reflow
+      el.classList.add('section-enter');
+    } else {
+      el.classList.remove('active', 'section-enter');
+    }
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Data state ────────────────────────────────────────────────────────────────
+var _allOpinions       = [];
+var _confirmedArticles = [];
+var _opinionsPage      = 1;
+var _articlesPage      = 1;
+var _dataLoaded        = false;
+var OPINIONS_PER_PAGE  = 20;
+var OPINIONS_PREVIEW   = 3;
+var ARTICLES_PER_PAGE  = 20;
+var ARTICLES_PREVIEW   = 6;
+
+// ── Opinions ──────────────────────────────────────────────────────────────────
+function loadOpinions() {
+  if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
+    document.getElementById('opinions-loading').style.display = 'none';
+    return;
+  }
+  jsonp(EPOCH_API_URL + '?action=opinions', function(data) {
+    _allOpinions = Array.isArray(data) ? data : [];
+    renderOpinionsPreview();
+  });
+}
+
+function renderOpinionItem(op, idx) {
+  var date = op.ts ? new Date(op.ts).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }) : '';
+  return '<div class="opinion-item" style="animation-delay:' + (idx * 0.06) + 's">' +
+    '<span class="opinion-item-name">' + escHtml(op.name) + '</span>' +
+    '<p class="opinion-item-text">' + escHtml(op.text) + '</p>' +
+    (date ? '<span class="opinion-item-date">' + date + '</span>' : '') +
+  '</div>';
+}
+
+function renderOpinionsPreview() {
+  var container = document.getElementById('opinions-list');
+  var loading   = document.getElementById('opinions-loading');
+  var empty     = document.getElementById('opinions-empty');
+  var viewMore  = document.getElementById('opinions-view-more');
+  loading.style.display = 'none';
+  if (!_allOpinions.length) { empty.style.display = 'block'; viewMore.style.display = 'none'; return; }
+  empty.style.display = 'none';
+  container.innerHTML = _allOpinions.slice(0, OPINIONS_PREVIEW).map(renderOpinionItem).join('');
+  viewMore.style.display = _allOpinions.length > OPINIONS_PREVIEW ? 'block' : 'none';
+}
+
+function openOpinionsPage() {
+  _opinionsPage = 1;
+  showCommSection('opinions-page');
+  renderOpinionsPage();
+}
+
+function renderOpinionsPage() {
+  var list  = document.getElementById('opinions-page-list');
+  var pager = document.getElementById('opinions-pagination');
+  var start = (_opinionsPage - 1) * OPINIONS_PER_PAGE;
+  var slice = _allOpinions.slice(start, start + OPINIONS_PER_PAGE);
+  var total = Math.ceil(_allOpinions.length / OPINIONS_PER_PAGE);
+  list.innerHTML = slice.map(renderOpinionItem).join('');
+  pager.innerHTML = buildPagination(total, _opinionsPage, 'goOpinionsPage');
+}
+
+function goOpinionsPage(p) {
+  _opinionsPage = p;
+  renderOpinionsPage();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Articles ──────────────────────────────────────────────────────────────────
+function loadConfirmedArticles() {
+  if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
+    document.getElementById('blog-loading').style.display = 'none';
+    document.getElementById('blog-empty').style.display = 'block';
+    return;
+  }
+  jsonp(EPOCH_API_URL + '?action=confirmed_articles', function(data) {
+    _confirmedArticles = Array.isArray(data) ? data : [];
+    renderArticlesPreview();
+  });
+}
+
+function renderArticleCard(a, globalIdx, delay) {
+  var date    = a.ts ? new Date(a.ts).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }) : '';
+  var excerpt = a.content && a.content.length ? a.content[0].slice(0, 180) + (a.content[0].length > 180 ? '…' : '') : '';
+  return '<div class="blog-card" style="animation-delay:' + (delay * 0.07) + 's" onclick="openArticleDetailPage(' + globalIdx + ')">' +
+    '<h4 class="blog-card-title">' + escHtml(a.title || 'Untitled') + '</h4>' +
+    (excerpt ? '<p class="blog-card-excerpt">' + escHtml(excerpt) + '</p>' : '') +
+    '<p class="blog-card-meta">' + date + '</p>' +
+  '</div>';
+}
+
+function renderArticlesPreview() {
+  var grid    = document.getElementById('blog-grid');
+  var loading = document.getElementById('blog-loading');
+  var empty   = document.getElementById('blog-empty');
+  var seeMore = document.getElementById('blog-see-more');
+  loading.style.display = 'none';
+  if (!_confirmedArticles.length) { empty.style.display = 'block'; return; }
+  grid.innerHTML = _confirmedArticles.slice(0, ARTICLES_PREVIEW).map(function(a, i) { return renderArticleCard(a, i, i); }).join('');
+  if (_confirmedArticles.length > ARTICLES_PREVIEW) {
+    seeMore.textContent = 'See All Articles →';
+    seeMore.style.display = 'block';
+  }
+}
+
+function openArticlesPage() {
+  _articlesPage = 1;
+  showCommSection('articles-page');
+  renderArticlesPage();
+}
+
+function renderArticlesPage() {
+  var grid  = document.getElementById('articles-page-grid');
+  var pager = document.getElementById('articles-pagination');
+  var empty = document.getElementById('articles-page-empty');
+  var start = (_articlesPage - 1) * ARTICLES_PER_PAGE;
+  var slice = _confirmedArticles.slice(start, start + ARTICLES_PER_PAGE);
+  var total = Math.ceil(_confirmedArticles.length / ARTICLES_PER_PAGE);
+  if (!slice.length) { empty.style.display = 'block'; grid.innerHTML = ''; pager.innerHTML = ''; return; }
+  grid.innerHTML = slice.map(function(a, i) { return renderArticleCard(a, start + i, i); }).join('');
+  pager.innerHTML = buildPagination(total, _articlesPage, 'goArticlesPage');
+}
+
+function goArticlesPage(p) {
+  _articlesPage = p;
+  renderArticlesPage();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openArticleDetailPage(idx) {
+  var a = _confirmedArticles[idx];
+  if (!a) return;
+  document.getElementById('article-detail-title').textContent = a.title || 'Untitled';
+  document.getElementById('article-detail-meta').textContent  = a.ts
+    ? new Date(a.ts).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+  document.getElementById('article-detail-body').innerHTML = (a.content || []).map(function(p) {
+    return '<p>' + escHtml(p) + '</p>';
+  }).join('');
+  var fromArticles = document.getElementById('articles-page').classList.contains('active');
+  ['article-detail-back', 'article-detail-back-bottom'].forEach(function(id) {
+    document.getElementById(id).dataset.from = fromArticles ? 'articles' : 'community';
+  });
+  showCommSection('article-detail');
+}
+
+function closeArticleDetail() {
+  var from = document.getElementById('article-detail-back').dataset.from;
+  if (from === 'articles') { showCommSection('articles-page'); renderArticlesPage(); }
+  else { showCommSection('community-page'); }
+}
+
+// ── Load on init ──────────────────────────────────────────────────────────────
+function loadCommunityData() {
+  if (_dataLoaded) return;
+  _dataLoaded = true;
+  loadConfirmedArticles();
+  loadOpinions();
+}
+loadCommunityData();
+
+// ── Event wiring ──────────────────────────────────────────────────────────────
+document.getElementById('opinions-view-more').addEventListener('click', openOpinionsPage);
+document.getElementById('blog-see-more').addEventListener('click', openArticlesPage);
+document.getElementById('opinions-page-back').addEventListener('click', function() { showCommSection('community-page'); });
+document.getElementById('articles-page-back').addEventListener('click', function() { showCommSection('community-page'); });
+document.getElementById('article-detail-back').addEventListener('click', closeArticleDetail);
+document.getElementById('article-detail-back-bottom').addEventListener('click', closeArticleDetail);
+
+// ── Share modal ───────────────────────────────────────────────────────────────
+var _shareFile = null;
+
+document.getElementById('open-share-btn').addEventListener('click', function() {
+  document.getElementById('share-modal').classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+});
+
+function closeShareModal() {
+  document.getElementById('share-modal').classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+document.getElementById('share-modal-close').addEventListener('click', closeShareModal);
+document.getElementById('share-modal').addEventListener('click', function(e) {
+  if (e.target === e.currentTarget) closeShareModal();
+});
+
+// Drop zone
+(function() {
+  var zone     = document.getElementById('drop-zone');
+  var fileInput = document.getElementById('sf-file');
+  var label    = document.getElementById('drop-zone-filename');
+
+  function setFile(file) {
+    if (!file || !file.name.toLowerCase().endsWith('.docx')) {
+      alert('Please select a .docx file.');
+      return;
+    }
+    _shareFile = file;
+    label.textContent = '📄 ' + file.name;
+    label.style.display = 'block';
+  }
+
+  fileInput.addEventListener('change', function() { if (this.files[0]) setFile(this.files[0]); });
+  zone.addEventListener('dragover',  function(e) { e.preventDefault(); zone.classList.add('dragover'); });
+  zone.addEventListener('dragleave', function()  { zone.classList.remove('dragover'); });
+  zone.addEventListener('drop', function(e) {
+    e.preventDefault(); zone.classList.remove('dragover');
+    if (e.dataTransfer.files[0]) setFile(e.dataTransfer.files[0]);
+  });
+})();
+
+// Profession → affiliation row
+document.getElementById('sf-profession').addEventListener('change', function() {
+  var needsAffil = ['Teacher', 'Student', 'Researcher', 'Academic'].indexOf(this.value) !== -1;
+  var optlAffil  = ['Healthcare Professional', 'Engineering Professional', 'Public Service', 'Private Service', 'Other'].indexOf(this.value) !== -1;
+  var row = document.getElementById('sf-affil-row');
+  row.style.display = (needsAffil || optlAffil) ? 'flex' : 'none';
+  document.getElementById('sf-affil').required = needsAffil;
+  document.getElementById('sf-affil-star').style.display = needsAffil ? '' : 'none';
+});
+
+// Share form submit
+document.getElementById('share-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name  = document.getElementById('sf-name').value.trim();
+  var prof  = document.getElementById('sf-profession').value;
+  var affil = document.getElementById('sf-affil').value.trim();
+  var email = document.getElementById('sf-email').value.trim();
+  var affilReq = ['Teacher', 'Student', 'Researcher', 'Academic'].indexOf(prof) !== -1;
+  var ok = true;
+
+  [['sf-name', !name], ['sf-profession', !prof],
+   ['sf-affil', affilReq && !affil], ['sf-email', !isValidEmail(email)],
+   ['drop-zone', !_shareFile]].forEach(function(pair) {
+    var el = document.getElementById(pair[0]);
+    if (el) el.classList.toggle('form-input-error', pair[1]);
+    if (pair[1]) ok = false;
+  });
+
+  if (!ok) return;
+
+  var reader = new FileReader();
+  reader.onload = function() {
+    var base64 = reader.result.split(',')[1];
+    fetch(EPOCH_API_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({
+        type: 'article', name: name, profession: prof, affil: affil, email: email,
+        title: _shareFile.name.replace(/\.docx$/i, ''),
+        filename: _shareFile.name, fileBase64: base64
+      })
+    }).catch(function() {});
+    document.getElementById('sf-success').style.display = 'block';
+    _shareFile = null;
+  };
+  reader.readAsDataURL(_shareFile);
+});
+
+// ── Opinion form ──────────────────────────────────────────────────────────────
+document.getElementById('opinion-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name = document.getElementById('op-name').value.trim();
+  var text = document.getElementById('op-text').value.trim();
+  var ok   = true;
+  [['op-name', !name], ['op-text', !text]].forEach(function(pair) {
+    document.getElementById(pair[0]).classList.toggle('form-input-error', pair[1]);
+    if (pair[1]) ok = false;
+  });
+  if (!ok) return;
+
+  if (EPOCH_API_URL && !EPOCH_API_URL.includes('PASTE')) {
+    fetch(EPOCH_API_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ type: 'opinion', name: name, text: text })
+    }).catch(function() {});
+  }
+
+  // Optimistic prepend
+  _allOpinions.unshift({ name: name, text: text, ts: Date.now() });
+  renderOpinionsPreview();
+  document.getElementById('op-success').style.display = 'block';
+  document.getElementById('opinion-form').reset();
+});
+
+// ── Newsletter ────────────────────────────────────────────────────────────────
+document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var input = document.getElementById('nl-email');
+  var email = input.value.trim();
+  if (!isValidEmail(email)) { input.classList.add('form-input-error'); return; }
+  input.classList.remove('form-input-error');
+
+  if (typeof FORMSPREE_URL !== 'undefined' && FORMSPREE_URL && !FORMSPREE_URL.includes('PASTE')) {
+    fetch(FORMSPREE_URL, {
+      method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, _subject: 'Newsletter Signup' })
+    }).catch(function() {});
+  }
+
+  document.getElementById('newsletter-form').style.display = 'none';
+  document.getElementById('nl-success').style.display = 'block';
+});
+document.getElementById('nl-email').addEventListener('input', function() {
+  this.classList.remove('form-input-error');
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+initNav('community');
+</script>
+
+</body>
+</html>

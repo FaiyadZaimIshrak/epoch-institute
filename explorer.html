@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var l=localStorage.getItem('epoch-lang');if(l==='bn')document.documentElement.classList.add('bangla-mode-init');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empire Explorer — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Explore the rise and fall of 94 empires across five millennia with interactive trajectory charts.">
+<meta property="og:title" content="Empire Explorer — The Epoch Institute">
+<meta property="og:description" content="Interactive civilisational data: 94 empires, five millennia of rise and fall.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/explorer.html">
+<link rel="canonical" href="https://the-epoch-institute.org/explorer.html">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<section id="explorer">
+  <div class="explorer-header">
+    <p class="explorer-label" data-i18n="exp_label">Interactive Explorer</p>
+    <h2 class="explorer-title" data-i18n="exp_title">The Rise &amp; Fall of Empires</h2>
+    <p class="explorer-description" data-i18n="exp_desc">Ninety-four civilizations. Five millennia. Each trajectory scaled to its own peak — so you can compare not absolute size, but the shape of a civilization's story. Use the controls below to filter by region, era, or search for a specific empire.</p>
+    <p class="explorer-method-note">Power scores are normalized indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. Each trajectory is drawn from peer-reviewed sources cited in the Empire Profiles.</p>
+  </div>
+
+  <div class="controls">
+    <div class="region-tabs" id="region-tabs">
+      <button class="tab" data-region="All" data-i18n="tab_all">All Regions</button>
+      <button class="tab" data-region="Ancient Near East" data-i18n="tab_ane">Ancient Near East</button>
+      <button class="tab" data-region="Egypt &amp; North Africa" data-i18n="tab_ena">Egypt &amp; N. Africa</button>
+      <button class="tab" data-region="Sub-Saharan Africa" data-i18n="tab_ssa">Sub-Saharan Africa</button>
+      <button class="tab" data-region="Europe" data-i18n="tab_eur">Europe</button>
+      <button class="tab" data-region="Islamic Caliphates &amp; Middle East" data-i18n="tab_isl">Islamic &amp; Middle East</button>
+      <button class="tab" data-region="Central &amp; East Asia" data-i18n="tab_cea">Central &amp; East Asia</button>
+      <button class="tab" data-region="South &amp; Southeast Asia" data-i18n="tab_sea">South &amp; SE Asia</button>
+      <button class="tab" data-region="Americas" data-i18n="tab_ame">Americas</button>
+    </div>
+    <div class="right-controls">
+      <div class="search-wrap">
+        <input type="text" id="empire-search" placeholder="Search empire…" data-i18n="search_placeholder">
+        <button class="clear-btn" id="clear-search">✕</button>
+      </div>
+      <select class="era-select" id="era-select">
+        <option value="" disabled selected data-i18n="era_placeholder">— Select Era —</option>
+        <option value="all" data-i18n="era_all">Full Timeline</option>
+        <option value="ancient" data-i18n="era_ancient">Ancient (2700–500 BCE)</option>
+        <option value="classical" data-i18n="era_classical">Classical (500 BCE–500 CE)</option>
+        <option value="medieval" data-i18n="era_medieval">Medieval (500–1400 CE)</option>
+        <option value="early-modern" data-i18n="era_earlymodern">Early Modern (1400–1800 CE)</option>
+        <option value="modern" data-i18n="era_modern">Modern (1800–1980 CE)</option>
+      </select>
+      <label class="toggle-labels">
+        <input type="checkbox" id="toggle-events"> <span data-i18n="events">Events</span>
+      </label>
+      <label class="toggle-labels">
+        <input type="checkbox" id="toggle-labels"> <span data-i18n="labels">Labels</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="playback-bar" id="playback-bar" style="display:none">
+    <button class="play-btn" id="play-btn">▶</button>
+    <div class="play-year-display" id="play-year">—</div>
+    <input type="range" class="play-scrubber" id="play-scrubber" min="0" max="100" value="0" step="0.1">
+    <button class="play-reset-btn" id="play-reset">⟳</button>
+  </div>
+
+  <div class="minimap-wrapper" id="minimap-wrapper" style="display:none">
+    <div id="minimap"></div>
+  </div>
+
+  <div class="chart-wrapper">
+    <button id="zoom-reset-btn" class="zoom-reset-btn" data-i18n="zoom_out">← Zoom Out</button>
+    <div id="chart-guide" class="visible">
+      <span class="guide-ornament"></span>
+      <p class="guide-title" data-i18n="guide_title">Begin Your Exploration</p>
+      <p class="guide-body" data-i18n="guide_body">Select a region tab and an era above to reveal the trajectories of civilizations across time.</p>
+      <div class="guide-steps">
+        <span class="guide-step" data-i18n="guide_step1">① Choose a Region</span>
+        <span class="guide-step-sep">→</span>
+        <span class="guide-step" data-i18n="guide_step2">② Choose an Era</span>
+        <span class="guide-step-sep">→</span>
+        <span class="guide-step" data-i18n="guide_step3">③ Explore</span>
+      </div>
+    </div>
+    <div id="chart"></div>
+  </div>
+
+  <div class="legend" id="legend"></div>
+</section>
+
+<div id="info-panel" class="info-panel">
+  <button class="info-close" id="info-close">✕</button>
+  <div class="info-region" id="info-region"></div>
+  <div class="info-emblem" id="info-emblem" style="display:none">
+    <img id="info-emblem-img" src="" alt="" onerror="this.parentElement.style.display='none'">
+  </div>
+  <h3 class="info-name" id="info-name"></h3>
+  <div class="info-stats">
+    <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val" id="info-peak"></span></div>
+    <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val" id="info-duration"></span></div>
+  </div>
+  <div class="info-ornament"></div>
+  <p class="info-summary" id="info-summary"></p>
+  <div class="info-share-row">
+    <span class="info-share-label">Share:</span>
+    <button class="info-share-btn" id="info-share-x" aria-label="Share on X">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.6 1.5h2.3L9.8 7.2 15.5 14.5h-4.3L7.8 10.1l-4 4.4H1.5l5.4-6.1L1 1.5h4.4l3.3 4.2zM11.8 13.3h1.3L4.3 2.8H2.9z" fill="currentColor"/>
+      </svg>
+    </button>
+    <button class="info-share-btn" id="info-share-li" aria-label="Share on LinkedIn">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.5 3.174 2.5 3.883c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+  <a href="#" id="info-view-profile" class="hero-cta" style="display:block;text-align:center;font-size:11px;margin-top:14px;">View Full Profile →</a>
+  <div id="info-divider2" class="info-ornament" style="display:none; margin-top:8px"></div>
+  <div id="info-compare-section" style="display:none; flex-direction:column; gap:12px">
+    <div class="info-region" id="info-compare-region"></div>
+    <h3 class="info-name" id="info-compare-name"></h3>
+    <div class="info-stats">
+      <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val" id="info-compare-peak"></span></div>
+      <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val" id="info-compare-duration"></span></div>
+    </div>
+    <div class="info-ornament"></div>
+    <p class="info-summary" id="info-compare-summary"></p>
+  </div>
+</div>
+
+<div id="crosshair-tip"></div>
+<div id="event-tooltip"></div>
+<div id="tooltip"></div>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+initNav('explorer');
+
+// ── Google Drive config for empire emblems ─────────────────────────────────
+const GDRIVE_FOLDER_ID = "1ZCKyZSlOkpv5BYHiDZVsOShv1B5aG5Xg";
+const GDRIVE_API_KEY   = "AIzaSyBR5wx7et8NPsxA51vuR4zxlQlSlU9-a2A";
+
+let _driveFolderPromise = null;
+function loadDriveFolder() {
+  if (_driveFolderPromise) return _driveFolderPromise;
+  _driveFolderPromise = (async () => {
+    const map = {};
+    if (!GDRIVE_FOLDER_ID || GDRIVE_FOLDER_ID === "PASTE_FOLDER_ID_HERE") return map;
+    let pageToken = "";
+    do {
+      const params = new URLSearchParams({
+        q: `'${GDRIVE_FOLDER_ID}' in parents`,
+        fields: "nextPageToken,files(id,name,thumbnailLink)",
+        pageSize: "1000",
+        key: GDRIVE_API_KEY
+      });
+      if (pageToken) params.set("pageToken", pageToken);
+      try {
+        const r = await fetch(`https://www.googleapis.com/drive/v3/files?${params}`);
+        const d = await r.json();
+        if (d.files) {
+          for (const f of d.files) {
+            const key = f.name.replace(/\.[^/.]+$/, "").trim().toLowerCase();
+            map[key] = { id: f.id, thumb: f.thumbnailLink || null };
+          }
+        }
+        pageToken = d.nextPageToken || "";
+      } catch(e) { pageToken = ""; }
+    } while (pageToken);
+    return map;
+  })();
+  return _driveFolderPromise;
+}
+
+const emblemCache = {};
+async function fetchEmblem(empName) {
+  if (empName in emblemCache) return emblemCache[empName];
+  let url = null;
+  try {
+    const driveMap = await loadDriveFolder();
+    const key = empName.trim().toLowerCase();
+    if (driveMap[key]) {
+      url = driveMap[key].thumb || `https://drive.google.com/uc?export=view&id=${driveMap[key].id}`;
+    }
+  } catch(e) {}
+  emblemCache[empName] = url || false;
+  return url || false;
+}
+
+// ── State ──────────────────────────────────────────────────────────────────
+let _lastEventWasTouch = false;
+document.addEventListener("touchstart", () => { _lastEventWasTouch = true; }, { passive: true });
+document.addEventListener("mousedown",  () => { _lastEventWasTouch = false; }, { passive: true });
+
+let activeRegion = null;
+let soloEmpire = null;
+let compareEmpire = null;
+let showLabels = false;
+let showEvents = false;
+let xRange = null;
+let viewDomain = null;
+let searchTerm = "";
+let playYear = null;
+let playTimer = null;
+let isPlaying = false;
+
+// ── Layout ─────────────────────────────────────────────────────────────────
+const margin = { top: 20, right: 24, bottom: 48, left: 44 };
+let W, H, innerW, innerH;
+
+const container = document.getElementById("chart");
+const svg = d3.select("#chart").append("svg");
+const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+const defs = svg.append("defs");
+defs.append("clipPath").attr("id","chart-clip")
+  .append("rect").attr("x",0).attr("y",0);
+
+const xAxisG = g.append("g").attr("class","axis x-axis");
+const yAxisG = g.append("g").attr("class","axis y-axis");
+const gridG = g.append("g").attr("class","grid");
+const eraBandsG = g.append("g").attr("class","era-bands");
+const areaG = g.append("g").attr("class","areas");
+const linesG = g.append("g").attr("class","lines").attr("clip-path","url(#chart-clip)");
+const dotsG = g.append("g").attr("class","dots").attr("clip-path","url(#chart-clip)");
+const labelsG = g.append("g").attr("class","empire-labels");
+const peaksG = g.append("g").attr("class","peaks");
+const crosshairG = g.append("g").attr("class","crosshair-group");
+
+const xScale = d3.scaleLinear();
+const yScale = d3.scaleLinear().domain([0, 10]);
+
+const lineGen = d3.line()
+  .x(d => xScale(d[0]))
+  .y(d => yScale(d[1]))
+  .curve(d3.curveCatmullRom.alpha(0.5));
+
+const areaGen = d3.area()
+  .x(d => xScale(d[0]))
+  .y0(d => yScale(0))
+  .y1(d => yScale(d[1]))
+  .curve(d3.curveCatmullRom.alpha(0.5));
+
+const tooltip = document.getElementById("tooltip");
+
+// ── Helper functions ───────────────────────────────────────────────────────
+function formatYear(y) {
+  if (y < 0) return `${Math.abs(Math.round(y))} BCE`;
+  return `${Math.round(y)} CE`;
+}
+
+function getEffectiveDomain() {
+  return viewDomain || xRange || ERAS.all;
+}
+
+function isVisible(empire) {
+  if (activeRegion !== null && activeRegion !== "All" && empire.region !== activeRegion) return false;
+  const [x0, x1] = getEffectiveDomain();
+  return empire.points.some(p => p[0] >= x0 && p[0] <= x1);
+}
+
+function getPointsInRange(empire) {
+  const effectivePts = (playYear !== null)
+    ? empire.points.filter(p => p[0] <= playYear)
+    : empire.points;
+  if (!effectivePts.length) return [];
+  if (soloEmpire === empire.name) return effectivePts;
+  const [x0, x1] = getEffectiveDomain();
+  return effectivePts.filter((p, i, arr) => {
+    const inRange = p[0] >= x0 && p[0] <= x1;
+    const prevIn = i > 0 && arr[i-1][0] >= x0 && arr[i-1][0] <= x1;
+    const nextIn = i < arr.length-1 && arr[i+1][0] >= x0 && arr[i+1][0] <= x1;
+    return inRange || prevIn || nextIn;
+  });
+}
+
+function getLineOpacity(d) {
+  if (soloEmpire) {
+    if (d.name === soloEmpire || d.name === compareEmpire) return 1;
+    return 0.04;
+  }
+  if (searchTerm) return d.name.toLowerCase().includes(searchTerm) ? 0.95 : 0.06;
+  return 0.75;
+}
+
+function positionTooltip(evTip, mx, my) {
+  const panelOpen = document.getElementById("info-panel").classList.contains("open");
+  const rightBound = panelOpen ? window.innerWidth - 310 : window.innerWidth - 10;
+  const tipW = 280;
+  const tx = (mx + 14 + tipW > rightBound) ? Math.max(0, mx - 14 - tipW) : mx + 14;
+  evTip.style.left = tx + "px";
+  evTip.style.top = Math.max(10, Math.min(my - 10, window.innerHeight - 300)) + "px";
+}
+
+// ── Playback ───────────────────────────────────────────────────────────────
+function getPlayRange() {
+  return xRange || ERAS.all;
+}
+
+function setPlayYear(yr) {
+  playYear = yr;
+  const [start, end] = getPlayRange();
+  const pct = ((yr - start) / (end - start)) * 100;
+  document.getElementById("play-scrubber").value = pct;
+  document.getElementById("play-year").textContent = formatYear(yr);
+  render();
+}
+
+function startPlay() {
+  if (isPlaying) return;
+  isPlaying = true;
+  document.getElementById("play-btn").textContent = "⏸";
+  const [start, end] = getPlayRange();
+  if (playYear === null || playYear >= end) playYear = start;
+  const totalMs = 12000;
+  const range = end - start;
+  let lastTime = null;
+  playTimer = d3.timer(elapsed => {
+    if (!isPlaying) { playTimer.stop(); return; }
+    if (lastTime === null) lastTime = elapsed;
+    const dt = elapsed - lastTime;
+    lastTime = elapsed;
+    playYear = Math.min(end, playYear + (range * dt / totalMs));
+    setPlayYear(playYear);
+    if (playYear >= end) stopPlay();
+  });
+}
+
+function stopPlay() {
+  isPlaying = false;
+  if (playTimer) { playTimer.stop(); playTimer = null; }
+  document.getElementById("play-btn").textContent = "▶";
+}
+
+// ── Minimap ────────────────────────────────────────────────────────────────
+const mmMargin = {top:4, right:24, bottom:16, left:44};
+const mmH = 48;
+let mmSvg, mmX, mmBrush, mmBrushG;
+
+function buildMinimap() {
+  const wrapper = document.getElementById("minimap");
+  wrapper.innerHTML = "";
+  const W2 = wrapper.clientWidth || container.clientWidth;
+  const mmInnerW = W2 - mmMargin.left - mmMargin.right;
+  const mmInnerH = mmH - mmMargin.top - mmMargin.bottom;
+
+  mmSvg = d3.select("#minimap").append("svg").attr("width", W2).attr("height", mmH);
+  const mmG = mmSvg.append("g").attr("transform",`translate(${mmMargin.left},${mmMargin.top})`);
+
+  mmX = d3.scaleLinear().domain(ERAS.all).range([0, mmInnerW]);
+  const mmY = d3.scaleLinear().domain([0,10]).range([mmInnerH, 0]);
+  const mmLine = d3.line().x(d=>mmX(d[0])).y(d=>mmY(d[1])).curve(d3.curveCatmullRom.alpha(0.5));
+
+  const filtered = activeRegion && activeRegion !== "All"
+    ? EMPIRES.filter(e => e.region === activeRegion)
+    : EMPIRES;
+
+  filtered.forEach(emp => {
+    mmG.append("path").datum(emp.points)
+      .attr("fill","none").attr("stroke",emp.color)
+      .attr("stroke-width",0.5).attr("opacity",0.3)
+      .attr("d", mmLine);
+  });
+
+  mmG.append("g").attr("transform",`translate(0,${mmInnerH})`).call(
+    d3.axisBottom(mmX).ticks(8).tickFormat(y => { const v=Math.round(y); return v<0?`${Math.abs(v)}B`:`${v}`; }).tickSize(3)
+  ).selectAll("text").attr("fill","var(--muted)").attr("font-size","8px");
+  mmG.select(".domain").attr("stroke","var(--border)");
+
+  mmBrush = d3.brushX()
+    .extent([[0,0],[mmInnerW, mmInnerH]])
+    .on("brush end", ({selection, sourceEvent}) => {
+      if (!sourceEvent) return;
+      if (!selection) return;
+      const [x0, x1] = selection.map(mmX.invert);
+      xRange = [x0, x1];
+      viewDomain = null;
+      soloEmpire = null;
+      compareEmpire = null;
+      stopPlay();
+      playYear = null;
+      updateZoomButton();
+      document.getElementById("era-select").value = "";
+      render();
+      encodeState();
+    });
+
+  mmBrushG = mmG.append("g").attr("class","brush").call(mmBrush);
+  mmBrushG.select(".selection")
+    .attr("fill","var(--gold)").attr("fill-opacity",0.15)
+    .attr("stroke","var(--gold)").attr("stroke-width",1);
+
+  updateMinimapBrush();
+}
+
+function updateMinimapBrush() {
+  if (!mmBrush || !mmBrushG || !xRange) return;
+  const [x0,x1] = xRange;
+  if (!mmX) return;
+  mmBrushG.call(mmBrush.move, [mmX(x0), mmX(x1)]);
+}
+
+// ── URL State ──────────────────────────────────────────────────────────────
+function encodeState() {
+  const era = Object.entries(ERAS).find(([k,v]) => xRange && v[0]===xRange[0] && v[1]===xRange[1]);
+  const parts = [
+    activeRegion || "",
+    era ? era[0] : "",
+    soloEmpire || ""
+  ];
+  history.replaceState(null, "", "#" + parts.map(encodeURIComponent).join("/"));
+}
+
+function decodeState() {
+  const hash = location.hash.slice(1);
+  if (!hash) return;
+  const [region, era, empire] = hash.split("/").map(decodeURIComponent);
+  if (region) {
+    activeRegion = region;
+    document.querySelectorAll(".tab").forEach(t => {
+      t.classList.toggle("active", t.dataset.region === region);
+    });
+  }
+  if (era && ERAS[era]) {
+    xRange = ERAS[era];
+    document.getElementById("era-select").value = era;
+  }
+  if (empire) {
+    soloEmpire = empire;
+    const emp = EMPIRES.find(e => e.name === empire);
+    if (emp) {
+      const pts = emp.points;
+      const pad = (pts[pts.length-1][0] - pts[0][0]) * 0.04;
+      viewDomain = [pts[0][0] - pad, pts[pts.length-1][0] + pad];
+    }
+  }
+}
+
+// ── Info panel ─────────────────────────────────────────────────────────────
+function updateInfoPanel() {
+  const panel = document.getElementById("info-panel");
+  const compareSection = document.getElementById("info-compare-section");
+  const divider2 = document.getElementById("info-divider2");
+
+  if (!soloEmpire) {
+    panel.classList.remove("open");
+    document.body.classList.remove("panel-open");
+    compareSection.style.display = "none";
+    divider2.style.display = "none";
+    setTimeout(() => { resize(); buildMinimap(); }, 420);
+    return;
+  }
+
+  const emp = EMPIRES.find(e => e.name === soloEmpire);
+  if (!emp) return;
+  const pts = emp.points;
+  const peak = pts.reduce((a,b) => b[1]>a[1]?b:a);
+  const duration = Math.round(pts[pts.length-1][0] - pts[0][0]);
+  document.getElementById("info-region").textContent = emp.region;
+  document.getElementById("info-name").textContent = emp.name;
+
+  const emblemEl = document.getElementById("info-emblem");
+  const emblemImg = document.getElementById("info-emblem-img");
+  emblemEl.style.display = "none";
+  fetchEmblem(emp.name).then(url => {
+    if (url && document.getElementById("info-name").textContent === emp.name) {
+      emblemImg.src = url;
+      emblemImg.alt = emp.name;
+      emblemEl.style.display = "flex";
+    }
+  });
+  document.getElementById("info-peak").textContent = formatYear(peak[0]);
+  document.getElementById("info-duration").textContent = `${Math.abs(duration)} years`;
+  document.getElementById("info-summary").textContent = EMPIRE_INFO[emp.name] || "Historical data for this empire is being compiled.";
+
+  // Update profile link
+  document.getElementById("info-view-profile").href = "/empire/" + toSlug(emp.name) + ".html";
+
+  if (compareEmpire) {
+    const emp2 = EMPIRES.find(e => e.name === compareEmpire);
+    if (emp2) {
+      const pts2 = emp2.points;
+      const peak2 = pts2.reduce((a,b) => b[1]>a[1]?b:a);
+      const duration2 = Math.round(pts2[pts2.length-1][0] - pts2[0][0]);
+      document.getElementById("info-compare-region").textContent = emp2.region;
+      document.getElementById("info-compare-name").textContent = emp2.name;
+      document.getElementById("info-compare-peak").textContent = formatYear(peak2[0]);
+      document.getElementById("info-compare-duration").textContent = `${Math.abs(duration2)} years`;
+      document.getElementById("info-compare-summary").textContent = EMPIRE_INFO[emp2.name] || "Historical data for this empire is being compiled.";
+      compareSection.style.display = "flex";
+      divider2.style.display = "block";
+    }
+  } else {
+    compareSection.style.display = "none";
+    divider2.style.display = "none";
+  }
+
+  const wasOpen = panel.classList.contains("open");
+  panel.classList.add("open");
+  document.body.classList.add("panel-open");
+  if (!wasOpen) setTimeout(() => { resize(); buildMinimap(); }, 420);
+}
+
+// ── Tooltips ───────────────────────────────────────────────────────────────
+function showTooltip(event, d) {
+  const [mx, my] = d3.pointer(event, document.body);
+  const pts = getPointsInRange(d);
+  const mouseX = xScale.invert(d3.pointer(event, g.node())[0]);
+  const closest = pts.reduce((a,b) => Math.abs(b[0]-mouseX) < Math.abs(a[0]-mouseX) ? b : a);
+  const T = TRANSLATIONS[currentLang];
+  tooltip.innerHTML = `
+    <div class="tip-empire">${d.name}</div>
+    <div class="tip-region">${d.region}</div>
+    <div class="tip-row"><span>${T.tip_year}</span><span class="tip-val">${formatYear(closest[0])}</span></div>
+    <div class="tip-row"><span>${T.tip_power}</span><span class="tip-val">${closest[1].toFixed(1)}</span></div>
+  `;
+  tooltip.classList.add("visible");
+  const tx = Math.min(mx + 14, window.innerWidth - 240);
+  const ty = Math.min(my - 10, window.innerHeight - 120);
+  tooltip.style.left = tx + "px";
+  tooltip.style.top = ty + "px";
+}
+function hideTooltip() { tooltip.classList.remove("visible"); }
+
+// ── Zoom ───────────────────────────────────────────────────────────────────
+function zoomTo(targetDomain, duration) {
+  viewDomain = targetDomain;
+  const fromDomain = xScale.domain().slice();
+  const tickCount = Math.max(4, Math.min(12, Math.round(innerW / 100)));
+  const fmtTick = y => { const v = Math.round(y); return v < 0 ? `${Math.abs(v)}BCE` : `${v}CE`; };
+  const t = d3.transition().duration(duration).ease(d3.easeCubicInOut);
+  svg.transition(t).tween("xzoom", () => {
+    const interp = d3.interpolate(fromDomain, targetDomain);
+    return ti => {
+      xScale.domain(interp(ti));
+      xAxisG.attr("transform", `translate(0,${innerH})`)
+        .call(d3.axisBottom(xScale).ticks(tickCount).tickFormat(fmtTick));
+      linesG.selectAll(".empire-line").attr("d", d => lineGen(getPointsInRange(d)));
+    };
+  });
+  t.on("end", () => { render(); updateZoomButton(); });
+}
+
+function updateZoomButton() {
+  document.getElementById("zoom-reset-btn").classList.toggle("visible", soloEmpire !== null);
+}
+
+function zoomToCompare() {
+  const e1 = EMPIRES.find(e => e.name === soloEmpire);
+  const e2 = EMPIRES.find(e => e.name === compareEmpire);
+  if (!e1 || !e2) return;
+  const allPts = [...e1.points, ...e2.points];
+  const minX = Math.min(...allPts.map(p => p[0]));
+  const maxX = Math.max(...allPts.map(p => p[0]));
+  const pad = (maxX - minX) * 0.04;
+  zoomTo([minX - pad, maxX + pad], 650);
+}
+
+function toggleSolo(name) {
+  const deselecting = soloEmpire === name;
+  soloEmpire = deselecting ? null : name;
+  if (deselecting) compareEmpire = null;
+  if (soloEmpire) {
+    const empire = EMPIRES.find(e => e.name === soloEmpire);
+    const pts = empire.points;
+    const minX = pts[0][0];
+    const maxX = pts[pts.length - 1][0];
+    const pad = (maxX - minX) * 0.04;
+    zoomTo([minX - pad, maxX + pad], 750);
+  } else {
+    viewDomain = null;
+    zoomTo(xRange || ERAS.all, 600);
+  }
+  updateLegendActive();
+  updateZoomButton();
+  updateInfoPanel();
+  encodeState();
+}
+
+function updateLegendActive() {
+  document.querySelectorAll(".legend-item").forEach(el => {
+    el.classList.remove("solo-active");
+    if (soloEmpire && el.dataset.name === soloEmpire) el.classList.add("solo-active");
+  });
+}
+
+function updateLegend(visible) {
+  const legend = document.getElementById("legend");
+  legend.innerHTML = "";
+  const grouped = {};
+  visible.forEach(e => {
+    if (!grouped[e.region]) grouped[e.region] = [];
+    grouped[e.region].push(e);
+  });
+  Object.entries(grouped).forEach(([region, empires]) => {
+    const div = document.createElement("div");
+    div.className = "legend-region";
+    div.innerHTML = `<div class="legend-region-title">${region}</div>`;
+    empires.sort((a, b) => a.points[0][0] - b.points[0][0]);
+    empires.forEach(empire => {
+      const item = document.createElement("div");
+      item.className = "legend-item" + (soloEmpire === empire.name ? " solo-active" : "");
+      item.dataset.name = empire.name;
+      item.title = "Click to isolate · Shift+click to compare";
+      item.innerHTML = `<div class="legend-swatch" style="background:${empire.color}"></div>${empire.name}`;
+      item.addEventListener("click", (event) => {
+        if (event.shiftKey && soloEmpire && soloEmpire !== empire.name) {
+          compareEmpire = compareEmpire === empire.name ? null : empire.name;
+          if (compareEmpire) zoomToCompare();
+          render();
+          updateLegendActive();
+          updateInfoPanel();
+        } else {
+          compareEmpire = null;
+          toggleSolo(empire.name);
+        }
+      });
+      div.appendChild(item);
+    });
+    legend.appendChild(div);
+  });
+}
+
+// ── Resize ─────────────────────────────────────────────────────────────────
+function resize() {
+  W = container.clientWidth;
+  H = Math.max(480, Math.min(600, window.innerHeight * 0.55));
+  innerW = W - margin.left - margin.right;
+  innerH = H - margin.top - margin.bottom;
+  svg.attr("width", W).attr("height", H);
+  xScale.range([0, innerW]);
+  yScale.range([innerH, 0]);
+  svg.select("#chart-clip rect").attr("width", innerW).attr("height", innerH + 10);
+  render();
+}
+
+// ── Render ─────────────────────────────────────────────────────────────────
+function render() {
+  const guide = document.getElementById("chart-guide");
+  if (activeRegion === null || xRange === null) {
+    linesG.selectAll("*").remove();
+    dotsG.selectAll("*").remove();
+    labelsG.selectAll("*").remove();
+    eraBandsG.selectAll("*").remove();
+    areaG.selectAll("*").remove();
+    peaksG.selectAll("*").remove();
+    crosshairG.selectAll("*").remove();
+    xAxisG.selectAll("*").remove();
+    yAxisG.selectAll("*").remove();
+    gridG.selectAll("*").remove();
+    svg.selectAll(".axis-label-x,.axis-label-y").remove();
+    guide.classList.add("visible");
+    updateLegend([]);
+    document.getElementById("playback-bar").style.display = "none";
+    document.getElementById("minimap-wrapper").style.display = "none";
+    return;
+  }
+  guide.classList.remove("visible");
+  document.getElementById("playback-bar").style.display = (activeRegion && xRange) ? "flex" : "none";
+  document.getElementById("minimap-wrapper").style.display = activeRegion ? "block" : "none";
+
+  xScale.domain(getEffectiveDomain());
+  yScale.domain([0, 10]);
+
+  const tickCount = Math.max(4, Math.min(12, Math.round(innerW / 100)));
+  xAxisG.attr("transform", `translate(0,${innerH})`).call(
+    d3.axisBottom(xScale).ticks(tickCount).tickFormat(y => {
+      const v = Math.round(y);
+      if (v < 0) return `${Math.abs(v)}BCE`;
+      return `${v}CE`;
+    })
+  );
+  yAxisG.call(d3.axisLeft(yScale).ticks(5).tickFormat(d => d));
+  gridG.call(d3.axisLeft(yScale).ticks(5).tickSize(-innerW).tickFormat(""));
+
+  svg.selectAll(".axis-label-x").remove();
+  svg.selectAll(".axis-label-y").remove();
+  svg.append("text").attr("class","axis-label axis-label-x")
+    .attr("x", margin.left + innerW/2).attr("y", H - 4)
+    .attr("text-anchor","middle").text(TRANSLATIONS[currentLang].axis_year);
+  svg.append("text").attr("class","axis-label axis-label-y")
+    .attr("transform",`translate(10,${margin.top + innerH/2}) rotate(-90)`)
+    .attr("text-anchor","middle").text(TRANSLATIONS[currentLang].axis_power);
+
+  eraBandsG.selectAll("*").remove();
+  const [ed0, ed1] = getEffectiveDomain();
+  const eraMarkers = [-2000,-1000,0,500,1000,1500,1800];
+  eraMarkers.forEach(yr => {
+    if (yr < ed0 || yr > ed1) return;
+    const x = xScale(yr);
+    eraBandsG.append("line")
+      .attr("x1",x).attr("x2",x).attr("y1",0).attr("y2",innerH)
+      .attr("stroke","#3a3d4a").attr("stroke-width",1).attr("stroke-dasharray","4,4").attr("opacity",0.5);
+    eraBandsG.append("text").attr("class","era-label-text")
+      .attr("x",x+3).attr("y",12).text(formatYear(yr));
+  });
+
+  areaG.selectAll("*").remove();
+  if (soloEmpire) {
+    const emp = EMPIRES.find(e => e.name === soloEmpire);
+    if (emp) {
+      const gradId = "area-grad-" + emp.name.replace(/\s+/g,"_");
+      let defs2 = svg.select("defs");
+      if (defs2.empty()) defs2 = svg.insert("defs","g");
+      defs2.selectAll("#" + gradId).remove();
+      const grad = defs2.append("linearGradient")
+        .attr("id", gradId).attr("x1","0").attr("y1","0").attr("x2","0").attr("y2","1");
+      grad.append("stop").attr("offset","0%").attr("stop-color", emp.color).attr("stop-opacity", 0.22);
+      grad.append("stop").attr("offset","100%").attr("stop-color", emp.color).attr("stop-opacity", 0);
+      areaG.append("path")
+        .datum(getPointsInRange(emp))
+        .attr("fill", `url(#${gradId})`)
+        .attr("d", areaGen);
+    }
+  }
+
+  const eventsG_sel = g.selectAll(".event-marker").data(showEvents ? EVENTS.filter(ev => { const [x0,x1]=getEffectiveDomain(); return ev.year>=x0&&ev.year<=x1; }) : []);
+  eventsG_sel.exit().remove();
+  const evEnter = eventsG_sel.enter().append("g").attr("class","event-marker");
+  evEnter.append("line").attr("y1",0).attr("stroke-dasharray","2,6");
+  evEnter.append("polygon").attr("class","event-tick").attr("points","-5,-14 5,-14 0,-5");
+  const evMerge = eventsG_sel.merge(evEnter);
+  evMerge.attr("transform", d => `translate(${xScale(d.year)},0)`);
+  evMerge.select("line").attr("y1",0).attr("y2",innerH);
+  evMerge.on("mouseover", function(event, d) {
+    const evTip = document.getElementById("event-tooltip");
+    if (!this.classList.contains("ev-active")) {
+      evTip.innerHTML = `<div class="event-tip-label">${d.label}</div><div class="event-tip-year">${formatYear(d.year)}</div>`;
+      const [mx, my] = d3.pointer(event, document.body);
+      positionTooltip(evTip, mx, my);
+      evTip.classList.add("visible");
+    }
+  }).on("mouseleave", function() {
+    if (!this.classList.contains("ev-active")) {
+      document.getElementById("event-tooltip").classList.remove("visible");
+    }
+  }).on("click", function(event, d) {
+    event.stopPropagation();
+    const evTip = document.getElementById("event-tooltip");
+    const isActive = this.classList.contains("ev-active");
+    g.selectAll(".event-marker").classed("ev-active", false);
+    if (!isActive) {
+      this.classList.add("ev-active");
+      evTip.innerHTML = `<div class="event-tip-label">${d.label}</div><div class="event-tip-year">${formatYear(d.year)}</div><div class="event-tip-desc">${d.desc}</div>`;
+      const [mx, my] = d3.pointer(event, document.body);
+      positionTooltip(evTip, mx, my);
+      evTip.classList.add("visible");
+    } else {
+      evTip.classList.remove("visible");
+    }
+  });
+
+  const visible = EMPIRES.filter(isVisible);
+
+  const linesSel = linesG.selectAll(".empire-line").data(visible, d => d.name);
+  linesSel.exit().remove();
+  const linesEnter = linesSel.enter().append("path").attr("class","empire-line");
+  const linesMerge = linesEnter.merge(linesSel);
+  linesMerge
+    .attr("d", d => lineGen(getPointsInRange(d)))
+    .attr("stroke", d => d.color)
+    .attr("stroke-opacity", d => getLineOpacity(d))
+    .attr("stroke-width", d => (soloEmpire === d.name || compareEmpire === d.name) ? 2.8 : 1.5)
+    .on("mousemove", (event, d) => showTooltip(event, d))
+    .on("mouseleave", hideTooltip)
+    .on("click", (event, d) => {
+      if (event.shiftKey && soloEmpire && soloEmpire !== d.name) {
+        compareEmpire = compareEmpire === d.name ? null : d.name;
+        if (compareEmpire) zoomToCompare();
+        render();
+        updateLegendActive();
+        updateInfoPanel();
+      } else {
+        compareEmpire = null;
+        if (_lastEventWasTouch && soloEmpire === d.name) return;
+        toggleSolo(d.name);
+      }
+    });
+
+  dotsG.selectAll("*").remove();
+  if (soloEmpire || searchTerm) {
+    const dotEmpires = soloEmpire
+      ? visible.filter(e => e.name === soloEmpire)
+      : visible.filter(e => e.name.toLowerCase().includes(searchTerm));
+    dotEmpires.forEach(empire => {
+      empire.points.filter(p => p[0] >= xRange[0] && p[0] <= xRange[1]).forEach(p => {
+        const desc = POINT_DESCS[empire.name + "|" + Math.round(p[0])];
+        dotsG.append("circle")
+          .datum({ empire, p, desc })
+          .attr("cx", xScale(p[0])).attr("cy", yScale(p[1]))
+          .attr("r", 4)
+          .attr("fill", empire.color)
+          .attr("stroke", "#0b0c10").attr("stroke-width", 1)
+          .attr("opacity", 0.9)
+          .style("cursor", desc ? "pointer" : "default")
+          .on("mouseover", function(event, d) {
+            if (!d.desc) return;
+            const evTip = document.getElementById("event-tooltip");
+            if (evTip.classList.contains("dot-pinned")) return;
+            evTip.innerHTML = `<div class="event-tip-label">${d.empire.name}</div><div class="event-tip-year">${formatYear(d.p[0])}</div><div class="event-tip-desc">${d.desc}</div>`;
+            const [mx, my] = d3.pointer(event, document.body);
+            positionTooltip(evTip, mx, my);
+            evTip.classList.add("visible");
+          })
+          .on("mouseleave", function() {
+            const evTip = document.getElementById("event-tooltip");
+            if (!evTip.classList.contains("dot-pinned")) evTip.classList.remove("visible");
+          })
+          .on("click", function(event, d) {
+            event.stopPropagation();
+            if (!d.desc) return;
+            const evTip = document.getElementById("event-tooltip");
+            const isPinned = evTip.classList.contains("dot-pinned") && evTip._pinnedDot === this;
+            evTip.classList.remove("dot-pinned", "visible");
+            evTip._pinnedDot = null;
+            if (!isPinned) {
+              evTip.innerHTML = `<div class="event-tip-label">${d.empire.name}</div><div class="event-tip-year">${formatYear(d.p[0])}</div><div class="event-tip-desc">${d.desc}</div>`;
+              const [mx, my] = d3.pointer(event, document.body);
+              positionTooltip(evTip, mx, my);
+              evTip.classList.add("visible", "dot-pinned");
+              evTip._pinnedDot = this;
+            }
+          });
+      });
+    });
+  }
+
+  labelsG.selectAll("*").remove();
+  if (showLabels) {
+    const labelEmpires = soloEmpire
+      ? visible.filter(e => e.name === soloEmpire)
+      : searchTerm ? visible.filter(e => e.name.toLowerCase().includes(searchTerm)) : visible;
+    labelEmpires.forEach(empire => {
+      const pts = getPointsInRange(empire);
+      if (!pts.length) return;
+      const peakPt = pts.reduce((a,b) => b[1] > a[1] ? b : a);
+      labelsG.append("text")
+        .attr("x", xScale(peakPt[0])).attr("y", yScale(peakPt[1]) - 7)
+        .attr("text-anchor","middle")
+        .attr("fill", empire.color)
+        .attr("font-family","'Crimson Pro', serif")
+        .attr("font-size", soloEmpire ? "12px" : "9px")
+        .attr("font-style","italic")
+        .attr("opacity", soloEmpire || searchTerm ? 1 : 0.7)
+        .text(empire.name);
+    });
+  }
+
+  peaksG.selectAll("*").remove();
+  const peakEmpires = soloEmpire ? visible.filter(e => e.name === soloEmpire || e.name === compareEmpire) : visible;
+  peakEmpires.forEach(emp => {
+    const pts = getPointsInRange(emp);
+    if (!pts.length) return;
+    const peak = pts.reduce((a,b) => b[1] > a[1] ? b : a);
+    peaksG.append("text")
+      .attr("x", xScale(peak[0])).attr("y", yScale(peak[1]) - 2)
+      .attr("text-anchor","middle")
+      .attr("font-size","10px")
+      .attr("fill", emp.color)
+      .attr("opacity", soloEmpire ? 1 : 0.6)
+      .attr("class","peak-marker")
+      .text("◆")
+      .append("title").text(`${emp.name} peak: ${formatYear(peak[0])}`);
+  });
+
+  crosshairG.selectAll("*").remove();
+  if (!soloEmpire) {
+    crosshairG.append("rect")
+      .attr("width", innerW).attr("height", innerH)
+      .attr("fill", "transparent")
+      .attr("class", "crosshair-overlay")
+      .on("mousemove", function(event) {
+        const [px] = d3.pointer(event);
+        const mouseX = xScale.invert(px);
+        crosshairG.selectAll(".crosshair-line").remove();
+        crosshairG.append("line")
+          .attr("class","crosshair-line")
+          .attr("x1",px).attr("x2",px).attr("y1",0).attr("y2",innerH)
+          .attr("stroke","var(--border)").attr("stroke-width",1).attr("stroke-dasharray","3,3").attr("opacity",0.5);
+      })
+      .on("mouseleave", () => crosshairG.selectAll(".crosshair-line").remove());
+  }
+
+  updateLegend(visible);
+}
+
+// ── Event Listeners ────────────────────────────────────────────────────────
+document.getElementById("region-tabs").addEventListener("click", e => {
+  if (!e.target.classList.contains("tab")) return;
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  e.target.classList.add("active");
+  activeRegion = e.target.dataset.region;
+  soloEmpire = null;
+  compareEmpire = null;
+  viewDomain = null;
+  stopPlay();
+  playYear = null;
+  updateZoomButton();
+  render();
+  buildMinimap();
+  encodeState();
+});
+
+document.getElementById("era-select").addEventListener("change", e => {
+  xRange = e.target.value ? (ERAS[e.target.value] || null) : null;
+  soloEmpire = null;
+  compareEmpire = null;
+  viewDomain = null;
+  stopPlay();
+  playYear = null;
+  updateZoomButton();
+  render();
+  encodeState();
+});
+
+document.getElementById("toggle-labels").addEventListener("change", e => {
+  showLabels = e.target.checked; render();
+});
+
+document.getElementById("toggle-events").addEventListener("change", e => {
+  showEvents = e.target.checked; render();
+});
+
+const searchInput = document.getElementById("empire-search");
+const clearBtn = document.getElementById("clear-search");
+searchInput.addEventListener("input", e => {
+  searchTerm = e.target.value.toLowerCase().trim();
+  clearBtn.classList.toggle("visible", searchTerm.length > 0);
+  soloEmpire = null;
+  render();
+});
+clearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  searchTerm = "";
+  clearBtn.classList.remove("visible");
+  render();
+});
+
+document.getElementById("zoom-reset-btn").addEventListener("click", () => {
+  if (soloEmpire) toggleSolo(soloEmpire);
+});
+
+window.addEventListener("resize", () => { resize(); buildMinimap(); });
+
+document.getElementById("play-btn").addEventListener("click", () => {
+  if (isPlaying) stopPlay(); else startPlay();
+});
+document.getElementById("play-reset").addEventListener("click", () => {
+  stopPlay();
+  playYear = null;
+  document.getElementById("play-year").textContent = "—";
+  document.getElementById("play-scrubber").value = 0;
+  render();
+});
+document.getElementById("play-scrubber").addEventListener("input", e => {
+  stopPlay();
+  const [start, end] = getPlayRange();
+  playYear = start + (parseFloat(e.target.value) / 100) * (end - start);
+  document.getElementById("play-year").textContent = formatYear(playYear);
+  render();
+});
+
+document.addEventListener("click", () => {
+  const evTip = document.getElementById("event-tooltip");
+  if (evTip) {
+    evTip.classList.remove("visible");
+    evTip.classList.remove("dot-pinned");
+    evTip._pinnedDot = null;
+  }
+  g.selectAll(".event-marker").classed("ev-active", false);
+});
+
+document.getElementById("info-close").addEventListener("click", () => {
+  if (soloEmpire) toggleSolo(soloEmpire);
+});
+
+document.getElementById("info-share-x").addEventListener("click", () => {
+  const name = document.getElementById("info-name").textContent;
+  const text = encodeURIComponent("I just explored the rise and fall of " + name + " on The Epoch Institute — an interactive civilisational research project.");
+  window.open("https://twitter.com/intent/tweet?text=" + text + "&url=https%3A%2F%2Fthe-epoch-institute.org&hashtags=history%2Cempires%2CEpochInstitute", "_blank");
+});
+document.getElementById("info-share-li").addEventListener("click", () => {
+  window.open("https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fthe-epoch-institute.org", "_blank");
+});
+
+document.getElementById("export-btn").addEventListener("click", () => {
+  const svgEl = document.querySelector("#chart svg");
+  if (!svgEl) return;
+  const serializer = new XMLSerializer();
+  let svgStr = serializer.serializeToString(svgEl);
+  svgStr = svgStr.replace("<svg", `<svg style="background:${getComputedStyle(document.documentElement).getPropertyValue("--bg").trim()}"`);
+  const blob = new Blob([svgStr], {type:"image/svg+xml"});
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  img.onload = () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = svgEl.clientWidth * 2;
+    canvas.height = svgEl.clientHeight * 2;
+    const ctx = canvas.getContext("2d");
+    ctx.scale(2,2);
+    ctx.drawImage(img, 0, 0);
+    URL.revokeObjectURL(url);
+    const a = document.createElement("a");
+    a.download = "epoch-institute-chart.png";
+    a.href = canvas.toDataURL("image/png");
+    a.click();
+  };
+  img.src = url;
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    if (soloEmpire) toggleSolo(soloEmpire);
+    return;
+  }
+  if (e.key === " " && activeRegion && xRange) {
+    e.preventDefault();
+    if (isPlaying) stopPlay(); else startPlay();
+    return;
+  }
+  if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+    const vis = EMPIRES.filter(isVisible);
+    if (!vis.length) return;
+    const idx = soloEmpire ? vis.findIndex(ev => ev.name === soloEmpire) : -1;
+    const next = e.key === "ArrowRight"
+      ? (idx + 1) % vis.length
+      : (idx - 1 + vis.length) % vis.length;
+    if (soloEmpire) { soloEmpire = null; viewDomain = null; }
+    compareEmpire = null;
+    toggleSolo(vis[next].name);
+  }
+});
+
+// ── Init ───────────────────────────────────────────────────────────────────
+decodeState();
+resize();
+buildMinimap();
+</script>
+</body>
+</html>
