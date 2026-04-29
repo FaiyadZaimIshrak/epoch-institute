@@ -1,6 +1,6 @@
 const EPOCH_API_URL  = 'https://script.google.com/macros/s/AKfycbzRw6c1ZiZy3PJS41zkz1QQHxaFog2ctVowALgfhL5zk_19kXkhGB0rlEUNeMMac3-xfg/exec';
 const FORMSPREE_URL  = 'https://formspree.io/f/mpqkezdj';
-const CONTRIB_APPLY_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+const CONTRIB_APPLY_URL = 'https://script.google.com/macros/s/AKfycbyFAiO53HJLGMHe4YpL7q1nfOoeGbRND1w7nnDTbGY4P49Zjl1tfKMHrUfnIK2rXTxpQg/exec';
 const ARTICLES_INITIAL_COUNT = 6;
 
 // ── Today in History dataset ──────────────────────────────────────────────────
