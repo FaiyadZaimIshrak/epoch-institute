@@ -1049,8 +1049,7 @@ document.addEventListener("keydown", e => {
 
 // ── Init ───────────────────────────────────────────────────────────────────
 decodeState();
-resize();
-buildMinimap();
+requestAnimationFrame(() => { resize(); buildMinimap(); });
 </script>
 </body>
 </html>
