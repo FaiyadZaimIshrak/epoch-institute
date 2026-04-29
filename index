@@ -75,8 +75,8 @@
   <p class="hero-tagline" data-i18n="hero_tagline">Understanding civilizational patterns to illuminate the present.</p>
   <p class="hero-mission" data-i18n="hero_mission">The Epoch Institute researches human civilization with objectivity and curiosity — studying the rise and fall of empires, examining the real-time implications of historical events, and tracing how the past shapes modern society. We make the story of humanity not just informative, but compelling. History is not a closed book; it is the foundation of everything around us.</p>
 
-  <a href="/explorer.html" class="hero-cta">Explore the Data →</a>
-  <a href="/research.html" class="hero-secondary-cta">Browse Research Projects →</a>
+  <a href="/explorer" class="hero-cta">Explore the Data →</a>
+  <a href="/research" class="hero-secondary-cta">Browse Research Projects →</a>
 
   <div id="tih-card" class="tih-card" style="display:none;">
     <div class="tih-date-row">

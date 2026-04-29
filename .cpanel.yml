@@ -3,5 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/theeiorh/public_html/
     - /bin/cp -R *.html *.css *.js .htaccess $DEPLOYPATH
+    - /bin/cp index about research research-series profiles community contributors dataset explorer $DEPLOYPATH
     - /bin/cp -R empire $DEPLOYPATH
     - /bin/cp -R logos $DEPLOYPATH

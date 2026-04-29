@@ -39,30 +39,30 @@ function initNav(activePage) {
 
   const navHtml = `
 <nav class="site-nav" id="site-nav">
-  <a href="/index.html" class="nav-logo">
+  <a href="/index" class="nav-logo">
     <span class="nav-logo-text">THE EPOCH INSTITUTE</span>
   </a>
   <div class="nav-links">
-    <a href="/research.html" class="nav-link"${activeStyle('research')} data-i18n="nav_research">Research</a>
-    <a href="/research-series.html" class="nav-link"${activeStyle('series')} id="nav-series-link">Series</a>
-    <a href="/about.html" class="nav-link"${activeStyle('about')} id="nav-about-link">About</a>
-    <a href="/contributors.html" class="nav-link"${activeStyle('contributors')} id="nav-contributors-link">Contributors</a>
-    <a href="/dataset.html" class="nav-link"${activeStyle('dataset')} id="nav-dataset-link">Dataset</a>
-    <a href="/community.html" class="nav-link"${activeStyle('community')} id="nav-community-link" data-i18n="nav_community">Community</a>
-    <a href="/explorer.html" class="nav-link"${activeStyle('explorer')} id="nav-explorer-link">Explorer</a>
+    <a href="/research" class="nav-link"${activeStyle('research')} data-i18n="nav_research">Research</a>
+    <a href="/research-series" class="nav-link"${activeStyle('series')} id="nav-series-link">Series</a>
+    <a href="/about" class="nav-link"${activeStyle('about')} id="nav-about-link">About</a>
+    <a href="/contributors" class="nav-link"${activeStyle('contributors')} id="nav-contributors-link">Contributors</a>
+    <a href="/dataset" class="nav-link"${activeStyle('dataset')} id="nav-dataset-link">Dataset</a>
+    <a href="/community" class="nav-link"${activeStyle('community')} id="nav-community-link" data-i18n="nav_community">Community</a>
+    <a href="/explorer" class="nav-link"${activeStyle('explorer')} id="nav-explorer-link">Explorer</a>
   </div>
   <div class="nav-toggles">
     <button class="nav-toggle-btn" id="theme-toggle" title="Toggle theme">&#x2600;</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">&#x2630;</button>
   </div>
   <div id="nav-dropdown" class="nav-dropdown" role="menu">
-    <a href="/research.html" class="nav-dropdown-link" id="mob-research">Research</a>
-    <a href="/research-series.html" class="nav-dropdown-link" id="mob-series">Series</a>
-    <a href="/about.html" class="nav-dropdown-link" id="mob-about">About</a>
-    <a href="/contributors.html" class="nav-dropdown-link" id="mob-contributors">Contributors</a>
-    <a href="/dataset.html" class="nav-dropdown-link" id="mob-dataset">Dataset</a>
-    <a href="/community.html" class="nav-dropdown-link" id="mob-community">Community</a>
-    <a href="/explorer.html" class="nav-dropdown-link" id="mob-explorer">Explorer</a>
+    <a href="/research" class="nav-dropdown-link" id="mob-research">Research</a>
+    <a href="/research-series" class="nav-dropdown-link" id="mob-series">Series</a>
+    <a href="/about" class="nav-dropdown-link" id="mob-about">About</a>
+    <a href="/contributors" class="nav-dropdown-link" id="mob-contributors">Contributors</a>
+    <a href="/dataset" class="nav-dropdown-link" id="mob-dataset">Dataset</a>
+    <a href="/community" class="nav-dropdown-link" id="mob-community">Community</a>
+    <a href="/explorer" class="nav-dropdown-link" id="mob-explorer">Explorer</a>
   </div>
 </nav>`;
 
@@ -76,30 +76,30 @@ function initNav(activePage) {
     <div class="footer-links">
       <div class="footer-col">
         <span class="footer-col-title">Research</span>
-        <a class="footer-link" href="/explorer.html" id="fl-explorer">Empire Explorer</a>
-        <a class="footer-link" href="/profiles.html" id="fl-profiles">Empire Profiles</a>
-        <a class="footer-link" href="/research.html" id="fl-research">Research Hub</a>
-        <a class="footer-link" href="/research-series.html" id="fl-series">Research Series</a>
-        <a class="footer-link" href="/dataset.html" id="fl-dataset">Open Dataset</a>
+        <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
+        <a class="footer-link" href="/profiles" id="fl-profiles">Empire Profiles</a>
+        <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
+        <a class="footer-link" href="/research-series" id="fl-series">Research Series</a>
+        <a class="footer-link" href="/dataset" id="fl-dataset">Open Dataset</a>
         <a class="footer-link" href="/epoch-methodology.pdf" target="_blank" rel="noopener">Methodology</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Community</span>
-        <a class="footer-link" href="/community.html" id="fl-blogs">Blogs</a>
-        <a class="footer-link" href="/community.html" id="fl-opinions">Opinions</a>
-        <a class="footer-link" href="/community.html" id="fl-submit">Submit Article</a>
-        <a class="footer-link" href="/community.html" id="fl-newsletter">Newsletter</a>
+        <a class="footer-link" href="/community" id="fl-blogs">Blogs</a>
+        <a class="footer-link" href="/community" id="fl-opinions">Opinions</a>
+        <a class="footer-link" href="/community" id="fl-submit">Submit Article</a>
+        <a class="footer-link" href="/community" id="fl-newsletter">Newsletter</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">About</span>
-        <a class="footer-link" href="/about.html" id="fl-institute">The Institute</a>
-        <a class="footer-link" href="/contributors.html" id="fl-contributors">Contributors</a>
+        <a class="footer-link" href="/about" id="fl-institute">The Institute</a>
+        <a class="footer-link" href="/contributors" id="fl-contributors">Contributors</a>
         <a class="footer-link" href="#" id="fl-contact">Contact</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Institute</span>
-        <a class="footer-link" href="/about.html" id="fl-about">About</a>
-        <a class="footer-link" href="/about.html" id="fl-mission">Our Mission</a>
+        <a class="footer-link" href="/about" id="fl-about">About</a>
+        <a class="footer-link" href="/about" id="fl-mission">Our Mission</a>
       </div>
     </div>
   </div>
