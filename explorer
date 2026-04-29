@@ -489,7 +489,7 @@ function updateInfoPanel() {
   document.getElementById("info-summary").textContent = EMPIRE_INFO[emp.name] || "Historical data for this empire is being compiled.";
 
   // Update profile link
-  document.getElementById("info-view-profile").href = "/empire/" + toSlug(emp.name) + ".html";
+  document.getElementById("info-view-profile").href = "/empire/" + toSlug(emp.name);
 
   if (compareEmpire) {
     const emp2 = EMPIRES.find(e => e.name === compareEmpire);

@@ -121,7 +121,7 @@ function getEmpireEra(empire) {
 
 // ── Navigate to empire detail page ───────────────────────────────────────────
 function openEmpireDetail(name) {
-  window.location.href = '/empire/' + toSlug(name) + '.html';
+  window.location.href = '/empire/' + toSlug(name);
 }
 
 // ── Build era-grouped gallery ─────────────────────────────────────────────────
@@ -339,7 +339,7 @@ function buildProfileGallery() {
     }
     var viewBtn = e.target.closest('.compare-view-btn');
     if (viewBtn) {
-      window.location.href = '/empire/' + toSlug(viewBtn.dataset.empire) + '.html';
+      window.location.href = '/empire/' + toSlug(viewBtn.dataset.empire);
     }
   });
 
