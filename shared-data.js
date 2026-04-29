@@ -1,5 +1,6 @@
 const EPOCH_API_URL  = 'https://script.google.com/macros/s/AKfycbzRw6c1ZiZy3PJS41zkz1QQHxaFog2ctVowALgfhL5zk_19kXkhGB0rlEUNeMMac3-xfg/exec';
 const FORMSPREE_URL  = 'https://formspree.io/f/mpqkezdj';
+const CONTRIB_APPLY_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
 const ARTICLES_INITIAL_COUNT = 6;
 
 // ── Today in History dataset ──────────────────────────────────────────────────

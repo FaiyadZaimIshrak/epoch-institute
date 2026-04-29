@@ -102,9 +102,41 @@
   <div class="join-band">
     <h3 class="join-band-title">Join the Institute</h3>
     <p class="join-band-desc">Are you a historian, researcher, or writer with a passion for civilisational history? We welcome contributors of all backgrounds — academic, independent, and student alike. If you would like to contribute research, profiles, or essays, reach out to us.</p>
-    <a href="mailto:research@the-epoch-institute.org?subject=Contributor%20Application&body=Please%20tell%20us%20about%20yourself%20and%20your%20area%20of%20interest%3A" class="hero-cta">Apply to Contribute →</a>
+    <button class="hero-cta" id="apply-btn" onclick="openApplyModal()">Apply to Contribute →</button>
   </div>
 </section>
+
+<!-- Apply to Contribute modal -->
+<div id="apply-modal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="apply-modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="apply-modal-close" aria-label="Close">✕</button>
+    <h3 class="modal-title" id="apply-modal-title">Apply to Contribute</h3>
+    <form class="modal-form" id="apply-form" novalidate>
+      <div class="form-row">
+        <label class="form-label" for="ap-name">Full Name <span class="form-required">*</span></label>
+        <input class="form-input" id="ap-name" type="text" placeholder="Your full name" autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label class="form-label" for="ap-role">Role / Title <span class="form-required">*</span></label>
+        <input class="form-input" id="ap-role" type="text" placeholder="e.g. PhD Candidate, Independent Researcher">
+      </div>
+      <div class="form-row">
+        <label class="form-label" for="ap-region">Region / Country <span class="form-required">*</span></label>
+        <input class="form-input" id="ap-region" type="text" placeholder="e.g. United Kingdom, Bangladesh">
+      </div>
+      <div class="form-row">
+        <label class="form-label" for="ap-area">Research Areas <span class="form-required">*</span></label>
+        <textarea class="form-input form-textarea" id="ap-area" placeholder="e.g. South Asian history · Maritime empires · Medieval Europe"></textarea>
+      </div>
+      <div class="form-row">
+        <label class="form-label" for="ap-message">Why do you want to contribute?</label>
+        <textarea class="form-input form-textarea" id="ap-message" placeholder="Tell us a little about yourself and your interest…"></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="ap-submit">Submit Application →</button>
+      <p class="form-success" id="ap-success" style="display:none;">Thank you — your application has been received. We'll be in touch shortly.</p>
+    </form>
+  </div>
+</div>
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
@@ -160,6 +192,76 @@
 })();
 
 initNav('contributors');
+
+// ── Apply to Contribute modal ─────────────────────────────────────────────────
+function openApplyModal() {
+  var overlay = document.getElementById('apply-modal');
+  overlay.classList.remove('closing');
+  overlay.style.display = 'flex';
+  overlay.offsetHeight;
+  overlay.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+function closeApplyModal() {
+  var overlay = document.getElementById('apply-modal');
+  overlay.classList.remove('is-open');
+  overlay.classList.add('closing');
+  setTimeout(function() {
+    overlay.style.display = 'none';
+    overlay.classList.remove('closing');
+    document.body.style.overflow = '';
+  }, 220);
+}
+document.getElementById('apply-modal-close').addEventListener('click', closeApplyModal);
+document.getElementById('apply-modal').addEventListener('click', function(e) {
+  if (e.target === e.currentTarget) closeApplyModal();
+});
+
+document.getElementById('apply-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name    = document.getElementById('ap-name').value.trim();
+  var role    = document.getElementById('ap-role').value.trim();
+  var region  = document.getElementById('ap-region').value.trim();
+  var area    = document.getElementById('ap-area').value.trim();
+  var message = document.getElementById('ap-message').value.trim();
+
+  var ok = true;
+  [['ap-name', !name], ['ap-role', !role], ['ap-region', !region], ['ap-area', !area]].forEach(function(pair) {
+    document.getElementById(pair[0]).classList.toggle('form-input-error', pair[1]);
+    if (pair[1]) ok = false;
+  });
+  if (!ok) return;
+
+  var btn = document.getElementById('ap-submit');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+
+  fetch(CONTRIB_APPLY_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: name, role: role, region: region, area: area, message: message })
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    if (data.ok) {
+      document.getElementById('apply-form').style.display = 'none';
+      document.getElementById('ap-success').style.display = 'block';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Submit Application →';
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Submit Application →';
+  });
+});
+
+['ap-name', 'ap-role', 'ap-region', 'ap-area'].forEach(function(id) {
+  document.getElementById(id).addEventListener('input', function() {
+    document.getElementById(id).classList.remove('form-input-error');
+  });
+});
 </script>
 
 </body>
