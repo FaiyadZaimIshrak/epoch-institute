@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Today in History — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Explore what happened throughout history on this very day — from ancient civilisations to modern milestones, curated by The Epoch Institute.">
+<meta property="og:title" content="Today in History — The Epoch Institute">
+<meta property="og:description" content="Historical events from across five millennia, surfaced for today's date.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/today-in-history">
+<link rel="canonical" href="https://the-epoch-institute.org/today-in-history">
+<link rel="stylesheet" href="/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<section id="today-in-history">
+  <span class="hero-ornament"></span>
+  <h2 class="research-title" id="tih-heading">Today in History</h2>
+  <p class="research-subtitle" id="tih-subheading">Loading…</p>
+
+  <div class="tih-full-wrap">
+    <p class="tih-full-loading" id="tih-loading">Loading events…</p>
+
+    <div class="tih-carousel-outer" id="tih-carousel" style="display:none;">
+      <button class="tih-nav-btn" id="tih-prev" aria-label="Previous event">‹</button>
+      <div class="tih-carousel-window" id="tih-window">
+        <div class="tih-carousel-track" id="tih-track"></div>
+      </div>
+      <button class="tih-nav-btn" id="tih-next" aria-label="Next event">›</button>
+    </div>
+
+    <p class="tih-counter" id="tih-counter" style="display:none;"></p>
+  </div>
+</section>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+initNav('today');
+
+var cachedData = null;
+var currentDay = null;
+var currentIdx = 0;
+var dayEvents  = [];
+
+function getDayKey() {
+  var n = new Date();
+  return String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0');
+}
+
+function getDayLabel() {
+  return new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+}
+
+function getStep() {
+  var card = document.querySelector('.tih-event-card');
+  return card ? card.offsetWidth + 20 : 300;
+}
+
+function applyTransform(animate) {
+  var track = document.getElementById('tih-track');
+  if (!animate) track.style.transition = 'none';
+  track.style.transform = 'translateX(' + -(currentIdx * getStep()) + 'px)';
+  if (!animate) {
+    track.offsetHeight; // force reflow
+    track.style.transition = '';
+  }
+}
+
+function updateNav() {
+  document.getElementById('tih-prev').disabled = currentIdx === 0;
+  document.getElementById('tih-next').disabled = currentIdx >= dayEvents.length - 1;
+  document.getElementById('tih-counter').textContent =
+    (currentIdx + 1) + ' / ' + dayEvents.length + ' events';
+}
+
+function goTo(idx) {
+  currentIdx = Math.max(0, Math.min(idx, dayEvents.length - 1));
+  applyTransform(true);
+  updateNav();
+}
+
+function renderDay(key) {
+  currentDay = key;
+  currentIdx = 0;
+  dayEvents  = (cachedData && cachedData[key]) || [];
+
+  var label    = getDayLabel();
+  document.getElementById('tih-subheading').textContent = label + ' — Today in History';
+
+  var loading  = document.getElementById('tih-loading');
+  var carousel = document.getElementById('tih-carousel');
+  var counter  = document.getElementById('tih-counter');
+
+  loading.style.display  = 'none';
+  carousel.style.display = 'none';
+  counter.style.display  = 'none';
+
+  if (!dayEvents.length) {
+    loading.textContent    = 'No events found for ' + label + '.';
+    loading.style.display  = '';
+    return;
+  }
+
+  document.getElementById('tih-track').innerHTML = dayEvents.map(function(ev, i) {
+    return '<div class="tih-event-card" data-idx="' + i + '">' +
+      '<p class="tih-event-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
+      '<p class="tih-event-title">' + escHtml(ev.title) + '</p>' +
+      '<p class="tih-event-desc">' + escHtml(ev.description) + '</p>' +
+    '</div>';
+  }).join('');
+
+  carousel.style.display = 'flex';
+  counter.style.display  = '';
+  applyTransform(false);
+  updateNav();
+}
+
+// Nav buttons
+document.getElementById('tih-prev').addEventListener('click', function() { goTo(currentIdx - 1); });
+document.getElementById('tih-next').addEventListener('click', function() { goTo(currentIdx + 1); });
+
+// Touch / swipe
+(function() {
+  var win    = document.getElementById('tih-window');
+  var startX = 0;
+  win.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+  win.addEventListener('touchend',   function(e) {
+    var dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) goTo(currentIdx + (dx < 0 ? 1 : -1));
+  });
+})();
+
+// Reposition on resize without animation
+window.addEventListener('resize', function() {
+  if (dayEvents.length) applyTransform(false);
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowLeft')  goTo(currentIdx - 1);
+  if (e.key === 'ArrowRight') goTo(currentIdx + 1);
+});
+
+// Load data
+fetch('/data/history.json')
+  .then(function(r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(function(data) {
+    cachedData = data;
+    renderDay(getDayKey());
+  })
+  .catch(function() {
+    var el = document.getElementById('tih-loading');
+    el.style.display = '';
+    el.textContent = 'Events unavailable — please run the data scraping script first.';
+  });
+
+// Midnight rollover: check every 30 s, re-render if day changes
+setInterval(function() {
+  var key = getDayKey();
+  if (key !== currentDay && cachedData) renderDay(key);
+}, 30000);
+</script>
+
+</body>
+</html>

@@ -45,6 +45,7 @@ function initNav(activePage) {
   <div class="nav-links">
     <a href="/research" class="nav-link"${activeStyle('research')} data-i18n="nav_research">Research</a>
     <a href="/research-series" class="nav-link"${activeStyle('series')} id="nav-series-link">Series</a>
+    <a href="/today-in-history" class="nav-link"${activeStyle('today')} id="nav-today-link">Today</a>
     <a href="/about" class="nav-link"${activeStyle('about')} id="nav-about-link">About</a>
     <a href="/contributors" class="nav-link"${activeStyle('contributors')} id="nav-contributors-link">Contributors</a>
     <a href="/dataset" class="nav-link"${activeStyle('dataset')} id="nav-dataset-link">Dataset</a>
@@ -58,6 +59,7 @@ function initNav(activePage) {
   <div id="nav-dropdown" class="nav-dropdown" role="menu">
     <a href="/research" class="nav-dropdown-link" id="mob-research">Research</a>
     <a href="/research-series" class="nav-dropdown-link" id="mob-series">Series</a>
+    <a href="/today-in-history" class="nav-dropdown-link" id="mob-today">Today in History</a>
     <a href="/about" class="nav-dropdown-link" id="mob-about">About</a>
     <a href="/contributors" class="nav-dropdown-link" id="mob-contributors">Contributors</a>
     <a href="/dataset" class="nav-dropdown-link" id="mob-dataset">Dataset</a>
@@ -76,6 +78,7 @@ function initNav(activePage) {
     <div class="footer-links">
       <div class="footer-col">
         <span class="footer-col-title">Research</span>
+        <a class="footer-link" href="/today-in-history" id="fl-today">Today in History</a>
         <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
         <a class="footer-link" href="/profiles" id="fl-profiles">Empire Profiles</a>
         <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
@@ -160,6 +163,16 @@ function initNav(activePage) {
       document.body.classList.add('page-leaving');
       setTimeout(() => { window.location.href = href; }, 180);
     } catch(e) {}
+  });
+
+  window.addEventListener('pageshow', function() {
+    document.body.classList.remove('page-leaving');
+    document.body.style.overflow = '';
+    document.body.style.pointerEvents = '';
+    document.querySelectorAll('.modal-overlay').forEach(function(el) {
+      el.style.display = 'none';
+      el.classList.remove('is-open', 'closing');
+    });
   });
 
   // ── Hamburger ───────────────────────────────────────────────────────────────

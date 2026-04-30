@@ -1962,4 +1962,91 @@ mark.search-hl {
   .compare-divider { padding:10px 0; }
   .compare-vs::before { content:'— '; } .compare-vs::after { content:' —'; }
 }
+
+/* ── Today in History — homepage strip ──────────────────────────────────────── */
+#tih-strip { margin-top: 32px; }
+.tih-strip-cards {
+  display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px; max-width: 880px;
+}
+.tih-strip-card {
+  flex: 1 1 200px; max-width: 260px; margin-top: 0;
+  border-left: 2px solid var(--gold);
+}
+.tih-desc {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 13px; line-height: 1.6; color: var(--text);
+  opacity: 0.8; margin: 4px 0 0;
+}
+.tih-strip-cta {
+  display: inline-block; margin-top: 20px;
+  font-family: 'Cinzel', serif; font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  border: 1px solid var(--gold); padding: 10px 24px;
+  transition: background 0.2s, color 0.2s;
+}
+.tih-strip-cta:hover { background: var(--gold); color: var(--bg); }
+@media (max-width: 600px) {
+  .tih-strip-cards { flex-direction: column; }
+  .tih-strip-card { max-width: none; }
+}
+
+/* ── Today in History — full page ───────────────────────────────────────────── */
+#today-in-history { min-height: 100vh; padding-top: 100px; }
+.tih-full-wrap {
+  max-width: 1200px; margin: 0 auto; padding: 0 40px 64px;
+}
+.tih-full-loading {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;
+  color: var(--muted); text-align: center; padding: 48px 0; opacity: 0.5;
+}
+.tih-carousel-outer {
+  position: relative; display: flex; align-items: center; gap: 12px;
+}
+.tih-carousel-window { flex: 1; overflow: hidden; }
+.tih-carousel-track {
+  display: flex; gap: 20px;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  will-change: transform;
+}
+.tih-event-card {
+  flex: 0 0 280px; background: var(--surface);
+  border: 1px solid var(--border); border-left: 2px solid var(--gold);
+  border-radius: 4px; padding: 24px 20px;
+  transition: border-color 0.2s;
+}
+.tih-event-card:hover { border-color: var(--gold); }
+.tih-event-year {
+  font-family: 'Cinzel', serif; font-size: 10px;
+  letter-spacing: 0.12em; color: var(--gold); margin: 0 0 8px;
+}
+.tih-event-title {
+  font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.04em;
+  color: var(--gold-light); margin: 0 0 10px; line-height: 1.55;
+}
+.tih-event-desc {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 13px;
+  color: var(--text); line-height: 1.6; opacity: 0.8; margin: 0;
+}
+.tih-nav-btn {
+  flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--gold); font-size: 22px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+  line-height: 1; padding: 0;
+}
+.tih-nav-btn:hover:not(:disabled) {
+  border-color: var(--gold); background: rgba(201,168,76,0.08);
+}
+.tih-nav-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+.tih-counter {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.08em;
+  color: var(--muted); text-align: center; margin-top: 20px;
+}
+@media (max-width: 640px) {
+  .tih-full-wrap { padding: 0 16px 48px; }
+  .tih-event-card { flex: 0 0 calc(100vw - 120px); }
+  .tih-nav-btn { width: 36px; height: 36px; font-size: 18px; }
+}
 @media (max-width:480px) { .compare-slot-filled { padding:14px; } }

@@ -78,17 +78,12 @@
   <a href="/explorer" class="hero-cta">Explore the Data →</a>
   <a href="/research" class="hero-secondary-cta">Browse Research Projects →</a>
 
-  <div id="tih-card" class="tih-card" style="display:none;">
+  <div id="tih-strip" style="display:none;">
     <div class="tih-date-row">
-      <span class="tih-date" id="tih-date"></span>
-      <span class="tih-region" id="tih-region"></span>
+      <span class="tih-date" id="tih-strip-date"></span>
     </div>
-    <p class="tih-title" id="tih-title"></p>
-    <p class="tih-year" id="tih-year"></p>
-    <div class="tih-actions">
-      <a href="#" class="tih-link" id="tih-empire-link" style="display:none;">Related empire →</a>
-      <a href="#" class="tih-link" id="tih-share-link">Share →</a>
-    </div>
+    <div class="tih-strip-cards" id="tih-strip-cards"></div>
+    <a href="/today-in-history" class="tih-strip-cta">See all events today →</a>
   </div>
 
   <span class="scroll-indicator"></span>
@@ -192,83 +187,54 @@ document.addEventListener('visibilitychange', () => {
   if (!document.hidden) loadAnnouncements();
 });
 
-// ── Today in History ──────────────────────────────────────────────────────────
+// ── Today in History strip ────────────────────────────────────────────────────
 (function() {
-  const keys = Object.keys(TODAY_IN_HISTORY);
+  var now  = new Date();
+  var mm   = String(now.getMonth() + 1).padStart(2, '0');
+  var dd   = String(now.getDate()).padStart(2, '0');
+  var key  = mm + '-' + dd;
+  var date = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
 
-  function dayOfYear(mm, dd) {
-    const months = [0,31,28,31,30,31,30,31,31,30,31,30,31];
-    let d = dd;
-    for (let i = 1; i < mm; i++) d += months[i];
-    return d;
+  function renderStrip(events) {
+    if (!events || !events.length) return;
+    var strip   = document.getElementById('tih-strip');
+    var dateEl  = document.getElementById('tih-strip-date');
+    var cardsEl = document.getElementById('tih-strip-cards');
+
+    dateEl.textContent = 'Today in History · ' + date;
+
+    // Pick up to 3 random events
+    var pool     = events.slice().sort(function() { return Math.random() - 0.5; });
+    var selected = pool.slice(0, Math.min(3, pool.length));
+
+    cardsEl.innerHTML = selected.map(function(ev) {
+      return '<div class="tih-card tih-strip-card">' +
+        '<p class="tih-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
+        '<p class="tih-title">' + escHtml(ev.title) + '</p>' +
+        '<p class="tih-desc">' + escHtml(ev.description) + '</p>' +
+      '</div>';
+    }).join('');
+
+    strip.style.display = '';
   }
 
-  const now      = new Date();
-  const todayMM  = String(now.getMonth() + 1).padStart(2, '0');
-  const todayDD  = String(now.getDate()).padStart(2, '0');
-  const todayKey = todayMM + '-' + todayDD;
-  const todayDoy = dayOfYear(+todayMM, +todayDD);
-
-  let entry = null, matchKey = null, exact = false;
-
-  if (TODAY_IN_HISTORY[todayKey]) {
-    entry = TODAY_IN_HISTORY[todayKey];
-    matchKey = todayKey;
-    exact = true;
-  } else {
-    let best = Infinity;
-    keys.forEach(k => {
-      const [mm, dd] = k.split('-').map(Number);
-      let dist = Math.abs(dayOfYear(mm, dd) - todayDoy);
-      dist = Math.min(dist, 365 - dist);
-      if (dist < best && dist <= 15) { best = dist; matchKey = k; }
+  fetch('/data/history.json')
+    .then(function(r) {
+      if (!r.ok) throw new Error('not found');
+      return r.json();
+    })
+    .then(function(data) { renderStrip(data[key] || []); })
+    .catch(function() {
+      // Fallback to TODAY_IN_HISTORY (single-entry, available in shared-data.js)
+      var entry = (typeof TODAY_IN_HISTORY !== 'undefined') && TODAY_IN_HISTORY[key];
+      if (entry) {
+        renderStrip([{
+          year: null, yearDisplay: entry.year,
+          title: entry.title,
+          description: ''
+        }]);
+      }
     });
-    if (matchKey) entry = TODAY_IN_HISTORY[matchKey];
-  }
-
-  if (!entry) return;
-
-  const regionNames = {
-    EU: 'Europe', AS: 'Asia', AM: 'Americas', AF: 'Africa',
-    ME: 'Middle East', BD: 'Bangladesh', GL: 'Global'
-  };
-
-  const card     = document.getElementById('tih-card');
-  const dateEl   = document.getElementById('tih-date');
-  const regionEl = document.getElementById('tih-region');
-  const titleEl  = document.getElementById('tih-title');
-  const yearEl   = document.getElementById('tih-year');
-  const empireEl = document.getElementById('tih-empire-link');
-  const shareEl  = document.getElementById('tih-share-link');
-
-  const [emm, edd] = matchKey.split('-');
-  const dispDate = new Date(2000, +emm - 1, +edd)
-    .toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
-
-  if (!exact) {
-    dateEl.textContent = 'On ' + dispDate + ' •';
-    dateEl.style.opacity = '0.6';
-  } else {
-    dateEl.textContent = 'Today in History · ' + dispDate;
-  }
-
-  regionEl.textContent = regionNames[entry.region] || entry.region;
-  titleEl.textContent  = entry.title;
-  yearEl.textContent   = entry.year;
-
-  if (entry.empire) {
-    empireEl.style.display = '';
-    empireEl.href = '/explorer#//' + encodeURIComponent(entry.empire);
-  }
-
-  const tweetText = encodeURIComponent(
-    'On this day in history: ' + entry.title + ' (' + entry.year + ') via @EpochInstitute https://the-epoch-institute.org #history #epoch'
-  );
-  shareEl.href   = 'https://twitter.com/intent/tweet?text=' + tweetText;
-  shareEl.target = '_blank';
-  shareEl.rel    = 'noopener';
-
-  card.style.display = '';
 })();
 </script>
 </body>
