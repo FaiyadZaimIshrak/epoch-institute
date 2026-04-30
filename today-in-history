@@ -28,23 +28,19 @@
 <body>
 
 <section id="today-in-history">
-  <span class="hero-ornament"></span>
-  <h2 class="research-title" id="tih-heading">Today in History</h2>
-  <p class="research-subtitle" id="tih-subheading">Loading…</p>
+  <div class="tih-page-header">
+    <span class="hero-ornament"></span>
+    <h2 class="research-title" id="tih-heading">Today in History</h2>
+    <p class="research-subtitle" id="tih-subheading">Loading&hellip;</p>
+  </div>
 
   <div class="tih-full-wrap">
-    <p class="tih-full-loading" id="tih-loading">Loading events…</p>
-
-    <div class="tih-carousel-outer" id="tih-carousel" style="display:none;">
-      <button class="tih-nav-btn" id="tih-prev" aria-label="Previous event">‹</button>
-      <div class="tih-carousel-window" id="tih-window">
-        <div class="tih-carousel-track" id="tih-track"></div>
-      </div>
-      <button class="tih-nav-btn" id="tih-next" aria-label="Next event">›</button>
-    </div>
-
-    <p class="tih-counter" id="tih-counter" style="display:none;"></p>
+    <p class="tih-full-loading" id="tih-loading" style="display:none;"></p>
+    <div class="tih-grid" id="tih-grid" style="display:none;"></div>
+    <div class="tih-pagination" id="tih-pagination" style="display:none;"></div>
   </div>
+
+  <div id="tih-tooltip" class="tih-share-tooltip"></div>
 </section>
 
 <script src="/shared-data.js"></script>
@@ -52,10 +48,12 @@
 <script>
 initNav('today');
 
-var cachedData = null;
-var currentDay = null;
-var currentIdx = 0;
-var dayEvents  = [];
+var cachedData  = null;
+var currentDay  = null;
+var currentPage = 1;
+var dayEvents   = [];
+var PER_PAGE    = 15;
+var tooltipTimer;
 
 function getDayKey() {
   var n = new Date();
@@ -66,113 +64,146 @@ function getDayLabel() {
   return new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
 }
 
-function getStep() {
-  var card = document.querySelector('.tih-event-card');
-  return card ? card.offsetWidth + 20 : 300;
-}
+function totalPages() { return Math.max(1, Math.ceil(dayEvents.length / PER_PAGE)); }
 
-function applyTransform(animate) {
-  var track = document.getElementById('tih-track');
-  if (!animate) track.style.transition = 'none';
-  track.style.transform = 'translateX(' + -(currentIdx * getStep()) + 'px)';
-  if (!animate) {
-    track.offsetHeight; // force reflow
-    track.style.transition = '';
+function getPaginationItems(cur, tot) {
+  var set = {}, i;
+  set[1] = set[tot] = true;
+  for (i = Math.max(2, cur - 2); i <= Math.min(tot - 1, cur + 2); i++) set[i] = true;
+  var nums = Object.keys(set).map(Number).sort(function(a, b) { return a - b; });
+  var out = [];
+  for (i = 0; i < nums.length; i++) {
+    if (i > 0 && nums[i] - nums[i - 1] > 1) out.push('...');
+    out.push(nums[i]);
   }
+  return out;
 }
 
-function updateNav() {
-  document.getElementById('tih-prev').disabled = currentIdx === 0;
-  document.getElementById('tih-next').disabled = currentIdx >= dayEvents.length - 1;
-  document.getElementById('tih-counter').textContent =
-    (currentIdx + 1) + ' / ' + dayEvents.length + ' events';
+var SHARE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
+
+function showTooltip(msg) {
+  var el = document.getElementById('tih-tooltip');
+  el.textContent = msg;
+  el.classList.add('visible');
+  clearTimeout(tooltipTimer);
+  tooltipTimer = setTimeout(function() { el.classList.remove('visible'); }, 2200);
 }
 
-function goTo(idx) {
-  currentIdx = Math.max(0, Math.min(idx, dayEvents.length - 1));
-  applyTransform(true);
-  updateNav();
-}
-
-function renderDay(key) {
-  currentDay = key;
-  currentIdx = 0;
-  dayEvents  = (cachedData && cachedData[key]) || [];
-
-  var label    = getDayLabel();
-  document.getElementById('tih-subheading').textContent = label + ' — Today in History';
-
-  var loading  = document.getElementById('tih-loading');
-  var carousel = document.getElementById('tih-carousel');
-  var counter  = document.getElementById('tih-counter');
-
-  loading.style.display  = 'none';
-  carousel.style.display = 'none';
-  counter.style.display  = 'none';
-
-  if (!dayEvents.length) {
-    loading.textContent    = 'No events found for ' + label + '.';
-    loading.style.display  = '';
+function shareEvent(ev) {
+  var year = ev.yearDisplay || String(ev.year);
+  var text = year + ' — ' + ev.title + '. ' + ev.description +
+    ' | The Epoch Institute · the-epoch-institute.org/today-in-history';
+  if (navigator.share) {
+    navigator.share({ text: text, url: 'https://the-epoch-institute.org/today-in-history' }).catch(function() {});
     return;
   }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      showTooltip('Copied to clipboard');
+    }).catch(function() { showTooltip('Copy failed — please copy manually'); });
+  } else {
+    showTooltip('Sharing not available in this browser');
+  }
+}
 
-  document.getElementById('tih-track').innerHTML = dayEvents.map(function(ev, i) {
-    return '<div class="tih-event-card" data-idx="' + i + '">' +
+function scrollToGrid() {
+  var grid = document.getElementById('tih-grid');
+  var top = grid.getBoundingClientRect().top + window.pageYOffset - 80;
+  window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+}
+
+function renderPage(page, scroll) {
+  currentPage = page;
+  var start = (page - 1) * PER_PAGE;
+  var slice = dayEvents.slice(start, start + PER_PAGE);
+  var tot   = totalPages();
+  var grid  = document.getElementById('tih-grid');
+  var pag   = document.getElementById('tih-pagination');
+
+  grid.innerHTML = slice.map(function(ev, i) {
+    return '<div class="tih-event-card">' +
+      '<button class="tih-share-btn" data-idx="' + (start + i) + '" aria-label="Share this event" title="Share">' +
+        SHARE_SVG +
+      '</button>' +
       '<p class="tih-event-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
       '<p class="tih-event-title">' + escHtml(ev.title) + '</p>' +
-      '<p class="tih-event-desc">' + escHtml(ev.description) + '</p>' +
+      '<p class="tih-event-desc">'  + escHtml(ev.description) + '</p>' +
     '</div>';
   }).join('');
 
-  carousel.style.display = 'flex';
-  counter.style.display  = '';
-  applyTransform(false);
-  updateNav();
+  grid.querySelectorAll('.tih-share-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      shareEvent(dayEvents[parseInt(btn.dataset.idx, 10)]);
+    });
+  });
+
+  var items = getPaginationItems(page, tot);
+  var html  = '';
+  if (page > 1)
+    html += '<button class="tih-pg-btn prev-next" data-pg="' + (page - 1) + '">← Prev</button>';
+  items.forEach(function(p) {
+    if (p === '...')
+      html += '<span class="tih-pg-ellipsis">…</span>';
+    else
+      html += '<button class="tih-pg-btn' + (p === page ? ' active' : '') +
+        '" data-pg="' + p + '">' + p + '</button>';
+  });
+  if (page < tot)
+    html += '<button class="tih-pg-btn prev-next" data-pg="' + (page + 1) + '">Next →</button>';
+
+  pag.innerHTML = html;
+  pag.querySelectorAll('.tih-pg-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      renderPage(parseInt(btn.dataset.pg, 10), true);
+    });
+  });
+
+  grid.style.display = '';
+  pag.style.display  = tot > 1 ? 'flex' : 'none';
+  if (scroll) scrollToGrid();
 }
 
-// Nav buttons
-document.getElementById('tih-prev').addEventListener('click', function() { goTo(currentIdx - 1); });
-document.getElementById('tih-next').addEventListener('click', function() { goTo(currentIdx + 1); });
+function renderDay(key) {
+  currentDay  = key;
+  currentPage = 1;
+  dayEvents   = (cachedData && cachedData[key]) || [];
 
-// Touch / swipe
-(function() {
-  var win    = document.getElementById('tih-window');
-  var startX = 0;
-  win.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
-  win.addEventListener('touchend',   function(e) {
-    var dx = e.changedTouches[0].clientX - startX;
-    if (Math.abs(dx) > 50) goTo(currentIdx + (dx < 0 ? 1 : -1));
-  });
-})();
+  var label   = getDayLabel();
+  document.getElementById('tih-subheading').textContent = label + ' — Today in History';
 
-// Reposition on resize without animation
-window.addEventListener('resize', function() {
-  if (dayEvents.length) applyTransform(false);
-});
+  var loading = document.getElementById('tih-loading');
+  var grid    = document.getElementById('tih-grid');
+  var pag     = document.getElementById('tih-pagination');
 
-// Keyboard navigation
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'ArrowLeft')  goTo(currentIdx - 1);
-  if (e.key === 'ArrowRight') goTo(currentIdx + 1);
-});
+  if (!dayEvents.length) {
+    loading.textContent   = 'No events found for ' + label + '.';
+    loading.style.display = '';
+    grid.style.display    = 'none';
+    pag.style.display     = 'none';
+    return;
+  }
 
-// Load data
+  loading.style.display = 'none';
+  renderPage(1, false);
+}
+
+// Show loading state while fetch is pending
+document.getElementById('tih-loading').textContent  = 'Loading events…';
+document.getElementById('tih-loading').style.display = '';
+
 fetch('/data/history.json')
-  .then(function(r) {
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    return r.json();
-  })
+  .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(function(data) {
     cachedData = data;
     renderDay(getDayKey());
   })
   .catch(function() {
     var el = document.getElementById('tih-loading');
-    el.style.display = '';
     el.textContent = 'Events unavailable — please run the data scraping script first.';
   });
 
-// Midnight rollover: check every 30 s, re-render if day changes
+// Midnight rollover: re-render if day changes
 setInterval(function() {
   var key = getDayKey();
   if (key !== currentDay && cachedData) renderDay(key);
