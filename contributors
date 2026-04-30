@@ -97,7 +97,19 @@
 
   <p class="contributors-loading" id="contributors-loading">Loading contributors…</p>
   <div class="contributors-grid" id="contributors-grid" style="display:none;"></div>
-  <p class="contributors-empty" id="contributors-empty" style="display:none;">No contributors listed yet.</p>
+  <!-- Shown only when API returns no active contributors -->
+  <div id="contributors-fallback" style="display:none;">
+    <div class="contributors-grid" style="display:grid;">
+      <div class="contributor-card visible">
+        <div class="contributor-avatar">EI</div>
+        <p class="contributor-name">The Epoch Institute Research Team</p>
+        <p class="contributor-role">Core Research</p>
+        <p class="contributor-role" style="opacity:0.6;margin-top:2px;">🌍 International</p>
+        <p class="contributor-bio">Empire trajectory data · Scholarly profiles · Dataset compilation</p>
+      </div>
+    </div>
+    <p class="contributors-empty" style="display:block;margin-top:8px;">More contributors coming soon — <a href="#" onclick="openApplyModal();return false;" style="color:var(--gold);text-decoration:none;">apply to join</a>.</p>
+  </div>
 
   <div class="join-band">
     <h3 class="join-band-title">Join the Institute</h3>
@@ -155,7 +167,10 @@
 
   function renderContributors(list) {
     loading.style.display = 'none';
-    if (!list || !list.length) { empty.style.display = 'block'; return; }
+    if (!list || !list.length) {
+      document.getElementById('contributors-fallback').style.display = 'block';
+      return;
+    }
     grid.style.display = 'grid';
     grid.innerHTML = list.map(function(c, i) {
       var avatarHtml = c.photoUrl
@@ -183,7 +198,7 @@
 
   if (typeof CONTRIB_URL === 'undefined' || !CONTRIB_URL) {
     loading.style.display = 'none';
-    empty.style.display = 'block';
+    document.getElementById('contributors-fallback').style.display = 'block';
     return;
   }
 

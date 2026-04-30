@@ -32,8 +32,8 @@
   <div class="explorer-header">
     <p class="explorer-label" data-i18n="exp_label">Interactive Explorer</p>
     <h2 class="explorer-title" data-i18n="exp_title">The Rise &amp; Fall of Empires</h2>
-    <p class="explorer-description" data-i18n="exp_desc">Ninety-four civilizations. Five millennia. Each trajectory scaled to its own peak — so you can compare not absolute size, but the shape of a civilization's story. Use the controls below to filter by region, era, or search for a specific empire.</p>
-    <p class="explorer-method-note">Power scores are normalized indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. Each trajectory is drawn from peer-reviewed sources cited in the Empire Profiles.</p>
+    <p class="explorer-description" data-i18n="exp_desc">Ninety-four civilisations. Five millennia. Each trajectory scaled to its own peak — so you can compare not absolute size, but the shape of a civilisation's story. Use the controls below to filter by region, era, or search for a specific empire.</p>
+    <p class="explorer-method-note">Power scores are normalised indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. Each trajectory is drawn from peer-reviewed sources cited in the Empire Profiles.</p>
   </div>
 
   <div class="controls">
@@ -87,7 +87,7 @@
     <div id="chart-guide" class="visible">
       <span class="guide-ornament"></span>
       <p class="guide-title" data-i18n="guide_title">Begin Your Exploration</p>
-      <p class="guide-body" data-i18n="guide_body">Select a region tab and an era above to reveal the trajectories of civilizations across time.</p>
+      <p class="guide-body" data-i18n="guide_body">Select a region tab and an era above to reveal the trajectories of civilisations across time.</p>
       <div class="guide-steps">
         <span class="guide-step" data-i18n="guide_step1">① Choose a Region</span>
         <span class="guide-step-sep">→</span>
@@ -95,6 +95,10 @@
         <span class="guide-step-sep">→</span>
         <span class="guide-step" data-i18n="guide_step3">③ Explore</span>
       </div>
+    </div>
+    <div id="chart-no-results" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;pointer-events:none;">
+      <p style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:0;">No civilisations recorded</p>
+      <p style="font-family:'Crimson Pro',Georgia,serif;font-size:14px;color:var(--muted);opacity:0.7;margin:0;">No civilisations are recorded for this region and era combination.</p>
     </div>
     <div id="chart"></div>
   </div>
@@ -765,6 +769,9 @@ function render() {
   });
 
   const visible = EMPIRES.filter(isVisible);
+
+  const noResults = document.getElementById("chart-no-results");
+  noResults.style.display = visible.length === 0 ? "flex" : "none";
 
   const linesSel = linesG.selectAll(".empire-line").data(visible, d => d.name);
   linesSel.exit().remove();

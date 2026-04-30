@@ -75,7 +75,7 @@
   </div>
   <div class="dataset-cite-box">
     <span class="dataset-cite-label">How to cite this dataset</span>
-    <p class="dataset-cite-text">The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset.html</p>
+    <p class="dataset-cite-text">The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset</p>
     <button class="detail-cite-btn" id="dataset-copy-cite-btn">Copy citation →</button>
   </div>
   <div class="dataset-licence">
@@ -139,7 +139,7 @@ document.getElementById('dataset-csv-btn').addEventListener('click', downloadEmp
 document.getElementById('dataset-json-btn').addEventListener('click', downloadEmpireJSON);
 
 document.getElementById('dataset-copy-cite-btn').addEventListener('click', function() {
-  var text = 'The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset.html';
+  var text = 'The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset';
   var btn  = this;
   navigator.clipboard.writeText(text).then(function() {
     var orig = btn.textContent;

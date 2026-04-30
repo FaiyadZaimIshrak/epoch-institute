@@ -219,6 +219,7 @@
       <h3 class="discord-cta-title">Discuss History on Discord</h3>
       <p class="discord-cta-desc">Connect with historians, researchers, and curious minds. Share insights, debate ideas, and explore civilisational history together.</p>
     </div>
+    <!-- Discord invite link: regenerate at discord.com/developers if this expires -->
     <a href="https://discord.gg/DmjwDbkW" class="discord-cta-btn" target="_blank" rel="noopener">Join on Discord →</a>
   </div>
 
@@ -245,7 +246,7 @@
     </div>
     <div class="blog-grid" id="blog-grid"></div>
     <p class="blog-loading" id="blog-loading">Loading articles…</p>
-    <p class="blog-empty" id="blog-empty" style="display:none;">No articles yet — be the first to submit.</p>
+    <p class="blog-empty" id="blog-empty" style="display:none;">Community articles are coming soon. Use the form below to submit the first piece.</p>
     <button class="blog-see-more" id="blog-see-more" style="display:none;">See All Articles →</button>
   </div>
 
@@ -257,7 +258,7 @@
     </div>
     <div id="opinions-list"></div>
     <p class="opinions-loading" id="opinions-loading">Loading opinions…</p>
-    <p class="opinions-empty" id="opinions-empty" style="display:none;">No opinions yet — share yours below.</p>
+    <p class="opinions-empty" id="opinions-empty" style="display:none;">Community opinions are coming soon. Be the first to share a perspective using the form below.</p>
     <button class="blog-see-more" id="opinions-view-more" style="display:none;">View More Opinions →</button>
   </div>
 

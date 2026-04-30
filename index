@@ -258,7 +258,7 @@ document.addEventListener('visibilitychange', () => {
 
   if (entry.empire) {
     empireEl.style.display = '';
-    empireEl.href = '/explorer.html#//' + encodeURIComponent(entry.empire);
+    empireEl.href = '/explorer#//' + encodeURIComponent(entry.empire);
   }
 
   const tweetText = encodeURIComponent(

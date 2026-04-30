@@ -18,6 +18,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 #about { min-height: 100vh; padding-top: 100px; }
+.team-section {
+  max-width: 1200px; margin: 0 auto 64px; padding: 0 40px;
+}
+.team-section-title {
+  font-family: 'Cinzel', serif; font-size: clamp(13px, 2vw, 17px);
+  letter-spacing: 0.08em; color: var(--gold-light);
+  margin: 0 0 8px; text-align: center;
+}
+.team-section-sub {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  color: var(--muted); text-align: center; max-width: 560px;
+  margin: 0 auto 36px; line-height: 1.65;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.team-card {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 6px; padding: 24px 20px; text-align: center;
+  transition: border-color 0.2s;
+}
+.team-card:hover { border-color: var(--gold); }
+.team-avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--border); margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cinzel', serif; font-size: 18px; color: var(--gold); opacity: 0.8;
+}
+.team-name {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.06em;
+  color: var(--gold-light); margin: 0 0 4px;
+}
+.team-role {
+  font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 8px;
+}
+.team-area {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 13px;
+  color: var(--text); line-height: 1.6; opacity: 0.8; margin: 0;
+}
+@media (max-width: 600px) {
+  .team-section { padding: 0 16px; }
+  .team-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
@@ -67,6 +113,30 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section id="team" style="background:var(--surface-alt,var(--surface));border-top:0.5px solid var(--border);padding-top:56px;">
+  <div class="team-section">
+    <h2 class="team-section-title">Founding Contributors</h2>
+    <p class="team-section-sub">The researchers, historians, and analysts who built the foundations of the Institute's dataset and research output.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">EI</div>
+        <p class="team-name">The Epoch Institute Research Team</p>
+        <p class="team-role">Core Research</p>
+        <p class="team-area">Empire trajectory data · Scholarly profiles · Dataset compilation</p>
+      </div>
+      <div class="team-card" style="border-style:dashed;opacity:0.55;">
+        <div class="team-avatar" style="opacity:0.4;">+</div>
+        <p class="team-name">Open Position</p>
+        <p class="team-role">Research Associate</p>
+        <p class="team-area">We welcome historians, researchers, and writers of all backgrounds.</p>
+      </div>
+    </div>
+    <p style="font-family:'Crimson Pro',Georgia,serif;font-size:14px;color:var(--muted);text-align:center;margin:28px 0 0;">
+      Interested in contributing? <a href="/contributors" style="color:var(--gold);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View the Contributors page →</a>
+    </p>
   </div>
 </section>
 
