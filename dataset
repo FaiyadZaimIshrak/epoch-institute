@@ -88,51 +88,20 @@
 <script src="/shared-nav.js"></script>
 <script>
 // ── Download helpers ──────────────────────────────────────────────────────────
-function _triggerDownload(content, filename, mimeType) {
-  var blob = new Blob([content], { type: mimeType });
-  var url  = URL.createObjectURL(blob);
-  var a    = document.createElement('a');
+function _downloadStatic(url, filename) {
+  var a = document.createElement('a');
   a.href = url; a.download = filename;
   document.body.appendChild(a);
-  a.click();
-  setTimeout(function() { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
+  a.dispatchEvent(new MouseEvent('click', { bubbles: false }));
+  document.body.removeChild(a);
 }
 
 function downloadEmpireCSV() {
-  var maxPts  = Math.max.apply(null, EMPIRES.map(function(e) { return e.points.length; }));
-  var headers = ['name', 'region', 'start_year', 'end_year', 'peak_year', 'duration'];
-  for (var i = 0; i < maxPts; i++) headers.push('t_' + i);
-
-  var rows = EMPIRES.map(function(emp) {
-    var pts      = emp.points;
-    var startYear = pts[0][0];
-    var endYear   = pts[pts.length - 1][0];
-    var peakPt    = pts.reduce(function(m, p) { return p[1] >= m[1] ? p : m; });
-    var duration  = Math.round(endYear - startYear);
-    var row = [
-      '"' + String(emp.name).replace(/"/g, '""') + '"',
-      '"' + String(emp.region).replace(/"/g, '""') + '"',
-      startYear, endYear, peakPt[0], duration
-    ];
-    for (var j = 0; j < maxPts; j++) row.push(pts[j] !== undefined ? pts[j][1] : '');
-    return row.join(',');
-  });
-
-  _triggerDownload([headers.join(',')].concat(rows).join('\n'),
-    'epoch-institute-empire-dataset.csv', 'text/csv');
+  _downloadStatic('/epoch-institute-empire-dataset.csv', 'epoch-institute-empire-dataset.csv');
 }
 
 function downloadEmpireJSON() {
-  var obj = {
-    source:        'The Epoch Institute',
-    url:           'https://the-epoch-institute.org',
-    licence:       'CC BY 4.0',
-    retrieved:     new Date().toISOString().split('T')[0],
-    total_empires: EMPIRES.length,
-    empires:       EMPIRES
-  };
-  _triggerDownload(JSON.stringify(obj, null, 2),
-    'epoch-institute-empire-dataset.json', 'application/json');
+  _downloadStatic('/epoch-institute-empire-dataset.json', 'epoch-institute-empire-dataset.json');
 }
 
 document.getElementById('dataset-csv-btn').addEventListener('click', downloadEmpireCSV);

@@ -210,10 +210,14 @@
     }
   } catch(e) {}
 
-  jsonp(CONTRIB_URL + '?action=contributors', function(list) {
-    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: list })); } catch(e) {}
-    renderContributors(list);
-  });
+  fetch(CONTRIB_URL + '?action=contributors')
+    .then(function(r) { return r.json(); })
+    .then(function(list) {
+      var data = Array.isArray(list) ? list : [];
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch(e) {}
+      renderContributors(data);
+    })
+    .catch(function() { renderContributors([]); });
 })();
 
 initNav('contributors');
