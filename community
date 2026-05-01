@@ -246,7 +246,7 @@
     </div>
     <div class="blog-grid" id="blog-grid"></div>
     <p class="blog-loading" id="blog-loading">Loading articles…</p>
-    <p class="blog-empty" id="blog-empty" style="display:none;">Community articles are coming soon. Use the form below to submit the first piece.</p>
+    <p class="blog-empty" id="blog-empty" style="display:none;">No articles yet. Use the form below to submit the first piece.</p>
     <button class="blog-see-more" id="blog-see-more" style="display:none;">See All Articles →</button>
   </div>
 
@@ -258,7 +258,7 @@
     </div>
     <div id="opinions-list"></div>
     <p class="opinions-loading" id="opinions-loading">Loading opinions…</p>
-    <p class="opinions-empty" id="opinions-empty" style="display:none;">Community opinions are coming soon. Be the first to share a perspective using the form below.</p>
+    <p class="opinions-empty" id="opinions-empty" style="display:none;">No opinions yet. Be the first to share a perspective using the form below.</p>
     <button class="blog-see-more" id="opinions-view-more" style="display:none;">View More Opinions →</button>
   </div>
 
@@ -279,11 +279,11 @@
     </div>
     <form class="modal-form" id="opinion-form" novalidate style="max-width:600px;">
       <div class="form-row">
-        <label class="form-label">Name <span class="form-required">*</span></label>
+        <label class="form-label" for="op-name">Name <span class="form-required">*</span></label>
         <input class="form-input" id="op-name" type="text" placeholder="Your name" required>
       </div>
       <div class="form-row">
-        <label class="form-label">Your Opinion <span class="form-required">*</span></label>
+        <label class="form-label" for="op-text">Your Opinion <span class="form-required">*</span></label>
         <textarea class="form-input form-textarea" id="op-text" placeholder="Write your thoughts here…" required style="min-height:120px;"></textarea>
       </div>
       <button type="submit" class="form-submit">Submit Opinion</button>
@@ -344,11 +344,11 @@
     <h3 class="modal-title">Submit Your Article</h3>
     <form class="modal-form" id="share-form" novalidate>
       <div class="form-row">
-        <label class="form-label">Name <span class="form-required">*</span></label>
+        <label class="form-label" for="sf-name">Name <span class="form-required">*</span></label>
         <input class="form-input" id="sf-name" type="text" placeholder="Your full name" required>
       </div>
       <div class="form-row">
-        <label class="form-label">Profession <span class="form-required">*</span></label>
+        <label class="form-label" for="sf-profession">Profession <span class="form-required">*</span></label>
         <select class="form-input form-select" id="sf-profession" required>
           <option value="">Select your profession…</option>
           <option value="Healthcare Professional">Healthcare Professional</option>
@@ -363,11 +363,11 @@
         </select>
       </div>
       <div class="form-row" id="sf-affil-row" style="display:none;">
-        <label class="form-label">Institute / Organisation <span class="form-required" id="sf-affil-star">*</span></label>
+        <label class="form-label" for="sf-affil">Institute / Organisation <span class="form-required" id="sf-affil-star">*</span></label>
         <input class="form-input" id="sf-affil" type="text" placeholder="e.g. University of Dhaka">
       </div>
       <div class="form-row">
-        <label class="form-label">Email <span class="form-required">*</span></label>
+        <label class="form-label" for="sf-email">Email <span class="form-required">*</span></label>
         <input class="form-input" id="sf-email" type="email" placeholder="your@email.com" required>
       </div>
       <div class="form-row">
@@ -422,6 +422,7 @@ var ARTICLES_PREVIEW   = 6;
 function loadOpinions() {
   if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
     document.getElementById('opinions-loading').style.display = 'none';
+    document.getElementById('opinions-empty').style.display = 'block';
     return;
   }
   jsonp(EPOCH_API_URL + '?action=opinions', function(data) {
@@ -699,15 +700,19 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
   if (!isValidEmail(email)) { input.classList.add('form-input-error'); return; }
   input.classList.remove('form-input-error');
 
+  function showNlSuccess() {
+    document.getElementById('newsletter-form').style.display = 'none';
+    document.getElementById('nl-success').style.display = 'block';
+  }
+
   if (typeof FORMSPREE_URL !== 'undefined' && FORMSPREE_URL && !FORMSPREE_URL.includes('PASTE')) {
     fetch(FORMSPREE_URL, {
       method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, _subject: 'Newsletter Signup' })
-    }).catch(function() {});
+    }).then(showNlSuccess).catch(showNlSuccess);
+  } else {
+    showNlSuccess();
   }
-
-  document.getElementById('newsletter-form').style.display = 'none';
-  document.getElementById('nl-success').style.display = 'block';
 });
 document.getElementById('nl-email').addEventListener('input', function() {
   this.classList.remove('form-input-error');

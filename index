@@ -189,52 +189,151 @@ document.addEventListener('visibilitychange', () => {
 
 // ── Today in History strip ────────────────────────────────────────────────────
 (function() {
-  var now  = new Date();
-  var mm   = String(now.getMonth() + 1).padStart(2, '0');
-  var dd   = String(now.getDate()).padStart(2, '0');
-  var key  = mm + '-' + dd;
-  var date = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+  var now     = new Date();
+  var mm      = String(now.getMonth() + 1).padStart(2, '0');
+  var dd      = String(now.getDate()).padStart(2, '0');
+  var key     = mm + '-' + dd;
+  var PAGE_URL = 'https://the-epoch-institute.org/today-in-history';
 
-  function renderStrip(events) {
-    if (!events || !events.length) return;
+  var SHARE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
+  var GLOBE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
+
+  function composeTweet(ev) {
+    var yearDisplay = ev.yearDisplay || String(ev.year);
+    var title = ev.title;
+    var desc = ev.description || '';
+    var firstSentence = desc.replace(/^([\s\S]*?[.!?])(?:\s|$)[\s\S]*$/, '$1') || desc;
+    var hashtags = '#OnThisDay #History #EpochInstitute';
+    var header = 'On this day in ' + yearDisplay + ': ' + title + '.';
+    var full = header + '\n\n' + firstSentence + '\n\n' + hashtags + '\n\n' + PAGE_URL;
+    if (full.length <= 280) return full;
+    var budget = 280 - header.length - 2 - firstSentence.length - 2 - hashtags.length - 2 - PAGE_URL.length;
+    budget = 280 - header.length - 6 - hashtags.length - PAGE_URL.length - 1;
+    if (budget > 5) {
+      return header + '\n\n' + firstSentence.substring(0, budget) + '…\n\n' + hashtags + '\n\n' + PAGE_URL;
+    }
+    var noDesc = header + '\n\n' + hashtags + '\n\n' + PAGE_URL;
+    if (noDesc.length <= 280) return noDesc;
+    var titleBudget = 280 - ('On this day in ' + yearDisplay + ': ').length - 1 - 4 - hashtags.length - 2 - PAGE_URL.length;
+    return 'On this day in ' + yearDisplay + ': ' + title.substring(0, Math.max(10, titleBudget)) + '…\n\n' + hashtags + '\n\n' + PAGE_URL;
+  }
+
+  var activeDropdown = null;
+
+  function closeAllDropdowns() {
+    if (activeDropdown) { activeDropdown.style.display = 'none'; activeDropdown = null; }
+  }
+
+  document.addEventListener('click', function(e) {
+    if (activeDropdown && !activeDropdown.parentNode.contains(e.target)) closeAllDropdowns();
+  });
+
+  function buildCard(ev, ddId) {
+    return '<div class="tih-card tih-strip-card">' +
+      '<button class="tih-share-btn" data-dd="' + ddId + '" aria-label="Share this event">' + SHARE_SVG + '</button>' +
+      '<div class="tih-share-dropdown" id="' + ddId + '" style="display:none;">' +
+        '<button class="tih-share-dd-item" data-action="tweet" data-dd="' + ddId + '">Post on X</button>' +
+        '<button class="tih-share-dd-item" data-action="copy" data-dd="' + ddId + '">Copy link</button>' +
+      '</div>' +
+      '<p class="tih-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
+      '<p class="tih-title">' + escHtml(ev.title) + '</p>' +
+      '<p class="tih-desc">' + escHtml(ev.description) + '</p>' +
+    '</div>';
+  }
+
+  function buildPinnedCard(day) {
+    return '<div class="tih-card tih-strip-card tih-pinned-card tih-strip-pinned">' +
+      '<span class="tih-pinned-icon">' + GLOBE_SVG + '</span>' +
+      '<p class="tih-pinned-label">Today\'s International Day</p>' +
+      '<p class="tih-pinned-title">' + escHtml(day.name) + '</p>' +
+      '<p class="tih-pinned-desc">' + escHtml(day.description) + '</p>' +
+    '</div>';
+  }
+
+  function renderStrip(events, intlDay) {
+    if (!events.length && !intlDay) return;
     var strip   = document.getElementById('tih-strip');
     var dateEl  = document.getElementById('tih-strip-date');
     var cardsEl = document.getElementById('tih-strip-cards');
 
-    dateEl.textContent = 'Today in History · ' + date;
+    var dow      = now.toLocaleDateString('en-GB', { weekday: 'long' });
+    var fullDate = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    dateEl.innerHTML =
+      '<span class="tih-date-sep"></span>' +
+      '<span class="tih-date-dow">' + escHtml(dow) + '</span>' +
+      '<span class="tih-date-full">' + escHtml(fullDate) + '</span>' +
+      '<span class="tih-date-sep"></span>';
 
-    // Pick up to 3 random events
+    var count    = intlDay ? 2 : 3;
     var pool     = events.slice().sort(function() { return Math.random() - 0.5; });
-    var selected = pool.slice(0, Math.min(3, pool.length));
+    var selected = pool.slice(0, Math.min(count, pool.length));
 
-    cardsEl.innerHTML = selected.map(function(ev) {
-      return '<div class="tih-card tih-strip-card">' +
-        '<p class="tih-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
-        '<p class="tih-title">' + escHtml(ev.title) + '</p>' +
-        '<p class="tih-desc">' + escHtml(ev.description) + '</p>' +
-      '</div>';
-    }).join('');
+    var html = '';
+    if (intlDay) html += buildPinnedCard(intlDay);
+    var evMap = {};
+    selected.forEach(function(ev, i) {
+      var ddId = 'strip-dd-' + i;
+      html += buildCard(ev, ddId);
+      evMap[ddId] = ev;
+    });
+    cardsEl.innerHTML = html;
+
+    cardsEl.querySelectorAll('.tih-share-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var ddId = btn.dataset.dd;
+        var ev   = evMap[ddId];
+        if (navigator.share) {
+          navigator.share({ title: ev.title, text: composeTweet(ev), url: PAGE_URL }).catch(function() {});
+          return;
+        }
+        var dd = document.getElementById(ddId);
+        if (dd.style.display === 'none') {
+          closeAllDropdowns();
+          dd.style.display = '';
+          activeDropdown = dd;
+        } else {
+          closeAllDropdowns();
+        }
+      });
+    });
+
+    cardsEl.querySelectorAll('.tih-share-dd-item').forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var ddId   = item.dataset.dd;
+        var ev     = evMap[ddId];
+        var action = item.dataset.action;
+        if (action === 'tweet') {
+          window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(composeTweet(ev)), '_blank');
+          closeAllDropdowns();
+        } else if (action === 'copy') {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(PAGE_URL).then(function() {
+              var orig = item.textContent;
+              item.textContent = '✓ Copied!';
+              setTimeout(function() { item.textContent = orig; }, 2000);
+            }).catch(function() {});
+          }
+          setTimeout(closeAllDropdowns, 2100);
+        }
+      });
+    });
 
     strip.style.display = '';
   }
 
-  fetch('/data/history.json')
-    .then(function(r) {
-      if (!r.ok) throw new Error('not found');
-      return r.json();
-    })
-    .then(function(data) { renderStrip(data[key] || []); })
-    .catch(function() {
-      // Fallback to TODAY_IN_HISTORY (single-entry, available in shared-data.js)
-      var entry = (typeof TODAY_IN_HISTORY !== 'undefined') && TODAY_IN_HISTORY[key];
-      if (entry) {
-        renderStrip([{
-          year: null, yearDisplay: entry.year,
-          title: entry.title,
-          description: ''
-        }]);
-      }
-    });
+  Promise.all([
+    fetch('/data/history.json').then(function(r) { if (!r.ok) throw new Error(); return r.json(); }),
+    fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
+  ]).then(function(results) {
+    var events  = results[0][key] || [];
+    var intlDay = results[1][key] || null;
+    renderStrip(events, intlDay);
+  }).catch(function() {
+    var entry = (typeof TODAY_IN_HISTORY !== 'undefined') && TODAY_IN_HISTORY[key];
+    if (entry) renderStrip([{ year: null, yearDisplay: entry.year, title: entry.title, description: '' }], null);
+  });
 })();
 </script>
 </body>

@@ -35,6 +35,7 @@
   </div>
 
   <div class="tih-full-wrap">
+    <div id="tih-pinned-wrap" style="display:none;"></div>
     <p class="tih-full-loading" id="tih-loading" style="display:none;"></p>
     <div class="tih-grid" id="tih-grid" style="display:none;"></div>
     <div class="tih-pagination" id="tih-pagination" style="display:none;"></div>
@@ -48,20 +49,30 @@
 <script>
 initNav('today');
 
-var cachedData  = null;
-var currentDay  = null;
-var currentPage = 1;
-var dayEvents   = [];
-var PER_PAGE    = 15;
+var cachedData    = null;
+var cachedIntlDay = null;
+var currentDay    = null;
+var currentPage   = 1;
+var dayEvents     = [];
+var PER_PAGE      = 15;
 var tooltipTimer;
+var activeDropdown = null;
+var PAGE_URL      = 'https://the-epoch-institute.org/today-in-history';
+
+var SHARE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
+var GLOBE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
 
 function getDayKey() {
   var n = new Date();
   return String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0');
 }
 
-function getDayLabel() {
-  return new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+function getDayLabels() {
+  var n = new Date();
+  return {
+    dow:  n.toLocaleDateString('en-GB', { weekday: 'long' }),
+    full: n.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  };
 }
 
 function totalPages() { return Math.max(1, Math.ceil(dayEvents.length / PER_PAGE)); }
@@ -79,7 +90,32 @@ function getPaginationItems(cur, tot) {
   return out;
 }
 
-var SHARE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
+function composeTweet(ev) {
+  var yearDisplay = ev.yearDisplay || String(ev.year);
+  var title = ev.title;
+  var desc = ev.description || '';
+  var firstSentence = desc.replace(/^([\s\S]*?[.!?])(?:\s|$)[\s\S]*$/, '$1') || desc;
+  var hashtags = '#OnThisDay #History #EpochInstitute';
+  var header = 'On this day in ' + yearDisplay + ': ' + title + '.';
+  var full = header + '\n\n' + firstSentence + '\n\n' + hashtags + '\n\n' + PAGE_URL;
+  if (full.length <= 280) return full;
+  var budget = 280 - header.length - 6 - hashtags.length - PAGE_URL.length - 1;
+  if (budget > 5) {
+    return header + '\n\n' + firstSentence.substring(0, budget) + '…\n\n' + hashtags + '\n\n' + PAGE_URL;
+  }
+  var noDesc = header + '\n\n' + hashtags + '\n\n' + PAGE_URL;
+  if (noDesc.length <= 280) return noDesc;
+  var titleBudget = 280 - ('On this day in ' + yearDisplay + ': ').length - 1 - 4 - hashtags.length - 2 - PAGE_URL.length;
+  return 'On this day in ' + yearDisplay + ': ' + title.substring(0, Math.max(10, titleBudget)) + '…\n\n' + hashtags + '\n\n' + PAGE_URL;
+}
+
+function closeAllDropdowns() {
+  if (activeDropdown) { activeDropdown.style.display = 'none'; activeDropdown = null; }
+}
+
+document.addEventListener('click', function(e) {
+  if (activeDropdown && !activeDropdown.parentNode.contains(e.target)) closeAllDropdowns();
+});
 
 function showTooltip(msg) {
   var el = document.getElementById('tih-tooltip');
@@ -87,23 +123,6 @@ function showTooltip(msg) {
   el.classList.add('visible');
   clearTimeout(tooltipTimer);
   tooltipTimer = setTimeout(function() { el.classList.remove('visible'); }, 2200);
-}
-
-function shareEvent(ev) {
-  var year = ev.yearDisplay || String(ev.year);
-  var text = year + ' — ' + ev.title + '. ' + ev.description +
-    ' | The Epoch Institute · the-epoch-institute.org/today-in-history';
-  if (navigator.share) {
-    navigator.share({ text: text, url: 'https://the-epoch-institute.org/today-in-history' }).catch(function() {});
-    return;
-  }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(function() {
-      showTooltip('Copied to clipboard');
-    }).catch(function() { showTooltip('Copy failed — please copy manually'); });
-  } else {
-    showTooltip('Sharing not available in this browser');
-  }
 }
 
 function scrollToGrid() {
@@ -121,10 +140,13 @@ function renderPage(page, scroll) {
   var pag   = document.getElementById('tih-pagination');
 
   grid.innerHTML = slice.map(function(ev, i) {
+    var ddId = 'tih-dd-' + (start + i);
     return '<div class="tih-event-card">' +
-      '<button class="tih-share-btn" data-idx="' + (start + i) + '" aria-label="Share this event" title="Share">' +
-        SHARE_SVG +
-      '</button>' +
+      '<button class="tih-share-btn" data-dd="' + ddId + '" aria-label="Share this event">' + SHARE_SVG + '</button>' +
+      '<div class="tih-share-dropdown" id="' + ddId + '" style="display:none;">' +
+        '<button class="tih-share-dd-item" data-action="tweet" data-idx="' + (start + i) + '">Post on X</button>' +
+        '<button class="tih-share-dd-item" data-action="copy" data-idx="' + (start + i) + '">Copy link</button>' +
+      '</div>' +
       '<p class="tih-event-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
       '<p class="tih-event-title">' + escHtml(ev.title) + '</p>' +
       '<p class="tih-event-desc">'  + escHtml(ev.description) + '</p>' +
@@ -134,7 +156,42 @@ function renderPage(page, scroll) {
   grid.querySelectorAll('.tih-share-btn').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.stopPropagation();
-      shareEvent(dayEvents[parseInt(btn.dataset.idx, 10)]);
+      var ddId = btn.dataset.dd;
+      var idx  = parseInt(ddId.replace('tih-dd-', ''), 10);
+      var ev   = dayEvents[idx];
+      if (navigator.share) {
+        navigator.share({ title: ev.title, text: composeTweet(ev), url: PAGE_URL }).catch(function() {});
+        return;
+      }
+      var dd = document.getElementById(ddId);
+      if (dd.style.display === 'none') {
+        closeAllDropdowns();
+        dd.style.display = '';
+        activeDropdown = dd;
+      } else {
+        closeAllDropdowns();
+      }
+    });
+  });
+
+  grid.querySelectorAll('.tih-share-dd-item').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var action = item.dataset.action;
+      var ev     = dayEvents[parseInt(item.dataset.idx, 10)];
+      if (action === 'tweet') {
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(composeTweet(ev)), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'copy') {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(PAGE_URL).then(function() {
+            var orig = item.textContent;
+            item.textContent = '✓ Copied!';
+            setTimeout(function() { item.textContent = orig; }, 2000);
+          }).catch(function() {});
+        }
+        setTimeout(closeAllDropdowns, 2100);
+      }
     });
   });
 
@@ -164,20 +221,39 @@ function renderPage(page, scroll) {
   if (scroll) scrollToGrid();
 }
 
-function renderDay(key) {
+function renderDay(key, intlDay) {
   currentDay  = key;
   currentPage = 1;
   dayEvents   = (cachedData && cachedData[key]) || [];
 
-  var label   = getDayLabel();
-  document.getElementById('tih-subheading').textContent = label + ' — Today in History';
+  var labels = getDayLabels();
+  document.getElementById('tih-subheading').innerHTML =
+    '<span class="tih-date-sep"></span>' +
+    '<span class="tih-date-dow">' + escHtml(labels.dow) + '</span>' +
+    '<span class="tih-date-full">' + escHtml(labels.full) + '</span>' +
+    '<span class="tih-date-sep"></span>';
+
+  var pinnedWrap = document.getElementById('tih-pinned-wrap');
+  if (intlDay) {
+    pinnedWrap.innerHTML =
+      '<div class="tih-pinned-card">' +
+        '<span class="tih-pinned-icon">' + GLOBE_SVG + '</span>' +
+        '<p class="tih-pinned-label">Today\'s International Day</p>' +
+        '<p class="tih-pinned-title">' + escHtml(intlDay.name) + '</p>' +
+        '<p class="tih-pinned-desc">' + escHtml(intlDay.description) + '</p>' +
+      '</div>';
+    pinnedWrap.style.display = '';
+  } else {
+    pinnedWrap.style.display = 'none';
+    pinnedWrap.innerHTML = '';
+  }
 
   var loading = document.getElementById('tih-loading');
   var grid    = document.getElementById('tih-grid');
   var pag     = document.getElementById('tih-pagination');
 
   if (!dayEvents.length) {
-    loading.textContent   = 'No events found for ' + label + '.';
+    loading.textContent   = 'No events found for ' + labels.full + '.';
     loading.style.display = '';
     grid.style.display    = 'none';
     pag.style.display     = 'none';
@@ -192,21 +268,22 @@ function renderDay(key) {
 document.getElementById('tih-loading').textContent  = 'Loading events…';
 document.getElementById('tih-loading').style.display = '';
 
-fetch('/data/history.json')
-  .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-  .then(function(data) {
-    cachedData = data;
-    renderDay(getDayKey());
-  })
-  .catch(function() {
-    var el = document.getElementById('tih-loading');
-    el.textContent = 'Events unavailable — please run the data scraping script first.';
-  });
+Promise.all([
+  fetch('/data/history.json').then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
+  fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
+]).then(function(results) {
+  cachedData    = results[0];
+  cachedIntlDay = results[1];
+  renderDay(getDayKey(), cachedIntlDay[getDayKey()] || null);
+}).catch(function() {
+  var el = document.getElementById('tih-loading');
+  el.textContent = 'Events unavailable — please run the data scraping script first.';
+});
 
 // Midnight rollover: re-render if day changes
 setInterval(function() {
   var key = getDayKey();
-  if (key !== currentDay && cachedData) renderDay(key);
+  if (key !== currentDay && cachedData) renderDay(key, (cachedIntlDay || {})[key] || null);
 }, 30000);
 </script>
 

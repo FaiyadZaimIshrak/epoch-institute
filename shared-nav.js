@@ -53,7 +53,7 @@ function initNav(activePage) {
     <a href="/explorer" class="nav-link"${activeStyle('explorer')} id="nav-explorer-link">Explorer</a>
   </div>
   <div class="nav-toggles">
-    <button class="nav-toggle-btn" id="theme-toggle" title="Toggle theme">&#x2600;</button>
+    <button class="nav-toggle-btn" id="theme-toggle">&#x2600;</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">&#x2630;</button>
   </div>
   <div id="nav-dropdown" class="nav-dropdown" role="menu">
@@ -100,15 +100,16 @@ function initNav(activePage) {
         <a class="footer-link" href="#" id="fl-contact">Contact</a>
       </div>
       <div class="footer-col">
-        <span class="footer-col-title">Institute</span>
-        <a class="footer-link" href="/about" id="fl-about">About</a>
-        <a class="footer-link" href="/about" id="fl-mission">Our Mission</a>
+        <span class="footer-col-title">Explore</span>
+        <a class="footer-link" href="/profiles" id="fl-profiles-2">Empire Profiles</a>
+        <a class="footer-link" href="/explorer" id="fl-explorer-2">Empire Explorer</a>
+        <a class="footer-link" href="/today-in-history" id="fl-today-2">Today in History</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <span data-i18n="footer_hint">Hover over a line to inspect · Click to isolate · Use region tabs or era selector to filter</span>
-    <span data-i18n="footer_copy">© 2025 The Epoch Institute</span>
+    <span data-i18n="footer_copy">© ${new Date().getFullYear()} The Epoch Institute</span>
   </div>
 </footer>`;
 
@@ -141,13 +142,22 @@ function initNav(activePage) {
   document.body.insertAdjacentHTML('beforeend', footerHtml + contactModalHtml);
 
   // ── Theme toggle ────────────────────────────────────────────────────────────
-  document.getElementById('theme-toggle').addEventListener('click', () => {
-    const html = document.documentElement;
-    const isDark = html.getAttribute('data-theme') === 'dark';
-    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    document.getElementById('theme-toggle').textContent = isDark ? '🌙' : '☀';
-    localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark');
-  });
+  (function() {
+    const btn = document.getElementById('theme-toggle');
+    function applyTheme(isDark) {
+      btn.textContent    = isDark ? '☀' : '🌙';
+      btn.title          = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    applyTheme(document.documentElement.getAttribute('data-theme') !== 'light');
+    btn.addEventListener('click', () => {
+      const html   = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark');
+      applyTheme(!isDark);
+    });
+  })();
 
   // ── Page transitions ────────────────────────────────────────────────────────
   document.body.classList.add('page-entering');
@@ -205,6 +215,7 @@ function initNav(activePage) {
     overlay.offsetHeight; // force reflow for animation
     overlay.classList.add('is-open');
     document.body.style.overflow = 'hidden';
+    setTimeout(() => { const f = document.getElementById('ct-name'); if (f) f.focus(); }, 50);
   }
   function closeContactModal() {
     const overlay = document.getElementById('contact-modal');
@@ -234,7 +245,9 @@ function initNav(activePage) {
     const message = document.getElementById('ct-message').value.trim();
     let ok = true;
     [['ct-name', !name], ['ct-email', !isValidEmail(email)], ['ct-message', !message]].forEach(([id, bad]) => {
-      document.getElementById(id).classList.toggle('form-input-error', bad);
+      const el = document.getElementById(id);
+      el.classList.toggle('form-input-error', bad);
+      bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid');
       if (bad) ok = false;
     });
     if (!ok) return;
@@ -258,7 +271,9 @@ function initNav(activePage) {
 
   ['ct-name', 'ct-email', 'ct-message'].forEach(id => {
     document.getElementById(id).addEventListener('input', () => {
-      document.getElementById(id).classList.remove('form-input-error');
+      const el = document.getElementById(id);
+      el.classList.remove('form-input-error');
+      el.removeAttribute('aria-invalid');
     });
   });
 }

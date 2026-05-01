@@ -7,6 +7,11 @@
     --gold: #c9a84c;
     --gold-light: #e8c97a;
     --border-radius-lg: 6px;
+    --error: #c0392b;
+    --success: #5a9e6f;
+    --shadow: rgba(0,0,0,0.5);
+    --overlay: rgba(0,0,0,0.72);
+    --shimmer-mid: var(--shimmer-mid);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -327,6 +332,11 @@
     --muted: #7a6840;
     --gold: #8b6914;
     --gold-light: #6b4e0a;
+    --error: #b52a1d;
+    --success: #3a7d52;
+    --shadow: rgba(0,0,0,0.2);
+    --overlay: rgba(0,0,0,0.5);
+    --shimmer-mid: rgba(200,184,150,0.7);
   }
   [data-theme="light"] body::before { opacity: 0.15; }
   [data-theme="light"] .site-nav.scrolled { background: rgba(244,239,228,0.92); }
@@ -1100,7 +1110,7 @@
     outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;
   }
   .form-input:focus { border-color: var(--gold); }
-  .form-input-error { border-color: #c0392b !important; }
+  .form-input-error { border-color: var(--error) !important; }
   .file-dropzone {
     position: relative; border: 1.5px dashed var(--border);
     padding: 28px 20px; text-align: center; cursor: pointer;
@@ -1109,16 +1119,16 @@
   .file-dropzone:hover, .file-dropzone.drag-over {
     border-color: var(--gold); background: rgba(180,140,60,0.05);
   }
-  .file-dropzone.has-file { border-color: #7dba84; }
-  .file-dropzone.error { border-color: #c0392b; }
+  .file-dropzone.has-file { border-color: var(--success); }
+  .file-dropzone.error { border-color: var(--error); }
   .file-dropzone-inner { display: flex; flex-direction: column; align-items: center; gap: 8px; pointer-events: none; }
   .file-dropzone-icon { font-size: 28px; opacity: 0.4; }
   .file-dropzone-text {
     font-family: 'Crimson Pro', Georgia, serif; font-size: 14px;
     color: var(--muted); opacity: 0.6; line-height: 1.5;
   }
-  .file-dropzone.has-file .file-dropzone-text { opacity: 1; color: #7dba84; }
-  .file-dropzone.error .file-dropzone-text { opacity: 1; color: #c0392b; }
+  .file-dropzone.has-file .file-dropzone-text { opacity: 1; color: var(--success); }
+  .file-dropzone.error .file-dropzone-text { opacity: 1; color: var(--error); }
   .form-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23c9a84c'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
   .form-textarea { resize: vertical; min-height: 120px; line-height: 1.65; }
   .form-hint { font-family: 'Crimson Pro', Georgia, serif; font-size: 12px; color: var(--muted); margin: 2px 0 0; }
@@ -1387,9 +1397,10 @@
   }
   .tih-date-row {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 0;
+    margin-bottom: 20px;
   }
   .tih-date {
     font-family: 'Cinzel', serif;
@@ -1879,12 +1890,12 @@ mark.search-hl {
 }
 .skeleton-avatar {
   width: 52px; height: 52px; border-radius: 50%;
-  background: linear-gradient(90deg, var(--border) 25%, rgba(42,45,58,0.5) 50%, var(--border) 75%);
+  background: linear-gradient(90deg, var(--border) 25%, var(--shimmer-mid) 50%, var(--border) 75%);
   background-size: 400px 100%; animation: contributorShimmer 1.4s ease infinite;
 }
 .skeleton-line {
   border-radius: 3px;
-  background: linear-gradient(90deg, var(--border) 25%, rgba(42,45,58,0.5) 50%, var(--border) 75%);
+  background: linear-gradient(90deg, var(--border) 25%, var(--shimmer-mid) 50%, var(--border) 75%);
   background-size: 400px 100%; animation: contributorShimmer 1.4s ease infinite;
 }
 /* Join band */
@@ -1970,7 +1981,7 @@ mark.search-hl {
 }
 .tih-strip-card {
   flex: 1 1 200px; max-width: 260px; margin-top: 0;
-  border-left: 2px solid var(--gold);
+  border-left: 2px solid var(--gold); position: relative;
 }
 .tih-desc {
   font-family: 'Crimson Pro', Georgia, serif;
@@ -2028,7 +2039,7 @@ mark.search-hl {
   color: var(--text); line-height: 1.6; opacity: 0.8; margin: 0;
 }
 .tih-share-btn {
-  position: absolute; top: 10px; right: 10px;
+  position: absolute; bottom: 10px; right: 10px;
   background: none; border: none; color: var(--gold);
   cursor: pointer; padding: 4px; line-height: 0;
   opacity: 0; transition: opacity 0.2s, color 0.2s;
@@ -2044,6 +2055,70 @@ mark.search-hl {
   opacity: 0; transition: opacity 0.25s;
 }
 .tih-share-tooltip.visible { opacity: 1; }
+/* strip card share hover (mirrors .tih-event-card rule) */
+.tih-strip-card:hover .tih-share-btn { opacity: 0.7; }
+/* share dropdown */
+.tih-share-dropdown {
+  position: absolute; bottom: 36px; right: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 2px; min-width: 130px; z-index: 100; overflow: hidden;
+}
+.tih-share-dd-item {
+  display: block; width: 100%; background: none; border: none;
+  text-align: left; padding: 10px 16px; cursor: pointer;
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.06em;
+  color: var(--muted); transition: color 0.15s, background 0.15s;
+}
+.tih-share-dd-item:hover { color: var(--gold); background: rgba(201,168,76,0.06); }
+/* date block — homepage strip */
+.tih-date-sep {
+  display: block; width: 60px; height: 1px;
+  background: var(--gold); opacity: 0.6; margin: 8px auto;
+}
+.tih-date-dow {
+  font-family: 'Cinzel', serif; font-size: 11px;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+}
+.tih-date-full {
+  font-family: 'Cinzel', serif; font-size: 22px;
+  letter-spacing: 0.08em; color: var(--gold);
+}
+/* date block — today page subtitle */
+#tih-subheading { font-style: normal; }
+#tih-subheading .tih-date-full { font-size: 26px; }
+/* pinned international day card */
+.tih-pinned-card {
+  position: relative; background: var(--surface);
+  border: 1px solid var(--gold);
+  border-radius: 4px; padding: 24px 20px 20px 20px;
+  margin-bottom: 24px;
+}
+#tih-pinned-wrap { margin-bottom: 8px; }
+.tih-pinned-icon {
+  position: absolute; top: 12px; left: 12px;
+  color: var(--gold); opacity: 0.75; line-height: 0;
+}
+.tih-pinned-label {
+  font-family: 'Cinzel', serif; font-size: 9px;
+  letter-spacing: 0.14em; font-variant: small-caps;
+  color: var(--gold); margin: 0 0 8px; padding-left: 24px;
+}
+.tih-pinned-title {
+  font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.04em;
+  color: var(--gold-light); margin: 0 0 10px; line-height: 1.55;
+}
+.tih-pinned-desc {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 13px;
+  color: var(--text); line-height: 1.6; opacity: 0.8; margin: 0;
+}
+/* pinned card on homepage strip */
+.tih-strip-pinned {
+  flex: 1 1 200px; max-width: 260px; margin-top: 0; padding: 20px 24px 20px 20px;
+  border-left: none;
+}
+.tih-strip-pinned .tih-pinned-label { font-size: 8px; margin-bottom: 6px; }
+.tih-strip-pinned .tih-pinned-title { font-size: 12px; }
+.tih-strip-pinned .tih-pinned-desc { font-size: 12px; }
 .tih-pagination {
   display: flex; align-items: center; justify-content: center;
   flex-wrap: wrap; gap: 4px; padding: 24px 0 8px;
@@ -2073,3 +2148,13 @@ mark.search-hl {
   .tih-pg-btn { min-width: 30px; height: 30px; font-size: 9px; }
 }
 @media (max-width:480px) { .compare-slot-filled { padding:14px; } }
+
+/* ── Accessibility: respect reduced-motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

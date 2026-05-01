@@ -57,6 +57,10 @@
   border: 0.5px solid var(--border); border-radius: 2px; color: var(--muted);
 }
 .series-status.available { border-color: rgba(201,168,76,0.4); color: var(--gold); opacity: 0.8; }
+.series-card.coming-soon {
+  opacity: 0.45; cursor: default; pointer-events: none;
+}
+.series-card.coming-soon .series-cta { color: var(--muted); }
 
 /* ── Series detail view ── */
 #series-detail { display: none; min-height: 100vh; padding-top: 60px; }
@@ -115,48 +119,48 @@
       <span class="series-cta">Read Series →</span>
     </div>
 
-    <div class="series-card" onclick="openSeriesDetail('series-02')">
+    <div class="series-card coming-soon" aria-disabled="true">
       <div>
         <span class="series-number">Series 02</span>
-        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+        <span class="series-status" style="margin-left:10px;">In Preparation</span>
       </div>
       <h3 class="series-title">Trade and Territory</h3>
       <p class="series-subtitle">Economic Networks Across the Ancient and Medieval World</p>
       <p class="series-desc">A study of how control over trade routes, currency systems, and agricultural surplus shaped imperial ambition — and how economic disruption so often proved fatal to imperial order.</p>
-      <span class="series-cta">Coming Soon</span>
+      <span class="series-cta">In Preparation</span>
     </div>
 
-    <div class="series-card" onclick="openSeriesDetail('series-03')">
+    <div class="series-card coming-soon" aria-disabled="true">
       <div>
         <span class="series-number">Series 03</span>
-        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+        <span class="series-status" style="margin-left:10px;">In Preparation</span>
       </div>
       <h3 class="series-title">The Collapse Problem</h3>
       <p class="series-subtitle">Common Patterns in Imperial Decline Across Five Millennia</p>
       <p class="series-desc">Why do empires fall? Comparing the trajectories of the Western Roman Empire, the Abbasid Caliphate, the Mongol Empire, and others to identify recurring structural vulnerabilities.</p>
-      <span class="series-cta">Coming Soon</span>
+      <span class="series-cta">In Preparation</span>
     </div>
 
-    <div class="series-card" onclick="openSeriesDetail('series-04')">
+    <div class="series-card coming-soon" aria-disabled="true">
       <div>
         <span class="series-number">Series 04</span>
-        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+        <span class="series-status" style="margin-left:10px;">In Preparation</span>
       </div>
       <h3 class="series-title">Cross-Cultural Exchange</h3>
       <p class="series-subtitle">How Empires Spread — and Were Changed by — Ideas and Culture</p>
       <p class="series-desc">From Hellenisation to the Islamic Golden Age to the Columbian Exchange, this series explores the two-way nature of cultural contact under imperial conditions and its lasting consequences.</p>
-      <span class="series-cta">Coming Soon</span>
+      <span class="series-cta">In Preparation</span>
     </div>
 
-    <div class="series-card" onclick="openSeriesDetail('series-05')">
+    <div class="series-card coming-soon" aria-disabled="true">
       <div>
         <span class="series-number">Series 05</span>
-        <span class="series-status" style="margin-left:10px;">Coming Soon</span>
+        <span class="series-status" style="margin-left:10px;">In Preparation</span>
       </div>
       <h3 class="series-title">The Military Revolution</h3>
       <p class="series-subtitle">Technology, Tactics, and the Shifting Balance of Power</p>
       <p class="series-desc">How advances in military technology — the stirrup, gunpowder, the warship — reshaped the competitive landscape between polities and enabled otherwise peripheral states to become world powers.</p>
-      <span class="series-cta">Coming Soon</span>
+      <span class="series-cta">In Preparation</span>
     </div>
 
   </div>
