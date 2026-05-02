@@ -50,6 +50,62 @@ function composeTweet(ev) {
   return 'On this day in ' + yearDisplay + ': ' + title.substring(0, Math.max(10, titleBudget)) + '…\n\n' + hashtags + '\n\n' + TIH_URL;
 }
 
+// ── Reusable share button ─────────────────────────────────────────────────────
+var SHARE_BTN_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
+
+function buildShareButton(ddId, shareUrl, tweetText) {
+  return '<button class="tih-share-btn" data-dd="' + ddId + '" aria-label="Share">' + SHARE_BTN_SVG + '</button>' +
+    '<div class="tih-share-dropdown" id="' + ddId + '" style="display:none;">' +
+      '<button class="tih-share-dd-item" data-action="tweet" data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '" data-tweet="' + escHtml(tweetText) + '">Post on X</button>' +
+      '<button class="tih-share-dd-item" data-action="copy" data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '">Copy link</button>' +
+    '</div>';
+}
+
+function attachShareListeners(container, fallbackUrl) {
+  var activeDropdown = null;
+  function closeAll() { if (activeDropdown) { activeDropdown.style.display = 'none'; activeDropdown = null; } }
+  container.querySelectorAll('.tih-share-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var ddId = btn.dataset.dd;
+      var dd   = document.getElementById(ddId);
+      if (!dd) return;
+      if (navigator.share) {
+        var url = (dd.querySelector('[data-url]') || {}).dataset.url || fallbackUrl;
+        var tweet = (dd.querySelector('[data-tweet]') || {}).dataset.tweet || '';
+        navigator.share({ title: document.title, text: tweet, url: url }).catch(function() {});
+        return;
+      }
+      if (dd.style.display === 'none') { closeAll(); dd.style.display = ''; activeDropdown = dd; }
+      else { closeAll(); }
+    });
+  });
+  container.querySelectorAll('.tih-share-dd-item').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var action = item.dataset.action;
+      var url    = item.dataset.url || fallbackUrl;
+      var tweet  = item.dataset.tweet || '';
+      if (action === 'tweet') {
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet), '_blank');
+        closeAll();
+      } else if (action === 'copy') {
+        if (navigator.clipboard) navigator.clipboard.writeText(url).then(function() {
+          var orig = item.textContent; item.textContent = '✓ Copied!';
+          setTimeout(function() { item.textContent = orig; }, 2000);
+        }).catch(function() {});
+        setTimeout(closeAll, 2100);
+      }
+    });
+  });
+  document.addEventListener('click', function(e) {
+    if (activeDropdown && !activeDropdown.parentNode.contains(e.target)) closeAll();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && activeDropdown) closeAll();
+  });
+}
+
 // ── initNav(activePage) ───────────────────────────────────────────────────────
 function initNav(activePage) {
 
@@ -57,34 +113,58 @@ function initNav(activePage) {
     return activePage === page ? ' style="color:var(--gold)"' : '';
   }
 
+  const researchActive = ['research','series','explorer','profiles','dataset'].includes(activePage) ? ' style="color:var(--gold)"' : '';
+  const communityActive = activePage === 'community' ? ' style="color:var(--gold)"' : '';
+  const aboutActive = ['about','contributors'].includes(activePage) ? ' style="color:var(--gold)"' : '';
+
   const navHtml = `
 <nav class="site-nav" id="site-nav">
   <a href="/index" class="nav-logo">
     <span class="nav-logo-text">THE EPOCH INSTITUTE</span>
   </a>
   <div class="nav-links">
-    <a href="/research" class="nav-link"${activeStyle('research')} data-i18n="nav_research">Research</a>
-    <a href="/research-series" class="nav-link"${activeStyle('series')} id="nav-series-link">Series</a>
-    <a href="/today-in-history" class="nav-link"${activeStyle('today')} id="nav-today-link">Today</a>
-    <a href="/about" class="nav-link"${activeStyle('about')} id="nav-about-link">About</a>
-    <a href="/contributors" class="nav-link"${activeStyle('contributors')} id="nav-contributors-link">Contributors</a>
-    <a href="/dataset" class="nav-link"${activeStyle('dataset')} id="nav-dataset-link">Dataset</a>
-    <a href="/community" class="nav-link"${activeStyle('community')} id="nav-community-link" data-i18n="nav_community">Community</a>
-    <a href="/explorer" class="nav-link"${activeStyle('explorer')} id="nav-explorer-link">Explorer</a>
+    <a href="/today-in-history" class="nav-link"${activeStyle('today')} id="nav-today-link">Today in History</a>
+    <div class="nav-group-wrap" id="nav-research-wrap">
+      <button class="nav-parent-btn${researchActive ? ' active-group' : ''}" id="nav-research-btn" aria-haspopup="true" aria-expanded="false">Research ▾</button>
+      <div class="nav-group-menu" id="nav-research-menu" role="menu">
+        <a href="/explorer" id="nav-explorer-link"${activeStyle('explorer')}>Empire Explorer</a>
+        <a href="/profiles" id="nav-profiles-link"${activeStyle('profiles')}>Empire Profiles</a>
+        <a href="/research-series" id="nav-series-link"${activeStyle('series')}>Research Series</a>
+        <a href="/research" id="nav-research-link"${activeStyle('research')}>Research Hub</a>
+        <a href="/dataset" id="nav-dataset-link"${activeStyle('dataset')}>Open Dataset</a>
+      </div>
+    </div>
+    <div class="nav-group-wrap" id="nav-community-wrap">
+      <button class="nav-parent-btn${communityActive ? ' active-group' : ''}" id="nav-community-btn" aria-haspopup="true" aria-expanded="false">Community ▾</button>
+      <div class="nav-group-menu" id="nav-community-menu" role="menu">
+        <a href="/community" id="nav-community-link"${activeStyle('community')}>Community Hub</a>
+        <a href="/community#submit">Submit Article</a>
+        <a href="/index#newsletter-section">Newsletter</a>
+      </div>
+    </div>
+    <div class="nav-group-wrap" id="nav-about-wrap">
+      <button class="nav-parent-btn${aboutActive ? ' active-group' : ''}" id="nav-about-btn" aria-haspopup="true" aria-expanded="false">About ▾</button>
+      <div class="nav-group-menu" id="nav-about-menu" role="menu">
+        <a href="/about" id="nav-about-link"${activeStyle('about')}>The Institute</a>
+        <a href="/contributors" id="nav-contributors-link"${activeStyle('contributors')}>Contributors</a>
+        <button onclick="openContactModal()">Contact</button>
+      </div>
+    </div>
   </div>
   <div class="nav-toggles">
     <button class="nav-toggle-btn" id="theme-toggle">&#x2600;</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">&#x2630;</button>
   </div>
   <div id="nav-dropdown" class="nav-dropdown" role="menu">
-    <a href="/research" class="nav-dropdown-link" id="mob-research">Research</a>
-    <a href="/research-series" class="nav-dropdown-link" id="mob-series">Series</a>
     <a href="/today-in-history" class="nav-dropdown-link" id="mob-today">Today in History</a>
-    <a href="/about" class="nav-dropdown-link" id="mob-about">About</a>
-    <a href="/contributors" class="nav-dropdown-link" id="mob-contributors">Contributors</a>
-    <a href="/dataset" class="nav-dropdown-link" id="mob-dataset">Dataset</a>
+    <a href="/explorer" class="nav-dropdown-link" id="mob-explorer">Empire Explorer</a>
+    <a href="/profiles" class="nav-dropdown-link" id="mob-profiles">Empire Profiles</a>
+    <a href="/research-series" class="nav-dropdown-link" id="mob-series">Research Series</a>
+    <a href="/research" class="nav-dropdown-link" id="mob-research">Research Hub</a>
+    <a href="/dataset" class="nav-dropdown-link" id="mob-dataset">Open Dataset</a>
     <a href="/community" class="nav-dropdown-link" id="mob-community">Community</a>
-    <a href="/explorer" class="nav-dropdown-link" id="mob-explorer">Explorer</a>
+    <a href="/about" class="nav-dropdown-link" id="mob-about">The Institute</a>
+    <a href="/contributors" class="nav-dropdown-link" id="mob-contributors">Contributors</a>
   </div>
 </nav>`;
 
@@ -123,7 +203,16 @@ function initNav(activePage) {
         <span class="footer-col-title">Explore</span>
         <a class="footer-link" href="/profiles" id="fl-profiles-2">Empire Profiles</a>
         <a class="footer-link" href="/explorer" id="fl-explorer-2">Empire Explorer</a>
-        <a class="footer-link" href="/today-in-history" id="fl-today-2">Today in History</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-newsletter">
+          <span class="footer-nl-label">Newsletter</span>
+          <form class="footer-nl-form" id="footer-nl-form">
+            <input type="email" id="footer-nl-email" placeholder="your@email.com" required aria-label="Email for newsletter">
+            <button type="submit">→</button>
+          </form>
+          <p id="footer-nl-msg" style="display:none; font-size:11px; color:var(--success); margin-top:6px; font-family:'Crimson Pro',serif;"></p>
+        </div>
       </div>
     </div>
   </div>
@@ -258,6 +347,14 @@ function initNav(activePage) {
     openContactModal();
   });
 
+  // ── Escape closes contact modal ──────────────────────────────────────────────
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      var m = document.getElementById('contact-modal');
+      if (m && m.style.display !== 'none') closeContactModal();
+    }
+  });
+
   document.getElementById('contact-form').addEventListener('submit', e => {
     e.preventDefault();
     const name    = document.getElementById('ct-name').value.trim();
@@ -296,4 +393,80 @@ function initNav(activePage) {
       el.removeAttribute('aria-invalid');
     });
   });
+
+  // ── Desktop dropdown groups (mobile tap + keyboard nav) ──────────────────────
+  (function() {
+    var wraps = document.querySelectorAll('.nav-group-wrap');
+    function closeAll() {
+      wraps.forEach(function(w) {
+        w.classList.remove('open');
+        var btn = w.querySelector('.nav-parent-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+    wraps.forEach(function(wrap) {
+      var btn = wrap.querySelector('.nav-parent-btn');
+      var menu = wrap.querySelector('.nav-group-menu');
+      if (!btn || !menu) return;
+      // Mobile: tap to toggle
+      btn.addEventListener('click', function(e) {
+        var isOpen = wrap.classList.contains('open');
+        closeAll();
+        if (!isOpen) {
+          wrap.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+        e.stopPropagation();
+      });
+      // Keyboard: ArrowDown opens/navigates; Escape closes
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          wrap.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          var first = menu.querySelector('a, button');
+          if (first) first.focus();
+        } else if (e.key === 'Escape') {
+          closeAll();
+        }
+      });
+      var items = menu.querySelectorAll('a, button');
+      items.forEach(function(item, idx) {
+        item.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowDown') { e.preventDefault(); if (items[idx + 1]) items[idx + 1].focus(); }
+          else if (e.key === 'ArrowUp') { e.preventDefault(); idx === 0 ? btn.focus() : items[idx - 1].focus(); }
+          else if (e.key === 'Escape') { closeAll(); btn.focus(); }
+        });
+      });
+    });
+    // Close when clicking outside any dropdown group
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-group-wrap')) closeAll();
+    });
+  })();
+
+  // ── Footer newsletter form ────────────────────────────────────────────────────
+  (function() {
+    var form = document.getElementById('footer-nl-form');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = document.getElementById('footer-nl-email').value.trim();
+      if (!isValidEmail(email)) return;
+      var btn = form.querySelector('button');
+      btn.disabled = true;
+      fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: email, _subject: 'Newsletter signup — footer', source: 'footer' })
+      }).then(function() {
+        var msg = document.getElementById('footer-nl-msg');
+        msg.textContent = 'Subscribed!';
+        msg.style.display = 'block';
+        form.style.display = 'none';
+      }).catch(function() {
+        btn.disabled = false;
+      });
+    });
+  })();
 }

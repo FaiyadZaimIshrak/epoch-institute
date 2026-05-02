@@ -57,6 +57,47 @@
   font-family: 'Crimson Pro', Georgia, serif; font-size: 13px;
   color: var(--muted); max-width: 480px; line-height: 1.5; margin: 0;
 }
+.dataset-preview-section {
+  width: 100%; max-width: 860px; margin-top: 48px; padding-top: 40px;
+  border-top: 0.5px solid var(--border); text-align: left;
+}
+.dataset-preview-heading {
+  font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.08em;
+  color: var(--gold-light); margin: 0 0 8px;
+}
+.dataset-preview-sub {
+  font-family: 'Crimson Pro', serif; font-size: 14px; color: var(--muted);
+  margin: 0 0 20px; line-height: 1.6;
+}
+.dataset-table-wrap { overflow-x: auto; margin-bottom: 32px; }
+.dataset-table {
+  width: 100%; border-collapse: collapse;
+  font-family: 'Crimson Pro', serif; font-size: 14px;
+}
+.dataset-table th {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); padding: 8px 12px;
+  border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap;
+}
+.dataset-table td {
+  padding: 9px 12px; border-bottom: 0.5px solid var(--border);
+  color: var(--text); line-height: 1.4;
+}
+.dataset-table tr:last-child td { border-bottom: none; }
+.dataset-table tr:hover td { background: rgba(201,168,76,0.04); }
+.dataset-cols-heading {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 12px;
+}
+.dataset-col-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.dataset-col-list li {
+  font-family: 'Crimson Pro', serif; font-size: 14px; color: var(--text);
+  line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--border);
+}
+.dataset-col-list strong { color: var(--gold-light); }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
@@ -80,12 +121,44 @@
   </div>
   <div class="dataset-cite-box">
     <span class="dataset-cite-label">How to cite this dataset</span>
-    <p class="dataset-cite-text">The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset</p>
+    <p class="dataset-cite-text">The Epoch Institute Research Team (2026). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset</p>
     <button class="detail-cite-btn" id="dataset-copy-cite-btn">Copy citation →</button>
   </div>
   <div class="dataset-licence">
     <a class="dataset-licence-badge" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>
     <p class="dataset-licence-note">You are free to share and adapt this data for any purpose, provided you give appropriate credit to The Epoch Institute.</p>
+  </div>
+
+  <div class="dataset-preview-section">
+    <h3 class="dataset-preview-heading">Sample Data</h3>
+    <p class="dataset-preview-sub">Five representative entries from across the dataset — spanning regions and eras. Trajectory columns (t_0–t_30) omitted for brevity.</p>
+    <div class="dataset-table-wrap">
+      <table class="dataset-table">
+        <thead>
+          <tr>
+            <th>Name</th><th>Region</th><th>Start</th><th>End</th><th>Peak</th><th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Akkadian Empire</td><td>Ancient Near East</td><td>−2334</td><td>−2154</td><td>−2240</td><td>180</td></tr>
+          <tr><td>Assyrian Empire</td><td>Ancient Near East</td><td>−2025</td><td>−609</td><td>−671</td><td>1,416</td></tr>
+          <tr><td>Roman Empire</td><td>Europe</td><td>−27</td><td>476</td><td>117</td><td>503</td></tr>
+          <tr><td>Tang Dynasty</td><td>East Asia</td><td>618</td><td>907</td><td>700</td><td>289</td></tr>
+          <tr><td>Ottoman Empire</td><td>Middle East / Europe</td><td>1299</td><td>1922</td><td>1683</td><td>623</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dataset-cols">
+      <h4 class="dataset-cols-heading">Column Definitions</h4>
+      <ul class="dataset-col-list">
+        <li><strong>name</strong> — Empire or civilisation name</li>
+        <li><strong>region</strong> — Broad geographic region (15 categories)</li>
+        <li><strong>start_year / end_year</strong> — Conventional founding and dissolution dates; negative values indicate BCE</li>
+        <li><strong>peak_year</strong> — Year of maximum territorial or institutional power</li>
+        <li><strong>duration</strong> — Years from start to end</li>
+        <li><strong>t_0 … t_30</strong> — 31 normalised power-trajectory sample points at equal intervals across the empire's lifespan, scored 0–10</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -113,7 +186,7 @@ document.getElementById('dataset-csv-btn').addEventListener('click', downloadEmp
 document.getElementById('dataset-json-btn').addEventListener('click', downloadEmpireJSON);
 
 document.getElementById('dataset-copy-cite-btn').addEventListener('click', function() {
-  var text = 'The Epoch Institute Research Team (2024). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset';
+  var text = 'The Epoch Institute Research Team (2026). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset';
   var btn  = this;
   navigator.clipboard.writeText(text).then(function() {
     var orig = btn.textContent;

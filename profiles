@@ -99,9 +99,7 @@
           <span class="compare-slot-placeholder">Select Empire B</span>
         </div>
       </div>
-      <div class="compare-actions" id="compare-actions" style="display:none;">
-        <button class="compare-share-btn" id="compare-share-btn">Share this comparison →</button>
-      </div>
+      <div class="compare-actions" id="compare-actions" style="display:none;"></div>
     </div>
   </div>
 
@@ -207,7 +205,6 @@ function buildProfileGallery() {
   var panel      = document.getElementById('compare-panel');
   var toggleBtn  = document.getElementById('compare-toggle-btn');
   var actions    = document.getElementById('compare-actions');
-  var shareBtn   = document.getElementById('compare-share-btn');
   var profilesEl = document.getElementById('profiles');
   var hint       = document.getElementById('compare-hint');
 
@@ -282,7 +279,14 @@ function buildProfileGallery() {
 
   function updatePanel() {
     var bothFilled = _slotA && _slotB;
-    actions.style.display = bothFilled ? 'block' : 'none';
+    if (bothFilled) {
+      var tweetText = 'Comparing ' + _slotA + ' vs ' + _slotB + ' on @EpochInstitute.\n\n#EmpireHistory\n\nhttps://the-epoch-institute.org/profiles';
+      actions.innerHTML = buildShareButton('compare-share-dd', 'https://the-epoch-institute.org/profiles', tweetText);
+      attachShareListeners(actions, 'https://the-epoch-institute.org/profiles');
+    } else {
+      actions.innerHTML = '';
+    }
+    actions.style.display = bothFilled ? 'flex' : 'none';
     hint.style.display    = (!_slotA && !_slotB) ? 'block' : 'none';
   }
 
@@ -346,12 +350,6 @@ function buildProfileGallery() {
     if (viewBtn) {
       window.location.href = '/empire/' + toSlug(viewBtn.dataset.empire);
     }
-  });
-
-  shareBtn.addEventListener('click', function() {
-    if (!_slotA || !_slotB) return;
-    var text = encodeURIComponent('Comparing ' + _slotA + ' vs ' + _slotB + ' on The Epoch Institute — interactive civilisational research. https://the-epoch-institute.org #history #empires #EpochInstitute');
-    window.open('https://twitter.com/intent/tweet?text=' + text, '_blank');
   });
 
   document.addEventListener('keydown', function(e) {

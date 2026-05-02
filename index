@@ -72,8 +72,8 @@
   <span class="hero-ornament"></span>
   <h1 class="hero-title">THE EPOCH INSTITUTE</h1>
   <span class="hero-ornament"></span>
-  <p class="hero-tagline" data-i18n="hero_tagline">Understanding civilizational patterns to illuminate the present.</p>
-  <p class="hero-mission" data-i18n="hero_mission">The Epoch Institute researches human civilization with objectivity and curiosity — studying the rise and fall of empires, examining the real-time implications of historical events, and tracing how the past shapes modern society. We make the story of humanity not just informative, but compelling. History is not a closed book; it is the foundation of everything around us.</p>
+  <p class="hero-tagline" data-i18n="hero_tagline">Understanding civilisational patterns to illuminate the present.</p>
+  <p class="hero-mission" data-i18n="hero_mission">The Epoch Institute researches human civilisation with objectivity and curiosity — studying the rise and fall of empires, examining the real-time implications of historical events, and tracing how the past shapes modern society. We make the story of humanity not just informative, but compelling. History is not a closed book; it is the foundation of everything around us.</p>
 
   <a href="/explorer" class="hero-cta">Explore the Data →</a>
   <a href="/research" class="hero-secondary-cta">Browse Research Projects →</a>
@@ -87,6 +87,25 @@
   </div>
 
   <span class="scroll-indicator"></span>
+</section>
+
+<!-- Newsletter section -->
+<section id="newsletter-section">
+  <h2 class="newsletter-heading">Stay Informed</h2>
+  <p class="newsletter-sub">New research series, data releases, and historical analyses — directly to your inbox.</p>
+  <form id="newsletter-form" class="newsletter-main-form">
+    <input type="email" id="newsletter-email" placeholder="your@email.com" required aria-label="Email address">
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="newsletter-msg" style="display:none;"></p>
+</section>
+
+<!-- Explorer teaser -->
+<section id="explorer-teaser">
+  <h2 class="explorer-teaser-heading">Civilisations in Motion</h2>
+  <p class="explorer-teaser-sub">European empires of the Classical era — from Alexander to the fall of Rome.</p>
+  <div id="explorer-teaser-chart"></div>
+  <a href="/explorer" class="explorer-teaser-cta">Launch Full Explorer →</a>
 </section>
 
 <!-- Article modal (used by announcements) -->
@@ -118,6 +137,7 @@ function openAnnouncementModal(fileId, name) {
   overlay.offsetHeight;
   overlay.classList.add('is-open');
   document.body.style.overflow = 'hidden';
+  setTimeout(function() { var c = document.getElementById('article-modal-close'); if (c) c.focus(); }, 50);
 }
 
 (function() {
@@ -135,6 +155,9 @@ function openAnnouncementModal(fileId, name) {
   }
   close.addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.style.display !== 'none') closeModal();
+  });
 })();
 
 // ── Announcements ─────────────────────────────────────────────────────────────
@@ -303,6 +326,20 @@ document.addEventListener('visibilitychange', () => {
     strip.style.display = '';
   }
 
+  // Show skeleton cards while loading
+  (function() {
+    var strip = document.getElementById('tih-strip');
+    var cardsEl = document.getElementById('tih-strip-cards');
+    var skelHtml = '';
+    for (var i = 0; i < 2; i++) skelHtml += '<div class="tih-skeleton-card tih-strip-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>';
+    cardsEl.innerHTML = skelHtml;
+    strip.style.display = '';
+    var dateEl = document.getElementById('tih-strip-date');
+    var dowLabel = now.toLocaleDateString('en-GB', { weekday: 'long' });
+    var fullDate = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    dateEl.innerHTML = '<span class="tih-date-sep"></span><span class="tih-date-dow">' + escHtml(dowLabel) + '</span><span class="tih-date-full">' + escHtml(fullDate) + '</span><span class="tih-date-sep"></span>';
+  })();
+
   Promise.all([
     fetch('/data/history.json').then(function(r) { if (!r.ok) throw new Error(); return r.json(); }),
     fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
@@ -311,9 +348,113 @@ document.addEventListener('visibilitychange', () => {
     var intlDay = results[1][key] || null;
     renderStrip(events, intlDay);
   }).catch(function() {
-    var entry = (typeof TODAY_IN_HISTORY !== 'undefined') && TODAY_IN_HISTORY[key];
-    if (entry) renderStrip([{ year: null, yearDisplay: entry.year, title: entry.title, description: '' }], null);
+    document.getElementById('tih-strip').style.display = 'none';
   });
+})();
+</script>
+
+<script>
+// ── Newsletter form ──────────────────────────────────────────────────────────
+(function() {
+  var form = document.getElementById('newsletter-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('newsletter-email').value.trim();
+    if (!isValidEmail(email)) return;
+    var btn = form.querySelector('button');
+    btn.disabled = true; btn.textContent = 'Subscribing…';
+    fetch(FORMSPREE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email: email, _subject: 'Newsletter signup', source: 'homepage' })
+    }).then(function() {
+      var msg = document.getElementById('newsletter-msg');
+      msg.textContent = "You're subscribed.";
+      msg.style.display = 'block';
+      form.style.display = 'none';
+    }).catch(function() {
+      btn.disabled = false; btn.textContent = 'Subscribe';
+    });
+  });
+})();
+
+// ── Explorer teaser (lazy-load D3, auto-play European Classical era) ─────────
+(function() {
+  var observed = false;
+  var chartEl = document.getElementById('explorer-teaser-chart');
+  if (!chartEl) return;
+  if (!window.IntersectionObserver) return;
+  var io = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting && !observed) {
+      observed = true; io.disconnect();
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+      s.onload = initTeaserChart;
+      document.head.appendChild(s);
+    }
+  }, { threshold: 0.2 });
+  io.observe(chartEl);
+
+  function initTeaserChart() {
+    if (typeof EMPIRES === 'undefined') return;
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var empires = EMPIRES.filter(function(e) {
+      return e.region === 'Europe' && e.start_year >= -600 && e.end_year <= 700;
+    }).slice(0, 10);
+    if (!empires.length) return;
+    var W = Math.min(700, chartEl.offsetWidth || 700), H = 300;
+    var svg = d3.select('#explorer-teaser-chart').append('svg')
+      .attr('width', '100%').attr('height', H).attr('viewBox', '0 0 ' + W + ' ' + H);
+    var years = [-600, -400, -200, 0, 200, 400, 600];
+    var currentIdx = 0;
+    var REGION_COLORS = { 'Europe': '#c9a84c' };
+    var rScale = d3.scaleSqrt().domain([0,10]).range([4, 28]);
+    var xScale = d3.scaleLinear().domain([-600, 600]).range([40, W - 40]);
+    var yScale = d3.scaleLinear().domain([0,10]).range([H - 30, 20]);
+
+    svg.append('g').attr('class', 'teaser-bubbles');
+
+    function getPower(emp, year) {
+      if (year < emp.start_year || year > emp.end_year) return 0;
+      var frac = emp.end_year > emp.start_year
+        ? (year - emp.start_year) / (emp.end_year - emp.start_year)
+        : 0;
+      var idx = Math.round(frac * 30);
+      return emp['t_' + idx] || 0;
+    }
+
+    function render(year) {
+      var data = empires.map(function(e, i) {
+        return { emp: e, power: getPower(e, year), x: xScale(e.peak_year), y: yScale(i * 1.1 % 10 + 1) };
+      }).filter(function(d) { return d.power > 0; });
+      var bubbles = svg.select('.teaser-bubbles').selectAll('circle').data(data, function(d) { return d.emp.name; });
+      bubbles.enter().append('circle')
+        .attr('cx', function(d) { return d.x; })
+        .attr('cy', function(d) { return d.y; })
+        .attr('r', 0).attr('fill', '#c9a84c').attr('opacity', 0.55)
+        .merge(bubbles).transition().duration(reduced ? 0 : 800)
+        .attr('r', function(d) { return rScale(d.power); })
+        .attr('opacity', 0.55);
+      bubbles.exit().transition().duration(reduced ? 0 : 400).attr('r', 0).remove();
+      svg.selectAll('.teaser-year-label').remove();
+      svg.append('text').attr('class', 'teaser-year-label')
+        .attr('x', W / 2).attr('y', H - 6)
+        .attr('text-anchor', 'middle')
+        .attr('font-family', 'Cinzel, serif').attr('font-size', 11)
+        .attr('fill', 'var(--muted)')
+        .text(year < 0 ? Math.abs(year) + ' BCE' : year + ' CE');
+    }
+
+    render(years[0]);
+    if (reduced) return;
+    var interval = setInterval(function() {
+      currentIdx = (currentIdx + 1) % years.length;
+      render(years[currentIdx]);
+    }, 2000);
+    // Clean up if section scrolls out of view for a long time — not needed for static site
+    chartEl._teaserInterval = interval;
+  }
 })();
 </script>
 </body>

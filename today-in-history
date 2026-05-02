@@ -52,7 +52,11 @@
   <div class="tih-full-wrap">
     <div id="tih-pinned-wrap" style="display:none;"></div>
     <p class="tih-full-loading" id="tih-loading" style="display:none;"></p>
-    <div class="tih-grid" id="tih-grid" style="display:none;"></div>
+    <div class="tih-grid" id="tih-grid">
+      <div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>
+      <div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>
+      <div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>
+    </div>
     <div class="tih-pagination" id="tih-pagination" style="display:none;"></div>
   </div>
 
@@ -212,7 +216,6 @@ function renderPage(page, scroll) {
     });
   });
 
-  grid.style.display = '';
   pag.style.display  = tot > 1 ? 'flex' : 'none';
   if (scroll) scrollToGrid();
 }
@@ -260,21 +263,37 @@ function renderDay(key, intlDay) {
   renderPage(1, false);
 }
 
-// Show loading state while fetch is pending
-document.getElementById('tih-loading').textContent  = 'Loading events…';
-document.getElementById('tih-loading').style.display = '';
+function showTihError() {
+  var grid = document.getElementById('tih-grid');
+  grid.innerHTML = '<div class="tih-error-state"><p>Events could not be loaded.</p><button class="tih-retry-btn" id="tih-retry-btn">Try again</button></div>';
+  grid.style.display = '';
+  document.getElementById('tih-loading').style.display = 'none';
+  document.getElementById('tih-retry-btn').addEventListener('click', function() {
+    grid.innerHTML = '<div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div><div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div><div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>';
+    loadTihData();
+  });
+}
 
-Promise.all([
-  fetch('/data/history.json').then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
-  fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
-]).then(function(results) {
-  cachedData    = results[0];
-  cachedIntlDay = results[1];
-  renderDay(getDayKey(), cachedIntlDay[getDayKey()] || null);
-}).catch(function() {
-  var el = document.getElementById('tih-loading');
-  el.textContent = 'Events unavailable — please run the data scraping script first.';
-});
+function loadTihData() {
+  var timeout = new Promise(function(_, rej) {
+    setTimeout(function() { rej(new Error('timeout')); }, 8000);
+  });
+  Promise.race([
+    Promise.all([
+      fetch('/data/history.json').then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
+      fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
+    ]),
+    timeout
+  ]).then(function(results) {
+    cachedData    = results[0];
+    cachedIntlDay = results[1];
+    renderDay(getDayKey(), cachedIntlDay[getDayKey()] || null);
+  }).catch(function() {
+    showTihError();
+  });
+}
+
+loadTihData();
 
 // Midnight rollover: re-render if day changes
 setInterval(function() {

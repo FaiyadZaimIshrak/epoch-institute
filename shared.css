@@ -11,7 +11,7 @@
     --success: #5a9e6f;
     --shadow: rgba(0,0,0,0.5);
     --overlay: rgba(0,0,0,0.72);
-    --shimmer-mid: var(--shimmer-mid);
+    --shimmer-mid: rgba(42,45,58,0.5);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1960,7 +1960,7 @@ mark.search-hl {
 .compare-read-more:hover { color:var(--gold); }
 .compare-view-btn { display:block; width:100%; margin-top:16px; padding:9px 0; font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); border-radius:4px; cursor:pointer; transition:border-color 0.2s,color 0.2s; }
 .compare-view-btn:hover { border-color:var(--gold); color:var(--gold); }
-.compare-actions { text-align:center; padding:16px 0 24px; }
+.compare-actions { justify-content:center; align-items:center; gap:8px; padding:16px 0 24px; position:relative; }
 .compare-share-btn { font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); background:none; border:1px solid var(--gold); padding:10px 28px; cursor:pointer; transition:background 0.2s; }
 .compare-share-btn:hover { background:rgba(201,168,76,0.1); }
 #profiles.compare-mode .empire-thumb { position:relative; overflow:hidden; }
@@ -2078,10 +2078,12 @@ mark.search-hl {
 .tih-date-dow {
   font-family: 'Cinzel', serif; font-size: 11px;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 6px;
 }
 .tih-date-full {
   font-family: 'Cinzel', serif; font-size: 22px;
   letter-spacing: 0.08em; color: var(--gold);
+  margin-top: 6px;
 }
 /* date block — today page subtitle */
 #tih-subheading { font-style: normal; }
@@ -2148,6 +2150,154 @@ mark.search-hl {
   .tih-pg-btn { min-width: 30px; height: 30px; font-size: 9px; }
 }
 @media (max-width:480px) { .compare-slot-filled { padding:14px; } }
+
+/* ── TiH skeleton loading cards ── */
+.tih-skeleton-card {
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 4px; padding: 24px 20px;
+  animation: skshimmer 1.6s ease-in-out infinite;
+}
+@keyframes skshimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.tih-sk-year  { height: 14px; width: 60px;  background: var(--border); border-radius: 2px; margin-bottom: 12px; }
+.tih-sk-title { height: 18px; width: 80%;   background: var(--border); border-radius: 2px; margin-bottom: 10px; }
+.tih-sk-desc  { height: 14px; width: 95%;   background: var(--border); border-radius: 2px; }
+/* TiH error state */
+.tih-error-state { text-align: center; padding: 48px 24px; color: var(--muted); font-family: 'Crimson Pro', serif; }
+.tih-retry-btn {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 8px 20px; border: 0.5px solid var(--gold); background: none; color: var(--gold);
+  cursor: pointer; margin-top: 12px; display: inline-block;
+}
+.tih-retry-btn:hover { background: rgba(201,168,76,0.08); }
+
+/* ── Nav group dropdowns (desktop) ── */
+.nav-group-wrap { position: relative; display: inline-flex; align-items: center; }
+.nav-group-wrap:hover .nav-group-menu { display: block; }
+.nav-group-menu {
+  display: none; position: absolute; top: calc(100% + 12px); left: 50%;
+  transform: translateX(-50%); min-width: 176px;
+  background: var(--surface); border: 0.5px solid var(--border);
+  border-radius: 3px; z-index: 300; padding: 6px 0;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+.nav-group-menu a, .nav-group-menu button {
+  display: block; width: 100%; font-family: 'Cinzel', serif; font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+  padding: 10px 18px; text-decoration: none; background: none; border: none;
+  text-align: left; cursor: pointer; white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-group-menu a:hover, .nav-group-menu button:hover { color: var(--gold); background: rgba(201,168,76,0.04); }
+.nav-parent-btn {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); background: none; border: none; cursor: pointer; padding: 0;
+  transition: color 0.2s;
+}
+.nav-parent-btn:hover, .nav-group-wrap.open .nav-parent-btn { color: var(--gold); }
+.nav-parent-btn.active-group { color: var(--gold); }
+
+/* ── Series notify-me forms (coming-soon cards) ── */
+.series-card.coming-soon .series-notify-form { pointer-events: all; }
+.series-notify-form { margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap; }
+.series-notify-input {
+  flex: 1; min-width: 120px; font-family: 'Crimson Pro', serif; font-size: 13px; padding: 6px 10px;
+  background: var(--bg); border: 0.5px solid var(--border); border-radius: 2px; color: var(--text);
+  outline: none; transition: border-color 0.2s;
+}
+.series-notify-input:focus { border-color: var(--gold); }
+.series-notify-btn {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 12px; border: 0.5px solid var(--gold); background: none; color: var(--gold);
+  cursor: pointer; transition: background 0.2s; white-space: nowrap;
+}
+.series-notify-btn:hover { background: rgba(201,168,76,0.08); }
+
+/* ── Newsletter homepage section ── */
+#newsletter-section {
+  max-width: 600px; margin: 0 auto; padding: 60px 40px;
+  text-align: center; border-top: 0.5px solid var(--border);
+}
+.newsletter-heading {
+  font-family: 'Cinzel', serif; font-size: clamp(18px,2vw,26px);
+  color: var(--gold-light); letter-spacing: 0.06em; margin: 0 0 12px;
+}
+.newsletter-sub {
+  font-family: 'Crimson Pro', serif; font-size: 16px; color: var(--muted); margin: 0 0 24px;
+}
+.newsletter-main-form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.newsletter-main-form input {
+  font-family: 'Crimson Pro', serif; font-size: 14px; padding: 10px 16px; min-width: 240px;
+  background: var(--surface); border: 0.5px solid var(--border); border-radius: 2px;
+  color: var(--text); outline: none; transition: border-color 0.2s;
+}
+.newsletter-main-form input:focus { border-color: var(--gold); }
+.newsletter-main-form button {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 10px 20px; border: 0.5px solid var(--gold); background: none; color: var(--gold);
+  cursor: pointer; transition: background 0.2s;
+}
+.newsletter-main-form button:hover { background: rgba(201,168,76,0.08); }
+#newsletter-msg { font-family: 'Crimson Pro', serif; font-size: 14px; color: var(--success); margin-top: 12px; }
+/* Footer newsletter compact */
+.footer-newsletter { margin-top: 16px; }
+.footer-nl-label {
+  display: block; font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin-bottom: 8px;
+}
+.footer-nl-form { display: flex; gap: 4px; }
+.footer-nl-form input {
+  font-family: 'Crimson Pro', serif; font-size: 12px; padding: 6px 10px;
+  background: var(--bg); border: 0.5px solid var(--border); border-radius: 2px;
+  color: var(--text); outline: none; flex: 1; min-width: 0; transition: border-color 0.2s;
+}
+.footer-nl-form input:focus { border-color: var(--gold); }
+.footer-nl-form button {
+  font-family: 'Cinzel', serif; font-size: 11px; padding: 6px 10px;
+  border: 0.5px solid var(--gold); background: none; color: var(--gold); cursor: pointer; transition: background 0.2s;
+}
+.footer-nl-form button:hover { background: rgba(201,168,76,0.08); }
+
+/* ── Explorer onboarding sentence ── */
+.explorer-onboarding {
+  font-family: 'Crimson Pro', serif; font-size: 16px; color: var(--muted);
+  max-width: 600px; margin: 0 auto 32px; text-align: center; line-height: 1.7;
+}
+
+/* ── Homepage explorer teaser section ── */
+#explorer-teaser { padding: 60px 40px; text-align: center; border-top: 0.5px solid var(--border); }
+.explorer-teaser-heading {
+  font-family: 'Cinzel', serif; font-size: clamp(16px,2vw,24px);
+  color: var(--gold-light); letter-spacing: 0.06em; margin: 0 0 10px;
+}
+.explorer-teaser-sub { font-family: 'Crimson Pro', serif; font-size: 15px; color: var(--muted); margin: 0 0 28px; }
+#explorer-teaser-chart { width: 100%; max-width: 700px; height: 320px; margin: 0 auto 24px; overflow: hidden; }
+.explorer-teaser-cta {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); border: 0.5px solid var(--gold); padding: 10px 24px; text-decoration: none; display: inline-block;
+  transition: background 0.2s;
+}
+.explorer-teaser-cta:hover { background: rgba(201,168,76,0.08); }
+
+/* ── Series TOC and section headings ── */
+.series-section-heading {
+  font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.06em; color: var(--gold-light);
+  margin: 32px 0 12px; padding-top: 8px; border-top: 0.5px solid var(--border);
+}
+.series-toc {
+  margin-bottom: 32px; padding: 20px 24px;
+  background: var(--surface); border: 0.5px solid var(--border); border-radius: 4px;
+}
+.series-toc-label {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.14em;
+  color: var(--gold); text-transform: uppercase; margin: 0 0 10px; display: block;
+}
+.series-toc ol { margin: 0; padding-left: 20px; }
+.series-toc li { font-family: 'Crimson Pro', serif; font-size: 14px; color: var(--muted); margin-bottom: 4px; }
+.series-toc a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.series-toc a:hover { color: var(--gold); }
 
 /* ── Accessibility: respect reduced-motion preference ── */
 @media (prefers-reduced-motion: reduce) {

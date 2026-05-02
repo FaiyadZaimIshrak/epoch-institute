@@ -17,6 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/research-series">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute Research Series" href="/feed.xml">
 <link rel="stylesheet" href="/shared.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,6 +143,10 @@
       <h3 class="series-title">Trade and Territory</h3>
       <p class="series-subtitle">Economic Networks Across the Ancient and Medieval World</p>
       <p class="series-desc">A study of how control over trade routes, currency systems, and agricultural surplus shaped imperial ambition — and how economic disruption so often proved fatal to imperial order.</p>
+      <form class="series-notify-form" onsubmit="seriesNotify(event,'Series 02 — Trade and Territory')">
+        <input type="email" class="series-notify-input" placeholder="your@email.com" required>
+        <button type="submit" class="series-notify-btn">Notify me</button>
+      </form>
       <span class="series-cta">In Preparation</span>
     </div>
 
@@ -153,6 +158,10 @@
       <h3 class="series-title">The Collapse Problem</h3>
       <p class="series-subtitle">Common Patterns in Imperial Decline Across Five Millennia</p>
       <p class="series-desc">Why do empires fall? Comparing the trajectories of the Western Roman Empire, the Abbasid Caliphate, the Mongol Empire, and others to identify recurring structural vulnerabilities.</p>
+      <form class="series-notify-form" onsubmit="seriesNotify(event,'Series 03 — The Collapse Problem')">
+        <input type="email" class="series-notify-input" placeholder="your@email.com" required>
+        <button type="submit" class="series-notify-btn">Notify me</button>
+      </form>
       <span class="series-cta">In Preparation</span>
     </div>
 
@@ -164,6 +173,10 @@
       <h3 class="series-title">Cross-Cultural Exchange</h3>
       <p class="series-subtitle">How Empires Spread — and Were Changed by — Ideas and Culture</p>
       <p class="series-desc">From Hellenisation to the Islamic Golden Age to the Columbian Exchange, this series explores the two-way nature of cultural contact under imperial conditions and its lasting consequences.</p>
+      <form class="series-notify-form" onsubmit="seriesNotify(event,'Series 04 — Cross-Cultural Exchange')">
+        <input type="email" class="series-notify-input" placeholder="your@email.com" required>
+        <button type="submit" class="series-notify-btn">Notify me</button>
+      </form>
       <span class="series-cta">In Preparation</span>
     </div>
 
@@ -175,6 +188,10 @@
       <h3 class="series-title">The Military Revolution</h3>
       <p class="series-subtitle">Technology, Tactics, and the Shifting Balance of Power</p>
       <p class="series-desc">How advances in military technology — the stirrup, gunpowder, the warship — reshaped the competitive landscape between polities and enabled otherwise peripheral states to become world powers.</p>
+      <form class="series-notify-form" onsubmit="seriesNotify(event,'Series 05 — The Military Revolution')">
+        <input type="email" class="series-notify-input" placeholder="your@email.com" required>
+        <button type="submit" class="series-notify-btn">Notify me</button>
+      </form>
       <span class="series-cta">In Preparation</span>
     </div>
 
@@ -202,14 +219,31 @@ var SERIES_DATA = {
     number: 'Series 01',
     title: 'The Architecture of Power',
     subtitle: 'How Empires Build the Structures That Sustain Them',
+    rawHtml: true,
     body: [
-      'What distinguishes an empire from a merely large kingdom? Size is the obvious answer — but size alone cannot explain the longevity of the Roman Empire, the administrative resilience of the Achaemenid Persians, or the remarkable coherence of the Han Chinese state across centuries of turbulence. The more fundamental answer lies in architecture: the deliberate construction of systems — legal, bureaucratic, infrastructural, and fiscal — that allow a polity to govern territory far beyond the reach of any single ruler.',
-      'The Achaemenid model established one of history\'s first truly multi-ethnic administrative frameworks. Cyrus and Darius understood that a conquered people who retained their customs, their temples, and their local governance structures were far less likely to revolt than a people stripped of identity. The satrapal system — provincial governors operating under central oversight, with standardised coinage, a Royal Road enabling rapid communication, and a sophisticated census system — allowed Persia to govern from the Aegean to the Indus without the constant military presence that a cruder empire would have required.',
-      'The Roman Empire refined this insight over centuries. At its height, Roman administration had produced a legal system so internally consistent that it could adjudicate disputes between parties who had never seen Rome, in languages Rome\'s founders could not have imagined. The legions built roads; the roads enabled commerce; commerce filled the treasury; the treasury paid the legions. The system was self-reinforcing so long as its key nodes — the tax base, the military, the administrative class — remained functional.',
-      'What is striking about imperial collapse, viewed through this lens, is how often it begins not with dramatic military defeat but with the quiet erosion of these structural systems. The Western Roman Empire did not fall in a single catastrophic moment. It degraded: tax receipts fell as the rural population contracted and elites found means of avoiding the fiscal system; the army professionalised but shrank and relied increasingly on federates whose loyalty was conditional; the roads went unrepaired; the legal system fragmented into local custom. By the time the last Western emperor was deposed in 476 CE, the administrative architecture of empire had already largely ceased to function.',
-      'This pattern — structural erosion preceding visible political collapse — recurs with striking regularity. The Abbasid Caliphate\'s true decline began not with the Mongol sack of Baghdad in 1258 but with the transfer of real power to Turkish military commanders in the 860s and the resulting fiscal fragmentation of the 870s and 880s. The Mughal Empire\'s administrative coherence had already begun to unravel under Aurangzeb\'s ideological rigidities before the Maratha confederacy and Nadir Shah\'s invasion completed the fracture.',
-      'The lesson for the historian — and perhaps for the student of contemporary institutions — is that the most important question about any large-scale political structure is not how powerful it appears at its peak, but how robust its underlying architecture is to perturbation. Empires that invested in systems — in law, in roads, in fiscal administration, in the cultivation of a competent bureaucratic class — tended to last longer and recover more readily from crisis than those that relied on the personal authority of a gifted ruler. Personal authority is non-transferable. Institutions, when well-designed, outlast the individuals who build them.',
-      'The Epoch Institute\'s empire trajectory data reflects this directly. Empires that achieved high scores across multiple dimensions simultaneously — territory, governance, economic output — consistently showed longer periods of sustained power than those that achieved high scores on a single dimension. Military dominance without administrative depth is a different, and more fragile, kind of power. The architecture of power is not glamorous. But it is durable.'
+      '<nav class="series-toc"><span class="series-toc-label">Contents</span><ol>' +
+        '<li><a href="#s1-q">What Distinguishes an Empire?</a></li>' +
+        '<li><a href="#s1-achaemenid">The Achaemenid Model</a></li>' +
+        '<li><a href="#s1-roman">The Roman System</a></li>' +
+        '<li><a href="#s1-collapse">Structural Erosion and Collapse</a></li>' +
+        '<li><a href="#s1-recurrence">Recurrence Across Civilisations</a></li>' +
+        '<li><a href="#s1-lesson">The Lesson for Institutions</a></li>' +
+        '<li><a href="#s1-data">What the Data Shows</a></li>' +
+      '</ol></nav>',
+      '<h3 id="s1-q" class="series-section-heading">What Distinguishes an Empire?</h3>' +
+      '<p>What distinguishes an empire from a merely large kingdom? Size is the obvious answer — but size alone cannot explain the longevity of the Roman Empire, the administrative resilience of the Achaemenid Persians, or the remarkable coherence of the Han Chinese state across centuries of turbulence. The more fundamental answer lies in architecture: the deliberate construction of systems — legal, bureaucratic, infrastructural, and fiscal — that allow a polity to govern territory far beyond the reach of any single ruler.</p>',
+      '<h3 id="s1-achaemenid" class="series-section-heading">The Achaemenid Model</h3>' +
+      '<p>The Achaemenid model established one of history\'s first truly multi-ethnic administrative frameworks. Cyrus and Darius understood that a conquered people who retained their customs, their temples, and their local governance structures were far less likely to revolt than a people stripped of identity. The satrapal system — provincial governors operating under central oversight, with standardised coinage, a Royal Road enabling rapid communication, and a sophisticated census system — allowed Persia to govern from the Aegean to the Indus without the constant military presence that a cruder empire would have required.</p>',
+      '<h3 id="s1-roman" class="series-section-heading">The Roman System</h3>' +
+      '<p>The Roman Empire refined this insight over centuries. At its height, Roman administration had produced a legal system so internally consistent that it could adjudicate disputes between parties who had never seen Rome, in languages Rome\'s founders could not have imagined. The legions built roads; the roads enabled commerce; commerce filled the treasury; the treasury paid the legions. The system was self-reinforcing so long as its key nodes — the tax base, the military, the administrative class — remained functional.</p>',
+      '<h3 id="s1-collapse" class="series-section-heading">Structural Erosion and Collapse</h3>' +
+      '<p>What is striking about imperial collapse, viewed through this lens, is how often it begins not with dramatic military defeat but with the quiet erosion of these structural systems. The Western Roman Empire did not fall in a single catastrophic moment. It degraded: tax receipts fell as the rural population contracted and elites found means of avoiding the fiscal system; the army professionalised but shrank and relied increasingly on federates whose loyalty was conditional; the roads went unrepaired; the legal system fragmented into local custom. By the time the last Western emperor was deposed in 476 CE, the administrative architecture of empire had already largely ceased to function.</p>',
+      '<h3 id="s1-recurrence" class="series-section-heading">Recurrence Across Civilisations</h3>' +
+      '<p>This pattern — structural erosion preceding visible political collapse — recurs with striking regularity. The Abbasid Caliphate\'s true decline began not with the Mongol sack of Baghdad in 1258 but with the transfer of real power to Turkish military commanders in the 860s and the resulting fiscal fragmentation of the 870s and 880s. The Mughal Empire\'s administrative coherence had already begun to unravel under Aurangzeb\'s ideological rigidities before the Maratha confederacy and Nadir Shah\'s invasion completed the fracture.</p>',
+      '<h3 id="s1-lesson" class="series-section-heading">The Lesson for Institutions</h3>' +
+      '<p>The lesson for the historian — and perhaps for the student of contemporary institutions — is that the most important question about any large-scale political structure is not how powerful it appears at its peak, but how robust its underlying architecture is to perturbation. Empires that invested in systems — in law, in roads, in fiscal administration, in the cultivation of a competent bureaucratic class — tended to last longer and recover more readily from crisis than those that relied on the personal authority of a gifted ruler. Personal authority is non-transferable. Institutions, when well-designed, outlast the individuals who build them.</p>',
+      '<h3 id="s1-data" class="series-section-heading">What the Data Shows</h3>' +
+      '<p>The Epoch Institute\'s empire trajectory data reflects this directly. Empires that achieved high scores across multiple dimensions simultaneously — territory, governance, economic output — consistently showed longer periods of sustained power than those that achieved high scores on a single dimension. Military dominance without administrative depth is a different, and more fragile, kind of power. The architecture of power is not glamorous. But it is durable.</p>'
     ]
   },
   'series-02': { number: 'Series 02', title: 'Trade and Territory', subtitle: 'Economic Networks Across the Ancient and Medieval World', body: ['This series is in preparation. Check back soon.'] },
@@ -224,11 +258,25 @@ function openSeriesDetail(id) {
   document.getElementById('series-detail-number').textContent   = s.number;
   document.getElementById('series-detail-title').textContent    = s.title;
   document.getElementById('series-detail-subtitle').textContent = s.subtitle;
-  document.getElementById('series-detail-body').innerHTML = s.body.map(function(p) {
-    return '<p>' + escHtml(p) + '</p>';
-  }).join('');
+  document.getElementById('series-detail-body').innerHTML = s.rawHtml
+    ? s.body.join('')
+    : s.body.map(function(p) { return '<p>' + escHtml(p) + '</p>'; }).join('');
   document.getElementById('research-series').style.display = 'none';
-  document.getElementById('series-detail').style.display   = 'block';
+  var detailEl = document.getElementById('series-detail');
+  detailEl.style.display = 'block';
+  // Inject share button for available series
+  var existingShare = detailEl.querySelector('.series-share-wrap');
+  if (existingShare) existingShare.remove();
+  if (!s.rawHtml === false || s.rawHtml) {
+    var shareUrl = 'https://the-epoch-institute.org/research-series';
+    var tweetText = 'Just read: “' + s.title + '” from @EpochInstitute’s Research Series.\n\n#History #Civilisation\n\n' + shareUrl;
+    var wrap = document.createElement('div');
+    wrap.className = 'series-share-wrap';
+    wrap.style.cssText = 'position:relative; display:inline-block; margin-top:16px;';
+    wrap.innerHTML = buildShareButton('series-share-dd', shareUrl, tweetText);
+    document.querySelector('.series-detail-header').appendChild(wrap);
+    attachShareListeners(wrap, shareUrl);
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -237,6 +285,15 @@ document.getElementById('series-detail-back').addEventListener('click', function
   document.getElementById('research-series').style.display = '';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+function seriesNotify(e, seriesName) {
+  e.preventDefault();
+  var email = e.target.querySelector('input[type="email"]').value.trim();
+  if (!email) return;
+  window.location.href = 'mailto:outreach@the-epoch-institute.org'
+    + '?subject=' + encodeURIComponent('Notify me: ' + seriesName)
+    + '&body=' + encodeURIComponent('Please notify ' + email + ' when ' + seriesName + ' is published.');
+}
 
 initNav('series');
 </script>

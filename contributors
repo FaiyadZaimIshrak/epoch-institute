@@ -235,6 +235,7 @@ function openApplyModal() {
   overlay.offsetHeight;
   overlay.classList.add('is-open');
   document.body.style.overflow = 'hidden';
+  setTimeout(function() { var f = document.getElementById('ap-name'); if (f) f.focus(); }, 50);
 }
 function closeApplyModal() {
   var overlay = document.getElementById('apply-modal');

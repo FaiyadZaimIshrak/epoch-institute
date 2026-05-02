@@ -586,6 +586,7 @@ var _shareFile = null;
 document.getElementById('open-share-btn').addEventListener('click', function() {
   document.getElementById('share-modal').classList.add('is-open');
   document.body.style.overflow = 'hidden';
+  setTimeout(function() { var f = document.getElementById('sf-name'); if (f) f.focus(); }, 50);
 });
 
 function closeShareModal() {
@@ -595,6 +596,9 @@ function closeShareModal() {
 document.getElementById('share-modal-close').addEventListener('click', closeShareModal);
 document.getElementById('share-modal').addEventListener('click', function(e) {
   if (e.target === e.currentTarget) closeShareModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && document.getElementById('share-modal').classList.contains('is-open')) closeShareModal();
 });
 
 // Drop zone
