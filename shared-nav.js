@@ -30,6 +30,26 @@ function isValidEmail(v) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
 }
 
+function composeTweet(ev) {
+  var TIH_URL = 'https://the-epoch-institute.org/today-in-history';
+  var yearDisplay = ev.yearDisplay || String(ev.year);
+  var title = ev.title;
+  var desc = ev.description || '';
+  var firstSentence = desc.replace(/^([\s\S]*?[.!?])(?:\s|$)[\s\S]*$/, '$1') || desc;
+  var hashtags = '#OnThisDay #History #EpochInstitute';
+  var header = 'On this day in ' + yearDisplay + ': ' + title + '.';
+  var full = header + '\n\n' + firstSentence + '\n\n' + hashtags + '\n\n' + TIH_URL;
+  if (full.length <= 280) return full;
+  var budget = 280 - header.length - 6 - hashtags.length - TIH_URL.length - 1;
+  if (budget > 5) {
+    return header + '\n\n' + firstSentence.substring(0, budget) + '…\n\n' + hashtags + '\n\n' + TIH_URL;
+  }
+  var noDesc = header + '\n\n' + hashtags + '\n\n' + TIH_URL;
+  if (noDesc.length <= 280) return noDesc;
+  var titleBudget = 280 - ('On this day in ' + yearDisplay + ': ').length - 1 - 4 - hashtags.length - 2 - TIH_URL.length;
+  return 'On this day in ' + yearDisplay + ': ' + title.substring(0, Math.max(10, titleBudget)) + '…\n\n' + hashtags + '\n\n' + TIH_URL;
+}
+
 // ── initNav(activePage) ───────────────────────────────────────────────────────
 function initNav(activePage) {
 

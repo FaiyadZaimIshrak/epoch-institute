@@ -11,6 +11,11 @@
 <meta property="og:description" content="A space for readers, researchers, and thinkers to read, write, and reflect on history and its implications.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/community">
+<meta property="og:image" content="https://the-epoch-institute.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
 <link rel="stylesheet" href="/shared.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -378,6 +383,7 @@
           <p class="drop-zone-file" id="drop-zone-filename" style="display:none;"></p>
           <input type="file" id="sf-file" accept=".docx" style="position:absolute;inset:0;opacity:0;cursor:pointer;">
         </div>
+        <p id="drop-zone-error" aria-live="polite" style="display:none;font-family:'Crimson Pro',Georgia,serif;font-size:13px;color:var(--error);margin-top:4px;"></p>
       </div>
       <button type="submit" class="form-submit">Submit →</button>
       <p class="form-success" id="sf-success" style="display:none;">Thank you! We'll review your submission and be in touch.</p>
@@ -599,7 +605,10 @@ document.getElementById('share-modal').addEventListener('click', function(e) {
 
   function setFile(file) {
     if (!file || !file.name.toLowerCase().endsWith('.docx')) {
-      alert('Please select a .docx file.');
+      var errEl = document.getElementById('drop-zone-error');
+      errEl.textContent = 'Please select a .docx file.';
+      errEl.style.display = 'block';
+      setTimeout(function() { errEl.style.display = 'none'; }, 4000);
       return;
     }
     _shareFile = file;

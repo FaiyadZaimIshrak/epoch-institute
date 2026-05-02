@@ -11,6 +11,11 @@
 <meta property="og:description" content="Researchers, historians, and writers shaping the study of civilisational history at The Epoch Institute.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/contributors">
+<meta property="og:image" content="https://the-epoch-institute.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/contributors">
 <link rel="stylesheet" href="/shared.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -244,6 +249,9 @@ function closeApplyModal() {
 document.getElementById('apply-modal-close').addEventListener('click', closeApplyModal);
 document.getElementById('apply-modal').addEventListener('click', function(e) {
   if (e.target === e.currentTarget) closeApplyModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && document.getElementById('apply-modal').style.display !== 'none') closeApplyModal();
 });
 
 document.getElementById('apply-form').addEventListener('submit', function(e) {
