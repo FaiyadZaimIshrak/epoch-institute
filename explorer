@@ -79,7 +79,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
         </button>
         <div class="tih-share-dropdown" id="explorer-share-dd" style="display:none; bottom:auto; top:calc(100% + 4px);">
-          <button class="tih-share-dd-item" data-action="tweet" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer" data-tweet="Watching civilisations rise and fall across five millennia on @EpochInstitute.&#10;&#10;#History #Civilisation&#10;&#10;https://the-epoch-institute.org/explorer">Post on X</button>
+          <button class="tih-share-dd-item" data-action="tweet" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer" data-tweet="Explore civilisational history on The Epoch Institute. #History #EpochInstitute">Post on X</button>
           <button class="tih-share-dd-item" data-action="copy" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer">Copy link</button>
         </div>
       </div>
@@ -170,6 +170,22 @@
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
+
+var ERA_DISPLAY = {
+  '': 'all eras', 'all': 'all eras',
+  'ancient': 'the Ancient Era', 'classical': 'the Classical Era',
+  'medieval': 'the Medieval Era', 'early-modern': 'the Early Modern Era',
+  'modern': 'the Modern Era'
+};
+function updateExplorerShareText() {
+  var regionLabel = activeRegion || 'all regions';
+  var eraEl = document.getElementById('era-select');
+  var eraLabel = ERA_DISPLAY[(eraEl ? eraEl.value : '') || ''] || 'all eras';
+  var text = 'Explore the rise and fall of ' + regionLabel + ' civilisations across ' + eraLabel +
+    ' — interactive trajectories from The Epoch Institute. #History #EpochInstitute';
+  var tweetBtn = document.querySelector('#explorer-share-dd [data-action="tweet"]');
+  if (tweetBtn) tweetBtn.dataset.tweet = text;
+}
 
 // ── Google Drive config for empire emblems ─────────────────────────────────
 const GDRIVE_FOLDER_ID = "1ZCKyZSlOkpv5BYHiDZVsOShv1B5aG5Xg";
@@ -460,6 +476,7 @@ function decodeState() {
     xRange = ERAS[era];
     document.getElementById("era-select").value = era;
   }
+  updateExplorerShareText();
   if (empire) {
     soloEmpire = empire;
     const emp = EMPIRES.find(e => e.name === empire);
@@ -927,6 +944,7 @@ document.getElementById("region-tabs").addEventListener("click", e => {
   document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
   e.target.classList.add("active");
   activeRegion = e.target.dataset.region;
+  updateExplorerShareText();
   soloEmpire = null;
   compareEmpire = null;
   viewDomain = null;
@@ -940,6 +958,7 @@ document.getElementById("region-tabs").addEventListener("click", e => {
 
 document.getElementById("era-select").addEventListener("change", e => {
   xRange = e.target.value ? (ERAS[e.target.value] || null) : null;
+  updateExplorerShareText();
   soloEmpire = null;
   compareEmpire = null;
   viewDomain = null;
@@ -1011,10 +1030,10 @@ document.getElementById("info-close").addEventListener("click", () => {
   if (soloEmpire) toggleSolo(soloEmpire);
 });
 
-document.getElementById("info-share-x").addEventListener("click", () => {
-  const name = document.getElementById("info-name").textContent;
-  const text = encodeURIComponent("I just explored the rise and fall of " + name + " on The Epoch Institute — an interactive civilisational research project.");
-  window.open("https://twitter.com/intent/tweet?text=" + text + "&url=https%3A%2F%2Fthe-epoch-institute.org&hashtags=history%2Cempires%2CEpochInstitute", "_blank");
+document.getElementById("info-share-x").addEventListener("click", function() {
+  var name = document.getElementById("info-name").textContent;
+  var text = name + ' — rise and fall across history, charted. #History #EpochInstitute';
+  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent("https://the-epoch-institute.org/explorer"), "_blank");
 });
 document.getElementById("info-share-li").addEventListener("click", () => {
   window.open("https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fthe-epoch-institute.org", "_blank");

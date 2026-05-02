@@ -268,8 +268,12 @@ function openSeriesDetail(id) {
   var existingShare = detailEl.querySelector('.series-share-wrap');
   if (existingShare) existingShare.remove();
   if (!s.rawHtml === false || s.rawHtml) {
-    var shareUrl = 'https://the-epoch-institute.org/research-series';
-    var tweetText = ‘”’ + s.title + ‘” — @EpochInstitute Research Series.\n\n#History #Civilisation\n\n’ + shareUrl;
+    var shareUrl = ‘https://the-epoch-institute.org/research-series’;
+    var rawDesc = s.description || ‘’;
+    var firstSent = rawDesc.replace(/^([^.!?]*[.!?])[\s\S]*$/, ‘$1’).trim();
+    var tweetBase = ‘”’ + s.title + ‘” — ‘ + (firstSent || rawDesc) + ‘\n\n#History #EpochInstitute’;
+    var tweetText = tweetBase.length <= 240 ? tweetBase
+      : ‘”’ + s.title + ‘” — ‘ + (firstSent || rawDesc).substring(0, Math.max(10, 240 - (‘”’ + s.title + ‘” — \n\n#History #EpochInstitute’).length)) + ‘…\n\n#History #EpochInstitute’;
     var wrap = document.createElement('div');
     wrap.className = 'series-share-wrap';
     wrap.style.cssText = 'position:relative; display:inline-block; margin-top:16px;';

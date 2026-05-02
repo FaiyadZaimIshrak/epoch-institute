@@ -280,7 +280,7 @@ function buildProfileGallery() {
   function updatePanel() {
     var bothFilled = _slotA && _slotB;
     if (bothFilled) {
-      var tweetText = 'Comparing ' + _slotA + ' vs ' + _slotB + ' on @EpochInstitute.\n\n#EmpireHistory\n\nhttps://the-epoch-institute.org/profiles';
+      var tweetText = _slotA + ' vs ' + _slotB + ' — two civilisations, one chart. Compare their rise and fall across five millennia. #EpochInstitute #History';
       actions.innerHTML = buildShareButton('compare-share-dd', 'https://the-epoch-institute.org/profiles', tweetText);
       attachShareListeners(actions, 'https://the-epoch-institute.org/profiles');
     } else {

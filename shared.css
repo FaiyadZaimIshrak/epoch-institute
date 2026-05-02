@@ -2081,12 +2081,12 @@ mark.search-hl {
 .tih-date-dow {
   font-family: 'Cinzel', serif; font-size: 11px;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
-  margin-bottom: 14px;
+  margin-bottom: 24px;
 }
 .tih-date-full {
   font-family: 'Cinzel', serif; font-size: 22px;
   letter-spacing: 0.08em; color: var(--gold);
-  margin-top: 14px;
+  margin-top: 24px;
 }
 /* date block — today page subtitle */
 #tih-subheading { font-style: normal; }
@@ -2266,7 +2266,7 @@ mark.search-hl {
 /* ── Explorer onboarding sentence ── */
 .explorer-onboarding {
   font-family: 'Crimson Pro', serif; font-size: 16px; color: var(--muted);
-  max-width: 680px; margin: 16px 0 32px; text-align: left; line-height: 1.7;
+  max-width: 680px; margin: 32px 0 32px; text-align: left; line-height: 1.7;
 }
 
 /* ── Homepage explorer teaser section ── */
