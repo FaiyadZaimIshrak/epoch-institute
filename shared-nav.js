@@ -217,7 +217,6 @@ function initNav(activePage) {
     </div>
   </div>
   <div class="footer-bottom">
-    <span data-i18n="footer_hint">Hover over a line to inspect · Click to isolate · Use region tabs or era selector to filter</span>
     <span data-i18n="footer_copy">© ${new Date().getFullYear()} The Epoch Institute</span>
   </div>
 </footer>`;
@@ -394,21 +393,38 @@ function initNav(activePage) {
     });
   });
 
-  // ── Desktop dropdown groups (mobile tap + keyboard nav) ──────────────────────
+  // ── Desktop dropdown groups (hover + click + keyboard nav) ──────────────────
   (function() {
-    var wraps = document.querySelectorAll('.nav-group-wrap');
+    var wraps = Array.prototype.slice.call(document.querySelectorAll('.nav-group-wrap'));
+    var timers = wraps.map(function() { return null; });
+
     function closeAll() {
-      wraps.forEach(function(w) {
+      wraps.forEach(function(w, i) {
+        clearTimeout(timers[i]); timers[i] = null;
         w.classList.remove('open');
-        var btn = w.querySelector('.nav-parent-btn');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
+        var b = w.querySelector('.nav-parent-btn');
+        if (b) b.setAttribute('aria-expanded', 'false');
       });
     }
-    wraps.forEach(function(wrap) {
-      var btn = wrap.querySelector('.nav-parent-btn');
+
+    wraps.forEach(function(wrap, i) {
+      var btn  = wrap.querySelector('.nav-parent-btn');
       var menu = wrap.querySelector('.nav-group-menu');
       if (!btn || !menu) return;
-      // Mobile: tap to toggle
+
+      wrap.addEventListener('mouseenter', function() {
+        clearTimeout(timers[i]);
+        wrap.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      });
+      wrap.addEventListener('mouseleave', function() {
+        timers[i] = setTimeout(function() {
+          wrap.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          timers[i] = null;
+        }, 300);
+      });
+
       btn.addEventListener('click', function(e) {
         var isOpen = wrap.classList.contains('open');
         closeAll();
@@ -418,7 +434,7 @@ function initNav(activePage) {
         }
         e.stopPropagation();
       });
-      // Keyboard: ArrowDown opens/navigates; Escape closes
+
       btn.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowDown') {
           e.preventDefault();
@@ -426,20 +442,19 @@ function initNav(activePage) {
           btn.setAttribute('aria-expanded', 'true');
           var first = menu.querySelector('a, button');
           if (first) first.focus();
-        } else if (e.key === 'Escape') {
-          closeAll();
-        }
+        } else if (e.key === 'Escape') { closeAll(); }
       });
-      var items = menu.querySelectorAll('a, button');
+
+      var items = Array.prototype.slice.call(menu.querySelectorAll('a, button'));
       items.forEach(function(item, idx) {
         item.addEventListener('keydown', function(e) {
           if (e.key === 'ArrowDown') { e.preventDefault(); if (items[idx + 1]) items[idx + 1].focus(); }
-          else if (e.key === 'ArrowUp') { e.preventDefault(); idx === 0 ? btn.focus() : items[idx - 1].focus(); }
+          else if (e.key === 'ArrowUp') { e.preventDefault(); if (idx === 0) btn.focus(); else items[idx - 1].focus(); }
           else if (e.key === 'Escape') { closeAll(); btn.focus(); }
         });
       });
     });
-    // Close when clicking outside any dropdown group
+
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.nav-group-wrap')) closeAll();
     });

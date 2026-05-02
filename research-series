@@ -269,7 +269,7 @@ function openSeriesDetail(id) {
   if (existingShare) existingShare.remove();
   if (!s.rawHtml === false || s.rawHtml) {
     var shareUrl = 'https://the-epoch-institute.org/research-series';
-    var tweetText = 'Just read: “' + s.title + '” from @EpochInstitute’s Research Series.\n\n#History #Civilisation\n\n' + shareUrl;
+    var tweetText = ‘”’ + s.title + ‘” — @EpochInstitute Research Series.\n\n#History #Civilisation\n\n’ + shareUrl;
     var wrap = document.createElement('div');
     wrap.className = 'series-share-wrap';
     wrap.style.cssText = 'position:relative; display:inline-block; margin-top:16px;';

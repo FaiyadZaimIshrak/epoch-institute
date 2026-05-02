@@ -697,6 +697,9 @@
   .nav-logo-text { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.16em; color: var(--gold); transition: color 0.2s; }
   .nav-logo:hover .nav-logo-text { color: var(--gold-light); }
   .nav-links { display: flex; gap: 32px; }
+  @media (min-width: 769px) {
+    .nav-links { position: absolute; left: 50%; transform: translateX(-50%); }
+  }
   .nav-link {
     font-family: 'Cinzel', serif;
     font-size: 9px;
@@ -2078,12 +2081,12 @@ mark.search-hl {
 .tih-date-dow {
   font-family: 'Cinzel', serif; font-size: 11px;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
-  margin-bottom: 6px;
+  margin-bottom: 14px;
 }
 .tih-date-full {
   font-family: 'Cinzel', serif; font-size: 22px;
   letter-spacing: 0.08em; color: var(--gold);
-  margin-top: 6px;
+  margin-top: 14px;
 }
 /* date block — today page subtitle */
 #tih-subheading { font-style: normal; }
@@ -2175,7 +2178,7 @@ mark.search-hl {
 
 /* ── Nav group dropdowns (desktop) ── */
 .nav-group-wrap { position: relative; display: inline-flex; align-items: center; }
-.nav-group-wrap:hover .nav-group-menu { display: block; }
+.nav-group-wrap.open .nav-group-menu { display: block; }
 .nav-group-menu {
   display: none; position: absolute; top: calc(100% + 12px); left: 50%;
   transform: translateX(-50%); min-width: 176px;
@@ -2263,7 +2266,7 @@ mark.search-hl {
 /* ── Explorer onboarding sentence ── */
 .explorer-onboarding {
   font-family: 'Crimson Pro', serif; font-size: 16px; color: var(--muted);
-  max-width: 600px; margin: 0 auto 32px; text-align: center; line-height: 1.7;
+  max-width: 680px; margin: 16px 0 32px; text-align: left; line-height: 1.7;
 }
 
 /* ── Homepage explorer teaser section ── */

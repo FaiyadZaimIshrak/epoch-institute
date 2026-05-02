@@ -400,9 +400,16 @@ document.addEventListener('visibilitychange', () => {
     if (typeof EMPIRES === 'undefined') return;
     var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var empires = EMPIRES.filter(function(e) {
-      return e.region === 'Europe' && e.start_year >= -600 && e.end_year <= 700;
+      var s = e.points[0][0], end = e.points[e.points.length - 1][0];
+      return e.region === 'Europe' && s >= -600 && end <= 700;
     }).slice(0, 10);
     if (!empires.length) return;
+    empires.forEach(function(e) {
+      e._s  = e.points[0][0];
+      e._e  = e.points[e.points.length - 1][0];
+      var pk = e.points.reduce(function(m, p) { return p[1] >= m[1] ? p : m; });
+      e._pk = pk[0];
+    });
     var W = Math.min(700, chartEl.offsetWidth || 700), H = 300;
     var svg = d3.select('#explorer-teaser-chart').append('svg')
       .attr('width', '100%').attr('height', H).attr('viewBox', '0 0 ' + W + ' ' + H);
@@ -416,17 +423,16 @@ document.addEventListener('visibilitychange', () => {
     svg.append('g').attr('class', 'teaser-bubbles');
 
     function getPower(emp, year) {
-      if (year < emp.start_year || year > emp.end_year) return 0;
-      var frac = emp.end_year > emp.start_year
-        ? (year - emp.start_year) / (emp.end_year - emp.start_year)
-        : 0;
-      var idx = Math.round(frac * 30);
-      return emp['t_' + idx] || 0;
+      if (year < emp._s || year > emp._e) return 0;
+      var nearest = emp.points.reduce(function(best, pt) {
+        return Math.abs(pt[0] - year) < Math.abs(best[0] - year) ? pt : best;
+      });
+      return nearest[1];
     }
 
     function render(year) {
       var data = empires.map(function(e, i) {
-        return { emp: e, power: getPower(e, year), x: xScale(e.peak_year), y: yScale(i * 1.1 % 10 + 1) };
+        return { emp: e, power: getPower(e, year), x: xScale(e._pk), y: yScale(i * 1.1 % 10 + 1) };
       }).filter(function(d) { return d.power > 0; });
       var bubbles = svg.select('.teaser-bubbles').selectAll('circle').data(data, function(d) { return d.emp.name; });
       bubbles.enter().append('circle')
