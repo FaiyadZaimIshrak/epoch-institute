@@ -196,10 +196,6 @@ function initNav(activePage) {
         <a class="footer-link" href="#" id="fl-contact">Contact</a>
       </div>
       <div class="footer-col">
-        <span class="footer-col-title">Explore</span>
-        <a class="footer-link" href="/profiles" id="fl-profiles-2">Empire Profiles</a>
-      </div>
-      <div class="footer-col">
         <div class="footer-newsletter">
           <span class="footer-nl-label">Newsletter</span>
           <form class="footer-nl-form" id="footer-nl-form">

@@ -2079,14 +2079,16 @@ mark.search-hl {
   background: var(--gold); opacity: 0.6; margin: 8px auto;
 }
 .tih-date-dow {
+  display: block;
   font-family: 'Cinzel', serif; font-size: 11px;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 .tih-date-full {
+  display: block;
   font-family: 'Cinzel', serif; font-size: 22px;
   letter-spacing: 0.08em; color: var(--gold);
-  margin-top: 24px;
+  margin-top: 30px;
 }
 /* date block — today page subtitle */
 #tih-subheading { font-style: normal; }
@@ -2276,7 +2278,16 @@ mark.search-hl {
   color: var(--gold-light); letter-spacing: 0.06em; margin: 0 0 10px;
 }
 .explorer-teaser-sub { font-family: 'Crimson Pro', serif; font-size: 15px; color: var(--muted); margin: 0 0 28px; }
-#explorer-teaser-chart { width: 100%; max-width: 700px; height: 320px; margin: 0 auto 24px; overflow: hidden; }
+#explorer-teaser-chart { width: 100%; max-width: 700px; height: 280px; margin: 0 auto 24px; overflow: hidden; position: relative; }
+.tl-axis { position: absolute; left: 0; right: 0; top: 138px; height: 1px; background: var(--gold); opacity: 0.4; }
+.tl-mark { position: absolute; top: 138px; transform: translateX(-50%); }
+.tl-mark-tick { width: 1px; height: 6px; background: var(--gold); opacity: 0.4; margin: 0 auto; }
+.tl-mark-label { display: block; font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.06em; color: var(--muted); text-align: center; margin-top: 3px; white-space: nowrap; opacity: 0.7; }
+.tl-bar { position: absolute; height: 14px; background: var(--gold); border-radius: 1px; min-width: 6px; will-change: opacity, transform; }
+.tl-bar-label { position: absolute; font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.05em; color: var(--gold-light); white-space: nowrap; pointer-events: none; }
+.tl-above .tl-bar-label { bottom: calc(100% + 3px); left: 2px; }
+.tl-below .tl-bar-label { top: calc(100% + 3px); left: 2px; }
+@media (max-width: 600px) { .tl-bar-label { font-size: 7px; } .tl-mark-label { font-size: 7px; } }
 .explorer-teaser-cta {
   font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--gold); border: 0.5px solid var(--gold); padding: 10px 24px; text-decoration: none; display: inline-block;

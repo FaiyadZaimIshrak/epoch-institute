@@ -172,15 +172,15 @@ initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
 
 var ERA_DISPLAY = {
-  '': 'all eras', 'all': 'all eras',
+  '': 'five millennia', 'all': 'five millennia',
   'ancient': 'the Ancient Era', 'classical': 'the Classical Era',
   'medieval': 'the Medieval Era', 'early-modern': 'the Early Modern Era',
   'modern': 'the Modern Era'
 };
 function updateExplorerShareText() {
-  var regionLabel = activeRegion || 'all regions';
+  var regionLabel = activeRegion || 'world';
   var eraEl = document.getElementById('era-select');
-  var eraLabel = ERA_DISPLAY[(eraEl ? eraEl.value : '') || ''] || 'all eras';
+  var eraLabel = ERA_DISPLAY[(eraEl ? eraEl.value : '') || ''] || 'five millennia';
   var text = 'Explore the rise and fall of ' + regionLabel + ' civilisations across ' + eraLabel +
     ' — interactive trajectories from The Epoch Institute. #History #EpochInstitute';
   var tweetBtn = document.querySelector('#explorer-share-dd [data-action="tweet"]');
