@@ -75,12 +75,16 @@
         <input type="checkbox" id="toggle-labels"> <span data-i18n="labels">Labels</span>
       </label>
       <div style="position:relative;" id="explorer-share-wrap">
-        <button class="tih-share-btn" data-dd="explorer-share-dd" aria-label="Share the Explorer" style="opacity:0.6;position:static;padding:6px;">
+        <button class="tih-share-btn" data-dd="explorer-share-dd" aria-label="Share the Explorer" style="opacity:0.6;position:static;padding:10px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
         </button>
         <div class="tih-share-dropdown" id="explorer-share-dd" style="display:none; bottom:auto; top:calc(100% + 4px);">
-          <button class="tih-share-dd-item" data-action="tweet" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer" data-tweet="Explore civilisational history on The Epoch Institute. #History #EpochInstitute">Post on X</button>
-          <button class="tih-share-dd-item" data-action="copy" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer">Copy link</button>
+          <button class="tih-share-dd-item" data-action="tweet"    data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer" data-tweet="Explore civilisational history on The Epoch Institute. #History #EpochInstitute">Post on X</button>
+          <button class="tih-share-dd-item" data-action="facebook" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer">Share on Facebook</button>
+          <button class="tih-share-dd-item" data-action="linkedin" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer">Share on LinkedIn</button>
+          <button class="tih-share-dd-item" data-action="reddit"   data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer" data-title="The Epoch Institute — Empire Explorer">Share on Reddit</button>
+          <button class="tih-share-dd-item" data-action="whatsapp" data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer" data-tweet="Explore civilisational history on The Epoch Institute. #History #EpochInstitute">Share on WhatsApp</button>
+          <button class="tih-share-dd-item" data-action="copy"     data-dd="explorer-share-dd" data-url="https://the-epoch-institute.org/explorer">Copy link</button>
         </div>
       </div>
     </div>
