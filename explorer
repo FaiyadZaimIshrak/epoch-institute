@@ -1033,7 +1033,7 @@ document.getElementById("info-close").addEventListener("click", () => {
 document.getElementById("info-share-x").addEventListener("click", function() {
   var name = document.getElementById("info-name").textContent;
   var text = name + ' — rise and fall across history, charted. #History #EpochInstitute';
-  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent("https://the-epoch-institute.org/explorer"), "_blank");
+  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text + "\nhttps://the-epoch-institute.org/explorer"), "_blank");
 });
 document.getElementById("info-share-li").addEventListener("click", () => {
   window.open("https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fthe-epoch-institute.org", "_blank");

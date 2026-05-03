@@ -180,7 +180,7 @@ function renderPage(page, scroll) {
       var action = item.dataset.action;
       var ev     = dayEvents[parseInt(item.dataset.idx, 10)];
       if (action === 'tweet') {
-        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(composeTweet(ev)) + '&url=' + encodeURIComponent('https://the-epoch-institute.org/today-in-history'), '_blank');
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(composeTweet(ev) + '\n\nhttps://the-epoch-institute.org/today-in-history'), '_blank');
         closeAllDropdowns();
       } else if (action === 'copy') {
         if (navigator.clipboard && navigator.clipboard.writeText) {

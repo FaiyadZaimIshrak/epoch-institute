@@ -83,7 +83,7 @@ function attachShareListeners(container, fallbackUrl) {
       var url    = item.dataset.url || fallbackUrl;
       var tweet  = item.dataset.tweet || '';
       if (action === 'tweet') {
-        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet) + '&url=' + encodeURIComponent(url), '_blank');
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet + (url ? '\n\n' + url : '')), '_blank');
         closeAll();
       } else if (action === 'copy') {
         if (navigator.clipboard) navigator.clipboard.writeText(url).then(function() {
