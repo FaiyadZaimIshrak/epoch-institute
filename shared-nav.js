@@ -66,12 +66,6 @@ function attachShareListeners(container, fallbackUrl) {
       var ddId = btn.dataset.dd;
       var dd   = document.getElementById(ddId);
       if (!dd) return;
-      if (navigator.share) {
-        var url = (dd.querySelector('[data-url]') || {}).dataset.url || fallbackUrl;
-        var tweet = (dd.querySelector('[data-tweet]') || {}).dataset.tweet || '';
-        navigator.share({ title: document.title, text: tweet, url: url }).catch(function() {});
-        return;
-      }
       if (dd.style.display === 'none') { closeAll(); dd.style.display = ''; activeDropdown = dd; }
       else { closeAll(); }
     });

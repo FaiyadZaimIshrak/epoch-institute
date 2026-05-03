@@ -159,10 +159,6 @@ function renderPage(page, scroll) {
       var ddId = btn.dataset.dd;
       var idx  = parseInt(ddId.replace('tih-dd-', ''), 10);
       var ev   = dayEvents[idx];
-      if (navigator.share) {
-        navigator.share({ title: ev.title, text: composeTweet(ev), url: PAGE_URL }).catch(function() {});
-        return;
-      }
       var dd = document.getElementById(ddId);
       if (dd.style.display === 'none') {
         closeAllDropdowns();
