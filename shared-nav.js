@@ -49,11 +49,16 @@ function composeTweet(ev) {
 // ── Reusable share button ─────────────────────────────────────────────────────
 var SHARE_BTN_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
 
-function buildShareButton(ddId, shareUrl, tweetText) {
+function buildShareButton(ddId, shareUrl, tweetText, pageTitle) {
+  pageTitle = pageTitle || '';
   return '<button class="tih-share-btn" data-dd="' + ddId + '" aria-label="Share">' + SHARE_BTN_SVG + '</button>' +
     '<div class="tih-share-dropdown" id="' + ddId + '" style="display:none;">' +
-      '<button class="tih-share-dd-item" data-action="tweet" data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '" data-tweet="' + escHtml(tweetText) + '">Post on X</button>' +
-      '<button class="tih-share-dd-item" data-action="copy" data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '">Copy link</button>' +
+      '<button class="tih-share-dd-item" data-action="tweet"     data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '" data-tweet="' + escHtml(tweetText) + '">Post on X</button>' +
+      '<button class="tih-share-dd-item" data-action="facebook"  data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '">Share on Facebook</button>' +
+      '<button class="tih-share-dd-item" data-action="linkedin"  data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '">Share on LinkedIn</button>' +
+      '<button class="tih-share-dd-item" data-action="reddit"    data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '" data-title="' + escHtml(pageTitle) + '">Share on Reddit</button>' +
+      '<button class="tih-share-dd-item" data-action="whatsapp"  data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '" data-tweet="' + escHtml(tweetText) + '">Share on WhatsApp</button>' +
+      '<button class="tih-share-dd-item" data-action="copy"      data-dd="' + ddId + '" data-url="' + escHtml(shareUrl) + '">Copy link</button>' +
     '</div>';
 }
 
@@ -78,6 +83,19 @@ function attachShareListeners(container, fallbackUrl) {
       var tweet  = item.dataset.tweet || '';
       if (action === 'tweet') {
         window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet + (url ? '\n\n' + url : '')), '_blank');
+        closeAll();
+      } else if (action === 'facebook') {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        closeAll();
+      } else if (action === 'linkedin') {
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank');
+        closeAll();
+      } else if (action === 'reddit') {
+        var title = item.dataset.title || '';
+        window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(url) + (title ? '&title=' + encodeURIComponent(title) : ''), '_blank');
+        closeAll();
+      } else if (action === 'whatsapp') {
+        window.open('https://wa.me/?text=' + encodeURIComponent(tweet + (url ? '\n\n' + url : '')), '_blank');
         closeAll();
       } else if (action === 'copy') {
         if (navigator.clipboard) navigator.clipboard.writeText(url).then(function() {

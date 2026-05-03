@@ -144,8 +144,12 @@ function renderPage(page, scroll) {
     return '<div class="tih-event-card">' +
       '<button class="tih-share-btn" data-dd="' + ddId + '" aria-label="Share this event">' + SHARE_SVG + '</button>' +
       '<div class="tih-share-dropdown" id="' + ddId + '" style="display:none;">' +
-        '<button class="tih-share-dd-item" data-action="tweet" data-idx="' + (start + i) + '">Post on X</button>' +
-        '<button class="tih-share-dd-item" data-action="copy" data-idx="' + (start + i) + '">Copy link</button>' +
+        '<button class="tih-share-dd-item" data-action="tweet"    data-idx="' + (start + i) + '">Post on X</button>' +
+        '<button class="tih-share-dd-item" data-action="facebook" data-idx="' + (start + i) + '">Share on Facebook</button>' +
+        '<button class="tih-share-dd-item" data-action="linkedin" data-idx="' + (start + i) + '">Share on LinkedIn</button>' +
+        '<button class="tih-share-dd-item" data-action="reddit"   data-idx="' + (start + i) + '">Share on Reddit</button>' +
+        '<button class="tih-share-dd-item" data-action="whatsapp" data-idx="' + (start + i) + '">Share on WhatsApp</button>' +
+        '<button class="tih-share-dd-item" data-action="copy"     data-idx="' + (start + i) + '">Copy link</button>' +
       '</div>' +
       '<p class="tih-event-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
       '<p class="tih-event-title">' + escHtml(ev.title) + '</p>' +
@@ -176,7 +180,19 @@ function renderPage(page, scroll) {
       var action = item.dataset.action;
       var ev     = dayEvents[parseInt(item.dataset.idx, 10)];
       if (action === 'tweet') {
-        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(composeTweet(ev) + '\n\nhttps://the-epoch-institute.org/today-in-history'), '_blank');
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(composeTweet(ev) + '\n\n' + PAGE_URL), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'facebook') {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(PAGE_URL), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'linkedin') {
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(PAGE_URL), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'reddit') {
+        window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(PAGE_URL) + '&title=' + encodeURIComponent(ev.title), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'whatsapp') {
+        window.open('https://wa.me/?text=' + encodeURIComponent(composeTweet(ev) + '\n\n' + PAGE_URL), '_blank');
         closeAllDropdowns();
       } else if (action === 'copy') {
         if (navigator.clipboard && navigator.clipboard.writeText) {
