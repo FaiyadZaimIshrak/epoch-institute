@@ -1953,6 +1953,8 @@ mark.search-hl {
 .compare-vs { font-family:'Cinzel',serif; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); opacity:0.6; }
 .compare-slot-filled { padding:20px; overflow:hidden; }
 .compare-slot-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; }
+.compare-slot-identity { display:flex; align-items:center; gap:10px; }
+.compare-slot-logo { width:36px; height:36px; object-fit:contain; flex-shrink:0; }
 .compare-slot-name { font-family:'Cinzel',serif; font-size:14px; color:var(--gold-light); letter-spacing:0.05em; margin:0 0 2px; }
 .compare-slot-region { font-family:'Cinzel',serif; font-size:8px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin:0; }
 .compare-slot-remove { background:none; border:none; cursor:pointer; font-size:14px; color:var(--muted); padding:6px 8px; min-width:32px; min-height:32px; display:flex; align-items:center; justify-content:center; line-height:1; transition:color 0.2s; flex-shrink:0; }
@@ -1982,6 +1984,7 @@ mark.search-hl {
   .compare-divider { padding:10px 0; }
   .compare-vs::before { content:'— '; } .compare-vs::after { content:' —'; }
   #profiles.compare-mode .empire-thumb::after { opacity:0.45; }
+  .compare-slot-logo { width:28px; height:28px; }
 }
 
 /* ── Today in History — homepage strip ──────────────────────────────────────── */

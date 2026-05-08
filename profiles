@@ -249,9 +249,12 @@ function buildProfileGallery() {
     slotEl.className = 'compare-slot compare-slot-filled';
     slotEl.innerHTML =
       '<div class="compare-slot-header">' +
-        '<div>' +
-          '<p class="compare-slot-region">' + escHtml(emp.region || '') + '</p>' +
-          '<h3 class="compare-slot-name">' + escHtml(name) + '</h3>' +
+        '<div class="compare-slot-identity">' +
+          '<img class="compare-slot-logo" src="/logos/' + encodeURIComponent(name) + '.png" alt="' + escHtml(name) + '" onerror="this.style.display=\'none\'">' +
+          '<div>' +
+            '<p class="compare-slot-region">' + escHtml(emp.region || '') + '</p>' +
+            '<h3 class="compare-slot-name">' + escHtml(name) + '</h3>' +
+          '</div>' +
         '</div>' +
         '<button class="compare-slot-remove" data-slot="' + slotId + '" aria-label="Remove ' + escHtml(name) + '">✕</button>' +
       '</div>' +
