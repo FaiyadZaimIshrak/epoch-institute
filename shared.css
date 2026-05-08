@@ -2331,3 +2331,63 @@ mark.search-hl {
     scroll-behavior: auto !important;
   }
 }
+
+/* ── Empire Stats Panel ── */
+.empire-stats-panel {
+  margin: 28px 0 36px;
+  padding: 24px 20px;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+}
+.empire-stats-title {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin: 0 0 16px;
+}
+.empire-stats-top {
+  display: flex; flex-wrap: wrap; gap: 16px 32px;
+  align-items: flex-start; margin-bottom: 20px;
+}
+.empire-overall-wrap { display: flex; flex-direction: column; gap: 4px; }
+.empire-overall-score {
+  font-family: 'Cinzel', serif; font-size: 40px; font-weight: 700;
+  color: var(--gold-light); letter-spacing: 0.02em; line-height: 1;
+}
+.empire-overall-label {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted);
+}
+.empire-rank-label {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7;
+}
+.empire-tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 4px; }
+.empire-tag {
+  font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.85;
+  border: 0.5px solid rgba(201,168,76,0.4); border-radius: 2px; padding: 3px 9px;
+}
+.empire-radar-wrap { width: 100%; max-width: 440px; margin: 0 auto; }
+.empire-radar-wrap svg { width: 100%; height: auto; display: block; }
+.empire-dim-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-top: 20px;
+}
+.empire-dim { display: flex; flex-direction: column; gap: 3px; }
+.empire-dim-label {
+  font-family: 'Cinzel', serif; font-size: 7.5px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted);
+}
+.empire-dim-row { display: flex; align-items: center; gap: 8px; }
+.empire-dim-bar-wrap {
+  flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden;
+}
+.empire-dim-bar { height: 100%; background: var(--gold); border-radius: 2px; }
+.empire-dim-val {
+  font-family: 'Cinzel', serif; font-size: 9px; color: var(--gold-light);
+  min-width: 20px; text-align: right;
+}
+@media (max-width: 480px) {
+  .empire-overall-score { font-size: 32px; }
+  .empire-stats-panel { padding: 18px 14px; }
+  .empire-dim-grid { grid-template-columns: 1fr; }
+}

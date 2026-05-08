@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empire Page Generator — The Epoch Institute</title>
+<style>
+  body { font-family: monospace; background: #0d0d0d; color: #c9a84c; padding: 40px; max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 18px; letter-spacing: 0.1em; margin-bottom: 8px; }
+  p  { color: #888; font-size: 13px; line-height: 1.6; margin: 0 0 24px; }
+  button {
+    background: none; border: 1px solid #c9a84c; color: #c9a84c;
+    padding: 12px 28px; cursor: pointer; font-family: monospace;
+    font-size: 13px; letter-spacing: 0.08em; transition: background 0.2s;
+  }
+  button:hover { background: rgba(201,168,76,0.1); }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  #log { margin-top: 24px; font-size: 12px; color: #666; line-height: 1.8; max-height: 300px; overflow-y: auto; }
+  #log .ok  { color: #5a8; }
+  #log .err { color: #c55; }
+  #log .hd  { color: #c9a84c; }
+  a.dl { display: inline-block; margin-top: 20px; color: #c9a84c; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<h1>Empire Page Generator</h1>
+<p>
+  Loads <code>shared-data.js</code> and generates <strong>94 empire HTML pages</strong> bundled into a ZIP file.<br>
+  Host this file alongside <code>shared-data.js</code> (either upload both to your server or use a local dev server).<br>
+  After generation, extract the ZIP and upload the <code>empire/</code> folder to your hosting.
+</p>
+
+<button id="gen-btn" onclick="generate()">Generate All Empire Pages →</button>
+
+<div id="log"></div>
+
+<!-- JSZip CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<!-- Site data -->
+<script src="shared-data.js"></script>
+<script>
+function log(msg, cls) {
+  var el = document.getElementById('log');
+  var line = document.createElement('div');
+  if (cls) line.className = cls;
+  line.textContent = msg;
+  el.appendChild(line);
+  el.scrollTop = el.scrollHeight;
+}
+
+function esc(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function formatYear(y) {
+  var yr = Math.round(y);
+  return yr < 0 ? Math.abs(yr) + ' BCE' : yr + ' CE';
+}
+
+function buildPage(emp) {
+  var name    = emp.name;
+  var slug    = toSlug(name);
+  var region  = emp.region || '';
+  var profile = EMPIRE_PROFILES[name];
+  var info    = EMPIRE_INFO[name] || '';
+
+  var pts      = emp.points;
+  var startY   = pts[0][0];
+  var endY     = pts[pts.length - 1][0];
+  var peakPt   = pts.reduce(function(m,p){ return p[1]>=m[1]?p:m; });
+  var peakY    = peakPt[0];
+  var duration = Math.abs(Math.round(endY - startY));
+  var peakStr  = formatYear(peakY);
+  var period   = formatYear(startY) + ' – ' + formatYear(endY);
+
+  var metaDesc = info
+    ? info.slice(0, 155).replace(/"/g,"'") + (info.length > 155 ? '…' : '')
+    : 'Explore the history of the ' + name + ' — foundation, military, governance, and decline.';
+
+  var sectionKeys = [
+    ['foundation','Foundation'],['socioeconomy','Socioeconomy'],['military','Military'],
+    ['governance','Governance &amp; Law'],['impact','Global &amp; Regional Impact'],['decline','Decline &amp; Fall']
+  ];
+
+  var sectionsHtml = '';
+  if (profile) {
+    sectionsHtml = sectionKeys.map(function(pair) {
+      var key = pair[0], label = pair[1];
+      var body = profile[key] || '<em>Description coming soon.</em>';
+      return '<div class="profile-section-block">\n        <p class="profile-section-title">'+label+'</p>\n        <div class="profile-section-body">'+body+'</div>\n      </div>';
+    }).join('\n      ');
+  }
+
+  var summaryHtml = (profile && profile.summary)
+    ? '<p class="profile-summary"><em>'+esc(profile.summary)+'</em></p>'
+    : (info ? '<p class="profile-summary">'+esc(info)+'</p>' : '');
+
+  var referencesHtml = '';
+  if (profile && Array.isArray(profile.references) && profile.references.length) {
+    referencesHtml = '<div id="detail-references" class="profile-references">\n      <p class="profile-references-title">References</p>\n      <ul class="profile-references-list">\n        ' +
+      profile.references.map(function(r){ return '<li>'+esc(r)+'</li>'; }).join('\n        ') +
+      '\n      </ul>\n    </div>';
+  }
+
+  var noProfileNote = !profile
+    ? '<div style="padding:48px 0;text-align:center;"><p style="font-family:\'Cinzel\',serif;font-size:11px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;margin:0 0 16px;">Full profile coming soon</p>' +
+      (info ? '<p style="font-family:\'Crimson Pro\',Georgia,serif;font-size:16px;color:var(--text);line-height:1.75;max-width:720px;margin:0 auto;">'+esc(info)+'</p>' : '') +
+      '</div>'
+    : '';
+
+  var canonicalUrl = 'https://the-epoch-institute.org/empire/' + slug;
+  var encodedName  = encodeURIComponent(name);
+
+  return '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
+'<script>(function(){var t=localStorage.getItem(\'epoch-theme\');if(t===\'light\')document.documentElement.setAttribute(\'data-theme\',\'light\');else if(t===\'dark\')document.documentElement.setAttribute(\'data-theme\',\'dark\');})()\x3C/script>\n' +
+'<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+'<title>'+esc(name)+' — The Epoch Institute</title>\n' +
+'<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'%3E%3Crect width=\'32\' height=\'32\' fill=\'%230d0d0d\'/%3E%3Ctext x=\'16\' y=\'23\' font-family=\'serif\' font-size=\'22\' font-weight=\'700\' fill=\'%23c9a84c\' text-anchor=\'middle\'%3EE%3C/text%3E%3C/svg%3E">\n' +
+'<meta name="description" content="'+esc(metaDesc)+'">\n' +
+'<meta property="og:title" content="'+esc(name)+' — The Epoch Institute">\n' +
+'<meta property="og:description" content="'+esc(metaDesc)+'">\n' +
+'<meta property="og:type" content="article">\n' +
+'<meta property="og:url" content="'+canonicalUrl+'">\n' +
+'<link rel="canonical" href="'+canonicalUrl+'">\n' +
+'<link rel="stylesheet" href="/shared.css">\n' +
+'<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
+'<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
+'<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">\n' +
+'<style>\n' +
+'.empire-page { padding-top: 80px; min-height: 100vh; }\n' +
+'.info-share-row { display:flex; gap:10px; margin:20px 0 0; }\n' +
+'.info-share-btn { display:flex; align-items:center; gap:6px; font-family:\'Cinzel\',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; }\n' +
+'.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }\n' +
+'.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }\n' +
+'.empire-view-explorer { font-family:\'Cinzel\',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; }\n' +
+'.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }\n' +
+'@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }\n' +
+'</style>\n' +
+'<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4">\x3C/script>\n' +
+'<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-B163TLDMP4\');\x3C/script>\n' +
+'</head>\n<body>\n\n' +
+'<div class="empire-page">\n' +
+'  <div class="empire-nav-row">\n' +
+'    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>\n' +
+'    <a href="/explorer#//'+encodedName+'" class="empire-view-explorer">View on Explorer →</a>\n' +
+'  </div>\n\n' +
+'  <div class="profile-detail-inner">\n' +
+'    <div class="profile-detail-header">\n' +
+'      <img class="profile-detail-logo" id="detail-logo" src="/logos/'+encodedName+'.png" alt="'+esc(name)+'" onerror="this.style.display=\'none\'">\n' +
+'      <div>\n' +
+'        <p class="profile-detail-region">'+esc(region)+'</p>\n' +
+'        <h1 class="profile-detail-name">'+esc(name)+'</h1>\n' +
+'        <div class="info-stats" style="margin-top:10px;">\n' +
+'          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">'+peakStr+'</span></div>\n' +
+'          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">'+duration+' yrs</span></div>\n' +
+'          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">'+period+'</span></div>\n' +
+'        </div>\n' +
+'      </div>\n' +
+'    </div>\n\n' +
+'    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' +
+noProfileNote + '\n' +
+(sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
+(summaryHtml ? '\n    ' + summaryHtml + '\n' : '') +
+(referencesHtml ? '\n    ' + referencesHtml + '\n' : '') +
+'\n' +
+'    <div class="detail-cite-row" id="detail-cite-row">\n' +
+'      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>\n' +
+'      <div class="cite-dropdown" id="cite-dropdown"></div>\n' +
+'    </div>\n\n' +
+'    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">\n' +
+'      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>\n' +
+'      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>\n' +
+'    </div>\n' +
+'  </div>\n</div>\n\n' +
+'<script src="/shared-data.js">\x3C/script>\n' +
+'<script src="/shared-nav.js">\x3C/script>\n' +
+'<script src="/epoch-stats.js">\x3C/script>\n' +
+'<script>\n' +
+'(function(){\n' +
+'  var name="'+name.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'",slug="'+slug+'",url="https://the-epoch-institute.org/empire/'+slug+'";\n' +
+'  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];\n' +
+'  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();\n' +
+'  var cites=[\n' +
+'    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},\n' +
+'    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},\n' +
+'    {label:"Chicago",text:\'The Epoch Institute Research Team. "\'+name+\'." The Epoch Institute, 2024. Accessed \'+month+" "+day+", "+year+". "+url}\n' +
+'  ];\n' +
+'  var dropdown=document.getElementById("cite-dropdown");\n' +
+'  dropdown.innerHTML=cites.map(function(c,i){return \'<div class="cite-block"><div class="cite-block-header"><span class="cite-label">\'+c.label+\'</span><button class="cite-copy-btn" data-cite="\'+i+\'">Copy</button></div><p class="cite-text">\'+escHtml(c.text)+\'</p></div>\';}).join("");\n' +
+'  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));\n' +
+'  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});\n' +
+'  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});\n' +
+'})();\n' +
+'document.getElementById("share-x").addEventListener("click",function(){var _t=encodeURIComponent("'+name.replace(/'/g,"\\'")+ ' — rise and fall across history. #History #EpochInstitute\\n\\nhttps://the-epoch-institute.org/empire/'+slug+'");window.open("https://twitter.com/intent/tweet?text="+_t,"_blank");});\n' +
+'document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/'+slug+'"),"_blank");});\n' +
+'initNav("profiles");\n' +
+'\x3C/script>\n\n\x3C/body>\n\x3C/html>';
+}
+
+async function generate() {
+  var btn = document.getElementById('gen-btn');
+  btn.disabled = true;
+  document.getElementById('log').innerHTML = '';
+
+  log('Loading data…', 'hd');
+
+  if (typeof EMPIRES === 'undefined' || typeof EMPIRE_PROFILES === 'undefined') {
+    log('ERROR: shared-data.js not loaded. Make sure this page is served alongside shared-data.js.', 'err');
+    btn.disabled = false;
+    return;
+  }
+
+  log('Found ' + EMPIRES.length + ' empires. Generating pages…', 'hd');
+
+  var zip = new JSZip();
+  var folder = zip.folder('empire');
+
+  for (var i = 0; i < EMPIRES.length; i++) {
+    var emp  = EMPIRES[i];
+    var slug = toSlug(emp.name);
+    try {
+      var html = buildPage(emp);
+      folder.file(slug, html);
+      log('[' + (i+1) + '/' + EMPIRES.length + '] ' + emp.name + ' → ' + slug, 'ok');
+    } catch (err) {
+      log('ERROR: ' + emp.name + ': ' + err.message, 'err');
+    }
+  }
+
+  log('\nPacking ZIP…', 'hd');
+  var blob = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE', compressionOptions: { level: 6 } });
+  var url  = URL.createObjectURL(blob);
+  var a    = document.createElement('a');
+  a.href     = url;
+  a.download = 'empire-pages.zip';
+  a.className = 'dl';
+  a.textContent = '↓ Download empire-pages.zip (' + EMPIRES.length + ' files)';
+  document.getElementById('log').appendChild(a);
+  a.click();
+  log('Done. Extract the ZIP to get the empire/ folder.', 'hd');
+  btn.disabled = false;
+}
+</script>
+
+</body>
+</html>
