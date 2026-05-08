@@ -49,6 +49,7 @@
 @media (max-width: 600px) {
   .profile-search-wrap { padding: 0 16px 20px; }
   .profile-search-empty { padding: 0 16px 24px; }
+  .profile-search-input { font-size: 16px; }
 }
 
 /* ── Profiles page layout ── */
