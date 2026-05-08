@@ -249,7 +249,7 @@ var EMPIRE_STATS_BY_NAME = {
     for (j = 0; j < 8; j++) {
       p = polar(j * 45, LR);
       out += '<text x="'+p[0]+'" y="'+p[1]+'" text-anchor="'+ANCHORS[j]+'" dominant-baseline="middle"'+
-        ' font-family="Cinzel,serif" font-size="8" fill="rgba(201,168,76,0.7)" letter-spacing="0.06em">'+
+        ' font-family="Cinzel,serif" font-size="9.5" fill="var(--text)" opacity="0.6" letter-spacing="0.06em">'+
         STAT_DIMENSIONS[j].shortLabel+'</text>';
     }
 
@@ -264,8 +264,10 @@ var EMPIRE_STATS_BY_NAME = {
         var val = stats[dim.key];
         return '<div class="empire-dim">'+
           '<span class="empire-dim-label">'+dim.shortLabel+'</span>'+
-          '<div class="empire-dim-bar-wrap"><div class="empire-dim-bar" style="width:'+(val*10)+'%"></div></div>'+
-          '<span class="empire-dim-val">'+val+'</span>'+
+          '<div class="empire-dim-row">'+
+            '<div class="empire-dim-bar-wrap"><div class="empire-dim-bar" style="width:'+(val*10)+'%"></div></div>'+
+            '<span class="empire-dim-val">'+val+'</span>'+
+          '</div>'+
         '</div>';
       }).join('')+
     '</div>';

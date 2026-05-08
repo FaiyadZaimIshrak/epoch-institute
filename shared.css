@@ -2342,7 +2342,7 @@ mark.search-hl {
 }
 .empire-stats-title {
   font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin: 0 0 16px;
+  text-transform: uppercase; color: var(--gold); opacity: 0.9; margin: 0 0 16px;
 }
 .empire-stats-top {
   display: flex; flex-wrap: wrap; gap: 16px 32px;
@@ -2359,13 +2359,13 @@ mark.search-hl {
 }
 .empire-rank-label {
   font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.7;
+  text-transform: uppercase; color: var(--gold); opacity: 0.85;
 }
 .empire-tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 4px; }
 .empire-tag {
   font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.85;
-  border: 0.5px solid rgba(201,168,76,0.4); border-radius: 2px; padding: 3px 9px;
+  text-transform: uppercase; color: var(--gold);
+  border: 0.5px solid rgba(201,168,76,0.5); border-radius: 2px; padding: 3px 9px;
 }
 .empire-radar-wrap { width: 100%; max-width: 440px; margin: 0 auto; }
 .empire-radar-wrap svg { width: 100%; height: auto; display: block; }
@@ -2374,8 +2374,8 @@ mark.search-hl {
 }
 .empire-dim { display: flex; flex-direction: column; gap: 3px; }
 .empire-dim-label {
-  font-family: 'Cinzel', serif; font-size: 7.5px; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--muted);
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text); opacity: 0.6;
 }
 .empire-dim-row { display: flex; align-items: center; gap: 8px; }
 .empire-dim-bar-wrap {
@@ -2383,7 +2383,7 @@ mark.search-hl {
 }
 .empire-dim-bar { height: 100%; background: var(--gold); border-radius: 2px; }
 .empire-dim-val {
-  font-family: 'Cinzel', serif; font-size: 9px; color: var(--gold-light);
+  font-family: 'Cinzel', serif; font-size: 10px; color: var(--gold-light);
   min-width: 20px; text-align: right;
 }
 @media (max-width: 480px) {
