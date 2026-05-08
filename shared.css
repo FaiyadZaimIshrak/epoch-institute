@@ -880,6 +880,9 @@
     color: var(--muted);
     font-style: italic;
   }
+  .footer-social { display:flex; gap:12px; margin-top:14px; }
+  .footer-social-link { color:var(--muted); transition:color 0.2s; display:flex; align-items:center; }
+  .footer-social-link:hover { color:var(--gold); }
   .footer-links {
     display: flex;
     gap: 48px;
