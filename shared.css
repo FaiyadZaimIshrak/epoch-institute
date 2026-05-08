@@ -1979,7 +1979,8 @@ mark.search-hl {
 #profiles.compare-mode .empire-thumb:active::after { opacity:1; }
 @media (max-width:768px) {
   .compare-toggle-row { padding:0 16px 16px; }
-  .compare-panel { padding:0 16px; }
+  .compare-panel { padding:0 16px; transition:none; }
+  .compare-panel.open { max-height:none; }
   .compare-slots { grid-template-columns:1fr; }
   .compare-divider { padding:10px 0; }
   .compare-vs::before { content:'— '; } .compare-vs::after { content:' —'; }
