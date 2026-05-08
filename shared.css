@@ -881,10 +881,9 @@
     font-style: italic;
   }
   .footer-social { display:flex; flex-direction:column; gap:16px; margin-top:18px; }
-  .footer-social-link { display:flex; align-items:center; gap:10px; text-decoration:none; transition:opacity 0.2s; }
-  .footer-social-link:hover { opacity:0.8; }
-  .footer-social-text { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.05em; color:var(--muted); transition:color 0.2s; }
-  .footer-social-link:hover .footer-social-text { color:var(--text); }
+  .footer-social-link { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--muted); transition:opacity 0.2s; }
+  .footer-social-link:hover { opacity:0.8; color:var(--text); }
+  .footer-social-text { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.05em; color:inherit; transition:color 0.2s; }
   .footer-links {
     display: flex;
     gap: 48px;
