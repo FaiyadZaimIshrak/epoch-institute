@@ -301,4 +301,22 @@ var EMPIRE_STATS_BY_NAME = {
     if (!profile) return;
     render(panel, profile);
   });
+
+  window.epochStatsCompareHTML = function(name) {
+    var profile = EMPIRE_STATS_BY_NAME[name];
+    if (!profile) return '';
+    var tags = profile.tags.map(function(t) {
+      return '<span class="empire-tag">'+t+'</span>';
+    }).join('');
+    return '<div class="empire-stats-top compare-stats-top">'+
+        '<div class="empire-overall-wrap">'+
+          '<span class="empire-overall-score">'+profile.overall.toFixed(1)+'</span>'+
+          '<span class="empire-overall-label">/ 10 &nbsp; Overall Score</span>'+
+          '<span class="empire-rank-label">#'+profile.rank+' of 94 Empires</span>'+
+        '</div>'+
+        '<div class="empire-tags">'+tags+'</div>'+
+      '</div>'+
+      '<div class="empire-radar-wrap compare-radar-wrap">'+buildSVG(profile.stats)+'</div>'+
+      buildDimGrid(profile.stats);
+  };
 })();

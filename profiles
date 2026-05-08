@@ -110,6 +110,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script src="/epoch-stats.js"></script>
 <script>
 // ── Era classifier ────────────────────────────────────────────────────────────
 function getEmpireEra(empire) {
@@ -238,26 +239,11 @@ function buildProfileGallery() {
       slotEl.innerHTML = '<span class="compare-slot-placeholder">' + label + '</span>';
       return;
     }
-    var emp     = EMPIRES.find(function(e) { return e.name === name; }) || {};
-    var profile = EMPIRE_PROFILES[name] || {};
-    var stats   = empireStats(name);
-    var sectionKeys = [
-      ['foundation', 'Foundation'], ['socioeconomy', 'Socioeconomy'], ['military', 'Military'],
-      ['governance', 'Governance &amp; Law'], ['impact', 'Global &amp; Regional Impact'], ['decline', 'Decline &amp; Fall']
-    ];
-    var sectionsHtml = sectionKeys.map(function(pair) {
-      var key   = pair[0], label = pair[1];
-      var raw   = stripTags(profile[key] || '');
-      var res   = truncateText(raw, 400);
-      var uid   = slotId + '-' + key;
-      return '<div class="compare-section-block">' +
-        '<p class="compare-section-title">' + label + '</p>' +
-        '<p class="compare-section-body" id="csb-' + uid + '">' +
-          (raw ? escHtml(res.out) : '<em>Coming soon.</em>') +
-        '</p>' +
-        (res.hasMore && raw ? '<button class="compare-read-more" data-slot="' + slotId + '" data-key="' + key + '" data-uid="' + uid + '">Read more →</button>' : '') +
-      '</div>';
-    }).join('');
+    var emp   = EMPIRES.find(function(e) { return e.name === name; }) || {};
+    var stats = empireStats(name);
+    var statsHtml = (typeof window.epochStatsCompareHTML === 'function')
+      ? window.epochStatsCompareHTML(name)
+      : '';
 
     slotEl.className = 'compare-slot compare-slot-filled';
     slotEl.innerHTML =
@@ -273,7 +259,7 @@ function buildProfileGallery() {
         '<div class="compare-stat-item"><span class="compare-stat-label">Duration</span><span class="compare-stat-val">' + stats.duration + '</span></div>' +
         '<div class="compare-stat-item"><span class="compare-stat-label">Period</span><span class="compare-stat-val">' + stats.period + '</span></div>' +
       '</div>' +
-      sectionsHtml +
+      statsHtml +
       '<button class="compare-view-btn" data-empire="' + escHtml(name) + '">View Full Profile →</button>';
   }
 

@@ -2391,3 +2391,7 @@ mark.search-hl {
   .empire-stats-panel { padding: 18px 14px; }
   .empire-dim-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Compare slot stats overrides ── */
+.compare-radar-wrap { max-width: 300px; }
+.compare-stats-top { margin-bottom: 16px; }
