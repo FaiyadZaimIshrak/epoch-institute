@@ -7,5 +7,6 @@ deployment:
     - /bin/mkdir -p ${DEPLOYPATH}data; /bin/cp data/history.json data/international-days.json ${DEPLOYPATH}data/ 2>/dev/null; true
     - /bin/cp -R empire $DEPLOYPATH
     - /bin/cp -R logos $DEPLOYPATH
+    - /bin/mkdir -p ${DEPLOYPATH}images; /bin/cp -R images/. ${DEPLOYPATH}images/ 2>/dev/null; true
     - /bin/rm -f ${DEPLOYPATH}index.html ${DEPLOYPATH}about.html ${DEPLOYPATH}research.html ${DEPLOYPATH}research-series.html ${DEPLOYPATH}profiles.html ${DEPLOYPATH}community.html ${DEPLOYPATH}contributors.html ${DEPLOYPATH}dataset.html ${DEPLOYPATH}explorer.html
     - /bin/rm -f ${DEPLOYPATH}empire/*.html
