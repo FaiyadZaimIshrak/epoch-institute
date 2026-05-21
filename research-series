@@ -66,8 +66,10 @@
   border: none; cursor: pointer; padding: 0; transition: color 0.2s;
 }
 .series-card:hover .series-copy-link, .series-card:active .series-copy-link { color: var(--gold); }
-.series-end-share { margin-top: 40px; padding-top: 24px; border-top: 0.5px solid var(--border); display: flex; align-items: center; gap: 12px; position: relative; }
-.series-end-share-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.series-end-share { margin-top: 40px; padding-top: 24px; border-top: 0.5px solid var(--border); display: inline-block; position: relative; }
+.series-end-share .tih-share-btn { position:static !important; opacity:1 !important; font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); padding:0; }
+.series-end-share .tih-share-btn:hover { color:var(--gold) !important; opacity:1 !important; }
+.series-end-share .tih-share-dropdown { bottom:auto !important; top:calc(100% + 4px) !important; right:auto !important; left:0 !important; }
 .series-status {
   display: inline-block; font-family: 'Cinzel', serif; font-size: 8px;
   letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px;
@@ -360,24 +362,17 @@ function openSeriesDetail(id) {
     document.querySelector('.series-detail-header').appendChild(wrap);
     attachShareListeners(wrap, shareUrl);
   }
-  // Inject end-of-article share (copy link) button
+  // Inject end-of-article share dropdown
   var existingEndShare = document.getElementById('series-end-share');
   if (existingEndShare) existingEndShare.remove();
   var endShare = document.createElement('div');
   endShare.id = 'series-end-share';
   endShare.className = 'series-end-share';
-  var shareBtn = document.createElement('button');
-  shareBtn.className = 'series-copy-link';
-  shareBtn.textContent = 'Share';
-  shareBtn.addEventListener('click', function() {
-    navigator.clipboard.writeText(shareUrl).then(function() {
-      shareBtn.textContent = 'Copied ✓';
-      shareBtn.style.color = 'var(--gold)';
-      setTimeout(function() { shareBtn.textContent = 'Share'; shareBtn.style.color = ''; }, 1800);
-    });
-  });
-  endShare.appendChild(shareBtn);
+  endShare.innerHTML = buildShareButton('series-end-share-dd', shareUrl, tweetText, s.title);
+  var triggerBtn = endShare.querySelector('.tih-share-btn');
+  if (triggerBtn) triggerBtn.innerHTML = 'Share';
   document.getElementById('series-detail-body').appendChild(endShare);
+  attachShareListeners(endShare, shareUrl);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
