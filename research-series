@@ -360,16 +360,24 @@ function openSeriesDetail(id) {
     document.querySelector('.series-detail-header').appendChild(wrap);
     attachShareListeners(wrap, shareUrl);
   }
-  // Inject end-of-article share row
+  // Inject end-of-article share (copy link) button
   var existingEndShare = document.getElementById('series-end-share');
   if (existingEndShare) existingEndShare.remove();
   var endShare = document.createElement('div');
   endShare.id = 'series-end-share';
   endShare.className = 'series-end-share';
-  endShare.innerHTML = '<span class="series-end-share-label">Share</span>' +
-    buildShareButton('series-end-share-dd', shareUrl, tweetText, s.title);
+  var shareBtn = document.createElement('button');
+  shareBtn.className = 'series-copy-link';
+  shareBtn.textContent = 'Share';
+  shareBtn.addEventListener('click', function() {
+    navigator.clipboard.writeText(shareUrl).then(function() {
+      shareBtn.textContent = 'Copied ✓';
+      shareBtn.style.color = 'var(--gold)';
+      setTimeout(function() { shareBtn.textContent = 'Share'; shareBtn.style.color = ''; }, 1800);
+    });
+  });
+  endShare.appendChild(shareBtn);
   document.getElementById('series-detail-body').appendChild(endShare);
-  attachShareListeners(endShare, shareUrl);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
