@@ -53,10 +53,21 @@
 }
 .series-cta {
   font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); margin-top: auto;
-  padding-top: 8px; border-top: 0.5px solid var(--border); transition: color 0.2s;
+  text-transform: uppercase; color: var(--muted); transition: color 0.2s;
 }
 .series-card:hover .series-cta, .series-card:active .series-cta { color: var(--gold); }
+.series-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: auto; padding-top: 8px; border-top: 0.5px solid var(--border);
+}
+.series-copy-link {
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); background: none;
+  border: none; cursor: pointer; padding: 0; transition: color 0.2s;
+}
+.series-card:hover .series-copy-link, .series-card:active .series-copy-link { color: var(--gold); }
+.series-end-share { margin-top: 40px; padding-top: 24px; border-top: 0.5px solid var(--border); display: flex; align-items: center; gap: 12px; position: relative; }
+.series-end-share-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .series-status {
   display: inline-block; font-family: 'Cinzel', serif; font-size: 8px;
   letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px;
@@ -143,7 +154,10 @@
       <h3 class="series-title">The Architecture of Power</h3>
       <p class="series-subtitle">How Empires Build the Structures That Sustain Them</p>
       <p class="series-desc">An examination of the administrative, legal, and infrastructural systems that allowed large-scale polities to persist — and why their absence almost always preceded collapse.</p>
-      <span class="series-cta">Read Series →</span>
+      <div class="series-card-footer">
+        <span class="series-cta">Read Series →</span>
+        <button class="series-copy-link" onclick="event.stopPropagation(); copySeriesLink(this)">Copy link</button>
+      </div>
     </div>
 
     <div class="series-card coming-soon" aria-disabled="true">
@@ -329,16 +343,16 @@ function openSeriesDetail(id) {
   document.getElementById('research-series').style.display = 'none';
   var detailEl = document.getElementById('series-detail');
   detailEl.style.display = 'block';
-  // Inject share button for available series
+  var shareUrl = 'https://the-epoch-institute.org/research-series';
+  var rawDesc = s.description || '';
+  var firstSent = rawDesc.replace(/^([^.!?]*[.!?])[\s\S]*$/, '$1').trim();
+  var tweetBase = '"' + s.title + '" — ' + (firstSent || rawDesc) + '\n\n#History #EpochInstitute';
+  var tweetText = tweetBase.length <= 240 ? tweetBase
+    : '"' + s.title + '" — ' + (firstSent || rawDesc).substring(0, Math.max(10, 240 - ('"' + s.title + '" — \n\n#History #EpochInstitute').length)) + '…\n\n#History #EpochInstitute';
+  // Inject share button in header
   var existingShare = detailEl.querySelector('.series-share-wrap');
   if (existingShare) existingShare.remove();
   if (!s.rawHtml === false || s.rawHtml) {
-    var shareUrl = 'https://the-epoch-institute.org/research-series';
-    var rawDesc = s.description || '';
-    var firstSent = rawDesc.replace(/^([^.!?]*[.!?])[\s\S]*$/, '$1').trim();
-    var tweetBase = '"' + s.title + '" — ' + (firstSent || rawDesc) + '\n\n#History #EpochInstitute';
-    var tweetText = tweetBase.length <= 240 ? tweetBase
-      : '"' + s.title + '" — ' + (firstSent || rawDesc).substring(0, Math.max(10, 240 - ('"' + s.title + '" — \n\n#History #EpochInstitute').length)) + '…\n\n#History #EpochInstitute';
     var wrap = document.createElement('div');
     wrap.className = 'series-share-wrap';
     wrap.style.cssText = 'position:relative; display:inline-block; margin-top:16px;';
@@ -346,6 +360,16 @@ function openSeriesDetail(id) {
     document.querySelector('.series-detail-header').appendChild(wrap);
     attachShareListeners(wrap, shareUrl);
   }
+  // Inject end-of-article share row
+  var existingEndShare = document.getElementById('series-end-share');
+  if (existingEndShare) existingEndShare.remove();
+  var endShare = document.createElement('div');
+  endShare.id = 'series-end-share';
+  endShare.className = 'series-end-share';
+  endShare.innerHTML = '<span class="series-end-share-label">Share</span>' +
+    buildShareButton('series-end-share-dd', shareUrl, tweetText, s.title);
+  document.getElementById('series-detail-body').appendChild(endShare);
+  attachShareListeners(endShare, shareUrl);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -354,6 +378,15 @@ document.getElementById('series-detail-back').addEventListener('click', function
   document.getElementById('research-series').style.display = '';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+function copySeriesLink(btn) {
+  navigator.clipboard.writeText('https://the-epoch-institute.org/research-series').then(function() {
+    var orig = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    btn.style.color = 'var(--gold)';
+    setTimeout(function() { btn.textContent = orig; btn.style.color = ''; }, 1800);
+  });
+}
 
 function seriesNotify(e, seriesName) {
   e.preventDefault();
