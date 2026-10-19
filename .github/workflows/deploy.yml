@@ -1,0 +1,70 @@
+# Auto-deploy to Namecheap cPanel on every push to master.
+# Does the same as cPanel → Git Version Control → "Update from Remote" + "Deploy HEAD Commit",
+# so .cpanel.yml stays the single source of truth for what gets copied to public_html.
+#
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   CPANEL_HOST       e.g. server123.web-hosting.com  (cPanel hostname, no https:// or port)
+#   CPANEL_USER       cPanel username, e.g. theeiorh
+#   CPANEL_API_TOKEN  cPanel → Security → Manage API Tokens
+#   CPANEL_REPO_PATH  cPanel → Git Version Control → "Repository Path", e.g. /home/theeiorh/repositories/epoch-institute
+
+name: Deploy to cPanel
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: cpanel-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      HOST: ${{ secrets.CPANEL_HOST }}
+      USER: ${{ secrets.CPANEL_USER }}
+      TOKEN: ${{ secrets.CPANEL_API_TOKEN }}
+      REPO_PATH: ${{ secrets.CPANEL_REPO_PATH }}
+    steps:
+      - name: Check secrets
+        run: |
+          for v in HOST USER TOKEN REPO_PATH; do
+            [ -n "${!v}" ] || { echo "::error::Missing secret for $v"; exit 1; }
+          done
+
+      - name: Pull latest commit into cPanel repository
+        run: |
+          res=$(curl -sS -G "https://$HOST:2083/execute/VersionControl/update" \
+            -H "Authorization: cpanel $USER:$TOKEN" \
+            --data-urlencode "repository_root=$REPO_PATH" \
+            --data-urlencode "branch=master")
+          echo "$res" | jq '{status, errors, head: .data.last_update.identifier}'
+          [ "$(echo "$res" | jq -r .status)" = "1" ] || { echo "::error::cPanel pull failed"; exit 1; }
+
+      - name: Deploy (runs .cpanel.yml)
+        run: |
+          res=$(curl -sS -G "https://$HOST:2083/execute/VersionControlDeployment/create" \
+            -H "Authorization: cpanel $USER:$TOKEN" \
+            --data-urlencode "repository_root=$REPO_PATH")
+          echo "$res" | jq '{status, errors, deploy_id: .data.deploy_id}'
+          [ "$(echo "$res" | jq -r .status)" = "1" ] || { echo "::error::cPanel deploy request failed"; exit 1; }
+          echo "DEPLOY_ID=$(echo "$res" | jq -r .data.deploy_id)" >> "$GITHUB_ENV"
+
+      - name: Wait for deployment to finish
+        run: |
+          for i in $(seq 1 30); do
+            d=$(curl -sS "https://$HOST:2083/execute/VersionControlDeployment/retrieve" \
+              -H "Authorization: cpanel $USER:$TOKEN" \
+              | jq --arg id "$DEPLOY_ID" '.data[] | select((.deploy_id|tostring) == $id)')
+            if [ -n "$(echo "$d" | jq -r '.timestamps.succeeded // empty')" ]; then
+              echo "Deployed $(echo "$d" | jq -r '.sha // empty')"; exit 0
+            fi
+            if [ -n "$(echo "$d" | jq -r '(.timestamps.failed // .timestamps.canceled) // empty')" ]; then
+              echo "::error::Deployment failed — see log on server: $(echo "$d" | jq -r '.log_path // empty')"; exit 1
+            fi
+            sleep 5
+          done
+          echo "::warning::Deployment still running after 150s; check cPanel → Git Version Control."
