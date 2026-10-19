@@ -169,8 +169,9 @@
 <div id="event-tooltip"></div>
 <div id="tooltip"></div>
 
-<script src="/shared-data.js"></script>
-<script src="/shared-nav.js"></script>
+<script src="/shared-data.js?v=2"></script>
+<script src="/point-descs.js?v=2"></script>
+<script src="/shared-nav.js?v=2"></script>
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
@@ -191,55 +192,9 @@ function updateExplorerShareText() {
   if (tweetBtn) tweetBtn.dataset.tweet = text;
 }
 
-// ── Google Drive config for empire emblems ─────────────────────────────────
-const GDRIVE_FOLDER_ID = "1ZCKyZSlOkpv5BYHiDZVsOShv1B5aG5Xg";
-const GDRIVE_API_KEY   = "AIzaSyBR5wx7et8NPsxA51vuR4zxlQlSlU9-a2A";
-
-let _driveFolderPromise = null;
-function loadDriveFolder() {
-  if (_driveFolderPromise) return _driveFolderPromise;
-  _driveFolderPromise = (async () => {
-    const map = {};
-    if (!GDRIVE_FOLDER_ID || GDRIVE_FOLDER_ID === "PASTE_FOLDER_ID_HERE") return map;
-    let pageToken = "";
-    do {
-      const params = new URLSearchParams({
-        q: `'${GDRIVE_FOLDER_ID}' in parents`,
-        fields: "nextPageToken,files(id,name,thumbnailLink)",
-        pageSize: "1000",
-        key: GDRIVE_API_KEY
-      });
-      if (pageToken) params.set("pageToken", pageToken);
-      try {
-        const r = await fetch(`https://www.googleapis.com/drive/v3/files?${params}`);
-        const d = await r.json();
-        if (d.files) {
-          for (const f of d.files) {
-            const key = f.name.replace(/\.[^/.]+$/, "").trim().toLowerCase();
-            map[key] = { id: f.id, thumb: f.thumbnailLink || null };
-          }
-        }
-        pageToken = d.nextPageToken || "";
-      } catch(e) { pageToken = ""; }
-    } while (pageToken);
-    return map;
-  })();
-  return _driveFolderPromise;
-}
-
-const emblemCache = {};
-async function fetchEmblem(empName) {
-  if (empName in emblemCache) return emblemCache[empName];
-  let url = null;
-  try {
-    const driveMap = await loadDriveFolder();
-    const key = empName.trim().toLowerCase();
-    if (driveMap[key]) {
-      url = driveMap[key].thumb || `https://drive.google.com/uc?export=view&id=${driveMap[key].id}`;
-    }
-  } catch(e) {}
-  emblemCache[empName] = url || false;
-  return url || false;
+// ── Empire emblems (served from /logos, same as profiles + empire pages) ────
+function emblemUrl(empName) {
+  return "/logos/" + encodeURIComponent(empName) + ".png";
 }
 
 // ── State ──────────────────────────────────────────────────────────────────
@@ -518,13 +473,10 @@ function updateInfoPanel() {
   const emblemEl = document.getElementById("info-emblem");
   const emblemImg = document.getElementById("info-emblem-img");
   emblemEl.style.display = "none";
-  fetchEmblem(emp.name).then(url => {
-    if (url && document.getElementById("info-name").textContent === emp.name) {
-      emblemImg.src = url;
-      emblemImg.alt = emp.name;
-      emblemEl.style.display = "flex";
-    }
-  });
+  emblemImg.onload = () => { emblemEl.style.display = "flex"; };
+  emblemImg.onerror = () => { emblemEl.style.display = "none"; };
+  emblemImg.alt = emp.name;
+  emblemImg.src = emblemUrl(emp.name);
   document.getElementById("info-peak").textContent = formatYear(peak[0]);
   document.getElementById("info-duration").textContent = `${Math.abs(duration)} years`;
   document.getElementById("info-summary").textContent = EMPIRE_INFO[emp.name] || "Historical data for this empire is being compiled.";

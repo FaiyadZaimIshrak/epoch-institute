@@ -148,7 +148,7 @@
   <div class="series-grid">
 
     <div class="series-card" onclick="openSeriesDetail('series-01')">
-      <img class="series-card-thumb" src="/images/series-01-cover.png" alt="The Architecture of Power cover">
+      <img class="series-card-thumb" src="/images/series-01-cover.jpg" alt="The Architecture of Power cover">
       <div>
         <span class="series-number">Series 01</span>
         <span class="series-status available" style="margin-left:10px;">Available</span>
@@ -237,15 +237,15 @@
   </div>
 </div>
 
-<script src="/shared-data.js"></script>
-<script src="/shared-nav.js"></script>
+<script src="/shared-data.js?v=2"></script>
+<script src="/shared-nav.js?v=2"></script>
 <script>
 var SERIES_DATA = {
   'series-01': {
     number: 'Series 01',
     title: 'The Architecture of Power',
     subtitle: 'How Empires Build the Structures That Sustain Them',
-    thumbnail: '/images/series-01-cover.png',
+    thumbnail: '/images/series-01-cover.jpg',
     description: 'An examination of the administrative, legal, and infrastructural systems that allowed large-scale polities to persist — and why their absence almost always preceded collapse.',
     rawHtml: true,
     body: [

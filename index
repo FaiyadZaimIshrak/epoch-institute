@@ -120,8 +120,8 @@
   </div>
 </div>
 
-<script src="/shared-data.js"></script>
-<script src="/shared-nav.js"></script>
+<script src="/shared-data.js?v=2"></script>
+<script src="/shared-nav.js?v=2"></script>
 <script>
 initNav('home');
 
@@ -130,7 +130,7 @@ function openAnnouncementModal(fileId, name) {
   document.getElementById('article-modal-title').textContent = name;
   document.getElementById('article-modal-meta').textContent = 'Announcement';
   document.getElementById('article-modal-frame').src =
-    'https://drive.google.com/file/d/' + fileId + '/preview';
+    'https://drive.google.com/file/d/' + encodeURIComponent(fileId) + '/preview';
   const overlay = document.getElementById('article-modal');
   overlay.classList.remove('closing');
   overlay.style.display = 'flex';
@@ -191,9 +191,9 @@ function renderAnnouncements(items) {
     const isImg = /\.(png|jpe?g|gif|webp)$/i.test(item.name) || /^image\//.test(item.mimeType);
     const typeLabel = isImg ? 'Image Notice' : 'Document Notice';
     const imgHtml = isImg
-      ? `<img class="announcement-card-img" src="https://lh3.googleusercontent.com/d/${item.id}" alt="${escHtml(item.name)}" loading="lazy">`
+      ? `<img class="announcement-card-img" src="https://lh3.googleusercontent.com/d/${encodeURIComponent(item.id)}" alt="${escHtml(item.name)}" loading="lazy">`
       : `<div class="announcement-card-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--gold);opacity:0.35;">📄</div>`;
-    return `<div class="announcement-card" onclick="openAnnouncementModal('${item.id}','${escHtml(item.name).replace(/'/g,"\\'")}')">
+    return `<div class="announcement-card" data-id="${escHtml(item.id)}" data-name="${escHtml(item.name)}">
       ${imgHtml}
       <div class="announcement-card-body">
         <span class="announcement-card-type">${typeLabel}</span>
@@ -204,11 +204,22 @@ function renderAnnouncements(items) {
   }).join('');
 }
 
-loadAnnouncements();
-setInterval(loadAnnouncements, 5 * 60 * 1000);
-document.addEventListener('visibilitychange', () => {
-  if (!document.hidden) loadAnnouncements();
+document.getElementById('announcements-grid').addEventListener('click', e => {
+  const card = e.target.closest('.announcement-card');
+  if (card) openAnnouncementModal(card.dataset.id, card.dataset.name);
 });
+
+// Refresh every 5 min while visible; on tab return only if the data is stale.
+const ANNOUNCEMENTS_TTL = 5 * 60 * 1000;
+let _announcementsLoadedAt = 0;
+function refreshAnnouncements() {
+  if (document.hidden || Date.now() - _announcementsLoadedAt < ANNOUNCEMENTS_TTL) return;
+  _announcementsLoadedAt = Date.now();
+  loadAnnouncements();
+}
+refreshAnnouncements();
+setInterval(refreshAnnouncements, ANNOUNCEMENTS_TTL);
+document.addEventListener('visibilitychange', refreshAnnouncements);
 
 // ── Today in History strip ────────────────────────────────────────────────────
 (function() {
@@ -368,7 +379,8 @@ document.addEventListener('visibilitychange', () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ email: email, _subject: 'Newsletter signup', source: 'homepage' })
-    }).then(function() {
+    }).then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
       var msg = document.getElementById('newsletter-msg');
       msg.textContent = "You're subscribed.";
       msg.style.display = 'block';

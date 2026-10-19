@@ -93,7 +93,7 @@
       <p class="research-card-desc">The Epoch Institute studies civilisational patterns through data-driven research — examining how empires rise, sustain themselves, and collapse, and what those trajectories reveal about the forces that shape human societies. We make history intellectually rigorous and genuinely accessible.</p>
     </div>
 
-    <div class="research-card">
+    <div class="research-card" id="methodology">
       <div class="research-card-icon">⊞</div>
       <h3 class="research-card-title">Methodology</h3>
       <p class="research-card-desc">Empire power scores are researcher-assigned normalised indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. All scores are drawn from peer-reviewed historiography and cited using Harvard-style references. Each trajectory is scaled to its own peak, allowing comparison of shape rather than absolute size.</p>
@@ -145,8 +145,8 @@
   </div>
 </section>
 
-<script src="/shared-data.js"></script>
-<script src="/shared-nav.js"></script>
+<script src="/shared-data.js?v=2"></script>
+<script src="/shared-nav.js?v=2"></script>
 <script>
 initNav('about');
 </script>

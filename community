@@ -268,7 +268,7 @@
   </div>
 
   <!-- Share Your Thoughts -->
-  <div class="community-share-band" style="margin-top:40px;">
+  <div class="community-share-band" id="submit" style="margin-top:40px;">
     <div class="share-band-text">
       <h3 class="community-section-title">Share Your Thoughts</h3>
       <p class="community-section-sub">Have a perspective on history, society, or civilisation? We'd love to feature your writing.</p>
@@ -293,6 +293,7 @@
       </div>
       <button type="submit" class="form-submit">Submit Opinion</button>
       <p class="form-success" id="op-success" style="display:none;">Thank you — your opinion has been received.</p>
+      <p id="op-error" aria-live="polite" style="display:none;font-family:'Crimson Pro',Georgia,serif;font-size:13px;color:var(--error);margin-top:4px;">Couldn't send — please check your connection and try again.</p>
     </form>
   </div>
 
@@ -387,12 +388,13 @@
       </div>
       <button type="submit" class="form-submit">Submit →</button>
       <p class="form-success" id="sf-success" style="display:none;">Thank you! We'll review your submission and be in touch.</p>
+      <p id="sf-error" aria-live="polite" style="display:none;font-family:'Crimson Pro',Georgia,serif;font-size:13px;color:var(--error);margin-top:4px;">Couldn't send — please check your connection and try again.</p>
     </form>
   </div>
 </div>
 
-<script src="/shared-data.js"></script>
-<script src="/shared-nav.js"></script>
+<script src="/shared-data.js?v=2"></script>
+<script src="/shared-nav.js?v=2"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
 var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];
@@ -582,8 +584,24 @@ document.getElementById('article-detail-back-bottom').addEventListener('click', 
 
 // ── Share modal ───────────────────────────────────────────────────────────────
 var _shareFile = null;
+var MAX_ARTICLE_BYTES = 10 * 1024 * 1024;
+
+// Apps Script POSTs use no-cors, so the response is opaque: a resolved fetch
+// means the request reached Google, a rejected one means it never left.
+function postToApi(payload) {
+  return fetch(EPOCH_API_URL, {
+    method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify(payload)
+  });
+}
 
 document.getElementById('open-share-btn').addEventListener('click', function() {
+  var submitBtn = document.querySelector('#share-form button[type="submit"]');
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Submit →';
+  document.getElementById('sf-success').style.display = 'none';
+  document.getElementById('sf-error').style.display = 'none';
   document.getElementById('share-modal').classList.add('is-open');
   document.body.style.overflow = 'hidden';
   setTimeout(function() { var f = document.getElementById('sf-name'); if (f) f.focus(); }, 50);
@@ -608,9 +626,10 @@ document.addEventListener('keydown', function(e) {
   var label    = document.getElementById('drop-zone-filename');
 
   function setFile(file) {
-    if (!file || !file.name.toLowerCase().endsWith('.docx')) {
+    var tooBig = file && file.size > MAX_ARTICLE_BYTES;
+    if (!file || !file.name.toLowerCase().endsWith('.docx') || tooBig) {
       var errEl = document.getElementById('drop-zone-error');
-      errEl.textContent = 'Please select a .docx file.';
+      errEl.textContent = tooBig ? 'File is too large (max 10 MB).' : 'Please select a .docx file.';
       errEl.style.display = 'block';
       setTimeout(function() { errEl.style.display = 'none'; }, 4000);
       return;
@@ -659,23 +678,34 @@ document.getElementById('share-form').addEventListener('submit', function(e) {
 
   if (!ok) return;
 
+  var submitBtn = this.querySelector('button[type="submit"]');
+  var errEl = document.getElementById('sf-error');
+  errEl.style.display = 'none';
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+  function failed() {
+    errEl.style.display = 'block';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit →';
+  }
+
+  var file = _shareFile;
   var reader = new FileReader();
+  reader.onerror = failed;
   reader.onload = function() {
     var base64 = reader.result.split(',')[1];
-    fetch(EPOCH_API_URL, {
-      method: 'POST', mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({
-        type: 'article', name: name, profession: prof, affil: affil, email: email,
-        title: _shareFile.name.replace(/\.docx$/i, ''),
-        filename: _shareFile.name, fileBase64: base64
-      })
-    }).catch(function() {});
-    document.getElementById('sf-success').style.display = 'block';
-    setTimeout(closeShareModal, 2500);
-    _shareFile = null;
+    postToApi({
+      type: 'article', name: name, profession: prof, affil: affil, email: email,
+      title: file.name.replace(/\.docx$/i, ''),
+      filename: file.name, fileBase64: base64
+    }).then(function() {
+      document.getElementById('sf-success').style.display = 'block';
+      submitBtn.textContent = 'Sent ✓';
+      _shareFile = null;
+      setTimeout(closeShareModal, 2500);
+    }).catch(failed);
   };
-  reader.readAsDataURL(_shareFile);
+  reader.readAsDataURL(file);
 });
 
 // ── Opinion form ──────────────────────────────────────────────────────────────
@@ -690,19 +720,23 @@ document.getElementById('opinion-form').addEventListener('submit', function(e) {
   });
   if (!ok) return;
 
-  if (EPOCH_API_URL && !EPOCH_API_URL.includes('PASTE')) {
-    fetch(EPOCH_API_URL, {
-      method: 'POST', mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ type: 'opinion', name: name, text: text })
-    }).catch(function() {});
-  }
+  var form = this;
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var errEl = document.getElementById('op-error');
+  errEl.style.display = 'none';
+  document.getElementById('op-success').style.display = 'none';
+  submitBtn.disabled = true;
 
-  // Optimistic prepend
-  _allOpinions.unshift({ name: name, text: text, ts: Date.now() });
-  renderOpinionsPreview();
-  document.getElementById('op-success').style.display = 'block';
-  document.getElementById('opinion-form').reset();
+  postToApi({ type: 'opinion', name: name, text: text }).then(function() {
+    _allOpinions.unshift({ name: name, text: text, ts: Date.now() });
+    renderOpinionsPreview();
+    document.getElementById('op-success').style.display = 'block';
+    form.reset();
+  }).catch(function() {
+    errEl.style.display = 'block';
+  }).then(function() {
+    submitBtn.disabled = false;
+  });
 });
 
 // ── Newsletter ────────────────────────────────────────────────────────────────
@@ -722,7 +756,12 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
     fetch(FORMSPREE_URL, {
       method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, _subject: 'Newsletter Signup' })
-    }).then(showNlSuccess).catch(showNlSuccess);
+    }).then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      showNlSuccess();
+    }).catch(function() {
+      input.classList.add('form-input-error');
+    });
   } else {
     showNlSuccess();
   }

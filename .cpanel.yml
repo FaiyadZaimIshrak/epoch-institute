@@ -10,3 +10,4 @@ deployment:
     - /bin/mkdir -p ${DEPLOYPATH}images; /bin/cp -R images/. ${DEPLOYPATH}images/ 2>/dev/null; true
     - /bin/rm -f ${DEPLOYPATH}index.html ${DEPLOYPATH}about.html ${DEPLOYPATH}research.html ${DEPLOYPATH}research-series.html ${DEPLOYPATH}profiles.html ${DEPLOYPATH}community.html ${DEPLOYPATH}contributors.html ${DEPLOYPATH}dataset.html ${DEPLOYPATH}explorer.html
     - /bin/rm -f ${DEPLOYPATH}empire/*.html
+    - /bin/rm -f ${DEPLOYPATH}generator.html

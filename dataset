@@ -162,8 +162,8 @@
   </div>
 </section>
 
-<script src="/shared-data.js"></script>
-<script src="/shared-nav.js"></script>
+<script src="/shared-data.js?v=2"></script>
+<script src="/shared-nav.js?v=2"></script>
 <script>
 // ── Download helpers ──────────────────────────────────────────────────────────
 function _downloadStatic(url, filename) {

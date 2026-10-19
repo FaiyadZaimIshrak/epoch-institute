@@ -127,7 +127,7 @@ function initNav(activePage) {
 
   const navHtml = `
 <nav class="site-nav" id="site-nav">
-  <a href="/index" class="nav-logo">
+  <a href="/" class="nav-logo">
     <span class="nav-logo-text">THE EPOCH INSTITUTE</span>
   </a>
   <div class="nav-links">
@@ -147,7 +147,7 @@ function initNav(activePage) {
       <div class="nav-group-menu" id="nav-community-menu" role="menu">
         <a href="/community" id="nav-community-link"${activeStyle('community')}>Community Hub</a>
         <a href="/community#submit">Submit Article</a>
-        <a href="/index#newsletter-section">Newsletter</a>
+        <a href="/#newsletter-section">Newsletter</a>
       </div>
     </div>
     <div class="nav-group-wrap" id="nav-about-wrap">
@@ -206,14 +206,14 @@ function initNav(activePage) {
         <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
         <a class="footer-link" href="/research-series" id="fl-series">Research Series</a>
         <a class="footer-link" href="/dataset" id="fl-dataset">Open Dataset</a>
-        <a class="footer-link" href="/epoch-methodology.pdf" target="_blank" rel="noopener">Methodology</a>
+        <a class="footer-link" href="/about#methodology">Methodology</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Community</span>
-        <a class="footer-link" href="/community" id="fl-blogs">Blogs</a>
-        <a class="footer-link" href="/community" id="fl-opinions">Opinions</a>
-        <a class="footer-link" href="/community" id="fl-submit">Submit Article</a>
-        <a class="footer-link" href="/community" id="fl-newsletter">Newsletter</a>
+        <a class="footer-link" href="/community#community-blogs" id="fl-blogs">Blogs</a>
+        <a class="footer-link" href="/community#community-opinions-display" id="fl-opinions">Opinions</a>
+        <a class="footer-link" href="/community#submit" id="fl-submit">Submit Article</a>
+        <a class="footer-link" href="/community#newsletter-band" id="fl-newsletter">Newsletter</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">About</span>
@@ -277,7 +277,7 @@ function initNav(activePage) {
     applyTheme(document.documentElement.getAttribute('data-theme') !== 'light');
     btn.addEventListener('click', () => {
       const html   = document.documentElement;
-      const isDark = html.getAttribute('data-theme') === 'dark';
+      const isDark = html.getAttribute('data-theme') !== 'light';
       html.setAttribute('data-theme', isDark ? 'light' : 'dark');
       localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark');
       applyTheme(!isDark);
@@ -287,8 +287,9 @@ function initNav(activePage) {
   // ── Page transitions ────────────────────────────────────────────────────────
   document.body.classList.add('page-entering');
   document.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     const a = e.target.closest('a[href]');
-    if (!a || a.target === '_blank') return;
+    if (!a || a.target === '_blank' || a.hasAttribute('download')) return;
     try {
       const dest = new URL(a.href, location.href);
       if (dest.origin !== location.origin) return;
@@ -392,7 +393,8 @@ function initNav(activePage) {
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ name, email, message, _subject: 'Contact — The Epoch Institute' })
     })
-    .then(() => {
+    .then(res => {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
       document.getElementById('contact-form').style.display = 'none';
       document.getElementById('ct-success').style.display = 'block';
     })
@@ -491,7 +493,8 @@ function initNav(activePage) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({ email: email, _subject: 'Newsletter signup — footer', source: 'footer' })
-      }).then(function() {
+      }).then(function(res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
         var msg = document.getElementById('footer-nl-msg');
         msg.textContent = 'Subscribed!';
         msg.style.display = 'block';
