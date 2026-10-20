@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=3">
+<link rel="stylesheet" href="/shared.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
 
   <div class="explorer-header">
     <p class="explorer-label">HISTORICAL RECORDS</p>
-    <h2 class="explorer-title">Empire Profile &amp; Summary</h2>
+    <h1 class="explorer-title">Empire Profiles</h1>
     <p class="explorer-description">Detailed chronicles of 94 civilisations across five millennia — select an empire to explore its founding, society, military, governance, global influence, and fall.</p>
   </div>
 
@@ -111,7 +111,7 @@
 
 <script src="/shared-data.js?v=2"></script>
 <script src="/empire-profiles.js?v=3"></script>
-<script src="/shared-nav.js?v=3"></script>
+<script src="/shared-nav.js?v=4"></script>
 <script src="/epoch-stats.js"></script>
 <script>
 // ── Era classifier ────────────────────────────────────────────────────────────
@@ -148,13 +148,12 @@ function buildProfileGallery() {
       '<div class="profile-thumb-grid">' +
         emps.map(function(emp) {
           var safeName = emp.name.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-          var safeJs   = emp.name.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-          return '<div class="empire-thumb" data-name="' + safeName + '" onclick="openEmpireDetail(\'' + safeJs + '\')">' +
+          return '<a class="empire-thumb" href="/empire/' + toSlug(emp.name) + '" data-name="' + safeName + '">' +
             '<img class="thumb-logo" src="logos/' + encodeURIComponent(emp.name) + '.png" alt="' + safeName + '" ' +
               'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
             '<div class="thumb-logo-fallback" style="display:none">🏛</div>' +
             '<span class="thumb-name">' + safeName + '</span>' +
-          '</div>';
+          '</a>';
         }).join('') +
       '</div>' +
     '</div>';
@@ -353,6 +352,13 @@ function buildProfileGallery() {
     if (_compareMode) { addToCompare(name); return; }
     _origOpenEmpireDetail(name);
   };
+  // Cards are links to the empire pages; in compare mode a click selects the empire instead.
+  document.getElementById('profile-gallery').addEventListener('click', function(e) {
+    var card = e.target.closest('.empire-thumb');
+    if (!card || !_compareMode) return;
+    e.preventDefault();
+    addToCompare(card.dataset.name.replace(/&amp;/g, '&').replace(/&quot;/g, '"'));
+  });
 })();
 
 // ── Init ──────────────────────────────────────────────────────────────────────

@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/dataset">
-<link rel="stylesheet" href="/shared.css?v=3">
+<link rel="stylesheet" href="/shared.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -84,7 +84,7 @@
   color: var(--text); line-height: 1.4;
 }
 .dataset-table tr:last-child td { border-bottom: none; }
-.dataset-table tr:hover td { background: rgba(201,168,76,0.04); }
+.dataset-table tr:hover td { background: rgba(var(--gold-rgb),0.04); }
 .dataset-cols-heading {
   font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--muted); margin: 0 0 12px;
@@ -112,7 +112,7 @@
 
 <section id="dataset" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
   <span class="hero-ornament"></span>
-  <h2 class="research-title">Open Dataset</h2>
+  <h1 class="research-title">Open Dataset</h1>
   <p class="research-subtitle">Empire Trajectory Data — Freely Available for Research</p>
   <p class="dataset-description">The Epoch Institute's empire trajectory dataset covers 94 civilisations across five millennia, from ancient Mesopotamia to the modern era. Each entry includes normalised power scores across six dimensions — territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach — plotted across each empire's full lifespan. The dataset is freely available for academic, educational, and research use under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
   <div class="dataset-btn-row">
@@ -163,7 +163,7 @@
 </section>
 
 <script src="/shared-data.js?v=2"></script>
-<script src="/shared-nav.js?v=3"></script>
+<script src="/shared-nav.js?v=4"></script>
 <script>
 // ── Download helpers ──────────────────────────────────────────────────────────
 function _downloadStatic(url, filename) {

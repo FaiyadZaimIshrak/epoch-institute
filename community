@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
-<link rel="stylesheet" href="/shared.css?v=3">
+<link rel="stylesheet" href="/shared.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
 .community-share-band {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; flex-wrap: wrap;
-  background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(var(--gold-rgb),0.06) 0%, transparent 100%);
   border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
   padding: 40px; margin: 40px 0 0; max-width: none;
 }
@@ -63,7 +63,7 @@
   animation: cardFadeIn 0.35s cubic-bezier(0.22,1,0.36,1) both;
 }
 @keyframes cardFadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
-.blog-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.04); }
+.blog-card:hover { border-color: var(--gold); background: rgba(var(--gold-rgb),0.04); }
 .blog-card-tag {
   font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--gold); opacity: 0.8;
@@ -144,7 +144,7 @@
   padding: 32px 24px; text-align: center; cursor: pointer;
   transition: border-color 0.2s, background 0.2s; margin-bottom: 16px;
 }
-.drop-zone.dragover { border-color: var(--gold); background: rgba(201,168,76,0.06); }
+.drop-zone.dragover { border-color: var(--gold); background: rgba(var(--gold-rgb),0.06); }
 .drop-zone-label {
   font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--muted);
@@ -213,7 +213,7 @@
 
   <div class="explorer-header" style="padding-top:100px;">
     <p class="explorer-label">COMMUNITY</p>
-    <h2 class="explorer-title">The Epoch Community</h2>
+    <h1 class="explorer-title">The Epoch Community</h1>
     <p class="explorer-description">A space for readers, researchers, and thinkers to read, write, and reflect on history and its implications.</p>
   </div>
 
@@ -394,7 +394,7 @@
 </div>
 
 <script src="/shared-data.js?v=2"></script>
-<script src="/shared-nav.js?v=3"></script>
+<script src="/shared-nav.js?v=4"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
 var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];

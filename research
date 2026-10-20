@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/research">
-<link rel="stylesheet" href="/shared.css?v=3">
+<link rel="stylesheet" href="/shared.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
 
 <section id="research">
   <span class="hero-ornament"></span>
-  <h2 class="research-title">Research at The Epoch Institute</h2>
+  <h1 class="research-title">Research at The Epoch Institute</h1>
   <p class="research-subtitle">Interactive tools and in-depth profiles for studying civilisational trajectories across time.</p>
   <div class="research-grid">
 
@@ -73,7 +73,7 @@
 </section>
 
 <script src="/shared-data.js?v=2"></script>
-<script src="/shared-nav.js?v=3"></script>
+<script src="/shared-nav.js?v=4"></script>
 <script>
 initNav('research');
 </script>

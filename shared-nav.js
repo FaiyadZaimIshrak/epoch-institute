@@ -117,16 +117,18 @@ function attachShareListeners(container, fallbackUrl) {
 // ── initNav(activePage) ───────────────────────────────────────────────────────
 function initNav(activePage) {
 
+  // The current page's links carry aria-current="page" (styled gold in shared.css).
   function activeStyle(page) {
-    return activePage === page ? ' style="color:var(--gold)"' : '';
+    return activePage === page ? ' aria-current="page"' : '';
   }
 
-  const researchActive = ['research','series','explorer','profiles','dataset'].includes(activePage) ? ' style="color:var(--gold)"' : '';
-  const communityActive = activePage === 'community' ? ' style="color:var(--gold)"' : '';
-  const aboutActive = ['about','contributors'].includes(activePage) ? ' style="color:var(--gold)"' : '';
+  const researchActive = ['research','series','explorer','profiles','dataset'].includes(activePage);
+  const communityActive = activePage === 'community';
+  const aboutActive = ['about','contributors'].includes(activePage);
 
   const navHtml = `
-<nav class="site-nav" id="site-nav">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" id="site-nav" aria-label="Main">
   <a href="/" class="nav-logo">
     <span class="nav-logo-text">THE EPOCH INSTITUTE</span>
   </a>
@@ -162,19 +164,25 @@ function initNav(activePage) {
   </div>
   <div class="nav-toggles">
     <button class="nav-toggle-btn" id="theme-toggle">&#x2600;</button>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">&#x2630;</button>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-dropdown">&#x2630;</button>
   </div>
-  <div id="nav-dropdown" class="nav-dropdown" role="menu">
-    <a href="/today-in-history" class="nav-dropdown-link" id="mob-today">Today in History</a>
-    <a href="/encyclopedia" class="nav-dropdown-link" id="mob-encyclopedia">Encyclopedia</a>
-    <a href="/explorer" class="nav-dropdown-link" id="mob-explorer">Empire Explorer</a>
-    <a href="/profiles" class="nav-dropdown-link" id="mob-profiles">Empire Profiles</a>
-    <a href="/research-series" class="nav-dropdown-link" id="mob-series">Research Series</a>
-    <a href="/research" class="nav-dropdown-link" id="mob-research">Research Hub</a>
-    <a href="/dataset" class="nav-dropdown-link" id="mob-dataset">Open Dataset</a>
-    <a href="/community" class="nav-dropdown-link" id="mob-community">Community</a>
-    <a href="/about" class="nav-dropdown-link" id="mob-about">The Institute</a>
-    <a href="/contributors" class="nav-dropdown-link" id="mob-contributors">Contributors</a>
+  <div id="nav-dropdown" class="nav-dropdown">
+    <a href="/today-in-history" class="nav-dropdown-link" id="mob-today"${activeStyle('today')}>Today in History</a>
+    <a href="/encyclopedia" class="nav-dropdown-link" id="mob-encyclopedia"${activeStyle('encyclopedia')}>Encyclopedia</a>
+    <span class="nav-dropdown-group">Research</span>
+    <a href="/explorer" class="nav-dropdown-link" id="mob-explorer"${activeStyle('explorer')}>Empire Explorer</a>
+    <a href="/profiles" class="nav-dropdown-link" id="mob-profiles"${activeStyle('profiles')}>Empire Profiles</a>
+    <a href="/research-series" class="nav-dropdown-link" id="mob-series"${activeStyle('series')}>Research Series</a>
+    <a href="/research" class="nav-dropdown-link" id="mob-research"${activeStyle('research')}>Research Hub</a>
+    <a href="/dataset" class="nav-dropdown-link" id="mob-dataset"${activeStyle('dataset')}>Open Dataset</a>
+    <span class="nav-dropdown-group">Community</span>
+    <a href="/community" class="nav-dropdown-link" id="mob-community"${activeStyle('community')}>Community Hub</a>
+    <a href="/community#submit" class="nav-dropdown-link">Submit Article</a>
+    <a href="/#newsletter-section" class="nav-dropdown-link">Newsletter</a>
+    <span class="nav-dropdown-group">About</span>
+    <a href="/about" class="nav-dropdown-link" id="mob-about"${activeStyle('about')}>The Institute</a>
+    <a href="/contributors" class="nav-dropdown-link" id="mob-contributors"${activeStyle('contributors')}>Contributors</a>
+    <button type="button" class="nav-dropdown-link" id="mob-contact">Contact</button>
   </div>
 </nav>`;
 
@@ -323,12 +331,34 @@ function initNav(activePage) {
       btn.textContent = '☰';
       btn.setAttribute('aria-expanded', 'false');
     }
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
       const open = drop.classList.toggle('open');
       btn.textContent = open ? '✕' : '☰';
       btn.setAttribute('aria-expanded', String(open));
+      if (open) { const first = drop.querySelector('.nav-dropdown-link'); if (first) first.focus(); }
     });
     drop.querySelectorAll('.nav-dropdown-link').forEach(link => link.addEventListener('click', closeMenu));
+    document.getElementById('mob-contact').addEventListener('click', () => openContactModal());
+    document.addEventListener('click', e => {
+      if (drop.classList.contains('open') && !drop.contains(e.target)) closeMenu();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && drop.classList.contains('open')) { closeMenu(); btn.focus(); }
+    });
+  })();
+
+  // ── Skip link target: the page's <main>, or the first content element after the nav ──
+  (function() {
+    let main = document.getElementById('main') || document.querySelector('main');
+    if (!main) {
+      main = document.getElementById('site-nav').nextElementSibling;
+      while (main && /^(SCRIPT|STYLE|NOSCRIPT)$/.test(main.tagName)) main = main.nextElementSibling;
+    }
+    if (!main) return;
+    if (!main.id) main.id = 'main';
+    else document.querySelector('.skip-link').setAttribute('href', '#' + main.id);
+    if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
   })();
 
   // ── Nav scroll ──────────────────────────────────────────────────────────────

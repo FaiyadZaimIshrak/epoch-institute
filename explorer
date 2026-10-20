@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/explorer">
-<link rel="stylesheet" href="/shared.css?v=3">
+<link rel="stylesheet" href="/shared.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
 <section id="explorer" style="display:block">
   <div class="explorer-header">
     <p class="explorer-label" data-i18n="exp_label">Interactive Explorer</p>
-    <h2 class="explorer-title" data-i18n="exp_title">The Rise &amp; Fall of Empires</h2>
+    <h1 class="explorer-title" data-i18n="exp_title">The Rise &amp; Fall of Empires</h1>
     <p class="explorer-description" data-i18n="exp_desc">Ninety-four civilisations. Five millennia. Each trajectory scaled to its own peak — so you can compare not absolute size, but the shape of a civilisation's story. Use the controls below to filter by region, era, or search for a specific empire.</p>
     <p class="explorer-onboarding">Navigate five millennia of human civilisation. Each line represents an empire — use the region tabs and era selector to filter, or search by name. Press ▶ to animate the timeline.</p>
     <p class="explorer-method-note">Power scores are normalised indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. Each trajectory is drawn from peer-reviewed sources cited in the Empire Profiles.</p>
@@ -171,7 +171,7 @@
 
 <script src="/shared-data.js?v=2"></script>
 <script src="/point-descs.js?v=2"></script>
-<script src="/shared-nav.js?v=3"></script>
+<script src="/shared-nav.js?v=4"></script>
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');

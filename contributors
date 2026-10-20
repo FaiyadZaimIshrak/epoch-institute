@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/contributors">
-<link rel="stylesheet" href="/shared.css?v=3">
+<link rel="stylesheet" href="/shared.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@
   color: var(--muted); text-align: center; padding: 32px 0; opacity: 0.6;
 }
 .join-band {
-  background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(var(--gold-rgb),0.06) 0%, transparent 100%);
   border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
   padding: 60px 40px; text-align: center; margin: 0 0 48px;
 }
@@ -97,7 +97,7 @@
 
 <section id="contributors">
   <span class="hero-ornament"></span>
-  <h2 class="research-title">Our Contributors</h2>
+  <h1 class="research-title">Our Contributors</h1>
   <p class="research-subtitle">Researchers, historians, and writers shaping the study of civilisational history.</p>
 
   <p class="contributors-loading" id="contributors-loading">Loading contributors…</p>
@@ -156,7 +156,7 @@
 </div>
 
 <script src="/shared-data.js?v=2"></script>
-<script src="/shared-nav.js?v=3"></script>
+<script src="/shared-nav.js?v=4"></script>
 <script>
 // ── Contributors loader ───────────────────────────────────────────────────────
 (function() {
