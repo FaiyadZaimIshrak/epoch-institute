@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/encyclopedia">
 <link rel="canonical" href="https://the-epoch-institute.org/encyclopedia">
-<link rel="stylesheet" href="/shared.css?v=9">
+<link rel="stylesheet" href="/shared.css?v=10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -64,6 +64,19 @@
 .enc-mentions a { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em; color: var(--gold); text-decoration: none; border: 0.5px solid var(--border); padding: 6px 10px; border-radius: 2px; }
 .enc-mentions a:hover { border-color: var(--gold); }
 .enc-mentions .secs { color: var(--muted); font-family: var(--font-text); letter-spacing: 0; text-transform: none; margin-left: 4px; }
+.enc-item.has-img a { grid-template-columns: 56px minmax(0,1fr) auto; column-gap: 14px; }
+.enc-item.has-img .enc-snip { grid-column: 2 / -1; }
+.enc-thumb { grid-row: 1 / span 2; width: 56px; height: 56px; object-fit: cover; border-radius: 2px; background: var(--surface); }
+.enc-count-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.enc-random, .enc-random-link { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 2px; padding: 5px 12px; cursor: pointer; text-decoration: none; }
+.enc-random:hover, .enc-random-link:hover { border-color: var(--gold); }
+.enc-seealso { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+.enc-seealso a { display: flex; align-items: center; gap: 10px; padding: 8px; border: 1px solid var(--border); border-radius: 2px; text-decoration: none; color: var(--text); }
+.enc-seealso a:hover { border-color: var(--gold); }
+.enc-seealso img, .enc-seealso .ph { width: 44px; height: 44px; flex: 0 0 44px; object-fit: cover; border-radius: 2px; background: var(--surface); }
+.enc-seealso .nm { display: block; font-size: 17px; line-height: 1.25; }
+.enc-seealso .tp { display: block; font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.enc-article-foot { margin: 0; }
 @media (max-width: 720px) {
   .enc-body { grid-template-columns: 1fr; }
   .enc-fig { width: 100%; max-width: 360px; order: -1; }
@@ -87,7 +100,7 @@
         <input class="enc-search" id="enc-q" type="search" placeholder="Search the encyclopedia…" aria-label="Search the encyclopedia" autocomplete="off">
         <div class="enc-row" id="enc-types" role="group" aria-label="Filter by type"></div>
         <nav class="enc-az" id="enc-az" aria-label="Jump to letter"></nav>
-        <span class="enc-count" id="enc-count"></span>
+        <div class="enc-count-row"><span class="enc-count" id="enc-count"></span><button type="button" class="enc-random" id="enc-random">Random entry ↻</button></div>
       </div>
       <div id="enc-list"></div>
     </div>
@@ -97,7 +110,7 @@
 
 <script src="/shared-data.js?v=2"></script>
 <script src="/shared-nav.js?v=5"></script>
-<script src="/encyclopedia-data.js?v=3"></script>
+<script src="/encyclopedia-data.js?v=4"></script>
 <script src="/encyclopedia-links.js?v=2"></script>
 <script>
 initNav('encyclopedia');
@@ -162,7 +175,8 @@ initNav('encyclopedia');
     }).join('');
     document.getElementById('enc-list').innerHTML = rows.length ? order.map(function (L) {
       return '<section class="enc-letter"><h2 id="enc-l-' + (L === '#' ? 'num' : L) + '">' + L + '</h2><ul class="enc-list">' + groups[L].map(function (e) {
-        return '<li class="enc-item"><a href="#' + e.slug + '"><span class="enc-name">' + esc(e.name) + '</span><span class="enc-type">' + esc(SING[e.type] || e.type) + '</span>' + (e.desc ? '<span class="enc-snip">' + esc(e.desc) + '</span>' : '') + '</a></li>';
+        return '<li class="enc-item' + (e.img ? ' has-img' : '') + '"><a href="#' + e.slug + '">' + (e.img ? '<img class="enc-thumb" src="' + esc(e.img) + '" alt="" loading="lazy" width="56" height="56">' : '') +
+          '<span class="enc-name">' + esc(e.name) + '</span><span class="enc-type">' + esc(SING[e.type] || e.type) + '</span>' + (e.desc ? '<span class="enc-snip">' + esc(e.desc) + '</span>' : '') + '</a></li>';
       }).join('') + '</ul></section>';
     }).join('') : '<p class="enc-empty">No entries match. Clear the search or choose “All”.</p>';
   }
@@ -170,6 +184,27 @@ initNav('encyclopedia');
     var a = ev.target.closest('a[data-jump]'); if (!a) return; ev.preventDefault();
     var t = document.getElementById(a.getAttribute('data-jump')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  // ── random entry (entries with a description) ──
+  var withDesc = data.filter(function (e) { return e.desc; });
+  function randomSlug() { return withDesc[Math.floor(Math.random() * withDesc.length)].slug; }
+  document.getElementById('enc-random').addEventListener('click', function () { location.hash = randomSlug(); });
+
+  // ── see also: entries mentioned in the same empire sections, most shared sections first ──
+  var byEmpire = {};
+  data.forEach(function (e) { (e.empires || []).forEach(function (m) { (byEmpire[m.name] = byEmpire[m.name] || []).push(e); }); });
+  function seeAlso(e) {
+    var score = {};
+    (e.empires || []).forEach(function (m) {
+      (byEmpire[m.name] || []).forEach(function (o) {
+        if (o === e) return;
+        var om = o.empires.filter(function (x) { return x.name === m.name; })[0];
+        var shared = om.sections.filter(function (s) { return m.sections.indexOf(s) !== -1; }).length;
+        score[o.slug] = (score[o.slug] || 0) + shared * 3 + 1 + (o.img ? 0.5 : 0);
+      });
+    });
+    return Object.keys(score).sort(function (a, b) { return score[b] - score[a]; }).slice(0, 8).map(function (s) { return bySlug[s]; });
+  }
 
   // ── article view ──
   var SEC = { foundation:'Foundation', socioeconomy:'Socioeconomy', military:'Military', governance:'Governance', impact:'Impact', decline:'Decline', summary:'Summary' };
@@ -192,7 +227,15 @@ initNav('encyclopedia');
       '<div><p class="enc-kicker">' + esc(SING[e.type] || e.type) + (e.subtype && e.type !== 'polity' && e.type !== 'factor' ? ' · ' + esc(e.subtype) : '') + '</p>' +
       '<h1 class="enc-title">' + esc(e.name) + '</h1>' + (meta.length ? '<p class="enc-meta">' + meta.join(' · ') + '</p>' : '') + '</div>' +
       '<div class="enc-body"><p class="enc-desc">' + (e.desc ? linkify(e.desc, e.slug) : 'Description coming soon.') + '</p>' + fig + '</div>' +
-      (e.empires.length ? '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' empire profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>' : '');
+      (e.empires.length ? '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' empire profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>' : '') +
+      (function () {
+        var rel = seeAlso(e); if (!rel.length) return '';
+        return '<div><p class="enc-section-title">See also</p><ul class="enc-seealso">' + rel.map(function (o) {
+          return '<li><a href="#' + o.slug + '">' + (o.img ? '<img src="' + esc(o.img) + '" alt="" loading="lazy" width="44" height="44">' : '<span class="ph"></span>') +
+            '<span><span class="nm">' + esc(o.name) + '</span><span class="tp">' + esc(SING[o.type] || o.type) + '</span></span></a></li>';
+        }).join('') + '</ul></div>';
+      })() +
+      '<p class="enc-article-foot"><a class="enc-random-link" href="#' + randomSlug() + '">Random entry ↻</a></p>';
     document.title = e.name + ' — Encyclopedia — The Epoch Institute';
   }
 

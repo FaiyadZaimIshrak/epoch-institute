@@ -17,23 +17,38 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=9">
+<link rel="stylesheet" href="/shared.css?v=10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* ── Profile search ── */
-.profile-search-wrap {
-  display: flex; align-items: center; gap: 8px;
-  padding: 0 40px 24px; max-width: 540px; margin: 0;
+/* ── Profile search, filters, sort ── */
+.profile-controls {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px;
+  padding: 24px 40px 20px;
 }
+.profile-search-wrap {
+  display: flex; flex-direction: row; align-items: center; gap: 8px; flex: 1 1 260px; max-width: 420px;
+  padding: 0; position: relative;
+}
+.profile-search-wrap .profile-search-input { padding-right: 40px; }
+.profile-filter { display: flex; flex-direction: column; gap: 4px; }
+.profile-filter span { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.profile-filter select {
+  font-family: var(--font-ui); font-size: 15px; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 3px; padding: 9px 10px; min-width: 150px; cursor: pointer;
+}
+.profile-filter select:focus { border-color: var(--gold); }
+.profile-count { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 0 0 10px auto; }
+.profile-reset { font: inherit; color: var(--gold); background: none; border: 0; text-decoration: underline; cursor: pointer; }
 .profile-search-input {
-  flex: 1; background: var(--surface); border: 0.5px solid var(--border);
-  border-radius: 3px; padding: 9px 14px;
-  font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em;
+  flex: 1; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 3px; padding: 10px 14px;
+  font-family: var(--font-ui); font-size: 15px;
   color: var(--text); outline: none; transition: border-color 0.2s;
 }
-.profile-search-input::placeholder { color: var(--muted); opacity: 0.5; }
+.profile-search-input::placeholder { color: var(--muted); }
+.profile-search-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
 .profile-search-input:focus { border-color: var(--gold); }
 .profile-search-clear {
   background: none; border: none; cursor: pointer;
@@ -44,13 +59,31 @@
 .profile-search-empty {
   padding: 0 40px 32px;
   font-family: var(--font-text); font-size: 17px;
-  color: var(--muted); opacity: 0.65;
+  color: var(--muted);
 }
 @media (max-width: 600px) {
-  .profile-search-wrap { padding: 0 16px 20px; }
+  .profile-controls { padding: 20px 16px 16px; }
+  .profile-search-wrap { max-width: none; flex-basis: 100%; }
+  .profile-filter { flex: 1 1 140px; }
+  .profile-filter select { min-width: 0; width: 100%; }
+  .profile-count { margin: 0; flex-basis: 100%; }
   .profile-search-empty { padding: 0 16px 24px; }
   .profile-search-input { font-size: 16px; }
 }
+
+/* ── Empire cards: emblem left, name / dates / region / one-line summary right ── */
+#profiles .profile-thumb-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+#profiles .empire-thumb {
+  flex-direction: row; align-items: flex-start; text-align: left; gap: 14px; padding: 16px;
+  border-radius: 3px; background: var(--surface);
+}
+#profiles .thumb-logo, #profiles .thumb-logo-fallback { width: 56px; height: 56px; flex: 0 0 56px; }
+.thumb-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+#profiles .thumb-name { font-family: var(--font-display); font-size: 16px; letter-spacing: 0.02em; color: var(--gold-light); line-height: 1.3; }
+.thumb-dates { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.thumb-region { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.thumb-info { font-family: var(--font-text); font-size: 15px; line-height: 1.5; color: var(--text); margin-top: 4px; }
+@media (max-width: 600px) { #profiles .profile-thumb-grid { grid-template-columns: 1fr; gap: 10px; } }
 
 /* ── Profiles page layout ── */
 #profiles { min-height: 100vh; }
@@ -75,13 +108,21 @@
     <p class="explorer-description">Detailed chronicles of 94 civilisations across five millennia — select an empire to explore its founding, society, military, governance, global influence, and fall.</p>
   </div>
 
-  <!-- Profile search -->
-  <div class="profile-search-wrap" id="profile-search-wrap">
-    <input type="text" class="profile-search-input" id="profile-search" placeholder="Search empires…" autocomplete="off">
-    <button class="profile-search-clear" id="profile-search-clear" aria-label="Clear search">✕</button>
+  <!-- Search, filters, sort -->
+  <div class="profile-controls" role="search">
+    <div class="profile-search-wrap" id="profile-search-wrap">
+      <input type="search" class="profile-search-input" id="profile-search" placeholder="Search empires…" autocomplete="off" aria-label="Search empires">
+      <button class="profile-search-clear" id="profile-search-clear" aria-label="Clear search">✕</button>
+    </div>
+    <label class="profile-filter"><span>Era</span><select id="filter-era"><option value="">All eras</option></select></label>
+    <label class="profile-filter"><span>Region</span><select id="filter-region"><option value="">All regions</option></select></label>
+    <label class="profile-filter"><span>Sort</span><select id="filter-sort">
+      <option value="chrono">By era</option><option value="az">A–Z</option><option value="duration">Longest-lasting</option><option value="start">Oldest first</option>
+    </select></label>
+    <p class="profile-count" id="profile-count" aria-live="polite"></p>
   </div>
   <div class="profile-search-empty" id="profile-search-empty" style="display:none;">
-    No empires match your search.
+    No empires match these filters. <button type="button" class="profile-reset" id="profile-reset">Clear filters</button>
   </div>
 
   <!-- Compare area -->
@@ -130,72 +171,71 @@ function openEmpireDetail(name) {
   window.location.href = '/empire/' + toSlug(name);
 }
 
-// ── Build era-grouped gallery ─────────────────────────────────────────────────
-function buildProfileGallery() {
-  var gallery = document.getElementById('profile-gallery');
-  if (gallery.dataset.built) return;
-  gallery.dataset.built = '1';
-
-  var groups = {};
-  ERA_ORDER.forEach(function(e) { groups[e] = []; });
-  EMPIRES.forEach(function(emp) { groups[getEmpireEra(emp)].push(emp); });
-
-  gallery.innerHTML = ERA_ORDER.map(function(eraKey) {
-    var emps = groups[eraKey];
-    if (!emps.length) return '';
-    return '<div class="profile-era-group" data-era="' + eraKey + '">' +
-      '<p class="profile-era-title">' + ERA_LABELS[eraKey] + '</p>' +
-      '<div class="profile-thumb-grid">' +
-        emps.map(function(emp) {
-          var safeName = emp.name.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-          return '<a class="empire-thumb" href="/empire/' + toSlug(emp.name) + '" data-name="' + safeName + '">' +
-            '<img class="thumb-logo" src="logos/' + encodeURIComponent(emp.name) + '.png" alt="' + safeName + '" ' +
-              'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-            '<div class="thumb-logo-fallback" style="display:none">🏛</div>' +
-            '<span class="thumb-name">' + safeName + '</span>' +
-          '</a>';
-        }).join('') +
-      '</div>' +
-    '</div>';
-  }).join('');
+// ── Gallery: search, era/region filters (?era= / ?region=), sort ──────────────
+var PF = { q: '', era: '', region: '', sort: 'chrono' };
+function pfYears(e) { return [e.points[0][0], e.points[e.points.length - 1][0]]; }
+function pfYear(y) { y = Math.round(y); return y < 0 ? Math.abs(y) + ' BCE' : y + ' CE'; }
+function pfCard(emp) {
+  var safeName = escHtml(emp.name), y = pfYears(emp);
+  var info = (EMPIRE_INFO[emp.name] || '').split(/(?<=\.)\s/)[0];
+  if (info.length > 120) info = info.slice(0, info.lastIndexOf(' ', 117)) + '…';
+  return '<a class="empire-thumb" href="/empire/' + toSlug(emp.name) + '" data-name="' + safeName + '">' +
+    '<img class="thumb-logo" src="logos/' + encodeURIComponent(emp.name) + '.png" alt="" loading="lazy" ' +
+      'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+    '<div class="thumb-logo-fallback" style="display:none">🏛</div>' +
+    '<span class="thumb-text"><span class="thumb-name">' + safeName + '</span>' +
+    '<span class="thumb-dates">' + pfYear(y[0]) + ' – ' + pfYear(y[1]) + '</span>' +
+    '<span class="thumb-region">' + escHtml(emp.region) + '</span>' +
+    (info ? '<span class="thumb-info">' + escHtml(info) + '</span>' : '') + '</span>' +
+  '</a>';
 }
-
-// ── Profile search IIFE ───────────────────────────────────────────────────────
-(function() {
-  var searchInput = document.getElementById('profile-search');
-  var clearBtn    = document.getElementById('profile-search-clear');
-  var emptyState  = document.getElementById('profile-search-empty');
-
-  function filterGallery(query) {
-    var q = query.toLowerCase().trim();
-    var gallery = document.getElementById('profile-gallery');
-    var thumbs  = gallery.querySelectorAll('.empire-thumb');
-    var hasVisible = false;
-
-    thumbs.forEach(function(thumb) {
-      var name = (thumb.dataset.name || '').toLowerCase();
-      var visible = !q || name.indexOf(q) !== -1;
-      thumb.style.display = visible ? '' : 'none';
-      if (visible) hasVisible = true;
+function buildProfileGallery() {
+  var gallery = document.getElementById('profile-gallery'), q = PF.q.toLowerCase().trim();
+  var list = EMPIRES.filter(function (e) {
+    return (!q || e.name.toLowerCase().indexOf(q) !== -1) && (!PF.era || getEmpireEra(e) === PF.era) && (!PF.region || e.region === PF.region);
+  });
+  var html;
+  if (PF.sort === 'chrono') {
+    html = ERA_ORDER.map(function (eraKey) {
+      var emps = list.filter(function (e) { return getEmpireEra(e) === eraKey; });
+      if (!emps.length) return '';
+      return '<div class="profile-era-group" data-era="' + eraKey + '"><h2 class="profile-era-title">' + ERA_LABELS[eraKey] + '</h2>' +
+        '<div class="profile-thumb-grid">' + emps.map(pfCard).join('') + '</div></div>';
+    }).join('');
+  } else {
+    var sorted = list.slice().sort(function (a, b) {
+      if (PF.sort === 'az') return a.name.localeCompare(b.name);
+      if (PF.sort === 'start') return pfYears(a)[0] - pfYears(b)[0];
+      var da = pfYears(a)[1] - pfYears(a)[0], db = pfYears(b)[1] - pfYears(b)[0]; return db - da;
     });
-
-    // Show/hide era group headers based on whether any empires are visible within
-    gallery.querySelectorAll('.profile-era-group').forEach(function(group) {
-      var anyVisible = Array.from(group.querySelectorAll('.empire-thumb')).some(function(t) {
-        return t.style.display !== 'none';
-      });
-      group.style.display = anyVisible ? '' : 'none';
-    });
-
-    emptyState.style.display = (!hasVisible && q) ? 'block' : 'none';
-    clearBtn.style.display = q ? 'block' : 'none';
+    html = sorted.length ? '<div class="profile-era-group"><div class="profile-thumb-grid">' + sorted.map(pfCard).join('') + '</div></div>' : '';
   }
-
-  searchInput.addEventListener('input', function() { filterGallery(this.value); });
-  clearBtn.addEventListener('click', function() {
-    searchInput.value = '';
-    filterGallery('');
-    searchInput.focus();
+  gallery.innerHTML = html;
+  document.getElementById('profile-count').textContent = list.length === EMPIRES.length ? EMPIRES.length + ' empires' : list.length + ' of ' + EMPIRES.length + ' empires';
+  document.getElementById('profile-search-empty').style.display = list.length ? 'none' : 'block';
+  document.getElementById('profile-search-clear').style.display = PF.q ? 'block' : 'none';
+  // keep the URL shareable: /profiles?era=medieval&region=Europe
+  var params = new URLSearchParams();
+  if (PF.era) params.set('era', PF.era); if (PF.region) params.set('region', PF.region); if (PF.sort !== 'chrono') params.set('sort', PF.sort);
+  history.replaceState(null, '', location.pathname + (params.toString() ? '?' + params : '') + location.hash);
+}
+(function () {
+  var eraSel = document.getElementById('filter-era'), regSel = document.getElementById('filter-region'), sortSel = document.getElementById('filter-sort');
+  var search = document.getElementById('profile-search');
+  ERA_ORDER.forEach(function (k) { eraSel.insertAdjacentHTML('beforeend', '<option value="' + k + '">' + escHtml(ERA_LABELS[k]) + '</option>'); });
+  REGIONS.forEach(function (r) { regSel.insertAdjacentHTML('beforeend', '<option value="' + escHtml(r) + '">' + escHtml(r) + '</option>'); });
+  var params = new URLSearchParams(location.search);
+  if (ERA_ORDER.indexOf(params.get('era')) !== -1) PF.era = params.get('era');
+  if (REGIONS.indexOf(params.get('region')) !== -1) PF.region = params.get('region');
+  if (['az', 'duration', 'start'].indexOf(params.get('sort')) !== -1) PF.sort = params.get('sort');
+  eraSel.value = PF.era; regSel.value = PF.region; sortSel.value = PF.sort;
+  eraSel.addEventListener('change', function () { PF.era = this.value; buildProfileGallery(); });
+  regSel.addEventListener('change', function () { PF.region = this.value; buildProfileGallery(); });
+  sortSel.addEventListener('change', function () { PF.sort = this.value; buildProfileGallery(); });
+  search.addEventListener('input', function () { PF.q = this.value; buildProfileGallery(); });
+  document.getElementById('profile-search-clear').addEventListener('click', function () { search.value = ''; PF.q = ''; buildProfileGallery(); search.focus(); });
+  document.getElementById('profile-reset').addEventListener('click', function () {
+    search.value = ''; PF.q = ''; PF.era = ''; PF.region = ''; eraSel.value = ''; regSel.value = ''; buildProfileGallery();
   });
 })();
 
