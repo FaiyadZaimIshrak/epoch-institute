@@ -45,6 +45,9 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 ## Empire pages
 - `empire-section-images.js` — SECTION_IMAGES: one picture per profile section (an encyclopedia entry linked in
   that section, with its image and credit). Loaded only by generator.html; rendered as `.profile-section-fig`.
+- `empire-facts.js` — EMPIRE_FACTS: capital, founder, predecessor, successor per empire (key-facts box).
+  Loaded only by generator.html. The template also builds the table of contents, reading time and
+  related/earlier/later empires from EMPIRES (same region, overlapping years).
 - `profile-changes.md` — log of the Oct 2026 fact-check of all 94 profiles (corrections per empire). Not deployed.
 - Editing profile text can break encyclopedia matching: entries are found by their exact name or aliases, so keep
   full names (e.g. "the Battle of Mohács", not "at Mohács") or the entry loses its link.

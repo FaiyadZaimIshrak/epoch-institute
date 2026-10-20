@@ -42,6 +42,7 @@
 <script src="empire-profiles.js"></script>
 <script src="encyclopedia-links.js"></script>
 <script src="empire-section-images.js"></script>
+<script src="empire-facts.js"></script>
 <script>
 // ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
 // Wikipedia convention: link the first mention of each entry per section, never inside tags,
@@ -115,6 +116,71 @@ function formatYear(y) {
   return yr < 0 ? Math.abs(yr) + ' BCE' : yr + ' CE';
 }
 
+// ── Key facts, reading time, table of contents, related empires ──────────────
+var EMPIRE_ALIAS = { 'Neo-Babylonian Empire': 'Chaldean Empire', 'Zand dynasty': 'Zand Empire', 'Mughal dynasty': 'Mughal Empire',
+  'Safavid dynasty': 'Safavid Empire', 'Qing dynasty': 'Qing Empire', 'Ming dynasty': 'Ming Empire', 'Yuan Dynasty': 'Yuan Dynasty',
+  'Sasanian dynasty': 'Sasanian Empire', 'Parthian dynasty': 'Parthian Empire', 'Seljuk dynasty': 'Seljuk Empire',
+  'Byzantine Empire (Eastern Roman Empire)': 'Byzantine Empire', 'Western Roman Empire': 'Roman Empire' };
+function empireByName(n) {
+  n = EMPIRE_ALIAS[n] || n;
+  for (var i = 0; i < EMPIRES.length; i++) if (EMPIRES[i].name === n) return EMPIRES[i];
+  return null;
+}
+function yearsOf(e) { return [e.points[0][0], e.points[e.points.length - 1][0]]; }
+// "A, B" -> each part linked to its empire page if it is one of the 94, else encyclopedia links via linkify
+function linkStates(value, selfName) {
+  return value.split(/,\s+/).map(function (part) {
+    var e = empireByName(part);
+    if (e && e.name !== selfName) return '<a class="enc-link" href="/empire/' + toSlug(e.name) + '">' + esc(part) + '</a>';
+    return linkify(esc(part), selfName);
+  }).join(', ');
+}
+function factRows(name) {
+  var f = (typeof EMPIRE_FACTS !== 'undefined' && EMPIRE_FACTS[name]) || {}, rows = '';
+  [['capital', 'Capital', false], ['founder', 'Founder', false], ['predecessor', 'Preceded by', true], ['successor', 'Succeeded by', true]].forEach(function (r) {
+    if (!f[r[0]]) return;
+    var val = r[2] ? linkStates(f[r[0]], name) : linkify(esc(f[r[0]]), name);
+    rows += '          <div class="info-stat"><span class="info-stat-label">' + r[1] + '</span><span class="info-stat-val">' + val + '</span></div>\n';
+  });
+  return rows;
+}
+function readingMinutes(profile) {
+  if (!profile) return 0;
+  var text = ['foundation','socioeconomy','military','governance','impact','decline','summary'].map(function (k) { return profile[k] || ''; }).join(' ');
+  var words = text.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 230));
+}
+function tocHtml(sectionKeys, profile) {
+  if (!profile) return '';
+  var items = [['empire-stats-panel', 'Historical analysis']].concat(sectionKeys.filter(function (p) { return profile[p[0]]; }).map(function (p) { return [p[0], p[1]]; }));
+  if (profile.summary) items.push(['summary', 'Summary']);
+  if (Array.isArray(profile.references) && profile.references.length) items.push(['detail-references', 'References']);
+  return '<nav class="empire-toc" aria-label="On this page">\n      <p class="empire-toc-title">On this page</p>\n      <ul>' +
+    items.map(function (it) { return '<li><a href="#' + it[0] + '">' + it[1] + '</a></li>'; }).join('') + '</ul>\n    </nav>';
+}
+function empireCard(e, label) {
+  var y = yearsOf(e);
+  return '<a class="related-card" href="/empire/' + toSlug(e.name) + '">' +
+    (label ? '<span class="related-card-label">' + label + '</span>' : '') +
+    '<img src="/logos/' + encodeURIComponent(e.name) + '.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility=\'hidden\'">' +
+    '<span class="related-card-name">' + esc(e.name) + '</span>' +
+    '<span class="related-card-dates">' + formatYear(y[0]) + ' – ' + formatYear(y[1]) + '</span></a>';
+}
+function relatedHtml(emp) {
+  var y = yearsOf(emp);
+  var same = EMPIRES.filter(function (e) { return e.name !== emp.name && e.region === emp.region; }).map(function (e) {
+    var z = yearsOf(e), overlap = Math.min(y[1], z[1]) - Math.max(y[0], z[0]);
+    return { e: e, score: overlap > 0 ? 100000 + overlap : -Math.abs(overlap) };   // overlapping first, then nearest in time
+  }).sort(function (a, b) { return b.score - a.score; }).slice(0, 4).map(function (x) { return x.e; });
+  var chrono = EMPIRES.slice().sort(function (a, b) { return yearsOf(a)[0] - yearsOf(b)[0] || a.name.localeCompare(b.name); });
+  var i = chrono.indexOf(emp), prev = chrono[i - 1], next = chrono[i + 1];
+  return '<section class="related-empires" aria-labelledby="related-title">\n' +
+    '      <p class="profile-references-title" id="related-title">Related empires</p>\n' +
+    '      <div class="related-grid">' + same.map(function (e) { return empireCard(e); }).join('') + '</div>\n' +
+    '      <div class="related-prevnext">' + (prev ? empireCard(prev, '← Earlier') : '<span></span>') + (next ? empireCard(next, 'Later →') : '') + '</div>\n' +
+    '    </section>';
+}
+
 // One picture per profile section (empire-section-images.js), linked to its encyclopedia entry, with credit.
 function sectionFigure(empireName, key) {
   var f = typeof SECTION_IMAGES !== 'undefined' && SECTION_IMAGES[empireName] && SECTION_IMAGES[empireName][key];
@@ -156,12 +222,12 @@ function buildPage(emp) {
     sectionsHtml = sectionKeys.map(function(pair) {
       var key = pair[0], label = pair[1];
       var body = profile[key] ? linkify(profile[key], name) : '<em>Description coming soon.</em>';
-      return '<div class="profile-section-block">\n        <p class="profile-section-title">'+label+'</p>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>\n      </div>';
+      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>\n      </div>';
     }).join('\n      ');
   }
 
   var summaryHtml = (profile && profile.summary)
-    ? '<p class="profile-summary"><em>'+linkify(esc(profile.summary), name)+'</em></p>'
+    ? '<p class="profile-summary" id="summary"><em>'+linkify(esc(profile.summary), name)+'</em></p>'
     : (info ? '<p class="profile-summary">'+linkify(esc(info), name)+'</p>' : '');
 
   var referencesHtml = '';
@@ -191,7 +257,7 @@ function buildPage(emp) {
 '<meta property="og:type" content="article">\n' +
 '<meta property="og:url" content="'+canonicalUrl+'">\n' +
 '<link rel="canonical" href="'+canonicalUrl+'">\n' +
-'<link rel="stylesheet" href="/shared.css?v=5">\n' +
+'<link rel="stylesheet" href="/shared.css?v=7">\n' +
 '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
 '<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">\n' +
@@ -223,14 +289,18 @@ function buildPage(emp) {
 '          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">'+peakStr+'</span></div>\n' +
 '          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">'+duration+' yrs</span></div>\n' +
 '          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">'+period+'</span></div>\n' +
+factRows(name) +
 '        </div>\n' +
+(profile ? '        <p class="empire-meta">' + readingMinutes(profile) + ' min read · Last reviewed October 2026</p>\n' : '') +
 '      </div>\n' +
 '    </div>\n\n' +
+'    ' + tocHtml(sectionKeys, profile) + '\n\n' +
 '    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' +
 noProfileNote + '\n' +
 (sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
 (summaryHtml ? '\n    ' + summaryHtml + '\n' : '') +
 (referencesHtml ? '\n    ' + referencesHtml + '\n' : '') +
+'\n    ' + relatedHtml(emp) + '\n' +
 '\n' +
 '    <div class="detail-cite-row" id="detail-cite-row">\n' +
 '      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>\n' +
@@ -263,6 +333,7 @@ noProfileNote + '\n' +
 'document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring '+name.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+' on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/'+slug+' #history #empires #EpochInstitute"),"_blank");});\n' +
 'document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/'+slug+'"),"_blank");});\n' +
 'initNav("profiles");\n' +
+'(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();\n' +
 '\x3C/script>\n\n\x3C/body>\n\x3C/html>';
 }
 

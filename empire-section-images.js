@@ -391,7 +391,7 @@ var SECTION_IMAGES = {
     decline:{slug:"demak-sultanate",name:"Demak Sultanate",img:"/images/encyclopedia/demak-sultanate.jpg",artist:"Mhatopzz",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:MUS_Koin_Sultan_Pangeran_Raden_Fatah.png"}
   },
   "Mali Empire": {
-    foundation:{slug:"sumanguru-kante",name:"Sumanguru Kanté",img:"/images/encyclopedia/sumanguru-kante.jpg",artist:"T L Miles (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ghana_successor_map_1200.png"},
+    foundation:{slug:"ghana-empire",name:"Ghana Empire",img:"/images/encyclopedia/ghana-empire.jpg",artist:"Luxo",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ghana_empire_map.png"},
     socioeconomy:{slug:"timbuktu",name:"Timbuktu",img:"/images/encyclopedia/timbuktu.jpg",artist:"Flickr user: Emilio Labrador Santiago de Chile https://www.flickr.com/people/3059349393/",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Donkeys,_Timbuktu.jpg"},
     military:{slug:"songhai-empire",name:"Songhai Empire",img:"/images/encyclopedia/songhai-empire.jpg",artist:"HetmanTheResearcher",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_the_Songhay_Empire.png"},
     governance:{slug:"kouroukan-fouga",name:"Kouroukan Fouga",img:"/images/encyclopedia/kouroukan-fouga.jpg",artist:"Lancine.kounfantoh.fofana",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%DF%9E%DF%99%DF%8E%DF%AC%DF%9E%DF%8A%DF%B2%DF%AC%DF%9D%DF%8E%DF%A5%DF%8A%DF%AB_%DF%98%DF%8F%DF%B2%DF%AC%DF%98%DF%8A.jpg"},

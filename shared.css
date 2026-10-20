@@ -2423,3 +2423,44 @@ mark.search-hl {
   color: var(--muted); padding: 16px 24px 6px;
 }
 button.nav-dropdown-link { background: none; border: none; border-bottom: 1px solid var(--border); text-align: left; cursor: pointer; width: 100%; }
+/* ── Empire pages: key facts, table of contents, related empires (design pass, Oct 2026) ── */
+h2.profile-section-title { font-weight: 400; }
+.profile-section-block, .profile-summary, #empire-stats-panel, #detail-references { scroll-margin-top: 84px; }
+.empire-meta { font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+.info-stat-val .enc-link { text-decoration-thickness: 1px; }
+.profile-detail-inner { position: relative; }
+.empire-toc { margin: 0 0 28px; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.empire-toc-title { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.empire-toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.empire-toc a { font-family: var(--font-ui); font-size: 14px; color: var(--text); text-decoration: none; }
+.empire-toc a:hover, .empire-toc a[aria-current] { color: var(--gold); }
+@media (min-width: 1300px) {
+  .empire-toc { position: absolute; top: 0; bottom: 0; left: -210px; width: 180px; margin: 0; padding: 0; border: 0; }
+  .empire-toc > * { position: sticky; }
+  .empire-toc-title { top: 90px; }
+  .empire-toc ul { top: 116px; flex-direction: column; gap: 2px; border-left: 1px solid var(--border); }
+  .empire-toc a { display: block; padding: 5px 0 5px 14px; margin-left: -1px; border-left: 2px solid transparent; font-size: 14px; }
+  .empire-toc a[aria-current] { border-left-color: var(--gold); }
+}
+.related-empires { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--border); }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; margin-top: 14px; }
+.related-prevnext { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; }
+.related-prevnext .related-card { flex: 0 1 300px; }
+.related-prevnext .related-card:last-child:not(:first-child) { text-align: right; grid-template-columns: 1fr 40px; }
+.related-prevnext .related-card:last-child:not(:first-child) img { order: 2; grid-row: 1 / span 3; grid-column: 2; }
+.related-card {
+  display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; align-items: center;
+  padding: 12px; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+}
+.related-card:hover { border-color: var(--gold); background: rgba(var(--gold-rgb), 0.05); }
+.related-card img { width: 40px; height: 40px; object-fit: contain; grid-row: 1 / span 3; }
+.related-card-label { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.related-card-name { font-family: var(--font-display); font-size: 15px; color: var(--gold-light); line-height: 1.3; }
+.related-card-dates { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+@media (max-width: 600px) { .related-prevnext { flex-direction: column; } .related-prevnext .related-card { flex: 1 1 auto; } }.profile-detail-header .info-stat { gap: 16px; }
+.profile-detail-header .info-stat-label { white-space: nowrap; }
+.profile-detail-header .info-stat-val { text-align: right; }
+@media (max-width: 1299px) { .empire-toc { border-top: 0; padding-top: 0; } }
+.related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
