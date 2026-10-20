@@ -42,6 +42,14 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 - `images/encyclopedia/<slug>.jpg` — freely licensed Wikimedia Commons thumbnails; author/licence/source
   are in each entry's `credit` and shown under the image. Keep the credit if an image is reused.
 
+## Homepage and site search
+- `home-data.js` — HOME_PICS (one distinctive picture per empire for the featured cards), HOME_ENTRIES
+  (encyclopedia "entry of the day"), HOME_COUNTS. Loaded only by `index`.
+- `search-index.js` — SEARCH_INDEX [slug, name, type, aliases] for the header search (shared-nav.js
+  `initSiteSearch`; loaded on first open; "/" or Ctrl+K opens it). Bump `search-index.js?v=` in shared-nav.js
+  when regenerated.
+- Both are generated from encyclopedia-data.js + empire-section-images.js; regenerate them whenever those change.
+
 ## Empire pages
 - `empire-section-images.js` — SECTION_IMAGES: one picture per profile section (an encyclopedia entry linked in
   that section, with its image and credit). Loaded only by generator.html; rendered as `.profile-section-fig`.

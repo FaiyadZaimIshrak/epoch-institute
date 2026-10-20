@@ -114,6 +114,85 @@ function attachShareListeners(container, fallbackUrl) {
   });
 }
 
+// ── Site-wide search (empires + encyclopedia; index loaded on first open) ─────
+var SEARCH_TYPES = { person: 'Person', event: 'Event', place: 'Place', polity: 'State', group: 'People / group',
+  institution: 'Institution', term: 'Term', idea: 'Idea', work: 'Work', factor: 'Factor' };
+function searchFold(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'ʿʾ]/g, ''); }
+function searchScore(q, name) {
+  var n = searchFold(name);
+  if (n === q) return 100;
+  if (n.indexOf(q) === 0) return 80;
+  if ((' ' + n).indexOf(' ' + q) !== -1) return 60;
+  if (n.indexOf(q) !== -1) return 40;
+  return 0;
+}
+function siteSearch(query) {
+  var q = searchFold(query).trim(), out = [];
+  if (q.length < 2) return out;
+  if (typeof EMPIRES !== 'undefined') EMPIRES.forEach(function (e) {
+    var s = searchScore(q, e.name);
+    if (s) out.push({ s: s + 15, name: e.name, type: 'Empire profile', href: '/empire/' + toSlug(e.name) });
+  });
+  if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) {
+    var s = searchScore(q, r[1]);
+    if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
+    if (s > 0) out.push({ s: s, name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia#' + r[0] });
+  });
+  out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
+  return out.slice(0, 12);
+}
+function initSiteSearch() {
+  var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
+      list = document.getElementById('site-search-results'), hint = document.getElementById('site-search-hint'),
+      opener = null, active = -1, loading = false;
+  function load(cb) {
+    if (typeof SEARCH_INDEX !== 'undefined') return cb();
+    if (loading) return; loading = true;
+    var s = document.createElement('script'); s.src = '/search-index.js?v=1';
+    s.onload = function () { loading = false; cb(); }; s.onerror = function () { loading = false; cb(); };
+    document.head.appendChild(s);
+  }
+  function render() {
+    var res = siteSearch(input.value); active = -1;
+    list.innerHTML = res.map(function (r, i) {
+      return '<li role="option" id="ss-opt-' + i + '"><a href="' + r.href + '"><span class="ss-name">' + escHtml(r.name) + '</span><span class="ss-type">' + escHtml(r.type) + '</span></a></li>';
+    }).join('');
+    hint.textContent = input.value.trim().length < 2 ? '94 empire profiles and the full encyclopedia.' : (res.length ? '' : 'No matches. Try another spelling or a shorter word.');
+    hint.hidden = !hint.textContent;
+  }
+  function setActive(i) {
+    var items = list.querySelectorAll('li'); if (!items.length) return;
+    active = (i + items.length) % items.length;
+    items.forEach(function (li, k) { li.classList.toggle('active', k === active); li.setAttribute('aria-selected', k === active); });
+    input.setAttribute('aria-activedescendant', 'ss-opt-' + active);
+    items[active].scrollIntoView({ block: 'nearest' });
+  }
+  function open(prefill) {
+    opener = document.activeElement; box.hidden = false; document.body.style.overflow = 'hidden';
+    if (typeof prefill === 'string') input.value = prefill;
+    input.focus(); render();
+    load(render);
+  }
+  function close() { box.hidden = true; document.body.style.overflow = ''; if (opener && opener.focus) opener.focus(); }
+  window.openSiteSearch = open;
+  document.getElementById('nav-search-btn').addEventListener('click', function () { open(); });
+  document.getElementById('site-search-close').addEventListener('click', close);
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  input.addEventListener('input', render);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
+    else if (e.key === 'Enter') { var a = list.querySelectorAll('li a')[Math.max(active, 0)]; if (a) { e.preventDefault(); a.click(); } }
+    else if (e.key === 'Escape') { e.preventDefault(); close(); }
+  });
+  list.addEventListener('click', function (e) { if (e.target.closest('a')) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!box.hidden) return;
+    var t = e.target, typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
+    if ((e.key === '/' && !typing) || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) { e.preventDefault(); open(); }
+  });
+}
+
 // ── initNav(activePage) ───────────────────────────────────────────────────────
 function initNav(activePage) {
 
@@ -163,6 +242,7 @@ function initNav(activePage) {
     </div>
   </div>
   <div class="nav-toggles">
+    <button class="nav-search-btn" id="nav-search-btn" aria-label="Search the site" title="Search (/)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button>
     <button class="nav-toggle-btn" id="theme-toggle">&#x2600;</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-dropdown">&#x2630;</button>
   </div>
@@ -273,9 +353,23 @@ function initNav(activePage) {
   </div>
 </div>`;
 
-  // Inject nav, footer, contact modal
+  const searchHtml = `
+<div id="site-search" class="site-search" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <div class="site-search-box">
+    <div class="site-search-row">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      <input type="search" id="site-search-input" placeholder="Search empires, people, events, places…" autocomplete="off" aria-controls="site-search-results" aria-label="Search">
+      <button type="button" class="site-search-close" id="site-search-close" aria-label="Close search">Esc</button>
+    </div>
+    <ul id="site-search-results" class="site-search-results" role="listbox"></ul>
+    <p class="site-search-hint" id="site-search-hint">94 empire profiles and the full encyclopedia.</p>
+  </div>
+</div>`;
+
+  // Inject nav, footer, contact modal, search
   document.body.insertAdjacentHTML('afterbegin', navHtml);
-  document.body.insertAdjacentHTML('beforeend', footerHtml + contactModalHtml);
+  document.body.insertAdjacentHTML('beforeend', footerHtml + contactModalHtml + searchHtml);
+  initSiteSearch();
 
   // ── Theme toggle ────────────────────────────────────────────────────────────
   (function() {
