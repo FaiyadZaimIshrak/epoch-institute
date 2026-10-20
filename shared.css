@@ -2417,3 +2417,24 @@ mark.search-hl {
   }
   .enc-link:hover, .enc-link:focus-visible { color: var(--gold-light); text-decoration-style: solid; }
   .enc-link:focus-visible { outline: 1px solid var(--gold); outline-offset: 2px; }
+
+  /* ── Empire profile section pictures (one per section, linked to the encyclopedia) ── */
+  .profile-section-block { display: flow-root; }
+  .profile-section-fig {
+    float: right; width: 240px; margin: 4px 0 14px 28px;
+    border: 0.5px solid var(--border); padding: 6px; background: var(--surface, transparent);
+  }
+  .profile-section-fig img { display: block; width: 100%; height: auto; max-height: 300px; object-fit: cover; }
+  .profile-section-fig figcaption {
+    font-family: 'Crimson Pro', Georgia, serif; font-size: 13px; line-height: 1.4;
+    color: var(--muted); margin: 6px 2px 0;
+  }
+  .profile-section-fig figcaption > a { color: var(--gold); text-decoration: none; }
+  .profile-section-fig figcaption > a:hover { color: var(--gold-light); }
+  .profile-section-fig-credit { display: block; font-size: 11px; margin-top: 2px; overflow-wrap: anywhere; }
+  .profile-section-fig-credit a { color: inherit; text-decoration: none; }
+  .profile-section-fig-credit a:hover { color: var(--gold); }
+  @media (max-width: 600px) {
+    .profile-section-fig { float: none; width: auto; margin: 0 0 14px; }
+    .profile-section-fig img { max-height: 260px; }
+  }

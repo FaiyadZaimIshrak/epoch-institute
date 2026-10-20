@@ -35,8 +35,7 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 
 ## Encyclopedia
 - `encyclopedia` page (top-level nav item): index view, and one article per entry at `/encyclopedia#<slug>`.
-- `encyclopedia-data.js` — 3,736 entries (slug, name, type, aka, dates, desc, img, credit, empires). Generated;
-  descriptions are drafts under review (the page says so).
+- `encyclopedia-data.js` — 3,736 entries (slug, name, type, aka, dates, desc, img, credit, empires). Generated.
 - `encyclopedia-links.js` — regex patterns used to find entry names in text. Loaded by `generator.html`
   (gold `.enc-link` links on empire pages: first mention per section, never the empire's own name) and by
   the encyclopedia page (links inside descriptions).
@@ -44,6 +43,12 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
   are in each entry's `credit` and shown under the image. Keep the credit if an image is reused.
 
 ## Empire pages
+- `empire-section-images.js` — SECTION_IMAGES: one picture per profile section (an encyclopedia entry linked in
+  that section, with its image and credit). Loaded only by generator.html; rendered as `.profile-section-fig`.
+- `profile-changes.md` — log of the Oct 2026 fact-check of all 94 profiles (corrections per empire). Not deployed.
+- Editing profile text can break encyclopedia matching: entries are found by their exact name or aliases, so keep
+  full names (e.g. "the Battle of Mohács", not "at Mohács") or the entry loses its link.
+
 generator.html must produce output identical to the committed empire/* files — edit the template
 there rather than editing the 94 pages by hand. To regenerate: open generator.html from a local
 server, download empire-pages.zip, extract into empire/, commit and push.

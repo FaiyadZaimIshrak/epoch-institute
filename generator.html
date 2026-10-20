@@ -41,6 +41,7 @@
 <script src="shared-data.js"></script>
 <script src="empire-profiles.js"></script>
 <script src="encyclopedia-links.js"></script>
+<script src="empire-section-images.js"></script>
 <script>
 // ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
 // Wikipedia convention: link the first mention of each entry per section, never inside tags,
@@ -114,6 +115,17 @@ function formatYear(y) {
   return yr < 0 ? Math.abs(yr) + ' BCE' : yr + ' CE';
 }
 
+// One picture per profile section (empire-section-images.js), linked to its encyclopedia entry, with credit.
+function sectionFigure(empireName, key) {
+  var f = typeof SECTION_IMAGES !== 'undefined' && SECTION_IMAGES[empireName] && SECTION_IMAGES[empireName][key];
+  if (!f) return '';
+  var credit = [f.artist, f.licence].filter(Boolean).map(esc).join(', ');
+  return '<figure class="profile-section-fig"><a href="/encyclopedia#' + f.slug + '"><img src="' + esc(f.img) + '" alt="' + esc(f.name) + '" loading="lazy" width="240"></a>' +
+    '<figcaption><a href="/encyclopedia#' + f.slug + '">' + esc(f.name) + '</a>' +
+    (credit ? '<span class="profile-section-fig-credit">' + (f.source ? '<a href="' + esc(f.source) + '" target="_blank" rel="noopener">' + credit + '</a>' : credit) + '</span>' : '') +
+    '</figcaption></figure>\n        ';
+}
+
 function buildPage(emp) {
   var name    = emp.name;
   var slug    = toSlug(name);
@@ -144,7 +156,7 @@ function buildPage(emp) {
     sectionsHtml = sectionKeys.map(function(pair) {
       var key = pair[0], label = pair[1];
       var body = profile[key] ? linkify(profile[key], name) : '<em>Description coming soon.</em>';
-      return '<div class="profile-section-block">\n        <p class="profile-section-title">'+label+'</p>\n        <div class="profile-section-body">'+body+'</div>\n      </div>';
+      return '<div class="profile-section-block">\n        <p class="profile-section-title">'+label+'</p>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>\n      </div>';
     }).join('\n      ');
   }
 
@@ -179,7 +191,7 @@ function buildPage(emp) {
 '<meta property="og:type" content="article">\n' +
 '<meta property="og:url" content="'+canonicalUrl+'">\n' +
 '<link rel="canonical" href="'+canonicalUrl+'">\n' +
-'<link rel="stylesheet" href="/shared.css?v=2">\n' +
+'<link rel="stylesheet" href="/shared.css?v=3">\n' +
 '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
 '<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">\n' +

@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/encyclopedia">
 <link rel="canonical" href="https://the-epoch-institute.org/encyclopedia">
-<link rel="stylesheet" href="/shared.css?v=2">
+<link rel="stylesheet" href="/shared.css?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -81,7 +81,6 @@
         <span class="hero-ornament"></span>
         <h1 class="research-title">Encyclopedia</h1>
         <p class="research-subtitle">The people, events, places, states, institutions and ideas named in our 94 empire profiles.</p>
-        <p class="enc-draft">Draft — entries are under review by The Epoch Institute research team</p>
         <p class="enc-stats" id="enc-stats">Loading…</p>
       </header>
       <div class="enc-controls">
@@ -98,8 +97,8 @@
 
 <script src="/shared-data.js?v=2"></script>
 <script src="/shared-nav.js?v=3"></script>
-<script src="/encyclopedia-data.js?v=1"></script>
-<script src="/encyclopedia-links.js?v=1"></script>
+<script src="/encyclopedia-data.js?v=2"></script>
+<script src="/encyclopedia-links.js?v=2"></script>
 <script>
 initNav('encyclopedia');
 (function () {
@@ -190,11 +189,10 @@ initNav('encyclopedia');
     }).join('');
     el.innerHTML =
       '<a class="enc-back" href="#index">← Encyclopedia index</a>' +
-      '<p class="enc-draft">Draft — this entry is under review by The Epoch Institute research team</p>' +
       '<div><p class="enc-kicker">' + esc(SING[e.type] || e.type) + (e.subtype && e.type !== 'polity' && e.type !== 'factor' ? ' · ' + esc(e.subtype) : '') + '</p>' +
       '<h1 class="enc-title">' + esc(e.name) + '</h1>' + (meta.length ? '<p class="enc-meta">' + meta.join(' · ') + '</p>' : '') + '</div>' +
       '<div class="enc-body"><p class="enc-desc">' + (e.desc ? linkify(e.desc, e.slug) : 'Description coming soon.') + '</p>' + fig + '</div>' +
-      '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' empire profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>';
+      (e.empires.length ? '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' empire profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>' : '');
     document.title = e.name + ' — Encyclopedia — The Epoch Institute';
   }
 
