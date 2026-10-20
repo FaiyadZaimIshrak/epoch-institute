@@ -2405,3 +2405,15 @@ mark.search-hl {
 /* ── Compare slot stats overrides ── */
 .compare-radar-wrap { max-width: 300px; width: 100%; }
 .compare-stats-top { margin-bottom: 16px; }
+
+  /* ── Encyclopedia links (gold, clickable mentions in empire profiles) ── */
+  .enc-link {
+    color: var(--gold);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .enc-link:hover, .enc-link:focus-visible { color: var(--gold-light); text-decoration-style: solid; }
+  .enc-link:focus-visible { outline: 1px solid var(--gold); outline-offset: 2px; }

@@ -40,6 +40,60 @@
 <!-- Site data -->
 <script src="shared-data.js"></script>
 <script src="empire-profiles.js"></script>
+<script src="encyclopedia-links.js"></script>
+<script>
+// ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
+// Wikipedia convention: link the first mention of each entry per section, never inside tags,
+// longest match wins where names overlap, and an empire never links to itself.
+var ENC_RX = null;
+function encCompile() {
+  if (ENC_RX) return;
+  ENC_RX = ENC_LINKS.e.map(function (en) {
+    return { slug: en[0], rx: en[1].map(function (p) {
+      try { return new RegExp(p[0], 'gu' + (p[1] ? 'i' : '')); } catch (err) { console.warn('Skipped pattern', en[0], p[0]); return null; }
+    }).filter(Boolean) };
+  });
+}
+function linkify(html, empireName) {
+  if (typeof ENC_LINKS === 'undefined' || !html) return html;
+  encCompile();
+  var idxs = (ENC_LINKS.byEmpire[empireName] || []).slice(), self = ENC_LINKS.self[empireName];
+  // The empire's own name still claims its text (so "Caliphate" inside "Abbasid Caliphate" is not
+  // linked on its own), but is never turned into a link.
+  ENC_RX.forEach(function (en, i) { if (en.slug === self && idxs.indexOf(i) === -1) idxs.push(i); });
+  var parts = html.split(/(<[^>]+>)/), cands = [];
+  idxs.forEach(function (i) {
+    var en = ENC_RX[i]; if (!en) return;
+    en.rx.forEach(function (rx) {
+      for (var p = 0; p < parts.length; p += 2) {
+        var t = parts[p], m; if (!t) continue; rx.lastIndex = 0;
+        while ((m = rx.exec(t))) {
+          if (!m[0].length) { rx.lastIndex++; continue; }
+          cands.push({ p: p, s: m.index, e: m.index + m[0].length, slug: en.slug });
+        }
+      }
+    });
+  });
+  cands.sort(function (a, b) { return a.p - b.p || a.s - b.s || (b.e - b.s) - (a.e - a.s); });
+  var used = {}, chosen = {}, lastP = -1, lastEnd = -1;
+  cands.forEach(function (c) {
+    if (c.p === lastP && c.s < lastEnd) return;
+    if (used[c.slug]) return;
+    used[c.slug] = 1; (chosen[c.p] = chosen[c.p] || []).push(c); lastP = c.p; lastEnd = c.e;
+  });
+  Object.keys(chosen).forEach(function (p) {
+    var t = parts[p];
+    chosen[p].sort(function (a, b) { return b.s - a.s; }).forEach(function (c) {
+      if (c.slug === self) return;
+      var txt = t.slice(c.s, c.e), tail = '';
+      var poss = txt.match(/(['’]s)$/); if (poss) { tail = poss[1]; txt = txt.slice(0, -tail.length); }
+      t = t.slice(0, c.s) + '<a class="enc-link" href="/encyclopedia#' + c.slug + '">' + txt + '</a>' + tail + t.slice(c.e);
+    });
+    parts[p] = t;
+  });
+  return parts.join('');
+}
+</script>
 <script>
 function log(msg, cls) {
   var el = document.getElementById('log');
@@ -89,14 +143,14 @@ function buildPage(emp) {
   if (profile) {
     sectionsHtml = sectionKeys.map(function(pair) {
       var key = pair[0], label = pair[1];
-      var body = profile[key] || '<em>Description coming soon.</em>';
+      var body = profile[key] ? linkify(profile[key], name) : '<em>Description coming soon.</em>';
       return '<div class="profile-section-block">\n        <p class="profile-section-title">'+label+'</p>\n        <div class="profile-section-body">'+body+'</div>\n      </div>';
     }).join('\n      ');
   }
 
   var summaryHtml = (profile && profile.summary)
-    ? '<p class="profile-summary"><em>'+esc(profile.summary)+'</em></p>'
-    : (info ? '<p class="profile-summary">'+esc(info)+'</p>' : '');
+    ? '<p class="profile-summary"><em>'+linkify(esc(profile.summary), name)+'</em></p>'
+    : (info ? '<p class="profile-summary">'+linkify(esc(info), name)+'</p>' : '');
 
   var referencesHtml = '';
   if (profile && Array.isArray(profile.references) && profile.references.length) {
@@ -125,7 +179,7 @@ function buildPage(emp) {
 '<meta property="og:type" content="article">\n' +
 '<meta property="og:url" content="'+canonicalUrl+'">\n' +
 '<link rel="canonical" href="'+canonicalUrl+'">\n' +
-'<link rel="stylesheet" href="/shared.css">\n' +
+'<link rel="stylesheet" href="/shared.css?v=2">\n' +
 '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
 '<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">\n' +
@@ -176,7 +230,7 @@ noProfileNote + '\n' +
 '    </div>\n' +
 '  </div>\n</div>\n\n' +
 '<script src="/shared-data.js?v=2">\x3C/script>\n' +
-'<script src="/shared-nav.js?v=2">\x3C/script>\n' +
+'<script src="/shared-nav.js?v=3">\x3C/script>\n' +
 '<script src="/epoch-stats.js">\x3C/script>\n' +
 '<script>\n' +
 '(function(){\n' +

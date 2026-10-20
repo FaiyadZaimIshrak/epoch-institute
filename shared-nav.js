@@ -132,6 +132,7 @@ function initNav(activePage) {
   </a>
   <div class="nav-links">
     <a href="/today-in-history" class="nav-link"${activeStyle('today')} id="nav-today-link">Today in History</a>
+    <a href="/encyclopedia" class="nav-link"${activeStyle('encyclopedia')} id="nav-encyclopedia-link">Encyclopedia</a>
     <div class="nav-group-wrap" id="nav-research-wrap">
       <button class="nav-parent-btn${researchActive ? ' active-group' : ''}" id="nav-research-btn" aria-haspopup="true" aria-expanded="false">Research ▾</button>
       <div class="nav-group-menu" id="nav-research-menu" role="menu">
@@ -165,6 +166,7 @@ function initNav(activePage) {
   </div>
   <div id="nav-dropdown" class="nav-dropdown" role="menu">
     <a href="/today-in-history" class="nav-dropdown-link" id="mob-today">Today in History</a>
+    <a href="/encyclopedia" class="nav-dropdown-link" id="mob-encyclopedia">Encyclopedia</a>
     <a href="/explorer" class="nav-dropdown-link" id="mob-explorer">Empire Explorer</a>
     <a href="/profiles" class="nav-dropdown-link" id="mob-profiles">Empire Profiles</a>
     <a href="/research-series" class="nav-dropdown-link" id="mob-series">Research Series</a>
@@ -201,6 +203,7 @@ function initNav(activePage) {
       <div class="footer-col">
         <span class="footer-col-title">Research</span>
         <a class="footer-link" href="/today-in-history" id="fl-today">Today in History</a>
+        <a class="footer-link" href="/encyclopedia" id="fl-encyclopedia">Encyclopedia</a>
         <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
         <a class="footer-link" href="/profiles" id="fl-profiles">Empire Profiles</a>
         <a class="footer-link" href="/research" id="fl-research">Research Hub</a>

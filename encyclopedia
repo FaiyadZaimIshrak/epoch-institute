@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encyclopedia — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The Epoch Institute Encyclopedia: the people, events, places, states, institutions and ideas named in our 94 empire profiles.">
+<meta property="og:title" content="Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="People, events, places, states, institutions and ideas from 94 empire profiles.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia">
+<link rel="stylesheet" href="/shared.css?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+<style>
+.enc-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
+.enc-wrap { max-width: 920px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.enc-head { text-align: center; display: grid; gap: 10px; justify-items: center; margin-bottom: 28px; }
+.enc-draft { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border: 0.5px solid var(--border); padding: 6px 12px; border-radius: 2px; max-width: 640px; line-height: 1.6; }
+.enc-stats { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .08em; color: var(--muted); }
+.enc-controls { position: sticky; top: 64px; z-index: 5; background: var(--bg); padding: 12px 0; border-bottom: 0.5px solid var(--border); display: grid; gap: 10px; }
+.enc-search { width: 100%; font-family: 'Crimson Pro', Georgia, serif; font-size: 18px; padding: 10px 14px; background: var(--surface); color: var(--text); border: 0.5px solid var(--border); border-radius: 2px; }
+.enc-search:focus { outline: 1px solid var(--gold); }
+.enc-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.enc-chip { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; background: none; color: var(--muted); border: 0.5px solid var(--border); border-radius: 2px; cursor: pointer; }
+.enc-chip:hover { color: var(--gold); border-color: var(--gold); }
+.enc-chip[aria-pressed="true"] { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+.enc-chip .n { opacity: .7; margin-left: 4px; }
+.enc-az { display: flex; flex-wrap: wrap; gap: 2px; font-family: 'Cinzel', serif; font-size: 12px; }
+.enc-az a { color: var(--gold); text-decoration: none; padding: 2px 6px; }
+.enc-az a.off { color: var(--border); pointer-events: none; }
+.enc-count { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+.enc-letter h2 { font-family: 'Cinzel', serif; font-weight: 600; font-size: 24px; color: var(--gold); margin: 28px 0 6px; scroll-margin-top: 230px; }
+.enc-letter { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+.enc-list { list-style: none; }
+.enc-item a { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2px 12px; padding: 10px 0; border-bottom: 0.5px solid var(--border); color: var(--text); text-decoration: none; }
+.enc-item a:hover .enc-name { color: var(--gold); }
+.enc-name { font-size: 18px; font-weight: 600; min-width: 0; }
+.enc-type { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-top: 6px; white-space: nowrap; }
+.enc-snip { grid-column: 1 / -1; font-size: 15px; color: var(--muted); line-height: 1.5; min-width: 0; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.enc-empty { padding: 40px 0; color: var(--muted); font-size: 17px; }
+/* Article */
+.enc-article { display: grid; gap: 18px; }
+.enc-back { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; border: 0.5px solid var(--border); padding: 7px 14px; border-radius: 2px; justify-self: start; }
+.enc-back:hover { color: var(--gold); border-color: var(--gold); }
+.enc-kicker { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.enc-title { font-family: 'Cinzel', serif; font-weight: 600; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; color: var(--text); text-wrap: balance; }
+.enc-meta { font-size: 16px; color: var(--muted); }
+.enc-meta .dates { color: var(--text); }
+.enc-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: start; }
+.enc-desc { font-size: 20px; line-height: 1.7; color: var(--text); max-width: 65ch; }
+.enc-fig { width: 280px; max-width: 100%; border: 0.5px solid var(--border); background: var(--surface); padding: 8px; }
+.enc-fig img { display: block; width: 100%; height: auto; }
+.enc-fig figcaption { font-size: 12px; line-height: 1.45; color: var(--muted); margin-top: 8px; overflow-wrap: anywhere; }
+.enc-fig figcaption a { color: var(--muted); }
+.enc-section-title { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.enc-mentions { display: flex; flex-wrap: wrap; gap: 8px; }
+.enc-mentions a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .06em; color: var(--gold); text-decoration: none; border: 0.5px solid var(--border); padding: 6px 10px; border-radius: 2px; }
+.enc-mentions a:hover { border-color: var(--gold); }
+.enc-mentions .secs { color: var(--muted); font-family: 'Crimson Pro', Georgia, serif; letter-spacing: 0; text-transform: none; margin-left: 4px; }
+@media (max-width: 720px) {
+  .enc-body { grid-template-columns: 1fr; }
+  .enc-fig { width: 100%; max-width: 360px; order: -1; }
+  .enc-desc { font-size: 18px; }
+  .enc-controls { top: 56px; }
+}
+</style>
+</head>
+<body>
+
+<main class="enc-page">
+  <div class="enc-wrap">
+    <div id="enc-index">
+      <header class="enc-head">
+        <span class="hero-ornament"></span>
+        <h1 class="research-title">Encyclopedia</h1>
+        <p class="research-subtitle">The people, events, places, states, institutions and ideas named in our 94 empire profiles.</p>
+        <p class="enc-draft">Draft — entries are under review by The Epoch Institute research team</p>
+        <p class="enc-stats" id="enc-stats">Loading…</p>
+      </header>
+      <div class="enc-controls">
+        <input class="enc-search" id="enc-q" type="search" placeholder="Search the encyclopedia…" aria-label="Search the encyclopedia" autocomplete="off">
+        <div class="enc-row" id="enc-types" role="group" aria-label="Filter by type"></div>
+        <nav class="enc-az" id="enc-az" aria-label="Jump to letter"></nav>
+        <span class="enc-count" id="enc-count"></span>
+      </div>
+      <div id="enc-list"></div>
+    </div>
+    <article class="enc-article" id="enc-article" hidden></article>
+  </div>
+</main>
+
+<script src="/shared-data.js?v=2"></script>
+<script src="/shared-nav.js?v=3"></script>
+<script src="/encyclopedia-data.js?v=1"></script>
+<script src="/encyclopedia-links.js?v=1"></script>
+<script>
+initNav('encyclopedia');
+(function () {
+  var TYPES = [["person","People"],["event","Events"],["place","Places"],["polity","States & dynasties"],["group","Peoples & groups"],["institution","Institutions & offices"],["term","Terms"],["idea","Religions & ideas"],["work","Works & monuments"],["factor","Factors"]];
+  var SING = { person:"Person", event:"Event", place:"Place", polity:"State", group:"People / group", institution:"Institution", term:"Term", idea:"Religion / idea", work:"Work / monument", factor:"Historical factor" };
+  var data = (typeof ENCYCLOPEDIA !== 'undefined') ? ENCYCLOPEDIA : [];
+  var bySlug = {}; data.forEach(function (e) { bySlug[e.slug] = e; });
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]; }); };
+  var fold = function (s) { return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); };
+  data.forEach(function (e) { e._k = fold(e.name).replace(/^(al-|el-|the )/, '').replace(/^[^a-z0-9]+/, ''); e._s = fold([e.name].concat(e.aka || []).join(' | ')); });
+  data.sort(function (a, b) { return a._k < b._k ? -1 : a._k > b._k ? 1 : 0; });
+  var counts = {}; data.forEach(function (e) { counts[e.type] = (counts[e.type] || 0) + 1; });
+  document.getElementById('enc-stats').textContent = data.length.toLocaleString() + ' entries';
+
+  // ── links inside descriptions (same patterns as the empire pages) ──
+  var RX = null;
+  function compile() {
+    if (RX || typeof ENC_LINKS === 'undefined') return;
+    RX = [];
+    ENC_LINKS.e.forEach(function (en) {
+      en[1].forEach(function (p) { try { RX.push({ slug: en[0], rx: new RegExp(p[0], 'gu' + (p[1] ? 'i' : '')) }); } catch (err) {} });
+    });
+  }
+  function linkify(text, selfSlug) {
+    compile(); if (!RX) return esc(text);
+    var cands = [];
+    RX.forEach(function (r) {
+      if (r.slug === selfSlug) return;
+      r.rx.lastIndex = 0; var m;
+      while ((m = r.rx.exec(text))) { if (!m[0].length) { r.rx.lastIndex++; continue; } cands.push({ s: m.index, e: m.index + m[0].length, slug: r.slug }); }
+    });
+    cands.sort(function (a, b) { return a.s - b.s || (b.e - b.s) - (a.e - a.s); });
+    var out = '', pos = 0, used = {};
+    cands.forEach(function (c) {
+      if (c.s < pos || used[c.slug] || !bySlug[c.slug]) return;
+      used[c.slug] = 1;
+      var txt = text.slice(c.s, c.e), tail = '', poss = txt.match(/(['’]s)$/);
+      if (poss) { tail = poss[1]; txt = txt.slice(0, -tail.length); }
+      out += esc(text.slice(pos, c.s)) + '<a class="enc-link" href="#' + c.slug + '">' + esc(txt) + '</a>' + esc(tail);
+      pos = c.e;
+    });
+    return out + esc(text.slice(pos));
+  }
+
+  // ── index view ──
+  var state = { q: '', type: '' };
+  var typesEl = document.getElementById('enc-types');
+  function chips() {
+    typesEl.innerHTML = [['', 'All', data.length]].concat(TYPES.map(function (t) { return [t[0], t[1], counts[t[0]] || 0]; }))
+      .map(function (t) { return '<button class="enc-chip" type="button" data-t="' + t[0] + '" aria-pressed="' + (state.type === t[0]) + '">' + esc(t[1]) + '<span class="n">' + t[2].toLocaleString() + '</span></button>'; }).join('');
+  }
+  typesEl.addEventListener('click', function (ev) { var b = ev.target.closest('.enc-chip'); if (!b) return; state.type = b.getAttribute('data-t'); chips(); renderIndex(); });
+  var timer; document.getElementById('enc-q').addEventListener('input', function (ev) { clearTimeout(timer); var v = ev.target.value; timer = setTimeout(function () { state.q = fold(v.trim()); renderIndex(); }, 120); });
+  function renderIndex() {
+    var rows = data.filter(function (e) { return (!state.type || e.type === state.type) && (!state.q || e._s.indexOf(state.q) !== -1); });
+    document.getElementById('enc-count').textContent = rows.length.toLocaleString() + ' shown';
+    var groups = {}, order = [];
+    rows.forEach(function (e) { var L = /[a-z]/.test(e._k[0]) ? e._k[0].toUpperCase() : '#'; if (!groups[L]) { groups[L] = []; order.push(L); } groups[L].push(e); });
+    document.getElementById('enc-az').innerHTML = '#ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(function (L) {
+      return '<a href="javascript:void(0)" data-jump="enc-l-' + (L === '#' ? 'num' : L) + '"' + (groups[L] ? '' : ' class="off"') + '>' + L + '</a>';
+    }).join('');
+    document.getElementById('enc-list').innerHTML = rows.length ? order.map(function (L) {
+      return '<section class="enc-letter"><h2 id="enc-l-' + (L === '#' ? 'num' : L) + '">' + L + '</h2><ul class="enc-list">' + groups[L].map(function (e) {
+        return '<li class="enc-item"><a href="#' + e.slug + '"><span class="enc-name">' + esc(e.name) + '</span><span class="enc-type">' + esc(SING[e.type] || e.type) + '</span>' + (e.desc ? '<span class="enc-snip">' + esc(e.desc) + '</span>' : '') + '</a></li>';
+      }).join('') + '</ul></section>';
+    }).join('') : '<p class="enc-empty">No entries match. Clear the search or choose “All”.</p>';
+  }
+  document.getElementById('enc-az').addEventListener('click', function (ev) {
+    var a = ev.target.closest('a[data-jump]'); if (!a) return; ev.preventDefault();
+    var t = document.getElementById(a.getAttribute('data-jump')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // ── article view ──
+  var SEC = { foundation:'Foundation', socioeconomy:'Socioeconomy', military:'Military', governance:'Governance', impact:'Impact', decline:'Decline', summary:'Summary' };
+  function renderArticle(e) {
+    var el = document.getElementById('enc-article');
+    var meta = [];
+    if (e.dates) meta.push('<span class="dates">' + esc(e.dates) + '</span>');
+    if (e.aka && e.aka.length) meta.push('Also known as ' + e.aka.map(esc).join(', '));
+    var fig = '';
+    if (e.img) {
+      var cap = [e.credit && e.credit.artist ? esc(e.credit.artist) : '', e.credit && e.credit.licence ? esc(e.credit.licence) : ''].filter(Boolean).join(' · ');
+      fig = '<figure class="enc-fig"><img src="' + esc(e.img) + '" alt="' + esc(e.name) + '" loading="lazy" width="320">' +
+        '<figcaption>' + (cap ? 'Image: ' + cap + ' · ' : '') + (e.credit && e.credit.source ? '<a href="' + esc(e.credit.source) + '" target="_blank" rel="noopener">Wikimedia Commons</a>' : '') + '</figcaption></figure>';
+    }
+    var mentions = e.empires.map(function (m) {
+      return '<a href="/empire/' + m.slug + '">' + esc(m.name) + '<span class="secs">' + esc(m.sections.map(function (s) { return SEC[s] || s; }).join(', ')) + '</span></a>';
+    }).join('');
+    el.innerHTML =
+      '<a class="enc-back" href="#index">← Encyclopedia index</a>' +
+      '<p class="enc-draft">Draft — this entry is under review by The Epoch Institute research team</p>' +
+      '<div><p class="enc-kicker">' + esc(SING[e.type] || e.type) + (e.subtype && e.type !== 'polity' && e.type !== 'factor' ? ' · ' + esc(e.subtype) : '') + '</p>' +
+      '<h1 class="enc-title">' + esc(e.name) + '</h1>' + (meta.length ? '<p class="enc-meta">' + meta.join(' · ') + '</p>' : '') + '</div>' +
+      '<div class="enc-body"><p class="enc-desc">' + (e.desc ? linkify(e.desc, e.slug) : 'Description coming soon.') + '</p>' + fig + '</div>' +
+      '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' empire profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>';
+    document.title = e.name + ' — Encyclopedia — The Epoch Institute';
+  }
+
+  var lastIndexScroll = 0;
+  function route() {
+    var slug = decodeURIComponent(location.hash.slice(1));
+    var e = slug && bySlug[slug];
+    var idx = document.getElementById('enc-index'), art = document.getElementById('enc-article');
+    if (e) {
+      if (!idx.hidden) lastIndexScroll = window.scrollY;
+      renderArticle(e); idx.hidden = true; art.hidden = false; window.scrollTo(0, 0);
+    } else {
+      idx.hidden = false; art.hidden = true; document.title = 'Encyclopedia — The Epoch Institute';
+      window.scrollTo(0, lastIndexScroll);
+    }
+  }
+  window.addEventListener('hashchange', route);
+  chips(); renderIndex(); route();
+})();
+</script>
+</body>
+</html>
