@@ -249,7 +249,7 @@ var EMPIRE_STATS_BY_NAME = {
     for (j = 0; j < 8; j++) {
       p = polar(j * 45, LR);
       out += '<text x="'+p[0]+'" y="'+p[1]+'" text-anchor="'+ANCHORS[j]+'" dominant-baseline="middle"'+
-        ' font-family="Cinzel,serif" font-size="9.5" fill="var(--text)" opacity="0.6" letter-spacing="0.06em">'+
+        ' style="font-family:var(--font-ui);font-size:13px;font-weight:600" fill="var(--text)" opacity="0.75" letter-spacing="0.02em">'+
         STAT_DIMENSIONS[j].shortLabel+'</text>';
     }
 

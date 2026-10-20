@@ -12,17 +12,17 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://the-epoch-institute.org/empire/rozvi-empire">
 <link rel="canonical" href="https://the-epoch-institute.org/empire/rozvi-empire">
-<link rel="stylesheet" href="/shared.css?v=4">
+<link rel="stylesheet" href="/shared.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 .empire-page { padding-top: 80px; min-height: 100vh; }
 .info-share-row { display:flex; gap:10px; margin:20px 0 0; }
-.info-share-btn { display:flex; align-items:center; gap:6px; font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
 .info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
 .empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
-.empire-view-explorer { font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
 .empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
 @media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
 </style>
@@ -113,7 +113,7 @@
 
 <script src="/shared-data.js?v=2"></script>
 <script src="/shared-nav.js?v=4"></script>
-<script src="/epoch-stats.js"></script>
+<script src="/epoch-stats.js?v=2"></script>
 <script>
 (function(){
   var name="Rozvi Empire",slug="rozvi-empire",url="https://the-epoch-institute.org/empire/rozvi-empire";

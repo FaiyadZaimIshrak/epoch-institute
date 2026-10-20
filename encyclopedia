@@ -12,45 +12,45 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/encyclopedia">
 <link rel="canonical" href="https://the-epoch-institute.org/encyclopedia">
-<link rel="stylesheet" href="/shared.css?v=4">
+<link rel="stylesheet" href="/shared.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 <style>
 .enc-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
 .enc-wrap { max-width: 920px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 .enc-head { text-align: center; display: grid; gap: 10px; justify-items: center; margin-bottom: 28px; }
-.enc-draft { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border: 0.5px solid var(--border); padding: 6px 12px; border-radius: 2px; max-width: 640px; line-height: 1.6; }
-.enc-stats { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .08em; color: var(--muted); }
+.enc-draft { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 0.5px solid var(--border); padding: 6px 12px; border-radius: 2px; max-width: 640px; line-height: 1.6; font-weight: 600;}
+.enc-stats { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em; color: var(--muted); }
 .enc-controls { position: sticky; top: 64px; z-index: 5; background: var(--bg); padding: 12px 0; border-bottom: 0.5px solid var(--border); display: grid; gap: 10px; }
-.enc-search { width: 100%; font-family: 'Crimson Pro', Georgia, serif; font-size: 18px; padding: 10px 14px; background: var(--surface); color: var(--text); border: 0.5px solid var(--border); border-radius: 2px; }
+.enc-search { width: 100%; font-family: var(--font-text); font-size: 18px; padding: 10px 14px; background: var(--surface); color: var(--text); border: 0.5px solid var(--border); border-radius: 2px; }
 .enc-search:focus { outline: 1px solid var(--gold); }
 .enc-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.enc-chip { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; background: none; color: var(--muted); border: 0.5px solid var(--border); border-radius: 2px; cursor: pointer; }
+.enc-chip { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 10px; background: none; color: var(--muted); border: 0.5px solid var(--border); border-radius: 2px; cursor: pointer; font-weight: 600;}
 .enc-chip:hover { color: var(--gold); border-color: var(--gold); }
 .enc-chip[aria-pressed="true"] { color: var(--bg); background: var(--gold); border-color: var(--gold); }
 .enc-chip .n { opacity: .7; margin-left: 4px; }
-.enc-az { display: flex; flex-wrap: wrap; gap: 2px; font-family: 'Cinzel', serif; font-size: 12px; }
+.enc-az { display: flex; flex-wrap: wrap; gap: 2px; font-family: var(--font-ui); font-size: 13px; }
 .enc-az a { color: var(--gold); text-decoration: none; padding: 2px 6px; }
 .enc-az a.off { color: var(--border); pointer-events: none; }
-.enc-count { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
-.enc-letter h2 { font-family: 'Cinzel', serif; font-weight: 600; font-size: 24px; color: var(--gold); margin: 28px 0 6px; scroll-margin-top: 230px; }
+.enc-count { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; font-weight: 600;}
+.enc-letter h2 { font-family: var(--font-display); font-weight: 600; font-size: 24px; color: var(--gold); margin: 28px 0 6px; scroll-margin-top: 230px; }
 .enc-letter { content-visibility: auto; contain-intrinsic-size: auto 800px; }
 .enc-list { list-style: none; }
 .enc-item a { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2px 12px; padding: 10px 0; border-bottom: 0.5px solid var(--border); color: var(--text); text-decoration: none; }
 .enc-item a:hover .enc-name { color: var(--gold); }
 .enc-name { font-size: 18px; font-weight: 600; min-width: 0; }
-.enc-type { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-top: 6px; white-space: nowrap; }
+.enc-type { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 6px; white-space: nowrap; font-weight: 600;}
 .enc-snip { grid-column: 1 / -1; font-size: 15px; color: var(--muted); line-height: 1.5; min-width: 0; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .enc-empty { padding: 40px 0; color: var(--muted); font-size: 17px; }
 /* Article */
 .enc-article { display: grid; gap: 18px; }
-.enc-back { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; border: 0.5px solid var(--border); padding: 7px 14px; border-radius: 2px; justify-self: start; }
+.enc-back { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; border: 0.5px solid var(--border); padding: 7px 14px; border-radius: 2px; justify-self: start; font-weight: 600;}
 .enc-back:hover { color: var(--gold); border-color: var(--gold); }
-.enc-kicker { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
-.enc-title { font-family: 'Cinzel', serif; font-weight: 600; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; color: var(--text); text-wrap: balance; }
+.enc-kicker { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); font-weight: 600;}
+.enc-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; color: var(--text); text-wrap: balance; }
 .enc-meta { font-size: 16px; color: var(--muted); }
 .enc-meta .dates { color: var(--text); }
 .enc-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: start; }
@@ -59,11 +59,11 @@
 .enc-fig img { display: block; width: 100%; height: auto; }
 .enc-fig figcaption { font-size: 12px; line-height: 1.45; color: var(--muted); margin-top: 8px; overflow-wrap: anywhere; }
 .enc-fig figcaption a { color: var(--muted); }
-.enc-section-title { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.enc-section-title { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; font-weight: 600;}
 .enc-mentions { display: flex; flex-wrap: wrap; gap: 8px; }
-.enc-mentions a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .06em; color: var(--gold); text-decoration: none; border: 0.5px solid var(--border); padding: 6px 10px; border-radius: 2px; }
+.enc-mentions a { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em; color: var(--gold); text-decoration: none; border: 0.5px solid var(--border); padding: 6px 10px; border-radius: 2px; }
 .enc-mentions a:hover { border-color: var(--gold); }
-.enc-mentions .secs { color: var(--muted); font-family: 'Crimson Pro', Georgia, serif; letter-spacing: 0; text-transform: none; margin-left: 4px; }
+.enc-mentions .secs { color: var(--muted); font-family: var(--font-text); letter-spacing: 0; text-transform: none; margin-left: 4px; }
 @media (max-width: 720px) {
   .enc-body { grid-template-columns: 1fr; }
   .enc-fig { width: 100%; max-width: 360px; order: -1; }

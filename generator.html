@@ -172,8 +172,8 @@ function buildPage(emp) {
   }
 
   var noProfileNote = !profile
-    ? '<div style="padding:48px 0;text-align:center;"><p style="font-family:\'Cinzel\',serif;font-size:11px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;margin:0 0 16px;">Full profile coming soon</p>' +
-      (info ? '<p style="font-family:\'Crimson Pro\',Georgia,serif;font-size:16px;color:var(--text);line-height:1.75;max-width:720px;margin:0 auto;">'+esc(info)+'</p>' : '') +
+    ? '<div style="padding:48px 0;text-align:center;"><p style="font-family:var(--font-ui);font-size:13px;letter-spacing: 0.06em;color:var(--muted);text-transform:uppercase;margin:0 0 16px; font-weight: 600;">Full profile coming soon</p>' +
+      (info ? '<p style="font-family:var(--font-text);font-size:18px;color:var(--text);line-height:1.75;max-width:720px;margin:0 auto;">'+esc(info)+'</p>' : '') +
       '</div>'
     : '';
 
@@ -191,17 +191,17 @@ function buildPage(emp) {
 '<meta property="og:type" content="article">\n' +
 '<meta property="og:url" content="'+canonicalUrl+'">\n' +
 '<link rel="canonical" href="'+canonicalUrl+'">\n' +
-'<link rel="stylesheet" href="/shared.css?v=4">\n' +
+'<link rel="stylesheet" href="/shared.css?v=5">\n' +
 '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
-'<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">\n' +
+'<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">\n' +
 '<style>\n' +
 '.empire-page { padding-top: 80px; min-height: 100vh; }\n' +
 '.info-share-row { display:flex; gap:10px; margin:20px 0 0; }\n' +
-'.info-share-btn { display:flex; align-items:center; gap:6px; font-family:\'Cinzel\',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; }\n' +
+'.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}\n' +
 '.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }\n' +
 '.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }\n' +
-'.empire-view-explorer { font-family:\'Cinzel\',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; }\n' +
+'.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}\n' +
 '.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }\n' +
 '@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }\n' +
 '</style>\n' +
@@ -243,7 +243,7 @@ noProfileNote + '\n' +
 '  </div>\n</div>\n\n' +
 '<script src="/shared-data.js?v=2">\x3C/script>\n' +
 '<script src="/shared-nav.js?v=4">\x3C/script>\n' +
-'<script src="/epoch-stats.js">\x3C/script>\n' +
+'<script src="/epoch-stats.js?v=2">\x3C/script>\n' +
 '<script>\n' +
 '(function(){\n' +
 '  var name="'+name.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'",slug="'+slug+'",url="https://the-epoch-institute.org/empire/'+slug+'";\n' +

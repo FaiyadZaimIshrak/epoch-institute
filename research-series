@@ -18,10 +18,10 @@
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/research-series">
 <link rel="alternate" type="application/rss+xml" title="The Epoch Institute Research Series" href="/feed.xml">
-<link rel="stylesheet" href="/shared.css?v=4">
+<link rel="stylesheet" href="/shared.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 #research-series { min-height: 100vh; padding-top: 100px; }
 .series-grid {
@@ -36,45 +36,41 @@
 }
 .series-card:hover, .series-card:active { border-color: var(--gold); background: rgba(var(--gold-rgb),0.04); }
 .series-number {
-  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.7;
-}
+  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7; font-weight: 600;}
 .series-title {
-  font-family: 'Cinzel', serif; font-size: clamp(14px, 1.8vw, 18px);
+  font-family: var(--font-display); font-size: clamp(14px, 1.8vw, 18px);
   color: var(--gold-light); letter-spacing: 0.04em; margin: 0; line-height: 1.4;
 }
 .series-subtitle {
-  font-family: 'Crimson Pro', Georgia, serif; font-style: italic;
-  font-size: 14px; color: var(--muted); margin: 0;
+  font-family: var(--font-text); font-style: italic;
+  font-size: 16px; color: var(--muted); margin: 0;
 }
 .series-desc {
-  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  font-family: var(--font-text); font-size: 17px;
   color: var(--text); line-height: 1.7; margin: 0; opacity: 0.85;
 }
 .series-cta {
-  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); transition: color 0.2s;
-}
+  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--muted); transition: color 0.2s; font-weight: 600;}
 .series-card:hover .series-cta, .series-card:active .series-cta { color: var(--gold); }
 .series-card-footer {
   display: flex; align-items: center; justify-content: space-between;
   margin-top: auto; padding-top: 8px; border-top: 0.5px solid var(--border);
 }
 .series-copy-link {
-  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.1em;
+  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--muted); background: none;
-  border: none; cursor: pointer; padding: 0; transition: color 0.2s;
-}
+  border: none; cursor: pointer; padding: 0; transition: color 0.2s; font-weight: 600;}
 .series-card:hover .series-copy-link, .series-card:active .series-copy-link { color: var(--gold); }
 .series-end-share { margin-top: 40px; padding-top: 24px; border-top: 0.5px solid var(--border); display: inline-block; position: relative; }
-.series-end-share .tih-share-btn { position:static !important; opacity:1 !important; font-family:'Cinzel',serif; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); padding:0; }
+.series-end-share .tih-share-btn { position:static !important; opacity:1 !important; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); padding:0; font-weight: 600;}
 .series-end-share .tih-share-btn:hover { color:var(--gold) !important; opacity:1 !important; }
 .series-end-share .tih-share-dropdown { bottom:auto !important; top:calc(100% + 4px) !important; right:auto !important; left:0 !important; }
 .series-status {
-  display: inline-block; font-family: 'Cinzel', serif; font-size: 8px;
-  letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px;
-  border: 0.5px solid var(--border); border-radius: 2px; color: var(--muted);
-}
+  display: inline-block; font-family: var(--font-ui); font-size: 12px;
+  letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px;
+  border: 0.5px solid var(--border); border-radius: 2px; color: var(--muted); font-weight: 600;}
 .series-status.available { border-color: rgba(var(--gold-rgb),0.4); color: var(--gold); opacity: 0.8; }
 .series-card.coming-soon {
   opacity: 0.45; cursor: default; pointer-events: none;
@@ -96,19 +92,18 @@
 .series-detail-inner { max-width: 860px; margin: 0 auto; padding: 40px 40px 80px; }
 .series-detail-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 0.5px solid var(--border); }
 .series-detail-number {
-  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin: 0 0 10px;
-}
+  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin: 0 0 10px; font-weight: 600;}
 .series-detail-title {
-  font-family: 'Cinzel', serif; font-size: clamp(20px, 3vw, 32px);
+  font-family: var(--font-display); font-size: clamp(20px, 3vw, 32px);
   color: var(--gold-light); letter-spacing: 0.05em; margin: 0 0 8px; line-height: 1.3;
 }
 .series-detail-subtitle {
-  font-family: 'Crimson Pro', Georgia, serif; font-style: italic;
-  font-size: 17px; color: var(--muted); margin: 0;
+  font-family: var(--font-text); font-style: italic;
+  font-size: 19px; color: var(--muted); margin: 0;
 }
 .series-detail-body {
-  font-family: 'Crimson Pro', Georgia, serif; font-size: 16px;
+  font-family: var(--font-text); font-size: 18px;
   color: var(--text); line-height: 1.85;
 }
 .series-detail-body p { margin: 0 0 20px; }

@@ -17,10 +17,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=4">
+<link rel="stylesheet" href="/shared.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 /* ── Profile search ── */
 .profile-search-wrap {
@@ -30,7 +30,7 @@
 .profile-search-input {
   flex: 1; background: var(--surface); border: 0.5px solid var(--border);
   border-radius: 3px; padding: 9px 14px;
-  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.06em;
+  font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em;
   color: var(--text); outline: none; transition: border-color 0.2s;
 }
 .profile-search-input::placeholder { color: var(--muted); opacity: 0.5; }
@@ -43,7 +43,7 @@
 .profile-search-clear:hover { color: var(--gold); }
 .profile-search-empty {
   padding: 0 40px 32px;
-  font-family: 'Crimson Pro', Georgia, serif; font-size: 15px;
+  font-family: var(--font-text); font-size: 17px;
   color: var(--muted); opacity: 0.65;
 }
 @media (max-width: 600px) {
@@ -112,7 +112,7 @@
 <script src="/shared-data.js?v=2"></script>
 <script src="/empire-profiles.js?v=3"></script>
 <script src="/shared-nav.js?v=4"></script>
-<script src="/epoch-stats.js"></script>
+<script src="/epoch-stats.js?v=2"></script>
 <script>
 // ── Era classifier ────────────────────────────────────────────────────────────
 function getEmpireEra(empire) {

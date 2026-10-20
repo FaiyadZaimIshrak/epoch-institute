@@ -12,10 +12,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/404">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="/shared.css?v=4">
+<link rel="stylesheet" href="/shared.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 .error-page {
   min-height: 100vh; display: flex; flex-direction: column;
@@ -23,16 +23,16 @@
   padding: 40px 24px;
 }
 .error-code {
-  font-family: 'Cinzel', serif; font-size: clamp(64px, 12vw, 120px);
+  font-family: var(--font-display); font-size: clamp(64px, 12vw, 120px);
   color: var(--gold); opacity: 0.15; letter-spacing: 0.06em;
   line-height: 1; margin: 0;
 }
 .error-title {
-  font-family: 'Cinzel', serif; font-size: clamp(14px, 2.5vw, 20px);
+  font-family: var(--font-display); font-size: clamp(14px, 2.5vw, 20px);
   letter-spacing: 0.1em; color: var(--gold-light); margin: 16px 0 12px;
 }
 .error-desc {
-  font-family: 'Crimson Pro', Georgia, serif; font-size: 16px;
+  font-family: var(--font-text); font-size: 18px;
   color: var(--muted); line-height: 1.7; max-width: 480px;
   margin: 0 auto 36px;
 }
@@ -40,11 +40,10 @@
   display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
 }
 .error-link {
-  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em;
+  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--muted); text-decoration: none;
   border: 0.5px solid var(--border); padding: 10px 20px; border-radius: 2px;
-  transition: border-color 0.2s, color 0.2s;
-}
+  transition: border-color 0.2s, color 0.2s; font-weight: 600;}
 .error-link:hover { border-color: var(--gold); color: var(--gold); }
 </style>
 </head>
