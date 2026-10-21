@@ -308,7 +308,7 @@ function buildPage(emp) {
 '<meta property="og:url" content="'+canonicalUrl+'">\n' +
 '<meta property="og:image" content="https://the-epoch-institute.org/images/og/'+slug+'.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/'+slug+'.jpg">\n' +
 '<link rel="canonical" href="'+canonicalUrl+'">\n' +
-'<link rel="stylesheet" href="/shared.css?v=23">\n' +
+'<link rel="stylesheet" href="/shared.css?v=24">\n' +
 '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
 '<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">\n' +
@@ -355,6 +355,7 @@ noProfileNote + '\n' +
 (sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
 (summaryHtml ? '\n    ' + summaryHtml + '\n' : '') +
 (referencesHtml ? '\n    ' + referencesHtml + '\n' : '') +
+'\n    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>\n      <p class="profile-references-title" id="mini-cx-title">Connections</p>\n      <div class="cx-map" id="mini-cx" data-id="' + slug + '"></div>\n      <a class="mini-connections-more" href="/connections#' + slug + '">Open the full connections map →</a>\n    </section>\n' +
 (isPolity ? '\n    ' + relatedHtml(emp) + '\n' : '') +
 '\n' +
 '    <div class="detail-cite-row" id="detail-cite-row">\n' +
@@ -367,8 +368,10 @@ noProfileNote + '\n' +
 '    </div>\n' +
 '  </div>\n</div>\n\n' +
 '<script src="/shared-data.js?v=5">\x3C/script>\n' +
-'<script src="/shared-nav.js?v=9">\x3C/script>\n' +
+'<script src="/shared-nav.js?v=10">\x3C/script>\n' +
 '<script src="/epoch-stats.js?v=2">\x3C/script>\n' +
+'<script src="/connections-map.js?v=1" defer>\x3C/script>\n' +
+'<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});\x3C/script>\n' +
 '<script>\n' +
 '(function(){\n' +
 '  var name="'+name.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'",slug="'+slug+'",url="https://the-epoch-institute.org/empire/'+slug+'";\n' +

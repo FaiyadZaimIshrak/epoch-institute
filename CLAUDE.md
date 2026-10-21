@@ -89,3 +89,7 @@ server, download empire-pages.zip, extract into empire/, commit and push.
 
 ## Reading paths
 `paths` page (Research menu) and a homepage teaser read `reading-paths.js` (READING_PATHS: themed routes of profiles and encyclopedia entries, each step with a one-line reason). Generated from scratchpad design2/paths.json by make-paths.ps1, which validates every profile name and entry slug.
+
+## Connections map and the states register
+- `data/polities.json` — register of every state: nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
+- `connections` page + `connections-map.js` (no D3; radial layout, glowing links, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).
