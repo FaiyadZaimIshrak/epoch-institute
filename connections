@@ -57,7 +57,7 @@
 
 <script src="/shared-data.js?v=5"></script>
 <script src="/shared-nav.js?v=10"></script>
-<script src="/connections-map.js?v=2"></script>
+<script src="/connections-map.js?v=3"></script>
 <script>
 initNav('connections');
 (function () {
