@@ -85,3 +85,6 @@ server, download empire-pages.zip, extract into empire/, commit and push.
 
 ## Share cards
 `images/og/<slug>.jpg` (1200x630) are the social-media preview images for each profile; `images/og/default.jpg` for other pages. Rendered from a card template with headless Edge (scratchpad design2/og.html + make-og.ps1); re-render when a profile's name, dates or teaser changes.
+
+## Reading paths
+`paths` page (Research menu) and a homepage teaser read `reading-paths.js` (READING_PATHS: themed routes of profiles and encyclopedia entries, each step with a one-line reason). Generated from scratchpad design2/paths.json by make-paths.ps1, which validates every profile name and entry slug.

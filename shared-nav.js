@@ -269,7 +269,7 @@ function initNav(activePage) {
     return activePage === page ? ' aria-current="page"' : '';
   }
 
-  const researchActive = ['research','series','explorer','profiles','dataset'].includes(activePage);
+  const researchActive = ['research','series','explorer','profiles','dataset','paths'].includes(activePage);
   const communityActive = activePage === 'community';
   const aboutActive = ['about','contributors'].includes(activePage);
 
@@ -287,6 +287,7 @@ function initNav(activePage) {
       <div class="nav-group-menu" id="nav-research-menu" role="menu">
         <a href="/explorer" id="nav-explorer-link"${activeStyle('explorer')}>Empire Explorer</a>
         <a href="/profiles" id="nav-profiles-link"${activeStyle('profiles')}>Profiles</a>
+        <a href="/paths" id="nav-paths-link"${activeStyle('paths')}>Reading Paths</a>
         <a href="/research-series" id="nav-series-link"${activeStyle('series')}>Research Series</a>
         <a href="/research" id="nav-research-link"${activeStyle('research')}>Research Hub</a>
         <a href="/dataset" id="nav-dataset-link"${activeStyle('dataset')}>Open Dataset</a>
@@ -320,6 +321,7 @@ function initNav(activePage) {
     <span class="nav-dropdown-group">Research</span>
     <a href="/explorer" class="nav-dropdown-link" id="mob-explorer"${activeStyle('explorer')}>Empire Explorer</a>
     <a href="/profiles" class="nav-dropdown-link" id="mob-profiles"${activeStyle('profiles')}>Profiles</a>
+    <a href="/paths" class="nav-dropdown-link" id="mob-paths"${activeStyle('paths')}>Reading Paths</a>
     <a href="/research-series" class="nav-dropdown-link" id="mob-series"${activeStyle('series')}>Research Series</a>
     <a href="/research" class="nav-dropdown-link" id="mob-research"${activeStyle('research')}>Research Hub</a>
     <a href="/dataset" class="nav-dropdown-link" id="mob-dataset"${activeStyle('dataset')}>Open Dataset</a>
@@ -363,6 +365,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
         <a class="footer-link" href="/profiles" id="fl-profiles">Profiles</a>
         <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
+        <a class="footer-link" href="/paths" id="fl-paths">Reading Paths</a>
         <a class="footer-link" href="/research-series" id="fl-series">Research Series</a>
         <a class="footer-link" href="/dataset" id="fl-dataset">Open Dataset</a>
         <a class="footer-link" href="/about#methodology">Methodology</a>

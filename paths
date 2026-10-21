@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading Paths — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Curated routes through The Epoch Institute's profiles and encyclopedia: the Silk Road, steppe empires, religion and power, and more.">
+<meta property="og:title" content="Reading Paths — The Epoch Institute">
+<meta property="og:description" content="Curated routes through history: follow a theme across empires, people and events.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/paths">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/paths">
+<link rel="stylesheet" href="/shared.css?v=22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<main class="paths-page" id="main">
+  <div id="paths-index">
+    <header class="paths-head">
+      <span class="hero-ornament"></span>
+      <h1 class="research-title">Reading Paths</h1>
+      <p class="research-subtitle">Curated routes through the profiles and the encyclopedia. Pick a theme and follow it across empires, people and events.</p>
+    </header>
+    <div class="paths-grid" id="paths-grid"></div>
+  </div>
+  <article class="path-view" id="path-view" hidden></article>
+</main>
+
+<script src="/shared-data.js?v=5"></script>
+<script src="/shared-nav.js?v=9"></script>
+<script src="/reading-paths.js?v=1"></script>
+<script>
+initNav('paths');
+(function () {
+  var data = (typeof READING_PATHS !== 'undefined') ? READING_PATHS : [];
+  var bySlug = {}; data.forEach(function (p) { bySlug[p.slug] = p; });
+  function thumbs(p) {
+    return p.steps.filter(function (s) { return s.img; }).slice(0, 3).map(function (s) { return '<img src="' + escHtml(s.img) + '" alt="" loading="lazy">'; }).join('');
+  }
+  document.getElementById('paths-grid').innerHTML = data.map(function (p) {
+    return '<a class="path-card" href="#' + p.slug + '"><span class="path-thumbs">' + thumbs(p) + '</span>' +
+      '<span class="path-card-body"><span class="featured-region">' + p.steps.length + ' stops</span>' +
+      '<span class="path-card-title">' + escHtml(p.title) + '</span><span class="path-card-tag">' + escHtml(p.tagline) + '</span></span></a>';
+  }).join('');
+  function render(p) {
+    var i = data.indexOf(p), next = data[(i + 1) % data.length];
+    document.getElementById('path-view').innerHTML =
+      '<a class="path-back" href="#index">← All reading paths</a>' +
+      '<div class="path-head"><p class="featured-region">Reading path · ' + p.steps.length + ' stops</p><h1 class="path-title">' + escHtml(p.title) + '</h1>' +
+      '<p class="path-intro">' + escHtml(p.intro) + '</p></div>' +
+      '<ol class="path-steps">' + p.steps.map(function (s, n) {
+        return '<li><a class="path-step" href="' + escHtml(s.href) + '">' +
+          (s.img ? '<img src="' + escHtml(s.img) + '" alt="" loading="lazy">' : '<span class="path-step-ph">' + (n + 1) + '</span>') +
+          '<span class="path-step-body"><span class="path-step-kind">' + (n + 1) + ' · ' + escHtml(s.meta) + '</span>' +
+          '<span class="path-step-name">' + escHtml(s.name) + '</span><span class="path-step-why">' + escHtml(s.why) + '</span></span></a></li>';
+      }).join('') + '</ol>' +
+      (next && next !== p ? '<a class="path-next" href="#' + next.slug + '">Next path: ' + escHtml(next.title) + ' →</a>' : '');
+    document.title = p.title + ' — Reading Paths — The Epoch Institute';
+  }
+  function route() {
+    var p = bySlug[decodeURIComponent(location.hash.slice(1))], idx = document.getElementById('paths-index'), view = document.getElementById('path-view');
+    if (p) { render(p); idx.hidden = true; view.hidden = false; window.scrollTo(0, 0); }
+    else { idx.hidden = false; view.hidden = true; document.title = 'Reading Paths — The Epoch Institute'; }
+  }
+  window.addEventListener('hashchange', route); route();
+})();
+</script>
+
+</body>
+</html>

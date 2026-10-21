@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
 <meta name="twitter:site" content="@EpochInstitute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=20">
+<link rel="stylesheet" href="/shared.css?v=22">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -97,6 +97,15 @@
     <div><p class="browse-label">By era</p><div class="browse-chips" id="browse-eras"></div></div>
     <div><p class="browse-label">By region</p><div class="browse-chips" id="browse-regions"></div></div>
   </div>
+</section>
+
+<!-- Reading paths -->
+<section class="home-section" aria-labelledby="paths-title">
+  <div class="home-section-hd">
+    <h2 class="home-section-title" id="paths-title">Reading Paths</h2>
+    <a class="home-section-more" href="/paths">All reading paths →</a>
+  </div>
+  <div class="paths-grid home-paths" id="home-paths"></div>
 </section>
 
 <!-- Daily quiz -->
@@ -186,8 +195,9 @@
 </div>
 
 <script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=8"></script>
+<script src="/shared-nav.js?v=9"></script>
 <script src="/home-data.js?v=4"></script>
+<script src="/reading-paths.js?v=1"></script>
 <script>
 initNav('home');
 
@@ -242,6 +252,17 @@ initNav('home');
       '<span class="enc-day-name">' + escHtml(en.name) + '</span>' +
       '<span class="enc-day-desc">' + escHtml(en.desc) + '</span>' +
       '<span class="home-section-more">Read the entry →</span></span></a>';
+  }
+
+  // Reading paths teaser: three paths, rotating daily
+  if (typeof READING_PATHS !== 'undefined' && READING_PATHS.length) {
+    var rp = READING_PATHS.slice(), start = day % rp.length, three = [0, 1, 2].map(function (k) { return rp[(start + k) % rp.length]; });
+    document.getElementById('home-paths').innerHTML = three.map(function (p) {
+      var th = p.steps.filter(function (s) { return s.img; }).slice(0, 3).map(function (s) { return '<img src="' + escHtml(s.img) + '" alt="" loading="lazy">'; }).join('');
+      return '<a class="path-card" href="/paths#' + p.slug + '"><span class="path-thumbs">' + th + '</span><span class="path-card-body">' +
+        '<span class="featured-region">' + p.steps.length + ' stops</span><span class="path-card-title">' + escHtml(p.title) + '</span>' +
+        '<span class="path-card-tag">' + escHtml(p.tagline) + '</span></span></a>';
+    }).join('');
   }
 
   // Continue reading: the profile last read in this browser (from the empire pages' progress tracking)
