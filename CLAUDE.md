@@ -70,6 +70,8 @@ To add a new profile, e.g. a culture:
 - `empire-facts.js` — EMPIRE_FACTS: capital, founder, predecessor, successor per empire (key-facts box).
   Loaded only by generator.html. The template also builds the table of contents, reading time and
   related/earlier/later empires from EMPIRES (same region, overlapping years).
+- `empire-glance.js` — GLANCE: per profile 3 takeaways (t), a 'Did you know?' (dyk) and 5-8 key events (ev: [year text, text]).
+  Generator renders 'At a glance', and 'Rise & fall' (SVG from EMPIRES.points with numbered event ticks) + timeline.
 - `profile-changes.md` — log of the Oct 2026 fact-check of all 94 profiles (corrections per empire). Not deployed.
 - Editing profile text can break encyclopedia matching: entries are found by their exact name or aliases, so keep
   full names (e.g. "the Battle of Mohács", not "at Mohács") or the entry loses its link.

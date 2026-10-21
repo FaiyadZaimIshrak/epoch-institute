@@ -43,6 +43,7 @@
 <script src="encyclopedia-links.js"></script>
 <script src="empire-section-images.js"></script>
 <script src="empire-facts.js"></script>
+<script src="empire-glance.js"></script>
 <script>
 // ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
 // Wikipedia convention: link the first mention of each entry per section, never inside tags,
@@ -150,9 +151,9 @@ function readingMinutes(profile) {
   var words = text.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 230));
 }
-function tocHtml(sectionKeys, profile) {
+function tocHtml(sectionKeys, profile, lead) {
   if (!profile) return '';
-  var items = [['empire-stats-panel', 'Historical analysis']].concat(sectionKeys.filter(function (p) { return profile[p[0]]; }).map(function (p) { return [p[0], p[1]]; }));
+  var items = (lead || []).concat(sectionKeys.filter(function (p) { return profile[p[0]]; }).map(function (p) { return [p[0], p[1]]; }));
   if (profile.summary) items.push(['summary', 'Summary']);
   if (Array.isArray(profile.references) && profile.references.length) items.push(['detail-references', 'References']);
   return '<nav class="empire-toc" aria-label="On this page">\n      <p class="empire-toc-title">On this page</p>\n      <ul>' +
@@ -179,6 +180,56 @@ function relatedHtml(emp) {
     '      <div class="related-grid">' + same.map(function (e) { return empireCard(e); }).join('') + '</div>\n' +
     '      <div class="related-prevnext">' + (prev ? empireCard(prev, '← Earlier') : '<span></span>') + (next ? empireCard(next, 'Later →') : '') + '</div>\n' +
     '    </section>';
+}
+
+// ── At a glance (takeaways + did you know), rise-and-fall chart, key events (empire-glance.js) ──
+function glanceOf(name) { return (typeof GLANCE !== 'undefined' && GLANCE[name]) || null; }
+function glanceHtml(name) {
+  var g = glanceOf(name); if (!g) return '';
+  return '<section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">\n' +
+    '      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul>' +
+    g.t.map(function (t) { return '<li>' + linkify(esc(t), name) + '</li>'; }).join('') + '</ul></div>\n' +
+    '      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>' + linkify(esc(g.dyk), name) + '</p></aside>\n' +
+    '    </section>';
+}
+// "c. 1250 BCE" -> -1250, "330" -> 330, "13th century" -> 1250, "Mid-13th century BCE" -> -1250; null if no number
+function eventYear(s) {
+  var bce = /BCE|BC\b/.test(s), m = s.match(/(\d{1,2})(?:st|nd|rd|th)\s+centur/i), n;
+  if (m) n = (parseInt(m[1], 10) - 1) * 100 + 50;
+  else { m = s.match(/\d{1,4}/); if (!m) return null; n = parseInt(m[0], 10); }
+  return bce ? -n : n;
+}
+function riseFallHtml(emp, name, isPolity) {
+  var g = glanceOf(name); if (!g && !isPolity) return '';
+  var svg = '';
+  if (isPolity && emp.points && emp.points.length > 1) {
+    var W = 760, H = 206, PX = 20, PT = 26, PB = 46, pts = emp.points.slice().sort(function (a, b) { return a[0] - b[0]; });
+    var y0 = pts[0][0], y1 = pts[pts.length - 1][0], span = (y1 - y0) || 1;
+    var X = function (y) { return PX + (y - y0) / span * (W - 2 * PX); }, Y = function (v) { return H - PB - v / 10 * (H - PT - PB); };
+    var line = pts.map(function (p, i) { return (i ? 'L' : 'M') + X(p[0]).toFixed(1) + ' ' + Y(p[1]).toFixed(1); }).join(' ');
+    var area = line + ' L' + X(y1).toFixed(1) + ' ' + (H - PB) + ' L' + X(y0).toFixed(1) + ' ' + (H - PB) + ' Z';
+    var peak = pts.reduce(function (m, p) { return p[1] >= m[1] ? p : m; });
+    var ticks = '';
+    (g ? g.ev : []).forEach(function (e, i) {
+      var yr = eventYear(e[0]); if (yr === null || yr < y0 - span * 0.1 || yr > y1 + span * 0.1) return;
+      var x = X(Math.min(Math.max(yr, y0), y1)).toFixed(1);
+      ticks += '<g class="rf-ev"><line x1="' + x + '" x2="' + x + '" y1="' + (H - PB) + '" y2="' + (H - PB + 6) + '"/><circle cx="' + x + '" cy="' + (H - PB) + '" r="8"/><text x="' + x + '" y="' + (H - PB + 4) + '" text-anchor="middle">' + (i + 1) + '</text><title>' + esc(e[0] + ': ' + e[1]) + '</title></g>';
+    });
+    svg = '<figure class="rf-chart"><svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Relative power of the ' + esc(name) + ' over time, peaking in ' + formatYear(peak[0]) + '">' +
+      '<line class="rf-base" x1="' + PX + '" x2="' + (W - PX) + '" y1="' + (H - PB) + '" y2="' + (H - PB) + '"/>' +
+      '<path class="rf-area" d="' + area + '"/><path class="rf-line" d="' + line + '"/>' +
+      '<circle class="rf-peak" cx="' + X(peak[0]).toFixed(1) + '" cy="' + Y(peak[1]).toFixed(1) + '" r="5"/>' +
+      '<text class="rf-peak-label" x="' + X(peak[0]).toFixed(1) + '" y="' + (Y(peak[1]) - 10).toFixed(1) + '" text-anchor="middle">Peak ' + formatYear(peak[0]) + '</text>' +
+      ticks +
+      '<text class="rf-axis" x="' + PX + '" y="' + (H - 6) + '">' + formatYear(y0) + '</text>' +
+      '<text class="rf-axis" x="' + (W - PX) + '" y="' + (H - 6) + '" text-anchor="end">' + formatYear(y1) + '</text>' +
+      '</svg><figcaption>Relative power on the Institute\'s 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure>';
+  }
+  var list = g ? '<ol class="rf-events">' + g.ev.map(function (e) {
+    return '<li><span class="rf-year">' + esc(e[0]) + '</span><span class="rf-text">' + linkify(esc(e[1]), name) + '</span></li>';
+  }).join('') + '</ol>' : '';
+  return '<section class="rise-fall" id="timeline" aria-labelledby="timeline-title">\n' +
+    '      <h2 class="profile-section-title" id="timeline-title">' + (isPolity ? 'Rise &amp; Fall' : 'Timeline') + '</h2>\n      ' + svg + list + '\n    </section>';
 }
 
 // One picture per profile section (empire-section-images.js), linked to its encyclopedia entry, with credit.
@@ -256,7 +307,7 @@ function buildPage(emp) {
 '<meta property="og:type" content="article">\n' +
 '<meta property="og:url" content="'+canonicalUrl+'">\n' +
 '<link rel="canonical" href="'+canonicalUrl+'">\n' +
-'<link rel="stylesheet" href="/shared.css?v=15">\n' +
+'<link rel="stylesheet" href="/shared.css?v=17">\n' +
 '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
 '<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">\n' +
@@ -294,8 +345,10 @@ factRows(name) +
 (profile ? '        <p class="empire-meta">' + readingMinutes(profile) + ' min read · Last reviewed October 2026</p>\n' : '') +
 '      </div>\n' +
 '    </div>\n\n' +
-'    ' + tocHtml(sectionKeys, profile) + '\n\n' +
+(glanceOf(name) ? '    ' + glanceHtml(name) + '\n\n' : '') +
+'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []))) + '\n\n' +
 (isPolity ? '    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' : '') +
+'    ' + riseFallHtml(emp, name, isPolity) + '\n\n' +
 noProfileNote + '\n' +
 (sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
 (summaryHtml ? '\n    ' + summaryHtml + '\n' : '') +
