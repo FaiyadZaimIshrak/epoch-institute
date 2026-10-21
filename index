@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
 <meta name="twitter:site" content="@EpochInstitute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
-<link rel="stylesheet" href="/shared.css?v=18">
+<link rel="stylesheet" href="/shared.css?v=19">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -186,7 +186,7 @@
 </div>
 
 <script src="/shared-data.js?v=4"></script>
-<script src="/shared-nav.js?v=7"></script>
+<script src="/shared-nav.js?v=8"></script>
 <script src="/home-data.js?v=4"></script>
 <script>
 initNav('home');
@@ -440,7 +440,7 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
       '</div>' +
       '<p class="tih-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
       '<p class="tih-title">' + escHtml(ev.title) + '</p>' +
-      '<p class="tih-desc">' + escHtml(ev.description) + '</p>' +
+      '<p class="tih-desc">' + escHtml(ev.description) + '</p>' + tihTags(ev) +
     '</div>';
   }
 
@@ -541,7 +541,7 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
   })();
 
   Promise.all([
-    fetch('/data/history.json').then(function(r) { if (!r.ok) throw new Error(); return r.json(); }),
+    fetch('/data/history.json?v=2').then(function(r) { if (!r.ok) throw new Error(); return r.json(); }),
     fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
   ]).then(function(results) {
     var events  = results[0][key] || [];

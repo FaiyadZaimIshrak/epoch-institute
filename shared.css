@@ -2705,3 +2705,10 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .quiz-verdict { width: 100%; font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--text); margin: 0; }
 .quiz-answer { font-family: var(--font-display); font-size: 22px; color: var(--gold-light); text-decoration: none; }
 .quiz-next { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+/* ── Today in History: related profile + encyclopedia tags ── */
+.tih-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.tih-tag { font-family: var(--font-ui); font-size: 13px; text-decoration: none; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); color: var(--text); }
+.tih-tag.enc-link { color: var(--gold); text-decoration: none; }
+.tih-tag:hover { border-color: var(--gold); color: var(--gold-light); }
+.tih-tag-profile { background: rgba(var(--gold-rgb), 0.12); border-color: rgba(var(--gold-rgb), 0.5); color: var(--gold-light); font-weight: 600; }
+@media (max-width: 600px) { .tih-tag { padding: 8px 12px; } }

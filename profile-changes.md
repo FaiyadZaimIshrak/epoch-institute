@@ -1216,3 +1216,573 @@ One-line teasers shown on profile cards, the homepage and the explorer, fact-che
 - **Seleucid Empire**: FACT: the Seleucids did not single-handedly 'create the Hellenistic world' (shared with the Ptolemies and others); influence on Christianity and Judaism made concrete via the Maccabean revolt.
 - **Maratha Empire**: FACT: the Marathas never 'nearly expelled' the British, who defeated them by 1818; they did break Mughal supremacy (profile).
 - **Aztec Empire**: FACT: Tenochtitlan (founded c. 1325) was not of the 'ancient world'; the calendar was a shared Mesoamerican one, not an Aztec creation; added population estimate (profile).
+
+## Today in History corrections (data/history.json, Oct 2026)
+
+Every event was checked against its calendar date; events that did not happen on that day were replaced, facts corrected.
+
+- **01-01, 1001**: Replaced: the conquest of Mecca took place around 11 January 630, not 1 January; substituted Stephen I's coronation (traditionally dated 1 January 1001).
+- **01-01, 1739**: Corrected the distance to the nearest land (about 1,600 km, not 1,700 km).
+- **01-01, 1773**: Clarified that Newton's abolitionism came later in his life.
+- **01-01, 1877**: Corrected: the British Raj began in 1858; the 1877 durbar proclaimed the imperial title rather than inaugurating the Raj.
+- **01-01, 1890**: Replaced: no 25-nation adoption of time zones took place on 1 January 1885 (the Meridian Conference met in October 1884); substituted the founding of the Italian colony of Eritrea on 1 January 1890.
+- **01-01, 1959**: Corrected: Castro's government was not declared communist in 1959; that came in 1961.
+- **01-01, 1970**: Clarified that the epoch was a reference date chosen retrospectively, not an event on the day.
+- **01-02, 1777**: Corrected: the Battle of Princeton was fought on 3 January 1777; on 2 January the armies fought at Assunpink Creek (Second Trenton).
+- **01-02, 1818**: Corrected the founding details (three founders; Telford became president in 1820).
+- **01-02, 1959**: Clarified that 2 January was the launch date.
+- **01-02, 1963**: Corrected: the Viet Cong were South Vietnamese insurgents, not North Vietnamese troops.
+- **01-02, 2004**: Replaced: the Spirit rover landed on Mars on 3-4 January 2004, not 2 January; substituted Stardust's comet flyby on 2 January 2004.
+- **01-03, 1925**: Replaced: the African National Congress (as the SANNC) was founded on 8 January 1912, not 3 January; substituted Mussolini's speech of 3 January 1925.
+- **01-03, 1959**: Replaced: Charles de Gaulle took office as President of the Fifth Republic on 8 January 1959, not 3 January; substituted Alaska's statehood on 3 January 1959.
+- **01-03, 1993**: Replaced: the Watergate burglars' trial began on 8 January 1973, not 3 January; substituted the signing of START II on 3 January 1993.
+- **01-04, 46 BCE**: Corrected: Caesar's opponent at Ruspina was Labienus, not Scipio, and the battle was a narrow escape rather than a victory.
+- **01-05, 1757**: Replaced: John Rut's letter from Newfoundland was written in August 1527, not 5 January; substituted Damiens's attack on Louis XV on 5 January 1757.
+- **01-06, 1412**: Noted that the date of Joan's birth is traditional.
+- **01-06, 1838**: Corrected: the demonstration was a private one at Speedwell Ironworks, made jointly with Alfred Vail.
+- **01-06, 1950**: Replaced: no decisive halt to the Battle of the Bulge occurred on 6 January 1945; substituted Britain's recognition of the People's Republic of China on 6 January 1950.
+- **01-07, 1785**: Corrected: the balloon was filled with hydrogen, not hot air.
+- **01-08, 1926**: Corrected: the proclamation did not unify the whole Arabian Peninsula.
+- **01-09, 1693**: Corrected: the catastrophic main shock struck on 11 January 1693; 9 January saw the damaging foreshock.
+- **01-09, 1861**: Replaced: the daguerreotype was announced to the French Academy of Sciences on 7 January 1839, not 9 January; substituted the Star of the West incident of 9 January 1861.
+- **01-09, 1916**: Adjusted the casualty figure to a more defensible estimate.
+- **01-10, 1072**: Replaced: Pope Gregory VII excommunicated Henry IV in February 1076, not 10 January; substituted the Norman capture of Palermo on 10 January 1072.
+- **01-10, 1840**: Corrected: the Penny Black stamp was issued in May 1840; 10 January saw the start of the uniform penny rate.
+- **01-10, 1901**: Corrected: the American oil industry began in Pennsylvania in 1859; Spindletop launched the Texas boom.
+- **01-10, 1920**: Corrected: on 10 January 1920 the Covenant took effect; the League's first council met in Paris on 16 January and it later sat in Geneva.
+- **01-10, 1954**: Replaced: IBM's Georgetown machine-translation demonstration took place on 7 January 1954; substituted the BOAC Flight 781 disaster of 10 January 1954.
+- **01-11, 1158**: Replaced: Tughril Beg entered Baghdad in December 1055, not 11 January; substituted Vladislaus II's elevation as King of Bohemia on 11 January 1158.
+- **01-11, 1922**: Clarified that the first injection was unsuccessful and the purified extract succeeded on 23 January.
+- **01-12, 1528**: Replaced: France and England declared war on Charles V on 22 January 1528, not 12 January; substituted Gustav Vasa's coronation on 12 January 1528.
+- **01-12, 1755**: Noted the Old Style date and Shuvalov's role.
+- **01-12, 1970**: Adjusted the death toll to the generally cited range.
+- **01-13, 1128**: Corrected: the council was presided over by a papal legate, not by Pope Honorius II in person.
+- **01-14, 1236**: Replaced: the Council of Troyes duplicates 13 January (1128/1129) and did not meet on 14 January; substituted Henry III's marriage on 14 January 1236.
+- **01-14, 1761**: Replaced: Handel's 'Messiah' premiered in Dublin on 13 April 1742, not 14 January; substituted the Third Battle of Panipat on 14 January 1761.
+- **01-15, 69**: Corrected: Galba's murder did not begin the Year of the Four Emperors; he was already emperor from June 68.
+- **01-15, 1777**: Replaced: the Gazette of the United States first appeared on 15 April 1789 in New York; substituted Vermont's declaration of independence on 15 January 1777.
+- **01-15, 1919**: Corrected: the uprising had already been suppressed when they were killed.
+- **01-15, 1973**: Corrected: the Paris Peace Accords were signed twelve days later (27 January), not eight.
+- **01-16, 1780**: Corrected: the British fleet was larger than the Spanish squadron, not smaller.
+- **01-16, 1919**: Corrected: the amendment was ratified on 16 January 1919; Prohibition began on 17 January 1920.
+- **01-16, 2003**: Corrected the interval to re-entry (sixteen days).
+- **01-17, 1377**: Clarified that Gregory XI entered Rome on this date, having left Avignon in 1376.
+- **01-17, 1781**: Replaced: no USS Constitution action against Tripoli took place on 17 January 1806 (the First Barbary War ended in 1805); substituted the Battle of Cowpens on 17 January 1781.
+- **01-18, 1535**: Corrected: the Viceroyalty of Peru was created in 1542, after Lima's foundation.
+- **01-18, 1778**: Corrected: Cook sighted the islands on 18 January and landed on Kauai on 20 January.
+- **01-18, 1958**: Replaced: Bobby Fischer earned the grandmaster title in late 1958, not on 18 January; substituted Willie O'Ree's NHL debut on 18 January 1958.
+- **01-19, 1917**: Corrected: the telegram was sent on 16 January and forwarded to Mexico on 19 January; British codebreakers had already intercepted it.
+- **01-19, 1983**: Corrected: the Xerox Star (1981) preceded the Lisa as a commercial computer with a graphical interface.
+- **01-20, 1265**: Corrected: earlier English parliaments existed; de Montfort's was the first to include burgesses as well as knights.
+- **01-20, 1841**: Corrected: the January 1841 agreement was a preliminary convention; formal cession came with the Treaty of Nanking in 1842.
+- **01-20, 1936**: Replaced: the American Civil Liberties Union was founded on 19 January 1920, not 20 January; substituted the accession of Edward VIII on 20 January 1936.
+- **01-22, 1517**: Corrected: 22 January was the decisive Battle of Ridaniya; Cairo itself was taken in the following days.
+- **01-25, 1554**: Replaced: Moscow University's founding decree is dated 12 January 1755 (Old Style) and already appears on that day; substituted the founding of São Paulo on 25 January 1554.
+- **01-25, 1858**: Rewritten: the claim that the wedding was the first royal event reported by telegraph could not be verified; the description now focuses on the wedding itself.
+- **01-26, 1950**: Corrected: the monarch replaced was King George VI as King of India, not a 'King of England'.
+- **01-28, 1871**: Corrected: the armistice did not formally end the war; the Treaty of Frankfurt followed in May 1871.
+- **01-29, 1676**: Replaced: French forces did not capture Genoa on 29 January 1528; substituted Feodor III's accession on 29 January 1676.
+- **01-29, 1820**: Replaced: West Point was established by Act of Congress on 16 March 1802, not 29 January; substituted the death of George III on 29 January 1820.
+- **01-29, 1886**: Corrected: Benz filed his patent application on this date; it was granted later in 1886.
+- **01-29, 1916**: Corrected: the first Zeppelin raid on Paris took place in March 1915; this was a later raid.
+- **01-31, 1919**: Replaced: Trotsky's deportation from the Soviet Union took place in February 1929, not 31 January; substituted the George Square riot of 31 January 1919.
+- **01-31, 1961**: Corrected: Ham was not the first primate in space; monkeys had flown since 1949. He was the first chimpanzee (great ape).
+- **01-31, 1971**: Corrected: Apollo 14 launched on 31 January and landed on the Moon on 5 February.
+- **02-01, 1865**: Removed an unsupported quotation attributed to Lincoln.
+- **02-01, 1920**: Replaced: the Treaty of Versailles came into force on 10 January 1920, not 1 February; substituted the creation of the RCMP on 1 February 1920.
+- **02-02, 2007**: Replaced: the United Kingdom left the EU on 31 January 2020, not 2 February; substituted the IPCC report of 2 February 2007.
+- **02-03, 1451**: Clarified that 3 February was the date of Murad II's death, which opened Mehmed's second reign.
+- **02-03, 1690**: Noted that the year follows the Old Style calendar (1690/91).
+- **02-04, 1794**: Corrected: French colonial slavery was finally abolished in 1848; Haiti's independence ended it only in Haiti.
+- **02-04, 1861**: Corrected: the convention opened on 4 February; Davis was elected on 9 February.
+- **02-05, 1597**: Replaced: the Shaanxi earthquake occurred on 23 January 1556, not 5 February; substituted the Nagasaki martyrdoms of 5 February 1597.
+- **02-05, 1852**: Replaced: Chile's independence was proclaimed on 12 February 1818, not 5 February; substituted the opening of the New Hermitage on 5 February 1852.
+- **02-05, 1900**: Replaced: the Senate ratified the Treaty of Paris annexing the Philippines on 6 February 1899; substituted the Hay-Pauncefote Treaty signed on 5 February 1900.
+- **02-06, 1820**: Corrected: the Elizabeth sailed from New York on 6 February; the settlers reached Sherbro Island in March.
+- **02-07, 457**: Corrected: Leo I died in 474, before the end of the Western Empire in 476.
+- **02-07, 1904**: Replaced: Lewis Carroll first told the Alice story on 4 July 1862, not 7 February 1863; substituted the Great Baltimore Fire of 7 February 1904.
+- **02-09, 474**: Corrected: Leo II was already emperor; on 9 February 474 he crowned his father Zeno as co-emperor.
+- **02-10, 1258**: Corrected: Baghdad surrendered on 10 February; the Caliph was executed around 20 February.
+- **02-10, 1763**: Corrected: France did not cede India; it kept its trading posts there.
+- **02-11, 1752**: Replaced: the US Senate first opened its sessions to the public in December 1795, not on 11 February 1794; substituted the opening of Pennsylvania Hospital on 11 February 1752.
+- **02-11, 1847**: Corrected: Edison did not invent the light bulb itself, but a practical long-lasting version.
+- **02-12, 1502**: Corrected: the decree applied to Castile only; Muslims remained in Aragon until 1526 and Moriscos until 1609-14.
+- **02-12, 1974**: Corrected: Solzhenitsyn was arrested on 12 February and expelled on 13 February.
+- **02-13, 1258**: Corrected: the Caliph was executed around 20 February, not on 13 February.
+- **02-13, 1861**: Replaced: the Kingdom of Italy was proclaimed on 17 March 1861, not 13 February; substituted the surrender of Gaeta on 13 February 1861.
+- **02-14, 278**: Corrected: Claudius II died in 270 and cannot have ordered an execution in 278; the date and details are traditional.
+- **02-14, 842**: Corrected: the oaths are the earliest text in Old French but not in Old High German, which survives in earlier texts.
+- **02-15, 1113**: Replaced: Gregory the Great was consecrated pope on 3 September 590, not 15 February; substituted the recognition of the Hospitallers on 15 February 1113.
+- **02-15, 1898**: Corrected the death toll (about 260).
+- **02-16, 1804**: Noted that Nelson's praise is reported rather than documented.
+- **02-16, 1923**: Corrected: the opening revealed the gilded shrine; the sarcophagus itself was opened in 1924.
+- **02-16, 1945**: Corrected: Bataan is a peninsula, not a city; 16 February 1945 saw the assault on Corregidor.
+- **02-18, 1229**: Replaced: Kublai Khan proclaimed the Yuan dynasty in 1271, not on 18 February 1268; substituted the Treaty of Jaffa of 18 February 1229.
+- **02-18, 1885**: Replaced: the union of Upper and Lower Canada took effect on 10 February 1841, not 18 February 1840; substituted the US publication of Huckleberry Finn on 18 February 1885.
+- **02-20, 1472**: Clarified that the islands were pledged in 1468-69 and annexed in 1472.
+- **02-21, 1613**: Noted that the date is Old Style.
+- **02-21, 1804**: Replaced: Celsius presented his temperature scale in 1742, and no 21 February 1741 presentation is documented; substituted Trevithick's Penydarren run on 21 February 1804.
+- **02-22, 1495**: Corrected: the Italian Wars began with the invasion of 1494; Charles did not conquer the whole peninsula.
+- **02-23, 1455**: Noted that the date is traditional.
+- **02-24, 1525**: Corrected: Charles V was not present; his generals commanded at Pavia.
+- **02-24, 1821**: Corrected: 24 February 1821 saw the Plan of Iguala; independence was declared on 28 September 1821.
+- **02-24, 1920**: Corrected: the party was founded in January 1919 and renamed in 1920.
+- **02-24, 1946**: Replaced: the Voice of America began broadcasting on 1 February 1942, not 24 February; substituted Perón's election on 24 February 1946.
+- **02-27, 1939**: Corrected: the Civil War ended on 1 April 1939, after recognition.
+- **02-28, 1784**: Corrected: the deed gave the Methodist Conference legal status; separation from the Church of England came after Wesley's death.
+- **03-01, 1836**: Corrected: the Texas Declaration of Independence was adopted on 2 March 1836; the convention opened on 1 March.
+- **03-01, 1896**: Corrected: Ethiopia was occupied by Italy in 1936-41, and Liberia also remained uncolonised.
+- **03-01, 2005**: Replaced: the draft human genome was published in Nature on 15 February 2001, not 1 March; substituted Roper v. Simmons, decided on 1 March 2005.
+- **03-02, 1836**: Corrected: 2 March was the declaration of independence; the Texas constitution was adopted on 16-17 March.
+- **03-02, 1861**: Replaced: Alexander II's emancipation manifesto was signed on 19 February Old Style (3 March New Style), not 2 March; substituted the creation of the Nevada and Dakota territories on 2 March 1861.
+- **03-02, 1930**: Corrected: Lawrence died at Vence in France, not Venice.
+- **03-03, 473**: Corrected: Glycerius was raised by Gundobad rather than by the Roman army as a whole.
+- **03-03, 1585**: Replaced: the Union of Krewo was agreed on 14 August 1385, not 3 March 1386; substituted the opening of the Teatro Olimpico on 3 March 1585.
+- **03-03, 1848**: Replaced: the Berlin revolution broke out on 18 March 1848, not 3 March; substituted Kossuth's speech of 3 March 1848.
+- **03-03, 1918**: Corrected: Finland was already independent and was not ceded by the treaty.
+- **03-04, 1966**: Replaced: Kwame Nkrumah became Prime Minister of the Gold Coast on 21 March 1952, not 4 March; substituted the publication of Lennon's interview on 4 March 1966.
+- **03-05, 1946**: Corrected: Churchill popularised rather than coined the phrase 'iron curtain'.
+- **03-05, 1960**: Replaced: the Lucky Dragon crew's radiation sickness came to light after their return to port on 14 March 1954; substituted Korda's photograph of 5 March 1960.
+- **03-07, 161**: Corrected: Marcus Aurelius ruled jointly with Lucius Verus, not as sole emperor, at first.
+- **03-08, 1702**: Replaced: the date The Theatre opened in Shoreditch in 1576 is not recorded; substituted the accession of Queen Anne on 8 March 1702.
+- **03-08, 1942**: Corrected: the conquest of Burma was not completed until May 1942.
+- **03-09, 1796**: Corrected: the divorce took effect in January 1810, not 1809.
+- **03-10, 241 BCE**: Corrected: the victory gave Rome its first overseas province rather than its first overseas victory.
+- **03-10, 1804**: Replaced: the Battle of Falkirk Muir was fought on 17 January 1746, not 10 March; substituted the 'Three Flags Day' transfer of 10 March 1804.
+- **03-10, 1848**: Corrected: the payment was 15 million dollars plus assumed claims, not 18 million.
+- **03-10, 2000**: Replaced: the Tohoku earthquake and tsunami struck Japan on 11 March 2011, not 10 March; substituted the Nasdaq peak of 10 March 2000.
+- **03-11, 1811**: Replaced: 'Frankenstein' was published on 1 January 1818, not 11 March; substituted the first Luddite attacks of 11 March 1811.
+- **03-11, 1917**: Corrected: Ottoman rule in Mesopotamia did not end until 1918.
+- **03-12, 1088**: Replaced: Vitiges began the siege of Rome on 2 March 537, not 12 March; substituted the election of Urban II on 12 March 1088.
+- **03-12, 1664**: Replaced: Bermuda was settled after the Sea Venture wreck of July 1609, not on 12 March 1609; substituted Charles II's grant of 12 March 1664.
+- **03-14, 1942**: Corrected: Miller had streptococcal septicaemia, not endocarditis.
+- **03-17, 461**: Noted that the year of Patrick's death is uncertain.
+- **03-17, 1905**: Corrected: the special relativity paper was submitted in June 1905; 17 March is the date of the photoelectric (light quanta) paper.
+- **03-17, 1948**: Corrected: NATO did not replace the Brussels Treaty, which continued as the Western European Union until 2011.
+- **03-18, 1871**: Corrected: 18 March was the uprising; the Commune was formally proclaimed on 28 March.
+- **03-18, 1990**: Replaced: the German monetary union treaty was signed in May and took effect on 1 July 1990; substituted East Germany's elections of 18 March 1990.
+- **03-19, 1279**: Corrected: Kublai had already proclaimed the Yuan dynasty in 1271.
+- **03-20, 1602**: Removed an unsupported claim that the VOC controlled half of world shipping.
+- **03-20, 1852**: Noted that Lincoln's remark to Stowe is a later, unverified anecdote.
+- **03-21, 1800**: Replaced: the Convention of 1800 (Treaty of Mortefontaine) was signed on 30 September 1800, not 21 March; substituted the coronation of Pius VII on 21 March 1800.
+- **03-22, 1945**: Corrected: Yemen joined in May 1945 and was not among the signatories on 22 March.
+- **03-23, 1540**: Replaced: no well-documented battle at Honselersdijk took place on 23 March 1568; substituted the surrender of Waltham Abbey on 23 March 1540.
+- **03-24, 1401**: Corrected: the sack did not end Mamluk power, which lasted until 1517.
+- **03-25, 1821**: Noted that the date and the Germanos episode are traditional; independence was recognised in 1830.
+- **03-26, 1812**: Corrected: it struck on Holy Thursday, the same feast as the 1810 rising, not the anniversary of the 1811 declaration.
+- **03-26, 1971**: Replaced: Britain's driving test was introduced in 1935, not on 26 March 1934; substituted Bangladesh's declaration of independence on 26 March 1971.
+- **03-26, 1979**: Corrected: Sadat and Begin received the Nobel Peace Prize in 1978, for the Camp David Accords.
+- **03-26, 1995**: Replaced: NATO's air campaign against Yugoslavia began on 24 March 1999, not 26 March; substituted the start of Schengen on 26 March 1995.
+- **03-27, 1513**: Replaced: Robert the Bruce was defeated at Methven on 19 June 1306, not victorious on 27 March; substituted Ponce de León's sighting of Florida on 27 March 1513.
+- **03-27, 1871**: Corrected the score: Scotland won by a goal and a try to a try.
+- **03-27, 1980**: Replaced: Pope Francis was elected on 13 March 2013, not 27 March; substituted the reawakening of Mount St Helens on 27 March 1980.
+- **03-28, 1854**: Corrected: the Red Cross was inspired by the Battle of Solferino (1859), not the Crimean War.
+- **03-30, 1814**: Corrected: the battle and capitulation took place on 30 March; the Allies entered Paris on 31 March.
+- **03-30, 1842**: Replaced: the Act of Union for Canada received royal assent on 23 July 1840, not 30 March; substituted Crawford Long's ether operation on 30 March 1842.
+- **03-30, 1981**: Corrected: Reagan was not the first president since Ford to survive an attempt; he was the first serving president to survive being shot.
+- **04-02, 1865**: Corrected interval: Appomattox was seven days later, not nine.
+- **04-03, 1367**: Replaced: Magnus the Good became King of Denmark in 1042, with no documented link to 3 April 1043. Battle of Nájera was fought on 3 April 1367.
+- **04-03, 1559**: Clarified: the treaty of 3 April was Franco-Spanish; England's treaty with France was signed on 2 April.
+- **04-03, 1783**: Replaced: Spain did not formally recognise US independence on 3 April 1783; the Swedish-American treaty was signed that day.
+- **04-05, 823**: Corrected: Lothar was already King of Italy; Paschal crowned him co-emperor.
+- **04-05, 1242**: Replaced: the Jallianwala Bagh massacre took place on 13 April 1919, not 5 April. The Battle on the Ice was fought on 5 April 1242.
+- **04-05, 1994**: Corrected: Cobain died on or about 5 April; he was found dead on 8 April.
+- **04-07, 529**: Replaced: the closure of the Academy in Athens in 529 has no known date; the first Codex was promulgated on 7 April 529.
+- **04-07, 1939**: Replaced: Germany invaded Denmark and Norway on 9 April 1940, not 7 April. Italy invaded Albania on 7 April 1939.
+- **04-08, 217**: Replaced: the Second Lateran Council met in April 1139 but its opening is not securely dated to 8 April. Caracalla was killed on 8 April 217.
+- **04-08, 1953**: Replaced: Dag Hammarskjöld was appointed UN Secretary-General on 7 April 1953, not 8 April. Kenyatta was convicted on 8 April 1953.
+- **04-09, 193**: Corrected: the Year of the Five Emperors began with Commodus's death, and the empire's greatest extent came under Trajan, not Severus.
+- **04-09, 1945**: Corrected: execution was about four weeks, not two, before the German surrender.
+- **04-10, 1606**: Replaced: the Battle of Ravenna was fought on 11 April 1512, not 10 April. The Virginia Company charter was granted on 10 April 1606.
+- **04-13, 1111**: Corrected: the coronation did not end the Investiture Controversy, which was settled by the Concordat of Worms in 1122.
+- **04-14, 69**: Corrected: Otho died two days after the battle, not the next day.
+- **04-15, 1450**: Corrected: Formigny did not end the Hundred Years' War; the decisive final battle was Castillon in 1453.
+- **04-15, 1989**: Corrected: the fans were exonerated by the 2016 inquests (the 2012 panel exposed the police cover-up).
+- **04-16, 1856**: Corrected: the Treaty of Paris ending the Crimean War was signed on 30 March 1856; the Declaration Respecting Maritime Law was signed on 16 April.
+- **04-17, 1946**: Replaced: there is no record of Chaucer reciting the Canterbury Tales at court on 17 April 1397. French evacuation of Syria was completed on 17 April 1946.
+- **04-17, 1521**: Corrected: Luther's refusal ('Here I stand') came on 18 April; on 17 April he asked for time to consider.
+- **04-20, 1653**: Replaced: Cook's first sighting of Australia is recorded on 19 April 1770, not 20 April. Cromwell dissolved the Rump on 20 April 1653.
+- **04-20, 1792**: Replaced: there is no evidence the Curies isolated radium on 20 April 1902. France declared war on Austria on 20 April 1792.
+- **04-21, 1506**: Clarified: the massacre began on 19 April and ended on 21 April.
+- **04-23, 1564**: Corrected: the description referred to the baptism (26 April) rather than the traditional birth date.
+- **04-23, 1616**: Replaced: Cervantes died on 22 April 1616 and was buried on 23 April. Shakespeare died on 23 April 1616.
+- **04-24, 1877**: Corrected: Bulgaria became autonomous in 1878, not independent.
+- **04-25, 1915**: Corrected: Allied deaths numbered about 45,000-56,000, not over 130,000.
+- **04-27, 1521**: Corrected: the expedition did not prove the Earth was round, which was already accepted.
+- **04-27, 1650**: Corrected: Montrose was defeated by Scottish Covenanter troops, not by the English.
+- **04-27, 1810**: Corrected: the piece was published in 1867, some forty years after Beethoven's death.
+- **04-27, 1945**: Corrected: Mussolini was captured on 27 April and executed on 28 April.
+- **04-28, 1952**: Replaced: no first human test of a yellow fever vaccine is documented on 28 April 1932. The San Francisco Peace Treaty took effect on 28 April 1952.
+- **04-29, 1991**: Replaced: France's invasion of the Dutch Republic in 1672 is not dated to 29 April (war was declared on 6 April; the Rhine crossing was on 12 June). The Bangladesh cyclone struck on 29 April 1991.
+- **04-29, 1945**: Corrected: Dachau was not the last major camp liberated (Mauthausen was freed on 5 May).
+- **04-30, 1492**: Corrected: the Capitulations of Santa Fe were agreed on 17 April; on 30 April the Crown issued Columbus's commission of titles.
+- **05-01, 1328**: Replaced: Philip VI was crowned on 29 May 1328, not 1 May. The Treaty of Edinburgh-Northampton was ratified at Northampton on 1 May 1328.
+- **05-02, 1536**: Corrected: Anne was executed seventeen days after her arrest (19 May), not nineteen.
+- **05-03, 1814**: Clarified: Napoleon's ship reached Portoferraio on 3 May; he went ashore on 4 May.
+- **05-03, 1921**: Replaced: no Mingo County clash of 3 May 1921 is documented as the start of the mine wars. The Government of Ireland Act came into force on 3 May 1921.
+- **05-06, 1889**: Replaced: William Tyndale was executed in October 1536 in the Low Countries, not on 6 May and not on Henry VIII's orders. The Paris Exposition opened on 6 May 1889.
+- **05-09, 1864**: Corrected: the Battle of Spotsylvania began on 8 May; Sedgwick's death on 9 May replaces the start date.
+- **05-10, 1503**: Replaced: John Cabot's departure from Bristol in 1497 is usually dated to early or late May, not securely to 10 May. Columbus sighted the Caymans on 10 May 1503.
+- **05-10, 1773**: Corrected: the Tea Act created no new tax and granted the Company a direct-shipping privilege rather than a sales monopoly.
+- **05-11, 1857**: Corrected: the sepoys seized Delhi on 11 May; it was the British who later besieged the city.
+- **05-11, 1998**: Corrected: three tests were conducted on 11 May and two on 13 May, not five on 11 May.
+- **05-12, 1191**: Corrected: the conquest of Cyprus was completed in late May-June 1191; on 12 May Richard married Berengaria at Limassol.
+- **05-12, 1942**: Replaced: the Anglo-Soviet Treaty was signed on 26 May 1942, not 12 May, and was not the Molotov-Ribbentrop Pact. The Second Battle of Kharkov began on 12 May 1942.
+- **05-12, 1949**: Replaced: Expo 67 opened on 27 April 1967, not 12 May. The Berlin Blockade was lifted on 12 May 1949.
+- **05-13, 1787**: Replaced: the Battle of Lewes was fought on 14 May 1264, not 13 May. The First Fleet sailed on 13 May 1787.
+- **05-13, 1568**: Corrected: Mary was defeated at Langside on 13 May and crossed into England on 16 May.
+- **05-15, 1618**: Replaced: Britain declared war on France on 17 May 1756, not 15 May. Kepler recorded the discovery of his third law on 15 May 1618.
+- **05-15, 1957**: Corrected: the test was off Malden Island, not Christmas Island; its yield was lower than intended; the claim that it secured a UN Security Council seat was removed.
+- **05-17, 1521**: Replaced: the siege of Tenochtitlan began in late May 1521, not 17 May. Buckingham was executed on 17 May 1521.
+- **05-19, 1536**: Corrected: Henry was betrothed to Jane Seymour the following day and married her on 30 May.
+- **05-19, 1643**: Replaced: the Spanish Armada left Lisbon in late May 1588, not on 19 May. Rocroi was fought on 19 May 1643.
+- **05-20, 1932**: Corrected: Earhart took off on 20 May and landed in Northern Ireland on 21 May.
+- **05-20, 1940**: Corrected: the first transport of 728 Polish prisoners arrived on 14 June 1940; the 20 May arrivals were 30 German prisoners.
+- **05-22, 337**: Replaced: the Battle of Legnano was fought on 29 May 1176, not 22 May. Constantine died on 22 May 337.
+- **05-22, 1856**: Replaced: the Eighty Years' War has no start on 22 May 1568 (Heiligerlee was fought on 23 May). The caning of Charles Sumner took place on 22 May 1856.
+- **05-22, 1762**: Replaced: no 'Indian Act' reforming the East India Company was passed on 22 May 1761. The Treaty of Hamburg was signed on 22 May 1762.
+- **05-23, 1618**: Corrected: removed the inflated death toll of 12 million (estimates are 4.5-8 million).
+- **05-24, 1543**: Corrected: the book was printed in March 1543, not on the day of his death.
+- **05-24, 1689**: Replaced: no record dates Minuit's purchase of Manhattan to 24 May 1626. The Toleration Act received royal assent on 24 May 1689.
+- **05-25, 1521**: Replaced: Eratosthenes's measurement of the Earth (c. 240 BCE) has no known date. The Edict of Worms was issued on 25 May 1521.
+- **05-26, 1896**: Replaced: the Edict of Worms was issued on 25 May 1521, not 26 May. Nicholas II was crowned on 26 May 1896.
+- **05-27, 1967**: Corrected: the referendum did not grant citizenship, which Aboriginal people already held; it changed census counting and federal powers.
+- **05-28, 1871**: Replaced: the Treaty of Perpetual Peace was concluded in January 1502, not 28 May 1503. The Paris Commune was suppressed on 28 May 1871.
+- **05-28, 1918**: Replaced: Handel's Messiah premiered on 13 April 1742, not 28 May. Azerbaijan and Armenia declared independence on 28 May 1918.
+- **05-30, 1989**: Corrected: the crackdown came five days later, not four.
+- **05-31, 1223**: Corrected: the Mongol invasion of the Rus began in 1237, fourteen years later, not seventeen.
+- **05-31, 1859**: Corrected: the clock started on 31 May 1859; Big Ben first struck the hours on 11 July.
+- **05-31, 1970**: Corrected: it was not the deadliest disaster in the Western Hemisphere (the 2010 Haiti earthquake killed more).
+- **06-01, 193**: Corrected: Severus entered Rome some days later; on 1 June the Senate deposed Julianus, who was killed.
+- **06-01, 1794**: Replaced: the Battle of Jutland was fought on 31 May-1 June 1916 and already appears on 31 May. The Glorious First of June was fought on 1 June 1794.
+- **06-01, 1813**: Replaced: the thousand-bomber raid on Cologne took place on the night of 30-31 May 1942. Shannon captured Chesapeake on 1 June 1813.
+- **06-01, 1533**: Replaced: Sgt. Pepper's Lonely Hearts Club Band was released in Britain on 26 May 1967. Anne Boleyn was crowned on 1 June 1533.
+- **06-02, 1763**: Corrected: the fort was captured by Ojibwe (and Sauk) warriors, not by Pontiac's Ottawa.
+- **06-02, 1896**: Replaced: there is no documented arrival of HMS Ganges in India on 2 June 1857. Marconi filed his patent application on 2 June 1896.
+- **06-03, 1839**: Replaced: the US government's move to Washington took place over the summer of 1800, with no documented start on 3 June. Lin Zexu began destroying opium on 3 June 1839.
+- **06-03, 1940**: Replaced: Operation Dynamo ended on 4 June 1940, not 3 June. The Luftwaffe bombed Paris on 3 June 1940.
+- **06-03, 1989**: Replaced: Poland's semi-free elections were held on 4 June 1989, not 3 June. Khomeini died on 3 June 1989.
+- **06-04, 1783**: Replaced: Pepin was crowned King of Italy at Easter (15 April) 781, not 4 June. The Montgolfiers' public demonstration took place on 4 June 1783.
+- **06-04, 1913**: Replaced: Lanfranc was consecrated Archbishop of Canterbury in August 1070 and did not crown William on 4 June. Davison was struck on 4 June 1913.
+- **06-04, 1989**: Replaced: the 'Tank Man' photographs were taken on 5 June 1989. Poland's elections were held on 4 June 1989.
+- **06-05, 1305**: Replaced: Qing forces entered Beijing on 6 June 1644, not 5 June. Clement V was elected on 5 June 1305.
+- **06-05, 1832**: Corrected: the rising caused about 800 casualties (killed and wounded), not 800 deaths.
+- **06-05, 1883**: Clarified: the first through journey to Constantinople began in October 1883.
+- **06-05, 1968**: Corrected: Kennedy was shot on 5 June and died on 6 June.
+- **06-06, 1523**: Corrected: Gustav was elected on 6 June 1523; his coronation took place in 1528.
+- **06-07, 1905**: Replaced: Emily Davison was struck at Epsom on 4 June 1913, not 7 June. Norway's Storting dissolved the union on 7 June 1905.
+- **06-08, 632**: Replaced: the first part of Don Quixote was published in January 1605, not 8 June. Muhammad's death is traditionally dated to 8 June 632.
+- **06-09, 1815**: Replaced: Cartier's entry into the Gulf of St Lawrence in 1534 is not securely dated to 9 June. The Final Act of the Congress of Vienna was signed on 9 June 1815.
+- **06-12, 1665**: Corrected: the English captured New Amsterdam in 1664; on 12 June 1665 New York received its English municipal government.
+- **06-13, 313**: Corrected: the text was published by Licinius at Nicomedia on 13 June 313, following his agreement with Constantine.
+- **06-13, 1381**: Corrected: the Tower was stormed and the archbishop killed on 14 June.
+- **06-13, 1525**: Replaced: Rhode Island's 1774 ban on importing enslaved people is not securely dated to 13 June. Luther married on 13 June 1525.
+- **06-13, 1886**: Corrected: Ludwig was deposed on 10 June, three days before his death.
+- **06-14, 1800**: Corrected year: Marengo was fought on 14 June 1800, not 1801.
+- **06-14, 1645**: Replaced: US withdrawal from the ABM Treaty took effect on 13 June 2002, not 14 June. The Battle of Naseby was fought on 14 June 1645.
+- **06-15, 1389**: Corrected: the battle did not immediately end Serbian statehood, which fell to the Ottomans in 1459.
+- **06-16, 1779**: Replaced: the Battle of Bunker Hill was fought on 17 June 1775 and appears on that date. Spain declared war on Britain on 16 June 1779.
+- **06-16, 1976**: Corrected: the figure of 176 deaths refers to the first days of unrest, not a single massacre.
+- **06-19, 1867**: Replaced: Drake's evacuation of Roanoke in 1586 is not securely dated to 19 June. Maximilian was executed on 19 June 1867.
+- **06-20, 1963**: Corrected: the hotline was a teletype link, not a telephone.
+- **06-21, 217 BCE**: Corrected: about 15,000 Romans were killed; the army was not wholly destroyed, and the 'largest ambush in history' claim was removed.
+- **06-21, 1964**: Corrected: the Civil Rights Act had already passed Congress; the killings fed the campaign for voting rights.
+- **06-22, 1772**: Corrected: the ruling was narrower than ending slavery in England, though widely understood that way.
+- **06-24, 1314**: Corrected: removed unsupported casualty figures of 20,000 English and 4,000 Scots.
+- **06-25, 1678**: Replaced: Montreal (Ville-Marie) was founded on 17 May 1642, not 25 June 1638. Elena Cornaro received her doctorate on 25 June 1678.
+- **06-26, 1857**: Replaced: the US federal holidays act was passed on 28 June 1870, not 26 June. The first VC investiture took place on 26 June 1857.
+- **06-26, 1963**: Corrected: the speech was given at Rathaus Schöneberg, not at the Wall, to a crowd of about 450,000.
+- **06-27, 1743**: Replaced: the Jacquerie was crushed at Mello on 10 June 1358, not 27 June. Dettingen was fought on 27 June 1743.
+- **06-27, 1905**: Replaced: the Panic of 1893 is not tied to a single stock market crash on 27 June. The Potemkin mutiny began on 27 June 1905.
+- **06-29, 1776**: Corrected: Mission San Diego was founded on 16 July 1769; Mission San Francisco de Asís was founded on 29 June 1776.
+- **06-29, 1916**: Replaced: the Battle of the Somme began on 1 July 1916, not 29 June. Casement was sentenced on 29 June 1916.
+- **06-29, 1995**: Corrected: removed the claim of deadliest peacetime structural collapse (Rana Plaza in 2013 was deadlier).
+- **06-30, 1559**: Replaced: the Battle of Wavre was fought on 18-19 June 1815, not 30 June. Henry II was wounded on 30 June 1559.
+- **06-30, 1905**: Corrected: E = mc² appeared in a separate later paper, not in this one.
+- **07-01, 1690**: Clarified that 1 July is the Old Style (Julian) date.
+- **07-01, 1776**: Original said the final 12-colony vote happened on 1 July; that was 2 July. 1 July saw the debate and a nine-colony test vote.
+- **07-02, 626**: He did not take the throne that day; he became crown prince and was enthroned in September 626.
+- **07-02, 1863**: Removed misleading 'Pickett's Charge postponed' from title.
+- **07-04, 1943**: Replaced: the Battle of Kursk (Operation Citadel) began on 5 July 1943, not 4 July.
+- **07-04, 1946**: Corrected the legislative background (Tydings-McDuffie Act of 1934).
+- **07-05, 1946**: It was a poolside show, not a catwalk; named the model.
+- **07-05, 1962**: Replaced: the Stonewall riots began on 28 June 1969, not 5 July.
+- **07-06, 1918**: Replaced: the Romanovs were executed on the night of 16-17 July 1918, not 6 July (see 17 July).
+- **07-06, 1944**: Death toll usually given as 167 (some sources 168); removed overstated claim about tents being abandoned.
+- **07-07, 1898**: Replaced: the first Wimbledon Championships began on 9 July 1877, not 7 July.
+- **07-07, 1985**: Becker was unseeded but not a qualifier.
+- **07-08, 1099**: Jerusalem fell on 15 July, a week later, not five days.
+- **07-08, 1776**: The Liberty Bell ringing is a later legend; refocused on the documented public reading.
+- **07-09, 1810**: Louis Bonaparte abdicated on 1 July; he was not overthrown by the annexation.
+- **07-09, 1877**: 9 July 1877 was the start of the tournament; the final was played on 19 July.
+- **07-10, 1962**: Telstar was launched on 10 July; the first transatlantic pictures followed early on 11 July and public broadcasts on 23 July.
+- **07-11, 1346**: He was elected King of the Romans in 1346; he was crowned Holy Roman Emperor only in 1355.
+- **07-11, 1914**: Corrected team: his major league debut was with the Boston Red Sox, not the Baltimore Orioles.
+- **07-11, 1979**: The fine was paid by a US radio host, not NASA.
+- **07-12, 1691**: Replaced the 1690 Boyne entry (fought 1 July Old Style, already on 1 July) with Aughrim, fought on 12 July 1691 Old Style.
+- **07-12, 1862**: The 1862 act created the Army medal; the Navy medal had been authorised in December 1861.
+- **07-12, 1943**: Softened the disputed 'largest ever' claim.
+- **07-13, 982**: Removed unsupported claim that it was the last major Arab offensive in Italy.
+- **07-13, 1174**: Replaced: Saladin entered Damascus in November 1174, not 13 July.
+- **07-13, 1923**: Replaced: the Treaty of Lausanne was signed on 24 July 1923, not 13 July.
+- **07-14, 1223**: Corrected: Louis did not launch the Albigensian Crusade (begun in 1209); he led the royal campaign of 1226.
+- **07-14, 1865**: Replaced: the Spanish Civil War began on 17-18 July 1936, not 14 July.
+- **07-16, 622**: 16 July 622 is the epoch of the Islamic calendar; Muhammad's migration itself took place in September 622.
+- **07-19, 711**: The exact date is traditional; flagged as such.
+- **07-19, 1870**: Removed error: Prussian troops paraded through Paris, not Versailles.
+- **07-20, 1944**: Replaced uncertain figure of 5,000 executions with 'thousands arrested'.
+- **07-20, 1969**: Armstrong's step was on 20 July in US time (02.56 UTC on 21 July); time reference corrected.
+- **07-21, 356 BCE**: The date is traditional and approximate.
+- **07-21, 1588**: Gravelines was fought on 29 July Old Style (8 August New Style); 21 July Old Style was the first engagement off Plymouth.
+- **07-21, 1925**: Replaced: the founding congress of the Chinese Communist Party opened on 23 July 1921, not 21 July.
+- **07-21, 1969**: Refocused on the lift-off, which unambiguously occurred on 21 July.
+- **07-22, 1587**: Replaced: Virginia Dare was born on 18 August 1587; 22 July was the colonists' arrival at Roanoke.
+- **07-23, 1952**: Replaced: Godfrey of Bouillon was elected ruler of Jerusalem on 22 July 1099, not 23 July.
+- **07-23, 1745**: He raised his standard at Glenfinnan on 19 August 1745; on 23 July he landed on Eriskay.
+- **07-24, 1567**: James was crowned on 29 July, not on the day of the abdication.
+- **07-25, 1837**: The demonstration line was about 2.4 km long, not 21 km.
+- **07-26, 1745**: Replaced: the Hannah Penn entry had no connection to 26 July 1745.
+- **07-29, 1588**: The fire-ship attack was on the night of 28-29 July Old Style; 29 July was the Battle of Gravelines itself.
+- **07-29, 1900**: Removed contradiction that called it the 'last' in a wave that continued the next year.
+- **07-31, 1492**: Replaced: there is no record that Offa's Dyke was completed on 31 July 781.
+- **08-01, 30 BCE**: Cleopatra died about ten days later, not on 1 August.
+- **08-01, 1291**: The charter is dated only to the beginning of August; 1 August is the commemorative date.
+- **08-01, 1774**: His mouse experiments came in 1775; removed from this date.
+- **08-02, 1923**: Corrected: his death did not end the Teapot Dome affair, which came to light afterwards.
+- **08-03, 8**: Replaced: the date of Ovid's exile in 8 CE is not known.
+- **08-03, 1914**: Corrected: Germany invaded Belgium and Britain declared war on 4 August, not 3 August.
+- **08-03, 1981**: The strike began on 3 August; the dismissals followed on 5 August.
+- **08-04, 1914**: Removed Grey's 'lamps are going out' remark, which he dated to the evening of 3 August.
+- **08-04, 1944**: Who betrayed the family remains unknown; removed 'Gestapo tip-off' claim.
+- **08-04, 1964**: Clarified that the 4 August attack was likely illusory and the resolution passed on 7 August.
+- **08-05, 1583**: Removed claim that a colony was established.
+- **08-05, 1858**: The Queen Victoria-Buchanan messages were exchanged on 16 August, not 5 August.
+- **08-06, 1890**: The 'current war' rivalry was between Edison and Westinghouse.
+- **08-06, 1991**: He publicly announced the project that day; the first website had gone live at CERN earlier.
+- **08-07, 461**: Replaced: Libius Severus was proclaimed emperor in November 461; 7 August is the date of Majorian's execution.
+- **08-07, 1947**: Replaced: the Forbidden City's completion in 1420 cannot be dated to 7 August.
+- **08-09, 1173**: Replaced: the Sistine Chapel's first Mass was on 15 August 1483, not 9 August.
+- **08-10, 1792**: Replaced: the exact day of Nineveh's fall in 612 BCE is not known.
+- **08-10, 1628**: Removed claim that the loss was 'kept quiet for centuries'.
+- **08-10, 1809**: Corrected 'first major revolt' and 'fourteen years later'.
+- **08-10, 1945**: The US did not explicitly accept the condition; corrected.
+- **08-11, 1965**: Replaced: the first ascent of Mont Blanc was on 8 August 1786, not 11 August.
+- **08-11, 1960**: Replaced: Indonesia proclaimed independence on 17 August 1945, not 11 August (see 17 August).
+- **08-12, 1851**: Singer's was not the first practical sewing machine; title adjusted.
+- **08-12, 1981**: Replaced: Edison's phonograph was developed in late 1877; the 12 August date is unsupported.
+- **08-12, 1944**: Replaced: Allied troops entered Florence on 4 August and the city rose on 11 August; 12 August is not the liberation date.
+- **08-13, 1898**: Replaced: the 2008 Russia-Georgia ceasefire was agreed on 12 August and signed on 15-16 August.
+- **08-14, 1040**: Shakespeare wrote Macbeth over five centuries later, not three.
+- **08-14, 1457**: Corrected: the Gutenberg Bible was finished around 1455; the book completed on 14 August 1457 was the Mainz Psalter.
+- **08-14, 1945**: Hirohito's radio broadcast was on 15 August Japan time; corrected.
+- **08-15, 1945**: Corrected: this was the Emperor's announcement, not the formal surrender.
+- **08-15, 1947**: Pakistan marks independence on 14 August; adjusted.
+- **08-17, 1896**: Replaced: Melbourne's founding is not dated to 17 August 1835 (see 30 August).
+- **08-18, 1868**: Replaced: Abu Bakr died on 23 August 634, not 18 August.
+- **08-19, 14**: Corrected title: the dynasty had begun with Augustus himself; Tiberius succeeded.
+- **08-20, 1882**: The premiere was in a tent near the cathedral, not inside it.
+- **08-20, 1940**: Trotsky died on 21 August; clarified.
+- **08-21, 1680**: Replaced: the Treaty of Jaffa was concluded on 2 September 1192, not 21 August.
+- **08-21, 1689**: The Jacobite rising was not finally ended until Cromdale in 1690; wording adjusted.
+- **08-22, 1138**: Replaced: St Columba's encounter with a beast in the River Ness has no recorded date.
+- **08-23, 406**: Radagaisus was a Gothic king but not a Visigoth; corrected.
+- **08-23, 1572**: The massacre itself began in the early hours of 24 August; 23 August was the decision.
+- **08-24, 79**: Corrected year field from -79 to 79 CE; noted the debate over the date.
+- **08-25, 325**: The closing date is traditional; flagged.
+- **08-25, 1919**: It was a passenger and mail service, not purely airmail.
+- **08-25, 1944**: De Gaulle's march down the Champs-Élysées was on 26 August.
+- **08-26, 1789**: Removed incorrect '150 years' gap to the 1948 Universal Declaration.
+- **08-26, 1978**: Removed 'unexplained circumstances'; the official cause was a heart attack.
+- **08-27, 479 BCE**: The precise date is traditional; flagged.
+- **08-27, 1928**: Removed claim that both authors won the Nobel for it.
+- **08-28, 475**: Romulus Augustulus was proclaimed on 31 October 475; 28 August was Nepos's flight.
+- **08-28, 1565**: Founding was on 8 September 1565; 28 August was the sighting and naming.
+- **08-28, 2005**: Katrina made landfall on the Gulf Coast on 29 August, not 28 August.
+- **08-29, 1526**: Replaced: Atahualpa was executed on 26 July 1533, not 29 August.
+- **08-30, 1835**: Clarified: the settlement was founded by Fawkner's party; it was named Melbourne in 1837.
+- **08-30, 1963**: The hotline was a teletype link, not a telephone.
+- **08-31, 1886**: Replaced: Macbeth was killed at Lumphanan on 15 August 1057 (see 15 August).
+- **09-01, 1159**: Replaced: Barbarossa's siege of Crema began in July 1159, not 1 September.
+- **09-01, 1864**: Hood evacuated on 1 September; Union troops occupied the city on 2 September.
+- **09-03, 590**: He was elected earlier in 590; 3 September was his consecration.
+- **09-03, 1783**: The Treaty of Paris was between Britain and the US; France and Spain signed separate treaties at Versailles.
+- **09-04, 1781**: It was a civil pueblo, not a mission town.
+- **09-05, 1698**: The beard tax was formalised later (1705); 5 September 1698 (New Style) was the shaving episode.
+- **09-06, 394**: Eugenius was nominally Christian but supported by pagans; wording adjusted.
+- **09-06, 1522**: Removed claim that it proved the Earth round, which was already accepted.
+- **09-07, 1940**: Removed unsupported figure for homes destroyed.
+- **09-09, 9**: The exact dates of the battle are uncertain; flagged as traditional.
+- **09-09, 1087**: William Rufus was his third son, not second; reworded.
+- **09-09, 1956**: Corrected: he was filmed from the waist up only on his third appearance.
+- **09-11, 1973**: Softened 'CIA-backed': US involvement in destabilisation is documented, direct role in the coup less so.
+- **09-12, 490 BCE**: The date is a traditional reconstruction; flagged.
+- **09-13, 1759**: Montcalm died the following day; corrected.
+- **09-14, 1321**: Replaced: Philip II became sole king on his father's death on 18 September 1180, not 14 September.
+- **09-15, 1830**: Replaced: Marco Polo's exact date of birth is unknown.
+- **09-15, 1916**: Replaced: Harvey's first lectures on circulation were in April 1616, not 15 September.
+- **09-15, 1835**: Darwin did not 'observe evolution' there; title adjusted.
+- **09-16, 1400**: Replaced: the Battle of Kulikovo was fought on 8 September 1380 (Julian calendar).
+- **09-16, 1620**: Noted that 16 September is the New Style date.
+- **09-16, 1982**: Corrected year from 1978 to 1982.
+- **09-17, 1787**: Corrected: the Bill of Rights was not part of the 1787 Constitution.
+- **09-17, 1862**: Lincoln had already drafted the proclamation in July; Antietam allowed him to issue it.
+- **09-19, 1991**: Removed claim that he is the oldest known murder victim.
+- **09-20, 1973**: Replaced: no documented UN proposal for Korean talks on 20 September 1976.
+- **09-21, 1745**: Removed overstated claim that the victory conquered all of Scotland.
+- **09-22, 1499**: Basel gave de facto, not formal, independence; corrected.
+- **09-23, 1779**: The famous quote was reported decades later; flagged.
+- **09-24, 768**: The brothers were crowned on 9 October; 24 September was Pepin's death.
+- **09-24, 1932**: Gandhi broke his fast on 26 September, not 24 September; corrected.
+- **09-25, 1066**: William landed on 28 September, not on the day of the battle; title adjusted.
+- **09-25, 1513**: He waded in on 29 September, not on the day of the sighting.
+- **09-26, 46 BCE**: Replaced: the dates of Caesar's four triumphs are uncertain; the temple dedication is recorded for 26 September.
+- **09-26, 1580**: He was knighted in April 1581, not on his return.
+- **09-26, 1905**: Mass-energy equivalence came in a separate paper later in 1905; removed.
+- **09-26, 1983**: He had no launch authority; the title no longer says he 'refused to launch'.
+- **09-28, 1928**: Replaced: Black Hawk died on 3 October 1838, not 28 September.
+- **09-29, 1829**: Removed 'world's first' claim, which is disputed.
+- **10-01, 1814**: Softened: the formal opening was scheduled for this day but talks had begun in September.
+- **10-01, 1957**: Corrected: the motto law was signed in July 1956; 1 October 1957 is when it first appeared on paper currency.
+- **10-04, 610**: Trimmed an unsupported claim about Greek becoming the official language.
+- **10-04, 1582**: Clarified that 4 October was the last Julian day before the ten-day jump.
+- **10-05, 869**: Corrected: it is the eighth ecumenical council in Catholic reckoning, not the final one.
+- **10-07, 3761 BCE**: Clarified that this is a calendrical epoch, not a historical event.
+- **10-07, 1737**: Qualified the 300,000 death toll, which is disputed.
+- **10-07, 1959**: Replaced: Cook's first sighting of New Zealand (6 October) and landing (8 October) do not fall on 7 October.
+- **10-08, 451**: Replaced: the Council of Arles (314) opened on 1 August, not 8 October.
+- **10-08, 1856**: Replaced: the University of Paris charter of 1200 has no documented 8 October date.
+- **10-08, 1918**: Corrected: York was a corporal at the time and killed about 25, not 28.
+- **10-08, 1967**: Corrected: Guevara was captured on 8 October and executed on 9 October.
+- **10-09, 1874**: Replaced: the Louvre opened as a public museum on 10 August 1793, not 9 October.
+- **10-09, 1940**: Removed the popular but unfounded claim that he was born during an air raid.
+- **10-10, 732**: Noted that the exact date is traditional.
+- **10-10, 1845**: Corrected: John McCain, an alumnus, was never president.
+- **10-10, 1913**: Replaced: the Red Cross committee was founded in February 1863 and its Geneva conference opened on 26 October.
+- **10-12, 1915**: Replaced: Frobisher reached Baffin Island in the summer of 1576, not on 12 October.
+- **10-12, 1822**: Corrected: the cry of Ipiranga was on 7 September; 12 October 1822 was Pedro's acclamation as emperor.
+- **10-13, 54**: Removed the 'fiddling while Rome burned' legend.
+- **10-14, 1066**: Removed the arrow-in-the-eye detail, which is uncertain.
+- **10-14, 1322**: Removed an erroneous reference to de Gaulle.
+- **10-15, 1815**: Replaced: Titus destroyed the Temple and Jerusalem in August and September 70, not on 15 October.
+- **10-15, 1783**: Corrected: this was a tethered ascent in the Faubourg Saint-Antoine; the free flight over the Bois de Boulogne was on 21 November.
+- **10-15, 1880**: Removed disputed superlatives.
+- **10-17, 1888**: Corrected: this was a caveat (notice of an invention), not a granted patent.
+- **10-17, 1956**: Replaced: Marconi's Nobel Prize was awarded in 1909, not on 17 October 1907.
+- **10-17, 1979**: Clarified that the prize was announced, not presented, on this day.
+- **10-18, 1685**: Revised the number of refugees to the commonly cited estimate.
+- **10-18, 1922**: Replaced: the Smith and Carlos protest took place on 16 October 1968.
+- **10-19, 202 BCE**: Noted that the exact date is traditional.
+- **10-20, 1827**: Replaced: Raleigh's El Dorado account (1596) has no 20 October date and the title and description did not match.
+- **10-20, 1740**: Corrected: she was not Empress of Austria in her own right.
+- **10-21, 1096**: Corrected: the title described the Rhineland massacres (May to June 1096) while the description and date fit Civetot.
+- **10-21, 1966**: Replaced: duplicate of the 1879 Edison lamp entry.
+- **10-22, 794**: Clarified that the date follows the Japanese lunar calendar.
+- **10-22, 1721**: Noted the Old Style date (2 November New Style).
+- **10-22, 1836**: Replaced: the 2011 Thai floods were a months-long disaster with no defining event on 22 October.
+- **10-23, 4004 BCE**: Clarified that this is a calculated date, not a historical event.
+- **10-23, 1983**: Added the simultaneous attack on French troops.
+- **10-24, 1360**: Corrected: the treaty was drafted at Brétigny in May and ratified at Calais on 24 October.
+- **10-24, 1648**: Toned down the debated claim that Westphalia created the modern state system.
+- **10-25, 1760**: Replaced: the Battle of Tours is traditionally dated 10 October 732 and already appears on that day.
+- **10-25, 1400**: Noted that the date comes from his later tomb inscription.
+- **10-25, 1415**: Removed the 'five times their size' claim; modern estimates of the odds vary widely.
+- **10-25, 1944**: Corrected: the Battle of Leyte Gulf ended on 26 October; 25 October saw the first organised kamikaze attacks.
+- **10-26, 899**: Replaced: the Battle of Akroinon (740) has no known day of the month.
+- **10-26, 1881**: Fixed a repeated phrase and named the dead.
+- **10-27, 1275**: Replaced: the Battle of Andernach was fought on 2 October 939 and was a victory for Otto I's supporters.
+- **10-27, 1553**: Corrected: the sentence was passed by Geneva's council, not on Calvin's orders alone.
+- **10-29, 1618**: Removed the myth that Raleigh introduced tobacco and potatoes to England.
+- **10-29, 1863**: Corrected: the conference ran from 26 to 29 October and adopted its founding resolutions on this day.
+- **10-30, 1270**: Corrected: it was not the last crusade; Edward I's expedition followed in 1271.
+- **10-31, 1517**: Noted that the nailing to the door is traditional.
+- **10-31, 1956**: Replaced: the final Third Partition treaty was signed on 24 October 1795, not 31 October.
+- **11-01, 1914**: Replaced: the Third Lateran Council met in March 1179, not on 1 November.
+- **11-01, 1755**: Revised the death toll to the range supported by estimates.
+- **11-02, 1936**: Replaced: Lisbon fell to the crusaders on 24-25 October 1147, not 2 November.
+- **11-02, 1930**: Replaced: Atahualpa was executed on 26 July 1533, not 2 November.
+- **11-02, 1783**: Corrected: these were written orders; his farewell to his officers was in New York on 4 December.
+- **11-02, 1889**: Corrected: the president was Benjamin Harrison, not Cleveland.
+- **11-03, 1492**: Corrected: the treaty did not end English ambitions in France, which Henry VIII revived.
+- **11-04, 1333**: Removed the unsupported 'worst on record' claim.
+- **11-04, 1956**: Replaced: Guy Fawkes was arrested in the early hours of 5 November, which is covered on that day.
+- **11-04, 1918**: Replaced: James Garfield was elected on 2 November 1880, not 4 November 1879.
+- **11-05, 1414**: Corrected: two popes were deposed and one resigned.
+- **11-05, 1605**: Corrected: the thanksgiving law came in 1606; reframed around the arrest itself.
+- **11-06, 1917**: Replaced: the Second Battle of Panipat was fought on 5 November 1556 against Hemu, not in 1612.
+- **11-07, 1867**: Replaced: the Battle of Karbala was fought on 10 October 680, not 7 November.
+- **11-07, 1940**: Corrected: the failure was caused by aeroelastic flutter rather than simple resonance.
+- **11-08, 1602**: Removed an incorrect claim about 40 Gutenberg Bibles.
+- **11-08, 1923**: Corrected: the coup began on 8 November and was crushed on 9 November.
+- **11-10, 1202**: Corrected: the crusaders arrived on 10 November; the city fell on 24 November.
+- **11-10, 1871**: Noted that the date comes from Stanley's account.
+- **11-10, 1938**: Replaced: the First World War armistice took effect on 11 November, not 10 November.
+- **11-10, 1975**: Replaced: Angola became independent on 11 November 1975, not 10 November.
+- **11-11, 1921**: Corrected: the British and French tombs (1920) predate Arlington's.
+- **11-12, 1912**: Replaced: Henry VI's ban on kissing was issued on 16 July 1439, not 12 November.
+- **11-13, 1093**: Replaced: no great fire of Bruges on 13 November 1460 could be verified; Malcolm III's death (wrongly placed on 16 November in the source) belongs here.
+- **11-13, 1918**: Corrected: the empire broke up over several weeks; this is the specific event of 13 November.
+- **11-14, 1940**: Replaced: James Bruce reached the source of the Blue Nile on 4 November 1770, not 14 November.
+- **11-15, 1889**: Replaced: William of Orange landed on 5 November 1688 and did not begin his march on London on 15 November.
+- **11-15, 1920**: Corrected: it was not the world's first intergovernmental organisation.
+- **11-16, 1093**: Corrected: Malcolm III was killed on 13 November; 16 November is the date of Queen Margaret's death.
+- **11-16, 1988**: Corrected: the election was on 16 November; she became prime minister on 2 December.
+- **11-17, 1989**: Replaced: the Bolshevik-Menshevik split occurred at the party congress in July and August 1903.
+- **11-17, 1973**: Replaced: the interim Iran nuclear deal was signed on 24 November 2013, not 17 November.
+- **11-18, 326**: Noted that the date is traditional.
+- **11-18, 1477**: Corrected: it was the first dated book printed in England, not the first book printed in English.
+- **11-18, 1626**: Removed the disputed claim that it is the largest church in the world.
+- **11-19, 1977**: Replaced: the House impeached Clinton on 19 December 1998; the committee did not approve articles on 19 November.
+- **11-20, 1759**: Corrected: the capture of Quebec preceded the battle and was not a consequence of it.
+- **11-20, 1945**: Corrected: 24 were indicted but 22 stood trial.
+- **11-21, 1620**: Corrected: signed off Cape Cod, not at Plymouth; the date is 11 November Old Style, 21 November New Style.
+- **11-22, 1220**: Replaced: the Tang persecution of Buddhism (under Emperor Wuzong, not Xuanzong) has no peak on 22 November 845.
+- **11-23, 1248**: Replaced: the Treaty of Saint-Clair-sur-Epte with Rollo was made in 911, with no recorded day.
+- **11-24, 380**: Corrected: the Edict of Thessalonica preceded his entry, in February 380.
+- **11-24, 1922**: Corrected: the burial chamber itself was opened in February 1923.
+- **11-25, 1034**: Corrected: Shakespeare wrote Macbeth over five centuries later, and Duncan died in battle.
+- **11-26, 1778**: Corrected: Cook first reached Hawaii (Kauai) in January 1778; on 26 November he sighted Maui.
+- **11-30, 1872**: Replaced: Justice Samuel Chase was impeached in March 1804 and acquitted in March 1805.
+- **12-01, 800**: Corrected: no presentation of the keys of Rome is recorded on this day; the assembly is.
+- **12-01, 1990**: Replaced: Benazir Bhutto was sworn in on 2 December 1988, not 1 December.
+- **12-02, 1697**: Corrected: the building was not complete in 1697; this was its first service.
+- **12-03, 1552**: Removed an inflated claim about the number of baptisms.
+- **12-03, 1984**: Revised the death toll: immediate deaths were in the low thousands, with far more over time.
+- **12-04, 1872**: Replaced: the US Senate ratified the UN Charter on 28 July 1945, not 4 December.
+- **12-05, 1484**: Replaced: no 5 December date is recorded for the completion of the Gutenberg Bible.
+- **12-05, 1791**: Removed the myth that he died in poverty.
+- **12-07, 1975**: Corrected: Portugal had withdrawn in August, and Fretilin declared independence on 28 November; death toll revised to the truth commission range.
+- **12-08, 1991**: Replaced: Isabella I of Castile died on 26 November 1504, not 8 December.
+- **12-08, 1854**: Corrected: the dogma concerns Mary's conception, not her birth.
+- **12-09, 1917**: Corrected: the city surrendered on 9 December; Allenby's formal entry was on 11 December.
+- **12-11, 1792**: Replaced: no fall of Sirmium to the Sarmatians on 11 December 359 could be verified.
+- **12-11, 1688**: Corrected: his first flight on 11 December failed; he reached France on 23 December.
+- **12-12, 1911**: Replaced: Wilson signed the Federal Reserve Act on 23 December 1913, not 12 December.
+- **12-12, 1963**: Corrected: Kenyatta was imprisoned by the British on disputed charges of leading Mau Mau.
+- **12-13, 1939**: Corrected: it was the first major surface battle of the war, not the first naval battle.
+- **12-14, 557**: Corrected: the dome collapsed in 558, months after the earthquake.
+- **12-14, 1911**: Corrected: Scott arrived 34 days later, not 35.
+- **12-15, 37**: Replaced: the Battle of Tertry (687) has no recorded day.
+- **12-15, 1939**: Corrected: eight competitive Oscars plus two honorary awards.
+- **12-16, 1991**: Corrected: Kazakhstan was the second-largest Soviet republic, not the largest.
+- **12-17, 546**: Removed an exaggerated population figure.
+- **12-18, 1916**: Replaced: no 18 December date is recorded for Marco Polo's departure in 1271.
+- **12-18, 1865**: Corrected: ratification was completed on 6 December; 18 December is when it was proclaimed in effect.
+- **12-20, 2001**: Corrected: the default was announced on 23 December; 20 December was De la Rúa's resignation.
+- **12-21, 69**: Corrected: Vespasian himself was in Egypt and reached Rome in 70; his forces took the city on 20 December.
+- **12-21, 1620**: Clarified the Old Style date.
+- **12-21, 1968**: Replaced: James K. Polk's election was not held on 21 December 1844.
+- **12-21, 1898**: Corrected: radium was identified in 1898 but not isolated as a metal until 1910.
+- **12-22, 1715**: Corrected the timing: the November battles were about five weeks earlier, and Sheriffmuir was indecisive.
+- **12-24, 1814**: Replaced: Columba's foundation of Iona in 563 has no 24 December date.
+- **12-24, 1800**: Revised the death toll, which sources give variously.
+- **12-24, 1851**: Corrected: Jefferson's collection was among the losses, not a later replacement.
+- **12-25, 336**: Clarified that the evidence comes from the Chronograph of 354.
+- **12-26, 1898**: Corrected: radium had been identified, not isolated, by this date.
+- **12-26, 2004**: Corrected: it was not the deadliest natural disaster in recorded history.
+- **12-27, 537**: Corrected: it was the largest cathedral, not the largest building, in the world.
+- **12-27, 1979**: Corrected: Soviet troops began entering on 24-25 December; Amin was killed on 27 December.
+- **12-28, 1065**: Corrected: Edward was too ill to attend the consecration.
+- **12-28, 1832**: Corrected: Calhoun was not the only vice-president to serve twice; George Clinton also served under two presidents.
+- **12-28, 1908**: Replaced: the Bretton Woods agreements entered into force on 27 December 1945, not 28 December.
+- **12-29, 1940**: Corrected: it was one of the most destructive raids of the Blitz, but not the heaviest.
+- **12-30, 1916**: Replaced: the Great Storm of 1703 struck on 26-27 November (Old Style), not 30 December.
