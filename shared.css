@@ -2806,6 +2806,19 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .cx-bar { position: absolute; top: 0; height: 100%; border-radius: 5px; background: var(--gold); box-shadow: 0 0 8px rgba(var(--gold-rgb), 0.6); }
 .cx-bar-approx { background: repeating-linear-gradient(90deg, var(--gold) 0 6px, transparent 6px 9px); }
 .cx-row-dates { font-family: var(--font-ui); font-size: 13px; color: var(--muted); text-align: right; }
+/* grouped neighbours of large hubs ("142 counties") */
+.cx-map { position: relative; }
+.cm-group-line { stroke-width: 3; stroke-dasharray: none; opacity: 0.5; }
+.cm-group circle { fill: rgba(var(--gold-rgb), 0.16); stroke: var(--gold); stroke-dasharray: 3 3; }
+.cm-group:hover circle, .cm-group:focus circle { fill: rgba(var(--gold-rgb), 0.3); }
+.cm-group text { font-style: italic; fill: var(--gold-light); }
+.cm-node text.cm-group-n { font-style: normal; font-weight: 600; font-size: 12px; fill: var(--gold-light); }
+.cm-group-rest { cursor: default; }
+.cm-back { position: absolute; top: 10px; left: 10px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 12px; min-height: 36px; cursor: pointer; }
+.cm-back:hover { border-color: var(--gold); }
+.cx-more { display: block; margin: 14px auto 0; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 18px; min-height: 40px; cursor: pointer; }
+.cx-more:hover { border-color: var(--gold); }
+.cx-filter-note { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 0 0 10px; }
 /* mini map on profiles */
 .mini-connections { margin: 36px 0 8px; }
 .mini-connections .cx-map { min-height: 0; }

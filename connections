@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/connections">
-<link rel="stylesheet" href="/shared.css?v=24">
+<link rel="stylesheet" href="/shared.css?v=25">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -57,38 +57,45 @@
 
 <script src="/shared-data.js?v=5"></script>
 <script src="/shared-nav.js?v=10"></script>
-<script src="/connections-map.js?v=1"></script>
+<script src="/connections-map.js?v=2"></script>
 <script>
 initNav('connections');
 (function () {
-  var CM = ConnectionsMap, current = null, yearOn = false;
+  var CM = ConnectionsMap, current = null, yearOn = false, expand = null, showAll = false;
   var map = document.getElementById('cx-map'), card = document.getElementById('cx-card'), tl = document.getElementById('cx-timeline');
   var q = document.getElementById('cx-q'), yr = document.getElementById('cx-year'), any = document.getElementById('cx-any'), yout = document.getElementById('cx-year-out');
   function year() { return yearOn ? +yr.value : null; }
   function show(id, push) {
     if (!CM.get(id)) return;
+    if (id !== current) { expand = null; showAll = false; }
     current = id;
     if (push !== false && location.hash.slice(1) !== id) history.replaceState(null, '', '#' + id);
-    CM.render(map, id, { year: year(), onSelect: function (nid) { show(nid); window.scrollTo({ top: map.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); } }).then(function (h) {
+    CM.render(map, id, { year: year(), expand: expand,
+      onSelect: function (nid) { show(nid); window.scrollTo({ top: map.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); },
+      onExpand: function (t) { expand = t; showAll = false; show(current, false); } }).then(function (h) {
       var n = CM.get(id), e = CM.esc;
       document.title = n.n + ' — Connections — The Epoch Institute';
       card.innerHTML = '<p class="featured-region">' + e((n.t || 'state').replace(/-/g, ' ')) + (n.b ? ' · ' + e(n.b) : '') + '</p>' +
         '<h2 class="cx-name">' + e(n.n) + '</h2><p class="cx-dates">' + e(CM.span(n)) + (n.x ? ' (approx.)' : '') + '</p>' +
         '<dl class="cx-facts">' + (n.c ? '<dt>Capital</dt><dd>' + e(n.c) + '</dd>' : '') + (n.m ? '<dt>Character</dt><dd>' + e(n.m) + '</dd>' : '') +
         (n.mo ? '<dt>Today</dt><dd>' + e(n.mo.join(', ')) + '</dd>' : '') + (n.a ? '<dt>Also</dt><dd>' + e(n.a.join(', ')) + '</dd>' : '') +
-        '<dt>Connections</dt><dd>' + h.order1.length + ' direct, ' + h.order2.length + ' further</dd></dl>' +
+        '<dt>Connections</dt><dd>' + h.total1 + ' direct, ' + h.total2 + ' further</dd></dl>' +
         (n.p ? '<a class="cx-profile" href="' + e(n.p) + '">Read the full profile →</a>' : '<p class="cx-soon">Full profile in preparation.</p>');
-      var rows = CM.timeline(id);
+      var rows = CM.timeline(id), total = rows.length, note = '';
       if (!rows.length) { tl.innerHTML = '<p class="cx-none">No recorded connections: an independent state with no recorded ties to the others in the archive.</p>'; return; }
+      if (expand) { rows = rows.filter(function (r) { return (CM.get(r.id).t || 'state') === expand; }); note = '<p class="cx-filter-note">Showing ' + rows.length + ' of ' + total + ' connections: ' + e(expand.replace(/-/g, ' ')) + ' only.</p>'; }
+      var LIMIT = 40, more = !showAll && rows.length > LIMIT ? rows.length - LIMIT : 0;
+      if (more) rows = rows.slice(0, LIMIT);
       var lo = Math.min.apply(null, rows.map(function (r) { return r.f; })), hi = Math.max.apply(null, rows.map(function (r) { return r.u; }));
       if (hi - lo < 50) { lo -= 25; hi += 25; }
-      tl.innerHTML = '<div class="cx-axis"><span>' + CM.yr(lo) + '</span><span>' + CM.yr(Math.round((lo + hi) / 2)) + '</span><span>' + CM.yr(hi) + '</span></div>' +
+      tl.innerHTML = note + '<div class="cx-axis"><span>' + CM.yr(lo) + '</span><span>' + CM.yr(Math.round((lo + hi) / 2)) + '</span><span>' + CM.yr(hi) + '</span></div>' +
         rows.map(function (r) {
           var left = (r.f - lo) / (hi - lo) * 100, width = Math.max(0.8, (r.u - r.f) / (hi - lo) * 100);
           return '<button type="button" class="cx-row" data-id="' + e(r.id) + '"><span class="cx-row-label"><b>' + e(r.name) + '</b> <i>' + e(r.sentence) + '</i></span>' +
             '<span class="cx-track"><span class="cx-bar' + (r.exact ? '' : ' cx-bar-approx') + '" style="left:' + left.toFixed(2) + '%;width:' + width.toFixed(2) + '%"></span></span>' +
             '<span class="cx-row-dates">' + (r.f === r.u ? CM.yr(r.f) : CM.yr(r.f) + ' – ' + CM.yr(r.u)) + '</span></button>';
-        }).join('');
+        }).join('') + (more ? '<button type="button" class="cx-more">Show ' + more + ' more</button>' : '');
+      var mb = tl.querySelector('.cx-more'); if (mb) mb.addEventListener('click', function () { showAll = true; show(current, false); });
       tl.querySelectorAll('.cx-row').forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-id')); window.scrollTo({ top: 0, behavior: 'smooth' }); }); });
     });
   }
