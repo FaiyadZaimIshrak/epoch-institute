@@ -2623,3 +2623,19 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .profile-kinds { display: flex; flex-wrap: wrap; gap: 8px; padding: 24px 40px 0; }
 .profile-kinds [aria-pressed="true"] { background: var(--gold); color: var(--bg); border-color: var(--gold); }
 @media (max-width: 600px) { .profile-kinds { padding: 20px 16px 0; } }
+
+/* ── Encyclopedia preview card ── */
+.enc-preview {
+  position: fixed; z-index: 2500; width: min(360px, calc(100vw - 16px)); display: flex; gap: 14px; padding: 14px;
+  background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--gold); border-radius: var(--radius);
+  box-shadow: 0 14px 40px var(--shadow);
+}
+.enc-preview[hidden] { display: none; }
+.enc-preview img { width: 96px; height: 96px; flex: 0 0 96px; object-fit: cover; border-radius: 2px; background: var(--bg); }
+.enc-preview > div { min-width: 0; }
+.enc-preview-kicker { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin: 0 0 2px; }
+.enc-preview-name { font-family: var(--font-display); font-size: 17px; color: var(--gold-light); margin: 0 0 6px; line-height: 1.25; }
+.enc-preview-text { font-family: var(--font-text); font-size: 15px; line-height: 1.5; color: var(--text); margin: 0 0 8px; }
+.enc-preview-more { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); text-decoration: none; }
+.enc-preview-more:hover { color: var(--gold-light); }
+@media (max-width: 480px) { .enc-preview img { width: 72px; height: 72px; flex-basis: 72px; } .enc-preview-more { display: inline-flex; min-height: 40px; align-items: center; } }

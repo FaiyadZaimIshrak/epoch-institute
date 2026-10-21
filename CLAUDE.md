@@ -77,3 +77,6 @@ To add a new profile, e.g. a culture:
 generator.html must produce output identical to the committed empire/* files — edit the template
 there rather than editing the 94 pages by hand. To regenerate: open generator.html from a local
 server, download empire-pages.zip, extract into empire/, commit and push.
+
+## Encyclopedia previews
+`data/enc-preview/<first char>.json` hold preview cards (name, type, dates, two sentences, image) for gold links; shared-nav.js `initEncPreviews` fetches them on hover/focus/first tap. Regenerate after rebuilding encyclopedia-data.js (scratchpad design2/make-previews.ps1 logic: first two sentences, max 280 chars).

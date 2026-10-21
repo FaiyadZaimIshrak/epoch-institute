@@ -193,6 +193,66 @@ function initSiteSearch() {
   });
 }
 
+// ── Encyclopedia previews: hover/focus (or first tap on touch) a gold link → small card ─
+// Data: /data/enc-preview/<first char of slug>.json, fetched on demand and cached.
+function initEncPreviews() {
+  var cache = {}, card = null, showTimer = null, hideTimer = null, current = null;
+  var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
+  function slugOf(a) { var h = a.getAttribute('href') || '', i = h.indexOf('#'); return (i !== -1 && (h.indexOf('/encyclopedia') === 0 || i === 0)) ? decodeURIComponent(h.slice(i + 1)) : null; }
+  function load(slug, cb) {
+    var c = /^[a-z]/.test(slug) ? slug[0] : '0';
+    if (cache[c]) return cb(cache[c][slug]);
+    fetch('/data/enc-preview/' + c + '.json?v=1').then(function (r) { return r.json(); })
+      .then(function (j) { cache[c] = j; cb(j[slug]); }).catch(function () { cb(null); });
+  }
+  function ensureCard() {
+    if (card) return card;
+    card = document.createElement('div'); card.className = 'enc-preview'; card.setAttribute('role', 'tooltip'); card.id = 'enc-preview';
+    card.addEventListener('mouseenter', function () { clearTimeout(hideTimer); });
+    card.addEventListener('mouseleave', hideSoon);
+    document.body.appendChild(card); return card;
+  }
+  function place(a) {
+    var r = a.getBoundingClientRect(), c = card.getBoundingClientRect(), vw = document.documentElement.clientWidth;
+    var left = Math.min(Math.max(8, r.left + r.width / 2 - c.width / 2), vw - c.width - 8);
+    var top = r.bottom + 8; if (top + c.height > window.innerHeight - 8 && r.top - c.height - 8 > 0) top = r.top - c.height - 8;
+    card.style.left = left + 'px'; card.style.top = top + 'px';
+  }
+  function show(a) {
+    var slug = slugOf(a); if (!slug) return;
+    current = a;
+    load(slug, function (p) {
+      if (current !== a || !p) return;
+      var href = a.getAttribute('href');
+      ensureCard().innerHTML = (p.i ? '<img src="' + escHtml(p.i) + '" alt="" width="96" height="96">' : '') +
+        '<div><p class="enc-preview-kicker">' + escHtml(p.t || '') + (p.d ? ' · ' + escHtml(p.d) : '') + '</p>' +
+        '<p class="enc-preview-name">' + escHtml(p.n) + '</p><p class="enc-preview-text">' + escHtml(p.s) + '</p>' +
+        '<a class="enc-preview-more" href="' + escHtml(href) + '">Read the full entry →</a></div>';
+      card.classList.toggle('no-img', !p.i);
+      card.hidden = false; place(a); a.setAttribute('aria-describedby', 'enc-preview');
+    });
+  }
+  function hide() { if (card) card.hidden = true; if (current) current.removeAttribute('aria-describedby'); current = null; }
+  function hideSoon() { clearTimeout(showTimer); hideTimer = setTimeout(hide, 220); }
+  document.addEventListener('mouseover', function (e) {
+    var a = e.target.closest && e.target.closest('a.enc-link'); if (!a || touch) return;
+    clearTimeout(hideTimer); clearTimeout(showTimer);
+    showTimer = setTimeout(function () { show(a); }, 280);
+  });
+  document.addEventListener('mouseout', function (e) {
+    var a = e.target.closest && e.target.closest('a.enc-link'); if (a && !touch) hideSoon();
+  });
+  document.addEventListener('focusin', function (e) { var a = e.target.closest && e.target.closest('a.enc-link'); if (a) show(a); else if (card && !card.contains(e.target)) hide(); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.enc-link');
+    if (touch && a && slugOf(a) && current !== a) { e.preventDefault(); show(a); return; }   // first tap previews
+    if (card && !card.hidden && !card.contains(e.target) && !a) hide();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+  window.addEventListener('scroll', function () { if (card && !card.hidden && !touch) hide(); }, { passive: true });
+  window.addEventListener('hashchange', hide);
+}
+
 // ── initNav(activePage) ───────────────────────────────────────────────────────
 function initNav(activePage) {
 
@@ -370,6 +430,7 @@ function initNav(activePage) {
   document.body.insertAdjacentHTML('afterbegin', navHtml);
   document.body.insertAdjacentHTML('beforeend', footerHtml + contactModalHtml + searchHtml);
   initSiteSearch();
+  initEncPreviews();
 
   // ── Theme toggle ────────────────────────────────────────────────────────────
   (function() {
