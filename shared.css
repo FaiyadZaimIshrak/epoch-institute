@@ -2619,3 +2619,7 @@ html, body { overflow-x: clip; }
 input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 
 @media (max-width: 600px) { .info-share-btn, .enc-random, .cite-copy-btn { min-height: 40px; min-width: 40px; } .empire-nav-row .profile-back-gallery-btn { min-height: 40px !important; display: inline-flex; align-items: center; } }
+
+.profile-kinds { display: flex; flex-wrap: wrap; gap: 8px; padding: 24px 40px 0; }
+.profile-kinds [aria-pressed="true"] { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+@media (max-width: 600px) { .profile-kinds { padding: 20px 16px 0; } }

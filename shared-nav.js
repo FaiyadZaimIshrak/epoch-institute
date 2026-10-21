@@ -131,7 +131,7 @@ function siteSearch(query) {
   if (q.length < 2) return out;
   if (typeof EMPIRES !== 'undefined') EMPIRES.forEach(function (e) {
     var s = searchScore(q, e.name);
-    if (s) out.push({ s: s + 15, name: e.name, type: 'Empire profile', href: '/empire/' + toSlug(e.name) });
+    if (s) out.push({ s: s + 15, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e) });
   });
   if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) {
     var s = searchScore(q, r[1]);
@@ -157,7 +157,7 @@ function initSiteSearch() {
     list.innerHTML = res.map(function (r, i) {
       return '<li role="option" id="ss-opt-' + i + '"><a href="' + r.href + '"><span class="ss-name">' + escHtml(r.name) + '</span><span class="ss-type">' + escHtml(r.type) + '</span></a></li>';
     }).join('');
-    hint.textContent = input.value.trim().length < 2 ? '94 empire profiles and the full encyclopedia.' : (res.length ? '' : 'No matches. Try another spelling or a shorter word.');
+    hint.textContent = input.value.trim().length < 2 ? EMPIRES.length + ' profiles and the full encyclopedia.' : (res.length ? '' : 'No matches. Try another spelling or a shorter word.');
     hint.hidden = !hint.textContent;
   }
   function setActive(i) {
@@ -218,7 +218,7 @@ function initNav(activePage) {
       <button class="nav-parent-btn${researchActive ? ' active-group' : ''}" id="nav-research-btn" aria-haspopup="true" aria-expanded="false">Research ▾</button>
       <div class="nav-group-menu" id="nav-research-menu" role="menu">
         <a href="/explorer" id="nav-explorer-link"${activeStyle('explorer')}>Empire Explorer</a>
-        <a href="/profiles" id="nav-profiles-link"${activeStyle('profiles')}>Empire Profiles</a>
+        <a href="/profiles" id="nav-profiles-link"${activeStyle('profiles')}>Profiles</a>
         <a href="/research-series" id="nav-series-link"${activeStyle('series')}>Research Series</a>
         <a href="/research" id="nav-research-link"${activeStyle('research')}>Research Hub</a>
         <a href="/dataset" id="nav-dataset-link"${activeStyle('dataset')}>Open Dataset</a>
@@ -251,7 +251,7 @@ function initNav(activePage) {
     <a href="/encyclopedia" class="nav-dropdown-link" id="mob-encyclopedia"${activeStyle('encyclopedia')}>Encyclopedia</a>
     <span class="nav-dropdown-group">Research</span>
     <a href="/explorer" class="nav-dropdown-link" id="mob-explorer"${activeStyle('explorer')}>Empire Explorer</a>
-    <a href="/profiles" class="nav-dropdown-link" id="mob-profiles"${activeStyle('profiles')}>Empire Profiles</a>
+    <a href="/profiles" class="nav-dropdown-link" id="mob-profiles"${activeStyle('profiles')}>Profiles</a>
     <a href="/research-series" class="nav-dropdown-link" id="mob-series"${activeStyle('series')}>Research Series</a>
     <a href="/research" class="nav-dropdown-link" id="mob-research"${activeStyle('research')}>Research Hub</a>
     <a href="/dataset" class="nav-dropdown-link" id="mob-dataset"${activeStyle('dataset')}>Open Dataset</a>
@@ -293,7 +293,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/today-in-history" id="fl-today">Today in History</a>
         <a class="footer-link" href="/encyclopedia" id="fl-encyclopedia">Encyclopedia</a>
         <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
-        <a class="footer-link" href="/profiles" id="fl-profiles">Empire Profiles</a>
+        <a class="footer-link" href="/profiles" id="fl-profiles">Profiles</a>
         <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
         <a class="footer-link" href="/research-series" id="fl-series">Research Series</a>
         <a class="footer-link" href="/dataset" id="fl-dataset">Open Dataset</a>
@@ -362,7 +362,7 @@ function initNav(activePage) {
       <button type="button" class="site-search-close" id="site-search-close" aria-label="Close search">Esc</button>
     </div>
     <ul id="site-search-results" class="site-search-results" role="listbox"></ul>
-    <p class="site-search-hint" id="site-search-hint">94 empire profiles and the full encyclopedia.</p>
+    <p class="site-search-hint" id="site-search-hint">Profiles and the full encyclopedia.</p>
   </div>
 </div>`;
 

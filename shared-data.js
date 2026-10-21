@@ -206,7 +206,36 @@ function toSlug(n) {
   return n.toLowerCase().replace(/['']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
 
+// ── Kinds of profile ──────────────────────────────────────────────────────────
+// The Institute profiles more than empires. Every profile has a kind; each kind has its own URL folder,
+// label and section scheme. EMPIRES entries without a `kind` are polities (states and empires).
+// To add e.g. a culture: add {name, region, kind:'culture', points?} to EMPIRES (points only for polities),
+// its sections to EMPIRE_PROFILES under the keys below, then regenerate pages (generator.html).
+const PROFILE_KINDS = {
+  polity:   { label: 'States & empires', single: 'State', path: 'empire', chart: true,
+              sections: [['foundation','Foundation'],['socioeconomy','Socioeconomy'],['military','Military'],
+                         ['governance','Governance &amp; Law'],['impact','Global &amp; Regional Impact'],['decline','Decline &amp; Fall']] },
+  culture:  { label: 'Cultures & civilisations', single: 'Culture', path: 'culture', chart: false,
+              sections: [['origins','Origins'],['society','Society'],['beliefs','Beliefs &amp; Worldview'],
+                         ['arts','Arts &amp; Knowledge'],['exchange','Contact &amp; Exchange'],['legacy','Legacy']] },
+  ideology: { label: 'Ideologies & ideas', single: 'Ideology', path: 'ideology', chart: false,
+              sections: [['origins','Origins'],['ideas','Core Ideas'],['spread','Spread'],
+                         ['institutions','In Power &amp; Practice'],['critiques','Critiques'],['legacy','Legacy']] },
+  movement: { label: 'Movements & revolutions', single: 'Movement', path: 'movement', chart: false,
+              sections: [['background','Background'],['aims','Aims'],['events','Course of Events'],
+                         ['people','People'],['outcomes','Outcomes'],['legacy','Legacy']] }
+};
+function profileKind(e) { return (e && e.kind && PROFILE_KINDS[e.kind]) ? e.kind : 'polity'; }
+// Subtype from the name for polities (empire, kingdom, caliphate…); others may set e.subtype explicitly
+function profileSubtype(e) {
+  if (e.subtype) return e.subtype;
+  if (profileKind(e) !== 'polity') return PROFILE_KINDS[profileKind(e)].single;
+  var m = e.name.match(/\b(Empire|Caliphate|Sultanate|Dynasty|Kingdom|Khaganate|Khanate|Confederation|Shogunate|Commonwealth|Ilkhanate)\b/);
+  return m ? m[1].replace('Ilkhanate', 'Khanate') : 'State';
+}
+function profileUrl(e) { return '/' + PROFILE_KINDS[profileKind(e)].path + '/' + toSlug(e.name); }
+
 // Node.js export (for generate-profiles.js)
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { EMPIRES, EMPIRE_INFO, ERAS, ERA_LABELS, ERA_ORDER, REGIONS, TRANSLATIONS, toSlug };
+  module.exports = { EMPIRES, EMPIRE_INFO, ERAS, ERA_LABELS, ERA_ORDER, REGIONS, TRANSLATIONS, toSlug, PROFILE_KINDS, profileKind, profileSubtype, profileUrl };
 }

@@ -6,13 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Encyclopedia — The Epoch Institute</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
-<meta name="description" content="The Epoch Institute Encyclopedia: the people, events, places, states, institutions and ideas named in our 94 empire profiles.">
+<meta name="description" content="The Epoch Institute Encyclopedia: the people, events, places, states, institutions and ideas named in the Institute's profiles of states, empires and civilisations.">
 <meta property="og:title" content="Encyclopedia — The Epoch Institute">
-<meta property="og:description" content="People, events, places, states, institutions and ideas from 94 empire profiles.">
+<meta property="og:description" content="People, events, places, states, institutions and ideas from the Institute's profiles.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/encyclopedia">
 <link rel="canonical" href="https://the-epoch-institute.org/encyclopedia">
-<link rel="stylesheet" href="/shared.css?v=13">
+<link rel="stylesheet" href="/shared.css?v=14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -93,7 +93,7 @@
       <header class="enc-head">
         <span class="hero-ornament"></span>
         <h1 class="research-title">Encyclopedia</h1>
-        <p class="research-subtitle">The people, events, places, states, institutions and ideas named in our 94 empire profiles.</p>
+        <p class="research-subtitle">The people, events, places, states, institutions and ideas named in our profiles of states, empires and civilisations.</p>
         <p class="enc-stats" id="enc-stats">Loading…</p>
       </header>
       <div class="enc-controls">
@@ -108,8 +108,8 @@
   </div>
 </main>
 
-<script src="/shared-data.js?v=3"></script>
-<script src="/shared-nav.js?v=5"></script>
+<script src="/shared-data.js?v=4"></script>
+<script src="/shared-nav.js?v=6"></script>
 <script src="/encyclopedia-data.js?v=4"></script>
 <script src="/encyclopedia-links.js?v=2"></script>
 <script>
@@ -227,7 +227,7 @@ initNav('encyclopedia');
       '<div><p class="enc-kicker">' + esc(SING[e.type] || e.type) + (e.subtype && e.type !== 'polity' && e.type !== 'factor' ? ' · ' + esc(e.subtype) : '') + '</p>' +
       '<h1 class="enc-title">' + esc(e.name) + '</h1>' + (meta.length ? '<p class="enc-meta">' + meta.join(' · ') + '</p>' : '') + '</div>' +
       '<div class="enc-body"><p class="enc-desc">' + (e.desc ? linkify(e.desc, e.slug) : 'Description coming soon.') + '</p>' + fig + '</div>' +
-      (e.empires.length ? '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' empire profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>' : '') +
+      (e.empires.length ? '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>' : '') +
       (function () {
         var rel = seeAlso(e); if (!rel.length) return '';
         return '<div><p class="enc-section-title">See also</p><ul class="enc-seealso">' + rel.map(function (o) {

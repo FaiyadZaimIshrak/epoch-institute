@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
 <meta name="twitter:site" content="@EpochInstitute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
-<link rel="stylesheet" href="/shared.css?v=13">
+<link rel="stylesheet" href="/shared.css?v=14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -75,7 +75,7 @@
 
 <!-- At a glance -->
 <section class="home-stats" aria-label="The Epoch Institute in numbers">
-  <a class="home-stat" href="/profiles"><span class="home-stat-num" id="stat-empires">94</span><span class="home-stat-label">Empire profiles</span></a>
+  <a class="home-stat" href="/profiles"><span class="home-stat-num" id="stat-empires">94</span><span class="home-stat-label">Profiles</span></a>
   <a class="home-stat" href="/encyclopedia"><span class="home-stat-num" id="stat-entries">3,736</span><span class="home-stat-label">Encyclopedia entries</span></a>
   <a class="home-stat" href="/encyclopedia"><span class="home-stat-num" id="stat-images">2,070</span><span class="home-stat-label">Historical images</span></a>
   <a class="home-stat" href="/explorer"><span class="home-stat-num" id="stat-years">4,600</span><span class="home-stat-label">Years of history</span></a>
@@ -167,8 +167,8 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=3"></script>
-<script src="/shared-nav.js?v=5"></script>
+<script src="/shared-data.js?v=4"></script>
+<script src="/shared-nav.js?v=6"></script>
 <script src="/home-data.js?v=3"></script>
 <script>
 initNav('home');
@@ -199,7 +199,7 @@ initNav('home');
   document.getElementById('featured-grid').innerHTML = picked.map(function (e) {
     var p = HOME_PICS[e.name], s = span(e), info = (EMPIRE_INFO[e.name] || '').split(/(?<=\.)\s/)[0];
     if (info.length > 150) info = info.slice(0, info.lastIndexOf(' ', 147)) + '…';
-    return '<a class="featured-card" href="/empire/' + toSlug(e.name) + '">' +
+    return '<a class="featured-card" href="' + profileUrl(e) + '">' +
       '<span class="featured-img"><img src="' + escHtml(p.img) + '" alt="' + escHtml(p.name) + '" loading="lazy"></span>' +
       '<span class="featured-body"><span class="featured-region">' + escHtml(e.region) + '</span>' +
       '<span class="featured-name">' + escHtml(e.name) + '</span>' +

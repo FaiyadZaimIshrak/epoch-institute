@@ -4,10 +4,10 @@
 <script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Empire Profiles — The Epoch Institute</title>
+<title>Profiles — The Epoch Institute</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Detailed profiles of 94 civilisations — foundation, economy, military, governance, global impact, and decline, illustrated with historical emblems.">
-<meta property="og:title" content="Empire Profiles — The Epoch Institute">
+<meta property="og:title" content="Profiles — The Epoch Institute">
 <meta property="og:description" content="Explore detailed chronicles of 94 civilisations across five millennia of human history.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/profiles">
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=13">
+<link rel="stylesheet" href="/shared.css?v=14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -105,10 +105,11 @@
 
   <div class="explorer-header">
     <p class="explorer-label">HISTORICAL RECORDS</p>
-    <h1 class="explorer-title">Empire Profiles</h1>
-    <p class="explorer-description">Detailed chronicles of 94 civilisations across five millennia — select an empire to explore its founding, society, military, governance, global influence, and fall.</p>
+    <h1 class="explorer-title">Profiles</h1>
+    <p class="explorer-description">In-depth profiles of states, empires and civilisations across five millennia — how each was founded, how it lived, fought and governed, what it left behind and why it fell.</p>
   </div>
 
+  <div class="profile-kinds" id="profile-kinds" role="group" aria-label="Kind of profile" hidden></div>
   <!-- Search, filters, sort -->
   <div class="profile-controls" role="search">
     <div class="profile-search-wrap" id="profile-search-wrap">
@@ -149,9 +150,9 @@
 
 </div>
 
-<script src="/shared-data.js?v=3"></script>
+<script src="/shared-data.js?v=4"></script>
 <script src="/empire-profiles.js?v=3"></script>
-<script src="/shared-nav.js?v=5"></script>
+<script src="/shared-nav.js?v=6"></script>
 <script src="/epoch-stats.js?v=2"></script>
 <script>
 // ── Era classifier ────────────────────────────────────────────────────────────
@@ -171,14 +172,14 @@ function openEmpireDetail(name) {
 }
 
 // ── Gallery: search, era/region filters (?era= / ?region=), sort ──────────────
-var PF = { q: '', era: '', region: '', sort: 'chrono' };
+var PF = { q: '', era: '', region: '', sort: 'chrono', kind: '' };
 function pfYears(e) { return [e.points[0][0], e.points[e.points.length - 1][0]]; }
 function pfYear(y) { y = Math.round(y); return y < 0 ? Math.abs(y) + ' BCE' : y + ' CE'; }
 function pfCard(emp) {
   var safeName = escHtml(emp.name), y = pfYears(emp);
   var info = (EMPIRE_INFO[emp.name] || '').split(/(?<=\.)\s/)[0];
   if (info.length > 120) info = info.slice(0, info.lastIndexOf(' ', 117)) + '…';
-  return '<a class="empire-thumb" href="/empire/' + toSlug(emp.name) + '" data-name="' + safeName + '">' +
+  return '<a class="empire-thumb" href="' + profileUrl(emp) + '" data-name="' + safeName + '">' +
     '<img class="thumb-logo" src="logos/' + encodeURIComponent(emp.name) + '.png" alt="" loading="lazy" ' +
       'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
     '<div class="thumb-logo-fallback" style="display:none">🏛</div>' +
@@ -191,7 +192,7 @@ function pfCard(emp) {
 function buildProfileGallery() {
   var gallery = document.getElementById('profile-gallery'), q = PF.q.toLowerCase().trim();
   var list = EMPIRES.filter(function (e) {
-    return (!q || e.name.toLowerCase().indexOf(q) !== -1) && (!PF.era || getEmpireEra(e) === PF.era) && (!PF.region || e.region === PF.region);
+    return (!q || e.name.toLowerCase().indexOf(q) !== -1) && (!PF.era || getEmpireEra(e) === PF.era) && (!PF.region || e.region === PF.region) && (!PF.kind || profileKind(e) === PF.kind);
   });
   var html;
   if (PF.sort === 'chrono') {
@@ -223,6 +224,19 @@ function buildProfileGallery() {
   var search = document.getElementById('profile-search');
   ERA_ORDER.forEach(function (k) { eraSel.insertAdjacentHTML('beforeend', '<option value="' + k + '">' + escHtml(ERA_LABELS[k]) + '</option>'); });
   REGIONS.forEach(function (r) { regSel.insertAdjacentHTML('beforeend', '<option value="' + escHtml(r) + '">' + escHtml(r) + '</option>'); });
+  // Kind chips (states, cultures, ideologies…) appear once more than one kind of profile exists
+  var kinds = Object.keys(PROFILE_KINDS).filter(function (k) { return EMPIRES.some(function (e) { return profileKind(e) === k; }); });
+  var kindRow = document.getElementById('profile-kinds');
+  if (kinds.length > 1) {
+    kindRow.hidden = false;
+    kindRow.innerHTML = [['', 'All']].concat(kinds.map(function (k) { return [k, PROFILE_KINDS[k].label]; })).map(function (k) {
+      return '<button type="button" class="browse-chip" data-kind="' + k[0] + '" aria-pressed="' + (PF.kind === k[0]) + '">' + escHtml(k[1]) + '</button>';
+    }).join('');
+    kindRow.addEventListener('click', function (ev) {
+      var b = ev.target.closest('[data-kind]'); if (!b) return; PF.kind = b.getAttribute('data-kind');
+      kindRow.querySelectorAll('[data-kind]').forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); buildProfileGallery();
+    });
+  }
   var params = new URLSearchParams(location.search);
   if (ERA_ORDER.indexOf(params.get('era')) !== -1) PF.era = params.get('era');
   if (REGIONS.indexOf(params.get('region')) !== -1) PF.region = params.get('region');

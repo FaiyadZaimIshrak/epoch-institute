@@ -42,6 +42,20 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 - `images/encyclopedia/<slug>.jpg` — freely licensed Wikimedia Commons thumbnails; author/licence/source
   are in each entry's `credit` and shown under the image. Keep the credit if an image is reused.
 
+## Kinds of profile (not only empires)
+The Institute profiles states and empires today and will add cultures, ideologies, movements and more.
+`PROFILE_KINDS` in shared-data.js defines each kind: label, URL folder (`path`), section scheme, and whether it has a
+power curve (`chart`: explorer, radar stats, related empires). Helpers: `profileKind(e)`, `profileSubtype(e)`,
+`profileUrl(e)`. EMPIRES entries without `kind` are polities (URL /empire/<slug>, unchanged).
+To add a new profile, e.g. a culture:
+1. Add `{name, region, kind:'culture', start, end}` to EMPIRES (`points` only for polities) and a one-line teaser to
+   EMPIRE_INFO.
+2. Add its texts to EMPIRE_PROFILES using that kind's section keys (e.g. origins, society, beliefs, arts, exchange,
+   legacy) plus summary and references.
+3. Add an .htaccess ForceType rule for the new folder (copy empire/.htaccess) and a copy rule in .cpanel.yml.
+4. Regenerate pages (generator.html), rebuild the encyclopedia links (they match entry names in all profile texts),
+   regenerate home-data.js / search-index.js. The profiles page shows a kind filter once a second kind exists.
+
 ## Homepage and site search
 - `home-data.js` — HOME_PICS (one distinctive picture per empire for the featured cards), HOME_ENTRIES
   (encyclopedia "entry of the day"), HOME_COUNTS. Loaded only by `index`.
