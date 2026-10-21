@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
 <meta name="twitter:site" content="@EpochInstitute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
-<link rel="stylesheet" href="/shared.css?v=17">
+<link rel="stylesheet" href="/shared.css?v=18">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -99,6 +99,24 @@
   </div>
 </section>
 
+<!-- Daily quiz -->
+<section class="home-section" aria-labelledby="quiz-title">
+  <div class="home-section-hd">
+    <h2 class="home-section-title" id="quiz-title">Daily Quiz: Guess the Empire</h2>
+    <span class="quiz-streak" id="quiz-streak"></span>
+  </div>
+  <div class="quiz" id="quiz">
+    <ol class="quiz-clues" id="quiz-clues"></ol>
+    <form class="quiz-form" id="quiz-form" autocomplete="off">
+      <input id="quiz-input" list="quiz-names" placeholder="Type an empire, e.g. Roman Empire" aria-label="Your guess">
+      <datalist id="quiz-names"></datalist>
+      <button type="submit">Guess</button>
+    </form>
+    <p class="quiz-status" id="quiz-status" aria-live="polite"></p>
+    <div class="quiz-result" id="quiz-result" hidden></div>
+  </div>
+</section>
+
 <!-- Encyclopedia entry of the day -->
 <section class="home-section" aria-labelledby="enc-day-title">
   <div class="home-section-hd">
@@ -169,7 +187,7 @@
 
 <script src="/shared-data.js?v=4"></script>
 <script src="/shared-nav.js?v=7"></script>
-<script src="/home-data.js?v=3"></script>
+<script src="/home-data.js?v=4"></script>
 <script>
 initNav('home');
 
@@ -225,6 +243,70 @@ initNav('home');
       '<span class="enc-day-desc">' + escHtml(en.desc) + '</span>' +
       '<span class="home-section-more">Read the entry →</span></span></a>';
   }
+
+  // Continue reading: the profile last read in this browser (from the empire pages' progress tracking)
+  (function () {
+    var last = null; try { last = JSON.parse(localStorage.getItem('epoch-last') || 'null'); } catch (e) {}
+    if (!last || !last.url || last.pct >= 95 || Date.now() - last.t > 30 * 86400000) return;
+    var el = document.createElement('a'); el.className = 'continue-reading'; el.href = last.url;
+    el.innerHTML = '<span class="continue-label">Continue reading</span><span class="continue-name">' + escHtml(last.name) + '</span>' +
+      '<span class="continue-bar" aria-hidden="true"><span style="width:' + Math.max(5, last.pct) + '%"></span></span><span class="continue-pct">' + last.pct + '% read →</span>';
+    document.querySelector('.hero-ctas').insertAdjacentElement('afterend', el);
+  })();
+
+  // Daily quiz: four clues, a wrong guess reveals the next one; progress and streak kept in this browser
+  (function () {
+    if (typeof HOME_QUIZ === 'undefined') return;
+    var pool = EMPIRES.filter(function (e) { return HOME_QUIZ[e.name]; });
+    var answer = pool[(day * 7919 + 13) % pool.length], q = HOME_QUIZ[answer.name], s = span(answer);
+    var num = day - 20740;   // quiz number since launch
+    var clues = [
+      'Region: ' + answer.region + '. It lasted about ' + Math.abs(Math.round(s[1] - s[0])) + ' years, from ' + fmtYear(s[0]) + ' to ' + fmtYear(s[1]) + '.',
+      q[2] ? 'Did you know? ' + q[2] : null,
+      q[1] ? 'Its founder: ' + q[1] + '.' : null,
+      q[0] ? 'Its capital: ' + q[0] + '.' : null
+    ].filter(Boolean);
+    var st = { day: day, guesses: [], done: false, won: false };
+    try { var saved = JSON.parse(localStorage.getItem('epoch-quiz') || 'null'); if (saved && saved.day === day) st = saved; } catch (e) {}
+    function save() { try { localStorage.setItem('epoch-quiz', JSON.stringify(st)); } catch (e) {} }
+    function streak() { try { return JSON.parse(localStorage.getItem('epoch-quiz-streak') || '{"n":0,"last":0}'); } catch (e) { return { n: 0, last: 0 }; } }
+    document.getElementById('quiz-names').innerHTML = EMPIRES.map(function (e) { return '<option value="' + escHtml(e.name) + '">'; }).join('');
+    function render() {
+      var shown = Math.min(clues.length, st.done ? clues.length : st.guesses.length + 1);
+      document.getElementById('quiz-clues').innerHTML = clues.slice(0, shown).map(function (c, i) { return '<li><span class="quiz-n">Clue ' + (i + 1) + '</span>' + escHtml(c) + '</li>'; }).join('');
+      var left = clues.length - st.guesses.length;
+      document.getElementById('quiz-status').textContent = st.done ? '' :
+        (st.guesses.length ? 'Not ' + st.guesses[st.guesses.length - 1] + '. ' : '') + left + (left === 1 ? ' guess' : ' guesses') + ' left.';
+      document.getElementById('quiz-form').hidden = st.done;
+      var sk = streak(); document.getElementById('quiz-streak').textContent = sk.n > 1 ? 'Streak: ' + sk.n + ' days' : '';
+      var res = document.getElementById('quiz-result');
+      if (st.done) {
+        res.hidden = false;
+        res.innerHTML = '<p class="quiz-verdict">' + (st.won ? 'Correct — solved with ' + st.guesses.length + ' of ' + clues.length + ' clues.' : 'The answer was:') + '</p>' +
+          '<a class="quiz-answer" href="' + profileUrl(answer) + '">' + escHtml(answer.name) + ' →</a>' +
+          '<button type="button" class="quiz-share" id="quiz-share">Copy result</button><span class="quiz-next">A new empire tomorrow.</span>';
+        document.getElementById('quiz-share').onclick = function () {
+          var t = 'The Epoch Institute daily quiz #' + num + ': ' + (st.won ? 'solved with ' + st.guesses.length + '/' + clues.length + ' clues' : 'stumped today') + '. https://the-epoch-institute.org';
+          var b = this; if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { b.textContent = 'Copied ✓'; }).catch(function () {});
+        };
+      } else res.hidden = true;
+    }
+    document.getElementById('quiz-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var inp = document.getElementById('quiz-input'), g = inp.value.trim(); if (!g || st.done) return;
+      var match = EMPIRES.filter(function (x) { return x.name.toLowerCase() === g.toLowerCase(); })[0];
+      if (!match) { document.getElementById('quiz-status').textContent = 'Choose a name from the list of 94 profiles.'; return; }
+      st.guesses.push(match.name); inp.value = '';
+      if (match.name === answer.name) { st.done = true; st.won = true; }
+      else if (st.guesses.length >= clues.length) st.done = true;
+      if (st.done) {
+        var sk = streak(); sk.n = st.won ? (sk.last === day - 1 ? sk.n + 1 : 1) : 0; sk.last = day;
+        try { localStorage.setItem('epoch-quiz-streak', JSON.stringify(sk)); } catch (e2) {}
+      }
+      save(); render();
+    });
+    render();
+  })();
 
   // Hero search opens the site search with what was typed
   var hs = document.getElementById('home-search'), hi = document.getElementById('home-search-input');
