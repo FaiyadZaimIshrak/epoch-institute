@@ -2560,3 +2560,62 @@ h2.profile-section-title { font-weight: 400; }
   .enc-day-body { padding: 18px; }
 }
 #site-search-input::-webkit-search-cancel-button, #home-search-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+
+/* ── Layout fixes (audit Oct 2026) ── */
+/* Off-screen panels (explorer info panel) must never widen the page */
+html, body { overflow-x: clip; }
+/* Inner pages start at the top instead of centring in a full-screen block */
+#research, #about, #contributors { min-height: auto; justify-content: flex-start; padding-top: 120px; }
+.research-card { text-align: left; }
+#research .research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 900px; }
+@media (max-width: 700px) { #research .research-grid { grid-template-columns: 1fr; } #research, #about, #contributors { padding-top: 96px; } }
+/* Contributors: centre the cards under the centred heading */
+.contributors-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 260px)) !important; justify-content: center; }
+/* Today in History page: tighter header */
+.tih-page-header { padding-bottom: 32px; }
+/* Community: every block on one 1100px column with the same content edge */
+#community-page .explorer-header { max-width: 1100px; margin: 0 auto; padding-left: 40px; padding-right: 40px; border-bottom: 0; }
+#community-page .discord-cta-section,
+#community-page .community-share-band { max-width: 1020px; width: calc(100% - 80px); margin-left: auto; margin-right: auto; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 40px; }
+#community-page .discord-cta-section { margin-top: 24px; }
+@media (max-width: 768px) {
+  #community-page .explorer-header { padding-left: 16px; padding-right: 16px; }
+  #community-page .discord-cta-section, #community-page .community-share-band { width: calc(100% - 32px); padding: 24px 18px; }
+}
+/* Explorer: tabs row must scroll inside its box, not widen the page */
+.chart-controls > * { min-width: 0; }
+.region-tabs { max-width: 100%; }
+/* Homepage Today in History: equal cards across the section; date as a left-aligned line */
+.home-section #tih-strip .tih-date-row { flex-direction: row; align-items: baseline; gap: 10px; margin: 0 0 16px; }
+.home-section #tih-strip .tih-date-sep { display: none; }
+.home-section #tih-strip .tih-date-full { font-size: 18px; letter-spacing: 0.04em; }
+.home-section .tih-strip-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; max-width: none; margin-top: 0; }
+.home-section .tih-strip-card { max-width: none; }
+@media (max-width: 900px) { .home-section .tih-strip-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .home-section .tih-strip-cards { grid-template-columns: 1fr; } }
+/* Phone tap targets: at least 40px */
+@media (max-width: 600px) {
+  .nav-search-btn, .nav-toggle-btn { min-width: 40px; min-height: 40px; }
+  .nav-logo { padding: 10px 0; }
+  .tab, .enc-chip { min-height: 40px; }
+  .home-section-more { display: inline-flex; align-items: center; min-height: 40px; }
+  .footer-social-link { min-height: 40px; display: inline-flex; align-items: center; }
+  .empire-toc a { display: inline-flex; align-items: center; min-height: 40px; }
+  .series-copy-link, .detail-cite-btn { min-height: 40px; }
+}@media (max-width: 600px) {
+  .hero-secondary-cta { display: inline-flex; align-items: center; min-height: 40px; }
+  #empire-search, .era-select, .zoom-reset-btn { min-height: 40px; }
+  #toggle-events, #toggle-labels { width: 20px; height: 20px; }
+  .chart-controls label { min-height: 40px; display: inline-flex; align-items: center; gap: 6px; }
+  .info-close { min-width: 40px; min-height: 40px; }
+  .enc-az a { min-width: 32px; min-height: 40px; display: inline-flex; align-items: center; justify-content: center; }
+  .series-notify-input, .series-notify-btn { min-height: 42px; }
+  #about a[href^="mailto:"] { display: inline-block; padding: 10px 0; }
+  .dataset-licence-badge { min-height: 40px; display: inline-flex; align-items: center; }
+}#announcements .announcements-inner { max-width: 1100px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+#community-page .community-section { max-width: 1020px; width: calc(100% - 80px); padding-left: 0; padding-right: 0; }
+@media (max-width: 768px) { #community-page .community-section { width: calc(100% - 32px); } #announcements .announcements-inner { padding-left: 16px; padding-right: 16px; } }
+@media (max-width: 420px) { .nav-logo-text { font-size: 13px; letter-spacing: 0.1em; white-space: nowrap; } }
+input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
+
+@media (max-width: 600px) { .info-share-btn, .enc-random, .cite-copy-btn { min-height: 40px; min-width: 40px; } .empire-nav-row .profile-back-gallery-btn { min-height: 40px !important; display: inline-flex; align-items: center; } }

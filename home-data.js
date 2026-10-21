@@ -54,7 +54,7 @@ var HOME_PICS = {
   "Lunda Empire": {img:"/images/encyclopedia/luba-empire.jpg",name:"Luba Empire",slug:"luba-empire",credit:"Library of Congress, Public domain"},
   "Macedonian Empire": {img:"/images/encyclopedia/pergamon.jpg",name:"Pergamon",slug:"pergamon",credit:"Adam Jones from Kelowna, BC, Canada, CC BY-SA 2.0"},
   "Majapahit Empire": {img:"/images/encyclopedia/trowulan.jpg",name:"Trowulan",slug:"trowulan",credit:"Ivuvisual, CC BY-SA 4.0"},
-  "Mali Empire": {img:"/images/encyclopedia/ghana-empire.jpg",name:"Ghana Empire",slug:"ghana-empire",credit:"Luxo, CC BY-SA 3.0"},
+  "Mali Empire": {img:"/images/encyclopedia/djenne.jpg",name:"Djenné",slug:"djenne",credit:"qiv, CC BY-SA 2.0"},
   "Mamluk Sultanate": {img:"/images/encyclopedia/shajar-al-durr.jpg",name:"Shajar al-Durr",slug:"shajar-al-durr",credit:"Stanley Lane Poole, Public domain"},
   "Maratha Empire": {img:"/images/encyclopedia/shivaji.jpg",name:"Shivaji",slug:"shivaji",credit:"Unknown authorUnknown author, Public domain"},
   "Maurya Empire": {img:"/images/encyclopedia/ashoka.jpg",name:"Ashoka",slug:"ashoka",credit:"Photo Dharma from Sadao, Thailand, CC BY 2.0"},

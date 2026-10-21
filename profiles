@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=10">
+<link rel="stylesheet" href="/shared.css?v=13">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -40,6 +40,7 @@
 }
 .profile-filter select:focus { border-color: var(--gold); }
 .profile-count { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 0 0 10px auto; }
+.profile-controls .compare-toggle-btn { min-height: 42px; }
 .profile-reset { font: inherit; color: var(--gold); background: none; border: 0; text-decoration: underline; cursor: pointer; }
 .profile-search-input {
   flex: 1; background: var(--surface); border: 1px solid var(--border);
@@ -120,6 +121,7 @@
       <option value="chrono">By era</option><option value="az">A–Z</option><option value="duration">Longest-lasting</option><option value="start">Oldest first</option>
     </select></label>
     <p class="profile-count" id="profile-count" aria-live="polite"></p>
+    <button class="compare-toggle-btn" id="compare-toggle-btn">⇄ Compare</button>
   </div>
   <div class="profile-search-empty" id="profile-search-empty" style="display:none;">
     No empires match these filters. <button type="button" class="profile-reset" id="profile-reset">Clear filters</button>
@@ -127,9 +129,6 @@
 
   <!-- Compare area -->
   <div id="compare-area">
-    <div class="compare-toggle-row">
-      <button class="compare-toggle-btn" id="compare-toggle-btn">⇄ Compare Empires</button>
-    </div>
     <div id="compare-panel" class="compare-panel" aria-live="polite">
       <p class="compare-hint" id="compare-hint">Click any two empire cards below to compare their profiles side by side.</p>
       <div class="compare-slots">
@@ -346,7 +345,7 @@ function buildProfileGallery() {
     profilesEl.classList.remove('compare-mode');
     panel.classList.remove('open');
     toggleBtn.classList.remove('active');
-    toggleBtn.textContent = '⇄ Compare Empires';
+    toggleBtn.textContent = '⇄ Compare';
     renderSlot('compare-slot-a', null);
     renderSlot('compare-slot-b', null);
     updatePanel();
