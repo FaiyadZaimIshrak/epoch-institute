@@ -2746,4 +2746,9 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 @media (max-width: 900px) { .home-paths { grid-template-columns: 1fr; } }
 .path-back { justify-self: start; font-family: var(--font-ui); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; border: 1px solid var(--border); padding: 8px 14px; border-radius: 2px; }
 .path-back:hover { color: var(--gold); border-color: var(--gold); }
-.path-head { border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.path-head { border-bottom: 1px solid var(--border); padding-bottom: 20px; }/* quiz: answer picture after solving */
+.quiz-result { display: flex; gap: 18px; align-items: center; }
+.quiz-img { width: 120px; height: 120px; flex: 0 0 120px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); }
+.quiz-result-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.quiz-result-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 4px; }
+@media (max-width: 480px) { .quiz-result { flex-direction: column; align-items: flex-start; } .quiz-img { width: 100%; height: 180px; } }

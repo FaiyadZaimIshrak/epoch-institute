@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
 <meta name="twitter:site" content="@EpochInstitute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=22">
+<link rel="stylesheet" href="/shared.css?v=23">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -59,7 +59,7 @@
   <h1 class="hero-title">THE EPOCH INSTITUTE</h1>
   <span class="hero-ornament"></span>
   <p class="hero-tagline" data-i18n="hero_tagline">Understanding civilisational patterns to illuminate the present.</p>
-  <p class="hero-mission" data-i18n="hero_mission">The Epoch Institute researches human civilisation with objectivity and curiosity — studying the rise and fall of empires, examining the real-time implications of historical events, and tracing how the past shapes modern society. We make the story of humanity not just informative, but compelling. History is not a closed book; it is the foundation of everything around us.</p>
+  <p class="hero-mission" data-i18n="hero_mission">The Epoch Institute researches human civilisation with objectivity and curiosity — studying the rise and fall of states, empires and cultures, examining the real-time implications of historical events, and tracing how the past shapes modern society. We make the story of humanity not just informative, but compelling. History is not a closed book; it is the foundation of everything around us.</p>
 
   <form class="home-search" id="home-search" role="search">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
@@ -84,7 +84,7 @@
 <!-- Featured empires (rotates daily) -->
 <section class="home-section" aria-labelledby="featured-title">
   <div class="home-section-hd">
-    <h2 class="home-section-title" id="featured-title">Featured Empires</h2>
+    <h2 class="home-section-title" id="featured-title">Featured Profiles</h2>
     <a class="home-section-more" href="/profiles">All 94 profiles →</a>
   </div>
   <div class="featured-grid" id="featured-grid"></div>
@@ -117,7 +117,7 @@
   <div class="quiz" id="quiz">
     <ol class="quiz-clues" id="quiz-clues"></ol>
     <form class="quiz-form" id="quiz-form" autocomplete="off">
-      <input id="quiz-input" list="quiz-names" placeholder="Type an empire, e.g. Roman Empire" aria-label="Your guess">
+      <input id="quiz-input" list="quiz-names" placeholder="Type your guess" aria-label="Your guess">
       <datalist id="quiz-names"></datalist>
       <button type="submit">Guess</button>
     </form>
@@ -196,7 +196,7 @@
 
 <script src="/shared-data.js?v=5"></script>
 <script src="/shared-nav.js?v=9"></script>
-<script src="/home-data.js?v=4"></script>
+<script src="/home-data.js?v=5"></script>
 <script src="/reading-paths.js?v=1"></script>
 <script>
 initNav('home');
@@ -275,23 +275,54 @@ initNav('home');
     document.querySelector('.hero-ctas').insertAdjacentElement('afterend', el);
   })();
 
-  // Daily quiz: four clues, a wrong guess reveals the next one; progress and streak kept in this browser
+  // Daily quiz: rotates through profiles (any kind) and encyclopedia people, events, places, ideas and works.
+  // Four clues; a wrong guess reveals the next one; progress and streak kept in this browser.
   (function () {
-    if (typeof HOME_QUIZ === 'undefined') return;
-    var pool = EMPIRES.filter(function (e) { return HOME_QUIZ[e.name]; });
-    var answer = pool[(day * 7919 + 13) % pool.length], q = HOME_QUIZ[answer.name], s = span(answer);
-    var num = day - 20740;   // quiz number since launch
-    var clues = [
-      'Region: ' + answer.region + '. It lasted about ' + Math.abs(Math.round(s[1] - s[0])) + ' years, from ' + fmtYear(s[0]) + ' to ' + fmtYear(s[1]) + '.',
-      q[2] ? 'Did you know? ' + q[2] : null,
-      q[1] ? 'Its founder: ' + q[1] + '.' : null,
-      q[0] ? 'Its capital: ' + q[0] + '.' : null
-    ].filter(Boolean);
-    var st = { day: day, guesses: [], done: false, won: false };
-    try { var saved = JSON.parse(localStorage.getItem('epoch-quiz') || 'null'); if (saved && saved.day === day) st = saved; } catch (e) {}
+    if (typeof HOME_QUIZ === 'undefined' || !HOME_QUIZ.entries) return;
+    var qd = parseInt(new URLSearchParams(location.search).get('quizday'), 10), qday = isNaN(qd) ? day : qd;
+    var ROTA = ['profile', 'person', 'event', 'place', 'profile', 'idea', 'work'];
+    var TITLES = { person: 'Who am I?', event: 'Which event is this?', place: 'Which place is this?', idea: 'Which idea is this?', work: 'Which work is this?' };
+    var NOUNS = { person: 'person', event: 'event', place: 'place', idea: 'idea', work: 'work' };
+    var cat = ROTA[qday % ROTA.length];
+    if (cat !== 'profile' && !(HOME_QUIZ.entries[cat] || []).length) cat = 'profile';
+    var num = qday - 20740, puzzle;   // quiz number since launch
+    if (cat === 'profile') {
+      var pool = EMPIRES.filter(function (e) { return HOME_QUIZ.profiles[e.name]; });
+      var ans = pool[(qday * 7919 + 13) % pool.length], q = HOME_QUIZ.profiles[ans.name], s = span(ans);
+      var kindSingle = PROFILE_KINDS[profileKind(ans)].single.toLowerCase();
+      puzzle = { name: ans.name, aka: [], href: profileUrl(ans), img: (typeof HOME_PICS !== 'undefined' && HOME_PICS[ans.name]) ? HOME_PICS[ans.name].img : '',
+        title: 'Guess the ' + kindSingle, noun: 'profile', names: EMPIRES.map(function (e) { return e.name; }),
+        clues: [
+          'Region: ' + ans.region + '. It lasted about ' + Math.abs(Math.round(s[1] - s[0])) + ' years, from ' + fmtYear(s[0]) + ' to ' + fmtYear(s[1]) + '.',
+          q[2] ? 'Did you know? ' + q[2] : null,
+          q[1] ? 'Its founder: ' + q[1] + '.' : null,
+          q[0] ? 'Its capital: ' + q[0] + '.' : null
+        ].filter(Boolean) };
+    } else {
+      var list = HOME_QUIZ.entries[cat], en = list[(qday * 7919 + 13) % list.length];
+      puzzle = { name: en.name, aka: en.aka || [], href: '/encyclopedia#' + en.slug, img: en.img, title: TITLES[cat], noun: NOUNS[cat], names: null, clues: en.clues, type: cat };
+    }
+    document.getElementById('quiz-title').textContent = 'Daily Quiz: ' + puzzle.title;
+    var input = document.getElementById('quiz-input'), datalist = document.getElementById('quiz-names');
+    input.placeholder = cat === 'profile' ? 'Type a profile, e.g. Roman Empire' : 'Type the name of the ' + puzzle.noun;
+    // Suggestions: profile names, or encyclopedia names of today's type (search index loaded on first focus)
+    function fillNames(names) { puzzle.names = names; datalist.innerHTML = names.map(function (n) { return '<option value="' + escHtml(n) + '">'; }).join(''); }
+    if (puzzle.names) fillNames(puzzle.names);
+    else {
+      var loading = false, loadNames = function () {
+      if (puzzle.names || loading) return;
+      var go = function () { if (typeof SEARCH_INDEX !== 'undefined') fillNames(SEARCH_INDEX.filter(function (r) { return r[2] === cat; }).map(function (r) { return r[1]; })); };
+      if (typeof SEARCH_INDEX !== 'undefined') return go();
+      loading = true; var sc = document.createElement('script'); sc.src = '/search-index.js?v=1'; sc.onload = go; document.head.appendChild(sc);
+      };
+      input.addEventListener('focus', loadNames); setTimeout(loadNames, 2500);
+    }
+    var clues = puzzle.clues;
+    var st = { day: qday, guesses: [], done: false, won: false };
+    try { var saved = JSON.parse(localStorage.getItem('epoch-quiz') || 'null'); if (saved && saved.day === qday) st = saved; } catch (e) {}
     function save() { try { localStorage.setItem('epoch-quiz', JSON.stringify(st)); } catch (e) {} }
     function streak() { try { return JSON.parse(localStorage.getItem('epoch-quiz-streak') || '{"n":0,"last":0}'); } catch (e) { return { n: 0, last: 0 }; } }
-    document.getElementById('quiz-names').innerHTML = EMPIRES.map(function (e) { return '<option value="' + escHtml(e.name) + '">'; }).join('');
+    function isAnswer(g) { var f = searchFold(g).trim(); return [puzzle.name].concat(puzzle.aka).some(function (n) { return searchFold(n).trim() === f; }); }
     function render() {
       var shown = Math.min(clues.length, st.done ? clues.length : st.guesses.length + 1);
       document.getElementById('quiz-clues').innerHTML = clues.slice(0, shown).map(function (c, i) { return '<li><span class="quiz-n">Clue ' + (i + 1) + '</span>' + escHtml(c) + '</li>'; }).join('');
@@ -303,25 +334,29 @@ initNav('home');
       var res = document.getElementById('quiz-result');
       if (st.done) {
         res.hidden = false;
-        res.innerHTML = '<p class="quiz-verdict">' + (st.won ? 'Correct — solved with ' + st.guesses.length + ' of ' + clues.length + ' clues.' : 'The answer was:') + '</p>' +
-          '<a class="quiz-answer" href="' + profileUrl(answer) + '">' + escHtml(answer.name) + ' →</a>' +
-          '<button type="button" class="quiz-share" id="quiz-share">Copy result</button><span class="quiz-next">A new empire tomorrow.</span>';
+        res.innerHTML = (puzzle.img ? '<img class="quiz-img" src="' + escHtml(puzzle.img) + '" alt="">' : '') +
+          '<div class="quiz-result-body"><p class="quiz-verdict">' + (st.won ? 'Correct — solved with ' + st.guesses.length + ' of ' + clues.length + ' clues.' : 'The answer was:') + '</p>' +
+          '<a class="quiz-answer" href="' + escHtml(puzzle.href) + '">' + escHtml(puzzle.name) + ' →</a>' +
+          '<div class="quiz-result-actions"><button type="button" class="quiz-share" id="quiz-share">Copy result</button><span class="quiz-next">A new puzzle tomorrow: profiles, people, events, places, ideas and works in turn.</span></div></div>';
         document.getElementById('quiz-share').onclick = function () {
-          var t = 'The Epoch Institute daily quiz #' + num + ': ' + (st.won ? 'solved with ' + st.guesses.length + '/' + clues.length + ' clues' : 'stumped today') + '. https://the-epoch-institute.org';
+          var t = 'The Epoch Institute daily quiz #' + num + ' (' + puzzle.noun + '): ' + (st.won ? 'solved with ' + st.guesses.length + '/' + clues.length + ' clues' : 'stumped today') + '. https://the-epoch-institute.org';
           var b = this; if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { b.textContent = 'Copied ✓'; }).catch(function () {});
         };
       } else res.hidden = true;
     }
     document.getElementById('quiz-form').addEventListener('submit', function (e) {
       e.preventDefault();
-      var inp = document.getElementById('quiz-input'), g = inp.value.trim(); if (!g || st.done) return;
-      var match = EMPIRES.filter(function (x) { return x.name.toLowerCase() === g.toLowerCase(); })[0];
-      if (!match) { document.getElementById('quiz-status').textContent = 'Choose a name from the list of 94 profiles.'; return; }
-      st.guesses.push(match.name); inp.value = '';
-      if (match.name === answer.name) { st.done = true; st.won = true; }
+      var g = input.value.trim(); if (!g || st.done) return;
+      var right = isAnswer(g);
+      if (!right && !puzzle.names) { document.getElementById('quiz-status').textContent = 'Loading suggestions… try again in a moment.'; loadNames(); return; }
+      if (!right && puzzle.names && !puzzle.names.some(function (n) { return searchFold(n) === searchFold(g); })) {
+        document.getElementById('quiz-status').textContent = 'Pick a name from the suggestions.'; return;
+      }
+      st.guesses.push(right ? puzzle.name : g); input.value = '';
+      if (right) { st.done = true; st.won = true; }
       else if (st.guesses.length >= clues.length) st.done = true;
       if (st.done) {
-        var sk = streak(); sk.n = st.won ? (sk.last === day - 1 ? sk.n + 1 : 1) : 0; sk.last = day;
+        var sk = streak(); sk.n = st.won ? (sk.last === qday - 1 ? sk.n + 1 : 1) : 0; sk.last = qday;
         try { localStorage.setItem('epoch-quiz-streak', JSON.stringify(sk)); } catch (e2) {}
       }
       save(); render();

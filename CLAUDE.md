@@ -57,7 +57,8 @@ To add a new profile, e.g. a culture:
    regenerate home-data.js / search-index.js. The profiles page shows a kind filter once a second kind exists.
 
 ## Homepage and site search
-- `home-data.js` — HOME_PICS (one distinctive picture per empire for the featured cards), HOME_ENTRIES
+- Daily quiz (index): rotates profile → person → event → place → profile → idea → work. Profiles of every kind (title from PROFILE_KINDS), entry puzzles from the encyclopedia with the name masked in the clues. `?quizday=N` previews another day.
+- `home-data.js` — HOME_QUIZ (profiles + entry puzzles by type), HOME_PICS (one distinctive picture per empire for the featured cards), HOME_ENTRIES
   (encyclopedia "entry of the day"), HOME_COUNTS. Loaded only by `index`.
 - `search-index.js` — SEARCH_INDEX [slug, name, type, aliases] for the header search (shared-nav.js
   `initSiteSearch`; loaded on first open; "/" or Ctrl+K opens it). Bump `search-index.js?v=` in shared-nav.js

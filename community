@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
-<link rel="stylesheet" href="/shared.css?v=22">
+<link rel="stylesheet" href="/shared.css?v=23">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -228,7 +228,7 @@
   <div class="community-share-band" id="newsletter-band">
     <div class="share-band-text">
       <h3 class="community-section-title">Stay Informed</h3>
-      <p class="community-section-sub">Receive our monthly digest — new empire profiles, research updates, and historical analysis.</p>
+      <p class="community-section-sub">Receive our monthly digest — new profiles, research updates, and historical analysis.</p>
     </div>
     <div id="newsletter-form-wrap">
       <form class="newsletter-form" id="newsletter-form" novalidate>

@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=22">
+<link rel="stylesheet" href="/shared.css?v=23">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -131,14 +131,14 @@
   <!-- Compare area -->
   <div id="compare-area">
     <div id="compare-panel" class="compare-panel" aria-live="polite">
-      <p class="compare-hint" id="compare-hint">Click any two empire cards below to compare their profiles side by side.</p>
+      <p class="compare-hint" id="compare-hint">Click any two profile cards below to compare their profiles side by side.</p>
       <div class="compare-slots">
         <div class="compare-slot compare-slot-empty" id="compare-slot-a">
-          <span class="compare-slot-placeholder">Select Empire A</span>
+          <span class="compare-slot-placeholder">Select profile A</span>
         </div>
         <div class="compare-divider"><span class="compare-vs">vs</span></div>
         <div class="compare-slot compare-slot-empty" id="compare-slot-b">
-          <span class="compare-slot-placeholder">Select Empire B</span>
+          <span class="compare-slot-placeholder">Select profile B</span>
         </div>
       </div>
       <div class="compare-actions" id="compare-actions" style="display:none;"></div>
@@ -288,7 +288,7 @@ function buildProfileGallery() {
   function renderSlot(slotId, name) {
     var slotEl = document.getElementById(slotId);
     if (!name) {
-      var label = slotId === 'compare-slot-a' ? 'Select Empire A' : 'Select Empire B';
+      var label = slotId === 'compare-slot-a' ? 'Select profile A' : 'Select profile B';
       slotEl.className = 'compare-slot compare-slot-empty';
       slotEl.innerHTML = '<span class="compare-slot-placeholder">' + label + '</span>';
       return;
