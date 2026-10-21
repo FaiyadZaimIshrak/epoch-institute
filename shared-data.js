@@ -233,6 +233,12 @@ function profileSubtype(e) {
   var m = e.name.match(/\b(Empire|Caliphate|Sultanate|Dynasty|Kingdom|Khaganate|Khanate|Confederation|Shogunate|Commonwealth|Ilkhanate)\b/);
   return m ? m[1].replace('Ilkhanate', 'Khanate') : 'State';
 }
+// First sentence of a text (ignores abbreviations like "c." and initials), trimmed to max characters
+function firstSentence(text, max) {
+  var m = String(text || '').match(/^.+?[a-z0-9)’']{2}[.!?](?=\s|$)/), s = m ? m[0] : String(text || '');
+  if (max && s.length > max) s = s.slice(0, s.lastIndexOf(' ', max - 3)) + '…';
+  return s;
+}
 function profileUrl(e) { return '/' + PROFILE_KINDS[profileKind(e)].path + '/' + toSlug(e.name); }
 
 // Node.js export (for generate-profiles.js)

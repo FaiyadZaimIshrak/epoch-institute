@@ -11,13 +11,13 @@
 <meta property="og:description" content="Historical events from across five millennia, surfaced for today's date.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/today-in-history">
-<meta property="og:image" content="https://the-epoch-institute.org/og-image.png">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/today-in-history">
-<link rel="stylesheet" href="/shared.css?v=19">
+<link rel="stylesheet" href="/shared.css?v=20">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@
   <div id="tih-tooltip" class="tih-share-tooltip"></div>
 </section>
 
-<script src="/shared-data.js?v=4"></script>
+<script src="/shared-data.js?v=5"></script>
 <script src="/shared-nav.js?v=8"></script>
 <script>
 initNav('today');

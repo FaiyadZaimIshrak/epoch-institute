@@ -82,3 +82,6 @@ server, download empire-pages.zip, extract into empire/, commit and push.
 
 ## Encyclopedia previews
 `data/enc-preview/<first char>.json` hold preview cards (name, type, dates, two sentences, image) for gold links; shared-nav.js `initEncPreviews` fetches them on hover/focus/first tap. Regenerate after rebuilding encyclopedia-data.js (scratchpad design2/make-previews.ps1 logic: first two sentences, max 280 chars).
+
+## Share cards
+`images/og/<slug>.jpg` (1200x630) are the social-media preview images for each profile; `images/og/default.jpg` for other pages. Rendered from a card template with headless Edge (scratchpad design2/og.html + make-og.ps1); re-render when a profile's name, dates or teaser changes.

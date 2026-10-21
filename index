@@ -12,15 +12,15 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org">
 <link rel="canonical" href="https://the-epoch-institute.org">
-<meta property="og:image" content="https://the-epoch-institute.org/og-image.png">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Epoch Institute">
 <meta name="twitter:description" content="The Epoch Institute researches human civilisation — studying the rise and fall of empires across five millennia through interactive data and scholarly profiles.">
 <meta name="twitter:site" content="@EpochInstitute">
-<meta name="twitter:image" content="https://the-epoch-institute.org/og-image.png">
-<link rel="stylesheet" href="/shared.css?v=19">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=20">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -185,7 +185,7 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=4"></script>
+<script src="/shared-data.js?v=5"></script>
 <script src="/shared-nav.js?v=8"></script>
 <script src="/home-data.js?v=4"></script>
 <script>
@@ -215,7 +215,7 @@ initNav('home');
   pool.forEach(function (x) { if (picked.length < 6 && !regions[x.e.region]) { picked.push(x.e); regions[x.e.region] = 1; } });
   pool.forEach(function (x) { if (picked.length < 6 && picked.indexOf(x.e) === -1) picked.push(x.e); });
   document.getElementById('featured-grid').innerHTML = picked.map(function (e) {
-    var p = HOME_PICS[e.name], s = span(e), info = (EMPIRE_INFO[e.name] || '').split(/(?<=\.)\s/)[0];
+    var p = HOME_PICS[e.name], s = span(e), info = firstSentence(EMPIRE_INFO[e.name]);
     if (info.length > 150) info = info.slice(0, info.lastIndexOf(' ', 147)) + '…';
     return '<a class="featured-card" href="' + profileUrl(e) + '">' +
       '<span class="featured-img"><img src="' + escHtml(p.img) + '" alt="' + escHtml(p.name) + '" loading="lazy"></span>' +
