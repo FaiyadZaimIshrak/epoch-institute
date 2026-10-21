@@ -1139,3 +1139,80 @@ Fact-check and polish of all 94 empire profiles: factual corrections, added spec
 - FACT: Karim Khan's control of "most of Iran" qualified: Khorasan remained under the Afsharid Shahrokh; "restored food production to pre-Nader Shah levels within a generation" softened.
 - ADDED: Ali Mardan Khan Bakhtiari, Ismail III, Mohammad Hasan Khan Qajar, Azad Khan, Vakil title sequence, Sadeq Khan at Basra, Mir Muhanna, Hafez's tomb (1773), Nader's Ja'fari madhhab policy, Zaki Khan, Tehran as Qajar base, Haji Ebrahim Khan Kalantar.
 - STYLE: British spelling, removed dashes and filler. Founding given as "around 1750"; removed "1795" (incorrect Shiraz conquest year).
+
+## Card summaries (EMPIRE_INFO in shared-data.js)
+
+One-line teasers shown on profile cards, the homepage and the explorer, fact-checked against the profiles.
+
+- **Elamite Confederation**: British spelling (civilisations); otherwise accurate and consistent with profile.
+- **Akkadian Empire**: FACT: 'united Mesopotamia under a single ruler for the first time' overstated (Lugalzagesi had already united Sumer); now Sumer and Akkad under one ruler. 'considered' -> 'widely regarded' (matches profile).
+- **Assyrian Empire**: FACT: siege warfare predates Assyria, so 'pioneering' -> 'perfecting'; 'ancient world's most feared' narrowed to 'of its age'; Iran -> western Iran (Assyrian control did not cover the plateau).
+- **Babylonian Empire**: FACT: 'cultural and commercial center of the ancient world' overstated -> leading power of Mesopotamia; code 'defined Babylonian society' overstated (earlier codes exist and its use as working law is debated). British spelling centre.
+- **Hittite Empire**: FACT: the battle did not itself produce the treaty, which came c. 1259 BCE, and it is not the earliest known treaty, only the earliest surviving in both parties' versions (per profile); 'among the first to master iron-working' is a dated myth -> 'early workers of iron'.
+- **Chaldean Empire**: FACT: Hanging Gardens stated as fact; their existence is debated (as the profile says). Added the Ishtar Gate to keep the first sentence vivid.
+- **Median Empire**: FACT: Nineveh fell to a Median-Babylonian alliance, not the Medes alone; 'first Iranian empire' hedged as the extent of the Median state is debated. British spelling organisation.
+- **Achaemenid Empire**: FACT: it never ruled mainland Greece (Greece -> the Balkans); 'revolutionary concepts of human rights' is a modern myth about the Cyrus Cylinder, replaced with its documented tolerance of local religions and customs.
+- **Kushite Empire**: FACT: Meroë did not pioneer iron smelting in Africa (it was practised earlier elsewhere); it was a major centre of iron production, as the profile says. British spelling centre.
+- **Punic Empire**: FACT: unsupported superlative 'the Mediterranean's greatest trading empire' softened to 'one of the greatest'. British spelling civilisation.
+- **Garamantian Empire**: FACT: 'stretching thousands of kilometers' unsupported; profile cites some 550 or more foggaras in the Wadi al-Ajal, so 'hundreds of channels' used.
+- **Fatimid Caliphate**: FACT: al-Azhar was founded as a mosque and teaching centre, not a university (that status is modern); Shia -> Ismaili Shia. Grammar their -> its; British spelling centre.
+- **Almohad Caliphate**: Vague 'transformed the intellectual landscape of the medieval Islamic world' made concrete with the court's patronage of Averroes and Ibn Tufayl (per profile).
+- **Almoravid Empire**: FACT: Sagrajas checked the Christian advance but did not halt the Reconquista; they ruled Muslim al-Andalus, not all Iberia. Added date 1086.
+- **Ptolemaic Empire**: FACT: 'the world's intellectual capital' overstated -> leading centre of the Hellenistic world. British spelling centre.
+- **Aksumite Empire**: FACT: not all the obelisks stand (the largest fell, probably soon after erection, per profile) -> 'several still stand'.
+- **Ghana Empire**: Hedged 'the first great empire' to 'often regarded as' (earliest known from written sources).
+- **Kanem-Bornu Empire**: FACT: 'nearly a thousand years' -> 'around a thousand years' (c. 9th century to 1893, per profile).
+- **Mali Empire**: FACT: 'caused currency inflation across the Mediterranean world' overstated; contemporary sources describe a fall in the value of gold in Cairo.
+- **Benin Empire**: Added the 1897 British looting and recent returns for context; claim retained.
+- **Songhai Empire**: FACT: not the largest empire in African history but in West African history (per profile); 'among the medieval world's most important cities' overstated.
+- **Mutapa Empire**: FACT: Mutapa did not draw its wealth from Great Zimbabwe; it rose as Great Zimbabwe declined (per profile).
+- **Darfur Sultanate**: FACT: Darfur lies in western, not central, Sudan. Added its 1916 end (per profile).
+- **Rozvi Empire**: FACT: the Rozvi were not the direct successor of Great Zimbabwe (abandoned c. 1450) but heirs to its tradition via Torwa; added 1690s expulsion of the Portuguese (per profile).
+- **Wadai Empire**: FACT: Wadai did not fight off Egyptian expansion (which affected its trade routes) and did not resist 'well into the 20th century'; French conquest began with Abéché in 1909.
+- **Macedonian Empire**: FACT: campaign ran 334–323 BCE (eleven years, not twelve); 'history's largest empire to that point' dubious since the Achaemenid Empire it conquered was comparable or larger.
+- **Roman Empire**: FACT: population figure is an estimate (scholars range roughly 50–90 million), so hedged; 'over five million' -> 'some five million'. British spelling kilometres, civilisation.
+- **Byzantine Empire**: FACT: 476 to 1453 is just under a millennium; 'Rome's fall' clarified as the fall of the West.
+- **Carolingian Empire**: FACT: it did not include Britain or most of Iberia, so 'much of Western Europe'.
+- **Holy Roman Empire**: FACT: it lasted from 800/962 to 1806, not over a thousand years; it was not a confederation; 'dominated' softened.
+- **French Empire**: FACT: timing clarified; Napoleon was himself 19th-century, and the colonial empire peaked in the late 19th and early 20th centuries.
+- **Spanish Empire**: FACT: 'the first truly global empire' hedged to 'often called' (profile wording; Portugal has an equal claim); named the Aztec/Inca conquests and added Zacatecas; British spelling.
+- **Portuguese Empire**: FACT: 'the first truly global maritime empire' softened to 'one of the first' (Spain makes the same claim); 'tiny nation' made precise (c. 1 million people, per profile); added India.
+- **Dutch Empire**: FACT: VOC as 'history's first multinational' hedged to 'often called' (the English EIC was older; the VOC's novelty was permanent capital and tradable shares); 'world's dominant trading empire' limited to the 17th century.
+- **Italian Empire**: FACT: the empire predates Mussolini (Assab 1882, Massawa 1885, Libya 1911–12), so not 'brief ambitions under Mussolini'; Ethiopia was conquered in 1936, the disaster came in the 1940–41 campaigns.
+- **Austro-Hungarian Empire**: FACT: superlative 'Europe's most ethnically complex empire' hedged to 'one of the most'; added dates.
+- **German Empire**: FACT: 'triggered the catastrophe' softened to 'helped bring on' (war causes were shared; profile stresses strategic anxiety); 'Europe's economic powerhouse' made 'continental Europe's leading industrial power'; British spelling.
+- **Russian Empire**: Replaced 'eleven time zones' with the profile's area figure and hedged the 'third-largest ever' ranking; dropped 'sudden'.
+- **Brazilian Empire**: FACT: 'only stable empire' clarified (Mexico had two short-lived empires); 'rapid economic development' removed as overstated; added dates of abolition (1888) and coup (1889).
+- **Rashidun Caliphate**: FACT: Spain was conquered by the Umayyads from 711, not the Rashidun; removed the unsupported 'more territory than Rome in centuries' comparison; '25 years' corrected to 632–661.
+- **Umayyad Caliphate**: FACT: 'the largest empire' softened to 'one of the largest' (profile wording); 'lingua franca of the medieval world' overstated, limited to the caliphate's realm.
+- **Abbasid Caliphate**: FACT: 'the world's greatest intellectual center' is an unsupported superlative (the House of Wisdom's nature and scale are debated); added the translation movement; British spelling.
+- **Ayyubid Empire**: Hero status attributed to Saladin specifically rather than the whole dynasty.
+- **Mamluk Sultanate**: FACT: 'nearly three centuries' replaced with exact dates 1250–1517 (267 years); 'saving the Islamic heartland' replaced with the end of the Crusader states (profile).
+- **Delhi Sultanate**: Added dates; 'India' narrowed to North India (its southern hold was brief); British spelling.
+- **Seljuk Empire**: FACT: the Seljuks dominated rather than 'revitalized' the caliphate; the Crusade was triggered chiefly by the Byzantine appeal after Seljuk gains in Anatolia (Jerusalem was Fatimid again by 1098), not simply by their control of the Holy Land.
+- **Safavid Empire**: FACT: the Safavids did not create the Shia-Sunni divide (it dates to the 7th century); they entrenched it as an Iranian-Ottoman rivalry; added 1501.
+- **Afsharid Empire**: 'Broke Mughal power permanently' reworded in line with the profile (Mughal decline was already under way); nickname marked as such.
+- **Zand Empire**: Minor wording; Shiraz identified as capital; British spelling (centre).
+- **Mughal Empire**: FACT: the Mughals never united the whole subcontinent (the far south stayed outside); the Taj Mahal is not the world's most visited monument.
+- **Ottoman Empire**: FACT: removed 'preserved and transmitted classical knowledge', an unsupported claim better applied to the Abbasids; added dates; British spelling.
+- **Ilkhanate**: 'Devastating Islamic civilization' made specific (sack of Baghdad 1258, Ghazan's conversion 1295).
+- **Xiongnu Empire**: FACT: the Great Wall was not 'built largely' against the Xiongnu (most surviving wall is Ming; Qin/Han walls were partly aimed at them); 'China's greatest nomadic adversary' superlative replaced.
+- **Han Dynasty**: Added dates; 'the Chinese' narrowed to the Han majority; British spelling.
+- **Tang Dynasty**: FACT: 'the world's largest city' hedged to 'among the largest' (profile wording); golden age marked as a common view.
+- **Song Dynasty**: FACT: paper money is not one of the 'four inventions' (papermaking is), and woodblock printing and gunpowder predate the Song; reworded to the Song's actual innovations (per profile).
+- **Qing Empire**: FACT: decline was driven by internal rebellions (e.g. Taiping) as well as European pressure; added dates.
+- **Yuan Dynasty**: FACT: the Yuan did not open the Silk Road, which existed since the Han; Marco Polo kept as the author of a famous account.
+- **Mongol Empire**: British spelling (civilisation) only.
+- **Chagatai Empire**: FACT: Chagatai was the second of four sons, not the 'middle' son; 'dominated Central Asia for centuries' and 'key bridge to China' overstated (Timur took the west by 1370).
+- **Khazar Khaganate**: FACT: it was the ruling elite that converted; Judaism was not an exclusive state religion in a religiously plural realm (per profile).
+- **Tokugawa Shogunate**: FACT: peace was not a product of 'strict isolationism', and contact was restricted rather than cut off (Dutch, Chinese, Korea); haiku as a term is later, Basho wrote hokku (per profile).
+- **Empire of Japan**: British spelling; 'isolated' softened to 'largely isolated'.
+- **Maurya Empire**: FACT: 'spread dharma across Asia' overstated; Ashoka's missions helped carry Buddhism beyond India (e.g. Sri Lanka); added Kalinga.
+- **Gupta Empire**: FACT: the decimal system and zero were not Gupta inventions (zero as a number was formalised by Brahmagupta in 628, after the Guptas); reworded around Aryabhata (499) per profile.
+- **Srivijaya Empire**: 'First great maritime empire' replaced with the profile's dates and dominance; added Buddhist learning (Yijing).
+- **Khmer Empire**: FACT: 'fed millions' overstated (Greater Angkor's population is estimated at under a million) and the 'hydraulic empire' thesis is debated; reworded.
+- **Majapahit Empire**: FACT: 'Southeast Asia's greatest empire' is an unsupported superlative; 'most' softened to 'much' as its claims rest on court texts.
+- **Sasanian Empire**: British spelling (civilisation, rivalled) only.
+- **Seleucid Empire**: FACT: the Seleucids did not single-handedly 'create the Hellenistic world' (shared with the Ptolemies and others); influence on Christianity and Judaism made concrete via the Maccabean revolt.
+- **Maratha Empire**: FACT: the Marathas never 'nearly expelled' the British, who defeated them by 1818; they did break Mughal supremacy (profile).
+- **Aztec Empire**: FACT: Tenochtitlan (founded c. 1325) was not of the 'ancient world'; the calendar was a shared Mesoamerican one, not an Aztec creation; added population estimate (profile).
