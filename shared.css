@@ -2806,6 +2806,13 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .cx-bar { position: absolute; top: 0; height: 100%; border-radius: 5px; background: var(--gold); box-shadow: 0 0 8px rgba(var(--gold-rgb), 0.6); }
 .cx-bar-approx { background: repeating-linear-gradient(90deg, var(--gold) 0 6px, transparent 6px 9px); }
 .cx-row-dates { font-family: var(--font-ui); font-size: 13px; color: var(--muted); text-align: right; }
+/* phone tap targets on the connections page */
+@media (max-width: 600px) {
+  .cx-year input { height: 36px; }
+  .cx-any { min-height: 44px; }
+  .cx-any input { width: 22px; height: 22px; }
+  .cx-profile { display: inline-flex; align-items: center; min-height: 44px; }
+}
 /* labels hidden by the map's collision pass reappear on hover/focus */
 .cm-node text.cm-lbl-hidden { display: none; }
 .cm-node:hover text.cm-lbl-hidden, .cm-node:focus text.cm-lbl-hidden { display: inline; }

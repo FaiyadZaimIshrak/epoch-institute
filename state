@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/state">
-<link rel="stylesheet" href="/shared.css?v=27">
+<link rel="stylesheet" href="/shared.css?v=28">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -94,6 +94,11 @@
   .st-body { grid-template-columns: 1fr; }
   .st-side { order: -1; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); align-items: start; }
   .st-text p { font-size: 18px; }
+}
+@media (max-width: 600px) {
+  .st-random, .st-maplink { display: inline-flex; align-items: center; min-height: 44px; }
+  .st-ties a { display: inline-block; padding: 10px 0; }
+  .st-lineage a, .st-lineage .here { min-height: 44px; display: inline-flex; align-items: center; }
 }
 @media (max-width: 520px) { .st-side { grid-template-columns: 1fr; } .st-fig, .st-emblem { max-width: 280px; } }
 </style>
