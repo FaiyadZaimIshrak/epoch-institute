@@ -122,7 +122,7 @@ function attachShareListeners(container, fallbackUrl) {
   });
 }
 
-// ── Site-wide search (empires + encyclopedia; index loaded on first open) ─────
+// ── Site-wide search (profiles + encyclopedia + states; index loaded on first open) ─────
 var SEARCH_TYPES = { person: 'Person', event: 'Event', place: 'Place', polity: 'State', group: 'People / group',
   institution: 'Institution', term: 'Term', idea: 'Idea', work: 'Work', factor: 'Factor' };
 function searchFold(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'ʿʾ]/g, ''); }
@@ -144,8 +144,18 @@ function siteSearch(query) {
   if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) {
     var s = searchScore(q, r[1]);
     if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-    if (s > 0) out.push({ s: s, name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia#' + r[0] });
+    if (s > 0) out.push({ s: s, name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia#' + r[0], enc: r[2] === 'polity' });
   });
+  // every state in the register (page /state#id); an encyclopedia polity of the same name is dropped in its favour
+  if (typeof SEARCH_STATES !== 'undefined') {
+    var stateNames = {};
+    SEARCH_STATES.forEach(function (r) {
+      var s = searchScore(q, r[1]);
+      if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
+      if (s > 0) { out.push({ s: s + 2, name: r[1], type: String(r[2] || 'state').replace(/-/g, ' ') + ' · state', href: '/state#' + r[0] }); stateNames[searchFold(r[1])] = 1; }
+    });
+    out = out.filter(function (o) { return !(o.enc && stateNames[searchFold(o.name)]); });
+  }
   out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
   return out.slice(0, 12);
 }
@@ -156,7 +166,7 @@ function initSiteSearch() {
   function load(cb) {
     if (typeof SEARCH_INDEX !== 'undefined') return cb();
     if (loading) return; loading = true;
-    var s = document.createElement('script'); s.src = '/search-index.js?v=1';
+    var s = document.createElement('script'); s.src = '/search-index.js?v=2';
     s.onload = function () { loading = false; cb(); }; s.onerror = function () { loading = false; cb(); };
     document.head.appendChild(s);
   }

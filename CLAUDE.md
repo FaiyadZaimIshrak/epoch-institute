@@ -94,4 +94,13 @@ server, download empire-pages.zip, extract into empire/, commit and push.
 - `data/polities.json` — register of every state: nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, glowing links, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).
 - Big hubs (Holy Roman Empire: 378 links): the inner ring shows the ~24 most important neighbours (successions, profiled states, well-connected states), the rest as type bubbles ("86 counties") that expand on click (`opts.expand`, back button); timeline capped at 40 rows + "Show more". Phones (<600px) get a tall layout with fewer nodes.
+- `state` page (Research → States): index of all 5,463 states (filters: name, region, type, present-day country,
+  "existing in" year) and one view per state at `/state#<id>` (empire nodes redirect to their profile): teaser,
+  Origins / Rule and society / Decline and legacy, key facts, picture or monogram, lineage strip (successor-of,
+  merged-into, split-from), mini map, dated connections. Text and pictures come from `data/states/<first char>.json`
+  ({t, o, r, e, ru, re, la, c confidence, img, cr {a, l, s}}); pictures in `images/states/<id>.jpg` (Wikipedia lead
+  image, free Commons licence only, 320px JPEG; credit shown). Built by scratchpad states/desc scripts
+  (DESC-GUIDE.md for the writers, check.ps1, build-state-data.ps1, pick-state-images.ps1, shrink-images.ps1).
+- Site search also covers states: `SEARCH_STATES` at the end of search-index.js (states/desc/make-search-states.ps1);
+  bump `search-index.js?v=` in shared-nav.js when regenerated.
 - merge.ps1 dedupes only when lifespans overlap and modern countries agree; ambiguous names ("Kingdom of Hungary") resolve to the state alive at the relation's date; relations to Rome before 27 BCE go to the Roman Republic. Bump `polities.json?v=` in connections-map.js (and connections-map.js?v= on all pages) after each merge.

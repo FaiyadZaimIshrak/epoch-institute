@@ -368,7 +368,7 @@ noProfileNote + '\n' +
 '    </div>\n' +
 '  </div>\n</div>\n\n' +
 '<script src="/shared-data.js?v=5">\x3C/script>\n' +
-'<script src="/shared-nav.js?v=11">\x3C/script>\n' +
+'<script src="/shared-nav.js?v=12">\x3C/script>\n' +
 '<script src="/epoch-stats.js?v=2">\x3C/script>\n' +
 '<script src="/connections-map.js?v=6" defer>\x3C/script>\n' +
 '<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});\x3C/script>\n' +
