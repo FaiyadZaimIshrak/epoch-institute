@@ -4,7 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/theeiorh/public_html/
     - /bin/cp -R *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH
     - /bin/cp index about research research-series profiles community contributors dataset explorer today-in-history encyclopedia paths connections state $DEPLOYPATH
-    - /bin/mkdir -p ${DEPLOYPATH}data; /bin/cp data/history.json data/international-days.json data/polities.json ${DEPLOYPATH}data/ 2>/dev/null; true
+    - /bin/mkdir -p ${DEPLOYPATH}data; /bin/cp data/history.json data/international-days.json data/polities.json data/enc-states.json ${DEPLOYPATH}data/ 2>/dev/null; true
     - /bin/cp -R empire $DEPLOYPATH
     - /bin/mkdir -p ${DEPLOYPATH}data/enc-preview; /bin/cp data/enc-preview/*.json ${DEPLOYPATH}data/enc-preview/ 2>/dev/null; true
     - /bin/mkdir -p ${DEPLOYPATH}data/states; /bin/cp data/states/*.json ${DEPLOYPATH}data/states/ 2>/dev/null; true

@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/state">
-<link rel="stylesheet" href="/shared.css?v=25">
+<link rel="stylesheet" href="/shared.css?v=27">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -65,8 +65,13 @@
 .st-fig img { display: block; width: 100%; height: auto; }
 .st-fig figcaption { font-size: 12px; line-height: 1.45; color: var(--muted); margin-top: 8px; overflow-wrap: anywhere; }
 .st-fig figcaption a { color: var(--muted); }
-.st-mono { aspect-ratio: 1; display: grid; place-items: center; border: 0.5px solid var(--border); background: radial-gradient(circle, rgba(var(--gold-rgb), 0.08), transparent 70%), var(--surface); }
-.st-mono span { width: 58%; aspect-ratio: 1; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; font-family: var(--font-display); font-size: 56px; font-weight: 600; color: var(--gold); letter-spacing: 0.02em; }
+.st-emblem { border: 0.5px solid var(--border); background: radial-gradient(circle at 50% 35%, rgba(var(--gold-rgb), 0.10), transparent 65%), var(--surface); padding: 18px 16px 14px; text-align: center; }
+.st-emblem svg { width: 46%; max-width: 130px; height: auto; fill: none; stroke: var(--gold); stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; display: block; margin: 0 auto 8px; }
+.st-emblem-type { font-family: var(--font-display); font-size: 18px; color: var(--gold-light); text-transform: capitalize; margin: 0; }
+.st-emblem-region { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+.st-span { position: relative; height: 6px; background: rgba(var(--gold-rgb), 0.12); border-radius: 3px; }
+.st-span-bar { position: absolute; top: 0; height: 100%; border-radius: 3px; background: var(--gold); box-shadow: 0 0 6px rgba(var(--gold-rgb), 0.6); }
+.st-span-axis { display: flex; justify-content: space-between; font-family: var(--font-ui); font-size: 10px; color: var(--muted); margin-top: 4px; }
 .st-facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-family: var(--font-ui); font-size: 14px; border: 0.5px solid var(--border); background: var(--surface); padding: 14px 16px; margin: 0; }
 .st-facts dt { color: var(--muted); font-weight: 600; } .st-facts dd { margin: 0; color: var(--text); min-width: 0; overflow-wrap: anywhere; }
 .st-sec-title { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; font-weight: 600; }
@@ -90,7 +95,7 @@
   .st-side { order: -1; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); align-items: start; }
   .st-text p { font-size: 18px; }
 }
-@media (max-width: 520px) { .st-side { grid-template-columns: 1fr; } .st-fig, .st-mono { max-width: 280px; } }
+@media (max-width: 520px) { .st-side { grid-template-columns: 1fr; } .st-fig, .st-emblem { max-width: 280px; } }
 </style>
 </head>
 <body>
@@ -120,8 +125,8 @@
 </main>
 
 <script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=12"></script>
-<script src="/connections-map.js?v=6"></script>
+<script src="/shared-nav.js?v=14"></script>
+<script src="/connections-map.js?v=8"></script>
 <script>
 initNav('states');
 (function () {
@@ -175,10 +180,53 @@ initNav('states');
     if (!chunks[k]) chunks[k] = fetch('/data/states/' + k + '.json?v=1').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     return chunks[k];
   }
-  function monogram(name) {
-    var core = name.replace(/\(.*\)/, '').replace(/^(the |kingdom|duchy|grand duchy|principality|sultanate|emirate|khanate|county|republic|empire|state|imamate|caliphate|despotate|tsardom|lordship|margraviate|electorate|landgraviate|prince-bishopric|free imperial city|imperial city|confederation|federation|protectorate|colony|dominion|people's republic|socialist republic|soviet republic)( of)?( the)? /i, '');
-    var w = core.split(/[\s-]+/).filter(function (x) { return x && !/^(of|the|and|de|la|al|el)$/i.test(x); });
-    return ((w[0] || name).charAt(0) + (w[1] ? w[1].charAt(0) : '')).toUpperCase();
+  // text with gold-link markers: [[e:slug|text]] encyclopedia entry, [[s:id|text]] another state or empire
+  function rich(t) {
+    var out = '', pos = 0, rx = /\[\[([es]):([^|\]]+)\|([^\]]*)\]\]/g, m;
+    while ((m = rx.exec(t))) {
+      out += esc(t.slice(pos, m.index));
+      if (m[1] === 'e') out += '<a class="enc-link" href="/encyclopedia#' + esc(m[2]) + '">' + esc(m[3]) + '</a>';
+      else { var o = byId[m[2]]; out += o ? '<a class="enc-link st-link" href="' + esc(url(o)) + '">' + esc(m[3]) + '</a>' : esc(m[3]); }
+      pos = m.index + m[0].length;
+    }
+    return out + esc(t.slice(pos));
+  }
+  // emblem card for states without a picture: a line emblem for the kind of state, its type and region, and where its
+  // lifespan falls between 3000 BCE and today
+  var EMBLEM = {
+    crown: '<path d="M22 72 V40 L36 54 L50 28 L64 54 L78 40 V72 Z"/><path d="M22 80 H78"/><circle cx="50" cy="24" r="3"/><circle cx="22" cy="36" r="2.5"/><circle cx="78" cy="36" r="2.5"/>',
+    coronet: '<path d="M20 74 H80 V60 H20 Z"/><path d="M20 60 Q35 46 50 60 Q65 46 80 60"/><circle cx="20" cy="54" r="3"/><circle cx="35" cy="48" r="3"/><circle cx="50" cy="44" r="3"/><circle cx="65" cy="48" r="3"/><circle cx="80" cy="54" r="3"/>',
+    mitre: '<path d="M30 82 V46 Q50 12 70 46 V82 Z"/><path d="M50 30 V82 M40 58 H60"/>',
+    tower: '<path d="M24 82 V42 H32 V34 H40 V42 H46 V34 H54 V42 H60 V34 H68 V42 H76 V82 Z"/><path d="M44 82 V66 Q50 58 56 66 V82"/><path d="M34 54 H40 M60 54 H66"/>',
+    dome: '<path d="M24 82 V62 Q24 40 50 34 Q76 40 76 62 V82 Z"/><path d="M50 34 V24"/><path d="M53 13 A6 6 0 1 0 53 25 A4.5 4.5 0 1 1 53 13"/><path d="M38 82 V66 Q44 58 50 66 V82"/>',
+    yurt: '<path d="M18 74 V58 Q50 30 82 58 V74 Z"/><path d="M42 74 V60 H58 V74"/><path d="M30 50 L50 36 L70 50"/><path d="M50 36 V26"/>',
+    tribal: '<ellipse cx="44" cy="56" rx="16" ry="24"/><path d="M44 34 V78"/><path d="M68 20 V84"/><path d="M68 20 L63 30 H73 Z"/>',
+    columns: '<path d="M20 38 L50 20 L80 38 Z"/><path d="M24 42 H76 M24 80 H76"/><path d="M30 44 V78 M43 44 V78 M57 44 V78 M70 44 V78"/>',
+    ship: '<path d="M20 64 H80 L70 78 H30 Z"/><path d="M50 64 V18"/><path d="M50 22 L72 56 H50"/><path d="M50 28 L32 56 H50"/>',
+    shield: '<path d="M26 24 H74 V52 Q74 74 50 84 Q26 74 26 52 Z"/><path d="M50 24 V84 M26 46 H74"/>'
+  };
+  function emblemKind(n) {
+    var t = n.t || '', m = n.m || '';
+    // the type decides first; the character (mode) only when the type says nothing distinctive
+    if (/nomadic|khanate|khaganate|horde/.test(t)) return 'yurt';
+    if (/chiefdom|tribal/.test(t)) return 'tribal';
+    if (/kingdom|princely-state/.test(t)) return 'crown';
+    if (/duchy|principality|county|margraviate|electorate|landgraviate|lordship|despotate/.test(t)) return 'coronet';
+    if (/bishopric|theocracy|imamate/.test(t)) return 'mitre';
+    if (/city|polis|league/.test(t)) return 'tower';
+    if (/sultanate|emirate|caliphate|beylik/.test(t)) return 'dome';
+    if (/republic|commune|confederation/.test(t)) return 'columns';
+    if (/colony|protectorate|mandate|territory/.test(t)) return 'ship';
+    return { nomadic: 'yurt', tribal: 'tribal', theocratic: 'mitre', colonial: 'ship', mercantile: 'tower' }[m] || 'shield';
+  }
+  function emblemCard(n) {
+    var lo = -3000, hi = 2025, s = n.s == null ? lo : Math.max(lo, n.s), e = n.e == null ? hi : Math.min(hi, n.e);
+    var left = (s - lo) / (hi - lo) * 100, width = Math.max(1.2, (e - s) / (hi - lo) * 100);
+    return '<div class="st-emblem" role="img" aria-label="' + esc(typeLabel(n.t) + ', ' + yrs(n)) + '">' +
+      '<svg viewBox="0 0 100 100" aria-hidden="true">' + EMBLEM[emblemKind(n)] + '</svg>' +
+      '<p class="st-emblem-type">' + esc(typeLabel(n.t)) + '</p><p class="st-emblem-region">' + esc(n.rg ? regionLabel(n.rg) : n.b || '') + '</p>' +
+      '<div class="st-span" aria-hidden="true"><span class="st-span-bar" style="left:' + left.toFixed(2) + '%;width:' + width.toFixed(2) + '%"></span></div>' +
+      '<div class="st-span-axis" aria-hidden="true"><span>3000 BCE</span><span>1 CE</span><span>2000</span></div></div>';
   }
   // full sentence ("Kingdom of Powys was a vassal of Kingdom of Gwynedd") with the other state as a link
   function tieRow(r) {
@@ -207,13 +255,13 @@ initNav('states');
     var fig = d.img ? '<figure class="st-fig"><img src="' + esc(d.img) + '" alt="' + esc(n.n) + '" loading="lazy" width="320">' +
       '<figcaption>' + ['Image: ' + (d.cr && d.cr.a ? esc(d.cr.a) : 'Wikimedia Commons'), d.cr && d.cr.l ? esc(d.cr.l) : ''].filter(Boolean).join(' · ') +
       (d.cr && d.cr.s ? ' · <a href="' + esc(d.cr.s) + '" target="_blank" rel="noopener">source</a>' : '') + '</figcaption></figure>'
-      : '<div class="st-mono" aria-hidden="true"><span>' + esc(monogram(n.n)) + '</span></div>';
+      : emblemCard(n);
     var facts = '<dl class="st-facts"><dt>Years</dt><dd>' + esc(yrs(n)) + '</dd><dt>Type</dt><dd>' + esc(typeLabel(n.t)) + '</dd>' +
       (n.m ? '<dt>Character</dt><dd>' + esc(n.m) + '</dd>' : '') + (n.c ? '<dt>Capital</dt><dd>' + esc(n.c) + '</dd>' : '') +
       (d.ru && d.ru.length ? '<dt>Rulers</dt><dd>' + esc(d.ru.join(', ')) + '</dd>' : '') + (d.re ? '<dt>Religion</dt><dd>' + esc(d.re) + '</dd>' : '') +
       (d.la ? '<dt>Language</dt><dd>' + esc(d.la) + '</dd>' : '') + (n.mo && n.mo.length ? '<dt>Today</dt><dd>' + esc(n.mo.join(', ')) + '</dd>' : '') +
       (n.a && n.a.length ? '<dt>Also</dt><dd>' + esc(n.a.join(', ')) + '</dd>' : '') + '</dl>';
-    var text = d.o ? '<h2>Origins</h2><p>' + esc(d.o) + '</p><h2>Rule and society</h2><p>' + esc(d.r) + '</p><h2>' + (n.e == null ? 'To the present' : 'Decline and legacy') + '</h2><p>' + esc(d.e) + '</p>' +
+    var text = d.o ? '<h2>Origins</h2><p>' + rich(d.o) + '</p><h2>Rule and society</h2><p>' + rich(d.r) + '</p><h2>' + (n.e == null ? 'To the present' : 'Decline and legacy') + '</h2><p>' + rich(d.e) + '</p>' +
       (d.c === 'low' ? '<p class="st-conf">Few sources survive for this state; details are uncertain.</p>' : '')
       : '<p class="st-pending">A written history of this state is in preparation. Its dates, connections and lineage are below.</p>';
     $('st-article').innerHTML = '<a class="st-back" href="#">← All states</a>' +

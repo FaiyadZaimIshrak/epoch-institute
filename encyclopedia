@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/encyclopedia">
 <link rel="canonical" href="https://the-epoch-institute.org/encyclopedia">
-<link rel="stylesheet" href="/shared.css?v=25">
+<link rel="stylesheet" href="/shared.css?v=27">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -114,7 +114,7 @@
 </main>
 
 <script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=12"></script>
+<script src="/shared-nav.js?v=14"></script>
 <script src="/encyclopedia-data.js?v=4"></script>
 <script src="/encyclopedia-links.js?v=2"></script>
 <script>
@@ -233,6 +233,7 @@ initNav('encyclopedia');
       '<h1 class="enc-title">' + esc(e.name) + '</h1>' + (meta.length ? '<p class="enc-meta">' + meta.join(' · ') + '</p>' : '') + '</div>' +
       '<div class="enc-body"><p class="enc-desc">' + (e.desc ? linkify(e.desc, e.slug) : 'Description coming soon.') + '</p>' + fig + '</div>' +
       (e.empires.length ? '<div><p class="enc-section-title">Mentioned in ' + e.empires.length + ' profile' + (e.empires.length === 1 ? '' : 's') + '</p><div class="enc-mentions">' + mentions + '</div></div>' : '') +
+      '<div id="enc-states" hidden></div>' +
       (function () {
         var rel = seeAlso(e); if (!rel.length) return '';
         return '<div><p class="enc-section-title">See also</p><ul class="enc-seealso">' + rel.map(function (o) {
@@ -242,6 +243,20 @@ initNav('encyclopedia');
       })() +
       '<p class="enc-article-foot"><a class="enc-random-link" href="#' + randomSlug() + '">Random entry ↻</a></p>';
     document.title = e.name + ' — Encyclopedia — The Epoch Institute';
+    statesFor(e);
+  }
+  // states whose histories mention this entry, and the state page of an entry that is itself a state
+  var encStates = null;
+  function statesFor(e) {
+    (encStates || (encStates = fetch('/data/enc-states.json?v=1').then(function (r) { return r.json(); }).catch(function () { return { m: {}, p: {} }; }))).then(function (j) {
+      var box = document.getElementById('enc-states'); if (!box || location.hash.slice(1) !== e.slug) return;
+      var html = '', own = j.p && j.p[e.slug], m = j.m && j.m[e.slug];
+      if (own) html += '<p class="enc-article-foot"><a class="enc-random-link" href="/state#' + esc(own) + '">State page: history, lineage and connections →</a></p>';
+      if (m) html += '<div><p class="enc-section-title">Mentioned in ' + m[0] + ' state histor' + (m[0] === 1 ? 'y' : 'ies') + '</p><div class="enc-mentions">' +
+        m[1].map(function (s) { return '<a href="/state#' + esc(s[0]) + '">' + esc(s[1]) + '</a>'; }).join('') +
+        (m[0] > m[1].length ? '<span class="secs">and ' + (m[0] - m[1].length) + ' more</span>' : '') + '</div></div>';
+      box.innerHTML = html; box.hidden = !html;
+    });
   }
 
   var lastIndexScroll = 0;

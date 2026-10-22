@@ -216,8 +216,19 @@ function initSiteSearch() {
 function initEncPreviews() {
   var cache = {}, card = null, showTimer = null, hideTimer = null, current = null;
   var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
-  function slugOf(a) { var h = a.getAttribute('href') || '', i = h.indexOf('#'); return (i !== -1 && (h.indexOf('/encyclopedia') === 0 || i === 0)) ? decodeURIComponent(h.slice(i + 1)) : null; }
-  function load(slug, cb) {
+  function slugOf(a) {
+    var h = a.getAttribute('href') || '', i = h.indexOf('#');
+    if (i !== -1 && h.indexOf('/state#') === 0) return 'state:' + decodeURIComponent(h.slice(i + 1));
+    return (i !== -1 && (h.indexOf('/encyclopedia') === 0 || i === 0)) ? decodeURIComponent(h.slice(i + 1)) : null;
+  }
+  function load(slug, cb, a) {
+    if (slug.indexOf('state:') === 0) {   // a state page: teaser and picture from its data chunk
+      var id = slug.slice(6), k = 's' + (/^[a-z]/.test(id) ? id[0] : '0');
+      var done = function (j) { var r = j && j[id]; cb(r ? { n: a.textContent, t: 'State', s: (r.t || '').replace(/\[\[[es]:[^|\]]+\|([^\]]*)\]\]/g, '$1'), i: r.img } : null); };
+      if (cache[k]) return done(cache[k]);
+      fetch('/data/states/' + k.slice(1) + '.json?v=1').then(function (r) { return r.json(); }).then(function (j) { cache[k] = j; done(j); }).catch(function () { cb(null); });
+      return;
+    }
     var c = /^[a-z]/.test(slug) ? slug[0] : '0';
     if (cache[c]) return cb(cache[c][slug]);
     fetch('/data/enc-preview/' + c + '.json?v=1').then(function (r) { return r.json(); })
@@ -245,10 +256,10 @@ function initEncPreviews() {
       ensureCard().innerHTML = (p.i ? '<img src="' + escHtml(p.i) + '" alt="" width="96" height="96">' : '') +
         '<div><p class="enc-preview-kicker">' + escHtml(p.t || '') + (p.d ? ' · ' + escHtml(p.d) : '') + '</p>' +
         '<p class="enc-preview-name">' + escHtml(p.n) + '</p><p class="enc-preview-text">' + escHtml(p.s) + '</p>' +
-        '<a class="enc-preview-more" href="' + escHtml(href) + '">Read the full entry →</a></div>';
+        '<a class="enc-preview-more" href="' + escHtml(href) + '">' + (slug.indexOf('state:') === 0 ? 'Read about this state →' : 'Read the full entry →') + '</a></div>';
       card.classList.toggle('no-img', !p.i);
       card.hidden = false; place(a); a.setAttribute('aria-describedby', 'enc-preview');
-    });
+    }, a);
   }
   function hide() { if (card) card.hidden = true; if (current) current.removeAttribute('aria-describedby'); current = null; }
   function hideSoon() { clearTimeout(showTimer); hideTimer = setTimeout(hide, 220); }

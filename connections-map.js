@@ -19,7 +19,7 @@ var ConnectionsMap = (function () {
   function load() {
     if (DATA) return Promise.resolve(DATA);
     if (loading) return loading;
-    loading = fetch('/data/polities.json?v=6').then(function (r) { return r.json(); }).then(function (d) {
+    loading = fetch('/data/polities.json?v=7').then(function (r) { return r.json(); }).then(function (d) {
       DATA = d; d.nodes.forEach(function (n) { BY[n.id] = n; ADJ[n.id] = []; });
       d.links.forEach(function (l) { if (BY[l.s] && BY[l.t]) { ADJ[l.s].push(l); ADJ[l.t].push(l); } });
       return d;
@@ -92,6 +92,34 @@ var ConnectionsMap = (function () {
     all1.forEach(function (p) { ADJ[p].forEach(function (l) { var o = other(l, p); if (o !== id && !d1[o]) total2[o] = 1; }); });
     return { c: c, d1: d1, order1: order1, groups: groups, d2: d2, order2: order2, outl: outl, total1: all1.length, total2: Object.keys(total2).length };
   }
+  // labels that collide: keep the more important one (centre, inner ring, groups, outer ring), nudge the other up or
+  // down by a line, else hide it until hover (the node keeps its tooltip and aria-label)
+  function declutter(svg) {
+    var items = [], placed = [];
+    svg.querySelectorAll('.cm-node text:not(.cm-group-n)').forEach(function (t) {
+      var c = t.parentNode.classList;
+      items.push({ t: t, pr: c.contains('cm-centre') ? 0 : (c.contains('cm-n1') || c.contains('cm-group')) ? 1 : c.contains('cm-n2') ? 2 : 3 });
+    });
+    items.sort(function (a, b) { return a.pr - b.pr; });
+    function hit(b) { return placed.some(function (p) { return b.x < p.x + p.w && p.x < b.x + b.w && b.y < p.y + p.h && p.y < b.y + b.h; }); }
+    // node circles are obstacles too (a label must not run across another state's dot)
+    svg.querySelectorAll('.cm-node circle').forEach(function (c) {
+      var r = +c.getAttribute('r'), x = +c.getAttribute('cx'), y = +c.getAttribute('cy');
+      if (r >= 3.5) placed.push({ x: x - r, y: y - r, w: 2 * r, h: 2 * r });
+    });
+    items.forEach(function (it) {
+      var bb; try { bb = it.t.getBBox(); } catch (e) { return; }
+      if (!bb || !bb.width) return;
+      var b = { x: bb.x - 3, y: bb.y - 1, w: bb.width + 6, h: bb.height + 2 }, y0 = +it.t.getAttribute('y');
+      if (!hit(b) || it.pr === 0) { placed.push(b); return; }
+      var steps = [b.h, -b.h, 2 * b.h, -2 * b.h];
+      for (var i = 0; i < steps.length; i++) {
+        var nb = { x: b.x, y: b.y + steps[i], w: b.w, h: b.h };
+        if (!hit(nb)) { it.t.setAttribute('y', (y0 + steps[i]).toFixed(1)); placed.push(nb); return; }
+      }
+      it.t.classList.add('cm-lbl-hidden');
+    });
+  }
   function render(el, id, opts) {
     opts = Object.assign({}, opts || {});
     // phones: a tall layout with fewer nodes, so that labels stay readable
@@ -159,6 +187,7 @@ var ConnectionsMap = (function () {
       h.order1.forEach(function (o) { svg += node(o, 'cm-n1', sentence(h.d1[o])); });
       svg += node(id, 'cm-centre', '') + '</svg>';
       el.innerHTML = svg + (opts.expand ? '<button type="button" class="cm-back">← All connections</button>' : '');
+      declutter(el.querySelector('svg'));
       var back = el.querySelector('.cm-back'); if (back) back.addEventListener('click', function () { if (opts.onExpand) opts.onExpand(null); });
       el.querySelectorAll('.cm-node').forEach(function (g) {
         function go() { var t = g.getAttribute('data-group'); if (t != null) { if (t !== '*') { if (opts.onExpand) opts.onExpand(t); else if (opts.onSelect) opts.onSelect(id); } return; } if (opts.onSelect) opts.onSelect(g.getAttribute('data-id')); }
