@@ -35,7 +35,12 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 
 ## Encyclopedia
 - `encyclopedia` page (top-level nav item): index view, and one article per entry at `/encyclopedia#<slug>`.
-- `encyclopedia-data.js` — 3,736 entries (slug, name, type, aka, dates, desc, img, credit, empires). Generated.
+- `encyclopedia-data.js` — 9,214 entries (slug, name, type, aka, dates, desc, img, credit, empires). Generated.
+  The 5,478 entries added in Oct 2026 (people, places, events named in the state histories) were merged by scratchpad
+  states/desc/enc-merge.ps1, which always starts from the saved originals (enc-orig/). Duplicate subjects are folded via
+  enc-dupes.tsv, and pictures come from enc-images.ps1 / enc-img-credits.json. After a merge: enc-empires-apply (fills `empires` and byEmpire for new entries that
+  the empire texts mention, from design/t-encemp.html run in headless Edge), make-previews,
+  make-home-data, make-search-states, link-state-texts, build-state-data, make-enc-states, then regenerate the empire pages.
 - `encyclopedia-links.js` — regex patterns used to find entry names in text. Loaded by `generator.html`
   (gold `.enc-link` links on empire pages: first mention per section, never the empire's own name) and by
   the encyclopedia page (links inside descriptions).

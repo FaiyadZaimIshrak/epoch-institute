@@ -166,7 +166,7 @@ function initSiteSearch() {
   function load(cb) {
     if (typeof SEARCH_INDEX !== 'undefined') return cb();
     if (loading) return; loading = true;
-    var s = document.createElement('script'); s.src = '/search-index.js?v=2';
+    var s = document.createElement('script'); s.src = '/search-index.js?v=3';
     s.onload = function () { loading = false; cb(); }; s.onerror = function () { loading = false; cb(); };
     document.head.appendChild(s);
   }
@@ -226,12 +226,12 @@ function initEncPreviews() {
       var id = slug.slice(6), k = 's' + (/^[a-z]/.test(id) ? id[0] : '0');
       var done = function (j) { var r = j && j[id]; cb(r ? { n: a.textContent, t: 'State', s: (r.t || '').replace(/\[\[[es]:[^|\]]+\|([^\]]*)\]\]/g, '$1'), i: r.img } : null); };
       if (cache[k]) return done(cache[k]);
-      fetch('/data/states/' + k.slice(1) + '.json?v=1').then(function (r) { return r.json(); }).then(function (j) { cache[k] = j; done(j); }).catch(function () { cb(null); });
+      fetch('/data/states/' + k.slice(1) + '.json?v=3').then(function (r) { return r.json(); }).then(function (j) { cache[k] = j; done(j); }).catch(function () { cb(null); });
       return;
     }
     var c = /^[a-z]/.test(slug) ? slug[0] : '0';
     if (cache[c]) return cb(cache[c][slug]);
-    fetch('/data/enc-preview/' + c + '.json?v=1').then(function (r) { return r.json(); })
+    fetch('/data/enc-preview/' + c + '.json?v=2').then(function (r) { return r.json(); })
       .then(function (j) { cache[c] = j; cb(j[slug]); }).catch(function () { cb(null); });
   }
   function ensureCard() {
