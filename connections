@@ -56,8 +56,8 @@
 </main>
 
 <script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=10"></script>
-<script src="/connections-map.js?v=4"></script>
+<script src="/shared-nav.js?v=11"></script>
+<script src="/connections-map.js?v=5"></script>
 <script>
 initNav('connections');
 (function () {
@@ -80,7 +80,7 @@ initNav('connections');
         '<dl class="cx-facts">' + (n.c ? '<dt>Capital</dt><dd>' + e(n.c) + '</dd>' : '') + (n.m ? '<dt>Character</dt><dd>' + e(n.m) + '</dd>' : '') +
         (n.mo ? '<dt>Today</dt><dd>' + e(n.mo.join(', ')) + '</dd>' : '') + (n.a ? '<dt>Also</dt><dd>' + e(n.a.join(', ')) + '</dd>' : '') +
         '<dt>Connections</dt><dd>' + h.total1 + ' direct, ' + h.total2 + ' further</dd></dl>' +
-        (n.p ? '<a class="cx-profile" href="' + e(n.p) + '">Read the full profile →</a>' : '<p class="cx-soon">Full profile in preparation.</p>');
+        (n.p ? '<a class="cx-profile" href="' + e(n.p) + '">Read the full profile →</a>' : '<a class="cx-profile" href="/state#' + e(n.id) + '">Read about this state →</a>');
       var rows = CM.timeline(id), total = rows.length, note = '';
       if (!rows.length) { tl.innerHTML = '<p class="cx-none">No recorded connections: an independent state with no recorded ties to the others in the archive.</p>'; return; }
       if (expand) { rows = rows.filter(function (r) { return (CM.get(r.id).t || 'state') === expand; }); note = '<p class="cx-filter-note">Showing ' + rows.length + ' of ' + total + ' connections: ' + e(expand.replace(/-/g, ' ')) + ' only.</p>'; }

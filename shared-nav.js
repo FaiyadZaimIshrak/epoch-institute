@@ -269,7 +269,7 @@ function initNav(activePage) {
     return activePage === page ? ' aria-current="page"' : '';
   }
 
-  const researchActive = ['research','series','explorer','profiles','dataset','paths','connections'].includes(activePage);
+  const researchActive = ['research','series','explorer','profiles','dataset','paths','connections','states'].includes(activePage);
   const communityActive = activePage === 'community';
   const aboutActive = ['about','contributors'].includes(activePage);
 
@@ -287,6 +287,7 @@ function initNav(activePage) {
       <div class="nav-group-menu" id="nav-research-menu" role="menu">
         <a href="/explorer" id="nav-explorer-link"${activeStyle('explorer')}>Empire Explorer</a>
         <a href="/profiles" id="nav-profiles-link"${activeStyle('profiles')}>Profiles</a>
+        <a href="/state" id="nav-states-link"${activeStyle('states')}>States</a>
         <a href="/connections" id="nav-connections-link"${activeStyle('connections')}>Connections</a>
         <a href="/paths" id="nav-paths-link"${activeStyle('paths')}>Reading Paths</a>
         <a href="/research-series" id="nav-series-link"${activeStyle('series')}>Research Series</a>
@@ -322,6 +323,7 @@ function initNav(activePage) {
     <span class="nav-dropdown-group">Research</span>
     <a href="/explorer" class="nav-dropdown-link" id="mob-explorer"${activeStyle('explorer')}>Empire Explorer</a>
     <a href="/profiles" class="nav-dropdown-link" id="mob-profiles"${activeStyle('profiles')}>Profiles</a>
+    <a href="/state" class="nav-dropdown-link" id="mob-states"${activeStyle('states')}>States</a>
     <a href="/connections" class="nav-dropdown-link" id="mob-connections"${activeStyle('connections')}>Connections</a>
     <a href="/paths" class="nav-dropdown-link" id="mob-paths"${activeStyle('paths')}>Reading Paths</a>
     <a href="/research-series" class="nav-dropdown-link" id="mob-series"${activeStyle('series')}>Research Series</a>
@@ -367,6 +369,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
         <a class="footer-link" href="/profiles" id="fl-profiles">Profiles</a>
         <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
+        <a class="footer-link" href="/state" id="fl-states">States</a>
         <a class="footer-link" href="/connections" id="fl-connections">Connections</a>
         <a class="footer-link" href="/paths" id="fl-paths">Reading Paths</a>
         <a class="footer-link" href="/research-series" id="fl-series">Research Series</a>
