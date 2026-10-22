@@ -19,7 +19,7 @@ var ConnectionsMap = (function () {
   function load() {
     if (DATA) return Promise.resolve(DATA);
     if (loading) return loading;
-    loading = fetch('/data/polities.json?v=5').then(function (r) { return r.json(); }).then(function (d) {
+    loading = fetch('/data/polities.json?v=6').then(function (r) { return r.json(); }).then(function (d) {
       DATA = d; d.nodes.forEach(function (n) { BY[n.id] = n; ADJ[n.id] = []; });
       d.links.forEach(function (l) { if (BY[l.s] && BY[l.t]) { ADJ[l.s].push(l); ADJ[l.t].push(l); } });
       return d;
