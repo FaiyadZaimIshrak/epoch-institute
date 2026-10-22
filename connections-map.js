@@ -19,7 +19,7 @@ var ConnectionsMap = (function () {
   function load() {
     if (DATA) return Promise.resolve(DATA);
     if (loading) return loading;
-    loading = fetch('/data/polities.json?v=3').then(function (r) { return r.json(); }).then(function (d) {
+    loading = fetch('/data/polities.json?v=4').then(function (r) { return r.json(); }).then(function (d) {
       DATA = d; d.nodes.forEach(function (n) { BY[n.id] = n; ADJ[n.id] = []; });
       d.links.forEach(function (l) { if (BY[l.s] && BY[l.t]) { ADJ[l.s].push(l); ADJ[l.t].push(l); } });
       return d;
@@ -63,7 +63,7 @@ var ConnectionsMap = (function () {
         if (i < maxG - 1 || types.length <= maxG) groups.push({ key: 'g:' + t, type: t, ids: byType[t] });
         else few = few.concat(byType[t]);
       });
-      if (few.length) groups.push({ key: 'g:*', type: '*', ids: few });
+      if (few.length === 1) keep.push(few[0]); else if (few.length) groups.push({ key: 'g:*', type: '*', ids: few });
       var more = opts.expand ? ' more ' + plural(opts.expand) : ' more';
       groups.forEach(function (g) { g.s = Math.min.apply(null, g.ids.map(function (o) { return BY[o].s == null ? 9999 : BY[o].s; })); g.label = g.type === '*' ? g.ids.length + more : g.ids.length + ' ' + (g.ids.length === 1 ? String(g.type).replace(/-/g, ' ') : plural(g.type)); });
       order1 = keep;
