@@ -126,7 +126,7 @@
 
 <script src="/shared-data.js?v=5"></script>
 <script src="/shared-nav.js?v=14"></script>
-<script src="/connections-map.js?v=8"></script>
+<script src="/connections-map.js?v=9"></script>
 <script>
 initNav('states');
 (function () {
@@ -177,7 +177,7 @@ initNav('states');
   function chunkKey(id) { var c = id.charAt(0); return /[a-z]/.test(c) ? c : '0'; }
   function loadChunk(id) {
     var k = chunkKey(id);
-    if (!chunks[k]) chunks[k] = fetch('/data/states/' + k + '.json?v=1').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+    if (!chunks[k]) chunks[k] = fetch('/data/states/' + k + '.json?v=2').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     return chunks[k];
   }
   // text with gold-link markers: [[e:slug|text]] encyclopedia entry, [[s:id|text]] another state or empire

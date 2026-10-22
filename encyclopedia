@@ -248,7 +248,7 @@ initNav('encyclopedia');
   // states whose histories mention this entry, and the state page of an entry that is itself a state
   var encStates = null;
   function statesFor(e) {
-    (encStates || (encStates = fetch('/data/enc-states.json?v=1').then(function (r) { return r.json(); }).catch(function () { return { m: {}, p: {} }; }))).then(function (j) {
+    (encStates || (encStates = fetch('/data/enc-states.json?v=2').then(function (r) { return r.json(); }).catch(function () { return { m: {}, p: {} }; }))).then(function (j) {
       var box = document.getElementById('enc-states'); if (!box || location.hash.slice(1) !== e.slug) return;
       var html = '', own = j.p && j.p[e.slug], m = j.m && j.m[e.slug];
       if (own) html += '<p class="enc-article-foot"><a class="enc-random-link" href="/state#' + esc(own) + '">State page: history, lineage and connections →</a></p>';
