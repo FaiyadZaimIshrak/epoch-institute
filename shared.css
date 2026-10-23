@@ -3050,3 +3050,25 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .day-cal a:hover { border-color: var(--gold); color: var(--gold); }
 .day-cal span[aria-current] { background: var(--gold); border-color: var(--gold); color: var(--bg); font-weight: 600; }
 .tih-day-link { text-align: center; margin: 18px 0 0; }
+
+/* ── Back to top (shared-nav.js) ── */
+.to-top { position: fixed; right: max(18px, env(safe-area-inset-right, 0px)); bottom: max(18px, env(safe-area-inset-bottom, 0px)); z-index: 900; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--gold); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35); transition: border-color 0.2s, transform 0.2s; }
+.to-top:hover { border-color: var(--gold); transform: translateY(-2px); }
+.to-top[hidden] { display: none; }
+
+/* ── Print: black on white, without the site's controls ── */
+@media print {
+  :root, :root[data-theme="dark"], :root[data-theme="light"] { --bg: #fff; --surface: #fff; --text: #111; --muted: #555; --gold: #6b4f12; --gold-light: #6b4f12; --border: #ccc; }
+  html, body { background: #fff !important; color: #111 !important; }
+  body::before, body::after { display: none !important; }
+  #site-nav, #site-footer, .skip-link, .to-top, .read-progress, .site-search, .enc-preview, #contact-modal, .modal-overlay,
+  .empire-toc, .info-share-row, .detail-cite-row, .empire-view-explorer, .tih-share-btn, .tih-share-dropdown, .home-search,
+  .ref-prevnext, .ref-updated a, .ref-copy, .enc-controls, .enc-random, .st-filters, .st-random, .st-more, .st-mapwrap,
+  .mini-connections, #connections, .quiz, #newsletter-section, #announcements, .explorer-teaser, .playback-bar { display: none !important; }
+  .empire-page, .enc-page, .st-page, .day-page, main { padding-top: 0 !important; min-height: 0 !important; }
+  a { color: #111 !important; }
+  .enc-link { color: inherit !important; text-decoration: none !important; }
+  img, figure, svg, .st-facts, .ref-cite { break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; }
+  .enc-fig, .st-fig, .profile-section-fig { border-color: #ccc !important; background: #fff !important; }
+}

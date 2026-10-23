@@ -489,6 +489,23 @@ function initNav(activePage) {
     });
   })();
 
+  // ── Back to top: appears after a screen and a half of scrolling ─────────────
+  (function () {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'to-top'; b.hidden = true; b.title = 'Back to top';
+    b.setAttribute('aria-label', 'Back to top');
+    b.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 15 12 9 18 15"/></svg>';
+    document.body.appendChild(b);
+    let shown = false;
+    const check = () => { const s = window.scrollY > window.innerHeight * 1.5; if (s !== shown) { shown = s; b.hidden = !s; } };
+    window.addEventListener('scroll', check, { passive: true }); check();
+    b.addEventListener('click', () => {
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      const m = document.getElementById('main'); if (m) m.focus({ preventScroll: true });
+    });
+  })();
+
   // ── Page transitions ────────────────────────────────────────────────────────
   document.body.classList.add('page-entering');
   document.addEventListener('click', e => {

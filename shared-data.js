@@ -499,7 +499,7 @@ const ERA_LABELS = {
   'classical':    'Classical  (500 BCE – 500 CE)',
   'medieval':     'Medieval  (500 – 1400 CE)',
   'early-modern': 'Early Modern  (1400 – 1800 CE)',
-  'modern':       'Modern  (1800 – 1980 CE)'
+  'modern':       'Modern  (1800 CE – today)'
 };
 const ERA_ORDER = ['ancient','classical','medieval','early-modern','modern'];
 

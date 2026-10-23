@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/explorer">
-<link rel="stylesheet" href="/shared.css?v=30">
+<link rel="stylesheet" href="/shared.css?v=31">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
@@ -40,8 +40,7 @@
   <div class="explorer-header">
     <p class="explorer-label" data-i18n="exp_label">Interactive Explorer</p>
     <h1 class="explorer-title" data-i18n="exp_title">The Rise &amp; Fall of Empires</h1>
-    <p class="explorer-description" data-i18n="exp_desc">Nearly four hundred states and empires. Five millennia. Each trajectory scaled to its own peak — so you can compare not absolute size, but the shape of a civilisation's story. Use the controls below to filter by region, era, or search for a specific state.</p>
-    <p class="explorer-onboarding">Navigate five millennia of human civilisation. Each line represents an empire — use the region tabs and era selector to filter, or search by name. Press ▶ to animate the timeline.</p>
+    <p class="explorer-description" data-i18n="exp_desc">Nearly four hundred states and empires across five millennia, each line scaled to its own peak — so you compare not their size but the shape of their story. Pick a region or an era, search for a state, click a line to follow it, or press ▶ to watch the centuries pass.</p>
     <p class="explorer-method-note">Power scores are normalised indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. Each trajectory is drawn from peer-reviewed sources cited in the Empire Profiles.</p>
   </div>
 
@@ -179,9 +178,9 @@
 <div id="tooltip"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="/shared-data.js?v=6"></script>
+<script src="/shared-data.js?v=7"></script>
 <script src="/point-descs.js?v=3" async></script>
-<script src="/shared-nav.js?v=18"></script>
+<script src="/shared-nav.js?v=19"></script>
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
@@ -436,7 +435,14 @@ function encodeState() {
 
 function decodeState() {
   const hash = location.hash.slice(1);
-  if (!hash) return;
+  if (!hash) {   // first visit: open on the great empires across the full timeline instead of an empty chart
+    activeRegion = "All";
+    empiresOnly = true; document.getElementById("toggle-empires").checked = true;
+    document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.region === "All"));
+    xRange = ERAS.all; document.getElementById("era-select").value = "all";
+    updateExplorerShareText();
+    return;
+  }
   const [region, era, empire] = hash.split("/").map(decodeURIComponent);
   if (region) {
     activeRegion = region;

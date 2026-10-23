@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
-<link rel="stylesheet" href="/shared.css?v=30">
+<link rel="stylesheet" href="/shared.css?v=31">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -91,6 +91,10 @@
   font-family: var(--font-text); font-size: 17px;
   color: var(--muted); opacity: 0.6; text-align: center; padding: 16px 0;
 }
+.comm-invite { border: 1px dashed rgba(var(--gold-rgb), 0.45); border-radius: 4px; padding: 28px 24px; text-align: center; display: grid; gap: 10px; justify-items: center; }
+.comm-invite-title { font-family: var(--font-display); font-size: 20px; color: var(--gold-light); margin: 0; }
+.comm-invite-text { font-family: var(--font-text); font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 560px; margin: 0 0 6px; }
+.comm-invite .hero-cta { margin-top: 4px; }
 .blog-see-more {
   display: block; margin: 16px auto 0;
   font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
@@ -251,7 +255,11 @@
     </div>
     <div class="blog-grid" id="blog-grid"></div>
     <p class="blog-loading" id="blog-loading">Loading articles…</p>
-    <p class="blog-empty" id="blog-empty" style="display:none;">No articles yet. Use the form below to submit the first piece.</p>
+    <div class="comm-invite" id="blog-empty" style="display:none;">
+      <p class="comm-invite-title">Be the first to publish here</p>
+      <p class="comm-invite-text">Community articles are essays by readers on history, society and civilisation. Send yours in: every piece is read by the Institute before it appears.</p>
+      <button type="button" class="hero-cta" onclick="document.getElementById('open-share-btn').click()">Submit an article →</button>
+    </div>
     <button class="blog-see-more" id="blog-see-more" style="display:none;">See All Articles →</button>
   </div>
 
@@ -395,8 +403,8 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=6"></script>
-<script src="/shared-nav.js?v=18"></script>
+<script src="/shared-data.js?v=7"></script>
+<script src="/shared-nav.js?v=19"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
 var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];
@@ -431,8 +439,7 @@ var ARTICLES_PREVIEW   = 6;
 // ── Opinions ──────────────────────────────────────────────────────────────────
 function loadOpinions() {
   if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
-    document.getElementById('opinions-loading').style.display = 'none';
-    document.getElementById('opinions-empty').style.display = 'block';
+    document.getElementById('community-opinions-display').hidden = true;
     return;
   }
   jsonp(EPOCH_API_URL + '?action=opinions', function(data) {
@@ -456,7 +463,7 @@ function renderOpinionsPreview() {
   var empty     = document.getElementById('opinions-empty');
   var viewMore  = document.getElementById('opinions-view-more');
   loading.style.display = 'none';
-  if (!_allOpinions.length) { empty.style.display = 'block'; viewMore.style.display = 'none'; return; }
+  if (!_allOpinions.length) { document.getElementById('community-opinions-display').hidden = true; return; }   // the form below invites the first one
   empty.style.display = 'none';
   container.innerHTML = _allOpinions.slice(0, OPINIONS_PREVIEW).map(renderOpinionItem).join('');
   viewMore.style.display = _allOpinions.length > OPINIONS_PREVIEW ? 'block' : 'none';
@@ -488,7 +495,7 @@ function goOpinionsPage(p) {
 function loadConfirmedArticles() {
   if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
     document.getElementById('blog-loading').style.display = 'none';
-    document.getElementById('blog-empty').style.display = 'block';
+    document.getElementById('blog-empty').style.display = '';
     return;
   }
   jsonp(EPOCH_API_URL + '?action=confirmed_articles', function(data) {
@@ -513,7 +520,7 @@ function renderArticlesPreview() {
   var empty   = document.getElementById('blog-empty');
   var seeMore = document.getElementById('blog-see-more');
   loading.style.display = 'none';
-  if (!_confirmedArticles.length) { empty.style.display = 'block'; return; }
+  if (!_confirmedArticles.length) { empty.style.display = ''; return; }
   grid.innerHTML = _confirmedArticles.slice(0, ARTICLES_PREVIEW).map(function(a, i) { return renderArticleCard(a, i, i); }).join('');
   if (_confirmedArticles.length > ARTICLES_PREVIEW) {
     seeMore.textContent = 'See All Articles →';
