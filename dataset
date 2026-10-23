@@ -45,7 +45,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/shared.css?v=29">
+<link rel="stylesheet" href="/shared.css?v=30">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -190,7 +190,7 @@
 </main>
 
 <script src="/shared-data.js?v=6"></script>
-<script src="/shared-nav.js?v=17"></script>
+<script src="/shared-nav.js?v=18"></script>
 <script>
 document.getElementById('dataset-copy-cite-btn').addEventListener('click', function() {
   var text = 'The Epoch Institute Research Team (2026). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset';

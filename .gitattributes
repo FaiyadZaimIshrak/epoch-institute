@@ -1,0 +1,8 @@
+# Pages written by scripts/build-pages.ps1 keep LF line endings, so the builder's "only write what changed"
+# comparison sees the same bytes after a checkout.
+encyclopedia/** text eol=lf
+state/** text eol=lf
+today-in-history/** text eol=lf
+sitemaps/** text eol=lf
+sitemap.xml text eol=lf
+scripts/sitemap-state.tsv text eol=lf

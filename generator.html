@@ -102,7 +102,7 @@ function linkify(html, empireName) {
       if (c.slug === self) return;
       var txt = t.slice(c.s, c.e), tail = '';
       var poss = txt.match(/(['’]s)$/); if (poss) { tail = poss[1]; txt = txt.slice(0, -tail.length); }
-      t = t.slice(0, c.s) + '<a class="enc-link" href="/encyclopedia#' + c.slug + '">' + txt + '</a>' + tail + t.slice(c.e);
+      t = t.slice(0, c.s) + '<a class="enc-link" href="/encyclopedia/' + c.slug + '">' + txt + '</a>' + tail + t.slice(c.e);
     });
     parts[p] = t;
   });
@@ -249,8 +249,8 @@ function sectionFigure(empireName, key) {
   var f = typeof SECTION_IMAGES !== 'undefined' && SECTION_IMAGES[empireName] && SECTION_IMAGES[empireName][key];
   if (!f) return '';
   var credit = [f.artist, f.licence].filter(Boolean).map(esc).join(', ');
-  return '<figure class="profile-section-fig"><a href="/encyclopedia#' + f.slug + '"><img src="' + esc(f.img) + '" alt="' + esc(f.name) + '" loading="lazy" width="240"></a>' +
-    '<figcaption><a href="/encyclopedia#' + f.slug + '">' + esc(f.name) + '</a>' +
+  return '<figure class="profile-section-fig"><a href="/encyclopedia/' + f.slug + '"><img src="' + esc(f.img) + '" alt="' + esc(f.name) + '" loading="lazy" width="240"></a>' +
+    '<figcaption><a href="/encyclopedia/' + f.slug + '">' + esc(f.name) + '</a>' +
     (credit ? '<span class="profile-section-fig-credit">' + (f.source ? '<a href="' + esc(f.source) + '" target="_blank" rel="noopener">' + credit + '</a>' : credit) + '</span>' : '') +
     '</figcaption></figure>\n        ';
 }
@@ -274,9 +274,14 @@ function buildPage(emp) {
   var living   = !!emp.id && endY >= 2025;
   var period   = formatYear(startY) + ' – ' + (living ? 'present' : formatYear(endY));
 
-  var metaDesc = info
-    ? info.slice(0, 155).replace(/"/g,"'") + (info.length > 155 ? '…' : '')
-    : 'Explore the history of the ' + name + ' — foundation, military, governance, and decline.';
+  // meta description: whole sentences of the teaser up to 155 characters (else cut at a word)
+  var metaDesc = (function (s, max) {
+    s = String(s || '').replace(/\s+/g, ' ').trim(); if (s.length <= max) return s;
+    var parts = s.split(/(?<=[.!?])\s+(?=[A-Z"“(])/), out = '';
+    for (var i = 0; i < parts.length; i++) { if ((out ? out.length + 1 : 0) + parts[i].length > max) break; out += (out ? ' ' : '') + parts[i]; }
+    if (out.length >= 70) return out;
+    var cut = s.lastIndexOf(' ', max - 2); return s.slice(0, cut > 40 ? cut : max - 2).replace(/[,;:( ]+$/, '') + '…';
+  })(info || ('Explore the history of the ' + name + ': foundation, military, governance and decline.'), 155);
 
   var kind = PROFILE_KINDS[profileKind(emp)], isPolity = kind.chart;   // section scheme per kind of profile
   var sectionKeys = living ? kind.sections.map(function (s) { return s[0] === 'decline' ? ['decline', 'Into the Present'] : s; }) : kind.sections;
@@ -309,20 +314,36 @@ function buildPage(emp) {
 
   var canonicalUrl = 'https://the-epoch-institute.org' + profileUrl(emp);
   var encodedName  = encodeURIComponent(name);
+  var pageTitle    = name + (isPolity ? ' (' + period + '): History' + (living ? '' : ', Rise and Fall') : ' — Profile') + ' — The Epoch Institute';
+  var regionUrl    = '/profiles?region=' + encodeURIComponent(region);
+  // structured data: breadcrumbs and the article (search engines); '<' escaped so nothing can close the script
+  var ORG = { '@type': 'Organization', name: 'The Epoch Institute', url: 'https://the-epoch-institute.org/', logo: { '@type': 'ImageObject', url: 'https://the-epoch-institute.org/logo.png', width: 512, height: 512 } };
+  var ldJson = JSON.stringify({ '@context': 'https://schema.org', '@graph': [
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://the-epoch-institute.org/' },
+      { '@type': 'ListItem', position: 2, name: 'Profiles', item: 'https://the-epoch-institute.org/profiles' },
+      { '@type': 'ListItem', position: 3, name: region, item: 'https://the-epoch-institute.org' + regionUrl },
+      { '@type': 'ListItem', position: 4, name: name } ] },
+    { '@type': 'Article', headline: name, description: metaDesc, url: canonicalUrl, mainEntityOfPage: canonicalUrl, inLanguage: 'en-GB',
+      dateModified: '2026-10-23', author: ORG, publisher: ORG, isPartOf: { '@type': 'WebSite', name: 'The Epoch Institute', url: 'https://the-epoch-institute.org/' },
+      about: { '@type': isPolity ? 'Country' : 'Thing', name: name },
+      image: { '@type': 'ImageObject', url: 'https://the-epoch-institute.org/images/og/' + slug + '.jpg', width: 1200, height: 630 } } ] }).replace(/</g, '\\u003c');
 
   return '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
 '<script>(function(){var t=localStorage.getItem(\'epoch-theme\');if(t===\'light\')document.documentElement.setAttribute(\'data-theme\',\'light\');else if(t===\'dark\')document.documentElement.setAttribute(\'data-theme\',\'dark\');})()\x3C/script>\n' +
 '<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-'<title>'+esc(name)+' — The Epoch Institute</title>\n' +
-'<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'%3E%3Crect width=\'32\' height=\'32\' fill=\'%230d0d0d\'/%3E%3Ctext x=\'16\' y=\'23\' font-family=\'serif\' font-size=\'22\' font-weight=\'700\' fill=\'%23c9a84c\' text-anchor=\'middle\'%3EE%3C/text%3E%3C/svg%3E">\n' +
+'<title>'+esc(pageTitle)+'</title>\n' +
+'<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n<link rel="icon" href="/favicon.ico" sizes="48x48">\n<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n' +
 '<meta name="description" content="'+esc(metaDesc)+'">\n' +
-'<meta property="og:title" content="'+esc(name)+' — The Epoch Institute">\n' +
+'<meta name="robots" content="index, follow, max-image-preview:large">\n' +
+'<meta property="og:title" content="'+esc(pageTitle)+'">\n' +
 '<meta property="og:description" content="'+esc(metaDesc)+'">\n' +
 '<meta property="og:type" content="article">\n' +
 '<meta property="og:url" content="'+canonicalUrl+'">\n' +
-'<meta property="og:image" content="https://the-epoch-institute.org/images/og/'+slug+'.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/'+slug+'.jpg">\n' +
+'<meta property="og:site_name" content="The Epoch Institute">\n<meta property="og:locale" content="en_GB">\n' +
+'<meta property="og:image" content="https://the-epoch-institute.org/images/og/'+slug+'.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:site" content="@Epoch_Institute">\n<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/'+slug+'.jpg">\n' +
 '<link rel="canonical" href="'+canonicalUrl+'">\n' +
-'<link rel="stylesheet" href="/shared.css?v=28">\n' +
+'<link rel="stylesheet" href="/shared.css">\n' +
 '<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n' +
 '<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n' +
 '<style>\n' +
@@ -333,21 +354,22 @@ function buildPage(emp) {
 '.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }\n' +
 '.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}\n' +
 '.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }\n' +
-'.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }\n' +
+'.empire-nav-row .ref-crumbs { margin:0; }\n' +
 '@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }\n' +
 '</style>\n' +
+'<script type="application/ld+json">' + ldJson + '\x3C/script>\n' +
 '<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4">\x3C/script>\n' +
 '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-B163TLDMP4\');\x3C/script>\n' +
 '</head>\n<body>\n\n' +
 '<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>\n' +
-'<div class="empire-page">\n' +
+'<main id="main" class="empire-page">\n' +
 '  <div class="empire-nav-row">\n' +
-'    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>\n' +
+'    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="'+esc(regionUrl)+'">'+esc(region)+'</a></li><li aria-current="page">'+esc(name)+'</li></ol></nav>\n' +
 (isPolity ? '    <a href="/explorer#//'+encodedName+'" class="empire-view-explorer">View on Explorer →</a>\n' : '') +
 '  </div>\n\n' +
 '  <div class="profile-detail-inner">\n' +
 '    <div class="profile-detail-header">\n' +
-'      <img class="profile-detail-logo" id="detail-logo" src="/logos/'+encodedName+'.png" alt="'+esc(name)+'" onerror="this.style.display=\'none\'">\n' +
+'      <img class="profile-detail-logo" id="detail-logo" src="/logos/'+encodedName+'.png" alt="'+esc(name)+'" width="100" height="100" onerror="this.style.display=\'none\'">\n' +
 '      <div>\n' +
 '        <p class="profile-detail-region">'+esc(region)+'</p>\n' +
 '        <h1 class="profile-detail-name">'+esc(name)+'</h1>\n' +
@@ -379,12 +401,12 @@ noProfileNote + '\n' +
 '      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>\n' +
 '      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>\n' +
 '    </div>\n' +
-'  </div>\n</div>\n\n' +
-'<script src="/shared-data.js?v=6">\x3C/script>\n' +
-'<script src="/shared-nav.js?v=17">\x3C/script>\n' +
+'  </div>\n</main>\n\n' +
+'<script src="/shared-data.js">\x3C/script>\n' +
+'<script src="/shared-nav.js">\x3C/script>\n' +
 '<script src="/epoch-stats.js?v=3">\x3C/script>\n' +
 '<script src="/connections-map.js?v=10" defer>\x3C/script>\n' +
-'<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});\x3C/script>\n' +
+'<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});\x3C/script>\n' +
 '<script>\n' +
 '(function(){\n' +
 '  var name="'+name.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'",slug="'+slug+'",url="https://the-epoch-institute.org/empire/'+slug+'";\n' +

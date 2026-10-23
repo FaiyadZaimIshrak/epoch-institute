@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>/* old addresses /state#id -> /state/id (states with a profile are sent on to it by the server) */ if (/^#[a-z0-9-]+$/.test(location.hash)) location.replace('/state/' + location.hash.slice(1));</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historical States: Kingdoms, Sultanates, Republics — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Kingdoms, principalities, city-states, sultanates, khanates and republics through history: a short history of each, with its lineage and connections.">
+<meta property="og:title" content="Historical States — The Epoch Institute">
+<meta property="og:description" content="Kingdoms, principalities, city-states, tribes and republics: what existed when, where, and how they were connected.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/state/">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/state/">
+<link rel="stylesheet" href="/shared.css?v=30">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"States"}]},{"@type":"CollectionPage","name":"Historical states","url":"https://the-epoch-institute.org/state/","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<main class="st-page" id="main">
+  <div class="st-wrap">
+    <div id="st-index">
+      <header class="st-head">
+        <span class="hero-ornament"></span>
+        <h1 class="research-title">States</h1>
+        <p class="st-lede">Kingdoms, principalities, city-states, sultanates, khanates, tribes and republics. Pick a year to see what existed then, or a country to see everything that once stood on its soil.</p>
+        <p class="st-stats" id="st-stats">Loading…</p>
+      </header>
+      <div class="st-filters" role="search">
+        <label class="st-q">Search<input id="st-q" type="search" placeholder="Name, e.g. Gwynedd, Ayutthaya, Benin" autocomplete="off"></label>
+        <label>Region<select id="st-region"><option value="">All regions</option></select></label>
+        <label>Today in<select id="st-country"><option value="">Any country</option></select></label>
+        <label>Type<select id="st-type"><option value="">All types</option></select></label>
+        <label>Existing in<input id="st-year" type="number" inputmode="numeric" placeholder="e.g. 1200 or -300" title="Year; negative numbers are BCE" step="1"></label>
+      </div>
+      <div class="st-count-row"><span id="st-count"></span><a class="st-random" id="st-random" href="/state/">Random state ↻</a></div>
+      <ul class="st-list" id="st-list"></ul>
+      <button type="button" class="st-more" id="st-more" hidden>Show more</button>
+<!-- build:regions -->
+<section class="ref-browse" aria-labelledby="st-reg-title"><h2 class="ref-sec-title" id="st-reg-title">Browse by region</h2><ul class="ref-cent-list"><li><a href="/state/browse/british-isles">British Isles <span>196</span></a></li><li><a href="/state/browse/france-low-countries">France and the Low Countries <span>262</span></a></li><li><a href="/state/browse/iberia">Iberia <span>206</span></a></li><li><a href="/state/browse/italy">Italy <span>255</span></a></li><li><a href="/state/browse/hre-germany-central-europe">Germany and Central Europe <span>518</span></a></li><li><a href="/state/browse/greece-aegean">Greece and the Aegean <span>234</span></a></li><li><a href="/state/browse/balkans-hungary">Balkans and Hungary <span>186</span></a></li><li><a href="/state/browse/scandinavia-baltic">Scandinavia and the Baltic <span>137</span></a></li><li><a href="/state/browse/poland-lithuania-russia">Poland, Lithuania and Russia <span>148</span></a></li><li><a href="/state/browse/caucasus">Caucasus <span>119</span></a></li><li><a href="/state/browse/anatolia-levant">Anatolia and the Levant <span>250</span></a></li><li><a href="/state/browse/mesopotamia-iran">Mesopotamia and Iran <span>139</span></a></li><li><a href="/state/browse/arabia-gulf">Arabia and the Gulf <span>114</span></a></li><li><a href="/state/browse/egypt-maghreb-sahara">Egypt, North Africa and Sudan <span>194</span></a></li><li><a href="/state/browse/west-africa">West Africa <span>188</span></a></li><li><a href="/state/browse/horn-east-africa">Horn and East Africa <span>115</span></a></li><li><a href="/state/browse/central-southern-africa">Central and Southern Africa <span>184</span></a></li><li><a href="/state/browse/central-asia-steppe">Central Asia and the Steppe <span>134</span></a></li><li><a href="/state/browse/south-asia">South Asia <span>243</span></a></li><li><a href="/state/browse/south-asia-princely-states">Indian princely states <span>354</span></a></li><li><a href="/state/browse/southeast-asia-mainland">Mainland Southeast Asia <span>123</span></a></li><li><a href="/state/browse/maritime-southeast-asia">Maritime Southeast Asia <span>167</span></a></li><li><a href="/state/browse/china-tibet-mongolia">China, Tibet and Mongolia <span>249</span></a></li><li><a href="/state/browse/korea-japan">Korea and Japan <span>123</span></a></li><li><a href="/state/browse/mesoamerica-caribbean">Mesoamerica and the Caribbean <span>223</span></a></li><li><a href="/state/browse/andes-south-america">South America <span>142</span></a></li><li><a href="/state/browse/north-america-oceania">North America and Oceania <span>166</span></a></li></ul></section>
+<!-- /build:regions -->
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=18"></script>
+<script src="/connections-map.js?v=10"></script>
+<script>
+initNav('states');
+(function () {
+  // Index of every state in the register; each state has its own page at /state/<id> (built by scripts/build-pages.ps1)
+  // and the 394 with a full profile live at /empire/<slug>.
+  var CM = ConnectionsMap, esc = CM.esc, nodes = [], PAGE = 150, shown = PAGE;
+  var $ = function (id) { return document.getElementById(id); };
+  var REGION_NAMES = { 'british-isles': 'British Isles', 'france-low-countries': 'France and the Low Countries', 'iberia': 'Iberia', 'italy': 'Italy', 'hre-germany-central-europe': 'Germany and Central Europe',
+    'greece-aegean': 'Greece and the Aegean', 'balkans-hungary': 'Balkans and Hungary', 'scandinavia-baltic': 'Scandinavia and the Baltic', 'poland-lithuania-russia': 'Poland, Lithuania and Russia',
+    'caucasus': 'Caucasus', 'anatolia-levant': 'Anatolia and the Levant', 'mesopotamia-iran': 'Mesopotamia and Iran', 'arabia-gulf': 'Arabia and the Gulf', 'egypt-maghreb-sahara': 'Egypt, North Africa and Sudan',
+    'west-africa': 'West Africa', 'horn-east-africa': 'Horn and East Africa', 'central-southern-africa': 'Central and Southern Africa', 'central-asia-steppe': 'Central Asia and the Steppe',
+    'south-asia': 'South Asia', 'south-asia-princely-states': 'Indian princely states', 'southeast-asia-mainland': 'Mainland Southeast Asia', 'maritime-southeast-asia': 'Maritime Southeast Asia',
+    'china-tibet-mongolia': 'China, Tibet and Mongolia', 'korea-japan': 'Korea and Japan', 'mesoamerica-caribbean': 'Mesoamerica and the Caribbean', 'andes-south-america': 'South America', 'north-america-oceania': 'North America and Oceania' };
+  function fold(s) { return (typeof searchFold === 'function' ? searchFold(s) : String(s).toLowerCase()); }
+  function typeLabel(t) { return String(t || 'state').replace(/-/g, ' '); }
+  function regionLabel(rg) { return REGION_NAMES[rg] || String(rg || '').replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); }); }
+  function url(n) { return n.p ? n.p : '/state/' + n.id; }
+  function alive(n, y) { return (n.s == null || n.s <= y) && (n.e == null || n.e >= y); }
+  function fillSelect(el, values, label) { el.innerHTML += values.map(function (v) { return '<option value="' + esc(v) + '">' + esc(label ? label(v) : v) + '</option>'; }).join(''); }
+  function filtered() {
+    var q = fold($('st-q').value.trim()), rg = $('st-region').value, co = $('st-country').value, ty = $('st-type').value, yv = $('st-year').value.trim(), y = yv === '' ? null : +yv;
+    return nodes.filter(function (n) {
+      if (rg && n.rg !== rg) return false;
+      if (ty && n.t !== ty) return false;
+      if (co && (n.mo || []).indexOf(co) === -1) return false;
+      if (y != null && !isNaN(y) && !alive(n, y)) return false;
+      if (q && fold(n.n).indexOf(q) === -1 && !(n.a || []).some(function (a) { return fold(a).indexOf(q) !== -1; })) return false;
+      return true;
+    });
+  }
+  function renderIndex() {
+    var list = filtered(), yv = $('st-year').value.trim();
+    $('st-count').textContent = list.length.toLocaleString('en-GB') + (list.length === 1 ? ' state' : ' states') + (yv !== '' && !isNaN(+yv) ? ' existing in ' + CM.yr(+yv) : '');
+    $('st-list').innerHTML = list.length ? list.slice(0, shown).map(function (n) {
+      return '<li class="st-item"><a href="' + esc(url(n)) + '"><span class="st-name">' + esc(n.n) + '</span><span class="st-yrs">' + esc(CM.span(n)) + '</span>' +
+        '<span class="st-sub"><b>' + esc(n.p ? 'profile' : typeLabel(n.t)) + '</b> · ' + esc(n.rg ? regionLabel(n.rg) : n.b || '') + (n.mo && n.mo.length ? ' · today ' + esc(n.mo.slice(0, 3).join(', ')) : '') + '</span></a></li>';
+    }).join('') : '<li class="st-empty">No states match these filters.</li>';
+    $('st-more').hidden = list.length <= shown;
+    $('st-more').textContent = 'Show more (' + (list.length - shown).toLocaleString('en-GB') + ' left)';
+  }
+  ['st-q', 'st-region', 'st-country', 'st-type', 'st-year'].forEach(function (id) { $(id).addEventListener('input', function () { shown = PAGE; renderIndex(); }); });
+  $('st-more').addEventListener('click', function () { shown += PAGE * 2; renderIndex(); });
+  $('st-random').addEventListener('click', function (e) {
+    var pool = nodes.filter(function (n) { return !n.p; }); if (!pool.length) return;
+    e.preventDefault(); location.href = '/state/' + pool[Math.floor(Math.random() * pool.length)].id;
+  });
+  CM.load().then(function (d) {
+    nodes = d.nodes.slice().sort(function (a, b) { return a.n.localeCompare(b.n, 'en'); });
+    var regions = {}, countries = {}, types = {};
+    nodes.forEach(function (n) { if (n.rg) regions[n.rg] = 1; (n.mo || []).forEach(function (c) { countries[c] = 1; }); types[n.t || 'state'] = 1; });
+    fillSelect($('st-region'), Object.keys(regions).sort(), regionLabel);
+    fillSelect($('st-country'), Object.keys(countries).sort());
+    fillSelect($('st-type'), Object.keys(types).sort(), typeLabel);
+    $('st-stats').textContent = nodes.length.toLocaleString('en-GB') + ' states · ' + Object.keys(countries).length + ' present-day countries';
+    renderIndex();
+  });
+})();
+</script>
+</body>
+</html>

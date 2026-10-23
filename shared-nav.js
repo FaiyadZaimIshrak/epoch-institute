@@ -50,7 +50,7 @@ function composeTweet(ev) {
 function tihTags(ev) {
   var out = '';
   if (ev.profile) out += '<a class="tih-tag tih-tag-profile" href="' + escHtml(ev.profile[1]) + '">' + escHtml(ev.profile[0]) + '</a>';
-  (ev.links || []).forEach(function (l) { out += '<a class="tih-tag enc-link" href="/encyclopedia#' + escHtml(l[0]) + '">' + escHtml(l[1]) + '</a>'; });
+  (ev.links || []).forEach(function (l) { out += '<a class="tih-tag enc-link" href="/encyclopedia/' + escHtml(l[0]) + '">' + escHtml(l[1]) + '</a>'; });
   return out ? '<div class="tih-tags">' + out + '</div>' : '';
 }
 
@@ -144,15 +144,15 @@ function siteSearch(query) {
   if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) {
     var s = searchScore(q, r[1]);
     if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-    if (s > 0) out.push({ s: s, name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia#' + r[0], enc: r[2] === 'polity' });
+    if (s > 0) out.push({ s: s, name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia/' + r[0], enc: r[2] === 'polity' });
   });
-  // every state in the register (page /state#id); an encyclopedia polity of the same name is dropped in its favour
+  // every state in the register (page /state/<id>); an encyclopedia polity of the same name is dropped in its favour
   if (typeof SEARCH_STATES !== 'undefined') {
     var stateNames = {};
     SEARCH_STATES.forEach(function (r) {
       var s = searchScore(q, r[1]);
       if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-      if (s > 0) { out.push({ s: s + 2, name: r[1], type: String(r[2] || 'state').replace(/-/g, ' ') + ' · state', href: '/state#' + r[0] }); stateNames[searchFold(r[1])] = 1; }
+      if (s > 0) { out.push({ s: s + 2, name: r[1], type: String(r[2] || 'state').replace(/-/g, ' ') + ' · state', href: '/state/' + r[0] }); stateNames[searchFold(r[1])] = 1; }
     });
     out = out.filter(function (o) { return !(o.enc && stateNames[searchFold(o.name)]); });
   }
@@ -216,10 +216,11 @@ function initSiteSearch() {
 function initEncPreviews() {
   var cache = {}, card = null, showTimer = null, hideTimer = null, current = null;
   var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
-  function slugOf(a) {
-    var h = a.getAttribute('href') || '', i = h.indexOf('#');
-    if (i !== -1 && h.indexOf('/state#') === 0) return 'state:' + decodeURIComponent(h.slice(i + 1));
-    return (i !== -1 && (h.indexOf('/encyclopedia') === 0 || i === 0)) ? decodeURIComponent(h.slice(i + 1)) : null;
+  function slugOf(a) {   // /encyclopedia/<slug>, /state/<id> (and the old #-addresses)
+    var h = a.getAttribute('href') || '', m;
+    if ((m = /^\/state\/([a-z0-9-]+)$/.exec(h)) || (m = /^\/state\/?#(.+)$/.exec(h))) return 'state:' + decodeURIComponent(m[1]);
+    if ((m = /^\/encyclopedia\/([a-z0-9-]+)$/.exec(h)) || (m = /^\/encyclopedia\/?#(.+)$/.exec(h)) || (m = /^#(.+)$/.exec(h))) return decodeURIComponent(m[1]);
+    return null;
   }
   function load(slug, cb, a) {
     if (slug.indexOf('state:') === 0) {   // a state page: teaser and picture from its data chunk
@@ -301,14 +302,14 @@ function initNav(activePage) {
     <span class="nav-logo-text">THE EPOCH INSTITUTE</span>
   </a>
   <div class="nav-links">
-    <a href="/today-in-history" class="nav-link"${activeStyle('today')} id="nav-today-link">Today in History</a>
-    <a href="/encyclopedia" class="nav-link"${activeStyle('encyclopedia')} id="nav-encyclopedia-link">Encyclopedia</a>
+    <a href="/today-in-history/" class="nav-link"${activeStyle('today')} id="nav-today-link">Today in History</a>
+    <a href="/encyclopedia/" class="nav-link"${activeStyle('encyclopedia')} id="nav-encyclopedia-link">Encyclopedia</a>
     <div class="nav-group-wrap" id="nav-research-wrap">
       <button class="nav-parent-btn${researchActive ? ' active-group' : ''}" id="nav-research-btn" aria-haspopup="true" aria-expanded="false">Research ▾</button>
       <div class="nav-group-menu" id="nav-research-menu" role="menu">
         <a href="/explorer" id="nav-explorer-link"${activeStyle('explorer')}>Empire Explorer</a>
         <a href="/profiles" id="nav-profiles-link"${activeStyle('profiles')}>Profiles</a>
-        <a href="/state" id="nav-states-link"${activeStyle('states')}>States</a>
+        <a href="/state/" id="nav-states-link"${activeStyle('states')}>States</a>
         <a href="/connections" id="nav-connections-link"${activeStyle('connections')}>Connections</a>
         <a href="/paths" id="nav-paths-link"${activeStyle('paths')}>Reading Paths</a>
         <a href="/research-series" id="nav-series-link"${activeStyle('series')}>Research Series</a>
@@ -339,12 +340,12 @@ function initNav(activePage) {
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-dropdown">&#x2630;</button>
   </div>
   <div id="nav-dropdown" class="nav-dropdown">
-    <a href="/today-in-history" class="nav-dropdown-link" id="mob-today"${activeStyle('today')}>Today in History</a>
-    <a href="/encyclopedia" class="nav-dropdown-link" id="mob-encyclopedia"${activeStyle('encyclopedia')}>Encyclopedia</a>
+    <a href="/today-in-history/" class="nav-dropdown-link" id="mob-today"${activeStyle('today')}>Today in History</a>
+    <a href="/encyclopedia/" class="nav-dropdown-link" id="mob-encyclopedia"${activeStyle('encyclopedia')}>Encyclopedia</a>
     <span class="nav-dropdown-group">Research</span>
     <a href="/explorer" class="nav-dropdown-link" id="mob-explorer"${activeStyle('explorer')}>Empire Explorer</a>
     <a href="/profiles" class="nav-dropdown-link" id="mob-profiles"${activeStyle('profiles')}>Profiles</a>
-    <a href="/state" class="nav-dropdown-link" id="mob-states"${activeStyle('states')}>States</a>
+    <a href="/state/" class="nav-dropdown-link" id="mob-states"${activeStyle('states')}>States</a>
     <a href="/connections" class="nav-dropdown-link" id="mob-connections"${activeStyle('connections')}>Connections</a>
     <a href="/paths" class="nav-dropdown-link" id="mob-paths"${activeStyle('paths')}>Reading Paths</a>
     <a href="/research-series" class="nav-dropdown-link" id="mob-series"${activeStyle('series')}>Research Series</a>
@@ -385,12 +386,12 @@ function initNav(activePage) {
     <div class="footer-links">
       <div class="footer-col">
         <span class="footer-col-title">Research</span>
-        <a class="footer-link" href="/today-in-history" id="fl-today">Today in History</a>
-        <a class="footer-link" href="/encyclopedia" id="fl-encyclopedia">Encyclopedia</a>
+        <a class="footer-link" href="/today-in-history/" id="fl-today">Today in History</a>
+        <a class="footer-link" href="/encyclopedia/" id="fl-encyclopedia">Encyclopedia</a>
         <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
         <a class="footer-link" href="/profiles" id="fl-profiles">Profiles</a>
         <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
-        <a class="footer-link" href="/state" id="fl-states">States</a>
+        <a class="footer-link" href="/state/" id="fl-states">States</a>
         <a class="footer-link" href="/connections" id="fl-connections">Connections</a>
         <a class="footer-link" href="/paths" id="fl-paths">Reading Paths</a>
         <a class="footer-link" href="/research-series" id="fl-series">Research Series</a>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Today in History: What Happened on This Day — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Explore what happened throughout history on this very day — from ancient civilisations to modern milestones, curated by The Epoch Institute.">
+<meta property="og:title" content="Today in History — The Epoch Institute">
+<meta property="og:description" content="Historical events from across five millennia, surfaced for today's date.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/today-in-history/">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/today-in-history/">
+<link rel="stylesheet" href="/shared.css?v=30">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Today in History — The Epoch Institute",
+  "description": "Explore what happened throughout history on this very day — from ancient civilisations to modern milestones, curated by The Epoch Institute.",
+  "url": "https://the-epoch-institute.org/today-in-history/",
+  "isPartOf": { "@type": "WebSite", "name": "The Epoch Institute", "url": "https://the-epoch-institute.org" }
+}
+</script>
+</head>
+<body>
+
+<main id="main">
+<section id="today-in-history">
+  <div class="tih-page-header">
+    <span class="hero-ornament"></span>
+    <h1 class="research-title" id="tih-heading">Today in History</h1>
+    <p class="research-subtitle" id="tih-subheading">Loading&hellip;</p>
+  </div>
+
+  <div class="tih-full-wrap">
+    <div id="tih-pinned-wrap" style="display:none;"></div>
+    <p class="tih-full-loading" id="tih-loading" style="display:none;"></p>
+    <div class="tih-grid" id="tih-grid">
+      <div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>
+      <div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>
+      <div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>
+    </div>
+    <div class="tih-pagination" id="tih-pagination" style="display:none;"></div>
+  </div>
+
+  <div id="tih-tooltip" class="tih-share-tooltip"></div>
+  <p class="tih-day-link"><a class="enc-random-link" id="tih-day-link" href="/today-in-history/">This day&rsquo;s permanent page &rarr;</a></p>
+  <div class="tih-full-wrap">
+<!-- build:calendar -->
+<section class="day-cal-wrap day-cal-year" aria-labelledby="cal-title"><h2 class="ref-sec-title" id="cal-title">Every day of the year</h2><div class="day-cal-grid"><div class="day-cal-month"><h3>January</h3><ol class="day-cal"><li><a href="/today-in-history/january-1">1</a></li><li><a href="/today-in-history/january-2">2</a></li><li><a href="/today-in-history/january-3">3</a></li><li><a href="/today-in-history/january-4">4</a></li><li><a href="/today-in-history/january-5">5</a></li><li><a href="/today-in-history/january-6">6</a></li><li><a href="/today-in-history/january-7">7</a></li><li><a href="/today-in-history/january-8">8</a></li><li><a href="/today-in-history/january-9">9</a></li><li><a href="/today-in-history/january-10">10</a></li><li><a href="/today-in-history/january-11">11</a></li><li><a href="/today-in-history/january-12">12</a></li><li><a href="/today-in-history/january-13">13</a></li><li><a href="/today-in-history/january-14">14</a></li><li><a href="/today-in-history/january-15">15</a></li><li><a href="/today-in-history/january-16">16</a></li><li><a href="/today-in-history/january-17">17</a></li><li><a href="/today-in-history/january-18">18</a></li><li><a href="/today-in-history/january-19">19</a></li><li><a href="/today-in-history/january-20">20</a></li><li><a href="/today-in-history/january-21">21</a></li><li><a href="/today-in-history/january-22">22</a></li><li><a href="/today-in-history/january-23">23</a></li><li><a href="/today-in-history/january-24">24</a></li><li><a href="/today-in-history/january-25">25</a></li><li><a href="/today-in-history/january-26">26</a></li><li><a href="/today-in-history/january-27">27</a></li><li><a href="/today-in-history/january-28">28</a></li><li><a href="/today-in-history/january-29">29</a></li><li><a href="/today-in-history/january-30">30</a></li><li><a href="/today-in-history/january-31">31</a></li></ol></div><div class="day-cal-month"><h3>February</h3><ol class="day-cal"><li><a href="/today-in-history/february-1">1</a></li><li><a href="/today-in-history/february-2">2</a></li><li><a href="/today-in-history/february-3">3</a></li><li><a href="/today-in-history/february-4">4</a></li><li><a href="/today-in-history/february-5">5</a></li><li><a href="/today-in-history/february-6">6</a></li><li><a href="/today-in-history/february-7">7</a></li><li><a href="/today-in-history/february-8">8</a></li><li><a href="/today-in-history/february-9">9</a></li><li><a href="/today-in-history/february-10">10</a></li><li><a href="/today-in-history/february-11">11</a></li><li><a href="/today-in-history/february-12">12</a></li><li><a href="/today-in-history/february-13">13</a></li><li><a href="/today-in-history/february-14">14</a></li><li><a href="/today-in-history/february-15">15</a></li><li><a href="/today-in-history/february-16">16</a></li><li><a href="/today-in-history/february-17">17</a></li><li><a href="/today-in-history/february-18">18</a></li><li><a href="/today-in-history/february-19">19</a></li><li><a href="/today-in-history/february-20">20</a></li><li><a href="/today-in-history/february-21">21</a></li><li><a href="/today-in-history/february-22">22</a></li><li><a href="/today-in-history/february-23">23</a></li><li><a href="/today-in-history/february-24">24</a></li><li><a href="/today-in-history/february-25">25</a></li><li><a href="/today-in-history/february-26">26</a></li><li><a href="/today-in-history/february-27">27</a></li><li><a href="/today-in-history/february-28">28</a></li></ol></div><div class="day-cal-month"><h3>March</h3><ol class="day-cal"><li><a href="/today-in-history/march-1">1</a></li><li><a href="/today-in-history/march-2">2</a></li><li><a href="/today-in-history/march-3">3</a></li><li><a href="/today-in-history/march-4">4</a></li><li><a href="/today-in-history/march-5">5</a></li><li><a href="/today-in-history/march-6">6</a></li><li><a href="/today-in-history/march-7">7</a></li><li><a href="/today-in-history/march-8">8</a></li><li><a href="/today-in-history/march-9">9</a></li><li><a href="/today-in-history/march-10">10</a></li><li><a href="/today-in-history/march-11">11</a></li><li><a href="/today-in-history/march-12">12</a></li><li><a href="/today-in-history/march-13">13</a></li><li><a href="/today-in-history/march-14">14</a></li><li><a href="/today-in-history/march-15">15</a></li><li><a href="/today-in-history/march-16">16</a></li><li><a href="/today-in-history/march-17">17</a></li><li><a href="/today-in-history/march-18">18</a></li><li><a href="/today-in-history/march-19">19</a></li><li><a href="/today-in-history/march-20">20</a></li><li><a href="/today-in-history/march-21">21</a></li><li><a href="/today-in-history/march-22">22</a></li><li><a href="/today-in-history/march-23">23</a></li><li><a href="/today-in-history/march-24">24</a></li><li><a href="/today-in-history/march-25">25</a></li><li><a href="/today-in-history/march-26">26</a></li><li><a href="/today-in-history/march-27">27</a></li><li><a href="/today-in-history/march-28">28</a></li><li><a href="/today-in-history/march-29">29</a></li><li><a href="/today-in-history/march-30">30</a></li><li><a href="/today-in-history/march-31">31</a></li></ol></div><div class="day-cal-month"><h3>April</h3><ol class="day-cal"><li><a href="/today-in-history/april-1">1</a></li><li><a href="/today-in-history/april-2">2</a></li><li><a href="/today-in-history/april-3">3</a></li><li><a href="/today-in-history/april-4">4</a></li><li><a href="/today-in-history/april-5">5</a></li><li><a href="/today-in-history/april-6">6</a></li><li><a href="/today-in-history/april-7">7</a></li><li><a href="/today-in-history/april-8">8</a></li><li><a href="/today-in-history/april-9">9</a></li><li><a href="/today-in-history/april-10">10</a></li><li><a href="/today-in-history/april-11">11</a></li><li><a href="/today-in-history/april-12">12</a></li><li><a href="/today-in-history/april-13">13</a></li><li><a href="/today-in-history/april-14">14</a></li><li><a href="/today-in-history/april-15">15</a></li><li><a href="/today-in-history/april-16">16</a></li><li><a href="/today-in-history/april-17">17</a></li><li><a href="/today-in-history/april-18">18</a></li><li><a href="/today-in-history/april-19">19</a></li><li><a href="/today-in-history/april-20">20</a></li><li><a href="/today-in-history/april-21">21</a></li><li><a href="/today-in-history/april-22">22</a></li><li><a href="/today-in-history/april-23">23</a></li><li><a href="/today-in-history/april-24">24</a></li><li><a href="/today-in-history/april-25">25</a></li><li><a href="/today-in-history/april-26">26</a></li><li><a href="/today-in-history/april-27">27</a></li><li><a href="/today-in-history/april-28">28</a></li><li><a href="/today-in-history/april-29">29</a></li><li><a href="/today-in-history/april-30">30</a></li></ol></div><div class="day-cal-month"><h3>May</h3><ol class="day-cal"><li><a href="/today-in-history/may-1">1</a></li><li><a href="/today-in-history/may-2">2</a></li><li><a href="/today-in-history/may-3">3</a></li><li><a href="/today-in-history/may-4">4</a></li><li><a href="/today-in-history/may-5">5</a></li><li><a href="/today-in-history/may-6">6</a></li><li><a href="/today-in-history/may-7">7</a></li><li><a href="/today-in-history/may-8">8</a></li><li><a href="/today-in-history/may-9">9</a></li><li><a href="/today-in-history/may-10">10</a></li><li><a href="/today-in-history/may-11">11</a></li><li><a href="/today-in-history/may-12">12</a></li><li><a href="/today-in-history/may-13">13</a></li><li><a href="/today-in-history/may-14">14</a></li><li><a href="/today-in-history/may-15">15</a></li><li><a href="/today-in-history/may-16">16</a></li><li><a href="/today-in-history/may-17">17</a></li><li><a href="/today-in-history/may-18">18</a></li><li><a href="/today-in-history/may-19">19</a></li><li><a href="/today-in-history/may-20">20</a></li><li><a href="/today-in-history/may-21">21</a></li><li><a href="/today-in-history/may-22">22</a></li><li><a href="/today-in-history/may-23">23</a></li><li><a href="/today-in-history/may-24">24</a></li><li><a href="/today-in-history/may-25">25</a></li><li><a href="/today-in-history/may-26">26</a></li><li><a href="/today-in-history/may-27">27</a></li><li><a href="/today-in-history/may-28">28</a></li><li><a href="/today-in-history/may-29">29</a></li><li><a href="/today-in-history/may-30">30</a></li><li><a href="/today-in-history/may-31">31</a></li></ol></div><div class="day-cal-month"><h3>June</h3><ol class="day-cal"><li><a href="/today-in-history/june-1">1</a></li><li><a href="/today-in-history/june-2">2</a></li><li><a href="/today-in-history/june-3">3</a></li><li><a href="/today-in-history/june-4">4</a></li><li><a href="/today-in-history/june-5">5</a></li><li><a href="/today-in-history/june-6">6</a></li><li><a href="/today-in-history/june-7">7</a></li><li><a href="/today-in-history/june-8">8</a></li><li><a href="/today-in-history/june-9">9</a></li><li><a href="/today-in-history/june-10">10</a></li><li><a href="/today-in-history/june-11">11</a></li><li><a href="/today-in-history/june-12">12</a></li><li><a href="/today-in-history/june-13">13</a></li><li><a href="/today-in-history/june-14">14</a></li><li><a href="/today-in-history/june-15">15</a></li><li><a href="/today-in-history/june-16">16</a></li><li><a href="/today-in-history/june-17">17</a></li><li><a href="/today-in-history/june-18">18</a></li><li><a href="/today-in-history/june-19">19</a></li><li><a href="/today-in-history/june-20">20</a></li><li><a href="/today-in-history/june-21">21</a></li><li><a href="/today-in-history/june-22">22</a></li><li><a href="/today-in-history/june-23">23</a></li><li><a href="/today-in-history/june-24">24</a></li><li><a href="/today-in-history/june-25">25</a></li><li><a href="/today-in-history/june-26">26</a></li><li><a href="/today-in-history/june-27">27</a></li><li><a href="/today-in-history/june-28">28</a></li><li><a href="/today-in-history/june-29">29</a></li><li><a href="/today-in-history/june-30">30</a></li></ol></div><div class="day-cal-month"><h3>July</h3><ol class="day-cal"><li><a href="/today-in-history/july-1">1</a></li><li><a href="/today-in-history/july-2">2</a></li><li><a href="/today-in-history/july-3">3</a></li><li><a href="/today-in-history/july-4">4</a></li><li><a href="/today-in-history/july-5">5</a></li><li><a href="/today-in-history/july-6">6</a></li><li><a href="/today-in-history/july-7">7</a></li><li><a href="/today-in-history/july-8">8</a></li><li><a href="/today-in-history/july-9">9</a></li><li><a href="/today-in-history/july-10">10</a></li><li><a href="/today-in-history/july-11">11</a></li><li><a href="/today-in-history/july-12">12</a></li><li><a href="/today-in-history/july-13">13</a></li><li><a href="/today-in-history/july-14">14</a></li><li><a href="/today-in-history/july-15">15</a></li><li><a href="/today-in-history/july-16">16</a></li><li><a href="/today-in-history/july-17">17</a></li><li><a href="/today-in-history/july-18">18</a></li><li><a href="/today-in-history/july-19">19</a></li><li><a href="/today-in-history/july-20">20</a></li><li><a href="/today-in-history/july-21">21</a></li><li><a href="/today-in-history/july-22">22</a></li><li><a href="/today-in-history/july-23">23</a></li><li><a href="/today-in-history/july-24">24</a></li><li><a href="/today-in-history/july-25">25</a></li><li><a href="/today-in-history/july-26">26</a></li><li><a href="/today-in-history/july-27">27</a></li><li><a href="/today-in-history/july-28">28</a></li><li><a href="/today-in-history/july-29">29</a></li><li><a href="/today-in-history/july-30">30</a></li><li><a href="/today-in-history/july-31">31</a></li></ol></div><div class="day-cal-month"><h3>August</h3><ol class="day-cal"><li><a href="/today-in-history/august-1">1</a></li><li><a href="/today-in-history/august-2">2</a></li><li><a href="/today-in-history/august-3">3</a></li><li><a href="/today-in-history/august-4">4</a></li><li><a href="/today-in-history/august-5">5</a></li><li><a href="/today-in-history/august-6">6</a></li><li><a href="/today-in-history/august-7">7</a></li><li><a href="/today-in-history/august-8">8</a></li><li><a href="/today-in-history/august-9">9</a></li><li><a href="/today-in-history/august-10">10</a></li><li><a href="/today-in-history/august-11">11</a></li><li><a href="/today-in-history/august-12">12</a></li><li><a href="/today-in-history/august-13">13</a></li><li><a href="/today-in-history/august-14">14</a></li><li><a href="/today-in-history/august-15">15</a></li><li><a href="/today-in-history/august-16">16</a></li><li><a href="/today-in-history/august-17">17</a></li><li><a href="/today-in-history/august-18">18</a></li><li><a href="/today-in-history/august-19">19</a></li><li><a href="/today-in-history/august-20">20</a></li><li><a href="/today-in-history/august-21">21</a></li><li><a href="/today-in-history/august-22">22</a></li><li><a href="/today-in-history/august-23">23</a></li><li><a href="/today-in-history/august-24">24</a></li><li><a href="/today-in-history/august-25">25</a></li><li><a href="/today-in-history/august-26">26</a></li><li><a href="/today-in-history/august-27">27</a></li><li><a href="/today-in-history/august-28">28</a></li><li><a href="/today-in-history/august-29">29</a></li><li><a href="/today-in-history/august-30">30</a></li><li><a href="/today-in-history/august-31">31</a></li></ol></div><div class="day-cal-month"><h3>September</h3><ol class="day-cal"><li><a href="/today-in-history/september-1">1</a></li><li><a href="/today-in-history/september-2">2</a></li><li><a href="/today-in-history/september-3">3</a></li><li><a href="/today-in-history/september-4">4</a></li><li><a href="/today-in-history/september-5">5</a></li><li><a href="/today-in-history/september-6">6</a></li><li><a href="/today-in-history/september-7">7</a></li><li><a href="/today-in-history/september-8">8</a></li><li><a href="/today-in-history/september-9">9</a></li><li><a href="/today-in-history/september-10">10</a></li><li><a href="/today-in-history/september-11">11</a></li><li><a href="/today-in-history/september-12">12</a></li><li><a href="/today-in-history/september-13">13</a></li><li><a href="/today-in-history/september-14">14</a></li><li><a href="/today-in-history/september-15">15</a></li><li><a href="/today-in-history/september-16">16</a></li><li><a href="/today-in-history/september-17">17</a></li><li><a href="/today-in-history/september-18">18</a></li><li><a href="/today-in-history/september-19">19</a></li><li><a href="/today-in-history/september-20">20</a></li><li><a href="/today-in-history/september-21">21</a></li><li><a href="/today-in-history/september-22">22</a></li><li><a href="/today-in-history/september-23">23</a></li><li><a href="/today-in-history/september-24">24</a></li><li><a href="/today-in-history/september-25">25</a></li><li><a href="/today-in-history/september-26">26</a></li><li><a href="/today-in-history/september-27">27</a></li><li><a href="/today-in-history/september-28">28</a></li><li><a href="/today-in-history/september-29">29</a></li><li><a href="/today-in-history/september-30">30</a></li></ol></div><div class="day-cal-month"><h3>October</h3><ol class="day-cal"><li><a href="/today-in-history/october-1">1</a></li><li><a href="/today-in-history/october-2">2</a></li><li><a href="/today-in-history/october-3">3</a></li><li><a href="/today-in-history/october-4">4</a></li><li><a href="/today-in-history/october-5">5</a></li><li><a href="/today-in-history/october-6">6</a></li><li><a href="/today-in-history/october-7">7</a></li><li><a href="/today-in-history/october-8">8</a></li><li><a href="/today-in-history/october-9">9</a></li><li><a href="/today-in-history/october-10">10</a></li><li><a href="/today-in-history/october-11">11</a></li><li><a href="/today-in-history/october-12">12</a></li><li><a href="/today-in-history/october-13">13</a></li><li><a href="/today-in-history/october-14">14</a></li><li><a href="/today-in-history/october-15">15</a></li><li><a href="/today-in-history/october-16">16</a></li><li><a href="/today-in-history/october-17">17</a></li><li><a href="/today-in-history/october-18">18</a></li><li><a href="/today-in-history/october-19">19</a></li><li><a href="/today-in-history/october-20">20</a></li><li><a href="/today-in-history/october-21">21</a></li><li><a href="/today-in-history/october-22">22</a></li><li><a href="/today-in-history/october-23">23</a></li><li><a href="/today-in-history/october-24">24</a></li><li><a href="/today-in-history/october-25">25</a></li><li><a href="/today-in-history/october-26">26</a></li><li><a href="/today-in-history/october-27">27</a></li><li><a href="/today-in-history/october-28">28</a></li><li><a href="/today-in-history/october-29">29</a></li><li><a href="/today-in-history/october-30">30</a></li><li><a href="/today-in-history/october-31">31</a></li></ol></div><div class="day-cal-month"><h3>November</h3><ol class="day-cal"><li><a href="/today-in-history/november-1">1</a></li><li><a href="/today-in-history/november-2">2</a></li><li><a href="/today-in-history/november-3">3</a></li><li><a href="/today-in-history/november-4">4</a></li><li><a href="/today-in-history/november-5">5</a></li><li><a href="/today-in-history/november-6">6</a></li><li><a href="/today-in-history/november-7">7</a></li><li><a href="/today-in-history/november-8">8</a></li><li><a href="/today-in-history/november-9">9</a></li><li><a href="/today-in-history/november-10">10</a></li><li><a href="/today-in-history/november-11">11</a></li><li><a href="/today-in-history/november-12">12</a></li><li><a href="/today-in-history/november-13">13</a></li><li><a href="/today-in-history/november-14">14</a></li><li><a href="/today-in-history/november-15">15</a></li><li><a href="/today-in-history/november-16">16</a></li><li><a href="/today-in-history/november-17">17</a></li><li><a href="/today-in-history/november-18">18</a></li><li><a href="/today-in-history/november-19">19</a></li><li><a href="/today-in-history/november-20">20</a></li><li><a href="/today-in-history/november-21">21</a></li><li><a href="/today-in-history/november-22">22</a></li><li><a href="/today-in-history/november-23">23</a></li><li><a href="/today-in-history/november-24">24</a></li><li><a href="/today-in-history/november-25">25</a></li><li><a href="/today-in-history/november-26">26</a></li><li><a href="/today-in-history/november-27">27</a></li><li><a href="/today-in-history/november-28">28</a></li><li><a href="/today-in-history/november-29">29</a></li><li><a href="/today-in-history/november-30">30</a></li></ol></div><div class="day-cal-month"><h3>December</h3><ol class="day-cal"><li><a href="/today-in-history/december-1">1</a></li><li><a href="/today-in-history/december-2">2</a></li><li><a href="/today-in-history/december-3">3</a></li><li><a href="/today-in-history/december-4">4</a></li><li><a href="/today-in-history/december-5">5</a></li><li><a href="/today-in-history/december-6">6</a></li><li><a href="/today-in-history/december-7">7</a></li><li><a href="/today-in-history/december-8">8</a></li><li><a href="/today-in-history/december-9">9</a></li><li><a href="/today-in-history/december-10">10</a></li><li><a href="/today-in-history/december-11">11</a></li><li><a href="/today-in-history/december-12">12</a></li><li><a href="/today-in-history/december-13">13</a></li><li><a href="/today-in-history/december-14">14</a></li><li><a href="/today-in-history/december-15">15</a></li><li><a href="/today-in-history/december-16">16</a></li><li><a href="/today-in-history/december-17">17</a></li><li><a href="/today-in-history/december-18">18</a></li><li><a href="/today-in-history/december-19">19</a></li><li><a href="/today-in-history/december-20">20</a></li><li><a href="/today-in-history/december-21">21</a></li><li><a href="/today-in-history/december-22">22</a></li><li><a href="/today-in-history/december-23">23</a></li><li><a href="/today-in-history/december-24">24</a></li><li><a href="/today-in-history/december-25">25</a></li><li><a href="/today-in-history/december-26">26</a></li><li><a href="/today-in-history/december-27">27</a></li><li><a href="/today-in-history/december-28">28</a></li><li><a href="/today-in-history/december-29">29</a></li><li><a href="/today-in-history/december-30">30</a></li><li><a href="/today-in-history/december-31">31</a></li></ol></div></div></section>
+<!-- /build:calendar -->
+  </div>
+</section>
+</main>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=18"></script>
+<script>
+initNav('today');
+
+var cachedData    = null;
+var cachedIntlDay = null;
+var currentDay    = null;
+var currentPage   = 1;
+var dayEvents     = [];
+var PER_PAGE      = 15;
+var tooltipTimer;
+var activeDropdown = null;
+var MONTHS        = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+var PAGE_URL      = 'https://the-epoch-institute.org/today-in-history/';   // set to the day's own page in renderDay()
+
+var SHARE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
+var GLOBE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
+
+function getDayKey() {
+  var n = new Date();
+  return String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0');
+}
+
+function getDayLabels() {
+  var n = new Date();
+  return {
+    dow:  n.toLocaleDateString('en-GB', { weekday: 'long' }),
+    full: n.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  };
+}
+
+function totalPages() { return Math.max(1, Math.ceil(dayEvents.length / PER_PAGE)); }
+
+function getPaginationItems(cur, tot) {
+  var set = {}, i;
+  set[1] = set[tot] = true;
+  for (i = Math.max(2, cur - 2); i <= Math.min(tot - 1, cur + 2); i++) set[i] = true;
+  var nums = Object.keys(set).map(Number).sort(function(a, b) { return a - b; });
+  var out = [];
+  for (i = 0; i < nums.length; i++) {
+    if (i > 0 && nums[i] - nums[i - 1] > 1) out.push('...');
+    out.push(nums[i]);
+  }
+  return out;
+}
+
+function closeAllDropdowns() {
+  if (activeDropdown) { activeDropdown.style.display = 'none'; activeDropdown = null; }
+}
+
+document.addEventListener('click', function(e) {
+  if (activeDropdown && !activeDropdown.parentNode.contains(e.target)) closeAllDropdowns();
+});
+
+function showTooltip(msg) {
+  var el = document.getElementById('tih-tooltip');
+  el.textContent = msg;
+  el.classList.add('visible');
+  clearTimeout(tooltipTimer);
+  tooltipTimer = setTimeout(function() { el.classList.remove('visible'); }, 2200);
+}
+
+function scrollToGrid() {
+  var grid = document.getElementById('tih-grid');
+  var top = grid.getBoundingClientRect().top + window.pageYOffset - 80;
+  window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+}
+
+function renderPage(page, scroll) {
+  currentPage = page;
+  var start = (page - 1) * PER_PAGE;
+  var slice = dayEvents.slice(start, start + PER_PAGE);
+  var tot   = totalPages();
+  var grid  = document.getElementById('tih-grid');
+  var pag   = document.getElementById('tih-pagination');
+
+  grid.innerHTML = slice.map(function(ev, i) {
+    var ddId = 'tih-dd-' + (start + i);
+    return '<div class="tih-event-card">' +
+      '<button class="tih-share-btn" data-dd="' + ddId + '" aria-label="Share this event">' + SHARE_SVG + '</button>' +
+      '<div class="tih-share-dropdown" id="' + ddId + '" style="display:none;">' +
+        '<button class="tih-share-dd-item" data-action="tweet"    data-idx="' + (start + i) + '">Post on X</button>' +
+        '<button class="tih-share-dd-item" data-action="facebook" data-idx="' + (start + i) + '">Share on Facebook</button>' +
+        '<button class="tih-share-dd-item" data-action="linkedin" data-idx="' + (start + i) + '">Share on LinkedIn</button>' +
+        '<button class="tih-share-dd-item" data-action="reddit"   data-idx="' + (start + i) + '">Share on Reddit</button>' +
+        '<button class="tih-share-dd-item" data-action="whatsapp" data-idx="' + (start + i) + '">Share on WhatsApp</button>' +
+        '<button class="tih-share-dd-item" data-action="copy"     data-idx="' + (start + i) + '">Copy link</button>' +
+      '</div>' +
+      '<p class="tih-event-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
+      '<p class="tih-event-title">' + escHtml(ev.title) + '</p>' +
+      '<p class="tih-event-desc">'  + escHtml(ev.description) + '</p>' + tihTags(ev) +
+    '</div>';
+  }).join('');
+
+  grid.querySelectorAll('.tih-share-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var ddId = btn.dataset.dd;
+      var idx  = parseInt(ddId.replace('tih-dd-', ''), 10);
+      var ev   = dayEvents[idx];
+      var dd = document.getElementById(ddId);
+      if (dd.style.display === 'none') {
+        closeAllDropdowns();
+        dd.style.display = '';
+        activeDropdown = dd;
+      } else {
+        closeAllDropdowns();
+      }
+    });
+  });
+
+  grid.querySelectorAll('.tih-share-dd-item').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var action = item.dataset.action;
+      var ev     = dayEvents[parseInt(item.dataset.idx, 10)];
+      if (action === 'tweet') {
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(composeTweet(ev) + '\n\n' + PAGE_URL), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'facebook') {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(PAGE_URL), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'linkedin') {
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(PAGE_URL), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'reddit') {
+        window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(PAGE_URL) + '&title=' + encodeURIComponent(ev.title), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'whatsapp') {
+        window.open('https://wa.me/?text=' + encodeURIComponent(composeTweet(ev) + '\n\n' + PAGE_URL), '_blank');
+        closeAllDropdowns();
+      } else if (action === 'copy') {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(PAGE_URL).then(function() {
+            var orig = item.textContent;
+            item.textContent = '✓ Copied!';
+            setTimeout(function() { item.textContent = orig; }, 2000);
+          }).catch(function() {});
+        }
+        setTimeout(closeAllDropdowns, 2100);
+      }
+    });
+  });
+
+  var items = getPaginationItems(page, tot);
+  var html  = '';
+  if (page > 1)
+    html += '<button class="tih-pg-btn prev-next" data-pg="' + (page - 1) + '">← Prev</button>';
+  items.forEach(function(p) {
+    if (p === '...')
+      html += '<span class="tih-pg-ellipsis">…</span>';
+    else
+      html += '<button class="tih-pg-btn' + (p === page ? ' active' : '') +
+        '" data-pg="' + p + '">' + p + '</button>';
+  });
+  if (page < tot)
+    html += '<button class="tih-pg-btn prev-next" data-pg="' + (page + 1) + '">Next →</button>';
+
+  pag.innerHTML = html;
+  pag.querySelectorAll('.tih-pg-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      renderPage(parseInt(btn.dataset.pg, 10), true);
+    });
+  });
+
+  pag.style.display  = tot > 1 ? 'flex' : 'none';
+  if (scroll) scrollToGrid();
+}
+
+function renderDay(key, intlDay) {
+  currentDay  = key;
+  // shares and the permanent-page link point at the day's own page (/today-in-history/october-23)
+  var dayPath = '/today-in-history/' + MONTHS[parseInt(key.slice(0, 2), 10) - 1] + '-' + parseInt(key.slice(3), 10);
+  PAGE_URL = 'https://the-epoch-institute.org' + dayPath;
+  var dayLink = document.getElementById('tih-day-link'); if (dayLink) dayLink.href = dayPath;
+  currentPage = 1;
+  dayEvents   = (cachedData && cachedData[key]) || [];
+
+  var labels = getDayLabels();
+  document.getElementById('tih-subheading').innerHTML =
+    '<span class="tih-date-sep"></span>' +
+    '<span class="tih-date-dow">' + escHtml(labels.dow) + '</span>' +
+    '<span class="tih-date-full">' + escHtml(labels.full) + '</span>' +
+    '<span class="tih-date-sep"></span>';
+
+  var pinnedWrap = document.getElementById('tih-pinned-wrap');
+  if (intlDay) {
+    pinnedWrap.innerHTML =
+      '<div class="tih-pinned-card">' +
+        '<span class="tih-pinned-icon">' + GLOBE_SVG + '</span>' +
+        '<p class="tih-pinned-label">Today\'s International Day</p>' +
+        '<p class="tih-pinned-title">' + escHtml(intlDay.name) + '</p>' +
+        '<p class="tih-pinned-desc">' + escHtml(intlDay.description) + '</p>' +
+      '</div>';
+    pinnedWrap.style.display = '';
+  } else {
+    pinnedWrap.style.display = 'none';
+    pinnedWrap.innerHTML = '';
+  }
+
+  var loading = document.getElementById('tih-loading');
+  var grid    = document.getElementById('tih-grid');
+  var pag     = document.getElementById('tih-pagination');
+
+  if (!dayEvents.length) {
+    loading.textContent   = 'No events found for ' + labels.full + '.';
+    loading.style.display = '';
+    grid.style.display    = 'none';
+    pag.style.display     = 'none';
+    return;
+  }
+
+  loading.style.display = 'none';
+  renderPage(1, false);
+}
+
+function showTihError() {
+  var grid = document.getElementById('tih-grid');
+  grid.innerHTML = '<div class="tih-error-state"><p>Events could not be loaded.</p><button class="tih-retry-btn" id="tih-retry-btn">Try again</button></div>';
+  grid.style.display = '';
+  document.getElementById('tih-loading').style.display = 'none';
+  document.getElementById('tih-retry-btn').addEventListener('click', function() {
+    grid.innerHTML = '<div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div><div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div><div class="tih-skeleton-card"><div class="tih-sk-year"></div><div class="tih-sk-title"></div><div class="tih-sk-desc"></div></div>';
+    loadTihData();
+  });
+}
+
+function loadTihData() {
+  var timeout = new Promise(function(_, rej) {
+    setTimeout(function() { rej(new Error('timeout')); }, 8000);
+  });
+  Promise.race([
+    Promise.all([
+      fetch('/data/history.json?v=2').then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
+      fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
+    ]),
+    timeout
+  ]).then(function(results) {
+    cachedData    = results[0];
+    cachedIntlDay = results[1];
+    renderDay(getDayKey(), cachedIntlDay[getDayKey()] || null);
+  }).catch(function() {
+    showTihError();
+  });
+}
+
+loadTihData();
+
+// Midnight rollover: re-render if day changes
+setInterval(function() {
+  var key = getDayKey();
+  if (key !== currentDay && cachedData) renderDay(key, (cachedIntlDay || {})[key] || null);
+}, 30000);
+</script>
+
+</body>
+</html>

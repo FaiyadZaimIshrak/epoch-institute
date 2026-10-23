@@ -25,7 +25,7 @@
 <meta name="twitter:description" content="394 state and empire profiles, a 31,955-entry encyclopedia and 5,463 state histories: five millennia of world history, researched and mapped.">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=29">
+<link rel="stylesheet" href="/shared.css?v=30">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -94,8 +94,8 @@
 <!-- At a glance -->
 <section class="home-stats" aria-label="The Epoch Institute in numbers">
   <a class="home-stat" href="/profiles"><span class="home-stat-num" id="stat-empires">394</span><span class="home-stat-label">Profiles</span></a>
-  <a class="home-stat" href="/encyclopedia"><span class="home-stat-num" id="stat-entries">3,736</span><span class="home-stat-label">Encyclopedia entries</span></a>
-  <a class="home-stat" href="/encyclopedia"><span class="home-stat-num" id="stat-images">2,070</span><span class="home-stat-label">Historical images</span></a>
+  <a class="home-stat" href="/encyclopedia/"><span class="home-stat-num" id="stat-entries">31,955</span><span class="home-stat-label">Encyclopedia entries</span></a>
+  <a class="home-stat" href="/encyclopedia/"><span class="home-stat-num" id="stat-images">21,801</span><span class="home-stat-label">Historical images</span></a>
   <a class="home-stat" href="/explorer"><span class="home-stat-num" id="stat-years">4,600</span><span class="home-stat-label">Years of history</span></a>
 </section>
 
@@ -148,7 +148,7 @@
 <section class="home-section" aria-labelledby="enc-day-title">
   <div class="home-section-hd">
     <h2 class="home-section-title" id="enc-day-title">From the Encyclopedia</h2>
-    <a class="home-section-more" href="/encyclopedia">Browse all entries →</a>
+    <a class="home-section-more" href="/encyclopedia/">Browse all entries →</a>
   </div>
   <div id="enc-day"></div>
 </section>
@@ -157,7 +157,7 @@
 <section class="home-section" aria-labelledby="tih-title">
   <div class="home-section-hd">
     <h2 class="home-section-title" id="tih-title">Today in History</h2>
-    <a class="home-section-more" href="/today-in-history">See all events today →</a>
+    <a class="home-section-more" href="/today-in-history/">See all events today →</a>
   </div>
   <div id="tih-strip" style="display:none;">
     <div class="tih-date-row">
@@ -215,7 +215,7 @@
 </div>
 
 <script src="/shared-data.js?v=6"></script>
-<script src="/shared-nav.js?v=17"></script>
+<script src="/shared-nav.js?v=18"></script>
 <script src="/home-data.js?v=8"></script>
 <script src="/reading-paths.js?v=1"></script>
 <script>
@@ -266,7 +266,7 @@ initNav('home');
   // Encyclopedia entry of the day
   if (typeof HOME_ENTRIES !== 'undefined' && HOME_ENTRIES.length) {
     var en = HOME_ENTRIES[day % HOME_ENTRIES.length];
-    document.getElementById('enc-day').innerHTML = '<a class="enc-day-card" href="/encyclopedia#' + en.slug + '">' +
+    document.getElementById('enc-day').innerHTML = '<a class="enc-day-card" href="/encyclopedia/' + en.slug + '">' +
       '<span class="enc-day-img"><img src="' + escHtml(en.img) + '" alt="' + escHtml(en.name) + '" loading="lazy"></span>' +
       '<span class="enc-day-body"><span class="featured-region">Entry of the day' + (en.dates ? ' · ' + escHtml(en.dates) : '') + '</span>' +
       '<span class="enc-day-name">' + escHtml(en.name) + '</span>' +
@@ -320,7 +320,7 @@ initNav('home');
         ].filter(Boolean) };
     } else {
       var list = HOME_QUIZ.entries[cat], en = list[(qday * 7919 + 13) % list.length];
-      puzzle = { name: en.name, aka: en.aka || [], href: '/encyclopedia#' + en.slug, img: en.img, title: TITLES[cat], noun: NOUNS[cat], names: null, clues: en.clues, type: cat };
+      puzzle = { name: en.name, aka: en.aka || [], href: '/encyclopedia/' + en.slug, img: en.img, title: TITLES[cat], noun: NOUNS[cat], names: null, clues: en.clues, type: cat };
     }
     document.getElementById('quiz-title').textContent = 'Daily Quiz: ' + puzzle.title;
     var input = document.getElementById('quiz-input'), datalist = document.getElementById('quiz-names');

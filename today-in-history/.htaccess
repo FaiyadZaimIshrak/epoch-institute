@@ -1,0 +1,4 @@
+# Day pages (/today-in-history/<month>-<day>) are extensionless HTML files written by scripts/build-pages.ps1.
+<FilesMatch "^[a-z0-9-]+$">
+  ForceType text/html
+</FilesMatch>

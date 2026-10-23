@@ -4,7 +4,9 @@ deployment:
     - export DEPLOYPATH=/home/theeiorh/public_html/
     - /bin/cp -R *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH
     - /bin/cp *.txt *.xml *.svg *.png *.ico $DEPLOYPATH 2>/dev/null; true
-    - /bin/cp index about research research-series profiles community contributors dataset explorer today-in-history encyclopedia paths connections state $DEPLOYPATH
+    - /bin/cp index about research research-series profiles community contributors dataset explorer paths connections $DEPLOYPATH
+    - for d in encyclopedia state today-in-history; do [ -f "${DEPLOYPATH}$d" ] && /bin/rm -f "${DEPLOYPATH}$d"; /bin/mkdir -p "${DEPLOYPATH}$d"; if command -v rsync >/dev/null 2>&1; then rsync -a --delete "$d/" "${DEPLOYPATH}$d/"; else /bin/cp -R "$d/." "${DEPLOYPATH}$d/"; fi; done; true
+    - /bin/mkdir -p ${DEPLOYPATH}sitemaps; /bin/cp sitemaps/*.xml ${DEPLOYPATH}sitemaps/ 2>/dev/null; true
     - /bin/mkdir -p ${DEPLOYPATH}fonts; /bin/cp fonts/* ${DEPLOYPATH}fonts/ 2>/dev/null; true
     - /bin/mkdir -p ${DEPLOYPATH}data; /bin/cp data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json ${DEPLOYPATH}data/ 2>/dev/null; true
     - /bin/cp -R empire $DEPLOYPATH

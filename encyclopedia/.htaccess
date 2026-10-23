@@ -1,0 +1,5 @@
+# Encyclopedia pages (/encyclopedia/<slug>, /encyclopedia/browse/<letter>, /encyclopedia/conflicts/<century>) are
+# extensionless HTML files written by scripts/build-pages.ps1.
+<FilesMatch "^[a-z0-9-]+$">
+  ForceType text/html
+</FilesMatch>

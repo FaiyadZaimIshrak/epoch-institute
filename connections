@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/connections">
-<link rel="stylesheet" href="/shared.css?v=29">
+<link rel="stylesheet" href="/shared.css?v=30">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
@@ -59,7 +59,7 @@
 </main>
 
 <script src="/shared-data.js?v=6"></script>
-<script src="/shared-nav.js?v=17"></script>
+<script src="/shared-nav.js?v=18"></script>
 <script src="/connections-map.js?v=10"></script>
 <script>
 initNav('connections');
@@ -83,7 +83,7 @@ initNav('connections');
         '<dl class="cx-facts">' + (n.c ? '<dt>Capital</dt><dd>' + e(n.c) + '</dd>' : '') + (n.m ? '<dt>Character</dt><dd>' + e(n.m) + '</dd>' : '') +
         (n.mo ? '<dt>Today</dt><dd>' + e(n.mo.join(', ')) + '</dd>' : '') + (n.a ? '<dt>Also</dt><dd>' + e(n.a.join(', ')) + '</dd>' : '') +
         '<dt>Connections</dt><dd>' + h.total1 + ' direct, ' + h.total2 + ' further</dd></dl>' +
-        (n.p ? '<a class="cx-profile" href="' + e(n.p) + '">Read the full profile →</a>' : '<a class="cx-profile" href="/state#' + e(n.id) + '">Read about this state →</a>');
+        (n.p ? '<a class="cx-profile" href="' + e(n.p) + '">Read the full profile →</a>' : '<a class="cx-profile" href="/state/' + e(n.id) + '">Read about this state →</a>');
       var rows = CM.timeline(id), total = rows.length, note = '';
       if (!rows.length) { tl.innerHTML = '<p class="cx-none">No recorded connections: an independent state with no recorded ties to the others in the archive.</p>'; return; }
       if (expand) { rows = rows.filter(function (r) { return (CM.get(r.id).t || 'state') === expand; }); note = '<p class="cx-filter-note">Showing ' + rows.length + ' of ' + total + ' connections: ' + e(expand.replace(/-/g, ' ')) + ' only.</p>'; }

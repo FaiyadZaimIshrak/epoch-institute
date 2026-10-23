@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>/* old addresses /encyclopedia#slug -> /encyclopedia/slug */ if (/^#[a-z0-9-]+$/.test(location.hash) && location.hash !== '#index') location.replace('/encyclopedia/' + location.hash.slice(1));</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encyclopedia of World History: People, Places, Events — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Epoch Institute Encyclopedia: people, places, events, states and ideas from five millennia of world history, linked to the profiles that mention them.">
+<meta property="og:title" content="Encyclopedia of World History — The Epoch Institute">
+<meta property="og:description" content="People, places, events, states, institutions and ideas from five millennia of world history.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/">
+<link rel="stylesheet" href="/shared.css?v=30">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia"}]},{"@type":"CollectionPage","name":"The Epoch Institute Encyclopedia","url":"https://the-epoch-institute.org/encyclopedia/","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<main id="main" class="enc-page">
+  <div class="enc-wrap">
+    <header class="enc-head">
+      <span class="hero-ornament"></span>
+      <h1 class="research-title">Encyclopedia</h1>
+      <p class="research-subtitle">The people, events, places, states, institutions and ideas named in our profiles of states, empires and civilisations.</p>
+      <p class="enc-stats" id="enc-stats"></p>
+    </header>
+    <div class="enc-controls" role="search">
+      <input class="enc-search" id="enc-q" type="search" placeholder="Search the encyclopedia…" aria-label="Search the encyclopedia" autocomplete="off">
+      <div class="enc-row" id="enc-types" role="group" aria-label="Filter by type"></div>
+      <div class="enc-row enc-tags" id="enc-tags" role="group" aria-label="Filter conflicts and resolutions" hidden></div>
+      <div class="enc-count-row"><span class="enc-count" id="enc-count"></span><a class="enc-random" id="enc-random" href="/encyclopedia/">Random entry ↻</a></div>
+    </div>
+    <div id="enc-results" hidden>
+      <ul class="enc-list" id="enc-list"></ul>
+      <nav class="ref-pager" id="enc-pager" aria-label="Result pages"></nav>
+    </div>
+<!-- build:browse -->
+<section class="ref-browse" id="enc-browse" aria-labelledby="enc-az-title"><h2 class="ref-sec-title" id="enc-az-title">Browse A&ndash;Z</h2><ul class="ref-az"><li><a href="/encyclopedia/browse/0-9"><b>0–9</b><span>26</span></a></li><li><a href="/encyclopedia/browse/a"><b>A</b><span>2,697</span></a></li><li><a href="/encyclopedia/browse/b"><b>B</b><span>2,759</span></a></li><li><a href="/encyclopedia/browse/c"><b>C</b><span>1,998</span></a></li><li><a href="/encyclopedia/browse/d"><b>D</b><span>1,064</span></a></li><li><a href="/encyclopedia/browse/e"><b>E</b><span>900</span></a></li><li><a href="/encyclopedia/browse/f"><b>F</b><span>930</span></a></li><li><a href="/encyclopedia/browse/g"><b>G</b><span>1,426</span></a></li><li><a href="/encyclopedia/browse/h"><b>H</b><span>1,372</span></a></li><li><a href="/encyclopedia/browse/i"><b>I</b><span>757</span></a></li><li><a href="/encyclopedia/browse/j"><b>J</b><span>1,202</span></a></li><li><a href="/encyclopedia/browse/k"><b>K</b><span>1,366</span></a></li><li><a href="/encyclopedia/browse/l"><b>L</b><span>1,392</span></a></li><li><a href="/encyclopedia/browse/m"><b>M</b><span>2,406</span></a></li><li><a href="/encyclopedia/browse/n"><b>N</b><span>970</span></a></li><li><a href="/encyclopedia/browse/o"><b>O</b><span>627</span></a></li><li><a href="/encyclopedia/browse/p"><b>P</b><span>1,700</span></a></li><li><a href="/encyclopedia/browse/q"><b>Q</b><span>190</span></a></li><li><a href="/encyclopedia/browse/r"><b>R</b><span>1,103</span></a></li><li><a href="/encyclopedia/browse/s"><b>S</b><span>2,767</span></a></li><li><a href="/encyclopedia/browse/t"><b>T</b><span>1,829</span></a></li><li><a href="/encyclopedia/browse/u"><b>U</b><span>413</span></a></li><li><a href="/encyclopedia/browse/v"><b>V</b><span>561</span></a></li><li><a href="/encyclopedia/browse/w"><b>W</b><span>727</span></a></li><li><a href="/encyclopedia/browse/x"><b>X</b><span>83</span></a></li><li><a href="/encyclopedia/browse/y"><b>Y</b><span>362</span></a></li><li><a href="/encyclopedia/browse/z"><b>Z</b><span>328</span></a></li></ul><h2 class="ref-sec-title">Conflicts &amp; Resolutions by century</h2><ul class="ref-cent-list"><li><a href="/encyclopedia/conflicts/21st-century-bce">21st century BCE <span>1</span></a></li><li><a href="/encyclopedia/conflicts/18th-century-bce">18th century BCE <span>3</span></a></li><li><a href="/encyclopedia/conflicts/17th-century-bce">17th century BCE <span>1</span></a></li><li><a href="/encyclopedia/conflicts/16th-century-bce">16th century BCE <span>1</span></a></li><li><a href="/encyclopedia/conflicts/15th-century-bce">15th century BCE <span>1</span></a></li><li><a href="/encyclopedia/conflicts/14th-century-bce">14th century BCE <span>1</span></a></li><li><a href="/encyclopedia/conflicts/13th-century-bce">13th century BCE <span>3</span></a></li><li><a href="/encyclopedia/conflicts/12th-century-bce">12th century BCE <span>2</span></a></li><li><a href="/encyclopedia/conflicts/11th-century-bce">11th century BCE <span>2</span></a></li><li><a href="/encyclopedia/conflicts/9th-century-bce">9th century BCE <span>1</span></a></li><li><a href="/encyclopedia/conflicts/8th-century-bce">8th century BCE <span>3</span></a></li><li><a href="/encyclopedia/conflicts/7th-century-bce">7th century BCE <span>18</span></a></li><li><a href="/encyclopedia/conflicts/6th-century-bce">6th century BCE <span>20</span></a></li><li><a href="/encyclopedia/conflicts/5th-century-bce">5th century BCE <span>35</span></a></li><li><a href="/encyclopedia/conflicts/4th-century-bce">4th century BCE <span>37</span></a></li><li><a href="/encyclopedia/conflicts/3rd-century-bce">3rd century BCE <span>45</span></a></li><li><a href="/encyclopedia/conflicts/2nd-century-bce">2nd century BCE <span>18</span></a></li><li><a href="/encyclopedia/conflicts/1st-century-bce">1st century BCE <span>38</span></a></li><li><a href="/encyclopedia/conflicts/1st-century">1st century <span>61</span></a></li><li><a href="/encyclopedia/conflicts/2nd-century">2nd century <span>3</span></a></li><li><a href="/encyclopedia/conflicts/3rd-century">3rd century <span>11</span></a></li><li><a href="/encyclopedia/conflicts/4th-century">4th century <span>12</span></a></li><li><a href="/encyclopedia/conflicts/5th-century">5th century <span>9</span></a></li><li><a href="/encyclopedia/conflicts/6th-century">6th century <span>17</span></a></li><li><a href="/encyclopedia/conflicts/7th-century">7th century <span>55</span></a></li><li><a href="/encyclopedia/conflicts/8th-century">8th century <span>30</span></a></li><li><a href="/encyclopedia/conflicts/9th-century">9th century <span>34</span></a></li><li><a href="/encyclopedia/conflicts/10th-century">10th century <span>34</span></a></li><li><a href="/encyclopedia/conflicts/11th-century">11th century <span>55</span></a></li><li><a href="/encyclopedia/conflicts/12th-century">12th century <span>66</span></a></li><li><a href="/encyclopedia/conflicts/13th-century">13th century <span>147</span></a></li><li><a href="/encyclopedia/conflicts/14th-century">14th century <span>88</span></a></li><li><a href="/encyclopedia/conflicts/15th-century">15th century <span>121</span></a></li><li><a href="/encyclopedia/conflicts/16th-century">16th century <span>174</span></a></li><li><a href="/encyclopedia/conflicts/17th-century">17th century <span>167</span></a></li><li><a href="/encyclopedia/conflicts/18th-century">18th century <span>215</span></a></li><li><a href="/encyclopedia/conflicts/19th-century">19th century <span>505</span></a></li><li><a href="/encyclopedia/conflicts/20th-century">20th century <span>418</span></a></li><li><a href="/encyclopedia/conflicts/21st-century">21st century <span>18</span></a></li><li><a href="/encyclopedia/conflicts/undated">Undated <span>58</span></a></li></ul></section>
+<!-- /build:browse -->
+  </div>
+</main>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=18"></script>
+<script src="/encyclopedia/index-data.js?v=a163eb73e2"></script>
+<script>
+initNav('encyclopedia');
+(function () {
+  // Search and filters over the slim index (built by scripts/build-pages.ps1); every entry has its own page at
+  // /encyclopedia/<slug>. With no search or filter the A-Z and century lists (static, above) are shown instead.
+  var D = (typeof ENC_INDEX !== 'undefined') ? ENC_INDEX : { types: [], rows: [] };
+  var TYPES = D.types;   // [key, plural label, singular label]
+  var TAGS = [['battle', 'Battles', ['battle']], ['siege', 'Sieges', ['siege']], ['war', 'Wars & campaigns', ['war', 'campaign']],
+    ['revolt', 'Revolts & revolutions', ['revolt', 'revolution']], ['crisis', 'Crises & tensions', ['crisis']], ['treaty', 'Treaties', ['treaty']],
+    ['peace', 'Peace efforts & congresses', ['peace']]];
+  var TAGNAME = { battle: 'Battle', siege: 'Siege', war: 'War', campaign: 'Campaign', revolt: 'Revolt', revolution: 'Revolution', crisis: 'Crisis', treaty: 'Treaty', peace: 'Peace' };
+  var PER = 50, $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var fold = function (s) { return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); };
+  var rows = D.rows.map(function (r) { return { slug: r[0], name: r[1], t: TYPES[r[2]] ? TYPES[r[2]][0] : '', dates: r[3], tags: r[4] ? r[4].split(' ') : [], img: r[5], s: fold(r[1] + (r[6] ? ' | ' + r[6] : '')) }; });
+  var SING = {}; TYPES.forEach(function (t) { SING[t[0]] = t[2]; });
+  function yearOf(e) {   // first year in the dates, BCE negative; null if none
+    var s = String(e.dates || ''), m = s.match(/(\d{1,4})/); if (!m) return null;
+    var y = parseInt(m[1], 10); if (/BCE|BC\b/.test(s) && !/CE\b/.test(s.slice(0, s.indexOf(m[1]) + m[1].length + 6).replace(/BCE/g, ''))) y = -y;
+    return y;
+  }
+  var counts = {}; rows.forEach(function (e) { counts[e.t] = (counts[e.t] || 0) + 1; });
+  $('enc-stats').textContent = rows.length.toLocaleString('en-GB') + ' entries';
+
+  // state, kept in the address (?q=&type=&tag=&sort=&page=) so a search can be shared and survives the back button
+  var P = new URLSearchParams(location.search);
+  var state = { q: P.get('q') || '', type: P.get('type') || '', tag: P.get('tag') || '', sort: P.get('sort') || 'az', page: Math.max(1, parseInt(P.get('page'), 10) || 1) };
+  $('enc-q').value = state.q;
+  function saveState() {
+    var p = new URLSearchParams();
+    if (state.q) p.set('q', state.q); if (state.type) p.set('type', state.type); if (state.tag) p.set('tag', state.tag);
+    if (state.sort !== 'az') p.set('sort', state.sort); if (state.page > 1) p.set('page', state.page);
+    history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+  }
+  function chips() {
+    $('enc-types').innerHTML = [['', 'All', rows.length]].concat(TYPES.map(function (t) { return [t[0], t[1], counts[t[0]] || 0]; }))
+      .map(function (t) { return '<button class="enc-chip" type="button" data-t="' + t[0] + '" aria-pressed="' + (state.type === t[0]) + '">' + esc(t[1]) + '<span class="n">' + t[2].toLocaleString('en-GB') + '</span></button>'; }).join('');
+    var el = $('enc-tags'); el.hidden = state.type !== 'conflict'; if (el.hidden) return;
+    var conf = rows.filter(function (e) { return e.tags.length; });
+    el.innerHTML = [['', 'All', conf.length]].concat(TAGS.map(function (g) { return [g[0], g[1], conf.filter(function (e) { return e.tags.some(function (t) { return g[2].indexOf(t) !== -1; }); }).length]; }))
+      .map(function (g) { return '<button class="enc-chip" type="button" data-g="' + g[0] + '" aria-pressed="' + (state.tag === g[0]) + '">' + esc(g[1]) + '<span class="n">' + g[2].toLocaleString('en-GB') + '</span></button>'; }).join('') +
+      '<span class="enc-sort">Sort: <button class="enc-chip" type="button" data-s="az" aria-pressed="' + (state.sort === 'az') + '">A–Z</button><button class="enc-chip" type="button" data-s="date" aria-pressed="' + (state.sort === 'date') + '">By date</button></span>';
+  }
+  function typeLine(e) {
+    if (e.tags.length) return e.tags.map(function (t) { return TAGNAME[t] || t; }).join(' · ') + (e.dates ? ' · ' + e.dates : '');
+    return (SING[e.t] || e.t) + (e.dates ? ' · ' + e.dates : '');
+  }
+  function render() {
+    var q = fold(state.q.trim()), active = !!(q || state.type);
+    $('enc-results').hidden = !active; var browse = $('enc-browse'); if (browse) browse.hidden = active;
+    if (!active) { $('enc-count').textContent = ''; return; }
+    var grp = state.tag ? (TAGS.filter(function (g) { return g[0] === state.tag; })[0] || [])[2] : null;
+    var list = rows.filter(function (e) { return (!state.type || e.t === state.type) && (!grp || e.tags.some(function (t) { return grp.indexOf(t) !== -1; })) && (!q || e.s.indexOf(q) !== -1); });
+    if (state.type === 'conflict' && state.sort === 'date') list = list.slice().sort(function (a, b) { var ya = yearOf(a), yb = yearOf(b); return (ya === null) - (yb === null) || ya - yb; });
+    var pages = Math.max(1, Math.ceil(list.length / PER)); if (state.page > pages) state.page = pages;
+    $('enc-count').textContent = list.length.toLocaleString('en-GB') + (list.length === 1 ? ' entry' : ' entries') + (pages > 1 ? ' · page ' + state.page + ' of ' + pages : '');
+    $('enc-list').innerHTML = list.length ? list.slice((state.page - 1) * PER, state.page * PER).map(function (e) {
+      return '<li class="enc-item' + (e.img ? ' has-img' : '') + '"><a href="/encyclopedia/' + e.slug + '">' + (e.img ? '<img class="enc-thumb" src="/images/encyclopedia/' + e.slug + '.jpg" alt="" loading="lazy" width="56" height="56">' : '') +
+        '<span class="enc-name">' + esc(e.name) + '</span><span class="enc-type">' + esc(typeLine(e)) + '</span></a></li>';
+    }).join('') : '<li class="enc-empty">No entries match. Try a shorter word, or choose “All”.</li>';
+    var pg = '';
+    if (pages > 1) {
+      var show = {}; [1, pages, state.page - 2, state.page - 1, state.page, state.page + 1, state.page + 2].forEach(function (k) { if (k >= 1 && k <= pages) show[k] = 1; });
+      var ks = Object.keys(show).map(Number).sort(function (a, b) { return a - b; }), prev = 0;
+      if (state.page > 1) pg += '<button type="button" data-p="' + (state.page - 1) + '">← Previous</button>';
+      ks.forEach(function (k) { if (prev && k - prev > 1) pg += '<span class="gap">…</span>'; pg += k === state.page ? '<span aria-current="page">' + k + '</span>' : '<button type="button" data-p="' + k + '">' + k + '</button>'; prev = k; });
+      if (state.page < pages) pg += '<button type="button" data-p="' + (state.page + 1) + '">Next →</button>';
+    }
+    $('enc-pager').innerHTML = pg;
+  }
+  $('enc-types').addEventListener('click', function (ev) { var b = ev.target.closest('.enc-chip'); if (!b) return; state.type = b.getAttribute('data-t'); state.tag = ''; state.page = 1; chips(); render(); saveState(); });
+  $('enc-tags').addEventListener('click', function (ev) {
+    var b = ev.target.closest('.enc-chip'); if (!b) return;
+    if (b.hasAttribute('data-s')) state.sort = b.getAttribute('data-s'); else state.tag = b.getAttribute('data-g');
+    state.page = 1; chips(); render(); saveState();
+  });
+  $('enc-pager').addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-p]'); if (!b) return;
+    state.page = +b.getAttribute('data-p'); render(); saveState();
+    $('enc-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  var timer; $('enc-q').addEventListener('input', function (ev) { clearTimeout(timer); var v = ev.target.value; timer = setTimeout(function () { state.q = v; state.page = 1; render(); saveState(); }, 150); });
+  $('enc-random').addEventListener('click', function (ev) { if (!rows.length) return; ev.preventDefault(); location.href = '/encyclopedia/' + rows[Math.floor(Math.random() * rows.length)].slug; });
+  chips(); render();
+})();
+</script>
+</body>
+</html>
