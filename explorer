@@ -4,24 +4,26 @@
 <script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Empire Explorer — The Epoch Institute</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
-<meta name="description" content="Explore the rise and fall of nearly 400 states and empires across five millennia with interactive trajectory charts.">
-<meta property="og:title" content="Empire Explorer — The Epoch Institute">
-<meta property="og:description" content="Interactive civilisational data: nearly 400 states and empires, five millennia of rise and fall.">
+<title>Empire Explorer: Rise and Fall Charts — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Explore the rise and fall of 394 states and empires across five millennia with interactive power charts, key events and side-by-side comparisons.">
+<meta property="og:title" content="Empire Explorer: Rise and Fall Charts — The Epoch Institute">
+<meta property="og:description" content="Explore the rise and fall of 394 states and empires across five millennia with interactive power charts, key events and side-by-side comparisons.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/explorer">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
 <meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/explorer">
-<link rel="stylesheet" href="/shared.css?v=28">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<link rel="stylesheet" href="/shared.css?v=29">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>
@@ -32,6 +34,7 @@
 </script>
 </head>
 <body>
+<main id="main">
 
 <section id="explorer" style="display:block">
   <div class="explorer-header">
@@ -169,10 +172,13 @@
   </div>
 </div>
 
+</main>
+
 <div id="crosshair-tip"></div>
 <div id="event-tooltip"></div>
 <div id="tooltip"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="/shared-data.js?v=6"></script>
 <script src="/point-descs.js?v=3" async></script>
 <script src="/shared-nav.js?v=17"></script>

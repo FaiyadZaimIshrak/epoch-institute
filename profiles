@@ -4,23 +4,26 @@
 <script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profiles — The Epoch Institute</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<title>Profiles of 394 States and Empires — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="Detailed profiles of 394 states and empires — foundation, economy, military, governance, global impact, and decline, illustrated with historical emblems.">
-<meta property="og:title" content="Profiles — The Epoch Institute">
+<meta property="og:title" content="Profiles of 394 States and Empires — The Epoch Institute">
 <meta property="og:description" content="Explore detailed chronicles of 394 states and empires across five millennia of human history.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/profiles">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
 <meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=28">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css?v=29">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* ── Profile search, filters, sort ── */
 .profile-controls {
@@ -100,6 +103,7 @@
 </script>
 </head>
 <body>
+<main id="main">
 
 <div id="profiles">
 
@@ -150,6 +154,8 @@
 
 </div>
 
+</main>
+
 <script src="/shared-data.js?v=6"></script>
 <script src="/shared-nav.js?v=17"></script>
 <script src="/epoch-stats.js?v=3"></script>
@@ -179,7 +185,7 @@ function pfCard(emp) {
   var info = firstSentence(EMPIRE_INFO[emp.name]);
   if (info.length > 120) info = info.slice(0, info.lastIndexOf(' ', 117)) + '…';
   return '<a class="empire-thumb" href="' + profileUrl(emp) + '" data-name="' + safeName + '">' +
-    '<img class="thumb-logo" src="logos/' + encodeURIComponent(emp.name) + '.png" alt="" loading="lazy" ' +
+    '<img class="thumb-logo" src="/logos/thumbs/' + encodeURIComponent(emp.name) + '.png" alt="" loading="lazy" ' +
       'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
     '<div class="thumb-logo-fallback" style="display:none">🏛</div>' +
     '<span class="thumb-text"><span class="thumb-name">' + safeName + '</span>' +
@@ -302,7 +308,7 @@ function buildProfileGallery() {
     slotEl.innerHTML =
       '<div class="compare-slot-header">' +
         '<div class="compare-slot-identity">' +
-          '<img class="compare-slot-logo" src="/logos/' + encodeURIComponent(name) + '.png" alt="' + escHtml(name) + '" onerror="this.style.display=\'none\'">' +
+          '<img class="compare-slot-logo" src="/logos/thumbs/' + encodeURIComponent(name) + '.png" alt="' + escHtml(name) + '" onerror="this.style.display=\'none\'">' +
           '<div>' +
             '<p class="compare-slot-region">' + escHtml(emp.region || '') + '</p>' +
             '<h3 class="compare-slot-name">' + escHtml(name) + '</h3>' +

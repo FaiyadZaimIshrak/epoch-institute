@@ -4,23 +4,50 @@
 <script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Open Dataset — The Epoch Institute</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<title>Open Dataset: Rise and Fall of 394 States — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="Download the Epoch Institute's empire trajectory dataset — 394 states and empires, five millennia of normalised power scores. Free to use under CC BY 4.0.">
-<meta property="og:title" content="Open Dataset — The Epoch Institute">
+<meta property="og:title" content="Open Dataset: Rise and Fall of 394 States — The Epoch Institute">
 <meta property="og:description" content="394 states and empires, five millennia of data. Free for academic and research use under Creative Commons Attribution 4.0.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/dataset">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
 <meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/dataset">
-<link rel="stylesheet" href="/shared.css?v=28">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Empire Trajectory Dataset",
+  "description": "Normalised power trajectories for 394 states and empires from 3500 BCE to the present: start, end and peak years, duration, and 31 power scores (0–10) sampled at equal intervals across each state's lifespan, combining territory, military capacity, economic output, administrative coherence, cultural influence and geopolitical reach.",
+  "url": "https://the-epoch-institute.org/dataset",
+  "identifier": "https://the-epoch-institute.org/dataset",
+  "keywords": ["empires", "world history", "historical states", "rise and fall", "power trajectories", "historical data"],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": { "@type": "Organization", "name": "The Epoch Institute", "url": "https://the-epoch-institute.org/" },
+  "publisher": { "@type": "Organization", "name": "The Epoch Institute", "url": "https://the-epoch-institute.org/" },
+  "creditText": "The Epoch Institute Research Team (2026). Empire Trajectory Dataset. The Epoch Institute.",
+  "temporalCoverage": "-3499/2026",
+  "spatialCoverage": { "@type": "Place", "name": "World" },
+  "variableMeasured": ["start_year", "end_year", "peak_year", "duration", "normalised power score (0–10) at 31 points of the lifespan"],
+  "dateModified": "2026-10-23",
+  "distribution": [
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://the-epoch-institute.org/epoch-institute-empire-dataset.csv" },
+    { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://the-epoch-institute.org/epoch-institute-empire-dataset.json" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/shared.css?v=29">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 #dataset { min-height: 100vh; padding-top: 100px; }
 .dataset-description {
@@ -106,6 +133,7 @@
 </script>
 </head>
 <body>
+<main id="main">
 
 <section id="dataset" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
   <span class="hero-ornament"></span>
@@ -113,8 +141,8 @@
   <p class="research-subtitle">Empire Trajectory Data — Freely Available for Research</p>
   <p class="dataset-description">The Epoch Institute's empire trajectory dataset covers 394 states and empires across five millennia, from ancient Mesopotamia to the modern era. Each entry includes normalised power scores across six dimensions — territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach — plotted across each empire's full lifespan. The dataset is freely available for academic, educational, and research use under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
   <div class="dataset-btn-row">
-    <button class="hero-cta" id="dataset-csv-btn">Download CSV →</button>
-    <button class="hero-cta" id="dataset-json-btn">Download JSON →</button>
+    <a class="hero-cta" id="dataset-csv-btn" href="/epoch-institute-empire-dataset.csv" download>Download CSV →</a>
+    <a class="hero-cta" id="dataset-json-btn" href="/epoch-institute-empire-dataset.json" download>Download JSON →</a>
   </div>
   <div class="dataset-cite-box">
     <span class="dataset-cite-label">How to cite this dataset</span>
@@ -149,7 +177,7 @@
       <h4 class="dataset-cols-heading">Column Definitions</h4>
       <ul class="dataset-col-list">
         <li><strong>name</strong> — Empire or civilisation name</li>
-        <li><strong>region</strong> — Broad geographic region (15 categories)</li>
+        <li><strong>region</strong> — Broad geographic region (9 categories)</li>
         <li><strong>start_year / end_year</strong> — Conventional founding and dissolution dates; negative values indicate BCE</li>
         <li><strong>peak_year</strong> — Year of maximum territorial or institutional power</li>
         <li><strong>duration</strong> — Years from start to end</li>
@@ -159,29 +187,11 @@
   </div>
 </section>
 
+</main>
+
 <script src="/shared-data.js?v=6"></script>
 <script src="/shared-nav.js?v=17"></script>
 <script>
-// ── Download helpers ──────────────────────────────────────────────────────────
-function _downloadStatic(url, filename) {
-  var a = document.createElement('a');
-  a.href = url; a.download = filename;
-  document.body.appendChild(a);
-  a.dispatchEvent(new MouseEvent('click', { bubbles: false }));
-  document.body.removeChild(a);
-}
-
-function downloadEmpireCSV() {
-  _downloadStatic('/epoch-institute-empire-dataset.csv', 'epoch-institute-empire-dataset.csv');
-}
-
-function downloadEmpireJSON() {
-  _downloadStatic('/epoch-institute-empire-dataset.json', 'epoch-institute-empire-dataset.json');
-}
-
-document.getElementById('dataset-csv-btn').addEventListener('click', downloadEmpireCSV);
-document.getElementById('dataset-json-btn').addEventListener('click', downloadEmpireJSON);
-
 document.getElementById('dataset-copy-cite-btn').addEventListener('click', function() {
   var text = 'The Epoch Institute Research Team (2026). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset';
   var btn  = this;

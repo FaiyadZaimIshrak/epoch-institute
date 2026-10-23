@@ -22,7 +22,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     env:
       HOST: ${{ secrets.CPANEL_HOST }}
       USER: ${{ secrets.CPANEL_USER }}
@@ -55,7 +55,7 @@ jobs:
 
       - name: Wait for deployment to finish
         run: |
-          for i in $(seq 1 30); do
+          for i in $(seq 1 60); do
             d=$(curl -sS "https://$HOST:2083/execute/VersionControlDeployment/retrieve" \
               -H "Authorization: cpanel $USER:$TOKEN" \
               | jq --arg id "$DEPLOY_ID" '.data[] | select((.deploy_id|tostring) == $id)')
@@ -65,6 +65,6 @@ jobs:
             if [ -n "$(echo "$d" | jq -r '(.timestamps.failed // .timestamps.canceled) // empty')" ]; then
               echo "::error::Deployment failed — see log on server: $(echo "$d" | jq -r '.log_path // empty')"; exit 1
             fi
-            sleep 5
+            sleep 10
           done
-          echo "::warning::Deployment still running after 150s; check cPanel → Git Version Control."
+          echo "::warning::Deployment still running after 10 minutes; check cPanel → Git Version Control."
