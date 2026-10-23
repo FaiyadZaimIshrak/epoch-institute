@@ -7,11 +7,11 @@ deployment:
     - export DEPLOYPATH=/home/theeiorh/public_html/
     - rsync -a *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH || /bin/cp -R *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH
     - (rsync -a *.txt *.xml *.svg *.png *.ico $DEPLOYPATH || /bin/cp *.txt *.xml *.svg *.png *.ico $DEPLOYPATH) 2>/dev/null; true
-    - rsync -a index about research research-series profiles community contributors dataset explorer paths connections $DEPLOYPATH || /bin/cp index about research research-series profiles community contributors dataset explorer paths connections $DEPLOYPATH
-    - for d in encyclopedia state today-in-history; do [ -f "${DEPLOYPATH}$d" ] && /bin/rm -f "${DEPLOYPATH}$d"; /bin/mkdir -p "${DEPLOYPATH}$d"; if command -v rsync >/dev/null 2>&1; then rsync -a --delete "$d/" "${DEPLOYPATH}$d/"; else /bin/cp -R "$d/." "${DEPLOYPATH}$d/"; fi; done; true
+    - rsync -a index about research research-series profiles community contributors dataset explorer connections atlas quiz $DEPLOYPATH || /bin/cp index about research research-series profiles community contributors dataset explorer connections atlas quiz $DEPLOYPATH
+    - for d in encyclopedia state today-in-history countries centuries paths; do [ -f "${DEPLOYPATH}$d" ] && /bin/rm -f "${DEPLOYPATH}$d"; /bin/mkdir -p "${DEPLOYPATH}$d"; if command -v rsync >/dev/null 2>&1; then rsync -a --delete "$d/" "${DEPLOYPATH}$d/"; else /bin/cp -R "$d/." "${DEPLOYPATH}$d/"; fi; done; true
     - rsync -a sitemaps fonts $DEPLOYPATH || /bin/cp -R sitemaps fonts $DEPLOYPATH
     - /bin/mkdir -p ${DEPLOYPATH}data; rsync -a data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json data/enc-preview data/states ${DEPLOYPATH}data/ || /bin/cp -R data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json data/enc-preview data/states ${DEPLOYPATH}data/
-    - rsync -a empire logos images $DEPLOYPATH || /bin/cp -R empire logos images $DEPLOYPATH
+    - rsync -a empire logos images maps $DEPLOYPATH || /bin/cp -R empire logos images maps $DEPLOYPATH
     - for d in culture ideology movement; do [ -d "$d" ] && (rsync -a "$d" $DEPLOYPATH || /bin/cp -R "$d" $DEPLOYPATH); done; true
     - /bin/rm -f ${DEPLOYPATH}index.html ${DEPLOYPATH}about.html ${DEPLOYPATH}research.html ${DEPLOYPATH}research-series.html ${DEPLOYPATH}profiles.html ${DEPLOYPATH}community.html ${DEPLOYPATH}contributors.html ${DEPLOYPATH}dataset.html ${DEPLOYPATH}explorer.html
     - /bin/rm -f ${DEPLOYPATH}empire/*.html

@@ -12,10 +12,11 @@ $JSS = New-Object System.Web.Script.Serialization.JavaScriptSerializer; $JSS.Max
 $U8 = New-Object Text.UTF8Encoding($false)
 $clock = [Diagnostics.Stopwatch]::StartNew()
 
-# pages: extensionless files of the site (root pages, empire/, encyclopedia/, state/, today-in-history/) and 404.html
+# pages: extensionless files of the site (root pages, empire/, encyclopedia/, state/, today-in-history/, countries/,
+# centuries/, paths/) and 404.html
 $pages = New-Object System.Collections.Generic.List[object]
 foreach ($f in Get-ChildItem $Repo -File) { if (-not $f.Extension -and $f.Name -notmatch '^\.') { $pages.Add($f) } }
-foreach ($d in 'empire', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history') {
+foreach ($d in 'empire', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths') {
   foreach ($f in Get-ChildItem (Join-Path $Repo $d) -File -ErrorAction SilentlyContinue) { if (-not $f.Extension) { $pages.Add($f) } }
 }
 $redir = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\state\.htaccess", $U8)) { if ($l -match '^Redirect 301 (\S+) ') { $redir[$Matches[1]] = 1 } }

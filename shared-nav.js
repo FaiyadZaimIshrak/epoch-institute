@@ -159,6 +159,7 @@ function siteSearch(query) {
   out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
   return out.slice(0, 12);
 }
+var SEARCH_INDEX_SRC = '/search-index.js?v=5';   // also loaded by quiz.js for answer suggestions
 function initSiteSearch() {
   var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
       list = document.getElementById('site-search-results'), hint = document.getElementById('site-search-hint'),
@@ -166,7 +167,7 @@ function initSiteSearch() {
   function load(cb) {
     if (typeof SEARCH_INDEX !== 'undefined') return cb();
     if (loading) return; loading = true;
-    var s = document.createElement('script'); s.src = '/search-index.js?v=5';
+    var s = document.createElement('script'); s.src = SEARCH_INDEX_SRC;
     s.onload = function () { loading = false; cb(); }; s.onerror = function () { loading = false; cb(); };
     document.head.appendChild(s);
   }
@@ -291,9 +292,17 @@ function initNav(activePage) {
     return activePage === page ? ' aria-current="page"' : '';
   }
 
-  const researchActive = ['research','series','explorer','profiles','dataset','paths','connections','states'].includes(activePage);
-  const communityActive = activePage === 'community';
-  const aboutActive = ['about','contributors'].includes(activePage);
+  // Explore: the ways into the collections; More: the Institute's other pages
+  const EXPLORE = [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
+    ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
+    ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
+    ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained']];
+  const MORE = [['series', '/research-series', 'Research Series'], ['dataset', '/dataset', 'Open Dataset'], ['research', '/research', 'Research Hub'],
+    ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'], ['', '/#newsletter-section', 'Newsletter'],
+    ['about', '/about', 'About the Institute'], ['contributors', '/contributors', 'Contributors']];
+  const exploreActive = EXPLORE.some(x => x[0] === activePage);
+  const moreActive = MORE.some(x => x[0] && x[0] === activePage);
+  const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}</a>`;
 
   const navHtml = `
 <a class="skip-link" href="#main">Skip to content</a>
@@ -302,35 +311,21 @@ function initNav(activePage) {
     <span class="nav-logo-text">THE EPOCH INSTITUTE</span>
   </a>
   <div class="nav-links">
-    <a href="/today-in-history/" class="nav-link"${activeStyle('today')} id="nav-today-link">Today in History</a>
-    <a href="/encyclopedia/" class="nav-link"${activeStyle('encyclopedia')} id="nav-encyclopedia-link">Encyclopedia</a>
-    <div class="nav-group-wrap" id="nav-research-wrap">
-      <button class="nav-parent-btn${researchActive ? ' active-group' : ''}" id="nav-research-btn" aria-haspopup="true" aria-expanded="false">Research ▾</button>
-      <div class="nav-group-menu" id="nav-research-menu" role="menu">
-        <a href="/explorer" id="nav-explorer-link"${activeStyle('explorer')}>Empire Explorer</a>
-        <a href="/profiles" id="nav-profiles-link"${activeStyle('profiles')}>Profiles</a>
-        <a href="/state/" id="nav-states-link"${activeStyle('states')}>States</a>
-        <a href="/connections" id="nav-connections-link"${activeStyle('connections')}>Connections</a>
-        <a href="/paths" id="nav-paths-link"${activeStyle('paths')}>Reading Paths</a>
-        <a href="/research-series" id="nav-series-link"${activeStyle('series')}>Research Series</a>
-        <a href="/research" id="nav-research-link"${activeStyle('research')}>Research Hub</a>
-        <a href="/dataset" id="nav-dataset-link"${activeStyle('dataset')}>Open Dataset</a>
+    <a href="/profiles" class="nav-link"${activeStyle('profiles')}>Profiles</a>
+    <a href="/encyclopedia/" class="nav-link"${activeStyle('encyclopedia')}>Encyclopedia</a>
+    <a href="/state/" class="nav-link"${activeStyle('states')}>States</a>
+    <div class="nav-group-wrap" id="nav-explore-wrap">
+      <button class="nav-parent-btn${exploreActive ? ' active-group' : ''}" id="nav-explore-btn" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+      <div class="nav-group-menu nav-group-menu-wide" id="nav-explore-menu" role="menu">
+        ${EXPLORE.map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}</b><span>${x[3]}</span></a>`).join('\n        ')}
       </div>
     </div>
-    <div class="nav-group-wrap" id="nav-community-wrap">
-      <button class="nav-parent-btn${communityActive ? ' active-group' : ''}" id="nav-community-btn" aria-haspopup="true" aria-expanded="false">Community ▾</button>
-      <div class="nav-group-menu" id="nav-community-menu" role="menu">
-        <a href="/community" id="nav-community-link"${activeStyle('community')}>Community Hub</a>
-        <a href="/community#submit">Submit Article</a>
-        <a href="/#newsletter-section">Newsletter</a>
-      </div>
-    </div>
-    <div class="nav-group-wrap" id="nav-about-wrap">
-      <button class="nav-parent-btn${aboutActive ? ' active-group' : ''}" id="nav-about-btn" aria-haspopup="true" aria-expanded="false">About ▾</button>
-      <div class="nav-group-menu" id="nav-about-menu" role="menu">
-        <a href="/about" id="nav-about-link"${activeStyle('about')}>The Institute</a>
-        <a href="/contributors" id="nav-contributors-link"${activeStyle('contributors')}>Contributors</a>
-        <button onclick="openContactModal()">Contact</button>
+    <a href="/today-in-history/" class="nav-link"${activeStyle('today')}>Today in History</a>
+    <div class="nav-group-wrap" id="nav-more-wrap">
+      <button class="nav-parent-btn${moreActive ? ' active-group' : ''}" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">More ▾</button>
+      <div class="nav-group-menu" id="nav-more-menu" role="menu">
+        ${MORE.map(x => navItem(x)).join('\n        ')}
+        <button type="button" onclick="openContactModal()">Contact</button>
       </div>
     </div>
   </div>
@@ -340,24 +335,11 @@ function initNav(activePage) {
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-dropdown">&#x2630;</button>
   </div>
   <div id="nav-dropdown" class="nav-dropdown">
-    <a href="/today-in-history/" class="nav-dropdown-link" id="mob-today"${activeStyle('today')}>Today in History</a>
-    <a href="/encyclopedia/" class="nav-dropdown-link" id="mob-encyclopedia"${activeStyle('encyclopedia')}>Encyclopedia</a>
-    <span class="nav-dropdown-group">Research</span>
-    <a href="/explorer" class="nav-dropdown-link" id="mob-explorer"${activeStyle('explorer')}>Empire Explorer</a>
-    <a href="/profiles" class="nav-dropdown-link" id="mob-profiles"${activeStyle('profiles')}>Profiles</a>
-    <a href="/state/" class="nav-dropdown-link" id="mob-states"${activeStyle('states')}>States</a>
-    <a href="/connections" class="nav-dropdown-link" id="mob-connections"${activeStyle('connections')}>Connections</a>
-    <a href="/paths" class="nav-dropdown-link" id="mob-paths"${activeStyle('paths')}>Reading Paths</a>
-    <a href="/research-series" class="nav-dropdown-link" id="mob-series"${activeStyle('series')}>Research Series</a>
-    <a href="/research" class="nav-dropdown-link" id="mob-research"${activeStyle('research')}>Research Hub</a>
-    <a href="/dataset" class="nav-dropdown-link" id="mob-dataset"${activeStyle('dataset')}>Open Dataset</a>
-    <span class="nav-dropdown-group">Community</span>
-    <a href="/community" class="nav-dropdown-link" id="mob-community"${activeStyle('community')}>Community Hub</a>
-    <a href="/community#submit" class="nav-dropdown-link">Submit Article</a>
-    <a href="/#newsletter-section" class="nav-dropdown-link">Newsletter</a>
-    <span class="nav-dropdown-group">About</span>
-    <a href="/about" class="nav-dropdown-link" id="mob-about"${activeStyle('about')}>The Institute</a>
-    <a href="/contributors" class="nav-dropdown-link" id="mob-contributors"${activeStyle('contributors')}>Contributors</a>
+    ${[['profiles', '/profiles', 'Profiles'], ['encyclopedia', '/encyclopedia/', 'Encyclopedia'], ['states', '/state/', 'States'], ['today', '/today-in-history/', 'Today in History']].map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
+    <span class="nav-dropdown-group">Explore</span>
+    ${EXPLORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
+    <span class="nav-dropdown-group">More</span>
+    ${MORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
     <button type="button" class="nav-dropdown-link" id="mob-contact">Contact</button>
   </div>
 </nav>`;
@@ -385,30 +367,33 @@ function initNav(activePage) {
     </div>
     <div class="footer-links">
       <div class="footer-col">
-        <span class="footer-col-title">Research</span>
-        <a class="footer-link" href="/today-in-history/" id="fl-today">Today in History</a>
-        <a class="footer-link" href="/encyclopedia/" id="fl-encyclopedia">Encyclopedia</a>
-        <a class="footer-link" href="/explorer" id="fl-explorer">Empire Explorer</a>
-        <a class="footer-link" href="/profiles" id="fl-profiles">Profiles</a>
-        <a class="footer-link" href="/research" id="fl-research">Research Hub</a>
-        <a class="footer-link" href="/state/" id="fl-states">States</a>
-        <a class="footer-link" href="/connections" id="fl-connections">Connections</a>
-        <a class="footer-link" href="/paths" id="fl-paths">Reading Paths</a>
-        <a class="footer-link" href="/research-series" id="fl-series">Research Series</a>
-        <a class="footer-link" href="/dataset" id="fl-dataset">Open Dataset</a>
+        <span class="footer-col-title">Collections</span>
+        <a class="footer-link" href="/profiles">Profiles</a>
+        <a class="footer-link" href="/encyclopedia/">Encyclopedia</a>
+        <a class="footer-link" href="/state/">States</a>
+        <a class="footer-link" href="/countries/">Country Histories</a>
+        <a class="footer-link" href="/centuries/">Centuries</a>
+        <a class="footer-link" href="/today-in-history/">Today in History</a>
+        <a class="footer-link" href="/encyclopedia/glossary">Glossary</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Explore</span>
+        <a class="footer-link" href="/atlas">Atlas</a>
+        <a class="footer-link" href="/explorer">Empire Explorer</a>
+        <a class="footer-link" href="/connections">Connections</a>
+        <a class="footer-link" href="/paths/">Reading Paths</a>
+        <a class="footer-link" href="/quiz">History Quiz</a>
+        <a class="footer-link" href="/research-series">Research Series</a>
+        <a class="footer-link" href="/dataset">Open Dataset</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Institute</span>
+        <a class="footer-link" href="/about">About the Institute</a>
         <a class="footer-link" href="/about#methodology">Methodology</a>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-title">Community</span>
-        <a class="footer-link" href="/community#community-blogs" id="fl-blogs">Blogs</a>
-        <a class="footer-link" href="/community#community-opinions-display" id="fl-opinions">Opinions</a>
-        <a class="footer-link" href="/community#submit" id="fl-submit">Submit Article</a>
-        <a class="footer-link" href="/community#newsletter-band" id="fl-newsletter">Newsletter</a>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-title">About</span>
-        <a class="footer-link" href="/about" id="fl-institute">The Institute</a>
-        <a class="footer-link" href="/contributors" id="fl-contributors">Contributors</a>
+        <a class="footer-link" href="/research">Research Hub</a>
+        <a class="footer-link" href="/contributors">Contributors</a>
+        <a class="footer-link" href="/community">Community</a>
+        <a class="footer-link" href="/community#submit">Submit an Article</a>
         <a class="footer-link" href="#" id="fl-contact">Contact</a>
       </div>
       <div class="footer-col">

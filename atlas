@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas of World History: the States of Any Year — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="An interactive atlas of 5,000 years: slide to any year from 3000 BCE to today and see where the kingdoms, empires and republics of the time lay.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/atlas">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Atlas of World History: the States of Any Year — The Epoch Institute">
+<meta property="og:description" content="Slide through five thousand years and watch the world's states appear and vanish.">
+<meta property="og:url" content="https://the-epoch-institute.org/atlas">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Atlas"}]},{"@type":"Map","name":"Atlas of States and Empires","url":"https://the-epoch-institute.org/atlas","description":"An interactive atlas of the states of the register in any year from 3000 BCE to today.","mapType":"https://schema.org/PoliticalMap","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<main id="main" class="atl-page ref-page">
+<div class="atl-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Atlas</li></ol></nav>
+<header class="atl-head">
+  <h1 class="research-title">Atlas of States and Empires</h1>
+  <p class="ref-lede">Slide through five thousand years and watch the world&#8217;s states appear and vanish. Each dot is a state of the register at its capital or seat; gold dots have a full profile.</p>
+</header>
+
+<section class="atl-app" aria-label="Interactive atlas">
+  <div class="atl-bar">
+    <div class="atl-now"><output id="atl-year-out" for="atl-year">1000 CE</output><span class="atl-count"><span id="atl-count"></span><span id="atl-place"></span></span></div>
+    <div class="atl-time">
+      <button type="button" class="atl-play" id="atl-play" aria-label="Play through time">&#9654;</button>
+      <input type="range" id="atl-year" min="-3000" max="2025" step="1" value="1000" aria-label="Year">
+    </div>
+    <div class="atl-jumps" aria-label="Go to a year">
+      <a href="/atlas?year=-1500" data-year="-1500">1500 BCE</a><a href="/atlas?year=-500" data-year="-500">500 BCE</a><a href="/atlas?year=1" data-year="1">1 CE</a><a href="/atlas?year=500" data-year="500">500</a><a href="/atlas?year=1000" data-year="1000">1000</a><a href="/atlas?year=1300" data-year="1300">1300</a><a href="/atlas?year=1500" data-year="1500">1500</a><a href="/atlas?year=1700" data-year="1700">1700</a><a href="/atlas?year=1900" data-year="1900">1900</a><a href="/atlas?year=2025" data-year="2025">Today</a>
+    </div>
+  </div>
+  <div class="atl-tools">
+    <div class="atl-presets" id="atl-presets" role="group" aria-label="Zoom to a region"></div>
+    <div class="atl-filters">
+      <label class="atl-check"><input type="checkbox" id="atl-prof"> Profiles only</label>
+      <select id="atl-kind" aria-label="Kind of state"><option value="">All kinds of state</option></select>
+      <div class="atl-search"><input type="search" id="atl-q" placeholder="Find a state…" autocomplete="off" aria-label="Find a state" aria-controls="atl-sugg"><ul id="atl-sugg" class="atl-sugg" role="listbox" hidden></ul></div>
+    </div>
+  </div>
+  <div class="atl-map" id="atl-map">
+    <svg id="atl-svg" viewBox="0 0 10000 4393" tabindex="0" role="img" aria-label="World map of the states that existed in the chosen year. Use the list below the map for the same states as links.">
+      <g id="atl-world">
+        <path id="atl-edge" class="atl-edge"/>
+        <path id="atl-grat" class="atl-grat"/>
+        <path id="atl-land" class="atl-land"/>
+        <g id="atl-dots-s"></g>
+        <g id="atl-dots-p"></g>
+        <circle id="atl-ring" class="atl-ring" r="0" style="display:none"/>
+        <g id="atl-labels"></g>
+      </g>
+    </svg>
+    <div class="atl-zoom"><button type="button" id="atl-zin" aria-label="Zoom in">+</button><button type="button" id="atl-zout" aria-label="Zoom out">&minus;</button><button type="button" id="atl-zreset" aria-label="Show the whole world">&#8634;</button></div>
+    <div class="atl-tip" id="atl-tip" role="status" hidden></div>
+    <noscript><p class="atl-none">The atlas needs JavaScript. The <a href="/state/">states register</a> and the <a href="/centuries/">century pages</a> list the same states.</p></noscript>
+  </div>
+  <p class="atl-legend"><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span class="map-key"><i class="k-a"></i>Place approximate</span><span>Drag to move, scroll or pinch to zoom. Present-day borders are shown for orientation.</span></p>
+</section>
+
+<section class="atl-list-wrap" aria-labelledby="atl-list-title">
+  <h2 class="ref-sec-title" id="atl-list-title">States in <span id="atl-list-year">1000 CE</span></h2>
+  <div id="atl-list" class="atl-list"></div>
+</section>
+
+<section class="atl-about">
+  <h2 class="ref-sec-title">About the atlas</h2>
+  <p>The atlas shows the <a href="/state/">states register</a>: every state, empire, principality and chiefdom the Institute has recorded, with the years it existed. A dot marks a state&#8217;s capital or seat, from Wikidata, not the extent of its territory; where no seat is known the state is placed in its present-day country and drawn as a ring. Years before the common era are approximate, and many early states are known only from a few sources.</p>
+  <p>Read the world one age at a time in the <a href="/centuries/">century pages</a>, or a single land through time in the <a href="/countries/">country histories</a>.</p>
+  <!-- build:atlas-centuries -->
+<ul class="cty-chips atl-cents"><li><a href="/centuries/30th-century-bce">30th century BCE</a></li><li><a href="/centuries/29th-century-bce">29th century BCE</a></li><li><a href="/centuries/28th-century-bce">28th century BCE</a></li><li><a href="/centuries/27th-century-bce">27th century BCE</a></li><li><a href="/centuries/26th-century-bce">26th century BCE</a></li><li><a href="/centuries/25th-century-bce">25th century BCE</a></li><li><a href="/centuries/24th-century-bce">24th century BCE</a></li><li><a href="/centuries/23rd-century-bce">23rd century BCE</a></li><li><a href="/centuries/22nd-century-bce">22nd century BCE</a></li><li><a href="/centuries/21st-century-bce">21st century BCE</a></li><li><a href="/centuries/20th-century-bce">20th century BCE</a></li><li><a href="/centuries/19th-century-bce">19th century BCE</a></li><li><a href="/centuries/18th-century-bce">18th century BCE</a></li><li><a href="/centuries/17th-century-bce">17th century BCE</a></li><li><a href="/centuries/16th-century-bce">16th century BCE</a></li><li><a href="/centuries/15th-century-bce">15th century BCE</a></li><li><a href="/centuries/14th-century-bce">14th century BCE</a></li><li><a href="/centuries/13th-century-bce">13th century BCE</a></li><li><a href="/centuries/12th-century-bce">12th century BCE</a></li><li><a href="/centuries/11th-century-bce">11th century BCE</a></li><li><a href="/centuries/10th-century-bce">10th century BCE</a></li><li><a href="/centuries/9th-century-bce">9th century BCE</a></li><li><a href="/centuries/8th-century-bce">8th century BCE</a></li><li><a href="/centuries/7th-century-bce">7th century BCE</a></li><li><a href="/centuries/6th-century-bce">6th century BCE</a></li><li><a href="/centuries/5th-century-bce">5th century BCE</a></li><li><a href="/centuries/4th-century-bce">4th century BCE</a></li><li><a href="/centuries/3rd-century-bce">3rd century BCE</a></li><li><a href="/centuries/2nd-century-bce">2nd century BCE</a></li><li><a href="/centuries/1st-century-bce">1st century BCE</a></li><li><a href="/centuries/1st-century">1st century</a></li><li><a href="/centuries/2nd-century">2nd century</a></li><li><a href="/centuries/3rd-century">3rd century</a></li><li><a href="/centuries/4th-century">4th century</a></li><li><a href="/centuries/5th-century">5th century</a></li><li><a href="/centuries/6th-century">6th century</a></li><li><a href="/centuries/7th-century">7th century</a></li><li><a href="/centuries/8th-century">8th century</a></li><li><a href="/centuries/9th-century">9th century</a></li><li><a href="/centuries/10th-century">10th century</a></li><li><a href="/centuries/11th-century">11th century</a></li><li><a href="/centuries/12th-century">12th century</a></li><li><a href="/centuries/13th-century">13th century</a></li><li><a href="/centuries/14th-century">14th century</a></li><li><a href="/centuries/15th-century">15th century</a></li><li><a href="/centuries/16th-century">16th century</a></li><li><a href="/centuries/17th-century">17th century</a></li><li><a href="/centuries/18th-century">18th century</a></li><li><a href="/centuries/19th-century">19th century</a></li><li><a href="/centuries/20th-century">20th century</a></li><li><a href="/centuries/21st-century">21st century</a></li></ul>
+<!-- /build:atlas-centuries -->
+  <p class="atl-credit">Positions: <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a> (CC0). Outlines: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (public domain). Equal Earth projection.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-data.js?v=7"></script>
+<script src="/shared-nav.js?v=20"></script>
+<script src="/maps/basemap.js?v=4478c4912d"></script>
+<script src="/maps/atlas-data.js?v=687fefb366"></script>
+<script src="/atlas.js?v=1"></script>
+<script>initNav('atlas');</script>
+</body>
+</html>

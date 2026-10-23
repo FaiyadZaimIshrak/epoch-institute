@@ -1,0 +1,10 @@
+# id	lat	lng	place (set by hand where the register has no capital and Wikidata no usable coordinates); used by scripts/fetch-geo.ps1
+elamite-confederation	32.189	48.258	Susa
+neo-sumerian-empire	30.962	46.103	Ur
+hittite-empire	40.019	34.615	Hattusa
+egyptian-empire-new-kingdom	25.7	32.639	Thebes
+kushite-empire	18.533	31.833	Napata
+punic-empire	36.853	10.323	Carthage
+chagatai-empire	44	80.8	Almaliq
+khazar-khaganate	46.1	47.9	Atil (approximate site)
+gibraltar	36.14	-5.35	Gibraltar (not drawn on the 1:50m map, so its Wikidata point is rejected)

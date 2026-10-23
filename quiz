@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History Quiz: Guess the Empire, Person or Event — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="A daily history puzzle and unlimited practice: name the empire, person, event, place, idea or work from four clues.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/quiz">
+<meta property="og:type" content="website">
+<meta property="og:title" content="History Quiz: Guess the Empire, Person or Event — The Epoch Institute">
+<meta property="og:description" content="Four clues, four guesses: a new history puzzle every day, and practice rounds by category.">
+<meta property="og:url" content="https://the-epoch-institute.org/quiz">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Quiz"}]},{"@type":"WebPage","name":"History Quiz","url":"https://the-epoch-institute.org/quiz","description":"A daily history puzzle and practice rounds: name the empire, person, event, place, idea or work from four clues.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<main id="main" class="qz-page ref-page">
+<div class="qz-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">History Quiz</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">History Quiz</h1>
+  <p class="ref-lede">Four clues, four guesses. Name the empire, person, event, place, idea or work: each wrong guess reveals another clue.</p>
+</header>
+
+<section class="qz-block" aria-labelledby="qz-daily-title">
+  <div class="home-section-hd">
+    <h2 class="home-section-title" id="qz-daily-title">Today&#8217;s puzzle</h2>
+    <span class="quiz-streak" id="qz-streak"></span>
+  </div>
+  <p class="qz-kind" id="qz-daily-kind"></p>
+  <div class="quiz" id="qz-daily"><p class="quiz-status">Loading today&#8217;s puzzle…</p></div>
+</section>
+
+<section class="qz-block" aria-labelledby="qz-practice-title">
+  <div class="home-section-hd">
+    <h2 class="home-section-title" id="qz-practice-title">Practice</h2>
+    <span class="qz-score" id="qz-score" aria-live="polite"></span>
+  </div>
+  <div class="qz-cats" id="qz-cats" role="group" aria-label="Category"></div>
+  <p class="qz-kind" id="qz-practice-kind"></p>
+  <div class="quiz" id="qz-practice"></div>
+</section>
+
+<section class="qz-how">
+  <h2 class="ref-sec-title">How it works</h2>
+  <p>Every puzzle comes from the Institute&#8217;s own work: the <a href="/profiles">profiles</a> of states and empires and the <a href="/encyclopedia/">encyclopedia</a>. The first clue is the broadest; the last nearly gives the answer away. Guesses are checked against the names in the suggestions, so pick one from the list.</p>
+  <p>Today&#8217;s puzzle changes at midnight (UTC) and turns in order through profiles, people, events, places, ideas and works. Your progress and streak are kept in this browser only.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-data.js?v=7"></script>
+<script src="/shared-nav.js?v=20"></script>
+<script src="/home-data.js?v=9"></script>
+<script src="/quiz.js?v=1"></script>
+<script>
+initNav('quiz');
+(function () {
+  if (typeof EpochQuiz === 'undefined') return;
+  var daily = EpochQuiz.daily(EpochQuiz.today());
+  EpochQuiz.mount(document.getElementById('qz-daily'), daily, { daily: true, titleEl: document.getElementById('qz-daily-kind'), streakEl: document.getElementById('qz-streak') });
+
+  // practice: random puzzles of one category, a score for this visit and the best run kept in this browser
+  var el = document.getElementById('qz-practice'), kindEl = document.getElementById('qz-practice-kind'), scoreEl = document.getElementById('qz-score');
+  var cat = 'profile', seen = {}, played = 0, solved = 0, run = 0, best = 0;
+  try { best = parseInt(localStorage.getItem('epoch-quiz-best') || '0', 10) || 0; } catch (e) {}
+  function score() { scoreEl.textContent = played ? solved + ' of ' + played + ' solved' + (run > 1 ? ' · run of ' + run : '') + (best > 1 ? ' · best run ' + best : '') : (best > 1 ? 'Best run: ' + best : ''); }
+  function next(focus) {
+    var p = EpochQuiz.random(cat, seen); if (!p) return;
+    seen[p.key] = 1;
+    EpochQuiz.mount(el, p, { titleEl: kindEl, focus: focus, onNext: function () { next(true); }, onDone: function (won) {
+      played++; if (won) { solved++; run++; if (run > best) { best = run; try { localStorage.setItem('epoch-quiz-best', String(best)); } catch (e) {} } } else run = 0;
+      score();
+    } });
+  }
+  var cats = document.getElementById('qz-cats');
+  EpochQuiz.cats.forEach(function (c) {
+    if (!EpochQuiz.has(c[0])) return;
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = c[1]; b.setAttribute('aria-pressed', c[0] === cat ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      cat = c[0]; Array.prototype.forEach.call(cats.children, function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      next(true);
+    });
+    cats.appendChild(b);
+  });
+  score(); next(false);
+})();
+</script>
+</body>
+</html>

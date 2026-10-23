@@ -3,6 +3,16 @@
 encyclopedia/** text eol=lf
 state/** text eol=lf
 today-in-history/** text eol=lf
+countries/** text eol=lf
+centuries/** text eol=lf
+paths/** text eol=lf
+maps/** text eol=lf
+data/geo.json text eol=lf
+data/land.json text eol=lf
+index text eol=lf
+research text eol=lf
+atlas text eol=lf
+enc-page.js text eol=lf
 sitemaps/** text eol=lf
 sitemap.xml text eol=lf
 scripts/sitemap-state.tsv text eol=lf

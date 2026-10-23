@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/about">
-<link rel="stylesheet" href="/shared.css?v=31">
+<link rel="stylesheet" href="/shared.css?v=32">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -88,6 +88,7 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">About the Institute</h1>
   <p class="research-subtitle">Who we are, how we work, and how to reach us.</p>
+  <p class="about-lede">The Epoch Institute researches human civilisation with objectivity and curiosity: the rise and fall of states, empires and cultures, the present-day echoes of historical events, and the ways the past shapes modern society. We aim to make the story of humanity not just informative but compelling. History is not a closed book; it is the foundation of everything around us.</p>
   <div class="research-grid">
 
     <div class="research-card">
@@ -151,7 +152,7 @@
 </main>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=19"></script>
+<script src="/shared-nav.js?v=20"></script>
 <script>
 initNav('about');
 </script>

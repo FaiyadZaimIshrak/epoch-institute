@@ -9,6 +9,12 @@
   var today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   [].forEach.call(document.querySelectorAll('[data-today]'), function (el) { el.textContent = today; });
 
+  // a century bar that scrolls sideways (phones) starts at the current century
+  [].forEach.call(document.querySelectorAll('.ref-centuries'), function (bar) {
+    var cur = bar.querySelector('[aria-current]');
+    if (cur && bar.scrollWidth > bar.clientWidth) bar.scrollLeft = cur.offsetLeft - bar.offsetLeft - (bar.clientWidth - cur.offsetWidth) / 2;
+  });
+
   // copy a citation
   document.addEventListener('click', function (ev) {
     var b = ev.target.closest('[data-copy]'); if (!b) return;
