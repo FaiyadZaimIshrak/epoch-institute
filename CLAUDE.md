@@ -35,15 +35,34 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 
 ## Encyclopedia
 - `encyclopedia` page (top-level nav item): index view, and one article per entry at `/encyclopedia#<slug>`.
-- `encyclopedia-data.js` — 9,214 entries (slug, name, type, aka, dates, desc, img, credit, empires). Generated.
-  The 5,478 entries added in Oct 2026 (people, places, events named in the state histories) were merged by scratchpad
+- `encyclopedia-data.js` — 31,955 entries (slug, name, type, aka, dates, desc, img, credit, tags, war, empires), 21,801
+  with a picture. Generated.
+  The entries added in Oct 2026 (people, places, events named in the state histories and profiles) were merged by scratchpad
   states/desc/enc-merge.ps1, which always starts from the saved originals (enc-orig/). Duplicate subjects are folded via
-  enc-dupes.tsv, and pictures come from enc-images.ps1 / enc-img-credits.json. After a merge: enc-empires-apply (fills `empires` and byEmpire for new entries that
-  the empire texts mention, from design/t-encemp.html run in headless Edge), make-previews,
-  make-home-data, make-search-states, link-state-texts, build-state-data, make-enc-states, then regenerate the empire pages.
-- `encyclopedia-links.js` — regex patterns used to find entry names in text. Loaded by `generator.html`
-  (gold `.enc-link` links on empire pages: first mention per section, never the empire's own name) and by
-  the encyclopedia page (links inside descriptions).
+  enc-dupes.tsv, and pictures come from enc-images.ps1 / enc-img-credits.json.
+- Conflicts & Resolutions: entries carry `tags` (battle, siege, war, campaign, revolt, revolution, crisis, treaty, peace;
+  2,528 entries) and `war:"<slug>"` (the war a battle/treaty belongs to). Written by enc2/apply-conflicts.ps1 — run it
+  once on fresh enc-merge output (a rerun drops names).
+- Pipeline after a merge: apply-conflicts, enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
+  run-scan -Page t-encprof + prof/enc-prof-apply, enc2/prof-forms, link-state-texts, make-previews, make-home-data,
+  make-search-states, build-state-data, make-enc-states, prof/section-images, prof/regen (394 pages), then verify-pages
+  and prof/verify. Headless Edge pages that touch all profiles run in slices of 30–40 (one page for all crashes the
+  renderer and Edge then waits forever), each in a job with a time limit, with --no-first-run --disable-sync and their
+  own --user-data-dir (Edge 156 otherwise opens a sync sign-in page that blocks the run).
+- `encyclopedia-links.js` — finds entry names in text. Loaded by `generator.html` (gold `.enc-link` links on
+  empire pages: first mention per section, never the empire's own name) and by the encyclopedia page (links inside
+  descriptions). Written by scratchpad states/desc/enc2/enc-links-pack.ps1 (run after enc-merge):
+  - `e` rows `[slug, [[text, mode], ...]]`; `ENC_FN.rx(text, mode)` builds the regex (mode 0 name, 2 name with
+    either-case first letter, 1 lowercase term). Rows from `fs` on are profile-only short forms (prof-forms.ps1),
+    listed first in `byEmpire[profile]`; the encyclopedia page and the state linker ignore them.
+  - Name groups `["@g", [[text, mode]], [slugs], primary]`: a name several entries share ("Sack of Delhi" 1739 /
+    "Sack of Delhi (1398)", "Leopold II", "Treaty of Paris (1763)/(1783)…"). `ENC_FN.pick` chooses the entry that fits
+    the year written in the same sentence, else the one whose dates overlap the page's period most (profile span,
+    state s–e, or the host entry's dates), else the entry that has the plain name, else no link. `ENC_FN.ok`: a dated
+    event next to a contradicting year is not linked. Undecided text is still claimed, so no shorter name inside links.
+  - `y` {slug: [from, to, kind]}, `ex` {profile: [slugs not linked there]}, `byEmpire`, `self`.
+  - `ENC_FN` is the file's footer (scratchpad enc2/enc-fn.js); enc2/enc-fn.ps1 is the PowerShell port used by
+    link-state-texts.ps1 — keep them in step (design/t-pick.html + enc2/pick-test.ps1 check both on the same cases).
 - `images/encyclopedia/<slug>.jpg` — freely licensed Wikimedia Commons thumbnails; author/licence/source
   are in each entry's `credit` and shown under the image. Keep the credit if an image is reused.
 

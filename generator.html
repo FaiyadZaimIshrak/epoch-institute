@@ -48,19 +48,26 @@
 // ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
 // Wikipedia convention: link the first mention of each entry per section, never inside tags,
 // longest match wins where names overlap, and an empire never links to itself.
+// A name several entries share (group rows "@g") goes to the one that fits the year in the sentence or the profile's
+// period (ENC_FN.pick, defined in encyclopedia-links.js); a dated event next to a contradicting year is not linked.
 var ENC_RX = null;
 function encCompile() {
   if (ENC_RX) return;
   ENC_RX = ENC_LINKS.e.map(function (en) {
-    return { slug: en[0], rx: en[1].map(function (p) {
-      try { return new RegExp(p[0], 'gu' + (p[1] ? 'i' : '')); } catch (err) { console.warn('Skipped pattern', en[0], p[0]); return null; }
+    return { slug: en[0], g: en[0] === '@g' ? { m: en[2], p: en[3] } : null, rx: en[1].map(function (p) {
+      try { return ENC_FN.rx(p[0], p[1]); } catch (err) { console.warn('Skipped pattern', en[0], p[0]); return null; }
     }).filter(Boolean) };
   });
+}
+function encCtx(empireName) {
+  var e = EMPIRES.filter(function (x) { return x.name === empireName; })[0]; if (!e) return null;
+  return (e.points && e.points.length) ? yearsOf(e) : [e.start, e.end == null ? 2025 : e.end];
 }
 function linkify(html, empireName) {
   if (typeof ENC_LINKS === 'undefined' || !html) return html;
   encCompile();
   var idxs = (ENC_LINKS.byEmpire[empireName] || []).slice(), self = ENC_LINKS.self[empireName];
+  var ctx = encCtx(empireName), ex = {}; ((ENC_LINKS.ex || {})[empireName] || []).forEach(function (s) { ex[s] = 1; });
   // The empire's own name still claims its text (so "Caliphate" inside "Abbasid Caliphate" is not
   // linked on its own), but is never turned into a link.
   ENC_RX.forEach(function (en, i) { if (en.slug === self && idxs.indexOf(i) === -1) idxs.push(i); });
@@ -72,15 +79,20 @@ function linkify(html, empireName) {
         var t = parts[p], m; if (!t) continue; rx.lastIndex = 0;
         while ((m = rx.exec(t))) {
           if (!m[0].length) { rx.lastIndex++; continue; }
-          cands.push({ p: p, s: m.index, e: m.index + m[0].length, slug: en.slug });
+          var s = m.index, e = s + m[0].length, slug = en.slug;
+          // undecided group / wrong year / excluded: the text is still claimed, so no shorter name inside it links
+          if (en.g) slug = ENC_FN.pick(en.g.m, t, s, e, ctx, ex, en.g.p);
+          else if (ex[slug] || !ENC_FN.ok(slug, t, s, e)) slug = null;
+          cands.push({ p: p, s: s, e: e, slug: slug });
         }
       }
     });
   });
-  cands.sort(function (a, b) { return a.p - b.p || a.s - b.s || (b.e - b.s) - (a.e - a.s); });
+  cands.sort(function (a, b) { return a.p - b.p || a.s - b.s || (b.e - b.s) - (a.e - a.s) || (b.slug ? 1 : 0) - (a.slug ? 1 : 0); });
   var used = {}, chosen = {}, lastP = -1, lastEnd = -1;
   cands.forEach(function (c) {
     if (c.p === lastP && c.s < lastEnd) return;
+    if (!c.slug) { lastP = c.p; lastEnd = c.e; return; }
     if (used[c.slug]) return;
     used[c.slug] = 1; (chosen[c.p] = chosen[c.p] || []).push(c); lastP = c.p; lastEnd = c.e;
   });
@@ -370,7 +382,7 @@ noProfileNote + '\n' +
 '    </div>\n' +
 '  </div>\n</div>\n\n' +
 '<script src="/shared-data.js?v=6">\x3C/script>\n' +
-'<script src="/shared-nav.js?v=16">\x3C/script>\n' +
+'<script src="/shared-nav.js?v=17">\x3C/script>\n' +
 '<script src="/epoch-stats.js?v=3">\x3C/script>\n' +
 '<script src="/connections-map.js?v=10" defer>\x3C/script>\n' +
 '<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});\x3C/script>\n' +

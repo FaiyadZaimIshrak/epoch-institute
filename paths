@@ -45,7 +45,7 @@
 </main>
 
 <script src="/shared-data.js?v=6"></script>
-<script src="/shared-nav.js?v=16"></script>
+<script src="/shared-nav.js?v=17"></script>
 <script src="/reading-paths.js?v=1"></script>
 <script>
 initNav('paths');

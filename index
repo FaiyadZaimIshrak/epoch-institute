@@ -195,8 +195,8 @@
 </div>
 
 <script src="/shared-data.js?v=6"></script>
-<script src="/shared-nav.js?v=16"></script>
-<script src="/home-data.js?v=7"></script>
+<script src="/shared-nav.js?v=17"></script>
+<script src="/home-data.js?v=8"></script>
 <script src="/reading-paths.js?v=1"></script>
 <script>
 initNav('home');
@@ -313,7 +313,7 @@ initNav('home');
       if (puzzle.names || loading) return;
       var go = function () { if (typeof SEARCH_INDEX !== 'undefined') fillNames(SEARCH_INDEX.filter(function (r) { return r[2] === cat; }).map(function (r) { return r[1]; })); };
       if (typeof SEARCH_INDEX !== 'undefined') return go();
-      loading = true; var sc = document.createElement('script'); sc.src = '/search-index.js?v=4'; sc.onload = go; document.head.appendChild(sc);
+      loading = true; var sc = document.createElement('script'); sc.src = '/search-index.js?v=5'; sc.onload = go; document.head.appendChild(sc);
       };
       input.addEventListener('focus', loadNames); setTimeout(loadNames, 2500);
     }
