@@ -57,7 +57,7 @@
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#tenochtitlan">Tenochtitlan</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#itzcoatl">Itzcoatl</a>, <a class="enc-link" href="/encyclopedia#nezahualcoyotl">Nezahualcoyotl</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Tepanec Empire</span></div>
-          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#viceroyalty-of-new-spain">New Spain</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/new-spain">New Spain</a></span></div>
         </div>
         <p class="empire-meta">7 min read · Last reviewed October 2026</p>
       </div>
@@ -134,9 +134,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/brazilian-empire"><img src="/logos/Brazilian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Brazilian Empire</span><span class="related-card-dates">1822 CE – 1889 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/oyo-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Oyo%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Oyo Empire</span><span class="related-card-dates">1300 CE – 1896 CE</span></a><a class="related-card" href="/empire/timurid-empire"><span class="related-card-label">Later →</span><img src="/logos/Timurid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Timurid Empire</span><span class="related-card-dates">1363 CE – 1507 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/inca-empire"><img src="/logos/Inca%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Inca Empire</span><span class="related-card-dates">1438 CE – 1533 CE</span></a><a class="related-card" href="/empire/iroquois-confederacy"><img src="/logos/Iroquois%20Confederacy.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Iroquois Confederacy</span><span class="related-card-dates">1450 CE – 2025 CE</span></a><a class="related-card" href="/empire/new-spain"><img src="/logos/New%20Spain.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">New Spain</span><span class="related-card-dates">1521 CE – 1821 CE</span></a><a class="related-card" href="/empire/new-france"><img src="/logos/New%20France.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">New France</span><span class="related-card-dates">1534 CE – 1763 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/kingdom-of-sardinia"><span class="related-card-label">← Earlier</span><img src="/logos/Kingdom%20of%20Sardinia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Sardinia</span><span class="related-card-dates">1324 CE – 1861 CE</span></a><a class="related-card" href="/empire/vijayanagara-empire"><span class="related-card-label">Later →</span><img src="/logos/Vijayanagara%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Vijayanagara Empire</span><span class="related-card-dates">1336 CE – 1646 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -151,10 +151,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

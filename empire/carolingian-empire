@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/holy-roman-empire"><img src="/logos/Holy%20Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Holy Roman Empire</span><span class="related-card-dates">800 CE – 1806 CE</span></a><a class="related-card" href="/empire/roman-empire"><img src="/logos/Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Roman Empire</span><span class="related-card-dates">27 BCE – 476 CE</span></a><a class="related-card" href="/empire/portuguese-empire"><img src="/logos/Portuguese%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Portuguese Empire</span><span class="related-card-dates">1415 CE – 1975 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/abbasid-caliphate"><span class="related-card-label">← Earlier</span><img src="/logos/Abbasid%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Abbasid Caliphate</span><span class="related-card-dates">750 CE – 1517 CE</span></a><a class="related-card" href="/empire/holy-roman-empire"><span class="related-card-label">Later →</span><img src="/logos/Holy%20Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Holy Roman Empire</span><span class="related-card-dates">800 CE – 1806 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/kingdom-of-the-picts"><img src="/logos/Kingdom%20of%20the%20Picts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of the Picts</span><span class="related-card-dates">300 CE – 900 CE</span></a><a class="related-card" href="/empire/kingdom-of-powys"><img src="/logos/Kingdom%20of%20Powys.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Powys</span><span class="related-card-dates">410 CE – 1160 CE</span></a><a class="related-card" href="/empire/kingdom-of-gwynedd"><img src="/logos/Kingdom%20of%20Gwynedd.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Gwynedd</span><span class="related-card-dates">450 CE – 1283 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/emirate-of-cordoba"><span class="related-card-label">← Earlier</span><img src="/logos/Emirate%20of%20C%C3%B3rdoba.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Emirate of Córdoba</span><span class="related-card-dates">756 CE – 929 CE</span></a><a class="related-card" href="/empire/county-of-toulouse"><span class="related-card-label">Later →</span><img src="/logos/County%20of%20Toulouse.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">County of Toulouse</span><span class="related-card-dates">778 CE – 1271 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

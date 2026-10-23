@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dilmun — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The island trading power of Bahrain that linked Mesopotamia with Magan and the Indus, remembered in Sumerian myth as a pure land.">
+<meta property="og:title" content="Dilmun — The Epoch Institute">
+<meta property="og:description" content="The island trading power of Bahrain that linked Mesopotamia with Magan and the Indus, remembered in Sumerian myth as a pure land.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/dilmun">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/dilmun.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/dilmun.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/dilmun">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Dilmun" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Dilmun.png" alt="Dilmun" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Ancient Near East</p>
+        <h1 class="profile-detail-name">Dilmun</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">1900 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">1662 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">2200 BCE – 538 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Qal’at al-<a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#chaldean-empire">Chaldean Empire</a>; then <a class="enc-link" href="/encyclopedia#achaemenid-empire">Achaemenid Empire</a></span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A <a class="enc-link" href="/encyclopedia#bronze-age">Bronze Age</a> merchant state centred on <a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a>, linking <a class="enc-link" href="/encyclopedia#mesopotamia">Mesopotamia</a> with the <a class="enc-link" href="/encyclopedia#copper">copper</a> of <a class="enc-link" href="/encyclopedia#magan">Magan</a> and the luxuries of the <a class="enc-link" href="/encyclopedia#indus">Indus</a>.</li><li>Its springs, harbour, stamp seals and weight standard made it the clearing house of Gulf trade around 2000–1750 BCE.</li><li>Later ruled by Kassite governors and then a tributary of <a class="enc-link" href="/encyclopedia#assyrian-empire">Assyria</a> and <a class="enc-link" href="/encyclopedia#babylon">Babylon</a>, it vanished as a polity in the 6th century BCE.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Sumerian myth described <a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> as a pure land without sickness or old age, where the gods settled the flood hero Ziusudra and gave him eternal life.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Dilmun"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Dilmun over time, peaking in 1900 BCE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L85.0 79.6 L106.6 52.8 L150.0 26.0 L193.3 39.4 L214.9 79.6 L258.3 119.8 L344.9 106.4 L388.2 93.0 L442.4 119.8 L539.9 133.2 L665.9 119.8 L674.6 119.8 L695.8 133.2 L727.4 146.6 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L85.0 79.6 L106.6 52.8 L150.0 26.0 L193.3 39.4 L214.9 79.6 L258.3 119.8 L344.9 106.4 L388.2 93.0 L442.4 119.8 L539.9 133.2 L665.9 119.8 L674.6 119.8 L695.8 133.2 L727.4 146.6 L740.0 160.0"/><circle class="rf-peak" cx="150.0" cy="26.0" r="5"/><text class="rf-peak-label" x="150.0" y="16.0" text-anchor="middle">Peak 1900 BCE</text><g class="rf-ev"><line x1="85.0" x2="85.0" y1="160" y2="166"/><circle cx="85.0" cy="160" r="8"/><text x="85.0" y="164" text-anchor="middle">2</text><title>c. 2050 BCE: Qal’at al-Bahrain becomes a walled town; temples rise at Barbar</title></g><g class="rf-ev"><line x1="214.9" x2="214.9" y1="160" y2="166"/><circle cx="214.9" cy="160" r="8"/><text x="214.9" y="164" text-anchor="middle">3</text><title>c. 1750 BCE: Gulf trade contracts as the Indus cities decline and Babylon rises</title></g><g class="rf-ev"><line x1="344.9" x2="344.9" y1="160" y2="166"/><circle cx="344.9" cy="160" r="8"/><text x="344.9" y="164" text-anchor="middle">4</text><title>c. 1450 BCE: Kassite Babylonia installs a governor on Bahrain</title></g><g class="rf-ev"><line x1="665.9" x2="665.9" y1="160" y2="166"/><circle cx="665.9" cy="160" r="8"/><text x="665.9" y="164" text-anchor="middle">5</text><title>709 BCE: King Uperi of Dilmun sends gifts to Sargon II of Assyria</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">6</text><title>538 BCE: Dilmun passes with Babylonia to the Achaemenid Empire</title></g><text class="rf-axis" x="20" y="200">2200 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">538 BCE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 2500 BCE</span><span class="rf-text">Ur-Nanshe of <a class="enc-link" href="/encyclopedia#lagash">Lagash</a> records ships of <a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> bringing him <a class="enc-link" href="/encyclopedia#timber">timber</a></span></li><li><span class="rf-year">c. 2050 BCE</span><span class="rf-text">Qal’at al-<a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a> becomes a walled town; temples rise at Barbar</span></li><li><span class="rf-year">c. 1750 BCE</span><span class="rf-text">Gulf trade contracts as the <a class="enc-link" href="/encyclopedia#indus">Indus</a> cities decline and <a class="enc-link" href="/encyclopedia#babylon">Babylon</a> rises</span></li><li><span class="rf-year">c. 1450 BCE</span><span class="rf-text">Kassite <a class="enc-link" href="/encyclopedia#babylonia">Babylonia</a> installs a governor on <a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a></span></li><li><span class="rf-year">709 BCE</span><span class="rf-text">King Uperi of <a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> sends gifts to <a class="enc-link" href="/encyclopedia#sargon-ii">Sargon II</a> of <a class="enc-link" href="/encyclopedia#assyrian-empire">Assyria</a></span></li><li><span class="rf-year">538 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> passes with <a class="enc-link" href="/encyclopedia#babylonia">Babylonia</a> to the <a class="enc-link" href="/encyclopedia#achaemenid-empire">Achaemenid Empire</a></span></li><li><span class="rf-year">1953</span><span class="rf-text">Danish expedition under P.V. Glob and Geoffrey Bibby begins excavations</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#sargon-of-akkad"><img src="/images/encyclopedia/sargon-of-akkad.jpg" alt="Sargon of Akkad" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#sargon-of-akkad">Sargon of Akkad</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Sargon_of_Akkad_on_his_victory_stele.jpg" target="_blank" rel="noopener">ALFGRN, CC BY-SA 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> is named in Mesopotamian texts long before it can be located with certainty. Archaic tablets from <a class="enc-link" href="/encyclopedia#uruk">Uruk</a> of the late fourth millennium BCE already mention it, and Ur-Nanshe of <a class="enc-link" href="/encyclopedia#lagash">Lagash</a> (c. 2500 BCE) recorded that the ships of Dilmun brought him <a class="enc-link" href="/encyclopedia#timber">timber</a> from foreign lands. <a class="enc-link" href="/encyclopedia#sargon-of-akkad">Sargon of Akkad</a> later boasted that ships from Dilmun, <a class="enc-link" href="/encyclopedia#magan">Magan</a> and <a class="enc-link" href="/encyclopedia#meluhha">Meluhha</a> moored at the quay of his capital Agade. In the third millennium the name probably covered parts of the eastern Arabian coast, including Tarut Island, before it came to centre on the island of <a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a>. Around 2200 BCE the settlement at Qal’at al-Bahrain on the north coast began to grow, and by about 2050 BCE it was a walled town with paved streets, houses and storerooms, the core of what archaeologists call the Early Dilmun or Barbar culture. Temples rose at Barbar and Diraz, and a planned village with its own temple developed at Saar. The island’s great asset was fresh water: artesian springs on land and even beneath the sea made it a natural harbour and watering station on the route between southern <a class="enc-link" href="/encyclopedia#mesopotamia">Mesopotamia</a> and the <a class="enc-link" href="/encyclopedia#copper">copper</a> and stone sources of Magan, in present-day <a class="enc-link" href="/encyclopedia#oman">Oman</a>, and the <a class="enc-link" href="/encyclopedia#indus-valley">Indus Valley</a> beyond.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#ur"><img src="/images/encyclopedia/ur.jpg" alt="Ur" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#ur">Ur</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Urimki_inscription.jpg" target="_blank" rel="noopener">Steve Harris, CC BY-SA 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> lived by the sea trade. Its merchants carried <a class="enc-link" href="/encyclopedia#copper">copper</a> from <a class="enc-link" href="/encyclopedia#magan">Magan</a>, carnelian, <a class="enc-link" href="/encyclopedia#ivory-trade">ivory</a> and other luxuries from <a class="enc-link" href="/encyclopedia#meluhha">Meluhha</a>, the <a class="enc-link" href="/encyclopedia#indus">Indus</a> region, and pearls, called “fish-eyes” in Mesopotamian texts, while they brought back barley, wool, textiles, oil and <a class="enc-link" href="/encyclopedia#silver">silver</a> from <a class="enc-link" href="/encyclopedia#sumer">Sumer</a>. Tablets from <a class="enc-link" href="/encyclopedia#ur">Ur</a> record Dilmun voyagers, and the Old Babylonian merchant Ea-nasir of Ur, known from a famous letter of complaint about poor-quality copper, traded with Dilmun around 1750 BCE. Dilmun used a weight system related to the Indus standard, known in <a class="enc-link" href="/encyclopedia#mesopotamia">Mesopotamia</a> as the “Dilmun standard”, and developed its own round stamp seals with a domed back and carved scenes of animals, drinkers and gods, which spread around the Gulf. Agriculture rested on date palms and gardens watered by springs, supplemented by fishing. Religion centred on the god Inzak, with his consort Meskilak, and on Enki, the Sumerian god of fresh water; the temple at Barbar was built around a sacred spring-fed pool. The most striking remains are the burial mounds, originally numbering many tens of thousands, that cover northern <a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a>, from small individual tombs to the large royal mounds at A’ali, which reveal a prosperous and stratified society.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#tukulti-ninurta-i"><img src="/images/encyclopedia/tukulti-ninurta-i.jpg" alt="Tukulti-Ninurta I" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#tukulti-ninurta-i">Tukulti-Ninurta I</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Detail._Assyrian_king_Tukulti-Ninurta_I_stands_and_kneels,_13th_century_BCE._From_Assur,_Iraq._Pergamon_Museum.jpg" target="_blank" rel="noopener">Osama Shukir Muhammed Amin FRCP(Glasg), CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Almost nothing is known of a Dilmunite army, and the state’s security rested above all on its island position and its usefulness to stronger neighbours. The town at Qal’at al-<a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a> was enclosed by a stone wall around 2050 BCE, and its fortifications were rebuilt in later periods, but there is no record of <a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> waging wars of conquest. Mesopotamian rulers generally treated it as a trading partner rather than a target during the third and early second millennia BCE, and its prosperity depended on keeping sea lanes open rather than on military strength. Outside powers nonetheless claimed authority over it. The Kassite kings of <a class="enc-link" href="/encyclopedia#babylon">Babylon</a> placed a governor on the island in the fifteenth and fourteenth centuries BCE, and the <a class="enc-link" href="/encyclopedia#middle-assyrian-empire">Middle Assyrian</a> king <a class="enc-link" href="/encyclopedia#tukulti-ninurta-i">Tukulti-Ninurta I</a> (r. c. 1243–1207 BCE) styled himself king of Dilmun and <a class="enc-link" href="/encyclopedia#meluhha">Meluhha</a>, a claim probably more boastful than real. Neo-Assyrian kings described Dilmun as lying far off in the midst of the sea and received gifts from its rulers rather than sending armies there. According to an inscription of <a class="enc-link" href="/encyclopedia#sennacherib">Sennacherib</a>, after the destruction of Babylon in 689 BCE the people of Dilmun sent men with bronze tools to help, a sign of how readily its rulers accommodated imperial power.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#sargon-ii"><img src="/images/encyclopedia/sargon-ii.jpg" alt="Sargon II" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#sargon-ii">Sargon II</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Sargon_II,_Iraq_Museum_in_Baghdad.jpg" target="_blank" rel="noopener">Osama Shukir Muhammed Amin FRCP(Glasg), CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a>’s political institutions are known only in fragments. The royal mounds at A’ali, the palace-like buildings at Qal’at al-<a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a> and the temple complexes suggest a kingship that controlled trade, water and religious life during the Early Dilmun period, roughly 2050–1750 BCE. A stone inscription found in the nineteenth century by the British officer E.L. Durand names a palace of a man called Rimum, “servant of Inzak”, showing that rulers presented themselves as agents of the island’s chief god. Failaka Island off Kuwait, with its Dilmun-period temple and seal workshop, was part of the same political and commercial sphere. Around 1450 BCE Kassite <a class="enc-link" href="/encyclopedia#babylonia">Babylonia</a> brought Dilmun under direct rule. Letters found at <a class="enc-link" href="/encyclopedia#nippur">Nippur</a> from Ili-ippashra, a governor in Dilmun, to Enlil-kidinni, governor of Nippur, complain that nomadic Ahlamu were stealing the date harvest, and a large Kassite administrative building at Qal’at al-Bahrain probably served the date trade. In the first millennium BCE Dilmun had kings again, but as tributaries. <a class="enc-link" href="/encyclopedia#sargon-ii">Sargon II</a> recorded gifts from Uperi in 709 BCE, and <a class="enc-link" href="/encyclopedia#ashurbanipal">Ashurbanipal</a> received tribute from a later king, Hundaru. Under the Chaldean dynasty of <a class="enc-link" href="/encyclopedia#babylon">Babylon</a> a governor of Dilmun is named in a sixth-century document, indicating its absorption as a province.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#indus"><img src="/images/encyclopedia/indus.jpg" alt="Indus" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#indus">Indus</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Nanga_Parbat_Indus_Gorge.jpg" target="_blank" rel="noopener">Heavyrunner, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a> was the main intermediary of one of the earliest long-distance maritime trade systems, linking <a class="enc-link" href="/encyclopedia#mesopotamia">Mesopotamia</a>, <a class="enc-link" href="/encyclopedia#magan">Magan</a> and the <a class="enc-link" href="/encyclopedia#indus">Indus</a> civilisation, and its weights, seals and harbour made Gulf commerce possible for several centuries. Its place in Mesopotamian imagination was even larger. The Sumerian myth of Enki and Ninhursag describes Dilmun as a pure, clean and bright land where there was no sickness or old age, and in the Sumerian flood story the gods settled the flood hero Ziusudra in Dilmun, “where the sun rises”, granting him eternal life. These texts made Dilmun a kind of paradise in Near Eastern literature, and some writers have linked it, without firm evidence, to the biblical Eden. The island remained a trading centre after Dilmun disappeared, known to Greek authors as Tylos. Modern knowledge of Dilmun owes much to the Danish expedition led by P.V. Glob and Geoffrey Bibby from 1953, which identified <a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a> as Dilmun’s centre and excavated Qal’at al-Bahrain, Barbar and many tombs. Qal’at al-Bahrain became a <a class="enc-link" href="/encyclopedia#unesco-world-heritage-site">UNESCO World Heritage Site</a> in 2005 and the Dilmun Burial Mounds followed in 2019, and Dilmun is today a central part of Bahrain’s national identity and heritage.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#hammurabi"><img src="/images/encyclopedia/hammurabi.jpg" alt="Hammurabi" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#hammurabi">Hammurabi</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:F0182_Louvre_Code_Hammourabi_Bas-relief_Sb8_rwk.jpg" target="_blank" rel="noopener">Mbzt, CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a>’s commercial golden age ended around 1750 BCE. The <a class="enc-link" href="/encyclopedia#indus">Indus</a> cities were in decline, the old Sumerian ports of the south lost importance as power shifted north under <a class="enc-link" href="/encyclopedia#hammurabi">Hammurabi</a> of <a class="enc-link" href="/encyclopedia#babylon">Babylon</a> and his successors, and direct sea trade between <a class="enc-link" href="/encyclopedia#mesopotamia">Mesopotamia</a> and the Gulf contracted. At Qal’at al-<a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a> building activity slowed, and the temples at Barbar and Saar went out of use. The Kassite occupation from about 1450 BCE brought a revival based on dates and administration, but as a dependency rather than an independent trading state. After the Kassite period the sources fall almost silent for several centuries, and Dilmun re-emerges in the eighth century BCE as a minor kingdom paying tribute to the <a class="enc-link" href="/encyclopedia#neo-assyrian-empire">Neo-Assyrian Empire</a>, which valued its position but did not occupy it. After <a class="enc-link" href="/encyclopedia#assyrian-empire">Assyria</a> fell in 612 BCE the island passed under Babylonian control, and by the reign of <a class="enc-link" href="/encyclopedia#nebuchadnezzar-ii">Nebuchadnezzar II</a> or his successors it was ruled by a Babylonian governor. When <a class="enc-link" href="/encyclopedia#cyrus-the-great">Cyrus the Great</a> took Babylon in 539 BCE Dilmun passed to the <a class="enc-link" href="/encyclopedia#achaemenid-empire">Achaemenid Empire</a>, and it disappears from the record as a political entity. The island lived on under Seleucid, Characenian and Sasanian influence as Tylos and later as part of the region known as Bahrain.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em><a class="enc-link" href="/encyclopedia#dilmun">Dilmun</a>, centred on the island of <a class="enc-link" href="/encyclopedia#bahrain">Bahrain</a>, was the hub of the <a class="enc-link" href="/encyclopedia#bronze-age">Bronze Age</a> sea trade linking <a class="enc-link" href="/encyclopedia#mesopotamia">Mesopotamia</a> with <a class="enc-link" href="/encyclopedia#magan">Magan</a> and the <a class="enc-link" href="/encyclopedia#indus">Indus</a>, a merchant state with its own seals and weights whose tens of thousands of burial mounds survive and whose name became a byword for paradise in Sumerian myth.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Bibby, G. (1969) Looking for Dilmun. New York: Alfred A. Knopf.</li>
+        <li>Crawford, H. (1998) Dilmun and its Gulf Neighbours. Cambridge: Cambridge University Press.</li>
+        <li>Potts, D.T. (1990) The Arabian Gulf in Antiquity. 2 vols. Oxford: Clarendon Press.</li>
+        <li>Laursen, S. and Steinkeller, P. (2017) Babylonia, the Gulf Region, and the Indus: Archaeological and Textual Evidence for Contact in the Third and Early Second Millennia B.C. Winona Lake: Eisenbrauns.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="dilmun"></div>
+      <a class="mini-connections-more" href="/connections#dilmun">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/byblos"><img src="/logos/Byblos.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byblos</span><span class="related-card-dates">2600 BCE – 332 BCE</span></a><a class="related-card" href="/empire/elamite-confederation"><img src="/logos/Elamite%20Confederation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Elamite Confederation</span><span class="related-card-dates">2700 BCE – 539 BCE</span></a><a class="related-card" href="/empire/assyrian-empire"><img src="/logos/Assyrian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Assyrian Empire</span><span class="related-card-dates">2025 BCE – 609 BCE</span></a><a class="related-card" href="/empire/kingdom-of-lydia"><img src="/logos/Kingdom%20of%20Lydia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Lydia</span><span class="related-card-dates">1200 BCE – 546 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/akkadian-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Akkadian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Akkadian Empire</span><span class="related-card-dates">2334 BCE – 2154 BCE</span></a><a class="related-card" href="/empire/neo-sumerian-empire"><span class="related-card-label">Later →</span><img src="/logos/Neo-Sumerian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Neo-Sumerian Empire</span><span class="related-card-dates">2112 BCE – 2004 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Dilmun",slug="dilmun",url="https://the-epoch-institute.org/empire/dilmun";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Dilmun on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/dilmun #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/dilmun"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Dilmun",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

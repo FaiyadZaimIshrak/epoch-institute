@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Empire Explorer — The Epoch Institute</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
-<meta name="description" content="Explore the rise and fall of 94 empires across five millennia with interactive trajectory charts.">
+<meta name="description" content="Explore the rise and fall of nearly 400 states and empires across five millennia with interactive trajectory charts.">
 <meta property="og:title" content="Empire Explorer — The Epoch Institute">
-<meta property="og:description" content="Interactive civilisational data: 94 empires, five millennia of rise and fall.">
+<meta property="og:description" content="Interactive civilisational data: nearly 400 states and empires, five millennia of rise and fall.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/explorer">
 <meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
@@ -37,7 +37,7 @@
   <div class="explorer-header">
     <p class="explorer-label" data-i18n="exp_label">Interactive Explorer</p>
     <h1 class="explorer-title" data-i18n="exp_title">The Rise &amp; Fall of Empires</h1>
-    <p class="explorer-description" data-i18n="exp_desc">Ninety-four civilisations. Five millennia. Each trajectory scaled to its own peak — so you can compare not absolute size, but the shape of a civilisation's story. Use the controls below to filter by region, era, or search for a specific empire.</p>
+    <p class="explorer-description" data-i18n="exp_desc">Nearly four hundred states and empires. Five millennia. Each trajectory scaled to its own peak — so you can compare not absolute size, but the shape of a civilisation's story. Use the controls below to filter by region, era, or search for a specific state.</p>
     <p class="explorer-onboarding">Navigate five millennia of human civilisation. Each line represents an empire — use the region tabs and era selector to filter, or search by name. Press ▶ to animate the timeline.</p>
     <p class="explorer-method-note">Power scores are normalised indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. Each trajectory is drawn from peer-reviewed sources cited in the Empire Profiles.</p>
   </div>
@@ -53,6 +53,7 @@
       <button class="tab" data-region="Central &amp; East Asia" data-i18n="tab_cea">Central &amp; East Asia</button>
       <button class="tab" data-region="South &amp; Southeast Asia" data-i18n="tab_sea">South &amp; SE Asia</button>
       <button class="tab" data-region="Americas" data-i18n="tab_ame">Americas</button>
+      <button class="tab" data-region="Oceania">Oceania</button>
     </div>
     <div class="right-controls">
       <div class="search-wrap">
@@ -66,10 +67,13 @@
         <option value="classical" data-i18n="era_classical">Classical (500 BCE–500 CE)</option>
         <option value="medieval" data-i18n="era_medieval">Medieval (500–1400 CE)</option>
         <option value="early-modern" data-i18n="era_earlymodern">Early Modern (1400–1800 CE)</option>
-        <option value="modern" data-i18n="era_modern">Modern (1800–1980 CE)</option>
+        <option value="modern" data-i18n="era_modern">Modern (1800 CE–today)</option>
       </select>
       <label class="toggle-labels">
         <input type="checkbox" id="toggle-events"> <span data-i18n="events">Events</span>
+      </label>
+      <label class="toggle-labels" title="In All Regions, show only the 94 great empires">
+        <input type="checkbox" id="toggle-empires" checked> <span>Empires only</span>
       </label>
       <label class="toggle-labels">
         <input type="checkbox" id="toggle-labels"> <span data-i18n="labels">Labels</span>
@@ -169,9 +173,9 @@
 <div id="event-tooltip"></div>
 <div id="tooltip"></div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/point-descs.js?v=2"></script>
-<script src="/shared-nav.js?v=15"></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/point-descs.js?v=3" async></script>
+<script src="/shared-nav.js?v=16"></script>
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
@@ -206,6 +210,8 @@ let activeRegion = null;
 let soloEmpire = null;
 let compareEmpire = null;
 let showLabels = false;
+// all-regions view starts with the 94 great empires only (nearly 400 curves are unreadable at once)
+let empiresOnly = true;
 let showEvents = false;
 let xRange = null;
 let viewDomain = null;
@@ -265,6 +271,7 @@ function getEffectiveDomain() {
 
 function isVisible(empire) {
   if (activeRegion !== null && activeRegion !== "All" && empire.region !== activeRegion) return false;
+  if (empiresOnly && empire.id && (activeRegion === null || activeRegion === "All") && empire.name !== soloEmpire && empire.name !== compareEmpire && !(searchTerm && empire.name.toLowerCase().includes(searchTerm))) return false;
   const [x0, x1] = getEffectiveDomain();
   return empire.points.some(p => p[0] >= x0 && p[0] <= x1);
 }
@@ -427,6 +434,7 @@ function decodeState() {
   const [region, era, empire] = hash.split("/").map(decodeURIComponent);
   if (region) {
     activeRegion = region;
+    empiresOnly = region === "All"; document.getElementById("toggle-empires").checked = empiresOnly;
     document.querySelectorAll(".tab").forEach(t => {
       t.classList.toggle("active", t.dataset.region === region);
     });
@@ -794,7 +802,7 @@ function render() {
       : visible.filter(e => e.name.toLowerCase().includes(searchTerm));
     dotEmpires.forEach(empire => {
       empire.points.filter(p => p[0] >= xRange[0] && p[0] <= xRange[1]).forEach(p => {
-        const desc = POINT_DESCS[empire.name + "|" + Math.round(p[0])];
+        const desc = typeof POINT_DESCS === "undefined" ? null : (POINT_DESCS[empire.name + "|" + p[0]] || POINT_DESCS[empire.name + "|" + Math.round(p[0])]);
         dotsG.append("circle")
           .datum({ empire, p, desc })
           .attr("cx", xScale(p[0])).attr("cy", yScale(p[1]))
@@ -900,6 +908,7 @@ document.getElementById("region-tabs").addEventListener("click", e => {
   document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
   e.target.classList.add("active");
   activeRegion = e.target.dataset.region;
+  empiresOnly = activeRegion === "All"; document.getElementById("toggle-empires").checked = empiresOnly;
   updateExplorerShareText();
   soloEmpire = null;
   compareEmpire = null;
@@ -925,6 +934,9 @@ document.getElementById("era-select").addEventListener("change", e => {
   encodeState();
 });
 
+document.getElementById("toggle-empires").addEventListener("change", e => {
+  empiresOnly = e.target.checked; render();
+});
 document.getElementById("toggle-labels").addEventListener("change", e => {
   showLabels = e.target.checked; render();
 });

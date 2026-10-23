@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State of Qi — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The great eastern state of ancient China, home of the first hegemon Duke Huan, the reformer Guan Zhong and the Jixia Academy, and the last to fall to Qin.">
+<meta property="og:title" content="State of Qi — The Epoch Institute">
+<meta property="og:description" content="The great eastern state of ancient China, home of the first hegemon Duke Huan, the reformer Guan Zhong and the Jixia Academy, and the last to fall to Qin.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/state-of-qi">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/state-of-qi.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/state-of-qi.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/state-of-qi">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//State%20of%20Qi" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/State%20of%20Qi.png" alt="State of Qi" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">State of Qi</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">286 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">825 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1046 BCE – 221 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Yingqiu, traditionally identified with Linzi</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Jiang Ziya (Lord Taigong)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#qin-dynasty">Qin dynasty</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A great eastern state of ancient <a class="enc-link" href="/encyclopedia#china">China</a>, founded on the Shandong peninsula by Jiang Ziya after the Zhou conquest.</li><li>Duke Huan and his minister Guan Zhong made Qi the first hegemon of the Zhou states in the 7th century BCE.</li><li>Its capital Linzi and the Jixia Academy made Qi a centre of wealth and philosophy until it surrendered to <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> in 221 BCE.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Qi's later ruling family, the Tian, descended from a prince of the State of Chen who had fled to Qi as a refugee in 672 BCE.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="State of Qi"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the State of Qi over time, peaking in 286 BCE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L330.7 106.4 L335.1 93.0 L340.3 52.8 L364.7 39.4 L371.7 79.6 L418.8 93.0 L513.1 93.0 L596.0 79.6 L634.4 52.8 L641.4 52.8 L658.8 39.4 L683.3 26.0 L685.0 133.2 L689.4 106.4 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L330.7 106.4 L335.1 93.0 L340.3 52.8 L364.7 39.4 L371.7 79.6 L418.8 93.0 L513.1 93.0 L596.0 79.6 L634.4 52.8 L641.4 52.8 L658.8 39.4 L683.3 26.0 L685.0 133.2 L689.4 106.4 L740.0 160.0"/><circle class="rf-peak" cx="683.3" cy="26.0" r="5"/><text class="rf-peak-label" x="683.3" y="16.0" text-anchor="middle">Peak 286 BCE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>c. 1046 BCE: Jiang Ziya receives Qi as a fief after the Zhou conquest</title></g><g class="rf-ev"><line x1="335.1" x2="335.1" y1="160" y2="166"/><circle cx="335.1" cy="160" r="8"/><text x="335.1" y="164" text-anchor="middle">2</text><title>685 BCE: Duke Huan takes the throne and appoints Guan Zhong as minister</title></g><g class="rf-ev"><line x1="364.7" x2="364.7" y1="160" y2="166"/><circle cx="364.7" cy="160" r="8"/><text x="364.7" y="164" text-anchor="middle">3</text><title>651 BCE: Duke Huan presides over the covenant of Kuiqiu as hegemon</title></g><g class="rf-ev"><line x1="596.0" x2="596.0" y1="160" y2="166"/><circle cx="596.0" cy="160" r="8"/><text x="596.0" y="164" text-anchor="middle">4</text><title>386 BCE: The Zhou king recognises Tian He as ruler of Qi</title></g><g class="rf-ev"><line x1="634.4" x2="634.4" y1="160" y2="166"/><circle cx="634.4" cy="160" r="8"/><text x="634.4" y="164" text-anchor="middle">5</text><title>342 BCE: Sun Bin's strategy defeats Wei at the Battle of Maling</title></g><g class="rf-ev"><line x1="685.0" x2="685.0" y1="160" y2="166"/><circle cx="685.0" cy="160" r="8"/><text x="685.0" y="164" text-anchor="middle">6</text><title>284 BCE: Yue Yi's coalition army sacks Linzi</title></g><g class="rf-ev"><line x1="689.4" x2="689.4" y1="160" y2="166"/><circle cx="689.4" cy="160" r="8"/><text x="689.4" y="164" text-anchor="middle">7</text><title>279 BCE: Tian Dan breaks the siege of Jimo and restores Qi</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>221 BCE: King Jian surrenders to Qin, completing the Qin unification</title></g><text class="rf-axis" x="20" y="200">1046 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">221 BCE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 1046 BCE</span><span class="rf-text">Jiang Ziya receives Qi as a fief after the Zhou conquest</span></li><li><span class="rf-year">685 BCE</span><span class="rf-text">Duke Huan takes the throne and appoints Guan Zhong as minister</span></li><li><span class="rf-year">651 BCE</span><span class="rf-text">Duke Huan presides over the covenant of Kuiqiu as hegemon</span></li><li><span class="rf-year">386 BCE</span><span class="rf-text">The Zhou king recognises Tian He as ruler of Qi</span></li><li><span class="rf-year">342 BCE</span><span class="rf-text">Sun Bin's strategy defeats Wei at the Battle of Maling</span></li><li><span class="rf-year">284 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#yue-yi">Yue Yi</a>'s coalition army sacks Linzi</span></li><li><span class="rf-year">279 BCE</span><span class="rf-text">Tian Dan breaks the siege of Jimo and restores Qi</span></li><li><span class="rf-year">221 BCE</span><span class="rf-text">King Jian surrenders to <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a>, completing the Qin unification</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#king-wu-of-zhou"><img src="/images/encyclopedia/king-wu-of-zhou.jpg" alt="King Wu of Zhou" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#king-wu-of-zhou">King Wu of Zhou</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:King_Wu_of_Zhou.jpg" target="_blank" rel="noopener">Ma Lin, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Qi was founded shortly after the Zhou conquest of the Shang, conventionally dated to 1046 BCE. According to the <em><a class="enc-link" href="/encyclopedia#records-of-the-grand-historian">Shiji</a></em>, <a class="enc-link" href="/encyclopedia#king-wu-of-zhou">King Wu of Zhou</a> enfeoffed his leading general and adviser Jiang Ziya, known as Lord Taigong, with land in the north of the Shandong peninsula, where he established his capital at Yingqiu, traditionally identified with Linzi. The fief was a frontier outpost among the Dongyi, peoples of the east who resisted Zhou rule and joined the rebellions that followed King Wu's death. Tradition says that Taigong simplified rites and adapted to local customs, encouraged crafts and exploited the fish and salt of the coast, so that people and merchants flocked to the state. Its rulers, of the Jiang surname, were not kin of the royal Ji clan but were tied to it by repeated marriages, and Qi princesses became queens of Zhou. In its early centuries the state was a middle-ranking power whose relations with the court were not always easy: one ruler, Duke Ai, was reportedly boiled to death at the Zhou court in the ninth century BCE. Qi expanded by absorbing small neighbouring polities, such as the state of Ji, which it annexed in 690 BCE, and by the early seventh century BCE it was the dominant power of the east.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#warring-states-period"><img src="/images/encyclopedia/warring-states-period.jpg" alt="Warring States period" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#warring-states-period">Warring States period</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:EN-WarringStatesAll260BCE.jpg" target="_blank" rel="noopener">Philg88, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Qi was one of the richest states of ancient <a class="enc-link" href="/encyclopedia#china">China</a>. Its coastline supplied salt and fish, its plains grew <a class="enc-link" href="/encyclopedia#millet">millet</a> and wheat, and the region was famed for <a class="enc-link" href="/encyclopedia#silk">silk</a> and fine textiles; Sima Qian wrote that Qi supplied caps, sashes, clothes and shoes to the whole world. Under Duke Huan the minister Guan Zhong is credited with organising state control of salt and iron, measures later attributed to him in the <em>Guanzi</em>, a collection of texts largely written by later Qi scholars. Qi cast its own bronze knife-shaped money, the <em>daobi</em>, which circulated widely in the east. Its capital, Linzi, became perhaps the largest city of the <a class="enc-link" href="/encyclopedia#warring-states-period">Warring States period</a>: a speech recorded in the <em>Zhanguo ce</em> credits it with 70,000 households and describes streets so crowded that <a class="enc-link" href="/encyclopedia#chariot">chariot</a> hubs knocked together, and inhabitants who played music, raced dogs and played the board game <em>liubo</em>. Excavations show a walled city of about fifteen square kilometres with workshops for bronze, iron, bone and coins. Linzi was also an intellectual centre. From the fourth century BCE the Tian rulers supported scholars at the Jixia Academy near the city's Ji Gate with stipends and houses; Mencius, Xunzi, Zou Yan, Shen Dao and Tian Pian were among those associated with it. The magicians known as <em>fangshi</em>, who sought immortality on islands in the eastern sea, also flourished in Qi.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#yue-yi"><img src="/images/encyclopedia/yue-yi.jpg" alt="Yue Yi" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#yue-yi">Yue Yi</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:%E4%B9%90%E6%AF%85%E5%83%8F%EF%BC%88%E6%B8%85%E4%BA%BA%E7%BB%98%EF%BC%89.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Qi's rise as a military power began under Duke Huan (r. 685–643 BCE), who used his wealth and Guan Zhong's reorganisation of the population into military districts to field large <a class="enc-link" href="/encyclopedia#chariot">chariot</a> armies. As hegemon, or <em>ba</em>, he led coalitions in defence of the Zhou order: he helped the State of Yan against the Shanrong in 663 BCE, and in 656 BCE marched with allied lords against the southern State of Chu, which agreed to a covenant at Shaoling. After Huan's death Qi lost primacy to the State of Jin, which defeated it at the Battle of An in 589 BCE. Qi is associated with famous military thinkers: Sun Wu, the traditional author of <em>The Art of War</em>, was said to come from Qi, and his descendant Sun Bin, as strategist for the general Tian Ji, defeated the State of Wei at the Battle of Guiling in 354 or 353 BCE and at the Battle of Maling in 342 BCE, where the Wei commander Pang Juan died. Its greatest disaster came in 284 BCE, when an allied army under the Yan general <a class="enc-link" href="/encyclopedia#yue-yi">Yue Yi</a> took Linzi and more than seventy cities, leaving only Ju and Jimo; Tian Dan broke the siege of Jimo with a stampede of oxen carrying burning reeds and recovered the state by 279 BCE.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <div class="profile-section-body"><p>Qi was ruled first by the Jiang lineage descended from Taigong, and from the fourth century BCE by the Tian lineage, who took the title of king. The administration associated with Guan Zhong, minister to Duke Huan, divided the capital region into districts that combined civilian registration with military service, although the detailed accounts in the <em>Guoyu</em> and <em>Guanzi</em> were written later and idealised. Powerful ministerial families dominated the court in the sixth century BCE, when Yan Ying served Duke Jing (r. 547–490 BCE) and Confucius visited the state. The Tian, descended from Prince Wan of the State of Chen, who had fled to Qi in 672 BCE, won popularity by lending grain with large measures and collecting it with small ones. Tian Chang killed Duke Jian in 481 BCE and dominated his successors, and in 386 BCE King An of Zhou recognised Tian He as ruler of Qi; the last Jiang ruler died in 379 BCE. Under the Tian, Qi became a centralised territorial state, organised into five major districts (<em>du</em>) with their own garrisons and governed by officials appointed by the ruler. King Wei (r. c. 356–320 BCE) is remembered for disciplining officials by rewarding the honest governor of Jimo and boiling the corrupt governor of E, and in 334 BCE he and King Hui of Wei recognised each other as kings at Xuzhou.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#rites-of-zhou"><img src="/images/encyclopedia/rites-of-zhou.jpg" alt="Rites of Zhou" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#rites-of-zhou">Rites of Zhou</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg" target="_blank" rel="noopener">Aethelwolf Emsworth., Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Qi's influence on Chinese thought was greater than its military record. Duke Huan's hegemony created a model in which a powerful lord protected the Zhou order and the Chinese states against outside peoples, and Confucius praised Guan Zhong for it, saying in the <em>Analects</em> that without him people would be wearing their hair loose and folding their robes to the left. The <em>Guanzi</em>, attributed to Guan Zhong but compiled from the writings of later Qi scholars, became a foundational text of statecraft and economic thought and informed later debates on state monopolies of salt and iron under the <a class="enc-link" href="/encyclopedia#han-dynasty">Han dynasty</a>. The Jixia Academy was the first known institution in <a class="enc-link" href="/encyclopedia#china">China</a> where a state supported scholars of rival schools to teach and debate; it helped shape <a class="enc-link" href="/encyclopedia#confucianism">Confucianism</a> through Mencius and Xunzi, and the cosmology of yin and yang and the Five Phases through Zou Yan, ideas that became central to Han thought. Qi traditions of sacrifice at Mount Tai and of the quest for immortality later drew the <a class="enc-link" href="/encyclopedia#qin-shi-huang">First Emperor of Qin</a> and <a class="enc-link" href="/encyclopedia#emperor-wu-of-han">Emperor Wu of Han</a> to Shandong. The <em>Kaogong ji</em>, a technical treatise on crafts preserved in the <em><a class="enc-link" href="/encyclopedia#rites-of-zhou">Rites of Zhou</a></em>, is often thought to come from Qi. After unification the name Qi survived as a kingdom title under the Han and as a dynastic name in the fifth and sixth centuries CE.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#qin-shi-huang"><img src="/images/encyclopedia/qin-shi-huang.jpg" alt="Qin Shi Huang" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#qin-shi-huang">Qin Shi Huang</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:QinShiHuang19century.jpg" target="_blank" rel="noopener">Unknown (18??–18??), Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Qi's last great expansion proved fatal. King Xuan exploited a succession crisis in Yan to occupy it in 314 BCE but was forced to withdraw, leaving Yan bent on revenge. King Min (r. c. 300–284 BCE) briefly took the title of Eastern Emperor alongside King Zhao of <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> in 288 BCE, and in 286 BCE annexed the wealthy State of <a class="enc-link" href="/encyclopedia#song-dynasty">Song</a>, alarming every neighbour. In 284 BCE Yan, Qin, Zhao, Wei and Han attacked together under <a class="enc-link" href="/encyclopedia#yue-yi">Yue Yi</a>; Linzi was sacked, its treasures carried to Yan, and King Min fled to Ju, where he was killed by Nao Chi, a general sent by Chu. Although Tian Dan restored the state under King Xiang by 279 BCE, Qi never regained its former strength. In the last decades of the <a class="enc-link" href="/encyclopedia#warring-states-period">Warring States period</a> its rulers, King Jian and his mother, Queen Dowager Jun, kept friendly relations with Qin and stayed out of the wars in which Qin destroyed Han, Zhao, Wei, Chu and Yan one by one, a policy encouraged by the minister Hou Sheng, who was reportedly bribed by Qin. When Qin finally turned on Qi in 221 BCE, its general Wang Ben entered Linzi from the north, and King Jian surrendered without a battle. The fall of Qi completed the unification of <a class="enc-link" href="/encyclopedia#china">China</a> by <a class="enc-link" href="/encyclopedia#qin-shi-huang">King Zheng of Qin</a>, who then took the title of First Emperor.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Qi was the great eastern state of ancient <a class="enc-link" href="/encyclopedia#china">China</a> for eight centuries: under Duke Huan and Guan Zhong it created the first hegemony over the Zhou states, its salt, iron and textile wealth made Linzi one of the largest cities of its age, and its Jixia Academy shaped classical Chinese philosophy.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Hsu, C.-Y. (1965) Ancient China in Transition: An Analysis of Social Mobility, 722–222 B.C. Stanford: Stanford University Press.</li>
+        <li>Lewis, M.E. (1990) Sanctioned Violence in Early China. Albany: State University of New York Press.</li>
+        <li>Loewe, M. and Shaughnessy, E.L. (eds) (1999) The Cambridge History of Ancient China: From the Origins of Civilization to 221 B.C. Cambridge: Cambridge University Press.</li>
+        <li>Pines, Y. (2009) Envisioning Eternal Empire: Chinese Political Thought of the Warring States Era. Honolulu: University of Hawai'i Press.</li>
+        <li>Rickett, W.A. (1985) Guanzi: Political, Economic, and Philosophical Essays from Early China. Volume 1. Princeton: Princeton University Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="state-of-qi"></div>
+      <a class="mini-connections-more" href="/connections#state-of-qi">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/state-of-chu"><img src="/logos/State%20of%20Chu.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">State of Chu</span><span class="related-card-dates">1030 BCE – 223 BCE</span></a><a class="related-card" href="/empire/state-of-qin"><img src="/logos/State%20of%20Qin.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">State of Qin</span><span class="related-card-dates">897 BCE – 221 BCE</span></a><a class="related-card" href="/empire/saka"><img src="/logos/Saka.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Saka</span><span class="related-card-dates">700 BCE – 100 BCE</span></a><a class="related-card" href="/empire/western-zhou"><img src="/logos/Western%20Zhou.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Western Zhou</span><span class="related-card-dates">1046 BCE – 771 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/united-kingdom-of-israel"><span class="related-card-label">← Earlier</span><img src="/logos/United%20Kingdom%20of%20Israel.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">United Kingdom of Israel</span><span class="related-card-dates">1047 BCE – 930 BCE</span></a><a class="related-card" href="/empire/western-zhou"><span class="related-card-label">Later →</span><img src="/logos/Western%20Zhou.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Western Zhou</span><span class="related-card-dates">1046 BCE – 771 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="State of Qi",slug="state-of-qi",url="https://the-epoch-institute.org/empire/state-of-qi";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring State of Qi on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/state-of-qi #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/state-of-qi"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"State of Qi",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

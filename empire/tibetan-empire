@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tibetan Empire — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The empire of the Yarlung kings that united the Tibetan plateau, rivalled Tang China for the Silk Road and brought Buddhism and writing to Tibet.">
+<meta property="og:title" content="Tibetan Empire — The Epoch Institute">
+<meta property="og:description" content="The empire of the Yarlung kings that united the Tibetan plateau, rivalled Tang China for the Silk Road and brought Buddhism and writing to Tibet.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/tibetan-empire">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/tibetan-empire.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/tibetan-empire.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/tibetan-empire">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Tibetan%20Empire" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Tibetan%20Empire.png" alt="Tibetan Empire" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Tibetan Empire</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">786 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">224 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">618 CE – 842 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Lhasa; the court also moved between seasonal camps</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Namri Songtsen and his son <a class="enc-link" href="/encyclopedia#songtsen-gampo">Songtsen Gampo</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Yarlung chiefdom; Zhangzhung</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Era of Fragmentation (Guge and other Tibetan kingdoms)</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Yarlung kings united the Tibetan plateau in the 7th century and ruled it from Lhasa as divine emperors (tsenpo).</li><li>Its cavalry fought <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> for the <a class="enc-link" href="/encyclopedia#tarim-basin">Tarim Basin</a> and <a class="enc-link" href="/encyclopedia#gansu-corridor">Hexi Corridor</a>, and briefly occupied <a class="enc-link" href="/encyclopedia#changan">Chang'an</a> in 763.</li><li>It gave <a class="enc-link" href="/encyclopedia#tibet">Tibet</a> its script and made <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> the religion of the court, founding Samye monastery around 779.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The peace treaty <a class="enc-link" href="/encyclopedia#tibet">Tibet</a> swore with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> in 821–822 was carved in Tibetan and Chinese on a stone pillar that still stands in front of the Jokhang temple in Lhasa.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Tibetan Empire"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Tibetan Empire over time, peaking in 786 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L71.4 106.4 L93.9 93.0 L164.6 79.6 L187.1 66.2 L257.9 79.6 L296.4 93.0 L315.7 93.0 L434.6 93.0 L460.4 79.6 L486.1 39.4 L560.0 26.0 L585.7 52.8 L672.5 66.2 L740.0 146.6 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L71.4 106.4 L93.9 93.0 L164.6 79.6 L187.1 66.2 L257.9 79.6 L296.4 93.0 L315.7 93.0 L434.6 93.0 L460.4 79.6 L486.1 39.4 L560.0 26.0 L585.7 52.8 L672.5 66.2 L740.0 146.6"/><circle class="rf-peak" cx="560.0" cy="26.0" r="5"/><text class="rf-peak-label" x="560.0" y="16.0" text-anchor="middle">Peak 786 CE</text><g class="rf-ev"><line x1="93.9" x2="93.9" y1="160" y2="166"/><circle cx="93.9" cy="160" r="8"/><text x="93.9" y="164" text-anchor="middle">1</text><title>641: Princess Wencheng of Tang China arrives as a bride for the Tibetan royal house</title></g><g class="rf-ev"><line x1="164.6" x2="164.6" y1="160" y2="166"/><circle cx="164.6" cy="160" r="8"/><text x="164.6" y="164" text-anchor="middle">2</text><title>663: Tibet conquers the Tuyuhun around Lake Kokonor</title></g><g class="rf-ev"><line x1="187.1" x2="187.1" y1="160" y2="166"/><circle cx="187.1" cy="160" r="8"/><text x="187.1" y="164" text-anchor="middle">3</text><title>670: Tibetans defeat a Tang army at the Dafei River and overrun the Tarim Basin</title></g><g class="rf-ev"><line x1="486.1" x2="486.1" y1="160" y2="166"/><circle cx="486.1" cy="160" r="8"/><text x="486.1" y="164" text-anchor="middle">4</text><title>763: A Tibetan army occupies the Tang capital Chang'an for about two weeks</title></g><g class="rf-ev"><line x1="537.5" x2="537.5" y1="160" y2="166"/><circle cx="537.5" cy="160" r="8"/><text x="537.5" y="164" text-anchor="middle">5</text><title>c. 779: Trisong Detsen founds Samye monastery</title></g><g class="rf-ev"><line x1="672.5" x2="672.5" y1="160" y2="166"/><circle cx="672.5" cy="160" r="8"/><text x="672.5" y="164" text-anchor="middle">6</text><title>821–822: Tibet and Tang China swear a peace treaty, recorded on a pillar in Lhasa</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">7</text><title>842: Emperor Udumtsen (Langdarma) is assassinated and the empire breaks apart</title></g><text class="rf-axis" x="20" y="200">618 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">842 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">641</span><span class="rf-text">Princess Wencheng of <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> arrives as a bride for the Tibetan royal house</span></li><li><span class="rf-year">663</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#tibet">Tibet</a> conquers the Tuyuhun around Lake <a class="enc-link" href="/encyclopedia#qinghai-lake">Kokonor</a></span></li><li><span class="rf-year">670</span><span class="rf-text">Tibetans defeat a Tang army at the Dafei River and overrun the <a class="enc-link" href="/encyclopedia#tarim-basin">Tarim Basin</a></span></li><li><span class="rf-year">763</span><span class="rf-text">A Tibetan army occupies the Tang capital <a class="enc-link" href="/encyclopedia#changan">Chang'an</a> for about two weeks</span></li><li><span class="rf-year">c. 779</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#trisong-detsen">Trisong Detsen</a> founds Samye monastery</span></li><li><span class="rf-year">821–822</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#tibet">Tibet</a> and <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> swear a peace treaty, recorded on a pillar in Lhasa</span></li><li><span class="rf-year">842</span><span class="rf-text">Emperor Udumtsen (Langdarma) is assassinated and the empire breaks apart</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#songtsen-gampo"><img src="/images/encyclopedia/songtsen-gampo.jpg" alt="Songtsen Gampo" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#songtsen-gampo">Songtsen Gampo</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:The_King_Songtsen_Gampo.jpg" target="_blank" rel="noopener">Bhavna Sayana, CC BY 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Tibetan Empire grew out of the Yarlung valley in south-central <a class="enc-link" href="/encyclopedia#tibet">Tibet</a>, where a line of chiefs later remembered as the first kings of Tibet held lands south of the Yarlung Tsangpo river. In the late sixth and early seventh centuries Namri Songtsen, allied with clan leaders who had deserted rival lords, extended Yarlung authority over much of central Tibet. The chronology of this period is uncertain, and the year 618 used here is conventional. Namri Songtsen was poisoned, and his son <a class="enc-link" href="/encyclopedia#songtsen-gampo">Songtsen Gampo</a>, who probably came to the throne as a youth around 618 or somewhat later, suppressed revolts by the conquered clans and made Lhasa his seat. He brought the Sumpa of the north-east under his rule and, in the 640s, absorbed the kingdom of Zhangzhung in western Tibet, partly through a marriage alliance and partly by force. In 634 he sent his first embassy to <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a>, and after a Tibetan attack on the Tang frontier at Songzhou in 638 the emperor Taizong agreed to a marriage alliance: Princess Wencheng arrived in Tibet in 641. Tibetan tradition adds a Nepalese wife, Bhrikuti, whose historicity is debated. When Songtsen Gampo died around 649, Tibet was a single kingdom stretching across much of the plateau and recognised by its neighbours as a major power.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <div class="profile-section-body"><p>Imperial <a class="enc-link" href="/encyclopedia#tibet">Tibet</a> was a society of aristocratic clans, free commoners and dependent households bound to estates. Great families such as the Gar, Nanam, Dro, Tsepong and Chims held land, supplied ministers and royal consorts, and competed for influence at court. The economy rested on barley farming in the river valleys of central Tibet and on the herding of yaks, sheep, goats and horses on the high pastures, and the state recorded both through <a class="enc-link" href="/encyclopedia#census">censuses</a> and tax registers. Conquest added wealth: tribute from the Tuyuhun, Nanzhao and the oasis cities of the <a class="enc-link" href="/encyclopedia#tarim-basin">Tarim Basin</a>, and from the 760s the farmland and trade of the <a class="enc-link" href="/encyclopedia#gansu-corridor">Hexi Corridor</a> and Dunhuang. Tibet exported horses, musk and gold, and its control of routes between <a class="enc-link" href="/encyclopedia#china">China</a>, <a class="enc-link" href="/encyclopedia#india">India</a> and <a class="enc-link" href="/encyclopedia#central-asia">Central Asia</a> brought <a class="enc-link" href="/encyclopedia#silk">silk</a> and other luxuries to the court. Religion combined the cult of the divine king with rites performed by priests whom later sources call Bon, including elaborate royal funerals in the tombs of the Chongye valley. <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> arrived from China, <a class="enc-link" href="/encyclopedia#nepal">Nepal</a> and India, first through royal temples such as the Jokhang in Lhasa, traditionally founded in <a class="enc-link" href="/encyclopedia#songtsen-gampo">Songtsen Gampo</a>'s reign, and later through monasteries endowed with land and households. <a class="enc-link" href="/encyclopedia#manuscript">Manuscripts</a> from Dunhuang show officials, soldiers and monks writing contracts, letters and prayers in Tibetan.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#an-lushan-rebellion"><img src="/images/encyclopedia/an-lushan-rebellion.jpg" alt="An Lushan Rebellion" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#an-lushan-rebellion">An Lushan Rebellion</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:An_Lushan_Rebellion.png" target="_blank" rel="noopener">SY, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The empire's strength lay in its army, raised through military districts called 'thousand-districts' (<em>stong sde</em>), grouped into large regional divisions known as 'horns' (<em>ru</em>), each district owing a fixed number of soldiers. Tibetan cavalry, protected by chain mail that Chinese observers described with respect, fought alongside levies from conquered peoples. Under the minister Gar Tongtsen and his sons, <a class="enc-link" href="/encyclopedia#tibet">Tibet</a> conquered the Tuyuhun around Lake <a class="enc-link" href="/encyclopedia#qinghai-lake">Kokonor</a> in 663, and in 670 the general Gar Trinring Tsendro defeated a Tang army under Xue Rengui at the Dafei River. In the same years Tibetan forces with Western Turkic allies overran the Tang <a class="enc-link" href="/encyclopedia#protectorate">protectorate</a> in the <a class="enc-link" href="/encyclopedia#tarim-basin">Tarim Basin</a>, which the Tang retook in 692. Rivalry with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a>, the Turks and the <a class="enc-link" href="/encyclopedia#arabs">Arabs</a> continued in the Pamirs, where the Tang general <a class="enc-link" href="/encyclopedia#gao">Gao</a> Xianzhi's expedition of 747 seized Little Balur, a Tibetan ally. The <a class="enc-link" href="/encyclopedia#an-lushan-rebellion">An Lushan Rebellion</a> (755–763) opened the way to the greatest Tibetan victories: in 763 an army briefly occupied the Tang capital <a class="enc-link" href="/encyclopedia#changan">Chang'an</a> and installed a puppet emperor, and over the next two decades Tibet took the <a class="enc-link" href="/encyclopedia#gansu-corridor">Hexi Corridor</a>, capturing Dunhuang around 786. From 752 the kingdom of Nanzhao in Yunnan was a Tibetan <a class="enc-link" href="/encyclopedia#vassal">vassal</a> and ally, but in 794 it changed sides and inflicted a heavy defeat on Tibetan forces.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <div class="profile-section-body"><p>At the head of the state stood the emperor, the <em>tsenpo</em>, regarded as a divine son descended from the heavens, whose person bound the clans together. In practice power was shared with a council of ministers led by a great minister (<em>blon chen</em>), drawn from the leading clans. For long periods the throne was overshadowed: the Gar clan dominated government after <a class="enc-link" href="/encyclopedia#songtsen-gampo">Songtsen Gampo</a>'s death until Tridu Songtsen destroyed it in 698, and several emperors came to the throne as children under regents and powerful queen mothers. Royal assemblies, held each summer and winter, settled matters of taxation, conscription and law, and are recorded year by year in the <em>Old Tibetan Annals</em>, which begin around 650. The state conducted <a class="enc-link" href="/encyclopedia#census">censuses</a>, kept land and tax registers and issued edicts, some of them inscribed on stone pillars such as the Zhol pillar in Lhasa, which records the services of the minister Takdra Lukhong. Writing was central to this administration: a script derived from Indian models, attributed by tradition to the minister Thonmi Sambhota in Songtsen Gampo's reign, was used for laws, correspondence and military orders. Conquered regions such as Dunhuang were organised into military districts staffed by Tibetan and local officials, while <a class="enc-link" href="/encyclopedia#vassal">vassal</a> rulers kept their thrones in return for tribute and troops.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#trisong-detsen"><img src="/images/encyclopedia/trisong-detsen.jpg" alt="Trisong Detsen" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#trisong-detsen">Trisong Detsen</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Emperor_Trisong_Detsen.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Tibetan Empire shaped the political map of <a class="enc-link" href="/encyclopedia#inner-asia">Inner Asia</a> for two centuries. Its wars with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a>, fought from the <a class="enc-link" href="/encyclopedia#qinghai-lake">Kokonor</a> to the <a class="enc-link" href="/encyclopedia#tarim-basin">Tarim Basin</a> and Yunnan, drained Tang resources, and its occupation of the <a class="enc-link" href="/encyclopedia#gansu-corridor">Hexi Corridor</a> cut <a class="enc-link" href="/encyclopedia#china">China</a>'s direct overland link with <a class="enc-link" href="/encyclopedia#central-asia">Central Asia</a> for some eighty years. <a class="enc-link" href="/encyclopedia#tibet">Tibet</a> also became, for the first time, a single cultural sphere. The Tibetan script, still in use today, and a standardised written language spread across the plateau and into conquered territories, and the Dunhuang <a class="enc-link" href="/encyclopedia#manuscript">manuscripts</a>, among them the <em>Old Tibetan Annals</em> and the <em>Old Tibetan Chronicle</em>, form the oldest substantial body of historical writing in Tibetan. Royal patronage made Tibet a Buddhist land. <a class="enc-link" href="/encyclopedia#trisong-detsen">Trisong Detsen</a> invited the Indian scholar Shantarakshita and, by tradition, the tantric master Padmasambhava, founded Samye monastery around 779 and, according to later accounts, presided over a debate around 792–794 in which Indian <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> prevailed over Chinese Chan teaching. In the early ninth century translators standardised the terms used to render <a class="enc-link" href="/encyclopedia#sanskrit">Sanskrit</a> texts, compiling the lexicon known as the <em>Mahavyutpatti</em>. Later Tibetans remembered <a class="enc-link" href="/encyclopedia#songtsen-gampo">Songtsen Gampo</a>, Trisong Detsen and Ralpachen as the three <a class="enc-link" href="/encyclopedia#dharma">Dharma</a> kings, and the memory of the empire underpinned the legitimacy of later Tibetan rulers and lineages.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#zhang-yichao"><img src="/images/encyclopedia/zhang-yichao.jpg" alt="Zhang Yichao" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#zhang-yichao">Zhang Yichao</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Dunhuang_Zhang_Yichao_army.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>By the early ninth century the empire's resources were stretched by wars on several fronts and by the cost of supporting the Buddhist establishment, which had gained tax-exempt estates and growing influence at court. Under Ralpachen (r. 815–838) <a class="enc-link" href="/encyclopedia#tibet">Tibet</a> made peace with its main rivals: a treaty with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> was sworn in 821–822, and its text, in Tibetan and Chinese, was carved on a pillar that still stands before the Jokhang in Lhasa; a settlement with the <a class="enc-link" href="/encyclopedia#uyghurs">Uyghurs</a> was reached at about the same time. Ralpachen, a lavish patron of <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a>, was murdered in 838, and his brother Udumtsen, known to later tradition as Langdarma, succeeded him. Later Buddhist histories portray Langdarma as a persecutor of the faith who was assassinated by the monk Lhalung Palgyi Dorje, traditionally in 842; modern historians accept that he withdrew state support from the monasteries and was killed, but treat the details with caution. His death left two claimants, Ösung and Yumten, backed by rival factions, and central government collapsed. Tibetan commanders in the north-east fought one another, Dunhuang was retaken by the local leader <a class="enc-link" href="/encyclopedia#zhang-yichao">Zhang Yichao</a> in 848, and revolts broke out in central Tibet from 869. The plateau entered the long Era of Fragmentation, while descendants of the royal line founded small kingdoms such as Guge in western Tibet.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Tibetan Empire united the Tibetan plateau for the first time and for two centuries contested <a class="enc-link" href="/encyclopedia#inner-asia">Inner Asia</a> with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a>, the Turks and the <a class="enc-link" href="/encyclopedia#arabs">Arabs</a>, while its kings gave <a class="enc-link" href="/encyclopedia#tibet">Tibet</a> a script, a written language and the royal patronage of <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> that came to define Tibetan civilisation.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Beckwith, C.I. (1987) The Tibetan Empire in Central Asia: A History of the Struggle for Great Power among Tibetans, Turks, Arabs, and Chinese during the Early Middle Ages. Princeton: Princeton University Press.</li>
+        <li>Dotson, B. (2009) The Old Tibetan Annals: An Annotated Translation of Tibet's First History. Vienna: Verlag der Österreichischen Akademie der Wissenschaften.</li>
+        <li>Kapstein, M.T. (2006) The Tibetans. Malden, MA: Blackwell.</li>
+        <li>Richardson, H.E. (1985) A Corpus of Early Tibetan Inscriptions. London: Royal Asiatic Society.</li>
+        <li>Snellgrove, D. and Richardson, H. (1968) A Cultural History of Tibet. London: Weidenfeld &amp; Nicolson.</li>
+        <li>Van Schaik, S. (2011) Tibet: A History. New Haven: Yale University Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="tibetan-empire"></div>
+      <a class="mini-connections-more" href="/connections#tibetan-empire">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/tang-dynasty"><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a><a class="related-card" href="/empire/silla"><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/khazar-khaganate"><img src="/logos/Khazar%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khazar Khaganate</span><span class="related-card-dates">650 CE – 969 CE</span></a><a class="related-card" href="/empire/balhae"><img src="/logos/Balhae.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Balhae</span><span class="related-card-dates">698 CE – 926 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/tang-dynasty"><span class="related-card-label">← Earlier</span><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a><a class="related-card" href="/empire/rashidun-caliphate"><span class="related-card-label">Later →</span><img src="/logos/Rashidun%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rashidun Caliphate</span><span class="related-card-dates">632 CE – 661 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Tibetan Empire",slug="tibetan-empire",url="https://the-epoch-institute.org/empire/tibetan-empire";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Tibetan Empire on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/tibetan-empire #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/tibetan-empire"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Tibetan Empire",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

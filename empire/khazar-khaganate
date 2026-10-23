@@ -131,8 +131,8 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/tang-dynasty"><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a><a class="related-card" href="/empire/gokturk-empire"><img src="/logos/Gokturk%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Gokturk Empire</span><span class="related-card-dates">546 CE – 744 CE</span></a><a class="related-card" href="/empire/song-dynasty"><img src="/logos/Song%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Song Dynasty</span><span class="related-card-dates">960 CE – 1279 CE</span></a><a class="related-card" href="/empire/mongol-empire"><img src="/logos/Mongol%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mongol Empire</span><span class="related-card-dates">1206 CE – 1368 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/silla"><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/tang-dynasty"><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a><a class="related-card" href="/empire/balhae"><img src="/logos/Balhae.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Balhae</span><span class="related-card-dates">698 CE – 926 CE</span></a><a class="related-card" href="/empire/tibetan-empire"><img src="/logos/Tibetan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tibetan Empire</span><span class="related-card-dates">618 CE – 842 CE</span></a></div>
       <div class="related-prevnext"><a class="related-card" href="/empire/rashidun-caliphate"><span class="related-card-label">← Earlier</span><img src="/logos/Rashidun%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rashidun Caliphate</span><span class="related-card-dates">632 CE – 661 CE</span></a><a class="related-card" href="/empire/srivijaya-empire"><span class="related-card-label">Later →</span><img src="/logos/Srivijaya%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Srivijaya Empire</span><span class="related-card-dates">650 CE – 1377 CE</span></a></div>
     </section>
 
@@ -148,10 +148,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

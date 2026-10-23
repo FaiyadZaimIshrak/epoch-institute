@@ -57,7 +57,7 @@
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#alexandria">Alexandria</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#ptolemy-i-soter">Ptolemy I Soter</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/macedonian-empire">Macedonian Empire</a></span></div>
-          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Roman <a class="enc-link" href="/encyclopedia#egypt">Egypt</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/roman-egypt">Roman Egypt</a></span></div>
         </div>
         <p class="empire-meta">5 min read · Last reviewed October 2026</p>
       </div>
@@ -133,8 +133,8 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/kushite-empire"><img src="/logos/Kushite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushite Empire</span><span class="related-card-dates">1070 BCE – 350 CE</span></a><a class="related-card" href="/empire/garamantian-empire"><img src="/logos/Garamantian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Garamantian Empire</span><span class="related-card-dates">1000 BCE – 700 CE</span></a><a class="related-card" href="/empire/punic-empire"><img src="/logos/Punic%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Punic Empire</span><span class="related-card-dates">814 BCE – 146 BCE</span></a><a class="related-card" href="/empire/egyptian-empire-new-kingdom"><img src="/logos/Egyptian%20Empire%20New%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Egyptian Empire New Kingdom</span><span class="related-card-dates">1550 BCE – 1070 BCE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/kushite-empire"><img src="/logos/Kushite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushite Empire</span><span class="related-card-dates">1070 BCE – 350 CE</span></a><a class="related-card" href="/empire/garamantian-empire"><img src="/logos/Garamantian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Garamantian Empire</span><span class="related-card-dates">1000 BCE – 700 CE</span></a><a class="related-card" href="/empire/punic-empire"><img src="/logos/Punic%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Punic Empire</span><span class="related-card-dates">814 BCE – 146 BCE</span></a><a class="related-card" href="/empire/numidia"><img src="/logos/Numidia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Numidia</span><span class="related-card-dates">202 BCE – 46 BCE</span></a></div>
       <div class="related-prevnext"><a class="related-card" href="/empire/macedonian-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Macedonian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Macedonian Empire</span><span class="related-card-dates">336 BCE – 323 BCE</span></a><a class="related-card" href="/empire/maurya-empire"><span class="related-card-label">Later →</span><img src="/logos/Maurya%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Maurya Empire</span><span class="related-card-dates">322 BCE – 185 BCE</span></a></div>
     </section>
 
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/elamite-confederation"><img src="/logos/Elamite%20Confederation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Elamite Confederation</span><span class="related-card-dates">2700 BCE – 539 BCE</span></a><a class="related-card" href="/empire/assyrian-empire"><img src="/logos/Assyrian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Assyrian Empire</span><span class="related-card-dates">2025 BCE – 609 BCE</span></a><a class="related-card" href="/empire/hittite-empire"><img src="/logos/Hittite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hittite Empire</span><span class="related-card-dates">1650 BCE – 1178 BCE</span></a><a class="related-card" href="/empire/mitanni-empire"><img src="/logos/Mitanni%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mitanni Empire</span><span class="related-card-dates">1590 BCE – 1250 BCE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/assyrian-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Assyrian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Assyrian Empire</span><span class="related-card-dates">2025 BCE – 609 BCE</span></a><a class="related-card" href="/empire/hittite-empire"><span class="related-card-label">Later →</span><img src="/logos/Hittite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hittite Empire</span><span class="related-card-dates">1650 BCE – 1178 BCE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/elamite-confederation"><img src="/logos/Elamite%20Confederation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Elamite Confederation</span><span class="related-card-dates">2700 BCE – 539 BCE</span></a><a class="related-card" href="/empire/assyrian-empire"><img src="/logos/Assyrian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Assyrian Empire</span><span class="related-card-dates">2025 BCE – 609 BCE</span></a><a class="related-card" href="/empire/byblos"><img src="/logos/Byblos.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byblos</span><span class="related-card-dates">2600 BCE – 332 BCE</span></a><a class="related-card" href="/empire/dilmun"><img src="/logos/Dilmun.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dilmun</span><span class="related-card-dates">2200 BCE – 538 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/assyrian-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Assyrian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Assyrian Empire</span><span class="related-card-dates">2025 BCE – 609 BCE</span></a><a class="related-card" href="/empire/kingdom-of-ugarit"><span class="related-card-label">Later →</span><img src="/logos/Kingdom%20of%20Ugarit.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Ugarit</span><span class="related-card-dates">1800 BCE – 1185 BCE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/almoravid-empire"><img src="/logos/Almoravid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Almoravid Empire</span><span class="related-card-dates">1040 CE – 1147 CE</span></a><a class="related-card" href="/empire/almohad-caliphate"><img src="/logos/Almohad%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Almohad Caliphate</span><span class="related-card-dates">1121 CE – 1269 CE</span></a><a class="related-card" href="/empire/garamantian-empire"><img src="/logos/Garamantian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Garamantian Empire</span><span class="related-card-dates">1000 BCE – 700 CE</span></a><a class="related-card" href="/empire/kushite-empire"><img src="/logos/Kushite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushite Empire</span><span class="related-card-dates">1070 BCE – 350 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/khmer-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Khmer%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khmer Empire</span><span class="related-card-dates">802 CE – 1431 CE</span></a><a class="related-card" href="/empire/song-dynasty"><span class="related-card-label">Later →</span><img src="/logos/Song%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Song Dynasty</span><span class="related-card-dates">960 CE – 1279 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/makuria"><img src="/logos/Makuria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Makuria</span><span class="related-card-dates">450 CE – 1365 CE</span></a><a class="related-card" href="/empire/almoravid-empire"><img src="/logos/Almoravid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Almoravid Empire</span><span class="related-card-dates">1040 CE – 1147 CE</span></a><a class="related-card" href="/empire/almohad-caliphate"><img src="/logos/Almohad%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Almohad Caliphate</span><span class="related-card-dates">1121 CE – 1269 CE</span></a><a class="related-card" href="/empire/hafsid-sultanate"><img src="/logos/Hafsid%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hafsid Sultanate</span><span class="related-card-dates">1229 CE – 1574 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/county-of-hainaut"><span class="related-card-label">← Earlier</span><img src="/logos/County%20of%20Hainaut.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">County of Hainaut</span><span class="related-card-dates">898 CE – 1795 CE</span></a><a class="related-card" href="/empire/kingdom-of-leon"><span class="related-card-label">Later →</span><img src="/logos/Kingdom%20of%20Le%C3%B3n.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of León</span><span class="related-card-dates">910 CE – 1230 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

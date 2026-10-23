@@ -131,9 +131,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/khmer-empire"><img src="/logos/Khmer%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khmer Empire</span><span class="related-card-dates">802 CE – 1431 CE</span></a><a class="related-card" href="/empire/majapahit-empire"><img src="/logos/Majapahit%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Majapahit Empire</span><span class="related-card-dates">1293 CE – 1527 CE</span></a><a class="related-card" href="/empire/gupta-empire"><img src="/logos/Gupta%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Gupta Empire</span><span class="related-card-dates">240 CE – 550 CE</span></a><a class="related-card" href="/empire/maratha-empire"><img src="/logos/Maratha%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Maratha Empire</span><span class="related-card-dates">1674 CE – 1818 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/khazar-khaganate"><span class="related-card-label">← Earlier</span><img src="/logos/Khazar%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khazar Khaganate</span><span class="related-card-dates">650 CE – 969 CE</span></a><a class="related-card" href="/empire/umayyad-caliphate"><span class="related-card-label">Later →</span><img src="/logos/Umayyad%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Umayyad Caliphate</span><span class="related-card-dates">661 CE – 750 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/sunda-kingdom"><img src="/logos/Sunda%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sunda Kingdom</span><span class="related-card-dates">669 CE – 1579 CE</span></a><a class="related-card" href="/empire/udaipur-state"><img src="/logos/Udaipur%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Udaipur State</span><span class="related-card-dates">728 CE – 1949 CE</span></a><a class="related-card" href="/empire/khmer-empire"><img src="/logos/Khmer%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khmer Empire</span><span class="related-card-dates">802 CE – 1431 CE</span></a><a class="related-card" href="/empire/pagan-kingdom"><img src="/logos/Pagan%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pagan Kingdom</span><span class="related-card-dates">849 CE – 1297 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/khazar-khaganate"><span class="related-card-label">← Earlier</span><img src="/logos/Khazar%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khazar Khaganate</span><span class="related-card-dates">650 CE – 969 CE</span></a><a class="related-card" href="/empire/kingdom-of-northumbria"><span class="related-card-label">Later →</span><img src="/logos/Kingdom%20of%20Northumbria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Northumbria</span><span class="related-card-dates">654 CE – 954 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -148,10 +148,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

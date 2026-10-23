@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eastern Jin — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The Jin dynasty in exile at Jiankang, where northern aristocrats preserved Chinese court culture and turned back the Former Qin at the Fei River in 383.">
+<meta property="og:title" content="Eastern Jin — The Epoch Institute">
+<meta property="og:description" content="The Jin dynasty in exile at Jiankang, where northern aristocrats preserved Chinese court culture and turned back the Former Qin at the Fei River in 383.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/eastern-jin">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/eastern-jin.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/eastern-jin.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/eastern-jin">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Eastern%20Jin" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Eastern%20Jin.png" alt="Eastern Jin" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Eastern Jin</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">385 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">103 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">317 CE – 420 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Jiankang (modern Nanjing)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Sima Rui (Emperor Yuan of Jin)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Western Jin</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Liu <a class="enc-link" href="/encyclopedia#song-dynasty">Song</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Eastern Jin carried on the Jin dynasty at Jiankang (Nanjing) after northern <a class="enc-link" href="/encyclopedia#china">China</a> fell to the Xiongnu-led Han Zhao in 311–316.</li><li>Power lay with great aristocratic clans such as the Wang, Huan and Xie, while the emperors were usually weak.</li><li>Its era saw Wang Xizhi's <a class="enc-link" href="/encyclopedia#calligraphy">calligraphy</a>, Tao Yuanming's poetry and the victory over the Former <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> at the Fei River in 383.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Contemporaries said that 'the Wang and the Sima share the realm', so great was the power of the Wang clan of Langye at the court of the first Eastern Jin emperor.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Eastern Jin"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Eastern Jin over time, peaking in 385 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 106.4 L55.0 119.8 L229.7 79.6 L292.6 66.2 L383.5 93.0 L411.5 93.0 L481.4 39.4 L495.3 26.0 L572.2 66.2 L593.2 93.0 L621.2 133.2 L628.2 106.4 L670.1 66.2 L719.0 39.4 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 106.4 L55.0 119.8 L229.7 79.6 L292.6 66.2 L383.5 93.0 L411.5 93.0 L481.4 39.4 L495.3 26.0 L572.2 66.2 L593.2 93.0 L621.2 133.2 L628.2 106.4 L670.1 66.2 L719.0 39.4 L740.0 160.0"/><circle class="rf-peak" cx="495.3" cy="26.0" r="5"/><text class="rf-peak-label" x="495.3" y="16.0" text-anchor="middle">Peak 385 CE</text><g class="rf-ev"><line x1="27.0" x2="27.0" y1="160" y2="166"/><circle cx="27.0" cy="160" r="8"/><text x="27.0" y="164" text-anchor="middle">1</text><title>318: Sima Rui takes the imperial title at Jiankang as Emperor Yuan</title></g><g class="rf-ev"><line x1="229.7" x2="229.7" y1="160" y2="166"/><circle cx="229.7" cy="160" r="8"/><text x="229.7" y="164" text-anchor="middle">2</text><title>347: Huan Wen conquers the Cheng Han state in Sichuan</title></g><g class="rf-ev"><line x1="271.7" x2="271.7" y1="160" y2="166"/><circle cx="271.7" cy="160" r="8"/><text x="271.7" y="164" text-anchor="middle">3</text><title>353: Wang Xizhi writes his preface at the Orchid Pavilion gathering</title></g><g class="rf-ev"><line x1="481.4" x2="481.4" y1="160" y2="166"/><circle cx="481.4" cy="160" r="8"/><text x="481.4" y="164" text-anchor="middle">4</text><title>383: Jin forces defeat the Former Qin at the Battle of Fei River</title></g><g class="rf-ev"><line x1="593.2" x2="593.2" y1="160" y2="166"/><circle cx="593.2" cy="160" r="8"/><text x="593.2" y="164" text-anchor="middle">5</text><title>399: Sun En's Daoist rebellion breaks out in the coastal south</title></g><g class="rf-ev"><line x1="621.2" x2="621.2" y1="160" y2="166"/><circle cx="621.2" cy="160" r="8"/><text x="621.2" y="164" text-anchor="middle">6</text><title>403: Huan Xuan usurps the throne as emperor of Chu</title></g><g class="rf-ev"><line x1="719.0" x2="719.0" y1="160" y2="166"/><circle cx="719.0" cy="160" r="8"/><text x="719.0" y="164" text-anchor="middle">7</text><title>417: Liu Yu's army conquers the Later Qin and takes Chang'an</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>420: Emperor Gong abdicates to Liu Yu, founder of the Liu Song</title></g><text class="rf-axis" x="20" y="200">317 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">420 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">318</span><span class="rf-text">Sima Rui takes the imperial title at Jiankang as Emperor Yuan</span></li><li><span class="rf-year">347</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#huan-wen">Huan Wen</a> conquers the Cheng Han state in <a class="enc-link" href="/encyclopedia#sichuan">Sichuan</a></span></li><li><span class="rf-year">353</span><span class="rf-text">Wang Xizhi writes his preface at the Orchid Pavilion gathering</span></li><li><span class="rf-year">383</span><span class="rf-text">Jin forces defeat the Former <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> at the <a class="enc-link" href="/encyclopedia#battle-of-fei-river">Battle of Fei River</a></span></li><li><span class="rf-year">399</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#sun-en">Sun En</a>'s Daoist rebellion breaks out in the coastal south</span></li><li><span class="rf-year">403</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#huan-xuan">Huan Xuan</a> usurps the throne as emperor of Chu</span></li><li><span class="rf-year">417</span><span class="rf-text">Liu Yu's army conquers the Later <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> and takes <a class="enc-link" href="/encyclopedia#changan">Chang'an</a></span></li><li><span class="rf-year">420</span><span class="rf-text">Emperor Gong abdicates to Liu Yu, founder of the Liu <a class="enc-link" href="/encyclopedia#song-dynasty">Song</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#luoyang"><img src="/images/encyclopedia/luoyang.jpg" alt="Luoyang" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#luoyang">Luoyang</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Longmen_Grottoes_3.jpg" target="_blank" rel="noopener">Rialfver Original uploader was Rialfver at nl.wikipedia, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Eastern Jin was the continuation, south of the <a class="enc-link" href="/encyclopedia#yangtze-river">Yangtze</a>, of the <a class="enc-link" href="/encyclopedia#western-jin-dynasty">Western Jin dynasty</a> founded by the Sima family in 266. After the <a class="enc-link" href="/encyclopedia#war-of-the-eight-princes">War of the Eight Princes</a> (291–306) wrecked the Western Jin, the Xiongnu-led Han Zhao state sacked <a class="enc-link" href="/encyclopedia#luoyang">Luoyang</a> in 311, capturing Emperor Huai, and took <a class="enc-link" href="/encyclopedia#changan">Chang'an</a> in 316, capturing Emperor Min. Sima Rui, Prince of Langye, had been posted to Jianye in 307 on the advice of the aristocrat Wang Dao, and had won the cooperation of the <a class="enc-link" href="/encyclopedia#gentry">gentry</a> families of the lower Yangtze. In 317 he proclaimed himself King of Jin, and in 318, after news of Emperor Min's death, he took the imperial title at Jiankang (modern Nanjing), as Jianye had been renamed in 313; he is known as Emperor Yuan. The Wang clan of Langye, led by Wang Dao at court and his cousin Wang Dun in command of the middle Yangtze, was so dominant that contemporaries said 'the Wang and the Sima share the realm'. Hundreds of thousands of northern refugees, from great aristocratic lineages to peasant families, followed the court south in successive waves, settling around Jiankang, Jingkou and the middle Yangtze. The new regime rested on an uneasy partnership between émigré northern clans, the established southern gentry and a weak imperial house.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#guangzhou"><img src="/images/encyclopedia/guangzhou.jpg" alt="Guangzhou" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#guangzhou">Guangzhou</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Canton_Tower_20241027.jpg" target="_blank" rel="noopener">Tim Wu, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The migrations transformed southern <a class="enc-link" href="/encyclopedia#china">China</a>. Northern émigrés were at first entered on separate 'white registers' and settled in 'lodged' <a class="enc-link" href="/encyclopedia#commandery">commanderies</a> and counties named after their abandoned homes in the north, which kept them exempt from regular taxes; repeated campaigns of <em>tuduan</em>, 'registration by actual residence', such as <a class="enc-link" href="/encyclopedia#huan-wen">Huan Wen</a>'s of 364, sought to bring them onto the ordinary tax rolls. Great families, both northern and southern, built up extensive estates in the <a class="enc-link" href="/encyclopedia#yangtze-river">Yangtze</a> delta and Zhejiang, worked by tenants and dependants, and cleared new land in hills and wetlands, laying foundations for the later economic dominance of the south. <a class="enc-link" href="/encyclopedia#rice">Rice</a> farming, <a class="enc-link" href="/encyclopedia#silk">silk</a>, salt and river commerce sustained Jiankang, which grew into a great city, and <a class="enc-link" href="/encyclopedia#guangzhou">Guangzhou</a> handled maritime trade with <a class="enc-link" href="/encyclopedia#southeast-asia">Southeast Asia</a> and beyond. Intellectual life was led by aristocrats devoted to <em>qingtan</em>, 'pure conversation' on metaphysical questions drawn from the <em>Laozi</em>, <em>Zhuangzi</em> and <em><a class="enc-link" href="/encyclopedia#yijing">Yijing</a></em>, as recorded in the later <em>Shishuo xinyu</em>. <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> spread among the elite through monks such as Zhi Dun and Huiyuan, whose community on Mount Lu became a major centre, while Daoism flourished in the Shangqing revelations received near Maoshan in the 360s and in the alchemical writings of Ge Hong.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#battle-of-fei-river"><img src="/images/encyclopedia/battle-of-fei-river.jpg" alt="Battle of Fei River" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#battle-of-fei-river">Battle of Fei River</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Battle_of_Fei_River.png" target="_blank" rel="noopener">SY, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Eastern Jin never had a large standing army under direct court control. Military power lay with regional commanders, above all in the middle <a class="enc-link" href="/encyclopedia#yangtze-river">Yangtze</a> province of Jing, whose governors repeatedly challenged Jiankang: Wang Dun rebelled in 322 and 324, and Su Jun's rebellion of 327–329 captured the capital. The court nevertheless launched several northern expeditions. Zu Ti recovered much of the land south of the <a class="enc-link" href="/encyclopedia#yellow-river">Yellow River</a> in the 310s, and <a class="enc-link" href="/encyclopedia#huan-wen">Huan Wen</a>, the dominant general of the mid-century, conquered the Cheng Han state in <a class="enc-link" href="/encyclopedia#sichuan">Sichuan</a> in 347, reached the outskirts of <a class="enc-link" href="/encyclopedia#changan">Chang'an</a> against the Former <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> in 354 and retook <a class="enc-link" href="/encyclopedia#luoyang">Luoyang</a> in 356, but was badly defeated by the Former Yan at Fangtou in 369. In 377 Xie Xuan formed the Beifu, or 'Northern Headquarters', army at Jingkou from hardy northern refugees. When Fu Jian of the Former Qin invaded with a vast army in 383, Xie Shi and Xie Xuan, under the overall direction of Xie An, defeated its advance forces at the <a class="enc-link" href="/encyclopedia#battle-of-fei-river">Battle of Fei River</a>, and the Former Qin collapsed. The Beifu army later produced the generals who decided the dynasty's fate, including Liu Laozhi and Liu Yu, whose campaigns conquered the Southern Yan in 410, Western Shu in 413 and the Later Qin in 417, briefly recovering Chang'an and Luoyang.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#huan-wen"><img src="/images/encyclopedia/huan-wen.jpg" alt="Huan Wen" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#huan-wen">Huan Wen</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Huan_Wen_%E6%A1%93%E6%BA%AB.png" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Eastern Jin emperors reigned more than they ruled. Many came to the throne as children or were dominated by ministers, and effective government passed between great clans: the Wang of Langye under Emperor Yuan and his successors, the Yu family of the empress dowager in the 320s and 330s, the Huan of Qiao under <a class="enc-link" href="/encyclopedia#huan-wen">Huan Wen</a>, who deposed Emperor Fei in 371 and was prevented from usurping the throne only by his death in 373, and the Xie of Chenjun under Xie An. The central institutions of the Western Jin were preserved in form, with a <a class="enc-link" href="/encyclopedia#department-of-state-affairs">Department of State Affairs</a>, a Secretariat and the Nine Ranks system of official recruitment, through which local 'impartial judges' graded candidates. In practice the ranks reflected family pedigree, entrenching an aristocracy that monopolised high office and married within its own circle. Provincial administration was dominated by the governors of Yang province around the capital and Jing province upstream, whose rivalry shaped politics throughout the century. Emperor Xiaowu (r. 372–396), after Xie An's death in 385, tried to restore imperial power with his brother Sima Daozi, but their quarrels, and Daozi's control of government under the disabled Emperor An, weakened the throne further and opened the way to the military strongmen of the dynasty's last decades.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#faxian"><img src="/images/encyclopedia/faxian.jpg" alt="Faxian" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#faxian">Faxian</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Faxian_statue_in_Maritime_Experiential_Museum_%26_Aquarium_Singapore.jpg" target="_blank" rel="noopener">Ms Sarah Welch, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Eastern Jin preserved the legitimacy, institutions and high culture of the Han and Jin world in the south while northern <a class="enc-link" href="/encyclopedia#china">China</a> was divided among the <a class="enc-link" href="/encyclopedia#sixteen-kingdoms">Sixteen Kingdoms</a>, and in doing so began the long shift of China's population and economic centre towards the <a class="enc-link" href="/encyclopedia#yangtze-river">Yangtze</a>. Jiankang remained the capital of the Southern Dynasties, the Liu <a class="enc-link" href="/encyclopedia#song-dynasty">Song</a>, Southern Qi, Liang and Chen, which inherited Eastern Jin institutions and aristocratic society until the <a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> conquest of 589. Its cultural achievement was outstanding. Wang Xizhi, whose preface to the poems composed at the Orchid Pavilion gathering of 353 became the most celebrated work of Chinese <a class="enc-link" href="/encyclopedia#calligraphy">calligraphy</a>, was revered as the 'sage of calligraphy'; the painter Gu Kaizhi, to whom the <em>Admonitions of the Instructress to the Court Ladies</em> scroll is attributed, was among the first Chinese artists known by name; and Tao Yuanming's poems of rural retreat became models for later Chinese poetry. <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> found an intellectual footing among the elite. The pilgrim <a class="enc-link" href="/encyclopedia#faxian">Faxian</a>, who set out from the north in 399, returned by sea in 412 and later translated texts at Jiankang, while Huiyuan's treatise arguing that monks need not bow to rulers framed a lasting question in Chinese politics. Neighbours took note: Baekje and Goguryeo sent embassies, and Buddhism reached Baekje from the Eastern Jin in 384.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#emperor-wu-of-han"><img src="/images/encyclopedia/emperor-wu-of-han.jpg" alt="Emperor Wu of Han" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#emperor-wu-of-han">Emperor Wu of Han</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The final decades of the dynasty were marked by rebellion and usurpation. In 399 <a class="enc-link" href="/encyclopedia#sun-en">Sun En</a>, a leader of the Five Pecks of <a class="enc-link" href="/encyclopedia#rice">Rice</a> Daoist movement, rose in the coastal <a class="enc-link" href="/encyclopedia#commandery">commanderies</a> of Zhejiang, where the court's conscription of dependants had caused deep resentment; his followers devastated the region before he was defeated and drowned himself in 402, and his brother-in-law Lu Xun carried on the revolt until 411. Taking advantage of the chaos, <a class="enc-link" href="/encyclopedia#huan-xuan">Huan Xuan</a>, son of <a class="enc-link" href="/encyclopedia#huan-wen">Huan Wen</a> and master of Jing province, seized Jiankang in 402 and at the end of 403 forced Emperor An to abdicate, founding his own short-lived Chu dynasty. Liu Yu, a Beifu officer of humble origin, led a rising against him in 404, restored Emperor An and became the real ruler of the state. His victories over Lu Xun and over the northern states of Southern Yan and Later <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> brought him unrivalled prestige, although <a class="enc-link" href="/encyclopedia#changan">Chang'an</a> was lost again to the Xia in 418. Early in 419 Liu Yu had Emperor An strangled and placed his brother on the throne as Emperor Gong, who abdicated to him in 420. Liu Yu founded the Liu <a class="enc-link" href="/encyclopedia#song-dynasty">Song dynasty</a> as <a class="enc-link" href="/encyclopedia#emperor-wu-of-han">Emperor Wu</a>, and the deposed emperor was murdered in 421, ending the Sima house.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Eastern Jin carried the Jin dynasty south of the <a class="enc-link" href="/encyclopedia#yangtze-river">Yangtze</a> after the fall of northern <a class="enc-link" href="/encyclopedia#china">China</a>, preserved its institutions and aristocratic culture at Jiankang, repelled the Former <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> at the Fei River in 383, and fostered the <a class="enc-link" href="/encyclopedia#calligraphy">calligraphy</a>, poetry and southern <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> that shaped Chinese civilisation for centuries.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Dien, A.E. and Knapp, K.N. (eds) (2019) The Cambridge History of China, Volume 2: The Six Dynasties, 220–589. Cambridge: Cambridge University Press.</li>
+        <li>Graff, D.A. (2002) Medieval Chinese Warfare, 300–900. London: Routledge.</li>
+        <li>Lewis, M.E. (2009) China between Empires: The Northern and Southern Dynasties. Cambridge, MA: Belknap Press of Harvard University Press.</li>
+        <li>Liu I-ch'ing (1976) Shih-shuo Hsin-yü: A New Account of Tales of the World. Trans. R.B. Mather. Minneapolis: University of Minnesota Press.</li>
+        <li>Zürcher, E. (1959) The Buddhist Conquest of China. Leiden: E.J. Brill.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="eastern-jin"></div>
+      <a class="mini-connections-more" href="/connections#eastern-jin">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/silla"><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/goguryeo"><img src="/logos/Goguryeo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Goguryeo</span><span class="related-card-dates">37 BCE – 668 CE</span></a><a class="related-card" href="/empire/baekje"><img src="/logos/Baekje.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Baekje</span><span class="related-card-dates">18 BCE – 660 CE</span></a><a class="related-card" href="/empire/rouran-khaganate"><img src="/logos/Rouran%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rouran Khaganate</span><span class="related-card-dates">330 CE – 555 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/kingdom-of-the-picts"><span class="related-card-label">← Earlier</span><img src="/logos/Kingdom%20of%20the%20Picts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of the Picts</span><span class="related-card-dates">300 CE – 900 CE</span></a><a class="related-card" href="/empire/byzantine-empire"><span class="related-card-label">Later →</span><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Eastern Jin",slug="eastern-jin",url="https://the-epoch-institute.org/empire/eastern-jin";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Eastern Jin on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/eastern-jin #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/eastern-jin"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Eastern Jin",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

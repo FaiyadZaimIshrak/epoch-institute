@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uganda — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="An East African republic built around the old Great Lakes kingdoms, whose post-independence turmoil under Obote and Amin gave way to Museveni's long rule.">
+<meta property="og:title" content="Uganda — The Epoch Institute">
+<meta property="og:description" content="An East African republic built around the old Great Lakes kingdoms, whose post-independence turmoil under Obote and Amin gave way to Museveni's long rule.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/uganda">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/uganda.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/uganda.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/uganda">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Uganda" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Uganda.png" alt="Uganda" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Sub-Saharan Africa</p>
+        <h1 class="profile-detail-name">Uganda</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">2025 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">63 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1962 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Kampala</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#milton-obote">Milton Obote</a> (first prime minister)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Uganda <a class="enc-link" href="/encyclopedia#protectorate">Protectorate</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Uganda became independent in 1962 as a quasi-federal state built around Buganda and the other <a class="enc-link" href="/encyclopedia#great-lakes">Great Lakes</a> kingdoms.</li><li>Obote abolished the kingdoms in 1967, and <a class="enc-link" href="/encyclopedia#idi-amin">Idi Amin</a>’s rule of 1971–1979 killed an estimated 100,000 or more people.</li><li>Yoweri Museveni, in power since 1986, restored order and growth and brought back the kingdoms as cultural institutions in 1993.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Rwandan exiles who fought in Museveni’s National Resistance Army, among them <a class="enc-link" href="/encyclopedia#paul-kagame">Paul Kagame</a>, went on to lead the Rwandan Patriotic Front, which invaded Rwanda from Uganda in 1990.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Uganda"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Uganda over time, peaking in 2025 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 93.0 L42.9 93.0 L65.7 106.4 L122.9 106.4 L134.3 119.8 L180.0 133.2 L214.3 146.6 L225.7 133.2 L260.0 146.6 L294.3 119.8 L305.7 106.4 L374.3 79.6 L408.6 66.2 L465.7 66.2 L522.9 52.8 L580.0 52.8 L637.1 39.4 L740.0 26.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 93.0 L42.9 93.0 L65.7 106.4 L122.9 106.4 L134.3 119.8 L180.0 133.2 L214.3 146.6 L225.7 133.2 L260.0 146.6 L294.3 119.8 L305.7 106.4 L374.3 79.6 L408.6 66.2 L465.7 66.2 L522.9 52.8 L580.0 52.8 L637.1 39.4 L740.0 26.0"/><circle class="rf-peak" cx="740.0" cy="26.0" r="5"/><text class="rf-peak-label" x="740.0" y="16.0" text-anchor="middle">Peak 2025 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>1962: Uganda becomes independent on 9 October under Prime Minister Milton Obote</title></g><g class="rf-ev"><line x1="65.7" x2="65.7" y1="160" y2="166"/><circle cx="65.7" cy="160" r="8"/><text x="65.7" y="164" text-anchor="middle">2</text><title>1966: Troops under Idi Amin storm the Kabaka’s palace at Mengo</title></g><g class="rf-ev"><line x1="77.1" x2="77.1" y1="160" y2="166"/><circle cx="77.1" cy="160" r="8"/><text x="77.1" y="164" text-anchor="middle">3</text><title>1967: A republican constitution abolishes the kingdoms</title></g><g class="rf-ev"><line x1="122.9" x2="122.9" y1="160" y2="166"/><circle cx="122.9" cy="160" r="8"/><text x="122.9" y="164" text-anchor="middle">4</text><title>1971: Idi Amin seizes power in a military coup</title></g><g class="rf-ev"><line x1="134.3" x2="134.3" y1="160" y2="166"/><circle cx="134.3" cy="160" r="8"/><text x="134.3" y="164" text-anchor="middle">5</text><title>1972: Amin expels the country’s Asian community</title></g><g class="rf-ev"><line x1="214.3" x2="214.3" y1="160" y2="166"/><circle cx="214.3" cy="160" r="8"/><text x="214.3" y="164" text-anchor="middle">6</text><title>1979: Tanzanian forces and Ugandan exiles take Kampala and overthrow Amin</title></g><g class="rf-ev"><line x1="294.3" x2="294.3" y1="160" y2="166"/><circle cx="294.3" cy="160" r="8"/><text x="294.3" y="164" text-anchor="middle">7</text><title>1986: The National Resistance Army takes Kampala and Museveni becomes president</title></g><g class="rf-ev"><line x1="374.3" x2="374.3" y1="160" y2="166"/><circle cx="374.3" cy="160" r="8"/><text x="374.3" y="164" text-anchor="middle">8</text><title>1993: The kingdoms are restored as cultural institutions</title></g><text class="rf-axis" x="20" y="200">1962 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">2025 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">1962</span><span class="rf-text">Uganda becomes independent on 9 October under Prime Minister <a class="enc-link" href="/encyclopedia#milton-obote">Milton Obote</a></span></li><li><span class="rf-year">1966</span><span class="rf-text">Troops under <a class="enc-link" href="/encyclopedia#idi-amin">Idi Amin</a> storm the Kabaka’s palace at Mengo</span></li><li><span class="rf-year">1967</span><span class="rf-text">A republican constitution abolishes the kingdoms</span></li><li><span class="rf-year">1971</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#idi-amin">Idi Amin</a> seizes power in a military coup</span></li><li><span class="rf-year">1972</span><span class="rf-text">Amin expels the country’s Asian community</span></li><li><span class="rf-year">1979</span><span class="rf-text">Tanzanian forces and Ugandan exiles take Kampala and overthrow Amin</span></li><li><span class="rf-year">1986</span><span class="rf-text">The National Resistance Army takes Kampala and Museveni becomes president</span></li><li><span class="rf-year">1993</span><span class="rf-text">The kingdoms are restored as cultural institutions</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#milton-obote"><img src="/images/encyclopedia/milton-obote.jpg" alt="Milton Obote" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#milton-obote">Milton Obote</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:President_John_F._Kennedy_with_Prime_Minister_Milton_Obote_(cropped).jpg" target="_blank" rel="noopener">Warren K. Leffler, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Uganda became independent from <a class="enc-link" href="/encyclopedia#britain">Britain</a> on 9 October 1962. The Uganda <a class="enc-link" href="/encyclopedia#protectorate">Protectorate</a> had been built around the Kingdom of Buganda, whose chiefs had helped the British extend their rule under the Uganda Agreement of 1900, and it also included the kingdoms of Bunyoro, Toro and Ankole, the Busoga states and the peoples of the north and east. This history made the place of the kingdoms the central question of independence. The constitution of 1962 gave Buganda federal status with its own parliament, the Lukiiko, and lesser autonomy to the other kingdoms. <a class="enc-link" href="/encyclopedia#milton-obote">Milton Obote</a>, leader of the Uganda People’s Congress, became prime minister through an alliance with the Buganda royalist movement Kabaka Yekka, defeating the Democratic Party of Benedicto Kiwanuka, who had led the government during the brief period of internal self-government. In October 1963 Uganda replaced the British monarch as head of state with a president of its own, and the Kabaka of Buganda, Sir <a class="enc-link" href="/encyclopedia#mutesa-ii-of-buganda">Edward Mutesa</a> II, was elected to the largely ceremonial office. The alliance soon broke down over the ‘lost counties’, territory that Buganda had gained from Bunyoro with British help in the 1890s: a referendum in 1964 returned two of them to Bunyoro, and Mutesa and Obote became open rivals.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#nile"><img src="/images/encyclopedia/nile.jpg" alt="Nile" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#nile">Nile</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Beautiful_nature_along_Nile_River_01.jpg" target="_blank" rel="noopener">Fiktube, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Uganda is a fertile, well-watered country around <a class="enc-link" href="/encyclopedia#lake-victoria">Lake Victoria</a> and the upper <a class="enc-link" href="/encyclopedia#nile">Nile</a>, and most Ugandans have always lived by farming. <a class="enc-link" href="/encyclopedia#coffee-economy">Coffee</a> has been the main export since the colonial period, alongside <a class="enc-link" href="/encyclopedia#cotton">cotton</a> in the early decades and <a class="enc-link" href="/encyclopedia#tea">tea</a>, tobacco, fish and later gold, while bananas, <a class="enc-link" href="/encyclopedia#millet">millet</a>, <a class="enc-link" href="/encyclopedia#cassava">cassava</a> and <a class="enc-link" href="/encyclopedia#maize">maize</a> feed the population. At independence much of the country’s commerce was in the hands of a South Asian minority. In 1972 <a class="enc-link" href="/encyclopedia#idi-amin">Idi Amin</a> ordered the expulsion of the Asian community, commonly estimated at around 80,000 people, and handed their businesses to supporters; together with the violence of his regime this ruined the economy, which shrank sharply through the 1970s. From 1987 Yoweri Museveni’s government adopted reforms backed by the <a class="enc-link" href="/encyclopedia#international-monetary-fund">International Monetary Fund</a>, liberalised the coffee trade and invited expelled Asians to reclaim their property, and Uganda achieved some of the fastest growth in <a class="enc-link" href="/encyclopedia#africa">Africa</a> during the 1990s. It also became known for an early and open response to HIV/AIDS, which helped reduce infection rates in that decade. The population has grown from about 7 million at independence to over 45 million, one of the youngest in the world. Oil found near Lake Albert in 2006 is being developed with a pipeline to the Tanzanian coast. Most Ugandans are Christians, with a sizeable Muslim minority, and Makerere University in Kampala remains a leading East African institution.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#idi-amin"><img src="/images/encyclopedia/idi-amin.jpg" alt="Idi Amin" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#idi-amin">Idi Amin</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Idi_Amin_at_UN_(United_Nations,_New_York)_gtfy.00132_(cropped).jpg" target="_blank" rel="noopener">Bernard Gotfryd, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The army has been the decisive force in Ugandan politics. In January 1964 soldiers of the Uganda Rifles mutinied over pay and Africanisation, and British troops restored order at Obote’s request. Obote then promoted <a class="enc-link" href="/encyclopedia#idi-amin">Idi Amin</a>, who in May 1966 led the assault on the Kabaka’s palace at Mengo that drove Mutesa II into exile. On 25 January 1971 Amin seized power while Obote was at a Commonwealth conference in <a class="enc-link" href="/encyclopedia#singapore">Singapore</a> and purged the army of Acholi and Langi soldiers. In July 1976 Israeli commandos freed hostages held at Entebbe airport, humiliating his regime. Amin’s invasion of the Kagera Salient of Tanzania in late 1978 provoked the Uganda–Tanzania War: Tanzanian forces and Ugandan exiles, opposed by Libyan troops sent to help Amin, took Kampala on 11 April 1979. The Bush War of 1981–1986 between Obote’s Uganda National Liberation Army and Museveni’s National Resistance Army devastated the Luwero Triangle north of Kampala. The NRA became the national army, later renamed the Uganda People’s Defence Force, which fought the Lord’s Resistance Army of Joseph Kony in the north for some two decades, intervened in the Congo wars from 1996 to 2003, and since 2007 has provided the largest contingent of the African Union mission in <a class="enc-link" href="/encyclopedia#somalia">Somalia</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <div class="profile-section-body"><p>Independent Uganda has seen few peaceful transfers of power. In February 1966 Obote suspended the constitution, after parliament had moved to investigate gold and <a class="enc-link" href="/encyclopedia#ivory-trade">ivory</a> smuggling from Congo involving Amin, and imposed an interim constitution that made him executive president. The republican constitution of 1967 abolished the kingdoms and created a unitary state, and in 1969 Obote banned the opposition parties. Amin ruled by decree from 1971 to 1979 through the army and security agencies such as the State Research Bureau. After his fall, short-lived governments under Yusuf Lule, Godfrey Binaisa and a military commission led to the disputed election of December 1980, which returned Obote to power. Museveni, sworn in on 29 January 1986, introduced a ‘no-party’ Movement system based on elected resistance councils from village level upward, confirmed by a new constitution in 1995. In 1993 the kingdoms were restored as cultural institutions without political power, and Ronald Muwenda Mutebi II was crowned Kabaka of Buganda. Multi-party politics returned after a referendum in 2005, the same year parliament removed presidential term limits, and the presidential age limit was abolished in 2017. Museveni has won every election since 1996 against challengers such as Kizza Besigye and Robert Kyagulanyi, known as Bobi Wine, amid complaints of repression and irregularities.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#paul-kagame"><img src="/images/encyclopedia/paul-kagame.jpg" alt="Paul Kagame" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#paul-kagame">Paul Kagame</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Paul_Kagame_2024_(cropped).jpg" target="_blank" rel="noopener">Saeima, CC BY-SA 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Uganda’s history after independence shaped wider African debates about state power, ethnicity and the military. The fate of the Kingdom of Buganda showed how hard it was to fit precolonial monarchies into new national states, and the restoration of the kingdoms in 1993 as cultural institutions offered one compromise. <a class="enc-link" href="/encyclopedia#idi-amin">Idi Amin</a>’s regime, with its mass killings, the murder of Archbishop Janani Luwum in 1977 and the expulsion of the Asians, became one of the best-known examples of post-colonial dictatorship; many expelled Ugandan Asians settled in <a class="enc-link" href="/encyclopedia#britain">Britain</a> and <a class="enc-link" href="/encyclopedia#canada">Canada</a> and built prominent communities there. The overthrow of Amin by Tanzania in 1979 was a rare case of an African state removing a neighbouring government by war. Museveni’s National Resistance Army served as a model and a training ground for movements across the region: Rwandan exiles who had fought in it, among them Fred Rwigyema and <a class="enc-link" href="/encyclopedia#paul-kagame">Paul Kagame</a>, led the Rwandan Patriotic Front, which invaded Rwanda from Uganda in 1990. Ugandan forces have since been involved in the wars of the <a class="enc-link" href="/encyclopedia#democratic-republic-of-the-congo">Democratic Republic of the Congo</a>, the conflicts of South <a class="enc-link" href="/encyclopedia#sudan">Sudan</a> and the African Union mission in <a class="enc-link" href="/encyclopedia#somalia">Somalia</a>. The country also hosts one of the largest refugee populations in <a class="enc-link" href="/encyclopedia#africa">Africa</a>, admitted under a relatively open policy that gives refugees land and freedom of movement.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Into the Present</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#josip-broz-tito"><img src="/images/encyclopedia/josip-broz-tito.jpg" alt="Josip Broz Tito" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#josip-broz-tito">Josip Broz Tito</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Josip_Broz_Tito_uniform_portrait.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Uganda created at independence, a quasi-federal union of kingdoms and districts under a parliamentary system, did not survive its first decade. Obote’s centralisation in 1966–1967, Amin’s dictatorship and the wars that followed killed hundreds of thousands of people and wrecked the economy: estimates for those killed under Amin usually range from about 100,000 to 300,000, and the Bush War cost many more lives. Obote was overthrown a second time in July 1985 by his own commanders, Bazilio Olara-Okello and <a class="enc-link" href="/encyclopedia#josip-broz-tito">Tito</a> Okello, whose military government signed a peace agreement in Nairobi in December 1985 but was driven from Kampala by the NRA in January 1986. Museveni’s government restored order in the south and centre, rebuilt the economy and the state, and in the 2000s ended the war in the north, where the Lord’s Resistance Army had abducted tens of thousands of children before leaving Uganda around 2006. The International Criminal Court issued warrants for Kony and other LRA commanders in 2005. Today Uganda is a republic of over 45 million people with its capital at Kampala, a member of the East African Community with one of the fastest-growing populations in the world, governed under a dominant-party system by a president in office since 1986.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Uganda’s passage from a federation of old <a class="enc-link" href="/encyclopedia#great-lakes">Great Lakes</a> kingdoms through the dictatorship of <a class="enc-link" href="/encyclopedia#idi-amin">Idi Amin</a> and civil war to the long rule of Yoweri Museveni made it a defining case of post-colonial <a class="enc-link" href="/encyclopedia#africa">Africa</a>’s struggles over power, ethnicity and the army, and a major military actor in the Great Lakes region.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Kasozi, A.B.K. (1994) The Social Origins of Violence in Uganda, 1964–1985. Montreal: McGill-Queen’s University Press.</li>
+        <li>Mamdani, M. (1976) Politics and Class Formation in Uganda. New York: Monthly Review Press.</li>
+        <li>Mutibwa, P. (1992) Uganda since Independence: A Story of Unfulfilled Hopes. London: Hurst.</li>
+        <li>Reid, R.J. (2017) A History of Modern Uganda. Cambridge: Cambridge University Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="uganda"></div>
+      <a class="mini-connections-more" href="/connections#uganda">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/swazi-kingdom"><img src="/logos/Swazi%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Swazi Kingdom</span><span class="related-card-dates">1745 CE – 2025 CE</span></a><a class="related-card" href="/empire/liberia"><img src="/logos/Liberia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liberia</span><span class="related-card-dates">1847 CE – 2025 CE</span></a><a class="related-card" href="/empire/republic-of-south-africa"><img src="/logos/Republic%20of%20South%20Africa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of South Africa</span><span class="related-card-dates">1961 CE – 2025 CE</span></a><a class="related-card" href="/empire/tanzania"><img src="/logos/Tanzania.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tanzania</span><span class="related-card-dates">1964 CE – 2025 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/republic-of-south-africa"><span class="related-card-label">← Earlier</span><img src="/logos/Republic%20of%20South%20Africa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of South Africa</span><span class="related-card-dates">1961 CE – 2025 CE</span></a><a class="related-card" href="/empire/malaysia"><span class="related-card-label">Later →</span><img src="/logos/Malaysia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Malaysia</span><span class="related-card-dates">1963 CE – 2025 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Uganda",slug="uganda",url="https://the-epoch-institute.org/empire/uganda";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Uganda on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/uganda #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/uganda"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Uganda",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

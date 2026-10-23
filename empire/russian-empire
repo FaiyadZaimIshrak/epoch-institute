@@ -56,7 +56,7 @@
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1721 CE – 1917 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#saint-petersburg">Saint Petersburg</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#peter-the-great">Peter the Great</a></span></div>
-          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Tsardom of <a class="enc-link" href="/encyclopedia#russia">Russia</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/tsardom-of-russia">Tsardom of Russia</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Russian Republic, Soviet <a class="enc-link" href="/encyclopedia#russia">Russia</a></span></div>
         </div>
         <p class="empire-meta">7 min read · Last reviewed October 2026</p>
@@ -134,9 +134,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/british-empire"><img src="/logos/British%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">British Empire</span><span class="related-card-dates">1583 CE – 1997 CE</span></a><a class="related-card" href="/empire/french-empire"><img src="/logos/French%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">French Empire</span><span class="related-card-dates">1534 CE – 1980 CE</span></a><a class="related-card" href="/empire/portuguese-empire"><img src="/logos/Portuguese%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Portuguese Empire</span><span class="related-card-dates">1415 CE – 1975 CE</span></a><a class="related-card" href="/empire/dutch-empire"><img src="/logos/Dutch%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dutch Empire</span><span class="related-card-dates">1581 CE – 1975 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/rozvi-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Rozvi%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rozvi Empire</span><span class="related-card-dates">1684 CE – 1836 CE</span></a><a class="related-card" href="/empire/afsharid-empire"><span class="related-card-label">Later →</span><img src="/logos/Afsharid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Afsharid Empire</span><span class="related-card-dates">1729 CE – 1796 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/principality-of-liechtenstein"><span class="related-card-label">← Earlier</span><img src="/logos/Principality%20of%20Liechtenstein.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Principality of Liechtenstein</span><span class="related-card-dates">1719 CE – 2025 CE</span></a><a class="related-card" href="/empire/hyderabad-state"><span class="related-card-label">Later →</span><img src="/logos/Hyderabad%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hyderabad State</span><span class="related-card-dates">1724 CE – 1948 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -151,10 +151,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

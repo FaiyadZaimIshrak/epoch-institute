@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vijayanagara Empire — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The great south Indian empire whose capital at Hampi, on the Tungabhadra, was among the largest and richest cities of the fifteenth and sixteenth centuries…">
+<meta property="og:title" content="Vijayanagara Empire — The Epoch Institute">
+<meta property="og:description" content="The great south Indian empire whose capital at Hampi, on the Tungabhadra, was among the largest and richest cities of the fifteenth and sixteenth centuries…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/vijayanagara-empire">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/vijayanagara-empire.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/vijayanagara-empire.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/vijayanagara-empire">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Vijayanagara%20Empire" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Vijayanagara%20Empire.png" alt="Vijayanagara Empire" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Vijayanagara Empire</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">1520 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">310 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1336 CE – 1646 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Vijayanagara (Hampi); later Penukonda, Chandragiri and Vellore</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Harihara I and Bukka I</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#hoysala-empire">Hoysala Empire</a>; <a class="enc-link" href="/encyclopedia#delhi-sultanate">Delhi Sultanate</a> (in the south)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Nayaka kingdoms (<a class="enc-link" href="/encyclopedia#madurai">Madurai</a>, Thanjavur, Gingee), Kingdom of Mysore, Bijapur and Golconda sultanates</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Founded around 1336 by the Sangama brothers on the Tungabhadra as <a class="enc-link" href="/encyclopedia#delhi-sultanate">Delhi Sultanate</a> power collapsed in the south.</li><li>Under Krishnadevaraya (r. 1509–1529) it was the dominant power of southern <a class="enc-link" href="/encyclopedia#india">India</a>, ruled from a vast capital at Hampi.</li><li>Defeat at Talikota in 1565 led to the sack of the capital; nayaka governors became independent and the empire ended by 1646.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The site of Madras, where the English built Fort St George in 1639–40, was granted by a local nayaka who served the Aravidu kings of Vijayanagara.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Vijayanagara Empire"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Vijayanagara Empire over time, peaking in 1520 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L43.2 106.4 L117.5 79.6 L182.6 79.6 L224.4 66.2 L268.5 52.8 L319.6 93.0 L366.1 93.0 L421.8 52.8 L447.4 26.0 L468.3 39.4 L498.5 52.8 L551.9 119.8 L563.5 119.8 L600.6 106.4 L665.7 119.8 L702.8 133.2 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L43.2 106.4 L117.5 79.6 L182.6 79.6 L224.4 66.2 L268.5 52.8 L319.6 93.0 L366.1 93.0 L421.8 52.8 L447.4 26.0 L468.3 39.4 L498.5 52.8 L551.9 119.8 L563.5 119.8 L600.6 106.4 L665.7 119.8 L702.8 133.2 L740.0 160.0"/><circle class="rf-peak" cx="447.4" cy="26.0" r="5"/><text class="rf-peak-label" x="447.4" y="16.0" text-anchor="middle">Peak 1520 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>c. 1336: Harihara I and Bukka I found the kingdom on the Tungabhadra</title></g><g class="rf-ev"><line x1="117.5" x2="117.5" y1="160" y2="166"/><circle cx="117.5" cy="160" r="8"/><text x="117.5" y="164" text-anchor="middle">2</text><title>1378: The Madurai Sultanate is destroyed by Vijayanagara armies</title></g><g class="rf-ev"><line x1="268.5" x2="268.5" y1="160" y2="166"/><circle cx="268.5" cy="160" r="8"/><text x="268.5" y="164" text-anchor="middle">3</text><title>1443: Persian envoy Abdur Razzaq visits the capital</title></g><g class="rf-ev"><line x1="421.8" x2="421.8" y1="160" y2="166"/><circle cx="421.8" cy="160" r="8"/><text x="421.8" y="164" text-anchor="middle">4</text><title>1509: Krishnadevaraya becomes king</title></g><g class="rf-ev"><line x1="447.4" x2="447.4" y1="160" y2="166"/><circle cx="447.4" cy="160" r="8"/><text x="447.4" y="164" text-anchor="middle">5</text><title>1520: Krishnadevaraya defeats Bijapur at the Battle of Raichur</title></g><g class="rf-ev"><line x1="551.9" x2="551.9" y1="160" y2="166"/><circle cx="551.9" cy="160" r="8"/><text x="551.9" y="164" text-anchor="middle">6</text><title>1565: The Deccan sultanates defeat Vijayanagara at Talikota and sack the capital</title></g><g class="rf-ev"><line x1="563.5" x2="563.5" y1="160" y2="166"/><circle cx="563.5" cy="160" r="8"/><text x="563.5" y="164" text-anchor="middle">7</text><title>c. 1570: Tirumala founds the Aravidu dynasty at Penukonda</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>c. 1646: Sriranga III loses his last territories to Bijapur and Golconda</title></g><text class="rf-axis" x="20" y="200">1336 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">1646 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 1336</span><span class="rf-text">Harihara I and Bukka I found the kingdom on the Tungabhadra</span></li><li><span class="rf-year">1378</span><span class="rf-text">The Madurai Sultanate is destroyed by Vijayanagara armies</span></li><li><span class="rf-year">1443</span><span class="rf-text">Persian envoy Abdur Razzaq visits the capital</span></li><li><span class="rf-year">1509</span><span class="rf-text">Krishnadevaraya becomes king</span></li><li><span class="rf-year">1520</span><span class="rf-text">Krishnadevaraya defeats Bijapur at the Battle of Raichur</span></li><li><span class="rf-year">1565</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia#deccan-sultanates">Deccan sultanates</a> defeat Vijayanagara at Talikota and sack the capital</span></li><li><span class="rf-year">c. 1570</span><span class="rf-text">Tirumala founds the Aravidu dynasty at Penukonda</span></li><li><span class="rf-year">c. 1646</span><span class="rf-text">Sriranga III loses his last territories to Bijapur and Golconda</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#alauddin-khalji"><img src="/images/encyclopedia/alauddin-khalji.jpg" alt="Alauddin Khalji" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#alauddin-khalji">Alauddin Khalji</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:The_Execution_of_Jalal-al-Din_Firuzshah_II_(r1290-96),_Jami_al-Tawarikh_(Alauddin_Khalji_detail).jpg" target="_blank" rel="noopener">14th century author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Vijayanagara Empire arose in the political vacuum left by the <a class="enc-link" href="/encyclopedia#delhi-sultanate">Delhi Sultanate</a>'s campaigns in southern <a class="enc-link" href="/encyclopedia#india">India</a> in the early fourteenth century. The armies of <a class="enc-link" href="/encyclopedia#alauddin-khalji">Alauddin Khalji</a> and <a class="enc-link" href="/encyclopedia#muhammad-bin-tughluq">Muhammad bin Tughluq</a> had destroyed or humbled the old kingdoms of the <a class="enc-link" href="/encyclopedia#seuna-yadava-dynasty">Yadavas of Devagiri</a>, the Kakatiyas of Warangal and the <a class="enc-link" href="/encyclopedia#pandya-dynasty">Pandyas</a> of <a class="enc-link" href="/encyclopedia#madurai">Madurai</a>, and in 1327 annexed the small kingdom of Kampili on the Tungabhadra River. Shortly afterwards, as Tughluq authority in the south crumbled, the brothers Harihara I and Bukka I of the Sangama family established their own kingdom on the Tungabhadra, traditionally in 1336, with its capital at the city they named Vijayanagara, "city of victory". Their earlier careers are obscure: a later tradition, now doubted by many historians, holds that they had served Kampili, were captured and converted to <a class="enc-link" href="/encyclopedia#islam">Islam</a> by the Tughluqs, and then returned to <a class="enc-link" href="/encyclopedia#hinduism">Hinduism</a> under the guidance of the sage Vidyaranya of Sringeri. When the <a class="enc-link" href="/encyclopedia#hoysala-empire">Hoysala</a> king <a class="enc-link" href="/encyclopedia#veera-ballala-iii">Veera Ballala III</a> was killed fighting the Madurai Sultanate in 1343, the Sangamas absorbed the Hoysala lands within a few years. Bukka I's son Kumara Kampana then campaigned in the Tamil country and destroyed the Madurai Sultanate by 1378, giving Vijayanagara control of almost all of India south of the Krishna and Tungabhadra rivers.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#goa"><img src="/images/encyclopedia/goa.jpg" alt="Goa" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#goa">Goa</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:BeachFun.jpg" target="_blank" rel="noopener">Sam 8393, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Vijayanagara's wealth came from an agrarian economy expanded by irrigation tanks and canals, from textile production and from trade through the ports of the western and eastern coasts. The capital, at the site now called Hampi, lay in a rocky landscape on the Tungabhadra and drew water from a network of canals and tanks; its population in the early sixteenth century may have reached several hundred thousand, though estimates vary. Foreign visitors, including the Persian envoy Abdur Razzaq in 1443 and the Portuguese Domingo Paes around 1520, described its <a class="enc-link" href="/encyclopedia#bazaar">bazaars</a> of jewels, cloth and grain, its palaces and its festivals, especially the annual Mahanavami celebrations. The state struck gold coins, the <em>varaha</em> or pagoda, widely used in southern <a class="enc-link" href="/encyclopedia#india">India</a>. Horses could not be bred in sufficient numbers in the south, and the import of Arabian and Persian horses through the western ports, after 1510 largely through Portuguese <a class="enc-link" href="/encyclopedia#goa">Goa</a>, was vital to the army. Temples were major landowners and economic centres, and kings and nobles endowed huge complexes such as the Virupaksha and Vitthala temples at the capital. Society was dominated by <a class="enc-link" href="/encyclopedia#brahmins">Brahmin</a> and warrior elites, while merchant and artisan groups, organised in <a class="enc-link" href="/encyclopedia#guild">guilds</a> and <a class="enc-link" href="/encyclopedia#caste">caste</a> associations, gained wealth and influence. The empire also had substantial Muslim populations, including soldiers in royal service.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#adil-shah"><img src="/images/encyclopedia/adil-shah.jpg" alt="Adil Shah" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#adil-shah">Adil Shah</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Adel_Shah.jpg" target="_blank" rel="noopener">CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Vijayanagara was a militarised state, continuously at war for most of its history. Its long rivalry with the <a class="enc-link" href="/encyclopedia#bahmani-sultanate">Bahmani Sultanate</a>, and later with the <a class="enc-link" href="/encyclopedia#deccan-sultanates">Deccan sultanates</a> that succeeded it, centred on the fertile Raichur Doab between the Krishna and Tungabhadra rivers and began in the reign of Bukka I with notoriously destructive campaigns on both sides. Armies combined large infantry levies, <a class="enc-link" href="/encyclopedia#archery">archers</a>, <a class="enc-link" href="/encyclopedia#war-elephant">war elephants</a> and cavalry mounted on imported horses. Deva Raya II (r. 1424–1446) recruited Muslim cavalry and archers and gave them land, aiming to match the mounted archery of his Deccani rivals, and firearms were adopted in the sixteenth century, sometimes with Portuguese help. Abdur Razzaq described the capital as surrounded by several concentric lines of fortification, and a chain of strongholds, including Raichur, Gooty, Penukonda and Chandragiri, defended the frontiers. The empire's greatest commander was Krishnadevaraya (r. 1509–1529), who defeated the Gajapati rulers of Odisha in campaigns between 1513 and 1519, taking Udayagiri and Kondavidu, and in 1520 defeated Ismail <a class="enc-link" href="/encyclopedia#adil-shah">Adil Shah</a> of Bijapur at the Battle of Raichur. The decisive defeat came on 23 January 1565 at the Battle of Talikota, when the combined armies of Bijapur, Ahmadnagar, Golconda and Bidar destroyed the Vijayanagara army and killed its leader Aliya Rama Raya.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <div class="profile-section-body"><p>Four dynasties ruled Vijayanagara in succession: the Sangama (c. 1336–1485), the Saluva (1485–1505), the Tuluva (1505–c. 1570) and the Aravidu (c. 1570–1646). Changes of dynasty usually came through powerful generals who first acted as regents: Saluva Narasimha seized the throne from the last weak Sangama king, the Tuluva general Narasa Nayaka ruled in the name of a Saluva heir, and Aliya Rama Raya dominated the court as regent for Sadashiva Raya before his family founded the Aravidu line. The king, styled <em>raya</em>, stood at the top of a hierarchy of ministers, provincial governors and military chiefs. The most distinctive institution was the <em>nayaka</em> system, in which commanders received the revenue of assigned territories, called <em>amaram</em>, in return for maintaining specified numbers of troops and paying tribute to the crown. The system allowed rapid mobilisation but gave great power to the nayakas, who became hereditary rulers in many regions. At the local level, villages were managed by hereditary officials, the <em>ayagars</em>, paid with shares of the harvest. <a class="enc-link" href="/encyclopedia#brahmins">Brahmin</a> ministers and temple institutions supported royal government, and the kings presented themselves as protectors of <a class="enc-link" href="/encyclopedia#hinduism">Hindu</a> <a class="enc-link" href="/encyclopedia#dharma">dharma</a> while also using Persianate titles, dress and court ceremony; several styled themselves "sultan among Hindu kings".</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#madurai"><img src="/images/encyclopedia/madurai.jpg" alt="Madurai" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#madurai">Madurai</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Meenakshi_Amman_West_Tower.jpg" target="_blank" rel="noopener">KennyOMG, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Vijayanagara shaped the political and cultural map of southern <a class="enc-link" href="/encyclopedia#india">India</a> for centuries. Its patronage fostered literature in <a class="enc-link" href="/encyclopedia#sanskrit">Sanskrit</a>, Kannada, Telugu and Tamil. Under the early Sangama kings the scholar Sayana and his collaborators produced commentaries on the Vedas that became standard. Krishnadevaraya himself composed the Telugu poem <em>Amuktamalyada</em>, and his court is associated with celebrated poets such as Allasani Peddana. The composer Purandara Dasa, traditionally regarded as the father of Carnatic music, lived and worked within the empire. Vijayanagara architecture, with its tall gateway towers, pillared halls carved with horses and mythical beasts and large temple-city complexes, set a style followed across the south, and many temples in Tamil Nadu and Andhra Pradesh were rebuilt or enlarged under its rule. The ruins of the capital at Hampi were inscribed as a <a class="enc-link" href="/encyclopedia#unesco-world-heritage-site">UNESCO World Heritage Site</a> in 1986. Politically, the nayaka kingdoms that succeeded it, including <a class="enc-link" href="/encyclopedia#madurai">Madurai</a>, Thanjavur, Gingee, Ikkeri and the Wodeyars of Mysore, inherited its institutions and claimed its legitimacy. Even foreign trade was affected: in 1639 the <a class="enc-link" href="/encyclopedia#east-india-company">English East India Company</a> obtained the site of Madras, where it built Fort St George, from a local nayaka subordinate to the Aravidu kings. In modern times Vijayanagara has been invoked as a symbol of south Indian and <a class="enc-link" href="/encyclopedia#hinduism">Hindu</a> resistance, a reading that historians often treat with caution.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#deccan-sultanates"><img src="/images/encyclopedia/deccan-sultanates.jpg" alt="Deccan sultanates" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#deccan-sultanates">Deccan sultanates</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Deccan_Sultanates_in_16th_Century.jpg" target="_blank" rel="noopener">Beylarbey, CC BY 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The defeat at the Battle of Talikota in 1565 was followed by the sack of the capital, which the victorious armies plundered for months; the city was abandoned and never reoccupied. Rama Raya's brother Tirumala withdrew with the treasury and the puppet king Sadashiva Raya to Penukonda and around 1570 took the throne himself, founding the Aravidu dynasty. The empire survived for another eighty years in reduced form. Venkatapati Raya II (r. 1586–1614) restored some authority and moved the court to Chandragiri, but after his death a disputed succession led to civil war among the nobility. The great nayakas of <a class="enc-link" href="/encyclopedia#madurai">Madurai</a>, Thanjavur and Gingee, and the Wodeyars of Mysore, who took Srirangapatna in 1610, now ruled largely as independent princes, giving only nominal allegiance. Meanwhile the <a class="enc-link" href="/encyclopedia#deccan-sultanates">Deccan sultanates</a> of Bijapur and Golconda advanced into the south. The last king, Sriranga III, came to the throne in 1642 and tried to reassert control, but he was defeated by the armies of Bijapur and Golconda and by his own nayakas, and by about 1646 had lost his remaining territories, after which he lived as a fugitive under the protection of others. The southern nayaka kingdoms carried on many of Vijayanagara's institutions until they too fell to the <a class="enc-link" href="/encyclopedia#maratha-empire">Marathas</a>, the <a class="enc-link" href="/encyclopedia#mughal-empire">Mughals</a> and later the British.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Vijayanagara was the dominant power of southern <a class="enc-link" href="/encyclopedia#india">India</a> for over two centuries, uniting the south against the <a class="enc-link" href="/encyclopedia#deccan-sultanates">Deccan sultanates</a>, building at Hampi one of the great cities of its age and shaping the politics, architecture, music and literature of the region long after its defeat at Talikota in 1565.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Sewell, R. (1900) A Forgotten Empire (Vijayanagar): A Contribution to the History of India. London: Swan Sonnenschein.</li>
+        <li>Nilakanta Sastri, K.A. (1955) A History of South India from Prehistoric Times to the Fall of Vijayanagar. Madras: Oxford University Press.</li>
+        <li>Stein, B. (1989) Vijayanagara. The New Cambridge History of India, I.2. Cambridge: Cambridge University Press.</li>
+        <li>Eaton, R.M. (2005) A Social History of the Deccan, 1300–1761: Eight Indian Lives. Cambridge: Cambridge University Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="vijayanagara-empire"></div>
+      <a class="mini-connections-more" href="/connections#vijayanagara-empire">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/udaipur-state"><img src="/logos/Udaipur%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Udaipur State</span><span class="related-card-dates">728 CE – 1949 CE</span></a><a class="related-card" href="/empire/ahom-kingdom"><img src="/logos/Ahom%20kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ahom kingdom</span><span class="related-card-dates">1228 CE – 1826 CE</span></a><a class="related-card" href="/empire/lan-na"><img src="/logos/Lan%20Na.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lan Na</span><span class="related-card-dates">1292 CE – 1775 CE</span></a><a class="related-card" href="/empire/ayutthaya-kingdom"><img src="/logos/Ayutthaya%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ayutthaya Kingdom</span><span class="related-card-dates">1351 CE – 1767 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/aztec-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Aztec%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aztec Empire</span><span class="related-card-dates">1325 CE – 1521 CE</span></a><a class="related-card" href="/empire/principality-of-moldavia"><span class="related-card-label">Later →</span><img src="/logos/Principality%20of%20Moldavia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Principality of Moldavia</span><span class="related-card-dates">1346 CE – 1859 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Vijayanagara Empire",slug="vijayanagara-empire",url="https://the-epoch-institute.org/empire/vijayanagara-empire";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Vijayanagara Empire on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/vijayanagara-empire #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/vijayanagara-empire"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Vijayanagara Empire",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

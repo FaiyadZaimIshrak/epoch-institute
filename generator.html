@@ -26,7 +26,7 @@
 
 <h1>Empire Page Generator</h1>
 <p>
-  Loads <code>shared-data.js</code> and generates <strong>94 empire HTML pages</strong> bundled into a ZIP file.<br>
+  Loads <code>shared-data.js</code> and generates <strong>all profile pages</strong> bundled into a ZIP file.<br>
   Host this file alongside <code>shared-data.js</code> (either upload both to your server or use a local dev server).<br>
   After generation, extract the ZIP and upload the <code>empire/</code> folder to your hosting.
 </p>
@@ -176,7 +176,7 @@ function relatedHtml(emp) {
   var chrono = EMPIRES.slice().sort(function (a, b) { return yearsOf(a)[0] - yearsOf(b)[0] || a.name.localeCompare(b.name); });
   var i = chrono.indexOf(emp), prev = chrono[i - 1], next = chrono[i + 1];
   return '<section class="related-empires" aria-labelledby="related-title">\n' +
-    '      <p class="profile-references-title" id="related-title">Related empires</p>\n' +
+    '      <p class="profile-references-title" id="related-title">Related states and empires</p>\n' +
     '      <div class="related-grid">' + same.map(function (e) { return empireCard(e); }).join('') + '</div>\n' +
     '      <div class="related-prevnext">' + (prev ? empireCard(prev, '← Earlier') : '<span></span>') + (next ? empireCard(next, 'Later →') : '') + '</div>\n' +
     '    </section>';
@@ -258,14 +258,16 @@ function buildPage(emp) {
   var peakY    = peakPt[0];
   var duration = Math.abs(Math.round(endY - startY));
   var peakStr  = formatYear(peakY);
-  var period   = formatYear(startY) + ' – ' + formatYear(endY);
+  // a state that still exists (curve runs to the present): last section is 'Into the Present', period ends 'present'
+  var living   = !!emp.id && endY >= 2025;
+  var period   = formatYear(startY) + ' – ' + (living ? 'present' : formatYear(endY));
 
   var metaDesc = info
     ? info.slice(0, 155).replace(/"/g,"'") + (info.length > 155 ? '…' : '')
     : 'Explore the history of the ' + name + ' — foundation, military, governance, and decline.';
 
   var kind = PROFILE_KINDS[profileKind(emp)], isPolity = kind.chart;   // section scheme per kind of profile
-  var sectionKeys = kind.sections;
+  var sectionKeys = living ? kind.sections.map(function (s) { return s[0] === 'decline' ? ['decline', 'Into the Present'] : s; }) : kind.sections;
 
   var sectionsHtml = '';
   if (profile) {
@@ -367,10 +369,10 @@ noProfileNote + '\n' +
 '      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>\n' +
 '    </div>\n' +
 '  </div>\n</div>\n\n' +
-'<script src="/shared-data.js?v=5">\x3C/script>\n' +
-'<script src="/shared-nav.js?v=15">\x3C/script>\n' +
-'<script src="/epoch-stats.js?v=2">\x3C/script>\n' +
-'<script src="/connections-map.js?v=9" defer>\x3C/script>\n' +
+'<script src="/shared-data.js?v=6">\x3C/script>\n' +
+'<script src="/shared-nav.js?v=16">\x3C/script>\n' +
+'<script src="/epoch-stats.js?v=3">\x3C/script>\n' +
+'<script src="/connections-map.js?v=10" defer>\x3C/script>\n' +
 '<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});\x3C/script>\n' +
 '<script>\n' +
 '(function(){\n' +

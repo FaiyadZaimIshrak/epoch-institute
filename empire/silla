@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silla — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The longest-lived of Korea's Three Kingdoms, which unified most of the peninsula in the 7th century and built a Buddhist golden age at Gyeongju.">
+<meta property="og:title" content="Silla — The Epoch Institute">
+<meta property="og:description" content="The longest-lived of Korea's Three Kingdoms, which unified most of the peninsula in the 7th century and built a Buddhist golden age at Gyeongju.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/silla">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/silla.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/silla.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/silla">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Silla" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Silla.png" alt="Silla" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Silla</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">687 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">992 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">57 BCE – 935 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Gyeongju (Seorabeol)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Bak Hyeokgeose (traditional)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Jinhan confederacy</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/goryeo">Goryeo</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Silla grew from Saro, a chiefdom at Gyeongju traditionally founded in 57 BCE, into one of <a class="enc-link" href="/encyclopedia#korea">Korea</a>'s <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms</a>.</li><li>Allied with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a>, it destroyed Baekje in 660 and Goguryeo in 668, then expelled Tang forces by 676.</li><li>Its bone-rank aristocracy presided over a Buddhist golden age that produced Bulguksa and the Seokguram grotto.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>King Munmu, who completed Silla's unification, is said to have asked for burial at sea so that he could become a dragon guarding <a class="enc-link" href="/encyclopedia#korea">Korea</a>; a rock islet off the coast near Gyeongju is held to be his tomb.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Silla"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Silla over time, peaking in 687 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 146.6 L251.5 133.2 L319.8 119.8 L351.7 133.2 L426.5 106.4 L443.9 93.0 L447.5 93.0 L462.7 79.6 L469.3 66.2 L527.3 93.0 L540.4 52.8 L546.2 39.4 L552.0 26.0 L560.0 26.0 L606.5 39.4 L627.5 66.2 L658.0 79.6 L706.6 106.4 L714.6 119.8 L734.2 146.6 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 146.6 L251.5 133.2 L319.8 119.8 L351.7 133.2 L426.5 106.4 L443.9 93.0 L447.5 93.0 L462.7 79.6 L469.3 66.2 L527.3 93.0 L540.4 52.8 L546.2 39.4 L552.0 26.0 L560.0 26.0 L606.5 39.4 L627.5 66.2 L658.0 79.6 L706.6 106.4 L714.6 119.8 L734.2 146.6 L740.0 160.0"/><circle class="rf-peak" cx="560.0" cy="26.0" r="5"/><text class="rf-peak-label" x="560.0" y="16.0" text-anchor="middle">Peak 687 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>57 BCE: Traditional founding of Saro by Bak Hyeokgeose</title></g><g class="rf-ev"><line x1="443.9" x2="443.9" y1="160" y2="166"/><circle cx="443.9" cy="160" r="8"/><text x="443.9" y="164" text-anchor="middle">2</text><title>527: King Beopheung recognises Buddhism after the martyrdom of Ichadon</title></g><g class="rf-ev"><line x1="462.7" x2="462.7" y1="160" y2="166"/><circle cx="462.7" cy="160" r="8"/><text x="462.7" y="164" text-anchor="middle">3</text><title>553: King Jinheung seizes the Han River valley from Baekje</title></g><g class="rf-ev"><line x1="469.3" x2="469.3" y1="160" y2="166"/><circle cx="469.3" cy="160" r="8"/><text x="469.3" y="164" text-anchor="middle">4</text><title>562: Silla conquers Daegaya, the last Gaya state</title></g><g class="rf-ev"><line x1="540.4" x2="540.4" y1="160" y2="166"/><circle cx="540.4" cy="160" r="8"/><text x="540.4" y="164" text-anchor="middle">5</text><title>660: Silla and Tang destroy Baekje after the Battle of Hwangsanbeol</title></g><g class="rf-ev"><line x1="546.2" x2="546.2" y1="160" y2="166"/><circle cx="546.2" cy="160" r="8"/><text x="546.2" y="164" text-anchor="middle">6</text><title>668: Silla and Tang take Pyongyang and destroy Goguryeo</title></g><g class="rf-ev"><line x1="552.0" x2="552.0" y1="160" y2="166"/><circle cx="552.0" cy="160" r="8"/><text x="552.0" y="164" text-anchor="middle">7</text><title>676: Victory at Gibeolpo ends the Silla–Tang War</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>935: King Gyeongsun surrenders Silla to Goryeo</title></g><text class="rf-axis" x="20" y="200">57 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">935 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">57 BCE</span><span class="rf-text">Traditional founding of Saro by Bak Hyeokgeose</span></li><li><span class="rf-year">527</span><span class="rf-text">King Beopheung recognises <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> after the martyrdom of Ichadon</span></li><li><span class="rf-year">553</span><span class="rf-text">King Jinheung seizes the <a class="enc-link" href="/encyclopedia#han-river">Han River</a> valley from Baekje</span></li><li><span class="rf-year">562</span><span class="rf-text">Silla conquers Daegaya, the last Gaya state</span></li><li><span class="rf-year">660</span><span class="rf-text">Silla and Tang destroy Baekje after the Battle of Hwangsanbeol</span></li><li><span class="rf-year">668</span><span class="rf-text">Silla and Tang take Pyongyang and destroy Goguryeo</span></li><li><span class="rf-year">676</span><span class="rf-text">Victory at Gibeolpo ends the Silla–Tang War</span></li><li><span class="rf-year">935</span><span class="rf-text">King Gyeongsun surrenders Silla to Goryeo</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#qin-dynasty"><img src="/images/encyclopedia/qin-dynasty.jpg" alt="Qin dynasty" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#qin-dynasty">Qin dynasty</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Qin_dynasty_territory.svg" target="_blank" rel="noopener">Ian Remsen, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Silla grew from Saro, one of the twelve statelets of the Jinhan confederacy in south-eastern <a class="enc-link" href="/encyclopedia#korea">Korea</a>, centred on the Gyeongju basin. The <em>Samguk sagi</em>, compiled by Kim Busik in 1145, dates its foundation to 57 BCE, when the six villages of the basin are said to have chosen as ruler Bak Hyeokgeose, who according to legend hatched from an egg found beside a well. This early chronology, which makes Silla older than its rivals Goguryeo and Baekje, is generally treated as legendary, and Saro was probably a chiefdom of modest size until the third century CE. The early throne passed among three lineages: the Bak, the Seok, beginning with Talhae, and the Kim, whose ancestor Kim Alji was also said to have appeared miraculously. From the reign of Naemul (r. 356–402), who used the title <em>maripgan</em>, the Kim held the throne by hereditary succession, and Saro gradually absorbed the other Jinhan polities. In 377 and 382 Silla envoys reached the Former <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> court in northern <a class="enc-link" href="/encyclopedia#china">China</a> in company with Goguryeo missions. Pressed by Wa raiders from <a class="enc-link" href="/encyclopedia#japan">Japan</a> and by Gaya, Naemul sought help from Goguryeo, and according to the Gwanggaeto Stele an army of that king came south in 400 to relieve Silla, which remained under Goguryeo influence for much of the fifth century.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#mediterranean"><img src="/images/encyclopedia/mediterranean.jpg" alt="Mediterranean" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#mediterranean">Mediterranean</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_16.61811E_38.99124N.jpg" target="_blank" rel="noopener">of the modification : Eric Gaba (Sting), Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Silla society was ordered by the bone-rank system (<em>golpum</em>), which fixed status by birth. At the top stood the 'sacred bone' (<em>seonggol</em>) royal lineage, which died out with Queen Jindeok in 654, and the 'true bone' (<em>jingol</em>) aristocracy; below them came head ranks six to four and commoners. Rank determined the offices a man could hold and even the size of his house, the colours of his clothing and the carriages he could use. The economy rested on <a class="enc-link" href="/encyclopedia#rice">rice</a> and other grains grown by peasants who owed taxes and labour service, and the state granted aristocrats and officials the revenue of villages and, later, land. Silla also had rich gold resources and skilled goldsmiths: royal tombs of the fifth and sixth centuries at Gyeongju, such as Hwangnam Daechong and Cheonmachong, have yielded gold crowns with tree- and antler-shaped uprights, gold belts and glass vessels from the <a class="enc-link" href="/encyclopedia#mediterranean">Mediterranean</a> world. King Beopheung recognised <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> in 527 after the martyrdom of the courtier Ichadon, and it became the faith of court and aristocracy. Under Unified Silla, Gyeongju grew into a large city, and trade with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> and <a class="enc-link" href="/encyclopedia#japan">Japan</a> flourished; in the ninth century the merchant-commander Jang Bogo controlled shipping across the Yellow Sea from his base at Cheonghaejin on Wando, and Silla communities lived in Shandong.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#tang-dynasty"><img src="/images/encyclopedia/tang-dynasty.jpg" alt="Tang Dynasty" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#tang-dynasty">Tang Dynasty</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Tang_outline_map,_661.svg" target="_blank" rel="noopener">Kanguole, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Silla's military rise began in the sixth century. In 512 its general Isabu subdued the island state of Usan, modern Ulleungdo, and in 532 King Beopheung annexed Geumgwan Gaya at Gimhae, whose royal family joined the Silla aristocracy. King Jinheung (r. 540–576) allied with Baekje to drive Goguryeo from the <a class="enc-link" href="/encyclopedia#han-river">Han River</a> valley in 551, then seized Baekje's share in 553, gaining access to the Yellow Sea and direct contact with <a class="enc-link" href="/encyclopedia#china">China</a>. When Baekje struck back, its King Seong was killed at the Battle of Gwansan Fortress in 554, and in 562 Silla conquered Daegaya, the last of the Gaya states. Stelae recording Jinheung's tours of his new lands survive on Bukhansan and at Changnyeong, Hwangchoryeong and Maunnyeong. The army combined aristocratic commanders, local levies and the <em>hwarang</em>, bands of young aristocrats trained in arms and moral discipline, who produced leaders such as Kim Yusin. After Baekje took many Silla fortresses in 642, Kim Chunchu secured an alliance with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> in 648. Silla and Tang forces destroyed Baekje in 660, after Kim Yusin overcame the Baekje general Gyebaek at Hwangsanbeol, and took Pyongyang in 668. Silla then fought its former ally from 670, winning at Maesoseong in 675 and in a naval battle at Gibeolpo in 676.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <div class="profile-section-body"><p>Silla developed from a federation of six aristocratic districts into a centralised monarchy. Early rulers bore titles such as <em>geoseogan</em>, <em>isageum</em> and <em>maripgan</em>; King Jijeung adopted the Chinese title <em>wang</em> and fixed the dynastic name Silla in 503, and King Beopheung promulgated a code of administrative law in 520, organised a seventeen-grade official hierarchy and in 536 proclaimed Silla's own era name. The council of true-bone nobles, the <em>hwabaek</em>, decided major questions by unanimity and could depose kings. Two queens regnant ruled in the seventh century: Queen Seondeok (r. 632–647), who faced the rebellion of the noble Bidam in her last days, and Queen Jindeok (r. 647–654). The creation of the Chancellery (<em>jipsabu</em>) in 651 strengthened royal control. After unification King Sinmun (r. 681–692) purged rebellious nobles, divided the realm into nine provinces (<em>ju</em>) and five secondary capitals, founded the National Confucian Academy (<em>gukhak</em>) in 682, and in 689 abolished the stipend villages of officials in favour of salaries, though they were restored in 757. The central army was reorganised into nine 'oath bannerman' divisions (<em>seodang</em>) that included former Goguryeo and Baekje subjects and Malgal soldiers, binding the conquered peoples to the new state.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <div class="profile-section-body"><p>By uniting the peninsula south of the Taedong River in 676, Silla created the first state to rule the greater part of <a class="enc-link" href="/encyclopedia#korea">Korea</a>, and its language, the main ancestor of later Korean, its aristocracy and its capital culture shaped all later Korean states. Unified Silla's <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> reached a high level: the monk Wonhyo (617–686) wrote influential commentaries and spread devotion among ordinary people, Uisang (625–702) founded the Korean Hwaeom school, and the pilgrim Hyecho travelled to <a class="enc-link" href="/encyclopedia#india">India</a> in the 720s and left a record of his journey. The Bulguksa temple and the Seokguram cave shrine, begun in the mid-eighth century under the minister Kim Daeseong, are among the masterpieces of East Asian Buddhist art and are World Heritage sites. The Divine Bell of King Seongdeok, completed in 771, is one of the largest surviving bells in Korea, and the Cheomseongdae tower at Gyeongju, traditionally dated to Queen Seondeok's reign, is often described as the oldest surviving observatory in East <a class="enc-link" href="/encyclopedia#asia">Asia</a>. Silla scholars such as Choe Chiwon passed the Tang examinations and wrote in classical Chinese. The <em>idu</em> and <em>hyangchal</em> systems of writing Korean with Chinese characters preserved the <em>hyangga</em>, the earliest Korean poems, some of which survive in Iryeon's <em>Samguk yusa</em>.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#gung-ye"><img src="/images/encyclopedia/gung-ye.jpg" alt="Gung Ye" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#gung-ye">Gung Ye</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:%EA%B6%81%EC%98%88.jpg" target="_blank" rel="noopener">(Wikibotbot) 위키봇봇, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Silla's decline began after the reign of King Hyegong, who was killed in 780 during an aristocratic revolt. In the following 155 years twenty kings reigned, many after violent succession disputes among true-bone families, and the rebellion of Kim Heonchang in 822, who proclaimed a state called Jangan, showed how far provincial governors could challenge the capital. The bone-rank system excluded talented men of lower rank, including returned Tang graduates such as Choe Chiwon, while local strongmen (<em>hojok</em>) who controlled castles, land and private armies, and maritime <a class="enc-link" href="/encyclopedia#magnates">magnates</a> such as Jang Bogo, grew increasingly independent. Under Queen Jinseong (r. 887–897) attempts to collect taxes from exhausted provinces provoked peasant uprisings, beginning with that of Wonjong and Aeno at Sabeolju in 889. The rebel leaders <a class="enc-link" href="/encyclopedia#gyeon-hwon">Gyeon Hwon</a> and <a class="enc-link" href="/encyclopedia#gung-ye">Gung Ye</a> carved out Later Baekje (from 892, proclaimed in 900) and Later Goguryeo (901), later renamed Taebong, reducing Silla to the area around Gyeongju in the period known as the Later <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms</a>. In 918 <a class="enc-link" href="/encyclopedia#taejo-of-goryeo">Wang Geon</a> overthrew Gung Ye and founded Goryeo. Gyeon Hwon sacked Gyeongju in 927 and forced King Gyeongae to take his own life. In 935 King Gyeongsun surrendered his kingdom peacefully to Goryeo, which absorbed the Silla aristocracy.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Silla, <a class="enc-link" href="/encyclopedia#korea">Korea</a>'s longest-lived kingdom, rose from a chiefdom at Gyeongju to unite most of the peninsula, first in alliance with <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> and then against it, and its aristocracy, Buddhist art and language laid foundations on which every later Korean state built.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Barnes, G.L. (2001) State Formation in Korea: Historical and Archaeological Perspectives. Richmond: Curzon.</li>
+        <li>Iryeon (1972) Samguk Yusa: Legends and History of the Three Kingdoms of Ancient Korea, trans. Ha Tae-Hung and G.K. Mintz. Seoul: Yonsei University Press.</li>
+        <li>Lee, Ki-baik (1984) A New History of Korea, trans. E.W. Wagner with E.J. Shultz. Cambridge, MA: Harvard University Press.</li>
+        <li>Pai, Hyung Il (2000) Constructing 'Korean' Origins: A Critical Review of Archaeology, Historiography, and Racial Myth in Korean State-Formation Theories. Cambridge, MA: Harvard University Asia Center.</li>
+        <li>Seth, M.J. (2010) A History of Korea: From Antiquity to the Present. Lanham: Rowman &amp; Littlefield.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="silla"></div>
+      <a class="mini-connections-more" href="/connections#silla">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/goguryeo"><img src="/logos/Goguryeo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Goguryeo</span><span class="related-card-dates">37 BCE – 668 CE</span></a><a class="related-card" href="/empire/baekje"><img src="/logos/Baekje.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Baekje</span><span class="related-card-dates">18 BCE – 660 CE</span></a><a class="related-card" href="/empire/kushan-empire"><img src="/logos/Kushan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushan Empire</span><span class="related-card-dates">30 CE – 375 CE</span></a><a class="related-card" href="/empire/xianbei"><img src="/logos/Xianbei.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Xianbei</span><span class="related-card-dates">206 BCE – 235 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/teotihuacan"><span class="related-card-label">← Earlier</span><img src="/logos/Teotihuacan.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Teotihuacan</span><span class="related-card-dates">100 BCE – 550 CE</span></a><a class="related-card" href="/empire/goguryeo"><span class="related-card-label">Later →</span><img src="/logos/Goguryeo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Goguryeo</span><span class="related-card-dates">37 BCE – 668 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Silla",slug="silla",url="https://the-epoch-institute.org/empire/silla";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Silla on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/silla #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/silla"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Silla",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

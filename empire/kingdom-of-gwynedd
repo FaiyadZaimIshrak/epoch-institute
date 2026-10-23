@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingdom of Gwynedd — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The most enduring Welsh kingdom, ruled from Aberffraw on Anglesey, whose princes led Welsh resistance until Edward I’s conquest in 1283.">
+<meta property="og:title" content="Kingdom of Gwynedd — The Epoch Institute">
+<meta property="og:description" content="The most enduring Welsh kingdom, ruled from Aberffraw on Anglesey, whose princes led Welsh resistance until Edward I’s conquest in 1283.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/kingdom-of-gwynedd">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/kingdom-of-gwynedd.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/kingdom-of-gwynedd.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/kingdom-of-gwynedd">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Kingdom%20of%20Gwynedd" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Kingdom%20of%20Gwynedd.png" alt="Kingdom of Gwynedd" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Europe</p>
+        <h1 class="profile-detail-name">Kingdom of Gwynedd</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">1267 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">833 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">450 CE – 1283 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Aberffraw; later also Abergwyngregyn</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Cunedda (traditional)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/roman-britain">Roman Britain</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Kingdom of <a class="enc-link" href="/encyclopedia#england">England</a> (<a class="enc-link" href="/encyclopedia#principality-of-wales">Principality of Wales</a>)</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The leading Welsh kingdom, based on the mountains of Snowdonia and the grain lands of Anglesey, with its chief royal court at Aberffraw.</li><li>Its rulers, from <a class="enc-link" href="/encyclopedia#rhodri-the-great">Rhodri the Great</a> to <a class="enc-link" href="/encyclopedia#llywelyn-the-great">Llywelyn the Great</a>, repeatedly brought much of Wales under their authority.</li><li><a class="enc-link" href="/encyclopedia#llywelyn-ap-gruffudd">Llywelyn ap Gruffudd</a> was recognised as <a class="enc-link" href="/encyclopedia#prince-of-wales">Prince of Wales</a> in 1267, but Edward I conquered Gwynedd in 1282–1283.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>A sixth-century gravestone at Penmachno calls the dead man a citizen of ‘Venedotis’, one of the earliest written records of the name of Gwynedd.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Kingdom of Gwynedd"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Kingdom of Gwynedd over time, peaking in 1267 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L103.8 93.0 L178.2 79.6 L179.0 106.4 L344.1 119.8 L370.1 79.6 L384.8 66.2 L389.9 93.0 L445.3 133.2 L529.1 79.6 L542.9 52.8 L549.8 119.8 L581.8 119.8 L613.8 79.6 L638.0 52.8 L642.3 79.6 L683.8 39.4 L702.8 66.2 L708.9 106.4 L726.2 26.0 L734.8 93.0 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L103.8 93.0 L178.2 79.6 L179.0 106.4 L344.1 119.8 L370.1 79.6 L384.8 66.2 L389.9 93.0 L445.3 133.2 L529.1 79.6 L542.9 52.8 L549.8 119.8 L581.8 119.8 L613.8 79.6 L638.0 52.8 L642.3 79.6 L683.8 39.4 L702.8 66.2 L708.9 106.4 L726.2 26.0 L734.8 93.0 L740.0 160.0"/><circle class="rf-peak" cx="726.2" cy="26.0" r="5"/><text class="rf-peak-label" x="726.2" y="16.0" text-anchor="middle">Peak 1267 CE</text><g class="rf-ev"><line x1="103.8" x2="103.8" y1="160" y2="166"/><circle cx="103.8" cy="160" r="8"/><text x="103.8" y="164" text-anchor="middle">1</text><title>547: Maelgwn Gwynedd, the king Gildas called the dragon of the island, dies of plague</title></g><g class="rf-ev"><line x1="178.2" x2="178.2" y1="160" y2="166"/><circle cx="178.2" cy="160" r="8"/><text x="178.2" y="164" text-anchor="middle">2</text><title>633: Cadwallon ap Cadfan and Penda of Mercia defeat and kill Edwin of Northumbria</title></g><g class="rf-ev"><line x1="370.1" x2="370.1" y1="160" y2="166"/><circle cx="370.1" cy="160" r="8"/><text x="370.1" y="164" text-anchor="middle">3</text><title>855: Rhodri the Great adds Powys to Gwynedd</title></g><g class="rf-ev"><line x1="638.0" x2="638.0" y1="160" y2="166"/><circle cx="638.0" cy="160" r="8"/><text x="638.0" y="164" text-anchor="middle">4</text><title>1165: Henry II’s invasion of Wales founders on the Berwyn mountains against Owain Gwynedd</title></g><g class="rf-ev"><line x1="683.8" x2="683.8" y1="160" y2="166"/><circle cx="683.8" cy="160" r="8"/><text x="683.8" y="164" text-anchor="middle">5</text><title>1218: The Treaty of Worcester confirms Llywelyn the Great’s dominance in Wales</title></g><g class="rf-ev"><line x1="726.2" x2="726.2" y1="160" y2="166"/><circle cx="726.2" cy="160" r="8"/><text x="726.2" y="164" text-anchor="middle">6</text><title>1267: The Treaty of Montgomery recognises Llywelyn ap Gruffudd as Prince of Wales</title></g><g class="rf-ev"><line x1="739.1" x2="739.1" y1="160" y2="166"/><circle cx="739.1" cy="160" r="8"/><text x="739.1" y="164" text-anchor="middle">7</text><title>1282: Llywelyn ap Gruffudd is killed near Cilmeri</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>1284: The Statute of Rhuddlan turns Gwynedd into English shires</title></g><text class="rf-axis" x="20" y="200">450 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">1283 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">547</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#maelgwn-gwynedd">Maelgwn Gwynedd</a>, the king Gildas called the dragon of the island, dies of plague</span></li><li><span class="rf-year">633</span><span class="rf-text">Cadwallon ap Cadfan and Penda of Mercia defeat and kill <a class="enc-link" href="/encyclopedia#edwin-of-northumbria">Edwin of Northumbria</a></span></li><li><span class="rf-year">855</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#rhodri-the-great">Rhodri the Great</a> adds Powys to Gwynedd</span></li><li><span class="rf-year">1165</span><span class="rf-text">Henry II’s invasion of Wales founders on the Berwyn mountains against Owain Gwynedd</span></li><li><span class="rf-year">1218</span><span class="rf-text">The Treaty of Worcester confirms <a class="enc-link" href="/encyclopedia#llywelyn-the-great">Llywelyn the Great</a>’s dominance in Wales</span></li><li><span class="rf-year">1267</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia#treaty-of-montgomery">Treaty of Montgomery</a> recognises <a class="enc-link" href="/encyclopedia#llywelyn-ap-gruffudd">Llywelyn ap Gruffudd</a> as <a class="enc-link" href="/encyclopedia#prince-of-wales">Prince of Wales</a></span></li><li><span class="rf-year">1282</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#llywelyn-ap-gruffudd">Llywelyn ap Gruffudd</a> is killed near Cilmeri</span></li><li><span class="rf-year">1284</span><span class="rf-text">The Statute of Rhuddlan turns Gwynedd into English shires</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#maelgwn-gwynedd"><img src="/images/encyclopedia/maelgwn-gwynedd.jpg" alt="Maelgwn Gwynedd" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#maelgwn-gwynedd">Maelgwn Gwynedd</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:History_of_the_Kings_(f.96.v)_Maelgwn_Gwynedd_Detail.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Kingdom of Gwynedd took shape in north-west Wales in the generations after Roman rule in <a class="enc-link" href="/encyclopedia#britain">Britain</a> ended early in the fifth century, in a region that had been guarded by the Roman fort of Segontium at Caernarfon. Its <a class="enc-link" href="/encyclopedia#latin">Latin</a> name, Venedotia, appears in an early form on a sixth-century gravestone at Penmachno. Medieval tradition, first recorded in the ninth-century <em>Historia Brittonum</em>, held that Cunedda came with his sons from <a class="enc-link" href="/encyclopedia#manaw-gododdin">Manaw Gododdin</a>, the district around the head of the <a class="enc-link" href="/encyclopedia#firth-of-forth">Firth of Forth</a>, and expelled Irish settlers from Wales; many historians doubt the story or its date, but the later kings of Gwynedd all traced their line to him. The first ruler known from a near-contemporary source is <a class="enc-link" href="/encyclopedia#maelgwn-gwynedd">Maelgwn Gwynedd</a>, whom the British writer Gildas, probably in the first half of the sixth century, denounced as Maglocunus, the ‘dragon of the island’, a powerful king who had overthrown rivals and broken monastic vows. The <em>Annales Cambriae</em> place Maelgwn’s death in 547, during a great plague. The kingdom’s heartland was Snowdonia, Eryri, a natural fortress of mountains, together with the fertile island of Anglesey, Môn, whose grain fed the court. Aberffraw on Anglesey became its chief royal seat.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#irish-sea"><img src="/images/encyclopedia/irish-sea.jpg" alt="Irish Sea" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#irish-sea">Irish Sea</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Irish_Sea_satellite_image.jpg" target="_blank" rel="noopener">Irish_Sea_4.82844W_53.54821N.png: NASA derivative work: Dr Greg, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Gwynedd was a land of mountain pasture and narrow coastal plains, and its economy rested on <a class="enc-link" href="/encyclopedia#cattle">cattle</a>, sheep and the cereals of Anglesey, praised in a later saying as <em>Môn mam Cymru</em>, ‘Anglesey, mother of Wales’, because its harvests could feed the mainland. Society was ordered by kinship and status. Free men held hereditary shares of land within their kindred and owed the king food renders, hospitality and military service, while bond tenants in royal townships, the <em>maerdrefi</em>, worked the demesne land attached to each royal court. Welsh law fixed compensation for injury and killing and divided land equally among sons. Trade was modest: the kingdom exported cattle, hides and wool and imported wine, salt and cloth, much of it through contacts across the <a class="enc-link" href="/encyclopedia#irish-sea">Irish Sea</a>, especially with Hiberno-Norse Dublin, where Gruffudd ap Cynan was born and raised. The church was rooted in early monastic foundations. Bangor, traditionally founded by Saint Deiniol in the sixth century, became the seat of the diocese, while Clynnog Fawr, associated with Saint Beuno, Penmon and Holyhead were important churches. The thirteenth-century princes favoured the Cistercians, above all Aberconwy Abbey, founded in 1186, where <a class="enc-link" href="/encyclopedia#llywelyn-the-great">Llywelyn the Great</a> was buried. Excavations at Llys Rhosyr on Anglesey have uncovered the remains of one of the royal courts.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#edwin-of-northumbria"><img src="/images/encyclopedia/edwin-of-northumbria.jpg" alt="Edwin of Northumbria" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#edwin-of-northumbria">Edwin of Northumbria</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Saint_King_Edwin_of_Northumbria.jpg" target="_blank" rel="noopener">DaveWebster14, CC BY 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The armies of Gwynedd were built around the king’s household troop, the <em>teulu</em>, and the levy of free men, who fought mainly as spearmen and <a class="enc-link" href="/encyclopedia#archery">archers</a> and used the mountains of Snowdonia as refuge and fortress. Cadwallon ap Cadfan, in alliance with Penda of Mercia, defeated and killed <a class="enc-link" href="/encyclopedia#edwin-of-northumbria">Edwin of Northumbria</a> at the Battle of Hatfield Chase in 633 and ravaged Northumbria before he was himself killed by Oswald at the Battle of Heavenfield in 634. <a class="enc-link" href="/encyclopedia#rhodri-the-great">Rhodri the Great</a> killed the Danish leader Horm in 856, and in 881 his son Anarawd defeated the Mercians at Conwy, a victory the annals called vengeance for Rhodri. Gruffudd ap Llywelyn defeated the Mercians at Rhyd-y-groes on the Severn in 1039 and later raided deep into <a class="enc-link" href="/encyclopedia#england">England</a>. Owain Gwynedd ambushed Henry II’s army in 1157 before coming to terms, and with a coalition of Welsh rulers saw Henry’s great invasion of 1165 founder in rain on the Berwyn mountains. The thirteenth-century princes built stone castles such as Dolwyddelan, Criccieth, Castell y Bere and Dolforwyn. Yet Edward I’s campaigns of 1277 and 1282–1283 showed the limits of Welsh power: English armies, supplied by sea, seized the harvest of Anglesey and slowly encircled Snowdonia, despite a Welsh victory at Moel-y-don on the Menai Strait in November 1282.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#hywel-dda"><img src="/images/encyclopedia/hywel-dda.jpg" alt="Hywel Dda" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#hywel-dda">Hywel Dda</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Hyweldda_historieofcambria.png" target="_blank" rel="noopener">Humphrey Llwyd, David Powell, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Gwynedd’s kings, and from the twelfth century its princes, ruled through a network of courts, the <em>llysoedd</em>, one in each commote, or <em>cwmwd</em>, the subdivision of the larger cantref. Each court was the centre of a district in which a <em>maer</em> managed the royal lands and bond tenants and a <em>rhaglaw</em> exercised the ruler’s authority over free men, while the royal household moved between courts to consume their food renders. Succession was open to any male of the royal kin, which produced repeated wars between brothers and cousins. The kingdom’s law was written down in the thirteenth century in the version known as <em>Llyfr Iorwerth</em>, the Gwynedd redaction of the laws attributed to <a class="enc-link" href="/encyclopedia#hywel-dda">Hywel Dda</a>. Under Owain Gwynedd (r. 1137–1170), who styled himself prince of the Welsh, and Llywelyn ab Iorwerth, <a class="enc-link" href="/encyclopedia#llywelyn-the-great">Llywelyn the Great</a> (r. c. 1195–1240), government became more formal. Llywelyn issued charters, kept a household of officials led by his steward, the <em>distain</em> Ednyfed Fychan, married Joan, daughter of <a class="enc-link" href="/encyclopedia#john-king-of-england">King John</a> of <a class="enc-link" href="/encyclopedia#england">England</a>, and by the Treaty of Worcester of 1218 obtained recognition of his conquests. <a class="enc-link" href="/encyclopedia#llywelyn-ap-gruffudd">Llywelyn ap Gruffudd</a> went further, levying heavy taxes and winning, by the <a class="enc-link" href="/encyclopedia#treaty-of-montgomery">Treaty of Montgomery</a> of 1267, recognition from Henry III as <a class="enc-link" href="/encyclopedia#prince-of-wales">Prince of Wales</a> with the homage of the other Welsh lords.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#rhodri-the-great"><img src="/images/encyclopedia/rhodri-the-great.jpg" alt="Rhodri the Great" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#rhodri-the-great">Rhodri the Great</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Rhodri_Mawr_-_Historiae_Cambriae.png" target="_blank" rel="noopener">David Powell, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Gwynedd became the leading Welsh kingdom and, under its last princes, the core of an attempt to unite Wales as a single principality. The line of <a class="enc-link" href="/encyclopedia#rhodri-the-great">Rhodri the Great</a>, through his sons and his grandson <a class="enc-link" href="/encyclopedia#hywel-dda">Hywel Dda</a>, supplied kings to much of Wales, and the later dynasties of Deheubarth and Gwynedd both descended from him. The kingdom’s early Christian culture left monuments such as the stone at Llangadwaladr on Anglesey commemorating Cadfan ap Iago as the ‘wisest and most renowned of all kings’. From the twelfth century the princes’ courts sustained the Poets of the Princes, the <em>Gogynfeirdd</em>, among them Meilyr Brydydd, Gwalchmai ap Meilyr and Llywarch ap Llywelyn, known as Prydydd y Moch, whose elaborate praise poetry is a major body of medieval Welsh literature, and the life of Gruffudd ap Cynan, written in <a class="enc-link" href="/encyclopedia#latin">Latin</a> and preserved also in Welsh, is a rare secular biography of a Welsh king. The idea of a principality of Wales outlived its creators: Edward I kept the title and gave it to his son Edward of Caernarfon in 1301, and it has been held by heirs to the English and British throne since. Edward’s castles at Caernarfon, Conwy, Harlech and Beaumaris now form a World Heritage Site. North-west Wales remains the region where Welsh is most widely spoken, and the modern county of Gwynedd revives the old name.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#llywelyn-the-great"><img src="/images/encyclopedia/llywelyn-the-great.jpg" alt="Llywelyn the Great" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#llywelyn-the-great">Llywelyn the Great</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Pen_Llywelyn_ab_Iorwerth,_Castell_Degannwy.png" target="_blank" rel="noopener">Tipcake, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The power of Gwynedd rose and fell with its dynasty. <a class="enc-link" href="/encyclopedia#rhodri-the-great">Rhodri the Great</a>’s lands were divided after his death in 878, and in 942 <a class="enc-link" href="/encyclopedia#hywel-dda">Hywel Dda</a> of Deheubarth took over Gwynedd; through the tenth century the kingdom suffered <a class="enc-link" href="/encyclopedia#vikings">Viking</a> raids on Anglesey and wars between rival claimants. Gruffudd ap Llywelyn reunited Wales from Gwynedd but was killed in 1063 after Harold Godwinson’s campaign, and from about 1081 Norman lords from Chester occupied much of the kingdom until a Welsh revolt in 1094 and the return of Gruffudd ap Cynan. After <a class="enc-link" href="/encyclopedia#llywelyn-the-great">Llywelyn the Great</a> died in 1240, Henry III cut back his son Dafydd’s power, and the Treaty of Woodstock of 1247 confined Dafydd’s heirs to the lands west of the River Conwy. The final crisis came under <a class="enc-link" href="/encyclopedia#llywelyn-ap-gruffudd">Llywelyn ap Gruffudd</a>, who after 1272 refused homage to Edward I and fell behind on the payments owed under the <a class="enc-link" href="/encyclopedia#treaty-of-montgomery">Treaty of Montgomery</a>. The war of 1277 ended with the Treaty of Aberconwy, which again confined him to Gwynedd west of the Conwy. In 1282 his brother Dafydd ap Gruffudd attacked Hawarden Castle, and Llywelyn joined the rising; he was killed near Cilmeri on 11 December 1282. Dafydd was captured in June 1283 and executed at Shrewsbury that October. The Statute of Rhuddlan of 1284 divided Gwynedd into the shires of Anglesey, Caernarfon and Merioneth under English officials.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Gwynedd was the most durable of the Welsh kingdoms, rooted in Snowdonia and Anglesey, whose rulers from <a class="enc-link" href="/encyclopedia#maelgwn-gwynedd">Maelgwn Gwynedd</a> to <a class="enc-link" href="/encyclopedia#llywelyn-ap-gruffudd">Llywelyn ap Gruffudd</a> repeatedly led native Wales, created the idea of a Welsh principality and sustained a flowering of court poetry before Edward I conquered it in 1282–1283.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Charles-Edwards, T.M. (2013) Wales and the Britons, 350–1064. Oxford: Oxford University Press.</li>
+        <li>Davies, R.R. (1987) Conquest, Coexistence, and Change: Wales 1063–1415. Oxford: Clarendon Press.</li>
+        <li>Lloyd, J.E. (1911) A History of Wales from the Earliest Times to the Edwardian Conquest. London: Longmans, Green and Co.</li>
+        <li>Smith, J.B. (1998) Llywelyn ap Gruffudd, Prince of Wales. Cardiff: University of Wales Press.</li>
+        <li>Stephenson, D. (1984) The Governance of Gwynedd. Cardiff: University of Wales Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="kingdom-of-gwynedd"></div>
+      <a class="mini-connections-more" href="/connections#kingdom-of-gwynedd">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/duchy-of-bavaria"><img src="/logos/Duchy%20of%20Bavaria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Duchy of Bavaria</span><span class="related-card-dates">555 CE – 1623 CE</span></a><a class="related-card" href="/empire/kingdom-of-powys"><img src="/logos/Kingdom%20of%20Powys.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Powys</span><span class="related-card-dates">410 CE – 1160 CE</span></a><a class="related-card" href="/empire/republic-of-venice"><img src="/logos/Republic%20of%20Venice.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Venice</span><span class="related-card-dates">697 CE – 1797 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/kingdom-of-powys"><span class="related-card-label">← Earlier</span><img src="/logos/Kingdom%20of%20Powys.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Powys</span><span class="related-card-dates">410 CE – 1160 CE</span></a><a class="related-card" href="/empire/makuria"><span class="related-card-label">Later →</span><img src="/logos/Makuria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Makuria</span><span class="related-card-dates">450 CE – 1365 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Kingdom of Gwynedd",slug="kingdom-of-gwynedd",url="https://the-epoch-institute.org/empire/kingdom-of-gwynedd";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Kingdom of Gwynedd on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/kingdom-of-gwynedd #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/kingdom-of-gwynedd"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Kingdom of Gwynedd",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

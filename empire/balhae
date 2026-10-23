@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balhae — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="A kingdom of Manchuria and northern Korea founded by Goguryeo and Mohe people, so prosperous that Tang China called it the flourishing land of the east.">
+<meta property="og:title" content="Balhae — The Epoch Institute">
+<meta property="og:description" content="A kingdom of Manchuria and northern Korea founded by Goguryeo and Mohe people, so prosperous that Tang China called it the flourishing land of the east.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/balhae">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/balhae.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/balhae.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/balhae">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Balhae" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Balhae.png" alt="Balhae" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Balhae</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">830 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">228 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">698 CE – 926 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Near Mount Dongmo; later the Central Capital, Sanggyeong (Upper Capital) and briefly the Eastern Capital</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#dae-joyeong">Dae Joyeong</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/goguryeo">Goguryeo</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Dongdan (<a class="enc-link" href="/encyclopedia#liao-dynasty">Liao</a> client state); many refugees joined Goryeo</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Founded in 698 by <a class="enc-link" href="/encyclopedia#dae-joyeong">Dae Joyeong</a>, who led Goguryeo refugees and Mohe tribesmen after the fall of Goguryeo.</li><li>It ruled <a class="enc-link" href="/encyclopedia#manchuria">Manchuria</a> and northern <a class="enc-link" href="/encyclopedia#korea">Korea</a> from Tang-style capitals such as Sanggyeong, modelled on <a class="enc-link" href="/encyclopedia#changan">Chang'an</a>.</li><li>Conquered by the Khitan in 926, it is claimed in Korean history as the northern partner of Unified Silla.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Tang Xuanming calendar, which <a class="enc-link" href="/encyclopedia#japan">Japan</a> used for more than 800 years from 862, first reached Japan with an embassy from Balhae.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Balhae"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Balhae over time, peaking in 830 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 119.8 L67.4 106.4 L86.3 93.0 L127.4 79.6 L143.2 79.6 L203.2 66.2 L222.1 52.8 L320.0 79.6 L398.9 52.8 L436.8 26.0 L522.1 39.4 L680.0 79.6 L708.4 93.0 L736.8 119.8 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 119.8 L67.4 106.4 L86.3 93.0 L127.4 79.6 L143.2 79.6 L203.2 66.2 L222.1 52.8 L320.0 79.6 L398.9 52.8 L436.8 26.0 L522.1 39.4 L680.0 79.6 L708.4 93.0 L736.8 119.8 L740.0 160.0"/><circle class="rf-peak" cx="436.8" cy="26.0" r="5"/><text class="rf-peak-label" x="436.8" y="16.0" text-anchor="middle">Peak 830 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>698: Dae Joyeong defeats a Tang army at Tianmenling and founds the state of Jin</title></g><g class="rf-ev"><line x1="67.4" x2="67.4" y1="160" y2="166"/><circle cx="67.4" cy="160" r="8"/><text x="67.4" y="164" text-anchor="middle">2</text><title>713: Tang recognises Dae Joyeong as Commandery Prince of Bohai</title></g><g class="rf-ev"><line x1="111.6" x2="111.6" y1="160" y2="166"/><circle cx="111.6" cy="160" r="8"/><text x="111.6" y="164" text-anchor="middle">3</text><title>727: The first Balhae embassy reaches Japan</title></g><g class="rf-ev"><line x1="127.4" x2="127.4" y1="160" y2="166"/><circle cx="127.4" cy="160" r="8"/><text x="127.4" y="164" text-anchor="middle">4</text><title>732: A Balhae fleet raids Dengzhou in Shandong</title></g><g class="rf-ev"><line x1="203.2" x2="203.2" y1="160" y2="166"/><circle cx="203.2" cy="160" r="8"/><text x="203.2" y="164" text-anchor="middle">5</text><title>c. 756: King Mun moves the court to Sanggyeong, laid out on the plan of Chang'an</title></g><g class="rf-ev"><line x1="398.9" x2="398.9" y1="160" y2="166"/><circle cx="398.9" cy="160" r="8"/><text x="398.9" y="164" text-anchor="middle">6</text><title>818: King Seon begins a reign of northern expansion</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">7</text><title>926: King Dae Inseon surrenders to the Khitan; Balhae becomes the client state of Dongdan</title></g><text class="rf-axis" x="20" y="200">698 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">926 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">698</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#dae-joyeong">Dae Joyeong</a> defeats a Tang army at Tianmenling and founds the state of Jin</span></li><li><span class="rf-year">713</span><span class="rf-text">Tang recognises <a class="enc-link" href="/encyclopedia#dae-joyeong">Dae Joyeong</a> as <a class="enc-link" href="/encyclopedia#commandery">Commandery</a> Prince of Bohai</span></li><li><span class="rf-year">727</span><span class="rf-text">The first Balhae embassy reaches <a class="enc-link" href="/encyclopedia#japan">Japan</a></span></li><li><span class="rf-year">732</span><span class="rf-text">A Balhae fleet raids Dengzhou in Shandong</span></li><li><span class="rf-year">c. 756</span><span class="rf-text">King Mun moves the court to Sanggyeong, laid out on the plan of <a class="enc-link" href="/encyclopedia#changan">Chang'an</a></span></li><li><span class="rf-year">818</span><span class="rf-text">King Seon begins a reign of northern expansion</span></li><li><span class="rf-year">926</span><span class="rf-text">King Dae Inseon surrenders to the Khitan; Balhae becomes the client state of Dongdan</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#tang-dynasty"><img src="/images/encyclopedia/tang-dynasty.jpg" alt="Tang Dynasty" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#tang-dynasty">Tang Dynasty</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Tang_outline_map,_661.svg" target="_blank" rel="noopener">Kanguole, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Balhae arose from the wreckage of Goguryeo, the northern Korean kingdom destroyed by <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> and Silla in 668. Tang resettled many Goguryeo families around Yingzhou in Liaoxi, west of the <a class="enc-link" href="/encyclopedia#liao-dynasty">Liao</a> River, alongside Mohe tribesmen from <a class="enc-link" href="/encyclopedia#manchuria">Manchuria</a>. When the Khitan chief Li Jinzhong rebelled against Tang in 696, the Goguryeo leader Dae Jung-sang and the Mohe chief Geolsa Biu led their followers east. Both died during the flight, and Dae Jung-sang's son <a class="enc-link" href="/encyclopedia#dae-joyeong">Dae Joyeong</a> took command of the combined Goguryeo and Mohe groups. In 698 he defeated a pursuing Tang army under Li Kaigu at Tianmenling and founded a state named Jin near Mount Dongmo, close to modern Dunhua in Jilin province. Whether Dae Joyeong himself was of Goguryeo or Mohe origin is disputed, since the Chinese histories describe him in different ways. His state grew by absorbing Goguryeo remnants and Mohe tribes, and he sent envoys to the Eastern Turks to strengthen his position against Tang. In 713 the Tang court, seeking peace on its north-eastern frontier, recognised him as <a class="enc-link" href="/encyclopedia#commandery">Commandery</a> Prince of Bohai, and the name Bohai, Balhae in Korean, replaced Jin. By his death in 719 the kingdom controlled much of eastern Manchuria.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <div class="profile-section-body"><p>Balhae society was led by an aristocracy in which families of Goguryeo descent held most high offices, while much of the population, especially in the north, was Mohe; the proportions are debated and bear on modern arguments about the kingdom's identity. The economy combined farming, livestock raising, hunting, fishing and crafts suited to a cold northern climate. Chinese records praise the horses of Solbin, the iron of Wiseong and the <a class="enc-link" href="/encyclopedia#rice">rice</a> of Noseong, and the kingdom produced cloth of hemp and <a class="enc-link" href="/encyclopedia#silk">silk</a>. <a class="enc-link" href="/encyclopedia#fur-trade">Furs</a> of sable, tiger and bear, together with honey and ginseng, were its most valued exports. Trade moved along official routes radiating from the capitals: a road to <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a> through Liaodong and by sea to Shandong, a route to <a class="enc-link" href="/encyclopedia#japan">Japan</a> from the east coast, a road to Silla and routes to the Khitan and the Mohe of the far north. Some thirty-four Balhae embassies sailed to Japan between 727 and 919, exchanging furs for silks and other goods, and their envoys joined Japanese courtiers in composing Chinese poetry. The elite wrote literary Chinese and practised <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a>, building temples, stone lanterns and pagodas, while underfloor heating and roof-tile designs found at Balhae sites show continuities with Goguryeo.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <div class="profile-section-body"><p>Balhae's early survival depended on its army. <a class="enc-link" href="/encyclopedia#dae-joyeong">Dae Joyeong</a>'s victory at Tianmenling in 698 allowed the state to form, and under his son King Mu (Dae Muye, r. 719–737) it expanded aggressively. When the Heishui Mohe on the Amur placed themselves under Tang protection, Mu ordered an attack on them, and his brother Dae Munye, who opposed the war, fled to the Tang court. In 732 a Balhae fleet under the general Jang Mun-hyu crossed the sea and raided Dengzhou in Shandong, killing the Tang prefect. Tang responded by asking Silla to strike from the south in 733, but the Silla army turned back in heavy snow, and Balhae's relations with Tang soon settled into a peaceful tributary relationship. The central army was organised into guards on the Tang model, and provincial forces garrisoned fortified towns and mountain strongholds in a landscape of forests and river valleys. Under King Seon (r. 818–830) campaigns against the Mohe tribes of the north extended Balhae rule towards the Amur and Ussuri rivers. After this, records of warfare become scarce for most of the ninth century. When the Khitan armies of Yelü Abaoji invaded in 925, Balhae's frontier fortresses and capital fell within weeks, suggesting that the kingdom's military strength had declined during the long peace.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#departement"><img src="/images/encyclopedia/departement.jpg" alt="Département" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#departement">Département</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:France_d%C3%A9partementale.svg" target="_blank" rel="noopener">Nilstilar, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Balhae adapted the Tang system of government to its own needs. At the centre stood three <a class="enc-link" href="/encyclopedia#departement">departments</a>, the Jeongdangseong (Department of Political Affairs), the Seonjoseong and the Jungdaeseong, with the Jeongdangseong supervising six ministries named after Confucian virtues: Chung, In, Ui, Ji, Ye and Sin. The territory was divided into five capitals, fifteen prefectures (<em>bu</em>) and sixty-two districts (<em>ju</em>), though in outlying areas Mohe chiefs governed their own people under Balhae overlordship. King Mun (Dae Heummu, r. 737–793), the longest-reigning king, built much of this structure. He moved the court from the original capital to the Central Capital and, around 756, to the Upper Capital, Sanggyeong, in the Mudan River valley near modern Ning'an in Heilongjiang. Laid out in a grid on the plan of <a class="enc-link" href="/encyclopedia#changan">Chang'an</a>, with an outer wall about 16 kilometres long, it was among the largest cities of north-east <a class="enc-link" href="/encyclopedia#asia">Asia</a>. Mun later moved to the Eastern Capital, and the court returned to Sanggyeong in 794. Balhae kings were invested by the Tang emperor, from 762 as kings of the Bohai state, but at home they used their own reign titles, and the epitaph of Mun's daughter Princess Jeonghyo refers to him with imperial-style terms. In letters to <a class="enc-link" href="/encyclopedia#japan">Japan</a>, kings sometimes presented themselves as heirs of Goguryeo.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#liao-dynasty"><img src="/images/encyclopedia/liao-dynasty.jpg" alt="Liao dynasty" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#liao-dynasty">Liao dynasty</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Liao_circuits.png" target="_blank" rel="noopener">SY, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Balhae dominated <a class="enc-link" href="/encyclopedia#manchuria">Manchuria</a> and the north of the Korean peninsula for more than two centuries, standing between <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang China</a>, the Khitan, the Mohe peoples and Silla. Its adoption of Tang institutions, urban planning and literary culture carried Chinese models deep into the north-east, and the Tang called it the 'flourishing land of the east' (<em>Haedong seongguk</em>), a name associated with the reign of King Seon. Its embassies formed one of <a class="enc-link" href="/encyclopedia#japan">Japan</a>'s main channels to the continent in the eighth and ninth centuries: Japanese records preserve the letters exchanged and the names of Balhae envoys, and the Tang Xuanming calendar, adopted in Japan in 862, arrived with a Balhae embassy. After its fall its people and traditions passed to several successors. The <a class="enc-link" href="/encyclopedia#liao-dynasty">Khitan Liao</a> state absorbed most of its territory and employed former Balhae officials, refugees strengthened the new Korean kingdom of Goryeo, and the <a class="enc-link" href="/encyclopedia#jurchens">Jurchens</a>, who later founded the Jin dynasty, descended from Mohe peoples of the region. Balhae's place in history is contested today. Korean historians, following Yu Deuk-gong's <em>Balhaego</em> of 1784, treat it as a Korean state that formed, with Unified Silla, a period of Northern and Southern States, whereas Chinese historians generally describe it as a regional regime within the Tang order.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <div class="profile-section-body"><p>Balhae's last century is poorly documented, but the sources point to growing internal strain. Succession disputes after King Mun's death in 793 brought several short reigns, and in the later ninth century the kingdom's hold over outlying Mohe tribes appears to have loosened. The collapse of the <a class="enc-link" href="/encyclopedia#tang-dynasty">Tang dynasty</a> in 907 removed the regional order within which Balhae had flourished and coincided with the rise of the Khitan under Yelü Abaoji, who united the tribes of the <a class="enc-link" href="/encyclopedia#liao-dynasty">Liao</a> River basin and proclaimed himself emperor in 916. Balhae and the Khitan clashed over the Liaodong region, and late in 925 Abaoji launched a full-scale invasion. His army took the fortress of Buyeo on the western frontier and besieged the capital, Holhan Fortress at Sanggyeong, where the last king, Dae Inseon, surrendered early in 926. Abaoji turned the kingdom into the client state of Dongdan under his eldest son <a class="enc-link" href="/encyclopedia#yelu-bei">Yelü Bei</a>, and much of its population was later moved west towards Liaoyang. Resistance continued in local revolts and in short-lived restoration states such as Jeongan, while many nobles fled to Goryeo, which received the crown prince Dae Gwang-hyeon in 934. A once popular theory that a great eruption of Mount Paektu destroyed Balhae has been ruled out, since the eruption has been dated to around 946.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Balhae, founded by Goguryeo and Mohe refugees in 698, ruled <a class="enc-link" href="/encyclopedia#manchuria">Manchuria</a> and northern <a class="enc-link" href="/encyclopedia#korea">Korea</a> for over two centuries, built Tang-style institutions and capitals such as Sanggyeong, linked <a class="enc-link" href="/encyclopedia#japan">Japan</a> with the continent through its embassies, and remains central to Korean and Chinese debates about the history of the north-east.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Holcombe, C. (2001) The Genesis of East Asia, 221 B.C.–A.D. 907. Honolulu: University of Hawai'i Press.</li>
+        <li>Lee, K.-b. (1984) A New History of Korea. Trans. E.W. Wagner with E.J. Shultz. Cambridge, MA: Harvard University Press.</li>
+        <li>Seth, M.J. (2006) A Concise History of Korea: From the Neolithic Period through the Nineteenth Century. Lanham, MD: Rowman &amp; Littlefield.</li>
+        <li>Twitchett, D. (ed.) (1979) The Cambridge History of China, Volume 3: Sui and T'ang China, 589–906, Part I. Cambridge: Cambridge University Press.</li>
+        <li>Franke, H. and Twitchett, D. (eds) (1994) The Cambridge History of China, Volume 6: Alien Regimes and Border States, 907–1368. Cambridge: Cambridge University Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="balhae"></div>
+      <a class="mini-connections-more" href="/connections#balhae">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/khazar-khaganate"><img src="/logos/Khazar%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khazar Khaganate</span><span class="related-card-dates">650 CE – 969 CE</span></a><a class="related-card" href="/empire/silla"><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/tang-dynasty"><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a><a class="related-card" href="/empire/tibetan-empire"><img src="/logos/Tibetan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tibetan Empire</span><span class="related-card-dates">618 CE – 842 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/republic-of-venice"><span class="related-card-label">← Earlier</span><img src="/logos/Republic%20of%20Venice.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Venice</span><span class="related-card-dates">697 CE – 1797 CE</span></a><a class="related-card" href="/empire/kanem-bornu-empire"><span class="related-card-label">Later →</span><img src="/logos/Kanem-Bornu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kanem-Bornu Empire</span><span class="related-card-dates">700 CE – 1893 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Balhae",slug="balhae",url="https://the-epoch-institute.org/empire/balhae";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Balhae on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/balhae #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/balhae"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Balhae",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

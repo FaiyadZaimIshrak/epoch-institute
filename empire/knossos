@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knossos — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Leading city-state of Iron Age Crete on the site of the great Minoan palace, rival of Gortyn until the Roman conquest of 67 BCE.">
+<meta property="og:title" content="Knossos — The Epoch Institute">
+<meta property="og:description" content="Leading city-state of Iron Age Crete on the site of the great Minoan palace, rival of Gortyn until the Roman conquest of 67 BCE.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/knossos">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/knossos.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/knossos.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/knossos">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Knossos" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Knossos.png" alt="Knossos" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Europe</p>
+        <h1 class="profile-detail-name">Knossos</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">220 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">833 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">900 BCE – 67 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Knossos</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Minoan Knossos</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#roman-republic">Roman Republic</a> (province of <a class="enc-link" href="/encyclopedia#crete">Crete</a>)</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Knossos grew from the ruins of the Minoan palace into one of the two leading <a class="enc-link" href="/encyclopedia#greek-city-states">Greek city-states</a> of <a class="enc-link" href="/encyclopedia#iron-age">Iron Age</a> <a class="enc-link" href="/encyclopedia#crete">Crete</a>.</li><li>It was governed by annual <a class="enc-link" href="/encyclopedia#kosmoi">kosmoi</a> and a council of elders, with men's messes and age groups for citizen training.</li><li>Long rivalry with Gortyn and Lyttos ended when Quintus Caecilius Metellus conquered <a class="enc-link" href="/encyclopedia#crete">Crete</a> for <a class="enc-link" href="/encyclopedia#rome">Rome</a> in 69–67 BCE.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Classical Knossos put the Labyrinth on its <a class="enc-link" href="/encyclopedia#silver">silver</a> coins, sometimes with the Minotaur, centuries after the <a class="enc-link" href="/encyclopedia#bronze-age">Bronze Age</a> palace that inspired the legend had fallen into ruin.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Knossos"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Knossos over time, peaking in 220 BCE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 119.8 L106.4 93.0 L236.1 93.0 L322.5 119.8 L409.0 93.0 L452.2 79.6 L538.6 79.6 L606.9 52.8 L607.8 26.0 L611.2 52.8 L625.0 66.2 L711.5 79.6 L736.5 79.6 L738.3 119.8 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 119.8 L106.4 93.0 L236.1 93.0 L322.5 119.8 L409.0 93.0 L452.2 79.6 L538.6 79.6 L606.9 52.8 L607.8 26.0 L611.2 52.8 L625.0 66.2 L711.5 79.6 L736.5 79.6 L738.3 119.8 L740.0 160.0"/><circle class="rf-peak" cx="607.8" cy="26.0" r="5"/><text class="rf-peak-label" x="607.8" y="16.0" text-anchor="middle">Peak 220 BCE</text><g class="rf-ev"><line x1="106.4" x2="106.4" y1="160" y2="166"/><circle cx="106.4" cy="160" r="8"/><text x="106.4" y="164" text-anchor="middle">1</text><title>c. 800 BCE: Rich burials in the North Cemetery show Knossos among the wealthiest Aegean towns</title></g><g class="rf-ev"><line x1="409.0" x2="409.0" y1="160" y2="166"/><circle cx="409.0" cy="160" r="8"/><text x="409.0" y="164" text-anchor="middle">2</text><title>c. 450 BCE: Treaty between Knossos and Tylissos made under the arbitration of Argos</title></g><g class="rf-ev"><line x1="430.6" x2="430.6" y1="160" y2="166"/><circle cx="430.6" cy="160" r="8"/><text x="430.6" y="164" text-anchor="middle">3</text><title>c. 425 BCE: Knossos begins striking silver coins showing the Labyrinth</title></g><g class="rf-ev"><line x1="607.8" x2="607.8" y1="160" y2="166"/><circle cx="607.8" cy="160" r="8"/><text x="607.8" y="164" text-anchor="middle">4</text><title>c. 220 BCE: Knossos seizes and destroys its rival Lyttos in the Lyttian War</title></g><g class="rf-ev"><line x1="611.2" x2="611.2" y1="160" y2="166"/><circle cx="611.2" cy="160" r="8"/><text x="611.2" y="164" text-anchor="middle">5</text><title>c. 216 BCE: Philip V of Macedon becomes protector of the Cretan Koinon</title></g><g class="rf-ev"><line x1="736.5" x2="736.5" y1="160" y2="166"/><circle cx="736.5" cy="160" r="8"/><text x="736.5" y="164" text-anchor="middle">6</text><title>c. 71 BCE: Cretans defeat the Roman fleet of Marcus Antonius near Kydonia</title></g><g class="rf-ev"><line x1="738.3" x2="738.3" y1="160" y2="166"/><circle cx="738.3" cy="160" r="8"/><text x="738.3" y="164" text-anchor="middle">7</text><title>69–67 BCE: Quintus Caecilius Metellus conquers Crete, including Knossos</title></g><text class="rf-axis" x="20" y="200">900 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">67 BCE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 800 BCE</span><span class="rf-text">Rich burials in the North Cemetery show Knossos among the wealthiest <a class="enc-link" href="/encyclopedia#aegean">Aegean</a> towns</span></li><li><span class="rf-year">c. 450 BCE</span><span class="rf-text">Treaty between Knossos and Tylissos made under the arbitration of Argos</span></li><li><span class="rf-year">c. 425 BCE</span><span class="rf-text">Knossos begins striking <a class="enc-link" href="/encyclopedia#silver">silver</a> coins showing the Labyrinth</span></li><li><span class="rf-year">c. 220 BCE</span><span class="rf-text">Knossos seizes and destroys its rival Lyttos in the Lyttian War</span></li><li><span class="rf-year">c. 216 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#philip-v-of-macedon">Philip V of Macedon</a> becomes protector of the Cretan Koinon</span></li><li><span class="rf-year">c. 71 BCE</span><span class="rf-text">Cretans defeat the Roman fleet of Marcus Antonius near Kydonia</span></li><li><span class="rf-year">69–67 BCE</span><span class="rf-text">Quintus Caecilius Metellus conquers <a class="enc-link" href="/encyclopedia#crete">Crete</a>, including Knossos</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#athens"><img src="/images/encyclopedia/athens.jpg" alt="Athens" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#athens">Athens</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg" target="_blank" rel="noopener">Andrew Parlette, CC BY 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Knossos lies a few kilometres inland from the north coast of central <a class="enc-link" href="/encyclopedia#crete">Crete</a>, on the Kairatos stream. Its <a class="enc-link" href="/encyclopedia#bronze-age">Bronze Age</a> palace, the largest of Minoan Crete, was destroyed in the fourteenth or thirteenth century BCE (the date of its final destruction is still debated), but the site was never abandoned. In the early <a class="enc-link" href="/encyclopedia#iron-age">Iron Age</a> a substantial town grew up around the ruins, and the rich tombs of the North Cemetery, used from the eleventh to the seventh century BCE, contain bronzes, gold jewellery and pottery imported from <a class="enc-link" href="/encyclopedia#cyprus">Cyprus</a>, the <a class="enc-link" href="/encyclopedia#levant">Levant</a> and <a class="enc-link" href="/encyclopedia#athens">Athens</a>, showing that Knossos was one of the most prosperous and outward-looking communities of the <a class="enc-link" href="/encyclopedia#aegean">Aegean</a> around 900–700 BCE. By the Archaic period its inhabitants spoke the Doric dialect common to most of Crete, and Knossos had become a polis with its own territory, institutions and port at Amnisos and later at Herakleion, the site of modern Heraklion. Greek memory linked the city to its <a class="enc-link" href="/encyclopedia#bronze">Bronze</a> Age past: the <em>Iliad</em> names Knossos first among the Cretan cities led by Idomeneus, and the <em>Odyssey</em> calls it the great city where Minos ruled. Like much of Crete, Knossos is archaeologically less visible in the sixth century BCE, but it re-emerged in the Classical period as, with Gortyn, one of the two strongest cities of the island.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#mediterranean"><img src="/images/encyclopedia/mediterranean.jpg" alt="Mediterranean" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#mediterranean">Mediterranean</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_16.61811E_38.99124N.jpg" target="_blank" rel="noopener">of the modification : Eric Gaba (Sting), Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Knossian society followed the pattern ancient writers described for <a class="enc-link" href="/encyclopedia#crete">Crete</a> as a whole. Full citizens formed a privileged class, while the land was worked by dependent rural populations, called by various names in Cretan sources, who were bound to the soil and excluded from political life; <a class="enc-link" href="/encyclopedia#aristotle">Aristotle</a> compared them to the helots of <a class="enc-link" href="/encyclopedia#sparta">Sparta</a>, though he noted they were less rebellious. Citizen men ate together in men's houses, the <em>andreia</em>, whose meals Aristotle says were funded from public produce, and boys were trained in groups called <em>agelai</em>. The economy rested on cereals, olives, vines and stock-raising in the territory between the coast and the uplands, with trade through the harbours of Amnisos and Herakleion. From the later fifth century Knossos struck <a class="enc-link" href="/encyclopedia#silver">silver</a> coins showing a stylised labyrinth on one side and often the Minotaur or a head of Hera, Demeter or Apollo on the other, an explicit claim on the Minoan legends. Excavations have revealed a sanctuary of Demeter in use from the eighth century BCE into Roman times. In the <a class="enc-link" href="/encyclopedia#hellenistic-period">Hellenistic period</a> Cretan <a class="enc-link" href="/encyclopedia#mercenary">mercenaries</a>, especially <a class="enc-link" href="/encyclopedia#archery">archers</a>, served across the eastern <a class="enc-link" href="/encyclopedia#mediterranean">Mediterranean</a>, and piracy and <a class="enc-link" href="/encyclopedia#slave-raiding">slave raiding</a> became a significant, and notorious, part of the island's economy, in which Knossos shared.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#philip-v-of-macedon"><img src="/images/encyclopedia/philip-v-of-macedon.jpg" alt="Philip V of Macedon" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#philip-v-of-macedon">Philip V of Macedon</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Bust_of_Philip_V_of_Macedon_in_Palazzo_Massimo_(Rome).jpg" target="_blank" rel="noopener">Livioandronico2013, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Like other Cretan <a class="enc-link" href="/encyclopedia#polis">poleis</a>, Knossos fielded a citizen army trained through the <em>agelai</em> and men's houses, and Cretans were famed above all as <a class="enc-link" href="/encyclopedia#archery">archers</a> and light troops. Warfare on the island was endemic, as the cities competed for land, harbours and allies, and many interstate treaties survive as inscriptions. In the <a class="enc-link" href="/encyclopedia#hellenistic-period">Hellenistic period</a> Knossos and Gortyn, sometimes allied and sometimes enemies, sought to dominate <a class="enc-link" href="/encyclopedia#crete">Crete</a>. According to Polybius, by the late third century they had brought most of the island under their control, with the exception of Lyttos. In the Lyttian War of about 221–219 BCE Knossos, supported by Aetolian troops, attacked Lyttos, and while the Lyttian army was away on campaign the Knossians seized the city and destroyed it around 220 BCE. The war split Gortyn into rival factions and drew in <a class="enc-link" href="/encyclopedia#philip-v-of-macedon">Philip V of Macedon</a> and the Achaean League on the side of Knossos' opponents. Through the second century Knossos and Gortyn alternately cooperated and fought, while Cretan cities clashed with <a class="enc-link" href="/encyclopedia#rhodes">Rhodes</a> in the Cretan War of about 205–200 BCE. When <a class="enc-link" href="/encyclopedia#rome">Rome</a> turned on Crete, the Cretans defeated Marcus Antonius at sea near Kydonia around 71 BCE, but Quintus Caecilius Metellus then reduced the cities one by one, including Knossos, between 69 and 67 BCE.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#aristotle"><img src="/images/encyclopedia/aristotle.jpg" alt="Aristotle" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#aristotle">Aristotle</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg" target="_blank" rel="noopener">After Lysippos, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Knossos was governed by the institutions shared by the Cretan <a class="enc-link" href="/encyclopedia#polis">poleis</a>. Executive power lay with a board of annual magistrates, the <em><a class="enc-link" href="/encyclopedia#kosmoi">kosmoi</a></em>, ten in number according to <a class="enc-link" href="/encyclopedia#aristotle">Aristotle</a>, drawn from certain privileged kinship groups and led by a chief kosmos who gave his name to the year. Former kosmoi formed a council of elders, while the citizen assembly had limited powers, chiefly to ratify decisions taken by the magistrates and council. Aristotle, in the <em>Politics</em>, criticised this system for its narrow recruitment and the habit of suspending the kosmoi during factional struggles. Knossos conducted its foreign affairs through sworn treaties; an inscription of about 450 BCE records an agreement between Knossos and Tylissos made under the arbitration of Argos, and in the <a class="enc-link" href="/encyclopedia#hellenistic-period">Hellenistic period</a> Knossos concluded treaties of alliance and shared citizenship with many Cretan cities. The young men of Dreros swore an oath, preserved on stone, to be hostile to Lyttos and friendly to Knossos. In the late third century the cities of <a class="enc-link" href="/encyclopedia#crete">Crete</a> formed a federal Cretan Koinon with a common court for disputes between cities, in which Knossos was a leading member, and Philip V was recognised as its protector around 216 BCE. Its cohesion was weak, and the Koinon repeatedly broke apart in local wars.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#rome"><img src="/images/encyclopedia/rome.jpg" alt="Rome" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#rome">Rome</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg" target="_blank" rel="noopener">Diliff, CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Knossos' chief legacy lies in the way it carried the memory of <a class="enc-link" href="/encyclopedia#bronze-age">Bronze Age</a> <a class="enc-link" href="/encyclopedia#crete">Crete</a> into Greek culture. The myths of Minos, the lawgiver king of Knossos, of Daedalus and the Labyrinth, of Theseus, Ariadne and the Minotaur, circulated throughout the Greek world, and the city deliberately advertised them on its coinage. The seer Epimenides, traditionally said to be a Knossian, was remembered for purifying <a class="enc-link" href="/encyclopedia#athens">Athens</a> after the sacrilege of the Cylonian conspiracy, and a line attributed to him, that Cretans are always liars, is quoted in the <a class="enc-link" href="/encyclopedia#new-testament">New Testament</a> letter to Titus. Cretan institutions fascinated political thinkers. Ephorus and <a class="enc-link" href="/encyclopedia#aristotle">Aristotle</a> compared them with those of <a class="enc-link" href="/encyclopedia#sparta">Sparta</a>, and <a class="enc-link" href="/encyclopedia#plato">Plato</a> set his last dialogue, the <em>Laws</em>, among three old men walking from Knossos to the cave of Zeus on Mount Ida, one of them a Knossian named Kleinias who is charged with founding a new Cretan city. Under <a class="enc-link" href="/encyclopedia#rome">Rome</a> Knossos became the colony of Colonia Iulia Nobilis Cnosus and later a bishopric. Its greatest modern impact came from archaeology: excavation of the Minoan palace by Arthur Evans from 1900 revealed the <a class="enc-link" href="/encyclopedia#bronze">Bronze</a> Age civilisation he named Minoan, while later work by the British School at Athens has made <a class="enc-link" href="/encyclopedia#iron-age">Iron Age</a> Knossos one of the best known Greek towns of its era.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#mithridates-vi-of-pontus"><img src="/images/encyclopedia/mithridates-vi-of-pontus.jpg" alt="Mithridates VI of Pontus" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#mithridates-vi-of-pontus">Mithridates VI of Pontus</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Mithridates_VI_Louvre.jpg" target="_blank" rel="noopener">Unknown artistUnknown artist, CC BY-SA 2.5</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The decline of independent Knossos was tied to the fate of <a class="enc-link" href="/encyclopedia#crete">Crete</a> within the expanding Roman world. Endless wars among the Cretan cities, competition between Knossos and Gortyn, and the island's reputation as a base for <a class="enc-link" href="/encyclopedia#piracy">pirates</a> and slavers made Crete a target for Roman intervention, especially once <a class="enc-link" href="/encyclopedia#rome">Rome</a> undertook to suppress piracy in the eastern <a class="enc-link" href="/encyclopedia#mediterranean">Mediterranean</a>. Cretan support for <a class="enc-link" href="/encyclopedia#mithridates-vi-of-pontus">Mithridates VI of Pontus</a> and refusal of Roman demands to surrender pirate leaders and hostages led to war. After the defeat of Marcus Antonius around 71 BCE the <a class="enc-link" href="/encyclopedia#roman-empire">Romans</a> sent Quintus Caecilius Metellus with three legions in 69 BCE. He defeated the Cretans near Kydonia and then besieged the cities in turn; at Knossos the Cretan commander Lasthenes held out before escaping, and by 67 BCE the island was conquered, a campaign that earned Metellus the surname Creticus. Crete became a Roman province, later combined with Cyrene, with its capital at Gortyn, Knossos' old rival. Knossos lost its independence and much of its importance, but was refounded as a Roman colony, probably under Octavian or Augustus in the late first century BCE, and continued as a prosperous provincial town through the Roman period.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Knossos matters as the city that bridged Minoan and Greek <a class="enc-link" href="/encyclopedia#crete">Crete</a>: built over the greatest <a class="enc-link" href="/encyclopedia#bronze-age">Bronze Age</a> palace, it became one of the island's two leading <a class="enc-link" href="/encyclopedia#iron-age">Iron Age</a> <a class="enc-link" href="/encyclopedia#polis">poleis</a>, kept the legends of Minos alive on its coins, shaped Greek ideas of Cretan law, and fought Gortyn and Lyttos until <a class="enc-link" href="/encyclopedia#rome">Rome</a>'s conquest in 67 BCE.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Willetts, R.F. (1955) Aristocratic Society in Ancient Crete. London: Routledge &amp; Kegan Paul.</li>
+        <li>Chaniotis, A. (1996) Die Verträge zwischen kretischen Poleis in der hellenistischen Zeit. Stuttgart: Franz Steiner.</li>
+        <li>Hansen, M.H. and Nielsen, T.H. (eds) (2004) An Inventory of Archaic and Classical Poleis. Oxford: Oxford University Press.</li>
+        <li>Sanders, I.F. (1982) Roman Crete. Warminster: Aris &amp; Phillips.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="knossos"></div>
+      <a class="mini-connections-more" href="/connections#knossos">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/chios"><img src="/logos/Chios.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chios</span><span class="related-card-dates">1000 BCE – 86 BCE</span></a><a class="related-card" href="/empire/athens"><img src="/logos/Athens.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Athens</span><span class="related-card-dates">900 BCE – 86 BCE</span></a><a class="related-card" href="/empire/samos"><img src="/logos/Samos.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Samos</span><span class="related-card-dates">1000 BCE – 129 BCE</span></a><a class="related-card" href="/empire/ephesus"><img src="/logos/Ephesus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ephesus</span><span class="related-card-dates">1000 BCE – 133 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/athens"><span class="related-card-label">← Earlier</span><img src="/logos/Athens.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Athens</span><span class="related-card-dates">900 BCE – 86 BCE</span></a><a class="related-card" href="/empire/sparta"><span class="related-card-label">Later →</span><img src="/logos/Sparta.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sparta</span><span class="related-card-dates">900 BCE – 146 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Knossos",slug="knossos",url="https://the-epoch-institute.org/empire/knossos";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Knossos on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/knossos #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/knossos"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Knossos",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

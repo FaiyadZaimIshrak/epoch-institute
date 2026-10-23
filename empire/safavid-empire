@@ -56,7 +56,7 @@
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1501 CE – 1736 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#isfahan">Isfahan</a>, <a class="enc-link" href="/encyclopedia#tabriz">Tabriz</a>, Qazvin</span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#ismail-i">Ismail I</a></span></div>
-          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#aq-qoyunlu">Aq Qoyunlu</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/aq-qoyunlu">Aq Qoyunlu</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Hotak dynasty, Afsharid dynasty</span></div>
         </div>
         <p class="empire-meta">7 min read · Last reviewed October 2026</p>
@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/ottoman-empire"><img src="/logos/Ottoman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ottoman Empire</span><span class="related-card-dates">1299 CE – 1922 CE</span></a><a class="related-card" href="/empire/mughal-empire"><img src="/logos/Mughal%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mughal Empire</span><span class="related-card-dates">1526 CE – 1857 CE</span></a><a class="related-card" href="/empire/delhi-sultanate"><img src="/logos/Delhi%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Delhi Sultanate</span><span class="related-card-dates">1206 CE – 1526 CE</span></a><a class="related-card" href="/empire/abbasid-caliphate"><img src="/logos/Abbasid%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Abbasid Caliphate</span><span class="related-card-dates">750 CE – 1517 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/luba-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Luba%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Luba Empire</span><span class="related-card-dates">1500 CE – 1889 CE</span></a><a class="related-card" href="/empire/mughal-empire"><span class="related-card-label">Later →</span><img src="/logos/Mughal%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mughal Empire</span><span class="related-card-dates">1526 CE – 1857 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/ottoman-empire"><img src="/logos/Ottoman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ottoman Empire</span><span class="related-card-dates">1299 CE – 1922 CE</span></a><a class="related-card" href="/empire/kingdom-of-imereti"><img src="/logos/Kingdom%20of%20Imereti.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Imereti</span><span class="related-card-dates">1260 CE – 1810 CE</span></a><a class="related-card" href="/empire/circassia"><img src="/logos/Circassia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Circassia</span><span class="related-card-dates">1400 CE – 1864 CE</span></a><a class="related-card" href="/empire/mughal-empire"><img src="/logos/Mughal%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mughal Empire</span><span class="related-card-dates">1526 CE – 1857 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/luba-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Luba%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Luba Empire</span><span class="related-card-dates">1500 CE – 1889 CE</span></a><a class="related-card" href="/empire/funj-sultanate"><span class="related-card-label">Later →</span><img src="/logos/Funj%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Funj Sultanate</span><span class="related-card-dates">1504 CE – 1821 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

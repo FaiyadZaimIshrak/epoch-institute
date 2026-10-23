@@ -134,9 +134,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/kushite-empire"><img src="/logos/Kushite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushite Empire</span><span class="related-card-dates">1070 BCE – 350 CE</span></a><a class="related-card" href="/empire/garamantian-empire"><img src="/logos/Garamantian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Garamantian Empire</span><span class="related-card-dates">1000 BCE – 700 CE</span></a><a class="related-card" href="/empire/punic-empire"><img src="/logos/Punic%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Punic Empire</span><span class="related-card-dates">814 BCE – 146 BCE</span></a><a class="related-card" href="/empire/ptolemaic-empire"><img src="/logos/Ptolemaic%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ptolemaic Empire</span><span class="related-card-dates">323 BCE – 30 BCE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/mitanni-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Mitanni%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mitanni Empire</span><span class="related-card-dates">1590 BCE – 1250 BCE</span></a><a class="related-card" href="/empire/kushite-empire"><span class="related-card-label">Later →</span><img src="/logos/Kushite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushite Empire</span><span class="related-card-dates">1070 BCE – 350 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/kushite-empire"><img src="/logos/Kushite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushite Empire</span><span class="related-card-dates">1070 BCE – 350 CE</span></a><a class="related-card" href="/empire/garamantian-empire"><img src="/logos/Garamantian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Garamantian Empire</span><span class="related-card-dates">1000 BCE – 700 CE</span></a><a class="related-card" href="/empire/middle-kingdom-of-egypt"><img src="/logos/Middle%20Kingdom%20of%20Egypt.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Middle Kingdom of Egypt</span><span class="related-card-dates">2055 BCE – 1650 BCE</span></a><a class="related-card" href="/empire/punic-empire"><img src="/logos/Punic%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Punic Empire</span><span class="related-card-dates">814 BCE – 146 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/mitanni-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Mitanni%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mitanni Empire</span><span class="related-card-dates">1590 BCE – 1250 BCE</span></a><a class="related-card" href="/empire/kingdom-of-lydia"><span class="related-card-label">Later →</span><img src="/logos/Kingdom%20of%20Lydia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Lydia</span><span class="related-card-dates">1200 BCE – 546 BCE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -151,10 +151,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

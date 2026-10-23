@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goguryeo — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The largest of Korea's Three Kingdoms, a fortress-based warrior state that ruled Manchuria and the northern peninsula and repelled Sui and Tang invasions.">
+<meta property="og:title" content="Goguryeo — The Epoch Institute">
+<meta property="og:description" content="The largest of Korea's Three Kingdoms, a fortress-based warrior state that ruled Manchuria and the northern peninsula and repelled Sui and Tang invasions.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/goguryeo">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/goguryeo.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/goguryeo.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/goguryeo">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Goguryeo" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Goguryeo.png" alt="Goguryeo" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Goguryeo</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">494 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">705 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">37 BCE – 668 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Jolbon; Gungnae (Ji'an) from c. 3 CE; Pyongyang from 427</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Jumong (King Dongmyeong), by tradition</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Yemaek clans; Buyeo</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Balhae; Unified Silla</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Goguryeo grew from a clan federation on the Yalu into the largest of <a class="enc-link" href="/encyclopedia#korea">Korea</a>'s <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms</a>, ruling <a class="enc-link" href="/encyclopedia#manchuria">Manchuria</a> and the northern peninsula.</li><li>It took the Chinese commandery of Lelang in 313 and adopted <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a>, a Confucian academy and a law code under King Sosurim.</li><li>Its fortresses held off <a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> and Tang invasions for seventy years before a Tang and Silla alliance took Pyongyang in 668.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Goguryeo itself was often called Goryeo from the 5th century, and through the later kingdom of Goryeo that name became the English word <a class="enc-link" href="/encyclopedia#korea">Korea</a>.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Goguryeo"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Goguryeo over time, peaking in 494 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 146.6 L60.9 133.2 L111.9 119.8 L307.0 119.8 L377.4 93.0 L407.1 106.4 L436.7 106.4 L457.1 79.6 L479.6 52.8 L493.9 39.4 L542.9 26.0 L562.3 26.0 L620.5 66.2 L668.5 66.2 L682.8 52.8 L716.5 66.2 L738.0 106.4 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 146.6 L60.9 133.2 L111.9 119.8 L307.0 119.8 L377.4 93.0 L407.1 106.4 L436.7 106.4 L457.1 79.6 L479.6 52.8 L493.9 39.4 L542.9 26.0 L562.3 26.0 L620.5 66.2 L668.5 66.2 L682.8 52.8 L716.5 66.2 L738.0 106.4 L740.0 160.0"/><circle class="rf-peak" cx="562.3" cy="26.0" r="5"/><text class="rf-peak-label" x="562.3" y="16.0" text-anchor="middle">Peak 494 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>37 BCE: Traditional founding of Goguryeo by Jumong at Jolbon</title></g><g class="rf-ev"><line x1="377.4" x2="377.4" y1="160" y2="166"/><circle cx="377.4" cy="160" r="8"/><text x="377.4" y="164" text-anchor="middle">2</text><title>313: Goguryeo captures the Lelang commandery, ending Chinese rule around Pyongyang</title></g><g class="rf-ev"><line x1="437.7" x2="437.7" y1="160" y2="166"/><circle cx="437.7" cy="160" r="8"/><text x="437.7" y="164" text-anchor="middle">3</text><title>372: Buddhism is received and the Taehak academy founded under King Sosurim</title></g><g class="rf-ev"><line x1="480.6" x2="480.6" y1="160" y2="166"/><circle cx="480.6" cy="160" r="8"/><text x="480.6" y="164" text-anchor="middle">4</text><title>414: King Jangsu erects the stele of Gwanggaeto the Great at Ji'an</title></g><g class="rf-ev"><line x1="493.9" x2="493.9" y1="160" y2="166"/><circle cx="493.9" cy="160" r="8"/><text x="493.9" y="164" text-anchor="middle">5</text><title>427: The capital moves from Gungnae to Pyongyang</title></g><g class="rf-ev"><line x1="542.9" x2="542.9" y1="160" y2="166"/><circle cx="542.9" cy="160" r="8"/><text x="542.9" y="164" text-anchor="middle">6</text><title>475: Jangsu takes the Baekje capital Hanseong</title></g><g class="rf-ev"><line x1="682.8" x2="682.8" y1="160" y2="166"/><circle cx="682.8" cy="160" r="8"/><text x="682.8" y="164" text-anchor="middle">7</text><title>612: Eulji Mundeok routs a Sui army at the Salsu River</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>668: Tang and Silla forces take Pyongyang; the kingdom ends</title></g><text class="rf-axis" x="20" y="200">37 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">668 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">37 BCE</span><span class="rf-text">Traditional founding of Goguryeo by Jumong at Jolbon</span></li><li><span class="rf-year">313</span><span class="rf-text">Goguryeo captures the Lelang commandery, ending Chinese rule around Pyongyang</span></li><li><span class="rf-year">372</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> is received and the Taehak academy founded under King Sosurim</span></li><li><span class="rf-year">414</span><span class="rf-text">King Jangsu erects the stele of <a class="enc-link" href="/encyclopedia#gwanggaeto-the-great">Gwanggaeto the Great</a> at Ji'an</span></li><li><span class="rf-year">427</span><span class="rf-text">The capital moves from Gungnae to Pyongyang</span></li><li><span class="rf-year">475</span><span class="rf-text">Jangsu takes the Baekje capital Hanseong</span></li><li><span class="rf-year">612</span><span class="rf-text">Eulji Mundeok routs a <a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> army at the Salsu River</span></li><li><span class="rf-year">668</span><span class="rf-text">Tang and Silla forces take Pyongyang; the kingdom ends</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <div class="profile-section-body"><p>Goguryeo grew out of the Yemaek peoples of the middle Yalu and Hun river valleys, a rugged region of mountains and narrow farmland on the borders of modern <a class="enc-link" href="/encyclopedia#china">China</a> and <a class="enc-link" href="/encyclopedia#north-korea">North Korea</a>. Chinese sources mention a Gaogouli county within the Han commandery of Xuantu after 107 BCE, and the Goguryeo polity took shape among these communities as a federation of five clans, or <em>bu</em>. Korean tradition, recorded centuries later in the <em>Samguk sagi</em> of 1145, holds that Jumong, a prince who fled from the kingdom of Buyeo, founded the state in 37 BCE at Jolbon, usually identified with the area of modern Huanren and the mountain fortress of Wunü Shan. The same tradition places the move of the capital to Gungnae, at modern Ji'an on the Yalu, in 3 CE under King Yuri; archaeology confirms Ji'an as the royal centre for the following four centuries. According to the Chinese <em>Sanguozhi</em>, kingship passed early on from the Sono clan to the Gyeru, whose kings bore the royal surname Go. Under King Taejo, whose traditional reign of 53–146 is implausibly long, Goguryeo subjugated the Okjeo and Dongye peoples to the east and began to raid the Chinese <a class="enc-link" href="/encyclopedia#commandery">commanderies</a> of Liaodong and Xuantu.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <div class="profile-section-body"><p>Goguryeo's mountainous homeland offered little good farmland, and the <em>Sanguozhi</em> of the late 3rd century describes a frugal, warlike people whose great households lived on grain, fish and salt carried to them by commoners and by subject peoples such as the Okjeo. <a class="enc-link" href="/encyclopedia#millet">Millet</a>, barley and soybeans were the main crops, supplemented by hunting, stock-raising and <a class="enc-link" href="/encyclopedia#iron-working">iron-working</a>, and the conquest of the Liaodong plain and of the Taedong basin around Pyongyang in the 4th and 5th centuries greatly widened the agricultural base. Society was sharply ranked between a hereditary aristocracy of the five <em>bu</em>, free commoners who owed taxes and labour, and dependent or enslaved people taken in war. The same Chinese account records a great state festival, <em>Dongmaeng</em>, held in the tenth month to honour Heaven, and a marriage custom in which the groom lived in the bride's family home until a child was grown. <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a>, officially received in 372, spread among the elite alongside older ancestral and sky cults, and Daoism was favoured at court in the 7th century. The painted tombs near Ji'an and Pyongyang, such as Anak Tomb No. 3, dated 357, and the Tomb of the Dancers, show banquets, kitchens, hunts, wrestlers and armoured cavalry.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#gwanggaeto-the-great"><img src="/images/encyclopedia/gwanggaeto-the-great.jpg" alt="Gwanggaeto the Great" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#gwanggaeto-the-great">Gwanggaeto the Great</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Gwanggaeto_Stele_5.jpg" target="_blank" rel="noopener">EditQ, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Goguryeo was organised for war. Its strength rested on aristocratic <a class="enc-link" href="/encyclopedia#heavy-cavalry">heavy cavalry</a>, in which both rider and horse were armoured, supported by infantry <a class="enc-link" href="/encyclopedia#archery">archers</a> and spearmen, and on a dense network of stone-walled mountain fortresses (<em>sanseong</em>) that sheltered troops and population and forced invaders into slow sieges. Setbacks came early: in 244 the <a class="enc-link" href="/encyclopedia#cao-wei">Cao Wei</a> general Guanqiu Jian sacked the capital Hwando, and in 342 the Former Yan of the <a class="enc-link" href="/encyclopedia#murong-xianbei">Murong Xianbei</a> sacked it again, carrying off the queen mother and the body of the previous king. Expansion resumed with the capture of Lelang in 313 and Daifang soon after, ending four centuries of Chinese commandery rule in <a class="enc-link" href="/encyclopedia#korea">Korea</a>, although King Gogugwon was killed defending Pyongyang against Baekje in 371. <a class="enc-link" href="/encyclopedia#gwanggaeto-the-great">Gwanggaeto the Great</a> (r. 391–413) campaigned against Baekje, the Later Yan, the Khitan and eastern Buyeo, and in 400 sent an army to relieve Silla from Wa and Gaya attackers. In 475 King Jangsu took the Baekje capital Hanseong and executed King Gaero. Goguryeo's defences met their greatest test in the wars with <a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> and Tang: Sui Wendi's expedition of 598 failed, Sui Yangdi's huge army of 612 was routed by Eulji Mundeok at the Salsu River, and in 645 Tang Taizong took Liaodong fortress but abandoned the siege of Ansi.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#yeon-gaesomun"><img src="/images/encyclopedia/yeon-gaesomun.jpg" alt="Yeon Gaesomun" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#yeon-gaesomun">Yeon Gaesomun</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Yon_Kaesomun.gif" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Early Goguryeo kings headed a federation, sharing power with the chiefs of the other four <em>bu</em>, who kept their own officials. From the 2nd century the crown gradually turned the <em>bu</em> into divisions of an aristocracy based in the capital, and the reforms of King Sosurim (r. 371–384) laid the foundations of a centralised state: the reception of <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> from the Former <a class="enc-link" href="/encyclopedia#qin-dynasty">Qin</a> in 372, the founding that same year of the <em>Taehak</em>, a Confucian academy for aristocratic youths, and the promulgation of a law code (<em>yullyeong</em>) in 373. Officials were graded in a hierarchy of a dozen or more ranks, headed in the later period by a chief minister, the <em>daedaero</em>, who according to Chinese accounts was chosen among the great nobles, at times by force of arms. Provinces were run from the fortresses, whose commanders combined military, fiscal and judicial authority, and Chinese sources describe three capitals: Pyongyang, Gungnae and a southern Hanseong. Gwanggaeto's stele at Ji'an, erected by his son Jangsu in 414, is both a royal genealogy and a register of tomb-guard households, showing an administration that kept records of people. In 642 the general <a class="enc-link" href="/encyclopedia#yeon-gaesomun">Yeon Gaesomun</a> killed King Yeongnyu and more than a hundred officials, placed Bojang on the throne and ruled as military dictator with the title <em>dae mangniji</em>.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#unesco-world-heritage-site"><img src="/images/encyclopedia/unesco-world-heritage-site.jpg" alt="UNESCO World Heritage Site" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#unesco-world-heritage-site">UNESCO World Heritage Site</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:World_Heritage_Logo_global.svg" target="_blank" rel="noopener">UNESCO; Designer: Michel Olyff. Uploaded by Siyuwj, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Goguryeo was the dominant power of north-east <a class="enc-link" href="/encyclopedia#asia">Asia</a> for much of the 4th–6th centuries and an early channel through which Chinese writing, <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a>, Confucian learning and law reached the Korean peninsula. Its ascendancy shaped the politics of the <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms</a>: Silla was for a time a near-<a class="enc-link" href="/encyclopedia#protectorate">protectorate</a>, as the stele and a bronze vessel inscribed with Gwanggaeto's name found in a Silla tomb in Gyeongju attest, while Baekje's long rivalry with Goguryeo drove its alliances with the southern Chinese courts and Yamato <a class="enc-link" href="/encyclopedia#japan">Japan</a>. Goguryeo monks and artists also travelled to Japan; the monk Hyeja taught Prince Shōtoku, and the <em>Nihon shoki</em> credits the monk Damjing with introducing the making of paper and ink in 610. The Gwanggaeto Stele, rediscovered around 1880, is among the most important and most contested inscriptions in East Asian history, especially for its passages on the Wa. After 668 Goguryeo's people and traditions passed into Silla and into Balhae, founded in 698 by <a class="enc-link" href="/encyclopedia#dae-joyeong">Dae Joyeong</a>, which presented itself to Japan as Goguryeo's heir. The painted tombs are listed by <a class="enc-link" href="/encyclopedia#unesco-world-heritage-site">UNESCO</a> as the Complex of Koguryo Tombs and the Capital Cities and Tombs of the Ancient Koguryo Kingdom. In recent decades Chinese and Korean historians have disputed whether Goguryeo belongs to Korean or Chinese history.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#sui-dynasty"><img src="/images/encyclopedia/sui-dynasty.jpg" alt="Sui dynasty" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#sui-dynasty">Sui dynasty</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Cheui_Dynasty_581_CE.png" target="_blank" rel="noopener">Ian Kiu, CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The decline of Goguryeo began with the loss of the <a class="enc-link" href="/encyclopedia#han-river">Han River</a> basin, held since 475, to a Silla and Baekje alliance in 551; Silla then seized the whole area in 553 and gained direct access to the Yellow Sea and <a class="enc-link" href="/encyclopedia#china">China</a>. At the same time the reunification of China under the <a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> in 589 confronted Goguryeo with a far larger neighbour that would not tolerate its hold on Liaodong. Goguryeo survived four Sui invasions between 598 and 614, and the cost of these failures helped bring down the Sui dynasty itself in 618, but the wars drained its manpower. Under the Tang, Taizong's campaign of 645 and further attacks in the 650s and 660s wore down the frontier fortresses, and Tang's alliance with Silla, which destroyed Baekje in 660, opened a second front in the south. The death of <a class="enc-link" href="/encyclopedia#yeon-gaesomun">Yeon Gaesomun</a> in 665 or 666 set his sons against one another; the eldest, Yeon Namsaeng, defected to the Tang and guided its armies. In 668 the Tang general Li Ji, with Silla forces, took Pyongyang and captured King Bojang. The Tang set up the <a class="enc-link" href="/encyclopedia#protectorate">Protectorate</a> General to Pacify the East there and deported tens of thousands of households to China. Restoration movements followed, including the Silla-sponsored kingdom of Bodeok under Anseung (670–684), and many Goguryeo people later joined Balhae.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Goguryeo was the most powerful of <a class="enc-link" href="/encyclopedia#korea">Korea</a>'s <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms</a>, a fortress-based warrior state that ended Chinese commandery rule in the peninsula, transmitted <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> and Chinese learning eastward, held off the <a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> and Tang for seventy years, and left its name to Goryeo and ultimately to Korea itself.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Byington, M.E. (2016) The Ancient State of Puyŏ in Northeast Asia: Archaeology and Historical Memory. Cambridge, MA: Harvard University Asia Center.</li>
+        <li>Graff, D.A. (2002) Medieval Chinese Warfare, 300–900. London: Routledge.</li>
+        <li>Lee, K.-b. (1984) A New History of Korea. Trans. E.W. Wagner with E.J. Shultz. Cambridge, MA: Harvard University Press.</li>
+        <li>Seth, M.J. (2010) A History of Korea: From Antiquity to the Present. Lanham: Rowman &amp; Littlefield.</li>
+        <li>Wright, A.F. (1978) The Sui Dynasty. New York: Alfred A. Knopf.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="goguryeo"></div>
+      <a class="mini-connections-more" href="/connections#goguryeo">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/silla"><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/baekje"><img src="/logos/Baekje.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Baekje</span><span class="related-card-dates">18 BCE – 660 CE</span></a><a class="related-card" href="/empire/kushan-empire"><img src="/logos/Kushan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushan Empire</span><span class="related-card-dates">30 CE – 375 CE</span></a><a class="related-card" href="/empire/xianbei"><img src="/logos/Xianbei.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Xianbei</span><span class="related-card-dates">206 BCE – 235 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/silla"><span class="related-card-label">← Earlier</span><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/roman-egypt"><span class="related-card-label">Later →</span><img src="/logos/Roman%20Egypt.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Roman Egypt</span><span class="related-card-dates">30 BCE – 641 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Goguryeo",slug="goguryeo",url="https://the-epoch-institute.org/empire/goguryeo";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Goguryeo on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/goguryeo #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/goguryeo"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Goguryeo",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

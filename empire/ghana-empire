@@ -130,9 +130,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/aksumite-empire"><img src="/logos/Aksumite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aksumite Empire</span><span class="related-card-dates">100 CE – 940 CE</span></a><a class="related-card" href="/empire/kanem-bornu-empire"><img src="/logos/Kanem-Bornu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kanem-Bornu Empire</span><span class="related-card-dates">700 CE – 1893 CE</span></a><a class="related-card" href="/empire/benin-empire"><img src="/logos/Benin%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Benin Empire</span><span class="related-card-dates">1180 CE – 1897 CE</span></a><a class="related-card" href="/empire/mali-empire"><img src="/logos/Mali%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mali Empire</span><span class="related-card-dates">1235 CE – 1600 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/gupta-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Gupta%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Gupta Empire</span><span class="related-card-dates">240 CE – 550 CE</span></a><a class="related-card" href="/empire/byzantine-empire"><span class="related-card-label">Later →</span><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/aksumite-empire"><img src="/logos/Aksumite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aksumite Empire</span><span class="related-card-dates">100 CE – 940 CE</span></a><a class="related-card" href="/empire/kanem-bornu-empire"><img src="/logos/Kanem-Bornu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kanem-Bornu Empire</span><span class="related-card-dates">700 CE – 1893 CE</span></a><a class="related-card" href="/empire/hausa-kingdoms"><img src="/logos/Hausa%20kingdoms.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hausa kingdoms</span><span class="related-card-dates">1000 CE – 1808 CE</span></a><a class="related-card" href="/empire/mombasa"><img src="/logos/Mombasa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mombasa</span><span class="related-card-dates">1100 CE – 1593 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/saxons"><span class="related-card-label">← Earlier</span><img src="/logos/Saxons.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Saxons</span><span class="related-card-dates">280 CE – 804 CE</span></a><a class="related-card" href="/empire/kingdom-of-the-picts"><span class="related-card-label">Later →</span><img src="/logos/Kingdom%20of%20the%20Picts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of the Picts</span><span class="related-card-dates">300 CE – 900 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -147,10 +147,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

@@ -56,7 +56,7 @@
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1492 CE – 1898 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#madrid">Madrid</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Isabella I and Ferdinand II</span></div>
-          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Crown of <a class="enc-link" href="/encyclopedia#kingdom-of-castile">Castile</a>, Crown of <a class="enc-link" href="/encyclopedia#kingdom-of-aragon">Aragon</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/crown-of-castile">Crown of Castile</a>, <a class="enc-link" href="/empire/crown-of-aragon">Crown of Aragon</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Spanish American republics</span></div>
         </div>
         <p class="empire-meta">7 min read · Last reviewed October 2026</p>
@@ -134,9 +134,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/portuguese-empire"><img src="/logos/Portuguese%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Portuguese Empire</span><span class="related-card-dates">1415 CE – 1975 CE</span></a><a class="related-card" href="/empire/french-empire"><img src="/logos/French%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">French Empire</span><span class="related-card-dates">1534 CE – 1980 CE</span></a><a class="related-card" href="/empire/dutch-empire"><img src="/logos/Dutch%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dutch Empire</span><span class="related-card-dates">1581 CE – 1975 CE</span></a><a class="related-card" href="/empire/british-empire"><img src="/logos/British%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">British Empire</span><span class="related-card-dates">1583 CE – 1997 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/songhai-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Songhai%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Songhai Empire</span><span class="related-card-dates">1430 CE – 1600 CE</span></a><a class="related-card" href="/empire/luba-empire"><span class="related-card-label">Later →</span><img src="/logos/Luba%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Luba Empire</span><span class="related-card-dates">1500 CE – 1889 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/portuguese-empire"><img src="/logos/Portuguese%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Portuguese Empire</span><span class="related-card-dates">1415 CE – 1975 CE</span></a><a class="related-card" href="/empire/kingdom-of-norway"><img src="/logos/Kingdom%20of%20Norway.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Norway</span><span class="related-card-dates">872 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-denmark"><img src="/logos/Kingdom%20of%20Denmark.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Denmark</span><span class="related-card-dates">936 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-sweden"><img src="/logos/Kingdom%20of%20Sweden.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Sweden</span><span class="related-card-dates">970 CE – 2025 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/bijapur-sultanate"><span class="related-card-label">← Earlier</span><img src="/logos/Bijapur%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bijapur Sultanate</span><span class="related-card-dates">1490 CE – 1686 CE</span></a><a class="related-card" href="/empire/aceh-sultanate"><span class="related-card-label">Later →</span><img src="/logos/Aceh%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aceh Sultanate</span><span class="related-card-dates">1496 CE – 1903 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -151,10 +151,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

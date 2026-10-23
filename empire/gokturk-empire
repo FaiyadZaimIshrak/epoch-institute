@@ -56,7 +56,7 @@
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">546 CE – 744 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#otuken">Ötüken</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#bumin-qaghan">Bumin Qaghan</a></span></div>
-          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#rouran-khaganate">Rouran Khaganate</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/rouran-khaganate">Rouran Khaganate</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Uyghur Khaganate</span></div>
         </div>
         <p class="empire-meta">5 min read · Last reviewed October 2026</p>
@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/tang-dynasty"><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a><a class="related-card" href="/empire/khazar-khaganate"><img src="/logos/Khazar%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khazar Khaganate</span><span class="related-card-dates">650 CE – 969 CE</span></a><a class="related-card" href="/empire/song-dynasty"><img src="/logos/Song%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Song Dynasty</span><span class="related-card-dates">960 CE – 1279 CE</span></a><a class="related-card" href="/empire/han-dynasty"><img src="/logos/Han%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Han Dynasty</span><span class="related-card-dates">206 BCE – 220 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/byzantine-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/tang-dynasty"><span class="related-card-label">Later →</span><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/silla"><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/tang-dynasty"><img src="/logos/Tang%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tang Dynasty</span><span class="related-card-dates">618 CE – 907 CE</span></a><a class="related-card" href="/empire/tibetan-empire"><img src="/logos/Tibetan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tibetan Empire</span><span class="related-card-dates">618 CE – 842 CE</span></a><a class="related-card" href="/empire/goguryeo"><img src="/logos/Goguryeo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Goguryeo</span><span class="related-card-dates">37 BCE – 668 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/chalukyas-of-badami"><span class="related-card-label">← Earlier</span><img src="/logos/Chalukyas%20of%20Badami.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chalukyas of Badami</span><span class="related-card-dates">543 CE – 753 CE</span></a><a class="related-card" href="/empire/duchy-of-bavaria"><span class="related-card-label">Later →</span><img src="/logos/Duchy%20of%20Bavaria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Duchy of Bavaria</span><span class="related-card-dates">555 CE – 1623 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

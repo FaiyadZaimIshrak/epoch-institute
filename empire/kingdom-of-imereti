@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingdom of Imereti — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The western Georgian kingdom centred on Kutaisi that endured centuries of Ottoman pressure until the Russian Empire annexed it in 1810.">
+<meta property="og:title" content="Kingdom of Imereti — The Epoch Institute">
+<meta property="og:description" content="The western Georgian kingdom centred on Kutaisi that endured centuries of Ottoman pressure until the Russian Empire annexed it in 1810.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/kingdom-of-imereti">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/kingdom-of-imereti.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/kingdom-of-imereti.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/kingdom-of-imereti">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Kingdom%20of%20Imereti" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Kingdom%20of%20Imereti.png" alt="Kingdom of Imereti" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Islamic Caliphates &amp; Middle East</p>
+        <h1 class="profile-detail-name">Kingdom of Imereti</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">1465 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">550 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1260 CE – 1810 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Kutaisi</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#david-vi-narin">David VI Narin</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/kingdom-of-georgia">Kingdom of Georgia</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/russian-empire">Russian Empire</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A western Georgian kingdom ruled from Kutaisi by a branch of the Bagrationi dynasty, separate from 1260 and definitively from 1490.</li><li>It spent over two centuries as an Ottoman tributary, troubled by rebellious <a class="enc-link" href="/encyclopedia#vassal">vassals</a> and a cruel trade in slaves.</li><li><a class="enc-link" href="/encyclopedia#solomon">Solomon</a> I revived it in the eighteenth century, but the <a class="enc-link" href="/encyclopedia#russian-empire">Russian Empire</a> deposed Solomon II and annexed it in 1810.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Two battles fought at Chikhori shaped Imereti’s history: Bagrat’s victory over George VIII in 1463 and <a class="enc-link" href="/encyclopedia#solomon">Solomon</a> I’s victory over the <a class="enc-link" href="/encyclopedia#ottoman-empire">Ottomans</a> in 1757.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Kingdom of Imereti"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Kingdom of Imereti over time, peaking in 1465 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 93.0 L63.2 106.4 L111.6 146.6 L186.3 119.8 L285.7 39.4 L288.4 26.0 L321.1 52.8 L347.3 79.6 L406.2 93.0 L543.6 93.0 L596.0 133.2 L670.6 79.6 L692.9 79.6 L712.5 106.4 L732.1 119.8 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 93.0 L63.2 106.4 L111.6 146.6 L186.3 119.8 L285.7 39.4 L288.4 26.0 L321.1 52.8 L347.3 79.6 L406.2 93.0 L543.6 93.0 L596.0 133.2 L670.6 79.6 L692.9 79.6 L712.5 106.4 L732.1 119.8 L740.0 160.0"/><circle class="rf-peak" cx="288.4" cy="26.0" r="5"/><text class="rf-peak-label" x="288.4" y="16.0" text-anchor="middle">Peak 1465 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>1260: David VI Narin withdraws to Kutaisi and founds a western kingdom</title></g><g class="rf-ev"><line x1="111.6" x2="111.6" y1="160" y2="166"/><circle cx="111.6" cy="160" r="8"/><text x="111.6" y="164" text-anchor="middle">2</text><title>1330: George V the Brilliant reunites Imereti with the rest of Georgia</title></g><g class="rf-ev"><line x1="285.7" x2="285.7" y1="160" y2="166"/><circle cx="285.7" cy="160" r="8"/><text x="285.7" y="164" text-anchor="middle">3</text><title>1463: Bagrat of Imereti defeats George VIII at Chikhori</title></g><g class="rf-ev"><line x1="321.1" x2="321.1" y1="160" y2="166"/><circle cx="321.1" cy="160" r="8"/><text x="321.1" y="164" text-anchor="middle">4</text><title>1490: The division of Georgia leaves Imereti a separate kingdom</title></g><g class="rf-ev"><line x1="406.2" x2="406.2" y1="160" y2="166"/><circle cx="406.2" cy="160" r="8"/><text x="406.2" y="164" text-anchor="middle">5</text><title>1555: The Treaty of Amasya places western Georgia in the Ottoman sphere</title></g><g class="rf-ev"><line x1="670.6" x2="670.6" y1="160" y2="166"/><circle cx="670.6" cy="160" r="8"/><text x="670.6" y="164" text-anchor="middle">6</text><title>1757: Solomon I defeats the Ottomans at Chikhori</title></g><g class="rf-ev"><line x1="732.1" x2="732.1" y1="160" y2="166"/><circle cx="732.1" cy="160" r="8"/><text x="732.1" y="164" text-anchor="middle">7</text><title>1804: Solomon II accepts Russian protection by the Treaty of Elaznauri</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>1810: Russia deposes Solomon II and annexes Imereti</title></g><text class="rf-axis" x="20" y="200">1260 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">1810 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">1260</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#david-vi-narin">David VI Narin</a> withdraws to Kutaisi and founds a western kingdom</span></li><li><span class="rf-year">1330</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#george-v">George V</a> the Brilliant reunites Imereti with the rest of <a class="enc-link" href="/encyclopedia#georgia">Georgia</a></span></li><li><span class="rf-year">1463</span><span class="rf-text">Bagrat of Imereti defeats George VIII at Chikhori</span></li><li><span class="rf-year">1490</span><span class="rf-text">The division of <a class="enc-link" href="/encyclopedia#georgia">Georgia</a> leaves Imereti a separate kingdom</span></li><li><span class="rf-year">1555</span><span class="rf-text">The Treaty of Amasya places western <a class="enc-link" href="/encyclopedia#georgia">Georgia</a> in the Ottoman sphere</span></li><li><span class="rf-year">1757</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#solomon">Solomon</a> I defeats the <a class="enc-link" href="/encyclopedia#ottoman-empire">Ottomans</a> at Chikhori</span></li><li><span class="rf-year">1804</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#solomon">Solomon</a> II accepts Russian protection by the Treaty of Elaznauri</span></li><li><span class="rf-year">1810</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#russia">Russia</a> deposes <a class="enc-link" href="/encyclopedia#solomon">Solomon</a> II and annexes Imereti</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#david"><img src="/images/encyclopedia/david.jpg" alt="David" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#david">David</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:King_David,_the_King_of_Israel.jpg" target="_blank" rel="noopener">Gerard van Honthorst, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Imereti, the land of western <a class="enc-link" href="/encyclopedia#georgia">Georgia</a> lying beyond the Likhi Range around the city of Kutaisi, had been the heart of the old Kingdom of Abkhazia and a core region of the united Kingdom of Georgia. Its separate history as a kingdom began during the Mongol domination of the <a class="enc-link" href="/encyclopedia#caucasus">Caucasus</a>. In the 1240s the <a class="enc-link" href="/encyclopedia#mongols">Mongols</a> recognised two cousins as co-kings of Georgia: <a class="enc-link" href="/encyclopedia#david">David</a> VII Ulu and <a class="enc-link" href="/encyclopedia#david-vi-narin">David VI Narin</a>, son of Queen Rusudan. In 1259–1260 David Narin joined a rising against Mongol overlordship and, when it failed, withdrew west to Kutaisi, where the Mongols could not easily reach him. He ruled western Georgia as an independent king until his death in 1293, and his descendants succeeded him. <a class="enc-link" href="/encyclopedia#george-v">George V</a> the Brilliant reunited the western kingdom with the rest of Georgia in 1330. During the crisis caused by <a class="enc-link" href="/encyclopedia#timur">Timur</a>’s invasions in the 1380s, descendants of David Narin revived a separate western kingdom for a time, before the kings of Georgia reasserted their authority. The decisive break came in the fifteenth century. Bagrat, a prince of a junior Bagratid line who governed in the west, made himself king of Imereti, defeated King George VIII at the Battle of Chikhori in 1463 and took Kartli as well in 1465. After the council of 1490 recognised the division of Georgia, Imereti remained a separate kingdom under his descendants.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#black-sea"><img src="/images/encyclopedia/black-sea.jpg" alt="Black Sea" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#black-sea">Black Sea</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:The_Danube_Spills_into_the_Black_Sea.jpg" target="_blank" rel="noopener">The SeaWiFS Project, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Imereti was a land of hills, river valleys and forests with a humid climate, and its economy rested on farming and stock-raising. Peasants grew <a class="enc-link" href="/encyclopedia#millet">millet</a> and wheat and tended vineyards, and from the seventeenth century <a class="enc-link" href="/encyclopedia#maize">maize</a>, introduced from the <a class="enc-link" href="/encyclopedia#americas">Americas</a>, gradually became the staple food of western <a class="enc-link" href="/encyclopedia#georgia">Georgia</a>. Society was hierarchical. The princely families, or <em>tavadi</em>, and the lesser nobility, or <em>aznauri</em>, held land and peasants in a system of <a class="enc-link" href="/encyclopedia#serfdom">serfdom</a>, and the church and great monasteries such as Gelati were major landowners. Kutaisi was the only significant town, a royal seat and market rather than a large commercial city. Trade ran mainly through <a class="enc-link" href="/encyclopedia#black-sea">Black Sea</a> ports controlled by the <a class="enc-link" href="/encyclopedia#ottoman-empire">Ottomans</a> and their clients, and the most notorious export was people. Western Georgian nobles sold captives and even their own serfs to Ottoman slave traders, and raiding for slaves between rival princes depopulated parts of the country. European visitors, including the French traveller Jean Chardin, who passed through western Georgia in the 1670s, described the trade and the poverty that accompanied it. Religious life centred on the <a class="enc-link" href="/encyclopedia#georgian-orthodox-church">Georgian Orthodox Church</a>, whose western branch was headed by the Catholicos of Abkhazia, and Catholic missionaries also worked in the region in the seventeenth century.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#solomon"><img src="/images/encyclopedia/solomon.jpg" alt="Solomon" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#solomon">Solomon</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Simeon_Solomon,_King_Solomon,_1872_or_1874,_NGA_76152_(cropped).jpg" target="_blank" rel="noopener">Simeon Solomon, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The kingdom’s armed forces consisted of the levies of nobles and their retainers, summoned by the king in time of war, and were rarely large or well equipped. Fortresses such as Kutaisi, Shorapani, Bagdati and Skanda guarded the passes and river routes, and control of them was often the decisive issue in wars with the <a class="enc-link" href="/encyclopedia#ottoman-empire">Ottomans</a>. Bagrat III (r. 1510–1565) was one of the most active kings: he fought the princes of Samtskhe, defeating them at Murjakheti in 1535, but a coalition of Georgian rulers was beaten by the Ottomans at Sokhoista in 1545. Much of Imereti’s fighting was internal, against its own great <a class="enc-link" href="/encyclopedia#vassal">vassals</a>, the <a class="enc-link" href="/encyclopedia#house-of-dadiani">Dadiani of Mingrelia</a>, the Gurieli of Guria and the dukes of Racha, or against the eastern Georgian kingdoms, and these wars often drew in Ottoman or Persian intervention. Ottoman garrisons held key fortresses for long periods, including the fortress of Kutaisi. <a class="enc-link" href="/encyclopedia#solomon">Solomon</a> I won the kingdom’s best-known victory when he defeated an Ottoman army at the Battle of Chikhori in 1757. During the <a class="enc-link" href="/encyclopedia#russo-turkish-war-1877-1878">Russo-Turkish War</a> of 1768–1774, a Russian force under Gottlieb Totleben campaigned in western <a class="enc-link" href="/encyclopedia#georgia">Georgia</a>, and Solomon took the opportunity to drive Ottoman garrisons from fortresses in his kingdom.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#moscow"><img src="/images/encyclopedia/moscow.jpg" alt="Moscow" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#moscow">Moscow</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Saint_Basil%27s_Cathedral_and_the_Red_Square.jpg" target="_blank" rel="noopener">U.S. Department of State, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Imereti was ruled by a branch of the Bagrationi dynasty, whose kings were crowned at Gelati or Kutaisi and buried in the Gelati monastery, the kingdom’s royal shrine. In theory the king was overlord of all western <a class="enc-link" href="/encyclopedia#georgia">Georgia</a>, including the principalities of Mingrelia, Guria and Abkhazia and the mountain region of Svaneti. In practice these <a class="enc-link" href="/encyclopedia#vassal">vassals</a> became independent in all but name during the sixteenth century, and the kingdom proper was reduced to Imereti itself, where even the dukes of Racha often defied the crown. Royal government was simple: the king relied on a small court, on princely families who held hereditary offices and on the church. The Treaty of Amasya of 1555 between the Ottoman and Safavid empires placed western Georgia in the Ottoman sphere, and Imereti paid tribute to the sultans for over two centuries, sometimes including captives. Successions were frequently contested, and in the late seventeenth and early eighteenth centuries kings were made and unmade by noble factions, the Ottoman pasha of Akhaltsikhe and the eastern Georgian kings. Archil, a cultivated poet who ruled Imereti several times between the 1660s and 1690s, ended his life in exile in <a class="enc-link" href="/encyclopedia#moscow">Moscow</a>. <a class="enc-link" href="/encyclopedia#solomon">Solomon</a> I (r. 1752–1784) strengthened royal authority, curbed the nobility and in the 1750s prohibited the sale of slaves.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#erekle-ii"><img src="/images/encyclopedia/erekle-ii.jpg" alt="Erekle II" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#erekle-ii">Erekle II</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Heraclius_II_of_Eastern_Georgia_crop.png" target="_blank" rel="noopener">UnknownUnknown derivative work: Carnby, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>For more than three centuries the Kingdom of Imereti preserved an independent Georgian <a class="enc-link" href="/encyclopedia#eastern-orthodox-church">Orthodox</a> monarchy in western <a class="enc-link" href="/encyclopedia#georgia">Georgia</a>, on the frontier between the <a class="enc-link" href="/encyclopedia#ottoman-empire">Ottoman Empire</a> and the Christian <a class="enc-link" href="/encyclopedia#caucasus">Caucasus</a>. It maintained the traditions of the medieval kingdom: Kutaisi remained a royal capital, and the Gelati monastery, founded by <a class="enc-link" href="/encyclopedia#david">David</a> IV the Builder, continued to receive royal burials, endowments and new wall paintings. The church of Gelati and the remains of the Bagrati Cathedral, damaged by an Ottoman explosion in 1692, are today among Georgia’s most important monuments. Imereti also shaped the political geography of western Georgia. The struggle between the kings and their <a class="enc-link" href="/encyclopedia#vassal">vassals</a> in Mingrelia, Guria and Abkhazia produced the separate principalities that survived into the Russian period, and the Imeretian dialect and regional identity remain distinct within modern Georgia. The alliance between <a class="enc-link" href="/encyclopedia#solomon">Solomon</a> I and <a class="enc-link" href="/encyclopedia#erekle-ii">Erekle II</a> of Kartli-Kakheti in the eighteenth century, and their shared turn towards <a class="enc-link" href="/encyclopedia#russia">Russia</a>, prepared the incorporation of Georgia into the <a class="enc-link" href="/encyclopedia#russian-empire">Russian Empire</a>. After annexation, the kingdom’s lands formed the core of the later Kutaisi <a class="enc-link" href="/encyclopedia#governorate">Governorate</a>, and Kutaisi grew into Georgia’s second city. Members of the royal family continued in Russia as the princes Imeretinsky.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <div class="profile-section-body"><p>Imereti’s final decline came as the <a class="enc-link" href="/encyclopedia#russian-empire">Russian Empire</a> expanded into the <a class="enc-link" href="/encyclopedia#caucasus">Caucasus</a>. The <a class="enc-link" href="/encyclopedia#treaty-of-kucuk-kaynarca">Treaty of Küçük Kaynarca</a> of 1774, which ended the Russo-Turkish war, freed Imereti from the tribute in captives owed to the <a class="enc-link" href="/encyclopedia#ottoman-empire">Ottomans</a>, but the kingdom remained poor and divided. After <a class="enc-link" href="/encyclopedia#solomon">Solomon</a> I died in 1784, his successor <a class="enc-link" href="/encyclopedia#david">David</a> II struggled with rival claimants, and in 1789 Solomon II, a grandson of <a class="enc-link" href="/encyclopedia#erekle-ii">Erekle II</a> of Kartli-Kakheti, took the throne with eastern Georgian support. <a class="enc-link" href="/encyclopedia#russia">Russia</a> annexed Kartli-Kakheti in 1801, and Solomon II, under pressure, signed the Treaty of Elaznauri in 1804, accepting Russian protection while keeping his throne. He resisted Russian demands for direct control and sought help from the Ottomans and the pasha of Akhaltsikhe. In 1810 Russian troops occupied Imereti and deposed him. Solomon was taken prisoner, escaped to Ottoman territory and died in exile at Trebizond in 1815. Russia abolished the kingdom and placed Imereti under military administration. Popular resentment broke out in a major rising in 1819–1820, provoked partly by Russian reforms of the western Georgian church, which had recently lost its own Catholicos and been placed under the Russian-controlled exarchate. The rising was suppressed, and Imereti became a province of the Russian Empire.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Kingdom of Imereti preserved a Georgian <a class="enc-link" href="/encyclopedia#eastern-orthodox-church">Orthodox</a> monarchy in western <a class="enc-link" href="/encyclopedia#georgia">Georgia</a> for more than three centuries after the break-up of the medieval kingdom, surviving Ottoman overlordship, the <a class="enc-link" href="/encyclopedia#atlantic-slave-trade">slave trade</a> and rebellious <a class="enc-link" href="/encyclopedia#vassal">vassals</a> before Russian annexation in 1810 brought it into the empire that absorbed all of Georgia.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Allen, W.E.D. (1932) A History of the Georgian People: From the Beginning down to the Russian Conquest in the Nineteenth Century. London: Kegan Paul, Trench, Trubner.</li>
+        <li>Gvosdev, N.K. (2000) Imperial Policies and Perspectives towards Georgia, 1760–1819. Basingstoke: Macmillan.</li>
+        <li>Lang, D.M. (1957) The Last Years of the Georgian Monarchy, 1658–1832. New York: Columbia University Press.</li>
+        <li>Rayfield, D. (2012) Edge of Empires: A History of Georgia. London: Reaktion Books.</li>
+        <li>Suny, R.G. (1994) The Making of the Georgian Nation. 2nd edn. Bloomington: Indiana University Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="kingdom-of-imereti"></div>
+      <a class="mini-connections-more" href="/connections#kingdom-of-imereti">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/ottoman-empire"><img src="/logos/Ottoman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ottoman Empire</span><span class="related-card-dates">1299 CE – 1922 CE</span></a><a class="related-card" href="/empire/circassia"><img src="/logos/Circassia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Circassia</span><span class="related-card-dates">1400 CE – 1864 CE</span></a><a class="related-card" href="/empire/mughal-empire"><img src="/logos/Mughal%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mughal Empire</span><span class="related-card-dates">1526 CE – 1857 CE</span></a><a class="related-card" href="/empire/shirvanshah-state"><img src="/logos/Shirvanshah%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shirvanshah State</span><span class="related-card-dates">861 CE – 1538 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/ilkhanate"><span class="related-card-label">← Earlier</span><img src="/logos/Ilkhanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ilkhanate</span><span class="related-card-dates">1256 CE – 1357 CE</span></a><a class="related-card" href="/empire/grand-duchy-of-moscow"><span class="related-card-label">Later →</span><img src="/logos/Grand%20Duchy%20of%20Moscow.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Grand Duchy of Moscow</span><span class="related-card-dates">1263 CE – 1547 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Kingdom of Imereti",slug="kingdom-of-imereti",url="https://the-epoch-institute.org/empire/kingdom-of-imereti";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Kingdom of Imereti on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/kingdom-of-imereti #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/kingdom-of-imereti"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Kingdom of Imereti",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

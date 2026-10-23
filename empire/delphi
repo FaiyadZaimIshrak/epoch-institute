@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delphi — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Sanctuary-state of Apollo on Mount Parnassus, whose oracle was consulted for centuries by Greek cities and foreign kings.">
+<meta property="og:title" content="Delphi — The Epoch Institute">
+<meta property="og:description" content="Sanctuary-state of Apollo on Mount Parnassus, whose oracle was consulted for centuries by Greek cities and foreign kings.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/delphi">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/delphi.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/delphi.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/delphi">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Delphi" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Delphi.png" alt="Delphi" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Europe</p>
+        <h1 class="profile-detail-name">Delphi</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">480 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">654 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">800 BCE – 146 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Delphi</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/roman-republic">Roman Republic</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Delphi was a small city-state in Phocis that existed to run the sanctuary of Apollo and the most famous oracle of the Greek world.</li><li>The Amphictyonic League of twelve peoples protected the shrine, ran the <a class="enc-link" href="/encyclopedia#pythian-games">Pythian Games</a> and could proclaim sacred wars.</li><li>Phocians, <a class="enc-link" href="/encyclopedia#macedonian-empire">Macedonians</a>, Aetolians and finally <a class="enc-link" href="/encyclopedia#roman-empire">Romans</a> controlled it in turn, until <a class="enc-link" href="/encyclopedia#greece">Greece</a> came under Roman oversight in 146 BCE.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p><a class="enc-link" href="/encyclopedia#greeks">Greeks</a> believed Delphi was the centre of the earth: Zeus released two eagles from opposite ends of the world and they met there, a spot marked by a stone navel, the omphalos.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Delphi"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Delphi over time, peaking in 480 BCE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L93.8 106.4 L185.1 93.0 L245.7 66.2 L255.6 52.8 L297.4 66.2 L339.3 39.4 L372.3 26.0 L406.4 52.8 L490.1 66.2 L508.8 106.4 L519.8 93.0 L593.6 79.6 L625.5 93.0 L690.5 106.4 L715.8 119.8 L740.0 146.6 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L93.8 106.4 L185.1 93.0 L245.7 66.2 L255.6 52.8 L297.4 66.2 L339.3 39.4 L372.3 26.0 L406.4 52.8 L490.1 66.2 L508.8 106.4 L519.8 93.0 L593.6 79.6 L625.5 93.0 L690.5 106.4 L715.8 119.8 L740.0 146.6"/><circle class="rf-peak" cx="372.3" cy="26.0" r="5"/><text class="rf-peak-label" x="372.3" y="16.0" text-anchor="middle">Peak 480 BCE</text><g class="rf-ev"><line x1="245.7" x2="245.7" y1="160" y2="166"/><circle cx="245.7" cy="160" r="8"/><text x="245.7" y="164" text-anchor="middle">1</text><title>c. 595–586 BCE: First Sacred War: the Amphictyons destroy Kirrha and consecrate its plain to Apollo</title></g><g class="rf-ev"><line x1="255.6" x2="255.6" y1="160" y2="166"/><circle cx="255.6" cy="160" r="8"/><text x="255.6" y="164" text-anchor="middle">2</text><title>586 or 582 BCE: The Pythian Games are reorganised as a panhellenic festival</title></g><g class="rf-ev"><line x1="297.4" x2="297.4" y1="160" y2="166"/><circle cx="297.4" cy="160" r="8"/><text x="297.4" y="164" text-anchor="middle">3</text><title>548 BCE: The temple of Apollo burns and is rebuilt with contributions from across Greece</title></g><g class="rf-ev"><line x1="373.4" x2="373.4" y1="160" y2="166"/><circle cx="373.4" cy="160" r="8"/><text x="373.4" y="164" text-anchor="middle">4</text><title>479 BCE: The Greeks dedicate the Serpent Column after the victory at Plataea</title></g><g class="rf-ev"><line x1="508.8" x2="508.8" y1="160" y2="166"/><circle cx="508.8" cy="160" r="8"/><text x="508.8" y="164" text-anchor="middle">5</text><title>356–346 BCE: Third Sacred War: the Phocians seize Delphi and spend its treasures</title></g><g class="rf-ev"><line x1="593.6" x2="593.6" y1="160" y2="166"/><circle cx="593.6" cy="160" r="8"/><text x="593.6" y="164" text-anchor="middle">6</text><title>279 BCE: A Gallic army under Brennus is driven back from Delphi</title></g><g class="rf-ev"><line x1="690.5" x2="690.5" y1="160" y2="166"/><circle cx="690.5" cy="160" r="8"/><text x="690.5" y="164" text-anchor="middle">7</text><title>191 BCE: Rome ends Aetolian control and restores Delphian autonomy</title></g><text class="rf-axis" x="20" y="200">800 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">146 BCE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 595–586 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#first-sacred-war">First Sacred War</a>: the Amphictyons destroy Kirrha and consecrate its plain to Apollo</span></li><li><span class="rf-year">586 or 582 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia#pythian-games">Pythian Games</a> are reorganised as a panhellenic festival</span></li><li><span class="rf-year">548 BCE</span><span class="rf-text">The temple of Apollo burns and is rebuilt with contributions from across <a class="enc-link" href="/encyclopedia#greece">Greece</a></span></li><li><span class="rf-year">479 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia#greeks">Greeks</a> dedicate the Serpent Column after the victory at <a class="enc-link" href="/encyclopedia#battle-of-plataea">Plataea</a></span></li><li><span class="rf-year">356–346 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#third-sacred-war">Third Sacred War</a>: the Phocians seize Delphi and spend its treasures</span></li><li><span class="rf-year">279 BCE</span><span class="rf-text">A Gallic army under Brennus is driven back from Delphi</span></li><li><span class="rf-year">191 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#rome">Rome</a> ends Aetolian control and restores Delphian autonomy</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#herodotus"><img src="/images/encyclopedia/herodotus.jpg" alt="Herodotus" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#herodotus">Herodotus</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg" target="_blank" rel="noopener">CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Delphi lies on the southern slopes of <a class="enc-link" href="/encyclopedia#mount-parnassus">Mount Parnassus</a> in Phocis, above the gorge of the Pleistos and the plain that runs down to the <a class="enc-link" href="/encyclopedia#gulf-of-corinth">Gulf of Corinth</a>. A small Mycenaean settlement occupied the site in the <a class="enc-link" href="/encyclopedia#late-bronze-age">Late Bronze Age</a>, but the sanctuary of Apollo as later <a class="enc-link" href="/encyclopedia#greeks">Greeks</a> knew it took shape in the eighth century BCE, when bronze tripods and other offerings begin to appear in quantity. Greek tradition held that the oracle had first belonged to Gaia or Themis before Apollo killed the serpent Python and took possession of it, which is why his priestess was called the Pythia; the <em>Homeric Hymn to Apollo</em> adds that the god brought Cretan sailors from Knossos to serve as his first priests. Its rise was rapid. During the great wave of Greek colonisation the oracle was consulted by the founders of new cities, and tradition credits it with sanctioning, among many others, Syracuse, Croton and Cyrene, traditionally settled about 631 BCE after, as <a class="enc-link" href="/encyclopedia#herodotus">Herodotus</a> tells it, repeated commands from the Pythia. A small community of Delphians, living around the sanctuary and from it, formed the city-state that administered the shrine, while the wider Greek world came to regard Delphi as the centre of the earth, marked by a sacred stone, the <em>omphalos</em> or navel.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#croesus"><img src="/images/encyclopedia/croesus.jpg" alt="Croesus" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#croesus">Croesus</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Croesus_portrait.jpg" target="_blank" rel="noopener">Marco Prins, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Delphians had little farmland of their own, and the plain below the city, consecrated to Apollo after the <a class="enc-link" href="/encyclopedia#first-sacred-war">First Sacred War</a>, was by law left uncultivated. The community lived instead from the sanctuary: consultation fees and the sacred cake, the <em>pelanos</em>, the sale of sacrificial animals, the lodging of visitors and the festivals. Consultations were at first held only once a year, on the seventh day of the month Bysios, regarded as Apollo's birthday, and later on the seventh of each of nine months, since the god was thought to leave Delphi in winter, when Dionysus was honoured there. Inquirers sacrificed a goat, paid their fee and waited their turn, with priority, the <em>promanteia</em>, granted to favoured cities and individuals. The Pythia, a Delphian woman who in later times had to be over fifty, gave the responses in the inner temple, and male officials called prophets conveyed them; how the answers were produced, and whether vapours played any part, remains debated. The sanctuary accumulated great wealth. <a class="enc-link" href="/encyclopedia#croesus">Croesus of Lydia</a> sent gold and <a class="enc-link" href="/encyclopedia#silver">silver</a> offerings, and cities built treasuries along the Sacred Way, such as the Siphnian Treasury of about 525 BCE. From around 200 BCE the sanctuary walls were covered with some 1,300 inscriptions recording slaves freed through a fictive sale to Apollo.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#battle-of-the-crocus-field"><img src="/images/encyclopedia/battle-of-the-crocus-field.jpg" alt="Battle of the Crocus Field" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#battle-of-the-crocus-field">Battle of the Crocus Field</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Phillip_II,_king_of_Macedonia,_Roman_copy_of_Greek_original,_Ny_Carlsberg_Glyptotek,_Copenhagen_(36420294055).jpg" target="_blank" rel="noopener">Richard Mortel from Riyadh, Saudi Arabia, CC BY 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Delphi itself had no military strength worth the name; its security depended on the sanctity of the shrine and on whichever power controlled central <a class="enc-link" href="/encyclopedia#greece">Greece</a>. Control of the sanctuary was worth fighting for, and four wars were called sacred because they were fought in Apollo's name. In the <a class="enc-link" href="/encyclopedia#first-sacred-war">First Sacred War</a>, traditionally dated about 595–586 BCE, the Amphictyons, aided by Cleisthenes of Sicyon and the Thessalians, destroyed Kirrha, accused of exploiting pilgrims, and consecrated its plain to the god, although many details of the story are doubted by modern historians. <a class="enc-link" href="/encyclopedia#herodotus">Herodotus</a> reports that when a Persian detachment approached in 480 BCE, rocks crashed down from Parnassus and drove it off. In the Second Sacred War of about 449–448 BCE <a class="enc-link" href="/encyclopedia#sparta">Sparta</a> handed the sanctuary to the Delphians, after which <a class="enc-link" href="/encyclopedia#athens">Athens</a> returned it to the Phocians. The gravest blow came in the <a class="enc-link" href="/encyclopedia#third-sacred-war">Third Sacred War</a> of 356–346 BCE, when the Phocians under Philomelus seized Delphi and his successor Onomarchus spent the temple treasures on <a class="enc-link" href="/encyclopedia#mercenary">mercenaries</a>. <a class="enc-link" href="/encyclopedia#philip-ii-of-macedon">Philip II of Macedon</a> defeated Onomarchus at the <a class="enc-link" href="/encyclopedia#battle-of-the-crocus-field">Battle of the Crocus Field</a> in 352 BCE and imposed a settlement in 346 BCE. A Fourth Sacred War against Amphissa in 339 BCE brought Philip south again and led to the Battle of Chaeronea. In 279 BCE a Gallic army under Brennus attacked Delphi and was driven back, chiefly by Aetolian and Phocian troops.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#athens"><img src="/images/encyclopedia/athens.jpg" alt="Athens" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#athens">Athens</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg" target="_blank" rel="noopener">Andrew Parlette, CC BY 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Delphi had a double structure. The city of the Delphians was a small polis with an annual eponymous archon, a council and an assembly of citizens. It managed the shrine's daily business, chose the Pythia and the cult staff, and granted honours such as <em>promanteia</em> and proxeny to benefactors. Apollo had two priests appointed for life, one of them later Plutarch. Above the city stood the Amphictyonic League, or Amphictyony, an ancient association of twelve peoples, mostly of central and northern <a class="enc-link" href="/encyclopedia#greece">Greece</a>, among them the Thessalians, Boeotians, Phocians, Locrians, <a class="enc-link" href="/encyclopedia#dorians">Dorians</a> and Ionians. Each people sent two delegates, the <em>hieromnemones</em>, to meetings held each spring and autumn at Delphi and at Anthela near <a class="enc-link" href="/encyclopedia#battle-of-thermopylae">Thermopylae</a>. The council supervised the sanctuary's property, the sacred land and the <a class="enc-link" href="/encyclopedia#pythian-games">Pythian Games</a>, fined offenders and could proclaim sacred war. Because votes belonged to peoples rather than cities, <a class="enc-link" href="/encyclopedia#athens">Athens</a> and <a class="enc-link" href="/encyclopedia#sparta">Sparta</a> held only a share of the Ionian and Dorian votes, and control passed to whoever dominated the member peoples: the Thessalians in the Archaic period, Philip II after 346 BCE, when he received the Phocian votes, and the Aetolian League for much of the third century BCE. Rebuilding the temple after the fire of 548 BCE and its destruction, probably by earthquake, in 373 BCE was financed by contributions from across the Greek world.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#constantinople"><img src="/images/encyclopedia/constantinople.jpg" alt="Constantinople" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#constantinople">Constantinople</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Byzantine_Constantinople-en.png" target="_blank" rel="noopener">Cplakidas, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Delphi was the nearest thing the Greek world had to a common religious centre. Its oracle advised on colonies, laws, cults, wars and private dilemmas, and its famous responses, whatever their authenticity, shaped how <a class="enc-link" href="/encyclopedia#greeks">Greeks</a> told their history. <a class="enc-link" href="/encyclopedia#herodotus">Herodotus</a> records that <a class="enc-link" href="/encyclopedia#croesus">Croesus</a> was told he would destroy a great empire if he attacked <a class="enc-link" href="/encyclopedia#persia">Persia</a>, and that the Athenians in 480 BCE were told to trust in their wooden walls, which Themistocles read as their fleet. In <a class="enc-link" href="/encyclopedia#plato">Plato</a>'s <em>Apology</em> Socrates traces his philosophical mission to the Pythia's answer that no one was wiser than he. Maxims inscribed at the temple, such as Know yourself and Nothing in excess, became touchstones of Greek ethics. The <a class="enc-link" href="/encyclopedia#pythian-games">Pythian Games</a>, reorganised as a panhellenic festival in 586 or 582 BCE, ranked second only to the Olympic Games and gave music a special place. Dedications made Delphi a showcase of Greek art and politics: the Athenian Treasury, the bronze Charioteer of Delphi of about 475 BCE, and the Serpent Column set up after the <a class="enc-link" href="/encyclopedia#battle-of-plataea">Battle of Plataea</a> in 479 BCE, which <a class="enc-link" href="/encyclopedia#constantine-i">Constantine the Great</a> later moved to <a class="enc-link" href="/encyclopedia#constantinople">Constantinople</a>, where its remains still stand in the old Hippodrome of <a class="enc-link" href="/encyclopedia#istanbul">Istanbul</a>. Two Delphic hymns to Apollo of the late second century BCE, carved with musical notation, are among the most important survivals of ancient Greek music. French excavations from 1892 uncovered the site.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#achaean-war"><img src="/images/encyclopedia/achaean-war.jpg" alt="Achaean War" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#achaean-war">Achaean War</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Tony_robert-fleury,_l%27ultimo_giorno_di_corinto,_ante_1870.JPG" target="_blank" rel="noopener">Sailko, CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Delphi's decline was political long before it was religious. The plundering of its treasures by the Phocians in the <a class="enc-link" href="/encyclopedia#third-sacred-war">Third Sacred War</a> stripped it of much of its accumulated wealth, and after 346 BCE the Amphictyony became an instrument of Macedonian policy. From the early third century BCE the Aetolian League dominated both the council and the sanctuary, gaining prestige from its defence of Delphi against the <a class="enc-link" href="/encyclopedia#gauls">Gauls</a> in 279 BCE, which was commemorated by a new festival, the Soteria. <a class="enc-link" href="/encyclopedia#rome">Rome</a>'s victory over <a class="enc-link" href="/encyclopedia#antiochus-iii-the-great">Antiochus III</a> and his Aetolian allies in 191 BCE ended Aetolian control: the consul Manius Acilius Glabrio restored the sanctuary's property and the autonomy of the Delphians, which the <a class="enc-link" href="/encyclopedia#roman-senate">Roman Senate</a> soon confirmed. Roman generals then used Delphi as Greek kings had. After the Battle of Pydna in 168 BCE <a class="enc-link" href="/encyclopedia#lucius-aemilius-paullus-macedonicus">Lucius Aemilius Paullus</a> took over a pillar intended for a statue of Perseus of <a class="enc-link" href="/encyclopedia#kingdom-of-macedon">Macedon</a> and crowned it with his own monument. After the <a class="enc-link" href="/encyclopedia#achaean-war">Achaean War</a> of 146 BCE <a class="enc-link" href="/encyclopedia#greece">Greece</a> came under the oversight of the Roman governors of Macedonia, and Delphi's freedom became a privilege granted by Rome. Sulla took treasures from the sanctuary in 86 BCE. The oracle continued under the <a class="enc-link" href="/encyclopedia#roman-empire">Roman Empire</a>, patronised by Hadrian among others, but fell silent in the late fourth century CE, probably as a result of the anti-pagan measures of <a class="enc-link" href="/encyclopedia#theodosius-i">Theodosius I</a>.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Delphi matters as the shared sanctuary of the Greek world: its oracle advised colonists, cities and kings for centuries, its Amphictyonic council and <a class="enc-link" href="/encyclopedia#pythian-games">Pythian Games</a> bound the <a class="enc-link" href="/encyclopedia#greeks">Greeks</a> together, and the struggle to control it, from the Sacred Wars to <a class="enc-link" href="/encyclopedia#rome">Rome</a>, mirrored the shifting balance of power in <a class="enc-link" href="/encyclopedia#greece">Greece</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Scott, M. (2014) Delphi: A History of the Center of the Ancient World. Princeton: Princeton University Press.</li>
+        <li>Parke, H.W. and Wormell, D.E.W. (1956) The Delphic Oracle. 2 vols. Oxford: Basil Blackwell.</li>
+        <li>Fontenrose, J. (1978) The Delphic Oracle: Its Responses and Operations. Berkeley: University of California Press.</li>
+        <li>Morgan, C. (1990) Athletes and Oracles: The Transformation of Olympia and Delphi in the Eighth Century BC. Cambridge: Cambridge University Press.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="delphi"></div>
+      <a class="mini-connections-more" href="/connections#delphi">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/ephesus"><img src="/logos/Ephesus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ephesus</span><span class="related-card-dates">1000 BCE – 133 BCE</span></a><a class="related-card" href="/empire/chios"><img src="/logos/Chios.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chios</span><span class="related-card-dates">1000 BCE – 86 BCE</span></a><a class="related-card" href="/empire/miletus"><img src="/logos/Miletus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Miletus</span><span class="related-card-dates">1000 BCE – 133 BCE</span></a><a class="related-card" href="/empire/samos"><img src="/logos/Samos.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Samos</span><span class="related-card-dates">1000 BCE – 129 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/punic-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Punic%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Punic Empire</span><span class="related-card-dates">814 BCE – 146 BCE</span></a><a class="related-card" href="/empire/kingdom-of-saba"><span class="related-card-label">Later →</span><img src="/logos/Kingdom%20of%20Saba.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Saba</span><span class="related-card-dates">800 BCE – 275 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Delphi",slug="delphi",url="https://the-epoch-institute.org/empire/delphi";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Delphi on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/delphi #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/delphi"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Delphi",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -134,9 +134,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/holy-roman-empire"><img src="/logos/Holy%20Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Holy Roman Empire</span><span class="related-card-dates">800 CE – 1806 CE</span></a><a class="related-card" href="/empire/roman-empire"><img src="/logos/Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Roman Empire</span><span class="related-card-dates">27 BCE – 476 CE</span></a><a class="related-card" href="/empire/carolingian-empire"><img src="/logos/Carolingian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Carolingian Empire</span><span class="related-card-dates">768 CE – 888 CE</span></a><a class="related-card" href="/empire/portuguese-empire"><img src="/logos/Portuguese%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Portuguese Empire</span><span class="related-card-dates">1415 CE – 1975 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/ghana-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Ghana%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ghana Empire</span><span class="related-card-dates">300 CE – 1240 CE</span></a><a class="related-card" href="/empire/gokturk-empire"><span class="related-card-label">Later →</span><img src="/logos/Gokturk%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Gokturk Empire</span><span class="related-card-dates">546 CE – 744 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/duchy-of-bavaria"><img src="/logos/Duchy%20of%20Bavaria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Duchy of Bavaria</span><span class="related-card-dates">555 CE – 1623 CE</span></a><a class="related-card" href="/empire/kingdom-of-gwynedd"><img src="/logos/Kingdom%20of%20Gwynedd.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Gwynedd</span><span class="related-card-dates">450 CE – 1283 CE</span></a><a class="related-card" href="/empire/republic-of-venice"><img src="/logos/Republic%20of%20Venice.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Venice</span><span class="related-card-dates">697 CE – 1797 CE</span></a><a class="related-card" href="/empire/kingdom-of-powys"><img src="/logos/Kingdom%20of%20Powys.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Powys</span><span class="related-card-dates">410 CE – 1160 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/eastern-jin"><span class="related-card-label">← Earlier</span><img src="/logos/Eastern%20Jin.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Eastern Jin</span><span class="related-card-dates">317 CE – 420 CE</span></a><a class="related-card" href="/empire/rouran-khaganate"><span class="related-card-label">Later →</span><img src="/logos/Rouran%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rouran Khaganate</span><span class="related-card-dates">330 CE – 555 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -151,10 +151,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

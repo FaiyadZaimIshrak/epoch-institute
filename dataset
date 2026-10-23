@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Open Dataset — The Epoch Institute</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
-<meta name="description" content="Download the Epoch Institute's empire trajectory dataset — 94 civilisations, five millennia of normalised power scores. Free to use under CC BY 4.0.">
+<meta name="description" content="Download the Epoch Institute's empire trajectory dataset — 394 states and empires, five millennia of normalised power scores. Free to use under CC BY 4.0.">
 <meta property="og:title" content="Open Dataset — The Epoch Institute">
-<meta property="og:description" content="94 civilisations, five millennia of data. Free for academic and research use under Creative Commons Attribution 4.0.">
+<meta property="og:description" content="394 states and empires, five millennia of data. Free for academic and research use under Creative Commons Attribution 4.0.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/dataset">
 <meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
@@ -111,7 +111,7 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">Open Dataset</h1>
   <p class="research-subtitle">Empire Trajectory Data — Freely Available for Research</p>
-  <p class="dataset-description">The Epoch Institute's empire trajectory dataset covers 94 civilisations across five millennia, from ancient Mesopotamia to the modern era. Each entry includes normalised power scores across six dimensions — territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach — plotted across each empire's full lifespan. The dataset is freely available for academic, educational, and research use under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+  <p class="dataset-description">The Epoch Institute's empire trajectory dataset covers 394 states and empires across five millennia, from ancient Mesopotamia to the modern era. Each entry includes normalised power scores across six dimensions — territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach — plotted across each empire's full lifespan. The dataset is freely available for academic, educational, and research use under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
   <div class="dataset-btn-row">
     <button class="hero-cta" id="dataset-csv-btn">Download CSV →</button>
     <button class="hero-cta" id="dataset-json-btn">Download JSON →</button>
@@ -159,8 +159,8 @@
   </div>
 </section>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
 <script>
 // ── Download helpers ──────────────────────────────────────────────────────────
 function _downloadStatic(url, filename) {

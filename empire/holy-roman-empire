@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/portuguese-empire"><img src="/logos/Portuguese%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Portuguese Empire</span><span class="related-card-dates">1415 CE – 1975 CE</span></a><a class="related-card" href="/empire/spanish-empire"><img src="/logos/Spanish%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Spanish Empire</span><span class="related-card-dates">1492 CE – 1898 CE</span></a><a class="related-card" href="/empire/french-empire"><img src="/logos/French%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">French Empire</span><span class="related-card-dates">1534 CE – 1980 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/carolingian-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Carolingian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Carolingian Empire</span><span class="related-card-dates">768 CE – 888 CE</span></a><a class="related-card" href="/empire/khmer-empire"><span class="related-card-label">Later →</span><img src="/logos/Khmer%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khmer Empire</span><span class="related-card-dates">802 CE – 1431 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/papal-states"><img src="/logos/Papal%20States.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Papal States</span><span class="related-card-dates">754 CE – 1870 CE</span></a><a class="related-card" href="/empire/republic-of-venice"><img src="/logos/Republic%20of%20Venice.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Venice</span><span class="related-card-dates">697 CE – 1797 CE</span></a><a class="related-card" href="/empire/kingdom-of-navarre"><img src="/logos/Kingdom%20of%20Navarre.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Navarre</span><span class="related-card-dates">824 CE – 1841 CE</span></a><a class="related-card" href="/empire/kingdom-of-norway"><img src="/logos/Kingdom%20of%20Norway.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Norway</span><span class="related-card-dates">872 CE – 2025 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/county-of-toulouse"><span class="related-card-label">← Earlier</span><img src="/logos/County%20of%20Toulouse.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">County of Toulouse</span><span class="related-card-dates">778 CE – 1271 CE</span></a><a class="related-card" href="/empire/khmer-empire"><span class="related-card-label">Later →</span><img src="/logos/Khmer%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khmer Empire</span><span class="related-card-dates">802 CE – 1431 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingdom of Scotland — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The medieval and early modern kingdom of the Scots, forged from Pictland and Dál Riata, independent until the Union with England in 1707.">
+<meta property="og:title" content="Kingdom of Scotland — The Epoch Institute">
+<meta property="og:description" content="The medieval and early modern kingdom of the Scots, forged from Pictland and Dál Riata, independent until the Union with England in 1707.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/kingdom-of-scotland">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/kingdom-of-scotland.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/kingdom-of-scotland.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/kingdom-of-scotland">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Kingdom%20of%20Scotland" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Kingdom%20of%20Scotland.png" alt="Kingdom of Scotland" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Europe</p>
+        <h1 class="profile-detail-name">Kingdom of Scotland</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">1640 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">864 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">843 CE – 1707 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Scone and other royal centres; later Edinburgh</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#kenneth-macalpin">Kenneth MacAlpin</a> (by tradition)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Kingdom of the Picts; Dál Riata</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/kingdom-of-great-britain">Kingdom of Great Britain</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A northern British kingdom formed from the Picts and Gaelic Dál Riata, traditionally dated to <a class="enc-link" href="/encyclopedia#kenneth-macalpin">Kenneth MacAlpin</a> around 843.</li><li>It kept its independence against <a class="enc-link" href="/encyclopedia#england">England</a> in the Wars of Independence, won by Robert the Bruce at Bannockburn in 1314.</li><li>James VI inherited <a class="enc-link" href="/encyclopedia#england">England</a> in 1603, and the <a class="enc-link" href="/encyclopedia#acts-of-union-1707">Acts of Union</a> of 1707 merged the two kingdoms into <a class="enc-link" href="/encyclopedia#kingdom-of-great-britain">Great Britain</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>James II of <a class="enc-link" href="/encyclopedia#scotland">Scotland</a>, an enthusiast for artillery, was killed in 1460 when one of his own <a class="enc-link" href="/encyclopedia#field-artillery">cannons</a> burst during the siege of Roxburgh Castle.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Kingdom of Scotland"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Kingdom of Scotland over time, peaking in 1640 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L67.5 119.8 L165.8 106.4 L254.2 93.0 L268.3 66.2 L295.8 106.4 L372.5 79.6 L397.5 133.2 L412.5 79.6 L424.2 66.2 L439.2 106.4 L460.0 93.0 L557.5 66.2 L578.3 106.4 L617.5 79.6 L653.3 39.4 L684.2 26.0 L693.3 133.2 L700.8 93.0 L734.2 119.8 L740.0 146.6 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L67.5 119.8 L165.8 106.4 L254.2 93.0 L268.3 66.2 L295.8 106.4 L372.5 79.6 L397.5 133.2 L412.5 79.6 L424.2 66.2 L439.2 106.4 L460.0 93.0 L557.5 66.2 L578.3 106.4 L617.5 79.6 L653.3 39.4 L684.2 26.0 L693.3 133.2 L700.8 93.0 L734.2 119.8 L740.0 146.6"/><circle class="rf-peak" cx="684.2" cy="26.0" r="5"/><text class="rf-peak-label" x="684.2" y="16.0" text-anchor="middle">Peak 1640 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>c. 843: Kenneth MacAlpin becomes king of the Picts</title></g><g class="rf-ev"><line x1="372.5" x2="372.5" y1="160" y2="166"/><circle cx="372.5" cy="160" r="8"/><text x="372.5" y="164" text-anchor="middle">2</text><title>1266: The Treaty of Perth transfers the Western Isles from Norway</title></g><g class="rf-ev"><line x1="412.5" x2="412.5" y1="160" y2="166"/><circle cx="412.5" cy="160" r="8"/><text x="412.5" y="164" text-anchor="middle">3</text><title>1314: Robert the Bruce defeats Edward II at Bannockburn</title></g><g class="rf-ev"><line x1="417.5" x2="417.5" y1="160" y2="166"/><circle cx="417.5" cy="160" r="8"/><text x="417.5" y="164" text-anchor="middle">4</text><title>1320: The Declaration of Arbroath asserts Scottish independence</title></g><g class="rf-ev"><line x1="578.3" x2="578.3" y1="160" y2="166"/><circle cx="578.3" cy="160" r="8"/><text x="578.3" y="164" text-anchor="middle">5</text><title>1513: James IV is killed at the Battle of Flodden</title></g><g class="rf-ev"><line x1="617.5" x2="617.5" y1="160" y2="166"/><circle cx="617.5" cy="160" r="8"/><text x="617.5" y="164" text-anchor="middle">6</text><title>1560: The Reformation Parliament creates a Protestant church</title></g><g class="rf-ev"><line x1="653.3" x2="653.3" y1="160" y2="166"/><circle cx="653.3" cy="160" r="8"/><text x="653.3" y="164" text-anchor="middle">7</text><title>1603: James VI inherits the English throne</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>1707: The Acts of Union create the Kingdom of Great Britain</title></g><text class="rf-axis" x="20" y="200">843 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">1707 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 843</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#kenneth-macalpin">Kenneth MacAlpin</a> becomes king of the Picts</span></li><li><span class="rf-year">1266</span><span class="rf-text">The Treaty of Perth transfers the Western Isles from <a class="enc-link" href="/encyclopedia#norway">Norway</a></span></li><li><span class="rf-year">1314</span><span class="rf-text">Robert the Bruce defeats Edward II at Bannockburn</span></li><li><span class="rf-year">1320</span><span class="rf-text">The Declaration of Arbroath asserts Scottish independence</span></li><li><span class="rf-year">1513</span><span class="rf-text">James IV is killed at the Battle of Flodden</span></li><li><span class="rf-year">1560</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia#protestant-reformation">Reformation</a> Parliament creates a Protestant church</span></li><li><span class="rf-year">1603</span><span class="rf-text">James VI inherits the English throne</span></li><li><span class="rf-year">1707</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia#acts-of-union-1707">Acts of Union</a> create the <a class="enc-link" href="/encyclopedia#kingdom-of-great-britain">Kingdom of Great Britain</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#columba"><img src="/images/encyclopedia/columba.jpg" alt="Columba" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#columba">Columba</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Columba_at_Bridei%27s_fort.jpg" target="_blank" rel="noopener">J. R. Skelton (Joseph Ratcliffe Skelton; 1865–1927) (illustrator), erroneously credited as John R. Skelton, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Kingdom of <a class="enc-link" href="/encyclopedia#scotland">Scotland</a> grew out of the union of the Picts, who held most of the land north of the Forth, and the Gaelic kingdom of Dál Riata in Argyll. Tradition dates the new realm to <a class="enc-link" href="/encyclopedia#kenneth-macalpin">Kenneth MacAlpin</a> (Cináed mac Ailpín), a king of Gaelic descent who became ruler of the Picts around 843 and died in 858. Medieval accounts later described a violent conquest of the Picts, but modern historians see a more gradual process in which <a class="enc-link" href="/encyclopedia#vikings">Viking</a> attacks on both peoples, intermarriage among royal kindreds and the spread of Gaelic language and church culture fused them into one realm. By about 900, under Donald II and Constantine II, the kingdom was called Alba, with its royal centre at Scone and relics of <a class="enc-link" href="/encyclopedia#columba">Columba</a> at Dunkeld. Over the following centuries its kings expanded southwards. Malcolm II’s victory at the Battle of Carham, around 1018, secured Lothian between the Forth and the Tweed, and the British kingdom of Strathclyde was absorbed during the eleventh century. Galloway, Moray and the Norse-ruled north and west were brought under royal control only slowly: after the Battle of Largs in 1263, the Treaty of Perth of 1266 transferred the Western Isles and the Isle of Man from <a class="enc-link" href="/encyclopedia#norway">Norway</a> to Scotland, and Orkney and Shetland followed in 1468–1469.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#david"><img src="/images/encyclopedia/david.jpg" alt="David" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#david">David</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:King_David,_the_King_of_Israel.jpg" target="_blank" rel="noopener">Gerard van Honthorst, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#scotland">Scotland</a> was a thinly populated country, with pastoral farming dominant in the Highlands and mixed farming in the Lowlands, and it probably had around a million people by 1700. Its society combined Gaelic kin-based lordship, strongest in the Highlands and Islands, with feudal tenures introduced from the twelfth century, when <a class="enc-link" href="/encyclopedia#david">David</a> I and his successors invited Anglo-Norman and Flemish settlers. Royal burghs such as Berwick, Perth, Aberdeen and Edinburgh held monopolies of foreign trade, exporting wool, hides, fish and later <a class="enc-link" href="/encyclopedia#coal">coal</a> and salt to the <a class="enc-link" href="/encyclopedia#low-countries">Low Countries</a>, the Baltic and <a class="enc-link" href="/encyclopedia#france">France</a>; from the fifteenth century a Scottish staple port in the <a class="enc-link" href="/encyclopedia#kingdom-of-the-netherlands">Netherlands</a>, from 1541 at Veere, handled much of this trade. Language divided the country: Gaelic remained dominant in the north and west, while Scots, which grew from northern English, became the language of the Lowlands, the court and the law. The church was rich, with great reformed abbeys such as Melrose, Kelso and Holyrood, and the founding of universities at St Andrews (1413), Glasgow (1451) and Aberdeen (1495) gave Scotland three universities when <a class="enc-link" href="/encyclopedia#england">England</a> still had two. After the <a class="enc-link" href="/encyclopedia#protestant-reformation">Reformation</a> of 1560 the Kirk aimed at a school in every parish, a goal written into law by an act of 1696. Many Scots sought a living abroad as soldiers, merchants and pedlars in <a class="enc-link" href="/encyclopedia#poland">Poland</a>, <a class="enc-link" href="/encyclopedia#scandinavia">Scandinavia</a> and Ireland.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#oliver-cromwell"><img src="/images/encyclopedia/oliver-cromwell.jpg" alt="Oliver Cromwell" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#oliver-cromwell">Oliver Cromwell</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Oliver_Cromwell_by_Samuel_Cooper.jpg" target="_blank" rel="noopener">After Samuel Cooper, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#scotland">Scotland</a>’s armies were raised from the common army of free men owing service, the feudal knights of the Lowlands and the clan levies of the Highlands, and they were rarely a match for English armies in pitched battle. Their strength lay in defensive warfare, the spear formations known as schiltrons, and raiding into northern <a class="enc-link" href="/encyclopedia#england">England</a>. The Wars of Independence began when Edward I of England invaded in 1296, sacked Berwick and took the Stone of Scone to Westminster. William Wallace defeated an English army at the Battle of Stirling Bridge in 1297 but lost at Falkirk in 1298. Robert the Bruce, crowned in 1306, waged a <a class="enc-link" href="/encyclopedia#guerrilla-warfare">guerrilla</a> war and took castles one by one before routing Edward II at the Battle of Bannockburn in 1314. The Second War of Independence brought defeats at Halidon Hill in 1333 and Neville’s Cross in 1346, where <a class="enc-link" href="/encyclopedia#david">David</a> II was captured. The alliance with <a class="enc-link" href="/encyclopedia#france">France</a>, the Auld Alliance first sealed in 1295, drew Scotland into repeated wars with England: James IV built a royal navy, including the great ship <em>Michael</em>, but was killed with much of his nobility at the Battle of Flodden in 1513, and another heavy defeat followed at Solway Moss in 1542. In the 1640s the Covenanting army was among the strongest in <a class="enc-link" href="/encyclopedia#britain">Britain</a>, but <a class="enc-link" href="/encyclopedia#oliver-cromwell">Oliver Cromwell</a> crushed Scottish forces at Dunbar in 1650 and Worcester in 1651.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#london"><img src="/images/encyclopedia/london.jpg" alt="London" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#london">London</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:London_Skyline_(125508655).jpeg" target="_blank" rel="noopener">Ilya Grigorik, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Scottish kings ruled through a small, personal government rather than a large bureaucracy. <a class="enc-link" href="/encyclopedia#david">David</a> I (1124–1153) laid the foundations of the medieval state, developing sheriffdoms, founding royal burghs, issuing the first Scottish coinage and organising the church into territorial dioceses and parishes. The crown passed within the royal house, but repeated royal minorities in the fifteenth and sixteenth centuries left regents and noble factions to govern, and several kings met violent ends, among them James I, murdered in 1437. The Parliament of <a class="enc-link" href="/encyclopedia#scotland">Scotland</a>, a single chamber of the estates of clergy, nobility and burgh commissioners, developed from the thirteenth century; much of its business was prepared by a committee, the Lords of the Articles. Scots law drew on Roman and canon law as well as native custom, and in 1532 James V founded the College of Justice, whose Court of Session remains Scotland’s supreme civil court. In the localities great <a class="enc-link" href="/encyclopedia#magnates">magnates</a> held hereditary jurisdictions, and in the Highlands clan chiefs ruled with considerable independence. The <a class="enc-link" href="/encyclopedia#protestant-reformation">Reformation</a> of 1560 created a national Kirk governed, after a long conflict over <a class="enc-link" href="/encyclopedia#bishop">bishops</a>, by Presbyterian courts of kirk sessions, presbyteries, synods and a General Assembly. After the Union of the Crowns in 1603, James VI governed Scotland from <a class="enc-link" href="/encyclopedia#london">London</a> through the Privy Council in Edinburgh, boasting that he ruled it with his pen.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#papacy"><img src="/images/encyclopedia/papacy.jpg" alt="Papacy" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#papacy">Papacy</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_3_(3x4_cropped).png" target="_blank" rel="noopener">Edgar Beltrán, The Pillar, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#scotland">Scotland</a>’s long resistance to English conquest made it a rare case of a small medieval kingdom preserving its independence beside a much larger neighbour. The Declaration of Arbroath of 1320, a letter from the barons to <a class="enc-link" href="/encyclopedia#papacy">Pope</a> John XXII asserting the kingdom’s freedom and the right to replace a king who betrayed it, became one of the most quoted documents of Scottish history. The kingdom produced a distinctive literature in Scots, from John Barbour’s verse epic <em>The Bruce</em> of the 1370s to the makars of the late fifteenth and early sixteenth centuries, Robert Henryson, William Dunbar and Gavin Douglas, whose translation of Virgil’s <em>Aeneid</em> was completed in 1513. The <a class="enc-link" href="/encyclopedia#protestant-reformation">Reformation</a> led by John Knox produced a Calvinist church that shaped Scottish society, education and ideas of resistance, and the National Covenant of 1638 helped to start the Wars of the <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms</a> that convulsed <a class="enc-link" href="/encyclopedia#britain">Britain</a> and Ireland. When James VI became king of <a class="enc-link" href="/encyclopedia#england">England</a> in 1603, a Scottish dynasty came to rule all of Britain and Ireland, and Scots settled in large numbers in the <a class="enc-link" href="/encyclopedia#plantation-of-ulster">Plantation of Ulster</a> from 1609. The institutions the kingdom kept after 1707, its law, church and universities, became the base for the Scottish <a class="enc-link" href="/encyclopedia#age-of-enlightenment">Enlightenment</a> of the eighteenth century and for a lasting Scottish national identity within the United Kingdom.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#glorious-revolution"><img src="/images/encyclopedia/glorious-revolution.jpg" alt="Glorious Revolution" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#glorious-revolution">Glorious Revolution</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:William_of_Orange_III_and_his_Dutch_army_land_in_Brixham,_1688.jpg" target="_blank" rel="noopener">Johan Herman Isings, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The road to union began in 1603, when James VI inherited the English throne as James I and moved his court to <a class="enc-link" href="/encyclopedia#london">London</a>. The two kingdoms shared a monarch but kept separate parliaments, churches and laws, and the arrangement proved unstable. Charles I’s attempt to impose a new prayer book in 1637 provoked the National Covenant of 1638 and the <a class="enc-link" href="/encyclopedia#bishop">Bishops</a>’ Wars, and in the civil wars that followed <a class="enc-link" href="/encyclopedia#scotland">Scotland</a> was conquered by Cromwell and incorporated into the Commonwealth from 1652 until the Restoration of 1660. After the <a class="enc-link" href="/encyclopedia#glorious-revolution">Revolution of 1688</a>–1689 the Scottish Parliament became more assertive, while economic weakness grew acute: the famines of the 1690s, known as the ill years, and the failure of the Darien scheme, a colony on the Isthmus of Panama in 1698–1700 that lost a large share of the country’s capital, convinced many that access to English markets was essential. <a class="enc-link" href="/encyclopedia#england">England</a>, at war with <a class="enc-link" href="/encyclopedia#france">France</a>, wanted to secure the Protestant succession and prevent Scotland from choosing a different monarch. After negotiations in 1706, the Parliament of Scotland ratified the Treaty of Union, and on 1 May 1707 Scotland and England were united as the <a class="enc-link" href="/encyclopedia#kingdom-of-great-britain">Kingdom of Great Britain</a>, with one parliament at Westminster. The kingdom ended, but its law, Presbyterian church and education system were guaranteed, and a devolved Scottish Parliament was established in 1999.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Kingdom of <a class="enc-link" href="/encyclopedia#scotland">Scotland</a> preserved its independence against a far larger <a class="enc-link" href="/encyclopedia#england">England</a> for four centuries, created a distinctive law, church, literature and university tradition, and through James VI gave <a class="enc-link" href="/encyclopedia#britain">Britain</a> its first shared monarch before the Union of 1707 merged it into the <a class="enc-link" href="/encyclopedia#kingdom-of-great-britain">Kingdom of Great Britain</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Barrow, G.W.S. (1965) Robert Bruce and the Community of the Realm of Scotland. London: Eyre and Spottiswoode.</li>
+        <li>Duncan, A.A.M. (1975) Scotland: The Making of the Kingdom. Edinburgh: Oliver and Boyd.</li>
+        <li>Lynch, M. (1991) Scotland: A New History. London: Century.</li>
+        <li>Whatley, C.A. (2006) The Scots and the Union. Edinburgh: Edinburgh University Press.</li>
+        <li>Woolf, A. (2007) From Pictland to Alba, 789–1070. Edinburgh: Edinburgh University Press.</li>
+        <li>Wormald, J. (1981) Court, Kirk, and Community: Scotland, 1470–1625. London: Edward Arnold.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="kingdom-of-scotland"></div>
+      <a class="mini-connections-more" href="/connections#kingdom-of-scotland">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/holy-roman-empire"><img src="/logos/Holy%20Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Holy Roman Empire</span><span class="related-card-dates">800 CE – 1806 CE</span></a><a class="related-card" href="/empire/republic-of-venice"><img src="/logos/Republic%20of%20Venice.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Venice</span><span class="related-card-dates">697 CE – 1797 CE</span></a><a class="related-card" href="/empire/papal-states"><img src="/logos/Papal%20States.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Papal States</span><span class="related-card-dates">754 CE – 1870 CE</span></a><a class="related-card" href="/empire/kingdom-of-navarre"><img src="/logos/Kingdom%20of%20Navarre.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Navarre</span><span class="related-card-dates">824 CE – 1841 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/kara-khanid-khanate"><span class="related-card-label">← Earlier</span><img src="/logos/Kara-Khanid%20Khanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kara-Khanid Khanate</span><span class="related-card-dates">840 CE – 1042 CE</span></a><a class="related-card" href="/empire/pagan-kingdom"><span class="related-card-label">Later →</span><img src="/logos/Pagan%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pagan Kingdom</span><span class="related-card-dates">849 CE – 1297 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Kingdom of Scotland",slug="kingdom-of-scotland",url="https://the-epoch-institute.org/empire/kingdom-of-scotland";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Kingdom of Scotland on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/kingdom-of-scotland #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/kingdom-of-scotland"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Kingdom of Scotland",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

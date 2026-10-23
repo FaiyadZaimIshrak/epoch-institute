@@ -75,7 +75,7 @@
 
 <!-- At a glance -->
 <section class="home-stats" aria-label="The Epoch Institute in numbers">
-  <a class="home-stat" href="/profiles"><span class="home-stat-num" id="stat-empires">94</span><span class="home-stat-label">Profiles</span></a>
+  <a class="home-stat" href="/profiles"><span class="home-stat-num" id="stat-empires">394</span><span class="home-stat-label">Profiles</span></a>
   <a class="home-stat" href="/encyclopedia"><span class="home-stat-num" id="stat-entries">3,736</span><span class="home-stat-label">Encyclopedia entries</span></a>
   <a class="home-stat" href="/encyclopedia"><span class="home-stat-num" id="stat-images">2,070</span><span class="home-stat-label">Historical images</span></a>
   <a class="home-stat" href="/explorer"><span class="home-stat-num" id="stat-years">4,600</span><span class="home-stat-label">Years of history</span></a>
@@ -85,7 +85,7 @@
 <section class="home-section" aria-labelledby="featured-title">
   <div class="home-section-hd">
     <h2 class="home-section-title" id="featured-title">Featured Profiles</h2>
-    <a class="home-section-more" href="/profiles">All 94 profiles →</a>
+    <a class="home-section-more" href="/profiles">All 394 profiles →</a>
   </div>
   <div class="featured-grid" id="featured-grid"></div>
 </section>
@@ -194,9 +194,9 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/home-data.js?v=6"></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/home-data.js?v=7"></script>
 <script src="/reading-paths.js?v=1"></script>
 <script>
 initNav('home');
@@ -313,7 +313,7 @@ initNav('home');
       if (puzzle.names || loading) return;
       var go = function () { if (typeof SEARCH_INDEX !== 'undefined') fillNames(SEARCH_INDEX.filter(function (r) { return r[2] === cat; }).map(function (r) { return r[1]; })); };
       if (typeof SEARCH_INDEX !== 'undefined') return go();
-      loading = true; var sc = document.createElement('script'); sc.src = '/search-index.js?v=3'; sc.onload = go; document.head.appendChild(sc);
+      loading = true; var sc = document.createElement('script'); sc.src = '/search-index.js?v=4'; sc.onload = go; document.head.appendChild(sc);
       };
       input.addEventListener('focus', loadNames); setTimeout(loadNames, 2500);
     }

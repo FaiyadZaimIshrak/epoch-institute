@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baekje — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="A south-western Korean kingdom of the Three Kingdoms period, famed for refined Buddhist art and for passing writing, Buddhism and crafts to Japan.">
+<meta property="og:title" content="Baekje — The Epoch Institute">
+<meta property="og:description" content="A south-western Korean kingdom of the Three Kingdoms period, famed for refined Buddhist art and for passing writing, Buddhism and crafts to Japan.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/baekje">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/baekje.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/baekje.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/baekje">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Baekje" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Baekje.png" alt="Baekje" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Baekje</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">371 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">678 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">18 BCE – 660 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Wiryeseong/Hanseong (Seoul); Ungjin (Gongju) from 475; Sabi (Buyeo) from 538</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Onjo, by tradition</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Mahan confederacy</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Unified Silla (after brief Tang rule)</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Baekje grew from a Mahan statelet on the <a class="enc-link" href="/encyclopedia#han-river">Han River</a> into a kingdom of south-western <a class="enc-link" href="/encyclopedia#korea">Korea</a>, ruled from Hanseong, Ungjin and Sabi.</li><li>Its court was celebrated for refined Buddhist art, metalwork and stone pagodas, seen in King Muryeong's tomb and the Baekje <a class="enc-link" href="/encyclopedia#incense">incense</a> burner.</li><li>Baekje passed Chinese writing, <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> and skilled craftsmen to Yamato <a class="enc-link" href="/encyclopedia#japan">Japan</a>, its closest ally, before falling to Silla and the Tang in 660.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>King Muryeong's tomb at Gongju, found unlooted in 1971, held an epitaph stone naming the king, a rare case in which a <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms</a> royal tomb can be identified with certainty.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Baekje"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Baekje over time, peaking in 371 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 146.6 L304.6 119.8 L406.5 79.6 L433.1 26.0 L459.6 79.6 L498.9 79.6 L543.5 119.8 L571.2 93.0 L610.4 79.6 L627.4 106.4 L676.3 93.0 L720.9 79.6 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 146.6 L304.6 119.8 L406.5 79.6 L433.1 26.0 L459.6 79.6 L498.9 79.6 L543.5 119.8 L571.2 93.0 L610.4 79.6 L627.4 106.4 L676.3 93.0 L720.9 79.6 L740.0 160.0"/><circle class="rf-peak" cx="433.1" cy="26.0" r="5"/><text class="rf-peak-label" x="433.1" y="16.0" text-anchor="middle">Peak 371 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>18 BCE: Traditional founding of Baekje by Onjo at Wiryeseong</title></g><g class="rf-ev"><line x1="433.1" x2="433.1" y1="160" y2="166"/><circle cx="433.1" cy="160" r="8"/><text x="433.1" y="164" text-anchor="middle">2</text><title>371: Geunchogo's army kills the Goguryeo king Gogugwon at Pyongyang</title></g><g class="rf-ev"><line x1="446.9" x2="446.9" y1="160" y2="166"/><circle cx="446.9" cy="160" r="8"/><text x="446.9" y="164" text-anchor="middle">3</text><title>384: The monk Marananta brings Buddhism from the Eastern Jin</title></g><g class="rf-ev"><line x1="543.5" x2="543.5" y1="160" y2="166"/><circle cx="543.5" cy="160" r="8"/><text x="543.5" y="164" text-anchor="middle">4</text><title>475: Goguryeo takes Hanseong; the court moves to Ungjin</title></g><g class="rf-ev"><line x1="610.4" x2="610.4" y1="160" y2="166"/><circle cx="610.4" cy="160" r="8"/><text x="610.4" y="164" text-anchor="middle">5</text><title>538: King Seong moves the capital to Sabi</title></g><g class="rf-ev"><line x1="627.4" x2="627.4" y1="160" y2="166"/><circle cx="627.4" cy="160" r="8"/><text x="627.4" y="164" text-anchor="middle">6</text><title>554: King Seong is killed fighting Silla at Gwansanseong</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">7</text><title>660: Silla and Tang take Sabi; King Uija surrenders</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>663: Tang and Silla defeat Baekje loyalists and a Yamato fleet at Baekgang</title></g><text class="rf-axis" x="20" y="200">18 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">660 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">18 BCE</span><span class="rf-text">Traditional founding of Baekje by Onjo at Wiryeseong</span></li><li><span class="rf-year">371</span><span class="rf-text">Geunchogo's army kills the Goguryeo king Gogugwon at Pyongyang</span></li><li><span class="rf-year">384</span><span class="rf-text">The monk Marananta brings <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> from the Eastern Jin</span></li><li><span class="rf-year">475</span><span class="rf-text">Goguryeo takes Hanseong; the court moves to Ungjin</span></li><li><span class="rf-year">538</span><span class="rf-text">King Seong moves the capital to Sabi</span></li><li><span class="rf-year">554</span><span class="rf-text">King Seong is killed fighting Silla at Gwansanseong</span></li><li><span class="rf-year">660</span><span class="rf-text">Silla and Tang take Sabi; King Uija surrenders</span></li><li><span class="rf-year">663</span><span class="rf-text">Tang and Silla defeat Baekje loyalists and a Yamato fleet at Baekgang</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <div class="profile-section-body"><p>Baekje arose in the <a class="enc-link" href="/encyclopedia#han-river">Han River</a> basin, around modern Seoul, among the walled-town communities of the Mahan confederacy, which Chinese sources of the 3rd century list as some fifty small polities in south-western <a class="enc-link" href="/encyclopedia#korea">Korea</a>. Korean tradition, preserved in the <em>Samguk sagi</em>, holds that Onjo, a son of Jumong, the founder of Goguryeo, came south with followers and founded the kingdom in 18 BCE at Wiryeseong; another version credits his elder brother Biryu. The royal house claimed descent from Buyeo, a claim later expressed in the royal surname Buyeo and in the alternative state name Nambuyeo, 'Southern Buyeo'. Archaeologically, the earthen walls of Pungnap Toseong and Mongchon Toseong in south-eastern Seoul, raised around the 3rd century CE, mark the emergence of a sizeable royal centre, and most historians date Baekje's development into a true kingdom to the reign of King Goi (traditionally 234–286) or later. King Geunchogo (r. 346–375) is generally credited with absorbing the remaining Mahan polities towards the south-west coast. He opened relations with the Eastern Jin court in 372, and in 371 his army killed the Goguryeo king Gogugwon at Pyongyang, making Baekje for a time the strongest of the Korean kingdoms.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#sui-dynasty"><img src="/images/encyclopedia/sui-dynasty.jpg" alt="Sui dynasty" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#sui-dynasty">Sui dynasty</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Cheui_Dynasty_581_CE.png" target="_blank" rel="noopener">Ian Kiu, CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Baekje's core lay in the fertile plains of the Han, Geum and Yeongsan river basins, where <a class="enc-link" href="/encyclopedia#rice">rice</a> grown in irrigated paddies, together with <a class="enc-link" href="/encyclopedia#millet">millet</a> and barley, formed the basis of the economy. Society was led by a small group of great families; the Chinese <em><a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> shu</em> names eight leading clans, including the Sa, Yeon, Hae, Jin and Mok, who supplied the highest officials and royal consorts. Below them stood free farmers liable to taxes, military service and <a class="enc-link" href="/encyclopedia#corvee-labour">corvée</a> labour, and unfree people. <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a>, brought from the Eastern Jin by the monk Marananta in 384, became the faith of the court, and the Sabi period saw great temples such as Jeongnimsa, whose five-storey stone pagoda still stands, and Mireuksa at Iksan, one of the largest temple complexes of its age, whose reliquary inscription dates its western pagoda to 639. Baekje craftsmen were renowned: the tomb of King Muryeong at Gongju, found intact in 1971, yielded gold crown ornaments, jewellery and Chinese ceramics, and the gilt-bronze <a class="enc-link" href="/encyclopedia#incense">incense</a> burner discovered at Neungsan-ri in 1993 is among the masterpieces of East Asian metalwork. Sea routes linked Baekje with the southern Chinese courts, the Gaya states and the Japanese archipelago, bringing <a class="enc-link" href="/encyclopedia#silk">silks</a>, ceramics and books from <a class="enc-link" href="/encyclopedia#china">China</a> and carrying Baekje goods, scholars and artisans to <a class="enc-link" href="/encyclopedia#japan">Japan</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#gwanggaeto-the-great"><img src="/images/encyclopedia/gwanggaeto-the-great.jpg" alt="Gwanggaeto the Great" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#gwanggaeto-the-great">Gwanggaeto the Great</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Gwanggaeto_Stele_5.jpg" target="_blank" rel="noopener">EditQ, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Baekje's armies were led by aristocratic commanders and raised from provincial levies, supported by earthen and stone fortresses along its frontiers and by ships that controlled the coastal crossings of the Yellow Sea. For most of its history Baekje fought on two fronts. Its early wars against Goguryeo culminated in Geunchogo's victory at Pyongyang in 371, but under <a class="enc-link" href="/encyclopedia#gwanggaeto-the-great">Gwanggaeto the Great</a> Goguryeo struck back, taking dozens of Baekje fortresses in 396 and forcing King Asin to submit. The decisive blow came in 475, when King Jangsu of Goguryeo captured Hanseong and executed King Gaero, compelling the court to flee south to Ungjin (Gongju). From 433 Baekje was allied with Silla against Goguryeo, and in 551 their combined forces recovered the <a class="enc-link" href="/encyclopedia#han-river">Han River</a> basin, only for Silla to seize it for itself in 553. King Seong (r. 523–554) attacked Silla in revenge and was killed at the Battle of Gwansanseong in 554, a defeat in which, according to the <em>Samguk sagi</em>, nearly 30,000 Baekje soldiers died. Baekje regained the initiative under King Uija, who took some forty Silla fortresses and the stronghold of Daeya in 642, but in 660 the general Gyebaek fell with his last army at Hwangsanbeol against <a class="enc-link" href="/encyclopedia#kim-yu-sin">Kim Yu-sin</a>, and the capital was lost.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#departement"><img src="/images/encyclopedia/departement.jpg" alt="Département" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#departement">Département</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:France_d%C3%A9partementale.svg" target="_blank" rel="noopener">Nilstilar, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Baekje was a hereditary monarchy in which the king, of the Buyeo lineage, shared power with the great aristocratic clans. Tradition credits King Goi with a system of sixteen official ranks headed by the <em>jwapyeong</em>, distinguished by the colours of official robes; whatever its exact date, a graded bureaucracy of this kind was in place by the 6th century. Early local control rested on the <em>damno</em>, districts often entrusted to royal kinsmen. After the move to Sabi in 538 the government was organised into twenty-two <a class="enc-link" href="/encyclopedia#departement">departments</a>, divided between those serving the royal household and those handling state affairs; the capital was divided into five <em>bu</em> and the territory into five <em>bang</em>, or regions, each governed from a fortress by an appointed commander. Kings sought legitimacy through investiture by Chinese emperors, from whom they received titles of general and king, and Baekje envoys appear at the courts of the Eastern Jin, Liu <a class="enc-link" href="/encyclopedia#song-dynasty">Song</a>, Liang, <a class="enc-link" href="/encyclopedia#sui-dynasty">Sui</a> and Tang. Records were kept in Chinese: the <em>Samguk sagi</em> reports that the scholar Go Heung compiled a history called <em>Seogi</em> under Geunchogo. King Muryeong's epitaph stone, which records his death in 523 in Chinese-style dating, and the many inscribed wooden tablets excavated at Sabi show a literate court and administration.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#unesco-world-heritage-site"><img src="/images/encyclopedia/unesco-world-heritage-site.jpg" alt="UNESCO World Heritage Site" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#unesco-world-heritage-site">UNESCO World Heritage Site</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:World_Heritage_Logo_global.svg" target="_blank" rel="noopener">UNESCO; Designer: Michel Olyff. Uploaded by Siyuwj, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Baekje's most enduring influence lay across the sea in <a class="enc-link" href="/encyclopedia#japan">Japan</a>. Its close alliance with the Yamato court, sealed by exchanges of princes and envoys, made it a main route by which Chinese-derived learning, <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> and technology reached the Japanese archipelago. Japanese chronicles relate that the scholar Wani came from Baekje bringing the <em>Analects</em> and, anachronistically, the <em>Thousand Character Classic</em>, and that King Seong sent a Buddhist image and sutras to the Yamato court, in 552 according to the <em>Nihon shoki</em>, though another Japanese source gives 538, the date most often preferred today. Baekje monks, carpenters, tile-makers, painters and physicians helped build Japan's first great temples, including Asuka-dera. The Seven-Branched Sword kept at the Isonokami Shrine, inscribed with a date usually read as 369, is generally interpreted as a gift from a Baekje king to a Wa ruler. In <a class="enc-link" href="/encyclopedia#korea">Korea</a>, Baekje's art, marked by gentle Buddhist sculpture such as the rock-carved triad at Seosan, and its stone pagodas influenced Silla and later Korean styles. After 660 thousands of Baekje refugees, including members of the royal family, settled in Japan, where the prince Zenkō received the surname Kudara no Konikishi and refugee experts helped build Korean-style mountain fortresses. The Baekje Historic Areas at Gongju, Buyeo and Iksan joined the <a class="enc-link" href="/encyclopedia#unesco-world-heritage-site">UNESCO</a> World Heritage List in 2015.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#kim-yu-sin"><img src="/images/encyclopedia/kim-yu-sin.jpg" alt="Kim Yu-sin" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#kim-yu-sin">Kim Yu-sin</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Kim_Yushin_in_the_famous_portrait_photo_book_of_Joseon.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Baekje's fall resulted from its long struggle with Silla, which after taking the <a class="enc-link" href="/encyclopedia#han-river">Han River</a> basin in 553 gained direct sea access to <a class="enc-link" href="/encyclopedia#china">China</a> and courted the Tang. King Uija's successful offensives of the 640s, including the capture of Daeya fortress in 642, in which the son-in-law of the Silla noble Kim Chunchu was killed, pushed Silla to seek Tang help, and Kim Chunchu travelled to <a class="enc-link" href="/encyclopedia#changan">Chang'an</a> in 648 to negotiate an alliance. In 660 a Tang fleet under Su Dingfang landed at the mouth of the Geum River while Silla forces under <a class="enc-link" href="/encyclopedia#kim-yu-sin">Kim Yu-sin</a> advanced overland and defeated Gyebaek at Hwangsanbeol. Sabi fell in the seventh month of 660; King Uija surrendered at Ungjin and was taken with his family and many officials to the Tang court at <a class="enc-link" href="/encyclopedia#luoyang">Luoyang</a>, where he died. Later Korean histories blamed his luxury and neglect of loyal advisers, a view probably coloured by the victors. A restoration movement led by Boksin and the monk Dochim, with Prince Buyeo Pung brought back from <a class="enc-link" href="/encyclopedia#japan">Japan</a>, held out for three years with Yamato support, until a Tang and Silla fleet destroyed the Japanese navy at the Battle of Baekgang in 663 and the last fortress, Imjonseong, fell. The Tang briefly administered the former kingdom through the Ungjin Area Command before Silla absorbed its lands by 676.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Baekje, the south-western kingdom of <a class="enc-link" href="/encyclopedia#korea">Korea</a>'s <a class="enc-link" href="/encyclopedia#three-kingdoms-period">Three Kingdoms period</a>, created a refined Buddhist and literate court culture and served as the main bridge between the Korean peninsula and <a class="enc-link" href="/encyclopedia#japan">Japan</a>, transmitting writing, <a class="enc-link" href="/encyclopedia#buddhism">Buddhism</a> and craftsmanship to Yamato before Silla and the Tang destroyed it in 660.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Best, J.W. (2006) A History of the Early Korean Kingdom of Paekche, together with an Annotated Translation of The Paekche Annals of the Samguk sagi. Cambridge, MA: Harvard University Asia Center.</li>
+        <li>Farris, W.W. (1998) Sacred Texts and Buried Treasures: Issues in the Historical Archaeology of Ancient Japan. Honolulu: University of Hawai'i Press.</li>
+        <li>Lee, K.-b. (1984) A New History of Korea. Trans. E.W. Wagner with E.J. Shultz. Cambridge, MA: Harvard University Press.</li>
+        <li>Seth, M.J. (2010) A History of Korea: From Antiquity to the Present. Lanham: Rowman &amp; Littlefield.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="baekje"></div>
+      <a class="mini-connections-more" href="/connections#baekje">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/silla"><img src="/logos/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/goguryeo"><img src="/logos/Goguryeo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Goguryeo</span><span class="related-card-dates">37 BCE – 668 CE</span></a><a class="related-card" href="/empire/kushan-empire"><img src="/logos/Kushan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushan Empire</span><span class="related-card-dates">30 CE – 375 CE</span></a><a class="related-card" href="/empire/xianbei"><img src="/logos/Xianbei.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Xianbei</span><span class="related-card-dates">206 BCE – 235 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/roman-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Roman Empire</span><span class="related-card-dates">27 BCE – 476 CE</span></a><a class="related-card" href="/empire/kushan-empire"><span class="related-card-label">Later →</span><img src="/logos/Kushan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kushan Empire</span><span class="related-card-dates">30 CE – 375 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Baekje",slug="baekje",url="https://the-epoch-institute.org/empire/baekje";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Baekje on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/baekje #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/baekje"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Baekje",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

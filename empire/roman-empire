@@ -56,7 +56,7 @@
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">27 BCE – 476 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#rome">Rome</a>, <a class="enc-link" href="/encyclopedia#constantinople">Constantinople</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Augustus</span></div>
-          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#roman-republic">Roman Republic</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/roman-republic">Roman Republic</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/byzantine-empire">Byzantine Empire</a>, Germanic kingdoms</span></div>
         </div>
         <p class="empire-meta">6 min read · Last reviewed October 2026</p>
@@ -134,9 +134,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/carolingian-empire"><img src="/logos/Carolingian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Carolingian Empire</span><span class="related-card-dates">768 CE – 888 CE</span></a><a class="related-card" href="/empire/macedonian-empire"><img src="/logos/Macedonian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Macedonian Empire</span><span class="related-card-dates">336 BCE – 323 BCE</span></a><a class="related-card" href="/empire/holy-roman-empire"><img src="/logos/Holy%20Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Holy Roman Empire</span><span class="related-card-dates">800 CE – 1806 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/han-dynasty"><span class="related-card-label">← Earlier</span><img src="/logos/Han%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Han Dynasty</span><span class="related-card-dates">206 BCE – 220 CE</span></a><a class="related-card" href="/empire/aksumite-empire"><span class="related-card-label">Later →</span><img src="/logos/Aksumite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aksumite Empire</span><span class="related-card-dates">100 CE – 940 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/hispania-tarraconensis"><img src="/logos/Hispania%20Tarraconensis.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hispania Tarraconensis</span><span class="related-card-dates">27 BCE – 472 CE</span></a><a class="related-card" href="/empire/lusitania"><img src="/logos/Lusitania.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lusitania</span><span class="related-card-dates">27 BCE – 439 CE</span></a><a class="related-card" href="/empire/sarmatians"><img src="/logos/Sarmatians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sarmatians</span><span class="related-card-dates">300 BCE – 375 CE</span></a><a class="related-card" href="/empire/bosporan-kingdom"><img src="/logos/Bosporan%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bosporan Kingdom</span><span class="related-card-dates">438 BCE – 370 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/lusitania"><span class="related-card-label">← Earlier</span><img src="/logos/Lusitania.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lusitania</span><span class="related-card-dates">27 BCE – 439 CE</span></a><a class="related-card" href="/empire/baekje"><span class="related-card-label">Later →</span><img src="/logos/Baekje.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Baekje</span><span class="related-card-dates">18 BCE – 660 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -151,10 +151,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

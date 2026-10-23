@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingdom of Wessex — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The kingdom of the West Saxons, which survived the Viking onslaught under Alfred the Great and grew into the Kingdom of England.">
+<meta property="og:title" content="Kingdom of Wessex — The Epoch Institute">
+<meta property="og:description" content="The kingdom of the West Saxons, which survived the Viking onslaught under Alfred the Great and grew into the Kingdom of England.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/kingdom-of-wessex">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/kingdom-of-wessex.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/kingdom-of-wessex.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/kingdom-of-wessex">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Kingdom%20of%20Wessex" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Kingdom%20of%20Wessex.png" alt="Kingdom of Wessex" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Europe</p>
+        <h1 class="profile-detail-name">Kingdom of Wessex</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">927 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">408 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">519 CE – 927 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Dorchester-on-Thames (early see); later Winchester</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val">Cerdic (traditional)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Gewisse; Roman <a class="enc-link" href="/encyclopedia#britain">Britain</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/kingdom-of-england">Kingdom of England</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The kingdom of the West <a class="enc-link" href="/encyclopedia#saxons">Saxons</a>, centred on Winchester, which grew from small beginnings in the upper Thames valley and the Solent region.</li><li>Under <a class="enc-link" href="/encyclopedia#alfred-the-great">Alfred the Great</a> it alone of the English kingdoms survived the <a class="enc-link" href="/encyclopedia#vikings">Viking</a> onslaught, defended by a network of fortified burhs.</li><li>Alfred’s heirs conquered the Danelaw, and in 927 <a class="enc-link" href="/encyclopedia#aethelstan">Æthelstan</a> made Wessex the core of the Kingdom of <a class="enc-link" href="/encyclopedia#england">England</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Anglo-<a class="enc-link" href="/encyclopedia#saxons">Saxon</a> Chronicle, first compiled in Wessex in Alfred’s reign, was still being kept up at Peterborough Abbey in 1154.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Kingdom of Wessex"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Kingdom of Wessex over time, peaking in 927 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L122.4 106.4 L148.8 119.8 L224.7 119.8 L312.9 93.0 L328.8 79.6 L385.3 106.4 L431.2 106.4 L519.4 106.4 L560.0 66.2 L567.1 52.8 L584.7 79.6 L605.9 79.6 L641.2 106.4 L653.5 93.0 L667.6 66.2 L690.6 52.8 L724.1 39.4 L740.0 26.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L122.4 106.4 L148.8 119.8 L224.7 119.8 L312.9 93.0 L328.8 79.6 L385.3 106.4 L431.2 106.4 L519.4 106.4 L560.0 66.2 L567.1 52.8 L584.7 79.6 L605.9 79.6 L641.2 106.4 L653.5 93.0 L667.6 66.2 L690.6 52.8 L724.1 39.4 L740.0 26.0"/><circle class="rf-peak" cx="740.0" cy="26.0" r="5"/><text class="rf-peak-label" x="740.0" y="16.0" text-anchor="middle">Peak 927 CE</text><g class="rf-ev"><line x1="122.4" x2="122.4" y1="160" y2="166"/><circle cx="122.4" cy="160" r="8"/><text x="122.4" y="164" text-anchor="middle">1</text><title>577: Ceawlin wins the Battle of Dyrham, taking Gloucester, Cirencester and Bath</title></g><g class="rf-ev"><line x1="224.7" x2="224.7" y1="160" y2="166"/><circle cx="224.7" cy="160" r="8"/><text x="224.7" y="164" text-anchor="middle">2</text><title>635: King Cynegils is baptised by Bishop Birinus</title></g><g class="rf-ev"><line x1="328.8" x2="328.8" y1="160" y2="166"/><circle cx="328.8" cy="160" r="8"/><text x="328.8" y="164" text-anchor="middle">3</text><title>c. 694: Ine issues the first West Saxon law code</title></g><g class="rf-ev"><line x1="560.0" x2="560.0" y1="160" y2="166"/><circle cx="560.0" cy="160" r="8"/><text x="560.0" y="164" text-anchor="middle">4</text><title>825: Ecgberht defeats Mercia at the Battle of Ellendun</title></g><g class="rf-ev"><line x1="653.5" x2="653.5" y1="160" y2="166"/><circle cx="653.5" cy="160" r="8"/><text x="653.5" y="164" text-anchor="middle">5</text><title>878: Alfred defeats Guthrum at the Battle of Edington</title></g><g class="rf-ev"><line x1="667.6" x2="667.6" y1="160" y2="166"/><circle cx="667.6" cy="160" r="8"/><text x="667.6" y="164" text-anchor="middle">6</text><title>886: Alfred occupies London and is recognised as king of the Anglo-Saxons</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">7</text><title>927: Æthelstan takes York and becomes king of the English</title></g><text class="rf-axis" x="20" y="200">519 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">927 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">577</span><span class="rf-text">Ceawlin wins the Battle of Dyrham, taking Gloucester, Cirencester and Bath</span></li><li><span class="rf-year">635</span><span class="rf-text">King Cynegils is baptised by <a class="enc-link" href="/encyclopedia#bishop">Bishop</a> Birinus</span></li><li><span class="rf-year">c. 694</span><span class="rf-text">Ine issues the first West <a class="enc-link" href="/encyclopedia#saxons">Saxon</a> law code</span></li><li><span class="rf-year">825</span><span class="rf-text">Ecgberht defeats Mercia at the Battle of Ellendun</span></li><li><span class="rf-year">878</span><span class="rf-text">Alfred defeats Guthrum at the Battle of Edington</span></li><li><span class="rf-year">886</span><span class="rf-text">Alfred occupies <a class="enc-link" href="/encyclopedia#london">London</a> and is recognised as king of the Anglo-<a class="enc-link" href="/encyclopedia#saxons">Saxons</a></span></li><li><span class="rf-year">927</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#aethelstan">Æthelstan</a> takes York and becomes king of the English</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <div class="profile-section-body"><p>According to the <em>Anglo-<a class="enc-link" href="/encyclopedia#saxons">Saxon</a> Chronicle</em>, compiled in Wessex in the late ninth century, the kingdom was founded by Cerdic and his son Cynric, who landed on the south coast with five ships in 495 and in 519 ‘took the kingdom’ after a battle at Cerdicesford, probably Charford on the Avon. Historians treat this account with caution: its dates appear to have been artificially arranged, Cerdic’s name is British rather than Germanic, and the story was written to give the ruling dynasty a heroic origin. Archaeology and other sources suggest that the West Saxons, known early on as the Gewisse, formed first in the upper Thames valley around Dorchester-on-Thames, where early Anglo-Saxon cemeteries are numerous, and that groups in the Thames valley and the Solent region came together under a single dynasty. Ceawlin, who ruled in the later sixth century and was listed by Bede among the kings who held authority over the southern English, expanded westwards; the <em>Chronicle</em> records his victory at the Battle of Dyrham in 577, which brought Gloucester, Cirencester and Bath under West Saxon control. In the seventh century, under pressure from Mercia in the Thames valley, the kingdom’s centre shifted south and west to Hampshire and Wiltshire, and Winchester became its principal ecclesiastical and royal centre.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <div class="profile-section-body"><p>Wessex was a farming kingdom of chalk downland, fertile river valleys and, in the west, the heavier lands of Somerset and Devon. Most people lived in villages and hamlets, growing wheat and barley and keeping sheep and <a class="enc-link" href="/encyclopedia#cattle">cattle</a>, and society ranged from nobles, the <em>gesiths</em> and later thegns, through free peasants, or ceorls, to slaves. Ine’s laws give Britons lower wergilds than Englishmen, showing that a large British population lived under West <a class="enc-link" href="/encyclopedia#saxons">Saxon</a> rule. <a class="enc-link" href="/encyclopedia#christianity">Christianity</a> arrived when <a class="enc-link" href="/encyclopedia#bishop">Bishop</a> Birinus baptised King Cynegils in 635, with Oswald of Northumbria as godfather, and established a see at Dorchester-on-Thames; the see later moved to Winchester, and a second bishopric was created at Sherborne in 705 under the scholar Aldhelm. Monasteries such as Malmesbury and Glastonbury became centres of learning, and Boniface, a West Saxon monk probably born in Devon, worked to convert and organise the church in <a class="enc-link" href="/encyclopedia#germany">Germany</a> in the eighth century. Trade flowed through the emporium of Hamwic, on the site of Southampton, which flourished in the eighth century and dealt with the Frankish world. Alfred’s burhs, several planned with regular streets, later became market towns of southern <a class="enc-link" href="/encyclopedia#england">England</a>, among them Winchester, Wallingford and Wareham, and <a class="enc-link" href="/encyclopedia#silver">silver</a> pennies minted in Wessex circulated widely.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <div class="profile-section-body"><p>The West <a class="enc-link" href="/encyclopedia#saxons">Saxon</a> army was raised from the king’s companions and from the free men of the shires, led by ealdormen, and in the early centuries war meant raids and battles against British kingdoms and English rivals. Under Cædwalla (r. 685–688) the West Saxons conquered the Isle of Wight and Sussex and briefly held Kent, and Ine and his successors pushed into the British kingdom of Dumnonia, taking Devon in the late seventh and eighth centuries. In 825 Ecgberht defeated Beornwulf of Mercia at the Battle of Ellendun, near Swindon, a victory that brought Kent, Surrey, Sussex and Essex under West Saxon rule, and in 838 he defeated an alliance of Cornish and Danes at Hingston Down. The Great Heathen Army that landed in 865 conquered Northumbria, East Anglia and much of Mercia, and attacked Wessex in 871, the ‘year of battles’, which included the West Saxon victory at Ashdown. In January 878 a surprise Danish attack on Chippenham drove Alfred into the marshes of Athelney, but in May he defeated Guthrum at the Battle of Edington. Alfred then reorganised the defence of the kingdom: a network of about thirty fortified burhs, listed in the document known as the Burghal Hidage, was garrisoned by men supplied from the surrounding land, the army was divided so that half served while half stayed at home, and new ships were built.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#alfred-the-great"><img src="/images/encyclopedia/alfred-the-great.jpg" alt="Alfred the Great" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#alfred-the-great">Alfred the Great</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Alfred_the_Great,_silver_penny;_struck_875%E2%80%93880_(obverse).png" target="_blank" rel="noopener">CNG - Classical Numismatic Group, CC BY-SA 2.5</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Wessex was ruled by kings who claimed descent from Cerdic, though for much of the seventh century power seems to have been shared among several sub-kings, and succession often passed between distant branches of the royal kin. Ine (r. 688–726) issued a law code, probably around 694, the earliest surviving from Wessex, dealing with church dues, theft, wergilds and the duties of farmers, and Alfred later attached it to his own code. By the eighth century the kingdom was divided into shires named after their central places or peoples, such as Hampshire, Wiltshire, Dorset and Somerset, each under an ealdorman, with royal estates collecting food renders, and the king consulted his councillors, the witan, on law and policy. Ecgberht (r. 802–839) and his descendants consolidated the kingdom and placed eastern provinces such as Kent under members of the royal family. <a class="enc-link" href="/encyclopedia#alfred-the-great">Alfred the Great</a> (r. 871–899) strengthened royal government: his law book drew on the codes of Ine, Æthelberht of Kent and <a class="enc-link" href="/encyclopedia#offa-of-mercia">Offa of Mercia</a>, his burhs created a lasting framework of defence and administration, and he presented himself as king of the Anglo-<a class="enc-link" href="/encyclopedia#saxons">Saxons</a>, all the English not under Danish rule. His household served in rotating shifts, as his biographer Asser described, and the <em>Anglo-Saxon Chronicle</em> was compiled in his reign.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#pope-gregory-i"><img src="/images/encyclopedia/pope-gregory-i.jpg" alt="Pope Gregory I" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#pope-gregory-i">Pope Gregory I</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Gregory_the_Great_with_the_Holy_Spirit.jpg" target="_blank" rel="noopener">British Library, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Wessex was the only English kingdom to survive the <a class="enc-link" href="/encyclopedia#vikings">Viking</a> conquests of the ninth century, and it became the core of the Kingdom of <a class="enc-link" href="/encyclopedia#england">England</a>. Its royal house ruled England for most of the following century and a half, and Winchester remained a principal royal centre and treasury into the twelfth century. Alfred’s programme of learning had lasting effects on English culture. Lamenting that few priests south of the Humber could understand <a class="enc-link" href="/encyclopedia#latin">Latin</a>, he arranged for books ‘most necessary for all men to know’ to be put into English, among them <a class="enc-link" href="/encyclopedia#pope-gregory-i">Gregory the Great</a>’s <em>Pastoral Care</em>, with a preface in his own name; English versions of Boethius’s <em>Consolation of Philosophy</em>, of Orosius’s history and of Bede’s <em>Ecclesiastical History</em> were also made in this period. The <em>Anglo-<a class="enc-link" href="/encyclopedia#saxons">Saxon</a> Chronicle</em>, begun in his reign, was continued in several monasteries into the twelfth century and is a principal source for early English history. The West Saxon dialect became the standard written form of late Old English, in which much Old English literature survives, and Alfred’s burhs set the pattern of many English towns. Earlier, Boniface had helped to organise the church in <a class="enc-link" href="/encyclopedia#germany">Germany</a>, and Aldhelm of Malmesbury was among the first English scholars to write extensively in Latin. Alfred remains the only English king to be called ‘the Great’.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#edward-the-elder"><img src="/images/encyclopedia/edward-the-elder.jpg" alt="Edward the Elder" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#edward-the-elder">Edward the Elder</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Edward_the_Elder_-_MS_Royal_14_B_VI.jpg" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Wessex did not fall; it expanded until it became something larger. After 886, when Alfred occupied <a class="enc-link" href="/encyclopedia#london">London</a> and entrusted it to Æthelred, Lord of the Mercians, ‘all the English people who were not under subjection to the Danes’ submitted to him, and charters began to call him king of the Anglo-<a class="enc-link" href="/encyclopedia#saxons">Saxons</a>, a realm joining Wessex and English Mercia. His son <a class="enc-link" href="/encyclopedia#edward-the-elder">Edward the Elder</a> (r. 899–924), working with his sister Æthelflæd, Lady of the Mercians, built more burhs and conquered the Danish territories south of the Humber: by 918 the armies of East Anglia and the eastern Midlands had submitted, and after Æthelflæd’s death that year Edward took direct control of Mercia. Edward’s son <a class="enc-link" href="/encyclopedia#aethelstan">Æthelstan</a>, accepted first in Mercia and then in Wessex, took York from the <a class="enc-link" href="/encyclopedia#vikings">Vikings</a> in 927, and on 12 July of that year the rulers of <a class="enc-link" href="/encyclopedia#scotland">Scotland</a>, Strathclyde and Bamburgh, and probably Welsh kings, submitted to him at Eamont near Penrith. From then on Æthelstan ruled as king of the English, and Wessex became a region of the new Kingdom of <a class="enc-link" href="/encyclopedia#england">England</a>. Its name survived in an earldom: in the eleventh century the earls of Wessex, Godwin and his son Harold, were among the most powerful men in England, and Harold became king in 1066.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Wessex was the kingdom of the West <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> that alone among the English kingdoms survived the <a class="enc-link" href="/encyclopedia#vikings">Viking</a> conquests; under <a class="enc-link" href="/encyclopedia#alfred-the-great">Alfred the Great</a> it built burhs, laws and a revival of learning in English, and his son and grandson expanded it into the Kingdom of <a class="enc-link" href="/encyclopedia#england">England</a>, with Winchester as its royal centre.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Yorke, B. (1995) Wessex in the Early Middle Ages. London: Leicester University Press.</li>
+        <li>Stenton, F.M. (1943) Anglo-Saxon England. Oxford: Clarendon Press.</li>
+        <li>Keynes, S. and Lapidge, M. (trans.) (1983) Alfred the Great: Asser’s Life of King Alfred and Other Contemporary Sources. Harmondsworth: Penguin.</li>
+        <li>Abels, R. (1998) Alfred the Great: War, Kingship and Culture in Anglo-Saxon England. London: Longman.</li>
+        <li>Swanton, M. (trans.) (1996) The Anglo-Saxon Chronicle. London: J.M. Dent.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="kingdom-of-wessex"></div>
+      <a class="mini-connections-more" href="/connections#kingdom-of-wessex">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/kingdom-of-powys"><img src="/logos/Kingdom%20of%20Powys.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Powys</span><span class="related-card-dates">410 CE – 1160 CE</span></a><a class="related-card" href="/empire/kingdom-of-gwynedd"><img src="/logos/Kingdom%20of%20Gwynedd.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Gwynedd</span><span class="related-card-dates">450 CE – 1283 CE</span></a><a class="related-card" href="/empire/kingdom-of-mercia"><img src="/logos/Kingdom%20of%20Mercia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Mercia</span><span class="related-card-dates">527 CE – 918 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/dal-riata"><span class="related-card-label">← Earlier</span><img src="/logos/Dal%20Riata.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dal Riata</span><span class="related-card-dates">500 CE – 850 CE</span></a><a class="related-card" href="/empire/kingdom-of-mercia"><span class="related-card-label">Later →</span><img src="/logos/Kingdom%20of%20Mercia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Mercia</span><span class="related-card-dates">527 CE – 918 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Kingdom of Wessex",slug="kingdom-of-wessex",url="https://the-epoch-institute.org/empire/kingdom-of-wessex";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Kingdom of Wessex on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/kingdom-of-wessex #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/kingdom-of-wessex"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Kingdom of Wessex",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

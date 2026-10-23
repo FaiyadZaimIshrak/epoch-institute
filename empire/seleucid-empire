@@ -57,7 +57,7 @@
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#antioch">Antioch</a>, <a class="enc-link" href="/encyclopedia#seleucia">Seleucia-on-Tigris</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#seleucus-i-nicator">Seleucus I Nicator</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/macedonian-empire">Macedonian Empire</a></span></div>
-          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val">Roman Republic, <a class="enc-link" href="/empire/parthian-empire">Parthian Empire</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/roman-republic">Roman Republic</a>, <a class="enc-link" href="/empire/parthian-empire">Parthian Empire</a></span></div>
         </div>
         <p class="empire-meta">8 min read · Last reviewed October 2026</p>
       </div>
@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/achaemenid-empire"><img src="/logos/Achaemenid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Achaemenid Empire</span><span class="related-card-dates">559 BCE – 330 BCE</span></a><a class="related-card" href="/empire/elamite-confederation"><img src="/logos/Elamite%20Confederation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Elamite Confederation</span><span class="related-card-dates">2700 BCE – 539 BCE</span></a><a class="related-card" href="/empire/chaldean-empire"><img src="/logos/Chaldean%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chaldean Empire</span><span class="related-card-dates">626 BCE – 539 BCE</span></a><a class="related-card" href="/empire/median-empire"><img src="/logos/Median%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Median Empire</span><span class="related-card-dates">678 BCE – 549 BCE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/xiongnu-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Xiongnu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Xiongnu Empire</span><span class="related-card-dates">318 BCE – 36 BCE</span></a><a class="related-card" href="/empire/parthian-empire"><span class="related-card-label">Later →</span><img src="/logos/Parthian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Parthian Empire</span><span class="related-card-dates">247 BCE – 224 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/kingdom-of-saba"><img src="/logos/Kingdom%20of%20Saba.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Saba</span><span class="related-card-dates">800 BCE – 275 CE</span></a><a class="related-card" href="/empire/kingdom-of-iberia"><img src="/logos/Kingdom%20of%20Iberia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Iberia</span><span class="related-card-dates">302 BCE – 580 CE</span></a><a class="related-card" href="/empire/kingdom-of-pontus"><img src="/logos/Kingdom%20of%20Pontus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Pontus</span><span class="related-card-dates">281 BCE – 63 BCE</span></a><a class="related-card" href="/empire/himyarite-kingdom"><img src="/logos/Himyarite%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Himyarite Kingdom</span><span class="related-card-dates">110 BCE – 525 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/xiongnu-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Xiongnu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Xiongnu Empire</span><span class="related-card-dates">318 BCE – 36 BCE</span></a><a class="related-card" href="/empire/antigonid-kingdom-of-macedonia"><span class="related-card-label">Later →</span><img src="/logos/Antigonid%20Kingdom%20of%20Macedonia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Antigonid Kingdom of Macedonia</span><span class="related-card-dates">306 BCE – 168 BCE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

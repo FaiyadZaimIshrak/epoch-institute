@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saxons — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="A confederation of north German peoples who raided Roman coasts, settled England and fought Charlemagne for thirty years before forced conversion.">
+<meta property="og:title" content="Saxons — The Epoch Institute">
+<meta property="og:description" content="A confederation of north German peoples who raided Roman coasts, settled England and fought Charlemagne for thirty years before forced conversion.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/saxons">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/saxons.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/saxons.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/saxons">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Saxons" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Saxons.png" alt="Saxons" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Europe</p>
+        <h1 class="profile-detail-name">Saxons</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">695 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">524 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">280 CE – 804 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">No capital; annual assembly traditionally at Marklo on the Weser</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#north-sea">North Sea</a> peoples such as the Chauci and Angrivarii</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#carolingian-empire">Carolingian Empire</a>; later the Duchy of Saxony</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A confederation of north German peoples between the Elbe and the <a class="enc-link" href="/encyclopedia#rhine">Rhine</a>, ruled by nobles and assemblies rather than kings.</li><li><a class="enc-link" href="/encyclopedia#saxons">Saxon</a> sea raiders troubled Roman <a class="enc-link" href="/encyclopedia#britain">Britain</a> and Gaul, and Saxon settlers helped create Anglo-Saxon <a class="enc-link" href="/encyclopedia#england">England</a>.</li><li><a class="enc-link" href="/encyclopedia#charlemagne">Charlemagne</a>’s <a class="enc-link" href="/encyclopedia#saxon-wars">Saxon Wars</a> of 772–804 ended their independence with <a class="enc-link" href="/encyclopedia#deportation">mass deportations</a> and forced conversion.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In Finnish and Estonian, <a class="enc-link" href="/encyclopedia#germany">Germany</a> is still named after the <a class="enc-link" href="/encyclopedia#saxons">Saxons</a>: Saksa and Saksamaa.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Saxons"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Saxons over time, peaking in 695 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 133.2 L28.2 106.4 L139.5 79.6 L143.7 93.0 L198.6 79.6 L253.6 66.2 L279.7 79.6 L364.9 52.8 L399.2 66.2 L503.7 52.8 L590.2 26.0 L649.3 39.4 L676.8 66.2 L696.0 79.6 L709.8 93.0 L713.9 119.8 L724.9 106.4 L733.1 133.2 L740.0 160.0 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 133.2 L28.2 106.4 L139.5 79.6 L143.7 93.0 L198.6 79.6 L253.6 66.2 L279.7 79.6 L364.9 52.8 L399.2 66.2 L503.7 52.8 L590.2 26.0 L649.3 39.4 L676.8 66.2 L696.0 79.6 L709.8 93.0 L713.9 119.8 L724.9 106.4 L733.1 133.2 L740.0 160.0"/><circle class="rf-peak" cx="590.2" cy="26.0" r="5"/><text class="rf-peak-label" x="590.2" y="16.0" text-anchor="middle">Peak 695 CE</text><g class="rf-ev"><line x1="26.9" x2="26.9" y1="160" y2="166"/><circle cx="26.9" cy="160" r="8"/><text x="26.9" y="164" text-anchor="middle">1</text><title>c. 285: Carausius is given command against Frankish and Saxon pirates</title></g><g class="rf-ev"><line x1="139.5" x2="139.5" y1="160" y2="166"/><circle cx="139.5" cy="160" r="8"/><text x="139.5" y="164" text-anchor="middle">2</text><title>367: Saxons join the 'barbarian conspiracy' that overruns Roman Britain</title></g><g class="rf-ev"><line x1="252.2" x2="252.2" y1="160" y2="166"/><circle cx="252.2" cy="160" r="8"/><text x="252.2" y="164" text-anchor="middle">3</text><title>c. 449: Bede’s traditional date for the arrival of Saxon settlers in Britain</title></g><g class="rf-ev"><line x1="590.2" x2="590.2" y1="160" y2="166"/><circle cx="590.2" cy="160" r="8"/><text x="590.2" y="164" text-anchor="middle">4</text><title>c. 695: Saxons conquer the lands of the Bructeri between the Lippe and the Ruhr</title></g><g class="rf-ev"><line x1="696.0" x2="696.0" y1="160" y2="166"/><circle cx="696.0" cy="160" r="8"/><text x="696.0" y="164" text-anchor="middle">5</text><title>772: Charlemagne takes the Eresburg and destroys the Irminsul</title></g><g class="rf-ev"><line x1="709.8" x2="709.8" y1="160" y2="166"/><circle cx="709.8" cy="160" r="8"/><text x="709.8" y="164" text-anchor="middle">6</text><title>782: Saxons defeat the Franks in the Süntel hills; mass execution at Verden</title></g><g class="rf-ev"><line x1="713.9" x2="713.9" y1="160" y2="166"/><circle cx="713.9" cy="160" r="8"/><text x="713.9" y="164" text-anchor="middle">7</text><title>785: Widukind is baptised at Attigny with Charlemagne as godfather</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>804: Deportation of the Nordalbingian Saxons ends the Saxon Wars</title></g><text class="rf-axis" x="20" y="200">280 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">804 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 285</span><span class="rf-text">Carausius is given command against Frankish and <a class="enc-link" href="/encyclopedia#saxons">Saxon</a> <a class="enc-link" href="/encyclopedia#piracy">pirates</a></span></li><li><span class="rf-year">367</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#saxons">Saxons</a> join the 'barbarian conspiracy' that overruns Roman <a class="enc-link" href="/encyclopedia#britain">Britain</a></span></li><li><span class="rf-year">c. 449</span><span class="rf-text">Bede’s traditional date for the arrival of <a class="enc-link" href="/encyclopedia#saxons">Saxon</a> settlers in <a class="enc-link" href="/encyclopedia#britain">Britain</a></span></li><li><span class="rf-year">c. 695</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#saxons">Saxons</a> conquer the lands of the Bructeri between the Lippe and the Ruhr</span></li><li><span class="rf-year">772</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#charlemagne">Charlemagne</a> takes the Eresburg and destroys the Irminsul</span></li><li><span class="rf-year">782</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#saxons">Saxons</a> defeat the <a class="enc-link" href="/encyclopedia#frankish-kingdom">Franks</a> in the Süntel hills; mass execution at <a class="enc-link" href="/encyclopedia#verden">Verden</a></span></li><li><span class="rf-year">785</span><span class="rf-text">Widukind is baptised at Attigny with <a class="enc-link" href="/encyclopedia#charlemagne">Charlemagne</a> as godfather</span></li><li><span class="rf-year">804</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#deportation">Deportation</a> of the Nordalbingian <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> ends the <a class="enc-link" href="/encyclopedia#saxon-wars">Saxon Wars</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#frankish-kingdom"><img src="/images/encyclopedia/frankish-kingdom.jpg" alt="Frankish Kingdom" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#frankish-kingdom">Frankish Kingdom</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Franks_expansion.gif" target="_blank" rel="noopener">No machine-readable author provided. Roke~commonswiki assumed (based on copyright claims)., CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The origins of the <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> lie among the peoples of the <a class="enc-link" href="/encyclopedia#north-sea">North Sea</a> coast between the Elbe and the Weser and in Holstein. The geographer Ptolemy, writing around 150, places a people called Saxones in the neck of the Jutland peninsula, but the reading is disputed and may be a copyist’s error. The Saxons enter history with certainty in the late 3rd century as sea raiders: around 285 the Roman commander Carausius was charged with clearing the Channel of Frankish and Saxon <a class="enc-link" href="/encyclopedia#piracy">pirates</a>. The name is traditionally linked with the <em>seax</em>, the single-edged knife used across the region, though this derivation is not certain. Like the <a class="enc-link" href="/encyclopedia#frankish-kingdom">Franks</a> and the Alemanni, the Saxons were not a single migrating tribe but a widening grouping that came to include older peoples of north-west <a class="enc-link" href="/encyclopedia#germany">Germany</a>, such as the Chauci, the Angrivarii and later parts of the Cherusci and Bructeri, so that by the 8th century Saxony stretched from the North Sea and the Elbe to the edge of the Rhineland. Its main regions were <a class="enc-link" href="/encyclopedia#peace-of-westphalia">Westphalia</a>, Engern (the land of the Angrarii on the middle Weser), Eastphalia and Nordalbingia, north of the Elbe. In the 5th century Saxon groups also crossed the sea to settle in <a class="enc-link" href="/encyclopedia#britain">Britain</a> and on the coasts of Gaul.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#charlemagne"><img src="/images/encyclopedia/charlemagne.jpg" alt="Charlemagne" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#charlemagne">Charlemagne</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg" target="_blank" rel="noopener">Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#saxons">Saxon</a> society was rural, built on mixed farming and <a class="enc-link" href="/encyclopedia#cattle">cattle</a> raising on the sandy heaths, river valleys and coastal marshes of north <a class="enc-link" href="/encyclopedia#germany">Germany</a>. On the coast people lived on artificial mounds raised above the floods; the excavated village of Feddersen Wierde near Bremerhaven, occupied from the 1st century BCE to the 5th century CE, shows longhouses that sheltered people and cattle under one roof, a chieftain’s hall and workshops. Cremation in decorated urns was common in the great cemeteries of the Elbe–Weser region, while later centuries brought more inhumation burials. Society was sharply divided. Ninth-century writers such as Nithard describe three ranks, the nobles (<em>edhilingi</em>), the freemen (<em>frilingi</em>) and the half-free <em>lazzi</em>, with slaves beneath them, and the <em>Lex Saxonum</em> of about 802 set far higher compensation for nobles than for others. The Saxons traded cattle, hides and slaves and received Frankish goods, while raiding brought wealth from Roman lands. Religion was pagan: a Saxon baptismal vow of the late 8th or 9th century makes converts renounce Thunaer, Woden and Saxnot, and sacred sites included springs, groves and the Irminsul, a great pillar or tree near the Eresburg, destroyed by <a class="enc-link" href="/encyclopedia#charlemagne">Charlemagne</a> in 772.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#ammianus-marcellinus"><img src="/images/encyclopedia/ammianus-marcellinus.jpg" alt="Ammianus Marcellinus" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#ammianus-marcellinus">Ammianus Marcellinus</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg" target="_blank" rel="noopener">Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a ..., CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>For more than two centuries the <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> were feared as seaborne raiders. Roman defences against them included the forts of the Saxon Shore in <a class="enc-link" href="/encyclopedia#britain">Britain</a> and on the Gallic coast, named in the <em>Notitia Dignitatum</em>, and in 367 Saxons joined Picts, Scotti and Attacotti in the attack on Britain that <a class="enc-link" href="/encyclopedia#ammianus-marcellinus">Ammianus Marcellinus</a> called a barbarian conspiracy. Ammianus also reports that in 370 Roman troops broke a truce to ambush a Saxon force withdrawing from northern Gaul. The poet Sidonius Apollinaris, writing around 480, describes Saxon <a class="enc-link" href="/encyclopedia#piracy">pirates</a> as masters of the sea who drowned one in ten of their captives as a sacrifice before sailing home. In the 460s a Saxon leader named Adovacrius (Odovacer) fought on the lower Loire around Angers until the Frankish king <a class="enc-link" href="/encyclopedia#childeric-i">Childeric I</a> took the city. On land the Saxons fought on foot with spear, shield and <em>seax</em>, led by nobles and their followings. They were long a match for the <a class="enc-link" href="/encyclopedia#frankish-kingdom">Franks</a>: in the 550s they inflicted a heavy defeat on Chlothar I, and in the 8th century they resisted repeated campaigns by <a class="enc-link" href="/encyclopedia#charles-martel">Charles Martel</a> and Pippin the Short. Their defence relied on ramparts such as the Eresburg and the Syburg and on the difficulty of campaigning in a land of forests and marshes without towns or roads.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#peace-of-westphalia"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="Peace of Westphalia" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#peace-of-westphalia">Peace of Westphalia</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:M%C3%BCnster,_Historisches_Rathaus_--_2014_--_6855.jpg" target="_blank" rel="noopener">Dietmar Rabich, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Continental Saxony never had a king. Bede, writing in 731, says that the Old <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> had no king but many <em>satrapae</em> set over the people, who in time of war cast lots to choose a common leader whom all obeyed for the duration of the campaign, after which each returned to equal power. The Life of Lebuin, written in the 9th or early 10th century, describes a general assembly held each year at Marklo on the Weser, attended by twelve chosen men from each of the three ranks of nobles, freemen and half-free in every district, which decided on war and peace and judged disputes. Historians debate how far this account reflects real practice and how far it was idealised, but it fits a society governed by regional nobles, local assemblies and customary law rather than central institutions. The great regions of <a class="enc-link" href="/encyclopedia#peace-of-westphalia">Westphalia</a>, Engern, Eastphalia and Nordalbingia were themselves divided into many districts (<em>gaue</em>). This decentralisation made Saxony hard to conquer: there was no capital to seize and no king whose submission bound the rest, so each Frankish victory produced oaths that local leaders soon broke. Under <a class="enc-link" href="/encyclopedia#charlemagne">Charlemagne</a> Saxon law was written down in the <em>Lex Saxonum</em>, and Frankish counts and <a class="enc-link" href="/encyclopedia#bishop">bishops</a> replaced the old order.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#henry-the-fowler"><img src="/images/encyclopedia/henry-the-fowler.jpg" alt="Henry the Fowler" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#henry-the-fowler">Henry the Fowler</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Siegel_Heinrich_I_Posse.JPG" target="_blank" rel="noopener">Unknown authorUnknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> left a double legacy, in <a class="enc-link" href="/encyclopedia#britain">Britain</a> and in <a class="enc-link" href="/encyclopedia#germany">Germany</a>. Saxon settlers, with Angles and Jutes, founded the kingdoms of the Anglo-Saxons, and the names Essex, Sussex and <a class="enc-link" href="/encyclopedia#wessex">Wessex</a> preserve the East, South and West Saxons. Old English and Old Saxon were closely related languages, and the Anglo-Saxons remembered their continental kin: English missionaries went to convert the Old Saxons, among them the two Hewalds, martyred in the 690s, and Lebuin in the 8th century. On the continent Saxony, once conquered, became one of the great regions of the Frankish and German world. The Old Saxon epic <em>Heliand</em>, written around 830, retold the life of Christ in Saxon alliterative verse, presenting Christ as a lord and the disciples as his retainers. The Duchy of Saxony, ruled by the Liudolfing family, produced the kings of <a class="enc-link" href="/encyclopedia#east-francia">East Francia</a> from 919, beginning with <a class="enc-link" href="/encyclopedia#henry-the-fowler">Henry the Fowler</a>, and his son <a class="enc-link" href="/encyclopedia#otto-i">Otto I</a> was crowned emperor in 962. The name Saxony later moved east with the ducal title and survives in the German states of Saxony, Lower Saxony and Saxony-Anhalt. In Finnish and Estonian, Germany is still called <em>Saksa</em> and <em>Saksamaa</em>, after the Saxons.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#saxon-wars"><img src="/images/encyclopedia/saxon-wars.jpg" alt="Saxon Wars" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#saxon-wars">Saxon Wars</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Frankish_Empire_481_to_814-en.svg" target="_blank" rel="noopener">Sémhur, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> lost their independence to <a class="enc-link" href="/encyclopedia#charlemagne">Charlemagne</a> in the long <a class="enc-link" href="/encyclopedia#saxon-wars">Saxon Wars</a> of 772–804. Frankish rulers had fought the Saxons for two centuries and imposed tribute, including 300 horses a year after Pippin the Short’s campaign of 758, but Charlemagne sought conquest and conversion. In 772 he took the Eresburg and destroyed the Irminsul. Saxon revolts followed whenever the <a class="enc-link" href="/encyclopedia#frankish-kingdom">Franks</a> were engaged elsewhere, most famously under the Westphalian noble Widukind. In 782 Saxons destroyed a Frankish army in the Süntel hills, and Charlemagne responded by having some 4,500 Saxons beheaded at <a class="enc-link" href="/encyclopedia#verden">Verden</a>, according to the Royal Frankish Annals, though the number and nature of the event are debated. Severe laws, the <em>Capitulatio de partibus Saxoniae</em>, prescribed death for refusing baptism or for pagan practices. In 785 Widukind submitted and was baptised at Attigny with Charlemagne as his godfather. New risings from 792 were met with systematic <a class="enc-link" href="/encyclopedia#deportation">deportations</a> of Saxons into <a class="enc-link" href="/encyclopedia#francia">Francia</a> and the settlement of Franks in their place, and in 804 the people of Nordalbingia were removed and their land given to the Slavic Obodrites. Saxony was then organised into counties and bishoprics such as Paderborn, Münster and <a class="enc-link" href="/encyclopedia#bremen">Bremen</a>, and later formed the Duchy of Saxony.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The <a class="enc-link" href="/encyclopedia#saxons">Saxons</a> were the <a class="enc-link" href="/encyclopedia#north-sea">North Sea</a> confederation whose raiders troubled Roman <a class="enc-link" href="/encyclopedia#britain">Britain</a> and Gaul, whose settlers helped create Anglo-Saxon <a class="enc-link" href="/encyclopedia#england">England</a>, and whose long resistance to <a class="enc-link" href="/encyclopedia#charlemagne">Charlemagne</a> ended in conquest and forced conversion, after which Saxony became a core region of medieval <a class="enc-link" href="/encyclopedia#germany">Germany</a> and gave it a royal dynasty.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Bede (1990) Ecclesiastical History of the English People, trans. L. Sherley-Price, rev. R.E. Latham. London: Penguin.</li>
+        <li>Collins, R. (1998) Charlemagne. Basingstoke: Macmillan.</li>
+        <li>Scholz, B.W. (trans.) (1970) Carolingian Chronicles: Royal Frankish Annals and Nithard’s Histories. Ann Arbor: University of Michigan Press.</li>
+        <li>Springer, M. (2004) Die Sachsen. Stuttgart: Kohlhammer.</li>
+        <li>Todd, M. (1992) The Early Germans. Oxford: Blackwell.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="saxons"></div>
+      <a class="mini-connections-more" href="/connections#saxons">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/kingdom-of-the-picts"><img src="/logos/Kingdom%20of%20the%20Picts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of the Picts</span><span class="related-card-dates">300 CE – 900 CE</span></a><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/kingdom-of-powys"><img src="/logos/Kingdom%20of%20Powys.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Powys</span><span class="related-card-dates">410 CE – 1160 CE</span></a><a class="related-card" href="/empire/kingdom-of-gwynedd"><img src="/logos/Kingdom%20of%20Gwynedd.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Gwynedd</span><span class="related-card-dates">450 CE – 1283 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/pallava-dynasty"><span class="related-card-label">← Earlier</span><img src="/logos/Pallava%20dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pallava dynasty</span><span class="related-card-dates">275 CE – 897 CE</span></a><a class="related-card" href="/empire/ghana-empire"><span class="related-card-label">Later →</span><img src="/logos/Ghana%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ghana Empire</span><span class="related-card-dates">300 CE – 1240 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Saxons",slug="saxons",url="https://the-epoch-institute.org/empire/saxons";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Saxons on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/saxons #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/saxons"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Saxons",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

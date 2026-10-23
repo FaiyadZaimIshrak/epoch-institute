@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/qing-empire"><img src="/logos/Qing%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Qing Empire</span><span class="related-card-dates">1644 CE – 1912 CE</span></a><a class="related-card" href="/empire/tokugawa-shogunate"><img src="/logos/Tokugawa%20Shogunate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tokugawa Shogunate</span><span class="related-card-dates">1603 CE – 1868 CE</span></a><a class="related-card" href="/empire/ming-empire"><img src="/logos/Ming%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ming Empire</span><span class="related-card-dates">1368 CE – 1644 CE</span></a><a class="related-card" href="/empire/timurid-empire"><img src="/logos/Timurid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Timurid Empire</span><span class="related-card-dates">1363 CE – 1507 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/austro-hungarian-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Austro-Hungarian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Austro-Hungarian Empire</span><span class="related-card-dates">1867 CE – 1918 CE</span></a><a class="related-card" href="/empire/german-empire"><span class="related-card-label">Later →</span><img src="/logos/German%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">German Empire</span><span class="related-card-dates">1871 CE – 1918 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/qing-empire"><img src="/logos/Qing%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Qing Empire</span><span class="related-card-dates">1644 CE – 1912 CE</span></a><a class="related-card" href="/empire/republic-of-china"><img src="/logos/Republic%20of%20China.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of China</span><span class="related-card-dates">1912 CE – 2025 CE</span></a><a class="related-card" href="/empire/joseon"><img src="/logos/Joseon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Joseon</span><span class="related-card-dates">1392 CE – 1897 CE</span></a><a class="related-card" href="/empire/ryukyu-kingdom"><img src="/logos/Ryukyu%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ryukyu Kingdom</span><span class="related-card-dates">1429 CE – 1872 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/mexico"><span class="related-card-label">← Earlier</span><img src="/logos/Mexico.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mexico</span><span class="related-card-dates">1867 CE – 2025 CE</span></a><a class="related-card" href="/empire/german-empire"><span class="related-card-label">Later →</span><img src="/logos/German%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">German Empire</span><span class="related-card-dates">1871 CE – 1918 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uruk — The Epoch Institute</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='22' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="The great city of the Uruk period, where some of the earliest writing appeared around 3300 BCE, and the seat of the legendary king Gilgamesh.">
+<meta property="og:title" content="Uruk — The Epoch Institute">
+<meta property="og:description" content="The great city of the Uruk period, where some of the earliest writing appeared around 3300 BCE, and the seat of the legendary king Gilgamesh.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/uruk">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/uruk.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/uruk.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/uruk">
+<link rel="stylesheet" href="/shared.css?v=28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row .profile-back-gallery-btn { margin:0; padding:0; min-height:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<div class="empire-page">
+  <div class="empire-nav-row">
+    <a href="/profiles" class="profile-back-gallery-btn">← Back to Profiles</a>
+    <a href="/explorer#//Uruk" class="empire-view-explorer">View on Explorer →</a>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Uruk.png" alt="Uruk" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Ancient Near East</p>
+        <h1 class="profile-detail-name">Uruk</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">3200 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">1698 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">3500 BCE – 1802 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#uruk">Uruk</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#larsa">Larsa</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li><a class="enc-link" href="/encyclopedia#uruk">Uruk</a> in southern <a class="enc-link" href="/encyclopedia#iraq">Iraq</a> grew into the largest city in the world in the fourth millennium BCE.</li><li>Administrators in its Eanna temple precinct produced proto-<a class="enc-link" href="/encyclopedia#cuneiform">cuneiform</a>, among the earliest known writing, around 3300 BCE.</li><li>It was the city of Gilgamesh and the capital of <a class="enc-link" href="/encyclopedia#lugal-zage-si">Lugal-zage-si</a> before falling to <a class="enc-link" href="/encyclopedia#akkad">Akkad</a>, <a class="enc-link" href="/encyclopedia#ur">Ur</a> and finally <a class="enc-link" href="/encyclopedia#larsa">Larsa</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Warka Vase and the Mask of Warka, two of <a class="enc-link" href="/encyclopedia#uruk">Uruk</a>’s greatest treasures, were looted from the <a class="enc-link" href="/encyclopedia#iraq">Iraq</a> Museum in <a class="enc-link" href="/encyclopedia#baghdad">Baghdad</a> in 2003 and both were later recovered.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Uruk"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Uruk over time, peaking in 3200 BCE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 119.8 L104.8 52.8 L147.2 26.0 L189.6 66.2 L274.4 66.2 L359.2 79.6 L465.2 93.0 L507.6 39.4 L514.4 106.4 L550.0 133.2 L605.6 66.2 L608.6 106.4 L654.3 119.8 L713.3 93.0 L732.4 106.4 L740.0 146.6 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 119.8 L104.8 52.8 L147.2 26.0 L189.6 66.2 L274.4 66.2 L359.2 79.6 L465.2 93.0 L507.6 39.4 L514.4 106.4 L550.0 133.2 L605.6 66.2 L608.6 106.4 L654.3 119.8 L713.3 93.0 L732.4 106.4 L740.0 146.6"/><circle class="rf-peak" cx="147.2" cy="26.0" r="5"/><text class="rf-peak-label" x="147.2" y="16.0" text-anchor="middle">Peak 3200 BCE</text><g class="rf-ev"><line x1="104.8" x2="104.8" y1="160" y2="166"/><circle cx="104.8" cy="160" r="8"/><text x="104.8" y="164" text-anchor="middle">1</text><title>c. 3300 BCE: Administrators in Eanna begin recording goods on clay tablets: the beginning of writing</title></g><g class="rf-ev"><line x1="189.6" x2="189.6" y1="160" y2="166"/><circle cx="189.6" cy="160" r="8"/><text x="189.6" y="164" text-anchor="middle">2</text><title>c. 3100 BCE: Uruk outposts in Syria and Iran are abandoned</title></g><g class="rf-ev"><line x1="274.4" x2="274.4" y1="160" y2="166"/><circle cx="274.4" cy="160" r="8"/><text x="274.4" y="164" text-anchor="middle">3</text><title>c. 2900 BCE: A city wall about 9 km long encloses Uruk</title></g><g class="rf-ev"><line x1="359.2" x2="359.2" y1="160" y2="166"/><circle cx="359.2" cy="160" r="8"/><text x="359.2" y="164" text-anchor="middle">4</text><title>c. 2700 BCE: Approximate date of Gilgamesh, the city’s legendary king</title></g><g class="rf-ev"><line x1="507.6" x2="507.6" y1="160" y2="166"/><circle cx="507.6" cy="160" r="8"/><text x="507.6" y="164" text-anchor="middle">5</text><title>c. 2350 BCE: Lugal-zage-si makes Uruk the capital of a united Sumer</title></g><g class="rf-ev"><line x1="605.6" x2="605.6" y1="160" y2="166"/><circle cx="605.6" cy="160" r="8"/><text x="605.6" y="164" text-anchor="middle">6</text><title>c. 2119 BCE: Utu-hengal of Uruk defeats the Gutian king Tirigan</title></g><g class="rf-ev"><line x1="713.3" x2="713.3" y1="160" y2="166"/><circle cx="713.3" cy="160" r="8"/><text x="713.3" y="164" text-anchor="middle">7</text><title>c. 1865 BCE: Sin-kashid founds Uruk’s last independent dynasty</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">8</text><title>c. 1802 BCE: Rim-Sin of Larsa conquers Uruk</title></g><text class="rf-axis" x="20" y="200">3500 BCE</text><text class="rf-axis" x="740" y="200" text-anchor="end">1802 BCE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">c. 3300 BCE</span><span class="rf-text">Administrators in Eanna begin recording goods on clay tablets: the beginning of writing</span></li><li><span class="rf-year">c. 3100 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#uruk">Uruk</a> outposts in <a class="enc-link" href="/encyclopedia#syria">Syria</a> and <a class="enc-link" href="/encyclopedia#iran">Iran</a> are abandoned</span></li><li><span class="rf-year">c. 2900 BCE</span><span class="rf-text">A city wall about 9 km long encloses <a class="enc-link" href="/encyclopedia#uruk">Uruk</a></span></li><li><span class="rf-year">c. 2700 BCE</span><span class="rf-text">Approximate date of Gilgamesh, the city’s legendary king</span></li><li><span class="rf-year">c. 2350 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia#lugal-zage-si">Lugal-zage-si</a> makes <a class="enc-link" href="/encyclopedia#uruk">Uruk</a> the capital of a united <a class="enc-link" href="/encyclopedia#sumer">Sumer</a></span></li><li><span class="rf-year">c. 2119 BCE</span><span class="rf-text">Utu-hengal of <a class="enc-link" href="/encyclopedia#uruk">Uruk</a> defeats the Gutian king Tirigan</span></li><li><span class="rf-year">c. 1865 BCE</span><span class="rf-text">Sin-kashid founds <a class="enc-link" href="/encyclopedia#uruk">Uruk</a>’s last independent dynasty</span></li><li><span class="rf-year">c. 1802 BCE</span><span class="rf-text">Rim-Sin of <a class="enc-link" href="/encyclopedia#larsa">Larsa</a> conquers <a class="enc-link" href="/encyclopedia#uruk">Uruk</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#euphrates"><img src="/images/encyclopedia/euphrates.jpg" alt="Euphrates" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#euphrates">Euphrates</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:The_Euphrates_River_in_Turkey,_Rumkale_(52031477798).jpg" target="_blank" rel="noopener">Carole Raddato from Frankfurt, Germany, CC BY-SA 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#uruk">Uruk</a>, called Unug in Sumerian, Erech in the <a class="enc-link" href="/encyclopedia#hebrew-bible">Hebrew Bible</a> and Warka today, lay on a branch of the <a class="enc-link" href="/encyclopedia#euphrates">Euphrates</a> in southern <a class="enc-link" href="/encyclopedia#iraq">Iraq</a>. It grew from two settlements of the Ubaid period, Kullaba and Eanna, which merged during the fourth millennium BCE into a single city. Growth was so rapid that archaeologists named a whole era after it: in the Uruk period, c. 4000–3100 BCE, the city became the largest settlement in the world, covering perhaps 250 hectares by the late fourth millennium, with a population often estimated at 20,000 to 40,000 and possibly more. Its rise rested on irrigated barley farming, date palms, herding and fishing in the marshes, and on two great religious precincts: Eanna, the house of the goddess <a class="enc-link" href="/encyclopedia#inanna">Inanna</a>, and the terrace of the sky god An in Kullaba, crowned by the whitewashed White Temple. In the Late Uruk phase, c. 3300–3100 BCE, the monumental buildings of Eanna were rebuilt again and again on an unprecedented scale. In the early third millennium the city was enclosed by a wall about 9 kilometres long, which later tradition credited to Gilgamesh. By then Uruk had become one of a number of competing Sumerian city-states, each ruled by its own king and protected by its own god.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <div class="profile-section-body"><p>Late <a class="enc-link" href="/encyclopedia#uruk">Uruk</a> society was organised around great institutions that collected produce, kept herds and workshops, and paid workers in rations. The mass-produced bevelled-rim bowls found in vast numbers at Uruk sites are widely interpreted as ration containers, though this is debated. Specialised crafts flourished: potters used the fast wheel, sculptors carved the alabaster Warka Vase, which shows a procession bringing offerings to <a class="enc-link" href="/encyclopedia#inanna">Inanna</a>, and the marble Mask of Warka, one of the earliest naturalistic portrayals of a human face. Walls in Eanna were decorated with mosaics of coloured clay cones. To manage this economy, administrators in Eanna developed writing. The earliest proto-<a class="enc-link" href="/encyclopedia#cuneiform">cuneiform</a> tablets, some 5,000 of them, date from c. 3300–3000 BCE; about 85 per cent record grain, livestock, textiles and labour, and the rest are lexical lists used to train scribes. Cylinder seals, also invented in this period, marked ownership and authority. The city depended on materials it lacked, such as <a class="enc-link" href="/encyclopedia#timber">timber</a>, stone and metals, and in the so-called Uruk expansion settlers founded outposts and colonies far up the <a class="enc-link" href="/encyclopedia#euphrates">Euphrates</a> in <a class="enc-link" href="/encyclopedia#syria">Syria</a> and south-eastern <a class="enc-link" href="/encyclopedia#anatolia">Anatolia</a>, such as Habuba Kabira and Jebel Aruda, and in western <a class="enc-link" href="/encyclopedia#iran">Iran</a> at Godin Tepe. Whether this network was driven by trade, colonisation or something else is still argued.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#lugal-zage-si"><img src="/images/encyclopedia/lugal-zage-si.jpg" alt="Lugal-zage-si" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#lugal-zage-si">Lugal-zage-si</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Prisoner_exiting_a_cage,_on_an_Akkadian_Empire_victory_stele_circa_2300_BCE,_Louvre_Museum.jpg" target="_blank" rel="noopener">ALFGRN, CC BY-SA 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Little is known of warfare in the <a class="enc-link" href="/encyclopedia#uruk">Uruk</a> period, although cylinder seals already show a ruler with bound captives and armed men. Conflict is better documented in the <a class="enc-link" href="/encyclopedia#early-dynastic-period">Early Dynastic period</a>, c. 2900–2350 BCE, when Uruk competed with <a class="enc-link" href="/encyclopedia#kish">Kish</a>, <a class="enc-link" href="/encyclopedia#ur">Ur</a>, <a class="enc-link" href="/encyclopedia#lagash">Lagash</a> and Umma for land, water and supremacy. Sumerian poems tell of Gilgamesh resisting Aga of Kish, and of Enmerkar demanding precious stone from the distant land of Aratta; these are literary works composed centuries later, and how far they reflect real events is uncertain. Around the twenty-fourth century BCE kings of Uruk such as Enshakushanna claimed victories over Kish, and Lugal-kinishe-dudu ruled both Uruk and Ur. The greatest moment came when <a class="enc-link" href="/encyclopedia#lugal-zage-si">Lugal-zage-si</a>, ruler of Umma, defeated Lagash, took Uruk as his capital and claimed rule over all <a class="enc-link" href="/encyclopedia#sumer">Sumer</a>, from the <a class="enc-link" href="/encyclopedia#persian-gulf">Persian Gulf</a> to the <a class="enc-link" href="/encyclopedia#mediterranean">Mediterranean</a>. <a class="enc-link" href="/encyclopedia#sargon-of-akkad">Sargon of Akkad</a> defeated him, led him in a neck-stock to the temple of Enlil at <a class="enc-link" href="/encyclopedia#nippur">Nippur</a> and tore down Uruk’s walls. Uruk joined the great southern revolt against <a class="enc-link" href="/encyclopedia#naram-sin">Naram-Sin</a> under a king named Amar-girid and was crushed. Its last military triumph came when Utu-hengal defeated the Gutian king Tirigan, c. 2119 BCE, and the city fell to Rim-Sin of <a class="enc-link" href="/encyclopedia#larsa">Larsa</a>, c. 1802 BCE.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#sumerian-king-list"><img src="/images/encyclopedia/sumerian-king-list.jpg" alt="Sumerian King List" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#sumerian-king-list">Sumerian King List</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Weld-Blundell_Prism_with_transcription_by_Stephen_Herbert_Langdon_(1876-1937).jpg" target="_blank" rel="noopener">Photograph: unknown&amp;gt; Transcription: Stephen Herbert Langdon (1876-1937), Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>How <a class="enc-link" href="/encyclopedia#uruk">Uruk</a> was governed in the fourth millennium is uncertain. Cylinder seals, reliefs and the Warka Vase repeatedly show a bearded man in a net skirt who leads offerings, hunts lions and dominates prisoners; scholars often call him the priest-king and link him to the title <em>en</em>, a ruler with a sacred role towards <a class="enc-link" href="/encyclopedia#inanna">Inanna</a>. The temple households of Eanna clearly managed land, labour and stores on a large scale, and early lists of officials and professions suggest an elaborate hierarchy. In the <a class="enc-link" href="/encyclopedia#early-dynastic-period">Early Dynastic period</a> Uruk’s rulers used the title <em>lugal</em>, king, and the <a class="enc-link" href="/encyclopedia#sumerian-king-list">Sumerian King List</a> names a <a class="enc-link" href="/encyclopedia#old-babylonian-empire">First Dynasty</a> of Uruk including Meskiaggasher, Enmerkar, Lugalbanda and Gilgamesh, who may have lived around 2700 BCE, though none of these early kings is attested in contemporary inscriptions. The poem of Gilgamesh and Aga describes the king consulting an assembly of elders and one of young men before war, which some historians take as evidence for collective institutions alongside the king. Under the <a class="enc-link" href="/encyclopedia#akkadian-empire">Akkadian Empire</a> and later the <a class="enc-link" href="/encyclopedia#third-dynasty-of-ur">Third Dynasty of Ur</a>, Uruk was ruled by governors. In the early second millennium an Amorite dynasty founded by Sin-kashid, c. 1865 BCE, governed Uruk again as an independent kingdom, building a large palace in the city.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#epic-of-gilgamesh"><img src="/images/encyclopedia/epic-of-gilgamesh.jpg" alt="Epic of Gilgamesh" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#epic-of-gilgamesh">Epic of Gilgamesh</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:British_Museum_Flood_Tablet.jpg" target="_blank" rel="noopener">CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#uruk">Uruk</a>’s influence is out of all proportion to the size of its territory. It is the best candidate for the world’s first true city, and the institutions developed there, including large-scale administration, standardised rations, cylinder seals and above all writing, laid foundations for all later Mesopotamian civilisation. Proto-<a class="enc-link" href="/encyclopedia#cuneiform">cuneiform</a> developed into the cuneiform script used for some three thousand years to write Sumerian, Akkadian, Hittite and other languages. Uruk-style buildings, pottery and seals spread across a wide area from south-eastern <a class="enc-link" href="/encyclopedia#anatolia">Anatolia</a> to western <a class="enc-link" href="/encyclopedia#iran">Iran</a>, the first time one culture’s forms were carried so far across the <a class="enc-link" href="/encyclopedia#near-east">Near East</a>. The city also held a central place in Mesopotamian memory. The kings of the <a class="enc-link" href="/encyclopedia#third-dynasty-of-ur">Third Dynasty of Ur</a> claimed kinship with Gilgamesh, and the <a class="enc-link" href="/encyclopedia#epic-of-gilgamesh">Epic of Gilgamesh</a>, in its Standard Babylonian version attributed to the scholar Sin-leqi-unninni, begins and ends with praise of Uruk’s walls. Through the epic Uruk has become familiar to modern readers. The city remained a major religious centre for two thousand years after it lost independence; in Seleucid times priests and astronomers there were among the last to write in cuneiform. German excavations since 1912 have made it the type site of the period that bears its name.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia#sargon-of-akkad"><img src="/images/encyclopedia/sargon-of-akkad.jpg" alt="Sargon of Akkad" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia#sargon-of-akkad">Sargon of Akkad</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Sargon_of_Akkad_on_his_victory_stele.jpg" target="_blank" rel="noopener">ALFGRN, CC BY-SA 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia#uruk">Uruk</a>’s political decline was gradual and was punctuated by revivals. After the Late Uruk period its outposts in <a class="enc-link" href="/encyclopedia#syria">Syria</a> and <a class="enc-link" href="/encyclopedia#iran">Iran</a> were abandoned around 3100 BCE, and in the third millennium it became one city-state among many, eclipsed in turn by <a class="enc-link" href="/encyclopedia#kish">Kish</a>, <a class="enc-link" href="/encyclopedia#lagash">Lagash</a> and <a class="enc-link" href="/encyclopedia#ur">Ur</a>. <a class="enc-link" href="/encyclopedia#lugal-zage-si">Lugal-zage-si</a>’s hegemony ended with <a class="enc-link" href="/encyclopedia#sargon-of-akkad">Sargon</a>’s conquest, and under the <a class="enc-link" href="/encyclopedia#akkadian-empire">Akkadian Empire</a> Uruk was subject to <a class="enc-link" href="/encyclopedia#akkad">Akkad</a>. After Utu-hengal expelled the <a class="enc-link" href="/encyclopedia#gutians">Gutians</a>, power passed almost at once to <a class="enc-link" href="/encyclopedia#ur-nammu">Ur-Nammu</a> of Ur, probably his brother or a governor he had appointed, who founded the <a class="enc-link" href="/encyclopedia#third-dynasty-of-ur">Third Dynasty of Ur</a>; Uruk was honoured as a cult centre but governed from Ur. When that empire collapsed around 2004 BCE, Uruk came under the kings of <a class="enc-link" href="/encyclopedia#isin">Isin</a> and then <a class="enc-link" href="/encyclopedia#larsa">Larsa</a> before Sin-kashid restored its independence. That last kingdom was small, and its king Irdanene was defeated by Rim-Sin of Larsa, who took the city, c. 1802 BCE, ending Uruk as an independent state. Uruk joined the revolt against <a class="enc-link" href="/encyclopedia#samsu-iluna">Samsu-iluna</a> of <a class="enc-link" href="/encyclopedia#babylon">Babylon</a> and suffered decline in the later eighteenth century, yet its temples were later restored and it remained a religious and scholarly centre under the Neo-Babylonian, Achaemenid, Seleucid and Parthian empires. The site was finally abandoned around the seventh century CE.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em><a class="enc-link" href="/encyclopedia#uruk">Uruk</a> was the first great city of history, where the administration of temples and workshops produced some of the earliest known writing around 3300 BCE; its culture spread across the <a class="enc-link" href="/encyclopedia#near-east">Near East</a>, its kings, real and legendary, gave <a class="enc-link" href="/encyclopedia#mesopotamia">Mesopotamia</a> the figure of Gilgamesh, and its temples endured for three thousand years.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Liverani, M. (2006) Uruk: The First City. Edited and translated by Z. Bahrani and M. Van De Mieroop. London: Equinox.</li>
+        <li>Algaze, G. (1993) The Uruk World System: The Dynamics of Expansion of Early Mesopotamian Civilization. Chicago: University of Chicago Press.</li>
+        <li>Nissen, H.J., Damerow, P. and Englund, R.K. (1993) Archaic Bookkeeping: Early Writing and Techniques of Economic Administration in the Ancient Near East. Chicago: University of Chicago Press.</li>
+        <li>Postgate, J.N. (1992) Early Mesopotamia: Society and Economy at the Dawn of History. London: Routledge.</li>
+        <li>Van De Mieroop, M. (2016) A History of the Ancient Near East, ca. 3000–323 BC. 3rd edn. Chichester: Wiley-Blackwell.</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="uruk"></div>
+      <a class="mini-connections-more" href="/connections#uruk">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/ebla"><img src="/logos/Ebla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ebla</span><span class="related-card-dates">3000 BCE – 1600 BCE</span></a><a class="related-card" href="/empire/mari"><img src="/logos/Mari.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mari</span><span class="related-card-dates">2900 BCE – 1761 BCE</span></a><a class="related-card" href="/empire/elamite-confederation"><img src="/logos/Elamite%20Confederation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Elamite Confederation</span><span class="related-card-dates">2700 BCE – 539 BCE</span></a><a class="related-card" href="/empire/byblos"><img src="/logos/Byblos.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byblos</span><span class="related-card-dates">2600 BCE – 332 BCE</span></a></div>
+      <div class="related-prevnext"><span></span><a class="related-card" href="/empire/ebla"><span class="related-card-label">Later →</span><img src="/logos/Ebla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ebla</span><span class="related-card-dates">3000 BCE – 1600 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
+<script>
+(function(){
+  var name="Uruk",slug="uruk",url="https://the-epoch-institute.org/empire/uruk";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Uruk on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/uruk #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/uruk"),"_blank");});
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Uruk",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

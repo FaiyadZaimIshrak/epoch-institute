@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/maratha-empire"><img src="/logos/Maratha%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Maratha Empire</span><span class="related-card-dates">1674 CE – 1818 CE</span></a><a class="related-card" href="/empire/majapahit-empire"><img src="/logos/Majapahit%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Majapahit Empire</span><span class="related-card-dates">1293 CE – 1527 CE</span></a><a class="related-card" href="/empire/khmer-empire"><img src="/logos/Khmer%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khmer Empire</span><span class="related-card-dates">802 CE – 1431 CE</span></a><a class="related-card" href="/empire/srivijaya-empire"><img src="/logos/Srivijaya%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Srivijaya Empire</span><span class="related-card-dates">650 CE – 1377 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/zand-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Zand%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Zand Empire</span><span class="related-card-dates">1747 CE – 1794 CE</span></a><a class="related-card" href="/empire/sokoto-caliphate"><span class="related-card-label">Later →</span><img src="/logos/Sokoto%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sokoto Caliphate</span><span class="related-card-dates">1804 CE – 1903 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/udaipur-state"><img src="/logos/Udaipur%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Udaipur State</span><span class="related-card-dates">728 CE – 1949 CE</span></a><a class="related-card" href="/empire/brunei-sultanate"><img src="/logos/Brunei%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Brunei Sultanate</span><span class="related-card-dates">1368 CE – 2025 CE</span></a><a class="related-card" href="/empire/sulu-sultanate"><img src="/logos/Sulu%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sulu Sultanate</span><span class="related-card-dates">1405 CE – 1915 CE</span></a><a class="related-card" href="/empire/aceh-sultanate"><img src="/logos/Aceh%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aceh Sultanate</span><span class="related-card-dates">1496 CE – 1903 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/cape-colony"><span class="related-card-label">← Earlier</span><img src="/logos/Cape%20Colony.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cape Colony</span><span class="related-card-dates">1795 CE – 1910 CE</span></a><a class="related-card" href="/empire/dutch-east-indies"><span class="related-card-label">Later →</span><img src="/logos/Dutch%20East%20Indies.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dutch East Indies</span><span class="related-card-dates">1800 CE – 1949 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/aztec-empire"><img src="/logos/Aztec%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aztec Empire</span><span class="related-card-dates">1325 CE – 1521 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/sokoto-caliphate"><span class="related-card-label">← Earlier</span><img src="/logos/Sokoto%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sokoto Caliphate</span><span class="related-card-dates">1804 CE – 1903 CE</span></a><a class="related-card" href="/empire/italian-empire"><span class="related-card-label">Later →</span><img src="/logos/Italian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Italian Empire</span><span class="related-card-dates">1861 CE – 1943 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/iroquois-confederacy"><img src="/logos/Iroquois%20Confederacy.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Iroquois Confederacy</span><span class="related-card-dates">1450 CE – 2025 CE</span></a><a class="related-card" href="/empire/suriname"><img src="/logos/Suriname.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Suriname</span><span class="related-card-dates">1667 CE – 2025 CE</span></a><a class="related-card" href="/empire/united-states"><img src="/logos/United%20States.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">United States</span><span class="related-card-dates">1776 CE – 2025 CE</span></a><a class="related-card" href="/empire/republic-of-chile"><img src="/logos/Republic%20of%20Chile.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Chile</span><span class="related-card-dates">1818 CE – 2025 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/republic-of-peru"><span class="related-card-label">← Earlier</span><img src="/logos/Republic%20of%20Peru.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Peru</span><span class="related-card-dates">1821 CE – 2025 CE</span></a><a class="related-card" href="/empire/federal-republic-of-central-america"><span class="related-card-label">Later →</span><img src="/logos/Federal%20Republic%20of%20Central%20America.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Federal Republic of Central America</span><span class="related-card-dates">1823 CE – 1841 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

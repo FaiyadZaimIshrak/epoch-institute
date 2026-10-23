@@ -56,7 +56,7 @@
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1804 CE – 1903 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val">Sokoto</span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#usman-dan-fodio">Usman dan Fodio</a></span></div>
-          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#hausa">Hausa</a> kingdoms</span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/hausa-kingdoms">Hausa kingdoms</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#northern-nigeria-protectorate">Protectorate of Northern Nigeria</a></span></div>
         </div>
         <p class="empire-meta">7 min read · Last reviewed October 2026</p>
@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/ethiopian-empire"><img src="/logos/Ethiopian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ethiopian Empire</span><span class="related-card-dates">1270 CE – 1974 CE</span></a><a class="related-card" href="/empire/kongo-empire"><img src="/logos/Kongo%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kongo Empire</span><span class="related-card-dates">1390 CE – 1914 CE</span></a><a class="related-card" href="/empire/darfur-sultanate"><img src="/logos/Darfur%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Darfur Sultanate</span><span class="related-card-dates">1600 CE – 1916 CE</span></a><a class="related-card" href="/empire/wadai-empire"><img src="/logos/Wadai%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Wadai Empire</span><span class="related-card-dates">1611 CE – 1912 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/sikh-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Sikh%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sikh Empire</span><span class="related-card-dates">1799 CE – 1849 CE</span></a><a class="related-card" href="/empire/brazilian-empire"><span class="related-card-label">Later →</span><img src="/logos/Brazilian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Brazilian Empire</span><span class="related-card-dates">1822 CE – 1889 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/austrian-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Austrian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Austrian Empire</span><span class="related-card-dates">1804 CE – 1867 CE</span></a><a class="related-card" href="/empire/grand-duchy-of-hesse"><span class="related-card-label">Later →</span><img src="/logos/Grand%20Duchy%20of%20Hesse.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Grand Duchy of Hesse</span><span class="related-card-dates">1806 CE – 1918 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

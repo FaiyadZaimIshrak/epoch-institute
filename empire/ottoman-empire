@@ -56,7 +56,7 @@
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1299 CE – 1922 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#constantinople">Constantinople</a>, <a class="enc-link" href="/encyclopedia#bursa">Bursa</a>, <a class="enc-link" href="/encyclopedia#edirne">Edirne</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#osman-i">Osman I</a></span></div>
-          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val">Sultanate of Rum, <a class="enc-link" href="/empire/byzantine-empire">Byzantine Empire</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/sultanate-of-rum">Sultanate of Rum</a>, <a class="enc-link" href="/empire/byzantine-empire">Byzantine Empire</a></span></div>
           <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#republic-of-turkey">Republic of Turkey</a></span></div>
         </div>
         <p class="empire-meta">7 min read · Last reviewed October 2026</p>
@@ -134,8 +134,8 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/mughal-empire"><img src="/logos/Mughal%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mughal Empire</span><span class="related-card-dates">1526 CE – 1857 CE</span></a><a class="related-card" href="/empire/safavid-empire"><img src="/logos/Safavid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Safavid Empire</span><span class="related-card-dates">1501 CE – 1736 CE</span></a><a class="related-card" href="/empire/delhi-sultanate"><img src="/logos/Delhi%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Delhi Sultanate</span><span class="related-card-dates">1206 CE – 1526 CE</span></a><a class="related-card" href="/empire/abbasid-caliphate"><img src="/logos/Abbasid%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Abbasid Caliphate</span><span class="related-card-dates">750 CE – 1517 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/kingdom-of-imereti"><img src="/logos/Kingdom%20of%20Imereti.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Imereti</span><span class="related-card-dates">1260 CE – 1810 CE</span></a><a class="related-card" href="/empire/circassia"><img src="/logos/Circassia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Circassia</span><span class="related-card-dates">1400 CE – 1864 CE</span></a><a class="related-card" href="/empire/mughal-empire"><img src="/logos/Mughal%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mughal Empire</span><span class="related-card-dates">1526 CE – 1857 CE</span></a><a class="related-card" href="/empire/shirvanshah-state"><img src="/logos/Shirvanshah%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shirvanshah State</span><span class="related-card-dates">861 CE – 1538 CE</span></a></div>
       <div class="related-prevnext"><a class="related-card" href="/empire/majapahit-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Majapahit%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Majapahit Empire</span><span class="related-card-dates">1293 CE – 1527 CE</span></a><a class="related-card" href="/empire/jolof-empire"><span class="related-card-label">Later →</span><img src="/logos/Jolof%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Jolof Empire</span><span class="related-card-dates">1300 CE – 1549 CE</span></a></div>
     </section>
 
@@ -151,10 +151,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

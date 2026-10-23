@@ -55,7 +55,7 @@
           <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">389 yrs</span></div>
           <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1500 CE – 1889 CE</span></div>
           <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#kalala-ilunga">Kalala Ilunga</a> (traditionally)</span></div>
-          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia#congo-free-state">Congo Free State</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/empire/congo-free-state">Congo Free State</a></span></div>
         </div>
         <p class="empire-meta">4 min read · Last reviewed October 2026</p>
       </div>
@@ -129,9 +129,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/kanem-bornu-empire"><img src="/logos/Kanem-Bornu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kanem-Bornu Empire</span><span class="related-card-dates">700 CE – 1893 CE</span></a><a class="related-card" href="/empire/ethiopian-empire"><img src="/logos/Ethiopian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ethiopian Empire</span><span class="related-card-dates">1270 CE – 1974 CE</span></a><a class="related-card" href="/empire/benin-empire"><img src="/logos/Benin%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Benin Empire</span><span class="related-card-dates">1180 CE – 1897 CE</span></a><a class="related-card" href="/empire/oyo-empire"><img src="/logos/Oyo%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Oyo Empire</span><span class="related-card-dates">1300 CE – 1896 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/spanish-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Spanish%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Spanish Empire</span><span class="related-card-dates">1492 CE – 1898 CE</span></a><a class="related-card" href="/empire/safavid-empire"><span class="related-card-label">Later →</span><img src="/logos/Safavid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Safavid Empire</span><span class="related-card-dates">1501 CE – 1736 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/kingdom-of-rwanda"><span class="related-card-label">← Earlier</span><img src="/logos/Kingdom%20of%20Rwanda.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Rwanda</span><span class="related-card-dates">1500 CE – 1961 CE</span></a><a class="related-card" href="/empire/safavid-empire"><span class="related-card-label">Later →</span><img src="/logos/Safavid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Safavid Empire</span><span class="related-card-dates">1501 CE – 1736 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -146,10 +146,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){

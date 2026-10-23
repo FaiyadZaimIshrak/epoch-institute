@@ -133,9 +133,9 @@
     </section>
 
     <section class="related-empires" aria-labelledby="related-title">
-      <p class="profile-references-title" id="related-title">Related empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/kanem-bornu-empire"><img src="/logos/Kanem-Bornu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kanem-Bornu Empire</span><span class="related-card-dates">700 CE – 1893 CE</span></a><a class="related-card" href="/empire/benin-empire"><img src="/logos/Benin%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Benin Empire</span><span class="related-card-dates">1180 CE – 1897 CE</span></a><a class="related-card" href="/empire/ethiopian-empire"><img src="/logos/Ethiopian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ethiopian Empire</span><span class="related-card-dates">1270 CE – 1974 CE</span></a><a class="related-card" href="/empire/oyo-empire"><img src="/logos/Oyo%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Oyo Empire</span><span class="related-card-dates">1300 CE – 1896 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/chagatai-empire"><span class="related-card-label">← Earlier</span><img src="/logos/Chagatai%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chagatai Empire</span><span class="related-card-dates">1225 CE – 1500 CE</span></a><a class="related-card" href="/empire/mamluk-sultanate"><span class="related-card-label">Later →</span><img src="/logos/Mamluk%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mamluk Sultanate</span><span class="related-card-dates">1250 CE – 1517 CE</span></a></div>
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/kanem-bornu-empire"><img src="/logos/Kanem-Bornu%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kanem-Bornu Empire</span><span class="related-card-dates">700 CE – 1893 CE</span></a><a class="related-card" href="/empire/benin-empire"><img src="/logos/Benin%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Benin Empire</span><span class="related-card-dates">1180 CE – 1897 CE</span></a><a class="related-card" href="/empire/hausa-kingdoms"><img src="/logos/Hausa%20kingdoms.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hausa kingdoms</span><span class="related-card-dates">1000 CE – 1808 CE</span></a><a class="related-card" href="/empire/mombasa"><img src="/logos/Mombasa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mombasa</span><span class="related-card-dates">1100 CE – 1593 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/emirate-of-granada"><span class="related-card-label">← Earlier</span><img src="/logos/Emirate%20of%20Granada.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Emirate of Granada</span><span class="related-card-dates">1232 CE – 1492 CE</span></a><a class="related-card" href="/empire/grand-duchy-of-lithuania"><span class="related-card-label">Later →</span><img src="/logos/Grand%20Duchy%20of%20Lithuania.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Grand Duchy of Lithuania</span><span class="related-card-dates">1236 CE – 1795 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -150,10 +150,10 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=5"></script>
-<script src="/shared-nav.js?v=15"></script>
-<script src="/epoch-stats.js?v=2"></script>
-<script src="/connections-map.js?v=9" defer></script>
+<script src="/shared-data.js?v=6"></script>
+<script src="/shared-nav.js?v=16"></script>
+<script src="/epoch-stats.js?v=3"></script>
+<script src="/connections-map.js?v=10" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))return;sec.hidden=false;ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});sec.hidden=false;io.observe(sec);ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id))sec.hidden=true;});});</script>
 <script>
 (function(){
