@@ -1,20 +1,18 @@
 ---
+# Copies the site to public_html. rsync writes every file under a temporary name and renames it, so a visitor never
+# gets a half-copied file (cp overwrites in place: a page opened mid-deploy could get half of shared.css and keep it
+# in its cache); it also copies only files that changed. Each line falls back to cp if rsync fails or is missing.
 deployment:
   tasks:
     - export DEPLOYPATH=/home/theeiorh/public_html/
-    - /bin/cp -R *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH
-    - /bin/cp *.txt *.xml *.svg *.png *.ico $DEPLOYPATH 2>/dev/null; true
-    - /bin/cp index about research research-series profiles community contributors dataset explorer paths connections $DEPLOYPATH
+    - rsync -a *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH || /bin/cp -R *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH
+    - (rsync -a *.txt *.xml *.svg *.png *.ico $DEPLOYPATH || /bin/cp *.txt *.xml *.svg *.png *.ico $DEPLOYPATH) 2>/dev/null; true
+    - rsync -a index about research research-series profiles community contributors dataset explorer paths connections $DEPLOYPATH || /bin/cp index about research research-series profiles community contributors dataset explorer paths connections $DEPLOYPATH
     - for d in encyclopedia state today-in-history; do [ -f "${DEPLOYPATH}$d" ] && /bin/rm -f "${DEPLOYPATH}$d"; /bin/mkdir -p "${DEPLOYPATH}$d"; if command -v rsync >/dev/null 2>&1; then rsync -a --delete "$d/" "${DEPLOYPATH}$d/"; else /bin/cp -R "$d/." "${DEPLOYPATH}$d/"; fi; done; true
-    - /bin/mkdir -p ${DEPLOYPATH}sitemaps; /bin/cp sitemaps/*.xml ${DEPLOYPATH}sitemaps/ 2>/dev/null; true
-    - /bin/mkdir -p ${DEPLOYPATH}fonts; /bin/cp fonts/* ${DEPLOYPATH}fonts/ 2>/dev/null; true
-    - /bin/mkdir -p ${DEPLOYPATH}data; /bin/cp data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json ${DEPLOYPATH}data/ 2>/dev/null; true
-    - /bin/cp -R empire $DEPLOYPATH
-    - /bin/mkdir -p ${DEPLOYPATH}data/enc-preview; /bin/cp data/enc-preview/*.json ${DEPLOYPATH}data/enc-preview/ 2>/dev/null; true
-    - /bin/mkdir -p ${DEPLOYPATH}data/states; /bin/cp data/states/*.json ${DEPLOYPATH}data/states/ 2>/dev/null; true
-    - for d in culture ideology movement; do [ -d "$d" ] && /bin/cp -R "$d" $DEPLOYPATH; done; true
-    - /bin/cp -R logos $DEPLOYPATH
-    - /bin/mkdir -p ${DEPLOYPATH}images; /bin/cp -R images/. ${DEPLOYPATH}images/ 2>/dev/null; true
+    - rsync -a sitemaps fonts $DEPLOYPATH || /bin/cp -R sitemaps fonts $DEPLOYPATH
+    - /bin/mkdir -p ${DEPLOYPATH}data; rsync -a data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json data/enc-preview data/states ${DEPLOYPATH}data/ || /bin/cp -R data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json data/enc-preview data/states ${DEPLOYPATH}data/
+    - rsync -a empire logos images $DEPLOYPATH || /bin/cp -R empire logos images $DEPLOYPATH
+    - for d in culture ideology movement; do [ -d "$d" ] && (rsync -a "$d" $DEPLOYPATH || /bin/cp -R "$d" $DEPLOYPATH); done; true
     - /bin/rm -f ${DEPLOYPATH}index.html ${DEPLOYPATH}about.html ${DEPLOYPATH}research.html ${DEPLOYPATH}research-series.html ${DEPLOYPATH}profiles.html ${DEPLOYPATH}community.html ${DEPLOYPATH}contributors.html ${DEPLOYPATH}dataset.html ${DEPLOYPATH}explorer.html
     - /bin/rm -f ${DEPLOYPATH}empire/*.html
     - /bin/rm -f ${DEPLOYPATH}generator.html

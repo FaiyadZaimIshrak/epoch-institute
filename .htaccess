@@ -24,7 +24,8 @@ AddType font/woff2 .woff2
 </IfModule>
 
 # Caching. Scripts and styles are referenced with ?v=N (cache-buster), so they can be kept for a year; the shared
-# files that generated pages load without ?v= are kept for an hour (block below). HTML is always revalidated.
+# files that generated pages load without ?v= are kept for 10 minutes and then refreshed in the background (block
+# below). HTML is always revalidated.
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css                "access plus 1 month"
@@ -61,7 +62,7 @@ AddType font/woff2 .woff2
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000"
   <FilesMatch "^(shared\.css|shared-data\.js|shared-nav\.js|enc-page\.js)$">
-    Header set Cache-Control "public, max-age=3600"
+    Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
     Header unset Expires
   </FilesMatch>
 </IfModule>

@@ -28,8 +28,8 @@ data/history.json, data/international-days.json — Today in History data (built
 - favicon.svg / favicon.ico / apple-touch-icon.png / logo.png (Organization logo in the home page's JSON-LD)
 
 Caching (.htaccess): scripts a year, CSS a month, JSON a week, HTML always revalidated. shared.css, shared-data.js,
-shared-nav.js and enc-page.js are kept only an hour: the 394 profile pages and the ~37,800 generated pages load them
-WITHOUT `?v=`, so changing them needs no rebuild. Every other script tag carries a `?v=N` cache-buster: when you
+shared-nav.js and enc-page.js are kept only 10 minutes (then stale-while-revalidate): the 394 profile pages and the
+~37,800 generated pages load them WITHOUT `?v=`, so changing them needs no rebuild. Every other script tag carries a `?v=N` cache-buster: when you
 change such a file, bump its `?v=` on every page that loads it (hand-written pages also use `?v=` for the four shared
 files; bump those too). data/*.json are sent as text/javascript (data/.htaccess) because the server does not compress
 application/json.
@@ -45,8 +45,10 @@ which copies files to /home/theeiorh/public_html/. The workflow needs the reposi
 CPANEL_API_TOKEN and CPANEL_REPO_PATH; until they are set every run stops at "Check secrets" and the site is deployed
 by hand: cPanel → Git Version Control → Update from Remote, then Deploy HEAD Commit.
 New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, *.txt, *.xml, *.svg, *.png, *.ico)
-or they won't be deployed. encyclopedia/, state/ and today-in-history/ are copied with rsync --delete (cp fallback),
-so pages removed from the repo also disappear from the server.
+or they won't be deployed. Every copy uses rsync -a (cp fallback): rsync writes to a temporary file and renames it,
+so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
+the broken copy in its cache - Oct 2026), and only changed files are copied. encyclopedia/, state/ and
+today-in-history/ use rsync --delete, so pages removed from the repo also disappear from the server.
 
 ## Indexable reference pages (SEO)
 scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-8 BOM) writes from the data:
