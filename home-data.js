@@ -1126,4 +1126,4 @@ var HOME_QUIZ = {profiles: {
     {slug:"las-meninas",name:"Las Meninas",aka:[],img:"/images/encyclopedia/las-meninas.jpg",clues:["A work or monument · 1656","It appears in the profile of the Habsburg Spain.","████ ████ is a painting by Diego Velázquez, completed in 1656 and now in the Prado in Madrid.","It shows the Infanta Margarita Teresa with her maids of honour and attendants in the painter's studio, with Velázquez himself at his easel and the king and queen reflected in a mirror."]}
   ]
 }};
-var HOME_COUNTS ={entries:31955,images:21801};
+var HOME_COUNTS ={entries:31964,images:21801};

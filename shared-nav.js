@@ -168,7 +168,7 @@ function siteSearch(query) {
   out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
   return out.slice(0, 12);
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=5';   // also loaded by quiz.js for answer suggestions
+var SEARCH_INDEX_SRC = '/search-index.js?v=6';   // also loaded by quiz.js for answer suggestions
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=1';   // the 394 profiles, for pages without shared-data.js
 function initSiteSearch() {
   var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
@@ -319,7 +319,8 @@ function initNav(activePage) {
   const EXPLORE = [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
     ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
-    ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained']];
+    ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'],
+    ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']];
   const MORE = [['series', '/research-series', 'Research Series'], ['dataset', '/dataset', 'Open Data'], ['research', '/research', 'Research Hub'],
     ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'], ['', '/#newsletter-section', 'Newsletter'],
     ['about', '/about', 'About the Institute'], ['contributors', '/contributors', 'Write for Us'], ['contact', '/contact', 'Contact']];
@@ -411,6 +412,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/connections">Connections</a>
         <a class="footer-link" href="/paths/">Reading Paths</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
+        <a class="footer-link" href="/start">Find Your Way In</a>
         <a class="footer-link" href="/research-series">Research Series</a>
         <a class="footer-link" href="/dataset">Open Data</a>
       </div>

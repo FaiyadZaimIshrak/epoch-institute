@@ -916,10 +916,24 @@ function MonthCal([int]$mo, [string]$curKey) {
   foreach ($k in ($DAYS | Where-Object { [int]$_.Substring(0, 2) -eq $mo })) { $dn = [int]$k.Substring(3, 2); if ($k -eq $curKey) { [void]$sb.Append('<li><span aria-current="page">' + $dn + '</span></li>') } else { [void]$sb.Append('<li><a href="/today-in-history/' + (DaySlug $k) + '">' + $dn + '</a></li>') } }
   return $sb.Append('</ol></div>').ToString()
 }
+function EvImg($ev) {   # the event's picture: the first linked encyclopedia entry that has one
+  foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0]) -and $BY[[string]$lk[0]].img) { return , @([string]$BY[[string]$lk[0]].img, [string]$lk[0]) } }
+  return $null
+}
+function YearsAgo([double]$y) { [int]($YEAR - $y) }
+$TIHTHUMB = @{}   # day -> the hero event's picture, for the home page strip
 for ($di = 0; $di -lt $DAYS.Count; $di++) {
   $k = $DAYS[$di]; $evs = @($HIST[$k] | Sort-Object @{ e = { [double]$_['year'] } }); $lbl = DayLabel $k; $path = '/today-in-history/' + (DaySlug $k)
   $pk = $DAYS[($di - 1 + $DAYS.Count) % $DAYS.Count]; $nk = $DAYS[($di + 1) % $DAYS.Count]
   $crumb = Crumbs @(@('Home', '/'), @('Today in History', '/today-in-history/'), @($lbl, $null))
+  # the day's anniversary piece: the roundest centenary, else half-century, else quarter, else the oldest event
+  $hero = $null; $heroScore = -1
+  foreach ($ev in $evs) {
+    $ago = YearsAgo ([double]$ev['year']); if ($ago -le 0) { continue }
+    $sc = if ($ago % 100 -eq 0) { 300 } elseif ($ago % 50 -eq 0) { 200 } elseif ($ago % 25 -eq 0) { 100 } else { 0 }
+    if ((EvImg $ev)) { $sc += 10 }
+    if ($sc -gt $heroScore) { $heroScore = $sc; $hero = $ev }
+  }
   $sb = New-Object Text.StringBuilder(20000)
   [void]$sb.Append('<main id="main" class="day-page ref-page">' + "`n<div class=`"day-wrap`">`n" + $crumb[0] + "`n")
   [void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">' + $lbl + ' in history</h1><p class="ref-lede">' + $evs.Count + ' events that happened on ' + $lbl + ', from ' + (Hx ([string]$evs[0]['yearDisplay'])) + ' to ' + (Hx ([string]$evs[-1]['yearDisplay'])) + ".</p></header>`n")
@@ -930,16 +944,27 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
     $evTags = ''
     if ($ev['profile']) { $evTags += '<a class="tih-tag tih-tag-profile" href="' + (Hx ([string]$ev['profile'][1])) + '">' + (Hx ([string]$ev['profile'][0])) + '</a>' }
     foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0])) { $evTags += '<a class="tih-tag enc-link" href="/encyclopedia/' + $lk[0] + '">' + (Hx ([string]$lk[1])) + '</a>' } }
-    [void]$sb.Append('<li class="tih-event-card"><p class="tih-event-year">' + (Hx ([string]$ev['yearDisplay'])) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + (Hx ([string]$ev['description'])) + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</li>')
+    $ago = YearsAgo ([double]$ev['year'])
+    $isHero = ($hero -and [object]::ReferenceEquals($ev, $hero))
+    $im = EvImg $ev
+    if ($isHero -and $im) { $TIHTHUMB[$k] = $im[0] }
+    $thumb = if ($im) { '<a class="tih-event-thumb" href="/encyclopedia/' + $im[1] + '" tabindex="-1" aria-hidden="true"><img src="' + (Hx $im[0]) + '" alt="" loading="lazy" width="76" height="76"></a>' } else { '' }
+    [void]$sb.Append('<li class="tih-event-card' + $(if ($im) { ' tih-has-thumb' } else { '' }) + $(if ($isHero) { ' tih-event-hero' } else { '' }) + '">' + $(if ($isHero) { '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p>' } else { '' }) + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + (Hx ([string]$ev['yearDisplay'])) + $(if ($ago -gt 0) { ' <span class="tih-ago">' + $ago.ToString('N0', $INV) + ' years ago</span>' } else { '' }) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + (Hx ([string]$ev['description'])) + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</div></li>')
   }
   [void]$sb.Append("</ol>`n")
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring days"><a class="prev" rel="prev" href="/today-in-history/' + (DaySlug $pk) + '"><span class="lbl">&larr; Previous day</span><span class="nm">' + (DayLabel $pk) + '</span></a><a class="next" rel="next" href="/today-in-history/' + (DaySlug $nk) + '"><span class="lbl">Next day &rarr;</span><span class="nm">' + (DayLabel $nk) + "</span></a></nav>`n")
   [void]$sb.Append('<section class="day-cal-wrap" aria-label="Other days of ' + $MONTHS[[int]$k.Substring(0, 2) - 1] + '">' + (MonthCal ([int]$k.Substring(0, 2)) $k) + '<p><a class="enc-random-link" href="/today-in-history/">All days of the year &rarr;</a></p></section>' + "`n</div>`n</main>`n")
   $title = "What Happened on $lbl in History — The Epoch Institute"
   $desc = [EpochBuild.W]::Summary("On this day, $lbl" + ': ' + ((@($evs | Select-Object -First 3 | ForEach-Object { [string]$_['yearDisplay'] + ', ' + [string]$_['title'] })) -join '; ') + '.', 155)
-  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + '}'); nav = 'today'; body = $sb.ToString() })
+  $ogD = '/images/og/day-' + (DaySlug $k) + '.jpg'
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; img = $(if (Test-Path (Join-Path $Repo ($ogD.TrimStart('/') -replace '/', '\'))) { $ogD }); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + '}'); nav = 'today'; body = $sb.ToString() })
 }
-Say "day pages: $($DAYS.Count)"
+# the home page strip's picture of the day (hero event's image per day)
+$tihSb = New-Object Text.StringBuilder; [void]$tihSb.Append('{')
+$first = $true; foreach ($k in $DAYS) { if ($TIHTHUMB[$k]) { if (-not $first) { [void]$tihSb.Append(',') }; $first = $false; [void]$tihSb.Append("`n" + (Js $k) + ':' + (Js ([string]$TIHTHUMB[$k]))) } }
+[void]$tihSb.Append("`n}`n")
+if ([EpochBuild.W]::WriteIfChanged("$Repo\data\tih-thumbs.json", $tihSb.ToString())) { $NWRITE++ }
+Say "day pages: $($DAYS.Count), day pictures: $($TIHTHUMB.Count)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Profiles (shared-data.js EMPIRES, epoch-stats.js) and shared pieces for the country and century pages
@@ -1480,7 +1505,7 @@ foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts'
 }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

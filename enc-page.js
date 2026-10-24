@@ -2,7 +2,7 @@
 // days of Today in History; built by scripts/build-pages.ps1). Loaded without ?v= (cached for an hour), after
 // shared-data.js and shared-nav.js. IDX_V is set by the builder: the version of /encyclopedia/index-data.js.
 (function () {
-  var IDX_V = 'a163eb73e2';
+  var IDX_V = 'fc9c4f810b';
   if (typeof initNav === 'function') initNav(document.body.getAttribute('data-nav') || '');
 
   // today's date in citations ("Accessed 23 October 2026")
@@ -29,7 +29,7 @@
     var a = ev.target.closest('[data-random]'); if (!a) return;
     ev.preventDefault();
     if (a.getAttribute('data-random') === 'state') {
-      fetch('/data/polities.json?v=9').then(function (r) { return r.json(); }).then(function (d) {
+      fetch('/data/polities.json?v=10').then(function (r) { return r.json(); }).then(function (d) {
         var pool = d.nodes.filter(function (n) { return !n.p; });
         location.href = '/state/' + pool[Math.floor(Math.random() * pool.length)].id;
       }).catch(function () { location.href = a.href; });
@@ -46,7 +46,7 @@
     sec.hidden = false;
     var io = new IntersectionObserver(function (es) {
       if (!es[0].isIntersecting) return; io.disconnect();
-      loadScript('/connections-map.js?v=11').then(function () { return ConnectionsMap.load(); }).then(function () {
+      loadScript('/connections-map.js?v=12').then(function () { return ConnectionsMap.load(); }).then(function () {
         var id = map.getAttribute('data-id');
         if (!ConnectionsMap.degree(id)) { sec.hidden = true; return; }
         ConnectionsMap.render(map, id, { compact: true, onSelect: function (o) { var n = ConnectionsMap.get(o); location.href = n && n.p ? n.p : '/state/' + o; } });

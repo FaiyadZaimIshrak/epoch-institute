@@ -27,7 +27,7 @@
 <meta name="twitter:description" content="Five thousand years of states, empires and civilisations: profiles, an encyclopedia, an atlas, country histories and century pages.">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=39">
+<link rel="stylesheet" href="/shared.css?v=40">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -94,22 +94,25 @@
 <!-- /build:home-map -->
 </section>
 
-<!-- Ways in: the collections, with their sizes -->
-<section class="home-section" aria-labelledby="doors-title">
+<!-- First visit: the questionnaire invitation. Returning readers: continue where you left off. (Both client-side.) -->
+<div class="home-start-banner" id="home-start-banner" hidden>
+  <p><b>New here?</b> Four quick questions find the right way in for you.</p>
+  <a class="hero-cta" href="/start">Find your way in &rarr;</a>
+  <button type="button" class="home-banner-x" id="home-start-x" aria-label="Dismiss">&#10005;</button>
+</div>
+<section class="home-section" id="home-continue" aria-labelledby="continue-title" hidden>
   <div class="home-section-hd">
-    <h2 class="home-section-title" id="doors-title">Ways into history</h2>
-    <a class="home-section-more" href="/research">Everything we publish →</a>
+    <h2 class="home-section-title" id="continue-title">Continue where you left off</h2>
+    <button type="button" class="home-section-more home-continue-clear" id="home-continue-clear">Clear</button>
   </div>
-  <!-- build:home-doors -->
-<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">394 profiles</span><span class="door-t">Profiles</span><span class="door-d">In-depth histories of states and empires: how each rose, lived, fought, governed and fell, with key facts and timelines.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">31,955 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events, institutions and ideas, with 21,801 historical pictures.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,463 states</span><span class="door-t">States</span><span class="door-d">Every kingdom, principality, republic and chiefdom of the register, with its lineage and connections.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">The world in any year: slide through five thousand years and watch states appear and vanish.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">The history of each present-day country, told through the states that lay on its soil.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time: the great powers, key events, people and a map.</span></span></a></li><li><a class="door" href="/explorer"><span class="door-img"><img src="/images/encyclopedia/trajans-column.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">Power curves</span><span class="door-t">Empire Explorer</span><span class="door-d">Compare the rise and fall of nearly four hundred states and empires on one timeline.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">8 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes across profiles and entries, from the Silk Road to the steppe empires.</span></span></a></li></ul>
-<!-- /build:home-doors -->
+  <div class="home-continue-row" id="home-continue-row"></div>
 </section>
 
 <!-- Today in History -->
 <section class="home-section" aria-labelledby="tih-title">
   <div class="home-section-hd">
     <h2 class="home-section-title" id="tih-title">On This Day</h2>
-    <a class="home-section-more" id="tih-more" href="/today-in-history/">All of today’s events →</a>
+    <a class="home-section-more" id="tih-more" href="/today-in-history/">All of today&rsquo;s events &rarr;</a>
   </div>
   <div id="tih-strip" style="display:none;">
     <div class="tih-date-row">
@@ -117,6 +120,35 @@
     </div>
     <div class="tih-strip-cards" id="tih-strip-cards"></div>
   </div>
+</section>
+
+<!-- Daily quiz and the entry of the day -->
+<section class="home-section home-two" aria-label="Daily quiz and entry of the day">
+  <div class="home-col">
+    <div class="home-section-hd">
+      <h2 class="home-section-title" id="quiz-title">Daily Quiz</h2>
+      <span class="quiz-streak" id="quiz-streak"></span>
+    </div>
+    <div class="quiz quiz-compact" id="quiz"></div>
+  </div>
+  <div class="home-col">
+    <div class="home-section-hd">
+      <h2 class="home-section-title" id="enc-day-title">From the Encyclopedia</h2>
+      <a class="home-section-more" href="/encyclopedia/">Browse all entries &rarr;</a>
+    </div>
+    <div id="enc-day"></div>
+  </div>
+</section>
+
+<!-- Ways in: the collections, with their sizes -->
+<section class="home-section" aria-labelledby="doors-title">
+  <div class="home-section-hd">
+    <h2 class="home-section-title" id="doors-title">Ways into history</h2>
+    <a class="home-section-more" href="/research">Everything we publish →</a>
+  </div>
+  <!-- build:home-doors -->
+<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">394 profiles</span><span class="door-t">Profiles</span><span class="door-d">In-depth histories of states and empires: how each rose, lived, fought, governed and fell, with key facts and timelines.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">31,964 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events, institutions and ideas, with 21,801 historical pictures.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,468 states</span><span class="door-t">States</span><span class="door-d">Every kingdom, principality, republic and chiefdom of the register, with its lineage and connections.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">The world in any year: slide through five thousand years and watch states appear and vanish.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">The history of each present-day country, told through the states that lay on its soil.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time: the great powers, key events, people and a map.</span></span></a></li><li><a class="door" href="/explorer"><span class="door-img"><img src="/images/encyclopedia/trajans-column.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">Power curves</span><span class="door-t">Empire Explorer</span><span class="door-d">Compare the rise and fall of nearly four hundred states and empires on one timeline.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">16 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes across profiles and entries, from the Silk Road to the steppe empires.</span></span></a></li></ul>
+<!-- /build:home-doors -->
 </section>
 
 <!-- Featured profiles (rotate daily) and the profile filters -->
@@ -140,7 +172,7 @@
       <a class="home-section-more" href="/centuries/">All centuries →</a>
     </div>
     <!-- build:home-centuries -->
-<ol class="cen-bars cen-bars-home"><li><a href="/centuries/30th-century-bce" title="30th century BCE: 10 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">30th BC</span></a></li><li><a href="/centuries/29th-century-bce" title="29th century BCE: 9 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">29th BC</span></a></li><li><a href="/centuries/28th-century-bce" title="28th century BCE: 11 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">28th BC</span></a></li><li><a href="/centuries/27th-century-bce" title="27th century BCE: 16 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">27th BC</span></a></li><li><a href="/centuries/26th-century-bce" title="26th century BCE: 23 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">26th BC</span></a></li><li><a href="/centuries/25th-century-bce" title="25th century BCE: 25 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">25th BC</span></a></li><li><a href="/centuries/24th-century-bce" title="24th century BCE: 27 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">24th BC</span></a></li><li><a href="/centuries/23rd-century-bce" title="23rd century BCE: 22 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">23rd BC</span></a></li><li><a href="/centuries/22nd-century-bce" title="22nd century BCE: 27 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">22nd BC</span></a></li><li><a href="/centuries/21st-century-bce" title="21st century BCE: 33 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">21st BC</span></a></li><li><a href="/centuries/20th-century-bce" title="20th century BCE: 41 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">20th BC</span></a></li><li><a href="/centuries/19th-century-bce" title="19th century BCE: 53 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">19th BC</span></a></li><li><a href="/centuries/18th-century-bce" title="18th century BCE: 60 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">18th BC</span></a></li><li><a href="/centuries/17th-century-bce" title="17th century BCE: 51 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">17th BC</span></a></li><li><a href="/centuries/16th-century-bce" title="16th century BCE: 63 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">16th BC</span></a></li><li><a href="/centuries/15th-century-bce" title="15th century BCE: 64 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">15th BC</span></a></li><li><a href="/centuries/14th-century-bce" title="14th century BCE: 65 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">14th BC</span></a></li><li><a href="/centuries/13th-century-bce" title="13th century BCE: 60 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">13th BC</span></a></li><li><a href="/centuries/12th-century-bce" title="12th century BCE: 72 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">12th BC</span></a></li><li><a href="/centuries/11th-century-bce" title="11th century BCE: 117 states"><span class="cen-bar" style="height:7.0%"></span><span class="cen-lbl">11th BC</span></a></li><li><a href="/centuries/10th-century-bce" title="10th century BCE: 166 states"><span class="cen-bar" style="height:9.0%"></span><span class="cen-lbl">10th BC</span></a></li><li><a href="/centuries/9th-century-bce" title="9th century BCE: 211 states"><span class="cen-bar" style="height:12.0%"></span><span class="cen-lbl">9th BC</span></a></li><li><a href="/centuries/8th-century-bce" title="8th century BCE: 272 states"><span class="cen-bar" style="height:15.0%"></span><span class="cen-lbl">8th BC</span></a></li><li><a href="/centuries/7th-century-bce" title="7th century BCE: 325 states"><span class="cen-bar" style="height:18.0%"></span><span class="cen-lbl">7th BC</span></a></li><li><a href="/centuries/6th-century-bce" title="6th century BCE: 362 states"><span class="cen-bar" style="height:20.0%"></span><span class="cen-lbl">6th BC</span></a></li><li><a href="/centuries/5th-century-bce" title="5th century BCE: 393 states"><span class="cen-bar" style="height:22.0%"></span><span class="cen-lbl">5th BC</span></a></li><li><a href="/centuries/4th-century-bce" title="4th century BCE: 486 states"><span class="cen-bar" style="height:27.0%"></span><span class="cen-lbl">4th BC</span></a></li><li><a href="/centuries/3rd-century-bce" title="3rd century BCE: 472 states"><span class="cen-bar" style="height:27.0%"></span><span class="cen-lbl">3rd BC</span></a></li><li><a href="/centuries/2nd-century-bce" title="2nd century BCE: 399 states"><span class="cen-bar" style="height:23.0%"></span><span class="cen-lbl">2nd BC</span></a></li><li><a href="/centuries/1st-century-bce" title="1st century BCE: 320 states"><span class="cen-bar" style="height:18.0%"></span><span class="cen-lbl">1st BC</span></a></li><li><a href="/centuries/1st-century" title="1st century: 186 states"><span class="cen-bar" style="height:11.0%"></span><span class="cen-lbl">1st</span></a></li><li><a href="/centuries/2nd-century" title="2nd century: 180 states"><span class="cen-bar" style="height:10.0%"></span><span class="cen-lbl">2nd</span></a></li><li><a href="/centuries/3rd-century" title="3rd century: 205 states"><span class="cen-bar" style="height:12.0%"></span><span class="cen-lbl">3rd</span></a></li><li><a href="/centuries/4th-century" title="4th century: 193 states"><span class="cen-bar" style="height:11.0%"></span><span class="cen-lbl">4th</span></a></li><li><a href="/centuries/5th-century" title="5th century: 237 states"><span class="cen-bar" style="height:13.0%"></span><span class="cen-lbl">5th</span></a></li><li><a href="/centuries/6th-century" title="6th century: 266 states"><span class="cen-bar" style="height:15.0%"></span><span class="cen-lbl">6th</span></a></li><li><a href="/centuries/7th-century" title="7th century: 318 states"><span class="cen-bar" style="height:18.0%"></span><span class="cen-lbl">7th</span></a></li><li><a href="/centuries/8th-century" title="8th century: 358 states"><span class="cen-bar" style="height:20.0%"></span><span class="cen-lbl">8th</span></a></li><li><a href="/centuries/9th-century" title="9th century: 467 states"><span class="cen-bar" style="height:26.0%"></span><span class="cen-lbl">9th</span></a></li><li><a href="/centuries/10th-century" title="10th century: 541 states"><span class="cen-bar" style="height:31.0%"></span><span class="cen-lbl">10th</span></a></li><li><a href="/centuries/11th-century" title="11th century: 614 states"><span class="cen-bar" style="height:35.0%"></span><span class="cen-lbl">11th</span></a></li><li><a href="/centuries/12th-century" title="12th century: 775 states"><span class="cen-bar" style="height:44.0%"></span><span class="cen-lbl">12th</span></a></li><li><a href="/centuries/13th-century" title="13th century: 981 states"><span class="cen-bar" style="height:55.0%"></span><span class="cen-lbl">13th</span></a></li><li><a href="/centuries/14th-century" title="14th century: 1061 states"><span class="cen-bar" style="height:60.0%"></span><span class="cen-lbl">14th</span></a></li><li><a href="/centuries/15th-century" title="15th century: 1116 states"><span class="cen-bar" style="height:63.0%"></span><span class="cen-lbl">15th</span></a></li><li><a href="/centuries/16th-century" title="16th century: 1279 states"><span class="cen-bar" style="height:72.0%"></span><span class="cen-lbl">16th</span></a></li><li><a href="/centuries/17th-century" title="17th century: 1367 states"><span class="cen-bar" style="height:77.0%"></span><span class="cen-lbl">17th</span></a></li><li><a href="/centuries/18th-century" title="18th century: 1559 states"><span class="cen-bar" style="height:88.0%"></span><span class="cen-lbl">18th</span></a></li><li><a href="/centuries/19th-century" title="19th century: 1768 states"><span class="cen-bar" style="height:100.0%"></span><span class="cen-lbl">19th</span></a></li><li><a href="/centuries/20th-century" title="20th century: 1348 states"><span class="cen-bar" style="height:76.0%"></span><span class="cen-lbl">20th</span></a></li><li><a href="/centuries/21st-century" title="21st century: 191 states"><span class="cen-bar" style="height:11.0%"></span><span class="cen-lbl">21st</span></a></li></ol>
+<ol class="cen-bars cen-bars-home"><li><a href="/centuries/30th-century-bce" title="30th century BCE: 10 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">30th BC</span></a></li><li><a href="/centuries/29th-century-bce" title="29th century BCE: 9 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">29th BC</span></a></li><li><a href="/centuries/28th-century-bce" title="28th century BCE: 11 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">28th BC</span></a></li><li><a href="/centuries/27th-century-bce" title="27th century BCE: 16 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">27th BC</span></a></li><li><a href="/centuries/26th-century-bce" title="26th century BCE: 23 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">26th BC</span></a></li><li><a href="/centuries/25th-century-bce" title="25th century BCE: 25 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">25th BC</span></a></li><li><a href="/centuries/24th-century-bce" title="24th century BCE: 27 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">24th BC</span></a></li><li><a href="/centuries/23rd-century-bce" title="23rd century BCE: 22 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">23rd BC</span></a></li><li><a href="/centuries/22nd-century-bce" title="22nd century BCE: 27 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">22nd BC</span></a></li><li><a href="/centuries/21st-century-bce" title="21st century BCE: 33 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">21st BC</span></a></li><li><a href="/centuries/20th-century-bce" title="20th century BCE: 41 states"><span class="cen-bar" style="height:2.0%"></span><span class="cen-lbl">20th BC</span></a></li><li><a href="/centuries/19th-century-bce" title="19th century BCE: 53 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">19th BC</span></a></li><li><a href="/centuries/18th-century-bce" title="18th century BCE: 60 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">18th BC</span></a></li><li><a href="/centuries/17th-century-bce" title="17th century BCE: 51 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">17th BC</span></a></li><li><a href="/centuries/16th-century-bce" title="16th century BCE: 63 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">16th BC</span></a></li><li><a href="/centuries/15th-century-bce" title="15th century BCE: 64 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">15th BC</span></a></li><li><a href="/centuries/14th-century-bce" title="14th century BCE: 65 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">14th BC</span></a></li><li><a href="/centuries/13th-century-bce" title="13th century BCE: 60 states"><span class="cen-bar" style="height:3.0%"></span><span class="cen-lbl">13th BC</span></a></li><li><a href="/centuries/12th-century-bce" title="12th century BCE: 72 states"><span class="cen-bar" style="height:4.0%"></span><span class="cen-lbl">12th BC</span></a></li><li><a href="/centuries/11th-century-bce" title="11th century BCE: 117 states"><span class="cen-bar" style="height:7.0%"></span><span class="cen-lbl">11th BC</span></a></li><li><a href="/centuries/10th-century-bce" title="10th century BCE: 166 states"><span class="cen-bar" style="height:9.0%"></span><span class="cen-lbl">10th BC</span></a></li><li><a href="/centuries/9th-century-bce" title="9th century BCE: 211 states"><span class="cen-bar" style="height:12.0%"></span><span class="cen-lbl">9th BC</span></a></li><li><a href="/centuries/8th-century-bce" title="8th century BCE: 272 states"><span class="cen-bar" style="height:15.0%"></span><span class="cen-lbl">8th BC</span></a></li><li><a href="/centuries/7th-century-bce" title="7th century BCE: 325 states"><span class="cen-bar" style="height:18.0%"></span><span class="cen-lbl">7th BC</span></a></li><li><a href="/centuries/6th-century-bce" title="6th century BCE: 362 states"><span class="cen-bar" style="height:20.0%"></span><span class="cen-lbl">6th BC</span></a></li><li><a href="/centuries/5th-century-bce" title="5th century BCE: 393 states"><span class="cen-bar" style="height:22.0%"></span><span class="cen-lbl">5th BC</span></a></li><li><a href="/centuries/4th-century-bce" title="4th century BCE: 486 states"><span class="cen-bar" style="height:27.0%"></span><span class="cen-lbl">4th BC</span></a></li><li><a href="/centuries/3rd-century-bce" title="3rd century BCE: 472 states"><span class="cen-bar" style="height:27.0%"></span><span class="cen-lbl">3rd BC</span></a></li><li><a href="/centuries/2nd-century-bce" title="2nd century BCE: 399 states"><span class="cen-bar" style="height:23.0%"></span><span class="cen-lbl">2nd BC</span></a></li><li><a href="/centuries/1st-century-bce" title="1st century BCE: 320 states"><span class="cen-bar" style="height:18.0%"></span><span class="cen-lbl">1st BC</span></a></li><li><a href="/centuries/1st-century" title="1st century: 186 states"><span class="cen-bar" style="height:11.0%"></span><span class="cen-lbl">1st</span></a></li><li><a href="/centuries/2nd-century" title="2nd century: 180 states"><span class="cen-bar" style="height:10.0%"></span><span class="cen-lbl">2nd</span></a></li><li><a href="/centuries/3rd-century" title="3rd century: 205 states"><span class="cen-bar" style="height:12.0%"></span><span class="cen-lbl">3rd</span></a></li><li><a href="/centuries/4th-century" title="4th century: 193 states"><span class="cen-bar" style="height:11.0%"></span><span class="cen-lbl">4th</span></a></li><li><a href="/centuries/5th-century" title="5th century: 237 states"><span class="cen-bar" style="height:13.0%"></span><span class="cen-lbl">5th</span></a></li><li><a href="/centuries/6th-century" title="6th century: 266 states"><span class="cen-bar" style="height:15.0%"></span><span class="cen-lbl">6th</span></a></li><li><a href="/centuries/7th-century" title="7th century: 318 states"><span class="cen-bar" style="height:18.0%"></span><span class="cen-lbl">7th</span></a></li><li><a href="/centuries/8th-century" title="8th century: 358 states"><span class="cen-bar" style="height:20.0%"></span><span class="cen-lbl">8th</span></a></li><li><a href="/centuries/9th-century" title="9th century: 467 states"><span class="cen-bar" style="height:26.0%"></span><span class="cen-lbl">9th</span></a></li><li><a href="/centuries/10th-century" title="10th century: 541 states"><span class="cen-bar" style="height:31.0%"></span><span class="cen-lbl">10th</span></a></li><li><a href="/centuries/11th-century" title="11th century: 614 states"><span class="cen-bar" style="height:35.0%"></span><span class="cen-lbl">11th</span></a></li><li><a href="/centuries/12th-century" title="12th century: 775 states"><span class="cen-bar" style="height:44.0%"></span><span class="cen-lbl">12th</span></a></li><li><a href="/centuries/13th-century" title="13th century: 981 states"><span class="cen-bar" style="height:55.0%"></span><span class="cen-lbl">13th</span></a></li><li><a href="/centuries/14th-century" title="14th century: 1061 states"><span class="cen-bar" style="height:60.0%"></span><span class="cen-lbl">14th</span></a></li><li><a href="/centuries/15th-century" title="15th century: 1116 states"><span class="cen-bar" style="height:63.0%"></span><span class="cen-lbl">15th</span></a></li><li><a href="/centuries/16th-century" title="16th century: 1279 states"><span class="cen-bar" style="height:72.0%"></span><span class="cen-lbl">16th</span></a></li><li><a href="/centuries/17th-century" title="17th century: 1367 states"><span class="cen-bar" style="height:77.0%"></span><span class="cen-lbl">17th</span></a></li><li><a href="/centuries/18th-century" title="18th century: 1559 states"><span class="cen-bar" style="height:88.0%"></span><span class="cen-lbl">18th</span></a></li><li><a href="/centuries/19th-century" title="19th century: 1768 states"><span class="cen-bar" style="height:100.0%"></span><span class="cen-lbl">19th</span></a></li><li><a href="/centuries/20th-century" title="20th century: 1353 states"><span class="cen-bar" style="height:77.0%"></span><span class="cen-lbl">20th</span></a></li><li><a href="/centuries/21st-century" title="21st century: 196 states"><span class="cen-bar" style="height:11.0%"></span><span class="cen-lbl">21st</span></a></li></ol>
 <!-- /build:home-centuries -->
     <p class="home-note">Each bar is a century; its height, the number of states alive in it.</p>
   </div>
@@ -150,7 +182,7 @@
       <a class="home-section-more" href="/countries/">All countries →</a>
     </div>
     <!-- build:home-countries -->
-<ul class="cty-chips"><li><a href="/countries/india">India <span>522</span></a></li><li><a href="/countries/germany">Germany <span>421</span></a></li><li><a href="/countries/italy">Italy <span>268</span></a></li><li><a href="/countries/france">France <span>265</span></a></li><li><a href="/countries/china">China <span>261</span></a></li><li><a href="/countries/greece">Greece <span>196</span></a></li><li><a href="/countries/spain">Spain <span>191</span></a></li><li><a href="/countries/turkey">Turkey <span>188</span></a></li><li><a href="/countries/russia">Russia <span>160</span></a></li><li><a href="/countries/united-kingdom">United Kingdom <span>145</span></a></li><li><a href="/countries/united-states">United States <span>106</span></a></li><li><a href="/countries/indonesia">Indonesia <span>104</span></a></li><li><a href="/countries/iran">Iran <span>104</span></a></li><li><a href="/countries/poland">Poland <span>103</span></a></li><li><a href="/countries/syria">Syria <span>84</span></a></li><li><a href="/countries/mexico">Mexico <span>84</span></a></li><li><a href="/countries/japan">Japan <span>83</span></a></li><li><a href="/countries/ukraine">Ukraine <span>79</span></a></li><li><a class="cty-all" href="/countries/">All 190 countries &rarr;</a></li></ul>
+<ul class="cty-chips"><li><a href="/countries/india">India <span>522</span></a></li><li><a href="/countries/germany">Germany <span>421</span></a></li><li><a href="/countries/italy">Italy <span>268</span></a></li><li><a href="/countries/france">France <span>265</span></a></li><li><a href="/countries/china">China <span>261</span></a></li><li><a href="/countries/greece">Greece <span>196</span></a></li><li><a href="/countries/spain">Spain <span>191</span></a></li><li><a href="/countries/turkey">Turkey <span>188</span></a></li><li><a href="/countries/russia">Russia <span>160</span></a></li><li><a href="/countries/united-kingdom">United Kingdom <span>145</span></a></li><li><a href="/countries/united-states">United States <span>106</span></a></li><li><a href="/countries/indonesia">Indonesia <span>104</span></a></li><li><a href="/countries/iran">Iran <span>104</span></a></li><li><a href="/countries/poland">Poland <span>103</span></a></li><li><a href="/countries/syria">Syria <span>85</span></a></li><li><a href="/countries/mexico">Mexico <span>84</span></a></li><li><a href="/countries/japan">Japan <span>83</span></a></li><li><a href="/countries/ukraine">Ukraine <span>79</span></a></li><li><a class="cty-all" href="/countries/">All 190 countries &rarr;</a></li></ul>
 <!-- /build:home-countries -->
   </div>
 </section>
@@ -162,24 +194,6 @@
     <a class="home-section-more" href="/paths/">All reading paths →</a>
   </div>
   <div class="paths-grid home-paths" id="home-paths"></div>
-</section>
-
-<!-- Daily quiz and the entry of the day -->
-<section class="home-section home-two" aria-label="Daily quiz and entry of the day">
-  <div class="home-col">
-    <div class="home-section-hd">
-      <h2 class="home-section-title" id="quiz-title">Daily Quiz</h2>
-      <span class="quiz-streak" id="quiz-streak"></span>
-    </div>
-    <div class="quiz quiz-compact" id="quiz"></div>
-  </div>
-  <div class="home-col">
-    <div class="home-section-hd">
-      <h2 class="home-section-title" id="enc-day-title">From the Encyclopedia</h2>
-      <a class="home-section-more" href="/encyclopedia/">Browse all entries →</a>
-    </div>
-    <div id="enc-day"></div>
-  </div>
 </section>
 
 <!-- Announcements -->
@@ -222,9 +236,9 @@
 </div>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=24"></script>
-<script src="/home-data.js?v=9"></script>
-<script src="/reading-paths.js?v=1"></script>
+<script src="/shared-nav.js?v=25"></script>
+<script src="/home-data.js?v=10"></script>
+<script src="/reading-paths.js?v=2"></script>
 <script src="/quiz.js?v=1"></script>
 <script>
 initNav('home');
@@ -446,11 +460,12 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
     '</div>';
   }
 
-  function renderStrip(events, intlDay) {
+  function renderStrip(events, intlDay, pic) {
     if (!events.length && !intlDay) return;
     var strip   = document.getElementById('tih-strip');
     var dateEl  = document.getElementById('tih-strip-date');
     var cardsEl = document.getElementById('tih-strip-cards');
+    var daySlug = now.toLocaleDateString('en-GB', { month: 'long' }).toLowerCase() + '-' + now.getDate();
 
     var dow      = now.toLocaleDateString('en-GB', { weekday: 'long' });
     var fullDate = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -465,6 +480,7 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
     var selected = pool.slice(0, Math.min(count, pool.length));
 
     var html = '';
+    if (pic) html += '<a class="tih-strip-pic" href="/today-in-history/' + daySlug + '" aria-hidden="true" tabindex="-1"><img src="' + escHtml(pic) + '" alt="" loading="lazy"></a>';
     if (intlDay) html += buildPinnedCard(intlDay);
     var evMap = {};
     selected.forEach(function(ev, i) {
@@ -535,14 +551,53 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
 
   Promise.all([
     fetch('/data/history.json?v=2').then(function(r) { if (!r.ok) throw new Error(); return r.json(); }),
-    fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
+    fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; }),
+    fetch('/data/tih-thumbs.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
   ]).then(function(results) {
     var events  = results[0][key] || [];
     var intlDay = results[1][key] || null;
-    renderStrip(events, intlDay);
+    renderStrip(events, intlDay, results[2][key] || null);
   }).catch(function() {
     document.getElementById('tih-strip').style.display = 'none';
   });
+})();
+
+// ── First visit and returning readers: the /start invitation, and "continue where you left off" ──
+(function () {
+  function get(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } }
+  var recent = get('epoch-recent') || [];
+  if (Array.isArray(recent) && recent.length >= 2) {
+    var row = document.getElementById('home-continue-row');
+    row.innerHTML = recent.slice(0, 6).map(function (r) {
+      return '<a class="home-continue-card" href="' + escHtml(r.u) + '"><span class="hc-n">' + escHtml(r.n) + '</span><span class="hc-t">' + escHtml(r.t) + '</span></a>';
+    }).join('');
+    document.getElementById('home-continue').hidden = false;
+    document.getElementById('home-continue-clear').addEventListener('click', function () {
+      try { localStorage.removeItem('epoch-recent'); } catch (e) {}
+      document.getElementById('home-continue').hidden = true;
+    });
+  } else {
+    var seen = null, typed = null;
+    try { seen = localStorage.getItem('epoch-start-seen'); typed = localStorage.getItem('epoch-reader-type'); } catch (e) {}
+    if (!seen && !typed) {
+      var b = document.getElementById('home-start-banner');
+      b.hidden = false;
+      document.getElementById('home-start-x').addEventListener('click', function () {
+        try { localStorage.setItem('epoch-start-seen', '1'); } catch (e) {}
+        b.hidden = true;
+      });
+    }
+  }
+})();
+
+// ── A gentle reveal as the sections scroll in (none under reduced motion) ──
+(function () {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.home-section');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (el) { el.classList.add('home-reveal'); io.observe(el); });
 })();
 
 // ── The hero globe: the world of 1000 CE, turning slowly (the flat strip stays as the instant fallback) ──
