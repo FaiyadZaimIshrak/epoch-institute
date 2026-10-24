@@ -12,7 +12,11 @@ var ConnectionsMap = (function () {
     'predecessor-of': ['preceded', 'was preceded by'], 'conquered-by': ['was conquered by', 'conquered'],
     'split-from': ['split from', 'lost'], 'merged-into': ['merged into', 'absorbed']
   };
-  var STYLE = { 'successor-of': 'seq', 'predecessor-of': 'seq', 'vassal-of': 'loose', 'tributary-to': 'loose', 'protectorate-of': 'loose', 'personal-union-with': 'loose' };
+  // what a direct line means: rule (thick glowing gold), a looser tie (slimmer gold), lineage through time (silver)
+  var KIND = { 'part-of': 'strong', 'province-of': 'strong', 'colony-of': 'strong', 'conquered-by': 'strong',
+    'vassal-of': 'light', 'tributary-to': 'light', 'protectorate-of': 'light', 'personal-union-with': 'light',
+    'successor-of': 'lineage', 'predecessor-of': 'lineage', 'merged-into': 'lineage', 'split-from': 'lineage' };
+  function seq(l) { return l.r === 'successor-of' || l.r === 'predecessor-of'; }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function yr(y) { if (y == null) return '?'; y = Math.round(y); return y < 0 ? (-y) + ' BCE' : y + ' CE'; }
   function span(n) { return yr(n.s) + ' – ' + (n.e == null ? 'present' : yr(n.e)); }
@@ -40,7 +44,7 @@ var ConnectionsMap = (function () {
     ADJ[id].forEach(function (l) { var o = other(l, id); if (!d1[o]) { d1[o] = l; all1.push(o); } });
     var max1 = opts.compact ? 14 : (opts.narrow ? 12 : 30), order1 = all1, groups = [];
     if (opts.expand || all1.length > max1) {
-      function score(o) { var l = d1[o]; return ADJ[o].length + (BY[o].p ? 40 : 0) + (STYLE[l.r] === 'seq' ? 200 : 0) + (linkOn(l, Y) ? 0 : -1000); }
+      function score(o) { var l = d1[o]; return ADJ[o].length + (BY[o].p ? 40 : 0) + (seq(l) ? 200 : 0) + (linkOn(l, Y) ? 0 : -1000); }
       var keep = [], rest = [];
       if (opts.expand) {   // one type only: up to 40 of them individually, the rest of that type as one '+N more' bubble, other types hidden (back button)
         all1.forEach(function (o) { if ((BY[o].t || 'state') === opts.expand) keep.push(o); });
@@ -152,12 +156,26 @@ var ConnectionsMap = (function () {
       h.outl.forEach(function (o, i) { var a = -Math.PI / 2 + (i + 0.5) * 2 * Math.PI / Math.max(h.outl.length, 1) + 0.13; pos[o] = [cx + E3[0] * Math.cos(a), cy + E3[1] * Math.sin(a)]; });
       var Y = opts.year == null ? null : opts.year;
       function linkActive(l) { return Y == null || ((l.f == null || l.f <= Y) && (l.u == null || l.u >= Y)); }
-      var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="cm-svg" role="img" aria-label="Connections of ' + esc(h.c.n) + '">' +
-        '<defs><filter id="cm-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+      // the same map drawn again (year slider) shows its lines at once; a new one draws them out from the centre
+      var key = id + '|' + (opts.expand || ''), still = el.getAttribute('data-cm') === key, used = {};
+      var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="cm-svg' + (still ? ' cm-still' : '') + '" role="img" aria-label="Connections of ' + esc(h.c.n) + '">' +
+        '<defs><filter id="cm-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+        '<filter id="cm-glow2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
       function curve(a, b) { var mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2, dx = b[0] - a[0], dy = b[1] - a[1]; return 'M' + a[0].toFixed(1) + ' ' + a[1].toFixed(1) + ' Q' + (mx - dy * 0.12).toFixed(1) + ' ' + (my + dx * 0.12).toFixed(1) + ' ' + b[0].toFixed(1) + ' ' + b[1].toFixed(1); }
-      h.order2.forEach(function (o) { var l = h.d2[o].link, p = h.d2[o].parent; svg += '<path class="cm-line cm-l2 cm-' + (STYLE[l.r] || 'firm') + (linkActive(l) ? '' : ' cm-off') + '" d="' + curve(pos[p], pos[o]) + '"/>'; });
-      h.order1.forEach(function (o, i) { var l = h.d1[o]; svg += '<path class="cm-line cm-l1 cm-' + (STYLE[l.r] || 'firm') + (linkActive(l) ? '' : ' cm-off') + '" style="animation-delay:' + (i * 0.04).toFixed(2) + 's" d="' + curve(pos[id], pos[o]) + '"/>'; });
-      h.groups.forEach(function (g) { var on = g.ids.some(function (o) { return linkActive(h.d1[o]); }); svg += '<path class="cm-line cm-l1 cm-group-line' + (on ? '' : ' cm-off') + '" d="' + curve(pos[id], pos[g.key]) + '"/>'; });
+      // one line of a kind (strong, light, lineage, past, thread, bundle) with its draw-in delay; the rule lines'
+      // glimmers start after the draw-in, spread over the cycle
+      function line(kind, dim, d, wait, i) {
+        used[kind] = 1;
+        var glim = kind === 'strong' ? ((i * 0.7) % 4.5 + (still ? 0 : 1)).toFixed(2) + 's' : '', delay = still ? glim : wait.toFixed(2) + 's' + (glim ? ',' + glim : '');
+        return '<path class="cm-line cm-' + kind + (dim ? ' cm-dim' : '') + '" pathLength="1"' + (delay ? ' style="animation-delay:' + delay + '"' : '') + ' d="' + d + '"/>';
+      }
+      h.order2.forEach(function (o, i) { var l = h.d2[o].link, p = h.d2[o].parent; svg += line('thread', !linkActive(l), curve(pos[p], pos[o]), 0.45 + i * 0.015, i); });
+      h.groups.forEach(function (g, i) { var on = g.ids.some(function (o) { return linkActive(h.d1[o]); }); svg += line('bundle', !on, curve(pos[id], pos[g.key]), i * 0.035, i); });
+      // direct lines: a tie not in force in the chosen year is a past one; the glowing ones on top
+      function kindOf(l) { return linkActive(l) ? KIND[l.r] || 'light' : 'past'; }
+      ['past', 'lineage', 'light', 'strong'].forEach(function (k) {
+        h.order1.forEach(function (o, i) { if (kindOf(h.d1[o]) === k) svg += line(k, false, curve(pos[id], pos[o]), i * 0.035, i); });
+      });
       // label beside the node on the inner ring (left/right of it), above/below elsewhere
       function labelAt(p, r, beside) {
         if (beside && Math.abs(p[0] - cx) > (opts.narrow ? 40 : 70)) { var right = p[0] > cx; return ' x="' + (p[0] + (right ? r + 6 : -r - 6)).toFixed(1) + '" y="' + (p[1] + 4).toFixed(1) + '" text-anchor="' + (right ? 'start' : 'end') + '"'; }
@@ -186,7 +204,13 @@ var ConnectionsMap = (function () {
       h.groups.forEach(function (g) { svg += group(g); });
       h.order1.forEach(function (o) { svg += node(o, 'cm-n1', sentence(h.d1[o])); });
       svg += node(id, 'cm-centre', '') + '</svg>';
-      el.innerHTML = svg + (opts.expand ? '<button type="button" class="cm-back">← All connections</button>' : '');
+      // key to the lines on this map
+      var LEG = [['strong', 'Rule', 'part of, province, colony, conquest'], ['light', 'Looser ties', 'vassal, tributary, protectorate, union'],
+        ['lineage', 'Lineage', 'predecessor, successor, merged, split off'], ['past', 'Not in force', 'in ' + yr(Y)],
+        ['bundle', 'Groups', 'states of one kind'], ['thread', 'Second step', 'their own connections']].filter(function (g) { return used[g[0]]; });
+      var legend = LEG.length ? '<p class="cm-legend">' + LEG.map(function (g) { return '<span><i class="cm-sw cm-sw-' + g[0] + '"></i><b>' + g[1] + '</b> ' + esc(g[2]) + '</span>'; }).join('') + '</p>' : '';
+      el.innerHTML = svg + legend + (opts.expand ? '<button type="button" class="cm-back">← All connections</button>' : '');
+      el.setAttribute('data-cm', key);
       declutter(el.querySelector('svg'));
       var back = el.querySelector('.cm-back'); if (back) back.addEventListener('click', function () { if (opts.onExpand) opts.onExpand(null); });
       el.querySelectorAll('.cm-node').forEach(function (g) {

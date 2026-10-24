@@ -507,8 +507,11 @@ $LAND = ReadJson "$Repo\data\land.json"; $GEOD = ReadJson "$Repo\data\geo.json"
 $RINGS = New-Object 'System.Collections.Generic.List[double[]]'; $BOXES = New-Object 'System.Collections.Generic.List[double[]]'
 $CTRY = @{}   # a present-day country -> its outline record (n, ct, lp, bb, ...): its own name first, then its other
               # names, its sovereign's name last (dependencies such as Greenland carry it too)
+$CRING = @{}   # a country's own rings and their boxes (Natural Earth name): the country lit up on its page
 foreach ($c in $LAND['countries']) {
-  foreach ($r in $c['r']) { $d = [EpochGeo.G]::FromInts([object[]]$r, 100); $RINGS.Add($d); $BOXES.Add([EpochGeo.G]::Bbox($d)) }
+  $cr = New-Object 'System.Collections.Generic.List[double[]]'; $cb = New-Object 'System.Collections.Generic.List[double[]]'
+  foreach ($r in $c['r']) { $d = [EpochGeo.G]::FromInts([object[]]$r, 100); $bx = [EpochGeo.G]::Bbox($d); $RINGS.Add($d); $BOXES.Add($bx); $cr.Add($d); $cb.Add($bx) }
+  $CRING[[string]$c['n']] = @($cr, $cb)
   $CTRY[[string]$c['n']] = $c
 }
 foreach ($c in $LAND['countries']) { foreach ($nm in @($c['names'])) { if ($nm -and -not $CTRY.ContainsKey([string]$nm)) { $CTRY[[string]$nm] = $c } } }
@@ -532,11 +535,12 @@ function DotPath([string]$cls, $pts) {   # pts: a list of points (@(, $p) for on
   return '<path class="' + $cls + '" d="' + $sbD.ToString() + '"/>'
 }
 # a map of the rectangle $view (x, y, w, h in plane units): over the shared world picture, or with its own outlines
-function MapSvg($view, [string]$inner, [string]$label, [string]$cls, [switch]$Outlines) {
+function MapSvg($view, [string]$inner, [string]$label, [string]$cls, [switch]$Outlines, $Hi) {   # Hi: @(rings, boxes) of a country to light up
   $vb = (Fx $view[0]) + ' ' + (Fx $view[1]) + ' ' + (Fx $view[2]) + ' ' + (Fx $view[3])
   if ($Outlines) {
     $clip = [double[]]@(($view[0] - $view[2] * 0.03), ($view[1] - $view[3] * 0.03), ($view[0] + $view[2] * 1.03), ($view[1] + $view[3] * 1.03))
     $bg = '<path class="map-land" d="' + [EpochGeo.G]::PathData($RINGS, $BOXES, ($view[2] / 700), 0, $clip, 10) + '"/>'
+    if ($Hi) { $bg += '<path class="map-land-hi" d="' + [EpochGeo.G]::PathData($Hi[0], $Hi[1], ($view[2] / 700), 0, $clip, 10) + '"/>' }
   } else { $bg = '<image href="/maps/world.svg" x="0" y="0" width="10000" height="' + (Fx $MAPH) + '"/>' }
   return '<svg class="map' + $(if ($cls) { ' ' + $cls } else { '' }) + '" viewBox="' + $vb + '" role="img" aria-label="' + (Hx $label) + '">' + $bg + $inner + '</svg>'
 }
@@ -1018,7 +1022,8 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
     $view = FitView $box 16 1.5 0.08; $CINFO[$m]['view'] = $view
     $pp = @($profs | ForEach-Object { , $STATEXY[[string]$_['id']] } | Where-Object { $_ -and -not $_[2] })
     $nAp = @($CLIST | Where-Object { $q = $STATEXY[[string]$_['id']]; -not $q -or $q[2] }).Count
-    $mapHtml = '<figure class="cty-map">' + (MapSvg $view ((DotPath 'map-dot-s' $pts) + (DotPath 'map-dot-p' $pp)) "Map of the states of $(TheCountry $m)" 'map-cty' -Outlines) +
+    $hiRings = $CRING[[string]$ct['n']]   # the country itself, lit up; the dots get a dark halo to stand out on it
+    $mapHtml = '<figure class="cty-map">' + (MapSvg $view ((DotPath 'map-dot-bg' $pts) + (DotPath 'map-dot-s' $pts) + (DotPath 'map-dot-p' $pp)) "Map of the states of $(TheCountry $m), with $(TheCountry $m) highlighted" 'map-cty' -Outlines -Hi $hiRings) +
       '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State (capital or seat)</span>' + $(if ($nAp) { '<span>' + $nAp + ' without a known seat not shown</span>' } else { '' }) + '<a href="/atlas?c=' + $slug + '">Open in the atlas &rarr;</a></figcaption></figure>'
   }
   $crumb = Crumbs @(@('Home', '/'), @('Countries', '/countries/'), @($m, $null))

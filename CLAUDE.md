@@ -33,7 +33,8 @@ data/history.json, data/international-days.json — Today in History data (built
   Crimson Pro and Cinzel files)
 - /shared-nav.js — initNav(activePage), escHtml(), jsonp() (gives up after 10 s: an Apps Script error is an HTML
   page with status 200 that never calls back), buildPagination(), isValidEmail(), share buttons. The old contact modal
-  is gone; openContactModal() now just opens /contact.
+  is gone; openContactModal() now just opens /contact. The page-transition click handler reads a link's address as
+  text: an SVG `<a>`'s .href is an SVGAnimatedString (it once sent the country bubbles to /countries/[object …]).
 - /shared-data.js — core data loaded on every page: API URLs, EMPIRES (394: 94 empires + 300 state profiles with an `id`), EMPIRE_INFO, REGIONS, ERAS, EVENTS, TRANSLATIONS, toSlug()
 - /enc-page.js — script of the generated pages (initNav from body[data-nav], random entry/state, citation copy,
   lazy state mini map, century bars scrolled to the current century on phones); its IDX_V is written by build-pages.ps1
@@ -100,7 +101,7 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   the sidebar has a locator map (the state, its connected states, a link to the atlas at its middle year).
 - `/today-in-history/<month>-<day>` — 365 day pages.
 - `/countries/<slug>` + `/countries/` — 190 country histories (present-day countries with at least 3 states): map
-  with the states' seats (inline outlines), profiles, "Empires that ruled here" (profiles outside the country that
+  with the states' seats (inline outlines, the country lit up), profiles, "Empires that ruled here" (profiles outside the country that
   its states were part/province/colony/vassal/tributary/protectorate of or conquered by), a timeline on one scale by
   century of founding, encyclopedia entries naming the country, shared histories. TheCountry() adds "the" (the
   United Kingdom, the Netherlands …). Index: bubble map + countries by continent.
@@ -142,8 +143,10 @@ outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) 
   ?year=, ?focus=<state id>, ?c=<country slug>. maps/atlas-data.js rows [id, name, start, end, x, y, flags (1 profile,
   2 approximate), kind (EmblemKind), region, profile url]; maps/basemap.js outlines (styled by shared.css).
 - Small maps are inline SVG: state locators, century maps and the home page draw over `<image href=/maps/world.svg>`
-  (fixed translucent gold, cached once); country pages carry their own clipped outlines. Dots are zero-length
-  strokes with vector-effect: non-scaling-stroke (classes map-dot-*, sizes in shared.css).
+  (fixed translucent gold, cached once); country pages carry their own clipped outlines, with the country itself
+  drawn again on top as `map-land-hi` (lit gold with a glow; MapSvg -Hi, rings from $CRING) and its neighbours dimmed;
+  their dots sit on a `map-dot-bg` halo. Dots are zero-length strokes with vector-effect: non-scaling-stroke
+  (classes map-dot-*, sizes in shared.css).
 Old #-addresses (/encyclopedia#slug, /state#id) still work: the index pages forward them. Every page has a title,
 description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article JSON-LD and visible breadcrumbs.
 
@@ -236,7 +239,13 @@ server, download empire-pages.zip, extract into empire/, commit and push.
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state: nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
-- `connections` page + `connections-map.js` (no D3; radial layout, glowing links, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).
+- `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).
+- Lines have one meaning each, with a key under every map listing only the kinds drawn (KIND in connections-map.js,
+  .cm-* in shared.css): Rule (part of, province, colony, conquered by) thick glowing gold with a slow glimmer;
+  Looser ties (vassal, tributary, protectorate, personal union) slimmer gold; Lineage (successor, merged into, split
+  from) silver; Not in force in the chosen year: thinner faded silver; Second step: slim threads without glow;
+  Groups: a soft band. No dashes or flowing: lines draw out from the centre once (pathLength 1); a redraw of the same
+  map (year slider) shows them at once (.cm-still). Colours --cm-silver, --cm-thread, --cm-glint in both themes.
 - Big hubs (Holy Roman Empire: 378 links): the inner ring shows the ~24 most important neighbours (successions, profiled states, well-connected states), the rest as type bubbles ("86 counties") that expand on click (`opts.expand`, back button); timeline capped at 40 rows + "Show more". Phones (<600px) get a tall layout with fewer nodes.
 - `state/` page (Research → States): index of all 5,463 states (filters: name, region, type, present-day country,
   "existing in" year) and one page per state at `/state/<id>` (built by build-pages.ps1; states with a profile

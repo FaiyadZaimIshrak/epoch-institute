@@ -479,15 +479,16 @@ function initNav(activePage) {
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     const a = e.target.closest('a[href]');
-    if (!a || a.target === '_blank' || a.hasAttribute('download')) return;
+    if (!a || a.getAttribute('target') === '_blank' || a.hasAttribute('download')) return;
     try {
-      const dest = new URL(a.href, location.href);
+      // an SVG link's .href is an object (SVGAnimatedString), not a string: read the attribute's text instead
+      const raw = typeof a.href === 'string' ? a.href : (a.href && a.href.baseVal) || a.getAttribute('href');
+      const dest = new URL(raw, location.href);
       if (dest.origin !== location.origin) return;
       if (dest.pathname === location.pathname && dest.hash) return;
       e.preventDefault();
-      const href = a.href;
       document.body.classList.add('page-leaving');
-      setTimeout(() => { window.location.href = href; }, 180);
+      setTimeout(() => { window.location.href = dest.href; }, 180);
     } catch(e) {}
   });
 

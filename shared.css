@@ -22,6 +22,9 @@
     --gold-light: #e8c97a;
     --gold-rgb: 201,168,76;        /* for translucent gold: rgba(var(--gold-rgb), a) */
     --gold-light-rgb: 232,201,122;
+    --cm-silver: #b4bcc6;          /* connections map: lineage and past ties */
+    --cm-thread: rgba(236,232,224,0.42);  /* connections map: second-step threads */
+    --cm-glint: #f7d67c;           /* connections map: the rule lines' glimmer (stays gold: never mistaken for silver) */
     /* Type: Cinzel for display only, Source Sans 3 for interface text, Crimson Pro for reading */
     --font-display: 'Cinzel', Georgia, serif;
     --font-ui: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -354,6 +357,9 @@
     --gold-light: #6b4e0a;
     --gold-rgb: 139,105,20;
     --gold-light-rgb: 107,78,10;
+    --cm-silver: #7d8894;
+    --cm-thread: rgba(42,32,16,0.42);
+    --cm-glint: #b08a1c;
     --error: #b52a1d;
     --success: #3a7d52;
     --shadow: rgba(0,0,0,0.2);
@@ -2797,13 +2803,31 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .cx-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; margin-top: 18px; }
 .cx-map { background: radial-gradient(ellipse at center, rgba(var(--gold-rgb), 0.06), transparent 65%), var(--surface); border: 1px solid var(--border); border-radius: var(--radius); min-height: 420px; }
 .cm-svg { width: 100%; height: auto; display: block; }
-.cm-line { fill: none; stroke: var(--gold); stroke-width: 1.6; opacity: 0.85; filter: url(#cm-glow); stroke-dasharray: 6 5; animation: cm-flow 1.6s linear infinite, cm-in 0.6s ease-out both; }
-.cm-l2 { stroke-width: 1; opacity: 0.45; }
-.cm-loose { stroke-dasharray: 2 6; }
-.cm-seq { stroke: var(--gold-light); stroke-dasharray: 12 6; }
-.cm-off { opacity: 0.12; animation: none; }
-@keyframes cm-flow { to { stroke-dashoffset: -22; } }
-@keyframes cm-in { from { opacity: 0; } }
+/* connection lines, one meaning each (the key under the map): rule = thick glowing gold that glimmers slowly,
+   looser ties = slimmer gold, lineage = silver, not in force in the chosen year = faint silver, second step = slim
+   threads without glow, groups = a soft band. Drawn out from the centre once (pathLength 1), then still. */
+.cm-line { fill: none; stroke-dasharray: 1 1; animation: cm-draw 0.8s ease-out both; }
+.cm-strong { stroke: var(--gold); stroke-width: 3.4; filter: url(#cm-glow2); animation: cm-draw 0.8s ease-out both, cm-glim 4.5s ease-in-out infinite; }
+.cm-light { stroke: var(--gold); stroke-width: 2; opacity: 0.8; filter: url(#cm-glow); }
+.cm-lineage { stroke: var(--cm-silver); stroke-width: 2.2; }
+.cm-past { stroke: var(--cm-silver); stroke-width: 1.6; opacity: 0.7; }
+.cm-thread { stroke: var(--cm-thread); stroke-width: 0.8; }
+.cm-bundle { stroke: var(--gold); stroke-width: 8; opacity: 0.2; }
+.cm-thread.cm-dim { opacity: 0.35; } .cm-bundle.cm-dim { opacity: 0.07; }
+.cm-still .cm-line { animation: none; }
+.cm-still .cm-strong { animation: cm-glim 4.5s ease-in-out infinite; }
+@keyframes cm-draw { from { stroke-dashoffset: 1; } }
+@keyframes cm-glim { 50% { stroke: var(--cm-glint); } }
+.cm-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; padding: 10px 14px 12px; border-top: 1px solid var(--border); font-family: var(--font-ui); font-size: 13px; line-height: 1.4; color: var(--muted); }
+.cm-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.cm-legend b { color: var(--text); font-weight: 600; }
+.cm-sw { display: inline-block; flex: none; width: 26px; height: 0; border-top: 2px solid var(--gold); }
+.cm-sw-strong { border-top-width: 3px; box-shadow: 0 0 6px 1px rgba(var(--gold-rgb), 0.7); }
+.cm-sw-light { opacity: 0.8; box-shadow: 0 0 4px rgba(var(--gold-rgb), 0.45); }
+.cm-sw-lineage { border-top-color: var(--cm-silver); }
+.cm-sw-past { border-top: 1.5px solid var(--cm-silver); opacity: 0.7; }
+.cm-sw-thread { border-top: 1px solid var(--cm-thread); }
+.cm-sw-bundle { border-top: 7px solid rgba(var(--gold-rgb), 0.25); }
 .cm-node { cursor: pointer; }
 .cm-node circle { fill: var(--bg); stroke: var(--gold); stroke-width: 1.5; transition: r 0.2s; }
 .cm-node.cm-prof circle { fill: var(--gold); }
@@ -2824,9 +2848,6 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .cx-profile { font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--gold); text-decoration: none; }
 .cx-soon, .cx-none, .cm-empty { font-family: var(--font-text); font-style: italic; color: var(--muted); margin: 0; }
 .cx-timeline-wrap { margin-top: 28px; }
-.cx-legend { font-family: var(--font-ui); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin: 4px 0 14px; }
-.cx-legend .lg { display: inline-block; width: 28px; height: 0; border-top: 2px dashed var(--gold); }
-.cx-legend .lg.loose { border-top-style: dotted; } .cx-legend .lg.seq { border-top: 2px dashed var(--gold-light); }
 .cx-axis { display: flex; justify-content: space-between; font-family: var(--font-ui); font-size: 12px; color: var(--muted); margin-left: 36%; padding: 0 0 6px; border-bottom: 1px solid var(--border); }
 .cx-row { display: grid; grid-template-columns: 36% 1fr 140px; gap: 12px; align-items: center; width: 100%; padding: 8px 0; background: none; border: 0; border-bottom: 1px solid var(--border); cursor: pointer; text-align: left; color: var(--text); }
 .cx-row:hover .cx-row-label b { color: var(--gold-light); }
@@ -2849,7 +2870,6 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .cm-node:hover text, .cm-node:focus text { fill: var(--gold-light); }
 /* grouped neighbours of large hubs ("142 counties") */
 .cx-map { position: relative; }
-.cm-group-line { stroke-width: 3; stroke-dasharray: none; opacity: 0.5; }
 .cm-group circle { fill: rgba(var(--gold-rgb), 0.16); stroke: var(--gold); stroke-dasharray: 3 3; }
 .cm-group:hover circle, .cm-group:focus circle { fill: rgba(var(--gold-rgb), 0.3); }
 .cm-group text { font-style: italic; fill: var(--gold-light); }
@@ -2866,7 +2886,7 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .mini-connections-more { display: inline-block; margin-top: 8px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); text-decoration: none; }
 @media (max-width: 900px) { .cx-body { grid-template-columns: 1fr; } .cx-row { grid-template-columns: 1fr; gap: 4px; } .cx-axis { margin-left: 0; } .cx-row-dates { text-align: left; } }
 @media (max-width: 600px) { .cx-page { padding: 86px 16px 50px; } .cm-node text { font-size: 18px; } .cm-centre text { font-size: 24px; } .cm-n2 text { display: none; } }
-@media (prefers-reduced-motion: reduce) { .cm-line { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .cm-svg .cm-line { animation: none; } }
 
 /* ══ Reference pages: encyclopedia, states, Today in History days and their index pages ══════════════════════════════
    (encyclopedia/<slug>, state/<id>, today-in-history/<day>, browse pages; generated by scripts/build-pages.ps1) */
@@ -3070,7 +3090,12 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 /* ── Maps: country and century pages, state locators, home (inline SVG; dots are zero-length strokes) ── */
 .map { display: block; width: 100%; height: auto; }
 .map-land { fill: rgba(var(--gold-rgb), 0.13); stroke: rgba(var(--gold-rgb), 0.5); stroke-width: 0.8px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.map-dot-s, .map-dot-p, .map-dot-n, .map-dot-me, .map-dot-halo, .map-dot-ap { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.map-dot-s, .map-dot-p, .map-dot-n, .map-dot-me, .map-dot-halo, .map-dot-ap, .map-dot-bg { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+/* a country history's own country: lit up, its neighbours dimmed */
+.map-cty .map-land { fill: rgba(var(--gold-rgb), 0.06); stroke: rgba(var(--gold-rgb), 0.32); }
+.map-land-hi { fill: rgba(var(--gold-rgb), 0.34); stroke: var(--gold-light); stroke-width: 1.4px; stroke-linejoin: round; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 7px rgba(var(--gold-rgb), 0.55)); animation: map-light 1.4s ease-out both; }
+@keyframes map-light { from { fill: rgba(var(--gold-rgb), 0.06); filter: drop-shadow(0 0 0 rgba(var(--gold-rgb), 0)); } 60% { filter: drop-shadow(0 0 14px rgba(var(--gold-rgb), 0.8)); } }
+.map-dot-bg { stroke: var(--bg); stroke-opacity: 0.8; stroke-width: 8px; }
 .map-dot-s { stroke: var(--text); stroke-opacity: 0.55; stroke-width: 3.2px; }
 .map-dot-p { stroke: var(--gold); stroke-width: 6px; }
 .map-dot-n { stroke: var(--gold); stroke-opacity: 0.75; stroke-width: 4.5px; }
