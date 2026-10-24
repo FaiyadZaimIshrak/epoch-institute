@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
-<link rel="stylesheet" href="/shared.css?v=35">
+<link rel="stylesheet" href="/shared.css?v=36">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -621,6 +621,27 @@ document.getElementById('share-modal').addEventListener('click', function(e) {
 });
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' && document.getElementById('share-modal').classList.contains('is-open')) closeShareModal();
+});
+
+// "Submit an Article" (nav, footer, /community#submit): bring the band into view from any state of the page —
+// a plain #submit jump fails when a sub-view hides the band, lands it under the fixed nav, and ignores repeat clicks
+function goSubmit() {
+  var band = document.getElementById('submit'), cp = document.getElementById('community-page');
+  var wait = 0;
+  if (!cp.classList.contains('active')) { showCommSection('community-page'); wait = 400; }
+  setTimeout(function () {
+    band.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    band.classList.remove('band-flash'); void band.offsetWidth; band.classList.add('band-flash');
+  }, wait);
+}
+if (location.hash === '#submit') setTimeout(goSubmit, 250);
+window.addEventListener('hashchange', function () { if (location.hash === '#submit') goSubmit(); });
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href="/community#submit"], a[href="#submit"]');
+  if (!a) return;
+  e.preventDefault(); e.stopPropagation();
+  if (location.hash !== '#submit') history.replaceState(null, '', '#submit');
+  goSubmit();
 });
 
 // Drop zone
