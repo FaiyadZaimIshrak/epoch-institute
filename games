@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>History Games: Pairs, Timelines and the Globe — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Three quick history games: match the emblems of empires, put real events in order, and find lost states on a turning globe. No sign-up, works on phones.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/games">
+<meta property="og:type" content="website">
+<meta property="og:title" content="History Games — The Epoch Institute">
+<meta property="og:description" content="Match the emblems, order the ages, and find lost empires on the globe.">
+<meta property="og:url" content="https://the-epoch-institute.org/games">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=42">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Three quick history games: match the emblems of empires, put real events in order, and find lost states on a turning globe.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<main class="gm-page" id="main">
+  <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">History Games</li></ol></nav>
+  <header class="ref-head">
+    <span class="hero-ornament"></span>
+    <h1 class="research-title">History games</h1>
+    <p class="ref-lede">Three quick games built from the collection itself. No sign-up, nothing to install; your best scores stay in this browser. For a daily challenge, try the <a href="/quiz">History Quiz</a> too.</p>
+  </header>
+
+  <div class="gm-tabs" role="tablist" aria-label="Choose a game">
+    <button class="gm-tab" id="tab-pairs" role="tab" aria-selected="true" aria-controls="game-pairs">Emblem Pairs</button>
+    <button class="gm-tab" id="tab-order" role="tab" aria-selected="false" aria-controls="game-order">Order the Ages</button>
+    <button class="gm-tab" id="tab-hunt" role="tab" aria-selected="false" aria-controls="game-hunt">Globe Hunt</button>
+  </div>
+
+  <!-- Emblem Pairs -->
+  <section class="gm-game" id="game-pairs" role="tabpanel" aria-labelledby="tab-pairs">
+    <div class="gm-bar">
+      <p class="gm-howto">Find the matching pairs of emblems. Fewer flips, more stars.</p>
+      <p class="gm-score"><span id="pairs-moves">0 flips</span><span class="gm-best" id="pairs-best"></span></p>
+      <button type="button" class="gm-again" id="pairs-new">New round ↻</button>
+    </div>
+    <div class="gm-pairs" id="pairs-grid"></div>
+    <p class="gm-win" id="pairs-win" hidden></p>
+  </section>
+
+  <!-- Order the Ages -->
+  <section class="gm-game" id="game-order" role="tabpanel" aria-labelledby="tab-order" hidden>
+    <div class="gm-bar">
+      <p class="gm-howto">Put these five into time order, oldest at the top. Tap two cards to swap them, then check.</p>
+      <p class="gm-score"><span id="order-tries">0 checks</span><span class="gm-best" id="order-best"></span></p>
+      <button type="button" class="gm-again" id="order-new">New round ↻</button>
+    </div>
+    <ol class="gm-order" id="order-list"></ol>
+    <div class="fp-actions"><button type="button" class="hero-cta" id="order-check">Check the order</button></div>
+    <p class="gm-win" id="order-win" hidden></p>
+  </section>
+
+  <!-- Globe Hunt -->
+  <section class="gm-game" id="game-hunt" role="tabpanel" aria-labelledby="tab-hunt" hidden>
+    <div class="gm-bar">
+      <p class="gm-howto" id="hunt-q">Loading the globe…</p>
+      <p class="gm-score"><span id="hunt-score">Round 1 of 5 · 0 points</span><span class="gm-best" id="hunt-best"></span></p>
+      <button type="button" class="gm-again" id="hunt-new">New round ↻</button>
+    </div>
+    <div class="gm-hunt-wrap">
+      <canvas id="hunt-globe" aria-label="A globe. Drag to turn it, then tap where you think the named state lay."></canvas>
+      <p class="gm-hunt-note">Drag to turn the globe · tap to guess</p>
+    </div>
+    <p class="gm-win" id="hunt-msg" hidden></p>
+  </section>
+</main>
+
+<script src="/search-profiles.js?v=1"></script>
+<script src="/home-data.js?v=11"></script>
+<script src="/shared-nav.js?v=26"></script>
+<script>
+initNav('games');
+(function () {
+  'use strict';
+  function $(id) { return document.getElementById(id); }
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function best(k) { try { return JSON.parse(localStorage.getItem('epoch-games') || '{}')[k]; } catch (e) { return null; } }
+  function setBest(k, v) { try { var o = JSON.parse(localStorage.getItem('epoch-games') || '{}'); o[k] = v; localStorage.setItem('epoch-games', JSON.stringify(o)); } catch (e) {} }
+
+  // ── tabs ──
+  var tabs = ['pairs', 'order', 'hunt'];
+  tabs.forEach(function (t) {
+    $('tab-' + t).addEventListener('click', function () {
+      tabs.forEach(function (o) {
+        $('tab-' + o).setAttribute('aria-selected', String(o === t));
+        $('game-' + o).hidden = o !== t;
+      });
+      if (t === 'hunt') startHunt();
+    });
+  });
+
+  // ── Emblem Pairs ─────────────────────────────────────────────────────────────
+  var pMoves = 0, pOpen = [], pLock = false, pLeft = 0;
+  var SP = (typeof SEARCH_PROFILES !== 'undefined') ? SEARCH_PROFILES : [];   // a const in search-profiles.js: not on window
+  function newPairs() {
+    var pool = shuffle(SP.slice()).slice(0, 8);
+    var cards = shuffle(pool.concat(pool).map(function (p, i) { return { n: p[0], id: i }; }));
+    pMoves = 0; pOpen = []; pLock = false; pLeft = 8;
+    $('pairs-moves').textContent = '0 flips';
+    $('pairs-win').hidden = true;
+    var b = best('pairs'); $('pairs-best').textContent = b ? 'Best: ' + b + ' flips' : '';
+    $('pairs-grid').innerHTML = cards.map(function (c, i) {
+      return '<button type="button" class="gm-card" data-n="' + escHtml(c.n) + '" aria-label="Hidden emblem ' + (i + 1) + '">' +
+        '<span class="gm-card-back">✦</span>' +
+        '<span class="gm-card-face"><img src="/logos/thumbs/' + encodeURIComponent(c.n) + '.png" alt="" loading="lazy"><i>' + escHtml(c.n) + '</i></span></button>';
+    }).join('');
+    Array.prototype.forEach.call($('pairs-grid').children, function (el) {
+      el.addEventListener('click', function () {
+        if (pLock || el.classList.contains('is-up') || el.classList.contains('is-done')) return;
+        el.classList.add('is-up'); pOpen.push(el);
+        if (pOpen.length === 2) {
+          pMoves++; $('pairs-moves').textContent = pMoves + ' flips';
+          if (pOpen[0].getAttribute('data-n') === pOpen[1].getAttribute('data-n')) {
+            pOpen.forEach(function (e) { e.classList.add('is-done'); }); pOpen = []; pLeft--;
+            if (!pLeft) {
+              var stars = pMoves <= 10 ? '★★★' : pMoves <= 14 ? '★★' : '★';
+              $('pairs-win').innerHTML = stars + ' Matched in ' + pMoves + ' flips!';
+              $('pairs-win').hidden = false;
+              var b2 = best('pairs'); if (!b2 || pMoves < b2) { setBest('pairs', pMoves); $('pairs-best').textContent = 'Best: ' + pMoves + ' flips'; }
+            }
+          } else {
+            pLock = true;
+            setTimeout(function () { pOpen.forEach(function (e) { e.classList.remove('is-up'); }); pOpen = []; pLock = false; }, 750);
+          }
+        }
+      });
+    });
+  }
+  $('pairs-new').addEventListener('click', newPairs);
+  newPairs();
+
+  // ── Order the Ages ───────────────────────────────────────────────────────────
+  var oItems = [], oSel = null, oTries = 0;
+  function yearOf(d) {
+    var m = /(\d+)(\s*BCE)?/.exec(String(d || '')); if (!m) return null;
+    return m[2] ? -parseInt(m[1], 10) : parseInt(m[1], 10);
+  }
+  function newOrder() {
+    var pool = shuffle((window.HOME_ENTRIES || []).filter(function (e) { return yearOf(e.dates) !== null; }).slice());
+    var pick = [], years = {};
+    for (var i = 0; i < pool.length && pick.length < 5; i++) { var y = yearOf(pool[i].dates); if (!years[y]) { years[y] = 1; pick.push(pool[i]); } }
+    oItems = shuffle(pick.slice()); oSel = null; oTries = 0;
+    $('order-tries').textContent = '0 checks';
+    $('order-win').hidden = true;
+    var b = best('order'); $('order-best').textContent = b ? 'Best: ' + b + (b === 1 ? ' check' : ' checks') : '';
+    drawOrder(false);
+  }
+  function drawOrder(showYears) {
+    $('order-list').innerHTML = oItems.map(function (e, i) {
+      return '<li><button type="button" class="gm-ocard" data-i="' + i + '">' +
+        (e.img ? '<img src="' + escHtml(e.img) + '" alt="" loading="lazy">' : '<span class="gm-oph">' + (i + 1) + '</span>') +
+        '<span class="gm-on">' + escHtml(e.name) + '</span>' +
+        (showYears ? '<span class="gm-oy">' + escHtml(e.dates) + '</span>' : '') + '</button></li>';
+    }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('.gm-ocard'), function (el) {
+      el.addEventListener('click', function () {
+        if (el.classList.contains('is-locked')) return;
+        var i = +el.getAttribute('data-i');
+        if (oSel === null) { oSel = i; el.classList.add('is-sel'); return; }
+        if (oSel === i) { oSel = null; el.classList.remove('is-sel'); return; }
+        var t = oItems[oSel]; oItems[oSel] = oItems[i]; oItems[i] = t; oSel = null;
+        drawOrder(false);
+      });
+    });
+  }
+  $('order-check').addEventListener('click', function () {
+    if (!oItems.length || !$('order-win').hidden) return;
+    oTries++; $('order-tries').textContent = oTries + (oTries === 1 ? ' check' : ' checks');
+    var sorted = oItems.slice().sort(function (a, b2) { return yearOf(a.dates) - yearOf(b2.dates); });
+    var allRight = true;
+    Array.prototype.forEach.call(document.querySelectorAll('.gm-ocard'), function (el, i) {
+      var right = oItems[i] === sorted[i];
+      el.classList.toggle('is-right', right); el.classList.toggle('is-wrong', !right);
+      if (right) el.classList.add('is-locked');
+      if (!right) allRight = false;
+    });
+    if (allRight) {
+      drawOrder(true);
+      Array.prototype.forEach.call(document.querySelectorAll('.gm-ocard'), function (el) { el.classList.add('is-right', 'is-locked'); });
+      $('order-win').textContent = (oTries === 1 ? '★★★ First try!' : oTries === 2 ? '★★ In two.' : '★ Done in ' + oTries + ' checks.');
+      $('order-win').hidden = false;
+      var b2 = best('order'); if (!b2 || oTries < b2) { setBest('order', oTries); }
+    }
+  });
+  $('order-new').addEventListener('click', newOrder);
+  newOrder();
+
+  // ── Globe Hunt ───────────────────────────────────────────────────────────────
+  var H = { ready: false, round: 0, score: 0, target: null, rot: [-20, -15], k: 1, drag: null, moved: false, dpr: 1, R: 100, answered: false };
+  var hProj = null, hPath = null, hGeo = null, hGrat = null, hCtx = null, hPts = [];
+  var cv = $('hunt-globe');
+  function loadScript(src) { return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
+  function startHunt() {
+    if (H.ready) return;
+    H.ready = 'loading';
+    var chain = (window.d3 && d3.geoOrthographic) ? Promise.resolve() : loadScript('https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js');
+    chain.then(function () { return window.ATLAS_GLOBE ? null : loadScript((document.querySelector('script[src*="globe-land"]') || {}).src || '/maps/globe-land.js'); })
+      .then(function () { return window.ATLAS ? null : loadScript('/maps/atlas-data.js'); })
+      .then(function () {
+        hPts = ATLAS.rows.filter(function (r) { return (r[6] & 1) && !(r[6] & 2); }).map(function (r) { return { n: r[1], lng: r[9], lat: r[10] }; });
+        var polys = ATLAS_GLOBE.rings.map(function (fl) {
+          var ring = []; for (var i = 0; i < fl.length; i += 2) ring.push([fl[i] / 100, fl[i + 1] / 100]);
+          if (d3.geoArea({ type: 'Polygon', coordinates: [ring] }) > 2 * Math.PI) ring.reverse();
+          return [ring];
+        });
+        hGeo = { type: 'MultiPolygon', coordinates: polys };
+        hGrat = d3.geoGraticule().step([20, 20])();
+        hProj = d3.geoOrthographic().clipAngle(90);
+        hCtx = cv.getContext('2d');
+        hPath = d3.geoPath(hProj, hCtx);
+        sizeHunt(); window.addEventListener('resize', sizeHunt);
+        wireHunt();
+        H.ready = true;
+        newHunt();
+      })
+      .catch(function () { $('hunt-q').textContent = 'The globe could not load — check your connection and try again.'; H.ready = false; });
+  }
+  function sizeHunt() {
+    if (!hCtx) return;
+    H.dpr = Math.min(2, window.devicePixelRatio || 1);
+    var w = cv.parentNode.clientWidth, h = Math.round(Math.min(w * 0.72, 520));
+    cv.style.height = h + 'px'; cv.width = Math.round(w * H.dpr); cv.height = Math.round(h * H.dpr);
+    H.R = Math.min(cv.width, cv.height) / 2 - 8 * H.dpr;
+    drawHunt();
+  }
+  function colours() {
+    var cs = getComputedStyle(document.documentElement);
+    return { g: (cs.getPropertyValue('--gold-rgb') || '201,168,76').trim(), gold: (cs.getPropertyValue('--gold') || '#c9a84c').trim(),
+      goldL: (cs.getPropertyValue('--gold-light') || '#e8c97a').trim(), text: (cs.getPropertyValue('--text') || '#e8e0d0').trim(), err: (cs.getPropertyValue('--error') || '#c0392b').trim() };
+  }
+  function drawHunt(guess, truth) {
+    if (!hCtx) return;
+    var c = colours();
+    hProj.scale(H.R * H.k).translate([cv.width / 2, cv.height / 2]).rotate([H.rot[0], H.rot[1], 0]);
+    hCtx.setTransform(1, 0, 0, 1, 0, 0); hCtx.clearRect(0, 0, cv.width, cv.height);
+    hCtx.beginPath(); hPath({ type: 'Sphere' }); hCtx.fillStyle = 'rgba(' + c.g + ',0.05)'; hCtx.fill();
+    hCtx.beginPath(); hPath(hGrat); hCtx.strokeStyle = 'rgba(' + c.g + ',0.14)'; hCtx.lineWidth = 0.6 * H.dpr; hCtx.stroke();
+    hCtx.beginPath(); hPath(hGeo); hCtx.fillStyle = 'rgba(' + c.g + ',0.13)'; hCtx.fill();
+    hCtx.strokeStyle = 'rgba(' + c.g + ',0.45)'; hCtx.lineWidth = 0.7 * H.dpr; hCtx.lineJoin = 'round'; hCtx.stroke();
+    hCtx.beginPath(); hPath({ type: 'Sphere' }); hCtx.strokeStyle = 'rgba(' + c.g + ',0.4)'; hCtx.lineWidth = H.dpr; hCtx.stroke();
+    function dot(lnglat, col, r) {
+      var cl = -H.rot[0] * Math.PI / 180, cp = -H.rot[1] * Math.PI / 180;
+      var la = lnglat[1] * Math.PI / 180, lo = lnglat[0] * Math.PI / 180;
+      if (Math.cos(la) * Math.cos(cp) * Math.cos(lo - cl) + Math.sin(la) * Math.sin(cp) < 0.001) return;
+      var p = hProj(lnglat); if (!p) return;
+      hCtx.beginPath(); hCtx.arc(p[0], p[1], r * H.dpr, 0, 6.2832); hCtx.fillStyle = col; hCtx.fill();
+      hCtx.lineWidth = 1.2 * H.dpr; hCtx.strokeStyle = 'rgba(0,0,0,0.5)'; hCtx.stroke();
+    }
+    if (guess && truth) {
+      hCtx.beginPath(); hPath({ type: 'LineString', coordinates: [guess, truth] });
+      hCtx.strokeStyle = c.goldL; hCtx.lineWidth = 1.4 * H.dpr; hCtx.setLineDash([5 * H.dpr, 5 * H.dpr]); hCtx.stroke(); hCtx.setLineDash([]);
+    }
+    if (guess) dot(guess, c.err, 6);
+    if (truth) dot(truth, c.gold, 7);
+  }
+  function wireHunt() {
+    cv.addEventListener('pointerdown', function (e) {
+      try { cv.setPointerCapture(e.pointerId); } catch (err) {}
+      H.drag = { x: e.clientX, y: e.clientY, rot: [H.rot[0], H.rot[1]] }; H.moved = false;
+    });
+    cv.addEventListener('pointermove', function (e) {
+      if (!H.drag) return;
+      var dx = e.clientX - H.drag.x, dy = e.clientY - H.drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 5) H.moved = true;
+      if (!H.moved) return;
+      var s = 57.296 / (H.R / H.dpr * H.k);
+      H.rot[0] = H.drag.rot[0] + dx * s; while (H.rot[0] > 180) H.rot[0] -= 360; while (H.rot[0] < -180) H.rot[0] += 360;
+      H.rot[1] = Math.max(-88, Math.min(88, H.drag.rot[1] - dy * s));
+      drawHunt();
+    });
+    cv.addEventListener('pointerup', function (e) {
+      var wasDrag = H.moved; H.drag = null;
+      if (wasDrag || !H.target || H.answered) return;
+      var b = cv.getBoundingClientRect();
+      var ll = hProj.invert && hProj.invert([(e.clientX - b.left) * H.dpr, (e.clientY - b.top) * H.dpr]);
+      if (!ll || !isFinite(ll[0])) return;
+      answerHunt(ll);
+    });
+    cv.addEventListener('pointercancel', function () { H.drag = null; });
+  }
+  function kmBetween(a, b) {
+    var rad = Math.PI / 180, la1 = a[1] * rad, la2 = b[1] * rad, dla = (b[1] - a[1]) * rad, dlo = (b[0] - a[0]) * rad;
+    var h = Math.sin(dla / 2) * Math.sin(dla / 2) + Math.cos(la1) * Math.cos(la2) * Math.sin(dlo / 2) * Math.sin(dlo / 2);
+    return Math.round(6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h)));
+  }
+  function newHunt() {
+    H.round = 0; H.score = 0; nextHunt();
+  }
+  function nextHunt() {
+    H.round++; H.answered = false;
+    H.target = hPts[Math.floor(Math.random() * hPts.length)];
+    $('hunt-q').innerHTML = 'Where was the <b>' + escHtml(H.target.n) + '</b>? Tap the globe.';
+    $('hunt-score').textContent = 'Round ' + H.round + ' of 5 · ' + H.score + ' points';
+    var b = best('hunt'); $('hunt-best').textContent = b ? 'Best: ' + b : '';
+    $('hunt-msg').hidden = true;
+    drawHunt();
+  }
+  function answerHunt(ll) {
+    H.answered = true;
+    var truth = [H.target.lng, H.target.lat];
+    var km = kmBetween(ll, truth);
+    var pts = Math.max(0, Math.round((5000 - Math.min(km, 5000)) / 50));
+    H.score += pts;
+    drawHunt(ll, truth);
+    $('hunt-score').textContent = 'Round ' + H.round + ' of 5 · ' + H.score + ' points';
+    var msg = km <= 300 ? 'Bullseye!' : km <= 1000 ? 'Close!' : km <= 2500 ? 'Warm.' : 'A different continent, perhaps.';
+    if (H.round < 5) {
+      $('hunt-msg').innerHTML = msg + ' ' + km.toLocaleString('en-GB') + ' km away · +' + pts + ' points. <button type="button" class="gm-again" id="hunt-next">Next →</button>';
+      $('hunt-msg').hidden = false;
+      $('hunt-next').addEventListener('click', nextHunt);
+    } else {
+      var b = best('hunt'); var nb = (!b || H.score > b);
+      if (nb) setBest('hunt', H.score);
+      $('hunt-msg').innerHTML = msg + ' ' + km.toLocaleString('en-GB') + ' km away · +' + pts + '. Final score: <b>' + H.score + '</b> of 500' + (nb ? ' — a new best!' : '') + ' <button type="button" class="gm-again" id="hunt-next">Play again ↻</button>';
+      $('hunt-msg').hidden = false;
+      $('hunt-next').addEventListener('click', newHunt);
+    }
+  }
+  $('hunt-new').addEventListener('click', function () { if (H.ready === true) newHunt(); });
+})();
+</script>
+
+</body>
+</html>

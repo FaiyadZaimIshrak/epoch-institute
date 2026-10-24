@@ -269,7 +269,7 @@
       var lst = groups[g].sort(function (a, b) { return a.n.localeCompare(b.n); });
       return '<section class="atl-group"><h3>' + escHtml(g || 'Elsewhere') + ' <span>' + lst.length + '</span></h3><p>' +
         lst.map(function (r) { return '<a href="' + escHtml(r.url) + '"' + ((r.f & 1) ? ' class="is-prof"' : '') + '>' + escHtml(r.n) + '</a>'; }).join('<span aria-hidden="true"> · </span>') + '</p></section>';
-    }).join('') : '<p class="atl-none">No state of the register matches these filters in ' + fmtYear(year) + '.</p>';
+    }).join('') : '<p class="atl-none">No recorded state matches these filters in ' + fmtYear(year) + '.</p>';
   }
 
   // ── search ──

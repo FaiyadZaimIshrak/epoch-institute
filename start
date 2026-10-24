@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=41">
+<link rel="stylesheet" href="/shared.css?v=42">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Find Your Way In"}]},{"@type":"WebPage","name":"Find Your Way In","url":"https://the-epoch-institute.org/start","description":"Four quick questions, and the Institute suggests the reading paths and tools that fit how you like your history."}]}</script>
@@ -50,6 +50,11 @@
   </header>
 
   <form id="fp-form" novalidate>
+    <div class="fp-progress" id="fp-progress" hidden>
+      <button type="button" class="fp-back" id="fp-back" aria-label="Previous question" disabled>&larr;</button>
+      <span class="fp-count" id="fp-count">Question 1 of 4</span>
+      <span class="fp-dots" id="fp-dots" aria-hidden="true"></span>
+    </div>
     <fieldset class="fp-q">
       <legend>1 · What pulls you into a history?</legend>
       <div class="fp-opts" data-q="pull">
@@ -95,7 +100,10 @@
     </fieldset>
 
     <p class="fp-err" id="fp-err" hidden>Choose an answer for the first three questions.</p>
-    <button type="submit" class="hero-cta fp-go">Show me my way in →</button>
+    <div class="fp-navbtns">
+      <button type="button" class="hero-secondary-cta" id="fp-skip" hidden>Skip this question →</button>
+      <button type="submit" class="hero-cta fp-go">Show me my way in →</button>
+    </div>
   </form>
 
   <section class="fp-result" id="fp-result" hidden aria-live="polite">
@@ -114,7 +122,8 @@
   </section>
 </main>
 
-<script src="/shared-nav.js?v=25"></script>
+<script src="/reading-paths.js?v=3"></script>
+<script src="/shared-nav.js?v=26"></script>
 <script>
 initNav('start');
 (function () {
@@ -132,14 +141,17 @@ initNav('start');
     timekeeper: { n: 'The Timekeeper', b: 'You want the long view: patterns across centuries, the same tides rising under different flags. Breadth first, then depth.',
       paths: ['how-empires-fall', 'china-dynasty-by-dynasty', 'the-fall-of-rome'], tools: [['/centuries/', 'Centuries', 'World history one century at a time'], ['/atlas', 'Atlas', 'Press play and watch 5,500 years pass']] }
   };
-  var PATH_TITLES = { 'silk-road': ['The Silk Road', 'Follow silk, ideas and armies across Eurasia.'], 'steppe-empires': ['Steppe Empires', 'The horse peoples who kept conquering the world.'],
-    'religion-and-power': ['Religion and Power', 'Where faith and rule made and unmade each other.'], 'empires-of-africa': ['Empires of Africa', 'Ghana to the Zulu: the continent’s great states.'],
-    'age-of-sail': ['The Age of Sail', 'The empires the ocean built.'], 'how-empires-fall': ['How Empires Fall', 'The patterns behind every collapse.'],
-    'law-and-government': ['Law and Government', 'How states learned to rule.'], 'science-and-learning': ['Science and Learning', 'Where knowledge was made and kept.'],
-    'the-crusades': ['The Crusades', 'Two centuries of holy war in the Levant.'], 'the-fall-of-rome': ['The Fall of Rome', 'How the west came apart, and what survived.'],
-    'the-americas-before-columbus': ['The Americas before Columbus', 'Great cities and empires before 1492.'], 'india-through-the-ages': ['India through the Ages', 'Ashoka to the Marathas.'],
-    'china-dynasty-by-dynasty': ['China, Dynasty by Dynasty', 'Two thousand years of reinvention.'], 'the-age-of-revolutions': ['The Age of Revolutions', 'When subjects became citizens.'],
-    'women-who-ruled': ['Women Who Ruled', 'Nine rulers the rules could not stop.'], 'city-states-and-leagues': ['City-States and Leagues', 'Single cities that outplayed empires.'] };
+  // the path catalogue (titles, taglines and reader types) comes from reading-paths.js, one source for the whole site
+  var PATHS = {};
+  (window.READING_PATHS || []).forEach(function (p) { PATHS[p.slug] = p; });
+  function pathsFor(t) {
+    var prim = [], sec = [];
+    (window.READING_PATHS || []).forEach(function (p) {
+      if (!p.types) return;
+      if (p.types[0] === t) prim.push(p.slug); else if (p.types.indexOf(t) > 0) sec.push(p.slug);
+    });
+    return prim.concat(sec).slice(0, 3);
+  }
   var REGION_PATH = { africa: 'empires-of-africa', americas: 'the-americas-before-columbus', eastasia: 'china-dynasty-by-dynasty', southasia: 'india-through-the-ages', europe: 'the-fall-of-rome', mideast: 'religion-and-power' };
   var ERA_BONUS = { ancient: ['timekeeper', 'builder'], medieval: ['navigator', 'chronicler'], earlymodern: ['navigator', 'strategist'], modern: ['chronicler', 'thinker'], all: ['timekeeper', 'timekeeper'] };
   var PACE_BONUS = { short: ['chronicler'], long: ['thinker', 'timekeeper'] };
@@ -158,13 +170,14 @@ initNav('start');
     var best = pull;   // the first question breaks every tie
     Object.keys(score).forEach(function (k) { if (score[k] > score[best]) best = k; });
     var T = TYPES[best];
-    var paths = T.paths.slice();
-    if (region && REGION_PATH[region] && paths.indexOf(REGION_PATH[region]) < 0) paths[2] = REGION_PATH[region];
+    var paths = pathsFor(best);
+    if (!paths.length) paths = T.paths.slice();
+    if (region && REGION_PATH[region] && paths.indexOf(REGION_PATH[region]) < 0) paths[paths.length - 1] = REGION_PATH[region];
     document.getElementById('fp-type').textContent = T.n;
     document.getElementById('fp-blurb').textContent = T.b;
     document.getElementById('fp-paths').innerHTML = paths.map(function (s) {
-      var p = PATH_TITLES[s] || [s, ''];
-      return '<a class="fp-path" href="/paths/' + s + '"><b>' + escHtml(p[0]) + '</b><span>' + escHtml(p[1]) + '</span><i>Start the path →</i></a>';
+      var p = PATHS[s] || { title: s, tagline: '' };
+      return '<a class="fp-path" href="/paths/' + s + '"><b>' + escHtml(p.title) + '</b><span>' + escHtml(p.tagline) + '</span><i>Start the path →</i></a>';
     }).join('');
     document.getElementById('fp-tools').innerHTML = T.tools.map(function (t) {
       return '<a class="fp-tool" href="' + t[0] + '"><b>' + escHtml(t[1]) + '</b><span>' + escHtml(t[2]) + '</span></a>';
@@ -179,9 +192,9 @@ initNav('start');
       try {
         var shelf = JSON.parse(localStorage.getItem('epoch-shelf') || '[]'); if (!Array.isArray(shelf)) shelf = [];
         paths.slice().reverse().forEach(function (s) {
-          var p = PATH_TITLES[s] || [s, ''];
+          var p = PATHS[s] || { title: s };
           shelf = shelf.filter(function (r) { return r && r.u !== '/paths/' + s; });
-          shelf.unshift({ u: '/paths/' + s, n: p[0], t: 'reading path' });
+          shelf.unshift({ u: '/paths/' + s, n: p.title, t: 'reading path' });
         });
         localStorage.setItem('epoch-shelf', JSON.stringify(shelf.slice(0, 100)));
         save.textContent = '✓ Saved — open the bookmark in the menu'; save.disabled = true;
@@ -190,8 +203,50 @@ initNav('start');
   });
   document.getElementById('fp-retake').addEventListener('click', function () {
     result.hidden = true; form.hidden = false;
+    if (form.classList.contains('fp-wizard')) goStep(0);
     window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   });
+
+  // ── one question at a time: the wizard (no-JS keeps the full form) ──
+  var steps = Array.prototype.slice.call(form.querySelectorAll('.fp-q')), cur = 0;
+  var backBtn = document.getElementById('fp-back'), countEl = document.getElementById('fp-count'),
+      dotsEl = document.getElementById('fp-dots'), skipBtn = document.getElementById('fp-skip'),
+      goBtn = form.querySelector('.fp-go'), reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function goStep(i) {
+    cur = Math.max(0, Math.min(steps.length - 1, i));
+    steps.forEach(function (fs, k) {
+      fs.classList.remove('fp-in');
+      fs.hidden = k !== cur;
+      if (k === cur && !reduce) { void fs.offsetWidth; fs.classList.add('fp-in'); }
+    });
+    backBtn.disabled = cur === 0;
+    countEl.textContent = 'Question ' + (cur + 1) + ' of ' + steps.length;
+    dotsEl.innerHTML = steps.map(function (fs, k) { return '<i class="' + (k === cur ? 'on' : (k < cur ? 'done' : '')) + '"></i>'; }).join('');
+    var last = cur === steps.length - 1;
+    skipBtn.hidden = !(last);   // the region question is optional
+    goBtn.hidden = !last;
+    document.getElementById('fp-err').hidden = true;
+    var first = steps[cur].querySelector('input');
+    if (first) first.focus({ preventScroll: true });
+  }
+  if (steps.length === 4) {
+    form.classList.add('fp-wizard');
+    document.getElementById('fp-progress').hidden = false;
+    goStep(0);
+    backBtn.addEventListener('click', function () { goStep(cur - 1); });
+    skipBtn.addEventListener('click', function () { form.dispatchEvent(new Event('submit', { cancelable: true })); });
+    form.addEventListener('change', function (e) {
+      if (!e.target.matches('input[type=radio]')) return;
+      if (cur < steps.length - 1) setTimeout(function () { goStep(cur + 1); }, reduce ? 0 : 260);
+    });
+    form.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && cur < steps.length - 1) {
+        e.preventDefault();
+        var name = steps[cur].querySelector('input').name;
+        if (form.querySelector('input[name="' + name + '"]:checked')) goStep(cur + 1);
+      }
+    });
+  }
   // returning with a saved type: offer the result straight away
   try {
     var prev = JSON.parse(localStorage.getItem('epoch-reader-type') || 'null');

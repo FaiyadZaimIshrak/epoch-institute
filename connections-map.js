@@ -129,7 +129,7 @@ var ConnectionsMap = (function () {
     // phones: a tall layout with fewer nodes, so that labels stay readable
     opts.narrow = !opts.compact && el.clientWidth > 0 && el.clientWidth < 600;
     return load().then(function () {
-      if (!BY[id]) { el.innerHTML = '<p class="cm-empty">This entity is not in the register yet.</p>'; return; }
+      if (!BY[id]) { el.innerHTML = '<p class="cm-empty">This entity is not yet among the recorded states.</p>'; return; }
       var h = hood(id, opts), n1all = h.order1.length + h.groups.length, W = opts.compact ? 760 : (opts.narrow ? 520 : 1000), H = opts.compact ? 380 : (opts.narrow ? 760 : 640 + Math.max(0, n1all - 30) * 14), cx = W / 2, cy = H / 2;
       var R1 = Math.min(W, H) * (opts.compact ? 0.30 : 0.27), R2 = Math.min(W, H) * (opts.compact ? 0.42 : 0.43), R3 = Math.min(W, H) * 0.49;
       var st1 = W / H > 1.6 ? 1.6 : 1.25, st2 = W / H > 1.6 ? 1.6 : 1.3, st3 = W / H > 1.6 ? 1.95 : 1.5;

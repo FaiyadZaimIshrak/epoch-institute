@@ -1072,7 +1072,7 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
   $crumb = Crumbs @(@('Home', '/'), @('Countries', '/countries/'), @($m, $null))
   $sb = New-Object Text.StringBuilder(60000)
   [void]$sb.Append('<main id="main" class="cty-page ref-page">' + "`n<div class=`"cty-wrap`">`n" + $crumb[0] + "`n")
-  $lede = $CLIST.Count.ToString('N0') + ' states of the register lay in what is now ' + (Hx (TheCountry $m)) + $(if ($first) { ', from ' + (Hx ([string]$first['n'])) + ' (' + (Hx (Yr $first['s'])) + ')' } else { '' }) +
+  $lede = $CLIST.Count.ToString('N0') + ' recorded states lay in what is now ' + (Hx (TheCountry $m)) + $(if ($first) { ', from ' + (Hx ([string]$first['n'])) + ' (' + (Hx (Yr $first['s'])) + ')' } else { '' }) +
     $(if ($living.Count) { ' to ' + (Hx (TheCountry ([string]$living[-1]['n']))) } else { '' }) + '. ' + $(if ($profs.Count) { $profs.Count.ToString() + ' of them ' + $(if ($profs.Count -eq 1) { 'has' } else { 'have' }) + ' a full profile' + $(if ($ruled.Count) { ', and ' + $ruled.Count + ' outside ' + $(if ($ruled.Count -eq 1) { 'power' } else { 'powers' }) + ' ruled here' } else { '' }) + '.' } elseif ($ruled.Count) { $ruled.Count.ToString() + ' outside ' + $(if ($ruled.Count -eq 1) { 'power' } else { 'powers' }) + ' ruled here.' } else { '' })
   [void]$sb.Append('<header class="ref-head cty-head"><p class="cty-kicker">Country history' + $(if ($cont) { ' · ' + (Hx $cont) } else { '' }) + '</p><h1 class="research-title">History of ' + (Hx (TheCountry $m)) + '</h1><p class="ref-lede">' + $lede + "</p></header>`n")
   [void]$sb.Append($mapHtml + "`n")
@@ -1150,7 +1150,7 @@ for ($ci = 0; $ci -lt $CENTPAGES.Count; $ci++) {
   $crumb = Crumbs @(@('Home', '/'), @('Centuries', '/centuries/'), @($ct, $null))
   $sb = New-Object Text.StringBuilder(60000)
   [void]$sb.Append('<main id="main" class="cen-page ref-page">' + "`n<div class=`"cen-wrap`">`n" + $crumb[0] + "`n")
-  $lede = 'In ' + $dec + ', ' + $cs.alive.Count.ToString('N0') + ' states of the register existed somewhere in the world. ' + $cs.founded.Count.ToString('N0') + ' were founded and ' + $cs.ended.Count.ToString('N0') + ' came to an end. ' +
+  $lede = 'In ' + $dec + ', ' + $cs.alive.Count.ToString('N0') + ' recorded states existed somewhere in the world. ' + $cs.founded.Count.ToString('N0') + ' were founded and ' + $cs.ended.Count.ToString('N0') + ' came to an end. ' +
     $(if ($pw.Count) { 'The great powers of the age included ' + (ProseList @($pw | Select-Object -First 3 | ForEach-Object { 'the ' + (Hx ([string]$_['name'])) })) + '.' } else { '' })
   [void]$sb.Append('<header class="ref-head cen-head"><p class="cty-kicker">History by century · ' + (Hx ($dec.Substring(0, 1).ToUpperInvariant() + $dec.Substring(1))) + '</p><h1 class="research-title">The ' + (Hx $ct) + '</h1><p class="ref-lede">' + $lede + "</p></header>`n")
   $bar = '<nav class="ref-letters ref-centuries" aria-label="Centuries">' + (($CENTPAGES | ForEach-Object { '<a href="/centuries/' + (CenturySlug $_) + '"' + $(if ($_ -eq $c) { ' aria-current="page"' } else { '' }) + '>' + (Hx ($_ -replace ' century', ' c.')) + '</a>' }) -join '') + '</nav>'
@@ -1201,7 +1201,7 @@ $sb = New-Object Text.StringBuilder(30000)
 [void]$sb.Append('<main id="main" class="cen-page ref-page">' + "`n<div class=`"cen-wrap`">`n" + $crumb[0] + "`n")
 [void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">History by Century</h1><p class="ref-lede">Five thousand years, one century at a time: the states and great powers of each age, its key events and people, and a map of the world at mid-century.</p></header>' + "`n")
 [void]$sb.Append('<figure class="cen-hist"><ol class="cen-bars">' + (($CENTPAGES | ForEach-Object { $ii = $CENTINFO[$_]; '<li><a href="/centuries/' + $ii.slug + '" title="' + (Hx (CentTitle $_)) + ': ' + $ii.alive + ' states"><span class="cen-bar" style="height:' + ([Math]::Max(2, $ii.alive / $maxA * 100)).ToString('0.0', $INV) + '%"></span><span class="cen-lbl">' + (Hx (($_ -replace ' century', '') -replace ' BCE', ' BC')) + '</span></a></li>' }) -join '') +
-  '</ol><figcaption>States of the register alive in each century</figcaption></figure>' + "`n")
+  '</ol><figcaption>Recorded states alive in each century</figcaption></figure>' + "`n")
 [void]$sb.Append('<ul class="cen-cards">')
 foreach ($c in $CENTPAGES) {
   $ii = $CENTINFO[$c]
@@ -1241,13 +1241,18 @@ Emit '/encyclopedia/glossary' (Page @{ title = $title; desc = $desc; path = '/en
 $rpText = [IO.File]::ReadAllText("$Repo\reading-paths.js", $U8); $i0 = $rpText.IndexOf('var READING_PATHS = ') + 20; $i1 = $rpText.LastIndexOf('];')
 $RP = @($JSS.DeserializeObject([EpochBuild.W]::QuoteKeys($rpText.Substring($i0, $i1 - $i0 + 1)))); $rpText = $null
 function PathThumbs($p) { (@($p['steps']) | Where-Object { $_['img'] } | Select-Object -First 3 | ForEach-Object { '<img src="' + (Hx ([string]$_['img'])) + '" alt="" loading="lazy" width="64" height="64">' }) -join '' }
-function PathCard($p) { '<a class="path-card" href="/paths/' + $p['slug'] + '"><span class="path-thumbs">' + (PathThumbs $p) + '</span><span class="path-card-body"><span class="featured-region">' + @($p['steps']).Count + ' stops</span><span class="path-card-title">' + (Hx ([string]$p['title'])) + '</span><span class="path-card-tag">' + (Hx ([string]$p['tagline'])) + '</span></span></a>' }
+$RTYPE = @{ strategist = 'the Strategist'; navigator = 'the Navigator'; thinker = 'the Thinker'; chronicler = 'the Chronicler'; builder = 'the Builder'; timekeeper = 'the Timekeeper' }
+function PathTypes($p) {   # the reader types this path suits (from /start), as a small badge line
+  if (-not $p['types'] -or -not @($p['types']).Count) { return '' }
+  '<p class="path-types">Suits <a href="/start">' + ((@($p['types']) | ForEach-Object { Hx ([string]$RTYPE[[string]$_]) }) -join '</a> · <a href="/start">') + '</a></p>'
+}
+function PathCard($p) { '<a class="path-card" href="/paths/' + $p['slug'] + '"><span class="path-thumbs">' + (PathThumbs $p) + '</span><span class="path-card-body"><span class="featured-region">' + @($p['steps']).Count + ' stops' + $(if ($p['types'] -and @($p['types']).Count) { ' · ' + ((@($p['types']) | ForEach-Object { [string]$RTYPE[[string]$_] }) -join ', ') } else { '' }) + '</span><span class="path-card-title">' + (Hx ([string]$p['title'])) + '</span><span class="path-card-tag">' + (Hx ([string]$p['tagline'])) + '</span></span></a>' }
 for ($pi2 = 0; $pi2 -lt $RP.Count; $pi2++) {
   $p = $RP[$pi2]; $slug = [string]$p['slug']; $path = '/paths/' + $slug; $steps = @($p['steps'])
   $crumb = Crumbs @(@('Home', '/'), @('Reading Paths', '/paths/'), @([string]$p['title'], $null))
   $sb = New-Object Text.StringBuilder(20000)
   [void]$sb.Append('<main id="main" class="paths-page ref-page">' + "`n<div class=`"paths-wrap`">`n" + $crumb[0] + "`n<article class=`"path-view`">`n")
-  [void]$sb.Append('<div class="path-head"><p class="featured-region">Reading path · ' + $steps.Count + ' stops</p><h1 class="path-title">' + (Hx ([string]$p['title'])) + '</h1><p class="path-tagline">' + (Hx ([string]$p['tagline'])) + '</p><p class="path-intro">' + (Hx ([string]$p['intro'])) + "</p></div>`n<ol class=`"path-steps`">")
+  [void]$sb.Append('<div class="path-head"><p class="featured-region">Reading path · ' + $steps.Count + ' stops</p><h1 class="path-title">' + (Hx ([string]$p['title'])) + '</h1><p class="path-tagline">' + (Hx ([string]$p['tagline'])) + '</p><p class="path-intro">' + (Hx ([string]$p['intro'])) + '</p>' + (PathTypes $p) + "</div>`n<ol class=`"path-steps`">")
   for ($k = 0; $k -lt $steps.Count; $k++) {
     $s = $steps[$k]
     [void]$sb.Append('<li><a class="path-step" href="' + (Hx ([string]$s['href'])) + '">' + $(if ($s['img']) { '<img src="' + (Hx ([string]$s['img'])) + '" alt="" loading="lazy" width="96" height="96">' } else { '<span class="path-step-ph">' + ($k + 1) + '</span>' }) +
@@ -1270,9 +1275,64 @@ $body = "<script>(function(){var h=location.hash.slice(1);if(/^[a-z0-9-]+`$/.tes
   '<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Reading Paths</h1><p class="ref-lede">Curated routes through the profiles and the encyclopedia. Pick a theme and follow it across empires, people and events, one stop at a time.</p></header>' + "`n" +
   '<div class="paths-grid">' + (($RP | ForEach-Object { PathCard $_ }) -join '') + "</div>`n</div>`n</main>`n"
 $title = 'Reading Paths Through World History — The Epoch Institute'
-$desc = 'Curated routes through The Epoch Institute''s profiles and encyclopedia: the Silk Road, steppe empires, religion and power, and more.'
+$desc = 'Curated routes through world history: the Silk Road, the steppe empires, the crusades, great conquerors and explorers, one stop at a time.'
 Emit '/paths/' (Page @{ title = $title; desc = $desc; path = '/paths/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/paths/") + '}'); nav = 'paths'; body = $body })
 Say "glossary: $($TERMS.Count) terms; reading paths: $($RP.Count)"
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Great Speeches: /speeches/<slug> (the setting, the famous words and their source, what followed, connected entries)
+# and /speeches/ by era. Data: speeches-data.js (short passages only; see its header).
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+$spText = [IO.File]::ReadAllText("$Repo\speeches-data.js", $U8); $i0 = $spText.IndexOf('var SPEECHES = ') + 15; $i1 = $spText.LastIndexOf('];')
+# QuoteKeys quotes a key only right after { or , - so drop the line breaks first (no string value holds one)
+$SPS = @($JSS.DeserializeObject([EpochBuild.W]::QuoteKeys($spText.Substring($i0, $i1 - $i0 + 1).Replace("`r", '').Replace("`n", '')))); $spText = $null
+$SPS = @($SPS | Sort-Object @{ e = { [double]$_['year'] } })
+$SPERA = [ordered]@{ ancient = 'The ancient world'; medieval = 'The medieval world'; earlymodern = 'The early modern world'; revolutions = 'The age of revolutions'; nineteenth = 'The nineteenth century'; twentieth = 'The twentieth century' }
+function SpChip([string]$pair) { $q = $pair -split '\|', 2; '<a class="tih-tag' + $(if ($q[0] -like '/empire/*') { ' tih-tag-profile' } else { ' enc-link' }) + '" href="' + (Hx $q[0]) + '">' + (Hx $q[1]) + '</a>' }
+for ($si = 0; $si -lt $SPS.Count; $si++) {
+  $s = $SPS[$si]; $slug = [string]$s['slug']; $path = '/speeches/' + $slug
+  $crumb = Crumbs @(@('Home', '/'), @('Great Speeches', '/speeches/'), @([string]$s['title'], $null))
+  $isPara = ([string]$s['kind'] -eq 'paraphrase'); $isCopy = [bool]$s['copyright']
+  $spk = if ($s['speakerSlug'] -and $BY.ContainsKey([string]$s['speakerSlug'])) { '<a class="enc-link" href="/encyclopedia/' + $s['speakerSlug'] + '">' + (Hx ([string]$s['speaker'])) + '</a>' } else { Hx ([string]$s['speaker']) }
+  $chips = New-Object Text.StringBuilder
+  if ($s['empire']) { [void]$chips.Append((SpChip ([string]$s['empire']))) }
+  foreach ($l in @($s['links'])) { if ($l) { [void]$chips.Append((SpChip ([string]$l))) } }
+  $sb = New-Object Text.StringBuilder(9000)
+  [void]$sb.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n<article class=`"sp-view`">`n")
+  [void]$sb.Append('<header class="sp-head"><p class="featured-region">' + (Hx ([string]$s['display'])) + ' · ' + (Hx ([string]$s['place'])) + '</p><h1 class="sp-title">' + (Hx ([string]$s['title'])) + '</h1><p class="sp-by">' + $spk + "</p></header>`n")
+  [void]$sb.Append('<section class="sp-sec"><h2>The setting</h2><p>' + (Hx ([string]$s['before'])) + "</p></section>`n")
+  [void]$sb.Append('<section class="sp-sec"><h2>' + $(if ($isPara) { 'In substance' } else { 'The words' }) + '</h2>' +
+    $(if ($isPara) { '<p class="sp-para">' + (Hx ([string]$s['excerpt'])) + '</p>' } else { '<blockquote class="sp-quote"><p>' + (Hx ([string]$s['excerpt'])) + '</p></blockquote>' }) +
+    '<p class="sp-source">' + (Hx ([string]$s['source'])) + $(if ($isCopy) { ' Quoted briefly: the full text is still under copyright.' } else { '' }) + "</p></section>`n")
+  [void]$sb.Append('<section class="sp-sec"><h2>What followed</h2><p>' + (Hx ([string]$s['after'])) + "</p></section>`n")
+  if ($chips.Length) { [void]$sb.Append('<section class="sp-sec"><h2>Connected</h2><div class="tih-tags">' + $chips.ToString() + "</div></section>`n") }
+  $pv = $SPS[($si - 1 + $SPS.Count) % $SPS.Count]; $nx = $SPS[($si + 1) % $SPS.Count]
+  [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other speeches"><a class="prev" rel="prev" href="/speeches/' + $pv['slug'] + '"><span class="lbl">&larr; Earlier speech</span><span class="nm">' + (Hx ([string]$pv['title'])) + '</span></a><a class="next" rel="next" href="/speeches/' + $nx['slug'] + '"><span class="lbl">Later speech &rarr;</span><span class="nm">' + (Hx ([string]$nx['title'])) + "</span></a></nav>`n")
+  [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/speeches/">All great speeches &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n")
+  $title = [string]$s['title'] + ' (' + [string]$s['display'] + ') — Great Speeches — The Epoch Institute'
+  $desc = [EpochBuild.W]::Summary([string]$s['before'], 155)
+  $ld = $crumb[1] + ',' + (ArticleLd ([string]$s['title']) $desc $path 'Event' ([string]$s['title']) $null $null)
+  if (-not $isPara) { $ld += ',{"@type":"Quotation","text":' + (Js ([string]$s['excerpt'])) + ',"creator":{"@type":"Person","name":' + (Js ([string]$s['speaker'])) + '}}' }
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'article'; ld = $ld; nav = 'speeches'; body = $sb.ToString() })
+}
+$crumb = Crumbs @(@('Home', '/'), @('Great Speeches', $null))
+$ib = New-Object Text.StringBuilder
+[void]$ib.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n")
+[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Great Speeches</h1><p class="ref-lede">' + $SPS.Count + ' speeches that moved history, from Pericles to Mandela. Each gives the setting, the famous words with their source, and what followed.</p></header>' + "`n")
+foreach ($era in $SPERA.Keys) {
+  $grp = @($SPS | Where-Object { [string]$_['era'] -eq $era }); if (-not $grp.Count) { continue }
+  [void]$ib.Append('<section class="sp-era"><h2 class="ref-sec-title">' + $SPERA[$era] + '</h2><div class="sp-grid">')
+  foreach ($s in $grp) {
+    $para = ([string]$s['kind'] -eq 'paraphrase')
+    [void]$ib.Append('<a class="sp-card" href="/speeches/' + $s['slug'] + '"><span class="sp-card-k">' + (Hx ([string]$s['display'])) + '</span><span class="sp-card-t">' + (Hx ([string]$s['title'])) + '</span><span class="sp-card-q">' + $(if ($para) { 'In substance: ' + (Hx ([string]$s['excerpt'])) } else { '&ldquo;' + (Hx ([string]$s['excerpt'])) + '&rdquo;' }) + '</span><span class="sp-card-by">' + (Hx ([string]$s['speaker'])) + '</span></a>')
+  }
+  [void]$ib.Append("</div></section>`n")
+}
+[void]$ib.Append("</div>`n</main>`n")
+$title = 'Great Speeches in History: The Words That Moved the World — The Epoch Institute'
+$desc = 'Great speeches that moved history, from Pericles to Mandela: the setting, the famous words and their source, and what followed.'
+Emit '/speeches/' (Page @{ title = $title; desc = $desc; path = '/speeches/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/speeches/") + '}'); nav = 'speeches'; body = $ib.ToString() })
+Say "great speeches: $($SPS.Count)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Atlas: maps/atlas-data.js (states), maps/basemap.js (outlines for the atlas page), maps/world.svg (picture for small maps)
@@ -1362,7 +1422,7 @@ $nImg = @($ENT | Where-Object { $_.img }).Count; $nTih = 0; foreach ($k in $DAYS
 $SECTIONS = [ordered]@{
   profiles     = @{ t = 'Profiles'; h = '/profiles'; k = "$($EMPS.Count) profiles"; d = 'In-depth histories of states and empires: how each rose, lived, fought, governed and fell, with key facts and timelines.'; pic = @('colosseum', 'augustus', 'hagia-sophia') }
   encyclopedia = @{ t = 'Encyclopedia'; h = '/encyclopedia/'; k = $NENT.ToString('N0') + ' entries'; d = "People, places, events, institutions and ideas, with $($nImg.ToString('N0')) historical pictures."; pic = @('library-of-alexandria', 'house-of-wisdom', 'encyclopedie') }
-  states       = @{ t = 'States'; h = '/state/'; k = $POL['nodes'].Count.ToString('N0') + ' states'; d = 'Every kingdom, principality, republic and chiefdom of the register, with its lineage and connections.'; pic = @('peace-of-westphalia', 'congress-of-vienna') }
+  states       = @{ t = 'States'; h = '/state/'; k = $POL['nodes'].Count.ToString('N0') + ' states'; d = 'Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.'; pic = @('peace-of-westphalia', 'congress-of-vienna') }
   atlas        = @{ t = 'Atlas'; h = '/atlas'; k = 'From ' + (Yr $minS) + ' to today'; d = 'The world in any year: slide through five thousand years and watch states appear and vanish.'; pic = @('catalan-atlas', 'tabula-rogeriana', 'cantino-planisphere', 'piri-reis-map') }
   countries    = @{ t = 'Country Histories'; h = '/countries/'; k = "$($CPAGE.Count) countries"; d = 'The history of each present-day country, told through the states that lay on its soil.'; pic = @('great-wall-of-china', 'machu-picchu', 'petra') }
   centuries    = @{ t = 'Centuries'; h = '/centuries/'; k = "$($CENTPAGES.Count) centuries"; d = 'World history one century at a time: the great powers, key events, people and a map.'; pic = @('bayeux-tapestry', 'battle-of-hastings', 'magna-carta') }
@@ -1393,7 +1453,7 @@ foreach ($n in $POL['nodes']) {
   if ($hg.Length) { [void]$hg.Append(',') }
   [void]$hg.Append([int][Math]::Round($ll[0] * 100)).Append(',').Append([int][Math]::Round($ll[1] * 100)).Append(',').Append($(if ($n['p']) { 1 } else { 0 }))
 }
-SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?year=1000" aria-label="Open the atlas at the year 1000">' + (MapSvg ([double[]]@(0, 20, 1000, ($MAPH - 20))) $hm[0] 'World map: the states that existed in the year 1000' 'map-world') + '<canvas id="home-globe" aria-hidden="true" hidden></canvas>' + '</a><figcaption>The world in 1000 CE: <b>' + $hm[1] + ' states</b> of the register. <a href="/atlas?year=1000">Travel through time in the atlas &rarr;</a></figcaption>' +
+SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?year=1000" aria-label="Open the atlas at the year 1000">' + (MapSvg ([double[]]@(0, 20, 1000, ($MAPH - 20))) $hm[0] 'World map: the states that existed in the year 1000' 'map-world') + '<canvas id="home-globe" aria-hidden="true" hidden></canvas>' + '</a><figcaption>The world in 1000 CE: <b>' + $hm[1] + ' recorded states</b>. <a href="/atlas?year=1000">Travel through time in the atlas &rarr;</a></figcaption>' +
   '<script>var HOME_GLOBE=[' + $hg.ToString() + '];var HOME_GLOBE_SRC="/maps/globe-land.js?v=' + $GLOBEV + '";</script></figure>')
 SetBlock "$Repo\index" 'home-centuries' ('<ol class="cen-bars cen-bars-home">' + (($CENTPAGES | ForEach-Object { $ii = $CENTINFO[$_]; '<li><a href="/centuries/' + $ii.slug + '" title="' + (Hx (CentTitle $_)) + ': ' + $ii.alive + ' states"><span class="cen-bar" style="height:' + ([Math]::Max(2, $ii.alive / $maxA * 100)).ToString('0.0', $INV) + '%"></span><span class="cen-lbl">' + (Hx (($_ -replace ' century', '') -replace ' BCE', ' BC')) + '</span></a></li>' }) -join '') + '</ol>')
 SetBlock "$Repo\index" 'home-countries' ('<ul class="cty-chips">' + ((@($CINFO.Keys | Sort-Object @{ e = { $CINFO[$_].n }; Descending = $true } | Select-Object -First 18) | ForEach-Object { '<li><a href="/countries/' + $CINFO[$_].slug + '">' + (Hx $_) + ' <span>' + $CINFO[$_].n + '</span></a></li>' }) -join '') + '<li><a class="cty-all" href="/countries/">All ' + $CPAGE.Count + ' countries &rarr;</a></li></ul>')
@@ -1495,9 +1555,9 @@ Say ("open data: {0} states ({1} placed), {2} relations, {3} curve points" -f $o
 
 # stale generated pages (entries, states or days that no longer exist)
 $htPlain = "# Generated by scripts/build-pages.ps1: the pages in this folder are extensionless HTML.`n<FilesMatch `"^[a-z0-9-]+$`">`n  ForceType text/html`n</FilesMatch>`n"
-foreach ($dir in 'countries', 'centuries', 'paths') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
+foreach ($dir in 'countries', 'centuries', 'paths', 'speeches') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
 $nDel = 0
-foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths') {
+foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches') {
   $full = Join-Path $Repo $dir; if (-not (Test-Path $full)) { continue }
   foreach ($f in Get-ChildItem $full -File) {
     if ($f.Extension -or $f.Name -eq 'index' -or $f.Name.StartsWith('.')) { continue }
@@ -1506,7 +1566,7 @@ foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts'
 }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }
