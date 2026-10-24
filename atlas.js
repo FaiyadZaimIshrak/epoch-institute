@@ -310,7 +310,7 @@
     var ready = false, failed = false, waiting = [];
     var proj = null, path = null, geo = null, grat = null, ctx = null;
     var G = { k: 1, rot: [-10, -15] };   // rotate([-lng, -lat]) of the facing point; k: zoom 1..12
-    var R = 100, dpr = 1, base = null, baseCtx = null, baseDirty = true, drawRaf = null;
+    var R = 100, dpr = 1, base = null, baseCtx = null, baseDirty = true, drawRaf = null, flickOn = false;
     function kFor(spanDeg) { return Math.max(1, Math.min(12, 1.8 / (spanDeg * D2R))); }
     function rect() { return canvas.getBoundingClientRect(); }
     function colours() {
@@ -374,7 +374,7 @@
       baseCtx.restore();
       baseCtx.beginPath(); p2(grat); baseCtx.strokeStyle = 'rgba(' + c.g + ',0.14)'; baseCtx.lineWidth = 0.6 * dpr; baseCtx.stroke();
       baseCtx.beginPath(); p2(geo); baseCtx.fillStyle = 'rgba(' + c.g + ',0.13)'; baseCtx.fill();
-      baseCtx.strokeStyle = 'rgba(' + c.g + ',0.45)'; baseCtx.lineWidth = 0.7 * dpr; baseCtx.lineJoin = 'round'; baseCtx.stroke();
+      baseCtx.strokeStyle = flickOn ? c.goldL : 'rgba(' + c.g + ',0.45)'; baseCtx.lineWidth = (flickOn ? 1.4 : 0.7) * dpr; baseCtx.lineJoin = 'round'; baseCtx.stroke();
       baseCtx.beginPath(); p2({ type: 'Sphere' }); baseCtx.strokeStyle = 'rgba(' + c.g + ',0.4)'; baseCtx.lineWidth = 1 * dpr; baseCtx.stroke();
       baseDirty = false;
     }
@@ -518,7 +518,8 @@
     // theme switches repaint the cached base
     new MutationObserver(function () { baseDirty = true; draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     return { load: load, resize: resize, draw: draw, rotateTo: rotateTo, zoomBy: zoomBy, reset: reset, kFor: kFor,
-      nearest: nearestG, pointOf: pointOf, rect: rect, get k() { return G.k; } };
+      nearest: nearestG, pointOf: pointOf, rect: rect, get k() { return G.k; },
+      flick: function (on) { flickOn = on; baseDirty = true; draw(); } };
   })();
 
   // ── the view toggle ──
@@ -551,6 +552,16 @@
 
   // ── start ──
   slider.value = year;
+  function flickBorders() {   // arriving from a state, country or profile page: the borders blink for two seconds
+    if (reduced()) return;
+    var n = 0, land = $('atl-land');
+    var t = setInterval(function () {
+      n++;
+      var on = n % 2 === 1 && n < 8;
+      if (isG()) GL.flick(on); else land.classList.toggle('atl-flick', on);
+      if (n >= 8) clearInterval(t);
+    }, 250);
+  }
   function begin() {
     paintToggle();
     render(true);
@@ -563,6 +574,7 @@
       else fitBox(cv[1], cv[2], cv[3], cv[4]);
       $('atl-place').textContent = ' · in the world; map centred on present-day ' + cv[0];
     }
+    if ((f && byId[f]) || (c && A.countries[c])) setTimeout(flickBorders, 750);   // once the turn has landed
   }
   if (isG()) {
     GL.load(function (ok) {

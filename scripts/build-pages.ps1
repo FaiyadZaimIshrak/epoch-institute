@@ -1346,7 +1346,17 @@ SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (
 SetBlock "$Repo\research" 'hub' ('<ul class="hub-grid">' + (($SECTIONS.Keys | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul>')
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'atlas', 'countries', 'centuries', 'explorer', 'paths') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
 $hm = WorldDots 1000
-SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?year=1000" aria-label="Open the atlas at the year 1000">' + (MapSvg ([double[]]@(0, 20, 1000, ($MAPH - 20))) $hm[0] 'World map: the states that existed in the year 1000' 'map-world') + '</a><figcaption>The world in 1000 CE: <b>' + $hm[1] + ' states</b> of the register. <a href="/atlas?year=1000">Travel through time in the atlas &rarr;</a></figcaption></figure>')
+# the hero globe's points: the states of 1000 CE as [lng100, lat100, profile] triplets (the page spins them client-side)
+$hg = New-Object Text.StringBuilder
+foreach ($n in $POL['nodes']) {
+  if (-not (Alive $n 1000)) { continue }
+  $q = $STATEXY[[string]$n['id']]; if (-not $q -or $q[2]) { continue }   # approximate places stay off the hero, as on the flat strip
+  $ll = [EpochGeo.G]::Inv([double]$q[0], [double]$q[1])
+  if ($hg.Length) { [void]$hg.Append(',') }
+  [void]$hg.Append([int][Math]::Round($ll[0] * 100)).Append(',').Append([int][Math]::Round($ll[1] * 100)).Append(',').Append($(if ($n['p']) { 1 } else { 0 }))
+}
+SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?year=1000" aria-label="Open the atlas at the year 1000">' + (MapSvg ([double[]]@(0, 20, 1000, ($MAPH - 20))) $hm[0] 'World map: the states that existed in the year 1000' 'map-world') + '<canvas id="home-globe" aria-hidden="true" hidden></canvas>' + '</a><figcaption>The world in 1000 CE: <b>' + $hm[1] + ' states</b> of the register. <a href="/atlas?year=1000">Travel through time in the atlas &rarr;</a></figcaption>' +
+  '<script>var HOME_GLOBE=[' + $hg.ToString() + '];var HOME_GLOBE_SRC="/maps/globe-land.js?v=' + $GLOBEV + '";</script></figure>')
 SetBlock "$Repo\index" 'home-centuries' ('<ol class="cen-bars cen-bars-home">' + (($CENTPAGES | ForEach-Object { $ii = $CENTINFO[$_]; '<li><a href="/centuries/' + $ii.slug + '" title="' + (Hx (CentTitle $_)) + ': ' + $ii.alive + ' states"><span class="cen-bar" style="height:' + ([Math]::Max(2, $ii.alive / $maxA * 100)).ToString('0.0', $INV) + '%"></span><span class="cen-lbl">' + (Hx (($_ -replace ' century', '') -replace ' BCE', ' BC')) + '</span></a></li>' }) -join '') + '</ol>')
 SetBlock "$Repo\index" 'home-countries' ('<ul class="cty-chips">' + ((@($CINFO.Keys | Sort-Object @{ e = { $CINFO[$_].n }; Descending = $true } | Select-Object -First 18) | ForEach-Object { '<li><a href="/countries/' + $CINFO[$_].slug + '">' + (Hx $_) + ' <span>' + $CINFO[$_].n + '</span></a></li>' }) -join '') + '<li><a class="cty-all" href="/countries/">All ' + $CPAGE.Count + ' countries &rarr;</a></li></ul>')
 
