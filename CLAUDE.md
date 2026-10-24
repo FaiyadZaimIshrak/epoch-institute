@@ -101,7 +101,7 @@ After deploying, run scripts/ping-indexnow.ps1: it submits the pages the last bu
 
 ## Indexable reference pages (SEO)
 scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-8 BOM) writes from the data:
-- `/encyclopedia/<slug>` — 31,955 entry pages: description gold-linked at build time with the encyclopedia page's
+- `/encyclopedia/<slug>` — 32,011 entry pages: description gold-linked at build time with the encyclopedia page's
   rules (scripts/lib/enc-fn.ps1, a copy of the scratchpad enc2/enc-fn.ps1 — keep both in step with ENC_FN), picture
   and credit, profiles and state histories that mention it, a war's battles, see also, previous/next A–Z entry,
   citations; `/encyclopedia/browse/<letter>[-n]` (A–Z, 100 a page), `/encyclopedia/conflicts/<century>`;
@@ -124,7 +124,7 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   alive, times strength on the profile's own curve), key events, people, works and ideas (ranked by profile and
   state mentions and a picture), states founded / ended, On this day, prev/next. Century labels follow the
   encyclopedia's Century(): 13th century = 1200–1299, 5th century BCE = 499–400 BCE.
-- `/encyclopedia/glossary` — the 721 term entries A–Z (DefinedTermSet JSON-LD).
+- `/encyclopedia/glossary` — the 723 term entries A–Z (DefinedTermSet JSON-LD).
 - `/paths/<slug>` + `/paths/` — the 28 reading paths from reading-paths.js, each tagged with the /start reader types it suits (types:[…] in paths.json; shown as "Suits the …" on the page and card); /paths#slug forwards to /paths/slug.
 - `maps/atlas-data.js`, `maps/basemap.js`, `maps/world.svg` (see "Atlas and maps"), their ?v= stamped into /atlas.
 - The `<!-- build:... -->` blocks of encyclopedia/index, state/index, today-in-history/index, research (hub: every
@@ -175,7 +175,7 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
 ## Encyclopedia
 - `encyclopedia/` index page (top-level nav item): search, type and conflict filters, 50 results a page, A–Z and
   century lists when nothing is searched; every entry has its own page at `/encyclopedia/<slug>`.
-- `encyclopedia-data.js` — 31,955 entries (slug, name, type, aka, dates, desc, img, credit, tags, war, empires), 21,801
+- `encyclopedia-data.js` — 32,011 entries (slug, name, type, aka, dates, desc, img, credit, tags, war, empires), 21,801
   with a picture. Generated.
   The entries added in Oct 2026 (people, places, events named in the state histories and profiles) were merged by scratchpad
   states/desc/enc-merge.ps1, which always starts from the saved originals (enc-orig/). Duplicate subjects are folded via
@@ -231,20 +231,38 @@ which never shows once a reader type exists. The homepage also shows "Continue w
 ≥2 items) instead of the banner.
 
 ## /games — History Games
-Hand page, three client-side games with per-game bests in localStorage epoch-games: Emblem Pairs (8 pairs of
-logos/thumbs from search-profiles.js), Order the Ages (5 dated HOME_ENTRIES from home-data.js, tap to swap,
-check), Globe Hunt (d3 orthographic globe + maps/globe-land.js + maps/atlas-data.js profile points; tap where a
-state lay, scored by great-circle distance, 5 rounds). Note: SEARCH_PROFILES is a top-level const, so it is not on
-window — test with typeof.
+Hand page, three client-side games behind tabs with a sliding marker (#pairs/#order/#hunt deep links; last tab in
+localStorage epoch-games-tab). Level switches (segmented buttons) and bests are kept in localStorage epoch-games.
+- Emblem Pairs: 3-D flip cards, Easy/Medium/Hard = 6/8/10 pairs, timer, stars, "New best". Cards come only from
+  games-emblems.js: GAME_EMBLEMS (199 profile emblems that are flags or coats of arms: no maps, portraits, coins,
+  statues or lettered placeholders) and GAME_EMBLEM_CLASH (index pairs alike in colour, never dealt together).
+  Written by scratchpad games/emblem-sort.ps1 (state profiles judged by the Wikimedia file name of their picture
+  credit, the 94 empires by labelled contact sheets) and games/emblem-final.ps1 (hand list of look-alikes, 8x6
+  colour signatures). Re-run both when logos change and bump games-emblems.js?v=.
+- Order the Ages: 5 dated HOME_ENTRIES (home-data.js); drag by the grip or tap two cards to swap (FLIP
+  animation), a staggered check, then the years and a timeline.
+- Globe Hunt: d3 orthographic globe loaded on first open; HUNT_SRC in the page holds the ?v= of maps/globe-land.js
+  and maps/atlas-data.js (stamped by build-pages.ps1). Famous states (profiles) or all states; drag with inertia,
+  wheel/pinch/± zoom, a hint (−20 points, names the region), a pin and a great-circle arc to the answer, 5 rounds
+  with medal dots and a summary.
 
 ## Great Speeches (/speeches/)
-speeches-data.js (SPEECHES, 28 speeches, Pericles to Mandela) → build-pages.ps1 writes /speeches/<slug> (setting,
-the words, what followed, connected chips) and /speeches/ grouped by era (ancient … twentieth). Each speech
-carries ONLY its famous passage, a sentence or two, with a source line: never full texts. copyright:true (Churchill,
-King, Mandela) adds a note; kind:"paraphrase" (Cixi's edict) renders as "In substance" without quotation marks.
-empire and links are "href|label" strings; every href must resolve (check-site). The data file breaks lines before
-keys, so the builder strips newlines before QuoteKeys. speeches/ has a builder-written .htaccess, the .cpanel.yml
-rsync --delete loop and the root /speeches → /speeches/ redirect.
+speeches-data.js (SPEECHES, 60 speeches, Pericles to Reagan) → build-pages.ps1 writes /speeches/<slug> (The
+setting, Key passage, What followed + "What it led to" chips, Connected chips) and /speeches/ grouped by era
+(ancient, medieval, earlymodern, revolutions, nineteenth, twentieth = to 1945, postwar). Each speech carries ONLY its
+key passage, a sentence or two, with a source line: never full texts. Instead full:"url|source" links the complete
+text where a free, reliable copy exists (38 of them: Wikisource, Avalon Project, Hansard, Fordham Sourcebooks,
+presidential libraries, the Mandela Foundation). Each URL was checked to hold the quoted speech itself, not just to
+load: a page of the same collection can hold another speech (the Wikisource "To the Army in Italy" is Napoleon's
+April 1796 proclamation, not the March one quoted, so that speech has no link). The builder reads SPEECHES before
+the entry pages, and every entry named as speaker, in links or in led lists those speeches ("Great speeches",
+above See also). copyright:true (Churchill, King,
+Mandela, de Gaulle, Mao, Nkrumah) adds a note; kind:"paraphrase" (Cixi, Moctezuma, Nasser) renders as "In substance"
+without quotation marks. empire, links and led are "href|label" strings; the builder reports unknown encyclopedia
+slugs and check-site every unresolved href. The data file breaks lines before keys, so the builder strips newlines
+before QuoteKeys (never put a line break inside a string). speeches/ has a builder-written .htaccess, the
+.cpanel.yml rsync --delete loop and the root /speeches → /speeches/ redirect. The Research Hub has a card for it
+and for /games.
 
 ## Voice
 Write in a general, academic register about the past itself. The encyclopedia no longer says "the X profile

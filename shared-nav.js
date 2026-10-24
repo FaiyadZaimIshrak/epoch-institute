@@ -168,7 +168,7 @@ function siteSearch(query) {
   out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
   return out.slice(0, 12);
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=7';   // also loaded by quiz.js for answer suggestions
+var SEARCH_INDEX_SRC = '/search-index.js?v=8';   // also loaded by quiz.js for answer suggestions
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=1';   // the 394 profiles, for pages without shared-data.js
 function initSiteSearch() {
   var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
