@@ -24,13 +24,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      HOST: ${{ secrets.CPANEL_HOST }}
+      RAW_HOST: ${{ secrets.CPANEL_HOST }}
       USER: ${{ secrets.CPANEL_USER }}
       TOKEN: ${{ secrets.CPANEL_API_TOKEN }}
       REPO_PATH: ${{ secrets.CPANEL_REPO_PATH }}
     steps:
       - name: Check secrets
         run: |
+          # forgive a pasted URL in CPANEL_HOST: strip the scheme, any path and any :port, and all whitespace
+          HOST=$(printf '%s' "$RAW_HOST" | tr -d '[:space:]')
+          HOST="${HOST#http://}"; HOST="${HOST#https://}"; HOST="${HOST%%/*}"; HOST="${HOST%%:*}"
+          echo "HOST=$HOST" >> "$GITHUB_ENV"
           for v in HOST USER TOKEN REPO_PATH; do
             [ -n "${!v}" ] || { echo "::error::Missing secret for $v"; exit 1; }
           done
