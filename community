@@ -399,7 +399,7 @@
 </div>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=23"></script>
+<script src="/shared-nav.js?v=24"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
 var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];

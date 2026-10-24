@@ -609,8 +609,10 @@ function initNav(activePage) {
     document.body.style.overflow = '';
     document.body.style.pointerEvents = '';
     document.querySelectorAll('.modal-overlay').forEach(function(el) {
-      el.style.display = 'none';
+      // close a modal left open across navigation, without pinning an inline display:none that would stop
+      // class-based modals (community's share form opens with .is-open) from ever opening again
       el.classList.remove('is-open', 'closing');
+      if (el.style.display && el.style.display !== 'none') el.style.display = 'none';
     });
   });
 
