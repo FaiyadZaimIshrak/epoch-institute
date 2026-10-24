@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=36">
+<link rel="stylesheet" href="/shared.css?v=37">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Atlas"}]},{"@type":"Map","name":"Atlas of States and Empires","url":"https://the-epoch-institute.org/atlas","description":"An interactive atlas of the states of the register in any year from 3000 BCE to today.","mapType":"https://schema.org/PoliticalMap","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -62,6 +62,10 @@
     </div>
   </div>
   <div class="atl-tools">
+    <div class="atl-viewtog" role="group" aria-label="Map view">
+      <button type="button" id="atl-v-globe" aria-pressed="true">&#9679; Globe</button>
+      <button type="button" id="atl-v-flat" aria-pressed="false">&#9645; Flat map</button>
+    </div>
     <div class="atl-presets" id="atl-presets" role="group" aria-label="Zoom to a region"></div>
     <div class="atl-filters">
       <label class="atl-check"><input type="checkbox" id="atl-prof"> Profiles only</label>
@@ -70,6 +74,7 @@
     </div>
   </div>
   <div class="atl-map" id="atl-map">
+    <canvas id="atl-globe" tabindex="0" role="img" aria-label="Globe of the states that existed in the chosen year. Drag to turn it; use the list below the map for the same states as links." hidden></canvas>
     <svg id="atl-svg" viewBox="0 0 10000 4393" tabindex="0" role="img" aria-label="World map of the states that existed in the chosen year. Use the list below the map for the same states as links.">
       <g id="atl-world">
         <path id="atl-edge" class="atl-edge"/>
@@ -85,7 +90,7 @@
     <div class="atl-tip" id="atl-tip" role="status" hidden></div>
     <noscript><p class="atl-none">The atlas needs JavaScript. The <a href="/state/">states register</a> and the <a href="/centuries/">century pages</a> list the same states.</p></noscript>
   </div>
-  <p class="atl-legend"><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span class="map-key"><i class="k-a"></i>Place approximate</span><span>Drag to move, scroll or pinch to zoom. Present-day borders are shown for orientation.</span></p>
+  <p class="atl-legend"><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span class="map-key"><i class="k-a"></i>Place approximate</span><span id="atl-note-globe">Drag to turn the globe, scroll or pinch to zoom. No projection: shapes and sizes as they are. Present-day borders for orientation.</span><span id="atl-note-flat" hidden>Drag to move, scroll or pinch to zoom. Present-day borders are shown for orientation.</span></p>
 </section>
 
 <section class="atl-list-wrap" aria-labelledby="atl-list-title">
@@ -108,8 +113,9 @@
 <script src="/shared-data.js?v=7"></script>
 <script src="/shared-nav.js?v=24"></script>
 <script src="/maps/basemap.js?v=4478c4912d"></script>
-<script src="/maps/atlas-data.js?v=687fefb366"></script>
-<script src="/atlas.js?v=2"></script>
+<script src="/maps/atlas-data.js?v=575f738595"></script>
+<script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=d5e3631ac0';</script>
+<script src="/atlas.js?v=3"></script>
 <script>initNav('atlas');</script>
 </body>
 </html>

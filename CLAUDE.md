@@ -153,10 +153,17 @@ outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) 
   countries and their dependencies is rejected and listed in scripts/geo-rejected.tsv (mostly wrong Wikidata ids).
 - Geometry in scripts/lib/geo.cs (Add-Type): projection, Douglas-Peucker, rectangle clipping, compact path data.
   Maps are written in tenths of a unit (10000 wide, 4393 high: the plane is cut at 58° S).
-- `/atlas` + atlas.js: year slider (3500 BCE–today) with play, zoom/pan/pinch, region presets, profile and kind
+- `/atlas` + atlas.js: a GLOBE by default (d3 7.8.5 orthographic on a canvas — drag to turn, no projection) with a
+  Flat map toggle (?view=globe|flat, localStorage epoch-atlas-view; falls back to flat if d3 or the canvas fails);
+  year slider (3500 BCE–today) with play and a random-year die, zoom/pan/pinch, region presets, profile and kind
   filters, search, tooltips (nearest dot), labels from 2.2x zoom, the list of states shown (accessible view);
   ?year=, ?focus=<state id>, ?c=<country slug>. maps/atlas-data.js rows [id, name, start, end, x, y, flags (1 profile,
-  2 approximate), kind (EmblemKind), region, profile url]; maps/basemap.js outlines (styled by shared.css).
+  2 approximate), kind (EmblemKind), region, lng, lat (degrees; approximate places keep their spiral spread via
+  geo.cs Inv, the Equal Earth inverse), profile url], plus presetsLL and countriesLL (centres + span in degrees);
+  maps/basemap.js outlines (styled by shared.css); maps/globe-land.js the same outlines in lng/lat (hundredths of
+  a degree, rings rewound client-side with d3.geoArea), its ?v= stamped into /atlas's ATLAS_GLOBE_SRC. The globe's
+  canvas colours come from the CSS tokens and repaint on data-theme changes. Note the hidden pitfall: an SVG
+  element has no .hidden property - toggle the hidden ATTRIBUTE.
 - Small maps are inline SVG: state locators, century maps and the home page draw over `<image href=/maps/world.svg>`
   (fixed translucent gold, cached once); country pages carry their own clipped outlines, with the country itself
   drawn again on top as `map-land-hi` (lit gold with a glow; MapSvg -Hi, rings from $CRING) and its neighbours dimmed;
