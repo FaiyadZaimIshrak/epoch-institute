@@ -212,6 +212,12 @@
   }
   slider.addEventListener('input', function () { stop(); setYear(+slider.value); });
   var playBtn = $('atl-play'), timer = null;
+  var randBtn = $('atl-rand');
+  if (randBtn) randBtn.addEventListener('click', function () {   // half the leaps land in the crowded CE years
+    stop();
+    var y = Math.random() < 0.5 ? 1 + Math.random() * (MAXY - 1) : MINY + Math.random() * (1 - MINY);
+    setYear(y); renderList();
+  });
   function stop() { if (!timer) return; clearInterval(timer); timer = null; playBtn.textContent = '▶'; playBtn.setAttribute('aria-label', 'Play through time'); scheduleList(); scheduleUrl(); }
   playBtn.addEventListener('click', function () {
     if (timer) { stop(); return; }

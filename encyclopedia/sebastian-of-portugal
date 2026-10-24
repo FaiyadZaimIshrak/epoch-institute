@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
 <title>Sebastian of Portugal — Encyclopedia — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,7 +29,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"S","item":"https://the-epoch-institute.org/encyclopedia/browse/s-9"},{"@type":"ListItem","position":4,"name":"Sebastian of Portugal"}]},{"@type":"Article","headline":"Sebastian of Portugal","description":"Sebastian of Portugal (Sebastião I) was King of Portugal from 1557 until 1578.","url":"https://the-epoch-institute.org/encyclopedia/sebastian-of-portugal","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/sebastian-of-portugal","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Person","name":"Sebastian of Portugal","alternateName":["Sebastião I"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/sebastian-of-portugal.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/sebastian-of-portugal.jpg","width":320,"height":379,"license":"https://creativecommons.org/publicdomain/mark/1.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Sebasti%C3%A3o_de_Portugal,_c._1571-1574_-_Crist%C3%B3v%C3%A3o_de_Morais_(Google_Art_Project).jpg","creditText":"Cristóvão de Morais","creator":{"@type":"Person","name":"Cristóvão de Morais"},"copyrightNotice":"Cristóvão de Morais"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"S","item":"https://the-epoch-institute.org/encyclopedia/browse/s-9"},{"@type":"ListItem","position":4,"name":"Sebastian of Portugal"}]},{"@type":"Article","headline":"Sebastian of Portugal","description":"Sebastian of Portugal (Sebastião I) was King of Portugal from 1557 until 1578.","url":"https://the-epoch-institute.org/encyclopedia/sebastian-of-portugal","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/sebastian-of-portugal","inLanguage":"en-GB","dateModified":"2026-10-24","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Person","name":"Sebastian of Portugal","alternateName":["Sebastião I"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/sebastian-of-portugal.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/sebastian-of-portugal.jpg","width":320,"height":379,"license":"https://creativecommons.org/publicdomain/mark/1.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Sebasti%C3%A3o_de_Portugal,_c._1571-1574_-_Crist%C3%B3v%C3%A3o_de_Morais_(Google_Art_Project).jpg","creditText":"Cristóvão de Morais","creator":{"@type":"Person","name":"Cristóvão de Morais"},"copyrightNotice":"Cristóvão de Morais"}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 </head>
@@ -48,7 +51,6 @@
 </div>
 </main>
 
-<script src="/shared-data.js" defer></script>
 <script src="/shared-nav.js" defer></script>
 <script src="/enc-page.js" defer></script>
 </body>

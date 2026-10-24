@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
 <title>Val d'Aran — Encyclopedia — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,7 +29,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"V","item":"https://the-epoch-institute.org/encyclopedia/browse/v"},{"@type":"ListItem","position":4,"name":"Val d'Aran"}]},{"@type":"Article","headline":"Val d'Aran","description":"The Val d'Aran is a valley in the central Pyrenees, in Catalonia, Spain, lying on the northern side of the main ridge and drained by the Garonne.","url":"https://the-epoch-institute.org/encyclopedia/val-daran","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/val-daran","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Val d'Aran","alternateName":["Aran Valley"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/val-daran.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/val-daran.jpg","width":320,"height":105,"license":"https://creativecommons.org/licenses/by-sa/3.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Pano_of_Boss%C3%B2st_in_Aran_Valley_in_Spain-cropped.jpg","creditText":"Nickj","creator":{"@type":"Person","name":"Nickj"},"copyrightNotice":"Nickj"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"V","item":"https://the-epoch-institute.org/encyclopedia/browse/v"},{"@type":"ListItem","position":4,"name":"Val d'Aran"}]},{"@type":"Article","headline":"Val d'Aran","description":"The Val d'Aran is a valley in the central Pyrenees, in Catalonia, Spain, lying on the northern side of the main ridge and drained by the Garonne.","url":"https://the-epoch-institute.org/encyclopedia/val-daran","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/val-daran","inLanguage":"en-GB","dateModified":"2026-10-24","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Val d'Aran","alternateName":["Aran Valley"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/val-daran.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/val-daran.jpg","width":320,"height":105,"license":"https://creativecommons.org/licenses/by-sa/3.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Pano_of_Boss%C3%B2st_in_Aran_Valley_in_Spain-cropped.jpg","creditText":"Nickj","creator":{"@type":"Person","name":"Nickj"},"copyrightNotice":"Nickj"}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 </head>
@@ -47,7 +50,6 @@
 </div>
 </main>
 
-<script src="/shared-data.js" defer></script>
 <script src="/shared-nav.js" defer></script>
 <script src="/enc-page.js" defer></script>
 </body>

@@ -145,6 +145,11 @@ function siteSearch(query) {
     var s = searchScore(q, e.name);
     if (s) out.push({ s: s + 15, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e) });
   });
+  // pages without shared-data.js (the generated reference pages) get the profiles from /search-profiles.js instead
+  else if (typeof SEARCH_PROFILES !== 'undefined') SEARCH_PROFILES.forEach(function (r) {
+    var s = searchScore(q, r[0]);
+    if (s) out.push({ s: s + 15, name: r[0], type: r[2] + ' · profile', href: r[1] });
+  });
   if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) {
     var s = searchScore(q, r[1]);
     if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
@@ -164,15 +169,21 @@ function siteSearch(query) {
   return out.slice(0, 12);
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=5';   // also loaded by quiz.js for answer suggestions
+var SEARCH_PROFILES_SRC = '/search-profiles.js?v=1';   // the 394 profiles, for pages without shared-data.js
 function initSiteSearch() {
   var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
       list = document.getElementById('site-search-results'), hint = document.getElementById('site-search-hint'),
-      opener = null, active = -1, loading = false;
+      opener = null, active = -1, loading = false, pending = [];
   function load(cb) {
     if (typeof SEARCH_INDEX !== 'undefined') return cb();
+    pending.push(cb);
     if (loading) return; loading = true;
+    if (typeof EMPIRES === 'undefined' && typeof SEARCH_PROFILES === 'undefined') {
+      var p = document.createElement('script'); p.src = SEARCH_PROFILES_SRC; document.head.appendChild(p);
+    }
+    var done = function () { loading = false; var q = pending; pending = []; q.forEach(function (f) { f(); }); };
     var s = document.createElement('script'); s.src = SEARCH_INDEX_SRC;
-    s.onload = function () { loading = false; cb(); }; s.onerror = function () { loading = false; cb(); };
+    s.onload = done; s.onerror = done;
     document.head.appendChild(s);
   }
   function render() {
@@ -180,7 +191,7 @@ function initSiteSearch() {
     list.innerHTML = res.map(function (r, i) {
       return '<li role="option" id="ss-opt-' + i + '"><a href="' + r.href + '"><span class="ss-name">' + escHtml(r.name) + '</span><span class="ss-type">' + escHtml(r.type) + '</span></a></li>';
     }).join('');
-    hint.textContent = input.value.trim().length < 2 ? EMPIRES.length + ' profiles and the full encyclopedia.' : (res.length ? '' : 'No matches. Try another spelling or a shorter word.');
+    hint.textContent = input.value.trim().length < 2 ? 'Profiles, states and the full encyclopedia.' : (res.length ? '' : 'No matches. Try another spelling or a shorter word.');
     hint.hidden = !hint.textContent;
   }
   function setActive(i) {
@@ -214,6 +225,14 @@ function initSiteSearch() {
     var t = e.target, typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
     if ((e.key === '/' && !typing) || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) { e.preventDefault(); open(); }
   });
+  // warm the index up before the first search: on hovering the search button, and in idle time after load
+  var warm = function () { load(function () {}); };
+  document.getElementById('nav-search-btn').addEventListener('pointerover', warm, { once: true });
+  if (!(navigator.connection && navigator.connection.saveData)) {
+    var idle = window.requestIdleCallback || function (f) { setTimeout(f, 3000); };
+    var onLoad = function () { idle(warm, { timeout: 8000 }); };
+    if (document.readyState === 'complete') onLoad(); else window.addEventListener('load', onLoad, { once: true });
+  }
 }
 
 // ── Encyclopedia previews: hover/focus (or first tap on touch) a gold link → small card ─
@@ -322,6 +341,7 @@ function initNav(activePage) {
       <button class="nav-parent-btn${exploreActive ? ' active-group' : ''}" id="nav-explore-btn" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
       <div class="nav-group-menu nav-group-menu-wide" id="nav-explore-menu" role="menu">
         ${EXPLORE.map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}</b><span>${x[3]}</span></a>`).join('\n        ')}
+        <a href="#" id="nav-surprise" class="nav-surprise"><b>Surprise me</b><span>A random leap into history</span></a>
       </div>
     </div>
     <a href="/today-in-history/" class="nav-link"${activeStyle('today')}>Today in History</a>
@@ -341,6 +361,7 @@ function initNav(activePage) {
     ${[['profiles', '/profiles', 'Profiles'], ['encyclopedia', '/encyclopedia/', 'Encyclopedia'], ['states', '/state/', 'States'], ['today', '/today-in-history/', 'Today in History']].map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
     <span class="nav-dropdown-group">Explore</span>
     ${EXPLORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
+    <a href="#" class="nav-dropdown-link" data-surprise>Surprise me</a>
     <span class="nav-dropdown-group">More</span>
     ${MORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
   </div>
@@ -417,7 +438,9 @@ function initNav(activePage) {
   </div>
   <div class="footer-bottom">
     <span data-i18n="footer_copy">© ${new Date().getFullYear()} The Epoch Institute</span>
+    <button type="button" class="footer-quote-btn" id="footer-quote-btn" aria-expanded="false" aria-label="A word from the past" title="A word from the past">✦</button>
   </div>
+  <p class="footer-quote" id="footer-quote" hidden></p>
 </footer>`;
 
   const searchHtml = `
@@ -446,6 +469,8 @@ function initNav(activePage) {
       btn.textContent    = isDark ? '☀' : '🌙';
       btn.title          = isDark ? 'Switch to light mode' : 'Switch to dark mode';
       btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      // pin the browser chrome's colour to the chosen theme (the metas' media rules covered only the system theme)
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', isDark ? '#0b0c10' : '#f4efe4'); m.removeAttribute('media'); });
     }
     applyTheme(document.documentElement.getAttribute('data-theme') !== 'light');
     btn.addEventListener('click', () => {
@@ -454,6 +479,93 @@ function initNav(activePage) {
       html.setAttribute('data-theme', isDark ? 'light' : 'dark');
       localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark');
       applyTheme(!isDark);
+    });
+  })();
+
+  // ── My shelf: pages saved for later and recently viewed (kept in this browser only) ──
+  (function () {
+    function sGet(k, cap) { try { var v = JSON.parse(localStorage.getItem(k) || '[]'); return Array.isArray(v) ? v.slice(0, cap) : []; } catch (e) { return []; } }
+    function sSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+    // the reading pages that can be saved and are recorded as recently viewed
+    var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
+      [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path']];
+    var kind = null;
+    if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
+      KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
+    var h1 = document.querySelector('h1');
+    var here = kind && h1 && h1.textContent.trim() ? { u: location.pathname, n: h1.textContent.trim().slice(0, 90), t: kind } : null;
+    if (here) {
+      var rec = sGet('epoch-recent', 20).filter(function (r) { return r && r.u !== here.u; });
+      rec.unshift(here); sSet('epoch-recent', rec.slice(0, 10));
+    }
+    var tog = document.querySelector('.nav-toggles');
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'nav-search-btn'; btn.id = 'nav-shelf-btn';
+    btn.title = 'My shelf (saved pages)'; btn.setAttribute('aria-label', 'My shelf'); btn.setAttribute('aria-haspopup', 'true'); btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>';
+    var panel = document.createElement('div'); panel.className = 'shelf-menu'; panel.id = 'shelf-menu'; panel.hidden = true;
+    tog.insertBefore(btn, document.getElementById('theme-toggle'));
+    tog.appendChild(panel);
+    function renderShelf() {
+      var shelf = sGet('epoch-shelf', 100), rec2 = sGet('epoch-recent', 10);
+      var saved = !!(here && shelf.some(function (r) { return r && r.u === here.u; }));
+      var row = function (r) { return '<a href="' + escHtml(r.u) + '"><span class="shelf-n">' + escHtml(r.n) + '</span><span class="shelf-t">' + escHtml(r.t) + '</span></a>'; };
+      panel.innerHTML =
+        (here ? '<button type="button" class="shelf-save' + (saved ? ' is-saved' : '') + '" id="shelf-save">' + (saved ? '✓ Saved — tap to remove' : '☆ Save this page') + '</button>' : '') +
+        '<p class="shelf-head">Saved' + (shelf.length ? ' · ' + shelf.length : '') + '</p>' +
+        (shelf.length ? shelf.map(row).join('') : '<p class="shelf-empty">Nothing saved yet. Open a profile or an entry and save it from here.</p>') +
+        (rec2.length ? '<p class="shelf-head">Recently viewed</p>' + rec2.map(row).join('') : '');
+      var sv = document.getElementById('shelf-save');
+      if (sv) sv.addEventListener('click', function () {
+        var s2 = sGet('epoch-shelf', 100).filter(function (r) { return r && r.u !== here.u; });
+        if (!saved) s2.unshift(here);
+        sSet('epoch-shelf', s2.slice(0, 100)); renderShelf();
+      });
+    }
+    function closeShelf() { panel.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (panel.hidden) { renderShelf(); panel.hidden = false; btn.setAttribute('aria-expanded', 'true'); }
+      else closeShelf();
+    });
+    document.addEventListener('click', function (e) { if (!panel.hidden && !panel.contains(e.target) && e.target !== btn) closeShelf(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { closeShelf(); btn.focus(); } });
+  })();
+
+  // ── Reading progress: a thin gold line on the long reading pages ─────────────
+  (function () {
+    if (!/^\/(empire|encyclopedia)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
+    var bar = document.createElement('div'); bar.className = 'read-progress'; bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+    var ticking = false;
+    function set() { ticking = false; var max = document.documentElement.scrollHeight - window.innerHeight; bar.style.width = (max > 600 ? Math.min(100, Math.max(0, window.scrollY / max * 100)) : 0) + '%'; }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(set); } }, { passive: true });
+    set();
+  })();
+
+  // ── Surprise me: a random profile, day or century ─────────────────────────────
+  (function () {
+    var MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+    var DMAX = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    function ordinal(n) { return n + (n % 10 === 1 && n !== 11 ? 'st' : n % 10 === 2 && n !== 12 ? 'nd' : n % 10 === 3 && n !== 13 ? 'rd' : 'th'); }
+    function go(u) { document.body.classList.add('page-leaving'); setTimeout(function () { location.href = u; }, 180); }
+    function surprise() {
+      var r = Math.random();
+      if (r < 0.55) {
+        var pick = function () { var p = SEARCH_PROFILES[Math.floor(Math.random() * SEARCH_PROFILES.length)]; go(p[1]); };
+        if (typeof SEARCH_PROFILES !== 'undefined') pick();
+        else if (typeof EMPIRES !== 'undefined') go(profileUrl(EMPIRES[Math.floor(Math.random() * EMPIRES.length)]));
+        else { var s = document.createElement('script'); s.src = SEARCH_PROFILES_SRC; s.onload = pick; s.onerror = function () { go('/today-in-history/'); }; document.head.appendChild(s); }
+      } else if (r < 0.8) {
+        var m = Math.floor(Math.random() * 12);
+        go('/today-in-history/' + MONTHS[m] + '-' + (Math.floor(Math.random() * DMAX[m]) + 1));
+      } else {
+        var i = Math.floor(Math.random() * 51);   // 30th century BCE … 21st century
+        go('/centuries/' + (i < 30 ? ordinal(30 - i) + '-century-bce' : ordinal(i - 29) + '-century'));
+      }
+    }
+    document.querySelectorAll('#nav-surprise, [data-surprise]').forEach(function (el) {
+      el.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); surprise(); });
     });
   })();
 
@@ -638,6 +750,40 @@ function initNav(activePage) {
       }).catch(function() {
         btn.disabled = false;
       });
+    });
+  })();
+
+  // ── A word from the past: the ✦ in the footer reveals a rotating quotation ───
+  (function () {
+    var QUOTES = [
+      ['Those who cannot remember the past are condemned to repeat it.', 'George Santayana'],
+      ['The past resembles the future more than one drop of water resembles another.', 'Ibn Khaldun'],
+      ['History is the witness that testifies to the passing of time.', 'Cicero'],
+      ['Great deeds are usually wrought at great risks.', 'Herodotus'],
+      ['The secret of happiness is freedom, the secret of freedom is courage.', 'Thucydides'],
+      ['Loss is nothing else but change, and change is Nature’s delight.', 'Marcus Aurelius'],
+      ['The more corrupt the state, the more numerous the laws.', 'Tacitus'],
+      ['Those who know how to win are much more numerous than those who know how to make proper use of their victories.', 'Polybius'],
+      ['A man has only one death. It may be as weighty as Mount Tai or as light as a goose feather.', 'Sima Qian'],
+      ['Study the past if you would define the future.', 'Confucius'],
+      ['History is little more than the register of the crimes, follies, and misfortunes of mankind.', 'Edward Gibbon'],
+      ['We owe respect to the living; to the dead we owe only truth.', 'Voltaire'],
+      ['People will not look forward to posterity, who never look backward to their ancestors.', 'Edmund Burke'],
+      ['Whoever wishes to foresee the future must consult the past.', 'Niccolò Machiavelli'],
+      ['The two most powerful warriors are patience and time.', 'Leo Tolstoy'],
+      ['The Moving Finger writes; and, having writ, moves on.', 'Omar Khayyám'],
+      ['Every epoch is immediate to God.', 'Leopold von Ranke'],
+      ['What experience and history teach is this — that peoples and governments have never learned anything from history.', 'G. W. F. Hegel']
+    ];
+    var btn = document.getElementById('footer-quote-btn'), out = document.getElementById('footer-quote');
+    if (!btn || !out) return;
+    var day = Math.floor(Date.now() / 86400000), i = day % QUOTES.length, shown = false;
+    btn.addEventListener('click', function () {
+      if (shown) i = (i + 1) % QUOTES.length;   // another click, another voice
+      var q = QUOTES[i];
+      out.innerHTML = '“' + escHtml(q[0]) + '” <span class="footer-quote-by">— ' + escHtml(q[1]) + '</span>';
+      out.hidden = false; shown = true;
+      btn.setAttribute('aria-expanded', 'true');
     });
   })();
 }

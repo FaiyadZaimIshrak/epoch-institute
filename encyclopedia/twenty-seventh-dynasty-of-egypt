@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
 <title>Twenty-seventh Dynasty of Egypt — Encyclopedia — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,7 +29,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"T","item":"https://the-epoch-institute.org/encyclopedia/browse/t-19"},{"@type":"ListItem","position":4,"name":"Twenty-seventh Dynasty of Egypt"}]},{"@type":"Article","headline":"Twenty-seventh Dynasty of Egypt","description":"The Twenty-seventh Dynasty of Egypt is the name given to the first period of Persian rule over Egypt, beginning with Cambyses II's conquest in 525 BCE.","url":"https://the-epoch-institute.org/encyclopedia/twenty-seventh-dynasty-of-egypt","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/twenty-seventh-dynasty-of-egypt","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Country","name":"Twenty-seventh Dynasty of Egypt","alternateName":["27th Dynasty"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/twenty-seventh-dynasty-of-egypt.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/twenty-seventh-dynasty-of-egypt.jpg","width":320,"height":324,"license":"https://creativecommons.org/licenses/by-sa/4.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Western_part_of_the_Achaemenid_Empire.jpg","creditText":"Mossmaps","creator":{"@type":"Person","name":"Mossmaps"},"copyrightNotice":"Mossmaps"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"T","item":"https://the-epoch-institute.org/encyclopedia/browse/t-19"},{"@type":"ListItem","position":4,"name":"Twenty-seventh Dynasty of Egypt"}]},{"@type":"Article","headline":"Twenty-seventh Dynasty of Egypt","description":"The Twenty-seventh Dynasty of Egypt is the name given to the first period of Persian rule over Egypt, beginning with Cambyses II's conquest in 525 BCE.","url":"https://the-epoch-institute.org/encyclopedia/twenty-seventh-dynasty-of-egypt","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/twenty-seventh-dynasty-of-egypt","inLanguage":"en-GB","dateModified":"2026-10-24","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Country","name":"Twenty-seventh Dynasty of Egypt","alternateName":["27th Dynasty"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/twenty-seventh-dynasty-of-egypt.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/twenty-seventh-dynasty-of-egypt.jpg","width":320,"height":324,"license":"https://creativecommons.org/licenses/by-sa/4.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Western_part_of_the_Achaemenid_Empire.jpg","creditText":"Mossmaps","creator":{"@type":"Person","name":"Mossmaps"},"copyrightNotice":"Mossmaps"}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 </head>
@@ -47,7 +50,6 @@
 </div>
 </main>
 
-<script src="/shared-data.js" defer></script>
 <script src="/shared-nav.js" defer></script>
 <script src="/enc-page.js" defer></script>
 </body>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
 <title>The Epoch Institute — States, Empires and World History</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -25,7 +27,7 @@
 <meta name="twitter:description" content="Five thousand years of states, empires and civilisations: profiles, an encyclopedia, an atlas, country histories and century pages.">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=34">
+<link rel="stylesheet" href="/shared.css?v=35">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -220,7 +222,7 @@
 </div>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=22"></script>
+<script src="/shared-nav.js?v=23"></script>
 <script src="/home-data.js?v=9"></script>
 <script src="/reading-paths.js?v=1"></script>
 <script src="/quiz.js?v=1"></script>

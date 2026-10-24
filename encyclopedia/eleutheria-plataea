@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
 <title>Eleutheria (Plataea) — Encyclopedia — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,7 +29,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"E","item":"https://the-epoch-institute.org/encyclopedia/browse/e-4"},{"@type":"ListItem","position":4,"name":"Eleutheria (Plataea)"}]},{"@type":"Article","headline":"Eleutheria (Plataea)","description":"The Eleutheria was a festival of freedom held at Plataea in Boeotia in honour of Zeus Eleutherios, commemorating the Greek victory over the Persians…","url":"https://the-epoch-institute.org/encyclopedia/eleutheria-plataea","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/eleutheria-plataea","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Event","name":"Eleutheria (Plataea)"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"E","item":"https://the-epoch-institute.org/encyclopedia/browse/e-4"},{"@type":"ListItem","position":4,"name":"Eleutheria (Plataea)"}]},{"@type":"Article","headline":"Eleutheria (Plataea)","description":"The Eleutheria was a festival of freedom held at Plataea in Boeotia in honour of Zeus Eleutherios, commemorating the Greek victory over the Persians…","url":"https://the-epoch-institute.org/encyclopedia/eleutheria-plataea","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/eleutheria-plataea","inLanguage":"en-GB","dateModified":"2026-10-24","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Event","name":"Eleutheria (Plataea)"}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 </head>
@@ -47,7 +50,6 @@
 </div>
 </main>
 
-<script src="/shared-data.js" defer></script>
 <script src="/shared-nav.js" defer></script>
 <script src="/enc-page.js" defer></script>
 </body>

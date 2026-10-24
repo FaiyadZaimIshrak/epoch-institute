@@ -3213,6 +3213,7 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .atl-time { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .atl-play { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%; border: 1px solid var(--gold); background: none; color: var(--gold); font-size: 15px; cursor: pointer; }
 .atl-play:hover { background: var(--gold); color: var(--bg); }
+.atl-rand { font-size: 20px; line-height: 1; }
 #atl-year { flex: 1; min-width: 0; height: 28px; accent-color: var(--gold); }
 .atl-jumps { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px; }
 .atl-jumps a { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 5px 10px; border: 1px solid var(--border); border-radius: 999px; }
@@ -3508,6 +3509,27 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .footer-fix a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ── Back to top (shared-nav.js) ── */
+/* ── My shelf (nav bookmark), reading progress, footer quote, surprise me ── */
+.nav-toggles { position: relative; }
+.shelf-menu { position: absolute; top: calc(100% + 14px); right: 0; width: 330px; max-width: calc(100vw - 24px); max-height: min(70vh, 480px); overflow-y: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 30px var(--shadow); padding: 10px; z-index: 1002; }
+.shelf-menu[hidden] { display: none; }
+.shelf-save { display: block; width: 100%; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: rgba(var(--gold-rgb), 0.07); border: 1px dashed rgba(var(--gold-rgb), 0.5); border-radius: var(--radius); padding: 9px 10px; min-height: 40px; cursor: pointer; margin-bottom: 4px; }
+.shelf-save:hover { border-color: var(--gold); }
+.shelf-save.is-saved { border-style: solid; background: rgba(var(--gold-rgb), 0.12); }
+.shelf-head { font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 10px 4px 4px; }
+.shelf-menu a { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; padding: 7px 8px; border-radius: var(--radius); text-decoration: none; }
+.shelf-menu a:hover { background: rgba(var(--gold-rgb), 0.06); }
+.shelf-n { font-family: var(--font-text); font-size: 15px; color: var(--text); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.shelf-t { font-family: var(--font-ui); font-size: 11px; color: var(--muted); white-space: nowrap; }
+.shelf-empty { font-family: var(--font-text); font-style: italic; font-size: 14px; color: var(--muted); margin: 4px; }
+.read-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--gold); box-shadow: 0 0 6px rgba(var(--gold-rgb), 0.7); z-index: 1200; pointer-events: none; }
+.footer-quote-btn { background: none; border: 0; color: var(--gold); font-size: 14px; cursor: pointer; padding: 2px 10px; min-height: 32px; opacity: 0.7; }
+.footer-quote-btn:hover, .footer-quote-btn:focus-visible { opacity: 1; }
+.footer-quote { font-family: var(--font-text); font-style: italic; font-size: 15px; color: var(--muted); text-align: center; margin: 0 auto; max-width: 680px; padding: 0 16px 18px; }
+.footer-quote-by { font-style: normal; font-size: 13px; color: var(--gold); white-space: nowrap; }
+.nav-group-menu .nav-surprise b { color: var(--gold); }
+@media (max-width: 600px) { .shelf-menu { position: fixed; top: 66px; left: 12px; right: 12px; width: auto; } }
+
 .to-top { position: fixed; right: max(18px, env(safe-area-inset-right, 0px)); bottom: max(18px, env(safe-area-inset-bottom, 0px)); z-index: 900; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--gold); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35); transition: border-color 0.2s, transform 0.2s; }
 .to-top:hover { border-color: var(--gold); transform: translateY(-2px); }
 .to-top[hidden] { display: none; }

@@ -1,0 +1,30 @@
+# The Epoch Institute
+
+> A historical research site: 394 full profiles of empires and states, a 31,955-entry encyclopedia, a register of
+> 5,463 states and their 11,291 connections, country histories, century overviews, an interactive world atlas
+> (3500 BCE to today), and the data behind them, free to download.
+
+All reference pages are static HTML with the content in the page itself. Dates use CE/BCE. British English.
+
+## Collections
+- [Profiles](https://the-epoch-institute.org/profiles): the 394 in-depth profiles (history, power curve, key facts, references)
+- [Encyclopedia](https://the-epoch-institute.org/encyclopedia/): people, events, places, ideas and works; one page per entry at /encyclopedia/<slug>
+- [States register](https://the-epoch-institute.org/state/): every recorded state at /state/<id>, with origins, rule and legacy
+- [Country histories](https://the-epoch-institute.org/countries/): the states that ruled each present-day country
+- [Centuries](https://the-epoch-institute.org/centuries/): one page per century, 30th century BCE to the 21st
+- [Today in history](https://the-epoch-institute.org/today-in-history/): a page for each day of the year
+- [Glossary](https://the-epoch-institute.org/encyclopedia/glossary): 721 historical terms
+
+## Tools
+- [Atlas](https://the-epoch-institute.org/atlas): the world's states in any year
+- [Connections](https://the-epoch-institute.org/connections): how states were linked — rule, vassalage, lineage
+- [Empire Explorer](https://the-epoch-institute.org/explorer): power trajectories compared
+
+## Data
+- [Open Data](https://the-epoch-institute.org/dataset): the states register, relations and power curves as CSV and JSON
+- [Sitemap](https://the-epoch-institute.org/sitemap.xml)
+
+## About
+- [About the Institute](https://the-epoch-institute.org/about): method and sourcing
+- [Contact](https://the-epoch-institute.org/contact)
+Please cite pages by their canonical URL; each page shows a suggested citation.

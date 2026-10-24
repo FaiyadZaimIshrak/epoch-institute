@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
 <title>Puyang — Encyclopedia — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,7 +29,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"P","item":"https://the-epoch-institute.org/encyclopedia/browse/p-17"},{"@type":"ListItem","position":4,"name":"Puyang"}]},{"@type":"Article","headline":"Puyang","description":"Puyang is a city in north-eastern Henan, near the Yellow River. In the Spring and Autumn period it was Diqiu, capital of the State of Wey from 629 BCE…","url":"https://the-epoch-institute.org/encyclopedia/puyang","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/puyang","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Puyang"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/puyang.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/puyang.jpg","width":320,"height":240,"license":"https://creativecommons.org/licenses/by-sa/4.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:%E6%BF%AE%E9%98%B3%E6%BF%AE%E4%B8%8A%E5%9B%AD%E6%97%85%E6%B8%B8%E5%BA%A6%E5%81%87%E5%8C%BA.jpg","creditText":"who_i_am","creator":{"@type":"Person","name":"who_i_am"},"copyrightNotice":"who_i_am"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"P","item":"https://the-epoch-institute.org/encyclopedia/browse/p-17"},{"@type":"ListItem","position":4,"name":"Puyang"}]},{"@type":"Article","headline":"Puyang","description":"Puyang is a city in north-eastern Henan, near the Yellow River. In the Spring and Autumn period it was Diqiu, capital of the State of Wey from 629 BCE…","url":"https://the-epoch-institute.org/encyclopedia/puyang","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/puyang","inLanguage":"en-GB","dateModified":"2026-10-24","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Puyang"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/puyang.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/puyang.jpg","width":320,"height":240,"license":"https://creativecommons.org/licenses/by-sa/4.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:%E6%BF%AE%E9%98%B3%E6%BF%AE%E4%B8%8A%E5%9B%AD%E6%97%85%E6%B8%B8%E5%BA%A6%E5%81%87%E5%8C%BA.jpg","creditText":"who_i_am","creator":{"@type":"Person","name":"who_i_am"},"copyrightNotice":"who_i_am"}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 </head>
@@ -47,7 +50,6 @@
 </div>
 </main>
 
-<script src="/shared-data.js" defer></script>
 <script src="/shared-nav.js" defer></script>
 <script src="/enc-page.js" defer></script>
 </body>

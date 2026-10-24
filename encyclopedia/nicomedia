@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
 <title>Nicomedia — Encyclopedia — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,7 +29,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"N","item":"https://the-epoch-institute.org/encyclopedia/browse/n-7"},{"@type":"ListItem","position":4,"name":"Nicomedia"}]},{"@type":"Article","headline":"Nicomedia","description":"Nicomedia was an ancient city at the head of the Gulf of Izmit in north-western Anatolia, founded in 264 BCE by Nicomedes I as the capital of Bithynia.","url":"https://the-epoch-institute.org/encyclopedia/nicomedia","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/nicomedia","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Nicomedia","alternateName":["İzmit"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/nicomedia.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/nicomedia.jpg","width":320,"height":232,"license":"https://creativecommons.org/publicdomain/mark/1.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Grande_rue_de_Nicom%C3%A9die_-_Texier_Charles_F%C3%A9lix_Marie_-_1882.jpg","creditText":"Félix Marie Charles Texier","creator":{"@type":"Person","name":"Félix Marie Charles Texier"},"copyrightNotice":"Félix Marie Charles Texier"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"N","item":"https://the-epoch-institute.org/encyclopedia/browse/n-7"},{"@type":"ListItem","position":4,"name":"Nicomedia"}]},{"@type":"Article","headline":"Nicomedia","description":"Nicomedia was an ancient city at the head of the Gulf of Izmit in north-western Anatolia, founded in 264 BCE by Nicomedes I as the capital of Bithynia.","url":"https://the-epoch-institute.org/encyclopedia/nicomedia","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/nicomedia","inLanguage":"en-GB","dateModified":"2026-10-24","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Nicomedia","alternateName":["İzmit"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/nicomedia.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/nicomedia.jpg","width":320,"height":232,"license":"https://creativecommons.org/publicdomain/mark/1.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Grande_rue_de_Nicom%C3%A9die_-_Texier_Charles_F%C3%A9lix_Marie_-_1882.jpg","creditText":"Félix Marie Charles Texier","creator":{"@type":"Person","name":"Félix Marie Charles Texier"},"copyrightNotice":"Félix Marie Charles Texier"}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 </head>
@@ -47,7 +50,6 @@
 </div>
 </main>
 
-<script src="/shared-data.js" defer></script>
 <script src="/shared-nav.js" defer></script>
 <script src="/enc-page.js" defer></script>
 </body>

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
 <title>Ulcinj — Encyclopedia — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -26,7 +29,7 @@
 <link rel="stylesheet" href="/shared.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"U","item":"https://the-epoch-institute.org/encyclopedia/browse/u"},{"@type":"ListItem","position":4,"name":"Ulcinj"}]},{"@type":"Article","headline":"Ulcinj","description":"Ulcinj is a town on the southern Adriatic coast of Montenegro near the Albanian border, with an Albanian majority.","url":"https://the-epoch-institute.org/encyclopedia/ulcinj","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/ulcinj","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Ulcinj"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/ulcinj.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/ulcinj.jpg","width":320,"height":214,"license":"https://creativecommons.org/licenses/by/2.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Ulcinj,_Montenegro_-_Sept._2010.jpg","creditText":"Andrey from Russia","creator":{"@type":"Person","name":"Andrey from Russia"},"copyrightNotice":"Andrey from Russia"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"U","item":"https://the-epoch-institute.org/encyclopedia/browse/u"},{"@type":"ListItem","position":4,"name":"Ulcinj"}]},{"@type":"Article","headline":"Ulcinj","description":"Ulcinj is a town on the southern Adriatic coast of Montenegro near the Albanian border, with an Albanian majority.","url":"https://the-epoch-institute.org/encyclopedia/ulcinj","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/ulcinj","inLanguage":"en-GB","dateModified":"2026-10-24","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Ulcinj"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/ulcinj.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/ulcinj.jpg","width":320,"height":214,"license":"https://creativecommons.org/licenses/by/2.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Ulcinj,_Montenegro_-_Sept._2010.jpg","creditText":"Andrey from Russia","creator":{"@type":"Person","name":"Andrey from Russia"},"copyrightNotice":"Andrey from Russia"}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
 </head>
@@ -47,7 +50,6 @@
 </div>
 </main>
 
-<script src="/shared-data.js" defer></script>
 <script src="/shared-nav.js" defer></script>
 <script src="/enc-page.js" defer></script>
 </body>
