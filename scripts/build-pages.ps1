@@ -91,7 +91,10 @@ public static class W {
     byte[] b = U8.GetBytes(content);
     if (File.Exists(path)) { byte[] o = File.ReadAllBytes(path); if (o.Length == b.Length) { bool same = true; for (int i = 0; i < b.Length; i++) if (o[i] != b[i]) { same = false; break; } if (same) return false; } }
     string dir = Path.GetDirectoryName(path); if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
-    File.WriteAllBytes(path, b); return true;
+    for (int attempt = 1; ; attempt++) {   // a virus scanner or indexer may hold a file it just saw being written
+      try { File.WriteAllBytes(path, b); return true; }
+      catch (Exception ex) { if (attempt >= 8 || !(ex is IOException || ex is UnauthorizedAccessException)) throw; System.Threading.Thread.Sleep(250 * attempt); }
+    }
   }
   public static int[] JpegSize(string path) {
     try {
@@ -1295,7 +1298,7 @@ $SECTIONS = [ordered]@{
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
   series       = @{ t = 'Research Series'; h = '/research-series'; k = 'Essays'; d = 'Thematic essays on the forces behind the rise and collapse of civilisations.'; pic = @('thucydides', 'ibn-khaldun', 'edward-gibbon') }
-  dataset      = @{ t = 'Open Dataset'; h = '/dataset'; k = 'CC BY 4.0'; d = "The power curves of all $($EMPS.Count) profiles, free for research and teaching."; pic = @('rhind-mathematical-papyrus', 'moscow-mathematical-papyrus', 'domesday-book') }
+  dataset      = @{ t = 'Open Data'; h = '/dataset'; k = 'CC BY 4.0'; d = "The states register ($($POL['nodes'].Count.ToString('N0')) states, $($POL['links'].Count.ToString('N0')) relations) and the power curves, free to reuse."; pic = @('rhind-mathematical-papyrus', 'moscow-mathematical-papyrus', 'domesday-book') }
 }
 function HubCard($s, [string]$cls) {
   $img = PicOf $s.pic
@@ -1310,6 +1313,101 @@ SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?yea
 SetBlock "$Repo\index" 'home-centuries' ('<ol class="cen-bars cen-bars-home">' + (($CENTPAGES | ForEach-Object { $ii = $CENTINFO[$_]; '<li><a href="/centuries/' + $ii.slug + '" title="' + (Hx (CentTitle $_)) + ': ' + $ii.alive + ' states"><span class="cen-bar" style="height:' + ([Math]::Max(2, $ii.alive / $maxA * 100)).ToString('0.0', $INV) + '%"></span><span class="cen-lbl">' + (Hx (($_ -replace ' century', '') -replace ' BCE', ' BC')) + '</span></a></li>' }) -join '') + '</ol>')
 SetBlock "$Repo\index" 'home-countries' ('<ul class="cty-chips">' + ((@($CINFO.Keys | Sort-Object @{ e = { $CINFO[$_].n }; Descending = $true } | Select-Object -First 18) | ForEach-Object { '<li><a href="/countries/' + $CINFO[$_].slug + '">' + (Hx $_) + ' <span>' + $CINFO[$_].n + '</span></a></li>' }) -join '') + '<li><a class="cty-all" href="/countries/">All ' + $CPAGE.Count + ' countries &rarr;</a></li></ul>')
 
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Open data (/dataset): the states register and the power curves as CSV and JSON (root files, CC BY 4.0)
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+function Csv($v) { $s = [string]$v; if ($s -match '[",\r\n]') { return '"' + $s.Replace('"', '""') + '"' }; return $s }
+function IntOrBlank($v) { if ($null -eq $v) { '' } else { [string][int][Math]::Round([double]$v) } }
+$LOCSRC = @{ 0 = 'capital'; 1 = 'recorded location'; 2 = 'capital'; 3 = 'capital (matched by name)'; 4 = 'set by hand'; 9 = 'approximate (centre of the present-day country)' }
+$odNodes = @($POL['nodes'] | Sort-Object @{ e = { if ($null -eq $_['s']) { 1e9 } else { [double]$_['s'] } } }, @{ e = { [string]$_['id'] } })
+# the 94 empires carry no capital in the register: take it from their key facts (empire-facts.js)
+$FACTCAP = @{}; foreach ($m in [regex]::Matches([IO.File]::ReadAllText("$Repo\empire-facts.js", $U8), '(?m)^  "([^"]+)": \{capital:"((?:[^"\\]|\\.)*)"')) { $FACTCAP[$m.Groups[1].Value] = $m.Groups[2].Value }
+$csvS = New-Object Text.StringBuilder(1500000); $jsS = New-Object Text.StringBuilder(2500000)
+[void]$csvS.Append("id,name,type,region,broad_region,start_year,end_year,approximate_dates,capital,present_day_countries,latitude,longitude,location_source,profile_url,page_url`n")
+$nPlaced = 0
+foreach ($n in $odNodes) {
+  $id = [string]$n['id']; $g = $GEOD[$id]; $lat = ''; $lng = ''; $ls = ''
+  if ($g) { $lat = ([double]$g[0]).ToString('0.###', $INV); $lng = ([double]$g[1]).ToString('0.###', $INV); $ls = $LOCSRC[[int]$g[2]]; if ([int]$g[2] -ne 9) { $nPlaced++ } }
+  $mo = (@($n['mo']) | Where-Object { $_ } | ForEach-Object { [string]$_ }) -join '; '
+  $rgl = if ($n['rg']) { RegionLabel ([string]$n['rg']) } else { '' }
+  $prof = if ($n['p']) { $SITE + [string]$n['p'] } else { '' }
+  $cap = [string]$n['c']; if (-not $cap -and $n['p'] -and $EMPURL.ContainsKey([string]$n['p'])) { $cap = [string]$FACTCAP[[string]$EMPURL[[string]$n['p']]['name']] }
+  [void]$csvS.Append((@($id, [string]$n['n'], [string]$n['t'], $rgl, [string]$n['b'], (IntOrBlank $n['s']), (IntOrBlank $n['e']), $(if ($n['x']) { 'yes' } else { '' }), $cap, $mo, $lat, $lng, $ls, $prof, ($SITE + (StateUrl $n))) | ForEach-Object { Csv $_ }) -join ',').Append("`n")
+  if ($jsS.Length) { [void]$jsS.Append(",`n") }
+  [void]$jsS.Append('{"id":' + (Js $id) + ',"name":' + (Js ([string]$n['n'])) + ',"type":' + (Js ([string]$n['t'])) + ',"region":' + (Js $rgl) + ',"broad_region":' + (Js ([string]$n['b'])) +
+    ',"start_year":' + $(if ($null -eq $n['s']) { 'null' } else { IntOrBlank $n['s'] }) + ',"end_year":' + $(if ($null -eq $n['e']) { 'null' } else { IntOrBlank $n['e'] }) + ',"approximate_dates":' + $(if ($n['x']) { 'true' } else { 'false' }) +
+    ',"capital":' + $(if ($cap) { Js $cap } else { 'null' }) + ',"present_day_countries":[' + ((@($n['mo']) | Where-Object { $_ } | ForEach-Object { Js ([string]$_) }) -join ',') + ']' +
+    ',"latitude":' + $(if ($lat) { $lat } else { 'null' }) + ',"longitude":' + $(if ($lng) { $lng } else { 'null' }) + ',"location_source":' + $(if ($ls) { Js $ls } else { 'null' }) +
+    ',"profile_url":' + $(if ($prof) { Js $prof } else { 'null' }) + ',"page_url":' + (Js ($SITE + (StateUrl $n))) + '}')
+}
+$csvR = New-Object Text.StringBuilder(600000); $jsR = New-Object Text.StringBuilder(900000); $nRel = 0
+[void]$csvR.Append("source_id,relation,target_id,from_year,until_year`n")
+foreach ($l in $POL['links']) {
+  $s = [string]$l['s']; $t = [string]$l['t']; if (-not ($NODE.ContainsKey($s) -and $NODE.ContainsKey($t))) { continue }
+  [void]$csvR.Append((@($s, [string]$l['r'], $t, (IntOrBlank $l['f']), (IntOrBlank $l['u'])) | ForEach-Object { Csv $_ }) -join ',').Append("`n")
+  if ($jsR.Length) { [void]$jsR.Append(",`n") }
+  [void]$jsR.Append('{"source_id":' + (Js $s) + ',"relation":' + (Js ([string]$l['r'])) + ',"target_id":' + (Js $t) + ',"from_year":' + $(if ($null -eq $l['f']) { 'null' } else { IntOrBlank $l['f'] }) + ',"until_year":' + $(if ($null -eq $l['u']) { 'null' } else { IntOrBlank $l['u'] }) + '}')
+  $nRel++
+}
+$odHead = '"source":"The Epoch Institute","url":"' + $SITE + '/dataset","licence":"CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)","citation":"The Epoch Institute (' + $YEAR + '). States Register [Data set]. ' + $SITE + '/dataset"'
+$OD = [ordered]@{
+  'epoch-institute-states.csv' = $csvS.ToString(); 'epoch-institute-state-relations.csv' = $csvR.ToString()
+  'epoch-institute-states.json' = '{' + $odHead + ",`n" + '"states":[' + "`n" + $jsS.ToString() + "`n],`n" + '"relations":[' + "`n" + $jsR.ToString() + "`n]}`n"
+}
+# power curves: one row per turning point (the score 0-10 at that year, scaled to the profile's own peak)
+$csvP = New-Object Text.StringBuilder(200000); $jsP = New-Object Text.StringBuilder(400000); $nPts = 0
+[void]$csvP.Append("name,region,profile_url,year,score`n")
+foreach ($em in $EMPS) {
+  $nm = [string]$em['name']; $url = $SITE + '/empire/' + [EpochBuild.W]::ToSlug($nm); $pts = $em['points']
+  foreach ($pt in $pts) { [void]$csvP.Append((@($nm, [string]$em['region'], $url, (IntOrBlank $pt[0]), ([double]$pt[1]).ToString('0.##', $INV)) | ForEach-Object { Csv $_ }) -join ',').Append("`n"); $nPts++ }
+  if ($jsP.Length) { [void]$jsP.Append(",`n") }
+  [void]$jsP.Append('{"name":' + (Js $nm) + ',"region":' + (Js ([string]$em['region'])) + ',"profile_url":' + (Js $url) + ',"start_year":' + (IntOrBlank $pts[0][0]) + ',"end_year":' + (IntOrBlank $pts[-1][0]) + ',"peak_year":' + (IntOrBlank (PeakYear $em)) +
+    ',"points":[' + (($pts | ForEach-Object { '[' + (IntOrBlank $_[0]) + ',' + ([double]$_[1]).ToString('0.##', $INV) + ']' }) -join ',') + ']}')
+}
+$OD['epoch-institute-power-curves.csv'] = $csvP.ToString()
+$OD['epoch-institute-power-curves.json'] = '{"source":"The Epoch Institute","url":"' + $SITE + '/dataset","licence":"CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)","note":"Interpretive scores (0-10) at each turning point, scaled to each profile''s own peak: compare shapes, not sizes.","profiles":[' + "`n" + $jsP.ToString() + "`n]}`n"
+$ODSIZE = @{}; foreach ($f in $OD.Keys) { if ([EpochBuild.W]::WriteIfChanged("$Repo\$f", $OD[$f])) { $NWRITE++ }; $ODSIZE[$f] = $U8.GetByteCount($OD[$f]) }
+function FileSize([string]$f) { $b = $ODSIZE[$f]; if ($b -ge 1MB) { ($b / 1MB).ToString('0.0', $INV) + ' MB' } else { [string][Math]::Max(1, [Math]::Round($b / 1KB)) + ' KB' } }
+function Dl([string]$f, [string]$label) { '<a class="od-dl-btn" href="/' + $f + '" download>' + $label + ' <span>' + (FileSize $f) + '</span></a>' }
+# the page's block: two datasets, their downloads, columns and sample rows, and the Dataset JSON-LD
+$minY = [int](($POL['nodes'] | Where-Object { $null -ne $_['s'] } | ForEach-Object { [double]$_['s'] } | Measure-Object -Minimum).Minimum)
+function IsoYear([int]$y) { if ($y -le 0) { $iy = $y + 1; '-' + ([Math]::Abs($iy)).ToString('0000') } else { $y.ToString('0000') } }
+$minP = [int](($EMPS | ForEach-Object { [double]$_['points'][0][0] } | Measure-Object -Minimum).Minimum)
+$sample = @('kingdom-of-france', 'joseon', 'ayutthaya-kingdom', 'kingdom-of-zimbabwe', 'republic-of-venice', 'kingdom-of-hawaii') | Where-Object { $NODE.ContainsKey($_) } | ForEach-Object { $NODE[$_] }
+$sampleP = @('Roman Empire', 'Mongol Empire', 'Ottoman Empire', 'Mali Empire') | Where-Object { $EMPURL.ContainsKey('/empire/' + [EpochBuild.W]::ToSlug($_)) } | ForEach-Object { $EMPURL['/empire/' + [EpochBuild.W]::ToSlug($_)] }
+function Spark($em) {   # a small line of the power curve
+  $pts = $em['points']; $x0 = [double]$pts[0][0]; $x1 = [double]$pts[-1][0]; $w = [Math]::Max(1, $x1 - $x0)
+  '<svg class="od-spark" viewBox="0 0 120 30" aria-hidden="true"><polyline points="' + (($pts | ForEach-Object { ((([double]$_[0] - $x0) / $w) * 118 + 1).ToString('0.#', $INV) + ',' + (29 - [double]$_[1] * 2.8).ToString('0.#', $INV) }) -join ' ') + '"/></svg>'
+}
+$ldStates = '{"@type":"Dataset","@id":"' + $SITE + '/dataset#states","name":"The Epoch Institute States Register","description":' + (Js ("Every state recorded by The Epoch Institute: $($odNodes.Count.ToString('N0')) kingdoms, empires, principalities, republics and chiefdoms from $(Yr $minY) to today, with years, type, region, capital, present-day countries and map position, and $($nRel.ToString('N0')) dated relations between them (succession, conquest, vassalage, union, colonial rule).")) +
+  ',"url":"' + $SITE + '/dataset","identifier":"' + $SITE + '/dataset#states","keywords":["historical states","world history","gazetteer","empires","kingdoms","historical geography"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":' + $ORG + ',"publisher":' + $ORG +
+  ',"temporalCoverage":"' + (IsoYear $minY) + '/' + $YEAR + '","spatialCoverage":{"@type":"Place","name":"World"},"variableMeasured":["start year","end year","type of state","region","capital","present-day countries","latitude","longitude","relation between states"]' +
+  ',"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"' + $SITE + '/epoch-institute-states.csv"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"' + $SITE + '/epoch-institute-state-relations.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"' + $SITE + '/epoch-institute-states.json"}]}'
+$ldCurves = '{"@type":"Dataset","@id":"' + $SITE + '/dataset#curves","name":"The Epoch Institute Power Curves","description":' + (Js "The Institute's interpretive power curves for $($EMPS.Count) state and empire profiles: a score from 0 to 10 at each turning point of a state's history, scaled to its own peak. They describe the shape of a state's rise and fall, not its absolute size.") +
+  ',"url":"' + $SITE + '/dataset","identifier":"' + $SITE + '/dataset#curves","keywords":["empires","rise and fall","historical power","world history"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":' + $ORG + ',"publisher":' + $ORG +
+  ',"temporalCoverage":"' + (IsoYear $minP) + '/' + $YEAR + '","variableMeasured":["year","power score (0-10, scaled to the profile''s peak)"]' +
+  ',"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"' + $SITE + '/epoch-institute-power-curves.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"' + $SITE + '/epoch-institute-power-curves.json"}]}'
+$odHtml = '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DataCatalog","name":"The Epoch Institute Open Data","url":"' + $SITE + '/dataset","publisher":' + $ORG + ',"dataset":[{"@id":"' + $SITE + '/dataset#states"},{"@id":"' + $SITE + '/dataset#curves"}]},' + $ldStates + ',' + $ldCurves + ']}</script>' + "`n" +
+  '<section class="od-set" id="states" aria-labelledby="od-states"><p class="od-kicker">Dataset 1</p><h2 class="od-title" id="od-states">The States Register</h2>' +
+  '<p class="od-desc">Every state the Institute has recorded, from ' + (Hx (Yr $minY)) + ' to today: kingdoms, empires, principalities, republics and chiefdoms, with their years, type, region, capital, present-day countries and map position, and the dated relations between them: who succeeded, conquered, ruled or merged with whom.</p>' +
+  '<ul class="od-facts"><li><b>' + $odNodes.Count.ToString('N0') + '</b> states</li><li><b>' + $nRel.ToString('N0') + '</b> relations</li><li><b>' + $nPlaced.ToString('N0') + '</b> placed at a capital or seat</li><li><b>' + $REGIONS.Count + '</b> regions</li></ul>' +
+  '<div class="od-dl">' + (Dl 'epoch-institute-states.csv' 'States, CSV') + (Dl 'epoch-institute-state-relations.csv' 'Relations, CSV') + (Dl 'epoch-institute-states.json' 'Both, JSON') + '</div>' +
+  '<div class="od-table-wrap"><table class="dataset-table"><caption>Six rows of the register</caption><thead><tr><th>Name</th><th>Type</th><th>Years</th><th>Capital</th><th>Today</th><th>Position</th></tr></thead><tbody>' +
+  (($sample | ForEach-Object { $g = $GEOD[[string]$_['id']]; '<tr><td><a href="' + (StateUrl $_) + '">' + (Hx ([string]$_['n'])) + '</a></td><td>' + (Hx (TypeLabel $_['t'])) + '</td><td>' + (Hx (SpanShort $_['s'] $_['e'])) + '</td><td>' + (Hx ([string]$_['c'])) + '</td><td>' + (Hx ((@($_['mo']) | Select-Object -First 2) -join ', ')) + '</td><td>' + $(if ($g) { ([double]$g[0]).ToString('0.0', $INV) + ', ' + ([double]$g[1]).ToString('0.0', $INV) } else { '' }) + '</td></tr>' }) -join '') + '</tbody></table></div>' +
+  '<details class="od-cols"><summary>The columns</summary><dl>' +
+  '<dt>States file</dt><dd>id (as in /state/&lt;id&gt;), name, type, region, broad_region, start_year and end_year (negative = BCE; an empty end year: the state exists today), approximate_dates, capital, present_day_countries (separated by &#8220;; &#8221;; empty for most of the 94 great empires, which spanned many), latitude and longitude, location_source (capital, recorded location, capital matched by name, set by hand, or approximate: the centre of the present-day country), profile_url, page_url.</dd>' +
+  '<dt>Relations file</dt><dd>source_id, relation, target_id, from_year, until_year. Relations: ' + (Hx ((@($POL['links'] | ForEach-Object { [string]$_['r'] } | Sort-Object -Unique)) -join ', ')) + '. A succession is stored once, as successor-of.</dd></dl></details>' +
+  '<p class="od-explore">Explore it on the site: <a href="/atlas">the Atlas</a> · <a href="/state/">States</a> · <a href="/connections">Connections</a> · <a href="/countries/">Country histories</a></p></section>' + "`n" +
+  '<section class="od-set" id="curves" aria-labelledby="od-curves"><p class="od-kicker">Dataset 2</p><h2 class="od-title" id="od-curves">Power Curves</h2>' +
+  '<p class="od-desc">The curves behind the <a href="/explorer">Empire Explorer</a> and the profiles&#8217; &#8220;Rise &amp; fall&#8221; charts: a score from 0 to 10 at each turning point of a state&#8217;s history. They are the Institute&#8217;s interpretive judgements, based on the works cited in each profile, and every curve is scaled to its own peak: compare the shapes, not the sizes.</p>' +
+  '<ul class="od-facts"><li><b>' + $EMPS.Count + '</b> profiles</li><li><b>' + $nPts.ToString('N0') + '</b> points</li><li><b>' + (Hx (Yr $minP)) + '</b> to today</li></ul>' +
+  '<div class="od-dl">' + (Dl 'epoch-institute-power-curves.csv' 'Curves, CSV') + (Dl 'epoch-institute-power-curves.json' 'Curves, JSON') + '</div>' +
+  '<div class="od-table-wrap"><table class="dataset-table"><caption>Four of the curves</caption><thead><tr><th>Profile</th><th>Years</th><th>Peak</th><th>Points</th><th>Curve</th></tr></thead><tbody>' +
+  (($sampleP | ForEach-Object { $p0 = $_['points']; '<tr><td><a href="/empire/' + [EpochBuild.W]::ToSlug([string]$_['name']) + '">' + (Hx ([string]$_['name'])) + '</a></td><td>' + (Hx (SpanShort $p0[0][0] $p0[-1][0])) + '</td><td>' + (Hx (Yr (PeakYear $_))) + '</td><td>' + $p0.Count + '</td><td>' + (Spark $_) + '</td></tr>' }) -join '') + '</tbody></table></div>' +
+  '<details class="od-cols"><summary>The columns</summary><dl><dt>CSV</dt><dd>One row per point: name, region, profile_url, year (negative = BCE), score (0&#8211;10).</dd><dt>JSON</dt><dd>One object per profile: name, region, profile_url, start_year, end_year, peak_year and points as [year, score] pairs.</dd></dl></details></section>'
+SetBlock "$Repo\dataset" 'open-data' $odHtml
+Say ("open data: {0} states ({1} placed), {2} relations, {3} curve points" -f $odNodes.Count, $nPlaced, $nRel, $nPts)
+
 # stale generated pages (entries, states or days that no longer exist)
 $htPlain = "# Generated by scripts/build-pages.ps1: the pages in this folder are extensionless HTML.`n<FilesMatch `"^[a-z0-9-]+$`">`n  ForceType text/html`n</FilesMatch>`n"
 foreach ($dir in 'countries', 'centuries', 'paths') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
@@ -1323,7 +1421,7 @@ foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts'
 }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

@@ -21,56 +21,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/about">
-<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="stylesheet" href="/shared.css?v=33">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-#about { min-height: 100vh; padding-top: 100px; }
-.team-section {
-  max-width: 1200px; margin: 0 auto 64px; padding: 0 40px;
-}
-.team-section-title {
-  font-family: var(--font-display); font-size: clamp(13px, 2vw, 17px);
-  letter-spacing: 0.08em; color: var(--gold-light);
-  margin: 0 0 8px; text-align: center;
-}
-.team-section-sub {
-  font-family: var(--font-text); font-size: 17px;
-  color: var(--muted); text-align: center; max-width: 560px;
-  margin: 0 auto 36px; line-height: 1.65;
-}
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-}
-.team-card {
-  background: var(--surface); border: 0.5px solid var(--border);
-  border-radius: 6px; padding: 24px 20px; text-align: center;
-  transition: border-color 0.2s;
-}
-.team-card:hover { border-color: var(--gold); }
-.team-avatar {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--border); margin: 0 auto 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 18px; color: var(--gold); opacity: 0.8;
-}
-.team-name {
-  font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em;
-  color: var(--gold-light); margin: 0 0 4px;
-}
-.team-role {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--muted); margin: 0 0 8px; font-weight: 600;}
-.team-area {
-  font-family: var(--font-text); font-size: 15px;
-  color: var(--text); line-height: 1.6; opacity: 0.8; margin: 0;
-}
-@media (max-width: 600px) {
-  .team-section { padding: 0 16px; }
-  .team-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
-}
+#about { min-height: auto; justify-content: flex-start; padding-top: 110px; }
+.about-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) !important; max-width: 1000px !important; align-items: start; }
+.about-how { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; text-align: left; }
+.about-how li { font-family: var(--font-text); font-size: 17px; line-height: 1.6; color: var(--text); padding-left: 14px; border-left: 2px solid rgba(var(--gold-rgb), 0.45); }
+.about-how b { color: var(--gold-light); font-weight: 600; }
+.about-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.about-chips a { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text); text-decoration: none; padding: 7px 12px; border: 1px solid var(--border); border-radius: 999px; }
+.about-chips a:hover { border-color: var(--gold); color: var(--gold-light); }
+.about-join { border-top: 0.5px solid var(--border); background: linear-gradient(135deg, rgba(var(--gold-rgb), 0.06), transparent); padding: 56px max(20px, env(safe-area-inset-right, 0px)) 64px max(20px, env(safe-area-inset-left, 0px)); text-align: center; }
+.team-section-title { font-family: var(--font-display); font-size: clamp(16px, 2.4vw, 22px); letter-spacing: 0.08em; color: var(--gold-light); margin: 0 0 10px; }
+.team-section-sub { font-family: var(--font-text); font-size: 18px; color: var(--muted); max-width: 600px; margin: 0 auto 26px; line-height: 1.65; }
+.about-join-ctas { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 24px; }
+.about-join-ctas .hero-cta { margin-top: 0; }
+@media (max-width: 760px) { .about-grid { grid-template-columns: 1fr !important; } }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
@@ -89,70 +57,40 @@
   <h1 class="research-title">About the Institute</h1>
   <p class="research-subtitle">Who we are, how we work, and how to reach us.</p>
   <p class="about-lede">The Epoch Institute researches human civilisation with objectivity and curiosity: the rise and fall of states, empires and cultures, the present-day echoes of historical events, and the ways the past shapes modern society. We aim to make the story of humanity not just informative but compelling. History is not a closed book; it is the foundation of everything around us.</p>
-  <div class="research-grid">
-
-    <div class="research-card">
-      <div class="research-card-icon">◎</div>
-      <h3 class="research-card-title">Our Mission</h3>
-      <p class="research-card-desc">The Epoch Institute studies civilisational patterns through data-driven research — examining how states, empires, cultures and ideas rise, sustain themselves and decline, and what those trajectories reveal about the forces that shape human societies. We make history intellectually rigorous and genuinely accessible.</p>
-    </div>
+  <div class="research-grid about-grid">
 
     <div class="research-card" id="methodology">
       <div class="research-card-icon">⊞</div>
-      <h3 class="research-card-title">Methodology</h3>
-      <p class="research-card-desc">Empire power scores are researcher-assigned normalised indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. All scores are drawn from peer-reviewed historiography and cited using Harvard-style references. Each trajectory is scaled to its own peak, allowing comparison of shape rather than absolute size.</p>
+      <h3 class="research-card-title">How we work</h3>
+      <ul class="about-how">
+        <li><b>Profiles</b> are written from the works listed in each profile&#8217;s references and checked for accuracy; every page shows when it was last reviewed.</li>
+        <li><b>Power scores</b> (0&#8211;10) are the Institute&#8217;s interpretive judgements of a state&#8217;s strength over time, based on those works. Each curve is scaled to its own peak: compare the shapes, not the sizes.</li>
+        <li><b>The encyclopedia and the states register</b> are compiled by the Institute. Pictures come from Wikimedia Commons under free licences, credited under each one.</li>
+        <li><b>Maps</b> place each state at its capital or seat, from Wikidata (CC0), on Natural Earth outlines (public domain).</li>
+      </ul>
     </div>
 
-    <div class="research-card" style="align-items:flex-start;text-align:left;">
+    <div class="research-card">
       <div class="research-card-icon">✉</div>
-      <h3 class="research-card-title" style="color:var(--gold-light);">Contact Us</h3>
-      <div style="display:flex;flex-direction:column;gap:14px;width:100%;">
-        <div>
-          <span style="font-family:var(--font-ui);font-size:12px;letter-spacing: 0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px; font-weight: 600;">Research &amp; Academic</span>
-          <a href="mailto:research@the-epoch-institute.org" style="font-family:var(--font-text);font-size:16px;color:var(--gold);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">research@the-epoch-institute.org</a>
-        </div>
-        <div>
-          <span style="font-family:var(--font-ui);font-size:12px;letter-spacing: 0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px; font-weight: 600;">Partnerships &amp; Outreach</span>
-          <a href="mailto:outreach@the-epoch-institute.org" style="font-family:var(--font-text);font-size:16px;color:var(--gold);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">outreach@the-epoch-institute.org</a>
-        </div>
-        <div>
-          <span style="font-family:var(--font-ui);font-size:12px;letter-spacing: 0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px; font-weight: 600;">Events &amp; Information</span>
-          <a href="mailto:info@the-epoch-institute.org" style="font-family:var(--font-text);font-size:16px;color:var(--gold);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">info@the-epoch-institute.org</a>
-        </div>
-      </div>
+      <h3 class="research-card-title">Get in touch</h3>
+      <p class="research-card-desc">Spotted an error? Want to suggest a state or a theme, write for us, or work with us? Every message reaches the research team.</p>
+      <div class="about-chips"><a href="/contact?topic=correction">Correct an error</a><a href="/contact?topic=suggest">Suggest a topic</a><a href="/contact?topic=press">Partnerships</a></div>
+      <a class="research-card-cta" href="/contact">Contact the Institute &rarr;</a>
     </div>
 
   </div>
 </section>
 
-<section id="team" style="background:var(--surface-alt,var(--surface));border-top:0.5px solid var(--border);padding-top:56px;">
-  <div class="team-section">
-    <h2 class="team-section-title">Founding Contributors</h2>
-    <p class="team-section-sub">The researchers, historians, and analysts who built the foundations of the Institute's dataset and research output.</p>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar">EI</div>
-        <p class="team-name">The Epoch Institute Research Team</p>
-        <p class="team-role">Core Research</p>
-        <p class="team-area">Empire trajectory data · Scholarly profiles · Dataset compilation</p>
-      </div>
-      <div class="team-card" style="border-style:dashed;opacity:0.55;">
-        <div class="team-avatar" style="opacity:0.4;">+</div>
-        <p class="team-name">Open Position</p>
-        <p class="team-role">Research Associate</p>
-        <p class="team-area">We welcome historians, researchers, and writers of all backgrounds.</p>
-      </div>
-    </div>
-    <p style="font-family:var(--font-text);font-size:16px;color:var(--muted);text-align:center;margin:28px 0 0;">
-      Interested in contributing? <a href="/contributors" style="color:var(--gold);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View the Contributors page →</a>
-    </p>
-  </div>
+<section class="about-join" aria-labelledby="join-title">
+  <h2 class="team-section-title" id="join-title">Write for the Institute</h2>
+  <p class="team-section-sub">Historians, students and curious readers write for the Institute: essays for the Community pages, research for new profiles, and corrections that keep the work accurate.</p>
+  <div class="about-join-ctas"><a class="hero-cta" href="/contributors">Write for us &rarr;</a><a class="hero-secondary-cta" href="/community#submit">Submit an article &rarr;</a></div>
 </section>
 
 </main>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=20"></script>
+<script src="/shared-nav.js?v=21"></script>
 <script>
 initNav('about');
 </script>

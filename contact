@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact the Institute: Corrections, Ideas and Questions — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Write to The Epoch Institute: report an error, suggest a state or topic, write for us, ask about our data and images, or propose a partnership.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/contact">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact the Institute — The Epoch Institute">
+<meta property="og:description" content="Report an error, suggest a topic, write for us, or ask about our data: every message reaches the research team.">
+<meta property="og:url" content="https://the-epoch-institute.org/contact">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=33">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Contact"}]},{"@type":"ContactPage","name":"Contact the Institute","url":"https://the-epoch-institute.org/contact","inLanguage":"en-GB","about":{"@id":"https://the-epoch-institute.org/#org"}},{"@type":"Organization","@id":"https://the-epoch-institute.org/#org","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","contactPoint":[{"@type":"ContactPoint","contactType":"research and corrections","email":"research@the-epoch-institute.org","availableLanguage":"English"},{"@type":"ContactPoint","contactType":"partnerships and outreach","email":"outreach@the-epoch-institute.org","availableLanguage":"English"},{"@type":"ContactPoint","contactType":"events and general information","email":"info@the-epoch-institute.org","availableLanguage":"English"}]}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<main id="main" class="ct-page ref-page">
+<div class="ct-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">Write to the Institute</h1>
+  <p class="ref-lede">Corrections, ideas, questions and proposals all reach the research team. Tell us what your message is about and we will take it from there.</p>
+</header>
+
+<div class="ct-layout">
+  <section class="ct-main" aria-label="Contact form">
+    <form class="ct-form" id="ct-form" action="https://formspree.io/f/mpqkezdj" method="POST" novalidate>
+      <fieldset class="ct-topics">
+        <legend class="ct-step"><span class="ct-num">1</span> What is your message about?</legend>
+        <div class="ct-topic-grid">
+          <label class="ct-topic"><input type="radio" name="topic" value="correction"><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg></span><span class="ct-tt">Correct an error</span><span class="ct-td">A wrong date, name, place or fact on one of our pages</span></label>
+          <label class="ct-topic"><input type="radio" name="topic" value="suggest"><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="ct-tt">Suggest a topic</span><span class="ct-td">A state, empire, person or theme we should cover</span></label>
+          <label class="ct-topic"><input type="radio" name="topic" value="write"><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4c-6 0-12 4-14 12l-2 4"/><path d="M8 14c4 0 8-2 10-6"/></svg></span><span class="ct-tt">Write for us</span><span class="ct-td">An article, an essay idea, or joining as a contributor</span></label>
+          <label class="ct-topic"><input type="radio" name="topic" value="data"><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 10h16M4 15h16M10 4v16"/></svg></span><span class="ct-tt">Our data and images</span><span class="ct-td">Reusing, citing or licensing what we publish</span></label>
+          <label class="ct-topic"><input type="radio" name="topic" value="press"><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10v4h3l6 4V6L7 10z"/><path d="M16.5 9a4 4 0 0 1 0 6"/></svg></span><span class="ct-tt">Press and partnerships</span><span class="ct-td">Media, collaborations, schools and events</span></label>
+          <label class="ct-topic"><input type="radio" name="topic" value="other"><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span class="ct-tt">Something else</span><span class="ct-td">Questions, feedback, or just to say hello</span></label>
+        </div>
+      </fieldset>
+
+      <div class="ct-details">
+        <p class="ct-step"><span class="ct-num">2</span> <span id="ct-step2">Your message</span></p>
+        <p class="ct-hint" id="ct-hint">Choose a topic above, or simply write to us.</p>
+        <div class="form-row" id="ct-page-row" hidden>
+          <label class="form-label" for="ct-page">Page with the error</label>
+          <input class="form-input" id="ct-page" name="page" type="text" placeholder="the page address, e.g. /encyclopedia/battle-of-hastings">
+        </div>
+        <div class="ct-two">
+          <div class="form-row">
+            <label class="form-label" for="ct-name">Name <span class="form-required">*</span></label>
+            <input class="form-input" id="ct-name" name="name" type="text" autocomplete="name" placeholder="Your name">
+            <p class="ct-err" id="ct-name-err" hidden>Please tell us your name.</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="ct-email">Email <span class="form-required">*</span></label>
+            <input class="form-input" id="ct-email" name="email" type="email" autocomplete="email" placeholder="your@email.com">
+            <p class="ct-err" id="ct-email-err" hidden>We need a valid email address to reply.</p>
+          </div>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="ct-message">Message <span class="form-required">*</span></label>
+          <textarea class="form-input form-textarea ct-message" id="ct-message" name="message" placeholder="Write your message…"></textarea>
+          <p class="ct-err" id="ct-message-err" hidden>Your message is a little short: a sentence or two helps us help you.</p>
+        </div>
+        <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" id="ct-subject" value="Message — The Epoch Institute">
+        <div class="ct-send-row">
+          <button type="submit" class="form-submit ct-send" id="ct-send">Send message &rarr;</button>
+          <p class="ct-privacy">We use your email only to reply to you.</p>
+        </div>
+        <p class="ct-status" id="ct-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <div class="ct-done" id="ct-done" tabindex="-1" hidden>
+      <span class="ct-done-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      <h2 class="ct-done-title" id="ct-done-title">Thank you</h2>
+      <p class="ct-done-text" id="ct-done-text">Your message is with the research team.</p>
+      <p class="ct-step ct-step-sm">While you wait</p>
+      <ul class="ct-next">
+        <li><a href="/atlas"><b>The Atlas</b><span>See the world in any year</span></a></li>
+        <li><a href="/quiz"><b>Today's quiz</b><span>Four clues, four guesses</span></a></li>
+        <li><a href="/today-in-history/"><b>On this day</b><span>What happened today in history</span></a></li>
+      </ul>
+      <form class="ct-nl" id="ct-nl" novalidate>
+        <label class="form-label" for="ct-nl-email">Get the monthly digest</label>
+        <div class="ct-nl-row"><input class="form-input" id="ct-nl-email" type="email" placeholder="your@email.com" autocomplete="email"><button type="submit" class="form-submit">Subscribe</button></div>
+        <p class="ct-status" id="ct-nl-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <aside class="ct-side">
+    <div class="ct-card">
+      <h2 class="ct-card-title">Write to us directly</h2>
+      <dl class="ct-mails">
+        <dt>Research and corrections</dt><dd><span class="ct-mail">research@the-epoch-institute.org</span><button type="button" class="ct-copy" data-copy="research@the-epoch-institute.org">Copy</button></dd>
+        <dt>Partnerships and outreach</dt><dd><span class="ct-mail">outreach@the-epoch-institute.org</span><button type="button" class="ct-copy" data-copy="outreach@the-epoch-institute.org">Copy</button></dd>
+        <dt>Events and information</dt><dd><span class="ct-mail">info@the-epoch-institute.org</span><button type="button" class="ct-copy" data-copy="info@the-epoch-institute.org">Copy</button></dd>
+      </dl>
+    </div>
+    <div class="ct-card">
+      <h2 class="ct-card-title">Follow the Institute</h2>
+      <ul class="ct-social">
+        <li><a href="https://x.com/Epoch_Institute" target="_blank" rel="noopener">X <span>@Epoch_Institute</span></a></li>
+        <li><a href="https://www.instagram.com/the.epoch.institute/" target="_blank" rel="noopener">Instagram <span>@the.epoch.institute</span></a></li>
+        <li><a href="https://www.facebook.com/the.epoch.institute" target="_blank" rel="noopener">Facebook <span>The Epoch Institute</span></a></li>
+      </ul>
+    </div>
+    <div class="ct-card ct-faq">
+      <h2 class="ct-card-title">Before you write</h2>
+      <details><summary>How do I cite a page?</summary><p>Encyclopedia, state, country and century pages end with a &#8220;Cite this&#8221; box in APA, MLA, Chicago and Harvard style, ready to copy.</p></details>
+      <details><summary>Can I reuse your pictures?</summary><p>Our pictures come from Wikimedia Commons under free licences. The author and licence are shown under each one: reuse them on those terms.</p></details>
+      <details><summary>Can I use your data?</summary><p>Yes. The states register and the power curves are free to reuse under CC BY 4.0: see <a href="/dataset">Open Data</a>.</p></details>
+      <details><summary>What happens to a correction?</summary><p>We check it against our sources and, if it holds, correct the page. Each page shows when it was last reviewed.</p></details>
+      <details><summary>Can I write for the Institute?</summary><p>Yes: send a finished article to the <a href="/community#submit">Community</a> pages, or <a href="/contributors">apply to join</a> as a contributor.</p></details>
+    </div>
+  </aside>
+</div>
+</div>
+</main>
+
+<script src="/shared-data.js?v=7"></script>
+<script src="/shared-nav.js?v=21"></script>
+<script>
+initNav('contact');
+(function () {
+  var TOPICS = {
+    correction: { label: 'a correction', step: 'Tell us what is wrong', hint: 'Which page, what it says, and what it should say. A source helps us check it quickly.', ph: 'The page says … but it should say … (source: …)', subject: 'Correction' },
+    suggest: { label: 'a suggestion', step: 'What should we add?', hint: 'A state, empire, person, event or theme you would like the Institute to cover, and why it matters.', ph: 'I would like to read about …', subject: 'Suggestion' },
+    write: { label: 'writing for us', step: 'Your idea', hint: 'Finished article? <a href="/community#submit">Submit it on the Community page</a>. Want to join as a contributor? <a href="/contributors">Apply here</a>. Or tell us your idea below.', ph: 'I would like to write about …', subject: 'Writing for the Institute' },
+    data: { label: 'our data and images', step: 'How would you like to use them?', hint: 'Our data is free under CC BY 4.0 (<a href="/dataset">Open Data</a>); pictures carry their own licences, shown under each one.', ph: 'I am working on … and would like to …', subject: 'Data and images' },
+    press: { label: 'press and partnerships', step: 'Tell us about your project', hint: 'Who you are, what you have in mind, and any dates.', ph: 'I am writing from … about …', subject: 'Press and partnerships' },
+    other: { label: 'your message', step: 'Your message', hint: 'Questions, feedback, or just to say hello.', ph: 'Write your message…', subject: 'Message' }
+  };
+  var form = document.getElementById('ct-form'), msg = document.getElementById('ct-message'), pageRow = document.getElementById('ct-page-row'), page = document.getElementById('ct-page');
+  var topic = 'other';
+  function setTopic(t, focus) {
+    if (!TOPICS[t]) return; topic = t; var d = TOPICS[t];
+    document.getElementById('ct-step2').textContent = d.step;
+    document.getElementById('ct-hint').innerHTML = d.hint;
+    msg.placeholder = d.ph;
+    pageRow.hidden = t !== 'correction';
+    document.getElementById('ct-subject').value = d.subject + ' — The Epoch Institute';
+    var r = form.querySelector('input[name="topic"][value="' + t + '"]'); if (r) r.checked = true;
+    if (focus) (t === 'correction' && !page.value ? page : document.getElementById('ct-name')).focus({ preventScroll: true });
+  }
+  form.querySelectorAll('input[name="topic"]').forEach(function (r) { r.addEventListener('change', function () { setTopic(r.value, false); }); });
+  // ?topic=correction&page=/state/x (the "Suggest a correction" link in every page's footer)
+  var q = new URLSearchParams(location.search);
+  if (q.get('page')) page.value = q.get('page').replace(/[^\w\-\/.#?=&%]/g, '');
+  if (TOPICS[q.get('topic')]) setTopic(q.get('topic'), false); else document.getElementById('ct-subject').value = 'Message — The Epoch Institute';
+
+  function err(id, bad) { document.getElementById(id + '-err').hidden = !bad; var el = document.getElementById(id); el.classList.toggle('form-input-error', bad); bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid'); return bad; }
+  ['ct-name', 'ct-email', 'ct-message'].forEach(function (id) { document.getElementById(id).addEventListener('input', function () { err(id, false); }); });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('ct-name').value.trim(), email = document.getElementById('ct-email').value.trim(), text = msg.value.trim();
+    var bad = [err('ct-name', !name), err('ct-email', !isValidEmail(email)), err('ct-message', text.length < 15)];
+    var firstBad = ['ct-name', 'ct-email', 'ct-message'][bad.indexOf(true)]; if (firstBad) { document.getElementById(firstBad).focus(); return; }
+    var btn = document.getElementById('ct-send'), status = document.getElementById('ct-status');
+    btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = '';
+    var body = { name: name, email: email, topic: TOPICS[topic].subject, message: text, _subject: document.getElementById('ct-subject').value, _gotcha: form.querySelector('.ct-hp').value };
+    if (topic === 'correction' && page.value.trim()) body.page = page.value.trim();
+    fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.hidden = true;
+        document.getElementById('ct-done-title').textContent = 'Thank you, ' + name.split(' ')[0] + '.';
+        document.getElementById('ct-done-text').textContent = (topic === 'other' ? 'Your message' : 'Your message about ' + TOPICS[topic].label) + ' is with the research team. We will reply to ' + email + '.';
+        var done = document.getElementById('ct-done'); done.hidden = false; done.focus();
+      })
+      .catch(function () {
+        btn.disabled = false; btn.innerHTML = 'Send message &rarr;';
+        status.innerHTML = 'Your message could not be sent. Please try again, or write to <b>research@the-epoch-institute.org</b>.';
+      });
+  });
+  // newsletter in the thank-you panel
+  document.getElementById('ct-nl').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var em = document.getElementById('ct-nl-email').value.trim(), st = document.getElementById('ct-nl-status');
+    if (!isValidEmail(em)) { st.textContent = 'Please enter a valid email address.'; return; }
+    fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email: em, _subject: 'Newsletter signup', source: 'contact page' }) })
+      .then(function (res) { if (!res.ok) throw new Error(); e.target.querySelector('.ct-nl-row').hidden = true; st.textContent = 'Subscribed. Thank you!'; })
+      .catch(function () { st.textContent = 'That did not work; please try again later.'; });
+  });
+  // copy an address (mail links do nothing for readers without a mail program)
+  document.querySelectorAll('.ct-copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-copy');
+      function ok() { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, function () { selectText(b.previousElementSibling); });
+      else selectText(b.previousElementSibling);
+    });
+  });
+  function selectText(el) { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+})();
+</script>
+</body>
+</html>

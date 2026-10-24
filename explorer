@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/explorer">
-<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="stylesheet" href="/shared.css?v=33">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
@@ -41,7 +41,7 @@
     <p class="explorer-label" data-i18n="exp_label">Interactive Explorer</p>
     <h1 class="explorer-title" data-i18n="exp_title">The Rise &amp; Fall of Empires</h1>
     <p class="explorer-description" data-i18n="exp_desc">Nearly four hundred states and empires across five millennia, each line scaled to its own peak — so you compare not their size but the shape of their story. Pick a region or an era, search for a state, click a line to follow it, or press ▶ to watch the centuries pass.</p>
-    <p class="explorer-method-note">Power scores are normalised indices (0–10) across six dimensions: territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach. Each trajectory is drawn from peer-reviewed sources cited in the Empire Profiles.</p>
+    <p class="explorer-method-note">Power scores (0–10) are the Institute&rsquo;s interpretive judgements of each state&rsquo;s strength over time, based on the works cited in its profile. Every curve is scaled to its own peak. The curves are free to download as <a href="/dataset#curves">open data</a>.</p>
   </div>
 
   <div class="controls">
@@ -108,6 +108,7 @@
   </div>
 
   <div class="chart-wrapper">
+    <p id="zoom-caption" class="zoom-caption" aria-live="polite"></p>
     <button id="zoom-reset-btn" class="zoom-reset-btn" data-i18n="zoom_out" title="Return to full timeline view">← Zoom Out</button>
     <div id="chart-guide" class="visible">
       <span class="guide-ornament"></span>
@@ -180,7 +181,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="/shared-data.js?v=7"></script>
 <script src="/point-descs.js?v=3" async></script>
-<script src="/shared-nav.js?v=20"></script>
+<script src="/shared-nav.js?v=21"></script>
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
@@ -226,7 +227,7 @@ let playTimer = null;
 let isPlaying = false;
 
 // ── Layout ─────────────────────────────────────────────────────────────────
-const margin = { top: 20, right: 24, bottom: 48, left: 44 };
+const margin = { top: 56, right: 24, bottom: 48, left: 44 };   // the top band holds the zoom caption and button
 let W, H, innerW, innerH;
 
 const container = document.getElementById("chart");
@@ -570,6 +571,15 @@ function zoomTo(targetDomain, duration) {
 
 function updateZoomButton() {
   document.getElementById("zoom-reset-btn").classList.toggle("visible", soloEmpire !== null);
+  // caption in the band above the plot: the state shown (and the one compared with it)
+  const cap = document.getElementById("zoom-caption");
+  const fmt = y => { y = Math.round(y); return y < 0 ? Math.abs(y) + " BCE" : y + " CE"; };
+  const part = name => {
+    const e = EMPIRES.find(x => x.name === name); if (!e) return "";
+    return `<b>${escHtml(e.name)}</b> ${fmt(e.points[0][0])} – ${fmt(e.points[e.points.length - 1][0])}`;
+  };
+  cap.innerHTML = soloEmpire ? part(soloEmpire) + (compareEmpire ? ' <span class="zoom-vs">compared with</span> ' + part(compareEmpire) : "") : "";
+  cap.classList.toggle("visible", soloEmpire !== null);
 }
 
 function zoomToCompare() {
@@ -657,7 +667,7 @@ function resize() {
   svg.attr("width", W).attr("height", H);
   xScale.range([0, innerW]);
   yScale.range([innerH, 0]);
-  svg.select("#chart-clip rect").attr("width", innerW).attr("height", innerH + 10);
+  svg.select("#chart-clip rect").attr("y", -10).attr("width", innerW).attr("height", innerH + 20);   // dots at 0 and 10 drawn whole
   render();
 }
 
@@ -683,6 +693,7 @@ function render() {
     return;
   }
   guide.classList.remove("visible");
+  updateZoomButton();
   document.getElementById("playback-bar").style.display = (activeRegion && xRange) ? "flex" : "none";
   document.getElementById("minimap-wrapper").style.display = activeRegion ? "block" : "none";
 

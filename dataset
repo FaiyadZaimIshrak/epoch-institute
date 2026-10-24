@@ -4,13 +4,14 @@
 <script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Open Dataset: Rise and Fall of 394 States — The Epoch Institute</title>
+<title>Open Data: the States Register and Power Curves — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Download the Epoch Institute's empire trajectory dataset — 394 states and empires, five millennia of normalised power scores. Free to use under CC BY 4.0.">
-<meta property="og:title" content="Open Dataset: Rise and Fall of 394 States — The Epoch Institute">
-<meta property="og:description" content="394 states and empires, five millennia of data. Free for academic and research use under Creative Commons Attribution 4.0.">
+<meta name="description" content="Download the Institute's states register (every recorded state with years, capital, map position and relations) and its power curves. Free under CC BY 4.0.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Open Data: the States Register and Power Curves — The Epoch Institute">
+<meta property="og:description" content="Every state the Institute has recorded, with years, capitals, map positions and relations, plus the power curves: free under CC BY 4.0.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/dataset">
 <meta property="og:site_name" content="The Epoch Institute">
@@ -19,110 +20,12 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/dataset">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "Empire Trajectory Dataset",
-  "description": "Normalised power trajectories for 394 states and empires from 3500 BCE to the present: start, end and peak years, duration, and 31 power scores (0–10) sampled at equal intervals across each state's lifespan, combining territory, military capacity, economic output, administrative coherence, cultural influence and geopolitical reach.",
-  "url": "https://the-epoch-institute.org/dataset",
-  "identifier": "https://the-epoch-institute.org/dataset",
-  "keywords": ["empires", "world history", "historical states", "rise and fall", "power trajectories", "historical data"],
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "isAccessibleForFree": true,
-  "creator": { "@type": "Organization", "name": "The Epoch Institute", "url": "https://the-epoch-institute.org/" },
-  "publisher": { "@type": "Organization", "name": "The Epoch Institute", "url": "https://the-epoch-institute.org/" },
-  "creditText": "The Epoch Institute Research Team (2026). Empire Trajectory Dataset. The Epoch Institute.",
-  "temporalCoverage": "-3499/2026",
-  "spatialCoverage": { "@type": "Place", "name": "World" },
-  "variableMeasured": ["start_year", "end_year", "peak_year", "duration", "normalised power score (0–10) at 31 points of the lifespan"],
-  "dateModified": "2026-10-23",
-  "distribution": [
-    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://the-epoch-institute.org/epoch-institute-empire-dataset.csv" },
-    { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://the-epoch-institute.org/epoch-institute-empire-dataset.json" }
-  ]
-}
-</script>
-<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="stylesheet" href="/shared.css?v=33">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-#dataset { min-height: 100vh; padding-top: 100px; }
-.dataset-description {
-  font-family: var(--font-text); font-size: 17px;
-  color: var(--text); line-height: 1.75; max-width: 720px; margin: 0 0 36px;
-}
-.dataset-btn-row {
-  display: flex; gap: 12px; flex-wrap: wrap;
-  justify-content: center; margin-bottom: 32px;
-}
-.dataset-cite-box {
-  background: var(--surface); border: 0.5px solid var(--border);
-  border-radius: 8px; padding: 16px; max-width: 640px; width: 100%;
-  text-align: left; margin-bottom: 16px;
-}
-.dataset-cite-label {
-  font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 8px; font-weight: 600;}
-.dataset-cite-text {
-  font-family: var(--font-text); font-size: 16px;
-  color: var(--text); line-height: 1.6; margin: 0 0 12px;
-}
-.dataset-licence {
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-}
-.dataset-licence-badge {
-  border: 0.5px solid var(--border); border-radius: 20px;
-  padding: 3px 10px; font-size: 13px; color: var(--muted);
-  text-decoration: none; transition: border-color 0.2s, color 0.2s;
-}
-.dataset-licence-badge:hover { border-color: var(--gold); color: var(--gold); }
-.dataset-licence-note {
-  font-family: var(--font-text); font-size: 15px;
-  color: var(--muted); max-width: 480px; line-height: 1.5; margin: 0;
-}
-.dataset-preview-section {
-  width: 100%; max-width: 860px; margin-top: 48px; padding-top: 40px;
-  border-top: 0.5px solid var(--border); text-align: left;
-}
-.dataset-preview-heading {
-  font-family: var(--font-display); font-size: 15px; letter-spacing: 0.08em;
-  color: var(--gold-light); margin: 0 0 8px;
-}
-.dataset-preview-sub {
-  font-family: var(--font-text); font-size: 16px; color: var(--muted);
-  margin: 0 0 20px; line-height: 1.6;
-}
-.dataset-table-wrap { overflow-x: auto; margin-bottom: 32px; }
-.dataset-table {
-  width: 100%; border-collapse: collapse;
-  font-family: var(--font-text); font-size: 16px;
-}
-.dataset-table th {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--gold); padding: 8px 12px;
-  border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; font-weight: 600;}
-.dataset-table td {
-  padding: 9px 12px; border-bottom: 0.5px solid var(--border);
-  color: var(--text); line-height: 1.4;
-}
-.dataset-table tr:last-child td { border-bottom: none; }
-.dataset-table tr:hover td { background: rgba(var(--gold-rgb),0.04); }
-.dataset-cols-heading {
-  font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--muted); margin: 0 0 12px; font-weight: 600;}
-.dataset-col-list {
-  list-style: none; padding: 0; margin: 0;
-  display: flex; flex-direction: column; gap: 8px;
-}
-.dataset-col-list li {
-  font-family: var(--font-text); font-size: 16px; color: var(--text);
-  line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--border);
-}
-.dataset-col-list strong { color: var(--gold-light); }
-</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>
@@ -133,78 +36,47 @@
 </script>
 </head>
 <body>
-<main id="main">
-
-<section id="dataset" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+<main id="main" class="od-page ref-page">
+<div class="od-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Open Data</li></ol></nav>
+<header class="ref-head">
   <span class="hero-ornament"></span>
-  <h1 class="research-title">Open Dataset</h1>
-  <p class="research-subtitle">Empire Trajectory Data — Freely Available for Research</p>
-  <p class="dataset-description">The Epoch Institute's empire trajectory dataset covers 394 states and empires across five millennia, from ancient Mesopotamia to the modern era. Each entry includes normalised power scores across six dimensions — territory, military capacity, economic output, administrative coherence, cultural influence, and geopolitical reach — plotted across each empire's full lifespan. The dataset is freely available for academic, educational, and research use under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
-  <div class="dataset-btn-row">
-    <a class="hero-cta" id="dataset-csv-btn" href="/epoch-institute-empire-dataset.csv" download>Download CSV →</a>
-    <a class="hero-cta" id="dataset-json-btn" href="/epoch-institute-empire-dataset.json" download>Download JSON →</a>
-  </div>
-  <div class="dataset-cite-box">
-    <span class="dataset-cite-label">How to cite this dataset</span>
-    <p class="dataset-cite-text">The Epoch Institute Research Team (2026). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset</p>
-    <button class="detail-cite-btn" id="dataset-copy-cite-btn">Copy citation →</button>
-  </div>
-  <div class="dataset-licence">
-    <a class="dataset-licence-badge" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>
-    <p class="dataset-licence-note">You are free to share and adapt this data for any purpose, provided you give appropriate credit to The Epoch Institute.</p>
-  </div>
+  <h1 class="research-title">Open Data</h1>
+  <p class="ref-lede">The Institute&#8217;s data, free to reuse in research, teaching and journalism under a Creative Commons Attribution licence (CC BY 4.0). Download it, cite it, build on it.</p>
+</header>
 
-  <div class="dataset-preview-section">
-    <h3 class="dataset-preview-heading">Sample Data</h3>
-    <p class="dataset-preview-sub">Five representative entries from across the dataset — spanning regions and eras. Trajectory columns (t_0–t_30) omitted for brevity.</p>
-    <div class="dataset-table-wrap">
-      <table class="dataset-table">
-        <thead>
-          <tr>
-            <th>Name</th><th>Region</th><th>Start</th><th>End</th><th>Peak</th><th>Duration</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Akkadian Empire</td><td>Ancient Near East</td><td>−2334</td><td>−2154</td><td>−2240</td><td>180</td></tr>
-          <tr><td>Assyrian Empire</td><td>Ancient Near East</td><td>−2025</td><td>−609</td><td>−671</td><td>1,416</td></tr>
-          <tr><td>Roman Empire</td><td>Europe</td><td>−27</td><td>476</td><td>117</td><td>503</td></tr>
-          <tr><td>Tang Dynasty</td><td>East Asia</td><td>618</td><td>907</td><td>700</td><td>289</td></tr>
-          <tr><td>Ottoman Empire</td><td>Middle East / Europe</td><td>1299</td><td>1922</td><td>1683</td><td>623</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="dataset-cols">
-      <h4 class="dataset-cols-heading">Column Definitions</h4>
-      <ul class="dataset-col-list">
-        <li><strong>name</strong> — Empire or civilisation name</li>
-        <li><strong>region</strong> — Broad geographic region (9 categories)</li>
-        <li><strong>start_year / end_year</strong> — Conventional founding and dissolution dates; negative values indicate BCE</li>
-        <li><strong>peak_year</strong> — Year of maximum territorial or institutional power</li>
-        <li><strong>duration</strong> — Years from start to end</li>
-        <li><strong>t_0 … t_30</strong> — 31 normalised power-trajectory sample points at equal intervals across the empire's lifespan, scored 0–10</li>
-      </ul>
-    </div>
-  </div>
+<!-- build:open-data -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DataCatalog","name":"The Epoch Institute Open Data","url":"https://the-epoch-institute.org/dataset","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"dataset":[{"@id":"https://the-epoch-institute.org/dataset#states"},{"@id":"https://the-epoch-institute.org/dataset#curves"}]},{"@type":"Dataset","@id":"https://the-epoch-institute.org/dataset#states","name":"The Epoch Institute States Register","description":"Every state recorded by The Epoch Institute: 5,463 kingdoms, empires, principalities, republics and chiefdoms from 5400 BCE to today, with years, type, region, capital, present-day countries and map position, and 11,291 dated relations between them (succession, conquest, vassalage, union, colonial rule).","url":"https://the-epoch-institute.org/dataset","identifier":"https://the-epoch-institute.org/dataset#states","keywords":["historical states","world history","gazetteer","empires","kingdoms","historical geography"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"temporalCoverage":"-5399/2026","spatialCoverage":{"@type":"Place","name":"World"},"variableMeasured":["start year","end year","type of state","region","capital","present-day countries","latitude","longitude","relation between states"],"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://the-epoch-institute.org/epoch-institute-states.csv"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://the-epoch-institute.org/epoch-institute-state-relations.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://the-epoch-institute.org/epoch-institute-states.json"}]},{"@type":"Dataset","@id":"https://the-epoch-institute.org/dataset#curves","name":"The Epoch Institute Power Curves","description":"The Institute's interpretive power curves for 394 state and empire profiles: a score from 0 to 10 at each turning point of a state's history, scaled to its own peak. They describe the shape of a state's rise and fall, not its absolute size.","url":"https://the-epoch-institute.org/dataset","identifier":"https://the-epoch-institute.org/dataset#curves","keywords":["empires","rise and fall","historical power","world history"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"temporalCoverage":"-3499/2026","variableMeasured":["year","power score (0-10, scaled to the profile's peak)"],"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://the-epoch-institute.org/epoch-institute-power-curves.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://the-epoch-institute.org/epoch-institute-power-curves.json"}]}]}</script>
+<section class="od-set" id="states" aria-labelledby="od-states"><p class="od-kicker">Dataset 1</p><h2 class="od-title" id="od-states">The States Register</h2><p class="od-desc">Every state the Institute has recorded, from 5400 BCE to today: kingdoms, empires, principalities, republics and chiefdoms, with their years, type, region, capital, present-day countries and map position, and the dated relations between them: who succeeded, conquered, ruled or merged with whom.</p><ul class="od-facts"><li><b>5,463</b> states</li><li><b>11,291</b> relations</li><li><b>4,534</b> placed at a capital or seat</li><li><b>27</b> regions</li></ul><div class="od-dl"><a class="od-dl-btn" href="/epoch-institute-states.csv" download>States, CSV <span>1.1 MB</span></a><a class="od-dl-btn" href="/epoch-institute-state-relations.csv" download>Relations, CSV <span>634 KB</span></a><a class="od-dl-btn" href="/epoch-institute-states.json" download>Both, JSON <span>3.6 MB</span></a></div><div class="od-table-wrap"><table class="dataset-table"><caption>Six rows of the register</caption><thead><tr><th>Name</th><th>Type</th><th>Years</th><th>Capital</th><th>Today</th><th>Position</th></tr></thead><tbody><tr><td><a href="/empire/kingdom-of-france">Kingdom of France</a></td><td>kingdom</td><td>987–1792</td><td>Paris</td><td>France</td><td>48.9, 2.4</td></tr><tr><td><a href="/empire/joseon">Joseon</a></td><td>kingdom</td><td>1392–1897</td><td>Hanseong (Seoul)</td><td>South Korea, North Korea</td><td>37.6, 127.0</td></tr><tr><td><a href="/empire/ayutthaya-kingdom">Ayutthaya Kingdom</a></td><td>kingdom</td><td>1351–1767</td><td>Ayutthaya</td><td>Thailand</td><td>14.3, 100.6</td></tr><tr><td><a href="/state/kingdom-of-zimbabwe">Kingdom of Zimbabwe</a></td><td>kingdom</td><td>1220–1450</td><td>Great Zimbabwe</td><td>Zimbabwe, Mozambique</td><td>-20.3, 30.9</td></tr><tr><td><a href="/empire/republic-of-venice">Republic of Venice</a></td><td>republic</td><td>697–1797</td><td>Venice</td><td>Italy, Croatia</td><td>45.4, 12.3</td></tr><tr><td><a href="/state/kingdom-of-hawaii">Kingdom of Hawaii</a></td><td>kingdom</td><td>1795–1893</td><td>Honolulu</td><td>United States</td><td>21.3, -157.9</td></tr></tbody></table></div><details class="od-cols"><summary>The columns</summary><dl><dt>States file</dt><dd>id (as in /state/&lt;id&gt;), name, type, region, broad_region, start_year and end_year (negative = BCE; an empty end year: the state exists today), approximate_dates, capital, present_day_countries (separated by &#8220;; &#8221;; empty for most of the 94 great empires, which spanned many), latitude and longitude, location_source (capital, recorded location, capital matched by name, set by hand, or approximate: the centre of the present-day country), profile_url, page_url.</dd><dt>Relations file</dt><dd>source_id, relation, target_id, from_year, until_year. Relations: colony-of, conquered-by, merged-into, part-of, personal-union-with, protectorate-of, province-of, split-from, successor-of, tributary-to, vassal-of. A succession is stored once, as successor-of.</dd></dl></details><p class="od-explore">Explore it on the site: <a href="/atlas">the Atlas</a> · <a href="/state/">States</a> · <a href="/connections">Connections</a> · <a href="/countries/">Country histories</a></p></section>
+<section class="od-set" id="curves" aria-labelledby="od-curves"><p class="od-kicker">Dataset 2</p><h2 class="od-title" id="od-curves">Power Curves</h2><p class="od-desc">The curves behind the <a href="/explorer">Empire Explorer</a> and the profiles&#8217; &#8220;Rise &amp; fall&#8221; charts: a score from 0 to 10 at each turning point of a state&#8217;s history. They are the Institute&#8217;s interpretive judgements, based on the works cited in each profile, and every curve is scaled to its own peak: compare the shapes, not the sizes.</p><ul class="od-facts"><li><b>394</b> profiles</li><li><b>6,585</b> points</li><li><b>3500 BCE</b> to today</li></ul><div class="od-dl"><a class="od-dl-btn" href="/epoch-institute-power-curves.csv" download>Curves, CSV <span>607 KB</span></a><a class="od-dl-btn" href="/epoch-institute-power-curves.json" download>Curves, JSON <span>130 KB</span></a></div><div class="od-table-wrap"><table class="dataset-table"><caption>Four of the curves</caption><thead><tr><th>Profile</th><th>Years</th><th>Peak</th><th>Points</th><th>Curve</th></tr></thead><tbody><tr><td><a href="/empire/roman-empire">Roman Empire</a></td><td>27 BCE – 476 CE</td><td>117 CE</td><td>16</td><td><svg class="od-spark" viewBox="0 0 120 30" aria-hidden="true"><polyline points="1,17.8 9.4,15 10.6,12.2 23.5,12.2 34.8,1 46,6.6 49.6,6.6 62.5,15 74,12.2 80.5,9.4 84.7,6.6 96,15 100,12.2 103.5,20.6 114.1,23.4 119,29"/></svg></td></tr><tr><td><a href="/empire/mongol-empire">Mongol Empire</a></td><td>1206–1368</td><td>1241 CE</td><td>14</td><td><svg class="od-spark" viewBox="0 0 120 30" aria-hidden="true"><polyline points="1,20.6 7.6,15 10.5,12.2 16.3,9.4 22.9,3.8 26.5,1 38.9,3.8 40.3,12.2 54.2,6.6 54.9,9.4 65.1,15 69.5,17.8 106.6,23.4 119,29"/></svg></td></tr><tr><td><a href="/empire/ottoman-empire">Ottoman Empire</a></td><td>1299–1922</td><td>1520 CE</td><td>19</td><td><svg class="od-spark" viewBox="0 0 120 30" aria-hidden="true"><polyline points="1,23.4 6.1,17.8 18,12.2 20.5,26.2 22.6,17.8 30.2,6.6 41.3,3.8 42.9,1 51.6,3.8 58,6.6 73.7,9.4 76.8,12.2 77,12.2 95.9,15 110.7,20.6 117.3,23.4 117.5,23.4 118.6,26.2 119,29"/></svg></td></tr><tr><td><a href="/empire/mali-empire">Mali Empire</a></td><td>1235–1600</td><td>1337 CE</td><td>14</td><td><svg class="od-spark" viewBox="0 0 120 30" aria-hidden="true"><polyline points="1,23.4 7.5,20.6 17.2,17.8 22,15 25.9,9.4 34,1 38.2,9.4 51.1,17.8 54.3,17.8 65,23.4 70.5,20.6 76.3,26.2 86.7,23.4 119,29"/></svg></td></tr></tbody></table></div><details class="od-cols"><summary>The columns</summary><dl><dt>CSV</dt><dd>One row per point: name, region, profile_url, year (negative = BCE), score (0&#8211;10).</dd><dt>JSON</dt><dd>One object per profile: name, region, profile_url, start_year, end_year, peak_year and points as [year, score] pairs.</dd></dl></details></section>
+<!-- /build:open-data -->
+
+<section class="od-set od-cite" aria-labelledby="od-cite">
+  <h2 class="od-title" id="od-cite">How to cite</h2>
+  <div class="od-cite-row"><p class="od-cite-text">The Epoch Institute (2026). <i>States Register</i> [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset</p><button type="button" class="ct-copy" data-copy>Copy</button></div>
+  <div class="od-cite-row"><p class="od-cite-text">The Epoch Institute (2026). <i>Power Curves</i> [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset</p><button type="button" class="ct-copy" data-copy>Copy</button></div>
+  <h2 class="od-title">Licence and sources</h2>
+  <ul class="od-notes">
+    <li>Both datasets are released under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>: share and adapt them for any purpose, with credit to The Epoch Institute.</li>
+    <li>The register is compiled by the Institute. Positions come from <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a> (CC0): a state&#8217;s capital where known, else its recorded location; states without either are placed at the centre of their present-day country and marked as approximate.</li>
+    <li>Early dates are often uncertain; rows marked approximate_dates have no firmer date in our sources.</li>
+    <li>The pictures on the site are not part of these datasets: each carries its own licence, shown under it.</li>
+    <li>Found an error in the data? <a href="/contact?topic=correction&amp;page=/dataset">Tell us</a>.</li>
+  </ul>
 </section>
-
+</div>
 </main>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=20"></script>
+<script src="/shared-nav.js?v=21"></script>
 <script>
-document.getElementById('dataset-copy-cite-btn').addEventListener('click', function() {
-  var text = 'The Epoch Institute Research Team (2026). Empire Trajectory Dataset [Data set]. The Epoch Institute. https://the-epoch-institute.org/dataset';
-  var btn  = this;
-  navigator.clipboard.writeText(text).then(function() {
-    var orig = btn.textContent;
-    btn.textContent = 'Copied ✓';
-    btn.style.color = 'var(--gold)';
-    setTimeout(function() { btn.textContent = orig; btn.style.color = ''; }, 1800);
+initNav('dataset');
+document.querySelectorAll('.od-cite [data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.previousElementSibling.textContent.replace(/\s+/g, ' ').trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); }, function () {});
   });
 });
-
-initNav('dataset');
 </script>
-
 </body>
 </html>

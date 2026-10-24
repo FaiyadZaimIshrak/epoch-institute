@@ -6,11 +6,15 @@ function escHtml(str) {
 }
 
 function jsonp(url, cb) {
+  // an Apps Script error comes back as an HTML page (status 200): it never calls back, so give up after 10 s
   const fn = '_ep_' + Date.now() + '_' + Math.random().toString(36).slice(2);
-  window[fn] = function(data) { delete window[fn]; document.head.removeChild(s); cb(data); };
+  let done = false;
+  const finish = data => { if (done) return; done = true; clearTimeout(timer); window[fn] = function () {}; if (s.parentNode) s.parentNode.removeChild(s); cb(data); };
+  window[fn] = finish;
   const s = document.createElement('script');
   s.src = url + '&callback=' + fn;
-  s.onerror = function() { delete window[fn]; cb([]); };
+  s.onerror = function() { finish([]); };
+  const timer = setTimeout(function () { finish([]); }, 10000);
   document.head.appendChild(s);
 }
 
@@ -297,9 +301,9 @@ function initNav(activePage) {
     ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
     ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained']];
-  const MORE = [['series', '/research-series', 'Research Series'], ['dataset', '/dataset', 'Open Dataset'], ['research', '/research', 'Research Hub'],
+  const MORE = [['series', '/research-series', 'Research Series'], ['dataset', '/dataset', 'Open Data'], ['research', '/research', 'Research Hub'],
     ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'], ['', '/#newsletter-section', 'Newsletter'],
-    ['about', '/about', 'About the Institute'], ['contributors', '/contributors', 'Contributors']];
+    ['about', '/about', 'About the Institute'], ['contributors', '/contributors', 'Write for Us'], ['contact', '/contact', 'Contact']];
   const exploreActive = EXPLORE.some(x => x[0] === activePage);
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
   const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}</a>`;
@@ -325,7 +329,6 @@ function initNav(activePage) {
       <button class="nav-parent-btn${moreActive ? ' active-group' : ''}" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">More ▾</button>
       <div class="nav-group-menu" id="nav-more-menu" role="menu">
         ${MORE.map(x => navItem(x)).join('\n        ')}
-        <button type="button" onclick="openContactModal()">Contact</button>
       </div>
     </div>
   </div>
@@ -340,12 +343,16 @@ function initNav(activePage) {
     ${EXPLORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
     <span class="nav-dropdown-group">More</span>
     ${MORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
-    <button type="button" class="nav-dropdown-link" id="mob-contact">Contact</button>
   </div>
 </nav>`;
 
+  // every page but the contact page itself invites corrections, with its own address filled in
+  const fixHtml = location.pathname === '/contact' ? '' :
+    `<p class="footer-fix">Spotted a mistake on this page? <a href="/contact?topic=correction&amp;page=${encodeURIComponent(location.pathname)}">Suggest a correction &rarr;</a></p>`;
+
   const footerHtml = `
 <footer id="site-footer">
+  ${fixHtml}
   <div class="footer-inner">
     <div class="footer-brand">
       <span class="footer-logo">THE EPOCH INSTITUTE</span>
@@ -384,17 +391,17 @@ function initNav(activePage) {
         <a class="footer-link" href="/paths/">Reading Paths</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
         <a class="footer-link" href="/research-series">Research Series</a>
-        <a class="footer-link" href="/dataset">Open Dataset</a>
+        <a class="footer-link" href="/dataset">Open Data</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Institute</span>
         <a class="footer-link" href="/about">About the Institute</a>
         <a class="footer-link" href="/about#methodology">Methodology</a>
         <a class="footer-link" href="/research">Research Hub</a>
-        <a class="footer-link" href="/contributors">Contributors</a>
+        <a class="footer-link" href="/contributors">Write for Us</a>
         <a class="footer-link" href="/community">Community</a>
         <a class="footer-link" href="/community#submit">Submit an Article</a>
-        <a class="footer-link" href="#" id="fl-contact">Contact</a>
+        <a class="footer-link" href="/contact">Contact</a>
       </div>
       <div class="footer-col">
         <div class="footer-newsletter">
@@ -413,30 +420,6 @@ function initNav(activePage) {
   </div>
 </footer>`;
 
-  const contactModalHtml = `
-<div id="contact-modal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
-  <div class="modal-box">
-    <button class="modal-close" id="contact-modal-close" aria-label="Close">✕</button>
-    <h3 class="modal-title" id="contact-modal-title">Get in Touch</h3>
-    <form class="modal-form" id="contact-form" novalidate>
-      <div class="form-row">
-        <label class="form-label" for="ct-name">Name <span class="form-required">*</span></label>
-        <input class="form-input" id="ct-name" type="text" placeholder="Your name" autocomplete="name">
-      </div>
-      <div class="form-row">
-        <label class="form-label" for="ct-email">Email <span class="form-required">*</span></label>
-        <input class="form-input" id="ct-email" type="email" placeholder="your@email.com" autocomplete="email">
-      </div>
-      <div class="form-row">
-        <label class="form-label" for="ct-message">Message <span class="form-required">*</span></label>
-        <textarea class="form-input form-textarea" id="ct-message" placeholder="Your message…"></textarea>
-      </div>
-      <button type="submit" class="form-submit" id="ct-submit">Send Message →</button>
-      <p class="form-success" id="ct-success" style="display:none;">Thank you — we’ll be in touch shortly.</p>
-    </form>
-  </div>
-</div>`;
-
   const searchHtml = `
 <div id="site-search" class="site-search" role="dialog" aria-modal="true" aria-label="Search" hidden>
   <div class="site-search-box">
@@ -450,9 +433,9 @@ function initNav(activePage) {
   </div>
 </div>`;
 
-  // Inject nav, footer, contact modal, search
+  // Inject nav, footer, search
   document.body.insertAdjacentHTML('afterbegin', navHtml);
-  document.body.insertAdjacentHTML('beforeend', footerHtml + contactModalHtml + searchHtml);
+  document.body.insertAdjacentHTML('beforeend', footerHtml + searchHtml);
   initSiteSearch();
   initEncPreviews();
 
@@ -535,7 +518,6 @@ function initNav(activePage) {
       if (open) { const first = drop.querySelector('.nav-dropdown-link'); if (first) first.focus(); }
     });
     drop.querySelectorAll('.nav-dropdown-link').forEach(link => link.addEventListener('click', closeMenu));
-    document.getElementById('mob-contact').addEventListener('click', () => openContactModal());
     document.addEventListener('click', e => {
       if (drop.classList.contains('open') && !drop.contains(e.target)) closeMenu();
     });
@@ -562,84 +544,8 @@ function initNav(activePage) {
     document.getElementById('site-nav').classList.toggle('scrolled', window.scrollY > 80);
   });
 
-  // ── Contact modal ───────────────────────────────────────────────────────────
-  function openContactModal() {
-    const overlay = document.getElementById('contact-modal');
-    overlay.classList.remove('closing');
-    overlay.style.display = 'flex';
-    overlay.offsetHeight; // force reflow for animation
-    overlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-    setTimeout(() => { const f = document.getElementById('ct-name'); if (f) f.focus(); }, 50);
-  }
-  function closeContactModal() {
-    const overlay = document.getElementById('contact-modal');
-    overlay.classList.remove('is-open');
-    overlay.classList.add('closing');
-    setTimeout(() => {
-      overlay.style.display = 'none';
-      overlay.classList.remove('closing');
-      document.body.style.overflow = '';
-    }, 220);
-  }
-  window.openContactModal = openContactModal;
-
-  document.getElementById('contact-modal-close').addEventListener('click', closeContactModal);
-  document.getElementById('contact-modal').addEventListener('click', e => {
-    if (e.target === e.currentTarget) closeContactModal();
-  });
-  document.getElementById('fl-contact').addEventListener('click', e => {
-    e.preventDefault();
-    openContactModal();
-  });
-
-  // ── Escape closes contact modal ──────────────────────────────────────────────
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      var m = document.getElementById('contact-modal');
-      if (m && m.style.display !== 'none') closeContactModal();
-    }
-  });
-
-  document.getElementById('contact-form').addEventListener('submit', e => {
-    e.preventDefault();
-    const name    = document.getElementById('ct-name').value.trim();
-    const email   = document.getElementById('ct-email').value.trim();
-    const message = document.getElementById('ct-message').value.trim();
-    let ok = true;
-    [['ct-name', !name], ['ct-email', !isValidEmail(email)], ['ct-message', !message]].forEach(([id, bad]) => {
-      const el = document.getElementById(id);
-      el.classList.toggle('form-input-error', bad);
-      bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid');
-      if (bad) ok = false;
-    });
-    if (!ok) return;
-    const btn = document.getElementById('ct-submit');
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    fetch(FORMSPREE_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ name, email, message, _subject: 'Contact — The Epoch Institute' })
-    })
-    .then(res => {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('ct-success').style.display = 'block';
-    })
-    .catch(() => {
-      btn.disabled = false;
-      btn.textContent = 'Send Message →';
-    });
-  });
-
-  ['ct-name', 'ct-email', 'ct-message'].forEach(id => {
-    document.getElementById(id).addEventListener('input', () => {
-      const el = document.getElementById(id);
-      el.classList.remove('form-input-error');
-      el.removeAttribute('aria-invalid');
-    });
-  });
+  // ── Contact: a page of its own (/contact); old callers of the modal go there ──
+  window.openContactModal = function () { location.href = '/contact'; };
 
   // ── Desktop dropdown groups (hover + click + keyboard nav) ──────────────────
   (function() {

@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/research-series">
 <link rel="alternate" type="application/rss+xml" title="The Epoch Institute Research Series" href="/feed.xml">
-<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="stylesheet" href="/shared.css?v=33">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -239,7 +239,7 @@
 </main>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=20"></script>
+<script src="/shared-nav.js?v=21"></script>
 <script>
 var SERIES_DATA = {
   'series-01': {
@@ -444,13 +444,18 @@ function copySeriesLink(btn) {
   });
 }
 
-function seriesNotify(e, seriesName) {
+function seriesNotify(e, seriesName) {   // sent through the contact form service; confirmed in place
   e.preventDefault();
-  var email = e.target.querySelector('input[type="email"]').value.trim();
-  if (!email) return;
-  window.location.href = 'mailto:outreach@the-epoch-institute.org'
-    + '?subject=' + encodeURIComponent('Notify me: ' + seriesName)
-    + '&body=' + encodeURIComponent('Please notify ' + email + ' when ' + seriesName + ' is published.');
+  var form = e.target, input = form.querySelector('input[type="email"]'), btn = form.querySelector('button'), email = input.value.trim();
+  if (!isValidEmail(email)) { input.classList.add('form-input-error'); input.focus(); return; }
+  input.classList.remove('form-input-error'); btn.disabled = true; btn.textContent = 'Sending…';
+  fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ email: email, _subject: 'Notify me: ' + seriesName, series: seriesName }) })
+    .then(function (res) {
+      if (!res.ok) throw new Error();
+      form.innerHTML = '<p class="series-notify-done">We will write to you when ' + escHtml(seriesName.replace(/^Series \d+ — /, '')) + ' is published.</p>';
+    })
+    .catch(function () { btn.disabled = false; btn.textContent = 'Notify me'; input.classList.add('form-input-error'); });
 }
 
 initNav('series');

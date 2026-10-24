@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
-<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="stylesheet" href="/shared.css?v=33">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -221,16 +221,8 @@
     <p class="explorer-description">A space for readers, researchers, and thinkers to read, write, and reflect on history and its implications.</p>
   </div>
 
-  <!-- Discord CTA -->
-  <div class="discord-cta-section">
-    <div class="discord-cta-left">
-      <p class="discord-cta-label">◆ Join the Conversation</p>
-      <h3 class="discord-cta-title">Discuss History on Discord</h3>
-      <p class="discord-cta-desc">Connect with historians, researchers, and curious minds. Share insights, debate ideas, and explore civilisational history together.</p>
-    </div>
-    <!-- Discord invite link: regenerate at discord.com/developers if this expires -->
-    <a href="https://discord.gg/DmjwDbkW" class="discord-cta-btn" target="_blank" rel="noopener">Join on Discord →</a>
-  </div>
+  <!-- (The Discord invitation was removed in Oct 2026: its invite link had expired. Restore the block with a
+       permanent invite - Server Settings, Invites, "Never expire".) -->
 
   <!-- Newsletter -->
   <div class="community-share-band" id="newsletter-band">
@@ -404,7 +396,7 @@
 </div>
 
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=20"></script>
+<script src="/shared-nav.js?v=21"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
 var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];

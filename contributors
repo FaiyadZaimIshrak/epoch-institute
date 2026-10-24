@@ -4,13 +4,13 @@
 <script>(function(){var t=localStorage.getItem('epoch-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contributors and Researchers — The Epoch Institute</title>
+<title>Write for the Institute: Contributors — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Meet the researchers, historians, and writers who contribute to The Epoch Institute. Learn how to join our growing community of contributors.">
-<meta property="og:title" content="Contributors and Researchers — The Epoch Institute">
-<meta property="og:description" content="Researchers, historians, and writers shaping the study of civilisational history at The Epoch Institute.">
+<meta name="description" content="Write for The Epoch Institute: publish an article, join as a contributor to research profiles and entries, or send a correction. Apply in a few minutes.">
+<meta property="og:title" content="Write for the Institute — The Epoch Institute">
+<meta property="og:description" content="Publish an article, join as a contributor, or send a correction: how to take part in The Epoch Institute's work.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/contributors">
 <meta property="og:site_name" content="The Epoch Institute">
@@ -21,71 +21,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/contributors">
-<link rel="stylesheet" href="/shared.css?v=32">
+<link rel="stylesheet" href="/shared.css?v=33">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-#contributors { min-height: 100vh; padding-top: 100px; }
-.contributors-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px; padding: 0 40px 48px; max-width: 1200px; margin: 0 auto;
-}
-.contributor-card {
-  background: var(--surface); border: 0.5px solid var(--border);
-  border-radius: 6px; padding: 24px 20px; text-align: center;
-  transition: border-color 0.2s;
-  opacity: 0; transform: translateY(12px);
-  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.2s;
-}
-.contributor-card.visible { opacity: 1; transform: translateY(0); }
-.contributor-card:hover { border-color: var(--gold); }
-.contributor-avatar {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: var(--border); margin: 0 auto 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 22px; color: var(--gold); opacity: 0.7;
-  overflow: hidden;
-}
-.contributor-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.contributor-name {
-  font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em;
-  color: var(--gold-light); margin: 0 0 4px;
-}
-.contributor-role {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--muted); margin: 0 0 8px; font-weight: 600;}
-.contributor-bio {
-  font-family: var(--font-text); font-size: 15px;
-  color: var(--text); line-height: 1.6; opacity: 0.8;
-}
-.contributors-loading {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.02em;
-  color: var(--muted); opacity: 0.5; text-align: center; padding: 48px 0;
-}
-.contributors-empty {
-  font-family: var(--font-text); font-size: 17px;
-  color: var(--muted); text-align: center; padding: 32px 0; opacity: 0.6;
-}
-.join-band {
-  background: linear-gradient(135deg, rgba(var(--gold-rgb),0.06) 0%, transparent 100%);
-  border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
-  padding: 60px 40px; text-align: center; margin: 0 0 48px;
-}
-.join-band-title {
-  font-family: var(--font-display); font-size: clamp(16px, 2.5vw, 22px);
-  letter-spacing: 0.08em; color: var(--gold-light); margin: 0 0 16px;
-}
-.join-band-desc {
-  font-family: var(--font-text); font-size: 18px;
-  color: var(--text); line-height: 1.75; max-width: 600px;
-  margin: 0 auto 28px; opacity: 0.85;
-}
-@media (max-width: 600px) {
-  .contributors-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); padding: 0 16px 32px; }
-  .join-band { padding: 40px 16px; }
-}
-</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>
@@ -96,210 +34,122 @@
 </script>
 </head>
 <body>
-<main id="main">
+<main id="main" class="wf-page">
 
-<section id="contributors">
+<section id="contributors" class="wf-wrap">
   <span class="hero-ornament"></span>
-  <h1 class="research-title">Our Contributors</h1>
-  <p class="research-subtitle">Researchers, historians, and writers shaping the study of civilisational history.</p>
+  <h1 class="research-title">Write for the Institute</h1>
+  <p class="research-subtitle">Historians, students and curious readers help the Institute grow. There are three ways to take part.</p>
 
-  <p class="contributors-loading" id="contributors-loading">Loading contributors…</p>
-  <div class="contributors-grid" id="contributors-grid" style="display:none;"></div>
-  <!-- Shown only when API returns no active contributors -->
-  <div id="contributors-fallback" style="display:none;">
-    <div class="contributors-grid" style="display:grid;">
-      <div class="contributor-card visible">
-        <div class="contributor-avatar">EI</div>
-        <p class="contributor-name">The Epoch Institute Research Team</p>
-        <p class="contributor-role">Core Research</p>
-        <p class="contributor-role" style="opacity:0.6;margin-top:2px;">🌍 International</p>
-        <p class="contributor-bio">Empire trajectory data · Scholarly profiles · Dataset compilation</p>
+  <ol class="wf-ways">
+    <li><a class="wf-way" href="/community#submit"><span class="wf-n">1</span><b>Publish an article</b><span>Send a finished essay on history, society or civilisation. It is read by the Institute before it appears in the Community pages.</span><em>Submit an article &rarr;</em></a></li>
+    <li><a class="wf-way" href="#apply"><span class="wf-n">2</span><b>Join as a contributor</b><span>Research and write new profiles, encyclopedia entries and essays together with the research team.</span><em>Apply below &rarr;</em></a></li>
+    <li><a class="wf-way" href="/contact?topic=correction"><span class="wf-n">3</span><b>Send a correction</b><span>Every page has a &#8220;Suggest a correction&#8221; link at its foot. Corrections keep the work accurate.</span><em>Suggest a correction &rarr;</em></a></li>
+  </ol>
+
+  <div class="wf-apply" id="apply">
+    <div class="wf-apply-text">
+      <h2 class="wf-title">Apply to contribute</h2>
+      <p class="wf-lead">Tell us who you are and what you would like to work on. Academic, independent or student: all backgrounds are welcome.</p>
+      <ol class="wf-steps">
+        <li><b>Apply</b> <span>with your interests and background, in five minutes.</span></li>
+        <li><b>Talk with us</b> <span>about a first piece that suits you.</span></li>
+        <li><b>Publish</b> <span>your work on the site, under your name.</span></li>
+      </ol>
+    </div>
+    <div class="wf-form-box">
+      <form class="modal-form" id="apply-form" novalidate>
+        <div class="wf-two">
+          <div class="form-row">
+            <label class="form-label" for="ap-name">Full name <span class="form-required">*</span></label>
+            <input class="form-input" id="ap-name" type="text" placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="ap-role">Role or title <span class="form-required">*</span></label>
+            <input class="form-input" id="ap-role" type="text" placeholder="e.g. PhD candidate, teacher">
+          </div>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="ap-region">Country or region <span class="form-required">*</span></label>
+          <input class="form-input" id="ap-region" type="text" placeholder="e.g. United Kingdom, Bangladesh">
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="ap-area">Research interests <span class="form-required">*</span></label>
+          <textarea class="form-input form-textarea" id="ap-area" placeholder="e.g. South Asian history · maritime empires · medieval Europe"></textarea>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="ap-message">Why would you like to contribute?</label>
+          <textarea class="form-input form-textarea" id="ap-message" placeholder="A little about yourself and what you would like to write…"></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="ap-submit">Send my application &rarr;</button>
+        <p class="ct-status" id="ap-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="wf-done" id="ap-success" tabindex="-1" hidden>
+        <p class="wf-done-title">Thank you: your application has been received.</p>
+        <p>We will be in touch about a first piece. Meanwhile, browse the <a href="/profiles">profiles</a> to see what the Institute publishes.</p>
       </div>
     </div>
-    <p class="contributors-empty" style="display:block;margin-top:8px;">More contributors coming soon — <a href="#" onclick="openApplyModal();return false;" style="color:var(--gold);text-decoration:none;">apply to join</a>.</p>
   </div>
 
-  <div class="join-band">
-    <h3 class="join-band-title">Join the Institute</h3>
-    <p class="join-band-desc">Are you a historian, researcher, or writer with a passion for civilisational history? We welcome contributors of all backgrounds — academic, independent, and student alike. If you would like to contribute research, profiles, or essays, reach out to us.</p>
-    <button class="hero-cta" id="apply-btn" onclick="openApplyModal()">Apply to Contribute →</button>
-  </div>
+  <h2 class="wf-title wf-list-title">Contributors</h2>
+  <p class="contributors-loading" id="contributors-loading">Loading contributors…</p>
+  <div class="contributors-grid" id="contributors-grid" style="display:none;"></div>
 </section>
 
 </main>
 
-<!-- Apply to Contribute modal -->
-<div id="apply-modal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="apply-modal-title">
-  <div class="modal-box">
-    <button class="modal-close" id="apply-modal-close" aria-label="Close">✕</button>
-    <h3 class="modal-title" id="apply-modal-title">Apply to Contribute</h3>
-    <form class="modal-form" id="apply-form" novalidate>
-      <div class="form-row">
-        <label class="form-label" for="ap-name">Full Name <span class="form-required">*</span></label>
-        <input class="form-input" id="ap-name" type="text" placeholder="Your full name" autocomplete="name">
-      </div>
-      <div class="form-row">
-        <label class="form-label" for="ap-role">Role / Title <span class="form-required">*</span></label>
-        <input class="form-input" id="ap-role" type="text" placeholder="e.g. PhD Candidate, Independent Researcher">
-      </div>
-      <div class="form-row">
-        <label class="form-label" for="ap-region">Region / Country <span class="form-required">*</span></label>
-        <input class="form-input" id="ap-region" type="text" placeholder="e.g. United Kingdom, Bangladesh">
-      </div>
-      <div class="form-row">
-        <label class="form-label" for="ap-area">Research Areas <span class="form-required">*</span></label>
-        <textarea class="form-input form-textarea" id="ap-area" placeholder="e.g. South Asian history · Maritime empires · Medieval Europe"></textarea>
-      </div>
-      <div class="form-row">
-        <label class="form-label" for="ap-message">Why do you want to contribute?</label>
-        <textarea class="form-input form-textarea" id="ap-message" placeholder="Tell us a little about yourself and your interest…"></textarea>
-      </div>
-      <button type="submit" class="form-submit" id="ap-submit">Submit Application →</button>
-    </form>
-    <p class="form-success" id="ap-success" style="display:none;">Thank you — your application has been received. We'll be in touch shortly.</p>
-  </div>
-</div>
-
 <script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=20"></script>
+<script src="/shared-nav.js?v=21"></script>
 <script>
-// ── Contributors loader ───────────────────────────────────────────────────────
-(function() {
-  var loading   = document.getElementById('contributors-loading');
-  var grid      = document.getElementById('contributors-grid');
-  var empty     = document.getElementById('contributors-empty');
-  var CACHE_KEY = 'epoch_contributors';
-  var CACHE_TTL = 24 * 60 * 60 * 1000;
-
-  function initials(name) {
-    return (name || '?').split(' ').slice(0, 2).map(function(w) { return w[0]; }).join('');
-  }
-
-  function renderContributors(list) {
-    loading.style.display = 'none';
-    if (!list || !list.length) {
-      document.getElementById('contributors-fallback').style.display = 'block';
-      return;
-    }
-    grid.style.display = 'grid';
-    grid.innerHTML = list.map(function(c, i) {
-      var avatarHtml = c.photoUrl
-        ? '<img src="' + escHtml(c.photoUrl) + '" alt="' + escHtml(c.name || '') + '" onerror="this.style.display=\'none\'">'
-        : escHtml(initials(c.name));
-      var regionLine = (c.flag || c.region)
-        ? '<p class="contributor-role" style="opacity:0.6;margin-top:2px;">' + escHtml((c.flag ? c.flag + ' ' : '') + (c.region || '')) + '</p>'
-        : '';
-      return '<div class="contributor-card" style="transition-delay:' + (i * 0.05) + 's">' +
-        '<div class="contributor-avatar">' + avatarHtml + '</div>' +
-        '<p class="contributor-name">' + escHtml(c.name || 'Anonymous') + '</p>' +
-        '<p class="contributor-role">' + escHtml(c.role || c.profession || 'Contributor') + '</p>' +
-        regionLine +
-        (c.area ? '<p class="contributor-bio">' + escHtml(c.area) + '</p>' : '') +
-      '</div>';
-    }).join('');
-
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.1 });
-    grid.querySelectorAll('.contributor-card').forEach(function(card) { observer.observe(card); });
-  }
-
-  if (typeof CONTRIB_URL === 'undefined' || !CONTRIB_URL) {
-    loading.style.display = 'none';
-    document.getElementById('contributors-fallback').style.display = 'block';
-    return;
-  }
-
-  try {
-    var cached = localStorage.getItem(CACHE_KEY);
-    if (cached) {
-      var obj = JSON.parse(cached);
-      if (Date.now() - obj.ts < CACHE_TTL) { renderContributors(obj.data); return; }
-    }
-  } catch(e) {}
-
-  fetch(CONTRIB_URL + '?action=contributors')
-    .then(function(r) { return r.json(); })
-    .then(function(list) {
-      var data = Array.isArray(list) ? list : [];
-      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch(e) {}
-      renderContributors(data);
-    })
-    .catch(function() { renderContributors([]); });
-})();
-
 initNav('contributors');
 
-// ── Apply to Contribute modal ─────────────────────────────────────────────────
-function openApplyModal() {
-  var overlay = document.getElementById('apply-modal');
-  overlay.classList.remove('closing');
-  overlay.style.display = 'flex';
-  overlay.offsetHeight;
-  overlay.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
-  setTimeout(function() { var f = document.getElementById('ap-name'); if (f) f.focus(); }, 50);
-}
-function closeApplyModal() {
-  var overlay = document.getElementById('apply-modal');
-  overlay.classList.remove('is-open');
-  overlay.classList.add('closing');
-  setTimeout(function() {
-    overlay.style.display = 'none';
-    overlay.classList.remove('closing');
-    document.body.style.overflow = '';
-  }, 220);
-}
-document.getElementById('apply-modal-close').addEventListener('click', closeApplyModal);
-document.getElementById('apply-modal').addEventListener('click', function(e) {
-  if (e.target === e.currentTarget) closeApplyModal();
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && document.getElementById('apply-modal').style.display !== 'none') closeApplyModal();
-});
+// ── Contributors (from the contributors' sheet; cached for a day) ──────────────
+(function () {
+  var loading = document.getElementById('contributors-loading'), grid = document.getElementById('contributors-grid');
+  var CACHE_KEY = 'epoch_contributors', CACHE_TTL = 24 * 60 * 60 * 1000;
+  var FALLBACK = [{ name: 'The Epoch Institute Research Team', role: 'Core research', region: 'International', area: 'Profiles · Encyclopedia · States register' }];
+  function initials(name) { return (name || '?').split(' ').slice(0, 2).map(function (w) { return w[0]; }).join(''); }
+  function render(list) {
+    loading.style.display = 'none';
+    if (!list || !list.length) list = FALLBACK;
+    grid.style.display = 'grid';
+    grid.innerHTML = list.map(function (c) {
+      var avatar = c.photoUrl ? '<img src="' + escHtml(c.photoUrl) + '" alt="' + escHtml(c.name || '') + '" onerror="this.style.display=\'none\'">' : escHtml(initials(c.name));
+      return '<div class="contributor-card visible"><div class="contributor-avatar">' + avatar + '</div>' +
+        '<p class="contributor-name">' + escHtml(c.name || 'Anonymous') + '</p>' +
+        '<p class="contributor-role">' + escHtml(c.role || c.profession || 'Contributor') + '</p>' +
+        ((c.flag || c.region) ? '<p class="contributor-role contributor-region">' + escHtml((c.flag ? c.flag + ' ' : '') + (c.region || '')) + '</p>' : '') +
+        (c.area ? '<p class="contributor-bio">' + escHtml(c.area) + '</p>' : '') + '</div>';
+    }).join('') +
+      '<a class="contributor-card visible contributor-join" href="#apply"><div class="contributor-avatar">+</div><p class="contributor-name">Your name here</p><p class="contributor-bio">Apply to contribute</p></a>';
+  }
+  if (typeof CONTRIB_URL === 'undefined' || !CONTRIB_URL) return render([]);
+  try { var c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); if (c && Date.now() - c.ts < CACHE_TTL) return render(c.data); } catch (e) {}
+  fetch(CONTRIB_URL + '?action=contributors').then(function (r) { return r.json(); }).then(function (list) {
+    var data = Array.isArray(list) ? list : [];
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch (e) {}
+    render(data);
+  }).catch(function () { render([]); });
+})();
 
-document.getElementById('apply-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var name    = document.getElementById('ap-name').value.trim();
-  var role    = document.getElementById('ap-role').value.trim();
-  var region  = document.getElementById('ap-region').value.trim();
-  var area    = document.getElementById('ap-area').value.trim();
-  var message = document.getElementById('ap-message').value.trim();
-
-  var ok = true;
-  [['ap-name', !name], ['ap-role', !role], ['ap-region', !region], ['ap-area', !area]].forEach(function(pair) {
-    document.getElementById(pair[0]).classList.toggle('form-input-error', pair[1]);
-    if (pair[1]) ok = false;
+// ── Apply to contribute ────────────────────────────────────────────────────────
+(function () {
+  var REQ = ['ap-name', 'ap-role', 'ap-region', 'ap-area'];
+  REQ.forEach(function (id) { document.getElementById(id).addEventListener('input', function () { var el = document.getElementById(id); el.classList.remove('form-input-error'); el.removeAttribute('aria-invalid'); }); });
+  document.getElementById('apply-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = {}; REQ.concat('ap-message').forEach(function (id) { v[id] = document.getElementById(id).value.trim(); });
+    var first = null;
+    REQ.forEach(function (id) { var bad = !v[id], el = document.getElementById(id); el.classList.toggle('form-input-error', bad); bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid'); if (bad && !first) first = el; });
+    var status = document.getElementById('ap-status');
+    if (first) { status.textContent = 'Please fill in the marked fields.'; first.focus(); return; }
+    var btn = document.getElementById('ap-submit'); btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = '';
+    fetch(CONTRIB_APPLY_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ name: v['ap-name'], role: v['ap-role'], region: v['ap-region'], area: v['ap-area'], message: v['ap-message'] }) })
+      .then(function () { e.target.hidden = true; var d = document.getElementById('ap-success'); d.hidden = false; d.focus(); })
+      .catch(function () { btn.disabled = false; btn.innerHTML = 'Send my application &rarr;'; status.textContent = 'Your application could not be sent. Please try again in a moment.'; });
   });
-  if (!ok) return;
-
-  var btn = document.getElementById('ap-submit');
-  btn.disabled = true;
-  btn.textContent = 'Submitting…';
-
-  fetch(CONTRIB_APPLY_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({ name: name, role: role, region: region, area: area, message: message })
-  })
-  .then(function() {
-    document.getElementById('apply-form').style.display = 'none';
-    document.getElementById('ap-success').style.display = 'block';
-  })
-  .catch(function() {
-    btn.disabled = false;
-    btn.textContent = 'Submit Application →';
-  });
-});
-
-['ap-name', 'ap-role', 'ap-region', 'ap-area'].forEach(function(id) {
-  document.getElementById(id).addEventListener('input', function() {
-    document.getElementById(id).classList.remove('form-input-error');
-  });
-});
+})();
 </script>
 
 </body>
