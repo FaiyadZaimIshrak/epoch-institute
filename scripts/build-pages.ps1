@@ -946,10 +946,11 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
     foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0])) { $evTags += '<a class="tih-tag enc-link" href="/encyclopedia/' + $lk[0] + '">' + (Hx ([string]$lk[1])) + '</a>' } }
     $ago = YearsAgo ([double]$ev['year'])
     $isHero = ($hero -and [object]::ReferenceEquals($ev, $hero))
-    $im = EvImg $ev
-    if ($isHero -and $im) { $TIHTHUMB[$k] = $im[0] }
-    $thumb = if ($im) { '<a class="tih-event-thumb" href="/encyclopedia/' + $im[1] + '" tabindex="-1" aria-hidden="true"><img src="' + (Hx $im[0]) + '" alt="" loading="lazy" width="76" height="76"></a>' } else { '' }
-    [void]$sb.Append('<li class="tih-event-card' + $(if ($im) { ' tih-has-thumb' } else { '' }) + $(if ($isHero) { ' tih-event-hero' } else { '' }) + '">' + $(if ($isHero) { '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p>' } else { '' }) + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + (Hx ([string]$ev['yearDisplay'])) + $(if ($ago -gt 0) { ' <span class="tih-ago">' + $ago.ToString('N0', $INV) + ' years ago</span>' } else { '' }) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + (Hx ([string]$ev['description'])) + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</div></li>')
+    $im = if ($isHero) { EvImg $ev } else { $null }   # one strong picture per day: only the anniversary card
+    if ($im) { $TIHTHUMB[$k] = $im[0] }
+    $yd = [string]$ev['yearDisplay']; if ($yd -match '^\d+$') { $yd += ' CE' }   # bare years read as CE, like everywhere else
+    $thumb = if ($im) { '<a class="tih-event-thumb" href="/encyclopedia/' + $im[1] + '" tabindex="-1" aria-hidden="true"><img src="' + (Hx $im[0]) + '" alt="" loading="lazy" width="168" height="112"></a>' } else { '' }
+    [void]$sb.Append('<li class="tih-event-card' + $(if ($im) { ' tih-has-thumb' } else { '' }) + $(if ($isHero) { ' tih-event-hero' } else { '' }) + '">' + $(if ($isHero) { '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p>' } else { '' }) + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + (Hx $yd) + $(if ($ago -gt 0) { ' <span class="tih-ago">' + $ago.ToString('N0', $INV) + ' years ago</span>' } else { '' }) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + (Hx ([string]$ev['description'])) + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</div></li>')
   }
   [void]$sb.Append("</ol>`n")
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring days"><a class="prev" rel="prev" href="/today-in-history/' + (DaySlug $pk) + '"><span class="lbl">&larr; Previous day</span><span class="nm">' + (DayLabel $pk) + '</span></a><a class="next" rel="next" href="/today-in-history/' + (DaySlug $nk) + '"><span class="lbl">Next day &rarr;</span><span class="nm">' + (DayLabel $nk) + "</span></a></nav>`n")

@@ -2052,16 +2052,17 @@ mark.search-hl {
   transition: border-color 0.2s;
 }
 .tih-event-card:hover { border-color: var(--gold); }
-/* day pages: event pictures, "years ago" chips and the anniversary of the day */
-.tih-has-thumb { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 4px 16px; align-items: start; }
-.tih-hero-kicker { grid-column: 1 / -1; font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 0 0 6px; }
-.tih-event-thumb { display: block; width: 76px; height: 76px; border-radius: 3px; overflow: hidden; border: 0.5px solid var(--border); background: var(--bg); }
+/* day pages: the anniversary card's picture, "years ago" chips */
+.tih-has-thumb { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 4px 18px; align-items: start; }
+.tih-hero-kicker { grid-column: 1 / -1; font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+.tih-event-thumb { display: block; width: 168px; height: 112px; border-radius: 3px; overflow: hidden; border: 0.5px solid var(--border); background: var(--bg); }
 .tih-event-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .tih-event-main { min-width: 0; }
-.tih-ago { font-family: var(--font-ui); font-size: 11px; font-weight: 600; color: var(--muted); border: 0.5px solid var(--border); border-radius: 999px; padding: 1px 8px; margin-left: 8px; white-space: nowrap; }
+.day-events .tih-event-year { display: flex; align-items: center; gap: 10px; }
+.tih-ago { font-family: var(--font-ui); font-size: 11px; font-weight: 600; color: var(--muted); border: 0.5px solid var(--border); border-radius: 999px; padding: 1px 9px; margin-left: auto; white-space: nowrap; }
 .tih-event-hero { border-color: rgba(var(--gold-rgb), 0.55); background: linear-gradient(135deg, rgba(var(--gold-rgb), 0.07), transparent 55%), var(--surface); }
 .tih-event-hero .tih-event-title { font-size: 16px; }
-@media (max-width: 480px) { .tih-has-thumb { grid-template-columns: 56px minmax(0, 1fr); } .tih-event-thumb { width: 56px; height: 56px; } }
+@media (max-width: 480px) { .tih-has-thumb { grid-template-columns: 120px minmax(0, 1fr); } .tih-event-thumb { width: 120px; height: 80px; } }
 .tih-event-year {
   font-family: var(--font-ui); font-size: 12px;
   letter-spacing: 0.02em; color: var(--gold); margin: 0 0 8px;
@@ -3556,6 +3557,9 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 
 /* ── /start: find your way in ── */
 .fp-page { max-width: 880px; margin: 0 auto; padding: 96px 20px 70px; }
+.fp-page .ref-lede a { color: var(--gold); text-decoration-color: rgba(var(--gold-rgb), 0.45); }
+.fp-page .ref-lede a:hover { color: var(--gold-light); }
+.fp-page .ref-lede a b { color: var(--gold-light); }
 .fp-q { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 20px 20px 16px; margin: 0 0 20px; }
 .fp-q legend { font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--gold); padding: 0 8px; }
 .fp-opt-note { color: var(--muted); font-weight: 400; }
