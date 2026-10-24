@@ -32,21 +32,15 @@ public static class G {
     double sp = Math.Sin(l) / M; if (sp > 1) sp = 1; else if (sp < -1) sp = -1;
     return new[] { lam * 180 / Math.PI, Math.Asin(sp) * 180 / Math.PI };
   }
-  // rings on the plane -> a JS array of rings in hundredths of a degree (flat [lng,lat,...]), for the atlas globe
-  public static string GlobeRings(List<double[]> rings, double tol) {
+  // one ring on the plane -> a JS array in hundredths of a degree (flat [lng,lat,...]) for the atlas globe,
+  // or null when the ring is too small to keep (the caller tracks which country each kept ring belongs to)
+  public static string GlobeRing(double[] r, double tol) {
+    int n = r.Length / 2; var d = new double[r.Length];
+    for (int i = 0; i < n; i++) { var g = Inv(r[2 * i], r[2 * i + 1]); d[2 * i] = g[0]; d[2 * i + 1] = g[1]; }
+    var bb = Bbox(d); if (Math.Max(bb[2] - bb[0], bb[3] - bb[1]) < tol * 2) return null;
+    var s = Simplify(d, tol); if (s.Length < 8) return null;
     var sb = new StringBuilder(); sb.Append('[');
-    bool first = true;
-    foreach (var r in rings) {
-      int n = r.Length / 2; var d = new double[r.Length];
-      for (int i = 0; i < n; i++) { var g = Inv(r[2 * i], r[2 * i + 1]); d[2 * i] = g[0]; d[2 * i + 1] = g[1]; }
-      var bb = Bbox(d); if (Math.Max(bb[2] - bb[0], bb[3] - bb[1]) < tol * 2) continue;
-      var s = Simplify(d, tol); if (s.Length < 8) continue;
-      if (!first) sb.Append(",\n");
-      first = false;
-      sb.Append('[');
-      for (int i = 0; i < s.Length; i++) { if (i > 0) sb.Append(','); sb.Append((int)Math.Round(s[i] * 100)); }
-      sb.Append(']');
-    }
+    for (int i = 0; i < s.Length; i++) { if (i > 0) sb.Append(','); sb.Append((int)Math.Round(s[i] * 100)); }
     return sb.Append(']').ToString();
   }
 

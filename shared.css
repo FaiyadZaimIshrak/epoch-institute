@@ -3245,7 +3245,6 @@ input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 .atl-viewtog button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; }
 .atl-viewtog button + button { border-left: 1px solid var(--border); }
 .atl-viewtog button[aria-pressed="true"] { color: var(--gold); background: rgba(var(--gold-rgb), 0.1); }
-#atl-land.atl-flick { stroke: var(--gold-light); stroke-opacity: 1; stroke-width: 1.4px; }   /* arrival blink on the flat map */
 .home-map canvas { display: block; width: 100%; }
 #atl-svg:active { cursor: grabbing; }
 #atl-svg:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }

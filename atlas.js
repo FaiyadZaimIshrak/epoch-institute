@@ -309,8 +309,9 @@
   var GL = (function () {
     var ready = false, failed = false, waiting = [];
     var proj = null, path = null, geo = null, grat = null, ctx = null;
+    var ringsLL = [], ringBB = [], ctyArr = [], hi = null;   // hi: the arrival highlight {geo, t0, steady}
     var G = { k: 1, rot: [-10, -15] };   // rotate([-lng, -lat]) of the facing point; k: zoom 1..12
-    var R = 100, dpr = 1, base = null, baseCtx = null, baseDirty = true, drawRaf = null, flickOn = false;
+    var R = 100, dpr = 1, base = null, baseCtx = null, baseDirty = true, drawRaf = null;
     function kFor(spanDeg) { return Math.max(1, Math.min(12, 1.8 / (spanDeg * D2R))); }
     function rect() { return canvas.getBoundingClientRect(); }
     function colours() {
@@ -331,9 +332,19 @@
       }
       function init() {
         try {
-          // decode the rings (hundredths of a degree) and rewind any that d3 would read inside-out
-          var polys = window.ATLAS_GLOBE.rings.map(function (fl) {
+          // decode the rings (hundredths of a degree) and rewind any that d3 would read inside-out;
+          // keep each ring, its box and its country slug for the arrival highlight
+          ctyArr = window.ATLAS_GLOBE.cty || [];
+          ringsLL = window.ATLAS_GLOBE.rings.map(function (fl) {
             var ring2 = []; for (var i = 0; i < fl.length; i += 2) ring2.push([fl[i] / 100, fl[i + 1] / 100]);
+            return ring2;
+          });
+          ringBB = ringsLL.map(function (ring2) {
+            var b = [Infinity, Infinity, -Infinity, -Infinity];
+            for (var i = 0; i < ring2.length; i++) { var p = ring2[i]; if (p[0] < b[0]) b[0] = p[0]; if (p[1] < b[1]) b[1] = p[1]; if (p[0] > b[2]) b[2] = p[0]; if (p[1] > b[3]) b[3] = p[1]; }
+            return b;
+          });
+          var polys = ringsLL.map(function (ring2) {
             if (d3.geoArea({ type: 'Polygon', coordinates: [ring2] }) > 2 * Math.PI) ring2.reverse();
             return [ring2];
           });
@@ -374,7 +385,7 @@
       baseCtx.restore();
       baseCtx.beginPath(); p2(grat); baseCtx.strokeStyle = 'rgba(' + c.g + ',0.14)'; baseCtx.lineWidth = 0.6 * dpr; baseCtx.stroke();
       baseCtx.beginPath(); p2(geo); baseCtx.fillStyle = 'rgba(' + c.g + ',0.13)'; baseCtx.fill();
-      baseCtx.strokeStyle = flickOn ? c.goldL : 'rgba(' + c.g + ',0.45)'; baseCtx.lineWidth = (flickOn ? 1.4 : 0.7) * dpr; baseCtx.lineJoin = 'round'; baseCtx.stroke();
+      baseCtx.strokeStyle = 'rgba(' + c.g + ',0.45)'; baseCtx.lineWidth = 0.7 * dpr; baseCtx.lineJoin = 'round'; baseCtx.stroke();
       baseCtx.beginPath(); p2({ type: 'Sphere' }); baseCtx.strokeStyle = 'rgba(' + c.g + ',0.4)'; baseCtx.lineWidth = 1 * dpr; baseCtx.stroke();
       baseDirty = false;
     }
@@ -398,6 +409,23 @@
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(base, 0, 0);
+        // the arrival highlight: the chosen country's border breathes gold for two seconds (steady under reduced motion)
+        if (hi) {
+          var tt = performance.now() - hi.t0;
+          if (!hi.steady && tt > 2400) hi = null;
+          else {
+            var env = hi.steady ? 1 : Math.sin(Math.PI * Math.min(1, tt / 2400));
+            var pul = hi.steady ? 1 : 0.4 + 0.6 * Math.pow(Math.sin(Math.PI * tt / 600), 2);
+            var aH = Math.max(0, Math.min(1, env * pul));
+            ctx.save();
+            ctx.beginPath(); path(hi.geo);
+            ctx.fillStyle = 'rgba(' + c.g + ',' + (0.22 * aH).toFixed(3) + ')'; ctx.fill();   // the country itself breathes
+            ctx.shadowColor = 'rgba(' + c.g + ',' + (0.85 * aH).toFixed(3) + ')'; ctx.shadowBlur = 16 * dpr * aH;
+            ctx.globalAlpha = 0.5 + 0.5 * aH;
+            ctx.strokeStyle = c.goldL; ctx.lineJoin = 'round'; ctx.lineWidth = (1.2 + 2 * aH) * dpr;
+            ctx.stroke(); ctx.restore(); ctx.globalAlpha = 1;
+          }
+        }
         // dots, in the flat map's language: states, approximate rings, profiles on top
         var sc = Math.max(0.55, Math.min(1, (canvas.width / dpr) / 900)) * dpr;
         var rp = 4.4 * sc, rs = 2.7 * sc, i, r, p;
@@ -413,7 +441,36 @@
         if (focused && shown(focused)) { p = front(focused) ? proj([focused.lng, focused.lat]) : null; if (p) { ctx.strokeStyle = c.goldL; ctx.lineWidth = 2 * dpr; ctx.beginPath(); ctx.arc(p[0], p[1], 11 * sc, 0, 6.2832); ctx.stroke(); } }
         drawGlobeLabels(c, sc);
         if (pinned) { if (front(pinned) && shown(pinned)) showTip(pinned, true); else hideTip(true); }
+        if (hi && !hi.steady) draw();   // keep the highlight breathing
       });
+    }
+    // which country's border to light up: all rings of a slug, or the (smallest) ring around a point
+    function ringsFor(slug) { var out = [], i; for (i = 0; i < ctyArr.length; i++) if (ctyArr[i] === slug) out.push(i); return out; }
+    function pip(lng, lat, ring2) {
+      var inside = false;
+      for (var i = 0, j = ring2.length - 1; i < ring2.length; j = i++) {
+        var xi = ring2[i][0], yi = ring2[i][1], xj = ring2[j][0], yj = ring2[j][1];
+        if ((yi > lat) !== (yj > lat) && lng < (xj - xi) * (lat - yi) / (yj - yi) + xi) inside = !inside;
+      }
+      return inside;
+    }
+    function countryAt(lng, lat) {
+      var best = -1, bestA = Infinity;
+      for (var i = 0; i < ringsLL.length; i++) {
+        var b = ringBB[i];
+        if (lng < b[0] || lng > b[2] || lat < b[1] || lat > b[3]) continue;
+        if (!pip(lng, lat, ringsLL[i])) continue;
+        var a = (b[2] - b[0]) * (b[3] - b[1]);   // the smallest ring wins (an enclave over its neighbour)
+        if (a < bestA) { bestA = a; best = i; }
+      }
+      if (best < 0) return [];
+      return ctyArr[best] ? ringsFor(ctyArr[best]) : [best];
+    }
+    function highlight(idxs) {
+      if (!ready || !idxs.length) return;
+      hi = { geo: { type: 'MultiPolygon', coordinates: idxs.map(function (i) { return [ringsLL[i]]; }) }, t0: performance.now(), steady: reduced() };
+      draw();
+      if (hi.steady) setTimeout(function () { hi = null; draw(); }, 1800);
     }
     function drawGlobeLabels(c, sc) {
       if (G.k < 2.2) return;
@@ -519,7 +576,7 @@
     new MutationObserver(function () { baseDirty = true; draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     return { load: load, resize: resize, draw: draw, rotateTo: rotateTo, zoomBy: zoomBy, reset: reset, kFor: kFor,
       nearest: nearestG, pointOf: pointOf, rect: rect, get k() { return G.k; },
-      flick: function (on) { flickOn = on; baseDirty = true; draw(); } };
+      highlight: highlight, ringsFor: ringsFor, countryAt: countryAt };
   })();
 
   // ── the view toggle ──
@@ -552,16 +609,6 @@
 
   // ── start ──
   slider.value = year;
-  function flickBorders() {   // arriving from a state, country or profile page: the borders blink for two seconds
-    if (reduced()) return;
-    var n = 0, land = $('atl-land');
-    var t = setInterval(function () {
-      n++;
-      var on = n % 2 === 1 && n < 8;
-      if (isG()) GL.flick(on); else land.classList.toggle('atl-flick', on);
-      if (n >= 8) clearInterval(t);
-    }, 250);
-  }
   function begin() {
     paintToggle();
     render(true);
@@ -574,7 +621,11 @@
       else fitBox(cv[1], cv[2], cv[3], cv[4]);
       $('atl-place').textContent = ' · in the world; map centred on present-day ' + cv[0];
     }
-    if ((f && byId[f]) || (c && A.countries[c])) setTimeout(flickBorders, 750);   // once the turn has landed
+    // arriving from a state, country or profile page: once the turn has landed, that country's border breathes gold
+    if (isG()) {
+      var sel = (f && byId[f]) ? GL.countryAt(byId[f].lng, byId[f].lat) : (c && A.countries[c]) ? GL.ringsFor(c) : [];
+      if (sel.length) setTimeout(function () { GL.highlight(sel); }, 800);
+    }
   }
   if (isG()) {
     GL.load(function (ok) {
