@@ -1,0 +1,154 @@
+# The Kids corner (/kids), read by scripts/build-pages.ps1. Tab-separated.
+# @key	title	one-line introduction	picture (an entry slug)
+# slug	a line for young readers (the entry gives the picture and the link)
+# !	a "Did you know?" fact	link (optional: /encyclopedia/<slug> or /empire/<slug>)
+@egypt	Ancient Egypt	Pharaohs, pyramids and the gift of the Nile.	great-pyramid-of-giza
+great-pyramid-of-giza	Built about 4,500 years ago, it was the tallest building on Earth for some 3,800 years.
+khufu	The pharaoh who built the Great Pyramid; the only complete statue of him ever found is just 7.5 centimetres tall.
+ramesses-ii	He ruled for 66 years and put up giant statues of himself all over Egypt.
+hatshepsut	One of the few women to rule Egypt as pharaoh; some statues show her with a king's false beard.
+akhenaten	A pharaoh who tried to make Egyptians worship a single sun god, the Aten.
+cleopatra-vii	Egypt's last queen spoke many languages and was the first of her family to learn Egyptian.
+nile	Africa's longest river: its yearly flood left rich black mud for farming.
+rosetta-stone	The same message in three scripts helped scholars finally read hieroglyphs in 1822.
+abu-simbel	Two temples carved into a cliff, cut into blocks and moved uphill in the 1960s to save them from a new lake.
+deir-el-bahari	The terraced temple of Queen Hatshepsut, built against the cliffs near Luxor.
+rhind-mathematical-papyrus	An Egyptian maths book about 3,600 years old, full of puzzles about bread, beer and pyramids.
+@greece	Ancient Greece	Thinkers, athletes and the first democracy.	parthenon
+parthenon	A marble temple for the goddess Athena, built on a hill above Athens nearly 2,500 years ago.
+athens	The city where citizens first voted on their own laws, in a democracy.
+leonidas-i	A king of Sparta who led his 300 Spartans at the pass of Thermopylae in 480 BCE.
+homer	The poet said to have told the stories of the Trojan War and of Odysseus' long voyage home.
+socrates	He taught by asking questions, and he never wrote a single book.
+plato	A pupil of Socrates who started one of the first schools, the Academy.
+aristotle	He studied everything from animals and plants to poetry, and he taught Alexander the Great.
+alexander-the-great	By the age of 30 he ruled an empire that stretched from Greece to India.
+ancient-olympic-games	Held at Olympia every four years for more than a thousand years, with races, wrestling and chariots.
+colossus-of-rhodes	A bronze statue of the sun god about as tall as a ten-storey building; an earthquake toppled it.
+lighthouse-of-alexandria	One of the Seven Wonders, its fire guided ships into harbour for many centuries.
+@rome	Ancient Rome	Emperors, legions and roads that led everywhere.	roman-forum
+julius-caesar	A famous general who became master of Rome; the month of July is named after him.
+cicero	Rome's greatest speaker; hundreds of his letters still survive.
+hannibal	Rome's great enemy, who marched an army with elephants across the Alps.
+roman-forum	The busy heart of the city, full of temples, law courts and shops.
+appian-way	A stone road begun in 312 BCE; you can still walk along parts of it today.
+trajan	Under this emperor the Roman Empire reached its largest size.
+marcus-aurelius	An emperor who wrote his thoughts in a notebook we still read, the Meditations.
+nero	An emperor who loved music and theatre, and even sang on stage himself.
+pompeii	A town buried by the eruption of Mount Vesuvius in 79 CE, so well preserved that you can walk its streets.
+constantine-i	The emperor who founded Constantinople, the city we now call Istanbul.
+@knights	Knights and Castles	Kings, queens and castles of the Middle Ages.	krak-des-chevaliers
+william-the-conqueror	He sailed from Normandy and won the Battle of Hastings in 1066.
+bayeux-tapestry	A 70-metre-long embroidery that tells the story of 1066 like a comic strip.
+eleanor-of-aquitaine	She was queen of France and then queen of England, and the mother of two English kings.
+richard-i-of-england	Called the Lionheart, he spent only a few months of his reign in England.
+knights-templar	An order of knights who were also monks, dressed in white with a red cross.
+krak-des-chevaliers	One of the best-preserved castles of the Crusades, high on a hill in Syria.
+joan-of-arc	A farm girl from France who led an army when she was about 17.
+magna-carta	A charter of 1215 which said that even the king had to obey the law.
+@vikings	Vikings	Sailors, traders and explorers from the far north.	oseberg-ship
+leif-erikson	A Viking explorer who reached North America about 500 years before Columbus.
+erik-the-red	He named his icy new home Greenland to make settlers want to go there.
+thor	The Norse god of thunder; Thursday is named after him.
+oseberg-ship	A beautifully carved Viking ship found buried in a grave mound in Norway.
+gokstad-ship	A Viking ship so well made that a copy sailed across the Atlantic in 1893.
+lanse-aux-meadows	The remains of a Viking settlement in Canada, about a thousand years old.
+froso-runestone	A stone carved with runes, the letters the Vikings wrote with.
+lindisfarne	An island monastery in England whose raid by Vikings in 793 shocked Europe.
+@explorers	Great Explorers	Brave travellers who crossed oceans, deserts and mountains.	zheng-he
+xuanzang	A Chinese monk who walked all the way to India and back to collect books.
+marco-polo	A merchant from Venice who travelled to China and wrote a famous book about it.
+ibn-battuta	He travelled for nearly 30 years across Africa and Asia, further than anyone else of his time.
+zheng-he	A Chinese admiral who led huge fleets across the Indian Ocean; his treasure ships are said to be among the largest wooden ships ever built.
+prince-henry-the-navigator	A Portuguese prince who sent ships down the coast of Africa, though he rarely sailed himself.
+christopher-columbus	In 1492 he sailed across the Atlantic, hoping to reach Asia.
+vasco-da-gama	The first European to sail all the way from Europe to India, in 1498.
+ferdinand-magellan	His fleet was the first to sail around the whole world, though he died on the way.
+james-cook	A British captain who mapped the coasts of New Zealand and eastern Australia.
+@inventions	Inventions and Ideas	Clever ideas that changed how people live.	johannes-gutenberg
+code-of-hammurabi	One of the oldest written law codes, carved on a tall black stone nearly 3,800 years ago.
+library-of-alexandria	An ancient library that tried to collect a copy of every book it could find.
+archimedes	A Greek inventor who is said to have shouted "Eureka!" in his bath.
+euclid	His geometry book was used in schools for more than 2,000 years.
+cai-lun	A Chinese court official remembered for improving paper-making around the year 105.
+al-khwarizmi	A scholar in Baghdad whose name gave us the word "algorithm".
+house-of-wisdom	A great library and meeting place for scholars in Baghdad.
+johannes-gutenberg	His printing press with movable metal letters made books far cheaper.
+leonardo-da-vinci	A painter and inventor who filled notebooks with designs for flying machines.
+galileo-galilei	In 1610 he looked through his telescope and discovered four moons of Jupiter.
+isaac-newton	He explained gravity, the force that makes apples fall and keeps the Moon in orbit.
+@buildings	Amazing Buildings	Wonders of stone, brick and marble from around the world.	taj-mahal
+great-wall-of-china	Built and rebuilt over 2,000 years, its walls run for thousands of kilometres.
+taj-mahal	A white marble tomb built by the emperor Shah Jahan for his wife, Mumtaz Mahal.
+angkor-wat	A vast temple in Cambodia, often called the largest religious monument in the world.
+borobudur	A giant Buddhist monument on the island of Java with more than 500 Buddha statues.
+hagia-sophia	For nearly a thousand years it was the largest church in the world.
+alhambra	A palace in Granada famous for its gardens, fountains and patterned walls.
+machu-picchu	An Inca city high in the Andes mountains, built around 1450.
+petra	A city carved into pink sandstone cliffs in Jordan.
+pyramid-of-the-sun	One of the largest pyramids in the world, in the ancient city of Teotihuacan in Mexico.
+ziggurat-of-ur	A stepped temple tower built about 4,000 years ago in what is now Iraq.
+qutb-minar	A red sandstone tower in Delhi about 73 metres tall, begun around the year 1200.
+hanging-gardens-of-babylon	One of the Seven Wonders; no one has ever found it, and some think it was only a legend.
+!	Cleopatra lived closer in time to the first Moon landing than to the building of the Great Pyramid.	/encyclopedia/great-pyramid-of-giza
+!	The Great Pyramid was built from more than two million blocks of stone.	/encyclopedia/great-pyramid-of-giza
+!	The Great Wall of China cannot really be seen from the Moon with your own eyes.	/encyclopedia/great-wall-of-china
+!	Vikings did not wear horned helmets in battle: that idea comes from costumes and paintings of the 1800s.	/encyclopedia/vikings
+!	The first Olympic Games, according to Greek tradition, were held in 776 BCE.	/encyclopedia/ancient-olympic-games
+!	Paper was invented in China about 2,000 years ago.	/encyclopedia/papermaking
+!	The Bayeux Tapestry is not really a tapestry at all: it is embroidered with wool on linen.	/encyclopedia/bayeux-tapestry
+!	Napoleon was about 1.69 metres tall, ordinary for his time: the idea that he was very short is a myth.	/encyclopedia/napoleon
+!	At Pompeii, loaves of bread were found still in an oven, buried by the eruption of 79 CE.	/encyclopedia/pompeii
+!	Mansa Musa of Mali gave away so much gold on his way to Mecca in 1324 that its price fell in Cairo.	/encyclopedia/mansa-musa
+!	The Hanging Gardens of Babylon are the only one of the Seven Wonders whose site has never been found.	/encyclopedia/hanging-gardens-of-babylon
+!	Roman concrete was so strong that buildings made with it are still standing nearly 2,000 years later.	/empire/roman-empire
+!	Writing was invented in Mesopotamia more than 5,000 years ago, with marks pressed into wet clay.	/encyclopedia/cuneiform
+!	William Shakespeare is the first known writer to use hundreds of English words.	/encyclopedia/william-shakespeare
+!	Queen Elizabeth I could speak French, Italian and Latin, and she studied Greek too.	/encyclopedia/elizabeth-i
+!	Leonardo da Vinci wrote many of his notes backwards, in mirror writing.	/encyclopedia/leonardo-da-vinci
+!	Tutankhamun became pharaoh when he was only about nine years old.
+!	The Romans held a winter festival called Saturnalia, with feasts, games and presents.
+!	The Maya kept two calendars at once, one of 260 days and one of 365 days.
+!	Under Genghis Khan's sons and grandsons, the Mongol Empire became the largest land empire there has ever been.	/empire/mongol-empire
+!	Marco Polo amazed Europeans by describing paper money, which he had seen in China.	/encyclopedia/marco-polo
+!	The Eiffel Tower was built for a world's fair in 1889 and was only meant to stand for 20 years.
+!	Louis XIV of France reigned for 72 years, longer than any other European king.	/encyclopedia/louis-xiv
+!	Isaac Newton also ran England's Royal Mint and hunted down people who made fake coins.	/encyclopedia/isaac-newton
+!	Gutenberg printed his famous Bible in Mainz around 1455.	/encyclopedia/johannes-gutenberg
+!	Hannibal crossed the Alps in 218 BCE with an army and about 37 elephants.	/encyclopedia/hannibal
+!	The Silk Road was not one road but a web of trade routes stretching across Asia.	/encyclopedia/silk-road
+!	Alexander the Great founded many cities called Alexandria; the most famous is in Egypt.	/encyclopedia/alexander-the-great
+!	The Tower of London once kept a royal zoo, with lions and even a polar bear.
+!	The ancient Egyptians loved cats, and many cats were mummified.
+!	In Roman public toilets, people sat side by side on long stone benches.
+!	China's first emperor, Qin Shi Huang, was buried with an army of thousands of life-size clay soldiers.	/encyclopedia/qin-shi-huang
+!	Actors in ancient Greek plays wore big masks so that everyone in the theatre could tell who they were playing.
+!	The Aztec capital, Tenochtitlan, was built on an island in the middle of a lake.	/encyclopedia/tenochtitlan
+!	Cyrus the Great of Persia is remembered for letting the peoples he conquered keep their own customs.	/encyclopedia/cyrus-the-great
+!	The Library of Alexandria may have held hundreds of thousands of scrolls.	/encyclopedia/library-of-alexandria
+!	Medieval castles had toilets called garderobes, which often emptied straight into the moat.
+!	At the pyramid of Chichén Itzá in Mexico, the evening sun at the equinox makes a shadow like a snake.
+!	Cleopatra came from a Greek family that ruled Egypt for nearly 300 years.	/encyclopedia/cleopatra-vii
+!	The Colosseum in Rome could hold at least 50,000 people.
+!	Roman towns had snack bars that sold hot food to people in the street.
+!	The oldest photograph that still survives was taken in France around 1826.
+!	The Wright brothers' first powered flight, in 1903, lasted just 12 seconds.
+!	The windows around the base of the Hagia Sophia's dome make it look as if it is floating.	/encyclopedia/hagia-sophia
+!	The Inca had no alphabet, but they kept records with knotted strings called quipu.	/empire/inca-empire
+!	Inca messengers ran in relays along mountain roads to carry news across the empire.	/empire/inca-empire
+!	Queen Victoria was the first ruler of Britain to live in Buckingham Palace.	/encyclopedia/queen-victoria
+!	Peter the Great of Russia was more than two metres tall.	/encyclopedia/peter-the-great
+!	The ancient Egyptians made one of the first calendars with 365 days.
+!	Kites were invented in China more than 2,000 years ago.
+!	Chess began in India about 1,500 years ago, in a game called chaturanga.
+!	The Rosetta Stone is a piece of a bigger stone: its top and one corner are missing.	/encyclopedia/rosetta-stone
+!	Ancient Greek runners at Olympia raced in a stadium about 192 metres long.	/encyclopedia/ancient-olympic-games
+!	The Statue of Liberty was a gift from the people of France to the United States in 1886.
+!	Sparta's kings were always two at a time, from two different royal families.	/encyclopedia/sparta
+!	The Vikings reached North America about a thousand years ago, at L'Anse aux Meadows in Canada.	/encyclopedia/lanse-aux-meadows
+!	Zheng He's fleet in 1405 had more than 200 ships and about 27,000 sailors and soldiers.	/encyclopedia/zheng-he
+!	Ibn Battuta's travels covered about 120,000 kilometres, three times around the Earth.	/encyclopedia/ibn-battuta
+!	The word "algorithm" comes from the name of the Baghdad scholar al-Khwarizmi.	/encyclopedia/al-khwarizmi
+!	In 1610 Galileo published drawings of the Moon's mountains and craters, seen through his own telescope.	/encyclopedia/galileo-galilei
+!	Machu Picchu's finest walls were built without mortar: their stones are cut to fit together tightly.	/encyclopedia/machu-picchu
+!	The Taj Mahal took about 20 years and 20,000 workers to build.	/encyclopedia/taj-mahal

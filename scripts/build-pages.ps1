@@ -279,7 +279,8 @@ function LicenceUrl([string]$l) {
 }
 
 # ── shared page frame ───────────────────────────────────────────────────────────────────────────────────────────────
-$THEME = "<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>"
+$THEME = "<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>"
+$THEME0 = "<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>"   # for Stamp, until every page is restamped
 $GTAG = "<script async src=`"https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4`"></script>`n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>"
 $ORG = '{"@type":"Organization","name":"The Epoch Institute","url":"' + $SITE + '/","logo":{"@type":"ImageObject","url":"' + $SITE + '/logo.png","width":512,"height":512}}'
 function Crumbs($items) {   # items: @(@(name, path or $null), ...); returns @(html, jsonld)
@@ -358,10 +359,15 @@ function Pager([string]$base, [int]$cur, [int]$tot) {   # links: base, base-2, .
 # ── sitemap state: lastmod changes only when a page's content changes ──────────────────────────────────────────────
 $stateFile = "$PSScriptRoot\sitemap-state.tsv"; $SM = @{}
 if (Test-Path $stateFile) { foreach ($l in [IO.File]::ReadAllLines($stateFile, $U8)) { $p = $l -split "`t"; if ($p.Count -eq 3) { $SM[$p[0]] = @($p[1], $p[2]) } } }
-$SMNEW = @{}
+$SMNEW = @{}; $CHANGED = @{}
 function Stamp([string]$path, [string]$content) {   # content may hold @@MOD@@ (dateModified): hashed without it
-  $hash = [EpochBuild.W]::Sha1($content.Replace("`r`n", "`n"))
-  $mod = if ($SM.ContainsKey($path) -and $SM[$path][0] -eq $hash) { $SM[$path][1] } else { $TODAY }
+  $c = $content.Replace("`r`n", "`n")
+  $hash = [EpochBuild.W]::Sha1($c.Replace($THEME, ''))   # the head snippet is not content: changing it dates no page
+  # until every page has been stamped once without the snippet: a hash of the page with the snippet as it was before Kids mode
+  $old = if ($SM.ContainsKey($path) -and $SM[$path][0] -ne $hash) { [EpochBuild.W]::Sha1($c.Replace($THEME, $THEME0)) } else { '' }
+  $same = $SM.ContainsKey($path) -and ($SM[$path][0] -eq $hash -or $SM[$path][0] -eq $old)
+  if (-not $same) { $CHANGED[$path] = 1 }
+  $mod = if ($same) { $SM[$path][1] } else { $TODAY }
   $SMNEW[$path] = @($hash, $mod); return $mod
 }
 $WROTE = @{}; $NWRITE = 0
@@ -1304,6 +1310,9 @@ Say "glossary: $($TERMS.Count) terms; reading paths: $($RP.Count)"
 # ($SPS, sorted by year, was read before the entry pages)
 $SPERA = [ordered]@{ ancient = 'The ancient world'; medieval = 'The medieval world'; earlymodern = 'The early modern world'; revolutions = 'The age of revolutions'; nineteenth = 'The nineteenth century'; twentieth = 'The early twentieth century'; postwar = 'The world since 1945' }
 $spMiss = New-Object Collections.Generic.List[string]
+# the complete texts of the speeches in the public domain, imported by scripts/fetch-speech-texts.ps1
+$SPTXT = @{}
+foreach ($f in @(Get-ChildItem "$Repo\data\speech-texts\*.json" -ErrorAction SilentlyContinue)) { $o = $JSS.DeserializeObject([IO.File]::ReadAllText($f.FullName, $U8)); $SPTXT[[string]$o['slug']] = $o }
 function SpChip([string]$pair) {
   $q = $pair -split '\|', 2
   if ($q[0] -match '^/encyclopedia/(.+)$' -and -not $BY.ContainsKey($Matches[1])) { $spMiss.Add($q[0]) }
@@ -1319,8 +1328,11 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   foreach ($l in @($s['links'])) { if ($l) { [void]$chips.Append((SpChip ([string]$l))) } }
   $led = New-Object Text.StringBuilder
   foreach ($l in @($s['led'])) { if ($l) { [void]$led.Append((SpChip ([string]$l))) } }
-  # full: "url|source" - the complete text at a free, reliable source (opens in a new tab)
+  # full: "url|source" - the complete text at a free, reliable source (opens in a new tab); when the text itself is
+  # here (data/speech-texts/<slug>.json), the page carries it and the button leads down to it
   $full = if ($s['full']) { [string]$s['full'] -split '\|', 2 } else { $null }
+  $ft = $SPTXT[$slug]; $ftw = 0; $ftm = 0
+  if ($ft) { $ftw = [int]$ft['words']; $ftm = [Math]::Max(1, [int][Math]::Round($ftw / 200.0)) }
   $sb = New-Object Text.StringBuilder(9000)
   [void]$sb.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n<article class=`"sp-view`">`n")
   [void]$sb.Append('<header class="sp-head"><p class="featured-region">' + (Hx ([string]$s['display'])) + ' · ' + (Hx ([string]$s['place'])) + '</p><h1 class="sp-title">' + (Hx ([string]$s['title'])) + '</h1><p class="sp-by">' + $spk + "</p></header>`n")
@@ -1328,7 +1340,17 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   [void]$sb.Append('<section class="sp-sec"><h2>' + $(if ($isPara) { 'In substance' } else { 'Key passage' }) + '</h2>' +
     $(if ($isPara) { '<p class="sp-para">' + (Hx ([string]$s['excerpt'])) + '</p>' } else { '<blockquote class="sp-quote"><p>' + (Hx ([string]$s['excerpt'])) + '</p></blockquote>' }) +
     '<p class="sp-source">' + (Hx ([string]$s['source'])) + $(if ($isCopy) { ' Quoted briefly: the full text is still under copyright.' } else { '' }) + '</p>' +
-    $(if ($full) { '<div class="sp-full"><a class="sp-full-link" href="' + (Hx $full[0]) + '" target="_blank" rel="noopener">Read the complete text<span aria-hidden="true"> &#8599;</span></a><span class="sp-full-src">' + (Hx $full[1]) + '</span></div>' } else { '' }) + "</section>`n")
+    $(if ($ft) { '<div class="sp-full"><a class="sp-full-link" href="#full-text">Read the full speech<span aria-hidden="true"> &#8595;</span></a><span class="sp-full-src">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' min</span></div>' }
+      elseif ($full) { '<div class="sp-full"><a class="sp-full-link" href="' + (Hx $full[0]) + '" target="_blank" rel="noopener">Read the complete text<span aria-hidden="true"> &#8599;</span></a><span class="sp-full-src">' + (Hx $full[1]) + '</span></div>' } else { '' }) + "</section>`n")
+  if ($ft) {
+    $ftb = New-Object Text.StringBuilder
+    foreach ($fp in @($ft['paras'])) { [void]$ftb.Append('<p>' + ((Hx ([string]$fp)) -replace "`n", '<br>') + '</p>') }
+    $ftLang = if ($ft['lang'] -and [string]$ft['lang'] -ne 'en') { ' lang="' + $ft['lang'] + '"' } else { '' }
+    $ftBody = '<div class="sp-ft-body"' + $ftLang + '>' + $ftb.ToString() + '</div>'
+    [void]$sb.Append('<section class="sp-sec sp-ft" id="full-text"><h2>The full speech</h2>' +
+      $(if ($ftw -le 600) { $ftBody } else { '<details class="sp-ft-fold"><summary><span class="sp-ft-open">Read the full speech</span><span class="sp-ft-meta">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' minutes</span></summary>' + $ftBody + '</details>' }) +
+      '<p class="sp-ft-credit">Text: <a href="' + (Hx ([string]$ft['url'])) + '" target="_blank" rel="noopener">' + (Hx ([string]$ft['source'])) + '</a>' + $(if ($ft['credit']) { ', ' + (Hx ([string]$ft['credit'])) } else { '' }) + '. ' + (Hx ([string]$ft['licence'])) + "</p></section>`n")
+  }
   [void]$sb.Append('<section class="sp-sec"><h2>What followed</h2><p>' + (Hx ([string]$s['after'])) + '</p>' +
     $(if ($led.Length) { '<div class="sp-led"><h3 class="sp-led-k">What it led to</h3><div class="tih-tags">' + $led.ToString() + '</div></div>' } else { '' }) + "</section>`n")
   if ($chips.Length) { [void]$sb.Append('<section class="sp-sec"><h2>Connected</h2><div class="tih-tags">' + $chips.ToString() + "</div></section>`n") }
@@ -1338,28 +1360,30 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   $title = [string]$s['title'] + ' (' + [string]$s['display'] + ') — Great Speeches — The Epoch Institute'
   $desc = [EpochBuild.W]::Summary([string]$s['before'], 155)
   $ld = $crumb[1] + ',' + (ArticleLd ([string]$s['title']) $desc $path 'Event' ([string]$s['title']) $null $null)
-  if (-not $isPara) { $ld += ',{"@type":"Quotation","text":' + (Js ([string]$s['excerpt'])) + ',"creator":{"@type":"Person","name":' + (Js ([string]$s['speaker'])) + '}' + $(if ($full) { ',"isPartOf":{"@type":"CreativeWork","name":' + (Js ([string]$s['title'])) + ',"url":' + (Js $full[0]) + '}' } else { '' }) + '}' }
+  $srcUrl = if ($ft) { [string]$ft['url'] } elseif ($full) { $full[0] } else { $null }
+  if (-not $isPara) { $ld += ',{"@type":"Quotation","text":' + (Js ([string]$s['excerpt'])) + ',"creator":{"@type":"Person","name":' + (Js ([string]$s['speaker'])) + '}' + $(if ($srcUrl) { ',"isPartOf":{"@type":"CreativeWork","name":' + (Js ([string]$s['title'])) + ',"url":' + (Js $srcUrl) + '}' } else { '' }) + '}' }
   Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'article'; ld = $ld; nav = 'speeches'; body = $sb.ToString() })
 }
 $crumb = Crumbs @(@('Home', '/'), @('Great Speeches', $null))
 $ib = New-Object Text.StringBuilder
 [void]$ib.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n")
-$spFull = @($SPS | Where-Object { $_['full'] }).Count
-[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Great Speeches</h1><p class="ref-lede">' + $SPS.Count + ' speeches that moved history, from Pericles to Reagan. Each gives the setting, the key passage with its source, what followed and what it led to; ' + $spFull + ' link to the complete text at a free source.</p></header>' + "`n")
+$spWhole = @($SPS | Where-Object { $SPTXT.ContainsKey([string]$_['slug']) }).Count
+$spFull = @($SPS | Where-Object { $_['full'] -and -not $SPTXT.ContainsKey([string]$_['slug']) }).Count
+[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Great Speeches</h1><p class="ref-lede">' + $SPS.Count + ' speeches that moved history, from Pericles to Reagan. Each gives the setting, the key passage with its source, what followed and what it led to. ' + $spWhole + ' carry their full text, and ' + $spFull + ' more link to it at a free source.</p></header>' + "`n")
 foreach ($era in $SPERA.Keys) {
   $grp = @($SPS | Where-Object { [string]$_['era'] -eq $era }); if (-not $grp.Count) { continue }
   [void]$ib.Append('<section class="sp-era"><h2 class="ref-sec-title">' + $SPERA[$era] + '</h2><div class="sp-grid">')
   foreach ($s in $grp) {
     $para = ([string]$s['kind'] -eq 'paraphrase')
-    [void]$ib.Append('<a class="sp-card" href="/speeches/' + $s['slug'] + '"><span class="sp-card-k">' + (Hx ([string]$s['display'])) + '</span><span class="sp-card-t">' + (Hx ([string]$s['title'])) + '</span><span class="sp-card-q">' + $(if ($para) { 'In substance: ' + (Hx ([string]$s['excerpt'])) } else { '&ldquo;' + (Hx ([string]$s['excerpt'])) + '&rdquo;' }) + '</span><span class="sp-card-by">' + (Hx ([string]$s['speaker'])) + $(if ($s['full']) { '<span class="sp-card-ft"> · complete text linked</span>' } else { '' }) + '</span></a>')
+    [void]$ib.Append('<a class="sp-card" href="/speeches/' + $s['slug'] + '"><span class="sp-card-k">' + (Hx ([string]$s['display'])) + '</span><span class="sp-card-t">' + (Hx ([string]$s['title'])) + '</span><span class="sp-card-q">' + $(if ($para) { 'In substance: ' + (Hx ([string]$s['excerpt'])) } else { '&ldquo;' + (Hx ([string]$s['excerpt'])) + '&rdquo;' }) + '</span><span class="sp-card-by">' + (Hx ([string]$s['speaker'])) + $(if ($SPTXT.ContainsKey([string]$s['slug'])) { '<span class="sp-card-ft"> · full text</span>' } elseif ($s['full']) { '<span class="sp-card-ft"> · complete text linked</span>' } else { '' }) + '</span></a>')
   }
   [void]$ib.Append("</div></section>`n")
 }
 [void]$ib.Append("</div>`n</main>`n")
 $title = 'Great Speeches in History: The Words That Moved the World — The Epoch Institute'
-$desc = 'Great speeches that moved history, from Pericles to Reagan: the setting, the key passage and its source, what followed, and links to the complete texts.'
+$desc = 'Great speeches that moved history, from Pericles to Reagan: the setting, the key passage, what followed, and the full text of every speech in the public domain.'
 Emit '/speeches/' (Page @{ title = $title; desc = $desc; path = '/speeches/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/speeches/") + '}'); nav = 'speeches'; body = $ib.ToString() })
-Say "great speeches: $($SPS.Count) ($spFull with the complete text linked)"
+Say "great speeches: $($SPS.Count) ($spWhole with their full text, $spFull more linked to it)"
 if ($spMiss.Count) { Say ("great speeches: unknown encyclopedia links " + (($spMiss | Sort-Object -Unique) -join ', ')) }
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1435,6 +1459,82 @@ function SetBlock([string]$file, [string]$name, [string]$html) {
   $new = $t.Substring(0, $i + $a.Length) + "`n" + $html + "`n" + $t.Substring($j)
   if ([EpochBuild.W]::WriteIfChanged($file, $new)) { $script:NWRITE++ }
 }
+
+# ── games-data.js (Which Came First?, Guess the Year, Picture Puzzle, Word Hunt) and the Kids corner (/kids) ──────────
+# Pictures: scripts/game-pictures.tsv, chosen by eye (and images/games/<slug>.jpg, 800 px, from fetch-game-images.ps1).
+# Cards: [slug, name, kind, first year, last year, dates, picture, big picture, caption, fit for Kids mode, credit, source]
+function GameCredit($e) { if (-not $e.cr) { return '' }; ((@([string]$e.cr['artist'], [string]$e.cr['licence']) | Where-Object { $_ }) -join ' · ') }
+$GPICS = [ordered]@{}; $GPSETS = New-Object Collections.Generic.List[string]
+foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\game-pictures.tsv", $U8)) {
+  if ($l -match '^# sets: (.+)$') { foreach ($sn in ($Matches[1] -split '\|')) { $GPSETS.Add($sn.Trim()) }; continue }
+  if (-not $l -or $l.StartsWith('#')) { continue }
+  $c = $l.Split("`t"); $GPICS[$c[0]] = @($(if ($c.Count -gt 1) { $c[1] } else { '' }), $(if ($c.Count -gt 2 -and $c[2]) { [int]$c[2] } else { 0 }))
+}
+$gCards = New-Object Collections.Generic.List[string]; $gPuz = @{}; $gMiss = New-Object Collections.Generic.List[string]; $gDated = 0; $gBig = 0
+foreach ($gs in $GPICS.Keys) {
+  if (-not $BY.ContainsKey($gs) -or -not $BY[$gs].img) { $gMiss.Add($gs); continue }
+  $e = $BY[$gs]; $gsp = [EpochBuild.W]::Span($e.dates)
+  $big = if (Test-Path "$Repo\images\games\$gs.jpg") { "/images/games/$gs.jpg" } else { '' }
+  if ($gsp) { $gDated++ }; if ($big) { $gBig++ }
+  $kind = if ($SING.ContainsKey($e.type)) { $SING[$e.type] } else { $e.type }
+  $gCards.Add('[' + (Js $gs) + ',' + (Js $e.name) + ',' + (Js $kind) + ',' + $(if ($gsp) { [string]$gsp[0] + ',' + [string]$gsp[1] } else { 'null,null' }) + ',' + (Js $e.dates) + ',' + (Js $e.img) + ',' + (Js $big) + ',' +
+    (Js ([EpochBuild.W]::Summary($e.desc, 170))) + ',' + $(if ($e.conflict) { 0 } else { 1 }) + ',' + (Js (GameCredit $e)) + ',' + (Js $(if ($e.cr) { [string]$e.cr['source'] } else { '' })) + ']')
+  $ps = $GPICS[$gs][0]
+  if ($ps -and $big) { if (-not $gPuz.ContainsKey($ps)) { $gPuz[$ps] = New-Object Collections.Generic.List[object] }; $gPuz[$ps].Add(@($GPICS[$gs][1], $gs)) }
+}
+$gPuzJs = (@($GPSETS | Where-Object { $gPuz.ContainsKey($_) } | ForEach-Object { '{"set":' + (Js $_) + ',"items":[' + ((@($gPuz[$_] | Sort-Object { $_[0] } | ForEach-Object { Js $_[1] })) -join ',') + ']}' })) -join ','
+# Word Hunt themes: scripts/word-hunt.tsv (@key, title, introduction, picture; then WORD, clue, entry)
+$gWords = New-Object Collections.Generic.List[string]; $wTheme = $null; $wList = $null; $wBad = New-Object Collections.Generic.List[string]
+function FlushTheme { if ($script:wTheme) { $script:gWords.Add($script:wTheme + ',"words":[' + ($script:wList -join ',') + ']}') } }
+foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\word-hunt.tsv", $U8)) {
+  if (-not $l -or $l.StartsWith('#')) { continue }
+  $c = $l.Split("`t")
+  if ($c[0].StartsWith('@')) {
+    FlushTheme
+    $wp = $c[3]; $wimg = if ($wp -and (Test-Path "$Repo\images\games\$wp.jpg")) { "/images/games/$wp.jpg" } elseif ($wp -and $BY.ContainsKey($wp) -and $BY[$wp].img) { $BY[$wp].img } else { $wBad.Add("picture $wp"); '' }
+    $script:wTheme = '{"k":' + (Js $c[0].Substring(1)) + ',"t":' + (Js $c[1]) + ',"intro":' + (Js $c[2]) + ',"img":' + (Js $wimg); $script:wList = New-Object Collections.Generic.List[string]; continue
+  }
+  if ($c[0] -notmatch '^[A-Z]{3,12}$') { $wBad.Add("word $($c[0])"); continue }
+  $wl = if ($c.Count -gt 2 -and $c[2]) { if ($BY.ContainsKey($c[2])) { '/encyclopedia/' + $c[2] } else { $wBad.Add("entry $($c[2])"); '' } } else { '' }
+  $script:wList.Add('[' + (Js $c[0]) + ',' + (Js $c[1]) + ',' + (Js $wl) + ']')
+}
+FlushTheme
+$gameJs = "// games-data.js - built by scripts/build-pages.ps1 from scripts/game-pictures.tsv and scripts/word-hunt.tsv. Do not edit.`n" +
+  "var GAME_CARDS = [`n" + ($gCards -join ",`n") + "`n];`nvar GAME_PUZZLES = [" + $gPuzJs + "];`nvar GAME_WORDS = [`n" + ($gWords -join ",`n") + "`n];`n"
+[void][EpochBuild.W]::WriteIfChanged("$Repo\games-data.js", $gameJs); $GAMESV = [EpochBuild.W]::Sha1($gameJs).Substring(0, 10)
+$t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'games-data\.js\?v=[0-9a-f]*', "games-data.js?v=$GAMESV")
+if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
+Say ("games: {0} pictures ({1} dated, {2} large), {3} puzzle sets, {4} Word Hunt themes{5}" -f $gCards.Count, $gDated, $gBig, $gPuz.Count, $gWords.Count, $(if ($gMiss.Count -or $wBad.Count) { '; skipped: ' + (($gMiss + $wBad) -join ', ') } else { '' }))
+# The Kids corner: scripts/kids-corner.tsv (@theme lines, entry lines with a line for young readers, ! facts)
+$kdThemes = New-Object Collections.Generic.List[object]; $kdFacts = New-Object Collections.Generic.List[string]; $kdBad = New-Object Collections.Generic.List[string]; $kdT = $null
+foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\kids-corner.tsv", $U8)) {
+  if (-not $l -or $l.StartsWith('#')) { continue }
+  $c = $l.Split("`t")
+  if ($c[0] -eq '!') {
+    $fl = if ($c.Count -gt 2) { $c[2] } else { '' }
+    if ($fl -match '^/encyclopedia/(.+)$' -and -not $BY.ContainsKey($Matches[1])) { $kdBad.Add($fl); $fl = '' }
+    if ($fl -match '^/empire/(.+)$' -and -not (Test-Path "$Repo\empire\$($Matches[1])")) { $kdBad.Add($fl); $fl = '' }
+    $kdFacts.Add('[' + (Js $c[1]) + ',' + (Js $fl) + ']'); continue
+  }
+  if ($c[0].StartsWith('@')) { $kdT = [pscustomobject]@{ k = $c[0].Substring(1); t = $c[1]; intro = $c[2]; pic = $c[3]; items = New-Object Collections.Generic.List[object] }; $kdThemes.Add($kdT); continue }
+  if (-not $BY.ContainsKey($c[0]) -or -not $BY[$c[0]].img) { $kdBad.Add($c[0]); continue }
+  $kdT.items.Add(@($BY[$c[0]], $c[1]))
+}
+$kdNav = New-Object Text.StringBuilder; $kdBody = New-Object Text.StringBuilder
+foreach ($th in $kdThemes) {
+  $tp = if ($BY.ContainsKey($th.pic)) { $BY[$th.pic].img } else { '' }
+  [void]$kdNav.Append('<li><a class="kd-door" href="#t-' + $th.k + '"><span class="kd-door-img"><img src="' + $tp + '" alt="" loading="lazy"></span><span class="kd-door-t">' + (Hx $th.t) + '</span><span class="kd-door-n">' + $th.items.Count + ' to explore</span></a></li>')
+  [void]$kdBody.Append('<section class="kd-sec" id="t-' + $th.k + '" aria-labelledby="t-' + $th.k + '-h"><h2 class="kd-h" id="t-' + $th.k + '-h">' + (Hx $th.t) + '</h2><p class="kd-intro">' + (Hx $th.intro) + '</p><ul class="kd-cards">')
+  foreach ($it in $th.items) {
+    $ie = $it[0]; $isz = ImgSize $ie.img
+    [void]$kdBody.Append('<li><a class="kd-card" href="/encyclopedia/' + $ie.slug + '"><span class="kd-card-img"><img src="' + $ie.img + '" alt=""' + $(if ($isz) { ' width="' + $isz[0] + '" height="' + $isz[1] + '"' } else { '' }) + ' loading="lazy"></span><span class="kd-card-b"><span class="kd-card-t">' + (Hx $ie.name) + '</span><span class="kd-card-d">' + (Hx $it[1]) + '</span></span></a></li>')
+  }
+  [void]$kdBody.Append('</ul><p class="kd-more"><a class="kd-btn" href="/games#words-' + $th.k + '">Play the ' + (Hx $th.t) + ' Word Hunt &rarr;</a></p></section>')
+}
+SetBlock "$Repo\kids" 'kids-doors' ('<ul class="kd-doors">' + $kdNav.ToString() + '</ul>')
+SetBlock "$Repo\kids" 'kids-themes' $kdBody.ToString()
+SetBlock "$Repo\kids" 'kids-facts' ('<script>var KIDS_FACTS = [' + ($kdFacts -join ',') + '];</script>')
+Say ("kids corner: {0} themes, {1} pictures, {2} facts{3}" -f $kdThemes.Count, (($kdThemes | ForEach-Object { $_.items.Count } | Measure-Object -Sum).Sum), $kdFacts.Count, $(if ($kdBad.Count) { '; skipped: ' + ($kdBad -join ', ') } else { '' }))
 $az = '<ul class="ref-az">' + (($LETTERS | Where-Object { $byLetter[$_].Count } | ForEach-Object { '<li><a href="/encyclopedia/browse/' + $_ + '"><b>' + (LetterLabel $_) + '</b><span>' + $byLetter[$_].Count.ToString('N0') + '</span></a></li>' }) -join '') + '</ul>'
 $cents = '<ul class="ref-cent-list">' + (($CENTORDER | ForEach-Object { '<li><a href="/encyclopedia/conflicts/' + (CenturySlug $_) + '">' + (Hx ($_.Substring(0, 1).ToUpperInvariant() + $_.Substring(1))) + ' <span>' + $CENT[$_].Count + '</span></a></li>' }) -join '') + '</ul>'
 SetBlock "$Repo\encyclopedia\index" 'browse' ('<section class="ref-browse" id="enc-browse" aria-labelledby="enc-az-title"><h2 class="ref-sec-title" id="enc-az-title">Browse A&ndash;Z</h2>' + $az +
@@ -1461,7 +1561,8 @@ $SECTIONS = [ordered]@{
   today        = @{ t = 'Today in History'; h = '/today-in-history/'; k = $nTih.ToString('N0') + ' events'; d = 'What happened on each day of the year, across five thousand years.'; pic = @('mesoamerican-long-count-calendar', 'anglo-saxon-chronicle') }
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
-  games        = @{ t = 'Games'; h = '/games'; k = 'Three games'; d = 'Emblem Pairs, Order the Ages and Globe Hunt: quick games with history for every age.'; pic = @('pythian-games') }
+  games        = @{ t = 'Games'; h = '/games'; k = 'Seven games'; d = 'Picture puzzles, word hunts, timelines and a globe: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  kids         = @{ t = 'Kids corner'; h = '/kids'; k = 'For young explorers'; d = 'Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.'; pic = @('great-pyramid-of-giza') }
   series       = @{ t = 'Research Series'; h = '/research-series'; k = 'Essays'; d = 'Thematic essays on the forces behind the rise and collapse of civilisations.'; pic = @('thucydides', 'ibn-khaldun', 'edward-gibbon') }
   dataset      = @{ t = 'Open Data'; h = '/dataset'; k = 'CC BY 4.0'; d = "The states register ($($POL['nodes'].Count.ToString('N0')) states, $($POL['links'].Count.ToString('N0')) relations) and the power curves, free to reuse."; pic = @('rhind-mathematical-papyrus', 'moscow-mathematical-papyrus', 'domesday-book') }
 }
@@ -1596,7 +1697,7 @@ foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts'
 }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }
@@ -1633,6 +1734,6 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\sitemap.xml", $idx)) { $NWRITE++ }
 [IO.File]::WriteAllLines($stateFile, [string[]]@($SMNEW.Keys | Sort-Object | ForEach-Object { $_ + "`t" + $SMNEW[$_][0] + "`t" + $SMNEW[$_][1] }), $U8)
 # pages whose content changed in this build, for scripts/ping-indexnow.ps1 (run it after deploying)
 $chg = New-Object System.Collections.Generic.List[string]
-foreach ($p in ($SMNEW.Keys | Sort-Object)) { if (-not $SM.ContainsKey($p) -or $SM[$p][0] -ne $SMNEW[$p][0]) { $chg.Add($SITE + $p) } }
+foreach ($p in ($CHANGED.Keys | Sort-Object)) { $chg.Add($SITE + $p) }
 [IO.File]::WriteAllLines("$PSScriptRoot\changed-urls.txt", $chg, $U8)
 Say "done: $NWRITE files written, $nDel stale pages deleted, $($SMNEW.Count) URLs in the sitemaps, $($chg.Count) changed URLs"

@@ -23,6 +23,11 @@
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () {});
   });
 
+  // speeches: "Read the full speech" unfolds the text it leads to (also when the page opens at #full-text)
+  function openFull() { var d = document.querySelector('#full-text details'); if (d) d.open = true; }
+  document.addEventListener('click', function (ev) { if (ev.target.closest('a[href="#full-text"]')) openFull(); });
+  if (location.hash === '#full-text') openFull();
+
   // random entry / random state
   function loadScript(src) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
   document.addEventListener('click', function (ev) {

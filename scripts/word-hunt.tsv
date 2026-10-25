@@ -1,0 +1,93 @@
+# Word Hunt themes for /games (read by scripts/build-pages.ps1 into games-data.js). Tab-separated.
+# @key	title	one-line introduction	picture (an entry slug)
+# WORD	clue	entry slug (optional; the builder drops a link that does not resolve)
+# Words are capital letters only, at most 12. Easy grids (8x8) use words of up to 8 letters, Medium (10x10) up to 10.
+@egypt	Ancient Egypt	The land of the pharaohs, the pyramids and the River Nile.	great-pyramid-of-giza
+PHARAOH	The title of the kings of ancient Egypt	pharaoh
+PYRAMID	A giant stone tomb with four sloping sides	great-pyramid-of-giza
+NILE	The great river whose floods watered Egypt's fields	nile
+MUMMY	A body carefully preserved for the life after death
+SPHINX	A stone lion with a human head that guards the pyramids of Giza
+PAPYRUS	A river reed the Egyptians turned into paper	papyrus
+OBELISK	A tall, thin stone pillar with a pointed top	obelisk
+SCARAB	A beetle that Egyptians wore as a lucky charm
+CLEOPATRA	The last queen of ancient Egypt	cleopatra-vii
+HIEROGLYPHS	Egyptian writing made of little pictures	egyptian-hieroglyphs
+@greece	Ancient Greece	Thinkers, athletes and the first democracy.	parthenon
+ATHENS	The city where citizens first voted on their own laws	athens
+SPARTA	A Greek city famous for its tough soldiers	sparta
+OLYMPICS	Games held at Olympia every four years to honour Zeus	ancient-olympic-games
+ZEUS	The king of the Greek gods	zeus
+HOPLITE	A Greek foot soldier with a big round shield	hoplite
+PARTHENON	The marble temple of Athena on the Acropolis	parthenon
+HOMER	The poet of the Iliad and the Odyssey	homer
+ACROPOLIS	The rocky hill at the heart of Athens	acropolis-of-athens
+SOCRATES	The philosopher who taught by asking questions	socrates
+PHALANX	Soldiers in a block, standing shoulder to shoulder	phalanx
+@rome	Ancient Rome	Emperors, legions and roads that led everywhere.	roman-forum
+CAESAR	The general who became master of Rome	julius-caesar
+AUGUSTUS	The first Roman emperor	augustus-roman-emperor
+SENATE	The council of Rome's leading men	roman-senate
+FORUM	The busy main square of the city of Rome	roman-forum
+LEGION	A Roman army unit of about five thousand soldiers	legion
+TOGA	The white robe worn by Roman citizens
+AQUEDUCT	A stone channel that carried water into a city	aqueduct
+GLADIATOR	A fighter who performed in the arena
+REPUBLIC	Rome's government before the emperors	roman-republic
+GALLEY	A ship rowed by many oars	galley
+@knights	Knights and Castles	Lords, ladies and life in the Middle Ages.	krak-des-chevaliers
+KNIGHT	A warrior on horseback who served a lord	knighthood
+CASTLE	A strong stone home built for defence
+MOAT	A ditch full of water around a castle
+SHIELD	A knight's protection, painted with his colours
+ARMOUR	Metal clothing that protected a knight
+SWORD	A knight's long blade
+BANNER	A flag carried at the head of an army
+CRUSADES	Wars fought over the Holy Land	crusades
+FEUDALISM	The system of lords, knights and peasants	feudalism
+TEMPLARS	An order of knights who were also monks	knights-templar
+@vikings	Vikings	Sailors, traders and raiders from the far north.	oseberg-ship
+VIKING	A seafaring raider and trader from Scandinavia	vikings
+LONGSHIP	The fast, narrow ship of the Vikings	oseberg-ship
+RUNES	The letters of the Viking alphabet	froso-runestone
+ODIN	The one-eyed chief of the Norse gods
+THOR	The Norse god of thunder, with his hammer	thor
+SAGA	A long story of heroes and families
+FJORD	A long, narrow inlet of the sea between steep cliffs
+VALHALLA	The great hall of fallen warriors in Norse myth
+VINLAND	The Viking name for a land in North America	lanse-aux-meadows
+NORSE	The language and people of the Viking north
+@explorers	Great Explorers	Brave travellers who crossed oceans, deserts and mountains.	zheng-he
+COLUMBUS	He crossed the Atlantic in 1492	christopher-columbus
+MAGELLAN	His fleet was the first to sail around the world	ferdinand-magellan
+ZHENGHE	Zheng He, admiral of China's great treasure fleets	zheng-he
+MARCOPOLO	Marco Polo, who travelled from Venice to China	marco-polo
+CARAVEL	A small, nimble sailing ship of the explorers	caravel
+COMPASS	A needle that always points north
+ASTROLABE	A tool for finding your place by the stars
+SPICES	Pepper, cloves and cinnamon: what many explorers sailed for	spice-trade
+ATLAS	A book of maps
+VOYAGE	A long journey by sea
+@inventions	Inventions and Ideas	Clever ideas that changed how people live.	johannes-gutenberg
+PRINTING	Pressing inked letters onto paper to make many copies of a book	printing-press
+PAPER	Invented in China, made from plant fibres	papermaking
+WHEEL	One of the oldest and most useful inventions
+SILK	A shining cloth made from the threads of silkworms	silk
+PORCELAIN	Fine white pottery first made in China	porcelain
+CALENDAR	A way of counting the days of the year
+ALPHABET	A set of letters for writing words
+ABACUS	A frame of beads for doing sums
+TELESCOPE	Galileo used one to discover the moons of Jupiter	galileo-galilei
+ALGEBRA	A kind of maths named in a book by al-Khwarizmi	al-khwarizmi
+@buildings	Amazing Buildings	Wonders of stone, brick and marble from around the world.	taj-mahal
+TAJMAHAL	A white marble tomb built for a beloved wife	taj-mahal
+GREATWALL	A wall that winds across northern China	great-wall-of-china
+ALHAMBRA	A palace of gardens and fountains in Granada	alhambra
+ANGKORWAT	A huge temple among the forests of Cambodia	angkor-wat
+HAGIASOPHIA	A great church, later a mosque, in Istanbul	hagia-sophia
+ZIGGURAT	A stepped temple tower of Mesopotamia	ziggurat-of-ur
+LIGHTHOUSE	The one at Alexandria was a Wonder of the World	lighthouse-of-alexandria
+MINARET	A tall tower beside a mosque	qutb-minar
+DOME	A round roof shaped like half a ball
+TEMPLE	A building where people worship their gods
+BOROBUDUR	A giant Buddhist monument on the island of Java	borobudur

@@ -330,7 +330,7 @@ function buildPage(emp) {
       image: { '@type': 'ImageObject', url: 'https://the-epoch-institute.org/images/og/' + slug + '.jpg', width: 1200, height: 630 } } ] }).replace(/</g, '\\u003c');
 
   return '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
-'<script>(function(){try{var t=localStorage.getItem(\'epoch-theme\');if(!t&&window.matchMedia&&matchMedia(\'(prefers-color-scheme: light)\').matches)t=\'light\';if(t===\'light\')document.documentElement.setAttribute(\'data-theme\',\'light\');else if(t===\'dark\')document.documentElement.setAttribute(\'data-theme\',\'dark\');}catch(e){}})()\x3C/script>\n' +
+'<script>(function(){try{var t=localStorage.getItem(\'epoch-theme\');if(!t&&window.matchMedia&&matchMedia(\'(prefers-color-scheme: light)\').matches)t=\'light\';if(t===\'light\')document.documentElement.setAttribute(\'data-theme\',\'light\');else if(t===\'dark\')document.documentElement.setAttribute(\'data-theme\',\'dark\');if(localStorage.getItem(\'epoch-kids\')===\'1\')document.documentElement.setAttribute(\'data-kids\',\'1\');}catch(e){}})()\x3C/script>\n' +
 '<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
 '<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">\n<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">\n' +
 '<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">\n' +

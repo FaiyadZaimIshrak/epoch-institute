@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
 <link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
-<title>History Games: Pairs, Timelines and the Globe — The Epoch Institute</title>
+<title>History Games: Puzzles, Timelines, Word Hunts and the Globe — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Three quick history games: match the flags and emblems of empires, put real events in order, and find lost states on a turning globe. No sign-up.">
+<meta name="description" content="Seven history games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year. Free, no sign-up.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://the-epoch-institute.org/games">
 <meta property="og:type" content="website">
 <meta property="og:title" content="History Games — The Epoch Institute">
-<meta property="og:description" content="Match the flags and emblems, order the ages, and find lost empires on the globe.">
+<meta property="og:description" content="Seven games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -26,10 +26,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=43">
+<link rel="stylesheet" href="/shared.css?v=44">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Three quick history games: match the flags and emblems of empires, put real events in order, and find lost states on a turning globe.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Seven history games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>
@@ -46,14 +46,19 @@
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Three quick games built from the collection. No sign-up and nothing to install; your best scores stay in this browser. For a daily challenge, try the <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Seven games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
   <div class="gm-tabs" role="tablist" aria-label="Choose a game">
     <span class="gm-tab-ink" aria-hidden="true"></span>
-    <button class="gm-tab" id="tab-pairs" role="tab" aria-selected="true" aria-controls="game-pairs"><span class="gm-tab-ic" aria-hidden="true">&#10022;</span> Emblem Pairs</button>
-    <button class="gm-tab" id="tab-order" role="tab" aria-selected="false" aria-controls="game-order" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#8645;</span> Order the Ages</button>
-    <button class="gm-tab" id="tab-hunt" role="tab" aria-selected="false" aria-controls="game-hunt" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9673;</span> Globe Hunt</button>
+    <button class="gm-tab" id="tab-pairs" role="tab" aria-selected="true" aria-controls="game-pairs"><span class="gm-tab-ic" aria-hidden="true">&#10022;</span><span class="gm-tab-t">Emblem Pairs</span></button>
+    <button class="gm-tab" id="tab-order" role="tab" aria-selected="false" aria-controls="game-order" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#8645;</span><span class="gm-tab-t">Order the Ages</span></button>
+    <button class="gm-tab" id="tab-hunt" role="tab" aria-selected="false" aria-controls="game-hunt" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9673;</span><span class="gm-tab-t">Globe Hunt</span></button>
+    <button class="gm-tab" id="tab-first" role="tab" aria-selected="false" aria-controls="game-first" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9878;</span><span class="gm-tab-t">Which Came First?</span></button>
+    <button class="gm-tab" id="tab-puzzle" role="tab" aria-selected="false" aria-controls="game-puzzle" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10070;</span><span class="gm-tab-t">Picture Puzzle</span></button>
+    <button class="gm-tab" id="tab-words" role="tab" aria-selected="false" aria-controls="game-words" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9998;</span><span class="gm-tab-t">Word Hunt</span></button>
+    <button class="gm-tab" id="tab-year" role="tab" aria-selected="false" aria-controls="game-year" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10710;</span><span class="gm-tab-t">Guess the Year</span></button>
   </div>
 
   <!-- Emblem Pairs -->
@@ -64,7 +69,7 @@
     </div>
     <div class="gm-stats">
       <span class="gm-stat"><b id="pairs-flips">0</b> <span id="pairs-flips-l">flips</span></span>
-      <span class="gm-stat"><b id="pairs-time">0:00</b></span>
+      <span class="gm-stat gm-stat-time"><b id="pairs-time">0:00</b></span>
       <span class="gm-stat gm-stat-best" id="pairs-best"></span>
       <button type="button" class="gm-again" id="pairs-new">New round &#8635;</button>
     </div>
@@ -75,7 +80,7 @@
   <!-- Order the Ages -->
   <section class="gm-game" id="game-order" role="tabpanel" aria-labelledby="tab-order" hidden>
     <div class="gm-head">
-      <p class="gm-howto">Put these in time order, oldest at the top. Drag a card by its handle, use the arrows, or tap two cards to swap them, then check.</p>
+      <p class="gm-howto">Put these in time order, oldest at the top (a person by the year they were born). Drag a card by its handle, use the arrows, or tap two cards to swap them, then check.</p>
       <div class="gm-seg" data-for="order" role="group" aria-label="Number of cards"><button type="button" data-v="4">4 cards</button><button type="button" data-v="5">5 cards</button><button type="button" data-v="6">6 cards</button></div>
     </div>
     <div class="gm-stats">
@@ -90,7 +95,7 @@
   <!-- Globe Hunt -->
   <section class="gm-game" id="game-hunt" role="tabpanel" aria-labelledby="tab-hunt" hidden>
     <div class="gm-head">
-      <p class="gm-howto">Find where each state lay. Drag to turn the globe, zoom with the wheel or the buttons, and tap to place your guess. Five rounds, up to 100 points each.</p>
+      <p class="gm-howto">Find where each state lay. Drag to turn the globe, zoom with the wheel or the buttons, and tap to place your guess. Five rounds in five regions of the world, up to 100 points each.</p>
       <div class="gm-seg" data-for="hunt" role="group" aria-label="Which states"><button type="button" data-v="famous">Famous states</button><button type="button" data-v="all">All states</button></div>
     </div>
     <div class="gm-stats">
@@ -101,503 +106,108 @@
     </div>
     <div class="gm-hunt-q"><p id="hunt-q">Loading the globe&hellip;</p><button type="button" class="gm-hint" id="hunt-hint" hidden>Hint <small>&minus;20</small></button></div>
     <div class="gm-hunt-wrap">
-      <canvas id="hunt-globe" aria-label="A globe. Drag to turn it, then tap where you think the named state lay."></canvas>
+      <canvas id="hunt-globe" tabindex="0" role="application" aria-roledescription="globe" aria-label="A globe. Drag to turn it, then tap where you think the named state lay. With a keyboard: the arrow keys turn it, plus and minus zoom, and Enter drops your pin at the centre."></canvas>
+      <span class="gm-hunt-cross" aria-hidden="true"></span>
       <div class="gm-hunt-zoom"><button type="button" id="hunt-zin" aria-label="Zoom in">+</button><button type="button" id="hunt-zout" aria-label="Zoom out">&minus;</button></div>
       <div class="gm-hunt-res" id="hunt-res" hidden></div>
       <div class="gm-done" id="hunt-done" hidden></div>
+    </div>
+  </section>
+
+  <!-- Which Came First? -->
+  <section class="gm-game" id="game-first" role="tabpanel" aria-labelledby="tab-first" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">Two moments from history: tap the one that came first (for a person, the year they were born). Every right answer grows your streak, and the gaps get closer as you go. You have three lives.</p>
+      <div class="gm-seg" data-for="first" role="group" aria-label="Which pictures"><button type="button" data-v="all">Everything</button><button type="button" data-v="people">People</button><button type="button" data-v="events">Events and works</button></div>
+    </div>
+    <div class="gm-stats">
+      <span class="gm-lives" id="first-lives" aria-label="3 lives left"></span>
+      <span class="gm-stat"><b id="first-streak">0</b> in a row</span>
+      <span class="gm-stat gm-stat-best" id="first-best"></span>
+      <button type="button" class="gm-again" id="first-new">New game &#8635;</button>
+    </div>
+    <div class="gm-board">
+      <div class="gm-duel" id="first-duel"></div>
+      <div class="gm-fc-res" id="first-res" aria-live="polite"></div>
+      <div class="gm-done" id="first-done" hidden></div>
+    </div>
+  </section>
+
+  <!-- Picture Puzzle -->
+  <section class="gm-game" id="game-puzzle" role="tabpanel" aria-labelledby="tab-puzzle" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">Swap the pieces to put the picture back together: tap two pieces to swap them, or drag one onto another. A piece in the right place glows and stays.</p>
+      <div class="gm-seg" data-for="puzzle" role="group" aria-label="Pieces"><button type="button" data-v="3">3 &times; 3</button><button type="button" data-v="4">4 &times; 4</button><button type="button" data-v="5">5 &times; 5</button></div>
+    </div>
+    <div class="gm-seg gm-seg-wide" data-for="pzset" role="group" aria-label="Set of pictures"></div>
+    <div class="gm-stats">
+      <span class="gm-stat"><b id="puzzle-moves">0</b> moves</span>
+      <span class="gm-stat gm-stat-time"><b id="puzzle-time">0:00</b></span>
+      <span class="gm-stat gm-stat-best" id="puzzle-prog"></span>
+      <button type="button" class="gm-again" id="puzzle-peek">Peek</button>
+      <button type="button" class="gm-again" id="puzzle-new">Shuffle &#8635;</button>
+    </div>
+    <div class="gm-board gm-pz-wrap"><div class="gm-pz" id="puzzle-board" role="group" aria-label="Picture puzzle"></div><div class="gm-done" id="puzzle-done" hidden></div></div>
+    <p class="gm-credit" id="puzzle-credit"></p>
+    <ol class="gm-pz-strip" id="puzzle-strip" aria-label="Pictures in this set"></ol>
+  </section>
+
+  <!-- Word Hunt -->
+  <section class="gm-game" id="game-words" role="tabpanel" aria-labelledby="tab-words" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">Find the hidden words: drag across the letters, or tap the first and the last letter of a word. Each word you find tells you something about the theme.</p>
+      <div class="gm-seg" data-for="words" role="group" aria-label="Difficulty"><button type="button" data-v="easy">Easy</button><button type="button" data-v="medium">Medium</button><button type="button" data-v="hard">Hard</button></div>
+    </div>
+    <div class="gm-wh-themes" id="words-themes" role="group" aria-label="Choose a theme"></div>
+    <p class="gm-wh-intro" id="words-intro"></p>
+    <div class="gm-stats">
+      <span class="gm-stat"><b id="words-found">0</b> of <b id="words-total">0</b> found</span>
+      <span class="gm-stat gm-stat-time"><b id="words-time">0:00</b></span>
+      <span class="gm-stat gm-stat-best" id="words-best"></span>
+      <button type="button" class="gm-again" id="words-new">New grid &#8635;</button>
+    </div>
+    <div class="gm-board gm-wh">
+      <div class="gm-wh-grid" id="words-grid" role="img"></div>
+      <div class="gm-wh-side">
+        <ul class="gm-wh-list" id="words-list"></ul>
+        <form class="gm-wh-type" id="words-type"><label for="words-input">Spotted one? Type it:</label><span><input id="words-input" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="14"><button type="submit">Check</button></span><span class="gm-live" id="words-say" aria-live="polite"></span></form>
+      </div>
+      <div class="gm-done" id="words-done" hidden></div>
+    </div>
+  </section>
+
+  <!-- Guess the Year -->
+  <section class="gm-game" id="game-year" role="tabpanel" aria-labelledby="tab-year" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">Look at the picture and slide to the year you think it shows. The closer you are, the more points you score: five rounds, one from each age, up to 100 points each.</p>
+    </div>
+    <div class="gm-stats">
+      <ol class="gm-rounds" id="year-rounds" aria-label="Rounds"><li></li><li></li><li></li><li></li><li></li></ol>
+      <span class="gm-stat"><b id="year-score">0</b> points</span>
+      <span class="gm-stat gm-stat-best" id="year-best"></span>
+      <button type="button" class="gm-again" id="year-new">New game &#8635;</button>
+    </div>
+    <div class="gm-board gm-yr">
+      <p class="gm-yr-q" id="year-q"></p>
+      <figure class="gm-yr-fig"><img id="year-img" alt=""><figcaption class="gm-credit" id="year-credit"></figcaption></figure>
+      <div class="gm-yr-pick" id="year-pick">
+        <output class="gm-yr-out" id="year-out" for="year-range">1000 CE</output>
+        <input type="range" id="year-range" min="0" max="1000" step="1" value="855" aria-label="Your year">
+        <div class="gm-yr-scale" id="year-scale" aria-hidden="true"></div>
+        <div class="gm-yr-fine" id="year-fine" role="group" aria-label="Fine-tune the year"><button type="button" data-d="-10">&minus;10</button><button type="button" data-d="-1">&minus;1</button><button type="button" data-d="1">+1</button><button type="button" data-d="10">+10</button></div>
+        <button type="button" class="hero-cta" id="year-go">That&rsquo;s my guess</button>
+      </div>
+      <div class="gm-yr-res" id="year-res" hidden></div>
+      <div class="gm-done" id="year-done" hidden></div>
     </div>
   </section>
 </main>
 
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=97751474c0' };</script>
 <script src="/games-emblems.js?v=1"></script>
-<script src="/home-data.js?v=12"></script>
-<script src="/shared-nav.js?v=27"></script>
-<script>
-initNav('games');
-(function () {
-  'use strict';
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function $(id) { return document.getElementById(id); }
-  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
-  function store() { try { return JSON.parse(localStorage.getItem('epoch-games') || '{}') || {}; } catch (e) { return {}; } }
-  function best(k) { return store()[k]; }
-  function setBest(k, v) { try { var o = store(); o[k] = v; localStorage.setItem('epoch-games', JSON.stringify(o)); } catch (e) {} }
-  function fmtTime(s) { return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
-  function ease(p) { return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2; }
-  function countUp(el, to, ms) {
-    if (reduce) { el.textContent = to.toLocaleString('en-GB'); return; }
-    var t0 = performance.now();
-    (function f(now) { var p = Math.min(1, (now - t0) / ms); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('en-GB'); if (p < 1) requestAnimationFrame(f); })(t0);
-  }
-  function bump(el) { el.classList.remove('gm-bump'); void el.offsetWidth; el.classList.add('gm-bump'); }
-  function stars(n) { return '<span class="gm-stars" aria-label="' + n + ' of 3 stars">' + [1, 2, 3].map(function (i) { return '<i class="' + (i <= n ? 'on' : '') + '" style="--i:' + i + '">&#9733;</i>'; }).join('') + '</span>'; }
-  function confetti(host) {
-    if (reduce) return;
-    for (var i = 0; i < 28; i++) {
-      var s = document.createElement('span'); s.className = 'gm-conf';
-      s.style.setProperty('--x', ((Math.random() * 2 - 1) * 200).toFixed(0) + 'px');
-      s.style.setProperty('--y', (-(70 + Math.random() * 170)).toFixed(0) + 'px');
-      s.style.setProperty('--r', ((Math.random() * 2 - 1) * 540).toFixed(0) + 'deg');
-      s.style.setProperty('--d', (Math.random() * 0.2).toFixed(2) + 's');
-      host.appendChild(s);
-      setTimeout(function (n) { return function () { if (n.parentNode) n.parentNode.removeChild(n); }; }(s), 1800);
-    }
-  }
-  // a segmented switch (difficulty and the like), remembered per game
-  function seg(name, def, onChange) {
-    var box = document.querySelector('.gm-seg[data-for="' + name + '"]'), saved = best('lvl-' + name), val = String(saved != null ? saved : def);
-    function paint() { Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === val)); }); }
-    box.addEventListener('click', function (e) { var b = e.target.closest('button[data-v]'); if (!b || b.getAttribute('data-v') === val) return; val = b.getAttribute('data-v'); setBest('lvl-' + name, val); paint(); onChange(val); });
-    paint();
-    return function () { return val; };
-  }
-
-  // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs / #order / #hunt ──
-  var GAMES = ['pairs', 'order', 'hunt'], ink = document.querySelector('.gm-tab-ink'), current = null;
-  function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.transform = 'translateX(' + btn.offsetLeft + 'px)'; }
-  function showGame(g, focus) {
-    if (GAMES.indexOf(g) < 0) g = 'pairs';
-    if (g === current) return;
-    current = g;
-    GAMES.forEach(function (o) {
-      var t = $('tab-' + o), p = $('game-' + o), on = o === g;
-      t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1;
-      if (on) { p.hidden = false; p.classList.remove('gm-enter'); void p.offsetWidth; p.classList.add('gm-enter'); } else p.hidden = true;
-    });
-    moveInk($('tab-' + g));
-    if (focus) $('tab-' + g).focus();
-    try { history.replaceState(null, '', '#' + g); localStorage.setItem('epoch-games-tab', g); } catch (e) {}
-    if (g === 'hunt') Hunt.start();
-  }
-  GAMES.forEach(function (g, i) {
-    var t = $('tab-' + g);
-    t.addEventListener('click', function () { showGame(g); });
-    t.addEventListener('keydown', function (e) {
-      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-      if (k) { e.preventDefault(); showGame(GAMES[(i + k + GAMES.length) % GAMES.length], true); }
-    });
-  });
-  window.addEventListener('resize', function () { if (current) moveInk($('tab-' + current)); });
-
-  // ── Emblem Pairs ─────────────────────────────────────────────────────────────
-  var EM = typeof GAME_EMBLEMS !== 'undefined' ? GAME_EMBLEMS : [];
-  var CL = {};
-  (typeof GAME_EMBLEM_CLASH !== 'undefined' ? GAME_EMBLEM_CLASH : []).forEach(function (p) { (CL[p[0]] = CL[p[0]] || {})[p[1]] = 1; (CL[p[1]] = CL[p[1]] || {})[p[0]] = 1; });
-  function dealEmblems(n) {   // n emblems, never two that look alike
-    var idx = shuffle(EM.map(function (_, i) { return i; })), pick = [];
-    for (var k = 0; k < idx.length && pick.length < n; k++) { var i = idx[k]; if (pick.every(function (j) { return !(CL[i] && CL[i][j]); })) pick.push(i); }
-    return pick.map(function (i) { return EM[i]; });
-  }
-  var P = { flips: 0, open: [], lock: false, left: 0, t0: 0, timer: null, n: 8 };
-  var pairsLevel = seg('pairs', 8, function () { newPairs(); });
-  function newPairs() {
-    P.n = +pairsLevel(); P.flips = 0; P.open = []; P.lock = false; P.left = P.n; P.t0 = 0; clearInterval(P.timer); P.timer = null;
-    $('pairs-flips').textContent = '0'; $('pairs-flips-l').textContent = 'flips'; $('pairs-time').textContent = '0:00'; $('pairs-done').hidden = true; $('pairs-live').textContent = '';
-    var b = best('pairs' + P.n); $('pairs-best').textContent = b ? 'Best ' + b.f + ' flips · ' + fmtTime(b.t) : '';
-    var names = dealEmblems(P.n), cards = shuffle(names.concat(names)), grid = $('pairs-grid');
-    grid.style.setProperty('--cols', P.n === 10 ? 5 : 4);
-    grid.innerHTML = cards.map(function (n, i) {
-      return '<button type="button" class="gm-card" data-n="' + escHtml(n) + '" aria-label="Card ' + (i + 1) + ', face down" style="--d:' + (reduce ? 0 : i * 32) + 'ms">' +
-        '<span class="gm-card-in"><span class="gm-face gm-back" aria-hidden="true"><span class="gm-back-mark">&#10022;</span></span>' +
-        '<span class="gm-face gm-front"><img src="/logos/thumbs/' + encodeURIComponent(n) + '.png" alt="" draggable="false"><i>' + escHtml(n) + '</i></span></span></button>';
-    }).join('');
-  }
-  $('pairs-grid').addEventListener('click', function (e) {
-    var el = e.target.closest('.gm-card');
-    if (!el || P.lock || el.classList.contains('is-up') || el.classList.contains('is-done')) return;
-    if (!P.t0) { P.t0 = Date.now(); P.timer = setInterval(function () { $('pairs-time').textContent = fmtTime(Math.floor((Date.now() - P.t0) / 1000)); }, 1000); }
-    el.classList.add('is-up'); el.setAttribute('aria-label', el.getAttribute('data-n'));
-    P.open.push(el);
-    if (P.open.length < 2) return;
-    P.flips++; $('pairs-flips').textContent = P.flips; $('pairs-flips-l').textContent = P.flips === 1 ? 'flip' : 'flips'; bump($('pairs-flips'));
-    var a = P.open[0], c = P.open[1]; P.open = []; P.lock = true;
-    if (a.getAttribute('data-n') === c.getAttribute('data-n')) {
-      setTimeout(function () {
-        a.classList.add('is-done'); c.classList.add('is-done'); P.lock = false; P.left--;
-        $('pairs-live').textContent = 'Pair found: ' + a.getAttribute('data-n') + '.';
-        if (!P.left) setTimeout(pairsWin, reduce ? 0 : 450);
-      }, reduce ? 0 : 420);
-    } else {
-      setTimeout(function () { a.classList.add('is-miss'); c.classList.add('is-miss'); }, reduce ? 0 : 560);
-      setTimeout(function () { [a, c].forEach(function (x) { x.classList.remove('is-up', 'is-miss'); x.setAttribute('aria-label', 'Card face down'); }); P.lock = false; }, reduce ? 350 : 1100);
-    }
-  });
-  function pairsWin() {
-    clearInterval(P.timer);
-    var t = Math.max(1, Math.floor((Date.now() - P.t0) / 1000)), s = P.flips <= Math.ceil(P.n * 1.4) ? 3 : P.flips <= P.n * 2 ? 2 : 1;
-    var b = best('pairs' + P.n), isBest = !b || P.flips < b.f || (P.flips === b.f && t < b.t);
-    if (isBest) { setBest('pairs' + P.n, { f: P.flips, t: t }); $('pairs-best').textContent = 'Best ' + P.flips + ' flips · ' + fmtTime(t); }
-    var d = $('pairs-done');
-    d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">All ' + P.n + ' pairs found</p><p class="gm-done-s">' + P.flips + ' flips · ' + fmtTime(t) + '</p>' +
-      (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>';
-    d.hidden = false; confetti(d);
-    d.querySelector('.gm-done-btn').addEventListener('click', newPairs);
-    d.querySelector('.gm-done-btn').focus({ preventScroll: true });
-    $('pairs-live').textContent = 'All pairs found in ' + P.flips + ' flips.';
-  }
-  $('pairs-new').addEventListener('click', newPairs);
-  newPairs();
-
-  // ── Order the Ages ───────────────────────────────────────────────────────────
-  function yearOf(d) { var m = /(\d+)(\s*BCE)?/.exec(String(d || '')); return m ? (m[2] ? -parseInt(m[1], 10) : parseInt(m[1], 10)) : null; }
-  var ENTRIES = (typeof HOME_ENTRIES !== 'undefined' ? HOME_ENTRIES : []).filter(function (e) { return yearOf(e.dates) !== null; });
-  var O = { items: [], sel: null, checks: 0, done: false };
-  var orderLevel = seg('order', 5, function () { newOrder(); });
-  function newOrder() {
-    var n = +orderLevel(), pool = shuffle(ENTRIES.slice()), pick = [], seen = {};
-    for (var i = 0; i < pool.length && pick.length < n; i++) { var y = yearOf(pool[i].dates); if (!seen[y]) { seen[y] = 1; pick.push(pool[i]); } }
-    O.items = shuffle(pick); O.sel = null; O.checks = 0; O.done = false;
-    $('order-checks').textContent = '0'; $('order-done').hidden = true; $('order-check').disabled = false; $('order-check').hidden = false;
-    var b = best('order' + n); $('order-best').textContent = b ? 'Best ' + b + (b === 1 ? ' check' : ' checks') : '';
-    renderOrder(true);
-  }
-  function renderOrder(deal) {
-    var list = $('order-list');
-    list.classList.toggle('is-solved', O.done);
-    list.innerHTML = O.items.map(function (e, i) {
-      return '<li class="gm-orow' + (O.done ? ' is-right' : '') + (deal && !reduce ? ' is-deal' : '') + '" data-k="' + escHtml(e.slug) + '" style="--d:' + (reduce ? 0 : i * (O.done ? 130 : 60)) + 'ms">' +
-        '<button type="button" class="gm-ocard" data-i="' + i + '" aria-label="' + escHtml(e.name) + ', position ' + (i + 1) + ' of ' + O.items.length + '"' + (O.done ? ' disabled' : '') + '>' +
-        (e.img ? '<img src="' + escHtml(e.img) + '" alt="" draggable="false">' : '<span class="gm-oph">' + (i + 1) + '</span>') +
-        '<span class="gm-on">' + escHtml(e.name) + (O.done ? '<span class="gm-oy">' + escHtml(e.dates) + '</span>' : '') + '</span></button>' +
-        (O.done ? '' : '<span class="gm-omove"><button type="button" data-mv="-1" data-i="' + i + '" aria-label="Move up"' + (i === 0 ? ' disabled' : '') + '>&#9650;</button><button type="button" data-mv="1" data-i="' + i + '" aria-label="Move down"' + (i === O.items.length - 1 ? ' disabled' : '') + '>&#9660;</button></span><span class="gm-grip" data-i="' + i + '" title="Drag to move" aria-hidden="true">&#10303;</span>') +
-        '</li>';
-    }).join('');
-  }
-  // re-render with every card gliding from where it was to where it now is (FLIP)
-  function flipRender(mutate) {
-    var list = $('order-list'), first = {};
-    Array.prototype.forEach.call(list.children, function (r) { first[r.getAttribute('data-k')] = r.getBoundingClientRect().top; });
-    mutate(); renderOrder(false);
-    if (reduce) return;
-    Array.prototype.forEach.call(list.children, function (r) {
-      var f = first[r.getAttribute('data-k')]; if (f == null) return;
-      var dy = f - r.getBoundingClientRect().top; if (!dy) return;
-      r.style.transition = 'none'; r.style.transform = 'translateY(' + dy + 'px)';
-      requestAnimationFrame(function () { requestAnimationFrame(function () { r.style.transition = ''; r.style.transform = ''; }); });
-    });
-  }
-  function moveItem(from, to, focusMv) {
-    if (O.done || to < 0 || to >= O.items.length || from === to) return;
-    O.sel = null;
-    flipRender(function () { var it = O.items.splice(from, 1)[0]; O.items.splice(to, 0, it); });
-    if (focusMv) { var b = $('order-list').querySelector('[data-mv="' + focusMv + '"][data-i="' + to + '"]'); if (b && !b.disabled) b.focus(); else { var c = $('order-list').querySelector('.gm-ocard[data-i="' + to + '"]'); if (c) c.focus(); } }
-  }
-  $('order-list').addEventListener('click', function (e) {
-    var mv = e.target.closest('[data-mv]');
-    if (mv) { var i = +mv.getAttribute('data-i'), d = +mv.getAttribute('data-mv'); moveItem(i, i + d, d); return; }
-    var card = e.target.closest('.gm-ocard'); if (!card || O.done) return;
-    var j = +card.getAttribute('data-i'), rows = $('order-list').children;
-    if (O.sel === null) { O.sel = j; rows[j].classList.add('is-sel'); return; }
-    if (O.sel === j) { O.sel = null; rows[j].classList.remove('is-sel'); return; }
-    var a = O.sel; O.sel = null;
-    flipRender(function () { var t = O.items[a]; O.items[a] = O.items[j]; O.items[j] = t; });
-  });
-  // drag by the handle: the card follows the pointer and the others slide out of its way
-  var drag = null;
-  $('order-list').addEventListener('pointerdown', function (e) {
-    var g = e.target.closest('.gm-grip'); if (!g || O.done) return;
-    e.preventDefault();
-    var rows = Array.prototype.slice.call($('order-list').children), i = +g.getAttribute('data-i');
-    var rects = rows.map(function (r) { return r.getBoundingClientRect(); });
-    drag = { i: i, to: i, row: rows[i], rows: rows, rects: rects, y0: e.clientY, id: e.pointerId, slot: rects.length > 1 ? rects[1].top - rects[0].top : rects[0].height };
-    try { g.setPointerCapture(e.pointerId); } catch (err) {}
-    drag.row.classList.add('is-drag');
-  });
-  $('order-list').addEventListener('pointermove', function (e) {
-    if (!drag || e.pointerId !== drag.id) return;
-    var dy = e.clientY - drag.y0, r0 = drag.rects[drag.i], c = r0.top + r0.height / 2 + dy, to = drag.i;
-    drag.rects.forEach(function (r, k) { var mid = r.top + r.height / 2; if (k < drag.i && c < mid) to = Math.min(to, k); if (k > drag.i && c > mid) to = Math.max(to, k); });
-    drag.to = to;
-    drag.row.style.transform = 'translateY(' + dy + 'px)';
-    drag.rows.forEach(function (r, k) {
-      if (k === drag.i) return;
-      var s = (drag.i < to && k > drag.i && k <= to) ? -drag.slot : (drag.i > to && k >= to && k < drag.i) ? drag.slot : 0;
-      r.style.transform = s ? 'translateY(' + s + 'px)' : '';
-    });
-  });
-  function endDrag(e) {
-    if (!drag || (e && e.pointerId !== drag.id)) return;
-    var d = drag; drag = null; d.row.classList.remove('is-drag');
-    if (d.to === d.i) { d.rows.forEach(function (r) { r.style.transform = ''; }); return; }
-    O.sel = null;
-    flipRender(function () { var it = O.items.splice(d.i, 1)[0]; O.items.splice(d.to, 0, it); });
-  }
-  $('order-list').addEventListener('pointerup', endDrag);
-  $('order-list').addEventListener('pointercancel', endDrag);
-  $('order-check').addEventListener('click', function () {
-    if (O.done) return;
-    O.checks++; $('order-checks').textContent = O.checks; bump($('order-checks'));
-    var sorted = O.items.slice().sort(function (a, b) { return yearOf(a.dates) - yearOf(b.dates); }), all = true, rows = $('order-list').children;
-    O.items.forEach(function (it, i) {
-      var ok = it === sorted[i]; if (!ok) all = false;
-      var r = rows[i]; r.classList.remove('is-right', 'is-wrong', 'is-sel');
-      setTimeout(function () { r.classList.add(ok ? 'is-right' : 'is-wrong'); }, reduce ? 0 : i * 110);
-    });
-    O.sel = null;
-    if (all) { $('order-check').disabled = true; setTimeout(orderWin, reduce ? 0 : O.items.length * 110 + 300); }
-  });
-  function orderWin() {
-    O.done = true; renderOrder(false); $('order-check').hidden = true;
-    var n = O.items.length, s = O.checks === 1 ? 3 : O.checks === 2 ? 2 : 1, b = best('order' + n), isBest = !b || O.checks < b;
-    if (isBest) { setBest('order' + n, O.checks); $('order-best').textContent = 'Best ' + O.checks + (O.checks === 1 ? ' check' : ' checks'); }
-    var d = $('order-done');
-    d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (O.checks === 1 ? 'Right first time!' : 'In order after ' + O.checks + ' checks') + '</p>' +
-      (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<button type="button" class="hero-cta gm-done-btn">Next round</button></div>';
-    d.hidden = false; confetti(d);
-    d.querySelector('.gm-done-btn').addEventListener('click', function () { newOrder(); $('order-list').scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' }); });
-  }
-  $('order-new').addEventListener('click', newOrder);
-  newOrder();
-
-  // ── Globe Hunt ───────────────────────────────────────────────────────────────
-  var Hunt = (function () {
-    var cv = $('hunt-globe'), ctx = null, proj = null, path = null, geo = null, grat = null;
-    var H = { ready: false, loading: false, round: 0, score: 0, results: [], target: null, answered: false, hint: false,
-      rot: [-15, -20], k: 1, vel: [0, 0], dpr: 1, R: 100 };
-    var pools = { famous: [], all: [] }, regions = [], view = null, anim = null, raf = null, ptrs = {}, drag = null, level = null;
-    function loadScript(src) { return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
-    function start() {
-      if (H.ready || H.loading) return;
-      H.loading = true;
-      (window.d3 && d3.geoOrthographic ? Promise.resolve() : loadScript('https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js'))
-        .then(function () { return window.ATLAS_GLOBE ? null : loadScript(HUNT_SRC.land); })
-        .then(function () { return window.ATLAS ? null : loadScript(HUNT_SRC.data); })
-        .then(init)
-        .catch(function () { H.loading = false; $('hunt-q').textContent = 'The globe could not load. Check your connection and try again.'; });
-    }
-    function init() {
-      regions = ATLAS.regions || [];
-      ATLAS.rows.forEach(function (r) {
-        if (r[6] & 2) return;   // only states with a known seat
-        var p = { n: r[1], lng: r[9], lat: r[10], g: r[8] };
-        pools.all.push(p); if (r[6] & 1) pools.famous.push(p);
-      });
-      geo = { type: 'MultiPolygon', coordinates: ATLAS_GLOBE.rings.map(function (fl) {
-        var ring = []; for (var i = 0; i < fl.length; i += 2) ring.push([fl[i] / 100, fl[i + 1] / 100]);
-        if (d3.geoArea({ type: 'Polygon', coordinates: [ring] }) > 2 * Math.PI) ring.reverse();
-        return [ring];
-      }) };
-      grat = d3.geoGraticule().step([20, 20])();
-      proj = d3.geoOrthographic().clipAngle(90);
-      ctx = cv.getContext('2d'); path = d3.geoPath(proj, ctx);
-      level = seg('hunt', 'famous', function () { newGame(); });
-      size(); window.addEventListener('resize', size);
-      wire();
-      new MutationObserver(function () { draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-      H.ready = true; H.loading = false;
-      newGame();
-    }
-    function size() {
-      H.dpr = Math.min(2, window.devicePixelRatio || 1);
-      var w = cv.parentNode.clientWidth, h = Math.round(Math.min(w * 0.78, 540));
-      cv.style.height = h + 'px'; cv.width = Math.round(w * H.dpr); cv.height = Math.round(h * H.dpr);
-      H.R = Math.min(cv.width, cv.height) / 2 - 10 * H.dpr;
-      draw();
-    }
-    function colours() {
-      var cs = getComputedStyle(document.documentElement);
-      return { g: (cs.getPropertyValue('--gold-rgb') || '201,168,76').trim(), gold: (cs.getPropertyValue('--gold') || '#c9a84c').trim(),
-        goldL: (cs.getPropertyValue('--gold-light') || '#e8c97a').trim(), err: (cs.getPropertyValue('--error') || '#c0392b').trim(), bg: (cs.getPropertyValue('--bg') || '#0b0c10').trim() };
-    }
-    function onFront(ll) {
-      var cl = -H.rot[0] * Math.PI / 180, cp = -H.rot[1] * Math.PI / 180, la = ll[1] * Math.PI / 180, lo = ll[0] * Math.PI / 180;
-      return Math.cos(la) * Math.cos(cp) * Math.cos(lo - cl) + Math.sin(la) * Math.sin(cp) > 0.001;
-    }
-    function pin(ll, col, s) {
-      if (!onFront(ll) || s <= 0) return;
-      var p = proj(ll); if (!p) return;
-      var d = H.dpr, x = ctx, h = 22 * d * s, r = 7 * d * s;
-      x.save();
-      x.beginPath(); x.ellipse(p[0], p[1], 6 * d * s, 2.4 * d * s, 0, 0, 6.2832); x.fillStyle = 'rgba(0,0,0,0.35)'; x.fill();
-      x.beginPath(); x.moveTo(p[0], p[1]); x.lineTo(p[0] - r * 0.62, p[1] - h + r * 0.6); x.arc(p[0], p[1] - h, r, Math.PI * 0.82, Math.PI * 0.18, false); x.closePath();
-      x.fillStyle = col; x.fill(); x.lineWidth = 1.2 * d; x.strokeStyle = 'rgba(0,0,0,0.45)'; x.stroke();
-      x.beginPath(); x.arc(p[0], p[1] - h, r * 0.38, 0, 6.2832); x.fillStyle = 'rgba(255,255,255,0.85)'; x.fill();
-      x.restore();
-    }
-    function draw(now) {
-      if (!ctx) return;
-      var c = colours(), d = H.dpr, x = ctx, t = now || performance.now();
-      proj.scale(H.R * H.k).translate([cv.width / 2, cv.height / 2]).rotate([H.rot[0], H.rot[1], 0]);
-      x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, cv.width, cv.height);
-      x.save(); x.shadowColor = 'rgba(' + c.g + ',0.4)'; x.shadowBlur = 18 * d;
-      x.beginPath(); path({ type: 'Sphere' }); x.fillStyle = 'rgba(' + c.g + ',0.05)'; x.fill(); x.restore();
-      x.beginPath(); path(grat); x.strokeStyle = 'rgba(' + c.g + ',0.14)'; x.lineWidth = 0.6 * d; x.stroke();
-      x.beginPath(); path(geo); x.fillStyle = 'rgba(' + c.g + ',0.14)'; x.fill();
-      x.strokeStyle = 'rgba(' + c.g + ',0.45)'; x.lineWidth = 0.7 * d; x.lineJoin = 'round'; x.stroke();
-      x.beginPath(); path({ type: 'Sphere' }); x.strokeStyle = 'rgba(' + c.g + ',0.42)'; x.lineWidth = d; x.stroke();
-      if (!view) return;
-      if (view.arc > 0) {   // the great circle from the guess towards the answer, drawn as it grows
-        var n = 64, upto = Math.max(1, Math.round(n * view.arc)), pts = [];
-        for (var i = 0; i <= upto; i++) pts.push(view.interp(i / n));
-        x.beginPath(); path({ type: 'LineString', coordinates: pts });
-        x.strokeStyle = c.goldL; x.lineWidth = 2.2 * d; x.setLineDash([7 * d, 6 * d]); x.lineDashOffset = -t / 40; x.stroke(); x.setLineDash([]);
-      }
-      if (view.truthOn && onFront(view.truth)) {   // the answer: a gold dot with a slow pulse
-        var q = proj(view.truth);
-        if (q) {
-          var ph = reduce ? 0.35 : ((t - view.truthAt) % 1400) / 1400;
-          x.beginPath(); x.arc(q[0], q[1], (8 + ph * 26) * d, 0, 6.2832); x.strokeStyle = 'rgba(' + c.g + ',' + (0.85 * (1 - ph)).toFixed(3) + ')'; x.lineWidth = 2 * d; x.stroke();
-          x.beginPath(); x.arc(q[0], q[1], 7 * d, 0, 6.2832); x.fillStyle = c.gold; x.fill(); x.lineWidth = 2 * d; x.strokeStyle = c.bg; x.stroke();
-        }
-      }
-      pin(view.guess, c.err, view.pin);
-    }
-    function wantFrames() { return !!anim || (drag === null && (Math.abs(H.vel[0]) > 0.02 || Math.abs(H.vel[1]) > 0.02)) || (view && (view.truthOn || view.arc > 0) && !reduce); }
-    function kick() { if (!raf) raf = requestAnimationFrame(loop); }
-    function loop(now) {
-      raf = null;
-      if (anim) {
-        var p = Math.min(1, (now - anim.t0) / anim.ms), e = ease(p);
-        H.rot[0] = anim.r0[0] + anim.dl * e; H.rot[1] = anim.r0[1] + (anim.r1[1] - anim.r0[1]) * e; H.k = anim.k0 + (anim.k1 - anim.k0) * e;
-        if (anim.tick) anim.tick(p, now);
-        if (p >= 1) { var done = anim.done; anim = null; if (done) done(); }
-      } else if (!drag && (Math.abs(H.vel[0]) > 0.02 || Math.abs(H.vel[1]) > 0.02)) {   // the globe coasts after a flick
-        H.rot[0] += H.vel[0]; H.rot[1] = Math.max(-85, Math.min(85, H.rot[1] + H.vel[1]));
-        H.vel[0] *= 0.93; H.vel[1] *= 0.93;
-      }
-      draw(now);
-      if (wantFrames()) kick();
-    }
-    function turnTo(lng, lat, k, ms, tick, done) {
-      var r0 = H.rot.slice(), r1 = [-lng, Math.max(-80, Math.min(80, -lat))], dl = r1[0] - r0[0];
-      while (dl > 180) dl -= 360; while (dl < -180) dl += 360;
-      H.vel = [0, 0];
-      if (reduce) { H.rot = [r0[0] + dl, r1[1]]; H.k = k; if (tick) tick(1, performance.now()); if (done) done(); draw(); return; }
-      anim = { t0: performance.now(), ms: ms, r0: r0, r1: r1, dl: dl, k0: H.k, k1: k, tick: tick, done: done };
-      kick();
-    }
-    function wire() {
-      function degPerPx() { return 57.296 / (H.R / H.dpr * H.k); }
-      cv.addEventListener('pointerdown', function (e) {
-        ptrs[e.pointerId] = { x: e.clientX, y: e.clientY };
-        try { cv.setPointerCapture(e.pointerId); } catch (err) {}
-        var ids = Object.keys(ptrs);
-        if (ids.length === 1) { drag = { x0: e.clientX, y0: e.clientY, lx: e.clientX, ly: e.clientY, lt: performance.now(), moved: false }; H.vel = [0, 0]; if (anim && !view) anim = null; }
-        else if (ids.length === 2) { var a = ptrs[ids[0]], b = ptrs[ids[1]]; drag = { pinch: Math.hypot(a.x - b.x, a.y - b.y) || 1, k: H.k, moved: true }; }
-      });
-      cv.addEventListener('pointermove', function (e) {
-        if (ptrs[e.pointerId]) ptrs[e.pointerId] = { x: e.clientX, y: e.clientY };
-        if (!drag) return;
-        var ids = Object.keys(ptrs);
-        if (drag.pinch && ids.length === 2) {
-          var a = ptrs[ids[0]], b = ptrs[ids[1]];
-          H.k = Math.max(1, Math.min(6, drag.k * Math.hypot(a.x - b.x, a.y - b.y) / drag.pinch)); kick(); draw(); return;
-        }
-        if (Math.abs(e.clientX - drag.x0) + Math.abs(e.clientY - drag.y0) > 6) drag.moved = true;
-        if (!drag.moved) return;
-        var s = degPerPx(), dx = e.clientX - drag.lx, dy = e.clientY - drag.ly, now = performance.now(), dt = Math.max(8, now - drag.lt);
-        H.rot[0] += dx * s; H.rot[1] = Math.max(-85, Math.min(85, H.rot[1] - dy * s));
-        H.vel = [dx * s * 16 / dt, -dy * s * 16 / dt];
-        drag.lx = e.clientX; drag.ly = e.clientY; drag.lt = now;
-        draw();
-      });
-      function up(e) {
-        var had = !!ptrs[e.pointerId]; delete ptrs[e.pointerId];
-        if (!drag || Object.keys(ptrs).length) { if (!Object.keys(ptrs).length) drag = null; return; }
-        var d0 = drag; drag = null;
-        if (performance.now() - d0.lt > 80) H.vel = [0, 0];   // a slow release does not coast
-        if (had && !d0.moved && !d0.pinch && H.target && !H.answered && !anim) {
-          var b = cv.getBoundingClientRect(), ll = proj.invert([(e.clientX - b.left) * H.dpr, (e.clientY - b.top) * H.dpr]);
-          if (ll && isFinite(ll[0]) && d3.geoDistance(ll, [-H.rot[0], -H.rot[1]]) < Math.PI / 2) guess(ll);
-        }
-        kick();
-      }
-      cv.addEventListener('pointerup', up);
-      cv.addEventListener('pointercancel', function (e) { delete ptrs[e.pointerId]; drag = null; });
-      cv.addEventListener('wheel', function (e) { e.preventDefault(); H.k = Math.max(1, Math.min(6, H.k * Math.pow(1.0015, -e.deltaY))); draw(); }, { passive: false });
-      $('hunt-zin').addEventListener('click', function () { zoomBy(1.5); });
-      $('hunt-zout').addEventListener('click', function () { zoomBy(1 / 1.5); });
-      $('hunt-hint').addEventListener('click', function () {
-        if (H.hint || H.answered || !H.target) return;
-        H.hint = true; $('hunt-hint').disabled = true;
-        var reg = regions[H.target.g];
-        $('hunt-q').innerHTML = 'Where was the <b>' + escHtml(H.target.n) + '</b>? <span class="gm-hint-text">Hint: ' + (reg ? 'somewhere in ' + escHtml(reg) : 'no region recorded') + '</span>';
-      });
-      $('hunt-new').addEventListener('click', function () { if (H.ready) newGame(); });
-    }
-    function zoomBy(f) {
-      var k1 = Math.max(1, Math.min(6, H.k * f));
-      if (reduce) { H.k = k1; draw(); return; }
-      anim = { t0: performance.now(), ms: 260, r0: H.rot.slice(), r1: H.rot.slice(), dl: 0, k0: H.k, k1: k1 }; kick();
-    }
-    function kmBetween(a, b) { return Math.round(d3.geoDistance(a, b) * 6371); }
-    function paintRounds() {
-      Array.prototype.forEach.call($('hunt-rounds').children, function (li, i) {
-        var r = H.results[i]; li.className = r ? (r.pts >= 80 ? 'r-gold' : r.pts >= 40 ? 'r-silver' : r.pts > 0 ? 'r-bronze' : 'r-miss') : (i === H.round - 1 ? 'is-now' : '');
-        li.title = r ? r.n + ': ' + r.km.toLocaleString('en-GB') + ' km, ' + r.pts + ' points' : '';
-      });
-    }
-    function newGame() {
-      H.round = 0; H.score = 0; H.results = []; view = null;
-      $('hunt-score').textContent = '0'; $('hunt-done').hidden = true;
-      var b = best('hunt-' + level()); $('hunt-best').textContent = b ? 'Best ' + b : '';
-      nextRound();
-    }
-    function nextRound() {
-      var pool = pools[level()] || pools.famous;
-      H.round++; H.answered = false; H.hint = false; view = null;
-      H.target = pool[Math.floor(Math.random() * pool.length)];
-      $('hunt-res').hidden = true; $('hunt-hint').hidden = false; $('hunt-hint').disabled = false;
-      var q = $('hunt-q'); q.classList.remove('gm-enter'); void q.offsetWidth; q.classList.add('gm-enter');
-      q.innerHTML = 'Round ' + H.round + ' of 5: where was the <b>' + escHtml(H.target.n) + '</b>?';
-      paintRounds();
-      // a fresh view that does not give the answer away
-      turnTo(Math.random() * 360 - 180, Math.random() * 50 - 10, 1, 900);
-    }
-    function guess(ll) {
-      H.answered = true; $('hunt-hint').hidden = true;
-      var truth = [H.target.lng, H.target.lat], km = kmBetween(ll, truth), pts = Math.max(0, Math.round((5000 - Math.min(km, 5000)) / 50));
-      if (H.hint) pts = Math.max(0, pts - 20);
-      H.score += pts; H.results.push({ n: H.target.n, km: km, pts: pts });
-      var interp = d3.geoInterpolate(ll, truth), mid = interp(0.5), ang = d3.geoDistance(ll, truth);
-      view = { guess: ll, truth: truth, interp: interp, arc: 0, pin: 0, truthOn: false, truthAt: 0 };
-      var t0 = performance.now(), k1 = Math.max(1, Math.min(3.2, 1.75 / (ang + 0.45)));
-      // the pin drops, then the globe swings to show both points while the arc is drawn
-      turnTo(mid[0], mid[1], k1, reduce ? 0 : 1200, function (p, now) {
-        var tp = (now - t0) / 300; view.pin = tp >= 1 ? 1 : 1.25 * Math.sin(Math.min(1, tp) * Math.PI * 0.62) / Math.sin(Math.PI * 0.62);
-        view.arc = Math.max(0, Math.min(1, (p - 0.15) / 0.75));
-      }, function () {
-        view.pin = 1; view.arc = 1; view.truthOn = true; view.truthAt = performance.now(); kick();
-        reveal(km, pts);
-      });
-    }
-    function reveal(km, pts) {
-      var verdict = km <= 300 ? 'Bullseye!' : km <= 1000 ? 'Very close!' : km <= 2500 ? 'Warm.' : 'A long way off.';
-      var res = $('hunt-res');
-      res.innerHTML = '<p class="gm-res-v">' + verdict + '</p><p class="gm-res-d"><b>' + escHtml(H.target.n) + '</b> lay <b class="gm-res-km">0</b> km from your pin · <b class="gm-res-pts">+0</b> points' + (H.hint ? ' <span class="gm-res-hint">(hint −20)</span>' : '') + '</p>' +
-        '<button type="button" class="hero-cta gm-res-next">' + (H.round < 5 ? 'Next round &rarr;' : 'See your score') + '</button>';
-      res.hidden = false; res.classList.remove('gm-enter'); void res.offsetWidth; res.classList.add('gm-enter');
-      countUp(res.querySelector('.gm-res-km'), km, 800);
-      var ptsEl = res.querySelector('.gm-res-pts');
-      if (reduce) ptsEl.textContent = '+' + pts; else { var t0 = performance.now(); (function f(now) { var p = Math.min(1, (now - t0) / 800); ptsEl.textContent = '+' + Math.round(pts * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(f); })(t0); }
-      countUp($('hunt-score'), H.score, 800); bump($('hunt-score'));
-      paintRounds();
-      var btn = res.querySelector('.gm-res-next');
-      btn.addEventListener('click', function () { res.hidden = true; if (H.round < 5) nextRound(); else finish(); });
-      btn.focus({ preventScroll: true });
-    }
-    function finish() {
-      var lvl = level(), b = best('hunt-' + lvl), isBest = !b || H.score > b, s = H.score >= 400 ? 3 : H.score >= 250 ? 2 : 1;
-      if (isBest) { setBest('hunt-' + lvl, H.score); $('hunt-best').textContent = 'Best ' + H.score; }
-      $('hunt-q').innerHTML = 'Game over: <b>' + H.score + '</b> of 500 points.';
-      var d = $('hunt-done');
-      d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + H.score + ' of 500 points</p>' + (isBest ? '<p class="gm-newbest">New best!</p>' : '') +
-        '<ol class="gm-sum">' + H.results.map(function (r) { return '<li><span>' + escHtml(r.n) + '</span><span>' + r.km.toLocaleString('en-GB') + ' km</span><b>+' + r.pts + '</b></li>'; }).join('') + '</ol>' +
-        '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>';
-      d.hidden = false; confetti(d);
-      d.querySelector('.gm-done-btn').addEventListener('click', newGame);
-      view = null; draw();
-    }
-    return { start: start };
-  })();
-
-  // open the game from the address, else the last one played
-  var startGame = location.hash.slice(1);
-  if (GAMES.indexOf(startGame) < 0) { try { startGame = localStorage.getItem('epoch-games-tab'); } catch (e) {} }
-  showGame(GAMES.indexOf(startGame) >= 0 ? startGame : 'pairs');
-})();
-</script>
+<script src="/games-data.js?v=37651e0ffd"></script>
+<script src="/shared-nav.js?v=28"></script>
+<script src="/games.js?v=1"></script>
 
 </body>
 </html>

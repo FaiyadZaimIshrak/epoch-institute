@@ -1,0 +1,392 @@
+# The pictures the games may use: chosen by eye from contact sheets of well-known entries (no maps, coins, seals,
+# documents, collages, or pictures that do not show their subject). Read by scripts/build-pages.ps1 for games-data.js.
+# slug<TAB>puzzle set (empty = Which Came First? / Guess the Year only, when the dates allow)<TAB>order in the set
+# sets: Wonders of the World | Treasures | Famous Faces
+napoleon	Famous Faces	1
+charles-v-holy-roman-emperor		
+timur		
+alexander-the-great		
+herodotus		
+louis-xiv	Famous Faces	8
+frederick-barbarossa		
+julius-caesar	Famous Faces	12
+strabo		
+genghis-khan	Famous Faces	4
+philip-ii-of-macedon		
+pompey		
+hannibal		
+philip-ii-of-spain		
+sargon-ii		
+cyrus-the-great		
+tacitus		
+simon-bolivar	Famous Faces	16
+nader-shah		
+antiochus-iii-the-great		
+claudius		
+marco-polo		
+henry-the-lion		
+tokugawa-ieyasu	Famous Faces	15
+peter-the-great	Famous Faces	13
+livy		
+hammurabi		
+mehmed-ii	Famous Faces	6
+diocletian		
+constantine-i		
+xiang-yu		
+ivan-iii		
+pliny-the-elder		
+lysimachus		
+septimius-severus		
+trajan		
+ivan-iv-of-russia		
+martin-luther		
+mahmud-of-ghazni		
+maria-theresa		
+louis-the-pious		
+henry-ii-of-england		
+bede		
+liu-bang		
+homer		
+ashurbanipal		
+toyotomi-hideyoshi		
+aristotle		
+thucydides		
+akbar	Famous Faces	7
+babur		
+plutarch		
+napoleon-iii		
+louis-ix-of-france		
+kublai-khan	Famous Faces	5
+ammianus-marcellinus		
+emperor-wu-of-han		
+aurangzeb		
+plato		
+queen-victoria	Famous Faces	10
+catherine-the-great	Famous Faces	9
+mahatma-gandhi		
+ferdinand-ii-of-aragon		
+francis-i-duke-of-nevers		
+philip-the-good		
+christopher-columbus		
+bayinnaung		
+francisco-pizarro		
+charles-i-of-anjou		
+alfonso-vi-of-castile		
+richard-i-of-england		
+afonso-de-albuquerque		
+lothair-i		
+shalmaneser-iii		
+prince-henry-the-navigator		
+cecil-rhodes		
+taksin		
+menelik-ii		
+muhammad-bin-tughluq		
+pyrrhus-of-epirus		
+hernan-cortes		
+agha-mohammad-khan-qajar		
+mikhail-gorbachev		
+justinian-i	Famous Faces	2
+karim-khan-zand		
+andrei-bogolyubsky		
+william-the-conqueror		
+ptolemy-i-soter		
+xuanzang		
+sviatoslav-i-of-kiev		
+henry-iv-of-france		
+dante-alighieri		
+jose-de-san-martin		
+rafael-carrera		
+oda-nobunaga		
+thutmose-iii		
+frederick-the-great		
+agustin-de-iturbide		
+antonio-jose-de-sucre		
+algirdas		
+charles-the-bold		
+charles-de-gaulle		
+bayezid-i		
+selim-i		
+michael-viii-palaiologos		
+batu-khan		
+aethelstan		
+bao-dai		
+charles-iii-of-spain		
+charles-xii-of-sweden		
+croesus		
+francisco-morazan		
+elizabeth-i	Famous Faces	3
+subutai		
+george-iii		
+penda-of-mercia		
+petrarch		
+marcus-licinius-crassus		
+alp-arslan		
+roger-of-lauria		
+shivaji		
+ranjit-singh		
+niccolo-machiavelli		
+w-adys-aw-ii-jagie-o		
+ahmad-shah-abdali		
+sima-qian		
+ismail-i		
+seleucus-i-nicator		
+alexander-nevsky		
+afonso-i-of-portugal		
+suleiman-the-magnificent	Famous Faces	14
+hongwu-emperor		
+vasco-da-gama		
+caracalla		
+xenophon		
+george-v		
+milton-obote		
+baji-rao-i		
+tokhtamysh		
+giuseppe-garibaldi		
+cato-the-elder		
+esarhaddon		
+yongle-emperor		
+uzun-hasan		
+columba		
+margaret-i-of-denmark		
+ivan-i-of-moscow		
+tughril		
+otto-i-duke-of-bavaria		
+cleopatra-vii	Famous Faces	11
+roger-ii-of-sicily		
+philip-the-bold		
+albert-of-riga		
+rurik		
+henry-viii-of-england		
+almanzor		
+frederick-lugard		
+miguel-de-cervantes		
+dionysius-i-of-syracuse		
+basil-ii		
+ferdinand-iii-of-castile		
+sukarno		
+oliver-cromwell		
+hyder-ali		
+arpad		
+philip-v-of-macedon		
+theodosius-i		
+dmitry-donskoy		
+zheng-he		
+henry-morton-stanley		
+franz-joseph-i		
+cao-cao		
+pope-leo-iii		
+charles-x-gustav		
+second-world-war		
+first-world-war		
+first-crusade		
+fourth-crusade		
+great-depression		
+thirty-years-war		
+french-revolution		
+franco-prussian-war		
+livonian-war		
+dutch-revolt		
+armistice-of-11-november-1918		
+crimean-war		
+battle-of-las-navas-de-tolosa		
+battle-of-mohacs		
+battle-of-sekigahara		
+austro-prussian-war		
+treaties-of-nijmegen		
+italian-unification		
+battle-of-thermopylae		
+battle-of-plataea		
+battle-of-lepanto		
+battle-of-white-mountain		
+battle-of-poltava		
+treaty-of-verdun		
+battle-of-crecy		
+battle-of-ayacucho		
+treaty-of-the-pyrenees		
+battle-of-bouvines		
+korean-war		
+february-revolution		
+battle-of-leuctra		
+second-crusade		
+glorious-revolution		
+battle-of-koniggratz		
+anglo-nepalese-war		
+battle-of-leipzig		
+battle-of-worringen		
+hundred-years-war		
+battle-of-marignano		
+battle-of-alesia		
+battle-of-adwa		
+battle-of-actium		
+bandung-conference		
+great-stand-on-the-ugra-river		
+battle-of-alcacer-quibir		
+battle-of-pavia		
+battle-of-nicopolis		
+balkan-wars		
+battle-of-waterloo		
+first-sino-japanese-war		
+peace-of-cateau-cambresis		
+molotov-ribbentrop-pact		
+spanish-civil-war		
+baltic-way		
+peace-of-munster		
+suez-crisis		
+battle-of-marathon		
+aceh-war		
+battle-of-legnano		
+battle-of-grunwald		
+expedition-of-the-thousand		
+battle-of-dien-bien-phu		
+american-revolution		
+battle-of-gaugamela		
+battle-of-the-java-sea		
+battle-of-kadesh		
+battle-of-dandanaqan		
+battle-of-hattin		
+liberal-revolution-of-1820		
+mfecane		
+meiji-restoration		
+battle-of-muret		
+battle-of-morat		
+battle-of-the-kalka-river		
+battle-of-the-winwaed		
+battle-of-benevento		
+battle-of-hatfield-chase		
+battle-of-chalchuapa		
+battle-of-carchemish		
+munich-agreement		
+battle-of-hastings		
+battle-of-agincourt		
+battle-of-vouille		
+battle-of-khanwa		
+battle-of-ellendun		
+battle-of-plassey		
+sicilian-vespers		
+normandy-landings		
+lateran-treaty		
+fall-of-singapore		
+siege-of-fredriksten		
+achaean-war		
+sack-of-delhi		
+battle-of-the-catalaunian-plains		
+battle-of-kulikovo		
+council-of-florence		
+malayan-emergency		
+battle-of-ourique		
+battle-of-hafrsfjord		
+august-revolution		
+marcomannic-wars		
+winter-war		
+berlin-conference		
+carnation-revolution		
+industrial-revolution		
+belovezha-accords		
+boshin-war		
+burgundian-wars		
+battle-of-nancy		
+second-peace-of-thorn		
+battle-of-austerlitz		
+reconquista		
+treaty-of-turkmenchay		
+macedonian-front		
+battle-of-almansa		
+battle-of-qarqar		
+battle-of-carabobo		
+battle-of-largs		
+xinhai-revolution		
+treaty-of-saint-germain-en-laye-1919		
+battle-of-simancas		
+battle-of-aljubarrota		
+battle-of-quiberon-bay		
+beaver-wars		
+battle-of-rocroi		
+battle-of-shelon		
+battle-of-rio-salado		
+american-civil-war		
+evian-accords		
+fall-of-constantinople		
+battle-of-ipsus		
+belgian-revolution		
+jameson-raid		
+chaco-war		
+treaty-of-amiens		
+battle-of-issus	Treasures	10
+hambach-festival		
+october-revolution		
+battle-of-rozgony		
+suez-canal		
+shahnameh		
+lugou-bridge		
+mosque-cathedral-of-cordoba		
+great-wall-of-china	Wonders of the World	1
+domesday-book		
+magna-carta		
+colossus-of-rhodes	Wonders of the World	12
+temple-of-artemis		
+cyrus-cylinder	Treasures	4
+dublin-castle		
+epic-of-gilgamesh		
+golden-temple	Wonders of the World	11
+tiananmen		
+trans-siberian-railway		
+porta-pia		
+code-of-hammurabi	Treasures	3
+universal-declaration-of-human-rights		
+tower-of-belem	Wonders of the World	9
+templo-mayor		
+balfour-declaration-of-1926		
+osu-castle		
+bagrati-cathedral		
+uraniborg		
+gwanggaeto-stele		
+svetitskhoveli-cathedral		
+hagia-sophia	Wonders of the World	3
+peacock-throne	Treasures	7
+jeronimos-monastery		
+qutb-minar	Wonders of the World	7
+dome-of-the-rock	Wonders of the World	8
+ringstrasse		
+parthenon	Wonders of the World	2
+koutoubia-mosque		
+benin-bronzes	Treasures	5
+behistun-inscription	Treasures	8
+stele-of-the-vultures		
+wat-xieng-thong		
+bayeux-tapestry	Treasures	2
+milan-cathedral	Wonders of the World	10
+tel-dan-stele		
+borobudur	Wonders of the World	5
+mont-orgueil		
+red-fort		
+wat-chet-yot		
+band-e-amir-dam		
+ibrahim-rauza		
+somapura-mahavihara		
+gol-gumbaz		
+adina-mosque		
+certosa-di-pavia		
+sixty-dome-mosque		
+el-escorial		
+tripitaka-koreana		
+serpent-column		
+minaret-of-jam		
+rosetta-stone	Treasures	1
+somnath-temple		
+kangra-fort		
+palace-of-westminster		
+jameh-mosque-of-isfahan		
+palermo-stone		
+gwalior-fort		
+siloam-tunnel		
+lindisfarne-gospels	Treasures	6
+palazzo-della-pilotta		
+valle-crucis-abbey		
+aachen-cathedral		
+cefalu-cathedral		
+rhind-mathematical-papyrus	Treasures	9
+alhambra	Wonders of the World	4
+mesha-stele		
+teatro-farnese		
+medracen		
+pyramid-of-the-sun	Wonders of the World	6

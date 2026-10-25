@@ -1,0 +1,44 @@
+# Sources of the complete speech texts (read by scripts/fetch-speech-texts.ps1). Tab-separated:
+# slug	url	select	credit	lang
+# select: all | @first..@last paragraph numbers (as -Peek lists them) | #from..#to anchors | "start".."end" phrases
+# Only public-domain or freely licensed texts, copied from the source. Never added: speeches whose text belongs to an
+# estate or company (Churchill, King, Mandela, de Gaulle, Mao, Nkrumah) or that have no free, reliable source.
+pericles-funeral-oration	https://en.wikisource.org/wiki/History_of_the_Peloponnesian_War/Book_2	""Most of my predecessors in this place".."you may depart"	tr. Richard Crawley (1874)	en
+socrates-defence	https://en.wikisource.org/wiki/Apology_(Jowett)	"How you,".."God only knows"	tr. Benjamin Jowett (1892)	en
+demosthenes-first-philippic	https://en.wikisource.org/wiki/The_Public_Orations_of_Demosthenes/Philippic_I	@2..	tr. A. W. Pickard-Cambridge (1912)	en
+alexander-at-opis	https://en.wikisource.org/wiki/The_Anabasis_of_Alexander/Book_VII/Chapter_IX	@2..	tr. E. J. Chinnock (1884)	en
+alexander-at-opis	https://en.wikisource.org/wiki/The_Anabasis_of_Alexander/Book_VII/Chapter_X	@2..	tr. E. J. Chinnock (1884)	en
+hannibal-before-the-ticinus	https://en.wikisource.org/wiki/From_the_Founding_of_the_City/Book_21	""Soldiers, you have seen".."than a contempt for death"	tr. W. M. Roberts (1905)	en
+cicero-against-catiline	https://en.wikisource.org/wiki/The_World%27s_Famous_Orations/Volume_2/The_First_Oration_Against_Catiline	"When, O Catiline".."with eternal punishments"	tr. C. D. Yonge	en
+boudica-before-the-battle	https://en.wikisource.org/wiki/The_Annals_(Tacitus)/Book_14	#35..#36	tr. A. J. Church and W. J. Brodribb (1876)	en
+calgacus-at-mons-graupius	https://en.wikisource.org/wiki/Agricola	#30..#33	tr. A. J. Church and W. J. Brodribb (1876)	en
+luther-at-worms	https://en.wikisource.org/wiki/The_World%27s_Famous_Orations/Volume_7/Before_the_Diet_of_Worms	"Most Serene Emperor".."God help me. Amen"	tr. H. White, from J. H. Merle d'Aubigné's History of the Reformation	en
+elizabeth-i-at-tilbury	https://en.wikisource.org/wiki/Speech_to_the_Troops_at_Tilbury	@2..	from Leonel Sharp's letter, published 1654	en
+patrick-henry-liberty-or-death	https://en.wikisource.org/wiki/Sketches_of_the_Life_and_Character_of_Patrick_Henry/Chapter_4	"“No man".."give me death!”"	as given by William Wirt (1817), with his narration	en
+wilberforce-against-the-slave-trade	https://en.wikisource.org/wiki/The_Speech_of_William_Wilberforce,_Esq.,_Representative_for_the_County_of_York,_on_Wednesday_the_13th_of_May,_1789,_on_the_Question_of_the_Abolition_of_the_Slave_Trade	@6..@73	as printed in 1789	en
+danton-de-laudace	https://en.wikisource.org/wiki/The_World%27s_Famous_Orations/Volume_7/Dare,_Dare_Again,_Always_Dare	@5..	from The World's Famous Orations (1906)	en
+robespierre-on-virtue-and-terror	https://en.wikisource.org/wiki/Speeches_of_Maximilien_Robespierre/Report_on_the_Principles_of_Political_Morality	@2..@21	abridged anonymous translation, Voices of Revolt (1927)	en
+napoleon-to-the-army-of-italy	https://en.wikisource.org/wiki/Napoleon%27s_Addresses/Part_I	@5..@5	from Napoleon's Addresses (1896)	en
+tecumseh-to-the-osages	https://en.wikisource.org/wiki/Memoirs_of_a_Captivity_among_the_Indians_of_North_America/Memoirs	@65..@81	as recorded by John Dunn Hunter (1823)	en
+bolivar-at-angostura	https://es.wikisource.org/wiki/Discurso_de_Sim%C3%B3n_Bol%C3%ADvar_ante_el_Congreso_de_Angostura	@1..@65	in the original Spanish	es
+sojourner-truth-aint-i-a-woman	https://en.wikisource.org/wiki/Ain%27t_I_a_Woman%3F	all	Frances Gage's version (1863)	en
+douglass-fourth-of-july	https://en.wikisource.org/wiki/What_to_the_Slave_Is_the_Fourth_of_July%3F	@1..	as published in 1852	en
+lincoln-gettysburg-address	https://en.wikisource.org/wiki/Gettysburg_Address_(Bliss_copy)	@1..@3	the Bliss copy	en
+lincoln-second-inaugural	https://en.wikisource.org/wiki/Abraham_Lincoln%27s_Second_Inaugural_Address	@2..		en
+vivekananda-at-chicago	https://en.wikisource.org/wiki/The_Complete_Works_of_Swami_Vivekananda/Volume_1/Addresses_at_The_Parliament_of_Religions/Response_to_Welcome	@2..	The Complete Works of Swami Vivekananda	en
+pankhurst-freedom-or-death	https://en.wikisource.org/wiki/Freedom_or_death	all		en
+wilson-fourteen-points	https://en.wikisource.org/wiki/Fourteen_Points_Speech	all		en
+ataturk-nutuk	https://tr.wikisource.org/wiki/Nutuk/19._b%C3%B6l%C3%BCm	"Ey Türk gençliği".."asil kanda, mevcuttur!"	the Address to the Youth that closes the speech, in the original Turkish	tr
+fdr-nothing-to-fear	https://en.wikisource.org/wiki/Franklin_D._Roosevelt%27s_First_Inaugural_Address	all		en
+haile-selassie-at-the-league-of-nations	https://en.wikisource.org/wiki/Appeal_to_The_League_of_Nations	all	English text published by the Haile Selassie I Press	en
+fdr-a-date-which-will-live-in-infamy	https://en.wikisource.org/wiki/Pearl_Harbor_speech	all		en
+hirohito-surrender-broadcast	https://en.wikisource.org/wiki/Imperial_Rescript_on_Surrender	@1..	English translation	en
+ho-chi-minh-declaration-of-independence	https://en.wikisource.org/wiki/Vietnamese_Declaration_of_Independence	@2..	English text from Ho Chi Minh, Selected Works (Hanoi, 1960–62)	en
+nehru-tryst-with-destiny	https://en.wikisource.org/wiki/A_Tryst_With_Destiny	"Long years ago".."Jai Hind"	from the Constituent Assembly Debates (1950); Wikisource marks this copy as possibly incomplete	en
+eisenhower-farewell-address	https://en.wikisource.org/wiki/Eisenhower%27s_farewell_address_(press_copy)	all	the press copy	en
+kennedy-ask-not	https://en.wikisource.org/wiki/John_F._Kennedy%27s_Inaugural_Address	all		en
+reagan-tear-down-this-wall	https://en.wikisource.org/wiki/Ronald_Reagan%27s_Berlin_Wall_Speech	all		en
+urban-ii-at-clermont	https://sourcebooks.fordham.edu/source/urban2-5vers.asp	@30..@37	Robert the Monk's version, tr. Dana C. Munro (1895)	en
+moctezuma-greets-cortes	https://en.wikisource.org/wiki/Letters_of_Cortes_to_Emperor_Charles_V_-_Vol_1/Second_Letter,_October_30,_1520	@101..@102	as Cortés reported it in his Second Letter (1520), tr. Francis A. MacNutt (1908)	en
+susan-b-anthony-on-suffrage	https://en.wikisource.org/wiki/History_of_Woman_Suffrage/Volume_2/Chapter_25	@279..@403	as printed in the History of Woman Suffrage, vol. 2 (1882)	en
+chief-joseph-surrender	https://en.wikisource.org/wiki/The_Indian_Dispossessed/The_Nez_Perces	@158..@158	as taken down on the spot by Howard's officers, quoted in Seth K. Humphrey, The Indian Dispossessed (1905)	en

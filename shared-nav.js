@@ -5,6 +5,13 @@ function escHtml(str) {
   return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+// Kids mode keeps wars and killings out of the day's events at first (the home page's On This Day, the day pages):
+// grim words anywhere, military ones only in the title (a description may mention an army in passing)
+function kidsGentle(title, desc) {
+  return !/\b(wars?|warfare|battles?|massacr\w*|kill(s|ed|ing|ings)?|slain|execut(e|ed|es|ion|ions|ing)|assassin\w*|bomb(s|ed|er|ers|ing|ings)?|attack\w*|invad\w*|invasions?|sieges?|besieg\w*|murder\w*|slaughter\w*|genocide|kamikaze|suicide|behead\w*|hanged|pogroms?|terror\w*|atrocit\w*|tortur\w*|crucifi\w*|burned at the stake)\b/i.test((title || '') + ' ' + (desc || '')) &&
+    !/\b(shot|shoot\w*|raid\w*|sack(s|ed)?|troops|arm(y|ies|ed)|coup|defeats?|routs?|occup(y|ies|ied)|captur\w*|bombard\w*|destroys?|surrender\w*|conquer\w*)\b/i.test(title || '');
+}
+
 function jsonp(url, cb) {
   // an Apps Script error comes back as an HTML page (status 200): it never calls back, so give up after 10 s
   const fn = '_ep_' + Date.now() + '_' + Math.random().toString(36).slice(2);
@@ -320,7 +327,8 @@ function initNav(activePage) {
     ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
     ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
-    ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Pairs, timelines and the globe'],
+    ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
+    ['kids', '/kids', 'Kids Corner', 'History for young explorers'],
     ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'],
     ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']];
   const MORE = [['series', '/research-series', 'Research Series'], ['dataset', '/dataset', 'Open Data'], ['research', '/research', 'Research Hub'],
@@ -416,6 +424,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/speeches/">Great Speeches</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
         <a class="footer-link" href="/games">History Games</a>
+        <a class="footer-link" href="/kids">Kids Corner</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
         <a class="footer-link" href="/research-series">Research Series</a>
         <a class="footer-link" href="/dataset">Open Data</a>
@@ -536,6 +545,92 @@ function initNav(activePage) {
     });
     document.addEventListener('click', function (e) { if (!panel.hidden && !panel.contains(e.target) && e.target !== btn) closeShelf(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { closeShelf(); btn.focus(); } });
+  })();
+
+  // ── Kids mode: brighter colours, rounder type, the short version of long pages first ─────────────────────────────
+  // html[data-kids="1"], kept in localStorage epoch-kids and set before first paint by every page's head snippet;
+  // the Kids corner always looks this way (html[data-kids-always]), so there the switch changes only the other pages
+  (function () {
+    var html = document.documentElement, tog = document.querySelector('.nav-toggles'), btn = document.createElement('button');
+    var always = html.hasAttribute('data-kids-always'), mem = html.getAttribute('data-kids') === '1' && !always;
+    btn.type = 'button'; btn.className = 'nav-search-btn nav-kids-btn'; btn.id = 'nav-kids-btn';
+    btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg>';
+    window.kidsModeOn = function () { try { return localStorage.getItem('epoch-kids') === '1'; } catch (e) { return mem; } };
+    if (window.kidsModeOn()) html.setAttribute('data-kids', '1');   // a page cached from before Kids mode lacks the head line
+    function paint() {
+      var on = window.kidsModeOn();
+      btn.setAttribute('aria-pressed', String(on)); btn.setAttribute('aria-label', 'Kids mode');
+      btn.title = on ? 'Kids mode is on: tap to switch it off' : 'Kids mode: brighter, simpler pages for young readers';
+    }
+    window.setKidsMode = function (on) {
+      mem = !!on;
+      try { if (on) localStorage.setItem('epoch-kids', '1'); else localStorage.removeItem('epoch-kids'); } catch (e) {}
+      if (on || always) html.setAttribute('data-kids', '1'); else { html.removeAttribute('data-kids'); html.classList.remove('kd-open'); }
+      paint();
+      document.dispatchEvent(new CustomEvent('epoch:kids', { detail: { on: !!on } }));
+    };
+    btn.addEventListener('click', function () { window.setKidsMode(!window.kidsModeOn()); });
+    tog.insertBefore(btn, document.getElementById('theme-toggle'));
+    paint();
+
+    // the short version first (shared.css shows these only in Kids mode): an entry's first sentence, and on profiles
+    // and state pages a button that reveals the full history
+    function openAll() { html.classList.add('kd-open'); }
+    function firstSentence(t) {
+      var re = /[.!?]["'”’)\]]*\s+(?=["'“‘(]?[A-Z0-9])/g, m;
+      while ((m = re.exec(t))) {
+        var before = t.slice(0, m.index), w = (/(\S+)$/.exec(before) || ['', ''])[1].replace(/^[("'“‘]+/, '');
+        if (/^(c|ca|fl|r|b|d|St|Mt|Mr|Mrs|Ms|Dr|Jr|Sr|vs|No|Nos|vol|ed|eds|tr|e\.g|i\.e|[A-Z])$/.test(w)) continue;   // abbreviations and initials
+        return t.slice(0, m.index + 1);
+      }
+      return t;
+    }
+    var desc = document.querySelector('.enc-article .enc-desc');
+    if (desc) {
+      // one cell of the entry's text-and-picture grid holds the note, the short version and the description
+      var col = document.createElement('div'), box = document.createElement('div');
+      var full = desc.textContent.replace(/\s+/g, ' ').trim(), first = firstSentence(full);
+      col.className = 'kd-col'; desc.parentNode.insertBefore(col, desc);
+      if (document.querySelector('.enc-kicker a[href*="/encyclopedia/conflicts/"]')) {
+        var note = document.createElement('p'); note.className = 'kd-note';
+        note.textContent = 'This page is about a war, a battle or a hard time. Wars caused great suffering for the people who lived through them.';
+        col.appendChild(note);
+      }
+      box.className = 'kd-short';
+      // a one-sentence description is its own short version (keeping its links)
+      box.innerHTML = '<b>In short</b>' + (first.length < full.length ? escHtml(first) + ' <button type="button" class="kd-story">Read more</button>' : desc.innerHTML);
+      col.appendChild(box); col.appendChild(desc);
+      var more = box.querySelector('.kd-story'); if (more) more.addEventListener('click', openAll);
+    }
+    [document.querySelector('.profile-section-block'), document.querySelector('.st-text')].forEach(function (el) {
+      if (!el) return;
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'kd-story'; b.textContent = 'Read the whole story';
+      b.addEventListener('click', openAll); el.parentNode.insertBefore(b, el);
+    });
+    // a link (the profile's "On this page") or an address that points into the folded text opens it first
+    function folded(id) {
+      try { id = decodeURIComponent(id); } catch (e) {}
+      var t = id && document.getElementById(id);
+      return t && html.getAttribute('data-kids') === '1' && !html.classList.contains('kd-open') && t.closest('.profile-section-block, .profile-references, .st-text, .enc-desc') ? t : null;
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (a && folded(a.getAttribute('href').slice(1))) openAll();
+    }, true);
+    var ft = location.hash && folded(location.hash.slice(1));
+    if (ft) { openAll(); requestAnimationFrame(function () { ft.scrollIntoView(); }); }
+    // a day page: the wars and killings of the day wait behind a button (unless they are all there is)
+    var evs = Array.prototype.slice.call(document.querySelectorAll('li.tih-event-card')), rough = evs.filter(function (li) {
+      var t = li.querySelector('.tih-event-title'), d = li.querySelector('.tih-event-desc');
+      return !kidsGentle(t ? t.textContent : li.textContent, d ? d.textContent : '');
+    });
+    if (rough.length && rough.length < evs.length) {
+      rough.forEach(function (li) { li.classList.add('kd-rough'); });
+      var rb = document.createElement('button'); rb.type = 'button'; rb.className = 'kd-story';
+      rb.textContent = 'Show the battles and wars of this day too (' + rough.length + ')';
+      rb.addEventListener('click', openAll);
+      evs[evs.length - 1].parentNode.parentNode.insertBefore(rb, evs[evs.length - 1].parentNode.nextSibling);
+    }
   })();
 
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
