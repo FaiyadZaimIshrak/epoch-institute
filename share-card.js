@@ -2,7 +2,7 @@
 // Instagram, Facebook and WhatsApp show whole), handed to sharePoster() in shared-nav.js. Loaded by /games, /quiz
 // and the home page (bump share-card.js?v= there). EpochCard.make(spec) starts drawing at once and returns
 // { p: promise of a JPEG Blob, b: the Blob once drawn }, so the picture is ready by the time Share is tapped.
-// spec: { title, score, unit, stars (0-3), squares ('1101…'), dots (['bad','good','none']), pics ([{src, label, sub}]),
+// spec: { title, score, unit, stars (0-3), squares ('1101…'), grid ([[level 1-4 x4] per guess]), stamps ([name]), dots (['bad','good','none']), pics ([{src, label, sub}]),
 // hero ({src, label}), emblems ([src]), rows ([[name, middle, right]]), words ([text]), note, cta, url, kids }
 var EpochCard = (function () {
   'use strict';
@@ -87,6 +87,23 @@ var EpochCard = (function () {
         round(c, sx, sy + r * (size + 18), size, size, s.kids ? 26 : 16); c.fillStyle = v === '1' ? T.good : T.bad; c.fill();
         c.fillStyle = 'rgba(255,255,255,0.92)'; c.font = '700 ' + Math.round(size * 0.46) + 'px ' + T.ui; c.textAlign = 'center';
         c.fillText(v === '1' ? '✓' : '✗', sx + size / 2, sy + r * (size + 18) + size * 0.64);
+      });
+    } else if (s.grid) {   // History Connections: a row of four squares for every guess, in the colours of the groups
+      var GC = ['', '#e6c85f', '#9cc47f', '#8fb4dc', '#bb96d6'], gr = s.grid, nr = gr.length, gg = 14;
+      var gs = Math.min(100, (room - (nr - 1) * gg) / nr), gx0 = mid - (4 * gs + 3 * gg) / 2, gy0 = top + (room - nr * gs - (nr - 1) * gg) / 2;
+      gr.forEach(function (row, r) { row.forEach(function (lv, k) { round(c, gx0 + k * (gs + gg), gy0 + r * (gs + gg), gs, gs, s.kids ? 22 : 12); c.fillStyle = GC[lv] || T.none; c.fill(); }); });
+    } else if (s.stamps) {   // My History: the passport's stamps, round and a little askew, up to twelve
+      var stl = s.stamps.slice(0, 12), ns = stl.length, scol = ns > 9 ? 4 : 3, srow = Math.ceil(ns / scol), sg = 28;
+      var sd = Math.min(200, (W - 200 - (scol - 1) * sg) / scol, (room - (srow - 1) * sg) / Math.max(1, srow)), sy0 = top + (room - srow * sd - (srow - 1) * sg) / 2;
+      stl.forEach(function (name, k) {
+        var r = Math.floor(k / scol), col = k % scol, cnt = Math.min(scol, ns - r * scol);
+        var cx = mid - (cnt * sd + (cnt - 1) * sg) / 2 + col * (sd + sg) + sd / 2, cy = sy0 + r * (sd + sg) + sd / 2;
+        c.save(); c.translate(cx, cy); c.rotate(((k * 37) % 21 - 10) * Math.PI / 180);
+        c.strokeStyle = T.gold; c.lineWidth = 5; c.beginPath(); c.arc(0, 0, sd / 2 - 4, 0, Math.PI * 2); c.stroke();
+        c.lineWidth = 2; c.beginPath(); c.arc(0, 0, sd / 2 - 15, 0, Math.PI * 2); c.stroke();
+        c.fillStyle = T.gl; c.textAlign = 'center'; c.font = '700 ' + Math.round(sd * 0.12) + 'px ' + T.ui;
+        var ls = lines(c, String(name).toUpperCase(), sd - 46, 3); ls.forEach(function (l, li) { c.fillText(l, 0, (li - (ls.length - 1) / 2) * sd * 0.14 + sd * 0.04); });
+        c.restore();
       });
     } else if (s.dots) {   // the daily quiz: a box for every clue
       var nd = s.dots.length, ds = Math.min(170, (W - 200 - (nd - 1) * 26) / nd), gap = 26, dx0 = mid - (nd * ds + (nd - 1) * gap) / 2, dyy = top + (room - ds) / 2 - 30;

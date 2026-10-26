@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ (each has an .htaccess forcing text/html; /folder
 redirects to /folder/).
@@ -22,7 +22,7 @@ Contact (/contact)). The phone menu and the three-column footer (Collections / E
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -304,9 +304,21 @@ epoch-shelf). Linked from the Explore menu, the footer and the homepage first-vi
 which never shows once a reader type exists. The homepage also shows "Continue where you left off" (epoch-recent,
 ≥2 items) instead of the banner.
 
+## /passport — My History
+Hand page (noindex) + passport.js: what this browser has read and played, kept in localStorage only. shared-nav.js
+records every reading page in epoch-seen (profiles of every kind, entries, states, countries, centuries, years,
+people, days, speeches, paths, essays, articles; at most 3000) and the UTC days with a visit in epoch-visits. The
+page shows pages read, days, the visit run, 25 stamps with their rules and progress (earned stamps are kept in
+epoch-badges, so a broken streak does not take one away; quiz, Daily Ten and Connections streaks keep their best run
+as b), pages by kind, profiles by region (EMPIRES), the 51 centuries visited, paths finished (epoch-paths +
+epoch-seen), games played, recent pages. Share sends a poster of the stamps (share-card.js stamps layout). A backup
+code (`EPOCH1.` + base64 JSON of the epoch-* keys) carries the passport to another browser, e.g. out of an in-app
+browser; restoring adds to what is there (lists joined, best runs kept). Clear asks twice. Linked from the shelf
+menu, the footer and the Research Hub ("Play").
+
 ## /games — History Games
-Hand page, seven client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
-#words #year; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
+Hand page, eight client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
+#words #year #conn; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
 (bump games.js?v= on the page). Level switches (segmented buttons) and bests are kept in localStorage epoch-games; in
 Kids mode an unchosen level starts easy. Every game carries a round token (P.id, O.id, F.id …) that its timers check:
 a timer left from an earlier round (New round pressed mid-flip) does nothing. Sounds: tiny WebAudio tones (no
@@ -356,6 +368,19 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
 - Guess the Year: five rounds, one big picture from each age (not a person, dated within 25 years); the slider gives
   more room to recent centuries, ±1/±10 buttons (no year 0); points = 100 × (1 − distance / (2 × allowance)),
   allowance = max(20, a quarter of the years since).
+- History Connections (#conn): sixteen tiles, four groups of four, one puzzle a day for everyone (UTC; #1 = 26 Oct
+  2026, the puzzles taken in order and repeated after the last), the tile order seeded by the number. Four mistakes,
+  "One away…", a guess already made is not counted; Shuffle, Deselect; the groups found as coloured bands (level
+  1–4: yellow, green, blue, purple; .gm-cl1–4). The day's game is kept in epoch-games conn-<number> {s: groups found,
+  m: mistakes, h: the levels of each guess, k: the guesses, done} and resumed after a reload; conn-streak {n, last, b}.
+  The finish card: the squares (🟨🟩🟦🟪, also on the score poster's grid layout), every tile's entry, the countdown,
+  Share, the newsletter line; earlier puzzles can be replayed for practice (not kept). The home page shows today's
+  number and result beside the Daily Ten. Puzzles: scripts/connections.tsv (`@` starts a puzzle, then
+  `level, group, Label=slug ×4`; a tile may link a page instead: `Label=/empire/…`, `/state/…`, `/countries/…`);
+  build-pages.ps1 writes connections-data.js (CONN_PUZZLES) and stamps its ?v= into /games, and STOPS on an unknown
+  entry or page. Every group's facts are checked against the entries; "Born in / Died in <year>" groups are read
+  with [EpochBuild.W]::Life (scratchpad conn/years-check.ps1). Each tile belongs to exactly one group: a decoy that
+  seems to fit two (Beethoven: composer, but born in 1770) works only because the other group has four without it.
 
 ## Kids mode and the Kids corner (/kids)
 - Kids mode is site-wide: html[data-kids="1"], set before first paint by the head snippet from localStorage

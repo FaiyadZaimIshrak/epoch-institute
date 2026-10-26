@@ -1939,6 +1939,29 @@ $gameJs = "// games-data.js - built by scripts/build-pages.ps1 from scripts/game
 $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'games-data\.js\?v=[0-9a-f]*', "games-data.js?v=$GAMESV")
 if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
 Say ("games: {0} pictures ({1} dated, {2} large), {3} puzzle sets, {4} Word Hunt themes{5}" -f $gCards.Count, $gDated, $gBig, $gPuz.Count, $gWords.Count, $(if ($gMiss.Count -or $wBad.Count) { '; skipped: ' + (($gMiss + $wBad) -join ', ') } else { '' }))
+# History Connections: scripts/connections.tsv ("@" starts a puzzle; then four groups: level, name, four tiles "Label=slug",
+# or "Label=/empire/..." for a profile or state page) -> connections-data.js, its ?v= stamped into /games. An unknown
+# entry or page stops the build: every tile links to what it names.
+$czOut = New-Object Collections.Generic.List[string]; $czBad = New-Object Collections.Generic.List[string]; $czCur = $null; $czN = 0
+function FlushConn { if ($script:czCur) { if ($script:czCur.Count -ne 4) { $script:czBad.Add("puzzle $($script:czN): $($script:czCur.Count) groups") } else { $script:czOut.Add('{"g":[' + ($script:czCur -join ',') + ']}') } } }
+foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\connections.tsv", $U8)) {
+  if (-not $l -or $l.StartsWith('#')) { continue }
+  if ($l.StartsWith('@')) { FlushConn; $czN++; $czCur = New-Object Collections.Generic.List[string]; continue }
+  $c = $l.Split("`t"); if ($c.Count -ne 6) { $czBad.Add("puzzle ${czN}: $l"); continue }
+  $tiles = for ($i = 2; $i -lt 6; $i++) {
+    $kv = $c[$i] -split '=', 2; $sl = $kv[1]
+    if ($sl.StartsWith('/')) { if (-not (Test-Path (Join-Path $Repo ($sl.TrimStart('/') -replace '/', '\')))) { $czBad.Add("puzzle ${czN}: no page $sl") } }
+    elseif (-not $BY.ContainsKey($sl)) { $czBad.Add("puzzle ${czN}: unknown entry $sl") }
+    '[' + (Js $kv[0]) + ',' + (Js $sl) + ']'
+  }
+  $czCur.Add('[' + (Js $c[1]) + ',' + [int]$c[0] + ',[' + ($tiles -join ',') + ']]')
+}
+FlushConn
+if ($czBad.Count) { throw ('scripts/connections.tsv: ' + ($czBad -join '; ')) }
+$connJs = "// connections-data.js - built by scripts/build-pages.ps1 from scripts/connections.tsv. Do not edit.`n// puzzles: {g: [[group name, level 1-4, [[tile, entry slug or page path] x4]] x4]}`nvar CONN_PUZZLES = [`n" + ($czOut -join ",`n") + "`n];`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\connections-data.js", $connJs)) { $NWRITE++ }; $CONNV = [EpochBuild.W]::Sha1($connJs).Substring(0, 10)
+$t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'connections-data\.js\?v=[0-9a-f]*', "connections-data.js?v=$CONNV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
+Say "connections: $($czOut.Count) puzzles"
 # The Kids corner: scripts/kids-corner.tsv (@theme lines, entry lines with a line for young readers, ! facts)
 $kdThemes = New-Object Collections.Generic.List[object]; $kdFacts = New-Object Collections.Generic.List[string]; $kdBad = New-Object Collections.Generic.List[string]; $kdT = $null
 foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\kids-corner.tsv", $U8)) {
@@ -2015,7 +2038,8 @@ $SECTIONS = [ordered]@{
   today        = @{ t = 'Today in History'; h = '/today-in-history/'; k = $nTih.ToString('N0') + ' events'; d = 'What happened on each day of the year, across five thousand years.'; pic = @('mesoamerican-long-count-calendar', 'anglo-saxon-chronicle') }
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
-  games        = @{ t = 'Games'; h = '/games'; k = 'Seven games'; d = 'Picture puzzles, word hunts, timelines and a globe: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  games        = @{ t = 'Games'; h = '/games'; k = 'Eight games'; d = 'Picture puzzles, word hunts, timelines, a globe and a daily Connections: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  passport     = @{ t = 'My History'; h = '/passport'; k = 'Your passport'; d = 'The pages you read, the centuries you visit and the games you play, with stamps to collect. Kept in your own browser.'; pic = @('xuanzang') }
   kids         = @{ t = 'Kids corner'; h = '/kids'; k = 'For young explorers'; d = 'Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.'; pic = @('great-pyramid-of-giza') }
   start        = @{ t = 'Find Your Way In'; h = '/start'; k = 'Four questions'; d = 'Tell us what draws you to history and get the reading paths and tools that suit you.'; pic = @('piri-reis-map', 'cantino-planisphere', 'tabula-rogeriana') }
   community    = @{ t = 'Community'; h = '/community'; k = 'Readers and writers'; d = 'Essays and opinions from the Institute''s readers, and a place to share your own.'; pic = @('althing', 'roman-forum') }
@@ -2031,8 +2055,8 @@ function HubCard($s, [string]$cls) {
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
 $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
-  @('Through time', @('atlas', 'timeline', 'centuries', 'years')), @('Explore', @('explorer', 'connections', 'paths')),
-  @('Play', @('quiz', 'games', 'kids', 'start')), @('The Institute', @('series', 'dataset', 'community', 'contributors')))
+  @('Through time', @('atlas', 'timeline', 'centuries', 'years')), @('Explore', @('explorer', 'connections', 'paths', 'start')),
+  @('Play', @('quiz', 'games', 'kids', 'passport')), @('The Institute', @('series', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'countries', 'atlas', 'centuries', 'explorer', 'paths', 'today', 'speeches', 'games', 'kids') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')

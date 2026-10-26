@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-games.jpg">
-<link rel="stylesheet" href="/shared.css?v=48">
+<link rel="stylesheet" href="/shared.css?v=49">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Seven history games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -46,7 +46,7 @@
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Seven games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Eight games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
@@ -59,6 +59,7 @@
     <button class="gm-tab" id="tab-puzzle" role="tab" aria-selected="false" aria-controls="game-puzzle" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10070;</span><span class="gm-tab-t">Picture Puzzle</span></button>
     <button class="gm-tab" id="tab-words" role="tab" aria-selected="false" aria-controls="game-words" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9998;</span><span class="gm-tab-t">Word Hunt</span></button>
     <button class="gm-tab" id="tab-year" role="tab" aria-selected="false" aria-controls="game-year" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10710;</span><span class="gm-tab-t">Guess the Year</span></button>
+    <button class="gm-tab" id="tab-conn" role="tab" aria-selected="false" aria-controls="game-conn" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9638;</span><span class="gm-tab-t">Connections</span></button>
   </div>
 
   <!-- Emblem Pairs -->
@@ -201,13 +202,34 @@
       <div class="gm-done" id="year-done" hidden></div>
     </div>
   </section>
+
+  <!-- History Connections -->
+  <section class="gm-game" id="game-conn" role="tabpanel" aria-labelledby="tab-conn" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">Sixteen names from history hide four groups of four. Pick four that belong together and submit; the groups get harder from yellow to purple. Four mistakes are allowed. A new puzzle every day, the same for everyone.</p>
+    </div>
+    <div class="gm-stats">
+      <span class="gm-stat" id="conn-num"></span>
+      <span class="gm-conn-left" id="conn-left"></span>
+      <span class="gm-stat gm-stat-best" id="conn-best"></span>
+    </div>
+    <div class="gm-board gm-conn">
+      <div class="gm-conn-solved" id="conn-solved"></div>
+      <div class="gm-conn-grid" id="conn-grid" role="group" aria-label="The tiles: pick four"></div>
+      <p class="gm-live gm-conn-live" id="conn-live" aria-live="polite"></p>
+      <div class="gm-conn-acts"><button type="button" class="gm-again" id="conn-shuffle">Shuffle</button><button type="button" class="gm-again" id="conn-clear">Deselect all</button><button type="button" class="hero-cta" id="conn-go" disabled>Submit</button></div>
+      <div class="gm-done" id="conn-done" hidden></div>
+    </div>
+    <p class="gm-conn-more"><label>Play another <select id="conn-pick"></select></label></p>
+  </section>
 </main>
 
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=97751474c0' };</script>
 <script src="/games-emblems.js?v=1"></script>
 <script src="/games-data.js?v=1acf549129"></script>
-<script src="/shared-nav.js?v=32"></script>
-<script src="/games.js?v=3"></script>
+<script src="/connections-data.js?v=ae5bec8c68"></script>
+<script src="/shared-nav.js?v=33"></script>
+<script src="/games.js?v=4"></script>
 
 </body>
 </html>

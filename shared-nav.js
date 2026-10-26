@@ -111,7 +111,7 @@ function sharePoster(o) {
 // the line, the address and a button: the old signature, kept for the pages that call it
 function shareThis(text, url, btn) { sharePoster({ text: text, url: url, btn: btn }); }
 // a score poster (share-card.js, fetched the first time a result is shown): { p: promise of the picture, b: once drawn }
-var SHARE_CARD_SRC = '/share-card.js?v=1', CARD_LIB = null;
+var SHARE_CARD_SRC = '/share-card.js?v=2', CARD_LIB = null;
 function scoreCard(spec) {
   CARD_LIB = CARD_LIB || new Promise(function (ok, no) {
     if (window.EpochCard) return ok();
@@ -621,6 +621,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/games">History Games</a>
         <a class="footer-link" href="/kids">Kids Corner</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
+        <a class="footer-link" href="/passport">My History</a>
         <a class="footer-link" href="/research-series">Research Series</a>
         <a class="footer-link" href="/dataset">Open Data</a>
       </div>
@@ -740,7 +741,8 @@ function initNav(activePage) {
     function sSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
     // the reading pages that can be saved and are recorded as recently viewed
     var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
-      [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path']];
+      [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path'],
+      [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech']];
     var kind = null;
     if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
       KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
@@ -766,7 +768,8 @@ function initNav(activePage) {
         (here ? '<button type="button" class="shelf-save' + (saved ? ' is-saved' : '') + '" id="shelf-save">' + (saved ? '✓ Saved — tap to remove' : '☆ Save this page') + '</button>' : '') +
         '<p class="shelf-head">Saved' + (shelf.length ? ' · ' + shelf.length : '') + '</p>' +
         (shelf.length ? shelf.map(row).join('') : '<p class="shelf-empty">Nothing saved yet. Open a profile or an entry and save it from here.</p>') +
-        (rec2.length ? '<p class="shelf-head">Recently viewed</p>' + rec2.map(row).join('') : '');
+        (rec2.length ? '<p class="shelf-head">Recently viewed</p>' + rec2.map(row).join('') : '') +
+        '<a class="shelf-passport" href="/passport">My History: your passport &rarr;</a>';
       var sv = document.getElementById('shelf-save');
       if (sv) sv.addEventListener('click', function () {
         var s2 = sGet('epoch-shelf', 100).filter(function (r) { return r && r.u !== here.u; });
@@ -881,7 +884,10 @@ function initNav(activePage) {
     function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
     var here = location.pathname.replace(/\/+$/, '') || '/', seen = get('epoch-seen', []);
     if (!Array.isArray(seen)) seen = [];
-    if (/^\/(empire|encyclopedia|state|speeches|countries|centuries)\/[^/]+$/.test(here) && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
+    // every reading page counts (the passport at /passport reads epoch-seen); epoch-visits: the UTC days with a visit
+    if (/^\/(empire|religion|language|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
+    var vday = Math.floor(Date.now() / 864e5), visits = get('epoch-visits', []);
+    if (Array.isArray(visits) && visits[visits.length - 1] !== vday) { visits.push(vday); put('epoch-visits', visits.slice(-400)); }
     function isSeen(h) { return seen.indexOf(String(h || '').replace(/\/+$/, '')) >= 0; }
     // a path's own page: the stops already read, the progress, the next stop
     var list = document.querySelector('ol.path-steps');

@@ -1,0 +1,306 @@
+# History Connections - one puzzle a day, in this order (#1 = 26 October 2026). Lines starting with # are notes.
+# A puzzle: a line "@" (anything after it is a note), then four groups, one a line, tab-separated:
+#   level (1 easiest, yellow ... 4 hardest, purple)	the group's name	four tiles "Label=slug"
+# A slug is an encyclopedia entry; a tile can instead link a profile or state page: "Label=/empire/ottoman-empire".
+# Every tile belongs to exactly one group (decoys may seem to fit two, but only one arrangement works). Check facts
+# against the entries: scripts/build-pages.ps1 refuses an unknown slug.
+@ 1
+1	Wonders of the Ancient World	Great Pyramid=great-pyramid-of-giza	Colossus of Rhodes=colossus-of-rhodes	Pharos of Alexandria=lighthouse-of-alexandria	Hanging Gardens=hanging-gardens-of-babylon
+2	Battles of the Greco-Persian Wars	Marathon=battle-of-marathon	Thermopylae=battle-of-thermopylae	Salamis=battle-of-salamis	Plataea=battle-of-plataea
+3	Mughal emperors	Babur=babur	Humayun=humayun	Jahangir=jahangir	Aurangzeb=aurangzeb
+4	Known as "the Great"	Alfred=alfred-the-great	Frederick=frederick-the-great	Cyrus=cyrus-the-great	Peter=peter-the-great
+@ 2
+1	Greek gods	Zeus=zeus	Athena=athena	Apollo=apollo	Poseidon=poseidon
+2	Silk Road cities	Samarkand=samarkand	Bukhara=bukhara	Kashgar=kashgar	Merv=merv
+3	Leaders of Latin American independence	Bolívar=simon-bolivar	San Martín=jose-de-san-martin	O'Higgins=bernardo-ohiggins	Hidalgo=miguel-hidalgo-y-costilla
+4	Born in 1813	Verdi=giuseppe-verdi	Wagner=richard-wagner	Kierkegaard=soren-kierkegaard	Livingstone=david-livingstone
+@ 3
+1	Pharaohs of Egypt	Khufu=khufu	Hatshepsut=hatshepsut	Akhenaten=akhenaten	Ramesses II=ramesses-ii
+2	Tudor monarchs	Henry VII=henry-vii-of-england	Henry VIII=henry-viii-of-england	Mary I=mary-i-of-england	Elizabeth I=elizabeth-i
+3	Ottoman sultans	Osman I=osman-i	Mehmed II=mehmed-ii	Selim I=selim-i	Suleiman=suleiman-the-magnificent
+4	Died in 1616	Cervantes=miguel-de-cervantes	Shakespeare=william-shakespeare	Garcilaso de la Vega=inca-garcilaso-de-la-vega	Kuzma Minin=kuzma-minin
+@ 4
+1	Greek philosophers	Socrates=socrates	Plato=plato	Aristotle=aristotle	Epicurus=epicurus
+2	Capitals of China	Chang'an=changan	Luoyang=luoyang	Kaifeng=kaifeng	Hangzhou=hangzhou
+3	Founding Fathers of the United States	Washington=george-washington	Jefferson=thomas-jefferson	Franklin=benjamin-franklin	Madison=james-madison
+4	Died in 1778	Voltaire=voltaire	Rousseau=jean-jacques-rousseau	Linnaeus=carl-linnaeus	Hargreaves=james-hargreaves
+@ 5 (Beethoven is a composer, but he was born in 1770; Davout was Napoleon's marshal, not a battle)
+1	Composers	Bach=johann-sebastian-bach	Mozart=wolfgang-amadeus-mozart	Handel=george-frideric-handel	Vivaldi=antonio-vivaldi
+2	Napoleon's victories	Austerlitz=battle-of-austerlitz	Jena=battle-of-jena-auerstedt	Wagram=battle-of-wagram	Marengo=battle-of-marengo
+3	Inca emperors	Pachacuti=pachacuti	Huayna Capac=huayna-capac	Atahualpa=atahualpa	Huáscar=huascar
+4	Born in 1770	Beethoven=ludwig-van-beethoven	Hegel=georg-wilhelm-friedrich-hegel	Pétion=alexandre-petion	Davout=louis-nicolas-davout
+@ 6 (Constantinople is named after an emperor, but none of the emperors here is Constantine)
+1	Roman emperors	Nero=nero	Trajan=trajan	Marcus Aurelius=marcus-aurelius	Caligula=caligula
+2	Wars named for how long they lasted	Seven Years' War=seven-years-war	Thirty Years' War=thirty-years-war	Hundred Years' War=hundred-years-war	Six-Day War=six-day-war
+3	Battles of the Second Punic War	Cannae=battle-of-cannae	Zama=battle-of-zama	Trebia=battle-of-the-trebia	Lake Trasimene=battle-of-lake-trasimene
+4	Cities named after a person	Alexandria=alexandria	Constantinople=constantinople	Saint Petersburg=saint-petersburg	Washington, D.C.=washington-dc
+@ 7 (the Golden Horde was a Mongol state, not a ruler)
+1	Explorers	Columbus=christopher-columbus	Magellan=ferdinand-magellan	Vasco da Gama=vasco-da-gama	James Cook=james-cook
+2	Mongol rulers	Genghis Khan=genghis-khan	Kublai Khan=kublai-khan	Möngke=mongke	Hulagu=hulagu-khan
+3	Abbasid caliphs	Harun al-Rashid=harun-al-rashid	al-Ma'mun=al-mamun	al-Mansur=al-mansur-abbasid-caliph	al-Saffah=abu-al-abbas-al-saffah
+4	Begin with a colour	Golden Horde=golden-horde	Black Death=black-death	Red Fort=red-fort	White Lotus Rebellion=white-lotus-rebellion
+@ 8
+1	Rivers of the first civilisations	Nile=nile	Tigris=tigris	Euphrates=euphrates	Indus=indus
+2	Leaders of the Reformation	Luther=martin-luther	Calvin=john-calvin	Zwingli=huldrych-zwingli	Knox=john-knox
+3	Capitals of Persian empires	Persepolis=persepolis	Susa=susa	Ctesiphon=ctesiphon	Isfahan=isfahan
+4	Born in 1809	Darwin=charles-darwin	Mendelssohn=felix-mendelssohn	Gladstone=william-ewart-gladstone	J. J. Roberts=joseph-jenkins-roberts
+@ 9 (Galileo and Newton did not die in 1924)
+1	Astronomers of the Scientific Revolution	Copernicus=nicolaus-copernicus	Galileo=galileo-galilei	Kepler=johannes-kepler	Tycho Brahe=tycho-brahe
+2	Conquistadors	Cortés=hernan-cortes	Pizarro=francisco-pizarro	Balboa=vasco-nunez-de-balboa	Orellana=francisco-de-orellana
+3	Cities of Mesopotamia	Ur=ur	Uruk=uruk	Nineveh=nineveh	Babylon=babylon
+4	Died in 1924	Lenin=vladimir-lenin	Puccini=giacomo-puccini	Joseph Conrad=joseph-conrad	Matteotti=giacomo-matteotti
+@ 10
+1	Epic poems	Iliad=iliad	Odyssey=odyssey	Aeneid=aeneid	Beowulf=beowulf
+2	Women who ruled in their own right	Wu Zetian=wu-zetian	Maria Theresa=maria-theresa	Isabella I=isabella-i-of-castile	Tamar=tamar-of-georgia
+3	Empires of West and Central Africa	Mali Empire=mali-empire	Songhai Empire=songhai-empire	Ghana Empire=ghana-empire	Kingdom of Kongo=kingdom-of-kongo
+4	Carolingian kings	Pepin the Short=pepin-the-short	Charlemagne=charlemagne	Louis the Pious=louis-the-pious	Charles the Bald=charles-the-bald
+@ 11
+1	Egyptian gods	Osiris=osiris	Isis=isis	Horus=horus	Thoth=thoth
+2	Battles of Alexander the Great	Granicus=battle-of-the-granicus	Issus=battle-of-issus	Gaugamela=battle-of-gaugamela	Hydaspes=battle-of-the-hydaspes
+3	Seats of power in Japan	Nara=nara	Kyoto=kyoto	Kamakura=kamakura	Edo=edo-tokyo
+4	Born in 1858	Theodore Roosevelt=theodore-roosevelt	Rudolf Diesel=rudolf-diesel	Puccini=giacomo-puccini	Bonar Law=bonar-law
+@ 12 (Peter the Great was not the last of his line)
+1	Rulers of Russia	Ivan the Terrible=ivan-iv-of-russia	Peter the Great=peter-the-great	Catherine the Great=catherine-the-great	Alexander II=alexander-ii-of-russia
+2	Peace treaties	Tordesillas=treaty-of-tordesillas	Westphalia=peace-of-westphalia	Utrecht=treaty-of-utrecht	Versailles=treaty-of-versailles
+3	Scholars of the Islamic world	Avicenna=avicenna	al-Khwarizmi=al-khwarizmi	Ibn Khaldun=ibn-khaldun	al-Biruni=al-biruni
+4	Last emperors	Puyi=puyi	Romulus Augustulus=romulus-augustulus	Constantine XI=constantine-xi-palaiologos	Bahadur Shah II=bahadur-shah-ii
+@ 13 (Cnut was called "the Great", but there is no such group here)
+1	Aztec gods	Quetzalcoatl=quetzalcoatl	Huitzilopochtli=huitzilopochtli	Tlaloc=tlaloc	Xipe Totec=xipe-totec
+2	Viking-age kings	Harald Fairhair=harald-fairhair	Harald Hardrada=harald-hardrada	Cnut=cnut-the-great	Olaf Tryggvason=olaf-tryggvason
+3	Writers of Italy	Dante=dante-alighieri	Petrarch=petrarch	Boccaccio=giovanni-boccaccio	Machiavelli=niccolo-machiavelli
+4	Born in 1533	Elizabeth I=elizabeth-i	William the Silent=william-the-silent	Stephen Báthory=stephen-bathory	Eric XIV=eric-xiv-of-sweden
+@ 14 (Nobunaga died in a betrayal at Honnō-ji, by his own hand, not by an assassin)
+1	Wonders of Asia	Taj Mahal=taj-mahal	Angkor Wat=angkor-wat	Borobudur=borobudur	Great Wall=great-wall-of-china
+2	Popes	Urban II=pope-urban-ii	Gregory VII=pope-gregory-vii	Innocent III=pope-innocent-iii	Julius II=pope-julius-ii
+3	Unifiers and shoguns of Japan	Yoritomo=minamoto-no-yoritomo	Nobunaga=oda-nobunaga	Hideyoshi=toyotomi-hideyoshi	Tokugawa Ieyasu=tokugawa-ieyasu
+4	Killed by an assassin	Philip II of Macedon=philip-ii-of-macedon	Gustav III=gustav-iii	Henry IV of France=henry-iv-of-france	Lincoln=abraham-lincoln
+@ 15
+1	Early writing systems	Cuneiform=cuneiform	Hieroglyphs=egyptian-hieroglyphs	Linear A=linear-a	Linear B=linear-b
+2	Sea battles	Lepanto=battle-of-lepanto	Actium=battle-of-actium	Trafalgar=battle-of-trafalgar	Tsushima=battle-of-tsushima
+3	Dynasties of China	Han=han-dynasty	Tang=tang-dynasty	Song=song-dynasty	Yuan=yuan-dynasty
+4	Born in 1898	Zhou Enlai=zhou-enlai	Eisenstein=sergei-eisenstein	Magritte=rene-magritte	Alvar Aalto=alvar-aalto
+@ 16
+1	Sacred texts	Quran=quran	Rigveda=rigveda	Bhagavad Gita=bhagavad-gita	Hebrew Bible=hebrew-bible
+2	Battles of the First World War	Somme=battle-of-the-somme	Verdun=battle-of-verdun	Marne=first-battle-of-the-marne	Gallipoli=gallipoli-campaign
+3	Islamic dynasties	Umayyads=umayyad-caliphate	Abbasids=abbasid-caliphate	Fatimids=fatimid-caliphate	Mamluks=mamluk-sultanate
+4	Died in 1901	Queen Victoria=queen-victoria	Verdi=giuseppe-verdi	Crispi=francesco-crispi	Pretorius=marthinus-wessel-pretorius
+@ 17 (Louis IX died on crusade, but the crusade group is of battles)
+1	Kings of France	Clovis I=clovis-i	Philip Augustus=philip-ii-of-france	Saint Louis=louis-ix-of-france	Louis XIV=louis-xiv
+2	Battles of the Crusades	Hattin=battle-of-hattin	Arsuf=battle-of-arsuf	Montgisard=battle-of-montgisard	Siege of Acre=siege-of-acre-1189-1191
+3	Rulers of West African empires	Mansa Musa=mansa-musa	Sundiata=sundiata-keita	Sunni Ali=sunni-ali	Askia Muhammad=askia-muhammad
+4	Landmarks of Istanbul	Hagia Sophia=hagia-sophia	Topkapı Palace=topkapi-palace	Hippodrome=hippodrome-of-constantinople	Golden Horn=golden-horn
+@ 18
+1	Mathematicians of the ancient world	Archimedes=archimedes	Euclid=euclid	Hypatia=hypatia	Eratosthenes=eratosthenes
+2	Led their country to independence	Gandhi=mahatma-gandhi	Nkrumah=kwame-nkrumah	Kenyatta=jomo-kenyatta	Sukarno=sukarno
+3	Habsburg rulers	Charles V=charles-v-holy-roman-emperor	Philip II of Spain=philip-ii-of-spain	Rudolf II=rudolf-ii-holy-roman-emperor	Joseph II=joseph-ii-holy-roman-emperor
+4	Rebellions in China	Yellow Turbans=yellow-turban-rebellion	An Lushan=an-lushan-rebellion	Taiping=taiping-rebellion	Boxers=boxer-rebellion
+@ 19
+1	Invented in China	Gunpowder=gunpowder	Papermaking=papermaking	Movable type=movable-type	Porcelain=porcelain
+2	Kingdoms of Korea	Goguryeo=/empire/goguryeo	Baekje=/empire/baekje	Silla=/empire/silla	Goryeo=/empire/goryeo
+3	Codes of law	Code of Hammurabi=code-of-hammurabi	Twelve Tables=twelve-tables	Corpus Juris Civilis=corpus-juris-civilis	Napoleonic Code=napoleonic-code
+4	All in 1066	Hastings=battle-of-hastings	Stamford Bridge=battle-of-stamford-bridge	Harold Godwinson=harold-godwinson	Edward the Confessor=edward-the-confessor
+@ 20
+1	Kings of the Achaemenid Empire	Darius I=darius-i	Xerxes I=xerxes-i	Cambyses II=cambyses-ii	Artaxerxes I=artaxerxes-i
+2	Germanic peoples in the Roman world	Vandals=vandals	Lombards=lombards	Visigoths=visigoths	Ostrogoths=ostrogoths
+3	Byzantine emperors	Justinian I=justinian-i	Basil II=basil-ii	Heraclius=heraclius	Alexios I=alexios-i-komnenos
+4	Born in 1883	Keynes=john-maynard-keynes	Attlee=clement-attlee	Kazantzakis=nikos-kazantzakis	Hašek=jaroslav-hasek
+@ 21 (Ovid was a Roman poet, but he died in exile: the poets here are four without him)
+1	Peoples of Mesoamerica	Olmecs=olmecs	Zapotecs=zapotecs	Toltecs=/state/toltec-state	Aztecs=aztec-empire
+2	Holy Roman Emperors	Otto I=otto-i	Barbarossa=frederick-barbarossa	Sigismund=sigismund-holy-roman-emperor	Maximilian I=maximilian-i-holy-roman-emperor
+3	Roman poets	Virgil=virgil	Horace=horace	Catullus=catullus	Lucretius=lucretius
+4	Died in exile	Napoleon=napoleon	Ovid=ovid	Dante=dante-alighieri	Trotsky=leon-trotsky
+@ 22
+1	Chinese philosophers	Confucius=confucius	Laozi=laozi	Mencius=mencius	Zhuangzi=zhuangzi
+2	Greek playwrights	Aeschylus=aeschylus	Sophocles=sophocles	Euripides=euripides	Aristophanes=aristophanes
+3	Crusader states	Kingdom of Jerusalem=/empire/kingdom-of-jerusalem	County of Edessa=/state/county-of-edessa	Antioch=/state/principality-of-antioch	County of Tripoli=/state/county-of-tripoli
+4	Universities older than 1300	Paris=university-of-paris	Salamanca=university-of-salamanca	al-Qarawiyyin=university-of-al-qarawiyyin	Naples=university-of-naples-federico-ii
+@ 23 (Corinth was a Greek city-state too, but here it is a canal)
+1	Canals	Suez=suez-canal	Panama=panama-canal	Grand Canal=grand-canal	Corinth=corinth-canal
+2	City-states of ancient Greece	Athens=athens	Sparta=sparta	Thebes=thebes	Argos=argos
+3	Emperors of early India	Ashoka=ashoka	Chandragupta Maurya=chandragupta-maurya	Samudragupta=samudragupta	Harsha=harsha
+4	Historians of the ancient world	Herodotus=herodotus	Thucydides=thucydides	Livy=livy	Sima Qian=sima-qian
+@ 24
+1	Walls built against invaders	Hadrian's Wall=hadrians-wall	Great Wall=great-wall-of-china	Antonine Wall=antonine-wall	Offa's Dyke=offas-dyke
+2	Empires of Southeast Asia	Khmer Empire=/empire/khmer-empire	Srivijaya=/empire/srivijaya-empire	Majapahit=/empire/majapahit-empire	Ayutthaya=ayutthaya-kingdom
+3	Founding charters and declarations	Magna Carta=magna-carta	Golden Bull=golden-bull-of-1356	US Declaration=united-states-declaration-of-independence	Rights of Man=declaration-of-the-rights-of-man-and-of-the-citizen
+4	Old names of today's cities	Edo=edo-tokyo	Tenochtitlan=tenochtitlan	Batavia=batavia	New Amsterdam=new-amsterdam
+@ 25
+1	Rivers of Europe	Danube=danube	Rhine=rhine	Elbe=elbe	Vistula=vistula
+2	Novelists of the 19th century	Tolstoy=leo-tolstoy	Dostoevsky=fyodor-dostoevsky	Dickens=charles-dickens	Jane Austen=jane-austen
+3	Sasanian kings	Ardashir I=ardashir-i	Shapur I=shapur-i	Khosrow I=khosrow-i	Khosrow II=khosrow-ii
+4	Died in 1820	George III=george-iii	Henri Christophe=henri-christophe	Gia Long=gia-long	Elisa Bonaparte=elisa-bonaparte
+@ 26
+1	Dutch painters	Rembrandt=rembrandt	Vermeer=johannes-vermeer	Frans Hals=frans-hals	Van Gogh=vincent-van-gogh
+2	States the Mongol Empire split into	Golden Horde=golden-horde	Ilkhanate=ilkhanate	Chagatai Khanate=chagatai-khanate	Yuan dynasty=yuan-dynasty
+3	Coins of the past	Denarius=denarius	Solidus=solidus	Dinar=dinar	Dirham=dirham
+4	Died in 1859	Metternich=klemens-von-metternich	Tocqueville=alexis-de-tocqueville	Humboldt=alexander-von-humboldt	Archduke John=archduke-john-of-austria
+@ 27
+1	Thinkers of the Enlightenment	Locke=john-locke	Montesquieu=montesquieu	Kant=immanuel-kant	Hume=david-hume
+2	Titles of rulers	Shogun=shogun	Tsar=tsar	Khagan=khagan	Sapa Inca=sapa-inca
+3	Councils of the Church	Nicaea=first-council-of-nicaea	Chalcedon=council-of-chalcedon	Constance=council-of-constance	Trent=council-of-trent
+4	Wars named after odd things	Jenkins' Ear=war-of-jenkins-ear	Pastry War=pastry-war	Opium War=first-opium-war	Wars of the Roses=wars-of-the-roses
+@ 28
+1	Spices	Pepper=pepper	Cinnamon=cinnamon	Nutmeg=nutmeg	Cloves=cloves
+2	Muslim powers of Spain and the Maghreb	Caliphate of Córdoba=/empire/caliphate-of-cordoba	Emirate of Granada=/empire/emirate-of-granada	Almoravids=/empire/almoravid-empire	Almohads=/empire/almohad-caliphate
+3	Empires of the ancient Near East	Akkadian Empire=/empire/akkadian-empire	Assyrian Empire=/empire/assyrian-empire	Babylonian Empire=/empire/babylonian-empire	Hittite Empire=/empire/hittite-empire
+4	Died in 1885	Victor Hugo=victor-hugo	Ulysses S. Grant=ulysses-s-grant	Louis Riel=louis-riel	Rufino Barrios=justo-rufino-barrios
+@ 29 (Wellington was a prime minister too, but he died in 1852)
+1	British prime ministers	Gladstone=william-ewart-gladstone	Disraeli=benjamin-disraeli	Churchill=winston-churchill	Attlee=clement-attlee
+2	Empires founded by Turkic peoples	Göktürks=/empire/gokturk-empire	Seljuks=/empire/seljuk-empire	Timurids=/empire/timurid-empire	Ghaznavids=/empire/ghaznavid-empire
+3	Weapons of war	Greek fire=greek-fire	Trebuchet=trebuchet	Crossbow=crossbow	Musket=musket
+4	Died in 1852	Wellington=arthur-wellesley-1st-duke-of-wellington	Amir Kabir=amir-kabir	Schwarzenberg=felix-zu-schwarzenberg	Ballivián=jose-ballivian
+@ 30 (Stanley died in 1904)
+1	Leaders of communist China	Mao Zedong=mao-zedong	Zhou Enlai=zhou-enlai	Deng Xiaoping=deng-xiaoping	Liu Shaoqi=liu-shaoqi
+2	Explorers of Africa	Mungo Park=mungo-park	Richard Burton=richard-francis-burton	Speke=john-hanning-speke	Stanley=henry-morton-stanley
+3	Empires of India	Maurya=/empire/maurya-empire	Gupta=/empire/gupta-empire	Kushan=/empire/kushan-empire	Delhi Sultanate=/empire/delhi-sultanate
+4	Died in 1910	Mark Twain=mark-twain	Henry Dunant=henry-dunant	Chulalongkorn=chulalongkorn	Hormuzd Rassam=hormuzd-rassam
+@ 31 (Beethoven was a composer, but he died in 1827; Schubert died in 1828)
+1	Composers	Haydn=joseph-haydn	Schubert=franz-schubert	Liszt=franz-liszt	Tchaikovsky=pyotr-ilyich-tchaikovsky
+2	Islands of the Mediterranean	Crete=crete	Cyprus=cyprus	Sicily=sicily	Malta=malta
+3	Saints	Augustine of Canterbury=augustine-of-canterbury	Bernard of Clairvaux=bernard-of-clairvaux	Thomas Aquinas=thomas-aquinas	Ignatius of Loyola=ignatius-of-loyola
+4	Died in 1827	Beethoven=ludwig-van-beethoven	William Blake=william-blake	Pestalozzi=johann-heinrich-pestalozzi	Fabrizio Ruffo=fabrizio-ruffo
+@ 32
+1	Built by the Mughals	Taj Mahal=taj-mahal	Red Fort=red-fort	Humayun's Tomb=humayuns-tomb	Fatehpur Sikri=fatehpur-sikri
+2	Treaties	Nerchinsk=treaty-of-nerchinsk	Karlowitz=treaty-of-karlowitz	Waitangi=treaty-of-waitangi	Guadalupe Hidalgo=treaty-of-guadalupe-hidalgo
+3	Egyptian deities	Amun=amun	Hathor=hathor	Aten=aten	Osiris=osiris
+4	Died in 1916	Kitchener=herbert-kitchener	Yuan Shikai=yuan-shikai	Roger Casement=roger-casement	Franz Marc=franz-marc
+@ 33 (the Two Sicilies fell to Garibaldi, but the group of Italy's makers is of people)
+1	Built by the Romans	Pont du Gard=pont-du-gard	Appian Way=appian-way	Hadrian's Villa=hadrians-villa	Hadrian's Wall=hadrians-wall
+2	Founders of dynasties	Hongwu Emperor=hongwu-emperor	Rurik=rurik	Hugh Capet=hugh-capet	Osman I=osman-i
+3	Makers of united Italy	Garibaldi=giuseppe-garibaldi	Cavour=camillo-benso-count-of-cavour	Mazzini=giuseppe-mazzini	Victor Emmanuel II=victor-emmanuel-ii
+4	Begin with a number	Twelve Tables=twelve-tables	Thirty Tyrants=thirty-tyrants	Two Sicilies=kingdom-of-the-two-sicilies	Seven Sages=seven-sages-of-greece
+@ 34 (Sinan built the Süleymaniye, but here he is an architect)
+1	Physicians	Hippocrates=hippocrates	Galen=galen	Pasteur=louis-pasteur	Semmelweis=ignaz-semmelweis
+2	Islamic monuments	Dome of the Rock=dome-of-the-rock	Süleymaniye=suleymaniye-mosque	Alhambra=alhambra	Saadian Tombs=saadian-tombs
+3	Architects	Imhotep=imhotep	Sinan=mimar-sinan	Brunelleschi=filippo-brunelleschi	Bernini=gian-lorenzo-bernini
+4	Gave their names to things	Diesel=rudolf-diesel	Zeppelin=ferdinand-von-zeppelin	Sax=adolphe-sax	Nobel=alfred-nobel
+@ 35 (Omar Khayyam was a poet too, but four other poets are here)
+1	Poets who wrote in Persian	Rumi=rumi	Hafez=hafez	Nizami=nizami-ganjavi	Jami=jami
+2	Mathematicians	Aryabhata=aryabhata	Fibonacci=fibonacci	al-Khwarizmi=al-khwarizmi	Omar Khayyam=omar-khayyam
+3	___ Revolution	Haitian=haitian-revolution	Glorious=glorious-revolution	Xinhai=xinhai-revolution	Iranian=iranian-revolution
+4	Died in 1759	Handel=george-frideric-handel	James Wolfe=james-wolfe	Montcalm=louis-joseph-de-montcalm	Mohammad Hasan Khan=mohammad-hasan-khan-qajar
+@ 36
+1	Kings of Mesopotamia	Hammurabi=hammurabi	Nebuchadnezzar II=nebuchadnezzar-ii	Ashurbanipal=ashurbanipal	Sargon of Akkad=sargon-of-akkad
+2	Trading companies	Dutch East India Co.=dutch-east-india-company	East India Company=east-india-company	Hudson's Bay Company=hudsons-bay-company	Muscovy Company=muscovy-company
+3	Ruins found again	Troy=troy	Pompeii=pompeii	Machu Picchu=machu-picchu	Petra=petra
+4	Kings killed in battle	Richard III=richard-iii-of-england	James IV=james-iv-of-scotland	Sebastian=sebastian-of-portugal	Louis II=louis-ii-of-hungary
+@ 37 (Napoleon gave up his throne too, but there is no such group here)
+1	Words from Japan's age of warriors	Samurai=samurai	Daimyo=daimyo	Bushido=bushido	Shogun=shogun
+2	Reigned for more than 60 years	Louis XIV=louis-xiv	Queen Victoria=queen-victoria	Kangxi=kangxi-emperor	Franz Joseph=franz-joseph-i
+3	Works of literature	Don Quixote=don-quixote	Canterbury Tales=the-canterbury-tales	Divine Comedy=divine-comedy	Shahnameh=shahnameh
+4	Crossed the Alps with an army	Hannibal=hannibal	Napoleon=napoleon	Charlemagne=charlemagne	Suvorov=alexander-suvorov
+@ 38
+1	Dynasties that ruled Egypt	Ptolemies=/empire/ptolemaic-empire	Fatimids=/empire/fatimid-caliphate	Ayyubids=/empire/ayyubid-empire	Mamluks=/empire/mamluk-sultanate
+2	Gave up the throne	Charles V=charles-v-holy-roman-emperor	Edward VIII=edward-viii	Nicholas II=nicholas-ii	Puyi=puyi
+3	Dynasties of China	Zhou=zhou-dynasty	Qin=qin-dynasty	Sui=sui-dynasty	Tang=tang-dynasty
+4	Died in 1817	Jane Austen=jane-austen	Masséna=andre-massena	Princess Charlotte=princess-charlotte-of-wales	Sugita Genpaku=sugita-genpaku
+@ 39 (Mount Fuji is a volcano, but here it is sacred)
+1	Sacred mountains	Mount Sinai=mount-sinai	Mount Fuji=mount-fuji	Mount Kailash=mount-kailash	Mount Athos=mount-athos
+2	Once held by Portugal	Goa=goa	Malacca=malacca	Macau=macau	Hormuz=hormuz
+3	Families of Renaissance Italy	Medici=house-of-medici	Borgia=house-of-borgia	Sforza=house-of-sforza	Este=house-of-este
+4	Died in 1819	James Watt=james-watt	Blücher=gebhard-leberecht-von-blucher	Bodawpaya=bodawpaya	Kotzebue=august-von-kotzebue
+@ 40 (Waterloo and Trafalgar were defeats of Napoleon; the Nile too)
+1	Dynasties of Iran	Achaemenids=/empire/achaemenid-empire	Sasanians=/empire/sasanian-empire	Safavids=/empire/safavid-empire	Qajars=/empire/qajar-iran
+2	Defeats of Napoleon's France	Waterloo=battle-of-waterloo	Leipzig=battle-of-leipzig	Trafalgar=battle-of-trafalgar	The Nile=battle-of-the-nile
+3	Rivers of Asia	Yellow River=yellow-river	Amur=amur-river	Syr Darya=syr-darya	Brahmaputra=brahmaputra
+4	Died in 1870	Charles Dickens=charles-dickens	Solano López=francisco-solano-lopez	Urquiza=justo-jose-de-urquiza	Majid bin Said=majid-bin-said
+@ 41
+1	Travellers of the Middle Ages	Marco Polo=marco-polo	Ibn Battuta=ibn-battuta	Xuanzang=xuanzang	William of Rubruck=william-of-rubruck
+2	Rulers of the Aztecs	Moctezuma II=moctezuma-ii	Cuauhtémoc=cuauhtemoc	Itzcoatl=itzcoatl	Ahuitzotl=ahuitzotl
+3	Treaties after the First World War	Versailles=treaty-of-versailles	Trianon=treaty-of-trianon	Sèvres=treaty-of-sevres	Lausanne=treaty-of-lausanne
+4	Founded a city	Romulus=romulus	Dido=dido	Peter the Great=peter-the-great	Alexander the Great=alexander-the-great
+@ 42
+1	Women writers	Sappho=sappho	Sor Juana=sor-juana-ines-de-la-cruz	George Eliot=george-eliot	Gabriela Mistral=gabriela-mistral
+2	The Cold War	Berlin Wall=berlin-wall	Cuban Missile Crisis=cuban-missile-crisis	Korean War=korean-war	Marshall Plan=marshall-plan
+3	Norsemen	Erik the Red=erik-the-red	Leif Erikson=leif-erikson	Rollo=rollo	Sweyn Forkbeard=sweyn-forkbeard
+4	The first emperors	Qin Shi Huang=qin-shi-huang	Augustus=augustus-roman-emperor	Iturbide=agustin-de-iturbide	Babur=babur
+@ 43
+1	Empires that fell after the First World War	Austria-Hungary=/empire/austro-hungarian-empire	German Empire=/empire/german-empire	Ottoman Empire=/empire/ottoman-empire	Russian Empire=/empire/russian-empire
+2	Movements in art	Impressionism=impressionism	Expressionism=expressionism	Art Nouveau=art-nouveau	Futurism=futurism
+3	Siege engines	Battering ram=battering-ram	Catapult=catapult	Siege tower=siege-tower	Trebuchet=counterweight-trebuchet
+4	Died in 1896	Alfred Nobel=alfred-nobel	Henry Parkes=henry-parkes	Trikoupis=charilaos-trikoupis	Rainilaiarivony=rainilaiarivony
+@ 44
+1	Lakes of Africa	Lake Victoria=lake-victoria	Lake Tanganyika=lake-tanganyika	Lake Chad=lake-chad	Lake Tana=lake-tana
+2	Writing systems	Hangul=hangul	Devanagari=devanagari	Carolingian minuscule=carolingian-minuscule	ʼPhags-pa=phags-pa-script
+3	Periods of Chinese history	Warring States=warring-states-period	Three Kingdoms=three-kingdoms-period	Sixteen Kingdoms=sixteen-kingdoms	Five Dynasties=five-dynasties-and-ten-kingdoms-period
+4	Died in 1884	Gregor Mendel=gregor-mendel	Cetshwayo=cetshwayo	Elias Lönnrot=elias-lonnrot	Alberdi=juan-bautista-alberdi
+@ 45
+1	Firearms	Arquebus=arquebus	Matchlock=matchlock	Maxim gun=maxim-gun	Gatling gun=gatling-gun
+2	Coins and money through history	Daric=daric	Talent=talent	Kopek=kopek	Rupee=rupee
+3	Ages of Europe	Renaissance=renaissance	Age of Discovery=age-of-discovery	Scientific Revolution=scientific-revolution	Enlightenment=age-of-enlightenment
+4	Died in 1891	John A. Macdonald=john-a-macdonald	Parnell=charles-stewart-parnell	Balmaceda=jose-manuel-balmaceda	Msiri=msiri
+@ 46
+1	Heroes of Greek myth	Achilles=achilles	Odysseus=odysseus	Heracles=heracles	Theseus=theseus
+2	Places in the life of the Buddha	Lumbini=lumbini	Bodh Gaya=bodh-gaya	Sarnath=sarnath	Kushinagar=kushinagar
+3	Kings of Poland	Casimir the Great=casimir-iii-the-great	Stephen Báthory=stephen-bathory	Jan III Sobieski=jan-iii-sobieski	Sigismund III=sigismund-iii-vasa
+4	Died in 1865	Semmelweis=ignaz-semmelweis	Andrés Bello=andres-bello	Rafael Carrera=rafael-carrera	Andrés de Santa Cruz=andres-de-santa-cruz
+@ 47 (Napoleon was sent to Elba and Saint Helena, but there is no group of people here)
+1	Hindu gods	Vishnu=vishnu	Shiva=shiva	Brahma=brahma	Ganesha=ganesha
+2	Holy cities	Jerusalem=jerusalem	Mecca=mecca	Varanasi=varanasi	Lhasa=lhasa
+3	Islands of exile and prison	Elba=elba	Saint Helena=saint-helena	Robben Island=robben-island	Devil's Island=devils-island
+4	Died in 1861	Cavour=camillo-benso-count-of-cavour	Ranavalona I=ranavalona-i	Frederick William IV=frederick-william-iv-of-prussia	Lola Montez=lola-montez
+@ 48 (the Somme and the Marne are rivers as well as battles)
+1	Branches of Protestantism	Calvinism=calvinism	Lutheranism=lutheranism	Anglicanism=anglicanism	Methodism=methodism
+2	Fought against Rome	Vercingetorix=vercingetorix	Jugurtha=jugurtha	Spartacus=spartacus	Boudica=boudica
+3	Palaces	El Escorial=el-escorial	Potala Palace=potala-palace	Topkapı Palace=topkapi-palace	Alhambra=alhambra
+4	Battles named after rivers	Boyne=battle-of-the-boyne	Yarmuk=battle-of-the-yarmuk	Marne=first-battle-of-the-marne	Somme=battle-of-the-somme
+@ 49 (Bernadotte was one of Napoleon's marshals before he became king of Sweden)
+1	Presidents of the United States	Franklin D. Roosevelt=franklin-d-roosevelt	John F. Kennedy=john-f-kennedy	James Monroe=james-monroe	Woodrow Wilson=woodrow-wilson
+2	Marshals of Napoleon	Ney=michel-ney	Murat=joachim-murat	Masséna=andre-massena	Davout=louis-nicolas-davout
+3	Schools of thought	Stoicism=stoicism	Neoplatonism=neoplatonism	Legalism=legalism	Neo-Confucianism=neo-confucianism
+4	Kings who came from abroad	Bernadotte=charles-xiv-john	Otto of Greece=otto-of-greece	Leopold I=leopold-i-of-belgium	George I=george-i-of-great-britain
+@ 50
+1	Temples of ancient Egypt	Karnak=karnak	Abu Simbel=abu-simbel	Philae=philae	Dendera=dendera-temple-complex
+2	Castles	Krak des Chevaliers=krak-des-chevaliers	Osaka Castle=osaka-castle	Malbork=malbork-castle	Prague Castle=prague-castle
+3	Kings of Hungary	Stephen I=stephen-i-of-hungary	Béla IV=bela-iv-of-hungary	Matthias Corvinus=matthias-corvinus	Louis II=louis-ii-of-hungary
+4	Died in 1826	Jefferson=thomas-jefferson	Raffles=stamford-raffles	John VI of Portugal=john-vi-of-portugal	James Hastie=james-hastie
+@ 51 (the Sultanate of Rum took its name from Rome)
+1	Colonies called "New"	New Spain=/empire/new-spain	New France=/empire/new-france	New Netherland=/state/new-netherland	New Sweden=/state/new-sweden
+2	Arab conquerors	Khalid ibn al-Walid=khalid-ibn-al-walid	Tariq ibn Ziyad=tariq-ibn-ziyad	Amr ibn al-As=amr-ibn-al-as	Uqba ibn Nafi=uqba-ibn-nafi
+3	Islands of South and Southeast Asia	Sri Lanka=sri-lanka	Java=java	Sumatra=sumatra	Borneo=borneo
+4	Claimed to be Roman	Holy Roman Empire=/empire/holy-roman-empire	Byzantine Empire=/empire/byzantine-empire	Sultanate of Rum=/empire/sultanate-of-rum	Latin Empire=/state/latin-empire
+@ 52 (the Golden Horde was Mongol, but here it is a Horde, not a battle)
+1	Explorers	Jacques Cartier=jacques-cartier	Henry Hudson=henry-hudson	John Cabot=john-cabot	Bartolomeu Dias=bartolomeu-dias
+2	Battles fought by the Mongols	Kalka River=battle-of-the-kalka-river	Legnica=battle-of-legnica	Mohi=battle-of-mohi	Ain Jalut=battle-of-ain-jalut
+3	Battles in India	Plassey=battle-of-plassey	Panipat=first-battle-of-panipat	Talikota=battle-of-talikota	Haldighati=battle-of-haldighati
+4	Follow "Golden"	Horde=golden-horde	Bull=golden-bull-of-1356	Horn=golden-horn	Temple=golden-temple
+@ 53
+1	Kingdoms of Africa	Ashanti=/empire/ashanti-empire	Oyo=/empire/oyo-empire	Zulu Kingdom=/empire/zulu-kingdom	Kanem-Bornu=/empire/kanem-bornu-empire
+2	Powers of southern India	Chalukyas=/empire/chalukyas-of-badami	Pallavas=/empire/pallava-dynasty	Rashtrakutas=/empire/rashtrakuta-dynasty	Vijayanagara=/empire/vijayanagara-empire
+3	Generals of the ancient world	Belisarius=belisarius	Themistocles=themistocles	Epaminondas=epaminondas	Scipio Africanus=scipio-africanus
+4	Countries named after people	Bolivia=/countries/bolivia	Colombia=/countries/colombia	Philippines=/countries/philippines	Saudi Arabia=/countries/saudi-arabia
+@ 54
+1	Empires of the steppe	Avars=/empire/avar-khaganate	Khazars=/empire/khazar-khaganate	Xiongnu=/empire/xiongnu-empire	Huns=/state/hunnic-empire
+2	Battles in Japan	Sekigahara=battle-of-sekigahara	Nagashino=battle-of-nagashino	Okehazama=battle-of-okehazama	Siege of Osaka=siege-of-osaka
+3	Kingdoms after Alexander	Seleucids=/empire/seleucid-empire	Antigonids=antigonid-dynasty	Pergamon=/state/kingdom-of-pergamon	Greco-Bactria=/state/greco-bactrian-kingdom
+4	Died in 1913	Wolseley=garnet-wolseley	Madero=francisco-i-madero	Song Jiaoren=song-jiaoren	Hoàng Hoa Thám=hoang-hoa-tham
+@ 55
+1	Seas	Baltic Sea=baltic-sea	Black Sea=black-sea	Caspian Sea=caspian-sea	Aegean Sea=aegean
+2	Battles in Africa	Adwa=battle-of-adwa	Isandlwana=battle-of-isandlwana	Kirina=battle-of-kirina	Tondibi=battle-of-tondibi
+3	Popes	Leo III=pope-leo-iii	Gregory I=pope-gregory-i	Boniface VIII=pope-boniface-viii	Pius IX=pope-pius-ix
+4	Died in 1919	Theodore Roosevelt=theodore-roosevelt	Louis Botha=louis-botha	Laurier=wilfrid-laurier	Sverdlov=yakov-sverdlov
+@ 56 (Atahualpa was an Inca emperor, but there is no such group here)
+1	Rivers of the Americas	Mississippi=mississippi-river	Orinoco=orinoco	Rio Grande=rio-grande	Paraná=parana-river
+2	Treasures of the past	Rosetta Stone=rosetta-stone	Sutton Hoo=sutton-hoo	Benin Bronzes=benin-bronzes	Lindisfarne Gospels=lindisfarne-gospels
+3	Political movements	Socialism=socialism	Zionism=zionism	Pan-Africanism=pan-africanism	Pan-Islamism=pan-islamism
+4	Executed monarchs	Charles I=charles-i-of-england	Louis XVI=louis-xvi	Maximilian of Mexico=maximilian-i-of-mexico	Atahualpa=atahualpa
+@ 57 (Saint Petersburg was built as a new capital too, but four other capitals are here)
+1	Capitals built from scratch	Brasília=brasilia	Canberra=canberra	New Delhi=new-delhi	Islamabad=islamabad
+2	Cities named after saints	São Paulo=sao-paulo	San Francisco=san-francisco	Santiago=santiago	Saint Petersburg=saint-petersburg
+3	Rulers who became saints	Louis IX=louis-ix-of-france	Stephen I of Hungary=stephen-i-of-hungary	Olaf II=olaf-ii-of-norway	Wenceslaus=wenceslaus-i-duke-of-bohemia
+4	Hide an animal	Bay of Pigs=bay-of-pigs-invasion	Little Bighorn=battle-of-the-little-bighorn	James Wolfe=james-wolfe	Richard the Lionheart=richard-i-of-england
+@ 58
+1	Russian writers	Pushkin=alexander-pushkin	Tolstoy=leo-tolstoy	Dostoevsky=fyodor-dostoevsky	Pasternak=boris-pasternak
+2	Painters of Spain's Golden Age	Velázquez=diego-velazquez	El Greco=el-greco	Murillo=bartolome-esteban-murillo	Zurbarán=francisco-de-zurbaran
+3	Fathers of the early Church	Augustine of Hippo=augustine-of-hippo	Jerome=jerome	Ambrose=ambrose	Origen=origen
+4	Died in 1900	Gottlieb Daimler=gottlieb-daimler	Umberto I=umberto-i	Wang Yirong=wang-yirong	Hsinbyumashin=hsinbyumashin
+@ 59
+1	Sacred texts in Sanskrit	Mahabharata=mahabharata	Ramayana=ramayana	Upanishads=upanishads	Rigveda=rigveda
+2	Writers of Latin America	Machado de Assis=machado-de-assis	Ricardo Palma=ricardo-palma	José Martí=jose-marti	Rubén Darío=ruben-dario
+3	Islands of the Atlantic	Madeira=madeira	Canary Islands=canary-islands	Azores=azores	Cape Verde=cape-verde
+4	Died in 1875	Hans Christian Andersen=hans-christian-andersen	García Moreno=gabriel-garcia-moreno	Mörike=eduard-morike	Dufour=guillaume-henri-dufour
+@ 60
+1	Hindu deities	Krishna=krishna	Rama=rama	Indra=indra	Ganesha=ganesha
+2	Leaders of the First Crusade	Godfrey of Bouillon=godfrey-of-bouillon	Bohemond=bohemond-i-of-antioch	Raymond of Toulouse=raymond-iv-of-toulouse	Baldwin I=baldwin-i-of-jerusalem
+3	Battles of the first millennium	Adrianople=battle-of-adrianople	Catalaunian Plains=battle-of-the-catalaunian-plains	Tours=battle-of-tours	Talas=battle-of-talas
+4	Born in 1820	Victor Emmanuel II=victor-emmanuel-ii	Multatuli=multatuli	Cuza=alexandru-ioan-cuza	Heungseon Daewongun=heungseon-daewongun

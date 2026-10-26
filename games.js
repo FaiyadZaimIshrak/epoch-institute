@@ -1,6 +1,7 @@
 // games.js - the games of /games: Emblem Pairs, Order the Ages, Globe Hunt, Which Came First?, Picture Puzzle,
-// Word Hunt and Guess the Year. Needs shared-nav.js (initNav, escHtml), games-emblems.js and games-data.js (built by
-// scripts/build-pages.ps1: curated pictures with their years, puzzle sets, Word Hunt themes). Bump games.js?v= in /games.
+// Word Hunt, Guess the Year and History Connections. Needs shared-nav.js (initNav, escHtml), games-emblems.js,
+// games-data.js and connections-data.js (built by scripts/build-pages.ps1: curated pictures with their years, puzzle
+// sets, Word Hunt themes, the Connections puzzles). Bump games.js?v= in /games.
 initNav('games');
 (function () {
   'use strict';
@@ -129,7 +130,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'hunt', 'first', 'puzzle', 'words', 'year'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   function showGame(g, focus, sub) {
     if (GAMES.indexOf(g) < 0) g = 'pairs';
@@ -754,7 +755,7 @@ initNav('games');
       F.done = true;
       var m = F.daily.m, n = (m.match(/1/g) || []).length, tot = F.daily.pairs.length, num = Math.max(1, QDAY - DAY0 + 1);
       var sk = best('daily-streak') || { n: 0, last: 0 };
-      if (sk.last !== QDAY) { sk = { n: sk.last === QDAY - 1 ? sk.n + 1 : 1, last: QDAY }; setBest('daily-streak', sk); }
+      if (sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('daily-streak', sk); }
       var squares = m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join('');
       var dn = $('first-done'), s = n >= 9 ? 3 : n >= 6 ? 2 : 1;
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + n + ' of ' + tot + ' right</p>' +
@@ -1158,6 +1159,119 @@ initNav('games');
     return { show: function () { if (!started) { started = true; newGame(); } } };
   })();
   MODS.year = Year;
+
+  // ── History Connections ──────────────────────────────────────────────────────
+  // Sixteen tiles to sort into four groups of four (connections-data.js, from scripts/connections.tsv): one puzzle a
+  // day for everyone (UTC; #1 is 26 October 2026), four mistakes allowed, "One away" when three of the four belong
+  // together, and a guess already made is not counted twice. The day's game (resumed after a reload), its squares and
+  // the streak of days played are kept in epoch-games (conn-<number>, conn-streak); an earlier puzzle can be played
+  // again for practice, which is not kept.
+  var Conn = (function () {
+    var PZ = typeof CONN_PUZZLES !== 'undefined' ? CONN_PUZZLES : [];
+    var QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 9, 26) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var EMO = ['', '🟨', '🟩', '🟦', '🟪'], K = { id: 0, num: 0, pz: null, items: [], order: [], sel: [], s: [], m: 0, h: [], k: [], done: false, practice: false, busy: false };
+    function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+    function puzzle(num) { return PZ.length ? PZ[(num - 1) % PZ.length] : null; }
+    function live(t) { $('conn-live').textContent = t; }
+    function save() { if (!K.practice) setBest('conn-' + K.num, { s: K.s, m: K.m, h: K.h, k: K.k, done: K.done }); }
+    function load(num, practice) {
+      K.id++; K.num = num; K.practice = practice; K.pz = puzzle(num); K.sel = []; K.busy = false;
+      if (!K.pz) { $('conn-grid').innerHTML = '<p class="gm-howto">The puzzles are on their way.</p>'; return; }
+      var sv = practice ? null : best('conn-' + num);
+      K.s = sv && sv.s ? sv.s.slice() : []; K.m = sv ? sv.m || 0 : 0; K.h = sv && sv.h ? sv.h.slice() : []; K.k = sv && sv.k ? sv.k.slice() : []; K.done = !!(sv && sv.done);
+      K.items = []; K.pz.g.forEach(function (g, gi) { g[2].forEach(function (it) { K.items.push({ t: it[0], slug: it[1], g: gi }); }); });
+      var r = rng(num * 7907 + 3); K.order = K.items.map(function (_, i) { return i; });   // the day's tile order is the same for everyone
+      for (var i = K.order.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = K.order[i]; K.order[i] = K.order[j]; K.order[j] = t; }
+      $('conn-done').hidden = true; $('conn-done').innerHTML = '';
+      render(); live('');
+      if (K.done) finish(true);
+    }
+    function band(gi, reveal) {
+      var g = K.pz.g[gi];
+      return '<div class="gm-cband gm-cl' + g[1] + (reveal ? ' is-reveal' : '') + '"><p class="gm-cband-t">' + escHtml(g[0]) + '</p><p class="gm-cband-i">' + g[2].map(function (it) { return escHtml(it[0]); }).join(' · ') + '</p></div>';
+    }
+    function dots() {
+      var left = 4 - K.m;
+      $('conn-left').innerHTML = 'Mistakes left <span>' + [0, 1, 2, 3].map(function (i) { return '<i class="' + (i < left ? 'on' : '') + '"></i>'; }).join('') + '</span>';
+      $('conn-left').setAttribute('aria-label', left + (left === 1 ? ' mistake' : ' mistakes') + ' left');
+    }
+    function buttons() { $('conn-go').disabled = K.sel.length !== 4 || K.done; $('conn-clear').disabled = !K.sel.length || K.done; $('conn-shuffle').disabled = K.done; }
+    function render() {
+      $('conn-num').innerHTML = (K.practice ? 'Practice: ' : 'Today: ') + 'Connections <b>#' + K.num + '</b>';
+      var sk = best('conn-streak'); $('conn-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+      dots();
+      $('conn-solved').innerHTML = K.s.map(function (gi) { return band(gi); }).join('');
+      var left = K.order.filter(function (i) { return K.s.indexOf(K.items[i].g) < 0; });
+      $('conn-grid').innerHTML = K.done ? '' : left.map(function (i) { return '<button type="button" class="gm-ct" data-i="' + i + '" aria-pressed="' + (K.sel.indexOf(i) >= 0) + '"><span>' + escHtml(K.items[i].t) + '</span></button>'; }).join('');
+      buttons();
+    }
+    $('conn-grid').addEventListener('click', function (e) {
+      var b = e.target.closest('.gm-ct'); if (!b || K.done || K.busy) return;
+      var i = +b.getAttribute('data-i'), at = K.sel.indexOf(i);
+      if (at >= 0) K.sel.splice(at, 1); else if (K.sel.length < 4) K.sel.push(i); else return;
+      b.setAttribute('aria-pressed', String(at < 0)); Sfx.play('tap'); buttons(); live('');
+    });
+    function submit() {
+      if (K.sel.length !== 4 || K.done || K.busy) return;
+      var key = K.sel.slice().sort(function (a, b) { return a - b; }).join(',');
+      if (K.k.indexOf(key) >= 0) { live('You have tried those four already.'); return; }
+      var gs = K.sel.map(function (i) { return K.items[i].g; }), cnt = {}, top = 0, topG = -1;
+      gs.forEach(function (g) { cnt[g] = (cnt[g] || 0) + 1; if (cnt[g] > top) { top = cnt[g]; topG = g; } });
+      K.k.push(key); K.h.push(gs.map(function (g) { return K.pz.g[g][1]; }));
+      var id = K.id, tiles = K.sel.map(function (i) { return $('conn-grid').querySelector('[data-i="' + i + '"]'); });
+      K.busy = true;
+      if (top === 4) {
+        Sfx.play('good'); tiles.forEach(function (t) { if (t) t.classList.add('gm-ct-hit'); });
+        K.s.push(topG); K.sel = []; if (K.s.length === 4) K.done = true; save();
+        setTimeout(function () { if (id !== K.id) return; K.busy = false; render(); live('Right: ' + K.pz.g[topG][0] + '.'); if (K.done) finish(); }, reduce ? 0 : 420);
+      } else {
+        K.m++; if (K.m >= 4) K.done = true; save(); Sfx.play('bad');
+        tiles.forEach(function (t) { if (t) { t.classList.remove('gm-shake'); void t.offsetWidth; t.classList.add('gm-shake'); } });
+        dots(); bump($('conn-left')); live(top === 3 ? 'One away…' : 'Not a group.');
+        setTimeout(function () { if (id !== K.id) return; K.busy = false; if (K.done) { K.sel = []; render(); finish(); } else buttons(); }, reduce ? 0 : 520);
+      }
+    }
+    $('conn-go').addEventListener('click', submit);
+    $('conn-clear').addEventListener('click', function () { K.sel = []; render(); live(''); });
+    $('conn-shuffle').addEventListener('click', function () {
+      var rest = K.order.filter(function (i) { return K.s.indexOf(K.items[i].g) < 0; }); shuffle(rest);
+      K.order = K.order.filter(function (i) { return K.s.indexOf(K.items[i].g) >= 0; }).concat(rest); render();
+    });
+    // the end: the groups not found (in order of difficulty), the squares to share, every tile's encyclopedia entry
+    function finish(again) {
+      K.done = true;
+      var won = K.s.length === 4, rest = [0, 1, 2, 3].filter(function (gi) { return K.s.indexOf(gi) < 0; }).sort(function (a, b) { return K.pz.g[a][1] - K.pz.g[b][1]; });
+      $('conn-solved').innerHTML = K.s.map(function (gi) { return band(gi); }).join('') + rest.map(function (gi) { return band(gi, true); }).join('');
+      $('conn-grid').innerHTML = ''; buttons();
+      var sk = best('conn-streak') || { n: 0, last: 0 };
+      if (!K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('conn-streak', sk); }
+      var squares = K.h.map(function (row) { return row.map(function (l) { return EMO[l]; }).join(''); }).join('\n');
+      var s = won ? (K.m === 0 ? 3 : K.m <= 2 ? 2 : 1) : 0, dn = $('conn-done');
+      dn.innerHTML = '<div class="gm-done-card">' + (won ? stars(s) : '') + '<p class="gm-done-t">' + (won ? (K.m ? 'Solved, with ' + K.m + (K.m === 1 ? ' mistake' : ' mistakes') : 'Solved without a mistake!') : 'Out of guesses: ' + K.s.length + ' of 4 groups') + '</p>' +
+        '<p class="gm-daily-sq gm-conn-sq" aria-label="Your guesses, in colours of the groups">' + squares.replace(/\n/g, '<br>') + '</p>' +
+        '<p class="gm-done-s">Connections #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new puzzle in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' +
+        '<div class="gm-conn-links">' + [0, 1, 2, 3].sort(function (a, b) { return K.pz.g[a][1] - K.pz.g[b][1]; }).map(function (gi) { var g = K.pz.g[gi]; return '<p><i class="gm-cdot gm-cl' + g[1] + '"></i><b>' + escHtml(g[0]) + ':</b> ' + g[2].map(function (it) { return '<a href="' + escHtml(it[1].charAt(0) === '/' ? it[1] : '/encyclopedia/' + encodeURIComponent(it[1])) + '">' + escHtml(it[0]) + '</a>'; }).join(', ') + '</p>'; }).join('') + '</div>' +
+        (K.practice ? '' : newsletterPrompt('connections')) + '</div>';
+      share(dn, 'Epoch Connections #' + K.num + '\n' + squares, 'conn', { title: 'Connections #' + K.num, score: K.s.length + '/4', unit: won ? (K.m ? K.m + (K.m === 1 ? ' mistake' : ' mistakes') : 'no mistakes') : 'groups found', stars: won ? s : null, grid: K.h,
+        note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'A new puzzle every day', url: 'the-epoch-institute.org/games#conn' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again) { if (won) { confetti(dn); Sfx.play('win'); } }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    // earlier puzzles, for practice
+    var pick = $('conn-pick');
+    function options() {
+      var n = Math.min(TODAY - 1, PZ.length - 1), h = '<option value="' + TODAY + '">Today&rsquo;s puzzle (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best('conn-' + i) && best('conn-' + i).done ? ' (played)' : '') + '</option>';
+      pick.innerHTML = h; pick.parentNode.hidden = TODAY < 2 || !PZ.length;
+    }
+    pick.addEventListener('change', function () { var n = +pick.value; load(n, n !== TODAY && !(best('conn-' + n) && best('conn-' + n).done)); });
+    var started = false;
+    return { show: function () { if (!started) { started = true; options(); load(TODAY, false); } } };
+  })();
+  MODS.conn = Conn;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the last one played
   var hp = location.hash.slice(1).split('-'), startGame = hp[0], startSub = hp.slice(1).join('-');

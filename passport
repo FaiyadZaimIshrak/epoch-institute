@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>My History: Your Passport Through the Past — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Your passport through history: the profiles, states, centuries and years you have read, the paths you finished and the games you played, with stamps to collect.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://the-epoch-institute.org/passport">
+<meta property="og:type" content="website">
+<meta property="og:title" content="My History — The Epoch Institute">
+<meta property="og:description" content="A passport of everything you have read and played at The Epoch Institute, with stamps to collect.">
+<meta property="og:url" content="https://the-epoch-institute.org/passport">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=49">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"My History"}]},{"@type":"WebPage","name":"My History","url":"https://the-epoch-institute.org/passport","description":"A passport of everything read and played at The Epoch Institute, kept in the reader's own browser."}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<main id="main" class="pass-page ref-page">
+<div class="pass-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">My History</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">My History</h1>
+  <p class="ref-lede">Your passport through the past: every page you read, every century you visit and every game you play adds to it. It is kept in this browser and nowhere else, with no account, and only you can see it.</p>
+</header>
+
+<section class="pass-summary" id="pass-summary" aria-label="In numbers"><noscript><p class="pass-note">The passport needs JavaScript.</p></noscript></section>
+
+<section aria-labelledby="pass-stamps-t">
+  <h2 class="ref-sec-title" id="pass-stamps-t">Stamps <span class="n" id="pass-stamps-n"></span></h2>
+  <ul class="pass-stamps" id="pass-stamps"></ul>
+</section>
+
+<section aria-labelledby="pass-kinds-t">
+  <h2 class="ref-sec-title" id="pass-kinds-t">What you have read</h2>
+  <div class="pass-cols">
+    <div><h3 class="pass-h3">By kind of page</h3><ul class="pass-bars" id="pass-kinds"></ul></div>
+    <div><h3 class="pass-h3">Profiles by region</h3><ul class="pass-bars" id="pass-regions"></ul></div>
+  </div>
+</section>
+
+<section aria-labelledby="pass-cent-t">
+  <h2 class="ref-sec-title" id="pass-cent-t">Centuries visited <span class="n" id="pass-cent-n"></span></h2>
+  <ol class="pass-cents" id="pass-cents"></ol>
+</section>
+
+<section aria-labelledby="pass-play-t">
+  <h2 class="ref-sec-title" id="pass-play-t">Paths, quizzes and games</h2>
+  <ul class="pass-play" id="pass-play"></ul>
+</section>
+
+<section aria-labelledby="pass-recent-t" id="pass-recent-wrap" hidden>
+  <h2 class="ref-sec-title" id="pass-recent-t">Lately</h2>
+  <ul class="ref-cent-list" id="pass-recent"></ul>
+</section>
+
+<section class="pass-keep" aria-labelledby="pass-keep-t">
+  <h2 class="ref-sec-title" id="pass-keep-t">Share, keep or start again</h2>
+  <div class="pass-acts"><button type="button" class="gm-share" id="pass-share">Share my passport</button><button type="button" class="gm-again" id="pass-export">Make a backup code</button><button type="button" class="gm-again" id="pass-clear">Clear my history</button></div>
+  <div class="pass-code" id="pass-code-box" hidden>
+    <label for="pass-code">Your backup code: keep it, or paste it into this page in another browser to carry your passport there.</label>
+    <textarea id="pass-code" rows="4" readonly></textarea>
+    <button type="button" class="gm-again" id="pass-copy">Copy the code</button>
+  </div>
+  <details class="pass-restore"><summary>Restore from a backup code</summary>
+    <label for="pass-in">Paste a backup code. What it holds is added to what is here; nothing here is lost.</label>
+    <textarea id="pass-in" rows="4"></textarea>
+    <button type="button" class="gm-again" id="pass-restore">Restore</button>
+  </details>
+  <p class="pass-note" id="pass-msg" role="status" aria-live="polite"></p>
+  <p class="pass-note">Opened the site inside Instagram, Facebook or another app? That browser keeps its own passport: make a backup code there and restore it in your usual browser.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=33"></script>
+<script>initNav('passport');</script>
+<script src="/passport.js?v=1"></script>
+</body>
+</html>

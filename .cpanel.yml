@@ -7,7 +7,7 @@ deployment:
     - export DEPLOYPATH=/home/theeiorh/public_html/
     - rsync -a *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH || /bin/cp -R *.html *.css *.js *.csv *.json .htaccess $DEPLOYPATH
     - (rsync -a *.txt *.xml *.svg *.png *.ico $DEPLOYPATH || /bin/cp *.txt *.xml *.svg *.png *.ico $DEPLOYPATH) 2>/dev/null; true
-    - rsync -a index about research research-series profiles community contributors dataset explorer connections atlas quiz contact start games kids search timeline $DEPLOYPATH || /bin/cp index about research research-series profiles community contributors dataset explorer connections atlas quiz contact start games kids search timeline $DEPLOYPATH
+    - rsync -a index about research research-series profiles community contributors dataset explorer connections atlas quiz contact start games kids search timeline passport $DEPLOYPATH || /bin/cp index about research research-series profiles community contributors dataset explorer connections atlas quiz contact start games kids search timeline passport $DEPLOYPATH
     - for d in encyclopedia state today-in-history countries centuries paths speeches years people; do [ -f "${DEPLOYPATH}$d" ] && /bin/rm -f "${DEPLOYPATH}$d"; /bin/mkdir -p "${DEPLOYPATH}$d"; if command -v rsync >/dev/null 2>&1; then rsync -a --delete "$d/" "${DEPLOYPATH}$d/"; else /bin/cp -R "$d/." "${DEPLOYPATH}$d/"; fi; done; true
     - rsync -a sitemaps fonts $DEPLOYPATH || /bin/cp -R sitemaps fonts $DEPLOYPATH
     - /bin/mkdir -p ${DEPLOYPATH}feeds; /bin/cp feeds/.htaccess ${DEPLOYPATH}feeds/.htaccess

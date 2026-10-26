@@ -116,7 +116,7 @@ var EpochQuiz = (function () {
       st.guesses.push(right ? puzzle.name : g); input.value = '';
       if (right) { st.done = true; st.won = true; } else if (st.guesses.length >= clues.length) st.done = true;
       if (st.done && opts.daily) {
-        var sk = streak(); sk.n = st.won ? (sk.last === puzzle.day - 1 ? sk.n + 1 : 1) : 0; sk.last = puzzle.day;
+        var sk = streak(); sk.n = st.won ? (sk.last === puzzle.day - 1 ? sk.n + 1 : 1) : 0; sk.last = puzzle.day; sk.b = Math.max(sk.b || 0, sk.n);   // b: the best run (the passport's stamps)
         try { localStorage.setItem('epoch-quiz-streak', JSON.stringify(sk)); } catch (e2) {}
       }
       save(); render();
