@@ -8,8 +8,8 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
 index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
-countries/ · centuries/ · paths/ · speeches/ · years/ · people/ (each has an .htaccess forcing text/html; /folder
-redirects to /folder/).
+countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ (each has an .htaccess forcing text/html;
+/folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series.
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
 Plus 404.html and generator.html (generator is NOT deployed — see .cpanel.yml).
 
@@ -17,12 +17,12 @@ Plus 404.html and generator.html (generator is NOT deployed — see .cpanel.yml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
 Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, History Quiz, History Games, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
-Research Series, Open Data, Research Hub, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
+Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -84,8 +84,9 @@ application/json.
 
 ## Key variables (shared-data.js)
 EPOCH_API_URL — Google Apps Script (articles, opinions, announcements, confirmed_articles)
-FORMSPREE_URL — contact page, newsletter and the Research Series "Notify me" forms (fields name, email, topic,
-  message, page, _subject, _gotcha honeypot)
+FORMSPREE_URL — contact page and newsletter forms (fields name, email, topic, message, page, _subject, _gotcha
+  honeypot). Until Oct 2026 the unpublished Research Series essays had "Notify me" forms: those sign-ups are in
+  Formspree with the subject "Notify me: Series 0N — …"
 CONTRIB_URL — separate Apps Script for contributors (list); CONTRIB_APPLY_URL — the "Apply to contribute" form
 The Apps Scripts are not in this repo. Found Oct 2026, to fix there: `confirmed_articles` fails with
 "getOrCreateProcessedFolder is not defined" (so no community article ever shows), and `articles` returns every
@@ -112,7 +113,7 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 or they won't be deployed. Every copy uses rsync -a (cp fallback): rsync writes to a temporary file and renames it,
 so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
 the broken copy in its cache - Oct 2026), and only changed files are copied. encyclopedia/, state/,
-today-in-history/, countries/, centuries/ and paths/ use rsync --delete, so pages removed from the repo also disappear
+today-in-history/, countries/, centuries/, paths/, speeches/, years/, people/, essays/ and teachers/ use rsync --delete, so pages removed from the repo also disappear
 from the server (the loop also removes an old root FILE of the same name: /paths was a file until Oct 2026).
 Root pages are copied by name (the rsync line listing index, about, … atlas, quiz): add new ones there.
 After deploying, run scripts/ping-indexnow.ps1: it submits the pages the last build changed
@@ -433,6 +434,35 @@ and for /games. The speaker's portrait (SpPortrait: the speaker entry's picture)
 index card; "Share this quote" (data-share-text) sits under the key passage, and "Read the full speech ↓" shows only
 when the full text is folded (over 600 words).
 
+## Research Series (/research-series, /essays/<slug>)
+Five essays, sources in scripts/essays/NN-slug.html: a comment of `key: value` lines (title, subtitle, card = the
+text of its card, desc ≤ 160, published yyyy-mm-dd, picture `entry slug|caption` (the games' 800 px copy when
+images/games/<slug>.jpg exists, else the entry's thumbnail; the entry's credit is shown) or cover `path|alt`,
+profiles = slugs for "Profiles in this essay"), then the essay's HTML: `<h2 id="sN-…">` sections, the last one
+`…-reading` (Further Reading, `ul.essay-refs`: real works only), p, i, gold links written by hand (class enc-link on
+/encyclopedia/ and /state/ links for the preview cards; plain on /empire/), `div.essay-table-wrap > table.essay-table`.
+build-pages.ps1 writes /essays/<slug> (kicker with date and reading time, Share, figure, contents list, body, Further
+Reading, profile cards, Cite this essay, previous/next; Article JSON-LD with datePublished, wordCount and the works as
+citation), the cards of /research-series (`build:essays`, with a script forwarding the old #series-0N addresses) and
+feed.xml (guid = the old research-series#series-NN, so readers see no essay twice). It stops on a link to an unknown
+entry, profile or state. 01 and 02 (May 2026) were moved out of the page's script in Oct 2026 with their text
+unchanged; 03–05 were written then, their "What the Data Shows" figures computed from the power curves (shared-data.js
+EMPIRES), the register (data/polities.json) and epoch-stats.js. The Listen button reads article.essay-view (h1,
+.essay-sub, .essay-body h2/p/li): keep Further Reading and the contents list outside .essay-body.
+
+## Teachers' Corner (/teachers/)
+build-pages.ps1 writes the guide (/teachers/: the worksheets, ideas for the classroom, ages, citing and picture
+licences) and the worksheets: /teachers/path-<slug> and /teachers/century-<slug>, only where the data gives a task (two for a century; Oct 2026: 23 paths, 32 centuries - five paths are about undated people or terms, the early BCE centuries are thin).
+Every task comes from the data, never from made-up claims: stops or events put in order by their first year
+(WsSpread: no two within 10 years on a path, 3 in a century; century events dated "c." are left out), people matched to
+their lifespans ([EpochBuild.W]::Range: a plain two-part lifespan), the numbered states of a century map (profiles
+first, then the best-connected states alive at mid-century with a known seat, spread out) named from a word bank,
+glossary terms the texts use (the rarest across all sheets, everyday words in $WSSTOP left out), and questions built
+on each path stop's own "why" (first, middle and last stop, then the tagline). Orders are shuffled with a seed (the
+same on every build, never the answer's order). The answer key is a folded details#answers; enc-page.js's
+.ws-print buttons open or close it and print; @media print in shared.css sets A4, hides the tools and puts the key
+on a page of its own. Menu: More → Teachers' Corner; footer Institute column; Research Hub card (hub-5 row).
+
 ## Voice
 Write in a general, academic register about the past itself. The encyclopedia no longer says "the X profile
 treats/notes/describes …" (786 such frames were rewritten in Oct 2026: a clause after "notes that" stands alone;
@@ -494,6 +524,13 @@ the §"Kinds of profile" recipe: PROFILE_KINDS entry, EMPIRES rows with kind, te
   paragraph read is outlined (.is-speaking) and followed on screen until the reader scrolls; the player (.listen-bar)
   sits above .path-journey and to-top; pagehide stops it; speed 0.8/1/1.2 in epoch-listen-rate. window.epochListen
   exposes parts/chunks/speakable for tests (scratchpad t-listen.ps1 runs them against a stubbed speechSynthesis).
+  Voices (Oct 2026, after "this sounds fake"): the device's English voices are ranked by how natural they sound —
+  neural first (Edge's "Online (Natural)", Apple's "Premium"), then Apple's "Enhanced", network voices (Chrome's
+  Google voices, localService false), the basic voices, and Apple's novelty and Eloquence voices (Bubbles, Grandpa …)
+  only when there is nothing else; en-GB before en-US within a rank. The player's menu (.lb-voice) lists them
+  ("Sonia (natural) · UK") and a choice is kept in epoch-listen-voice and applies at once (scratchpad t-voices.ps1:
+  Edge, Chrome and Apple voice lists). The voice is still the device's: Edge and Apple's downloaded voices sound
+  natural, a phone's basic voice does not.
 - Both are generated from encyclopedia-data.js + empire-section-images.js; regenerate them whenever those change.
 
 ## Empire pages

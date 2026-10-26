@@ -10,9 +10,9 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Thematic essay series from The Epoch Institute exploring the structural forces behind civilisational rise and collapse.">
+<meta name="description" content="Essays from The Epoch Institute on the forces behind the rise and collapse of civilisations: power, trade, collapse, exchange and war.">
 <meta property="og:title" content="Research Series: Essays on Rise and Collapse — The Epoch Institute">
-<meta property="og:description" content="Thematic essays on administrative architecture, economic networks, military innovation, cultural diffusion, and civilisational collapse.">
+<meta property="og:description" content="Thematic essays on administrative architecture, economic networks, military innovation, cultural exchange, and civilisational collapse.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/research-series">
 <meta property="og:site_name" content="The Epoch Institute">
@@ -23,101 +23,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/research-series">
-<link rel="alternate" type="application/rss+xml" title="The Epoch Institute Research Series" href="/feed.xml">
-<link rel="stylesheet" href="/shared.css?v=49">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<link rel="stylesheet" href="/shared.css?v=50">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-#research-series { min-height: auto; justify-content: flex-start; padding-top: 110px; }   /* top-aligned: no blank band on tall screens */
-.series-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px; padding: 0 40px 48px; max-width: 1200px; margin: 0 auto;
-}
-.series-card {
-  background: var(--surface); border: 0.5px solid var(--border);
-  border-radius: 6px; padding: 32px 28px; cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
-  display: flex; flex-direction: column; gap: 12px;
-}
-.series-card:hover, .series-card:active { border-color: var(--gold); background: rgba(var(--gold-rgb),0.04); }
-.series-number {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.7; font-weight: 600;}
-.series-title {
-  font-family: var(--font-display); font-size: clamp(14px, 1.8vw, 18px);
-  color: var(--gold-light); letter-spacing: 0.04em; margin: 0; line-height: 1.4;
-}
-.series-subtitle {
-  font-family: var(--font-text); font-style: italic;
-  font-size: 16px; color: var(--muted); margin: 0;
-}
-.series-desc {
-  font-family: var(--font-text); font-size: 17px;
-  color: var(--text); line-height: 1.7; margin: 0; opacity: 0.85;
-}
-.series-cta {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--muted); transition: color 0.2s; font-weight: 600;}
-.series-card:hover .series-cta, .series-card:active .series-cta { color: var(--gold); }
-.series-card-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-top: auto; padding-top: 8px; border-top: 0.5px solid var(--border);
-}
-.series-copy-link {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--muted); background: none;
-  border: none; cursor: pointer; padding: 0; transition: color 0.2s; font-weight: 600;}
-.series-card:hover .series-copy-link, .series-card:active .series-copy-link { color: var(--gold); }
-.series-end-share { margin-top: 40px; padding-top: 24px; border-top: 0.5px solid var(--border); display: inline-block; position: relative; }
-.series-end-share .tih-share-btn { position:static !important; opacity:1 !important; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); padding:0; font-weight: 600;}
-.series-end-share .tih-share-btn:hover { color:var(--gold) !important; opacity:1 !important; }
-.series-end-share .tih-share-dropdown { bottom:auto !important; top:calc(100% + 4px) !important; right:auto !important; left:0 !important; }
-.series-status {
-  display: inline-block; font-family: var(--font-ui); font-size: 12px;
-  letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px;
-  border: 0.5px solid var(--border); border-radius: 2px; color: var(--muted); font-weight: 600;}
-.series-status.available { border-color: rgba(var(--gold-rgb),0.4); color: var(--gold); opacity: 0.8; }
-.series-card.coming-soon {
-  opacity: 0.45; cursor: default; pointer-events: none;
-}
-.series-card.coming-soon .series-cta { color: var(--muted); }
-.series-card-thumb {
-  width: 100%; aspect-ratio: 1/1; object-fit: cover;
-  border-radius: 4px; margin-bottom: 4px; display: block;
-}
-.series-detail-hero {
-  width: 100%; max-width: 560px; aspect-ratio: 1/1;
-  object-fit: cover; border-radius: 4px;
-  display: block; margin: 0 auto 36px;
-}
-@media (max-width: 600px) { .series-detail-hero { max-width: 100%; } }
-
-/* ── Series detail view ── */
-#series-detail { display: none; min-height: 100vh; padding-top: 60px; }
-.series-detail-inner { max-width: 860px; margin: 0 auto; padding: 40px 40px 80px; }
-.series-detail-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 0.5px solid var(--border); }
-.series-detail-number {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin: 0 0 10px; font-weight: 600;}
-.series-detail-title {
-  font-family: var(--font-display); font-size: clamp(20px, 3vw, 32px);
-  color: var(--gold-light); letter-spacing: 0.05em; margin: 0 0 8px; line-height: 1.3;
-}
-.series-detail-subtitle {
-  font-family: var(--font-text); font-style: italic;
-  font-size: 19px; color: var(--muted); margin: 0;
-}
-.series-detail-body {
-  font-family: var(--font-text); font-size: 18px;
-  color: var(--text); line-height: 1.85;
-}
-.series-detail-body p { margin: 0 0 20px; }
-.series-detail-body p:last-child { margin-bottom: 0; }
-@media (max-width: 600px) {
-  .series-grid { grid-template-columns: 1fr; padding: 0 16px 32px; }
-  .series-detail-inner { padding: 24px 16px 48px; }
-}
-</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>
@@ -131,337 +40,36 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Research Series — The Epoch Institute",
-  "description": "Thematic essay series examining the structural forces behind civilisational rise and collapse.",
+  "description": "Thematic essays examining the structural forces behind civilisational rise and collapse.",
   "url": "https://the-epoch-institute.org/research-series",
   "isPartOf": { "@type": "WebSite", "name": "The Epoch Institute", "url": "https://the-epoch-institute.org" }
 }
 </script>
 </head>
 <body>
-<main id="main">
-
-<!-- Gallery view -->
-<section id="research-series">
+<main id="main" class="rs-page">
+<div class="rs-wrap">
+<header class="ref-head">
   <span class="hero-ornament"></span>
   <h1 class="research-title">Research Series</h1>
-  <p class="research-subtitle">Thematic essays examining the structural forces behind civilisational rise and collapse.</p>
-
-  <div class="series-grid">
-
-    <div class="series-card" onclick="openSeriesDetail('series-01')">
-      <img class="series-card-thumb" src="/images/series-01-cover.jpg" alt="The Architecture of Power cover">
-      <div>
-        <span class="series-number">Series 01</span>
-        <span class="series-status available" style="margin-left:10px;">Available</span>
-      </div>
-      <h3 class="series-title">The Architecture of Power</h3>
-      <p class="series-subtitle">How Empires Build the Structures That Sustain Them</p>
-      <p class="series-desc">An examination of the administrative, legal, and infrastructural systems that allowed large-scale polities to persist — and why their absence almost always preceded collapse.</p>
-      <div class="series-card-footer">
-        <span class="series-cta">Read Series →</span>
-        <button class="series-copy-link" onclick="event.stopPropagation(); copySeriesLink(this)">Copy link</button>
-      </div>
-    </div>
-
-    <div class="series-card" onclick="openSeriesDetail('series-02')">
-      <div>
-        <span class="series-number">Series 02</span>
-        <span class="series-status available" style="margin-left:10px;">Available</span>
-      </div>
-      <h3 class="series-title">Trade and Territory</h3>
-      <p class="series-subtitle">Economic Networks Across the Ancient and Medieval World</p>
-      <p class="series-desc">A study of how control over trade routes, currency systems, and agricultural surplus shaped imperial ambition — and how economic disruption so often proved fatal to imperial order.</p>
-      <div class="series-card-footer">
-        <span class="series-cta">Read Series →</span>
-        <button class="series-copy-link" onclick="event.stopPropagation(); copySeriesLink(this)">Copy link</button>
-      </div>
-    </div>
-
-    <div class="series-card coming-soon" aria-disabled="true">
-      <div>
-        <span class="series-number">Series 03</span>
-        <span class="series-status" style="margin-left:10px;">In Preparation</span>
-      </div>
-      <h3 class="series-title">The Collapse Problem</h3>
-      <p class="series-subtitle">Common Patterns in Imperial Decline Across Five Millennia</p>
-      <p class="series-desc">Why do empires fall? Comparing the trajectories of the Western Roman Empire, the Abbasid Caliphate, the Mongol Empire, and others to identify recurring structural vulnerabilities.</p>
-      <form class="series-notify-form" onsubmit="seriesNotify(event,'Series 03 — The Collapse Problem')">
-        <input type="email" class="series-notify-input" placeholder="your@email.com" required aria-label="Your email address">
-        <button type="submit" class="series-notify-btn">Notify me</button>
-      </form>
-      <span class="series-cta">In Preparation</span>
-    </div>
-
-    <div class="series-card coming-soon" aria-disabled="true">
-      <div>
-        <span class="series-number">Series 04</span>
-        <span class="series-status" style="margin-left:10px;">In Preparation</span>
-      </div>
-      <h3 class="series-title">Cross-Cultural Exchange</h3>
-      <p class="series-subtitle">How Empires Spread — and Were Changed by — Ideas and Culture</p>
-      <p class="series-desc">From Hellenisation to the Islamic Golden Age to the Columbian Exchange, this series explores the two-way nature of cultural contact under imperial conditions and its lasting consequences.</p>
-      <form class="series-notify-form" onsubmit="seriesNotify(event,'Series 04 — Cross-Cultural Exchange')">
-        <input type="email" class="series-notify-input" placeholder="your@email.com" required aria-label="Your email address">
-        <button type="submit" class="series-notify-btn">Notify me</button>
-      </form>
-      <span class="series-cta">In Preparation</span>
-    </div>
-
-    <div class="series-card coming-soon" aria-disabled="true">
-      <div>
-        <span class="series-number">Series 05</span>
-        <span class="series-status" style="margin-left:10px;">In Preparation</span>
-      </div>
-      <h3 class="series-title">The Military Revolution</h3>
-      <p class="series-subtitle">Technology, Tactics, and the Shifting Balance of Power</p>
-      <p class="series-desc">How advances in military technology — the stirrup, gunpowder, the warship — reshaped the competitive landscape between polities and enabled otherwise peripheral states to become world powers.</p>
-      <form class="series-notify-form" onsubmit="seriesNotify(event,'Series 05 — The Military Revolution')">
-        <input type="email" class="series-notify-input" placeholder="your@email.com" required aria-label="Your email address">
-        <button type="submit" class="series-notify-btn">Notify me</button>
-      </form>
-      <span class="series-cta">In Preparation</span>
-    </div>
-
-  </div>
+  <p class="ref-lede">Thematic essays on the structural forces behind the rise and collapse of civilisations. Each one compares empires across continents and ages, and ends with what the Institute&#8217;s own data shows.</p>
+</header>
+<!-- build:essays -->
+<script>(function(){var s={"01":"the-architecture-of-power","02":"trade-and-territory","03":"the-collapse-problem","04":"cross-cultural-exchange","05":"the-military-revolution"},m=/^#series-(\d\d)$/.exec(location.hash);if(m&&s[m[1]])location.replace("/essays/"+s[m[1]]);})();</script>
+<ul class="rs-grid"><li><a class="rs-card" href="/essays/the-architecture-of-power"><span class="rs-pic"><img src="/images/series-01-cover.jpg" alt="" loading="lazy"></span><span class="rs-b"><span class="rs-num">Series 01</span><span class="rs-title">The Architecture of Power</span><span class="rs-sub">How Empires Build the Structures That Sustain Them</span><span class="rs-desc">An examination of the administrative, legal, and infrastructural systems that allowed large-scale polities to persist — and why their absence almost always preceded collapse.</span><span class="rs-foot"><span class="rs-cta">Read the essay &rarr;</span><span class="rs-time">8 min read</span></span></span></a></li><li><a class="rs-card" href="/essays/trade-and-territory"><span class="rs-pic"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="rs-b"><span class="rs-num">Series 02</span><span class="rs-title">Trade and Territory</span><span class="rs-sub">Economic Networks Across the Ancient and Medieval World</span><span class="rs-desc">A study of how control over trade routes, currency systems, and agricultural surplus shaped imperial ambition — and how economic disruption so often proved fatal to imperial order.</span><span class="rs-foot"><span class="rs-cta">Read the essay &rarr;</span><span class="rs-time">10 min read</span></span></span></a></li><li><a class="rs-card" href="/essays/the-collapse-problem"><span class="rs-pic"><img src="/images/encyclopedia/persepolis.jpg" alt="" loading="lazy"></span><span class="rs-b"><span class="rs-num">Series 03</span><span class="rs-title">The Collapse Problem</span><span class="rs-sub">Common Patterns in Imperial Decline Across Five Millennia</span><span class="rs-desc">Why do empires fall? Comparing the trajectories of the Western Roman Empire, the Abbasid Caliphate, the Mongol Empire, and others to identify recurring structural vulnerabilities.</span><span class="rs-foot"><span class="rs-cta">Read the essay &rarr;</span><span class="rs-time">17 min read</span></span></span></a></li><li><a class="rs-card" href="/essays/cross-cultural-exchange"><span class="rs-pic"><img src="/images/encyclopedia/house-of-wisdom.jpg" alt="" loading="lazy"></span><span class="rs-b"><span class="rs-num">Series 04</span><span class="rs-title">Cross-Cultural Exchange</span><span class="rs-sub">How Empires Spread — and Were Changed by — Ideas and Culture</span><span class="rs-desc">From Hellenisation to the Islamic Golden Age to the Columbian Exchange, this series explores the two-way nature of cultural contact under imperial conditions and its lasting consequences.</span><span class="rs-foot"><span class="rs-cta">Read the essay &rarr;</span><span class="rs-time">14 min read</span></span></span></a></li><li><a class="rs-card" href="/essays/the-military-revolution"><span class="rs-pic"><img src="/images/games/battle-of-mohacs.jpg" alt="" loading="lazy"></span><span class="rs-b"><span class="rs-num">Series 05</span><span class="rs-title">The Military Revolution</span><span class="rs-sub">Technology, Tactics, and the Shifting Balance of Power</span><span class="rs-desc">How advances in military technology — the stirrup, gunpowder, the warship — reshaped the competitive landscape between polities and enabled otherwise peripheral states to become world powers.</span><span class="rs-foot"><span class="rs-cta">Read the essay &rarr;</span><span class="rs-time">14 min read</span></span></span></a></li></ul>
+<!-- /build:essays -->
+<section class="rs-more" aria-label="New essays">
+  <p>The figures in the essays come from the Institute&#8217;s <a href="/dataset">open data</a>: the power curves of every profile and the register of more than five thousand states, free to explore and reuse. New essays are announced in the newsletter and in the <a href="/feed.xml">RSS feed</a>.</p>
+  <form class="gm-nl" data-nl="research-series" novalidate id="rs-nl"><p class="gm-nl-t">New essays and stories from history, by email</p><span class="gm-nl-row"><input type="email" required placeholder="your@email.com" aria-label="Your email address"><button type="submit">Sign up</button></span><p class="gm-nl-msg" aria-live="polite"></p></form>
 </section>
-
-<!-- Series detail view -->
-<div id="series-detail">
-  <button class="explorer-back-btn" id="series-detail-back" style="margin:32px 0 0 40px;">← Research Series</button>
-  <div class="series-detail-inner">
-    <div class="series-detail-header">
-      <p class="series-detail-number" id="series-detail-number"></p>
-      <h2 class="series-detail-title" id="series-detail-title"></h2>
-      <p class="series-detail-subtitle" id="series-detail-subtitle"></p>
-    </div>
-    <div class="series-detail-body" id="series-detail-body"></div>
-  </div>
 </div>
-
 </main>
 
 <script src="/shared-data.js?v=8"></script>
-<script src="/shared-nav.js?v=33"></script>
+<script src="/shared-nav.js?v=34"></script>
 <script>
-var SERIES_DATA = {
-  'series-01': {
-    number: 'Series 01',
-    title: 'The Architecture of Power',
-    subtitle: 'How Empires Build the Structures That Sustain Them',
-    thumbnail: '/images/series-01-cover.jpg',
-    description: 'An examination of the administrative, legal, and infrastructural systems that allowed large-scale polities to persist — and why their absence almost always preceded collapse.',
-    rawHtml: true,
-    body: [
-      '<nav class="series-toc"><span class="series-toc-label">Contents</span><ol>' +
-        '<li><a href="#s1-q">What Distinguishes an Empire?</a></li>' +
-        '<li><a href="#s1-achaemenid">The Achaemenid Model</a></li>' +
-        '<li><a href="#s1-roman">The Roman System</a></li>' +
-        '<li><a href="#s1-collapse">Structural Erosion and Collapse</a></li>' +
-        '<li><a href="#s1-recurrence">Recurrence Across Civilisations</a></li>' +
-        '<li><a href="#s1-lesson">The Lesson for Institutions</a></li>' +
-        '<li><a href="#s1-data">What the Data Shows</a></li>' +
-      '</ol></nav>',
-
-      '<h3 id="s1-q" class="series-section-heading">What Distinguishes an Empire?</h3>' +
-      '<p>What distinguishes an empire from a merely large kingdom?</p>' +
-      '<p>Size is the most obvious answer. Empires are vast. They stretch across landscapes, peoples, languages, and climates. They absorb cities, kingdoms, tribes, and trade routes into a single political order. Yet size alone cannot explain why some empires endure for centuries while others collapse almost as quickly as they expand.</p>' +
-      '<p>The Roman Empire did not survive because Rome simply conquered a large territory. The Achaemenid Persians did not govern lands from the Aegean to the Indus merely through battlefield victory. The Han Chinese state did not maintain coherence across centuries of court struggle, frontier pressure, and internal rebellion because of scale alone.</p>' +
-      '<p>The deeper answer lies in architecture. Not only architecture in the physical sense of roads, cities, walls, ports, and aqueducts, though these mattered enormously. Rather, empire depends on the architecture of power: the deliberate construction of legal, bureaucratic, infrastructural, military, and fiscal systems capable of governing territory far beyond the personal reach of any single ruler.</p>' +
-      '<p>A kingdom can be held together by dynasty, loyalty, inheritance, or conquest. An empire requires something more durable. It must translate authority across distance. It must collect revenue from people who may never see the capital. It must resolve disputes among communities that speak different languages and follow different customs. It must move soldiers, information, grain, taxes, and commands across space faster than disorder can spread.</p>' +
-      '<p>At its core, an empire is not merely a large state. It is a system for making distance governable.</p>',
-
-      '<h3 id="s1-achaemenid" class="series-section-heading">The Achaemenid Model</h3>' +
-      '<p>The Achaemenid Empire offers one of history\'s earliest and most sophisticated examples of imperial architecture. Founded by Cyrus the Great and expanded under rulers such as Darius I, it became one of the first truly multi-ethnic imperial systems. Its success did not rest only on conquest, but on the management of diversity.</p>' +
-      '<p>Cyrus and Darius understood a principle many later rulers forgot: conquered peoples are easier to govern when they are not stripped entirely of identity. A subject population allowed to retain its temples, local customs, languages, and traditional elites is less likely to revolt than one humiliated by total cultural erasure. The Persian imperial model was therefore not one of constant forced uniformity. It was one of layered sovereignty.</p>' +
-      '<p>At the center stood the king. Beneath him operated a vast administrative framework. The satrapal system divided the empire into provinces governed by satraps, who exercised local authority while remaining subject to royal oversight. These governors could collect tribute, maintain order, and administer justice, but they did not operate in complete independence. Royal inspectors, military commanders, and reporting networks helped prevent provincial power from becoming fully autonomous.</p>' +
-      '<p>The empire also invested in the infrastructure of rule. The Royal Road connected key regions and enabled faster communication across immense distances. Standardized coinage, especially under Darius, helped facilitate taxation, trade, and payment. Census practices and tribute assessments allowed the center to understand and extract resources from its diverse territories. Imperial Aramaic served as a practical administrative language across regions where spoken languages varied widely.</p>' +
-      '<p>This was the architecture of empire in action. Persia did not need to station overwhelming military force everywhere at all times. Its power lay in the ability to govern through systems, intermediaries, and incentives. The sword conquered territory, but administration made it usable.</p>',
-
-      '<h3 id="s1-roman" class="series-section-heading">The Roman System</h3>' +
-      '<p>Rome refined the imperial architecture of power over centuries.</p>' +
-      '<p>The Roman Empire was not born fully formed. It grew through conquest, alliance, colonization, legal adaptation, and institutional experimentation. Its genius lay in transforming military expansion into administrative permanence. Rome conquered, but it also incorporated. It built roads, founded cities, extended citizenship, codified law, and created a political culture in which local elites could find advantage in participation.</p>' +
-      '<p>Roman power moved through roads and law as much as through legions. The legions built roads; the roads carried armies, merchants, officials, and tax revenues; commerce enriched cities and filled the treasury; the treasury paid soldiers and administrators; the security provided by soldiers made commerce possible. The system reinforced itself.</p>' +
-      '<p>At its height, Roman administration had produced a legal system capable of operating across an enormous and diverse world. Disputes could be adjudicated in provinces far from Rome, among people whose ancestors had never imagined Roman rule. Law provided a common imperial language of rights, obligations, contracts, property, and status. Roman citizenship, gradually expanded and eventually universalized among free inhabitants of the empire, helped turn conquest into membership.</p>' +
-      '<p>Infrastructure gave Roman authority physical form. Roads made movement predictable. Ports tied the Mediterranean into an imperial economy. Aqueducts and urban planning made cities into visible monuments of Roman order. Fortifications marked frontiers, but cities marked integration. To live under Rome was not only to pay taxes to an emperor. It was to inhabit a world shaped by Roman systems.</p>' +
-      '<p>This is why Rome endured beyond the lives of its greatest rulers. Caesar, Augustus, Trajan, and Constantine mattered, but the empire did not depend solely on any one of them. Its strength came from institutions that could survive succession, crisis, and distance. Rome\'s architecture of power made authority reproducible.</p>',
-
-      '<h3 id="s1-collapse" class="series-section-heading">Structural Erosion and Collapse</h3>' +
-      '<p>Viewed through this lens, imperial collapse often appears less like a single catastrophic event and more like the slow failure of systems.</p>' +
-      '<p>The Western Roman Empire did not fall in one dramatic moment. The deposition of the last western emperor in 476 CE became a convenient historical marker, but by then the administrative architecture of empire had already been severely weakened. The real collapse had unfolded gradually.</p>' +
-      '<p>Tax revenues declined as economic life contracted and wealthy elites found ways to avoid fiscal obligations. The rural population shrank or became harder to assess. Cities lost some of their administrative and commercial vitality. Roads and public works deteriorated when maintenance could no longer be reliably funded. The army remained essential but became increasingly expensive, fragmented, and dependent on federate groups whose loyalty was often conditional. Central authority struggled to enforce law uniformly across regions where local power brokers had become more important than imperial officials.</p>' +
-      '<p>The empire still possessed emperors, titles, ceremonies, and symbols. But the machinery beneath those symbols was failing. The problem was not simply that Rome lost battles. It was that Rome lost the systems that allowed it to recover from battles.</p>' +
-      '<p>This distinction matters. A powerful empire can survive defeat if its tax base, administrative class, military recruitment, logistics, and political legitimacy remain intact. A structurally weakened empire may collapse even after temporary victories. When the architecture fails, power becomes performative. The state may still speak in the language of command, but fewer people obey because fewer systems remain capable of translating command into reality.</p>',
-
-      '<h3 id="s1-recurrence" class="series-section-heading">Recurrence Across Civilisations</h3>' +
-      '<p>This pattern recurs across civilizations.</p>' +
-      '<p>The Abbasid Caliphate is often remembered through the catastrophe of 1258, when the Mongols sacked Baghdad. Yet the deeper weakening of Abbasid power began much earlier. From the ninth century onward, real authority increasingly shifted toward Turkish military commanders and regional dynasties. Fiscal fragmentation followed political fragmentation. Provincial revenues that once supported the caliphal center were redirected by local rulers. The caliph retained immense symbolic prestige, but the administrative and military architecture of unified rule had already eroded.</p>' +
-      '<p>The Mongols destroyed Baghdad, but they did not create Abbasid weakness from nothing. They struck a political order whose imperial systems had already lost much of their coherence.</p>' +
-      '<p>The Mughal Empire offers another example. At its height, the Mughal state combined military force, land revenue administration, elite incorporation, and courtly legitimacy into one of the early modern world\'s most formidable imperial systems. Yet by the late seventeenth and early eighteenth centuries, strains were becoming increasingly visible. Aurangzeb\'s long campaigns in the Deccan placed enormous pressure on the treasury and military. Imperial expansion stretched administrative capacity. Religious and political tensions complicated elite integration. Regional powers gained strength as the center struggled to maintain coherence.</p>' +
-      '<p>By the time the Maratha confederacy expanded and Nadir Shah invaded Delhi in 1739, Mughal authority had already been hollowed out. The empire still possessed prestige, but prestige could not substitute for functioning fiscal, military, and bureaucratic systems.</p>' +
-      '<p>The pattern is not identical in every case, but the rhythm is familiar. Imperial power rarely disappears first at the edges of symbolism. It disappears first in the working parts: tax collection, supply lines, legal enforcement, elite loyalty, military coordination, communications, and the credibility of central authority.</p>',
-
-      '<h3 id="s1-lesson" class="series-section-heading">The Lesson for Institutions</h3>' +
-      '<p>The lesson for the historian, and perhaps for the student of contemporary institutions, is that the most important question about any large-scale political structure is not how powerful it appears at its peak.</p>' +
-      '<p>The more important question is how robust its underlying architecture is under stress.</p>' +
-      '<p>Can it survive a weak ruler? Can it absorb military defeat? Can it collect revenue during crisis? Can it incorporate diverse populations without constant coercion? Can it maintain roads, records, courts, and administrative discipline across generations? Can it renew elite loyalty without allowing local power to become permanently detached from the center?</p>' +
-      '<p>Empires that invested in systems tended to last longer than those that relied primarily on personal charisma or military terror. Law, roads, fiscal administration, and bureaucracy are less dramatic than conquest, but they are far more durable. A gifted ruler can build an empire quickly. Only institutions can keep it alive after that ruler is gone.</p>' +
-      '<p>Personal authority is non-transferable. It belongs to a body, a voice, a battlefield reputation, a courtly presence. When the ruler dies, that authority must be recreated or replaced. Institutions, when well designed, outlast the individuals who build them. They allow power to be routinized. They make obedience predictable. They turn charisma into procedure.</p>' +
-      '<p>This does not mean institutions are morally neutral or inherently benevolent. Empires have used administrative systems to exploit, tax, displace, classify, and dominate subject peoples. The architecture of power can sustain injustice as easily as order. But from the standpoint of historical durability, the key point remains: empire survives when power becomes systematized.</p>',
-
-      '<h3 id="s1-data" class="series-section-heading">What the Data Shows</h3>' +
-      '<p>The Epoch Institute\'s empire trajectory data reflects this principle directly. Empires that scored highly across multiple dimensions at the same time — territory, governance, and economic output — tended to sustain power longer than those that excelled in only one dimension.</p>' +
-      '<p>Military dominance without administrative depth is impressive but fragile. Territorial expansion without fiscal integration is expensive. Economic wealth without political coherence invites fragmentation. Bureaucracy without legitimacy becomes brittle. The strongest imperial systems were those that aligned several forms of power into one structure.</p>' +
-      '<p>This helps explain why some empires endured repeated crises while others collapsed after a single succession dispute or military defeat. The question was not simply how much land they ruled. It was how deeply that land had been integrated into systems of revenue, law, communication, elite participation, and coercive capacity.</p>' +
-      '<p>The architecture of power is not glamorous. It is often hidden in ledgers, roads, courts, offices, tax registers, provincial appointments, legal formulas, and supply networks. It rarely produces the dramatic imagery of battle or coronation.</p>' +
-      '<p>But it is durable. And in the long history of empires, durability is the difference between conquest and civilization, between a ruler\'s ambition and a political order that can survive him.</p>'
-    ]
-  },
-  'series-02': {
-    number: 'Series 02',
-    title: 'Trade and Territory',
-    subtitle: 'Economic Networks Across the Ancient and Medieval World',
-    description: 'A study of how control over trade routes, currency systems, and agricultural surplus shaped imperial ambition — and how economic disruption so often proved fatal to imperial order.',
-    rawHtml: true,
-    body: [
-      '<nav class="series-toc"><span class="series-toc-label">Contents</span><ol>' +
-        '<li><a href="#s2-live">What Does an Empire Live On?</a></li>' +
-        '<li><a href="#s2-route">The Logic of the Route</a></li>' +
-        '<li><a href="#s2-coin">The Discipline of the Coin</a></li>' +
-        '<li><a href="#s2-field">The Foundation of the Field</a></li>' +
-        '<li><a href="#s2-fail">When the Economy Fails First</a></li>' +
-        '<li><a href="#s2-lesson">The Lesson for Institutions</a></li>' +
-      '</ol></nav>',
-
-      '<h3 id="s2-live" class="series-section-heading">What Does an Empire Live On?</h3>' +
-      '<p>If the first principle of empire is that it must make distance governable, the second is that it must make distance profitable. Governing is expensive. Armies must be paid, officials salaried, roads maintained, garrisons supplied, and capitals fed. No empire has ever sustained itself on conquest alone, for conquest is a cost before it is a reward. The territory an empire seizes must be made to yield more than it consumes, and the surplus must be moved — from field to granary, from province to capital, from frontier to treasury — reliably enough that the whole apparatus of rule can be financed year after year.</p>' +
-      '<p>This is why the economic question sits so close to the heart of imperial survival. An empire is not only a system for making distance governable. It is also a system for converting territory into revenue, and revenue into power. The two functions are inseparable. The roads that carried armies also carried grain and taxes. The administrators who enforced the law also assessed the tribute. The coinage that paid the soldiers also priced the goods that crossed the frontier. Strip away the economic foundation and the political structure does not merely weaken; it loses the means by which it sustains itself.</p>' +
-      '<p>Where the architecture of power describes how empires translate authority across distance, the economy of power describes what that authority feeds upon. Trade routes, currency systems, and agricultural surplus are not background conditions to imperial history. They are among its decisive forces. Empires rose by controlling them and fell when they lost control of them.</p>',
-
-      '<h3 id="s2-route" class="series-section-heading">The Logic of the Route</h3>' +
-      '<p>Before there were empires, there were routes. Rivers, mountain passes, coastlines, and caravan tracks determined where goods could move and at what cost. The empires that endured were, with striking regularity, those that understood that controlling a route was more valuable than controlling a territory.</p>' +
-      '<p>The reason is structural. A trade route is a point of leverage out of all proportion to its size. A single mountain pass, a strait, a river mouth, or an oasis chain can govern the movement of goods across thousands of miles. Whoever controls such a point can tax everything that passes, and taxation of movement is among the most efficient revenue an empire can collect. It requires no occupation of distant lands, no costly administration of subject peoples, only the ability to hold a chokepoint and levy a toll. The wealth flows to the holder regardless of who produced the goods or who will consume them.</p>' +
-      '<p>The Achaemenid Persians grasped this early. The Royal Road that ran from Sardis to Susa is often remembered as a marvel of communication, a means of moving messengers and armies with unprecedented speed. But it was also an artery of commerce, and the standardized coinage introduced under Darius made the wealth that moved along it legible and taxable. Persia did not merely connect its provinces; it monetized the connection. The empire\'s prosperity rested on its position astride the routes that linked the Mediterranean world to the resources of the Iranian plateau and beyond.</p>' +
-      '<p>Rome built its entire economic life upon the same principle, magnified to the scale of an inland sea. The Mediterranean was the great trade route of the ancient world, and Rome, by ringing it entirely, transformed it into something approaching an internal market. Grain from Egypt and North Africa, olive oil from Iberia, wine, metals, marble, and slaves moved across a sea made safe by Roman fleets and connected by Roman ports. The provisioning of the city of Rome itself — the famous grain supply that fed a population approaching a million — depended on this maritime network operating without interruption. The security that made the commerce possible was paid for by the taxes the commerce generated. The route financed the force that protected the route.</p>' +
-      '<p>The medieval world repeated the lesson on a vaster geographic canvas. The empires and states that controlled the overland routes of Central Asia, the maritime passages of the Indian Ocean, and the river systems of the Eurasian interior grew wealthy in proportion to their command of movement. The Mongol Empire, for all its reputation as a machine of destruction, presided over a period in which the overland routes across Asia became more secure and more active than they had been in centuries, and the wealth that flowed from this commerce was a foundation of Mongol power. To control the route was to control the wealth, and to control the wealth was to command the means of empire.</p>',
-
-      '<h3 id="s2-coin" class="series-section-heading">The Discipline of the Coin</h3>' +
-      '<p>If routes were the arteries of imperial economy, currency was its blood. A coinage system is one of the most revealing instruments an empire possesses, because it discloses the true condition of the state more honestly than any monument or chronicle. A stable, trusted coin is the sign of a confident and solvent power. A debased coin is the sign of a state borrowing against its own future.</p>' +
-      '<p>Currency performs functions that are easy to overlook precisely because they are so fundamental. It allows taxes to be assessed and collected across distance. It allows soldiers in distant provinces to be paid in a form they trust. It allows goods to be priced and exchanged among people who share no language and no personal acquaintance. A reliable currency, in this sense, is a form of administrative reach. It extends the authority of the center into every transaction in which the coin is used. The emperor\'s face on the coin is not vanity; it is a declaration that the holder of this coin stands within the emperor\'s economic order.</p>' +
-      '<p>This is why the debasement of currency recurs so persistently in the histories of declining empires. When an empire\'s costs outrun its revenues — when wars grow longer, frontiers grow harder to defend, and the administrative class grows more expensive to maintain — the temptation to reduce the precious-metal content of the coinage becomes nearly irresistible. By minting more coins from the same quantity of silver or gold, the state can pay its immediate obligations. But the relief is temporary and the damage is structural. The coin, once trusted, becomes suspect. Prices rise as the market recognizes the dilution. Tax revenues, collected in a depreciating currency, lose value before they can be spent. The very instrument the empire relied upon to project its authority into the economy becomes a transmitter of distrust.</p>' +
-      '<p>The later Roman Empire furnishes the textbook case. The progressive debasement of the silver coinage over the third century, as emperors struggled to fund armies during a period of relentless internal and external crisis, helped produce a spiral of rising prices and collapsing monetary confidence. Attempts to halt the spiral by decree could not restore what had been lost: the simple belief that a Roman coin was worth what it claimed to be. The monetary disorder did not by itself destroy the empire, but it dissolved one of the bonds that had held the imperial economy together, and it signaled to everyone who handled money that the center was no longer fully in command of its own affairs.</p>',
-
-      '<h3 id="s2-field" class="series-section-heading">The Foundation of the Field</h3>' +
-      '<p>Beneath the routes and the coinage lay the deepest economic foundation of all: the land and its surplus. Every pre-modern empire was, at bottom, an agrarian state. The overwhelming majority of its people worked the soil, and the surplus they produced beyond their own subsistence was the ultimate source of everything else — the taxes, the armies, the cities, the administration, the monuments. Trade and coinage moved wealth and made it usable, but agriculture created it.</p>' +
-      '<p>The management of agricultural surplus was therefore among the most consequential tasks of imperial government, and the empires that performed it well achieved a durability that those reliant on plunder or trade alone could never match. The great hydraulic civilizations organized their entire administrative existence around the productivity of the land — around irrigation, flood control, the timing of the agricultural year, and the systematic assessment and collection of the harvest. The wealth of Egypt was the wealth of the Nile, and the Egyptian state was, in large part, an apparatus for capturing the river\'s annual gift and converting it into the granaries that fed officials, soldiers, and the institutions of rule.</p>' +
-      '<p>The Mughal Empire built one of the most sophisticated systems of land-revenue administration in the pre-modern world. Its prosperity rested on the careful assessment of agricultural production across an enormous and fertile territory, and on a fiscal system designed to channel a share of that production to the imperial center while leaving enough in the countryside to sustain the cultivators who generated it. The fertility of the Gangetic plain and the administrative machinery built to tax it were, together, the foundation of Mughal power. When that machinery functioned, the empire was among the wealthiest states on earth. When the cost of holding the empire began to outrun what the land could be made to yield — as prolonged warfare in the Deccan strained the treasury — the foundation itself began to crack.</p>' +
-      '<p>This points to a vulnerability that agrarian empires could never fully escape. Their wealth was real but it was also inelastic in the short term. A harvest could not be increased by decree. When the demands of the state — driven by war, by an expanding administration, by the cost of defending overextended frontiers — grew faster than the surplus the land could provide, the empire faced a choice between equally dangerous options: tax the cultivators beyond what they could bear and risk rural collapse, or fail to meet its obligations and risk the loyalty of the soldiers and officials on whom its power depended. Many empires, confronted with this choice, did both, and the doing of both accelerated their decline.</p>',
-
-      '<h3 id="s2-fail" class="series-section-heading">When the Economy Fails First</h3>' +
-      '<p>Viewed through this lens, a great many imperial collapses reveal an economic anatomy beneath their political and military surface. The visible event — the lost battle, the deposed ruler, the sacked capital — is frequently the final consequence of an economic disorder that had been advancing, often invisibly, for a long time before.</p>' +
-      '<p>The pattern has a recognizable sequence. First, the costs of empire rise: a long war, a hardened frontier, a swollen administrative or military establishment. Then the revenue base, unable to expand as quickly, comes under strain. The state responds with the instruments available to it — heavier taxation, debasement of the currency, the sale of offices, the alienation of revenues to local powers in exchange for immediate relief. Each of these measures purchases short-term solvency at the price of long-term capacity. Heavier taxation exhausts the productive base. Debasement corrodes monetary confidence. The alienation of revenues hands the economic foundations of central power to the very regional figures who will later use that wealth to act independently of the center. By the time the visible crisis arrives, the economic sinews that would have allowed the empire to respond have already been cut.</p>' +
-      '<p>This is why disruption to an empire\'s economic networks so often proved fatal out of proportion to its apparent scale. The severing of a trade route, the loss of a grain-producing province, the collapse of a monetary system, or the breakdown of the administrative machinery that assessed and collected the agricultural surplus — any of these could remove a foundation on which the entire structure of rule depended. An empire can survive the loss of a battle if its economy remains intact, for an intact economy can fund the recruitment of new armies and the rebuilding of lost positions. An empire whose economy has already failed may collapse even in the absence of a decisive military defeat, because it has lost the means to sustain itself regardless of what happens on the battlefield.</p>' +
-      '<p>The economic foundation, in other words, is what gives an empire its resilience — its capacity to absorb shocks and recover from setbacks. When that foundation is sound, the empire is robust against crisis. When it has been hollowed out, every crisis becomes potentially terminal, because there is nothing left in reserve.</p>',
-
-      '<h3 id="s2-lesson" class="series-section-heading">The Lesson for Institutions</h3>' +
-      '<p>The lesson for the historian, and for the student of any enduring institution, is that economic foundations are easy to take for granted precisely because they operate quietly when they operate well. A functioning fiscal system, a trusted currency, secure routes of supply, and a productive base capable of generating surplus do not announce themselves. They are visible chiefly in their absence — in the disorder that follows when they fail.</p>' +
-      '<p>It is tempting, in the study of empires, to be drawn to the dramatic surface: the conquests, the rulers, the decisive battles. But the question that most reliably predicts whether a large-scale order will endure is rarely a question about its conquests. It is a question about its economy. Can it pay for what it has built? Can it move resources from where they are produced to where they are needed? Can it maintain the trust on which its currency and its commerce depend? Can it extract enough surplus to fund itself without exhausting the base that produces the surplus? Can it absorb the loss of a route, a province, or a revenue stream without losing the capacity to recover?</p>' +
-      '<p>Empires that answered these questions well endured. Empires that answered them poorly, however dazzling their conquests or charismatic their rulers, did not. The economic architecture of power is no more glamorous than the administrative architecture examined in the first essay of this series. It is hidden in tax registers, mint records, granary accounts, toll schedules, and the ledgers of distant provinces. But it is, in the long view, decisive. An empire is sustained not by the wealth it seizes in a season of conquest but by the systems through which it produces, moves, and renews wealth across generations.</p>' +
-      '<p>This is the larger purpose to which the study of these patterns is directed. To understand how empires fed themselves, financed themselves, and ultimately failed to do so is not an exercise in antiquarian curiosity. It is a way of seeing more clearly the foundations beneath every large and complex order — the quiet systems of production, exchange, and revenue without which no structure of power, ancient or modern, has ever long survived.</p>' +
-      '<p class="series-footer"><em>The Epoch Institute · Research Series</em></p>'
-    ]
-  },
-  'series-03': { number: 'Series 03', title: 'The Collapse Problem', subtitle: 'Common Patterns in Imperial Decline Across Five Millennia', body: ['This series is in preparation. Check back soon.'] },
-  'series-04': { number: 'Series 04', title: 'Cross-Cultural Exchange', subtitle: 'How Empires Spread — and Were Changed by — Ideas and Culture', body: ['This series is in preparation. Check back soon.'] },
-  'series-05': { number: 'Series 05', title: 'The Military Revolution', subtitle: 'Technology, Tactics, and the Shifting Balance of Power', body: ['This series is in preparation. Check back soon.'] }
-};
-
-function openSeriesDetail(id) {
-  var s = SERIES_DATA[id];
-  if (!s) return;
-  document.getElementById('series-detail-number').textContent   = s.number;
-  document.getElementById('series-detail-title').textContent    = s.title;
-  document.getElementById('series-detail-subtitle').textContent = s.subtitle;
-  var existingHero = document.getElementById('series-detail-hero-wrap');
-  if (existingHero) existingHero.remove();
-  if (s.thumbnail) {
-    var hw = document.createElement('div');
-    hw.id = 'series-detail-hero-wrap';
-    var heroImg = document.createElement('img');
-    heroImg.className = 'series-detail-hero';
-    heroImg.src = s.thumbnail;
-    heroImg.alt = s.title + ' cover';
-    hw.appendChild(heroImg);
-    var bodyEl = document.getElementById('series-detail-body');
-    bodyEl.parentNode.insertBefore(hw, bodyEl);
-  }
-  document.getElementById('series-detail-body').innerHTML = s.rawHtml
-    ? s.body.join('')
-    : s.body.map(function(p) { return '<p>' + escHtml(p) + '</p>'; }).join('');
-  document.getElementById('research-series').style.display = 'none';
-  var detailEl = document.getElementById('series-detail');
-  detailEl.style.display = 'block';
-  var shareUrl = 'https://the-epoch-institute.org/research-series';
-  var rawDesc = s.description || '';
-  var firstSent = rawDesc.replace(/^([^.!?]*[.!?])[\s\S]*$/, '$1').trim();
-  var tweetBase = '"' + s.title + '" — ' + (firstSent || rawDesc) + '\n\n#History #EpochInstitute';
-  var tweetText = tweetBase.length <= 240 ? tweetBase
-    : '"' + s.title + '" — ' + (firstSent || rawDesc).substring(0, Math.max(10, 240 - ('"' + s.title + '" — \n\n#History #EpochInstitute').length)) + '…\n\n#History #EpochInstitute';
-  // Inject share button in header
-  var existingShare = detailEl.querySelector('.series-share-wrap');
-  if (existingShare) existingShare.remove();
-  if (!s.rawHtml === false || s.rawHtml) {
-    var wrap = document.createElement('div');
-    wrap.className = 'series-share-wrap';
-    wrap.style.cssText = 'position:relative; display:inline-block; margin-top:16px;';
-    wrap.innerHTML = buildShareButton('series-share-dd', shareUrl, tweetText);
-    document.querySelector('.series-detail-header').appendChild(wrap);
-    attachShareListeners(wrap, shareUrl);
-  }
-  // Inject end-of-article share dropdown
-  var existingEndShare = document.getElementById('series-end-share');
-  if (existingEndShare) existingEndShare.remove();
-  var endShare = document.createElement('div');
-  endShare.id = 'series-end-share';
-  endShare.className = 'series-end-share';
-  endShare.innerHTML = buildShareButton('series-end-share-dd', shareUrl, tweetText, s.title);
-  var triggerBtn = endShare.querySelector('.tih-share-btn');
-  if (triggerBtn) triggerBtn.innerHTML = 'Share';
-  document.getElementById('series-detail-body').appendChild(endShare);
-  attachShareListeners(endShare, shareUrl);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-document.getElementById('series-detail-back').addEventListener('click', function() {
-  document.getElementById('series-detail').style.display   = 'none';
-  document.getElementById('research-series').style.display = '';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-function copySeriesLink(btn) {
-  navigator.clipboard.writeText('https://the-epoch-institute.org/research-series').then(function() {
-    var orig = btn.textContent;
-    btn.textContent = 'Copied ✓';
-    btn.style.color = 'var(--gold)';
-    setTimeout(function() { btn.textContent = orig; btn.style.color = ''; }, 1800);
-  });
-}
-
-function seriesNotify(e, seriesName) {   // sent through the contact form service; confirmed in place
-  e.preventDefault();
-  var form = e.target, input = form.querySelector('input[type="email"]'), btn = form.querySelector('button'), email = input.value.trim();
-  if (!isValidEmail(email)) { input.classList.add('form-input-error'); input.focus(); return; }
-  input.classList.remove('form-input-error'); btn.disabled = true; btn.textContent = 'Sending…';
-  fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({ email: email, _subject: 'Notify me: ' + seriesName, series: seriesName }) })
-    .then(function (res) {
-      if (!res.ok) throw new Error();
-      form.innerHTML = '<p class="series-notify-done">We will write to you when ' + escHtml(seriesName.replace(/^Series \d+ — /, '')) + ' is published.</p>';
-    })
-    .catch(function () { btn.disabled = false; btn.textContent = 'Notify me'; input.classList.add('form-input-error'); });
-}
-
+try { if (localStorage.getItem('epoch-nl')) document.getElementById('rs-nl').hidden = true; } catch (e) {}
 initNav('series');
 </script>
-
 </body>
 </html>

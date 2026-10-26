@@ -28,6 +28,14 @@
   document.addEventListener('click', function (ev) { if (ev.target.closest('a[href="#full-text"]')) openFull(); });
   if (location.hash === '#full-text') openFull();
 
+  // worksheets (Teachers' Corner): print the sheet alone, or with its answer key (which prints on a page of its own)
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('.ws-print'); if (!b) return;
+    var key = document.querySelector('.ws-key'); if (key) key.open = b.getAttribute('data-key') === '1';
+    window.print();
+  });
+  if (location.hash === '#answers') { var wk = document.querySelector('.ws-key'); if (wk) wk.open = true; }
+
   // random entry / random state
   function loadScript(src) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
   document.addEventListener('click', function (ev) {

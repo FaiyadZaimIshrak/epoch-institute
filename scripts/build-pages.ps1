@@ -415,7 +415,7 @@ function ImageLd([string]$path, $w, $h, [string]$artist, [string]$licence, [stri
 }
 function CiteBox([string]$name, [string]$url, [string]$work) {
   $n = Hx $name; $wk = Hx $work
-  return '<details class="ref-cite"><summary>Cite this ' + $(if ($work -like '*Encyclopedia') { 'entry' } else { 'page' }) + '</summary><dl>' +
+  return '<details class="ref-cite"><summary>Cite this ' + $(if ($work -like '*Encyclopedia') { 'entry' } elseif ($work -eq 'Research Series') { 'essay' } else { 'page' }) + '</summary><dl>' +
     "<dt>APA</dt><dd><span>The Epoch Institute. ($YEAR). $n. In <i>$wk</i>. $url</span> <button type=`"button`" class=`"ref-copy`" data-copy>Copy</button></dd>" +
     "<dt>MLA</dt><dd><span>&#8220;$n.&#8221; <i>$wk</i>, The Epoch Institute, $YEAR, $url. Accessed <span data-today></span>.</span> <button type=`"button`" class=`"ref-copy`" data-copy>Copy</button></dd>" +
     "<dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;$n.&#8221; <i>$wk</i>. $YEAR. $url.</span> <button type=`"button`" class=`"ref-copy`" data-copy>Copy</button></dd>" +
@@ -458,6 +458,13 @@ function Emit([string]$path, [string]$content) {   # path: site path (/encyclope
   $file = Join-Path $Repo ($path.TrimStart('/') -replace '/', '\'); if ($path.EndsWith('/')) { $file = Join-Path $file 'index' }
   $WROTE[$file.ToLowerInvariant()] = 1
   if ([EpochBuild.W]::WriteIfChanged($file, $content.Replace('@@MOD@@', $mod))) { $script:NWRITE++ }
+}
+# a generated block (<!-- build:name --> ... <!-- /build:name -->) in a hand-written page
+function SetBlock([string]$file, [string]$name, [string]$html) {
+  $t = [IO.File]::ReadAllText($file, $U8); $a = "<!-- build:$name -->"; $b = "<!-- /build:$name -->"
+  $i = $t.IndexOf($a); $j = $t.IndexOf($b); if ($i -lt 0 -or $j -lt $i) { throw "markers $a ... $b missing in $file" }
+  $new = $t.Substring(0, $i + $a.Length) + "`n" + $html + "`n" + $t.Substring($j)
+  if ([EpochBuild.W]::WriteIfChanged($file, $new)) { $script:NWRITE++ }
 }
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1377,6 +1384,9 @@ for ($ci = 0; $ci -lt $CENTPAGES.Count; $ci++) {
   $evs = TopEntries @($cs.ents | Where-Object { $_.type -eq 'event' -or $_.conflict }) 12
   $ppl = TopEntries @($cs.ents | Where-Object { $_.type -eq 'person' }) 12
   $wks = TopEntries @($cs.ents | Where-Object { $_.type -eq 'work' -or $_.type -eq 'idea' }) 8
+  # kept for the century's worksheet (Teachers' corner)
+  $CENTINFO[$c].evs = TopEntries @($cs.ents | Where-Object { $_.type -eq 'event' -or $_.conflict }) 30; $CENTINFO[$c].ppl = TopEntries @($cs.ents | Where-Object { $_.type -eq 'person' }) 30
+  $CENTINFO[$c].pw = $pw; $CENTINFO[$c].mid = $mid; $CENTINFO[$c].dec = $dec
   if ($evs.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Key events</h2><ul class="enc-seealso">' + (($evs | ForEach-Object { EntTile $_ }) -join '') + '</ul>' + $(if ($CENT.ContainsKey($c)) { '<p class="cen-more"><a class="enc-random-link" href="/encyclopedia/conflicts/' + $slug + '">All ' + $CENT[$c].Count + ' battles, wars and treaties of the ' + (Hx $c) + ' &rarr;</a></p>' } else { '' }) + "</section>`n") }
   if ($ppl.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">People</h2><ul class="enc-seealso">' + (($ppl | ForEach-Object { EntTile $_ }) -join '') + "</ul></section>`n") }
   if ($wks.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Works and ideas</h2><ul class="enc-seealso">' + (($wks | ForEach-Object { EntTile $_ }) -join '') + "</ul></section>`n") }
@@ -1589,6 +1599,296 @@ $desc = 'Great speeches that moved history, from Pericles to Reagan: the setting
 Emit '/speeches/' (Page @{ title = $title; desc = $desc; path = '/speeches/'; type = 'website'; img = (Poster 'page-speeches'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/speeches/") + '}'); nav = 'speeches'; body = $ib.ToString() })
 Say "great speeches: $($SPS.Count) ($spWhole with their full text, $spFull more linked to it)"
 if ($spMiss.Count) { Say ("great speeches: unknown encyclopedia links " + (($spMiss | Sort-Object -Unique) -join ', ')) }
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Research Series: /essays/<slug> from scripts/essays/NN-slug.html, the cards of /research-series (build:essays) and
+# feed.xml. Each source starts with a comment of "key: value" lines (title, subtitle, card: the text of its card,
+# desc, published: yyyy-mm-dd, picture: "entry slug|caption" or cover: "path|alt", profiles: slugs), then the essay:
+# h2 sections with ids (the last one, id ...-reading, is Further Reading), p, a, i, tables.
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+$ESSAYS = New-Object Collections.Generic.List[object]
+foreach ($f in @(Get-ChildItem "$PSScriptRoot\essays\*.html" | Sort-Object Name)) {
+  $raw = [IO.File]::ReadAllText($f.FullName, $U8).Replace("`r`n", "`n")
+  $esHead = [regex]::Match($raw, '^<!--\n(.*?)\n-->\n', [Text.RegularExpressions.RegexOptions]::Singleline)
+  $esName = [regex]::Match($f.BaseName, '^(\d\d)-([a-z0-9-]+)$')
+  if (-not $esHead.Success -or -not $esName.Success) { throw "essay $($f.Name): needs a name NN-slug.html and a header comment" }
+  $hd = @{}; foreach ($l in $esHead.Groups[1].Value -split "`n") { $kv = $l -split ':\s*', 2; if ($kv.Count -eq 2) { $hd[$kv[0].Trim()] = $kv[1].Trim() } }
+  foreach ($k in 'title', 'subtitle', 'card', 'desc', 'published') { if (-not $hd[$k]) { throw "essay $($f.Name): no $k" } }
+  if ($hd['desc'].Length -gt 160) { throw "essay $($f.Name): desc longer than 160 characters" }
+  $ESSAYS.Add([pscustomobject]@{ num = $esName.Groups[1].Value; slug = $esName.Groups[2].Value; hd = $hd; html = $raw.Substring($esHead.Length).Trim()
+      date = [datetime]::ParseExact($hd['published'], 'yyyy-MM-dd', $INV) })
+}
+$esMiss = New-Object Collections.Generic.List[string]
+for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
+  $ey = $ESSAYS[$ei]; $hd = $ey.hd; $path = '/essays/' + $ey.slug; $url = $SITE + $path; $title = $hd['title']
+  # every link inside the essay must lead somewhere (check-site checks again on the written pages)
+  foreach ($m in [regex]::Matches($ey.html, 'href="(/[^"#]*)"')) {
+    $h = $m.Groups[1].Value
+    if (($h -match '^/encyclopedia/(.+)$' -and -not $BY.ContainsKey($Matches[1])) -or ($h -like '/empire/*' -and -not $EMPURL.ContainsKey($h)) -or ($h -match '^/state/(.+)$' -and -not $NODE.ContainsKey($Matches[1]))) { $esMiss.Add("$($ey.slug): $h") }
+  }
+  # the sections: the contents list, and the essay apart from its Further Reading
+  $secs = [regex]::Matches($ey.html, '<h2 id="([^"]+)">(.*?)</h2>')
+  $rm = [regex]::Match($ey.html, '<h2 id="[^"]*-reading">'); $main = if ($rm.Success) { $ey.html.Substring(0, $rm.Index).Trim() } else { $ey.html }
+  $refs = if ($rm.Success) { $ey.html.Substring($rm.Index).Trim() } else { '' }
+  $words = @(([regex]::Replace($main, '<[^>]+>', ' ') -split '\s+') | Where-Object { $_ }).Count; $ey | Add-Member words $words
+  $mins = [Math]::Max(1, [int][Math]::Round($words / 230.0)); $ey | Add-Member mins $mins
+  # the picture: an encyclopedia entry's (with its caption and credit) or a cover
+  $fig = ''; $ogImg = Poster ('essay-' + $ey.slug); $ogW = 1200; $ogH = 630; $imgLd = $null; $cardImg = ''
+  if ($hd['picture']) {
+    $pp = $hd['picture'] -split '\|', 2; $o = $BY[$pp[0]]; if (-not $o -or -not $o.img) { throw "essay $($ey.slug): no picture for $($pp[0])" }
+    # the games' 800 px copy of the same Commons file when there is one, else the entry's thumbnail
+    $pic = if (Test-Path "$Repo\images\games\$($pp[0]).jpg") { "/images/games/$($pp[0]).jpg" } else { $o.img }
+    $sz = ImgSize $pic; $artist = if ($o.cr) { [string]$o.cr['artist'] } else { '' }; $lic = if ($o.cr) { [string]$o.cr['licence'] } else { '' }; $src = if ($o.cr) { [string]$o.cr['source'] } else { '' }
+    $fig = '<figure class="essay-fig"><img src="' + $pic + '" alt="' + (Hx $o.name) + '"' + $(if ($sz) { ' width="' + $sz[0] + '" height="' + $sz[1] + '"' } else { ' width="320"' }) + ' fetchpriority="high"><figcaption>' + (Hx $pp[1]) +
+      ' <span class="essay-credit">Image: ' + ((@($(if ($artist) { Hx $artist }), $(if ($lic) { Hx $lic })) | Where-Object { $_ }) -join ' · ') + $(if ($src) { ' · <a href="' + (Hx $src) + '" target="_blank" rel="noopener">Wikimedia Commons</a>' } else { '' }) + '</span></figcaption></figure>'
+    $imgLd = ImageLd $pic $(if ($sz) { $sz[0] }) $(if ($sz) { $sz[1] }) $artist $lic $src; $cardImg = $pic
+    if (-not $ogImg) { $ogImg = $pic; $ogW = $(if ($sz) { $sz[0] }); $ogH = $(if ($sz) { $sz[1] }) }
+  } elseif ($hd['cover']) {
+    $pp = $hd['cover'] -split '\|', 2; $sz = ImgSize $pp[0]
+    $fig = '<figure class="essay-fig essay-cover"><img src="' + $pp[0] + '" alt="' + (Hx $pp[1]) + '"' + $(if ($sz) { ' width="' + $sz[0] + '" height="' + $sz[1] + '"' }) + ' fetchpriority="high"></figure>'
+    $cardImg = $pp[0]; if (-not $ogImg) { $ogImg = $pp[0]; $ogW = $(if ($sz) { $sz[0] }); $ogH = $(if ($sz) { $sz[1] }) }
+  }
+  $ey | Add-Member pic $cardImg
+  $crumb = Crumbs @(@('Home', '/'), @('Research Series', '/research-series'), @($title, $null))
+  $dateTxt = $ey.date.ToString('d MMMM yyyy', $INV)
+  $sb = New-Object Text.StringBuilder(40000)
+  [void]$sb.Append('<main id="main" class="essay-page ref-page">' + "`n<div class=`"essay-wrap`">`n" + $crumb[0] + "`n<article class=`"essay-view`">`n")
+  [void]$sb.Append('<header class="essay-head"><p class="essay-kicker"><a href="/research-series">Research Series</a> · Essay ' + $ey.num + ' · <time datetime="' + $hd['published'] + '">' + $dateTxt + '</time> · ' + $mins + ' min read</p>' +
+    '<h1 class="essay-title">' + (Hx $title) + '</h1><p class="essay-sub">' + (Hx $hd['subtitle']) + '</p>' +
+    '<p class="page-share-row"><button type="button" class="sp-share page-share" data-share-text="' + (Hx ($title + ': ' + $hd['subtitle'])) + '" data-share-title="' + (Hx $title) + '" data-share-heading="Share this essay" data-share-url="' + $url + '"' + $(if ($ogImg -like '/images/og/*') { ' data-share-img="' + $ogImg + '"' } else { '' }) + '>Share</button></p></header>' + "`n")
+  if ($fig) { [void]$sb.Append($fig + "`n") }
+  [void]$sb.Append('<nav class="essay-toc" aria-label="Contents"><p class="essay-toc-k">Contents</p><ol>' + (($secs | ForEach-Object { '<li><a href="#' + $_.Groups[1].Value + '">' + $_.Groups[2].Value + '</a></li>' }) -join '') + "</ol></nav>`n")
+  [void]$sb.Append('<div class="essay-body">' + "`n" + $main + "`n</div>`n")
+  if ($refs) { [void]$sb.Append('<section class="essay-reading">' + "`n" + $refs + "`n</section>`n") }
+  $profs = @(($hd['profiles'] -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+  if ($profs.Count) {
+    [void]$sb.Append('<section class="essay-profs"><h2 class="ref-sec-title">Profiles in this essay</h2><ul class="pcards">')
+    foreach ($ps in $profs) {
+      $em = $EMPURL['/empire/' + $ps]; if (-not $em) { $esMiss.Add("$($ey.slug): profile $ps"); continue }
+      $pts0 = $em['points']; [void]$sb.Append((ProfCard ('/empire/' + $ps) ([string]$em['name']) ((Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0])) ''))
+    }
+    [void]$sb.Append("</ul></section>`n")
+  }
+  [void]$sb.Append((CiteBox $title $url 'Research Series') + "`n")
+  $pv = if ($ei -gt 0) { $ESSAYS[$ei - 1] } else { $null }; $nx = if ($ei -lt $ESSAYS.Count - 1) { $ESSAYS[$ei + 1] } else { $null }
+  [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other essays">' + $(if ($pv) { '<a class="prev" rel="prev" href="/essays/' + $pv.slug + '"><span class="lbl">&larr; Essay ' + $pv.num + '</span><span class="nm">' + (Hx $pv.hd['title']) + '</span></a>' } else { '' }) +
+    $(if ($nx) { '<a class="next" rel="next" href="/essays/' + $nx.slug + '"><span class="lbl">Essay ' + $nx.num + ' &rarr;</span><span class="nm">' + (Hx $nx.hd['title']) + '</span></a>' } else { '' }) + "</nav>`n")
+  [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/research-series">All essays in the Research Series &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n")
+  $cites = @([regex]::Matches($refs, '<li>(.*?)</li>') | ForEach-Object { Js ([System.Net.WebUtility]::HtmlDecode(([regex]::Replace($_.Groups[1].Value, '<[^>]+>', '')))) })
+  $ld = $crumb[1] + ',{"@type":"Article","headline":' + (Js $title) + ',"alternativeHeadline":' + (Js $hd['subtitle']) + ',"description":' + (Js $hd['desc']) + ',"url":' + (Js $url) + ',"mainEntityOfPage":' + (Js $url) +
+    ',"inLanguage":"en-GB","datePublished":"' + $hd['published'] + '","dateModified":"@@MOD@@","wordCount":' + $words + ',"author":' + $ORG + ',"publisher":' + $ORG +
+    ',"isPartOf":{"@type":"CreativeWorkSeries","name":"Research Series","url":"' + $SITE + '/research-series"},"position":' + [int]$ey.num +
+    $(if ($imgLd) { ',"image":' + $imgLd } elseif ($ogImg) { ',"image":' + (Js ($SITE + $ogImg)) } else { '' }) + $(if ($cites.Count) { ',"citation":[' + ($cites -join ',') + ']' } else { '' }) + '}'
+  Emit $path (Page @{ title = $title + ': ' + $hd['subtitle'] + ' — The Epoch Institute'; desc = $hd['desc']; path = $path; type = 'article'; img = $ogImg; imgW = $ogW; imgH = $ogH; ld = $ld; nav = 'series'; body = $sb.ToString() })
+}
+if ($esMiss.Count) { throw ("essays: unknown links " + (($esMiss | Sort-Object -Unique) -join ', ')) }
+# the cards of /research-series, and its old addresses (the essays opened inside that page: #series-01 ...) forwarded
+SetBlock "$Repo\research-series" 'essays' ('<script>(function(){var s={' + (($ESSAYS | ForEach-Object { '"' + $_.num + '":"' + $_.slug + '"' }) -join ',') + '},m=/^#series-(\d\d)$/.exec(location.hash);if(m&&s[m[1]])location.replace("/essays/"+s[m[1]]);})();</script>' + "`n" +
+  '<ul class="rs-grid">' + (($ESSAYS | ForEach-Object {
+  '<li><a class="rs-card" href="/essays/' + $_.slug + '">' + $(if ($_.pic) { '<span class="rs-pic"><img src="' + $_.pic + '" alt="" loading="lazy"></span>' } else { '' }) +
+  '<span class="rs-b"><span class="rs-num">Series ' + $_.num + '</span><span class="rs-title">' + (Hx $_.hd['title']) + '</span><span class="rs-sub">' + (Hx $_.hd['subtitle']) + '</span><span class="rs-desc">' + (Hx $_.hd['card']) + '</span>' +
+  '<span class="rs-foot"><span class="rs-cta">Read the essay &rarr;</span><span class="rs-time">' + $_.mins + ' min read</span></span></span></a></li>' }) -join '') + '</ul>')
+# feed.xml: the essays, newest first (the guid of each stays the old #series-NN address, so readers see none twice)
+$fx = New-Object Text.StringBuilder
+[void]$fx.Append('<?xml version="1.0" encoding="UTF-8"?>' + "`n" + '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">' + "`n  <channel>`n    <title>The Epoch Institute — Research Series</title>`n    <link>$SITE/research-series</link>`n    <description>Thematic essays on civilisational rise and collapse.</description>`n    <language>en-gb</language>`n    <atom:link href=`"$SITE/feed.xml`" rel=`"self`" type=`"application/rss+xml`"/>`n")
+foreach ($ey in @($ESSAYS | Sort-Object @{ e = { $_.date }; Descending = $true }, @{ e = { $_.num }; Descending = $true })) {
+  [void]$fx.Append("    <item>`n      <title>" + (Hx "Series $($ey.num) — $($ey.hd['title'])") + "</title>`n      <link>$SITE/essays/$($ey.slug)</link>`n      <description>" + (Hx "$($ey.hd['subtitle']). $($ey.hd['card'])") + "</description>`n" +
+    "      <pubDate>" + $ey.date.ToString('ddd, dd MMM yyyy', $INV) + " 09:00:00 +0000</pubDate>`n      <guid isPermaLink=`"false`">$SITE/research-series#series-$($ey.num)</guid>`n    </item>`n")
+}
+[void]$fx.Append("  </channel>`n</rss>`n")
+if ([EpochBuild.W]::WriteIfChanged("$Repo\feed.xml", $fx.ToString())) { $NWRITE++ }
+Say "research essays: $($ESSAYS.Count) ($((($ESSAYS | ForEach-Object { $_.words }) | Measure-Object -Sum).Sum) words)"
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Teachers' corner: /teachers/ (a guide) and printable worksheets on the reading paths (/teachers/path-<slug>) and
+# the centuries (/teachers/century-<slug>), wherever the data gives at least one task (two for a century). Every task comes from the data, never from made-up claims: stops or events
+# put in order by their first year, people matched to their lifespans, the numbered states of a map named from a word
+# bank, glossary terms the texts use, and questions built on each path stop's own "why". The answer key is folded on
+# screen; "Print with the answers" (enc-page.js) opens it, and it prints on a page of its own.
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Say 'teachers corner'
+function WsShuffle($items, [string]$seed) {   # the same order on every build, never the order of the answer
+  $a = @($items); if ($a.Count -lt 2) { return $a }
+  $rnd = New-Object Random ([Convert]::ToInt32(([EpochBuild.W]::Sha1($seed)).Substring(0, 7), 16))
+  for ($i = $a.Count - 1; $i -gt 0; $i--) { $j = $rnd.Next($i + 1); $t = $a[$i]; $a[$i] = $a[$j]; $a[$j] = $t }
+  $same = $true; for ($i = 0; $i -lt $a.Count; $i++) { if (-not [object]::ReferenceEquals($a[$i], @($items)[$i])) { $same = $false; break } }
+  if ($same) { $a = @($a[1..($a.Count - 1)]) + @($a[0]) }
+  return $a
+}
+# items with a first year, in their order of priority: up to max of them, no two within gap years of each other
+function WsSpread($items, [int]$max, [int]$gap) {
+  $out = New-Object Collections.Generic.List[object]
+  foreach ($it in $items) { if ($null -eq $it.y) { continue }; $ok = $true; foreach ($o in $out) { if ([Math]::Abs($o.y - $it.y) -lt $gap) { $ok = $false; break } }; if ($ok) { $out.Add($it); if ($out.Count -ge $max) { break } } }
+  return @($out | Sort-Object { $_.y })
+}
+# an encyclopedia entry as a worksheet item: a person's birth (a lifespan only), an event's or a work's first year
+function WsItem($e, [string]$name) {
+  $o = [pscustomobject]@{ name = $(if ($name) { $name } else { $e.name }); slug = $e.slug; e = $e; y = $null; life = $false; dates = [string]$e.dates; kind = '' }
+  if ($e.type -eq 'person') { $o.kind = 'person'; if ([EpochBuild.W]::Range($e.dates)) { $o.life = $true; $sp = [EpochBuild.W]::Span($e.dates); if ($sp) { $o.y = $sp[0] } } }
+  elseif ($e.type -eq 'event' -or $e.type -eq 'work' -or $e.conflict) { $o.kind = 'event'; $sp = [EpochBuild.W]::Span($e.dates); if ($sp -and $e.dates -notmatch 'centur') { $o.y = $sp[0] } }
+  elseif ($e.type -eq 'polity') { $o.kind = 'state'; $sp = [EpochBuild.W]::Span($e.dates); if ($sp -and $e.dates -notmatch 'centur') { $o.y = $sp[0] } }
+  return $o
+}
+# glossary terms: whole words, case apart; everyday words that are also terms (materials, crops, coins of the realm)
+# are left out, and a sheet takes the rarest of those it mentions
+$WSSTOP = @{}; foreach ($w in 'Well', 'Talent', 'Theatre', 'Silver', 'Silk', 'Tea', 'Cotton', 'Camel', 'Cattle', 'Copper', 'Bronze', 'Rice', 'Steel', 'Timber', 'Tin', 'Leather', 'Coal', 'Bead', 'Flax', 'Pepper', 'Yang', 'Skat', 'Riesling', 'Terp', 'Vogt', 'Charcoal', 'Cinnamon', 'Cloves', 'Nutmeg', 'Maize', 'Potato', 'Tomato', 'Peanut', 'Groundnut', 'Sorghum', 'Millet', 'Rye', 'Sesame', 'Pulses', 'Indigo', 'Rubber', 'Shawl', 'Kora', 'Tanka', 'Rajab', 'Insulin', 'Gamay', 'Pinot noir', 'Percheron', 'Union Flag', 'Flag of Denmark', 'Iron Curtain', 'Hellanodikai', 'Tin', 'Ebony', 'Natron', 'Phosphate', 'Calabash', 'Benzoin resin', 'Camphor', 'Myrrh', 'Incense', 'Sugarcane', 'Cassava', 'Sweet potato', 'Olive oil', 'Palm oil', 'Oil palm', 'Kola nut', 'Yerba mate', 'Cacao', 'Sling', 'Lance', 'Pike', 'Archery', 'Well') { $WSSTOP[$w] = 1 }
+$WSTERMS = New-Object Collections.Generic.List[object]
+foreach ($e in $TERMS) {
+  if ($WSSTOP.ContainsKey($e.name)) { continue }
+  $names = @($e.name) + @($e.aka | Where-Object { ([string]$_).Length -ge 4 })
+  $rx = '(?<![\p{L}\p{N}])(?:' + (($names | ForEach-Object { [regex]::Escape(([string]$_ -replace '\s*\([^)]*\)$', '')) }) -join '|') + ')(?![\p{L}\p{N}])'
+  $WSTERMS.Add([pscustomobject]@{ e = $e; rx = New-Object Regex ($rx, [Text.RegularExpressions.RegexOptions]::IgnoreCase) })
+}
+function WsTermsIn([string]$text) { $found = New-Object Collections.Generic.List[object]; foreach ($t in $WSTERMS) { if ($t.rx.IsMatch($text)) { $found.Add($t.e) } }; return $found }
+# the sheets' data first (the rarest terms need every sheet's terms), then the pages
+$NODEBYP = @{}; foreach ($n in $POL['nodes']) { if ($n['p']) { $NODEBYP[[string]$n['p']] = $n } }
+$WSDEG = @{}; foreach ($l in $POL['links']) { $WSDEG[[string]$l['s']] = 1 + [int]$WSDEG[[string]$l['s']]; $WSDEG[[string]$l['t']] = 1 + [int]$WSDEG[[string]$l['t']] }
+$SHEETS = New-Object Collections.Generic.List[object]; $TERMDF = @{}
+foreach ($p in $RP) {
+  $steps = New-Object Collections.Generic.List[object]; $k = 0
+  foreach ($st in @($p['steps'])) {
+    $k++; $h = [string]$st['href']; $it = $null
+    if ($h -match '^/encyclopedia/(.+)$' -and $BY.ContainsKey($Matches[1])) { $it = WsItem $BY[$Matches[1]] ([string]$st['name']) }
+    elseif ($EMPURL.ContainsKey($h)) { $em = $EMPURL[$h]; $pts0 = $em['points']; $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = [int][double]$pts0[0][0]; life = $false; dates = (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]); kind = 'state' } }
+    else { $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = $null; life = $false; dates = ''; kind = '' } }
+    $it | Add-Member n $k; $it | Add-Member why ([string]$st['why']); $it | Add-Member href $h; $steps.Add($it)
+  }
+  $shT = WsTermsIn (([string]$p['intro']) + ' ' + ((@($p['steps']) | ForEach-Object { [string]$_['why'] }) -join ' '))
+  foreach ($t in $shT) { $TERMDF[$t.slug] = 1 + [int]$TERMDF[$t.slug] }
+  $SHEETS.Add([pscustomobject]@{ kind = 'path'; slug = 'path-' + [string]$p['slug']; p = $p; steps = $steps; terms = $shT })
+}
+foreach ($c in $CENTPAGES) {
+  $ii = $CENTINFO[$c]
+  $evI = @($ii.evs | Where-Object { $_.dates -notmatch '^\s*c\.' } | ForEach-Object { WsItem $_ '' })
+  $ppI = @($ii.ppl | ForEach-Object { WsItem $_ '' } | Where-Object { $_.life })
+  $txt = ((@($ii.evs | Select-Object -First 12) + @($ii.ppl | Select-Object -First 12)) | ForEach-Object { [EpochBuild.W]::Summary($_.desc, 300) }) -join ' '
+  $shT = WsTermsIn $txt; foreach ($t in $shT) { $TERMDF[$t.slug] = 1 + [int]$TERMDF[$t.slug] }
+  $SHEETS.Add([pscustomobject]@{ kind = 'century'; slug = 'century-' + $ii.slug; c = $c; ev = $evI; pp = $ppI; terms = $shT })
+}
+function WsLines([int]$n) { '<span class="ws-lines" aria-hidden="true">' + ('<span></span>' * $n) + '</span>' }
+function WsTask([int]$n, [string]$head, [string]$how, [string]$html) { '<section class="ws-task"><h2><span class="ws-n">' + $n + '</span>' + $head + '</h2>' + $(if ($how) { '<p class="ws-how">' + $how + '</p>' } else { '' }) + $html + "</section>`n" }
+function WsOrderTask($items, [string]$seed) {   # @(task html, key html)
+  $mix = WsShuffle $items $seed
+  $t = '<ul class="ws-order">' + (($mix | ForEach-Object { '<li><span class="ws-box" aria-hidden="true"></span><span>' + (Hx $_.name) + '</span></li>' }) -join '') + '</ul>'
+  $k = '<ol class="ws-key-list">' + (($items | ForEach-Object { '<li>' + (Hx $_.name) + ' <span>' + (Hx $(if ($_.kind -eq 'person') { 'born ' + $(if ($_.dates -match '^\s*c\.') { 'c. ' } else { '' }) + (Yr $_.y) } elseif ($_.kind -eq 'state') { 'from ' + (Yr $_.y) } else { $_.dates })) + '</span></li>' }) -join '') + '</ol>'
+  return @($t, $k)
+}
+function WsMatchTask($people, [string]$seed) {
+  $ds = WsShuffle $people ($seed + '-d')
+  $t = '<div class="ws-match"><ol class="ws-ma" type="A">' + (($people | ForEach-Object { '<li>' + (Hx $_.name) + '</li>' }) -join '') + '</ol><ol class="ws-mb">' + (($ds | ForEach-Object { '<li><span class="ws-box" aria-hidden="true"></span>' + (Hx $_.dates) + '</li>' }) -join '') + '</ol></div>'
+  $k = '<ol class="ws-key-list" type="A">' + (($people | ForEach-Object { $pi = $_; '<li>' + (Hx $pi.name) + ' <span>' + ([array]::IndexOf(@($ds), $pi) + 1) + ': ' + (Hx $pi.dates) + '</span></li>' }) -join '') + '</ol>'
+  return @($t, $k)
+}
+function WsTermTask($tl) {
+  $t = '<ul class="ws-terms">' + (($tl | ForEach-Object { '<li><b>' + (Hx $_.name) + '</b>' + (WsLines 2) + '</li>' }) -join '') + '</ul>'
+  $k = '<dl class="ws-key-terms">' + (($tl | ForEach-Object { '<dt>' + (Hx $_.name) + '</dt><dd>' + (Hx ([EpochBuild.W]::FirstSentence($_.desc, 220))) + '</dd>' }) -join '') + '</dl>'
+  return @($t, $k)
+}
+function WsPage($sh, [string]$kicker, [string]$title, [string]$lede, [string]$online, [string]$onlineLbl, $tasks, $keys, [string]$desc) {
+  $path = '/teachers/' + $sh.slug; $WSOK[$sh.slug] = 1
+  $crumb = Crumbs @(@('Home', '/'), @("Teachers' Corner", '/teachers/'), @($title, $null))
+  $sb = New-Object Text.StringBuilder(20000)
+  [void]$sb.Append('<main id="main" class="ws-page ref-page">' + "`n<div class=`"ws-wrap`">`n" + $crumb[0] + "`n<article class=`"ws-sheet`">`n")
+  [void]$sb.Append('<header class="ws-head"><p class="ws-kicker">' + $kicker + '</p><h1 class="ws-title">' + (Hx $title) + '</h1><p class="ws-lede">' + $lede + '</p>' +
+    '<p class="ws-who" aria-hidden="true"><span>Name</span><span>Class</span><span>Date</span></p>' +
+    '<p class="ws-tools"><button type="button" class="ws-print" data-key="0">Print the worksheet</button><button type="button" class="ws-print" data-key="1">Print with the answers</button><a href="' + $online + '">' + $onlineLbl + ' &rarr;</a></p></header>' + "`n")
+  $n = 0; foreach ($t in $tasks) { $n++; [void]$sb.Append((WsTask $n $t[0] $t[1] $t[2])) }
+  [void]$sb.Append('<p class="ws-src">From The Epoch Institute: ' + (Hx ($SITE -replace '^https://', '')) + $online + '. Free to print and copy for use in class.</p>' + "`n")
+  [void]$sb.Append('<details class="ws-key" id="answers"><summary>Answer key</summary><div class="ws-key-b"><p class="ws-key-t">Answer key: ' + (Hx $title) + '</p>')
+  $n = 0; foreach ($k in $keys) { $n++; if ($k) { [void]$sb.Append('<section><h2><span class="ws-n">' + $n + '</span>' + $k[0] + '</h2>' + $k[1] + '</section>') } }
+  [void]$sb.Append("</div></details>`n</article>`n</div>`n</main>`n")
+  $ld = $crumb[1] + ',{"@type":"LearningResource","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"learningResourceType":"Worksheet","educationalLevel":"Secondary school","inLanguage":"en-GB","isAccessibleForFree":true,"publisher":' + $ORG + '}'
+  Emit $path (Page @{ title = $title + " — Teachers' Corner — The Epoch Institute"; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'teachers'; body = $sb.ToString() })
+}
+$wsN = @{ path = 0; century = 0 }; $WSOK = @{}
+foreach ($sh in $SHEETS) {
+  $shT = @($sh.terms | Sort-Object @{ e = { $TERMDF[$_.slug] } }, @{ e = { $_.name } } | Select-Object -First 5 | Sort-Object { $_.name })
+  $tasks = New-Object Collections.Generic.List[object]; $keys = New-Object Collections.Generic.List[object]
+  if ($sh.kind -eq 'path') {
+    $p = $sh.p; $title = 'Worksheet: ' + [string]$p['title']; $online = '/paths/' + [string]$p['slug']
+    $ord = WsSpread $sh.steps 6 10
+    if ($ord.Count -ge 3) { $r = WsOrderTask $ord $sh.slug; $tasks.Add(@('Put the stops in order', ('Number the stops from 1 (earliest) to ' + $ord.Count + ' (latest), by when each began: a state&#8217;s founding, a person&#8217;s birth, the date of an event.'), $r[0])); $keys.Add(@('Put the stops in order', $r[1])) }
+    $ppl = @($sh.steps | Where-Object { $_.life } | Select-Object -First 6)
+    if ($ppl.Count -ge 3) { $r = WsMatchTask $ppl $sh.slug; $tasks.Add(@('Match the people to their dates', 'Write the number of the right dates next to each person. Their pages on the path will help.', $r[0])); $keys.Add(@('Match the people to their dates', $r[1])) }
+    if ($shT.Count -ge 2) { $r = WsTermTask $shT; $tasks.Add(@('Key terms', 'The path uses these words. Explain each one in your own words.', $r[0])); $keys.Add(@('Key terms', $r[1])) }
+    if (-not $tasks.Count) { Say "  no worksheet for $($sh.slug): no task from the data"; continue }
+    # questions built on the path's own reasons for its stops: the first, one from the middle, the last
+    $st = $sh.steps.ToArray(); $mi = [int][Math]::Floor($st.Count / 2)
+    $qs = @(
+      ('Stop 1, <b>' + (Hx $st[0].name) + '</b>. The path begins here because: &#8220;' + (Hx $st[0].why) + '&#8221; What does this stop tell you about how the story began?'),
+      ('Stop ' + $st[$mi].n + ', <b>' + (Hx $st[$mi].name) + '</b>: &#8220;' + (Hx $st[$mi].why) + '&#8221; Find one detail on its page that supports this, and one question it leaves open.'),
+      ('Stop ' + $st[-1].n + ', <b>' + (Hx $st[-1].name) + '</b>: &#8220;' + (Hx $st[-1].why) + '&#8221; How does this last stop connect to an earlier one?'),
+      ('The path sums itself up as: &#8220;' + (Hx ([string]$p['tagline'])) + '&#8221; Which stop shows this best? Explain your choice.'))
+    $tasks.Add(@('Think and discuss', '', ('<ol class="ws-qs">' + (($qs | ForEach-Object { '<li><p>' + $_ + '</p>' + (WsLines 3) + '</li>' }) -join '') + '</ol>'))); $keys.Add(@('Think and discuss', '<p class="ws-key-note">Open questions: answers will vary. Good answers use details from the pages of the path.</p>'))
+    $lede = Hx ([string]$p['tagline']) + ' A worksheet for the reading path of ' + @($p['steps']).Count + ' stops: read the stops online, then answer.'
+    $desc = [EpochBuild.W]::Summary('A printable worksheet for the reading path ' + [string]$p['title'] + ': put the stops in order, match people to their dates, key terms and questions, with an answer key.', 155)
+    WsPage $sh 'Worksheet &middot; Reading path' $title $lede $online 'Open the path' $tasks $keys $desc; $wsN.path++
+  } else {
+    $c = $sh.c; $ii = $CENTINFO[$c]; $ct = CentTitle $c; $title = 'Worksheet: The ' + $ct; $online = '/centuries/' + $ii.slug
+    # the map: numbered profiles (else states) alive at mid-century with a known seat, spread out
+    $cand = New-Object Collections.Generic.List[object]; $seen = @{}
+    foreach ($em in $ii.pw) { $n = $NODEBYP['/empire/' + [EpochBuild.W]::ToSlug([string]$em['name'])]; if ($n -and -not $seen.ContainsKey([string]$n['id'])) { $seen[[string]$n['id']] = 1; $cand.Add($n) } }
+    # (a profile only while it still had some strength: the Abbasid caliphs of 1450 were a title in Cairo, not Baghdad)
+    $more = @($POL['nodes'] | Where-Object { (Alive $_ $ii.mid) -and -not $seen.ContainsKey([string]$_['id']) -and (-not $_['p'] -or ($EMPURL.ContainsKey([string]$_['p']) -and (PowerAt $EMPURL[[string]$_['p']] $ii.mid) -ge 2)) } | Sort-Object @{ e = { if ($_['p']) { 0 } else { 1 } } }, @{ e = { -[int]$WSDEG[[string]$_['id']] } }, @{ e = { [string]$_['n'] } })
+    foreach ($n in $more) { $cand.Add($n) }
+    $cand = @($cand | Where-Object { $q = $STATEXY[[string]$_['id']]; $q -and -not $q[2] } | Select-Object -First 60)
+    $mapT = $null
+    if ($cand.Count -ge 4) {
+      # the view fits the best-known twelve; the numbers go to the best-ranked states inside it that keep apart
+      $v0 = FitView @($cand | Select-Object -First 12 | ForEach-Object { $STATEXY[[string]$_['id']] }) 240 1.9 0.16
+      if ($v0[0] -lt 0) { $v0[0] = 0 }; if ($v0[1] -lt 0) { $v0[1] = 0 }; if ($v0[0] + $v0[2] -gt 1000) { $v0[0] = [Math]::Max(0, 1000 - $v0[2]) }; if ($v0[1] + $v0[3] -gt $MAPH) { $v0[1] = [Math]::Max(0, $MAPH - $v0[3]) }
+      $dmin = $v0[2] * 0.045; $pick = New-Object Collections.Generic.List[object]
+      foreach ($n in $cand) { $q = $STATEXY[[string]$n['id']]; if ($q[0] -lt $v0[0] + $dmin / 2 -or $q[0] -gt $v0[0] + $v0[2] - $dmin / 2 -or $q[1] -lt $v0[1] + $dmin / 2 -or $q[1] -gt $v0[1] + $v0[3] - $dmin / 2) { continue }; $ok = $true; foreach ($o in $pick) { $qo = $STATEXY[[string]$o['id']]; if ([Math]::Sqrt(($q[0] - $qo[0]) * ($q[0] - $qo[0]) + ($q[1] - $qo[1]) * ($q[1] - $qo[1])) -lt $dmin) { $ok = $false; break } }; if ($ok) { $pick.Add($n); if ($pick.Count -ge 8) { break } } }
+      if ($pick.Count -ge 4) {
+        $r0 = $v0[2] * 0.017; $pins = New-Object Text.StringBuilder; $i = 0
+        foreach ($n in $pick) { $i++; $q = $STATEXY[[string]$n['id']]; [void]$pins.Append('<g><circle cx="' + (Fx $q[0]) + '" cy="' + (Fx $q[1]) + '" r="' + (Fx $r0) + '"/><text x="' + (Fx $q[0]) + '" y="' + (Fx ($q[1] + $r0 * 0.42)) + '" font-size="' + (Fx ($r0 * 1.2)) + '">' + $i + '</text></g>') }
+        $bank = WsShuffle $pick.ToArray() ($sh.slug + '-map')
+        $mapT = @(('<figure class="ws-mapfig">' + (MapSvg $v0 ('<g class="ws-pins">' + $pins.ToString() + '</g>') ('Map: ' + $pick.Count + ' numbered states of the world in ' + (Yr $ii.mid)) 'map-world ws-map') + '<figcaption>The world in ' + (Hx (Yr $ii.mid)) + '</figcaption></figure>' +
+          '<p class="ws-bank"><b>Word bank:</b> ' + (($bank | ForEach-Object { Hx ([string]$_['n']) }) -join ' &middot; ') + '</p><ol class="ws-blanks">' + (($pick | ForEach-Object { '<li><span class="ws-line1"></span></li>' }) -join '') + '</ol>'),
+          ('<ol class="ws-key-list">' + (($pick | ForEach-Object { '<li>' + (Hx ([string]$_['n'])) + ' <span>' + (Hx (Span $_)) + '</span></li>' }) -join '') + '</ol>'))
+      }
+    }
+    if ($mapT) { $tasks.Add(@('Name the states on the map', ('Each number marks the capital or seat of a state that existed in ' + (Hx (Yr $ii.mid)) + '. Write its name from the word bank on the line with the same number.'), $mapT[0])); $keys.Add(@('Name the states on the map', $mapT[1])) }
+    $ord = WsSpread $sh.ev 6 3
+    if ($ord.Count -ge 3) { $r = WsOrderTask $ord $sh.slug; $tasks.Add(@('Put the events in order', ('Number the events from 1 (earliest) to ' + $ord.Count + ' (latest).'), $r[0])); $keys.Add(@('Put the events in order', $r[1])) }
+    $ppl = @($sh.pp | Select-Object -First 6)
+    if ($ppl.Count -ge 3) { $r = WsMatchTask $ppl $sh.slug; $tasks.Add(@('Match the people to their dates', 'Write the number of the right dates next to each person. Look them up in the encyclopedia.', $r[0])); $keys.Add(@('Match the people to their dates', $r[1])) }
+    if ($shT.Count -ge 2) { $r = WsTermTask $shT; $tasks.Add(@('Key terms', 'These words appear in the entries of this century. Explain each one in your own words.', $r[0])); $keys.Add(@('Key terms', $r[1])) }
+    if ($tasks.Count -lt 2) { Say "  no worksheet for $($sh.slug): too little for two tasks"; continue }
+    $cs = $CSTAT[$c]
+    $qs = @(('In ' + (Hx $ii.dec) + ', ' + $cs.founded.Count.ToString('N0') + ' recorded states were founded and ' + $cs.ended.Count.ToString('N0') + ' came to an end. Choose one of each from the century page. What happened to them?'))
+    if ($ii.pw.Count) { $qs += 'The great powers of the age included ' + (ProseList @($ii.pw | Select-Object -First 3 | ForEach-Object { 'the ' + (Hx ([string]$_['name'])) })) + '. Choose one: what made it strong in these hundred years, and what threatened it?' }
+    if ($ord.Count -ge 3 -and $ppl.Count -ge 3) { $qs += 'Choose one event from the list and one person. How might they be connected? Use the encyclopedia to find out.' }
+    $qs += 'If you could visit one place in the ' + (Hx $c) + ', where would you go, and what would you hope to see?'
+    $tasks.Add(@('Think and discuss', '', ('<ol class="ws-qs">' + (($qs | ForEach-Object { '<li><p>' + $_ + '</p>' + (WsLines 3) + '</li>' }) -join '') + '</ol>'))); $keys.Add(@('Think and discuss', '<p class="ws-key-note">Open questions: answers will vary. Good answers name states, people and events from the century page.</p>'))
+    $lede = 'A worksheet on ' + (Hx $ii.dec) + ': the states, events and people of the century. Use its page to find the answers.'
+    $desc = [EpochBuild.W]::Summary('A printable worksheet on the ' + $c + ': name the states on the map, put events in order, match people to their dates and discuss, with an answer key.', 155)
+    WsPage $sh 'Worksheet &middot; History by century' $title $lede $online 'Open the century page' $tasks $keys $desc; $wsN.century++
+  }
+}
+# the guide: how to use the site in class, and every worksheet
+$crumb = Crumbs @(@('Home', '/'), @("Teachers' Corner", $null))
+$sb = New-Object Text.StringBuilder(40000)
+[void]$sb.Append('<main id="main" class="ws-page ref-page">' + "`n<div class=`"ws-wrap ws-guide`">`n" + $crumb[0] + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Teachers&#8217; Corner</h1><p class="ref-lede">Free resources for teaching world history with the Institute: ' + ($wsN.path + $wsN.century) + ' printable worksheets with answer keys on the reading paths and the centuries, and ideas for using the atlas, the timeline and the games in class.</p></header>' + "`n")
+[void]$sb.Append('<section class="ws-guide-sec"><h2 class="ref-sec-title">Printable worksheets</h2><p>Each worksheet prints on a few A4 pages and draws only on the Institute&#8217;s pages: pupils read the reading path or the century page, then put stops or events in order, match people to their dates, explain key terms and answer open questions. The century sheets add a map with numbered states to name. The answer key prints on a page of its own: use <b>Print with the answers</b> on the sheet.</p>' +
+  '<h3 class="ws-guide-h">Reading paths <span class="n">' + $wsN.path + '</span></h3><ul class="ws-guide-list">' + (($RP | Where-Object { $WSOK.ContainsKey('path-' + $_['slug']) } | ForEach-Object { '<li><a href="/teachers/path-' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + '</a></li>' }) -join '') + '</ul>' +
+  '<h3 class="ws-guide-h">Centuries <span class="n">' + $wsN.century + '</span></h3><ul class="ws-guide-list ws-guide-cents">' + (($CENTPAGES | Where-Object { $WSOK.ContainsKey('century-' + (CenturySlug $_)) } | ForEach-Object { '<li><a href="/teachers/century-' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + "</ul></section>`n")
+[void]$sb.Append('<section class="ws-guide-sec"><h2 class="ref-sec-title">Ideas for the classroom</h2><dl class="ws-ideas">' +
+  '<dt><a href="/paths/">Reading paths</a></dt><dd>Twenty-eight guided routes of five to nine stops, each with a line on why it matters. Set a path as reading before a lesson, or give each group a different stop to present.</dd>' +
+  '<dt><a href="/atlas">Atlas</a> and <a href="/timeline">World Timeline</a></dt><dd>On a projector, move the atlas&#8217;s year slider through a century and ask what appears and disappears; the timeline shows which states lived at the same time. <a href="/years/">Year pages</a> collect what happened in a single year.</dd>' +
+  '<dt><a href="/today-in-history/">Today in History</a></dt><dd>A page for every day of the year: a quick start to a lesson with the anniversaries of the day.</dd>' +
+  '<dt><a href="/games">Games</a> and the <a href="/quiz">daily quiz</a></dt><dd>Order the Ages and Which Came First? practise chronology; Globe Hunt practises geography; History Connections asks pupils to group people, events and works by what links them.</dd>' +
+  '<dt><a href="/kids">Kids Corner</a> and Kids mode</dt><dd>For younger pupils: the star in the menu bar switches the whole site to larger text and short versions of the long pages, with the hardest stories folded away.</dd>' +
+  '<dt><a href="/research-series">Research Series</a> and <a href="/speeches/">Great Speeches</a></dt><dd>For older students: essays that compare empires across five thousand years, and speeches with their setting and, where it is free, the full text.</dd>' +
+  "</dl></section>`n")
+[void]$sb.Append('<section class="ws-guide-sec"><h2 class="ref-sec-title">Ages and levels</h2><p>The worksheets suit pupils of about eleven to sixteen. For younger classes, use Kids mode and the <a href="/kids">Kids Corner</a>; older students can follow the references at the end of each profile and the works listed in the essays.</p></section>' + "`n")
+[void]$sb.Append('<section class="ws-guide-sec"><h2 class="ref-sec-title">Citing the Institute and using its pictures</h2><p>Every page offers a ready-made citation (APA, MLA, Chicago and Harvard) under <b>Cite this page</b>. The pictures come from Wikimedia Commons under free licences, with the author and licence under each one: keep that credit when you reuse a picture. The states register and the power curves are free to download from <a href="/dataset">Open Data</a> for projects of your own.</p><p>Spotted a mistake, or have an idea for a worksheet? <a href="/contact?topic=suggest&amp;page=/teachers/">Tell us</a>.</p></section>' + "`n")
+[void]$sb.Append("</div>`n</main>`n")
+$title = "Teachers' Corner: Free History Worksheets and Classroom Ideas — The Epoch Institute"
+$desc = 'Free printable world history worksheets with answer keys on the reading paths and the centuries, and ideas for teaching with the atlas, timeline and games.'
+Emit '/teachers/' (Page @{ title = $title; desc = $desc; path = '/teachers/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/teachers/") + ',"audience":{"@type":"EducationalAudience","educationalRole":"teacher"}}'); nav = 'teachers'; body = $sb.ToString() })
+Say "teachers corner: $($wsN.path) path and $($wsN.century) century worksheets"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Years: /years/<y> and /years/ (the years were gathered before the entry pages), data/years.json (the atlas and the
@@ -1876,12 +2176,6 @@ Say ("atlas: {0} states, atlas-data.js {1:N0} KB, basemap.js {2:N0} KB, globe-la
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Generated blocks in the hand-written index pages, enc-page.js version, stale pages, sitemaps
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-function SetBlock([string]$file, [string]$name, [string]$html) {
-  $t = [IO.File]::ReadAllText($file, $U8); $a = "<!-- build:$name -->"; $b = "<!-- /build:$name -->"
-  $i = $t.IndexOf($a); $j = $t.IndexOf($b); if ($i -lt 0 -or $j -lt $i) { throw "markers $a ... $b missing in $file" }
-  $new = $t.Substring(0, $i + $a.Length) + "`n" + $html + "`n" + $t.Substring($j)
-  if ([EpochBuild.W]::WriteIfChanged($file, $new)) { $script:NWRITE++ }
-}
 
 # ── games-data.js (Which Came First?, Guess the Year, Picture Puzzle, Word Hunt) and the Kids corner (/kids) ──────────
 # Pictures: scripts/game-pictures.tsv, chosen by eye (and images/games/<slug>.jpg, 800 px, from fetch-game-images.ps1).
@@ -2044,7 +2338,8 @@ $SECTIONS = [ordered]@{
   start        = @{ t = 'Find Your Way In'; h = '/start'; k = 'Four questions'; d = 'Tell us what draws you to history and get the reading paths and tools that suit you.'; pic = @('piri-reis-map', 'cantino-planisphere', 'tabula-rogeriana') }
   community    = @{ t = 'Community'; h = '/community'; k = 'Readers and writers'; d = 'Essays and opinions from the Institute''s readers, and a place to share your own.'; pic = @('althing', 'roman-forum') }
   contributors = @{ t = 'Write for Us'; h = '/contributors'; k = 'Contribute'; d = 'Research, write or check facts with the Institute: three ways to take part.'; pic = @('book-of-kells', 'johannes-gutenberg') }
-  series       = @{ t = 'Research Series'; h = '/research-series'; k = 'Essays'; d = 'Thematic essays on the forces behind the rise and collapse of civilisations.'; pic = @('thucydides', 'ibn-khaldun', 'edward-gibbon') }
+  series       = @{ t = 'Research Series'; h = '/research-series'; k = "$($ESSAYS.Count) essays"; d = 'Thematic essays on the forces behind the rise and collapse of civilisations.'; pic = @('thucydides', 'ibn-khaldun', 'edward-gibbon') }
+  teachers     = @{ t = "Teachers' Corner"; h = '/teachers/'; k = "$($wsN.path + $wsN.century) worksheets"; d = 'Printable worksheets with answer keys on the reading paths and the centuries, and ideas for teaching with the site.'; pic = @('john-amos-comenius', 'sankore-madrasah') }
   dataset      = @{ t = 'Open Data'; h = '/dataset'; k = 'CC BY 4.0'; d = "The states register ($($POL['nodes'].Count.ToString('N0')) states, $($POL['links'].Count.ToString('N0')) relations) and the power curves, free to reuse."; pic = @('rhind-mathematical-papyrus', 'moscow-mathematical-papyrus', 'domesday-book') }
 }
 function HubCard($s, [string]$cls) {
@@ -2056,8 +2351,8 @@ SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
 $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
   @('Through time', @('atlas', 'timeline', 'centuries', 'years')), @('Explore', @('explorer', 'connections', 'paths', 'start')),
-  @('Play', @('quiz', 'games', 'kids', 'passport')), @('The Institute', @('series', 'dataset', 'community', 'contributors')))
-SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
+  @('Play', @('quiz', 'games', 'kids', 'passport')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors')))
+SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(if (@($_[1]).Count -eq 5) { ' hub-5' } else { '' }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'countries', 'atlas', 'centuries', 'explorer', 'paths', 'today', 'speeches', 'games', 'kids') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
 $hm = WorldDots 1000
@@ -2172,9 +2467,9 @@ Say ("open data: {0} states ({1} placed), {2} relations, {3} curve points" -f $o
 
 # stale generated pages (entries, states or days that no longer exist)
 $htPlain = "# Generated by scripts/build-pages.ps1: the pages in this folder are extensionless HTML.`n<FilesMatch `"^[a-z0-9-]+$`">`n  ForceType text/html`n</FilesMatch>`n"
-foreach ($dir in 'countries', 'centuries', 'paths', 'speeches', 'years', 'people') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
+foreach ($dir in 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'teachers') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
 $nDel = 0
-foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people') {
+foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'teachers') {
   $full = Join-Path $Repo $dir; if (-not (Test-Path $full)) { continue }
   foreach ($f in Get-ChildItem $full -File) {
     if ($f.Extension -or $f.Name -eq 'index' -or $f.Name.StartsWith('.')) { continue }
@@ -2207,6 +2502,7 @@ function SitemapOf([string]$p) {
 $IMGOF = @{}
 foreach ($e in $ENT) { if ($e.img) { $IMGOF['/encyclopedia/' + $e.slug] = $e.img } }
 foreach ($p in $PROF) { $IMGOF[$p] = '/images/og/' + $p.Substring(8) + '.jpg' }
+foreach ($ey in $ESSAYS) { if ($ey.pic) { $IMGOF['/essays/' + $ey.slug] = $ey.pic } }
 foreach ($kv in $STX.GetEnumerator()) { $im = [string]$kv.Value['img']; if ($im -and (Test-Path (Join-Path $Repo ($im.TrimStart('/') -replace '/', '\')))) { $IMGOF['/state/' + $kv.Key] = $im } }
 $SMG = [ordered]@{ pages = New-Object System.Collections.Generic.List[string]; profiles = New-Object System.Collections.Generic.List[string]; encyclopedia = New-Object System.Collections.Generic.List[string]; states = New-Object System.Collections.Generic.List[string]; years = New-Object System.Collections.Generic.List[string] }
 $LATEST = @{}

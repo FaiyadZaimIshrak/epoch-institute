@@ -523,7 +523,7 @@ function initNav(activePage) {
     ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'],
     ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']];
   const MORE = [['series', '/research-series', 'Research Series'], ['dataset', '/dataset', 'Open Data'], ['research', '/research', 'Research Hub'],
-    ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'], ['', '/#newsletter-section', 'Newsletter'],
+    ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'], ['', '/#newsletter-section', 'Newsletter'],
     ['about', '/about', 'About the Institute'], ['contributors', '/contributors', 'Write for Us'], ['contact', '/contact', 'Contact']];
   const exploreActive = EXPLORE.some(x => x[0] === activePage);
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -630,6 +630,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/about">About the Institute</a>
         <a class="footer-link" href="/about#methodology">Methodology</a>
         <a class="footer-link" href="/research">Research Hub</a>
+        <a class="footer-link" href="/teachers/">Teachers&#8217; Corner</a>
         <a class="footer-link" href="/contributors">Write for Us</a>
         <a class="footer-link" href="/community">Community</a>
         <a class="footer-link" href="/community#submit">Submit an Article</a>
@@ -742,7 +743,8 @@ function initNav(activePage) {
     // the reading pages that can be saved and are recorded as recently viewed
     var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
       [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path'],
-      [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech']];
+      [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech'], [/^\/essays\/[a-z0-9-]+$/, 'essay'],
+      [/^\/(religion|language)\/[a-z0-9-]+$/, 'profile']];
     var kind = null;
     if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
       KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
@@ -933,7 +935,7 @@ function initNav(activePage) {
 
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
   (function () {
-    if (!/^\/(empire|encyclopedia)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
+    if (!/^\/(empire|religion|language|encyclopedia|essays)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
     var bar = document.createElement('div'); bar.className = 'read-progress'; bar.setAttribute('aria-hidden', 'true');
     document.body.appendChild(bar);
     var ticking = false;
@@ -1006,13 +1008,42 @@ function initNav(activePage) {
       if (cur.trim()) out.push(cur.trim());
       return out;
     }
+    // how natural a voice sounds, best first: neural voices (Edge's "Natural", Apple's "Premium"), Apple's
+    // "Enhanced", network voices (Chrome's Google voices, Android's network voices), then the device's basic voices;
+    // Apple's novelty voices (Bubbles, Zarvox, Grandpa …) last. A voice the reader chose (epoch-listen-voice) wins.
+    var NOVELTY = /^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Good News|Hysterical|Jester|Organ|Pipe Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Fred|Junior|Kathy|Ralph|Princess|Eddy|Flo|Grandma|Grandpa|Reed|Rocko|Sandy|Shelley)\b/i;
+    function quality(v) {
+      var n = (v.name || '') + ' ' + (v.voiceURI || '');
+      if (NOVELTY.test(v.name || '')) return 9;
+      if (/natural|neural|premium/i.test(n)) return 0;
+      if (/enhanced/i.test(n)) return 1;
+      if (/google|network|online/i.test(n) || v.localService === false) return 2;
+      return 4;
+    }
+    function langOfVoice(v) { return String(v.lang || '').toLowerCase().replace('_', '-'); }
+    function accent(v) { var l = langOfVoice(v); return l.indexOf('en-gb') === 0 ? 0 : l.indexOf('en-us') === 0 ? 1 : 2; }
+    function englishVoices() {
+      var all = (synth.getVoices() || []).filter(function (v) { return /^en(-|$)/.test(langOfVoice(v)); })
+        .sort(function (a, b) { return quality(a) - quality(b) || accent(a) - accent(b) || String(a.name).localeCompare(String(b.name)); });
+      var real = all.filter(function (v) { return quality(v) < 9; });   // the novelty voices only when there is nothing else
+      return real.length ? real : all;
+    }
+    var chosen = ''; try { chosen = localStorage.getItem('epoch-listen-voice') || ''; } catch (e) {}
     function voiceFor(lang) {
       var vs = synth.getVoices() || []; if (!vs.length) return null;
-      var mine = vs.filter(function (v) { return String(v.lang || '').toLowerCase().replace('_', '-').indexOf(lang) === 0; });
-      if (!mine.length) return null;
-      if (lang !== 'en') return mine[0];
-      function rank(v) { var l = String(v.lang).toLowerCase(); return (l.indexOf('en-gb') === 0 ? 0 : l.indexOf('en-us') === 0 ? 1 : 2) * 2 + (/natural|neural|google/i.test(v.name) ? 0 : 1); }
-      return mine.slice().sort(function (a, b) { return rank(a) - rank(b); })[0];
+      if (lang !== 'en') {
+        var mine = vs.filter(function (v) { return langOfVoice(v).indexOf(lang) === 0; });
+        return mine.sort(function (a, b) { return quality(a) - quality(b); })[0] || null;
+      }
+      var en = englishVoices(); if (!en.length) return null;
+      if (chosen) { var c = en.filter(function (v) { return v.voiceURI === chosen || v.name === chosen; })[0]; if (c) return c; }
+      return en[0];
+    }
+    // a voice's name for the menu: "Sonia (natural) · UK" rather than "Microsoft Sonia Online (Natural) - English (United Kingdom)"
+    var PLACE = { 'en-gb': 'UK', 'en-us': 'US', 'en-au': 'Australia', 'en-ca': 'Canada', 'en-ie': 'Ireland', 'en-in': 'India', 'en-nz': 'New Zealand', 'en-za': 'South Africa', 'en-sg': 'Singapore', 'en-hk': 'Hong Kong', 'en-ph': 'Philippines', 'en-ng': 'Nigeria', 'en-ke': 'Kenya', 'en-tz': 'Tanzania' };
+    function voiceLabel(v) {
+      var n = String(v.name || '').replace(/^(Microsoft|Google|Apple)\s+/i, '').replace(/\s*[-–]\s*English\b.*$/i, '').replace(/\s+Online\b/i, '').replace(/\s*\((Natural|Neural)\)/i, ' (natural)').replace(/\s*\((Premium|Enhanced)\)/i, function (m, k) { return ' (' + k.toLowerCase() + ')'; });
+      var p = PLACE[langOfVoice(v).slice(0, 5)]; return n + (p && n.indexOf(p) < 0 ? ' · ' + p : '');
     }
     var RATES = [0.8, 1, 1.2], rate = 1;
     try { var sr = parseFloat(localStorage.getItem('epoch-listen-rate')); if (RATES.indexOf(sr) >= 0) rate = sr; else if (kidsOn()) rate = 0.8; } catch (e) {}
@@ -1024,7 +1055,7 @@ function initNav(activePage) {
     function ensureBar() {
       if (bar) return;
       bar = document.createElement('div'); bar.className = 'listen-bar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Reading aloud');
-      bar.innerHTML = '<button type="button" class="lb-play"></button><button type="button" class="lb-stop">Stop</button><button type="button" class="lb-rate" aria-label="Reading speed"></button><span class="lb-pos" aria-hidden="true"></span><span class="sr-only lb-live" aria-live="polite"></span>';
+      bar.innerHTML = '<button type="button" class="lb-play"></button><button type="button" class="lb-stop">Stop</button><button type="button" class="lb-rate" aria-label="Reading speed"></button><select class="lb-voice" aria-label="Voice"></select><span class="lb-pos" aria-hidden="true"></span><span class="sr-only lb-live" aria-live="polite"></span>';
       document.body.appendChild(bar);
       bar.querySelector('.lb-play').addEventListener('click', toggle);
       bar.querySelector('.lb-stop').addEventListener('click', stop);
@@ -1032,6 +1063,21 @@ function initNav(activePage) {
         rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length]; try { localStorage.setItem('epoch-listen-rate', String(rate)); } catch (e) {}
         paint(); if (state === 'play') { synth.cancel(); speakFrom(pos); }
       });
+      // the device's English voices, the most natural first: a choice is remembered and takes effect at once
+      var sel = bar.querySelector('.lb-voice');
+      sel.addEventListener('change', function () {
+        var v = englishVoices()[+sel.value]; if (!v) return;
+        chosen = v.voiceURI || v.name; try { localStorage.setItem('epoch-listen-voice', chosen); } catch (e) {}
+        if (state === 'play') { token++; synth.cancel(); speakFrom(pos); }
+      });
+      fillVoices();
+      if ('onvoiceschanged' in synth) synth.addEventListener('voiceschanged', fillVoices);
+    }
+    function fillVoices() {
+      var sel = bar && bar.querySelector('.lb-voice'); if (!sel) return;
+      var en = englishVoices(), cur = voiceFor('en');
+      sel.innerHTML = en.map(function (v, i) { return '<option value="' + i + '">' + escHtml(voiceLabel(v)) + '</option>'; }).join('');
+      sel.selectedIndex = Math.max(0, en.indexOf(cur)); sel.hidden = en.length < 2;
     }
     function paint() {
       label(); if (!bar) return;
