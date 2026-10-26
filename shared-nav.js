@@ -744,7 +744,7 @@ function initNav(activePage) {
     var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
       [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path'],
       [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech'], [/^\/essays\/[a-z0-9-]+$/, 'essay'],
-      [/^\/(religion|language)\/[a-z0-9-]+$/, 'profile']];
+      [/^\/(religion|language)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article']];
     var kind = null;
     if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
       KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
@@ -852,11 +852,20 @@ function initNav(activePage) {
       var b = document.createElement('button'); b.type = 'button'; b.className = 'kd-story'; b.textContent = 'Read the whole story';
       b.addEventListener('click', openAll); el.parentNode.insertBefore(b, el);
     });
+    // a community article was written by a reader for grown-ups: Kids mode opens it only when asked
+    var cmb = document.querySelector('.cm-article .cm-body');
+    if (cmb) {
+      var cn = document.createElement('p'); cn.className = 'kd-note';
+      cn.textContent = 'A reader wrote this article for grown-ups, and some of it may be hard to read.';
+      var cb = document.createElement('button'); cb.type = 'button'; cb.className = 'kd-story'; cb.textContent = 'Read the article';
+      cb.addEventListener('click', openAll);
+      cmb.parentNode.insertBefore(cn, cmb); cmb.parentNode.insertBefore(cb, cmb);
+    }
     // a link (the profile's "On this page") or an address that points into the folded text opens it first
     function folded(id) {
       try { id = decodeURIComponent(id); } catch (e) {}
       var t = id && document.getElementById(id);
-      return t && html.getAttribute('data-kids') === '1' && !html.classList.contains('kd-open') && t.closest('.profile-section-block, .profile-references, .st-text, .enc-desc') ? t : null;
+      return t && html.getAttribute('data-kids') === '1' && !html.classList.contains('kd-open') && t.closest('.profile-section-block, .profile-references, .st-text, .enc-desc, .cm-body') ? t : null;
     }
     document.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[href^="#"]');
@@ -935,7 +944,7 @@ function initNav(activePage) {
 
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
   (function () {
-    if (!/^\/(empire|religion|language|encyclopedia|essays)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
+    if (!/^\/(empire|religion|language|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
     var bar = document.createElement('div'); bar.className = 'read-progress'; bar.setAttribute('aria-hidden', 'true');
     document.body.appendChild(bar);
     var ticking = false;
@@ -960,8 +969,8 @@ function initNav(activePage) {
       ['article.sp-view', 'h1.sp-title, .sp-by, .sp-sec > h2, .sp-sec > p:not(.sp-source), blockquote.sp-quote, .sp-ft-body p, .sp-ft-body > div > p'],
       ['main.day-page', 'h1, .ref-lede, .day-events .tih-event-card'],
       ['main.yr-year', 'h1, .yr-head .ref-lede, .yr-events .tih-event-card, .yr-prof li'],
-      ['article.essay-view', 'h1, .essay-sub, .essay-body h2, .essay-body h3, .essay-body p, .essay-body li'],
-      ['article.cm-article', 'h1, .cm-by, .cm-body h2, .cm-body h3, .cm-body p']
+      ['article.essay-view:not(.cm-article)', 'h1, .essay-sub, .essay-body h2, .essay-body h3, .essay-body p, .essay-body li'],
+      ['article.cm-article', 'h1, .essay-sub, .cm-by, .cm-body h2, .cm-body h3, .cm-body p:not(.cm-src)']
     ];
     var type = null, root = null;
     for (var t = 0; t < TYPES.length && !root; t++) { root = document.querySelector(TYPES[t][0]); if (root) type = TYPES[t]; }
@@ -1131,7 +1140,7 @@ function initNav(activePage) {
     document.addEventListener('epoch:kids', function () { label(); });
     // where the button goes: under the title (profiles: next to the meta line)
     function place() {
-      var host = root.querySelector('.enc-meta, .st-meta, .empire-meta, .sp-by, .essay-sub, .cm-by') || (type[0] === 'main.day-page' || type[0] === 'main.yr-year' ? root.querySelector('.ref-lede') : null) || root.querySelector('h1');
+      var host = root.querySelector('.cm-by') || root.querySelector('.enc-meta, .st-meta, .empire-meta, .sp-by, .essay-sub') || (type[0] === 'main.day-page' || type[0] === 'main.yr-year' ? root.querySelector('.ref-lede') : null) || root.querySelector('h1');
       if (!host) return false;
       var row = document.createElement('p'); row.className = 'listen-row'; row.appendChild(btn);
       host.parentNode.insertBefore(row, host.nextSibling); label(); return true;

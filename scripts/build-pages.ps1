@@ -19,6 +19,7 @@
 #   the generated blocks of encyclopedia/index, state/index, today-in-history/index, research (hub) and index (home),
 #   enc-page.js's IDX_V, and the .htaccess files of state/, countries/, centuries/ and paths/
 #   sitemap.xml (index) + sitemaps/*.xml, with lastmod kept in scripts/sitemap-state.tsv
+#   images/encyclopedia/thumbs, images/states/thumbs   112 px copies for small pictures (scripts/make-thumbs.ps1, run first)
 # Only files whose content changed are written; generated pages without a source any more are deleted.
 # -SkipEntries keeps the existing entry pages (no linking, ~9 minutes faster) - for testing the other page sets.
 param([string]$Repo = (Split-Path $PSScriptRoot), [string]$Reviewed = 'October 2026', [switch]$SkipEntries)
@@ -27,6 +28,8 @@ $SITE = 'https://the-epoch-institute.org'; $TODAY = (Get-Date).ToString('yyyy-MM
 $clock = [Diagnostics.Stopwatch]::StartNew()
 function Say([string]$m) { Write-Host ('[{0,4}s] {1}' -f [int]$clock.Elapsed.TotalSeconds, $m) }
 . "$PSScriptRoot\lib\enc-fn.ps1"   # EncRx, EncPick, EncOk, EncYears (same rules as ENC_FN in the browser)
+# the 112 px copies of the encyclopedia and state pictures for small places (only new or changed pictures are redone)
+foreach ($thLine in (& "$PSScriptRoot\make-thumbs.ps1" -Repo $Repo)) { Say "thumbs: $thLine" }
 
 if (-not ('EpochBuild.W' -as [type])) {
   Add-Type -Language CSharp -TypeDefinition @'
@@ -454,7 +457,8 @@ $stateFile = "$PSScriptRoot\sitemap-state.tsv"; $SM = @{}
 if (Test-Path $stateFile) { foreach ($l in [IO.File]::ReadAllLines($stateFile, $U8)) { $p = $l -split "`t"; if ($p.Count -eq 3) { $SM[$p[0]] = @($p[1], $p[2]) } } }
 $SMNEW = @{}; $CHANGED = @{}
 function Stamp([string]$path, [string]$content) {   # content may hold @@MOD@@ (dateModified): hashed without it
-  $c = $content.Replace("`r`n", "`n")
+  # a picture's small copy (images/<folder>/thumbs/, Oct 2026) is the same picture: moving to it dates no page either
+  $c = $content.Replace("`r`n", "`n").Replace('/images/encyclopedia/thumbs/', '/images/encyclopedia/').Replace('/images/states/thumbs/', '/images/states/')
   $hash = [EpochBuild.W]::Sha1($c.Replace($THEME, ''))   # the head snippet is not content: changing it dates no page
   # until every page has been stamped once without the snippet: a hash of the page with the snippet as it was before Kids mode
   $old = if ($SM.ContainsKey($path) -and $SM[$path][0] -ne $hash) { [EpochBuild.W]::Sha1($c.Replace($THEME, $THEME0)) } else { '' }
@@ -506,6 +510,11 @@ function TagGroup($e) { foreach ($g in $TAGS) { foreach ($tg in $e.tags) { if ($
 function TypeLine($e) { if ($e.conflict) { (TagLabel $e) + $(if ($e.dates) { ' · ' + $e.dates } else { '' }) } elseif ($SING.ContainsKey($e.type)) { $SING[$e.type] } else { $e.type } }
 # an entry without a picture: a small sign of its kind (shared.css .ph-person, .ph-conflict, ...) instead of a blank square
 function PhSpan($e) { '<span class="ph ph-' + $(if ($e.conflict) { 'conflict' } else { [string]$e.type }) + '" aria-hidden="true"></span>' }
+# a picture shown at 56 px or less (list tiles, speech portraits on the index, chart avatars) uses its 112 px copy in
+# images/<folder>/thumbs/ (scripts/make-thumbs.ps1, run above); a picture without one keeps the full file
+$THUMBSET = New-Object 'Collections.Generic.HashSet[string]'
+foreach ($thDir in 'encyclopedia', 'states') { if (Test-Path "$Repo\images\$thDir\thumbs") { foreach ($thFile in [IO.Directory]::GetFiles("$Repo\images\$thDir\thumbs", '*.jpg')) { [void]$THUMBSET.Add("/images/$thDir/" + [IO.Path]::GetFileName($thFile)) } } }
+function ThumbOf([string]$img) { if ($THUMBSET.Contains($img)) { $img.Insert($img.LastIndexOf('/') + 1, 'thumbs/') } else { $img } }
 
 Say 'reading encyclopedia-links.js'
 $elText = [IO.File]::ReadAllText("$Repo\encyclopedia-links.js", $U8)
@@ -841,7 +850,7 @@ foreach ($e in $ENT) {
   if ($KIDS.ContainsKey($e.slug)) {
     $warKids = @($KIDS[$e.slug] | Sort-Object @{ e = { if ($_.year -eq [int]::MinValue) { 1 } else { 0 } } }, @{ e = { $_.year } }, @{ e = { $_.i } })
     [void]$body.Append('<section><h2 class="enc-section-title">Battles and settlements</h2><ul class="enc-seealso">')
-    foreach ($o in $warKids) { [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TagLabel $o) + $(if ($o.dates) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>') }
+    foreach ($o in $warKids) { [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TagLabel $o) + $(if ($o.dates) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>') }
     [void]$body.Append("</ul></section>`n")
   }
   $own = if ($ESP) { $ESP[$e.slug] } else { $null }
@@ -862,7 +871,7 @@ foreach ($e in $ENT) {
   $related = @($SEE[$e.i]); if (-not $related.Count) { $related = @($SEE2[$e.i]) }
   if ($related.Count) {
     [void]$body.Append('<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso">')
-    foreach ($ix in $related) { $o = $ENT[$ix]; [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $(if ($o.conflict) { TagLabel $o } else { $SING[$o.type] })) + '</span></span></a></li>') }
+    foreach ($ix in $related) { $o = $ENT[$ix]; [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $(if ($o.conflict) { TagLabel $o } else { $SING[$o.type] })) + '</span></span></a></li>') }
     [void]$body.Append("</ul></section>`n")
   }
   $pv = if ($e.i -gt 0) { $ENT[$e.i - 1] } else { $null }; $nx = if ($e.i -lt $NENT - 1) { $ENT[$e.i + 1] } else { $null }
@@ -892,7 +901,7 @@ foreach ($L in $LETTERS) {
     [void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Encyclopedia: ' + $lbl + '</h1><p class="ref-lede">' + $lst.Count.ToString('N0') + ' entries under ' + $lbl + $(if ($tot -gt 1) { " · page $pg of $tot" } else { '' }) + ': ' + (Hx $range) + "</p></header>`n")
     [void]$sb.Append(($LETTERBAR.Replace('href="/encyclopedia/browse/' + $L + '">', 'href="/encyclopedia/browse/' + $L + '" aria-current="page">')) + "`n<ul class=`"enc-list`">")
     foreach ($o in $slice) {
-      [void]$sb.Append('<li class="enc-item' + $(if ($o.img) { ' has-img' } else { '' }) + '"><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img class="enc-thumb" src="' + $o.img + '" alt="" loading="lazy" width="56" height="56">' } else { '' }) +
+      [void]$sb.Append('<li class="enc-item' + $(if ($o.img) { ' has-img' } else { '' }) + '"><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img class="enc-thumb" src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="56" height="56">' } else { '' }) +
         '<span class="enc-name">' + (Hx $o.name) + '</span><span class="enc-type">' + (Hx (TypeLine $o)) + '</span>' + $(if ($o.desc) { '<span class="enc-snip">' + (Hx ([EpochBuild.W]::FirstSentence($o.desc, 170))) + '</span>' } else { '' }) + '</a></li>')
     }
     [void]$sb.Append("</ul>`n" + (Pager ('/encyclopedia/browse/' + $L) $pg $tot) + "`n</div>`n</main>`n")
@@ -915,7 +924,7 @@ foreach ($c in $CENTORDER) {
     $items = @($lst | Where-Object { (TagGroup $_) -eq $g[0] } | Sort-Object @{ e = { $_.year } }, @{ e = { $_.i } })
     if (-not $items.Count) { continue }
     [void]$sb.Append('<section class="ref-group"><h2>' + (Hx $g[1]) + ' <span class="n">' + $items.Count + '</span></h2><ul class="enc-list">')
-    foreach ($o in $items) { [void]$sb.Append('<li class="enc-item' + $(if ($o.img) { ' has-img' } else { '' }) + '"><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img class="enc-thumb" src="' + $o.img + '" alt="" loading="lazy" width="56" height="56">' } else { '' }) + '<span class="enc-name">' + (Hx $o.name) + '</span><span class="enc-type">' + (Hx (TypeLine $o)) + '</span>' + $(if ($o.desc) { '<span class="enc-snip">' + (Hx ([EpochBuild.W]::FirstSentence($o.desc, 170))) + '</span>' } else { '' }) + '</a></li>') }
+    foreach ($o in $items) { [void]$sb.Append('<li class="enc-item' + $(if ($o.img) { ' has-img' } else { '' }) + '"><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img class="enc-thumb" src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="56" height="56">' } else { '' }) + '<span class="enc-name">' + (Hx $o.name) + '</span><span class="enc-type">' + (Hx (TypeLine $o)) + '</span>' + $(if ($o.desc) { '<span class="enc-snip">' + (Hx ([EpochBuild.W]::FirstSentence($o.desc, 170))) + '</span>' } else { '' }) + '</a></li>') }
     [void]$sb.Append("</ul></section>`n")
   }
   [void]$sb.Append("</div>`n</main>`n")
@@ -1244,7 +1253,7 @@ function ProfCard([string]$url, [string]$name, [string]$years, [string]$sub) {  
   return '<li><a class="pcard" href="' + $url + '">' + (LogoImg $logoName 52) + '<span class="pcard-b"><span class="pcard-n">' + (Hx $name) + '</span><span class="pcard-y">' + (Hx $years) + '</span>' + $(if ($sub) { '<span class="pcard-s">' + $sub + '</span>' } else { '' }) + '</span></a></li>'
 }
 function EntTile($o) {   # an encyclopedia entry as a picture tile (as "See also" on entry pages)
-  '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TypeLine $o) + $(if ($o.dates -and -not $o.conflict) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>'
+  '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TypeLine $o) + $(if ($o.dates -and -not $o.conflict) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>'
 }
 $ESCORE = @{}; foreach ($e in $ENT) { $stMent = if ($ESM -and $ESM[$e.slug]) { [int]$ESM[$e.slug][0] } else { 0 }; $ESCORE[$e.slug] = $e.emp.Count * 3 + [Math]::Min($stMent, 30) + $(if ($e.img) { 4 } else { 0 }) }
 function TopEntries($list, [int]$take) { @($list | Sort-Object @{ e = { $ESCORE[$_.slug] }; Descending = $true }, @{ e = { $_.i } } | Select-Object -First $take) }
@@ -1602,7 +1611,7 @@ foreach ($era in $SPERA.Keys) {
   [void]$ib.Append('<section class="sp-era"><h2 class="ref-sec-title">' + $SPERA[$era] + '</h2><div class="sp-grid">')
   foreach ($s in $grp) {
     $para = ([string]$s['kind'] -eq 'paraphrase'); $por = SpPortrait $s
-    [void]$ib.Append('<a class="sp-card' + $(if ($por) { ' has-pic' } else { '' }) + '" href="/speeches/' + $s['slug'] + '">' + $(if ($por) { '<span class="sp-card-pic"><img src="' + $por + '" alt="" loading="lazy" width="56" height="56"></span>' } else { '' }) + '<span class="sp-card-k">' + (Hx ([string]$s['display'])) + '</span><span class="sp-card-t">' + (Hx ([string]$s['title'])) + '</span><span class="sp-card-q">' + $(if ($para) { 'In substance: ' + (Hx ([string]$s['excerpt'])) } else { '&ldquo;' + (Hx ([string]$s['excerpt'])) + '&rdquo;' }) + '</span><span class="sp-card-by">' + (Hx ([string]$s['speaker'])) + $(if ($SPTXT.ContainsKey([string]$s['slug'])) { '<span class="sp-card-ft"> · full text</span>' } elseif ($s['full']) { '<span class="sp-card-ft"> · complete text linked</span>' } else { '' }) + '</span></a>')
+    [void]$ib.Append('<a class="sp-card' + $(if ($por) { ' has-pic' } else { '' }) + '" href="/speeches/' + $s['slug'] + '">' + $(if ($por) { '<span class="sp-card-pic"><img src="' + (ThumbOf $por) + '" alt="" loading="lazy" width="56" height="56"></span>' } else { '' }) + '<span class="sp-card-k">' + (Hx ([string]$s['display'])) + '</span><span class="sp-card-t">' + (Hx ([string]$s['title'])) + '</span><span class="sp-card-q">' + $(if ($para) { 'In substance: ' + (Hx ([string]$s['excerpt'])) } else { '&ldquo;' + (Hx ([string]$s['excerpt'])) + '&rdquo;' }) + '</span><span class="sp-card-by">' + (Hx ([string]$s['speaker'])) + $(if ($SPTXT.ContainsKey([string]$s['slug'])) { '<span class="sp-card-ft"> · full text</span>' } elseif ($s['full']) { '<span class="sp-card-ft"> · complete text linked</span>' } else { '' }) + '</span></a>')
   }
   [void]$ib.Append("</div></section>`n")
 }
@@ -1711,6 +1720,74 @@ foreach ($ey in @($ESSAYS | Sort-Object @{ e = { $_.date }; Descending = $true }
 [void]$fx.Append("  </channel>`n</rss>`n")
 if ([EpochBuild.W]::WriteIfChanged("$Repo\feed.xml", $fx.ToString())) { $NWRITE++ }
 Say "research essays: $($ESSAYS.Count) ($((($ESSAYS | ForEach-Object { $_.words }) | Measure-Object -Sum).Sum) words)"
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Community articles: /articles/<slug> from data/community/articles.json (scripts/fetch-community.ps1: a snapshot of the
+# articles approved in the Apps Script, so a build never needs the network) and the build:articles block of
+# /community, which links its cards to these pages. The texts are the authors' own; only their layout is made here:
+# leading short lines in capitals are the title (with the next as its second half and a third as the subtitle),
+# "PART n …" lines are sections, other short unpunctuated lines subheadings (leading emoji dropped), "Source: …"
+# lines source notes, "— End of Document —" is dropped. scripts/community-overrides.tsv: snapshot title, slug, title,
+# subtitle, author (an empty field keeps what the text gives; no author = "A community contributor").
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+$CMOV = @{}
+if (Test-Path "$PSScriptRoot\community-overrides.tsv") { foreach ($l in [IO.File]::ReadAllLines("$PSScriptRoot\community-overrides.tsv", $U8)) { if ($l.Trim() -and -not $l.StartsWith('#')) { $c = $l.Split("`t"); $CMOV[$c[0]] = $c } } }
+function CmTitleCase([string]$s) {   # "SATI PRATHA" -> "Sati Pratha"; small words stay lower inside
+  $small = @('a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'of', 'on', 'or', 'the', 'to', 'with')
+  $w = $s.ToLowerInvariant() -split ' '
+  for ($i = 0; $i -lt $w.Count; $i++) { if ($w[$i] -and ($i -eq 0 -or $small -notcontains $w[$i])) { $w[$i] = $w[$i].Substring(0, 1).ToUpperInvariant() + $w[$i].Substring(1) } }
+  return ($w -join ' ')
+}
+function CmHead([string]$s) { return ($s -replace '^[^\p{L}\p{N}"“(]+', '').Trim() }   # a heading without its leading emoji
+$CMART = New-Object Collections.Generic.List[object]
+$cmFile = "$Repo\data\community\articles.json"
+$cmList = if (Test-Path $cmFile) { @([IO.File]::ReadAllText($cmFile, $U8) | ConvertFrom-Json) } else { @() }
+foreach ($x in $cmList) {
+  $ov = $CMOV[[string]$x.title]
+  $paras = @($x.content | ForEach-Object { ([string]$_).Trim() } | Where-Object { $_ -and $_ -notmatch '^[—–-]+\s*End of Document\s*[—–-]+$' })
+  $k = 0; $title = ''; $sub = ''
+  if ($paras.Count -and $paras[0].Length -lt 90 -and $paras[0] -ceq $paras[0].ToUpperInvariant() -and $paras[0] -match '\p{Lu}') {
+    $lead = New-Object Collections.Generic.List[string]
+    while ($k -lt $paras.Count -and $lead.Count -lt 3 -and $paras[$k].Length -lt 90 -and $paras[$k] -notmatch '[.:;!?]$' -and $paras[$k] -notmatch '^(PART\b|Source:)') { $lead.Add($paras[$k]); $k++ }
+    $title = (CmTitleCase $lead[0]) + $(if ($lead.Count -ge 2) { ': ' + $lead[1] } else { '' }); if ($lead.Count -ge 3) { $sub = $lead[2] }
+  } else { $title = CmTitleCase ((([string]$x.title) -replace '^Copy of\s+', '' -replace '[_]+', ' ').Trim()) }
+  if ($ov -and $ov.Count -gt 2 -and $ov[2]) { $title = $ov[2] }; if ($ov -and $ov.Count -gt 3 -and $ov[3]) { $sub = $ov[3] }
+  $author = if ($ov -and $ov.Count -gt 4 -and $ov[4]) { $ov[4] } elseif (([string]$x.author).Trim()) { ([string]$x.author).Trim() } else { 'A community contributor' }
+  $slug = if ($ov -and $ov.Count -gt 1 -and $ov[1]) { $ov[1] } else { (($title.Normalize([Text.NormalizationForm]::FormD) -replace '\p{Mn}', '').ToLowerInvariant() -replace "['’]", '' -replace '[^a-z0-9]+', '-').Trim('-') }
+  $body = New-Object Text.StringBuilder; $words = 0; $first = ''
+  for ($i = $k; $i -lt $paras.Count; $i++) {
+    $p = $paras[$i]
+    if ($p -match '^Source:\s*(.+)$') { [void]$body.Append('<p class="cm-src">Source: ' + (Hx $Matches[1]) + "</p>`n"); continue }
+    if ($p -match '^PART\s+(\w+)\s*[—–:-]+\s*(.+)$') { [void]$body.Append('<h2>Part ' + (Hx $Matches[1]) + ' — ' + (Hx (CmHead $Matches[2])) + "</h2>`n"); continue }
+    if ($p.Length -lt 100 -and $p -notmatch '[.:;!?,]$') { [void]$body.Append('<h3>' + (Hx (CmHead $p)) + "</h3>`n"); continue }
+    if (-not $first) { $first = $p }
+    $words += @($p -split '\s+' | Where-Object { $_ }).Count
+    [void]$body.Append('<p>' + (Hx $p) + "</p>`n")
+  }
+  $desc = [regex]::Match($first, '^.+?[.!?](?=\s|$)').Value; if (-not $desc) { $desc = $first }
+  if ($desc.Length -gt 158) { $desc = $desc.Substring(0, $desc.LastIndexOf(' ', 155)) + '…' }
+  $when = [DateTimeOffset]::FromUnixTimeMilliseconds([long]$x.ts).UtcDateTime; $iso = $when.ToString('yyyy-MM-dd', $INV); $dateTxt = $when.ToString('d MMMM yyyy', $INV)
+  $mins = [Math]::Max(1, [int][Math]::Round($words / 230.0))
+  $path = '/articles/' + $slug; $url = $SITE + $path
+  $crumb = Crumbs @(@('Home', '/'), @('Community', '/community'), @($title, $null))
+  $sb = New-Object Text.StringBuilder(30000)
+  [void]$sb.Append('<main id="main" class="essay-page ref-page">' + "`n<div class=`"essay-wrap`">`n" + $crumb[0] + "`n<article class=`"essay-view cm-article`">`n")
+  [void]$sb.Append('<header class="essay-head"><p class="essay-kicker"><a href="/community">Community</a> · <time datetime="' + $iso + '">' + $dateTxt + '</time> · ' + $mins + ' min read</p>' +
+    '<h1 class="essay-title">' + (Hx $title) + '</h1>' + $(if ($sub) { '<p class="essay-sub">' + (Hx $sub) + '</p>' } else { '' }) + '<p class="cm-by">By ' + (Hx $author) + '</p>' +
+    '<p class="page-share-row"><button type="button" class="sp-share page-share" data-share-text="' + (Hx $title) + '" data-share-title="' + (Hx $title) + '" data-share-heading="Share this article" data-share-url="' + $url + '">Share</button></p></header>' + "`n")
+  [void]$sb.Append('<aside class="cm-note"><p>Community articles are written by the Institute''s readers and published as they were submitted, with light formatting. Their views, facts and sources are the author''s own and have not been checked by the Institute. <a href="/contact?topic=correction&amp;page=' + $path + '">Suggest a correction</a> · <a href="/contributors">Write for the Institute</a></p></aside>' + "`n")
+  [void]$sb.Append('<div class="essay-body cm-body">' + "`n" + $body.ToString() + "</div>`n")
+  [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/community">More from the community &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n")
+  $ld = $crumb[1] + ',{"@type":"Article","headline":' + (Js $title) + $(if ($sub) { ',"alternativeHeadline":' + (Js $sub) } else { '' }) + ',"description":' + (Js $desc) + ',"url":' + (Js $url) + ',"mainEntityOfPage":' + (Js $url) +
+    ',"inLanguage":"en","datePublished":"' + $iso + '","dateModified":"@@MOD@@","wordCount":' + $words + ',"author":{"@type":"Person","name":' + (Js $author) + '},"publisher":' + $ORG +
+    ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
+  Emit $path (Page @{ title = $title + ' — Community — The Epoch Institute'; desc = $desc; path = $path; type = 'article'; ld = $ld; nav = 'community'; body = $sb.ToString() })
+  $CMART.Add([pscustomobject]@{ key = [string]$x.title; path = $path; title = $title; author = $author; iso = $iso; excerpt = $(if ($first.Length -gt 180) { $first.Substring(0, $first.LastIndexOf(' ', 178)) + '…' } else { $first }) })
+}
+# /community: the approved articles that have a page open it (newer approvals still open inside the page); if the
+# Apps Script feed is down, these are the articles it shows
+SetBlock "$Repo\community" 'articles' ('<script>var BUILT_ARTICLES = {' + (($CMART | ForEach-Object { (Js $_.key) + ':{h:' + (Js $_.path) + ',t:' + (Js $_.title) + ',a:' + (Js $_.author) + ',d:' + (Js $_.iso) + ',e:' + (Js $_.excerpt) + '}' }) -join ',') + '};</script>')
+Say "community articles: $($CMART.Count)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Teachers' corner: /teachers/ (a guide) and printable worksheets on the reading paths (/teachers/path-<slug>) and
@@ -1928,7 +2005,7 @@ function GoodPic([string]$img) { if (-not $img) { return $false }; $src = PicSou
 function DayEvPic($ev) { foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0])) { $o = $BY[[string]$lk[0]]; if (GoodPic $o.img) { return $o } } }; return $null }
 function MdLabel([int]$md) { "$($md % 100) $($MONTHS[[int][Math]::Floor($md / 100) - 1])" }
 function MdKey([int]$md) { ([int][Math]::Floor($md / 100)).ToString('00') + '-' + ($md % 100).ToString('00') }
-function YrTile($o, [string]$note) { '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $note) + '</span></span></a></li>' }
+function YrTile($o, [string]$note) { '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $note) + '</span></span></a></li>' }
 function TileList($items, [string]$noteKind) {   # entry tiles, the 24 best known first, the rest folded
   $all = @($items | Sort-Object @{ e = { $ESCORE[$_.slug] }; Descending = $true }, @{ e = { $_.i } })
   $f = { param($o) YrTile $o $(if ($noteKind -eq 'dates') { $o.dates } else { (TypeLine $o) -replace ' · .*$', '' }) }
@@ -2063,7 +2140,7 @@ function LifeChart($rows, [string]$caption) {
   $h = '<figure class="pp-chart"><p class="cty-scale" aria-hidden="true"><span>' + (Hx (ScaleLbl $t0)) + '</span><span>' + (Hx (ScaleLbl ([int][Math]::Round(($t0 + $t1) / 2)))) + '</span><span>' + (Hx (ScaleLbl $t1)) + '</span></p><ol class="cty-tl pp-tl">'
   foreach ($rw in $rows) {
     $a = $rw.sp[0]; $b = $rw.sp[1]
-    $h += '<li><a href="/encyclopedia/' + $rw.e.slug + '">' + $(if ($rw.e.img) { '<img class="pp-av" src="' + $rw.e.img + '" alt="" loading="lazy" width="28" height="28">' } else { '<span class="pp-av"></span>' }) + '<span class="pp-nm"><span class="cty-n">' + (Hx $rw.e.name) + '</span><span class="cty-y">' + (Hx $rw.e.dates) + '</span></span></a><span class="cty-track" aria-hidden="true"><span class="cty-bar ' + $(if ($rw.k -ne 0) { 'pp-dim' } else { 'pp-life' }) + '" style="left:' + (($a - $t0) / $tw * 100).ToString('0.0', $INV) + '%;width:' + ([Math]::Max(0.8, ($b - $a) / $tw * 100)).ToString('0.0', $INV) + '%"></span></span></li>'
+    $h += '<li><a href="/encyclopedia/' + $rw.e.slug + '">' + $(if ($rw.e.img) { '<img class="pp-av" src="' + (ThumbOf $rw.e.img) + '" alt="" loading="lazy" width="28" height="28">' } else { '<span class="pp-av"></span>' }) + '<span class="pp-nm"><span class="cty-n">' + (Hx $rw.e.name) + '</span><span class="cty-y">' + (Hx $rw.e.dates) + '</span></span></a><span class="cty-track" aria-hidden="true"><span class="cty-bar ' + $(if ($rw.k -ne 0) { 'pp-dim' } else { 'pp-life' }) + '" style="left:' + (($a - $t0) / $tw * 100).ToString('0.0', $INV) + '%;width:' + ([Math]::Max(0.8, ($b - $a) / $tw * 100)).ToString('0.0', $INV) + '%"></span></span></li>'
   }
   return $h + '</ol><figcaption>' + $caption + '</figcaption></figure>'
 }
@@ -2116,7 +2193,7 @@ $opts = ($PCENTS | ForEach-Object { $r0 = CentRange $_; '<option value="' + (Cen
 [void]$sb.Append('<section aria-labelledby="pp-tool-t"><h2 class="ref-sec-title" id="pp-tool-t">Who lived when</h2><form class="srch-row pp-form" id="pp-form"><label>Region <select id="pp-r"><option value="-1">All regions</option>' + (($BREG | ForEach-Object { '<option value="' + $BREGIX[$_] + '">' + (Hx $_) + '</option>' }) -join '') + '</select></label><label>From <select id="pp-from">' + $opts + '</select></label><label>To <select id="pp-to">' + $opts + '</select></label><label class="srch-check"><input type="checkbox" id="pp-pic"> With a picture</label></form>' +
   '<p class="pp-status" id="pp-status" aria-live="polite">The chart needs JavaScript; the centuries below list everyone.</p><div id="pp-out"></div></section>' + "`n")
 [void]$sb.Append('<section><h2 class="ref-sec-title">By century</h2><ul class="cen-cards">' + (($PCENTS | ForEach-Object { $ii = $PCINFO[$_]; '<li><a href="/people/' + (CenturySlug $_) + '"><span class="cen-c-t">' + (Hx (CentTitle $_)) + '</span><span class="cen-c-d">' + (Hx (CentDecades $_)) + '</span><span class="cen-c-n">' + $ii.n.ToString('N0') + ' people</span><span class="cen-c-p">' + (Hx ($ii.top -join ' · ')) + '</span></a></li>' }) -join '') + "</ul></section>`n")
-[void]$sb.Append("<script src=`"/people-data.js?v=$PEOPLEV`" defer></script>`n<script src=`"/people.js?v=1`" defer></script>`n</div>`n</main>`n")
+[void]$sb.Append("<script src=`"/people-data.js?v=$PEOPLEV`" defer></script>`n<script src=`"/people.js?v=2`" defer></script>`n</div>`n</main>`n")
 $title = 'People in History: ' + $PPL.Count.ToString('N0') + ' Rulers, Thinkers and Explorers — The Epoch Institute'
 $desc = [EpochBuild.W]::Summary("$($PPL.Count.ToString('N0')) people of world history, from rulers and rebels to thinkers, artists and explorers: a chart of who lived when, and every century's people by region.", 155)
 Emit '/people/' (Page @{ title = $title; desc = $desc; path = '/people/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/people/") + '}'); nav = 'people'; body = $sb.ToString() })
@@ -2480,9 +2557,9 @@ Say ("open data: {0} states ({1} placed), {2} relations, {3} curve points" -f $o
 
 # stale generated pages (entries, states or days that no longer exist)
 $htPlain = "# Generated by scripts/build-pages.ps1: the pages in this folder are extensionless HTML.`n<FilesMatch `"^[a-z0-9-]+$`">`n  ForceType text/html`n</FilesMatch>`n"
-foreach ($dir in 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'teachers') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
+foreach ($dir in 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
 $nDel = 0
-foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'teachers') {
+foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers') {
   $full = Join-Path $Repo $dir; if (-not (Test-Path $full)) { continue }
   foreach ($f in Get-ChildItem $full -File) {
     if ($f.Extension -or $f.Name -eq 'index' -or $f.Name.StartsWith('.')) { continue }

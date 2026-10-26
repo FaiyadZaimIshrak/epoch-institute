@@ -40,7 +40,7 @@
     var tw = t1 - t0, h = '<figure class="pp-chart"><p class="cty-scale" aria-hidden="true"><span>' + label(t0) + '</span><span>' + label(Math.round((t0 + t1) / 2)) + '</span><span>' + label(t1) + '</span></p><ol class="cty-tl pp-tl">';
     rows.forEach(function (p) {
       var left = (p[3] - t0) / tw * 100, width = Math.max(0.8, (p[4] - p[3]) / tw * 100);
-      h += '<li><a href="/encyclopedia/' + esc(p[0]) + '">' + (p[7] ? '<img class="pp-av" src="/images/encyclopedia/' + esc(p[0]) + '.jpg" alt="" loading="lazy" width="28" height="28">' : '<span class="pp-av"></span>') +
+      h += '<li><a href="/encyclopedia/' + esc(p[0]) + '">' + (p[7] ? '<img class="pp-av" src="/images/encyclopedia/thumbs/' + esc(p[0]) + '.jpg" alt="" loading="lazy" width="28" height="28" onerror="this.onerror=null;this.src=this.src.replace(\'/thumbs/\',\'/\')">' : '<span class="pp-av"></span>') +
         '<span class="pp-nm"><span class="cty-n">' + esc(p[1]) + '</span><span class="cty-y">' + esc(p[2]) + '</span></span></a><span class="cty-track" aria-hidden="true"><span class="cty-bar ' + (p[5] ? 'pp-dim' : 'pp-life') +
         '" style="left:' + left.toFixed(1) + '%;width:' + width.toFixed(1) + '%"></span></span></li>';
     });

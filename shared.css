@@ -3971,6 +3971,15 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .essay-refs { list-style: none; margin: 0; padding: 0; }
 .essay-refs li { font-family: var(--font-text); font-size: 17px; line-height: 1.55; color: var(--text); margin: 0 0 9px; padding-left: 1.6em; text-indent: -1.6em; }
 .essay-profs { margin: 44px 0 10px; }
+/* community articles (/articles/<slug>): the essays' layout with a byline, the note on readers' articles, subheadings
+   and the authors' source lines */
+.cm-by { font-family: var(--font-ui); font-size: 14px; letter-spacing: 0.04em; color: var(--muted); margin: 12px 0 0; }
+.cm-note { margin: 0 0 30px; padding: 14px 18px; background: var(--surface); border: 1px solid var(--border); border-left: 2px solid var(--gold); border-radius: var(--radius); }
+.cm-note p { margin: 0; font-family: var(--font-text); font-size: 16px; line-height: 1.55; color: var(--muted); }
+.cm-note a { color: var(--gold); }
+.cm-body h3 { font-family: var(--font-display); font-size: clamp(18px, 2.2vw, 21px); line-height: 1.3; letter-spacing: 0.02em; color: var(--gold-light); margin: 1.7em 0 0.55em; }
+.cm-body p.cm-src { font-family: var(--font-ui); font-size: 13px; line-height: 1.5; color: var(--muted); margin: -0.6em 0 1.3em; }
+a.blog-card { display: block; color: inherit; text-decoration: none; }
 .essay-view .ref-cite { margin-top: 30px; }
 .essay-view .ref-prevnext { margin-top: 30px; }
 @media (max-width: 600px) {
@@ -4501,6 +4510,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 [data-kids="1"]:not(.kd-open) .profile-section-block,
 [data-kids="1"]:not(.kd-open) .profile-references,
 [data-kids="1"]:not(.kd-open) .st-text,
+[data-kids="1"]:not(.kd-open) .cm-body,
 [data-kids="1"]:not(.kd-open) .kd-rough { display: none; }
 [data-kids="1"].kd-open .kd-story, [data-kids="1"].kd-open .kd-short { display: none; }
 [data-kids="1"] .kd-short .kd-story { display: flex; width: fit-content; margin: 12px 0 0; }

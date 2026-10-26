@@ -118,7 +118,7 @@ initNav('encyclopedia');
     var pages = Math.max(1, Math.ceil(list.length / PER)); if (state.page > pages) state.page = pages;
     $('enc-count').textContent = list.length.toLocaleString('en-GB') + (list.length === 1 ? ' entry' : ' entries') + (pages > 1 ? ' · page ' + state.page + ' of ' + pages : '');
     $('enc-list').innerHTML = list.length ? list.slice((state.page - 1) * PER, state.page * PER).map(function (e) {
-      return '<li class="enc-item' + (e.img ? ' has-img' : '') + '"><a href="/encyclopedia/' + e.slug + '">' + (e.img ? '<img class="enc-thumb" src="/images/encyclopedia/' + e.slug + '.jpg" alt="" loading="lazy" width="56" height="56">' : '') +
+      return '<li class="enc-item' + (e.img ? ' has-img' : '') + '"><a href="/encyclopedia/' + e.slug + '">' + (e.img ? '<img class="enc-thumb" src="/images/encyclopedia/thumbs/' + e.slug + '.jpg" alt="" loading="lazy" width="56" height="56" onerror="this.onerror=null;this.src=this.src.replace(\'/thumbs/\',\'/\')">' : '') +
         '<span class="enc-name">' + esc(e.name) + '</span><span class="enc-type">' + esc(typeLine(e)) + '</span></a></li>';
     }).join('') : '<li class="enc-empty">No entries match. Try a shorter word, or choose “All”.</li>';
     var pg = '';

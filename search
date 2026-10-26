@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=51">
+<link rel="stylesheet" href="/shared.css?v=52">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Search"}]},{"@type":"WebPage","name":"Search the Institute","url":"https://the-epoch-institute.org/search","description":"Search every profile, state and encyclopedia entry of The Epoch Institute, by kind, region, century and picture."}]}</script>
@@ -65,7 +65,7 @@
 </main>
 
 <script src="/shared-data.js?v=9"></script>
-<script src="/shared-nav.js?v=35"></script>
+<script src="/shared-nav.js?v=36"></script>
 <script>
 initNav('search');
 (function () {
@@ -95,8 +95,8 @@ initNav('search');
   function picOf(r, f) {
     if (r.src === 'p') return '/logos/thumbs/' + encodeURIComponent(EMPIRES[r.i].name) + '.png';
     if (!f || !f[3]) return '';
-    if (r.src === 'e') return '/images/encyclopedia/' + SEARCH_INDEX[r.i][0] + '.jpg';
-    if (r.src === 's') return '/images/states/' + SEARCH_STATES[r.i][0] + '.jpg';
+    if (r.src === 'e') return '/images/encyclopedia/thumbs/' + SEARCH_INDEX[r.i][0] + '.jpg';   // the 112 px copies (scripts/make-thumbs.ps1)
+    if (r.src === 's') return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
     return '';
   }
   // state, kept in the address (?q=&k=&r=&from=&to=&pic=1&p=)
@@ -157,7 +157,7 @@ initNav('search');
       var where = f && f[2] >= 0 ? REGIONS[f[2]] : '';
       var meta = [r.type, when, where].filter(Boolean).join(' · ');
       return '<li class="enc-item has-img"><a href="' + escHtml(r.href) + '">' +
-        (pic ? '<img class="enc-thumb' + (r.src === 'p' ? ' srch-emblem' : '') + '" src="' + escHtml(pic) + '" alt="" loading="lazy" width="56" height="56">' : '<span class="enc-thumb ph ph-' + (GLYPH[r.k] || 'event') + '" aria-hidden="true"></span>') +
+        (pic ? '<img class="enc-thumb' + (r.src === 'p' ? ' srch-emblem' : '') + '" src="' + escHtml(pic) + '" alt="" loading="lazy" width="56" height="56"' + (r.src === 'p' ? '' : ' onerror="this.onerror=null;this.src=this.src.replace(\'/thumbs/\',\'/\')"') + '>' : '<span class="enc-thumb ph ph-' + (GLYPH[r.k] || 'event') + '" aria-hidden="true"></span>') +
         '<span class="enc-name">' + escHtml(r.name) + '</span><span class="enc-type">' + escHtml(meta) + '</span></a></li>';
     }).join('') : '<li class="enc-empty">Nothing matches' + (base.length || st.k ? ' with these filters. <button type="button" class="enc-chip" data-clear>Clear the filters</button>' : '. Try a shorter word or another spelling.') + '</li>';
     var pg = '';

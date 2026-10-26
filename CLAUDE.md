@@ -9,7 +9,8 @@ Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType
 index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ (each has an .htaccess forcing text/html;
-/folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series.
+/folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
+articles/ likewise holds the community article pages (/articles → /community).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
 Plus 404.html and generator.html (generator is NOT deployed — see .cpanel.yml).
 
@@ -93,9 +94,11 @@ FORMSPREE_URL — contact page and newsletter forms (fields name, email, topic, 
   honeypot). Until Oct 2026 the unpublished Research Series essays had "Notify me" forms: those sign-ups are in
   Formspree with the subject "Notify me: Series 0N — …"
 CONTRIB_URL — separate Apps Script for contributors (list); CONTRIB_APPLY_URL — the "Apply to contribute" form
-The Apps Scripts are not in this repo. Found Oct 2026, to fix there: `confirmed_articles` fails with
-"getOrCreateProcessedFolder is not defined" (so no community article ever shows), and `articles` returns every
-submission with the submitter's email to anyone.
+The Apps Scripts are not in this repo. Checked 26 Oct 2026: `confirmed_articles` works again (it failed with
+"getOrCreateProcessedFolder is not defined" earlier in the month); `articles` no longer returns emails but still lists
+every submission, reviewed or not, with its author, affiliation and profession, to anyone. No page uses it: delete
+that action in the Apps Script (then Deploy → Manage deployments → edit the existing one → New version, so the /exec
+address stays the same).
 
 ## Contact, contributors and open data
 - `/contact`: six topic cards (correction, suggest, write, data, press, other: heading, hint, placeholder and the
@@ -118,7 +121,7 @@ New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, 
 or they won't be deployed. Every copy uses rsync -a (cp fallback): rsync writes to a temporary file and renames it,
 so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
 the broken copy in its cache - Oct 2026), and only changed files are copied. encyclopedia/, state/,
-today-in-history/, countries/, centuries/, paths/, speeches/, years/, people/, essays/ and teachers/ use rsync --delete, so pages removed from the repo also disappear
+today-in-history/, countries/, centuries/, paths/, speeches/, years/, people/, essays/, articles/ and teachers/ use rsync --delete, so pages removed from the repo also disappear
 from the server (the loop also removes an old root FILE of the same name: /paths was a file until Oct 2026).
 Root pages are copied by name (the rsync line listing index, about, … atlas, quiz): add new ones there.
 After deploying, run scripts/ping-indexnow.ps1: it submits the pages the last build changed
@@ -285,6 +288,13 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
     link-state-texts.ps1 — keep them in step (design/t-pick.html + enc2/pick-test.ps1 check both on the same cases).
 - `images/encyclopedia/<slug>.jpg` — freely licensed Wikimedia Commons thumbnails; author/licence/source
   are in each entry's `credit` and shown under the image. Keep the credit if an image is reused.
+- `images/encyclopedia/thumbs/<slug>.jpg`, `images/states/thumbs/<id>.jpg` — 112 px (shorter side) JPEG copies, about
+  a quarter of the bytes, for pictures shown at 56 px or less: list tiles (44 px), result thumbnails (.enc-thumb, 56),
+  speech portraits on /speeches/ (56), the people chart (28). scripts/make-thumbs.ps1 makes them (only new or changed
+  pictures; thumbs of removed pictures are deleted); build-pages.ps1 runs it first and ThumbOf() links a thumb only
+  where one exists; /search, the /encyclopedia/ results and people.js link thumbs directly with an onerror fallback to
+  the full picture. Measured Oct 2026: WebP copies of the full pictures saved only 8% at the same quality (the
+  pictures are already well compressed), so the site stays on JPEG.
 
 ## Kinds of profile (not only empires)
 The Institute profiles states and empires and, since Oct 2026, religions (18) and languages (16); cultures, ideologies
@@ -410,7 +420,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   bigger text, pill buttons. Long pages show their short version first: an entry opens with "In short" (its first
   sentence; .kd-short), war and battle entries carry a gentle note (.kd-note), profiles and state pages hide their
   sections behind "Read the whole story" (.kd-story adds html.kd-open; a link or address into the folded text opens it
-  first). The day pages fold their wars and killings behind "Show the battles and wars of this day too" (.kd-rough)
+  first), and a community article's body waits behind a note (written by a reader for grown-ups) and "Read the article". The day pages fold their wars and killings behind "Show the battles and wars of this day too" (.kd-rough)
   and the home page's On This Day leaves them out: kidsGentle(title, desc) in shared-nav.js (grim words anywhere,
   military ones only in the title; about 40% of the events). shared-nav.js inserts all of this on every page; the
   CSS shows it only in Kids mode. Games start easy, timers are hidden, sounds are on.
@@ -467,6 +477,21 @@ entry, profile or state. 01 and 02 (May 2026) were moved out of the page's scrip
 unchanged; 03–05 were written then, their "What the Data Shows" figures computed from the power curves (shared-data.js
 EMPIRES), the register (data/polities.json) and epoch-stats.js. The Listen button reads article.essay-view (h1,
 .essay-sub, .essay-body h2/p/li): keep Further Reading and the contents list outside .essay-body.
+
+## Community articles (/articles/<slug>)
+scripts/fetch-community.ps1 saves the Apps Script's `confirmed_articles` (title, author, ts, content = the paragraphs)
+to data/community/articles.json, a committed snapshot (build input, not deployed; -Check only reports): run it after
+approving an article, then build, so a build never needs the network. build-pages.ps1 writes /articles/<slug>
+(kicker with date and reading time, title, subtitle, byline, Share, the readers' note .cm-note: the author's own views,
+not checked by the Institute, with Suggest a correction and Write for the Institute; body; Article JSON-LD with a Person
+author) and the `build:articles` block of /community (BUILT_ARTICLES {snapshot title: {h page, t title, a author,
+d date, e excerpt}}). Only the layout is made, never the words: leading short lines in capitals are the title (the
+next line its second half, a third the subtitle), "PART n —" lines h2, other short unpunctuated lines h3 (leading emoji
+dropped), "Source: …" lines source notes (.cm-src, which Listen skips), "— End of Document —" dropped.
+scripts/community-overrides.tsv: snapshot title, slug, title, subtitle, author (an empty field keeps what the text
+gives; no author = "A community contributor"). /community: a card whose title is in BUILT_ARTICLES links its page,
+newer approvals still open inside the page, and when the feed fails (jsonp gives up after 10 s) the cards come from
+BUILT_ARTICLES.
 
 ## Teachers' Corner (/teachers/)
 build-pages.ps1 writes the guide (/teachers/: the worksheets, ideas for the classroom, ages, citing and picture
