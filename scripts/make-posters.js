@@ -200,6 +200,21 @@ async function launch() {
   if (process.platform === 'win32') { try { return await pw.chromium.launch({ channel: 'msedge' }); } catch (e) {} }
   return pw.chromium.launch();
 }
+// the same poster rasterised a hair differently (the rotated emblem fields vary by a few levels from run to run):
+// every pixel within 40 of 255 of the old one, where any real change of words or picture moves some by far more
+function nearlySame(pg, oldBuf, buf) {
+  return pg.evaluate(async ([a, b]) => {
+    const load = s => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = s; });
+    const [x, y] = await Promise.all([load(a), load(b)]);
+    if (x.width !== y.width || x.height !== y.height) return false;
+    const c = document.createElement('canvas'); c.width = x.width; c.height = x.height;
+    const g = c.getContext('2d', { willReadFrequently: true });
+    g.drawImage(x, 0, 0); const p = g.getImageData(0, 0, c.width, c.height).data;
+    g.drawImage(y, 0, 0); const q = g.getImageData(0, 0, c.width, c.height).data;
+    for (let i = 0; i < p.length; i++) if (Math.abs(p[i] - q[i]) > 40) return false;
+    return true;
+  }, ['data:image/jpeg;base64,' + oldBuf.toString('base64'), 'data:image/jpeg;base64,' + buf.toString('base64')]);
+}
 (async () => {
   const list = (KINDS.length ? KINDS : Object.keys(JOBS)).flatMap(k => { if (!JOBS[k]) throw new Error('unknown kind ' + k); return JOBS[k]; })
     .filter(j => !ONLY || ONLY.some(w => j.file.includes(w)));
@@ -213,8 +228,8 @@ async function launch() {
     const warn = await pg.evaluate(() => window.check());
     if (warn.length) console.log('  ' + job.file + ': ' + warn.join(', '));
     const buf = await pg.screenshot({ type: 'jpeg', quality: 84, animations: 'disabled' });
-    const f = path.join(OUT, job.file);
-    if (fs.existsSync(f) && Buffer.compare(fs.readFileSync(f), buf) === 0) same++; else { fs.writeFileSync(f, buf); wrote++; }
+    const f = path.join(OUT, job.file), old = fs.existsSync(f) ? fs.readFileSync(f) : null;
+    if (old && (Buffer.compare(old, buf) === 0 || await nearlySame(pg, old, buf))) same++; else { fs.writeFileSync(f, buf); wrote++; }
     if (++n % 50 === 0) console.log(n + ' / ' + list.length);
   }
   await browser.close(); srv.close();
