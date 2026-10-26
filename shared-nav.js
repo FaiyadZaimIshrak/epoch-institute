@@ -512,8 +512,10 @@ function initNav(activePage) {
   }
 
   // Explore: the ways into the collections; More: the Institute's other pages
-  const EXPLORE = [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
-    ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
+  const EXPLORE = [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['timeline', '/timeline', 'World Timeline', 'Every state on one line'],
+    ['countries', '/countries/', 'Country Histories', 'Each land through time'],
+    ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['years', '/years/', 'Year by Year', 'What happened in any year'],
+    ['people', '/people/', 'People', 'Who lived when'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
     ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
     ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
@@ -602,12 +604,15 @@ function initNav(activePage) {
         <a class="footer-link" href="/state/">States</a>
         <a class="footer-link" href="/countries/">Country Histories</a>
         <a class="footer-link" href="/centuries/">Centuries</a>
+        <a class="footer-link" href="/years/">Year by Year</a>
+        <a class="footer-link" href="/people/">People</a>
         <a class="footer-link" href="/today-in-history/">Today in History</a>
         <a class="footer-link" href="/encyclopedia/glossary">Glossary</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Explore</span>
         <a class="footer-link" href="/atlas">Atlas</a>
+        <a class="footer-link" href="/timeline">World Timeline</a>
         <a class="footer-link" href="/explorer">Empire Explorer</a>
         <a class="footer-link" href="/connections">Connections</a>
         <a class="footer-link" href="/paths/">Reading Paths</a>
@@ -862,7 +867,7 @@ function initNav(activePage) {
     if (rough.length && rough.length < evs.length) {
       rough.forEach(function (li) { li.classList.add('kd-rough'); });
       var rb = document.createElement('button'); rb.type = 'button'; rb.className = 'kd-story';
-      rb.textContent = 'Show the battles and wars of this day too (' + rough.length + ')';
+      rb.textContent = 'Show the battles and wars of this ' + (document.querySelector('main.yr-year') ? 'year' : 'day') + ' too (' + rough.length + ')';
       rb.addEventListener('click', openAll);
       evs[evs.length - 1].parentNode.parentNode.insertBefore(rb, evs[evs.length - 1].parentNode.nextSibling);
     }
@@ -946,6 +951,7 @@ function initNav(activePage) {
       ['main.empire-page', 'h1.profile-detail-name, .profile-summary, .profile-section-block > h2.profile-section-title, .profile-section-body p, .profile-section-body li'],
       ['article.sp-view', 'h1.sp-title, .sp-by, .sp-sec > h2, .sp-sec > p:not(.sp-source), blockquote.sp-quote, .sp-ft-body p, .sp-ft-body > div > p'],
       ['main.day-page', 'h1, .ref-lede, .day-events .tih-event-card'],
+      ['main.yr-year', 'h1, .yr-head .ref-lede, .yr-events .tih-event-card, .yr-prof li'],
       ['article.essay-view', 'h1, .essay-sub, .essay-body h2, .essay-body h3, .essay-body p, .essay-body li'],
       ['article.cm-article', 'h1, .cm-by, .cm-body h2, .cm-body h3, .cm-body p']
     ];
@@ -1073,7 +1079,7 @@ function initNav(activePage) {
     document.addEventListener('epoch:kids', function () { label(); });
     // where the button goes: under the title (profiles: next to the meta line)
     function place() {
-      var host = root.querySelector('.enc-meta, .st-meta, .empire-meta, .sp-by, .essay-sub, .cm-by') || (type[0] === 'main.day-page' ? root.querySelector('.ref-lede') : null) || root.querySelector('h1');
+      var host = root.querySelector('.enc-meta, .st-meta, .empire-meta, .sp-by, .essay-sub, .cm-by') || (type[0] === 'main.day-page' || type[0] === 'main.yr-year' ? root.querySelector('.ref-lede') : null) || root.querySelector('h1');
       if (!host) return false;
       var row = document.createElement('p'); row.className = 'listen-row'; row.appendChild(btn);
       host.parentNode.insertBefore(row, host.nextSibling); label(); return true;

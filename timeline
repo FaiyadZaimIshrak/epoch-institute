@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>World Timeline: Five Thousand Years of States and Empires — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Every recorded state and empire on one timeline, region by region, from 3500 BCE to today: see who coexisted with whom, zoom into any age and open any state.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/timeline">
+<meta property="og:type" content="website">
+<meta property="og:title" content="World Timeline: Five Thousand Years of States and Empires — The Epoch Institute">
+<meta property="og:description" content="Every recorded state and empire on one timeline, region by region: see who coexisted with whom.">
+<meta property="og:url" content="https://the-epoch-institute.org/timeline">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=48">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"World Timeline"}]},{"@type":"WebPage","name":"World Timeline","url":"https://the-epoch-institute.org/timeline","description":"Every recorded state and empire on one timeline, region by region, from 3500 BCE to today.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B163TLDMP4');
+</script>
+</head>
+<body>
+
+<main id="main" class="atl-page ref-page">
+<div class="atl-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">World Timeline</li></ol></nav>
+<header class="atl-head">
+  <h1 class="research-title">World Timeline</h1>
+  <p class="ref-lede">Five thousand years of states and empires on one line, region by region. Each bar runs from a state&#8217;s founding to its end; gold bars have a full profile. Drag sideways to travel through time, pinch or hold Ctrl and scroll to zoom.</p>
+</header>
+
+<section class="atl-app tl-app" aria-label="Interactive world timeline">
+  <div class="atl-tools">
+    <div class="atl-viewtog" role="group" aria-label="Which states">
+      <button type="button" id="tl-m-p" aria-pressed="true">Profiles</button>
+      <button type="button" id="tl-m-a" aria-pressed="false">All states</button>
+    </div>
+    <div class="tl-eras" role="group" aria-label="Go to an age">
+      <button type="button" data-era="-3000:2026">All time</button><button type="button" data-era="-3000:500">Antiquity</button><button type="button" data-era="400:1500">Middle Ages</button><button type="button" data-era="1450:1800">Early modern</button><button type="button" data-era="1750:2026">Modern</button>
+    </div>
+    <div class="atl-search"><input type="search" id="tl-q" placeholder="Find a state…" autocomplete="off" aria-label="Find a state" aria-controls="tl-sugg"><ul id="tl-sugg" class="atl-sugg" role="listbox" hidden></ul></div>
+  </div>
+  <details class="tl-regions-wrap"><summary>Regions <span id="tl-reg-n"></span></summary><div class="tl-regions" id="tl-regions" role="group" aria-label="Regions shown"></div></details>
+  <div class="tl-box" id="tl-box">
+    <div class="tl-panel" id="tl-panel">
+      <canvas id="tl-canvas" tabindex="0" role="img" aria-label="Timeline of the recorded states, in lanes by region. Use the arrow keys to move through time and plus or minus to zoom; the states are also listed by region in the states register."></canvas>
+      <div id="tl-spacer"></div>
+    </div>
+    <div class="atl-zoom"><button type="button" id="tl-zin" aria-label="Zoom in">+</button><button type="button" id="tl-zout" aria-label="Zoom out">&minus;</button><button type="button" id="tl-zreset" aria-label="Show all time">&#8634;</button></div>
+    <div class="atl-tip" id="tl-tip" role="status" hidden></div>
+    <noscript><p class="atl-none">The timeline needs JavaScript. The <a href="/state/">states register</a> lists the same states by region, and the <a href="/centuries/">century pages</a> by age.</p></noscript>
+  </div>
+  <p class="atl-legend"><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span id="tl-status" aria-live="polite"></span><a class="tl-atlas" id="tl-atlas" href="/atlas?year=1000">Open the atlas at 1000 CE &rarr;</a></p>
+</section>
+
+<section class="atl-about">
+  <h2 class="ref-sec-title">About the timeline</h2>
+  <p>The timeline draws the <a href="/state/">states register</a>: every state, empire, principality and chiefdom the Institute has recorded, with the years it existed, grouped by region. Bars in the same row never overlap, so each row reads as a line of succession only by chance; follow the <a href="/connections">connections</a> for who succeeded whom. Years before the common era are often approximate, and many early states are known only from a few sources.</p>
+  <p>For the world in a single year, open the <a href="/atlas">atlas</a> or a <a href="/years/">year page</a>; for an age, the <a href="/centuries/">century pages</a>; for the people of each age, <a href="/people/">People in History</a>.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=32"></script>
+<script src="/maps/atlas-data.js?v=97751474c0"></script>
+<script src="/timeline.js?v=1"></script>
+<script>initNav('timeline');</script>
+</body>
+</html>

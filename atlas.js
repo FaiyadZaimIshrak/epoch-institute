@@ -228,10 +228,22 @@
   // ── year: slider, play, jumps ──
   var renderRaf = null;
   function setYear(y, now) {
-    year = clampYear(Math.round(y)); slider.value = year; yearOut.textContent = fmtYear(year);
+    year = clampYear(Math.round(y)); slider.value = year; yearOut.textContent = fmtYear(year); yearLink();
     if (now) { render(); return; }
     if (!renderRaf) renderRaf = requestAnimationFrame(function () { renderRaf = null; render(); });
     scheduleUrl();
+  }
+  // "What happened in <year>": shown when the year has a page of its own (data/years.json, its ?v= stamped by
+  // scripts/build-pages.ps1)
+  var yrLink = $('atl-yr'), yrSet = null;
+  function yearLink() {
+    if (!yrLink || !yrSet) return;
+    var on = yrSet[year] === 1;
+    yrLink.hidden = !on;
+    if (on) { yrLink.href = '/years/' + (year < 0 ? (-year) + '-bce' : year); yrLink.textContent = 'What happened in ' + fmtYear(year) + ' →'; }
+  }
+  if (yrLink && window.fetch && typeof ATLAS_YEARS_SRC === 'string') {
+    fetch(ATLAS_YEARS_SRC).then(function (r) { return r.text(); }).then(function (t) { yrSet = {}; JSON.parse(t).forEach(function (y) { yrSet[y] = 1; }); yearLink(); }).catch(function () {});
   }
   slider.addEventListener('input', function () { stop(); setYear(+slider.value); });
   var playBtn = $('atl-play'), timer = null;

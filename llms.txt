@@ -12,6 +12,8 @@ All reference pages are static HTML with the content in the page itself. Dates u
 - [States register](https://the-epoch-institute.org/state/): every recorded state at /state/<id>, with origins, rule and legacy
 - [Country histories](https://the-epoch-institute.org/countries/): the states that ruled each present-day country
 - [Centuries](https://the-epoch-institute.org/centuries/): one page per century, 30th century BCE to the 21st
+- [Year by year](https://the-epoch-institute.org/years/): what happened in a single year, at /years/<year> (/years/1453, /years/480-bce)
+- [People](https://the-epoch-institute.org/people/): the encyclopedia's 12,935 people by century and region, at /people/<century>
 - [Today in history](https://the-epoch-institute.org/today-in-history/): a page for each day of the year
 - [Great speeches](https://the-epoch-institute.org/speeches/): 60 speeches from Pericles to Reagan, with the setting, a key passage and, where free, the full text
 - [Reading paths](https://the-epoch-institute.org/paths/): 28 guided routes through the profiles and the encyclopedia
@@ -20,6 +22,7 @@ All reference pages are static HTML with the content in the page itself. Dates u
 ## Tools
 - [Search](https://the-epoch-institute.org/search): every profile, state and entry, filtered by kind, region and century (/search?q=<words>)
 - [Atlas](https://the-epoch-institute.org/atlas): the world's states in any year
+- [World timeline](https://the-epoch-institute.org/timeline): every state on one timeline, region by region
 - [Connections](https://the-epoch-institute.org/connections): how states were linked — rule, vassalage, lineage
 - [Empire Explorer](https://the-epoch-institute.org/explorer): power trajectories compared
 

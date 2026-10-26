@@ -176,6 +176,82 @@ public static class W {
     int lo = ys[0], hi = ys[0]; foreach (int y in ys) { if (y < lo) lo = y; if (y > hi) hi = y; }
     return new[] { lo, hi };
   }
+  // year pages: only firm years count - a bare year with an optional era ("1453", "480 BCE", "29 May 1453"), never
+  // "c. 1450", "1450s", "1066 or 1067" or a century; int.MinValue = none
+  const string Months = "January|February|March|April|May|June|July|August|September|October|November|December";
+  static readonly Regex FirmRx = new Regex("^(?:(?:" + Months + ")\\s+)?(\\d{1,4})(?:\\s*(BCE|BC|CE|AD))?$"), EraEnd = new Regex("\\b(BCE|BC|CE|AD)\\s*$"), Dash = new Regex("\\s*[–-]\\s*");
+  public static int Firm(string s, bool bceDefault) {
+    s = Clean(s ?? "").Trim(); var m = FirmRx.Match(s); if (!m.Success) return int.MinValue;
+    int v = int.Parse(m.Groups[1].Value); if (v == 0) return int.MinValue;
+    bool bce = m.Groups[2].Success ? m.Groups[2].Value.StartsWith("BC") : bceDefault;
+    return bce ? -v : v;
+  }
+  // dates made only of years, eras, months, "c." and "?" ("c. 1412–1431", "29 May 1453"); words make them something
+  // else: "caliph 656–661 CE" is a reign, "unified Jurchens 1583–1616" a span of work, "traditionally 543–505 BCE" a
+  // tradition, "1450s" a decade
+  static readonly Regex DateWords = new Regex("(?:" + Months + ")|\\bc\\.|\\b(?:BCE|BC|CE|AD)\\b");
+  public static bool PlainDates(string s) { return !Regex.IsMatch(DateWords.Replace(s ?? "", ""), "\\p{L}"); }
+  // two firm years of a range ("1337–1453", "356–323 BCE", "63 BCE – 14 CE", "1412–" (second: none)); a part that is
+  // not firm ("c. 1412") gives int.MinValue; null when the dates are not a plain range of two parts
+  public static int[] Range(string d) {
+    if (string.IsNullOrEmpty(d)) return null;
+    string s = Clean(d).Trim(); if (!PlainDates(s)) return null;
+    var parts = Dash.Split(s); if (parts.Length != 2) return null;
+    var e1 = EraEnd.Match(parts[0]); var e2 = EraEnd.Match(parts[1]);
+    bool bce1 = e1.Success ? e1.Groups[1].Value.StartsWith("BC") : (e2.Success && e2.Groups[1].Value.StartsWith("BC"));
+    return new[] { Firm(parts[0], bce1), parts[1].Length > 0 ? Firm(parts[1], false) : int.MinValue };
+  }
+  // a person's firm birth and death years: "1412–1431", "c. 1412–1431" (the death only), "d. 1066", "b. 1950",
+  // "356–323 BCE"; a reign ("r.", "reigned"), "fl." or a century gives none
+  public static int[] Life(string d) {
+    var r = new[] { int.MinValue, int.MinValue }; if (string.IsNullOrEmpty(d)) return r;
+    string s = Clean(d).Trim();
+    if (Regex.IsMatch(s, "^(r\\.|fl\\.|reigned|ruled)") || s.Contains("centur")) return r;
+    if (s.StartsWith("d. ")) { r[1] = Firm(s.Substring(3), false); return r; }
+    if (s.StartsWith("b. ")) { r[0] = Firm(s.Substring(3), false); return r; }
+    var rg = Range(s); return rg ?? r;
+  }
+  // month and day written in the dates ("29 May 1453", "July 4, 1776") as month * 100 + day; 0 = none
+  static readonly Regex MD1 = new Regex("\\b(\\d{1,2})\\s+(" + Months + ")\\b"), MD2 = new Regex("\\b(" + Months + ")\\s+(\\d{1,2}),");
+  public static int MonthDay(string d) {
+    if (string.IsNullOrEmpty(d)) return 0;
+    var m = MD1.Match(d); if (m.Success) return (Array.IndexOf(Months.Split('|'), m.Groups[2].Value) + 1) * 100 + int.Parse(m.Groups[1].Value);
+    m = MD2.Match(d); if (m.Success) return (Array.IndexOf(Months.Split('|'), m.Groups[1].Value) + 1) * 100 + int.Parse(m.Groups[2].Value);
+    return 0;
+  }
+  public static string YearSlug(int y) { return y < 0 ? (-y) + "-bce" : y.ToString(); }
+  // the dates as HTML, each firm year that has a page linked to /years/<y> (a day of the month, "c." years, decades,
+  // centuries and "or" / "/" alternatives stay text)
+  static readonly Regex NumTok = new Regex("(\\d{1,4})(\\s*(?:BCE|BC|CE|AD)\\b)?");
+  public static string LinkYears(string d, HashSet<int> pages) {
+    if (string.IsNullOrEmpty(d)) return "";
+    if (Regex.IsMatch(d, "(?i)\\btrad(?:itionally|\\.)")) return H(d);   // a traditional date is not a year to go to
+    var skip = new bool[d.Length]; foreach (Match dm in DayMonth.Matches(d)) for (int k = dm.Index; k < dm.Index + dm.Length; k++) skip[k] = true;
+    var ms = NumTok.Matches(d); var sb = new StringBuilder(); int pos = 0;
+    for (int i = 0; i < ms.Count; i++) {
+      var m = ms[i]; if (skip[m.Index]) continue;
+      int end = m.Index + m.Length; string before = d.Substring(0, m.Index), after = d.Substring(end);
+      if (Regex.IsMatch(after, "^(s\\b|st\\b|nd\\b|rd\\b|th\\b|\\s*(or|/)\\s*\\d)") || Regex.IsMatch(before, "(\\bc\\.|\\bcirca|\\bafter|\\bbefore|\\d\\s*(or|/))\\s*$") || (m.Index > 0 && char.IsLetterOrDigit(d[m.Index - 1]))) continue;
+      string era = m.Groups[2].Success ? m.Groups[2].Value.Trim() : "";
+      for (int j = i + 1; era == "" && j < ms.Count; j++) if (ms[j].Groups[2].Success) era = ms[j].Groups[2].Value.Trim();
+      int v = int.Parse(m.Groups[1].Value); int y = era.StartsWith("BC") ? -v : v;
+      if (v == 0 || !pages.Contains(y)) continue;
+      sb.Append(H(d.Substring(pos, m.Index - pos))).Append("<a href=\"/years/").Append(YearSlug(y)).Append("\">").Append(H(m.Value)).Append("</a>"); pos = end;
+    }
+    return sb.Append(H(d.Substring(pos))).ToString();
+  }
+  // the states alive in year yr (start <= yr <= end; NaN end: still exists): the map dots of the placed ones, written as
+  // DotPath writes them (map-dot-s, then map-dot-p for the profiles), the number of dots, and the number of all alive
+  public static object[] YearDots(double[] s, double[] e, double[] x, double[] y, bool[] placed, bool[] prof, double yr) {
+    var a = new StringBuilder(); var b = new StringBuilder(); int nAll = 0, nDots = 0;
+    for (int i = 0; i < s.Length; i++) {
+      if (double.IsNaN(s[i]) || s[i] > yr || (!double.IsNaN(e[i]) && e[i] < yr)) continue;
+      nAll++; if (!placed[i]) continue; nDots++;
+      var t = prof[i] ? b : a; t.Append('M').Append(((long)Math.Round(x[i] * 10)).ToString()).Append(' ').Append(((long)Math.Round(y[i] * 10)).ToString()).Append("h0");
+    }
+    string html = (a.Length > 0 ? "<path class=\"map-dot-s\" d=\"" + a + "\"/>" : "") + (b.Length > 0 ? "<path class=\"map-dot-p\" d=\"" + b + "\"/>" : "");
+    return new object[] { html, nDots, nAll };
+  }
   // "see also" scores, as the encyclopedia page computed them: for every profile both entries are mentioned in,
   // 3 points per shared section + 1, + 0.5 if the other entry has a picture; ties keep discovery order
   public static int[][] SeeAlso(int[][] emp, int[][] mask, bool[] img, int nEmp, int take) {
@@ -644,6 +720,72 @@ foreach ($spx in $SPS) {
   $spRefs = @([string]$spx['speakerSlug']) + @(@($spx['links']) + @($spx['led']) | ForEach-Object { if ([string]$_ -match '^/encyclopedia/([^|]+)\|') { $Matches[1] } })
   foreach ($spRef in ($spRefs | Where-Object { $_ } | Select-Object -Unique)) { if (-not $SPBY.ContainsKey($spRef)) { $SPBY[$spRef] = New-Object Collections.Generic.List[object] }; $SPBY[$spRef].Add($spx) }
 }
+
+# Years: /years/<y> for every year with enough firm-dated material (6 items, 2 of them events), gathered here so that
+# the entry, day and century pages can link to them (the pages are written after the centuries). Only firm years:
+# "c. 1450", "1450s" or a reign never put anything on a year. ($y would be $Y, the link years: script-level year
+# variables are $yv.)
+$HIST = ReadJson "$Repo\data\history.json"
+$GLANCE = [ordered]@{}   # profile -> 'At a glance' (empire-glance.js): ev = key events [year text, text]
+foreach ($l in [IO.File]::ReadAllLines("$Repo\empire-glance.js", $U8)) {
+  $m = [regex]::Match($l, '^\s+"((?:[^"\\]|\\.)*)": (\{.*\}),?\s*$'); if (-not $m.Success) { continue }
+  $GLANCE[[regex]::Unescape($m.Groups[1].Value)] = $JSS.DeserializeObject([EpochBuild.W]::QuoteKeys($m.Groups[2].Value))
+}
+$MINV = [int]::MinValue; $YEARB = @{}
+function YB([int]$yv) {   # the year's buckets
+  if (-not $YEARB.ContainsKey($yv)) { $h = @{}; foreach ($bk in 'days', 'ents', 'wks', 'born', 'died', 'began', 'ended', 'gl', 'sf', 'se', 'sp') { $h[$bk] = New-Object Collections.Generic.List[object] }; $YEARB[$yv] = $h }
+  return $YEARB[$yv]
+}
+foreach ($e in $ENT) {
+  if (-not $e.dates) { continue }
+  if ($e.type -eq 'person') {
+    $lf = [EpochBuild.W]::Life($e.dates)
+    if ($lf[0] -ne $MINV -and $lf[0] -le $YEAR) { (YB $lf[0]).born.Add($e) }
+    if ($lf[1] -ne $MINV -and $lf[1] -le $YEAR) { (YB $lf[1]).died.Add($e) }
+    continue
+  }
+  $isEv = ($e.type -eq 'event' -or $e.conflict); if (-not $isEv -and $e.type -ne 'work') { continue }
+  $yv = [EpochBuild.W]::Firm($e.dates, $false)
+  if ($yv -ne $MINV) { if ($yv -le $YEAR) { if ($isEv) { (YB $yv).ents.Add($e) } else { (YB $yv).wks.Add($e) } }; continue }
+  if ($isEv) { $rg2 = [EpochBuild.W]::Range($e.dates); if ($rg2 -and $rg2[0] -ne $MINV -and $rg2[1] -ne $MINV -and $rg2[1] -gt $rg2[0] -and $rg2[0] -le $YEAR) { (YB $rg2[0]).began.Add($e); if ($rg2[1] -le $YEAR) { (YB $rg2[1]).ended.Add($e) } } }
+}
+foreach ($k in @($HIST.Keys)) { foreach ($ev in $HIST[$k]) { $yv = [int][Math]::Round([double]$ev['year']); if ($yv -ne 0 -and $yv -le $YEAR) { (YB $yv).days.Add(@($k, $ev)) } } }
+foreach ($gn in $GLANCE.Keys) { foreach ($gev in @($GLANCE[$gn]['ev'])) { $yv = [EpochBuild.W]::Firm([string]$gev[0], $false); if ($yv -ne $MINV -and $yv -le $YEAR) { (YB $yv).gl.Add(@($gn, [string]$gev[1])) } } }
+foreach ($n in $POL['nodes']) {   # states whose years are recorded as firm (x: approximate)
+  if ($n['x']) { continue }
+  if ($null -ne $n['s']) { $yv = [int][Math]::Round([double]$n['s']); if ($yv -ne 0) { (YB $yv).sf.Add($n) } }
+  if ($null -ne $n['e']) { $yv = [int][Math]::Round([double]$n['e']); if ($yv -ne 0) { (YB $yv).se.Add($n) } }
+}
+foreach ($spx in $SPS) { (YB ([int][Math]::Round([double]$spx['year']))).sp.Add($spx) }
+# an entry a day event of the year already names is not listed again beside it: one of the event's links, its name in
+# the event's title, or every word of its name there ("Fall of Constantinople": "Constantinople falls to the Ottomans")
+$STOPW = @{}; foreach ($w in 'the', 'and', 'von', 'van', 'der', 'des', 'del', 'della') { $STOPW[$w] = 1 }
+function NameWords([string]$s) { @(([regex]::Replace($s.ToLowerInvariant(), '\([^)]*\)', ' ') -split '[^\p{L}\p{N}]+') | Where-Object { $_.Length -ge 3 -and -not $STOPW.ContainsKey($_) }) }
+function YCovered($yb, $o) {
+  if ($yb.cov.ContainsKey($o.slug)) { return $true }
+  $nm = $o.name.ToLowerInvariant(); foreach ($t in $yb.tl) { if ($t.Contains($nm)) { return $true } }
+  $ws = NameWords $o.name; if ($ws.Count -lt 2) { return $false }
+  foreach ($tw in $yb.tw) {
+    $all = $true
+    foreach ($w in $ws) { $hw = $false; foreach ($x in $tw) { if ($x.StartsWith($w) -or ($x.Length -ge 4 -and $w.StartsWith($x))) { $hw = $true; break } }; if (-not $hw) { $all = $false; break } }
+    if ($all) { return $true }
+  }
+  return $false
+}
+$YEARSET = New-Object 'System.Collections.Generic.HashSet[int]'
+foreach ($yv in @($YEARB.Keys)) {
+  $yb = $YEARB[$yv]; $cov = @{}; $tl = New-Object Collections.Generic.List[string]; $tw = New-Object Collections.Generic.List[object]
+  foreach ($de in $yb.days) { $tl.Add(([string]$de[1]['title']).ToLowerInvariant()); $tw.Add((NameWords ([string]$de[1]['title']))); foreach ($lk in @($de[1]['links'])) { if ($lk) { $cov[[string]$lk[0]] = 1 } } }
+  $yb.cov = $cov; $yb.tl = $tl; $yb.tw = $tw
+  $nEv = $yb.days.Count + $yb.gl.Count; foreach ($bk in 'ents', 'began', 'ended') { foreach ($o in $yb[$bk]) { if (-not (YCovered $yb $o)) { $nEv++ } } }
+  $nAll = $nEv + $yb.born.Count + $yb.died.Count + $yb.wks.Count + $yb.sf.Count + $yb.se.Count + $yb.sp.Count
+  if ($nAll -ge 6 -and $nEv -ge 2) { [void]$YEARSET.Add([int]$yv) }
+}
+$YEARLIST = @($YEARSET | Sort-Object)
+function YearLabel([int]$yv) { if ($yv -lt 0) { "$(-$yv) BCE" } elseif ($yv -lt 1000) { "$yv CE" } else { "$yv" } }
+function YearHref([int]$yv) { '/years/' + [EpochBuild.W]::YearSlug($yv) }
+Say "year pages: $($YEARLIST.Count) ($(YearLabel $YEARLIST[0]) - $(YearLabel $YEARLIST[-1]))"
+
 Say 'encyclopedia entry pages'
 $nLinks = 0
 foreach ($e in $ENT) {
@@ -656,7 +798,7 @@ foreach ($e in $ENT) {
   $kicker = if ($e.conflict) { '<a href="/encyclopedia/conflicts/' + (CenturySlug (Century $e.year)) + '">Conflicts &amp; Resolutions</a> · ' + (Hx (TagLabel $e)) }
             elseif ($e.type -eq 'term') { '<a href="/encyclopedia/glossary#' + $e.slug + '">Glossary</a> · Term' + $(if ($e.sub) { ' · ' + (Hx $e.sub) } else { '' }) }
             else { (Hx $SING[$e.type]) + $(if ($e.sub -and $e.sub -ne 'other' -and $e.type -ne 'polity' -and $e.type -ne 'factor') { ' · ' + (Hx $e.sub) } else { '' }) }
-  $meta = @(); if ($e.dates) { $meta += '<span class="dates">' + (Hx $e.dates) + '</span>' }
+  $meta = @(); if ($e.dates) { $meta += '<span class="dates">' + [EpochBuild.W]::LinkYears($e.dates, $YEARSET) + '</span>' }
   $ec = $ENTCENT[$e.slug]; if ($ec -and $CENTSET.ContainsKey($ec)) { $meta += CentLink $ec }
   if ($e.aka.Count) { $meta += 'Also known as ' + (($e.aka | ForEach-Object { Hx ([string]$_) }) -join ', ') }
   if ($e.war -and $BY.ContainsKey($e.war)) { $meta += 'Part of the <a class="enc-link" href="/encyclopedia/' + $e.war + '">' + (Hx $BY[$e.war].name) + '</a>' }
@@ -949,7 +1091,7 @@ Say 'state region pages done'
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Today in History: one page per day
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-$HIST = ReadJson "$Repo\data\history.json"; $INTL = ReadJson "$Repo\data\international-days.json"
+$INTL = ReadJson "$Repo\data\international-days.json"   # ($HIST was read for the years)
 $DAYS = @($HIST.Keys | Sort-Object)
 function DaySlug([string]$k) { $MONTHS[[int]$k.Substring(0, 2) - 1].ToLowerInvariant() + '-' + [int]$k.Substring(3, 2) }
 function DayLabel([string]$k) { "$([int]$k.Substring(3, 2)) $($MONTHS[[int]$k.Substring(0, 2) - 1])" }
@@ -1008,7 +1150,7 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
     $im = if ($isHero) { $heroImg } else { $null }   # one strong picture per day: only the anniversary card
     $yd = [string]$ev['yearDisplay']; if ($yd -match '^\d+$') { $yd += ' CE' }   # bare years read as CE, like everywhere else
     $thumb = if ($im) { '<a class="tih-event-thumb" href="/encyclopedia/' + $im[1] + '" tabindex="-1" aria-hidden="true"><img src="' + (Hx $im[0]) + '" alt="" loading="lazy" width="168" height="112"></a>' } else { '' }
-    [void]$sb.Append('<li class="tih-event-card' + $(if ($im) { ' tih-has-thumb' } else { '' }) + $(if ($isHero) { ' tih-event-hero' } else { '' }) + '">' + $(if ($isHero) { '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p>' } else { '' }) + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + (Hx $yd) + $(if ($ago -gt 0) { ' <span class="tih-ago">' + $ago.ToString('N0', $INV) + ' years ago</span>' } else { '' }) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + $DH[$ei] + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</div></li>')
+    [void]$sb.Append('<li class="tih-event-card' + $(if ($im) { ' tih-has-thumb' } else { '' }) + $(if ($isHero) { ' tih-event-hero' } else { '' }) + '">' + $(if ($isHero) { '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p>' } else { '' }) + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + $(if ($YEARSET.Contains([int][Math]::Round([double]$ev['year']))) { '<a href="' + (YearHref ([int][Math]::Round([double]$ev['year']))) + '">' + (Hx $yd) + '</a>' } else { Hx $yd }) + $(if ($ago -gt 0) { ' <span class="tih-ago">' + $ago.ToString('N0', $INV) + ' years ago</span>' } else { '' }) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + $DH[$ei] + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</div></li>')
     $ej.Add('{"year":' + ([double]$ev['year']).ToString($INV) + ',"yearDisplay":' + (Js $yd) + ',"title":' + (Js ([string]$ev['title'])) + ',"description":' + (Js ([string]$ev['description'])) + ',"html":' + (Js $DH[$ei]) + ',"links":[' + ($lkJs -join ',') + ']' + $(if ($ev['profile']) { ',"profile":[' + (Js ([string]$ev['profile'][0])) + ',' + (Js ([string]$ev['profile'][1])) + ']' } else { '' }) + '}')
   }
   [void]$sb.Append("</ol>`n")
@@ -1250,6 +1392,8 @@ for ($ci = 0; $ci -lt $CENTPAGES.Count; $ci++) {
     $tl = @($TIHC[$c] | Sort-Object @{ e = { [double]$_[1]['year'] } } | Select-Object -First 10)
     [void]$sb.Append('<section><h2 class="ref-sec-title">On this day</h2><ul class="cen-days">' + (($tl | ForEach-Object { '<li><a href="/today-in-history/' + (DaySlug $_[0]) + '"><span class="dt">' + (DayLabel $_[0]) + ' ' + (Hx ([string]$_[1]['yearDisplay'])) + '</span><span class="nm">' + (Hx ([string]$_[1]['title'])) + '</span></a></li>' }) -join '') + "</ul></section>`n")
   }
+  $cyrs = @($YEARLIST | Where-Object { $_ -ge $rg[0] -and $_ -le $rg[1] })
+  if ($cyrs.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Year by year <span class="n">' + $cyrs.Count + '</span></h2><p class="cty-note">The years of the ' + (Hx $c) + ' with a page of their own: their events, births and deaths, and the states founded and ended.</p><ul class="cty-chips yr-chips">' + (($cyrs | ForEach-Object { '<li><a href="' + (YearHref $_) + '">' + (Hx (YearLabel $_)) + '</a></li>' }) -join '') + "</ul></section>`n") }
   $pv = if ($ci -gt 0) { $CENTPAGES[$ci - 1] } else { $null }; $nx = if ($ci -lt $CENTPAGES.Count - 1) { $CENTPAGES[$ci + 1] } else { $null }
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring centuries">' + $(if ($pv) { '<a class="prev" rel="prev" href="/centuries/' + (CenturySlug $pv) + '"><span class="lbl">&larr; Previous century</span><span class="nm">' + (Hx (CentTitle $pv)) + '</span></a>' } else { '' }) +
     $(if ($nx) { '<a class="next" rel="next" href="/centuries/' + (CenturySlug $nx) + '"><span class="lbl">Next century &rarr;</span><span class="nm">' + (Hx (CentTitle $nx)) + '</span></a>' } else { '' }) + "</nav>`n")
@@ -1447,6 +1591,225 @@ Say "great speeches: $($SPS.Count) ($spWhole with their full text, $spFull more 
 if ($spMiss.Count) { Say ("great speeches: unknown encyclopedia links " + (($spMiss | Sort-Object -Unique) -join ', ')) }
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Years: /years/<y> and /years/ (the years were gathered before the entry pages), data/years.json (the atlas and the
+# 404 page find the nearest year with it)
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Say 'year pages'
+# the register as arrays for the year maps (WorldDots in C#: one map per year page)
+$nN = $POL['nodes'].Count
+$aS = New-Object 'double[]' $nN; $aE = New-Object 'double[]' $nN; $aX = New-Object 'double[]' $nN; $aYv = New-Object 'double[]' $nN; $aPl = New-Object 'bool[]' $nN; $aPr = New-Object 'bool[]' $nN
+for ($i = 0; $i -lt $nN; $i++) {
+  $n = $POL['nodes'][$i]; $aS[$i] = if ($null -eq $n['s']) { [double]::NaN } else { [double]$n['s'] }; $aE[$i] = if ($null -eq $n['e']) { [double]::NaN } else { [double]$n['e'] }
+  $q = $STATEXY[[string]$n['id']]; if ($q -and -not $q[2]) { $aPl[$i] = $true; $aX[$i] = [double]$q[0]; $aYv[$i] = [double]$q[1] }; $aPr[$i] = [bool]$n['p']
+}
+# a day event's description with its gold links, as the day pages wrote it to data/days (also in -SkipEntries builds)
+$DAYJ = @{}
+function DayEvHtml([string]$k, [string]$title) {
+  if (-not $DAYJ.ContainsKey($k)) { $f = "$Repo\data\days\$k.json"; $DAYJ[$k] = if (Test-Path $f) { ReadJson $f } else { $null } }
+  if ($DAYJ[$k]) { foreach ($x in $DAYJ[$k]['events']) { if ([string]$x['title'] -eq $title) { return [string]$x['html'] } } }
+  return $null
+}
+# a picture of the thing itself (no maps, diagrams, flags or arms): a painting or photograph, which on Commons is a
+# JPEG (battle maps and diagrams are PNG, GIF or SVG, whatever their names say)
+function GoodPic([string]$img) { if (-not $img) { return $false }; $src = PicSource $img; if ($src -and $src -notmatch '(?i)\.jpe?g$') { return $false }; return -not ((PicIsChart $src) -or $src -match '(?i)(?<![a-z])(flag|flags|coat[_ ]of[_ ]arms|emblem|seal)(?![a-z])') }
+function DayEvPic($ev) { foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0])) { $o = $BY[[string]$lk[0]]; if (GoodPic $o.img) { return $o } } }; return $null }
+function MdLabel([int]$md) { "$($md % 100) $($MONTHS[[int][Math]::Floor($md / 100) - 1])" }
+function MdKey([int]$md) { ([int][Math]::Floor($md / 100)).ToString('00') + '-' + ($md % 100).ToString('00') }
+function YrTile($o, [string]$note) { '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $note) + '</span></span></a></li>' }
+function TileList($items, [string]$noteKind) {   # entry tiles, the 24 best known first, the rest folded
+  $all = @($items | Sort-Object @{ e = { $ESCORE[$_.slug] }; Descending = $true }, @{ e = { $_.i } })
+  $f = { param($o) YrTile $o $(if ($noteKind -eq 'dates') { $o.dates } else { (TypeLine $o) -replace ' · .*$', '' }) }
+  $h = '<ul class="enc-seealso">' + (($all | Select-Object -First 24 | ForEach-Object { & $f $_ }) -join '') + '</ul>'
+  if ($all.Count -gt 24) { $h += '<details class="cen-all"><summary>Show all ' + $all.Count + '</summary><ul class="enc-seealso">' + (($all | Select-Object -Skip 24 | ForEach-Object { & $f $_ }) -join '') + '</ul></details>' }
+  return $h
+}
+function StateList($lst) {
+  if ($lst.Count -gt 40) { return '<ul class="ref-cent-list cen-states">' + (($lst | Select-Object -First 40 | ForEach-Object { StateItem $_ }) -join '') + '</ul><details class="cen-all"><summary>Show all ' + $lst.Count + '</summary><ul class="ref-cent-list cen-states">' + (($lst | Select-Object -Skip 40 | ForEach-Object { StateItem $_ }) -join '') + '</ul></details>' }
+  return '<ul class="ref-cent-list cen-states">' + (($lst | ForEach-Object { StateItem $_ }) -join '') + '</ul>'
+}
+function IsoY([int]$yv) { if ($yv -gt 0) { $yv.ToString('0000') } elseif ($yv -eq -1) { '0000' } else { '-' + ((-$yv) - 1).ToString('0000') } }
+function Plural([int]$n, [string]$one, [string]$many) { if ($n -eq 1) { "1 $one" } else { "$($n.ToString('N0')) $many" } }
+$nYrEv = 0
+for ($yi = 0; $yi -lt $YEARLIST.Count; $yi++) {
+  $yv = [int]$YEARLIST[$yi]; $yb = $YEARB[$yv]; $label = YearLabel $yv; $slug = [EpochBuild.W]::YearSlug($yv); $path = '/years/' + $slug; $cy = Century $yv
+  # events: the day events and the entries dated to the year, by month and day where known, then the best known
+  $rows = New-Object Collections.Generic.List[object]
+  foreach ($de in $yb.days) {
+    $sc = 0; foreach ($lk in @($de[1]['links'])) { if ($lk -and $ESCORE.ContainsKey([string]$lk[0]) -and $ESCORE[[string]$lk[0]] -gt $sc) { $sc = $ESCORE[[string]$lk[0]] } }
+    $rows.Add([pscustomobject]@{ md = ([int]$de[0].Substring(0, 2) * 100 + [int]$de[0].Substring(3, 2)); sc = $sc + 5; k = $de[0]; ev = $de[1]; e = $null; t = [string]$de[1]['title'] })
+  }
+  foreach ($o in $yb.ents) { if (-not (YCovered $yb $o)) { $rows.Add([pscustomobject]@{ md = [EpochBuild.W]::MonthDay($o.dates); sc = $ESCORE[$o.slug]; k = $null; ev = $null; e = $o; t = $o.name }) } }
+  $evRows = @(@($rows | Where-Object { $_.md } | Sort-Object md, @{ e = { $_.sc }; Descending = $true }) + @($rows | Where-Object { -not $_.md } | Sort-Object @{ e = { $_.sc }; Descending = $true }, t))
+  $began = @($yb.began | Where-Object { -not (YCovered $yb $_) }); $ended = @($yb.ended | Where-Object { -not (YCovered $yb $_) })
+  $sf = @($yb.sf | Sort-Object @{ e = { [string]$_['n'] } }); $se = @($yb.se | Sort-Object @{ e = { [string]$_['n'] } })
+  $yd = [EpochBuild.W]::YearDots($aS, $aE, $aX, $aYv, $aPl, $aPr, [double]$yv)
+  $nEvAll = $evRows.Count + $yb.gl.Count + $began.Count + $ended.Count; $nYrEv += $nEvAll
+  $crumb = Crumbs @(@('Home', '/'), @('Year by Year', '/years/'), @($label, $null))
+  $sb = New-Object Text.StringBuilder(30000)
+  [void]$sb.Append('<main id="main" class="yr-page yr-year ref-page">' + "`n<div class=`"yr-wrap`">`n" + $crumb[0] + "`n")
+  $parts = @(); if ($nEvAll) { $parts += Plural $nEvAll 'event' 'events' }; if ($yb.born.Count) { $parts += Plural $yb.born.Count 'birth' 'births' }; if ($yb.died.Count) { $parts += Plural $yb.died.Count 'death' 'deaths' }
+  if ($yb.wks.Count) { $parts += Plural $yb.wks.Count 'work' 'works' }; if ($sf.Count) { $parts += (Plural $sf.Count 'state' 'states') + ' founded' }; if ($se.Count) { $parts += $(if ($sf.Count) { [string]$se.Count + ' that came to an end' } else { (Plural $se.Count 'state' 'states') + ' that came to an end' }) }
+  $lede = (Hx $label) + ' in world history: ' + (ProseList $parts) + '. ' + (Plural ([int]$yd[2]) 'recorded state' 'recorded states') + ' existed that year.'
+  [void]$sb.Append('<header class="ref-head yr-head"><p class="cty-kicker">Year by year · ' + (CentLink $cy (CentTitle $cy)) + '</p><h1 class="research-title">' + (Hx $label) + '</h1><p class="ref-lede">' + $lede + "</p></header>`n")
+  $i0 = [Math]::Max(0, $yi - 4); $i1 = [Math]::Min($YEARLIST.Count - 1, $yi + 4)
+  [void]$sb.Append('<nav class="ref-letters yr-near" aria-label="Nearby years">' + (($i0..$i1 | ForEach-Object { $z = [int]$YEARLIST[$_]; '<a href="' + (YearHref $z) + '"' + $(if ($z -eq $yv) { ' aria-current="page"' } else { '' }) + '>' + (Hx (YearLabel $z)) + '</a>' }) -join '') + "</nav>`n")
+  if ($evRows.Count) {
+    [void]$sb.Append('<section><h2 class="ref-sec-title">Events</h2><ol class="day-events yr-events">')
+    foreach ($r in $evRows) {
+      if ($r.ev) {
+        $ev = $r.ev; $html = DayEvHtml $r.k $r.t; if (-not $html) { $html = Hx ([string]$ev['description']) }; $pic = DayEvPic $ev
+        $tags = ''; if ($ev['profile']) { $tags += '<a class="tih-tag tih-tag-profile" href="' + (Hx ([string]$ev['profile'][1])) + '">' + (Hx ([string]$ev['profile'][0])) + '</a>' }
+        foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0])) { $tags += '<a class="tih-tag enc-link" href="/encyclopedia/' + $lk[0] + '">' + (Hx ([string]$lk[1])) + '</a>' } }
+        $when = '<a href="/today-in-history/' + (DaySlug $r.k) + '">' + (DayLabel $r.k) + '</a>'; $head = Hx $r.t; $desc = $html
+      } else {
+        $o = $r.e; $pic = if (GoodPic $o.img) { $o } else { $null }; $tags = ''
+        $kindL = if ($o.conflict) { TagLabel $o } else { 'Event' }
+        $when = $(if ($r.md -and $HIST.ContainsKey((MdKey $r.md))) { '<a href="/today-in-history/' + (DaySlug (MdKey $r.md)) + '">' + (MdLabel $r.md) + '</a> · ' } elseif ($r.md) { (MdLabel $r.md) + ' · ' } else { '' }) + (Hx $kindL)
+        $head = '<a href="/encyclopedia/' + $o.slug + '">' + (Hx $o.name) + '</a>'; $desc = Hx ([EpochBuild.W]::FirstSentence($o.desc, 260))
+      }
+      $thumb = if ($pic) { '<a class="tih-event-thumb" href="/encyclopedia/' + $pic.slug + '" tabindex="-1" aria-hidden="true"><img src="' + (Hx $pic.img) + '" alt="" loading="lazy" width="168" height="112"></a>' } else { '' }
+      [void]$sb.Append('<li class="tih-event-card' + $(if ($pic) { ' tih-has-thumb' } else { '' }) + '">' + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + $when + '</p><h3 class="tih-event-title">' + $head + '</h3><p class="tih-event-desc">' + $desc + '</p>' + $(if ($tags) { '<div class="tih-tags">' + $tags + '</div>' } else { '' }) + '</div></li>')
+    }
+    [void]$sb.Append("</ol></section>`n")
+  }
+  [void]$sb.Append('<figure class="cen-map yr-map">' + (MapSvg ([double[]]@(0, 0, 1000, $MAPH)) ([string]$yd[0]) "World map: states that existed in $label" 'map-world') +
+    '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span>' + $yd[1] + ' states with a known seat in ' + (Hx $label) + '</span><a href="/atlas?year=' + $yv + '">Open the atlas at ' + (Hx $label) + ' &rarr;</a></figcaption></figure>' + "`n")
+  if ($yb.gl.Count) {
+    [void]$sb.Append('<section><h2 class="ref-sec-title">In the profiles</h2><ul class="yr-prof">')
+    foreach ($g in $yb.gl) { [void]$sb.Append('<li><a class="yr-prof-n" href="/empire/' + [EpochBuild.W]::ToSlug([string]$g[0]) + '">' + (LogoImg ([string]$g[0]) 28) + '<span>' + (Hx ([string]$g[0])) + '</span></a><span class="yr-prof-t">' + (Hx ([string]$g[1])) + '</span></li>') }
+    [void]$sb.Append("</ul></section>`n")
+  }
+  if ($began.Count -or $ended.Count) {
+    [void]$sb.Append('<section><h2 class="ref-sec-title">Wars and longer events</h2><ul class="enc-seealso">' + (($began | ForEach-Object { YrTile $_ ('Began · ' + $_.dates) }) -join '') + (($ended | ForEach-Object { YrTile $_ ('Ended · ' + $_.dates) }) -join '') + "</ul></section>`n")
+  }
+  if ($yb.born.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Born in ' + (Hx $label) + ' <span class="n">' + $yb.born.Count + '</span></h2>' + (TileList $yb.born 'dates') + "</section>`n") }
+  if ($yb.died.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Died in ' + (Hx $label) + ' <span class="n">' + $yb.died.Count + '</span></h2>' + (TileList $yb.died 'dates') + "</section>`n") }
+  if ($yb.wks.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Works <span class="n">' + $yb.wks.Count + '</span></h2>' + (TileList $yb.wks 'kind') + "</section>`n") }
+  if ($sf.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">States founded <span class="n">' + $sf.Count + '</span></h2>' + (StateList $sf) + "</section>`n") }
+  if ($se.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">States that came to an end <span class="n">' + $se.Count + '</span></h2>' + (StateList $se) + "</section>`n") }
+  if ($yb.sp.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Great speeches</h2><div class="enc-mentions">' + (($yb.sp | ForEach-Object { '<a href="/speeches/' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + '<span class="secs">' + (Hx ([string]$_['speaker'])) + '</span></a>' }) -join '') + "</div></section>`n") }
+  $pv = if ($yi -gt 0) { [int]$YEARLIST[$yi - 1] } else { $null }; $nx = if ($yi -lt $YEARLIST.Count - 1) { [int]$YEARLIST[$yi + 1] } else { $null }
+  [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring years">' + $(if ($null -ne $pv) { '<a class="prev" rel="prev" href="' + (YearHref $pv) + '"><span class="lbl">&larr; Earlier year</span><span class="nm">' + (Hx (YearLabel $pv)) + '</span></a>' } else { '' }) +
+    $(if ($null -ne $nx) { '<a class="next" rel="next" href="' + (YearHref $nx) + '"><span class="lbl">Later year &rarr;</span><span class="nm">' + (Hx (YearLabel $nx)) + '</span></a>' } else { '' }) + "</nav>`n")
+  [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/years/">All years &rarr;</a>' + $(if ($CENTSET.ContainsKey($cy)) { ' <a class="enc-random-link" href="/centuries/' + (CenturySlug $cy) + '">The ' + (Hx $cy) + ' &rarr;</a>' } else { '' }) + "</p>`n")
+  [void]$sb.Append((CiteBox $label ($SITE + $path) 'The Epoch Institute, Year by Year') + "`n</div>`n</main>`n")
+  $top = @($evRows | Sort-Object @{ e = { $_.sc }; Descending = $true } | Select-Object -First 3 | ForEach-Object { $_.t })
+  $title = "What Happened in $label`? Events, Births and Deaths — The Epoch Institute"
+  $desc = [EpochBuild.W]::Summary("$label in world history: " + $(if ($top.Count) { ($top -join '; ') + '. ' } else { '' }) + 'The events, births and deaths of the year, the states founded and ended, and a map of the world.', 155)
+  $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"temporalCoverage":' + (Js (IsoY $yv)) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'years'; body = $sb.ToString() })
+}
+# index: the years by century, and a box that goes to the nearest year with a page
+$byCent = [ordered]@{}; foreach ($z in $YEARLIST) { $c = Century ([int]$z); if (-not $byCent.Contains($c)) { $byCent[$c] = New-Object Collections.Generic.List[int] }; $byCent[$c].Add([int]$z) }
+$crumb = Crumbs @(@('Home', '/'), @('Year by Year', $null))
+$sb = New-Object Text.StringBuilder(60000)
+[void]$sb.Append('<main id="main" class="yr-page ref-page">' + "`n<div class=`"yr-wrap`">`n" + $crumb[0] + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Year by Year</h1><p class="ref-lede">' + $YEARLIST.Count.ToString('N0') + ' years of world history with a page of their own, from ' + (Hx (YearLabel $YEARLIST[0])) + ' to ' + (Hx (YearLabel $YEARLIST[-1])) + ': the events of each year, the people born and the people who died, the states founded and ended, and a map of the world.</p></header>' + "`n")
+[void]$sb.Append('<form class="yr-jump" id="yr-jump" role="search" action="/years/"><label for="yr-in">Go to a year</label><input id="yr-in" type="number" min="1" max="' + $YEAR + '" inputmode="numeric" placeholder="1453"><select id="yr-era" aria-label="Era"><option value="ce">CE</option><option value="bce">BCE</option></select><button type="submit">Go</button><span class="yr-jump-note">No page for a year? You land on the nearest one.</span></form>' + "`n")
+[void]$sb.Append('<nav class="ref-letters ref-centuries" aria-label="Centuries">' + (($byCent.Keys | ForEach-Object { '<a href="#' + (CenturySlug $_) + '">' + (Hx ($_ -replace ' century', ' c.')) + '</a>' }) -join '') + "</nav>`n")
+foreach ($c in $byCent.Keys) {
+  [void]$sb.Append('<section class="ref-group" id="' + (CenturySlug $c) + '"><h2>' + (CentLink $c (CentTitle $c)) + ' <span class="n">' + $byCent[$c].Count + '</span></h2><ul class="cty-chips yr-chips">' + (($byCent[$c] | ForEach-Object { '<li><a href="' + (YearHref $_) + '">' + (Hx (YearLabel $_)) + '</a></li>' }) -join '') + "</ul></section>`n")
+}
+[void]$sb.Append("<script>(function(){var f=document.getElementById('yr-jump');if(!f)return;var Y=[].map.call(document.querySelectorAll('.yr-chips a'),function(a){var m=a.getAttribute('href').match(/\/years\/(\d+)(-bce)?`$/);return m?(m[2]?-m[1]:+m[1]):null;}).filter(function(v){return v!==null;});f.addEventListener('submit',function(e){e.preventDefault();var v=parseInt(document.getElementById('yr-in').value,10);if(!v||v<1||!Y.length)return;if(document.getElementById('yr-era').value==='bce')v=-v;var b=Y[0];Y.forEach(function(z){if(Math.abs(z-v)<Math.abs(b-v))b=z;});location.href='/years/'+(b<0?(-b)+'-bce':b);});})();</script>`n")
+[void]$sb.Append("</div>`n</main>`n")
+$title = 'Year by Year: ' + $YEARLIST.Count.ToString('N0') + ' Years of World History — The Epoch Institute'
+$desc = [EpochBuild.W]::Summary("$($YEARLIST.Count.ToString('N0')) years of world history, from $(YearLabel $YEARLIST[0]) to $(YearLabel $YEARLIST[-1]), each with its events, births and deaths, the states founded and ended, and a world map.", 155)
+Emit '/years/' (Page @{ title = $title; desc = $desc; path = '/years/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/years/") + '}'); nav = 'years'; body = $sb.ToString() })
+$yearsJs = '[' + ($YEARLIST -join ',') + "]`n"; $YEARSV = [EpochBuild.W]::Sha1($yearsJs).Substring(0, 10)
+if ([EpochBuild.W]::WriteIfChanged("$Repo\data\years.json", $yearsJs)) { $NWRITE++ }
+$t = [IO.File]::ReadAllText("$Repo\atlas", $U8); $t2 = [regex]::Replace($t, 'data/years\.json\?v=[0-9a-f]*', "data/years.json?v=$YEARSV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\atlas", $t2)) { $NWRITE++ }
+Say "year pages: $($YEARLIST.Count), events on them: $nYrEv"
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# People: /people/<century>, /people/, and people-data.js for the "who lived when" chart on /people/
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Say 'people pages'
+$BREG = @([regex]::Matches([regex]::Match([IO.File]::ReadAllText("$Repo\shared-data.js", $U8), 'const REGIONS = \[([^\]]*)\]').Groups[1].Value, '"([^"]+)"') | ForEach-Object { $_.Groups[1].Value })
+$BREGIX = @{}; for ($i = 0; $i -lt $BREG.Count; $i++) { $BREGIX[$BREG[$i]] = $i }
+$EREG = @{}; foreach ($em in $EMPS) { $EREG[[string]$em['name']] = [string]$em['region'] }
+# a person's region: the one most of the profiles that mention them belong to, else most of the state histories (the
+# search page's region filter reads it the same way)
+function PersonRegion($e) {
+  $cnt = @{}; $ord = New-Object Collections.Generic.List[string]
+  foreach ($pm in $e.emp) { $rr = $EREG[[string]$pm['name']]; if ($rr -and $BREGIX.ContainsKey($rr)) { $cnt[$rr] = 1 + [int]$cnt[$rr]; if (-not $ord.Contains($rr)) { $ord.Add($rr) } } }
+  if (-not $ord.Count -and $ESM -and $ESM[$e.slug]) { foreach ($st in @($ESM[$e.slug][1])) { $nd = $NODE[[string]$st[0]]; if ($nd) { $rr = [string]$nd['b']; if ($BREGIX.ContainsKey($rr)) { $cnt[$rr] = 1 + [int]$cnt[$rr]; if (-not $ord.Contains($rr)) { $ord.Add($rr) } } } } }
+  $best = $null; $most = 0; foreach ($rr in $ord) { if ($cnt[$rr] -gt $most) { $most = $cnt[$rr]; $best = $rr } }; return $best
+}
+# what a person's years are: 0 a lifespan, 1 a reign, 2 years of activity, 3 the death, 4 the birth, 5 a century
+function SpanKind([string]$d) { if ($d -match '^\s*(r\.|reigned|ruled)') { 1 } elseif ($d -match '^\s*fl\.') { 2 } elseif ($d -match '^\s*d\.') { 3 } elseif ($d -match '^\s*b\.') { 4 } elseif ($d -match 'centur') { 5 } else { 0 } }
+$PPL = New-Object Collections.Generic.List[object]
+foreach ($e in $ENT) { if ($e.type -eq 'person') { $PPL.Add([pscustomobject]@{ e = $e; sp = $EYRS[$e.slug]; c = $ENTCENT[$e.slug]; r = (PersonRegion $e); k = (SpanKind $e.dates); sc = $ESCORE[$e.slug] }) } }
+$PBYC = @{}; foreach ($pp in $PPL) { if ($pp.c -and $CENTSET.ContainsKey($pp.c)) { if (-not $PBYC.ContainsKey($pp.c)) { $PBYC[$pp.c] = New-Object Collections.Generic.List[object] }; $PBYC[$pp.c].Add($pp) } }
+$PCENTS = @($CENTPAGES | Where-Object { $PBYC.ContainsKey($_) -and $PBYC[$_].Count -ge 5 })
+function ScaleLbl([int]$yv) { if ($yv -lt 0) { "$(-$yv) BCE" } elseif ($yv -lt 1000) { "$yv CE" } else { "$yv" } }
+# a lifespan chart on one scale (as the country timelines): rows of [person record]; dim bars: reigns and years of activity
+function LifeChart($rows, [string]$caption) {
+  $lo0 = ($rows | ForEach-Object { $_.sp[0] } | Measure-Object -Minimum).Minimum; $hi0 = ($rows | ForEach-Object { $_.sp[1] } | Measure-Object -Maximum).Maximum
+  $t0 = [Math]::Floor($lo0 / 25) * 25; $t1 = [Math]::Ceiling($hi0 / 25) * 25; if ($t1 -le $t0) { $t1 = $t0 + 25 }
+  if ((($t1 - $t0) % 50) -ne 0) { $t1 += 25 }; $tw = $t1 - $t0   # the middle mark falls on a round year
+  $h = '<figure class="pp-chart"><p class="cty-scale" aria-hidden="true"><span>' + (Hx (ScaleLbl $t0)) + '</span><span>' + (Hx (ScaleLbl ([int][Math]::Round(($t0 + $t1) / 2)))) + '</span><span>' + (Hx (ScaleLbl $t1)) + '</span></p><ol class="cty-tl pp-tl">'
+  foreach ($rw in $rows) {
+    $a = $rw.sp[0]; $b = $rw.sp[1]
+    $h += '<li><a href="/encyclopedia/' + $rw.e.slug + '">' + $(if ($rw.e.img) { '<img class="pp-av" src="' + $rw.e.img + '" alt="" loading="lazy" width="28" height="28">' } else { '<span class="pp-av"></span>' }) + '<span class="pp-nm"><span class="cty-n">' + (Hx $rw.e.name) + '</span><span class="cty-y">' + (Hx $rw.e.dates) + '</span></span></a><span class="cty-track" aria-hidden="true"><span class="cty-bar ' + $(if ($rw.k -ne 0) { 'pp-dim' } else { 'pp-life' }) + '" style="left:' + (($a - $t0) / $tw * 100).ToString('0.0', $INV) + '%;width:' + ([Math]::Max(0.8, ($b - $a) / $tw * 100)).ToString('0.0', $INV) + '%"></span></span></li>'
+  }
+  return $h + '</ol><figcaption>' + $caption + '</figcaption></figure>'
+}
+$PCINFO = @{}
+for ($pi3 = 0; $pi3 -lt $PCENTS.Count; $pi3++) {
+  $c = $PCENTS[$pi3]; $slug = CenturySlug $c; $path = '/people/' + $slug; $ct = CentTitle $c
+  $lst = @($PBYC[$c] | Sort-Object @{ e = { $_.sc }; Descending = $true }, @{ e = { $_.e.i } })
+  $PCINFO[$c] = @{ n = $lst.Count; top = @($lst | Select-Object -First 3 | ForEach-Object { $_.e.name }) }
+  $crumb = Crumbs @(@('Home', '/'), @('People', '/people/'), @($ct, $null))
+  $sb = New-Object Text.StringBuilder(80000)
+  [void]$sb.Append('<main id="main" class="pp-page ref-page">' + "`n<div class=`"pp-wrap`">`n" + $crumb[0] + "`n")
+  $nPic = @($lst | Where-Object { $_.e.img }).Count
+  [void]$sb.Append('<header class="ref-head cen-head"><p class="cty-kicker">People · ' + (Hx ((CentDecades $c).Substring(0, 1).ToUpperInvariant() + (CentDecades $c).Substring(1))) + '</p><h1 class="research-title">People of the ' + (Hx $ct) + '</h1><p class="ref-lede">' + $lst.Count.ToString('N0') + ' people whose working lives fell in the ' + (Hx $c) + $(if ($nPic) { ', ' + $nPic.ToString('N0') + ' of them with a portrait or picture' } else { '' }) + '. They are grouped by region, the best known first.</p></header>' + "`n")
+  [void]$sb.Append('<nav class="ref-letters ref-centuries" aria-label="Centuries">' + (($PCENTS | ForEach-Object { '<a href="/people/' + (CenturySlug $_) + '"' + $(if ($_ -eq $c) { ' aria-current="page"' } else { '' }) + '>' + (Hx ($_ -replace ' century', ' c.')) + '</a>' }) -join '') + "</nav>`n")
+  $ch = @($lst | Where-Object { $_.sp -and $_.sp[1] -gt $_.sp[0] -and $_.k -le 2 } | Select-Object -First 40 | Sort-Object @{ e = { $_.sp[0] } }, @{ e = { $_.e.name } })
+  if ($ch.Count -ge 5) { [void]$sb.Append('<section><h2 class="ref-sec-title">Who lived when</h2>' + (LifeChart $ch ('The ' + $ch.Count + ' best-known people of the century with dates. Bright bars: lifespans; pale bars: reigns or years of activity. <a href="/people/">Draw your own chart &rarr;</a>')) + "</section>`n") }
+  foreach ($rr in @($BREG) + @('')) {
+    $grp = @($lst | Where-Object { $(if ($rr) { $_.r -eq $rr } else { -not $_.r }) }); if (-not $grp.Count) { continue }
+    [void]$sb.Append('<section class="ref-group"><h2>' + $(if ($rr) { Hx $rr } else { 'Other people of the century' }) + ' <span class="n">' + $grp.Count + '</span></h2><ul class="enc-seealso">' + (($grp | Select-Object -First 24 | ForEach-Object { YrTile $_.e $_.e.dates }) -join '') + '</ul>')
+    if ($grp.Count -gt 24) { [void]$sb.Append('<details class="cen-all"><summary>All ' + $grp.Count + '</summary><ul class="ref-cent-list cen-states">' + (($grp | Select-Object -Skip 24 | ForEach-Object { '<li><a href="/encyclopedia/' + $_.e.slug + '">' + (Hx $_.e.name) + ' <span>' + (Hx $_.e.dates) + '</span></a></li>' }) -join '') + '</ul></details>') }
+    [void]$sb.Append("</section>`n")
+  }
+  $pv = if ($pi3 -gt 0) { $PCENTS[$pi3 - 1] } else { $null }; $nx = if ($pi3 -lt $PCENTS.Count - 1) { $PCENTS[$pi3 + 1] } else { $null }
+  [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring centuries">' + $(if ($pv) { '<a class="prev" rel="prev" href="/people/' + (CenturySlug $pv) + '"><span class="lbl">&larr; Earlier century</span><span class="nm">' + (Hx (CentTitle $pv)) + '</span></a>' } else { '' }) +
+    $(if ($nx) { '<a class="next" rel="next" href="/people/' + (CenturySlug $nx) + '"><span class="lbl">Later century &rarr;</span><span class="nm">' + (Hx (CentTitle $nx)) + '</span></a>' } else { '' }) + "</nav>`n")
+  [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/people/">All people &rarr;</a> <a class="enc-random-link" href="/centuries/' + $slug + '">The ' + (Hx $c) + ' &rarr;</a></p>' + "`n")
+  [void]$sb.Append((CiteBox "People of the $ct" ($SITE + $path) 'The Epoch Institute Encyclopedia') + "`n</div>`n</main>`n")
+  $title = "People of the $($ct -replace ' century', ' Century'): $($lst.Count.ToString('N0')) Historical Figures — The Epoch Institute"
+  $desc = [EpochBuild.W]::Summary("$($lst.Count.ToString('N0')) people of the $c ($(CentDecades $c)) by region, from $(ProseList @($PCINFO[$c].top)) to the less known, with a chart of who lived when.", 155)
+  $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'people'; body = $sb.ToString() })
+}
+# people-data.js: everyone with years, for the chart on /people/ (pictures are /images/encyclopedia/<slug>.jpg)
+$pd = New-Object Text.StringBuilder(1200000); $nPd = 0
+[void]$pd.Append("// Generated by scripts/build-pages.ps1 for /people/. Do not edit.`n// rows: [slug, name, dates, first year, last year, kind (0 lifespan, 1 reign, 2 active, 3 died, 4 born, 5 century), region (PEOPLE_REGIONS, -1 none), picture, weight]`n")
+[void]$pd.Append('var PEOPLE_REGIONS = [' + (($BREG | ForEach-Object { Js $_ }) -join ',') + "];`nvar PEOPLE = [`n")
+foreach ($pp in $PPL) {
+  if (-not $pp.sp) { continue }
+  if ($nPd) { [void]$pd.Append(",`n") }
+  [void]$pd.Append('[' + (Js $pp.e.slug) + ',' + (Js $pp.e.name) + ',' + (Js $pp.e.dates) + ',' + $pp.sp[0] + ',' + $pp.sp[1] + ',' + $pp.k + ',' + $(if ($pp.r) { $BREGIX[$pp.r] } else { -1 }) + ',' + $(if ($pp.e.img) { 1 } else { 0 }) + ',' + $pp.sc + ']'); $nPd++
+}
+[void]$pd.Append("`n];`n"); $pdText = $pd.ToString(); $PEOPLEV = [EpochBuild.W]::Sha1($pdText).Substring(0, 10)
+if ([EpochBuild.W]::WriteIfChanged("$Repo\people-data.js", $pdText)) { $NWRITE++ }
+# index: the chart tool (people-data.js), then the centuries
+$crumb = Crumbs @(@('Home', '/'), @('People', $null))
+$sb = New-Object Text.StringBuilder(40000)
+[void]$sb.Append('<main id="main" class="pp-page ref-page">' + "`n<div class=`"pp-wrap`">`n" + $crumb[0] + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">People in History</h1><p class="ref-lede">' + $PPL.Count.ToString('N0') + ' people of the encyclopedia: rulers and rebels, thinkers and believers, artists, scientists and explorers. Draw a chart of who lived when for any age and region, or browse them century by century.</p></header>' + "`n")
+$opts = ($PCENTS | ForEach-Object { $r0 = CentRange $_; '<option value="' + (CenturySlug $_) + '" data-a="' + $r0[0] + '" data-b="' + $r0[1] + '">' + (Hx (CentTitle $_)) + '</option>' }) -join ''
+[void]$sb.Append('<section aria-labelledby="pp-tool-t"><h2 class="ref-sec-title" id="pp-tool-t">Who lived when</h2><form class="srch-row pp-form" id="pp-form"><label>Region <select id="pp-r"><option value="-1">All regions</option>' + (($BREG | ForEach-Object { '<option value="' + $BREGIX[$_] + '">' + (Hx $_) + '</option>' }) -join '') + '</select></label><label>From <select id="pp-from">' + $opts + '</select></label><label>To <select id="pp-to">' + $opts + '</select></label><label class="srch-check"><input type="checkbox" id="pp-pic"> With a picture</label></form>' +
+  '<p class="pp-status" id="pp-status" aria-live="polite">The chart needs JavaScript; the centuries below list everyone.</p><div id="pp-out"></div></section>' + "`n")
+[void]$sb.Append('<section><h2 class="ref-sec-title">By century</h2><ul class="cen-cards">' + (($PCENTS | ForEach-Object { $ii = $PCINFO[$_]; '<li><a href="/people/' + (CenturySlug $_) + '"><span class="cen-c-t">' + (Hx (CentTitle $_)) + '</span><span class="cen-c-d">' + (Hx (CentDecades $_)) + '</span><span class="cen-c-n">' + $ii.n.ToString('N0') + ' people</span><span class="cen-c-p">' + (Hx ($ii.top -join ' · ')) + '</span></a></li>' }) -join '') + "</ul></section>`n")
+[void]$sb.Append("<script src=`"/people-data.js?v=$PEOPLEV`" defer></script>`n<script src=`"/people.js?v=1`" defer></script>`n</div>`n</main>`n")
+$title = 'People in History: ' + $PPL.Count.ToString('N0') + ' Rulers, Thinkers and Explorers — The Epoch Institute'
+$desc = [EpochBuild.W]::Summary("$($PPL.Count.ToString('N0')) people of world history, from rulers and rebels to thinkers, artists and explorers: a chart of who lived when, and every century's people by region.", 155)
+Emit '/people/' (Page @{ title = $title; desc = $desc; path = '/people/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/people/") + '}'); nav = 'people'; body = $sb.ToString() })
+Say ("people pages: {0} centuries, {1:N0} people, people-data.js {2:N0} KB" -f $PCENTS.Count, $PPL.Count, ($pdText.Length / 1KB))
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Atlas: maps/atlas-data.js (states), maps/basemap.js (outlines for the atlas page), maps/world.svg (picture for small maps)
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 $KINDS = @('crown', 'coronet', 'tower', 'dome', 'columns', 'ship', 'tribal', 'yurt', 'mitre', 'shield')
@@ -1507,7 +1870,7 @@ $world = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10000 ' + (Fx $MA
   '<path d="' + [EpochGeo.G]::Graticule(30, -58, 90, 0, 10) + '" fill="none" stroke="#9a8552" stroke-opacity=".22" stroke-width="2.5"/>' +
   '<path d="' + [EpochGeo.G]::PathData($RINGS, $BOXES, 0.22, 0, $null, 10) + '" fill="#b39a5a" fill-opacity=".2" stroke="#b39a5a" stroke-opacity=".6" stroke-width="2.6" stroke-linejoin="round"/></svg>' + "`n"
 if ([EpochBuild.W]::WriteIfChanged("$Repo\maps\world.svg", $world)) { $NWRITE++ }
-foreach ($f in @('atlas', 'games')) { $t = [IO.File]::ReadAllText("$Repo\$f", $U8); $t2 = [regex]::Replace([regex]::Replace([regex]::Replace($t, 'maps/atlas-data\.js\?v=[0-9a-f]*', "maps/atlas-data.js?v=$ATLASV"), 'maps/basemap\.js\?v=[0-9a-f]*', "maps/basemap.js?v=$BASEV"), 'maps/globe-land\.js\?v=[0-9a-f]*', "maps/globe-land.js?v=$GLOBEV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\$f", $t2)) { $NWRITE++ } }
+foreach ($f in @('atlas', 'games', 'timeline')) { $t = [IO.File]::ReadAllText("$Repo\$f", $U8); $t2 = [regex]::Replace([regex]::Replace([regex]::Replace($t, 'maps/atlas-data\.js\?v=[0-9a-f]*', "maps/atlas-data.js?v=$ATLASV"), 'maps/basemap\.js\?v=[0-9a-f]*', "maps/basemap.js?v=$BASEV"), 'maps/globe-land\.js\?v=[0-9a-f]*', "maps/globe-land.js?v=$GLOBEV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\$f", $t2)) { $NWRITE++ } }
 Say ("atlas: {0} states, atlas-data.js {1:N0} KB, basemap.js {2:N0} KB, globe-land.js {3:N0} KB, world.svg {4:N0} KB" -f $nA, ($atlasData.Length / 1KB), ($baseJs.Length / 1KB), ($globeJs.Length / 1KB), ($world.Length / 1KB))
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1642,6 +2005,9 @@ $SECTIONS = [ordered]@{
   atlas        = @{ t = 'Atlas'; h = '/atlas'; k = 'From ' + (Yr $minS) + ' to today'; d = 'The world in any year: slide through five thousand years and watch states appear and vanish.'; pic = @('catalan-atlas', 'tabula-rogeriana', 'cantino-planisphere', 'piri-reis-map') }
   countries    = @{ t = 'Country Histories'; h = '/countries/'; k = "$($CPAGE.Count) countries"; d = 'The history of each present-day country, told through the states that lay on its soil.'; pic = @('great-wall-of-china', 'machu-picchu', 'petra') }
   centuries    = @{ t = 'Centuries'; h = '/centuries/'; k = "$($CENTPAGES.Count) centuries"; d = 'World history one century at a time: the great powers, key events, people and a map.'; pic = @('bayeux-tapestry', 'battle-of-hastings', 'magna-carta') }
+  years        = @{ t = 'Year by Year'; h = '/years/'; k = $YEARLIST.Count.ToString('N0') + ' years'; d = 'What happened in a single year: its events, the people born and the people who died, the states founded and ended.'; pic = @('primary-chronicle') }
+  people       = @{ t = 'People'; h = '/people/'; k = $PPL.Count.ToString('N0') + ' people'; d = 'Rulers, thinkers, artists and explorers, century by century and region by region, with a chart of who lived when.'; pic = @('las-meninas') }
+  timeline     = @{ t = 'World Timeline'; h = '/timeline'; k = 'Every state'; d = 'Five thousand years of states and empires on one line, region by region: see who lived alongside whom.'; pic = @('standard-of-ur') }
   explorer     = @{ t = 'Empire Explorer'; h = '/explorer'; k = 'Power curves'; d = 'Compare the rise and fall of nearly four hundred states and empires on one timeline.'; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
   connections  = @{ t = 'Connections'; h = '/connections'; k = $POL['links'].Count.ToString('N0') + ' links'; d = 'Who succeeded, conquered, ruled or merged with whom: the states as one network.'; pic = @('congress-of-berlin', 'treaty-of-tordesillas', 'congress-of-vienna') }
   paths        = @{ t = 'Reading Paths'; h = '/paths/'; k = "$($RP.Count) paths"; d = 'Themed routes across profiles and entries, from the Silk Road to the steppe empires.'; pic = @('marco-polo', 'ibn-battuta', 'zheng-he') }
@@ -1664,9 +2030,9 @@ function HubCard($s, [string]$cls) {
 }
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
-$HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'centuries', 'speeches', 'today', 'glossary')),
-  @('Explore', @('atlas', 'explorer', 'connections', 'paths')), @('Play', @('quiz', 'games', 'kids', 'start')),
-  @('The Institute', @('series', 'dataset', 'community', 'contributors')))
+$HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
+  @('Through time', @('atlas', 'timeline', 'centuries', 'years')), @('Explore', @('explorer', 'connections', 'paths')),
+  @('Play', @('quiz', 'games', 'kids', 'start')), @('The Institute', @('series', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'countries', 'atlas', 'centuries', 'explorer', 'paths', 'today', 'speeches', 'games', 'kids') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
@@ -1782,9 +2148,9 @@ Say ("open data: {0} states ({1} placed), {2} relations, {3} curve points" -f $o
 
 # stale generated pages (entries, states or days that no longer exist)
 $htPlain = "# Generated by scripts/build-pages.ps1: the pages in this folder are extensionless HTML.`n<FilesMatch `"^[a-z0-9-]+$`">`n  ForceType text/html`n</FilesMatch>`n"
-foreach ($dir in 'countries', 'centuries', 'paths', 'speeches') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
+foreach ($dir in 'countries', 'centuries', 'paths', 'speeches', 'years', 'people') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
 $nDel = 0
-foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches') {
+foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people') {
   $full = Join-Path $Repo $dir; if (-not (Test-Path $full)) { continue }
   foreach ($f in Get-ChildItem $full -File) {
     if ($f.Extension -or $f.Name -eq 'index' -or $f.Name.StartsWith('.')) { continue }
@@ -1793,7 +2159,7 @@ foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts'
 }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }
@@ -1811,13 +2177,14 @@ function SitemapOf([string]$p) {
   if ($p -like '/encyclopedia/*') { return 'encyclopedia' }
   if ($p -like '/state/browse/*' -or $p -eq '/state/') { return 'pages' }
   if ($p -like '/state/*') { return 'states' }
+  if ($p -like '/years/?*') { return 'years' }
   return 'pages'
 }
 $IMGOF = @{}
 foreach ($e in $ENT) { if ($e.img) { $IMGOF['/encyclopedia/' + $e.slug] = $e.img } }
 foreach ($p in $PROF) { $IMGOF[$p] = '/images/og/' + $p.Substring(8) + '.jpg' }
 foreach ($kv in $STX.GetEnumerator()) { $im = [string]$kv.Value['img']; if ($im -and (Test-Path (Join-Path $Repo ($im.TrimStart('/') -replace '/', '\')))) { $IMGOF['/state/' + $kv.Key] = $im } }
-$SMG = [ordered]@{ pages = New-Object System.Collections.Generic.List[string]; profiles = New-Object System.Collections.Generic.List[string]; encyclopedia = New-Object System.Collections.Generic.List[string]; states = New-Object System.Collections.Generic.List[string] }
+$SMG = [ordered]@{ pages = New-Object System.Collections.Generic.List[string]; profiles = New-Object System.Collections.Generic.List[string]; encyclopedia = New-Object System.Collections.Generic.List[string]; states = New-Object System.Collections.Generic.List[string]; years = New-Object System.Collections.Generic.List[string] }
 $LATEST = @{}
 foreach ($p in ($SMNEW.Keys | Sort-Object)) {
   $grp = SitemapOf $p; $SMG[$grp].Add((UrlXml $p $IMGOF[$p]))

@@ -6,22 +6,24 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
-countries/ · centuries/ · paths/ (each has an .htaccess forcing text/html; /folder redirects to /folder/).
+countries/ · centuries/ · paths/ · speeches/ · years/ · people/ (each has an .htaccess forcing text/html; /folder
+redirects to /folder/).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
 Plus 404.html and generator.html (generator is NOT deployed — see .cpanel.yml).
 
 ## Menu (shared-nav.js navHtml)
-Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, Country Histories, Centuries, Empire Explorer,
-Connections, Reading Paths, History Quiz, History Games, Kids Corner, Glossary, Find Your Way In; two columns with a
-line each) · Today in History · More ▾ (MORE:
+Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
+Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, History Quiz, History Games, Kids Corner,
+Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, home. The header also carries the Kids mode star
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, home. The header also
+carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
 menu opens with a "Display" row (#nav-dd-theme, #nav-dd-kids) that works the same switches.
@@ -163,12 +165,31 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   diagrams last (PicIsChart).
 - Lists of entries show a type glyph where an entry has no picture (PhSpan: `.ph .ph-person/-conflict/-place/…`,
   masked SVG icons in shared.css).
+- `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — 931 year pages, one for every year with at least 6 items,
+  2 of them events. Only FIRM years count ([EpochBuild.W]::Firm, Range, Life: "1453", "29 May 1453", "480 BCE"; never
+  "c. 1450", "1450s", "1066 or 1067", a reign or a century): entry events and conflicts dated to the year, wars that
+  began or ended in it, day events (history.json; their linked text from data/days), profile key events (empire-glance.js
+  ev, "In the profiles"), births and deaths (lifespans, "b."/"d."), works, states with firm dates (polities x = approximate
+  is left out) founded or ended, speeches. An entry a day event already names (its links, its name in the title, or
+  every word of its name there: YCovered) is not listed twice. Event thumbnails are JPEG paintings or photographs only
+  (GoodPic: battle maps and diagrams on Commons are PNG/GIF/SVG). Each page: lede with counts, nearby years, events by
+  date, a world map of the states alive (YearDots, C#), births, deaths, works, states, prev/next, the century. Linked from
+  entry dates (LinkYears links every firm year that has a page), day-page years, century pages ("Year by year"), the
+  atlas ("What happened in <year>", data/years.json with its ?v= stamped into /atlas) and the 404 page (a year without a
+  page goes to the nearest one). Their own sitemap: sitemaps/years.xml. Script-level year variables are $yv ($y is $Y,
+  the link years); the year table is $YEARB ($yrs is a state page's year text).
+- `/people/<century>` + `/people/` — the 12,935 people by the century of their working life (ENTCENT) and by broad
+  region (PersonRegion: most of the mentioning profiles' regions, else of the state histories, as the search filter), a
+  "who lived when" chart of the 40 best known (lifespans bright, reigns and "fl." pale) and picture tiles by region.
+  people-data.js ([slug, name, dates, first, last, kind, region, picture, weight]; ?v= written into /people/) feeds
+  people.js, the chart tool on /people/ (region, from/to century, with a picture; kept in the address).
 - `maps/atlas-data.js`, `maps/basemap.js`, `maps/world.svg` (see "Atlas and maps"), their ?v= stamped into /atlas.
 - The `<!-- build:... -->` blocks of encyclopedia/index (with the Discover row: 8 notable entries with pictures, one
   kind each, re-picked daily by a small inline script from 10 per kind), state/index, today-in-history/index,
-  research (hub: every section with its count and a picture, grouped Read / Explore / Play / The Institute), index
+  research (hub: every section with its count and a picture, grouped Read / Through time / Explore / Play / The
+  Institute), index
   (home-map, home-doors: 12 doors with live counts, home-centuries, home-countries) and atlas (atlas-centuries); enc-page.js's IDX_V; the .htaccess of state/, countries/, centuries/, paths/;
-  `sitemap.xml` (an index) + `sitemaps/{pages,profiles,encyclopedia,states}.xml` with image entries; lastmod changes
+  `sitemap.xml` (an index) + `sitemaps/{pages,profiles,encyclopedia,states,years}.xml` with image entries; lastmod changes
   only when a page's content changes (scripts/sitemap-state.tsv); `search-profiles.js` (the profiles for the header
   search: the generated pages load it instead of shared-data.js); `scripts/changed-urls.txt` (for ping-indexnow.ps1).
 Run it after any change to encyclopedia-data.js, encyclopedia-links.js, data/*.json, reading-paths.js, shared-data.js
@@ -202,6 +223,14 @@ outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) 
   a degree, rings rewound client-side with d3.geoArea), its ?v= stamped into /atlas's ATLAS_GLOBE_SRC. The globe's
   canvas colours come from the CSS tokens and repaint on data-theme changes. Note the hidden pitfall: an SVG
   element has no .hidden property - toggle the hidden ATTRIBUTE.
+- `/timeline` + timeline.js: the World Timeline (hand page). maps/atlas-data.js (its ?v= stamped into /timeline as into
+  /atlas and /games) drawn as bars founding–end in lanes by region (the 94 great empires first), packed into rows;
+  Profiles (default, labelled gold bars, 190 rows) or All states (1,985 thin rows). The canvas is sticky inside a
+  scrolling panel (#tl-spacer gives the height) and draws only the rows in view. Time zooms and pans on its own, without
+  d3: drag sideways (touch-action: pan-y keeps vertical swipes for the panel), pinch, Ctrl/Cmd + wheel (a trackpad
+  pinch), the buttons, arrow and +/− keys; a plain wheel scrolls the lanes. Era buttons, region toggles, search (opens
+  the state's span and rings it), a click or a second tap opens the state or profile, "Open the atlas at <middle year>".
+  The address keeps ?from=&to=&all=1&hide=. window.epochTimeline is there for tests.
 - Small maps are inline SVG: state locators, century maps and the home page draw over `<image href=/maps/world.svg>`
   (fixed translucent gold, cached once); country pages carry their own clipped outlines, with the country itself
   drawn again on top as `map-land-hi` (lit gold with a glow; MapSvg -Hi, rings from $CRING) and its neighbours dimmed;
