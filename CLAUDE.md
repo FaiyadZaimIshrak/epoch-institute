@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ (each has an .htaccess forcing text/html; /folder redirects to /folder/).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
@@ -116,6 +116,12 @@ Root pages are copied by name (the rsync line listing index, about, … atlas, q
 After deploying, run scripts/ping-indexnow.ps1: it submits the pages the last build changed
 (scripts/changed-urls.txt, written by build-pages.ps1; gitignored) to IndexNow. The key file
 7887eeb120e9bc53cc20304b26431942.txt at the root proves ownership — keep it deployed.
+The daily RSS feed, /feeds/today.xml (Today in History + the entry of the day, the last 14 days), is not deployed:
+.github/workflows/daily-feed.yml builds it every morning at 00:05 UTC (and after a push that changes data/days,
+home-data.js or its script) with scripts/make-feed.ps1 (pwsh-compatible) and writes it into public_html/feeds through
+cPanel UAPI Fileman::save_file_content (upload_files as a fallback), with the deploy secrets. .cpanel.yml only makes
+feeds/ and copies feeds/.htaccess (RSS type, 1-hour cache); check-site skips /feeds/ links. Home, the Today in History
+pages and the footer link it.
 
 ## Indexable reference pages (SEO)
 scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-8 BOM) writes from the data:
@@ -215,7 +221,14 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
 - Conflicts & Resolutions: entries carry `tags` (battle, siege, war, campaign, revolt, revolution, crisis, treaty, peace;
   2,528 entries) and `war:"<slug>"` (the war a battle/treaty belongs to). Written by enc2/apply-conflicts.ps1 — run it
   once on fresh enc-merge output (a rerun drops names).
-- Pipeline after a merge: apply-conflicts, enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
+- Person dates (Oct 2026): scripts/person-dates.tsv holds the dates checked by hand (lifespans only where well
+  attested; otherwise the year the entry gave, marked "r." reigned or "fl." flourished) and, for the people in the
+  dated games whose dates are a reign, an accession or a death, their birth year ("-" = not known: they stay out of
+  Which Came First and Order the Ages). scripts/apply-person-dates.ps1 applies it to encyclopedia-data.js and
+  data/enc-preview, writes "born/died N" as "b./d. N" and drops a doubled "around c."; it is idempotent. Run it right
+  after every enc-merge (which starts again from the originals). The builder's YearOf/Span skip the day of a full
+  date (Clean: "13 July 1260" is 1260, not the 1st century).
+- Pipeline after a merge: apply-conflicts, apply-person-dates, enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
   run-scan -Page t-encprof + prof/enc-prof-apply, enc2/prof-forms, link-state-texts, make-previews, make-home-data,
   make-search-states, build-state-data, make-enc-states, prof/section-images, prof/regen (394 pages), then verify-pages
   and prof/verify, then scripts/build-pages.ps1 and scripts/check-site.ps1. Headless Edge pages that touch all profiles run in slices of 30–40 (one page for all crashes the
@@ -275,7 +288,8 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   sets). build-pages.ps1 writes games-data.js: GAME_CARDS [slug, name, kind, first year, last year, dates, picture,
   big picture, caption, fit for Kids mode (0 for conflicts), credit, source], GAME_PUZZLES (sets of big pictures),
   GAME_WORDS (scripts/word-hunt.tsv), and stamps games-data.js?v= into the page. Years come from
-  [EpochBuild.W]::Span (so BCE ranges sort right; a person's first year is the birth). Big pictures:
+  [EpochBuild.W]::Span (so BCE ranges sort right; a person's first year is the birth, which
+  scripts/person-dates.tsv gives where the dates are a reign or a death: Alexander was "born 336 BCE" before). Big pictures:
   images/games/<slug>.jpg, 800 px Commons thumbnails from scripts/fetch-game-images.ps1. The entry's credit is shown
   under every picture.
 - Emblem Pairs: 3-D flip cards, Easy/Medium/Hard = 6/8/10 pairs, timer, stars, "New best". Cards come only from
@@ -404,10 +418,28 @@ the §"Kinds of profile" recipe: PROFILE_KINDS entry, EMPIRES rows with kind, te
   scores: exact 100, prefix 80, the words after a leading "Battle of", "Kingdom of" … (SEARCH_LEAD) 90 if they are
   the query, 78 if they start with it, word start 70, inside 40; profiles +20, states +2. So "hastings" gives the
   Battle of Hastings before Hastings Banda. Bump `search-index.js?v=` (SEARCH_INDEX_SRC in shared-nav.js) when
-  regenerated.
-- 404.html: a search field (opens the site search) with the broken address's words, "Were you looking for…" (the
+  regenerated. siteSearchAll(q) returns every match (with k: kind, src: 'p'/'P'/'e'/'s' and i: its row);
+  siteSearch(q) is its first 12 for the dropdown, which ends with "See all N results →" (/search?q=).
+- `/search` (hand page, noindex): every result, 50 a page, kind chips with counts, region and century filters, "with a
+  picture"; the address keeps the state (?q=&k=&r=&from=&to=&pic=1&p=). The filters read `search-facets.js`
+  (SEARCH_FACETS: one row per SEARCH_INDEX row and per SEARCH_STATES row, [first century, last century (BCE
+  negative, 0 undated), region index in REGIONS, picture], with the row counts it was made for; written by
+  make-home-data.ps1 every run: century from the builder's Span, region from the profiles that mention an entry, else
+  its state histories, a state's from polities `b`). If the counts no longer match the index the filters do nothing:
+  re-run make-home-data after make-search-states. Bump `search-facets.js?v=` (FACETS_SRC in /search) when it changes.
+- 404.html: a search field (opens /search) with the broken address's words, "Were you looking for…" (the
   closest profiles, entries and states by word beginnings, so /encyclopedia/battle-of-hastingz still finds it) and
   six destinations.
+- Listen (shared-nav.js): a "Listen" button ("Read it to me" in Kids mode) under the title of entries, states,
+  profiles of every kind, speeches, day pages, essays and community articles, shown only where speechSynthesis has an
+  English voice (Android in-app browsers have none). It reads the title, lede and sections (TYPES: a root and its
+  selectors per page kind), never menus, pictures, credits, references or buttons, and nothing hidden (Kids-mode
+  folds, a closed full speech). Dates are said in words (r. → reigned, c. → circa, 1066–1087 → 1066 to 1087). Text
+  goes out in chunks of up to ~220 characters (Chrome cuts long utterances); Pause cancels and Resume restarts the
+  chunk; a passage with another lang gets a voice of that language or one spoken note that it is skipped; the
+  paragraph read is outlined (.is-speaking) and followed on screen until the reader scrolls; the player (.listen-bar)
+  sits above .path-journey and to-top; pagehide stops it; speed 0.8/1/1.2 in epoch-listen-rate. window.epochListen
+  exposes parts/chunks/speakable for tests (scratchpad t-listen.ps1 runs them against a stubbed speechSynthesis).
 - Both are generated from encyclopedia-data.js + empire-section-images.js; regenerate them whenever those change.
 
 ## Empire pages

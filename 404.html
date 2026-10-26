@@ -19,7 +19,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/shared.css?v=46">
+<link rel="stylesheet" href="/shared.css?v=47">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -87,7 +87,7 @@
 </main>
 
 <script src="/shared-data.js?v=8"></script>
-<script src="/shared-nav.js?v=30"></script>
+<script src="/shared-nav.js?v=31"></script>
 <script>
 initNav('');
 // the broken address's words: offered in the search field, and the closest pages suggested (a typo in the last
@@ -95,7 +95,7 @@ initNav('');
 (function () {
   var STOP = { encyclopedia: 1, empire: 1, state: 1, speeches: 1, countries: 1, centuries: 1, paths: 1, today: 1, 'in': 1, history: 1, of: 1, the: 1, and: 1, a: 1, html: 1, index: 1, browse: 1, conflicts: 1, glossary: 1 };
   var form = document.getElementById('err-search'), q = document.getElementById('err-q');
-  form.addEventListener('submit', function (e) { e.preventDefault(); if (q.value.trim()) openSiteSearch(q.value.trim()); });
+  form.addEventListener('submit', function (e) { e.preventDefault(); if (q.value.trim()) location.href = '/search?q=' + encodeURIComponent(q.value.trim()); });
   var path = location.pathname; try { path = decodeURIComponent(path); } catch (e) {}
   var words = searchFold(path).split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && !STOP[w]; });
   if (!words.length) return;

@@ -12,11 +12,11 @@ $JSS = New-Object System.Web.Script.Serialization.JavaScriptSerializer; $JSS.Max
 $U8 = New-Object Text.UTF8Encoding($false)
 $clock = [Diagnostics.Stopwatch]::StartNew()
 
-# pages: extensionless files of the site (root pages, empire/, encyclopedia/, state/, today-in-history/, countries/,
-# centuries/, paths/) and 404.html
+# pages: extensionless files of the site (root pages, the profile folders, encyclopedia/, state/, today-in-history/,
+# countries/, centuries/, paths/, speeches/ and the other generated folders) and 404.html
 $pages = New-Object System.Collections.Generic.List[object]
 foreach ($f in Get-ChildItem $Repo -File) { if (-not $f.Extension -and $f.Name -notmatch '^\.') { $pages.Add($f) } }
-foreach ($d in 'empire', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths') {
+foreach ($d in 'empire', 'religion', 'language', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers') {
   foreach ($f in Get-ChildItem (Join-Path $Repo $d) -File -ErrorAction SilentlyContinue) { if (-not $f.Extension) { $pages.Add($f) } }
 }
 $redir = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\state\.htaccess", $U8)) { if ($l -match '^Redirect 301 (\S+) ') { $redir[$Matches[1]] = 1 } }
@@ -44,6 +44,7 @@ foreach ($f in $pages) {
   foreach ($m in $rxRef.Matches($html)) {
     $u = $m.Groups[1].Value; if ($u.StartsWith('//')) { continue }
     $p = $u -replace '[?#].*$', ''; if (-not $p) { continue }; $nLinks++
+    if ($p.StartsWith('/feeds/')) { continue }   # written on the server every morning (.github/workflows/daily-feed.yml)
     if (-not (Exists $p)) { if ($p.StartsWith('/logos/')) { $noLogo[$p] = 1 } else { $bad.Add("$self : broken link $u") } }   # missing emblems are hidden by onerror
   }
   if (-not $self) { continue }

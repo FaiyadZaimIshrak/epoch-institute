@@ -327,38 +327,42 @@ function searchScore(q, name) {
   if (n.indexOf(q) !== -1) return 40;
   return 0;
 }
-function siteSearch(query) {
+// Every match, best first. Each result: s (score), name, type (its label), href, k (kind: 'profile', 'state' or the
+// entry's type), src ('p' EMPIRES, 'P' SEARCH_PROFILES, 'e' SEARCH_INDEX, 's' SEARCH_STATES) and i (its row there),
+// which /search uses for its filters (search-facets.js)
+function siteSearchAll(query) {
   var q = searchFold(query).trim(), out = [];
   if (q.length < 2) return out;
   // profiles first among equal matches (+20 outweighs an entry's notability, at most +16)
-  if (typeof EMPIRES !== 'undefined') EMPIRES.forEach(function (e) {
+  if (typeof EMPIRES !== 'undefined') EMPIRES.forEach(function (e, i) {
     var s = searchScore(q, e.name);
-    if (s) out.push({ s: s + 20, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e) });
+    if (s) out.push({ s: s + 20, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e), k: 'profile', src: 'p', i: i });
   });
   // pages without shared-data.js (the generated reference pages) get the profiles from /search-profiles.js instead
-  else if (typeof SEARCH_PROFILES !== 'undefined') SEARCH_PROFILES.forEach(function (r) {
+  else if (typeof SEARCH_PROFILES !== 'undefined') SEARCH_PROFILES.forEach(function (r, i) {
     var s = searchScore(q, r[0]);
-    if (s) out.push({ s: s + 20, name: r[0], type: r[2] + ' · profile', href: r[1] });
+    if (s) out.push({ s: s + 20, name: r[0], type: r[2] + ' · profile', href: r[1], k: 'profile', src: 'P', i: i });
   });
   // entries: r[4] is their notability (0-8: mentions in profiles and state histories, a picture)
-  if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) {
+  if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r, i) {
     var s = searchScore(q, r[1]);
     if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-    if (s > 0) out.push({ s: s + 2 * (r[4] || 0), name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia/' + r[0], enc: r[2] === 'polity' });
+    if (s > 0) out.push({ s: s + 2 * (r[4] || 0), name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia/' + r[0], enc: r[2] === 'polity', k: r[2], src: 'e', i: i });
   });
   // every state in the register (page /state/<id>); an encyclopedia polity of the same name is dropped in its favour
   if (typeof SEARCH_STATES !== 'undefined') {
     var stateNames = {};
-    SEARCH_STATES.forEach(function (r) {
+    SEARCH_STATES.forEach(function (r, i) {
       var s = searchScore(q, r[1]);
       if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-      if (s > 0) { out.push({ s: s + 2, name: r[1], type: String(r[2] || 'state').replace(/-/g, ' ') + ' · state', href: '/state/' + r[0] }); stateNames[searchFold(r[1])] = 1; }
+      if (s > 0) { out.push({ s: s + 2, name: r[1], type: String(r[2] || 'state').replace(/-/g, ' ') + ' · state', href: '/state/' + r[0], k: 'state', src: 's', i: i }); stateNames[searchFold(r[1])] = 1; }
     });
     out = out.filter(function (o) { return !(o.enc && stateNames[searchFold(o.name)]); });
   }
   out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
-  return out.slice(0, 12);
+  return out;
 }
+function siteSearch(query) { return siteSearchAll(query).slice(0, 12); }
 var SEARCH_INDEX_SRC = '/search-index.js?v=9';   // also loaded by quiz.js for answer suggestions
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=1';   // the 394 profiles, for pages without shared-data.js
 function initSiteSearch() {
@@ -378,10 +382,12 @@ function initSiteSearch() {
     document.head.appendChild(s);
   }
   function render() {
-    var res = siteSearch(input.value); active = -1;
+    var all = siteSearchAll(input.value), res = all.slice(0, 12), q = input.value.trim(); active = -1;
     list.innerHTML = res.map(function (r, i) {
       return '<li role="option" id="ss-opt-' + i + '"><a href="' + r.href + '"><span class="ss-name">' + escHtml(r.name) + '</span><span class="ss-type">' + escHtml(r.type) + '</span></a></li>';
-    }).join('');
+    }).join('') +
+      // the full list, with filters, on /search
+      (res.length ? '<li role="option" id="ss-opt-' + res.length + '" class="ss-all"><a href="/search?q=' + encodeURIComponent(q) + '">' + (all.length > res.length ? 'See all ' + all.length.toLocaleString('en-GB') + ' results' : 'Open the search page') + ' <span aria-hidden="true">&rarr;</span></a></li>' : '');
     hint.textContent = input.value.trim().length < 2 ? 'Profiles, states and the full encyclopedia.' : (res.length ? '' : 'No matches. Try another spelling or a shorter word.');
     hint.hidden = !hint.textContent;
   }
@@ -631,6 +637,7 @@ function initNav(activePage) {
             <button type="submit">→</button>
           </form>
           <p id="footer-nl-msg" style="display:none; font-size:11px; color:var(--success); margin-top:6px; font-family:'Crimson Pro',serif;"></p>
+          <a class="footer-link footer-feed" href="/feeds/today.xml" type="application/rss+xml">Today in History by RSS</a>
         </div>
       </div>
     </div>
@@ -922,6 +929,165 @@ function initNav(activePage) {
     function set() { ticking = false; var max = document.documentElement.scrollHeight - window.innerHeight; bar.style.width = (max > 600 ? Math.min(100, Math.max(0, window.scrollY / max * 100)) : 0) + '%'; }
     window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(set); } }, { passive: true });
     set();
+  })();
+
+  // ── Listen: the page read aloud by the device's own voices (speechSynthesis) ─────────────
+  // Reading pages only (entries, states, profiles of every kind, speeches, day pages, essays, community articles), and
+  // only their text: the title, the lede and the sections, never menus, pictures, credits, references or buttons. Text
+  // that is hidden (Kids mode folds, a closed full speech) is not read. It never starts by itself; it reads in short
+  // sentence chunks (long utterances stop in Chrome); Pause cancels and Resume restarts the chunk (pause() is not
+  // reliable on phones); a passage in another language gets a voice of that language or is skipped with a word.
+  (function () {
+    var synth = window.speechSynthesis;
+    if (!synth || typeof SpeechSynthesisUtterance === 'undefined') return;   // Android in-app browsers have none
+    var TYPES = [
+      ['article.enc-article', 'h1.enc-title, .enc-meta, .enc-desc'],
+      ['article.st-article', 'h1.st-title, .st-meta, .st-teaser, .st-text h2, .st-text h3, .st-text p'],
+      ['main.empire-page', 'h1.profile-detail-name, .profile-summary, .profile-section-block > h2.profile-section-title, .profile-section-body p, .profile-section-body li'],
+      ['article.sp-view', 'h1.sp-title, .sp-by, .sp-sec > h2, .sp-sec > p:not(.sp-source), blockquote.sp-quote, .sp-ft-body p, .sp-ft-body > div > p'],
+      ['main.day-page', 'h1, .ref-lede, .day-events .tih-event-card'],
+      ['article.essay-view', 'h1, .essay-sub, .essay-body h2, .essay-body h3, .essay-body p, .essay-body li'],
+      ['article.cm-article', 'h1, .cm-by, .cm-body h2, .cm-body h3, .cm-body p']
+    ];
+    var type = null, root = null;
+    for (var t = 0; t < TYPES.length && !root; t++) { root = document.querySelector(TYPES[t][0]); if (root) type = TYPES[t]; }
+    if (!root) return;
+    var kidsOn = function () { return document.documentElement.getAttribute('data-kids') === '1'; };
+    // the text to say: dates and abbreviations as words, separators as pauses
+    function speakable(s) {
+      return String(s).replace(/\s+/g, ' ')
+        .replace(/(^|[\s(])r\.\s?(?=c\.\s?\d|\d)/g, '$1reigned ').replace(/(^|[\s(])d\.\s?(?=c\.\s?\d|\d)/g, '$1died ')
+        .replace(/(^|[\s(])b\.\s?(?=c\.\s?\d|\d)/g, '$1born ').replace(/(^|[\s(])fl\.\s?(?=c\.\s?\d|\d)/g, '$1flourished ')
+        .replace(/(^|[\s(–-])c\.\s?(?=\d)/g, '$1circa ')
+        .replace(/(\d(?:st|nd|rd|th)?)\s?[–-]\s?(?=(?:circa )?\d)/g, '$1 to ').replace(/\s[–-]\s(?=(?:circa )?\d)/g, ' to ')
+        .replace(/\(approx\.\)/g, '(approximately)')
+        .replace(/\s[·|]\s/g, ', ').replace(/&/g, ' and ').replace(/\s+/g, ' ').trim();
+    }
+    // an element's text without its chips, buttons and pictures
+    function textOf(el) {
+      var c = el.cloneNode(true);
+      [].forEach.call(c.querySelectorAll('button, figure, img, svg, .tih-ago, .tih-tags, .tih-hero-kicker, .tih-event-thumb, .ph, .sr-only, sup'), function (x) { x.remove(); });
+      if (el.classList.contains('tih-event-card')) {   // a day's event: "1825. The Erie Canal opens. Governor …"
+        var y = c.querySelector('.tih-event-year'), h = c.querySelector('.tih-event-title'), d = c.querySelector('.tih-event-desc');
+        return [y && y.textContent, h && h.textContent, d && d.textContent].filter(Boolean).map(function (x) { return x.trim().replace(/[.:]?$/, '.'); }).join(' ');
+      }
+      return c.textContent;
+    }
+    function shown(el) { return el.getClientRects().length > 0 && !el.closest('[hidden], [aria-hidden="true"], details:not([open]) > :not(summary)'); }
+    function langOf(el) { var l = el.closest('[lang]'); l = l ? l.getAttribute('lang').toLowerCase() : 'en'; return l.split('-')[0]; }
+    function parts() {
+      var out = [];
+      [].forEach.call(root.querySelectorAll(type[1]), function (el) {
+        if (!shown(el)) return;
+        var s = speakable(textOf(el)); if (s.length < 2) return;
+        out.push({ el: el, text: s, lang: langOf(el) });
+      });
+      return out;
+    }
+    // short chunks: whole sentences up to about 220 characters, long sentences cut at commas
+    function chunks(s) {
+      var sent = s.match(/[^.!?]+(?:[.!?]+["'’”)\]]*|$)\s*/g) || [s], out = [], cur = '';
+      sent.forEach(function (p) {
+        var bits = p.length > 260 ? p.split(/,\s/).map(function (b, i, a) { return b + (i < a.length - 1 ? ',' : ''); }) : [p];
+        bits.forEach(function (b) { b = b.trim(); if (!b) return; if (cur && (cur + ' ' + b).length > 220) { out.push(cur.trim()); cur = ''; } cur += (cur && !/^[,;:.)\]]/.test(b) ? ' ' : '') + b; });
+      });
+      if (cur.trim()) out.push(cur.trim());
+      return out;
+    }
+    function voiceFor(lang) {
+      var vs = synth.getVoices() || []; if (!vs.length) return null;
+      var mine = vs.filter(function (v) { return String(v.lang || '').toLowerCase().replace('_', '-').indexOf(lang) === 0; });
+      if (!mine.length) return null;
+      if (lang !== 'en') return mine[0];
+      function rank(v) { var l = String(v.lang).toLowerCase(); return (l.indexOf('en-gb') === 0 ? 0 : l.indexOf('en-us') === 0 ? 1 : 2) * 2 + (/natural|neural|google/i.test(v.name) ? 0 : 1); }
+      return mine.slice().sort(function (a, b) { return rank(a) - rank(b); })[0];
+    }
+    var RATES = [0.8, 1, 1.2], rate = 1;
+    try { var sr = parseFloat(localStorage.getItem('epoch-listen-rate')); if (RATES.indexOf(sr) >= 0) rate = sr; else if (kidsOn()) rate = 0.8; } catch (e) {}
+    // the button under the title, the player at the foot of the screen
+    var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'listen-btn'; btn.setAttribute('aria-pressed', 'false');
+    var ICON = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
+    function label() { btn.innerHTML = ICON + '<span>' + (state === 'play' ? 'Pause' : state === 'pause' ? 'Resume' : (kidsOn() ? 'Read it to me' : 'Listen')) + '</span>'; btn.setAttribute('aria-pressed', String(state === 'play')); }
+    var bar = null, list = [], pos = 0, token = 0, state = 'stop', current = null, userScrolled = false, skipped = {}, lastU = null;
+    function ensureBar() {
+      if (bar) return;
+      bar = document.createElement('div'); bar.className = 'listen-bar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Reading aloud');
+      bar.innerHTML = '<button type="button" class="lb-play"></button><button type="button" class="lb-stop">Stop</button><button type="button" class="lb-rate" aria-label="Reading speed"></button><span class="lb-pos" aria-hidden="true"></span><span class="sr-only lb-live" aria-live="polite"></span>';
+      document.body.appendChild(bar);
+      bar.querySelector('.lb-play').addEventListener('click', toggle);
+      bar.querySelector('.lb-stop').addEventListener('click', stop);
+      bar.querySelector('.lb-rate').addEventListener('click', function () {
+        rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length]; try { localStorage.setItem('epoch-listen-rate', String(rate)); } catch (e) {}
+        paint(); if (state === 'play') { synth.cancel(); speakFrom(pos); }
+      });
+    }
+    function paint() {
+      label(); if (!bar) return;
+      bar.hidden = state === 'stop'; document.body.classList.toggle('has-listen', state !== 'stop');
+      bar.querySelector('.lb-play').textContent = state === 'play' ? 'Pause' : 'Resume';
+      bar.querySelector('.lb-rate').textContent = String(rate).replace(/^1$/, '1') + '×';
+      bar.querySelector('.lb-pos').textContent = list.length ? 'Part ' + Math.min(list[Math.min(pos, list.length - 1)].part + 1, list.total) + ' of ' + list.total : '';
+    }
+    function say(msg) { if (bar) bar.querySelector('.lb-live').textContent = msg; }
+    function mark(el) {
+      if (current === el) return;
+      if (current) current.classList.remove('is-speaking');
+      current = el; if (!el) return;
+      el.classList.add('is-speaking');
+      var r = el.getBoundingClientRect();
+      if (!userScrolled && (r.top < 70 || r.bottom > window.innerHeight - 90)) el.scrollIntoView({ block: 'center', behavior: window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }
+    function build() {
+      var ps = parts(), out = []; skipped = {};
+      ps.forEach(function (p, k) {
+        var v = voiceFor(p.lang);
+        if (!v && p.lang !== 'en') { if (!skipped[p.lang]) { skipped[p.lang] = 1; out.push({ el: p.el, text: 'The original text, in another language, is skipped: there is no voice for it on this device.', lang: 'en', part: k }); } return; }
+        chunks(p.text).forEach(function (c) { out.push({ el: p.el, text: c, lang: p.lang, part: k }); });
+      });
+      out.total = ps.length; return out;
+    }
+    function speakFrom(i) {
+      var my = ++token; pos = i;
+      if (pos >= list.length) { stop(); say('Finished reading.'); return; }
+      var it = list[pos], u = new SpeechSynthesisUtterance(it.text), v = voiceFor(it.lang) || voiceFor('en');
+      if (v) { u.voice = v; u.lang = v.lang; } else u.lang = it.lang === 'en' ? 'en-GB' : it.lang;
+      u.rate = rate; lastU = u;   // kept: Chrome can collect a speaking utterance and never send its end
+      u.onstart = function () { if (my === token) { mark(it.el); paint(); } };
+      u.onend = function () { if (my === token && state === 'play') speakFrom(pos + 1); };
+      u.onerror = function (e) { if (my !== token) return; if (e && (e.error === 'interrupted' || e.error === 'canceled')) return; if (state === 'play') speakFrom(pos + 1); };
+      synth.speak(u);
+    }
+    function play() {
+      if (state === 'stop') { synth.cancel(); list = build(); pos = 0; if (!list.length) return; }
+      ensureBar(); state = 'play'; userScrolled = false; paint(); say('Reading aloud.');
+      speakFrom(pos);
+    }
+    function pause() { if (state !== 'play') return; state = 'pause'; token++; synth.cancel(); paint(); say('Paused.'); }
+    function stop() { token++; if (state !== 'stop') synth.cancel(); state = 'stop'; mark(null); pos = 0; paint(); say('Stopped.'); }
+    function toggle() { if (state === 'play') pause(); else play(); }
+    btn.addEventListener('click', toggle);
+    // the reader takes over the scrolling: the page then stops following the voice until the next Resume
+    ['wheel', 'touchmove'].forEach(function (ev) { window.addEventListener(ev, function () { if (state === 'play') userScrolled = true; }, { passive: true }); });
+    window.addEventListener('keydown', function (e) { if (state === 'play' && /^(PageUp|PageDown|ArrowUp|ArrowDown|Home|End| )$/.test(e.key) && !/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(e.target.tagName)) userScrolled = true; });
+    window.addEventListener('pagehide', function () { if (state !== 'stop') { token++; synth.cancel(); } });
+    document.addEventListener('epoch:kids', function () { label(); });
+    // where the button goes: under the title (profiles: next to the meta line)
+    function place() {
+      var host = root.querySelector('.enc-meta, .st-meta, .empire-meta, .sp-by, .essay-sub, .cm-by') || (type[0] === 'main.day-page' ? root.querySelector('.ref-lede') : null) || root.querySelector('h1');
+      if (!host) return false;
+      var row = document.createElement('p'); row.className = 'listen-row'; row.appendChild(btn);
+      host.parentNode.insertBefore(row, host.nextSibling); label(); return true;
+    }
+    // only where an English voice exists (the list of voices can arrive late)
+    var placed = false, tries = 0;
+    function check() {
+      if (placed) return;
+      if (voiceFor('en')) { placed = parts().length > 0 && place(); return; }   // a page with nothing to read gets no button
+      if (++tries < 8) setTimeout(check, 400);
+    }
+    if (typeof synth.addEventListener === 'function') synth.addEventListener('voiceschanged', check); else synth.onvoiceschanged = check;
+    check();
+    window.epochListen = { parts: function () { return parts().map(function (p) { return p.text; }); }, chunks: chunks, speakable: speakable, play: play, pause: pause, stop: stop, state: function () { return state; } };
   })();
 
   // ── Surprise me: a random profile, day or century ─────────────────────────────

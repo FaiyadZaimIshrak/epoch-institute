@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>Search the Institute — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Search every profile, state and encyclopedia entry of The Epoch Institute, and narrow the results by kind, region, century and picture.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://the-epoch-institute.org/search">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Search — The Epoch Institute">
+<meta property="og:description" content="Search every profile, state and encyclopedia entry, by kind, region and century.">
+<meta property="og:url" content="https://the-epoch-institute.org/search">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/shared.css?v=47">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Search"}]},{"@type":"WebPage","name":"Search the Institute","url":"https://the-epoch-institute.org/search","description":"Search every profile, state and encyclopedia entry of The Epoch Institute, by kind, region, century and picture."}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<main id="main" class="enc-page srch-page">
+  <div class="enc-wrap">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Search</li></ol></nav>
+    <header class="enc-head">
+      <span class="hero-ornament"></span>
+      <h1 class="research-title">Search</h1>
+      <p class="research-subtitle">Every profile, every recorded state and every encyclopedia entry, in one list, with filters for kind, region and century.</p>
+    </header>
+    <form class="enc-controls srch-form" id="srch-form" role="search" action="/search" method="get">
+      <span class="srch-box"><input class="enc-search" id="srch-q" name="q" type="search" placeholder="A name, a place, a battle…" aria-label="Search words" autocomplete="off"><button type="submit" class="srch-go">Search</button></span>
+      <div class="enc-row" id="srch-kinds" role="group" aria-label="Kind"></div>
+      <div class="srch-row" id="srch-more">
+        <label>Region <select id="srch-region"><option value="">All regions</option></select></label>
+        <label>From <select id="srch-from" aria-label="From century"><option value="">the earliest</option></select></label>
+        <label>To <select id="srch-to" aria-label="To century"><option value="">today</option></select></label>
+        <label class="srch-check"><input type="checkbox" id="srch-pic"> With a picture</label>
+        <button type="button" class="enc-chip" id="srch-clear" hidden>Clear filters</button>
+      </div>
+      <div class="enc-count-row"><span class="enc-count" id="srch-count" aria-live="polite"></span></div>
+    </form>
+    <div id="srch-results">
+      <ul class="enc-list" id="srch-list"></ul>
+      <nav class="ref-pager" id="srch-pager" aria-label="Result pages"></nav>
+    </div>
+    <div class="srch-tips" id="srch-tips">
+      <p>Type at least two letters. A search finds names and their other spellings: <a href="/search?q=hastings">hastings</a>, <a href="/search?q=mughal">mughal</a>, <a href="/search?q=silk%20road">silk road</a>. Then narrow it: only people, only one region, only the centuries you want.</p>
+      <p>Or browse instead: <a href="/encyclopedia/">the encyclopedia A–Z</a>, <a href="/state/">all states by region</a>, <a href="/profiles">the profiles</a>, <a href="/centuries/">history by century</a>.</p>
+    </div>
+    <noscript><p class="enc-empty">The search works in the browser and needs JavaScript. You can still <a href="/encyclopedia/">browse the encyclopedia A–Z</a> or <a href="/state/">all states</a>.</p></noscript>
+  </div>
+</main>
+
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=31"></script>
+<script>
+initNav('search');
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var PER = 50, FACETS_SRC = '/search-facets.js?v=1';
+  // kinds: [key, label, test on a result]
+  var KINDS = [['', 'All', function () { return true; }], ['profile', 'Profiles', function (r) { return r.k === 'profile'; }],
+    ['state', 'States', function (r) { return r.k === 'state' || r.k === 'polity'; }], ['person', 'People', function (r) { return r.k === 'person'; }],
+    ['event', 'Events', function (r) { return r.k === 'event'; }], ['place', 'Places', function (r) { return r.k === 'place'; }],
+    ['work', 'Works & monuments', function (r) { return r.k === 'work'; }], ['idea', 'Religions & ideas', function (r) { return r.k === 'idea'; }],
+    ['group', 'Peoples & groups', function (r) { return r.k === 'group'; }], ['institution', 'Institutions', function (r) { return r.k === 'institution'; }],
+    ['term', 'Terms', function (r) { return r.k === 'term' || r.k === 'factor'; }]];
+  var KIND = {}; KINDS.forEach(function (k) { KIND[k[0]] = k; });
+  var GLYPH = { person: 'person', event: 'event', place: 'place', work: 'work', idea: 'idea', group: 'group', institution: 'institution', polity: 'polity', state: 'polity', profile: 'polity' };
+  function ord(n) { var a = n % 100, b = n % 10; return n + ((a > 10 && a < 14) ? 'th' : b === 1 ? 'st' : b === 2 ? 'nd' : b === 3 ? 'rd' : 'th'); }
+  function centLabel(c) { return c < 0 ? ord(-c) + ' century BCE' : ord(c) + ' century'; }
+  function cent(y) { y = Math.round(y); return y < 0 ? -(Math.floor(-y / 100) + 1) : Math.floor(y / 100) + 1; }
+  function profYears(e) { return e.points && e.points.length ? [e.points[0][0], e.points[e.points.length - 1][0]] : [e.start, e.end == null ? new Date().getFullYear() : e.end]; }
+  // the filters' view of a result: [first century, last century, region index, picture]
+  function facet(r) {
+    if (r.src === 'p') { var e = EMPIRES[r.i], y = profYears(e); return [cent(y[0]), cent(y[1]), REGIONS.indexOf(e.region), 1]; }
+    var F = window.SEARCH_FACETS; if (!F) return null;
+    if (r.src === 'e' && F.n === SEARCH_INDEX.length) return F.e[r.i];
+    if (r.src === 's' && typeof SEARCH_STATES !== 'undefined' && F.ns === SEARCH_STATES.length) return F.s[r.i];
+    return null;
+  }
+  function picOf(r, f) {
+    if (r.src === 'p') return '/logos/thumbs/' + encodeURIComponent(EMPIRES[r.i].name) + '.png';
+    if (!f || !f[3]) return '';
+    if (r.src === 'e') return '/images/encyclopedia/' + SEARCH_INDEX[r.i][0] + '.jpg';
+    if (r.src === 's') return '/images/states/' + SEARCH_STATES[r.i][0] + '.jpg';
+    return '';
+  }
+  // state, kept in the address (?q=&k=&r=&from=&to=&pic=1&p=)
+  var st = { q: '', k: '', r: '', from: '', to: '', pic: false, p: 1 };
+  function readUrl() {
+    var u = new URLSearchParams(location.search);
+    st.q = u.get('q') || ''; st.k = KIND[u.get('k') || ''] ? (u.get('k') || '') : ''; st.r = u.get('r') || ''; st.from = u.get('from') || ''; st.to = u.get('to') || '';
+    st.pic = u.get('pic') === '1'; st.p = Math.max(1, parseInt(u.get('p') || '1', 10) || 1);
+  }
+  function writeUrl(push) {
+    var u = new URLSearchParams();
+    if (st.q) u.set('q', st.q); if (st.k) u.set('k', st.k); if (st.r !== '') u.set('r', st.r); if (st.from !== '') u.set('from', st.from); if (st.to !== '') u.set('to', st.to);
+    if (st.pic) u.set('pic', '1'); if (st.p > 1) u.set('p', String(st.p));
+    var url = '/search' + (u.toString() ? '?' + u.toString() : '');
+    if (push) history.pushState(null, '', url); else history.replaceState(null, '', url);
+  }
+  // the selects: regions and centuries (35th century BCE to the 21st)
+  REGIONS.forEach(function (name, i) { var o = document.createElement('option'); o.value = String(i); o.textContent = name; $('srch-region').appendChild(o); });
+  for (var c = -35; c <= 21; c++) {
+    if (c === 0) continue;
+    ['srch-from', 'srch-to'].forEach(function (id) { var o = document.createElement('option'); o.value = String(c); o.textContent = centLabel(c); $(id).appendChild(o); });
+  }
+  var cacheQ = null, cacheAll = [];
+  function ready() { return typeof SEARCH_INDEX !== 'undefined'; }
+  function passes(r, withKind) {
+    if (withKind && !KIND[st.k][2](r)) return false;
+    if (st.r === '' && st.from === '' && st.to === '' && !st.pic) return true;
+    var f = facet(r); if (!f) return false;
+    if (st.r !== '' && f[2] !== +st.r) return false;
+    if (st.pic && !f[3]) return false;
+    if (st.from !== '' || st.to !== '') {
+      if (!f[0]) return false;   // undated
+      var lo = st.from === '' ? -1e9 : +st.from, hi = st.to === '' ? 1e9 : +st.to;
+      if (f[1] < lo || f[0] > hi) return false;
+    }
+    return true;
+  }
+  function render() {
+    $('srch-q').value = st.q; $('srch-region').value = st.r; $('srch-from').value = st.from; $('srch-to').value = st.to; $('srch-pic').checked = st.pic;
+    $('srch-clear').hidden = !(st.k || st.r !== '' || st.from !== '' || st.to !== '' || st.pic);
+    var q = st.q.trim(), has = q.length >= 2;
+    $('srch-tips').hidden = has;
+    if (!has) { $('srch-kinds').innerHTML = ''; $('srch-list').innerHTML = ''; $('srch-pager').innerHTML = ''; $('srch-count').textContent = ''; return; }
+    if (!ready()) { $('srch-count').textContent = 'Loading the index…'; return; }
+    if (cacheQ !== q) { cacheAll = siteSearchAll(q); cacheQ = q; }
+    var base = cacheAll.filter(function (r) { return passes(r, false); });
+    // the kind chips count what the other filters leave
+    $('srch-kinds').innerHTML = KINDS.map(function (k) {
+      var n = base.filter(k[2]).length; if (k[0] && !n && st.k !== k[0]) return '';
+      return '<button class="enc-chip" type="button" data-k="' + k[0] + '" aria-pressed="' + (st.k === k[0]) + '">' + escHtml(k[1]) + '<span class="n">' + n.toLocaleString('en-GB') + '</span></button>';
+    }).join('');
+    var list = base.filter(KIND[st.k][2]), pages = Math.max(1, Math.ceil(list.length / PER)); if (st.p > pages) st.p = pages;
+    var noFacets = (st.r !== '' || st.from !== '' || st.to !== '' || st.pic) && !window.SEARCH_FACETS;
+    $('srch-count').textContent = noFacets ? 'Loading the filters…' : list.length.toLocaleString('en-GB') + (list.length === 1 ? ' result' : ' results') + ' for “' + q + '”' + (pages > 1 ? ' · page ' + st.p + ' of ' + pages : '');
+    $('srch-list').innerHTML = list.length ? list.slice((st.p - 1) * PER, st.p * PER).map(function (r) {
+      var f = facet(r), pic = picOf(r, f), when = '';
+      if (f && f[0]) when = f[0] === f[1] ? centLabel(f[0]) : (f[0] < 0 && f[1] < 0 ? ord(-f[0]) + '–' + centLabel(f[1]) : f[0] > 0 && f[1] > 0 ? ord(f[0]) + '–' + centLabel(f[1]) : centLabel(f[0]) + ' – ' + centLabel(f[1]));
+      var where = f && f[2] >= 0 ? REGIONS[f[2]] : '';
+      var meta = [r.type, when, where].filter(Boolean).join(' · ');
+      return '<li class="enc-item has-img"><a href="' + escHtml(r.href) + '">' +
+        (pic ? '<img class="enc-thumb' + (r.src === 'p' ? ' srch-emblem' : '') + '" src="' + escHtml(pic) + '" alt="" loading="lazy" width="56" height="56">' : '<span class="enc-thumb ph ph-' + (GLYPH[r.k] || 'event') + '" aria-hidden="true"></span>') +
+        '<span class="enc-name">' + escHtml(r.name) + '</span><span class="enc-type">' + escHtml(meta) + '</span></a></li>';
+    }).join('') : '<li class="enc-empty">Nothing matches' + (base.length || st.k ? ' with these filters. <button type="button" class="enc-chip" data-clear>Clear the filters</button>' : '. Try a shorter word or another spelling.') + '</li>';
+    var pg = '';
+    if (pages > 1) {
+      var show = {}; [1, pages, st.p - 2, st.p - 1, st.p, st.p + 1, st.p + 2].forEach(function (k) { if (k >= 1 && k <= pages) show[k] = 1; });
+      var ks = Object.keys(show).map(Number).sort(function (a, b) { return a - b; }), prev = 0;
+      if (st.p > 1) pg += '<button type="button" data-p="' + (st.p - 1) + '">← Previous</button>';
+      ks.forEach(function (k) { if (prev && k - prev > 1) pg += '<span class="gap">…</span>'; pg += k === st.p ? '<span aria-current="page">' + k + '</span>' : '<button type="button" data-p="' + k + '">' + k + '</button>'; prev = k; });
+      if (st.p < pages) pg += '<button type="button" data-p="' + (st.p + 1) + '">Next →</button>';
+    }
+    $('srch-pager').innerHTML = pg;
+  }
+  function clearFilters() { st.k = ''; st.r = ''; st.from = ''; st.to = ''; st.pic = false; st.p = 1; }
+  $('srch-form').addEventListener('submit', function (e) { e.preventDefault(); st.q = $('srch-q').value.trim(); st.p = 1; writeUrl(true); render(); });
+  var timer; $('srch-q').addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { st.q = $('srch-q').value.trim(); st.p = 1; writeUrl(false); render(); }, 200); });
+  $('srch-kinds').addEventListener('click', function (e) { var b = e.target.closest('[data-k]'); if (!b) return; st.k = b.getAttribute('data-k'); st.p = 1; writeUrl(false); render(); });
+  $('srch-region').addEventListener('change', function () { st.r = this.value; st.p = 1; writeUrl(false); render(); });
+  $('srch-from').addEventListener('change', function () { st.from = this.value; if (st.to !== '' && st.from !== '' && +st.to < +st.from) st.to = st.from; st.p = 1; writeUrl(false); render(); });
+  $('srch-to').addEventListener('change', function () { st.to = this.value; if (st.from !== '' && st.to !== '' && +st.from > +st.to) st.from = st.to; st.p = 1; writeUrl(false); render(); });
+  $('srch-pic').addEventListener('change', function () { st.pic = this.checked; st.p = 1; writeUrl(false); render(); });
+  $('srch-clear').addEventListener('click', function () { clearFilters(); writeUrl(false); render(); });
+  $('srch-list').addEventListener('click', function (e) { if (e.target.closest('[data-clear]')) { clearFilters(); writeUrl(false); render(); } });
+  $('srch-pager').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-p]'); if (!b) return;
+    st.p = +b.getAttribute('data-p'); writeUrl(true); render(); $('srch-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  window.addEventListener('popstate', function () { readUrl(); render(); });
+  readUrl(); render();
+  // the index (the header search's own, cached) and the filters' data
+  function load(src, cb) { var s = document.createElement('script'); s.src = src; s.onload = cb; s.onerror = cb; document.head.appendChild(s); }
+  if (!ready()) load(SEARCH_INDEX_SRC, function () { cacheQ = null; render(); });
+  load(FACETS_SRC, function () { render(); });
+  if (!st.q) $('srch-q').focus();
+})();
+</script>
+
+</body>
+</html>

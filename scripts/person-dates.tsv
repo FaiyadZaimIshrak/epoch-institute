@@ -1,0 +1,159 @@
+# Person dates checked by hand (Oct 2026), applied by scripts/apply-person-dates.ps1 (to encyclopedia-data.js and
+# data/enc-preview; run it again after every enc-merge). Sources: Wikidata (year-precision values only), Wikipedia,
+# Britannica. A lifespan is written only where it is well attested; otherwise the year the entry already gave stays,
+# marked "r." (reigned) or "fl." (flourished, i.e. active then), so no number is invented.
+# Columns: slug <TAB> dates shown (empty = unchanged) <TAB> birth year for the dated games (BCE negative; "-" = not
+# reliably known, the person stays out of Which Came First and Order the Ages; empty = the first year of the dates)
+# <TAB> note
+abd-al-karim-ibn-jama	r. c. 1611		founder of Wadai, traditional date
+abipa	r. c. 1610		Alaafin of Oyo
+afonja	fl. c. 1817		Are-Ona-Kakanfo at Ilorin
+ahmose-i	r. c. 1550–1525 BCE	-	conventional reign
+arsaces-i	r. c. 247–217 BCE	-	died 217 BCE (Wikidata)
+al-bakri	d. 1094		death well attested; birth given variously c. 1014 / c. 1040
+barattarna	r. c. 1500 BCE
+bartolomeu-dias	c. 1450–1500	1450	died at sea off the Cape, 1500
+bi-sheng	d. 1051		death year from his tombstone; birth uncertain
+cao-pi	187–226 CE	187
+chandragupta-i	r. c. 320 CE
+cornelis-de-houtman	1565–1599	1565
+cristovao-da-gama	c. 1516–1542	1516
+diogo-cao	c. 1452–c. 1486	1452
+ebarat-ii	r. c. 1900 BCE
+endubis	r. c. 270 CE
+enmebaragesi	r. c. 2700 BCE
+garnet-wolseley	1833–1913	1833
+hanno-the-navigator	fl. c. 500 BCE
+ibn-hawqal	fl. c. 977 CE
+ilterish-qaghan	r. 682–691 CE	-
+jacques-cartier	1491–1557	1491
+jayavarman-ii	fl. 802 CE
+kalala-ilunga	r. c. 1585		oral tradition
+kertanegara	r. 1268–1292	-
+kutik-inshushinak	r. c. 2100 BCE
+leo-africanus	c. 1494–c. 1554	1494
+lucius-cornelius-balbus	fl. 19 BCE
+muhammad-ibn-ibrahim-al-fazari	fl. c. 777 CE
+nasir-khusraw	1004–c. 1088	1004
+pedro-alvares-cabral	c. 1467–c. 1520	1467
+pope-urban-ii	c. 1035–1099	1035	pope 1088–1099
+sabr-ad-din-iii	r. c. 1415–1422	-	died 1422
+sargon-of-akkad	r. c. 2334–2279 BCE	-	middle chronology
+seljuk-warlord	fl. c. 985 CE
+shaushtatar	r. c. 1450 BCE
+siwe-palar-khuppak	r. c. 1778 BCE
+sumuabum	r. c. 1894–1881 BCE	-	middle chronology
+tome-de-sousa	1503–1579	1503
+vasco-da-gama	c. 1469–1524	1469
+w-adys-aw-sicinski	fl. 1652
+yaa-asantewaa	c. 1840–1921	1840
+fergus-mor	fl. c. 500		legendary
+abdul-jalil-of-asahan	r. c. 1630		traditional date
+bir-sen	fl. c. 765		traditional date
+eannatum	r. c. 2450 BCE
+lord-of-sipan	d. c. 250 CE		buried around 250 CE
+manco-capac	fl. c. 1200		legendary
+mbegan-ndour	r. c. 1494		traditional date
+mesalim-of-kish	r. c. 2600 BCE
+mitinti-of-ashdod	r. c. 700 BCE
+mynyddog-mwynfawr	fl. c. 600
+na-atabia	r. c. 1700
+narmer	r. c. 3100 BCE
+rajah-salalila	fl. c. 1500		tradition
+thefarie-velianas	r. c. 500 BCE
+zakkur	r. c. 800 BCE
+senebkay	r. c. 1650 BCE
+attarissiya	fl. c. 1400 BCE
+viridovix	fl. 56 BCE
+vologases-thracian-priest	fl. 11 BCE
+attar-shumki-i	r. c. 800 BCE
+ahiram	r. c. 1000 BCE
+argentocoxus	fl. c. 210 CE
+ursus-of-solothurn	d. c. 300		martyr, by tradition
+loarn-mac-eirc	fl. c. 500		legendary
+mahendravarman-chenla	r. c. 600
+hakau	r. c. 1500
+umi-a-liloa	r. c. 1500
+hesiod	fl. c. 700 BCE
+anum-muttabbil	r. c. 2000 BCE
+gelou	fl. c. 900		Gesta Hungarorum
+tuhutum	fl. c. 900		Gesta Hungarorum
+glad	fl. c. 900		Gesta Hungarorum
+hor-aha	r. c. 3100 BCE
+khasekhemwy	r. c. 2690 BCE
+peribsen	r. c. 2700 BCE
+padi	r. c. 700 BCE
+dromichaetes	r. c. 300 BCE
+tirigan	r. c. 2120 BCE
+utu-hengal	r. c. 2120 BCE
+nanyadeva	r. c. 1097
+pharnavaz-i-of-iberia	r. c. 300 BCE		Georgian chronicles
+bagauda	r. c. 999		Kano Chronicle
+mulavarman	r. c. 400
+menes	r. c. 3100 BCE		tradition
+shyaam-a-mbul-a-ngoong	r. c. 1625		oral tradition
+gudea	r. c. 2100 BCE
+ur-nanshe	r. c. 2500 BCE
+urukagina	r. c. 2350 BCE
+parahu	r. c. 1470 BCE
+naplanum	r. c. 2025 BCE
+gyptis	fl. c. 600 BCE		foundation legend of Massalia
+nannus	r. c. 600 BCE		foundation legend of Massalia
+protis	fl. c. 600 BCE		foundation legend of Massalia
+myrsilus	r. c. 600 BCE
+elibaal	r. c. 900 BCE
+zakar-baal	r. c. 1075 BCE
+felix-and-regula	d. c. 300		martyrs, by tradition
+herihor	fl. c. 1080 BCE
+do-aklin	fl. c. 1600		tradition
+shallum-of-israel	r. c. 752 BCE
+zechariah-of-israel	r. c. 753 BCE
+zimri-king-of-israel	r. c. 885 BCE
+jehoahaz-of-judah	r. 609 BCE
+pybba-of-mercia	r. c. 600
+yahdun-lim	r. c. 1800 BCE
+henenu	fl. c. 2000 BCE
+heqanakht	fl. c. 1950 BCE
+mentuhotep-iii	r. c. 2000 BCE
+mentuhotep-iv	r. c. 1990 BCE
+balilla	fl. 1746		the boy's identity is traditional
+gopala-pala-dynasty	r. c. 750–770
+ea-mukin-zeri	r. c. 1008 BCE
+iddin-sin	r. c. 2000 BCE
+telys	fl. c. 510 BCE
+ahoeitu	r. c. 950		Tongan tradition
+tuitatui	r. c. 1200		Tongan tradition
+enmetena	r. c. 2400 BCE
+mesannepadda	r. c. 2500 BCE
+puabi	fl. c. 2600 BCE
+gilgamesh	fl. c. 2700 BCE		legendary king of Uruk
+alaksandu	r. c. 1280 BCE
+# people in the dated games whose dates are a reign, an accession or a death: their birth year
+alexander-the-great		-356
+philip-ii-of-macedon		-382
+philip-ii-of-spain		1527
+cyrus-the-great	c. 600–530 BCE	-600
+nader-shah		1688
+marco-polo	1254–1324	1254
+hammurabi		-1810	c. 1810 BCE
+diocletian		244	c. 242–245
+homer		-	no birth year
+ashurbanipal		-685	c. 685 BCE
+akbar		1542
+emperor-wu-of-han		-156
+aurangzeb		1618
+shalmaneser-iii		-	no birth year
+karim-khan-zand		1705	c. 1705
+ptolemy-i-soter	c. 367–282 BCE	-367
+charles-xii-of-sweden		1682
+penda-of-mercia		-	birth unknown
+ismail-i	1487–1524	1487
+hongwu-emperor	1328–1398	1328
+tokhtamysh		-	birth uncertain
+uzun-hasan		1423
+cleopatra-vii		-69
+rurik		-	legendary
+basil-ii		958
+theodosius-i		347
+franz-joseph-i		1830
+genghis-khan	c. 1162–1227	1162

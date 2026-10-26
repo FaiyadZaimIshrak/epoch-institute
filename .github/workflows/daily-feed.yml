@@ -1,0 +1,79 @@
+# The daily RSS feed, https://the-epoch-institute.org/feeds/today.xml (Today in History + the entry of the day, the last
+# 14 days). Every morning at 00:05 UTC, and after a push that changes its sources, scripts/make-feed.ps1 builds it from
+# data/days and home-data.js and cPanel's UAPI writes it into public_html/feeds: no commit and no deploy, so deploys
+# never touch it (.cpanel.yml copies only feeds/.htaccess). Uses the deploy workflow's secrets.
+
+name: Daily feed
+
+on:
+  schedule:
+    - cron: '5 0 * * *'
+  push:
+    branches: [master]
+    paths: ['data/days/**', 'home-data.js', 'scripts/make-feed.ps1', '.github/workflows/daily-feed.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: daily-feed
+  cancel-in-progress: true
+
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      RAW_HOST: ${{ secrets.CPANEL_HOST }}
+      USER: ${{ secrets.CPANEL_USER }}
+      TOKEN: ${{ secrets.CPANEL_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            data/days
+            home-data.js
+            scripts/make-feed.ps1
+          sparse-checkout-cone-mode: false
+
+      - name: Check secrets
+        run: |
+          HOST=$(printf '%s' "$RAW_HOST" | tr -d '[:space:]')
+          HOST="${HOST#http://}"; HOST="${HOST#https://}"; HOST="${HOST%%/*}"; HOST="${HOST%%:*}"
+          echo "HOST=$HOST" >> "$GITHUB_ENV"
+          for v in HOST USER TOKEN; do
+            [ -n "${!v}" ] || { echo "::error::Missing secret for $v"; exit 1; }
+          done
+
+      - name: Build the feed
+        shell: pwsh
+        run: ./scripts/make-feed.ps1 -Repo . -Out today.xml
+
+      - name: Check the feed
+        run: python3 -c "import xml.etree.ElementTree as E; r = E.parse('today.xml').getroot(); n = len(r.findall('channel/item')); print(n, 'items'); assert n > 0"
+
+      # public_html/feeds is made by the deploy (.cpanel.yml); after a push the deploy may still be running: retry
+      - name: Write it to public_html/feeds
+        run: |
+          for i in $(seq 1 8); do
+            res=$(curl -sS -X POST "https://$HOST:2083/execute/Fileman/save_file_content" \
+              -H "Authorization: cpanel $USER:$TOKEN" \
+              --data-urlencode "dir=public_html/feeds" \
+              --data-urlencode "file=today.xml" \
+              --data-urlencode "from_charset=UTF-8" \
+              --data-urlencode "to_charset=UTF-8" \
+              --data-urlencode "content@today.xml")
+            echo "$res" | jq -c '{status, errors}'
+            [ "$(echo "$res" | jq -r .status)" = "1" ] && exit 0
+            res=$(curl -sS "https://$HOST:2083/execute/Fileman/upload_files" \
+              -H "Authorization: cpanel $USER:$TOKEN" \
+              -F "dir=public_html/feeds" -F "overwrite=1" -F "file-1=@today.xml")
+            echo "$res" | jq -c '{status, errors}'
+            [ "$(echo "$res" | jq -r .status)" = "1" ] && exit 0
+            sleep 30
+          done
+          echo "::error::cPanel did not take the feed"; exit 1
+
+      - name: Check it is live
+        run: |
+          sleep 5
+          curl -sS "https://the-epoch-institute.org/feeds/today.xml" | head -c 300; echo

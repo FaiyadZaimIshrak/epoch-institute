@@ -1,7 +1,7 @@
 # The Epoch Institute
 
-> A historical research site: 394 full profiles of empires and states, a 31,955-entry encyclopedia, a register of
-> 5,463 states and their 11,291 connections, country histories, century overviews, an interactive world atlas
+> A historical research site: 394 full profiles of empires and states, a 32,011-entry encyclopedia, a register of
+> 5,468 states and their 11,296 connections, country histories, century overviews, an interactive world atlas
 > (3500 BCE to today), and the data behind them, free to download.
 
 All reference pages are static HTML with the content in the page itself. Dates use CE/BCE. British English.
@@ -13,15 +13,19 @@ All reference pages are static HTML with the content in the page itself. Dates u
 - [Country histories](https://the-epoch-institute.org/countries/): the states that ruled each present-day country
 - [Centuries](https://the-epoch-institute.org/centuries/): one page per century, 30th century BCE to the 21st
 - [Today in history](https://the-epoch-institute.org/today-in-history/): a page for each day of the year
-- [Glossary](https://the-epoch-institute.org/encyclopedia/glossary): 721 historical terms
+- [Great speeches](https://the-epoch-institute.org/speeches/): 60 speeches from Pericles to Reagan, with the setting, a key passage and, where free, the full text
+- [Reading paths](https://the-epoch-institute.org/paths/): 28 guided routes through the profiles and the encyclopedia
+- [Glossary](https://the-epoch-institute.org/encyclopedia/glossary): 723 historical terms
 
 ## Tools
+- [Search](https://the-epoch-institute.org/search): every profile, state and entry, filtered by kind, region and century (/search?q=<words>)
 - [Atlas](https://the-epoch-institute.org/atlas): the world's states in any year
 - [Connections](https://the-epoch-institute.org/connections): how states were linked — rule, vassalage, lineage
 - [Empire Explorer](https://the-epoch-institute.org/explorer): power trajectories compared
 
 ## Data
 - [Open Data](https://the-epoch-institute.org/dataset): the states register, relations and power curves as CSV and JSON
+- [Today in history feed](https://the-epoch-institute.org/feeds/today.xml): RSS, one item a day
 - [Sitemap](https://the-epoch-institute.org/sitemap.xml)
 
 ## About

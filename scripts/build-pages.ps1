@@ -155,8 +155,11 @@ public static class W {
   }
   // encyclopedia page's yearOf(): first number of the dates, BCE negative; int.MinValue = none
   static readonly Regex Num = new Regex("(\\d{1,4})"), Bce = new Regex("BCE|BC\\b"), Ce = new Regex("CE\\b");
+  // the day of a full date is not a year: "13 July 1260", "2–3 May 1815", "July 4, 1776" are read as 1260, 1815, 1776
+  static readonly Regex DayMonth = new Regex("\\b\\d{1,2}(?:\\s*[–-]\\s*\\d{1,2})?\\s+(?=(?:January|February|March|April|May|June|July|August|September|October|November|December)\\b)|(?<=\\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+)\\d{1,2}(?:\\s*[–-]\\s*\\d{1,2})?,");
+  public static string Clean(string s) { return string.IsNullOrEmpty(s) ? (s ?? "") : DayMonth.Replace(s, ""); }
   public static int YearOf(string s) {
-    s = s ?? ""; var m = Num.Match(s); if (!m.Success) return int.MinValue;
+    s = Clean(s); var m = Num.Match(s); if (!m.Success) return int.MinValue;
     int y = int.Parse(m.Groups[1].Value);
     if (Bce.IsMatch(s)) { int end = s.IndexOf(m.Groups[1].Value, StringComparison.Ordinal) + m.Groups[1].Value.Length + 6; string head = s.Substring(0, Math.Min(end, s.Length)).Replace("BCE", ""); if (!Ce.IsMatch(head)) y = -y; }
     return y;
@@ -164,7 +167,7 @@ public static class W {
   // first and last year written in a date ("c. 1390–1441", "27 BCE – 14 CE", "5th–4th century BCE"); null = none
   static readonly Regex CentW = new Regex("(\\d+)(?:st|nd|rd|th)(?:\\s*[–-]\\s*(\\d+)(?:st|nd|rd|th))?\\s+centur(?:y|ies)", RegexOptions.IgnoreCase), NumEra = new Regex("(\\d{1,4})(?:\\s*(BCE|BC|CE|AD)\\b)?");
   public static int[] Span(string s) {
-    if (string.IsNullOrEmpty(s) || !Regex.IsMatch(s, "\\d")) return null;
+    s = Clean(s); if (string.IsNullOrEmpty(s) || !Regex.IsMatch(s, "\\d")) return null;
     bool bce = Regex.IsMatch(s, "\\b(BCE|BC)\\b"); var c = CentW.Match(s);
     if (c.Success) { int a = int.Parse(c.Groups[1].Value), b = c.Groups[2].Success ? int.Parse(c.Groups[2].Value) : a; return bce ? new[] { -a * 100 + 1, -(b - 1) * 100 } : new[] { (a - 1) * 100, b * 100 - 1 }; }
     var ms = NumEra.Matches(s); int n = ms.Count; if (n == 0) return null;
@@ -302,6 +305,7 @@ function Page($p) {
   [void]$sb.Append("<!DOCTYPE html>`n<html lang=`"en`">`n<head>`n$THEME`n<meta charset=`"UTF-8`">`n<meta name=`"viewport`" content=`"width=device-width, initial-scale=1.0`">`n")
   [void]$sb.Append("<meta name=`"theme-color`" content=`"#0b0c10`" media=`"(prefers-color-scheme: dark)`">`n<meta name=`"theme-color`" content=`"#f4efe4`" media=`"(prefers-color-scheme: light)`">`n")
   [void]$sb.Append("<link rel=`"alternate`" type=`"application/rss+xml`" title=`"The Epoch Institute — Research Series`" href=`"/feed.xml`">`n")
+  if ($p.path -like '/today-in-history/*') { [void]$sb.Append("<link rel=`"alternate`" type=`"application/rss+xml`" title=`"The Epoch Institute — Today in History`" href=`"/feeds/today.xml`">`n") }
   [void]$sb.Append('<title>' + (Hx $p.title) + "</title>`n")
   [void]$sb.Append("<link rel=`"icon`" href=`"/favicon.svg`" type=`"image/svg+xml`">`n<link rel=`"icon`" href=`"/favicon.ico`" sizes=`"48x48`">`n<link rel=`"apple-touch-icon`" href=`"/apple-touch-icon.png`">`n")
   [void]$sb.Append('<meta name="description" content="' + (Hx $p.desc) + "`">`n<meta name=`"robots`" content=`"index, follow, max-image-preview:large`">`n<link rel=`"canonical`" href=`"$url`">`n")
@@ -1526,10 +1530,21 @@ foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\game-pictures.tsv", $U8)) 
   if (-not $l -or $l.StartsWith('#')) { continue }
   $c = $l.Split("`t"); $GPICS[$c[0]] = @($(if ($c.Count -gt 1) { $c[1] } else { '' }), $(if ($c.Count -gt 2 -and $c[2]) { [int]$c[2] } else { 0 }))
 }
+# a person's first year is the birth (the games say "born …"): scripts/person-dates.tsv gives it where the dates are a
+# reign, an accession or a death; "-" there keeps a person whose birth is not known out of the dated games
+$GBORN = @{}
+foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\person-dates.tsv", $U8)) {
+  if (-not $l -or $l.StartsWith('#')) { continue }
+  $c = $l.Split("`t"); if ($c.Count -gt 2 -and $c[2]) { $GBORN[$c[0]] = $c[2] }
+}
 $gCards = New-Object Collections.Generic.List[string]; $gPuz = @{}; $gMiss = New-Object Collections.Generic.List[string]; $gDated = 0; $gBig = 0
 foreach ($gs in $GPICS.Keys) {
   if (-not $BY.ContainsKey($gs) -or -not $BY[$gs].img) { $gMiss.Add($gs); continue }
   $e = $BY[$gs]; $gsp = [EpochBuild.W]::Span($e.dates)
+  if ($e.type -eq 'person' -and $GBORN.ContainsKey($gs)) {
+    if ($GBORN[$gs] -eq '-') { $gsp = $null }
+    else { $gb = [int]$GBORN[$gs]; $gsp = @($gb, $(if ($gsp -and $gsp[1] -gt $gb) { $gsp[1] } else { $gb })) }
+  }
   $big = if (Test-Path "$Repo\images\games\$gs.jpg") { "/images/games/$gs.jpg" } else { '' }
   if ($gsp) { $gDated++ }; if ($big) { $gBig++ }
   $kind = if ($SING.ContainsKey($e.type)) { $SING[$e.type] } else { $e.type }

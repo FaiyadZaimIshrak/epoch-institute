@@ -1,0 +1,8 @@
+# The daily RSS feed, today.xml, is written here every morning by .github/workflows/daily-feed.yml (not by deploys:
+# .cpanel.yml copies only this file). Served as RSS and kept for an hour.
+AddType application/rss+xml .xml
+<IfModule mod_headers.c>
+  <FilesMatch "\.xml$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
