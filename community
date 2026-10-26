@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
-<link rel="stylesheet" href="/shared.css?v=45">
+<link rel="stylesheet" href="/shared.css?v=46">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -399,7 +399,7 @@
 </div>
 
 <script src="/shared-data.js?v=8"></script>
-<script src="/shared-nav.js?v=29"></script>
+<script src="/shared-nav.js?v=30"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
 var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];

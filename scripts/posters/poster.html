@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<!-- The share posters (images/og/*.jpg, 1200x630): scripts/make-posters.js opens this page, calls render(job) for each
+     poster and screenshots it. Served from the repository root, so /shared.css, /fonts, /logos and /images resolve. -->
+<link rel="stylesheet" href="/shared.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0b0c10; min-height: 0; }
+  body::before, body::after { display: none !important; }
+  .P { --g: #c9a84c; --gl: #e8c97a; --t: #ece4d4; --m: #a1957f; --bg: #0b0c10;
+    position: relative; width: 1200px; height: 630px; overflow: hidden; color: var(--t); font-family: var(--font-ui);
+    background: radial-gradient(ellipse 70% 90% at 82% 40%, rgba(201,168,76,0.13), transparent 70%), radial-gradient(ellipse 60% 70% at 0% 100%, rgba(201,168,76,0.06), transparent 70%), #0b0c10; }
+  .P::after { content: ''; position: absolute; inset: 16px; border: 1px solid rgba(201,168,76,0.34); pointer-events: none; z-index: 20; }
+  .amb { position: absolute; inset: -80px; background-size: cover; background-position: center; filter: blur(52px) saturate(1.2) brightness(0.5); opacity: 0.5; z-index: 0; }
+  .shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, #0b0c10 0%, rgba(11,12,16,0.96) 42%, rgba(11,12,16,0.6) 70%, rgba(11,12,16,0.42) 100%); }
+  .brand { position: absolute; left: 60px; top: 46px; z-index: 10; font: 600 17px/1 var(--font-display); letter-spacing: 0.34em; color: var(--g); white-space: nowrap; }
+  .brand i { font-style: normal; color: rgba(201,168,76,0.55); margin: 0 0.5em 0 0.2em; letter-spacing: 0; }
+  .brand span { letter-spacing: 0.2em; color: rgba(201,168,76,0.75); }
+  .col { position: absolute; left: 60px; top: 96px; bottom: 76px; width: 610px; z-index: 10; display: flex; flex-direction: column; }
+  .kick { margin: 0 0 12px; font: 600 17px/1.25 var(--font-ui); letter-spacing: 0.16em; text-transform: uppercase; color: var(--g); }
+  .ttl { margin: 0; font: 600 66px/1.05 var(--font-display); letter-spacing: 0.005em; color: var(--gl); text-wrap: balance; }
+  .sub { margin: 14px 0 0; font: 600 24px/1.25 var(--font-ui); color: #ddd3bf; }
+  .sub b { color: var(--gl); font-weight: 600; }
+  .tease { margin: 16px 0 0; font: italic 400 25px/1.36 var(--font-text); color: var(--t); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+  .foot { position: absolute; left: 60px; right: 60px; bottom: 36px; z-index: 10; display: flex; justify-content: space-between; align-items: baseline; gap: 24px; font: 600 15px/1.2 var(--font-ui); color: var(--m); }
+  .foot .url { color: #c8bca4; letter-spacing: 0.02em; white-space: nowrap; }
+  .foot .cr { font-weight: 400; font-size: 12.5px; max-width: 470px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: right; }
+
+  /* the picture, framed like a print */
+  .frame { position: absolute; z-index: 8; right: 60px; top: 50%; transform: translateY(-50%); padding: 9px; background: #14161d; border: 1px solid rgba(201,168,76,0.55); box-shadow: 0 26px 60px rgba(0,0,0,0.6), 0 0 0 6px rgba(11,12,16,0.65); }
+  .frame img { display: block; object-fit: cover; }
+  .frame.lnd { right: 56px; }
+  .cal { width: 330px; height: 380px; display: flex; flex-direction: column; align-items: center; justify-content: center; right: 100px; background: linear-gradient(180deg, #17191f, #101116); }
+  .cal::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 64px; background: rgba(201,168,76,0.16); border-bottom: 1px solid rgba(201,168,76,0.5); }
+  .cal b { font: 600 190px/1 var(--font-display); color: var(--gl); margin-top: 40px; }
+  .cal span { font: 600 24px/1 var(--font-ui); letter-spacing: 0.3em; text-transform: uppercase; color: var(--g); margin-top: 18px; }
+  .emb-frame { padding: 40px; } .emb-frame img { width: 300px; height: 300px; object-fit: contain; }
+  .frame-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 14px 11px; font: 600 15px/1.3 var(--font-ui); color: #f3ead6; background: linear-gradient(transparent, rgba(8,9,12,0.88)); }
+  .frame-cap b { color: var(--gl); font-family: var(--font-display); font-weight: 600; margin-right: 6px; }
+
+  /* profile: emblem and rise-and-fall curve */
+  .seal { position: absolute; z-index: 12; left: 700px; top: 420px; padding: 8px; background: rgba(15,16,22,0.92); border: 1px solid rgba(201,168,76,0.75); box-shadow: 0 10px 28px rgba(0,0,0,0.65); }
+  .seal img { display: block; height: 70px; width: auto; max-width: 118px; object-fit: contain; }
+  .curve { position: absolute; left: 60px; width: 600px; bottom: 74px; height: 86px; z-index: 9; }
+  .curve svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .curve .lbl { font: 600 13px var(--font-ui); fill: var(--m); letter-spacing: 0.06em; }
+
+  /* day: the events of the day */
+  .evs { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .evs li { display: grid; grid-template-columns: 104px 1fr; align-items: baseline; gap: 14px; }
+  .evs .y { font: 600 26px/1 var(--font-display); color: var(--gl); text-align: right; white-space: nowrap; }
+  .evs .y small { font-size: 14px; letter-spacing: 0.08em; color: var(--g); }
+  .evs .e { font: 400 24px/1.25 var(--font-text); color: var(--t); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .more { margin: 14px 0 0 118px; font: 600 15px/1.2 var(--font-ui); letter-spacing: 0.05em; color: var(--m); }
+
+  /* speech: the quotation */
+  .q { margin: 0; font: italic 400 40px/1.28 var(--font-text); color: #f4ecdc; text-wrap: pretty; }
+  .q-para { font-style: normal; }
+  .para { margin: 0 0 10px; font: 600 14px/1 var(--font-ui); letter-spacing: 0.16em; text-transform: uppercase; color: var(--m); }
+  .qmark { position: absolute; z-index: 2; left: 34px; top: 92px; font: 400 300px/1 var(--font-display); color: rgba(201,168,76,0.11); }
+  .by { margin: 24px 0 0; font: 600 25px/1.25 var(--font-display); color: var(--gl); letter-spacing: 0.02em; }
+  .by span { display: block; margin-top: 6px; font: 400 17px/1.3 var(--font-ui); letter-spacing: 0.02em; color: var(--m); }
+  .ring { position: absolute; z-index: 8; right: 84px; top: 50%; transform: translateY(-54%); width: 300px; height: 300px; border-radius: 50%; padding: 8px; background: #14161d; border: 1px solid rgba(201,168,76,0.6); box-shadow: 0 0 0 10px rgba(201,168,76,0.07), 0 30px 70px rgba(0,0,0,0.6); }
+  .ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+  .ring-cap { position: absolute; z-index: 9; right: 84px; width: 316px; top: calc(50% + 152px); text-align: center; font: 600 16px/1.3 var(--font-ui); letter-spacing: 0.06em; color: var(--gl); }
+
+  /* maps: country and century */
+  .mapbox { position: absolute; z-index: 6; }
+  .mapbox svg { display: block; width: 100%; height: 100%; }
+  .mapbox.fade { -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%); }
+  .stats { display: flex; gap: 34px; margin: 24px 0 0; }
+  .stat b { display: block; font: 600 46px/1 var(--font-display); color: var(--gl); }
+  .stat span { display: block; margin-top: 6px; font: 600 13.5px/1.25 var(--font-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--m); max-width: 170px; }
+  .powers { display: flex; gap: 12px; align-items: center; margin: 24px 0 0; font: 600 15px/1.2 var(--font-ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--m); }
+  .powers img { height: 46px; width: auto; max-width: 70px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6)); }
+
+  .P-kids { --g: #ffc247; --gl: #ffd97a; --t: #f6f1ff; --m: #b9addf; --font-display: 'Baloo 2', 'Nunito', sans-serif; --font-ui: 'Nunito', sans-serif; --font-text: 'Nunito', sans-serif;
+    background: radial-gradient(rgba(255,255,255,0.10) 1.2px, transparent 1.8px) 0 0 / 34px 34px, radial-gradient(ellipse 70% 90% at 80% 40%, rgba(255,126,182,0.18), transparent 70%), #17123a; }
+  .P-kids::after { border-color: rgba(255,194,71,0.45); border-radius: 18px; }
+  .P-kids .ttl { font-weight: 800; letter-spacing: 0; line-height: 1; }
+  .P-kids .tease { font-style: normal; font-weight: 600; }
+  .P-kids .mosaic img { border-radius: 18px; border: 3px solid #ffc247; }
+  .P-kids .mosaic img:nth-child(3n+2) { border-color: #ff7eb6; } .P-kids .mosaic img:nth-child(3n) { border-color: #6fd6ff; }
+  .P-kids .chips span { border-color: rgba(255,194,71,0.6); background: rgba(34,27,79,0.8); }
+  .curves .tk { font: 600 14px var(--font-ui); fill: #a1957f; letter-spacing: 0.06em; }
+  .curves .nm { font: 600 13px var(--font-ui); letter-spacing: 0.03em; paint-order: stroke; stroke: #0b0c10; stroke-width: 4px; }
+  /* mosaic of pictures (paths, sections) */
+  .mosaic { position: absolute; z-index: 6; display: grid; gap: 8px; }
+  .mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; border: 1px solid rgba(201,168,76,0.4); background: #14161d; }
+  .tiles { position: absolute; inset: 0; z-index: 0; display: grid; gap: 14px; padding: 12px; opacity: 0.32; transform: rotate(-8deg) scale(1.25); transform-origin: 70% 50%; }
+  .tiles img { width: 100%; height: 100%; object-fit: contain; filter: saturate(0.85); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; max-width: 620px; }
+  .chips span { font: 600 15px/1 var(--font-ui); letter-spacing: 0.04em; color: #e6dcc6; padding: 8px 13px; border: 1px solid rgba(201,168,76,0.45); border-radius: 999px; background: rgba(11,12,16,0.55); }
+</style>
+</head>
+<body>
+<div id="P" class="P"></div>
+<script>
+'use strict';
+function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+var BRAND = '<div class="brand">THE EPOCH INSTITUTE</div>';
+function foot(url, credit) { return '<div class="foot"><span class="url">' + esc(url || 'the-epoch-institute.org') + '</span>' + (credit ? '<span class="cr">' + esc(credit) + '</span>' : '') + '</div>'; }
+function amb(src) { return src ? '<div class="amb" style="background-image:url(\'' + src + '\')"></div><div class="shade"></div>' : ''; }
+
+// a framed picture: portrait-ish pictures stand tall, wide ones lie flat
+function frame(pic, cap) {
+  if (!pic || !pic.src) return '';
+  var wide = pic.w && pic.h && pic.w / pic.h > 1.12, w = wide ? 430 : 372, h = wide ? 322 : 452;
+  return '<div class="frame' + (wide ? ' lnd' : '') + '"><img src="' + esc(pic.src) + '" style="width:' + w + 'px;height:' + h + 'px;object-position:center ' + (pic.top != null ? pic.top : 30) + '%">' +
+    (cap ? '<div class="frame-cap">' + cap + '</div>' : '') + '</div>';
+}
+// the rise and fall of a power: its curve, start and end years
+function curve(points, from, to) {
+  if (!points || points.length < 2) return '';
+  var W = 600, H = 66, x0 = points[0][0], x1 = points[points.length - 1][0], max = 0;
+  points.forEach(function (p) { if (p[1] > max) max = p[1]; });
+  if (x1 === x0 || !max) return '';
+  var pts = points.map(function (p) { return [((p[0] - x0) / (x1 - x0)) * W, H - (p[1] / max) * (H - 6)]; });
+  var line = 'M' + pts.map(function (p) { return p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' L');
+  return '<div class="curve"><svg viewBox="0 0 ' + W + ' 86" preserveAspectRatio="none"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a84c" stop-opacity="0.42"/><stop offset="1" stop-color="#c9a84c" stop-opacity="0"/></linearGradient></defs>' +
+    '<line x1="0" y1="' + H + '" x2="' + W + '" y2="' + H + '" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>' +
+    '<path d="' + line + ' L' + W + ' ' + H + ' L0 ' + H + 'Z" fill="url(#cg)"/><path d="' + line + '" fill="none" stroke="#e8c97a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>' +
+    '<text class="lbl" x="0" y="84">' + esc(from) + '</text><text class="lbl" x="' + W + '" y="84" text-anchor="end">' + esc(to) + '</text></svg></div>';
+}
+// shrink an element's font until it fits its height (and width for one word)
+function fit(el, maxH, minPx) {
+  if (!el) return;
+  var px = parseFloat(getComputedStyle(el).fontSize);
+  while ((el.scrollHeight > maxH + 1 || el.scrollWidth > el.clientWidth + 1) && px > minPx) { px -= 1; el.style.fontSize = px + 'px'; }
+}
+// the height a column's content takes (its box is fixed)
+function used(col) {
+  var top = col.getBoundingClientRect().top, b = top;
+  Array.prototype.forEach.call(col.children, function (c) { if (getComputedStyle(c).display !== 'none') b = Math.max(b, c.getBoundingClientRect().bottom); });
+  return b - top;
+}
+// drop lines from a clamped text until the column's content fits
+function settle(col, limit, el, minLines) {
+  if (!col || !el) return;
+  var n = parseInt(getComputedStyle(el).webkitLineClamp, 10) || 3;
+  while (used(col) > limit && n > minLines) { n--; el.style.webkitLineClamp = n; }
+  if (used(col) > limit && n <= 1 && minLines === 0) el.style.display = 'none';
+}
+
+var R = {};
+R.profile = function (j) {
+  var big = !j.pic && j.emblem;   // no picture: the emblem takes the frame
+  // the emblem is a seal on the picture's frame (placed once the frame is laid out)
+  return amb(j.pic && j.pic.src) + BRAND +
+    '<div class="col" id="col" style="bottom:182px;justify-content:center"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.name) + '</h1>' +
+    '<p class="sub">' + j.sub + '</p><p class="tease" id="tease">' + esc(j.tease) + '</p></div>' +
+    curve(j.points, j.from, j.to) + (big ? '<div class="frame emb-frame"><img src="' + esc(j.emblem) + '"></div>' : frame(j.pic) + (j.emblem ? '<div class="seal" id="seal"><img src="' + esc(j.emblem) + '"></div>' : '')) + foot(j.url, j.credit);
+};
+R.profile.after = function () {
+  fit(document.getElementById('ttl'), 146, 42);
+  settle(document.getElementById('col'), 630 - 96 - 182, document.getElementById('tease'), 0);
+  var seal = document.getElementById('seal'), f = document.querySelector('.frame');
+  if (seal && f) { var r = f.getBoundingClientRect(), sr = seal.getBoundingClientRect(); seal.style.left = Math.round(r.left + 24) + 'px'; seal.style.top = Math.round(r.bottom - sr.height - 24) + 'px'; }
+};
+R.day = function (j) {
+  var evs = j.events.map(function (e) { return '<li><span class="y">' + esc(e.y) + (e.era ? ' <small>' + esc(e.era) + '</small>' : '') + '</span><span class="e">' + esc(e.t) + '</span></li>'; }).join('');
+  return amb(j.pic && j.pic.src) + BRAND +
+    '<div class="col" id="col"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl" style="font-size:84px">' + esc(j.title) + '</h1>' +
+    '<ul class="evs" id="evs">' + evs + '</ul><p class="more" id="more"></p></div>' +
+    (j.pic ? frame(j.pic, j.cap) : '<div class="frame cal"><b>' + esc(j.day) + '</b><span>' + esc(j.month) + '</span></div>') + foot(j.url, j.credit);
+};
+R.day.after = function () {
+  var col = document.getElementById('col'), ul = document.getElementById('evs');
+  var more = document.getElementById('more');
+  function count() { var left = (window.JOB.total || 0) - ul.children.length; more.textContent = left > 0 ? '+ ' + left + ' more ' + (left === 1 ? 'event' : 'events') + ' on this day' : ''; more.hidden = left <= 0; }
+  count();
+  while (used(col) > col.clientHeight && ul.children.length > 2) { ul.removeChild(ul.lastElementChild); count(); }
+};
+R.speech = function (j) {
+  return BRAND + '<p class="kick" style="position:absolute;left:60px;top:96px;z-index:10">' + esc(j.kicker) + '</p>' + (j.para ? '' : '<div class="qmark">&#8220;</div>') +
+    '<div class="col" id="col" style="width:' + (j.pic ? 680 : 1060) + 'px;top:136px;bottom:84px;justify-content:center">' + (j.para ? '<p class="para">In substance</p>' : '') +
+    '<blockquote class="q' + (j.para ? ' q-para' : '') + '" id="q">' + esc(j.quote) + '</blockquote><p class="by" id="by">' + esc(j.by) + (j.what ? '<span>' + esc(j.what) + '</span>' : '') + '</p></div>' +
+    (j.pic ? '<div class="ring"><img src="' + esc(j.pic.src) + '" style="object-position:center ' + (j.pic.top != null ? j.pic.top : 25) + '%"></div>' : '') + foot(j.url, j.credit);
+};
+R.speech.after = function () {
+  var col = document.getElementById('col'), q = document.getElementById('q'), n = q.textContent.length, px = n < 70 ? 58 : n < 130 ? 50 : 46, room = 630 - 136 - 84;
+  q.style.fontSize = px + 'px';
+  while (used(col) > room && px > 22) { px -= 1; q.style.fontSize = px + 'px'; }
+};
+R.country = function (j) {
+  return BRAND + '<div class="mapbox fade" style="right:24px;top:40px;width:620px;height:550px">' + j.map + '</div>' +
+    '<div class="shade" style="background:linear-gradient(90deg,#0b0c10 0%,rgba(11,12,16,0.95) 48%,rgba(11,12,16,0) 66%)"></div>' +
+    '<div class="col" id="col" style="width:600px"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.title) + '</h1>' +
+    (j.stats ? '<div class="stats">' + j.stats.map(function (s) { return '<div class="stat"><b>' + esc(s[0]) + '</b><span>' + esc(s[1]) + '</span></div>'; }).join('') + '</div>' : '') +
+    '<p class="tease" id="tease" style="-webkit-line-clamp:2">' + esc(j.tease) + '</p></div>' + foot(j.url);
+};
+R.country.after = function () { fit(document.getElementById('ttl'), 146, 40); settle(document.getElementById('col'), 630 - 96 - 76, document.getElementById('tease'), 0); };
+R.century = function (j) {
+  return '<div class="mapbox" style="left:150px;top:40px;width:1240px;height:545px;opacity:0.95">' + j.map + '</div>' +
+    '<div class="shade" style="background:linear-gradient(90deg,#0b0c10 0%,rgba(11,12,16,0.93) 36%,rgba(11,12,16,0.35) 62%,rgba(11,12,16,0.1) 100%)"></div>' + BRAND +
+    '<div class="col" id="col" style="width:560px"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl" style="font-size:72px">' + esc(j.title) + '</h1>' +
+    '<p class="sub">' + esc(j.sub) + '</p>' +
+    (j.stats ? '<div class="stats">' + j.stats.map(function (s) { return '<div class="stat"><b>' + esc(s[0]) + '</b><span>' + esc(s[1]) + '</span></div>'; }).join('') + '</div>' : '') +
+    (j.powers && j.powers.length ? '<div class="powers">' + j.powers.map(function (p) { return '<img src="' + esc(p) + '">'; }).join('') + '<span>Great powers</span></div>' : '') + '</div>' + foot(j.url);
+};
+R.century.after = function () { fit(document.getElementById('ttl'), 160, 44); };
+R.mosaic = function (j) {
+  var pics = j.pics || [], n = pics.length, cols = n >= 6 ? 3 : 2, rows = Math.ceil(Math.min(n, cols * 3) / cols);
+  var W = cols === 3 ? 470 : 400, H = 520;
+  var grid = '<div class="mosaic" style="right:58px;top:55px;width:' + W + 'px;height:' + H + 'px;grid-template-columns:repeat(' + cols + ',1fr);grid-template-rows:repeat(' + rows + ',1fr)">' +
+    pics.slice(0, cols * rows).map(function (p) { return '<img src="' + esc(p.src || p) + '"' + (p.top != null ? ' style="object-position:center ' + p.top + '%"' : '') + '>'; }).join('') + '</div>';
+  return BRAND + grid + '<div class="col" id="col" style="width:' + (1200 - W - 58 - 60 - 40) + 'px"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.title) + '</h1>' +
+    (j.sub ? '<p class="sub">' + j.sub + '</p>' : '') + (j.tease ? '<p class="tease" id="tease">' + esc(j.tease) + '</p>' : '') +
+    (j.chips ? '<div class="chips">' + j.chips.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div>' : '') + '</div>' + foot(j.url, j.credit);
+};
+R.mosaic.after = function () { fit(document.getElementById('ttl'), 146, 40); settle(document.getElementById('col'), 630 - 96 - 76, document.getElementById('tease'), 0); };
+R.tiles = function (j) {   // a field of emblems behind the words (the home page, profiles)
+  var t = j.tiles || [], cols = 12;
+  return '<div class="tiles" style="grid-template-columns:repeat(' + cols + ',1fr)">' + t.map(function (s) { return '<img src="' + esc(s) + '">'; }).join('') + '</div>' +
+    '<div class="shade" style="background:linear-gradient(90deg,#0b0c10 0%,rgba(11,12,16,0.94) 46%,rgba(11,12,16,0.5) 72%,rgba(11,12,16,0.25) 100%)"></div>' + BRAND +
+    '<div class="col" id="col" style="width:700px;top:120px"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.title) + '</h1>' +
+    (j.sub ? '<p class="sub">' + j.sub + '</p>' : '') + (j.tease ? '<p class="tease" id="tease">' + esc(j.tease) + '</p>' : '') +
+    (j.chips ? '<div class="chips">' + j.chips.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div>' : '') + '</div>' + foot(j.url);
+};
+R.tiles.after = R.mosaic.after;
+R.curves = function (j) {
+  var L = 60, W = 1080, H = 330, x0 = j.from, x1 = j.to, X = function (y) { return L + ((y - x0) / (x1 - x0)) * W; };
+  // smooth the turning points into curves (Catmull-Rom), kept inside the chart
+  function smooth(pts) {
+    var d = 'M' + pts[0][0].toFixed(1) + ' ' + pts[0][1].toFixed(1), cl = function (v) { return Math.max(4, Math.min(H, v)); };
+    for (var i = 0; i < pts.length - 1; i++) {
+      var p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+      d += ' C' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + ' ' + cl(p1[1] + (p2[1] - p0[1]) / 6).toFixed(1) + ' ' + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + ' ' + cl(p2[1] - (p3[1] - p1[1]) / 6).toFixed(1) + ' ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1);
+    }
+    return d;
+  }
+  var labels = [], paths = j.lines.map(function (l) {
+    var max = 0, peak = l.points[0]; l.points.forEach(function (p) { if (p[1] > max) { max = p[1]; peak = p; } });
+    var pts = l.points.map(function (p) { return [X(p[0]), H - (p[1] / max) * (H * 0.78)]; }), d = smooth(pts);
+    labels.push('<text x="' + X(peak[0]).toFixed(1) + '" y="' + (H - H * 0.78 - 10).toFixed(1) + '" text-anchor="middle" class="nm" fill="' + l.color + '">' + esc(l.name) + '</text>');
+    return '<path d="' + d + ' L' + pts[pts.length - 1][0].toFixed(1) + ' ' + H + ' L' + pts[0][0].toFixed(1) + ' ' + H + 'Z" fill="' + l.color + '" fill-opacity="0.12"/>' +
+      '<path d="' + d + '" fill="none" stroke="' + l.color + '" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>';
+  }).join('');
+  var ticks = j.ticks.map(function (t) { return '<text x="' + X(t[0]).toFixed(1) + '" y="' + (H + 26) + '" text-anchor="middle" class="tk">' + esc(t[1]) + '</text>'; }).join('');
+  return BRAND + '<svg class="curves" viewBox="0 0 1200 ' + (H + 34) + '" style="position:absolute;left:0;bottom:64px;width:1200px;height:' + (H + 34) + 'px;z-index:2">' +
+    '<line x1="' + L + '" x2="' + (L + W) + '" y1="' + H + '" y2="' + H + '" stroke="rgba(201,168,76,0.4)"/>' + paths + labels.join('') + ticks + '</svg>' +
+    '<div class="col" id="col" style="width:1080px"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.title) + '</h1>' + (j.sub ? '<p class="sub">' + j.sub + '</p>' : '') + '</div>' + foot(j.url);
+};
+
+// what may have gone wrong with a poster: words running out of their space, pictures that did not load
+window.check = function () {
+  var P = document.getElementById('P'), out = [], col = document.getElementById('col'), ttl = document.getElementById('ttl');
+  if (col) { var r = col.getBoundingClientRect(); Array.prototype.forEach.call(col.children, function (c) { if (getComputedStyle(c).display !== 'none' && c.getBoundingClientRect().bottom > r.bottom + 2) out.push('overflow:' + c.className); }); }
+  if (ttl && (ttl.scrollWidth > ttl.clientWidth + 2)) out.push('title too wide');
+  var tease = document.getElementById('tease'); if (tease && getComputedStyle(tease).display === 'none') out.push('teaser dropped');
+  Array.prototype.forEach.call(P.querySelectorAll('img'), function (i) { if (!i.naturalWidth) out.push('missing ' + i.getAttribute('src')); });
+  return out;
+};
+// render one poster; resolves when its pictures and fonts are ready
+window.render = function (job) {
+  var P = document.getElementById('P');
+  P.className = 'P P-' + job.kind + (job.theme ? ' P-' + job.theme : '');
+  window.JOB = job;
+  P.innerHTML = R[job.kind](job);
+  var imgs = Array.prototype.slice.call(P.querySelectorAll('img'));
+  return Promise.all(imgs.map(function (i) { return i.decode ? i.decode().catch(function () { i.style.visibility = 'hidden'; }) : null; }))
+    .then(function () { return document.fonts.ready; })
+    .then(function () { if (R[job.kind].after) R[job.kind].after(job); return document.fonts.ready; })
+    .then(function () { return new Promise(function (r) { requestAnimationFrame(function () { requestAnimationFrame(r); }); }); });
+};
+</script>
+</body>
+</html>

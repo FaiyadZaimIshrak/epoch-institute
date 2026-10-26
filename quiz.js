@@ -86,10 +86,25 @@ var EpochQuiz = (function () {
         '<a class="quiz-answer" href="' + escHtml(puzzle.href) + '">' + escHtml(puzzle.name) + ' &rarr;</a><div class="quiz-result-actions">' + actions + '</div>' +
         (opts.daily && typeof newsletterPrompt === 'function' ? newsletterPrompt('daily-quiz') : '') + '</div>';
       var btn = res.querySelector('.quiz-share');
-      if (opts.daily) btn.onclick = function () {   // the share sheet on phones, else copied (shareThis, shared-nav.js)
+      if (opts.daily) {
+        // the share sheet on phones, else a panel (sharePoster, shared-nav.js), with a poster of the clues used: never
+        // the answer, so it spoils no one's puzzle
         var t = 'The Epoch Institute daily quiz #' + puzzle.num + ' (' + puzzle.noun + '): ' + (st.won ? 'solved with ' + st.guesses.length + '/' + clues.length + ' clues' : 'stumped today') + '.';
-        shareThis(t, 'https://the-epoch-institute.org/quiz', this);
-      };
+        // (drawn when the button is first pointed at or touched: a returning reader's result shows on every visit)
+        var poster = null, make = function () {
+          if (!poster && typeof scoreCard === 'function') poster = scoreCard({ title: 'Daily quiz #' + puzzle.num + ' · ' + puzzle.title, score: (st.won ? st.guesses.length : 'X') + '/' + clues.length,
+            unit: st.won ? (st.guesses.length === 1 ? 'solved with the first clue' : 'clues to solve today’s puzzle') : 'stumped today',
+            dots: clues.map(function (c, k) { return k < st.guesses.length ? (st.won && k === st.guesses.length - 1 ? 'good' : 'bad') : 'none'; }),
+            note: new Date(puzzle.day * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
+            cta: 'Can you solve it?', url: 'the-epoch-institute.org/quiz', kids: document.documentElement.getAttribute('data-kids') === '1' });
+        };
+        btn.addEventListener('pointerdown', make); btn.addEventListener('mouseenter', make); btn.addEventListener('focus', make);
+        btn.onclick = function () {
+          make();
+          if (typeof sharePoster === 'function') sharePoster({ text: t, url: 'https://the-epoch-institute.org/quiz', title: 'The Epoch Institute daily quiz #' + puzzle.num, heading: 'Share your result', image: poster, file: 'epoch-quiz-' + puzzle.num + '.jpg', btn: this });
+          else shareThis(t, 'https://the-epoch-institute.org/quiz', this);
+        };
+      }
       else btn.onclick = function () { if (opts.onNext) opts.onNext(); };
     }
     form.addEventListener('submit', function (e) {

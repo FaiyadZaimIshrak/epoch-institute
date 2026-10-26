@@ -19,13 +19,13 @@
 <meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
-<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-encyclopedia.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-encyclopedia.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/">
-<link rel="stylesheet" href="/shared.css?v=45">
+<link rel="stylesheet" href="/shared.css?v=46">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia"}]},{"@type":"CollectionPage","name":"The Epoch Institute Encyclopedia","url":"https://the-epoch-institute.org/encyclopedia/","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -59,7 +59,7 @@
 </main>
 
 <script src="/shared-data.js?v=8"></script>
-<script src="/shared-nav.js?v=29"></script>
+<script src="/shared-nav.js?v=30"></script>
 <script src="/encyclopedia/index-data.js?v=40909a99c0"></script>
 <script>
 initNav('encyclopedia');

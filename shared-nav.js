@@ -30,12 +30,163 @@ function newsletterPrompt(source) {
   return '<form class="gm-nl" data-nl="' + escHtml(source) + '" novalidate><p class="gm-nl-t">A new puzzle and a story from history, every week by email</p><span class="gm-nl-row"><input type="email" required placeholder="your@email.com" aria-label="Your email address"><button type="submit">Sign up</button></span><p class="gm-nl-msg" aria-live="polite"></p></form>';
 }
 
-// Share a line: the system share sheet where there is one (phones), else the line and the address are copied
-function shareThis(text, url, btn) {
-  url = url || location.href.split('#')[0];
-  if (navigator.share) { navigator.share({ text: text, url: url }).catch(function () {}); return; }
-  function done() { if (!btn) return; var o = btn.textContent; btn.textContent = 'Copied ✓'; setTimeout(function () { btn.textContent = o; }, 1800); }
-  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text + ' ' + url).then(done, function () {});
+// ── In-app browsers ───────────────────────────────────────────────────────────────────────────────────────────────
+// A link tapped in Instagram, Facebook or Messenger opens in the app's own browser: on Android it has no share sheet
+// and saves no downloads, and every app keeps its own storage (scores and streaks stay there). EPOCH_INAPP is
+// { app, os, name } there (html.in-app for the CSS), else null.
+var EPOCH_INAPP = (function () {
+  var ua = navigator.userAgent || '', os = /Android/i.test(ua) ? 'android' : /iPhone|iPad|iPod/i.test(ua) ? 'ios' : '';
+  var APPS = [[/Instagram/, 'Instagram'], [/MicroMessenger/, 'WeChat'], [/Messenger|Orca-Android/, 'Messenger'], [/FBAN|FBAV|FB_IAB|FB4A|FBIOS/, 'Facebook'],
+    [/Barcelona/, 'Threads'], [/musical_ly|TikTok|BytedanceWebview/i, 'TikTok'], [/Snapchat/, 'Snapchat'], [/LinkedInApp/, 'LinkedIn'], [/Pinterest/, 'Pinterest'], [/\bLine\//, 'LINE']];
+  for (var i = 0; i < APPS.length; i++) if (APPS[i][0].test(ua)) return { app: APPS[i][1], os: os, name: APPS[i][1] + '’s browser' };
+  if (os === 'android' && /; wv\)/.test(ua)) return { app: '', os: os, name: 'this app’s browser' };
+  return null;
+})();
+if (EPOCH_INAPP) document.documentElement.classList.add('in-app');
+// the way out to the reader's own browser: on Android a link the apps hand to the system, everywhere the app's menu
+function inAppTip(why) {
+  if (!EPOCH_INAPP) return '';
+  var u = location.href.split('#')[0];
+  return '<p class="ia-tip"><b>You are in ' + escHtml(EPOCH_INAPP.name) + '.</b> ' + escHtml(why) + ' open the page in your own browser: use the app’s ' +
+    (EPOCH_INAPP.os === 'android' ? '⋮' : '⋯') + ' menu and choose to open it in ' + (EPOCH_INAPP.os === 'ios' ? 'Safari' : EPOCH_INAPP.os === 'android' ? 'Chrome' : 'your browser') + '.' +
+    (EPOCH_INAPP.os === 'android' ? ' <a class="ia-open" href="intent://' + escHtml(u.replace(/^https?:\/\//, '')) + '#Intent;scheme=https;S.browser_fallback_url=' + encodeURIComponent(u) + ';end">Open in my browser</a>' : '') + '</p>';
+}
+
+// Copy to the clipboard; the old way where the Clipboard API is missing or refused (Android in-app browsers)
+function copyText(text) {
+  return new Promise(function (ok, no) {
+    function legacy() {
+      var t = document.createElement('textarea'), was = document.activeElement, done = false;
+      t.value = text; t.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px';
+      document.body.appendChild(t); t.focus(); t.select();
+      try { t.setSelectionRange(0, text.length); done = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(t); if (was && was.focus) was.focus({ preventScroll: true });
+      if (done) ok(); else no();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, legacy); else legacy();
+  });
+}
+
+// ── Sharing: a line, its address and a picture (a page's poster, a game's score card) ──────────────────────────────
+// Phones get the system share sheet with the picture; elsewhere, and in in-app browsers without a share sheet, a panel
+// of our own: the picture to save, the apps, Copy. o: { text, url, title (of what is shared), heading (the panel's),
+// image (a Blob, a promise of one or the poster's address), file (its name), btn }. A poster's address is fetched
+// when the button is first touched (warmPoster).
+var SHARE_ICONS = {
+  whatsapp: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#25D366" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#1877F2" d="M24 12.07C24 5.45 18.63.07 12 .07S0 5.45 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.38H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95h-1.52c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.38C19.61 23.03 24 18.06 24 12.07z"/></svg>',
+  x: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24H16.17l-4.71-6.23-5.4 6.23H2.75l7.73-8.84L1.25 2.25H8.08l4.25 5.62zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg>',
+  telegram: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#26A5E4" d="M11.94 0A12 12 0 1 0 12 24 12 12 0 0 0 11.94 0zm4.96 7.22c.1 0 .32.02.47.14.1.08.16.2.17.33.02.09.04.3.02.47-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.22-.46-1.9-.9-1.05-.7-1.65-1.13-2.67-1.8-1.19-.78-.42-1.21.26-1.91.17-.19 3.25-2.98 3.3-3.23.01-.03.02-.15-.05-.21-.07-.06-.17-.04-.25-.02-.1.02-1.79 1.14-5.06 3.34-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.24-1.35-.37-1.3-.79.03-.22.33-.44.9-.66 3.5-1.53 5.83-2.53 7-3.02 3.33-1.38 4.02-1.63 4.47-1.63z"/></svg>',
+  email: '<svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>',
+  copy: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>'
+};
+var POSTER_CACHE = {};
+function warmPoster(src) {   // fetch a poster once; .b holds the Blob when it has arrived
+  if (!src || typeof src !== 'string') return null;
+  if (!POSTER_CACHE[src]) {
+    var c = POSTER_CACHE[src] = { b: null };
+    c.p = fetch(src).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.blob(); }).then(function (b) { c.b = b; return b; });
+    c.p.catch(function () { delete POSTER_CACHE[src]; });
+  }
+  return POSTER_CACHE[src];
+}
+function shareFiles(blob, name) {   // [File] when this browser can hand a picture to the share sheet, else null
+  if (!blob || !navigator.share || !navigator.canShare || typeof File !== 'function') return null;
+  try { var f = [new File([blob], name || 'the-epoch-institute.jpg', { type: blob.type || 'image/jpeg' })]; return navigator.canShare({ files: f }) ? f : null; } catch (e) { return null; }
+}
+function sharePoster(o) {
+  var url = o.url || location.href.split('#')[0], all = (o.text ? o.text + '\n' : '') + url, img = o.image;
+  var phone = window.matchMedia && matchMedia('(pointer: coarse)').matches;
+  function fail(e) { if (!e || e.name !== 'AbortError') shareSheet(o); }
+  if (!phone || !navigator.share) return shareSheet(o);
+  if (!img) { navigator.share({ title: o.title || '', text: o.text || '', url: url }).catch(fail); return; }
+  // the address goes inside the text: an app given a picture keeps the caption but may drop a separate url
+  function go(b) { var f = shareFiles(b, o.file); if (!f) return shareSheet(o); navigator.share({ files: f, title: o.title || '', text: all }).catch(fail); }
+  var c = img instanceof Blob ? { b: img } : typeof img === 'string' ? warmPoster(img) : img;
+  if (c && c.b) return go(c.b);
+  // a picture still on its way: wait a moment (the tap still counts that long), else the panel shows it as it comes
+  var late = false, t = setTimeout(function () { late = true; shareSheet(o); }, 900);
+  (c && c.p ? c.p : Promise.reject()).then(function (b) { if (!late) { clearTimeout(t); go(b); } }, function () { if (!late) { clearTimeout(t); shareSheet(o); } });
+}
+// the line, the address and a button: the old signature, kept for the pages that call it
+function shareThis(text, url, btn) { sharePoster({ text: text, url: url, btn: btn }); }
+// a score poster (share-card.js, fetched the first time a result is shown): { p: promise of the picture, b: once drawn }
+var SHARE_CARD_SRC = '/share-card.js?v=1', CARD_LIB = null;
+function scoreCard(spec) {
+  CARD_LIB = CARD_LIB || new Promise(function (ok, no) {
+    if (window.EpochCard) return ok();
+    var s = document.createElement('script'); s.src = SHARE_CARD_SRC; s.onload = ok; s.onerror = function () { CARD_LIB = null; no(); }; document.head.appendChild(s);
+  });
+  var job = { b: null };
+  job.p = CARD_LIB.then(function () { return EpochCard.make(spec).p; }).then(function (b) { job.b = b; return b; });
+  job.p.catch(function () {});
+  return job;
+}
+
+function shareSheet(o) {
+  var url = o.url || location.href.split('#')[0], line = o.text || '', all = (line ? line + '\n' : '') + url, enc = encodeURIComponent;
+  var old = document.getElementById('share-sheet'); if (old) old.remove();
+  var opener = document.activeElement, box = document.createElement('div'), objUrl = null;
+  var phone = window.matchMedia && matchMedia('(pointer: coarse)').matches;
+  var apps = [
+    ['whatsapp', 'WhatsApp', 'https://api.whatsapp.com/send?text=' + enc(all)],
+    ['facebook', 'Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + enc(url)],
+    ['x', 'X', 'https://twitter.com/intent/tweet?text=' + enc(line) + '&url=' + enc(url)],
+    ['telegram', 'Telegram', 'https://t.me/share/url?url=' + enc(url) + '&text=' + enc(line)],
+    ['email', 'Email', 'mailto:?subject=' + enc(o.title || 'From The Epoch Institute') + '&body=' + enc(all)]
+  ];
+  box.id = 'share-sheet'; box.className = 'shr'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-labelledby', 'shr-t');
+  box.innerHTML = '<div class="shr-box"><div class="shr-head"><p class="shr-t" id="shr-t">' + escHtml(o.heading || o.title || 'Share') + '</p><button type="button" class="shr-x" aria-label="Close">&times;</button></div>' +
+    (o.image ? '<figure class="shr-pic"><img alt="' + escHtml(o.alt || 'The picture to share') + '"><figcaption class="shr-save"></figcaption></figure>' : '') +
+    (line ? '<p class="shr-line">' + escHtml(line) + '</p>' : '') +
+    '<div class="shr-acts">' + (o.image ? '<button type="button" class="shr-act shr-sys" hidden>Share the picture…</button><a class="shr-act shr-dl" hidden>Save the picture</a>' : '') + '</div>' +
+    '<div class="shr-apps">' + apps.map(function (a) { return '<a class="shr-app" href="' + escHtml(a[2]) + '" target="_blank" rel="noopener">' + SHARE_ICONS[a[0]] + '<span>' + a[1] + '</span></a>'; }).join('') +
+    '<button type="button" class="shr-app shr-copy">' + SHARE_ICONS.copy + '<span>Copy</span></button></div>' +
+    (navigator.share && !o.image ? '<button type="button" class="shr-act shr-more">More apps…</button>' : '') +
+    inAppTip(o.image ? 'To share the picture straight to other apps,' : 'To share straight to other apps,') + '</div>';
+  document.body.appendChild(box); document.body.classList.add('shr-open');
+  function close() { box.remove(); document.body.classList.remove('shr-open'); if (objUrl) URL.revokeObjectURL(objUrl); document.removeEventListener('keydown', key); if (opener && opener.focus) opener.focus({ preventScroll: true }); }
+  function key(e) {
+    if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+    if (e.key !== 'Tab') return;
+    var f = box.querySelectorAll('a[href], button:not([hidden])'), first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+  document.addEventListener('keydown', key);
+  box.addEventListener('click', function (e) { if (e.target === box || e.target.closest('.shr-x')) close(); });
+  box.querySelector('.shr-copy').addEventListener('click', function () {
+    var b = this, sp = b.querySelector('span');
+    copyText(all).then(function () { sp.textContent = 'Copied ✓'; }, function () { sp.textContent = 'Copy failed'; });
+    setTimeout(function () { sp.textContent = 'Copy'; }, 2200);
+  });
+  var more = box.querySelector('.shr-more');
+  if (more) more.addEventListener('click', function () { navigator.share({ title: o.title || '', text: line, url: url }).catch(function () {}); });
+  if (o.image) {
+    var pic = box.querySelector('.shr-pic img'), sys = box.querySelector('.shr-sys'), dl = box.querySelector('.shr-dl'), save = box.querySelector('.shr-save'), blob = null;
+    var show = function (b) {
+      blob = b; objUrl = URL.createObjectURL(b); pic.src = objUrl;
+      if (shareFiles(b, o.file)) sys.hidden = false;
+      // a download saves nothing inside an in-app browser: there the picture is pressed and held (or screenshotted)
+      if (!EPOCH_INAPP) { dl.href = objUrl; dl.setAttribute('download', o.file || 'the-epoch-institute.jpg'); dl.hidden = false; }
+      save.textContent = phone ? (EPOCH_INAPP && EPOCH_INAPP.os === 'android' ? 'Press and hold the picture to save it, or take a screenshot.' : 'Press and hold the picture to save it.') : '';
+      save.hidden = !save.textContent;
+    };
+    var img = o.image;
+    if (img instanceof Blob) show(img);
+    else {
+      var c = typeof img === 'string' ? warmPoster(img) : img;
+      if (typeof img === 'string') pic.src = img;   // shows at once; the Blob for sharing follows
+      var p = c && (c.p || (c.then ? c : null));
+      // a picture that could not be had leaves no empty frame behind
+      var gone = function () { if (typeof img !== 'string') { var f = box.querySelector('.shr-pic'); if (f) f.remove(); } };
+      if (c && c.b) show(c.b); else if (p) p.then(function (b) { if (b instanceof Blob && document.body.contains(box)) show(b); }, gone); else gone();
+    }
+    sys.addEventListener('click', function () {
+      var f = shareFiles(blob, o.file); if (!f) return;
+      navigator.share({ files: f, title: o.title || '', text: all }).catch(function () {});
+    });
+  }
+  setTimeout(function () { var x = box.querySelector('.shr-x'); if (x) x.focus({ preventScroll: true }); }, 30);
 }
 
 function jsonp(url, cb) {
@@ -143,10 +294,10 @@ function attachShareListeners(container, fallbackUrl) {
         window.open('https://wa.me/?text=' + encodeURIComponent(tweet + (url ? '\n\n' + url : '')), '_blank');
         closeAll();
       } else if (action === 'copy') {
-        if (navigator.clipboard) navigator.clipboard.writeText(url).then(function() {
+        copyText(url).then(function() {
           var orig = item.textContent; item.textContent = '✓ Copied!';
           setTimeout(function() { item.textContent = orig; }, 2000);
-        }).catch(function() {});
+        }, function() {});
         setTimeout(closeAll, 2100);
       }
     });
@@ -509,11 +660,33 @@ function initNav(activePage) {
   document.body.insertAdjacentHTML('beforeend', footerHtml + searchHtml);
   initSiteSearch();
   initEncPreviews();
-  // any [data-share-text] button shares its line (a speech's key passage, a game result)
+  // any [data-share-text] button shares its line (a speech's key passage), with its poster (data-share-img), which
+  // is fetched as soon as the button is pointed at or touched
   document.addEventListener('click', function (e) {
     var b = e.target.closest && e.target.closest('[data-share-text]');
-    if (b) shareThis(b.getAttribute('data-share-text'), b.getAttribute('data-share-url'), b);
+    var img = b && b.getAttribute('data-share-img');
+    if (b) sharePoster({ text: b.getAttribute('data-share-text'), url: b.getAttribute('data-share-url'), image: img, title: b.getAttribute('data-share-title'), heading: b.getAttribute('data-share-heading'), file: b.getAttribute('data-share-file') || (img ? img.split('/').pop() : null), btn: b });
   });
+  ['pointerdown', 'mouseover', 'focusin'].forEach(function (t) {
+    document.addEventListener(t, function (e) { var b = e.target.closest && e.target.closest('[data-share-img]'); if (b) warmPoster(b.getAttribute('data-share-img')); }, { passive: true });
+  });
+  // a page with a poster of its own (a profile, a day, a country, a century, a reading path) gets a Share button that
+  // sends the poster with the page's name and address
+  (function () {
+    var m = document.querySelector('meta[property="og:image"]'), src = m && m.getAttribute('content') || '';
+    if (!/\/images\/og\/(?!default\.)[^/]+\.jpg$/.test(src)) return;
+    var host = document.querySelector('.empire-page .info-share-row') || document.querySelector('.day-page .ref-head, .cty-head, .cen-head, .path-head');
+    if (!host || host.querySelector('.page-share')) return;
+    var t = document.querySelector('meta[property="og:title"]'), c = document.querySelector('link[rel="canonical"]');
+    var name = ((t && t.getAttribute('content')) || document.title).replace(/\s+—\s+The Epoch Institute$/, '');
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = host.classList.contains('info-share-row') ? 'info-share-btn page-share' : 'sp-share page-share';
+    b.textContent = 'Share'; b.setAttribute('data-share-text', name); b.setAttribute('data-share-title', name); b.setAttribute('data-share-heading', 'Share this page');
+    b.setAttribute('data-share-img', src.replace(/^https:\/\/the-epoch-institute\.org/, ''));
+    if (c) b.setAttribute('data-share-url', c.getAttribute('href'));
+    if (host.classList.contains('info-share-row')) host.insertBefore(b, host.children[1] || null);
+    else { var row = document.createElement('p'); row.className = 'page-share-row'; row.appendChild(b); host.appendChild(row); }
+  })();
   // the one-line newsletter forms (newsletterPrompt)
   document.addEventListener('submit', function (e) {
     var f = e.target.closest && e.target.closest('form[data-nl]'); if (!f) return;

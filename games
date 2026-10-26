@@ -20,13 +20,13 @@
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
-<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-games.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
-<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=45">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-games.jpg">
+<link rel="stylesheet" href="/shared.css?v=46">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Seven history games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -206,8 +206,8 @@
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=97751474c0' };</script>
 <script src="/games-emblems.js?v=1"></script>
 <script src="/games-data.js?v=37651e0ffd"></script>
-<script src="/shared-nav.js?v=29"></script>
-<script src="/games.js?v=2"></script>
+<script src="/shared-nav.js?v=30"></script>
+<script src="/games.js?v=3"></script>
 
 </body>
 </html>

@@ -317,6 +317,8 @@ function Page($p) {
   [void]$sb.Append("`n<script src=`"/shared-nav.js`" defer></script>`n<script src=`"/enc-page.js`" defer></script>`n</body>`n</html>`n")
   return $sb.ToString()
 }
+# a page's share poster (images/og/<name>.jpg, drawn by scripts/make-posters.js), when it has been drawn
+function Poster([string]$name) { $f = '/images/og/' + $name + '.jpg'; if (Test-Path (Join-Path $Repo ($f.TrimStart('/') -replace '/', '\'))) { $f } else { $null } }
 function ArticleLd([string]$headline, [string]$desc, [string]$path, [string]$aboutType, [string]$aboutName, $aka, $image) {
   $about = '{"@type":"' + $aboutType + '","name":' + (Js $aboutName) + $(if ($aka -and @($aka).Count) { ',"alternateName":[' + ((@($aka) | ForEach-Object { Js ([string]$_) }) -join ',') + ']' } else { '' }) + '}'
   return '{"@type":"Article","headline":' + (Js $headline) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"mainEntityOfPage":' + (Js ($SITE + $path)) +
@@ -1184,7 +1186,7 @@ foreach ($cont in $CONTS + @('')) {
 [void]$sb.Append("</div>`n</main>`n")
 $title = 'Country Histories: ' + $CPAGE.Count + ' Countries Through Time — The Epoch Institute'
 $desc = [EpochBuild.W]::Summary("The history of $($CPAGE.Count) present-day countries through the states that lay on their soil, from the first cities to today, with maps and timelines.", 155)
-Emit '/countries/' (Page @{ title = $title; desc = $desc; path = '/countries/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/countries/") + '}'); nav = 'countries'; body = $sb.ToString() })
+Emit '/countries/' (Page @{ title = $title; desc = $desc; path = '/countries/'; type = 'website'; img = (Poster 'page-countries'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/countries/") + '}'); nav = 'countries'; body = $sb.ToString() })
 Say "country pages: $($CPAGE.Count)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1271,7 +1273,7 @@ foreach ($c in $CENTPAGES) {
 [void]$sb.Append("</ul>`n</div>`n</main>`n")
 $title = 'History by Century: ' + $CENTPAGES.Count + ' Centuries of World History — The Epoch Institute'
 $desc = [EpochBuild.W]::Summary("World history one century at a time, from the $($CENTPAGES[0]) to the $($CENTPAGES[-1]): states, great powers, key events and people, with maps.", 155)
-Emit '/centuries/' (Page @{ title = $title; desc = $desc; path = '/centuries/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/centuries/") + '}'); nav = 'centuries'; body = $sb.ToString() })
+Emit '/centuries/' (Page @{ title = $title; desc = $desc; path = '/centuries/'; type = 'website'; img = (Poster 'page-centuries'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/centuries/") + '}'); nav = 'centuries'; body = $sb.ToString() })
 Say "century pages: $($CENTPAGES.Count)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1337,7 +1339,8 @@ for ($pi2 = 0; $pi2 -lt $RP.Count; $pi2++) {
   $ld = $crumb[1] + ',{"@type":"ItemList","name":' + (Js ([string]$p['title'])) + ',"description":' + (Js ([string]$p['tagline'])) + ',"url":' + (Js ($SITE + $path)) + ',"itemListOrder":"https://schema.org/ItemListOrderAscending","numberOfItems":' + $steps.Count + ',"itemListElement":[' +
     ((0..($steps.Count - 1) | ForEach-Object { '{"@type":"ListItem","position":' + ($_ + 1) + ',"name":' + (Js ([string]$steps[$_]['name'])) + ',"url":' + (Js ($SITE + [string]$steps[$_]['href'])) + '}' }) -join ',') + ']}'
   $img1 = @($steps | Where-Object { $_['img'] } | Select-Object -First 1); $isz = if ($img1.Count) { ImgSize ([string]$img1[0]['img']) } else { $null }
-  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'article'; img = $(if ($isz) { [string]$img1[0]['img'] }); imgW = $(if ($isz) { $isz[0] }); imgH = $(if ($isz) { $isz[1] }); ld = $ld; nav = 'paths'; body = $sb.ToString() })
+  $ogP = Poster ('path-' + $slug)
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'article'; img = $(if ($ogP) { $ogP } elseif ($isz) { [string]$img1[0]['img'] }); imgW = $(if ($ogP) { 1200 } elseif ($isz) { $isz[0] }); imgH = $(if ($ogP) { 630 } elseif ($isz) { $isz[1] }); ld = $ld; nav = 'paths'; body = $sb.ToString() })
 }
 $crumb = Crumbs @(@('Home', '/'), @('Reading Paths', $null))
 $body = "<script>(function(){var h=location.hash.slice(1);if(/^[a-z0-9-]+`$/.test(h)&&h!=='index')location.replace('/paths/'+h);})();</script>`n" +
@@ -1346,7 +1349,7 @@ $body = "<script>(function(){var h=location.hash.slice(1);if(/^[a-z0-9-]+`$/.tes
   '<div class="paths-grid">' + (($RP | ForEach-Object { PathCard $_ }) -join '') + "</div>`n</div>`n</main>`n"
 $title = 'Reading Paths Through World History — The Epoch Institute'
 $desc = 'Curated routes through world history: the Silk Road, the steppe empires, the crusades, great conquerors and explorers, one stop at a time.'
-Emit '/paths/' (Page @{ title = $title; desc = $desc; path = '/paths/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/paths/") + '}'); nav = 'paths'; body = $body })
+Emit '/paths/' (Page @{ title = $title; desc = $desc; path = '/paths/'; type = 'website'; img = (Poster 'page-paths'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/paths/") + '}'); nav = 'paths'; body = $body })
 Say "glossary: $($TERMS.Count) terms; reading paths: $($RP.Count)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1383,7 +1386,7 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   $sb = New-Object Text.StringBuilder(9000)
   [void]$sb.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n<article class=`"sp-view`">`n")
   # the speaker's portrait (the speaker's entry picture; its credit is on that entry)
-  $por = SpPortrait $s
+  $por = SpPortrait $s; $ogS = Poster ('speech-' + $slug)
   [void]$sb.Append('<header class="sp-head">' + $(if ($por) { '<a class="sp-portrait" href="/encyclopedia/' + $s['speakerSlug'] + '" tabindex="-1" aria-hidden="true"><img src="' + $por + '" alt="" width="104" height="104"></a>' } else { '' }) + '<p class="featured-region">' + (Hx ([string]$s['display'])) + ' · ' + (Hx ([string]$s['place'])) + '</p><h1 class="sp-title">' + (Hx ([string]$s['title'])) + '</h1><p class="sp-by">' + $spk + "</p></header>`n")
   [void]$sb.Append('<section class="sp-sec"><h2>The setting</h2><p>' + (Hx ([string]$s['before'])) + "</p></section>`n")
   [void]$sb.Append('<section class="sp-sec"><h2>' + $(if ($isPara) { 'In substance' } else { 'Key passage' }) + '</h2>' +
@@ -1393,7 +1396,7 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
     # a short full text stands open just below: the button is only for a folded one
     $(if ($ft -and $ftw -gt 600) { '<a class="sp-full-link" href="#full-text">Read the full speech<span aria-hidden="true"> &#8595;</span></a><span class="sp-full-src">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' min</span>' }
       elseif (-not $ft -and $full) { '<a class="sp-full-link" href="' + (Hx $full[0]) + '" target="_blank" rel="noopener">Read the complete text<span aria-hidden="true"> &#8599;</span></a><span class="sp-full-src">' + (Hx $full[1]) + '</span>' } else { '' }) +
-    $(if (-not $isPara) { '<button type="button" class="sp-share" data-share-text="' + (Hx ([string][char]0x201C + [string]$s['excerpt'] + [string][char]0x201D + ' ' + [string][char]0x2014 + ' ' + [string]$s['speaker'] + ', ' + [string]$s['title'])) + '">Share this quote</button>' } else { '' }) +
+    $(if (-not $isPara) { '<button type="button" class="sp-share" data-share-text="' + (Hx ([string][char]0x201C + [string]$s['excerpt'] + [string][char]0x201D + ' ' + [string][char]0x2014 + ' ' + [string]$s['speaker'] + ', ' + [string]$s['title'])) + '"' + $(if ($ogS) { ' data-share-img="' + $ogS + '"' } else { '' }) + '>Share this quote</button>' } else { '' }) +
     "</div></section>`n")
   if ($ft) {
     $ftb = New-Object Text.StringBuilder
@@ -1415,7 +1418,7 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   $ld = $crumb[1] + ',' + (ArticleLd ([string]$s['title']) $desc $path 'Event' ([string]$s['title']) $null $null)
   $srcUrl = if ($ft) { [string]$ft['url'] } elseif ($full) { $full[0] } else { $null }
   if (-not $isPara) { $ld += ',{"@type":"Quotation","text":' + (Js ([string]$s['excerpt'])) + ',"creator":{"@type":"Person","name":' + (Js ([string]$s['speaker'])) + '}' + $(if ($srcUrl) { ',"isPartOf":{"@type":"CreativeWork","name":' + (Js ([string]$s['title'])) + ',"url":' + (Js $srcUrl) + '}' } else { '' }) + '}' }
-  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'article'; ld = $ld; nav = 'speeches'; body = $sb.ToString() })
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'article'; img = $ogS; imgW = 1200; imgH = 630; ld = $ld; nav = 'speeches'; body = $sb.ToString() })
 }
 $crumb = Crumbs @(@('Home', '/'), @('Great Speeches', $null))
 $ib = New-Object Text.StringBuilder
@@ -1435,7 +1438,7 @@ foreach ($era in $SPERA.Keys) {
 [void]$ib.Append("</div>`n</main>`n")
 $title = 'Great Speeches in History: The Words That Moved the World — The Epoch Institute'
 $desc = 'Great speeches that moved history, from Pericles to Reagan: the setting, the key passage, what followed, and the full text of every speech in the public domain.'
-Emit '/speeches/' (Page @{ title = $title; desc = $desc; path = '/speeches/'; type = 'website'; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/speeches/") + '}'); nav = 'speeches'; body = $ib.ToString() })
+Emit '/speeches/' (Page @{ title = $title; desc = $desc; path = '/speeches/'; type = 'website'; img = (Poster 'page-speeches'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/speeches/") + '}'); nav = 'speeches'; body = $ib.ToString() })
 Say "great speeches: $($SPS.Count) ($spWhole with their full text, $spFull more linked to it)"
 if ($spMiss.Count) { Say ("great speeches: unknown encyclopedia links " + (($spMiss | Sort-Object -Unique) -join ', ')) }
 
