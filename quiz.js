@@ -20,6 +20,7 @@ var EpochQuiz = (function () {
       var kindSingle = PROFILE_KINDS[profileKind(ans)].single.toLowerCase();
       return { cat: cat, key: 'p:' + ans.name, name: ans.name, aka: [], href: profileUrl(ans), noun: 'profile', title: 'Guess the ' + kindSingle,
         img: (typeof HOME_PICS !== 'undefined' && HOME_PICS[ans.name]) ? HOME_PICS[ans.name].img : '', names: EMPIRES.map(function (e) { return e.name; }),
+        imgTop: (typeof HOME_PICS !== 'undefined' && HOME_PICS[ans.name]) ? HOME_PICS[ans.name].top : null,
         clues: [
           'Region: ' + ans.region + '. It lasted about ' + Math.abs(Math.round(s[1] - s[0])) + ' years, from ' + fmtYear(s[0]) + ' to ' + fmtYear(s[1]) + '.',
           q[2] ? 'Did you know? ' + q[2] : null,
@@ -61,7 +62,9 @@ var EpochQuiz = (function () {
       if (typeof SEARCH_INDEX !== 'undefined') return go();
       loading = true; var sc = document.createElement('script'); sc.src = SEARCH_INDEX_SRC; sc.onload = go; document.head.appendChild(sc);
     }
-    if (puzzle.names) fillNames(puzzle.names); else { input.addEventListener('focus', loadNames); setTimeout(loadNames, 2500); }
+    // the answer list (from the 800 KB search index) loads when a guess begins (a tap or a key in the field, not the
+    // page's own focus), not on every visit to the page
+    if (puzzle.names) fillNames(puzzle.names); else { input.addEventListener('pointerdown', loadNames); input.addEventListener('keydown', loadNames); }
     var st = { day: puzzle.day, guesses: [], done: false, won: false };
     if (opts.daily) { try { var saved = JSON.parse(localStorage.getItem('epoch-quiz') || 'null'); if (saved && saved.day === puzzle.day) st = saved; } catch (e) {} }
     function save() { if (opts.daily) { try { localStorage.setItem('epoch-quiz', JSON.stringify(st)); } catch (e) {} } }
@@ -76,15 +79,16 @@ var EpochQuiz = (function () {
       if (!st.done) { res.hidden = true; return; }
       res.hidden = false;
       var actions = opts.daily
-        ? '<button type="button" class="quiz-share">Copy result</button>' + (opts.moreHref ? '<a class="quiz-more" href="' + opts.moreHref + '">More puzzles &rarr;</a>' : '<span class="quiz-next">A new puzzle tomorrow: profiles, people, events, places, ideas and works in turn.</span>')
+        ? '<button type="button" class="quiz-share">Share result</button>' + (opts.moreHref ? '<a class="quiz-more" href="' + opts.moreHref + '">More puzzles &rarr;</a>' : '<span class="quiz-next">A new puzzle tomorrow: profiles, people, events, places, ideas and works in turn.</span>')
         : '<button type="button" class="quiz-share quiz-again">Next puzzle &rarr;</button>';
-      res.innerHTML = (puzzle.img ? '<img class="quiz-img" src="' + escHtml(puzzle.img) + '" alt="">' : '') +
+      res.innerHTML = (puzzle.img ? '<img class="quiz-img" src="' + escHtml(puzzle.img) + '" alt=""' + (puzzle.imgTop != null ? ' style="object-position:center ' + puzzle.imgTop + '%"' : '') + '>' : '') +
         '<div class="quiz-result-body"><p class="quiz-verdict">' + (st.won ? 'Correct — solved with ' + st.guesses.length + ' of ' + clues.length + ' clues.' : 'The answer was:') + '</p>' +
-        '<a class="quiz-answer" href="' + escHtml(puzzle.href) + '">' + escHtml(puzzle.name) + ' &rarr;</a><div class="quiz-result-actions">' + actions + '</div></div>';
+        '<a class="quiz-answer" href="' + escHtml(puzzle.href) + '">' + escHtml(puzzle.name) + ' &rarr;</a><div class="quiz-result-actions">' + actions + '</div>' +
+        (opts.daily && typeof newsletterPrompt === 'function' ? newsletterPrompt('daily-quiz') : '') + '</div>';
       var btn = res.querySelector('.quiz-share');
-      if (opts.daily) btn.onclick = function () {
-        var t = 'The Epoch Institute daily quiz #' + puzzle.num + ' (' + puzzle.noun + '): ' + (st.won ? 'solved with ' + st.guesses.length + '/' + clues.length + ' clues' : 'stumped today') + '. https://the-epoch-institute.org/quiz';
-        var b = this; if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { b.textContent = 'Copied ✓'; }).catch(function () {});
+      if (opts.daily) btn.onclick = function () {   // the share sheet on phones, else copied (shareThis, shared-nav.js)
+        var t = 'The Epoch Institute daily quiz #' + puzzle.num + ' (' + puzzle.noun + '): ' + (st.won ? 'solved with ' + st.guesses.length + '/' + clues.length + ' clues' : 'stumped today') + '.';
+        shareThis(t, 'https://the-epoch-institute.org/quiz', this);
       };
       else btn.onclick = function () { if (opts.onNext) opts.onNext(); };
     }

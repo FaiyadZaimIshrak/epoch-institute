@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/community">
-<link rel="stylesheet" href="/shared.css?v=44">
+<link rel="stylesheet" href="/shared.css?v=45">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -235,7 +235,7 @@
     </div>
     <div id="newsletter-form-wrap">
       <form class="newsletter-form" id="newsletter-form" novalidate>
-        <input class="form-input" id="nl-email" type="email" placeholder="your@email.com" autocomplete="email">
+        <input class="form-input" id="nl-email" type="email" placeholder="your@email.com" autocomplete="email" aria-label="Your email address">
         <button type="submit" class="form-submit" style="white-space:nowrap;">Subscribe →</button>
       </form>
       <p class="form-success" id="nl-success" style="display:none;">Thank you — we'll be in touch.</p>
@@ -398,8 +398,8 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=28"></script>
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=29"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
 var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];

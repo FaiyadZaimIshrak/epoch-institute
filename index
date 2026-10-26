@@ -27,7 +27,7 @@
 <meta name="twitter:description" content="Five thousand years of states, empires and civilisations: profiles, an encyclopedia, an atlas, country histories and century pages.">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=44">
+<link rel="stylesheet" href="/shared.css?v=45">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -130,6 +130,7 @@
       <span class="quiz-streak" id="quiz-streak"></span>
     </div>
     <div class="quiz quiz-compact" id="quiz"></div>
+    <a class="home-daily-ten" id="home-daily-ten" href="/games#first-daily"><span class="hdt-k">Today&rsquo;s other challenge</span><b>The Daily Ten</b><span class="hdt-d">Ten pairs, the same for everyone today: which came first?</span><span class="hdt-go">Play &rarr;</span></a>
   </div>
   <div class="home-col">
     <div class="home-section-hd">
@@ -147,7 +148,7 @@
     <a class="home-section-more" href="/research">Everything we publish →</a>
   </div>
   <!-- build:home-doors -->
-<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">394 profiles</span><span class="door-t">Profiles</span><span class="door-d">In-depth histories of states and empires: how each rose, lived, fought, governed and fell, with key facts and timelines.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">32,011 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events, institutions and ideas, with 21,801 historical pictures.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,468 states</span><span class="door-t">States</span><span class="door-d">Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">The world in any year: slide through five thousand years and watch states appear and vanish.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">The history of each present-day country, told through the states that lay on its soil.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time: the great powers, key events, people and a map.</span></span></a></li><li><a class="door" href="/explorer"><span class="door-img"><img src="/images/encyclopedia/trajans-column.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">Power curves</span><span class="door-t">Empire Explorer</span><span class="door-d">Compare the rise and fall of nearly four hundred states and empires on one timeline.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">28 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes across profiles and entries, from the Silk Road to the steppe empires.</span></span></a></li></ul>
+<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">394 profiles</span><span class="door-t">Profiles</span><span class="door-d">In-depth histories of states and empires: how each rose, lived, fought, governed and fell, with key facts and timelines.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">32,011 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events, institutions and ideas, with 21,801 historical pictures.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,468 states</span><span class="door-t">States</span><span class="door-d">Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">The history of each present-day country, told through the states that lay on its soil.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">The world in any year: slide through five thousand years and watch states appear and vanish.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time: the great powers, key events, people and a map.</span></span></a></li><li><a class="door" href="/explorer"><span class="door-img"><img src="/images/encyclopedia/trajans-column.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">Power curves</span><span class="door-t">Empire Explorer</span><span class="door-d">Compare the rise and fall of nearly four hundred states and empires on one timeline.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">28 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes across profiles and entries, from the Silk Road to the steppe empires.</span></span></a></li><li><a class="door" href="/today-in-history/"><span class="door-img"><img src="/images/encyclopedia/mesoamerican-long-count-calendar.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">2,202 events</span><span class="door-t">Today in History</span><span class="door-d">What happened on each day of the year, across five thousand years.</span></span></a></li><li><a class="door" href="/speeches/"><span class="door-img"><img src="/images/encyclopedia/pericles.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">60 speeches</span><span class="door-t">Great Speeches</span><span class="door-d">The words that moved history: the setting, the key passage, what followed, and the complete text where it is free to read.</span></span></a></li><li><a class="door" href="/games"><span class="door-img"><img src="/images/encyclopedia/pythian-games.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">Seven games</span><span class="door-t">Games</span><span class="door-d">Picture puzzles, word hunts, timelines and a globe: games with real pictures and real dates, for every age.</span></span></a></li><li><a class="door" href="/kids"><span class="door-img"><img src="/images/encyclopedia/great-pyramid-of-giza.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">For young explorers</span><span class="door-t">Kids corner</span><span class="door-d">Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.</span></span></a></li></ul>
 <!-- /build:home-doors -->
 </section>
 
@@ -235,11 +236,11 @@
   </div>
 </div>
 
-<script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=28"></script>
-<script src="/home-data.js?v=12"></script>
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=29"></script>
+<script src="/home-data.js?v=13"></script>
 <script src="/reading-paths.js?v=3"></script>
-<script src="/quiz.js?v=1"></script>
+<script src="/quiz.js?v=3"></script>
 <script>
 initNav('home');
 
@@ -251,7 +252,7 @@ initNav('home');
   function seeded(n) { var x = Math.sin(day * 9301 + n * 49297) * 233280; return x - Math.floor(x); }
 
   // Featured profiles: 6 per day, one from each of six different regions where possible
-  var pool = EMPIRES.filter(function (e) { return typeof HOME_PICS !== 'undefined' && HOME_PICS[e.name]; })
+  var pool = EMPIRES.filter(function (e) { return typeof HOME_PICS !== 'undefined' && HOME_PICS[e.name] && !HOME_PICS[e.name].hide; })
     .map(function (e, i) { return { e: e, r: seeded(i + 1) }; }).sort(function (a, b) { return a.r - b.r; });
   var picked = [], regions = {};
   pool.forEach(function (x) { if (picked.length < 6 && !regions[x.e.region]) { picked.push(x.e); regions[x.e.region] = 1; } });
@@ -260,7 +261,7 @@ initNav('home');
     var p = HOME_PICS[e.name], s = span(e), info = firstSentence(EMPIRE_INFO[e.name]);
     if (info.length > 150) info = info.slice(0, info.lastIndexOf(' ', 147)) + '…';
     return '<a class="featured-card" href="' + profileUrl(e) + '">' +
-      '<span class="featured-img"><img src="' + escHtml(p.img) + '" alt="' + escHtml(p.name) + '" loading="lazy"></span>' +
+      '<span class="featured-img"><img src="' + escHtml(p.img) + '" alt="' + escHtml(p.name) + '" loading="lazy"' + (p.top != null ? ' style="object-position:center ' + p.top + '%"' : '') + '></span>' +
       '<span class="featured-body"><span class="featured-region">' + escHtml(e.region) + '</span>' +
       '<span class="featured-name">' + escHtml(e.name) + '</span>' +
       '<span class="featured-dates">' + fmtYear(s[0]) + ' – ' + fmtYear(s[1]) + '</span>' +
@@ -317,6 +318,7 @@ initNav('home');
   var hs = document.getElementById('home-search'), hi = document.getElementById('home-search-input');
   hs.addEventListener('submit', function (e) { e.preventDefault(); openSiteSearch(hi.value); hi.value = ''; });
   hi.addEventListener('input', function () { if (hi.value.length >= 2) { var v = hi.value; hi.value = ''; openSiteSearch(v); } });
+  hi.addEventListener('focus', function () { if (window.warmSiteSearch) warmSiteSearch(); }, { once: true });
 })();
 
 // ── Article modal (announcements) ─────────────────────────────────────────────
@@ -447,7 +449,8 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
       '</div>' +
       '<p class="tih-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
       '<p class="tih-title">' + escHtml(ev.title) + '</p>' +
-      '<p class="tih-desc">' + escHtml(ev.description) + '</p>' + tihTags(ev) +
+      // html: the description with its encyclopedia links, written by the builder (data/days)
+      '<p class="tih-desc">' + (ev.html || escHtml(ev.description)) + '</p>' + tihTags(ev) +
     '</div>';
   }
 
@@ -460,7 +463,7 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
     '</div>';
   }
 
-  function renderStrip(events, intlDay, pic) {
+  function renderStrip(events, intlDay, pic, hero) {
     if (!events.length && !intlDay) return;
     var strip   = document.getElementById('tih-strip');
     var dateEl  = document.getElementById('tih-strip-date');
@@ -475,14 +478,18 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
       '<span class="tih-date-full">' + escHtml(fullDate) + '</span>' +
       '<span class="tih-date-sep"></span>';
 
-    var count    = intlDay ? 2 : 3;
+    // one full row of three: the picture and the international day take a place each, events fill the rest
+    var count    = Math.max(1, 3 - (pic ? 1 : 0) - (intlDay ? 1 : 0));
+    // the picture is the day's anniversary event, captioned, so that event is not dealt again as a card
+    var rest     = pic && hero ? events.filter(function(ev) { return ev !== hero; }) : events;
     // Kids mode leaves out the day's wars and killings (fewer cards rather than a grim one), unless that is all there is
-    var gentle   = document.documentElement.getAttribute('data-kids') === '1' && typeof kidsGentle === 'function' ? events.filter(function(ev) { return kidsGentle(ev.title, ev.description); }) : events;
-    var pool     = (gentle.length ? gentle : events).slice().sort(function() { return Math.random() - 0.5; });
-    var selected = pool.slice(0, Math.min(count, pool.length));
+    var gentle   = document.documentElement.getAttribute('data-kids') === '1' && typeof kidsGentle === 'function' ? rest.filter(function(ev) { return kidsGentle(ev.title, ev.description); }) : rest;
+    var pool     = (gentle.length ? gentle : rest).slice().sort(function() { return Math.random() - 0.5; });
+    var selected = pool.slice(0, Math.min(count, pool.length)).sort(function(a, b) { return a.year - b.year; });
 
     var html = '';
-    if (pic) html += '<a class="tih-strip-pic" href="/today-in-history/' + daySlug + '" aria-hidden="true" tabindex="-1"><img src="' + escHtml(pic) + '" alt="" loading="lazy"></a>';
+    if (pic) html += '<a class="tih-strip-pic" href="/today-in-history/' + daySlug + '"' + (hero ? '' : ' aria-hidden="true" tabindex="-1"') + '><img src="' + escHtml(pic) + '" alt="" loading="lazy">' +
+      (hero ? '<span class="tih-strip-cap"><b>' + escHtml(hero.yearDisplay || String(hero.year)) + '</b>' + escHtml(hero.title) + '</span>' : '') + '</a>';
     if (intlDay) html += buildPinnedCard(intlDay);
     var evMap = {};
     selected.forEach(function(ev, i) {
@@ -551,17 +558,27 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
     dateEl.innerHTML = '<span class="tih-date-sep"></span><span class="tih-date-dow">' + escHtml(dowLabel) + '</span><span class="tih-date-full">' + escHtml(fullDate) + '</span><span class="tih-date-sep"></span>';
   })();
 
-  Promise.all([
-    fetch('/data/history.json?v=2').then(function(r) { if (!r.ok) throw new Error(); return r.json(); }),
-    fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; }),
-    fetch('/data/tih-thumbs.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
-  ]).then(function(results) {
-    var events  = results[0][key] || [];
-    var intlDay = results[1][key] || null;
-    renderStrip(events, intlDay, results[2][key] || null);
+  // today's events, international day and picture: one small file per day (data/days, written by the builder)
+  var DAYS_V = 'b16cc19104';
+  fetch('/data/days/' + key + '.json?v=' + DAYS_V).then(function(r) { if (!r.ok) throw new Error(); return r.json(); }).then(function(d) {
+    var evs = d.events || [], pic = d.pic ? d.pic[0] : null, hero = evs[d.hero];
+    // Kids mode: no picture from a battle or a killing
+    if (pic && hero && document.documentElement.getAttribute('data-kids') === '1' && typeof kidsGentle === 'function' && !kidsGentle(hero.title, hero.description)) pic = null;
+    renderStrip(evs, d.intl || null, pic, pic ? hero : null);
   }).catch(function() {
     document.getElementById('tih-strip').style.display = 'none';
   });
+})();
+
+// ── The Daily Ten's card: today's score once played (games.js keeps it in epoch-games: daily-<UTC day>, daily-streak) ──
+(function () {
+  var a = document.getElementById('home-daily-ten'); if (!a) return;
+  var g = {}; try { g = JSON.parse(localStorage.getItem('epoch-games') || '{}') || {}; } catch (e) {}
+  var day = Math.floor(Date.now() / 864e5), t = g['daily-' + day], sk = g['daily-streak'];
+  if (t && t.m && t.m.length >= 10) {
+    a.querySelector('.hdt-d').textContent = 'You scored ' + (t.m.match(/1/g) || []).length + ' of 10 today' + (sk && sk.n > 1 && sk.last === day ? ', ' + sk.n + ' days in a row' : '') + '. A new ten tomorrow.';
+    a.querySelector('.hdt-go').innerHTML = 'Your squares &rarr;';
+  } else if (t && t.m) a.querySelector('.hdt-go').innerHTML = 'Carry on: ' + t.m.length + ' of 10 &rarr;';
 })();
 
 // ── First visit and returning readers: the /start invitation, and "continue where you left off" ──

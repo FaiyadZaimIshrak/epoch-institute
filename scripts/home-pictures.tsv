@@ -1,0 +1,174 @@
+# Featured-profile pictures chosen by eye (Oct 2026), read by make-home-data.ps1 (scratchpad design/).
+# Columns: profile name <TAB> encyclopedia entry slug whose picture is used ("-" = no picture) [<TAB> options]
+# Options, space-separated: "hide" (the picture still serves the daily quiz, but the profile is left out of the home
+# page's featured rotation); "top=NN" (where a tall picture's crop sits, 0-100 from the top; the cards use 30).
+# Profiles not listed keep the automatic pick (the section picture most distinctive to the profile).
+Abbasid Caliphate	samarra
+Achaemenid Empire	persepolis
+Adal Sultanate	harar
+Akkadian Empire	victory-stele-of-naram-sin
+Aksumite Empire	ezana
+Almoravid Empire	marrakesh
+Assyrian Empire	nimrud
+Austro-Hungarian Empire	franz-joseph-i
+Ayyubid Empire	cairo-citadel
+Aztec Empire	templo-mayor
+Babylonian Empire	hammurabi
+Carolingian Empire	charlemagne
+Chaldean Empire	ishtar-gate
+Darfur Sultanate	marrah-mountains
+Egyptian Empire New Kingdom	abu-simbel
+Elamite Confederation	chogha-zanbil
+Fatimid Caliphate	al-azhar
+Garamantian Empire	garama
+German Empire	proclamation-of-the-german-empire
+Ghana Empire	walata
+Gokturk Empire	kul-tigin	top=85
+Hittite Empire	hattusa
+Holy Roman Empire	frederick-barbarossa
+Italian Empire	victor-emmanuel-iii
+Jolof Empire	senegal-river
+Kaabu Empire	kaabu-empire
+Khazar Khaganate	sarkel
+Kushite Empire	meroe
+Lunda Empire	chibinda-ilunga	top=0
+Macedonian Empire	alexander-the-great
+Mamluk Sultanate	barquq
+Ming Empire	great-wall-of-china
+Mitanni Empire	amarna-letters
+Mongol Empire	genghis-khan
+Mutapa Empire	zambezi
+Oyo Empire	yorubaland
+Ptolemaic Empire	cleopatra-vii
+Punic Empire	hannibal
+Qing Empire	kangxi-emperor
+Rashidun Caliphate	medina
+Seljuk Empire	jameh-mosque-of-isfahan
+Sokoto Caliphate	zaria
+Song Dynasty	emperor-taizu-of-song
+Spanish Empire	el-escorial
+Swedish Empire	gustavus-adolphus
+Timurid Empire	samarkand
+Tokugawa Shogunate	edo-castle
+Xiongnu Empire	orkhon-river
+Teotihuacan	pyramid-of-the-sun
+Iroquois Confederacy	great-law-of-peace
+New Spain	antonio-de-mendoza
+New France	seminaire-de-quebec
+Viceroyalty of Peru	lima
+Suriname	suriname-river
+United States	united-states-capitol
+Republic of Chile	santiago
+Gran Colombia	simon-bolivar
+Republic of Peru	jose-de-san-martin
+Federal Republic of Central America	francisco-morazan
+Republic of Bolivia	la-paz
+Venezuela	caracas
+Republic of Ecuador	galapagos-islands
+Republic of Honduras	tegucigalpa
+Republic of El Salvador	san-salvador
+Republic of Guatemala	antigua-guatemala
+Mexico	benito-juarez
+Canada	ottawa
+Commonwealth of Australia	sydney
+Republic of Panama	panama-city
+Shang dynasty	houmuwu-ding
+Western Zhou	mao-gong-ding
+State of Qin	qin-shi-huang
+Saka	issyk-kurgan
+Kushan Empire	kanishka
+Balhae	sanggyeong
+Ghaznavid Empire	mahmud-of-ghazni
+Kazakh Khanate	syr-darya
+Dzungar Khanate	amursana
+Republic of China	sun-yat-sen
+People's Republic of China	tiananmen
+Numidia	medracen
+Roman Egypt	philae
+Hafsid Sultanate	tunis
+Funj Sultanate	funj-sultanate-of-sennar
+French Algeria	algiers
+Sparta	leonidas-i
+Celtiberians	numantia
+Roman Republic	roman-senate
+Antigonid Kingdom of Macedonia	aigai
+Roman Britain	bath
+Franks	childeric-i
+Kingdom of Gwynedd	dolwyddelan-castle
+Dal Riata	dunadd
+Avar Khaganate	tisza
+Volga Bulgaria	-
+Emirate of Córdoba	mosque-cathedral-of-cordoba
+Duchy of Saxony	henry-the-lion
+Kingdom of Norway	urnes-stave-church
+Duchy of Aquitaine	eleanor-of-aquitaine
+Caliphate of Córdoba	abd-al-rahman-iii
+Duchy of Lorraine	place-stanislas
+Kingdom of Sweden	gustav-i-of-sweden
+Kingdom of Castile	alfonso-x-of-castile
+Principality of Achaea	andravida
+Canton of Zürich	grossmunster
+Crown of Castile	isabella-i-of-castile
+Kingdom of Hungary (1301-1526)	visegrad
+Kingdom of Sardinia	turin
+Republic of Ragusa	dubrovnik
+Crimean Khanate	bakhchysarai
+Kingdom of Ireland	dublin-castle
+Dutch Republic	amsterdam
+Principality of Liechtenstein	hans-adam-i-prince-of-liechtenstein
+United Kingdom of Great Britain and Ireland	palace-of-westminster
+Austrian Empire	vienna
+Grand Duchy of Hesse	mathildenhohe
+Grand Duchy of Luxembourg	fortress-of-luxembourg
+German Confederation	klemens-von-metternich
+Kingdom of Belgium	brussels
+Kingdom of the Netherlands	binnenhof
+Russian SFSR	moscow-kremlin
+Kingdom of Yugoslavia	belgrade
+Czechoslovakia	prague-castle
+Republic of Latvia	janis-cakste
+United Kingdom	london
+Nazi Germany	nuremberg	hide
+Uruk	warka-vase
+Ebla	ebla
+Mari	statue-of-ebih-il	top=8
+Kingdom of Judah	siloam-tunnel
+Kingdom of Saba	sirwah
+Kingdom of Pontus	amasya
+Empire of Trebizond	trabzon
+Aq Qoyunlu	uzun-hasan
+South Yemen	aden
+Sunda Kingdom	sunda-kelapa
+Vijayanagara Empire	chandragiri
+Bahmani Sultanate	firuz-shah-bahmani
+Ayutthaya Kingdom	wat-phra-si-sanphet
+Sulu Sultanate	jamalul-kiram-ii
+Mataram Sultanate	kotagede
+Konbaung dynasty	shwebo
+Kingdom of Nepal	kathmandu
+Nguyen dynasty	gia-long
+Indonesia	sukarno
+Myanmar	yangon
+Republic of India	red-fort
+Malaysia	putrajaya
+Hausa kingdoms	gobarau-minaret
+Ajuran Sultanate	fakr-ad-din-mosque
+Kingdom of Ankole	ntare-v
+Barotseland	kuomboka
+Swazi Kingdom	labotsibeni-mdluli
+Zulu Kingdom	dingane
+Liberia	joseph-jenkins-roberts
+Sultanate of Zanzibar	house-of-wonders
+Union of South Africa	pretoria
+Republic of South Africa	nelson-mandela
+Uganda	kampala
+Tanzania	mount-kilimanjaro
+Republic of Venice	venice
+Kingdom of England	westminster-abbey
+Second Bulgarian Empire	ivan-asen-ii
+Free Hanseatic City of Bremen	bremen-roland
+Grand Duchy of Lithuania	trakai
+Qajar Iran	golestan-palace
+Kingdom of Magadha	bimbisara
+Hyderabad State	charminar
+Cape Colony	cape-town

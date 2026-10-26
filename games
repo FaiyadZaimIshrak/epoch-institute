@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=44">
+<link rel="stylesheet" href="/shared.css?v=45">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Seven history games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -117,12 +117,12 @@
   <!-- Which Came First? -->
   <section class="gm-game" id="game-first" role="tabpanel" aria-labelledby="tab-first" hidden>
     <div class="gm-head">
-      <p class="gm-howto">Two moments from history: tap the one that came first (for a person, the year they were born). Every right answer grows your streak, and the gaps get closer as you go. You have three lives.</p>
-      <div class="gm-seg" data-for="first" role="group" aria-label="Which pictures"><button type="button" data-v="all">Everything</button><button type="button" data-v="people">People</button><button type="button" data-v="events">Events and works</button></div>
+      <p class="gm-howto" id="first-howto">Two moments from history: tap the one that came first (for a person, the year they were born). Every right answer grows your streak, and the gaps get closer as you go. You have three lives.</p>
+      <div class="gm-seg" data-for="first" role="group" aria-label="Which game"><button type="button" data-v="daily">Daily Ten</button><button type="button" data-v="all">Everything</button><button type="button" data-v="people">People</button><button type="button" data-v="events">Events and works</button></div>
     </div>
     <div class="gm-stats">
       <span class="gm-lives" id="first-lives" aria-label="3 lives left"></span>
-      <span class="gm-stat"><b id="first-streak">0</b> in a row</span>
+      <span class="gm-stat"><b id="first-streak">0</b> <span id="first-unit">in a row</span></span>
       <span class="gm-stat gm-stat-best" id="first-best"></span>
       <button type="button" class="gm-again" id="first-new">New game &#8635;</button>
     </div>
@@ -206,8 +206,8 @@
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=97751474c0' };</script>
 <script src="/games-emblems.js?v=1"></script>
 <script src="/games-data.js?v=37651e0ffd"></script>
-<script src="/shared-nav.js?v=28"></script>
-<script src="/games.js?v=1"></script>
+<script src="/shared-nav.js?v=29"></script>
+<script src="/games.js?v=2"></script>
 
 </body>
 </html>

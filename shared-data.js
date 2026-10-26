@@ -443,8 +443,8 @@ const REGION_PALETTES = {
 };
 
 const ERAS = {
-  all:           [-2700, 2025],
-  ancient:       [-2700, -500],
+  all:           [-3500, 2025],
+  ancient:       [-3500, -500],
   classical:     [-500,   500],
   medieval:      [500,   1400],
   "early-modern":[1400,  1800],
@@ -464,7 +464,7 @@ const TRANSLATIONS = {
     tab_ssa:"Sub-Saharan Africa", tab_eur:"Europe", tab_isl:"Islamic & Middle East",
     tab_cea:"Central & East Asia", tab_sea:"South & SE Asia", tab_ame:"Americas",
     era_placeholder:"— Select Era —", era_all:"Full Timeline",
-    era_ancient:"Ancient (2700–500 BCE)", era_classical:"Classical (500 BCE–500 CE)",
+    era_ancient:"Ancient (3500–500 BCE)", era_classical:"Classical (500 BCE–500 CE)",
     era_medieval:"Medieval (500–1400 CE)", era_earlymodern:"Early Modern (1400–1800 CE)",
     era_modern:"Modern (1800–1980 CE)",
     labels:"Labels", search_placeholder:"Search empire…",
@@ -495,7 +495,7 @@ EMPIRES.forEach(e => {
 });
 
 const ERA_LABELS = {
-  'ancient':      'Ancient  (2700 – 500 BCE)',
+  'ancient':      'Ancient  (3500 – 500 BCE)',
   'classical':    'Classical  (500 BCE – 500 CE)',
   'medieval':     'Medieval  (500 – 1400 CE)',
   'early-modern': 'Early Modern  (1400 – 1800 CE)',

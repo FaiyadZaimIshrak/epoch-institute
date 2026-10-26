@@ -40,8 +40,12 @@ initNav('games');
     function paint() { Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === val)); }); }
     box.addEventListener('click', function (e) { var b = e.target.closest('button[data-v]'); if (!b || b.getAttribute('data-v') === val) return; val = b.getAttribute('data-v'); setBest('lvl-' + name, val); paint(); onChange(val); });
     paint();
-    return function () { return val; };
+    var get = function () { return val; };
+    get.set = function (v) { if (v === val || !box.querySelector('button[data-v="' + v + '"]')) return false; val = v; setBest('lvl-' + name, val); paint(); onChange(val); return true; };   // e.g. #first-daily
+    return get;
   }
+  // a result to share (phones: the share sheet; elsewhere it is copied, with the game's address)
+  function shareBtn(text, hash) { return '<button type="button" class="gm-share" data-share-text="' + escHtml(text) + '" data-share-url="https://the-epoch-institute.org/games#' + (hash || current) + '">Share your score</button>'; }
   // the curated pictures (games-data.js): only pictures that show their subject, with years worked out by the builder
   var CARDS = (typeof GAME_CARDS !== 'undefined' ? GAME_CARDS : []).map(function (c) {
     return { slug: c[0], name: c[1], kind: c[2], lo: c[3], hi: c[4], dates: c[5], img: c[6], big: c[7], cap: c[8], kid: c[9], credit: c[10], src: c[11] };
@@ -162,7 +166,7 @@ initNav('games');
     if (isBest) { setBest('pairs' + P.n, { f: P.flips, t: t }); $('pairs-best').textContent = 'Best ' + P.flips + ' flips · ' + fmtTime(t); }
     var d = $('pairs-done');
     d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">All ' + P.n + ' pairs found</p><p class="gm-done-s">' + P.flips + ' flips · ' + fmtTime(t) + '</p>' +
-      (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>';
+      (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<div class="gm-done-row">' + shareBtn('Emblem Pairs: all ' + P.n + ' pairs in ' + P.flips + ' flips at The Epoch Institute') + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div></div>';
     d.hidden = false; confetti(d);
     d.querySelector('.gm-done-btn').addEventListener('click', newPairs);
     d.querySelector('.gm-done-btn').focus({ preventScroll: true });
@@ -276,7 +280,7 @@ initNav('games');
     if (isBest) { setBest('order' + n, O.checks); $('order-best').textContent = 'Best ' + O.checks + (O.checks === 1 ? ' check' : ' checks'); }
     var d = $('order-done');
     d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (O.checks === 1 ? 'Right first time!' : 'In order after ' + O.checks + ' checks') + '</p>' +
-      (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<button type="button" class="hero-cta gm-done-btn">Next round</button></div>';
+      (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<div class="gm-done-row">' + shareBtn('Order the Ages: ' + (O.checks === 1 ? 'right first time' : 'in order after ' + O.checks + ' checks') + ' at The Epoch Institute') + '<button type="button" class="hero-cta gm-done-btn">Next round</button></div></div>';
     d.hidden = false; confetti(d);
     d.querySelector('.gm-done-btn').addEventListener('click', function () { newOrder(); $('order-list').scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' }); });
   }
@@ -550,7 +554,7 @@ initNav('games');
       var d = $('hunt-done');
       d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + H.score + ' of 500 points</p>' + (isBest ? '<p class="gm-newbest">New best!</p>' : '') +
         '<ol class="gm-sum">' + H.results.map(function (r) { return '<li><span>' + escHtml(r.n) + '</span><span>' + r.km.toLocaleString('en-GB') + ' km</span><b>+' + r.pts + '</b></li>'; }).join('') + '</ol>' +
-        '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>';
+        '<div class="gm-done-row">' + shareBtn('Globe Hunt: ' + H.score + ' of 500 points at The Epoch Institute') + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div></div>';
       d.hidden = false; confetti(d);
       d.querySelector('.gm-done-btn').addEventListener('click', newGame);
       view = null; draw();
@@ -561,9 +565,49 @@ initNav('games');
   // ── Which Came First? ────────────────────────────────────────────────────────
   // two curated pictures; tap the earlier one. The gaps narrow as the streak grows (a ladder, not a lottery), no
   // picture comes back in the same game, and the kinds of pair change from one round to the next. Three lives.
+  // The Daily Ten: the same ten pairs for everyone on a given day (UTC, like the daily quiz), closer and closer, one go.
   var First = (function () {
-    var F = { id: 0, lives: 3, streak: 0, used: {}, pair: null, kinds: '', busy: false, done: false };
-    var level = seg('first', 'all', function () { newGame(); });
+    var F = { id: 0, lives: 3, streak: 0, used: {}, pair: null, kinds: '', busy: false, done: false, daily: null };
+    var level = seg('first', 'daily', function () { newGame(); });   // newcomers start with the Daily Ten
+    var QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 9, 26) / 864e5);   // Daily Ten #1: 26 October 2026
+    var BANDS = [[900, 0], [600, 0], [400, 2500], [250, 1500], [180, 900], [120, 600], [80, 400], [50, 250], [30, 150], [15, 90]];
+    function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+    // a pair that answers itself (Hammurabi and the Code of Hammurabi) is never dealt
+    function related(a, c) { var x = a.name.toLowerCase(), y = c.name.toLowerCase(); return x.indexOf(y) >= 0 || y.indexOf(x) >= 0; }
+    // the day's ten pairs: a seeded shuffle of the pictures fit for every reader, then for each step of the ladder the
+    // first unused pair inside its gap
+    function dailyPairs(day) {
+      var r = rng(day * 7919 + 17), pool = DATED.filter(function (c) { return c.kid; }), used = {}, out = [];
+      for (var i = pool.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = pool[i]; pool[i] = pool[j]; pool[j] = t; }
+      BANDS.forEach(function (b) {
+        var found = null;
+        for (var pass = 0; pass < 2 && !found; pass++) {
+          for (var a = 0; a < pool.length && !found; a++) {
+            if (used[pool[a].slug]) continue;
+            for (var c = a + 1; c < pool.length; c++) {
+              if (used[pool[c].slug] || pool[a].lo === pool[c].lo || related(pool[a], pool[c])) continue;
+              var d = Math.abs(pool[a].lo - pool[c].lo);
+              if (pass ? d >= 15 : d >= b[0] && (!b[1] || d <= b[1])) { found = [pool[a], pool[c]]; break; }
+            }
+          }
+        }
+        if (!found) return;
+        used[found[0].slug] = used[found[1].slug] = 1;
+        if (r() < 0.5) found.reverse();
+        out.push(found);
+      });
+      return out;
+    }
+    function isDaily() { return level() === 'daily'; }
+    function dailySaved() { return best('daily-' + QDAY) || { m: '' }; }
+    function paintMode() {
+      var d = isDaily();
+      $('first-lives').hidden = d; $('first-new').hidden = d;
+      $('first-unit').textContent = d ? 'of 10 right' : 'in a row';
+      $('first-howto').textContent = d
+        ? 'Today’s ten pairs, the same for everyone: tap the one that came first (for a person, the year they were born). The gaps close as you go. One go a day: share your score, and come back tomorrow for a new ten.'
+        : 'Two moments from history: tap the one that came first (for a person, the year they were born). Every right answer grows your streak, and the gaps get closer as you go. You have three lives.';
+    }
     var LADDER = [[3, 800, 0], [6, 300, 2200], [10, 120, 900], [15, 50, 400], [1e9, 15, 180]];   // [while the streak is below, nearest gap, widest gap (0: any)]
     function pool() {
       var lv = level(), k = kids();
@@ -576,7 +620,7 @@ initNav('games');
       if (p.length < 2) return null;
       for (var t = 0; t < 800; t++) {
         var a = p[Math.floor(Math.random() * p.length)], c = p[Math.floor(Math.random() * p.length)];
-        if (a === c || a.lo === c.lo) continue;
+        if (a === c || a.lo === c.lo || related(a, c)) continue;
         var d = Math.abs(a.lo - c.lo);
         if (d < b[0] && t < 700) continue;
         if (b[1] && d > b[1] && t < 500) continue;
@@ -590,15 +634,24 @@ initNav('games');
       $('first-lives').setAttribute('aria-label', F.lives + (F.lives === 1 ? ' life' : ' lives') + ' left');
     }
     function newGame() {
-      F.id++; F.lives = 3; F.streak = 0; F.used = {}; F.kinds = ''; F.done = false;
-      $('first-streak').textContent = '0'; $('first-done').hidden = true; lives();
+      F.id++; F.lives = 3; F.streak = 0; F.used = {}; F.kinds = ''; F.done = false; F.daily = null;
+      paintMode();
+      $('first-streak').textContent = '0'; $('first-done').hidden = true; $('first-done').classList.remove('gm-done-inline'); lives();
+      if (isDaily()) {   // today's ten, resumed where it was left (one go a day)
+        F.daily = { pairs: dailyPairs(QDAY), m: String(dailySaved().m || '') };
+        F.streak = (F.daily.m.match(/1/g) || []).length; $('first-streak').textContent = F.streak;
+        var sk = best('daily-streak'); $('first-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+        if (F.daily.m.length >= F.daily.pairs.length) { finishDaily(); return; }
+        next(); return;
+      }
       var b = best('first-' + level()); $('first-best').textContent = b ? 'Best ' + b + ' in a row' : '';
       next();
     }
     function next() {
-      F.busy = false; F.pair = pick(); $('first-res').innerHTML = '';
+      F.busy = false; F.pair = F.daily ? F.daily.pairs[F.daily.m.length] : pick();
+      $('first-res').innerHTML = F.daily ? '<p class="gm-fc-count">Pair ' + (F.daily.m.length + 1) + ' of ' + F.daily.pairs.length + '</p>' : '';
       if (!F.pair) { $('first-duel').innerHTML = '<p class="gm-howto">There are not enough pictures for this choice.</p>'; return; }
-      F.pair.forEach(function (c) { F.used[c.slug] = 1; });
+      if (!F.daily) F.pair.forEach(function (c) { F.used[c.slug] = 1; });
       $('first-duel').innerHTML = F.pair.map(function (c, i) {
         return '<button type="button" class="gm-fc" data-i="' + i + '" style="--d:' + (reduce ? 0 : i * 90) + 'ms"><span class="gm-fc-img"><img src="' + escHtml(c.img) + '" alt="" draggable="false"></span>' +
           '<span class="gm-fc-b"><span class="gm-fc-k">' + escHtml(c.kind) + '</span><span class="gm-fc-n">' + escHtml(c.name) + '</span><span class="gm-fc-y"></span></span></button>';
@@ -613,11 +666,20 @@ initNav('games');
       });
       var d = Math.abs(pr[0].lo - pr[1].lo), a = pr[first], c = pr[1 - first];
       function born(x) { return x.kind === 'Person' ? ' (born ' + fmtYear(x.lo) + ')' : ''; }
+      var why = '<p class="gm-fc-v">' + (ok ? 'Right!' : 'Not this time.') + ' <span>' + entryLink(a) + born(a) + ' came ' + d.toLocaleString('en-GB') + ' year' + (d === 1 ? '' : 's') + ' before ' + entryLink(c) + born(c) + '.</span></p>' +
+        '<p class="gm-credit">' + [credit(pr[0]), credit(pr[1])].filter(function (x) { return x; }).join('<br>') + '</p>';
+      if (F.daily) {   // no lives: every answer counts, saved at once
+        F.daily.m += ok ? '1' : '0'; setBest('daily-' + QDAY, { m: F.daily.m });
+        if (ok) { F.streak++; $('first-streak').textContent = F.streak; bump($('first-streak')); }
+        Sfx.play(ok ? 'good' : 'bad');
+        var last = F.daily.m.length >= F.daily.pairs.length;
+        $('first-res').innerHTML = why + '<button type="button" class="hero-cta gm-fc-next">' + (last ? 'See your score' : 'Next pair') + ' &rarr;</button>';
+        var db = $('first-res').querySelector('.gm-fc-next'); db.addEventListener('click', last ? finishDaily : next); db.focus({ preventScroll: true });
+        return;
+      }
       if (ok) { F.streak++; $('first-streak').textContent = F.streak; bump($('first-streak')); Sfx.play('good'); }
       else { F.lives--; lives(); bump($('first-lives')); Sfx.play('bad'); }
-      $('first-res').innerHTML = '<p class="gm-fc-v">' + (ok ? 'Right!' : 'Not this time.') + ' <span>' + entryLink(a) + born(a) + ' came ' + d.toLocaleString('en-GB') + ' year' + (d === 1 ? '' : 's') + ' before ' + entryLink(c) + born(c) + '.</span></p>' +
-        '<p class="gm-credit">' + [credit(pr[0]), credit(pr[1])].filter(function (x) { return x; }).join('<br>') + '</p>' +
-        (F.lives ? '<button type="button" class="hero-cta gm-fc-next">Next pair &rarr;</button>' : '');
+      $('first-res').innerHTML = why + (F.lives ? '<button type="button" class="hero-cta gm-fc-next">Next pair &rarr;</button>' : '');
       if (!F.lives) { setTimeout(function () { if (id === F.id) finish(); }, reduce ? 0 : 1300); return; }
       var nb = $('first-res').querySelector('.gm-fc-next'); nb.addEventListener('click', next); nb.focus({ preventScroll: true });
     }
@@ -628,13 +690,40 @@ initNav('games');
       if (isBest) { setBest('first-' + lv, F.streak); $('first-best').textContent = 'Best ' + F.streak + ' in a row'; }
       var dn = $('first-done');
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + F.streak + ' in a row</p><p class="gm-done-s">' + (F.streak >= 12 ? 'A true time traveller!' : F.streak >= 6 ? 'A fine sense of time.' : 'Every game teaches a few dates.') + '</p>' +
-        (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>';
+        (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<div class="gm-done-row">' + shareBtn('Which Came First? ' + F.streak + ' in a row at The Epoch Institute') + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>' +
+        '<p class="gm-done-more"><a href="#first-daily" data-daily>Try today&rsquo;s Daily Ten &rarr;</a></p></div>';
       dn.hidden = false; confetti(dn); Sfx.play('win');
       dn.querySelector('.gm-done-btn').addEventListener('click', newGame); dn.querySelector('.gm-done-btn').focus({ preventScroll: true });
+      dn.querySelector('[data-daily]').addEventListener('click', function (e) { e.preventDefault(); level.set('daily'); });
     }
+    // the Daily Ten's score: the day's squares to share, the streak of days played, the time to the next ten
+    function finishDaily() {
+      F.done = true;
+      var m = F.daily.m, n = (m.match(/1/g) || []).length, tot = F.daily.pairs.length, num = Math.max(1, QDAY - DAY0 + 1);
+      var sk = best('daily-streak') || { n: 0, last: 0 };
+      if (sk.last !== QDAY) { sk = { n: sk.last === QDAY - 1 ? sk.n + 1 : 1, last: QDAY }; setBest('daily-streak', sk); }
+      var squares = m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join('');
+      var dn = $('first-done'), s = n >= 9 ? 3 : n >= 6 ? 2 : 1;
+      dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + n + ' of ' + tot + ' right</p>' +
+        '<p class="gm-daily-sq" aria-label="' + n + ' right, ' + (tot - n) + ' wrong">' + squares + '</p>' +
+        '<p class="gm-done-s">Daily Ten #' + num + (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '') + ' · a new ten in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn('Epoch Daily Ten #' + num + ': ' + n + '/' + tot + '\n' + squares, 'first-daily') + '<button type="button" class="hero-cta gm-done-btn">Play the endless game</button></div>' + newsletterPrompt('daily-ten') + '</div>';
+      // the board is emptied, so the card stands in its place instead of over it (an overlay of an empty board clipped it)
+      dn.classList.add('gm-done-inline'); dn.hidden = false; $('first-duel').innerHTML = ''; $('first-res').innerHTML = '';
+      if (!dailyShown) { confetti(dn); Sfx.play('win'); }
+      dailyShown = true;
+      dn.querySelector('.gm-done-btn').addEventListener('click', function () { level.set('all'); });
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    var dailyShown = false;
     $('first-new').addEventListener('click', newGame);
     var started = false;
-    return { show: function () { if (!started) { started = true; newGame(); } } };
+    function show(sub) {
+      if (sub === 'daily' && !isDaily()) { started = true; level.set('daily'); return; }   // #first-daily
+      if (!started) { started = true; newGame(); }
+    }
+    return { show: show, sub: show };
   })();
   MODS.first = First;
 
@@ -756,7 +845,7 @@ initNav('games');
         if (id !== Z.id) return;
         var nx = nextAfter(c), dn = $('puzzle-done');
         dn.innerHTML = '<div class="gm-done-card gm-pz-card">' + stars(s) + '<p class="gm-done-t">' + escHtml(c.name) + '</p><p class="gm-done-s">' + Z.moves + ' moves' + (t ? ' · ' + fmtTime(t) : '') + '</p>' +
-          '<p class="gm-pz-cap">' + escHtml(c.cap) + ' ' + entryLink(c, 'Read more &rarr;') + '</p><button type="button" class="hero-cta gm-done-btn">' + (nx && nx !== c ? 'Next picture &rarr;' : 'Play again') + '</button></div>';
+          '<p class="gm-pz-cap">' + escHtml(c.cap) + ' ' + entryLink(c, 'Read more &rarr;') + '</p><div class="gm-done-row">' + shareBtn('Picture Puzzle: ' + c.name + ' in ' + Z.moves + ' moves at The Epoch Institute') + '<button type="button" class="hero-cta gm-done-btn">' + (nx && nx !== c ? 'Next picture &rarr;' : 'Play again') + '</button></div></div>';
         dn.hidden = false; confetti(dn);
         dn.querySelector('.gm-done-btn').addEventListener('click', function () { load(nx || c); });
         dn.querySelector('.gm-done-btn').focus({ preventScroll: true });
@@ -876,7 +965,7 @@ initNav('games');
         var dn = $('words-done'), i = THEMES.indexOf(W.theme), nx = THEMES[(i + 1) % THEMES.length];
         dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">All ' + W.list.length + ' words found</p><p class="gm-done-s">' + escHtml(W.theme.t) + ' · ' + fmtTime(t) + '</p>' + (isBest ? '<p class="gm-newbest">New best!</p>' : '') +
           '<p class="gm-pz-cap"><a href="/kids#t-' + escHtml(W.theme.k) + '">Explore ' + escHtml(W.theme.t) + ' in the Kids corner &rarr;</a></p>' +
-          '<button type="button" class="hero-cta gm-done-btn">Next theme: ' + escHtml(nx.t) + ' &rarr;</button></div>';
+          '<div class="gm-done-row">' + shareBtn('Word Hunt, ' + W.theme.t + ': all ' + W.list.length + ' words in ' + fmtTime(t) + ' at The Epoch Institute') + '<button type="button" class="hero-cta gm-done-btn">Next theme: ' + escHtml(nx.t) + ' &rarr;</button></div></div>';
         dn.hidden = false; confetti(dn);
         dn.querySelector('.gm-done-btn').addEventListener('click', function () { choose(nx.k); });
         dn.querySelector('.gm-done-btn').focus({ preventScroll: true });
@@ -1000,7 +1089,7 @@ initNav('games');
       var dn = $('year-done');
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + Y.score + ' of ' + (Y.plan.length * 100) + ' points</p>' + (isBest ? '<p class="gm-newbest">New best!</p>' : '') +
         '<ol class="gm-sum">' + Y.results.map(function (r) { return '<li><span>' + escHtml(r.n) + '</span><span>' + (r.d ? r.d.toLocaleString('en-GB') + ' yrs off' : 'spot on') + '</span><b>+' + r.pts + '</b></li>'; }).join('') + '</ol>' +
-        '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>';
+        '<div class="gm-done-row">' + shareBtn('Guess the Year: ' + Y.score + ' of ' + (Y.plan.length * 100) + ' points at The Epoch Institute') + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div></div>';
       dn.hidden = false; confetti(dn); Sfx.play('win');
       dn.querySelector('.gm-done-btn').addEventListener('click', newGame); dn.querySelector('.gm-done-btn').focus({ preventScroll: true });
     }

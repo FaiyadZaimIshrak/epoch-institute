@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=44">
+<link rel="stylesheet" href="/shared.css?v=45">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -159,8 +159,8 @@
 
 </main>
 
-<script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=28"></script>
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=29"></script>
 <script src="/epoch-stats.js?v=3"></script>
 <script>
 // ── Era classifier ────────────────────────────────────────────────────────────
@@ -205,7 +205,7 @@ function buildProfileGallery() {
   var html;
   if (PF.sort === 'chrono') {
     html = ERA_ORDER.map(function (eraKey) {
-      var emps = list.filter(function (e) { return getEmpireEra(e) === eraKey; });
+      var emps = list.filter(function (e) { return getEmpireEra(e) === eraKey; }).sort(function (a, b) { return pfYears(a)[0] - pfYears(b)[0]; });   // oldest first
       if (!emps.length) return '';
       return '<div class="profile-era-group" data-era="' + eraKey + '"><h2 class="profile-era-title">' + ERA_LABELS[eraKey] + '</h2>' +
         '<div class="profile-thumb-grid">' + emps.map(pfCard).join('') + '</div></div>';

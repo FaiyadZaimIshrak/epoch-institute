@@ -404,6 +404,8 @@ function KindOf($e) { if ($e.conflict) { 'conflict' } else { $e.type } }
 function TagLabel($e) { ($e.tags | ForEach-Object { if ($TAGNAME.ContainsKey($_)) { $TAGNAME[$_] } else { $_ } }) -join ' · ' }
 function TagGroup($e) { foreach ($g in $TAGS) { foreach ($tg in $e.tags) { if ($g[2] -contains $tg) { return $g[0] } } }; return $null }   # first group (in $TAGS order) the entry belongs to
 function TypeLine($e) { if ($e.conflict) { (TagLabel $e) + $(if ($e.dates) { ' · ' + $e.dates } else { '' }) } elseif ($SING.ContainsKey($e.type)) { $SING[$e.type] } else { $e.type } }
+# an entry without a picture: a small sign of its kind (shared.css .ph-person, .ph-conflict, ...) instead of a blank square
+function PhSpan($e) { '<span class="ph ph-' + $(if ($e.conflict) { 'conflict' } else { [string]$e.type }) + '" aria-hidden="true"></span>' }
 
 Say 'reading encyclopedia-links.js'
 $elText = [IO.File]::ReadAllText("$Repo\encyclopedia-links.js", $U8)
@@ -569,6 +571,16 @@ $CPAGE = @{}; foreach ($m in $CSTATES.Keys) { if ($CSTATES[$m].Count -ge 3) { $C
 if (@($CPAGE.Values | Group-Object | Where-Object { $_.Count -gt 1 }).Count -or $CPAGE.Values -contains 'index') { throw 'country slugs are not unique' }
 function CountryLink([string]$m) { if ($CPAGE.ContainsKey($m)) { '<a href="/countries/' + $CPAGE[$m] + '">' + (Hx $m) + '</a>' } else { Hx $m } }
 function TheCountry([string]$m) { if ($m -match '^(United |Bahamas|Central African|Comoros|Cook Islands|Czech|Democratic Republic|Dominican Republic|Gambia|Maldives|Marshall Islands|Netherlands|Philippines|Republic of)') { "the $m" } else { $m } }
+# a register state's name in running text: "the" before titles ("the Kingdom of Ndongo", "the People's Republic of
+# China"), state nouns ("the Inca Empire", "the Xia dynasty", "the New Republic (Brazil)") and peoples ("the Ligures")
+$STATENOUN = 'Kingdoms?|Duchy|Grand Duchy|Archduchy|Principality|County|Republic|State|Lordship|(Prince-)?(Arch)?[Bb]ishopric|Sultanate|Emirate|Colony|colony|Commonwealth|Chiefdom|chiefdom|Province|Canton|Khanate|Khaganate|Caliphate|Empire|Federation|Union|Confederation|Confederacy|Protectorate|Viceroyalty|Captaincy|Earldom|Marquisate|Margraviate|Landgraviate|Electorate|Imamate|Mandate|Territory|Dominion|Tsardom|Despotate|Exarchate|Judicate|Taifa|Beylik|Regency|Satrapy|Settlement|Presidency|Shogunate|[Dd]ynasty|League|Horde|Raj|Banate|Governorate|Company|Order'
+function StateThe($n) {
+  [string]$s = $n['n']; [string]$t = $n['t']
+  $c = TheCountry $s; if ($c -ne $s) { return $c }
+  if ($s -match ('^(?:[A-Z][\w''-]* ){0,3}(?:' + $STATENOUN + ') of\b') -or $s -match ('\b(?:' + $STATENOUN + ')(?:\s*\([^)]*\))?$')) { return "the $s" }
+  if ($s -notmatch ' ' -and ($t -match 'tribal|tribe|people' -or $s -match '(ans|ians|ii|ites)$') -and $s -match '(s|i|ae)$') { return "the $s" }
+  return $s
+}
 
 # centuries: /centuries/<slug> (the encyclopedia's century labels: 13th century = 1200-1299, 5th century BCE = 499-400 BCE)
 function CentRange([string]$label) { $n = [int]([regex]::Match($label, '^\d+').Value); if ($label.EndsWith('BCE')) { return @((-$n * 100 + 1), (-($n - 1) * 100)) }; return @((($n - 1) * 100), ($n * 100 - 1)) }
@@ -663,7 +675,7 @@ foreach ($e in $ENT) {
   if ($KIDS.ContainsKey($e.slug)) {
     $warKids = @($KIDS[$e.slug] | Sort-Object @{ e = { if ($_.year -eq [int]::MinValue) { 1 } else { 0 } } }, @{ e = { $_.year } }, @{ e = { $_.i } })
     [void]$body.Append('<section><h2 class="enc-section-title">Battles and settlements</h2><ul class="enc-seealso">')
-    foreach ($o in $warKids) { [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { '<span class="ph"></span>' }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TagLabel $o) + $(if ($o.dates) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>') }
+    foreach ($o in $warKids) { [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TagLabel $o) + $(if ($o.dates) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>') }
     [void]$body.Append("</ul></section>`n")
   }
   $own = if ($ESP) { $ESP[$e.slug] } else { $null }
@@ -684,7 +696,7 @@ foreach ($e in $ENT) {
   $related = @($SEE[$e.i]); if (-not $related.Count) { $related = @($SEE2[$e.i]) }
   if ($related.Count) {
     [void]$body.Append('<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso">')
-    foreach ($ix in $related) { $o = $ENT[$ix]; [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { '<span class="ph"></span>' }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $(if ($o.conflict) { TagLabel $o } else { $SING[$o.type] })) + '</span></span></a></li>') }
+    foreach ($ix in $related) { $o = $ENT[$ix]; [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $(if ($o.conflict) { TagLabel $o } else { $SING[$o.type] })) + '</span></span></a></li>') }
     [void]$body.Append("</ul></section>`n")
   }
   $pv = if ($e.i -gt 0) { $ENT[$e.i - 1] } else { $null }; $nx = if ($e.i -lt $NENT - 1) { $ENT[$e.i + 1] } else { $null }
@@ -940,43 +952,64 @@ function MonthCal([int]$mo, [string]$curKey) {
   foreach ($k in ($DAYS | Where-Object { [int]$_.Substring(0, 2) -eq $mo })) { $dn = [int]$k.Substring(3, 2); if ($k -eq $curKey) { [void]$sb.Append('<li><span aria-current="page">' + $dn + '</span></li>') } else { [void]$sb.Append('<li><a href="/today-in-history/' + (DaySlug $k) + '">' + $dn + '</a></li>') } }
   return $sb.Append('</ol></div>').ToString()
 }
-function EvImg($ev) {   # the event's picture: the first linked encyclopedia entry that has one
+# the event's picture: an entry its title names first (Chaucer's portrait for "Geoffrey Chaucer dies in London"),
+# then its own linked entries
+function EvImg($ev, $titleSlugs) {
+  foreach ($s in @($titleSlugs)) { if ($s -and $BY.ContainsKey($s) -and $BY[$s].img) { return , @([string]$BY[$s].img, [string]$s) } }
   foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0]) -and $BY[[string]$lk[0]].img) { return , @([string]$BY[[string]$lk[0]].img, [string]$lk[0]) } }
   return $null
 }
+function LinkedSlugs([string]$html) { @([regex]::Matches($html, 'href="/encyclopedia/([^"]+)"') | ForEach-Object { $_.Groups[1].Value }) }
 function YearsAgo([double]$y) { [int]($YEAR - $y) }
-$TIHTHUMB = @{}   # day -> the hero event's picture, for the home page strip
+New-Item -ItemType Directory -Force "$Repo\data\days" | Out-Null
+$daysAll = New-Object Text.StringBuilder; $nDayPics = 0; $nDayLinks = 0
 for ($di = 0; $di -lt $DAYS.Count; $di++) {
   $k = $DAYS[$di]; $evs = @($HIST[$k] | Sort-Object @{ e = { [double]$_['year'] } }); $lbl = DayLabel $k; $path = '/today-in-history/' + (DaySlug $k)
+  # the descriptions are linked with the encyclopedia's patterns, compiled only in full builds: -SkipEntries keeps the
+  # day pages (and data/days) as they are, like the entry pages
+  if ($SkipEntries) { $WROTE[(Join-Path $Repo ('today-in-history\' + (DaySlug $k))).ToLowerInvariant()] = 1; $SMNEW[$path] = if ($SM.ContainsKey($path)) { $SM[$path] } else { @('', $TODAY) }; continue }
   $pk = $DAYS[($di - 1 + $DAYS.Count) % $DAYS.Count]; $nk = $DAYS[($di + 1) % $DAYS.Count]
   $crumb = Crumbs @(@('Home', '/'), @('Today in History', '/today-in-history/'), @($lbl, $null))
-  # the day's anniversary piece: the roundest centenary, else half-century, else quarter, else the oldest event
-  $hero = $null; $heroScore = -1
-  foreach ($ev in $evs) {
-    $ago = YearsAgo ([double]$ev['year']); if ($ago -le 0) { continue }
-    $sc = if ($ago % 100 -eq 0) { 300 } elseif ($ago % 50 -eq 0) { 200 } elseif ($ago % 25 -eq 0) { 100 } else { 0 }
-    if ((EvImg $ev)) { $sc += 10 }
-    if ($sc -gt $heroScore) { $heroScore = $sc; $hero = $ev }
+  # each event's description with gold links (its year decides between entries of one name), and the entries its title names
+  $DH = New-Object string[] $evs.Count; $TS = New-Object object[] $evs.Count
+  for ($ei = 0; $ei -lt $evs.Count; $ei++) {
+    $yr = [double]$evs[$ei]['year']; $cx = @($yr, $yr)
+    $DH[$ei] = LinkDesc ([string]$evs[$ei]['description']) '' $cx; $nDayLinks += ([regex]::Matches($DH[$ei], 'class="enc-link"')).Count
+    $TS[$ei] = LinkedSlugs (LinkDesc ([string]$evs[$ei]['title']) '' $cx)
   }
+  # the day's anniversary piece: the roundest centenary, else half-century, else quarter, else the oldest event
+  $hero = $null; $heroScore = -1; $heroIdx = -1
+  for ($ei = 0; $ei -lt $evs.Count; $ei++) {
+    $ago = YearsAgo ([double]$evs[$ei]['year']); if ($ago -le 0) { continue }
+    $sc = if ($ago % 100 -eq 0) { 300 } elseif ($ago % 50 -eq 0) { 200 } elseif ($ago % 25 -eq 0) { 100 } else { 0 }
+    if ((EvImg $evs[$ei] $TS[$ei])) { $sc += 10 }
+    if ($sc -gt $heroScore) { $heroScore = $sc; $hero = $evs[$ei]; $heroIdx = $ei }
+  }
+  $heroImg = if ($hero) { EvImg $hero $TS[$heroIdx] } else { $null }; if ($heroImg) { $nDayPics++ }
   $sb = New-Object Text.StringBuilder(20000)
   [void]$sb.Append('<main id="main" class="day-page ref-page">' + "`n<div class=`"day-wrap`">`n" + $crumb[0] + "`n")
   [void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">' + $lbl + ' in history</h1><p class="ref-lede">' + $evs.Count + ' events that happened on ' + $lbl + ', from ' + (Hx ([string]$evs[0]['yearDisplay'])) + ' to ' + (Hx ([string]$evs[-1]['yearDisplay'])) + ".</p></header>`n")
   $intlDay = $INTL[$k]
   if ($intlDay) { [void]$sb.Append('<div class="tih-pinned-card"><p class="tih-pinned-label">International day</p><p class="tih-pinned-title">' + (Hx ([string]$intlDay['name'])) + '</p><p class="tih-pinned-desc">' + (Hx ([string]$intlDay['description'])) + "</p></div>`n") }
   [void]$sb.Append('<ol class="day-events">')
-  foreach ($ev in $evs) {
-    $evTags = ''
+  $ej = New-Object Collections.Generic.List[string]   # the same day for the home page strip and the Today in History page
+  for ($ei = 0; $ei -lt $evs.Count; $ei++) {
+    $ev = $evs[$ei]; $evTags = ''; $lkJs = New-Object Collections.Generic.List[string]
     if ($ev['profile']) { $evTags += '<a class="tih-tag tih-tag-profile" href="' + (Hx ([string]$ev['profile'][1])) + '">' + (Hx ([string]$ev['profile'][0])) + '</a>' }
-    foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0])) { $evTags += '<a class="tih-tag enc-link" href="/encyclopedia/' + $lk[0] + '">' + (Hx ([string]$lk[1])) + '</a>' } }
+    foreach ($lk in @($ev['links'])) { if ($lk -and $BY.ContainsKey([string]$lk[0])) { $evTags += '<a class="tih-tag enc-link" href="/encyclopedia/' + $lk[0] + '">' + (Hx ([string]$lk[1])) + '</a>'; $lkJs.Add('[' + (Js ([string]$lk[0])) + ',' + (Js ([string]$lk[1])) + ']') } }
     $ago = YearsAgo ([double]$ev['year'])
-    $isHero = ($hero -and [object]::ReferenceEquals($ev, $hero))
-    $im = if ($isHero) { EvImg $ev } else { $null }   # one strong picture per day: only the anniversary card
-    if ($im) { $TIHTHUMB[$k] = $im[0] }
+    $isHero = ($ei -eq $heroIdx)
+    $im = if ($isHero) { $heroImg } else { $null }   # one strong picture per day: only the anniversary card
     $yd = [string]$ev['yearDisplay']; if ($yd -match '^\d+$') { $yd += ' CE' }   # bare years read as CE, like everywhere else
     $thumb = if ($im) { '<a class="tih-event-thumb" href="/encyclopedia/' + $im[1] + '" tabindex="-1" aria-hidden="true"><img src="' + (Hx $im[0]) + '" alt="" loading="lazy" width="168" height="112"></a>' } else { '' }
-    [void]$sb.Append('<li class="tih-event-card' + $(if ($im) { ' tih-has-thumb' } else { '' }) + $(if ($isHero) { ' tih-event-hero' } else { '' }) + '">' + $(if ($isHero) { '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p>' } else { '' }) + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + (Hx $yd) + $(if ($ago -gt 0) { ' <span class="tih-ago">' + $ago.ToString('N0', $INV) + ' years ago</span>' } else { '' }) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + (Hx ([string]$ev['description'])) + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</div></li>')
+    [void]$sb.Append('<li class="tih-event-card' + $(if ($im) { ' tih-has-thumb' } else { '' }) + $(if ($isHero) { ' tih-event-hero' } else { '' }) + '">' + $(if ($isHero) { '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p>' } else { '' }) + $thumb + '<div class="tih-event-main"><p class="tih-event-year">' + (Hx $yd) + $(if ($ago -gt 0) { ' <span class="tih-ago">' + $ago.ToString('N0', $INV) + ' years ago</span>' } else { '' }) + '</p><h2 class="tih-event-title">' + (Hx ([string]$ev['title'])) + '</h2><p class="tih-event-desc">' + $DH[$ei] + '</p>' + $(if ($evTags) { '<div class="tih-tags">' + $evTags + '</div>' } else { '' }) + '</div></li>')
+    $ej.Add('{"year":' + ([double]$ev['year']).ToString($INV) + ',"yearDisplay":' + (Js $yd) + ',"title":' + (Js ([string]$ev['title'])) + ',"description":' + (Js ([string]$ev['description'])) + ',"html":' + (Js $DH[$ei]) + ',"links":[' + ($lkJs -join ',') + ']' + $(if ($ev['profile']) { ',"profile":[' + (Js ([string]$ev['profile'][0])) + ',' + (Js ([string]$ev['profile'][1])) + ']' } else { '' }) + '}')
   }
   [void]$sb.Append("</ol>`n")
+  # data/days/<mm-dd>.json: one day for the home page strip and the Today in History page (not the whole year)
+  $dayJs = '{"k":' + (Js $k) + ',"events":[' + ($ej -join ',') + '],"hero":' + $heroIdx + ',"pic":' + $(if ($heroImg) { '[' + (Js $heroImg[0]) + ',' + (Js $heroImg[1]) + ']' } else { 'null' }) + ',"intl":' + $(if ($intlDay) { '{"name":' + (Js ([string]$intlDay['name'])) + ',"description":' + (Js ([string]$intlDay['description'])) + '}' } else { 'null' }) + "}`n"
+  if ([EpochBuild.W]::WriteIfChanged("$Repo\data\days\$k.json", $dayJs)) { $NWRITE++ }
+  [void]$daysAll.Append($dayJs)
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring days"><a class="prev" rel="prev" href="/today-in-history/' + (DaySlug $pk) + '"><span class="lbl">&larr; Previous day</span><span class="nm">' + (DayLabel $pk) + '</span></a><a class="next" rel="next" href="/today-in-history/' + (DaySlug $nk) + '"><span class="lbl">Next day &rarr;</span><span class="nm">' + (DayLabel $nk) + "</span></a></nav>`n")
   [void]$sb.Append('<section class="day-cal-wrap" aria-label="Other days of ' + $MONTHS[[int]$k.Substring(0, 2) - 1] + '">' + (MonthCal ([int]$k.Substring(0, 2)) $k) + '<p><a class="enc-random-link" href="/today-in-history/">All days of the year &rarr;</a></p></section>' + "`n</div>`n</main>`n")
   $title = "What Happened on $lbl in History — The Epoch Institute"
@@ -984,12 +1017,15 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
   $ogD = '/images/og/day-' + (DaySlug $k) + '.jpg'
   Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; img = $(if (Test-Path (Join-Path $Repo ($ogD.TrimStart('/') -replace '/', '\'))) { $ogD }); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + '}'); nav = 'today'; body = $sb.ToString() })
 }
-# the home page strip's picture of the day (hero event's image per day)
-$tihSb = New-Object Text.StringBuilder; [void]$tihSb.Append('{')
-$first = $true; foreach ($k in $DAYS) { if ($TIHTHUMB[$k]) { if (-not $first) { [void]$tihSb.Append(',') }; $first = $false; [void]$tihSb.Append("`n" + (Js $k) + ':' + (Js ([string]$TIHTHUMB[$k]))) } }
-[void]$tihSb.Append("`n}`n")
-if ([EpochBuild.W]::WriteIfChanged("$Repo\data\tih-thumbs.json", $tihSb.ToString())) { $NWRITE++ }
-Say "day pages: $($DAYS.Count), day pictures: $($TIHTHUMB.Count)"
+# the day files' version, stamped into the two pages that read them (var DAYS_V = '...')
+if (-not $SkipEntries) {
+  $DAYSV = [EpochBuild.W]::Sha1($daysAll.ToString()).Substring(0, 10)
+  foreach ($f in @("$Repo\index", "$Repo\today-in-history\index")) {
+    $t = [IO.File]::ReadAllText($f, $U8); $t2 = [regex]::Replace($t, "var DAYS_V(\s*)= '[0-9a-f]*'", "var DAYS_V`$1= '$DAYSV'")
+    if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged($f, $t2)) { $NWRITE++ }
+  }
+  Say "day pages: $($DAYS.Count), day pictures: $nDayPics, gold links in day events: $nDayLinks"
+} else { Say 'day pages: kept (-SkipEntries)' }
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Profiles (shared-data.js EMPIRES, epoch-stats.js) and shared pieces for the country and century pages
@@ -1040,7 +1076,7 @@ function ProfCard([string]$url, [string]$name, [string]$years, [string]$sub) {  
   return '<li><a class="pcard" href="' + $url + '">' + (LogoImg $logoName 52) + '<span class="pcard-b"><span class="pcard-n">' + (Hx $name) + '</span><span class="pcard-y">' + (Hx $years) + '</span>' + $(if ($sub) { '<span class="pcard-s">' + $sub + '</span>' } else { '' }) + '</span></a></li>'
 }
 function EntTile($o) {   # an encyclopedia entry as a picture tile (as "See also" on entry pages)
-  '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { '<span class="ph"></span>' }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TypeLine $o) + $(if ($o.dates -and -not $o.conflict) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>'
+  '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + $o.img + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx ((TypeLine $o) + $(if ($o.dates -and -not $o.conflict) { ' · ' + $o.dates } else { '' }))) + '</span></span></a></li>'
 }
 $ESCORE = @{}; foreach ($e in $ENT) { $stMent = if ($ESM -and $ESM[$e.slug]) { [int]$ESM[$e.slug][0] } else { 0 }; $ESCORE[$e.slug] = $e.emp.Count * 3 + [Math]::Min($stMent, 30) + $(if ($e.img) { 4 } else { 0 }) }
 function TopEntries($list, [int]$take) { @($list | Sort-Object @{ e = { $ESCORE[$_.slug] }; Descending = $true }, @{ e = { $_.i } } | Select-Object -First $take) }
@@ -1096,8 +1132,8 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
   $crumb = Crumbs @(@('Home', '/'), @('Countries', '/countries/'), @($m, $null))
   $sb = New-Object Text.StringBuilder(60000)
   [void]$sb.Append('<main id="main" class="cty-page ref-page">' + "`n<div class=`"cty-wrap`">`n" + $crumb[0] + "`n")
-  $lede = $CLIST.Count.ToString('N0') + ' recorded states lay in what is now ' + (Hx (TheCountry $m)) + $(if ($first) { ', from ' + (Hx ([string]$first['n'])) + ' (' + (Hx (Yr $first['s'])) + ')' } else { '' }) +
-    $(if ($living.Count) { ' to ' + (Hx (TheCountry ([string]$living[-1]['n']))) } else { '' }) + '. ' + $(if ($profs.Count) { $profs.Count.ToString() + ' of them ' + $(if ($profs.Count -eq 1) { 'has' } else { 'have' }) + ' a full profile' + $(if ($ruled.Count) { ', and ' + $ruled.Count + ' outside ' + $(if ($ruled.Count -eq 1) { 'power' } else { 'powers' }) + ' ruled here' } else { '' }) + '.' } elseif ($ruled.Count) { $ruled.Count.ToString() + ' outside ' + $(if ($ruled.Count -eq 1) { 'power' } else { 'powers' }) + ' ruled here.' } else { '' })
+  $lede = $CLIST.Count.ToString('N0') + ' recorded states lay in what is now ' + (Hx (TheCountry $m)) + $(if ($first) { ', from ' + (Hx (StateThe $first)) + ' (' + (Hx (Yr $first['s'])) + ')' } else { '' }) +
+    $(if ($living.Count) { ' to ' + (Hx (StateThe $living[-1])) } else { '' }) + '. ' + $(if ($profs.Count) { $profs.Count.ToString() + ' of them ' + $(if ($profs.Count -eq 1) { 'has' } else { 'have' }) + ' a full profile' + $(if ($ruled.Count) { ', and ' + $ruled.Count + ' outside ' + $(if ($ruled.Count -eq 1) { 'power' } else { 'powers' }) + ' ruled here' } else { '' }) + '.' } elseif ($ruled.Count) { $ruled.Count.ToString() + ' outside ' + $(if ($ruled.Count -eq 1) { 'power' } else { 'powers' }) + ' ruled here.' } else { '' })
   [void]$sb.Append('<header class="ref-head cty-head"><p class="cty-kicker">Country history' + $(if ($cont) { ' · ' + (Hx $cont) } else { '' }) + '</p><h1 class="research-title">History of ' + (Hx (TheCountry $m)) + '</h1><p class="ref-lede">' + $lede + "</p></header>`n")
   [void]$sb.Append($mapHtml + "`n")
   if ($profs.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Profiles</h2><ul class="pcards">' + (($profs | ForEach-Object { ProfCard ([string]$_['p']) ([string]$_['n']) (Span $_) $(if ([string]$_['t'] -and [string]$_['t'] -ne 'other') { Hx (TypeLabel $_['t']) } else { '' }) }) -join '') + "</ul></section>`n") }
@@ -1264,7 +1300,17 @@ Emit '/encyclopedia/glossary' (Page @{ title = $title; desc = $desc; path = '/en
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 $rpText = [IO.File]::ReadAllText("$Repo\reading-paths.js", $U8); $i0 = $rpText.IndexOf('var READING_PATHS = ') + 20; $i1 = $rpText.LastIndexOf('];')
 $RP = @($JSS.DeserializeObject([EpochBuild.W]::QuoteKeys($rpText.Substring($i0, $i1 - $i0 + 1)))); $rpText = $null
-function PathThumbs($p) { (@($p['steps']) | Where-Object { $_['img'] } | Select-Object -First 3 | ForEach-Object { '<img src="' + (Hx ([string]$_['img'])) + '" alt="" loading="lazy" width="64" height="64">' }) -join '' }
+# a path card's strip: three different pictures (two entries can share one Commons file), maps and diagrams only when
+# there is nothing else
+function PicSource([string]$img) { if ($img -match '^/images/encyclopedia/(.+)\.jpg$' -and $BY.ContainsKey($Matches[1]) -and $BY[$Matches[1]].cr) { [string]$BY[$Matches[1]].cr['source'] } else { '' } }
+function PicIsChart([string]$src) { $src -match '(?i)\.svg$' -or $src -match '(?i)(?<![a-z])(map|maps|mapa|carte|karte|locator|location|diagram|plan|territor(y|ies)|extent)(?![a-z])' }
+function PathThumbs($p) {
+  $seen = @{}; $all = New-Object Collections.Generic.List[object]
+  foreach ($st in @($p['steps'])) { $im = [string]$st['img']; if (-not $im) { continue }; $src = PicSource $im; $key = if ($src) { $src } else { $im }; if ($seen.ContainsKey($key)) { continue }; $seen[$key] = 1; $all.Add([pscustomobject]@{ im = $im; chart = [bool](PicIsChart $src) }) }
+  $pick = @($all | Where-Object { -not $_.chart } | Select-Object -First 3)
+  if ($pick.Count -lt 3) { $pick += @($all | Where-Object { $_.chart } | Select-Object -First (3 - $pick.Count)) }
+  ($pick | ForEach-Object { '<img src="' + (Hx $_.im) + '" alt="" loading="lazy" width="64" height="64">' }) -join ''
+}
 $RTYPE = @{ strategist = 'the Strategist'; navigator = 'the Navigator'; thinker = 'the Thinker'; chronicler = 'the Chronicler'; builder = 'the Builder'; timekeeper = 'the Timekeeper' }
 function PathTypes($p) {   # the reader types this path suits (from /start), as a small badge line
   if (-not $p['types'] -or -not @($p['types']).Count) { return '' }
@@ -1313,6 +1359,7 @@ $spMiss = New-Object Collections.Generic.List[string]
 # the complete texts of the speeches in the public domain, imported by scripts/fetch-speech-texts.ps1
 $SPTXT = @{}
 foreach ($f in @(Get-ChildItem "$Repo\data\speech-texts\*.json" -ErrorAction SilentlyContinue)) { $o = $JSS.DeserializeObject([IO.File]::ReadAllText($f.FullName, $U8)); $SPTXT[[string]$o['slug']] = $o }
+function SpPortrait($s) { $sl = [string]$s['speakerSlug']; if ($sl -and $BY.ContainsKey($sl) -and $BY[$sl].img) { [string]$BY[$sl].img } else { '' } }
 function SpChip([string]$pair) {
   $q = $pair -split '\|', 2
   if ($q[0] -match '^/encyclopedia/(.+)$' -and -not $BY.ContainsKey($Matches[1])) { $spMiss.Add($q[0]) }
@@ -1335,13 +1382,19 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   if ($ft) { $ftw = [int]$ft['words']; $ftm = [Math]::Max(1, [int][Math]::Round($ftw / 200.0)) }
   $sb = New-Object Text.StringBuilder(9000)
   [void]$sb.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n<article class=`"sp-view`">`n")
-  [void]$sb.Append('<header class="sp-head"><p class="featured-region">' + (Hx ([string]$s['display'])) + ' · ' + (Hx ([string]$s['place'])) + '</p><h1 class="sp-title">' + (Hx ([string]$s['title'])) + '</h1><p class="sp-by">' + $spk + "</p></header>`n")
+  # the speaker's portrait (the speaker's entry picture; its credit is on that entry)
+  $por = SpPortrait $s
+  [void]$sb.Append('<header class="sp-head">' + $(if ($por) { '<a class="sp-portrait" href="/encyclopedia/' + $s['speakerSlug'] + '" tabindex="-1" aria-hidden="true"><img src="' + $por + '" alt="" width="104" height="104"></a>' } else { '' }) + '<p class="featured-region">' + (Hx ([string]$s['display'])) + ' · ' + (Hx ([string]$s['place'])) + '</p><h1 class="sp-title">' + (Hx ([string]$s['title'])) + '</h1><p class="sp-by">' + $spk + "</p></header>`n")
   [void]$sb.Append('<section class="sp-sec"><h2>The setting</h2><p>' + (Hx ([string]$s['before'])) + "</p></section>`n")
   [void]$sb.Append('<section class="sp-sec"><h2>' + $(if ($isPara) { 'In substance' } else { 'Key passage' }) + '</h2>' +
     $(if ($isPara) { '<p class="sp-para">' + (Hx ([string]$s['excerpt'])) + '</p>' } else { '<blockquote class="sp-quote"><p>' + (Hx ([string]$s['excerpt'])) + '</p></blockquote>' }) +
     '<p class="sp-source">' + (Hx ([string]$s['source'])) + $(if ($isCopy) { ' Quoted briefly: the full text is still under copyright.' } else { '' }) + '</p>' +
-    $(if ($ft) { '<div class="sp-full"><a class="sp-full-link" href="#full-text">Read the full speech<span aria-hidden="true"> &#8595;</span></a><span class="sp-full-src">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' min</span></div>' }
-      elseif ($full) { '<div class="sp-full"><a class="sp-full-link" href="' + (Hx $full[0]) + '" target="_blank" rel="noopener">Read the complete text<span aria-hidden="true"> &#8599;</span></a><span class="sp-full-src">' + (Hx $full[1]) + '</span></div>' } else { '' }) + "</section>`n")
+    '<div class="sp-full">' +
+    # a short full text stands open just below: the button is only for a folded one
+    $(if ($ft -and $ftw -gt 600) { '<a class="sp-full-link" href="#full-text">Read the full speech<span aria-hidden="true"> &#8595;</span></a><span class="sp-full-src">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' min</span>' }
+      elseif (-not $ft -and $full) { '<a class="sp-full-link" href="' + (Hx $full[0]) + '" target="_blank" rel="noopener">Read the complete text<span aria-hidden="true"> &#8599;</span></a><span class="sp-full-src">' + (Hx $full[1]) + '</span>' } else { '' }) +
+    $(if (-not $isPara) { '<button type="button" class="sp-share" data-share-text="' + (Hx ([string][char]0x201C + [string]$s['excerpt'] + [string][char]0x201D + ' ' + [string][char]0x2014 + ' ' + [string]$s['speaker'] + ', ' + [string]$s['title'])) + '">Share this quote</button>' } else { '' }) +
+    "</div></section>`n")
   if ($ft) {
     $ftb = New-Object Text.StringBuilder
     foreach ($fp in @($ft['paras'])) { [void]$ftb.Append('<p>' + ((Hx ([string]$fp)) -replace "`n", '<br>') + '</p>') }
@@ -1374,8 +1427,8 @@ foreach ($era in $SPERA.Keys) {
   $grp = @($SPS | Where-Object { [string]$_['era'] -eq $era }); if (-not $grp.Count) { continue }
   [void]$ib.Append('<section class="sp-era"><h2 class="ref-sec-title">' + $SPERA[$era] + '</h2><div class="sp-grid">')
   foreach ($s in $grp) {
-    $para = ([string]$s['kind'] -eq 'paraphrase')
-    [void]$ib.Append('<a class="sp-card" href="/speeches/' + $s['slug'] + '"><span class="sp-card-k">' + (Hx ([string]$s['display'])) + '</span><span class="sp-card-t">' + (Hx ([string]$s['title'])) + '</span><span class="sp-card-q">' + $(if ($para) { 'In substance: ' + (Hx ([string]$s['excerpt'])) } else { '&ldquo;' + (Hx ([string]$s['excerpt'])) + '&rdquo;' }) + '</span><span class="sp-card-by">' + (Hx ([string]$s['speaker'])) + $(if ($SPTXT.ContainsKey([string]$s['slug'])) { '<span class="sp-card-ft"> · full text</span>' } elseif ($s['full']) { '<span class="sp-card-ft"> · complete text linked</span>' } else { '' }) + '</span></a>')
+    $para = ([string]$s['kind'] -eq 'paraphrase'); $por = SpPortrait $s
+    [void]$ib.Append('<a class="sp-card' + $(if ($por) { ' has-pic' } else { '' }) + '" href="/speeches/' + $s['slug'] + '">' + $(if ($por) { '<span class="sp-card-pic"><img src="' + $por + '" alt="" loading="lazy" width="56" height="56"></span>' } else { '' }) + '<span class="sp-card-k">' + (Hx ([string]$s['display'])) + '</span><span class="sp-card-t">' + (Hx ([string]$s['title'])) + '</span><span class="sp-card-q">' + $(if ($para) { 'In substance: ' + (Hx ([string]$s['excerpt'])) } else { '&ldquo;' + (Hx ([string]$s['excerpt'])) + '&rdquo;' }) + '</span><span class="sp-card-by">' + (Hx ([string]$s['speaker'])) + $(if ($SPTXT.ContainsKey([string]$s['slug'])) { '<span class="sp-card-ft"> · full text</span>' } elseif ($s['full']) { '<span class="sp-card-ft"> · complete text linked</span>' } else { '' }) + '</span></a>')
   }
   [void]$ib.Append("</div></section>`n")
 }
@@ -1537,7 +1590,24 @@ SetBlock "$Repo\kids" 'kids-facts' ('<script>var KIDS_FACTS = [' + ($kdFacts -jo
 Say ("kids corner: {0} themes, {1} pictures, {2} facts{3}" -f $kdThemes.Count, (($kdThemes | ForEach-Object { $_.items.Count } | Measure-Object -Sum).Sum), $kdFacts.Count, $(if ($kdBad.Count) { '; skipped: ' + ($kdBad -join ', ') } else { '' }))
 $az = '<ul class="ref-az">' + (($LETTERS | Where-Object { $byLetter[$_].Count } | ForEach-Object { '<li><a href="/encyclopedia/browse/' + $_ + '"><b>' + (LetterLabel $_) + '</b><span>' + $byLetter[$_].Count.ToString('N0') + '</span></a></li>' }) -join '') + '</ul>'
 $cents = '<ul class="ref-cent-list">' + (($CENTORDER | ForEach-Object { '<li><a href="/encyclopedia/conflicts/' + (CenturySlug $_) + '">' + (Hx ($_.Substring(0, 1).ToUpperInvariant() + $_.Substring(1))) + ' <span>' + $CENT[$_].Count + '</span></a></li>' }) -join '') + '</ul>'
-SetBlock "$Repo\encyclopedia\index" 'browse' ('<section class="ref-browse" id="enc-browse" aria-labelledby="enc-az-title"><h2 class="ref-sec-title" id="enc-az-title">Browse A&ndash;Z</h2>' + $az +
+# Discover: eight pictures a day from the most-mentioned entries (in profiles and state histories), one of each kind
+$DKINDS = @('person', 'conflict', 'place', 'work', 'idea', 'polity', 'group', 'event')
+$dByKind = @{}; foreach ($dk in $DKINDS) { $dByKind[$dk] = New-Object Collections.Generic.List[object] }
+foreach ($e in $ENT) {
+  if (-not $e.img) { continue }
+  # a picture of the thing itself: no maps or diagrams, and no flags or coats of arms (most states would show one)
+  $dsrc = PicSource $e.img; if ((PicIsChart $dsrc) -or $dsrc -match '(?i)(?<![a-z])(flag|flags|coat[_ ]of[_ ]arms|emblem|seal)(?![a-z])') { continue }
+  $dk = if ($e.conflict) { 'conflict' } elseif ($e.type -eq 'institution') { 'polity' } else { [string]$e.type }
+  if (-not $dByKind.ContainsKey($dk)) { continue }
+  $stm = if ($ESM) { $ESM[$e.slug] } else { $null }
+  $dByKind[$dk].Add([pscustomobject]@{ e = $e; n = $e.emp.Count * 3 + $(if ($stm) { [int]$stm[0] } else { 0 }) })
+}
+$dTop = @{}; foreach ($dk in $DKINDS) { $dTop[$dk] = @($dByKind[$dk] | Sort-Object -Property @{ e = { $_.n }; Descending = $true }, @{ e = { $_.e.name } } | Select-Object -First 10) }
+$dRows = New-Object Collections.Generic.List[string]; $dTiles = New-Object Collections.Generic.List[string]
+for ($di2 = 0; $di2 -lt 10; $di2++) { foreach ($dk in $DKINDS) { if ($di2 -lt $dTop[$dk].Count) { $o = $dTop[$dk][$di2].e; $tl = TypeLine $o; $dRows.Add('[' + (Js $o.slug) + ',' + (Js $o.name) + ',' + (Js ($tl -replace ' · .*$', '')) + ',' + (Js $o.img) + ']'); if ($dTiles.Count -lt 8) { $dTiles.Add('<li><a class="disc-card" href="/encyclopedia/' + $o.slug + '"><span class="disc-img"><img src="' + $o.img + '" alt="" loading="lazy"></span><span class="disc-b"><span class="disc-t">' + (Hx $o.name) + '</span><span class="disc-k">' + (Hx ($tl -replace ' · .*$', '')) + '</span></span></a></li>') } } } }
+$discover = '<h2 class="ref-sec-title" id="enc-disc-title">Discover</h2><ul class="enc-disc" id="enc-disc">' + ($dTiles -join '') + '</ul>' +
+  '<script>(function () { var D = [' + ($dRows -join ',') + '], d = Math.floor(Date.now() / 864e5), u = document.getElementById("enc-disc"), h = ""; function x(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;"); } for (var i = 0; i < 8 && D.length; i++) { var r = D[(d * 8 + i) % D.length]; h += "<li><a class=\"disc-card\" href=\"/encyclopedia/" + x(r[0]) + "\"><span class=\"disc-img\"><img src=\"" + x(r[3]) + "\" alt=\"\" loading=\"lazy\"></span><span class=\"disc-b\"><span class=\"disc-t\">" + x(r[1]) + "</span><span class=\"disc-k\">" + x(r[2]) + "</span></span></a></li>"; } u.innerHTML = h; })();</script>'
+SetBlock "$Repo\encyclopedia\index" 'browse' ('<section class="ref-browse" id="enc-browse" aria-labelledby="enc-az-title">' + $discover + '<h2 class="ref-sec-title" id="enc-az-title">Browse A&ndash;Z</h2>' + $az +
   '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/glossary">Glossary: ' + $TERMS.Count + ' historical terms explained &rarr;</a> <a class="enc-random-link" href="/centuries/">History by century &rarr;</a></p>' +
   '<h2 class="ref-sec-title">Conflicts &amp; Resolutions by century</h2>' + $cents + '</section>')
 $t = [IO.File]::ReadAllText("$Repo\encyclopedia\index", $U8); $t2 = [regex]::Replace($t, 'index-data\.js\?v=[0-9a-f]*', "index-data.js?v=$IDXV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\encyclopedia\index", $t2)) { $NWRITE++ }
@@ -1563,6 +1633,9 @@ $SECTIONS = [ordered]@{
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
   games        = @{ t = 'Games'; h = '/games'; k = 'Seven games'; d = 'Picture puzzles, word hunts, timelines and a globe: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
   kids         = @{ t = 'Kids corner'; h = '/kids'; k = 'For young explorers'; d = 'Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.'; pic = @('great-pyramid-of-giza') }
+  start        = @{ t = 'Find Your Way In'; h = '/start'; k = 'Four questions'; d = 'Tell us what draws you to history and get the reading paths and tools that suit you.'; pic = @('piri-reis-map', 'cantino-planisphere', 'tabula-rogeriana') }
+  community    = @{ t = 'Community'; h = '/community'; k = 'Readers and writers'; d = 'Essays and opinions from the Institute''s readers, and a place to share your own.'; pic = @('althing', 'roman-forum') }
+  contributors = @{ t = 'Write for Us'; h = '/contributors'; k = 'Contribute'; d = 'Research, write or check facts with the Institute: three ways to take part.'; pic = @('book-of-kells', 'johannes-gutenberg') }
   series       = @{ t = 'Research Series'; h = '/research-series'; k = 'Essays'; d = 'Thematic essays on the forces behind the rise and collapse of civilisations.'; pic = @('thucydides', 'ibn-khaldun', 'edward-gibbon') }
   dataset      = @{ t = 'Open Data'; h = '/dataset'; k = 'CC BY 4.0'; d = "The states register ($($POL['nodes'].Count.ToString('N0')) states, $($POL['links'].Count.ToString('N0')) relations) and the power curves, free to reuse."; pic = @('rhind-mathematical-papyrus', 'moscow-mathematical-papyrus', 'domesday-book') }
 }
@@ -1572,8 +1645,13 @@ function HubCard($s, [string]$cls) {
     '<span class="' + $cls + '-b"><span class="' + $cls + '-k">' + (Hx $s.k) + '</span><span class="' + $cls + '-t">' + (Hx $s.t) + '</span><span class="' + $cls + '-d">' + (Hx $s.d) + '</span></span></a></li>'
 }
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
-SetBlock "$Repo\research" 'hub' ('<ul class="hub-grid">' + (($SECTIONS.Keys | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul>')
-SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'atlas', 'countries', 'centuries', 'explorer', 'paths') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
+# the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
+$HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'centuries', 'speeches', 'today', 'glossary')),
+  @('Explore', @('atlas', 'explorer', 'connections', 'paths')), @('Play', @('quiz', 'games', 'kids', 'start')),
+  @('The Institute', @('series', 'dataset', 'community', 'contributors')))
+SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
+# the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
+SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'countries', 'atlas', 'centuries', 'explorer', 'paths', 'today', 'speeches', 'games', 'kids') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
 $hm = WorldDots 1000
 # the hero globe's points: the states of 1000 CE as [lng100, lat100, profile] triplets (the page spins them client-side)
 $hg = New-Object Text.StringBuilder

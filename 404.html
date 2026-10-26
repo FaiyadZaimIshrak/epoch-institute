@@ -19,7 +19,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/shared.css?v=44">
+<link rel="stylesheet" href="/shared.css?v=45">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -51,6 +51,18 @@
   border: 0.5px solid var(--border); padding: 10px 20px; border-radius: 2px;
   transition: border-color 0.2s, color 0.2s; font-weight: 600;}
 .error-link:hover { border-color: var(--gold); color: var(--gold); }
+.error-search { display: flex; gap: 8px; width: min(520px, 100%); margin: 0 auto 22px; }
+.error-search input { flex: 1; min-width: 0; font-family: var(--font-ui); font-size: 15px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 2px; padding: 11px 14px; }
+.error-search input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+.error-search button { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bg); background: var(--gold); border: 0; border-radius: 2px; padding: 0 18px; cursor: pointer; }
+.error-suggest { width: min(520px, 100%); margin: 0 auto 30px; text-align: left; }
+.error-suggest[hidden] { display: none; }
+.error-sug-t { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+.error-suggest ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.error-suggest a { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 2px; background: var(--surface); text-decoration: none; transition: border-color 0.2s; }
+.error-suggest a:hover { border-color: var(--gold); }
+.error-suggest b { font-family: var(--font-text); font-size: 17px; font-weight: 400; color: var(--text); }
+.error-suggest span { font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; align-self: center; }
 </style>
 </head>
 <body>
@@ -59,23 +71,56 @@
 <div class="error-page">
   <p class="error-code">404</p>
   <h1 class="error-title">Page Not Found</h1>
-  <p class="error-desc">The page you're looking for may have moved, been renamed, or no longer exists. Try one of these destinations:</p>
+  <p class="error-desc">The page you're looking for may have moved, been renamed, or no longer exists. Search for it, or try one of these destinations:</p>
+  <form class="error-search" id="err-search" role="search"><input type="search" id="err-q" placeholder="Search people, places, states, events…" aria-label="Search the Institute" autocomplete="off"><button type="submit">Search</button></form>
+  <div class="error-suggest" id="err-suggest" hidden><p class="error-sug-t">Were you looking for&hellip;</p><ul id="err-sug-list"></ul></div>
   <div class="error-links">
     <a href="/" class="error-link">Home</a>
-    <a href="/research" class="error-link">Research</a>
-    <a href="/explorer" class="error-link">Explorer</a>
+    <a href="/encyclopedia/" class="error-link">Encyclopedia</a>
     <a href="/profiles" class="error-link">Profiles</a>
-    <a href="/community" class="error-link">Community</a>
-    <a href="/about" class="error-link">About</a>
+    <a href="/today-in-history/" class="error-link">Today in History</a>
+    <a href="/atlas" class="error-link">Atlas</a>
+    <a href="/games" class="error-link">Games</a>
   </div>
 </div>
 
 </main>
 
-<script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=28"></script>
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=29"></script>
 <script>
 initNav('');
+// the broken address's words: offered in the search field, and the closest pages suggested (a typo in the last
+// letters is forgiven: words are compared by their beginnings)
+(function () {
+  var STOP = { encyclopedia: 1, empire: 1, state: 1, speeches: 1, countries: 1, centuries: 1, paths: 1, today: 1, 'in': 1, history: 1, of: 1, the: 1, and: 1, a: 1, html: 1, index: 1, browse: 1, conflicts: 1, glossary: 1 };
+  var form = document.getElementById('err-search'), q = document.getElementById('err-q');
+  form.addEventListener('submit', function (e) { e.preventDefault(); if (q.value.trim()) openSiteSearch(q.value.trim()); });
+  var path = location.pathname; try { path = decodeURIComponent(path); } catch (e) {}
+  var words = searchFold(path).split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && !STOP[w]; });
+  if (!words.length) return;
+  q.value = words.join(' ');
+  var want = words.map(function (w) { var k = Math.max(4, Math.min(w.length - 1, 7)); return w.length <= 4 ? w : w.slice(0, k); });
+  function score(name) {
+    var toks = searchFold(name).split(/[^a-z0-9]+/), hit = 0;
+    want.forEach(function (p) { if (toks.some(function (t) { return t.length >= p.length && t.slice(0, p.length) === p; })) hit++; });
+    return hit / want.length;
+  }
+  function suggest() {
+    var out = [], seen = {};
+    function add(name, href, type) { var s = score(name); if (s >= 0.6 && !seen[href]) { seen[href] = 1; out.push({ s: s, name: name, href: href, type: type }); } }
+    if (typeof EMPIRES !== 'undefined') EMPIRES.forEach(function (e) { add(e.name, profileUrl(e), 'Profile'); });
+    if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) { add(r[1], '/encyclopedia/' + r[0], SEARCH_TYPES[r[2]] || r[2]); });
+    if (typeof SEARCH_STATES !== 'undefined') SEARCH_STATES.forEach(function (r) { add(r[1], '/state/' + r[0], 'State'); });
+    out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
+    if (!out.length) return;
+    document.getElementById('err-sug-list').innerHTML = out.slice(0, 6).map(function (o) { return '<li><a href="' + escHtml(o.href) + '"><b>' + escHtml(o.name) + '</b><span>' + escHtml(o.type) + '</span></a></li>'; }).join('');
+    document.getElementById('err-suggest').hidden = false;
+  }
+  if (window.warmSiteSearch) warmSiteSearch();
+  var t0 = Date.now();
+  (function wait() { if (typeof SEARCH_INDEX !== 'undefined') suggest(); else if (Date.now() - t0 < 15000) setTimeout(wait, 200); })();
+})();
 </script>
 
 </body>

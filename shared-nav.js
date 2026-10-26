@@ -12,6 +12,32 @@ function kidsGentle(title, desc) {
     !/\b(shot|shoot\w*|raid\w*|sack(s|ed)?|troops|arm(y|ies|ed)|coup|defeats?|routs?|occup(y|ies|ied)|captur\w*|bombard\w*|destroys?|surrender\w*|conquer\w*)\b/i.test(title || '');
 }
 
+// The newsletter (Formspree): the same form as FORMSPREE_URL in shared-data.js, which the generated reference pages
+// do not load. Resolves when Formspree accepted the address.
+var NEWSLETTER_URL = 'https://formspree.io/f/mpqkezdj';
+function subscribeNewsletter(email, source) {
+  return fetch(typeof FORMSPREE_URL !== 'undefined' ? FORMSPREE_URL : NEWSLETTER_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ email: email, _subject: 'Newsletter signup — ' + source, source: source })
+  }).then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res; });
+}
+
+// After a daily challenge: the weekly newsletter in one line (none once this browser has signed up). The form is
+// handled by initNav (form[data-nl]); the source names where it was shown.
+function newsletterPrompt(source) {
+  try { if (localStorage.getItem('epoch-nl')) return ''; } catch (e) {}
+  return '<form class="gm-nl" data-nl="' + escHtml(source) + '" novalidate><p class="gm-nl-t">A new puzzle and a story from history, every week by email</p><span class="gm-nl-row"><input type="email" required placeholder="your@email.com" aria-label="Your email address"><button type="submit">Sign up</button></span><p class="gm-nl-msg" aria-live="polite"></p></form>';
+}
+
+// Share a line: the system share sheet where there is one (phones), else the line and the address are copied
+function shareThis(text, url, btn) {
+  url = url || location.href.split('#')[0];
+  if (navigator.share) { navigator.share({ text: text, url: url }).catch(function () {}); return; }
+  function done() { if (!btn) return; var o = btn.textContent; btn.textContent = 'Copied ✓'; setTimeout(function () { btn.textContent = o; }, 1800); }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text + ' ' + url).then(done, function () {});
+}
+
 function jsonp(url, cb) {
   // an Apps Script error comes back as an HTML page (status 200): it never calls back, so give up after 10 s
   const fn = '_ep_' + Date.now() + '_' + Math.random().toString(36).slice(2);
@@ -137,30 +163,37 @@ function attachShareListeners(container, fallbackUrl) {
 var SEARCH_TYPES = { person: 'Person', event: 'Event', place: 'Place', polity: 'State', group: 'People / group',
   institution: 'Institution', term: 'Term', idea: 'Idea', work: 'Work', factor: 'Factor' };
 function searchFold(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'ʿʾ]/g, ''); }
+// "hastings" means the Battle of Hastings as much as Hastings Banda: a name's words after a leading "Battle of",
+// "Kingdom of" … count almost as its beginning
+var SEARCH_LEAD = /^(?:battle|siege|sack|fall|capture|conquest|treaty|peace|congress|council|edict|war|wars|revolt|rebellion|kingdom|empire|republic|duchy|county|principality|emirate|sultanate|caliphate|khanate) (?:of|at|in) (?:the )?/;
 function searchScore(q, name) {
   var n = searchFold(name);
   if (n === q) return 100;
   if (n.indexOf(q) === 0) return 80;
-  if ((' ' + n).indexOf(' ' + q) !== -1) return 60;
+  var core = n.replace(SEARCH_LEAD, '');
+  if (core !== n && core.indexOf(q) === 0) return core === q ? 90 : 78;
+  if ((' ' + n).indexOf(' ' + q) !== -1) return 70;
   if (n.indexOf(q) !== -1) return 40;
   return 0;
 }
 function siteSearch(query) {
   var q = searchFold(query).trim(), out = [];
   if (q.length < 2) return out;
+  // profiles first among equal matches (+20 outweighs an entry's notability, at most +16)
   if (typeof EMPIRES !== 'undefined') EMPIRES.forEach(function (e) {
     var s = searchScore(q, e.name);
-    if (s) out.push({ s: s + 15, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e) });
+    if (s) out.push({ s: s + 20, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e) });
   });
   // pages without shared-data.js (the generated reference pages) get the profiles from /search-profiles.js instead
   else if (typeof SEARCH_PROFILES !== 'undefined') SEARCH_PROFILES.forEach(function (r) {
     var s = searchScore(q, r[0]);
-    if (s) out.push({ s: s + 15, name: r[0], type: r[2] + ' · profile', href: r[1] });
+    if (s) out.push({ s: s + 20, name: r[0], type: r[2] + ' · profile', href: r[1] });
   });
+  // entries: r[4] is their notability (0-8: mentions in profiles and state histories, a picture)
   if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r) {
     var s = searchScore(q, r[1]);
     if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-    if (s > 0) out.push({ s: s, name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia/' + r[0], enc: r[2] === 'polity' });
+    if (s > 0) out.push({ s: s + 2 * (r[4] || 0), name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia/' + r[0], enc: r[2] === 'polity' });
   });
   // every state in the register (page /state/<id>); an encyclopedia polity of the same name is dropped in its favour
   if (typeof SEARCH_STATES !== 'undefined') {
@@ -175,7 +208,7 @@ function siteSearch(query) {
   out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
   return out.slice(0, 12);
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=8';   // also loaded by quiz.js for answer suggestions
+var SEARCH_INDEX_SRC = '/search-index.js?v=9';   // also loaded by quiz.js for answer suggestions
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=1';   // the 394 profiles, for pages without shared-data.js
 function initSiteSearch() {
   var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
@@ -232,14 +265,13 @@ function initSiteSearch() {
     var t = e.target, typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
     if ((e.key === '/' && !typing) || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) { e.preventDefault(); open(); }
   });
-  // warm the index up before the first search: on hovering the search button, and in idle time after load
+  // warm the index up when a search looks likely (hovering or focusing the search button), never on every page view:
+  // it is 800 KB that most readers never need
   var warm = function () { load(function () {}); };
-  document.getElementById('nav-search-btn').addEventListener('pointerover', warm, { once: true });
-  if (!(navigator.connection && navigator.connection.saveData)) {
-    var idle = window.requestIdleCallback || function (f) { setTimeout(f, 3000); };
-    var onLoad = function () { idle(warm, { timeout: 8000 }); };
-    if (document.readyState === 'complete') onLoad(); else window.addEventListener('load', onLoad, { once: true });
-  }
+  window.warmSiteSearch = warm;   // the home page's search field warms up on focus too
+  var sb = document.getElementById('nav-search-btn');
+  sb.addEventListener('pointerover', warm, { once: true });
+  sb.addEventListener('focus', warm, { once: true });
 }
 
 // ── Encyclopedia previews: hover/focus (or first tap on touch) a gold link → small card ─
@@ -369,6 +401,7 @@ function initNav(activePage) {
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-dropdown">&#x2630;</button>
   </div>
   <div id="nav-dropdown" class="nav-dropdown">
+    <div class="nav-dd-display" role="group" aria-label="Display"><button type="button" class="nav-dd-btn" id="nav-dd-theme"></button><button type="button" class="nav-dd-btn" id="nav-dd-kids"></button></div>
     ${[['profiles', '/profiles', 'Profiles'], ['encyclopedia', '/encyclopedia/', 'Encyclopedia'], ['states', '/state/', 'States'], ['today', '/today-in-history/', 'Today in History']].map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
     <span class="nav-dropdown-group">Explore</span>
     ${EXPLORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
@@ -476,14 +509,32 @@ function initNav(activePage) {
   document.body.insertAdjacentHTML('beforeend', footerHtml + searchHtml);
   initSiteSearch();
   initEncPreviews();
+  // any [data-share-text] button shares its line (a speech's key passage, a game result)
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-share-text]');
+    if (b) shareThis(b.getAttribute('data-share-text'), b.getAttribute('data-share-url'), b);
+  });
+  // the one-line newsletter forms (newsletterPrompt)
+  document.addEventListener('submit', function (e) {
+    var f = e.target.closest && e.target.closest('form[data-nl]'); if (!f) return;
+    e.preventDefault();
+    var inp = f.querySelector('input'), msg = f.querySelector('.gm-nl-msg'), b = f.querySelector('button'), email = inp.value.trim();
+    if (!isValidEmail(email)) { msg.textContent = 'Please check the address.'; inp.focus(); return; }
+    b.disabled = true; msg.textContent = 'Signing you up…';
+    subscribeNewsletter(email, f.getAttribute('data-nl') || 'prompt').then(function () {
+      try { localStorage.setItem('epoch-nl', '1'); } catch (e2) {}
+      f.innerHTML = '<p class="gm-nl-ok">You are on the list: see you next week.</p>';
+    }).catch(function () { b.disabled = false; msg.textContent = 'That did not go through. Please try again.'; });
+  });
 
-  // ── Theme toggle ────────────────────────────────────────────────────────────
+  // ── Theme toggle (on phones it lives in the menu's Display row: the bar has room for search, shelf and menu only) ──
   (function() {
-    const btn = document.getElementById('theme-toggle');
+    const btn = document.getElementById('theme-toggle'), dd = document.getElementById('nav-dd-theme');
     function applyTheme(isDark) {
       btn.textContent    = isDark ? '☀' : '🌙';
       btn.title          = isDark ? 'Switch to light mode' : 'Switch to dark mode';
       btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      dd.textContent = isDark ? '☀ Light theme' : '🌙 Dark theme';
       // pin the browser chrome's colour to the chosen theme (the metas' media rules covered only the system theme)
       document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', isDark ? '#0b0c10' : '#f4efe4'); m.removeAttribute('media'); });
     }
@@ -492,9 +543,10 @@ function initNav(activePage) {
       const html   = document.documentElement;
       const isDark = html.getAttribute('data-theme') !== 'light';
       html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark');
+      try { localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark'); } catch (e) {}
       applyTheme(!isDark);
     });
+    dd.addEventListener('click', function () { btn.click(); });
   })();
 
   // ── My shelf: pages saved for later and recently viewed (kept in this browser only) ──
@@ -557,11 +609,14 @@ function initNav(activePage) {
     btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg>';
     window.kidsModeOn = function () { try { return localStorage.getItem('epoch-kids') === '1'; } catch (e) { return mem; } };
     if (window.kidsModeOn()) html.setAttribute('data-kids', '1');   // a page cached from before Kids mode lacks the head line
+    var dd = document.getElementById('nav-dd-kids');   // the same switch in the phone menu
     function paint() {
       var on = window.kidsModeOn();
       btn.setAttribute('aria-pressed', String(on)); btn.setAttribute('aria-label', 'Kids mode');
       btn.title = on ? 'Kids mode is on: tap to switch it off' : 'Kids mode: brighter, simpler pages for young readers';
+      dd.textContent = (on ? '★' : '☆') + ' Kids mode: ' + (on ? 'on' : 'off'); dd.setAttribute('aria-pressed', String(on));
     }
+    dd.addEventListener('click', function () { window.setKidsMode(!window.kidsModeOn()); });
     window.setKidsMode = function (on) {
       mem = !!on;
       try { if (on) localStorage.setItem('epoch-kids', '1'); else localStorage.removeItem('epoch-kids'); } catch (e) {}
@@ -631,6 +686,58 @@ function initNav(activePage) {
       rb.addEventListener('click', openAll);
       evs[evs.length - 1].parentNode.parentNode.insertBefore(rb, evs[evs.length - 1].parentNode.nextSibling);
     }
+  })();
+
+  // ── Reading paths as journeys ────────────────────────────────────────────────
+  // epoch-seen: the reading pages visited in this browser; epoch-paths: each opened path's stops (progress on
+  // /paths/); epoch-path: the path being followed, whose stops show where they stand and lead to the next one
+  (function () {
+    function get(k, d) { try { return JSON.parse(localStorage.getItem(k) || 'null') || d; } catch (e) { return d; } }
+    function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+    var here = location.pathname.replace(/\/+$/, '') || '/', seen = get('epoch-seen', []);
+    if (!Array.isArray(seen)) seen = [];
+    if (/^\/(empire|encyclopedia|state|speeches|countries|centuries)\/[^/]+$/.test(here) && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
+    function isSeen(h) { return seen.indexOf(String(h || '').replace(/\/+$/, '')) >= 0; }
+    // a path's own page: the stops already read, the progress, the next stop
+    var list = document.querySelector('ol.path-steps');
+    if (list) {
+      var links = Array.prototype.slice.call(list.querySelectorAll('a.path-step')), slug = here.split('/').pop();
+      var title = ((document.querySelector('h1') || {}).textContent || '').trim();
+      var steps = links.map(function (a) { return [a.getAttribute('href'), ((a.querySelector('.path-step-name') || a).textContent || '').trim()]; });
+      var paths = get('epoch-paths', {}); paths[slug] = steps.map(function (s) { return s[0]; }); put('epoch-paths', paths);
+      var read = 0, nextI = -1;
+      links.forEach(function (a, i) { if (isSeen(a.getAttribute('href'))) { a.classList.add('is-read'); read++; } else if (nextI < 0) nextI = i; });
+      var box = document.createElement('div'); box.className = 'path-progress';
+      box.innerHTML = '<div class="path-bar" aria-hidden="true"><i style="width:' + Math.round(100 * read / Math.max(1, steps.length)) + '%"></i></div><p>' +
+        (read ? read + ' of ' + steps.length + ' stops read' : steps.length + ' stops') +
+        (nextI >= 0 ? ' · <a class="path-continue" href="' + escHtml(steps[nextI][0]) + '" data-i="' + nextI + '">' + (read ? 'Continue' : 'Start') + ': ' + escHtml(steps[nextI][1]) + ' &rarr;</a>' : ' · every stop read &#10003;') + '</p>';
+      list.parentNode.insertBefore(box, list);
+      var follow = function (i) { put('epoch-path', { s: slug, t: title, steps: steps, i: i }); };
+      list.addEventListener('click', function (e) { var a = e.target.closest('a.path-step'); if (a) follow(links.indexOf(a)); });
+      box.addEventListener('click', function (e) { var a = e.target.closest('a.path-continue'); if (a) follow(+a.getAttribute('data-i')); });
+      return;
+    }
+    // the paths index: progress on the paths opened before
+    var paths2 = get('epoch-paths', {});
+    Array.prototype.forEach.call(document.querySelectorAll('a.path-card'), function (c) {
+      var st = paths2[(c.getAttribute('href') || '').replace(/\/+$/, '').split('/').pop()]; if (!st || !st.length) return;
+      var n = st.filter(isSeen).length; if (!n) return;
+      var b = document.createElement('span'); b.className = 'path-card-progress'; b.textContent = n >= st.length ? 'Read ✓' : n + ' of ' + st.length + ' read';
+      c.appendChild(b);
+    });
+    // a stop of the path being followed: where it stands, and the next stop
+    var jp = get('epoch-path', null);
+    if (!jp || !Array.isArray(jp.steps)) return;
+    var at = -1; jp.steps.forEach(function (s, i) { if (String(s[0]).replace(/\/+$/, '') === here) at = i; });
+    if (at < 0) return;
+    var nx = jp.steps[at + 1], bar = document.createElement('div');
+    bar.className = 'path-journey'; bar.setAttribute('role', 'navigation'); bar.setAttribute('aria-label', 'Reading path');
+    bar.innerHTML = '<a class="pj-path" href="/paths/' + escHtml(jp.s) + '">' + escHtml(jp.t) + '</a><span class="pj-at">Stop ' + (at + 1) + ' of ' + jp.steps.length + '</span>' +
+      (nx ? '<a class="pj-next" href="' + escHtml(nx[0]) + '">Next: ' + escHtml(nx[1]) + ' &rarr;</a>' : '<a class="pj-next" href="/paths/' + escHtml(jp.s) + '">The last stop: back to the path &rarr;</a>') +
+      '<button type="button" class="pj-x" aria-label="Stop following this path">&times;</button>';
+    document.body.appendChild(bar); document.body.classList.add('has-journey');
+    bar.querySelector('.pj-x').addEventListener('click', function () { try { localStorage.removeItem('epoch-path'); } catch (e) {} bar.remove(); document.body.classList.remove('has-journey'); });
+    if (nx) bar.querySelector('.pj-next').addEventListener('click', function () { jp.i = at + 1; put('epoch-path', jp); });
   })();
 
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
@@ -838,20 +945,17 @@ function initNav(activePage) {
       e.preventDefault();
       var email = document.getElementById('footer-nl-email').value.trim();
       if (!isValidEmail(email)) return;
-      var btn = form.querySelector('button');
+      var btn = form.querySelector('button'), msg = document.getElementById('footer-nl-msg');
       btn.disabled = true;
-      fetch(FORMSPREE_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ email: email, _subject: 'Newsletter signup — footer', source: 'footer' })
-      }).then(function(res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        var msg = document.getElementById('footer-nl-msg');
-        msg.textContent = 'Subscribed!';
+      subscribeNewsletter(email, 'footer').then(function() {
+        try { localStorage.setItem('epoch-nl', '1'); } catch (e2) {}
+        msg.textContent = 'Subscribed!'; msg.style.color = 'var(--success)';
         msg.style.display = 'block';
         form.style.display = 'none';
       }).catch(function() {
         btn.disabled = false;
+        msg.textContent = 'That did not go through. Please try again.'; msg.style.color = 'var(--error)';
+        msg.style.display = 'block';
       });
     });
   })();

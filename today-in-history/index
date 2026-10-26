@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/today-in-history/">
-<link rel="stylesheet" href="/shared.css?v=44">
+<link rel="stylesheet" href="/shared.css?v=45">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
@@ -77,13 +77,15 @@
 </section>
 </main>
 
-<script src="/shared-data.js?v=7"></script>
-<script src="/shared-nav.js?v=28"></script>
+<script src="/shared-data.js?v=8"></script>
+<script src="/shared-nav.js?v=29"></script>
 <script>
 initNav('today');
 
-var cachedData    = null;
-var cachedIntlDay = null;
+var cachedDays    = {};     // day key -> data/days/<mm-dd>.json: { events, hero, pic, intl }
+var DAYS_V        = 'b16cc19104';    // stamped by scripts/build-pages.ps1
+var dayHero       = -1;
+var dayPic        = null;
 var currentDay    = null;
 var currentPage   = 1;
 var dayEvents     = [];
@@ -154,9 +156,13 @@ function renderPage(page, scroll) {
   var grid  = document.getElementById('tih-grid');
   var pag   = document.getElementById('tih-pagination');
 
+  var thisYear = new Date().getFullYear();
   grid.innerHTML = slice.map(function(ev, i) {
-    var ddId = 'tih-dd-' + (start + i);
-    return '<div class="tih-event-card">' +
+    var idx = start + i, ddId = 'tih-dd-' + idx, ago = thisYear - ev.year;
+    var isHero = dayPic && idx === dayHero;   // the day's anniversary piece, with its picture (as on the day's own page)
+    return '<div class="tih-event-card' + (isHero ? ' tih-event-hero tih-has-thumb' : '') + '">' +
+      (isHero ? '<p class="tih-hero-kicker">&#10022; Anniversary of the day</p><a class="tih-event-thumb" href="/encyclopedia/' + encodeURIComponent(dayPic[1]) + '" tabindex="-1" aria-hidden="true"><img src="' + escHtml(dayPic[0]) + '" alt="" loading="lazy" width="168" height="112"></a>' : '') +
+      '<div class="tih-event-main">' +
       '<button class="tih-share-btn" data-dd="' + ddId + '" aria-label="Share this event">' + SHARE_SVG + '</button>' +
       '<div class="tih-share-dropdown" id="' + ddId + '" style="display:none;">' +
         '<button class="tih-share-dd-item" data-action="tweet"    data-idx="' + (start + i) + '">Post on X</button>' +
@@ -166,10 +172,11 @@ function renderPage(page, scroll) {
         '<button class="tih-share-dd-item" data-action="whatsapp" data-idx="' + (start + i) + '">Share on WhatsApp</button>' +
         '<button class="tih-share-dd-item" data-action="copy"     data-idx="' + (start + i) + '">Copy link</button>' +
       '</div>' +
-      '<p class="tih-event-year">' + escHtml(ev.yearDisplay || String(ev.year)) + '</p>' +
+      '<p class="tih-event-year">' + escHtml(ev.yearDisplay || String(ev.year)) + (ago > 0 ? ' <span class="tih-ago">' + ago.toLocaleString('en-GB') + ' years ago</span>' : '') + '</p>' +
       '<p class="tih-event-title">' + escHtml(ev.title) + '</p>' +
-      '<p class="tih-event-desc">'  + escHtml(ev.description) + '</p>' + tihTags(ev) +
-    '</div>';
+      // html: the description with its encyclopedia links, written by the builder (data/days)
+      '<p class="tih-event-desc">'  + (ev.html || escHtml(ev.description)) + '</p>' + tihTags(ev) +
+    '</div></div>';
   }).join('');
 
   grid.querySelectorAll('.tih-share-btn').forEach(function(btn) {
@@ -247,14 +254,25 @@ function renderPage(page, scroll) {
   if (scroll) scrollToGrid();
 }
 
-function renderDay(key, intlDay) {
+// today in the year's calendar below
+function markToday(dayPath) {
+  document.querySelectorAll('.day-cal a.is-today').forEach(function (a) { a.classList.remove('is-today'); a.removeAttribute('aria-current'); });
+  var a = document.querySelector('.day-cal a[href="' + dayPath + '"]');
+  if (a) { a.classList.add('is-today'); a.setAttribute('aria-current', 'date'); }
+}
+
+function renderDay(key) {
   currentDay  = key;
+  var day     = cachedDays[key] || {}, intlDay = day.intl || null;
   // shares and the permanent-page link point at the day's own page (/today-in-history/october-23)
   var dayPath = '/today-in-history/' + MONTHS[parseInt(key.slice(0, 2), 10) - 1] + '-' + parseInt(key.slice(3), 10);
   PAGE_URL = 'https://the-epoch-institute.org' + dayPath;
   var dayLink = document.getElementById('tih-day-link'); if (dayLink) dayLink.href = dayPath;
+  markToday(dayPath);
   currentPage = 1;
-  dayEvents   = (cachedData && cachedData[key]) || [];
+  dayEvents   = day.events || [];
+  dayHero     = typeof day.hero === 'number' ? day.hero : -1;
+  dayPic      = day.pic || null;
 
   var labels = getDayLabels();
   document.getElementById('tih-subheading').innerHTML =
@@ -305,20 +323,18 @@ function showTihError() {
   });
 }
 
+// one small file per day (data/days/<mm-dd>.json, written by the builder) instead of the whole year
 function loadTihData() {
+  var key = getDayKey();
   var timeout = new Promise(function(_, rej) {
     setTimeout(function() { rej(new Error('timeout')); }, 8000);
   });
   Promise.race([
-    Promise.all([
-      fetch('/data/history.json?v=2').then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
-      fetch('/data/international-days.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; })
-    ]),
+    fetch('/data/days/' + key + '.json?v=' + DAYS_V).then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
     timeout
-  ]).then(function(results) {
-    cachedData    = results[0];
-    cachedIntlDay = results[1];
-    renderDay(getDayKey(), cachedIntlDay[getDayKey()] || null);
+  ]).then(function(day) {
+    cachedDays[key] = day;
+    renderDay(key);
   }).catch(function() {
     showTihError();
   });
@@ -326,10 +342,10 @@ function loadTihData() {
 
 loadTihData();
 
-// Midnight rollover: re-render if day changes
+// Midnight rollover: load and show the new day
 setInterval(function() {
   var key = getDayKey();
-  if (key !== currentDay && cachedData) renderDay(key, (cachedIntlDay || {})[key] || null);
+  if (key !== currentDay && currentDay) { if (cachedDays[key]) renderDay(key); else loadTihData(); }
 }, 30000);
 </script>
 
