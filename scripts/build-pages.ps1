@@ -313,8 +313,19 @@ $SING = @{ person = 'Person'; conflict = 'Conflict / resolution'; event = 'Event
 $TYPES = @(@('person', 'People'), @('conflict', 'Conflicts & Resolutions'), @('event', 'Events'), @('place', 'Places'), @('polity', 'States & dynasties'), @('group', 'Peoples & groups'), @('institution', 'Institutions & offices'), @('term', 'Terms'), @('idea', 'Religions & ideas'), @('work', 'Works & monuments'), @('factor', 'Factors'))
 $TAGNAME = @{ battle = 'Battle'; siege = 'Siege'; war = 'War'; campaign = 'Campaign'; revolt = 'Revolt'; revolution = 'Revolution'; crisis = 'Crisis'; treaty = 'Treaty'; peace = 'Peace' }
 $TAGS = @(@('battle', 'Battles', @('battle')), @('siege', 'Sieges', @('siege')), @('war', 'Wars & campaigns', @('war', 'campaign')), @('revolt', 'Revolts & revolutions', @('revolt', 'revolution')), @('crisis', 'Crises & tensions', @('crisis')), @('treaty', 'Treaties', @('treaty')), @('peace', 'Peace efforts & congresses', @('peace')))
-$SEC = @{ foundation = 'Foundation'; socioeconomy = 'Socioeconomy'; military = 'Military'; governance = 'Governance'; impact = 'Impact'; decline = 'Decline'; summary = 'Summary' }
-$SECBIT = @{ foundation = 1; socioeconomy = 2; military = 4; governance = 8; impact = 16; decline = 32; summary = 64 }
+$SEC = @{ foundation = 'Foundation'; socioeconomy = 'Socioeconomy'; military = 'Military'; governance = 'Governance'; impact = 'Impact'; decline = 'Decline'; summary = 'Summary'
+  origins = 'Origins'; beliefs = 'Beliefs'; texts = 'Texts'; spread = 'Spread'; community = 'Community'; legacy = 'Legacy'; structure = 'Grammar'; speakers = 'Speakers'; literature = 'Literature'; change = 'Change' }
+# (religion and language sections share the bits of the state sections in the same place)
+$SECBIT = @{ foundation = 1; socioeconomy = 2; military = 4; governance = 8; impact = 16; decline = 32; summary = 64
+  origins = 1; beliefs = 2; structure = 2; texts = 4; literature = 4; spread = 8; speakers = 8; community = 16; change = 16; legacy = 32 }
+# a profile's address by its kind (shared-data.js PROFILE_KINDS paths): states and empires /empire/, religions
+# /religion/, languages /language/; read here because the entry pages link the profiles that mention them
+$KINDPATH = @{ religion = 'religion'; language = 'language'; culture = 'culture'; ideology = 'ideology'; movement = 'movement' }
+$PROFURL = @{}
+foreach ($m in [regex]::Matches([IO.File]::ReadAllText("$Repo\shared-data.js", $U8), '\{"name": ("(?:[^"\\]|\\.)*"), "region": "[^"]*", "kind": "(\w+)"')) {
+  $PROFURL[$JSS.Deserialize($m.Groups[1].Value, [string])] = '/' + $KINDPATH[$m.Groups[2].Value] + '/'
+}
+function ProfUrl([string]$name) { $(if ($PROFURL.ContainsKey($name)) { $PROFURL[$name] } else { '/empire/' }) + [EpochBuild.W]::ToSlug($name) }
 $ABOUT = @{ person = 'Person'; place = 'Place'; event = 'Event'; conflict = 'Event'; polity = 'Country'; institution = 'Organization'; work = 'CreativeWork'; term = 'DefinedTerm'; idea = 'DefinedTerm'; factor = 'DefinedTerm'; group = 'Thing' }
 $REGION = [ordered]@{ 'british-isles' = 'British Isles'; 'france-low-countries' = 'France and the Low Countries'; 'iberia' = 'Iberia'; 'italy' = 'Italy'; 'hre-germany-central-europe' = 'Germany and Central Europe'
   'greece-aegean' = 'Greece and the Aegean'; 'balkans-hungary' = 'Balkans and Hungary'; 'scandinavia-baltic' = 'Scandinavia and the Baltic'; 'poland-lithuania-russia' = 'Poland, Lithuania and Russia'
@@ -824,7 +835,7 @@ foreach ($e in $ENT) {
   [void]$body.Append('<div class="enc-body"><p class="enc-desc">' + $descHtml + '</p>' + $fig + "</div>`n")
   if ($e.emp.Count) {
     [void]$body.Append('<section><h2 class="enc-section-title">Mentioned in ' + $e.emp.Count + ' profile' + $(if ($e.emp.Count -eq 1) { '' } else { 's' }) + '</h2><div class="enc-mentions">')
-    foreach ($m in $e.emp) { $ps = [string]$m['slug']; if (-not $ps) { $ps = [EpochBuild.W]::ToSlug([string]$m['name']) }; [void]$body.Append('<a href="/empire/' + $ps + '">' + (Hx ([string]$m['name'])) + '<span class="secs">' + (Hx ((@($m['sections']) | ForEach-Object { if ($SEC.ContainsKey([string]$_)) { $SEC[[string]$_] } else { [string]$_ } }) -join ', ')) + '</span></a>') }
+    foreach ($m in $e.emp) { $ps = [string]$m['slug']; if (-not $ps) { $ps = [EpochBuild.W]::ToSlug([string]$m['name']) }; [void]$body.Append('<a href="' + $(if ($PROFURL.ContainsKey([string]$m['name'])) { $PROFURL[[string]$m['name']] } else { '/empire/' }) + $ps + '">' + (Hx ([string]$m['name'])) + '<span class="secs">' + (Hx ((@($m['sections']) | ForEach-Object { if ($SEC.ContainsKey([string]$_)) { $SEC[[string]$_] } else { [string]$_ } }) -join ', ')) + '</span></a>') }
     [void]$body.Append("</div></section>`n")
   }
   if ($KIDS.ContainsKey($e.slug)) {
@@ -1187,17 +1198,19 @@ if (-not $SkipEntries) {
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 $sdText = [IO.File]::ReadAllText("$Repo\shared-data.js", $U8); $i0 = $sdText.IndexOf('const EMPIRES = ') + 16; $i1 = $sdText.IndexOf('];', $i0)
 $EMPS = $JSS.DeserializeObject($sdText.Substring($i0, $i1 - $i0 + 1)); $sdText = $null
-$EMPURL = @{}; foreach ($em in $EMPS) { $EMPURL['/empire/' + [EpochBuild.W]::ToSlug([string]$em['name'])] = $em }
+$EMPURL = @{}; foreach ($em in $EMPS) { $EMPURL[(ProfUrl ([string]$em['name']))] = $em }
+# the profiles with a power curve (states and empires): the century powers, the open data, the curve samples
+$POLS = @($EMPS | Where-Object { $_['points'] })
 # search-profiles.js: the profiles for the header search on the generated pages (they no longer load shared-data.js)
 $spb = New-Object Text.StringBuilder
-[void]$spb.Append("// Generated by scripts/build-pages.ps1 - the 394 profiles for the header search on pages without shared-data.js.`nconst SEARCH_PROFILES=[`n")
+[void]$spb.Append("// Generated by scripts/build-pages.ps1 - the profiles for the header search on pages without shared-data.js.`nconst SEARCH_PROFILES=[`n")
 foreach ($em in $EMPS) {
   $nm = [string]$em['name']
-  $sub = if ($em['subtype']) { [string]$em['subtype'] } else {
+  $sub = if ($em['subtype']) { [string]$em['subtype'] } elseif ($em['kind'] -eq 'religion') { 'Religion' } elseif ($em['kind'] -eq 'language') { 'Language' } else {
     $m = [regex]::Match($nm, '\b(Empire|Caliphate|Sultanate|Dynasty|Kingdom|Khaganate|Khanate|Confederation|Shogunate|Commonwealth|Ilkhanate)\b')
     if ($m.Success) { $m.Groups[1].Value.Replace('Ilkhanate', 'Khanate') } else { 'State' }
   }
-  [void]$spb.Append('[' + (Js $nm) + ',' + (Js ('/empire/' + [EpochBuild.W]::ToSlug($nm))) + ',' + (Js $sub) + "],`n")
+  [void]$spb.Append('[' + (Js $nm) + ',' + (Js (ProfUrl $nm)) + ',' + (Js $sub) + "],`n")
 }
 [void]$spb.Append("];`n")
 if ([EpochBuild.W]::WriteIfChanged("$Repo\search-profiles.js", $spb.ToString())) { $NWRITE++ }
@@ -1358,8 +1371,8 @@ for ($ci = 0; $ci -lt $CENTPAGES.Count; $ci++) {
   $c = $CENTPAGES[$ci]; $cs = $CSTAT[$c]; $slug = CenturySlug $c; $path = '/centuries/' + $slug; $rg = CentRange $c; $mid = CentMid $c
   $ct = CentTitle $c; $dec = CentDecades $c; $midLbl = Yr $mid
   # great powers: profiles alive in the century, by the Institute's overall score
-  $cw = @{}; foreach ($em in $EMPS) { $pts0 = $em['points']; if ([double]$pts0[0][0] -le $rg[1] -and [double]$pts0[-1][0] -ge $rg[0]) { $w = CenturyWeight $em $rg; if ($w -gt 0.05) { $cw[[string]$em['name']] = $w } } }
-  $pw = @($EMPS | Where-Object { $cw.ContainsKey([string]$_['name']) } | Sort-Object @{ e = { $cw[[string]$_['name']] }; Descending = $true }, @{ e = { [string]$_['name'] } } | Select-Object -First 12)
+  $cw = @{}; foreach ($em in $POLS) { $pts0 = $em['points']; if ([double]$pts0[0][0] -le $rg[1] -and [double]$pts0[-1][0] -ge $rg[0]) { $w = CenturyWeight $em $rg; if ($w -gt 0.05) { $cw[[string]$em['name']] = $w } } }
+  $pw = @($POLS | Where-Object { $cw.ContainsKey([string]$_['name']) } | Sort-Object @{ e = { $cw[[string]$_['name']] }; Descending = $true }, @{ e = { [string]$_['name'] } } | Select-Object -First 12)
   $CENTINFO[$c] = @{ slug = $slug; alive = $cs.alive.Count; founded = $cs.founded.Count; ended = $cs.ended.Count; powers = @($pw | Select-Object -First 3 | ForEach-Object { [string]$_['name'] }); ents = $cs.ents.Count }
   $wd = WorldDots $mid
   $crumb = Crumbs @(@('Home', '/'), @('Centuries', '/centuries/'), @($ct, $null))
@@ -1664,8 +1677,8 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
   if ($profs.Count) {
     [void]$sb.Append('<section class="essay-profs"><h2 class="ref-sec-title">Profiles in this essay</h2><ul class="pcards">')
     foreach ($ps in $profs) {
-      $em = $EMPURL['/empire/' + $ps]; if (-not $em) { $esMiss.Add("$($ey.slug): profile $ps"); continue }
-      $pts0 = $em['points']; [void]$sb.Append((ProfCard ('/empire/' + $ps) ([string]$em['name']) ((Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0])) ''))
+      $pu = @('/empire/', '/religion/', '/language/') | ForEach-Object { $_ + $ps } | Where-Object { $EMPURL.ContainsKey($_) } | Select-Object -First 1; $em = if ($pu) { $EMPURL[$pu] } else { $null }; if (-not $em) { $esMiss.Add("$($ey.slug): profile $ps"); continue }
+      $pts0 = $em['points']; [void]$sb.Append((ProfCard $pu ([string]$em['name']) $(if ($pts0) { (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]) } else { (Yr $em['start']) + ' – ' + $(if ($null -eq $em['end']) { 'present' } else { Yr $em['end'] }) }) ''))
     }
     [void]$sb.Append("</ul></section>`n")
   }
@@ -1749,7 +1762,7 @@ foreach ($p in $RP) {
   foreach ($st in @($p['steps'])) {
     $k++; $h = [string]$st['href']; $it = $null
     if ($h -match '^/encyclopedia/(.+)$' -and $BY.ContainsKey($Matches[1])) { $it = WsItem $BY[$Matches[1]] ([string]$st['name']) }
-    elseif ($EMPURL.ContainsKey($h)) { $em = $EMPURL[$h]; $pts0 = $em['points']; $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = [int][double]$pts0[0][0]; life = $false; dates = (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]); kind = 'state' } }
+    elseif ($EMPURL.ContainsKey($h) -and $EMPURL[$h]['points']) { $em = $EMPURL[$h]; $pts0 = $em['points']; $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = [int][double]$pts0[0][0]; life = $false; dates = (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]); kind = 'state' } }
     else { $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = $null; life = $false; dates = ''; kind = '' } }
     $it | Add-Member n $k; $it | Add-Member why ([string]$st['why']); $it | Add-Member href $h; $steps.Add($it)
   }
@@ -1976,7 +1989,7 @@ for ($yi = 0; $yi -lt $YEARLIST.Count; $yi++) {
     '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span>' + $yd[1] + ' states with a known seat in ' + (Hx $label) + '</span><a href="/atlas?year=' + $yv + '">Open the atlas at ' + (Hx $label) + ' &rarr;</a></figcaption></figure>' + "`n")
   if ($yb.gl.Count) {
     [void]$sb.Append('<section><h2 class="ref-sec-title">In the profiles</h2><ul class="yr-prof">')
-    foreach ($g in $yb.gl) { [void]$sb.Append('<li><a class="yr-prof-n" href="/empire/' + [EpochBuild.W]::ToSlug([string]$g[0]) + '">' + (LogoImg ([string]$g[0]) 28) + '<span>' + (Hx ([string]$g[0])) + '</span></a><span class="yr-prof-t">' + (Hx ([string]$g[1])) + '</span></li>') }
+    foreach ($g in $yb.gl) { [void]$sb.Append('<li><a class="yr-prof-n" href="' + (ProfUrl ([string]$g[0])) + '">' + (LogoImg ([string]$g[0]) 28) + '<span>' + (Hx ([string]$g[0])) + '</span></a><span class="yr-prof-t">' + (Hx ([string]$g[1])) + '</span></li>') }
     [void]$sb.Append("</ul></section>`n")
   }
   if ($began.Count -or $ended.Count) {
@@ -2316,7 +2329,7 @@ SetBlock "$Repo\today-in-history\index" 'calendar' ('<section class="day-cal-wra
 function PicOf($slugs) { foreach ($s in $slugs) { if ($BY.ContainsKey($s) -and $BY[$s].img) { return $BY[$s].img } }; Say "  no picture among: $($slugs -join ', ')"; return '' }
 $nImg = @($ENT | Where-Object { $_.img }).Count; $nTih = 0; foreach ($k in $DAYS) { $nTih += @($HIST[$k]).Count }
 $SECTIONS = [ordered]@{
-  profiles     = @{ t = 'Profiles'; h = '/profiles'; k = "$($EMPS.Count) profiles"; d = 'In-depth histories of states and empires: how each rose, lived, fought, governed and fell, with key facts and timelines.'; pic = @('colosseum', 'augustus', 'hagia-sophia') }
+  profiles     = @{ t = 'Profiles'; h = '/profiles'; k = "$($EMPS.Count) profiles"; d = 'In-depth histories of states and empires, religions and languages: their origins, great ages and legacies, with key facts and timelines.'; pic = @('colosseum', 'augustus', 'hagia-sophia') }
   encyclopedia = @{ t = 'Encyclopedia'; h = '/encyclopedia/'; k = $NENT.ToString('N0') + ' entries'; d = "People, places, events, institutions and ideas, with $($nImg.ToString('N0')) historical pictures."; pic = @('library-of-alexandria', 'house-of-wisdom', 'encyclopedie') }
   states       = @{ t = 'States'; h = '/state/'; k = $POL['nodes'].Count.ToString('N0') + ' states'; d = 'Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.'; pic = @('peace-of-westphalia', 'congress-of-vienna') }
   atlas        = @{ t = 'Atlas'; h = '/atlas'; k = 'From ' + (Yr $minS) + ' to today'; d = 'The world in any year: slide through five thousand years and watch states appear and vanish.'; pic = @('catalan-atlas', 'tabula-rogeriana', 'cantino-planisphere', 'piri-reis-map') }
@@ -2414,7 +2427,7 @@ $OD = [ordered]@{
 # power curves: one row per turning point (the score 0-10 at that year, scaled to the profile's own peak)
 $csvP = New-Object Text.StringBuilder(200000); $jsP = New-Object Text.StringBuilder(400000); $nPts = 0
 [void]$csvP.Append("name,region,profile_url,year,score`n")
-foreach ($em in $EMPS) {
+foreach ($em in $POLS) {
   $nm = [string]$em['name']; $url = $SITE + '/empire/' + [EpochBuild.W]::ToSlug($nm); $pts = $em['points']
   foreach ($pt in $pts) { [void]$csvP.Append((@($nm, [string]$em['region'], $url, (IntOrBlank $pt[0]), ([double]$pt[1]).ToString('0.##', $INV)) | ForEach-Object { Csv $_ }) -join ',').Append("`n"); $nPts++ }
   if ($jsP.Length) { [void]$jsP.Append(",`n") }
@@ -2429,7 +2442,7 @@ function Dl([string]$f, [string]$label) { '<a class="od-dl-btn" href="/' + $f + 
 # the page's block: two datasets, their downloads, columns and sample rows, and the Dataset JSON-LD
 $minY = [int](($POL['nodes'] | Where-Object { $null -ne $_['s'] } | ForEach-Object { [double]$_['s'] } | Measure-Object -Minimum).Minimum)
 function IsoYear([int]$y) { if ($y -le 0) { $iy = $y + 1; '-' + ([Math]::Abs($iy)).ToString('0000') } else { $y.ToString('0000') } }
-$minP = [int](($EMPS | ForEach-Object { [double]$_['points'][0][0] } | Measure-Object -Minimum).Minimum)
+$minP = [int](($POLS | ForEach-Object { [double]$_['points'][0][0] } | Measure-Object -Minimum).Minimum)
 $sample = @('kingdom-of-france', 'joseon', 'ayutthaya-kingdom', 'kingdom-of-zimbabwe', 'republic-of-venice', 'kingdom-of-hawaii') | Where-Object { $NODE.ContainsKey($_) } | ForEach-Object { $NODE[$_] }
 $sampleP = @('Roman Empire', 'Mongol Empire', 'Ottoman Empire', 'Mali Empire') | Where-Object { $EMPURL.ContainsKey('/empire/' + [EpochBuild.W]::ToSlug($_)) } | ForEach-Object { $EMPURL['/empire/' + [EpochBuild.W]::ToSlug($_)] }
 function Spark($em) {   # a small line of the power curve
@@ -2482,7 +2495,7 @@ foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }
-$PROF = @(); foreach ($f in Get-ChildItem "$Repo\empire" -File | Where-Object { -not $_.Extension }) { $p = '/empire/' + $f.Name; [void](Stamp $p ([IO.File]::ReadAllText($f.FullName, $U8))); $PROF += $p }
+$PROF = @(); foreach ($dir in 'empire', 'religion', 'language') { foreach ($f in Get-ChildItem "$Repo\$dir" -File -ErrorAction SilentlyContinue | Where-Object { -not $_.Extension }) { $p = "/$dir/" + $f.Name; [void](Stamp $p ([IO.File]::ReadAllText($f.FullName, $U8))); $PROF += $p } }
 function UrlXml([string]$p, [string]$imgPath) {
   '<url><loc>' + (Hx ($SITE + $p)) + '</loc><lastmod>' + $SMNEW[$p][1] + '</lastmod>' + $(if ($imgPath) { '<image:image><image:loc>' + (Hx ($SITE + $imgPath)) + '</image:loc></image:image>' } else { '' }) + '</url>'
 }
@@ -2491,7 +2504,7 @@ function WriteSitemap([string]$name, $urls) {
   if ([EpochBuild.W]::WriteIfChanged("$Repo\sitemaps\$name", $x)) { $script:NWRITE++ }
 }
 function SitemapOf([string]$p) {
-  if ($p -like '/empire/*') { return 'profiles' }
+  if ($p -like '/empire/*' -or $p -like '/religion/*' -or $p -like '/language/*') { return 'profiles' }
   if ($p -like '/encyclopedia/browse/*' -or $p -like '/encyclopedia/conflicts/*' -or $p -eq '/encyclopedia/' -or $p -eq '/encyclopedia/glossary') { return 'pages' }
   if ($p -like '/encyclopedia/*') { return 'encyclopedia' }
   if ($p -like '/state/browse/*' -or $p -eq '/state/') { return 'pages' }
@@ -2501,7 +2514,7 @@ function SitemapOf([string]$p) {
 }
 $IMGOF = @{}
 foreach ($e in $ENT) { if ($e.img) { $IMGOF['/encyclopedia/' + $e.slug] = $e.img } }
-foreach ($p in $PROF) { $IMGOF[$p] = '/images/og/' + $p.Substring(8) + '.jpg' }
+foreach ($p in $PROF) { $og = '/images/og/' + $p.Substring($p.LastIndexOf('/') + 1) + '.jpg'; if (Test-Path (Join-Path $Repo ($og.TrimStart('/') -replace '/', '\'))) { $IMGOF[$p] = $og } }
 foreach ($ey in $ESSAYS) { if ($ey.pic) { $IMGOF['/essays/' + $ey.slug] = $ey.pic } }
 foreach ($kv in $STX.GetEnumerator()) { $im = [string]$kv.Value['img']; if ($im -and (Test-Path (Join-Path $Repo ($im.TrimStart('/') -replace '/', '\')))) { $IMGOF['/state/' + $kv.Key] = $im } }
 $SMG = [ordered]@{ pages = New-Object System.Collections.Generic.List[string]; profiles = New-Object System.Collections.Generic.List[string]; encyclopedia = New-Object System.Collections.Generic.List[string]; states = New-Object System.Collections.Generic.List[string]; years = New-Object System.Collections.Generic.List[string] }

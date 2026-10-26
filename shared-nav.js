@@ -363,8 +363,8 @@ function siteSearchAll(query) {
   return out;
 }
 function siteSearch(query) { return siteSearchAll(query).slice(0, 12); }
-var SEARCH_INDEX_SRC = '/search-index.js?v=9';   // also loaded by quiz.js for answer suggestions
-var SEARCH_PROFILES_SRC = '/search-profiles.js?v=1';   // the 394 profiles, for pages without shared-data.js
+var SEARCH_INDEX_SRC = '/search-index.js?v=10';   // also loaded by quiz.js for answer suggestions
+var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 function initSiteSearch() {
   var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
       list = document.getElementById('site-search-results'), hint = document.getElementById('site-search-hint'),

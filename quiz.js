@@ -10,7 +10,9 @@ var EpochQuiz = (function () {
   var TITLES = { person: 'Who am I?', event: 'Which event is this?', place: 'Which place is this?', idea: 'Which idea is this?', work: 'Which work is this?' };
   function ready() { return typeof HOME_QUIZ !== 'undefined' && HOME_QUIZ.entries && typeof EMPIRES !== 'undefined'; }
   function fmtYear(y) { y = Math.round(y); return y < 0 ? Math.abs(y) + ' BCE' : y + ' CE'; }
-  function span(e) { return [e.points[0][0], e.points[e.points.length - 1][0]]; }
+  function span(e) { return profileSpan(e); }
+  // the labels of a profile's two fact clues, by kind (HOME_QUIZ.profiles: [first fact, second fact, did you know])
+  var FACT_LABELS = { religion: ['Its scriptures: ', 'Its founder or early teachers: '], language: ['Its writing: ', 'Its family: '] };
   function pool(cat) { return cat === 'profile' ? EMPIRES.filter(function (e) { return HOME_QUIZ.profiles[e.name]; }) : (HOME_QUIZ.entries[cat] || []); }
   function make(cat, n) {
     var list = pool(cat); if (!list.length) return null;
@@ -22,10 +24,11 @@ var EpochQuiz = (function () {
         img: (typeof HOME_PICS !== 'undefined' && HOME_PICS[ans.name]) ? HOME_PICS[ans.name].img : '', names: EMPIRES.map(function (e) { return e.name; }),
         imgTop: (typeof HOME_PICS !== 'undefined' && HOME_PICS[ans.name]) ? HOME_PICS[ans.name].top : null,
         clues: [
-          'Region: ' + ans.region + '. It lasted about ' + Math.abs(Math.round(s[1] - s[0])) + ' years, from ' + fmtYear(s[0]) + ' to ' + fmtYear(s[1]) + '.',
+          ans.points ? 'Region: ' + ans.region + '. It lasted about ' + Math.abs(Math.round(s[1] - s[0])) + ' years, from ' + fmtYear(s[0]) + ' to ' + fmtYear(s[1]) + '.'
+            : 'Region: ' + ans.region + '. It began ' + (ans.circa ? 'around ' : 'in ') + fmtYear(s[0]) + (ans.end == null ? ' and is still ' + PROFILE_KINDS[profileKind(ans)].alive + '.' : ' and lasted until ' + (ans.endCirca ? 'about ' : '') + fmtYear(s[1]) + '.'),
           q[2] ? 'Did you know? ' + q[2] : null,
-          q[1] ? 'Its founder: ' + q[1] + '.' : null,
-          q[0] ? 'Its capital: ' + q[0] + '.' : null
+          q[1] ? (FACT_LABELS[profileKind(ans)] || [, 'Its founder: '])[1] + q[1] + '.' : null,
+          q[0] ? (FACT_LABELS[profileKind(ans)] || ['Its capital: '])[0] + q[0] + '.' : null
         ].filter(Boolean) };
     }
     var en = list[i];

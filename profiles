@@ -7,13 +7,13 @@
 <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
 <link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
-<title>Profiles of 394 States and Empires — The Epoch Institute</title>
+<title>Profiles of States, Empires, Religions and Languages — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Detailed profiles of 394 states and empires — foundation, economy, military, governance, global impact, and decline, illustrated with historical emblems.">
-<meta property="og:title" content="Profiles of 394 States and Empires — The Epoch Institute">
-<meta property="og:description" content="Explore detailed chronicles of 394 states and empires across five millennia of human history.">
+<meta name="description" content="In-depth profiles of 394 states and empires, 18 religions and 16 languages: origins, great ages, decline and legacy, with historical emblems and sources.">
+<meta property="og:title" content="Profiles of States, Empires, Religions and Languages — The Epoch Institute">
+<meta property="og:description" content="Explore detailed chronicles of 394 states and empires, 18 religions and 16 languages across five millennia of human history.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/profiles">
 <meta property="og:site_name" content="The Epoch Institute">
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-profiles.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/profiles">
-<link rel="stylesheet" href="/shared.css?v=50">
+<link rel="stylesheet" href="/shared.css?v=51">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -113,14 +113,14 @@
   <div class="explorer-header">
     <p class="explorer-label">HISTORICAL RECORDS</p>
     <h1 class="explorer-title">Profiles</h1>
-    <p class="explorer-description">In-depth profiles of states, empires and civilisations across five millennia — how each was founded, how it lived, fought and governed, what it left behind and why it fell.</p>
+    <p class="explorer-description">In-depth profiles of states and empires, religions and languages across five millennia — how each began and grew, what it built, believed and wrote, and what it left behind.</p>
   </div>
 
   <div class="profile-kinds" id="profile-kinds" role="group" aria-label="Kind of profile" hidden></div>
   <!-- Search, filters, sort -->
   <div class="profile-controls" role="search">
     <div class="profile-search-wrap" id="profile-search-wrap">
-      <input type="search" class="profile-search-input" id="profile-search" placeholder="Search states and empires…" autocomplete="off" aria-label="Search profiles">
+      <input type="search" class="profile-search-input" id="profile-search" placeholder="Search states, empires, religions, languages…" autocomplete="off" aria-label="Search profiles">
       <button class="profile-search-clear" id="profile-search-clear" aria-label="Clear search">✕</button>
     </div>
     <label class="profile-filter"><span>Era</span><select id="filter-era"><option value="">All eras</option></select></label>
@@ -159,14 +159,14 @@
 
 </main>
 
-<script src="/shared-data.js?v=8"></script>
-<script src="/shared-nav.js?v=34"></script>
+<script src="/shared-data.js?v=9"></script>
+<script src="/shared-nav.js?v=35"></script>
 <script src="/epoch-stats.js?v=3"></script>
 <script>
 // ── Era classifier ────────────────────────────────────────────────────────────
 function getEmpireEra(empire) {
-  var peak = empire.points.reduce(function(m, p) { return p[1] >= m[1] ? p : m; });
-  var y = peak[0];
+  // a state by the year of its peak, a religion or a language by its beginning
+  var y = empire.points ? empire.points.reduce(function(m, p) { return p[1] >= m[1] ? p : m; })[0] : profileSpan(empire)[0];
   if (y <= -500) return 'ancient';
   if (y <= 500)  return 'classical';
   if (y <= 1400) return 'medieval';
@@ -176,12 +176,13 @@ function getEmpireEra(empire) {
 
 // ── Navigate to empire detail page ───────────────────────────────────────────
 function openEmpireDetail(name) {
-  window.location.href = '/empire/' + toSlug(name);
+  var e = EMPIRES.find(function (x) { return x.name === name; });
+  window.location.href = e ? profileUrl(e) : '/empire/' + toSlug(name);
 }
 
 // ── Gallery: search, era/region filters (?era= / ?region=), sort ──────────────
 var PF = { q: '', era: '', region: '', sort: 'chrono', kind: '' };
-function pfYears(e) { return [e.points[0][0], e.points[e.points.length - 1][0]]; }
+function pfYears(e) { return profileSpan(e); }
 function pfYear(y) { y = Math.round(y); return y < 0 ? Math.abs(y) + ' BCE' : y + ' CE'; }
 function pfCard(emp) {
   var safeName = escHtml(emp.name), y = pfYears(emp);
@@ -192,8 +193,8 @@ function pfCard(emp) {
       'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
     '<div class="thumb-logo-fallback" style="display:none">🏛</div>' +
     '<span class="thumb-text"><span class="thumb-name">' + safeName + '</span>' +
-    '<span class="thumb-dates">' + pfYear(y[0]) + ' – ' + pfYear(y[1]) + '</span>' +
-    '<span class="thumb-region">' + escHtml(emp.region) + '</span>' +
+    '<span class="thumb-dates">' + (emp.points ? pfYear(y[0]) + ' – ' + pfYear(y[1]) : escHtml(profileSpanText(emp))) + '</span>' +
+    '<span class="thumb-region">' + escHtml(emp.points ? emp.region : PROFILE_KINDS[profileKind(emp)].single + ' · ' + emp.region) + '</span>' +
     (info ? '<span class="thumb-info">' + escHtml(info) + '</span>' : '') + '</span>' +
   '</a>';
 }
@@ -224,7 +225,7 @@ function buildProfileGallery() {
   document.getElementById('profile-search-clear').style.display = PF.q ? 'block' : 'none';
   // keep the URL shareable: /profiles?era=medieval&region=Europe
   var params = new URLSearchParams();
-  if (PF.era) params.set('era', PF.era); if (PF.region) params.set('region', PF.region); if (PF.sort !== 'chrono') params.set('sort', PF.sort);
+  if (PF.era) params.set('era', PF.era); if (PF.region) params.set('region', PF.region); if (PF.kind) params.set('kind', PF.kind); if (PF.sort !== 'chrono') params.set('sort', PF.sort);
   history.replaceState(null, '', location.pathname + (params.toString() ? '?' + params : '') + location.hash);
 }
 (function () {
@@ -246,6 +247,8 @@ function buildProfileGallery() {
     });
   }
   var params = new URLSearchParams(location.search);
+  if (PROFILE_KINDS[params.get('kind')] && EMPIRES.some(function (e) { return profileKind(e) === params.get('kind'); })) PF.kind = params.get('kind');
+  kindRow.querySelectorAll('[data-kind]').forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-kind') === PF.kind)); });
   if (ERA_ORDER.indexOf(params.get('era')) !== -1) PF.era = params.get('era');
   if (REGIONS.indexOf(params.get('region')) !== -1) PF.region = params.get('region');
   if (['az', 'duration', 'start'].indexOf(params.get('sort')) !== -1) PF.sort = params.get('sort');
@@ -283,6 +286,7 @@ function buildProfileGallery() {
   function empireStats(name) {
     var emp = EMPIRES.find(function(e) { return e.name === name; });
     if (!emp) return { peak: '—', duration: '—', period: '—' };
+    if (!emp.points) return { peak: '—', duration: '—', period: profileSpanText(emp) };   // a religion or a language: no curve
     var pts    = emp.points;
     var startY = Math.round(pts[0][0]);
     var endY   = Math.round(pts[pts.length - 1][0]);
@@ -399,7 +403,8 @@ function buildProfileGallery() {
     }
     var viewBtn = e.target.closest('.compare-view-btn');
     if (viewBtn) {
-      window.location.href = '/empire/' + toSlug(viewBtn.dataset.empire);
+      var ve = EMPIRES.find(function (x) { return x.name === viewBtn.dataset.empire; });
+      window.location.href = ve ? profileUrl(ve) : '/empire/' + toSlug(viewBtn.dataset.empire);
     }
   });
 

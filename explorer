@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-explorer.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/explorer">
-<link rel="stylesheet" href="/shared.css?v=50">
+<link rel="stylesheet" href="/shared.css?v=51">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
@@ -182,9 +182,9 @@
 <div id="tooltip"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="/shared-data.js?v=8"></script>
+<script src="/shared-data.js?v=9"></script>
 <script src="/point-descs.js?v=3" async></script>
-<script src="/shared-nav.js?v=34"></script>
+<script src="/shared-nav.js?v=35"></script>
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
@@ -279,6 +279,7 @@ function getEffectiveDomain() {
 }
 
 function isVisible(empire) {
+  if (!empire.points || !empire.points.length) return false;   // religions and languages have no power curve
   if (activeRegion !== null && activeRegion !== "All" && empire.region !== activeRegion) return false;
   if (empiresOnly && empire.id && (activeRegion === null || activeRegion === "All") && empire.name !== soloEmpire && empire.name !== compareEmpire && !(searchTerm && empire.name.toLowerCase().includes(searchTerm))) return false;
   const [x0, x1] = getEffectiveDomain();
@@ -378,8 +379,8 @@ function buildMinimap() {
   const mmLine = d3.line().x(d=>mmX(d[0])).y(d=>mmY(d[1])).curve(d3.curveCatmullRom.alpha(0.5));
 
   const filtered = activeRegion && activeRegion !== "All"
-    ? EMPIRES.filter(e => e.region === activeRegion)
-    : EMPIRES;
+    ? EMPIRES.filter(e => e.points && e.region === activeRegion)
+    : EMPIRES.filter(e => e.points);
 
   filtered.forEach(emp => {
     mmG.append("path").datum(emp.points)
@@ -460,7 +461,7 @@ function decodeState() {
     document.getElementById("era-select").value = era;
   }
   updateExplorerShareText();
-  if (empire) {
+  if (empire && EMPIRES.some(e => e.name === empire && e.points)) {   // only profiles with a power curve (not religions or languages)
     soloEmpire = empire;
     const emp = EMPIRES.find(e => e.name === empire);
     if (emp) {

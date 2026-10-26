@@ -10,7 +10,8 @@
 //   pages      images/og/page-<name>.jpg, images/og/default.jpg   the main sections
 // Usage: node scripts/make-posters.js [profiles|days|countries|centuries|speeches|paths|pages ...] [--only=a,b] [--out=dir]
 // (no kind: all of them; --only: posters whose file name contains one of the words; --out: write there instead,
-// for a look before replacing). Writes a poster only when its bytes changed. Needs Node and Playwright: once,
+// for a look before replacing; --dump=file.json: write the jobs and stop, for another driver of poster.html).
+// Writes a poster only when its bytes changed. Needs Node and Playwright: once,
 //   npm install --prefix scripts playwright-core
 // (scripts/node_modules, git-ignored; on Windows it drives the installed Edge, so no browser is downloaded).
 const fs = require('fs'), path = require('path'), http = require('http'), vm = require('vm');
@@ -81,6 +82,18 @@ EMPIRES.forEach(e => {
   const hp = HOME_PICS[e.name], pic = hp && hp.slug ? picOf(hp.slug, hp.top) : null;
   const logo = HIDDEN[e.name] ? null : ['/logos-src/' + e.name + '.png', '/logos/' + e.name + '.png'].find(exists);
   const pts = e.points || [], from = pts.length ? yr(pts[0][0]) : '', last = pts.length ? pts[pts.length - 1][0] : 0;
+  const pk = e.kind && ctx.PROFILE_KINDS[e.kind];
+  if (pk && !pk.chart) {
+    // a religion or language: its kind and region (the page header already reads "Religion · <region>"), its span as
+    // a band on the timeline of recorded history instead of a power curve
+    const c = s => s ? 'c. ' : '';
+    JOBS.profiles.push({ kind: 'profile', file: slug + '.jpg', name: e.name, kicker: region === e.region ? pk.single + ' · ' + region : region,
+      sub: esc(period || ctx.profileSpanText(e)), tease: firstSentence(EMPIRE_INFO[e.name], 170), emblem: logo ? encodeURI(logo) : '',
+      pic: pic ? { src: pic.src, w: pic.w, h: pic.h, top: pic.top } : null, points: [],
+      span: [e.start, e.end == null ? 2025 : e.end, c(e.circa) + yr(e.start), e.end == null ? 'today' : c(e.endCirca) + yr(e.end)],
+      url: 'the-epoch-institute.org' + url, credit: pic ? pic.credit : '' });
+    return;
+  }
   JOBS.profiles.push({ kind: 'profile', file: slug + '.jpg', name: e.name, kicker: region + ' · ' + type.replace(/\b\w/g, c => c.toUpperCase()),
     sub: esc(period || (from + ' – ' + yr(last))) + (dur ? ' <span style="color:#a1957f">· ' + esc(dur.replace(/yrs$/, 'years')) + '</span>' : ''),
     tease: firstSentence(EMPIRE_INFO[e.name], 170), emblem: logo ? encodeURI(logo) : '', pic: pic ? { src: pic.src, w: pic.w, h: pic.h, top: pic.top } : null,
@@ -218,6 +231,7 @@ function nearlySame(pg, oldBuf, buf) {
 (async () => {
   const list = (KINDS.length ? KINDS : Object.keys(JOBS)).flatMap(k => { if (!JOBS[k]) throw new Error('unknown kind ' + k); return JOBS[k]; })
     .filter(j => !ONLY || ONLY.some(w => j.file.includes(w)));
+  if (opt.dump) { fs.writeFileSync(path.resolve(String(opt.dump)), JSON.stringify(list)); console.log('jobs: ' + list.length + ' → ' + opt.dump); return; }
   fs.mkdirSync(OUT, { recursive: true });
   const srv = await serve(), browser = await launch();
   const pg = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });

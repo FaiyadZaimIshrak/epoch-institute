@@ -45,6 +45,7 @@
   .curve { position: absolute; left: 60px; width: 600px; bottom: 74px; height: 86px; z-index: 9; }
   .curve svg { display: block; width: 100%; height: 100%; overflow: visible; }
   .curve .lbl { font: 600 13px var(--font-ui); fill: var(--m); letter-spacing: 0.06em; }
+  .curve .tk { font: 600 11px var(--font-ui); fill: #8f846f; letter-spacing: 0.04em; }
 
   /* day: the events of the day */
   .evs { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
@@ -123,6 +124,23 @@ function curve(points, from, to) {
     '<path d="' + line + ' L' + W + ' ' + H + ' L0 ' + H + 'Z" fill="url(#cg)"/><path d="' + line + '" fill="none" stroke="#e8c97a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>' +
     '<text class="lbl" x="0" y="84">' + esc(from) + '</text><text class="lbl" x="' + W + '" y="84" text-anchor="end">' + esc(to) + '</text></svg></div>';
 }
+// a religion's or language's span on the timeline of recorded history (3500 BCE to today), lit in gold where the
+// profile has no power curve; span = [start year, end year, start label, end label]
+function band(span) {
+  if (!span) return '';
+  var W = 600, x0 = -3500, x1 = 2025, X = function (y) { return Math.max(0, Math.min(W, (y - x0) / (x1 - x0) * W)); };
+  var a = X(span[0]), b = Math.max(X(span[1]), a + 6), ticks = '';
+  [[-3000, '3000 BCE'], [-2000, '2000 BCE'], [-1000, '1000 BCE'], [1, '1 CE'], [1000, '1000'], [2000, '2000']].forEach(function (t) {
+    var x = X(t[0]).toFixed(1);
+    ticks += '<line x1="' + x + '" y1="46" x2="' + x + '" y2="58" stroke="rgba(201,168,76,0.35)" stroke-width="1"/><text class="tk" x="' + x + '" y="36" text-anchor="middle">' + esc(t[1]) + '</text>';
+  });
+  var lbl = b - a >= 170
+    ? '<text class="lbl" x="' + a.toFixed(1) + '" y="84">' + esc(span[2]) + '</text><text class="lbl" x="' + b.toFixed(1) + '" y="84" text-anchor="end">' + esc(span[3]) + '</text>'
+    : '<text class="lbl" x="' + (b > W / 2 ? b : a).toFixed(1) + '" y="84"' + (b > W / 2 ? ' text-anchor="end"' : '') + '>' + esc(span[2] + ' – ' + span[3]) + '</text>';
+  return '<div class="curve"><svg viewBox="0 0 ' + W + ' 86" preserveAspectRatio="none"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9a84c" stop-opacity="0.55"/><stop offset="1" stop-color="#e8c97a" stop-opacity="0.95"/></linearGradient></defs>' +
+    '<line x1="0" y1="52" x2="' + W + '" y2="52" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>' + ticks +
+    '<rect x="' + a.toFixed(1) + '" y="45" width="' + (b - a).toFixed(1) + '" height="14" rx="4" fill="url(#bg)"/>' + lbl + '</svg></div>';
+}
 // shrink an element's font until it fits its height (and width for one word)
 function fit(el, maxH, minPx) {
   if (!el) return;
@@ -150,7 +168,7 @@ R.profile = function (j) {
   return amb(j.pic && j.pic.src) + BRAND +
     '<div class="col" id="col" style="bottom:182px;justify-content:center"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.name) + '</h1>' +
     '<p class="sub">' + j.sub + '</p><p class="tease" id="tease">' + esc(j.tease) + '</p></div>' +
-    curve(j.points, j.from, j.to) + (big ? '<div class="frame emb-frame"><img src="' + esc(j.emblem) + '"></div>' : frame(j.pic) + (j.emblem ? '<div class="seal" id="seal"><img src="' + esc(j.emblem) + '"></div>' : '')) + foot(j.url, j.credit);
+    (j.span ? band(j.span) : curve(j.points, j.from, j.to)) + (big ? '<div class="frame emb-frame"><img src="' + esc(j.emblem) + '"></div>' : frame(j.pic) + (j.emblem ? '<div class="seal" id="seal"><img src="' + esc(j.emblem) + '"></div>' : '')) + foot(j.url, j.credit);
 };
 R.profile.after = function () {
   fit(document.getElementById('ttl'), 146, 42);

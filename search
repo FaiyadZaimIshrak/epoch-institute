@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=50">
+<link rel="stylesheet" href="/shared.css?v=51">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Search"}]},{"@type":"WebPage","name":"Search the Institute","url":"https://the-epoch-institute.org/search","description":"Search every profile, state and encyclopedia entry of The Epoch Institute, by kind, region, century and picture."}]}</script>
@@ -64,13 +64,13 @@
   </div>
 </main>
 
-<script src="/shared-data.js?v=8"></script>
-<script src="/shared-nav.js?v=34"></script>
+<script src="/shared-data.js?v=9"></script>
+<script src="/shared-nav.js?v=35"></script>
 <script>
 initNav('search');
 (function () {
   var $ = function (id) { return document.getElementById(id); };
-  var PER = 50, FACETS_SRC = '/search-facets.js?v=1';
+  var PER = 50, FACETS_SRC = '/search-facets.js?v=2';
   // kinds: [key, label, test on a result]
   var KINDS = [['', 'All', function () { return true; }], ['profile', 'Profiles', function (r) { return r.k === 'profile'; }],
     ['state', 'States', function (r) { return r.k === 'state' || r.k === 'polity'; }], ['person', 'People', function (r) { return r.k === 'person'; }],
