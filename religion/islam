@@ -86,7 +86,7 @@
 
     <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
       <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
-      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider; tap a mark to read about it.</p>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider, turn the globe, and tap a glow or a mark to read about it.</p>
       <div class="faith-map" data-faith="islam"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
       <p class="fm-more"><a href="/faiths?faith=islam">Compare it with another faith &rarr;</a></p>
     </section>

@@ -2264,13 +2264,15 @@ foreach ($f in @('atlas', 'games', 'timeline')) { $t = [IO.File]::ReadAllText("$
 Say ("atlas: {0} states, atlas-data.js {1:N0} KB, basemap.js {2:N0} KB, globe-land.js {3:N0} KB, world.svg {4:N0} KB" -f $nA, ($atlasData.Length / 1KB), ($baseJs.Length / 1KB), ($globeJs.Length / 1KB), ($world.Length / 1KB))
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-# Faith maps (faith-map.js: the religion profiles' #spread and /faiths), from scripts/faiths.tsv: where each religion was
-# the main faith (level 2) or held communities (level 1), century by century, its routes of spread, its marks (origin,
+# Faith maps (faith-map.js: the religion profiles' #faith-map and /faiths), from scripts/faiths.tsv: where each religion
+# was the main faith (level 2) or held communities (level 1), century by century, its routes of spread, its marks (origin,
 # holy places, the last places of a faith that ended), a caption per century and the works relied on. Written to
-# data/faiths/<slug>.json in tenths of the map plane, as the other maps: {name, span, areas [x, y, r, from, to, level,
-# name, note], routes [year, x1, y1, x2, y2, label], marks [kind, year, x, y, name, text], notes [[year, text]], src};
-# radii are given in kilometres (about 40 km to a plane unit). FAITHS_V goes into faith-map.js. Stops on a religion
-# without a profile, a year outside its span (a century's grace), a level other than 1 or 2, or a place off the map.
+# data/faiths/<slug>.json in tenths of the map plane, as the other maps, each place followed by its longitude and
+# latitude for the globe: {name, span, areas [x, y, r, from, to, level, name, note, lng, lat], routes [year, x1, y1, x2,
+# y2, label, lng1, lat1, lng2, lat2], marks [kind, year, x, y, name, text, lng, lat], notes [[year, text]], src}; radii
+# are given in kilometres (about 40 km to a plane unit). FAITHS_V and GLOBE_V (globe-land.js) go into faith-map.js.
+# Stops on a religion without a profile, a year outside its span (a century's grace), a level other than 1 or 2, or a
+# place off the map.
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 $FAITH = [ordered]@{}
 foreach ($m in [regex]::Matches([IO.File]::ReadAllText("$Repo\shared-data.js", $U8), '\{"name": ("(?:[^"\\]|\\.)*"), "region": "[^"]*", "kind": "religion", "start": (-?\d+), "end": (null|-?\d+)')) {
@@ -2282,7 +2284,7 @@ function FmPlace([string]$s, [string]$where) {
   $p = $s -split ','; if ($p.Count -ne 2) { $fmBad.Add("$where`: place '$s'"); return $null }
   $la = 0.0; $lo = 0.0
   if (-not [double]::TryParse($p[0].Trim(), [Globalization.NumberStyles]::Float, $INV, [ref]$la) -or -not [double]::TryParse($p[1].Trim(), [Globalization.NumberStyles]::Float, $INV, [ref]$lo) -or [Math]::Abs($la) -gt 84 -or $la -lt -57 -or [Math]::Abs($lo) -gt 180) { $fmBad.Add("$where`: place '$s'"); return $null }
-  $xy = [EpochGeo.G]::P($lo, $la); return @((Fx $xy[0]), (Fx $xy[1]))
+  $xy = [EpochGeo.G]::P($lo, $la); return @((Fx $xy[0]), (Fx $xy[1]), ([Math]::Round($lo, 2)).ToString($INV), ([Math]::Round($la, 2)).ToString($INV))
 }
 function FmYear([string]$s, [string]$where, $f, [switch]$Open) {
   if (-not $s.Trim()) { if ($Open) { return 'null' }; $fmBad.Add("$where`: a year is missing"); return '0' }
@@ -2309,17 +2311,17 @@ foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\faiths.tsv", $U8)) {
       if ($lv -ne '1' -and $lv -ne '2') { $fmBad.Add("$where`: level '$lv'") }
       $fr = FmYear $c[4] $where $ff; $to = FmYear $c[5] $where $ff -Open
       if ($to -ne 'null' -and [int]$to -le [int]$fr) { $fmBad.Add("$where`: ends before it begins") }
-      if ($xy) { $fmCur.areas.Add('[' + $xy[0] + ',' + $xy[1] + ',' + [Math]::Round($km / 4.0075) + ',' + $fr + ',' + $to + ',' + $lv + ',' + (Js $c[1]) + ',' + (Js $(if ($c.Count -gt 7) { $c[7] } else { '' })) + ']') }
+      if ($xy) { $fmCur.areas.Add('[' + $xy[0] + ',' + $xy[1] + ',' + [Math]::Round($km / 4.0075) + ',' + $fr + ',' + $to + ',' + $lv + ',' + (Js $c[1]) + ',' + (Js $(if ($c.Count -gt 7) { $c[7] } else { '' })) + ',' + $xy[2] + ',' + $xy[3] + ']') }
     }
     'route' {   # route year lat,lng > lat,lng label
       $ends = $c[2] -split '>'; $a = FmPlace $ends[0] $where; $b = $(if ($ends.Count -eq 2) { FmPlace $ends[1] $where } else { $fmBad.Add("$where`: route '$($c[2])'"); $null })
       $yr = FmYear $c[1] $where $ff
-      if ($a -and $b) { $fmCur.routes.Add('[' + $yr + ',' + $a[0] + ',' + $a[1] + ',' + $b[0] + ',' + $b[1] + ',' + (Js $c[3]) + ']') }
+      if ($a -and $b) { $fmCur.routes.Add('[' + $yr + ',' + $a[0] + ',' + $a[1] + ',' + $b[0] + ',' + $b[1] + ',' + (Js $c[3]) + ',' + $a[2] + ',' + $a[3] + ',' + $b[2] + ',' + $b[3] + ']') }
     }
     'mark' {   # mark origin|place|last year name lat,lng text
       if ($c[1] -notin 'origin', 'place', 'last') { $fmBad.Add("$where`: mark kind '$($c[1])'") }
       $xy = FmPlace $c[4] $where; $yr = FmYear $c[2] $where $ff
-      if ($xy) { $fmCur.marks.Add('[' + (Js $c[1]) + ',' + $yr + ',' + $xy[0] + ',' + $xy[1] + ',' + (Js $c[3]) + ',' + (Js $(if ($c.Count -gt 5) { $c[5] } else { '' })) + ']') }
+      if ($xy) { $fmCur.marks.Add('[' + (Js $c[1]) + ',' + $yr + ',' + $xy[0] + ',' + $xy[1] + ',' + (Js $c[3]) + ',' + (Js $(if ($c.Count -gt 5) { $c[5] } else { '' })) + ',' + $xy[2] + ',' + $xy[3] + ']') }
     }
     'note' { $fmCur.notes.Add('[' + (FmYear $c[1] $where $ff) + ',' + (Js $c[2]) + ']') }
     'src' { $fmCur.src.Add((Js $c[1])) }
@@ -2336,7 +2338,7 @@ foreach ($fsl in $fmOut.Keys) {
   if ([EpochBuild.W]::WriteIfChanged("$Repo\data\faiths\$fsl.json", $js)) { $NWRITE++ }
 }
 $FAITHSV = [EpochBuild.W]::Sha1($fmAll.ToString()).Substring(0, 10)
-$t = [IO.File]::ReadAllText("$Repo\faith-map.js", $U8); $t2 = [regex]::Replace($t, "var FAITHS_V = '[0-9a-f]*';", "var FAITHS_V = '$FAITHSV';"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\faith-map.js", $t2)) { $NWRITE++ }
+$t = [IO.File]::ReadAllText("$Repo\faith-map.js", $U8); $t2 = [regex]::Replace($t, "var FAITHS_V = '[0-9a-f]*', GLOBE_V = '[0-9a-f]*';", "var FAITHS_V = '$FAITHSV', GLOBE_V = '$GLOBEV';"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\faith-map.js", $t2)) { $NWRITE++ }
 Say ("faith maps: {0} of {1} religions, {2} areas" -f $fmOut.Count, $FAITH.Count, (($fmOut.Values | ForEach-Object { $_.areas.Count } | Measure-Object -Sum).Sum))
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -2526,7 +2528,7 @@ $SECTIONS = [ordered]@{
   connections  = @{ t = 'Connections'; h = '/connections'; k = $POL['links'].Count.ToString('N0') + ' links'; d = 'Who succeeded, conquered, ruled or merged with whom: the states as one network.'; pic = @('congress-of-berlin', 'treaty-of-tordesillas', 'congress-of-vienna') }
   paths        = @{ t = 'Reading Paths'; h = '/paths/'; k = "$($RP.Count) paths"; d = 'Themed routes across profiles and entries, from the Silk Road to the steppe empires.'; pic = @('marco-polo', 'ibn-battuta', 'zheng-he') }
   write        = @{ t = 'Write in Ancient Scripts'; h = '/write'; k = '12 languages'; d = 'Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: a keyboard that shows every sign with its sound, and your writing as a picture.'; pic = @('rosetta-stone', 'code-of-hammurabi') }
-  faiths       = @{ t = 'Faith Maps'; h = '/faiths'; k = '18 religions'; d = 'Where each religion began, how it spread and where it last lived on, century by century on the map.'; pic = @('borobudur', 'hagia-sophia') }
+  faiths       = @{ t = 'Faith Maps'; h = '/faiths'; k = '18 religions'; d = 'Where each religion began, how it spread and where it last lived on, century by century on a turning globe.'; pic = @('borobudur', 'hagia-sophia') }
   speeches     = @{ t = 'Great Speeches'; h = '/speeches/'; k = "$($SPS.Count) speeches"; d = 'The words that moved history: the setting, the key passage, what followed, and the complete text where it is free to read.'; pic = @('pericles', 'cicero', 'abraham-lincoln') }
   today        = @{ t = 'Today in History'; h = '/today-in-history/'; k = $nTih.ToString('N0') + ' events'; d = 'What happened on each day of the year, across five thousand years.'; pic = @('mesoamerican-long-count-calendar', 'anglo-saxon-chronicle') }
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }

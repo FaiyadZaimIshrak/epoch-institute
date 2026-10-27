@@ -4568,6 +4568,8 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .scr-act { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; min-height: 38px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
 .scr-act:hover { border-color: var(--gold); }
 .scr-act[hidden] { display: none; }
+.scr-act.scr-make { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.scr-act.scr-make:hover { background: var(--gold-light); border-color: var(--gold-light); }
 .scr-note { font-family: var(--font-text); font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0; }
 .scr-samples { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .scr-try { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); }
@@ -4692,8 +4694,24 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .fm-vs { font-family: var(--font-ui); font-size: 14px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 10px; min-height: 36px; max-width: 100%; }
 .fm-vs:focus { outline: none; border-color: var(--gold); }
 .fm-howto { margin-top: 36px; }
+/* the globe (the default view): a canvas in a taller box; the view switch and the zoom buttons are the atlas's. A
+   one-finger swipe up or down still scrolls the page (touch-action), sideways it turns the globe. */
+.fm-ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.fm.is-globe .fm-map { aspect-ratio: 16 / 10; }
+.fm-svg[hidden], .fm-globe[hidden], .fm-zoom[hidden], .fm-refollow[hidden], .fm-wheel[hidden], .fm-tip[hidden] { display: none; }
+.fm-globe { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; touch-action: pan-y; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; outline: none; }
+.fm-globe:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.fm.is-turning .fm-globe { cursor: grabbing; }
+.fm-tip { pointer-events: none; }
+.fm-tip .atl-tip-k { line-height: 1.45; }
+.fm-refollow { position: absolute; left: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; min-height: 34px; cursor: pointer; box-shadow: 0 4px 14px var(--shadow); }
+.fm-refollow:hover { border-color: var(--gold); }
+.fm-wheel { position: absolute; left: 50%; top: 12px; transform: translateX(-50%); margin: 0; font-family: var(--font-ui); font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; pointer-events: none; white-space: nowrap; box-shadow: 0 4px 14px var(--shadow); }
+.fm-how { margin: 0; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.fm-area, .fm-route { cursor: pointer; }
 @media (max-width: 600px) {
   .fm-map { aspect-ratio: 4 / 3; }
+  .fm.is-globe .fm-map { aspect-ratio: 1 / 1; }
   .fm-cent { font-size: 19px; }
   .fm-note { font-size: 17px; }
 }

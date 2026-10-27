@@ -519,28 +519,45 @@ material (clay, papyrus, marble, parchment, rock, sandstone, palm leaf, stele, r
   Hub (Explore group), Kids corner door "Write Like a Scribe", llms.txt, poster images/og/page-write.jpg.
 
 ## Faith maps (/faiths, the religion profiles' #faith-map)
-faith-map.js: the spread of each of the 18 religions century by century over /maps/world.svg (inline SVG, no library):
-soft radial glows where it was a main faith of the region or of its rulers (level 2, bright) or held communities (level
-1, faint), arrows for how it spread (drawn out in their century, faint for two more), a star where it began, dots for
-holy places and centres, rings for last places (Philae 537, Nojpetén 1697, Cao'an 1339, Khotan 1006 …). A century
-slider with Play (a century every 1.8 s), the century's caption, "This century in words" (the areas, new marks and
-routes as text) and the sources. The map glides to the century's new and living places; marks and arrowheads are
-scaled to stay the same size on screen, the names of a century's new marks are placed clear of each other. Centuries
-follow the site's labels (centOf: 1200 is the 13th century, 400 BCE the 5th BCE); a glow's strength is the share of the
+faith-map.js: the spread of each of the 18 religions century by century: soft radial glows where it was a main faith of
+the region or of its rulers (level 2, bright) or held communities (level 1, faint), arrows for how it spread (drawn out
+in their century, faint for two more), a star where it began, dots for holy places and centres, rings for last places
+(Philae 537, Nojpetén 1697, Cao'an 1339, Khotan 1006 …). A century slider with Play (a century every 1.8 s), the
+century's caption, "This century in words" (the areas, new marks and routes as text) and the sources. Centuries follow
+the site's labels (centOf: 1200 is the 13th century, 400 BCE the 5th BCE); a glow's strength is the share of the
 century it fills; a faith that ended closes on its last note. Colours: --fm-a (the faith) and --fm-b (the one compared),
-both themes and Kids mode; screen blending in the dark theme, multiply in the light one.
+both themes and Kids mode; screen blending in the dark theme, multiply in the light one. Two views (Globe | Flat map,
+localStorage epoch-faith-view; /faiths also ?view=flat):
+- The globe (default): d3 7.8.5 orthographic on a canvas over maps/globe-land.js (both loaded on first use; GLOBE_V in
+  faith-map.js is stamped by the builder), like the atlas and Globe Hunt and with their fixes (a zoom during a glide only
+  retargets its zoom, a pinch ending as one finger starts a fresh drag, a non-finite turn falls back to the last good
+  view, size() skips a hidden canvas). Glows are radial gradients squeezed towards the rim (by the cosine of their arc
+  from the face's middle); routes are great circles drawn out over 1.4 s; fades ease toward each century's opacity.
+  It FOLLOWS the spread: each century it glides (1.1 s) to the weighted middle of the living glows (main 3, communities
+  1, by size) and the century's new marks and routes (a faith's last century: its marks), zoomed to fit but never past
+  1.6 so it still looks round. Any drag, zoom or key hands it to the reader and shows "Follow the spread". Drag turns
+  it (a flick coasts), two fingers zoom and turn, touch-action pan-y keeps vertical swipes for the page, the wheel
+  zooms about the pointer only once the globe has focus (a click; the mouse leaving it gives the wheel back to the
+  page) or with Ctrl/⌘ (otherwise a hint and the page scrolls), double click zooms in, arrows/+/−, the + − buttons. Hover or tap a mark (14 px), a route (7 px) or the
+  smallest glow under the pointer for a tip (.atl-tip; a tap pins it beside the thing as the globe turns). Falls back
+  to the flat map without d3 or canvas. M._globe() (the mount's return value) exposes the state for tests (scratchpad
+  t/fm-int.html + fm-int.js: 22 checks).
+- The flat map: an SVG over /maps/world.svg that glides to the century's new and living places; marks and arrowheads
+  are scaled to stay the same size on screen, the names of a century's new marks are placed clear of each other; a
+  click on a glow, mark or route writes its note under the map (.fm-pick).
 - Data: scripts/faiths.tsv (format at its top: `@slug`, then area / route / mark / note / src lines; notes are captions
   that hold from their century until the next note). Written by hand from the standard histories named in each block's
   src lines and checked against the religion's profile (its key events and facts); keep the wording neutral and every
   date and place checked. build-pages.ps1 ("Faith maps") validates it (a religion profile, years inside its span with a
   century's grace, level 1 or 2, places on the map) and STOPS on a problem, projects the places with [EpochGeo.G]::P and
-  writes data/faiths/<slug>.json ({slug, name, span, areas [x, y, r, from, to, level, name, note], routes, marks, notes,
-  src}, in tenths of the plane; radius km / 4.0075) and FAITHS_V into faith-map.js. To test the section alone: scratchpad
-  faiths/run.ps1 (seconds instead of a full build).
+  writes data/faiths/<slug>.json ({slug, name, span, areas [x, y, r, from, to, level, name, note, lng, lat], routes
+  [year, x1, y1, x2, y2, label, lng1, lat1, lng2, lat2], marks [kind, year, x, y, name, text, lng, lat], notes, src}, in
+  tenths of the plane plus degrees for the globe; radius km / 4.0075) and FAITHS_V and GLOBE_V into faith-map.js. To
+  test the section alone: scratchpad faiths/run.ps1 (seconds instead of a full build).
 - Wiring: generator.html (hasFaithMap, faithMapHtml: section #faith-map, "Spread through the centuries", after the
   Timeline, a contents entry, a loader like the scribe's; the id is not "spread": that is the religions' text section);
   /faiths (hand page: the 18 cards oldest first, "Compare with" lays a second faith over the first, the address keeps
-  ?faith=&vs=&c=, epoch-faith); Explore menu, footer, Research Hub ("Through time" group), llms.txt, poster
+  ?faith=&vs=&c=&view=flat, epoch-faith); Explore menu, footer, Research Hub ("Through time" group), llms.txt, poster
   images/og/page-faiths.jpg, sitemap. faith-map.js has no ?v= on the profiles (10-minute cache in .htaccess).
 
 ## Research Series (/research-series, /essays/<slug>)

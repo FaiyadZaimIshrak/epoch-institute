@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-faiths.jpg">
-<link rel="stylesheet" href="/shared.css?v=55">
+<link rel="stylesheet" href="/shared.css?v=56">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Faith Maps"}]},{"@type":"WebApplication","name":"Faith Maps","url":"https://the-epoch-institute.org/faiths","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser","isAccessibleForFree":true,"description":"Animated maps of eighteen religions century by century: Hinduism, Buddhism, Jainism, Sikhism, Zoroastrianism, Judaism, Christianity, Islam, Manichaeism, Confucianism, Daoism, Shinto, the religions of ancient Egypt and Greece, Norse and Mesoamerican religion, Yoruba religion and the Bahá'í Faith: where each began, spread, was a main faith or held communities, and last lived on.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -38,7 +38,7 @@
 <header class="ref-head">
   <span class="hero-ornament"></span>
   <h1 class="research-title">Faith Maps</h1>
-  <p class="ref-lede">Eighteen religions on the map, century by century: where each began, how it spread, where it was a main faith or held communities, and where it last lived on. Choose a faith, press Play, or lay a second faith over the first to compare them.</p>
+  <p class="ref-lede">Eighteen religions on the map, century by century: where each began, how it spread, where it was a main faith or held communities, and where it last lived on. Choose a faith, press Play and turn the globe, or lay a second faith over the first to compare them.</p>
 </header>
 
 <nav class="write-langs faith-list" id="faith-list" aria-label="Choose a faith">
@@ -53,7 +53,7 @@
 
 <section class="fm-howto" aria-labelledby="faith-how">
   <h2 class="ref-sec-title" id="faith-how">How to read the maps</h2>
-  <p class="scribe-lede">A bright glow marks a region where the faith was a main faith of the people or of their rulers; a faint glow marks communities that lived among people of other faiths. A glow shows a region, not a border, and its dates are rounded: conversion was slow almost everywhere, and the maps follow the standard histories named under each one. Arrows show how a faith spread, a star where it began, dots its holy places and centres, and rings its last places. The religions of ancient Egypt and Greece, Manichaeism, Mesoamerican and Norse religion are maps of faiths that ended; the others run to today, with estimates of their followers from the Pew Research Center and national censuses.</p>
+  <p class="scribe-lede">A bright glow marks a region where the faith was a main faith of the people or of their rulers; a faint glow marks communities that lived among people of other faiths. A glow shows a region, not a border, and its dates are rounded: conversion was slow almost everywhere, and the maps follow the standard histories named under each one. Arrows show how a faith spread, a star where it began, dots its holy places and centres, and rings its last places. The globe turns to each century's spread until you turn it yourself (Follow the spread sets it going again); the flat map shows the whole world at once. The religions of ancient Egypt and Greece, Manichaeism, Mesoamerican and Norse religion are maps of faiths that ended; the others run to today, with estimates of their followers from the Pew Research Center and national censuses.</p>
 </section>
 </div>
 </main>
@@ -61,10 +61,10 @@
 <script src="/shared-data.js?v=9"></script>
 <script src="/shared-nav.js?v=39"></script>
 <script>initNav('faiths');</script>
-<script src="/faith-map.js?v=1"></script>
+<script src="/faith-map.js?v=2"></script>
 <script>
-// /faiths: the eighteen religions, oldest first; the faith, the one compared with it and the century are kept in the
-// address (?faith=buddhism&vs=christianity&c=7) and the faith in this browser
+// /faiths: the eighteen religions, oldest first; the faith, the one compared with it, the century and the flat map are
+// kept in the address (?faith=buddhism&vs=christianity&c=7&view=flat) and the faith in this browser
 (function () {
   var F = EMPIRES.filter(function (e) { return e.kind === 'religion'; }).sort(function (a, b) { return a.start - b.start || (a.name < b.name ? -1 : 1); })
     .map(function (e) { return { slug: toSlug(e.name), name: e.name, span: profileSpanText(e), url: profileUrl(e) }; });
@@ -76,6 +76,7 @@
   function find(slug) { return F.filter(function (f) { return f.slug === slug; })[0]; }
   function save(c) {
     var p = new URLSearchParams(); p.set('faith', cur); if (vs.value) p.set('vs', vs.value); if (c != null) p.set('c', String(c));
+    if (map && map.view() === 'flat') p.set('view', 'flat');
     try { history.replaceState(null, '', '?' + p.toString()); } catch (e) {}
   }
   function fillVs() {
@@ -91,7 +92,7 @@
     var o = find(vs.value);
     document.getElementById('faith-t').textContent = f.name + (o ? ' and ' + o.name : '') + ' through the centuries';
     var p = document.getElementById('faith-prof'); p.href = f.url + '#faith-map'; p.innerHTML = 'The history of ' + escHtml(f.name) + ' &rarr;';
-    if (!map) map = FaithMap.mount(host, cur, { compare: vs.value || null, cent: cent, onChange: save });
+    if (!map) map = FaithMap.mount(host, cur, { compare: vs.value || null, cent: cent, view: q.get('view'), onChange: save, onView: function () { save(map.century()); } });
     else map.set(cur, vs.value || null, cent);
     try { localStorage.setItem('epoch-faith', cur); } catch (e) {}
     if (scroll && host.scrollIntoView) host.scrollIntoView({ block: 'center', behavior: 'smooth' });

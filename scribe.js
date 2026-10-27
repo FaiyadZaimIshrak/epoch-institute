@@ -586,7 +586,7 @@ var Scribe = (function () {
           '<div class="scr-kb-acts"><button type="button" class="scr-act" data-a="space">Space</button><button type="button" class="scr-act" data-a="back">&#9003; Back</button><button type="button" class="scr-act" data-a="clear">Clear</button></div></div>' +
         '<p class="scr-note"></p>' +
         '<div class="scr-samples"></div>' +
-        '<div class="scr-acts"><button type="button" class="hero-cta scr-make">Make a picture</button><button type="button" class="scr-act scr-copy">Copy the text</button><button type="button" class="scr-act scr-share">Share</button></div>' +
+        '<div class="scr-acts"><button type="button" class="scr-act scr-make">Make a picture</button><button type="button" class="scr-act scr-copy">Copy the text</button><button type="button" class="scr-act scr-share">Share</button></div>' +
         '<div class="scr-pic" hidden><img class="scr-pic-img" alt=""><div class="scr-pic-acts"><a class="scr-act scr-dl" download>Download</a><button type="button" class="scr-act scr-copypic" hidden>Copy the picture</button><button type="button" class="scr-act scr-sharepic">Share the picture</button></div><p class="scr-pic-tip"></p></div>' +
         '<p class="scr-status" role="status"></p>' +
       '</div>';
@@ -787,8 +787,8 @@ var Scribe = (function () {
     var box = [90, 150, S - 180, 640];   // where the writing goes
     if (m.tablet) {   // a clay tablet: a pillow-shaped slab with a lit edge
       c.save(); c.shadowColor = 'rgba(0,0,0,0.35)'; c.shadowBlur = 40; c.shadowOffsetY = 14;
-      roundRect(c, 70, 110, S - 140, 760, 70); var tg = c.createLinearGradient(0, 110, 0, 870); tg.addColorStop(0, '#d8ab74'); tg.addColorStop(1, '#a9773f'); c.fillStyle = tg; c.fill(); c.restore();
-      c.strokeStyle = m.shade; c.lineWidth = 6; roundRect(c, 76, 116, S - 152, 748, 64); c.stroke();
+      roundRect(c, 70, 100, S - 140, 740, 70); var tg = c.createLinearGradient(0, 100, 0, 840); tg.addColorStop(0, '#d8ab74'); tg.addColorStop(1, '#a9773f'); c.fillStyle = tg; c.fill(); c.restore();
+      c.strokeStyle = m.shade; c.lineWidth = 6; roundRect(c, 76, 106, S - 152, 728, 64); c.stroke();
     }
     if (m.fibres) { for (var i = 0; i < 260; i++) { c.strokeStyle = 'rgba(120,90,40,' + (0.05 + r() * 0.08) + ')'; c.lineWidth = 1 + r() * 2; var y = r() * S; c.beginPath(); c.moveTo(0, y); c.lineTo(S, y + (r() - 0.5) * 6); c.stroke(); } for (i = 0; i < 90; i++) { c.strokeStyle = 'rgba(110,80,30,' + (0.03 + r() * 0.05) + ')'; c.lineWidth = 1 + r() * 2; var x = r() * S; c.beginPath(); c.moveTo(x, 0); c.lineTo(x + (r() - 0.5) * 8, S); c.stroke(); } }
     if (m.veins) { for (i = 0; i < 9; i++) { c.strokeStyle = 'rgba(120,115,105,' + (0.12 + r() * 0.15) + ')'; c.lineWidth = 0.8 + r() * 2.2; c.beginPath(); var x0 = r() * S, y0 = r() * S; c.moveTo(x0, y0); c.bezierCurveTo(x0 + (r() - 0.5) * 700, y0 + (r() - 0.5) * 500, x0 + (r() - 0.5) * 700, y0 + (r() - 0.5) * 500, x0 + (r() - 0.5) * 900, y0 + (r() - 0.5) * 900); c.stroke(); } }
@@ -802,15 +802,15 @@ var Scribe = (function () {
       box = [80, 330, S - 160, 320];
     }
     if (m.scroll) {   // a hanging paper scroll with wooden rollers
-      c.fillStyle = '#3a2416'; roundRect(c, 150, 40, S - 300, 26, 13); c.fill(); roundRect(c, 150, S - 216, S - 300, 26, 13); c.fill();
-      c.fillStyle = '#f6efdc'; c.fillRect(190, 66, S - 380, S - 282); c.strokeStyle = 'rgba(150,40,30,0.55)'; c.lineWidth = 3; c.strokeRect(220, 96, S - 440, S - 342);
-      box = [240, 120, S - 480, S - 390];
+      c.fillStyle = '#3a2416'; roundRect(c, 150, 40, S - 300, 26, 13); c.fill(); roundRect(c, 150, 820, S - 300, 26, 13); c.fill();
+      c.fillStyle = '#f6efdc'; c.fillRect(190, 66, S - 380, 754); c.strokeStyle = 'rgba(150,40,30,0.55)'; c.lineWidth = 3; c.strokeRect(220, 96, S - 440, 694);
+      box = [240, 120, S - 480, 650];
     }
     // the writing, as large as fits
     c.fillStyle = m.ink; c.textBaseline = 'alphabetic';
     if (o.vertical) drawVertical(c, o.text, o.family, box); else drawLines(c, o.text, o.family, box, o.dir === 'rtl', m);
-    // the romanisation, the meaning, and where it was made
-    var foot = m.scroll ? S - 175 : m.leaf ? 750 : 880;
+    // the romanisation, the meaning, and where it was made: clear of the tablet, panel or roller above (they end by 846)
+    var foot = m.leaf ? 750 : 900;
     c.textAlign = 'center'; c.direction = 'ltr';
     c.fillStyle = m.leaf || m.scroll ? '#e9dcc0' : 'rgba(20,14,8,0.82)';
     if (m.leaf || m.scroll || o.material === 'stele' || o.material === 'runestone' || o.material === 'rock') c.fillStyle = m.scroll ? '#3a2416' : '#f1eadb';

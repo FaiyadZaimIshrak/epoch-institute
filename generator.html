@@ -281,7 +281,7 @@ function faithMapHtml(emp) {
   var slug = toSlug(emp.name);
   return '<section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">\n' +
     '      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>\n' +
-    '      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century' + (emp.end == null ? ' to today' : ' to its last places') + '. Press Play or move the slider; tap a mark to read about it.</p>\n' +
+    '      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century' + (emp.end == null ? ' to today' : ' to its last places') + '. Press Play or move the slider, turn the globe, and tap a glow or a mark to read about it.</p>\n' +
     '      <div class="faith-map" data-faith="' + slug + '"><p class="fm-loading">The map opens here once the page has loaded.</p></div>\n' +
     '      <p class="fm-more"><a href="/faiths?faith=' + slug + '">Compare it with another faith &rarr;</a></p>\n' +
     '    </section>';
