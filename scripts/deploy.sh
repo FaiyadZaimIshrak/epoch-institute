@@ -141,6 +141,7 @@ trap finish EXIT
 RSYNC=(rsync --archive --no-times --no-owner --no-group --checksum '--chmod=D755,F644' --itemize-changes -e "ssh -F $CFG")
 if [ "$DRY_RUN" = 1 ]; then RSYNC+=(--dry-run); fi
 : > "$TMP/counts"
+: > "$TMP/changes"
 
 # sends with rsync, listing every change (<f sent, *deleting, cd new folder, . permissions);
 # $1 = the step, then rsync's arguments
@@ -152,6 +153,7 @@ send() {
   if [ "${GITHUB_ACTIONS:-}" = true ]; then say "::endgroup::"; fi
   awk -v step="$step" '/^<f/ { s++ } /^\*deleting/ { d++ } /^cd/ { n++ } /^\./ { o++ }
     END { printf "%s\t%d\t%d\t%d\t%d\n", step, s, d, n, o }' "$TMP/out" >> "$TMP/counts"
+  awk '/^(<f|\*deleting|cd|\.)/' "$TMP/out" >> "$TMP/changes"
 }
 
 # runs a script on the server with DEPLOYPATH set, as in .cpanel.yml, or in a dry run prints it; $1 = what it does.
@@ -211,6 +213,13 @@ say ""
 say "$title"
 awk -F '\t' -v c="$cols" 'BEGIN { split(c, h, "|") }
   { printf "  %-44s %6d %s, %5d %s, %4d new folders, %5d other changes\n", $1, $2, h[1], $3, h[2], $4, $5 }' "$TMP/counts"
+if [ "${GITHUB_ACTIONS:-}" = true ]; then
+  # the same summary and the first changes as a note at the top of the run's page
+  msg=$(awk -F '\t' -v c="$cols" 'BEGIN { split(c, h, "|") }
+    { printf "%%0A%s: %d %s, %d %s, %d new folders, %d other changes", $1, $2, h[1], $3, h[2], $4, $5 }' "$TMP/counts")
+  first=$(awk 'NR <= 20 { printf "%%0A  %s", $0 } END { if (NR > 20) printf "%%0A  … and %d more", NR - 20 }' "$TMP/changes")
+  say "::notice title=Deploy summary::$title$msg$first"
+fi
 if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
   {
     say "### $title"
