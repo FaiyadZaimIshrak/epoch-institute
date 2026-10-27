@@ -16,3 +16,5 @@ enc-page.js text eol=lf
 sitemaps/** text eol=lf
 sitemap.xml text eol=lf
 scripts/sitemap-state.tsv text eol=lf
+# Shell scripts run on Linux (scripts/deploy.sh): LF even in a Windows checkout.
+*.sh text eol=lf

@@ -1,74 +1,104 @@
-# Auto-deploy to Namecheap cPanel on every push to master.
-# Does the same as cPanel → Git Version Control → "Update from Remote" + "Deploy HEAD Commit",
-# so .cpanel.yml stays the single source of truth for what gets copied to public_html.
+# Deploys the site to public_html on every push to master, and from the Actions tab (Run workflow). scripts/deploy.sh
+# does the work over SSH with rsync and copies exactly what .cpanel.yml copied, so cPanel's clone of the repository on
+# the server is no longer needed. docs/DEPLOY.md explains the setup, dry runs, deploys by hand and rollbacks.
 #
-# Required repository secrets (Settings → Secrets and variables → Actions):
-#   CPANEL_HOST       e.g. server123.web-hosting.com  (cPanel hostname, no https:// or port)
-#   CPANEL_USER       cPanel username, e.g. theeiorh
-#   CPANEL_API_TOKEN  cPanel → Security → Manage API Tokens
-#   CPANEL_REPO_PATH  cPanel → Git Version Control → "Repository Path", e.g. /home/theeiorh/repositories/epoch-institute
+# Repository secrets (Settings → Secrets and variables → Actions):
+#   SSH_PRIVATE_KEY  a private key without a passphrase; its public key is authorized in cPanel → SSH Access
+#   SSH_HOST         server905.web-hosting.com
+#   SSH_PORT         21098 (Namecheap's SSH port on shared hosting)
+#   SSH_USER         theeiorh
+#
+# Only master deploys for real: run from any other branch, the workflow is always a dry run.
 
-name: Deploy to cPanel
+name: Deploy
 
 on:
   push:
     branches: [master]
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Dry run (list what would change, change nothing)
+        type: boolean
+        default: true
+      commit:
+        description: Commit (full SHA), tag or branch to deploy instead of the branch above, e.g. to roll back
+        type: string
+        default: ''
 
+# One deploy at a time. Dry runs wait in a queue of their own, so one never takes the place of a deploy that is
+# waiting (GitHub cancels the waiting run when another joins the same queue).
 concurrency:
-  group: cpanel-deploy
+  group: deploy-${{ (inputs.dry_run || github.ref != 'refs/heads/master') && 'dry-run' || 'live' }}
   cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     env:
-      RAW_HOST: ${{ secrets.CPANEL_HOST }}
-      USER: ${{ secrets.CPANEL_USER }}
-      TOKEN: ${{ secrets.CPANEL_API_TOKEN }}
-      REPO_PATH: ${{ secrets.CPANEL_REPO_PATH }}
+      DRY_RUN: ${{ (inputs.dry_run || github.ref != 'refs/heads/master') && '1' || '0' }}
     steps:
       - name: Check secrets
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
         run: |
-          # forgive a pasted URL in CPANEL_HOST: strip the scheme, any path and any :port, and all whitespace
-          HOST=$(printf '%s' "$RAW_HOST" | tr -d '[:space:]')
-          HOST="${HOST#http://}"; HOST="${HOST#https://}"; HOST="${HOST%%/*}"; HOST="${HOST%%:*}"
-          echo "HOST=$HOST" >> "$GITHUB_ENV"
-          for v in HOST USER TOKEN REPO_PATH; do
-            [ -n "${!v}" ] || { echo "::error::Missing secret for $v"; exit 1; }
+          for v in SSH_PRIVATE_KEY SSH_HOST SSH_PORT SSH_USER; do
+            [ -n "${!v}" ] || { echo "::error::Missing repository secret $v (see docs/DEPLOY.md)"; exit 1; }
           done
+          if [ "$DRY_RUN" = 1 ]; then echo "Dry run: nothing on the server will change."; fi
 
-      - name: Pull latest commit into cPanel repository
-        run: |
-          res=$(curl -sS -G "https://$HOST:2083/execute/VersionControl/update" \
-            -H "Authorization: cpanel $USER:$TOKEN" \
-            --data-urlencode "repository_root=$REPO_PATH" \
-            --data-urlencode "branch=master")
-          echo "$res" | jq '{status, errors, head: .data.last_update.identifier}'
-          [ "$(echo "$res" | jq -r .status)" = "1" ] || { echo "::error::cPanel pull failed"; exit 1; }
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.commit || github.sha }}
+          persist-credentials: false
 
-      - name: Deploy (runs .cpanel.yml)
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
         run: |
-          res=$(curl -sS -G "https://$HOST:2083/execute/VersionControlDeployment/create" \
-            -H "Authorization: cpanel $USER:$TOKEN" \
-            --data-urlencode "repository_root=$REPO_PATH")
-          echo "$res" | jq '{status, errors, deploy_id: .data.deploy_id}'
-          [ "$(echo "$res" | jq -r .status)" = "1" ] || { echo "::error::cPanel deploy request failed"; exit 1; }
-          echo "DEPLOY_ID=$(echo "$res" | jq -r .data.deploy_id)" >> "$GITHUB_ENV"
-
-      - name: Wait for deployment to finish
-        run: |
-          for i in $(seq 1 60); do
-            d=$(curl -sS "https://$HOST:2083/execute/VersionControlDeployment/retrieve" \
-              -H "Authorization: cpanel $USER:$TOKEN" \
-              | jq --arg id "$DEPLOY_ID" '.data[] | select((.deploy_id|tostring) == $id)')
-            if [ -n "$(echo "$d" | jq -r '.timestamps.succeeded // empty')" ]; then
-              echo "Deployed $(echo "$d" | jq -r '.sha // empty')"; exit 0
-            fi
-            if [ -n "$(echo "$d" | jq -r '(.timestamps.failed // .timestamps.canceled) // empty')" ]; then
-              echo "::error::Deployment failed — see log on server: $(echo "$d" | jq -r '.log_path // empty')"; exit 1
-            fi
-            sleep 10
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keygen -y -f ~/.ssh/deploy_key > /dev/null \
+            || { echo "::error::SSH_PRIVATE_KEY is not a private key without a passphrase"; exit 1; }
+          host=$(printf '%s' "$SSH_HOST" | tr -d '[:space:]')
+          port=$(printf '%s' "$SSH_PORT" | tr -d '[:space:]')
+          # the server's host key, so that ssh checks it (scripts/deploy.sh keeps StrictHostKeyChecking on)
+          for try in 1 2 3; do
+            if ssh-keyscan -p "$port" "$host" > ~/.ssh/known_hosts 2> /dev/null && [ -s ~/.ssh/known_hosts ]; then break; fi
+            if [ "$try" -lt 3 ]; then sleep 10; fi
           done
-          echo "::warning::Deployment still running after 10 minutes; check cPanel → Git Version Control."
+          [ -s ~/.ssh/known_hosts ] || { echo "::error::ssh-keyscan got no host key from the server"; exit 1; }
+          echo "Host keys of the server (compare with the fingerprints in docs/DEPLOY.md):"
+          ssh-keygen -lf ~/.ssh/known_hosts
+          command -v rsync > /dev/null || { sudo apt-get update -q && sudo apt-get install -y -q rsync; }
+
+      - name: Deploy
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          if [ ! -f scripts/deploy.sh ]; then
+            echo "::error::This commit has no scripts/deploy.sh: it is older than deploys over SSH (to go back to it, revert with git and push)"
+            exit 1
+          fi
+          SSH_KEY_FILE=~/.ssh/deploy_key bash scripts/deploy.sh
+
+      - name: Check the site answers
+        if: env.DRY_RUN != '1'
+        run: |
+          for path in / /encyclopedia/ /shared.css; do
+            code=$(curl -sS -o /dev/null -w '%{http_code}' "https://the-epoch-institute.org$path")
+            echo "$path $code"
+            [ "$code" = 200 ] || { echo "::error::https://the-epoch-institute.org$path answered $code after the deploy"; exit 1; }
+          done

@@ -1,7 +1,8 @@
 # The daily RSS feed, https://the-epoch-institute.org/feeds/today.xml (Today in History + the entry of the day, the last
 # 14 days). Every morning at 00:05 UTC, and after a push that changes its sources, scripts/make-feed.ps1 builds it from
 # data/days and home-data.js and cPanel's UAPI writes it into public_html/feeds: no commit and no deploy, so deploys
-# never touch it (.cpanel.yml copies only feeds/.htaccess). Uses the deploy workflow's secrets.
+# never touch it (scripts/deploy.sh copies only feeds/.htaccess). Uses the cPanel API secrets CPANEL_HOST, CPANEL_USER
+# and CPANEL_API_TOKEN.
 
 name: Daily feed
 
@@ -51,7 +52,7 @@ jobs:
       - name: Check the feed
         run: python3 -c "import xml.etree.ElementTree as E; r = E.parse('today.xml').getroot(); n = len(r.findall('channel/item')); print(n, 'items'); assert n > 0"
 
-      # public_html/feeds is made by the deploy (.cpanel.yml); after a push the deploy may still be running: retry
+      # public_html/feeds is made by the deploy (scripts/deploy.sh); after a push the deploy may still be running: retry
       - name: Write it to public_html/feeds
         run: |
           for i in $(seq 1 8); do
