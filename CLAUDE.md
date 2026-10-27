@@ -12,7 +12,7 @@ countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
 articles/ likewise holds the community article pages (/articles → /community).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
-Plus 404.html and generator.html (generator is NOT deployed — see .cpanel.yml).
+Plus 404.html and generator.html (generator is NOT deployed — see scripts/deploy.sh).
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
@@ -114,25 +114,36 @@ address stays the same).
   redirect (301) to the power curves.
 
 ## Deployment
-Push to master → GitHub Actions (.github/workflows/deploy.yml) tells cPanel to pull and run .cpanel.yml,
-which copies files to /home/theeiorh/public_html/. The workflow needs the repository secrets CPANEL_HOST, CPANEL_USER,
-CPANEL_API_TOKEN and CPANEL_REPO_PATH; until they are set every run stops at "Check secrets" and the site is deployed
-by hand: cPanel → Git Version Control → Update from Remote, then Deploy HEAD Commit.
-New top-level files must match a copy rule in .cpanel.yml (*.js, *.css, *.json, *.txt, *.xml, *.svg, *.png, *.ico)
-or they won't be deployed. Every copy uses rsync -a (cp fallback): rsync writes to a temporary file and renames it,
-so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
-the broken copy in its cache - Oct 2026), and only changed files are copied. encyclopedia/, state/,
-today-in-history/, countries/, centuries/, paths/, speeches/, years/, people/, essays/, articles/ and teachers/ use rsync --delete, so pages removed from the repo also disappear
-from the server (the loop also removes an old root FILE of the same name: /paths was a file until Oct 2026).
-Root pages are copied by name (the rsync line listing index, about, … atlas, quiz): add new ones there.
+Push to master → GitHub Actions (.github/workflows/deploy.yml) runs scripts/deploy.sh, which copies the site to
+/home/theeiorh/public_html/ over SSH with rsync (server905.web-hosting.com, port 21098; repository secrets
+SSH_PRIVATE_KEY, SSH_HOST, SSH_PORT, SSH_USER; the host key comes from ssh-keyscan). docs/DEPLOY.md has the setup, dry
+runs (Run workflow with "Dry run", the default; runs from any branch but master are always dry; DRY_RUN=1 by hand),
+deploys by hand (Linux, macOS or WSL: Git Bash has no rsync) and rollbacks (revert and push, or Run workflow with a
+Commit). Until Oct 2026 cPanel deployed from its own clone of the repository by running .cpanel.yml; the clone cost
+~95,000 inodes (over Namecheap's 200,000-inode backup limit), so it goes once the deploys over SSH are confirmed, and
+.cpanel.yml after it. deploy.sh reproduces .cpanel.yml line by line (each step names its line): its lists at the top
+are the copy rules. New top-level files must match a root pattern there (*.html, *.css, *.js, *.csv, *.json,
+.htaccess; *.txt, *.xml, *.svg, *.png, *.ico) or they won't be deployed. rsync writes to a temporary file and renames
+it, so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
+the broken copy in its cache - Oct 2026). Files are compared by checksum (--checksum --no-times: a fresh checkout gives
+every file a new time), so only changed files are sent and unchanged ones keep their time and Last-Modified; the
+server reads the whole site once per deploy to compare (a few minutes). encyclopedia/, state/, today-in-history/,
+countries/, centuries/, paths/, speeches/, years/, people/, essays/, articles/ and teachers/ (GENERATED) use rsync
+--delete, so pages removed from the repo also disappear from the server (a FILE of the same name at the root is
+removed first: /paths was a file until Oct 2026); nothing else in public_html is deleted except the old files of
+.cpanel.yml's last three lines. Root pages are copied by name (PAGES: index, about, … write, faiths): add new ones
+there. The script deploys only a clean checkout of a commit (no changed, untracked or ignored deployed files, no CRLF
+from core.autocrlf), stops before sending anything if a listed file or folder is missing, and fails loudly on any
+SSH or rsync error; the workflow then checks that the home page answers.
 After deploying, run scripts/ping-indexnow.ps1: it submits the pages the last build changed
 (scripts/changed-urls.txt, written by build-pages.ps1; gitignored) to IndexNow. The key file
 7887eeb120e9bc53cc20304b26431942.txt at the root proves ownership — keep it deployed.
 The daily RSS feed, /feeds/today.xml (Today in History + the entry of the day, the last 14 days), is not deployed:
 .github/workflows/daily-feed.yml builds it every morning at 00:05 UTC (and after a push that changes data/days,
 home-data.js or its script) with scripts/make-feed.ps1 (pwsh-compatible) and writes it into public_html/feeds through
-cPanel UAPI Fileman::save_file_content (upload_files as a fallback), with the deploy secrets. .cpanel.yml only makes
-feeds/ and copies feeds/.htaccess (RSS type, 1-hour cache); check-site skips /feeds/ links. Home, the Today in History
+cPanel UAPI Fileman::save_file_content (upload_files as a fallback), with the secrets CPANEL_HOST, CPANEL_USER and
+CPANEL_API_TOKEN. The deploy only makes feeds/ and copies feeds/.htaccess (RSS type, 1-hour cache), never
+feeds/today.xml; check-site skips /feeds/ links. Home, the Today in History
 pages and the footer link it.
 
 ## Indexable reference pages (SEO)
@@ -321,7 +332,7 @@ and empire-facts.js by kinds/merge-kinds.ps1 [-Only <name>] (idempotent; shared-
   by eye, "-" = no picture rather than a map, a flag or a modern city view);
 - home pictures in scripts/home-pictures.tsv, make-home-data, scripts/regen-profiles.ps1, the posters, a full build.
 To add a further kind: a PROFILE_KINDS entry, rows and texts as above, the folder's .htaccess (copy empire/.htaccess)
-and redirect, the folder in the .cpanel.yml rsync line and $PROF in build-pages.ps1, then the pipeline. The profiles
+and redirect, the folder in PROFILES in scripts/deploy.sh and $PROF in build-pages.ps1, then the pipeline. The profiles
 page filters by kind (?kind=).
 
 ## /start — Find Your Way In
@@ -478,7 +489,7 @@ Mandela, de Gaulle, Mao, Nkrumah) adds a note; kind:"paraphrase" (Cixi, Moctezum
 without quotation marks. empire, links and led are "href|label" strings; the builder reports unknown encyclopedia
 slugs and check-site every unresolved href. The data file breaks lines before keys, so the builder strips newlines
 before QuoteKeys (never put a line break inside a string). speeches/ has a builder-written .htaccess, the
-.cpanel.yml rsync --delete loop and the root /speeches → /speeches/ redirect. The Research Hub has a card for it
+--delete folders of scripts/deploy.sh (GENERATED) and the root /speeches → /speeches/ redirect. The Research Hub has a card for it
 and for /games. The speaker's portrait (SpPortrait: the speaker entry's picture) heads each speech page and its
 index card; "Share this quote" (data-share-text) sits under the key passage, and "Read the full speech ↓" shows only
 when the full text is folded (over 600 words).
