@@ -111,7 +111,7 @@ function sharePoster(o) {
 // the line, the address and a button: the old signature, kept for the pages that call it
 function shareThis(text, url, btn) { sharePoster({ text: text, url: url, btn: btn }); }
 // a score poster (share-card.js, fetched the first time a result is shown): { p: promise of the picture, b: once drawn }
-var SHARE_CARD_SRC = '/share-card.js?v=2', CARD_LIB = null;
+var SHARE_CARD_SRC = '/share-card.js?v=3', CARD_LIB = null;
 function scoreCard(spec) {
   CARD_LIB = CARD_LIB || new Promise(function (ok, no) {
     if (window.EpochCard) return ok();

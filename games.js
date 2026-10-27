@@ -130,7 +130,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   function showGame(g, focus, sub) {
     if (GAMES.indexOf(g) < 0) g = 'pairs';
@@ -1272,6 +1272,205 @@ initNav('games');
     return { show: function () { if (!started) { started = true; options(); load(TODAY, false); } } };
   })();
   MODS.conn = Conn;
+
+  // ── History Crossword ────────────────────────────────────────────────────────
+  // A 12 x 12 crossword of history a day, the same for everyone (UTC; #1 is 27 October 2026), from crossword-data.js
+  // (loaded when the tab first opens; scripts/make-crosswords.ps1 and scripts/crossword-words.tsv). Tap a square, tap
+  // it again to turn, and type: the letters on screen on touch screens, the keyboard elsewhere (arrows move, Tab goes to
+  // the next clue, Space turns). Check marks the wrong letters, Reveal gives a letter or a word, Show the answers ends the
+  // game. The day's grid, time, checks and reveals are kept in epoch-games (cw-<number>), with the streak of days
+  // solved (cw-streak); an earlier puzzle can be played again for practice, which is not kept.
+  var Cross = (function () {
+    var N = 12, QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 9, 27) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var D = null, K = { id: 0, num: 0, ws: [], at: [], sol: [], g: [], cur: -1, dir: 0, t: 0, c: 0, r: 0, wrong: {}, shown: {}, done: false, gave: false, practice: false };
+    var grid = $('cw-grid'), touch = window.matchMedia && matchMedia('(pointer: coarse)').matches;
+    function live(t) { $('cw-live').textContent = t; }
+    function helpOn(on) { ['cw-check', 'cw-rletter', 'cw-rword', 'cw-show'].forEach(function (id) { $(id).disabled = !on; }); }
+    function puzzle(num) { return D && D.p.length ? D.p[(num - 1) % D.p.length] : null; }
+    function clock(s) { return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
+    function enumOf(a) { return '(' + a.split(/[ -]/).map(function (w) { return w.length; }).join(',') + ')'; }
+    function save() {
+      if (K.practice || !K.num) return;
+      setBest('cw-' + K.num, { g: K.g.map(function (ch) { return ch || '.'; }).join(''), t: K.t, c: K.c, r: K.r, w: Object.keys(K.wrong).map(Number), s: Object.keys(K.shown).map(Number), done: K.done, gave: K.gave });
+    }
+    // the answers, their cells and numbers (a number for every cell that starts an answer, row by row)
+    function load(num, practice) {
+      K.id++; K.num = num; K.practice = practice;
+      var pz = puzzle(num);
+      if (!pz) { grid.innerHTML = '<p class="gm-howto">The crosswords are on their way.</p>'; return; }
+      K.ws = []; K.sol = new Array(N * N).fill(''); K.at = new Array(N * N);
+      for (var i = 0; i < pz.length; i += 4) {
+        var w = D.w[pz[i]], d = pz[i + 1], r0 = pz[i + 2], c0 = pz[i + 3], letters = w[0].replace(/[ -]/g, ''), cells = [];
+        for (var k = 0; k < letters.length; k++) { var ix = (r0 + (d ? k : 0)) * N + c0 + (d ? 0 : k); cells.push(ix); K.sol[ix] = letters[k]; (K.at[ix] = K.at[ix] || [])[d] = K.ws.length; }
+        K.ws.push({ d: d, cells: cells, ans: w[0], clue: w[1], slug: w[2], start: cells[0] });
+      }
+      var starts = K.ws.map(function (w) { return w.start; }).filter(function (v, j, a) { return a.indexOf(v) === j; }).sort(function (a, b) { return a - b; });
+      K.ws.forEach(function (w) { w.num = starts.indexOf(w.start) + 1; });
+      K.order = K.ws.map(function (_, j) { return j; }).sort(function (a, b) { return K.ws[a].d - K.ws[b].d || K.ws[a].num - K.ws[b].num; });
+      var sv = practice ? null : best('cw-' + num);
+      K.g = sv && sv.g ? sv.g.split('').map(function (ch) { return ch === '.' ? '' : ch; }) : new Array(N * N).fill('');
+      K.t = sv ? sv.t || 0 : 0; K.c = sv ? sv.c || 0 : 0; K.r = sv ? sv.r || 0 : 0; K.done = !!(sv && sv.done); K.gave = !!(sv && sv.gave);
+      K.wrong = {}; (sv && sv.w || []).forEach(function (ix) { K.wrong[ix] = 1; }); K.shown = {}; (sv && sv.s || []).forEach(function (ix) { K.shown[ix] = 1; });
+      K.cur = K.ws[K.order[0]].start; K.dir = K.ws[K.order[0]].d;
+      $('cw-done').hidden = true; $('cw-done').innerHTML = ''; helpOn(true);
+      build(); clues(); paint(); stats(); live('');
+      if (K.done) finish(true);
+    }
+    function build() {
+      var h = '', numAt = {};
+      K.ws.forEach(function (w) { numAt[w.start] = w.num; });
+      for (var ix = 0; ix < N * N; ix++) {
+        if (!K.sol[ix]) { h += '<span class="gm-cw-x" aria-hidden="true"></span>'; continue; }
+        h += '<span class="gm-cw-c" data-i="' + ix + '">' + (numAt[ix] ? '<i>' + numAt[ix] + '</i>' : '') + '<b></b></span>';
+      }
+      grid.innerHTML = h;
+    }
+    function clues() {
+      [0, 1].forEach(function (d) {
+        $(d ? 'cw-down' : 'cw-across').innerHTML = K.order.filter(function (j) { return K.ws[j].d === d; }).map(function (j) {
+          var w = K.ws[j]; return '<li data-w="' + j + '"><button type="button"><b>' + w.num + '</b> ' + escHtml(w.clue) + ' <span>' + enumOf(w.ans) + '</span></button></li>';
+        }).join('');
+      });
+    }
+    function word() { var a = K.at[K.cur]; return a ? (a[K.dir] != null ? a[K.dir] : a[1 - K.dir]) : null; }
+    function paint() {
+      var wj = word(), w = wj != null ? K.ws[wj] : null;
+      if (w) K.dir = w.d;
+      Array.prototype.forEach.call(grid.querySelectorAll('.gm-cw-c'), function (el) {
+        var ix = +el.getAttribute('data-i');
+        el.querySelector('b').textContent = K.done && K.gave && !K.g[ix] ? K.sol[ix] : K.g[ix];
+        el.classList.toggle('is-word', !!w && w.cells.indexOf(ix) >= 0 && !K.done);
+        el.classList.toggle('is-cur', ix === K.cur && !K.done);
+        el.classList.toggle('is-wrong', !!K.wrong[ix]);
+        el.classList.toggle('is-shown', !!K.shown[ix] || (K.done && K.gave && !K.g[ix]));
+      });
+      Array.prototype.forEach.call(document.querySelectorAll('#cw-across li, #cw-down li'), function (li) {
+        var j = +li.getAttribute('data-w'), ww = K.ws[j];
+        li.classList.toggle('is-on', j === wj && !K.done);
+        li.classList.toggle('is-full', ww.cells.every(function (ix) { return K.g[ix]; }));
+      });
+      $('cw-clue').innerHTML = w && !K.done ? '<b>' + w.num + ' ' + (w.d ? 'Down' : 'Across') + '</b> ' + escHtml(w.clue) + ' <span>' + enumOf(w.ans) + '</span>' : '';
+    }
+    function stats() {
+      $('cw-num').innerHTML = (K.practice ? 'Practice: ' : K.num === TODAY ? 'Today: ' : '') + 'Crossword <b>#' + K.num + '</b>';
+      $('cw-time').textContent = kids() ? '' : clock(K.t);
+      var sk = best('cw-streak'); $('cw-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Solved ' + sk.n + ' days in a row' : '';
+    }
+    // the clock runs while the page is in view and the game is on
+    setInterval(function () { if (!K.num || K.done || document.hidden || current !== 'cross') return; K.t++; if (!kids()) $('cw-time').textContent = clock(K.t); if (K.t % 10 === 0) save(); }, 1000);
+    function select(ix, dir) { if (!K.sol[ix]) return; K.cur = ix; if (dir != null) K.dir = dir; paint(); }
+    function step(n) {   // to the next (n = 1) or previous cell of the current answer
+      var w = K.ws[word()], k = w.cells.indexOf(K.cur) + n; if (k >= 0 && k < w.cells.length) K.cur = w.cells[k];
+    }
+    function goWord(n) {
+      var at = K.order.indexOf(word()), j = K.order[(at + n + K.order.length) % K.order.length], w = K.ws[j];
+      K.dir = w.d; K.cur = w.cells.filter(function (ix) { return !K.g[ix]; })[0]; if (K.cur == null) K.cur = w.start; paint();
+    }
+    function type(ch) {
+      if (K.done || K.cur < 0) return;
+      if (K.shown[K.cur]) { step(1); paint(); return; }
+      K.g[K.cur] = ch; delete K.wrong[K.cur]; Sfx.play('tap');
+      step(1); paint(); save(); full();
+    }
+    function erase() {
+      if (K.done || K.cur < 0) return;
+      if (!K.g[K.cur] || K.shown[K.cur]) step(-1);
+      if (!K.shown[K.cur]) { K.g[K.cur] = ''; delete K.wrong[K.cur]; }
+      paint(); save();
+    }
+    function move(dr, dc) {
+      var r = Math.floor(K.cur / N), c = K.cur % N;
+      for (var s = 1; s < N; s++) { var rr = r + dr * s, cc = c + dc * s; if (rr < 0 || rr >= N || cc < 0 || cc >= N) return; if (K.sol[rr * N + cc]) { select(rr * N + cc, dr ? 1 : 0); return; } }
+    }
+    // a full grid: solved, or a hint that something is wrong
+    function full() {
+      if (K.sol.some(function (ch, ix) { return ch && !K.g[ix]; })) return;
+      if (K.sol.every(function (ch, ix) { return !ch || K.g[ix] === ch; })) { K.done = true; save(); finish(); }
+      else live('The grid is full, but something is not right yet: Check will show you where.');
+    }
+    grid.addEventListener('click', function (e) {
+      var el = e.target.closest('.gm-cw-c'); if (!el || K.done) return;
+      var ix = +el.getAttribute('data-i'), a = K.at[ix];
+      if (ix === K.cur && a[0] != null && a[1] != null) K.dir = 1 - K.dir;   // a second tap turns
+      select(ix); if (!touch) grid.focus();
+    });
+    grid.addEventListener('keydown', function (e) {
+      if (K.done || e.ctrlKey || e.metaKey || e.altKey) return;
+      var k = e.key;
+      if (/^[a-z]$/i.test(k)) { e.preventDefault(); type(k.toUpperCase()); }
+      else if (k === 'Backspace' || k === 'Delete') { e.preventDefault(); erase(); }
+      else if (k === 'ArrowRight') { e.preventDefault(); move(0, 1); } else if (k === 'ArrowLeft') { e.preventDefault(); move(0, -1); }
+      else if (k === 'ArrowDown') { e.preventDefault(); move(1, 0); } else if (k === 'ArrowUp') { e.preventDefault(); move(-1, 0); }
+      else if (k === 'Tab') { e.preventDefault(); goWord(e.shiftKey ? -1 : 1); }
+      else if (k === ' ' || k === 'Enter') { e.preventDefault(); var a = K.at[K.cur]; if (a[0] != null && a[1] != null) { K.dir = 1 - K.dir; paint(); } }
+    });
+    $('cw-prev').addEventListener('click', function () { goWord(-1); }); $('cw-next').addEventListener('click', function () { goWord(1); });
+    ['cw-across', 'cw-down'].forEach(function (id) { $(id).addEventListener('click', function (e) { var li = e.target.closest('li'); if (!li || K.done) return; var w = K.ws[+li.getAttribute('data-w')]; K.dir = w.d; select(w.cells.filter(function (ix) { return !K.g[ix]; })[0] || w.start); if (!touch) grid.focus(); }); });
+    // the letters on screen (touch screens): the page never brings up the phone's own keyboard
+    $('cw-kb').innerHTML = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'].map(function (row, i) {
+      return '<div>' + row.split('').map(function (ch) { return '<button type="button" data-k="' + ch + '">' + ch + '</button>'; }).join('') + (i === 2 ? '<button type="button" class="gm-cw-del" data-k="del" aria-label="Delete">&#9003;</button>' : '') + '</div>';
+    }).join('');
+    $('cw-kb').addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; var k = b.getAttribute('data-k'); if (k === 'del') erase(); else type(k); });
+    // help: Check marks the wrong letters; Reveal gives the square or the answer; Show the answers ends the game
+    $('cw-check').addEventListener('click', function () {
+      if (K.done) return; var n = 0;
+      K.sol.forEach(function (ch, ix) { if (ch && K.g[ix] && K.g[ix] !== ch) { K.wrong[ix] = 1; n++; } });
+      K.c++; paint(); save(); live(n ? n + (n === 1 ? ' letter is' : ' letters are') + ' wrong: they are marked.' : 'Every letter so far is right.');
+    });
+    function reveal(cells) {
+      cells.forEach(function (ix) { if (K.g[ix] !== K.sol[ix]) { K.g[ix] = K.sol[ix]; K.shown[ix] = 1; delete K.wrong[ix]; } });
+      K.r++; paint(); save(); full();
+    }
+    $('cw-rletter').addEventListener('click', function () { if (!K.done && K.cur >= 0) { reveal([K.cur]); } });
+    $('cw-rword').addEventListener('click', function () { if (!K.done && K.cur >= 0) reveal(K.ws[word()].cells); });
+    var sure = 0;
+    $('cw-show').addEventListener('click', function () {
+      if (K.done) return; var b = this;
+      if (!sure) { b.textContent = 'Sure? Show them'; sure = setTimeout(function () { sure = 0; b.textContent = 'Show the answers'; }, 3500); return; }
+      clearTimeout(sure); sure = 0; b.textContent = 'Show the answers';
+      K.done = true; K.gave = true; save(); finish();
+    });
+    // the end: time and help, the answers with their entries, the poster (the grid's shape, no letters)
+    function finish(again) {
+      K.done = true; paint(); stats(); helpOn(false);
+      var solved = !K.gave, s = !solved ? 0 : K.r ? 1 : K.c ? 2 : 3, sk = best('cw-streak') || { n: 0, last: 0 };
+      if (solved && !K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('cw-streak', sk); }
+      var help = K.r ? K.r + (K.r === 1 ? ' reveal' : ' reveals') : K.c ? K.c + (K.c === 1 ? ' check' : ' checks') : 'no help', t = clock(K.t);
+      var title = solved ? (kids() ? 'Solved' : 'Solved in ' + t) + (help === 'no help' ? ' with no help!' : ', with ' + help) : 'The answers';
+      var ans = function (d) { return K.order.filter(function (j) { return K.ws[j].d === d; }).map(function (j) { var w = K.ws[j]; return '<li><b>' + w.num + '</b> <a href="/encyclopedia/' + encodeURIComponent(w.slug) + '">' + escHtml(w.ans) + '</a></li>'; }).join(''); };
+      var dn = $('cw-done');
+      dn.innerHTML = '<div class="gm-done-card">' + (solved ? stars(s) : '') + '<p class="gm-done-t">' + escHtml(title) + '</p>' +
+        '<p class="gm-done-s">Crossword #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 && solved ? ' · solved ' + sk.n + ' days in a row' : '')) + ' · a new crossword in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' +
+        '<div class="gm-cw-ans"><div><p class="gm-cw-h">Across</p><ol>' + ans(0) + '</ol></div><div><p class="gm-cw-h">Down</p><ol>' + ans(1) + '</ol></div></div>' +
+        (K.practice ? '' : newsletterPrompt('crossword')) + '</div>';
+      var shape = []; for (var r = 0; r < N; r++) { var row = ''; for (var c = 0; c < N; c++) row += K.sol[r * N + c] ? '1' : '0'; shape.push(row); }
+      share(dn, 'Epoch Crossword #' + K.num + ': ' + (solved ? (kids() ? 'solved' : t) + ', ' + help : 'answers shown'), 'cross', { title: 'Crossword #' + K.num, score: solved ? (kids() ? '✓' : t) : '—', unit: solved ? help : 'answers shown', stars: solved ? s : null, cw: shape,
+        note: sk.n > 1 && solved && !K.practice ? 'Solved ' + sk.n + ' days in a row' : '', cta: 'A new crossword every day', url: 'the-epoch-institute.org/games#cross' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && solved) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    // earlier puzzles, for practice
+    var pick = $('cw-pick');
+    function options() {
+      var n = Math.min(TODAY - 1, D.p.length - 1), h = '<option value="' + TODAY + '">Today&rsquo;s crossword (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best('cw-' + i) && best('cw-' + i).done ? ' (played)' : '') + '</option>';
+      pick.innerHTML = h; pick.parentNode.hidden = TODAY < 2;
+    }
+    pick.addEventListener('change', function () { var n = +pick.value; load(n, n !== TODAY && !(best('cw-' + n) && best('cw-' + n).done)); });
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      $('cw-kb').hidden = !touch;
+      var s = document.createElement('script'); s.src = typeof CW_SRC !== 'undefined' ? CW_SRC : '/crossword-data.js';
+      s.onload = function () { D = typeof CW_DATA !== 'undefined' ? CW_DATA : null; if (!D) return; options(); load(TODAY, false); };
+      s.onerror = function () { grid.innerHTML = '<p class="gm-howto">The crossword could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    } };
+  })();
+  MODS.cross = Cross;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the last one played
   var hp = location.hash.slice(1).split('-'), startGame = hp[0], startSub = hp.slice(1).join('-');

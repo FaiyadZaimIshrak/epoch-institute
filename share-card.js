@@ -2,7 +2,7 @@
 // Instagram, Facebook and WhatsApp show whole), handed to sharePoster() in shared-nav.js. Loaded by /games, /quiz
 // and the home page (bump share-card.js?v= there). EpochCard.make(spec) starts drawing at once and returns
 // { p: promise of a JPEG Blob, b: the Blob once drawn }, so the picture is ready by the time Share is tapped.
-// spec: { title, score, unit, stars (0-3), squares ('1101…'), grid ([[level 1-4 x4] per guess]), stamps ([name]), dots (['bad','good','none']), pics ([{src, label, sub}]),
+// spec: { title, score, unit, stars (0-3), squares ('1101…'), cw (['010…' a row]), grid ([[level 1-4 x4] per guess]), stamps ([name]), dots (['bad','good','none']), pics ([{src, label, sub}]),
 // hero ({src, label}), emblems ([src]), rows ([[name, middle, right]]), words ([text]), note, cta, url, kids }
 var EpochCard = (function () {
   'use strict';
@@ -87,6 +87,14 @@ var EpochCard = (function () {
         round(c, sx, sy + r * (size + 18), size, size, s.kids ? 26 : 16); c.fillStyle = v === '1' ? T.good : T.bad; c.fill();
         c.fillStyle = 'rgba(255,255,255,0.92)'; c.font = '700 ' + Math.round(size * 0.46) + 'px ' + T.ui; c.textAlign = 'center';
         c.fillText(v === '1' ? '✓' : '✗', sx + size / 2, sy + r * (size + 18) + size * 0.64);
+      });
+    } else if (s.cw) {   // History Crossword: the shape of the day's grid, without its letters
+      var cn = s.cw.length, cg = 5, cs = Math.min(54, (Math.min(W - 260, room) - (cn - 1) * cg) / cn), cx0 = mid - (cn * cs + (cn - 1) * cg) / 2, cy0 = top + (room - cn * cs - (cn - 1) * cg) / 2;
+      s.cw.forEach(function (row, r) {
+        row.split('').forEach(function (v, k) {
+          round(c, cx0 + k * (cs + cg), cy0 + r * (cs + cg), cs, cs, s.kids ? 10 : 4);
+          if (v === '1') { c.fillStyle = T.gold; c.fill(); } else { c.fillStyle = T.tile; c.fill(); }
+        });
       });
     } else if (s.grid) {   // History Connections: a row of four squares for every guess, in the colours of the groups
       var GC = ['', '#e6c85f', '#9cc47f', '#8fb4dc', '#bb96d6'], gr = s.grid, nr = gr.length, gg = 14;

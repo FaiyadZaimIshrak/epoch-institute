@@ -11,12 +11,12 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Seven history games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year. Free, no sign-up.">
+<meta name="description" content="Nine history games for every age: a daily crossword, Connections, emblem pairs, timelines, a globe hunt, picture puzzles, word hunts and guess the year.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://the-epoch-institute.org/games">
 <meta property="og:type" content="website">
 <meta property="og:title" content="History Games — The Epoch Institute">
-<meta property="og:description" content="Seven games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
+<meta property="og:description" content="Nine games for every age: a daily crossword and Connections, emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -26,10 +26,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-games.jpg">
-<link rel="stylesheet" href="/shared.css?v=54">
+<link rel="stylesheet" href="/shared.css?v=55">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Seven history games for every age: emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Nine history games for every age: a daily crossword and Connections, emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
 <script>
@@ -46,7 +46,7 @@
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Eight games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Nine games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
@@ -60,6 +60,7 @@
     <button class="gm-tab" id="tab-words" role="tab" aria-selected="false" aria-controls="game-words" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9998;</span><span class="gm-tab-t">Word Hunt</span></button>
     <button class="gm-tab" id="tab-year" role="tab" aria-selected="false" aria-controls="game-year" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10710;</span><span class="gm-tab-t">Guess the Year</span></button>
     <button class="gm-tab" id="tab-conn" role="tab" aria-selected="false" aria-controls="game-conn" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9638;</span><span class="gm-tab-t">Connections</span></button>
+    <button class="gm-tab" id="tab-cross" role="tab" aria-selected="false" aria-controls="game-cross" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9636;</span><span class="gm-tab-t">Crossword</span></button>
   </div>
 
   <!-- Emblem Pairs -->
@@ -222,14 +223,39 @@
     </div>
     <p class="gm-conn-more"><label>Play another <select id="conn-pick"></select></label></p>
   </section>
+
+  <!-- History Crossword -->
+  <section class="gm-game" id="game-cross" role="tabpanel" aria-labelledby="tab-cross" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">A crossword of history, new every day and the same for everyone. Tap a square (tap it again to go the other way) and type the answer. Check, reveal a letter or a word, or show the answers when you are stuck.</p>
+    </div>
+    <div class="gm-stats">
+      <span class="gm-stat" id="cw-num"></span>
+      <span class="gm-stat gm-cw-time" id="cw-time" aria-label="Time"></span>
+      <span class="gm-stat gm-stat-best" id="cw-best"></span>
+    </div>
+    <div class="gm-board gm-cw">
+      <div class="gm-cw-main">
+        <div class="gm-cw-bar"><button type="button" id="cw-prev" aria-label="Previous clue">&lsaquo;</button><p class="gm-cw-clue" id="cw-clue" aria-live="polite"></p><button type="button" id="cw-next" aria-label="Next clue">&rsaquo;</button></div>
+        <div class="gm-cw-grid" id="cw-grid" role="group" tabindex="0" aria-label="The crossword: choose a square and type"><p class="gm-howto">The crossword is loading&hellip;</p></div>
+        <div class="gm-cw-kb" id="cw-kb" aria-label="Letters" hidden></div>
+        <div class="gm-cw-acts"><button type="button" class="gm-again" id="cw-check">Check</button><button type="button" class="gm-again" id="cw-rletter">Reveal a letter</button><button type="button" class="gm-again" id="cw-rword">Reveal the word</button><button type="button" class="gm-again" id="cw-show">Show the answers</button></div>
+        <p class="gm-live" id="cw-live" aria-live="polite"></p>
+      </div>
+      <div class="gm-cw-clues"><div><p class="gm-cw-h">Across</p><ol id="cw-across"></ol></div><div><p class="gm-cw-h">Down</p><ol id="cw-down"></ol></div></div>
+      <div class="gm-done" id="cw-done" hidden></div>
+    </div>
+    <p class="gm-conn-more"><label>Play another <select id="cw-pick"></select></label></p>
+  </section>
 </main>
 
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=97751474c0' };</script>
 <script src="/games-emblems.js?v=1"></script>
 <script src="/games-data.js?v=1acf549129"></script>
 <script src="/connections-data.js?v=ae5bec8c68"></script>
-<script src="/shared-nav.js?v=38"></script>
-<script src="/games.js?v=4"></script>
+<script src="/shared-nav.js?v=39"></script>
+<script>var CW_SRC = '/crossword-data.js?v=70e9be812e';</script>
+<script src="/games.js?v=5"></script>
 
 </body>
 </html>

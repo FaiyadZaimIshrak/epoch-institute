@@ -338,7 +338,7 @@ which never shows once a reader type exists. The homepage also shows "Continue w
 Hand page (noindex) + passport.js: what this browser has read and played, kept in localStorage only. shared-nav.js
 records every reading page in epoch-seen (profiles of every kind, entries, states, countries, centuries, years,
 people, days, speeches, paths, essays, articles; at most 3000) and the UTC days with a visit in epoch-visits. The
-page shows pages read, days, the visit run, 25 stamps with their rules and progress (earned stamps are kept in
+page shows pages read, days, the visit run, 26 stamps with their rules and progress (earned stamps are kept in
 epoch-badges, so a broken streak does not take one away; quiz, Daily Ten and Connections streaks keep their best run
 as b), pages by kind, profiles by region (EMPIRES), the 51 centuries visited, paths finished (epoch-paths +
 epoch-seen), games played, recent pages. Share sends a poster of the stamps (share-card.js stamps layout). A backup
@@ -347,8 +347,8 @@ browser; restoring adds to what is there (lists joined, best runs kept). Clear a
 menu, the footer and the Research Hub ("Play").
 
 ## /games — History Games
-Hand page, eight client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
-#words #year #conn; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
+Hand page, nine client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
+#words #year #conn #cross; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
 (bump games.js?v= on the page). Level switches (segmented buttons) and bests are kept in localStorage epoch-games; in
 Kids mode an unchosen level starts easy. Every game carries a round token (P.id, O.id, F.id …) that its timers check:
 a timer left from an earlier round (New round pressed mid-flip) does nothing. Sounds: tiny WebAudio tones (no
@@ -411,6 +411,26 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   entry or page. Every group's facts are checked against the entries; "Born in / Died in <year>" groups are read
   with [EpochBuild.W]::Life (scratchpad conn/years-check.ps1). Each tile belongs to exactly one group: a decoy that
   seems to fit two (Beethoven: composer, but born in 1770) works only because the other group has four without it.
+- History Crossword (#cross): a 12 x 12 criss-cross crossword a day for everyone (UTC; #1 = 27 Oct 2026; the puzzles in
+  order, repeated after the last), plain clues, 13-17 answers. Tap a square (again to turn), type (keyboard: letters,
+  Backspace, arrows, Tab / Shift+Tab to the next clue, Space turns; on touch screens the letters on screen, #cw-kb, so
+  the phone's keyboard never covers the grid); the clue bar (sticky on phones) with ‹ ›, Across and Down lists (filled
+  clues greyed). Check marks the wrong letters, Reveal a letter / the word, Show the answers (asks twice) ends the game.
+  The clock runs while the tab is shown (hidden in Kids mode). epoch-games cw-<number> {g: the 144 squares, '.' empty,
+  t: seconds, c: checks, r: reveals, w: wrong squares, s: revealed squares, done, gave} resumed after a reload;
+  cw-streak {n, last, b} counts days solved without showing the answers. Stars: 3 no help, 2 checks only, 1 reveals.
+  The finish card: time and help, every answer linked to its entry, the countdown, Share ("Epoch Crossword #N: 7:42, no
+  help"; the score poster's cw layout draws the grid's shape, no letters), the newsletter line; earlier puzzles are
+  replayed for practice (not kept). The home page shows today's number and result beside Connections; the passport
+  counts it (games of 9, the "Crossword" stamp for a solve with no help).
+  Data: scripts/crossword-words.tsv (ANSWER, a plain clue, the entry it links to; 774 answers, picked from entries that
+  exist and checked against each entry's lede; no grim answers) and scripts/crosswords.tsv, which
+  scripts/make-crosswords.ps1 [-Count N] only ever APPENDS to (a C# placer: every answer crosses another, all joined,
+  no two answers side by side, no answer again within 30 puzzles, places at most 60% with at least two people and two
+  other things, the answers reaching across the whole grid). build-pages.ps1 writes crossword-data.js (CW_DATA {w:
+  [answer, clue, entry], p: [[answer, 0 across or 1 down, row, column, ...]]}) and stamps its ?v= into /games (CW_SRC;
+  games.js loads it when the tab first opens), and STOPS on an answer without a clue or an unknown entry. Scratchpad
+  cw/verify.js re-checks every puzzle on its own (stray runs, joins, crossings, repeats).
 
 ## Kids mode and the Kids corner (/kids)
 - Kids mode is site-wide: html[data-kids="1"], set before first paint by the head snippet from localStorage
@@ -426,7 +446,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   military ones only in the title; about 40% of the events). shared-nav.js inserts all of this on every page; the
   CSS shows it only in Kids mode. Games start easy, timers are hidden, sounds are on.
 - /kids is a hand page (always in Kids mode: html data-kids="1" data-kids-always; the star there changes only the
-  other pages): an inline-SVG owl (Hoot), picture and fact of the day (chosen by the date), doors to the seven games,
+  other pages): an inline-SVG owl (Hoot), picture and fact of the day (chosen by the date), doors to the games and the crossword,
   eight themes, a site-wide switch, a note for grown-ups. Its build blocks (kids-doors, kids-themes, kids-facts =
   KIDS_FACTS) come from scripts/kids-corner.tsv: `@key, title, introduction, door picture` lines, then
   `entry slug, a line for young readers` (8–12 per theme, pictures checked by eye), and `!, fact, link` lines
@@ -587,7 +607,7 @@ has pictures in only two sections: the encyclopedia has no pictured entries for 
 - Daily quiz (quiz.js, on index and /quiz): rotates profile → person → event → place → profile → idea → work. Profiles of every kind (title from PROFILE_KINDS), entry puzzles from the encyclopedia with the name masked in the clues. `?quizday=N` previews another day. /quiz adds practice rounds by category with a score and best run.
   An entry puzzle's first clue names the kind (the subtype: "A river", "A siege"…), the dates and the region most of
   its profiles belong to ("A battle · 31 BCE · Egypt and North Africa"). The result card has Share and, once, the
-  newsletter line. Next to it, "Today's challenges" links the Daily Ten (status from epoch-games).
+  newsletter line. Next to it, "Today's challenges" links the Daily Ten, Connections and the Crossword (status from epoch-games).
 - `home-data.js` — HOME_QUIZ (profiles + entry puzzles by type), HOME_PICS (one picture per profile for the featured
   cards and the profile puzzles), HOME_ENTRIES (encyclopedia "entry of the day"), HOME_COUNTS. Loaded by `index` and
   `quiz` (bump home-data.js?v= on both). Scratchpad design/make-home-data.ps1; -HomeOnly leaves search-index.js
@@ -689,7 +709,7 @@ for a link shared before: its Sharing Debugger ("Scrape again") refreshes one.
   pages: under the header) get a Share button that sends it.
 - scoreCard(spec) loads /share-card.js (SHARE_CARD_SRC in shared-nav.js: bump its ?v= when share-card.js changes)
   and draws a 1080x1350 score poster on a canvas (EpochCard.make): title, big score, unit, stars, and squares (Daily
-  Ten), clue boxes (daily quiz: never the answer), pictures with years (Order the Ages, Which Came First?, Guess the
+  Ten), the grid's shape (Crossword: no letters), clue boxes (daily quiz: never the answer), pictures with years (Order the Ages, Which Came First?, Guess the
   Year), emblems (Emblem Pairs), rounds (Globe Hunt), the solved picture (Picture Puzzle), found words (Word Hunt);
   Kids colours in Kids mode. games.js share() draws it as a finish card appears; quiz.js when its Share button is
   first touched.

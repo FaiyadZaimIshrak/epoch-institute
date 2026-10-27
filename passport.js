@@ -38,12 +38,14 @@
     S.days = days.length; S.run = 0;
     for (var d = days.indexOf(TODAY) >= 0 ? TODAY : TODAY - 1; days.indexOf(d) >= 0; d--) S.run++;
     function sk(o) { return o && typeof o === 'object' ? { n: o.last >= TODAY - 1 ? o.n || 0 : 0, b: Math.max(o.b || 0, o.n || 0) } : { n: 0, b: 0 }; }
-    S.quiz = sk(get('epoch-quiz-streak', null)); S.ten = sk(games['daily-streak']); S.conn = sk(games['conn-streak']);
+    S.quiz = sk(get('epoch-quiz-streak', null)); S.ten = sk(games['daily-streak']); S.conn = sk(games['conn-streak']); S.cw = sk(games['cw-streak']);
     S.tenPerfect = Object.keys(games).some(function (k) { return /^daily-\d+$/.test(k) && games[k] && games[k].m === '1111111111'; });
     S.connPerfect = Object.keys(games).some(function (k) { var g = games[k]; return /^conn-\d+$/.test(k) && g && g.done && g.s && g.s.length === 4 && !g.m; });
     S.connSolved = Object.keys(games).filter(function (k) { var g = games[k]; return /^conn-\d+$/.test(k) && g && g.done && g.s && g.s.length === 4; }).length;
+    S.cwSolved = Object.keys(games).filter(function (k) { var g = games[k]; return /^cw-\d+$/.test(k) && g && g.done && !g.gave; }).length;
+    S.cwClean = Object.keys(games).some(function (k) { var g = games[k]; return /^cw-\d+$/.test(k) && g && g.done && !g.gave && !g.c && !g.r; });
     var played = { pairs: games.pairs, order: games.order, year: games.year, puzzle: games['pz-solved'] };
-    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; });
+    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; });
     S.games = Object.keys(played).filter(function (k) { return played[k]; }).length;
     var shelf = get('epoch-shelf', []); S.shelf = Array.isArray(shelf) ? shelf.length : 0;
     return S;
@@ -61,7 +63,7 @@
       ['path', 'Pathfinder', 'Finish a reading path', S.pathsDone, 1], ['paths', 'Wayfarer', 'Finish 3 reading paths', S.pathsDone, 3],
       ['regular', 'Regular', 'Come back on 7 different days', S.days, 7], ['devoted', 'Devoted', 'Come back on 30 different days', S.days, 30],
       ['quiz', 'Quiz streak', 'Solve the daily quiz 7 days in a row', S.quiz.b, 7], ['ten', 'Ten out of ten', 'Get all of a Daily Ten right', S.tenPerfect ? 1 : 0, 1],
-      ['conn', 'No mistakes', 'Solve a Connections puzzle without a mistake', S.connPerfect ? 1 : 0, 1], ['gamer', 'Games room', 'Play 5 different games', S.games, 5],
+      ['conn', 'No mistakes', 'Solve a Connections puzzle without a mistake', S.connPerfect ? 1 : 0, 1], ['crossword', 'Crossword', 'Solve a crossword with no help', S.cwClean ? 1 : 0, 1], ['gamer', 'Games room', 'Play 5 different games', S.games, 5],
       ['shelf', 'Collector', 'Save 5 pages to your shelf', S.shelf, 5]
     ];
   }
@@ -95,7 +97,8 @@
       ['Daily quiz', S.quiz.n ? S.quiz.n + ' in a row now' + (S.quiz.b > S.quiz.n ? ' (best ' + S.quiz.b + ')' : '') : S.quiz.b ? 'Best run: ' + S.quiz.b + ' days' : 'Not played yet', '/quiz'],
       ['Daily Ten', S.ten.n ? S.ten.n + ' days in a row now' + (S.ten.b > S.ten.n ? ' (best ' + S.ten.b + ')' : '') : S.ten.b ? 'Best run: ' + S.ten.b + ' days' : 'Not played yet', '/games#first-daily'],
       ['Connections', S.connSolved ? S.connSolved + ' solved' + (S.conn.n > 1 ? ', ' + S.conn.n + ' days in a row' : '') : 'Not solved yet', '/games#conn'],
-      ['Games', S.games + ' of 8 played', '/games']
+      ['Crossword', S.cwSolved ? S.cwSolved + ' solved' + (S.cw.n > 1 ? ', ' + S.cw.n + ' days in a row' : '') : 'Not solved yet', '/games#cross'],
+      ['Games', S.games + ' of 9 played', '/games']
     ];
     $('pass-play').innerHTML = play.map(function (p) { return '<li><a href="' + p[2] + '"><span class="pass-play-t">' + esc(p[0]) + '</span><span class="pass-play-d">' + esc(p[1]) + '</span></a></li>'; }).join('');
     var rec = get('epoch-recent', []);

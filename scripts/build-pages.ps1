@@ -2422,6 +2422,37 @@ $connJs = "// connections-data.js - built by scripts/build-pages.ps1 from script
 if ([EpochBuild.W]::WriteIfChanged("$Repo\connections-data.js", $connJs)) { $NWRITE++ }; $CONNV = [EpochBuild.W]::Sha1($connJs).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'connections-data\.js\?v=[0-9a-f]*', "connections-data.js?v=$CONNV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
 Say "connections: $($czOut.Count) puzzles"
+# The History Crossword (games.js #cross): scripts/crossword-words.tsv (ANSWER, a plain clue, the entry it links to;
+# answers A-Z, words split by a space or hyphen) and scripts/crosswords.tsv (the puzzles made by
+# scripts/make-crosswords.ps1, only ever appended to) -> crossword-data.js, loaded by games.js when the tab first opens
+# (CW_SRC in /games, its ?v= stamped here). CW_DATA = {w: [[answer, clue, entry]], p: [[answer index, 0 across or
+# 1 down, row, column, ...] a puzzle]}. An answer without a clue, an unknown entry or an answer twice stops the build.
+$cwIdx = @{}; $cwRows = New-Object Collections.Generic.List[string]; $cwBad = New-Object Collections.Generic.List[string]
+foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\crossword-words.tsv", $U8)) {
+  if (-not $l.Trim() -or $l.StartsWith('#')) { continue }
+  $c = $l.Split("`t")
+  if ($c.Count -ne 3 -or $c[0] -cnotmatch '^[A-Z]+(?:[ -][A-Z]+)*$') { $cwBad.Add("words: '$l'"); continue }
+  if (-not $BY.ContainsKey($c[2])) { $cwBad.Add("words: unknown entry $($c[2]) for $($c[0])"); continue }
+  $cwKey = $c[0] -replace '[ -]', ''
+  if ($cwIdx.ContainsKey($cwKey)) { $cwBad.Add("words: $cwKey twice"); continue }
+  $cwIdx[$cwKey] = $cwRows.Count; $cwRows.Add('[' + (Js $c[0]) + ',' + (Js $c[1]) + ',' + (Js $c[2]) + ']')
+}
+$cwPz = New-Object Collections.Generic.List[string]
+foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\crosswords.tsv", $U8)) {
+  if ($l -notmatch '^\d+\t') { continue }
+  $cwParts = $l.Split("`t"); $cwNums = New-Object Collections.Generic.List[string]
+  foreach ($p in ($cwParts | Select-Object -Skip 1)) {
+    $q = $p.Split('|')
+    if (-not $cwIdx.ContainsKey($q[3])) { $cwBad.Add("crossword $($cwParts[0]): no clue for $($q[3])"); continue }
+    $cwNums.Add([string]$cwIdx[$q[3]] + ',' + $(if ($q[0] -eq 'D') { '1' } else { '0' }) + ',' + $q[1] + ',' + $q[2])
+  }
+  $cwPz.Add('[' + ($cwNums -join ',') + ']')
+}
+if ($cwBad.Count) { throw ('crossword: ' + ($cwBad -join '; ')) }
+$cwJs = "// crossword-data.js - built by scripts/build-pages.ps1 from scripts/crossword-words.tsv and scripts/crosswords.tsv.`n// w: [answer, clue, entry]; p: a puzzle a day, [answer, 0 across or 1 down, row, column, ...]. Do not edit.`nvar CW_DATA = {w:[`n" + ($cwRows -join ",`n") + "`n],`np:[`n" + ($cwPz -join ",`n") + "`n]};`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\crossword-data.js", $cwJs)) { $NWRITE++ }; $CWV = [EpochBuild.W]::Sha1($cwJs).Substring(0, 10)
+$t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'crossword-data\.js\?v=[0-9a-f]*', "crossword-data.js?v=$CWV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
+Say ("crossword: {0} answers, {1} puzzles, crossword-data.js {2:N0} KB" -f $cwRows.Count, $cwPz.Count, ($cwJs.Length / 1KB))
 # The Kids corner: scripts/kids-corner.tsv (@theme lines, entry lines with a line for young readers, ! facts)
 $kdThemes = New-Object Collections.Generic.List[object]; $kdFacts = New-Object Collections.Generic.List[string]; $kdBad = New-Object Collections.Generic.List[string]; $kdT = $null
 foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\kids-corner.tsv", $U8)) {
@@ -2500,7 +2531,7 @@ $SECTIONS = [ordered]@{
   today        = @{ t = 'Today in History'; h = '/today-in-history/'; k = $nTih.ToString('N0') + ' events'; d = 'What happened on each day of the year, across five thousand years.'; pic = @('mesoamerican-long-count-calendar', 'anglo-saxon-chronicle') }
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
-  games        = @{ t = 'Games'; h = '/games'; k = 'Eight games'; d = 'Picture puzzles, word hunts, timelines, a globe and a daily Connections: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  games        = @{ t = 'Games'; h = '/games'; k = 'Nine games'; d = 'Picture puzzles, word hunts, timelines, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
   passport     = @{ t = 'My History'; h = '/passport'; k = 'Your passport'; d = 'The pages you read, the centuries you visit and the games you play, with stamps to collect. Kept in your own browser.'; pic = @('xuanzang') }
   kids         = @{ t = 'Kids corner'; h = '/kids'; k = 'For young explorers'; d = 'Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.'; pic = @('great-pyramid-of-giza') }
   start        = @{ t = 'Find Your Way In'; h = '/start'; k = 'Four questions'; d = 'Tell us what draws you to history and get the reading paths and tools that suit you.'; pic = @('piri-reis-map', 'cantino-planisphere', 'tabula-rogeriana') }
