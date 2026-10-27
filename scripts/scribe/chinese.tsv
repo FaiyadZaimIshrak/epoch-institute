@@ -1,0 +1,143 @@
+# Classical Chinese for the "Write in ..." tool (scribe.js); built by scripts/make-scribe.ps1.
+# engine=han: the text is the characters themselves. The keys are themed characters in their traditional forms, with
+# the Mandarin reading (checked against Unihan kMandarin) and the classical sense; the pinyin search finds any of the
+# 4,400 characters of data/scribe/hanzi.json (make-scribe.ps1 -Hanzi). The reading shown is the usual one; some
+# characters had other readings in the classics (說 shuō, also yuè "pleased").
+lang	classical-chinese	Classical Chinese	Classical Chinese is written in characters, each standing for a word or a part of one; the same written language was read across China, Korea, Japan and Vietnam for two thousand years.
+script	han	Characters	engine=han	font=system	dir=ltr	material=scroll	vertical=1
+about	Chinese characters in their traditional forms, the standard shapes since the Han dynasty; the classics were written in columns, top to bottom and right to left, with no punctuation.
+note	Tap the characters, or find one by its pinyin (xue, dao, ren …) in the search box: each comes with its reading and meaning. “Top to bottom” sets the picture in columns from right to left, as books were printed until the 20th century.
+group	Nature 天地
+key	tiān	天	heaven, sky
+key	dì	地	earth
+key	rì	日	sun; day
+key	yuè	月	moon; month
+key	shān	山	mountain
+key	shuǐ	水	water
+key	huǒ	火	fire
+key	mù	木	tree, wood
+key	jīn	金	metal, gold
+key	tǔ	土	soil, earth
+key	fēng	風	wind
+key	yǔ	雨	rain
+key	yún	雲	cloud
+key	jiāng	江	river; the Yangzi
+key	hé	河	river; the Yellow River
+key	hǎi	海	sea
+key	shí	石	stone
+key	huā	花	flower
+key	lóng	龍	dragon
+key	mǎ	馬	horse
+key	niǎo	鳥	bird
+group	People 人
+key	rén	人	person
+key	zǐ	子	child; master, as in Kongzi
+key	nǚ	女	woman
+key	wáng	王	king
+key	jūn	君	ruler; the noble person
+key	chén	臣	minister, subject
+key	mín	民	the people
+key	fù	父	father
+key	mǔ	母	mother
+key	xiōng	兄	elder brother
+key	dì	弟	younger brother
+key	yǒu	友	friend
+key	shī	師	teacher
+key	shì	士	scholar, officer
+key	jiā	家	family, home
+key	guó	國	state, country
+key	xīn	心	heart, mind
+key	shēn	身	body, self
+group	Virtues 德
+key	rén	仁	humaneness
+key	yì	義	righteousness
+key	lǐ	禮	ritual, propriety
+key	zhì	智	wisdom
+key	xìn	信	good faith
+key	xiào	孝	filial piety
+key	zhōng	忠	loyalty
+key	dé	德	virtue, inner power
+key	dào	道	the Way; a road; to speak
+key	hé	和	harmony
+key	zhōng	中	middle, the mean
+key	shàn	善	good
+key	měi	美	beautiful
+key	zhēn	真	true, genuine
+group	Numbers 數
+key	yī	一	one
+key	èr	二	two
+key	sān	三	three
+key	sì	四	four
+key	wǔ	五	five
+key	liù	六	six
+key	qī	七	seven
+key	bā	八	eight
+key	jiǔ	九	nine
+key	shí	十	ten
+key	bǎi	百	hundred
+key	qiān	千	thousand
+key	wàn	萬	ten thousand; countless
+group	Actions 行
+key	yuē	曰	to say
+key	yán	言	to speak; words
+key	jiàn	見	to see
+key	wén	聞	to hear
+key	zhī	知	to know
+key	xué	學	to learn
+key	xí	習	to practise
+key	xíng	行	to walk; to act
+key	lái	來	to come
+key	qù	去	to go away
+key	shēng	生	to live; to be born
+key	sǐ	死	to die
+key	ài	愛	to love
+key	lè	樂	joy (also yuè, music)
+key	yǒu	有	to have; there is
+key	wú	無	there is not
+key	wéi	為	to do; to be (wèi: for)
+key	yù	欲	to wish
+key	shī	施	to give; to do to
+key	kě	可	can; may
+group	Particles 虛詞
+key	zhī	之	of; him, it
+key	hū	乎	a question
+key	zhě	者	the one who
+key	yě	也	it is so
+key	ér	而	and; but
+key	qí	其	his, its, their
+key	bù	不	not
+key	fēi	非	is not
+key	yǐ	以	by means of
+key	yú	於	at, in, to
+key	yǐ	矣	it has come about
+key	yān	焉	there; how?
+key	zāi	哉	an exclamation
+key	suǒ	所	that which
+key	wù	勿	do not
+key	jǐ	己	oneself
+key	wú	吾	I
+group	Time and place 時方
+key	chūn	春	spring
+key	xià	夏	summer
+key	qiū	秋	autumn
+key	dōng	冬	winter
+key	dōng	東	east
+key	nán	南	south
+key	xī	西	west
+key	běi	北	north
+key	nián	年	year
+key	shí	時	time; season
+key	gǔ	古	ancient
+key	jīn	今	now
+key	shàng	上	above
+key	xià	下	below
+key	dà	大	great
+key	xiǎo	小	small
+key	cháng	長	long
+key	cháng	常	constant, lasting
+punct	,	IDEOGRAPHIC COMMA	a pause
+punct	.	IDEOGRAPHIC FULL STOP	a full stop
+sample	學而時習之	“To learn, and in due time to practise it”: the first words of the Analects of Confucius	Analects 1.1
+sample	道可道非常道	“The Way that can be spoken of is not the constant Way”: the first words of the Daodejing	Daodejing 1
+sample	己所不欲勿施於人	“What you do not wish for yourself, do not do to others”	Analects 15.24
+sample	天下	Tianxia: “all under heaven”, the world

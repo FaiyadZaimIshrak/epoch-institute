@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Arabic</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">853 BCE</span><span class="rf-text">An Assyrian inscription names “Gindibu the Arab” among the enemies of <a class="enc-link" href="/encyclopedia/shalmaneser-iii">Shalmaneser III</a>, the first known mention of <a class="enc-link" href="/encyclopedia/arabs">Arabs</a></span></li><li><span class="rf-year">328</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/namara-inscription">Namara inscription</a>, the epitaph of Imru' al-Qays, “king of all the <a class="enc-link" href="/encyclopedia/arabs">Arabs</a>”, is carved in Arabic in Nabataean letters</span></li><li><span class="rf-year">512</span><span class="rf-text">The Zabad inscription, in Greek, <a class="enc-link" href="/encyclopedia/syriac">Syriac</a> and Arabic, is one of the oldest dated texts in the Arabic script</span></li><li><span class="rf-year">610–632</span><span class="rf-text">The Qur’an is revealed to Muhammad, according to Muslim belief, and becomes the first book in Arabic</span></li><li><span class="rf-year">c. 700</span><span class="rf-text">The Umayyad <a class="enc-link" href="/encyclopedia/caliphate">caliph</a> Abd al-Malik makes Arabic the language of government</span></li><li><span class="rf-year">Late 8th century</span><span class="rf-text">Sibawayh writes the first comprehensive grammar of Arabic</span></li><li><span class="rf-year">c. 820</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/al-khwarizmi">Al-Khwarizmi</a> writes his book on <a class="enc-link" href="/encyclopedia/algebra">algebra</a> in <a class="enc-link" href="/encyclopedia/baghdad">Baghdad</a></span></li><li><span class="rf-year">1973</span><span class="rf-text">Arabic becomes an official language of the <a class="enc-link" href="/encyclopedia/united-nations">United Nations</a></span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Arabic</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="arabic"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#arabic">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -150,6 +157,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Arabic",slug="arabic",url="https://the-epoch-institute.org/language/arabic";

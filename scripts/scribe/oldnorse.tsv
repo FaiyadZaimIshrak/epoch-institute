@@ -1,0 +1,59 @@
+# Old Norse for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# The Younger Futhark: 16 runes for many sounds (d and t, g and k, e and i, o, u, v, w and y share runes), in its two
+# forms, the long-branch runes of the Danish stones and the short-twig runes of Sweden and Norway. A doubled letter is
+# written once, as on the stones. Values follow the usual transliteration of runic inscriptions (Rundata).
+lang	old-norse	Old Norse	Old Norse was carved in runes, the Younger Futhark of sixteen letters, on stones, wood and bone; from the 11th and 12th centuries it was also written in the Latin alphabet.
+script	long	Long-branch runes	engine=letters	rules=runes	font=runic	dir=ltr	material=runestone	space=RUNIC SINGLE PUNCTUATION
+about	The long-branch runes (“Danish” runes) of the Viking Age, carved on the great stones of Denmark such as Harald Bluetooth’s at Jelling, around 965.
+note	Type Old Norse or any name: the sixteen runes stand for more sounds than they have letters, so d is written as t, g as k, e as i, and o, v, w and y as u, as the carvers did. A doubled letter is written once. ʀ (on its key) is the r that came from an older z. Spaces become the small dot between words.
+group	Runes
+key	f	RUNIC LETTER FEHU FEOH FE F	fé · f, v
+key	u	RUNIC LETTER URUZ UR U	úr · u, o, v, w, y	ú,o,ó,w,v,y,ý,ø,ö,œ
+key	þ	RUNIC LETTER THURISAZ THURS THORN	þurs · th	th,ð,dh
+key	ą	RUNIC LETTER LONG-BRANCH-OSS O	óss · a nasal a, later o	ǫ
+key	r	RUNIC LETTER RAIDO RAD REID R	reið · r
+key	k	RUNIC LETTER KAUN K	kaun · k, g	g,c,q
+key	h	RUNIC LETTER LONG-BRANCH-HAGALL H	hagall · h
+key	n	RUNIC LETTER NAUDIZ NYD NAUD N	nauðr · n
+key	i	RUNIC LETTER ISAZ IS ISS I	íss · i, e, j	í,e,é,j
+key	a	RUNIC LETTER LONG-BRANCH-AR AE	ár · a, æ	á,æ
+key	s	RUNIC LETTER SIGEL LONG-BRANCH-SOL S	sól · s	z
+key	t	RUNIC LETTER TIWAZ TIR TYR T	Týr · t, d	d
+key	b	RUNIC LETTER BERKANAN BEORC BJARKAN B	bjarkan · b, p	p
+key	m	RUNIC LETTER LONG-BRANCH-MADR M	maðr · m
+key	l	RUNIC LETTER LAUKAZ LAGU LOGR L	lǫgr · l
+key	ʀ	RUNIC LETTER LONG-BRANCH-YR	ýr · an r at the end of a word (from an older z)
+sign	x	RUNIC LETTER KAUN K + RUNIC LETTER SIGEL LONG-BRANCH-SOL S
+group	Dividers
+punct	.	RUNIC SINGLE PUNCTUATION	a dot between words
+punct	:	RUNIC MULTIPLE PUNCTUATION	two dots between words
+punct	+	RUNIC CROSS PUNCTUATION	a cross between words
+sample	haraltr kunukʀ baþ kaurua kubl þausi aft kurm faþur sin	“King Harald ordered these monuments made in memory of Gorm, his father”: the larger Jelling stone, about 965	Jelling stone 2 (DR 42), side A
+sample	þur uiki þasi runaʀ	“Thor, hallow these runes!”: the Glavendrup stone on Funen	Glavendrup stone (DR 209), side B
+sample	Þórr	Thor, the god of thunder
+script	short	Short-twig runes	engine=letters	rules=runes	font=runic	dir=ltr	material=runestone	space=RUNIC SINGLE PUNCTUATION
+about	The short-twig runes (“Swedish-Norwegian” runes), quicker to cut, used in Sweden and Norway from the 9th century, as on the Rök stone.
+note	The same sixteen runes in their shorter forms. Type as for the long-branch runes: d is written as t, g as k, e as i, o, v, w and y as u; a doubled letter is written once.
+group	Runes
+key	f	RUNIC LETTER FEHU FEOH FE F	fé · f, v
+key	u	RUNIC LETTER URUZ UR U	úr · u, o, v, w, y	ú,o,ó,w,v,y,ý,ø,ö,œ
+key	þ	RUNIC LETTER THURISAZ THURS THORN	þurs · th	th,ð,dh
+key	ą	RUNIC LETTER SHORT-TWIG-OSS O	óss · a nasal a, later o	ǫ
+key	r	RUNIC LETTER RAIDO RAD REID R	reið · r
+key	k	RUNIC LETTER KAUN K	kaun · k, g	g,c,q
+key	h	RUNIC LETTER SHORT-TWIG-HAGALL H	hagall · h
+key	n	RUNIC LETTER SHORT-TWIG-NAUD N	nauðr · n
+key	i	RUNIC LETTER ISAZ IS ISS I	íss · i, e, j	í,e,é,j
+key	a	RUNIC LETTER SHORT-TWIG-AR A	ár · a, æ	á,æ
+key	s	RUNIC LETTER SHORT-TWIG-SOL S	sól · s	z
+key	t	RUNIC LETTER SHORT-TWIG-TYR T	Týr · t, d	d
+key	b	RUNIC LETTER SHORT-TWIG-BJARKAN B	bjarkan · b, p	p
+key	m	RUNIC LETTER SHORT-TWIG-MADR M	maðr · m
+key	l	RUNIC LETTER LAUKAZ LAGU LOGR L	lǫgr · l
+key	ʀ	RUNIC LETTER SHORT-TWIG-YR	ýr · an r at the end of a word (from an older z)
+sign	x	RUNIC LETTER KAUN K + RUNIC LETTER SHORT-TWIG-SOL S
+group	Dividers
+punct	.	RUNIC SINGLE PUNCTUATION	a dot between words
+punct	:	RUNIC MULTIPLE PUNCTUATION	two dots between words
+sample	þur uiki þasi runaʀ	“Thor, hallow these runes!”	Glavendrup stone (DR 209), side B
+sample	Þórr	Thor, the god of thunder

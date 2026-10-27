@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Akkadian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 2300 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/sargon-of-akkad">Sargon of Akkad</a> unites <a class="enc-link" href="/encyclopedia/mesopotamia">Mesopotamia</a> and makes Akkadian a language of empire</span></li><li><span class="rf-year">c. 1754 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/hammurabi">Hammurabi</a> of <a class="enc-link" href="/encyclopedia/babylon">Babylon</a> has his laws inscribed in Akkadian on stone stelae</span></li><li><span class="rf-year">14th century BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/amarna-letters">Amarna letters</a> show Akkadian as the language of diplomacy between <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> and the kingdoms of the <a class="enc-link" href="/encyclopedia/near-east">Near East</a></span></li><li><span class="rf-year">7th century BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/ashurbanipal">Ashurbanipal</a> gathers his library of <a class="enc-link" href="/encyclopedia/cuneiform">cuneiform</a> tablets at <a class="enc-link" href="/encyclopedia/nineveh">Nineveh</a></span></li><li><span class="rf-year">539 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/cyrus-the-great">Cyrus the Great</a> takes <a class="enc-link" href="/encyclopedia/babylon">Babylon</a> and records his conquest in Akkadian on the <a class="enc-link" href="/encyclopedia/cyrus-cylinder">Cyrus Cylinder</a></span></li><li><span class="rf-year">c. 80</span><span class="rf-text">The last datable <a class="enc-link" href="/encyclopedia/cuneiform">cuneiform</a> tablet, an astronomical almanac, is written at <a class="enc-link" href="/encyclopedia/uruk">Uruk</a></span></li><li><span class="rf-year">1857</span><span class="rf-text">Four scholars independently translate an Assyrian inscription, proving the decipherment</span></li><li><span class="rf-year">2010</span><span class="rf-text">The Chicago Assyrian Dictionary is completed after nearly ninety years of work</span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Akkadian</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="akkadian"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#akkadian">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Akkadian",slug="akkadian",url="https://the-epoch-institute.org/language/akkadian";

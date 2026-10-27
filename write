@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>Write in Ancient Scripts: Cuneiform, Hieroglyphs, Runes — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Write your name in cuneiform, hieroglyphs, Greek, runes, Sanskrit, Hebrew or Arabic: a keyboard for twelve languages of the past, with each sign’s sound.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/write">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Write in Ancient Scripts — The Epoch Institute">
+<meta property="og:description" content="Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: write in twelve languages of the past, then save it as a picture.">
+<meta property="og:url" content="https://the-epoch-institute.org/write">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-write.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-write.jpg">
+<link rel="stylesheet" href="/shared.css?v=53">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Write in Ancient Scripts"}]},{"@type":"WebApplication","name":"Write in Ancient Scripts","url":"https://the-epoch-institute.org/write","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser","isAccessibleForFree":true,"description":"A keyboard for twelve languages of the past in their own scripts: Sumerian and Akkadian cuneiform, Egyptian hieroglyphs, Greek and Linear B, Aramaic and Syriac, Sanskrit in Devanagari and Brahmi, Classical Chinese, Arabic, Persian and Old Persian cuneiform, Old Turkic runes, Hebrew and Paleo-Hebrew, and the Old Norse runes.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<main id="main" class="write-page ref-page">
+<div class="write-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Write in Ancient Scripts</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">Write in Ancient Scripts</h1>
+  <p class="ref-lede">Twelve languages of the past in their own scripts, from the cuneiform of Sumer to the runes of the Vikings. Every key shows a sign with its value and how it sounds. Write a word or your name, then save it as a picture, copy it or share it.</p>
+</header>
+
+<nav class="write-langs" id="write-langs" aria-label="Choose a language"></nav>
+
+<section aria-labelledby="write-tool-t">
+  <div class="write-head-tool"><h2 class="ref-sec-title" id="write-tool-t">Write in Ancient Egyptian</h2><a class="write-prof" id="write-prof" href="/language/ancient-egyptian">The history of the language &rarr;</a></div>
+  <div class="scribe" id="write-tool"><p class="scr-loading">The keyboard needs JavaScript.</p></div>
+</section>
+
+<p class="scribe-lede" style="margin-top:28px">Latin, Nahuatl, Swahili and Quechua, the four other languages with profiles, have long been written in the Latin alphabet, the letters of English, so they have no keyboard of their own here. The signs of the rarer scripts are drawn with the Noto fonts (SIL Open Font License); sign values follow the standard lists (Borger for cuneiform, Gardiner for hieroglyphs, Tekin for Old Turkic, IAST for Sanskrit) and the readings of Chinese characters the Unicode Unihan database.</p>
+</div>
+</main>
+
+<script src="/shared-data.js?v=9"></script>
+<script src="/shared-nav.js?v=37"></script>
+<script>initNav('write');</script>
+<script src="/scribe.js?v=1"></script>
+<script>
+// /write: the twelve languages; the one chosen is kept in the address (#akkadian) and in this browser
+(function () {
+  var L = [['sumerian', 'Sumerian', 'Cuneiform'], ['akkadian', 'Akkadian', 'Cuneiform'], ['ancient-egyptian', 'Ancient Egyptian', 'Hieroglyphs'],
+    ['ancient-greek', 'Ancient Greek', 'Greek, Linear B'], ['aramaic', 'Aramaic', 'Imperial Aramaic, Syriac'], ['hebrew', 'Hebrew', 'Square script, Paleo-Hebrew'],
+    ['sanskrit', 'Sanskrit', 'Devanagari, Brahmi'], ['classical-chinese', 'Classical Chinese', 'Characters'], ['persian', 'Persian', 'Persian alphabet, Old Persian cuneiform'],
+    ['arabic', 'Arabic', 'Arabic script'], ['old-turkic', 'Old Turkic', 'Orkhon runes'], ['old-norse', 'Old Norse', 'Younger Futhark runes']];
+  var nav = document.getElementById('write-langs'), tool = document.getElementById('write-tool'), cur = null;
+  nav.innerHTML = L.map(function (l) {
+    return '<button type="button" class="write-lang" data-l="' + l[0] + '"><img src="/logos/thumbs/' + encodeURIComponent(l[1]) + '.png" alt="" width="40" height="40" loading="lazy"><span class="write-lang-t"><span class="write-lang-n">' + escHtml(l[1]) + '</span><span class="write-lang-s">' + escHtml(l[2]) + '</span></span></button>';
+  }).join('');
+  function choose(slug, scroll) {
+    var l = L.filter(function (x) { return x[0] === slug; })[0] || L[2];
+    if (cur === l[0]) return; cur = l[0];
+    Array.prototype.forEach.call(nav.querySelectorAll('.write-lang'), function (b) { b.setAttribute('aria-current', String(b.getAttribute('data-l') === l[0])); });
+    document.getElementById('write-tool-t').textContent = 'Write in ' + l[1];
+    var p = document.getElementById('write-prof'); p.href = '/language/' + l[0]; p.innerHTML = 'The history of ' + escHtml(l[1]) + ' &rarr;';
+    Scribe.mount(tool, l[0]);
+    try { history.replaceState(null, '', '#' + l[0]); localStorage.setItem('epoch-write-lang', l[0]); } catch (e) {}
+    if (scroll && tool.scrollIntoView) tool.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  nav.addEventListener('click', function (e) { var b = e.target.closest('.write-lang'); if (b) choose(b.getAttribute('data-l'), true); });
+  window.addEventListener('hashchange', function () { choose(location.hash.slice(1)); });
+  var start = location.hash.slice(1); if (!start) { try { start = localStorage.getItem('epoch-write-lang'); } catch (e) {} }
+  choose(start || 'ancient-egyptian');
+})();
+</script>
+</body>
+</html>

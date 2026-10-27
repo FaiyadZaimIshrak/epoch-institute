@@ -1,0 +1,70 @@
+# Arabic for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# Values: the DIN 31635 transliteration of each letter (ā for alif, ṯ ǧ→j ḥ ḫ ḏ š ṣ ḍ ṭ ẓ ʿ ġ, ẗ for tāʾ marbūṭa, à
+# for alif maqṣūra); typed forms after them. rules=arabic: short vowels are not written (or as harakat with "Vowel
+# marks"), long ā ī ū are alif, yāʾ and wāw, a word-initial vowel sits on an alif, a doubled letter is written once
+# (with shadda), and a hyphen joins (al-kitāb).
+lang	arabic	Arabic	Arabic is written from right to left in letters that join one another; only the long vowels are written, the short ones can be added as small marks above and below (harakat).
+script	arabic	Arabic script	engine=letters	rules=arabic	font=system	dir=rtl	material=parchment	vowelmarks=1
+about	The Arabic alphabet of 28 letters, grown from the Nabataean form of the Aramaic script; the oldest dated Arabic inscriptions are of the 4th–6th centuries, and the Qurʾan fixed its classical form.
+note	Type as it sounds: th, kh, dh, sh, gh for ث خ ذ ش غ, ' for the hamza ء and ` for ʿayn ع. Long vowels twice (aa, ii, uu) or with a line (ā ī ū) become ا ي و; short vowels are not written unless “Vowel marks” is on. A hyphen joins words, as in al-kitāb.
+group	Letters
+key	ā	ARABIC LETTER ALEF	alif · a long a, or the seat of a first vowel
+key	b	ARABIC LETTER BEH	bāʾ · b	p
+key	t	ARABIC LETTER TEH	tāʾ · t
+key	ṯ	ARABIC LETTER THEH	ṯāʾ · th as in thin	th
+key	j	ARABIC LETTER JEEM	jīm · j	ǧ,dj
+key	ḥ	ARABIC LETTER HAH	ḥāʾ · a breathy h from the throat	h.
+key	ḫ	ARABIC LETTER KHAH	ḫāʾ · ch as in loch	kh,x
+key	d	ARABIC LETTER DAL	dāl · d
+key	ḏ	ARABIC LETTER THAL	ḏāl · th as in this	dh
+key	r	ARABIC LETTER REH	rāʾ · a rolled r
+key	z	ARABIC LETTER ZAIN	zāy · z
+key	s	ARABIC LETTER SEEN	sīn · s
+key	š	ARABIC LETTER SHEEN	šīn · sh	sh
+key	ṣ	ARABIC LETTER SAD	ṣād · a heavy s	s.
+key	ḍ	ARABIC LETTER DAD	ḍād · a heavy d	d.
+key	ṭ	ARABIC LETTER TAH	ṭāʾ · a heavy t	t.
+key	ẓ	ARABIC LETTER ZAH	ẓāʾ · a heavy th, as in this	z.
+key	ʿ	ARABIC LETTER AIN	ʿayn · a sound squeezed in the throat	`
+key	ġ	ARABIC LETTER GHAIN	ġayn · a gargled r, as in French	gh
+key	f	ARABIC LETTER FEH	fāʾ · f	v
+key	q	ARABIC LETTER QAF	qāf · k, said deep in the throat
+key	k	ARABIC LETTER KAF	kāf · k	c
+key	l	ARABIC LETTER LAM	lām · l
+key	m	ARABIC LETTER MEEM	mīm · m
+key	n	ARABIC LETTER NOON	nūn · n
+key	h	ARABIC LETTER HEH	hāʾ · h
+key	w	ARABIC LETTER WAW	wāw · w; also a long u
+key	y	ARABIC LETTER YEH	yāʾ · y; also a long i
+group	Hamza and endings
+key	ʾ	ARABIC LETTER HAMZA	hamza · a catch in the throat	'
+key	ʾa	ARABIC LETTER ALEF WITH HAMZA ABOVE	alif with hamza · a first a or u
+key	ʾi	ARABIC LETTER ALEF WITH HAMZA BELOW	alif with hamza below · a first i
+key	ʾā	ARABIC LETTER ALEF WITH MADDA ABOVE	alif madda · ʾā
+key	ẗ	ARABIC LETTER TEH MARBUTA	tāʾ marbūṭa · -a or -at at the end of a word
+key	à	ARABIC LETTER ALEF MAKSURA	alif maqṣūra · a final -ā
+group	Numbers and punctuation
+punct	0	ARABIC-INDIC DIGIT ZERO	0
+punct	1	ARABIC-INDIC DIGIT ONE	1
+punct	2	ARABIC-INDIC DIGIT TWO	2
+punct	3	ARABIC-INDIC DIGIT THREE	3
+punct	4	ARABIC-INDIC DIGIT FOUR	4
+punct	5	ARABIC-INDIC DIGIT FIVE	5
+punct	6	ARABIC-INDIC DIGIT SIX	6
+punct	7	ARABIC-INDIC DIGIT SEVEN	7
+punct	8	ARABIC-INDIC DIGIT EIGHT	8
+punct	9	ARABIC-INDIC DIGIT NINE	9
+punct	,	ARABIC COMMA	comma
+punct	?	ARABIC QUESTION MARK	question mark
+mark	a	ARABIC FATHA	fatḥa · a short a
+mark	i	ARABIC KASRA	kasra · a short i
+mark	u	ARABIC DAMMA	ḍamma · a short u
+mark	°	ARABIC SUKUN	sukūn · no vowel
+mark	·	ARABIC SHADDA	šadda · a doubled letter
+mark	an	ARABIC FATHATAN	tanwīn · -an
+mark	in	ARABIC KASRATAN	tanwīn · -in
+mark	un	ARABIC DAMMATAN	tanwīn · -un
+sample	al-salāmu ʿalaykum	As-salāmu ʿalaykum: “peace be upon you”, the everyday greeting
+sample	al-ʿilmu nūr	“Knowledge is light”: a proverb
+sample	alf laylaẗ wa-laylaẗ	Alf layla wa-layla: “A Thousand and One Nights”
+sample	kitāb	Kitāb: a book

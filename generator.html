@@ -259,6 +259,21 @@ function riseFallHtml(emp, name, isPolity) {
     '      <h2 class="profile-section-title" id="timeline-title">' + (isPolity ? 'Rise &amp; Fall' : 'Timeline') + '</h2>\n      ' + svg + list + '\n    </section>';
 }
 
+// "Write in …" (scribe.js, data/scribe/<slug>.json): the languages with a script of their own; the four written in the
+// Latin alphabet (Latin, Nahuatl, Swahili, Quechua) have no keyboard of their own
+var SCRIBE_LANGS = ['Sumerian', 'Akkadian', 'Ancient Egyptian', 'Ancient Greek', 'Aramaic', 'Sanskrit', 'Classical Chinese', 'Arabic', 'Persian', 'Old Turkic', 'Hebrew', 'Old Norse'];
+function hasScribe(emp) { return profileKind(emp) === 'language' && SCRIBE_LANGS.indexOf(emp.name) >= 0; }
+function scribeHtml(emp) {
+  if (!hasScribe(emp)) return '';
+  var slug = toSlug(emp.name);
+  return '<section class="scribe-sec" id="write" aria-labelledby="write-title">\n' +
+    '      <h2 class="profile-section-title" id="write-title">Write in ' + esc(emp.name) + '</h2>\n' +
+    '      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>\n' +
+    '      <div class="scribe" data-lang="' + slug + '"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>\n' +
+    '      <p class="scribe-more"><a href="/write#' + slug + '">All twelve scripts on one page &rarr;</a></p>\n' +
+    '    </section>';
+}
+
 // One picture per profile section (empire-section-images.js), linked to its encyclopedia entry, with credit.
 function sectionFigure(empireName, key) {
   var f = typeof SECTION_IMAGES !== 'undefined' && SECTION_IMAGES[empireName] && SECTION_IMAGES[empireName][key];
@@ -403,9 +418,10 @@ factRows(name, emp) +
 '      </div>\n' +
 '    </div>\n\n' +
 (glanceOf(name) ? '    ' + glanceHtml(name) + '\n\n' : '') +
-'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []))) + '\n\n' +
+'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : [])) + '\n\n' +
 (isPolity ? '    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' : '') +
 '    ' + riseFallHtml(emp, name, isPolity) + '\n\n' +
+(hasScribe(emp) ? '    ' + scribeHtml(emp) + '\n\n' : '') +
 noProfileNote + '\n' +
 (sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
 (summaryHtml ? '\n    ' + summaryHtml + '\n' : '') +
@@ -428,6 +444,7 @@ noProfileNote + '\n' +
 (isPolity ? '<script src="/epoch-stats.js?v=3">\x3C/script>\n' +
 '<script src="/connections-map.js?v=12" defer>\x3C/script>\n' +
 '<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});\x3C/script>\n' : '') +
+(hasScribe(emp) ? '<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
 '<script>\n' +
 '(function(){\n' +
 '  var name="'+name.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'",slug="'+slug+'",url="'+canonicalUrl+'";\n' +

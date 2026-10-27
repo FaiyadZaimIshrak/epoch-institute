@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Aramaic</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 850 BCE</span><span class="rf-text">A statue at Tell Fekheriye in <a class="enc-link" href="/encyclopedia/syria">Syria</a> carries one of the oldest Aramaic inscriptions, beside an Akkadian text</span></li><li><span class="rf-year">8th century BCE</span><span class="rf-text">The Assyrian empire uses Aramaic beside Akkadian, spreading it across the <a class="enc-link" href="/encyclopedia/near-east">Near East</a></span></li><li><span class="rf-year">5th century BCE</span><span class="rf-text">Papyri of the Jewish garrison at Elephantine in <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> record the Aramaic of the Persian empire</span></li><li><span class="rf-year">c. 260 BCE</span><span class="rf-text">The Indian emperor <a class="enc-link" href="/encyclopedia/ashoka">Ashoka</a> has an edict inscribed in Greek and Aramaic at <a class="enc-link" href="/encyclopedia/kandahar">Kandahar</a></span></li><li><span class="rf-year">1st century</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/jesus">Jesus</a> and his disciples speak Aramaic in <a class="enc-link" href="/encyclopedia/galilee">Galilee</a></span></li><li><span class="rf-year">c. 500</span><span class="rf-text">The Babylonian Talmud, written largely in Aramaic, takes shape</span></li><li><span class="rf-year">7th century</span><span class="rf-text">After the <a class="enc-link" href="/encyclopedia/early-muslim-conquests">Arab conquests</a>, Arabic begins to replace Aramaic across the <a class="enc-link" href="/encyclopedia/near-east">Near East</a></span></li><li><span class="rf-year">2014</span><span class="rf-text">The advance of the Islamic State drives Aramaic-speaking Christians from their towns in northern <a class="enc-link" href="/encyclopedia/iraq">Iraq</a></span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Aramaic</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="aramaic"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#aramaic">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -150,6 +157,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Aramaic",slug="aramaic",url="https://the-epoch-institute.org/language/aramaic";

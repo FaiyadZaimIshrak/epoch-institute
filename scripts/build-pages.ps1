@@ -2418,6 +2418,7 @@ $SECTIONS = [ordered]@{
   explorer     = @{ t = 'Empire Explorer'; h = '/explorer'; k = 'Power curves'; d = 'Compare the rise and fall of nearly four hundred states and empires on one timeline.'; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
   connections  = @{ t = 'Connections'; h = '/connections'; k = $POL['links'].Count.ToString('N0') + ' links'; d = 'Who succeeded, conquered, ruled or merged with whom: the states as one network.'; pic = @('congress-of-berlin', 'treaty-of-tordesillas', 'congress-of-vienna') }
   paths        = @{ t = 'Reading Paths'; h = '/paths/'; k = "$($RP.Count) paths"; d = 'Themed routes across profiles and entries, from the Silk Road to the steppe empires.'; pic = @('marco-polo', 'ibn-battuta', 'zheng-he') }
+  write        = @{ t = 'Write in Ancient Scripts'; h = '/write'; k = '12 languages'; d = 'Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: a keyboard that shows every sign with its sound, and your writing as a picture.'; pic = @('rosetta-stone', 'code-of-hammurabi') }
   speeches     = @{ t = 'Great Speeches'; h = '/speeches/'; k = "$($SPS.Count) speeches"; d = 'The words that moved history: the setting, the key passage, what followed, and the complete text where it is free to read.'; pic = @('pericles', 'cicero', 'abraham-lincoln') }
   today        = @{ t = 'Today in History'; h = '/today-in-history/'; k = $nTih.ToString('N0') + ' events'; d = 'What happened on each day of the year, across five thousand years.'; pic = @('mesoamerican-long-count-calendar', 'anglo-saxon-chronicle') }
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
@@ -2440,7 +2441,7 @@ function HubCard($s, [string]$cls) {
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
 $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
-  @('Through time', @('atlas', 'timeline', 'centuries', 'years')), @('Explore', @('explorer', 'connections', 'paths', 'start')),
+  @('Through time', @('atlas', 'timeline', 'centuries', 'years')), @('Explore', @('explorer', 'connections', 'paths', 'write', 'start')),
   @('Play', @('quiz', 'games', 'kids', 'passport')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(if (@($_[1]).Count -eq 5) { ' hub-5' } else { '' }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
@@ -2568,7 +2569,7 @@ foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts'
 }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

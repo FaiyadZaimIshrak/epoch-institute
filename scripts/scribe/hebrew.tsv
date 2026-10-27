@@ -1,0 +1,89 @@
+# Hebrew for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# Values are the usual scholarly transliteration of the letters (ʾ b g d h w z ḥ ṭ y k l m n s ʿ p ṣ q r š t); the
+# typed forms after them are the ASCII ways to reach them. rules=hebrew: short a and e inside a word are not written,
+# i becomes yod and o, u vav, a word-initial vowel takes alef, a final a or e takes he, doubled letters are written
+# once, and the five letters with final forms take them at the end of a word. "Vowel marks" adds the niqqud instead.
+lang	hebrew	Hebrew	Hebrew is written from right to left with 22 letters, all of them consonants; the vowels were added later as dots and dashes (niqqud).
+script	square	Square script	engine=letters	rules=hebrew	font=system	dir=rtl	material=parchment	vowelmarks=1
+about	The “square” letters, taken over from the Aramaic script after the Babylonian exile (6th century BCE) and still used today.
+note	Type as it sounds: sh for ש, ch for ח, ts for צ, ' for א and ` for ע. Short a and e inside a word are left out; i becomes י and o or u become ו, as in many Hebrew spellings; final letters (ך ם ן ף ץ) appear by themselves. The line under the letters spells out what is written.
+group	Letters
+key	ʾ	HEBREW LETTER ALEF	alef · silent, or a catch in the throat	'
+key	b	HEBREW LETTER BET	bet · b, or v
+key	g	HEBREW LETTER GIMEL	gimel · g as in go
+key	d	HEBREW LETTER DALET	dalet · d
+key	h	HEBREW LETTER HE	he · h
+key	w	HEBREW LETTER VAV	vav · v (anciently w); also o and u	v
+key	z	HEBREW LETTER ZAYIN	zayin · z
+key	ḥ	HEBREW LETTER HET	het · ch as in loch	ch,H
+key	ṭ	HEBREW LETTER TET	tet · t	T
+key	y	HEBREW LETTER YOD	yod · y; also i	j
+key	k	HEBREW LETTER KAF	kaf · k, or kh	kh,c
+key	l	HEBREW LETTER LAMED	lamed · l
+key	m	HEBREW LETTER MEM	mem · m
+key	n	HEBREW LETTER NUN	nun · n
+key	s	HEBREW LETTER SAMEKH	samekh · s
+key	ʿ	HEBREW LETTER AYIN	ayin · a sound from deep in the throat	`
+key	p	HEBREW LETTER PE	pe · p, or f	f
+key	ṣ	HEBREW LETTER TSADI	tsadi · ts	ts,tz,S
+key	q	HEBREW LETTER QOF	qof · k, said further back
+key	r	HEBREW LETTER RESH	resh · r
+key	š	HEBREW LETTER SHIN	shin · sh (or s)	sh,ś
+key	t	HEBREW LETTER TAV	tav · t	th
+group	Final forms
+key	k	HEBREW LETTER FINAL KAF	final kaf · kaf at the end of a word
+key	m	HEBREW LETTER FINAL MEM	final mem · mem at the end of a word
+key	n	HEBREW LETTER FINAL NUN	final nun · nun at the end of a word
+key	p	HEBREW LETTER FINAL PE	final pe · pe at the end of a word
+key	ṣ	HEBREW LETTER FINAL TSADI	final tsadi · tsadi at the end of a word
+group	Punctuation
+punct	-	HEBREW PUNCTUATION MAQAF	maqaf · joins words
+punct	:	HEBREW PUNCTUATION SOF PASUQ	sof pasuq · ends a verse
+final	HEBREW LETTER KAF	HEBREW LETTER FINAL KAF
+final	HEBREW LETTER MEM	HEBREW LETTER FINAL MEM
+final	HEBREW LETTER NUN	HEBREW LETTER FINAL NUN
+final	HEBREW LETTER PE	HEBREW LETTER FINAL PE
+final	HEBREW LETTER TSADI	HEBREW LETTER FINAL TSADI
+mark	a	HEBREW POINT PATAH	patah · a
+mark	ā	HEBREW POINT QAMATS	qamats · a
+mark	e	HEBREW POINT SEGOL	segol · e
+mark	ē	HEBREW POINT TSERE	tsere · e
+mark	i	HEBREW POINT HIRIQ	hiriq · i
+mark	o	HEBREW POINT HOLAM	holam · o
+mark	u	HEBREW POINT QUBUTS	qubuts · u
+mark	ə	HEBREW POINT SHEVA	sheva · a short e, or no vowel
+mark	·	HEBREW POINT DAGESH OR MAPIQ	dagesh · a doubled or hard letter
+sample	shalom	Shalom: peace, and also hello and goodbye
+sample	lechayim	L’chaim: “to life”, a toast
+sample	tiqqun ʿolam	Tikkun olam: “repairing the world”, a phrase found in the Mishnah	Mishnah, Gittin 4
+sample	brʾšyt	Bereshit: “in the beginning”, the first word of the Bible and the Hebrew name of Genesis	Genesis 1:1
+script	paleo	Paleo-Hebrew	engine=letters	rules=abjad	font=phoenician	dir=rtl	material=rock	space=PHOENICIAN WORD SEPARATOR
+about	The older Hebrew letters, close to the Phoenician alphabet, used by the kingdoms of Israel and Judah from about the 10th century BCE.
+note	The same letters in their older shapes, with no final forms and a dot between words, as on the Siloam inscription. Type as for Hebrew: sh, ch, ts, ' and `.
+group	Letters
+key	ʾ	PHOENICIAN LETTER ALF	alef · silent, or a catch in the throat	'
+key	b	PHOENICIAN LETTER BET	bet · b
+key	g	PHOENICIAN LETTER GAML	gimel · g
+key	d	PHOENICIAN LETTER DELT	dalet · d
+key	h	PHOENICIAN LETTER HE	he · h
+key	w	PHOENICIAN LETTER WAU	waw · w; also o and u	v
+key	z	PHOENICIAN LETTER ZAI	zayin · z
+key	ḥ	PHOENICIAN LETTER HET	het · ch as in loch	ch,H
+key	ṭ	PHOENICIAN LETTER TET	tet · t	T
+key	y	PHOENICIAN LETTER YOD	yod · y; also i	j
+key	k	PHOENICIAN LETTER KAF	kaf · k	kh,c
+key	l	PHOENICIAN LETTER LAMD	lamed · l
+key	m	PHOENICIAN LETTER MEM	mem · m
+key	n	PHOENICIAN LETTER NUN	nun · n
+key	s	PHOENICIAN LETTER SEMK	samekh · s
+key	ʿ	PHOENICIAN LETTER AIN	ayin · a sound from deep in the throat	`
+key	p	PHOENICIAN LETTER PE	pe · p	f
+key	ṣ	PHOENICIAN LETTER SADE	tsadi · ts	ts,tz,S
+key	q	PHOENICIAN LETTER QOF	qof · k, said further back
+key	r	PHOENICIAN LETTER ROSH	resh · r
+key	š	PHOENICIAN LETTER SHIN	shin · sh	sh,ś
+key	t	PHOENICIAN LETTER TAU	tav · t	th
+group	Punctuation
+punct	.	PHOENICIAN WORD SEPARATOR	word divider
+sample	wzh hyh dbr hnqbh	“And this was the matter of the tunnel”: the Siloam inscription, cut in Hezekiah’s tunnel in Jerusalem around 700 BCE	Siloam inscription (KAI 189), line 1
+sample	shalom	Shalom: peace

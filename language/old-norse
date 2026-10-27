@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Old Norse</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">793</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/vikings">Viking</a> raid on <a class="enc-link" href="/encyclopedia/lindisfarne">Lindisfarne</a> opens the <a class="enc-link" href="/encyclopedia/viking-age">Viking Age</a>, which carries Old Norse across the seas</span></li><li><span class="rf-year">c. 800</span><span class="rf-text">The Rök stone, with the longest known runic inscription, is raised in <a class="enc-link" href="/encyclopedia/sweden">Sweden</a></span></li><li><span class="rf-year">c. 870</span><span class="rf-text">Norse settlers begin to colonise Iceland</span></li><li><span class="rf-year">1117–1118</span><span class="rf-text">The laws of Iceland are first written down in Old Norse</span></li><li><span class="rf-year">c. 1130</span><span class="rf-text">Ari Thorgilsson writes the Book of the Icelanders, the first history in the language</span></li><li><span class="rf-year">c. 1220</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/snorri-sturluson">Snorri Sturluson</a> writes the <a class="enc-link" href="/encyclopedia/edda">Prose Edda</a>, a handbook of poetry and myth</span></li><li><span class="rf-year">c. 1280</span><span class="rf-text">Njáls saga, the greatest of the Icelandic family sagas, is written</span></li><li><span class="rf-year">1971</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/denmark">Denmark</a> returns the Codex Regius and Flateyjarbók to Iceland, the first of the medieval <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> to go home</span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Old Norse</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="old-norse"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#old-norse">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Old Norse",slug="old-norse",url="https://the-epoch-institute.org/language/old-norse";

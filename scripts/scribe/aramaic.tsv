@@ -1,0 +1,64 @@
+# Aramaic for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# Two scripts with the same 22 letters: Imperial Aramaic, the chancery script of the Persian empire, and Syriac in its
+# oldest book hand, Estrangela. rules=aramaic: short vowels inside a word are not written, i/ē and o/u become yodh and
+# waw, a word-initial vowel takes aleph, and a final a takes aleph (the "emphatic" -ā of nouns: malkā, mlkʾ).
+lang	aramaic	Aramaic	Aramaic is written from right to left in 22 letters, all consonants, like Hebrew and Phoenician; its alphabet spread across the Persian empire and gave rise to the Hebrew, Syriac, Nabataean and Arabic scripts.
+script	imperial	Imperial Aramaic	engine=letters	rules=aramaic	font=imperialaramaic	dir=rtl	material=papyrus
+about	The letters of the Persian chancery (6th–4th centuries BCE), used for letters and contracts from Egypt to Afghanistan, as in the papyri of Elephantine.
+note	Type as it sounds: sh for š, ch for ḥ, ts for ṣ, ' for aleph and ` for ʿayin. Short vowels inside a word are left out; i becomes י-like yodh and o or u waw; a final a is written with aleph, as in malka, mlkʾ, “the king”.
+group	Letters
+key	ʾ	IMPERIAL ARAMAIC LETTER ALEPH	aleph · a catch in the throat; also a final a	'
+key	b	IMPERIAL ARAMAIC LETTER BETH	beth · b, or v
+key	g	IMPERIAL ARAMAIC LETTER GIMEL	gimel · g
+key	d	IMPERIAL ARAMAIC LETTER DALETH	daleth · d
+key	h	IMPERIAL ARAMAIC LETTER HE	he · h
+key	w	IMPERIAL ARAMAIC LETTER WAW	waw · w; also o and u	v
+key	z	IMPERIAL ARAMAIC LETTER ZAYIN	zayin · z
+key	ḥ	IMPERIAL ARAMAIC LETTER HETH	heth · ch as in loch	ch
+key	ṭ	IMPERIAL ARAMAIC LETTER TETH	teth · a heavy t	t.
+key	y	IMPERIAL ARAMAIC LETTER YODH	yodh · y; also i	j
+key	k	IMPERIAL ARAMAIC LETTER KAPH	kaph · k, or kh	kh,c
+key	l	IMPERIAL ARAMAIC LETTER LAMEDH	lamedh · l
+key	m	IMPERIAL ARAMAIC LETTER MEM	mem · m
+key	n	IMPERIAL ARAMAIC LETTER NUN	nun · n
+key	s	IMPERIAL ARAMAIC LETTER SAMEKH	samekh · s
+key	ʿ	IMPERIAL ARAMAIC LETTER AYIN	ʿayin · a sound squeezed in the throat	`
+key	p	IMPERIAL ARAMAIC LETTER PE	pe · p, or f	f
+key	ṣ	IMPERIAL ARAMAIC LETTER SADHE	sadhe · a heavy s	ts
+key	q	IMPERIAL ARAMAIC LETTER QOPH	qoph · k, said deep in the throat
+key	r	IMPERIAL ARAMAIC LETTER RESH	resh · r
+key	š	IMPERIAL ARAMAIC LETTER SHIN	shin · sh	sh
+key	t	IMPERIAL ARAMAIC LETTER TAW	taw · t, or th	th
+sample	mnʾ mnʾ tql wprsyn	“Mene, mene, tekel, upharsin”: the writing on the wall at Belshazzar’s feast	Daniel 5:25
+sample	shlam	Shlam: “peace”, a greeting
+sample	mlkʾ	Malkā: “the king”
+script	syriac	Syriac (Estrangela)	engine=letters	rules=aramaic	font=syriac	dir=rtl	material=parchment
+about	The script of Syriac, the Aramaic of Edessa and of the Christians of Mesopotamia, in Estrangela, its oldest book hand (from the 1st century CE); the letters join like Arabic.
+note	The same 22 letters, joined in Syriac fashion. Type as for Imperial Aramaic: sh, ch, ts, ' for alaph and ` for ʿe. Short vowels inside a word are left out; a final a takes alaph, as in shlama, ܫܠܡܐ.
+group	Letters
+key	ʾ	SYRIAC LETTER ALAPH	alaph · a catch in the throat; also a final a	'
+key	b	SYRIAC LETTER BETH	beth · b, or v
+key	g	SYRIAC LETTER GAMAL	gamal · g
+key	d	SYRIAC LETTER DALATH	dalath · d
+key	h	SYRIAC LETTER HE	he · h
+key	w	SYRIAC LETTER WAW	waw · w; also o and u	v
+key	z	SYRIAC LETTER ZAIN	zain · z
+key	ḥ	SYRIAC LETTER HETH	heth · ch as in loch	ch
+key	ṭ	SYRIAC LETTER TETH	teth · a heavy t	t.
+key	y	SYRIAC LETTER YUDH	yudh · y; also i	j
+key	k	SYRIAC LETTER KAPH	kaph · k, or kh	kh,c
+key	l	SYRIAC LETTER LAMADH	lamadh · l
+key	m	SYRIAC LETTER MIM	mim · m
+key	n	SYRIAC LETTER NUN	nun · n
+key	s	SYRIAC LETTER SEMKATH	semkath · s
+key	ʿ	SYRIAC LETTER E	ʿe · a sound squeezed in the throat	`
+key	p	SYRIAC LETTER PE	pe · p, or f	f
+key	ṣ	SYRIAC LETTER SADHE	sadhe · a heavy s	ts
+key	q	SYRIAC LETTER QAPH	qaph · k, said deep in the throat
+key	r	SYRIAC LETTER RISH	rish · r
+key	š	SYRIAC LETTER SHIN	shin · sh	sh
+key	t	SYRIAC LETTER TAW	taw · t, or th	th
+punct	.	SYRIAC SUPRALINEAR FULL STOP	full stop
+sample	shlama	Shlama: “peace”, the Syriac greeting
+sample	ʾbwn dbšmyʾ	“Our Father, who art in heaven”: the Lord’s Prayer in the Syriac Bible	Peshitta, Matthew 6:9
+sample	ṭlytʾ qwmy	“Talitha, koum”: “little girl, get up”	Mark 5:41

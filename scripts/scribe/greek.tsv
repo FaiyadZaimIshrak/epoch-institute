@@ -1,0 +1,144 @@
+# Ancient Greek for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# rules=greek: the letters from their usual Latin forms (th ph ch ps for θ φ χ ψ, ē/ee for η, ō/oo for ω); an h before
+# the first vowel gives the rough breathing, otherwise the smooth one (on the second vowel of a diphthong), an initial ρ
+# takes the rough breathing; accents typed on Latin vowels (ó, ò, ô) are kept, a circumflex on o or e means ω or η;
+# final sigma; n before a velar is γ. "As on stone": capitals and no marks, as the inscriptions were cut.
+# Linear B: the syllabary of the Mycenaean palaces, in its Unicode values (Bennett's numbers in the names).
+lang	ancient-greek	Ancient Greek	Greek has been written in its alphabet since the 8th century BCE; before that, the palaces of Mycenaean Greece kept their records in a syllabic script, Linear B.
+script	greek	Greek alphabet	engine=letters	rules=greek	font=system	dir=ltr	material=marble	caps=1
+about	The Greek alphabet, adapted from the Phoenician in the 8th century BCE; the breathings and accents were added by scholars of Alexandria around 200 BCE, and the inscriptions were cut in capitals.
+note	Type as in the usual romanisation: th, ph, ch (or kh) and ps for θ φ χ ψ, ē for η and ō for ω (or ee and oo), x for ξ. Start a word with h for the rough breathing (hodos → ὁδος). Accents: type them on the Latin letter (ó, ò, ô) or use the keys after a letter. “As on stone” writes capitals without marks, as the Greeks carved them.
+group	Letters
+key	a	GREEK SMALL LETTER ALPHA	alpha · a
+key	b	GREEK SMALL LETTER BETA	beta · b	v
+key	g	GREEK SMALL LETTER GAMMA	gamma · g
+key	d	GREEK SMALL LETTER DELTA	delta · d
+key	e	GREEK SMALL LETTER EPSILON	epsilon · a short e
+key	z	GREEK SMALL LETTER ZETA	zeta · zd
+key	ē	GREEK SMALL LETTER ETA	eta · a long e	ee
+key	th	GREEK SMALL LETTER THETA	theta · t + h (later th as in thin)
+key	i	GREEK SMALL LETTER IOTA	iota · i	j
+key	k	GREEK SMALL LETTER KAPPA	kappa · k	c,q
+key	l	GREEK SMALL LETTER LAMDA	lambda · l
+key	m	GREEK SMALL LETTER MU	mu · m
+key	n	GREEK SMALL LETTER NU	nu · n
+key	x	GREEK SMALL LETTER XI	xi · ks	ks
+key	o	GREEK SMALL LETTER OMICRON	omicron · a short o
+key	p	GREEK SMALL LETTER PI	pi · p
+key	r	GREEK SMALL LETTER RHO	rho · r	rh
+key	s	GREEK SMALL LETTER SIGMA	sigma · s (ς at the end of a word)
+key	t	GREEK SMALL LETTER TAU	tau · t
+key	u	GREEK SMALL LETTER UPSILON	upsilon · u (French u), y	y
+key	ph	GREEK SMALL LETTER PHI	phi · p + h (later f)	f
+key	ch	GREEK SMALL LETTER CHI	chi · k + h (later ch as in loch)	kh
+key	ps	GREEK SMALL LETTER PSI	psi · ps
+key	ō	GREEK SMALL LETTER OMEGA	omega · a long o	oo
+group	Accents and marks
+key	U+0301	GREEK SMALL LETTER ALPHA WITH OXIA	acute · the voice rises
+key	U+0300	GREEK SMALL LETTER ALPHA WITH VARIA	grave · an acute softened before another word
+key	U+0302	GREEK SMALL LETTER ALPHA WITH PERISPOMENI	circumflex · rises and falls (long vowels)
+key	U+0308	GREEK SMALL LETTER IOTA WITH DIALYTIKA	diaeresis · the two vowels are said apart
+key	U+0345	GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI	iota subscript · a silent i under a long vowel
+key	h	GREEK SMALL LETTER ALPHA WITH DASIA	rough breathing · h, typed before the word
+punct	?	GREEK QUESTION MARK	question mark (it looks like ;)
+punct	;	GREEK ANO TELEIA	raised dot · a pause, like ;
+sample	gnôthi seautón	“Know thyself”: inscribed at the temple of Apollo at Delphi
+sample	pánta rheî	“Everything flows”: a saying ascribed to Heraclitus
+sample	Hómēros	Homer, the poet of the Iliad and the Odyssey
+sample	dēmokratía	Dēmokratia: “rule of the people”, democracy
+script	linearb	Linear B	engine=syllabic	rules=linearb	font=linearb	dir=ltr	material=clay
+about	The syllabic script of the Mycenaean palaces (about 1450–1200 BCE), deciphered by Michael Ventris in 1952; its clay tablets were baked, and kept, by the fires that destroyed the palaces.
+note	Type syllables with hyphens, as scholars write Linear B (ko-no-so for Knossos), or a whole word: it is spelt as the palace scribes did, each consonant with the vowel that follows it, with the last consonant and nasals before a consonant left out. Spaces become the short upright word divider.
+group	Vowels
+key	a	LINEAR B SYLLABLE B008 A	a
+key	e	LINEAR B SYLLABLE B038 E	e
+key	i	LINEAR B SYLLABLE B028 I	i
+key	o	LINEAR B SYLLABLE B061 O	o
+key	u	LINEAR B SYLLABLE B010 U	u
+group	D- · d
+key	da	LINEAR B SYLLABLE B001 DA	da
+key	de	LINEAR B SYLLABLE B045 DE	de
+key	di	LINEAR B SYLLABLE B007 DI	di
+key	do	LINEAR B SYLLABLE B014 DO	do
+key	du	LINEAR B SYLLABLE B051 DU	du
+group	J- · y
+key	ja	LINEAR B SYLLABLE B057 JA	ja
+key	je	LINEAR B SYLLABLE B046 JE	je
+key	jo	LINEAR B SYLLABLE B036 JO	jo
+key	ju	LINEAR B SYLLABLE B065 JU	ju
+group	K- · k, g, kh
+key	ka	LINEAR B SYLLABLE B077 KA	ka
+key	ke	LINEAR B SYLLABLE B044 KE	ke
+key	ki	LINEAR B SYLLABLE B067 KI	ki
+key	ko	LINEAR B SYLLABLE B070 KO	ko
+key	ku	LINEAR B SYLLABLE B081 KU	ku
+group	M- · m
+key	ma	LINEAR B SYLLABLE B080 MA	ma
+key	me	LINEAR B SYLLABLE B013 ME	me
+key	mi	LINEAR B SYLLABLE B073 MI	mi
+key	mo	LINEAR B SYLLABLE B015 MO	mo
+key	mu	LINEAR B SYLLABLE B023 MU	mu
+group	N- · n
+key	na	LINEAR B SYLLABLE B006 NA	na
+key	ne	LINEAR B SYLLABLE B024 NE	ne
+key	ni	LINEAR B SYLLABLE B030 NI	ni
+key	no	LINEAR B SYLLABLE B052 NO	no
+key	nu	LINEAR B SYLLABLE B055 NU	nu
+group	P- · p, b, ph
+key	pa	LINEAR B SYLLABLE B003 PA	pa
+key	pe	LINEAR B SYLLABLE B072 PE	pe
+key	pi	LINEAR B SYLLABLE B039 PI	pi
+key	po	LINEAR B SYLLABLE B011 PO	po
+key	pu	LINEAR B SYLLABLE B050 PU	pu
+group	Q- · kw, the old labiovelar
+key	qa	LINEAR B SYLLABLE B016 QA	qa
+key	qe	LINEAR B SYLLABLE B078 QE	qe
+key	qi	LINEAR B SYLLABLE B021 QI	qi
+key	qo	LINEAR B SYLLABLE B032 QO	qo
+group	R- · r or l
+key	ra	LINEAR B SYLLABLE B060 RA	ra
+key	re	LINEAR B SYLLABLE B027 RE	re
+key	ri	LINEAR B SYLLABLE B053 RI	ri
+key	ro	LINEAR B SYLLABLE B002 RO	ro
+key	ru	LINEAR B SYLLABLE B026 RU	ru
+group	S- · s
+key	sa	LINEAR B SYLLABLE B031 SA	sa
+key	se	LINEAR B SYLLABLE B009 SE	se
+key	si	LINEAR B SYLLABLE B041 SI	si
+key	so	LINEAR B SYLLABLE B012 SO	so
+key	su	LINEAR B SYLLABLE B058 SU	su
+group	T- · t, th
+key	ta	LINEAR B SYLLABLE B059 TA	ta
+key	te	LINEAR B SYLLABLE B004 TE	te
+key	ti	LINEAR B SYLLABLE B037 TI	ti
+key	to	LINEAR B SYLLABLE B005 TO	to
+key	tu	LINEAR B SYLLABLE B069 TU	tu
+group	W- · w
+key	wa	LINEAR B SYLLABLE B054 WA	wa
+key	we	LINEAR B SYLLABLE B075 WE	we
+key	wi	LINEAR B SYLLABLE B040 WI	wi
+key	wo	LINEAR B SYLLABLE B042 WO	wo
+group	Z- · z
+key	za	LINEAR B SYLLABLE B017 ZA	za
+key	ze	LINEAR B SYLLABLE B074 ZE	ze
+key	zo	LINEAR B SYLLABLE B020 ZO	zo
+group	Other signs
+key	a2	LINEAR B SYLLABLE B025 A2	ha	ha
+key	a3	LINEAR B SYLLABLE B043 A3	ai	ai
+key	au	LINEAR B SYLLABLE B085 AU	au	
+key	dwe	LINEAR B SYLLABLE B071 DWE	dwe	
+key	dwo	LINEAR B SYLLABLE B090 DWO	dwo	
+key	nwa	LINEAR B SYLLABLE B048 NWA	nwa	
+key	pu2	LINEAR B SYLLABLE B029 PU2	phu	phu
+key	pte	LINEAR B SYLLABLE B062 PTE	pte	
+key	ra2	LINEAR B SYLLABLE B076 RA2	rya	rya
+key	ra3	LINEAR B SYLLABLE B033 RA3	rai	rai
+key	ro2	LINEAR B SYLLABLE B068 RO2	ryo	ryo
+key	ta2	LINEAR B SYLLABLE B066 TA2	tya	tya
+key	twe	LINEAR B SYLLABLE B087 TWE	twe	
+key	two	LINEAR B SYLLABLE B091 TWO	two	
+punct	.	AEGEAN WORD SEPARATOR LINE	word divider
+sample	ko-no-so	Ko-no-so: Knossos, the palace of Crete
+sample	wa-na-ka	Wa-na-ka: wanax, “the king”
+sample	a-ta-na-po-ti-ni-ja	“To the Mistress of Athana”: an offering on a tablet from Knossos	Knossos tablet V 52
+sample	pa-i-to	Pa-i-to: Phaistos, in southern Crete

@@ -1,0 +1,121 @@
+# Persian for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# Two scripts: the Perso-Arabic alphabet of New Persian, and the Old Persian cuneiform of the Achaemenid kings.
+# rules=persian: a, e, o inside a word are not written; ā is alef, i and u are ye and vav (also for ey, ow), a final e
+# is the silent he (nāme), a word-initial vowel sits on an alef (ā on alef madda). rules=oldpersian (scribe.js): a
+# consonant with a or no vowel is its Ca sign; before i or u the Ci or Cu sign where there is one, then the vowel sign;
+# long ā adds the sign a; a nasal before a consonant is not written (Kent, Old Persian, 1953, §§ 12–25).
+lang	persian	Persian	Persian has been written in three scripts: the cuneiform of the Achaemenid kings, scripts drawn from Aramaic for Middle Persian, and since the 9th century the Arabic alphabet with four letters of its own.
+script	perso	Persian alphabet	engine=letters	rules=persian	font=system	dir=rtl	material=parchment	vowelmarks=1
+about	New Persian in the Arabic script, with پ چ ژ گ added for sounds Arabic lacks; the alphabet of Ferdowsi, Rumi and Hafez, and of Persian today.
+note	Type as it sounds: sh, ch, zh, kh, gh for ش چ ژ خ غ. Long ā becomes ا, i and u become ی and و; short a, e and o inside a word are not written, and a final e is the silent ه (nāme). The letters that Persian took from Arabic are on the keys, with the sound they have in Persian.
+group	Letters
+key	ā	ARABIC LETTER ALEF	alef · a long a, or the seat of a first vowel	aa
+key	b	ARABIC LETTER BEH	be · b
+key	p	ARABIC LETTER PEH	pe · p
+key	t	ARABIC LETTER TEH	te · t
+key	s̱	ARABIC LETTER THEH	se · s (in Arabic words)
+key	j	ARABIC LETTER JEEM	jim · j
+key	č	ARABIC LETTER TCHEH	che · ch	ch
+key	ḥ	ARABIC LETTER HAH	he · h (in Arabic words)	h.
+key	x	ARABIC LETTER KHAH	khe · ch as in loch	kh
+key	d	ARABIC LETTER DAL	dāl · d
+key	ẕ	ARABIC LETTER THAL	zāl · z (in Arabic words)	dh
+key	r	ARABIC LETTER REH	re · r
+key	z	ARABIC LETTER ZAIN	ze · z
+key	ž	ARABIC LETTER JEH	zhe · s as in pleasure	zh
+key	s	ARABIC LETTER SEEN	sin · s
+key	š	ARABIC LETTER SHEEN	shin · sh	sh
+key	ṣ	ARABIC LETTER SAD	sād · s (in Arabic words)	s.
+key	ż	ARABIC LETTER DAD	zād · z (in Arabic words)	d.
+key	ṭ	ARABIC LETTER TAH	tā · t (in Arabic words)	t.
+key	ẓ	ARABIC LETTER ZAH	zā · z (in Arabic words)	z.
+key	ʿ	ARABIC LETTER AIN	eyn · a catch in the throat	`
+key	ġ	ARABIC LETTER GHAIN	gheyn · a gargled g	gh
+key	f	ARABIC LETTER FEH	fe · f	v
+key	q	ARABIC LETTER QAF	qāf · a gargled g
+key	k	ARABIC LETTER KEHEH	kāf · k	c
+key	g	ARABIC LETTER GAF	gāf · g
+key	l	ARABIC LETTER LAM	lām · l
+key	m	ARABIC LETTER MEEM	mim · m
+key	n	ARABIC LETTER NOON	nun · n
+key	w	ARABIC LETTER WAW	vāv · v; also u and o
+key	h	ARABIC LETTER HEH	he · h; also a final e
+key	y	ARABIC LETTER FARSI YEH	ye · y; also i
+group	Hamza and joining
+key	ʾā	ARABIC LETTER ALEF WITH MADDA ABOVE	alef madda · a first ā
+key	ʾ	ARABIC LETTER HAMZA	hamze · a catch in the throat	'
+punct	|	ZERO WIDTH NON-JOINER	half-space · keeps two parts apart (mi|ravam)
+group	Numbers and punctuation
+punct	0	EXTENDED ARABIC-INDIC DIGIT ZERO	0
+punct	1	EXTENDED ARABIC-INDIC DIGIT ONE	1
+punct	2	EXTENDED ARABIC-INDIC DIGIT TWO	2
+punct	3	EXTENDED ARABIC-INDIC DIGIT THREE	3
+punct	4	EXTENDED ARABIC-INDIC DIGIT FOUR	4
+punct	5	EXTENDED ARABIC-INDIC DIGIT FIVE	5
+punct	6	EXTENDED ARABIC-INDIC DIGIT SIX	6
+punct	7	EXTENDED ARABIC-INDIC DIGIT SEVEN	7
+punct	8	EXTENDED ARABIC-INDIC DIGIT EIGHT	8
+punct	9	EXTENDED ARABIC-INDIC DIGIT NINE	9
+punct	,	ARABIC COMMA	comma
+punct	?	ARABIC QUESTION MARK	question mark
+mark	a	ARABIC FATHA	zabar · a
+mark	i	ARABIC KASRA	zir · e
+mark	u	ARABIC DAMMA	pish · o
+mark	·	ARABIC SHADDA	tashdid · a doubled letter
+mark	°	ARABIC SUKUN	sokun · no vowel
+sample	beshnow in ney	“Listen to the reed”: the first words of Rumi’s Masnavi	Rumi, Masnavi, book 1, line 1
+sample	shāhnāme	Shāhnāme: the “Book of Kings”, Ferdowsi’s epic of about 1010
+sample	ferdowsi	Ferdowsi (about 940–1020), the poet of the Shāhnāme
+sample	irān	Irān: Iran
+script	oldpersian	Old Persian cuneiform	engine=syllabic	rules=oldpersian	font=oldpersian	dir=ltr	material=rock
+about	A script of 36 sound signs, a few word signs and a word divider, made for the Achaemenid kings in the 6th century BCE and carved at Behistun, Persepolis and Susa.
+note	Type the words as they were said; the rules of the script are applied for you: a consonant before i or u keeps its own sign where it has one (di, mi, ju …), long ā adds the sign a, and n before a consonant is left out. Type a word sign in capitals: XŠ king, DH land, BG god, BU earth, AM Ahuramazda. Spaces become the slanting word divider.
+group	Vowels
+key	a	OLD PERSIAN SIGN A	a, ā
+key	i	OLD PERSIAN SIGN I	i, ī
+key	u	OLD PERSIAN SIGN U	u, ū
+group	Consonants with a
+key	ka	OLD PERSIAN SIGN KA	ka · k
+key	ga	OLD PERSIAN SIGN GA	ga · g
+key	xa	OLD PERSIAN SIGN XA	xa · ch as in loch	kha
+key	ca	OLD PERSIAN SIGN CA	ca · ch	cha
+key	ja	OLD PERSIAN SIGN JA	ja · j
+key	ta	OLD PERSIAN SIGN TA	ta · t
+key	da	OLD PERSIAN SIGN DA	da · d
+key	θa	OLD PERSIAN SIGN THA	θa · th as in thin	tha
+key	pa	OLD PERSIAN SIGN PA	pa · p
+key	ba	OLD PERSIAN SIGN BA	ba · b
+key	fa	OLD PERSIAN SIGN FA	fa · f
+key	na	OLD PERSIAN SIGN NA	na · n
+key	ma	OLD PERSIAN SIGN MA	ma · m
+key	ya	OLD PERSIAN SIGN YA	ya · y
+key	va	OLD PERSIAN SIGN VA	va · v, w	wa
+key	ra	OLD PERSIAN SIGN RA	ra · r
+key	la	OLD PERSIAN SIGN LA	la · l
+key	sa	OLD PERSIAN SIGN SA	sa · s
+key	za	OLD PERSIAN SIGN ZA	za · z
+key	ša	OLD PERSIAN SIGN SHA	ša · sh	sha
+key	ça	OLD PERSIAN SIGN SSA	ça · a sound between s and th
+key	ha	OLD PERSIAN SIGN HA	ha · h
+group	Consonants with i and u
+key	ji	OLD PERSIAN SIGN JI	ji · j before i
+key	di	OLD PERSIAN SIGN DI	di · d before i
+key	mi	OLD PERSIAN SIGN MI	mi · m before i
+key	vi	OLD PERSIAN SIGN VI	vi · v before i
+key	ku	OLD PERSIAN SIGN KU	ku · k before u
+key	gu	OLD PERSIAN SIGN GU	gu · g before u
+key	tu	OLD PERSIAN SIGN TU	tu · t before u
+key	du	OLD PERSIAN SIGN DU	du · d before u
+key	nu	OLD PERSIAN SIGN NU	nu · n before u
+key	mu	OLD PERSIAN SIGN MU	mu · m before u
+key	ru	OLD PERSIAN SIGN RU	ru · r before u
+group	Word signs
+word	XŠ	OLD PERSIAN SIGN XSHAAYATHIYA	xšāyaθiya · king
+word	DH	OLD PERSIAN SIGN DAHYAAUSH	dahyāuš · land, country
+word	BG	OLD PERSIAN SIGN BAGA	baga · god
+word	BU	OLD PERSIAN SIGN BUUMISH	būmiš · earth
+word	AM	OLD PERSIAN SIGN AURAMAZDAA	Auramazdā · Ahuramazda
+punct	.	OLD PERSIAN WORD DIVIDER	word divider
+sample	adam dārayavauš xšāyaθiya vazraka	“I am Darius, the great king”: the first words of the Behistun inscription, about 520 BCE	Behistun inscription, DB 1.1
+sample	xšāyaθiya xšāyaθiyānām	“King of kings”: a title of the Achaemenid rulers
+sample	pārsa	Pārsa: Persia, and the city the Greeks called Persepolis

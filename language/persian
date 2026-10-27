@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Persian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 520 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/darius-i">Darius I</a> has his deeds carved in <a class="enc-link" href="/encyclopedia/old-persian">Old Persian</a>, Elamite and Babylonian on the cliff of Behistun</span></li><li><span class="rf-year">c. 262</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/shapur-i">Shapur I</a> records his victories over <a class="enc-link" href="/encyclopedia/rome">Rome</a> in <a class="enc-link" href="/encyclopedia/middle-persian">Middle Persian</a>, Parthian and Greek at <a class="enc-link" href="/encyclopedia/naqsh-e-rostam">Naqsh-e Rostam</a></span></li><li><span class="rf-year">651</span><span class="rf-text">The fall of the Sasanian empire to the Arab conquerors makes Arabic the language of government</span></li><li><span class="rf-year">10th century</span><span class="rf-text">The Samanid court at <a class="enc-link" href="/encyclopedia/bukhara">Bukhara</a> patronises poetry in the new Persian language</span></li><li><span class="rf-year">c. 1010</span><span class="rf-text">Ferdowsi completes the <a class="enc-link" href="/encyclopedia/shahnameh">Shahnameh</a>, the national epic of the Persian-speaking world</span></li><li><span class="rf-year">1273</span><span class="rf-text">Death of the poet <a class="enc-link" href="/encyclopedia/rumi">Rumi</a>, author of the <a class="enc-link" href="/encyclopedia/masnavi">Masnavi</a></span></li><li><span class="rf-year">1582</span><span class="rf-text">The Mughal emperor <a class="enc-link" href="/encyclopedia/akbar">Akbar</a> makes Persian the language of all government records in his empire</span></li><li><span class="rf-year">1837</span><span class="rf-text">Persian is replaced by English and local languages as the official language of <a class="enc-link" href="/encyclopedia/british-india">British India</a></span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Persian</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="persian"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#persian">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Persian",slug="persian",url="https://the-epoch-institute.org/language/persian";

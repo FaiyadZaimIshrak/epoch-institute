@@ -3288,7 +3288,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .pcard-y, .pcard-s { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
 .pcard-s b { color: var(--gold); font-weight: 600; }
 /* country histories */
-.cty-page, .cen-page, .yr-page, .pp-page, .pass-page, .qz-page, .atl-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
+.cty-page, .cen-page, .yr-page, .pp-page, .pass-page, .qz-page, .atl-page, .write-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
 .cty-wrap, .cen-wrap, .yr-wrap, .pp-wrap, .pass-wrap, .qz-wrap, .atl-wrap { margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 .cty-wrap, .cen-wrap, .yr-wrap, .pp-wrap, .pass-wrap { max-width: 1040px; }
 .qz-wrap { max-width: 860px; }
@@ -4467,6 +4467,90 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .to-top { position: fixed; right: max(18px, env(safe-area-inset-right, 0px)); bottom: max(18px, env(safe-area-inset-bottom, 0px)); z-index: 900; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--gold); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35); transition: border-color 0.2s, transform 0.2s; }
 .to-top:hover { border-color: var(--gold); transform: translateY(-2px); }
 .to-top[hidden] { display: none; }
+
+/* ── Write in … (scribe.js): the language profiles' #write and /write. The written text on a board, a Latin field, the
+   keyboard (each key: the sign, its value, its sound), samples, and the picture to save, copy or share. ─────────── */
+.scribe-sec { margin: 40px 0 8px; }
+.scribe-lede { font-family: var(--font-text); font-size: 18px; line-height: 1.6; color: var(--muted); margin: 0 0 18px; max-width: 70ch; }
+.scribe-more { font-family: var(--font-ui); font-size: 14px; margin: 14px 0 0; }
+.scribe-more a { color: var(--gold); text-decoration: none; }
+.scribe-more a:hover { text-decoration: underline; }
+.scr-loading { font-family: var(--font-ui); font-size: 14px; color: var(--muted); padding: 24px; border: 1px dashed var(--border); border-radius: var(--border-radius-lg); text-align: center; }
+.scr { display: grid; gap: 14px; }
+.scr-scripts { display: flex; flex-wrap: wrap; gap: 8px; }
+.scr-script { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--muted); background: none; border: 1px solid var(--border); border-radius: 999px; padding: 6px 16px; min-height: 36px; cursor: pointer; }
+.scr-script[aria-checked="true"] { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+.scr-about { font-family: var(--font-text); font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0; }
+.scr-board { background: var(--surface); border: 1px solid var(--border); border-left: 2px solid var(--gold); border-radius: var(--border-radius-lg); padding: 18px 20px 14px; }
+.scr-out { min-height: 92px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: clamp(34px, 6vw, 52px); line-height: 1.35; color: var(--text); overflow-wrap: anywhere; transition: opacity 0.2s; }
+.scr-out.is-loading { opacity: 0.4; }
+.scr-out.is-empty::before { content: 'Your words will appear here'; font-family: var(--font-text); font-style: italic; font-size: 20px; color: var(--muted); }
+.scr-out.is-vertical .scr-text { writing-mode: vertical-rl; max-height: 320px; letter-spacing: 0.08em; }
+.scr-roman { font-family: var(--font-text); font-style: italic; font-size: 19px; color: var(--gold-light); text-align: center; margin: 8px 0 0; overflow-wrap: anywhere; min-height: 1.4em; }
+.scr-type { display: grid; gap: 6px; }
+.scr-lab { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.scr-in, .scr-py { width: 100%; box-sizing: border-box; font-family: var(--font-text); font-size: 18px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; resize: vertical; }
+.scr-in:focus, .scr-py:focus { outline: none; border-color: var(--gold); }
+.scr-han { display: grid; gap: 6px; margin-top: 6px; }
+.scr-han[hidden], .scr-pic[hidden] { display: none; }
+.scr-cands { display: flex; flex-wrap: wrap; gap: 6px; }
+.scr-cand { display: grid; justify-items: center; gap: 1px; min-width: 64px; max-width: 120px; padding: 6px 8px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); cursor: pointer; }
+.scr-cand:hover, .scr-cand:focus-visible { border-color: var(--gold); }
+.scr-cg { font-size: 28px; line-height: 1.2; font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC", PMingLiU, serif; }
+.scr-cp { font-family: var(--font-ui); font-size: 13px; color: var(--gold); }
+.scr-cm { font-family: var(--font-ui); font-size: 11px; color: var(--muted); text-align: center; line-height: 1.25; }
+.scr-none { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 0; }
+.scr-opts { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.scr-opt { font-family: var(--font-ui); font-size: 14px; color: var(--text); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.scr-opt input { accent-color: var(--gold); width: 16px; height: 16px; }
+.scr-kb { border: 1px solid var(--border); border-radius: var(--border-radius-lg); padding: 12px; background: rgba(var(--gold-rgb), 0.03); }
+.scr-groups { max-height: 460px; overflow-y: auto; overscroll-behavior: contain; display: grid; gap: 12px; padding-right: 4px; scrollbar-color: var(--border) transparent; scrollbar-width: thin; }
+.scr-grp-t { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+.scr-keys { display: flex; flex-wrap: wrap; gap: 6px; }
+.scr-key { display: grid; justify-items: center; align-content: start; gap: 1px; width: 84px; min-height: 64px; padding: 6px 6px 5px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: border-color 0.15s, transform 0.1s; }
+.scr-key:hover, .scr-key:focus-visible { border-color: var(--gold); }
+.scr-key:active { transform: scale(0.96); }
+.scr-key.is-word { border-color: rgba(var(--gold-rgb), 0.45); }
+.scr-key.is-det { border-style: dashed; }
+.scr-kg { font-size: 28px; line-height: 1.25; min-height: 1.25em; }
+.scr-kv { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); line-height: 1.2; }
+.scr-kh { font-family: var(--font-ui); font-size: 11px; color: var(--muted); line-height: 1.25; text-align: center; max-width: 100%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.scr-kb-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.scr-act { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; min-height: 38px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
+.scr-act:hover { border-color: var(--gold); }
+.scr-act[hidden] { display: none; }
+.scr-note { font-family: var(--font-text); font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0; }
+.scr-samples { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.scr-try { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); }
+.scr-sample { font-family: var(--font-text); font-size: 16px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; cursor: pointer; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.scr-sample:hover { border-color: var(--gold); }
+.scr-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.scr-pic { display: grid; gap: 10px; justify-items: start; }
+.scr-pic-img { width: min(480px, 100%); height: auto; border-radius: var(--border-radius-lg); border: 1px solid var(--border); box-shadow: 0 10px 30px var(--shadow); }
+.scr-pic-acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.scr-pic-tip, .scr-status { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 0; min-height: 1em; }
+@media (max-width: 600px) {
+  .scr-key { width: 72px; min-height: 60px; }
+  .scr-kg { font-size: 24px; }
+  .scr-groups { max-height: 380px; }
+  .scr-board { padding: 14px 12px 10px; }
+}
+/* /write: the twelve scripts */
+.write-wrap { max-width: 960px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.write-head-tool { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.write-head-tool .ref-sec-title { margin: 8px 0 6px; }
+.write-prof { font-family: var(--font-ui); font-size: 14px; color: var(--gold); text-decoration: none; }
+.write-prof:hover { text-decoration: underline; }
+.write-langs { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin: 0 0 28px; }
+.write-lang img { width: 40px; height: 40px; }
+.write-lang { grid-template-columns: 40px 1fr; align-items: center; column-gap: 10px; }
+.write-lang .write-lang-t { display: grid; gap: 2px; min-width: 0; }
+.write-lang { display: grid; gap: 4px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius-lg); color: var(--text); text-decoration: none; cursor: pointer; text-align: left; font: inherit; }
+.write-lang:hover, .write-lang:focus-visible { border-color: var(--gold); }
+.write-lang[aria-current="true"] { border-color: var(--gold); background: rgba(var(--gold-rgb), 0.08); }
+.write-lang-g { font-size: 26px; line-height: 1.3; color: var(--gold-light); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.write-lang-n { font-family: var(--font-display); font-size: 15px; letter-spacing: 0.04em; }
+.write-lang-s { font-family: var(--font-ui); font-size: 12px; color: var(--muted); }
 
 /* ── Kids mode (html[data-kids="1"], set before first paint from localStorage epoch-kids; always on for /kids) ──────
    Brighter colours (a night sky with the dark theme, warm paper with the light one), rounder type and corners,

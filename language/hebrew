@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Hebrew</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">10th century BCE</span><span class="rf-text">The Gezer calendar, one of the oldest inscriptions in a Hebrew or related Canaanite dialect, lists the months of the farming year</span></li><li><span class="rf-year">c. 700 BCE</span><span class="rf-text">The Siloam inscription records the cutting of a water tunnel under <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a></span></li><li><span class="rf-year">c. 200</span><span class="rf-text">The Mishnah, the code of Jewish law, is compiled in Mishnaic Hebrew</span></li><li><span class="rf-year">c. 930</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/aleppo">Aleppo</a> Codex, a masterpiece of the Masoretic text with its vowel signs, is written in <a class="enc-link" href="/encyclopedia/tiberias">Tiberias</a></span></li><li><span class="rf-year">1881</span><span class="rf-text">Eliezer Ben-Yehuda settles in <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a> and begins his campaign to revive spoken Hebrew</span></li><li><span class="rf-year">1922</span><span class="rf-text">The British Mandate for <a class="enc-link" href="/encyclopedia/palestine">Palestine</a> recognises Hebrew as an official language beside English and Arabic</span></li><li><span class="rf-year">1947</span><span class="rf-text">The first Dead Sea Scrolls, including the oldest known <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> of the <a class="enc-link" href="/encyclopedia/hebrew-bible">Hebrew Bible</a>, are found near Qumran</span></li><li><span class="rf-year">1953</span><span class="rf-text">Israel founds the Academy of the Hebrew Language</span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Hebrew</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="hebrew"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#hebrew">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -149,6 +156,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Hebrew",slug="hebrew",url="https://the-epoch-institute.org/language/hebrew";

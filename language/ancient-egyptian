@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Ancient Egyptian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 3250 BCE</span><span class="rf-text">Bone labels in a royal tomb at Abydos carry the earliest known Egyptian writing</span></li><li><span class="rf-year">c. 2700 BCE</span><span class="rf-text">A seal of King <a class="enc-link" href="/encyclopedia/peribsen">Peribsen</a> bears the earliest known complete sentence in Egyptian</span></li><li><span class="rf-year">c. 2350 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/pyramid-texts">Pyramid Texts</a>, the oldest long religious texts in Egyptian, are carved in the pyramid of Unas</span></li><li><span class="rf-year">c. 1900 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/tale-of-sinuhe">Story of Sinuhe</a>, a classic of Middle Egyptian literature, is composed</span></li><li><span class="rf-year">196 BCE</span><span class="rf-text">A decree of Ptolemy V is inscribed in hieroglyphs, demotic and Greek on the <a class="enc-link" href="/encyclopedia/rosetta-stone">Rosetta Stone</a></span></li><li><span class="rf-year">394</span><span class="rf-text">The last known hieroglyphic inscription is carved at the temple of <a class="enc-link" href="/encyclopedia/philae">Philae</a></span></li><li><span class="rf-year">452</span><span class="rf-text">The last known inscription in demotic is written at <a class="enc-link" href="/encyclopedia/philae">Philae</a></span></li><li><span class="rf-year">1822</span><span class="rf-text">Jean-François Champollion announces the decipherment of hieroglyphs</span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Ancient Egyptian</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="ancient-egyptian"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#ancient-egyptian">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Ancient Egyptian",slug="ancient-egyptian",url="https://the-epoch-institute.org/language/ancient-egyptian";

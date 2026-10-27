@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
@@ -16,14 +16,14 @@ Plus 404.html and generator.html (generator is NOT deployed — see .cpanel.yml)
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, History Quiz, History Games, Kids Corner,
+Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, History Quiz, History Games, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -461,6 +461,41 @@ before QuoteKeys (never put a line break inside a string). speeches/ has a build
 and for /games. The speaker's portrait (SpPortrait: the speaker entry's picture) heads each speech page and its
 index card; "Share this quote" (data-share-text) sits under the key passage, and "Read the full speech ↓" shows only
 when the full text is folded (over 600 words).
+
+## Write in ancient scripts (/write, the language profiles' #write)
+scribe.js: a keyboard for the 12 languages with scripts of their own (Latin, Nahuatl, Swahili and Quechua, written in
+the Latin alphabet, have none): Sumerian and Akkadian cuneiform, Egyptian hieroglyphs, Greek and Linear B, Imperial
+Aramaic and Syriac, square and Paleo-Hebrew, Devanagari and Brahmi, Classical Chinese, Arabic, the Persian alphabet and
+Old Persian cuneiform, Orkhon runes, and long-branch and short-twig runes (18 scripts). Every key shows the sign, its
+value and its sound; a Latin field converts as you type (the romanised text is the source: Scribe.convert is pure and
+tested in Node, scratchpad scribe/t-engine.js + cases.json); samples are real texts (Behistun DB 1.1, Kül Tigin S1, the
+Jelling and Glavendrup stones, the Siloam inscription, Analects 1.1 …); "Make a picture" draws the writing on its
+material (clay, papyrus, marble, parchment, rock, sandstone, palm leaf, stele, runestone, scroll: painted in code) as a
+1080px PNG to download (not in in-app browsers: press and hold), copy (ClipboardItem) or share (sharePoster).
+- Data: scripts/scribe/<lang>.tsv (glyphs named by their Unicode names, "U+0301" for invisible marks; format at the top
+  of scripts/make-scribe.ps1) → `make-scribe.ps1` checks every name against UnicodeData.txt (downloaded once to
+  %LOCALAPPDATA%\epoch-tools\ucd) and writes data/scribe/<slug>.json (each page loads only its own) and LANGS_V into
+  scribe.js; `-Hanzi` also writes data/scribe/hanzi.json (4,407 traditional characters with a Tang reading or in the
+  Hong Kong school list, Mandarin reading and first English sense from Unihan, by frequency) and HANZI_V.
+  _cuneiform-values.tsv: Borger's (MesZL 2004) 3,299 sign values, read by the Sumerian and Akkadian files. Generators
+  of the long files are in the scratchpad (make-sanskrit.ps1, make-cuneiform.ps1: save PowerShell scripts with
+  non-ASCII text WITH a BOM, or 5.1 reads them as ANSI).
+- Engines (scribe.js): letters (abjads: short vowels unwritten, i/u as yod/waw, initial vowel on alef, final -a as he or
+  aleph, finals, doubled letters once, "Vowel marks" adds niqqud/harakat; Greek: breathings, accents typed on Latin
+  vowels, final sigma, "As on stone" capitals; runes: many-to-one, doubles once; Old Turkic: Tekin's spelling rules,
+  back/front consonants by the word's vowels, keys type an exact sign in brackets [ök]); abugida (IAST and
+  Harvard-Kyoto to Devanagari/Brahmi, virāma joins); syllabic (cuneiform: hyphenated values, words in CAPITALS (Akkadian)
+  or lower case (Sumerian), {determinatives}, unhyphenated words cut into syllables and spelt CVC or CV+VC: šarrum →
+  šar-ru-um; Old Persian: Kent's rules; Linear B: the scribes' spelling); hieroglyphs (one-sound signs by the Ptolemaic
+  convention for names, [word signs] and [determinatives], ( ) a cartouche); han (pinyin search, themed keys checked
+  against Unihan, "Top to bottom"). The line under the text spells out what is written (šlom, a-da-ma, þur).
+- Fonts: fonts/noto-sans-*.woff2 (cuneiform 467 KB and hieroglyphs 399 KB, the rest 6–43 KB; OFL-Noto.txt), loaded with
+  FontFace only when a tool opens; Hebrew, Arabic, Persian, Greek, Devanagari and Chinese use the device's fonts.
+- Wiring: generator.html (SCRIBE_LANGS, hasScribe, scribeHtml: section #write after the Timeline, a contents entry, a
+  loader that fetches /scribe.js when the section nears the screen or at once for #write); /write (hand page: 12
+  cards with the emblems, #slug deep links, epoch-write-lang); scribe.js has no ?v= on the profiles (10-minute cache in
+  .htaccess); localStorage epoch-scribe keeps each language's text, script and switches; Explore menu, footer, Research
+  Hub (Explore group), Kids corner door "Write Like a Scribe", llms.txt, poster images/og/page-write.jpg.
 
 ## Research Series (/research-series, /essays/<slug>)
 Five essays, sources in scripts/essays/NN-slug.html: a comment of `key: value` lines (title, subtitle, card = the

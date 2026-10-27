@@ -1,0 +1,172 @@
+# Sanskrit for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# Two scripts with the same letters in parallel Unicode names: Devanagari, in which Sanskrit is printed today, and
+# Brahmi, the script of Ashoka's edicts (3rd century BCE), ancestor of the scripts of South and Southeast Asia.
+# Values are IAST; Harvard-Kyoto capitals also work (A I U for long vowels, T D N S M H for ṭ ḍ ṇ ṣ ṃ ḥ). engine=abugida:
+# a consonant carries a short a; another vowel is written as a sign on it; consonants with no vowel between them join.
+lang	sanskrit	Sanskrit	Sanskrit was handed down by memory for centuries before it was written; it has been written in many scripts, from Brahmi to Devanagari, in which each consonant carries a vowel a unless a sign changes it.
+script	devanagari	Devanagari	engine=abugida	rules=indic	font=system	dir=ltr	material=palmleaf
+about	The script in which Sanskrit is printed today, used from about the 11th century in northern India; the line along the top joins the letters of a word.
+note	Type in IAST (the usual romanisation: ā, ś, ṛ …) or with capitals for the dotted letters (A I U, T D N S, M H). A consonant carries a short a; type the next vowel to change it, or another consonant to join them. On the keys: tap a consonant, then a vowel. | and || are the full stops.
+group	Vowels
+key	a	DEVANAGARI LETTER A	a · u in but
+key	ā	DEVANAGARI LETTER AA	ā · a in father
+key	i	DEVANAGARI LETTER I	i · i in bit
+key	ī	DEVANAGARI LETTER II	ī · ee in feet
+key	u	DEVANAGARI LETTER U	u · u in put
+key	ū	DEVANAGARI LETTER UU	ū · oo in food
+key	ṛ	DEVANAGARI LETTER VOCALIC R	ṛ · ri, an r sung as a vowel
+key	ṝ	DEVANAGARI LETTER VOCALIC RR	ṝ · the same, long
+key	ḷ	DEVANAGARI LETTER VOCALIC L	ḷ · an l sung as a vowel
+key	e	DEVANAGARI LETTER E	e · ay in day
+key	ai	DEVANAGARI LETTER AI	ai · ai in aisle
+key	o	DEVANAGARI LETTER O	o · o in go
+key	au	DEVANAGARI LETTER AU	au · ow in cow
+group	Velars, from the back of the mouth
+key	k	DEVANAGARI LETTER KA	ka · k
+key	kh	DEVANAGARI LETTER KHA	kha · k with a breath
+key	g	DEVANAGARI LETTER GA	ga · g
+key	gh	DEVANAGARI LETTER GHA	gha · g with a breath
+key	ṅ	DEVANAGARI LETTER NGA	ṅa · ng in sing
+group	Palatals
+key	c	DEVANAGARI LETTER CA	ca · ch in church
+key	ch	DEVANAGARI LETTER CHA	cha · ch with a breath
+key	j	DEVANAGARI LETTER JA	ja · j
+key	jh	DEVANAGARI LETTER JHA	jha · j with a breath
+key	ñ	DEVANAGARI LETTER NYA	ña · ny in canyon
+group	Retroflexes, the tongue curled back
+key	ṭ	DEVANAGARI LETTER TTA	ṭa · t
+key	ṭh	DEVANAGARI LETTER TTHA	ṭha · t with a breath
+key	ḍ	DEVANAGARI LETTER DDA	ḍa · d
+key	ḍh	DEVANAGARI LETTER DDHA	ḍha · d with a breath
+key	ṇ	DEVANAGARI LETTER NNA	ṇa · n
+group	Dentals, the tongue on the teeth
+key	t	DEVANAGARI LETTER TA	ta · t
+key	th	DEVANAGARI LETTER THA	tha · t with a breath, not th in thin
+key	d	DEVANAGARI LETTER DA	da · d
+key	dh	DEVANAGARI LETTER DHA	dha · d with a breath
+key	n	DEVANAGARI LETTER NA	na · n
+group	Labials
+key	p	DEVANAGARI LETTER PA	pa · p
+key	ph	DEVANAGARI LETTER PHA	pha · p with a breath, not f
+key	b	DEVANAGARI LETTER BA	ba · b
+key	bh	DEVANAGARI LETTER BHA	bha · b with a breath
+key	m	DEVANAGARI LETTER MA	ma · m
+group	Semivowels
+key	y	DEVANAGARI LETTER YA	ya · y
+key	r	DEVANAGARI LETTER RA	ra · r
+key	l	DEVANAGARI LETTER LA	la · l
+key	v	DEVANAGARI LETTER VA	va · v or w
+group	Sibilants and h
+key	ś	DEVANAGARI LETTER SHA	śa · sh
+key	ṣ	DEVANAGARI LETTER SSA	ṣa · sh, the tongue curled back
+key	s	DEVANAGARI LETTER SA	sa · s
+key	h	DEVANAGARI LETTER HA	ha · h
+group	Marks
+punct	ṃ	DEVANAGARI SIGN ANUSVARA	anusvāra · a nasal hum after a vowel
+punct	ḥ	DEVANAGARI SIGN VISARGA	visarga · a soft breath after a vowel
+punct	m̐	DEVANAGARI SIGN CANDRABINDU	candrabindu · a nasal vowel
+punct	'	DEVANAGARI SIGN AVAGRAHA	avagraha · an a that has dropped out
+punct	OM	DEVANAGARI OM	oṃ · the sacred syllable
+punct	|	DEVANAGARI DANDA	daṇḍa · the end of a half-verse
+punct	||	DEVANAGARI DOUBLE DANDA	double daṇḍa · the end of a verse
+mark	ā	DEVANAGARI VOWEL SIGN AA
+mark	i	DEVANAGARI VOWEL SIGN I
+mark	ī	DEVANAGARI VOWEL SIGN II
+mark	u	DEVANAGARI VOWEL SIGN U
+mark	ū	DEVANAGARI VOWEL SIGN UU
+mark	ṛ	DEVANAGARI VOWEL SIGN VOCALIC R
+mark	ṝ	DEVANAGARI VOWEL SIGN VOCALIC RR
+mark	ḷ	DEVANAGARI VOWEL SIGN VOCALIC L
+mark	e	DEVANAGARI VOWEL SIGN E
+mark	ai	DEVANAGARI VOWEL SIGN AI
+mark	o	DEVANAGARI VOWEL SIGN O
+mark	au	DEVANAGARI VOWEL SIGN AU
+mark	virama	DEVANAGARI SIGN VIRAMA	virāma · no vowel after the consonant
+mark	ṃ	DEVANAGARI SIGN ANUSVARA
+mark	ḥ	DEVANAGARI SIGN VISARGA
+mark	m̐	DEVANAGARI SIGN CANDRABINDU
+sample	satyameva jayate	“Truth alone triumphs”: from the Mundaka Upanishad, now the motto of India	Mundaka Upanishad 3.1.6
+sample	vasudhaiva kuṭumbakam	“The world is one family”	Maha Upanishad 6.71
+sample	asato mā sadgamaya	“Lead me from the unreal to the real”	Brihadaranyaka Upanishad 1.3.28
+sample	oṃ śāntiḥ śāntiḥ śāntiḥ	“Om, peace, peace, peace”: the close of many prayers
+script	brahmi	Brahmi	engine=abugida	rules=indic	font=brahmi	dir=ltr	material=sandstone
+about	The oldest script of India that can be read, known from the edicts of the emperor Ashoka (about 260 BCE), cut on rocks and polished pillars; nearly every script of South and Southeast Asia comes from it.
+note	The same letters as Devanagari in the shapes of Ashoka’s time. Type in IAST or with Harvard-Kyoto capitals; a consonant carries a short a, the next vowel changes it, and consonants without a vowel between them join.
+group	Vowels
+key	a	BRAHMI LETTER A	a · u in but
+key	ā	BRAHMI LETTER AA	ā · a in father
+key	i	BRAHMI LETTER I	i · i in bit
+key	ī	BRAHMI LETTER II	ī · ee in feet
+key	u	BRAHMI LETTER U	u · u in put
+key	ū	BRAHMI LETTER UU	ū · oo in food
+key	ṛ	BRAHMI LETTER VOCALIC R	ṛ · ri, an r sung as a vowel
+key	ṝ	BRAHMI LETTER VOCALIC RR	ṝ · the same, long
+key	ḷ	BRAHMI LETTER VOCALIC L	ḷ · an l sung as a vowel
+key	e	BRAHMI LETTER E	e · ay in day
+key	ai	BRAHMI LETTER AI	ai · ai in aisle
+key	o	BRAHMI LETTER O	o · o in go
+key	au	BRAHMI LETTER AU	au · ow in cow
+group	Velars, from the back of the mouth
+key	k	BRAHMI LETTER KA	ka · k
+key	kh	BRAHMI LETTER KHA	kha · k with a breath
+key	g	BRAHMI LETTER GA	ga · g
+key	gh	BRAHMI LETTER GHA	gha · g with a breath
+key	ṅ	BRAHMI LETTER NGA	ṅa · ng in sing
+group	Palatals
+key	c	BRAHMI LETTER CA	ca · ch in church
+key	ch	BRAHMI LETTER CHA	cha · ch with a breath
+key	j	BRAHMI LETTER JA	ja · j
+key	jh	BRAHMI LETTER JHA	jha · j with a breath
+key	ñ	BRAHMI LETTER NYA	ña · ny in canyon
+group	Retroflexes, the tongue curled back
+key	ṭ	BRAHMI LETTER TTA	ṭa · t
+key	ṭh	BRAHMI LETTER TTHA	ṭha · t with a breath
+key	ḍ	BRAHMI LETTER DDA	ḍa · d
+key	ḍh	BRAHMI LETTER DDHA	ḍha · d with a breath
+key	ṇ	BRAHMI LETTER NNA	ṇa · n
+group	Dentals, the tongue on the teeth
+key	t	BRAHMI LETTER TA	ta · t
+key	th	BRAHMI LETTER THA	tha · t with a breath, not th in thin
+key	d	BRAHMI LETTER DA	da · d
+key	dh	BRAHMI LETTER DHA	dha · d with a breath
+key	n	BRAHMI LETTER NA	na · n
+group	Labials
+key	p	BRAHMI LETTER PA	pa · p
+key	ph	BRAHMI LETTER PHA	pha · p with a breath, not f
+key	b	BRAHMI LETTER BA	ba · b
+key	bh	BRAHMI LETTER BHA	bha · b with a breath
+key	m	BRAHMI LETTER MA	ma · m
+group	Semivowels
+key	y	BRAHMI LETTER YA	ya · y
+key	r	BRAHMI LETTER RA	ra · r
+key	l	BRAHMI LETTER LA	la · l
+key	v	BRAHMI LETTER VA	va · v or w
+group	Sibilants and h
+key	ś	BRAHMI LETTER SHA	śa · sh
+key	ṣ	BRAHMI LETTER SSA	ṣa · sh, the tongue curled back
+key	s	BRAHMI LETTER SA	sa · s
+key	h	BRAHMI LETTER HA	ha · h
+group	Marks
+punct	ṃ	BRAHMI SIGN ANUSVARA	anusvāra · a nasal hum after a vowel
+punct	ḥ	BRAHMI SIGN VISARGA	visarga · a soft breath after a vowel
+punct	m̐	BRAHMI SIGN CANDRABINDU	candrabindu · a nasal vowel
+punct	|	BRAHMI DANDA	daṇḍa · a full stop
+punct	||	BRAHMI DOUBLE DANDA	double daṇḍa
+mark	ā	BRAHMI VOWEL SIGN AA
+mark	i	BRAHMI VOWEL SIGN I
+mark	ī	BRAHMI VOWEL SIGN II
+mark	u	BRAHMI VOWEL SIGN U
+mark	ū	BRAHMI VOWEL SIGN UU
+mark	ṛ	BRAHMI VOWEL SIGN VOCALIC R
+mark	ṝ	BRAHMI VOWEL SIGN VOCALIC RR
+mark	ḷ	BRAHMI VOWEL SIGN VOCALIC L
+mark	e	BRAHMI VOWEL SIGN E
+mark	ai	BRAHMI VOWEL SIGN AI
+mark	o	BRAHMI VOWEL SIGN O
+mark	au	BRAHMI VOWEL SIGN AU
+mark	virama	BRAHMI VIRAMA	virāma · no vowel after the consonant
+mark	ṃ	BRAHMI SIGN ANUSVARA
+mark	ḥ	BRAHMI SIGN VISARGA
+mark	m̐	BRAHMI SIGN CANDRABINDU
+sample	satyameva jayate	“Truth alone triumphs”, in the letters of Ashoka’s age	Mundaka Upanishad 3.1.6
+sample	vasudhaiva kuṭumbakam	“The world is one family”	Maha Upanishad 6.71

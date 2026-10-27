@@ -1,0 +1,85 @@
+# Ancient Egyptian for the "Write in ..." tool (scribe.js); built by scripts/make-scribe.ps1.
+# Hieroglyphs by their Gardiner numbers (the Unicode names: G001 is the vulture). Values: the Egyptological
+# transliteration (ꜣ i y ꜥ w b p f m n r h ḥ ḫ ẖ z s š q k g t ṯ d ḏ); the typed forms after them are the letters a
+# reader types for a name, after the way the Ptolemaic scribes spelt Greek names (Kleopatra: q-l-i-w-p-ꜣ-d-r-ꜣ-t), a
+# convention, not a rule of Egyptian: vowels were not written in Egyptian words. Word signs and determinatives are typed
+# in brackets: [ꜥnḫ] or [ankh], [woman]. ( and ) are the ends of a cartouche.
+lang	ancient-egyptian	Ancient Egyptian	Egyptian was written in hieroglyphs for more than 3,000 years: pictures that stand for sounds, for whole words, or, at the end of a word, for its kind of meaning; the vowels were never written.
+script	hieroglyphs	Hieroglyphs	engine=hiero	font=hieroglyphs	dir=ltr	material=papyrus
+about	The sacred script of Egypt, from about 3200 BCE to the last inscription at Philae in 394 CE; scribes also wrote faster hands, hieratic and demotic, and the Rosetta Stone let Champollion read it again in 1822.
+note	Type a name letter by letter: each sound becomes its one-sound sign, spelt the way Ptolemaic scribes spelt Greek names such as Cleopatra (a is the vulture, e and i the reed, o and u the quail chick; Egyptian itself did not write vowels). Word signs and determinatives go in brackets: [ankh], [nefer], [woman]. Put a royal name between ( and ) for a cartouche.
+group	One-sound signs
+key	ꜣ	EGYPTIAN HIEROGLYPH G001	vulture · a glottal stop; a in names	a,3
+key	i	EGYPTIAN HIEROGLYPH M017	reed · i, y; e or i in names	e,ı͗
+key	y	EGYPTIAN HIEROGLYPH M017A	two reeds · y	ii
+key	ꜥ	EGYPTIAN HIEROGLYPH D036	arm · a sound squeezed in the throat	`,ʿ
+key	w	EGYPTIAN HIEROGLYPH G043	quail chick · w; o or u in names	o,u
+key	b	EGYPTIAN HIEROGLYPH D058	foot · b
+key	p	EGYPTIAN HIEROGLYPH Q003	stool · p
+key	f	EGYPTIAN HIEROGLYPH I009	horned viper · f	v,ph
+key	m	EGYPTIAN HIEROGLYPH G017	owl · m
+key	n	EGYPTIAN HIEROGLYPH N035	water · n
+key	r	EGYPTIAN HIEROGLYPH D021	mouth · r
+key	l	EGYPTIAN HIEROGLYPH E023	lion · l in names of the Greek age
+key	h	EGYPTIAN HIEROGLYPH O004	reed shelter · h
+key	ḥ	EGYPTIAN HIEROGLYPH V028	twisted flax · a strong h	h.
+key	ḫ	EGYPTIAN HIEROGLYPH AA001	placenta · ch as in loch	kh
+key	ẖ	EGYPTIAN HIEROGLYPH F032	belly and udder · ch, softer
+key	z	EGYPTIAN HIEROGLYPH O034	door bolt · z, s
+key	s	EGYPTIAN HIEROGLYPH S029	folded cloth · s
+key	š	EGYPTIAN HIEROGLYPH N037	pool · sh	sh
+key	q	EGYPTIAN HIEROGLYPH N029	hill slope · k, deep in the throat
+key	k	EGYPTIAN HIEROGLYPH V031	basket · k	c,ck
+key	g	EGYPTIAN HIEROGLYPH W011	jar stand · g
+key	t	EGYPTIAN HIEROGLYPH X001	bread loaf · t	th
+key	ṯ	EGYPTIAN HIEROGLYPH V013	tethering rope · ch, tj	ch,tj
+key	d	EGYPTIAN HIEROGLYPH D046	hand · d
+key	ḏ	EGYPTIAN HIEROGLYPH I010	cobra · dj; j in names	j,dj
+sign	x	EGYPTIAN HIEROGLYPH V031 + EGYPTIAN HIEROGLYPH S029
+group	Word signs, typed in brackets
+word	ꜥnḫ	EGYPTIAN HIEROGLYPH S034	life (ankh)	ankh
+word	nfr	EGYPTIAN HIEROGLYPH F035	good, beautiful	nefer
+word	ḥtp	EGYPTIAN HIEROGLYPH R004	peace, an offering	hotep
+word	nṯr	EGYPTIAN HIEROGLYPH R008	god	netjer
+word	wḏꜣ	EGYPTIAN HIEROGLYPH U028	prosperity, soundness	wedja
+word	mn	EGYPTIAN HIEROGLYPH Y005	lasting	men
+word	rꜥ	EGYPTIAN HIEROGLYPH N005	the sun, the god Ra	ra
+word	pr	EGYPTIAN HIEROGLYPH O001	house	per
+word	nb	EGYPTIAN HIEROGLYPH V030	lord; every	neb
+word	mꜣꜥt	EGYPTIAN HIEROGLYPH H006	truth, right order (Maat)	maat
+word	ḏd	EGYPTIAN HIEROGLYPH R011	stability (the djed pillar)	djed
+word	wꜣs	EGYPTIAN HIEROGLYPH S040	power (the was sceptre)	was
+word	kꜣ	EGYPTIAN HIEROGLYPH D028	the life force (ka)	ka
+word	bꜣ	EGYPTIAN HIEROGLYPH G029	the soul (ba)	ba
+word	ꜣḫ	EGYPTIAN HIEROGLYPH G025	the blessed spirit (akh)	akh
+word	ḥr	EGYPTIAN HIEROGLYPH G005	Horus, the falcon god	horus
+word	nswt	EGYPTIAN HIEROGLYPH M023	king (the sedge of Upper Egypt)	nesu
+word	bjt	EGYPTIAN HIEROGLYPH L002	king (the bee of Lower Egypt)	bity
+word	sꜣ	EGYPTIAN HIEROGLYPH G039	son	sa
+word	ḫpr	EGYPTIAN HIEROGLYPH L001	to come into being (the scarab)	kheper
+word	jb	EGYPTIAN HIEROGLYPH F034	heart	ib
+word	wḏꜣt	EGYPTIAN HIEROGLYPH D010	the eye of Horus	wedjat
+word	šn	EGYPTIAN HIEROGLYPH V009	the shen ring: eternity	shen
+word	mr	EGYPTIAN HIEROGLYPH O024	pyramid	mer
+group	Determinatives, typed in brackets
+det	man	EGYPTIAN HIEROGLYPH A001	a man; a man’s name
+det	woman	EGYPTIAN HIEROGLYPH B001	a woman; a woman’s name
+det	god	EGYPTIAN HIEROGLYPH A040	a god
+det	goddess	EGYPTIAN HIEROGLYPH I012	a goddess
+det	divine	EGYPTIAN HIEROGLYPH G007	a god or a king
+det	city	EGYPTIAN HIEROGLYPH O049	a town
+det	desert	EGYPTIAN HIEROGLYPH N025	a foreign land, the desert
+det	water	EGYPTIAN HIEROGLYPH N035A	water, a lake
+det	sun	EGYPTIAN HIEROGLYPH N005	the sun, time
+det	writing	EGYPTIAN HIEROGLYPH Y001	writing, an idea
+det	walk	EGYPTIAN HIEROGLYPH D054	going, moving
+det	speak	EGYPTIAN HIEROGLYPH A002	eating, speaking, thinking
+det	egg	EGYPTIAN HIEROGLYPH H008	after a goddess’s or a queen’s name
+det	plural	EGYPTIAN HIEROGLYPH Z002	more than one
+det	stroke	EGYPTIAN HIEROGLYPH Z001	“this sign means what it shows”
+group	Cartouche
+punct	(	EGYPTIAN HIEROGLYPH V011A	start of a cartouche, around a royal name
+punct	)	EGYPTIAN HIEROGLYPH V011B	end of a cartouche
+sample	[ꜥnḫ] [wḏꜣ] snb	ꜥnḫ wḏꜣ snb: “life, prosperity, health”, the wish written after the king’s name
+sample	(qliwpꜣdrꜣt[egg][woman])	Cleopatra, in her cartouche as carved in the Ptolemaic age: q-l-i-w-p-ꜣ-d-r-ꜣ-t, then the egg and the seated woman	Cleopatra’s cartouche (Philae obelisk)
+sample	[nṯr] [nfr]	nṯr nfr: “the good god”, a title of the king

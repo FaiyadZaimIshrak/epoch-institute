@@ -1,0 +1,56 @@
+# Old Turkic for the "Write in ..." tool (scribe.js); built into scribe-langs.js by scripts/make-scribe.ps1.
+# The Orkhon runic script, written from right to left. Values follow Tekin (A Grammar of Orkhon Turkic, 1968): ¹ marks a
+# consonant used with back vowels (a ı o u), ² one used with front vowels (e i ö ü). The keys type one exact sign; typed
+# words are spelt by the rules in scribe.js (turkicWord): the consonants take the form of the word's vowels; a and e are
+# written only at the end of a word (or in a word of one syllable), ı/i always, o/u and ö/ü in the first syllable; q next
+# to o/u is the sign oq, k after an unwritten ö/ü the sign ök; nt, lt, nč, ny and ŋ have signs of their own.
+lang	old-turkic	Old Turkic	Old Turkic was carved in a runic script of its own, read from right to left, on the memorial stones of the Turkic khagans in Mongolia (720s–730s) and on rocks and objects from the Yenisei to the Danube.
+script	orkhon	Orkhon runes	engine=letters	rules=oldturkic	font=oldturkic	dir=rtl	material=stele	space=TWO DOT PUNCTUATION	exact=1
+about	The runes of the Orkhon inscriptions, raised for Kül Tigin (732) and Bilge Kagan (735) by the Orkhon river in Mongolia, the oldest long texts in a Turkic language.
+note	Type Turkic words as they sound (Tekin’s spelling: ı, ö, ü, q, ɣ or ğ, š, č, ŋ or ng): each consonant takes its back or front form from the word’s vowels, and the vowels are written as on the stones. The keys add one exact sign, back (¹) or front (²). Spaces become the two dots between words.
+group	Vowels
+key	a/e	OLD TURKIC LETTER ORKHON A	a, e · written at the end of a word
+key	ı/i	OLD TURKIC LETTER ORKHON I	ı, i
+key	o/u	OLD TURKIC LETTER ORKHON O	o, u
+key	ö/ü	OLD TURKIC LETTER ORKHON OE	ö, ü
+group	With back vowels (a ı o u)
+key	b¹	OLD TURKIC LETTER ORKHON AB	b
+key	d¹	OLD TURKIC LETTER ORKHON AD	d
+key	g¹	OLD TURKIC LETTER ORKHON AG	ɣ · a soft g
+key	l¹	OLD TURKIC LETTER ORKHON AL	l
+key	n¹	OLD TURKIC LETTER ORKHON AN	n
+key	r¹	OLD TURKIC LETTER ORKHON AR	r
+key	s¹	OLD TURKIC LETTER ORKHON AS	s
+key	t¹	OLD TURKIC LETTER ORKHON AT	t
+key	y¹	OLD TURKIC LETTER ORKHON AY	y
+key	q	OLD TURKIC LETTER ORKHON AQ	q · k said far back
+key	oq	OLD TURKIC LETTER ORKHON OQ	oq, uq, qo, qu
+key	ıq	OLD TURKIC LETTER ORKHON IQ	ıq, qı
+group	With front vowels (e i ö ü)
+key	b²	OLD TURKIC LETTER ORKHON AEB	b
+key	d²	OLD TURKIC LETTER ORKHON AED	d
+key	g²	OLD TURKIC LETTER ORKHON AEG	g
+key	l²	OLD TURKIC LETTER ORKHON AEL	l
+key	n²	OLD TURKIC LETTER ORKHON AEN	n
+key	r²	OLD TURKIC LETTER ORKHON AER	r
+key	s²	OLD TURKIC LETTER ORKHON AES	s
+key	t²	OLD TURKIC LETTER ORKHON AET	t
+key	y²	OLD TURKIC LETTER ORKHON AEY	y
+key	k²	OLD TURKIC LETTER ORKHON AEK	k
+key	ök	OLD TURKIC LETTER ORKHON OEK	ök, ük, kö, kü
+group	With any vowel
+key	č	OLD TURKIC LETTER ORKHON EC	č · ch
+key	ič	OLD TURKIC LETTER ORKHON IC	ič, či
+key	m	OLD TURKIC LETTER ORKHON EM	m
+key	p	OLD TURKIC LETTER ORKHON EP	p
+key	š	OLD TURKIC LETTER ORKHON ESH	š · sh
+key	z	OLD TURKIC LETTER ORKHON EZ	z
+key	ŋ	OLD TURKIC LETTER ORKHON ENG	ŋ · ng as in sing
+key	ñ	OLD TURKIC LETTER ORKHON ENY	ñ · ny
+key	nč	OLD TURKIC LETTER ORKHON ENC	nč · nch
+key	nt	OLD TURKIC LETTER ORKHON ENT	nt, nd
+key	lt	OLD TURKIC LETTER ORKHON ELT	lt, ld
+punct	:	TWO DOT PUNCTUATION	two dots between words
+sample	teŋri teg teŋride bolmuš türük bilge qaɣan bu ödke olurtum	“I, the heaven-like and heaven-born Turkic Bilge Kagan, took the throne at this time”	Kül Tigin inscription, south side, line 1 (732)
+sample	türük bodun	Türük bodun: “the Turkic people”	Kül Tigin inscription
+sample	teŋri	Teŋri: Heaven, the sky god of the Turks

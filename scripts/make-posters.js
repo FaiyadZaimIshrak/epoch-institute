@@ -167,6 +167,8 @@ page('quiz', { kind: 'mosaic', pics: pick(['genghis-khan', 'machu-picchu', 'mans
   tease: 'Four clues, one answer: a profile, a person, an event, a place, an idea or a work.', url: 'the-epoch-institute.org/quiz' });
 page('speeches', { kind: 'mosaic', pics: pick(SPEECHES.map(s => s.speakerSlug)).filter((p, i, a) => a.findIndex(q => q.src === p.src) === i).slice(0, 6), kicker: 'Great speeches', title: 'The words that moved history',
   tease: SPEECHES.length + ' speeches from Pericles to Reagan: the setting, the key passage and what followed.', url: 'the-epoch-institute.org/speeches/' });
+page('write', { kind: 'mosaic', pics: pick(['rosetta-stone', 'behistun-inscription', 'edicts-of-ashoka', 'linear-b', 'mesha-stele', 'cyrus-cylinder']), kicker: 'Write in ancient scripts', title: 'Write like a scribe',
+  tease: 'Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: twelve languages of the past, every sign with its sound.', chips: ['12 languages', '18 scripts', 'Save it as a picture'], url: 'the-epoch-institute.org/write' });
 page('paths', { kind: 'mosaic', pics: READING_PATHS.slice(0, 6).map(p => p.steps.find(s => s.img)).filter(Boolean).map(s => ({ src: s.img, top: 25 })), kicker: 'Reading paths', title: 'Themed routes through history',
   tease: READING_PATHS.length + ' paths through the profiles and the encyclopedia, each stop with a reason to read it.', url: 'the-epoch-institute.org/paths/' });
 page('encyclopedia', { kind: 'mosaic', pics: pick(['julius-caesar', 'battle-of-hastings', 'great-pyramid-of-giza', 'confucius', 'hagia-sophia', 'joan-of-arc']), kicker: 'Encyclopedia', title: 'The Encyclopedia',

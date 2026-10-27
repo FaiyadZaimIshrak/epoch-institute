@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Sumerian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 3200 BCE</span><span class="rf-text">The first accounting tablets are written at <a class="enc-link" href="/encyclopedia/uruk">Uruk</a> in proto-<a class="enc-link" href="/encyclopedia/cuneiform">cuneiform</a></span></li><li><span class="rf-year">c. 2600 BCE</span><span class="rf-text">The earliest Sumerian literary texts are copied at Shuruppak and <a class="enc-link" href="/encyclopedia/abu-salabikh">Abu Salabikh</a></span></li><li><span class="rf-year">c. 2300 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/enheduanna">Enheduanna</a>, high priestess at <a class="enc-link" href="/encyclopedia/ur">Ur</a> and daughter of <a class="enc-link" href="/encyclopedia/sargon-of-akkad">Sargon of Akkad</a>, composes hymns in Sumerian</span></li><li><span class="rf-year">c. 2100 BCE</span><span class="rf-text">The law code of <a class="enc-link" href="/encyclopedia/ur-nammu">Ur-Nammu</a>, the oldest known, is written in Sumerian</span></li><li><span class="rf-year">c. 1800 BCE</span><span class="rf-text">Babylonian scribal schools copy the classics of Sumerian literature, long after the language has ceased to be spoken</span></li><li><span class="rf-year">c. 80</span><span class="rf-text">The last datable <a class="enc-link" href="/encyclopedia/cuneiform">cuneiform</a> tablet, an astronomical almanac, is written at <a class="enc-link" href="/encyclopedia/uruk">Uruk</a></span></li><li><span class="rf-year">1869</span><span class="rf-text">The scholar Jules Oppert gives the rediscovered language the name Sumerian</span></li></ol>
+    </section>
+
+    <section class="scribe-sec" id="write" aria-labelledby="write-title">
+      <h2 class="profile-section-title" id="write-title">Write in Sumerian</h2>
+      <p class="scribe-lede">Type in the script itself: every key shows a sign with its value and how it sounds. Then make a picture of what you wrote, to save, copy or share.</p>
+      <div class="scribe" data-lang="sumerian"><p class="scr-loading">The keyboard opens here once the page has loaded.</p></div>
+      <p class="scribe-more"><a href="/write#sumerian">All twelve scripts on one page &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Sumerian",slug="sumerian",url="https://the-epoch-institute.org/language/sumerian";

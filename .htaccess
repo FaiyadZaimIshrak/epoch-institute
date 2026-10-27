@@ -1,7 +1,7 @@
 ErrorDocument 404 /404.html
 
 # Serve extensionless files as HTML
-<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport)$">
+<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write)$">
   ForceType text/html
 </FilesMatch>
 DirectoryIndex index
@@ -67,7 +67,7 @@ AddType font/woff2 .woff2
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000"
-  <FilesMatch "^(shared\.css|shared-data\.js|shared-nav\.js|enc-page\.js)$">
+  <FilesMatch "^(shared\.css|shared-data\.js|shared-nav\.js|enc-page\.js|scribe\.js)$">
     Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
     Header unset Expires
   </FilesMatch>
