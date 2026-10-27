@@ -5,7 +5,8 @@ Every push to `master` deploys the site. The workflow `.github/workflows/deploy.
 `server905.web-hosting.com` (port 21098).
 
 The script does what `.cpanel.yml` did when cPanel deployed from its own clone of the repository: the same files and
-folders, in the same order, with the same clean-up. That clone is no longer needed.
+folders, in the same order, with the same clean-up. The clone and `.cpanel.yml` were removed on 27 Oct 2026; git
+history keeps the file, and the table below names its lines.
 
 ## What a deploy does
 
@@ -151,23 +152,21 @@ The script reads these settings from the environment:
 The generated folders end up exactly as in the older commit. Files added since then elsewhere stay on the server, such
 as a new picture, as they did with cPanel.
 
-## Switching over from cPanel
+## The switch from cPanel (27 Oct 2026)
 
-1. Do the one-time setup.
-2. Do a dry run from the `deploy-over-ssh` branch. Expect nothing, or almost nothing, to send or delete: the server
-   already holds `master` as cPanel deployed it.
-3. Merge the pull request. The push to `master` runs the first real deploy; check that it is green and sent little or
-   nothing.
-4. Remove cPanel's clone. In cPanel → Files → Git Version Control, click Remove next to the repository. That only takes
-   it off cPanel's list, so then delete the folder itself, over SSH or with the File Manager:
-   ```bash
-   rm -rf /home/theeiorh/repositories/epoch-institute
-   ```
-   File usage (inodes) in cPanel's Statistics should drop by about 95,000.
-5. Delete the `CPANEL_REPO_PATH` secret.
-6. Later, delete `.cpanel.yml`, and its mentions here and in `CLAUDE.md`.
+1. A [dry run](https://github.com/FaiyadZaimIshrak/epoch-institute/actions/runs/40564806246) from the `deploy-over-ssh`
+   branch found nothing to send or delete, because the server already held `master` as cPanel had deployed it.
+2. The [first deploy](https://github.com/FaiyadZaimIshrak/epoch-institute/actions/runs/40566470827) from `master` (the
+   merge, ea29b29) sent nothing, and the site answered.
+3. The repository was taken off cPanel's Git list (`uapi VersionControl delete`). Then its folder,
+   `/home/theeiorh/repositories/epoch-institute`, was deleted. The account went from 201,865 to 106,147 inodes.
+4. `.cpanel.yml` was removed.
 
-Until step 4, reverting the pull request brings back the deploy through cPanel.
+To go back to deploys through cPanel, cPanel would need a clone of the repository again (Git Version Control → Create),
+and `.cpanel.yml` would have to be restored from git history.
+
+cPanel's Git list still holds `the-epoch-institute`, an April 2026 clone of `Rimonis/the-epoch-institute`. Don't press
+Deploy on it: its own `.cpanel.yml` would copy that old version over the site.
 
 ## When something goes wrong
 
@@ -183,7 +182,7 @@ Until step 4, reverting the pull request brings back the deploy through cPanel.
 
 ## Changing what is deployed
 
-The lists at the top of `scripts/deploy.sh` mirror `.cpanel.yml` line by line:
+The lists at the top of `scripts/deploy.sh` mirror the old `.cpanel.yml` line by line:
 - a new file at the root must match one of the root patterns;
 - a new root page goes in `PAGES`;
 - a new folder that should mirror the repository exactly, with `--delete`, goes in `GENERATED`;

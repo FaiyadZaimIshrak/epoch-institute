@@ -1,6 +1,7 @@
 # Deploys the site to public_html on every push to master, and from the Actions tab (Run workflow). scripts/deploy.sh
-# does the work over SSH with rsync and copies exactly what .cpanel.yml copied, so cPanel's clone of the repository on
-# the server is no longer needed. docs/DEPLOY.md explains the setup, dry runs, deploys by hand and rollbacks.
+# does the work over SSH with rsync and copies exactly what .cpanel.yml copied when cPanel deployed from its own clone
+# of the repository (both gone since 27 Oct 2026). docs/DEPLOY.md explains the setup, dry runs, deploys by hand and
+# rollbacks.
 #
 # Repository secrets (Settings → Secrets and variables → Actions):
 #   SSH_PRIVATE_KEY  a private key without a passphrase; its public key is authorized in cPanel → SSH Access

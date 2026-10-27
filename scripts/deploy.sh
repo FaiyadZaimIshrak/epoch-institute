@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Deploys the site to public_html over SSH with rsync. It does what .cpanel.yml did when cPanel deployed from its own
 # clone of the repository: the same files and folders, --delete only in the twelve generated folders, the same mkdir
-# and rm steps (each step below names its line in .cpanel.yml). .github/workflows/deploy.yml runs it on every push to
-# master; it also runs by hand from a clean clone on Linux, macOS or WSL. docs/DEPLOY.md has the details.
+# and rm steps (each step below names its line in .cpanel.yml, removed after the switch on 27 Oct 2026: see the git
+# history). .github/workflows/deploy.yml runs it on every push to master; it also runs by hand from a clean clone on
+# Linux, macOS or WSL. docs/DEPLOY.md has the details.
 #
 #   DRY_RUN=1 scripts/deploy.sh   list what would be sent and deleted (rsync -n) and print the server commands
 #   scripts/deploy.sh             deploy the commit that is checked out
@@ -29,7 +30,7 @@ SSH_HOST=${SSH_HOST//[[:space:]]/}
 SSH_PORT=${SSH_PORT//[[:space:]]/}
 SSH_USER=${SSH_USER//[[:space:]]/}
 
-# What .cpanel.yml copies, line by line
+# What .cpanel.yml copied, line by line
 ROOT_FILES=('*.html' '*.css' '*.js' '*.csv' '*.json' .htaccess)  # line 8: each must match (generator.html is left out)
 ROOT_EXTRA=('*.txt' '*.xml' '*.svg' '*.png' '*.ico')              # line 9: copied when present
 PAGES=(index about research research-series profiles community contributors dataset explorer connections atlas quiz

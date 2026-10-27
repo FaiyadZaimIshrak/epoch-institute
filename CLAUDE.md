@@ -119,10 +119,12 @@ Push to master → GitHub Actions (.github/workflows/deploy.yml) runs scripts/de
 SSH_PRIVATE_KEY, SSH_HOST, SSH_PORT, SSH_USER; the host key comes from ssh-keyscan). docs/DEPLOY.md has the setup, dry
 runs (Run workflow with "Dry run", the default; runs from any branch but master are always dry; DRY_RUN=1 by hand),
 deploys by hand (Linux, macOS or WSL: Git Bash has no rsync) and rollbacks (revert and push, or Run workflow with a
-Commit). Until Oct 2026 cPanel deployed from its own clone of the repository by running .cpanel.yml; the clone cost
-~95,000 inodes (over Namecheap's 200,000-inode backup limit), so it goes once the deploys over SSH are confirmed, and
-.cpanel.yml after it. deploy.sh reproduces .cpanel.yml line by line (each step names its line): its lists at the top
-are the copy rules. New top-level files must match a root pattern there (*.html, *.css, *.js, *.csv, *.json,
+Commit). Until 27 Oct 2026 cPanel deployed from its own clone of the repository by running .cpanel.yml; the clone
+(95,718 inodes, 2.8 GB) put the account over Namecheap's 200,000-inode backup limit, so after the first deploy over SSH
+it was taken off cPanel's Git list and deleted (201,865 → 106,147 inodes) and .cpanel.yml removed (git history has
+it). cPanel's Git list still holds the-epoch-institute, an April 2026 clone of Rimonis/the-epoch-institute (324
+inodes): never press Deploy there, its old .cpanel.yml would copy April's files over the site. deploy.sh reproduces
+.cpanel.yml line by line (each step names its line): its lists at the top are the copy rules. New top-level files must match a root pattern there (*.html, *.css, *.js, *.csv, *.json,
 .htaccess; *.txt, *.xml, *.svg, *.png, *.ico) or they won't be deployed. rsync writes to a temporary file and renames
 it, so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
 the broken copy in its cache - Oct 2026). Files are compared by checksum (--checksum --no-times: a fresh checkout gives
