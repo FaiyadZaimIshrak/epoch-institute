@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 300 BCE</span><span class="rf-text">Bamboo slips buried in a tomb at Guodian preserve the oldest known passages of the <a class="enc-link" href="/encyclopedia/daodejing">Daodejing</a></span></li><li><span class="rf-year">142</span><span class="rf-text">Zhang Daoling receives a revelation from the deified Laozi and founds the Way of the <a class="enc-link" href="/encyclopedia/way-of-the-five-pecks-of-rice">Celestial Masters</a></span></li><li><span class="rf-year">184</span><span class="rf-text">The Yellow Turban rebellion of the Way of Great Peace shakes the <a class="enc-link" href="/encyclopedia/han-dynasty">Han dynasty</a></span></li><li><span class="rf-year">442</span><span class="rf-text">The Northern Wei emperor Taiwu receives Daoist registers, making Daoism the religion of his state</span></li><li><span class="rf-year">666</span><span class="rf-text">The Tang emperor Gaozong honours Laozi, the dynasty’s claimed ancestor, as an emperor</span></li><li><span class="rf-year">1167</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/wang-chongyang">Wang Chongyang</a> founds the monastic school of <a class="enc-link" href="/encyclopedia/quanzhen-school">Complete Perfection</a> (Quanzhen)</span></li><li><span class="rf-year">1222</span><span class="rf-text">The Quanzhen master Qiu Chuji meets <a class="enc-link" href="/encyclopedia/genghis-khan">Genghis Khan</a> in the <a class="enc-link" href="/encyclopedia/hindu-kush">Hindu Kush</a></span></li><li><span class="rf-year">1445</span><span class="rf-text">The Ming court completes the <a class="enc-link" href="/encyclopedia/printing-press">printing</a> of the Daoist Canon</span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="daoism"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=daoism">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Daoism",slug="daoism",url="https://the-epoch-institute.org/religion/daoism";

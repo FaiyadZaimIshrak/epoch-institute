@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 1300</span><span class="rf-text">Ile-<a class="enc-link" href="/encyclopedia/ife">Ife</a>, the sacred city of the <a class="enc-link" href="/encyclopedia/yoruba">Yoruba</a>, is at its height; its artists cast naturalistic heads in <a class="enc-link" href="/encyclopedia/copper">copper</a> alloy</span></li><li><span class="rf-year">17th century</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/oyo-empire">Oyo Empire</a> rises to dominate the <a class="enc-link" href="/encyclopedia/yoruba">Yoruba</a> lands; its kings honour Shango, the orisha of thunder, remembered as one of their predecessors</span></li><li><span class="rf-year">1830s</span><span class="rf-text">The collapse of the <a class="enc-link" href="/encyclopedia/oyo-empire">Oyo Empire</a> and the wars that follow send many enslaved <a class="enc-link" href="/encyclopedia/yoruba">Yoruba</a> to <a class="enc-link" href="/encyclopedia/cuba">Cuba</a> and <a class="enc-link" href="/encyclopedia/brazil">Brazil</a></span></li><li><span class="rf-year">Early 19th century</span><span class="rf-text">African priestesses found Casa Branca, one of the first great <a class="enc-link" href="/encyclopedia/candomble">Candomblé</a> houses, in <a class="enc-link" href="/encyclopedia/salvador">Salvador</a>, <a class="enc-link" href="/encyclopedia/bahia">Bahia</a></span></li><li><span class="rf-year">1993</span><span class="rf-text">The Supreme Court of the <a class="enc-link" href="/encyclopedia/united-states">United States</a> upholds the right of a <a class="enc-link" href="/encyclopedia/santeria">Santería</a> church in <a class="enc-link" href="/encyclopedia/florida">Florida</a> to practise animal sacrifice</span></li><li><span class="rf-year">2005</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> proclaims Ifa divination a masterpiece of humanity’s oral heritage; the sacred grove of <a class="enc-link" href="/encyclopedia/osogbo">Osogbo</a> becomes a World Heritage Site</span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="yoruba-religion"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=yoruba-religion">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -147,6 +154,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Yoruba religion",slug="yoruba-religion",url="https://the-epoch-institute.org/religion/yoruba-religion";

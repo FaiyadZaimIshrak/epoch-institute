@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 1499</span><span class="rf-text">Guru Nanak’s spiritual experience at the river Bein near Sultanpur Lodhi begins his mission</span></li><li><span class="rf-year">1577</span><span class="rf-text">Guru Ram Das founds the city of <a class="enc-link" href="/encyclopedia/amritsar">Amritsar</a> around its sacred pool</span></li><li><span class="rf-year">1604</span><span class="rf-text">Guru Arjan installs the Adi Granth, the Sikh scripture, in the <a class="enc-link" href="/encyclopedia/golden-temple">Harmandir Sahib</a> at <a class="enc-link" href="/encyclopedia/amritsar">Amritsar</a></span></li><li><span class="rf-year">1606</span><span class="rf-text">Guru Arjan is executed under the Mughal emperor <a class="enc-link" href="/encyclopedia/jahangir">Jahangir</a></span></li><li><span class="rf-year">1675</span><span class="rf-text">Guru Tegh Bahadur is executed in <a class="enc-link" href="/encyclopedia/delhi">Delhi</a> on the orders of <a class="enc-link" href="/encyclopedia/aurangzeb">Aurangzeb</a></span></li><li><span class="rf-year">1699</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/guru-gobind-singh">Guru Gobind Singh</a> founds the <a class="enc-link" href="/encyclopedia/khalsa">Khalsa</a> at Anandpur on the festival of <a class="enc-link" href="/encyclopedia/vaisakhi">Vaisakhi</a></span></li><li><span class="rf-year">1799</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/ranjit-singh">Ranjit Singh</a> takes <a class="enc-link" href="/encyclopedia/lahore">Lahore</a> and goes on to found the <a class="enc-link" href="/encyclopedia/sikh-empire">Sikh Empire</a></span></li><li><span class="rf-year">1984</span><span class="rf-text">The Indian army’s <a class="enc-link" href="/encyclopedia/operation-blue-star">Operation Blue Star</a> at the <a class="enc-link" href="/encyclopedia/golden-temple">Golden Temple</a>, followed by the assassination of <a class="enc-link" href="/encyclopedia/indira-gandhi">Indira Gandhi</a> and anti-Sikh violence</span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="sikhism"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=sikhism">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -149,6 +156,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Sikhism",slug="sikhism",url="https://the-epoch-institute.org/religion/sikhism";

@@ -518,7 +518,7 @@ function initNav(activePage) {
     ['people', '/people/', 'People', 'Who lived when'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
     ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
-    ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
+    ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
     ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
     ['kids', '/kids', 'Kids Corner', 'History for young explorers'],
     ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'],
@@ -619,6 +619,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/paths/">Reading Paths</a>
         <a class="footer-link" href="/speeches/">Great Speeches</a>
         <a class="footer-link" href="/write">Write in Ancient Scripts</a>
+        <a class="footer-link" href="/faiths">Faith Maps</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
         <a class="footer-link" href="/games">History Games</a>
         <a class="footer-link" href="/kids">Kids Corner</a>

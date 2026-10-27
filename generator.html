@@ -274,6 +274,19 @@ function scribeHtml(emp) {
     '    </section>';
 }
 
+// "Spread through the centuries" (faith-map.js, data/faiths/<slug>.json from scripts/faiths.tsv): every religion
+function hasFaithMap(emp) { return profileKind(emp) === 'religion'; }
+function faithMapHtml(emp) {
+  if (!hasFaithMap(emp)) return '';
+  var slug = toSlug(emp.name);
+  return '<section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">\n' +
+    '      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>\n' +
+    '      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century' + (emp.end == null ? ' to today' : ' to its last places') + '. Press Play or move the slider; tap a mark to read about it.</p>\n' +
+    '      <div class="faith-map" data-faith="' + slug + '"><p class="fm-loading">The map opens here once the page has loaded.</p></div>\n' +
+    '      <p class="fm-more"><a href="/faiths?faith=' + slug + '">Compare it with another faith &rarr;</a></p>\n' +
+    '    </section>';
+}
+
 // One picture per profile section (empire-section-images.js), linked to its encyclopedia entry, with credit.
 function sectionFigure(empireName, key) {
   var f = typeof SECTION_IMAGES !== 'undefined' && SECTION_IMAGES[empireName] && SECTION_IMAGES[empireName][key];
@@ -418,9 +431,10 @@ factRows(name, emp) +
 '      </div>\n' +
 '    </div>\n\n' +
 (glanceOf(name) ? '    ' + glanceHtml(name) + '\n\n' : '') +
-'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : [])) + '\n\n' +
+'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasFaithMap(emp) ? [['faith-map', 'Spread through the centuries']] : [], hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : [])) + '\n\n' +
 (isPolity ? '    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' : '') +
 '    ' + riseFallHtml(emp, name, isPolity) + '\n\n' +
+(hasFaithMap(emp) ? '    ' + faithMapHtml(emp) + '\n\n' : '') +
 (hasScribe(emp) ? '    ' + scribeHtml(emp) + '\n\n' : '') +
 noProfileNote + '\n' +
 (sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
@@ -444,6 +458,7 @@ noProfileNote + '\n' +
 (isPolity ? '<script src="/epoch-stats.js?v=3">\x3C/script>\n' +
 '<script src="/connections-map.js?v=12" defer>\x3C/script>\n' +
 '<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});\x3C/script>\n' : '') +
+(hasFaithMap(emp) ? '<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
 (hasScribe(emp) ? '<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
 '<script>\n' +
 '(function(){\n' +

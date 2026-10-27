@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">1844</span><span class="rf-text">The Báb declares his mission in <a class="enc-link" href="/encyclopedia/shiraz">Shiraz</a></span></li><li><span class="rf-year">1850</span><span class="rf-text">The Báb is executed by a firing squad in <a class="enc-link" href="/encyclopedia/tabriz">Tabriz</a></span></li><li><span class="rf-year">1863</span><span class="rf-text">Bahá’u’lláh declares his mission in the Garden of Ridván in <a class="enc-link" href="/encyclopedia/baghdad">Baghdad</a></span></li><li><span class="rf-year">1868</span><span class="rf-text">Bahá’u’lláh is exiled to the Ottoman prison city of <a class="enc-link" href="/encyclopedia/acre">Acre</a></span></li><li><span class="rf-year">1892</span><span class="rf-text">Bahá’u’lláh dies near <a class="enc-link" href="/encyclopedia/acre">Acre</a>; his son ʻAbdu’l-Bahá leads the faith</span></li><li><span class="rf-year">1912</span><span class="rf-text">ʻAbdu’l-Bahá travels across <a class="enc-link" href="/encyclopedia/north-america">North America</a>, speaking in churches, synagogues and universities</span></li><li><span class="rf-year">1963</span><span class="rf-text">The Universal House of Justice, the faith’s governing body, is elected for the first time</span></li><li><span class="rf-year">1980s</span><span class="rf-text">More than two hundred Bahá’ís are executed or killed in <a class="enc-link" href="/encyclopedia/iran">Iran</a> in the years after the <a class="enc-link" href="/encyclopedia/iranian-revolution">Islamic Revolution</a></span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="bahai-faith"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=bahai-faith">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -147,6 +154,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Bahá'í Faith",slug="bahai-faith",url="https://the-epoch-institute.org/religion/bahai-faith";

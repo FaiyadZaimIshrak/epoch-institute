@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 10th century BCE</span><span class="rf-text">By the biblical account, <a class="enc-link" href="/encyclopedia/david">David</a> makes <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a> his capital and <a class="enc-link" href="/encyclopedia/solomon">Solomon</a> builds the First Temple</span></li><li><span class="rf-year">586 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/babylonians">Babylonians</a> destroy <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a> and the First Temple and take many Judeans into exile</span></li><li><span class="rf-year">516 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/temple-in-jerusalem">Second Temple</a> is completed in <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a> after the return from exile, by the traditional date</span></li><li><span class="rf-year">70</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/roman-empire">Romans</a> destroy <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a> and the <a class="enc-link" href="/encyclopedia/temple-in-jerusalem">Second Temple</a> at the end of the Jewish revolt</span></li><li><span class="rf-year">c. 200</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/judah">Judah</a> ha-Nasi compiles the Mishnah, the first great work of rabbinic law</span></li><li><span class="rf-year">c. 600</span><span class="rf-text">The Babylonian Talmud reaches its final form</span></li><li><span class="rf-year">1492</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/jews">Jews</a> are expelled from <a class="enc-link" href="/encyclopedia/spain">Spain</a></span></li><li><span class="rf-year">1948</span><span class="rf-text">The State of Israel is founded, three years after the end of the <a class="enc-link" href="/encyclopedia/holocaust">Holocaust</a></span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="judaism"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=judaism">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Judaism",slug="judaism",url="https://the-epoch-institute.org/religion/judaism";

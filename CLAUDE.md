@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
@@ -16,14 +16,14 @@ Plus 404.html and generator.html (generator is NOT deployed — see .cpanel.yml)
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, History Quiz, History Games, Kids Corner,
+Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -83,7 +83,8 @@ lastmod), so changing it dates no page ($THEME0, the pre-Kids snippet, only brid
 
 Caching (.htaccess): scripts a year, CSS a month, JSON a week, HTML always revalidated. shared.css, shared-data.js,
 shared-nav.js and enc-page.js are kept only 10 minutes (then stale-while-revalidate): the 428 profile pages and the
-~38,000 generated pages load them WITHOUT `?v=`, so changing them needs no rebuild. Every other script tag carries a `?v=N` cache-buster: when you
+~38,000 generated pages load them WITHOUT `?v=`, so changing them needs no rebuild (so are scribe.js and faith-map.js,
+which the language and religion profiles load without `?v=`). Every other script tag carries a `?v=N` cache-buster: when you
 change such a file, bump its `?v=` on every page that loads it (hand-written pages also use `?v=` for the four shared
 files; bump those too). data/*.json are sent as text/javascript (data/.htaccess) because the server does not compress
 application/json.
@@ -496,6 +497,31 @@ material (clay, papyrus, marble, parchment, rock, sandstone, palm leaf, stele, r
   cards with the emblems, #slug deep links, epoch-write-lang); scribe.js has no ?v= on the profiles (10-minute cache in
   .htaccess); localStorage epoch-scribe keeps each language's text, script and switches; Explore menu, footer, Research
   Hub (Explore group), Kids corner door "Write Like a Scribe", llms.txt, poster images/og/page-write.jpg.
+
+## Faith maps (/faiths, the religion profiles' #faith-map)
+faith-map.js: the spread of each of the 18 religions century by century over /maps/world.svg (inline SVG, no library):
+soft radial glows where it was a main faith of the region or of its rulers (level 2, bright) or held communities (level
+1, faint), arrows for how it spread (drawn out in their century, faint for two more), a star where it began, dots for
+holy places and centres, rings for last places (Philae 537, Nojpetén 1697, Cao'an 1339, Khotan 1006 …). A century
+slider with Play (a century every 1.8 s), the century's caption, "This century in words" (the areas, new marks and
+routes as text) and the sources. The map glides to the century's new and living places; marks and arrowheads are
+scaled to stay the same size on screen, the names of a century's new marks are placed clear of each other. Centuries
+follow the site's labels (centOf: 1200 is the 13th century, 400 BCE the 5th BCE); a glow's strength is the share of the
+century it fills; a faith that ended closes on its last note. Colours: --fm-a (the faith) and --fm-b (the one compared),
+both themes and Kids mode; screen blending in the dark theme, multiply in the light one.
+- Data: scripts/faiths.tsv (format at its top: `@slug`, then area / route / mark / note / src lines; notes are captions
+  that hold from their century until the next note). Written by hand from the standard histories named in each block's
+  src lines and checked against the religion's profile (its key events and facts); keep the wording neutral and every
+  date and place checked. build-pages.ps1 ("Faith maps") validates it (a religion profile, years inside its span with a
+  century's grace, level 1 or 2, places on the map) and STOPS on a problem, projects the places with [EpochGeo.G]::P and
+  writes data/faiths/<slug>.json ({slug, name, span, areas [x, y, r, from, to, level, name, note], routes, marks, notes,
+  src}, in tenths of the plane; radius km / 4.0075) and FAITHS_V into faith-map.js. To test the section alone: scratchpad
+  faiths/run.ps1 (seconds instead of a full build).
+- Wiring: generator.html (hasFaithMap, faithMapHtml: section #faith-map, "Spread through the centuries", after the
+  Timeline, a contents entry, a loader like the scribe's; the id is not "spread": that is the religions' text section);
+  /faiths (hand page: the 18 cards oldest first, "Compare with" lays a second faith over the first, the address keeps
+  ?faith=&vs=&c=, epoch-faith); Explore menu, footer, Research Hub ("Through time" group), llms.txt, poster
+  images/og/page-faiths.jpg, sitemap. faith-map.js has no ?v= on the profiles (10-minute cache in .htaccess).
 
 ## Research Series (/research-series, /essays/<slug>)
 Five essays, sources in scripts/essays/NN-slug.html: a comment of `key: value` lines (title, subtitle, card = the

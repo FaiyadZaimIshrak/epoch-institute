@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">793</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/vikings">Viking</a> raid on the monastery of <a class="enc-link" href="/encyclopedia/lindisfarne">Lindisfarne</a> opens the <a class="enc-link" href="/encyclopedia/viking-age">Viking Age</a></span></li><li><span class="rf-year">c. 965</span><span class="rf-text">King <a class="enc-link" href="/encyclopedia/harald-bluetooth">Harald Bluetooth</a> raises the <a class="enc-link" href="/encyclopedia/jelling">Jelling</a> stone, recording that he made the <a class="enc-link" href="/encyclopedia/danes">Danes</a> Christian</span></li><li><span class="rf-year">c. 1000</span><span class="rf-text">The Icelandic assembly, the <a class="enc-link" href="/encyclopedia/althing">Althing</a>, adopts <a class="enc-link" href="/encyclopedia/christianity">Christianity</a>, allowing pagan worship in private for a time</span></li><li><span class="rf-year">c. 1075</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/adam-of-bremen">Adam of Bremen</a> describes the temple at <a class="enc-link" href="/encyclopedia/uppsala">Uppsala</a> with images of <a class="enc-link" href="/encyclopedia/thor">Thor</a>, Odin and Freyr</span></li><li><span class="rf-year">c. 1220</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/snorri-sturluson">Snorri Sturluson</a> writes the <a class="enc-link" href="/encyclopedia/edda">Prose Edda</a>, a handbook of Norse myth and poetry</span></li><li><span class="rf-year">c. 1270</span><span class="rf-text">The Codex Regius, the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> of the <a class="enc-link" href="/encyclopedia/edda">Poetic Edda</a>, is written in Iceland</span></li><li><span class="rf-year">1973</span><span class="rf-text">Iceland recognises the modern Ásatrú fellowship as a religion</span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to its last places. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="norse-religion"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=norse-religion">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Norse religion",slug="norse-religion",url="https://the-epoch-institute.org/religion/norse-religion";

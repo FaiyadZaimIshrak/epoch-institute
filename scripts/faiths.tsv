@@ -1,0 +1,1056 @@
+# Faith maps (faith-map.js: the religion profiles' "Spread through the centuries" and /faiths), read by build-pages.ps1.
+# One block per religion: @<profile slug>, then tab-separated lines:
+#   area	name	lat,lng	radius in km	from	to (empty: to today)	level	note
+#         level 2: a main faith of the region or of its rulers; level 1: communities
+#   route	year	lat,lng > lat,lng	label        how it spread (drawn in its century, fading over the next two)
+#   mark	origin|place|last	year	name	lat,lng	text       where it began, a holy place or centre, a last place
+#   note	year	text      the caption from this year's century on, until the next note
+#   src	a work relied on
+# Years: negative = BCE. Dates and places are rounded: a glow is a region, not a border. Every line is checked against
+# the works named in src and the religion's profile; keep the wording neutral.
+
+@buddhism
+area	Magadha and Kosala (the Ganges plain)	25.6,84.0	380	-450	1200	1	where the Buddha taught; monks and nuns supported by merchants and kings, beside Brahmins and Jains
+area	The Mauryan Empire under Ashoka	23.0,80.0	1000	-260	-185	2	Ashoka promoted the Buddha's teaching in his edicts
+area	The Pala kingdom (Bihar and Bengal)	24.8,87.0	330	750	1200	2	the last great royal patrons of Buddhism in India
+area	Gandhara and the north-west	34.0,72.5	300	-180	500	2	Buddhist art and learning under the Indo-Greek and Kushan kings
+area	Gandhara and the north-west	34.0,72.5	300	500	800	1	declining after the Huna invasions
+area	Bactria and Bamiyan	35.8,67.5	350	100	900	1	monasteries at Termez and Balkh; the giant Buddhas of Bamiyan
+area	Kashmir	34.1,74.8	140	-180	1300	1	a centre of Buddhist learning
+area	Sri Lanka	7.9,80.7	210	-250		2	by tradition brought by Ashoka's son Mahinda; the Pali Canon was written down here
+area	Khotan and Kashgar	38.2,78.0	380	50	1006	2	Buddhist oasis kingdoms of the Silk Road
+area	Kucha and Turfan	42.2,86.0	420	150	1450	2	the cave temples of Kucha; later the Buddhist Uyghurs of Turfan
+area	Luoyang and the north China plain	34.7,112.5	350	65	400	1	the first temples and translators in China
+area	China	32.0,113.0	1000	400		2	a main faith beside the Confucian and Daoist traditions
+area	Korea	37.2,127.5	350	372	1392	2	the faith of the Three Kingdoms, Silla and Goryeo
+area	Korea	37.2,127.5	350	1392		1	restricted under the Confucian Joseon kings; about one Korean in six is Buddhist today
+area	Japan	35.3,136.0	480	538		2	brought from the Korean kingdom of Baekje
+area	Tibet	30.5,90.5	650	640	779	1	the first temples
+area	Tibet	30.5,90.5	650	779		2	from the founding of Samye
+area	Mongolia	47.0,104.0	650	1578		2	Tibetan Buddhism, suppressed under communist rule (1930s–1990) and revived since
+area	Burma	19.5,95.8	450	450		2	the Pyu and Mon cities, then Bagan
+area	Thailand	15.5,100.5	450	600		2	Dvaravati, then Sukhothai and Ayutthaya
+area	Cambodia	12.8,104.5	300	500	1180	1	Buddhism beside the Hindu court cults of the Khmer kings
+area	Cambodia	12.8,104.5	300	1180		2	Jayavarman VII's Buddhist temples; Theravada from the 13th century
+area	Laos	19.5,102.5	300	1353		2	Theravada in the kingdom of Lan Xang
+area	Northern Vietnam	21.0,105.8	250	200		2	Luy Lau, an early centre; the Ly kings were great patrons
+area	Srivijaya (Sumatra and the Malacca Strait)	-2.5,104.0	450	671	1400	2	a centre of Buddhist learning, visited by the Chinese pilgrim Yijing
+area	Central Java	-7.5,110.3	250	750	1520	2	the Sailendra kings built Borobudur; Hindu-Buddhist kingdoms ruled Java until the 16th century
+area	Bhutan	27.4,90.4	160	750		2	Tibetan Buddhism, by tradition since Padmasambhava; the state of the Drukpa school from 1616
+area	Sikkim	27.5,88.5	60	1642		2	the kingdom founded in 1642 by Buddhist lamas and its first chogyal
+area	Ladakh	34.15,77.6	160	1000		2	monasteries such as Alchi, from the 11th century
+area	Kathmandu valley	27.7,85.3	100	300		1	Newar Buddhism, which keeps its scriptures in Sanskrit
+area	Kalmykia (the lower Volga)	46.3,45.0	250	1630		2	the Kalmyks, Mongol Buddhists who settled here in the 17th century
+area	Buryatia and Tuva	51.5,102.0	500	1700		2	Siberian peoples of Tibetan Buddhism
+area	Maharashtra	20.0,76.5	330	1956		1	B. R. Ambedkar's movement: about 6.5 million Buddhists in Maharashtra (2011 census)
+area	Hawaii	21.3,-157.8	150	1889		1	temples of Japanese settlers
+area	California	37.0,-121.0	350	1899		1	temples of Japanese and Chinese settlers, later of many traditions
+area	Western Europe	50.0,4.0	600	1920		1	Buddhist societies and centres, most of them founded since the 1950s
+area	Eastern North America	41.0,-75.0	400	1960		1	immigrants from Asia and Western converts
+area	South-eastern Australia	-35.5,148.0	450	1970		1	immigrants from Asia and Western converts
+route	-250	25.6,85.1 > 8.4,80.4	Mahinda's mission to Sri Lanka, by tradition
+route	-250	25.6,85.1 > 33.8,72.8	Ashoka's missions to the north-west
+route	50	33.8,72.8 > 37.1,79.9	Over the mountains to the oasis kingdoms
+route	65	40.1,94.8 > 34.7,112.6	Along the Silk Road into China
+route	372	34.3,108.9 > 39.0,125.8	To the Korean kingdom of Goguryeo
+route	450	7.0,81.0 > 16.9,97.4	Across the Bay of Bengal to the Mon and Pyu
+route	538	36.3,126.9 > 34.5,135.8	From Baekje to Japan (538 or 552)
+route	650	25.1,85.4 > 29.7,91.1	Over the Himalayas into Tibet
+route	671	23.1,113.3 > -3.0,104.8	Yijing sails to Srivijaya
+route	1578	29.7,91.1 > 40.8,111.7	The Dalai Lama and the Mongol khans
+mark	origin	-450	Bodh Gaya	24.7,85.0	By tradition Siddhartha Gautama attained awakening here and became the Buddha; many historians now place his life in the 5th century BCE.
+mark	place	-450	Sarnath	25.38,83.02	The deer park near Varanasi where the Buddha gave his first teaching.
+mark	place	-250	Sanchi	23.48,77.74	The Great Stupa, first raised under Ashoka in the 3rd century BCE.
+mark	place	-250	Anuradhapura	8.34,80.4	The capital of early Buddhist Sri Lanka, where by tradition a cutting of the Bodhi tree was planted.
+mark	place	366	Dunhuang	40.04,94.81	Buddhist cave temples were cut here from the 4th century; the Diamond Sutra printed in 868 was found in one of them.
+mark	place	450	Nalanda	25.14,85.44	The great monastic university of Buddhist India, founded under the Guptas in the 5th century.
+mark	place	752	Nara	34.69,135.84	The Great Buddha of Todai-ji was dedicated in 752.
+mark	place	779	Samye	29.33,91.5	The first Buddhist monastery in Tibet, consecrated around 779.
+mark	place	800	Borobudur	-7.61,110.2	The largest Buddhist monument, built in Java around 800.
+mark	place	1044	Bagan	21.17,94.86	Under King Anawrahta (r. 1044–1077) and his successors Bagan became a Theravada capital of thousands of temples.
+mark	last	1006	Khotan	37.11,79.92	A Buddhist kingdom of the Silk Road for about a thousand years, until it fell to the Muslim Kara-Khanids around 1006.
+mark	last	1203	Vikramashila	25.32,87.28	One of the last great monasteries of Buddhist India, destroyed around 1200; Buddhism then faded from most of India.
+mark	last	1450	Turfan	42.95,89.18	The Uyghurs of Turfan, the last Buddhists of the Tarim basin, became Muslims in the 15th century.
+mark	place	1585	Erdene Zuu	47.2,102.84	The first great monastery of Mongolia, founded at Karakorum in 1585.
+mark	place	1956	Nagpur	21.13,79.07	Where B. R. Ambedkar and hundreds of thousands of his followers became Buddhists on 14 October 1956.
+note	-450	Siddhartha Gautama, the Buddha, teaches in the kingdoms of the Ganges plain; monks and nuns form the Sangha, supported by lay followers among merchants and kings.
+note	-260	The Mauryan emperor Ashoka turns to the Buddha's teaching, sets up edicts across his empire and, by tradition, sends missions to Sri Lanka and the north-west.
+note	-80	The Pali Canon is written down in Sri Lanka; in Gandhara, under Indo-Greek and then Kushan kings, Buddhist art and learning flourish.
+note	50	Monks and merchants carry the teaching over the Pamirs, along the Silk Road to the oases of the Tarim basin and into China.
+note	150	Mahayana sutras spread; translators such as An Shigao and Lokaksema render them into Chinese at Luoyang.
+note	372	Buddhism reaches Korea (372) and wins rulers and people across north and south China.
+note	401	Kumarajiva of Kucha translates the great sutras at Chang'an; Nalanda grows into a monastic university; Theravada reaches the Pyu and Mon cities of Burma.
+note	538	Buddhism is brought to Japan from Baekje (538 or 552); the giant Buddhas of Bamiyan are carved.
+note	645	Xuanzang returns from India to the Tang capital Chang'an (645); Yijing studies in Srivijaya; the first temples rise in Tibet.
+note	779	The Pala kings of Bengal and the Sailendras of Java are great patrons: Borobudur is built; in Tibet, Samye is consecrated (around 779).
+note	845	The Tang emperor Wuzong closes thousands of monasteries (845); the schools of Chan and Pure Land recover best.
+note	1006	Khotan falls to the Muslim Kara-Khanids (around 1006); in Burma, Anawrahta's Bagan becomes a Theravada kingdom (from 1044).
+note	1150	Polonnaruwa in Sri Lanka and Bagan are great Theravada capitals; in Cambodia, Jayavarman VII builds Buddhist temples such as the Bayon.
+note	1200	The great monasteries of Bihar and Bengal are sacked around 1200 and Buddhism fades from most of India; Theravada spreads through Burma, the Thai kingdoms and Cambodia.
+note	1353	Theravada is the faith of Sukhothai, Ayutthaya and the new Lao kingdom of Lan Xang; in Korea the Joseon kings (from 1392) favour Confucianism.
+note	1450	Islam spreads in the Malay world and Java; Turfan's Uyghurs, the last Buddhists of the Tarim basin, become Muslims.
+note	1578	The Mongol ruler Altan Khan gives the Tibetan lama Sonam Gyatso the title of Dalai Lama (1578), and Mongolia turns to Tibetan Buddhism.
+note	1642	The fifth Dalai Lama becomes ruler of Tibet (1642); in Japan every household must register with a Buddhist temple; the Kalmyks bring their faith to the Volga.
+note	1741	Russia recognises the Buddhist clergy of the Buryats (1741); Buddhism remains the faith of the kingdoms of Burma, Siam, Laos and Cambodia.
+note	1891	The Maha Bodhi Society (1891) works to restore Bodh Gaya; Japanese settlers bring Buddhism to Hawaii and California.
+note	1956	Buddhism suffers under communist rule in China, Tibet, Mongolia and Cambodia and spreads to the West; in 1956 B. R. Ambedkar leads hundreds of thousands into Buddhism at Nagpur.
+note	2001	Several hundred million Buddhists: estimates range from about 320 to 500 million, most of them in East and Southeast Asia.
+src	Peter Harvey, An Introduction to Buddhism (2nd ed., 2013)
+src	Rupert Gethin, The Foundations of Buddhism (1998)
+src	Robert E. Buswell Jr. and Donald S. Lopez Jr., The Princeton Dictionary of Buddhism (2014)
+src	Johan Elverskog, Buddhism and Islam on the Silk Road (2010)
+src	Pew Research Center, The Global Religious Landscape (2012)
+
+@hinduism
+area	Punjab and the Indus (the Vedic homeland)	31.0,72.5	420	-1500	1200	2	the hymns of the Rigveda name the rivers of the Punjab
+area	Western Punjab and Sindh	29.5,70.5	420	1200	1947	1	Hindus remained a large minority under Muslim rulers until the partition of 1947
+area	Sindh	25.3,69.0	220	1947		1	most of Pakistan's Hindus live in Sindh
+area	Kuru and Panchala (Haryana and the upper Ganges)	28.8,77.6	330	-1100		2	the later Vedic texts were composed here
+area	The middle and lower Ganges	25.8,83.5	420	-800		2	Kashi (Varanasi), Kosala and Magadha
+area	Bengal	23.0,88.2	220	400		2
+area	Eastern Bengal	23.9,90.6	230	600	1750	2	most people here turned to Islam between the 16th and 18th centuries
+area	Eastern Bengal	23.9,90.6	230	1750		1	Hindus are about 8% of Bangladesh today
+area	Odisha	20.3,85.3	230	300		2	the land of Jagannath of Puri
+area	Gujarat and Rajasthan	24.5,73.5	450	-400		2
+area	Malwa and central India	23.2,77.0	350	-500		2
+area	The Deccan	17.5,77.0	550	-150		2	the Satavahana kings performed the Vedic sacrifices
+area	The Tamil country and Kerala	10.5,77.8	400	-50		2	the Sangam poems; later the poet-saints of devotion
+area	Kashmir	34.1,74.8	150	200	1400	2	the home of Kashmir Shaivism
+area	Kashmir	34.1,74.8	150	1400		1	the Kashmiri Pandits; most of them left the valley in 1990
+area	Nepal	27.9,84.5	230	400		2
+area	Northern Sri Lanka	9.2,80.5	130	1000		2	Tamil Hindus; the kingdom of Jaffna (13th–17th centuries)
+area	Cambodia (Funan, Chenla and Angkor)	12.5,104.5	380	300	1350	2	Shiva and Vishnu were the gods of the Khmer court until Theravada Buddhism replaced them
+area	Champa (central Vietnam)	14.5,108.6	260	400	1471	2	Cham kings built temples to Shiva at My Son
+area	Panduranga	11.6,108.9	90	1471		1	the Cham Balamon, the Hindus of Vietnam
+area	Java	-7.4,110.8	380	400	1520	2	Hindu and Buddhist kingdoms, from Tarumanagara (5th century) to Majapahit
+area	The Tengger highlands	-7.94,112.95	50	1520		1	the Tengger people kept their Hindu rites
+area	Bali	-8.4,115.2	100	900		2	Bali kept the Hindu-Buddhist religion of Majapahit
+area	Mauritius	-20.2,57.55	70	1860		2	the largest religion of Mauritius, brought by indentured labourers from India
+area	Trinidad, Guyana and Suriname	7.5,-58.5	450	1838		1	descendants of indentured labourers from India
+area	Natal	-29.8,30.9	120	1860		1	descendants of indentured labourers from India
+area	Fiji	-17.8,178.0	160	1879		1	descendants of indentured labourers from India
+area	Malaya and Singapore	3.0,101.9	300	1840		1	Tamil labourers and merchants
+area	East Africa	-2.5,36.5	500	1890		1	Indian traders and railway workers
+area	Britain	52.5,-1.5	250	1950		1
+area	The north-east of North America	42.2,-76.8	420	1965		1
+area	California	37.4,-121.9	180	1965		1
+area	The Gulf	25.0,54.0	400	1970		1	workers from India
+route	-1100	31.0,73.0 > 28.8,77.6	The Vedic tradition moves east to the Kuru lands
+route	-800	28.8,77.6 > 25.5,83.0	Into the middle Ganges
+route	-150	25.0,81.0 > 18.5,76.0	South into the Deccan
+route	-50	18.0,77.0 > 11.0,78.5	To the Tamil country
+route	300	16.0,81.5 > 11.5,104.9	Brahmins and traders cross the Bay of Bengal
+route	400	10.8,79.8 > -6.5,106.8	To Java
+route	1834	22.57,88.36 > -20.2,57.5	Indentured labourers to Mauritius (from 1834)
+route	1838	22.57,88.36 > 6.8,-58.15	To the Caribbean (from 1838)
+route	1860	13.08,80.27 > -29.86,31.03	To Natal (from 1860)
+route	1879	22.57,88.36 > -18.1,178.4	To Fiji (from 1879)
+route	1965	28.6,77.2 > 40.7,-74.0	To North America (after 1965)
+mark	origin	-1500	The Punjab (Sapta Sindhu)	31.0,73.0	The hymns of the Rigveda, the oldest Hindu scripture, were composed in the land of the seven rivers from about 1500 BCE; Hinduism also grew from older and local traditions.
+mark	place	-500	Varanasi	25.31,83.01	Kashi, Shiva's city on the Ganges, one of the holiest places of pilgrimage.
+mark	place	760	Ellora	20.02,75.18	The Kailasa temple to Shiva, carved from the rock under the Rashtrakuta king Krishna I (r. 756–773).
+mark	place	856	Prambanan	-7.75,110.49	The great Shiva temple of Java, consecrated in 856 according to its inscription.
+mark	place	1010	Thanjavur	10.78,79.13	The Brihadishvara temple, built by the Chola king Rajaraja I and completed in 1010.
+mark	place	1113	Angkor Wat	13.41,103.87	Built as a temple to Vishnu under the Khmer king Suryavarman II (r. 1113–c. 1150).
+mark	place	1150	Puri	19.8,85.82	The temple of Jagannath, built in the 12th century under the Eastern Ganga king Anantavarman Chodaganga.
+mark	last	1527	Trowulan	-7.56,112.38	The capital of Majapahit, the last great Hindu-Buddhist kingdom of Java, which fell in the early 16th century.
+mark	last	1832	Panduranga	11.57,108.99	The last Cham principality, annexed by Vietnam in 1832; Cham Hindus still live here.
+note	-1500	The hymns of the Rigveda, in an early form of Sanskrit, are composed in the Punjab for rites of fire and sacrifice to gods such as Indra, Agni and Varuna.
+note	-1100	The Vedic tradition moves east to the Kuru and Panchala lands, where the later Vedas and the rules of sacrifice take shape.
+note	-700	In the kingdoms of the Ganges plain the earliest Upanishads ask about the self (atman) and ultimate reality (Brahman).
+note	-450	The epics, the Mahabharata and the Ramayana, begin to take shape; the Buddha and Mahavira challenge the sacrifices of the Brahmins.
+note	-150	Brahmin traditions reach the Deccan and the far south, beside Buddhism and Jainism; the Bhagavad Gita takes shape.
+note	320	Under the Gupta kings, temples, the Puranas and devotion to Vishnu and Shiva flourish; Brahmins and traders carry the gods across the Bay of Bengal.
+note	550	In the south the Tamil poet-saints, the Alvars and Nayanars, sing of devotion (bhakti) to Vishnu and Shiva.
+note	700	Shankara teaches Advaita Vedanta, the non-dual reading of the Upanishads; the Kailasa temple is carved at Ellora.
+note	800	Hindu and Buddhist kings rule Java, Cambodia and Champa; the Shiva temple of Prambanan is consecrated in 856.
+note	1000	The Chola kings build great temples and carry their power to Sri Lanka and Southeast Asia; raids from Ghazni strike the temples of the north-west.
+note	1113	Angkor Wat is built for Vishnu, the Jagannath temple of Puri rises, and Ramanuja teaches a devotional Vedanta.
+note	1206	Sultans rule from Delhi, while most people of the subcontinent remain Hindu; in Cambodia Theravada Buddhism replaces the Hindu court cults.
+note	1336	Vijayanagara, founded in 1336, becomes the great Hindu kingdom of the south; in Java, Majapahit is at its height.
+note	1471	Dai Viet takes Champa's capital (1471); Islam spreads in Java and Majapahit declines, while Bali keeps the old religion.
+note	1574	Devotional poets write in the languages people speak: Tulsidas retells the Ramayana in Awadhi (begun in 1574); Majapahit has fallen.
+note	1623	Temple building continues under Rajput and Nayaka rulers, and Madurai's great temple takes its present form.
+note	1785	The East India Company comes to rule much of India; the Bhagavad Gita is translated into English (1785).
+note	1828	Reformers rethink Hindu practice (the Brahmo Samaj, 1828; the Arya Samaj, 1875); indentured labourers take their faith to Mauritius, the Caribbean, Natal and Fiji; Vivekananda speaks in Chicago (1893).
+note	1947	The partition of 1947 divides India and Pakistan; India's constitution (1950) abolishes untouchability; Hindu communities grow in Britain, North America and the Gulf.
+note	2001	About 1.2 billion Hindus (2020), most of them in India and Nepal.
+src	Gavin Flood, An Introduction to Hinduism (1996)
+src	Wendy Doniger, The Hindus: An Alternative History (2009)
+src	Joseph E. Schwartzberg (ed.), A Historical Atlas of South Asia (1978)
+src	Richard M. Eaton, The Rise of Islam and the Bengal Frontier, 1204–1760 (1993)
+src	Steven Vertovec, The Hindu Diaspora (2000)
+src	Pew Research Center, The Global Religious Landscape (2012)
+
+@jainism
+area	Magadha and the Ganges plain	25.4,85.5	330	-500	1200	1	where Mahavira taught; monks and nuns supported by merchants and kings
+area	Kalinga under Kharavela	20.3,85.8	200	-150	-50	2	King Kharavela honoured the Jinas in his Hathigumpha inscription
+area	Mathura	27.5,77.7	150	-150	1100	1	a great Jain centre, with a stupa of the 2nd century BCE
+area	Karnataka	13.5,76.0	330	-250	350	1	by Digambara tradition the monks of Bhadrabahu settled here
+area	Karnataka	13.5,76.0	330	350	1150	2	the Ganga and early Rashtrakuta kings were patrons of the Jains
+area	Karnataka	13.5,76.0	330	1150		1	Shravanabelagola is still the great Digambara pilgrimage
+area	The Tamil country	10.8,78.5	300	-100		1	Jain monks left cave inscriptions in Tamil from the 2nd century BCE
+area	Gujarat	22.8,72.0	330	450		1	the heartland of the Svetambara Jains
+area	Gujarat under Kumarapala	22.8,72.0	330	1143	1173	2	King Kumarapala embraced Jainism under the teacher Hemachandra
+area	Rajasthan	25.0,73.8	350	700		1	temples at Mount Abu, Ranakpur and Jaisalmer
+area	Malwa and central India	23.5,77.5	300	800		1
+area	Maharashtra	19.5,75.0	300	800		1
+area	East Africa	-1.3,36.8	300	1900		1	Gujarati merchants and their families
+area	Britain	52.4,-1.0	200	1960		1	many came from East Africa in the 1960s and 1970s
+area	North America	40.5,-75.5	350	1970		1
+route	-297	25.6,85.1 > 12.86,76.48	Bhadrabahu leads monks to the south, by Digambara tradition
+route	-150	25.6,85.1 > 27.5,77.7	Up the Ganges to Mathura
+route	400	27.5,77.7 > 22.0,71.9	West to Gujarat
+route	1900	22.47,70.06 > -4.04,39.67	Gujarati merchants to East Africa
+route	1968	-1.29,36.82 > 51.5,-0.1	From East Africa to Britain (1960s–1970s)
+mark	origin	-500	Vaishali	25.99,85.13	By Jain tradition Mahavira, the 24th Tirthankara, was born near Vaishali; he taught in the Ganges plain in the 6th or 5th century BCE.
+mark	place	-500	Pavapuri	25.09,85.53	Where Mahavira died and attained final liberation, by Jain tradition.
+mark	place	-297	Shravanabelagola	12.86,76.48	By Digambara tradition Bhadrabahu and Chandragupta Maurya came here; the great statue of Bahubali was carved around 983.
+mark	place	-150	Udayagiri	20.26,85.78	The caves and the Hathigumpha inscription of King Kharavela, who honoured the Jinas (2nd or 1st century BCE).
+mark	place	453	Valabhi	21.89,71.88	A council here wrote down the Svetambara canon (453 or 466).
+mark	place	1031	Mount Abu	24.61,72.72	The marble temples of Dilwara, the first built in 1031.
+note	-500	By Jain tradition Mahavira, the 24th Tirthankara after Parshvanatha, teaches non-violence and the path to liberation in the Ganges plain.
+note	-297	By Digambara tradition, in a famine Bhadrabahu leads monks south to Karnataka, joined by Chandragupta Maurya.
+note	-150	King Kharavela of Kalinga honours the Jinas in his Hathigumpha inscription; Mathura becomes a great Jain centre.
+note	79	The community divides into the Digambara ("sky-clad") and Svetambara ("white-clad") traditions.
+note	453	A council at Valabhi writes down the Svetambara canon (453 or 466); Jain kings and merchants flourish in Karnataka and the Tamil country.
+note	650	Shaiva and Vaishnava poet-saints win many Tamil rulers away from the Jains; in Karnataka the Ganga and Rashtrakuta kings remain patrons.
+note	983	The great statue of Bahubali is carved at Shravanabelagola (around 983); the marble temples of Mount Abu follow (from 1031).
+note	1143	King Kumarapala of Gujarat embraces Jainism under the teacher Hemachandra; in Karnataka the Hoysala kings turn to Vishnu and the Lingayat movement rises.
+note	1437	Jain merchants and ministers build great temples, such as Ranakpur in Rajasthan, while the Lonka movement rejects the worship of images.
+note	1760	Acharya Bhikshu founds the Terapanth (1760), a reformed order of the Svetambaras.
+note	1893	Jain merchants settle in East Africa; Virchand Gandhi speaks for Jainism at the World's Parliament of Religions in Chicago (1893).
+note	1968	Many East African Jains move to Britain in the 1960s and 1970s; communities grow in North America.
+note	2011	About 4.5 million Jains in India (2011 census), with communities in Britain, North America and East Africa.
+src	Paul Dundas, The Jains (2nd ed., 2002)
+src	Padmanabh S. Jaini, The Jaina Path of Purification (1979)
+src	John E. Cort, Jains in the World (2001)
+src	Census of India 2011
+
+@sikhism
+area	Central Punjab	31.2,75.3	220	1499	1799	1	Guru Nanak's followers in the villages and towns of the Punjab
+area	Western Punjab	31.5,73.2	200	1520	1947	1	Sikhs left for India at partition; Nankana Sahib and Kartarpur remain places of pilgrimage
+area	The Sikh Empire	32.5,74.5	450	1799	1849	2	the kingdom of Ranjit Singh, from Lahore to Peshawar and Kashmir
+area	The Punjab under British rule	31.0,75.3	220	1849	1947	1	Sikhs served in large numbers in the British Indian army
+area	Indian Punjab	30.9,75.5	200	1947		2	the only Indian state with a Sikh majority (since 1966)
+area	Malaya and Singapore	3.5,101.5	300	1870		1	Sikh policemen, soldiers and settlers
+area	East Africa	-1.3,36.8	350	1896		1	railway workers and settlers
+area	British Columbia	49.25,-123.1	200	1903		1
+area	California	38.0,-121.4	200	1906		1	farmers of the Central Valley
+area	Britain	52.5,-1.5	220	1950		1
+area	Toronto	43.7,-79.7	150	1970		1
+route	1870	31.6,74.9 > 3.1,101.7	Sikh soldiers and policemen to Malaya
+route	1896	31.6,74.9 > -4.0,39.7	Railway workers to East Africa (from 1896)
+route	1955	31.6,74.9 > 52.5,-1.9	To Britain after the Second World War
+mark	place	1469	Nankana Sahib	31.45,73.71	The birthplace of Guru Nanak (1469).
+mark	origin	1499	Sultanpur Lodhi	31.21,75.2	Guru Nanak's spiritual experience at the river Bein here, around 1499, began his mission.
+mark	place	1539	Kartarpur	32.09,75.02	Guru Nanak's settlement on the Ravi, where he spent his last years and died (1539).
+mark	place	1577	Amritsar	31.62,74.88	Guru Ram Das founded the city around its sacred pool (1577); the Harmandir Sahib has housed the scripture since 1604.
+mark	place	1699	Anandpur Sahib	31.24,76.5	Guru Gobind Singh founded the Khalsa here at Vaisakhi in 1699.
+mark	place	1708	Nanded	19.15,77.31	Guru Gobind Singh died here in 1708, naming the scripture, the Guru Granth Sahib, as the Guru after him.
+mark	place	1799	Lahore	31.59,74.31	Ranjit Singh took Lahore in 1799 and made it the capital of the Sikh Empire.
+mark	place	1908	Vancouver	49.27,-123.1	The first gurdwara in Canada (1908).
+mark	place	1912	Stockton	37.96,-121.29	The first gurdwara in the United States (1912).
+note	1499	Guru Nanak, born in 1469, begins his mission after an experience at the river Bein (around 1499) and travels widely, teaching devotion to the one God.
+note	1520	Guru Nanak settles at Kartarpur (he dies in 1539); the community grows under the Gurus who follow him, and Guru Ram Das founds Amritsar (1577).
+note	1604	Guru Arjan installs the Adi Granth in the Harmandir Sahib (1604) and is executed (1606); Guru Tegh Bahadur is executed in Delhi (1675); Guru Gobind Singh founds the Khalsa (1699).
+note	1708	Guru Gobind Singh dies at Nanded (1708), naming the scripture the Guru; Sikh bands fight Mughal and Afghan armies, and in 1799 Ranjit Singh takes Lahore.
+note	1801	Ranjit Singh rules the Sikh Empire as maharaja (1801–1839); the British annex the Punjab (1849), and many Sikhs serve in their army and settle abroad.
+note	1947	The partition of 1947 divides the Punjab, and Sikhs leave the west for India; in 1984 the army's assault on the Golden Temple and the violence after Indira Gandhi's assassination; communities grow in Britain, Canada and the United States.
+note	2001	About 25 to 30 million Sikhs, most of them in the Punjab, with large communities in Britain, Canada and the United States.
+src	W. H. McLeod, Sikhism (1997)
+src	J. S. Grewal, The Sikhs of the Punjab (rev. ed., 1998)
+src	Eleanor Nesbitt, Sikhism: A Very Short Introduction (2nd ed., 2016)
+src	Pashaura Singh and Louis E. Fenech (eds), The Oxford Handbook of Sikh Studies (2014)
+
+@zoroastrianism
+area	Eastern Iran and Central Asia	36.5,63.0	600	-1200	-520	1	the homeland of the Gathas, by most accounts
+area	The Iranian plateau	32.0,53.0	800	-520	900	2	the faith of the Achaemenid, Parthian and Sasanian kings
+area	The Iranian plateau	32.0,53.0	800	900	1300	1	most Iranians had become Muslims by the 10th century, by most estimates
+area	Bactria and Sogdiana	39.0,66.0	450	-550	750	2	Sogdian and Bactrian forms of the faith, until the Arab conquest of Central Asia
+area	Armenia and the southern Caucasus	40.2,44.5	300	-500	301	2	an Armenian form of the Iranian religion, until Armenia adopted Christianity
+area	Cappadocia	38.7,35.0	250	-500	400	1	Magians lived here into the 4th century CE
+area	Mesopotamia	33.0,44.5	300	224	651	1	the Sasanian court at Ctesiphon; most people here were Christians, Jews and pagans
+area	Sogdian communities in China	34.3,108.9	300	550	845	1	fire temples of Sogdian merchants in the Chinese capitals
+area	Fars	29.6,52.5	250	650	1000	2	the old Persian heartland stayed largely Zoroastrian for centuries after the conquest
+area	Yazd and Kerman	31.0,55.5	200	1000		1	the last Zoroastrian communities of Iran
+area	Gujarat and Bombay (the Parsis)	20.3,72.9	250	850		1
+area	Britain	51.5,-0.5	150	1950		1
+area	North America	41.5,-77.0	400	1970		1
+route	-550	36.5,63.0 > 29.9,52.9	West across the Iranian plateau
+route	550	39.65,66.96 > 34.3,108.9	Sogdian merchants bring their fire temples to China
+route	850	27.1,56.5 > 20.2,72.8	By sea to Gujarat (the Story of Sanjan)
+mark	origin	-1200	Eastern Iran or Central Asia	36.5,63.0	Zarathustra composed the Gathas somewhere in eastern Iran or Central Asia; his date is disputed, from about 1500–1000 BCE to the 7th or 6th century BCE.
+mark	place	-520	Behistun	34.39,47.44	Darius I credits his victories to Ahura Mazda in the inscription carved here (around 520 BCE).
+mark	place	-515	Persepolis	29.94,52.89	The ceremonial capital of the Achaemenid kings, begun under Darius I.
+mark	place	450	Takht-e Soleyman	36.6,47.24	The sanctuary of Adur Gushnasp, one of the three great sacred fires of the Sasanian kings.
+mark	last	651	Merv	37.66,62.19	Yazdegerd III, the last Sasanian king, was killed near Merv in 651, after the Arab conquest of Iran.
+mark	place	850	Sanjan	20.2,72.8	By the Story of Sanjan, Zoroastrians from Iran landed here and were allowed to settle; the date is uncertain (8th–10th century).
+mark	last	1000	Yazd	31.9,54.37	With Kerman, the last home of Iran's Zoroastrians, whose fire temples and towers of silence still stand.
+mark	place	1742	Udvada	20.49,72.87	The Iranshah fire, the oldest sacred fire of the Parsis, has burned here since 1742.
+note	-1200	Zarathustra composes the Gathas in eastern Iran or Central Asia, praising Ahura Mazda, the Wise Lord; his date is disputed, and many scholars place him between about 1500 and 1000 BCE.
+note	-650	The worship of Ahura Mazda spreads west across the Iranian plateau among the Medes and Persians.
+note	-520	Darius I credits his victories to Ahura Mazda (Behistun, around 520 BCE); the Persian Empire reaches from Anatolia to the Indus.
+note	-330	Alexander conquers the Persian Empire (330 BCE); under Seleucid and then Parthian rule the old faith continues across Iran.
+note	224	Ardashir I founds the Sasanian Empire (224) and Zoroastrianism becomes the religion of the state; the high priest Kartir organises its fire temples.
+note	451	The Sasanian kings honour three great fires and try to bring Christian Armenia back to the faith (451); Sogdian merchants carry their fire temples along the Silk Road.
+note	651	The Arab conquest ends the Sasanian Empire (Yazdegerd III is killed in 651); over the next centuries most Iranians become Muslims.
+note	850	Priests compile the Pahlavi books (the Denkard, the Bundahishn); by the Story of Sanjan, a group of Zoroastrians settles in Gujarat, the origin of the Parsis.
+note	1000	Zoroastrians become a small minority in Iran, living mainly around Yazd and Kerman; the Parsis keep their faith in Gujarat.
+note	1742	The Iranshah fire is installed at Udvada (1742); Parsis thrive as merchants and shipbuilders in Bombay.
+note	1892	Parsis lead in Indian commerce and public life: Dadabhai Naoroji becomes the first Asian elected to the British House of Commons (1892).
+note	1950	Parsis and Iranian Zoroastrians settle in Britain, North America and Australia.
+note	2001	Perhaps 100,000 to 200,000 Zoroastrians, mainly in India, Iran and the diaspora.
+src	Mary Boyce, Zoroastrians: Their Religious Beliefs and Practices (1979)
+src	Jenny Rose, Zoroastrianism: An Introduction (2011)
+src	Michael Stausberg and Yuhan Sohrab-Dinshaw Vevaina (eds), The Wiley Blackwell Companion to Zoroastrianism (2015)
+src	Richard W. Bulliet, Conversion to Islam in the Medieval Period (1979)
+
+@judaism
+area	Israel and Judah	31.9,35.2	140	-1000	135	2	the kingdoms of Israel and Judah, then Judea under Persian, Hellenistic, Hasmonean and Roman rule
+area	Galilee	32.85,35.45	60	135	640	2	the rabbis of Galilee compiled the Mishnah and the Jerusalem Talmud
+area	The Land of Israel	31.8,35.1	150	640	1948	1	Jewish communities lived on in Jerusalem, Safed, Tiberias and Hebron
+area	Israel	31.6,34.9	160	1948		2
+area	Babylonia	32.5,44.4	220	-586	1951	1	the exiles of 586 BCE; later the academies that made the Babylonian Talmud; most Iraqi Jews left in 1950–1951
+area	Persia	32.6,51.7	400	-500		1	Jewish communities since the Persian period; a few thousand remain
+area	Egypt	30.5,31.0	250	-600	1967	1	from the Elephantine garrison to the great community of Alexandria; most Egyptian Jews left between 1948 and 1967
+area	Asia Minor and the Aegean	38.5,28.0	400	-250		1
+area	Syria	35.0,37.5	250	-300	1995	1	the communities of Damascus and Aleppo, which left by the 1990s
+area	Rome and Italy	41.9,12.5	300	-150		1	one of the oldest Jewish communities in Europe
+area	The Hejaz	24.5,39.6	250	100	630	1	Jewish tribes of Medina and Khaybar
+area	Himyar (Yemen)	15.0,44.5	300	380	525	2	the kings of Himyar adopted Judaism
+area	Yemen	15.0,44.5	300	525	1950	1	most Yemeni Jews left for Israel in 1949–1950
+area	The Maghreb	33.5,0.0	700	100	1970	1	communities from Roman times; most left in the 1950s and 1960s
+area	Iberia (Sefarad)	40.0,-4.0	500	300	1497	1	expelled from Spain in 1492 and from Portugal in 1496–1497
+area	Khazaria	47.0,45.0	500	740	969	2	the Khazar rulers adopted Judaism, by most accounts
+area	The Rhineland and Germany	50.5,8.5	400	900	1945	1	the first towns of Ashkenazi Jewry, Mainz, Worms and Speyer
+area	Northern France	48.5,3.0	250	900	1394	1	until the expulsions of 1306 and 1394
+area	England	52.5,-1.0	200	1070	1290	1	until the expulsion of 1290
+area	Poland, Lithuania and Eastern Europe	51.5,24.0	650	1300	1945	1	the largest Jewish population in the world by the 18th century; the Holocaust destroyed it
+area	Russia and Ukraine	52.0,33.0	400	1945		1
+area	Salonica	40.64,22.94	120	1492	1943	1	a city with a Jewish majority for centuries, until its Jews were deported in 1943
+area	The Netherlands	52.37,4.9	150	1600		1
+area	Britain	52.5,-1.0	200	1656		1	readmitted in 1656
+area	France	47.0,2.5	400	1791		1	the largest Jewish community in Europe today
+area	Kaifeng	34.8,114.3	60	1100	1860	1	the Jews of Kaifeng, attested from the 12th century
+area	Kerala (Cochin)	9.97,76.24	80	1000	1970	1
+area	Ethiopia (Beta Israel)	12.6,37.5	200	1300	1991	1	most moved to Israel in 1984–1991
+area	Bukhara	39.77,64.42	150	1200	1995	1	most Bukharan Jews emigrated in the 1990s
+area	New York and the north-east of North America	40.7,-74.0	400	1654		1	the largest Jewish community outside Israel
+area	California	34.0,-118.3	250	1900		1
+area	Florida	26.5,-80.5	200	1950		1
+area	Argentina	-34.6,-58.4	200	1889		1
+area	South Africa	-26.2,28.0	200	1880		1
+area	Canada	44.5,-77.0	300	1880		1
+route	-586	31.78,35.23 > 32.54,44.42	Exile to Babylon (586 BCE)
+route	-538	32.54,44.42 > 31.78,35.23	Return from exile under Persian rule (from 538 BCE)
+route	-300	31.78,35.23 > 31.2,29.9	To Alexandria
+route	70	31.78,35.23 > 41.9,12.5	Captives taken to Rome after the fall of Jerusalem (70)
+route	900	43.84,10.5 > 50.0,8.27	From Italy to the Rhineland
+route	1300	50.0,8.27 > 50.06,19.94	East to Poland and Lithuania
+route	1492	39.86,-4.02 > 40.64,22.94	Expelled from Spain (1492), many settle in the Ottoman Empire
+route	1492	39.86,-4.02 > 34.03,-5.0	and in North Africa
+route	1654	-8.05,-34.9 > 40.7,-74.0	From Recife to New Amsterdam (1654)
+route	1881	54.69,25.28 > 40.7,-74.0	Millions emigrate from Eastern Europe to America (1881–1924)
+route	1949	15.35,44.2 > 32.08,34.78	From Yemen to Israel (1949–1950)
+route	1950	33.31,44.36 > 32.08,34.78	From Iraq to Israel (1950–1951)
+route	1955	33.57,-7.6 > 32.08,34.78	From North Africa (1950s–1960s)
+route	1990	55.75,37.6 > 32.08,34.78	From the former Soviet Union (1990s)
+mark	origin	-1000	Jerusalem	31.78,35.23	By the biblical account David made Jerusalem his capital and Solomon built the First Temple there (10th century BCE).
+mark	place	-495	Elephantine	24.09,32.89	Papyri of the 5th century BCE tell of a Jewish garrison and its temple on this island in the Nile.
+mark	place	200	Sepphoris	32.75,35.28	Judah ha-Nasi compiled the Mishnah, the first great work of rabbinic law, in Galilee around 200.
+mark	place	600	Pumbedita	33.36,43.78	With Sura, the seat of the academies where the Babylonian Talmud reached its final form (around 600).
+mark	place	1000	Worms	49.63,8.36	With Mainz and Speyer, one of the Rhineland towns where Ashkenazi Jewry and its learning began.
+mark	place	1138	Córdoba	37.88,-4.78	Maimonides was born here in 1138, in the golden age of the Jews of al-Andalus.
+mark	last	1492	Toledo	39.86,-4.02	A great centre of Sephardic Jewry until the expulsion from Spain in 1492.
+mark	place	1570	Safed	32.96,35.5	A centre of Kabbalah, where Isaac Luria taught (1570).
+mark	place	1636	Recife	-8.06,-34.87	The first synagogue of the Americas (1636), until the Portuguese reconquest of 1654.
+mark	place	1654	New Amsterdam	40.7,-74.01	Twenty-three Jews from Recife arrived in 1654, the beginning of Jewish life in North America.
+mark	place	1740	Medzhybizh	49.44,27.42	The Baal Shem Tov taught here; Hasidism spread from Podolia across Eastern Europe.
+mark	last	1860	Kaifeng	34.8,114.35	The synagogue of the Jews of Kaifeng, built in 1163, was taken down around 1860; their descendants still remember their origins.
+mark	place	1948	Tel Aviv	32.08,34.78	The State of Israel was proclaimed here on 14 May 1948.
+mark	last	1967	Djerba	33.81,10.86	El Ghriba on Djerba, among the last old Jewish communities of North Africa, still draws pilgrims.
+note	-1000	By the biblical account David makes Jerusalem his capital and Solomon builds the First Temple; the kingdoms of Israel and Judah take shape.
+note	-722	Assyria destroys the northern kingdom of Israel (around 722 BCE); Judah survives, and its prophets and scribes shape the books of the Bible.
+note	-586	The Babylonians destroy Jerusalem and the First Temple (586 BCE) and take many Judeans into exile; under Persian rule many return, and the Second Temple is completed (516 BCE).
+note	-330	After Alexander's conquests Jews settle across the Hellenistic world; in Alexandria the Bible is translated into Greek.
+note	-164	The Maccabean revolt rededicates the Temple (164 BCE); the Hasmonean kings rule Judea until Rome takes control (63 BCE).
+note	70	The Romans destroy Jerusalem and the Second Temple (70) and later crush the Bar Kokhba revolt (132–135); rabbis rebuild Jewish life around the study of the law.
+note	200	Judah ha-Nasi compiles the Mishnah (around 200); Jews live across the Roman and Persian empires, from Spain to Babylonia.
+note	380	The kings of Himyar in Yemen adopt Judaism; under the Christian Roman emperors Jews face growing restrictions.
+note	600	The Babylonian Talmud reaches its final form (around 600); Islam arises in Arabia, and most Jews come to live under Muslim rule.
+note	740	The rulers of the Khazars on the Volga adopt Judaism, by most accounts in the 8th or 9th century.
+note	900	Jewish life flourishes under the caliphs in Babylonia, Egypt and Spain, and in the Rhineland towns of Ashkenaz.
+note	1096	Crusaders massacre Jewish communities of the Rhineland (1096); Rashi teaches at Troyes.
+note	1138	Maimonides, born in Córdoba in 1138, writes his works in Egypt; in Kaifeng, Jews build a synagogue (1163).
+note	1290	England expels its Jews (1290) and France soon after; many move east, where Polish rulers invite Jewish settlers.
+note	1348	The Black Death brings massacres of Jews in German towns; Poland and Lithuania become new centres.
+note	1492	Spain expels its Jews (1492) and Portugal forces them to convert (1497); many find refuge in the Ottoman Empire and North Africa.
+note	1565	Joseph Karo's code of law, the Shulchan Aruch, is printed (1565); Isaac Luria teaches Kabbalah at Safed; Jews settle in Amsterdam.
+note	1654	Jews from Recife found the first community in New Amsterdam (1654); England readmits Jews (1656); in Eastern Europe the Cossack uprising (1648) kills many thousands.
+note	1740	The Baal Shem Tov's Hasidism spreads in Eastern Europe; the Haskalah, the Jewish Enlightenment, begins in Berlin.
+note	1881	Emancipation in Western Europe; from 1881 pogroms drive millions of Jews from the Russian Empire to America; Zionism seeks a Jewish homeland.
+note	1948	The Holocaust murders about six million Jews (1941–1945); the State of Israel is founded (1948), and most Jews of the Middle East and North Africa move there.
+note	2001	About 15 million Jews, most of them in Israel and the United States.
+src	Nicholas de Lange, An Introduction to Judaism (2nd ed., 2010)
+src	Martin Gilbert, The Routledge Atlas of Jewish History
+src	Eli Barnavi (ed.), A Historical Atlas of the Jewish People (1992)
+src	Sergio DellaPergola, World Jewish Population (American Jewish Year Book)
+src	Pew Research Center, The Global Religious Landscape (2012)
+
+@christianity
+area	Judea and Galilee	32.0,35.2	130	30	380	1	the first followers of Jesus
+area	Palestine	31.9,35.0	150	380	1100	2	a Christian land under Rome and Byzantium, and for centuries after the Arab conquest
+area	Palestine	31.9,35.0	150	1100		1	the Christians of the Holy Land
+area	Syria	35.5,37.5	300	40	380	1	Antioch, where the followers of Jesus were first called Christians
+area	Syria	35.5,37.5	300	380	1300	2	the Syriac churches; Christians remained numerous long after the Arab conquest
+area	Syria and Lebanon	34.5,36.5	250	1300		1	Maronite, Orthodox and other churches
+area	Asia Minor	38.5,31.0	500	50	380	1	the churches of Paul's letters and of the Book of Revelation
+area	Asia Minor	38.5,31.0	500	380	1400	2	the heartland of Byzantium
+area	Asia Minor	38.5,31.0	500	1400	1923	1	Greek and Armenian Christians, until the Armenian genocide (1915) and the population exchange of 1923
+area	Greece and the Balkans	41.0,23.0	450	50	380	1
+area	Greece and the Balkans	41.0,23.0	450	380		2
+area	Rome and Italy	42.0,12.8	400	50	380	1
+area	Italy	42.0,12.8	400	380		2
+area	Egypt	28.5,31.0	400	60	350	1	by tradition founded by Mark the Evangelist
+area	Egypt	28.5,31.0	400	350	1100	2	the Coptic church and the first monks
+area	Egypt	28.5,31.0	400	1100		1	the Copts, about a tenth of Egyptians
+area	North Africa	36.0,8.0	450	180	380	1	Carthage, home of Tertullian and Cyprian
+area	North Africa	36.0,8.0	450	380	750	2	the Africa of Augustine
+area	North Africa	36.0,8.0	450	750	1150	1	native Christianity died out by the 12th century
+area	Gaul	46.5,2.5	450	150	400	1	Lyon and the Rhône valley
+area	Gaul and France	46.5,2.5	450	400		2
+area	Hispania	40.0,-4.0	500	200	400	1
+area	Hispania	40.0,-4.0	500	400	711	2	Visigothic Spain
+area	Al-Andalus	38.0,-4.5	350	711	1250	1	the Mozarabs, Christians under Muslim rule
+area	The northern kingdoms of Iberia	42.8,-4.0	300	718	1250	2	Asturias, León, Castile, Navarre and Aragon
+area	Spain and Portugal	40.0,-4.5	550	1250		2
+area	Roman Britain	52.0,-1.5	300	200	410	1
+area	Ireland	53.3,-8.0	230	450		2
+area	Britain	53.5,-2.5	380	600		2
+area	Armenia	40.2,44.5	220	301		2	by tradition the first state to adopt Christianity
+area	Georgia	42.0,43.5	180	330		2
+area	Aksum (Ethiopia and Eritrea)	13.0,39.0	450	340		2
+area	Nubia	18.0,31.5	350	550	1500	2	the Christian kingdoms of Nobadia, Makuria and Alodia
+area	The Low Countries	51.5,5.0	180	700		2
+area	Germany and Central Europe	51.0,11.0	450	750		2
+area	Bohemia and Moravia	49.5,16.0	220	880		2
+area	Poland	52.0,19.0	330	966		2
+area	Denmark	56.0,10.0	200	965		2
+area	Kievan Rus'	50.5,30.5	450	988		2	now Ukraine and Belarus
+area	Hungary	47.2,19.5	250	1000		2
+area	Iceland	64.9,-18.5	180	1000		2
+area	Norway	61.0,9.0	300	1030		2
+area	Russia	56.5,40.0	600	1050		2
+area	Sweden	59.5,16.0	300	1100		2
+area	Finland and the Baltic	60.0,25.0	350	1200		2
+area	Lithuania	55.0,24.0	250	1387		2
+area	Mesopotamia and Persia	33.5,46.0	450	100		1	the Church of the East, whose patriarchs sat at Ctesiphon and later Baghdad
+area	Central Asia	39.0,64.0	450	400	1400	1	the Church of the East at Merv and Samarkand
+area	Mongolia	47.5,103.0	400	1007	1370	1	the Keraites and other peoples of the steppe
+area	Tang China	34.3,108.9	300	635	845	1	the Church of the East in the Tang capital
+area	Yuan China	39.9,116.4	300	1260	1368	1	the Church of the East and the first Catholic mission
+area	Kerala (the Saint Thomas Christians)	9.9,76.4	150	500		1	by their tradition founded by the apostle Thomas
+area	The Kingdom of Kongo	-5.5,14.5	250	1491		2
+area	Goa	15.5,73.9	80	1510		1
+area	Japan	33.0,130.5	200	1549	1640	1	until the faith was banned and its followers persecuted
+area	The Caribbean	19.0,-72.0	500	1500		2
+area	New Spain (Mexico)	20.0,-100.0	700	1525		2
+area	Central America	13.5,-87.0	400	1530		2
+area	Peru and the Andes	-12.0,-75.0	700	1535		2
+area	New Granada	6.0,-73.0	500	1540		2	now Colombia and Venezuela
+area	Brazil	-12.0,-45.0	1000	1550		2
+area	Chile and the Río de la Plata	-33.0,-64.0	700	1550		2
+area	The Philippines	12.5,122.0	600	1565		2
+area	New Mexico and California	34.5,-112.0	700	1600		2	Spanish missions, from Santa Fe (1610) to California (from 1769)
+area	Eastern Indonesia	-8.5,123.0	400	1600		1	Flores and Timor
+area	China	32.0,113.0	1000	1600		1
+area	The English colonies	40.0,-76.0	600	1607		2
+area	New France	47.0,-72.0	400	1608		2
+area	Korea	37.0,127.5	300	1784	1950	1
+area	South Korea	37.0,127.5	300	1950		2	about three Koreans in ten
+area	Australia	-33.0,147.0	900	1788		2
+area	The American Midwest and South	37.0,-88.0	900	1800		2
+area	Tahiti	-17.6,-149.5	150	1815		2
+area	Hawaii	20.8,-156.5	150	1820		2
+area	Tonga	-21.2,-175.2	100	1830		2
+area	Samoa	-13.8,-172.0	100	1830		2
+area	Fiji	-17.8,178.0	150	1835		2
+area	New Zealand	-40.5,174.5	350	1840		2
+area	Madagascar	-19.0,47.0	400	1869		2
+area	Southern Africa	-28.0,26.0	800	1880		2
+area	Papua New Guinea	-6.0,145.0	500	1900		2
+area	West Africa (the coast)	7.0,2.0	900	1900		2
+area	East and Central Africa	-3.0,32.0	1100	1900		2
+route	45	36.2,36.16 > 37.94,27.34	Paul's journeys (around 45–58)
+route	50	37.94,27.34 > 37.9,22.9	to Greece
+route	60	37.9,22.9 > 41.9,12.5	Paul taken to Rome (around 60)
+route	60	31.78,35.23 > 31.2,29.9	To Egypt
+route	180	41.9,12.5 > 36.85,10.33	To North Africa
+route	301	38.72,35.48 > 40.16,44.29	Gregory the Illuminator to Armenia (by tradition 301)
+route	340	31.2,29.9 > 14.13,38.72	Frumentius to Aksum
+route	432	52.0,-3.0 > 54.35,-6.65	Patrick to Ireland (5th century)
+route	597	41.9,12.5 > 51.28,1.08	Augustine's mission to England (597)
+route	635	33.09,44.58 > 34.26,108.94	The Church of the East to China (635)
+route	700	52.0,0.0 > 50.55,9.68	Willibrord and Boniface to the Frisians and Germans
+route	863	41.0,28.98 > 49.0,17.5	Cyril and Methodius to the Slavs (863)
+route	988	41.0,28.98 > 50.45,30.52	From Byzantium to Kiev (988)
+route	1492	37.39,-5.98 > 19.0,-70.7	To the Americas (from 1492)
+route	1510	38.7,-9.14 > 15.5,73.8	To Goa (1510)
+route	1549	15.5,73.8 > 31.6,130.55	Francis Xavier to Japan (1549)
+route	1549	38.7,-9.14 > -12.97,-38.5	Jesuits to Brazil (1549)
+route	1608	46.16,-1.15 > 46.81,-71.2	To New France (1608)
+route	1620	50.37,-4.14 > 41.95,-70.66	Puritans to New England (1620)
+route	1784	39.9,116.4 > 37.57,126.98	Korean scholars bring Catholic books from Beijing (1784)
+route	1788	51.5,-0.1 > -33.86,151.2	To Australia (1788)
+route	1850	51.5,-0.1 > 6.45,3.4	Missionaries to West Africa
+route	1877	51.5,-0.1 > 0.31,32.58	Missionaries to East Africa (1877)
+mark	origin	30	Jerusalem	31.78,35.23	Jesus of Nazareth was crucified here under Pontius Pilate around 30; his followers proclaimed his resurrection.
+mark	place	40	Antioch	36.2,36.16	Where the followers of Jesus were first called Christians.
+mark	place	64	Rome	41.9,12.45	By tradition Peter and Paul died here under Nero; the bishops of Rome became the popes.
+mark	place	301	Etchmiadzin	40.16,44.29	By tradition Armenia became the first state to adopt Christianity (301); its mother cathedral stands here.
+mark	place	325	Nicaea	40.43,29.72	Constantine called the first council of the whole church here in 325; it defined the Nicene Creed.
+mark	place	330	Constantinople	41.01,28.98	Constantine's new capital (330), the centre of Eastern Christianity; Hagia Sophia was rebuilt under Justinian (537).
+mark	place	340	Aksum	14.13,38.72	King Ezana of Aksum adopted Christianity in the 4th century.
+mark	place	563	Iona	56.33,-6.39	Columba founded the monastery of Iona in 563.
+mark	place	597	Canterbury	51.28,1.08	Augustine's mission from Rome arrived in 597.
+mark	place	781	Xi'an	34.26,108.94	The Xi'an Stele (781) records the Church of the East in China since 635.
+mark	place	988	Kiev	50.45,30.52	Vladimir of Kiev was baptised and his people with him (around 988).
+mark	last	1076	Carthage	36.85,10.33	Pope Gregory VII wrote to the archbishop of Carthage in 1076; by the 12th century native Christianity had died out in North Africa.
+mark	last	1345	Chu valley	42.8,75.3	Gravestones of the Church of the East here run to the 1340s; Christianity disappeared from Central Asia by the end of the 14th century.
+mark	last	1500	Old Dongola	18.22,30.75	The capital of Christian Makuria; its throne hall became a mosque in 1317, and the Nubian kingdoms' Christianity faded by about 1500.
+mark	place	1517	Wittenberg	51.87,12.65	Martin Luther's Ninety-five Theses (1517) began the Protestant Reformation.
+mark	place	1565	Cebu	10.3,123.9	The Spanish settlement of Cebu (1565) began the conversion of the Philippines.
+mark	last	1873	Urakami	32.77,129.86	Japan's hidden Christians kept their faith in secret for over two centuries, until the ban was lifted in 1873.
+mark	last	1923	Cappadocia	38.65,34.85	The Greek Orthodox of Cappadocia, Christians here since the 1st century, left in the population exchange of 1923.
+note	30	Jesus of Nazareth is crucified in Jerusalem around 30; his followers proclaim him the Messiah, and Paul carries the message to Gentiles across the eastern Mediterranean.
+note	150	Christian communities spread through the cities of the Roman Empire, from Syria and Egypt to Rome, Gaul and North Africa; the New Testament takes shape.
+note	250	The churches grow despite persecution under Decius (250) and Valerian; Christianity reaches Mesopotamia and Persia.
+note	313	Constantine ends the persecution (313) and calls the Council of Nicaea (325); Armenia, Georgia and Aksum adopt Christianity; Theodosius makes it the religion of the empire (380).
+note	432	Patrick preaches in Ireland; the councils of Ephesus (431) and Chalcedon (451) divide the churches of the East; Rome falls (476) but its bishops remain.
+note	537	Justinian rebuilds Hagia Sophia (537); the Nubian kingdoms are converted; Augustine's mission reaches England (597).
+note	635	Arab armies conquer Syria, Egypt and Persia, where Christians remain the majority for centuries; the Church of the East reaches Tang China (635).
+note	711	Muslim armies take most of Spain (711); Boniface preaches in Germany, and Charlemagne forces the Saxons to convert.
+note	863	Cyril and Methodius bring the liturgy to the Slavs (863); Bulgaria is baptised (864).
+note	966	Poland (966), Kievan Rus' (988) and Denmark turn to Christianity; Iceland adopts it around 1000.
+note	1054	The Great Schism divides the Latin West from the Greek East (1054); the First Crusade takes Jerusalem (1099); Norway and Sweden become Christian.
+note	1150	Native Christianity dies out in North Africa; in Spain the Christian kingdoms push south; the Church of the East spreads among the Turkic and Mongol peoples.
+note	1260	Mongol rule opens Asia to missionaries, and Franciscans reach Beijing (1294); the last Crusader states fall (1291).
+note	1387	Lithuania, the last pagan state of Europe, is baptised (1387); in Central Asia and China the Church of the East disappears.
+note	1453	The Ottomans take Constantinople (1453); the Portuguese baptise the king of Kongo (1491); Columbus reaches the Americas (1492).
+note	1517	Luther's theses (1517) begin the Reformation; Spain and Portugal carry Catholicism to the Americas, Goa, Japan and the Philippines.
+note	1620	Japan bans Christianity (1614); Puritans settle New England (1620); Jesuits work in China and New France.
+note	1784	Methodism and the Great Awakening spread revival; the first Korean Catholics are baptised (1784); British settlers bring their churches to Australia (1788).
+note	1880	Missionaries travel across Africa, Asia and the Pacific; Christianity becomes a main faith of Madagascar, much of Polynesia and southern Africa.
+note	1962	Christianity grows fast in Africa, Korea and China and declines in much of Europe; the Second Vatican Council (1962–1965) reforms the Catholic Church.
+note	2001	About 2.3 billion Christians (2020): the largest religion in the world, with the most followers now in sub-Saharan Africa.
+src	Diarmaid MacCulloch, A History of Christianity: The First Three Thousand Years (2009)
+src	Philip Jenkins, The Lost History of Christianity (2008)
+src	Todd M. Johnson and Kenneth R. Ross (eds), Atlas of Global Christianity (2009)
+src	Pew Research Center, Global Christianity (2011)
+
+@islam
+area	The Hejaz	22.5,39.8	300	610	630	1	Muhammad's first followers in Mecca and Medina
+area	Arabia	23.5,45.0	900	630		2
+area	Syria and Palestine	33.5,36.5	350	636		2	conquered 634–640; Muslims became the majority over the following centuries
+area	Iraq	33.0,44.0	350	637		2
+area	Egypt	28.5,31.0	400	641		2
+area	Iran	32.0,53.0	800	651		2
+area	The Maghreb	33.0,2.0	900	700		2
+area	The Caucasus (Derbent and Azerbaijan)	41.0,47.5	300	700		2
+area	Al-Andalus	38.5,-4.0	450	711	1250	2
+area	Granada	37.2,-3.6	150	1250	1492	2	the last Muslim kingdom of Spain
+area	The Moriscos	40.0,-1.0	250	1492	1614	1	Muslims forced to convert, then expelled (1609–1614)
+area	Sindh	25.5,68.5	250	712		2
+area	Transoxiana	40.0,65.0	600	712		2
+area	Afghanistan	34.5,67.0	450	870		2
+area	Volga Bulgaria and the Volga-Ural region	55.0,49.0	450	922		2	now Tatarstan and Bashkortostan
+area	Kashgar and the Tarim basin	39.0,79.0	400	955		2
+area	The Swahili coast	-6.0,39.5	500	1000		2
+area	The Horn of Africa	9.5,44.0	450	1000		2	Zeila and Harar
+area	The Niger bend (Gao, Mali and Songhai)	14.5,-3.5	600	1010		2
+area	Takrur and Senegambia	15.0,-15.0	350	1035		2
+area	The Punjab	30.5,72.0	400	1020		2
+area	Anatolia	38.8,32.5	500	1071		2
+area	Kanem and Bornu	13.5,14.0	400	1085		2
+area	Northern India	27.0,80.0	600	1206	1857	2	the Delhi Sultanate and the Mughals; most of their subjects remained Hindu
+area	India	27.0,80.0	600	1857		1	about 200 million Muslims, India's largest minority
+area	Bengal	23.8,90.4	280	1204		2
+area	The Hui of north-west China	36.0,104.0	500	1260		1
+area	Northern Sumatra	5.0,96.5	300	1297		2
+area	The Golden Horde and the Crimea	46.5,40.0	600	1313	1783	2
+area	The Crimea	45.0,34.0	150	1783		1	the Crimean Tatars
+area	Kashmir	34.1,74.8	150	1339		2
+area	The Deccan	17.5,77.5	450	1347	1948	2	the Bahmani and Deccan sultanates, the Mughals and the Nizams of Hyderabad
+area	The Deccan	17.5,77.5	450	1948		1
+area	The Ottoman Balkans	42.5,24.0	400	1400	1878	2	under Ottoman rule; most of the people remained Christian
+area	The Ottoman Balkans	42.5,24.0	400	1878		1	Muslims of Bulgaria, Greek Thrace and North Macedonia
+area	Bosnia and Albania	42.5,19.5	250	1463		2
+area	Java	-7.3,110.5	500	1400	1527	1	Muslim traders and courtiers in the ports
+area	Java	-7.3,110.5	500	1527		2
+area	Brunei	4.9,114.9	150	1400		2
+area	Hausaland	12.0,8.5	400	1400		2
+area	The Malay Peninsula	3.0,102.0	400	1414		2
+area	Turfan	42.9,89.2	250	1450		2
+area	The southern Philippines	6.5,123.0	350	1450		2	the sultanates of Sulu and Maguindanao
+area	Nubia and Sudan	15.5,32.5	450	1500		2
+area	South Sulawesi	-5.1,119.9	200	1605		2
+area	Guangzhou and Quanzhou	23.5,115.5	300	750		1	Muslim merchants
+area	The Cape	-33.9,18.5	120	1700		1	the Cape Malays
+area	Western Europe	49.5,4.5	700	1960		1
+area	North America	40.0,-80.0	800	1960		1
+route	615	21.42,39.83 > 14.13,38.72	The first migration to Aksum (around 615)
+route	622	21.42,39.83 > 24.47,39.61	The Hijra (622)
+route	636	24.47,39.61 > 33.51,36.29	Into Syria (634–640)
+route	637	24.47,39.61 > 33.09,44.58	Into Iraq and Persia (636–651)
+route	641	24.47,39.61 > 30.0,31.23	Into Egypt (640–642)
+route	670	30.0,31.23 > 35.68,10.1	Across North Africa
+route	711	35.76,-5.8 > 37.88,-4.78	Into Spain (711)
+route	712	37.6,61.8 > 39.65,66.96	Into Transoxiana
+route	712	30.5,47.8 > 24.7,67.6	Muhammad ibn Qasim to Sindh (711–712)
+route	750	30.5,47.8 > 23.1,113.3	Merchants sail to China
+route	900	23.6,58.6 > -6.17,39.2	Along the monsoon routes to East Africa
+route	1000	31.28,-4.27 > 16.27,-0.04	Across the Sahara with the caravans
+route	1192	33.55,68.42 > 28.6,77.2	Into northern India (1192–1206)
+route	1290	22.3,72.6 > 5.15,97.15	Merchants and Sufis to Sumatra
+route	1450	2.2,102.25 > -6.9,110.6	From Malacca to Java and the Moluccas
+route	1960	36.75,3.06 > 48.86,2.35	To Europe after 1945
+mark	origin	610	Mecca	21.42,39.83	According to Islamic tradition Muhammad received his first revelation in the cave of Hira near Mecca (around 610); the Kaaba is the focus of prayer and pilgrimage.
+mark	place	622	Medina	24.47,39.61	The Hijra: Muhammad and his followers moved here in 622, the start of the Islamic calendar; he died in Medina in 632.
+mark	place	670	Kairouan	35.68,10.1	Founded around 670; its Great Mosque is among the oldest in North Africa.
+mark	place	680	Karbala	32.62,44.03	Husayn, Muhammad's grandson, was killed here in 680, an event central to Shia Islam.
+mark	place	692	Jerusalem	31.78,35.24	The Dome of the Rock was completed here in 691–692.
+mark	place	762	Baghdad	33.31,44.36	Founded in 762 as the capital of the Abbasid caliphs, a great centre of learning.
+mark	place	785	Córdoba	37.88,-4.78	The Great Mosque of Córdoba, begun in 785, in the capital of the Umayyads of al-Andalus.
+mark	place	970	Cairo	30.05,31.26	Al-Azhar, founded in 970–972 under the Fatimids, one of the oldest seats of learning in the world.
+mark	place	1297	Samudra Pasai	5.15,97.15	The gravestone of Sultan Malik al-Salih (1297) is the earliest evidence of a Muslim ruler in Southeast Asia.
+mark	place	1327	Timbuktu	16.77,-3.0	Mansa Musa of Mali made his famous pilgrimage in 1324; Timbuktu's Djinguereber mosque was built on his return.
+mark	place	1453	Istanbul	41.0,28.98	The Ottomans took Constantinople in 1453, and Hagia Sophia became a mosque.
+mark	last	1492	Granada	37.18,-3.6	Granada, the last Muslim kingdom of Spain, surrendered in 1492.
+mark	last	1609	Valencia	39.47,-0.38	The Moriscos, descendants of the Muslims of Spain, were expelled between 1609 and 1614.
+mark	place	1632	Agra	27.17,78.04	The Taj Mahal, built (1632–1648) by the Mughal emperor Shah Jahan as a tomb for his wife.
+mark	place	1804	Sokoto	13.06,5.24	Usman dan Fodio's jihad (1804) founded the Sokoto Caliphate.
+note	610	According to Islamic tradition Muhammad receives his first revelation near Mecca (610) and moves to Medina (622); by his death in 632 most of Arabia accepts his rule, and the caliphs' armies conquer Syria, Iraq, Egypt and Persia.
+note	711	The Umayyad caliphate reaches from Spain to Sindh and Central Asia; the Abbasids found Baghdad (762). Conversion is gradual: for centuries many subjects remain Christian, Jewish or Zoroastrian.
+note	850	Baghdad is a centre of learning; al-Bukhari gathers the hadith; by most estimates Muslims become the majority in Iran and Iraq in the 9th and 10th centuries.
+note	970	The Fatimids found Cairo and al-Azhar (970); the Volga Bulgars (922) and the Kara-Khanid Turks of Central Asia accept Islam.
+note	1071	The Seljuk Turks defeat Byzantium at Manzikert (1071) and settle Anatolia; in West Africa the rulers of Takrur, Gao and Kanem become Muslims.
+note	1150	Sufi orders spread; Saladin retakes Jerusalem (1187); Muslim merchants settle the Swahili coast and the ports of India and China.
+note	1206	The Delhi Sultanate is founded (1206); the Mongols sack Baghdad (1258), and within decades the Mongol rulers of Iran and the Golden Horde become Muslims.
+note	1324	Mansa Musa of Mali makes his pilgrimage (1324); Islam spreads in northern Sumatra and Malacca; Ibn Battuta travels from Morocco to China.
+note	1453	The Ottomans take Constantinople (1453); Granada, the last Muslim kingdom of Spain, falls (1492); Islam spreads through the Malay world and Java.
+note	1526	Three great empires: the Ottomans, the Safavids, who make Iran Shia (from 1501), and the Mughals in India (from 1526).
+note	1609	Spain expels the Moriscos (1609–1614); the Taj Mahal is built (1632–1648); Makassar and other kingdoms of eastern Indonesia accept Islam.
+note	1744	Muhammad ibn Abd al-Wahhab allies with the House of Saud (1744); Russia annexes the Crimea (1783).
+note	1804	Usman dan Fodio founds the Sokoto Caliphate (1804); by the end of the century European powers rule most Muslim lands.
+note	1924	Turkey abolishes the caliphate (1924); most Muslim countries gain independence; millions of Muslims settle in Europe and North America.
+note	2001	About 2 billion Muslims (2020), the second-largest religion; the largest Muslim country is Indonesia.
+src	Ira M. Lapidus, A History of Islamic Societies (3rd ed., 2014)
+src	Richard W. Bulliet, Conversion to Islam in the Medieval Period (1979)
+src	Francis Robinson (ed.), The Cambridge Illustrated History of the Islamic World (1996)
+src	Pew Research Center, The Future of the Global Muslim Population (2011)
+
+@manichaeism
+area	Babylonia	33.0,44.5	300	240	1000	1	Mani's homeland; the leaders of the church lived here until the 10th century
+area	Persia	32.0,52.0	600	242	600	1	Mani preached under Shapur I; his followers were persecuted after his death
+area	Roman Syria	34.0,37.0	300	270	600	1
+area	Egypt	27.5,31.0	400	270	600	1	communities whose books and letters survive in Coptic
+area	Roman North Africa	36.0,9.0	350	300	550	1	Augustine was a Manichaean Hearer here
+area	Rome and Italy	41.9,12.5	250	300	550	1
+area	Central Asia	39.0,64.0	500	270	1100	1	Parthian and Sogdian communities, from Merv to Samarkand
+area	The Uyghur Khaganate	47.5,102.5	450	763	840	2	the faith of the Uyghur rulers
+area	Qocho (Turfan)	42.9,89.5	300	850	1000	2	the court religion of the Uyghur kingdom of Qocho
+area	Qocho (Turfan)	42.9,89.5	300	1000	1250	1
+area	Tang China	34.3,108.9	300	694	843	1
+area	Fujian	25.0,118.5	300	900	1600	1	the 'religion of light' (Mingjiao), the last Manichaeans
+route	260	33.09,44.58 > 37.6,61.8	Mar Ammo's mission to the east
+route	260	33.09,44.58 > 31.2,29.9	Missionaries to Roman Egypt
+route	300	31.2,29.9 > 36.85,10.33	To North Africa and Rome
+route	694	39.65,66.96 > 34.26,108.94	To the Tang court (694)
+route	762	34.62,112.45 > 47.43,102.66	Bögü Qaghan brings Manichaean teachers from Luoyang (762)
+route	850	47.43,102.66 > 42.85,89.53	The Uyghurs move to Turfan after the fall of their khaganate (840)
+route	900	34.26,108.94 > 24.9,118.6	South to Fujian after the ban of 843
+mark	origin	240	Ctesiphon	33.09,44.58	Mani, born near Ctesiphon in 216, began to preach his religion around 240.
+mark	place	276	Bet Lapat	32.28,48.52	Mani died in prison here under Bahram I (around 274–277).
+mark	place	350	Kellis	25.52,29.1	Letters and books of a Manichaean community of the 4th century were found in this oasis village in Egypt.
+mark	place	373	Carthage	36.85,10.33	Augustine was a Manichaean Hearer for nine years (373–382), at Carthage and Thagaste.
+mark	place	763	Ordu-Baliq	47.43,102.66	The capital of the Uyghur Khaganate, whose ruler Bögü Qaghan adopted Manichaeism in 762–763.
+mark	place	900	Qocho	42.85,89.53	Manichaean books and paintings of the Uyghur kingdom were found in its ruins.
+mark	last	1339	Cao'an	24.73,118.57	The image of Mani as the Buddha of Light, carved in 1339 in the last known Manichaean temple, near Quanzhou.
+note	240	Mani, born near Ctesiphon in 216, preaches a religion of the struggle between light and darkness and sends missionaries east and west; Shapur I tolerates him.
+note	302	Diocletian orders the persecution of the Manichaeans (around 302), yet communities flourish in Egypt and North Africa, where the young Augustine is a Hearer (373–382).
+note	450	Christian emperors and Sasanian kings persecute the Manichaeans; in the West they fade, while Sogdian merchants carry the faith east.
+note	600	Manichaeans survive in Mesopotamia and Central Asia, where the eastern church forms a branch of its own, the Denawars.
+note	694	A Manichaean teacher reaches the Tang court (694).
+note	763	The Uyghur ruler Bögü Qaghan adopts Manichaeism (762–763), the faith of his empire for decades.
+note	843	The Tang emperor Wuzong bans Manichaeism (843) after the fall of the Uyghur Khaganate (840); the Uyghurs of Turfan keep the faith.
+note	950	Manichaeism is the court religion of the Uyghur kingdom of Qocho; the head of the church moves from Babylonia to Samarkand.
+note	1050	Buddhism wins the Uyghurs of Turfan; in southern China, Manichaeans live on as the 'religion of light' (Mingjiao) in Fujian.
+note	1339	The image of Mani as the Buddha of Light is carved at Cao'an near Quanzhou (1339).
+note	1500	The last Manichaean communities, in Fujian, fade after the 16th century.
+src	Samuel N. C. Lieu, Manichaeism in the Later Roman Empire and Medieval China (2nd ed., 1992)
+src	Iain Gardner and Samuel N. C. Lieu (eds), Manichaean Texts from the Roman Empire (2004)
+src	Nicholas J. Baker-Brian, Manichaeism: An Ancient Faith Rediscovered (2011)
+
+@confucianism
+area	Lu and the states of the Zhou	35.6,117.0	300	-520	-136	1	Confucius taught in Lu; his disciples and Mencius carried his teaching through the warring states
+area	China	34.0,112.0	900	-136	1912	2	the learning of officials and the moral order of the state
+area	China	34.0,112.0	900	1912		1	its values are shared by hundreds of millions; few call it their religion
+area	Korea	37.5,127.0	350	372	1392	1
+area	Korea	37.5,127.0	350	1392	1910	2	the state ideology of the Joseon kings
+area	Korea	37.5,127.0	350	1910		1
+area	Vietnam	21.0,105.8	250	100	1428	1
+area	Vietnam	21.0,105.8	250	1428	1919	2	the orthodoxy of the Lê and Nguyễn kings
+area	Vietnam	21.0,105.8	250	1919		1
+area	Japan	35.5,136.0	450	604	1630	1
+area	Japan	35.5,136.0	450	1630	1868	2	the official learning of the Tokugawa shoguns
+area	Japan	35.5,136.0	450	1868		1
+area	Taiwan	23.7,121.0	150	1665		1
+area	Chinese communities of Southeast Asia	1.3,103.8	400	1800		1	Confucian temples and festivals in Singapore, Malaysia and Indonesia
+route	100	34.7,112.5 > 21.03,105.84	With Han rule to the Red River delta
+route	372	34.7,112.5 > 39.0,125.75	Confucian learning to Korea (372)
+route	604	36.3,126.9 > 34.68,135.8	Through Korea to Japan
+route	1800	24.48,118.09 > 1.35,103.8	Chinese emigrants to Southeast Asia
+mark	origin	-520	Qufu	35.6,116.99	Confucius was born in the state of Lu in 551 BCE, by the traditional date, and taught here; his temple and family cemetery are at Qufu.
+mark	place	-136	Chang'an	34.3,108.9	Emperor Wu of Han set up official chairs for the Five Classics in 136 BCE and an imperial academy in 124 BCE.
+mark	place	1070	Hanoi	21.03,105.84	The Temple of Literature, founded in 1070, became Vietnam's first national university (1076).
+mark	place	1179	White Deer Grotto	29.5,115.98	Zhu Xi revived this academy in 1179; his commentaries on the Four Books (1190) became the core of Neo-Confucianism.
+mark	place	1398	Seoul	37.59,126.99	The Sungkyunkwan, the Confucian academy of the Joseon kings, opened here in 1398.
+mark	place	1690	Edo	35.7,139.77	The shogunate's Confucian temple and school at Yushima (1690).
+mark	place	1905	Beijing	39.9,116.4	The imperial examinations, based on the Confucian classics, were abolished in 1905.
+note	-520	Confucius, born in the state of Lu (551 BCE by tradition), teaches that a good society rests on the virtues of its people and the rituals of family and state.
+note	-479	Confucius dies (479 BCE); his disciples gather his sayings, later compiled as the Analects.
+note	-320	Mencius teaches that human nature is good and that rulers who oppress the people lose the mandate of Heaven; Xunzi answers that it must be shaped by learning.
+note	-213	The Qin dynasty orders the burning of books (213 BCE), the Confucian classics among them, by the traditional account.
+note	-136	Emperor Wu of Han establishes official chairs for the Five Classics (136 BCE): Confucian learning becomes the training of officials.
+note	220	After the fall of the Han (220), Buddhism and Daoism win many followers, but Confucian learning remains the language of government.
+note	372	The Korean kingdom of Goguryeo founds a Confucian academy (372).
+note	604	The Sui found the imperial examinations (605); Japan's Seventeen-article constitution (604) draws on Confucian ideals.
+note	1070	Neo-Confucian thinkers answer Buddhism; Vietnam founds the Temple of Literature (1070).
+note	1190	Zhu Xi publishes the Four Books with his commentaries (1190), the core of Neo-Confucianism.
+note	1313	The Yuan make Zhu Xi's commentaries the basis of the examinations (1313); in Korea the Joseon dynasty (1392) makes Neo-Confucianism its state ideology.
+note	1428	Vietnam's Lê dynasty (from 1428) makes Neo-Confucianism its orthodoxy.
+note	1500	Wang Yangming teaches the unity of knowing and acting; in Korea, Yi Hwang and Yi I debate Zhu Xi's philosophy.
+note	1630	Japan's Tokugawa shoguns adopt Neo-Confucianism as official learning; Confucian temples are built in Taiwan (1665).
+note	1773	The Qing emperors patronise Confucian scholarship and compile the Complete Library of the Four Treasuries (1773–1782).
+note	1850	Chinese emigrants carry Confucian temples and festivals to Southeast Asia; Japan's Meiji government turns to Western learning.
+note	1905	The Qing abolish the imperial examinations (1905); Confucianism is attacked as a cause of China's weakness after 1919 and again in the 1970s, and revived from the 1980s.
+note	2001	Few people claim Confucianism as their religion, but its values of family, learning and ritual are shared by hundreds of millions across East Asia.
+src	Xinzhong Yao, An Introduction to Confucianism (2000)
+src	Daniel K. Gardner, Confucianism: A Very Short Introduction (2014)
+src	Benjamin A. Elman, A Cultural History of Civil Examinations in Late Imperial China (2000)
+
+@daoism
+area	Chu and the warring states	31.0,113.5	500	-350	142	1	the Daodejing and the Zhuangzi take shape as philosophy
+area	Sichuan and Hanzhong	31.5,105.0	300	142		1	the Way of the Celestial Masters
+area	The Celestial Masters' state	33.07,107.0	150	191	215	2	Zhang Lu's Daoist state in Hanzhong
+area	China	32.0,113.0	1000	184	618	1
+area	China	32.0,113.0	1000	618	1911	2	a main faith beside Buddhism and Confucianism, honoured by many emperors
+area	China	32.0,113.0	1000	1911		1	temples, monasteries and the rites of many families
+area	Korea	37.5,127.0	300	624	1600	1	Daoist rites at the courts of Goguryeo, Goryeo and early Joseon
+area	Vietnam	21.0,105.8	250	200		1
+area	Taiwan	23.7,121.0	150	1700		2	Daoist priests serve the island's temples and festivals
+area	Chinese communities of Southeast Asia	2.0,104.0	500	1800		1
+route	624	34.26,108.94 > 39.0,125.75	Tang Daoist priests to Goguryeo (624)
+route	1221	37.3,121.0 > 35.0,69.2	Qiu Chuji's journey to Genghis Khan (1221–1222)
+route	1800	24.48,118.09 > 1.35,103.8	With Chinese emigrants to Southeast Asia
+route	1949	24.48,118.09 > 25.03,121.56	The 63rd Celestial Master moves to Taiwan (1949)
+mark	origin	-300	Guodian	30.6,112.2	Bamboo slips buried in a tomb here around 300 BCE preserve the oldest known passages of the Daodejing.
+mark	place	142	Mount Heming	30.55,103.53	By tradition Zhang Daoling received a revelation from the deified Laozi here in 142 and founded the Way of the Celestial Masters.
+mark	place	442	Pingcheng	40.08,113.3	The Northern Wei emperor Taiwu received Daoist registers here in 442, making Daoism the religion of his state.
+mark	place	666	Bozhou	33.85,115.78	Laozi's traditional birthplace, where the Tang emperor Gaozong honoured him as an emperor in 666.
+mark	place	1000	Mount Longhu	28.06,116.98	The seat of the Celestial Masters of the Zhang family from the Song dynasty on.
+mark	place	1167	Kunyu Mountain	37.27,121.73	Wang Chongyang founded the monastic school of Complete Perfection (Quanzhen) in Shandong in 1167.
+mark	place	1222	Parwan	35.0,69.2	The Quanzhen master Qiu Chuji met Genghis Khan here, in the Hindu Kush, in 1222.
+mark	place	1224	White Cloud Temple	39.9,116.34	Quanzhen's chief monastery in Beijing, where Qiu Chuji lived from 1224.
+mark	place	1412	Wudang Mountains	32.4,111.0	The Yongle emperor rebuilt Wudang's temples on a grand scale (from 1412).
+note	-350	The Daodejing, attributed to Laozi, and the Zhuangzi teach the Dao, the Way of nature, and acting through non-action; bamboo slips at Guodian (around 300 BCE) hold the oldest known passages.
+note	-180	Han rulers practise the teaching of the Yellow Emperor and Laozi; masters seek long life and immortality.
+note	142	Zhang Daoling founds the Way of the Celestial Masters in Sichuan (142); the Yellow Turban rebellion of the Way of Great Peace shakes the Han (184).
+note	215	Zhang Lu's Daoist state in Hanzhong submits to Cao Cao (215), and the Celestial Masters spread across northern China.
+note	365	The Shangqing ("Highest Clarity") revelations at Maoshan (364–370) and the Lingbao scriptures enrich Daoist practice in the south.
+note	442	The Northern Wei emperor Taiwu makes Daoism the religion of his state (442); Lu Xiujing catalogues the first Daoist canon (471).
+note	618	The Tang emperors claim Laozi as their ancestor and honour him as an emperor (666); Daoist priests are sent to Korea (624).
+note	733	Emperor Xuanzong orders every household to keep a copy of the Daodejing (733), which becomes an examination subject.
+note	1000	The Song court compiles a new Daoist canon; Mount Longhu becomes the seat of the Celestial Masters.
+note	1167	Wang Chongyang founds the monastic school of Complete Perfection (Quanzhen, 1167); Emperor Huizong (1100–1126) styles himself a Daoist sovereign.
+note	1222	The Quanzhen master Qiu Chuji meets Genghis Khan (1222); Quanzhen grows under Mongol favour, until Buddhist debates turn the court against it (1281).
+note	1445	The Ming court completes the printing of the Daoist Canon (1445); Wudang's temples are rebuilt on a grand scale.
+note	1700	Daoist priests serve temples, festivals and funerals across China and in Taiwan, while the Qing court favours Buddhism.
+note	1949	The 63rd Celestial Master moves to Taiwan (1949); Daoism is suppressed in China's Cultural Revolution (1966–1976) and revived since the 1980s.
+note	2001	Daoist priests and monastics serve temples in China, Taiwan and Chinese communities abroad, and its practices reach many millions more.
+src	Livia Kohn (ed.), Daoism Handbook (2000)
+src	Isabelle Robinet, Taoism: Growth of a Religion (1997)
+src	Kristofer Schipper, The Taoist Body (1993)
+src	Fabrizio Pregadio (ed.), The Encyclopedia of Taoism (2008)
+
+@shinto
+area	Western Japan	34.0,133.0	450	-250	300	1	the rites of the farming villages of the Yayoi period
+area	Western Japan	34.0,133.0	450	300		2
+area	Eastern Japan	37.0,139.5	400	300		2
+area	Tohoku	39.5,140.8	300	800		2
+area	Hokkaido	43.2,142.5	300	1870		2
+area	Taiwan under Japanese rule	23.7,121.0	150	1895	1945	1	shrines built under colonial rule
+area	Korea under Japanese rule	37.5,127.0	300	1910	1945	1	shrines built under colonial rule
+area	Hawaii	21.3,-157.8	150	1898		1	shrines of Japanese settlers
+route	1895	35.0,135.8 > 25.04,121.52	Shrines built under colonial rule in Taiwan (1895–1945)
+route	1910	35.0,135.8 > 37.55,126.98	and in Korea (1910–1945)
+mark	origin	300	Mount Miwa	34.53,135.87	Shinto has no founder and its roots are prehistoric; Mount Miwa, worshipped as a kami itself, is among its oldest places of worship.
+mark	place	300	Okinoshima	34.24,130.1	Ritual offerings to the kami were made on this sacred island from the 4th century.
+mark	place	690	Ise	34.45,136.73	The Grand Shrine of Ise, the shrine of the sun goddess Amaterasu, first rebuilt in 690 and rebuilt every twenty years since.
+mark	place	712	Izumo	35.4,132.69	The Grand Shrine of Izumo, honouring Ōkuninushi, whose myths fill much of the Kojiki (712).
+mark	place	712	Nara	34.69,135.8	The Kojiki (712), compiled at the court in Nara, records the myths of the kami and the descent of the emperors from the sun goddess.
+mark	place	927	Kyoto	35.01,135.77	The Engishiki (927), compiled at the court in Kyoto, lists 2,861 shrines and the court's rituals and prayers.
+mark	place	1869	Tokyo	35.69,139.74	The shrine later named Yasukuni was founded here in 1869 for those who died fighting for the emperor.
+mark	last	1945	Seoul	37.55,126.98	Chōsen Jingū, the chief shrine of colonial Korea (1925), was taken down after Japan's defeat in 1945.
+note	-250	Rice farming spreads through Japan in the Yayoi period; the bronze bells and mirrors of its rituals are among the roots of later kami worship.
+note	300	The rulers of Yamato build great tomb mounds; ritual offerings to the kami begin on the sacred island of Okinoshima.
+note	538	Buddhism arrives from Korea (538 or 552), and the worship of the kami begins to be named in contrast to it.
+note	690	The court organises the worship of the kami around the emperor: the Grand Shrine of Ise is first rebuilt in 690.
+note	712	The Kojiki (712) and the Nihon Shoki (720) record the myths of the kami and the descent of the emperors from the sun goddess Amaterasu.
+note	800	Kami and buddhas are worshipped together, and the kami come to be seen as local forms of the buddhas.
+note	927	The Engishiki (927) lists 2,861 shrines and the court's rituals and prayers.
+note	1274	Storms that wreck the Mongol fleets (1274, 1281) are hailed as "divine winds" (kamikaze).
+note	1450	Yoshida Kanetomo teaches a Shinto independent of Buddhism (Yoshida Shinto).
+note	1730	Scholars of "National Learning" such as Motoori Norinaga (1730–1801) study the Kojiki to recover an ancient Japanese way.
+note	1868	The Meiji government separates kami and buddhas (1868) and builds a State Shinto around the emperor; the shrine later named Yasukuni is founded (1869).
+note	1945	The Allied occupation's Shinto Directive ends State Shinto (1945); shrines become religious corporations.
+note	2001	Most Japanese take part in its festivals and rites at some 80,000 shrines, though few call Shinto their religion.
+src	Helen Hardacre, Shinto: A History (2017)
+src	John Breen and Mark Teeuwen, A New History of Shinto (2010)
+src	Inoue Nobutaka (ed.), Shinto: A Short History (2003)
+
+@ancient-egyptian-religion
+area	The Nile valley	27.5,31.3	470	-3100	350	2	the gods of Egypt's towns and of its kings
+area	The Nile valley	27.5,31.3	470	350	450	1	the last temples, as Egypt became Christian
+area	Philae and the southern frontier	24.0,32.9	120	450	537	1	priests of Isis served the Nubian peoples beyond the border
+area	Lower Nubia	22.5,32.0	200	-1950	-1500	1	the temples of Egypt's fortresses
+area	Nubia and Kush	19.5,32.5	450	-1500	350	2	Amun of Napata and the gods of Egypt, honoured by the kings of Kush and Meroë
+area	Canaan	32.5,35.5	250	-1500	-1150	1	Egyptian temples and garrisons under the New Kingdom
+area	The Aegean	37.8,25.0	300	-250	400	1	Isis and Serapis in the Greek world
+area	Italy	41.5,13.5	350	-100	400	1	temples of Isis at Rome and Pompeii
+area	Gaul, Germany and Britain	48.5,5.0	600	50	380	1	the cult of Isis across the Roman Empire
+route	-1500	25.72,32.66 > 18.54,31.83	The New Kingdom carries Amun's worship into Nubia
+route	-1450	30.0,31.2 > 32.5,35.5	Egyptian temples in Canaan
+route	-300	31.2,29.9 > 37.4,25.27	Isis and Serapis cross the Mediterranean
+route	-100	37.4,25.27 > 40.82,14.12	To Italy
+route	50	41.9,12.5 > 51.5,-0.1	As far as Roman Britain
+mark	origin	-3100	Hierakonpolis	25.1,32.78	Nekhen (Hierakonpolis), an early centre of the falcon god Horus, where the Narmer Palette, a record of the first kings, was found.
+mark	place	-2560	Giza	29.98,31.13	The Great Pyramid was built as the tomb of the king Khufu around 2560 BCE.
+mark	place	-2350	Saqqara	29.87,31.22	The Pyramid Texts, Egypt's oldest religious writings, were carved in the pyramid of Unas around 2350 BCE.
+mark	place	-1950	Karnak	25.72,32.66	The great temple of Amun-Ra at Thebes, built and enlarged over two thousand years from the Middle Kingdom on.
+mark	place	-1850	Abydos	26.19,31.92	The cult centre of Osiris, god of the dead, where pilgrims gathered for his festival.
+mark	place	-1450	Jebel Barkal	18.54,31.83	The "Pure Mountain" of Amun in Nubia, honoured by the kings of the New Kingdom and later by the kings of Kush.
+mark	place	-1350	Amarna	27.65,30.9	Akhenaten founded his new capital here for the Aten, the sun disc, around 1350 BCE.
+mark	place	-100	Pompeii	40.75,14.49	The temple of Isis at Pompeii, rebuilt after the earthquake of 62 and buried by Vesuvius in 79.
+mark	place	391	Alexandria	31.18,29.9	The Serapeum of Alexandria was destroyed in 391, after Theodosius banned pagan sacrifice.
+mark	last	537	Philae	24.03,32.88	The last known hieroglyphic inscription was carved here in 394; officials of Justinian closed the temple of Isis around 537.
+note	-3100	Egypt is united under the first kings, who rule as the god Horus on earth; the gods of its towns join a shared religion.
+note	-2560	The Old Kingdom: kings build the pyramids of Giza (around 2560 BCE), and the sun god Ra rises to supremacy.
+note	-2350	The Pyramid Texts, Egypt's oldest religious writings, are carved in the pyramid of Unas (around 2350 BCE).
+note	-2100	After the Old Kingdom falls, the hope of life after death with Osiris spreads beyond the king to all who can afford a proper burial.
+note	-1950	The Middle Kingdom builds the first temples at Karnak for Amun of Thebes; Egypt's fortresses and temples reach Lower Nubia.
+note	-1550	The New Kingdom: Amun-Ra of Thebes becomes the king of the gods, Egypt's temples spread into Nubia and Canaan, and the Book of the Dead guides the dead.
+note	-1350	Akhenaten raises the Aten, the sun disc, above all other gods and founds Amarna; after his death the old gods are restored.
+note	-1250	Ramesses II builds Abu Simbel and enlarges Karnak and Luxor.
+note	-747	Kings of Kush, devotees of Amun, rule Egypt as the 25th Dynasty.
+note	-525	The Persians conquer Egypt (525 BCE); the temples keep their rites under foreign kings.
+note	-305	The Ptolemies, Macedonian kings of Egypt, build temples in the old style and promote the god Serapis; Isis is worshipped across the Greek world.
+note	-30	Rome annexes Egypt (30 BCE); its emperors are shown on temple walls as pharaohs, and Isis has temples from Rome to Britain.
+note	250	Christianity spreads along the Nile, and the temples lose their income and their priests.
+note	391	Theodosius bans pagan sacrifice; the Serapeum of Alexandria is destroyed (391), and the last known hieroglyphic inscription is carved at Philae (394).
+note	450	Only on the southern frontier, at Philae, do priests still serve Isis, honoured by the Nubian peoples beyond the border.
+note	537	Officials of Justinian close the temple of Isis at Philae (around 537), the end of Egypt's ancient religion.
+src	Erik Hornung, Conceptions of God in Ancient Egypt (1982)
+src	Richard H. Wilkinson, The Complete Gods and Goddesses of Ancient Egypt (2003)
+src	John Baines and Jaromír Málek, Atlas of Ancient Egypt (1980)
+src	David Frankfurter, Religion in Roman Egypt (1998)
+
+@ancient-greek-religion
+area	Mycenaean Greece and Crete	37.5,23.5	300	-1400	-1150	2	tablets at Knossos and Pylos name Zeus, Hera, Poseidon and Dionysus
+area	Greece and the Aegean	38.5,23.5	350	-1150	400	2
+area	Greece and the Aegean	38.5,23.5	350	400	530	1	the last pagans, until Justinian's laws
+area	Ionia	38.3,27.3	250	-1000	400	2	the Greek cities of western Asia Minor
+area	Sicily and southern Italy	39.0,15.5	330	-750	400	2	Magna Graecia
+area	Cyrene	32.8,21.9	150	-630	400	2
+area	Egypt (Naucratis and Alexandria)	31.0,30.2	150	-570	400	1
+area	The Black Sea colonies	44.5,34.0	300	-600	300	1
+area	Massalia	43.3,5.4	200	-600	300	1
+area	Syria and Mesopotamia	35.5,38.0	450	-300	400	1	Greek cults in the cities of the Seleucid kings
+area	Bactria	37.17,69.4	200	-300	-130	1	the Greek city of Ai-Khanoum
+route	-750	37.9,22.9 > 37.07,15.29	Colonists carry their gods to Italy and Sicily (from the 8th century BCE)
+route	-630	36.4,25.4 > 32.82,21.86	To Cyrene (around 631 BCE)
+route	-600	37.53,27.28 > 46.69,31.9	To the Black Sea
+route	-600	38.67,26.75 > 43.3,5.37	To Massalia (around 600 BCE)
+route	-330	40.5,22.5 > 31.2,29.9	Alexander's conquests carry Greek cults to Egypt
+route	-330	40.5,22.5 > 37.17,69.4	and as far as Bactria
+mark	origin	-1400	Knossos	35.3,25.16	Linear B tablets here and at Pylos record offerings to Zeus, Hera, Poseidon and Dionysus (14th–13th centuries BCE).
+mark	place	-1000	Dodona	39.55,20.79	The oracle of Zeus at Dodona, the oldest in Greece by Herodotus's account.
+mark	place	-776	Olympia	37.64,21.63	The first Olympic Games were held in honour of Zeus in 776 BCE, by tradition; the last ancient Games in 393.
+mark	place	-750	Delphi	38.48,22.5	The oracle of Apollo, consulted by Greeks from the 8th century BCE until the end of the 4th century CE.
+mark	place	-600	Eleusis	38.04,23.54	The Mysteries of Demeter and Persephone were celebrated here for about a thousand years, until the sanctuary was sacked in 396.
+mark	place	-550	Ephesus	37.95,27.37	The temple of Artemis, rebuilt in the 6th century BCE, one of the Seven Wonders.
+mark	place	-438	Athens	37.97,23.73	Pheidias's gold and ivory statue of Athena was dedicated in the Parthenon in 438 BCE.
+mark	last	529	The Academy of Athens	37.99,23.71	Justinian forbade pagans to teach in 529, and the Platonic school of Athens closed.
+note	-1400	Mycenaean palaces at Knossos and Pylos record offerings to Zeus, Hera, Poseidon and Dionysus on their Linear B tablets.
+note	-1150	The Mycenaean palaces fall; the worship of the gods continues in the villages and sanctuaries of the Greek Dark Age.
+note	-776	The first Olympic Games honour Zeus (776 BCE, by tradition); the oracle of Delphi gains fame; colonists carry the gods to Italy and Sicily.
+note	-680	Homer's epics and Hesiod's Theogony give the gods their classic form; Greek colonies spread from the Black Sea to Massalia.
+note	-550	Great stone temples rise, such as Artemis's at Ephesus; the Mysteries of Eleusis draw initiates from all Greece.
+note	-438	Athens dedicates the Parthenon (438 BCE) and stages tragedies at the festival of Dionysus.
+note	-399	Socrates is condemned to death for impiety (399 BCE); Alexander's conquests carry Greek gods and temples to Egypt and Asia.
+note	-250	Greek cults spread through the Hellenistic kingdoms; the Romans identify their own gods with the Olympians.
+note	-146	Rome conquers Greece (146 BCE); the sanctuaries continue under Roman rule.
+note	131	Hadrian completes the temple of Olympian Zeus at Athens (131–132); Pausanias describes the sanctuaries of Greece.
+note	392	Theodosius bans all pagan sacrifice and worship (392); the last ancient Olympic Games are held (393, by tradition), and Eleusis is sacked (396).
+note	450	Pagan philosophers still teach in Athens; temples are closed, destroyed or turned into churches.
+note	529	Justinian forbids pagans to teach (529), and the Platonic school of Athens closes.
+src	Walter Burkert, Greek Religion (1985)
+src	Simon Price, Religions of the Ancient Greeks (1999)
+src	Jon D. Mikalson, Ancient Greek Religion (2nd ed., 2010)
+
+@norse-religion
+area	Denmark	56.0,10.0	220	500	965	2
+area	Denmark	56.0,10.0	220	965	1050	1
+area	Götaland	57.8,14.0	250	500	1050	2
+area	Svealand	59.8,17.0	220	500	1100	2	the lands around Uppsala, the last stronghold of the old gods
+area	Gotland and Öland	57.5,18.5	100	500	1100	2
+area	Norway	61.0,9.5	380	500	1030	2
+area	Orkney, Shetland and the Hebrides	59.0,-3.0	200	800	1000	2
+area	The Danelaw	53.5,-1.0	220	865	950	1	Danish settlers in England
+area	Ireland (Dublin)	53.35,-6.26	100	841	990	1
+area	Kievan Rus'	50.5,30.5	350	860	988	1	the Varangians of the river routes
+area	Iceland	64.9,-18.5	180	874	1000	2
+area	Iceland	64.9,-18.5	180	1000	1020	1	pagan worship allowed in private for a time
+area	Normandy	49.2,0.3	150	911	960	1
+area	Greenland	61.2,-45.4	200	985	1000	1
+route	793	60.4,5.3 > 55.67,-1.8	Viking raids on Britain (from 793)
+route	860	59.33,17.54 > 50.45,30.52	Along the rivers of Rus'
+route	865	55.5,9.5 > 53.5,-1.0	The Great Army settles the Danelaw (865)
+route	874	60.4,5.3 > 64.1,-21.9	Settlers to Iceland (874)
+route	911	55.5,9.5 > 49.4,1.1	Rollo's Northmen in Normandy (911)
+route	985	64.1,-21.9 > 61.2,-45.4	Erik the Red to Greenland (985)
+mark	origin	500	Gamla Uppsala	59.88,17.62	The royal mounds of Gamla Uppsala (6th century) mark a great centre of the old gods in Sweden.
+mark	place	600	Lejre	55.6,11.97	A royal seat in Denmark, where Thietmar of Merseburg (around 1015) placed great sacrifices every nine years.
+mark	place	793	Lindisfarne	55.67,-1.8	The Viking raid on the monastery here (793) opens the Viking Age.
+mark	place	965	Jelling	55.76,9.42	King Harald Bluetooth raised the Jelling stone, recording that he made the Danes Christian (around 965).
+mark	place	1000	Þingvellir	64.26,-21.12	The Althing adopted Christianity here around 1000, allowing pagan worship in private for a time.
+mark	place	1030	Stiklestad	63.8,11.56	Olaf Haraldsson fell here in 1030; venerated as a saint, he became the symbol of Christian Norway.
+mark	last	1075	Uppsala	59.92,17.65	Adam of Bremen describes the temple at Uppsala with images of Thor, Odin and Freyr (around 1075), one of the last centres of the old religion.
+note	500	The peoples of Scandinavia worship Odin, Thor, Freyr and other gods at open-air sites and in halls; great mounds are raised at Uppsala.
+note	600	Picture stones on Gotland and small gold foil figures show gods, heroes and rites.
+note	793	The Viking raid on Lindisfarne (793) opens the Viking Age.
+note	865	Vikings settle the Danelaw in England (865), Iceland (874) and the river routes of Rus'; missionaries such as Ansgar preach in Denmark and Sweden.
+note	965	Harald Bluetooth makes the Danes Christian (around 965); Norse settlers in England, Normandy and Rus' take up Christianity; Erik the Red settles Greenland (985).
+note	1000	Iceland adopts Christianity (around 1000) and Norway under Olaf (d. 1030); in Sweden the temple at Uppsala still stands around 1075, the last great centre of the old gods.
+note	1100	Scandinavia is Christian by the 12th century; the old myths survive in the poems and sagas written down in Iceland in the 13th century.
+src	John Lindow, Norse Mythology: A Guide to the Gods, Heroes, Rituals, and Beliefs (2001)
+src	Anders Andrén, Kristina Jennbert and Catharina Raudvere (eds), Old Norse Religion in Long-Term Perspectives (2006)
+src	Neil Price, Children of Ash and Elm: A History of the Vikings (2020)
+
+@mesoamerican-religion
+area	The Olmec heartland	18.0,-94.5	200	-1200	-400	2	San Lorenzo and La Venta on the Gulf Coast
+area	The Valley of Oaxaca	17.0,-96.7	180	-500	1521	2	the Zapotecs of Monte Albán, later the Mixtecs
+area	The southern Maya lowlands	17.0,-89.8	250	-800	1697	2	from the first cities to the Itza kingdom of Petén
+area	Yucatán	20.5,-89.0	250	-500	1546	2
+area	The Maya highlands	15.0,-91.0	220	-800	1530	2	the K'iche' and Kaqchikel kingdoms
+area	The Valley of Mexico	19.5,-99.0	180	-500	1521	2	Teotihuacan, then Tenochtitlan
+area	Central Mexico	19.5,-98.5	350	0	1530	2
+area	West Mexico	20.5,-103.5	300	-300	1530	2	the shaft tombs, later the Tarascan kingdom
+area	Veracruz	20.0,-97.4	200	600	1520	2	El Tajín and the Totonacs
+area	Southern Mesoamerica	14.0,-88.5	250	-500	1530	2	Copán and its neighbours
+area	The Maya highlands	15.0,-91.2	150	1530	1697	1	day-keepers and old rites within Catholic practice
+route	950	20.06,-99.34 > 20.68,-88.57	The Feathered Serpent honoured from Tula to Chichén Itzá
+mark	origin	-1200	San Lorenzo	17.75,-94.76	The Olmec centre of San Lorenzo, with the earliest monumental religious art of Mesoamerica (around 1200 BCE).
+mark	place	-900	La Venta	18.1,-94.04	The Olmec ceremonial centre of La Venta, with its great earthen pyramid (around 900–400 BCE).
+mark	place	-500	Monte Albán	17.04,-96.77	The Zapotec capital, founded around 500 BCE on a levelled mountain top.
+mark	place	200	Teotihuacan	19.69,-98.84	The Pyramid of the Sun was completed around 200; the Aztecs later believed the sun was born here.
+mark	place	292	Tikal	17.22,-89.62	Stela 29 (292) is the earliest known dated monument of the Maya lowlands.
+mark	place	900	Chichén Itzá	20.68,-88.57	A great Maya city of northern Yucatán, with its sacred cenote.
+mark	place	1325	Tenochtitlan	19.43,-99.13	The Mexica founded Tenochtitlan in 1325, by tradition where Huitzilopochtli had promised; its Great Temple was rededicated in 1487.
+mark	place	1562	Maní	20.39,-89.39	The friar Diego de Landa burned Maya books and images here in 1562.
+mark	last	1697	Nojpetén	16.93,-89.89	The Spanish took Nojpetén, capital of the Itza, the last independent Maya kingdom, in 1697.
+note	-1200	The Olmecs of the Gulf Coast build the first great ceremonial centres, with colossal heads and images of their gods.
+note	-900	La Venta becomes the main Olmec centre, and Olmec symbols spread through Mesoamerica.
+note	-500	The Zapotecs found Monte Albán; carvings there and in the Maya lowlands record the 260-day ritual calendar.
+note	-300	In the Maya lowlands, El Mirador and other cities raise huge pyramids for the gods and the ancestors of their rulers.
+note	100	Teotihuacan grows into the largest city of the Americas; the Pyramid of the Sun is completed around 200.
+note	292	The Maya of the lowlands raise dated stelae (Tikal, 292) and honour divine kings who offer their own blood to the gods.
+note	600	Classic Maya kingdoms such as Tikal, Calakmul, Palenque and Copán build temples to their gods and ancestors; Teotihuacan declines.
+note	900	The southern Maya cities are abandoned; Chichén Itzá and Tula honour the Feathered Serpent.
+note	1325	The Mexica found Tenochtitlan (1325), where by tradition their god Huitzilopochtli had promised.
+note	1487	The Aztec Empire rededicates the Great Temple of Tenochtitlan with the sacrifice of many captives (1487).
+note	1521	The fall of Tenochtitlan (1521) ends the Aztec state religion; friars destroy temples and books (Landa at Maní, 1562), while old rites survive in secret.
+note	1697	The Spanish take Nojpetén (1697), the last independent Maya kingdom; Maya day-keepers still count the 260-day calendar today.
+src	Mary Miller and Karl Taube, The Gods and Symbols of Ancient Mexico and the Maya (1993)
+src	Michael D. Coe and Stephen Houston, The Maya (9th ed., 2015)
+src	Richard F. Townsend, The Aztecs (3rd ed., 2009)
+src	Grant D. Jones, The Conquest of the Last Maya Kingdom (1998)
+
+@yoruba-religion
+area	Ile-Ife and the Yoruba heartland	7.5,4.5	220	1000	1900	2	the worship of the orishas under Olodumare
+area	Ile-Ife and the Yoruba heartland	7.5,4.5	220	1900		1	most Yoruba are now Christians or Muslims; the orishas are still honoured
+area	The western Yoruba lands	7.8,2.3	180	1300	1900	2	Ketu, Sabe and the Yoruba of present-day Benin
+area	The western Yoruba lands	7.8,2.3	180	1900		1
+area	The Oyo Empire	8.5,3.8	300	1600	1836	2
+area	Bahia	-12.97,-38.5	250	1800		1	Candomblé
+area	Cuba	22.5,-80.0	350	1820		1	Santería (Regla de Ocha)
+area	Trinidad	10.5,-61.3	80	1840		1	the Orisha tradition
+area	Rio de Janeiro and southern Brazil	-22.9,-43.2	300	1850		1
+area	Miami	25.8,-80.2	150	1960		1
+area	New York	40.7,-74.0	150	1960		1
+route	1700	6.36,2.08 > -12.97,-38.5	The Atlantic slave trade carries the orishas to Brazil
+route	1820	6.36,2.08 > 23.13,-82.38	and to Cuba
+route	1840	6.45,3.4 > 10.65,-61.5	and Trinidad
+route	1960	23.13,-82.38 > 25.8,-80.2	Cuban exiles bring Santería to the United States (after 1959)
+mark	origin	1000	Ile-Ife	7.48,4.56	The sacred city of the Yoruba, where by their tradition the earth was first created; it flourished from around 1000.
+mark	place	1600	Oyo-Ile	8.93,4.38	The capital of the Oyo Empire, whose kings honoured Shango, the orisha of thunder, remembered as one of their predecessors.
+mark	place	1700	Osogbo	7.75,4.55	The sacred grove of Osun, goddess of the river; a World Heritage Site since 2005.
+mark	place	1820	Havana	23.13,-82.38	Enslaved Yoruba, called Lucumí in Cuba, kept the orishas in Santería (Regla de Ocha).
+mark	place	1830	Salvador	-12.98,-38.48	Casa Branca, one of the first great Candomblé houses, founded by African priestesses in the early 19th century.
+mark	place	1970	Oyotunji	32.6,-80.85	A village founded in South Carolina in 1970 to follow Yoruba religion.
+mark	place	1993	Hialeah	25.86,-80.28	The Supreme Court upheld a Santería church's right to practise animal sacrifice here in 1993.
+note	1000	Ile-Ife grows into the sacred city of the Yoruba, centre of the worship of the orishas under Olodumare, the supreme being.
+note	1300	Ile-Ife is at its height; its artists cast naturalistic heads in copper alloy, probably of rulers.
+note	1500	Ifa divination, with its verses of the odu, guides kings and households across the Yoruba kingdoms.
+note	1600	The Oyo Empire rises to dominate the Yoruba lands; its kings honour Shango, the orisha of thunder.
+note	1700	Through the Atlantic slave trade, enslaved Yoruba carry the orishas to Brazil and the Caribbean.
+note	1830	The collapse of the Oyo Empire (1830s) and the wars that follow send many enslaved Yoruba to Cuba and Brazil, where Santería and Candomblé take shape; at home Islam and Christianity spread.
+note	1960	Most Yoruba become Christians or Muslims; Cuban exiles bring Santería to the United States, and Candomblé grows across Brazil.
+note	2005	UNESCO proclaims Ifa divination a masterpiece of humanity's oral heritage (2005) and the sacred grove of Osogbo becomes a World Heritage Site; the orishas are honoured across the Americas.
+src	J. D. Y. Peel, Christianity, Islam, and Oriṣa Religion (2016)
+src	Jacob K. Olupona and Terry Rey (eds), Òrìṣà Devotion as World Religion (2008)
+src	Robin Law, The Oyo Empire c. 1600–c. 1836 (1977)
+src	J. Lorand Matory, Black Atlantic Religion (2005)
+
+@bahai-faith
+area	Iran	32.5,53.0	700	1844		1	the faith's homeland, where its followers are persecuted
+area	Iraq	33.3,44.4	200	1853	1900	1
+area	Haifa and Acre	32.85,35.05	60	1868		1	the world centre of the faith
+area	Ashgabat	37.95,58.38	200	1885	1938	1
+area	India	22.0,78.0	800	1880		1
+area	North America	40.0,-85.0	900	1894		1
+area	Western Europe	49.0,5.0	600	1900		1
+area	Australia	-33.8,151.1	300	1920		1
+area	Latin America	-10.0,-60.0	1500	1940		1
+area	Sub-Saharan Africa	0.0,32.0	1200	1950		1
+area	Samoa and the Pacific	-13.8,-172.0	150	1954		1
+route	1853	35.69,51.39 > 33.31,44.37	Bahá'u'lláh's exile to Baghdad (1853)
+route	1863	33.31,44.37 > 41.0,28.98	To Constantinople and Edirne (1863)
+route	1868	41.68,26.56 > 32.92,35.07	To Acre (1868)
+route	1912	32.92,35.07 > 40.7,-74.0	ʻAbdu'l-Bahá's journey to North America (1912)
+route	1953	32.81,34.99 > 0.31,32.58	The Ten Year Crusade (1953–1963) carries the faith worldwide
+mark	origin	1844	Shiraz	29.6,52.54	The Báb declared his mission here in 1844.
+mark	place	1850	Tabriz	38.08,46.29	The Báb was executed by a firing squad here in 1850.
+mark	place	1863	Baghdad	33.31,44.37	Bahá'u'lláh declared his mission in the Garden of Ridván in 1863.
+mark	place	1868	Acre	32.92,35.07	Bahá'u'lláh was exiled to the Ottoman prison city of Acre in 1868 and died nearby, at Bahjí, in 1892; his shrine is the holiest place of the faith.
+mark	place	1909	Haifa	32.81,34.99	The Shrine of the Báb on Mount Carmel (1909), at the faith's world centre, where the Universal House of Justice has its seat.
+mark	last	1938	Ashgabat	37.95,58.38	The first Bahá'í House of Worship (1908) was seized under Soviet rule (1938) and pulled down in 1963.
+mark	place	1953	Wilmette	42.07,-87.68	The Bahá'í House of Worship near Chicago, dedicated in 1953.
+mark	place	1986	New Delhi	28.55,77.26	The Lotus Temple, the Bahá'í House of Worship of India (1986).
+note	1844	The Báb declares his mission in Shiraz (1844) and is executed in Tabriz (1850); Bahá'u'lláh, exiled from Iran, declares his mission in Baghdad (1863) and dies near Acre (1892).
+note	1912	ʻAbdu'l-Bahá travels across Europe and North America (1911–1913); the faith spreads worldwide, and its governing body, the Universal House of Justice, is first elected in 1963; in Iran more than two hundred Bahá'ís are killed in the years after the revolution of 1979.
+note	2001	Estimates range from about five to eight million Bahá'ís, in almost every country of the world.
+src	Peter Smith, An Introduction to the Baha'i Faith (2008)
+src	Moojan Momen, The Bahá'í Faith: A Beginner's Guide (2007)
+src	Juan R. I. Cole, Modernity and the Millennium (1998)

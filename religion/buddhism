@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 5th century BCE</span><span class="rf-text">Siddhartha Gautama attains awakening at <a class="enc-link" href="/encyclopedia/bodh-gaya">Bodh Gaya</a> and gives his first teaching at <a class="enc-link" href="/encyclopedia/sarnath">Sarnath</a></span></li><li><span class="rf-year">c. 260 BCE</span><span class="rf-text">The Mauryan emperor <a class="enc-link" href="/encyclopedia/ashoka">Ashoka</a> turns to the Buddha’s teaching and promotes it across his empire</span></li><li><span class="rf-year">1st century BCE</span><span class="rf-text">The Pali Canon is written down in <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>, by tradition at the Aluvihara monastery</span></li><li><span class="rf-year">1st century CE</span><span class="rf-text">Buddhism reaches <a class="enc-link" href="/encyclopedia/china">China</a> along the trade routes of <a class="enc-link" href="/encyclopedia/central-asia">Central Asia</a></span></li><li><span class="rf-year">538 or 552</span><span class="rf-text">Buddhism is brought to <a class="enc-link" href="/encyclopedia/japan">Japan</a> from the Korean kingdom of Baekje</span></li><li><span class="rf-year">c. 779</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/samye">Samye</a>, the first Buddhist monastery in <a class="enc-link" href="/encyclopedia/tibet">Tibet</a>, is consecrated</span></li><li><span class="rf-year">c. 1200</span><span class="rf-text">The great monastery of <a class="enc-link" href="/encyclopedia/nalanda">Nalanda</a> is sacked, and Buddhism fades from most of <a class="enc-link" href="/encyclopedia/india">India</a></span></li><li><span class="rf-year">1956</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/b-r-ambedkar">B. R. Ambedkar</a> and hundreds of thousands of his followers become Buddhists at <a class="enc-link" href="/encyclopedia/nagpur">Nagpur</a></span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to today. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="buddhism"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=buddhism">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Buddhism",slug="buddhism",url="https://the-epoch-institute.org/religion/buddhism";

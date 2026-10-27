@@ -76,12 +76,19 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
       <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
       <ol class="rf-events"><li><span class="rf-year">c. 3100 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/egypt">Egypt</a> is united under the first kings, who rule as the god <a class="enc-link" href="/encyclopedia/horus">Horus</a> on earth</span></li><li><span class="rf-year">c. 2560 BCE</span><span class="rf-text">The Great Pyramid is built at <a class="enc-link" href="/encyclopedia/giza">Giza</a> as the tomb of the king <a class="enc-link" href="/encyclopedia/khufu">Khufu</a></span></li><li><span class="rf-year">c. 2350 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/pyramid-texts">Pyramid Texts</a>, <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>’s oldest religious writings, are carved in the pyramid of Unas</span></li><li><span class="rf-year">c. 1350 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/akhenaten">Akhenaten</a> raises the <a class="enc-link" href="/encyclopedia/aten">Aten</a>, the sun disc, above all other gods and founds a new capital at <a class="enc-link" href="/encyclopedia/akhetaten">Amarna</a></span></li><li><span class="rf-year">30 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/rome">Rome</a> annexes <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>; its emperors are portrayed on temple walls as <a class="enc-link" href="/encyclopedia/pharaoh">pharaohs</a></span></li><li><span class="rf-year">391</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/serapeum-of-alexandria">Serapeum of Alexandria</a> is destroyed after the emperor Theodosius bans pagan sacrifice</span></li><li><span class="rf-year">394</span><span class="rf-text">The last known hieroglyphic inscription is carved at the temple of <a class="enc-link" href="/encyclopedia/philae">Philae</a></span></li><li><span class="rf-year">c. 537</span><span class="rf-text">Officials of the emperor Justinian close the temple of <a class="enc-link" href="/encyclopedia/isis">Isis</a> at <a class="enc-link" href="/encyclopedia/philae">Philae</a></span></li></ol>
+    </section>
+
+    <section class="fm-sec" id="faith-map" aria-labelledby="faith-map-title">
+      <h2 class="profile-section-title" id="faith-map-title">Spread through the centuries</h2>
+      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century to its last places. Press Play or move the slider; tap a mark to read about it.</p>
+      <div class="faith-map" data-faith="ancient-egyptian-religion"><p class="fm-loading">The map opens here once the page has loaded.</p></div>
+      <p class="fm-more"><a href="/faiths?faith=ancient-egyptian-religion">Compare it with another faith &rarr;</a></p>
     </section>
 
 
@@ -151,6 +158,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Ancient Egyptian religion",slug="ancient-egyptian-religion",url="https://the-epoch-institute.org/religion/ancient-egyptian-religion";

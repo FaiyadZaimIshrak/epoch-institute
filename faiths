@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>Faith Maps: How the World's Religions Spread — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Watch eighteen religions spread century by century, from Hinduism and Judaism to Islam and the Bahá’í Faith: where each began, spread and last lived on.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/faiths">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Faith Maps — The Epoch Institute">
+<meta property="og:description" content="Eighteen religions on the map, century by century: where each began, how it spread, and where it last lived on.">
+<meta property="og:url" content="https://the-epoch-institute.org/faiths">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-faiths.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-faiths.jpg">
+<link rel="stylesheet" href="/shared.css?v=54">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Faith Maps"}]},{"@type":"WebApplication","name":"Faith Maps","url":"https://the-epoch-institute.org/faiths","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser","isAccessibleForFree":true,"description":"Animated maps of eighteen religions century by century: Hinduism, Buddhism, Jainism, Sikhism, Zoroastrianism, Judaism, Christianity, Islam, Manichaeism, Confucianism, Daoism, Shinto, the religions of ancient Egypt and Greece, Norse and Mesoamerican religion, Yoruba religion and the Bahá'í Faith: where each began, spread, was a main faith or held communities, and last lived on.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+</head>
+<body>
+
+<main id="main" class="write-page ref-page">
+<div class="write-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Faith Maps</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">Faith Maps</h1>
+  <p class="ref-lede">Eighteen religions on the map, century by century: where each began, how it spread, where it was a main faith or held communities, and where it last lived on. Choose a faith, press Play, or lay a second faith over the first to compare them.</p>
+</header>
+
+<nav class="write-langs faith-list" id="faith-list" aria-label="Choose a faith">
+  <noscript><p class="scribe-lede">The maps need JavaScript. Each one is also on its religion's profile: <a href="/profiles?kind=religion">the eighteen religions</a>.</p></noscript>
+</nav>
+
+<section aria-labelledby="faith-t">
+  <div class="write-head-tool"><h2 class="ref-sec-title" id="faith-t">Buddhism through the centuries</h2><a class="write-prof" id="faith-prof" href="/religion/buddhism">The history of Buddhism &rarr;</a></div>
+  <p class="fm-vs-row"><label for="faith-vs">Compare with</label> <select id="faith-vs" class="fm-vs"><option value="">no other faith</option></select></p>
+  <div id="faith-map"><p class="fm-loading">The map needs JavaScript.</p></div>
+</section>
+
+<section class="fm-howto" aria-labelledby="faith-how">
+  <h2 class="ref-sec-title" id="faith-how">How to read the maps</h2>
+  <p class="scribe-lede">A bright glow marks a region where the faith was a main faith of the people or of their rulers; a faint glow marks communities that lived among people of other faiths. A glow shows a region, not a border, and its dates are rounded: conversion was slow almost everywhere, and the maps follow the standard histories named under each one. Arrows show how a faith spread, a star where it began, dots its holy places and centres, and rings its last places. The religions of ancient Egypt and Greece, Manichaeism, Mesoamerican and Norse religion are maps of faiths that ended; the others run to today, with estimates of their followers from the Pew Research Center and national censuses.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-data.js?v=9"></script>
+<script src="/shared-nav.js?v=38"></script>
+<script>initNav('faiths');</script>
+<script src="/faith-map.js?v=1"></script>
+<script>
+// /faiths: the eighteen religions, oldest first; the faith, the one compared with it and the century are kept in the
+// address (?faith=buddhism&vs=christianity&c=7) and the faith in this browser
+(function () {
+  var F = EMPIRES.filter(function (e) { return e.kind === 'religion'; }).sort(function (a, b) { return a.start - b.start || (a.name < b.name ? -1 : 1); })
+    .map(function (e) { return { slug: toSlug(e.name), name: e.name, span: profileSpanText(e), url: profileUrl(e) }; });
+  var list = document.getElementById('faith-list'), vs = document.getElementById('faith-vs'), host = document.getElementById('faith-map');
+  list.innerHTML = F.map(function (f) {
+    return '<button type="button" class="write-lang" data-f="' + f.slug + '"><img src="/logos/thumbs/' + encodeURIComponent(f.name) + '.png" alt="" width="40" height="40" loading="lazy"><span class="write-lang-t"><span class="write-lang-n">' + escHtml(f.name) + '</span><span class="write-lang-s">' + escHtml(f.span) + '</span></span></button>';
+  }).join('');
+  var q = new URLSearchParams(location.search), cur = null, map = null;
+  function find(slug) { return F.filter(function (f) { return f.slug === slug; })[0]; }
+  function save(c) {
+    var p = new URLSearchParams(); p.set('faith', cur); if (vs.value) p.set('vs', vs.value); if (c != null) p.set('c', String(c));
+    try { history.replaceState(null, '', '?' + p.toString()); } catch (e) {}
+  }
+  function fillVs() {
+    var keep = vs.value;
+    vs.innerHTML = '<option value="">no other faith</option>' + F.filter(function (f) { return f.slug !== cur; }).map(function (f) { return '<option value="' + f.slug + '">' + escHtml(f.name) + '</option>'; }).join('');
+    vs.value = keep && keep !== cur ? keep : '';
+  }
+  function choose(slug, other, cent, scroll) {
+    var f = find(slug) || find('buddhism');
+    cur = f.slug;
+    Array.prototype.forEach.call(list.querySelectorAll('.write-lang'), function (b) { b.setAttribute('aria-current', String(b.getAttribute('data-f') === cur)); });
+    fillVs(); if (other !== undefined) vs.value = other && other !== cur && find(other) ? other : '';
+    var o = find(vs.value);
+    document.getElementById('faith-t').textContent = f.name + (o ? ' and ' + o.name : '') + ' through the centuries';
+    var p = document.getElementById('faith-prof'); p.href = f.url + '#faith-map'; p.innerHTML = 'The history of ' + escHtml(f.name) + ' &rarr;';
+    if (!map) map = FaithMap.mount(host, cur, { compare: vs.value || null, cent: cent, onChange: save });
+    else map.set(cur, vs.value || null, cent);
+    try { localStorage.setItem('epoch-faith', cur); } catch (e) {}
+    if (scroll && host.scrollIntoView) host.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+  list.addEventListener('click', function (e) { var b = e.target.closest('.write-lang'); if (b) choose(b.getAttribute('data-f'), vs.value === b.getAttribute('data-f') ? '' : vs.value, null, true); });
+  vs.addEventListener('change', function () { choose(cur, vs.value, map ? map.century() : null); });
+  var start = q.get('faith'); if (!start) { try { start = localStorage.getItem('epoch-faith'); } catch (e) {} }
+  var c = parseInt(q.get('c'), 10);
+  choose(start || 'buddhism', q.get('vs') || '', isNaN(c) ? null : c);
+})();
+</script>
+</body>
+</html>
