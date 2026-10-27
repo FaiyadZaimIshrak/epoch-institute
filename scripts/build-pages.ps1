@@ -28,6 +28,7 @@ $SITE = 'https://the-epoch-institute.org'; $TODAY = (Get-Date).ToString('yyyy-MM
 $clock = [Diagnostics.Stopwatch]::StartNew()
 function Say([string]$m) { Write-Host ('[{0,4}s] {1}' -f [int]$clock.Elapsed.TotalSeconds, $m) }
 . "$PSScriptRoot\lib\enc-fn.ps1"   # EncRx, EncPick, EncOk, EncYears (same rules as ENC_FN in the browser)
+. "$PSScriptRoot\lib\clue-check.ps1"   # ClueOwnFault, ClueSet, ClueNamed: no game clue gives an answer away
 # the 112 px copies of the encyclopedia and state pictures for small places (only new or changed pictures are redone)
 foreach ($thLine in (& "$PSScriptRoot\make-thumbs.ps1" -Repo $Repo)) { Say "thumbs: $thLine" }
 
@@ -2379,9 +2380,18 @@ foreach ($gs in $GPICS.Keys) {
   if ($ps -and $big) { if (-not $gPuz.ContainsKey($ps)) { $gPuz[$ps] = New-Object Collections.Generic.List[object] }; $gPuz[$ps].Add(@($GPICS[$gs][1], $gs)) }
 }
 $gPuzJs = (@($GPSETS | Where-Object { $gPuz.ContainsKey($_) } | ForEach-Object { '{"set":' + (Js $_) + ',"items":[' + ((@($gPuz[$_] | Sort-Object { $_[0] } | ForEach-Object { Js $_[1] })) -join ',') + ']}' })) -join ','
-# Word Hunt themes: scripts/word-hunt.tsv (@key, title, introduction, picture; then WORD, clue, entry)
+# Word Hunt themes: scripts/word-hunt.tsv (@key, title, introduction, picture; then WORD, clue, entry). Hard grids show
+# only the clues, so a clue that gives its own word away or names another word of its theme stops the build.
 $gWords = New-Object Collections.Generic.List[string]; $wTheme = $null; $wList = $null; $wBad = New-Object Collections.Generic.List[string]
-function FlushTheme { if ($script:wTheme) { $script:gWords.Add($script:wTheme + ',"words":[' + ($script:wList -join ',') + ']}') } }
+$wClues = New-Object Collections.Generic.List[object]; $wFaults = New-Object Collections.Generic.List[string]
+function FlushTheme {
+  if ($script:wTheme) { $script:gWords.Add($script:wTheme + ',"words":[' + ($script:wList -join ',') + ']}') }
+  foreach ($x in $script:wClues) {
+    $f = ClueOwnFault $x[0] $x[1]; if ($f) { $script:wFaults.Add("$($x[0]) $f") }
+    foreach ($y in $script:wClues) { if ($y[0] -ne $x[0] -and (ClueNamed $x[2] $y[0])) { $script:wFaults.Add("the clue of $($x[0]) names $($y[0])") } }
+  }
+  $script:wClues.Clear()
+}
 foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\word-hunt.tsv", $U8)) {
   if (-not $l -or $l.StartsWith('#')) { continue }
   $c = $l.Split("`t")
@@ -2392,9 +2402,10 @@ foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\word-hunt.tsv", $U8)) {
   }
   if ($c[0] -notmatch '^[A-Z]{3,12}$') { $wBad.Add("word $($c[0])"); continue }
   $wl = if ($c.Count -gt 2 -and $c[2]) { if ($BY.ContainsKey($c[2])) { '/encyclopedia/' + $c[2] } else { $wBad.Add("entry $($c[2])"); '' } } else { '' }
-  $script:wList.Add('[' + (Js $c[0]) + ',' + (Js $c[1]) + ',' + (Js $wl) + ']')
+  $script:wList.Add('[' + (Js $c[0]) + ',' + (Js $c[1]) + ',' + (Js $wl) + ']'); $wClues.Add(@($c[0], $c[1], (ClueSet $c[1])))
 }
 FlushTheme
+if ($wFaults.Count) { throw ('scripts/word-hunt.tsv: clues that give an answer away: ' + ($wFaults -join '; ')) }
 $gameJs = "// games-data.js - built by scripts/build-pages.ps1 from scripts/game-pictures.tsv and scripts/word-hunt.tsv. Do not edit.`n" +
   "var GAME_CARDS = [`n" + ($gCards -join ",`n") + "`n];`nvar GAME_PUZZLES = [" + $gPuzJs + "];`nvar GAME_WORDS = [`n" + ($gWords -join ",`n") + "`n];`n"
 [void][EpochBuild.W]::WriteIfChanged("$Repo\games-data.js", $gameJs); $GAMESV = [EpochBuild.W]::Sha1($gameJs).Substring(0, 10)
@@ -2428,8 +2439,9 @@ Say "connections: $($czOut.Count) puzzles"
 # answers A-Z, words split by a space or hyphen) and scripts/crosswords.tsv (the puzzles made by
 # scripts/make-crosswords.ps1, only ever appended to) -> crossword-data.js, loaded by games.js when the tab first opens
 # (CW_SRC in /games, its ?v= stamped here). CW_DATA = {w: [[answer, clue, entry]], p: [[answer index, 0 across or
-# 1 down, row, column, ...] a puzzle]}. An answer without a clue, an unknown entry or an answer twice stops the build.
-$cwIdx = @{}; $cwRows = New-Object Collections.Generic.List[string]; $cwBad = New-Object Collections.Generic.List[string]
+# 1 down, row, column, ...] a puzzle]}. An answer without a clue, an unknown entry or an answer twice stops the build,
+# and so does a clue that gives its own answer away or names another answer of the same puzzle.
+$cwIdx = @{}; $cwRows = New-Object Collections.Generic.List[string]; $cwBad = New-Object Collections.Generic.List[string]; $cwSet = @{}
 foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\crossword-words.tsv", $U8)) {
   if (-not $l.Trim() -or $l.StartsWith('#')) { continue }
   $c = $l.Split("`t")
@@ -2437,6 +2449,8 @@ foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\crossword-words.tsv", $U8)
   if (-not $BY.ContainsKey($c[2])) { $cwBad.Add("words: unknown entry $($c[2]) for $($c[0])"); continue }
   $cwKey = $c[0] -replace '[ -]', ''
   if ($cwIdx.ContainsKey($cwKey)) { $cwBad.Add("words: $cwKey twice"); continue }
+  $cwF = ClueOwnFault $c[0] $c[1]; if ($cwF) { $cwBad.Add("words: the clue of $($c[0]) $cwF") }
+  $cwSet[$cwKey] = ClueSet $c[1]
   $cwIdx[$cwKey] = $cwRows.Count; $cwRows.Add('[' + (Js $c[0]) + ',' + (Js $c[1]) + ',' + (Js $c[2]) + ']')
 }
 $cwPz = New-Object Collections.Generic.List[string]
@@ -2448,6 +2462,8 @@ foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\crosswords.tsv", $U8)) {
     if (-not $cwIdx.ContainsKey($q[3])) { $cwBad.Add("crossword $($cwParts[0]): no clue for $($q[3])"); continue }
     $cwNums.Add([string]$cwIdx[$q[3]] + ',' + $(if ($q[0] -eq 'D') { '1' } else { '0' }) + ',' + $q[1] + ',' + $q[2])
   }
+  $cwIn = @($cwParts | Select-Object -Skip 1 | ForEach-Object { $_.Split('|')[3] } | Where-Object { $cwSet.ContainsKey($_) })
+  foreach ($cwA in $cwIn) { foreach ($cwO in $cwIn) { if ($cwO -ne $cwA -and (ClueNamed $cwSet[$cwA] $cwO)) { $cwBad.Add("crossword $($cwParts[0]): the clue of $cwA names $cwO") } } }
   $cwPz.Add('[' + ($cwNums -join ',') + ']')
 }
 if ($cwBad.Count) { throw ('crossword: ' + ($cwBad -join '; ')) }
@@ -2534,7 +2550,7 @@ $SECTIONS = [ordered]@{
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
   games        = @{ t = 'Games'; h = '/games'; k = 'Nine games'; d = 'Picture puzzles, word hunts, timelines, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
-  passport     = @{ t = 'My History'; h = '/passport'; k = 'Your passport'; d = 'The pages you read, the centuries you visit and the games you play, with stamps to collect. Kept in your own browser.'; pic = @('xuanzang') }
+  passport     = @{ t = 'My Passport'; h = '/passport'; k = 'Your stamps'; d = 'The pages you read, the centuries you visit and the games you play, with stamps to collect. Kept in your own browser.'; pic = @('xuanzang') }
   kids         = @{ t = 'Kids corner'; h = '/kids'; k = 'For young explorers'; d = 'Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.'; pic = @('great-pyramid-of-giza') }
   start        = @{ t = 'Find Your Way In'; h = '/start'; k = 'Four questions'; d = 'Tell us what draws you to history and get the reading paths and tools that suit you.'; pic = @('piri-reis-map', 'cantino-planisphere', 'tabula-rogeriana') }
   community    = @{ t = 'Community'; h = '/community'; k = 'Readers and writers'; d = 'Essays and opinions from the Institute''s readers, and a place to share your own.'; pic = @('althing', 'roman-forum') }

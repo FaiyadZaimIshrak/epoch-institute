@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-write.jpg">
-<link rel="stylesheet" href="/shared.css?v=56">
+<link rel="stylesheet" href="/shared.css?v=57">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Write in Ancient Scripts"}]},{"@type":"WebApplication","name":"Write in Ancient Scripts","url":"https://the-epoch-institute.org/write","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser","isAccessibleForFree":true,"description":"A keyboard for twelve languages of the past in their own scripts: Sumerian and Akkadian cuneiform, Egyptian hieroglyphs, Greek and Linear B, Aramaic and Syriac, Sanskrit in Devanagari and Brahmi, Classical Chinese, Arabic, Persian and Old Persian cuneiform, Old Turkic runes, Hebrew and Paleo-Hebrew, and the Old Norse runes.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -53,9 +53,9 @@
 </main>
 
 <script src="/shared-data.js?v=9"></script>
-<script src="/shared-nav.js?v=39"></script>
+<script src="/shared-nav.js?v=40"></script>
 <script>initNav('write');</script>
-<script src="/scribe.js?v=2"></script>
+<script src="/scribe.js?v=3"></script>
 <script>
 // /write: the twelve languages; the one chosen is kept in the address (#akkadian) and in this browser
 (function () {

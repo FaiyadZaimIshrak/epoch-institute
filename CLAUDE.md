@@ -16,7 +16,7 @@ Plus 404.html and generator.html (generator is NOT deployed — see scripts/depl
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, Kids Corner,
+Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, My Passport, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
@@ -49,7 +49,10 @@ lastmod), so changing it dates no page ($THEME0, the pre-Kids snippet, only brid
 
 ## Shared files
 - /shared.css — all CSS (fonts: self-hosted variable woff2 in /fonts, @font-face at the top; pages preload the latin
-  Crimson Pro and Cinzel files)
+  Crimson Pro and Cinzel files). A picture cropped to fill its box (object-fit: cover) keeps its upper part
+  (object-position: center 25%, the "Alignment pass" block: the centre cut heads off portraits); emblems drawn whole
+  (contain) stay centred. Checked by eye and by a layout audit of 59 pages at 390/768/1024/1280 px and in Kids mode
+  (scratchpad audit/layout-audit.ps1: anything wider than the page, overlapping or cut text, broken pictures).
 - /shared-nav.js — initNav(activePage), escHtml(), jsonp() (gives up after 10 s: an Apps Script error is an HTML
   page with status 200 that never calls back), buildPagination(), isValidEmail(), sharing (sharePoster, the share
   panel, scoreCard: see "Sharing"), in-app browser detection (EPOCH_INAPP, see "In-app browsers"). The old contact modal
@@ -347,8 +350,9 @@ epoch-shelf). Linked from the Explore menu, the footer and the homepage first-vi
 which never shows once a reader type exists. The homepage also shows "Continue where you left off" (epoch-recent,
 ≥2 items) instead of the banner.
 
-## /passport — My History
-Hand page (noindex) + passport.js: what this browser has read and played, kept in localStorage only. shared-nav.js
+## /passport — My Passport
+Hand page (noindex) + passport.js: what this browser has read and played, kept in localStorage only (built in Oct 2026
+as "My History"; renamed My Passport, the name readers look for). shared-nav.js
 records every reading page in epoch-seen (profiles of every kind, entries, states, countries, centuries, years,
 people, days, speeches, paths, essays, articles; at most 3000) and the UTC days with a visit in epoch-visits. The
 page shows pages read, days, the visit run, 26 stamps with their rules and progress (earned stamps are kept in
@@ -356,8 +360,9 @@ epoch-badges, so a broken streak does not take one away; quiz, Daily Ten and Con
 as b), pages by kind, profiles by region (EMPIRES), the 51 centuries visited, paths finished (epoch-paths +
 epoch-seen), games played, recent pages. Share sends a poster of the stamps (share-card.js stamps layout). A backup
 code (`EPOCH1.` + base64 JSON of the epoch-* keys) carries the passport to another browser, e.g. out of an in-app
-browser; restoring adds to what is there (lists joined, best runs kept). Clear asks twice. Linked from the shelf
-menu, the footer and the Research Hub ("Play").
+browser; restoring adds to what is there (lists joined, best runs kept). Clear asks twice. Linked from the Explore
+menu (desktop and phone), the shelf menu, the footer, the Research Hub ("Play") and the home page's "Continue where you
+left off" header.
 
 ## /games — History Games
 Hand page, nine client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
@@ -408,6 +413,13 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   3–12 letters). Easy 8×8 across and down (6 words of up to 8 letters), Medium 10×10 with diagonals (8), Hard 12×12
   in all eight directions with clues only (10). Grids are made in the browser and kept only when every word reads
   exactly once. Drag, tap the first and last letters, or type the word.
+- Clues never give an answer away (scripts/lib/clue-check.ps1, dot-sourced by build-pages.ps1, which STOPS on a fault):
+  a Word Hunt clue may not hold its own word (as a word or plural, a word of the clue inside it: "ship" for LONGSHIP,
+  the word inside a clue word: "silkworms" for SILK, the same first five letters: Olympia, or written in parts: "Zheng
+  He" for ZHENGHE), nor name another word of its theme (Hard shows only the clues). The crossword's clues follow the
+  same rules for their own answer (a part of a two-word answer counts: "Sea …" for BLACK SEA) and may not name another
+  answer of the same day's puzzle; make-crosswords.ps1 keeps such pairs out of new puzzles. 98 clues were rewritten for
+  this in Oct 2026 (facts kept).
 - Guess the Year: five rounds, one big picture from each age (not a person, dated within 25 years); the slider gives
   more room to recent centuries, ±1/±10 buttons (no year 0); points = 100 × (1 − distance / (2 × allowance)),
   allowance = max(20, a quarter of the years since).
@@ -506,6 +518,14 @@ tested in Node, scratchpad scribe/t-engine.js + cases.json); samples are real te
 Jelling and Glavendrup stones, the Siloam inscription, Analects 1.1 …); "Make a picture" draws the writing on its
 material (clay, papyrus, marble, parchment, rock, sandstone, palm leaf, stele, runestone, scroll: painted in code) as a
 1080px PNG to download (not in in-app browsers: press and hold), copy (ClipboardItem) or share (sharePoster).
+- The picture (Oct 2026, after "it malfunctions on phones"): one canvas reused (iOS caps all canvases' memory), a plain
+  message when a picture cannot be made, made once per writing (picKey: script, words, sample, top to bottom) so that
+  every share runs inside the tap (phones open the share sheet only then): Share sends the words and the link, with the
+  picture when it is made; phones that share files get "Save or share the picture" (iOS: Save Image) instead of
+  Download and Copy. Lines break at spaces and after a script's own word divider (runic ᛫, Old Turkic ⁚), at the largest
+  size where no word is cut (a cartouche stays one ring) before words are broken between signs; Chinese breaks between
+  characters. The tool's grid column is minmax(0, 1fr): a long sample once made Old Norse and Old Turkic wider than a
+  phone. Tested in Edge and in WebKit (Playwright at iPhone size, scratchpad pw/scribe-webkit.js) for every sample.
 - Data: scripts/scribe/<lang>.tsv (glyphs named by their Unicode names, "U+0301" for invisible marks; format at the top
   of scripts/make-scribe.ps1) → `make-scribe.ps1` checks every name against UnicodeData.txt (downloaded once to
   %LOCALAPPDATA%\epoch-tools\ucd) and writes data/scribe/<slug>.json (each page loads only its own) and LANGS_V into

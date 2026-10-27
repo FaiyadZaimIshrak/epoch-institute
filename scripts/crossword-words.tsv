@@ -5,7 +5,7 @@
 # (which writes crossword-data.js). Removing an answer that a published puzzle uses stops the build.
 AACHEN	Charlemagne's favourite residence, in western Germany	aachen
 ACAPULCO	Mexican Pacific port of the Manila galleons	acapulco
-ACHILLES	Greatest Greek warrior of the Trojan War	achilles
+ACHILLES	Greatest Greek warrior of the Iliad	achilles
 ADEN	Yemeni port built in the crater of an extinct volcano	aden
 AEGEAN	Sea between Greece and Anatolia	aegean
 AESCHYLUS	Athenian "father of tragedy"	aeschylus
@@ -13,7 +13,7 @@ AFRICA	Continent of the Mali and Songhai empires	africa
 AKBAR	Third Mughal emperor (1556–1605)	akbar
 AKHENATEN	Pharaoh who worshipped the sun disc	akhenaten
 ALARIC	Visigoth king who sacked Rome in 410	alaric-i
-ALEPPO	Ancient trading city of northern Syria	aleppo
+ALEPPO	Ancient trading city famed for its great citadel	aleppo
 ALEXANDER	Macedonian conqueror known as "the Great"	alexander-the-great
 ALEXANDRIA	Egyptian port with a famous lighthouse and library	alexandria
 ALFRED	King of Wessex known as "the Great"	alfred-the-great
@@ -41,8 +41,8 @@ ARMENIA	Highland land of the southern Caucasus	armenia
 ARTEMIS	Greek goddess of hunting	artemis
 ASHOKA	Maurya emperor who turned to the Buddha's teaching	ashoka
 ASIA	Largest continent	asia
-ATAHUALPA	Last Sapa Inca before the Spanish conquest	atahualpa
-ATEN	Sun disc worshipped by Akhenaten	aten
+ATAHUALPA	Andean emperor captured by Pizarro at Cajamarca	atahualpa
+ATEN	Sun disc worshipped at Amarna above all gods	aten
 ATHENA	Greek goddess of wisdom	athena
 ATHENS	Greek city of the Parthenon	athens
 ATTICA	Peninsula of ancient Athens	attica
@@ -57,7 +57,7 @@ AVARS	Nomads who ruled a khaganate on the Danube plain	avars
 AVICENNA	Persian philosopher and physician, Ibn Sina	avicenna
 BABUR	Founder of the Mughal Empire	babur
 BABYLON	Hammurabi's city on the Euphrates	babylon
-BACTRIA	Land between the Hindu Kush and the Amu Darya	bactria
+BACTRIA	Central Asian land ruled by Greek kings after Alexander	bactria
 BAGHDAD	City on the Tigris founded by the Abbasids in 762	baghdad
 BAKU	Capital on the Caspian Sea, famous for its oil	baku
 BALI	Island east of Java	bali
@@ -67,7 +67,7 @@ BANGKOK	Capital of Thailand	bangkok
 BARCELONA	Capital of Catalonia	barcelona
 BAROQUE	Grand style of 17th-century art and music	baroque
 BASRA	Port city of southern Iraq	basra
-BATU KHAN	Mongol prince who founded the Golden Horde	batu-khan
+BATU KHAN	Grandson of Genghis who led the Mongols into Europe in 1241	batu-khan
 BAVARIA	German land of Munich	bavaria
 BAYBARS	Mamluk sultan who fought the Mongols	baybars
 BAZAAR	Covered market of the Islamic world	bazaar
@@ -81,24 +81,24 @@ BERBERS	Indigenous peoples of North Africa	berbers
 BERGEN	Norwegian port of the Hanseatic League	bergen
 BERLIN	Capital of Germany	berlin
 BISHOP	Church leader of a diocese	bishop
-BISMARCK	Prussian statesman who unified Germany	otto-von-bismarck
+BISMARCK	The "Iron Chancellor", in office 1871–1890	otto-von-bismarck
 BLACK DEATH	Plague that swept Eurasia in the 1340s	black-death
-BLACK SEA	Sea north of Anatolia	black-sea
-BOERS	Dutch-speaking settlers of southern Africa	boers
+BLACK SEA	Waters north of Anatolia, reached through the Bosporus	black-sea
+BOERS	Afrikaner farmers of the Transvaal and the Orange Free State	boers
 BOGOTA	Capital of Colombia	bogota
 BOHEMIA	Kingdom of Prague	bohemia
 BOLIVAR	Liberator of much of South America	simon-bolivar
 BOLIVIA	South American country of the silver mountain of Potosí	bolivia
 BORDEAUX	Wine city on the Garonne	bordeaux
 BORNEO	Large island shared by Malaysia, Indonesia and Brunei	borneo
-BOROBUDUR	Great Buddhist temple of central Java	borobudur
+BOROBUDUR	Great Buddhist monument built under the Sailendra kings	borobudur
 BOSNIA	Balkan land named after its river	bosnia
 BOUDICA	Queen of the Iceni who rose against Rome	boudica
-BRAHMAPUTRA	Great river of Tibet, Assam and Bangladesh	brahmaputra
+BRAHMAPUTRA	Great river of Assam and Bangladesh	brahmaputra
 BRAZIL	Largest country in South America	brazil
 BREMEN	Hanseatic port on the Weser	bremen
 BRITAIN	Island of England, Scotland and Wales	britain
-BRONZE AGE	Age of tools made of copper and tin	bronze-age
+BRONZE AGE	Era of tools made of copper and tin	bronze-age
 BRUSSELS	Capital of Belgium	brussels
 BUDDHA	Siddhartha Gautama, the "awakened one"	gautama-buddha
 BUDDHISM	Religion founded on the teaching of Siddhartha Gautama	buddhism
@@ -124,13 +124,13 @@ CAPE TOWN	Port city on Table Bay	cape-town
 CARIBBEAN	Sea of many islands south of Florida	caribbean
 CARTHAGE	Phoenician city in Tunisia, enemy of Rome	carthage
 CASPIAN SEA	World's largest inland body of water	caspian-sea
-CASTE	Hereditary social group in India	caste
+CASTE	Hereditary social group, such as the Brahmins	caste
 CATHERINE	Russian empress known as "the Great"	catherine-the-great
 CATTLE	Cows and oxen	cattle
 CAUCASUS	Mountains between the Black Sea and the Caspian	caucasus
 CELTS	Iron Age peoples of Gaul and Britain	celts
 CENSUS	Official count of the people	census
-CHAMPA	Kingdoms of the Cham people in Vietnam	champa
+CHAMPA	Coastal kingdoms south of Dai Viet, annexed in 1832	champa
 CHANGAN	Tang capital, now called Xi'an	changan
 CHARIOT	Two-wheeled horse-drawn war vehicle	chariot
 CHARLEMAGNE	King of the Franks crowned emperor in 800	charlemagne
@@ -138,7 +138,7 @@ CHINA	Land of the Great Wall	china
 CICERO	Greatest orator of Rome	cicero
 CINNAMON	Spice from the bark of a tree	cinnamon
 CLAUDIUS	Roman emperor who invaded Britain in 43	claudius
-CLEOPATRA	Last ruler of Ptolemaic Egypt	cleopatra-vii
+CLEOPATRA	Last of the Ptolemaic rulers, who died in 30 BCE	cleopatra-vii
 CLOVES	Spice from the Maluku Islands	cloves
 CLOVIS	First king of all the Franks	clovis-i
 COAL	Black rock burned as fuel	coal
@@ -157,8 +157,8 @@ CORTES	Conquistador who brought down the Aztec Empire	hernan-cortes
 COSSACKS	Free warrior communities of the steppe	cossacks
 COTTON	Plant fibre woven into cloth	cotton
 CRETE	Largest Greek island	crete
-CRIMEA	Peninsula on the Black Sea	crimea
-CRIMEAN WAR	War of 1853–1856 between Russia and its enemies	crimean-war
+CRIMEA	Peninsula of Sevastopol and Yalta	crimea
+CRIMEAN WAR	Conflict of 1853–1856, centred on the siege of Sevastopol	crimean-war
 CROESUS	Rich last king of Lydia	croesus
 CROSSBOW	Weapon shot with a trigger, used in Han China and medieval Europe	crossbow
 CRUSADE	Holy war called by a pope	crusade
@@ -166,7 +166,7 @@ CTESIPHON	Persian capital on the Tigris	ctesiphon
 CUBA	Largest Caribbean island	cuba
 CUNEIFORM	Wedge-shaped writing pressed into clay	cuneiform
 CUSCO	Inca capital high in the Andes	cusco
-CYPRUS	Eastern Mediterranean island famous for its copper	cyprus
+CYPRUS	Eastern Mediterranean island divided since 1974	cyprus
 CYRUS	Founder of the Persian Empire	cyrus-the-great
 DALAI LAMA	Leading figure of the Gelug school of Tibet	dalai-lama
 DAMASCUS	Syrian capital of the Umayyad caliphs	damascus
@@ -179,7 +179,7 @@ DARWIN	Naturalist of evolution by natural selection	charles-darwin
 DAVID	Biblical king who fought Goliath	david
 DECCAN	Plateau of southern India	deccan
 DELHI	Capital of the sultans and of the later Mughals	delhi
-DELOS	Small Greek island, birthplace of Apollo in myth	delos
+DELOS	Small sacred island at the centre of the Cyclades	delos
 DEMETER	Greek goddess of grain	demeter
 DENMARK	Scandinavian kingdom of Copenhagen	denmark
 DHARMA	Indian idea of duty and moral law	dharma
@@ -190,12 +190,12 @@ DNIEPER	River of Kyiv	dnieper
 DOURO	Portuguese river of port wine	douro
 DUBLIN	Capital of Ireland	dublin
 DUNHUANG	Oasis town of the Mogao caves	dunhuang
-DURGA	Warrior goddess of Hinduism	durga
+DURGA	Many-armed goddess who slew the buffalo demon	durga
 DUTCH	People of the Netherlands	dutch
 EBONY	Dark hardwood of tropical Africa	ebony
 EDDA	Icelandic books of the Norse myths	edda
 EGYPT	Land of the pharaohs	egypt
-ELAM	Ancient land of Susa in south-western Iran	elam
+ELAM	Ancient kingdom ruled from Susa and Anshan	elam
 ELBE	River of Hamburg and Dresden	elbe
 ELIZABETH	English queen who faced the Spanish Armada	elizabeth-i
 EMIR	Arabic title meaning commander	emir
@@ -203,7 +203,7 @@ ENGLAND	Country in the south of Great Britain	england
 ENLIL	Sumerian god of the wind	enlil
 ERASMUS	Dutch humanist scholar of Rotterdam	erasmus
 ETHIOPIA	Land of Aksum and Lalibela	ethiopia
-ETRUSCANS	People of central Italy before the Romans	etruscans
+ETRUSCANS	Pre-Roman people of Tuscany, famous for painted tombs	etruscans
 EUCLID	Greek mathematician of the Elements	euclid
 EUPHRATES	Mesopotamian river of Babylon	euphrates
 EURIPIDES	Athenian playwright of Medea	euripides
@@ -231,7 +231,7 @@ GAUL	Land conquered by Julius Caesar	gaul
 GENEVA	Swiss city of John Calvin	geneva
 GENGHIS KHAN	Founder of the Mongol Empire	genghis-khan
 GENOA	Maritime republic, home of Columbus	genoa
-GEORGIA	Christian country of the South Caucasus	georgia
+GEORGIA	Christian country whose capital is Tbilisi	georgia
 GERMANY	Country unified in 1871	germany
 GHANA	West African country, independent in 1957	ghana
 GHAZNI	Afghan city of Mahmud's empire	ghazni
@@ -260,7 +260,7 @@ HAMMURABI	Babylonian king famous for his law code	hammurabi
 HAN	Chinese dynasty of 202 BCE to 220 CE	han-dynasty
 HANGUL	Korean alphabet created under King Sejong	hangul
 HANNIBAL	Carthaginian general who invaded Italy	hannibal
-HANOI	Capital of Vietnam on the Red River	hanoi
+HANOI	Capital on the Red River, once called Thang Long	hanoi
 HATSHEPSUT	Female pharaoh of the 18th Dynasty	hatshepsut
 HATTUSA	Capital of the Hittites	hattusa
 HAUSA	People of northern Nigeria	hausa
@@ -276,7 +276,7 @@ HINDU KUSH	Mountains of Afghanistan	hindu-kush
 HINDUISM	Major religion of South Asia	hinduism
 HISPANIOLA	Caribbean island of Haiti and the Dominican Republic	hispaniola
 HOMER	Poet of the Iliad and the Odyssey	homer
-HONG KONG	Territory on China's south coast, British until 1997	hong-kong
+HONG KONG	Territory returned by the British in 1997	hong-kong
 HOPLITE	Heavily armed Greek foot soldier	hoplite
 HORUS	Falcon-headed Egyptian sky god	horus
 HUGUENOTS	French Protestants	huguenots
@@ -288,7 +288,7 @@ IBERIA	Peninsula of Spain and Portugal	iberia
 IBN BATTUTA	Moroccan traveller of the 14th century	ibn-battuta
 IEYASU	Founder of the Tokugawa shogunate	tokugawa-ieyasu
 ILIAD	Homer's epic of the Trojan War	iliad
-ILKHANATE	Mongol state of Iran founded by Hulagu	ilkhanate
+ILKHANATE	Mongol realm founded by Hulagu, Kublai's brother	ilkhanate
 IMAM	Leader of prayer in a mosque	imam
 IMHOTEP	Builder of the first pyramid, for King Djoser	imhotep
 INANNA	Sumerian goddess of love and war	inanna
@@ -302,8 +302,8 @@ INDRA	Vedic king of the gods and of thunder	indra
 INDUS	River that gave India its name	indus
 IONIA	Greek coast of western Anatolia	ionia
 IRAN	Country once called Persia	iran
-IRAQ	Land of the Tigris and Euphrates	iraq
-IRON AGE	Age that followed the Bronze Age	iron-age
+IRAQ	Modern country of ancient Mesopotamia	iraq
+IRON AGE	Period that followed the era of bronze tools	iron-age
 ISABELLA	Queen of Castile who sponsored Columbus	isabella-i-of-castile
 ISFAHAN	Persian city of the Safavid shahs	isfahan
 ISIS	Egyptian goddess, wife of Osiris	isis
@@ -311,10 +311,10 @@ ISLAM	Religion that began in Arabia in the 7th century	islam
 ISTANBUL	City on the Bosporus, once Constantinople	istanbul
 ITALY	Boot-shaped peninsula of southern Europe	italy
 JAINISM	Indian religion of non-violence	jainism
-JAMAICA	Caribbean island, British from the 17th century	jamaica
+JAMAICA	Island the English took from the Spanish in 1655	jamaica
 JANISSARIES	Elite Ottoman infantry	janissaries
 JAPAN	Island nation of the shoguns	japan
-JAVA	Indonesian island of Borobudur	java
+JAVA	Indonesian island of Jakarta	java
 JERUSALEM	City sacred to Jews, Christians and Muslims	jerusalem
 JESUITS	Catholic order founded by Ignatius of Loyola	jesuits
 JESUS	Preacher from Galilee	jesus
@@ -340,13 +340,13 @@ KHMER	Empire of Angkor	khmer-empire
 KHUFU	Pharaoh of the Great Pyramid	khufu
 KIEVAN RUS	Medieval state centred on Kyiv	kievan-rus
 KOREA	Peninsula of Silla and Joseon	korea
-KOREAN WAR	War that began in June 1950	korean-war
+KOREAN WAR	Conflict that began in June 1950	korean-war
 KRAKOW	Old royal capital of Poland	krakow
 KRISHNA	Hindu god of the Bhagavad Gita	krishna
 KUBLAI KHAN	Mongol ruler who founded the Yuan dynasty	kublai-khan
 KYIV	Capital of Ukraine	kyiv
 KYOTO	Japanese imperial capital for over a thousand years	kyoto
-KYUSHU	Southernmost of Japan's four main islands	kyushu
+KYUSHU	Island of Nagasaki, southernmost of the four main home islands	kyushu
 LABYRINTH	Maze of the Minotaur	labyrinth
 LAHORE	Great city of the Punjab	lahore
 LAKE CHAD	Shallow body of water in the Sahel	lake-chad
@@ -369,7 +369,7 @@ LINCOLN	President who led the Union in the American Civil War	abraham-lincoln
 LINEAR B	Script of the Mycenaean palaces	linear-b
 LISBON	Capital of Portugal on the Tagus	lisbon
 LITHUANIA	Baltic country, once a great grand duchy	lithuania
-LIU BANG	Founder of the Han dynasty	liu-bang
+LIU BANG	Emperor Gaozu, who founded a dynasty in 202 BCE	liu-bang
 LIVY	Roman historian from Padua	livy
 LOIRE	Longest river in France	loire
 LOMBARDS	Germanic people who settled northern Italy	lombards
@@ -378,7 +378,7 @@ LONG MARCH	Retreat of the Chinese Red Army in 1934–1935	long-march
 LORRAINE	French region on the German border	lorraine
 LOUISIANA	French colony sold to the United States in 1803	louisiana
 LUBECK	Leading city of the Hanseatic League	lubeck
-LUOYANG	Ancient Chinese capital on the Yellow River plain	luoyang
+LUOYANG	Ancient Chinese capital near the Longmen Grottoes	luoyang
 LUTHER	Monk whose 95 theses began the Reformation	martin-luther
 LUTHERANISM	Protestant church named after a German reformer	lutheranism
 LYDIA	Kingdom of Croesus	lydia
@@ -395,7 +395,7 @@ MAGHREB	North-west Africa of Morocco, Algeria and Tunisia	maghreb
 MAGNA CARTA	Charter of 1215 forced on King John	magna-carta
 MAGYARS	The Hungarian people	magyars
 MAHABHARATA	Great Sanskrit epic that contains the Bhagavad Gita	mahabharata
-MAHARAJA	"Great king" in Sanskrit	maharaja
+MAHARAJA	Title meaning "great king", borne by Indian princes	maharaja
 MAHAVIRA	Last great teacher of Jainism	mahavira
 MAINZ	Rhine city where Gutenberg was born	mainz
 MAIZE	Cereal crop of the Aztecs and Maya	maize
@@ -404,7 +404,7 @@ MALI	Empire of Mansa Musa	mali-empire
 MALLORCA	Largest of the Balearic Islands	mallorca
 MALTA	Island south of Sicily	malta
 MAMLUK	Enslaved soldier who could rise to rule	mamluk
-MANCHURIA	Region of north-east China	manchuria
+MANCHURIA	Region of Harbin and Mukden	manchuria
 MANCHUS	People who founded the Qing dynasty	manchus
 MANDELA	South African leader against apartheid	nelson-mandela
 MANILA	Capital of the Philippines	manila
@@ -414,7 +414,7 @@ MANUSCRIPT	Handwritten book	manuscript
 MAO ZEDONG	Communist leader who proclaimed the People's Republic in 1949	mao-zedong
 MARCO POLO	Venetian traveller to China	marco-polo
 MARDUK	Chief god of Babylon	marduk
-MARK ANTONY	Roman general who loved Cleopatra	mark-antony
+MARK ANTONY	Roman general defeated at Actium in 31 BCE	mark-antony
 MARRAKESH	Moroccan city founded by the Almoravids	marrakesh
 MATCHLOCK	Early gun fired by a slow-burning cord	matchlock
 MECCA	Birthplace of the Prophet Muhammad	mecca
@@ -435,14 +435,14 @@ MINERVA	Roman goddess of wisdom	minerva
 MING	Chinese dynasty founded in 1368	ming-empire
 MITANNI	Hurrian kingdom of northern Mesopotamia	mitanni
 MOCTEZUMA	Aztec ruler when the Spanish arrived	moctezuma-ii
-MONGOLIA	Land of steppe north of China	mongolia
+MONGOLIA	Land of steppe whose capital is Ulaanbaatar	mongolia
 MONGOLS	People united by Genghis Khan	mongols
 MONSOON	Seasonal wind that brings rain to India	monsoon
 MONTREAL	Largest city of Quebec	montreal
 MORAVIA	Eastern region of the Czech Republic	moravia
 MOROCCO	North African kingdom of Fez and Marrakesh	morocco
 MOSCOW	Capital of Russia	moscow
-MOSES	Prophet who led the Israelites out of Egypt	moses
+MOSES	Prophet who received the Ten Commandments on Sinai	moses
 MOSUL	Iraqi city opposite the ruins of Nineveh	mosul
 MOZAMBIQUE	Portuguese colony of south-eastern Africa	mozambique
 MUMBAI	Indian city once called Bombay	mumbai
@@ -463,7 +463,7 @@ NERO	Roman emperor during the great fire of 64	nero
 NEW ENGLAND	North-eastern region of the United States	new-england
 NEW FRANCE	Colony of Quebec and the St Lawrence before 1763	new-france
 NEW GUINEA	World's second-largest island	new-guinea
-NEW YORK	American city once called New Amsterdam	new-york
+NEW YORK	US city the English took from the Dutch in 1664	new-york
 NEW ZEALAND	Pacific island country of the Maori	new-zealand
 NEWTON	Physicist of the laws of motion and gravity	isaac-newton
 NICAEA	City of the first council of the whole church, in 325	nicaea
@@ -472,8 +472,8 @@ NIGERIA	Most populous country of Africa	nigeria
 NILE	Longest river in Africa	nile
 NINEVEH	Assyrian capital on the Tigris	nineveh
 NIPPUR	Holy city of the Sumerians	nippur
-NOBUNAGA	Japanese warlord who began the unification of Japan	oda-nobunaga
-NORTH SEA	Sea between Britain and Scandinavia	north-sea
+NOBUNAGA	Sengoku warlord who died at Honnō-ji in 1582	oda-nobunaga
+NORTH SEA	Waters between Britain and Scandinavia	north-sea
 NORWAY	Scandinavian land of the fjords	norway
 NUBIA	Land along the Nile south of Egypt	nubia
 NUREMBERG	Franconian city where Albrecht Dürer was born	nuremberg
@@ -489,12 +489,12 @@ ORKNEY	Islands off the north of Scotland	orkney
 ORLEANS	City on the Loire freed by Joan of Arc	orleans
 OSIRIS	Egyptian god of the dead	osiris
 OSMAN	Founder of the Ottoman dynasty	osman-i
-OSTROGOTHS	Eastern Goths of Theodoric	ostrogoths
+OSTROGOTHS	Germanic people of Theodoric the Great's Italian kingdom	ostrogoths
 OTTO	German king crowned emperor in 962	otto-i
 OXUS	River now called the Amu Darya	oxus
 PACHACUTI	Inca ruler who built the empire	pachacuti
 PAKISTAN	Country of the Indus valley, founded in 1947	pakistan
-PALERMO	Capital of Sicily	palermo
+PALERMO	Seat of the Norman king Roger II	palermo
 PALESTINE	Historical region of the southern Levant	palestine
 PANNONIA	Roman province west of the Danube	pannonia
 PAPACY	Office of the Pope	papacy
@@ -508,12 +508,12 @@ PATALIPUTRA	Capital of the Mauryas, now Patna	pataliputra
 PELOPONNESE	Southern peninsula of Greece	peloponnese
 PEPPER	Spice from the berries of an Indian vine	pepper
 PERGAMON	Greek city of a great altar and library	pergamon
-PERICLES	Athenian statesman of the Parthenon age	pericles
+PERICLES	Athenian statesman who gave the Funeral Oration	pericles
 PERSEPHONE	Daughter of Demeter, queen of the underworld	persephone
-PERSIAN GULF	Arm of the sea between Iran and Arabia	persian-gulf
+PERSIAN GULF	Shallow sea entered through the Strait of Hormuz	persian-gulf
 PERU	Country of Machu Picchu	peru
 PESHAWAR	Pakistani city near the Khyber Pass	peshawar
-PETER	Russian tsar, "the Great", who built a new capital on the Baltic	peter-the-great
+PETER	Russian ruler, "the Great", who built a new capital on the Baltic	peter-the-great
 PETRARCH	Italian poet of the sonnets to Laura	petrarch
 PHALANX	Dense block of spearmen	phalanx
 PHARAOH	Title of the kings of ancient Egypt	pharaoh
@@ -532,7 +532,7 @@ POLAND	Country of Warsaw and Kraków	poland
 POLIS	Greek city-state	polis
 POMPEY	Roman general, rival of Julius Caesar	pompey
 PORCELAIN	Fine translucent ceramic first made in China	porcelain
-PORTO	Portuguese city at the mouth of the Douro	porto
+PORTO	Portuguese city that gave its name to a fortified wine	porto
 POSEIDON	Greek god of the sea	poseidon
 POTATO	Andean tuber that spread around the world	potato
 POTOSI	Bolivian city beside a mountain of silver	potosi
@@ -540,7 +540,7 @@ PRAGUE	Capital of Bohemia	prague
 PRETORIA	Administrative capital of South Africa	pretoria
 PTOLEMY	General of Alexander who became king of Egypt	ptolemy-i-soter
 PUNJAB	Land of five rivers	punjab
-PYRENEES	Mountains between France and Spain	pyrenees
+PYRENEES	Mountain range that shelters Andorra	pyrenees
 PYTHAGORAS	Greek philosopher of a famous theorem	pythagoras
 PYTHIA	Priestess of the oracle at Delphi	pythia
 QADI	Judge in Islamic law	qadi
@@ -559,14 +559,14 @@ RAMESSES	Great pharaoh of Abu Simbel	ramesses-ii
 RANJIT SINGH	Founder of the Sikh Empire	ranjit-singh
 RECONQUISTA	Christian wars that took back Iberia	reconquista
 RED ARMY	Soviet land forces founded in 1918	red-army
-RED SEA	Sea between Africa and Arabia	red-sea
+RED SEA	Narrow waters between Africa and Arabia	red-sea
 REIMS	French city of royal coronations	reims
 RENAISSANCE	European rebirth of art and learning	renaissance
 RHINE	River from the Alps to the North Sea	rhine
 RHODES	Aegean island of the Colossus	rhodes
 RHONE	River of Lyon	rhone
 RICE	Grain grown in flooded paddies	rice
-RIGVEDA	Oldest of the Vedas	rigveda
+RIGVEDA	Oldest of the four sacred Hindu hymn collections	rigveda
 ROMAN LAW	Legal system that began with the Twelve Tables	roman-law
 ROMANIA	Country formed in the 19th century from Wallachia and Moldavia	romania
 ROME	City on the Tiber, capital of an empire	rome
@@ -574,7 +574,7 @@ ROSTAM	Greatest hero of the Shahnameh	rostam
 ROYAL NAVY	Britain's fighting fleet	royal-navy
 RUBBER	Elastic material from tree latex	rubber
 RUHR	German industrial region of coal and steel	ruhr
-RUMI	Persian Sufi poet born in Balkh	rumi
+RUMI	Persian poet of the Masnavi, who lived in Konya	rumi
 RUSSIA	Country spanning eastern Europe and northern Asia	russia
 SAHARA	Largest hot desert in the world	sahara
 SAHEL	Semi-arid belt south of the great desert	sahel
@@ -594,7 +594,7 @@ SATRAPY	Province of the Persian Empire	satrapy
 SAVANNAH	Tropical grassland with scattered trees	savannah
 SAXONS	Germanic people who settled England with the Angles	saxons
 SCANDINAVIA	Denmark, Norway and Sweden together	scandinavia
-SCIPIO	Roman general who defeated Hannibal	scipio-africanus
+SCIPIO	Roman general who won at Zama in 202 BCE	scipio-africanus
 SCOTLAND	Northern part of Great Britain	scotland
 SCYTHIANS	Iranian nomads of the steppe north of the Black Sea	scythians
 SEINE	River of Paris	seine
@@ -621,7 +621,7 @@ SICILY	Largest island of the Mediterranean	sicily
 SIERRA LEONE	West African country of Freetown	sierra-leone
 SIKHISM	Religion founded by Guru Nanak	sikhism
 SILK	Fine fabric first produced in China	silk
-SILK ROAD	Trade routes linking China and the Mediterranean	silk-road
+SILK ROAD	Trade routes linking Chang'an and the Mediterranean	silk-road
 SILVER	Precious metal of the mines of Potosí	silver
 SIMA QIAN	Han historian of the Records of the Grand Historian	sima-qian
 SINDH	Pakistani province on the lower Indus	sindh
@@ -641,15 +641,15 @@ SOVIET UNION	Communist state of 1922 to 1991	soviet-union
 SPAIN	Country of Madrid	spain
 SPARTA	Greek city-state famous for its warriors	sparta
 SPARTACUS	Gladiator who led a great slave revolt	spartacus
-SPICE TRADE	Commerce in pepper, cinnamon and cloves	spice-trade
-SRI LANKA	Island off the southern tip of India	sri-lanka
+SPICE TRADE	Commerce in pepper, cinnamon and nutmeg	spice-trade
+SRI LANKA	Island once called Ceylon	sri-lanka
 SRIVIJAYA	Maritime empire based at Palembang	srivijaya
 STALIN	Soviet leader from the late 1920s to 1953	joseph-stalin
 STEEL	Alloy of iron and carbon	steel
 STRABO	Greek geographer from Pontus	strabo
 SUDAN	Country on the Nile south of Egypt	sudan
 SUEZ CANAL	Waterway between the Mediterranean and the Red Sea, opened in 1869	suez-canal
-SUFISM	Mystical tradition of Islam	sufism
+SUFISM	Mystical path followed by the whirling dervishes	sufism
 SUGARCANE	Tall tropical grass of the plantations	sugarcane
 SUI	Dynasty that reunified China in 589	sui-dynasty
 SULAWESI	Large island of eastern Indonesia	sulawesi
@@ -666,11 +666,11 @@ SWAHILI	People and language of the East African coast	swahili
 SWEDEN	Kingdom of Stockholm	sweden
 SWITZERLAND	Mountain country of the cantons	switzerland
 SYR DARYA	Central Asian river from the Tian Shan to the Aral Sea	syr-darya
-SYRIA	Land of Damascus and Aleppo	syria
+SYRIA	Country whose capital is Damascus	syria
 TABRIZ	City of north-western Iran	tabriz
 TACITUS	Roman historian of the Annals	tacitus
-TAGUS	Longest river of Iberia	tagus
-TAIWAN	Island off the south-east coast of China	taiwan
+TAGUS	River that meets the sea at Lisbon	tagus
+TAIWAN	Island once called Formosa	taiwan
 TALENT	Large ancient unit of weight and money	talent
 TAMAR	Queen of Georgia's golden age	tamar-of-georgia
 TANG	Chinese dynasty of 618 to 907	tang-dynasty
@@ -680,7 +680,7 @@ TBILISI	Capital of Georgia	tbilisi
 TEA	Drink made from the leaves of a plant native to China	tea
 TEHRAN	Capital of Iran	tehran
 TELEGRAPH	Wire that sent messages in Morse code	telegraph
-TERCIO	Spanish infantry formation of pikes and guns	tercio
+TERCIO	Spanish infantry square of the 16th and 17th centuries	tercio
 THAILAND	Kingdom once called Siam	thailand
 THANJAVUR	Chola city of the great temple	thanjavur
 THE HAGUE	Seat of the Dutch government	the-hague
@@ -703,7 +703,7 @@ TOURS	City on the Loire near a famous battle of 732	tours
 TOUSSAINT	Leader of the Haitian Revolution	toussaint-louverture
 TRABZON	Black Sea port once called Trebizond	trabzon
 TRAJAN	Roman emperor under whom the empire was largest	trajan
-TRANSOXIANA	Land beyond the Oxus	transoxiana
+TRANSOXIANA	Land of Bukhara and Samarkand, beyond the Amu Darya	transoxiana
 TRIER	Roman city on the Moselle	trier
 TRINIDAD	Larger island of a Caribbean nation, with Tobago	trinidad
 TROJAN WAR	Legendary siege told in the Iliad	trojan-war
@@ -715,7 +715,7 @@ TUNISIA	North African country of ancient Carthage	tunisia
 TURFAN	Oasis city of Xinjiang	turfan
 TURIN	City on the Po, capital of Piedmont	turin
 TURKEY	Country of Anatolia	turkey
-TYROL	Region of the eastern Alps	tyrol
+TYROL	Mountain region around Innsbruck	tyrol
 UKRAINE	Country of the steppe and Kyiv	ukraine
 ULAMA	Muslim religious scholars	ulama
 UNESCO	UN body for education, science and culture	unesco
@@ -735,29 +735,29 @@ VERDUN	French town of a great battle of 1916	verdun
 VERSAILLES	Palace of Louis XIV	versailles
 VICTORIA	British queen of 1837 to 1901	queen-victoria
 VIENNA	Capital of Austria on the Danube	vienna
-VIETNAM	Southeast Asian country of Hanoi	vietnam
+VIETNAM	Southeast Asian country of the Mekong Delta	vietnam
 VIKINGS	Seafaring raiders from Scandinavia	vikings
 VILNIUS	Capital of Lithuania	vilnius
 VIRGIL	Roman poet of the Aeneid	virgil
-VIRGINIA	English colony named in honour of Elizabeth I	virginia
+VIRGINIA	English colony whose first lasting town was Jamestown, 1607	virginia
 VISHNU	Hindu preserver god	vishnu
-VISIGOTHS	Goths who sacked Rome in 410	visigoths
+VISIGOTHS	Germanic people of Alaric, who sacked Rome in 410	visigoths
 VISTULA	Longest river of Poland	vistula
 VIZIER	Chief minister of a sultan	vizier
 VOLGA	Longest river in Europe	volga
 VOLTAIRE	French writer of the Enlightenment	voltaire
 WALES	Country of the United Kingdom west of England	wales
-WAR ELEPHANT	Beast that charged in the battles of Porus and Hannibal	war-elephant
+WAR ELEPHANT	Beast that charged at the Hydaspes and at Zama	war-elephant
 WARSAW	Capital of Poland on the Vistula	warsaw
 WASHINGTON	First president of the United States	george-washington
 WEIMAR	German city of Goethe	weimar
 WESSEX	Kingdom of Alfred the Great	wessex
 WILLIAM	Norman duke who conquered England in 1066	william-the-conqueror
-WINTER WAR	Soviet–Finnish war of 1939–1940	winter-war
+WINTER WAR	Soviet–Finnish conflict of 1939–1940	winter-war
 WU ZETIAN	Only woman to rule China as emperor	wu-zetian
 XENOPHON	Greek soldier who led the Ten Thousand home	xenophon
 XERXES	Persian king who invaded Greece in 480 BCE	xerxes-i
-XIANG YU	Rival of Liu Bang after the fall of the Qin	xiang-yu
+XIANG YU	Chu warlord defeated at Gaixia in 202 BCE	xiang-yu
 XINJIANG	Large region of north-western China	xinjiang
 XUANZANG	Chinese monk who travelled to India for scriptures	xuanzang
 YAMUNA	River of Delhi and Agra	yamuna
@@ -765,7 +765,7 @@ YANGON	Largest city of Myanmar, once called Rangoon	yangon
 YELLOW RIVER	Chinese waterway called "China's sorrow" for its floods	yellow-river
 YEMEN	Land in the south-west of Arabia	yemen
 YORK	English city the Vikings called Jorvik	york
-YUAN	Mongol dynasty of China	yuan-dynasty
+YUAN	Mongol dynasty founded by Kublai Khan	yuan-dynasty
 YUNNAN	Chinese province bordering Myanmar	yunnan
 ZAKAT	Obligatory almsgiving of Islam	zakat
 ZAMBEZI	River of the Victoria Falls	zambezi

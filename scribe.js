@@ -654,8 +654,10 @@ var Scribe = (function () {
       $('.scr-roman').textContent = w ? roman(s, segs) : '';
       if (input.value !== st.text) input.value = st.text;
       remember(slug, { s: s.id, t: st.text, o: st.opt });
-      $('.scr-pic').hidden = true;
+      if (picKey !== picState()) $('.scr-pic').hidden = true;   // a font arriving late re-renders the same words: the picture stays
     }
+    // what a picture shows: the script, the writing, the meaning of a sample, top to bottom or not
+    function picState() { return sc().id + '|' + written(lastSegs) + '|' + (st.sample ? st.sample[1] : '') + '|' + (st.opt.vertical && sc().vertical ? 1 : 0); }
     // typing from the keys, at the caret
     function put(txt, replaceBack) {
       var a = caret ? caret[0] : st.text.length, b = caret ? caret[1] : st.text.length;
@@ -705,7 +707,9 @@ var Scribe = (function () {
       if (a === 'space') put(' '); else if (a === 'back') back(); else if (a === 'clear') { st.text = ''; caret = null; st.consA = false; render(); }
       if (b.classList.contains('scr-make')) makePicture();
       if (b.classList.contains('scr-copy')) { var w = written(lastSegs); if (!w) return status('Write something first.'); (typeof copyText === 'function' ? copyText(w) : navigator.clipboard.writeText(w)).then(function () { status('Copied: ' + w); }, function () { status('Copying was refused by the browser.'); }); }
-      if (b.classList.contains('scr-share')) { var w2 = written(lastSegs); if (!w2) return status('Write something first.'); pictureBlob().then(function (blob) { share(blob, w2); }); }
+      // Share sends the words and the link at once, inside the tap (a phone's share sheet opens only then), with the
+      // picture when one of these words has been made
+      if (b.classList.contains('scr-share')) { var w2 = written(lastSegs); if (!w2) return status('Write something first.'); share(picKey === picState() ? picBlob : null, w2); }
       if (b.classList.contains('scr-copypic')) { if (picBlob && window.ClipboardItem) navigator.clipboard.write([new ClipboardItem({ 'image/png': picBlob })]).then(function () { status('The picture is copied.'); }, function () { status('Copying pictures was refused by the browser.'); }); }
       if (b.classList.contains('scr-sharepic')) { if (picBlob) share(picBlob, written(lastSegs)); }
     });
@@ -727,36 +731,52 @@ var Scribe = (function () {
     });
 
     // ── the picture ──────────────────────────────────────────────────────────────────────────────────────────────
-    var picBlob = null, picUrl = null;
+    // made once per writing (picKey), so that Share and the share sheet run inside the tap, which phones require
+    var picBlob = null, picUrl = null, picKey = null, making = false;
     function pictureBlob() {
-      var s = sc(), w = written(lastSegs);
+      var s = sc(), w = written(lastSegs), fam = family(slug, s);
+      var load = function (f, t) { return document.fonts && document.fonts.load ? document.fonts.load(f, t).catch(function () {}) : Promise.resolve(); };
+      // the script's font and the fonts of the lines under it, so that not even the first picture is drawn in stand-ins
       return loadFont(s).then(function () {
-        return (document.fonts && document.fonts.load ? document.fonts.load('80px ' + family(slug, s), w).catch(function () {}) : Promise.resolve());
+        return Promise.all([load('80px ' + fam, w), load('italic 40px "Crimson Pro"', 'a'), load('28px "Crimson Pro"', 'a'), load('600 22px "Source Sans 3"', 'A')]);
       }).then(function () {
-        var cv = drawPicture({ lang: L.name, script: s.label, material: s.material, family: family(slug, s), dir: s.dir, text: w, roman: roman(s, lastSegs), meaning: st.sample ? st.sample[1] : '', vertical: !!(st.opt.vertical && s.vertical) });
-        return new Promise(function (ok) { cv.toBlob(function (b) { ok(b); }, 'image/png'); });
+        var cv = drawPicture({ lang: L.name, script: s.label, material: s.material, family: fam, dir: s.dir, text: w, roman: roman(s, lastSegs), meaning: st.sample ? st.sample[1] : '', vertical: !!(st.opt.vertical && s.vertical), keepWords: s.engine !== 'han' });
+        return new Promise(function (ok, no) { cv.toBlob(function (b) { if (b) ok(b); else no(new Error('no picture')); }, 'image/png'); });
       });
     }
     function makePicture() {
       if (!written(lastSegs)) return status('Write something first.');
-      status('Making the picture…');
+      if (making) return;
+      var key = picState(); making = true; status('Making the picture…');
       pictureBlob().then(function (blob) {
-        picBlob = blob; if (picUrl) URL.revokeObjectURL(picUrl); picUrl = URL.createObjectURL(blob);
-        var box = $('.scr-pic'), img = $('.scr-pic-img'), dl = $('.scr-dl');
+        making = false;
+        if (picState() !== key) return status('The writing changed: make the picture again.');
+        picBlob = blob; picKey = key; if (picUrl) URL.revokeObjectURL(picUrl); picUrl = URL.createObjectURL(blob);
+        var box = $('.scr-pic'), img = $('.scr-pic-img'), dl = $('.scr-dl'), sh = $('.scr-sharepic');
         img.src = picUrl; img.alt = L.name + ' in ' + sc().label + ': ' + written(lastSegs);
         dl.href = picUrl; dl.setAttribute('download', 'epoch-' + slug + '.png');
-        var inapp = !!window.EPOCH_INAPP;
-        dl.hidden = inapp;
-        $('.scr-copypic').hidden = !(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) || inapp;
-        $('.scr-pic-tip').textContent = inapp ? 'Press and hold the picture to save it.' : '';
+        // phones that can hand a picture to other apps get the share sheet, which also saves it to the photos;
+        // a download there lands in a files folder, and in an app's own browser nowhere
+        var inapp = !!window.EPOCH_INAPP, phone = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
+        var sheet = phone && typeof shareFiles === 'function' && !!shareFiles(blob, 'epoch-' + slug + '.png');
+        dl.hidden = inapp || sheet;
+        $('.scr-copypic').hidden = sheet || inapp || !(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write);
+        sh.textContent = sheet ? 'Save or share the picture' : 'Share the picture';
+        sh.classList.toggle('scr-primary', sheet);
+        $('.scr-pic-tip').textContent = sheet ? 'You can also press and hold the picture to save it.' : phone || inapp ? 'Press and hold the picture to save it.' : '';
         box.hidden = false; status('');
         if (box.scrollIntoView) box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }).catch(function () {
+        making = false;
+        status('This browser could not make the picture. Try again, or copy the text instead.');
       });
     }
     function share(blob, w) {
       if (typeof sharePoster !== 'function') return;
       var url = 'https://the-epoch-institute.org' + location.pathname + (location.pathname === '/write' ? '#' + slug : '#write');
-      sharePoster({ text: w + ' (' + L.name + ', ' + sc().label + ')', url: url, title: 'Written in ' + L.name, heading: 'Share what you wrote', image: blob, file: 'epoch-' + slug + '.png', alt: L.name + ': ' + w });
+      var o = { text: w + ' (' + L.name + ', ' + sc().label + ')', url: url, title: 'Written in ' + L.name, heading: 'Share what you wrote' };
+      if (blob) { o.image = blob; o.file = 'epoch-' + slug + '.png'; o.alt = L.name + ': ' + w; }
+      sharePoster(o);
     }
 
     var startI = st.si; setScript(startI);
@@ -778,9 +798,11 @@ var Scribe = (function () {
     scroll: { bg: ['#efe6d0', '#dccfae'], ink: '#14100a', scroll: true }
   };
   function rnd(seed) { return function () { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+  var PIC_CV = null;   // one canvas for every picture: iOS caps the memory that all the canvases of a page may hold
   function drawPicture(o) {
-    var S = 1080, cv = document.createElement('canvas'); cv.width = S; cv.height = S;
-    var c = cv.getContext('2d'), m = MAT[o.material] || MAT.parchment, r = rnd(7919);
+    var S = 1080, cv = PIC_CV || (PIC_CV = document.createElement('canvas')); cv.width = S; cv.height = S;
+    var c = cv.getContext('2d'); if (!c) throw new Error('no canvas');
+    var m = MAT[o.material] || MAT.parchment, r = rnd(7919);
     // ground
     var g = c.createRadialGradient(S / 2, S * 0.42, S * 0.1, S / 2, S / 2, S * 0.75); g.addColorStop(0, m.bg[0]); g.addColorStop(1, m.bg[1]);
     c.fillStyle = g; c.fillRect(0, 0, S, S);
@@ -798,8 +820,9 @@ var Scribe = (function () {
     if (m.leaf) {   // a palm leaf with its two binding holes
       c.save(); c.shadowColor = 'rgba(0,0,0,0.5)'; c.shadowBlur = 30; roundRect(c, 40, 300, S - 80, 380, 60); var lg = c.createLinearGradient(0, 300, 0, 680); lg.addColorStop(0, '#e8c98a'); lg.addColorStop(0.5, '#d9b06a'); lg.addColorStop(1, '#c2934c'); c.fillStyle = lg; c.fill(); c.restore();
       for (i = 0; i < 40; i++) { c.strokeStyle = 'rgba(120,80,30,0.12)'; c.lineWidth = 1; var ly = 310 + r() * 360; c.beginPath(); c.moveTo(60, ly); c.lineTo(S - 60, ly + (r() - 0.5) * 4); c.stroke(); }
-      [[S * 0.3, 490], [S * 0.7, 490]].forEach(function (h) { c.fillStyle = '#2b2116'; c.beginPath(); c.arc(h[0], h[1], 14, 0, Math.PI * 2); c.fill(); });
-      box = [80, 330, S - 160, 320];
+      // the binding holes near the ends, and the writing between them (holes under the letters looked like ink blots)
+      [[70, 490], [S - 70, 490]].forEach(function (h) { c.fillStyle = '#2b2116'; c.beginPath(); c.arc(h[0], h[1], 12, 0, Math.PI * 2); c.fill(); });
+      box = [100, 330, S - 200, 320];
     }
     if (m.scroll) {   // a hanging paper scroll with wooden rollers
       c.fillStyle = '#3a2416'; roundRect(c, 150, 40, S - 300, 26, 13); c.fill(); roundRect(c, 150, 820, S - 300, 26, 13); c.fill();
@@ -808,7 +831,7 @@ var Scribe = (function () {
     }
     // the writing, as large as fits
     c.fillStyle = m.ink; c.textBaseline = 'alphabetic';
-    if (o.vertical) drawVertical(c, o.text, o.family, box); else drawLines(c, o.text, o.family, box, o.dir === 'rtl', m);
+    if (o.vertical) drawVertical(c, o.text, o.family, box); else drawLines(c, o.text, o.family, box, o.dir === 'rtl', m, o.keepWords !== false);
     // the romanisation, the meaning, and where it was made: clear of the tablet, panel or roller above (they end by 846)
     var foot = m.leaf ? 750 : 900;
     c.textAlign = 'center'; c.direction = 'ltr';
@@ -825,28 +848,46 @@ var Scribe = (function () {
   }
   function roundRect(c, x, y, w, h, r) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
   function fitLine(c, t, max, px, style, fam) { var p = px; c.font = (style ? style + ' ' : '') + p + 'px ' + fam; while (p > 14 && c.measureText(t).width > max) { p -= 2; c.font = (style ? style + ' ' : '') + p + 'px ' + fam; } }
-  // lines broken at spaces (or between signs where a script has no spaces), at the largest size that fits the box
-  function drawLines(c, text, fam, box, rtl, m) {
-    var paras = text.split('\n'), px = 280, lines, lh;
-    function wrap(size) {
+  // lines broken at spaces, at the largest size that fits the box. With keepWords no word is cut while a size of 40px or
+  // more keeps every word whole (a cartouche stays one ring); otherwise, as in Chinese, a line breaks between signs.
+  // a script's own word dividers (runic ᛫ ᛬ ᛭, Old Turkic ⁚, Aegean and Old Persian dividers): a line may break after one
+  var SEP = [0x16EB, 0x16EC, 0x16ED, 0x205A, 0x2E31, 0x00B7, 0x10100, 0x10101, 0x10102, 0x1039F];
+  // the pieces a line is made of: words between spaces, cut after a divider (such a piece joins the next without a space)
+  function pieces(p) {
+    var out = [];
+    p.split(' ').forEach(function (w, wi) {
+      var chars = Array.from(w), cur = '', first = true;
+      chars.forEach(function (ch, j) {
+        cur += ch;
+        if (SEP.indexOf(ch.codePointAt(0)) >= 0 && j < chars.length - 1) { out.push({ t: cur, sp: first && wi ? ' ' : '' }); cur = ''; first = false; }
+      });
+      if (cur || first) out.push({ t: cur, sp: first && wi ? ' ' : '' });
+    });
+    return out;
+  }
+  function drawLines(c, text, fam, box, rtl, m, keepWords) {
+    var paras = text.split('\n'), px, lines = null, lh;
+    function wrap(size, whole) {   // the lines at this size; null when whole and a word is wider than the box
       c.font = size + 'px ' + fam; var out = [];
-      paras.forEach(function (p) {
-        var words = p.split(' '), cur = '';
-        words.forEach(function (w) {
-          var t = cur ? cur + ' ' + w : w;
+      for (var pi = 0; pi < paras.length; pi++) {
+        var words = pieces(paras[pi]), cur = '';
+        for (var wi = 0; wi < words.length; wi++) {
+          var w = words[wi].t, t = cur ? cur + words[wi].sp + w : w;
           if (c.measureText(t).width <= box[2] || !cur) {
             if (!cur && c.measureText(w).width > box[2]) {   // one long word: break it between its signs
+              if (whole) return null;
               var chars = Array.from(w), piece = '';
               chars.forEach(function (ch) { if (c.measureText(piece + ch).width > box[2] && piece) { out.push(piece); piece = ''; } piece += ch; });
               cur = piece;
             } else cur = t;
           } else { out.push(cur); cur = w; }
-        });
+        }
         out.push(cur);
-      });
+      }
       return out;
     }
-    for (; px >= 28; px -= 6) { lines = wrap(px); lh = px * 1.35; if (lines.length * lh <= box[3]) break; }
+    if (keepWords) for (px = 280; px >= 40; px -= 6) { lines = wrap(px, true); lh = px * 1.35; if (lines && lines.length * lh <= box[3]) break; lines = null; }
+    if (!lines) { for (px = 280; px >= 28; px -= 6) { lines = wrap(px, false); lh = px * 1.35; if (lines.length * lh <= box[3]) break; } px = Math.max(px, 28); c.font = px + 'px ' + fam; }
     c.textAlign = 'center'; c.direction = rtl ? 'rtl' : 'ltr';
     var y0 = box[1] + (box[3] - lines.length * lh) / 2 + px;
     lines.forEach(function (l, i) {

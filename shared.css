@@ -2074,7 +2074,16 @@ mark.search-hl {
 .tih-ago { font-family: var(--font-ui); font-size: 11px; font-weight: 600; color: var(--muted); border: 0.5px solid var(--border); border-radius: 999px; padding: 1px 9px; margin-left: auto; white-space: nowrap; }
 .tih-event-hero { border-color: rgba(var(--gold-rgb), 0.55); background: linear-gradient(135deg, rgba(var(--gold-rgb), 0.07), transparent 55%), var(--surface); }
 .tih-event-hero .tih-event-title { font-size: 16px; }
-@media (max-width: 480px) { .tih-has-thumb { grid-template-columns: 120px minmax(0, 1fr); } .tih-event-thumb { width: 120px; height: 80px; } }
+/* phones: the picture sits beside the date and the title, and the text below runs the card's full width (beside a
+   picture all the way down it was a column of three or four words); the anniversary card shows its picture full width */
+@media (max-width: 480px) {
+  .tih-has-thumb { grid-template-columns: 96px minmax(0, 1fr); column-gap: 14px; }
+  .tih-has-thumb .tih-event-main { display: contents; }
+  .tih-has-thumb .tih-event-thumb { width: 96px; height: 72px; grid-row: span 2; }
+  .tih-has-thumb .tih-event-main > :not(.tih-event-year):not(.tih-event-title) { grid-column: 1 / -1; }
+  .tih-event-hero.tih-has-thumb { grid-template-columns: minmax(0, 1fr); }
+  .tih-event-hero .tih-event-thumb { width: 100%; height: auto; aspect-ratio: 16 / 9; grid-row: auto; margin-bottom: 10px; }
+}
 .tih-event-year {
   font-family: var(--font-ui); font-size: 12px;
   letter-spacing: 0.02em; color: var(--gold); margin: 0 0 8px;
@@ -2292,7 +2301,7 @@ mark.search-hl {
 .newsletter-main-form button:hover { background: rgba(var(--gold-rgb),0.08); }
 #newsletter-msg { font-family: var(--font-text); font-size: 16px; color: var(--success); margin-top: 12px; }
 /* Footer newsletter compact */
-.footer-newsletter { margin-top: 16px; }
+.footer-newsletter { margin-top: 0; }   /* level with the other columns' headings; a wrapped row keeps the row gap */
 .footer-nl-label {
   display: block; font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--gold); opacity: 0.7; margin-bottom: 8px; font-weight: 600;}
@@ -2589,6 +2598,12 @@ body.shr-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .shr, .shr-box { animation: none; } }
 .page-share-row { margin: 14px 0 0; }
 .info-share-row .page-share::before { content: '\2197'; font-size: 12px; }
+/* a profile's Save and Share buttons: one row on wide screens (the page's own style), two equal pairs on phones, where
+   four in a row squeezed the labels onto two lines and out of their borders */
+@media (max-width: 600px) {
+  .empire-page .info-share-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .empire-page .info-share-btn { justify-content: center; white-space: nowrap; min-height: 44px; padding: 8px 10px; }
+}
 
 /* ── Homepage (design pass, Oct 2026) ── */
 .hero.hero-compact { min-height: auto; padding: 150px 24px 64px; }
@@ -3056,6 +3071,14 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .enc-item.has-img a { grid-template-columns: 56px minmax(0,1fr) auto; column-gap: 14px; }
 .enc-item.has-img .enc-snip { grid-column: 2 / -1; }
 .enc-thumb { grid-row: 1 / span 2; width: 56px; height: 56px; object-fit: cover; border-radius: 2px; background: var(--surface); }
+/* phones: the type and dates go under the name (beside it, a long line such as "kingdom · state · 8th–6th century BCE ·
+   Europe" ran over the name and off the screen) */
+@media (max-width: 600px) {
+  .enc-item a { grid-template-columns: minmax(0, 1fr); }
+  .enc-item.has-img a { grid-template-columns: 56px minmax(0, 1fr); }
+  .enc-item.has-img .enc-type { grid-column: 2; }
+  .enc-type { white-space: normal; padding-top: 0; line-height: 1.4; }
+}
 /* /search: the encyclopedia list's look, with a search button, region and century filters, emblems for profiles */
 .srch-box { display: flex; gap: 8px; }
 .srch-box .enc-search { flex: 1; min-width: 0; }
@@ -3077,7 +3100,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
   .srch-row .srch-check { flex-direction: row; align-items: center; gap: 10px; }
 }
 .enc-count-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-.enc-random, .enc-random-link { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 2px; padding: 5px 12px; cursor: pointer; text-decoration: none; display: inline-block; }
+.enc-random, .enc-random-link { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 2px; padding: 5px 12px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
 .enc-random:hover, .enc-random-link:hover { border-color: var(--gold); }
 .enc-seealso { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
 .enc-seealso a { display: flex; align-items: center; gap: 10px; padding: 8px; border: 1px solid var(--border); border-radius: 2px; text-decoration: none; color: var(--text); }
@@ -3103,7 +3126,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
   .enc-body { grid-template-columns: 1fr; }
   .enc-fig { width: 100%; max-width: 360px; order: -1; }
   .enc-desc { font-size: 18px; }
-  .enc-controls { top: 56px; }
+  .enc-controls { position: static; }   /* on a phone the search and its rows of chips filled half the screen above the results */
   .enc-sort { margin-left: 0; }
 }
 /* states */
@@ -4504,6 +4527,7 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .home-continue-card .hc-n { font-family: var(--font-text); font-size: 16px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .home-continue-card .hc-t { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .home-continue-clear { background: none; border: 0; cursor: pointer; }
+.home-continue-acts { display: inline-flex; align-items: baseline; gap: 18px; }
 .tih-strip-pic { display: block; position: relative; border-radius: 4px; overflow: hidden; border: 0.5px solid var(--border); text-decoration: none; }
 /* the caption names the day's anniversary event; it sits on the picture, so its colours are fixed in both themes */
 .tih-strip-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 16px 14px; background: linear-gradient(rgba(8, 9, 12, 0), rgba(8, 9, 12, 0.9)); color: #f4efe4; font-family: var(--font-display); font-size: 16px; line-height: 1.3; }
@@ -4525,7 +4549,7 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .scribe-more a { color: var(--gold); text-decoration: none; }
 .scribe-more a:hover { text-decoration: underline; }
 .scr-loading { font-family: var(--font-ui); font-size: 14px; color: var(--muted); padding: 24px; border: 1px dashed var(--border); border-radius: var(--border-radius-lg); text-align: center; }
-.scr { display: grid; gap: 14px; }
+.scr { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }   /* one column no wider than the page: a long sample once widened it past a phone's edge */
 .scr-scripts { display: flex; flex-wrap: wrap; gap: 8px; }
 .scr-script { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--muted); background: none; border: 1px solid var(--border); border-radius: 999px; padding: 6px 16px; min-height: 36px; cursor: pointer; }
 .scr-script[aria-checked="true"] { color: var(--bg); background: var(--gold); border-color: var(--gold); }
@@ -4562,18 +4586,20 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .scr-key.is-word { border-color: rgba(var(--gold-rgb), 0.45); }
 .scr-key.is-det { border-style: dashed; }
 .scr-kg { font-size: 28px; line-height: 1.25; min-height: 1.25em; }
+/* hieroglyphs and cuneiform: tall signs (the foot, the reed) get room above their value instead of running into it */
+.scr[data-engine="hiero"] .scr-kg, .scr[data-engine="syllabic"] .scr-kg { line-height: 1.6; min-height: 1.6em; }
 .scr-kv { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); line-height: 1.2; }
 .scr-kh { font-family: var(--font-ui); font-size: 11px; color: var(--muted); line-height: 1.25; text-align: center; max-width: 100%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .scr-kb-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
 .scr-act { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; min-height: 38px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
 .scr-act:hover { border-color: var(--gold); }
 .scr-act[hidden] { display: none; }
-.scr-act.scr-make { background: var(--gold); border-color: var(--gold); color: var(--bg); }
-.scr-act.scr-make:hover { background: var(--gold-light); border-color: var(--gold-light); }
+.scr-act.scr-make, .scr-act.scr-primary { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.scr-act.scr-make:hover, .scr-act.scr-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
 .scr-note { font-family: var(--font-text); font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0; }
 .scr-samples { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .scr-try { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); }
-.scr-sample { font-family: var(--font-text); font-size: 16px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; cursor: pointer; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.scr-sample { font-family: var(--font-text); font-size: 16px; line-height: 1.35; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 5px 12px; cursor: pointer; max-width: 100%; text-align: left; overflow-wrap: anywhere; }
 .scr-sample:hover { border-color: var(--gold); }
 .scr-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .scr-pic { display: grid; gap: 10px; justify-items: start; }
@@ -4718,6 +4744,49 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   .fm-area, .fm-route, .fm-mark, .fm-label { transition: none; }
   .fm-route.is-new .fm-route-p, .fm-route.is-new .fm-arrow { animation: none; }
+}
+
+/* ── Alignment pass (Oct 2026) ─────────────────────────────────────────────────────────────────────────────────────── */
+/* pictures cropped to fill their box keep the upper part, where faces and the tops of buildings are (the centre cut
+   Louis IX's head off in Which Came First?); emblems drawn whole (contain) stay centred */
+.gm-fc-img img, .gm-ocard img, .gm-pz-strip img, .gm-wt img, .path-thumbs img, .path-step img, .enc-thumb, .enc-seealso img,
+.enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .announcement-card-img, .quiz-img, .tih-strip-pic img,
+.kd-potd img, .kd-door-img img, .profile-section-fig img, .contributor-avatar img { object-position: center 25%; }
+.enc-thumb.srch-emblem { object-position: center; }
+/* Connections: Submit is a pill in line with Shuffle and Deselect (as a .hero-cta it kept a 48px top margin) */
+.gm-conn-acts .hero-cta { margin: 0; display: inline-flex; align-items: center; min-height: 36px; padding: 6px 22px; border-radius: 999px; font-size: 13px; letter-spacing: 0.04em; }
+/* the crossword's clue lists: the numbers in a column of their own, so 1-9 and 10+ start their clues at one line */
+.gm-cw-clues button { padding-left: 37px; text-indent: -29px; }
+.gm-cw-clues button b { display: inline-block; width: 22px; margin-right: 3px; text-align: right; text-indent: 0; }   /* + the space after it: 29px */
+/* previous and next entry: a long name takes two lines instead of ending in "…" */
+.ref-prevnext a { align-content: start; }
+.ref-prevnext .nm { white-space: normal; text-overflow: clip; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.3; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  /* the World Timeline's zoom buttons get a strip of their own above the chart, instead of lying over the bars */
+  .tl-box { padding-top: 40px; }
+  .tl-box .atl-zoom { top: 5px; right: 6px; grid-auto-flow: column; gap: 4px; }
+  .tl-box .atl-zoom button { width: 40px; height: 30px; font-size: 17px; }
+}
+@media (max-width: 560px) {
+  /* the games' tab strip scrolls on phones: it fades at the right edge so a tab cut there reads as more to come */
+  .gm-tabs::after { content: ''; position: sticky; right: 0; flex: 0 0 34px; background: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--surface) 75%); pointer-events: none; z-index: 2; }
+}
+@media (max-width: 480px) {
+  /* Which Came First? has four choices: two by two on phones, each on one line */
+  .gm-seg[data-for="first"] { display: grid; grid-template-columns: 1fr 1fr; width: 100%; border-radius: 14px; }
+  .gm-seg[data-for="first"] button { white-space: nowrap; }
+  .gm-seg[data-for="first"] button + button { border-left: 0; }
+  .gm-seg[data-for="first"] button:nth-child(even) { border-left: 1px solid var(--border); }
+  .gm-seg[data-for="first"] button:nth-child(n+3) { border-top: 1px solid var(--border); }
+  /* Kids mode's larger labels under the century strip: every tenth century */
+  [data-kids="1"] .cen-bars li:not(:nth-child(10n+1)) .cen-lbl { display: none; }
+}
+/* touch screens: small text links and folds get a finger-sized target without changing how they look */
+@media (pointer: coarse) {
+  .ref-crumbs a { display: inline-block; padding: 10px 4px; margin: -10px -4px; }
+  .ref-cite summary, .od-cols summary, .tl-regions-wrap summary, .pass-restore summary, .fm-words summary, .ct-faq summary { padding-block: 10px; margin-block: -10px; }
+  .cen-all summary { padding-block: 8px; margin-block: 2px; }
+  .ref-copy { min-height: 34px; }
 }
 
 /* ── Kids mode (html[data-kids="1"], set before first paint from localStorage epoch-kids; always on for /kids) ──────

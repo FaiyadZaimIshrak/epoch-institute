@@ -817,7 +817,8 @@ initNav('games');
         if (id !== Z.id) return;
         var side = Math.min(im.naturalWidth, im.naturalHeight), px = Math.min(side, 800), cv = document.createElement('canvas');
         cv.width = cv.height = px;
-        cv.getContext('2d').drawImage(im, (im.naturalWidth - side) / 2, (im.naturalHeight - side) / 2, side, side, 0, 0, px, px);
+        // a square from the middle of a wide picture, from the upper part of a tall one (faces, the tops of buildings)
+        cv.getContext('2d').drawImage(im, (im.naturalWidth - side) / 2, (im.naturalHeight - side) * 0.3, side, side, 0, 0, px, px);
         try { Z.url = cv.toDataURL('image/jpeg', 0.88); } catch (e) { Z.url = c.big; }
         deal();
       };
@@ -1098,10 +1099,24 @@ initNav('games');
       var d = +b.getAttribute('data-d'), y = Y.cur + d; if (y === 0 || (Y.cur > 0) !== (y > 0) && Math.abs(d) === 1) y = d < 0 ? -1 : 1;
       setYear(y);
     });
-    // the scale under the slider
+    // the scale under the slider; a year that would touch its neighbour is left out (phones, Kids mode's larger type),
+    // and the two ends always stay
     $('year-scale').innerHTML = [-3000, -1000, 1, 500, 1000, 1500, 1800, 1900, 2000].map(function (y) {
       return '<span style="left:' + (toPos(y) / 10).toFixed(2) + '%">' + (y < 0 ? (-y) + ' BCE' : y === 1 ? '1 CE' : y) + '</span>';
     }).join('');
+    function fitScale() {
+      var sp = $('year-scale').children, n = sp.length, last = null, i;
+      for (i = 0; i < n; i++) sp[i].hidden = false;
+      if (!$('year-scale').offsetWidth) return;
+      var end = sp[n - 1].getBoundingClientRect();
+      for (i = 0; i < n - 1; i++) {
+        var r = sp[i].getBoundingClientRect();
+        if ((last && r.left < last.right + 8) || (i > 0 && r.right > end.left - 8)) sp[i].hidden = true; else last = r;
+      }
+    }
+    window.addEventListener('resize', fitScale);
+    document.addEventListener('epoch:kids', function () { setTimeout(fitScale, 60); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitScale);
     function rounds() {
       Array.prototype.forEach.call($('year-rounds').children, function (li, i) {
         var r = Y.results[i]; li.className = r ? (r.pts >= 80 ? 'r-gold' : r.pts >= 40 ? 'r-silver' : r.pts > 0 ? 'r-bronze' : 'r-miss') : (i === Y.round - 1 ? 'is-now' : '');
@@ -1156,7 +1171,7 @@ initNav('games');
     }
     $('year-new').addEventListener('click', newGame);
     var started = false;
-    return { show: function () { if (!started) { started = true; newGame(); } } };
+    return { show: function () { if (!started) { started = true; newGame(); } fitScale(); } };
   })();
   MODS.year = Year;
 

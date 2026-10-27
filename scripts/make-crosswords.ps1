@@ -3,14 +3,17 @@
 #   & scripts\make-crosswords.ps1 [-Count 365]
 # A puzzle has 13-18 answers, every one crossing another and all joined together; no two answers lie side by side
 # (no stray two-letter words), each answer starts and ends against an empty cell or the edge. An answer is not used
-# again within 30 puzzles, no answer sits inside another of the same puzzle, and places are at most 60% of a puzzle,
-# with at least two people and two other things (events, works, ideas). The kinds come from the encyclopedia entries.
+# again within 30 puzzles, no answer sits inside another of the same puzzle, no clue names another answer of the same
+# puzzle (scripts/lib/clue-check.ps1: HANOI's "Capital of Vietnam" keeps VIETNAM out), and places are at most 60% of a
+# puzzle, with at least two people and two other things (events, works, ideas). The kinds come from the encyclopedia
+# entries.
 # Puzzle lines: number, then the answers as direction|row|column|LETTERS (A across, D down; rows and columns from 0).
 param([string]$Repo = (Split-Path $PSScriptRoot), [int]$Count = 365, [int]$Tries = 60, [string]$Words, [string]$Out)
 if (-not $Words) { $Words = Join-Path $Repo "scripts/crossword-words.tsv" }
 if (-not $Out) { $Out = Join-Path $Repo "scripts/crosswords.tsv" }
 $ErrorActionPreference = 'Stop'
 $U8 = New-Object Text.UTF8Encoding($false)
+. "$PSScriptRoot\lib\clue-check.ps1"
 if (-not ('EpochCw.Maker' -as [type])) {
   Add-Type -Language CSharp -TypeDefinition @'
 using System; using System.Collections.Generic; using System.Linq; using System.Text;
@@ -19,6 +22,7 @@ public class Maker {
   const int N = 12;
   char[,] g = new char[N, N]; int[,] m = new int[N, N];   // letters; 1 = part of an across answer, 2 = of a down one
   List<int[]> placed = new List<int[]>(); List<string> words = new List<string>();
+  HashSet<string> clash = new HashSet<string>();   // "A|B": the clue of A names B, or the other way round
   Random rnd;
   public Maker(int seed) { rnd = new Random(seed); }
   void Clear() { g = new char[N, N]; m = new int[N, N]; placed.Clear(); words.Clear(); }
@@ -56,7 +60,7 @@ public class Maker {
     int crossTotal = 0, stall = 0;
     while (words.Count < target && stall < 3) {
       var cands = new List<Tuple<int, string, int, int, bool>>();
-      var sample = pool.Where(w => !words.Contains(w) && !words.Any(x => x.Contains(w) || w.Contains(x))).OrderBy(w => rnd.Next()).Take(140).ToList();
+      var sample = pool.Where(w => !words.Contains(w) && !words.Any(x => x.Contains(w) || w.Contains(x) || clash.Contains(x + "|" + w))).OrderBy(w => rnd.Next()).Take(140).ToList();
       foreach (var w in sample) {
         for (int i = 0; i < w.Length; i++)
           for (int r = 0; r < N; r++) for (int c = 0; c < N; c++) {
@@ -88,8 +92,8 @@ public class Maker {
     return fresh * 3;
   }
   // the best of many attempts that meets the rules, as "A|r|c|WORD\tD|r|c|WORD..." (null when none does)
-  public string Make(string[] pool, Dictionary<string, string> kind, int tries) {
-    string best = null; double bestScore = -1; var P = pool.ToList();
+  public string Make(string[] pool, Dictionary<string, string> kind, int tries, HashSet<string> clashes) {
+    clash = clashes; string best = null; double bestScore = -1; var P = pool.ToList();
     for (int t = 0; t < tries; t++) {
       int target = 15 + rnd.Next(4), cross = Attempt(P, target);
       if (words.Count < 13) continue;
@@ -114,13 +118,19 @@ public class Maker {
 # the answers and their kinds (from the encyclopedia entries' types)
 $enc = [IO.File]::ReadAllText("$Repo\encyclopedia-data.js", $U8)
 $TYPE = @{}; foreach ($mm in [regex]::Matches($enc, '\{slug:"([^"]+)",name:"(?:[^"\\]|\\.)*",type:"([a-z]+)"')) { $TYPE[$mm.Groups[1].Value] = $mm.Groups[2].Value }
-$KIND = New-Object 'Collections.Generic.Dictionary[string,string]'; $ALL = New-Object Collections.Generic.List[string]
+$KIND = New-Object 'Collections.Generic.Dictionary[string,string]'; $ALL = New-Object Collections.Generic.List[string]; $CLUE = @{}
 foreach ($l in [IO.File]::ReadAllLines($Words, $U8)) {
   if (-not $l.Trim() -or $l.StartsWith('#')) { continue }
   $c = $l.Split("`t"); $key = $c[0] -replace '[ -]', ''
   if (-not $TYPE.ContainsKey($c[2])) { throw "crossword-words.tsv: no entry '$($c[2])' for $($c[0])" }
   $t = $TYPE[$c[2]]; $KIND[$key] = $(if ($t -eq 'place' -or $t -eq 'person') { $t } else { 'other' }); $ALL.Add($key)
+  $CLUE[$key] = ClueSet $c[1]
 }
+# answers whose clues name each other never share a puzzle: every word (or run of words) of a clue, and whose clue it is
+$NAMED = @{}
+foreach ($k in $CLUE.Keys) { foreach ($s in $CLUE[$k].Keys) { if (-not $NAMED.ContainsKey($s)) { $NAMED[$s] = New-Object Collections.Generic.List[string] }; $NAMED[$s].Add($k) } }
+$CLASH = New-Object 'Collections.Generic.HashSet[string]'
+foreach ($b in $ALL) { foreach ($v in @($b, "${b}S", "${b}ES")) { if ($NAMED.ContainsKey($v)) { foreach ($a in $NAMED[$v]) { if ($a -ne $b) { [void]$CLASH.Add("$a|$b"); [void]$CLASH.Add("$b|$a") } } } } }
 # the puzzles made before: their numbers go on, and their last 30 hold their answers back
 $file = $Out; $lines = New-Object Collections.Generic.List[string]
 if (Test-Path $file) { foreach ($l in [IO.File]::ReadAllLines($file, $U8)) { $lines.Add($l) } }
@@ -133,7 +143,7 @@ $sw = [Diagnostics.Stopwatch]::StartNew(); $fail = 0
 for ($k = 0; $k -lt $Count; $k++) {
   $held = @{}; foreach ($ws in $recent) { foreach ($w in $ws) { $held[$w] = 1 } }
   $pool = @($ALL | Where-Object { -not $held.ContainsKey($_) })
-  $pz = $maker.Make($pool, $KIND, $Tries)
+  $pz = $maker.Make($pool, $KIND, $Tries, $CLASH)
   if (-not $pz) { $fail++; if ($fail -gt 20) { throw "no puzzle found 20 times (pool $($pool.Count))" }; $k--; continue }
   $num++; $lines.Add("$num`t$pz")
   $recent.Add(@($pz.Split("`t") | ForEach-Object { $_.Split('|')[3] })); if ($recent.Count -gt 30) { $recent.RemoveAt(0) }

@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="Five thousand years of states, empires and civilisations: profiles, an encyclopedia, an atlas, country histories and century pages.">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=56">
+<link rel="stylesheet" href="/shared.css?v=57">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -104,7 +104,7 @@
 <section class="home-section" id="home-continue" aria-labelledby="continue-title" hidden>
   <div class="home-section-hd">
     <h2 class="home-section-title" id="continue-title">Continue where you left off</h2>
-    <button type="button" class="home-section-more home-continue-clear" id="home-continue-clear">Clear</button>
+    <span class="home-continue-acts"><a class="home-section-more" href="/passport">My Passport &rarr;</a><button type="button" class="home-section-more home-continue-clear" id="home-continue-clear">Clear</button></span>
   </div>
   <div class="home-continue-row" id="home-continue-row"></div>
 </section>
@@ -240,7 +240,7 @@
 </div>
 
 <script src="/shared-data.js?v=9"></script>
-<script src="/shared-nav.js?v=39"></script>
+<script src="/shared-nav.js?v=40"></script>
 <script src="/home-data.js?v=14"></script>
 <script src="/reading-paths.js?v=3"></script>
 <script src="/quiz.js?v=6"></script>

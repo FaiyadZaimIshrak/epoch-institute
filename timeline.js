@@ -167,7 +167,7 @@
     var bw = box.clientWidth, tw = tip.offsetWidth, th = tip.offsetHeight, x = px + 14, y = py + 14;
     if (x + tw > bw - 6) x = Math.max(6, px - tw - 14);
     if (y + th > H - 6) y = Math.max(AXIS, py - th - 14);
-    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+    tip.style.left = (x + panel.offsetLeft) + 'px'; tip.style.top = (y + panel.offsetTop) + 'px';   // the box holds the zoom strip above the panel on phones
   }
   function hideTip() { tip.hidden = true; }
 

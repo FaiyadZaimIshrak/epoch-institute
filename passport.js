@@ -1,4 +1,4 @@
-// passport.js - My History (/passport): what this browser has read and played at the Institute, as a passport with
+// passport.js - My Passport (/passport): what this browser has read and played at the Institute, as a passport with
 // stamps. Everything comes from localStorage (epoch-seen: the reading pages, epoch-visits: the days with a visit,
 // epoch-paths, epoch-games, epoch-quiz-streak, epoch-shelf, epoch-recent) and nothing is sent anywhere. A stamp, once
 // earned, is kept in epoch-badges. A backup code (EPOCH1. + base64 JSON of those keys) carries the passport to another
@@ -111,8 +111,8 @@
   var poster = null;
   $('pass-share').addEventListener('click', function () {
     var names = cur.earned.map(function (b) { return b[1]; });
-    poster = poster || (typeof scoreCard === 'function' ? scoreCard({ title: 'My History Passport', score: num(cur.S.pages), unit: cur.S.pages === 1 ? 'page read' : 'pages read', stamps: names.length ? names : ['First page'], note: names.length + (names.length === 1 ? ' stamp' : ' stamps') + ' · ' + cur.S.days + (cur.S.days === 1 ? ' day' : ' days'), cta: 'Start your own passport', url: 'the-epoch-institute.org/passport', kids: document.documentElement.getAttribute('data-kids') === '1' }) : null);
-    if (typeof sharePoster === 'function') sharePoster({ text: 'My History passport at The Epoch Institute: ' + num(cur.S.pages) + ' pages read and ' + names.length + ' stamps.', url: 'https://the-epoch-institute.org/passport', title: 'My History Passport', heading: 'Share your passport', image: poster, file: 'epoch-passport.jpg', alt: 'My History Passport: ' + names.join(', '), btn: $('pass-share') });
+    poster = poster || (typeof scoreCard === 'function' ? scoreCard({ title: 'My Passport', score: num(cur.S.pages), unit: cur.S.pages === 1 ? 'page read' : 'pages read', stamps: names.length ? names : ['First page'], note: names.length + (names.length === 1 ? ' stamp' : ' stamps') + ' · ' + cur.S.days + (cur.S.days === 1 ? ' day' : ' days'), cta: 'Start your own passport', url: 'the-epoch-institute.org/passport', kids: document.documentElement.getAttribute('data-kids') === '1' }) : null);
+    if (typeof sharePoster === 'function') sharePoster({ text: 'My Passport at The Epoch Institute: ' + num(cur.S.pages) + ' pages read and ' + names.length + ' stamps.', url: 'https://the-epoch-institute.org/passport', title: 'My Passport', heading: 'Share your passport', image: poster, file: 'epoch-passport.jpg', alt: 'My Passport: ' + names.join(', '), btn: $('pass-share') });
   });
 
   // ── backup code, restore, clear ──
@@ -161,7 +161,7 @@
   $('pass-clear').addEventListener('click', function () {
     if (Date.now() - armed > 6000) { armed = Date.now(); $('pass-clear').textContent = 'Click again to clear everything'; msg.textContent = 'This removes your history, shelf, streaks and stamps from this browser. Make a backup code first if you want to keep them.'; return; }
     KEYS.forEach(function (k) { try { localStorage.removeItem(k); } catch (e) {} });
-    armed = 0; $('pass-clear').textContent = 'Clear my history'; poster = null; cur = render(); msg.textContent = 'Cleared. Your passport starts again from here.';
+    armed = 0; $('pass-clear').textContent = 'Clear my passport'; poster = null; cur = render(); msg.textContent = 'Cleared. Your passport starts again from here.';
   });
   window.epochPassport = { stats: stats, render: render };
 })();

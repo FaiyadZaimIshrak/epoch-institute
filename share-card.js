@@ -100,7 +100,7 @@ var EpochCard = (function () {
       var GC = ['', '#e6c85f', '#9cc47f', '#8fb4dc', '#bb96d6'], gr = s.grid, nr = gr.length, gg = 14;
       var gs = Math.min(100, (room - (nr - 1) * gg) / nr), gx0 = mid - (4 * gs + 3 * gg) / 2, gy0 = top + (room - nr * gs - (nr - 1) * gg) / 2;
       gr.forEach(function (row, r) { row.forEach(function (lv, k) { round(c, gx0 + k * (gs + gg), gy0 + r * (gs + gg), gs, gs, s.kids ? 22 : 12); c.fillStyle = GC[lv] || T.none; c.fill(); }); });
-    } else if (s.stamps) {   // My History: the passport's stamps, round and a little askew, up to twelve
+    } else if (s.stamps) {   // My Passport: its stamps, round and a little askew, up to twelve
       var stl = s.stamps.slice(0, 12), ns = stl.length, scol = ns > 9 ? 4 : 3, srow = Math.ceil(ns / scol), sg = 28;
       var sd = Math.min(200, (W - 200 - (scol - 1) * sg) / scol, (room - (srow - 1) * sg) / Math.max(1, srow)), sy0 = top + (room - srow * sd - (srow - 1) * sg) / 2;
       stl.forEach(function (name, k) {

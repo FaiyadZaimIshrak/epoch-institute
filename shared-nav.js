@@ -111,7 +111,7 @@ function sharePoster(o) {
 // the line, the address and a button: the old signature, kept for the pages that call it
 function shareThis(text, url, btn) { sharePoster({ text: text, url: url, btn: btn }); }
 // a score poster (share-card.js, fetched the first time a result is shown): { p: promise of the picture, b: once drawn }
-var SHARE_CARD_SRC = '/share-card.js?v=3', CARD_LIB = null;
+var SHARE_CARD_SRC = '/share-card.js?v=4', CARD_LIB = null;
 function scoreCard(spec) {
   CARD_LIB = CARD_LIB || new Promise(function (ok, no) {
     if (window.EpochCard) return ok();
@@ -520,6 +520,7 @@ function initNav(activePage) {
     ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
     ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
     ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
+    ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'],
     ['kids', '/kids', 'Kids Corner', 'History for young explorers'],
     ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'],
     ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']];
@@ -624,7 +625,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/games">History Games</a>
         <a class="footer-link" href="/kids">Kids Corner</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
-        <a class="footer-link" href="/passport">My History</a>
+        <a class="footer-link" href="/passport">My Passport</a>
         <a class="footer-link" href="/research-series">Research Series</a>
         <a class="footer-link" href="/dataset">Open Data</a>
       </div>
@@ -774,7 +775,7 @@ function initNav(activePage) {
         '<p class="shelf-head">Saved' + (shelf.length ? ' · ' + shelf.length : '') + '</p>' +
         (shelf.length ? shelf.map(row).join('') : '<p class="shelf-empty">Nothing saved yet. Open a profile or an entry and save it from here.</p>') +
         (rec2.length ? '<p class="shelf-head">Recently viewed</p>' + rec2.map(row).join('') : '') +
-        '<a class="shelf-passport" href="/passport">My History: your passport &rarr;</a>';
+        '<a class="shelf-passport" href="/passport">My Passport: your stamps and reading &rarr;</a>';
       var sv = document.getElementById('shelf-save');
       if (sv) sv.addEventListener('click', function () {
         var s2 = sGet('epoch-shelf', 100).filter(function (r) { return r && r.u !== here.u; });
