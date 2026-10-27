@@ -68,8 +68,16 @@ jobs:
           install -d -m 700 ~/.ssh
           printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keygen -y -f ~/.ssh/deploy_key > /dev/null \
-            || { echo "::error::SSH_PRIVATE_KEY is not a private key without a passphrase"; exit 1; }
+          # a pasted key that does not load: say what is wrong with it, without showing it
+          if ! err=$(ssh-keygen -y -P '' -f ~/.ssh/deploy_key 2>&1 > /dev/null); then
+            if grep -q '^ssh-' ~/.ssh/deploy_key; then why="it is the public key (a line starting ssh-): paste the private key file, the one without .pub"
+            elif ! grep -q 'PRIVATE KEY-----' ~/.ssh/deploy_key; then why="it has no BEGIN ... PRIVATE KEY line: paste the whole private key file"
+            elif [ "$(wc -l < ~/.ssh/deploy_key)" -lt 3 ]; then why="its line breaks are gone: paste the file as it is, one line under the other"
+            elif printf '%s' "$err" | grep -qi passphrase; then why="it has a passphrase: make a key without one"
+            else why="ssh-keygen says: $err"; fi
+            echo "::error::SSH_PRIVATE_KEY is not a usable private key: $why (docs/DEPLOY.md, One-time setup)"
+            exit 1
+          fi
           host=$(printf '%s' "$SSH_HOST" | tr -d '[:space:]')
           port=$(printf '%s' "$SSH_PORT" | tr -d '[:space:]')
           # the server's host key, so that ssh checks it (scripts/deploy.sh keeps StrictHostKeyChecking on)
