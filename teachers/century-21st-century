@@ -30,8 +30,7 @@
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Teachers' Corner","item":"https://the-epoch-institute.org/teachers/"},{"@type":"ListItem","position":3,"name":"Worksheet: The 21st century"}]},{"@type":"LearningResource","name":"Worksheet: The 21st century","description":"A printable worksheet on the 21st century: name the states on the map, put events in order, match people to their dates and discuss, with an answer key.","url":"https://the-epoch-institute.org/teachers/century-21st-century","learningResourceType":"Worksheet","educationalLevel":"Secondary school","inLanguage":"en-GB","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}}}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body data-nav="teachers">
 

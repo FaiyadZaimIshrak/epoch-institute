@@ -12,7 +12,7 @@ var SECTION_IMAGES = {
   },
   "Achaemenid Empire": {
     foundation:{slug:"cyrus-the-great",name:"Cyrus the Great",img:"/images/encyclopedia/cyrus-the-great.jpg",artist:"Surenae",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cyrus_II_(The_Great)_(cropped).jpg"},
-    socioeconomy:{slug:"royal-road",name:"Royal Road",img:"/images/encyclopedia/royal-road.jpg",artist:"Original creator: Mossmaps Corrections according to Oxford Atlas of World History 2002, The Times Atlas of World Hist...",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Achaemenid_Empire_at_its_greatest_extent_according_to_Oxford_Atlas_of_World_History_2002.jpg"},
+    socioeconomy:{slug:"royal-road",name:"Royal Road",img:"/images/encyclopedia/royal-road.jpg",artist:"Original creator: Mossmaps; Corrections according to Oxford Atlas of World History 2002, The Times Atlas of World History (1989) …",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Achaemenid_Empire_at_its_greatest_extent_according_to_Oxford_Atlas_of_World_History_2002.jpg"},
     military:{slug:"battle-of-thermopylae",name:"Battle of Thermopylae",img:"/images/encyclopedia/battle-of-thermopylae.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:L%C3%A9onidas_aux_Thermopyles_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3690_;_L_3711.jpg"},
     governance:{slug:"darius-i",name:"Darius I",img:"/images/encyclopedia/darius-i.jpg",artist:"Rumlu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darius_I.jpg"},
     impact:{slug:"temple-in-jerusalem",name:"Temple in Jerusalem",img:"/images/encyclopedia/temple-in-jerusalem.jpg",artist:"Berthold Werner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jerusalem_Modell_BW_2.JPG"},
@@ -27,12 +27,12 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-wayna-daga",name:"Battle of Wayna Daga",img:"/images/encyclopedia/battle-of-wayna-daga.jpg",artist:"Kegneketa Jemlieri Hailu of Gondar (fl.1900)",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:The_fall_and_death_of_Ahmad_Gragn.png"}
   },
   "Afsharid Empire": {
-    foundation:{slug:"nader-shah",name:"Nader Shah",img:"/images/encyclopedia/nader-shah.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Nader_Shah._Artist_unknown,_created_in_ca._1740_in_Iran_(cropped).jpg"},
+    foundation:{slug:"nader-shah",name:"Nader Shah",img:"/images/encyclopedia/nader-shah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Nader_Shah._Artist_unknown,_created_in_ca._1740_in_Iran_(cropped).jpg"},
     socioeconomy:{slug:"muscat",name:"Muscat",img:"/images/encyclopedia/muscat.jpg",artist:"Tristan",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Al_Alam_Palace.jpg"},
     military:{slug:"nader-shahs-invasion-of-india",name:"Nader Shah's invasion of India",img:"/images/encyclopedia/nader-shahs-invasion-of-india.jpg",artist:"possibly by Muhammad Ali ibn Abd al-Bayg ibn Ali Quli Jabbadar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nadir_Shah_at_the_sack_of_Delhi_-_Battle_scene_with_Nader_Shah_on_horseback,_possibly_by_Muhammad_Ali_ibn_Abd_al-Bayg_ibn_Ali_Quli_Jabbadar,_mid-18th_century,_Museum_of_Fine_Arts,_Boston.jpg"},
-    governance:{slug:"safavid-empire",name:"Safavid Empire",img:"/images/encyclopedia/safavid-empire.jpg",artist:"Safavid_Flag.png: Orange Tuesday (talk) The original uploader was Orange Tuesday at English Wikipedia. derivative wor...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Safavid_Flag.svg"},
-    impact:{slug:"peacock-throne",name:"Peacock Throne",img:"/images/encyclopedia/peacock-throne.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Mughal_Emperor_and_His_Court,_c._1774_-_V%26A.jpg"},
-    decline:{slug:"erekle-ii",name:"Erekle II",img:"/images/encyclopedia/erekle-ii.jpg",artist:"UnknownUnknown derivative work: Carnby",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Heraclius_II_of_Eastern_Georgia_crop.png"}
+    governance:{slug:"safavid-empire",name:"Safavid Empire",img:"/images/encyclopedia/safavid-empire.jpg",artist:"Orange Tuesday; The original uploader was Orange Tuesday at English Wikipedia.; derivative work by Himasaram",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Safavid_Flag.svg"},
+    impact:{slug:"peacock-throne",name:"Peacock Throne",img:"/images/encyclopedia/peacock-throne.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Mughal_Emperor_and_His_Court,_c._1774_-_V%26A.jpg"},
+    decline:{slug:"erekle-ii",name:"Erekle II",img:"/images/encyclopedia/erekle-ii.jpg",artist:"Unknown; derivative work by Carnby",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Heraclius_II_of_Eastern_Georgia_crop.png"}
   },
   "Akkadian Empire": {
     foundation:{slug:"sargon-of-akkad",name:"Sargon of Akkad",img:"/images/encyclopedia/sargon-of-akkad.jpg",artist:"ALFGRN",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Sargon_of_Akkad_on_his_victory_stele.jpg"},
@@ -45,7 +45,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"zoskales",name:"Zoskales",img:"/images/encyclopedia/zoskales.jpg",artist:"Zheim",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ethio_w3.jpg"},
     socioeconomy:{slug:"adulis",name:"Adulis",img:"/images/encyclopedia/adulis.jpg",artist:"David Stanley from Nanaimo, Canada",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Byzantine_Basilica_(8527948107).jpg"},
     military:{slug:"ezana",name:"Ezana",img:"/images/encyclopedia/ezana.jpg",artist:"CNG Coins",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:AXUM._Ezanas._Circa_330-360.jpg"},
-    governance:{slug:"frumentius",name:"Frumentius",img:"/images/encyclopedia/frumentius.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:St_Frumentius.jpg"},
+    governance:{slug:"frumentius",name:"Frumentius",img:"/images/encyclopedia/frumentius.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:St_Frumentius.jpg"},
     impact:{slug:"rock-hewn-churches-of-lalibela",name:"Rock-hewn churches of Lalibela",img:"/images/encyclopedia/rock-hewn-churches-of-lalibela.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Lalibela,_san_giorgio,_esterno_24.jpg"},
     decline:{slug:"early-muslim-conquests",name:"Early Muslim conquests",img:"/images/encyclopedia/early-muslim-conquests.jpg",artist:"DieBuche",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Map_of_expansion_of_Caliphate.svg"}
   },
@@ -61,7 +61,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"yusuf-ibn-tashfin",name:"Yusuf ibn Tashfin",img:"/images/encyclopedia/yusuf-ibn-tashfin.jpg",artist:"Numismática Pliego",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Yusuf_Ben_Tasfin_dinar_22562.jpg"},
     socioeconomy:{slug:"valencia",name:"Valencia",img:"/images/encyclopedia/valencia.jpg",artist:"Boris Dzhingarov",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Malvarrosa_Beach,_Valencia,_Spain_(29812271043).jpg"},
     military:{slug:"battle-of-sagrajas",name:"Battle of Sagrajas",img:"/images/encyclopedia/battle-of-sagrajas.jpg",artist:"Roque Gameiro",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalha_de_Zalaka_-_Hist%C3%B3ria_de_Portugal,_popular_e_ilustrada.png"},
-    governance:{slug:"ali-ibn-yusuf",name:"Ali ibn Yusuf",img:"/images/encyclopedia/ali-ibn-yusuf.jpg",artist:"User:LouisAragon (uploader)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Coin_of_Almoravid_ruler_Ali_ibn_Yusuf,_struck_at_the_Isbiliya_(Seville)_mint.jpg"},
+    governance:{slug:"ali-ibn-yusuf",name:"Ali ibn Yusuf",img:"/images/encyclopedia/ali-ibn-yusuf.jpg",artist:"LouisAragon (uploader)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Coin_of_Almoravid_ruler_Ali_ibn_Yusuf,_struck_at_the_Isbiliya_(Seville)_mint.jpg"},
     impact:{slug:"marrakesh",name:"Marrakesh",img:"/images/encyclopedia/marrakesh.jpg",artist:"Acp",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Pavillon_Menarag%C3%A4rten.jpg"},
     decline:{slug:"battle-of-ourique",name:"Battle of Ourique",img:"/images/encyclopedia/battle-of-ourique.jpg",artist:"Domingos Sequeira",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BatalhaOurique.jpg"}
   },
@@ -71,13 +71,13 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-nsamankow",name:"Battle of Nsamankow",img:"/images/encyclopedia/battle-of-nsamankow.jpg",artist:"C. Williams",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ashantee_soldier2.jpg"},
     governance:{slug:"thomas-bowdich",name:"Thomas Bowdich",img:"/images/encyclopedia/thomas-bowdich.jpg",artist:"William Derby",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thomas_Edward_Bowdich.jpg"},
     impact:{slug:"golden-stool",name:"Golden Stool",img:"/images/encyclopedia/golden-stool.jpg",artist:"UK gov",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Golden_stool_31_January_1935.jpg"},
-    decline:{slug:"third-anglo-ashanti-war",name:"Third Anglo-Ashanti War",img:"/images/encyclopedia/third-anglo-ashanti-war.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NAM-1971-02-33-1-1.jpg"}
+    decline:{slug:"third-anglo-ashanti-war",name:"Third Anglo-Ashanti War",img:"/images/encyclopedia/third-anglo-ashanti-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NAM-1971-02-33-1-1.jpg"}
   },
   "Assyrian Empire": {
     foundation:{slug:"shamshi-adad-i",name:"Shamshi-Adad I",img:"/images/encyclopedia/shamshi-adad-i.jpg",artist:"Adelheid Otto",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shamshi-Adad_I.png"},
     socioeconomy:{slug:"kanesh",name:"Kanesh",img:"/images/encyclopedia/kanesh.jpg",artist:"Klaus-Peter Simon",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:K%C3%BCltepeOberstadtPalast.jpg"},
     military:{slug:"assyrian-conquest-of-egypt",name:"Assyrian conquest of Egypt",img:"/images/encyclopedia/assyrian-conquest-of-egypt.jpg",artist:"Nigyou",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Neo-Assyrian_map_824-671_BC.png"},
-    governance:{slug:"tiglath-pileser-iii",name:"Tiglath-pileser III",img:"/images/encyclopedia/tiglath-pileser-iii.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tilglath_pileser_iii.jpg"},
+    governance:{slug:"tiglath-pileser-iii",name:"Tiglath-pileser III",img:"/images/encyclopedia/tiglath-pileser-iii.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tilglath_pileser_iii.jpg"},
     impact:{slug:"epic-of-gilgamesh",name:"Epic of Gilgamesh",img:"/images/encyclopedia/epic-of-gilgamesh.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:British_Museum_Flood_Tablet.jpg"},
     decline:{slug:"fall-of-nineveh",name:"Fall of Nineveh",img:"/images/encyclopedia/fall-of-nineveh.jpg",artist:"(Mu-tamajo) むーたんじょ",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Fall_of_nineveh.jpg"}
   },
@@ -98,12 +98,12 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-ain-jalut",name:"Battle of Ain Jalut",img:"/images/encyclopedia/battle-of-ain-jalut.jpg",artist:"MapMaster",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Campaign_of_the_Battle_of_Ain_Jalut_1260.svg"}
   },
   "Aztec Empire": {
-    foundation:{slug:"acamapichtli",name:"Acamapichtli",img:"/images/encyclopedia/acamapichtli.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Acamapichtli,_-_1387,_1395_o_1403,_retrato_an%C3%B3nimo_(~1541).png"},
+    foundation:{slug:"acamapichtli",name:"Acamapichtli",img:"/images/encyclopedia/acamapichtli.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Acamapichtli,_-_1387,_1395_o_1403,_retrato_an%C3%B3nimo_(~1541).png"},
     socioeconomy:{slug:"tenochtitlan",name:"Tenochtitlan",img:"/images/encyclopedia/tenochtitlan.jpg",artist:"thomas kole",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Vista_completa_de_Tenochtitl%C3%A1n.jpg"},
     military:{slug:"ahuitzotl",name:"Ahuitzotl",img:"/images/encyclopedia/ahuitzotl.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ahuitzotl.jpg"},
-    governance:{slug:"moctezuma-ii",name:"Moctezuma II",img:"/images/encyclopedia/moctezuma-ii.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Moctezuma_Mendoza.jpg"},
+    governance:{slug:"moctezuma-ii",name:"Moctezuma II",img:"/images/encyclopedia/moctezuma-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Moctezuma_Mendoza.jpg"},
     impact:{slug:"florentine-codex",name:"Florentine Codex",img:"/images/encyclopedia/florentine-codex.jpg",artist:"Bernardino de Sahagún",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codex_florentino_51_9.jpg"},
-    decline:{slug:"hernan-cortes",name:"Hernán Cortés",img:"/images/encyclopedia/hernan-cortes.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg"}
+    decline:{slug:"hernan-cortes",name:"Hernán Cortés",img:"/images/encyclopedia/hernan-cortes.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg"}
   },
   "Babylonian Empire": {
     foundation:{slug:"sin-muballit",name:"Sin-muballit",img:"/images/encyclopedia/sin-muballit.jpg",artist:"Osama Shukir Muhammed Amin FRCP(Glasg)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Clay_tablet_and_its_sealed_clay_envelope._Legal_document,_listing_of_land_and_their_distribution_to_several_sons._From_Sippar,_Iraq._Old-Babylonian_period._Reign_of_Sin-Muballit,_1812-1793_BCE._Vorderasiatisches_Museum,_Berlin,_Germany.jpg"},
@@ -130,20 +130,20 @@ var SECTION_IMAGES = {
     decline:{slug:"isabel-princess-imperial-of-brazil",name:"Isabel, Princess Imperial of Brazil",img:"/images/encyclopedia/isabel-princess-imperial-of-brazil.jpg",artist:"Joaquim Insley Pacheco",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Isabel,_Princesa_do_Brasil,_1846-1921_(cropped).jpg"}
   },
   "British Empire": {
-    foundation:{slug:"humphrey-gilbert",name:"Humphrey Gilbert",img:"/images/encyclopedia/humphrey-gilbert.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Humphrey_Gilbert_Compton_Castle.jpg"},
+    foundation:{slug:"humphrey-gilbert",name:"Humphrey Gilbert",img:"/images/encyclopedia/humphrey-gilbert.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Humphrey_Gilbert_Compton_Castle.jpg"},
     socioeconomy:{slug:"london",name:"London",img:"/images/encyclopedia/london.jpg",artist:"Ilya Grigorik",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:London_Skyline_(125508655).jpeg"},
     military:{slug:"battle-of-trafalgar",name:"Battle of Trafalgar",img:"/images/encyclopedia/battle-of-trafalgar.jpg",artist:"Clarkson Frederick Stanfield",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Battle_of_Trafalgar_by_William_Clarkson_Stanfield.jpg"},
     governance:{slug:"british-raj",name:"British Raj",img:"/images/encyclopedia/british-raj.jpg",artist:"Edinburgh Geographical Institute; J. G. Bartholomew and Sons.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:British_Indian_Empire_1909_Imperial_Gazetteer_of_India.jpg"},
     impact:{slug:"slavery-abolition-act-1833",name:"Slavery Abolition Act 1833",img:"/images/encyclopedia/slavery-abolition-act-1833.jpg",artist:"Sodacan",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_the_United_Kingdom_(1816-1837).svg"},
-    decline:{slug:"fall-of-singapore",name:"Fall of Singapore",img:"/images/encyclopedia/fall-of-singapore.jpg",artist:"Photographer not identified. \"Official photograph\". Post-Work: User:W.wolny",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Surrender_Singapore.jpg"}
+    decline:{slug:"fall-of-singapore",name:"Fall of Singapore",img:"/images/encyclopedia/fall-of-singapore.jpg",artist:"Photographer not identified. \"Official photograph\". Post-Work: W.wolny",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Surrender_Singapore.jpg"}
   },
   "Byzantine Empire": {
     foundation:{slug:"constantine-i",name:"Constantine I",img:"/images/encyclopedia/constantine-i.jpg",artist:"Merulana",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Statua_di_Costantino_ai_musei_capitolini.jpg"},
     socioeconomy:{slug:"constantinople",name:"Constantinople",img:"/images/encyclopedia/constantinople.jpg",artist:"Cplakidas",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Byzantine_Constantinople-en.png"},
-    military:{slug:"second-arab-siege-of-constantinople",name:"Second Arab siege of Constantinople",img:"/images/encyclopedia/second-arab-siege-of-constantinople.jpg",artist:"47-manasses-chronicle.jpg: Original: Constantine Manasses derivative work: Stegop",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:47-cropped-manasses-chronicle.jpg"},
+    military:{slug:"second-arab-siege-of-constantinople",name:"Second Arab siege of Constantinople",img:"/images/encyclopedia/second-arab-siege-of-constantinople.jpg",artist:"Original: Constantine Manasses; derivative work by Stegop",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:47-cropped-manasses-chronicle.jpg"},
     governance:{slug:"corpus-juris-civilis",name:"Corpus Juris Civilis",img:"/images/encyclopedia/corpus-juris-civilis.jpg",artist:"IusRomanum",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Corpus_Iuris_Civilis_-_Dion%C3%ADsio_Godofredo_-_1583.jpg"},
     impact:{slug:"hagia-sophia",name:"Hagia Sophia",img:"/images/encyclopedia/hagia-sophia.jpg",artist:"Adli Wahid",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hagia_Sophia_(228968325).jpeg"},
-    decline:{slug:"first-crusade",name:"First Crusade",img:"/images/encyclopedia/first-crusade.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peter_the_Hermit.jpg"}
+    decline:{slug:"first-crusade",name:"First Crusade",img:"/images/encyclopedia/first-crusade.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peter_the_Hermit.jpg"}
   },
   "Carolingian Empire": {
     foundation:{slug:"pepin-of-herstal",name:"Pepin of Herstal",img:"/images/encyclopedia/pepin-of-herstal.jpg",artist:"David Aubert (scribe), Loyset Li‚det (illuminator)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:St_Hubert_of_Li%C3%A8ge_offers_his_services_to_Pepin_of_Heristal.jpg"},
@@ -154,11 +154,11 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-fontenoy",name:"Battle of Fontenoy",img:"/images/encyclopedia/battle-of-fontenoy.jpg",artist:"Pierre L'Enfant",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pierre_Lenfant_-_La_Bataille_de_Fontenoy,_le_11_mai_1745_(Ch%C3%A2teau_de_Versailles).jpg"}
   },
   "Chagatai Empire": {
-    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
-    socioeconomy:{slug:"samarkand",name:"Samarkand",img:"/images/encyclopedia/samarkand.jpg",artist:"Registan_-_Gusjer.jpg: Gustavo Jeronimo from Aranjuez, Spain derivative work: MrPanyGoff",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:RegistanSquare_Samarkand.jpg"},
+    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    socioeconomy:{slug:"samarkand",name:"Samarkand",img:"/images/encyclopedia/samarkand.jpg",artist:"Gustavo Jeronimo from Aranjuez, Spain; derivative work by MrPanyGoff",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:RegistanSquare_Samarkand.jpg"},
     military:{slug:"kaidu",name:"Kaidu",img:"/images/encyclopedia/kaidu.jpg",artist:"Maître de la Mazarine",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qaidu_Khan.jpg"},
-    governance:{slug:"timur",name:"Timur",img:"/images/encyclopedia/timur.jpg",artist:"user:shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Timur_reconstruction03.jpg"},
-    impact:{slug:"ulugh-beg",name:"Ulugh Beg",img:"/images/encyclopedia/ulugh-beg.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulugh_Beg,_Timurid_painting_1425-50.jpg"},
+    governance:{slug:"timur",name:"Timur",img:"/images/encyclopedia/timur.jpg",artist:"shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Timur_reconstruction03.jpg"},
+    impact:{slug:"ulugh-beg",name:"Ulugh Beg",img:"/images/encyclopedia/ulugh-beg.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulugh_Beg,_Timurid_painting_1425-50.jpg"},
     decline:{slug:"moghulistan",name:"Moghulistan",img:"/images/encyclopedia/moghulistan.jpg",artist:"Ro4444 at English Wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chagatai_Khanate_(1490).png"}
   },
   "Chaldean Empire": {
@@ -180,15 +180,15 @@ var SECTION_IMAGES = {
   "Delhi Sultanate": {
     foundation:{slug:"muhammad-of-ghor",name:"Muhammad of Ghor",img:"/images/encyclopedia/muhammad-of-ghor.jpg",artist:"CNG Coins",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mu%27izz_al-Din_Muhammad._AH_599-602_AD_1171-1206.jpg"},
     socioeconomy:{slug:"delhi",name:"Delhi",img:"/images/encyclopedia/delhi.jpg",artist:"Marcin Białek",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jama_Masjid_2011.jpg"},
-    military:{slug:"first-battle-of-panipat",name:"First Battle of Panipat",img:"/images/encyclopedia/first-battle-of-panipat.jpg",artist:"Ẓahīr ud-Dīn Muḥammad Bābur (1483-1530) It contains 30 mostly full-page miniatures in fine Mughal style by at least t...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_battle_of_Panipat_and_the_death_of_Sultan_Ibr%C4%81h%C4%ABm,_the_last_of_the_L%C5%8Dd%C4%AB_Sultans_of_Delhi.jpg"},
-    governance:{slug:"balban",name:"Balban",img:"/images/encyclopedia/balban.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sultan_Ghayas-ud-Din_Balban.jpg"},
+    military:{slug:"first-battle-of-panipat",name:"First Battle of Panipat",img:"/images/encyclopedia/first-battle-of-panipat.jpg",artist:"Ẓahīr ud-Dīn Muḥammad Bābur (1483-1530); It contains 30 mostly full-page miniatures in fine Mughal style by at least two different artists.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_battle_of_Panipat_and_the_death_of_Sultan_Ibr%C4%81h%C4%ABm,_the_last_of_the_L%C5%8Dd%C4%AB_Sultans_of_Delhi.jpg"},
+    governance:{slug:"balban",name:"Balban",img:"/images/encyclopedia/balban.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sultan_Ghayas-ud-Din_Balban.jpg"},
     impact:{slug:"qutb-minar",name:"Qutb Minar",img:"/images/encyclopedia/qutb-minar.jpg",artist:"Wasir kasab",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Qutb_Minar_2022.jpg"},
     decline:{slug:"sack-of-delhi",name:"Sack of Delhi",img:"/images/encyclopedia/sack-of-delhi.jpg",artist:"possibly by Muhammad Ali ibn Abd al-Bayg ibn Ali Quli Jabbadar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nadir_Shah_at_the_sack_of_Delhi_-_Battle_scene_with_Nader_Shah_on_horseback,_possibly_by_Muhammad_Ali_ibn_Abd_al-Bayg_ibn_Ali_Quli_Jabbadar,_mid-18th_century,_Museum_of_Fine_Arts,_Boston.jpg"}
   },
   "Dutch Empire": {
     foundation:{slug:"cornelis-de-houtman",name:"Cornelis de Houtman",img:"/images/encyclopedia/cornelis-de-houtman.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:26_Cornelis_de_Houtman.jpg"},
     socioeconomy:{slug:"amsterdam",name:"Amsterdam",img:"/images/encyclopedia/amsterdam.jpg",artist:"Andrés Barrios",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"},
-    military:{slug:"battle-of-the-java-sea",name:"Battle of the Java Sea",img:"/images/encyclopedia/battle-of-the-java-sea.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Haguro-1942.jpg"},
+    military:{slug:"battle-of-the-java-sea",name:"Battle of the Java Sea",img:"/images/encyclopedia/battle-of-the-java-sea.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Haguro-1942.jpg"},
     governance:{slug:"jan-pieterszoon-coen",name:"Jan Pieterszoon Coen",img:"/images/encyclopedia/jan-pieterszoon-coen.jpg",artist:"Jacques Waben",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jan_Pieterszoon_Coen_by_Jacob_Waben.jpg"},
     impact:{slug:"hugo-grotius",name:"Hugo Grotius",img:"/images/encyclopedia/hugo-grotius.jpg",artist:"Michiel Jansz. van Mierevelt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Michiel_Jansz_van_Mierevelt_-_Hugo_Grotius.jpg"},
     decline:{slug:"fourth-anglo-dutch-war",name:"Fourth Anglo-Dutch War",img:"/images/encyclopedia/fourth-anglo-dutch-war.jpg",artist:"Thomas Luny",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Battle_of_the_Dogger_Bank_5_August_1781.jpg"}
@@ -198,7 +198,7 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"karnak",name:"Karnak",img:"/images/encyclopedia/karnak.jpg",artist:"René Hourdry",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Temple_de_Louxor_68.jpg"},
     military:{slug:"battle-of-kadesh",name:"Battle of Kadesh",img:"/images/encyclopedia/battle-of-kadesh.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Egypt_Abou_Simbel6.jpg"},
     governance:{slug:"amarna-letters",name:"Amarna letters",img:"/images/encyclopedia/amarna-letters.jpg",artist:"Osama Shukir Muhammed Amin FRCP(Glasg)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Five_Amarna_letters_on_display_at_the_British_Museum,_LondonA.jpg"},
-    impact:{slug:"akhetaten",name:"Akhetaten",img:"/images/encyclopedia/akhetaten.jpg",artist:"en:User:Markh",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Small_aten_temple.jpg"},
+    impact:{slug:"akhetaten",name:"Akhetaten",img:"/images/encyclopedia/akhetaten.jpg",artist:"Markh",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Small_aten_temple.jpg"},
     decline:{slug:"late-bronze-age-collapse",name:"Late Bronze Age collapse",img:"/images/encyclopedia/late-bronze-age-collapse.jpg",artist:"Alexikoua",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bronze_Age_End.svg"}
   },
   "Elamite Confederation": {
@@ -212,8 +212,8 @@ var SECTION_IMAGES = {
   "Empire of Japan": {
     foundation:{slug:"emperor-meiji",name:"Emperor Meiji",img:"/images/encyclopedia/emperor-meiji.jpg",artist:"Uchida Kuichi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Meiji_Emperor_(cropped)(b).jpg"},
     socioeconomy:{slug:"attack-on-pearl-harbor",name:"Attack on Pearl Harbor",img:"/images/encyclopedia/attack-on-pearl-harbor.jpg",artist:"Imperial Japanese Navy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Attack_on_Pearl_Harbor_Japanese_planes_view.jpg"},
-    military:{slug:"fall-of-singapore",name:"Fall of Singapore",img:"/images/encyclopedia/fall-of-singapore.jpg",artist:"Photographer not identified. \"Official photograph\". Post-Work: User:W.wolny",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Surrender_Singapore.jpg"},
-    governance:{slug:"hirohito",name:"Hirohito",img:"/images/encyclopedia/hirohito.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hirohito_in_dress_uniform_(cropped).jpg"},
+    military:{slug:"fall-of-singapore",name:"Fall of Singapore",img:"/images/encyclopedia/fall-of-singapore.jpg",artist:"Photographer not identified. \"Official photograph\". Post-Work: W.wolny",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Surrender_Singapore.jpg"},
+    governance:{slug:"hirohito",name:"Hirohito",img:"/images/encyclopedia/hirohito.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hirohito_in_dress_uniform_(cropped).jpg"},
     decline:{slug:"battle-of-midway",name:"Battle of Midway",img:"/images/encyclopedia/battle-of-midway.jpg",artist:"USN, photographed from USS Pensacola (CA-24)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:USS_Yorktown_(CV-5)_is_hit_by_a_torpedo_on_4_June_1942.jpg"}
   },
   "Ethiopian Empire": {
@@ -222,28 +222,28 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-shimbra-kure",name:"Battle of Shimbra Kure",img:"/images/encyclopedia/battle-of-shimbra-kure.jpg",artist:"Richard Pankhurst",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Illustration_of_Ahmad_Gragn_at_war.jpg"},
     governance:{slug:"1931-constitution-of-ethiopia",name:"1931 Constitution of Ethiopia",img:"/images/encyclopedia/1931-constitution-of-ethiopia.jpg",artist:"Tekle Hawariat Tekle Mariyam Gedamu Woldegiorgis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1931_Constitution_of_Ethiopia.png"},
     impact:{slug:"addis-ababa",name:"Addis Ababa",img:"/images/encyclopedia/addis-ababa.jpg",artist:"Abshewaga",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Addis_in_night.jpg"},
-    decline:{slug:"second-italo-ethiopian-war",name:"Second Italo-Ethiopian War",img:"/images/encyclopedia/second-italo-ethiopian-war.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Passo_Uarieu.jpg"}
+    decline:{slug:"second-italo-ethiopian-war",name:"Second Italo-Ethiopian War",img:"/images/encyclopedia/second-italo-ethiopian-war.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Passo_Uarieu.jpg"}
   },
   "Fatimid Caliphate": {
     foundation:{slug:"abdallah-al-mahdi-billah",name:"Abdallah al-Mahdi Billah",img:"/images/encyclopedia/abdallah-al-mahdi-billah.jpg",artist:"PHGCOM",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Calif_al_Mahdi_Kairouan_912_CE(png).png"},
     socioeconomy:{slug:"cairo",name:"Cairo",img:"/images/encyclopedia/cairo.jpg",artist:"Jorge Láscar from Melbourne, Australia",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Cairo_Opera_House,_Al_Hurriyah_Park_and_the_Nile_river_(14797782354).jpg"},
-    military:{slug:"al-aziz",name:"al-Aziz",img:"/images/encyclopedia/al-aziz.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Dinar_of_al-%27Aziz_billah,_AH_366_(AD_976-977).jpg"},
-    governance:{slug:"badr-al-jamali",name:"Badr al-Jamali",img:"/images/encyclopedia/badr-al-jamali.jpg",artist:"Md iet (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Juyushi_Mosque,Cairo_(1).jpg"},
+    military:{slug:"al-aziz",name:"al-Aziz",img:"/images/encyclopedia/al-aziz.jpg",artist:"Unknown author",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Dinar_of_al-%27Aziz_billah,_AH_366_(AD_976-977).jpg"},
+    governance:{slug:"badr-al-jamali",name:"Badr al-Jamali",img:"/images/encyclopedia/badr-al-jamali.jpg",artist:"Md iet",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Juyushi_Mosque,Cairo_(1).jpg"},
     impact:{slug:"alamut",name:"Alamut",img:"/images/encyclopedia/alamut.jpg",artist:"Soroush90gh",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Alamut_region_in_Iran.png"},
-    decline:{slug:"first-crusade",name:"First Crusade",img:"/images/encyclopedia/first-crusade.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peter_the_Hermit.jpg"}
+    decline:{slug:"first-crusade",name:"First Crusade",img:"/images/encyclopedia/first-crusade.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peter_the_Hermit.jpg"}
   },
   "French Empire": {
     foundation:{slug:"jacques-cartier",name:"Jacques Cartier",img:"/images/encyclopedia/jacques-cartier.jpg",artist:"Théophile Hamel / After François Nicholas Riss",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jacques_Cartier_1851-1852.jpg"},
     socioeconomy:{slug:"departement",name:"Département",img:"/images/encyclopedia/departement.jpg",artist:"Nilstilar",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:France_d%C3%A9partementale.svg"},
     military:{slug:"battle-of-quiberon-bay",name:"Battle of Quiberon Bay",img:"/images/encyclopedia/battle-of-quiberon-bay.jpg",artist:"Richard Paton",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Battle_of_Quiberon_Bay,_20_November_1759_RMG_BHC0397.tiff"},
-    governance:{slug:"charles-de-gaulle",name:"Charles de Gaulle",img:"/images/encyclopedia/charles-de-gaulle.jpg",artist:"Office of War Information, Overseas Picture Division. [1] The image prefix (LC-USW3) at the Library of Congress image...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:De_Gaulle-OWI_(cropped)_(c)(2).jpg"},
+    governance:{slug:"charles-de-gaulle",name:"Charles de Gaulle",img:"/images/encyclopedia/charles-de-gaulle.jpg",artist:"Office of War Information, Overseas Picture Division. [1] …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:De_Gaulle-OWI_(cropped)_(c)(2).jpg"},
     impact:{slug:"napoleonic-code",name:"Napoleonic Code",img:"/images/encyclopedia/napoleonic-code.jpg",artist:"DerHexer",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Speyer,_Historical_Museum_of_the_Palatinate_-_Code_civil_des_Fran%C3%A7ais.jpg"},
     decline:{slug:"battle-of-dien-bien-phu",name:"Battle of Dien Bien Phu",img:"/images/encyclopedia/battle-of-dien-bien-phu.jpg",artist:"Vietnam People's Army",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Victory_in_Battle_of_Dien_Bien_Phu.jpg"}
   },
   "Garamantian Empire": {
     foundation:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
     socioeconomy:{slug:"foggara",name:"Foggara",img:"/images/encyclopedia/foggara.jpg",artist:"Tavasoli mohsen",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ghasabe_Qanats_of_Gonabad2.jpg"},
-    military:{slug:"septimius-severus",name:"Septimius Severus",img:"/images/encyclopedia/septimius-severus.jpg",artist:"Unknown artistUnknown artist",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Septimius_Severus_busto-Musei_Capitolini.jpg"},
+    military:{slug:"septimius-severus",name:"Septimius Severus",img:"/images/encyclopedia/septimius-severus.jpg",artist:"Unknown artist",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Septimius_Severus_busto-Musei_Capitolini.jpg"},
     governance:{slug:"garama",name:"Garama",img:"/images/encyclopedia/garama.jpg",artist:"Franzfoto",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Garma_(Garama)_-_Ruinen_der_antiken_Stadt_Garma_02.jpg"},
     impact:{slug:"great-man-made-river",name:"Great Man-Made River",img:"/images/encyclopedia/great-man-made-river.jpg",artist:"Danmichaelo",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Great_Man_Made_River_schematic_EN.svg"}
   },
@@ -251,7 +251,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"wilhelm-i",name:"Wilhelm I",img:"/images/encyclopedia/wilhelm-i.jpg",artist:"Wilhelm Kuntzemüller",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kaiser_Wilhelm_I_(3x4_cropped).jpg"},
     socioeconomy:{slug:"basf",name:"BASF",img:"/images/encyclopedia/basf.jpg",artist:"The original uploader was Afrank99 at German Wikipedia.: we create logos",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BASF-Logo_bw.svg"},
     military:{slug:"battle-of-the-somme",name:"Battle of the Somme",img:"/images/encyclopedia/battle-of-the-somme.jpg",artist:"Ivor Castle",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Going_over_the_top_01.jpg"},
-    governance:{slug:"otto-von-bismarck",name:"Otto von Bismarck",img:"/images/encyclopedia/otto-von-bismarck.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Otto_von_Bismarck_1885_(cropped).jpg"},
+    governance:{slug:"otto-von-bismarck",name:"Otto von Bismarck",img:"/images/encyclopedia/otto-von-bismarck.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Otto_von_Bismarck_1885_(cropped).jpg"},
     impact:{slug:"war-guilt-clause",name:"War Guilt Clause",img:"/images/encyclopedia/war-guilt-clause.jpg",artist:"Noël Dorville",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Paris_Peace_Conference.jpg"},
     decline:{slug:"first-world-war",name:"First World War",img:"/images/encyclopedia/first-world-war.jpg",artist:"Collection DocAnciens/docpix.fr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_de_Verdun_1916.jpg"}
   },
@@ -277,22 +277,22 @@ var SECTION_IMAGES = {
     decline:{slug:"skandagupta",name:"Skandagupta",img:"/images/encyclopedia/skandagupta.jpg",artist:"CNG Coins",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Skandagupta_Circa_455-480_CE.jpg"}
   },
   "Han Dynasty": {
-    foundation:{slug:"liu-bang",name:"Liu Bang",img:"/images/encyclopedia/liu-bang.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liu-bang.jpg"},
+    foundation:{slug:"liu-bang",name:"Liu Bang",img:"/images/encyclopedia/liu-bang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liu-bang.jpg"},
     socioeconomy:{slug:"yangtze-river",name:"Yangtze River",img:"/images/encyclopedia/yangtze-river.jpg",artist:"Andrew Hitchcock",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Dusk_on_the_Yangtze_River.jpg"},
-    military:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"},
+    military:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"},
     governance:{slug:"imperial-examination",name:"Imperial examination",img:"/images/encyclopedia/imperial-examination.jpg",artist:"Qiu Ying (仇英) (attributed)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ming-Beamtenpr%C3%BCfungen1.jpg"},
     impact:{slug:"rome",name:"Rome",img:"/images/encyclopedia/rome.jpg",artist:"Diliff",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"},
     decline:{slug:"yellow-turban-rebellion",name:"Yellow Turban Rebellion",img:"/images/encyclopedia/yellow-turban-rebellion.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Yellow_Turban_Rebellion.jpg"}
   },
   "Hittite Empire": {
-    foundation:{slug:"hattusili-i",name:"Hattusili I",img:"/images/encyclopedia/hattusili-i.jpg",artist:"NASA; colorized and wording by Laszlovszky András at Hungarian Wikipedia based on Világtörténet tíz kötetben, Kossuth...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Korahettita_id%C5%91szak_t%C3%A9rk%C3%A9pe.png"},
+    foundation:{slug:"hattusili-i",name:"Hattusili I",img:"/images/encyclopedia/hattusili-i.jpg",artist:"NASA; colorized and wording by Laszlovszky András at Hungarian Wikipedia based on Világtörténet tíz kötetben, Kossuth Könyvkiadó, 1962",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Korahettita_id%C5%91szak_t%C3%A9rk%C3%A9pe.png"},
     military:{slug:"battle-of-kadesh",name:"Battle of Kadesh",img:"/images/encyclopedia/battle-of-kadesh.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Egypt_Abou_Simbel6.jpg"},
     governance:{slug:"hittite-laws",name:"Hittite laws",img:"/images/encyclopedia/hittite-laws.jpg",artist:"Mx. Granger",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Hittite_Cuneiform_Tablet-_Legal_Deposition(%3F).jpg"},
     impact:{slug:"karnak",name:"Karnak",img:"/images/encyclopedia/karnak.jpg",artist:"René Hourdry",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Temple_de_Louxor_68.jpg"},
     decline:{slug:"late-bronze-age-collapse",name:"Late Bronze Age collapse",img:"/images/encyclopedia/late-bronze-age-collapse.jpg",artist:"Alexikoua",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bronze_Age_End.svg"}
   },
   "Holy Roman Empire": {
-    foundation:{slug:"pope-leo-iii",name:"Pope Leo III",img:"/images/encyclopedia/pope-leo-iii.jpg",artist:"Various: Original: Unknown authorUnknown author Restoration: Ferdinando Fuga (1743)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pope_Leo_III_portrait_%E2%80%93_Triclinium_Leoninum.jpg"},
+    foundation:{slug:"pope-leo-iii",name:"Pope Leo III",img:"/images/encyclopedia/pope-leo-iii.jpg",artist:"Various: Original: Unknown author Restoration: Ferdinando Fuga (1743)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pope_Leo_III_portrait_%E2%80%93_Triclinium_Leoninum.jpg"},
     socioeconomy:{slug:"lubeck",name:"Lübeck",img:"/images/encyclopedia/lubeck.jpg",artist:"Oleg Dejan",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:L%C3%BCbeck_-_panoramio.jpg"},
     military:{slug:"battle-of-legnano",name:"Battle of Legnano",img:"/images/encyclopedia/battle-of-legnano.jpg",artist:"The original uploader was Faberh at Italian Wikipedia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BattagliaLegnano.jpg"},
     governance:{slug:"golden-bull-of-1356",name:"Golden Bull of 1356",img:"/images/encyclopedia/golden-bull-of-1356.jpg",artist:"Karl IV.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Goldene_Bulle_Nahaufnahme.jpg"},
@@ -301,14 +301,14 @@ var SECTION_IMAGES = {
   },
   "Ilkhanate": {
     foundation:{slug:"hulagu-khan",name:"Hulagu Khan",img:"/images/encyclopedia/hulagu-khan.jpg",artist:"Rashid-al-Din Hamadani",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hulagu_Khan.jpg"},
-    socioeconomy:{slug:"tabriz",name:"Tabriz",img:"/images/encyclopedia/tabriz.jpg",artist:"user:Elmju",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tabriz_Municipality_Sa%27at_Tower.jpg"},
+    socioeconomy:{slug:"tabriz",name:"Tabriz",img:"/images/encyclopedia/tabriz.jpg",artist:"Elmju",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tabriz_Municipality_Sa%27at_Tower.jpg"},
     military:{slug:"battle-of-ain-jalut",name:"Battle of Ain Jalut",img:"/images/encyclopedia/battle-of-ain-jalut.jpg",artist:"MapMaster",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Campaign_of_the_Battle_of_Ain_Jalut_1260.svg"},
     governance:{slug:"jami-al-tawarikh",name:"Jami' al-Tawarikh",img:"/images/encyclopedia/jami-al-tawarikh.jpg",artist:"Rashid al-Din",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mongol_soldiers_by_Rashid_al-Din_1305.JPG"},
     impact:{slug:"dome-of-soltaniyeh",name:"Dome of Soltaniyeh",img:"/images/encyclopedia/dome-of-soltaniyeh.jpg",artist:"Jb-mhr",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Dome_of_Soltaniyeh_jb1.jpg"},
     decline:{slug:"oljeitu",name:"Öljeitü",img:"/images/encyclopedia/oljeitu.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Khan_Oljaitu_accepts_Yuan_ambassadors,_as_featured_in_Majma%27_al-Tavarikh_(cropped)_(cropped).jpg"}
   },
   "Italian Empire": {
-    foundation:{slug:"menelik-ii",name:"Menelik II",img:"/images/encyclopedia/menelik-ii.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Menelik_II_in_coronation_garb,_Emperor_of_Ethiopia.jpg"},
+    foundation:{slug:"menelik-ii",name:"Menelik II",img:"/images/encyclopedia/menelik-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Menelik_II_in_coronation_garb,_Emperor_of_Ethiopia.jpg"},
     military:{slug:"battle-of-adwa",name:"Battle of Adwa",img:"/images/encyclopedia/battle-of-adwa.jpg",artist:"Franko Khoury.",licence:"PDM-owner",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Adwa.png"},
     governance:{slug:"benito-mussolini",name:"Benito Mussolini",img:"/images/encyclopedia/benito-mussolini.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mussolini_mezzobusto.jpg"},
     impact:{slug:"addis-ababa",name:"Addis Ababa",img:"/images/encyclopedia/addis-ababa.jpg",artist:"Abshewaga",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Addis_in_night.jpg"},
@@ -377,10 +377,10 @@ var SECTION_IMAGES = {
     impact:{slug:"luba-empire",name:"Luba Empire",img:"/images/encyclopedia/luba-empire.jpg",artist:"Library of Congress",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lunda_Empire.png"}
   },
   "Macedonian Empire": {
-    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
+    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
     socioeconomy:{slug:"alexandria",name:"Alexandria",img:"/images/encyclopedia/alexandria.jpg",artist:"TheEgyptian",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:San_Stefano_Grand_Plaza.JPG"},
     military:{slug:"battle-of-the-granicus",name:"Battle of the Granicus",img:"/images/encyclopedia/battle-of-the-granicus.jpg",artist:"Charles Le Brun / Abraham Genoels",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_Le_Brun,_Le_Passage_du_Granique,_1665.png"},
-    governance:{slug:"satrapy",name:"Satrapy",img:"/images/encyclopedia/satrapy.jpg",artist:"Georges Jansoone User: JoJan",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Achaemenid_Satrap_Asia_Minor_end_of_6th_century_BCE.jpg"},
+    governance:{slug:"satrapy",name:"Satrapy",img:"/images/encyclopedia/satrapy.jpg",artist:"Georges Jansoone JoJan",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Achaemenid_Satrap_Asia_Minor_end_of_6th_century_BCE.jpg"},
     impact:{slug:"pergamon",name:"Pergamon",img:"/images/encyclopedia/pergamon.jpg",artist:"Adam Jones from Kelowna, BC, Canada",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Acropolis_-_Bergama_(Pergamon)_-_Turkey_-_10_(5747249729).jpg"},
     decline:{slug:"babylon",name:"Babylon",img:"/images/encyclopedia/babylon.jpg",artist:"David Stanley",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ishtar_Gate.jpg"}
   },
@@ -392,7 +392,7 @@ var SECTION_IMAGES = {
   },
   "Mali Empire": {
     foundation:{slug:"ghana-empire",name:"Ghana Empire",img:"/images/encyclopedia/ghana-empire.jpg",artist:"Luxo",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ghana_empire_map.png"},
-    socioeconomy:{slug:"timbuktu",name:"Timbuktu",img:"/images/encyclopedia/timbuktu.jpg",artist:"Flickr user: Emilio Labrador Santiago de Chile https://www.flickr.com/people/3059349393/",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Donkeys,_Timbuktu.jpg"},
+    socioeconomy:{slug:"timbuktu",name:"Timbuktu",img:"/images/encyclopedia/timbuktu.jpg",artist:"Flickr Emilio Labrador Santiago de Chile 3059349393 (Flickr)",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Donkeys,_Timbuktu.jpg"},
     military:{slug:"songhai-empire",name:"Songhai Empire",img:"/images/encyclopedia/songhai-empire.jpg",artist:"HetmanTheResearcher",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_the_Songhay_Empire.png"},
     governance:{slug:"kouroukan-fouga",name:"Kouroukan Fouga",img:"/images/encyclopedia/kouroukan-fouga.jpg",artist:"Lancine.kounfantoh.fofana",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%DF%9E%DF%99%DF%8E%DF%AC%DF%9E%DF%8A%DF%B2%DF%AC%DF%9D%DF%8E%DF%A5%DF%8A%DF%AB_%DF%98%DF%8F%DF%B2%DF%AC%DF%98%DF%8A.jpg"},
     impact:{slug:"djenne",name:"Djenné",img:"/images/encyclopedia/djenne.jpg",artist:"qiv",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Moschee_von_Djenn%C3%A9.jpg"},
@@ -407,9 +407,9 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-marj-dabiq",name:"Battle of Marj Dabiq",img:"/images/encyclopedia/battle-of-marj-dabiq.jpg",artist:"Şükr-i Bitlisi (Yaşam süresi: 1531)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mercidab%C4%B1k_Muharebesi2.png"}
   },
   "Maratha Empire": {
-    foundation:{slug:"shivaji",name:"Shivaji",img:"/images/encyclopedia/shivaji.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shivaji_British_Museum.jpg"},
+    foundation:{slug:"shivaji",name:"Shivaji",img:"/images/encyclopedia/shivaji.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shivaji_British_Museum.jpg"},
     socioeconomy:{slug:"dabhol",name:"Dabhol",img:"/images/encyclopedia/dabhol.jpg",artist:"Nomaanmetkar",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Dabhol_Graveyard_Mosque.jpg"},
-    military:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Darbarscene.jpg: Cordanrad derivative work: Rani nurmai (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
+    military:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Cordanrad; derivative work by Rani nurmai",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
     governance:{slug:"ashta-pradhan",name:"Ashta Pradhan",img:"/images/encyclopedia/ashta-pradhan.jpg",artist:"Thomas Daniell",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thomas_Daniell,_Sir_Charles_Warre_Malet,_Concluding_a_Treaty_in_1790_in_Durbar_with_the_Peshwa_of_the_Maratha_Empire.jpg"},
     impact:{slug:"delhi",name:"Delhi",img:"/images/encyclopedia/delhi.jpg",artist:"Marcin Białek",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jama_Masjid_2011.jpg"},
     decline:{slug:"third-battle-of-panipat",name:"Third Battle of Panipat",img:"/images/encyclopedia/third-battle-of-panipat.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Third_battle_of_Panipat_13_January_1761.jpg"}
@@ -430,36 +430,36 @@ var SECTION_IMAGES = {
     decline:{slug:"nabonidus-chronicle",name:"Nabonidus Chronicle",img:"/images/encyclopedia/nabonidus-chronicle.jpg",artist:"Osama Shukir Muhammed Amin FRCP(Glasg)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Nabonidus%27s_faults_and_absences_were_recorded_alongside_events_of_his_reign._By_the_autumn_of_539_BCE,_Babylon_had_surrendered_to_the_army_of_king_Cyrus_to_become_part_of_the_growing_Achaemenid_Empire._From_Babylon,_Iraq,_530-400_BCE.jpg"}
   },
   "Ming Empire": {
-    foundation:{slug:"hongwu-emperor",name:"Hongwu Emperor",img:"/images/encyclopedia/hongwu-emperor.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"},
+    foundation:{slug:"hongwu-emperor",name:"Hongwu Emperor",img:"/images/encyclopedia/hongwu-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"},
     socioeconomy:{slug:"manila",name:"Manila",img:"/images/encyclopedia/manila.jpg",artist:"Bahnfrend",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cityscape_of_Manila,_2025_(01).jpg"},
-    military:{slug:"yongle-emperor",name:"Yongle Emperor",img:"/images/encyclopedia/yongle-emperor.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Chengzu.jpg"},
+    military:{slug:"yongle-emperor",name:"Yongle Emperor",img:"/images/encyclopedia/yongle-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Chengzu.jpg"},
     governance:{slug:"grand-secretariat",name:"Grand Secretariat",img:"/images/encyclopedia/grand-secretariat.jpg",artist:"Gisling",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Wen_Yuan_Chamber.JPG"},
     impact:{slug:"beijing",name:"Beijing",img:"/images/encyclopedia/beijing.jpg",artist:"N509FZ",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Skyline_of_Beijing_CBD_with_B-5906_approaching_(20211016171955)_(1).jpg"},
-    decline:{slug:"nurhaci",name:"Nurhaci",img:"/images/encyclopedia/nurhaci.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg"}
+    decline:{slug:"nurhaci",name:"Nurhaci",img:"/images/encyclopedia/nurhaci.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg"}
   },
   "Mitanni Empire": {
-    foundation:{slug:"barattarna",name:"Barattarna",img:"/images/encyclopedia/barattarna.jpg",artist:"Near_East_topographic_map-blank.svg: Sémhur derivative work: Zunkir (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Carte_du_Mitanni.png"},
+    foundation:{slug:"barattarna",name:"Barattarna",img:"/images/encyclopedia/barattarna.jpg",artist:"Sémhur; derivative work by Zunkir",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Carte_du_Mitanni.png"},
     socioeconomy:{slug:"washukanni",name:"Washukanni",img:"/images/encyclopedia/washukanni.jpg",artist:"Goran tek-en",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:N-Mesopotamia_and_Syria_english.svg"},
     military:{slug:"thutmose-iii",name:"Thutmose III",img:"/images/encyclopedia/thutmose-iii.jpg",artist:"ولاء",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Luxor_Museum,_Egypt_49_(trim).jpg"},
     governance:{slug:"tushratta",name:"Tushratta",img:"/images/encyclopedia/tushratta.jpg",artist:"Osama Shukir Muhammed Amin FRCP(Glasg)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:One_of_the_Amarna_letters._A_letter_from_Tushratta_king_of_Mitanni_to_the_Egyptian_Pharaoh_Amenhotep_III._Circa_1370_BCE._Akkadian_cuneiform_text._From_Tell_el-Amarna,_Egypt._Vorderasiatisches_Museum,_Berlin.jpg"},
     impact:{slug:"thutmose-iv",name:"Thutmose IV",img:"/images/encyclopedia/thutmose-iv.jpg",artist:"Iry-Hor",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Thutmosis_IV.jpg"},
-    decline:{slug:"suppiluliuma-i",name:"Suppiluliuma I",img:"/images/encyclopedia/suppiluliuma-i.jpg",artist:"Near_East_topographic_map-blank.svg: Sémhur derivative work: Ikonact",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Map_Hittite_rule_en.svg"}
+    decline:{slug:"suppiluliuma-i",name:"Suppiluliuma I",img:"/images/encyclopedia/suppiluliuma-i.jpg",artist:"Sémhur; derivative work by Ikonact",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Map_Hittite_rule_en.svg"}
   },
   "Mongol Empire": {
-    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
     socioeconomy:{slug:"karakorum",name:"Karakorum",img:"/images/encyclopedia/karakorum.jpg",artist:"Bernard Gagnon",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Erdene_Zuu_Monastery_05.jpg"},
     military:{slug:"subutai",name:"Subutai",img:"/images/encyclopedia/subutai.jpg",artist:"неизвестен/unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Subudei.jpg"},
     governance:{slug:"ariq-boke",name:"Ariq Böke",img:"/images/encyclopedia/ariq-boke.jpg",artist:"Miskin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ariq_B%C3%B6ke.jpg"},
-    impact:{slug:"marco-polo",name:"Marco Polo",img:"/images/encyclopedia/marco-polo.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispice_%C3%A9dition_de_Nuremberg_1477_(cropped).png"},
+    impact:{slug:"marco-polo",name:"Marco Polo",img:"/images/encyclopedia/marco-polo.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispice_%C3%A9dition_de_Nuremberg_1477_(cropped).png"},
     decline:{slug:"red-turban-rebellion",name:"Red Turban Rebellion",img:"/images/encyclopedia/red-turban-rebellion.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Red_Turban.png"}
   },
   "Mughal Empire": {
     foundation:{slug:"babur",name:"Babur",img:"/images/encyclopedia/babur.jpg",artist:"c.1650",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Humayun_and_Babur_(Late_Shah_Jahan_Album)_Babur_detail.jpg"},
-    socioeconomy:{slug:"agra",name:"Agra",img:"/images/encyclopedia/agra.jpg",artist:"Yann (talk)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India.jpg"},
-    military:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Darbarscene.jpg: Cordanrad derivative work: Rani nurmai (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
+    socioeconomy:{slug:"agra",name:"Agra",img:"/images/encyclopedia/agra.jpg",artist:"Yann",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India.jpg"},
+    military:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Cordanrad; derivative work by Rani nurmai",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
     governance:{slug:"fatawa-i-alamgiri",name:"Fatawa-i-Alamgiri",img:"/images/encyclopedia/fatawa-i-alamgiri.jpg",artist:"British Library Blog",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Manuscript_copy_of_al-Fatawa_al-%27Alamgiriyyah.jpg"},
     impact:{slug:"taj-mahal",name:"Taj Mahal",img:"/images/encyclopedia/taj-mahal.jpg",artist:"Yann; edited by Jim Carter",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Taj_Mahal_(Edited).jpeg"},
-    decline:{slug:"indian-rebellion-of-1857",name:"Indian Rebellion of 1857",img:"/images/encyclopedia/indian-rebellion-of-1857.jpg",artist:"Unknown authorUnknown author Cambridge University Press; Stanford's Geogl. Estabt..",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_Rebellion_of_1857.jpg"}
+    decline:{slug:"indian-rebellion-of-1857",name:"Indian Rebellion of 1857",img:"/images/encyclopedia/indian-rebellion-of-1857.jpg",artist:"Unknown author Cambridge University Press; Stanford's Geogl. Estabt..",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_Rebellion_of_1857.jpg"}
   },
   "Mutapa Empire": {
     foundation:{slug:"kingdom-of-zimbabwe",name:"Kingdom of Zimbabwe",img:"/images/encyclopedia/kingdom-of-zimbabwe.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Cefala_Manich_Simbaoe.png"},
@@ -487,7 +487,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"oranmiyan",name:"Oranmiyan",img:"/images/encyclopedia/oranmiyan.jpg",artist:"Abby's Lens",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Opa_Oranmiyan_at_Ile-Ife_03.jpg"},
     socioeconomy:{slug:"ouidah",name:"Ouidah",img:"/images/encyclopedia/ouidah.jpg",artist:"Francisco Anzola",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Door_of_no_return.jpg"},
     military:{slug:"niger-river",name:"Niger River",img:"/images/encyclopedia/niger-river.jpg",artist:"NigerTZai",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Niger,_Niamey,_Pont_Kennedy_(1).jpg"},
-    governance:{slug:"oyo-ile",name:"Oyo-Ile",img:"/images/encyclopedia/oyo-ile.jpg",artist:"http://csweb.bournemouth.ac.uk/africanlegacy/old_oyo.htm",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:OyoIle_plan_bw.jpg"},
+    governance:{slug:"oyo-ile",name:"Oyo-Ile",img:"/images/encyclopedia/oyo-ile.jpg",artist:"csweb.bournemouth.ac.uk",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:OyoIle_plan_bw.jpg"},
     impact:{slug:"ibadan",name:"Ibadan",img:"/images/encyclopedia/ibadan.jpg",artist:"ExploreWithTunde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_National_Museum_of_Unity,_Aleshinloye,_Ibadan_2024-06-02.jpg"},
     decline:{slug:"ilorin",name:"Ilorin",img:"/images/encyclopedia/ilorin.jpg",artist:"Eukoha",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ilorin_palace.jpg"}
   },
@@ -500,10 +500,10 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-hormozdgan",name:"Battle of Hormozdgan",img:"/images/encyclopedia/battle-of-hormozdgan.jpg",artist:"Eugène Flandin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ardachir_relief_Firuzabad_1.jpg"}
   },
   "Polish-Lithuanian Commonwealth": {
-    foundation:{slug:"w-adys-aw-ii-jagie-o",name:"Władysław II Jagiełło",img:"/images/encyclopedia/w-adys-aw-ii-jagie-o.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jogaila_(W%C5%82adys%C5%82aw_II).jpg"},
+    foundation:{slug:"w-adys-aw-ii-jagie-o",name:"Władysław II Jagiełło",img:"/images/encyclopedia/w-adys-aw-ii-jagie-o.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jogaila_(W%C5%82adys%C5%82aw_II).jpg"},
     socioeconomy:{slug:"gdansk",name:"Gdańsk",img:"/images/encyclopedia/gdansk.jpg",artist:"Diego Delso",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Calle_Dlugie_Pobrzeze,_Gdansk,_Polonia,_2013-05-20,_DD_06.jpg"},
     military:{slug:"battle-of-kircholm",name:"Battle of Kircholm",img:"/images/encyclopedia/battle-of-kircholm.jpg",artist:"Peter Snayers",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pieter_Snayers_-_Battle_of_Kircholm,_1605.jpg"},
-    governance:{slug:"henrician-articles",name:"Henrician Articles",img:"/images/encyclopedia/henrician-articles.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Grand_Duchy_of_Lithuania_from_the_Statute_(1614).png"},
+    governance:{slug:"henrician-articles",name:"Henrician Articles",img:"/images/encyclopedia/henrician-articles.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Grand_Duchy_of_Lithuania_from_the_Statute_(1614).png"},
     impact:{slug:"vienna",name:"Vienna",img:"/images/encyclopedia/vienna.jpg",artist:"Superbass",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Schoenbrunn_philharmoniker_2012.jpg"},
     decline:{slug:"khmelnytsky-uprising",name:"Khmelnytsky Uprising",img:"/images/encyclopedia/khmelnytsky-uprising.jpg",artist:"Mykola Ivasiuk",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pic_I_V_Ivasiuk_Mykola_Bohdan_Khmelnytskys_Entry_to_Kyiv.jpg"}
   },
@@ -513,14 +513,14 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-alcacer-quibir",name:"Battle of Alcácer Quibir",img:"/images/encyclopedia/battle-of-alcacer-quibir.jpg",artist:"Georges Jansoone",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Lagos46_kopie.jpg"},
     governance:{slug:"tome-de-sousa",name:"Tomé de Sousa",img:"/images/encyclopedia/tome-de-sousa.jpg",artist:"Samory Pereira Santos from Salvador, Brazil",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Thom%C3%A9_de_Souza_(3712120735).jpg"},
     impact:{slug:"venice",name:"Venice",img:"/images/encyclopedia/venice.jpg",artist:"kallerna",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Venezia_aerial_view.jpg"},
-    decline:{slug:"carnation-revolution",name:"Carnation Revolution",img:"/images/encyclopedia/carnation-revolution.jpg",artist:"Unknown authorUnknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Revolu%C3%A7%C3%A3o_dos_Cravos.jpg"}
+    decline:{slug:"carnation-revolution",name:"Carnation Revolution",img:"/images/encyclopedia/carnation-revolution.jpg",artist:"Unknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Revolu%C3%A7%C3%A3o_dos_Cravos.jpg"}
   },
   "Ptolemaic Empire": {
     foundation:{slug:"ptolemy-i-soter",name:"Ptolemy I Soter",img:"/images/encyclopedia/ptolemy-i-soter.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ptolemy_I_Soter_Louvre_Ma849_A.jpg"},
     socioeconomy:{slug:"alexandria",name:"Alexandria",img:"/images/encyclopedia/alexandria.jpg",artist:"TheEgyptian",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:San_Stefano_Grand_Plaza.JPG"},
-    military:{slug:"battle-of-raphia",name:"Battle of Raphia",img:"/images/encyclopedia/battle-of-raphia.jpg",artist:"Javierfv1212 (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_raphia.png"},
+    military:{slug:"battle-of-raphia",name:"Battle of Raphia",img:"/images/encyclopedia/battle-of-raphia.jpg",artist:"Javierfv1212",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_raphia.png"},
     governance:{slug:"pharaoh",name:"Pharaoh",img:"/images/encyclopedia/pharaoh.jpg",artist:"Jeff Dahl",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Double_crown.svg"},
-    impact:{slug:"euclid",name:"Euclid",img:"/images/encyclopedia/euclid.jpg",artist:"Jusepe de Ribera (Spanish / Italian, 1591 - 1652) (1591 - 1652) – artist (Spanish / Italian) Details on Google Art Pr...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Italian_-_Euclid_-_Google_Art_Project.jpg"},
+    impact:{slug:"euclid",name:"Euclid",img:"/images/encyclopedia/euclid.jpg",artist:"Jusepe de Ribera (Spanish / Italian, 1591 - 1652) (1591 - 1652) – artist (Spanish / Italian)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Italian_-_Euclid_-_Google_Art_Project.jpg"},
     decline:{slug:"battle-of-actium",name:"Battle of Actium",img:"/images/encyclopedia/battle-of-actium.jpg",artist:"Mark Landon",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Medinaceli_Actium_reliefs_06.jpg"}
   },
   "Punic Empire": {
@@ -532,10 +532,10 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-cannae",name:"Battle of Cannae",img:"/images/encyclopedia/battle-of-cannae.jpg",artist:"John Trumbull",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae_(Yale_University_Art_Gallery_scan).jpg"}
   },
   "Qing Empire": {
-    foundation:{slug:"nurhaci",name:"Nurhaci",img:"/images/encyclopedia/nurhaci.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg"},
+    foundation:{slug:"nurhaci",name:"Nurhaci",img:"/images/encyclopedia/nurhaci.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg"},
     socioeconomy:{slug:"guangzhou",name:"Guangzhou",img:"/images/encyclopedia/guangzhou.jpg",artist:"Tim Wu",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Canton_Tower_20241027.jpg"},
-    military:{slug:"ten-great-campaigns",name:"Ten Great Campaigns",img:"/images/encyclopedia/ten-great-campaigns.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jaohui.jpg"},
-    governance:{slug:"yongzheng-emperor",name:"Yongzheng Emperor",img:"/images/encyclopedia/yongzheng-emperor.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E9%9B%8D%E6%AD%A3%E6%9C%9D%E6%9C%8D%E5%83%8F%E8%BD%B4.jpg"},
+    military:{slug:"ten-great-campaigns",name:"Ten Great Campaigns",img:"/images/encyclopedia/ten-great-campaigns.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jaohui.jpg"},
+    governance:{slug:"yongzheng-emperor",name:"Yongzheng Emperor",img:"/images/encyclopedia/yongzheng-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E9%9B%8D%E6%AD%A3%E6%9C%9D%E6%9C%8D%E5%83%8F%E8%BD%B4.jpg"},
     impact:{slug:"opium-wars",name:"Opium Wars",img:"/images/encyclopedia/opium-wars.jpg",artist:"Edward Duncan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Destroying_Chinese_war_junks,_by_E._Duncan_(1843).jpg"},
     decline:{slug:"white-lotus-rebellion",name:"White Lotus Rebellion",img:"/images/encyclopedia/white-lotus-rebellion.jpg",artist:"Anonymous (Qing dynasty)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_portrait_of_the_White_Lotus_rebellion.jpg"}
   },
@@ -543,7 +543,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"musaylima",name:"Musaylima",img:"/images/encyclopedia/musaylima.jpg",artist:"Abu Ali Bal'ami",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Balami_-_Tarikhnama_-_The_death_of_Musaylima_at_the_hand_of_the_Ethiopian_Slave_Wahshi_(cropped).jpg"},
     socioeconomy:{slug:"kufa",name:"Kufa",img:"/images/encyclopedia/kufa.jpg",artist:"Ali sabih kadhim",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%A7%D9%84%D8%B3%D9%87%D9%84%D8%A9.jpg"},
     military:{slug:"battle-of-the-yarmuk",name:"Battle of the Yarmuk",img:"/images/encyclopedia/battle-of-the-yarmuk.jpg",artist:"anonymous Catalonian illustrator",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hayton_BNF886_9v.jpg"},
-    governance:{slug:"muawiya-i",name:"Muawiya I",img:"/images/encyclopedia/muawiya-i.jpg",artist:"User:LouisAragon (uploader)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arab-Sasanian_coin_of_Muawiyah_I,_struck_at_the_Fasa_mint_in_Darabjird_(Fars).jpg"},
+    governance:{slug:"muawiya-i",name:"Muawiya I",img:"/images/encyclopedia/muawiya-i.jpg",artist:"LouisAragon (uploader)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arab-Sasanian_coin_of_Muawiyah_I,_struck_at_the_Fasa_mint_in_Darabjird_(Fars).jpg"},
     impact:{slug:"yazdegerd-iii",name:"Yazdegerd III",img:"/images/encyclopedia/yazdegerd-iii.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Sasanian_king_Yazdegerd_III,_651_mint_(Cropped).jpg"},
     decline:{slug:"battle-of-the-camel",name:"Battle of the Camel",img:"/images/encyclopedia/battle-of-the-camel.jpg",artist:"Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ali_and_Aisha_at_the_Battle_of_the_Camel.jpg"}
   },
@@ -553,7 +553,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-the-teutoburg-forest",name:"Battle of the Teutoburg Forest",img:"/images/encyclopedia/battle-of-the-teutoburg-forest.jpg",artist:"Agnete",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Epitaph_des_Marcus_Caelius.JPG"},
     governance:{slug:"corpus-juris-civilis",name:"Corpus Juris Civilis",img:"/images/encyclopedia/corpus-juris-civilis.jpg",artist:"IusRomanum",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Corpus_Iuris_Civilis_-_Dion%C3%ADsio_Godofredo_-_1583.jpg"},
     impact:{slug:"london",name:"London",img:"/images/encyclopedia/london.jpg",artist:"Ilya Grigorik",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:London_Skyline_(125508655).jpeg"},
-    decline:{slug:"battle-of-adrianople",name:"Battle of Adrianople",img:"/images/encyclopedia/battle-of-adrianople.jpg",artist:"Bitva_u_Adrianopole.gif: Elias84 derivative work: Dipa_1965 (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Adrianople_378_en.svg"}
+    decline:{slug:"battle-of-adrianople",name:"Battle of Adrianople",img:"/images/encyclopedia/battle-of-adrianople.jpg",artist:"Elias84; derivative work by Dipa_1965",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Adrianople_378_en.svg"}
   },
   "Rozvi Empire": {
     foundation:{slug:"changamire-dombo",name:"Changamire Dombo",img:"/images/encyclopedia/changamire-dombo.jpg",artist:"Ypirétis",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Empire-rozvi.png"},
@@ -580,15 +580,15 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-gulnabad",name:"Battle of Gulnabad",img:"/images/encyclopedia/battle-of-gulnabad.jpg",artist:"Kailanmapper",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battleofgulnabad.png"}
   },
   "Sasanian Empire": {
-    foundation:{slug:"ardashir-i",name:"Ardashir I",img:"/images/encyclopedia/ardashir-i.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dinar_of_Ardashir_I_(cropped).jpg"},
+    foundation:{slug:"ardashir-i",name:"Ardashir I",img:"/images/encyclopedia/ardashir-i.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dinar_of_Ardashir_I_(cropped).jpg"},
     socioeconomy:{slug:"bishapur",name:"Bishapur",img:"/images/encyclopedia/bishapur.jpg",artist:"Behnam9395",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Anahita_Temple_of_Bishapur_(Kazerun)_1.jpg"},
     military:{slug:"shapur-i",name:"Shapur I",img:"/images/encyclopedia/shapur-i.jpg",artist:"Unknown after Rawlinson, George, 1812-1902",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shapour_I_statue.gif"},
     governance:{slug:"khosrow-i",name:"Khosrow I",img:"/images/encyclopedia/khosrow-i.jpg",artist:"",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Plate_of_the_Sasanian_king_Khosrow_I_Anushirvan.jpg"},
     impact:{slug:"athens",name:"Athens",img:"/images/encyclopedia/athens.jpg",artist:"Andrew Parlette",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg"},
-    decline:{slug:"battle-of-al-qadisiyyah",name:"Battle of al-Qadisiyyah",img:"/images/encyclopedia/battle-of-al-qadisiyyah.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Depiction_of_the_Battle_of_al-Q%C4%81disiyyah_from_a_manuscript_of_the_Persian_epic_Sh%C4%81h-n%C4%81meh._Source-_British_Library_(MS._I.O.Islamic_3265_(1614)_f._602r).jpg"}
+    decline:{slug:"battle-of-al-qadisiyyah",name:"Battle of al-Qadisiyyah",img:"/images/encyclopedia/battle-of-al-qadisiyyah.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Depiction_of_the_Battle_of_al-Q%C4%81disiyyah_from_a_manuscript_of_the_Persian_epic_Sh%C4%81h-n%C4%81meh._Source-_British_Library_(MS._I.O.Islamic_3265_(1614)_f._602r).jpg"}
   },
   "Seleucid Empire": {
-    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
+    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
     socioeconomy:{slug:"seleucia",name:"Seleucia",img:"/images/encyclopedia/seleucia.jpg",artist:"Renato de carvalho ferreira",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ctesiphon_map-en.svg"},
     military:{slug:"battle-of-panium",name:"Battle of Panium",img:"/images/encyclopedia/battle-of-panium.jpg",artist:"gugganij",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Banias_Spring_Cliff_Pan%27s_Cave.JPG"},
     governance:{slug:"antiochus-iv-epiphanes",name:"Antiochus IV Epiphanes",img:"/images/encyclopedia/antiochus-iv-epiphanes.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Antiochus_IV_Epiphanes_-_Altes_Museum_-_Berlin_-_Germany_2017.jpg"},
@@ -616,20 +616,20 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"zaria",name:"Zaria",img:"/images/encyclopedia/zaria.jpg",artist:"Aminucrus",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Zazzau_Emirs_Palace_Gate.jpg"},
     military:{slug:"ilorin",name:"Ilorin",img:"/images/encyclopedia/ilorin.jpg",artist:"Eukoha",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ilorin_palace.jpg"},
     governance:{slug:"gwandu-emirate",name:"Gwandu Emirate",img:"/images/encyclopedia/gwandu-emirate.jpg",artist:"AbdurRahman AbdulMoneim",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Sokoto_Sultanate_(cropped).png"},
-    impact:{slug:"heinrich-barth",name:"Heinrich Barth",img:"/images/encyclopedia/heinrich-barth.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Barth_Unterschrift.jpg"},
-    decline:{slug:"frederick-lugard",name:"Frederick Lugard",img:"/images/encyclopedia/frederick-lugard.jpg",artist:"Elliott &amp; Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LordLugard.jpg"}
+    impact:{slug:"heinrich-barth",name:"Heinrich Barth",img:"/images/encyclopedia/heinrich-barth.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Barth_Unterschrift.jpg"},
+    decline:{slug:"frederick-lugard",name:"Frederick Lugard",img:"/images/encyclopedia/frederick-lugard.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LordLugard.jpg"}
   },
   "Song Dynasty": {
     foundation:{slug:"emperor-taizu-of-song",name:"Emperor Taizu of Song",img:"/images/encyclopedia/emperor-taizu-of-song.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Song_Taizu.jpg"},
     socioeconomy:{slug:"kaifeng",name:"Kaifeng",img:"/images/encyclopedia/kaifeng.jpg",artist:"caoyuan",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:%E9%BE%99%E4%BA%AD%E5%85%AC%E5%9B%AD_-_panoramio_(2).jpg"},
     military:{slug:"xiangyang",name:"Xiangyang",img:"/images/encyclopedia/xiangyang.jpg",artist:"Zihanzor",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Xiangyang,_Hubei,_China.jpg"},
-    governance:{slug:"wang-anshi",name:"Wang Anshi",img:"/images/encyclopedia/wang-anshi.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wang_Anshi.jpg"},
+    governance:{slug:"wang-anshi",name:"Wang Anshi",img:"/images/encyclopedia/wang-anshi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wang_Anshi.jpg"},
     impact:{slug:"bi-sheng",name:"Bi Sheng",img:"/images/encyclopedia/bi-sheng.jpg",artist:"Popolon",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Beijing.Musee_imprimerie.caracteres_mobiles.Bisheng.jpg"},
     decline:{slug:"mongke",name:"Möngke",img:"/images/encyclopedia/mongke.jpg",artist:"1438 artist, Shiraz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:M%C3%B6ngke_enthroned._Tarikh-i_Jahangushay-i_Juvaini,_1438,_Shiraz.jpg"}
   },
   "Songhai Empire": {
     foundation:{slug:"gao",name:"Gao",img:"/images/encyclopedia/gao.jpg",artist:"David Sessoms from Fribourg, Switzerland",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Tombeau_dAskia_in_Gao_by_David_Sessoms.jpg"},
-    socioeconomy:{slug:"timbuktu",name:"Timbuktu",img:"/images/encyclopedia/timbuktu.jpg",artist:"Flickr user: Emilio Labrador Santiago de Chile https://www.flickr.com/people/3059349393/",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Donkeys,_Timbuktu.jpg"},
+    socioeconomy:{slug:"timbuktu",name:"Timbuktu",img:"/images/encyclopedia/timbuktu.jpg",artist:"Flickr Emilio Labrador Santiago de Chile 3059349393 (Flickr)",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Donkeys,_Timbuktu.jpg"},
     military:{slug:"ahmad-al-mansur",name:"Ahmad al-Mansur",img:"/images/encyclopedia/ahmad-al-mansur.jpg",artist:"André Thevet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ahmad_al-Mansur_by_Andr%C3%A9_Thevet.png"},
     governance:{slug:"djenne",name:"Djenné",img:"/images/encyclopedia/djenne.jpg",artist:"qiv",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Moschee_von_Djenn%C3%A9.jpg"},
     impact:{slug:"sahel",name:"Sahel",img:"/images/encyclopedia/sahel.jpg",artist:"Adam Jones, Ph.D.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mud_Mosque_-_Bani_-_Sahel_Region_-_Burkina_Faso_-_02.jpg"},
@@ -640,12 +640,12 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"potosi",name:"Potosí",img:"/images/encyclopedia/potosi.jpg",artist:"Parallelepiped09",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Vista_de_la_Villa_Imperial_de_Potos%C3%AD.jpg"},
     military:{slug:"battle-of-rocroi",name:"Battle of Rocroi",img:"/images/encyclopedia/battle-of-rocroi.jpg",artist:"Sauveur Lecomte",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:La_Bataille_de_Rocroi.jpg"},
     governance:{slug:"new-laws",name:"New Laws",img:"/images/encyclopedia/new-laws.jpg",artist:"Juan de Brocar (impresor), Jean de Vingles (grabador)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Leyes_Nuevas1.jpg"},
-    impact:{slug:"francisco-de-vitoria",name:"Francisco de Vitoria",img:"/images/encyclopedia/francisco-de-vitoria.jpg",artist:"Raúl Hernández González Seguir Francisco de Vitoria 3 Detalles de la fachada de la iglesia del convento de San Esteba...",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Franciscodevictoria.jpg"},
+    impact:{slug:"francisco-de-vitoria",name:"Francisco de Vitoria",img:"/images/encyclopedia/francisco-de-vitoria.jpg",artist:"Raúl Hernández González Seguir Francisco de Vitoria 3 Detalles de la fachada de la iglesia del convento de San Esteban, los …",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Franciscodevictoria.jpg"},
     decline:{slug:"war-of-the-spanish-succession",name:"War of the Spanish Succession",img:"/images/encyclopedia/war-of-the-spanish-succession.jpg",artist:"DavidDijkgraaf",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Final_War_of_the_Spanish_Succession_Collage.jpg"}
   },
   "Srivijaya Empire": {
     foundation:{slug:"palembang",name:"Palembang",img:"/images/encyclopedia/palembang.jpg",artist:"Gaudi Renanda",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:LRT_Palembang_Ampera_Bridge.jpg"},
-    socioeconomy:{slug:"strait-of-malacca",name:"Strait of Malacca",img:"/images/encyclopedia/strait-of-malacca.jpg",artist:"Derives from png uploaded by User:Wolrd blank map",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Strait_of_Malacca_highlighted.png"},
+    socioeconomy:{slug:"strait-of-malacca",name:"Strait of Malacca",img:"/images/encyclopedia/strait-of-malacca.jpg",artist:"Derives from png uploaded by Wolrd blank map",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Strait_of_Malacca_highlighted.png"},
     military:{slug:"rajendra-chola-i",name:"Rajendra Chola I",img:"/images/encyclopedia/rajendra-chola-i.jpg",artist:"David George",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rajendra_Chola_(cropped).JPG"},
     impact:{slug:"sailendra-dynasty",name:"Sailendra dynasty",img:"/images/encyclopedia/sailendra-dynasty.jpg",artist:"Gunawan Kartapranata",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Sailendra_King_and_Queen,_Borobudur.jpg"},
     decline:{slug:"chola-invasion-of-srivijaya",name:"Chola invasion of Srivijaya",img:"/images/encyclopedia/chola-invasion-of-srivijaya.jpg",artist:"Nikel3012",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Chola_Empire_Map_(1).svg"}
@@ -659,19 +659,19 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-poltava",name:"Battle of Poltava",img:"/images/encyclopedia/battle-of-poltava.jpg",artist:"Pierre-Denis Martin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Marten%27s_Poltava.jpg"}
   },
   "Tang Dynasty": {
-    foundation:{slug:"emperor-gaozu-of-tang",name:"Emperor Gaozu of Tang",img:"/images/encyclopedia/emperor-gaozu-of-tang.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TangGaozu.jpg"},
+    foundation:{slug:"emperor-gaozu-of-tang",name:"Emperor Gaozu of Tang",img:"/images/encyclopedia/emperor-gaozu-of-tang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TangGaozu.jpg"},
     socioeconomy:{slug:"changan",name:"Chang'an",img:"/images/encyclopedia/changan.jpg",artist:"Unknown Tang-era tomb artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Prince_Yide%27s_tomb,_towers.jpg"},
     military:{slug:"battle-of-talas",name:"Battle of Talas",img:"/images/encyclopedia/battle-of-talas.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Talas.png"},
     governance:{slug:"wei-zheng",name:"Wei Zheng",img:"/images/encyclopedia/wei-zheng.jpg",artist:"Taken by Fanghong",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:WeiZheng.jpg"},
     decline:{slug:"an-lushan-rebellion",name:"An Lushan Rebellion",img:"/images/encyclopedia/an-lushan-rebellion.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:An_Lushan_Rebellion.png"}
   },
   "Timurid Empire": {
-    foundation:{slug:"timur",name:"Timur",img:"/images/encyclopedia/timur.jpg",artist:"user:shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Timur_reconstruction03.jpg"},
-    socioeconomy:{slug:"samarkand",name:"Samarkand",img:"/images/encyclopedia/samarkand.jpg",artist:"Registan_-_Gusjer.jpg: Gustavo Jeronimo from Aranjuez, Spain derivative work: MrPanyGoff",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:RegistanSquare_Samarkand.jpg"},
+    foundation:{slug:"timur",name:"Timur",img:"/images/encyclopedia/timur.jpg",artist:"shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Timur_reconstruction03.jpg"},
+    socioeconomy:{slug:"samarkand",name:"Samarkand",img:"/images/encyclopedia/samarkand.jpg",artist:"Gustavo Jeronimo from Aranjuez, Spain; derivative work by MrPanyGoff",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:RegistanSquare_Samarkand.jpg"},
     military:{slug:"muhammad-shaybani",name:"Muhammad Shaybani",img:"/images/encyclopedia/muhammad-shaybani.jpg",artist:"Kamāl ud-Dīn Behzād",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_Shaybani.jpg"},
     governance:{slug:"shah-rukh",name:"Shah Rukh",img:"/images/encyclopedia/shah-rukh.jpg",artist:"1435-1436 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Shah_Rukh,_painted_in_his_lifetime_in_1435-36,_by_commission_of_his_son_Ibrahim_Sultan.jpg"},
-    impact:{slug:"kamal-ud-din-behzad",name:"Kamāl ud-Dīn Behzād",img:"/images/encyclopedia/kamal-ud-din-behzad.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Picture_of_the_master_Behzad_unknow_artist.jpg"},
-    decline:{slug:"ulugh-beg",name:"Ulugh Beg",img:"/images/encyclopedia/ulugh-beg.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulugh_Beg,_Timurid_painting_1425-50.jpg"}
+    impact:{slug:"kamal-ud-din-behzad",name:"Kamāl ud-Dīn Behzād",img:"/images/encyclopedia/kamal-ud-din-behzad.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Picture_of_the_master_Behzad_unknow_artist.jpg"},
+    decline:{slug:"ulugh-beg",name:"Ulugh Beg",img:"/images/encyclopedia/ulugh-beg.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulugh_Beg,_Timurid_painting_1425-50.jpg"}
   },
   "Tokugawa Shogunate": {
     foundation:{slug:"tokugawa-ieyasu",name:"Tokugawa Ieyasu",img:"/images/encyclopedia/tokugawa-ieyasu.jpg",artist:"Kanō Tan'yū",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tokugawa_Ieyasu2.JPG"},
@@ -682,7 +682,7 @@ var SECTION_IMAGES = {
     decline:{slug:"boshin-war",name:"Boshin War",img:"/images/encyclopedia/boshin-war.jpg",artist:"Utagawa Yoshimori",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:UenoSenso.jpg"}
   },
   "Umayyad Caliphate": {
-    foundation:{slug:"muawiya-i",name:"Muawiya I",img:"/images/encyclopedia/muawiya-i.jpg",artist:"User:LouisAragon (uploader)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arab-Sasanian_coin_of_Muawiyah_I,_struck_at_the_Fasa_mint_in_Darabjird_(Fars).jpg"},
+    foundation:{slug:"muawiya-i",name:"Muawiya I",img:"/images/encyclopedia/muawiya-i.jpg",artist:"LouisAragon (uploader)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arab-Sasanian_coin_of_Muawiyah_I,_struck_at_the_Fasa_mint_in_Darabjird_(Fars).jpg"},
     socioeconomy:{slug:"mediterranean",name:"Mediterranean",img:"/images/encyclopedia/mediterranean.jpg",artist:"of the modification : Eric Gaba (Sting)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_16.61811E_38.99124N.jpg"},
     military:{slug:"battle-of-tours",name:"Battle of Tours",img:"/images/encyclopedia/battle-of-tours.jpg",artist:"Charles de Steuben",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Steuben_-_Bataille_de_Poitiers.png"},
     governance:{slug:"damascus",name:"Damascus",img:"/images/encyclopedia/damascus.jpg",artist:"Vyacheslav Argenberg",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Damascus,_Syria,_Panoramic_view_of_Damascus.jpg"},
@@ -698,23 +698,23 @@ var SECTION_IMAGES = {
   "Xiongnu Empire": {
     foundation:{slug:"han-dynasty",name:"Han Dynasty",img:"/images/encyclopedia/han-dynasty.jpg",artist:"DannamEmpire",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Han_Dynasty_2_BC_(cropped).svg"},
     socioeconomy:{slug:"chanyu",name:"Chanyu",img:"/images/encyclopedia/chanyu.jpg",artist:"Davide Mauro",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Reconstruction_of_a_Xiongnu_chief_warrior,_2nd_century_BCE-1st_century_CE.jpg"},
-    military:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"},
+    military:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"},
     impact:{slug:"luoyang",name:"Luoyang",img:"/images/encyclopedia/luoyang.jpg",artist:"Rialfver Original uploader was Rialfver at nl.wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Longmen_Grottoes_3.jpg"},
     decline:{slug:"huo-qubing",name:"Huo Qubing",img:"/images/encyclopedia/huo-qubing.jpg",artist:"Ma Tai (馬駘; C.E.1885-1937)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%B8%A1%E6%B2%B3%E5%8F%97%E6%AC%BE.jpg"}
   },
   "Yuan Dynasty": {
     foundation:{slug:"kublai-khan",name:"Kublai Khan",img:"/images/encyclopedia/kublai-khan.jpg",artist:"Araniko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg"},
-    socioeconomy:{slug:"marco-polo",name:"Marco Polo",img:"/images/encyclopedia/marco-polo.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispice_%C3%A9dition_de_Nuremberg_1477_(cropped).png"},
+    socioeconomy:{slug:"marco-polo",name:"Marco Polo",img:"/images/encyclopedia/marco-polo.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispice_%C3%A9dition_de_Nuremberg_1477_(cropped).png"},
     military:{slug:"raden-wijaya",name:"Raden Wijaya",img:"/images/encyclopedia/raden-wijaya.jpg",artist:"Gunawan Kartapranata",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Harihara_Majapahit_1.JPG"},
     governance:{slug:"drogon-chogyal-phagpa",name:"Drogön Chögyal Phagpa",img:"/images/encyclopedia/drogon-chogyal-phagpa.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chogyal.JPG"},
     impact:{slug:"ibn-battuta",name:"Ibn Battuta",img:"/images/encyclopedia/ibn-battuta.jpg",artist:"Léon Benett",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Handmade_oil_painting_reproduction_of_Ibn_Battuta_in_Egypt,_a_painting_by_Hippolyte_Leon_Benett..jpg"},
     decline:{slug:"red-turban-rebellion",name:"Red Turban Rebellion",img:"/images/encyclopedia/red-turban-rebellion.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Red_Turban.png"}
   },
   "Zand Empire": {
-    foundation:{slug:"karim-khan-zand",name:"Karim Khan Zand",img:"/images/encyclopedia/karim-khan-zand.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karim_Khan-e_Zand.png"},
+    foundation:{slug:"karim-khan-zand",name:"Karim Khan Zand",img:"/images/encyclopedia/karim-khan-zand.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karim_Khan-e_Zand.png"},
     socioeconomy:{slug:"shiraz",name:"Shiraz",img:"/images/encyclopedia/shiraz.jpg",artist:"آرش (Arche)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Darvaze_Ghoran11.jpg"},
-    military:{slug:"siege-of-kerman",name:"Siege of Kerman",img:"/images/encyclopedia/siege-of-kerman.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Capture_and_Sack_of_Kerman_by_Agha_Mohammad_Khan_Qajar.png"},
-    governance:{slug:"nader-shah",name:"Nader Shah",img:"/images/encyclopedia/nader-shah.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Nader_Shah._Artist_unknown,_created_in_ca._1740_in_Iran_(cropped).jpg"},
+    military:{slug:"siege-of-kerman",name:"Siege of Kerman",img:"/images/encyclopedia/siege-of-kerman.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Capture_and_Sack_of_Kerman_by_Agha_Mohammad_Khan_Qajar.png"},
+    governance:{slug:"nader-shah",name:"Nader Shah",img:"/images/encyclopedia/nader-shah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Nader_Shah._Artist_unknown,_created_in_ca._1740_in_Iran_(cropped).jpg"},
     impact:{slug:"indian-ocean",name:"Indian Ocean",img:"/images/encyclopedia/indian-ocean.jpg",artist:"United States Central Intelligence Agency",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_Ocean-CIA_WFB_Map.png"},
     decline:{slug:"lotf-ali-khan",name:"Lotf Ali Khan",img:"/images/encyclopedia/lotf-ali-khan.jpg",artist:"Nimazandyf",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Lotfali_khan_zand2.jpg"}
   },
@@ -743,10 +743,10 @@ var SECTION_IMAGES = {
     decline:{slug:"american-revolution",name:"American Revolution",img:"/images/encyclopedia/american-revolution.jpg",artist:"John Trumbull",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Declaration_of_Independence_(1819),_by_John_Trumbull.jpg"}
   },
   "New Spain": {
-    foundation:{slug:"hernan-cortes",name:"Hernán Cortés",img:"/images/encyclopedia/hernan-cortes.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg"},
+    foundation:{slug:"hernan-cortes",name:"Hernán Cortés",img:"/images/encyclopedia/hernan-cortes.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg"},
     socioeconomy:{slug:"zacatecas",name:"Zacatecas",img:"/images/encyclopedia/zacatecas.jpg",artist:"ErickBasM",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Campo_en_zona_arqueol%C3%B3gica_La_Quemada.jpg"},
     military:{slug:"mixton-war",name:"Mixtón War",img:"/images/encyclopedia/mixton-war.jpg",artist:"Jaontiveros",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Xochipilla.jpg"},
-    governance:{slug:"jose-de-galvez",name:"José de Gálvez",img:"/images/encyclopedia/jose-de-galvez.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Jos%C3%A9_de_G%C3%A1lvez.jpg"},
+    governance:{slug:"jose-de-galvez",name:"José de Gálvez",img:"/images/encyclopedia/jose-de-galvez.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Jos%C3%A9_de_G%C3%A1lvez.jpg"},
     impact:{slug:"mexico-city",name:"Mexico City",img:"/images/encyclopedia/mexico-city.jpg",artist:"Gobierno CDMX",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Sobrevuelos_CDMX_HJ2A4913_(25514321687)_(cropped).jpg"},
     decline:{slug:"alexander-von-humboldt",name:"Alexander von Humboldt",img:"/images/encyclopedia/alexander-von-humboldt.jpg",artist:"Joseph Karl Stieler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stieler,_Joseph_Karl_-_Alexander_von_Humboldt_-_1843.jpg"}
   },
@@ -756,7 +756,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-the-monongahela",name:"Battle of the Monongahela",img:"/images/encyclopedia/battle-of-the-monongahela.jpg",artist:"Jacques Auguste Regnier",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Washington_the_soldier.jpg"},
     governance:{slug:"custom-of-paris",name:"Custom of Paris",img:"/images/encyclopedia/custom-of-paris.jpg",artist:"Guy Carleton (died 1808)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Custom_of_Paris_as_Practised_in_Quebec_during_the_French_government.jpg"},
     impact:{slug:"detroit",name:"Detroit",img:"/images/encyclopedia/detroit.jpg",artist:"TheWxResearcher",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Detroit_Skyline_from_Windsor_2025-09-01.jpg"},
-    decline:{slug:"treaty-of-utrecht",name:"Treaty of Utrecht",img:"/images/encyclopedia/treaty-of-utrecht.jpg",artist:"The_Treaty_of_Utrecht.jpg: Original uploader was RedCoat10 at en.wikipedia derivative work: Angel paez (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Treaty_of_Utrecht_(clean).jpg"}
+    decline:{slug:"treaty-of-utrecht",name:"Treaty of Utrecht",img:"/images/encyclopedia/treaty-of-utrecht.jpg",artist:"Original uploader was RedCoat10 at en.wikipedia; derivative work by Angel paez",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Treaty_of_Utrecht_(clean).jpg"}
   },
   "Viceroyalty of Peru": {
     foundation:{slug:"francisco-pizarro",name:"Francisco Pizarro",img:"/images/encyclopedia/francisco-pizarro.jpg",artist:"Amable-Paul Coutan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Francisco_Pizarro.jpg"},
@@ -793,7 +793,7 @@ var SECTION_IMAGES = {
   "Republic of Chile": {
     foundation:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
     socioeconomy:{slug:"valparaiso",name:"Valparaíso",img:"/images/encyclopedia/valparaiso.jpg",artist:"Julia Sumangil",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Historic_Quarter_of_the_Seaport_City_of_Valpara%C3%ADso_04.jpg"},
-    military:{slug:"battle-of-yungay",name:"Battle of Yungay",img:"/images/encyclopedia/battle-of-yungay.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plano_de_la_Batalla_de_Yungay.jpg"},
+    military:{slug:"battle-of-yungay",name:"Battle of Yungay",img:"/images/encyclopedia/battle-of-yungay.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plano_de_la_Batalla_de_Yungay.jpg"},
     governance:{slug:"chilean-civil-code",name:"Chilean Civil Code",img:"/images/encyclopedia/chilean-civil-code.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codigo_Civil_Chile_01.jpg"},
     impact:{slug:"antofagasta",name:"Antofagasta",img:"/images/encyclopedia/antofagasta.jpg",artist:"Montaje realizado por Açipni-Lovrij.",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Montaje_de_Antofagasta.jpg"},
     decline:{slug:"war-of-the-pacific",name:"War of the Pacific",img:"/images/encyclopedia/war-of-the-pacific.jpg",artist:"United States Federal Government",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:War_of_the_Pacific_LOC_map.png"}
@@ -807,9 +807,9 @@ var SECTION_IMAGES = {
     decline:{slug:"jose-maria-cordova",name:"José María Córdova",img:"/images/encyclopedia/jose-maria-cordova.jpg",artist:"José María Espinosa",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Mar%C3%ADa_C%C3%B3rdova._An%C3%B3nimo,_ca._1840._Colecci%C3%B3n_Museo_Nacional_de_Colombia._Reg._350.jpg"}
   },
   "Republic of Peru": {
-    foundation:{slug:"tupac-amaru-ii",name:"Túpac Amaru II",img:"/images/encyclopedia/tupac-amaru-ii.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TupacAmaruII.jpg"},
+    foundation:{slug:"tupac-amaru-ii",name:"Túpac Amaru II",img:"/images/encyclopedia/tupac-amaru-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TupacAmaruII.jpg"},
     socioeconomy:{slug:"lima",name:"Lima",img:"/images/encyclopedia/lima.jpg",artist:"David Felipe Ruiz Hoyos",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_Catedral_Metropolitana_de_Lima_(cropped).jpg"},
-    military:{slug:"battle-of-yungay",name:"Battle of Yungay",img:"/images/encyclopedia/battle-of-yungay.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plano_de_la_Batalla_de_Yungay.jpg"},
+    military:{slug:"battle-of-yungay",name:"Battle of Yungay",img:"/images/encyclopedia/battle-of-yungay.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plano_de_la_Batalla_de_Yungay.jpg"},
     governance:{slug:"ramon-castilla",name:"Ramón Castilla",img:"/images/encyclopedia/ramon-castilla.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:RamonCastilla.jpg"},
     impact:{slug:"tradiciones-peruanas",name:"Tradiciones peruanas",img:"/images/encyclopedia/tradiciones-peruanas.jpg",artist:"Ricardo Palma",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tradiciones_peruanas_1893.jpg"},
     decline:{slug:"battle-of-ayacucho",name:"Battle of Ayacucho",img:"/images/encyclopedia/battle-of-ayacucho.jpg",artist:"Martín Tovar y Tovar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalla_de_Ayacucho_by_Mart%C3%ADn_Tovar_y_Tovar_(1827_-_1902).jpg"}
@@ -817,23 +817,23 @@ var SECTION_IMAGES = {
   "Federal Republic of Central America": {
     foundation:{slug:"agustin-de-iturbide",name:"Agustín de Iturbide",img:"/images/encyclopedia/agustin-de-iturbide.jpg",artist:"Primitivo Miranda",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Agustin_I_of_Mexico.jpg"},
     socioeconomy:{slug:"guatemala-city",name:"Guatemala City",img:"/images/encyclopedia/guatemala-city.jpg",artist:"Rene Hernandez",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Ciudad_de_Guatemala,_CA.jpg"},
-    military:{slug:"manuel-jose-arce",name:"Manuel José Arce",img:"/images/encyclopedia/manuel-jose-arce.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manuel_Jos%C3%A9_Arce_y_Fagoaga.jpg"},
+    military:{slug:"manuel-jose-arce",name:"Manuel José Arce",img:"/images/encyclopedia/manuel-jose-arce.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manuel_Jos%C3%A9_Arce_y_Fagoaga.jpg"},
     governance:{slug:"francisco-morazan",name:"Francisco Morazán",img:"/images/encyclopedia/francisco-morazan.jpg",artist:"Aquiles Bigot",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francisco_Moraz%C3%A1n_Quesada.JPG"},
-    impact:{slug:"justo-rufino-barrios",name:"Justo Rufino Barrios",img:"/images/encyclopedia/justo-rufino-barrios.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Justo_Rufino_Barrios_Auy%C3%B3n.jpg"},
+    impact:{slug:"justo-rufino-barrios",name:"Justo Rufino Barrios",img:"/images/encyclopedia/justo-rufino-barrios.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Justo_Rufino_Barrios_Auy%C3%B3n.jpg"},
     decline:{slug:"mariano-galvez",name:"Mariano Gálvez",img:"/images/encyclopedia/mariano-galvez.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mariano_G%C3%A1lvez.jpg"}
   },
   "Republic of Bolivia": {
     foundation:{slug:"antonio-jose-de-sucre",name:"Antonio José de Sucre",img:"/images/encyclopedia/antonio-jose-de-sucre.jpg",artist:"Arturo Michelena",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Antonio_Jos%C3%A9_de_Sucre._Michelena,_Arturo._1895,_Legislative_Palace,_La_Paz.png"},
     socioeconomy:{slug:"potosi",name:"Potosí",img:"/images/encyclopedia/potosi.jpg",artist:"Parallelepiped09",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Vista_de_la_Villa_Imperial_de_Potos%C3%AD.jpg"},
-    military:{slug:"battle-of-yungay",name:"Battle of Yungay",img:"/images/encyclopedia/battle-of-yungay.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plano_de_la_Batalla_de_Yungay.jpg"},
-    governance:{slug:"mariano-melgarejo",name:"Mariano Melgarejo",img:"/images/encyclopedia/mariano-melgarejo.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:President_Mariano_Melgarejo.jpg"},
+    military:{slug:"battle-of-yungay",name:"Battle of Yungay",img:"/images/encyclopedia/battle-of-yungay.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plano_de_la_Batalla_de_Yungay.jpg"},
+    governance:{slug:"mariano-melgarejo",name:"Mariano Melgarejo",img:"/images/encyclopedia/mariano-melgarejo.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:President_Mariano_Melgarejo.jpg"},
     impact:{slug:"evo-morales",name:"Evo Morales",img:"/images/encyclopedia/evo-morales.jpg",artist:"EneasMx",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Evo_Morales_Ayma_(cropped_3).jpg"},
-    decline:{slug:"luis-garcia-meza",name:"Luis García Meza",img:"/images/encyclopedia/luis-garcia-meza.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LuisGarc%C3%ADaMeza1980.png"}
+    decline:{slug:"luis-garcia-meza",name:"Luis García Meza",img:"/images/encyclopedia/luis-garcia-meza.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LuisGarc%C3%ADaMeza1980.png"}
   },
   "Venezuela": {
     foundation:{slug:"simon-bolivar",name:"Simón Bolívar",img:"/images/encyclopedia/simon-bolivar.jpg",artist:"Luis Enrique Toro Moreno (1897-1933)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sim%C3%B3n_Bol%C3%ADvar._Toro_Moreno,_Luis._1922,_Legislative_Palace,_La_Paz.png"},
     socioeconomy:{slug:"cabimas",name:"Cabimas",img:"/images/encyclopedia/cabimas.jpg",artist:"Zulianito",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Autopista_lara_zulia_en_cabimas.jpg"},
-    military:{slug:"federal-war",name:"Federal War",img:"/images/encyclopedia/federal-war.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Combate_de_Maiquetia,_el_2_de_septiembre_de_1859.jpg"},
+    military:{slug:"federal-war",name:"Federal War",img:"/images/encyclopedia/federal-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Combate_de_Maiquetia,_el_2_de_septiembre_de_1859.jpg"},
     governance:{slug:"jose-antonio-paez",name:"José Antonio Páez",img:"/images/encyclopedia/jose-antonio-paez.jpg",artist:"John J. Peoli",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_J._Peoli_-_General_Jose_Antonio_Paez_-_1910.10.4_-_Smithsonian_American_Art_Museum.jpg"},
     impact:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ , JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
     decline:{slug:"caracazo",name:"Caracazo",img:"/images/encyclopedia/caracazo.jpg",artist:"Yrmauhili",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Una_v%C3%ADctima_del_Caracazo_en_Petare.jpg"}
@@ -850,9 +850,9 @@ var SECTION_IMAGES = {
     foundation:{slug:"agustin-de-iturbide",name:"Agustín de Iturbide",img:"/images/encyclopedia/agustin-de-iturbide.jpg",artist:"Primitivo Miranda",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Agustin_I_of_Mexico.jpg"},
     socioeconomy:{slug:"granada",name:"Granada",img:"/images/encyclopedia/granada.jpg",artist:"Brett Hodnett",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Granada_(25987961022).jpg"},
     military:{slug:"battle-of-san-jacinto",name:"Battle of San Jacinto",img:"/images/encyclopedia/battle-of-san-jacinto.jpg",artist:"Henry Arthur McArdle",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Battle_of_San_Jacinto_(1895).jpg"},
-    governance:{slug:"jose-santos-zelaya",name:"José Santos Zelaya",img:"/images/encyclopedia/jose-santos-zelaya.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jose_Santos_Zelaya_cph.3a03378.jpg"},
-    impact:{slug:"augusto-cesar-sandino",name:"Augusto César Sandino",img:"/images/encyclopedia/augusto-cesar-sandino.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Augusto_C%C3%A9sar_Sandino.jpg"},
-    decline:{slug:"anastasio-somoza-debayle",name:"Anastasio Somoza Debayle",img:"/images/encyclopedia/anastasio-somoza-debayle.jpg",artist:"Unknown authorUnknown author or not provided",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Anastasio_Somoza_Debayle.PNG"}
+    governance:{slug:"jose-santos-zelaya",name:"José Santos Zelaya",img:"/images/encyclopedia/jose-santos-zelaya.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jose_Santos_Zelaya_cph.3a03378.jpg"},
+    impact:{slug:"augusto-cesar-sandino",name:"Augusto César Sandino",img:"/images/encyclopedia/augusto-cesar-sandino.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Augusto_C%C3%A9sar_Sandino.jpg"},
+    decline:{slug:"anastasio-somoza-debayle",name:"Anastasio Somoza Debayle",img:"/images/encyclopedia/anastasio-somoza-debayle.jpg",artist:"Unknown author or not provided",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Anastasio_Somoza_Debayle.PNG"}
   },
   "Republic of Honduras": {
     foundation:{slug:"francisco-morazan",name:"Francisco Morazán",img:"/images/encyclopedia/francisco-morazan.jpg",artist:"Aquiles Bigot",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francisco_Moraz%C3%A1n_Quesada.JPG"},
@@ -882,38 +882,38 @@ var SECTION_IMAGES = {
     foundation:{slug:"juan-bautista-alberdi",name:"Juan Bautista Alberdi",img:"/images/encyclopedia/juan-bautista-alberdi.jpg",artist:"William George Helsby (1828-1891) [1]",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Juan_Bautista_Alberdi-restored.jpg"},
     socioeconomy:{slug:"buenos-aires",name:"Buenos Aires",img:"/images/encyclopedia/buenos-aires.jpg",artist:"Deensel",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Puerto_Madero,_Buenos_Aires_(40689219792)_(cropped).jpg"},
     military:{slug:"battle-of-curupayty",name:"Battle of Curupayty",img:"/images/encyclopedia/battle-of-curupayty.jpg",artist:"Luis Candido Lopez",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:C%C3%A1ndido_Lopez_-_Trinchera_de_Curupayt%C3%AD_-_Google_Art_Project_(497159).jpg"},
-    governance:{slug:"bartolome-mitre",name:"Bartolomé Mitre",img:"/images/encyclopedia/bartolome-mitre.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Mitre_01.jpg"},
+    governance:{slug:"bartolome-mitre",name:"Bartolomé Mitre",img:"/images/encyclopedia/bartolome-mitre.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Mitre_01.jpg"},
     impact:{slug:"eva-peron",name:"Eva Perón",img:"/images/encyclopedia/eva-peron.jpg",artist:"Pinélides Fusco",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Evita_(cropped).JPG"},
     decline:{slug:"raul-alfonsin",name:"Raúl Alfonsín",img:"/images/encyclopedia/raul-alfonsin.jpg",artist:"Presidencia de la Nación Argentina",licence:"CC BY 2.5 ar",source:"https://commons.wikimedia.org/wiki/File:Ra%C3%BAl_Alfons%C3%ADn_con_banda_presidencial_(cropped).jpg"}
   },
   "Mexico": {
     foundation:{slug:"benito-juarez",name:"Benito Juárez",img:"/images/encyclopedia/benito-juarez.jpg",artist:"Unknown photographer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Photograph_of_Benito_Juarez.jpg"},
     socioeconomy:{slug:"mexico-city",name:"Mexico City",img:"/images/encyclopedia/mexico-city.jpg",artist:"Gobierno CDMX",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Sobrevuelos_CDMX_HJ2A4913_(25514321687)_(cropped).jpg"},
-    military:{slug:"battle-of-celaya",name:"Battle of Celaya",img:"/images/encyclopedia/battle-of-celaya.jpg",artist:"Subido por User:Tatehuari el 14 de Marzo de 2007",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalla_celaya.jpg"},
+    military:{slug:"battle-of-celaya",name:"Battle of Celaya",img:"/images/encyclopedia/battle-of-celaya.jpg",artist:"Subido por Tatehuari el 14 de Marzo de 2007",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalla_celaya.jpg"},
     governance:{slug:"porfirio-diaz",name:"Porfirio Díaz",img:"/images/encyclopedia/porfirio-diaz.jpg",artist:"Aurelio Escobar Castellanos, Archive",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Porfirio_diaz.jpg"},
-    impact:{slug:"jose-vasconcelos",name:"José Vasconcelos",img:"/images/encyclopedia/jose-vasconcelos.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jose_Vasconcelos_portriat_c.1920s.jpg"},
+    impact:{slug:"jose-vasconcelos",name:"José Vasconcelos",img:"/images/encyclopedia/jose-vasconcelos.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jose_Vasconcelos_portriat_c.1920s.jpg"},
     decline:{slug:"carlos-salinas-de-gortari",name:"Carlos Salinas de Gortari",img:"/images/encyclopedia/carlos-salinas-de-gortari.jpg",artist:"Andrés Monroy",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Carlos_Salinas.jpg"}
   },
   "Canada": {
     foundation:{slug:"john-a-macdonald",name:"John A. Macdonald",img:"/images/encyclopedia/john-a-macdonald.jpg",artist:"George Lancefield",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_A_Macdonald_(ca._1875).jpg"},
     socioeconomy:{slug:"harold-innis",name:"Harold Innis",img:"/images/encyclopedia/harold-innis.jpg",artist:"H. James that is a pseudonym for William James Jr. according to City of Toroto Archive",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Harold_Innis_public-domain_library_archives-canada.jpg"},
     military:{slug:"battle-of-batoche",name:"Battle of Batoche",img:"/images/encyclopedia/battle-of-batoche.jpg",artist:"Seargent Grundy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Batoche_Print_by_Seargent_Grundy.jpg"},
-    governance:{slug:"constitution-act-1867",name:"Constitution Act, 1867",img:"/images/encyclopedia/constitution-act-1867.jpg",artist:"Statute enacted by the Parliament of the United Kingdom of Great Britain and Northern IrelandPublished by Hunter, Ros...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:British_North_America_Act,_1867.jpg"},
-    impact:{slug:"universal-declaration-of-human-rights",name:"Universal Declaration of Human Rights",img:"/images/encyclopedia/universal-declaration-of-human-rights.jpg",artist:"FDR Presidential Library &amp; Museum",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Eleanor_Roosevelt_UDHR.jpg"},
+    governance:{slug:"constitution-act-1867",name:"Constitution Act, 1867",img:"/images/encyclopedia/constitution-act-1867.jpg",artist:"Statute enacted by the Parliament of the United Kingdom of Great Britain and Northern Ireland; Published by Hunter, Rose in Ottawa",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:British_North_America_Act,_1867.jpg"},
+    impact:{slug:"universal-declaration-of-human-rights",name:"Universal Declaration of Human Rights",img:"/images/encyclopedia/universal-declaration-of-human-rights.jpg",artist:"FDR Presidential Library & Museum",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Eleanor_Roosevelt_UDHR.jpg"},
     decline:{slug:"second-world-war",name:"Second World War",img:"/images/encyclopedia/second-world-war.jpg",artist:"Richard Opitz",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-646-5188-17,_Flugzeuge_Junkers_Ju_87.jpg"}
   },
   "Commonwealth of Australia": {
-    foundation:{slug:"henry-parkes",name:"Henry Parkes",img:"/images/encyclopedia/henry-parkes.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henryparkes.jpg"},
+    foundation:{slug:"henry-parkes",name:"Henry Parkes",img:"/images/encyclopedia/henry-parkes.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henryparkes.jpg"},
     socioeconomy:{slug:"white-australia-policy",name:"White Australia policy",img:"/images/encyclopedia/white-australia-policy.jpg",artist:"Australian Natives' Association",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1910_White_Australia_badge.png"},
     military:{slug:"first-world-war",name:"First World War",img:"/images/encyclopedia/first-world-war.jpg",artist:"Collection DocAnciens/docpix.fr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_de_Verdun_1916.jpg"},
     governance:{slug:"robert-menzies",name:"Robert Menzies",img:"/images/encyclopedia/robert-menzies.jpg",artist:"National Library of Australia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_Menzies_1950s.jpg"},
     impact:{slug:"h-v-evatt",name:"H. V. Evatt",img:"/images/encyclopedia/h-v-evatt.jpg",artist:"Nationaal Archief",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Herbert_Vere_Evatt_1948.jpg"},
-    decline:{slug:"fall-of-singapore",name:"Fall of Singapore",img:"/images/encyclopedia/fall-of-singapore.jpg",artist:"Photographer not identified. \"Official photograph\". Post-Work: User:W.wolny",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Surrender_Singapore.jpg"}
+    decline:{slug:"fall-of-singapore",name:"Fall of Singapore",img:"/images/encyclopedia/fall-of-singapore.jpg",artist:"Photographer not identified. \"Official photograph\". Post-Work: W.wolny",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Surrender_Singapore.jpg"}
   },
   "Republic of Panama": {
     foundation:{slug:"ferdinand-de-lesseps",name:"Ferdinand de Lesseps",img:"/images/encyclopedia/ferdinand-de-lesseps.jpg",artist:"Nadar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ferdinand_de_Lesseps_by_Nadar.jpg"},
     socioeconomy:{slug:"panama-city",name:"Panama City",img:"/images/encyclopedia/panama-city.jpg",artist:"Dronepicr",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Panama_Papers_(148830809).jpeg"},
-    military:{slug:"coto-war",name:"Coto War",img:"/images/encyclopedia/coto-war.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Buques_de_Costa_Rica_capturados_en_Coto.jpg"},
+    military:{slug:"coto-war",name:"Coto War",img:"/images/encyclopedia/coto-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Buques_de_Costa_Rica_capturados_en_Coto.jpg"},
     governance:{slug:"arnulfo-arias",name:"Arnulfo Arias",img:"/images/encyclopedia/arnulfo-arias.jpg",artist:"Department of State. U.S. Embassy, Panama. 4/3/1964",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:A._Arias_President_of_Panama_(cropped).jpg"},
     impact:{slug:"panama-canal",name:"Panama Canal",img:"/images/encyclopedia/panama-canal.jpg",artist:"Thoroe",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Panama_Canal_Map_EN.svg"},
     decline:{slug:"torrijos-carter-treaties",name:"Torrijos–Carter Treaties",img:"/images/encyclopedia/torrijos-carter-treaties.jpg",artist:"White House photo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jimmy_Carter_and_General_Omar_Torrijos_signing_the_Panama_Canal_Treaty.jpg"}
@@ -929,7 +929,7 @@ var SECTION_IMAGES = {
   "Shang dynasty": {
     foundation:{slug:"sima-qian",name:"Sima Qian",img:"/images/encyclopedia/sima-qian.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Si_maqian.jpg"},
     socioeconomy:{slug:"houmuwu-ding",name:"Houmuwu ding",img:"/images/encyclopedia/houmuwu-ding.jpg",artist:"Mlogic",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:HouMuWuDingFullView.jpg"},
-    military:{slug:"wu-ding",name:"Wu Ding",img:"/images/encyclopedia/wu-ding.jpg",artist:"Wang Qiji of the Ming Dynasty, Wanli engraved \"Three Talents Picture Club\"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E4%B8%81.jpg"},
+    military:{slug:"wu-ding",name:"Wu Ding",img:"/images/encyclopedia/wu-ding.jpg",artist:"Wang Qiji of the Ming Dynasty, Wanli engraved \"Three Talents Picture Club",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E4%B8%81.jpg"},
     governance:{slug:"records-of-the-grand-historian",name:"Records of the Grand Historian",img:"/images/encyclopedia/records-of-the-grand-historian.jpg",artist:"Zhonghua Book Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%8F%B2%E8%AE%B0.jpg"},
     impact:{slug:"yinxu",name:"Yinxu",img:"/images/encyclopedia/yinxu.jpg",artist:"Tim Wu",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Exterior,_Yinxu_Museum_20241002-B.jpg"},
     decline:{slug:"battle-of-muye",name:"Battle of Muye",img:"/images/encyclopedia/battle-of-muye.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Muye.jpg"}
@@ -939,16 +939,16 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"tian",name:"Tian",img:"/images/encyclopedia/tian.jpg",artist:"Digital file creation, see the contributor names shown in the “User” column of the “File history” section below.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%A4%A9-bronze-shang.svg"},
     military:{slug:"battle-of-an",name:"Battle of An",img:"/images/encyclopedia/battle-of-an.jpg",artist:"Rolfmueller",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Huahill_2008_09_14.jpg"},
     governance:{slug:"guan-zhong",name:"Guan Zhong",img:"/images/encyclopedia/guan-zhong.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qihuangongguanzhong2.jpg"},
-    impact:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples,",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"},
+    impact:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"},
     decline:{slug:"king-zhaoxiang-of-qin",name:"King Zhaoxiang of Qin",img:"/images/encyclopedia/king-zhaoxiang-of-qin.jpg",artist:"ChenDaoIsHere",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Heshibi_%E5%AE%8C%E7%92%A7%E5%BD%92%E8%B5%B5%E6%AD%A6%E6%B0%8F%E7%A5%A0_%E9%87%91%E7%9F%B3%E7%B4%A23.jpg"}
   },
   "Western Zhou": {
     foundation:{slug:"di-xin",name:"Di Xin",img:"/images/encyclopedia/di-xin.jpg",artist:"高井 伴寛、蹄斎 北馬 (Hiroshi Takai, Hossai Hokuma)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E7%B5%B5%E6%9C%AC%E4%B8%89%E5%9B%BD%E5%A6%96%E5%A9%A6%E4%BC%9D_%E6%AE%B7%E7%B4%82%E7%8E%8B.jpg"},
     socioeconomy:{slug:"tian",name:"Tian",img:"/images/encyclopedia/tian.jpg",artist:"Digital file creation, see the contributor names shown in the “User” column of the “File history” section below.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%A4%A9-bronze-shang.svg"},
-    military:{slug:"duke-of-zhou",name:"Duke of Zhou",img:"/images/encyclopedia/duke-of-zhou.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Duke_of_Zhou.png"},
-    governance:{slug:"book-of-documents",name:"Book of Documents",img:"/images/encyclopedia/book-of-documents.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guwen_Shangshu_TNM.jpg"},
+    military:{slug:"duke-of-zhou",name:"Duke of Zhou",img:"/images/encyclopedia/duke-of-zhou.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Duke_of_Zhou.png"},
+    governance:{slug:"book-of-documents",name:"Book of Documents",img:"/images/encyclopedia/book-of-documents.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guwen_Shangshu_TNM.jpg"},
     impact:{slug:"classic-of-poetry",name:"Classic of Poetry",img:"/images/encyclopedia/classic-of-poetry.jpg",artist:"Aethelwolf Emsworth.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg"},
-    decline:{slug:"king-you-of-zhou",name:"King You of Zhou",img:"/images/encyclopedia/king-you-of-zhou.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E5%91%A8%E5%B9%BD%E7%8E%8B.jpg"}
+    decline:{slug:"king-you-of-zhou",name:"King You of Zhou",img:"/images/encyclopedia/king-you-of-zhou.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E5%91%A8%E5%B9%BD%E7%8E%8B.jpg"}
   },
   "State of Chu": {
     foundation:{slug:"zhuanxu",name:"Zhuanxu",img:"/images/encyclopedia/zhuanxu.jpg",artist:"mural painting from Han dynasty",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:EmperorZhuanxu.jpg"},
@@ -956,7 +956,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-chengpu",name:"Battle of Chengpu",img:"/images/encyclopedia/battle-of-chengpu.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Chengpu.png"},
     governance:{slug:"king-zhuang-of-chu",name:"King Zhuang of Chu",img:"/images/encyclopedia/king-zhuang-of-chu.jpg",artist:"馮夢龍",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%A5%9A%E8%8E%8A%E7%8E%8B_%E7%B9%A1%E5%83%8F%E6%9D%B1%E5%91%A8%E5%88%97%E5%9C%8B%E5%85%A8%E5%BF%97.jpg"},
     impact:{slug:"chu-ci",name:"Chu Ci",img:"/images/encyclopedia/chu-ci.jpg",artist:"Chen Hongshou",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qu_Yuan_Sang_while_Walking.jpg"},
-    decline:{slug:"bai-qi",name:"Bai Qi",img:"/images/encyclopedia/bai-qi.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bai_Qi.jpg"}
+    decline:{slug:"bai-qi",name:"Bai Qi",img:"/images/encyclopedia/bai-qi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bai_Qi.jpg"}
   },
   "State of Qin": {
     foundation:{slug:"sima-qian",name:"Sima Qian",img:"/images/encyclopedia/sima-qian.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Si_maqian.jpg"},
@@ -980,7 +980,7 @@ var SECTION_IMAGES = {
     military:{slug:"zhang-qian",name:"Zhang Qian",img:"/images/encyclopedia/zhang-qian.jpg",artist:"PHG",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ZhangQianTravels.jpg"},
     governance:{slug:"records-of-the-grand-historian",name:"Records of the Grand Historian",img:"/images/encyclopedia/records-of-the-grand-historian.jpg",artist:"Zhonghua Book Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%8F%B2%E8%AE%B0.jpg"},
     impact:{slug:"tillya-tepe",name:"Tillya Tepe",img:"/images/encyclopedia/tillya-tepe.jpg",artist:"H Sinica",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Tillya_Tepe_crown.jpg"},
-    decline:{slug:"kujula-kadphises",name:"Kujula Kadphises",img:"/images/encyclopedia/kujula-kadphises.jpg",artist:"Classical Numismatic Group;[1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Kushan_king_Kujula_Kadphises.jpg"}
+    decline:{slug:"kujula-kadphises",name:"Kujula Kadphises",img:"/images/encyclopedia/kujula-kadphises.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Kushan_king_Kujula_Kadphises.jpg"}
   },
   "Xianbei": {
     foundation:{slug:"chanyu",name:"Chanyu",img:"/images/encyclopedia/chanyu.jpg",artist:"Davide Mauro",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Reconstruction_of_a_Xiongnu_chief_warrior,_2nd_century_BCE-1st_century_CE.jpg"},
@@ -995,8 +995,8 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"gyeongju",name:"Gyeongju",img:"/images/encyclopedia/gyeongju.jpg",artist:"Kyoww (montage)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Gyeongju_montage.png"},
     military:{slug:"seong-of-baekje",name:"Seong of Baekje",img:"/images/encyclopedia/seong-of-baekje.jpg",artist:"Tokyo Bijutsu Gakko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:GUZE_Kannon_Horyuji.JPG"},
     governance:{slug:"jijeung-of-silla",name:"Jijeung of Silla",img:"/images/encyclopedia/jijeung-of-silla.jpg",artist:"by Julien Ambrosiano at Flickr",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Korea-Gyeongju-Cheonmachong-Entrance-01.jpg"},
-    impact:{slug:"bulguksa",name:"Bulguksa",img:"/images/encyclopedia/bulguksa.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju,_Korea.jpg"},
-    decline:{slug:"choe-chiwon",name:"Choe Chiwon",img:"/images/encyclopedia/choe-chiwon.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Choi_Chi-won.jpg"}
+    impact:{slug:"bulguksa",name:"Bulguksa",img:"/images/encyclopedia/bulguksa.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju,_Korea.jpg"},
+    decline:{slug:"choe-chiwon",name:"Choe Chiwon",img:"/images/encyclopedia/choe-chiwon.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Choi_Chi-won.jpg"}
   },
   "Goguryeo": {
     foundation:{slug:"gungnae",name:"Gungnae",img:"/images/encyclopedia/gungnae.jpg",artist:"DsouzaSohan",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Corner_of_Gungnae_Fortress_(GuoNei_Fortress).JPG"},
@@ -1004,7 +1004,7 @@ var SECTION_IMAGES = {
     military:{slug:"gwanggaeto-the-great",name:"Gwanggaeto the Great",img:"/images/encyclopedia/gwanggaeto-the-great.jpg",artist:"EditQ",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Gwanggaeto_Stele_5.jpg"},
     governance:{slug:"jangsu-of-goguryeo",name:"Jangsu of Goguryeo",img:"/images/encyclopedia/jangsu-of-goguryeo.jpg",artist:"Bart0278",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tomb_of_the_General_1.jpg"},
     impact:{slug:"gwanggaeto-stele",name:"Gwanggaeto Stele",img:"/images/encyclopedia/gwanggaeto-stele.jpg",artist:"Yumeto",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:20230605_Stela_for_Gwanggaeto.jpg"},
-    decline:{slug:"emperor-taizong-of-tang",name:"Emperor Taizong of Tang",img:"/images/encyclopedia/emperor-taizong-of-tang.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TangTaizong.jpg"}
+    decline:{slug:"emperor-taizong-of-tang",name:"Emperor Taizong of Tang",img:"/images/encyclopedia/emperor-taizong-of-tang.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TangTaizong.jpg"}
   },
   "Baekje": {
     foundation:{slug:"onjo-of-baekje",name:"Onjo of Baekje",img:"/images/encyclopedia/onjo-of-baekje.jpg",artist:"Original: Jeong Inho Transcription: History Net, National Institute of Korean History",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%EC%B4%88%EB%93%B1%EB%8C%80%ED%95%9C%EC%97%AD%EC%82%AC_%EC%A0%9C2%ED%8E%B8_12.jpg"},
@@ -1015,26 +1015,26 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-baekgang",name:"Battle of Baekgang",img:"/images/encyclopedia/battle-of-baekgang.jpg",artist:"Stillskywkpd",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_the_Battle_of_Baekgang.png"}
   },
   "Kushan Empire": {
-    foundation:{slug:"kujula-kadphises",name:"Kujula Kadphises",img:"/images/encyclopedia/kujula-kadphises.jpg",artist:"Classical Numismatic Group;[1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Kushan_king_Kujula_Kadphises.jpg"},
+    foundation:{slug:"kujula-kadphises",name:"Kujula Kadphises",img:"/images/encyclopedia/kujula-kadphises.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Kushan_king_Kujula_Kadphises.jpg"},
     socioeconomy:{slug:"mathura",name:"Mathura",img:"/images/encyclopedia/mathura.jpg",artist:"Umang108",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Vishram_Ghat.jpg"},
-    military:{slug:"kanishka",name:"Kanishka",img:"/images/encyclopedia/kanishka.jpg",artist:"No machine-readable author provided. World Imaging assumed (based on copyright claims).",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:KanishkaCoin3.JPG"},
+    military:{slug:"kanishka",name:"Kanishka",img:"/images/encyclopedia/kanishka.jpg",artist:"World Imaging",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:KanishkaCoin3.JPG"},
     governance:{slug:"rabatak-inscription",name:"Rabatak inscription",img:"/images/encyclopedia/rabatak-inscription.jpg",artist:"Unknown author, 2nd century CE inscription.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Surkh_Kotal_inscription.jpg"},
     impact:{slug:"kanishka-stupa",name:"Kanishka stupa",img:"/images/encyclopedia/kanishka-stupa.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ShahJiKiDheriStupa.jpg"},
     decline:{slug:"vasudeva-i",name:"Vasudeva I",img:"/images/encyclopedia/vasudeva-i.jpg",artist:"Xarbold",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:VASUDEVA_I.jpg"}
   },
   "Eastern Jin": {
-    foundation:{slug:"emperor-yuan-of-jin",name:"Emperor Yuan of Jin",img:"/images/encyclopedia/emperor-yuan-of-jin.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sima_Rui_(Jin_Yuandi).jpg"},
-    socioeconomy:{slug:"jiankang",name:"Jiankang",img:"/images/encyclopedia/jiankang.jpg",artist:"\"Jinling Ancient and Modern Map Research\" written by Chen Yi in the Ming Dynasty.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Southern_Dynasties_map_of_Nanjing.jpg"},
+    foundation:{slug:"emperor-yuan-of-jin",name:"Emperor Yuan of Jin",img:"/images/encyclopedia/emperor-yuan-of-jin.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sima_Rui_(Jin_Yuandi).jpg"},
+    socioeconomy:{slug:"jiankang",name:"Jiankang",img:"/images/encyclopedia/jiankang.jpg",artist:"Jinling Ancient and Modern Map Research\" written by Chen Yi in the Ming Dynasty.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Southern_Dynasties_map_of_Nanjing.jpg"},
     military:{slug:"battle-of-fei-river",name:"Battle of Fei River",img:"/images/encyclopedia/battle-of-fei-river.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Fei_River.png"},
-    governance:{slug:"huan-wen",name:"Huan Wen",img:"/images/encyclopedia/huan-wen.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Huan_Wen_%E6%A1%93%E6%BA%AB.png"},
+    governance:{slug:"huan-wen",name:"Huan Wen",img:"/images/encyclopedia/huan-wen.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Huan_Wen_%E6%A1%93%E6%BA%AB.png"},
     impact:{slug:"lantingji-xu",name:"Lantingji Xu",img:"/images/encyclopedia/lantingji-xu.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:XingshuLantingxv.jpg"},
-    decline:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"}
+    decline:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"}
   },
   "Rouran Khaganate": {
     foundation:{slug:"tuoba",name:"Tuoba",img:"/images/encyclopedia/tuoba.jpg",artist:"Gary Todd",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Northern_Wei_soldier.jpg"},
     socioeconomy:{slug:"turfan",name:"Turfan",img:"/images/encyclopedia/turfan.jpg",artist:"Colegota",licence:"CC BY-SA 2.5 es",source:"https://commons.wikimedia.org/wiki/File:Turpan-jiaohe-ruinas-d16.jpg"},
     military:{slug:"gaochang",name:"Gaochang",img:"/images/encyclopedia/gaochang.jpg",artist:"Colegota",licence:"CC BY-SA 2.5 es",source:"https://commons.wikimedia.org/wiki/File:Turpan-gaochang-d10.jpg"},
-    governance:{slug:"song-dynasty",name:"Song Dynasty",img:"/images/encyclopedia/song-dynasty.jpg",artist:"China - Song Dynasty - cs.svg: User:Mozzan derivative work: Kanguole",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:China_-_Song_Dynasty-en.svg"},
+    governance:{slug:"song-dynasty",name:"Song Dynasty",img:"/images/encyclopedia/song-dynasty.jpg",artist:"Mozzan; derivative work by Kanguole",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:China_-_Song_Dynasty-en.svg"},
     impact:{slug:"khazar-khaganate",name:"Khazar Khaganate",img:"/images/encyclopedia/khazar-khaganate.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chasaren.jpg"},
     decline:{slug:"changan",name:"Chang'an",img:"/images/encyclopedia/changan.jpg",artist:"Unknown Tang-era tomb artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Prince_Yide%27s_tomb,_towers.jpg"}
   },
@@ -1044,7 +1044,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-dafei-river",name:"Battle of Dafei River",img:"/images/encyclopedia/battle-of-dafei-river.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Dafei_River.png"},
     governance:{slug:"thonmi-sambhota",name:"Thonmi Sambhota",img:"/images/encyclopedia/thonmi-sambhota.jpg",artist:"Sahil Bhopal, Tashi Mannox",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Thomni-sambhota-thangka-72-for-web-1.jpg"},
     impact:{slug:"samye",name:"Samye",img:"/images/encyclopedia/samye.jpg",artist:"",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:A_grand_view_of_Samye.jpg"},
-    decline:{slug:"ralpachen",name:"Ralpachen",img:"/images/encyclopedia/ralpachen.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ralpachen.jpg"}
+    decline:{slug:"ralpachen",name:"Ralpachen",img:"/images/encyclopedia/ralpachen.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ralpachen.jpg"}
   },
   "Balhae": {
     foundation:{slug:"li-jinzhong",name:"Li Jinzhong",img:"/images/encyclopedia/li-jinzhong.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Khitan_Rebellion.png"},
@@ -1063,19 +1063,19 @@ var SECTION_IMAGES = {
   },
   "Ghurid Sultanate": {
     foundation:{slug:"mahmud-of-ghazni",name:"Mahmud of Ghazni",img:"/images/encyclopedia/mahmud-of-ghazni.jpg",artist:"1314-15",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahmud_of_Ghazni,_Ghaznavid_ruler,_conquering_Qasdar_(modern_Khuzdar)_in_India,_miniature_from_the_Jami%CA%BF_al-Tawarikh_of_Rashid_al-Din_Il-Khanid_Tabriz_Ms_Or_20_f.108v.jpg"},
-    socioeconomy:{slug:"herat",name:"Herat",img:"/images/encyclopedia/herat.jpg",artist:"Yves Picq http://veton.picq.fr",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Herat_7452a.jpg"},
+    socioeconomy:{slug:"herat",name:"Herat",img:"/images/encyclopedia/herat.jpg",artist:"Yves Picq",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Herat_7452a.jpg"},
     military:{slug:"battle-of-kasahrada",name:"Battle of Kasahrada",img:"/images/encyclopedia/battle-of-kasahrada.jpg",artist:"Sajaypal007",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Kasahrada.jpg"},
     governance:{slug:"ghiyath-al-din-muhammad",name:"Ghiyath al-Din Muhammad",img:"/images/encyclopedia/ghiyath-al-din-muhammad.jpg",artist:"Ninara",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Ghiyath_al-Din_Muhammad.jpg"},
     impact:{slug:"minaret-of-jam",name:"Minaret of Jam",img:"/images/encyclopedia/minaret-of-jam.jpg",artist:"david adamec",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jam_afghan_architecture_harirud_brick.jpg"},
     decline:{slug:"ala-ad-din-muhammad-ii",name:"Ala ad-Din Muhammad II",img:"/images/encyclopedia/ala-ad-din-muhammad-ii.jpg",artist:"Jami' al-tawarikh, Rashid al-Din, 15th century",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_II_portrait_in_a_1430_manuscript_of_the_Jami%27_al-tawarikh_by_Rashid-al-Din_Hamadani.jpg"}
   },
   "Liao dynasty": {
-    foundation:{slug:"shi-jingtang",name:"Shi Jingtang",img:"/images/encyclopedia/shi-jingtang.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shi_Jingtang_(Jin_Gaozu).jpg"},
+    foundation:{slug:"shi-jingtang",name:"Shi Jingtang",img:"/images/encyclopedia/shi-jingtang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shi_Jingtang_(Jin_Gaozu).jpg"},
     socioeconomy:{slug:"mahmud-of-ghazni",name:"Mahmud of Ghazni",img:"/images/encyclopedia/mahmud-of-ghazni.jpg",artist:"1314-15",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahmud_of_Ghazni,_Ghaznavid_ruler,_conquering_Qasdar_(modern_Khuzdar)_in_India,_miniature_from_the_Jami%CA%BF_al-Tawarikh_of_Rashid_al-Din_Il-Khanid_Tabriz_Ms_Or_20_f.108v.jpg"},
     military:{slug:"xiao-yanyan",name:"Xiao Yanyan",img:"/images/encyclopedia/xiao-yanyan.jpg",artist:"熊大木",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Empress_Dowager_Xiao_1892.jpg"},
     governance:{slug:"liaoyang",name:"Liaoyang",img:"/images/encyclopedia/liaoyang.jpg",artist:"红烧腰果",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:%E8%BE%BD%E9%98%B3%E7%99%BD%E5%A1%94%E5%85%AC%E5%9B%AD09.jpg"},
     impact:{slug:"dule-temple",name:"Dule Temple",img:"/images/encyclopedia/dule-temple.jpg",artist:"Xin",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Guanyin_Pavilion_of_Dule_Temple.JPG"},
-    decline:{slug:"emperor-taizu-of-jin",name:"Emperor Taizu of Jin",img:"/images/encyclopedia/emperor-taizu-of-jin.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wanggiyan_Aguda.jpg"}
+    decline:{slug:"emperor-taizu-of-jin",name:"Emperor Taizu of Jin",img:"/images/encyclopedia/emperor-taizu-of-jin.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wanggiyan_Aguda.jpg"}
   },
   "Goryeo": {
     foundation:{slug:"gung-ye",name:"Gung Ye",img:"/images/encyclopedia/gung-ye.jpg",artist:"(Wikibotbot) 위키봇봇",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%EA%B6%81%EC%98%88.jpg"},
@@ -1094,15 +1094,15 @@ var SECTION_IMAGES = {
     decline:{slug:"tughril",name:"Tughril",img:"/images/encyclopedia/tughril.jpg",artist:"1314 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Seljuk_Sultan_Tugrul_Bey_sitting_on_his_throne._Topkap%C4%B1_Saray%C4%B1_M%C3%BCzesi_1653-3_(304_B).jpg"}
   },
   "Jin dynasty (1115-1234)": {
-    foundation:{slug:"emperor-taizu-of-jin",name:"Emperor Taizu of Jin",img:"/images/encyclopedia/emperor-taizu-of-jin.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wanggiyan_Aguda.jpg"},
+    foundation:{slug:"emperor-taizu-of-jin",name:"Emperor Taizu of Jin",img:"/images/encyclopedia/emperor-taizu-of-jin.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wanggiyan_Aguda.jpg"},
     socioeconomy:{slug:"yellow-river",name:"Yellow River",img:"/images/encyclopedia/yellow-river.jpg",artist:"fading",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Yellow_River_-_panoramio.jpg"},
     military:{slug:"han-shizhong",name:"Han Shizhong",img:"/images/encyclopedia/han-shizhong.jpg",artist:"劉松年繪",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E9%9F%93%E4%B8%96%E5%BF%A0.jpg"},
-    governance:{slug:"wanyan-liang",name:"Wanyan Liang",img:"/images/encyclopedia/wanyan-liang.jpg",artist:"User:Slb nsk",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Wanyan_Digunai_cropped.jpg"},
+    governance:{slug:"wanyan-liang",name:"Wanyan Liang",img:"/images/encyclopedia/wanyan-liang.jpg",artist:"Slb nsk",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Wanyan_Digunai_cropped.jpg"},
     impact:{slug:"romance-of-the-western-chamber",name:"Romance of the Western Chamber",img:"/images/encyclopedia/romance-of-the-western-chamber.jpg",artist:"闵齐伋",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E9%97%B5%E9%BD%90%E4%BC%8B%E7%BB%98%E5%88%BB%E8%A5%BF%E5%8E%A2%E8%AE%B0%E5%BD%A9%E5%9B%BE%E7%AC%AC%E5%8D%81%E4%B8%89.jpg"},
     decline:{slug:"battle-of-yehuling",name:"Battle of Yehuling",img:"/images/encyclopedia/battle-of-yehuling.jpg",artist:"Sayf al-Vâhidî. Hérât. Afghanistan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_entre_mongols_%26_chinois_(1211).jpeg"}
   },
   "Golden Horde": {
-    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
     socioeconomy:{slug:"gurganj",name:"Gurganj",img:"/images/encyclopedia/gurganj.jpg",artist:"The original uploader was Atilin at French Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Urgench.jpg"},
     military:{slug:"battle-of-kulikovo",name:"Battle of Kulikovo",img:"/images/encyclopedia/battle-of-kulikovo.jpg",artist:"Adolphe Yvon",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dmitry_Donskoy_in_the_Battle_of_Kulikovo.jpg"},
     governance:{slug:"mengu-timur",name:"Mengu-Timur",img:"/images/encyclopedia/mengu-timur.jpg",artist:"1405-1409 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mengu-Timur_portrait._Timurid_genealogy,_1405-1409,_Samarkand_(Topkapi_Sarayi_M%C3%BCzesi,_H2152)_folio_36b.jpg"},
@@ -1118,7 +1118,7 @@ var SECTION_IMAGES = {
     decline:{slug:"imo-incident",name:"Imo Incident",img:"/images/encyclopedia/imo-incident.jpg",artist:"歌川国松",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Imogullan1.jpg"}
   },
   "Ryukyu Kingdom": {
-    foundation:{slug:"hongwu-emperor",name:"Hongwu Emperor",img:"/images/encyclopedia/hongwu-emperor.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"},
+    foundation:{slug:"hongwu-emperor",name:"Hongwu Emperor",img:"/images/encyclopedia/hongwu-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"},
     socioeconomy:{slug:"palembang",name:"Palembang",img:"/images/encyclopedia/palembang.jpg",artist:"Gaudi Renanda",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:LRT_Palembang_Ampera_Bridge.jpg"},
     military:{slug:"sho-shin",name:"Shō Shin",img:"/images/encyclopedia/sho-shin.jpg",artist:"Shō Genko, 1748-1841",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Sho_Shin.jpg"},
     governance:{slug:"beijing",name:"Beijing",img:"/images/encyclopedia/beijing.jpg",artist:"N509FZ",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Skyline_of_Beijing_CBD_with_B-5906_approaching_(20211016171955)_(1).jpg"},
@@ -1126,7 +1126,7 @@ var SECTION_IMAGES = {
     decline:{slug:"meiji-restoration",name:"Meiji Restoration",img:"/images/encyclopedia/meiji-restoration.jpg",artist:"Takahashi Yuichi (1828-1894)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emperor_Meiji_by_Takahashi_Yuichi.jpg"}
   },
   "Kazakh Khanate": {
-    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
     socioeconomy:{slug:"turkistan-city",name:"Turkistan",img:"/images/encyclopedia/turkistan-city.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1914_map_of_Asia.jpg"},
     military:{slug:"muhammad-haidar-dughlat",name:"Muhammad Haidar Dughlat",img:"/images/encyclopedia/muhammad-haidar-dughlat.jpg",artist:"Rani nurmai",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Silver_coin_of_Haidar_Dughlat_in_name_of_Humayun.jpg"},
     governance:{slug:"esim-khan",name:"Esim Khan",img:"/images/encyclopedia/esim-khan.jpg",artist:"naturalearthdata.com, offered to the Public Domain per Terms of Use",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_the_Kazakh_Khanate.png"},
@@ -1137,14 +1137,14 @@ var SECTION_IMAGES = {
     foundation:{slug:"esen-taishi",name:"Esen Taishi",img:"/images/encyclopedia/esen-taishi.jpg",artist:"Avishay",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:ESENTAISH_KHAAN.jpg"},
     socioeconomy:{slug:"kashgar",name:"Kashgar",img:"/images/encyclopedia/kashgar.jpg",artist:"N509FZ",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:H%C3%ABytgah_Mosque,_Kashi_(20230923100109).jpg"},
     military:{slug:"battle-of-ulan-butung",name:"Battle of Ulan Butung",img:"/images/encyclopedia/battle-of-ulan-butung.jpg",artist:"范承烈 (Fan Chenglie)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qing_artillery_and_musketeers.jpg"},
-    governance:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    governance:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
     impact:{slug:"dolon-nor",name:"Dolon Nor",img:"/images/encyclopedia/dolon-nor.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TTTC_Vol_I_033_Tolon-Noor.png"},
-    decline:{slug:"galdan-tseren",name:"Galdan Tseren",img:"/images/encyclopedia/galdan-tseren.jpg",artist:"Бобров, Леонид Александрович (*1980)",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Kalmyk_warriors.jpg"}
+    decline:{slug:"galdan-tseren",name:"Galdan Tseren",img:"/images/encyclopedia/galdan-tseren.jpg",artist:"Бобров, Леонид Александрович (; 1980)",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Kalmyk_warriors.jpg"}
   },
   "Republic of China": {
     foundation:{slug:"sun-yat-sen",name:"Sun Yat-sen",img:"/images/encyclopedia/sun-yat-sen.jpg",artist:"上海波尔照相馆",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%AD%99%E4%B8%AD%E5%B1%B1%E8%82%96%E5%83%8F.jpg"},
     socioeconomy:{slug:"shanghai",name:"Shanghai",img:"/images/encyclopedia/shanghai.jpg",artist:"xiquinhosilva",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Huangpu_Park_20124-Shanghai_(32208802494).jpg"},
-    military:{slug:"marco-polo-bridge-incident",name:"Marco Polo Bridge Incident",img:"/images/encyclopedia/marco-polo-bridge-incident.jpg",artist:"Sweeper tamonten (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Marco_Polo_Bridge_air_view.PNG"},
+    military:{slug:"marco-polo-bridge-incident",name:"Marco Polo Bridge Incident",img:"/images/encyclopedia/marco-polo-bridge-incident.jpg",artist:"Sweeper tamonten",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Marco_Polo_Bridge_air_view.PNG"},
     governance:{slug:"nanjing",name:"Nanjing",img:"/images/encyclopedia/nanjing.jpg",artist:"xiquinhosilva",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Nanjing_CBD_from_City_Wall.jpg"},
     impact:{slug:"franklin-d-roosevelt",name:"Franklin D. Roosevelt",img:"/images/encyclopedia/franklin-d-roosevelt.jpg",artist:"Leon Perskie",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:FDR-1944-Campaign-Portrait_(3x4_retouched,_cropped).jpg"},
     decline:{slug:"guangzhou",name:"Guangzhou",img:"/images/encyclopedia/guangzhou.jpg",artist:"Tim Wu",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Canton_Tower_20241027.jpg"}
@@ -1153,7 +1153,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"mao-zedong",name:"Mao Zedong",img:"/images/encyclopedia/mao-zedong.jpg",artist:"Chen Zhengqing (1917–1966)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg"},
     socioeconomy:{slug:"shenzhen",name:"Shenzhen",img:"/images/encyclopedia/shenzhen.jpg",artist:"Charlie fong",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Commercial_area_of_futian_to_east2020.jpg"},
     military:{slug:"korean-war",name:"Korean War",img:"/images/encyclopedia/korean-war.jpg",artist:"Photo by Corporal Peter McDonald, USMC",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chosin.jpg"},
-    governance:{slug:"liu-shaoqi",name:"Liu Shaoqi",img:"/images/encyclopedia/liu-shaoqi.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liu_Shaoqi_in_1959.jpg"},
+    governance:{slug:"liu-shaoqi",name:"Liu Shaoqi",img:"/images/encyclopedia/liu-shaoqi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liu_Shaoqi_in_1959.jpg"},
     impact:{slug:"zhou-enlai",name:"Zhou Enlai",img:"/images/encyclopedia/zhou-enlai.jpg",artist:"President (1969-1974 : Nixon). White House Photo Office. 1969-1974; General Services Administration. National Archive...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Premier_Chou_En-Lai_in_the_Great_Hall_of_the_People%27s_Banquet_Hall_-_DPLA_-_a40021a8100507bc7a244420481bf488.jpg"},
     decline:{slug:"xi-jinping",name:"Xi Jinping",img:"/images/encyclopedia/xi-jinping.jpg",artist:"Simon Dawson / No 10 Downing Street",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Prime_Minister_Keir_Starmer_visits_China_(55066713683)_(cropped%2Bangle).jpg"}
   },
@@ -1166,28 +1166,28 @@ var SECTION_IMAGES = {
     decline:{slug:"amenemhat-iv",name:"Amenemhat IV",img:"/images/encyclopedia/amenemhat-iv.jpg",artist:"Juan R. Lazaro",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Amenemhat_IV_upclose.jpg"}
   },
   "Numidia": {
-    foundation:{slug:"syphax",name:"Syphax",img:"/images/encyclopedia/syphax.jpg",artist:"Unknown authorUnknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_Syphax.png"},
+    foundation:{slug:"syphax",name:"Syphax",img:"/images/encyclopedia/syphax.jpg",artist:"Unknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_Syphax.png"},
     socioeconomy:{slug:"rome",name:"Rome",img:"/images/encyclopedia/rome.jpg",artist:"Diliff",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"},
     military:{slug:"third-punic-war",name:"Third Punic War",img:"/images/encyclopedia/third-punic-war.jpg",artist:"Harrias",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:City_of_Carthage_circa_149_BC.png"},
-    governance:{slug:"masinissa",name:"Masinissa",img:"/images/encyclopedia/masinissa.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Masinissa_-_Capitoline_Museum.png"},
+    governance:{slug:"masinissa",name:"Masinissa",img:"/images/encyclopedia/masinissa.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Masinissa_-_Capitoline_Museum.png"},
     impact:{slug:"bellum-iugurthinum",name:"Bellum Iugurthinum",img:"/images/encyclopedia/bellum-iugurthinum.jpg",artist:"CNG",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Sulla_Coin2.jpg"},
-    decline:{slug:"battle-of-thapsus",name:"Battle of Thapsus",img:"/images/encyclopedia/battle-of-thapsus.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Thapsus,_46_BC_(Initial_deployment_of_troops).jpg"}
+    decline:{slug:"battle-of-thapsus",name:"Battle of Thapsus",img:"/images/encyclopedia/battle-of-thapsus.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Thapsus,_46_BC_(Initial_deployment_of_troops).jpg"}
   },
   "Africa Proconsularis": {
     foundation:{slug:"gaius-gracchus",name:"Gaius Gracchus",img:"/images/encyclopedia/gaius-gracchus.jpg",artist:"Jean-Baptiste Claude Eugène Guillaume",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Eugene_Guillaume_-_the_Gracchi_(cropped)_Gaius.jpg"},
     socioeconomy:{slug:"rome",name:"Rome",img:"/images/encyclopedia/rome.jpg",artist:"Diliff",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"},
     military:{slug:"tacfarinas",name:"Tacfarinas",img:"/images/encyclopedia/tacfarinas.jpg",artist:"Hynox.qualaty",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mausolee_Takfarinas.jpg"},
-    governance:{slug:"trajan",name:"Trajan",img:"/images/encyclopedia/trajan.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_72.jpg"},
+    governance:{slug:"trajan",name:"Trajan",img:"/images/encyclopedia/trajan.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_72.jpg"},
     impact:{slug:"dougga",name:"Dougga",img:"/images/encyclopedia/dougga.jpg",artist:"Emna Trabelsi",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Dougga,_Beja.jpg"},
-    decline:{slug:"gildo",name:"Gildo",img:"/images/encyclopedia/gildo.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Corbita_BM_GR1850.3-4.32.jpg"}
+    decline:{slug:"gildo",name:"Gildo",img:"/images/encyclopedia/gildo.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Corbita_BM_GR1850.3-4.32.jpg"}
   },
   "Roman Egypt": {
     foundation:{slug:"mark-antony",name:"Mark Antony",img:"/images/encyclopedia/mark-antony.jpg",artist:"Byzantium565",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Octavian_and_Antony_denarius_(obverse).jpg"},
     socioeconomy:{slug:"alexandria",name:"Alexandria",img:"/images/encyclopedia/alexandria.jpg",artist:"TheEgyptian",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:San_Stefano_Grand_Plaza.JPG"},
     military:{slug:"samo",name:"Samo",img:"/images/encyclopedia/samo.jpg",artist:"Palickap",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:N%C3%A1klo_(vrch),_S%C3%A1mo_(2).jpg"},
-    governance:{slug:"septimius-severus",name:"Septimius Severus",img:"/images/encyclopedia/septimius-severus.jpg",artist:"Unknown artistUnknown artist",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Septimius_Severus_busto-Musei_Capitolini.jpg"},
+    governance:{slug:"septimius-severus",name:"Septimius Severus",img:"/images/encyclopedia/septimius-severus.jpg",artist:"Unknown artist",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Septimius_Severus_busto-Musei_Capitolini.jpg"},
     impact:{slug:"almagest",name:"Almagest",img:"/images/encyclopedia/almagest.jpg",artist:"Ptolemy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Claudius_Ptolemaeus,_Almagestum,_1515.djvu"},
-    decline:{slug:"jesus",name:"Jesus",img:"/images/encyclopedia/jesus.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg"}
+    decline:{slug:"jesus",name:"Jesus",img:"/images/encyclopedia/jesus.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg"}
   },
   "Makuria": {
     foundation:{slug:"justinian-i",name:"Justinian I",img:"/images/encyclopedia/justinian-i.jpg",artist:"Petar Milošević",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_(Ravenna).jpg"},
@@ -1248,7 +1248,7 @@ var SECTION_IMAGES = {
   "Chios": {
     foundation:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
     socioeconomy:{slug:"naucratis",name:"Naucratis",img:"/images/encyclopedia/naucratis.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plate_sphinx_BM_GR1965.9-30.705.jpg"},
-    military:{slug:"battle-of-lade",name:"Battle of Lade",img:"/images/encyclopedia/battle-of-lade.jpg",artist:"Ionian_Revolt_Campaign_Map-fr.svg: Eric Gaba (Sting - fr:Sting) derivative work: MinisterForBadTimes (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ionian_revolt_Battle_of_Lade.jpg"},
+    military:{slug:"battle-of-lade",name:"Battle of Lade",img:"/images/encyclopedia/battle-of-lade.jpg",artist:"Eric Gaba (Sting - fr:Sting); derivative work by MinisterForBadTimes",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ionian_revolt_Battle_of_Lade.jpg"},
     governance:{slug:"darius-i",name:"Darius I",img:"/images/encyclopedia/darius-i.jpg",artist:"Rumlu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darius_I.jpg"},
     impact:{slug:"rome",name:"Rome",img:"/images/encyclopedia/rome.jpg",artist:"Diliff",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"},
     decline:{slug:"peloponnesian-war",name:"Peloponnesian War",img:"/images/encyclopedia/peloponnesian-war.jpg",artist:"Translator was Kenmayer",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Pelop_war_en.png"}
@@ -1256,7 +1256,7 @@ var SECTION_IMAGES = {
   "Miletus": {
     foundation:{slug:"codrus",name:"Codrus",img:"/images/encyclopedia/codrus.jpg",artist:"Karl August Baumeister (nach Braun)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kodros-Schale.png"},
     socioeconomy:{slug:"naucratis",name:"Naucratis",img:"/images/encyclopedia/naucratis.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plate_sphinx_BM_GR1965.9-30.705.jpg"},
-    military:{slug:"battle-of-lade",name:"Battle of Lade",img:"/images/encyclopedia/battle-of-lade.jpg",artist:"Ionian_Revolt_Campaign_Map-fr.svg: Eric Gaba (Sting - fr:Sting) derivative work: MinisterForBadTimes (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ionian_revolt_Battle_of_Lade.jpg"},
+    military:{slug:"battle-of-lade",name:"Battle of Lade",img:"/images/encyclopedia/battle-of-lade.jpg",artist:"Eric Gaba (Sting - fr:Sting); derivative work by MinisterForBadTimes",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ionian_revolt_Battle_of_Lade.jpg"},
     governance:{slug:"periander",name:"Periander",img:"/images/encyclopedia/periander.jpg",artist:"Copy of Ktesilas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Periander_Pio-Clementino_Inv276.jpg"},
     impact:{slug:"didyma",name:"Didyma",img:"/images/encyclopedia/didyma.jpg",artist:"AlexanderVanLoon",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Didymaion_front_AvL.JPG"},
     decline:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"}
@@ -1264,10 +1264,10 @@ var SECTION_IMAGES = {
   "Samos": {
     foundation:{slug:"samo",name:"Samo",img:"/images/encyclopedia/samo.jpg",artist:"Palickap",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:N%C3%A1klo_(vrch),_S%C3%A1mo_(2).jpg"},
     socioeconomy:{slug:"heraion-of-samos",name:"Heraion of Samos",img:"/images/encyclopedia/heraion-of-samos.jpg",artist:"Tomisti",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Heraion_of_Samos_2.jpg"},
-    military:{slug:"battle-of-lade",name:"Battle of Lade",img:"/images/encyclopedia/battle-of-lade.jpg",artist:"Ionian_Revolt_Campaign_Map-fr.svg: Eric Gaba (Sting - fr:Sting) derivative work: MinisterForBadTimes (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ionian_revolt_Battle_of_Lade.jpg"},
+    military:{slug:"battle-of-lade",name:"Battle of Lade",img:"/images/encyclopedia/battle-of-lade.jpg",artist:"Eric Gaba (Sting - fr:Sting); derivative work by MinisterForBadTimes",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ionian_revolt_Battle_of_Lade.jpg"},
     governance:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
     impact:{slug:"hera",name:"Hera",img:"/images/encyclopedia/hera.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hera_Campana_Louvre_Ma2283.jpg"},
-    decline:{slug:"battle-of-mycale",name:"Battle of Mycale",img:"/images/encyclopedia/battle-of-mycale.jpg",artist:"No machine-readable author provided. Pedro Lassouras assumed (based on copyright claims).",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Priene_colline_colonne.jpg"}
+    decline:{slug:"battle-of-mycale",name:"Battle of Mycale",img:"/images/encyclopedia/battle-of-mycale.jpg",artist:"Pedro Lassouras",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Priene_colline_colonne.jpg"}
   },
   "Sparta": {
     foundation:{slug:"homer",name:"Homer",img:"/images/encyclopedia/homer.jpg",artist:"Photograph by Mike Peel (www.mikepeel.net).",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Homer_At_the_British_Museum_2024_(3x4_cropped).jpg"},
@@ -1283,7 +1283,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-marathon",name:"Battle of Marathon",img:"/images/encyclopedia/battle-of-marathon.jpg",artist:"John Steeple Davis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Scene_of_the_Battle_of_Marathon.jpg"},
     governance:{slug:"pericles",name:"Pericles",img:"/images/encyclopedia/pericles.jpg",artist:"Copy of Kresilas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pericles_Pio-Clementino_Inv269_n2.jpg"},
     impact:{slug:"parthenon",name:"Parthenon",img:"/images/encyclopedia/parthenon.jpg",artist:"Steve Swayne",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg"},
-    decline:{slug:"battle-of-chaeronea-338-bce",name:"Battle of Chaeronea (338 BCE)",img:"/images/encyclopedia/battle-of-chaeronea-338-bce.jpg",artist:"Battle_of_Chaeronea,_338_BC.gif: Kirill Lokshin derivative work: Dipa_1965 (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Chaeronea,_338_BC_en.svg"}
+    decline:{slug:"battle-of-chaeronea-338-bce",name:"Battle of Chaeronea (338 BCE)",img:"/images/encyclopedia/battle-of-chaeronea-338-bce.jpg",artist:"Kirill Lokshin; derivative work by Dipa_1965",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Chaeronea,_338_BC_en.svg"}
   },
   "Knossos": {
     foundation:{slug:"minos",name:"Minos",img:"/images/encyclopedia/minos.jpg",artist:"ArchaiOptix",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Syriskos_Painter_-_ARV_259_1_-_Theseus_killing_the_Minotauros_in_the_presence_of_Minos_and_Ariadne_and_lookers_-_Athens_NAM_15115.jpg"},
@@ -1318,7 +1318,7 @@ var SECTION_IMAGES = {
     decline:{slug:"sertorian-war",name:"Sertorian War",img:"/images/encyclopedia/sertorian-war.jpg",artist:"Jaume Noguera, Pau Valdés, and Eduard Ble",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Sertorian_war.png"}
   },
   "Boeotian League": {
-    foundation:{slug:"thucydides",name:"Thucydides",img:"/images/encyclopedia/thucydides.jpg",artist:"user:shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Thucydides_pushkin01.jpg"},
+    foundation:{slug:"thucydides",name:"Thucydides",img:"/images/encyclopedia/thucydides.jpg",artist:"shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Thucydides_pushkin01.jpg"},
     socioeconomy:{slug:"athens",name:"Athens",img:"/images/encyclopedia/athens.jpg",artist:"Andrew Parlette",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg"},
     military:{slug:"battle-of-delium",name:"Battle of Delium",img:"/images/encyclopedia/battle-of-delium.jpg",artist:"Thomas Couture",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Socrates_at_the_Battle_of_Delium_(Thomas_Couture,_1843).jpg"},
     governance:{slug:"hellenica-oxyrhynchia",name:"Hellenica Oxyrhynchia",img:"/images/encyclopedia/hellenica-oxyrhynchia.jpg",artist:"Издательство Кларендон, Оксфорд, 1913 г.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:HellenicaOxyrhynchia_Walker.jpg"},
@@ -1342,7 +1342,7 @@ var SECTION_IMAGES = {
     decline:{slug:"philip-ii-of-macedon",name:"Philip II of Macedon",img:"/images/encyclopedia/philip-ii-of-macedon.jpg",artist:"Richard Mortel from Riyadh, Saudi Arabia",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Phillip_II,_king_of_Macedonia,_Roman_copy_of_Greek_original,_Ny_Carlsberg_Glyptotek,_Copenhagen_(36420294055).jpg"}
   },
   "Bosporan Kingdom": {
-    foundation:{slug:"diodorus-siculus",name:"Diodorus Siculus",img:"/images/encyclopedia/diodorus-siculus.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diodoro_siculo_-_storico_di_Agira.jpg"},
+    foundation:{slug:"diodorus-siculus",name:"Diodorus Siculus",img:"/images/encyclopedia/diodorus-siculus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diodoro_siculo_-_storico_di_Agira.jpg"},
     socioeconomy:{slug:"athens",name:"Athens",img:"/images/encyclopedia/athens.jpg",artist:"Andrew Parlette",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg"},
     military:{slug:"tacitus",name:"Tacitus",img:"/images/encyclopedia/tacitus.jpg",artist:"Pe-Jo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wien-_Parlament-Tacitus.jpg"},
     governance:{slug:"apollonius-of-tyana",name:"Apollonius of Tyana",img:"/images/encyclopedia/apollonius-of-tyana.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Philosopher,_probably_Apollonius_of_Tyana,_marble,_ca_200_AD,_from_Gortys,_AMH,_145418.jpg"},
@@ -1358,9 +1358,9 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-pydna",name:"Battle of Pydna",img:"/images/encyclopedia/battle-of-pydna.jpg",artist:"Marsyas (original map); Mkr bu50 (English translation)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Plan_battle_of_Pydna-en.svg"}
   },
   "Antigonid Kingdom of Macedonia": {
-    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
+    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
     socioeconomy:{slug:"thessaloniki",name:"Thessaloniki",img:"/images/encyclopedia/thessaloniki.jpg",artist:"Berthold Werner",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tessaloniki_BW_2017-10-05_18-22-47.jpg"},
-    military:{slug:"battle-of-sellasia",name:"Battle of Sellasia",img:"/images/encyclopedia/battle-of-sellasia.jpg",artist:"en:User:Semperf",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:SouthernPeloponessus.gif"},
+    military:{slug:"battle-of-sellasia",name:"Battle of Sellasia",img:"/images/encyclopedia/battle-of-sellasia.jpg",artist:"Semperf",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:SouthernPeloponessus.gif"},
     governance:{slug:"antigonus-iii-doson",name:"Antigonus III Doson",img:"/images/encyclopedia/antigonus-iii-doson.jpg",artist:"uploader - Bjankuloski06",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Antigonus_Doson.jpg"},
     impact:{slug:"athens",name:"Athens",img:"/images/encyclopedia/athens.jpg",artist:"Andrew Parlette",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg"},
     decline:{slug:"battle-of-cynoscephalae",name:"Battle of Cynoscephalae",img:"/images/encyclopedia/battle-of-cynoscephalae.jpg",artist:"Kryston",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Macedonia_and_the_Aegean_World_c.200.png"}
@@ -1383,7 +1383,7 @@ var SECTION_IMAGES = {
   },
   "Lusitania": {
     foundation:{slug:"viriathus",name:"Viriathus",img:"/images/encyclopedia/viriathus.jpg",artist:"Eduardo Barrón",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Viriato.JPG"},
-    socioeconomy:{slug:"setubal",name:"Setúbal",img:"/images/encyclopedia/setubal.jpg",artist:"Filipe Rocha,user:sacavem (pt) http://pt.wikipedia.org/wiki/Usu%C3%A1rio:Sacavem (pt:usuário:sacavem)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Setubal_III_(cropped).jpg"},
+    socioeconomy:{slug:"setubal",name:"Setúbal",img:"/images/encyclopedia/setubal.jpg",artist:"Filipe Rocha,sacavem (pt) (pt:usuário:sacavem)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Setubal_III_(cropped).jpg"},
     military:{slug:"cantabrian-wars",name:"Cantabrian Wars",img:"/images/encyclopedia/cantabrian-wars.jpg",artist:"LLs",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cantabrian_Wars.jpg"},
     governance:{slug:"otho",name:"Otho",img:"/images/encyclopedia/otho.jpg",artist:"Fred Romero from Paris, France",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Statue_of_the_emperor_Otho,_Ma_1215_(cropped1).jpg"},
     impact:{slug:"temple-of-diana-merida",name:"Temple of Diana (Mérida)",img:"/images/encyclopedia/temple-of-diana-merida.jpg",artist:"Fernando",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Temple_of_Diana_in_M%C3%A9rida.jpg"},
@@ -1402,14 +1402,14 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"colchester",name:"Colchester",img:"/images/encyclopedia/colchester.jpg",artist:"Dr Neil Clifton",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Colchester_Castle_(geograph_4444025).jpg"},
     military:{slug:"battle-of-mons-graupius",name:"Battle of Mons Graupius",img:"/images/encyclopedia/battle-of-mons-graupius.jpg",artist:"myself",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Agricola.Campaigns.80.84.jpg"},
     governance:{slug:"boudica",name:"Boudica",img:"/images/encyclopedia/boudica.jpg",artist:"John Opie",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Queen_Boudica_by_John_Opie.jpg"},
-    impact:{slug:"hadrians-wall",name:"Hadrian's Wall",img:"/images/encyclopedia/hadrians-wall.jpg",artist:"Hadrians_Wall_map.png: Created by NormanEinstein, September 20, 2005 derivative work: Talifero (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hadrians_Wall_map.svg"},
-    decline:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a ...",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"}
+    impact:{slug:"hadrians-wall",name:"Hadrian's Wall",img:"/images/encyclopedia/hadrians-wall.jpg",artist:"Created by NormanEinstein, September 20, 2005; derivative work by Talifero",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hadrians_Wall_map.svg"},
+    decline:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a CC BY 3.0 license.",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"}
   },
   "Alemanni": {
-    foundation:{slug:"cassius-dio",name:"Cassius Dio",img:"/images/encyclopedia/cassius-dio.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dio_Cassius.jpg"},
+    foundation:{slug:"cassius-dio",name:"Cassius Dio",img:"/images/encyclopedia/cassius-dio.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dio_Cassius.jpg"},
     socioeconomy:{slug:"bad-urach",name:"Bad Urach",img:"/images/encyclopedia/bad-urach.jpg",artist:"Ssch",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:BadUrachMarktplatz.jpg"},
     military:{slug:"gallienus",name:"Gallienus",img:"/images/encyclopedia/gallienus.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ritratto_di_gallieno_dalla_casa_delle_vestali.jpg"},
-    governance:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a ...",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
+    governance:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a CC BY 3.0 license.",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
     impact:{slug:"konstanz",name:"Konstanz",img:"/images/encyclopedia/konstanz.jpg",artist:"JoachimKohler-HB",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Rheintorturm_in_Konstanz.jpg"},
     decline:{slug:"battle-of-tolbiac",name:"Battle of Tolbiac",img:"/images/encyclopedia/battle-of-tolbiac.jpg",artist:"Ary Scheffer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ary_Scheffer_-_Bataille_de_Tolbiac_496.jpg"}
   },
@@ -1417,36 +1417,36 @@ var SECTION_IMAGES = {
     foundation:{slug:"maximian",name:"Maximian",img:"/images/encyclopedia/maximian.jpg",artist:"Pierre-Selim",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_Saint-Raymond_-_2017-09-02_-_Inv._Ra_34b_-_4654.jpg"},
     socioeconomy:{slug:"rome",name:"Rome",img:"/images/encyclopedia/rome.jpg",artist:"Diliff",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"},
     military:{slug:"battle-of-the-catalaunian-plains",name:"Battle of the Catalaunian Plains",img:"/images/encyclopedia/battle-of-the-catalaunian-plains.jpg",artist:"Johannes de Thurocz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thur%C3%B3czy_kr%C3%B3nika_-_Attila_kir%C3%A1ly_csat%C3%A1ja_a_catalaunumi_s%C3%ADkon.jpg"},
-    governance:{slug:"clovis-i",name:"Clovis I",img:"/images/encyclopedia/clovis-i.jpg",artist:"Pethrus (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Remy_baptise_Clovis_d%C3%A9tail.jpg"},
+    governance:{slug:"clovis-i",name:"Clovis I",img:"/images/encyclopedia/clovis-i.jpg",artist:"Pethrus",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Remy_baptise_Clovis_d%C3%A9tail.jpg"},
     impact:{slug:"frankfurt",name:"Frankfurt",img:"/images/encyclopedia/frankfurt.jpg",artist:"Dr. Thomas Liptak",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Central_business_district_(2024).jpg"},
-    decline:{slug:"battle-of-vouille",name:"Battle of Vouillé",img:"/images/encyclopedia/battle-of-vouille.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_between_Clovis_and_the_Visigoths.jpg"}
+    decline:{slug:"battle-of-vouille",name:"Battle of Vouillé",img:"/images/encyclopedia/battle-of-vouille.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_between_Clovis_and_the_Visigoths.jpg"}
   },
   "Saxons": {
     foundation:{slug:"carausius",name:"Carausius",img:"/images/encyclopedia/carausius.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Antoninianus_Carausius_leg4-RIC_0069v.jpg"},
     socioeconomy:{slug:"bremerhaven",name:"Bremerhaven",img:"/images/encyclopedia/bremerhaven.jpg",artist:"Tuxyso",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Havenwelten_%C3%9Cberblick_Bremerhaven_2013.jpg"},
-    military:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a ...",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
-    governance:{slug:"bede",name:"Bede",img:"/images/encyclopedia/bede.jpg",artist:"http://www.e-codices.unifr.ch/de/bke/0047/1v",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:E-codices_bke-0047_001v_medium_(cropped).jpg"},
+    military:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a CC BY 3.0 license.",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
+    governance:{slug:"bede",name:"Bede",img:"/images/encyclopedia/bede.jpg",artist:"e-codices.unifr.ch",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:E-codices_bke-0047_001v_medium_(cropped).jpg"},
     impact:{slug:"heliand",name:"Heliand",img:"/images/encyclopedia/heliand.jpg",artist:"German Historical Museum",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Heliand_Excerpt.jpg"},
     decline:{slug:"battle-of-the-suntel",name:"Battle of the Süntel",img:"/images/encyclopedia/battle-of-the-suntel.jpg",artist:"The original uploader was Tortuosa at German Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:HohensteinS%C3%BCntel.jpg"}
   },
   "Kingdom of the Picts": {
-    foundation:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a ...",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
+    foundation:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a CC BY 3.0 license.",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
     socioeconomy:{slug:"inverness",name:"Inverness",img:"/images/encyclopedia/inverness.jpg",artist:"Diliff",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Inverness_Castle,_Scotland_-_Diliff.jpg"},
     military:{slug:"battle-of-dun-nechtain",name:"Battle of Dun Nechtain",img:"/images/encyclopedia/battle-of-dun-nechtain.jpg",artist:"Greenshed",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pictish_Stone_at_Aberlemno_Church_Yard_-_Battle_Scene_Detail.jpg"},
-    governance:{slug:"bede",name:"Bede",img:"/images/encyclopedia/bede.jpg",artist:"http://www.e-codices.unifr.ch/de/bke/0047/1v",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:E-codices_bke-0047_001v_medium_(cropped).jpg"},
+    governance:{slug:"bede",name:"Bede",img:"/images/encyclopedia/bede.jpg",artist:"e-codices.unifr.ch",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:E-codices_bke-0047_001v_medium_(cropped).jpg"},
     impact:{slug:"hilton-of-cadboll-stone",name:"Hilton of Cadboll Stone",img:"/images/encyclopedia/hilton-of-cadboll-stone.jpg",artist:"Catfish Jim and the soapdish",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hilton_of_Cadboll_nms.jpg"},
-    decline:{slug:"annals-of-ulster",name:"Annals of Ulster",img:"/images/encyclopedia/annals-of-ulster.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Annals-of-ulster.jpg"}
+    decline:{slug:"annals-of-ulster",name:"Annals of Ulster",img:"/images/encyclopedia/annals-of-ulster.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Annals-of-ulster.jpg"}
   },
   "Kingdom of Powys": {
     foundation:{slug:"vortigern",name:"Vortigern",img:"/images/encyclopedia/vortigern.jpg",artist:"William Harvey",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vortigern_and_Rowena.png"},
     socioeconomy:{slug:"viroconium-cornoviorum",name:"Viroconium Cornoviorum",img:"/images/encyclopedia/viroconium-cornoviorum.jpg",artist:"Alastair Rae from London, United Kingdom",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Viroconium_Cornoviorum_08.jpg"},
-    military:{slug:"aethelfrith-of-northumbria",name:"Æthelfrith of Northumbria",img:"/images/encyclopedia/aethelfrith-of-northumbria.jpg",artist:"User:Hel-hama",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Britain_peoples_circa_600.svg"},
+    military:{slug:"aethelfrith-of-northumbria",name:"Æthelfrith of Northumbria",img:"/images/encyclopedia/aethelfrith-of-northumbria.jpg",artist:"Hel-hama",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Britain_peoples_circa_600.svg"},
     governance:{slug:"rhodri-the-great",name:"Rhodri the Great",img:"/images/encyclopedia/rhodri-the-great.jpg",artist:"David Powell",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Rhodri_Mawr_-_Historiae_Cambriae.png"},
     impact:{slug:"pillar-of-eliseg",name:"Pillar of Eliseg",img:"/images/encyclopedia/pillar-of-eliseg.jpg",artist:"Wolfgang Sauber",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Elisegs_Pfeiler_5_S%C3%BCdost.jpg"},
-    decline:{slug:"battle-of-lincoln-1141",name:"Battle of Lincoln (1141)",img:"/images/encyclopedia/battle-of-lincoln-1141.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BattleOf_Lincoln.jpg"}
+    decline:{slug:"battle-of-lincoln-1141",name:"Battle of Lincoln (1141)",img:"/images/encyclopedia/battle-of-lincoln-1141.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BattleOf_Lincoln.jpg"}
   },
   "Kingdom of Gwynedd": {
-    foundation:{slug:"cunedda",name:"Cunedda",img:"/images/encyclopedia/cunedda.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Crop_Cunedda_from_File_History_of_the_Kings.jpg"},
+    foundation:{slug:"cunedda",name:"Cunedda",img:"/images/encyclopedia/cunedda.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Crop_Cunedda_from_File_History_of_the_Kings.jpg"},
     socioeconomy:{slug:"dublin",name:"Dublin",img:"/images/encyclopedia/dublin.jpg",artist:"瑞丽江的河水",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Dublin_-_aerial_-_2025-07-07_01.jpg"},
     military:{slug:"battle-of-hatfield-chase",name:"Battle of Hatfield Chase",img:"/images/encyclopedia/battle-of-hatfield-chase.jpg",artist:"F. H. Townsend",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Death_of_Edwin_of_Northumbria_at_Hatfield_-_F._H._Townsend.jpg"},
     governance:{slug:"hywel-dda",name:"Hywel Dda",img:"/images/encyclopedia/hywel-dda.jpg",artist:"Humphrey Llwyd, David Powell",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hyweldda_historieofcambria.png"},
@@ -1454,10 +1454,10 @@ var SECTION_IMAGES = {
     decline:{slug:"rhodri-the-great",name:"Rhodri the Great",img:"/images/encyclopedia/rhodri-the-great.jpg",artist:"David Powell",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Rhodri_Mawr_-_Historiae_Cambriae.png"}
   },
   "Kingdom of the Franks": {
-    foundation:{slug:"childeric-i",name:"Childeric I",img:"/images/encyclopedia/childeric-i.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:CHILDERICI_REGIS.jpg"},
+    foundation:{slug:"childeric-i",name:"Childeric I",img:"/images/encyclopedia/childeric-i.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:CHILDERICI_REGIS.jpg"},
     socioeconomy:{slug:"luxeuil-abbey",name:"Luxeuil Abbey",img:"/images/encyclopedia/luxeuil-abbey.jpg",artist:"A.BourgeoisP",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:2020-08_-_Monast%C3%A8re_de_Luxeuil_-_06.jpg"},
-    military:{slug:"clovis-i",name:"Clovis I",img:"/images/encyclopedia/clovis-i.jpg",artist:"Pethrus (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Remy_baptise_Clovis_d%C3%A9tail.jpg"},
-    governance:{slug:"salic-law",name:"Salic law",img:"/images/encyclopedia/salic-law.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jugement_de_Childebert_III_accordant_%C3%A0_l%27abbaye_de_Saint-Denis_la_terre_de_Hodenc-l%27Ev%C3%AAque_dans_l%27Oise.jpg"},
+    military:{slug:"clovis-i",name:"Clovis I",img:"/images/encyclopedia/clovis-i.jpg",artist:"Pethrus",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Remy_baptise_Clovis_d%C3%A9tail.jpg"},
+    governance:{slug:"salic-law",name:"Salic law",img:"/images/encyclopedia/salic-law.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jugement_de_Childebert_III_accordant_%C3%A0_l%27abbaye_de_Saint-Denis_la_terre_de_Hodenc-l%27Ev%C3%AAque_dans_l%27Oise.jpg"},
     impact:{slug:"aachen-cathedral",name:"Aachen Cathedral",img:"/images/encyclopedia/aachen-cathedral.jpg",artist:"CEphoto, Uwe Aranas",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Aachen_Germany_Imperial-Cathedral-01.jpg"},
     decline:{slug:"battle-of-fontenoy",name:"Battle of Fontenoy",img:"/images/encyclopedia/battle-of-fontenoy.jpg",artist:"Pierre L'Enfant",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pierre_Lenfant_-_La_Bataille_de_Fontenoy,_le_11_mai_1745_(Ch%C3%A2teau_de_Versailles).jpg"}
   },
@@ -1473,7 +1473,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"cerdic",name:"Cerdic",img:"/images/encyclopedia/cerdic.jpg",artist:"John Speed",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cherdik_-_John_Speed.JPG"},
     socioeconomy:{slug:"winchester",name:"Winchester",img:"/images/encyclopedia/winchester.jpg",artist:"(CC BY-SA 2.0)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Winchester_Montage.jpg"},
     military:{slug:"battle-of-ellendun",name:"Battle of Ellendun",img:"/images/encyclopedia/battle-of-ellendun.jpg",artist:"George Derville Rowlandson",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ellandun.jpg"},
-    governance:{slug:"anglo-saxon-chronicle",name:"Anglo-Saxon Chronicle",img:"/images/encyclopedia/anglo-saxon-chronicle.jpg",artist:"Photographed by en:User:Geogre, original author, monastic scribes in Peterborough",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peterborough.Chronicle.firstpage.jpg"},
+    governance:{slug:"anglo-saxon-chronicle",name:"Anglo-Saxon Chronicle",img:"/images/encyclopedia/anglo-saxon-chronicle.jpg",artist:"Photographed by Geogre, original author, monastic scribes in Peterborough",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peterborough.Chronicle.firstpage.jpg"},
     impact:{slug:"pastoral-care",name:"Pastoral Care",img:"/images/encyclopedia/pastoral-care.jpg",artist:"Gregory the Great, unknown writer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:01_01B_504_4TroyesMS504PastoralCare.jpg"},
     decline:{slug:"aethelred-lord-of-the-mercians",name:"Æthelred, Lord of the Mercians",img:"/images/encyclopedia/aethelred-lord-of-the-mercians.jpg",artist:"Philip Halling",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:St_Oswald%27s_Priory,_Gloucester_-_geograph.org.uk_-_443171.jpg"}
   },
@@ -1490,14 +1490,14 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"passau",name:"Passau",img:"/images/encyclopedia/passau.jpg",artist:"Compiled by Viceskeeni2",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:PassauCollection2025.jpg"},
     military:{slug:"battle-of-pressburg",name:"Battle of Pressburg",img:"/images/encyclopedia/battle-of-pressburg.jpg",artist:"Peter Johann Nepomuk Geiger",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schlacht_bei_Pressburg.jpg"},
     governance:{slug:"lex-baiuvariorum",name:"Lex Baiuvariorum",img:"/images/encyclopedia/lex-baiuvariorum.jpg",artist:"Schreiber unbekannt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Prolog_lex_baioariorum_ingolstadt.jpg"},
-    impact:{slug:"nibelungenlied",name:"Nibelungenlied",img:"/images/encyclopedia/nibelungenlied.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nibelungenlied_manuscript-c_f1r.jpg"},
+    impact:{slug:"nibelungenlied",name:"Nibelungenlied",img:"/images/encyclopedia/nibelungenlied.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nibelungenlied_manuscript-c_f1r.jpg"},
     decline:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"}
   },
   "Avar Khaganate": {
     foundation:{slug:"justinian-i",name:"Justinian I",img:"/images/encyclopedia/justinian-i.jpg",artist:"Petar Milošević",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_(Ravenna).jpg"},
     socioeconomy:{slug:"gepids",name:"Gepids",img:"/images/encyclopedia/gepids.jpg",artist:"Guriezous",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Europe_and_the_Near_East_at_476_AD.png"},
     military:{slug:"priscus",name:"Priscus",img:"/images/encyclopedia/priscus.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:PriscusofPanium.jpg"},
-    governance:{slug:"chronicle-of-fredegar",name:"Chronicle of Fredegar",img:"/images/encyclopedia/chronicle-of-fredegar.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Paris,_BnF_MS_Latin_10910_fol._23v_Chronicle_of_Fredegar_-_Miniature_Eusebius,_Jerome_and_a_mallard_drake.jpg"},
+    governance:{slug:"chronicle-of-fredegar",name:"Chronicle of Fredegar",img:"/images/encyclopedia/chronicle-of-fredegar.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Paris,_BnF_MS_Latin_10910_fol._23v_Chronicle_of_Fredegar_-_Miniature_Eusebius,_Jerome_and_a_mallard_drake.jpg"},
     impact:{slug:"primary-chronicle",name:"Primary Chronicle",img:"/images/encyclopedia/primary-chronicle.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:14_2_List_of_Radzivill_Chron.jpg"},
     decline:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"}
   },
@@ -1512,7 +1512,7 @@ var SECTION_IMAGES = {
   "First Bulgarian Empire": {
     foundation:{slug:"kubrat",name:"Kubrat",img:"/images/encyclopedia/kubrat.jpg",artist:"Dimitar Atanasov Gyudjenov (1891 - 1979)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giudjenov_Kubrat_and_his_sons_(cropped).jpg"},
     socioeconomy:{slug:"constantinople",name:"Constantinople",img:"/images/encyclopedia/constantinople.jpg",artist:"Cplakidas",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Byzantine_Constantinople-en.png"},
-    military:{slug:"battle-of-anchialus-763",name:"Battle of Anchialus (763)",img:"/images/encyclopedia/battle-of-anchialus-763.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Solidus-Leo_III_and_Constantine_V-sb1504.jpg"},
+    military:{slug:"battle-of-anchialus-763",name:"Battle of Anchialus (763)",img:"/images/encyclopedia/battle-of-anchialus-763.jpg",artist:"Unknown author",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Solidus-Leo_III_and_Constantine_V-sb1504.jpg"},
     governance:{slug:"krum",name:"Krum",img:"/images/encyclopedia/krum.jpg",artist:"Manasias",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Krum33.jpg"},
     impact:{slug:"preslav",name:"Preslav",img:"/images/encyclopedia/preslav.jpg",artist:"Izvora",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Preslav_fortress_11.jpg"},
     decline:{slug:"siege-of-dorostolon",name:"Siege of Dorostolon",img:"/images/encyclopedia/siege-of-dorostolon.jpg",artist:"Henryk Siemiradzki",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BelagerungvonDorostolon.jpg"}
@@ -1550,7 +1550,7 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-castelfidardo",name:"Battle of Castelfidardo",img:"/images/encyclopedia/battle-of-castelfidardo.jpg",artist:"it:Giovanni Gallucci (b. 1815 - d.: unknown)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giovanni_Gallucci_La_Battaglia_di_Castelfidardo_palazzo_comunale_di_Castelfidardo.jpg"}
   },
   "Emirate of Córdoba": {
-    foundation:{slug:"muawiya-i",name:"Muawiya I",img:"/images/encyclopedia/muawiya-i.jpg",artist:"User:LouisAragon (uploader)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arab-Sasanian_coin_of_Muawiyah_I,_struck_at_the_Fasa_mint_in_Darabjird_(Fars).jpg"},
+    foundation:{slug:"muawiya-i",name:"Muawiya I",img:"/images/encyclopedia/muawiya-i.jpg",artist:"LouisAragon (uploader)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arab-Sasanian_coin_of_Muawiyah_I,_struck_at_the_Fasa_mint_in_Darabjird_(Fars).jpg"},
     socioeconomy:{slug:"mediterranean",name:"Mediterranean",img:"/images/encyclopedia/mediterranean.jpg",artist:"of the modification : Eric Gaba (Sting)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_16.61811E_38.99124N.jpg"},
     military:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"},
     governance:{slug:"al-hakam-i",name:"Al-Hakam I",img:"/images/encyclopedia/al-hakam-i.jpg",artist:"Numismática Pliego",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Dirham_al_hakam_i_17521.jpg"},
@@ -1562,14 +1562,14 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"toulouse",name:"Toulouse",img:"/images/encyclopedia/toulouse.jpg",artist:"Frédéric Neupont",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Toulouse_-_vue_du_Vieux_Toulouse_depuis_St_Sernin_06.jpg"},
     military:{slug:"battle-of-muret",name:"Battle of Muret",img:"/images/encyclopedia/battle-of-muret.jpg",artist:"anonimous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Muret.jpg"},
     governance:{slug:"louis-vii-of-france",name:"Louis VII of France",img:"/images/encyclopedia/louis-vii-of-france.jpg",artist:"Natalis de Wailly (1805-1886)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_7.jpg"},
-    impact:{slug:"song-of-the-albigensian-crusade",name:"Song of the Albigensian Crusade",img:"/images/encyclopedia/song-of-the-albigensian-crusade.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_VIII_Marmande.jpg"},
-    decline:{slug:"albigensian-crusade",name:"Albigensian Crusade",img:"/images/encyclopedia/albigensian-crusade.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Le_massacre_des_Albigeois.jpg"}
+    impact:{slug:"song-of-the-albigensian-crusade",name:"Song of the Albigensian Crusade",img:"/images/encyclopedia/song-of-the-albigensian-crusade.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_VIII_Marmande.jpg"},
+    decline:{slug:"albigensian-crusade",name:"Albigensian Crusade",img:"/images/encyclopedia/albigensian-crusade.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Le_massacre_des_Albigeois.jpg"}
   },
   "Kingdom of Navarre": {
     foundation:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"},
     socioeconomy:{slug:"tudela",name:"Tudela",img:"/images/encyclopedia/tudela.jpg",artist:"Albert Torelló",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Tudela_panor%C3%A1mica_(7796714018)_(cropped).jpg"},
     military:{slug:"battle-of-las-navas-de-tolosa",name:"Battle of Las Navas de Tolosa",img:"/images/encyclopedia/battle-of-las-navas-de-tolosa.jpg",artist:"Francisco de Paula Van Halen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalla_de_las_Navas_de_Tolosa,_por_Francisco_van_Halen.jpg"},
-    governance:{slug:"fuero-general-de-navarra",name:"Fuero General de Navarra",img:"/images/encyclopedia/fuero-general-de-navarra.jpg",artist:"No machine-readable author provided. Mgoni4 assumed (based on copyright claims).",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NafarForuak.JPG"},
+    governance:{slug:"fuero-general-de-navarra",name:"Fuero General de Navarra",img:"/images/encyclopedia/fuero-general-de-navarra.jpg",artist:"Mgoni4",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NafarForuak.JPG"},
     impact:{slug:"pamplona",name:"Pamplona",img:"/images/encyclopedia/pamplona.jpg",artist:"José Luis Filpo Cabana",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Monumento_a_los_Fueros_(Pamplona).jpg"},
     decline:{slug:"italian-wars",name:"Italian Wars",img:"/images/encyclopedia/italian-wars.jpg",artist:"Waylon1104",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Italian_War_Battle.jpg"}
   },
@@ -1584,7 +1584,7 @@ var SECTION_IMAGES = {
   "Duchy of Saxony": {
     foundation:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"},
     socioeconomy:{slug:"bad-gandersheim",name:"Bad Gandersheim",img:"/images/encyclopedia/bad-gandersheim.jpg",artist:"Hagar66 based on work of TUBS",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bad_Gandersheim_in_NOM.svg"},
-    military:{slug:"battle-of-riade",name:"Battle of Riade",img:"/images/encyclopedia/battle-of-riade.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Heinrich_I._k%C3%A4mpft_gegen_die_Ungarn.jpg"},
+    military:{slug:"battle-of-riade",name:"Battle of Riade",img:"/images/encyclopedia/battle-of-riade.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Heinrich_I._k%C3%A4mpft_gegen_die_Ungarn.jpg"},
     governance:{slug:"sachsenspiegel",name:"Sachsenspiegel",img:"/images/encyclopedia/sachsenspiegel.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sachsenspiegel_die_wahl_des_deutschen_K%C3%B6nigs.jpg"},
     impact:{slug:"rome",name:"Rome",img:"/images/encyclopedia/rome.jpg",artist:"Diliff",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"},
     decline:{slug:"battle-of-legnano",name:"Battle of Legnano",img:"/images/encyclopedia/battle-of-legnano.jpg",artist:"The original uploader was Faberh at Italian Wikipedia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BattagliaLegnano.jpg"}
@@ -1619,10 +1619,10 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-taillebourg",name:"Battle of Taillebourg",img:"/images/encyclopedia/battle-of-taillebourg.jpg",artist:"Chroniques de Saint-Denis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis9_vs_Henri3.jpg"},
     governance:{slug:"louis-vii-of-france",name:"Louis VII of France",img:"/images/encyclopedia/louis-vii-of-france.jpg",artist:"Natalis de Wailly (1805-1886)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_7.jpg"},
     impact:{slug:"bordeaux",name:"Bordeaux",img:"/images/encyclopedia/bordeaux.jpg",artist:"Mariette",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bordeaux_Place_de_la_Bourse_de_nuit.jpg"},
-    decline:{slug:"battle-of-castillon",name:"Battle of Castillon",img:"/images/encyclopedia/battle-of-castillon.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fran%C3%A7ais_5054,_fol._229v,_Bataille_de_Castillon_1453_-_d%C3%A9tail.jpg"}
+    decline:{slug:"battle-of-castillon",name:"Battle of Castillon",img:"/images/encyclopedia/battle-of-castillon.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fran%C3%A7ais_5054,_fol._229v,_Bataille_de_Castillon_1453_-_d%C3%A9tail.jpg"}
   },
   "County of Hainaut": {
-    foundation:{slug:"bruno-the-great",name:"Bruno the Great",img:"/images/encyclopedia/bruno-the-great.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bruno_the_Great.jpg"},
+    foundation:{slug:"bruno-the-great",name:"Bruno the Great",img:"/images/encyclopedia/bruno-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bruno_the_Great.jpg"},
     socioeconomy:{slug:"lobbes-abbey",name:"Lobbes Abbey",img:"/images/encyclopedia/lobbes-abbey.jpg",artist:"Jean-Pol GRANDMONT",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Lobbes_-_La_Portelette_-_JPG1.jpg"},
     military:{slug:"battle-of-bouvines",name:"Battle of Bouvines",img:"/images/encyclopedia/battle-of-bouvines.jpg",artist:"Horace Vernet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_de_Bouvines_gagnee_par_Philippe_Auguste.jpg"},
     governance:{slug:"brussels",name:"Brussels",img:"/images/encyclopedia/brussels.jpg",artist:"Francisco Conde Sánchez",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Grand_Place_Bruselas_2.jpg"},
@@ -1656,7 +1656,7 @@ var SECTION_IMAGES = {
   "Kingdom of England": {
     foundation:{slug:"alfred-the-great",name:"Alfred the Great",img:"/images/encyclopedia/alfred-the-great.jpg",artist:"CNG - Classical Numismatic Group",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Alfred_the_Great,_silver_penny;_struck_875%E2%80%93880_(obverse).png"},
     socioeconomy:{slug:"london",name:"London",img:"/images/encyclopedia/london.jpg",artist:"Ilya Grigorik",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:London_Skyline_(125508655).jpeg"},
-    military:{slug:"battle-of-bannockburn",name:"Battle of Bannockburn",img:"/images/encyclopedia/battle-of-bannockburn.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Bannockburn.jpg"},
+    military:{slug:"battle-of-bannockburn",name:"Battle of Bannockburn",img:"/images/encyclopedia/battle-of-bannockburn.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Bannockburn.jpg"},
     governance:{slug:"magna-carta",name:"Magna Carta",img:"/images/encyclopedia/magna-carta.jpg",artist:"Original authors were the barons and King John of England. Uploaded by Earthsound.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Magna_Carta_(British_Library_Cotton_MS_Augustus_II.106).jpg"},
     impact:{slug:"the-canterbury-tales",name:"The Canterbury Tales",img:"/images/encyclopedia/the-canterbury-tales.jpg",artist:"DemonDays64",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Canterbury_Tales_characters_around_table_%E2%80%94_traced.svg"},
     decline:{slug:"elizabeth-i",name:"Elizabeth I",img:"/images/encyclopedia/elizabeth-i.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darnley_stage_3.jpg"}
@@ -1672,7 +1672,7 @@ var SECTION_IMAGES = {
   "Kingdom of Arles": {
     foundation:{slug:"boso-of-provence",name:"Boso of Provence",img:"/images/encyclopedia/boso-of-provence.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:King_Boson_of_Provence.JPG"},
     socioeconomy:{slug:"lyon",name:"Lyon",img:"/images/encyclopedia/lyon.jpg",artist:"Aldg692VX",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Lyon-part-dieu-2023.jpg"},
-    military:{slug:"rudolf-iii-of-burgundy",name:"Rudolf III of Burgundy",img:"/images/encyclopedia/rudolf-iii-of-burgundy.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Donation_du_roi_de_Bourgogne_Rodolphe_III_%C3%A0_l%27abbaye_Saint-Maurice_(15_f%C3%A9vrier_1018)_(cropped).jpg"},
+    military:{slug:"rudolf-iii-of-burgundy",name:"Rudolf III of Burgundy",img:"/images/encyclopedia/rudolf-iii-of-burgundy.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Donation_du_roi_de_Bourgogne_Rodolphe_III_%C3%A0_l%27abbaye_Saint-Maurice_(15_f%C3%A9vrier_1018)_(cropped).jpg"},
     governance:{slug:"conrad-i-of-burgundy",name:"Conrad I of Burgundy",img:"/images/encyclopedia/conrad-i-of-burgundy.jpg",artist:"CGB",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Denier_of_Conrad_the_Peaceful.jpg"},
     impact:{slug:"arles",name:"Arles",img:"/images/encyclopedia/arles.jpg",artist:"Chensiyuan",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1_arles_france_2016.jpg"},
     decline:{slug:"charles-i-of-anjou",name:"Charles I of Anjou",img:"/images/encyclopedia/charles-i-of-anjou.jpg",artist:"Son of Groucho from Scotland",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Some_Old_Guy_2_(5642308121)_(cropped).jpg"}
@@ -1689,7 +1689,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"nominoe",name:"Nominoe",img:"/images/encyclopedia/nominoe.jpg",artist:"John Tenniel / Joseph Swain",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nom%C3%A9no%C3%AB_(Tenniel).png"},
     socioeconomy:{slug:"rennes",name:"Rennes",img:"/images/encyclopedia/rennes.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Place_de_la_Mairie,_Rennes,_France.jpg"},
     military:{slug:"battle-of-hastings",name:"Battle of Hastings",img:"/images/encyclopedia/battle-of-hastings.jpg",artist:"Myrabella",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene57_Harold_death.jpg"},
-    governance:{slug:"arthur-i-duke-of-brittany",name:"Arthur I, Duke of Brittany",img:"/images/encyclopedia/arthur-i-duke-of-brittany.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Artur_of_Brittany.jpg"},
+    governance:{slug:"arthur-i-duke-of-brittany",name:"Arthur I, Duke of Brittany",img:"/images/encyclopedia/arthur-i-duke-of-brittany.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Artur_of_Brittany.jpg"},
     impact:{slug:"nantes-cathedral",name:"Nantes Cathedral",img:"/images/encyclopedia/nantes-cathedral.jpg",artist:"Eusebius",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Saint-Pierre_de_Nantes_-_fa%C3%A7ade.jpg"},
     decline:{slug:"league-of-the-public-weal",name:"League of the Public Weal",img:"/images/encyclopedia/league-of-the-public-weal.jpg",artist:"Circle of Étienne Colaud",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guerre_du_Bien_public.jpg"}
   },
@@ -1714,7 +1714,7 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"borgloon",name:"Borgloon",img:"/images/encyclopedia/borgloon.jpg",artist:"Torsade de Pointes",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Borgloon_Stadhuis_3.JPG"},
     military:{slug:"battle-of-steppes",name:"Battle of Steppes",img:"/images/encyclopedia/battle-of-steppes.jpg",artist:"Paul Hermans",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Stepsheuvel_16-04-2008_13-34-59.JPG"},
     governance:{slug:"louis-de-bourbon-bishop-of-liege",name:"Louis de Bourbon (bishop of Liège)",img:"/images/encyclopedia/louis-de-bourbon-bishop-of-liege.jpg",artist:"SirachMatthews",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Louis_de_Bourbon(Couleurs).jpg"},
-    impact:{slug:"stavelot-triptych",name:"Stavelot Triptych",img:"/images/encyclopedia/stavelot-triptych.jpg",artist:"Original File Uploaded by en:User:Stbalbach",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stavelot.Triptych.jpg"},
+    impact:{slug:"stavelot-triptych",name:"Stavelot Triptych",img:"/images/encyclopedia/stavelot-triptych.jpg",artist:"Original File Uploaded by Stbalbach",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stavelot.Triptych.jpg"},
     decline:{slug:"battle-of-jemappes",name:"Battle of Jemappes",img:"/images/encyclopedia/battle-of-jemappes.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_de_Jemmapes,_6_novembre_1792.jpg"}
   },
   "Kingdom of France": {
@@ -1729,7 +1729,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"geza-grand-prince-of-the-hungarians",name:"Géza, Grand Prince of the Hungarians",img:"/images/encyclopedia/geza-grand-prince-of-the-hungarians.jpg",artist:"Márk Kálti",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Geza-ChroniconPictum.jpg"},
     socioeconomy:{slug:"esztergom",name:"Esztergom",img:"/images/encyclopedia/esztergom.jpg",artist:"see above",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:EsztergomMontage2.JPG"},
     military:{slug:"battle-of-lechfeld",name:"Battle of Lechfeld",img:"/images/encyclopedia/battle-of-lechfeld.jpg",artist:"Hektor Mülich[1] (d. 1490)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lechfeld1457.jpg"},
-    governance:{slug:"golden-bull-of-1222",name:"Golden Bull of 1222",img:"/images/encyclopedia/golden-bull-of-1222.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:II._Andr%C3%A1s_aranybull%C3%A1ja.jpg"},
+    governance:{slug:"golden-bull-of-1222",name:"Golden Bull of 1222",img:"/images/encyclopedia/golden-bull-of-1222.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:II._Andr%C3%A1s_aranybull%C3%A1ja.jpg"},
     impact:{slug:"holy-crown-of-hungary",name:"Holy Crown of Hungary",img:"/images/encyclopedia/holy-crown-of-hungary.jpg",artist:"granada_turnier",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_002_-_Flickr_-_granada_turnier.jpg"},
     decline:{slug:"battle-of-rozgony",name:"Battle of Rozgony",img:"/images/encyclopedia/battle-of-rozgony.jpg",artist:"Márk Kálti",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rozgony_Battle.jpg"}
   },
@@ -1742,12 +1742,12 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-almansa",name:"Battle of Almansa",img:"/images/encyclopedia/battle-of-almansa.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Balaca-Battle_of_Almansa.jpg"}
   },
   "Kingdom of Castile": {
-    foundation:{slug:"garcia-sanchez-of-castile",name:"García Sánchez of Castile",img:"/images/encyclopedia/garcia-sanchez-of-castile.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Murder_of_Garc%C3%ADa_S%C3%A1nchez_of_Castile_in_1029.jpg"},
+    foundation:{slug:"garcia-sanchez-of-castile",name:"García Sánchez of Castile",img:"/images/encyclopedia/garcia-sanchez-of-castile.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Murder_of_Garc%C3%ADa_S%C3%A1nchez_of_Castile_in_1029.jpg"},
     socioeconomy:{slug:"burgos",name:"Burgos",img:"/images/encyclopedia/burgos.jpg",artist:"Jardoz",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Burgos_city_view_facing_south_east.jpg"},
     military:{slug:"battle-of-sagrajas",name:"Battle of Sagrajas",img:"/images/encyclopedia/battle-of-sagrajas.jpg",artist:"Roque Gameiro",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalha_de_Zalaka_-_Hist%C3%B3ria_de_Portugal,_popular_e_ilustrada.png"},
     governance:{slug:"alfonso-vi-of-castile",name:"Alfonso VI of Castile",img:"/images/encyclopedia/alfonso-vi-of-castile.jpg",artist:"Uploaded by MaiDireLollo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AlfonsoVI_of_Castile.jpg"},
     impact:{slug:"almagest",name:"Almagest",img:"/images/encyclopedia/almagest.jpg",artist:"Ptolemy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Claudius_Ptolemaeus,_Almagestum,_1515.djvu"},
-    decline:{slug:"alfonso-vii-of-leon-and-castile",name:"Alfonso VII of León and Castile",img:"/images/encyclopedia/alfonso-vii-of-leon-and-castile.jpg",artist:"Privilegium.jpg: anonymous derivative work: Agricolae (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alfonso-Privilegium.jpg"}
+    decline:{slug:"alfonso-vii-of-leon-and-castile",name:"Alfonso VII of León and Castile",img:"/images/encyclopedia/alfonso-vii-of-leon-and-castile.jpg",artist:"anonymous; derivative work by Agricolae",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alfonso-Privilegium.jpg"}
   },
   "Electoral Palatinate": {
     foundation:{slug:"henry-of-laach",name:"Henry of Laach",img:"/images/encyclopedia/henry-of-laach.jpg",artist:"Holger Weinandt",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Grabmal_Heinrich_II_von_Laach_Abtei_Maria_Laach_2011.jpg"},
@@ -1762,14 +1762,14 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"genoa",name:"Genoa",img:"/images/encyclopedia/genoa.jpg",artist:"Julian Lupyan",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Piazza_de_Ferrari,_Genoa.jpg"},
     military:{slug:"battle-of-meloria-1284",name:"Battle of Meloria (1284)",img:"/images/encyclopedia/battle-of-meloria-1284.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:How_the_Genoese_discomfited_the_Pisans_at_Meloria.png"},
     governance:{slug:"oberto-spinola",name:"Oberto Spinola",img:"/images/encyclopedia/oberto-spinola.jpg",artist:"Massimop",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coa_fam_ITA_spinola.jpg"},
-    impact:{slug:"strada-nuova",name:"Strada Nuova",img:"/images/encyclopedia/strada-nuova.jpg",artist:"Twice25 &amp; Rinina25",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Genova-DSCF7468.JPG"},
+    impact:{slug:"strada-nuova",name:"Strada Nuova",img:"/images/encyclopedia/strada-nuova.jpg",artist:"Twice25 & Rinina25",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Genova-DSCF7468.JPG"},
     decline:{slug:"war-of-chioggia",name:"War of Chioggia",img:"/images/encyclopedia/war-of-chioggia.jpg",artist:"Didier Descouens",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Canal_Vena_in_Chioggia.jpg"}
   },
   "Republic of Florence": {
     foundation:{slug:"matilda-of-tuscany",name:"Matilda of Tuscany",img:"/images/encyclopedia/matilda-of-tuscany.jpg",artist:"Donizo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mathilde_und_Hugo_von_Cluny_als_F%C3%BCrsprecher_Heinrichs_IV._(cropped).jpg"},
     socioeconomy:{slug:"florence",name:"Florence",img:"/images/encyclopedia/florence.jpg",artist:"Giorgio Galeotti",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Firenze_-_Piazzale_Michelangelo,_Firenze,_Italy_-_April_6,_2015_02.jpg"},
     military:{slug:"battle-of-montaperti",name:"Battle of Montaperti",img:"/images/encyclopedia/battle-of-montaperti.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:How_the_Florentines_raised_an_army_to_fortify_Montalcino_and_were_discomfited_by_Count_Giordano_and_by_the_Sienese_at_Montaperti.png"},
-    governance:{slug:"giano-della-bella",name:"Giano della Bella",img:"/images/encyclopedia/giano-della-bella.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giano_della_Bella.jpg"},
+    governance:{slug:"giano-della-bella",name:"Giano della Bella",img:"/images/encyclopedia/giano-della-bella.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giano_della_Bella.jpg"},
     impact:{slug:"florence-cathedral",name:"Florence Cathedral",img:"/images/encyclopedia/florence-cathedral.jpg",artist:"Gary Campbell-Hall",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Cattedrale_di_Santa_Maria_del_Fiore_%E2%80%93_Il_Duomo_di_Firenze.jpg"},
     decline:{slug:"sack-of-rome-1527",name:"Sack of Rome (1527)",img:"/images/encyclopedia/sack-of-rome-1527.jpg",artist:"Johannes Lingelbach",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sack_of_Rome_of_1527_by_Johannes_Lingelbach_17th_century.jpg"}
   },
@@ -1779,29 +1779,29 @@ var SECTION_IMAGES = {
     military:{slug:"absalon",name:"Absalon",img:"/images/encyclopedia/absalon.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Absalons_ligsten.jpg"},
     governance:{slug:"bogislaw-x",name:"Bogislaw X",img:"/images/encyclopedia/bogislaw-x.jpg",artist:"unbekannter Meister",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bogislaw_X_von_Pommern.JPG"},
     impact:{slug:"stralsund",name:"Stralsund",img:"/images/encyclopedia/stralsund.jpg",artist:"Moahim",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:WLM_-_2020_-_Stralsund_-_St._Nikolai_Kirche.jpg"},
-    decline:{slug:"bogislaw-xiv",name:"Bogislaw XIV",img:"/images/encyclopedia/bogislaw-xiv.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Barnim_VI_-_Bogus%C5%82aw_XIV_(ca_1635).tif"}
+    decline:{slug:"bogislaw-xiv",name:"Bogislaw XIV",img:"/images/encyclopedia/bogislaw-xiv.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Barnim_VI_-_Bogus%C5%82aw_XIV_(ca_1635).tif"}
   },
   "Kingdom of Sicily": {
     foundation:{slug:"roger-i-of-sicily",name:"Roger I of Sicily",img:"/images/encyclopedia/roger-i-of-sicily.jpg",artist:"sailko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Calabria,_trifollaro_di_ruggieri_I_d%27altavilla,_1072-1101.JPG"},
     socioeconomy:{slug:"palermo",name:"Palermo",img:"/images/encyclopedia/palermo.jpg",artist:"Tango7174",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Sicilia_Palermo5_tango7174.jpg"},
     military:{slug:"battle-of-benevento",name:"Battle of Benevento",img:"/images/encyclopedia/battle-of-benevento.jpg",artist:"Giovanni Villani",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Villani_Benevento.jpg"},
     governance:{slug:"assizes-of-ariano",name:"Assizes of Ariano",img:"/images/encyclopedia/assizes-of-ariano.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Roger_II_Sicily.jpg"},
-    impact:{slug:"palatine-chapel-palermo",name:"Palatine Chapel, Palermo",img:"/images/encyclopedia/palatine-chapel-palermo.jpg",artist:"No machine-readable author provided. Urban~commonswiki assumed (based on copyright claims).",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chapelle_Palatine.jpg"},
+    impact:{slug:"palatine-chapel-palermo",name:"Palatine Chapel, Palermo",img:"/images/encyclopedia/palatine-chapel-palermo.jpg",artist:"Urban",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chapelle_Palatine.jpg"},
     decline:{slug:"sicilian-vespers",name:"Sicilian Vespers",img:"/images/encyclopedia/sicilian-vespers.jpg",artist:"Giovanni Villani",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Sicilian_Vespers_1281_How_and_after_what_manner_the_island_of_Sicily_rebelled_against_King_Charles_Nuova_Cronica_Giovanni_Villani_14th_century.png"}
   },
   "Novgorod Republic": {
     foundation:{slug:"rurik",name:"Rurik",img:"/images/encyclopedia/rurik.jpg",artist:"Дар Ветер",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:1000_Rurik.JPG"},
-    socioeconomy:{slug:"peterhof-novgorod",name:"Peterhof (Novgorod)",img:"/images/encyclopedia/peterhof-novgorod.jpg",artist:"Loginname https://commons.wikimedia.org/w/index.php?title=User:Loginname&amp;action=edit&amp;redlink=1",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Center_of_Veliky_Novgorod_Peterhof_Gotenhof.jpg"},
-    military:{slug:"battle-on-the-ice",name:"Battle on the Ice",img:"/images/encyclopedia/battle-on-the-ice.jpg",artist:"Anonymous Russian manuscript illuminators, 1560-1570s Facial Chronicle (Illustrated Chronicle of Ivan the Terrible) (...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Facial_Chronicle_-_b.06,_page_085_-_Battle_of_the_Ice.jpg"},
+    socioeconomy:{slug:"peterhof-novgorod",name:"Peterhof (Novgorod)",img:"/images/encyclopedia/peterhof-novgorod.jpg",artist:"Loginname",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Center_of_Veliky_Novgorod_Peterhof_Gotenhof.jpg"},
+    military:{slug:"battle-on-the-ice",name:"Battle on the Ice",img:"/images/encyclopedia/battle-on-the-ice.jpg",artist:"Anonymous Russian manuscript illuminators, 1560-1570s …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Facial_Chronicle_-_b.06,_page_085_-_Battle_of_the_Ice.jpg"},
     governance:{slug:"yaroslavs-court",name:"Yaroslav's Court",img:"/images/encyclopedia/yaroslavs-court.jpg",artist:"Lite",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Yaroslavovo_Dvorische_01.jpg"},
     impact:{slug:"church-of-the-transfiguration-on-ilyina-street",name:"Church of the Transfiguration on Ilyina Street",img:"/images/encyclopedia/church-of-the-transfiguration-on-ilyina-street.jpg",artist:"Alaexis",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Ilyina_Transfiguration_church,_Novgorod.JPG"},
-    decline:{slug:"battle-of-shelon",name:"Battle of Shelon",img:"/images/encyclopedia/battle-of-shelon.jpg",artist:"Anonymous Russian manuscript illuminators, 1560-1570s Facial Chronicle (Illustrated Chronicle of Ivan the Terrible) (...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Facial_Chronicle_-_b.15,_p._243.gif"}
+    decline:{slug:"battle-of-shelon",name:"Battle of Shelon",img:"/images/encyclopedia/battle-of-shelon.jpg",artist:"Anonymous Russian manuscript illuminators, 1560-1570s …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Facial_Chronicle_-_b.15,_p._243.gif"}
   },
   "Kingdom of Portugal": {
     foundation:{slug:"alfonso-vi-of-castile",name:"Alfonso VI of Castile",img:"/images/encyclopedia/alfonso-vi-of-castile.jpg",artist:"Uploaded by MaiDireLollo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AlfonsoVI_of_Castile.jpg"},
     socioeconomy:{slug:"lisbon",name:"Lisbon",img:"/images/encyclopedia/lisbon.jpg",artist:"Vitor Oliveira from Torres Vedras, PORTUGAL",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Lisboa_-_Portugal_(52597836992).jpg"},
     military:{slug:"battle-of-aljubarrota",name:"Battle of Aljubarrota",img:"/images/encyclopedia/battle-of-aljubarrota.jpg",artist:"Jean d'Wavrin (Chronique d'Angleterre)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalha_de_Aljubarrota_02.jpg"},
-    governance:{slug:"ordenacoes-afonsinas",name:"Ordenações Afonsinas",img:"/images/encyclopedia/ordenacoes-afonsinas.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:N%C3%BAcleo_Antigo_C%C3%B3dice_14,_book_V,_folio_1_(recto).jpg"},
+    governance:{slug:"ordenacoes-afonsinas",name:"Ordenações Afonsinas",img:"/images/encyclopedia/ordenacoes-afonsinas.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:N%C3%BAcleo_Antigo_C%C3%B3dice_14,_book_V,_folio_1_(recto).jpg"},
     impact:{slug:"jeronimos-monastery",name:"Jerónimos Monastery",img:"/images/encyclopedia/jeronimos-monastery.jpg",artist:"Holger Uwe Schmitt",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg"},
     decline:{slug:"battle-of-alcacer-quibir",name:"Battle of Alcácer Quibir",img:"/images/encyclopedia/battle-of-alcacer-quibir.jpg",artist:"Georges Jansoone",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Lagos46_kopie.jpg"}
   },
@@ -1811,11 +1811,11 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-the-sit-river",name:"Battle of the Sit River",img:"/images/encyclopedia/battle-of-the-sit-river.jpg",artist:"Vasily Vereshchagin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:27_History_of_the_Russian_state_in_the_image_of_its_sovereign_rulers_-_fragment.jpg"},
     governance:{slug:"andrei-bogolyubsky",name:"Andrei Bogolyubsky",img:"/images/encyclopedia/andrei-bogolyubsky.jpg",artist:"Лапоть",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Andrey_Bogolyubsky_-_Vladimir_Historical_Museum.jpg"},
     impact:{slug:"dormition-cathedral-vladimir",name:"Dormition Cathedral, Vladimir",img:"/images/encyclopedia/dormition-cathedral-vladimir.jpg",artist:"Mike1979 Russia",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Dormition_of_the_Theotokos_Cathedral_Vladimir_2016-06-23_6402.jpg"},
-    decline:{slug:"yaroslav-ii-of-vladimir",name:"Yaroslav II of Vladimir",img:"/images/encyclopedia/yaroslav-ii-of-vladimir.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Yaroslav_II_Vsevolodovich_grand_duke_of_Vladimir.jpg"}
+    decline:{slug:"yaroslav-ii-of-vladimir",name:"Yaroslav II of Vladimir",img:"/images/encyclopedia/yaroslav-ii-of-vladimir.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Yaroslav_II_Vsevolodovich_grand_duke_of_Vladimir.jpg"}
   },
   "Margraviate of Brandenburg": {
-    foundation:{slug:"lothair-iii-holy-roman-emperor",name:"Lothair III, Holy Roman Emperor",img:"/images/encyclopedia/lothair-iii-holy-roman-emperor.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lothair_II,_Holy_Roman_Emperor.jpg"},
-    socioeconomy:{slug:"berlin",name:"Berlin",img:"/images/encyclopedia/berlin.jpg",artist:"File:Museumsinsel Berlin Juli 2021 1 (cropped).jpg: Kasa Fue derivative work: Georgfotoart",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Museumsinsel_Berlin_Juli_2021_1_(cropped)_b.jpg"},
+    foundation:{slug:"lothair-iii-holy-roman-emperor",name:"Lothair III, Holy Roman Emperor",img:"/images/encyclopedia/lothair-iii-holy-roman-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lothair_II,_Holy_Roman_Emperor.jpg"},
+    socioeconomy:{slug:"berlin",name:"Berlin",img:"/images/encyclopedia/berlin.jpg",artist:"Kasa Fue; derivative work by Georgfotoart",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Museumsinsel_Berlin_Juli_2021_1_(cropped)_b.jpg"},
     military:{slug:"battle-of-fehrbellin",name:"Battle of Fehrbellin",img:"/images/encyclopedia/battle-of-fehrbellin.jpg",artist:"Dismar Degen",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Schlacht_bei_Fehrbellin2.JPG"},
     governance:{slug:"golden-bull-of-1356",name:"Golden Bull of 1356",img:"/images/encyclopedia/golden-bull-of-1356.jpg",artist:"Karl IV.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Goldene_Bulle_Nahaufnahme.jpg"},
     impact:{slug:"kleve",name:"Kleve",img:"/images/encyclopedia/kleve.jpg",artist:"Pieter Delicaat",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Kleve_Schwanenturm_vom_Kleiner_Markt_PM17-2.jpg"},
@@ -1827,7 +1827,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-halmyros",name:"Battle of Halmyros",img:"/images/encyclopedia/battle-of-halmyros.jpg",artist:"Cplakidas",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Greece_in_1278.svg"},
     governance:{slug:"usatges-of-barcelona",name:"Usatges of Barcelona",img:"/images/encyclopedia/usatges-of-barcelona.jpg",artist:"Alfons II d'Aragó",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Usatici-Barchinone-usalia-Cathalonie.jpg"},
     impact:{slug:"consulate-of-the-sea",name:"Consulate of the Sea",img:"/images/encyclopedia/consulate-of-the-sea.jpg",artist:"Kent Wang from Barcelona, Spain",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Llotja_de_la_Seda_(52042949244).jpg"},
-    decline:{slug:"corpus-de-sang",name:"Corpus de Sang",img:"/images/encyclopedia/corpus-de-sang.jpg",artist:"Hermenegildo Miralles - (print in the public domain... is more than 100 years old &amp; author died more then 70 year...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Els_segadors.jpg"}
+    decline:{slug:"corpus-de-sang",name:"Corpus de Sang",img:"/images/encyclopedia/corpus-de-sang.jpg",artist:"Hermenegildo Miralles - (print in the public domain... is more than 100 years old & author died more then 70 year...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Els_segadors.jpg"}
   },
   "Crown of Aragon": {
     foundation:{slug:"alfonso-i-of-aragon",name:"Alfonso I of Aragon",img:"/images/encyclopedia/alfonso-i-of-aragon.jpg",artist:"Willtron",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Dinero_chaqu%C3%A9s_cara_Alifonso_I.png"},
@@ -1839,7 +1839,7 @@ var SECTION_IMAGES = {
   },
   "Margraviate of Moravia": {
     foundation:{slug:"frederick-barbarossa",name:"Frederick Barbarossa",img:"/images/encyclopedia/frederick-barbarossa.jpg",artist:"Montecappio",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Friedrich_I._Barbarossa.jpg"},
-    socioeconomy:{slug:"brno",name:"Brno",img:"/images/encyclopedia/brno.jpg",artist:"Brno-Freiheitsplatz2.jpg: SchiDD Brno_Katedrála_sv._Petra_a_Pavla_(St.Peter_and_St.Paul_Cathedral).jpg: JRodSilva Brn...",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Brno_Montage_IV.png"},
+    socioeconomy:{slug:"brno",name:"Brno",img:"/images/encyclopedia/brno.jpg",artist:"JRodSilva Brn...",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Brno_Montage_IV.png"},
     military:{slug:"battle-on-the-marchfeld",name:"Battle on the Marchfeld",img:"/images/encyclopedia/battle-on-the-marchfeld.jpg",artist:"Mór Than",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:IV_L%C3%A1szl%C3%B3_%C3%A9s_Rudolf.jpg"},
     governance:{slug:"john-henry-margrave-of-moravia",name:"John Henry, Margrave of Moravia",img:"/images/encyclopedia/john-henry-margrave-of-moravia.jpg",artist:"Packare",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Busta_Jan_Jindrich_face.jpg"},
     impact:{slug:"kralice-bible",name:"Kralice Bible",img:"/images/encyclopedia/kralice-bible.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kralice.jpg"},
@@ -1864,7 +1864,7 @@ var SECTION_IMAGES = {
   "Free Hanseatic City of Bremen": {
     foundation:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"},
     socioeconomy:{slug:"bremen",name:"Bremen",img:"/images/encyclopedia/bremen.jpg",artist:"Matthias Süßen",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bremen_Rathaus,_Roland_und_Dom-blaue-Stunde-2024-msu-8259-.jpg"},
-    military:{slug:"u-boat",name:"U-boat",img:"/images/encyclopedia/u-boat.jpg",artist:"File:U995 2001 1.jpg: Darkone (talk · contribs) derivative work: Georgfotoart",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:U995_2001_1_b.jpg"},
+    military:{slug:"u-boat",name:"U-boat",img:"/images/encyclopedia/u-boat.jpg",artist:"Darkone; derivative work by Georgfotoart",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:U995_2001_1_b.jpg"},
     governance:{slug:"johann-smidt",name:"Johann Smidt",img:"/images/encyclopedia/johann-smidt.jpg",artist:"Wilhelmine Suhrlandt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SuhrlandtWSmidt.jpg"},
     impact:{slug:"ss-kaiser-wilhelm-der-grosse",name:"SS Kaiser Wilhelm der Grosse",img:"/images/encyclopedia/ss-kaiser-wilhelm-der-grosse.jpg",artist:"A. [August] Loeffler (1865–1946), Tompkinsville, N.Y.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kaiser_wilhelm_der_grosse_01.jpg"},
     decline:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"}
@@ -1872,7 +1872,7 @@ var SECTION_IMAGES = {
   "Free and Hanseatic City of Hamburg": {
     foundation:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"},
     socioeconomy:{slug:"hamburg",name:"Hamburg",img:"/images/encyclopedia/hamburg.jpg",artist:"Dietmar Rabich",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Hamburg,_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg"},
-    military:{slug:"u-boat",name:"U-boat",img:"/images/encyclopedia/u-boat.jpg",artist:"File:U995 2001 1.jpg: Darkone (talk · contribs) derivative work: Georgfotoart",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:U995_2001_1_b.jpg"},
+    military:{slug:"u-boat",name:"U-boat",img:"/images/encyclopedia/u-boat.jpg",artist:"Darkone; derivative work by Georgfotoart",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:U995_2001_1_b.jpg"},
     governance:{slug:"imperial-chamber-court",name:"Imperial Chamber Court",img:"/images/encyclopedia/imperial-chamber-court.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Audienz_Reichskammergericht.jpg"},
     impact:{slug:"speicherstadt",name:"Speicherstadt",img:"/images/encyclopedia/speicherstadt.jpg",artist:"Thomas Wolf, www.foto-tw.de",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Speicherstadt_abends.jpg"},
     decline:{slug:"second-world-war",name:"Second World War",img:"/images/encyclopedia/second-world-war.jpg",artist:"Richard Opitz",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-646-5188-17,_Flugzeuge_Junkers_Ju_87.jpg"}
@@ -1890,7 +1890,7 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"saint-helier",name:"Saint Helier",img:"/images/encyclopedia/saint-helier.jpg",artist:"Man vyi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_H%C3%A9lyi_p%C3%A8lerinnage_2011_08.jpg"},
     military:{slug:"battle-of-jersey",name:"Battle of Jersey",img:"/images/encyclopedia/battle-of-jersey.jpg",artist:"John Singleton Copley",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Singleton_Copley_001.jpg"},
     governance:{slug:"pope-sixtus-iv",name:"Pope Sixtus IV",img:"/images/encyclopedia/pope-sixtus-iv.jpg",artist:"Pedro Berruguete",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Pedro_Berruguete_-_Portrait_of_Pope_Sixtus_IV_della_Rovere_-_1916.815_-_Cleveland_Museum_of_ArtFXD.jpg"},
-    impact:{slug:"george-carteret",name:"George Carteret",img:"/images/encyclopedia/george-carteret.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SirGeorgeCarteret.jpg"},
+    impact:{slug:"george-carteret",name:"George Carteret",img:"/images/encyclopedia/george-carteret.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SirGeorgeCarteret.jpg"},
     decline:{slug:"second-world-war",name:"Second World War",img:"/images/encyclopedia/second-world-war.jpg",artist:"Richard Opitz",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-646-5188-17,_Flugzeuge_Junkers_Ju_87.jpg"}
   },
   "County of Hohenzollern": {
@@ -1899,7 +1899,7 @@ var SECTION_IMAGES = {
     military:{slug:"francis-i-duke-of-nevers",name:"Francis I, Duke of Nevers",img:"/images/encyclopedia/francis-i-duke-of-nevers.jpg",artist:"Workshop of François Clouet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francis_I_of_Cleves,_duke_of_Nevers.jpg"},
     governance:{slug:"charles-v-holy-roman-emperor",name:"Charles V, Holy Roman Emperor",img:"/images/encyclopedia/charles-v-holy-roman-emperor.jpg",artist:"Attributed to Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Charles_V,_Holy_Roman_Emperor,_seated_(1500%E2%80%931558),_formerly_attributed_to_Titian_(Alte_Pinakothek,_Munich).jpg"},
     impact:{slug:"sigmaringen",name:"Sigmaringen",img:"/images/encyclopedia/sigmaringen.jpg",artist:"Felix König",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Sigmaringen_August_2015.jpg"},
-    decline:{slug:"charles-ii-count-of-hohenzollern-sigmaringen",name:"Charles II, Count of Hohenzollern-Sigmaringen",img:"/images/encyclopedia/charles-ii-count-of-hohenzollern-sigmaringen.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_II_hohenzollern.jpg"}
+    decline:{slug:"charles-ii-count-of-hohenzollern-sigmaringen",name:"Charles II, Count of Hohenzollern-Sigmaringen",img:"/images/encyclopedia/charles-ii-count-of-hohenzollern-sigmaringen.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_II_hohenzollern.jpg"}
   },
   "Principality of Achaea": {
     foundation:{slug:"geoffrey-i-of-villehardouin",name:"Geoffrey I of Villehardouin",img:"/images/encyclopedia/geoffrey-i-of-villehardouin.jpg",artist:"Original design: unknown 13th-century artist; Sketch: Gustave Schlumberger (1844–1929)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Seal_of_Geoffrey_I_of_Villehardouin_(Schlumberger,_1897).jpg"},
@@ -1913,7 +1913,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"felix-and-regula",name:"Felix and Regula",img:"/images/encyclopedia/felix-and-regula.jpg",artist:"Zürcher Veilchenmeister",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Altartafel_Kapelle_Spannweid_Z%C3%BCrich_Stadtheilige.jpg"},
     socioeconomy:{slug:"grossmunster",name:"Grossmünster",img:"/images/encyclopedia/grossmunster.jpg",artist:"Roland zh",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Grossm%C3%BCnster_-_M%C3%BCnsterhof_2014-05-23_12-08-43.JPG"},
     military:{slug:"battle-of-st-jakob-an-der-sihl",name:"Battle of St. Jakob an der Sihl",img:"/images/encyclopedia/battle-of-st-jakob-an-der-sihl.jpg",artist:"Werner Schodoler; upload by sidonius 09:58, 24 July 2007 (UTC)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zuerichkrieg_1444.jpg"},
-    governance:{slug:"rudolf-brun",name:"Rudolf Brun",img:"/images/encyclopedia/rudolf-brun.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rudolf_Brun.jpg"},
+    governance:{slug:"rudolf-brun",name:"Rudolf Brun",img:"/images/encyclopedia/rudolf-brun.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rudolf_Brun.jpg"},
     impact:{slug:"consensus-tigurinus",name:"Consensus Tigurinus",img:"/images/encyclopedia/consensus-tigurinus.jpg",artist:"John Calvin, Heinrich Bullinger, et al.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Consensus_Tigurinus.jpg"},
     decline:{slug:"war-of-the-second-coalition",name:"War of the Second Coalition",img:"/images/encyclopedia/war-of-the-second-coalition.jpg",artist:"Ruedi33a",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:War_of_the_second_coalition.jpg"}
   },
@@ -1928,7 +1928,7 @@ var SECTION_IMAGES = {
   "Crown of Castile": {
     foundation:{slug:"ferdinand-iii-of-castile",name:"Ferdinand III of Castile",img:"/images/encyclopedia/ferdinand-iii-of-castile.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fernando_III_de_Castilla_02.jpg"},
     socioeconomy:{slug:"santiago",name:"Santiago",img:"/images/encyclopedia/santiago.jpg",artist:"Miguel hernandez",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Palacio_de_La_Moneda_-_miguelreflex.jpg"},
-    military:{slug:"battle-of-rio-salado",name:"Battle of Río Salado",img:"/images/encyclopedia/battle-of-rio-salado.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:La_batalla_del_Salado_(1340).jpg"},
+    military:{slug:"battle-of-rio-salado",name:"Battle of Río Salado",img:"/images/encyclopedia/battle-of-rio-salado.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:La_batalla_del_Salado_(1340).jpg"},
     governance:{slug:"siete-partidas",name:"Siete Partidas",img:"/images/encyclopedia/siete-partidas.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Partidas.jpg"},
     impact:{slug:"capitulations-of-santa-fe",name:"Capitulations of Santa Fe",img:"/images/encyclopedia/capitulations-of-santa-fe.jpg",artist:"XpoferenS",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Capitulacionsori.jpg"},
     decline:{slug:"battle-of-villalar",name:"Battle of Villalar",img:"/images/encyclopedia/battle-of-villalar.jpg",artist:"Manuel Picolo López",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BatallaDeVillalar.jpg"}
@@ -1936,7 +1936,7 @@ var SECTION_IMAGES = {
   "Emirate of Granada": {
     foundation:{slug:"ibn-hud",name:"Ibn Hud",img:"/images/encyclopedia/ibn-hud.jpg",artist:"Under the patronage of Alfonso X",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ibn_Hud,_Cantigas_de_Santa_Maria_169.jpg"},
     socioeconomy:{slug:"granada",name:"Granada",img:"/images/encyclopedia/granada.jpg",artist:"Brett Hodnett",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Granada_(25987961022).jpg"},
-    military:{slug:"battle-of-rio-salado",name:"Battle of Río Salado",img:"/images/encyclopedia/battle-of-rio-salado.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:La_batalla_del_Salado_(1340).jpg"},
+    military:{slug:"battle-of-rio-salado",name:"Battle of Río Salado",img:"/images/encyclopedia/battle-of-rio-salado.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:La_batalla_del_Salado_(1340).jpg"},
     governance:{slug:"ibn-al-khatib",name:"Lisan al-Din ibn al-Khatib",img:"/images/encyclopedia/ibn-al-khatib.jpg",artist:"Schluchtenbummler",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Alhambra_104.JPG"},
     impact:{slug:"alhambra",name:"Alhambra",img:"/images/encyclopedia/alhambra.jpg",artist:"Jebulon",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg"},
     decline:{slug:"battle-of-lucena",name:"Battle of Lucena",img:"/images/encyclopedia/battle-of-lucena.jpg",artist:"JamesNarmer",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Batalla_de_Lucena.jpg"}
@@ -1944,13 +1944,13 @@ var SECTION_IMAGES = {
   "Grand Duchy of Lithuania": {
     foundation:{slug:"mindaugas",name:"Mindaugas",img:"/images/encyclopedia/mindaugas.jpg",artist:"Alexander Guagnini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mindo%C5%ADh._%D0%9C%D1%96%D0%BD%D0%B4%D0%BE%D1%9E%D0%B3_(A._Guagnini,_1611).jpg"},
     socioeconomy:{slug:"trakai",name:"Trakai",img:"/images/encyclopedia/trakai.jpg",artist:"BigHead",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Traku_pilis_by_Augustas_Didzgalvis.jpg"},
-    military:{slug:"battle-of-the-vorskla-river",name:"Battle of the Vorskla River",img:"/images/encyclopedia/battle-of-the-vorskla-river.jpg",artist:"Anonymous Russian manuscript illuminators, 1560-1570s Facial Chronicle (Illustrated Chronicle of Ivan the Terrible) (...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Facial_Chronicle_-_b.11,_p.421_-_Battle_at_Vorskla.jpg"},
+    military:{slug:"battle-of-the-vorskla-river",name:"Battle of the Vorskla River",img:"/images/encyclopedia/battle-of-the-vorskla-river.jpg",artist:"Anonymous Russian manuscript illuminators, 1560-1570s …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Facial_Chronicle_-_b.11,_p.421_-_Battle_at_Vorskla.jpg"},
     governance:{slug:"lithuanian-metrica",name:"Lithuanian Metrica",img:"/images/encyclopedia/lithuanian-metrica.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Metryka_litewska.jpg"},
-    impact:{slug:"statutes-of-lithuania",name:"Statutes of Lithuania",img:"/images/encyclopedia/statutes-of-lithuania.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Grand_Duchy_of_Lithuania_from_the_Statute_(1614).png"},
+    impact:{slug:"statutes-of-lithuania",name:"Statutes of Lithuania",img:"/images/encyclopedia/statutes-of-lithuania.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Grand_Duchy_of_Lithuania_from_the_Statute_(1614).png"},
     decline:{slug:"livonian-war",name:"Livonian War",img:"/images/encyclopedia/livonian-war.jpg",artist:"Boris Chorikov",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Siege_of_Narva_1558.jpg"}
   },
   "Reval": {
-    foundation:{slug:"muhammad-al-idrisi",name:"Muhammad al-Idrisi",img:"/images/encyclopedia/muhammad-al-idrisi.jpg",artist:"Estatua_de_Al-Idrisi_bajo_el_baluarte_de_los_Mallorquines,_Ceuta_(3).jpg: Mario Sánchez Bueno derivative work: Ecemaml",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Estatua_de_Al-Idrisi_bajo_el_baluarte_de_los_Mallorquines,_Ceuta_(5).jpg"},
+    foundation:{slug:"muhammad-al-idrisi",name:"Muhammad al-Idrisi",img:"/images/encyclopedia/muhammad-al-idrisi.jpg",artist:"Mario Sánchez Bueno; derivative work by Ecemaml",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Estatua_de_Al-Idrisi_bajo_el_baluarte_de_los_Mallorquines,_Ceuta_(5).jpg"},
     socioeconomy:{slug:"lubeck",name:"Lübeck",img:"/images/encyclopedia/lubeck.jpg",artist:"Oleg Dejan",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:L%C3%BCbeck_-_panoramio.jpg"},
     military:{slug:"livonian-war",name:"Livonian War",img:"/images/encyclopedia/livonian-war.jpg",artist:"Boris Chorikov",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Siege_of_Narva_1558.jpg"},
     governance:{slug:"tartu",name:"Tartu",img:"/images/encyclopedia/tartu.jpg",artist:"Boreaallane",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Tartu_(2019).jpg"},
@@ -1974,10 +1974,10 @@ var SECTION_IMAGES = {
     decline:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"}
   },
   "Kingdom of Naples": {
-    foundation:{slug:"roger-ii-of-sicily",name:"Roger II of Sicily",img:"/images/encyclopedia/roger-ii-of-sicily.jpg",artist:"User:Matthias Süßen",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Martorana_Palermo_msu2017-0166.jpg"},
+    foundation:{slug:"roger-ii-of-sicily",name:"Roger II of Sicily",img:"/images/encyclopedia/roger-ii-of-sicily.jpg",artist:"Matthias Süßen",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Martorana_Palermo_msu2017-0166.jpg"},
     socioeconomy:{slug:"naples",name:"Naples",img:"/images/encyclopedia/naples.jpg",artist:"Richard Nevell",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Napoli_-_Maschio_Angioino_-_202209302342_3.jpg"},
     military:{slug:"battle-of-cerignola",name:"Battle of Cerignola",img:"/images/encyclopedia/battle-of-cerignola.jpg",artist:"Federico de Madrazo y Kuntz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Elgrancapitantrasbatalladeceri%C3%B1ola.jpg"},
-    governance:{slug:"frederick-ii-elector-of-brandenburg",name:"Frederick II, Elector of Brandenburg",img:"/images/encyclopedia/frederick-ii-elector-of-brandenburg.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arolsen_Klebeband_01_203_1.jpg"},
+    governance:{slug:"frederick-ii-elector-of-brandenburg",name:"Frederick II, Elector of Brandenburg",img:"/images/encyclopedia/frederick-ii-elector-of-brandenburg.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arolsen_Klebeband_01_203_1.jpg"},
     impact:{slug:"castel-nuovo",name:"Castel Nuovo",img:"/images/encyclopedia/castel-nuovo.jpg",artist:"Little john at Italian Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Municip.jpg"},
     decline:{slug:"battle-of-tolentino",name:"Battle of Tolentino",img:"/images/encyclopedia/battle-of-tolentino.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Tolentino.jpg"}
   },
@@ -1993,7 +1993,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"arpad",name:"Árpád",img:"/images/encyclopedia/arpad.jpg",artist:"Csanády",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%C3%81rp%C3%A1d_R%C3%A1ckeve.JPG"},
     socioeconomy:{slug:"kremnica",name:"Kremnica",img:"/images/encyclopedia/kremnica.jpg",artist:"Dušan Turan",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kremnica_v_zime.jpg"},
     military:{slug:"battle-of-nicopolis",name:"Battle of Nicopolis",img:"/images/encyclopedia/battle-of-nicopolis.jpg",artist:"Sébastien Mamerot",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NikopolisSchlacht.jpg"},
-    governance:{slug:"golden-bull-of-1222",name:"Golden Bull of 1222",img:"/images/encyclopedia/golden-bull-of-1222.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:II._Andr%C3%A1s_aranybull%C3%A1ja.jpg"},
+    governance:{slug:"golden-bull-of-1222",name:"Golden Bull of 1222",img:"/images/encyclopedia/golden-bull-of-1222.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:II._Andr%C3%A1s_aranybull%C3%A1ja.jpg"},
     impact:{slug:"holy-crown-of-hungary",name:"Holy Crown of Hungary",img:"/images/encyclopedia/holy-crown-of-hungary.jpg",artist:"granada_turnier",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_002_-_Flickr_-_granada_turnier.jpg"},
     decline:{slug:"battle-of-mohacs",name:"Battle of Mohács",img:"/images/encyclopedia/battle-of-mohacs.jpg",artist:"unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:A_moh%C3%A1csi_csata_(Des_T%C3%BCrckischen_Keysers_Solymon_schlacht_-_So_mit_dem_K%C3%BCnig_von_Hungern_gethan,_Bamberg,_1526).jpg"}
   },
@@ -2002,16 +2002,16 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"cagliari",name:"Cagliari",img:"/images/encyclopedia/cagliari.jpg",artist:"Nilo1926",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cagliari_collage.png"},
     military:{slug:"battle-of-sanluri",name:"Battle of Sanluri",img:"/images/encyclopedia/battle-of-sanluri.jpg",artist:"Giovanni Marghinotti (1798-1865)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:MarghinottibattagliaSanluri.jpg"},
     governance:{slug:"carta-de-logu",name:"Carta de Logu",img:"/images/encyclopedia/carta-de-logu.jpg",artist:"Harlok83",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Pag1_carta_delogu.jpg"},
-    impact:{slug:"statuto-albertino",name:"Statuto Albertino",img:"/images/encyclopedia/statuto-albertino.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Carlo_Alberto_firma_lo_Statuto.jpg"},
+    impact:{slug:"statuto-albertino",name:"Statuto Albertino",img:"/images/encyclopedia/statuto-albertino.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Carlo_Alberto_firma_lo_Statuto.jpg"},
     decline:{slug:"battle-of-castelfidardo",name:"Battle of Castelfidardo",img:"/images/encyclopedia/battle-of-castelfidardo.jpg",artist:"it:Giovanni Gallucci (b. 1815 - d.: unknown)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giovanni_Gallucci_La_Battaglia_di_Castelfidardo_palazzo_comunale_di_Castelfidardo.jpg"}
   },
   "Principality of Moldavia": {
     foundation:{slug:"louis-i-of-hungary",name:"Louis I of Hungary",img:"/images/encyclopedia/louis-i-of-hungary.jpg",artist:"Márk Kálti",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_I_(Chronicon_Pictum).jpg"},
     socioeconomy:{slug:"suceava",name:"Suceava",img:"/images/encyclopedia/suceava.jpg",artist:"Rosenborg BK Fan",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Palatul_Administrativ_din_Suceava_(2).jpg"},
     military:{slug:"battle-of-vaslui",name:"Battle of Vaslui",img:"/images/encyclopedia/battle-of-vaslui.jpg",artist:"Anonimu at English Wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Vaslui_15cMD.png"},
-    governance:{slug:"regulamentul-organic",name:"Regulamentul Organic",img:"/images/encyclopedia/regulamentul-organic.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wallachian_Regulamentul_organic_1832.png"},
+    governance:{slug:"regulamentul-organic",name:"Regulamentul Organic",img:"/images/encyclopedia/regulamentul-organic.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wallachian_Regulamentul_organic_1832.png"},
     impact:{slug:"voronet-monastery",name:"Voroneț Monastery",img:"/images/encyclopedia/voronet-monastery.jpg",artist:"Dstefanescu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Voronet_Intrare.JPG"},
-    decline:{slug:"crimean-war",name:"Crimean War",img:"/images/encyclopedia/crimean-war.jpg",artist:"William Simpson, artist (1823-1899) E[dmond]. Morin, lithographer (1824 - 1882), working for \"Day &amp; Son, lithrs. ...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Simpson_-_Attack_on_the_Malakoff.jpg"}
+    decline:{slug:"crimean-war",name:"Crimean War",img:"/images/encyclopedia/crimean-war.jpg",artist:"William Simpson, artist (1823-1899); E[dmond]. Morin, lithographer (1824 - 1882), working for \"Day & Son, lithrs. to the Queen\" …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Simpson_-_Attack_on_the_Malakoff.jpg"}
   },
   "Hanseatic League": {
     foundation:{slug:"henry-the-lion",name:"Henry the Lion",img:"/images/encyclopedia/henry-the-lion.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_the_Lion_(cropped).jpg"},
@@ -2023,7 +2023,7 @@ var SECTION_IMAGES = {
   },
   "Electorate of Saxony": {
     foundation:{slug:"albert-iii-elector-of-saxony",name:"Albert III, Elector of Saxony",img:"/images/encyclopedia/albert-iii-elector-of-saxony.jpg",artist:"Lucas Cranach the Younger",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Albrecht_der_Beherzte,_1443-1500_(AT_KHM_GG4796).jpg"},
-    socioeconomy:{slug:"freiberg",name:"Freiberg",img:"/images/encyclopedia/freiberg.jpg",artist:"User:Kolossos",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Freiberg-Petri-Obermarkt.jpg"},
+    socioeconomy:{slug:"freiberg",name:"Freiberg",img:"/images/encyclopedia/freiberg.jpg",artist:"Kolossos",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Freiberg-Petri-Obermarkt.jpg"},
     military:{slug:"battle-of-muhlberg",name:"Battle of Mühlberg",img:"/images/encyclopedia/battle-of-muhlberg.jpg",artist:"LUIS DE AVILA Y ZUNIGA (c.1490 C. 1560)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schlacht_bei_M%C3%BChlberg_1547.jpg"},
     governance:{slug:"augustus-ii-the-strong",name:"Augustus II the Strong",img:"/images/encyclopedia/augustus-ii-the-strong.jpg",artist:"Louis de Silvestre",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_de_Silvestre-August_II.jpg"},
     impact:{slug:"zwinger-dresden",name:"Zwinger (Dresden)",img:"/images/encyclopedia/zwinger-dresden.jpg",artist:"Stephan Czuratis (Jazz-face)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:2006-07-30_Zwinger_dresden2.jpg"},
@@ -2049,12 +2049,12 @@ var SECTION_IMAGES = {
     foundation:{slug:"humbert-i-count-of-savoy",name:"Humbert I, Count of Savoy",img:"/images/encyclopedia/humbert-i-count-of-savoy.jpg",artist:"Pelagio Palagi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Comte_Humbert_I_de_Savoie.jpg"},
     socioeconomy:{slug:"chambery",name:"Chambéry",img:"/images/encyclopedia/chambery.jpg",artist:"Florian Pépellin",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chamb%C3%A9ry_-_Place_St-L%C3%A9ger.JPG"},
     military:{slug:"battle-of-saint-quentin-1557",name:"Battle of Saint-Quentin (1557)",img:"/images/encyclopedia/battle-of-saint-quentin-1557.jpg",artist:"Massimo d'Azeglio",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emanuele_Filiberto_vince_i_Francesi_a_San_Quintino.png"},
-    governance:{slug:"amadeus-viii-duke-of-savoy",name:"Amadeus VIII, Duke of Savoy",img:"/images/encyclopedia/amadeus-viii-duke-of-savoy.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amadeus_VIII_of_Savoy_from_a_French_edition_of_Albertanus_of_Brescia%27s_De_doctrina_dicendi_et_tacendi_and_De_amore_et_dilectione_Dei_et_proximi_et_aliarum_rerum_et_de_forma_vitae.jpg"},
+    governance:{slug:"amadeus-viii-duke-of-savoy",name:"Amadeus VIII, Duke of Savoy",img:"/images/encyclopedia/amadeus-viii-duke-of-savoy.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amadeus_VIII_of_Savoy_from_a_French_edition_of_Albertanus_of_Brescia%27s_De_doctrina_dicendi_et_tacendi_and_De_amore_et_dilectione_Dei_et_proximi_et_aliarum_rerum_et_de_forma_vitae.jpg"},
     impact:{slug:"basilica-of-superga",name:"Basilica of Superga",img:"/images/encyclopedia/basilica-of-superga.jpg",artist:"Paris Orlando",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Basilica_di_Superga_(Turin).jpg"},
     decline:{slug:"french-revolutionary-wars",name:"French Revolutionary Wars",img:"/images/encyclopedia/french-revolutionary-wars.jpg",artist:"Ruedi33a",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:French_Revolutionary_Wars.jpg"}
   },
   "Crimean Khanate": {
-    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
     socioeconomy:{slug:"bakhchysarai",name:"Bakhchysarai",img:"/images/encyclopedia/bakhchysarai.jpg",artist:"Aleksander Kaasik",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Baht%C5%A1isarai-Khaani_palee_Krimmis.jpg"},
     military:{slug:"battle-of-molodi",name:"Battle of Molodi",img:"/images/encyclopedia/battle-of-molodi.jpg",artist:"Wilder",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Molodi_-_v_pam%27at%27_pobedy_1572_goda_-_07.jpg"},
     governance:{slug:"istanbul",name:"Istanbul",img:"/images/encyclopedia/istanbul.jpg",artist:"Hunanuk",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Historical_peninsula_and_modern_skyline_of_Istanbul.jpg"},
@@ -2091,7 +2091,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-the-yellow-ford",name:"Battle of the Yellow Ford",img:"/images/encyclopedia/battle-of-the-yellow-ford.jpg",artist:"James O'Neill",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:B_Yellow_Ford_from_hill_1.jpg"},
     governance:{slug:"henry-grattan",name:"Henry Grattan",img:"/images/encyclopedia/henry-grattan.jpg",artist:"Martin Archer Shee",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Henry_Grattan_-Martin_Archer_Shee_.PNG"},
     impact:{slug:"george-berkeley",name:"George Berkeley",img:"/images/encyclopedia/george-berkeley.jpg",artist:"John Smibert",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Smibert_-_Bishop_George_Berkeley_-_Google_Art_Project_(cropped).jpg"},
-    decline:{slug:"theobald-wolfe-tone",name:"Theobald Wolfe Tone",img:"/images/encyclopedia/theobald-wolfe-tone.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wolfe_Tone.jpg"}
+    decline:{slug:"theobald-wolfe-tone",name:"Theobald Wolfe Tone",img:"/images/encyclopedia/theobald-wolfe-tone.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wolfe_Tone.jpg"}
   },
   "Duchy of Parma and Piacenza": {
     foundation:{slug:"pope-julius-ii",name:"Pope Julius II",img:"/images/encyclopedia/pope-julius-ii.jpg",artist:"Raphael",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pope_Julius_II.jpg"},
@@ -2127,10 +2127,10 @@ var SECTION_IMAGES = {
   },
   "Kingdom of Prussia": {
     foundation:{slug:"john-sigismund-elector-of-brandenburg",name:"John Sigismund, Elector of Brandenburg",img:"/images/encyclopedia/john-sigismund-elector-of-brandenburg.jpg",artist:"anonymous / Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Johann_Sigismund_Grunewald.jpg"},
-    socioeconomy:{slug:"berlin",name:"Berlin",img:"/images/encyclopedia/berlin.jpg",artist:"File:Museumsinsel Berlin Juli 2021 1 (cropped).jpg: Kasa Fue derivative work: Georgfotoart",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Museumsinsel_Berlin_Juli_2021_1_(cropped)_b.jpg"},
+    socioeconomy:{slug:"berlin",name:"Berlin",img:"/images/encyclopedia/berlin.jpg",artist:"Kasa Fue; derivative work by Georgfotoart",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Museumsinsel_Berlin_Juli_2021_1_(cropped)_b.jpg"},
     military:{slug:"battle-of-leuthen",name:"Battle of Leuthen",img:"/images/encyclopedia/battle-of-leuthen.jpg",artist:"Carl Röchling",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Leuthen_2.jpg"},
-    governance:{slug:"general-state-laws-for-the-prussian-states",name:"General State Laws for the Prussian States",img:"/images/encyclopedia/general-state-laws-for-the-prussian-states.jpg",artist:"User:Borysk5",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Legal_systems_in_1895_Germany.png"},
-    impact:{slug:"konigsberg",name:"Königsberg",img:"/images/encyclopedia/konigsberg.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:K%C3%B6nigsberg_Castle.jpg"},
+    governance:{slug:"general-state-laws-for-the-prussian-states",name:"General State Laws for the Prussian States",img:"/images/encyclopedia/general-state-laws-for-the-prussian-states.jpg",artist:"Borysk5",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Legal_systems_in_1895_Germany.png"},
+    impact:{slug:"konigsberg",name:"Königsberg",img:"/images/encyclopedia/konigsberg.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:K%C3%B6nigsberg_Castle.jpg"},
     decline:{slug:"first-world-war",name:"First World War",img:"/images/encyclopedia/first-world-war.jpg",artist:"Collection DocAnciens/docpix.fr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_de_Verdun_1916.jpg"}
   },
   "Kingdom of Great Britain": {
@@ -2161,7 +2161,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
     socioeconomy:{slug:"geneva",name:"Geneva",img:"/images/encyclopedia/geneva.jpg",artist:"fr:Utilisateur:Stéphane_Pecorini",licence:"CC BY-SA 2.0 fr",source:"https://commons.wikimedia.org/wiki/File:Geneve_2005_001_Ork.ch.jpg"},
     military:{slug:"battle-of-the-berezina",name:"Battle of the Berezina",img:"/images/encyclopedia/battle-of-the-berezina.jpg",artist:"January Suchodolski",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:National_Museum_in_Poznan_-_Przej%C5%9Bcie_przez_Berezyn%C4%99.JPG"},
-    governance:{slug:"federal-treaty",name:"Federal Treaty",img:"/images/encyclopedia/federal-treaty.jpg",artist:"Unknown authorUnknown author or not provided",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bundesvertrag_1815_-_CH-BAR_-_4035063.pdf"},
+    governance:{slug:"federal-treaty",name:"Federal Treaty",img:"/images/encyclopedia/federal-treaty.jpg",artist:"Unknown author or not provided",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bundesvertrag_1815_-_CH-BAR_-_4035063.pdf"},
     impact:{slug:"henry-dunant",name:"Henry Dunant",img:"/images/encyclopedia/henry-dunant.jpg",artist:"Frédéric Boissonnas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_Dunant-young.jpg"},
     decline:{slug:"european-economic-area",name:"European Economic Area",img:"/images/encyclopedia/european-economic-area.jpg",artist:"Rob984",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:European_Economic_Area_member_states.svg"}
   },
@@ -2203,7 +2203,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-the-bulge",name:"Battle of the Bulge",img:"/images/encyclopedia/battle-of-the-bulge.jpg",artist:"U.S. Army",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:117th_Infantry_North_Carolina_NG_at_St._Vith_1945.jpg"},
     governance:{slug:"william-iii-of-the-netherlands",name:"William III of the Netherlands",img:"/images/encyclopedia/william-iii-of-the-netherlands.jpg",artist:"Maria Elisabeth Hille",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portret_koning_Willem_III_door_Maria_Hille_HGA001008802_(uitsnede).jpg"},
     impact:{slug:"joseph-bech",name:"Joseph Bech",img:"/images/encyclopedia/joseph-bech.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Joseph_Bech_1950.jpg"},
-    decline:{slug:"luxleaks",name:"LuxLeaks",img:"/images/encyclopedia/luxleaks.jpg",artist:"International Consortium of Investigative Journalists (http://www.icij.org), Luxembourg tax authorities",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tax_ruling_luxembourg.png"}
+    decline:{slug:"luxleaks",name:"LuxLeaks",img:"/images/encyclopedia/luxleaks.jpg",artist:"International Consortium of Investigative Journalists Luxembourg tax authorities",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tax_ruling_luxembourg.png"}
   },
   "German Confederation": {
     foundation:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
@@ -2216,7 +2216,7 @@ var SECTION_IMAGES = {
   "Kingdom of Belgium": {
     foundation:{slug:"leopold-i-of-belgium",name:"Leopold I of Belgium",img:"/images/encyclopedia/leopold-i-of-belgium.jpg",artist:"Nicaise de Keyser",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NICAISE_Leopold_ANV.jpg"},
     socioeconomy:{slug:"seraing",name:"Seraing",img:"/images/encyclopedia/seraing.jpg",artist:"flamenc",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Seraing_-_Casa_de_la_vila.jpg"},
-    military:{slug:"battle-of-saio",name:"Battle of Saïo",img:"/images/encyclopedia/battle-of-saio.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Belgian_forces_with_captured_Italian_artillery.jpg"},
+    military:{slug:"battle-of-saio",name:"Battle of Saïo",img:"/images/encyclopedia/battle-of-saio.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Belgian_forces_with_captured_Italian_artillery.jpg"},
     governance:{slug:"albert-i-of-belgium",name:"Albert I of Belgium",img:"/images/encyclopedia/albert-i-of-belgium.jpg",artist:"Richard Speaight",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Albert_I_of_Belgium_(cropped).jpg"},
     impact:{slug:"eupen",name:"Eupen",img:"/images/encyclopedia/eupen.jpg",artist:"DimiTalen",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Evening_view_of_Sankt_Nikolaus_from_Loten,_Eupen,_2023.jpg"},
     decline:{slug:"leopold-iii-duke-of-austria",name:"Leopold III, Duke of Austria",img:"/images/encyclopedia/leopold-iii-duke-of-austria.jpg",artist:"Antoni Boys",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Leopold_III_of_Austria.jpg"}
@@ -2232,7 +2232,7 @@ var SECTION_IMAGES = {
   "Kingdom of the Netherlands": {
     foundation:{slug:"amsterdam",name:"Amsterdam",img:"/images/encyclopedia/amsterdam.jpg",artist:"Andrés Barrios",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"},
     socioeconomy:{slug:"nieuwe-waterweg",name:"Nieuwe Waterweg",img:"/images/encyclopedia/nieuwe-waterweg.jpg",artist:"DeltaWorks Online - Eszter Simonfi",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Maeslantkering.jpg"},
-    military:{slug:"battle-of-the-java-sea",name:"Battle of the Java Sea",img:"/images/encyclopedia/battle-of-the-java-sea.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Haguro-1942.jpg"},
+    military:{slug:"battle-of-the-java-sea",name:"Battle of the Java Sea",img:"/images/encyclopedia/battle-of-the-java-sea.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Haguro-1942.jpg"},
     governance:{slug:"johan-rudolf-thorbecke",name:"Johan Rudolf Thorbecke",img:"/images/encyclopedia/johan-rudolf-thorbecke.jpg",artist:"Johan Heinrich Neuman",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Johan_Heinrich_Neuman_-_Johan_Rudolf_Thorbecke.jpg"},
     impact:{slug:"the-hague",name:"The Hague",img:"/images/encyclopedia/the-hague.jpg",artist:"Zairon",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Den_Haag_Skyline_1.jpg"},
     decline:{slug:"pim-fortuyn",name:"Pim Fortuyn",img:"/images/encyclopedia/pim-fortuyn.jpg",artist:"Roy Beusker",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Pim_Fortuyn_-_May_4.jpg"}
@@ -2241,7 +2241,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"camillo-benso-count-of-cavour",name:"Camillo Benso, Count of Cavour",img:"/images/encyclopedia/camillo-benso-count-of-cavour.jpg",artist:"Antonio Ciseri",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Camillo_Benso_Cavour_di_Ciseri.jpg"},
     socioeconomy:{slug:"milan",name:"Milan",img:"/images/encyclopedia/milan.jpg",artist:"Jiuguang Wang",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Milan_Cathedral_from_Piazza_del_Duomo.jpg"},
     military:{slug:"battle-of-custoza-1866",name:"Battle of Custoza (1866)",img:"/images/encyclopedia/battle-of-custoza-1866.jpg",artist:"Juliusz Kossak",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Custozza1866.jpg"},
-    governance:{slug:"statuto-albertino",name:"Statuto Albertino",img:"/images/encyclopedia/statuto-albertino.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Carlo_Alberto_firma_lo_Statuto.jpg"},
+    governance:{slug:"statuto-albertino",name:"Statuto Albertino",img:"/images/encyclopedia/statuto-albertino.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Carlo_Alberto_firma_lo_Statuto.jpg"},
     impact:{slug:"giuseppe-garibaldi",name:"Giuseppe Garibaldi",img:"/images/encyclopedia/giuseppe-garibaldi.jpg",artist:"Salvatore Lo Forte",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Giuseppe_Garibaldi.jpg"},
     decline:{slug:"benito-mussolini",name:"Benito Mussolini",img:"/images/encyclopedia/benito-mussolini.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mussolini_mezzobusto.jpg"}
   },
@@ -2251,15 +2251,15 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-warsaw-1920",name:"Battle of Warsaw (1920)",img:"/images/encyclopedia/battle-of-warsaw-1920.jpg",artist:"patrickgom0",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Warsaw_1920.png"},
     governance:{slug:"felix-dzerzhinsky",name:"Felix Dzerzhinsky",img:"/images/encyclopedia/felix-dzerzhinsky.jpg",artist:"M.S. Nappelbaum",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Feliks_Dzier%C5%BCy%C5%84ski.jpg"},
     impact:{slug:"moscow",name:"Moscow",img:"/images/encyclopedia/moscow.jpg",artist:"U.S. Department of State",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Basil%27s_Cathedral_and_the_Red_Square.jpg"},
-    decline:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev.jpg: Vladimir Vyatkin / Владимир Вяткин derivative ...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
+    decline:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"Vladimir Vyatkin / Владимир Вяткин; derivative work by Jbarta",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
   },
   "Republic of Finland": {
-    foundation:{slug:"elias-lonnrot",name:"Elias Lönnrot",img:"/images/encyclopedia/elias-lonnrot.jpg",artist:"Elias_Lönnrot_potrait.jpg: unknwon derivative work: Bff",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Elias_L%C3%B6nnrot_portrait-2.jpg"},
+    foundation:{slug:"elias-lonnrot",name:"Elias Lönnrot",img:"/images/encyclopedia/elias-lonnrot.jpg",artist:"unknwon; derivative work by Bff",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Elias_L%C3%B6nnrot_portrait-2.jpg"},
     socioeconomy:{slug:"sami-people",name:"Sámi people",img:"/images/encyclopedia/sami-people.jpg",artist:"Jeltz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sami_flag.svg"},
     military:{slug:"battle-of-suomussalmi",name:"Battle of Suomussalmi",img:"/images/encyclopedia/battle-of-suomussalmi.jpg",artist:"Edward J. Krasnobowski, Frank Martini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_suomussalmi.jpg"},
     governance:{slug:"juho-kusti-paasikivi",name:"Juho Kusti Paasikivi",img:"/images/encyclopedia/juho-kusti-paasikivi.jpg",artist:"F.E Fremling",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:J.K._Paasikivi_1945_portrait_(cropped).jpg"},
     impact:{slug:"moscow",name:"Moscow",img:"/images/encyclopedia/moscow.jpg",artist:"U.S. Department of State",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Basil%27s_Cathedral_and_the_Red_Square.jpg"},
-    decline:{slug:"tarja-halonen",name:"Tarja Halonen",img:"/images/encyclopedia/tarja-halonen.jpg",artist:"Tarja_Halonen_1c389_8827.jpg: Janwikifoto derivative work: Bff (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tarja_Halonen_1c389_8827-2.jpg"}
+    decline:{slug:"tarja-halonen",name:"Tarja Halonen",img:"/images/encyclopedia/tarja-halonen.jpg",artist:"Janwikifoto; derivative work by Bff",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tarja_Halonen_1c389_8827-2.jpg"}
   },
   "Republic of Lithuania": {
     foundation:{slug:"antanas-smetona",name:"Antanas Smetona",img:"/images/encyclopedia/antanas-smetona.jpg",artist:"Owned by the National Museum of Lithuania",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Antanas_Smetona_2.jpg"},
@@ -2267,36 +2267,36 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-radviliskis",name:"Battle of Radviliškis",img:"/images/encyclopedia/battle-of-radviliskis.jpg",artist:"Emilis Jeneris",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Radvili%C5%A1kis_painting,_c._1920,_Emilis_Jeneris.png"},
     governance:{slug:"kazys-grinius",name:"Kazys Grinius",img:"/images/encyclopedia/kazys-grinius.jpg",artist:"unknown (added by arz)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kazys_Grinius.jpg"},
     impact:{slug:"kaunas",name:"Kaunas",img:"/images/encyclopedia/kaunas.jpg",artist:"BigHead",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Kauno_senamiestis_by_Augustas_Didzgalvis.jpg"},
-    decline:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev.jpg: Vladimir Vyatkin / Владимир Вяткин derivative ...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
+    decline:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"Vladimir Vyatkin / Владимир Вяткин; derivative work by Jbarta",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
   },
   "Kingdom of Yugoslavia": {
     foundation:{slug:"ante-trumbic",name:"Ante Trumbić",img:"/images/encyclopedia/ante-trumbic.jpg",artist:"Arthur W. Page",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Ante_Trumbi%C4%87.jpg"},
     socioeconomy:{slug:"bor-serbia",name:"Bor, Serbia",img:"/images/encyclopedia/bor-serbia.jpg",artist:"Bor030.net",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Borizvazduha.jpg"},
-    military:{slug:"macedonian-front",name:"Macedonian front",img:"/images/encyclopedia/macedonian-front.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Salonika_Army_Christmas_Card_1916_displaying_soldiers_of_all_Allied_nations.jpg"},
+    military:{slug:"macedonian-front",name:"Macedonian front",img:"/images/encyclopedia/macedonian-front.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Salonika_Army_Christmas_Card_1916_displaying_soldiers_of_all_Allied_nations.jpg"},
     governance:{slug:"nikola-pasic",name:"Nikola Pašić",img:"/images/encyclopedia/nikola-pasic.jpg",artist:"unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NikolaPasic--balkancockpitpol00pric_0191.png"},
-    impact:{slug:"jasenovac-concentration-camp",name:"Jasenovac concentration camp",img:"/images/encyclopedia/jasenovac-concentration-camp.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jasenovac_prisoners_enter_the_camp.jpg"},
-    decline:{slug:"dragisa-cvetkovic",name:"Dragiša Cvetković",img:"/images/encyclopedia/dragisa-cvetkovic.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dragi%C5%A1a_Cvetkovi%C4%87_(1).jpg"}
+    impact:{slug:"jasenovac-concentration-camp",name:"Jasenovac concentration camp",img:"/images/encyclopedia/jasenovac-concentration-camp.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jasenovac_prisoners_enter_the_camp.jpg"},
+    decline:{slug:"dragisa-cvetkovic",name:"Dragiša Cvetković",img:"/images/encyclopedia/dragisa-cvetkovic.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dragi%C5%A1a_Cvetkovi%C4%87_(1).jpg"}
   },
   "Czechoslovakia": {
-    foundation:{slug:"tomas-garrigue-masaryk",name:"Tomáš Garrigue Masaryk",img:"/images/encyclopedia/tomas-garrigue-masaryk.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tom%C3%A1%C5%A1_Garrigue_Masaryk_1925.PNG"},
-    socioeconomy:{slug:"plzen",name:"Plzeň",img:"/images/encyclopedia/plzen.jpg",artist:"Náměstí Republiky - panoramio (6).jpg: Mister No (Panoramio) Plzeň Cathedral of Saint Bartholomew-0146.jpg: Isiwal Ra...",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Plze%C5%88_Montage_I.png"},
+    foundation:{slug:"tomas-garrigue-masaryk",name:"Tomáš Garrigue Masaryk",img:"/images/encyclopedia/tomas-garrigue-masaryk.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tom%C3%A1%C5%A1_Garrigue_Masaryk_1925.PNG"},
+    socioeconomy:{slug:"plzen",name:"Plzeň",img:"/images/encyclopedia/plzen.jpg",artist:"Isiwal Ra...",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Plze%C5%88_Montage_I.png"},
     military:{slug:"zb-vz-26",name:"ZB vz. 26",img:"/images/encyclopedia/zb-vz-26.jpg",artist:"Vitaly V. Kuzmin",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:ZB_vz._26_at_Great_Patriotic_War_museum_in_Smolensk.jpg"},
-    governance:{slug:"edvard-benes",name:"Edvard Beneš",img:"/images/encyclopedia/edvard-benes.jpg",artist:"UnknownUnknown . Transfer; United States. Office of War Information. Overseas Picture Division. Washington Division; ...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edvard_Bene%C5%A1.jpg"},
+    governance:{slug:"edvard-benes",name:"Edvard Beneš",img:"/images/encyclopedia/edvard-benes.jpg",artist:"Unknown . Transfer; United States. Office of War Information. Overseas Picture Division. Washington Division; 1944.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edvard_Bene%C5%A1.jpg"},
     impact:{slug:"lidice",name:"Lidice",img:"/images/encyclopedia/lidice.jpg",artist:"Miaow Miaow",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lidice_CZ_new_Lidice_municipal_office.JPG"},
-    decline:{slug:"gustav-husak",name:"Gustáv Husák",img:"/images/encyclopedia/gustav-husak.jpg",artist:"http://kalendarakcii.bratislava.sk/vismo/akce.asp?id_org=700021&amp;id=4789&amp;p1=7765 http://zpravy.idnes.cz/foto.a...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Gust%C3%A1v_Hus%C3%A1k_-_o%C5%99%C3%ADznuto.JPG"}
+    decline:{slug:"gustav-husak",name:"Gustáv Husák",img:"/images/encyclopedia/gustav-husak.jpg",artist:"kalendarakcii.bratislava.sk",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Gust%C3%A1v_Hus%C3%A1k_-_o%C5%99%C3%ADznuto.JPG"}
   },
   "Republic of Estonia": {
-    foundation:{slug:"konstantin-pats",name:"Konstantin Päts",img:"/images/encyclopedia/konstantin-pats.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Konstantin_P%C3%A4ts.jpg"},
+    foundation:{slug:"konstantin-pats",name:"Konstantin Päts",img:"/images/encyclopedia/konstantin-pats.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Konstantin_P%C3%A4ts.jpg"},
     socioeconomy:{slug:"skype",name:"Skype",img:"/images/encyclopedia/skype.jpg",artist:"Skype Technologies",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Skype_logo_(2019%E2%80%93present).svg"},
-    military:{slug:"battle-of-tannenberg-line",name:"Battle of Tannenberg Line",img:"/images/encyclopedia/battle-of-tannenberg-line.jpg",artist:"Martintg (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tannenberg1944.jpg"},
-    governance:{slug:"johan-laidoner",name:"Johan Laidoner",img:"/images/encyclopedia/johan-laidoner.jpg",artist:"AnonymousUnknown author / J. &amp; P. Parikas",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Johan_Laidoner_(cropped).jpg"},
+    military:{slug:"battle-of-tannenberg-line",name:"Battle of Tannenberg Line",img:"/images/encyclopedia/battle-of-tannenberg-line.jpg",artist:"Martintg",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tannenberg1944.jpg"},
+    governance:{slug:"johan-laidoner",name:"Johan Laidoner",img:"/images/encyclopedia/johan-laidoner.jpg",artist:"AnonymousUnknown author / J. & P. Parikas",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Johan_Laidoner_(cropped).jpg"},
     impact:{slug:"singing-revolution",name:"Singing Revolution",img:"/images/encyclopedia/singing-revolution.jpg",artist:"Photographer Paulius Lileikis. Lithuanian Central State Archives.",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Leaders_of_the_Supreme_Council_of_Lithuania_on_11_March_1990.jpg"},
-    decline:{slug:"otto-tief",name:"Otto Tief",img:"/images/encyclopedia/otto-tief.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Otto_Tief.jpg"}
+    decline:{slug:"otto-tief",name:"Otto Tief",img:"/images/encyclopedia/otto-tief.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Otto_Tief.jpg"}
   },
   "Republic of Latvia": {
     foundation:{slug:"janis-cakste",name:"Jānis Čakste",img:"/images/encyclopedia/janis-cakste.jpg",artist:"ei tiedossa",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Janis_Cakste.jpg"},
     socioeconomy:{slug:"jelgava",name:"Jelgava",img:"/images/encyclopedia/jelgava.jpg",artist:"Ivarsveilins",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Jelgava_winter.jpg"},
-    military:{slug:"christmas-battles",name:"Christmas Battles",img:"/images/encyclopedia/christmas-battles.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ziemassvetku_kaujas_1917.gif"},
+    military:{slug:"christmas-battles",name:"Christmas Battles",img:"/images/encyclopedia/christmas-battles.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ziemassvetku_kaujas_1917.gif"},
     governance:{slug:"constitution-of-latvia",name:"Constitution of Latvia",img:"/images/encyclopedia/constitution-of-latvia.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Latvijas_Republikas_Satversmes_publik%C4%81cija_1922._gada_30._j%C5%ABnija_%E2%80%9CVald%C4%ABbas_V%C4%93stnes%C4%AB%E2%80%9D.png"},
     impact:{slug:"karlis-ulmanis",name:"Kārlis Ulmanis",img:"/images/encyclopedia/karlis-ulmanis.jpg",artist:"Bain News Service, publisher",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:K._Ulmakis_LCCN2014712518_(cropped).jpg"},
     decline:{slug:"molotov-ribbentrop-pact",name:"Molotov–Ribbentrop Pact",img:"/images/encyclopedia/molotov-ribbentrop-pact.jpg",artist:"Template:Helmut Laux",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-H27337,_Moskau,_Stalin_und_Ribbentrop_im_Kreml.jpg"}
@@ -2315,21 +2315,21 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-kursk",name:"Battle of Kursk",img:"/images/encyclopedia/battle-of-kursk.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Kursk_(map).jpg"},
     governance:{slug:"joseph-stalin",name:"Joseph Stalin",img:"/images/encyclopedia/joseph-stalin.jpg",artist:"Franklin D. Roosevelt Library Public Domain Photographs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:StalinCropped1943.jpg"},
     impact:{slug:"yuri-gagarin",name:"Yuri Gagarin",img:"/images/encyclopedia/yuri-gagarin.jpg",artist:"Александр Моклецов / СовИнформБюро",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Yuri_Gagarin_with_awards_(cropped)_2.jpg"},
-    decline:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev.jpg: Vladimir Vyatkin / Владимир Вяткин derivative ...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
+    decline:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"Vladimir Vyatkin / Владимир Вяткин; derivative work by Jbarta",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
   },
   "Nazi Germany": {
     foundation:{slug:"adolf-hitler",name:"Adolf Hitler",img:"/images/encyclopedia/adolf-hitler.jpg",artist:"Heinrich Hoffmann",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Hitler_portrait_crop_(cropped)(2).jpg"},
-    socioeconomy:{slug:"sinti",name:"Sinti",img:"/images/encyclopedia/sinti.jpg",artist:"UnknownUnknown",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-J0525-0500-003,_Rheinland,_Sinti_und_Roma_mit_Wohnwagen_auf_Landstra%C3%9Fe.jpg"},
+    socioeconomy:{slug:"sinti",name:"Sinti",img:"/images/encyclopedia/sinti.jpg",artist:"Unknown",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-J0525-0500-003,_Rheinland,_Sinti_und_Roma_mit_Wohnwagen_auf_Landstra%C3%9Fe.jpg"},
     military:{slug:"battle-of-britain",name:"Battle of Britain",img:"/images/encyclopedia/battle-of-britain.jpg",artist:"Australian armed forces",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spitfire_and_He_111_during_Battle_of_Britain_1940.jpg"},
     governance:{slug:"hermann-goring",name:"Hermann Göring",img:"/images/encyclopedia/hermann-goring.jpg",artist:"Charles Alexander, Office of the United States Chief of Counsel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hermann_Goering_-_Nuremberg_2_(cropped).jpg"},
     impact:{slug:"belzec-extermination-camp",name:"Bełżec extermination camp",img:"/images/encyclopedia/belzec-extermination-camp.jpg",artist:"nieznany/unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lubelszczyna_marzec_1942_%C5%BBydzi_w_drodze_do_obozu_zag%C5%82ady_w_Be%C5%82%C5%BCcu.jpg"},
     decline:{slug:"normandy-landings",name:"Normandy landings",img:"/images/encyclopedia/normandy-landings.jpg",artist:"Chief Photographer's Mate (CPHoM) Robert F. Sargent",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_23-0455M_edit.jpg"}
   },
   "Uruk": {
-    foundation:{slug:"kullaba",name:"Kullaba",img:"/images/encyclopedia/kullaba.jpg",artist:"Lamassu Design Gurdjieff (talk)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Anu_district.svg"},
+    foundation:{slug:"kullaba",name:"Kullaba",img:"/images/encyclopedia/kullaba.jpg",artist:"Lamassu Design Gurdjieff",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Anu_district.svg"},
     socioeconomy:{slug:"warka-vase",name:"Warka Vase",img:"/images/encyclopedia/warka-vase.jpg",artist:"Osama Shukir Muhammed Amin FRCP(Glasg)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Warka_vase_(background_retouched).jpg"},
     military:{slug:"aga-of-kish",name:"Aga of Kish",img:"/images/encyclopedia/aga-of-kish.jpg",artist:"Metropolitan Museum of Art",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Aga_of_Kish_Stele_of_Ushumgal.png"},
-    governance:{slug:"sumerian-king-list",name:"Sumerian King List",img:"/images/encyclopedia/sumerian-king-list.jpg",artist:"Photograph: unknown&gt; Transcription: Stephen Herbert Langdon (1876-1937)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Weld-Blundell_Prism_with_transcription_by_Stephen_Herbert_Langdon_(1876-1937).jpg"},
+    governance:{slug:"sumerian-king-list",name:"Sumerian King List",img:"/images/encyclopedia/sumerian-king-list.jpg",artist:"Photograph: unknown> Transcription: Stephen Herbert Langdon (1876-1937)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Weld-Blundell_Prism_with_transcription_by_Stephen_Herbert_Langdon_(1876-1937).jpg"},
     impact:{slug:"epic-of-gilgamesh",name:"Epic of Gilgamesh",img:"/images/encyclopedia/epic-of-gilgamesh.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:British_Museum_Flood_Tablet.jpg"},
     decline:{slug:"lugal-zage-si",name:"Lugal-zage-si",img:"/images/encyclopedia/lugal-zage-si.jpg",artist:"ALFGRN",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Prisoner_exiting_a_cage,_on_an_Akkadian_Empire_victory_stele_circa_2300_BCE,_Louvre_Museum.jpg"}
   },
@@ -2369,7 +2369,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"zimri-lim",name:"Zimri-Lim",img:"/images/encyclopedia/zimri-lim.jpg",artist:"Jolle",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Zimrilim.png"},
     socioeconomy:{slug:"baal",name:"Baal",img:"/images/encyclopedia/baal.jpg",artist:"Jastrow",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Baal_thunderbolt_Louvre_AO15775.jpg"},
     military:{slug:"battle-of-kadesh",name:"Battle of Kadesh",img:"/images/encyclopedia/battle-of-kadesh.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Egypt_Abou_Simbel6.jpg"},
-    governance:{slug:"suppiluliuma-i",name:"Suppiluliuma I",img:"/images/encyclopedia/suppiluliuma-i.jpg",artist:"Near_East_topographic_map-blank.svg: Sémhur derivative work: Ikonact",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Map_Hittite_rule_en.svg"},
+    governance:{slug:"suppiluliuma-i",name:"Suppiluliuma I",img:"/images/encyclopedia/suppiluliuma-i.jpg",artist:"Sémhur; derivative work by Ikonact",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Map_Hittite_rule_en.svg"},
     impact:{slug:"tale-of-aqhat",name:"Tale of Aqhat",img:"/images/encyclopedia/tale-of-aqhat.jpg",artist:"Rama",licence:"CC BY-SA 2.0 fr",source:"https://commons.wikimedia.org/wiki/File:Danel_epic_AO17323_img_0160.jpg"},
     decline:{slug:"mediterranean",name:"Mediterranean",img:"/images/encyclopedia/mediterranean.jpg",artist:"of the modification : Eric Gaba (Sting)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_16.61811E_38.99124N.jpg"}
   },
@@ -2402,8 +2402,8 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"samaria",name:"Samaria",img:"/images/encyclopedia/samaria.jpg",artist:"Daniel Ventura",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Views_from_Sebastia_18.jpg"},
     military:{slug:"battle-of-qarqar",name:"Battle of Qarqar",img:"/images/encyclopedia/battle-of-qarqar.jpg",artist:"Yuber",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karkar.jpg"},
     governance:{slug:"jeroboam-i",name:"Jeroboam I",img:"/images/encyclopedia/jeroboam-i.jpg",artist:"Jean-Honoré Fragonard",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_-_Jeroboam_Offering_Sacrifice_for_the_Idol_-_WGA08049_(cropped).jpg"},
-    impact:{slug:"mesha-stele",name:"Mesha Stele",img:"/images/encyclopedia/mesha-stele.jpg",artist:"Unknown artistUnknown artist",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG"},
-    decline:{slug:"tiglath-pileser-iii",name:"Tiglath-pileser III",img:"/images/encyclopedia/tiglath-pileser-iii.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tilglath_pileser_iii.jpg"}
+    impact:{slug:"mesha-stele",name:"Mesha Stele",img:"/images/encyclopedia/mesha-stele.jpg",artist:"Unknown artist",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG"},
+    decline:{slug:"tiglath-pileser-iii",name:"Tiglath-pileser III",img:"/images/encyclopedia/tiglath-pileser-iii.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tilglath_pileser_iii.jpg"}
   },
   "Kingdom of Urartu": {
     foundation:{slug:"arame-of-urartu",name:"Arame of Urartu",img:"/images/encyclopedia/arame-of-urartu.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Urartu860-840.png"},
@@ -2421,7 +2421,7 @@ var SECTION_IMAGES = {
     decline:{slug:"abraha",name:"Abraha",img:"/images/encyclopedia/abraha.jpg",artist:"Abu Ali Bal'ami",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Balami_-_Tarikhnama_-_The_miraculous_rescue_of_the_Ka%27ba_from_Abraha%27s_attack_(cropped).jpg"}
   },
   "Kingdom of Iberia": {
-    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
+    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
     socioeconomy:{slug:"phasis-town",name:"Phasis (town)",img:"/images/encyclopedia/phasis-town.jpg",artist:"Samuel Butler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Colchis.jpg"},
     military:{slug:"pompey",name:"Pompey",img:"/images/encyclopedia/pompey.jpg",artist:"Didier Descouens",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:(Venice)_Pompey_the_Great,_Museo_Archeologico_Nazionale.jpg"},
     governance:{slug:"mirian-iii-of-iberia",name:"Mirian III of Iberia",img:"/images/encyclopedia/mirian-iii-of-iberia.jpg",artist:"Kober",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Mirian,_a_17th-century_fresco_from_Svetitskhoveli_Cathedral_(Mtskheta,_Georgia).jpg"},
@@ -2429,7 +2429,7 @@ var SECTION_IMAGES = {
     decline:{slug:"shapur-ii",name:"Shapur II",img:"/images/encyclopedia/shapur-ii.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Shapur_II_the_Great_in_the_Metropolitan_Museum_of_Art.jpg"}
   },
   "Kingdom of Pontus": {
-    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
+    foundation:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
     socioeconomy:{slug:"trabzon",name:"Trabzon",img:"/images/encyclopedia/trabzon.jpg",artist:"Francesco Bini",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Trebisonda,_ex-chiesa_della_panagia_Chrysokephalos,_oggi_moschea_fatih,_esterno_01.jpg"},
     military:{slug:"third-mithridatic-war",name:"Third Mithridatic War",img:"/images/encyclopedia/third-mithridatic-war.jpg",artist:"Ilya Yakubovich",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1stMithritadicwar89BC.svg"},
     governance:{slug:"mithridates-v-of-pontus",name:"Mithridates V of Pontus",img:"/images/encyclopedia/mithridates-v-of-pontus.jpg",artist:"Francesco Bini",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Monete_ellenistiche,_regno_del_ponto,_mitridate_V_euergetes,_tetradracma_in_argento.jpg"},
@@ -2454,18 +2454,18 @@ var SECTION_IMAGES = {
   "Alans": {
     foundation:{slug:"josephus",name:"Josephus",img:"/images/encyclopedia/josephus.jpg",artist:"Scan by NYPL",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Joseph,_son_of_Gorian,_called_Flavius_Josephus_(cropped).jpg"},
     socioeconomy:{slug:"rome",name:"Rome",img:"/images/encyclopedia/rome.jpg",artist:"Diliff",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"},
-    military:{slug:"battle-of-adrianople",name:"Battle of Adrianople",img:"/images/encyclopedia/battle-of-adrianople.jpg",artist:"Bitva_u_Adrianopole.gif: Elias84 derivative work: Dipa_1965 (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Adrianople_378_en.svg"},
-    governance:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a ...",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
+    military:{slug:"battle-of-adrianople",name:"Battle of Adrianople",img:"/images/encyclopedia/battle-of-adrianople.jpg",artist:"Elias84; derivative work by Dipa_1965",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Adrianople_378_en.svg"},
+    governance:{slug:"ammianus-marcellinus",name:"Ammianus Marcellinus",img:"/images/encyclopedia/ammianus-marcellinus.jpg",artist:"Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a CC BY 3.0 license.",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg"},
     impact:{slug:"aspar",name:"Aspar",img:"/images/encyclopedia/aspar.jpg",artist:"sailko",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Piatto_di_ardaburio,_argento_fuso,_434_d.c._(found_in_1769)_03.JPG"},
     decline:{slug:"khazar-khaganate",name:"Khazar Khaganate",img:"/images/encyclopedia/khazar-khaganate.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chasaren.jpg"}
   },
   "Shirvanshah State": {
     foundation:{slug:"harun-al-rashid",name:"Harun al-Rashid",img:"/images/encyclopedia/harun-al-rashid.jpg",artist:"8/9th-century master(s)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Gold_dinar_of_Harun_al-Rashid,_AH_170-193.jpg"},
     socioeconomy:{slug:"shamakhi",name:"Shamakhi",img:"/images/encyclopedia/shamakhi.jpg",artist:"Sefer azeri",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Montage_of_%C5%9Eamax%C4%B1_2019.jpg"},
-    military:{slug:"david-iv-of-georgia",name:"David IV of Georgia",img:"/images/encyclopedia/david-iv-of-georgia.jpg",artist:"Certain types of Egyptian works (official documents, stamps, works of national folklore) should use specific license ...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:David_IV,_detail_from_icon,_St._Catherine_Monastery.jpg"},
+    military:{slug:"david-iv-of-georgia",name:"David IV of Georgia",img:"/images/encyclopedia/david-iv-of-georgia.jpg",artist:"Certain types of Egyptian works (official documents, stamps, works of national folklore) should use specific license tags instead …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:David_IV,_detail_from_icon,_St._Catherine_Monastery.jpg"},
     governance:{slug:"baku",name:"Baku",img:"/images/encyclopedia/baku.jpg",artist:"See above. Compilation by Interfase",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Baku_Montage.jpg"},
     impact:{slug:"palace-of-the-shirvanshahs",name:"Palace of the Shirvanshahs",img:"/images/encyclopedia/palace-of-the-shirvanshahs.jpg",artist:"Urek Meniashvili",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Palace_of_Shirvanshahs_common.JPG"},
-    decline:{slug:"battle-of-jabani",name:"Battle of Jabani",img:"/images/encyclopedia/battle-of-jabani.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1541-Battle_in_the_war_between_Shah_Isma%27il_and_the_King_of_Shirvan-Shahnama-i-Isma%27il.jpg"}
+    decline:{slug:"battle-of-jabani",name:"Battle of Jabani",img:"/images/encyclopedia/battle-of-jabani.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1541-Battle_in_the_war_between_Shah_Isma%27il_and_the_King_of_Shirvan-Shahnama-i-Isma%27il.jpg"}
   },
   "Buyid dynasty": {
     foundation:{slug:"mardavij",name:"Mardavij",img:"/images/encyclopedia/mardavij.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:MardavijCoinHistoryofIran.jpg"},
@@ -2479,7 +2479,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"david-iii-kuropalates",name:"David III Kuropalates",img:"/images/encyclopedia/david-iii-kuropalates.jpg",artist:"Scott Dexter from Brooklyn, US",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Oshki_(photo_by_Scott_Dexter,_June_23,_2012_)_(7993420831).jpg"},
     socioeconomy:{slug:"tbilisi",name:"Tbilisi",img:"/images/encyclopedia/tbilisi.jpg",artist:"Alexey Komarov",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:View_of_Tbilisi_from_Tabori_Church_2023-10-08-2.jpg"},
     military:{slug:"battle-of-khunan",name:"Battle of Khunan",img:"/images/encyclopedia/battle-of-khunan.jpg",artist:"Nika Khoperia (translation by Ercwlff)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mongol_invasion_of_Georgia-en.png"},
-    governance:{slug:"david-iv-of-georgia",name:"David IV of Georgia",img:"/images/encyclopedia/david-iv-of-georgia.jpg",artist:"Certain types of Egyptian works (official documents, stamps, works of national folklore) should use specific license ...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:David_IV,_detail_from_icon,_St._Catherine_Monastery.jpg"},
+    governance:{slug:"david-iv-of-georgia",name:"David IV of Georgia",img:"/images/encyclopedia/david-iv-of-georgia.jpg",artist:"Certain types of Egyptian works (official documents, stamps, works of national folklore) should use specific license tags instead …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:David_IV,_detail_from_icon,_St._Catherine_Monastery.jpg"},
     impact:{slug:"bagrati-cathedral",name:"Bagrati Cathedral",img:"/images/encyclopedia/bagrati-cathedral.jpg",artist:"Marcin Konsek",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:2014_Kutaisi,_Katedra_Bagrati_(19).jpg"},
     decline:{slug:"david",name:"David",img:"/images/encyclopedia/david.jpg",artist:"Gerard van Honthorst",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_David,_the_King_of_Israel.jpg"}
   },
@@ -2492,7 +2492,7 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-kose-dag",name:"Battle of Köse Dağ",img:"/images/encyclopedia/battle-of-kose-dag.jpg",artist:"Unknown. Catalonia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_de_K%C3%B6z%C3%A4_Dagh_(1243).jpeg"}
   },
   "Kingdom of Jerusalem": {
-    foundation:{slug:"pope-urban-ii",name:"Pope Urban II",img:"/images/encyclopedia/pope-urban-ii.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Urbano_II_in_consacrazione_de_l%27altare_del_monastero_di_Cluny_(detail)_(crop).png"},
+    foundation:{slug:"pope-urban-ii",name:"Pope Urban II",img:"/images/encyclopedia/pope-urban-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Urbano_II_in_consacrazione_de_l%27altare_del_monastero_di_Cluny_(detail)_(crop).png"},
     socioeconomy:{slug:"jerusalem",name:"Jerusalem",img:"/images/encyclopedia/jerusalem.jpg",artist:"Godot13",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Temple_Mount_(Aerial_view,_2007)_07.jpg"},
     military:{slug:"battle-of-montgisard",name:"Battle of Montgisard",img:"/images/encyclopedia/battle-of-montgisard.jpg",artist:"Charles-Philippe Larivière",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schlacht_von_Montgisard_2.jpg"},
     governance:{slug:"assizes-of-jerusalem",name:"Assizes of Jerusalem",img:"/images/encyclopedia/assizes-of-jerusalem.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Blason_Royaume_de_J%C3%A9rusalem.svg"},
@@ -2502,7 +2502,7 @@ var SECTION_IMAGES = {
   "Empire of Trebizond": {
     foundation:{slug:"david",name:"David",img:"/images/encyclopedia/david.jpg",artist:"Gerard van Honthorst",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_David,_the_King_of_Israel.jpg"},
     socioeconomy:{slug:"trabzon",name:"Trabzon",img:"/images/encyclopedia/trabzon.jpg",artist:"Francesco Bini",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Trebisonda,_ex-chiesa_della_panagia_Chrysokephalos,_oggi_moschea_fatih,_esterno_01.jpg"},
-    military:{slug:"eugenios-of-trebizond",name:"Eugenios of Trebizond",img:"/images/encyclopedia/eugenios-of-trebizond.jpg",artist:"Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators[1]: Pantoleon wit...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aquila,_Valerian,_Eugene_and_Candidus_of_Trebizond_(Menologion_of_Basil_II).jpg"},
+    military:{slug:"eugenios-of-trebizond",name:"Eugenios of Trebizond",img:"/images/encyclopedia/eugenios-of-trebizond.jpg",artist:"Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators[1] …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aquila,_Valerian,_Eugene_and_Candidus_of_Trebizond_(Menologion_of_Basil_II).jpg"},
     governance:{slug:"michael-viii-palaiologos",name:"Michael VIII Palaiologos",img:"/images/encyclopedia/michael-viii-palaiologos.jpg",artist:"George Pachymeres",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Miniature_of_Michael_VIII.png"},
     impact:{slug:"hagia-sophia",name:"Hagia Sophia",img:"/images/encyclopedia/hagia-sophia.jpg",artist:"Adli Wahid",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hagia_Sophia_(228968325).jpeg"},
     decline:{slug:"alexios-iii-of-trebizond",name:"Alexios III of Trebizond",img:"/images/encyclopedia/alexios-iii-of-trebizond.jpg",artist:"The original uploader was Bender235 at German Wikipedia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexios3_komnenos.jpg"}
@@ -2510,7 +2510,7 @@ var SECTION_IMAGES = {
   "Kingdom of Imereti": {
     foundation:{slug:"david-vii-ulu",name:"David VII Ulu",img:"/images/encyclopedia/david-vii-ulu.jpg",artist:"13th century artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_David_VII_Ulugh.jpg"},
     socioeconomy:{slug:"kutaisi",name:"Kutaisi",img:"/images/encyclopedia/kutaisi.jpg",artist:"Kober",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Downtown_Kutaisi_%26_White_Bridge_as_seen_from_Mt_Gora_(August_2011)-cropped.jpg"},
-    military:{slug:"bagrat-iii-of-georgia",name:"Bagrat III of Georgia",img:"/images/encyclopedia/bagrat-iii-of-georgia.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bagrat_III_of_Georgia_(Bedia_mural).jpg"},
+    military:{slug:"bagrat-iii-of-georgia",name:"Bagrat III of Georgia",img:"/images/encyclopedia/bagrat-iii-of-georgia.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bagrat_III_of_Georgia_(Bedia_mural).jpg"},
     governance:{slug:"archil-of-imereti",name:"Archil of Imereti",img:"/images/encyclopedia/archil-of-imereti.jpg",artist:"Nicolaes Witsen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Artschillus_Bagarationus._Koningh_van_Iberia_en_Melita.jpg"},
     impact:{slug:"bagrati-cathedral",name:"Bagrati Cathedral",img:"/images/encyclopedia/bagrati-cathedral.jpg",artist:"Marcin Konsek",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:2014_Kutaisi,_Katedra_Bagrati_(19).jpg"},
     decline:{slug:"solomon-i-of-imereti",name:"Solomon I of Imereti",img:"/images/encyclopedia/solomon-i-of-imereti.jpg",artist:"Surprizi",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Solomon_I_of_Imereti_(National_museum_of_Georgia).jpg"}
@@ -2518,18 +2518,18 @@ var SECTION_IMAGES = {
   "Aq Qoyunlu": {
     foundation:{slug:"qara-yuluk-osman",name:"Qara Yuluk Osman",img:"/images/encyclopedia/qara-yuluk-osman.jpg",artist:"1403-1435 CE",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Aq_Qoyunlu._Qara_Y%C3%BCl%C3%BCk_%27Uthman._AH_805-839_1403-1435_CE.jpg"},
     socioeconomy:{slug:"bursa",name:"Bursa",img:"/images/encyclopedia/bursa.jpg",artist:"Metuboy",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bursa_image.jpg"},
-    military:{slug:"battle-of-otlukbeli",name:"Battle of Otlukbeli",img:"/images/encyclopedia/battle-of-otlukbeli.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Otlukbeli_savasi.png"},
+    military:{slug:"battle-of-otlukbeli",name:"Battle of Otlukbeli",img:"/images/encyclopedia/battle-of-otlukbeli.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Otlukbeli_savasi.png"},
     governance:{slug:"oghuz-khan",name:"Oghuz Khan",img:"/images/encyclopedia/oghuz-khan.jpg",artist:"Jami al-Tawarikh artist, 1420-1430 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oghuz_Khan_enthroned,_folio_9r_(Biblioth%C3%A8que_nationale,_Suppl%C3%A9ment_persan_1113).jpg"},
     impact:{slug:"venice",name:"Venice",img:"/images/encyclopedia/venice.jpg",artist:"kallerna",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Venezia_aerial_view.jpg"},
     decline:{slug:"battle-of-chaldiran",name:"Battle of Chaldiran",img:"/images/encyclopedia/battle-of-chaldiran.jpg",artist:"Amir Pashaei",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:A_painting_in_Chehel_Sotoun1.jpg"}
   },
   "Circassia": {
-    foundation:{slug:"timur",name:"Timur",img:"/images/encyclopedia/timur.jpg",artist:"user:shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Timur_reconstruction03.jpg"},
+    foundation:{slug:"timur",name:"Timur",img:"/images/encyclopedia/timur.jpg",artist:"shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Timur_reconstruction03.jpg"},
     socioeconomy:{slug:"black-sea",name:"Black Sea",img:"/images/encyclopedia/black-sea.jpg",artist:"The SeaWiFS Project",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Danube_Spills_into_the_Black_Sea.jpg"},
     military:{slug:"aleksey-yermolov",name:"Aleksey Yermolov",img:"/images/encyclopedia/aleksey-yermolov.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexei-jermolov.jpg"},
     governance:{slug:"imam-shamil",name:"Imam Shamil",img:"/images/encyclopedia/imam-shamil.jpg",artist:"Andrey Denyer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shamil_by_Denier_(cropped).jpg"},
     impact:{slug:"moscow",name:"Moscow",img:"/images/encyclopedia/moscow.jpg",artist:"U.S. Department of State",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Basil%27s_Cathedral_and_the_Red_Square.jpg"},
-    decline:{slug:"crimean-war",name:"Crimean War",img:"/images/encyclopedia/crimean-war.jpg",artist:"William Simpson, artist (1823-1899) E[dmond]. Morin, lithographer (1824 - 1882), working for \"Day &amp; Son, lithrs. ...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Simpson_-_Attack_on_the_Malakoff.jpg"}
+    decline:{slug:"crimean-war",name:"Crimean War",img:"/images/encyclopedia/crimean-war.jpg",artist:"William Simpson, artist (1823-1899); E[dmond]. Morin, lithographer (1824 - 1882), working for \"Day & Son, lithrs. to the Queen\" …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Simpson_-_Attack_on_the_Malakoff.jpg"}
   },
   "Sheikhdom of Sharjah": {
     foundation:{slug:"ras-al-khaimah",name:"Ras al-Khaimah",img:"/images/encyclopedia/ras-al-khaimah.jpg",artist:"Stevenmccombe",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Aerial_view_of_RAK_City_from_Al_Qawasim_Corniche_flagpole.jpg"},
@@ -2550,10 +2550,10 @@ var SECTION_IMAGES = {
   "South Yemen": {
     foundation:{slug:"gamal-abdel-nasser",name:"Gamal Abdel Nasser",img:"/images/encyclopedia/gamal-abdel-nasser.jpg",artist:"Stevan Kragujević",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Stevan_Kragujevic,_Gamal_Abdel_Naser_u_Beogradu,_1962_(cropped).jpg"},
     socioeconomy:{slug:"aden",name:"Aden",img:"/images/encyclopedia/aden.jpg",artist:"Ahmedxalkatheri",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:MallaDistrict.jpg"},
-    military:{slug:"ogaden-war",name:"Ogaden War",img:"/images/encyclopedia/ogaden-war.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cubans_in_Ogaden1.JPG"},
-    governance:{slug:"qahtan-al-shaabi",name:"Qahtan al-Shaabi",img:"/images/encyclopedia/qahtan-al-shaabi.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qahtan_Shaabi.jpg"},
-    impact:{slug:"national-liberation-front-south-yemen",name:"National Liberation Front (South Yemen)",img:"/images/encyclopedia/national-liberation-front-south-yemen.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emblem_of_the_National_Liberation_Front_(South_Yemen).svg"},
-    decline:{slug:"ali-nasir-muhammad",name:"Ali Nasir Muhammad",img:"/images/encyclopedia/ali-nasir-muhammad.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ali_Nasser_Muhammad_USSR_(cropped).jpg"}
+    military:{slug:"ogaden-war",name:"Ogaden War",img:"/images/encyclopedia/ogaden-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cubans_in_Ogaden1.JPG"},
+    governance:{slug:"qahtan-al-shaabi",name:"Qahtan al-Shaabi",img:"/images/encyclopedia/qahtan-al-shaabi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qahtan_Shaabi.jpg"},
+    impact:{slug:"national-liberation-front-south-yemen",name:"National Liberation Front (South Yemen)",img:"/images/encyclopedia/national-liberation-front-south-yemen.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emblem_of_the_National_Liberation_Front_(South_Yemen).svg"},
+    decline:{slug:"ali-nasir-muhammad",name:"Ali Nasir Muhammad",img:"/images/encyclopedia/ali-nasir-muhammad.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ali_Nasser_Muhammad_USSR_(cropped).jpg"}
   },
   "United Arab Emirates": {
     foundation:{slug:"harold-wilson",name:"Harold Wilson",img:"/images/encyclopedia/harold-wilson.jpg",artist:"Courtesy Gerald R. Ford Library",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:President_Gerald_Ford_and_British_Prime_Minister_Harold_Wilson_(crop).jpg"},
@@ -2564,10 +2564,10 @@ var SECTION_IMAGES = {
     decline:{slug:"mohamed-bin-zayed-al-nahyan",name:"Mohamed bin Zayed Al Nahyan",img:"/images/encyclopedia/mohamed-bin-zayed-al-nahyan.jpg",artist:"Press Service of the President of the Republic of Azerbaijan",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Mohamed_bin_Zayed_Al_Nahyan_-_2024_(cropped).jpg"}
   },
   "Republic of Yemen": {
-    foundation:{slug:"ali-salim-al-beidh",name:"Ali Salim al-Beidh",img:"/images/encyclopedia/ali-salim-al-beidh.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ali_Salem_al-Beidh_(cropped).png"},
+    foundation:{slug:"ali-salim-al-beidh",name:"Ali Salim al-Beidh",img:"/images/encyclopedia/ali-salim-al-beidh.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ali_Salem_al-Beidh_(cropped).png"},
     socioeconomy:{slug:"marib",name:"Marib",img:"/images/encyclopedia/marib.jpg",artist:"بدرالدين الشهاري",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:MaribCity001.jpg"},
     military:{slug:"hussein-badreddin-al-houthi",name:"Hussein Badreddin al-Houthi",img:"/images/encyclopedia/hussein-badreddin-al-houthi.jpg",artist:"Elnur777536276",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Hussein_housi.jpg"},
-    governance:{slug:"abdullah-ibn-husayn-al-ahmar",name:"Abdullah ibn Husayn al-Ahmar",img:"/images/encyclopedia/abdullah-ibn-husayn-al-ahmar.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Al-Ahmar_1965_Crop.jpg"},
+    governance:{slug:"abdullah-ibn-husayn-al-ahmar",name:"Abdullah ibn Husayn al-Ahmar",img:"/images/encyclopedia/abdullah-ibn-husayn-al-ahmar.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Al-Ahmar_1965_Crop.jpg"},
     impact:{slug:"shibam",name:"Shibam",img:"/images/encyclopedia/shibam.jpg",artist:"Bkar6190",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%B4%D8%A8%D8%A7%D9%85_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA.jpg"},
     decline:{slug:"ali-mohsen-al-ahmar",name:"Ali Mohsen al-Ahmar",img:"/images/encyclopedia/ali-mohsen-al-ahmar.jpg",artist:"U.S. Embassy Yemen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henzel_and_al-Ahmar,_2020_(cropped).jpg"}
   },
@@ -2585,7 +2585,7 @@ var SECTION_IMAGES = {
     military:{slug:"pulakeshin-ii",name:"Pulakeshin II",img:"/images/encyclopedia/pulakeshin-ii.jpg",artist:"Unknown",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Pulakeshin_statue,_badami.png"},
     governance:{slug:"mattavilasa-prahasana",name:"Mattavilasa Prahasana",img:"/images/encyclopedia/mattavilasa-prahasana.jpg",artist:"Original uploaded by: Sreekanthv",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mani_damodara_Chakyar-mattavilasa.jpg"},
     impact:{slug:"descent-of-the-ganges",name:"Descent of the Ganges",img:"/images/encyclopedia/descent-of-the-ganges.jpg",artist:"Bernard Gagnon",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg"},
-    decline:{slug:"aditya-i",name:"Aditya I",img:"/images/encyclopedia/aditya-i.jpg",artist:"Venu62 (talk) (Uploads)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Aditya_territories.png"}
+    decline:{slug:"aditya-i",name:"Aditya I",img:"/images/encyclopedia/aditya-i.jpg",artist:"Venu62 (Uploads)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Aditya_territories.png"}
   },
   "Satavahana dynasty": {
     foundation:{slug:"simuka",name:"Simuka",img:"/images/encyclopedia/simuka.jpg",artist:"Photograph by Kevin Standage Rubbing by J. Burgess (1883, d. 1892)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Simuka_inscription_at_Naneghat_Caves.jpg"},
@@ -2598,7 +2598,7 @@ var SECTION_IMAGES = {
   "Chalukyas of Badami": {
     foundation:{slug:"pulakeshin-ii",name:"Pulakeshin II",img:"/images/encyclopedia/pulakeshin-ii.jpg",artist:"Unknown",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Pulakeshin_statue,_badami.png"},
     socioeconomy:{slug:"badami",name:"Badami",img:"/images/encyclopedia/badami.jpg",artist:"Sanyam Bahga",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:BadamiCaves87.JPG"},
-    military:{slug:"xuanzang",name:"Xuanzang",img:"/images/encyclopedia/xuanzang.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Xuanzang_w.jpg"},
+    military:{slug:"xuanzang",name:"Xuanzang",img:"/images/encyclopedia/xuanzang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Xuanzang_w.jpg"},
     governance:{slug:"chalukya-dynasty",name:"Chalukya dynasty",img:"/images/encyclopedia/chalukya-dynasty.jpg",artist:"Map created from DEMIS Mapserver, which are public domain. Koba-chan. Reference: [1] Borders by Rawn3012",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Chalukyas_at_their_height.png"},
     impact:{slug:"lad-khan-temple",name:"Lad Khan Temple",img:"/images/encyclopedia/lad-khan-temple.jpg",artist:"Meesanjay",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Lad_NKAD90.JPG"},
     decline:{slug:"dantidurga",name:"Dantidurga",img:"/images/encyclopedia/dantidurga.jpg",artist:"Shraman revival",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Rashtrakutas_Coins_25-07-23_15-44-48-445.png"}
@@ -2614,9 +2614,9 @@ var SECTION_IMAGES = {
   "Udaipur State": {
     foundation:{slug:"bappa-rawal",name:"Bappa Rawal",img:"/images/encyclopedia/bappa-rawal.jpg",artist:"Historicboyz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bappa_Rawal.jpg"},
     socioeconomy:{slug:"udaipur",name:"Udaipur",img:"/images/encyclopedia/udaipur.jpg",artist:"Geri from Biel/Bienne, Schweiz",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Evening_view,_City_Palace,_Udaipur.jpg"},
-    military:{slug:"battle-of-khanwa",name:"Battle of Khanwa",img:"/images/encyclopedia/battle-of-khanwa.jpg",artist:"\"Mirza 'Abd al-Rahim, Khan-i khanan (Mirza 'Abd al-Rahim, Khan-i khanan)\"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Babur%E2%80%99s_army_in_battle_against_the_army_of_Rana_Sanga_at.jpg"},
+    military:{slug:"battle-of-khanwa",name:"Battle of Khanwa",img:"/images/encyclopedia/battle-of-khanwa.jpg",artist:"Mirza 'Abd al-Rahim, Khan-i khanan (Mirza 'Abd al-Rahim, Khan-i khanan)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Babur%E2%80%99s_army_in_battle_against_the_army_of_Rana_Sanga_at.jpg"},
     governance:{slug:"amar-singh-i",name:"Amar Singh I",img:"/images/encyclopedia/amar-singh-i.jpg",artist:"Raja Ravi Varma",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Raja_Ravi_Varma,_Maharana_Amar_Singh_-_I.jpg"},
-    impact:{slug:"jag-mandir",name:"Jag Mandir",img:"/images/encyclopedia/jag-mandir.jpg",artist:"No machine-readable author provided. Philbrest assumed (based on copyright claims).",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:JagMandir.jpg"},
+    impact:{slug:"jag-mandir",name:"Jag Mandir",img:"/images/encyclopedia/jag-mandir.jpg",artist:"Philbrest",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:JagMandir.jpg"},
     decline:{slug:"raj-singh-i",name:"Raj Singh I",img:"/images/encyclopedia/raj-singh-i.jpg",artist:"Raja Ravi Varma",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Raja_Ravi_Varma,_Maharana_Raj_Singh_-_I.jpg"}
   },
   "Gurjara-Pratihara": {
@@ -2645,7 +2645,7 @@ var SECTION_IMAGES = {
   },
   "Pagan Kingdom": {
     foundation:{slug:"pyinbya",name:"Pyinbya",img:"/images/encyclopedia/pyinbya.jpg",artist:"Hybernator",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tharaba_Gate.JPG"},
-    socioeconomy:{slug:"bay-of-bengal",name:"Bay of Bengal",img:"/images/encyclopedia/bay-of-bengal.jpg",artist:"No machine-readable author provided. NormanEinstein assumed (based on copyright claims).",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bay_of_Bengal_map.png"},
+    socioeconomy:{slug:"bay-of-bengal",name:"Bay of Bengal",img:"/images/encyclopedia/bay-of-bengal.jpg",artist:"NormanEinstein",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bay_of_Bengal_map.png"},
     military:{slug:"anawrahta",name:"Anawrahta",img:"/images/encyclopedia/anawrahta.jpg",artist:"Phyo WP",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Anawrahta_at_National_museum.JPG"},
     governance:{slug:"kyansittha",name:"Kyansittha",img:"/images/encyclopedia/kyansittha.jpg",artist:"O.Mustafin",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Kyansittha-Ananda.jpg"},
     impact:{slug:"ananda-temple",name:"Ananda Temple",img:"/images/encyclopedia/ananda-temple.jpg",artist:"Vyacheslav Argenberg",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Bagan,_Myanmar,_Ananda_Temple.jpg"},
@@ -2671,24 +2671,24 @@ var SECTION_IMAGES = {
     foundation:{slug:"ashoka",name:"Ashoka",img:"/images/encyclopedia/ashoka.jpg",artist:"Photo Dharma from Sadao, Thailand",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Ashoka%27s_visit_to_the_Ramagrama_stupa_Sanchi_Stupa_1_Southern_gateway.jpg"},
     socioeconomy:{slug:"madurai",name:"Madurai",img:"/images/encyclopedia/madurai.jpg",artist:"KennyOMG",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Meenakshi_Amman_West_Tower.jpg"},
     military:{slug:"rajendra-chola-iii",name:"Rajendra Chola III",img:"/images/encyclopedia/rajendra-chola-iii.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Rajaraja3_territories2.png"},
-    governance:{slug:"marco-polo",name:"Marco Polo",img:"/images/encyclopedia/marco-polo.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispice_%C3%A9dition_de_Nuremberg_1477_(cropped).png"},
+    governance:{slug:"marco-polo",name:"Marco Polo",img:"/images/encyclopedia/marco-polo.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispice_%C3%A9dition_de_Nuremberg_1477_(cropped).png"},
     impact:{slug:"ranganathaswamy-temple-srirangam",name:"Ranganathaswamy Temple, Srirangam",img:"/images/encyclopedia/ranganathaswamy-temple-srirangam.jpg",artist:"RUPESH MAURYA",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ranganathaswamy_temple_tiruchirappalli.jpg"},
-    decline:{slug:"wassaf",name:"Wassaf",img:"/images/encyclopedia/wassaf.jpg",artist:"Baysunghur's court &amp; library.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Modern_Illustration_in_Baysunghur_Tarikh-i_Wassaf2.jpg"}
+    decline:{slug:"wassaf",name:"Wassaf",img:"/images/encyclopedia/wassaf.jpg",artist:"Baysunghur's court & library.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Modern_Illustration_in_Baysunghur_Tarikh-i_Wassaf2.jpg"}
   },
   "Ahom kingdom": {
     foundation:{slug:"sukaphaa",name:"Sukaphaa",img:"/images/encyclopedia/sukaphaa.jpg",artist:"govt of assam stamp",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sukapha.jpg"},
     socioeconomy:{slug:"charaideo",name:"Charaideo",img:"/images/encyclopedia/charaideo.jpg",artist:"Zorodocknife",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Charadeo_Maidam_mausoleum.jpg"},
-    military:{slug:"battle-of-saraighat",name:"Battle of Saraighat",img:"/images/encyclopedia/battle-of-saraighat.jpg",artist:"User:Chaipau",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_saraighat.svg"},
+    military:{slug:"battle-of-saraighat",name:"Battle of Saraighat",img:"/images/encyclopedia/battle-of-saraighat.jpg",artist:"Chaipau",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_saraighat.svg"},
     governance:{slug:"gadadhar-singha",name:"Gadadhar Singha",img:"/images/encyclopedia/gadadhar-singha.jpg",artist:"Kabiraj chakravarthy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Swargadeo_Gadadhar_Singha.jpg"},
     impact:{slug:"sivadol",name:"Sivadol",img:"/images/encyclopedia/sivadol.jpg",artist:"Aniruddha Buragohain",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Siva_Dol.JPG"},
-    decline:{slug:"rudra-singha",name:"Rudra Singha",img:"/images/encyclopedia/rudra-singha.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rudra_Singha_Jayata_in_court.jpg"}
+    decline:{slug:"rudra-singha",name:"Rudra Singha",img:"/images/encyclopedia/rudra-singha.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rudra_Singha_Jayata_in_court.jpg"}
   },
   "Sukhothai Kingdom": {
     foundation:{slug:"jayavarman-vii",name:"Jayavarman VII",img:"/images/encyclopedia/jayavarman-vii.jpg",artist:"Suzan Black",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg"},
     socioeconomy:{slug:"si-satchanalai",name:"Si Satchanalai",img:"/images/encyclopedia/si-satchanalai.jpg",artist:"Thomson Walt",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Proposed_locations_of_ancient_kingdoms_in_lower_Mekong_Valley_in_the_7th_century.png"},
-    military:{slug:"ram-khamhaeng",name:"Ram Khamhaeng",img:"/images/encyclopedia/ram-khamhaeng.jpg",artist:"This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author ...",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Ram_Khamhaeng_the_Great_(I).jpg"},
+    military:{slug:"ram-khamhaeng",name:"Ram Khamhaeng",img:"/images/encyclopedia/ram-khamhaeng.jpg",artist:"This Photo was taken by Supanut Arunoprayote. …",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Ram_Khamhaeng_the_Great_(I).jpg"},
     governance:{slug:"li-thai",name:"Li Thai",img:"/images/encyclopedia/li-thai.jpg",artist:"พระราชวชิรเมธี รองเจ้าคณะจังหวัดกำแพงเพชร เจ้าอาวาสวัดพระบรมธาตุนครชุม",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mahathammaracha_I.JPG"},
-    impact:{slug:"phra-phuttha-chinnarat",name:"Phra Phuttha Chinnarat",img:"/images/encyclopedia/phra-phuttha-chinnarat.jpg",artist:"This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author ...",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Wat_Phra_Si_Rattana_Mahathat,_Phitsanulok_(I).jpg"},
+    impact:{slug:"phra-phuttha-chinnarat",name:"Phra Phuttha Chinnarat",img:"/images/encyclopedia/phra-phuttha-chinnarat.jpg",artist:"This Photo was taken by Supanut Arunoprayote. …",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Wat_Phra_Si_Rattana_Mahathat,_Phitsanulok_(I).jpg"},
     decline:{slug:"ramathibodi-i",name:"Ramathibodi I",img:"/images/encyclopedia/ramathibodi-i.jpg",artist:"CKasa",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%B9%E0%B9%88%E0%B8%97%E0%B8%AD%E0%B8%87342.jpg"}
   },
   "Lan Na": {
@@ -2707,7 +2707,7 @@ var SECTION_IMAGES = {
     decline:{slug:"tirumala-deva-raya",name:"Tirumala Deva Raya",img:"/images/encyclopedia/tirumala-deva-raya.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Raksas_Tagdi_04.jpg"}
   },
   "Bahmani Sultanate": {
-    foundation:{slug:"muhammad-bin-tughluq",name:"Muhammad bin Tughluq",img:"/images/encyclopedia/muhammad-bin-tughluq.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_bin_Tughlaq_crop.jpg"},
+    foundation:{slug:"muhammad-bin-tughluq",name:"Muhammad bin Tughluq",img:"/images/encyclopedia/muhammad-bin-tughluq.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_bin_Tughlaq_crop.jpg"},
     socioeconomy:{slug:"bidar",name:"Bidar",img:"/images/encyclopedia/bidar.jpg",artist:"Sunnya343",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Guru_Nanak_Jhira_Sahib_gurdwara_in_Bidar,_Jul_2017.jpg"},
     military:{slug:"firuz-shah-bahmani",name:"Firuz Shah Bahmani",img:"/images/encyclopedia/firuz-shah-bahmani.jpg",artist:"Smloverboy4",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Haft_Gumbad.jpg"},
     governance:{slug:"delhi",name:"Delhi",img:"/images/encyclopedia/delhi.jpg",artist:"Marcin Białek",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jama_Masjid_2011.jpg"},
@@ -2720,7 +2720,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-nong-sarai",name:"Battle of Nong Sarai",img:"/images/encyclopedia/battle-of-nong-sarai.jpg",artist:"Thai Wicharn (ไทวิจารณ์) (probably)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Naresuan_vs_Mingyi_Swa_Elephant_Duel_1592_Painting.png"},
     governance:{slug:"prasat-thong",name:"Prasat Thong",img:"/images/encyclopedia/prasat-thong.jpg",artist:"Sun Colreone",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_King_Prasat_Thong.jpeg"},
     impact:{slug:"versailles",name:"Versailles",img:"/images/encyclopedia/versailles.jpg",artist:"ToucanWings",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_(cropped).jpg"},
-    decline:{slug:"sino-burmese-war-1765-1769",name:"Sino-Burmese War (1765–1769)",img:"/images/encyclopedia/sino-burmese-war-1765-1769.jpg",artist:"w:User:Soewinhan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qing_and_Konbaung_before_Sino_Burmese_War.png"}
+    decline:{slug:"sino-burmese-war-1765-1769",name:"Sino-Burmese War (1765–1769)",img:"/images/encyclopedia/sino-burmese-war-1765-1769.jpg",artist:"w:Soewinhan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qing_and_Konbaung_before_Sino_Burmese_War.png"}
   },
   "Bengal Sultanate": {
     foundation:{slug:"bakhtiyar-khalji",name:"Bakhtiyar Khalji",img:"/images/encyclopedia/bakhtiyar-khalji.jpg",artist:"Margaret Dovaston",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_end_of_Buddhist_Monks,_A.D._1193_(cropped).jpg"},
@@ -2731,7 +2731,7 @@ var SECTION_IMAGES = {
     decline:{slug:"battle-of-chausa",name:"Battle of Chausa",img:"/images/encyclopedia/battle-of-chausa.jpg",artist:"Beylarbey",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_plan_of_Chausa.svg"}
   },
   "Lan Xang": {
-    foundation:{slug:"fa-ngum",name:"Fa Ngum",img:"/images/encyclopedia/fa-ngum.jpg",artist:"en:User:Adam Carr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fangum.JPG"},
+    foundation:{slug:"fa-ngum",name:"Fa Ngum",img:"/images/encyclopedia/fa-ngum.jpg",artist:"Adam Carr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fangum.JPG"},
     socioeconomy:{slug:"mekong-river",name:"Mekong River",img:"/images/encyclopedia/mekong-river.jpg",artist:"Bjørn Christian Tørrissen",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mekong-River-Near-Luang-Prabang.jpg"},
     military:{slug:"le-thanh-tong",name:"Lê Thánh Tông",img:"/images/encyclopedia/le-thanh-tong.jpg",artist:"Ngoisao.vn",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:L%C3%AA_Th%C3%A1nh_T%C3%B4ng.jpg"},
     governance:{slug:"setthathirath",name:"Setthathirath",img:"/images/encyclopedia/setthathirath.jpg",artist:"Alcyon",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Setthathirat.JPG"},
@@ -2744,7 +2744,7 @@ var SECTION_IMAGES = {
     military:{slug:"bolkiah",name:"Bolkiah",img:"/images/encyclopedia/bolkiah.jpg",artist:"Bubbha at English Wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bolkiah-tomb.jpg"},
     governance:{slug:"omar-ali-saifuddien-iii",name:"Omar Ali Saifuddien III",img:"/images/encyclopedia/omar-ali-saifuddien-iii.jpg",artist:"Government of Brunei",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_D.Y.M.M._Maulana_Al-Sultan_Sir_Omar_Ali_Saifuddin_Saadul_Khairi_Waddin.jpg"},
     impact:{slug:"omar-ali-saifuddien-mosque",name:"Omar Ali Saifuddien Mosque",img:"/images/encyclopedia/omar-ali-saifuddien-mosque.jpg",artist:"Abdullah Geelah",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Sultan_Omar_Ali_Saifuddin_Mosque_with_the_ceremonial_ship.jpg"},
-    decline:{slug:"omar-ali-saifuddin-ii",name:"Omar Ali Saifuddin II",img:"/images/encyclopedia/omar-ali-saifuddin-ii.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Illustration_of_Sultan_Omar_Ali_Saifuddin_II.jpg"}
+    decline:{slug:"omar-ali-saifuddin-ii",name:"Omar Ali Saifuddin II",img:"/images/encyclopedia/omar-ali-saifuddin-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Illustration_of_Sultan_Omar_Ali_Saifuddin_II.jpg"}
   },
   "Kingdom of Mysore (1399-1799)": {
     foundation:{slug:"mysore",name:"Mysore",img:"/images/encyclopedia/mysore.jpg",artist:"Sathyaprakash01",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mysuru_Montage.jpg"},
@@ -2752,18 +2752,18 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-pollilur-1780",name:"Battle of Pollilur (1780)",img:"/images/encyclopedia/battle-of-pollilur-1780.jpg",artist:"Charles H. Hubbell (1898-1971)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rocket_warfare.jpg"},
     governance:{slug:"chikka-devaraja-wodeyar",name:"Chikka Devaraja Wodeyar",img:"/images/encyclopedia/chikka-devaraja-wodeyar.jpg",artist:"Artist unknown, photographer unknown, author: C. Hyavadana Rao",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chikkadevaraja.jpg"},
     impact:{slug:"daria-daulat-bagh",name:"Daria Daulat Bagh",img:"/images/encyclopedia/daria-daulat-bagh.jpg",artist:"Rahulpurushot",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Gumbaj_containing_tomb_of_Tipu_Sultan.jpg"},
-    decline:{slug:"third-anglo-mysore-war",name:"Third Anglo-Mysore War",img:"/images/encyclopedia/third-anglo-mysore-war.jpg",artist:"No machine-readable author provided. Miljoshi assumed (based on copyright claims).",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Anglo-Mysore_War_3.png"}
+    decline:{slug:"third-anglo-mysore-war",name:"Third Anglo-Mysore War",img:"/images/encyclopedia/third-anglo-mysore-war.jpg",artist:"Miljoshi",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Anglo-Mysore_War_3.png"}
   },
   "Sulu Sultanate": {
     foundation:{slug:"paduka-batara",name:"Paduka Batara",img:"/images/encyclopedia/paduka-batara.jpg",artist:"Suginami",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E5%BE%B7%E5%B7%9E%E8%8B%8F%E7%A6%84%E7%8E%8B%E5%A2%93.jpg"},
     socioeconomy:{slug:"tausug",name:"Tausug",img:"/images/encyclopedia/tausug.jpg",artist:"Jjarivera",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tausug.jpg"},
     military:{slug:"first-battle-of-bud-dajo",name:"First Battle of Bud Dajo",img:"/images/encyclopedia/first-battle-of-bud-dajo.jpg",artist:"Pershing, John J. (John Joseph), 1860-1948.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bud_Dajo_Massacre_Trench_on_Jolo_Island_c1906.png"},
-    governance:{slug:"sharif-ul-hashim-of-sulu",name:"Sharif ul-Hashim of Sulu",img:"/images/encyclopedia/sharif-ul-hashim-of-sulu.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sayyid_Abubakr_bin_Shaikh_Al-Kaff_(3).jpg"},
-    impact:{slug:"alfred-dent",name:"Alfred Dent",img:"/images/encyclopedia/alfred-dent.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AlfredDent.jpg"},
+    governance:{slug:"sharif-ul-hashim-of-sulu",name:"Sharif ul-Hashim of Sulu",img:"/images/encyclopedia/sharif-ul-hashim-of-sulu.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sayyid_Abubakr_bin_Shaikh_Al-Kaff_(3).jpg"},
+    impact:{slug:"alfred-dent",name:"Alfred Dent",img:"/images/encyclopedia/alfred-dent.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AlfredDent.jpg"},
     decline:{slug:"narciso-claveria",name:"Narciso Clavería",img:"/images/encyclopedia/narciso-claveria.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:El_teniente_general_Narciso_Claver%C3%ADa_y_Zald%C3%BAa,_conde_de_Manila_(Museo_del_Prado).jpg"}
   },
   "Later Le dynasty": {
-    foundation:{slug:"yongle-emperor",name:"Yongle Emperor",img:"/images/encyclopedia/yongle-emperor.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Chengzu.jpg"},
+    foundation:{slug:"yongle-emperor",name:"Yongle Emperor",img:"/images/encyclopedia/yongle-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Chengzu.jpg"},
     socioeconomy:{slug:"pho-hien",name:"Phố Hiến",img:"/images/encyclopedia/pho-hien.jpg",artist:"Hoàng Huy",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ph%C6%B0%E1%BB%9Dng_Ph%E1%BB%91_Hi%E1%BA%BFn.jpg"},
     military:{slug:"le-loi",name:"Lê Lợi",img:"/images/encyclopedia/le-loi.jpg",artist:"Nguyễn Thanh Quang",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Le_Loi_statue.JPG"},
     governance:{slug:"le-thanh-tong",name:"Lê Thánh Tông",img:"/images/encyclopedia/le-thanh-tong.jpg",artist:"Ngoisao.vn",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:L%C3%AA_Th%C3%A1nh_T%C3%B4ng.jpg"},
@@ -2773,8 +2773,8 @@ var SECTION_IMAGES = {
   "Bijapur Sultanate": {
     foundation:{slug:"yusuf-adil-shah",name:"Yusuf Adil Shah",img:"/images/encyclopedia/yusuf-adil-shah.jpg",artist:"Kamal Muhammad; Chand Muhammad",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:The_House_of_Bijapur_Album_leaf,_ca._1680_Deccan,_Bijapur._Metropolitan_Museum_of_Art.jpg"},
     socioeconomy:{slug:"bijapur",name:"Bijapur",img:"/images/encyclopedia/bijapur.jpg",artist:"Montage of several images",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bijapur_Montage.jpg"},
-    military:{slug:"afonso-de-albuquerque",name:"Afonso de Albuquerque",img:"/images/encyclopedia/afonso-de-albuquerque.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Afonso_de_Albuquerque_(ap%C3%B3s_1545)_-_Autor_desconhecido.png"},
-    governance:{slug:"ali-adil-shah-i",name:"Ali Adil Shah I",img:"/images/encyclopedia/ali-adil-shah-i.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aliadilshah.jpg"},
+    military:{slug:"afonso-de-albuquerque",name:"Afonso de Albuquerque",img:"/images/encyclopedia/afonso-de-albuquerque.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Afonso_de_Albuquerque_(ap%C3%B3s_1545)_-_Autor_desconhecido.png"},
+    governance:{slug:"ali-adil-shah-i",name:"Ali Adil Shah I",img:"/images/encyclopedia/ali-adil-shah-i.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aliadilshah.jpg"},
     impact:{slug:"ibrahim-rauza",name:"Ibrahim Rauza",img:"/images/encyclopedia/ibrahim-rauza.jpg",artist:"Aanand",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ibrahim_Roza.jpg"},
     decline:{slug:"shah-jahan",name:"Shah Jahan",img:"/images/encyclopedia/shah-jahan.jpg",artist:"Bichitr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%27Jujhar_Singh_Bundela_Kneels_in_Submission_to_Shah_Jahan%27,_painted_by_Bichitr,_c._1630,_Chester_Beatty_Library_(cropped2).jpg"}
   },
@@ -2782,16 +2782,16 @@ var SECTION_IMAGES = {
     foundation:{slug:"ali-mughayat-syah",name:"Ali Mughayat Syah",img:"/images/encyclopedia/ali-mughayat-syah.jpg",artist:"Si Gam Acèh",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jirat_Soleutan_Ali_Mughayat_Syah.JPG"},
     socioeconomy:{slug:"mecca",name:"Mecca",img:"/images/encyclopedia/mecca.jpg",artist:"Saudipics.com",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Mecca1.jpg"},
     military:{slug:"aceh-war",name:"Aceh War",img:"/images/encyclopedia/aceh-war.jpg",artist:"Geschilderd naar Jules Garnier (Collectie Koninklijk Huisarchief in bruikleen aan museum Bronbeek)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Samalanga_1878.jpg"},
-    governance:{slug:"iskandar-muda",name:"Iskandar Muda",img:"/images/encyclopedia/iskandar-muda.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lukisan_Iskandar_muda.jpg"},
+    governance:{slug:"iskandar-muda",name:"Iskandar Muda",img:"/images/encyclopedia/iskandar-muda.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lukisan_Iskandar_muda.jpg"},
     impact:{slug:"hikayat-aceh",name:"Hikayat Aceh",img:"/images/encyclopedia/hikayat-aceh.jpg",artist:"unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Hikayat_Aceh_Or._1954_(Leiden).pdf"},
     decline:{slug:"johan-harmen-rudolf-kohler",name:"Johan Harmen Rudolf Köhler",img:"/images/encyclopedia/johan-harmen-rudolf-kohler.jpg",artist:"P.H.K. van Schendel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Generaal_Kohler.jpg"}
   },
   "Johor Sultanate": {
-    foundation:{slug:"afonso-de-albuquerque",name:"Afonso de Albuquerque",img:"/images/encyclopedia/afonso-de-albuquerque.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Afonso_de_Albuquerque_(ap%C3%B3s_1545)_-_Autor_desconhecido.png"},
+    foundation:{slug:"afonso-de-albuquerque",name:"Afonso de Albuquerque",img:"/images/encyclopedia/afonso-de-albuquerque.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Afonso_de_Albuquerque_(ap%C3%B3s_1545)_-_Autor_desconhecido.png"},
     socioeconomy:{slug:"bugis",name:"Bugis",img:"/images/encyclopedia/bugis.jpg",artist:"Rejalobo",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:IMG-20190222-WA0014.jpg"},
     military:{slug:"raja-kecil",name:"Raja Kecil",img:"/images/encyclopedia/raja-kecil.jpg",artist:"Harris Est 13",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Jirat_Makam_Marhum_Buantan.png"},
     governance:{slug:"1931-constitution-of-ethiopia",name:"1931 Constitution of Ethiopia",img:"/images/encyclopedia/1931-constitution-of-ethiopia.jpg",artist:"Tekle Hawariat Tekle Mariyam Gedamu Woldegiorgis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1931_Constitution_of_Ethiopia.png"},
-    impact:{slug:"malay-annals",name:"Malay Annals",img:"/images/encyclopedia/malay-annals.jpg",artist:"Unknown authorUnknown author.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispiece_of_a_Jawi_edition_of_the_Malay_Annals.jpg"},
+    impact:{slug:"malay-annals",name:"Malay Annals",img:"/images/encyclopedia/malay-annals.jpg",artist:"Unknown author.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispiece_of_a_Jawi_edition_of_the_Malay_Annals.jpg"},
     decline:{slug:"stamford-raffles",name:"Stamford Raffles",img:"/images/encyclopedia/stamford-raffles.jpg",artist:"George Francis Joseph",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:George_Francis_Joseph_-_Sir_Thomas_Stamford_Bingley_Raffles.jpg"}
   },
   "Mataram Sultanate": {
@@ -2800,7 +2800,7 @@ var SECTION_IMAGES = {
     military:{slug:"sultan-agung",name:"Sultan Agung",img:"/images/encyclopedia/sultan-agung.jpg",artist:"Basuki Bawono",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Anyakrakusuma_of_Mataram.jpg"},
     governance:{slug:"amangkurat-i",name:"Amangkurat I",img:"/images/encyclopedia/amangkurat-i.jpg",artist:"putudananjaya, of Indonesia's Ministry of Education and Culture",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tegal_Arum_Grave_of_Amangkurat_I.jpg"},
     impact:{slug:"kartasura",name:"Kartasura",img:"/images/encyclopedia/kartasura.jpg",artist:"The original uploader was Aryphrase at Indonesian Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kantor_Kecamatan_Kartasura,_Sukoharjo.jpg"},
-    decline:{slug:"trunajaya",name:"Trunajaya",img:"/images/encyclopedia/trunajaya.jpg",artist:"Unknown authorUnknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Detail_painting_of_Trunajaya_executed_by_Amangkurat_II.jpg"}
+    decline:{slug:"trunajaya",name:"Trunajaya",img:"/images/encyclopedia/trunajaya.jpg",artist:"Unknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Detail_painting_of_Trunajaya_executed_by_Amangkurat_II.jpg"}
   },
   "Restored Toungoo Kingdom": {
     foundation:{slug:"bayinnaung",name:"Bayinnaung",img:"/images/encyclopedia/bayinnaung.jpg",artist:"Phyo WP",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bayinnaung.JPG"},
@@ -2811,12 +2811,12 @@ var SECTION_IMAGES = {
     decline:{slug:"alaungpaya",name:"Alaungpaya",img:"/images/encyclopedia/alaungpaya.jpg",artist:"Phyo WP",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Alaungpaya.JPG"}
   },
   "Hyderabad State": {
-    foundation:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Darbarscene.jpg: Cordanrad derivative work: Rani nurmai (talk)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
+    foundation:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Cordanrad; derivative work by Rani nurmai",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
     socioeconomy:{slug:"hyderabad-sindh",name:"Hyderabad, Sindh",img:"/images/encyclopedia/hyderabad-sindh.jpg",artist:"Waheed.chandio",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mir_Karam_Ali_Khan_Talpur_Tombs_were_restored_in_2016_1.jpg"},
     military:{slug:"battle-of-kharda",name:"Battle of Kharda",img:"/images/encyclopedia/battle-of-kharda.jpg",artist:"Rushikesh Awatade",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Kharda_Fort.jpg"},
     governance:{slug:"salar-jung-i",name:"Salar Jung I",img:"/images/encyclopedia/salar-jung-i.jpg",artist:"undated photo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Salar_Jung.jpg"},
     impact:{slug:"salar-jung-iii",name:"Salar Jung III",img:"/images/encyclopedia/salar-jung-iii.jpg",artist:"Rgajavelli",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Salarjungiii.jpg"},
-    decline:{slug:"mir-osman-ali-khan",name:"Mir Osman Ali Khan",img:"/images/encyclopedia/mir-osman-ali-khan.jpg",artist:"Bourne &amp; Shepherd",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Usman_Ali_Khan.jpg"}
+    decline:{slug:"mir-osman-ali-khan",name:"Mir Osman Ali Khan",img:"/images/encyclopedia/mir-osman-ali-khan.jpg",artist:"Bourne & Shepherd",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Usman_Ali_Khan.jpg"}
   },
   "Konbaung dynasty": {
     foundation:{slug:"alaungpaya",name:"Alaungpaya",img:"/images/encyclopedia/alaungpaya.jpg",artist:"Phyo WP",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Alaungpaya.JPG"},
@@ -2836,22 +2836,22 @@ var SECTION_IMAGES = {
   },
   "Rattanakosin Kingdom": {
     foundation:{slug:"taksin",name:"Taksin",img:"/images/encyclopedia/taksin.jpg",artist:"Tmd",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:King_Taksin_%26_Phraya_Pichai_Dabhak_Monument_in_Wat_Kungtapao_002.jpg"},
-    socioeconomy:{slug:"chao-phraya-river",name:"Chao Phraya River",img:"/images/encyclopedia/chao-phraya-river.jpg",artist:"This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author ...",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Chao_Phraya_River_-_Bangkok_-_northwards_-_from_King_Taksin_Bridge_-_2021.jpg"},
+    socioeconomy:{slug:"chao-phraya-river",name:"Chao Phraya River",img:"/images/encyclopedia/chao-phraya-river.jpg",artist:"This Photo was taken by Supanut Arunoprayote. …",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Chao_Phraya_River_-_Bangkok_-_northwards_-_from_King_Taksin_Bridge_-_2021.jpg"},
     military:{slug:"paknam-incident",name:"Paknam incident",img:"/images/encyclopedia/paknam-incident.jpg",artist:"Michelet / After Alexandre Jean-Baptiste Brun",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:L%27Illustration_No_2630_22_Juillet_1893_Page_61_(cropped).png"},
-    governance:{slug:"rama-i",name:"Rama I",img:"/images/encyclopedia/rama-i.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Rama_I_of_Siam_(Yodfa_Chulalok)_Portrait.jpg"},
+    governance:{slug:"rama-i",name:"Rama I",img:"/images/encyclopedia/rama-i.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Rama_I_of_Siam_(Yodfa_Chulalok)_Portrait.jpg"},
     impact:{slug:"wat-pho",name:"Wat Pho",img:"/images/encyclopedia/wat-pho.jpg",artist:"Mastertongapollo",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%84%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%95%E0%B8%B8%E0%B8%9E%E0%B8%99.jpg"},
     decline:{slug:"chulalongkorn",name:"Chulalongkorn",img:"/images/encyclopedia/chulalongkorn.jpg",artist:"Bain News Service, publisher.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chulalongkorn_LoC.jpg"}
   },
   "Dutch East Indies": {
     foundation:{slug:"herman-willem-daendels",name:"Herman Willem Daendels",img:"/images/encyclopedia/herman-willem-daendels.jpg",artist:"Raden Sarief Bastaman Saleh",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Posthuum_portret_van_Herman_Willem_Daendels_(1762-1818)._Gouverneur-generaal_(1808-10)_Rijksmuseum_SK-A-3790.jpeg"},
     socioeconomy:{slug:"cultivation-system",name:"Cultivation System",img:"/images/encyclopedia/cultivation-system.jpg",artist:"Nicolaes Visscher II",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nicolaes_Visscher_Indiae_Orientalis.jpg"},
-    military:{slug:"battle-of-the-java-sea",name:"Battle of the Java Sea",img:"/images/encyclopedia/battle-of-the-java-sea.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Haguro-1942.jpg"},
+    military:{slug:"battle-of-the-java-sea",name:"Battle of the Java Sea",img:"/images/encyclopedia/battle-of-the-java-sea.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Haguro-1942.jpg"},
     governance:{slug:"cornelis-van-vollenhoven",name:"Cornelis van Vollenhoven",img:"/images/encyclopedia/cornelis-van-vollenhoven.jpg",artist:"Unknown photographer",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:CornelisvanVollenhoven.jpg"},
     impact:{slug:"bogor",name:"Bogor",img:"/images/encyclopedia/bogor.jpg",artist:"Nafisathallah",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Istana_presiden_republik_Indonesia_di_Bogor.jpg"},
     decline:{slug:"sukarno",name:"Sukarno",img:"/images/encyclopedia/sukarno.jpg",artist:"Onbekend/Anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Presiden_Sukarno.jpg"}
   },
   "Nguyen dynasty": {
-    foundation:{slug:"gia-long",name:"Gia Long",img:"/images/encyclopedia/gia-long.jpg",artist:"Unknown authorUnknown author, restored by Nguyễn Phước Vĩnh Khánh ([1])",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emperor_Gia_Long.jpg"},
+    foundation:{slug:"gia-long",name:"Gia Long",img:"/images/encyclopedia/gia-long.jpg",artist:"Unknown author, restored by Nguyễn Phước Vĩnh Khánh ([1])",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emperor_Gia_Long.jpg"},
     socioeconomy:{slug:"vinh-te-canal",name:"Vĩnh Tế Canal",img:"/images/encyclopedia/vinh-te-canal.jpg",artist:"Bùi Thụy Đào Nguyên",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kinh_V%C4%A9nh_T%E1%BA%BF.jpg"},
     military:{slug:"battle-of-ky-hoa",name:"Battle of Kỳ Hòa",img:"/images/encyclopedia/battle-of-ky-hoa.jpg",artist:"See sources.",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%22History_of_Ho_Chi_Minh_City%22_for_template_heading.svg"},
     governance:{slug:"minh-mang",name:"Minh Mang",img:"/images/encyclopedia/minh-mang.jpg",artist:"Unknown, there is a line below the picture in the book that says: Drawn by a Chinese.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Minh_Mang.gif"},
@@ -2859,7 +2859,7 @@ var SECTION_IMAGES = {
     decline:{slug:"can-vuong",name:"Cần Vương",img:"/images/encyclopedia/can-vuong.jpg",artist:"Nguyen Dynasty in 19th century",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chieu_Can_Vuong.jpg"}
   },
   "British Raj": {
-    foundation:{slug:"bahadur-shah-ii",name:"Bahadur Shah II",img:"/images/encyclopedia/bahadur-shah-ii.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bahadur_Shah_II_of_India.jpg"},
+    foundation:{slug:"bahadur-shah-ii",name:"Bahadur Shah II",img:"/images/encyclopedia/bahadur-shah-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bahadur_Shah_II_of_India.jpg"},
     socioeconomy:{slug:"suez-canal",name:"Suez Canal",img:"/images/encyclopedia/suez-canal.jpg",artist:"NASA",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Iss016e019375.jpg"},
     military:{slug:"battle-of-imphal",name:"Battle of Imphal",img:"/images/encyclopedia/battle-of-imphal.jpg",artist:"British Information Service, information service operated by UK government during WW2.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gurkhas_advancing_with_Lee_tanks_to_clear_the_Japanese_from_Imphal-Kohima_road.jpg"},
     governance:{slug:"george-curzon",name:"George Curzon",img:"/images/encyclopedia/george-curzon.jpg",artist:"George Grantham Bain Collection (Library of Congress)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:George_Curzon2.jpg"},
@@ -2869,7 +2869,7 @@ var SECTION_IMAGES = {
   "French Indochina": {
     foundation:{slug:"norodom-of-cambodia",name:"Norodom of Cambodia",img:"/images/encyclopedia/norodom-of-cambodia.jpg",artist:"",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Norodom,_the_King_of_Cambodia_Wellcome_V0037202.jpg"},
     socioeconomy:{slug:"ho-chi-minh-city",name:"Ho Chi Minh City",img:"/images/encyclopedia/ho-chi-minh-city.jpg",artist:"Steffen Schmitz (more photos)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_City,_City_Hall,_2020-01_CN-03.jpg"},
-    military:{slug:"battle-of-ko-chang",name:"Battle of Ko Chang",img:"/images/encyclopedia/battle-of-ko-chang.jpg",artist:"Xiengyod (original work by user:historicair)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Koh_Chang_17_january_1941_(English_version).svg"},
+    military:{slug:"battle-of-ko-chang",name:"Battle of Ko Chang",img:"/images/encyclopedia/battle-of-ko-chang.jpg",artist:"Xiengyod (original work by historicair)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Koh_Chang_17_january_1941_(English_version).svg"},
     governance:{slug:"albert-sarraut",name:"Albert Sarraut",img:"/images/encyclopedia/albert-sarraut.jpg",artist:"Agence Rol",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Agence_Rol_-_Albert_Sarraut.jpg"},
     impact:{slug:"battambang",name:"Battambang",img:"/images/encyclopedia/battambang.jpg",artist:"Maharaja1994",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Aerial_view_of_Battambang_city.jpg"},
     decline:{slug:"battle-of-dien-bien-phu",name:"Battle of Dien Bien Phu",img:"/images/encyclopedia/battle-of-dien-bien-phu.jpg",artist:"Vietnam People's Army",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Victory_in_Battle_of_Dien_Bien_Phu.jpg"}
@@ -2883,8 +2883,8 @@ var SECTION_IMAGES = {
     decline:{slug:"b-j-habibie",name:"B. J. Habibie",img:"/images/encyclopedia/b-j-habibie.jpg",artist:"Office of the Vice PresidentThe Republic of Indonesia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:B._J._Habibie,_President_of_Indonesia_portrait.jpg"}
   },
   "Myanmar": {
-    foundation:{slug:"aung-san",name:"Aung San",img:"/images/encyclopedia/aung-san.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aung_San_color_portrait.jpg"},
-    socioeconomy:{slug:"bamar-people",name:"Bamar people",img:"/images/encyclopedia/bamar-people.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Upper_class_Burmese_couple_in_the_1890s.jpg"},
+    foundation:{slug:"aung-san",name:"Aung San",img:"/images/encyclopedia/aung-san.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aung_San_color_portrait.jpg"},
+    socioeconomy:{slug:"bamar-people",name:"Bamar people",img:"/images/encyclopedia/bamar-people.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Upper_class_Burmese_couple_in_the_1890s.jpg"},
     military:{slug:"operation-1027",name:"Operation 1027",img:"/images/encyclopedia/operation-1027.jpg",artist:"Clyde H. Mapping",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Operation_1027.svg"},
     governance:{slug:"constitution-of-japan",name:"Constitution of Japan",img:"/images/encyclopedia/constitution-of-japan.jpg",artist:"Japanese government",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nihon_Kenpo01.jpg"},
     impact:{slug:"coxs-bazar",name:"Cox's Bazar",img:"/images/encyclopedia/coxs-bazar.jpg",artist:"Syedhasibulhasan",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:A_dusk_at_Cox%27s_Bazar_sea_beach.jpg"},
@@ -2893,15 +2893,15 @@ var SECTION_IMAGES = {
   "United State of Rajasthan": {
     foundation:{slug:"vallabhbhai-patel",name:"Vallabhbhai Patel",img:"/images/encyclopedia/vallabhbhai-patel.jpg",artist:"Government of India work",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sardar_patel_(cropped).jpg"},
     socioeconomy:{slug:"kolkata",name:"Kolkata",img:"/images/encyclopedia/kolkata.jpg",artist:"NalGup20",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Kolkata_maidan.jpg"},
-    military:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott &amp; Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"},
+    military:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"},
     governance:{slug:"man-singh-ii-of-jaipur",name:"Man Singh II of Jaipur",img:"/images/encyclopedia/man-singh-ii-of-jaipur.jpg",artist:"Bassano Ltd",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Man_Singh_II.jpg"},
     impact:{slug:"rambagh-palace",name:"Rambagh Palace",img:"/images/encyclopedia/rambagh-palace.jpg",artist:"Chainwit.",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Rambagh_Palace_hotel_Jaipur_lobby_courtyard.jpg"},
     decline:{slug:"ajmer",name:"Ajmer",img:"/images/encyclopedia/ajmer.jpg",artist:"SUDHIR UPADHYAY JI",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:ADHAI_DIN_KA_JHONPRA.jpg"}
   },
   "Republic of India": {
-    foundation:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott &amp; Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"},
+    foundation:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"},
     socioeconomy:{slug:"scheduled-castes",name:"Scheduled Castes",img:"/images/encyclopedia/scheduled-castes.jpg",artist:"M Tracy Hunter",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:2011_Census_Scheduled_Caste_caste_distribution_map_India_by_state_and_union_territory.svg"},
-    military:{slug:"sino-indian-war",name:"Sino-Indian War",img:"/images/encyclopedia/sino-indian-war.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_soldiers_on_patrol_during_the_1962_Sino-Indian_border_war.jpg"},
+    military:{slug:"sino-indian-war",name:"Sino-Indian War",img:"/images/encyclopedia/sino-indian-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_soldiers_on_patrol_during_the_1962_Sino-Indian_border_war.jpg"},
     governance:{slug:"jawaharlal-nehru",name:"Jawaharlal Nehru",img:"/images/encyclopedia/jawaharlal-nehru.jpg",artist:"Harry Pot",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nehru_in_the_Netherlands,_1957.jpg"},
     impact:{slug:"belgrade",name:"Belgrade",img:"/images/encyclopedia/belgrade.jpg",artist:"ZlatanJovanovic",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Panorama_Belgrad.jpg"},
     decline:{slug:"rajiv-gandhi",name:"Rajiv Gandhi",img:"/images/encyclopedia/rajiv-gandhi.jpg",artist:"Bart Molendijk / Anefo",licence:"CC BY-SA 3.0 nl",source:"https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_(1987).jpg"}
@@ -2911,14 +2911,14 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"malays",name:"Malays",img:"/images/encyclopedia/malays.jpg",artist:"Orhanghazi",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Malay_tricolour.svg"},
     military:{slug:"sukarno",name:"Sukarno",img:"/images/encyclopedia/sukarno.jpg",artist:"Onbekend/Anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Presiden_Sukarno.jpg"},
     governance:{slug:"malaysia-agreement",name:"Malaysia Agreement",img:"/images/encyclopedia/malaysia-agreement.jpg",artist:"Governments of the UK, Federation of Malaya, North Borneo, Sarawak and Singapore.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Agreement_Relating_to_Malaysia_between_UK,_N._Borneo,_Sarawak_and_Singapore.djvu"},
-    impact:{slug:"petronas-twin-towers",name:"Petronas Twin Towers",img:"/images/encyclopedia/petronas-twin-towers.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Petronas_Towers_Logo.svg"},
+    impact:{slug:"petronas-twin-towers",name:"Petronas Twin Towers",img:"/images/encyclopedia/petronas-twin-towers.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Petronas_Towers_Logo.svg"},
     decline:{slug:"lee-kuan-yew",name:"Lee Kuan Yew",img:"/images/encyclopedia/lee-kuan-yew.jpg",artist:"White House Photographic Office. 1974-1977",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Prime_Minister_Lee_Kuan_Yew_of_Singapore_Making_a_Toast_at_a_State_Dinner_Held_in_His_Honor,_1975.jpg"}
   },
   "Socialist Republic of Vietnam": {
-    foundation:{slug:"ho-chi-minh",name:"Ho Chi Minh",img:"/images/encyclopedia/ho-chi-minh.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_-_1946_Portrait_(cropped).jpg"},
+    foundation:{slug:"ho-chi-minh",name:"Ho Chi Minh",img:"/images/encyclopedia/ho-chi-minh.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_-_1946_Portrait_(cropped).jpg"},
     socioeconomy:{slug:"ho-chi-minh-city",name:"Ho Chi Minh City",img:"/images/encyclopedia/ho-chi-minh-city.jpg",artist:"Steffen Schmitz (more photos)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_City,_City_Hall,_2020-01_CN-03.jpg"},
-    military:{slug:"johnson-south-reef-skirmish",name:"Johnson South Reef skirmish",img:"/images/encyclopedia/johnson-south-reef-skirmish.jpg",artist:"vi:User:RobertJordan from the Vietnamese Wikipedia",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Union_Banks_en.svg"},
-    governance:{slug:"le-duan",name:"Lê Duẩn",img:"/images/encyclopedia/le-duan.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Le_duan.png"},
+    military:{slug:"johnson-south-reef-skirmish",name:"Johnson South Reef skirmish",img:"/images/encyclopedia/johnson-south-reef-skirmish.jpg",artist:"RobertJordan from the Vietnamese Wikipedia",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Union_Banks_en.svg"},
+    governance:{slug:"le-duan",name:"Lê Duẩn",img:"/images/encyclopedia/le-duan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Le_duan.png"},
     impact:{slug:"moscow",name:"Moscow",img:"/images/encyclopedia/moscow.jpg",artist:"U.S. Department of State",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Basil%27s_Cathedral_and_the_Red_Square.jpg"},
     decline:{slug:"doi-moi",name:"Đổi Mới",img:"/images/encyclopedia/doi-moi.jpg",artist:"Tokeisan at Vietnamese Wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Khu_trung_t%C3%A2m_th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh,_nh%C3%ACn_t%E1%BB%AB_ph%C3%ADa_qu%E1%BA%ADn_2.JPG"}
   },
@@ -2930,7 +2930,7 @@ var SECTION_IMAGES = {
     impact:{slug:"niger-river",name:"Niger River",img:"/images/encyclopedia/niger-river.jpg",artist:"NigerTZai",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Niger,_Niamey,_Pont_Kennedy_(1).jpg"}
   },
   "Mombasa": {
-    foundation:{slug:"muhammad-al-idrisi",name:"Muhammad al-Idrisi",img:"/images/encyclopedia/muhammad-al-idrisi.jpg",artist:"Estatua_de_Al-Idrisi_bajo_el_baluarte_de_los_Mallorquines,_Ceuta_(3).jpg: Mario Sánchez Bueno derivative work: Ecemaml",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Estatua_de_Al-Idrisi_bajo_el_baluarte_de_los_Mallorquines,_Ceuta_(5).jpg"},
+    foundation:{slug:"muhammad-al-idrisi",name:"Muhammad al-Idrisi",img:"/images/encyclopedia/muhammad-al-idrisi.jpg",artist:"Mario Sánchez Bueno; derivative work by Ecemaml",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Estatua_de_Al-Idrisi_bajo_el_baluarte_de_los_Mallorquines,_Ceuta_(5).jpg"},
     socioeconomy:{slug:"sofala",name:"Sofala",img:"/images/encyclopedia/sofala.jpg",artist:"Mallet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sofala1683.jpg"},
     military:{slug:"vasco-da-gama",name:"Vasco da Gama",img:"/images/encyclopedia/vasco-da-gama.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ignoto_portoghese,_ritratto_di_un_cavaliere_dell%27ordine_di_cristo,_1525-50_ca._02.jpg"},
     impact:{slug:"fort-jesus",name:"Fort Jesus",img:"/images/encyclopedia/fort-jesus.jpg",artist:"Maingi030",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Fort_Jesus_at_the_Mombasa_Island.jpg"}
@@ -2946,8 +2946,8 @@ var SECTION_IMAGES = {
   "Kingdom of Buganda": {
     foundation:{slug:"kampala",name:"Kampala",img:"/images/encyclopedia/kampala.jpg",artist:"Chapelle musa",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Urban_Rising,_KAMPALA,_Uganda.jpg"},
     socioeconomy:{slug:"john-hanning-speke",name:"John Hanning Speke",img:"/images/encyclopedia/john-hanning-speke.jpg",artist:"Southwell Brothers",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JH_Speke.jpg"},
-    military:{slug:"frederick-lugard",name:"Frederick Lugard",img:"/images/encyclopedia/frederick-lugard.jpg",artist:"Elliott &amp; Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LordLugard.jpg"},
-    governance:{slug:"harry-johnston",name:"Harry Johnston",img:"/images/encyclopedia/harry-johnston.jpg",artist:"Elliott &amp; Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Harry_Johnston.jpg"},
+    military:{slug:"frederick-lugard",name:"Frederick Lugard",img:"/images/encyclopedia/frederick-lugard.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LordLugard.jpg"},
+    governance:{slug:"harry-johnston",name:"Harry Johnston",img:"/images/encyclopedia/harry-johnston.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Harry_Johnston.jpg"},
     impact:{slug:"kasubi-tombs",name:"Kasubi Tombs",img:"/images/encyclopedia/kasubi-tombs.jpg",artist:"not not phil from SF, CA, US",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Kampala_Kasubi_Tombs.jpg"},
     decline:{slug:"french-wars-of-religion",name:"French Wars of Religion",img:"/images/encyclopedia/french-wars-of-religion.jpg",artist:"François Dubois 1529-1584",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:La_masacre_de_San_Bartolom%C3%A9,_por_Fran%C3%A7ois_Dubois.jpg"}
   },
@@ -2960,7 +2960,7 @@ var SECTION_IMAGES = {
   },
   "Kingdom of Ankole": {
     foundation:{slug:"ntare-v",name:"Ntare V",img:"/images/encyclopedia/ntare-v.jpg",artist:"Associated Press",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ntare_V_of_Burundi_(1966).png"},
-    socioeconomy:{slug:"bahima",name:"Bahima",img:"/images/encyclopedia/bahima.jpg",artist:"Derivative work: User:Profoss - Original work:NordNordWest",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Democratic_Republic_of_the_Congo_(26_provinces)_-_Ituri.svg"},
+    socioeconomy:{slug:"bahima",name:"Bahima",img:"/images/encyclopedia/bahima.jpg",artist:"Profoss - Original work:NordNordWest",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Democratic_Republic_of_the_Congo_(26_provinces)_-_Ituri.svg"},
     military:{slug:"kigeli-iv-rwabugiri",name:"Kigeli IV Rwabugiri",img:"/images/encyclopedia/kigeli-iv-rwabugiri.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mwami_Kigeri_IV_Rwabugiri.jpg"},
     governance:{slug:"kahaya-ii",name:"Kahaya II",img:"/images/encyclopedia/kahaya-ii.jpg",artist:"Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kahaya_II_and_his_counsellors.jpg"},
     impact:{slug:"yoweri-museveni",name:"Yoweri Museveni",img:"/images/encyclopedia/yoweri-museveni.jpg",artist:"DFID - UK Department for International Development",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Museveni_July_2012_(3x4_cropped).jpg"},
@@ -2972,7 +2972,7 @@ var SECTION_IMAGES = {
     military:{slug:"samuel-baker",name:"Samuel Baker",img:"/images/encyclopedia/samuel-baker.jpg",artist:"LeonisRugitur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir-Baker.jpg"},
     governance:{slug:"banyoro",name:"Banyoro",img:"/images/encyclopedia/banyoro.jpg",artist:"Kasaijaivan",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bunyoro-Kitara_Kingdom_Flag.png"},
     impact:{slug:"murchison-falls",name:"Murchison Falls",img:"/images/encyclopedia/murchison-falls.jpg",artist:"Rod Waddington",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Murchison_Twin_Falls,_Uganda_(16093084916).jpg"},
-    decline:{slug:"frederick-lugard",name:"Frederick Lugard",img:"/images/encyclopedia/frederick-lugard.jpg",artist:"Elliott &amp; Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LordLugard.jpg"}
+    decline:{slug:"frederick-lugard",name:"Frederick Lugard",img:"/images/encyclopedia/frederick-lugard.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LordLugard.jpg"}
   },
   "Merina Kingdom": {
     foundation:{slug:"andriamasinavalona",name:"Andriamasinavalona",img:"/images/encyclopedia/andriamasinavalona.jpg",artist:"Ny Maraina Randrianarisoa - Tanora taranak'Andriamasinavalona",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Andriamasinavalona_2.png"},
@@ -2988,7 +2988,7 @@ var SECTION_IMAGES = {
     military:{slug:"ghezo",name:"Ghezo",img:"/images/encyclopedia/ghezo.jpg",artist:"Forbes, Frederick E.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gezo_(2).jpg"},
     governance:{slug:"ouidah",name:"Ouidah",img:"/images/encyclopedia/ouidah.jpg",artist:"Francisco Anzola",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Door_of_no_return.jpg"},
     impact:{slug:"royal-palaces-of-abomey",name:"Royal Palaces of Abomey",img:"/images/encyclopedia/royal-palaces-of-abomey.jpg",artist:"Joachim Huber",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Abomey_2006_1.jpg"},
-    decline:{slug:"first-franco-dahomean-war",name:"First Franco-Dahomean War",img:"/images/encyclopedia/first-franco-dahomean-war.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dahomey_amazon2.jpg"}
+    decline:{slug:"first-franco-dahomean-war",name:"First Franco-Dahomean War",img:"/images/encyclopedia/first-franco-dahomean-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dahomey_amazon2.jpg"}
   },
   "Barotseland": {
     foundation:{slug:"lunda-empire",name:"Lunda Empire",img:"/images/encyclopedia/lunda-empire.jpg",artist:"Library of Congress",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lunda_Empire.png"},
@@ -3001,7 +3001,7 @@ var SECTION_IMAGES = {
   "Swazi Kingdom": {
     foundation:{slug:"ndwandwe",name:"Ndwandwe",img:"/images/encyclopedia/ndwandwe.jpg",artist:"SFC9394",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:South_Africa_topo_continent.png"},
     socioeconomy:{slug:"ngwenya-mine",name:"Ngwenya Mine",img:"/images/encyclopedia/ngwenya-mine.jpg",artist:"Heather Dowd",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Ngwenya_Mine.jpg"},
-    military:{slug:"mpande",name:"Mpande",img:"/images/encyclopedia/mpande.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King-Mpande-1.gif"},
+    military:{slug:"mpande",name:"Mpande",img:"/images/encyclopedia/mpande.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King-Mpande-1.gif"},
     governance:{slug:"labotsibeni-mdluli",name:"Labotsibeni Mdluli",img:"/images/encyclopedia/labotsibeni-mdluli.jpg",artist:"N.N./National Archives",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Labotsibeni.jpg"},
     impact:{slug:"zulu-kingdom",name:"Zulu Kingdom",img:"/images/encyclopedia/zulu-kingdom.jpg",artist:"Seb az86556",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:LocationZululandca1890.svg"},
     decline:{slug:"second-boer-war",name:"Second Boer War",img:"/images/encyclopedia/second-boer-war.jpg",artist:"The British Army and The Illustrated London News",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Second_Boer_War_Collage.png"}
@@ -3010,7 +3010,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"george-elphinstone-1st-viscount-keith",name:"George Elphinstone, 1st Viscount Keith",img:"/images/encyclopedia/george-elphinstone-1st-viscount-keith.jpg",artist:"John Hoppner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vice-admiral_Lord_Keith,_Commander_in_Chief,_Mediterranean,_c_1799_-_John_Hoppner.jpg"},
     socioeconomy:{slug:"london",name:"London",img:"/images/encyclopedia/london.jpg",artist:"Ilya Grigorik",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:London_Skyline_(125508655).jpeg"},
     military:{slug:"second-boer-war",name:"Second Boer War",img:"/images/encyclopedia/second-boer-war.jpg",artist:"The British Army and The Illustrated London News",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Second_Boer_War_Collage.png"},
-    governance:{slug:"lord-charles-somerset",name:"Lord Charles Somerset",img:"/images/encyclopedia/lord-charles-somerset.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lord_Charles_Henry_Somerset.jpg"},
+    governance:{slug:"lord-charles-somerset",name:"Lord Charles Somerset",img:"/images/encyclopedia/lord-charles-somerset.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lord_Charles_Henry_Somerset.jpg"},
     impact:{slug:"cape-town",name:"Cape Town",img:"/images/encyclopedia/cape-town.jpg",artist:"Der Berzerker from Washington, DC, USA",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Camps_bay_(53460319478)_(cropped).jpg"},
     decline:{slug:"jameson-raid",name:"Jameson Raid",img:"/images/encyclopedia/jameson-raid.jpg",artist:"William Heysham Overend",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Jameson_Raid.jpg"}
   },
@@ -3039,26 +3039,26 @@ var SECTION_IMAGES = {
     decline:{slug:"second-boer-war",name:"Second Boer War",img:"/images/encyclopedia/second-boer-war.jpg",artist:"The British Army and The Illustrated London News",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Second_Boer_War_Collage.png"}
   },
   "Orange Free State": {
-    foundation:{slug:"sir-harry-smith-1st-baronet",name:"Sir Harry Smith, 1st Baronet",img:"/images/encyclopedia/sir-harry-smith-1st-baronet.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Harry_Smith,_Bt.jpg"},
+    foundation:{slug:"sir-harry-smith-1st-baronet",name:"Sir Harry Smith, 1st Baronet",img:"/images/encyclopedia/sir-harry-smith-1st-baronet.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Harry_Smith,_Bt.jpg"},
     socioeconomy:{slug:"koffiefontein",name:"Koffiefontein",img:"/images/encyclopedia/koffiefontein.jpg",artist:"Graham Maclachlan",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Koffiefontein,_South_Africa_-_panoramio_(12).jpg"},
-    military:{slug:"battle-of-magersfontein",name:"Battle of Magersfontein",img:"/images/encyclopedia/battle-of-magersfontein.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:British_in_Barbed_Wire_Magersfontein.jpg"},
-    governance:{slug:"johannes-brand",name:"Johannes Brand",img:"/images/encyclopedia/johannes-brand.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JHBrand_VA0907_bw.jpg"},
+    military:{slug:"battle-of-magersfontein",name:"Battle of Magersfontein",img:"/images/encyclopedia/battle-of-magersfontein.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:British_in_Barbed_Wire_Magersfontein.jpg"},
+    governance:{slug:"johannes-brand",name:"Johannes Brand",img:"/images/encyclopedia/johannes-brand.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JHBrand_VA0907_bw.jpg"},
     impact:{slug:"national-womens-monument",name:"National Women's Monument",img:"/images/encyclopedia/national-womens-monument.jpg",artist:"Carlviloria",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bloemfontein_Women%27s_Memorial_Vil004.jpg"},
-    decline:{slug:"battle-of-paardeberg",name:"Battle of Paardeberg",img:"/images/encyclopedia/battle-of-paardeberg.jpg",artist:"Unknown photographerUnknown photographer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Canadian_Infantry_at_Paardeberg,_1900.jpg"}
+    decline:{slug:"battle-of-paardeberg",name:"Battle of Paardeberg",img:"/images/encyclopedia/battle-of-paardeberg.jpg",artist:"Unknown photographer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Canadian_Infantry_at_Paardeberg,_1900.jpg"}
   },
   "Sultanate of Zanzibar": {
-    foundation:{slug:"thuwaini-bin-said",name:"Thuwaini bin Said",img:"/images/encyclopedia/thuwaini-bin-said.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thuwaini_bin_Said.jpg"},
+    foundation:{slug:"thuwaini-bin-said",name:"Thuwaini bin Said",img:"/images/encyclopedia/thuwaini-bin-said.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thuwaini_bin_Said.jpg"},
     socioeconomy:{slug:"tabora",name:"Tabora",img:"/images/encyclopedia/tabora.jpg",artist:"Wesellgold entertainment",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Around_Kanyenye_Street_,Tabora_Manicipality,_Tanzania.jpg"},
     military:{slug:"anglo-zanzibar-war",name:"Anglo-Zanzibar War",img:"/images/encyclopedia/anglo-zanzibar-war.jpg",artist:"Richard Mohun",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AngloZanzibarWar.jpg"},
-    governance:{slug:"majid-bin-said",name:"Majid bin Said",img:"/images/encyclopedia/majid-bin-said.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Majid_Bin_Saiid2.jpg"},
+    governance:{slug:"majid-bin-said",name:"Majid bin Said",img:"/images/encyclopedia/majid-bin-said.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Majid_Bin_Saiid2.jpg"},
     impact:{slug:"christ-church-cathedral-dublin",name:"Christ Church Cathedral, Dublin",img:"/images/encyclopedia/christ-church-cathedral-dublin.jpg",artist:"Ingo Mehling",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Christ_Church_Cathedral_(Dublin).jpg"},
-    decline:{slug:"carl-peters",name:"Carl Peters",img:"/images/encyclopedia/carl-peters.jpg",artist:"Unknown authorUnknown author",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-R30019,_Dr._Carl_Peters.jpg"}
+    decline:{slug:"carl-peters",name:"Carl Peters",img:"/images/encyclopedia/carl-peters.jpg",artist:"Unknown author",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-R30019,_Dr._Carl_Peters.jpg"}
   },
   "Congo Free State": {
-    foundation:{slug:"henry-morton-stanley",name:"Henry Morton Stanley",img:"/images/encyclopedia/henry-morton-stanley.jpg",artist:"Creator:J. Russel &amp; Sons",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:No-nb_bldsa_1c051_Henry_Morton_Stanley.jpg"},
-    socioeconomy:{slug:"berlin",name:"Berlin",img:"/images/encyclopedia/berlin.jpg",artist:"File:Museumsinsel Berlin Juli 2021 1 (cropped).jpg: Kasa Fue derivative work: Georgfotoart",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Museumsinsel_Berlin_Juli_2021_1_(cropped)_b.jpg"},
-    military:{slug:"congo-arab-war",name:"Congo Arab war",img:"/images/encyclopedia/congo-arab-war.jpg",artist:"User:BorysMapping",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Arab_Congo_War.svg"},
-    governance:{slug:"edmond-van-eetvelde",name:"Edmond van Eetvelde",img:"/images/encyclopedia/edmond-van-eetvelde.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edmond_van_Eetvelde2.png"},
+    foundation:{slug:"henry-morton-stanley",name:"Henry Morton Stanley",img:"/images/encyclopedia/henry-morton-stanley.jpg",artist:"Creator:J. Russel & Sons",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:No-nb_bldsa_1c051_Henry_Morton_Stanley.jpg"},
+    socioeconomy:{slug:"berlin",name:"Berlin",img:"/images/encyclopedia/berlin.jpg",artist:"Kasa Fue; derivative work by Georgfotoart",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Museumsinsel_Berlin_Juli_2021_1_(cropped)_b.jpg"},
+    military:{slug:"congo-arab-war",name:"Congo Arab war",img:"/images/encyclopedia/congo-arab-war.jpg",artist:"BorysMapping",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Arab_Congo_War.svg"},
+    governance:{slug:"edmond-van-eetvelde",name:"Edmond van Eetvelde",img:"/images/encyclopedia/edmond-van-eetvelde.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edmond_van_Eetvelde2.png"},
     impact:{slug:"the-crime-of-the-congo",name:"The Crime of the Congo",img:"/images/encyclopedia/the-crime-of-the-congo.jpg",artist:"Arthur Conan Doyle",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arthur_Conan_Doyle_-_The_Crime_of_the_Congo_(1909).pdf"},
     decline:{slug:"antwerp",name:"Antwerp",img:"/images/encyclopedia/antwerp.jpg",artist:"LBM1948",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Amberes;_vistas_MAS_2.jpg"}
   },
@@ -3071,18 +3071,18 @@ var SECTION_IMAGES = {
     decline:{slug:"second-world-war",name:"Second World War",img:"/images/encyclopedia/second-world-war.jpg",artist:"Richard Opitz",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-646-5188-17,_Flugzeuge_Junkers_Ju_87.jpg"}
   },
   "Union of South Africa": {
-    foundation:{slug:"louis-botha",name:"Louis Botha",img:"/images/encyclopedia/louis-botha.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louisbotha_(cropped).jpg"},
+    foundation:{slug:"louis-botha",name:"Louis Botha",img:"/images/encyclopedia/louis-botha.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louisbotha_(cropped).jpg"},
     socioeconomy:{slug:"sol-plaatje",name:"Sol Plaatje",img:"/images/encyclopedia/sol-plaatje.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sol_Plaatje_002.jpg"},
-    military:{slug:"battle-of-delville-wood",name:"Battle of Delville Wood",img:"/images/encyclopedia/battle-of-delville-wood.jpg",artist:"SVG version, and changes: Grandiose Original map:Worldwari map13 largerview.jpg, US Military Inset map: Giro720, File...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Map_of_the_Battle_of_the_Somme,_1916.svg"},
-    governance:{slug:"balfour-declaration-of-1926",name:"Balfour Declaration of 1926",img:"/images/encyclopedia/balfour-declaration-of-1926.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ImperialConference.jpg"},
+    military:{slug:"battle-of-delville-wood",name:"Battle of Delville Wood",img:"/images/encyclopedia/battle-of-delville-wood.jpg",artist:"SVG version, and changes: Grandiose; Original map:Worldwari map13 largerview.jpg, US Military; Inset map: Giro720, File:France blank1.svg",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Map_of_the_Battle_of_the_Somme,_1916.svg"},
+    governance:{slug:"balfour-declaration-of-1926",name:"Balfour Declaration of 1926",img:"/images/encyclopedia/balfour-declaration-of-1926.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ImperialConference.jpg"},
     impact:{slug:"kliptown",name:"Kliptown",img:"/images/encyclopedia/kliptown.jpg",artist:"S. Honorine VOA",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kliptown_is_one_of_the_most_destitute_areas_of_the_large_Soweto_township,_South_Africa,_November_2012._(S._Honorine_VOA).jpg"},
-    decline:{slug:"j-g-strijdom",name:"J. G. Strijdom",img:"/images/encyclopedia/j-g-strijdom.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hans_Strijdom_(cropped).jpg"}
+    decline:{slug:"j-g-strijdom",name:"J. G. Strijdom",img:"/images/encyclopedia/j-g-strijdom.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hans_Strijdom_(cropped).jpg"}
   },
   "Republic of South Africa": {
     foundation:{slug:"hendrik-verwoerd",name:"Hendrik Verwoerd",img:"/images/encyclopedia/hendrik-verwoerd.jpg",artist:"Snikkers / Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Zuid_Afrikaanse_premier_dr._H._Verwoerd,_Bestanddeelnr_911-1297_(cropped).jpg"},
     socioeconomy:{slug:"sasol",name:"Sasol",img:"/images/encyclopedia/sasol.jpg",artist:"Tom Corser",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Sasol_Corporate_Office_Johannesburg.jpg"},
-    military:{slug:"south-african-border-war",name:"South African Border War",img:"/images/encyclopedia/south-african-border-war.jpg",artist:"Collage: User:Katangais. Individual constituent images used in the collage: User:Smikect, Chris Lofting, Allen Herweg...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:SABorder_War_Montage2.jpg"},
-    governance:{slug:"john-vorster",name:"John Vorster",img:"/images/encyclopedia/john-vorster.jpg",artist:"Unknown authorUnknown author",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:John-Vorster_(cropped).jpg"},
+    military:{slug:"south-african-border-war",name:"South African Border War",img:"/images/encyclopedia/south-african-border-war.jpg",artist:"Collage: Katangais. Individual constituent images used in the collage: Smikect, Chris Lofting, Allen Herweg...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:SABorder_War_Montage2.jpg"},
+    governance:{slug:"john-vorster",name:"John Vorster",img:"/images/encyclopedia/john-vorster.jpg",artist:"Unknown author",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:John-Vorster_(cropped).jpg"},
     impact:{slug:"ronald-reagan",name:"Ronald Reagan",img:"/images/encyclopedia/ronald-reagan.jpg",artist:"Michael Evans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg"},
     decline:{slug:"f-w-de-klerk",name:"F. W. de Klerk",img:"/images/encyclopedia/f-w-de-klerk.jpg",artist:"Carol M. Highsmith",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:F.W._de_Klerk_wait_to_speak_in_Philadelphia,_Pennsylvania_LCCN2011634246_(cropped).tif"}
   },
@@ -3105,8 +3105,8 @@ var SECTION_IMAGES = {
   "Republic of Somaliland": {
     foundation:{slug:"siad-barre",name:"Siad Barre",img:"/images/encyclopedia/siad-barre.jpg",artist:"Government of Somalia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Official_portrait_of_Major_General_Siad_Barre.jpg"},
     socioeconomy:{slug:"berbera",name:"Berbera",img:"/images/encyclopedia/berbera.jpg",artist:"Seepsimon",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Berbera_6666.png"},
-    military:{slug:"muhammad-haji-ibrahim-egal",name:"Muhammad Haji Ibrahim Egal",img:"/images/encyclopedia/muhammad-haji-ibrahim-egal.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_Haji_Ibrahim_Egal_1968_(3x4_cropped).jpg"},
-    governance:{slug:"dahir-riyale-kahin",name:"Dahir Riyale Kahin",img:"/images/encyclopedia/dahir-riyale-kahin.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dahir_Riyaale_Kahin_(3x4_cropped).jpg"},
+    military:{slug:"muhammad-haji-ibrahim-egal",name:"Muhammad Haji Ibrahim Egal",img:"/images/encyclopedia/muhammad-haji-ibrahim-egal.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_Haji_Ibrahim_Egal_1968_(3x4_cropped).jpg"},
+    governance:{slug:"dahir-riyale-kahin",name:"Dahir Riyale Kahin",img:"/images/encyclopedia/dahir-riyale-kahin.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dahir_Riyaale_Kahin_(3x4_cropped).jpg"},
     impact:{slug:"hargeisa",name:"Hargeisa",img:"/images/encyclopedia/hargeisa.jpg",artist:"Somaliland.com",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:HargeisaDrone.jpg"},
     decline:{slug:"zeila",name:"Zeila",img:"/images/encyclopedia/zeila.jpg",artist:"islamic-art-and-quotes.tumblr.com",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zeila,_Somaliland.jpg"}
   },
@@ -3138,7 +3138,7 @@ var SECTION_IMAGES = {
     structure:{slug:"petra",name:"Petra",img:"/images/encyclopedia/petra.jpg",artist:"Azurfrog",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Al_Deir_Petra.JPG"},
     speakers:{slug:"palmyra",name:"Palmyra",img:"/images/encyclopedia/palmyra.jpg",artist:"Bernard Gagnon",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Palmyra_03.jpg"},
     literature:{slug:"hebrew-bible",name:"Hebrew Bible",img:"/images/encyclopedia/hebrew-bible.jpg",artist:"LGLou",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Tanach.jpg"},
-    legacy:{slug:"jesus",name:"Jesus",img:"/images/encyclopedia/jesus.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg"}
+    legacy:{slug:"jesus",name:"Jesus",img:"/images/encyclopedia/jesus.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg"}
   },
   "Bahá'í Faith": {
     origins:{slug:"shiraz",name:"Shiraz",img:"/images/encyclopedia/shiraz.jpg",artist:"آرش (Arche)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Darvaze_Ghoran11.jpg"},
@@ -3146,14 +3146,14 @@ var SECTION_IMAGES = {
   },
   "Buddhism": {
     origins:{slug:"bodh-gaya",name:"Bodh Gaya",img:"/images/encyclopedia/bodh-gaya.jpg",artist:"Amitabha Gupta",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Mahabodhi_temple_at_Bodhgaya_in_Bihar_21.jpg"},
-    beliefs:{slug:"gautama-buddha",name:"Gautama Buddha",img:"/images/encyclopedia/gautama-buddha.jpg",artist:"พระมหาเทวประภาส วชิรญาณเมธี (ผู้ถ่าย-ปล่อยสัญญาอนุญาตภาพให้นำไปใช้ได้เพื่อการศึกษาโดยอยู่ภา่ยใต้ cc-by-sa-3.0) ผู้สร้...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg"},
+    beliefs:{slug:"gautama-buddha",name:"Gautama Buddha",img:"/images/encyclopedia/gautama-buddha.jpg",artist:"พระมหาเทวประภาส วชิรญาณเมธี (ผู้ถ่าย-ปล่อยสัญญาอนุญาตภาพให้นำไปใช้ได้เพื่อการศึกษาโดยอยู่ภา่ยใต้ cc-by-sa-3.0) …",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg"},
     texts:{slug:"tripitaka-koreana",name:"Tripitaka Koreana",img:"/images/encyclopedia/tripitaka-koreana.jpg",artist:"Bernard Gagnon",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Tripitaka_Koreana_02.jpg"},
     spread:{slug:"borobudur",name:"Borobudur",img:"/images/encyclopedia/borobudur.jpg",artist:"Heri nugroho",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Pradaksina.jpg"},
     community:{slug:"nalanda",name:"Nalanda",img:"/images/encyclopedia/nalanda.jpg",artist:"Odantapuribs",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Temple_No.-_3,_Nalanda_Archaeological_Site.jpg"},
     legacy:{slug:"buddhas-of-bamiyan",name:"Buddhas of Bamiyan",img:"/images/encyclopedia/buddhas-of-bamiyan.jpg",artist:"James Gordon",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Buddha_of_Bamiyan.jpg"}
   },
   "Christianity": {
-    origins:{slug:"jesus",name:"Jesus",img:"/images/encyclopedia/jesus.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg"},
+    origins:{slug:"jesus",name:"Jesus",img:"/images/encyclopedia/jesus.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg"},
     beliefs:{slug:"eucharist",name:"Eucharist",img:"/images/encyclopedia/eucharist.jpg",artist:"Nheyob, cropped by Tahc",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:St_Michael_the_Archangel,_Findlay,_OH_-_bread_and_wine_crop_1.jpg"},
     texts:{slug:"king-james-version",name:"King James Version",img:"/images/encyclopedia/king-james-version.jpg",artist:"Church of England",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:KJV-King-James-Version-Bible-first-edition-title-page-1611.jpg"},
     spread:{slug:"first-council-of-nicaea",name:"First Council of Nicaea",img:"/images/encyclopedia/first-council-of-nicaea.jpg",artist:"C messier",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%CE%9C%CE%B9%CF%87%CE%B1%CE%AE%CE%BB_%CE%94%CE%B1%CE%BC%CE%B1%CF%83%CE%BA%CE%B7%CE%BD%CF%8C%CF%82_-_%CE%91%CE%84_%CE%9F%CE%B9%CE%BA%CE%BF%CF%85%CE%BC%CE%B5%CE%BD%CE%B9%CE%BA%CE%AE_%CE%A3%CF%8D%CE%BD%CE%BF%CE%B4%CE%BF%CF%82_7741.jpg"},
@@ -3163,10 +3163,10 @@ var SECTION_IMAGES = {
   "Classical Chinese": {
     origins:{slug:"anyang",name:"Anyang",img:"/images/encyclopedia/anyang.jpg",artist:"Windmemories",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:20250831_Temple_of_Han_Qi_02.jpg"},
     structure:{slug:"wang-xizhi",name:"Wang Xizhi",img:"/images/encyclopedia/wang-xizhi.jpg",artist:"Unknown Chinese artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Wang_Xizhi_(cropped).jpg"},
-    speakers:{slug:"xuanzang",name:"Xuanzang",img:"/images/encyclopedia/xuanzang.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Xuanzang_w.jpg"},
+    speakers:{slug:"xuanzang",name:"Xuanzang",img:"/images/encyclopedia/xuanzang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Xuanzang_w.jpg"},
     literature:{slug:"records-of-the-grand-historian",name:"Records of the Grand Historian",img:"/images/encyclopedia/records-of-the-grand-historian.jpg",artist:"Zhonghua Book Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%8F%B2%E8%AE%B0.jpg"},
-    change:{slug:"hu-shi",name:"Hu Shi",img:"/images/encyclopedia/hu-shi.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hu_Shih_1960_color_Crop.jpg"},
-    legacy:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples,",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"}
+    change:{slug:"hu-shi",name:"Hu Shi",img:"/images/encyclopedia/hu-shi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hu_Shih_1960_color_Crop.jpg"},
+    legacy:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"}
   },
   "Confucianism": {
     origins:{slug:"confucius",name:"Confucius",img:"/images/encyclopedia/confucius.jpg",artist:"Anonymous Chinese painter of the Western Han period",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Confucius,_fresco_from_a_Western_Han_tomb_of_Dongping_County,_Shandong_province,_China_(cropped).jpg"},
@@ -3174,13 +3174,13 @@ var SECTION_IMAGES = {
     texts:{slug:"zhu-xi",name:"Zhu Xi",img:"/images/encyclopedia/zhu-xi.jpg",artist:"向史公哲曰",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E5%94%AF%E4%B8%80%E5%8F%AF%E9%9D%A0%E7%9A%84%E6%9C%B1%E7%86%B9%E7%94%BB%E5%83%8F.jpg"},
     spread:{slug:"qufu",name:"Qufu",img:"/images/encyclopedia/qufu.jpg",artist:"호고호",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Zhou_Gong_Miao_3.jpg"},
     community:{slug:"seoul",name:"Seoul",img:"/images/encyclopedia/seoul.jpg",artist:"Eunmi Park",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%EC%A4%91%ED%99%94%EC%A0%84%EC%9D%98_%EB%82%AE.jpg"},
-    legacy:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples,",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"}
+    legacy:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"}
   },
   "Daoism": {
     origins:{slug:"zhuangzi",name:"Zhuangzi",img:"/images/encyclopedia/zhuangzi.jpg",artist:"Hua Zili (華祖立)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E7%8E%84%E9%96%80%E5%8D%81%E5%AD%90%E5%9C%96_%E8%8E%8A%E5%AD%90.jpg"},
-    beliefs:{slug:"daodejing",name:"Daodejing",img:"/images/encyclopedia/daodejing.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mawangdui_LaoTsu_Ms2.JPG"},
+    beliefs:{slug:"daodejing",name:"Daodejing",img:"/images/encyclopedia/daodejing.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mawangdui_LaoTsu_Ms2.JPG"},
     texts:{slug:"ge-hong",name:"Ge Hong",img:"/images/encyclopedia/ge-hong.jpg",artist:"Gan Bozong (Tang period, 618-907)",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Chinese_woodcut,_Famous_medical_figures;_Portrait_of_Ge_Hong_Wellcome_L0039323.jpg"},
-    spread:{slug:"quanzhen-school",name:"Quanzhen School",img:"/images/encyclopedia/quanzhen-school.jpg",artist:"Photo taken by User:Vmenkov. Painter's name is not known to the photographer. Although there is a fair amount of sign...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Changchun-Temple-Master-and-disciples-painting-0316.jpg"},
+    spread:{slug:"quanzhen-school",name:"Quanzhen School",img:"/images/encyclopedia/quanzhen-school.jpg",artist:"Photo taken by Vmenkov. Painter's name is not known to the photographer. Although there is a fair amount of sign...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Changchun-Temple-Master-and-disciples-painting-0316.jpg"},
     community:{slug:"wang-chongyang",name:"Wang Chongyang",img:"/images/encyclopedia/wang-chongyang.jpg",artist:"Phoenix Darshan",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Wang_Chongyang.jpg"},
     legacy:{slug:"tao-yuanming",name:"Tao Yuanming",img:"/images/encyclopedia/tao-yuanming.jpg",artist:"Chen Hongshou",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ch%27en_Hung-shou_002.jpg"}
   },
@@ -3194,7 +3194,7 @@ var SECTION_IMAGES = {
   },
   "Ancient Greek religion": {
     origins:{slug:"hesiod",name:"Hesiod",img:"/images/encyclopedia/hesiod.jpg",artist:"Yair Haklai",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Hesiod_(%3F)-Ancient_Roman_busts_in_the_Neues_Museum.jpg"},
-    beliefs:{slug:"zeus",name:"Zeus",img:"/images/encyclopedia/zeus.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zeus_Otricoli_Pio-Clementino_Inv257.jpg"},
+    beliefs:{slug:"zeus",name:"Zeus",img:"/images/encyclopedia/zeus.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zeus_Otricoli_Pio-Clementino_Inv257.jpg"},
     texts:{slug:"theogony",name:"Theogony",img:"/images/encyclopedia/theogony.jpg",artist:"Hesiod",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hesiod,_Theogony,_Venice,_Gr._464.jpg"},
     spread:{slug:"paestum",name:"Paestum",img:"/images/encyclopedia/paestum.jpg",artist:"Oliver-Bonjoch",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Veduta_di_Paestum_2010.jpg"},
     community:{slug:"parthenon",name:"Parthenon",img:"/images/encyclopedia/parthenon.jpg",artist:"Steve Swayne",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg"},
@@ -3209,9 +3209,9 @@ var SECTION_IMAGES = {
   "Hinduism": {
     origins:{slug:"vedas",name:"Vedas",img:"/images/encyclopedia/vedas.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1500-1200_BCE_Rigveda,_manuscript_page_sample_i,_Mandala_1,_Hymn_1_(Sukta_1),_Adhyaya_1,_lines_1.1.1_to_1.1.9,_Sanskrit,_Devanagari.jpg"},
     beliefs:{slug:"vishnu",name:"Vishnu",img:"/images/encyclopedia/vishnu.jpg",artist:"Manaku of Guler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vishnu_from_Gita_Govinda.jpg"},
-    texts:{slug:"bhagavad-gita",name:"Bhagavad Gita",img:"/images/encyclopedia/bhagavad-gita.jpg",artist:"Unknown artistUnknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg"},
+    texts:{slug:"bhagavad-gita",name:"Bhagavad Gita",img:"/images/encyclopedia/bhagavad-gita.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg"},
     spread:{slug:"angkor-wat",name:"Angkor Wat",img:"/images/encyclopedia/angkor-wat.jpg",artist:"Bjørn Christian Tørrissen",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Angkor_Wat.jpg"},
-    community:{slug:"mirabai",name:"Mirabai",img:"/images/encyclopedia/mirabai.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kangra_painting_of_Mirabai,_the_female_Bhakti_saint.jpg"},
+    community:{slug:"mirabai",name:"Mirabai",img:"/images/encyclopedia/mirabai.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kangra_painting_of_Mirabai,_the_female_Bhakti_saint.jpg"},
     legacy:{slug:"madurai",name:"Madurai",img:"/images/encyclopedia/madurai.jpg",artist:"KennyOMG",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Meenakshi_Amman_West_Tower.jpg"}
   },
   "Islam": {
@@ -3225,21 +3225,21 @@ var SECTION_IMAGES = {
   "Jainism": {
     origins:{slug:"mahavira",name:"Mahavira",img:"/images/encyclopedia/mahavira.jpg",artist:"Dayodaya",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mahavir.jpg"},
     beliefs:{slug:"parshvanatha",name:"Parshvanatha",img:"/images/encyclopedia/parshvanatha.jpg",artist:"Fawks3107",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Jirawala_Parshwanath.png"},
-    texts:{slug:"hemachandra",name:"Hemachandra",img:"/images/encyclopedia/hemachandra.jpg",artist:"hi:User:अनुनाद सिंह",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hemachandra.gif"},
+    texts:{slug:"hemachandra",name:"Hemachandra",img:"/images/encyclopedia/hemachandra.jpg",artist:"अनुनाद सिंह",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hemachandra.gif"},
     spread:{slug:"gommateshwara-statue",name:"Gommateshwara statue",img:"/images/encyclopedia/gommateshwara-statue.jpg",artist:"Kuldeep S",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Gommateshwara,_Shravanabelagola.jpg"},
     community:{slug:"shatrunjaya",name:"Shatrunjaya",img:"/images/encyclopedia/shatrunjaya.jpg",artist:"Trinidade",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Satrunjaya_Hill_Stairway.jpg"},
-    legacy:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott &amp; Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"}
+    legacy:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"}
   },
   "Judaism": {
     origins:{slug:"moses",name:"Moses",img:"/images/encyclopedia/moses.jpg",artist:"Rembrandt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_079.jpg"},
     beliefs:{slug:"maimonides",name:"Maimonides",img:"/images/encyclopedia/maimonides.jpg",artist:"Blaisio Ugolino",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Moses_Maimonides_in_Thesaurus_antiquitatum_sacrarum.tif"},
     texts:{slug:"hebrew-bible",name:"Hebrew Bible",img:"/images/encyclopedia/hebrew-bible.jpg",artist:"LGLou",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Tanach.jpg"},
     spread:{slug:"simon-bar-kokhba",name:"Simon bar Kokhba",img:"/images/encyclopedia/simon-bar-kokhba.jpg",artist:"Arthur Szyk",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Arthur_Szyk_(1894-1951)._Bar_Kochba_(1927),_Paris.jpg"},
-    community:{slug:"safed",name:"Safed",img:"/images/encyclopedia/safed.jpg",artist:"No machine-readable author provided. Beny Shlevich assumed (based on copyright claims).",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Safed1.jpg"},
+    community:{slug:"safed",name:"Safed",img:"/images/encyclopedia/safed.jpg",artist:"Beny Shlevich",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Safed1.jpg"},
     legacy:{slug:"temple-in-jerusalem",name:"Temple in Jerusalem",img:"/images/encyclopedia/temple-in-jerusalem.jpg",artist:"Berthold Werner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jerusalem_Modell_BW_2.JPG"}
   },
   "Latin": {
-    origins:{slug:"roman-forum",name:"Roman Forum",img:"/images/encyclopedia/roman-forum.jpg",artist:"This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg"},
+    origins:{slug:"roman-forum",name:"Roman Forum",img:"/images/encyclopedia/roman-forum.jpg",artist:"This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. …",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg"},
     structure:{slug:"cicero",name:"Cicero",img:"/images/encyclopedia/cicero.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"},
     speakers:{slug:"jerome",name:"Jerome",img:"/images/encyclopedia/jerome.jpg",artist:"Matthias Stom",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:MatthiasStom-SaintJerome-Nantes.jpg"},
     literature:{slug:"virgil",name:"Virgil",img:"/images/encyclopedia/virgil.jpg",artist:"Boyd Dwyer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Virgil_mosaic_in_the_Bardo_National_Museum_(Tunis)_(12241228546).jpg"},
@@ -3255,15 +3255,15 @@ var SECTION_IMAGES = {
   },
   "Mesoamerican religion": {
     origins:{slug:"pyramid-of-the-sun",name:"Pyramid of the Sun",img:"/images/encyclopedia/pyramid-of-the-sun.jpg",artist:"Burkhard Mücke",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:2020-02-11_Teotihuacan_la_Avenida_de_los_Muertos_y_la_Pir%C3%A1mide_del_Sol.jpg"},
-    beliefs:{slug:"tlaloc",name:"Tlaloc",img:"/images/encyclopedia/tlaloc.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tlaloc_glyph.svg"},
-    texts:{slug:"codex-zouche-nuttall",name:"Codex Zouche-Nuttall",img:"/images/encyclopedia/codex-zouche-nuttall.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codex_Zouche-Nuttall,_page_20.jpg"},
+    beliefs:{slug:"tlaloc",name:"Tlaloc",img:"/images/encyclopedia/tlaloc.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tlaloc_glyph.svg"},
+    texts:{slug:"codex-zouche-nuttall",name:"Codex Zouche-Nuttall",img:"/images/encyclopedia/codex-zouche-nuttall.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codex_Zouche-Nuttall,_page_20.jpg"},
     spread:{slug:"tenochtitlan",name:"Tenochtitlan",img:"/images/encyclopedia/tenochtitlan.jpg",artist:"thomas kole",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Vista_completa_de_Tenochtitl%C3%A1n.jpg"},
     community:{slug:"el-castillo-chichen-itza",name:"El Castillo, Chichén Itzá",img:"/images/encyclopedia/el-castillo-chichen-itza.jpg",artist:"Daniel Schwen",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Chichen_Itza_3.jpg"},
     legacy:{slug:"popol-vuh",name:"Popol Vuh",img:"/images/encyclopedia/popol-vuh.jpg",artist:"Francisco Ximénez",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Popol_vuh.jpg"}
   },
   "Nahuatl": {
     origins:{slug:"tenochtitlan",name:"Tenochtitlan",img:"/images/encyclopedia/tenochtitlan.jpg",artist:"thomas kole",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Vista_completa_de_Tenochtitl%C3%A1n.jpg"},
-    structure:{slug:"codex-mendoza",name:"Codex Mendoza",img:"/images/encyclopedia/codex-mendoza.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:CodexMendoza01.jpg"},
+    structure:{slug:"codex-mendoza",name:"Codex Mendoza",img:"/images/encyclopedia/codex-mendoza.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:CodexMendoza01.jpg"},
     speakers:{slug:"nahuas",name:"Nahuas",img:"/images/encyclopedia/nahuas.jpg",artist:"Fernando Rosales",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ni%C3%B1as_Nahuas.jpg"},
     literature:{slug:"florentine-codex",name:"Florentine Codex",img:"/images/encyclopedia/florentine-codex.jpg",artist:"Bernardino de Sahagún",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codex_florentino_51_9.jpg"},
     change:{slug:"popocatepetl",name:"Popocatépetl",img:"/images/encyclopedia/popocatepetl.jpg",artist:"Jakub Hejtmánek",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mexico-Popocatepetl.jpg"}
@@ -3295,7 +3295,7 @@ var SECTION_IMAGES = {
     origins:{slug:"darius-i",name:"Darius I",img:"/images/encyclopedia/darius-i.jpg",artist:"Rumlu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darius_I.jpg"},
     structure:{slug:"shahnameh",name:"Shahnameh",img:"/images/encyclopedia/shahnameh.jpg",artist:"Attributed to Sultan Muhammad",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Court_of_Gayumars_(Cropped).jpg"},
     speakers:{slug:"bukhara",name:"Bukhara",img:"/images/encyclopedia/bukhara.jpg",artist:"Euyasik",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kalon-Ensemble_Buchara.jpg"},
-    literature:{slug:"layla-and-majnun",name:"Layla and Majnun",img:"/images/encyclopedia/layla-and-majnun.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Layla_and_Majnun2.jpg"},
+    literature:{slug:"layla-and-majnun",name:"Layla and Majnun",img:"/images/encyclopedia/layla-and-majnun.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Layla_and_Majnun2.jpg"},
     change:{slug:"hafez",name:"Hafez",img:"/images/encyclopedia/hafez.jpg",artist:"Anselm Feuerbach",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Anselm_Feuerbach_Hafis_vor_der_Schenke_(cropped).jpg"},
     legacy:{slug:"rumi",name:"Rumi",img:"/images/encyclopedia/rumi.jpg",artist:"Hossein Behzad",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_(cropped).jpg"}
   },
@@ -3308,7 +3308,7 @@ var SECTION_IMAGES = {
     legacy:{slug:"machu-picchu",name:"Machu Picchu",img:"/images/encyclopedia/machu-picchu.jpg",artist:"Draceane",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Machu_Picchu,_2023_(012).jpg"}
   },
   "Sanskrit": {
-    origins:{slug:"rigveda",name:"Rigveda",img:"/images/encyclopedia/rigveda.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rigveda_MS2097.jpg"},
+    origins:{slug:"rigveda",name:"Rigveda",img:"/images/encyclopedia/rigveda.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rigveda_MS2097.jpg"},
     structure:{slug:"devanagari",name:"Devanagari",img:"/images/encyclopedia/devanagari.jpg",artist:"Symphonicallyu",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Devanagari_Varnamala.png"},
     speakers:{slug:"rudradaman-i",name:"Rudradaman I",img:"/images/encyclopedia/rudradaman-i.jpg",artist:"Uploadalt",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Rudradaman_coin.jpg"},
     literature:{slug:"mahabharata",name:"Mahabharata",img:"/images/encyclopedia/mahabharata.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kurukshetra.jpg"},
@@ -3316,20 +3316,20 @@ var SECTION_IMAGES = {
     legacy:{slug:"kalidasa",name:"Kalidasa",img:"/images/encyclopedia/kalidasa.jpg",artist:"William Douglas Almond",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kalidasa_inditing_the_cloud_Messenger,_A.D._375.jpg"}
   },
   "Shinto": {
-    origins:{slug:"nihon-shoki",name:"Nihon Shoki",img:"/images/encyclopedia/nihon-shoki.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nihonshoki_tanaka_version.jpg"},
-    spread:{slug:"hirohito",name:"Hirohito",img:"/images/encyclopedia/hirohito.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hirohito_in_dress_uniform_(cropped).jpg"},
+    origins:{slug:"nihon-shoki",name:"Nihon Shoki",img:"/images/encyclopedia/nihon-shoki.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nihonshoki_tanaka_version.jpg"},
+    spread:{slug:"hirohito",name:"Hirohito",img:"/images/encyclopedia/hirohito.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hirohito_in_dress_uniform_(cropped).jpg"},
     community:{slug:"ise-grand-shrine",name:"Ise Grand Shrine",img:"/images/encyclopedia/ise-grand-shrine.jpg",artist:"N yotarou",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Naiku_04.jpg"},
     legacy:{slug:"itsukushima",name:"Itsukushima",img:"/images/encyclopedia/itsukushima.jpg",artist:"Bernard Gagnon",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Miyajima_Island.jpg"}
   },
   "Sikhism": {
     origins:{slug:"golden-temple",name:"Golden Temple",img:"/images/encyclopedia/golden-temple.jpg",artist:"Shagil Kannur",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:The_Golden_Temple_of_Amrithsar_7.jpg"},
-    texts:{slug:"guru-gobind-singh",name:"Guru Gobind Singh",img:"/images/encyclopedia/guru-gobind-singh.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Painting_of_Guru_Gobind_Singh,_found_within_the_Anandpuri_Hazuri_Bir_codex_of_the_Dasam_Granth,_ca.1690%27s%E2%80%931700%27s_(detail).jpg"},
+    texts:{slug:"guru-gobind-singh",name:"Guru Gobind Singh",img:"/images/encyclopedia/guru-gobind-singh.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Painting_of_Guru_Gobind_Singh,_found_within_the_Anandpuri_Hazuri_Bir_codex_of_the_Dasam_Granth,_ca.1690%27s%E2%80%931700%27s_(detail).jpg"},
     spread:{slug:"ranjit-singh",name:"Ranjit Singh",img:"/images/encyclopedia/ranjit-singh.jpg",artist:"Colonel James Skinner (1778-1841)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Maharaj_Ranjit_Singh.jpg"},
     community:{slug:"akal-takht",name:"Akal Takht",img:"/images/encyclopedia/akal-takht.jpg",artist:"Paasikivi",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:AkalTakhtGoldenTempleComplex.jpg"}
   },
   "Sumerian": {
     origins:{slug:"ur",name:"Ur",img:"/images/encyclopedia/ur.jpg",artist:"Steve Harris",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Urimki_inscription.jpg"},
-    structure:{slug:"sumerian-king-list",name:"Sumerian King List",img:"/images/encyclopedia/sumerian-king-list.jpg",artist:"Photograph: unknown&gt; Transcription: Stephen Herbert Langdon (1876-1937)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Weld-Blundell_Prism_with_transcription_by_Stephen_Herbert_Langdon_(1876-1937).jpg"},
+    structure:{slug:"sumerian-king-list",name:"Sumerian King List",img:"/images/encyclopedia/sumerian-king-list.jpg",artist:"Photograph: unknown> Transcription: Stephen Herbert Langdon (1876-1937)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Weld-Blundell_Prism_with_transcription_by_Stephen_Herbert_Langdon_(1876-1937).jpg"},
     speakers:{slug:"nippur",name:"Nippur",img:"/images/encyclopedia/nippur.jpg",artist:"Jasmine N. Walthall, U.S. Army",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ruins_from_a_temple_in_Naffur.jpg"},
     literature:{slug:"enheduanna",name:"Enheduanna",img:"/images/encyclopedia/enheduanna.jpg",artist:"Mefman00",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Enheduanna,_daughter_of_Sargon_of_Akkad.jpg"},
     change:{slug:"gudea",name:"Gudea",img:"/images/encyclopedia/gudea.jpg",artist:"Jastrow",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gudea_of_Lagash_Girsu.jpg"},
@@ -3349,7 +3349,7 @@ var SECTION_IMAGES = {
   "Zoroastrianism": {
     origins:{slug:"cyrus-the-great",name:"Cyrus the Great",img:"/images/encyclopedia/cyrus-the-great.jpg",artist:"Surenae",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cyrus_II_(The_Great)_(cropped).jpg"},
     beliefs:{slug:"mithra",name:"Mithra",img:"/images/encyclopedia/mithra.jpg",artist:"Philippe Chavin",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Taq-e_Bostan_-_High-relief_of_Ardeshir_II_investiture.jpg"},
-    texts:{slug:"ardashir-i",name:"Ardashir I",img:"/images/encyclopedia/ardashir-i.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dinar_of_Ardashir_I_(cropped).jpg"},
+    texts:{slug:"ardashir-i",name:"Ardashir I",img:"/images/encyclopedia/ardashir-i.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dinar_of_Ardashir_I_(cropped).jpg"},
     spread:{slug:"yazd",name:"Yazd",img:"/images/encyclopedia/yazd.jpg",artist:"Ninara from Helsinki, Finland",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Iran_1343_Yazd_(8665215641).jpg"},
     community:{slug:"fire-temple",name:"Fire temple",img:"/images/encyclopedia/fire-temple.jpg",artist:"Uploaded to Flickr by Adam Jones(Copied to Wikimedia by nagualdesign)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Zoroastrian_Fire_Temple,_Yazd_(2).jpg"},
     legacy:{slug:"dadabhai-naoroji",name:"Dadabhai Naoroji",img:"/images/encyclopedia/dadabhai-naoroji.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dadabhai_Naoroji_1889.jpg"}
@@ -3357,7 +3357,7 @@ var SECTION_IMAGES = {
   "Ancient Greek": {
     origins:{slug:"linear-b",name:"Linear B",img:"/images/encyclopedia/linear-b.jpg",artist:"Sharon Mollerus",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:NAMA_Linear_B_tablet_of_Pylos.jpg"},
     structure:{slug:"homer",name:"Homer",img:"/images/encyclopedia/homer.jpg",artist:"Photograph by Mike Peel (www.mikepeel.net).",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Homer_At_the_British_Museum_2024_(3x4_cropped).jpg"},
-    speakers:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown authorUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
+    speakers:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"},
     literature:{slug:"iliad",name:"Iliad",img:"/images/encyclopedia/iliad.jpg",artist:"Homer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Illiad_fragmented_papyrus.png"},
     change:{slug:"manuel-chrysoloras",name:"Manuel Chrysoloras",img:"/images/encyclopedia/manuel-chrysoloras.jpg",artist:"Paolo Uccello.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manuel-chrysoloras-paolo-uccello-louvre-15th.jpg"},
     legacy:{slug:"aristotle",name:"Aristotle",img:"/images/encyclopedia/aristotle.jpg",artist:"After Lysippos",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg"}

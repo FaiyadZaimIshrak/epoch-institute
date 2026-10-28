@@ -30,8 +30,7 @@
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Year by Year","item":"https://the-epoch-institute.org/years/"},{"@type":"ListItem","position":3,"name":"1571"}]},{"@type":"CollectionPage","name":"What Happened in 1571? Events, Births and Deaths — The Epoch Institute","description":"1571 in world history: The Holy League defeats the Ottoman fleet at Lepanto; Battle of Lepanto; Battle of Bangkusay Channel.","url":"https://the-epoch-institute.org/years/1571","temporalCoverage":"1571","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body data-nav="years">
 

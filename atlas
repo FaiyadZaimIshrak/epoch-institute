@@ -26,18 +26,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-atlas.jpg">
-<link rel="stylesheet" href="/shared.css?v=57">
+<link rel="stylesheet" href="/shared.css?v=58">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Atlas"}]},{"@type":"Map","name":"Atlas of States and Empires","url":"https://the-epoch-institute.org/atlas","description":"An interactive atlas of the recorded states of the world in any year from 3000 BCE to today.","mapType":"https://schema.org/PoliticalMap","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B163TLDMP4');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body>
 
@@ -66,7 +60,9 @@
       <button type="button" id="atl-v-globe" aria-pressed="true">&#9679; Globe</button>
       <button type="button" id="atl-v-flat" aria-pressed="false">&#9645; Flat map</button>
     </div>
-    <div class="atl-presets" id="atl-presets" role="group" aria-label="Zoom to a region"></div>
+    <div class="atl-presets" id="atl-presets" role="group" aria-label="Zoom to a region"><!-- build:atlas-presets -->
+<button type="button">World</button><button type="button">Europe</button><button type="button">Mediterranean</button><button type="button">Middle East</button><button type="button">Africa</button><button type="button">South Asia</button><button type="button">East Asia</button><button type="button">Southeast Asia</button><button type="button">Central Asia</button><button type="button">The Americas</button><button type="button">Oceania</button>
+<!-- /build:atlas-presets --></div>
     <div class="atl-filters">
       <label class="atl-check"><input type="checkbox" id="atl-prof"> Profiles only</label>
       <select id="atl-kind" aria-label="Kind of state"><option value="">All kinds of state</option></select>
@@ -110,12 +106,11 @@
 </div>
 </main>
 
-<script src="/shared-data.js?v=9"></script>
-<script src="/shared-nav.js?v=40"></script>
+<script src="/shared-nav.js?v=41"></script>
 <script src="/maps/basemap.js?v=4478c4912d"></script>
 <script src="/maps/atlas-data.js?v=97751474c0"></script>
 <script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=47369e946f', ATLAS_YEARS_SRC = '/data/years.json?v=5b358bedb0';</script>
-<script src="/atlas.js?v=6"></script>
+<script src="/atlas.js?v=7"></script>
 <script>initNav('atlas');</script>
 </body>
 </html>

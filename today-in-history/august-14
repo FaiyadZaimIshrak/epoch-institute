@@ -31,8 +31,7 @@
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Today in History","item":"https://the-epoch-institute.org/today-in-history/"},{"@type":"ListItem","position":3,"name":"14 August"}]},{"@type":"CollectionPage","name":"What Happened on 14 August in History — The Epoch Institute","description":"On this day, 14 August: 1040, King Duncan I of Scotland is killed by Macbeth; 1457, The Mainz Psalter becomes the first dated printed book; 1900…","url":"https://the-epoch-institute.org/today-in-history/august-14"}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body data-nav="today">
 

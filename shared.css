@@ -18,6 +18,7 @@
     --bg: #0b0c10;
     --surface: #12141a;
     --border: #2a2d3a;
+    --field-border: #606478;   /* form fields: 3:1 against the page (WCAG 1.4.11); --border is for cards and rules */
     --text: #e8e0d0;
     --muted: #958a76;
     --gold: #c9a84c;
@@ -118,6 +119,7 @@
   .tab {
     font-family: var(--font-ui);
     font-size: 12px;
+    line-height: 16px; /* not "normal": that changes with the font, and the late font swap moved the explorer's chart */
     letter-spacing: 0.06em;
     padding: 5px 12px;
     border: 1px solid var(--border);
@@ -353,6 +355,7 @@
     --bg: #f4efe4;
     --surface: #ebe4d5;
     --border: #c8b896;
+    --field-border: #8f7d58;
     --text: #2a2010;
     --muted: #665632;
     --gold: #76590f;
@@ -2558,6 +2561,23 @@ h2.profile-section-title { font-weight: 400; }
 .site-search-results li.ss-all { border-top: 1px solid var(--border); margin-top: 4px; padding-top: 4px; }
 .site-search-results li.ss-all a { justify-content: flex-start; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); }
 .site-search-hint { font-family: var(--font-ui); font-size: 14px; color: var(--muted); padding: 14px 18px; margin: 0; }
+/* results with a picture or a glyph, the name, the kind; a profile's own encyclopedia entry as a small second link */
+.site-search-results li[role="option"]:not(.ss-all):not(.ss-rec) > a:first-child { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 2px 12px; padding: 7px 10px; }
+.ss-pic { width: 40px; height: 40px; border-radius: 2px; overflow: hidden; background: var(--bg); }
+.ss-pic img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.ss-pic img.ss-emblem { object-fit: contain; object-position: center; }
+.ss-name { min-width: 0; overflow-wrap: anywhere; }
+.site-search-results a.ss-twin { display: inline-block; margin: -6px 0 6px 62px; padding: 2px 0; font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--gold); background: none; text-decoration: underline; text-underline-offset: 3px; }
+.ss-head { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 8px 12px 2px; }
+.ss-clear button, .ss-dym { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: none; border: 0; padding: 4px 2px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.ss-dym { padding: 4px 0; font-size: inherit; }
+.ss-clear { padding: 4px 10px 6px; }
+@media (max-width: 520px) {
+  .site-search-results li[role="option"]:not(.ss-all):not(.ss-rec) > a:first-child { grid-template-columns: 40px minmax(0, 1fr); }
+  .site-search-results li[role="option"]:not(.ss-all):not(.ss-rec) > a:first-child .ss-pic { grid-row: span 2; }
+  .site-search-results .ss-type { grid-column: 2; white-space: normal; }
+  .ss-name { font-size: 17px; }
+}
 
 /* iPhones (Safari and the in-app browsers built on it) zoom into a field under 16px when it is tapped, and stay
    zoomed: on touch screens every field is 16px */
@@ -3143,6 +3163,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .st-random { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 2px; padding: 5px 12px; cursor: pointer; text-decoration: none; letter-spacing: 0; text-transform: none; }
 .st-random:hover { border-color: var(--gold); }
 .st-list { list-style: none; padding: 0; }
+.st-list:empty { min-height: 100vh; } /* the list arrives with the register: until then "Browse by region" waits below the fold, so it does not jump */
 .st-item a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 10px 0; border-bottom: 0.5px solid var(--border); color: var(--text); text-decoration: none; }
 .st-item a:hover .st-name { color: var(--gold); }
 .st-name { font-size: 18px; font-weight: 600; min-width: 0; }
@@ -4793,7 +4814,7 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
    Brighter colours (a night sky with the dark theme, warm paper with the light one), rounder type and corners,
    bigger text; long pages show their short version first ("In short", "Read the whole story"). */
 :root[data-kids="1"] {
-  --bg: #17123a; --surface: #221b4f; --border: #3d3480; --text: #f6f1ff; --muted: #b9addf;
+  --bg: #17123a; --surface: #221b4f; --border: #3d3480; --field-border: #7a6fc0; --text: #f6f1ff; --muted: #b9addf;
   --gold: #ffc247; --gold-light: #ffd97a; --gold-rgb: 255,194,71; --gold-light-rgb: 255,217,122;
   --error: #ff6b6b; --success: #4cd38a; --shadow: rgba(0,0,0,0.45); --overlay: rgba(10,6,40,0.75); --shimmer-mid: rgba(61,52,128,0.5);
   --font-display: 'Baloo 2', 'Nunito', 'Segoe UI', system-ui, sans-serif;
@@ -4803,7 +4824,7 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
   --kd-pop1: #ff7eb6; --kd-pop2: #6fd6ff; --kd-pop2-rgb: 111,214,255; --kd-pop3: #8be38b;
 }
 :root[data-kids="1"][data-theme="light"] {
-  --bg: #fff8ea; --surface: #ffffff; --border: #f0d9a8; --text: #2a2147; --muted: #6a6090;
+  --bg: #fff8ea; --surface: #ffffff; --border: #f0d9a8; --field-border: #a8873f; --text: #2a2147; --muted: #6a6090;
   --gold: #c2410c; --gold-light: #9a3412; --gold-rgb: 234,88,12; --gold-light-rgb: 154,52,18;
   --error: #d6336c; --success: #2f9e44; --shadow: rgba(80,50,0,0.16); --overlay: rgba(42,33,71,0.6); --shimmer-mid: rgba(240,217,168,0.6);
   --kd-pop1: #e64980; --kd-pop2: #1c7ed6; --kd-pop2-rgb: 28,126,214; --kd-pop3: #2f9e44;
@@ -4927,6 +4948,12 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) { .kd-owl, .kd-owl .kd-blink, [data-kids="1"] .nav-kids-btn { animation: none; } }
 
 /* ── Print: black on white, without the site's controls ── */
+/* Form fields: an outline that stands out from the page (3:1, WCAG 1.4.11) in both themes and in Kids mode. Fields drawn
+   without a border stay so; a focused field keeps its own focus colour. */
+:is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="submit"], [type="button"], [type="reset"], [type="color"], [type="hidden"], [type="image"], [type="file"]), select, textarea):not(:focus) { border-color: var(--field-border); }
+.srch-dym { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+.srch-dym a { color: var(--gold); font-weight: 600; }
+
 @media print {
   :root, :root[data-theme="dark"], :root[data-theme="light"] { --bg: #fff; --surface: #fff; --text: #111; --muted: #555; --gold: #6b4f12; --gold-light: #6b4f12; --border: #ccc; }
   html, body { background: #fff !important; color: #111 !important; }

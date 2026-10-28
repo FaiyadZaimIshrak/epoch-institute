@@ -347,7 +347,7 @@ initNav('games');
     function start() {
       if (H.ready || H.loading) return;
       H.loading = true;
-      (window.d3 && d3.geoOrthographic ? Promise.resolve() : loadScript('https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js'))
+      (window.d3 && d3.geoOrthographic ? Promise.resolve() : loadScript('/d3-geo.js?v=1'))
         .then(function () { return window.ATLAS_GLOBE ? null : loadScript(HUNT_SRC.land); })
         .then(function () { return window.ATLAS ? null : loadScript(HUNT_SRC.data); })
         .then(init)

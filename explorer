@@ -24,17 +24,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-explorer.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/explorer">
-<link rel="stylesheet" href="/shared.css?v=57">
+<link rel="stylesheet" href="/shared.css?v=58">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B163TLDMP4');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body>
 <main id="main">
@@ -183,8 +178,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="/shared-data.js?v=9"></script>
-<script src="/point-descs.js?v=3" async></script>
-<script src="/shared-nav.js?v=40"></script>
+<script src="/shared-nav.js?v=41"></script>
 <script>
 initNav('explorer');
 attachShareListeners(document.getElementById('explorer-share-wrap'), 'https://the-epoch-institute.org/explorer');
@@ -267,6 +261,17 @@ const areaGen = d3.area()
   .curve(d3.curveCatmullRom.alpha(0.5));
 
 const tooltip = document.getElementById("tooltip");
+
+// The point descriptions (632 KB compressed) are needed only once an empire is picked or searched: loaded then, and the
+// dots drawn again when they arrive.
+let pointDescsAsked = false;
+function loadPointDescs() {
+  if (pointDescsAsked || typeof POINT_DESCS !== "undefined") return;
+  pointDescsAsked = true;
+  const s = document.createElement("script"); s.src = "/point-descs.js?v=3"; s.async = true;
+  s.onload = () => { if (soloEmpire || searchTerm) render(); };
+  document.head.appendChild(s);
+}
 
 // ── Helper functions ───────────────────────────────────────────────────────
 function formatYear(y) {
@@ -824,6 +829,7 @@ function render() {
 
   dotsG.selectAll("*").remove();
   if (soloEmpire || searchTerm) {
+    loadPointDescs();
     const dotEmpires = soloEmpire
       ? visible.filter(e => e.name === soloEmpire)
       : visible.filter(e => e.name.toLowerCase().includes(searchTerm));

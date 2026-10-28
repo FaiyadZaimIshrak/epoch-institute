@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="Five thousand years of states, empires and civilisations: profiles, an encyclopedia, an atlas, country histories and century pages.">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=57">
+<link rel="stylesheet" href="/shared.css?v=58">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -63,13 +63,7 @@
 }
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B163TLDMP4');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body>
 <main id="main" class="home">
@@ -240,7 +234,7 @@
 </div>
 
 <script src="/shared-data.js?v=9"></script>
-<script src="/shared-nav.js?v=40"></script>
+<script src="/shared-nav.js?v=41"></script>
 <script src="/home-data.js?v=14"></script>
 <script src="/reading-paths.js?v=3"></script>
 <script src="/quiz.js?v=6"></script>
@@ -657,7 +651,7 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
   for (var i = 0; i < HOME_GLOBE.length; i += 3) pts.push([HOME_GLOBE[i] / 100, HOME_GLOBE[i + 1] / 100, HOME_GLOBE[i + 2]]);
   function start() {
     var s = document.createElement('script');
-    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js';
+    s.src = '/d3-geo.js?v=1';
     if (window.d3 && d3.geoOrthographic) return land();
     s.onload = land; document.head.appendChild(s);
   }
@@ -666,28 +660,46 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
     var s = document.createElement('script'); s.src = HOME_GLOBE_SRC; s.onload = init; document.head.appendChild(s);
   }
   function init() {
+    // coastlines thinned to about a third of a degree: at this size the rest is under a pixel and only costs time
     var polys = ATLAS_GLOBE.rings.map(function (fl) {
-      var ring = []; for (var i = 0; i < fl.length; i += 2) ring.push([fl[i] / 100, fl[i + 1] / 100]);
+      var ring = [], px = 1e9, py = 1e9;
+      for (var i = 0; i < fl.length; i += 2) {
+        var x = fl[i] / 100, y = fl[i + 1] / 100;
+        if (Math.abs(x - px) + Math.abs(y - py) >= 0.3 || i >= fl.length - 2) { ring.push([x, y]); px = x; py = y; }
+      }
+      if (ring.length < 4) return null;
       if (d3.geoArea({ type: 'Polygon', coordinates: [ring] }) > 2 * Math.PI) ring.reverse();
       return [ring];
-    });
+    }).filter(Boolean);
     var geo = { type: 'MultiPolygon', coordinates: polys }, grat = d3.geoGraticule().step([20, 20])();
     var ctx = cv.getContext('2d'), proj = d3.geoOrthographic().clipAngle(90), path = d3.geoPath(proj, ctx);
-    var dpr = Math.min(2, window.devicePixelRatio || 1), lng = 20, running = true, last = null;
+    var dpr = Math.min(2, window.devicePixelRatio || 1), lng = 20, running = true, looping = false, last = null, lastDraw = 0;
+    var step = matchMedia('(pointer: coarse)').matches ? 50 : 33;   // 20 or 30 frames a second: the turn is slow enough to look the same
+    var g, gold, text;   // the theme's colours, read once and again when the theme or Kids mode changes
+    function colours() {
+      var cs = getComputedStyle(document.documentElement); g = (cs.getPropertyValue('--gold-rgb') || '201,168,76').trim();
+      gold = (cs.getPropertyValue('--gold') || '#c9a84c').trim(); text = (cs.getPropertyValue('--text') || '#e8e0d0').trim();
+    }
+    colours();
+    new MutationObserver(colours).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-kids'] });
+    var mql = matchMedia('(prefers-color-scheme: light)'); if (mql.addEventListener) mql.addEventListener('change', colours);
     function size() {
       var w = cv.parentNode.clientWidth, h = Math.round(w * 0.56);
-      cv.style.height = h + 'px'; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+      cv.style.height = h + 'px'; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); lastDraw = 0;
     }
     size(); window.addEventListener('resize', size);
     cv.removeAttribute('hidden');
     var flat = cv.parentNode.querySelector('svg'); if (flat) flat.style.display = 'none';
-    new IntersectionObserver(function (es) { running = es[0].isIntersecting; if (running) { last = null; requestAnimationFrame(frame); } }, { rootMargin: '80px' }).observe(cv);
+    function kick() { if (running && !looping && !document.hidden) { looping = true; last = null; requestAnimationFrame(frame); } }
+    new IntersectionObserver(function (es) { running = es[0].isIntersecting; kick(); }, { rootMargin: '80px' }).observe(cv);
+    document.addEventListener('visibilitychange', kick);
     function frame(now) {
-      if (!running) return;
+      if (!running || document.hidden) { looping = false; return; }
+      requestAnimationFrame(frame);
+      if (lastDraw && now - lastDraw < step) return;
+      lastDraw = now;
       if (last !== null) lng = (lng + (now - last) * 0.004) % 360;   // a turn in about 90 seconds
       last = now;
-      var cs = getComputedStyle(document.documentElement), g = (cs.getPropertyValue('--gold-rgb') || '201,168,76').trim();
-      var gold = (cs.getPropertyValue('--gold') || '#c9a84c').trim(), text = (cs.getPropertyValue('--text') || '#e8e0d0').trim();
       proj.scale(Math.min(cv.width, cv.height) / 2 - 6 * dpr).translate([cv.width / 2, cv.height / 2]).rotate([-lng, -16, 0]);
       ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, cv.width, cv.height);
       ctx.save(); ctx.shadowColor = 'rgba(' + g + ',0.35)'; ctx.shadowBlur = 14 * dpr;
@@ -714,9 +726,8 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
         ctx.moveTo(q2[0] + 2.6 * dpr, q2[1]); ctx.arc(q2[0], q2[1], 2.6 * dpr, 0, 6.2832);
       }
       ctx.fill();
-      requestAnimationFrame(frame);
     }
-    requestAnimationFrame(frame);
+    kick();
   }
   var idle = window.requestIdleCallback || function (f) { setTimeout(f, 1200); };
   if (document.readyState === 'complete') idle(start, { timeout: 4000 });

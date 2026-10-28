@@ -46,6 +46,9 @@ Every page head: theme-color metas (dark #0b0c10 / light #f4efe4) and the inline
 OS scheme on a first visit (stored epoch-theme wins) and sets data-kids="1" when epoch-kids is stored. The snippet
 lives in build-pages.ps1 ($THEME), generator.html and every hand page; the builder hashes pages without it (sitemap
 lastmod), so changing it dates no page ($THEME0, the pre-Kids snippet, only bridges the old hashes). llms.txt at the root describes the site for AI crawlers.
+Analytics (every page head, one line: $GTAG in build-pages.ps1, generator.html, the hand pages): the page view is
+queued in dataLayer at once and gtag.js itself loads after `load` and an idle moment (Oct 2026: loaded with the page
+it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippet ($GTAG0), so the change dated none.
 
 ## Shared files
 - /shared.css — all CSS (fonts: self-hosted variable woff2 in /fonts, @font-face at the top; pages preload the latin
@@ -53,14 +56,23 @@ lastmod), so changing it dates no page ($THEME0, the pre-Kids snippet, only brid
   (object-position: center 25%, the "Alignment pass" block: the centre cut heads off portraits); emblems drawn whole
   (contain) stay centred. Checked by eye and by a layout audit of 59 pages at 390/768/1024/1280 px and in Kids mode
   (scratchpad audit/layout-audit.ps1: anything wider than the page, overlapping or cut text, broken pictures).
+  Form fields take --field-border (3:1 against the page in both themes and Kids mode; --border, 1.4-1.7:1, is for
+  cards and rules): one rule at the end of the file sets it on every bordered input, select and textarea not focused.
+  Layout shift (CLS) fixed Oct 2026, keep it so: nothing above content may arrive late. The atlas's region buttons are
+  in its HTML (build:atlas-presets, written from $PRESETS), /state/'s empty list holds a screen's height until the
+  register arrives, the explorer's tabs have a fixed line height and the page preloads Source Sans 3.
 - /shared-nav.js — initNav(activePage), escHtml(), jsonp() (gives up after 10 s: an Apps Script error is an HTML
   page with status 200 that never calls back), buildPagination(), isValidEmail(), sharing (sharePoster, the share
   panel, scoreCard: see "Sharing"), in-app browser detection (EPOCH_INAPP, see "In-app browsers"). The old contact modal
   is gone; openContactModal() now just opens /contact. Also: the "My shelf" nav bookmark (saved pages + recently
   viewed, localStorage epoch-shelf/epoch-recent, reading pages only), the reading-progress line on /empire and
-  /encyclopedia entry pages, "Surprise me" (Explore menu: random profile/day/century), the footer ✦ quotation, and
-  the search-index warm-up (only on hover/focus of the search button, or window.warmSiteSearch(): the index is
-  ~790 KB gzipped, so no page fetches it unasked). Newsletter: subscribeNewsletter(email, source) posts to Formspree
+  /encyclopedia entry pages, "Surprise me" (Explore menu: random profile/day/century), the footer ✦ quotation, the
+  site search (see "Homepage and site search") with its warm-up (only on hover/focus of the search button, or
+  window.warmSiteSearch(): the index is ~650 KB compressed, so no page fetches it unasked), and hover prefetch: a
+  speculationrules block (prefetch, eagerness moderate, same-site links except /contact, /feeds/ and data files;
+  Chrome and Edge, others ignore it; only with a mouse, (hover: hover) and (pointer: fine): matching the rules against
+  every link cost a slowed phone up to 200 ms on long lists, for a gain only at the tap). Startup measuring (back-to-top, reading progress, enc-page.js's century bar)
+  waits for requestAnimationFrame: reading layout at once forced a whole layout mid-build (363 ms on /about, phone). Newsletter: subscribeNewsletter(email, source) posts to Formspree
   (FORMSPREE_URL, else its own copy NEWSLETTER_URL: the generated pages have no shared-data.js and the footer form
   used to throw there); newsletterPrompt(source) is the one-line form shown after the daily quiz and the Daily Ten
   (form[data-nl], handled in initNav; hidden once localStorage epoch-nl is set). shareThis(text, url, btn):
@@ -71,7 +83,11 @@ lastmod), so changing it dates no page ($THEME0, the pre-Kids snippet, only brid
   EMPIRES when present, else from /search-profiles.js (SEARCH_PROFILES, written by build-pages.ps1) — the generated
   pages do NOT load shared-data.js. The theme toggle also rewrites the theme-color metas. The page-transition click handler reads a link's address as
   text: an SVG `<a>`'s .href is an SVGAnimatedString (it once sent the country bubbles to /countries/[object …]).
-- /shared-data.js — core data loaded on every page: API URLs, EMPIRES (428: 94 empires, 300 state profiles with an `id`, 18 religions and 16 languages with a `kind`), EMPIRE_INFO, REGIONS, ERAS, EVENTS, TRANSLATIONS, toSlug()
+- /shared-data.js — core data: API URLs, EMPIRES (428: 94 empires, 300 state profiles with an `id`, 18 religions and 16 languages with a `kind`), EMPIRE_INFO, REGIONS, ERAS, EVENTS, TRANSLATIONS, toSlug().
+  Loaded by the profiles and the hand pages that use it (index, profiles, explorer, quiz, faiths, passport, search,
+  community, contact, contributors, 404). Since Oct 2026 NOT by about, atlas, connections, dataset, research,
+  research-series, timeline, write and the encyclopedia/, state/ and today-in-history/ indexes (they used nothing in
+  it; 59 KB compressed each): a page that starts to need it must load it again.
 - /enc-page.js — script of the generated pages (initNav from body[data-nav], random entry/state, citation copy,
   lazy state mini map, century bars scrolled to the current century on phones); its IDX_V is written by build-pages.ps1
 - /share-card.js — EpochCard: score posters for the games and the daily quiz (see "Sharing"); loaded on demand
@@ -79,7 +95,11 @@ lastmod), so changing it dates no page ($THEME0, the pre-Kids snippet, only brid
   Needs shared-data.js, shared-nav.js (escHtml, searchFold, SEARCH_INDEX_SRC) and home-data.js. The answer
   suggestions load the search index only when the guess field is first touched (pointerdown/keydown).
 - /atlas.js — the atlas app (loaded only by /atlas, after maps/basemap.js and maps/atlas-data.js)
-- /point-descs.js — POINT_DESCS, loaded only by explorer
+- /point-descs.js — POINT_DESCS (632 KB compressed), loaded by the explorer only when an empire is first picked or
+  searched (loadPointDescs; the dots are drawn again when it arrives)
+- /d3-geo.js — the parts of d3 the globes use (d3-array 3.2.4 + d3-geo 3.1.0, the versions inside d3 7.8.5, as their
+  own UMD builds: 54 KB instead of 280 KB, same results), self-hosted, loaded on demand by the home globe, atlas.js,
+  faith-map.js and Globe Hunt (games.js) as `/d3-geo.js?v=1`. Only the explorer still loads full d3 (charts) from cdnjs.
 - /empire-profiles.js — EMPIRE_PROFILES, loaded only by profiles and generator.html
 - /epoch-stats.js — radar-chart stats, loaded by profiles and empire pages
 - favicon.svg / favicon.ico / apple-touch-icon.png / logo.png (Organization logo in the home page's JSON-LD)
@@ -157,7 +177,9 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   rules (scripts/lib/enc-fn.ps1, a copy of the scratchpad enc2/enc-fn.ps1 — keep both in step with ENC_FN), picture
   and credit, profiles and state histories that mention it, a war's battles, see also, previous/next A–Z entry,
   citations; `/encyclopedia/browse/<letter>[-n]` (A–Z, 100 a page), `/encyclopedia/conflicts/<century>`;
-  `encyclopedia/index-data.js` (slim index for the search on /encyclopedia/).
+  `encyclopedia/index-data.js` (slim index for the search on /encyclopedia/, 575 KB compressed: the page loads it
+  only when its search or a chip is touched, a query is in the address or Random entry is pressed; until then the
+  chips show ENC_COUNTS, the counts by type the builder writes into the page's `build:enc-counts` block).
   Entry pages link their century (/centuries/<c>, from the dates: an event's first year; a person's working life,
   two thirds from birth to death) and term entries link the glossary.
 - `/state/<id>` — 5,069 state pages (the 394 states with a profile are redirected to it by state/.htaccess, also
@@ -238,7 +260,7 @@ outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) 
   countries and their dependencies is rejected and listed in scripts/geo-rejected.tsv (mostly wrong Wikidata ids).
 - Geometry in scripts/lib/geo.cs (Add-Type): projection, Douglas-Peucker, rectangle clipping, compact path data.
   Maps are written in tenths of a unit (10000 wide, 4393 high: the plane is cut at 58° S).
-- `/atlas` + atlas.js: a GLOBE by default (d3 7.8.5 orthographic on a canvas — drag to turn, no projection) with a
+- `/atlas` + atlas.js: a GLOBE by default (d3-geo orthographic on a canvas, /d3-geo.js — drag to turn, no projection) with a
   Flat map toggle (?view=globe|flat, localStorage epoch-atlas-view; falls back to flat if d3 or the canvas fails);
   year slider (3500 BCE–today) with play and a random-year die, zoom/pan/pinch, region presets, profile and kind
   filters, search, tooltips (nearest dot), labels from 2.2x zoom, the list of states shown (accessible view);
@@ -283,7 +305,7 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   data/enc-preview, writes "born/died N" as "b./d. N" and drops a doubled "around c."; it is idempotent. Run it right
   after every enc-merge (which starts again from the originals). The builder's YearOf/Span skip the day of a full
   date (Clean: "13 July 1260" is 1260, not the 1st century).
-- Pipeline after a merge: apply-conflicts, apply-person-dates, enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
+- Pipeline after a merge: apply-conflicts, apply-person-dates, scripts/clean-credits.ps1 (see the pictures below), enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
   run-scan -Page t-encprof + prof/enc-prof-apply, enc2/prof-forms, link-state-texts, make-previews, make-home-data,
   make-search-states, build-state-data, make-enc-states, prof/section-images, prof/regen (428 pages), then verify-pages
   and prof/verify, then scripts/build-pages.ps1 and scripts/check-site.ps1. Headless Edge pages that touch all profiles run in slices of 30–40 (one page for all crashes the
@@ -305,6 +327,15 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
     link-state-texts.ps1 — keep them in step (design/t-pick.html + enc2/pick-test.ps1 check both on the same cases).
 - `images/encyclopedia/<slug>.jpg` — freely licensed Wikimedia Commons thumbnails; author/licence/source
   are in each entry's `credit` and shown under the image. Keep the credit if an image is reused.
+  Credits are plain text. scripts/clean-credits.ps1 (idempotent; -Check, -Review <file>) cleans the author field of
+  encyclopedia-data.js, empire-section-images.js and data/states/*.json in place: Commons' Artist field arrives as
+  flattened HTML, which had left entities escaped twice ("W. &amp;amp; D. Downey" on 173 pages), "(talk)" links,
+  "User:" prefixes, file names of the maps a derivative was drawn from, URLs, doubled text ("Unknown authorUnknown
+  author") and texts cut mid-word. A derivative becomes "Author; derivative work by Other"; a credit is at most 140
+  characters, cut where a part or sentence ends (the source link carries the rest). scripts/credit-overrides.tsv
+  gives the full Commons text for the 191 cut short at import (`File:<title>` TAB author). Run it after every
+  enc-merge (which starts from the originals). build-pages.ps1 and generator.html also decode a credit before
+  escaping it, so an entity can never show twice escaped again.
 - `images/encyclopedia/thumbs/<slug>.jpg`, `images/states/thumbs/<id>.jpg` — 112 px (shorter side) JPEG copies, about
   a quarter of the bytes, for pictures shown at 56 px or less: list tiles (44 px), result thumbnails (.enc-thumb, 56),
   speech portraits on /speeches/ (56), the people chart (28). scripts/make-thumbs.ps1 makes them (only new or changed
@@ -389,7 +420,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   colour signatures). Re-run both when logos change and bump games-emblems.js?v=.
 - Order the Ages: 4/5/6 dated pictures at least 150/80/40 years apart, ordered by their first year; drag by the
   grip, arrows, or tap two cards to swap (FLIP animation), a staggered check, then the years.
-- Globe Hunt: d3 orthographic globe loaded on first open; HUNT_SRC in the page holds the ?v= of maps/globe-land.js
+- Globe Hunt: d3-geo orthographic globe (/d3-geo.js) loaded on first open; HUNT_SRC in the page holds the ?v= of maps/globe-land.js
   and maps/atlas-data.js (stamped by build-pages.ps1). Famous states (profiles) or all states; five rounds in five
   different regions (no state twice); drag with inertia, wheel/pinch/± zoom, keyboard (arrows turn, +/− zoom, Enter
   drops the pin at the crosshair), a hint (−20 points, names the region), a pin and a great-circle arc to the
@@ -561,7 +592,7 @@ the site's labels (centOf: 1200 is the 13th century, 400 BCE the 5th BCE); a glo
 century it fills; a faith that ended closes on its last note. Colours: --fm-a (the faith) and --fm-b (the one compared),
 both themes and Kids mode; screen blending in the dark theme, multiply in the light one. Two views (Globe | Flat map,
 localStorage epoch-faith-view; /faiths also ?view=flat):
-- The globe (default): d3 7.8.5 orthographic on a canvas over maps/globe-land.js (both loaded on first use; GLOBE_V in
+- The globe (default): d3-geo orthographic (/d3-geo.js) on a canvas over maps/globe-land.js (both loaded on first use; GLOBE_V in
   faith-map.js is stamped by the builder), like the atlas and Globe Hunt and with their fixes (a zoom during a glide only
   retargets its zoom, a pinch ending as one finger starts a fresh drag, a non-finite turn falls back to the last good
   view, size() skips a hidden canvas). Glows are radial gradients squeezed towards the rim (by the cosine of their arc
@@ -648,7 +679,10 @@ Cultures and movements through history as further profile kinds, by the §"Kinds
 has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.
 
 ## Homepage and site search
-- Home (index): two-column hero (h1, search, the world in 1000 CE map from the builder), "Ways into history" doors
+- Home (index): two-column hero (h1, search, the world in 1000 CE map from the builder, replaced after load and an idle
+  moment by a slowly turning globe: /d3-geo.js and maps/globe-land.js, coasts thinned to about 0.3°, 30 frames a
+  second (20 on touch screens), colours read once and again on a theme or Kids change, drawn only while on screen and
+  the tab is shown; the still map stays under reduced motion or Save-Data), "Ways into history" doors
   with live counts (builder), On this day (one row: the anniversary event's picture with its year and title as a
   caption, then the international day and/or events in year order, never the pictured one again; links today's day
   page), featured profiles + era/region chips, centuries
@@ -673,10 +707,26 @@ has pictures in only two sections: the encyclopedia has no pictured entries for 
   make-home-data.ps1 keeps that part as it is). weight 0–8 = 1.5 × log2(1 + 2 × profiles mentioning + state
   histories mentioning, from data/enc-states.json) + 1 for a picture; siteSearch adds twice the weight. Match
   scores: exact 100, prefix 80, the words after a leading "Battle of", "Kingdom of" … (SEARCH_LEAD) 90 if they are
-  the query, 78 if they start with it, word start 70, inside 40; profiles +20, states +2. So "hastings" gives the
-  Battle of Hastings before Hastings Banda. Bump `search-index.js?v=` (SEARCH_INDEX_SRC in shared-nav.js) when
-  regenerated. siteSearchAll(q) returns every match (with k: kind, src: 'p'/'P'/'e'/'s' and i: its row);
-  siteSearch(q) is its first 12 for the dropdown, which ends with "See all N results →" (/search?q=).
+  the query, 78 if they start with it, word start 70, every word in any order ("hastings battle") 60, inside 40;
+  profiles +20, states +2. So "hastings" gives the Battle of Hastings before Hastings Banda. Since Oct 2026:
+  - build-pages.ps1 PACKS the file after make-home-data/make-search-states: a slug that follows from its name (accents
+    dropped, lower case, & as "and", other runs of signs "-"; only names plain ASCII without their accents) is written
+    0 and the line after the list restores it, so every reader of SEARCH_INDEX still sees slugs; rows with a picture end
+    in 1 (SEARCH_INDEX[5], SEARCH_STATES[4]). It also writes `search-pages.js` (SEARCH_PAGES [name, address, kind,
+    other names]: the tools under plain names ($HANDP), the 190 country histories, centuries ("fifteenth century",
+    "1400s"), speeches (with the speaker), paths, essays; SEARCH_YEARS: the years with a page) and stamps both ?v=
+    into shared-nav.js (SEARCH_INDEX_SRC, SEARCH_PAGES_SRC): never bump them by hand.
+  - shared-nav.js folds every name once (searchPrep; it was redone on each key press, 200-350 ms on a phone); the
+    dropdown waits 80 ms after typing. SEARCH_SYN: other names typed for the same thing (ww2, czar, mogul, peking,
+    aya sofya, karl der grosse, ussr …; each checked to reach an existing entry or profile; aliases already in the
+    index are not repeated). Fewer than 5 matches: close spellings (searchFuzzy: one edit for words of 4-6 letters,
+    two from 7 — "ghengis" — first letter fixed), shown with "Did you mean …?" (didYouMean on the result array, also
+    on /search). A year ("1066", "480 bce", "ad 800") gives its year page (or the nearest within 25 years) and its
+    century first. A profile and the entry of the same name are twins: the dropdown shows the profile with a small
+    "Encyclopedia entry" link, /search lists the entry right after it. Results show the 112 px thumbnail, the
+    profile's emblem or the kind's glyph; an empty field shows the last 8 searches (localStorage epoch-search-recent).
+  siteSearchAll(q) returns every match (with k: kind, src: 'p'/'P'/'e'/'s'/'g' (site page)/'y' (year) and i: its row);
+  siteSearch(q) is its first 12; loadSearchData(cb) loads the index, the pages and (without shared-data.js) the profiles.
 - `/search` (hand page, noindex): every result, 50 a page, kind chips with counts, region and century filters, "with a
   picture"; the address keeps the state (?q=&k=&r=&from=&to=&pic=1&p=). The filters read `search-facets.js`
   (SEARCH_FACETS: one row per SEARCH_INDEX row and per SEARCH_STATES row, [first century, last century (BCE
@@ -799,7 +849,7 @@ it uses "backwards".
   image, free Commons licence only, 320px JPEG; credit shown). Built by scratchpad states/desc scripts
   (DESC-GUIDE.md for the writers, check.ps1, build-state-data.ps1, pick-state-images.ps1, shrink-images.ps1).
 - Site search also covers states: `SEARCH_STATES` at the end of search-index.js (states/desc/make-search-states.ps1);
-  bump `search-index.js?v=` in shared-nav.js when regenerated.
+  the builder packs it and stamps its ?v= (see "Homepage and site search").
 - merge.ps1 dedupes only when lifespans overlap and modern countries agree; ambiguous names ("Kingdom of Hungary") resolve to the state alive at the relation's date; relations to Rome before 27 BCE go to the Roman Republic. Bump `polities.json?v=` in connections-map.js (and connections-map.js?v= on all pages) after each merge.
 
 ## State profiles (300, Oct 2026)

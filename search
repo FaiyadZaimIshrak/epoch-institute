@@ -23,12 +23,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=57">
+<link rel="stylesheet" href="/shared.css?v=58">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Search"}]},{"@type":"WebPage","name":"Search the Institute","url":"https://the-epoch-institute.org/search","description":"Search every profile, state and encyclopedia entry of The Epoch Institute, by kind, region, century and picture."}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body>
 
@@ -51,6 +50,7 @@
         <button type="button" class="enc-chip" id="srch-clear" hidden>Clear filters</button>
       </div>
       <div class="enc-count-row"><span class="enc-count" id="srch-count" aria-live="polite"></span></div>
+      <p class="srch-dym" id="srch-dym" hidden></p>
     </form>
     <div id="srch-results">
       <ul class="enc-list" id="srch-list"></ul>
@@ -65,7 +65,7 @@
 </main>
 
 <script src="/shared-data.js?v=9"></script>
-<script src="/shared-nav.js?v=40"></script>
+<script src="/shared-nav.js?v=41"></script>
 <script>
 initNav('search');
 (function () {
@@ -77,9 +77,11 @@ initNav('search');
     ['event', 'Events', function (r) { return r.k === 'event'; }], ['place', 'Places', function (r) { return r.k === 'place'; }],
     ['work', 'Works & monuments', function (r) { return r.k === 'work'; }], ['idea', 'Religions & ideas', function (r) { return r.k === 'idea'; }],
     ['group', 'Peoples & groups', function (r) { return r.k === 'group'; }], ['institution', 'Institutions', function (r) { return r.k === 'institution'; }],
-    ['term', 'Terms', function (r) { return r.k === 'term' || r.k === 'factor'; }]];
+    ['term', 'Terms', function (r) { return r.k === 'term' || r.k === 'factor'; }],
+    ['pages', 'Site pages', function (r) { return r.src === 'g' || r.src === 'y'; }]];   // countries, centuries, years, speeches, paths, tools
   var KIND = {}; KINDS.forEach(function (k) { KIND[k[0]] = k; });
-  var GLYPH = { person: 'person', event: 'event', place: 'place', work: 'work', idea: 'idea', group: 'group', institution: 'institution', polity: 'polity', state: 'polity', profile: 'polity' };
+  var GLYPH = { person: 'person', event: 'event', place: 'place', work: 'work', idea: 'idea', group: 'group', institution: 'institution', polity: 'polity', state: 'polity', profile: 'polity',
+    country: 'place', century: 'event', year: 'event', speech: 'work', path: 'idea', essay: 'work', page: 'term', term: 'term', factor: 'factor' };
   function ord(n) { var a = n % 100, b = n % 10; return n + ((a > 10 && a < 14) ? 'th' : b === 1 ? 'st' : b === 2 ? 'nd' : b === 3 ? 'rd' : 'th'); }
   function centLabel(c) { return c < 0 ? ord(-c) + ' century BCE' : ord(c) + ' century'; }
   function cent(y) { y = Math.round(y); return y < 0 ? -(Math.floor(-y / 100) + 1) : Math.floor(y / 100) + 1; }
@@ -151,6 +153,8 @@ initNav('search');
     var list = base.filter(KIND[st.k][2]), pages = Math.max(1, Math.ceil(list.length / PER)); if (st.p > pages) st.p = pages;
     var noFacets = (st.r !== '' || st.from !== '' || st.to !== '' || st.pic) && !window.SEARCH_FACETS;
     $('srch-count').textContent = noFacets ? 'Loading the filters…' : list.length.toLocaleString('en-GB') + (list.length === 1 ? ' result' : ' results') + ' for “' + q + '”' + (pages > 1 ? ' · page ' + st.p + ' of ' + pages : '');
+    var dym = cacheAll.didYouMean; $('srch-dym').hidden = !dym;   // the results are close spellings: offer the corrected words
+    if (dym) $('srch-dym').innerHTML = 'Showing close spellings. Did you mean <a href="/search?q=' + encodeURIComponent(dym) + '">' + escHtml(dym) + '</a>?';
     $('srch-list').innerHTML = list.length ? list.slice((st.p - 1) * PER, st.p * PER).map(function (r) {
       var f = facet(r), pic = picOf(r, f), when = '';
       if (f && f[0]) when = f[0] === f[1] ? centLabel(f[0]) : (f[0] < 0 && f[1] < 0 ? ord(-f[0]) + '–' + centLabel(f[1]) : f[0] > 0 && f[1] > 0 ? ord(f[0]) + '–' + centLabel(f[1]) : centLabel(f[0]) + ' – ' + centLabel(f[1]));
@@ -188,7 +192,7 @@ initNav('search');
   readUrl(); render();
   // the index (the header search's own, cached) and the filters' data
   function load(src, cb) { var s = document.createElement('script'); s.src = src; s.onload = cb; s.onerror = cb; document.head.appendChild(s); }
-  if (!ready()) load(SEARCH_INDEX_SRC, function () { cacheQ = null; render(); });
+  loadSearchData(function () { cacheQ = null; render(); });   // the index, the site's pages (and profiles where needed)
   load(FACETS_SRC, function () { render(); });
   if (!st.q) $('srch-q').focus();
 })();

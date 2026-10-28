@@ -30,8 +30,7 @@
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Teachers' Corner","item":"https://the-epoch-institute.org/teachers/"},{"@type":"ListItem","position":3,"name":"Worksheet: Capitals of the World"}]},{"@type":"LearningResource","name":"Worksheet: Capitals of the World","description":"A printable worksheet for the reading path Capitals of the World: put the stops in order, match people to their dates, key terms and questions, with an…","url":"https://the-epoch-institute.org/teachers/path-capitals-of-the-world","learningResourceType":"Worksheet","educationalLevel":"Secondary school","inLanguage":"en-GB","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}}}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body data-nav="teachers">
 

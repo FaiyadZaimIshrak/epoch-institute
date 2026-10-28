@@ -291,7 +291,8 @@ function faithMapHtml(emp) {
 function sectionFigure(empireName, key) {
   var f = typeof SECTION_IMAGES !== 'undefined' && SECTION_IMAGES[empireName] && SECTION_IMAGES[empireName][key];
   if (!f) return '';
-  var credit = [f.artist, f.licence].filter(Boolean).map(esc).join(', ');
+  // a credit is plain text: decoded first, so escaping it can never show "&amp;amp;" (scripts/clean-credits.ps1)
+  var credit = [f.artist, f.licence].filter(Boolean).map(function (s) { var t = document.createElement('textarea'); t.innerHTML = s; return esc(t.value); }).join(', ');
   return '<figure class="profile-section-fig"><a href="/encyclopedia/' + f.slug + '"><img src="' + esc(f.img) + '" alt="' + esc(f.name) + '" loading="lazy" width="240"></a>' +
     '<figcaption><a href="/encyclopedia/' + f.slug + '">' + esc(f.name) + '</a>' +
     (credit ? '<span class="profile-section-fig-credit">' + (f.source ? '<a href="' + esc(f.source) + '" target="_blank" rel="noopener">' + credit + '</a>' : credit) + '</span>' : '') +
@@ -406,8 +407,7 @@ function buildPage(emp) {
 '@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }\n' +
 '</style>\n' +
 '<script type="application/ld+json">' + ldJson + '\x3C/script>\n' +
-'<script async src="https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4">\x3C/script>\n' +
-'<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-B163TLDMP4\');\x3C/script>\n' +
+'<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-B163TLDMP4\');addEventListener(\'load\',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement(\'script\');s.async=true;s.src=\'https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4\';document.head.appendChild(s)},{timeout:4000})})\x3C/script>\n' +
 '</head>\n<body>\n\n' +
 '<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>\n' +
 '<main id="main" class="empire-page">\n' +

@@ -375,7 +375,11 @@ function LicenceUrl([string]$l) {
 # ── shared page frame ───────────────────────────────────────────────────────────────────────────────────────────────
 $THEME = "<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>"
 $THEME0 = "<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})()</script>"   # for Stamp, until every page is restamped
-$GTAG = "<script async src=`"https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4`"></script>`n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>"
+# Analytics: the page view is queued at once, gtag.js itself loads after the page has loaded and the browser is idle (it
+# cost 250-310 ms of main thread on a phone when it loaded with the page). $GTAG0 is the snippet before Oct 2026:
+# pages are hashed with it (Stamp), so changing the snippet dates no page.
+$GTAG0 = "<script async src=`"https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4`"></script>`n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>"
+$GTAG = "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>"
 $ORG = '{"@type":"Organization","name":"The Epoch Institute","url":"' + $SITE + '/","logo":{"@type":"ImageObject","url":"' + $SITE + '/logo.png","width":512,"height":512}}'
 function Crumbs($items) {   # items: @(@(name, path or $null), ...); returns @(html, jsonld)
   $li = New-Object Text.StringBuilder; $ld = New-Object Text.StringBuilder; $i = 0
@@ -459,7 +463,7 @@ if (Test-Path $stateFile) { foreach ($l in [IO.File]::ReadAllLines($stateFile, $
 $SMNEW = @{}; $CHANGED = @{}
 function Stamp([string]$path, [string]$content) {   # content may hold @@MOD@@ (dateModified): hashed without it
   # a picture's small copy (images/<folder>/thumbs/, Oct 2026) is the same picture: moving to it dates no page either
-  $c = $content.Replace("`r`n", "`n").Replace('/images/encyclopedia/thumbs/', '/images/encyclopedia/').Replace('/images/states/thumbs/', '/images/states/')
+  $c = $content.Replace("`r`n", "`n").Replace('/images/encyclopedia/thumbs/', '/images/encyclopedia/').Replace('/images/states/thumbs/', '/images/states/').Replace($GTAG, $GTAG0)
   $hash = [EpochBuild.W]::Sha1($c.Replace($THEME, ''))   # the head snippet is not content: changing it dates no page
   # until every page has been stamped once without the snippet: a hash of the page with the snippet as it was before Kids mode
   $old = if ($SM.ContainsKey($path) -and $SM[$path][0] -ne $hash) { [EpochBuild.W]::Sha1($c.Replace($THEME, $THEME0)) } else { '' }
@@ -499,6 +503,8 @@ $ord = [EpochBuild.W]::Order($keys)
 $ENT = New-Object 'object[]' $NENT; $BY = @{}
 for ($r = 0; $r -lt $NENT; $r++) {
   $d = $RAW[$ord[$r]]; $k = $keys[$ord[$r]]; $etags = @($d['tags'] | Where-Object { $_ })
+  # a credit is plain text: decoded once here, so escaping it can never write "&amp;amp;" (scripts/clean-credits.ps1)
+  if ($d['credit'] -and $d['credit']['artist']) { $d['credit']['artist'] = [Net.WebUtility]::HtmlDecode([string]$d['credit']['artist']) }
   $e = [pscustomobject]@{ i = $r; slug = [string]$d['slug']; name = [string]$d['name']; type = [string]$d['type']; sub = [string]$d['subtype']; aka = @($d['aka'] | Where-Object { $_ }); dates = [string]$d['dates']
     desc = [string]$d['desc']; img = [string]$d['img']; cr = $d['credit']; tags = $etags; war = [string]$d['war']; emp = @($d['empires'] | Where-Object { $_ }); k = $k
     L = $(if ($k -and $k[0] -ge [char]'a' -and $k[0] -le [char]'z') { [string]$k[0] } else { '0-9' }); conflict = ($etags.Count -gt 0); year = [EpochBuild.W]::YearOf([string]$d['dates']) }
@@ -945,6 +951,9 @@ for ($i = 0; $i -lt $NENT; $i++) { $e = $ENT[$i]; [void]$sbI.Append('[' + (Js $e
 [void]$sbI.Append("]};`n"); $idxText = $sbI.ToString(); $IDXV = [EpochBuild.W]::Sha1($idxText).Substring(0, 10)
 if ([EpochBuild.W]::WriteIfChanged("$Repo\encyclopedia\index-data.js", $idxText)) { $NWRITE++ }
 Say ("index-data.js: {0:N0} KB, v={1}" -f ($idxText.Length / 1KB), $IDXV)
+# the counts the page shows before anyone searches (its type chips), so index-data.js loads only when it is needed
+$tcount = @{}; for ($i = 0; $i -lt $NENT; $i++) { $kk = KindOf $ENT[$i]; $tcount[$kk] = 1 + [int]$tcount[$kk] }
+SetBlock "$Repo\encyclopedia\index" 'enc-counts' ('<script>var ENC_COUNTS = {total:' + $NENT + ',types:[' + (($TYPES | ForEach-Object { '[' + (Js $_[0]) + ',' + (Js $_[1]) + ',' + (Js $SING[$_[0]]) + ',' + [int]$tcount[$_[0]] + ']' }) -join ',') + ']};</script>')
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # State pages
@@ -1050,7 +1059,7 @@ foreach ($n in $POL['nodes']) {
   # figure or emblem
   $img = [string]$d['img']; $sz = $null; $imgLd = $null
   if ($img -and (Test-Path (Join-Path $Repo ($img.TrimStart('/') -replace '/', '\')))) {
-    $sz = ImgSize $img; $cr = $d['cr']; $a = if ($cr) { [string]$cr['a'] } else { '' }; $lic = if ($cr) { [string]$cr['l'] } else { '' }; $src = if ($cr) { [string]$cr['s'] } else { '' }
+    $sz = ImgSize $img; $cr = $d['cr']; $a = if ($cr) { [Net.WebUtility]::HtmlDecode([string]$cr['a']) } else { '' }; $lic = if ($cr) { [string]$cr['l'] } else { '' }; $src = if ($cr) { [string]$cr['s'] } else { '' }
     $fig = '<figure class="st-fig"><img src="' + $img + '" alt="' + (Hx $name) + '"' + $(if ($sz) { ' width="' + $sz[0] + '" height="' + $sz[1] + '"' } else { ' width="320"' }) + '><figcaption>' +
       ((@(('Image: ' + $(if ($a) { Hx $a } else { 'Wikimedia Commons' })), $(if ($lic) { Hx $lic })) | Where-Object { $_ }) -join ' · ') + $(if ($src) { ' · <a href="' + (Hx $src) + '" target="_blank" rel="noopener">source</a>' } else { '' }) + '</figcaption></figure>'
     $imgLd = ImageLd $img $(if ($sz) { $sz[0] }) $(if ($sz) { $sz[1] }) $a $lic $src
@@ -2564,6 +2573,7 @@ function HubCard($s, [string]$cls) {
   '<li><a class="' + $cls + '" href="' + $s.h + '">' + $(if ($img) { '<span class="' + $cls + '-img"><img src="' + $img + '" alt="" loading="lazy"></span>' } else { '<span class="' + $cls + '-img ' + $cls + '-mono" aria-hidden="true">' + (Hx $s.t.Substring(0, 1)) + '</span>' }) +
     '<span class="' + $cls + '-b"><span class="' + $cls + '-k">' + (Hx $s.k) + '</span><span class="' + $cls + '-t">' + (Hx $s.t) + '</span><span class="' + $cls + '-d">' + (Hx $s.d) + '</span></span></a></li>'
 }
+SetBlock "$Repo\atlas" 'atlas-presets' (($PRESETS | ForEach-Object { '<button type="button">' + (Hx $_[0]) + '</button>' }) -join '')   # in the page, so the map does not move when atlas.js runs
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
 $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
@@ -2693,6 +2703,86 @@ foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts'
     if (-not $WROTE.ContainsKey($f.FullName.ToLowerInvariant())) { Remove-Item $f.FullName; $nDel++ }
   }
 }
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Search: search-pages.js (the site's own pages: country histories, centuries, speeches, paths, essays, the tools, and
+# the years that have a page) and search-index.js packed: a slug that follows from its name is written 0 and restored
+# by a line in the file itself (so every reader of SEARCH_INDEX keeps working), and a row with a picture ends in 1.
+# Both versions are stamped into shared-nav.js.
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Say 'search: site pages and the packed index'
+$ORDW = @('', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth',
+  'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'twenty-first', 'twenty-second', 'twenty-third', 'twenty-fourth', 'twenty-fifth', 'twenty-sixth', 'twenty-seventh', 'twenty-eighth', 'twenty-ninth', 'thirtieth')
+$sgRows = New-Object System.Collections.Generic.List[string]
+function SgRow([string]$n, [string]$h, [string]$k, [string]$a) { $sgRows.Add('[' + (Js $n) + ',' + (Js $h) + ',' + (Js $k) + ',' + (Js $a) + ']') }
+# the tools and section pages under plain names, and the words people use for them
+$HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical maps'), @('World Timeline', '/timeline', 'timeline|chronology|time line'),
+  @('Country Histories', '/countries/', 'countries|country histories'), @('History by Century', '/centuries/', 'centuries|century'), @('Year by Year', '/years/', 'years|year pages'),
+  @('People in History', '/people/', 'people|who lived when'), @('Empire Explorer', '/explorer', 'explorer|power curves|rise and fall chart'),
+  @('Connections Map', '/connections', 'connections map|relations|network of states'), @('Reading Paths', '/paths/', 'paths|reading paths|where to start reading'),
+  @('Great Speeches', '/speeches/', 'speeches|famous speeches'), @('Write in Ancient Scripts', '/write', 'write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe'),
+  @('Faith Maps', '/faiths', 'faith maps|spread of religions|religion maps'), @('History Quiz', '/quiz', 'quiz|daily quiz|trivia'),
+  @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'),
+  @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'),
+  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('My Passport', '/passport', 'passport|my history|stamps|my reading'),
+  @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
+  @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
+  @('Research Series', '/research-series', 'research series|essays'), @('Open Data', '/dataset', 'open data|dataset|download|csv'),
+  @('Research Hub', '/research', 'research hub'), @("Teachers' Corner", '/teachers/', 'teachers|worksheets|classroom|lessons'),
+  @('Community', '/community', 'community|articles by readers'), @('About the Institute', '/about', 'about|mission|who we are'),
+  @('Write for the Institute', '/contributors', 'write for us|contributors|contribute'), @('Contact', '/contact', 'contact|email|suggest a correction'))
+foreach ($hp in $HANDP) { SgRow $hp[0] $hp[1] 'page' $hp[2] }
+foreach ($m in ($CPAGE.Keys | Sort-Object)) { SgRow $m ('/countries/' + $CPAGE[$m]) 'country' ('history of ' + $m) }
+foreach ($c in $CENTPAGES) {   # "15th century": also "fifteenth century" and "1400s"
+  $cm = [regex]::Match($c, '^(\d+)[a-z]{2} century( BCE)?$'); $al = ''
+  if ($cm.Success) { $cn = [int]$cm.Groups[1].Value; $bce = $(if ($cm.Groups[2].Success) { ' bce' } else { '' }); $al = $(if ($cn -lt $ORDW.Count) { $ORDW[$cn] + ' century' + $bce + '|' } else { '' }) + (($cn - 1) * 100) + 's' + $bce }
+  SgRow (CentTitle $c) ('/centuries/' + (CenturySlug $c)) 'century' $al
+}
+foreach ($spx in $SPS) { SgRow ([string]$spx['title']) ('/speeches/' + [string]$spx['slug']) 'speech' ([string]$spx['speaker']) }
+foreach ($p in $RP) { SgRow ([string]$p['title']) ('/paths/' + [string]$p['slug']) 'path' '' }
+foreach ($ey in $ESSAYS) { SgRow ([string]$ey.hd['title']) ('/essays/' + $ey.slug) 'essay' '' }
+$sgText = "// search-pages.js - written by scripts/build-pages.ps1. Do not edit. The site's own pages for the search (header and /search):`n" +
+  "// [name, address, kind, other names]; SEARCH_YEARS: the years that have a page (/years/<y>), BCE negative.`n" +
+  "var SEARCH_PAGES = [`n" + ($sgRows -join ",`n") + "`n];`nvar SEARCH_YEARS = [" + ($YEARLIST -join ',') + "];`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\search-pages.js", $sgText)) { $NWRITE++ }
+$SGV = [EpochBuild.W]::Sha1($sgText).Substring(0, 10)
+# packing: slugs are made from names exactly as the restoring line does (accents dropped, lower case, & as "and", other
+# runs of signs as "-"), and only for names that are plain ASCII once their accents are dropped, so both agree
+$A0 = "[$([char]0x300)-$([char]0x36F)]"
+function NameSlug([string]$n) { $d = $n.Normalize([Text.NormalizationForm]::FormD) -creplace $A0, ''; if ($d -match '[^\x00-\x7F]') { return $null }; (($d.ToLowerInvariant() -creplace '&', 'and') -creplace '[^a-z0-9]+', '-').Trim('-') }
+function JsonStr([string]$lit) { if ($lit.IndexOf('\') -lt 0) { $lit.Substring(1, $lit.Length - 2) } else { [string]$JSS.DeserializeObject($lit) } }
+$SIDEC = '(function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize(''NFD'').replace(/[' + '\' + 'u0300-' + '\' + 'u036f]/g, '''').toLowerCase().replace(/&/g, ''and'').replace(/[^a-z0-9]+/g, ''-'').replace(/^-|-$/g, ''''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name'
+$STRX = '"(?:[^"\\]|\\.)*"'
+$rxE = [regex]"^\[(?<s>$STRX|0),(?<n>$STRX),(?<t>$STRX),(?<a>$STRX),(?<w>-?[\d.]+)(?:,[01])?\](?<c>,?)$"
+$rxS = [regex]"^\[(?<s>$STRX),(?<n>$STRX),(?<t>$STRX),(?<a>$STRX)(?:,[01])?\](?<c>,?)$"
+$siIn = [IO.File]::ReadAllText("$Repo\search-index.js", $U8).Replace("`r`n", "`n").TrimEnd("`n")
+$siOut = New-Object System.Collections.Generic.List[string]; $part = ''; $nZero = 0; $nE = 0; $nS = 0
+foreach ($l in $siIn.Split("`n")) {
+  if ($l.Contains('packed by scripts/build-pages.ps1')) { continue }
+  if ($l.StartsWith('// search-index.js')) { $siOut.Add('// search-index.js - site-wide search over encyclopedia entries: [slug (0: made from the name, see the line after the list), name, type, aliases, weight 0-8, 1 if it has a picture]. Generated.'); continue }
+  if ($l.StartsWith('// states (register')) { $siOut.Add('// states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.'); continue }
+  if ($l.StartsWith('var SEARCH_INDEX')) { $part = 'e' } elseif ($l.StartsWith('var SEARCH_STATES')) { $part = 's' }
+  elseif ($l -eq '];') { $siOut.Add($l); if ($part -eq 'e') { $siOut.Add($SIDEC) }; $part = ''; continue }
+  $m = if ($part -eq 'e') { $rxE.Match($l) } elseif ($part -eq 's') { $rxS.Match($l) } else { $null }
+  if (-not $m -or -not $m.Success) { $siOut.Add($l); continue }
+  $name = JsonStr $m.Groups['n'].Value
+  if ($part -eq 'e') {
+    $made = NameSlug $name; $slug = if ($m.Groups['s'].Value -eq '0') { if (-not $made) { throw "search-index.js: no slug for $name" }; $made } else { JsonStr $m.Groups['s'].Value }
+    $pic = $BY.ContainsKey($slug) -and $BY[$slug].img
+    $siOut.Add('[' + $(if ($made -ceq $slug) { $nZero++; '0' } else { Js $slug }) + ',' + $m.Groups['n'].Value + ',' + $m.Groups['t'].Value + ',' + $m.Groups['a'].Value + ',' + $m.Groups['w'].Value + $(if ($pic) { ',1' } else { '' }) + ']' + $m.Groups['c'].Value); $nE++
+  } else {
+    $id = JsonStr $m.Groups['s'].Value; $im = if ($STX.ContainsKey($id)) { [string]$STX[$id]['img'] } else { '' }
+    $pic = $im -and (Test-Path (Join-Path $Repo ($im.TrimStart('/') -replace '/', '\')))
+    $siOut.Add('[' + $m.Groups['s'].Value + ',' + $m.Groups['n'].Value + ',' + $m.Groups['t'].Value + ',' + $m.Groups['a'].Value + $(if ($pic) { ',1' } else { '' }) + ']' + $m.Groups['c'].Value); $nS++
+  }
+}
+$siText2 = ($siOut -join "`n") + "`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\search-index.js", $siText2)) { $NWRITE++ }
+$SIV = [EpochBuild.W]::Sha1($siText2).Substring(0, 10)
+$t = [IO.File]::ReadAllText("$Repo\shared-nav.js", $U8)
+$t2 = [regex]::Replace([regex]::Replace($t, "var SEARCH_INDEX_SRC = '/search-index\.js\?v=[^']*';", "var SEARCH_INDEX_SRC = '/search-index.js?v=$SIV';"), "var SEARCH_PAGES_SRC = '/search-pages\.js\?v=[^']*';", "var SEARCH_PAGES_SRC = '/search-pages.js?v=$SGV';")
+if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\shared-nav.js", $t2)) { $NWRITE++ }
+Say ("search-pages.js: {0} rows, {1} years; search-index.js: {2:N0} entries ({3:N0} slugs made from the name), {4:N0} states, {5:N0} KB" -f $sgRows.Count, $YEARLIST.Count, $nE, $nZero, $nS, ($siText2.Length / 1KB))
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
 foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/encyclopedia/', '/state/', '/today-in-history/')) {

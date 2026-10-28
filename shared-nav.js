@@ -310,113 +310,274 @@ function attachShareListeners(container, fallbackUrl) {
   });
 }
 
-// ── Site-wide search (profiles + encyclopedia + states; index loaded on first open) ─────
+// ── Site-wide search (profiles, encyclopedia, states, the site's own pages; index loaded on first open) ─────
 var SEARCH_TYPES = { person: 'Person', event: 'Event', place: 'Place', polity: 'State', group: 'People / group',
   institution: 'Institution', term: 'Term', idea: 'Idea', work: 'Work', factor: 'Factor' };
+// the site's own pages (search-pages.js, written by the builder): their label and how much they count for. A tool
+// named like the query is usually what was meant ("atlas", "games"), so pages count most.
+var SEARCH_PAGE_KINDS = { page: ['Page', 25], country: ['Country history', 12], century: ['Century', 15], speech: ['Speech', 5], path: ['Reading path', 5], essay: ['Essay', 5] };
 function searchFold(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'ʿʾ]/g, ''); }
 // "hastings" means the Battle of Hastings as much as Hastings Banda: a name's words after a leading "Battle of",
 // "Kingdom of" … count almost as its beginning
 var SEARCH_LEAD = /^(?:battle|siege|sack|fall|capture|conquest|treaty|peace|congress|council|edict|war|wars|revolt|rebellion|kingdom|empire|republic|duchy|county|principality|emirate|sultanate|caliphate|khanate) (?:of|at|in) (?:the )?/;
-function searchScore(q, name) {
+// other names people type for the same thing (folded, dots dropped): a whole query, or a word of it. Each one leads
+// to an entry or profile that exists (checked Oct 2026); names the index already knows as aliases are not repeated.
+var SEARCH_SYN = {
+  ww1: 'first world war', wwi: 'first world war', 'world war 1': 'first world war', 'world war one': 'first world war',
+  ww2: 'second world war', wwii: 'second world war', 'world war 2': 'second world war', 'world war two': 'second world war',
+  peking: 'beijing', siam: 'thailand', myanmar: 'burma', abyssinia: 'ethiopia', holland: 'netherlands', danzig: 'gdansk',
+  leningrad: 'saint petersburg', dacca: 'dhaka', 'cheng ho': 'zheng he', stamboul: 'istanbul', nippon: 'japan',
+  mogul: 'mughal', moghul: 'mughal', mogol: 'mughal', moghal: 'mughal', czar: 'tsar', tzar: 'tsar', czars: 'tsars', czarina: 'tsarina',
+  'aya sofya': 'hagia sophia', ayasofya: 'hagia sophia', 'aya sofia': 'hagia sophia', 'santa sophia': 'hagia sophia',
+  'karl der grosse': 'charlemagne', 'carolus magnus': 'charlemagne', 'charles the great': 'charlemagne', 'ivan the terrible': 'ivan iv of russia',
+  mohammed: 'muhammad', mohammad: 'muhammad', muhammed: 'muhammad', mahomet: 'muhammad',
+  chinggis: 'genghis', chingis: 'genghis', jenghiz: 'genghis', khubilai: 'kublai', qubilai: 'kublai', suleyman: 'suleiman', sulayman: 'suleiman',
+  'lao tse': 'laozi', 'lao tze': 'laozi', ussr: 'soviet union', uk: 'united kingdom', usa: 'united states', prc: 'peoples republic of china',
+  roc: 'republic of china', drc: 'democratic republic of the congo', uae: 'united arab emirates', hre: 'holy roman empire',
+  'third reich': 'nazi germany', eic: 'east india company'
+};
+function searchScore(q, name) {   // kept for older callers; the search itself scores prepared names (searchMatch)
   var n = searchFold(name);
+  return searchMatch(q, q.split(' '), { n: n, c: n.replace(SEARCH_LEAD, ''), w: null });
+}
+function searchWords(s) { return s.split(/[\s\-–—,.;:()\/]+/).filter(Boolean); }
+var SEARCH_STOP = { the: 1, of: 1, a: 1, an: 1, and: 1, in: 1, at: 1, on: 1, de: 1, la: 1, le: 1, el: 1, von: 1, van: 1, der: 1, al: 1 };
+// how well a query (q, its significant words qw) matches a prepared name x {n folded, c without "Battle of" …, w words}
+function searchMatch(q, qw, x) {
+  var n = x.n;
   if (n === q) return 100;
   if (n.indexOf(q) === 0) return 80;
-  var core = n.replace(SEARCH_LEAD, '');
-  if (core !== n && core.indexOf(q) === 0) return core === q ? 90 : 78;
+  if (x.c !== n && x.c.indexOf(q) === 0) return x.c === q ? 90 : 78;
   if ((' ' + n).indexOf(' ' + q) !== -1) return 70;
+  if (qw.length > 1) {   // every word, in any order: "hastings battle"
+    var ws = x.w || (x.w = searchWords(n)), all = true;
+    for (var i = 0; i < qw.length && all; i++) { var ok = false; for (var j = 0; j < ws.length; j++) if (ws[j].indexOf(qw[i]) === 0) { ok = true; break; } all = ok; }
+    if (all) return 60;
+  }
   if (n.indexOf(q) !== -1) return 40;
   return 0;
 }
-// Every match, best first. Each result: s (score), name, type (its label), href, k (kind: 'profile', 'state' or the
-// entry's type), src ('p' EMPIRES, 'P' SEARCH_PROFILES, 'e' SEARCH_INDEX, 's' SEARCH_STATES) and i (its row there),
-// which /search uses for its filters (search-facets.js)
-function siteSearchAll(query) {
-  var q = searchFold(query).trim(), out = [];
-  if (q.length < 2) return out;
+// the names folded once per index (folding 37,000 names on every key press cost a phone 200-350 ms)
+var SEARCH_PREP = null;
+function searchPrep() {
+  var E = typeof SEARCH_INDEX !== 'undefined' ? SEARCH_INDEX : null, S = typeof SEARCH_STATES !== 'undefined' ? SEARCH_STATES : null,
+      P = typeof EMPIRES !== 'undefined' ? EMPIRES : null, PP = !P && typeof SEARCH_PROFILES !== 'undefined' ? SEARCH_PROFILES : null,
+      G = typeof SEARCH_PAGES !== 'undefined' ? SEARCH_PAGES : null;
+  var key = [E && E.length, S && S.length, P && P.length, PP && PP.length, G && G.length].join('/');
+  if (SEARCH_PREP && SEARCH_PREP.key === key) return SEARCH_PREP;
+  function f(name, al) { var n = searchFold(name); return { n: n, c: n.replace(SEARCH_LEAD, ''), w: null, al: al ? al.split('|').map(function (a) { var m = searchFold(a); return { n: m, c: m, w: null }; }) : null }; }
+  var X = { key: key, p: [], e: [], s: [], g: [] };
+  if (P) P.forEach(function (e) { X.p.push(f(e.name, '')); });
+  else if (PP) PP.forEach(function (r) { X.p.push(f(r[0], '')); });
+  if (E) E.forEach(function (r) { X.e.push(f(r[1], r[3])); });
+  if (S) S.forEach(function (r) { X.s.push(f(r[1], r[3])); });
+  if (G) G.forEach(function (r) { X.g.push(f(r[0], r[3])); });
+  return (SEARCH_PREP = X);
+}
+function searchMatchAll(q, qw, x) {   // the name, else its other names (a little lower)
+  var s = searchMatch(q, qw, x);
+  if (!s && x.al) for (var i = 0; i < x.al.length; i++) s = Math.max(s, searchMatch(q, qw, x.al[i]) - 10);
+  return s;
+}
+// one pass over everything; score(x) gives a row's match (0: none). Results carry s (score), name, type (its label),
+// href, k (kind), src ('p' EMPIRES, 'P' SEARCH_PROFILES, 'e' SEARCH_INDEX, 's' SEARCH_STATES, 'g' SEARCH_PAGES,
+// 'y' a year) and i (its row there), which /search uses for its filters (search-facets.js)
+function searchPass(X, score, add) {
+  var s, i;
   // profiles first among equal matches (+20 outweighs an entry's notability, at most +16)
-  if (typeof EMPIRES !== 'undefined') EMPIRES.forEach(function (e, i) {
-    var s = searchScore(q, e.name);
-    if (s) out.push({ s: s + 20, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e), k: 'profile', src: 'p', i: i });
-  });
+  if (typeof EMPIRES !== 'undefined') for (i = 0; i < X.p.length; i++) { if ((s = score(X.p[i]))) { var e = EMPIRES[i]; add({ s: s + 20, name: e.name, type: profileSubtype(e) + ' · profile', href: profileUrl(e), k: 'profile', src: 'p', i: i }); } }
   // pages without shared-data.js (the generated reference pages) get the profiles from /search-profiles.js instead
-  else if (typeof SEARCH_PROFILES !== 'undefined') SEARCH_PROFILES.forEach(function (r, i) {
-    var s = searchScore(q, r[0]);
-    if (s) out.push({ s: s + 20, name: r[0], type: r[2] + ' · profile', href: r[1], k: 'profile', src: 'P', i: i });
-  });
+  else if (typeof SEARCH_PROFILES !== 'undefined') for (i = 0; i < X.p.length; i++) { if ((s = score(X.p[i]))) { var r = SEARCH_PROFILES[i]; add({ s: s + 20, name: r[0], type: r[2] + ' · profile', href: r[1], k: 'profile', src: 'P', i: i }); } }
   // entries: r[4] is their notability (0-8: mentions in profiles and state histories, a picture)
-  if (typeof SEARCH_INDEX !== 'undefined') SEARCH_INDEX.forEach(function (r, i) {
-    var s = searchScore(q, r[1]);
-    if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-    if (s > 0) out.push({ s: s + 2 * (r[4] || 0), name: r[1], type: SEARCH_TYPES[r[2]] || r[2], href: '/encyclopedia/' + r[0], enc: r[2] === 'polity', k: r[2], src: 'e', i: i });
-  });
-  // every state in the register (page /state/<id>); an encyclopedia polity of the same name is dropped in its favour
-  if (typeof SEARCH_STATES !== 'undefined') {
-    var stateNames = {};
-    SEARCH_STATES.forEach(function (r, i) {
-      var s = searchScore(q, r[1]);
-      if (!s && r[3]) r[3].split('|').forEach(function (a) { s = Math.max(s, searchScore(q, a) - 10); });
-      if (s > 0) { out.push({ s: s + 2, name: r[1], type: String(r[2] || 'state').replace(/-/g, ' ') + ' · state', href: '/state/' + r[0], k: 'state', src: 's', i: i }); stateNames[searchFold(r[1])] = 1; }
-    });
-    out = out.filter(function (o) { return !(o.enc && stateNames[searchFold(o.name)]); });
+  if (typeof SEARCH_INDEX !== 'undefined') for (i = 0; i < X.e.length; i++) { var t = SEARCH_INDEX[i]; if ((s = score(X.e[i], t[2]))) { add({ s: s + 2 * (t[4] || 0), name: t[1], type: SEARCH_TYPES[t[2]] || t[2], href: '/encyclopedia/' + t[0], enc: t[2] === 'polity', k: t[2], src: 'e', i: i }); } }
+  // every state in the register (page /state/<id>)
+  if (typeof SEARCH_STATES !== 'undefined') for (i = 0; i < X.s.length; i++) { if ((s = score(X.s[i]))) { var u = SEARCH_STATES[i]; add({ s: s + 2, name: u[1], type: String(u[2] || 'state').replace(/-/g, ' ') + ' · state', href: '/state/' + u[0], k: 'state', src: 's', i: i }); } }
+  // the site's own pages: country histories, centuries, speeches, paths, essays and the tools
+  if (typeof SEARCH_PAGES !== 'undefined') for (i = 0; i < X.g.length; i++) { if ((s = score(X.g[i]))) { var g = SEARCH_PAGES[i], kd = SEARCH_PAGE_KINDS[g[2]] || ['Page', 0]; add({ s: s + kd[1], name: g[0], type: kd[0], href: g[1], k: g[2], src: 'g', i: i }); } }
+}
+// a bounded edit distance (optimal string alignment: a swap of two letters counts once); k + 1 means "more than k"
+function searchDist(a, b, k) {
+  var la = a.length, lb = b.length; if (Math.abs(la - lb) > k) return k + 1;
+  var p2 = null, p = [], c, i, j; for (j = 0; j <= lb; j++) p[j] = j;
+  for (i = 1; i <= la; i++) {
+    c = [i]; var lo = i;
+    for (j = 1; j <= lb; j++) {
+      var v = Math.min(p[j] + 1, c[j - 1] + 1, p[j - 1] + (a.charCodeAt(i - 1) === b.charCodeAt(j - 1) ? 0 : 1));
+      if (i > 1 && j > 1 && a.charCodeAt(i - 1) === b.charCodeAt(j - 2) && a.charCodeAt(i - 2) === b.charCodeAt(j - 1)) v = Math.min(v, p2[j - 2] + 1);
+      c[j] = v; if (v < lo) lo = v;
+    }
+    if (lo > k) return k + 1;
+    p2 = p; p = c;
   }
-  out.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
-  return out;
+  return p[lb];
+}
+// a misspelt query: every word of 4 letters or more within 1 edit of a word of the name (2 from 7 letters: "ghengis"),
+// shorter words exactly; the first letter must agree (typos rarely touch it, and it keeps this fast)
+function searchFuzzy(qw, x) {
+  var ws = x.w || (x.w = searchWords(x.n)), tot = 0, fix = [];
+  for (var i = 0; i < qw.length; i++) {
+    var w = qw[i], k = w.length >= 7 ? 2 : w.length >= 4 ? 1 : 0, best = k + 1, bw = '';
+    for (var j = 0; j < ws.length && best > 0; j++) {
+      var v = ws[j]; if (v.charCodeAt(0) !== w.charCodeAt(0)) continue;
+      var d = v.indexOf(w) === 0 ? 0 : k ? searchDist(w, v, k) : k + 1;
+      if (d < best) { best = d; bw = v; }
+    }
+    if (best > k) return null;
+    tot += best; fix.push(bw || w);
+  }
+  return tot ? { d: tot, fix: fix } : null;
+}
+function searchYear(q) {   // "1066", "480 bce", "ad 800": the year page (or the nearest one) and the century
+  var m = /^(?:(ad|ce) ?)?(\d{1,4}) ?(bce|bc|ce|ad)?$/.exec(q.replace(/\./g, '')); if (!m) return null;
+  var y = +m[2]; if (!y) return null;
+  var bce = m[3] === 'bce' || m[3] === 'bc'; if (bce) y = -y;
+  if (!bce && !m[1] && !m[3] && y > new Date().getFullYear()) return null;   // a bigger number is not a year
+  var res = [], Y = typeof SEARCH_YEARS !== 'undefined' ? SEARCH_YEARS : null;
+  function lab(v) { return v < 0 ? (-v) + ' BCE' : String(v); }
+  if (Y && Y.length) {
+    var near = Y[0]; for (var i = 1; i < Y.length; i++) if (Math.abs(Y[i] - y) < Math.abs(near - y)) near = Y[i];
+    if (Math.abs(near - y) <= 25) res.push({ s: 130, name: near === y ? 'The year ' + lab(y) : lab(near) + ' (the nearest year with a page to ' + lab(y) + ')', type: 'Year', href: '/years/' + (near < 0 ? (-near) + '-bce' : near), k: 'year', src: 'y', i: near });
+  }
+  var c = y < 0 ? Math.floor(-y / 100) + 1 : Math.floor(y / 100) + 1, o = c % 100, d = c % 10;
+  var ord = c + ((o > 10 && o < 14) ? 'th' : d === 1 ? 'st' : d === 2 ? 'nd' : d === 3 ? 'rd' : 'th');
+  if (y < 0 ? c <= 30 : c <= 21) res.push({ s: 125, name: ord + ' century' + (y < 0 ? ' BCE' : ''), type: 'Century', href: '/centuries/' + ord + '-century' + (y < 0 ? '-bce' : ''), k: 'century', src: 'y', i: y < 0 ? -c : c });
+  return res;
+}
+// Every match, best first. The array also carries didYouMean (a corrected query) when the matches are close spellings.
+function siteSearchAll(query) {
+  var q0 = searchFold(query).replace(/\s+/g, ' ').trim(), out = [];
+  if (q0.length < 2) return out;
+  var X = searchPrep(), best = {};
+  function add(o) { var b = best[o.href]; if (!b || o.s > b.s) best[o.href] = o; }
+  function words(q) { var w = searchWords(q).filter(function (x) { return !SEARCH_STOP[x]; }); return w.length ? w : searchWords(q); }
+  // the query, and the query in other words (a whole other name, or words of it swapped)
+  var qs = [q0], qd = q0.replace(/\./g, '');
+  if (SEARCH_SYN[qd]) qs.push(SEARCH_SYN[qd]);
+  else { var ch = false, sw = qd.split(' ').map(function (w) { if (SEARCH_SYN[w]) { ch = true; return SEARCH_SYN[w]; } return w; }); if (ch) qs.push(sw.join(' ')); }
+  qs.forEach(function (q) {
+    var qw = words(q);
+    searchPass(X, function (x, kind) {
+      var s = searchMatchAll(q, qw, x);
+      // a person whose surname is the query: "lincoln" means Abraham Lincoln before Lincoln, England
+      if (s && s < 85 && kind === 'person') { var ws = x.w || (x.w = searchWords(x.n)); if (ws[ws.length - 1] === q) s = 85; }
+      return s;
+    }, add);
+  });
+  (searchYear(q0) || []).forEach(add);
+  out = Object.keys(best).map(function (h) { return best[h]; });
+  var strict = out.length;
+  if (strict < 3 && q0.length >= 4 && !/\d/.test(q0)) {   // (almost) nothing: try close spellings; never for years or numbers
+    var qw0 = words(q0), fixes = {};
+    searchPass(X, function (x) { var r = searchFuzzy(qw0, x); if (!r) return 0; fixes[x.n] = r.fix; return 34 - 6 * r.d; }, function (o) { o.fz = 1; if (!best[o.href]) { best[o.href] = o; out.push(o); } });
+    var fz = out.filter(function (o) { return o.fz; }).sort(function (a, b) { return b.s - a.s; });
+    // "Did you mean" only when the words as typed found nothing at all
+    if (!strict && fz.length) { var f = fixes[searchFold(fz[0].name)]; if (f) out.didYouMean = f.join(' '); }
+  }
+  // an encyclopedia polity of the same name as a state in the register is dropped in the state's favour
+  var stateNames = {}; out.forEach(function (o) { if (o.src === 's') stateNames[searchFold(o.name)] = 1; });
+  // a profile and the encyclopedia entry of the same name: the entry comes straight after the profile (its twin)
+  var prof = {}; out.forEach(function (o) { if (o.k === 'profile') prof[searchFold(o.name)] = o; });
+  var res = out.filter(function (o) { return !(o.enc && stateNames[searchFold(o.name)]); });
+  res.forEach(function (o) { var p = o.src === 'e' && prof[searchFold(o.name)]; if (p) { o.twin = p.href; o.s = p.s - 0.01; p.entry = o.href; } });
+  res.sort(function (a, b) { return b.s - a.s || a.name.length - b.name.length; });
+  if (out.didYouMean) res.didYouMean = out.didYouMean;
+  return res;
 }
 function siteSearch(query) { return siteSearchAll(query).slice(0, 12); }
-var SEARCH_INDEX_SRC = '/search-index.js?v=10';   // also loaded by quiz.js for answer suggestions
+// a result's picture: an entry's or a state's 112 px copy where it has one, a profile's emblem
+function searchThumb(r) {
+  if (r.src === 'p' || r.src === 'P') return '/logos/thumbs/' + encodeURIComponent(r.name) + '.png';
+  if (r.src === 'e' && SEARCH_INDEX[r.i][5]) return '/images/encyclopedia/thumbs/' + SEARCH_INDEX[r.i][0] + '.jpg';
+  if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
+  return '';
+}
+var SEARCH_INDEX_SRC = '/search-index.js?v=c9a6b0cd4d';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_PAGES_SRC = '/search-pages.js?v=e7e4524819';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
+// everything the search needs, loaded once; then cb()
+var searchLoading = null;
+function loadSearchData(cb) {
+  if (!searchLoading) searchLoading = new Promise(function (ok) {
+    var left = 1, done = function () { if (--left === 0) ok(); };
+    function get(src) { left++; var s = document.createElement('script'); s.src = src; s.onload = done; s.onerror = done; document.head.appendChild(s); }
+    if (typeof EMPIRES === 'undefined' && typeof SEARCH_PROFILES === 'undefined') get(SEARCH_PROFILES_SRC);
+    if (typeof SEARCH_INDEX === 'undefined') get(SEARCH_INDEX_SRC);
+    if (typeof SEARCH_PAGES === 'undefined') get(SEARCH_PAGES_SRC);
+    done();
+  });
+  searchLoading.then(cb);
+}
+var SEARCH_RECENT = 'epoch-search-recent';
+function searchRecent() { try { var a = JSON.parse(localStorage.getItem(SEARCH_RECENT) || '[]'); return Array.isArray(a) ? a.filter(function (x) { return typeof x === 'string'; }) : []; } catch (e) { return []; } }
+function searchRemember(q) {
+  q = String(q || '').trim(); if (q.length < 2) return;
+  var a = searchRecent().filter(function (x) { return x.toLowerCase() !== q.toLowerCase(); }); a.unshift(q);
+  try { localStorage.setItem(SEARCH_RECENT, JSON.stringify(a.slice(0, 8))); } catch (e) {}
+}
 function initSiteSearch() {
   var box = document.getElementById('site-search'), input = document.getElementById('site-search-input'),
       list = document.getElementById('site-search-results'), hint = document.getElementById('site-search-hint'),
-      opener = null, active = -1, loading = false, pending = [];
-  function load(cb) {
-    if (typeof SEARCH_INDEX !== 'undefined') return cb();
-    pending.push(cb);
-    if (loading) return; loading = true;
-    if (typeof EMPIRES === 'undefined' && typeof SEARCH_PROFILES === 'undefined') {
-      var p = document.createElement('script'); p.src = SEARCH_PROFILES_SRC; document.head.appendChild(p);
-    }
-    var done = function () { loading = false; var q = pending; pending = []; q.forEach(function (f) { f(); }); };
-    var s = document.createElement('script'); s.src = SEARCH_INDEX_SRC;
-    s.onload = done; s.onerror = done;
-    document.head.appendChild(s);
+      opener = null, active = -1, timer = null;
+  var GLYPH = { person: 'person', event: 'event', place: 'place', work: 'work', idea: 'idea', group: 'group', institution: 'institution', polity: 'polity', state: 'polity', profile: 'polity', term: 'term', factor: 'factor' };
+  function pic(r) {
+    var src = searchThumb(r);
+    if (src) return '<span class="ss-pic"><img src="' + src + '" alt="" loading="lazy" width="40" height="40"' + (r.src === 'p' || r.src === 'P' ? ' class="ss-emblem"' : ' onerror="this.onerror=null;this.src=this.src.replace(\'/thumbs/\',\'/\')"') + '></span>';
+    return '<span class="ss-pic ph ph-' + (GLYPH[r.k] || 'term') + '" aria-hidden="true"></span>';
   }
   function render() {
-    var all = siteSearchAll(input.value), res = all.slice(0, 12), q = input.value.trim(); active = -1;
+    var q = input.value.trim(); active = -1;
+    if (q.length < 2) {   // nothing typed yet: the last searches
+      var rec = searchRecent();
+      list.innerHTML = rec.length ? '<li class="ss-head" role="presentation">Recent searches</li>' + rec.map(function (x, i) {
+        return '<li role="option" class="ss-rec" id="ss-opt-' + i + '"><a href="/search?q=' + encodeURIComponent(x) + '" data-recent="' + escHtml(x) + '"><span class="ss-name">' + escHtml(x) + '</span></a></li>';
+      }).join('') + '<li role="presentation" class="ss-clear"><button type="button" data-clear-recent>Clear recent searches</button></li>' : '';
+      hint.textContent = 'Profiles, states, the full encyclopedia, countries, centuries, years and the site’s own pages.'; hint.hidden = false;
+      return;
+    }
+    var all = siteSearchAll(q), res = all.filter(function (r) { return !r.twin; }).slice(0, 12);
     list.innerHTML = res.map(function (r, i) {
-      return '<li role="option" id="ss-opt-' + i + '"><a href="' + r.href + '"><span class="ss-name">' + escHtml(r.name) + '</span><span class="ss-type">' + escHtml(r.type) + '</span></a></li>';
+      return '<li role="option" id="ss-opt-' + i + '"><a href="' + r.href + '">' + pic(r) + '<span class="ss-name">' + escHtml(r.name) + '</span><span class="ss-type">' + escHtml(r.type) + '</span></a>' +
+        (r.entry ? '<a class="ss-twin" href="' + r.entry + '" tabindex="-1">Encyclopedia entry</a>' : '') + '</li>';
     }).join('') +
       // the full list, with filters, on /search
       (res.length ? '<li role="option" id="ss-opt-' + res.length + '" class="ss-all"><a href="/search?q=' + encodeURIComponent(q) + '">' + (all.length > res.length ? 'See all ' + all.length.toLocaleString('en-GB') + ' results' : 'Open the search page') + ' <span aria-hidden="true">&rarr;</span></a></li>' : '');
-    hint.textContent = input.value.trim().length < 2 ? 'Profiles, states and the full encyclopedia.' : (res.length ? '' : 'No matches. Try another spelling or a shorter word.');
-    hint.hidden = !hint.textContent;
+    if (all.didYouMean) { hint.innerHTML = 'Close spellings. Did you mean <button type="button" class="ss-dym" data-q="' + escHtml(all.didYouMean) + '">' + escHtml(all.didYouMean) + '</button>?'; hint.hidden = false; }
+    else { hint.textContent = res.length ? '' : 'No matches. Try another spelling or a shorter word.'; hint.hidden = !hint.textContent; }
   }
+  function soon() { clearTimeout(timer); timer = setTimeout(function () { timer = null; render(); }, 80); }
+  function options() { return list.querySelectorAll('li[role="option"]'); }
   function setActive(i) {
-    var items = list.querySelectorAll('li'); if (!items.length) return;
+    var items = options(); if (!items.length) return;
     active = (i + items.length) % items.length;
     items.forEach(function (li, k) { li.classList.toggle('active', k === active); li.setAttribute('aria-selected', k === active); });
-    input.setAttribute('aria-activedescendant', 'ss-opt-' + active);
+    input.setAttribute('aria-activedescendant', items[active].id);
     items[active].scrollIntoView({ block: 'nearest' });
   }
   function open(prefill) {
     opener = document.activeElement; box.hidden = false; document.body.style.overflow = 'hidden';
     if (typeof prefill === 'string') input.value = prefill;
     input.focus(); render();
-    load(render);
+    loadSearchData(render);
   }
   function close() { box.hidden = true; document.body.style.overflow = ''; if (opener && opener.focus) opener.focus(); }
   window.openSiteSearch = open;
   document.getElementById('nav-search-btn').addEventListener('click', function () { open(); });
   document.getElementById('site-search-close').addEventListener('click', close);
   box.addEventListener('click', function (e) { if (e.target === box) close(); });
-  input.addEventListener('input', render);
+  input.addEventListener('input', soon);
   input.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
-    else if (e.key === 'Enter') { var a = list.querySelectorAll('li a')[Math.max(active, 0)]; if (a) { e.preventDefault(); a.click(); } }
+    else if (e.key === 'Enter') { if (timer) { clearTimeout(timer); timer = null; render(); } var li = options()[Math.max(active, 0)], a = li && li.querySelector('a'); if (a) { e.preventDefault(); a.click(); } }
     else if (e.key === 'Escape') { e.preventDefault(); close(); }
   });
-  list.addEventListener('click', function (e) { if (e.target.closest('a')) close(); });
+  list.addEventListener('click', function (e) {
+    if (e.target.closest('[data-clear-recent]')) { try { localStorage.removeItem(SEARCH_RECENT); } catch (x) {} render(); input.focus(); return; }
+    var a = e.target.closest('a'); if (!a) return;
+    var rq = a.getAttribute('data-recent'); if (rq !== null) { e.preventDefault(); input.value = rq; render(); input.focus(); return; }   // a recent search: shown again here
+    searchRemember(input.value); close();
+  });
+  hint.addEventListener('click', function (e) { var b = e.target.closest('[data-q]'); if (b) { input.value = b.getAttribute('data-q'); render(); input.focus(); } });
   document.addEventListener('keydown', function (e) {
     if (!box.hidden) return;
     var t = e.target, typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
@@ -424,7 +585,7 @@ function initSiteSearch() {
   });
   // warm the index up when a search looks likely (hovering or focusing the search button), never on every page view:
   // it is 800 KB that most readers never need
-  var warm = function () { load(function () {}); };
+  var warm = function () { loadSearchData(function () {}); };
   window.warmSiteSearch = warm;   // the home page's search field warms up on focus too
   var sb = document.getElementById('nav-search-btn');
   sb.addEventListener('pointerover', warm, { once: true });
@@ -678,6 +839,16 @@ function initNav(activePage) {
   document.body.insertAdjacentHTML('beforeend', footerHtml + searchHtml);
   initSiteSearch();
   initEncPreviews();
+  // a link pointed at with a mouse for a moment is fetched before the click, in browsers that take speculation rules
+  // (Chrome, Edge; the others ignore it): same-site pages only, never the contact form, feeds or data files. Not on
+  // touch screens: matching the rules against every link cost a phone up to 200 ms on long lists (the glossary),
+  // and without hover they help only at the tap itself.
+  if (window.HTMLScriptElement && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules') && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var spec = document.createElement('script'); spec.type = 'speculationrules';
+    spec.textContent = JSON.stringify({ prefetch: [{ source: 'document', eagerness: 'moderate', where: { and: [{ href_matches: '/*' },
+      { not: { href_matches: '/contact*' } }, { not: { href_matches: '/feeds/*' } }, { not: { href_matches: '/*.csv' } }, { not: { href_matches: '/*.json' } }, { not: { href_matches: '/*.xml' } }] } }] });
+    document.head.appendChild(spec);
+  }
   // any [data-share-text] button shares its line (a speech's key passage), with its poster (data-share-img), which
   // is fetched as soon as the button is pointed at or touched
   document.addEventListener('click', function (e) {
@@ -954,7 +1125,7 @@ function initNav(activePage) {
     var ticking = false;
     function set() { ticking = false; var max = document.documentElement.scrollHeight - window.innerHeight; bar.style.width = (max > 600 ? Math.min(100, Math.max(0, window.scrollY / max * 100)) : 0) + '%'; }
     window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(set); } }, { passive: true });
-    set();
+    requestAnimationFrame(set);   // not at once: reading scrollHeight here forced a whole layout while the page was still being built
   })();
 
   // ── Listen: the page read aloud by the device's own voices (speechSynthesis) ─────────────
@@ -1196,7 +1367,7 @@ function initNav(activePage) {
     document.body.appendChild(b);
     let shown = false;
     const check = () => { const s = window.scrollY > window.innerHeight * 1.5; if (s !== shown) { shown = s; b.hidden = !s; } };
-    window.addEventListener('scroll', check, { passive: true }); check();
+    window.addEventListener('scroll', check, { passive: true }); requestAnimationFrame(check);   // scrollY read at once forced a layout
     b.addEventListener('click', () => {
       const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });

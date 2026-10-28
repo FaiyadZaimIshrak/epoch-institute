@@ -14,7 +14,7 @@ var FaithMap = (function () {
   'use strict';
   var FAITHS_V = '4574226297', GLOBE_V = '47369e946f';
   var W = 10000, H = 4393, NOW = 2026, NS = 'http://www.w3.org/2000/svg', uid = 0;
-  var D3_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js', D2R = Math.PI / 180;
+  var D3_SRC = '/d3-geo.js?v=1', D2R = Math.PI / 180;
   var KM = 4.0075 / 6371;   // an area's radius is given in tenths of a map unit (about 4 km each): this many radians
   var reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
   var HOW = { globe: 'Drag to turn the globe; pinch, or click it and scroll, to zoom. Tap a glow, a mark or an arrow to read about it.',

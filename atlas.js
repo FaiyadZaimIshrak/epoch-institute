@@ -115,15 +115,16 @@
     else if (e.key === 'ArrowUp') { ty += step; applyView(); } else if (e.key === 'ArrowDown') { ty -= step; applyView(); } else return;
     e.preventDefault();
   });
-  var presets = $('atl-presets');
+  // the buttons are in the page already (written by the builder), so the map does not move down when they arrive
+  var presets = $('atl-presets'), given = presets.querySelectorAll('button');
   A.presets.forEach(function (p, i) {
-    var b = document.createElement('button'); b.type = 'button'; b.textContent = p[0];
+    var b = given[i] || presets.appendChild(document.createElement('button')); b.type = 'button'; b.textContent = p[0];
     b.addEventListener('click', function () {
       if (isG()) { var g = A.presetsLL[i]; GL.rotateTo(g[0], g[1], i === 0 ? 1 : GL.kFor(g[2])); return; }
       if (p[0] === 'World') animateTo(1, 0, 0); else fitBox(p[1], p[2], p[3], p[4]);
     });
-    presets.appendChild(b);
   });
+  for (var gi = A.presets.length; gi < given.length; gi++) given[gi].remove();
   window.addEventListener('resize', function () { if (isG()) { GL.resize(); } else { sizeDots(); scheduleLabels(); } });
 
   // ── flat dots ──
@@ -371,7 +372,7 @@
         } catch (err) { fail(); }
       }
       if (window.d3 && d3.geoOrthographic) return step2();
-      var s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js'; s.onload = step2; s.onerror = fail; document.head.appendChild(s);
+      var s = document.createElement('script'); s.src = '/d3-geo.js?v=1'; s.onload = step2; s.onerror = fail; document.head.appendChild(s);
     }
     function resize() {
       if (!ready) return;
