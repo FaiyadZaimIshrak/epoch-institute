@@ -140,7 +140,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/holy-roman-empire"><img src="/logos/thumbs/Holy%20Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Holy Roman Empire</span><span class="related-card-dates">800 CE – 1806 CE</span></a><a class="related-card" href="/empire/papal-states"><img src="/logos/thumbs/Papal%20States.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Papal States</span><span class="related-card-dates">754 CE – 1870 CE</span></a><a class="related-card" href="/empire/kingdom-of-navarre"><img src="/logos/thumbs/Kingdom%20of%20Navarre.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Navarre</span><span class="related-card-dates">824 CE – 1841 CE</span></a><a class="related-card" href="/empire/kingdom-of-norway"><img src="/logos/thumbs/Kingdom%20of%20Norway.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Norway</span><span class="related-card-dates">872 CE – 2025 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/mongol-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Mongol%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mongol Empire</span><span class="related-card-dates">1206 CE – 1368 CE</span></a><a class="related-card" href="/empire/chagatai-empire"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Chagatai%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chagatai Empire</span><span class="related-card-dates">1225 CE – 1500 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/mongol-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Mongol%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mongol Empire</span><span class="related-card-dates">1206 CE – 1368 CE</span></a><a class="related-card" href="/empire/kingdom-of-mapungubwe"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Mapungubwe.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Mapungubwe</span><span class="related-card-dates">1220 CE – 1290 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -158,8 +158,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

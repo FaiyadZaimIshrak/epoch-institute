@@ -139,7 +139,7 @@
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/new-zealand"><img src="/logos/thumbs/New%20Zealand.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">New Zealand</span><span class="related-card-dates">1947 CE – 2025 CE</span></a></div>
+      <div class="related-grid"><a class="related-card" href="/empire/kingdom-of-tonga"><img src="/logos/thumbs/Kingdom%20of%20Tonga.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Tonga</span><span class="related-card-dates">1845 CE – 2025 CE</span></a><a class="related-card" href="/empire/new-zealand"><img src="/logos/thumbs/New%20Zealand.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">New Zealand</span><span class="related-card-dates">1947 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-hawaii"><img src="/logos/thumbs/Kingdom%20of%20Hawaii.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Hawaii</span><span class="related-card-dates">1795 CE – 1893 CE</span></a><a class="related-card" href="/empire/rapa-nui"><img src="/logos/thumbs/Rapa%20Nui.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rapa Nui</span><span class="related-card-dates">1200 CE – 1888 CE</span></a></div>
       <div class="related-prevnext"><a class="related-card" href="/empire/french-west-africa"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/French%20West%20Africa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">French West Africa</span><span class="related-card-dates">1895 CE – 1958 CE</span></a><a class="related-card" href="/empire/republic-of-panama"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Republic%20of%20Panama.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Panama</span><span class="related-card-dates">1903 CE – 2025 CE</span></a></div>
     </section>
 
@@ -158,8 +158,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

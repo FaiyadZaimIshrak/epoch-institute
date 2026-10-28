@@ -143,7 +143,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/byzantine-empire"><img src="/logos/thumbs/Byzantine%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byzantine Empire</span><span class="related-card-dates">330 CE – 1453 CE</span></a><a class="related-card" href="/empire/kingdom-of-the-picts"><img src="/logos/thumbs/Kingdom%20of%20the%20Picts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of the Picts</span><span class="related-card-dates">300 CE – 900 CE</span></a><a class="related-card" href="/empire/kingdom-of-powys"><img src="/logos/thumbs/Kingdom%20of%20Powys.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Powys</span><span class="related-card-dates">410 CE – 1160 CE</span></a><a class="related-card" href="/empire/kingdom-of-gwynedd"><img src="/logos/thumbs/Kingdom%20of%20Gwynedd.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Gwynedd</span><span class="related-card-dates">450 CE – 1283 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/kingdom-of-the-franks"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Kingdom%20of%20the%20Franks.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of the Franks</span><span class="related-card-dates">481 CE – 843 CE</span></a><a class="related-card" href="/empire/kingdom-of-wessex"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Wessex.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Wessex</span><span class="related-card-dates">519 CE – 927 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/kingdom-of-the-franks"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Kingdom%20of%20the%20Franks.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of the Franks</span><span class="related-card-dates">481 CE – 843 CE</span></a><a class="related-card" href="/empire/tiwanaku"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Tiwanaku.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tiwanaku</span><span class="related-card-dates">500 CE – 1000 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -161,8 +161,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

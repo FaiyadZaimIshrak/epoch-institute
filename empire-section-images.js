@@ -3361,5 +3361,193 @@ var SECTION_IMAGES = {
     literature:{slug:"iliad",name:"Iliad",img:"/images/encyclopedia/iliad.jpg",artist:"Homer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Illiad_fragmented_papyrus.png"},
     change:{slug:"manuel-chrysoloras",name:"Manuel Chrysoloras",img:"/images/encyclopedia/manuel-chrysoloras.jpg",artist:"Paolo Uccello.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manuel-chrysoloras-paolo-uccello-louvre-15th.jpg"},
     legacy:{slug:"aristotle",name:"Aristotle",img:"/images/encyclopedia/aristotle.jpg",artist:"After Lysippos",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg"}
+  },
+  "Kingdom of Hawaii": {
+    foundation:{slug:"kalaniopuu",name:"Kalaniʻōpuʻu",img:"/images/encyclopedia/kalaniopuu.jpg",artist:"Mark Miller",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kalani%CA%BB%C5%8Dpu%CA%BBu_%CA%BBAhu_%CA%BBula_and_mahiole.jpg"},
+    socioeconomy:{slug:"kamehameha-i",name:"Kamehameha I",img:"/images/encyclopedia/kamehameha-i.jpg",artist:"Louis Choris",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_Choris_(1795-1828)_-_Kamehameha,_King_of_the_Sandwich_Islands_by_Louis_Choris,_(Russian),_pen_and_watercolor.jpg"},
+    military:{slug:"battle-of-nuuanu",name:"Battle of Nuʻuanu",img:"/images/encyclopedia/battle-of-nuuanu.jpg",artist:"Jiang",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nuuanu_Pali_(1258).JPG"},
+    governance:{slug:"kamehameha-iii",name:"Kamehameha III",img:"/images/encyclopedia/kamehameha-iii.jpg",artist:"Hugo Stangenwald",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Photo_of_Kamehameha_III_(PP-97-7-003).jpg"},
+    impact:{slug:"iolani-palace",name:"ʻIolani Palace",img:"/images/encyclopedia/iolani-palace.jpg",artist:"Gage Skidmore from Surprise, AZ, United States of America",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Iolani_Palace_(51872681413).jpg"},
+    decline:{slug:"kalakaua",name:"Kalākaua",img:"/images/encyclopedia/kalakaua.jpg",artist:"James J. Williams",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kingdavidkalakaua_dust.jpg"}
+  },
+  "Kingdom of Tonga": {
+    foundation:{slug:"george-tupou-i",name:"George Tupou I",img:"/images/encyclopedia/george-tupou-i.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:George_Tupou_I,_c._1880s.jpg"},
+    military:{slug:"enele-maafu",name:"Enele Maʻafu",img:"/images/encyclopedia/enele-maafu.jpg",artist:"Colonel Stewart",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ma%27afu,_the_Tongan_Chief,_photograph_by_late_Colonel_Stewart.jpg"},
+    governance:{slug:"shirley-baker",name:"Shirley Baker",img:"/images/encyclopedia/shirley-baker.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SW_Baker.jpg"},
+    decline:{slug:"tupou-vi",name:"Tupou VI",img:"/images/encyclopedia/tupou-vi.jpg",artist:"Government House, Department of the Prime Minister and Cabinet",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Tupou_VI_2025.jpg"}
+  },
+  "Tuʻi Tonga Empire": {
+    foundation:{slug:"haamonga-a-maui",name:"Haʻamonga ʻa Maui",img:"/images/encyclopedia/haamonga-a-maui.jpg",artist:"Tauʻolunga",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ha%CA%BBamonga.jpg"},
+    socioeconomy:{slug:"tagaloa",name:"Tagaloa",img:"/images/encyclopedia/tagaloa.jpg",artist:"Stuartyeates",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Paula_Schaafhausen.JPG"},
+    decline:{slug:"laufilitonga",name:"Laufilitonga",img:"/images/encyclopedia/laufilitonga.jpg",artist:"Tauʻolunga",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Laufilitonga_cross.jpg"}
+  },
+  "Kingdom of Tahiti": {
+    foundation:{slug:"william-bligh",name:"William Bligh",img:"/images/encyclopedia/william-bligh.jpg",artist:"Alexander Huey",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:WilliamBligh.jpeg"},
+    socioeconomy:{slug:"london-missionary-society",name:"London Missionary Society",img:"/images/encyclopedia/london-missionary-society.jpg",artist:"See filename/description",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bechuana_Congregation_(relates_to_David_Livingstone)_by_The_London_Missionary_Society.jpg"},
+    military:{slug:"pomare-ii",name:"Pōmare II",img:"/images/encyclopedia/pomare-ii.jpg",artist:"Engraved by R. Hicks from an original drawing by William Ellis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pomare_II,_engraving_by_R._Hicks_(left).jpg"},
+    governance:{slug:"pomare-iv",name:"Pōmare IV",img:"/images/encyclopedia/pomare-iv.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Queen_Pomare%27s_Palace,_Tahiti_(LMS_illustration).jpg"},
+    impact:{slug:"papeiha",name:"Papeiha",img:"/images/encyclopedia/papeiha.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Brave_Teacher,_Papeiha_(1904).jpg"},
+    decline:{slug:"abel-aubert-du-petit-thouars",name:"Abel Aubert du Petit-Thouars",img:"/images/encyclopedia/abel-aubert-du-petit-thouars.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:DupetitThouarsAA.jpg"}
+  },
+  "Saudeleur dynasty": {
+    foundation:{slug:"temwen-island",name:"Temwen Island",img:"/images/encyclopedia/temwen-island.jpg",artist:"CT Snow from Hsinchu, Taiwan",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Nan_Madol_5.jpg"}
+  },
+  "Rapa Nui": {
+    foundation:{slug:"anakena",name:"Anakena",img:"/images/encyclopedia/anakena.jpg",artist:"Bjørn Christian Tørrissen",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Anakena-Ahu-Ature.jpg"},
+    socioeconomy:{slug:"easter-island",name:"Easter Island",img:"/images/encyclopedia/easter-island.jpg",artist:"kallerna",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Easter_Island_5.jpg"},
+    military:{slug:"policarpo-toro",name:"Policarpo Toro",img:"/images/encyclopedia/policarpo-toro.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Policarpo_Toro.jpg"},
+    governance:{slug:"atamu-tekena",name:"Atamu Tekena",img:"/images/encyclopedia/atamu-tekena.jpg",artist:"Edward Schonsett from Henderson, Nevada, USA",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Atamu_Tekena_(10772100486).jpg"},
+    impact:{slug:"rano-raraku",name:"Rano Raraku",img:"/images/encyclopedia/rano-raraku.jpg",artist:"Bjørn Christian Tørrissen",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Rano-Raraku-Panorama-2013.jpg"}
+  },
+  "Moche": {
+    foundation:{slug:"huacas-de-moche",name:"Huacas de Moche",img:"/images/encyclopedia/huacas-de-moche.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Huaca_Sol_lou.jpg"},
+    military:{slug:"lady-of-cao",name:"Lady of Cao",img:"/images/encyclopedia/lady-of-cao.jpg",artist:"Jean-Pierre Dalbéra from Paris, France",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Reconstitution_de_la_Dame_de_Cao_(Mus%C3%A9e_du_quai_Branly_-_Jacques_Chirac,_Paris).jpg"},
+    governance:{slug:"lord-of-sipan",name:"Lord of Sipán",img:"/images/encyclopedia/lord-of-sipan.jpg",artist:"Cicero Moraes",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Se%C3%B1or_de_S%C3%ADpan_-_Reconstrucci%C3%B3n_Facial_Forense.jpg"},
+    impact:{slug:"chan-chan",name:"Chan Chan",img:"/images/encyclopedia/chan-chan.jpg",artist:"Håkan Svensson",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chan_chan_view1.jpg"},
+    decline:{slug:"pampa-grande",name:"Pampa Grande",img:"/images/encyclopedia/pampa-grande.jpg",artist:"MI PERÚ",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pir%C3%A1mide_en_complejo_arqueol%C3%B3gico_moche_de_Pampa_Grande,_Chongoyape,_Lambayeque,_Per%C3%BA.jpg"}
+  },
+  "Chavín": {
+    foundation:{slug:"cupisnique",name:"Cupisnique",img:"/images/encyclopedia/cupisnique.jpg",artist:"The original uploader was Lyndsayruell at English Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:CupisniqueLMC.jpg"},
+    socioeconomy:{slug:"san-pedro-cactus",name:"San Pedro cactus",img:"/images/encyclopedia/san-pedro-cactus.jpg",artist:"Forest & Kim Starr",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Starr_070320-5799_Echinopsis_pachanoi.jpg"},
+    governance:{slug:"lanzon",name:"Lanzón",img:"/images/encyclopedia/lanzon.jpg",artist:"CyArk",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chavin_lanzon_stela2_cyark.jpg"},
+    impact:{slug:"julio-c-tello",name:"Julio C. Tello",img:"/images/encyclopedia/julio-c-tello.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Julio_C._Tello_Harvard.jpg"}
+  },
+  "Kingdom of Chimor": {
+    foundation:{slug:"chan-chan",name:"Chan Chan",img:"/images/encyclopedia/chan-chan.jpg",artist:"Håkan Svensson",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chan_chan_view1.jpg"},
+    military:{slug:"tupac-inca-yupanqui",name:"Túpac Inca Yupanqui",img:"/images/encyclopedia/tupac-inca-yupanqui.jpg",artist:"Felipe Huaman Puma de Ayala",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tupac-inca-yupanqui-small.png"}
+  },
+  "Wari Empire": {
+    foundation:{slug:"gateway-of-the-sun",name:"Gateway of the Sun",img:"/images/encyclopedia/gateway-of-the-sun.jpg",artist:"Mhwater",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zonnepoort_tiwanaku.jpg"},
+    socioeconomy:{slug:"cerro-baul",name:"Cerro Baúl",img:"/images/encyclopedia/cerro-baul.jpg",artist:"simon_chara",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Cerro_Baul.jpg"},
+    military:{slug:"pikillacta",name:"Pikillacta",img:"/images/encyclopedia/pikillacta.jpg",artist:"AgainErick",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Piquillacta_Archaeological_site_-_street.jpg"},
+    governance:{slug:"viracochapampa",name:"Viracochapampa",img:"/images/encyclopedia/viracochapampa.jpg",artist:"Trabajo propio",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Wiracochapampa1.jpg"},
+    impact:{slug:"pachacamac",name:"Pachacamac",img:"/images/encyclopedia/pachacamac.jpg",artist:"Apollo",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Pachacamac_-_51163366566.jpg"}
+  },
+  "Tiwanaku": {
+    foundation:{slug:"akapana",name:"Akapana",img:"/images/encyclopedia/akapana.jpg",artist:"Vale Velard",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Arqueologia_impresionante.jpg"},
+    military:{slug:"cerro-baul",name:"Cerro Baúl",img:"/images/encyclopedia/cerro-baul.jpg",artist:"simon_chara",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Cerro_Baul.jpg"},
+    governance:{slug:"kalasasaya",name:"Kalasasaya",img:"/images/encyclopedia/kalasasaya.jpg",artist:"Mhwater at Dutch Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plein_Tiwanaku.jpg"},
+    impact:{slug:"pedro-cieza-de-leon",name:"Pedro Cieza de León",img:"/images/encyclopedia/pedro-cieza-de-leon.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pedro_Cieza_de_Le%C3%B3n.jpg"}
+  },
+  "Neo-Inca State": {
+    foundation:{slug:"francisco-pizarro",name:"Francisco Pizarro",img:"/images/encyclopedia/francisco-pizarro.jpg",artist:"Amable-Paul Coutan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Francisco_Pizarro.jpg"},
+    socioeconomy:{slug:"vitcos",name:"Vitcos",img:"/images/encyclopedia/vitcos.jpg",artist:"Malmestar8",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Vitcos_-_Rosaspata_(parcial).jpg"},
+    military:{slug:"gonzalo-pizarro",name:"Gonzalo Pizarro",img:"/images/encyclopedia/gonzalo-pizarro.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gonzalo_Pizarro.jpg"},
+    governance:{slug:"huayna-capac",name:"Huayna Capac",img:"/images/encyclopedia/huayna-capac.jpg",artist:"Felipe Huaman Puma de Ayala",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hp_inka11.jpg"},
+    impact:{slug:"espiritu-pampa",name:"Espíritu Pampa",img:"/images/encyclopedia/espiritu-pampa.jpg",artist:"AgainErick",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Espiritu_Pampa_Archaeological_site_-_overgrown_house.jpg"},
+    decline:{slug:"tupac-amaru",name:"Túpac Amaru",img:"/images/encyclopedia/tupac-amaru.jpg",artist:"Cuzco School / Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TupacamaruI.JPG"}
+  },
+  "Toltec state": {
+    foundation:{slug:"topiltzin-quetzalcoatl",name:"Topiltzin Quetzalcoatl",img:"/images/encyclopedia/topiltzin-quetzalcoatl.jpg",artist:"author unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Quetzalcoatl_1.jpg"},
+    socioeconomy:{slug:"tula-mesoamerican-site",name:"Tula (Mesoamerican site)",img:"/images/encyclopedia/tula-mesoamerican-site.jpg",artist:"AlejandroLinaresGarcia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:TulaSite81.JPG"},
+    governance:{slug:"quetzalcoatl",name:"Quetzalcoatl",img:"/images/encyclopedia/quetzalcoatl.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Quetzalc%C3%B3atl_como_la_serpiente_emplumada_y_el_dios_del_viento_Eh%C3%A9catl,_en_el_folio_19.jpg"},
+    impact:{slug:"popol-vuh",name:"Popol Vuh",img:"/images/encyclopedia/popol-vuh.jpg",artist:"Francisco Ximénez",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Popol_vuh.jpg"}
+  },
+  "Purépecha Empire": {
+    foundation:{slug:"antonio-de-mendoza",name:"Antonio de Mendoza",img:"/images/encyclopedia/antonio-de-mendoza.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AntonioMendoza.jpg"},
+    socioeconomy:{slug:"curicaueri",name:"Curicaueri",img:"/images/encyclopedia/curicaueri.jpg",artist:"Josuemirandazepeda",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Exvoto_para_Curicaueri.jpg"},
+    military:{slug:"axayacatl",name:"Axayacatl",img:"/images/encyclopedia/axayacatl.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Axayacatl.jpg"},
+    impact:{slug:"vasco-de-quiroga",name:"Vasco de Quiroga",img:"/images/encyclopedia/vasco-de-quiroga.jpg",artist:"Original uploader was Rbraunwa at en.wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vasco_de_Quiroga.jpg"},
+    decline:{slug:"tangaxuan-ii",name:"Tangaxuan II",img:"/images/encyclopedia/tangaxuan-ii.jpg",artist:"Juan O'Gorman",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Tangaxuan_II_being_executed.png"}
+  },
+  "Tlaxcala": {
+    foundation:{slug:"ocotelolco",name:"Ocotelolco",img:"/images/encyclopedia/ocotelolco.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JeroglificodeOcotelulco.jpg"},
+    socioeconomy:{slug:"tepeticpac",name:"Tepeticpac",img:"/images/encyclopedia/tepeticpac.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JeroglificodeTepeticpac.jpg"},
+    military:{slug:"itzcoatl",name:"Itzcoatl",img:"/images/encyclopedia/itzcoatl.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Itzcoatl.jpg"},
+    governance:{slug:"xicotencatl-the-elder",name:"Xicotencatl the Elder",img:"/images/encyclopedia/xicotencatl-the-elder.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Xicotencatl_the_elder.jpg"},
+    impact:{slug:"pedro-de-alvarado",name:"Pedro de Alvarado",img:"/images/encyclopedia/pedro-de-alvarado.jpg",artist:"Tomás Povedano",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pedro_de_Alvarado_(Tom%C3%A1s_Povedano).jpg"},
+    decline:{slug:"maxixcatzin",name:"Maxixcatzin",img:"/images/encyclopedia/maxixcatzin.jpg",artist:"Thelmadatter",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:MaxixcatzinTlaxRegMus.JPG"}
+  },
+  "League of Mayapan": {
+    foundation:{slug:"hunac-ceel",name:"Hunac Ceel",img:"/images/encyclopedia/hunac-ceel.jpg",artist:"Salhedine",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cenote_Xtoloc_en_Chich%C3%A9n_Itz%C3%A1.jpg"},
+    impact:{slug:"books-of-chilam-balam",name:"Books of Chilam Balam",img:"/images/encyclopedia/books-of-chilam-balam.jpg",artist:"Carlos Reusser Monsalvez",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Chilam_Balam_Ixil.jpg"}
+  },
+  "Tikal": {
+    foundation:{slug:"yax-ehb-xook",name:"Yax Ehb Xook",img:"/images/encyclopedia/yax-ehb-xook.jpg",artist:"Mały koleżka",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Yax_Ehb_Xook.svg"},
+    military:{slug:"yuknoom-cheen-ii",name:"Yuknoom Ch'een II",img:"/images/encyclopedia/yuknoom-cheen-ii.jpg",artist:"Bernard DUPONT",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Funerary_Mask_of_Yuknoom_Ch%27een_II_(Jade,_Omphacite,_Green_Quartz,_and_diverse_Shell)..._Calakmul,_Late_Classic_(600-800_AD).jpg"},
+    governance:{slug:"jasaw-chan-kawiil-i",name:"Jasaw Chan K'awiil I",img:"/images/encyclopedia/jasaw-chan-kawiil-i.jpg",artist:"A.Skromnitsky (A.Skromnitsky)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:MutalImage3.jpg"}
+  },
+  "Muisca Confederation": {
+    military:{slug:"saguamanchica",name:"Saguamanchica",img:"/images/encyclopedia/saguamanchica.jpg",artist:"Lucas Fernandez de Piedrahita",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1_Saguamanchica.jpg"},
+    governance:{slug:"nemequene",name:"Nemequene",img:"/images/encyclopedia/nemequene.jpg",artist:"Lucas Fernandez de Piedrahita",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:2_Nemequene.jpg"},
+    impact:{slug:"lake-guatavita",name:"Lake Guatavita",img:"/images/encyclopedia/lake-guatavita.jpg",artist:"Masanalv",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:LagunaDeGuatavita.jpg"},
+    decline:{slug:"gonzalo-jimenez-de-quesada",name:"Gonzalo Jiménez de Quesada",img:"/images/encyclopedia/gonzalo-jimenez-de-quesada.jpg",artist:"Ricardo Gómez Campuzano",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:El_Licenciado_Gonzalo_Jim%C3%A9nez_de_Quesada.png"}
+  },
+  "Cahokia": {
+    foundation:{slug:"monks-mound",name:"Monks Mound",img:"/images/encyclopedia/monks-mound.jpg",artist:"Skubasteve834",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Monks_Mound_in_July.JPG"},
+    decline:{slug:"mississippi-river",name:"Mississippi River",img:"/images/encyclopedia/mississippi-river.jpg",artist:"NPS photo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Efmo_View_from_Fire_Point.jpg"}
+  },
+  "Powhatan Confederacy": {
+    foundation:{slug:"wahunsenacah",name:"Wahunsenacah",img:"/images/encyclopedia/wahunsenacah.jpg",artist:"engraved by William Hole",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Powhatan_john_smith_map.jpg"},
+    military:{slug:"opechancanough",name:"Opechancanough",img:"/images/encyclopedia/opechancanough.jpg",artist:"Robert Vaughan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Smith_taking_the_King_of_Pamavnkee_prisoner_-_etching.jpg"},
+    impact:{slug:"john-rolfe",name:"John Rolfe",img:"/images/encyclopedia/john-rolfe.jpg",artist:"J. W. Glass",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pocahontas_Rolfe_crop.jpg"},
+    decline:{slug:"cockacoeske",name:"Cockacoeske",img:"/images/encyclopedia/cockacoeske.jpg",artist:"Kss5pj",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cockacoeske_VWM_Statue.jpg"}
+  },
+  "Cherokee Nation": {
+    foundation:{slug:"new-echota",name:"New Echota",img:"/images/encyclopedia/new-echota.jpg",artist:"Thomson200",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Council_House,_New_Echota,_GA_July_2017.jpg"},
+    socioeconomy:{slug:"cherokee",name:"Cherokee",img:"/images/encyclopedia/cherokee.jpg",artist:"Henry Inman",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_Inman_-_Sequoyah_-_Google_Art_Project.jpg"},
+    military:{slug:"creek-war",name:"Creek War",img:"/images/encyclopedia/creek-war.jpg",artist:"John Reuben Chapin, 1823-1894 , artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jackson_and_Weatherford.jpg"},
+    impact:{slug:"john-marshall",name:"John Marshall",img:"/images/encyclopedia/john-marshall.jpg",artist:"Henry Inman",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Marshall_by_Henry_Inman,_1832.jpg"}
+  },
+  "Comancheria": {
+    foundation:{slug:"shoshone",name:"Shoshone",img:"/images/encyclopedia/shoshone.jpg",artist:"Cyrus Thomas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shoshone_group_American_Indian_Mongoloid.png"},
+    military:{slug:"juan-bautista-de-anza",name:"Juan Bautista de Anza",img:"/images/encyclopedia/juan-bautista-de-anza.jpg",artist:"Fray Orci",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Juan_Bautista_de_Anza_(Painted_by_Fray_Orci;_1774,_Mexico_City).jpg"},
+    impact:{slug:"treaty-of-guadalupe-hidalgo",name:"Treaty of Guadalupe Hidalgo",img:"/images/encyclopedia/treaty-of-guadalupe-hidalgo.jpg",artist:"Governments of USA and Mexico",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TreatyOfGuadalupeHidalgoCover.jpg"},
+    decline:{slug:"red-river-war",name:"Red River War",img:"/images/encyclopedia/red-river-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ledger-sm2.jpg"}
+  },
+  "Republic of Colombia": {
+    foundation:{slug:"rafael-nunez",name:"Rafael Núñez",img:"/images/encyclopedia/rafael-nunez.jpg",artist:"Oleo de Epifanio Garay.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rafael_N%C3%BA%C3%B1ez_Moledo.jpg"},
+    impact:{slug:"thomson-urrutia-treaty",name:"Thomson–Urrutia Treaty",img:"/images/encyclopedia/thomson-urrutia-treaty.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TRATADO_URRUTIA-THOMSON.jpg"},
+    decline:{slug:"juan-manuel-santos",name:"Juan Manuel Santos",img:"/images/encyclopedia/juan-manuel-santos.jpg",artist:"Cancillería de Perú on Flickr.",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Juan_Manuel_Santos_in_2018.jpg"}
+  },
+  "Republic of Paraguay": {
+    foundation:{slug:"manuel-belgrano",name:"Manuel Belgrano",img:"/images/encyclopedia/manuel-belgrano.jpg",artist:"Attributed to Casimir Carbonnier",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manuel_belgrano_by_carbonier_retouched.jpg"},
+    socioeconomy:{slug:"carlos-antonio-lopez",name:"Carlos Antonio López",img:"/images/encyclopedia/carlos-antonio-lopez.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Carlos_Antonio_L%C3%B3pez_retrato_(cropped).jpg"},
+    military:{slug:"chaco-war",name:"Chaco War",img:"/images/encyclopedia/chaco-war.jpg",artist:"Doctor Carlos De Sanctis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Paraguayos_en_alihuat%C3%A1.jpg"},
+    governance:{slug:"francisco-solano-lopez",name:"Francisco Solano López",img:"/images/encyclopedia/francisco-solano-lopez.jpg",artist:"Domenico Parodi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francisco_Solano_Lopez_Carrillo.jpg"},
+    impact:{slug:"asuncion",name:"Asunción",img:"/images/encyclopedia/asuncion.jpg",artist:"MosheA",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Palacio_de_los_L%C3%B3pez_Asunci%C3%B3n_2.jpg"}
+  },
+  "Kilwa Sultanate": {
+    foundation:{slug:"kilwa-kisiwani",name:"Kilwa Kisiwani",img:"/images/encyclopedia/kilwa-kisiwani.jpg",artist:"Khalidsalewa",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Great_Mosque_Kilwa_Interior.jpg"},
+    socioeconomy:{slug:"sofala",name:"Sofala",img:"/images/encyclopedia/sofala.jpg",artist:"Mallet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sofala1683.jpg"},
+    military:{slug:"ibn-battuta",name:"Ibn Battuta",img:"/images/encyclopedia/ibn-battuta.jpg",artist:"Léon Benett",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Handmade_oil_painting_reproduction_of_Ibn_Battuta_in_Egypt,_a_painting_by_Hippolyte_Leon_Benett..jpg"},
+    impact:{slug:"great-mosque-of-kilwa",name:"Great Mosque of Kilwa",img:"/images/encyclopedia/great-mosque-of-kilwa.jpg",artist:"Ron Van Oers",licence:"CC BY-SA 3.0 igo",source:"https://commons.wikimedia.org/wiki/File:Ruins_of_Kilwa_Kisiwani_and_Ruins_of_Songo_Mnara-108279.jpg"},
+    decline:{slug:"pedro-alvares-cabral",name:"Pedro Álvares Cabral",img:"/images/encyclopedia/pedro-alvares-cabral.jpg",artist:"Aurélio de Figueiredo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pedro_%C3%81lvares_Cabral.jpg"}
+  },
+  "Kingdom of Zimbabwe": {
+    foundation:{slug:"great-zimbabwe",name:"Great Zimbabwe",img:"/images/encyclopedia/great-zimbabwe.jpg",artist:"Andrew Moore from Johannesburg, South Africa",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Conical_Tower_-_Great_Enclosure_III_(33736918448).jpg"},
+    socioeconomy:{slug:"sofala",name:"Sofala",img:"/images/encyclopedia/sofala.jpg",artist:"Mallet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sofala1683.jpg"},
+    impact:{slug:"khami",name:"Khami",img:"/images/encyclopedia/khami.jpg",artist:"Digr",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:ZW_Khami_Ruins.JPG"},
+    decline:{slug:"zambezi",name:"Zambezi",img:"/images/encyclopedia/zambezi.jpg",artist:"Brian McMorrow",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Zambezi_River_at_junction_of_Namibia,_Zambia,_Zimbabwe_%26_Botswana.jpg"}
+  },
+  "Kingdom of Mapungubwe": {
+    foundation:{slug:"mapungubwe-hill",name:"Mapungubwe Hill",img:"/images/encyclopedia/mapungubwe-hill.jpg",artist:"South African Tourism from South Africa",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Mapungubwe,_Limpopo,_South_Africa_(20535429052).jpg"},
+    socioeconomy:{slug:"sofala",name:"Sofala",img:"/images/encyclopedia/sofala.jpg",artist:"Mallet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sofala1683.jpg"},
+    impact:{slug:"great-zimbabwe",name:"Great Zimbabwe",img:"/images/encyclopedia/great-zimbabwe.jpg",artist:"Andrew Moore from Johannesburg, South Africa",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Conical_Tower_-_Great_Enclosure_III_(33736918448).jpg"}
+  },
+  "Kingdom of Ndongo": {
+    foundation:{slug:"afonso-i-of-kongo",name:"Afonso I of Kongo",img:"/images/encyclopedia/afonso-i-of-kongo.jpg",artist:"Affricoll9",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Manikongo.jpg"},
+    military:{slug:"imbangala",name:"Imbangala",img:"/images/encyclopedia/imbangala.jpg",artist:"Theodor de Bry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:RegCongo12.png"},
+    governance:{slug:"njinga-of-ndongo-and-matamba",name:"Njinga of Ndongo and Matamba",img:"/images/encyclopedia/njinga-of-ndongo-and-matamba.jpg",artist:"Achille Devéria",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ann_Zingha.jpg"},
+    decline:{slug:"pungo-andongo",name:"Pungo Andongo",img:"/images/encyclopedia/pungo-andongo.jpg",artist:"Paulo César Santos",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Black_Stones_Pungo_Adongo.JPG"}
+  },
+  "Kingdom of Kano": {
+    governance:{slug:"gidan-rumfa",name:"Gidan Rumfa",img:"/images/encyclopedia/gidan-rumfa.jpg",artist:"Jonathan Riddell; Flickr jriddell; jriddell (Flickr)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Gate_to_the_Gidan_Rumfa_(2009)_in_Kano,_Nigeria..jpg"},
+    impact:{slug:"queen-amina",name:"Queen Amina",img:"/images/encyclopedia/queen-amina.jpg",artist:"Sidhant Bendre",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Queen_Amina_Statue_(cropped).jpg"},
+    decline:{slug:"zaria",name:"Zaria",img:"/images/encyclopedia/zaria.jpg",artist:"Aminucrus",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Zazzau_Emirs_Palace_Gate.jpg"}
+  },
+  "Kingdom of Nri": {
+    foundation:{slug:"igbo-ukwu",name:"Igbo-Ukwu",img:"/images/encyclopedia/igbo-ukwu.jpg",artist:"Ochiwar",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bronze_ornamental_staff_head,_9th_century,_Igbo-Ukwu.JPG"},
+    decline:{slug:"anglo-aro-war",name:"Anglo-Aro War",img:"/images/encyclopedia/anglo-aro-war.jpg",artist:"Donald A MacAlister",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arochukwu_burning.jpg"}
+  },
+  "Kingdom of Burundi": {
+    impact:{slug:"mwambutsa-iv",name:"Mwambutsa IV",img:"/images/encyclopedia/mwambutsa-iv.jpg",artist:"Fritz Cohen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mwambutsa_1962.jpg"},
+    decline:{slug:"michel-micombero",name:"Michel Micombero",img:"/images/encyclopedia/michel-micombero.jpg",artist:"Associated Press",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Michel_Micombero_(1966).png"}
+  },
+  "Bamana Empire": {
+    foundation:{slug:"biton-coulibaly",name:"Bitòn Coulibaly",img:"/images/encyclopedia/biton-coulibaly.jpg",artist:"KaTeznik",licence:"CC BY-SA 2.0 fr",source:"https://commons.wikimedia.org/wiki/File:Tombe_Biton_Coulibaly.jpg"},
+    socioeconomy:{slug:"bambara-people",name:"Bambara people",img:"/images/encyclopedia/bambara-people.jpg",artist:"Jeanniot (gravure)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BambaraSenegal.jpg"},
+    military:{slug:"djenne",name:"Djenné",img:"/images/encyclopedia/djenne.jpg",artist:"qiv",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Moschee_von_Djenn%C3%A9.jpg"},
+    decline:{slug:"louis-archinard",name:"Louis Archinard",img:"/images/encyclopedia/louis-archinard.jpg",artist:"Unknown (Bain News Service, publisher)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_Archinard.jpg"}
   }
 };

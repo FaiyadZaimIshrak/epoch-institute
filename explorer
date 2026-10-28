@@ -11,9 +11,9 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Explore the rise and fall of 394 states and empires across five millennia with interactive power charts, key events and side-by-side comparisons.">
+<meta name="description" content="Explore the rise and fall of 426 states and empires across five millennia with interactive power charts, key events and side-by-side comparisons.">
 <meta property="og:title" content="Empire Explorer: Rise and Fall Charts — The Epoch Institute">
-<meta property="og:description" content="Explore the rise and fall of 394 states and empires across five millennia with interactive power charts, key events and side-by-side comparisons.">
+<meta property="og:description" content="Explore the rise and fall of 426 states and empires across five millennia with interactive power charts, key events and side-by-side comparisons.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/explorer">
 <meta property="og:site_name" content="The Epoch Institute">
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-explorer.jpg">
 <link rel="canonical" href="https://the-epoch-institute.org/explorer">
-<link rel="stylesheet" href="/shared.css?v=58">
+<link rel="stylesheet" href="/shared.css?v=59">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -177,7 +177,7 @@
 <div id="tooltip"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="/shared-data.js?v=9"></script>
+<script src="/shared-data.js?v=10"></script>
 <script src="/shared-nav.js?v=41"></script>
 <script>
 initNav('explorer');
@@ -268,7 +268,7 @@ let pointDescsAsked = false;
 function loadPointDescs() {
   if (pointDescsAsked || typeof POINT_DESCS !== "undefined") return;
   pointDescsAsked = true;
-  const s = document.createElement("script"); s.src = "/point-descs.js?v=3"; s.async = true;
+  const s = document.createElement("script"); s.src = "/point-descs.js?v=4"; s.async = true;
   s.onload = () => { if (soloEmpire || searchTerm) render(); };
   document.head.appendChild(s);
 }

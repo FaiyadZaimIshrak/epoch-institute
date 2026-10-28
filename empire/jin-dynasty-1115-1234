@@ -141,7 +141,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/song-dynasty"><img src="/logos/thumbs/Song%20Dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Song Dynasty</span><span class="related-card-dates">960 CE – 1279 CE</span></a><a class="related-card" href="/empire/goryeo"><img src="/logos/thumbs/Goryeo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Goryeo</span><span class="related-card-dates">918 CE – 1392 CE</span></a><a class="related-card" href="/empire/ghurid-sultanate"><img src="/logos/thumbs/Ghurid%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ghurid Sultanate</span><span class="related-card-dates">879 CE – 1215 CE</span></a><a class="related-card" href="/empire/ghaznavid-empire"><img src="/logos/thumbs/Ghaznavid%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ghaznavid Empire</span><span class="related-card-dates">977 CE – 1186 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/mombasa"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Mombasa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mombasa</span><span class="related-card-dates">1100 CE – 1593 CE</span></a><a class="related-card" href="/empire/republic-of-florence"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Republic%20of%20Florence.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Florence</span><span class="related-card-dates">1115 CE – 1532 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/saudeleur-dynasty"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Saudeleur%20dynasty.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Saudeleur dynasty</span><span class="related-card-dates">1100 CE – 1628 CE</span></a><a class="related-card" href="/empire/republic-of-florence"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Republic%20of%20Florence.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Florence</span><span class="related-card-dates">1115 CE – 1532 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -159,8 +159,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

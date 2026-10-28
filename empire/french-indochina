@@ -142,7 +142,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/brunei-sultanate"><img src="/logos/thumbs/Brunei%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Brunei Sultanate</span><span class="related-card-dates">1368 CE – 2025 CE</span></a><a class="related-card" href="/empire/johor-sultanate"><img src="/logos/thumbs/Johor%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Johor Sultanate</span><span class="related-card-dates">1528 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-nepal"><img src="/logos/thumbs/Kingdom%20of%20Nepal.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Nepal</span><span class="related-card-dates">1768 CE – 2008 CE</span></a><a class="related-card" href="/empire/udaipur-state"><img src="/logos/thumbs/Udaipur%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Udaipur State</span><span class="related-card-dates">728 CE – 1949 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/congo-free-state"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Congo%20Free%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Congo Free State</span><span class="related-card-dates">1885 CE – 1908 CE</span></a><a class="related-card" href="/empire/french-west-africa"><span class="related-card-label">Later →</span><img src="/logos/thumbs/French%20West%20Africa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">French West Africa</span><span class="related-card-dates">1895 CE – 1958 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/republic-of-colombia"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Republic%20of%20Colombia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Republic of Colombia</span><span class="related-card-dates">1886 CE – 2025 CE</span></a><a class="related-card" href="/empire/french-west-africa"><span class="related-card-label">Later →</span><img src="/logos/thumbs/French%20West%20Africa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">French West Africa</span><span class="related-card-dates">1895 CE – 1958 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -160,8 +160,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

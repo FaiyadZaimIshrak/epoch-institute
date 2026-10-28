@@ -141,7 +141,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/sunda-kingdom"><img src="/logos/thumbs/Sunda%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sunda Kingdom</span><span class="related-card-dates">669 CE – 1579 CE</span></a><a class="related-card" href="/empire/udaipur-state"><img src="/logos/thumbs/Udaipur%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Udaipur State</span><span class="related-card-dates">728 CE – 1949 CE</span></a><a class="related-card" href="/empire/srivijaya-empire"><img src="/logos/thumbs/Srivijaya%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Srivijaya Empire</span><span class="related-card-dates">650 CE – 1377 CE</span></a><a class="related-card" href="/empire/pagan-kingdom"><img src="/logos/thumbs/Pagan%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pagan Kingdom</span><span class="related-card-dates">849 CE – 1297 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/holy-roman-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Holy%20Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Holy Roman Empire</span><span class="related-card-dates">800 CE – 1806 CE</span></a><a class="related-card" href="/empire/kingdom-of-navarre"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Navarre.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Navarre</span><span class="related-card-dates">824 CE – 1841 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/muisca-confederation"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Muisca%20Confederation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Muisca Confederation</span><span class="related-card-dates">800 CE – 1540 CE</span></a><a class="related-card" href="/empire/kingdom-of-navarre"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Navarre.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Navarre</span><span class="related-card-dates">824 CE – 1841 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -159,8 +159,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

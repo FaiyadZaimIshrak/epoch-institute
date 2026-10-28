@@ -8,11 +8,28 @@
 @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(/fonts/crimson-pro-normal-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
 @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(/fonts/crimson-pro-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(/fonts/crimson-pro-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* Crimson Pro draws the ʻokina (U+02BB, Hawaiian and Tongan names: Oʻahu, Tuʻi Tonga) 0.59 em wide, so "Oʻahu" read
+   "O ʻ ahu"; Times New Roman's is 0.33 em (Georgia has none). Declared after the faces above, these win for that one
+   character; where neither font is installed they fail quietly and Crimson Pro's glyph is used. */
+@font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300 600; src: local('Times New Roman'), local('TimesNewRomanPSMT'), local('Noto Serif'); unicode-range: U+02BB; }
+@font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300 400; src: local('Times New Roman Italic'), local('TimesNewRomanPS-ItalicMT'), local('Noto Serif Italic'); unicode-range: U+02BB; }
 @font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(/fonts/source-sans-3-normal-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
 @font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(/fonts/source-sans-3-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(/fonts/source-sans-3-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: 'Baloo 2'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(/fonts/baloo-2-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: 'Nunito'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(/fonts/nunito-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* Fallbacks sized like the fonts above, so text set before a font arrives takes the same room and nothing moves when it
+   swaps in (on a slow connection the fonts come seconds after the page; Georgia re-wrapped every paragraph, CLS up to
+   0.2). size-adjust: the value at which most paragraphs wrap to the same number of lines in both fonts (95% of 3,128 for
+   Crimson Pro, 99% of titles for Cinzel; scratchpad t/fontcal.html, bold and italic scaled alike); the overrides are the font's
+   ascent and descent divided by it (t/fontmetrics.html). local() fails quietly where the font is missing (Android).*/
+@font-face { font-family: 'Crimson Pro Fallback'; font-style: normal; font-weight: 300 500; src: local('Georgia'); size-adjust: 89.75%; ascent-override: 100.28%; descent-override: 23.4%; line-gap-override: 0%; }
+@font-face { font-family: 'Crimson Pro Fallback'; font-style: normal; font-weight: 600 700; src: local('Georgia Bold'), local('Georgia-Bold'); size-adjust: 80.17%; ascent-override: 112.26%; descent-override: 26.19%; line-gap-override: 0%; }
+@font-face { font-family: 'Crimson Pro Fallback'; font-style: italic; font-weight: 300 500; src: local('Georgia Italic'), local('Georgia-Italic'); size-adjust: 80.74%; ascent-override: 111.47%; descent-override: 26.01%; line-gap-override: 0%; }
+@font-face { font-family: 'Cinzel Fallback'; font-style: normal; font-weight: 400 500; src: local('Georgia'); size-adjust: 120.5%; ascent-override: 81.33%; descent-override: 30.71%; line-gap-override: 0%; }
+@font-face { font-family: 'Cinzel Fallback'; font-style: normal; font-weight: 600 700; src: local('Georgia Bold'), local('Georgia-Bold'); size-adjust: 107.25%; ascent-override: 91.38%; descent-override: 34.5%; line-gap-override: 0%; }
+@font-face { font-family: 'Source Sans 3 Fallback'; font-style: normal; font-weight: 400 500; src: local('Arial'), local('ArialMT'); size-adjust: 92.75%; ascent-override: 109.97%; descent-override: 43.13%; line-gap-override: 0%; }
+@font-face { font-family: 'Source Sans 3 Fallback'; font-style: normal; font-weight: 600 700; src: local('Arial Bold'), local('Arial-BoldMT'); size-adjust: 89.48%; ascent-override: 113.99%; descent-override: 44.7%; line-gap-override: 0%; }
 
   :root {
     --bg: #0b0c10;
@@ -29,9 +46,9 @@
     --cm-thread: rgba(236,232,224,0.42);  /* connections map: second-step threads */
     --cm-glint: #f7d67c;           /* connections map: the rule lines' glimmer (stays gold: never mistaken for silver) */
     /* Type: Cinzel for display only, Source Sans 3 for interface text, Crimson Pro for reading */
-    --font-display: 'Cinzel', Georgia, serif;
-    --font-ui: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    --font-text: 'Crimson Pro', Georgia, serif;
+    --font-display: 'Cinzel', 'Cinzel Fallback', Georgia, serif;
+    --font-ui: 'Source Sans 3', 'Source Sans 3 Fallback', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-text: 'Crimson Pro', 'Crimson Pro Fallback', Georgia, serif;
     --container: 1200px;
     --radius: 3px;
     --border-radius-lg: 6px;
@@ -3547,7 +3564,12 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .atl-viewtog button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; }
 .atl-viewtog button + button { border-left: 1px solid var(--border); }
 .atl-viewtog button[aria-pressed="true"] { color: var(--gold); background: rgba(var(--gold-rgb), 0.1); }
-.home-map canvas { display: block; width: 100%; }
+/* The home globe's canvas: [hidden] must win (a bare display:block showed an empty 300x150 box under the flat map, and
+   the page jumped when the globe started). When the globe will run (html.home-globe-on, set in the page head), the
+   link keeps the globe's shape from the first paint, the flat map centred in it, so nothing moves when it swaps. */
+.home-map canvas:not([hidden]) { display: block; width: 100%; }
+.home-globe-on .home-map > a { aspect-ratio: 25 / 14; display: flex; flex-direction: column; justify-content: center; }
+.home-globe-on .home-map canvas:not([hidden]) { height: 100%; }
 #atl-svg:active { cursor: grabbing; }
 #atl-svg:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 .atl-edge { fill: rgba(var(--gold-rgb), 0.03); stroke: rgba(var(--gold-rgb), 0.3); stroke-width: 1px; vector-effect: non-scaling-stroke; }
@@ -3620,6 +3642,9 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .home-lede { font-family: var(--font-text); font-size: clamp(18px, 1.8vw, 21px); line-height: 1.6; color: var(--text); margin: 0 0 22px; max-width: 52ch; }
 .home-hero .home-search { margin: 0 0 18px; }
 .home-hero .hero-ctas { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px 22px; }
+/* below 420px the two fit on one row only just (at 390px with 0px to spare in Source Sans, not in its fallback), so
+   they were one row or two depending on when the font arrived: stack them there always */
+@media (max-width: 419px) { .home-hero .hero-ctas { flex-direction: column; align-items: flex-start; } }
 .home-hero .hero-cta { margin-top: 0; }
 .home-map { margin: 0; }
 .home-map > a { display: block; border: 0.5px solid var(--border); border-radius: 3px; background: radial-gradient(ellipse at 50% 45%, rgba(var(--gold-rgb), 0.09), transparent 70%), var(--surface); transition: border-color 0.2s; }

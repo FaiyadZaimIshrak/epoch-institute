@@ -143,7 +143,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/silla"><img src="/logos/thumbs/Silla.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Silla</span><span class="related-card-dates">57 BCE – 935 CE</span></a><a class="related-card" href="/empire/khazar-khaganate"><img src="/logos/thumbs/Khazar%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Khazar Khaganate</span><span class="related-card-dates">650 CE – 969 CE</span></a><a class="related-card" href="/empire/tibetan-empire"><img src="/logos/thumbs/Tibetan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tibetan Empire</span><span class="related-card-dates">618 CE – 842 CE</span></a><a class="related-card" href="/empire/balhae"><img src="/logos/thumbs/Balhae.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Balhae</span><span class="related-card-dates">698 CE – 926 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/avar-khaganate"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Avar%20Khaganate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Avar Khaganate</span><span class="related-card-dates">567 CE – 822 CE</span></a><a class="related-card" href="/empire/tibetan-empire"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Tibetan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tibetan Empire</span><span class="related-card-dates">618 CE – 842 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/wari-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Wari%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Wari Empire</span><span class="related-card-dates">600 CE – 1000 CE</span></a><a class="related-card" href="/empire/tibetan-empire"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Tibetan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tibetan Empire</span><span class="related-card-dates">618 CE – 842 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -161,8 +161,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

@@ -142,7 +142,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/elamite-confederation"><img src="/logos/thumbs/Elamite%20Confederation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Elamite Confederation</span><span class="related-card-dates">2700 BCE – 539 BCE</span></a><a class="related-card" href="/empire/assyrian-empire"><img src="/logos/thumbs/Assyrian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Assyrian Empire</span><span class="related-card-dates">2025 BCE – 609 BCE</span></a><a class="related-card" href="/empire/byblos"><img src="/logos/thumbs/Byblos.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Byblos</span><span class="related-card-dates">2600 BCE – 332 BCE</span></a><a class="related-card" href="/empire/dilmun"><img src="/logos/thumbs/Dilmun.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dilmun</span><span class="related-card-dates">2200 BCE – 538 BCE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/samos"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Samos.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Samos</span><span class="related-card-dates">1000 BCE – 129 BCE</span></a><a class="related-card" href="/empire/kingdom-of-judah"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Judah.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Judah</span><span class="related-card-dates">930 BCE – 587 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/chavin"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Chav%C3%ADn.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chavín</span><span class="related-card-dates">950 BCE – 400 BCE</span></a><a class="related-card" href="/empire/kingdom-of-judah"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Judah.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Judah</span><span class="related-card-dates">930 BCE – 587 BCE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -160,8 +160,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

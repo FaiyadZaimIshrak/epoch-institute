@@ -142,7 +142,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/kingdom-of-norway"><img src="/logos/thumbs/Kingdom%20of%20Norway.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Norway</span><span class="related-card-dates">872 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-denmark"><img src="/logos/thumbs/Kingdom%20of%20Denmark.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Denmark</span><span class="related-card-dates">936 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-sweden"><img src="/logos/thumbs/Kingdom%20of%20Sweden.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Sweden</span><span class="related-card-dates">970 CE – 2025 CE</span></a><a class="related-card" href="/empire/margraviate-of-moravia"><img src="/logos/thumbs/Margraviate%20of%20Moravia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Margraviate of Moravia</span><span class="related-card-dates">1182 CE – 1918 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/later-pandyan-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Later%20Pandyan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Later Pandyan Empire</span><span class="related-card-dates">1190 CE – 1345 CE</span></a><a class="related-card" href="/empire/bailiwick-of-jersey"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Bailiwick%20of%20Jersey.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bailiwick of Jersey</span><span class="related-card-dates">1204 CE – 2025 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/later-pandyan-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Later%20Pandyan%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Later Pandyan Empire</span><span class="related-card-dates">1190 CE – 1345 CE</span></a><a class="related-card" href="/empire/rapa-nui"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Rapa%20Nui.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rapa Nui</span><span class="related-card-dates">1200 CE – 1888 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -160,8 +160,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

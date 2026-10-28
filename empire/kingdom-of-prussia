@@ -143,7 +143,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/british-empire"><img src="/logos/thumbs/British%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">British Empire</span><span class="related-card-dates">1583 CE – 1997 CE</span></a><a class="related-card" href="/empire/french-empire"><img src="/logos/thumbs/French%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">French Empire</span><span class="related-card-dates">1534 CE – 1980 CE</span></a><a class="related-card" href="/empire/portuguese-empire"><img src="/logos/thumbs/Portuguese%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Portuguese Empire</span><span class="related-card-dates">1415 CE – 1975 CE</span></a><a class="related-card" href="/empire/dutch-empire"><img src="/logos/thumbs/Dutch%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dutch Empire</span><span class="related-card-dates">1581 CE – 1975 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/rozvi-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Rozvi%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rozvi Empire</span><span class="related-card-dates">1684 CE – 1836 CE</span></a><a class="related-card" href="/empire/kingdom-of-great-britain"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Great%20Britain.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Great Britain</span><span class="related-card-dates">1707 CE – 1800 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/rozvi-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Rozvi%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rozvi Empire</span><span class="related-card-dates">1684 CE – 1836 CE</span></a><a class="related-card" href="/empire/comancheria"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Comancheria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Comancheria</span><span class="related-card-dates">1706 CE – 1875 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -161,8 +161,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

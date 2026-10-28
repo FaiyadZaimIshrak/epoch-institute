@@ -143,7 +143,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/fatimid-caliphate"><img src="/logos/thumbs/Fatimid%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Fatimid Caliphate</span><span class="related-card-dates">909 CE – 1171 CE</span></a><a class="related-card" href="/empire/makuria"><img src="/logos/thumbs/Makuria.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Makuria</span><span class="related-card-dates">450 CE – 1365 CE</span></a><a class="related-card" href="/empire/almohad-caliphate"><img src="/logos/thumbs/Almohad%20Caliphate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Almohad Caliphate</span><span class="related-card-dates">1121 CE – 1269 CE</span></a><a class="related-card" href="/empire/hafsid-sultanate"><img src="/logos/thumbs/Hafsid%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hafsid Sultanate</span><span class="related-card-dates">1229 CE – 1574 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/seljuk-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Seljuk%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Seljuk Empire</span><span class="related-card-dates">1037 CE – 1194 CE</span></a><a class="related-card" href="/empire/kingdom-of-castile"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Castile.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Castile</span><span class="related-card-dates">1065 CE – 1230 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/seljuk-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Seljuk%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Seljuk Empire</span><span class="related-card-dates">1037 CE – 1194 CE</span></a><a class="related-card" href="/empire/cahokia"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Cahokia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cahokia</span><span class="related-card-dates">1050 CE – 1350 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -161,8 +161,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

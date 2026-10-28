@@ -240,6 +240,7 @@ dmt,D'mt,kingdom,Horn and East Africa,Sub-Saharan Africa,-980,-400,yes,Yeha,Erit
 dynasty-of-e,Dynasty of E,kingdom,Mesopotamia and Iran,Ancient Near East,-979,-732,yes,Babylon,Iraq,32.543,44.421,capital (matched by name),,https://the-epoch-institute.org/state/dynasty-of-e
 bit-bahiani,Bit Bahiani,kingdom,Anatolia and the Levant,Ancient Near East,-950,-808,yes,Guzana,Syria,36.833,40.067,recorded location,,https://the-epoch-institute.org/state/bit-bahiani
 bit-zamani,Bit Zamani,kingdom,Anatolia and the Levant,Ancient Near East,-950,-830,yes,Amedi,Turkey,37.092,43.487,capital (matched by name),,https://the-epoch-institute.org/state/bit-zamani
+chavin,Chavín,theocracy,South America,Americas,-950,-400,yes,Chavín de Huántar,Peru,-9.593,-77.178,capital,https://the-epoch-institute.org/empire/chavin,https://the-epoch-institute.org/empire/chavin
 twenty-second-dynasty-of-egypt,Twenty-second Dynasty of Egypt,kingdom,"Egypt, North Africa and Sudan",Egypt & North Africa,-943,-720,yes,Bubastis,Egypt,30.573,31.51,capital (matched by name),,https://the-epoch-institute.org/state/twenty-second-dynasty-of-egypt
 kingdom-of-israel,Kingdom of Israel,kingdom,Anatolia and the Levant,Ancient Near East,-930,-720,yes,Samaria,Israel; Palestine,32.276,35.195,capital,https://the-epoch-institute.org/empire/kingdom-of-israel,https://the-epoch-institute.org/empire/kingdom-of-israel
 kingdom-of-judah,Kingdom of Judah,kingdom,Anatolia and the Levant,Ancient Near East,-930,-587,yes,Jerusalem,Israel; Palestine,31.777,35.234,capital,https://the-epoch-institute.org/empire/kingdom-of-judah,https://the-epoch-institute.org/empire/kingdom-of-judah
@@ -251,7 +252,6 @@ athens,Athens,city-state,Greece and the Aegean,Europe,-900,-86,yes,Athens,Greece
 bit-agusi,Bit Agusi,kingdom,Anatolia and the Levant,Ancient Near East,-900,-740,yes,Arpad,Syria,36.473,37.095,capital,,https://the-epoch-institute.org/state/bit-agusi
 caere,Caere,city-state,Italy,Europe,-900,-273,yes,Caere,Italy,42.002,12.108,recorded location,,https://the-epoch-institute.org/state/caere
 chalcis,Chalcis,city-state,Greece and the Aegean,Europe,-900,-146,yes,Chalcis,Greece,38.463,23.595,recorded location,,https://the-epoch-institute.org/state/chalcis
-chavin,Chavín,theocracy,South America,Americas,-900,-200,yes,Chavín de Huántar,Peru,-9.593,-77.178,capital,,https://the-epoch-institute.org/state/chavin
 clusium,Clusium,city-state,Italy,Europe,-900,-295,yes,Clusium,Italy,43.017,11.95,recorded location,,https://the-epoch-institute.org/state/clusium
 corinth,Corinth,city-state,Greece and the Aegean,Europe,-900,-146,yes,Corinth,Greece,37.939,22.927,capital (matched by name),,https://the-epoch-institute.org/state/corinth
 elis,Elis,city-state,Greece and the Aegean,Europe,-900,-146,yes,Elis,Greece,37.667,21.5,recorded location,,https://the-epoch-institute.org/state/elis
@@ -953,7 +953,7 @@ damnonii,Damnonii,chiefdom,British Isles,Europe,80,450,yes,,United Kingdom,54.40
 novantae,Novantae,chiefdom,British Isles,Europe,80,400,yes,,United Kingdom,54.403,-2.116,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/novantae
 selgovae,Selgovae,chiefdom,British Isles,Europe,80,400,yes,,United Kingdom,54.403,-2.116,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/selgovae
 votadini,Votadini,tribal-confederation,British Isles,Europe,80,450,yes,Traprain Law,United Kingdom,55.963,-2.673,capital (matched by name),,https://the-epoch-institute.org/state/votadini
-tikal,Tikal,city-state,Mesoamerica and the Caribbean,Americas,90,900,yes,Tikal,Guatemala,17.222,-89.624,recorded location,,https://the-epoch-institute.org/state/tikal
+tikal,Tikal,city-state,Mesoamerica and the Caribbean,Americas,90,900,yes,Tikal,Guatemala,17.222,-89.624,recorded location,https://the-epoch-institute.org/empire/tikal,https://the-epoch-institute.org/empire/tikal
 aksumite-empire,Aksumite Empire,empire,,Sub-Saharan Africa,100,940,,Aksum,,14.128,38.717,recorded location,https://the-epoch-institute.org/empire/aksumite-empire,https://the-epoch-institute.org/empire/aksumite-empire
 auteini,Auteini,chiefdom,British Isles,Europe,100,200,yes,,Ireland,53.079,-7.799,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/auteini
 brigantes-ireland,Brigantes (Ireland),chiefdom,British Isles,Europe,100,200,yes,,Ireland,53.079,-7.799,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/brigantes-ireland
@@ -978,7 +978,7 @@ langkasuka,Langkasuka,kingdom,Maritime Southeast Asia,South & Southeast Asia,100
 lima-culture,Lima culture,chiefdom,South America,Americas,100,650,yes,Maranga,Peru,-12.073,-77.085,capital (matched by name),,https://the-epoch-institute.org/state/lima-culture
 lugi,Lugi,chiefdom,British Isles,Europe,100,200,yes,,United Kingdom,54.403,-2.116,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/lugi
 manapii,Manapii,chiefdom,British Isles,Europe,100,200,yes,,Ireland,53.079,-7.799,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/manapii
-moche,Moche,kingdom,South America,Americas,100,800,yes,Huacas de Moche,Peru,-12.977,-72.9,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/moche
+moche,Moche,kingdom,South America,Americas,100,800,yes,Huacas de Moche,Peru,-12.977,-72.9,approximate (centre of the present-day country),https://the-epoch-institute.org/empire/moche,https://the-epoch-institute.org/empire/moche
 nagnatae,Nagnatae,chiefdom,British Isles,Europe,100,200,yes,,Ireland,53.079,-7.799,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/nagnatae
 robogdii,Robogdii,chiefdom,British Isles,Europe,100,200,yes,,United Kingdom,54.403,-2.116,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/robogdii
 smertae,Smertae,chiefdom,British Isles,Europe,100,200,yes,,United Kingdom,54.403,-2.116,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/smertae
@@ -1218,7 +1218,7 @@ principality-of-kesh,Principality of Kesh,city-state,Central Asia and the Steppe
 principality-of-panjikent,Principality of Panjikent,city-state,Central Asia and the Steppe,Central & East Asia,500,722,yes,Panjikent,Tajikistan,38.2,72.587,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/principality-of-panjikent
 principality-of-samarkand,Principality of Samarkand,city-state,Central Asia and the Steppe,Central & East Asia,500,750,yes,Samarkand,Uzbekistan,39.655,66.976,capital (matched by name),,https://the-epoch-institute.org/state/principality-of-samarkand
 pushyabhuti-dynasty,Pushyabhuti dynasty,kingdom,South Asia,South & Southeast Asia,500,647,yes,Kannauj,India; Nepal; Bangladesh,27.031,79.922,capital (matched by name),,https://the-epoch-institute.org/state/pushyabhuti-dynasty
-tiwanaku,Tiwanaku,theocracy,South America,Americas,500,1000,yes,Tiwanaku,Bolivia; Peru; Chile,-16.555,-68.673,recorded location,,https://the-epoch-institute.org/state/tiwanaku
+tiwanaku,Tiwanaku,theocracy,South America,Americas,500,1000,yes,Tiwanaku,Bolivia; Peru; Chile,-16.555,-68.673,recorded location,https://the-epoch-institute.org/empire/tiwanaku,https://the-epoch-institute.org/empire/tiwanaku
 tonina,Toniná,city-state,Mesoamerica and the Caribbean,Americas,500,909,yes,Toniná,Mexico,16.901,-92.01,recorded location,,https://the-epoch-institute.org/state/tonina
 ghassanids,Ghassanids,kingdom,Anatolia and the Levant,Ancient Near East,502,638,yes,Jabiyah,Syria; Jordan; Israel,32.998,36.014,capital,,https://the-epoch-institute.org/state/ghassanids
 liang-dynasty,Liang dynasty,kingdom,"China, Tibet and Mongolia",Central & East Asia,502,557,,Jiankang,China,32.058,118.796,capital,,https://the-epoch-institute.org/state/liang-dynasty
@@ -1321,7 +1321,7 @@ smolyani,Smolyani,tribal-confederation,Balkans and Hungary,Europe,600,837,yes,,B
 tambralinga,Tambralinga,kingdom,Mainland Southeast Asia,South & Southeast Asia,600,1300,yes,Nakhon Si Thammarat,Thailand,8.419,99.964,capital (matched by name),,https://the-epoch-institute.org/state/tambralinga
 ustrushana,Ustrushana,principality,Central Asia and the Steppe,Central & East Asia,600,893,yes,Bunjikat,Tajikistan; Uzbekistan,39.767,68.8,recorded location,,https://the-epoch-institute.org/state/ustrushana
 vyatichi,Vyatichi,tribal-confederation,"Poland, Lithuania and Russia",Europe,600,1100,yes,,Russia,58.249,44.686,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/vyatichi
-wari-empire,Wari Empire,other,South America,Americas,600,1000,yes,Wari,Peru,-9.369,-77.237,recorded location,,https://the-epoch-institute.org/state/wari-empire
+wari-empire,Wari Empire,other,South America,Americas,600,1000,yes,Wari,Peru,-9.369,-77.237,recorded location,https://the-epoch-institute.org/empire/wari-empire,https://the-epoch-institute.org/empire/wari-empire
 white-croats,White Croats,tribal-confederation,"Poland, Lithuania and Russia",Europe,600,992,yes,,Ukraine; Poland,49.725,32.141,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/white-croats
 duchy-of-gascony,Duchy of Gascony,duchy,France and the Low Countries,Europe,602,1053,yes,Bordeaux,France; Spain,44.838,-0.579,capital,,https://the-epoch-institute.org/state/duchy-of-gascony
 eastern-turkic-khaganate,Eastern Turkic Khaganate,khanate,Central Asia and the Steppe,Central & East Asia,603,630,yes,Otuken,Mongolia; China,46,110,recorded location,,https://the-epoch-institute.org/state/eastern-turkic-khaganate
@@ -1517,7 +1517,7 @@ laanemaa,Läänemaa,chiefdom,Scandinavia and the Baltic,Europe,800,1224,yes,Lihu
 lubavians,Lubavians,tribal-confederation,Scandinavia and the Baltic,Europe,800,1260,yes,,Poland,51.99,19.49,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/lubavians
 manteno-huancavilca,Manteño-Huancavilca,tribal-confederation,South America,Americas,800,1535,yes,Jocay,Ecuador,-1.259,-78.188,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/manteno-huancavilca
 mohu,Mõhu,chiefdom,Scandinavia and the Baltic,Europe,800,1224,yes,,Estonia,58.667,26,recorded location,,https://the-epoch-institute.org/state/mohu
-muisca-confederation,Muisca Confederation,tribal-confederation,South America,Americas,800,1540,yes,,Colombia,4.718,-74.209,recorded location,,https://the-epoch-institute.org/state/muisca-confederation
+muisca-confederation,Muisca Confederation,tribal-confederation,South America,Americas,800,1540,yes,"None single: the zipa ruled from Bacatá (near Funza), the zaque from Hunza (Tunja)",Colombia,4.718,-74.209,recorded location,https://the-epoch-institute.org/empire/muisca-confederation,https://the-epoch-institute.org/empire/muisca-confederation
 nadruvians,Nadruvians,tribal-confederation,Scandinavia and the Baltic,Europe,800,1277,yes,,Russia; Lithuania,58.249,44.686,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/nadruvians
 natangians,Natangians,tribal-confederation,Scandinavia and the Baltic,Europe,800,1274,yes,,Russia; Poland,58.249,44.686,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/natangians
 nurmekund,Nurmekund,chiefdom,Scandinavia and the Baltic,Europe,800,1224,yes,,Estonia,58.663,25.749,recorded location,,https://the-epoch-institute.org/state/nurmekund
@@ -1678,13 +1678,13 @@ gotland,Gotland,republic,Scandinavia and the Baltic,Europe,900,1361,yes,Roma,Swe
 huastec-chiefdoms,Huastec chiefdoms,chiefdom,Mesoamerica and the Caribbean,Americas,900,1522,yes,,Mexico,23.92,-102.289,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/huastec-chiefdoms
 igodomigodo-ogiso-dynasty,Igodomigodo (Ogiso dynasty),kingdom,West Africa,Sub-Saharan Africa,900,1180,yes,,Nigeria,9.44,7.503,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/igodomigodo-ogiso-dynasty
 jamtland,Jämtland,republic,Scandinavia and the Baltic,Europe,900,1178,yes,Frösön,Sweden,63.5,14.5,recorded location,,https://the-epoch-institute.org/state/jamtland
-kingdom-of-chimor,Kingdom of Chimor,kingdom,South America,Americas,900,1470,yes,Chan Chan,Peru,-8.111,-79.075,capital,,https://the-epoch-institute.org/state/kingdom-of-chimor
+kingdom-of-chimor,Kingdom of Chimor,kingdom,South America,Americas,900,1470,yes,Chan Chan,Peru,-8.111,-79.075,capital,https://the-epoch-institute.org/empire/kingdom-of-chimor,https://the-epoch-institute.org/empire/kingdom-of-chimor
 kingdom-of-moray,Kingdom of Moray,kingdom,British Isles,Europe,900,1130,yes,Inverness,United Kingdom,57.484,-4.226,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-moray
 kingdom-of-tondo,Kingdom of Tondo,kingdom,Maritime Southeast Asia,South & Southeast Asia,900,1589,yes,Tondo,Philippines,14.617,120.967,capital,,https://the-epoch-institute.org/state/kingdom-of-tondo
 mitla,Mitla,city-state,Mesoamerica and the Caribbean,Americas,900,1521,yes,Mitla,Mexico,16.917,-96.4,recorded location,,https://the-epoch-institute.org/state/mitla
 tatar-confederation,Tatar confederation,tribal-confederation,"China, Tibet and Mongolia",Central & East Asia,900,1202,yes,,Mongolia; China,45.997,104.15,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/tatar-confederation
 tilantongo,Tilantongo,kingdom,Mesoamerica and the Caribbean,Americas,900,1522,yes,Tilantongo,Mexico,17.25,-97.283,recorded location,,https://the-epoch-institute.org/state/tilantongo
-toltec-state,Toltec state,city-state,Mesoamerica and the Caribbean,Americas,900,1150,yes,Tula,Mexico,18.587,-95.378,capital (matched by name),,https://the-epoch-institute.org/state/toltec-state
+toltec-state,Toltec state,city-state,Mesoamerica and the Caribbean,Americas,900,1150,yes,Tula,Mexico,18.587,-95.378,capital (matched by name),https://the-epoch-institute.org/empire/toltec-state,https://the-epoch-institute.org/empire/toltec-state
 viscounty-of-narbonne,Viscounty of Narbonne,county,France and the Low Countries,Europe,900,1507,yes,Narbonne,France,43.185,3.004,capital (matched by name),,https://the-epoch-institute.org/state/viscounty-of-narbonne
 taebong,Taebong,kingdom,Korea and Japan,Central & East Asia,901,918,,Cheorwon,South Korea; North Korea,37.972,126.553,capital,,https://the-epoch-institute.org/state/taebong
 da-changhe,Da Changhe,kingdom,"China, Tibet and Mongolia",Central & East Asia,902,928,,Yangjumie,China,32.498,106.337,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/da-changhe
@@ -1755,7 +1755,7 @@ county-of-monzon,County of Monzón,county,Iberia,Europe,943,1028,yes,Monzón de 
 hamdanid-emirate-of-aleppo,Hamdanid Emirate of Aleppo,emirate,Anatolia and the Levant,Islamic Caliphates & Middle East,945,1004,,Aleppo,Syria; Turkey,36.2,37.16,capital (matched by name),,https://the-epoch-institute.org/state/hamdanid-emirate-of-aleppo
 county-of-provence,County of Provence,county,France and the Low Countries,Europe,947,1481,yes,Aix-en-Provence,France,43.528,5.446,capital,,https://the-epoch-institute.org/state/county-of-provence
 later-han,Later Han,kingdom,"China, Tibet and Mongolia",Central & East Asia,947,951,,Kaifeng,China,34.795,114.345,capital (matched by name),,https://the-epoch-institute.org/state/later-han
-kingdom-of-nri,Kingdom of Nri,theocracy,West Africa,Sub-Saharan Africa,948,1911,yes,Nri,Nigeria,6.153,7.031,recorded location,,https://the-epoch-institute.org/state/kingdom-of-nri
+kingdom-of-nri,Kingdom of Nri,theocracy,West Africa,Sub-Saharan Africa,948,1911,yes,Nri,Nigeria,6.153,7.031,recorded location,https://the-epoch-institute.org/empire/kingdom-of-nri,https://the-epoch-institute.org/empire/kingdom-of-nri
 prince-bishopric-of-brandenburg,Prince-Bishopric of Brandenburg,prince-bishopric,Germany and Central Europe,Europe,948,1571,yes,Ziesar,Germany,52.408,12.562,recorded location,,https://the-epoch-institute.org/state/prince-bishopric-of-brandenburg
 prince-bishopric-of-havelberg,Prince-Bishopric of Havelberg,prince-bishopric,Germany and Central Europe,Europe,948,1548,yes,Wittstock,Germany,52.825,12.074,capital,,https://the-epoch-institute.org/state/prince-bishopric-of-havelberg
 parvagupta-dynasty,Parvagupta dynasty,kingdom,South Asia,South & Southeast Asia,949,1003,yes,Srinagar,India; Pakistan,34.091,74.806,capital (matched by name),,https://the-epoch-institute.org/state/parvagupta-dynasty
@@ -1766,7 +1766,7 @@ lordship-of-beaujeu,Lordship of Beaujeu,other,France and the Low Countries,Europ
 realm-of-the-gyulas,Realm of the Gyulas,duchy,Balkans and Hungary,Europe,950,1003,yes,Gyulafehérvár,Romania,45.733,24.973,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/realm-of-the-gyulas
 sultanate-of-dahlak,Sultanate of Dahlak,sultanate,Horn and East Africa,Sub-Saharan Africa,950,1557,yes,Dahlak Kebir,Eritrea,15.66,40.114,capital (matched by name),,https://the-epoch-institute.org/state/sultanate-of-dahlak
 sultanate-of-mogadishu,Sultanate of Mogadishu,sultanate,Horn and East Africa,Sub-Saharan Africa,950,1600,yes,Mogadishu,Somalia,2.039,45.342,capital,,https://the-epoch-institute.org/state/sultanate-of-mogadishu
-tu-i-tonga-empire,Tuʻi Tonga Empire,kingdom,North America and Oceania,Oceania,950,1865,yes,Muʻa,Tonga,-21.179,-175.117,capital,,https://the-epoch-institute.org/state/tu-i-tonga-empire
+tu-i-tonga-empire,Tuʻi Tonga Empire,kingdom,North America and Oceania,Oceania,950,1865,yes,Muʻa,Tonga,-21.179,-175.117,capital,https://the-epoch-institute.org/empire/tu-i-tonga-empire,https://the-epoch-institute.org/empire/tu-i-tonga-empire
 later-zhou,Later Zhou,kingdom,"China, Tibet and Mongolia",Central & East Asia,951,960,,Kaifeng,China,34.795,114.345,capital,,https://the-epoch-institute.org/state/later-zhou
 northern-han,Northern Han,kingdom,"China, Tibet and Mongolia",Central & East Asia,951,979,,Taiyuan,China,37.873,112.542,capital,,https://the-epoch-institute.org/state/northern-han
 shaddadid-emirate,Shaddadid Emirate,emirate,Caucasus,Islamic Caliphates & Middle East,951,1075,,Ganja,Azerbaijan; Armenia,40.683,46.361,capital (matched by name),,https://the-epoch-institute.org/state/shaddadid-emirate
@@ -1774,7 +1774,7 @@ march-of-verona,March of Verona,margraviate,Italy,Europe,952,1164,yes,Verona,Ita
 electorate-of-cologne,Electorate of Cologne,electorate,Germany and Central Europe,Europe,953,1803,yes,Bonn,Germany,50.735,7.102,capital,,https://the-epoch-institute.org/state/electorate-of-cologne
 county-of-maine,County of Maine,county,France and the Low Countries,Europe,955,1481,yes,Le Mans,France,48.004,0.197,capital,,https://the-epoch-institute.org/state/county-of-maine
 rawwadid-emirate,Rawwadid Emirate,emirate,Caucasus,Islamic Caliphates & Middle East,955,1071,yes,Tabriz,Iran; Azerbaijan,38.074,46.296,capital (matched by name),,https://the-epoch-institute.org/state/rawwadid-emirate
-kilwa-sultanate,Kilwa Sultanate,sultanate,Horn and East Africa,Sub-Saharan Africa,957,1513,yes,Kilwa Kisiwani,Tanzania; Mozambique,-8.982,39.517,capital,,https://the-epoch-institute.org/state/kilwa-sultanate
+kilwa-sultanate,Kilwa Sultanate,sultanate,Horn and East Africa,Sub-Saharan Africa,957,1513,yes,Kilwa Kisiwani,Tanzania; Mozambique,-8.982,39.517,capital,https://the-epoch-institute.org/empire/kilwa-sultanate,https://the-epoch-institute.org/empire/kilwa-sultanate
 county-of-la-marche,County of La Marche,county,France and the Low Countries,Europe,958,1527,yes,Guéret,France,46.238,1.486,recorded location,,https://the-epoch-institute.org/state/county-of-la-marche
 duchy-of-lorraine,Duchy of Lorraine,duchy,France and the Low Countries,Europe,959,1766,,Nancy,France,48.693,6.184,capital,https://the-epoch-institute.org/empire/duchy-of-lorraine,https://the-epoch-institute.org/empire/duchy-of-lorraine
 duchy-of-lower-lorraine,Duchy of Lower Lorraine,duchy,France and the Low Countries,Europe,959,1190,,,Belgium; Netherlands; Germany,50.776,6.084,capital,,https://the-epoch-institute.org/state/duchy-of-lower-lorraine
@@ -1838,7 +1838,7 @@ uqaylid-dynasty,Uqaylid dynasty,emirate,Mesopotamia and Iran,Islamic Caliphates 
 mamunid-khwarazm,Ma'munid Khwarazm,kingdom,Central Asia and the Steppe,Central & East Asia,995,1017,,Gurganj,Uzbekistan; Turkmenistan,41.694,64.005,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/mamunid-khwarazm
 prince-bishopric-of-verdun,Prince-Bishopric of Verdun,prince-bishopric,France and the Low Countries,Europe,997,1648,,Verdun,France,49.16,5.383,capital,,https://the-epoch-institute.org/state/prince-bishopric-of-verdun
 county-of-tusculum,County of Tusculum,county,Italy,Europe,999,1179,yes,Tusculum,Italy,41.798,12.711,capital (matched by name),,https://the-epoch-institute.org/state/county-of-tusculum
-kingdom-of-kano,Kingdom of Kano,kingdom,West Africa,Sub-Saharan Africa,999,1805,yes,Kano,Nigeria,12.002,8.592,capital,,https://the-epoch-institute.org/state/kingdom-of-kano
+kingdom-of-kano,Kingdom of Kano,kingdom,West Africa,Sub-Saharan Africa,999,1805,yes,Kano,Nigeria,12.002,8.592,capital,https://the-epoch-institute.org/empire/kingdom-of-kano,https://the-epoch-institute.org/empire/kingdom-of-kano
 prince-bishopric-of-sion,Prince-Bishopric of Sion,prince-bishopric,Germany and Central Europe,Europe,999,1628,,Sion,Switzerland,46.23,7.366,capital,,https://the-epoch-institute.org/state/prince-bishopric-of-sion
 calusa,Calusa,chiefdom,North America and Oceania,Americas,1000,1760,yes,Calos (Mound Key),United States,39.538,-97.483,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/calusa
 chancay,Chancay,chiefdom,South America,Americas,1000,1470,yes,,Peru,-11.565,-77.271,recorded location,,https://the-epoch-institute.org/state/chancay
@@ -1956,7 +1956,7 @@ county-of-zutphen,County of Zutphen,county,France and the Low Countries,Europe,1
 taifa-of-calatayud,Taifa of Calatayud,emirate,Iberia,Europe,1046,1055,yes,Calatayud,Spain,41.35,-1.633,capital (matched by name),,https://the-epoch-institute.org/state/taifa-of-calatayud
 sulayhid-dynasty,Sulayhid dynasty,kingdom,Arabia and the Gulf,Islamic Caliphates & Middle East,1047,1138,,Sanaa,Yemen,15.35,44.2,capital (matched by name),,https://the-epoch-institute.org/state/sulayhid-dynasty
 tercia-pars-regni,Tercia pars regni,duchy,Balkans and Hungary,Europe,1048,1107,yes,Nyitra,Slovakia; Hungary,48.734,19.05,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/tercia-pars-regni
-cahokia,Cahokia,chiefdom,North America and Oceania,Americas,1050,1350,yes,Cahokia,United States,38.654,-90.064,recorded location,,https://the-epoch-institute.org/state/cahokia
+cahokia,Cahokia,chiefdom,North America and Oceania,Americas,1050,1350,yes,Cahokia,United States,38.654,-90.064,recorded location,https://the-epoch-institute.org/empire/cahokia,https://the-epoch-institute.org/empire/cahokia
 county-of-bentheim,County of Bentheim,county,Germany and Central Europe,Europe,1050,1806,yes,Bad Bentheim,Germany,52.303,7.16,capital,,https://the-epoch-institute.org/state/county-of-bentheim
 duchy-of-racha,Duchy of Racha,duchy,Caucasus,Islamic Caliphates & Middle East,1050,1789,yes,Oni,Georgia,42.584,43.442,capital (matched by name),,https://the-epoch-institute.org/state/duchy-of-racha
 kingdom-of-kangaba,Kingdom of Kangaba,kingdom,West Africa,Sub-Saharan Africa,1050,1235,yes,Kangaba,Mali; Guinea,11.933,-8.417,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-kangaba
@@ -1991,7 +1991,6 @@ shaddadids-of-ani,Shaddadids of Ani,emirate,Caucasus,Islamic Caliphates & Middle
 county-of-gruyere,County of Gruyère,county,Germany and Central Europe,Europe,1073,1555,yes,Gruyères,Switzerland,46.608,7.107,recorded location,,https://the-epoch-institute.org/state/county-of-gruyere
 second-taifa-of-malaga,Second Taifa of Málaga,emirate,Iberia,Europe,1073,1090,,Málaga,Spain,36.717,-4.417,capital (matched by name),,https://the-epoch-institute.org/state/second-taifa-of-malaga
 county-palatine-of-durham,County Palatine of Durham,prince-bishopric,British Isles,Europe,1075,1836,yes,Durham,United Kingdom,54.783,-1.567,capital (matched by name),,https://the-epoch-institute.org/state/county-palatine-of-durham
-kingdom-of-mapungubwe,Kingdom of Mapungubwe,kingdom,Central and Southern Africa,Sub-Saharan Africa,1075,1220,yes,Mapungubwe,South Africa; Zimbabwe; Botswana,-22.193,29.239,recorded location,,https://the-epoch-institute.org/state/kingdom-of-mapungubwe
 kingdom-of-diarra,Kingdom of Diarra,kingdom,West Africa,Sub-Saharan Africa,1076,1754,yes,Diara,Mali,15.318,-9.321,capital,,https://the-epoch-institute.org/state/kingdom-of-diarra
 taifa-of-majorca,Taifa of Majorca,emirate,Iberia,Europe,1076,1115,yes,Madina Mayurqa,Spain,39.633,2.747,recorded location,,https://the-epoch-institute.org/state/taifa-of-majorca
 uyunid-emirate,Uyunid Emirate,emirate,Arabia and the Gulf,Islamic Caliphates & Middle East,1076,1253,yes,al-Ahsa,Saudi Arabia; Bahrain,26.571,50.001,recorded location,,https://the-epoch-institute.org/state/uyunid-emirate
@@ -2079,7 +2078,7 @@ merkit-confederation,Merkit confederation,tribal-confederation,"China, Tibet and
 metsepole,Metsepole,chiefdom,Scandinavia and the Baltic,Europe,1100,1206,yes,,Latvia,57.517,24.717,recorded location,,https://the-epoch-institute.org/state/metsepole
 mombasa,Mombasa,city-state,Horn and East Africa,Sub-Saharan Africa,1100,1593,yes,Mombasa,Kenya,-4.05,39.667,recorded location,https://the-epoch-institute.org/empire/mombasa,https://the-epoch-institute.org/empire/mombasa
 naiman-khanate,Naiman Khanate,khanate,"China, Tibet and Mongolia",Central & East Asia,1100,1204,yes,Altai,Mongolia; China,46.373,96.257,capital (matched by name),,https://the-epoch-institute.org/state/naiman-khanate
-saudeleur-dynasty,Saudeleur dynasty,kingdom,North America and Oceania,Oceania,1100,1628,yes,Nan Madol,Micronesia,6.842,158.332,capital,,https://the-epoch-institute.org/state/saudeleur-dynasty
+saudeleur-dynasty,Saudeleur dynasty,kingdom,North America and Oceania,Oceania,1100,1628,yes,Nan Madol,Micronesia,6.842,158.332,capital,https://the-epoch-institute.org/empire/saudeleur-dynasty,https://the-epoch-institute.org/empire/saudeleur-dynasty
 shah-armens,Shah-Armens,emirate,Anatolia and the Levant,Islamic Caliphates & Middle East,1100,1207,,Ahlat,Turkey,38.754,42.488,capital,,https://the-epoch-institute.org/state/shah-armens
 talava,Tālava,chiefdom,Scandinavia and the Baltic,Europe,1100,1224,yes,Beverīna,Latvia,57.5,25.45,recorded location,,https://the-epoch-institute.org/state/talava
 turaida,Turaida,chiefdom,Scandinavia and the Baltic,Europe,1100,1206,yes,Turaida,Latvia,57.183,24.833,recorded location,,https://the-epoch-institute.org/state/turaida
@@ -2369,7 +2368,7 @@ natchez-chiefdom,Natchez chiefdom,chiefdom,North America and Oceania,Americas,12
 nicarao-chiefdom,Nicarao chiefdom,chiefdom,Mesoamerica and the Caribbean,Americas,1200,1524,yes,Quauhcapolca,Nicaragua,12.671,-85.069,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/nicarao-chiefdom
 qaraqara-charka-confederation,Qaraqara-Charka Confederation,tribal-confederation,South America,Americas,1200,1460,yes,,Bolivia,-16.666,-64.593,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/qaraqara-charka-confederation
 rajahnate-of-cebu,Rajahnate of Cebu,kingdom,Maritime Southeast Asia,South & Southeast Asia,1200,1565,yes,Sugbu,Philippines,11.198,122.465,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/rajahnate-of-cebu
-rapa-nui,Rapa Nui,chiefdom,North America and Oceania,Americas,1200,1888,yes,,Chile,-27.12,-109.35,recorded location,,https://the-epoch-institute.org/state/rapa-nui
+rapa-nui,Rapa Nui,chiefdom,North America and Oceania,Oceania,1200,1888,yes,No fixed capital (Anakena in tradition),Chile,-27.12,-109.35,recorded location,https://the-epoch-institute.org/empire/rapa-nui,https://the-epoch-institute.org/empire/rapa-nui
 totonac-state-of-cempoala,Totonac state of Cempoala,city-state,Mesoamerica and the Caribbean,Americas,1200,1521,yes,Cempoala,Mexico,19.447,-96.404,capital (matched by name),,https://the-epoch-institute.org/state/totonac-state-of-cempoala
 xochimilco,Xochimilco,city-state,Mesoamerica and the Caribbean,Americas,1200,1430,yes,Xochimilco,Mexico,19.248,-99.098,recorded location,,https://the-epoch-institute.org/state/xochimilco
 yanhuitlan,Yanhuitlan,kingdom,Mesoamerica and the Caribbean,Americas,1200,1522,yes,Yanhuitlan,Mexico,17.517,-97.333,recorded location,,https://the-epoch-institute.org/state/yanhuitlan
@@ -2449,8 +2448,9 @@ barony-of-passavant,Barony of Passavant,other,Greece and the Aegean,Europe,1220,
 free-imperial-city-of-dortmund,Free Imperial City of Dortmund,imperial-city,Germany and Central Europe,Europe,1220,1803,yes,Dortmund,Germany,51.514,7.465,capital (matched by name),,https://the-epoch-institute.org/state/free-imperial-city-of-dortmund
 free-imperial-city-of-nordhausen,Free Imperial City of Nordhausen,imperial-city,Germany and Central Europe,Europe,1220,1802,,Nordhausen,Germany,51.505,10.791,recorded location,,https://the-epoch-institute.org/state/free-imperial-city-of-nordhausen
 free-imperial-city-of-pfullendorf,Free Imperial City of Pfullendorf,imperial-city,Germany and Central Europe,Europe,1220,1803,yes,Pfullendorf,Germany,47.924,9.257,capital (matched by name),,https://the-epoch-institute.org/state/free-imperial-city-of-pfullendorf
-kingdom-of-zimbabwe,Kingdom of Zimbabwe,kingdom,Central and Southern Africa,Sub-Saharan Africa,1220,1450,yes,Great Zimbabwe,Zimbabwe; Mozambique,-20.27,30.933,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-zimbabwe
-league-of-mayapan,League of Mayapan,other,Mesoamerica and the Caribbean,Americas,1220,1441,yes,Mayapan,Mexico,20.629,-89.461,capital (matched by name),,https://the-epoch-institute.org/state/league-of-mayapan
+kingdom-of-mapungubwe,Kingdom of Mapungubwe,kingdom,Central and Southern Africa,Sub-Saharan Africa,1220,1290,yes,Mapungubwe,South Africa; Zimbabwe; Botswana,-22.193,29.239,recorded location,https://the-epoch-institute.org/empire/kingdom-of-mapungubwe,https://the-epoch-institute.org/empire/kingdom-of-mapungubwe
+kingdom-of-zimbabwe,Kingdom of Zimbabwe,kingdom,Central and Southern Africa,Sub-Saharan Africa,1220,1450,yes,Great Zimbabwe,Zimbabwe; Mozambique,-20.27,30.933,capital (matched by name),https://the-epoch-institute.org/empire/kingdom-of-zimbabwe,https://the-epoch-institute.org/empire/kingdom-of-zimbabwe
+league-of-mayapan,League of Mayapan,other,Mesoamerica and the Caribbean,Americas,1220,1441,yes,Mayapan,Mexico,20.629,-89.461,capital (matched by name),https://the-epoch-institute.org/empire/league-of-mayapan,https://the-epoch-institute.org/empire/league-of-mayapan
 prince-abbey-of-fulda,Prince-Abbey of Fulda,prince-bishopric,Germany and Central Europe,Europe,1220,1802,yes,Fulda,Germany,50.553,9.678,capital,,https://the-epoch-institute.org/state/prince-abbey-of-fulda
 qutlugh-khanid-dynasty,Qutlugh-Khanid dynasty,principality,Mesopotamia and Iran,Islamic Caliphates & Middle East,1222,1306,,Kerman,Iran,30.291,57.068,capital (matched by name),,https://the-epoch-institute.org/state/qutlugh-khanid-dynasty
 singhasari,Singhasari,kingdom,Maritime Southeast Asia,South & Southeast Asia,1222,1292,,Tumapel (Singhasari),Indonesia,-7.969,112.633,capital,,https://the-epoch-institute.org/state/singhasari
@@ -2735,7 +2735,7 @@ nakhon-si-thammarat-kingdom,Nakhon Si Thammarat Kingdom,kingdom,Mainland Southea
 nangchen,Nangchen,kingdom,"China, Tibet and Mongolia",Central & East Asia,1300,1932,yes,Nangchen,China,32.272,96.225,recorded location,,https://the-epoch-institute.org/state/nangchen
 oyo-empire,Oyo Empire,empire,,Sub-Saharan Africa,1300,1896,,Oyo-Ile (later New Oyo),,7.844,3.936,capital,https://the-epoch-institute.org/empire/oyo-empire,https://the-epoch-institute.org/empire/oyo-empire
 pate-sultanate,Pate Sultanate,sultanate,Horn and East Africa,Sub-Saharan Africa,1300,1862,yes,Pate,Kenya,-2.1,41.05,recorded location,,https://the-epoch-institute.org/state/pate-sultanate
-purepecha-empire,Purépecha Empire,kingdom,Mesoamerica and the Caribbean,Americas,1300,1530,yes,Tzintzuntzan,Mexico,19.628,-101.579,capital,,https://the-epoch-institute.org/state/purepecha-empire
+purepecha-empire,Purépecha Empire,kingdom,Mesoamerica and the Caribbean,Americas,1300,1530,yes,Tzintzuntzan,Mexico,19.628,-101.579,capital,https://the-epoch-institute.org/empire/purepecha-empire,https://the-epoch-institute.org/empire/purepecha-empire
 saruhanids,Saruhanids,emirate,Anatolia and the Levant,Islamic Caliphates & Middle East,1300,1410,yes,Manisa,Turkey,38.612,27.426,capital,,https://the-epoch-institute.org/state/saruhanids
 selaparang-kingdom,Selaparang Kingdom,kingdom,Maritime Southeast Asia,South & Southeast Asia,1300,1740,yes,Selaparang,Indonesia,-8.571,116.113,capital (matched by name),,https://the-epoch-institute.org/state/selaparang-kingdom
 sharkha-sultanate,Sharkha Sultanate,sultanate,Horn and East Africa,Sub-Saharan Africa,1300,1450,yes,,Ethiopia,8.033,39.089,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/sharkha-sultanate
@@ -2853,7 +2853,7 @@ karauli-state,Karauli State,princely-state,Indian princely states,South & Southe
 katsina-kingdom,Katsina Kingdom,kingdom,West Africa,Sub-Saharan Africa,1348,1807,yes,Katsina,Nigeria,12.989,7.601,capital (matched by name),,https://the-epoch-institute.org/state/katsina-kingdom
 pskov-republic,Pskov Republic,republic,"Poland, Lithuania and Russia",Europe,1348,1510,,Pskov,Russia,57.817,28.333,capital,,https://the-epoch-institute.org/state/pskov-republic
 taceddinids,Taceddinids,emirate,Anatolia and the Levant,Islamic Caliphates & Middle East,1348,1428,yes,Niksar,Turkey,40.583,36.967,capital (matched by name),,https://the-epoch-institute.org/state/taceddinids
-tlaxcala,Tlaxcala,republic,Mesoamerica and the Caribbean,Americas,1348,1521,yes,Tlaxcala,Mexico,19.4,-98.1,recorded location,,https://the-epoch-institute.org/state/tlaxcala
+tlaxcala,Tlaxcala,republic,Mesoamerica and the Caribbean,Americas,1348,1521,yes,Tlaxcala,Mexico,19.4,-98.1,recorded location,https://the-epoch-institute.org/empire/tlaxcala,https://the-epoch-institute.org/empire/tlaxcala
 afrasiyabids-of-mazandaran,Afrasiyabids of Mazandaran,principality,Mesopotamia and Iran,Islamic Caliphates & Middle East,1349,1359,yes,Amol,Iran,36.47,52.351,capital (matched by name),,https://the-epoch-institute.org/state/afrasiyabids-of-mazandaran
 despotate-of-the-morea,Despotate of the Morea,principality,Greece and the Aegean,Europe,1349,1460,,Mystras,Greece,37.074,22.367,capital,,https://the-epoch-institute.org/state/despotate-of-the-morea
 kamakura-fu,Kamakura-fu,other,Korea and Japan,Central & East Asia,1349,1439,,Kamakura,Japan,35.319,139.552,capital (matched by name),,https://the-epoch-institute.org/state/kamakura-fu
@@ -3116,7 +3116,7 @@ kingdom-of-fetu,Kingdom of Fetu,kingdom,West Africa,Sub-Saharan Africa,1450,1700
 kingdom-of-gobir,Kingdom of Gobir,kingdom,West Africa,Sub-Saharan Africa,1450,1808,yes,Alkalawa,Nigeria; Niger,13.613,6.26,capital,,https://the-epoch-institute.org/state/kingdom-of-gobir
 kingdom-of-niumi,Kingdom of Niumi,kingdom,West Africa,Sub-Saharan Africa,1450,1897,yes,Essau,Gambia,13.483,-16.533,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-niumi
 kingdom-of-tenkodogo,Kingdom of Tenkodogo,kingdom,West Africa,Sub-Saharan Africa,1450,1897,yes,Tenkodogo,Burkina Faso,11.783,-0.367,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-tenkodogo
-kingdom-of-uvea,Kingdom of Uvea,kingdom,North America and Oceania,Americas,1450,,yes,Mata-Utu,France,-13.283,-176.174,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-uvea
+kingdom-of-uvea,Kingdom of Uvea,kingdom,North America and Oceania,Oceania,1450,,yes,Mata-Utu,France,-13.283,-176.174,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-uvea
 kowoj,Kowoj,chiefdom,Mesoamerica and the Caribbean,Americas,1450,1697,yes,Zacpeten,Guatemala,16.983,-89.65,capital (matched by name),,https://the-epoch-institute.org/state/kowoj
 mohawk-nation,Mohawk Nation,chiefdom,North America and Oceania,Americas,1450,,yes,,United States; Canada,39.538,-97.483,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/mohawk-nation
 oneida-nation,Oneida Nation,chiefdom,North America and Oceania,Americas,1450,,yes,,United States; Canada,44.487,-88.206,recorded location,,https://the-epoch-institute.org/state/oneida-nation
@@ -3271,7 +3271,7 @@ kingdom-of-ketu,Kingdom of Ketu,kingdom,West Africa,Sub-Saharan Africa,1500,1886
 kingdom-of-lamjung,Kingdom of Lamjung,kingdom,South Asia,South & Southeast Asia,1500,1782,yes,Lamjung,Nepal,28.298,83.64,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/kingdom-of-lamjung
 kingdom-of-madanda,Kingdom of Madanda,kingdom,Central and Southern Africa,Sub-Saharan Africa,1500,1890,yes,,Mozambique,-13.943,37.838,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/kingdom-of-madanda
 kingdom-of-maynila,Kingdom of Maynila,kingdom,Maritime Southeast Asia,South & Southeast Asia,1500,1571,yes,Maynila,Philippines,11.198,122.465,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/kingdom-of-maynila
-kingdom-of-ndongo,Kingdom of Ndongo,kingdom,Central and Southern Africa,Sub-Saharan Africa,1500,1671,yes,Kabasa,Angola,-12.183,17.984,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/kingdom-of-ndongo
+kingdom-of-ndongo,Kingdom of Ndongo,kingdom,Central and Southern Africa,Sub-Saharan Africa,1500,1671,yes,Kabasa,Angola,-12.183,17.984,approximate (centre of the present-day country),https://the-epoch-institute.org/empire/kingdom-of-ndongo,https://the-epoch-institute.org/empire/kingdom-of-ndongo
 kingdom-of-nikki,Kingdom of Nikki,kingdom,West Africa,Sub-Saharan Africa,1500,1898,yes,Nikki,Benin,9.933,3.208,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-nikki
 kingdom-of-rwanda,Kingdom of Rwanda,kingdom,Horn and East Africa,Sub-Saharan Africa,1500,1961,yes,Nyanza,Rwanda,-2.352,29.751,capital,https://the-epoch-institute.org/empire/kingdom-of-rwanda,https://the-epoch-institute.org/empire/kingdom-of-rwanda
 kingdom-of-sabe,Kingdom of Sabe,kingdom,West Africa,Sub-Saharan Africa,1500,1894,yes,Save,Benin,6.394,0.708,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-sabe
@@ -3428,7 +3428,7 @@ republic-of-geneva,Republic of Geneva,city-state,Germany and Central Europe,Euro
 lordship-of-groningen,Lordship of Groningen,other,France and the Low Countries,Europe,1536,1594,,Groningen,Netherlands,53.219,6.568,capital,,https://the-epoch-institute.org/state/lordship-of-groningen
 duchy-of-castro,Duchy of Castro,duchy,Italy,Europe,1537,1649,,Castro,Italy,42.533,11.649,capital,,https://the-epoch-institute.org/state/duchy-of-castro
 kaabu-empire,Kaabu Empire,empire,,Sub-Saharan Africa,1537,1867,,Kansala,,13.217,-16.05,capital,https://the-epoch-institute.org/empire/kaabu-empire,https://the-epoch-institute.org/empire/kaabu-empire
-neo-inca-state,Neo-Inca State,kingdom,South America,Americas,1537,1572,,Vilcabamba,Peru,-12.903,-73.206,capital,,https://the-epoch-institute.org/state/neo-inca-state
+neo-inca-state,Neo-Inca State,kingdom,South America,Americas,1537,1572,,Vilcabamba,Peru,-12.903,-73.206,capital,https://the-epoch-institute.org/empire/neo-inca-state,https://the-epoch-institute.org/empire/neo-inca-state
 new-kingdom-of-granada,New Kingdom of Granada,colony,South America,Americas,1538,1717,,Santa Fe de Bogotá,Colombia,4.61,-74.082,capital,,https://the-epoch-institute.org/state/new-kingdom-of-granada
 real-audiencia-of-panama,Real Audiencia of Panama,colony,Mesoamerica and the Caribbean,Americas,1538,1751,,Panamá,Panama,8.722,-80.352,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/real-audiencia-of-panama
 yemen-eyalet,Yemen Eyalet,other,Arabia and the Gulf,Islamic Caliphates & Middle East,1538,1636,,Sanaa,Yemen,13.317,43.25,recorded location,,https://the-epoch-institute.org/state/yemen-eyalet
@@ -3534,7 +3534,7 @@ polish-lithuanian-commonwealth,Polish-Lithuanian Commonwealth,empire,,Europe,156
 chitral-state,Chitral State,princely-state,Indian princely states,South & Southeast Asia,1570,1969,yes,Chitral,Pakistan,35.851,71.789,capital,,https://the-epoch-institute.org/state/chitral-state
 don-cossack-host,Don Cossack Host,other,"Poland, Lithuania and Russia",Europe,1570,1918,yes,Cherkassk,Russia; Ukraine,45.668,80.367,capital (matched by name),,https://the-epoch-institute.org/state/don-cossack-host
 kingdom-of-livonia,Kingdom of Livonia,kingdom,Scandinavia and the Baltic,Europe,1570,1578,,Oberpahlen,Estonia; Latvia,58.653,25.972,capital,,https://the-epoch-institute.org/state/kingdom-of-livonia
-powhatan-confederacy,Powhatan Confederacy,chiefdom,North America and Oceania,Americas,1570,1677,yes,Werowocomoco,United States,37.412,-76.649,capital (matched by name),,https://the-epoch-institute.org/state/powhatan-confederacy
+powhatan-confederacy,Powhatan Confederacy,chiefdom,North America and Oceania,Americas,1570,1677,yes,Werowocomoco,United States,37.412,-76.649,capital (matched by name),https://the-epoch-institute.org/empire/powhatan-confederacy,https://the-epoch-institute.org/empire/powhatan-confederacy
 principality-of-bidache,Principality of Bidache,principality,France and the Low Countries,Europe,1570,1790,yes,Bidache,France,43.483,-1.141,capital,,https://the-epoch-institute.org/state/principality-of-bidache
 principality-of-transylvania,Principality of Transylvania,principality,Balkans and Hungary,Europe,1570,1711,,Gyulafehérvár,Romania; Hungary,45.733,24.973,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/principality-of-transylvania
 duchy-of-saxe-weimar,Duchy of Saxe-Weimar,duchy,Germany and Central Europe,Europe,1572,1741,,Weimar,Germany,50.981,11.329,capital,,https://the-epoch-institute.org/state/duchy-of-saxe-weimar
@@ -3946,7 +3946,7 @@ duchy-of-saxe-eisenberg,Duchy of Saxe-Eisenberg,duchy,Germany and Central Europe
 duchy-of-saxe-hildburghausen,Duchy of Saxe-Hildburghausen,duchy,Germany and Central Europe,Europe,1680,1826,,Hildburghausen,Germany,50.426,10.729,capital,,https://the-epoch-institute.org/state/duchy-of-saxe-hildburghausen
 duchy-of-saxe-meiningen,Duchy of Saxe-Meiningen,duchy,Germany and Central Europe,Europe,1680,1918,,Meiningen,Germany,50.55,10.417,capital,,https://the-epoch-institute.org/state/duchy-of-saxe-meiningen
 duchy-of-saxe-romhild,Duchy of Saxe-Römhild,duchy,Germany and Central Europe,Europe,1680,1710,,Römhild,Germany,50.383,10.55,capital (matched by name),,https://the-epoch-institute.org/state/duchy-of-saxe-romhild
-kingdom-of-burundi,Kingdom of Burundi,kingdom,Horn and East Africa,Sub-Saharan Africa,1680,1966,yes,Muramvya,Burundi,-3.667,29.817,recorded location,,https://the-epoch-institute.org/state/kingdom-of-burundi
+kingdom-of-burundi,Kingdom of Burundi,kingdom,Horn and East Africa,Sub-Saharan Africa,1680,1966,yes,Muramvya,Burundi,-3.667,29.817,recorded location,https://the-epoch-institute.org/empire/kingdom-of-burundi,https://the-epoch-institute.org/empire/kingdom-of-burundi
 savanur-state,Savanur State,princely-state,Indian princely states,South & Southeast Asia,1680,1948,yes,Savanur,India,14.967,75.35,recorded location,,https://the-epoch-institute.org/state/savanur-state
 wabanaki-confederacy,Wabanaki Confederacy,tribal-confederation,North America and Oceania,Americas,1680,1862,yes,,Canada; United States,60.324,-101.911,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/wabanaki-confederacy
 kingdom-of-khasso,Kingdom of Khasso,kingdom,West Africa,Sub-Saharan Africa,1681,1880,yes,Medine,Mali; Senegal,18.693,-2.038,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/kingdom-of-khasso
@@ -4061,7 +4061,7 @@ portuguese-timor,Portuguese Timor,colony,Maritime Southeast Asia,South & Southea
 mamluk-iraq,Mamluk Iraq,other,Mesopotamia and Iran,Islamic Caliphates & Middle East,1704,1831,,Baghdad,Iraq,33.315,44.366,capital,,https://the-epoch-institute.org/state/mamluk-iraq
 beylik-of-tunis,Beylik of Tunis,other,"Egypt, North Africa and Sudan",Egypt & North Africa,1705,1956,,Tunis,Tunisia,36.801,10.18,capital,,https://the-epoch-institute.org/state/beylik-of-tunis
 principality-of-mindelheim,Principality of Mindelheim,principality,Germany and Central Europe,Europe,1705,1714,,Mindelheim,Germany,48.053,10.492,capital (matched by name),,https://the-epoch-institute.org/state/principality-of-mindelheim
-comancheria,Comancheria,nomadic-confederation,North America and Oceania,Americas,1706,1875,yes,,United States; Mexico,39.538,-97.483,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/comancheria
+comancheria,Comancheria,nomadic-confederation,North America and Oceania,Americas,1706,1875,yes,None (mobile band camps),United States; Mexico,39.538,-97.483,approximate (centre of the present-day country),https://the-epoch-institute.org/empire/comancheria,https://the-epoch-institute.org/empire/comancheria
 republic-of-pirates,Republic of Pirates,other,Mesoamerica and the Caribbean,Americas,1706,1718,yes,Nassau,Bahamas,25.078,-77.339,capital,,https://the-epoch-institute.org/state/republic-of-pirates
 bhopal-state,Bhopal State,princely-state,Indian princely states,South & Southeast Asia,1707,1949,yes,Bhopal,India,23.259,77.413,capital,,https://the-epoch-institute.org/state/bhopal-state
 chuda-state,Chuda State,princely-state,Indian princely states,South & Southeast Asia,1707,1948,yes,Chuda,India,22.483,71.733,recorded location,,https://the-epoch-institute.org/state/chuda-state
@@ -4080,7 +4080,7 @@ kolhapur-state,Kolhapur State,princely-state,Indian princely states,South & Sout
 kong-empire,Kong Empire,kingdom,West Africa,Sub-Saharan Africa,1710,1898,yes,Kong,Ivory Coast; Burkina Faso,9.151,-4.61,capital,,https://the-epoch-institute.org/state/kong-empire
 grand-principality-of-transylvania,Grand Principality of Transylvania,principality,Balkans and Hungary,Europe,1711,1867,,Hermannstadt; later Kolozsvár,Romania,45.733,24.973,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/grand-principality-of-transylvania
 karamanli-tripoli,Karamanli Tripoli,other,"Egypt, North Africa and Sudan",Egypt & North Africa,1711,1835,,Tripoli,Libya,32.888,13.188,capital (matched by name),,https://the-epoch-institute.org/state/karamanli-tripoli
-bamana-empire,Bamana Empire,kingdom,West Africa,Sub-Saharan Africa,1712,1861,,Segou,Mali,13.432,-6.216,capital,,https://the-epoch-institute.org/state/bamana-empire
+bamana-empire,Bamana Empire,kingdom,West Africa,Sub-Saharan Africa,1712,1861,,Segou,Mali,13.432,-6.216,capital,https://the-epoch-institute.org/empire/bamana-empire,https://the-epoch-institute.org/empire/bamana-empire
 betsimisaraka-confederation,Betsimisaraka Confederation,tribal-confederation,Central and Southern Africa,Sub-Saharan Africa,1712,1817,yes,Fenoarivo,Madagascar,-18.933,47.435,capital (matched by name),,https://the-epoch-institute.org/state/betsimisaraka-confederation
 province-of-north-carolina,Province of North Carolina,colony,North America and Oceania,Americas,1712,1776,,New Bern,United States,35.108,-77.044,capital,,https://the-epoch-institute.org/state/province-of-north-carolina
 province-of-south-carolina,Province of South Carolina,colony,North America and Oceania,Americas,1712,1776,,Charles Town,United States,34,-81,recorded location,,https://the-epoch-institute.org/state/province-of-south-carolina
@@ -4338,7 +4338,7 @@ habr-yunis-sultanate,Habr Yunis Sultanate,sultanate,Horn and East Africa,Sub-Sah
 province-of-freedom,Province of Freedom,colony,West Africa,Sub-Saharan Africa,1787,1789,,Granville Town,Sierra Leone,8.617,-11.764,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/province-of-freedom
 colony-of-new-south-wales,Colony of New South Wales,colony,North America and Oceania,Oceania,1788,1901,,Sydney,Australia,-33.868,151.21,capital (matched by name),,https://the-epoch-institute.org/state/colony-of-new-south-wales
 kingdom-of-badung,Kingdom of Badung,kingdom,Maritime Southeast Asia,South & Southeast Asia,1788,1906,yes,Denpasar,Indonesia,-8.672,115.234,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-badung
-kingdom-of-tahiti,Kingdom of Tahiti,kingdom,North America and Oceania,Americas,1788,1880,,Papeete,France,-17.54,-149.569,capital,,https://the-epoch-institute.org/state/kingdom-of-tahiti
+kingdom-of-tahiti,Kingdom of Tahiti,kingdom,North America and Oceania,Oceania,1788,1880,,Papeete,France,-17.54,-149.569,capital,https://the-epoch-institute.org/empire/kingdom-of-tahiti,https://the-epoch-institute.org/empire/kingdom-of-tahiti
 pashalik-of-yanina,Pashalik of Yanina,other,Balkans and Hungary,Europe,1788,1822,,Ioannina,Greece; Albania,39.664,20.852,capital,,https://the-epoch-institute.org/state/pashalik-of-yanina
 principality-of-lippe,Principality of Lippe,principality,Germany and Central Europe,Europe,1789,1918,,Detmold,Germany,51.938,8.883,capital,,https://the-epoch-institute.org/state/principality-of-lippe
 qajar-iran,Qajar Iran,kingdom,Mesopotamia and Iran,Islamic Caliphates & Middle East,1789,1925,,Tehran,Iran; Azerbaijan; Armenia; Georgia,35.689,51.39,capital,https://the-epoch-institute.org/empire/qajar-iran,https://the-epoch-institute.org/empire/qajar-iran
@@ -4355,7 +4355,7 @@ sierra-leone-colony-and-protectorate,Sierra Leone Colony and Protectorate,colony
 british-occupation-of-saint-domingue,British occupation of Saint-Domingue,colony,Mesoamerica and the Caribbean,Americas,1793,1798,,Port-au-Prince,Haiti,18.547,-72.34,capital (matched by name),,https://the-epoch-institute.org/state/british-occupation-of-saint-domingue
 republic-of-mainz,Republic of Mainz,republic,Germany and Central Europe,Europe,1793,1793,,Mainz,Germany,49.999,8.274,recorded location,,https://the-epoch-institute.org/state/republic-of-mainz
 anglo-corsican-kingdom,Anglo-Corsican Kingdom,kingdom,France and the Low Countries,Europe,1794,1796,,Bastia,France,42.7,9.449,capital,,https://the-epoch-institute.org/state/anglo-corsican-kingdom
-cherokee-nation,Cherokee Nation,republic,North America and Oceania,Americas,1794,1907,,Tahlequah,United States,35.852,-94.991,recorded location,,https://the-epoch-institute.org/state/cherokee-nation
+cherokee-nation,Cherokee Nation,republic,North America and Oceania,Americas,1794,1907,,Tahlequah,United States,35.852,-94.991,recorded location,https://the-epoch-institute.org/empire/cherokee-nation,https://the-epoch-institute.org/empire/cherokee-nation
 pashalik-of-vidin,Pashalik of Vidin,other,Balkans and Hungary,Europe,1794,1807,yes,Vidin,Bulgaria; Serbia,43.989,22.874,capital,,https://the-epoch-institute.org/state/pashalik-of-vidin
 pathari-state,Pathari State,princely-state,Indian princely states,South & Southeast Asia,1794,1948,yes,Pathari,India,23.933,78.2,recorded location,,https://the-epoch-institute.org/state/pathari-state
 batavian-republic,Batavian Republic,republic,France and the Low Countries,Europe,1795,1806,,The Hague,Netherlands,52.08,4.31,capital,,https://the-epoch-institute.org/state/batavian-republic
@@ -4364,7 +4364,7 @@ cape-colony,Cape Colony,colony,Central and Southern Africa,Sub-Saharan Africa,17
 french-santo-domingo,French Santo Domingo,colony,Mesoamerica and the Caribbean,Americas,1795,1809,,Santo Domingo,Dominican Republic,18.463,-69.936,capital (matched by name),,https://the-epoch-institute.org/state/french-santo-domingo
 governorate-of-courland,Governorate of Courland,other,Scandinavia and the Baltic,Europe,1795,1918,,Mitau,Latvia; Lithuania,56.652,23.724,recorded location,,https://the-epoch-institute.org/state/governorate-of-courland
 graaff-reinet-republic,Graaff-Reinet Republic,republic,Central and Southern Africa,Sub-Saharan Africa,1795,1796,,Graaff-Reinet,South Africa,-32.252,24.541,capital,,https://the-epoch-institute.org/state/graaff-reinet-republic
-kingdom-of-hawaii,Kingdom of Hawaii,kingdom,North America and Oceania,Oceania,1795,1893,,Honolulu,United States,21.305,-157.857,capital,,https://the-epoch-institute.org/state/kingdom-of-hawaii
+kingdom-of-hawaii,Kingdom of Hawaii,kingdom,North America and Oceania,Oceania,1795,1893,,Honolulu,United States,21.305,-157.857,capital,https://the-epoch-institute.org/empire/kingdom-of-hawaii,https://the-epoch-institute.org/empire/kingdom-of-hawaii
 lebou-republic,Lebou Republic,republic,West Africa,Sub-Saharan Africa,1795,1857,yes,Ndakaaru,Senegal,14.673,-17.432,recorded location,,https://the-epoch-institute.org/state/lebou-republic
 swellendam-republic,Swellendam Republic,republic,Central and Southern Africa,Sub-Saharan Africa,1795,1795,,Swellendam,South Africa,-34.023,20.44,capital,,https://the-epoch-institute.org/state/swellendam-republic
 bolognese-republic,Bolognese Republic,republic,Italy,Europe,1796,1796,,Bologna,Italy,44.494,11.343,capital,,https://the-epoch-institute.org/state/bolognese-republic
@@ -4498,7 +4498,7 @@ first-republic-of-venezuela,First Republic of Venezuela,republic,South America,A
 jamkhandi-state,Jamkhandi State,princely-state,Indian princely states,South & Southeast Asia,1811,1948,yes,Jamkhandi,India,16.517,75.3,recorded location,,https://the-epoch-institute.org/state/jamkhandi-state
 kingdom-of-haiti,Kingdom of Haiti,kingdom,Mesoamerica and the Caribbean,Americas,1811,1820,,Cap-Henri,Haiti,19.75,-72.2,capital,,https://the-epoch-institute.org/state/kingdom-of-haiti
 kurundwad-senior,Kurundwad Senior,princely-state,Indian princely states,South & Southeast Asia,1811,1948,yes,Kurundwad,India,16.683,74.633,recorded location,,https://the-epoch-institute.org/state/kurundwad-senior
-republic-of-paraguay,Republic of Paraguay,republic,South America,Americas,1811,,,Asunción,Paraguay,-25.28,-57.634,capital,,https://the-epoch-institute.org/state/republic-of-paraguay
+republic-of-paraguay,Republic of Paraguay,republic,South America,Americas,1811,,,Asunción,Paraguay,-25.28,-57.634,capital,https://the-epoch-institute.org/empire/republic-of-paraguay,https://the-epoch-institute.org/empire/republic-of-paraguay
 state-of-quito,State of Quito,republic,South America,Americas,1811,1812,,Quito,Ecuador,-0.22,-78.513,capital (matched by name),,https://the-epoch-institute.org/state/state-of-quito
 united-provinces-of-new-granada,United Provinces of New Granada,republic,South America,Americas,1811,1816,,Tunja,Colombia,5.54,-73.361,capital (matched by name),,https://the-epoch-institute.org/state/united-provinces-of-new-granada
 bhaisaunda-state,Bhaisaunda State,princely-state,Indian princely states,South & Southeast Asia,1812,1950,yes,Bhaisaunda,India,25.3,80.8,recorded location,,https://the-epoch-institute.org/state/bhaisaunda-state
@@ -4664,7 +4664,7 @@ south-peruvian-republic,South Peruvian Republic,republic,South America,Americas,
 bahia-republic,Bahia Republic,republic,South America,Americas,1837,1838,,Salvador,Brazil,-12.983,-38.493,capital (matched by name),,https://the-epoch-institute.org/state/bahia-republic
 republic-of-winburg,Republic of Winburg,republic,Central and Southern Africa,Sub-Saharan Africa,1837,1848,yes,Winburg,South Africa,-28.533,27.017,capital (matched by name),,https://the-epoch-institute.org/state/republic-of-winburg
 jhalawar-state,Jhalawar State,princely-state,Indian princely states,South & Southeast Asia,1838,1948,,Jhalrapatan,India,24.59,76.16,recorded location,,https://the-epoch-institute.org/state/jhalawar-state
-pitcairn-islands,Pitcairn Islands,colony,North America and Oceania,Americas,1838,,,Adamstown,United Kingdom,-25.067,-130.1,capital,,https://the-epoch-institute.org/state/pitcairn-islands
+pitcairn-islands,Pitcairn Islands,colony,North America and Oceania,Oceania,1838,,,Adamstown,United Kingdom,-25.067,-130.1,capital,,https://the-epoch-institute.org/state/pitcairn-islands
 potchefstroom-republic,Potchefstroom Republic,republic,Central and Southern Africa,Sub-Saharan Africa,1838,1852,yes,Potchefstroom,South Africa,-26.715,27.103,capital (matched by name),,https://the-epoch-institute.org/state/potchefstroom-republic
 republic-of-honduras,Republic of Honduras,republic,Mesoamerica and the Caribbean,Americas,1838,,,Comayagua; later Tegucigalpa,Honduras,14.633,-86.817,recorded location,https://the-epoch-institute.org/empire/republic-of-honduras,https://the-epoch-institute.org/empire/republic-of-honduras
 republic-of-nicaragua,Republic of Nicaragua,republic,Mesoamerica and the Caribbean,Americas,1838,,,León; later Managua,Nicaragua,13,-85,recorded location,https://the-epoch-institute.org/empire/republic-of-nicaragua,https://the-epoch-institute.org/empire/republic-of-nicaragua
@@ -4695,7 +4695,7 @@ provisional-government-of-oregon,Provisional Government of Oregon,other,North Am
 senussi-order,Senussi Order,theocracy,"Egypt, North Africa and Sudan",Egypt & North Africa,1843,1951,yes,Jaghbub,Libya; Chad; Egypt,29.743,24.517,capital (matched by name),,https://the-epoch-institute.org/state/senussi-order
 first-dominican-republic,First Dominican Republic,republic,Mesoamerica and the Caribbean,Americas,1844,1861,,Santo Domingo,Dominican Republic,18.463,-69.936,capital,,https://the-epoch-institute.org/state/first-dominican-republic
 jumbe-state-of-nkhotakota,Jumbe State of Nkhotakota,other,Central and Southern Africa,Sub-Saharan Africa,1845,1894,yes,Nkhotakota,Malawi,-12.917,34.3,capital (matched by name),,https://the-epoch-institute.org/state/jumbe-state-of-nkhotakota
-kingdom-of-tonga,Kingdom of Tonga,kingdom,North America and Oceania,Oceania,1845,,,Nukuʻalofa,Tonga,-21.134,-175.202,capital,,https://the-epoch-institute.org/state/kingdom-of-tonga
+kingdom-of-tonga,Kingdom of Tonga,kingdom,North America and Oceania,Oceania,1845,,,Nukuʻalofa,Tonga,-21.134,-175.202,capital,https://the-epoch-institute.org/empire/kingdom-of-tonga,https://the-epoch-institute.org/empire/kingdom-of-tonga
 california-republic,California Republic,republic,North America and Oceania,Americas,1846,1846,,Sonoma,United States,38.292,-122.458,capital,,https://the-epoch-institute.org/state/california-republic
 jammu-and-kashmir-princely-state,Jammu and Kashmir (princely state),princely-state,Indian princely states,South & Southeast Asia,1846,1952,,Srinagar,India; Pakistan; China,34.091,74.806,capital,,https://the-epoch-institute.org/state/jammu-and-kashmir-princely-state
 second-federal-republic-of-mexico,Second Federal Republic of Mexico,republic,Mesoamerica and the Caribbean,Americas,1846,1863,,Mexico City,Mexico; United States,19.354,-99.136,capital,,https://the-epoch-institute.org/state/second-federal-republic-of-mexico
@@ -4734,7 +4734,7 @@ principality-of-montenegro,Principality of Montenegro,principality,Balkans and H
 second-french-empire,Second French Empire,other,France and the Low Countries,Europe,1852,1870,,Paris,France,48.857,2.352,capital,,https://the-epoch-institute.org/state/second-french-empire
 south-african-republic,South African Republic,republic,Central and Southern Africa,Sub-Saharan Africa,1852,1902,,Pretoria,South Africa,-25.746,28.188,capital,https://the-epoch-institute.org/empire/south-african-republic,https://the-epoch-institute.org/empire/south-african-republic
 state-of-buenos-aires,State of Buenos Aires,republic,South America,Americas,1852,1861,,Buenos Aires,Argentina,-34.6,-58.382,capital,,https://the-epoch-institute.org/state/state-of-buenos-aires
-new-caledonia,New Caledonia,colony,North America and Oceania,Americas,1853,,,Noumea,France,-22.267,166.45,capital,,https://the-epoch-institute.org/state/new-caledonia
+new-caledonia,New Caledonia,colony,North America and Oceania,Oceania,1853,,,Noumea,France,-22.267,166.45,capital,,https://the-epoch-institute.org/state/new-caledonia
 republic-of-lower-california,Republic of Lower California,republic,Mesoamerica and the Caribbean,Americas,1853,1854,,La Paz; later Ensenada,Mexico,24.149,-110.307,capital,,https://the-epoch-institute.org/state/republic-of-lower-california
 orange-free-state,Orange Free State,republic,Central and Southern Africa,Sub-Saharan Africa,1854,1902,,Bloemfontein,South Africa,-29.1,26.217,capital,https://the-epoch-institute.org/empire/orange-free-state,https://the-epoch-institute.org/empire/orange-free-state
 republic-of-utrecht,Republic of Utrecht,republic,Central and Southern Africa,Sub-Saharan Africa,1854,1858,,Utrecht,South Africa,-27.66,30.33,recorded location,,https://the-epoch-institute.org/state/republic-of-utrecht
@@ -4831,7 +4831,7 @@ canton-of-malaga,Canton of Málaga,city-state,Iberia,Europe,1873,1873,,Málaga,S
 canton-of-seville,Canton of Seville,city-state,Iberia,Europe,1873,1873,,Seville,Spain,37.389,-5.995,capital (matched by name),,https://the-epoch-institute.org/state/canton-of-seville
 canton-of-valencia,Canton of Valencia,city-state,Iberia,Europe,1873,1873,,Valencia,Spain,39.47,-0.376,capital (matched by name),,https://the-epoch-institute.org/state/canton-of-valencia
 griqualand-west-colony,Griqualand West Colony,colony,Central and Southern Africa,Sub-Saharan Africa,1873,1880,,Kimberley,South Africa,-28.738,24.764,capital (matched by name),,https://the-epoch-institute.org/state/griqualand-west-colony
-kingdom-of-samoa,Kingdom of Samoa,kingdom,North America and Oceania,Americas,1873,1899,yes,Mulinuʻu,Samoa; United States,-13.817,-171.783,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-samoa
+kingdom-of-samoa,Kingdom of Samoa,kingdom,North America and Oceania,Oceania,1873,1899,yes,Mulinuʻu,Samoa; United States,-13.817,-171.783,capital (matched by name),,https://the-epoch-institute.org/state/kingdom-of-samoa
 spanish-first-republic,Spanish First Republic,republic,Iberia,Europe,1873,1874,,Madrid,Spain,40.417,-3.703,capital,,https://the-epoch-institute.org/state/spanish-first-republic
 colony-of-fiji,Colony of Fiji,colony,North America and Oceania,Oceania,1874,1970,,Levuka; later Suva,Fiji,-17.684,178.84,capital,,https://the-epoch-institute.org/state/colony-of-fiji
 dar-masalit,Dar Masalit,sultanate,"Egypt, North Africa and Sudan",Egypt & North Africa,1874,1922,yes,Geneina,Sudan,13.45,22.45,capital (matched by name),,https://the-epoch-institute.org/state/dar-masalit
@@ -4880,11 +4880,11 @@ portuguese-congo,Portuguese Congo,protectorate,Central and Southern Africa,Sub-S
 provisional-government-of-saskatchewan,Provisional Government of Saskatchewan,other,North America and Oceania,Americas,1885,1885,,Batoche,Canada,52.755,-106.116,capital (matched by name),,https://the-epoch-institute.org/state/provisional-government-of-saskatchewan
 republic-of-upingtonia,Republic of Upingtonia,republic,Central and Southern Africa,Sub-Saharan Africa,1885,1887,,Grootfontein,Namibia,-19.566,18.104,capital,,https://the-epoch-institute.org/state/republic-of-upingtonia
 klein-vrystaat,Klein Vrystaat,republic,Central and Southern Africa,Sub-Saharan Africa,1886,1891,,Piet Retief,South Africa,-27,30.8,capital,,https://the-epoch-institute.org/state/klein-vrystaat
-republic-of-colombia,Republic of Colombia,republic,South America,Americas,1886,,,Bogotá,Colombia,4.61,-74.082,capital,,https://the-epoch-institute.org/state/republic-of-colombia
+republic-of-colombia,Republic of Colombia,republic,South America,Americas,1886,,,Bogotá,Colombia,4.61,-74.082,capital,https://the-epoch-institute.org/empire/republic-of-colombia,https://the-epoch-institute.org/empire/republic-of-colombia
 republic-of-counani,Republic of Counani,republic,South America,Americas,1886,1891,,Counani,Brazil,2.849,-51.125,recorded location,,https://the-epoch-institute.org/state/republic-of-counani
 royal-niger-company-territories,Royal Niger Company territories,other,West Africa,Sub-Saharan Africa,1886,1900,,Asaba,Nigeria,6.183,6.733,capital (matched by name),,https://the-epoch-institute.org/state/royal-niger-company-territories
 french-indochina,French Indochina,colony,Mainland Southeast Asia,South & Southeast Asia,1887,1954,,Saigon; Hanoi from 1902,Vietnam; Laos; Cambodia,10.802,106.697,capital,https://the-epoch-institute.org/empire/french-indochina,https://the-epoch-institute.org/empire/french-indochina
-wallis-and-futuna,Wallis and Futuna,protectorate,North America and Oceania,Americas,1887,,,Mata-Utu,France,-13.283,-176.174,capital,,https://the-epoch-institute.org/state/wallis-and-futuna
+wallis-and-futuna,Wallis and Futuna,protectorate,North America and Oceania,Oceania,1887,,,Mata-Utu,France,-13.283,-176.174,capital,,https://the-epoch-institute.org/state/wallis-and-futuna
 zululand-british-colony,Zululand (British colony),colony,Central and Southern Africa,Sub-Saharan Africa,1887,1897,,Eshowe,South Africa,-28.888,31.448,capital (matched by name),,https://the-epoch-institute.org/state/zululand-british-colony
 imperial-british-east-africa-company,Imperial British East Africa Company,other,Horn and East Africa,Sub-Saharan Africa,1888,1895,,Mombasa,Kenya; Uganda,-4.05,39.667,capital (matched by name),,https://the-epoch-institute.org/state/imperial-british-east-africa-company
 kingdom-of-sedang,Kingdom of Sedang,kingdom,Mainland Southeast Asia,South & Southeast Asia,1888,1890,,Kon Gung,Vietnam,14.383,107.983,recorded location,,https://the-epoch-institute.org/state/kingdom-of-sedang
@@ -4923,7 +4923,7 @@ korean-empire,Korean Empire,kingdom,Korea and Japan,Central & East Asia,1897,191
 republic-of-biak-na-bato,Republic of Biak-na-Bato,republic,Maritime Southeast Asia,South & Southeast Asia,1897,1897,,Biak-na-Bato,Philippines,11.198,122.465,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/republic-of-biak-na-bato
 cretan-state,Cretan State,protectorate,Greece and the Aegean,Europe,1898,1913,,Chania,Greece,35.517,24.017,capital,,https://the-epoch-institute.org/state/cretan-state
 federal-state-of-the-visayas,Federal State of the Visayas,republic,Maritime Southeast Asia,South & Southeast Asia,1898,1899,,Iloilo,Philippines,11.198,122.465,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/federal-state-of-the-visayas
-guam,Guam,colony,North America and Oceania,Americas,1898,,,Hagatna,United States,13.483,144.75,capital,,https://the-epoch-institute.org/state/guam
+guam,Guam,colony,North America and Oceania,Oceania,1898,,,Hagatna,United States,13.483,144.75,capital,,https://the-epoch-institute.org/state/guam
 guangzhouwan,Guangzhouwan,colony,"China, Tibet and Mongolia",Central & East Asia,1898,1945,,Fort-Bayard,China,21.177,110.418,recorded location,,https://the-epoch-institute.org/state/guangzhouwan
 kiautschou-bay-concession,Kiautschou Bay concession,colony,"China, Tibet and Mongolia",Central & East Asia,1898,1914,,Tsingtao,China,36.123,120.246,recorded location,,https://the-epoch-institute.org/state/kiautschou-bay-concession
 kwantung-oblast,Kwantung Oblast,colony,"China, Tibet and Mongolia",Central & East Asia,1898,1905,,Port Arthur,China,32.498,106.337,approximate (centre of the present-day country),,https://the-epoch-institute.org/state/kwantung-oblast
@@ -4940,7 +4940,7 @@ first-philippine-republic,First Philippine Republic,republic,Maritime Southeast 
 north-western-rhodesia,North-Western Rhodesia,protectorate,Central and Southern Africa,Sub-Saharan Africa,1899,1911,,Kalomo,Zambia,-17.033,26.483,capital,,https://the-epoch-institute.org/state/north-western-rhodesia
 republic-of-acre,Republic of Acre,republic,South America,Americas,1899,1903,,Puerto Alonso,Brazil,-9.967,-67.8,recorded location,,https://the-epoch-institute.org/state/republic-of-acre
 republic-of-zamboanga,Republic of Zamboanga,republic,Maritime Southeast Asia,South & Southeast Asia,1899,1903,,Zamboanga,Philippines,6.904,122.076,capital,,https://the-epoch-institute.org/state/republic-of-zamboanga
-american-samoa,American Samoa,colony,North America and Oceania,Americas,1900,,,Pago Pago,United States,-14.279,-170.701,capital,,https://the-epoch-institute.org/state/american-samoa
+american-samoa,American Samoa,colony,North America and Oceania,Oceania,1900,,,Pago Pago,United States,-14.279,-170.701,capital,,https://the-epoch-institute.org/state/american-samoa
 chad-french-colony,Chad (French colony),colony,Central and Southern Africa,Sub-Saharan Africa,1900,1958,,Fort-Lamy,Chad,10.592,14.54,capital (matched by name),,https://the-epoch-institute.org/state/chad-french-colony
 colony-of-niger,Colony of Niger,colony,West Africa,Sub-Saharan Africa,1900,1958,,Niamey,Niger,13.515,2.118,capital,,https://the-epoch-institute.org/state/colony-of-niger
 german-samoa,German Samoa,colony,North America and Oceania,Oceania,1900,1914,,Apia,Samoa,-13.833,-171.833,capital,,https://the-epoch-institute.org/state/german-samoa
@@ -5307,7 +5307,7 @@ crown-colony-of-north-borneo,Crown Colony of North Borneo,colony,Maritime Southe
 crown-colony-of-sarawak,Crown Colony of Sarawak,colony,Maritime Southeast Asia,South & Southeast Asia,1946,1963,,Kuching,Malaysia,1.558,110.344,capital,,https://the-epoch-institute.org/state/crown-colony-of-sarawak
 fourth-brazilian-republic,Fourth Brazilian Republic,republic,South America,Americas,1946,1964,,Rio de Janeiro,Brazil,-15.794,-47.883,capital,,https://the-epoch-institute.org/state/fourth-brazilian-republic
 french-fourth-republic,French Fourth Republic,republic,France and the Low Countries,Europe,1946,1958,,Paris,France,48.857,2.352,capital,,https://the-epoch-institute.org/state/french-fourth-republic
-french-polynesia,French Polynesia,colony,North America and Oceania,Americas,1946,,,Papeete,France,-17.54,-149.569,capital,,https://the-epoch-institute.org/state/french-polynesia
+french-polynesia,French Polynesia,colony,North America and Oceania,Oceania,1946,,,Papeete,France,-17.54,-149.569,capital,,https://the-epoch-institute.org/state/french-polynesia
 hashemite-kingdom-of-jordan,Hashemite Kingdom of Jordan,kingdom,Anatolia and the Levant,Islamic Caliphates & Middle East,1946,,,Amman,Jordan,31.95,35.933,capital,,https://the-epoch-institute.org/state/hashemite-kingdom-of-jordan
 italian-republic,Italian Republic,republic,Italy,Europe,1946,,,Rome,Italy,41.893,12.483,capital,,https://the-epoch-institute.org/state/italian-republic
 jordan,Jordan,kingdom,Anatolia and the Levant,Islamic Caliphates & Middle East,1946,,,Amman,Jordan,31.955,35.945,set by hand,,https://the-epoch-institute.org/state/jordan

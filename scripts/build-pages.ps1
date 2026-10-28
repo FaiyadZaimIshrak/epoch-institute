@@ -2753,8 +2753,10 @@ function NameSlug([string]$n) { $d = $n.Normalize([Text.NormalizationForm]::Form
 function JsonStr([string]$lit) { if ($lit.IndexOf('\') -lt 0) { $lit.Substring(1, $lit.Length - 2) } else { [string]$JSS.DeserializeObject($lit) } }
 $SIDEC = '(function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize(''NFD'').replace(/[' + '\' + 'u0300-' + '\' + 'u036f]/g, '''').toLowerCase().replace(/&/g, ''and'').replace(/[^a-z0-9]+/g, ''-'').replace(/^-|-$/g, ''''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name'
 $STRX = '"(?:[^"\\]|\\.)*"'
-$rxE = [regex]"^\[(?<s>$STRX|0),(?<n>$STRX),(?<t>$STRX),(?<a>$STRX),(?<w>-?[\d.]+)(?:,[01])?\](?<c>,?)$"
-$rxS = [regex]"^\[(?<s>$STRX),(?<n>$STRX),(?<t>$STRX),(?<a>$STRX)(?:,[01])?\](?<c>,?)$"
+# make-home-data and make-search-states leave out empty trailing fields (no aliases, weight 0): a row that gets the
+# picture flag has them written out ("" and 0) so the flag stays in its place
+$rxE = [regex]"^\[(?<s>$STRX|0),(?<n>$STRX),(?<t>$STRX)(?:,(?<a>$STRX))?(?:,(?<w>-?[\d.]+))?(?:,[01])?\](?<c>,?)$"
+$rxS = [regex]"^\[(?<s>$STRX),(?<n>$STRX),(?<t>$STRX)(?:,(?<a>$STRX))?(?:,[01])?\](?<c>,?)$"
 $siIn = [IO.File]::ReadAllText("$Repo\search-index.js", $U8).Replace("`r`n", "`n").TrimEnd("`n")
 $siOut = New-Object System.Collections.Generic.List[string]; $part = ''; $nZero = 0; $nE = 0; $nS = 0
 foreach ($l in $siIn.Split("`n")) {
@@ -2769,11 +2771,14 @@ foreach ($l in $siIn.Split("`n")) {
   if ($part -eq 'e') {
     $made = NameSlug $name; $slug = if ($m.Groups['s'].Value -eq '0') { if (-not $made) { throw "search-index.js: no slug for $name" }; $made } else { JsonStr $m.Groups['s'].Value }
     $pic = $BY.ContainsKey($slug) -and $BY[$slug].img
-    $siOut.Add('[' + $(if ($made -ceq $slug) { $nZero++; '0' } else { Js $slug }) + ',' + $m.Groups['n'].Value + ',' + $m.Groups['t'].Value + ',' + $m.Groups['a'].Value + ',' + $m.Groups['w'].Value + $(if ($pic) { ',1' } else { '' }) + ']' + $m.Groups['c'].Value); $nE++
+    $al = $m.Groups['a'].Value; $wt = $m.Groups['w'].Value
+    $tail = if ($pic) { ',' + $(if ($al) { $al } else { '""' }) + ',' + $(if ($wt) { $wt } else { '0' }) + ',1' } else { $(if ($al) { ',' + $al } else { '' }) + $(if ($wt) { $(if ($al) { '' } else { ',""' }) + ',' + $wt } else { '' }) }
+    $siOut.Add('[' + $(if ($made -ceq $slug) { $nZero++; '0' } else { Js $slug }) + ',' + $m.Groups['n'].Value + ',' + $m.Groups['t'].Value + $tail + ']' + $m.Groups['c'].Value); $nE++
   } else {
     $id = JsonStr $m.Groups['s'].Value; $im = if ($STX.ContainsKey($id)) { [string]$STX[$id]['img'] } else { '' }
     $pic = $im -and (Test-Path (Join-Path $Repo ($im.TrimStart('/') -replace '/', '\')))
-    $siOut.Add('[' + $m.Groups['s'].Value + ',' + $m.Groups['n'].Value + ',' + $m.Groups['t'].Value + ',' + $m.Groups['a'].Value + $(if ($pic) { ',1' } else { '' }) + ']' + $m.Groups['c'].Value); $nS++
+    $al = $m.Groups['a'].Value
+    $siOut.Add('[' + $m.Groups['s'].Value + ',' + $m.Groups['n'].Value + ',' + $m.Groups['t'].Value + $(if ($al) { ',' + $al } elseif ($pic) { ',""' } else { '' }) + $(if ($pic) { ',1' } else { '' }) + ']' + $m.Groups['c'].Value); $nS++
   }
 }
 $siText2 = ($siOut -join "`n") + "`n"

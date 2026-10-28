@@ -140,7 +140,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/roman-empire"><img src="/logos/thumbs/Roman%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Roman Empire</span><span class="related-card-dates">27 BCE – 476 CE</span></a><a class="related-card" href="/empire/hispania-tarraconensis"><img src="/logos/thumbs/Hispania%20Tarraconensis.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hispania Tarraconensis</span><span class="related-card-dates">27 BCE – 472 CE</span></a><a class="related-card" href="/empire/franks"><img src="/logos/thumbs/Franks.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Franks</span><span class="related-card-dates">250 CE – 481 CE</span></a><a class="related-card" href="/empire/lusitania"><img src="/logos/thumbs/Lusitania.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lusitania</span><span class="related-card-dates">27 BCE – 439 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/aksumite-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Aksumite%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aksumite Empire</span><span class="related-card-dates">100 CE – 940 CE</span></a><a class="related-card" href="/empire/sasanian-empire"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Sasanian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sasanian Empire</span><span class="related-card-dates">224 CE – 651 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/moche"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Moche.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Moche</span><span class="related-card-dates">100 CE – 800 CE</span></a><a class="related-card" href="/empire/sasanian-empire"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Sasanian%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sasanian Empire</span><span class="related-card-dates">224 CE – 651 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -158,8 +158,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

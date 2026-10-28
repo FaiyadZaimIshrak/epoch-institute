@@ -140,7 +140,7 @@
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
-      <div class="related-grid"><a class="related-card" href="/empire/commonwealth-of-australia"><img src="/logos/thumbs/Commonwealth%20of%20Australia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Commonwealth of Australia</span><span class="related-card-dates">1901 CE – 2025 CE</span></a></div>
+      <div class="related-grid"><a class="related-card" href="/empire/commonwealth-of-australia"><img src="/logos/thumbs/Commonwealth%20of%20Australia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Commonwealth of Australia</span><span class="related-card-dates">1901 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-tonga"><img src="/logos/thumbs/Kingdom%20of%20Tonga.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Tonga</span><span class="related-card-dates">1845 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-hawaii"><img src="/logos/thumbs/Kingdom%20of%20Hawaii.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Hawaii</span><span class="related-card-dates">1795 CE – 1893 CE</span></a><a class="related-card" href="/empire/rapa-nui"><img src="/logos/thumbs/Rapa%20Nui.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rapa Nui</span><span class="related-card-dates">1200 CE – 1888 CE</span></a></div>
       <div class="related-prevnext"><a class="related-card" href="/empire/indonesia"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Indonesia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Indonesia</span><span class="related-card-dates">1945 CE – 2025 CE</span></a><a class="related-card" href="/empire/myanmar"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Myanmar.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Myanmar</span><span class="related-card-dates">1948 CE – 2025 CE</span></a></div>
     </section>
 
@@ -159,8 +159,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

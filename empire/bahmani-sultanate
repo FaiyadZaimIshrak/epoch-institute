@@ -141,7 +141,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/majapahit-empire"><img src="/logos/thumbs/Majapahit%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Majapahit Empire</span><span class="related-card-dates">1293 CE – 1527 CE</span></a><a class="related-card" href="/empire/sunda-kingdom"><img src="/logos/thumbs/Sunda%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sunda Kingdom</span><span class="related-card-dates">669 CE – 1579 CE</span></a><a class="related-card" href="/empire/udaipur-state"><img src="/logos/thumbs/Udaipur%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Udaipur State</span><span class="related-card-dates">728 CE – 1949 CE</span></a><a class="related-card" href="/empire/ahom-kingdom"><img src="/logos/thumbs/Ahom%20kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ahom kingdom</span><span class="related-card-dates">1228 CE – 1826 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/principality-of-moldavia"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Principality%20of%20Moldavia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Principality of Moldavia</span><span class="related-card-dates">1346 CE – 1859 CE</span></a><a class="related-card" href="/empire/ayutthaya-kingdom"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Ayutthaya%20Kingdom.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ayutthaya Kingdom</span><span class="related-card-dates">1351 CE – 1767 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/principality-of-moldavia"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Principality%20of%20Moldavia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Principality of Moldavia</span><span class="related-card-dates">1346 CE – 1859 CE</span></a><a class="related-card" href="/empire/tlaxcala"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Tlaxcala.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tlaxcala</span><span class="related-card-dates">1348 CE – 1521 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -159,8 +159,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

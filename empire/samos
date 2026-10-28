@@ -142,7 +142,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/chios"><img src="/logos/thumbs/Chios.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chios</span><span class="related-card-dates">1000 BCE – 86 BCE</span></a><a class="related-card" href="/empire/ephesus"><img src="/logos/thumbs/Ephesus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ephesus</span><span class="related-card-dates">1000 BCE – 133 BCE</span></a><a class="related-card" href="/empire/miletus"><img src="/logos/thumbs/Miletus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Miletus</span><span class="related-card-dates">1000 BCE – 133 BCE</span></a><a class="related-card" href="/empire/athens"><img src="/logos/thumbs/Athens.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Athens</span><span class="related-card-dates">900 BCE – 86 BCE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/miletus"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Miletus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Miletus</span><span class="related-card-dates">1000 BCE – 133 BCE</span></a><a class="related-card" href="/empire/kingdom-of-israel"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Israel.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Israel</span><span class="related-card-dates">930 BCE – 720 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/miletus"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Miletus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Miletus</span><span class="related-card-dates">1000 BCE – 133 BCE</span></a><a class="related-card" href="/empire/chavin"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Chav%C3%ADn.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chavín</span><span class="related-card-dates">950 BCE – 400 BCE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -160,8 +160,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

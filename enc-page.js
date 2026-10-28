@@ -2,7 +2,7 @@
 // days of Today in History; built by scripts/build-pages.ps1). Loaded without ?v= (cached for an hour), after
 // shared-data.js and shared-nav.js. IDX_V is set by the builder: the version of /encyclopedia/index-data.js.
 (function () {
-  var IDX_V = '4b5d57a53e';
+  var IDX_V = 'e13e572d2e';
   if (typeof initNav === 'function') initNav(document.body.getAttribute('data-nav') || '');
 
   // today's date in citations ("Accessed 23 October 2026")
@@ -45,7 +45,7 @@
     var a = ev.target.closest('[data-random]'); if (!a) return;
     ev.preventDefault();
     if (a.getAttribute('data-random') === 'state') {
-      fetch('/data/polities.json?v=10').then(function (r) { return r.json(); }).then(function (d) {
+      fetch('/data/polities.json?v=11').then(function (r) { return r.json(); }).then(function (d) {
         var pool = d.nodes.filter(function (n) { return !n.p; });
         location.href = '/state/' + pool[Math.floor(Math.random() * pool.length)].id;
       }).catch(function () { location.href = a.href; });

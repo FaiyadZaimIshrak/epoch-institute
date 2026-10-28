@@ -141,7 +141,7 @@
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Related states and empires</p>
       <div class="related-grid"><a class="related-card" href="/empire/udaipur-state"><img src="/logos/thumbs/Udaipur%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Udaipur State</span><span class="related-card-dates">728 CE – 1949 CE</span></a><a class="related-card" href="/empire/brunei-sultanate"><img src="/logos/thumbs/Brunei%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Brunei Sultanate</span><span class="related-card-dates">1368 CE – 2025 CE</span></a><a class="related-card" href="/empire/johor-sultanate"><img src="/logos/thumbs/Johor%20Sultanate.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Johor Sultanate</span><span class="related-card-dates">1528 CE – 2025 CE</span></a><a class="related-card" href="/empire/hyderabad-state"><img src="/logos/thumbs/Hyderabad%20State.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hyderabad State</span><span class="related-card-dates">1724 CE – 1948 CE</span></a></div>
-      <div class="related-prevnext"><a class="related-card" href="/empire/united-states"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/United%20States.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">United States</span><span class="related-card-dates">1776 CE – 2025 CE</span></a><a class="related-card" href="/empire/qajar-iran"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Qajar%20Iran.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Qajar Iran</span><span class="related-card-dates">1789 CE – 1925 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/united-states"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/United%20States.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">United States</span><span class="related-card-dates">1776 CE – 2025 CE</span></a><a class="related-card" href="/empire/kingdom-of-tahiti"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Kingdom%20of%20Tahiti.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kingdom of Tahiti</span><span class="related-card-dates">1788 CE – 1880 CE</span></a></div>
     </section>
 
     <div class="detail-cite-row" id="detail-cite-row">
@@ -159,8 +159,8 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
-<script src="/epoch-stats.js?v=3"></script>
-<script src="/connections-map.js?v=12" defer></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
 <script>
 (function(){

@@ -1,13 +1,13 @@
 # The Epoch Institute
 
-> A historical research site: 428 full profiles of empires, states, religions and languages, a 32,011-entry encyclopedia, a register of
+> A historical research site: 460 full profiles of empires, states, religions and languages, a 32,011-entry encyclopedia, a register of
 > 5,468 states and their 11,296 connections, country histories, century overviews, an interactive world atlas
 > (3500 BCE to today), and the data behind them, free to download.
 
 All reference pages are static HTML with the content in the page itself. Dates use CE/BCE. British English.
 
 ## Collections
-- [Profiles](https://the-epoch-institute.org/profiles): the 394 in-depth profiles of empires and states (history, power curve, key facts, references) at /empire/<slug>
+- [Profiles](https://the-epoch-institute.org/profiles): the 426 in-depth profiles of empires and states, from Rome and the Mughals to Tonga, Cahokia and Great Zimbabwe (history, power curve, key facts, references) at /empire/<slug>
 - [Religions](https://the-epoch-institute.org/profiles?kind=religion): 18 profiles of faiths, from Hinduism and Judaism to Norse religion and the Bahá'í Faith, at /religion/<slug> (origins, beliefs, texts, spread, community, legacy)
 - [Languages](https://the-epoch-institute.org/profiles?kind=language): 16 profiles of languages, from Sumerian and Latin to Nahuatl and Swahili, at /language/<slug> (origins, structure, speakers, literature, change, legacy)
 - [Encyclopedia](https://the-epoch-institute.org/encyclopedia/): people, events, places, ideas and works; one page per entry at /encyclopedia/<slug>
