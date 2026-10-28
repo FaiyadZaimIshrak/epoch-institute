@@ -28,6 +28,9 @@ const ctx = { console }; vm.createContext(ctx);
 function load(f) { vm.runInContext(read(f).replace(/^(const|let) /mg, 'var '), ctx, { filename: f }); }
 ['shared-data.js', 'home-data.js', 'speeches-data.js', 'reading-paths.js', 'encyclopedia-data.js'].forEach(load);
 const { EMPIRES, EMPIRE_INFO, HOME_PICS, HOME_COUNTS, SPEECHES, READING_PATHS, ENCYCLOPEDIA } = ctx;
+// the scores (epoch-stats.js also wires its radar to the page: run apart, with a stand-in page)
+const sctx = { document: { addEventListener() {} }, window: {} }; vm.createContext(sctx); vm.runInContext(read('epoch-stats.js'), sctx, { filename: 'epoch-stats.js' });
+const EMPIRE_STATS_BY_NAME = sctx.EMPIRE_STATS_BY_NAME;
 const ENC = {}; ENCYCLOPEDIA.forEach(e => { ENC[e.slug] = e; });
 const POL = JSON.parse(read('data/polities.json'));
 const BYPROF = {}; POL.nodes.forEach(n => { if (n.p) BYPROF[n.p] = n; });
@@ -193,6 +196,13 @@ const CURVED = ['Achaemenid Empire', 'Roman Empire', 'Abbasid Caliphate', 'Mongo
 page('explorer', { kind: 'curves', lines: CURVED.map(e => ({ name: e.name, points: e.points, color: e.color || '#c9a84c' })), from: -650, to: 2020,
   ticks: [[-500, '500 BCE'], [1, '1 CE'], [500, '500'], [1000, '1000'], [1500, '1500'], [2000, '2000']],
   kicker: 'Empire explorer', title: 'Rise and fall compared', sub: 'The power curves of ' + EMPIRES.length + ' states and empires on one time line', url: 'the-epoch-institute.org/explorer' });
+// the race's first race as race.js scores it: each curve times the state's weight (the mean of four scores) over ten,
+// in the race's colours for the dark theme
+const RACERS = ['Roman Empire', 'Han Dynasty', 'Parthian Empire', 'Kushan Empire'].map(n => EMPIRES.find(e => e.name === n)).filter(Boolean);
+const weight = e => { const s = EMPIRE_STATS_BY_NAME[e.name] && EMPIRE_STATS_BY_NAME[e.name].stats; return s ? (s.militaryPower + s.territorialReach + s.economicStrength + s.historicalInfluence) / 4 : 4; };
+page('race', { kind: 'curves', abs: 10, lines: RACERS.map((e, k) => ({ name: e.name, points: e.points.map(p => [p[0], p[1] * weight(e) / 10]), color: ['#3987e5', '#c98500', '#d55181', '#008300'][k] })),
+  from: -260, to: 490, ticks: [[-200, '200 BCE'], [1, '1 CE'], [200, '200 CE'], [400, '400 CE']],
+  kicker: 'The rise and fall race', title: 'Who led, and when?', sub: 'Race any four of ' + EMPIRES.filter(e => e.points).length + ' states and empires, year by year', url: 'the-epoch-institute.org/race' });
 page('connections', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Connections', title: 'The states as a network', sub: 'Who ruled, succeeded and conquered whom', url: 'the-epoch-institute.org/connections' });
 page('start', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Find your way in', title: 'Where should you start?', sub: 'Four questions, and reading paths that suit you', url: 'the-epoch-institute.org/start' });
 

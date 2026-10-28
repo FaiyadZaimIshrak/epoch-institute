@@ -1,12 +1,14 @@
 // share-card.js - score posters: a game's or the daily quiz's result drawn as a 1080x1350 picture (4:5, the shape
 // Instagram, Facebook and WhatsApp show whole), handed to sharePoster() in shared-nav.js. Loaded by /games, /quiz
-// and the home page (bump share-card.js?v= there). EpochCard.make(spec) starts drawing at once and returns
+// and the home page, and by the race (bump SHARE_CARD_SRC in shared-nav.js). EpochCard.make(spec) starts drawing at once and returns
 // { p: promise of a JPEG Blob, b: the Blob once drawn }, so the picture is ready by the time Share is tapped.
 // spec: { title, score, unit, stars (0-3), squares ('1101…'), cw (['010…' a row]), grid ([[level 1-4 x4] per guess]), stamps ([name]), dots (['bad','good','none']), pics ([{src, label, sub}]),
-// hero ({src, label}), emblems ([src]), rows ([[name, middle, right]]), words ([text]), note, cta, url, kids }
+// hero ({src, label}), emblems ([src]), rows ([[name, middle, right]]), words ([text]), bars ([{label, value 0-10, slot 0-3, icon}]),
+// timeline ({from, to, items [[first, last, slot]], ticks [[year, label]], legend [[label, count, slot]]}), note, cta, url, kids }
+// Colour slots (bars, timeline): the four categorical colours of shared.css's --cat-0..3, the set for dark grounds.
 var EpochCard = (function () {
   'use strict';
-  var W = 1080, H = 1350;
+  var W = 1080, H = 1350, CAT = ['#3987e5', '#c98500', '#d55181', '#008300'];
   var DARK = { bg: '#0b0c10', glow: 'rgba(201,168,76,0.16)', frame: 'rgba(201,168,76,0.42)', gold: '#c9a84c', gl: '#e8c97a', text: '#ece4d4', muted: '#a1957f', tile: '#14161d',
     disp: "'Cinzel', Georgia, serif", ui: "'Source Sans 3', 'Segoe UI', system-ui, sans-serif", read: "'Crimson Pro', Georgia, serif", good: '#5a9e6f', bad: '#b8473a', none: '#2a2d3a' };
   var KIDS = { bg: '#17123a', glow: 'rgba(255,126,182,0.22)', frame: 'rgba(255,194,71,0.55)', gold: '#ffc247', gl: '#ffd97a', text: '#f6f1ff', muted: '#b9addf', tile: '#221b4f',
@@ -139,6 +141,31 @@ var EpochCard = (function () {
         c.textAlign = 'center'; c.fillStyle = T.gl; c.font = '600 28px ' + T.disp; if (p.sub) c.fillText(lines(c, p.sub, pw, 1)[0], px2 + pw / 2, py + ph + 36);
         c.fillStyle = T.text; c.font = '600 21px ' + T.ui; lines(c, p.label, pw + gp - 6, 2).forEach(function (l, li) { c.fillText(l, px2 + pw / 2, py + ph + (p.sub ? 64 : 34) + li * 24); });
       });
+    } else if (s.bars) {   // the Rise and Fall Race: the states in one year, the strongest first, on a scale of 0 to 10
+      var nbr = s.bars.length, bgp = 34, bhh = Math.min(120, (room - (nbr - 1) * bgp) / nbr), byy = top + (room - nbr * bhh - (nbr - 1) * bgp) / 2, isz = 76, bx0 = 110 + isz + 28, bwid = W - bx0 - 190;
+      s.bars.forEach(function (b, k) {
+        var yy = byy + k * (bhh + bgp), v = Math.max(0, Math.min(10, +b.value || 0)), by2 = yy + 54;
+        if (ims.barIcons[k]) contain(c, ims.barIcons[k], 110, yy + (bhh - isz) / 2, isz, isz);
+        c.textAlign = 'left'; c.fillStyle = T.text; c.font = '700 34px ' + T.ui; c.fillText(lines(c, b.label, bwid + 150, 1)[0], bx0, yy + 36);
+        c.fillStyle = T.tile; round(c, bx0, by2, bwid, 30, 6); c.fill();
+        if (v > 0) { c.fillStyle = CAT[b.slot] || T.gold; round(c, bx0, by2, Math.max(12, bwid * v / 10), 30, 6); c.fill(); }
+        c.fillStyle = T.gl; c.font = '600 40px ' + T.disp; c.fillText(v > 0 ? v.toFixed(1) : '–', bx0 + bwid + 22, by2 + 29);
+      });
+    } else if (s.timeline) {   // My timeline: the pages read as lanes on one axis of years, coloured by kind
+      var tl = s.timeline, tx0 = 110, tx1 = W - 110, lx = tx0, ly = top + 6;
+      c.font = '600 26px ' + T.ui; c.textAlign = 'left';
+      (tl.legend || []).forEach(function (l) {
+        var lt = l[0] + ' · ' + l[1], tw = c.measureText(lt).width + 30; if (lx + tw > tx1 && lx > tx0) { lx = tx0; ly += 40; }
+        c.fillStyle = CAT[l[2]] || T.gold; round(c, lx, ly - 19, 20, 20, 4); c.fill(); c.fillStyle = T.text; c.fillText(lt, lx + 30, ly); lx += tw + 26;
+      });
+      var ty0 = ly + 36, ty1 = bottom - 56, TX = function (yr) { return tx0 + (yr - tl.from) / Math.max(1, tl.to - tl.from) * (tx1 - tx0); }, lanes = [];
+      var its = tl.items.slice().sort(function (p, q) { return p[0] - q[0] || q[1] - p[1]; }).map(function (it) {
+        var x1 = TX(it[0]), x2 = Math.max(TX(it[1]), x1 + 8), ln = 0; while (ln < lanes.length && lanes[ln] + 5 > x1) ln++; lanes[ln] = x2; return [x1, x2, it[2], ln];
+      });
+      var pitch = Math.min(24, (ty1 - ty0) / Math.max(1, lanes.length)), bh = Math.max(1.5, pitch * 0.72), ty = ty0 + ((ty1 - ty0) - lanes.length * pitch) / 2;
+      c.strokeStyle = s.kids ? 'rgba(255,255,255,0.14)' : 'rgba(201,168,76,0.22)'; c.lineWidth = 2; c.fillStyle = T.muted; c.font = '600 24px ' + T.ui; c.textAlign = 'center';
+      (tl.ticks || []).forEach(function (tk) { var x = TX(tk[0]); c.beginPath(); c.moveTo(x, ty0 - 8); c.lineTo(x, ty1 + 8); c.stroke(); c.fillText(tk[1], x, ty1 + 42); });
+      its.forEach(function (it) { c.fillStyle = CAT[it[2]] || T.gold; round(c, it[0], ty + it[3] * pitch + (pitch - bh) / 2, it[1] - it[0], bh, Math.min(4, bh / 2)); c.fill(); });
     } else if (s.emblems && ims.emblems.length) {   // the emblems of the pairs found
       var ne = ims.emblems.length, ec = ne > 8 ? 5 : 4, er = Math.ceil(ne / ec), es = Math.min(150, (W - 200 - (ec - 1) * 20) / ec), eh = es * 0.72;
       var ey = top + (room - er * eh - (er - 1) * 24) / 2;
@@ -181,9 +208,9 @@ var EpochCard = (function () {
     var job = { b: null };
     var T = spec.kids ? KIDS : DARK;
     job.p = fonts(T).then(function () {
-      return Promise.all([load(spec.hero && spec.hero.src), Promise.all((spec.pics || []).map(function (p) { return load(p.src); })), Promise.all((spec.emblems || []).map(load)), load(spec.wordPic)]);
+      return Promise.all([load(spec.hero && spec.hero.src), Promise.all((spec.pics || []).map(function (p) { return load(p.src); })), Promise.all((spec.emblems || []).map(load)), load(spec.wordPic), Promise.all((spec.bars || []).map(function (b) { return load(b.icon); }))]);
     }).then(function (r) {
-      var cv = draw(spec, { hero: r[0], pics: r[1], emblems: r[2], wordPic: r[3] });
+      var cv = draw(spec, { hero: r[0], pics: r[1], emblems: r[2], wordPic: r[3], barIcons: r[4] });
       return new Promise(function (ok, no) { cv.toBlob(function (b) { if (b) { job.b = b; ok(b); } else no(new Error('no picture')); }, 'image/jpeg', 0.9); });
     });
     job.p.catch(function () {});

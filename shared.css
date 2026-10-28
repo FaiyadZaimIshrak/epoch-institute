@@ -30,6 +30,12 @@
 @font-face { font-family: 'Cinzel Fallback'; font-style: normal; font-weight: 600 700; src: local('Georgia Bold'), local('Georgia-Bold'); size-adjust: 107.25%; ascent-override: 91.38%; descent-override: 34.5%; line-gap-override: 0%; }
 @font-face { font-family: 'Source Sans 3 Fallback'; font-style: normal; font-weight: 400 500; src: local('Arial'), local('ArialMT'); size-adjust: 92.75%; ascent-override: 109.97%; descent-override: 43.13%; line-gap-override: 0%; }
 @font-face { font-family: 'Source Sans 3 Fallback'; font-style: normal; font-weight: 600 700; src: local('Arial Bold'), local('Arial-BoldMT'); size-adjust: 89.48%; ascent-override: 113.99%; descent-override: 44.7%; line-gap-override: 0%; }
+/* Kids mode's fonts, likewise (Oct 2026, scratchpad t/kidsmetrics.html + t/kidscal.html at Kids sizes: 93% of 2,737
+   paragraphs, 94% of interface lines and 99.6-99.8% of 1,880 titles keep their line count) */
+@font-face { font-family: 'Nunito Fallback'; font-style: normal; font-weight: 400 500; src: local('Arial'), local('ArialMT'); size-adjust: 101.25%; ascent-override: 99.75%; descent-override: 34.57%; line-gap-override: 0%; }
+@font-face { font-family: 'Nunito Fallback'; font-style: normal; font-weight: 600 900; src: local('Arial Bold'), local('Arial-BoldMT'); size-adjust: 99.75%; ascent-override: 101.25%; descent-override: 35.09%; line-gap-override: 0%; }
+@font-face { font-family: 'Baloo 2 Fallback'; font-style: normal; font-weight: 400 600; src: local('Arial Bold'), local('Arial-BoldMT'); size-adjust: 90%; ascent-override: 120%; descent-override: 57.78%; line-gap-override: 0%; }
+@font-face { font-family: 'Baloo 2 Fallback'; font-style: normal; font-weight: 700 900; src: local('Arial Bold'), local('Arial-BoldMT'); size-adjust: 95%; ascent-override: 113.68%; descent-override: 54.74%; line-gap-override: 0%; }
 
   :root {
     --bg: #0b0c10;
@@ -3487,6 +3493,33 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .pass-code textarea, .pass-restore textarea { width: 100%; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 2px; padding: 8px; resize: vertical; box-sizing: border-box; }
 .pass-note { font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin: 10px 0 0; }
 .pass-note a { color: var(--gold); }
+/* My timeline (passport.js): the pages read as lanes on one axis of years, coloured by kind with the --cat slots
+   (class number = slot); every line has its name in the tooltip and in the list below */
+.pass-tl-lede { max-width: 72ch; margin: 0 0 10px; font-family: var(--font-text); font-size: 17px; line-height: 1.55; color: var(--text); }
+.pass-tl-key { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; margin: 0 0 8px; padding: 0; font-family: var(--font-ui); font-size: 14px; color: var(--text); }
+.pass-tl-key li { display: inline-flex; align-items: center; gap: 7px; }
+.pass-tl-key b { font-weight: 700; font-variant-numeric: tabular-nums; }
+.pass-tl-sw { display: inline-block; flex: none; width: 12px; height: 12px; border-radius: 3px; }
+.pass-tl-s0 { background: var(--cat-0); } .pass-tl-s1 { background: var(--cat-1); } .pass-tl-s2 { background: var(--cat-2); } .pass-tl-s3 { background: var(--cat-3); }
+.pass-tl { position: relative; margin: 0; }
+.pass-tl svg { display: block; width: 100%; height: 160px; touch-action: pan-y; }
+.pass-tl-k0 { fill: var(--cat-0); } .pass-tl-k1 { fill: var(--cat-1); } .pass-tl-k2 { fill: var(--cat-2); } .pass-tl-k3 { fill: var(--cat-3); }
+.pass-tl-grid { stroke: var(--border); stroke-width: 1; }
+.pass-tl-ax { font-family: var(--font-ui); font-size: 12px; fill: var(--muted); }
+.pass-tl-tip { position: absolute; z-index: 2; display: grid; gap: 2px; max-width: 260px; padding: 7px 10px; font-family: var(--font-ui); font-size: 13px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 4px 16px rgba(0,0,0,0.25); pointer-events: none; }
+.pass-tl-tip[hidden] { display: none; }
+.pass-tl-tip span { color: var(--muted); }
+.pass-tl-list { margin: 10px 0 0; font-family: var(--font-ui); font-size: 14px; }
+.pass-tl-list[hidden] { display: none; }
+.pass-tl-list summary { cursor: pointer; color: var(--gold); font-weight: 600; }
+.pass-tl-list ol { list-style: none; margin: 8px 0 0; padding: 0; max-height: 420px; overflow-y: auto; }
+.pass-tl-list li { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--border); }
+.pass-tl-list .pass-tl-sw { align-self: center; }
+.pass-tl-y { flex: none; min-width: 9.5em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pass-tl-list a { min-width: 0; color: var(--text); text-decoration: none; overflow-wrap: anywhere; }
+.pass-tl-list a:hover { color: var(--gold); }
+.pass-tl-sec .pass-acts { margin-top: 12px; }
+@media (max-width: 560px) { .pass-tl-y { min-width: 7.2em; font-size: 13px; } }
 .shelf-passport { display: block; margin-top: 8px; padding: 9px 12px 4px; border-top: 0.5px solid var(--border); font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); text-decoration: none; }
 .shelf-passport:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* world timeline (/timeline): a canvas that stays in place while its panel scrolls the lanes */
@@ -3530,7 +3563,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .atl-head { text-align: center; display: grid; gap: 4px; justify-items: center; margin-bottom: 12px; }
 .atl-head .research-title { font-size: clamp(22px, 3.2vw, 34px); margin: 0; }
 .atl-head .ref-lede { font-size: 17px; }
-.atl-app { border: 0.5px solid var(--border); background: var(--surface); border-radius: 3px; padding: 12px; display: grid; gap: 10px; }
+.atl-app { border: 0.5px solid var(--border); background: var(--surface); border-radius: 3px; padding: 12px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.atl-app > * { min-width: 0; }
 .atl-bar { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 18px; align-items: center; }
 .atl-now { display: flex; flex-direction: column; min-width: 170px; }
 .atl-now output { font-family: var(--font-display); font-size: clamp(28px, 4vw, 40px); color: var(--gold-light); line-height: 1.05; font-variant-numeric: tabular-nums; }
@@ -3546,10 +3580,18 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .atl-jumps a { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 5px 10px; border: 1px solid var(--border); border-radius: 999px; }
 .atl-jumps a:hover { color: var(--gold); border-color: var(--gold); }
 .atl-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; }
+.atl-tools-l { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .atl-presets { display: flex; flex-wrap: wrap; gap: 4px; }
 .atl-presets button { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--text); background: none; border: 1px solid var(--border); border-radius: 2px; padding: 6px 10px; cursor: pointer; }
 .atl-presets button:hover { border-color: var(--gold); color: var(--gold); }
 .atl-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+/* phones: the year jumps and the region buttons in one row each that scrolls sideways, so the map is not pushed off
+   the first screen (in Kids mode it was) */
+@media (max-width: 560px) {
+  .atl-jumps, .atl-presets { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; padding-bottom: 4px; min-width: 0; max-width: 100%; }
+  .atl-presets { flex: 1 1 100%; }
+  .atl-jumps a, .atl-presets button { flex: none; }
+}
 .atl-check { font-family: var(--font-ui); font-size: 13px; color: var(--text); display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
 .atl-filters select, .atl-search input { font-family: var(--font-ui); font-size: 14px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 2px; padding: 7px 10px; }
 .atl-search { position: relative; }
@@ -3600,6 +3642,55 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .atl-tip-k b { color: var(--gold); }
 .atl-tip-go { display: inline-block; margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--gold); text-decoration: none; }
 .atl-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; font-family: var(--font-ui); font-size: 12px; color: var(--muted); margin: 0; }
+/* What was here? (atlas.js): the button, a crosshair while picking, the place's 250 km on the map and the panel */
+.atl-here-btn { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 7px 14px; min-height: 36px; cursor: pointer; }
+.atl-here-btn:hover { border-color: var(--gold); }
+.atl-here-btn[aria-pressed="true"] { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+.atl-here-hint { position: absolute; z-index: 5; left: 10px; right: 56px; bottom: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0; padding: 8px 12px; font-family: var(--font-ui); font-size: 14px; color: var(--gold-light); background: var(--surface); border: 1px solid var(--gold); border-radius: var(--radius); box-shadow: 0 6px 18px var(--shadow); }
+.atl-here-hint[hidden] { display: none; }
+.atl-here-me { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--gold); border-radius: var(--radius); padding: 5px 12px; cursor: pointer; }
+.atl-here-me[hidden] { display: none; }
+#atl-here-msg { color: var(--muted); font-size: 13px; }
+.atl-map.is-picking #atl-svg, .atl-map.is-picking #atl-globe { cursor: crosshair; }
+.atl-map { -webkit-touch-callout: none; }
+.atl-here-mark { pointer-events: none; }
+.atl-here-c { fill: rgba(var(--gold-rgb), 0.10); stroke: var(--gold-light); stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+.atl-here-p { fill: var(--gold-light); stroke: var(--bg); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.atl-here { margin: 4px 0 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius-lg); }
+.atl-here[hidden] { display: none; }
+.atl-here-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.atl-here-t { margin: 0; font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--gold-light); }
+.atl-here-x { flex: none; width: 36px; height: 36px; font-size: 22px; line-height: 1; color: var(--muted); background: none; border: 0; border-radius: 50%; cursor: pointer; }
+.atl-here-x:hover { color: var(--text); background: rgba(var(--gold-rgb), 0.12); }
+.atl-here-at { margin: 2px 0 0; font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
+.atl-here-at a { color: var(--gold); }
+.atl-here-n { max-width: 72ch; margin: 10px 0 6px; font-family: var(--font-text); font-size: 16px; line-height: 1.5; color: var(--text); }
+.atl-here-list { list-style: none; margin: 0; padding: 0 4px 0 0; max-height: 470px; overflow-y: auto; }
+.atl-here-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: "name y d" "bar bar bar"; align-items: baseline; gap: 3px 12px; padding: 7px 0; border-bottom: 1px solid var(--border); font-family: var(--font-ui); font-size: 14px; }
+.atl-here-nm { grid-area: name; min-width: 0; }
+.atl-here-name { font-weight: 600; color: var(--text); text-decoration: none; }
+.atl-here-name:hover { color: var(--gold); text-decoration: underline; }
+.atl-here-pf { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.atl-here-y { grid-area: y; padding: 0; font-family: var(--font-ui); font-size: 13px; color: var(--muted); white-space: nowrap; background: none; border: 0; text-decoration: underline dotted; text-underline-offset: 3px; cursor: pointer; }
+.atl-here-y:hover { color: var(--gold); }
+.atl-here-d { grid-area: d; min-width: 4.4em; font-size: 13px; color: var(--muted); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.atl-here-bar { grid-area: bar; position: relative; height: 5px; border-radius: 3px; background: rgba(var(--gold-rgb), 0.08); }
+.atl-here-bar i { position: absolute; top: 0; bottom: 0; border-radius: 3px; background: var(--muted); opacity: 0.55; }
+.atl-here-list li.is-now .atl-here-name { color: var(--gold-light); }
+.atl-here-list li.is-now .atl-here-bar i { background: var(--gold); opacity: 1; }
+.atl-here-note { margin: 14px 0 6px; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.atl-here-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.atl-here-chips a { padding: 4px 10px; font-family: var(--font-ui); font-size: 13px; color: var(--text); text-decoration: none; border: 1px solid var(--border); border-radius: 999px; }
+.atl-here-chips a:hover { border-color: var(--gold); }
+.atl-here-chips a span { color: var(--muted); }
+.atl-here-and { align-self: center; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.atl-here-seats { margin: 12px 0 0; font-family: var(--font-ui); font-size: 12px; color: var(--muted); }
+@media (max-width: 560px) {
+  .atl-here { padding: 14px 12px; }
+  .atl-here-at { min-height: 2.9em; }   /* the country arrives a moment later: room for it from the start */
+  .atl-here-list li { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name d" "y y" "bar bar"; }
+  .atl-here-y { justify-self: start; }
+}
 .atl-list { display: grid; gap: 14px; }
 .atl-group h3 { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 0 0 4px; }
 .atl-group h3 span { color: var(--muted); }
@@ -3686,7 +3777,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 @media (max-width: 700px) {
   .ref-centuries { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
   .ref-centuries a, .ref-centuries span { flex: 0 0 auto; }
-  .atl-bar { grid-template-columns: 1fr; }
+  .atl-bar { grid-template-columns: minmax(0, 1fr); }
   .atl-search { flex: 1 1 100%; }
   .atl-search input { width: 100%; }
   .atl-zoom button { width: 40px; height: 40px; }
@@ -4150,6 +4241,9 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .hub-group .hub-grid.hub-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 @media (max-width: 980px) { .hub-group .hub-grid.hub-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .hub-group .hub-grid.hub-5 { grid-template-columns: minmax(0, 1fr); } }
+.hub-group .hub-grid.hub-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 980px) { .hub-group .hub-grid.hub-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .hub-group .hub-grid.hub-6 { grid-template-columns: minmax(0, 1fr); } }
 @media print {
   @page { size: A4; margin: 13mm 13mm 14mm; }
   .ws-page .ref-crumbs, .ws-tools, .ws-key > summary, .ws-key:not([open]), .essay-page .page-share-row, .essay-toc, .essay-profs, .essay-view .ref-cite { display: none !important; }
@@ -4777,6 +4871,89 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .ty-actions { font-family: var(--font-ui); font-size: 14px; display: flex; gap: 16px; justify-content: center; align-items: baseline; flex-wrap: wrap; margin: 6px 0 0; }
 @media (max-width: 560px) { .ty-opts { grid-template-columns: minmax(0, 1fr); } .ty-card { padding: 14px 14px 16px; } }
 
+/* Four categorical colour slots (--cat-0..3: blue, gold, magenta, green), validated all-pairs on both themes and
+   Kids mode's surfaces (the dataviz check; the light gold and magenta sit under 3:1, so whatever uses them also names
+   each mark and has a table or list). share-card.js draws posters with the dark set. Used by the race and My timeline.
+   The Rise and Fall Race (/race, race.js): the slots follow the state, never its rank. Bars at most 22px thick with a
+   rounded data-end, square at the baseline; hairline axes; 2px curves with ringed dots. */
+:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; }
+[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; }
+.rc-s0 { background: var(--cat-0); } .rc-s1 { background: var(--cat-1); } .rc-s2 { background: var(--cat-2); } .rc-s3 { background: var(--cat-3); }
+.rc-st0 { stroke: var(--cat-0); } .rc-st1 { stroke: var(--cat-1); } .rc-st2 { stroke: var(--cat-2); } .rc-st3 { stroke: var(--cat-3); }
+.rc-df0 { fill: var(--cat-0); } .rc-df1 { fill: var(--cat-1); } .rc-df2 { fill: var(--cat-2); } .rc-df3 { fill: var(--cat-3); }
+.rc-wrap { max-width: 1000px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.rc-pick { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 16px; }
+.rc-add { display: flex; flex: 1 1 100%; flex-direction: column; gap: 4px; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }   /* the chips get a row of their own: beside the field, four long names wrapped or not with the font (a shift when Kids mode's font arrived) */
+.rc-add input { width: 100%; max-width: 340px; min-width: 240px; padding: 9px 12px; font-family: var(--font-ui); font-size: 16px; color: var(--text); background: var(--surface); border: 1px solid var(--field-border); border-radius: var(--radius); }
+.rc-chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.rc-chips li { display: inline-flex; align-items: center; gap: 8px; padding: 4px 4px 4px 12px; font-family: var(--font-ui); font-size: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; }
+.rc-chips a { color: var(--text); text-decoration: none; }
+.rc-chips a:hover { color: var(--gold); }
+.rc-chips button { width: 30px; height: 30px; font-size: 18px; line-height: 1; color: var(--muted); background: none; border: 0; border-radius: 50%; cursor: pointer; }
+.rc-chips button:hover { color: var(--text); background: rgba(var(--gold-rgb), 0.12); }
+.rc-sw { display: inline-block; flex: none; width: 12px; height: 12px; border-radius: 3px; }
+.rc-presets { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 14px 0 0; font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
+.rc-presets button { padding: 5px 12px; font-family: var(--font-ui); font-size: 13px; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 999px; cursor: pointer; }
+.rc-presets button:hover { border-color: var(--gold); }
+.rc-stage { margin: 18px 0 0; padding: 18px 20px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius-lg); }
+.rc-year { margin: 0 0 10px; font-family: var(--font-display); font-size: 44px; line-height: 1; color: var(--gold-light); font-variant-numeric: tabular-nums; }
+.rc-bars { position: relative; list-style: none; margin: 0; padding: 0; }
+.rc-row { position: absolute; top: 0; left: 0; right: 0; height: 46px; display: grid; grid-template-columns: 36px minmax(110px, 210px) minmax(0, 1fr) 64px; grid-template-areas: "logo name bar val"; align-items: center; gap: 10px; transition: transform 0.35s ease; }
+.rc-logo { grid-area: logo; width: 36px; height: 36px; object-fit: contain; }
+.rc-name { grid-area: name; overflow: hidden; font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--text); text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.rc-name:hover { color: var(--gold); }
+.rc-track { grid-area: bar; position: relative; height: 22px; }
+.rc-bar { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 0 4px 4px 0; transition: width 0.12s linear; }
+.rc-val { grid-area: val; font-family: var(--font-ui); font-size: 15px; font-weight: 700; color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+.rc-out .rc-val { font-size: 13px; font-weight: 400; color: var(--muted); }
+.rc-out .rc-logo { opacity: 0.45; }
+.rc-ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 14px 0 6px; }
+.rc-play { flex: none; width: 44px; height: 44px; font-size: 15px; color: var(--bg); background: var(--gold); border: 0; border-radius: 50%; cursor: pointer; }
+.rc-play:hover { background: var(--gold-light); }
+.rc-play:focus-visible, .rc-presets button:focus-visible, .rc-chips button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.rc-slide { display: flex; flex: 1 1 220px; }
+.rc-slide input { width: 100%; accent-color: var(--gold); }
+.rc-sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.rc-chart { position: relative; margin: 10px 0 0; }
+.rc-chart svg { display: block; width: 100%; height: 300px; cursor: crosshair; touch-action: pan-y; }
+.rc-grid { stroke: var(--border); stroke-width: 1; }
+.rc-ax { font-family: var(--font-ui); font-size: 12px; fill: var(--muted); }
+.rc-line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.rc-lab { font-family: var(--font-ui); font-size: 12px; font-weight: 600; fill: var(--text); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.rc-now { stroke: var(--gold); stroke-width: 1; }
+.rc-dot { stroke: var(--surface); stroke-width: 2; }
+.rc-tip { position: absolute; z-index: 2; display: grid; gap: 3px; padding: 8px 10px; font-family: var(--font-ui); font-size: 13px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 4px 16px var(--shadow, rgba(0,0,0,0.25)); pointer-events: none; }
+.rc-tip[hidden] { display: none; }
+.rc-tip span { display: flex; align-items: center; gap: 6px; }
+.rc-tip strong { min-width: 2.2em; font-variant-numeric: tabular-nums; }
+.rc-chart figcaption { margin: 6px 0 0; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.rc-chart figcaption.rc-warn { color: var(--gold); }
+.rc-table summary { margin: 12px 0 0; font-family: var(--font-ui); font-size: 14px; color: var(--gold); cursor: pointer; }
+.rc-table table { width: 100%; margin: 8px 0 0; font-family: var(--font-ui); font-size: 14px; border-collapse: collapse; }
+.rc-table th, .rc-table td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+.rc-table th[scope="row"] { font-weight: 600; } .rc-table th[scope="row"] .rc-sw { margin-right: 8px; vertical-align: -1px; }
+.rc-table td { font-variant-numeric: tabular-nums; }
+.rc-table div { overflow-x: auto; }
+.rc-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 14px 0 0; font-family: var(--font-ui); font-size: 14px; }
+.rc-share { padding: 8px 16px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--gold); border-radius: var(--radius); cursor: pointer; }
+.rc-share:hover { background: rgba(var(--gold-rgb), 0.1); }
+.rc-share:disabled { opacity: 0.5; cursor: default; }
+.rc-acts a { color: var(--gold); text-decoration: none; }
+.rc-acts a:hover { text-decoration: underline; }
+.rc-how { max-width: 72ch; margin: 34px 0 12px; font-family: var(--font-text); font-size: 17px; line-height: 1.6; color: var(--muted); }
+.rc-how p { margin: 0 0 10px; }
+.rc-how a { color: var(--gold); }
+@media (max-width: 560px) {
+  .rc-stage { padding: 14px 12px; }
+  .rc-year { font-size: 34px; }
+  .rc-row { height: 50px; grid-template-columns: 28px minmax(0, 1fr) 58px; grid-template-areas: "logo name val" "logo bar bar"; row-gap: 3px; column-gap: 8px; }
+  .rc-logo { width: 28px; height: 28px; }
+  .rc-track { height: 14px; }
+  .rc-add input { min-width: 0; width: 100%; }
+  .rc-add { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .rc-row, .rc-bar { transition: none; } }
+
 /* Flashcards (/flashcards, flashcards.js): the decks by group, then a round of cards that turn over. The two faces share
    one grid cell, so the card is as tall as its longer face; a swipe moves the stage, not the turned card. */
 .fc-wrap { max-width: 960px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
@@ -5013,9 +5190,9 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
   --bg: #17123a; --surface: #221b4f; --border: #3d3480; --field-border: #7a6fc0; --text: #f6f1ff; --muted: #b9addf;
   --gold: #ffc247; --gold-light: #ffd97a; --gold-rgb: 255,194,71; --gold-light-rgb: 255,217,122;
   --error: #ff6b6b; --success: #4cd38a; --shadow: rgba(0,0,0,0.45); --overlay: rgba(10,6,40,0.75); --shimmer-mid: rgba(61,52,128,0.5);
-  --font-display: 'Baloo 2', 'Nunito', 'Segoe UI', system-ui, sans-serif;
-  --font-ui: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-text: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: 'Baloo 2', 'Baloo 2 Fallback', 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  --font-ui: 'Nunito', 'Nunito Fallback', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-text: 'Nunito', 'Nunito Fallback', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --radius: 14px; --border-radius-lg: 20px;
   --kd-pop1: #ff7eb6; --kd-pop2: #6fd6ff; --kd-pop2-rgb: 111,214,255; --kd-pop3: #8be38b;
 }

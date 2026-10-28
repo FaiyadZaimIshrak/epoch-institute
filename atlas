@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-atlas.jpg">
-<link rel="stylesheet" href="/shared.css?v=60">
+<link rel="stylesheet" href="/shared.css?v=61">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Atlas"}]},{"@type":"Map","name":"Atlas of States and Empires","url":"https://the-epoch-institute.org/atlas","description":"An interactive atlas of the recorded states of the world in any year from 3000 BCE to today.","mapType":"https://schema.org/PoliticalMap","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -56,9 +56,12 @@
     </div>
   </div>
   <div class="atl-tools">
-    <div class="atl-viewtog" role="group" aria-label="Map view">
-      <button type="button" id="atl-v-globe" aria-pressed="true">&#9679; Globe</button>
-      <button type="button" id="atl-v-flat" aria-pressed="false">&#9645; Flat map</button>
+    <div class="atl-tools-l">
+      <div class="atl-viewtog" role="group" aria-label="Map view">
+        <button type="button" id="atl-v-globe" aria-pressed="true">&#9679; Globe</button>
+        <button type="button" id="atl-v-flat" aria-pressed="false">&#9645; Flat map</button>
+      </div>
+      <button type="button" class="atl-here-btn" id="atl-here-btn" aria-pressed="false" aria-controls="atl-here">&#9678; What was here?</button>
     </div>
     <div class="atl-presets" id="atl-presets" role="group" aria-label="Zoom to a region"><!-- build:atlas-presets -->
 <button type="button">World</button><button type="button">Europe</button><button type="button">Mediterranean</button><button type="button">Middle East</button><button type="button">Africa</button><button type="button">South Asia</button><button type="button">East Asia</button><button type="button">Southeast Asia</button><button type="button">Central Asia</button><button type="button">The Americas</button><button type="button">Oceania</button>
@@ -84,9 +87,18 @@
     </svg>
     <div class="atl-zoom"><button type="button" id="atl-zin" aria-label="Zoom in">+</button><button type="button" id="atl-zout" aria-label="Zoom out">&minus;</button><button type="button" id="atl-zreset" aria-label="Show the whole world">&#8634;</button></div>
     <div class="atl-tip" id="atl-tip" role="status" hidden></div>
+    <p class="atl-here-hint" id="atl-here-hint" hidden>Tap or click a place to see which states had their seat near it. <button type="button" class="atl-here-me" id="atl-here-me">Use my location</button> <span id="atl-here-msg" role="status"></span></p>
     <noscript><p class="atl-none">The atlas needs JavaScript. The <a href="/state/">states register</a> and the <a href="/centuries/">century pages</a> list the same states.</p></noscript>
   </div>
-  <p class="atl-legend"><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span class="map-key"><i class="k-a"></i>Place approximate</span><span id="atl-note-globe">Drag to turn the globe, scroll or pinch to zoom. No projection: shapes and sizes as they are. Present-day borders for orientation.</span><span id="atl-note-flat" hidden>Drag to move, scroll or pinch to zoom. Present-day borders are shown for orientation.</span></p>
+  <p class="atl-legend"><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span class="map-key"><i class="k-a"></i>Place approximate</span><span id="atl-note-globe">Drag to turn the globe, scroll or pinch to zoom. No projection: shapes and sizes as they are. Present-day borders for orientation.</span><span id="atl-note-flat" hidden>Drag to move, scroll or pinch to zoom. Present-day borders are shown for orientation.</span> <span>Press and hold a place, or use What was here?, for the states that stood there.</span></p>
+  <section class="atl-here" id="atl-here" aria-labelledby="atl-here-t" hidden>
+    <div class="atl-here-head"><h2 class="atl-here-t" id="atl-here-t">What was here?</h2><button type="button" class="atl-here-x" id="atl-here-x" aria-label="Close What was here?">&times;</button></div>
+    <p class="atl-here-at" id="atl-here-at"></p>
+    <p class="atl-here-n" id="atl-here-n" aria-live="polite"></p>
+    <ol class="atl-here-list" id="atl-here-list"></ol>
+    <div id="atl-here-more"></div>
+    <p class="atl-here-seats">Seats, not borders: a state counts here by where its capital or seat lay, and its lands may have reached far wider. Distances are as the crow flies. Tap a state&#8217;s years to see it on the map.</p>
+  </section>
 </section>
 
 <section class="atl-list-wrap" aria-labelledby="atl-list-title">
@@ -106,11 +118,11 @@
 </div>
 </main>
 
-<script src="/shared-nav.js?v=42"></script>
+<script src="/shared-nav.js?v=43"></script>
 <script src="/maps/basemap.js?v=4478c4912d"></script>
-<script src="/maps/atlas-data.js?v=b637909261"></script>
+<script src="/maps/atlas-data.js?v=e7c49a6f0f"></script>
 <script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=47369e946f', ATLAS_YEARS_SRC = '/data/years.json?v=6a8fd1b2bd';</script>
-<script src="/atlas.js?v=7"></script>
+<script src="/atlas.js?v=8"></script>
 <script>initNav('atlas');</script>
 </body>
 </html>

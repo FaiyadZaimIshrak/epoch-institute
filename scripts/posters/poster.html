@@ -86,6 +86,7 @@
   .P-kids .chips span { border-color: rgba(255,194,71,0.6); background: rgba(34,27,79,0.8); }
   .curves .tk { font: 600 14px var(--font-ui); fill: #a1957f; letter-spacing: 0.06em; }
   .curves .nm { font: 600 13px var(--font-ui); letter-spacing: 0.03em; paint-order: stroke; stroke: #0b0c10; stroke-width: 4px; }
+  .curves .nm2 { font: 700 19px var(--font-ui); letter-spacing: 0.02em; fill: #efe6d2; paint-order: stroke; stroke: #0b0c10; stroke-width: 6px; stroke-linejoin: round; }
   /* mosaic of pictures (paths, sections) */
   .mosaic { position: absolute; z-index: 6; display: grid; gap: 8px; }
   .mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; border: 1px solid rgba(201,168,76,0.4); background: #14161d; }
@@ -248,10 +249,13 @@ R.curves = function (j) {
     }
     return d;
   }
+  // each line to its own peak (the explorer's curves), or with j.abs one scale for all (the race's standings: a name in
+  // light ink over its peak, which a dot of the line's colour marks)
   var labels = [], paths = j.lines.map(function (l) {
     var max = 0, peak = l.points[0]; l.points.forEach(function (p) { if (p[1] > max) { max = p[1]; peak = p; } });
-    var pts = l.points.map(function (p) { return [X(p[0]), H - (p[1] / max) * (H * 0.78)]; }), d = smooth(pts);
-    labels.push('<text x="' + X(peak[0]).toFixed(1) + '" y="' + (H - H * 0.78 - 10).toFixed(1) + '" text-anchor="middle" class="nm" fill="' + l.color + '">' + esc(l.name) + '</text>');
+    var top = j.abs || max, pts = l.points.map(function (p) { return [X(p[0]), H - (p[1] / top) * (H * 0.78)]; }), d = smooth(pts);
+    if (j.abs) { var py = H - (max / top) * (H * 0.78); labels.push('<circle cx="' + X(peak[0]).toFixed(1) + '" cy="' + py.toFixed(1) + '" r="7" fill="' + l.color + '" stroke="#0b0c10" stroke-width="3"/><text x="' + X(peak[0]).toFixed(1) + '" y="' + (py - 16).toFixed(1) + '" text-anchor="middle" class="nm2">' + esc(l.name) + '</text>'); }
+    else labels.push('<text x="' + X(peak[0]).toFixed(1) + '" y="' + (H - H * 0.78 - 10).toFixed(1) + '" text-anchor="middle" class="nm" fill="' + l.color + '">' + esc(l.name) + '</text>');
     return '<path d="' + d + ' L' + pts[pts.length - 1][0].toFixed(1) + ' ' + H + ' L' + pts[0][0].toFixed(1) + ' ' + H + 'Z" fill="' + l.color + '" fill-opacity="0.12"/>' +
       '<path d="' + d + '" fill="none" stroke="' + l.color + '" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>';
   }).join('');

@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
@@ -16,14 +16,14 @@ Plus 404.html and generator.html (generator is NOT deployed — see scripts/depl
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
+Year, People, Empire Explorer, Rise and Fall Race, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, race, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -66,7 +66,11 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   connection the fonts come seconds after the page (the live crawl of 28 Oct measured CLS up to 0.23 from the swap):
   the tokens name fallback faces sized like the fonts ('Crimson Pro Fallback', 'Cinzel Fallback' on local Georgia,
   'Source Sans 3 Fallback' on Arial; size-adjust calibrated so 95% of 3,128 paragraphs and 99% of titles keep their
-  line count, scratchpad t/fontcal.html; ascent/descent from t/fontmetrics.html). Re-measure if a font file changes.
+  line count, scratchpad t/fontcal.html; ascent/descent from t/fontmetrics.html). Kids mode likewise: 'Nunito Fallback'
+  (Arial 400 at 101.25%, Arial Bold 600-900 at 99.75%) and 'Baloo 2 Fallback' (Arial Bold: 90% for 400-600, 95% for
+  700-900), from t/kidsmetrics.html and t/kidscal.html at Kids sizes (89-94% of text and interface lines, 99.6-99.8%
+  of titles): Kids pages with the fonts 1.5 s late went from CLS 0.08-0.10 to about 0 (KIDS=1 FONT_DELAY=1500
+  pw/cls-trace2.js). Re-measure if a font file changes.
 - /shared-nav.js — initNav(activePage), escHtml(), jsonp() (gives up after 10 s: an Apps Script error is an HTML
   page with status 200 that never calls back), buildPagination(), isValidEmail(), sharing (sharePoster, the share
   panel, scoreCard: see "Sharing"), in-app browser detection (EPOCH_INAPP, see "In-app browsers"). The old contact modal
@@ -236,7 +240,7 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   diagrams last (PicIsChart). Each path page ends with Test yourself.
 - Lists of entries show a type glyph where an entry has no picture (PhSpan: `.ph .ph-person/-conflict/-place/…`,
   masked SVG icons in shared.css).
-- `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — 939 year pages, one for every year with at least 6 items,
+- `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — 1,020 year pages, one for every year with at least 6 items,
   2 of them events. Only FIRM years count ([EpochBuild.W]::Firm, Range, Life: "1453", "29 May 1453", "480 BCE"; never
   "c. 1450", "1450s", "1066 or 1067", a reign or a century): entry events and conflicts dated to the year, wars that
   began or ended in it, day events (history.json; their linked text from data/days), profile key events (empire-glance.js
@@ -288,9 +292,23 @@ double-quoted string is read as a drive-qualified variable and stops the parse (
   Flat map toggle (?view=globe|flat, localStorage epoch-atlas-view; falls back to flat if d3 or the canvas fails);
   year slider (3500 BCE–today) with play and a random-year die, zoom/pan/pinch, region presets, profile and kind
   filters, search, tooltips (nearest dot), labels from 2.2x zoom, the list of states shown (accessible view);
-  ?year=, ?focus=<state id>, ?c=<country slug>. maps/atlas-data.js rows [id, name, start, end, x, y, flags (1 profile,
+  ?year=, ?focus=<state id>, ?c=<country slug>, ?at=<lat>,<lng>. maps/atlas-data.js rows [id, name, start, end, x, y, flags (1 profile,
   2 approximate), kind (EmblemKind), region, lng, lat (degrees; approximate places keep their spiral spread via
-  geo.cs Inv, the Equal Earth inverse), profile url], plus presetsLL and countriesLL (centres + span in degrees);
+  geo.cs Inv, the Equal Earth inverse), profile url (null when a 13th field follows), an approximate place's present-day
+  countries (country-page slugs, | between)], plus presetsLL and countriesLL (centres + span in degrees);
+  What was here? (the button by the view toggle, then a tap or click; a long press with a finger in either view; or
+  "Use my location", which the browser asks for and which never enters the address): the states whose seat lay within
+  250 km of the place (haversine on the rows' lng/lat; the 60 nearest when more, then oldest first), each with its
+  years (a button: the atlas goes to its middle year and rings it), distance and a bar on one time axis, gold when
+  alive in the slider's year; the approximate places of the present-day country under the point listed apart (by the
+  13th field); the country's history linked (the smallest ring of globe-land.js around the point, fetched when
+  needed); the place and its 250 km drawn on the map (a d3.geoCircle on the globe, a projected circle on the flat map).
+  The flat map's point comes from atlas.js's Equal Earth port (EE.fwd/inv, as geo.cs; checked against the rows' x, y).
+  "Seats, not borders" is said on the panel. window.epochAtlas for tests (scratchpad pw/r5-here.js). An address's
+  place gets its panel before the first paint (the country line, with room kept for it on phones, and the places known
+  only by their country fill in when globe-land.js arrives: globeData() fetches it once for the globe and the lookup).
+  The page opens on ?focus=, ?c= or ?at= without a glide (rotateTo/animateTo "now"): the 650 ms turn redrew all
+  the land every frame, 0.7-1 s of blocking on a slowed phone.
   maps/basemap.js outlines (styled by shared.css); maps/globe-land.js the same outlines in lng/lat (hundredths of
   a degree, rings rewound client-side with d3.geoArea), its ?v= stamped into /atlas's ATLAS_GLOBE_SRC. The globe's
   canvas colours come from the CSS tokens and repaint on data-theme changes. Note the hidden pitfall: an SVG
@@ -422,6 +440,16 @@ code (`EPOCH1.` + base64 JSON of the epoch-* keys) carries the passport to anoth
 browser; restoring adds to what is there (lists joined, best runs kept). Clear asks twice. Linked from the Explore
 menu (desktop and phone), the shelf menu, the footer, the Research Hub ("Play") and the home page's "Continue where you
 left off" header.
+My timeline (the section after "What you have read"): every page in epoch-seen placed in time, as lanes on one axis of
+years coloured by kind (the --cat slots: profiles gold, entries blue, states magenta, centuries/years/countries/speeches
+green), with a key, the count of pages that have no date (days, paths, glossary terms, essays, undated entries), a list
+of the same ("Show them as a list") and Share (share-card.js `timeline` layout, drawn as the pointer nears the button).
+Profiles from EMPIRES (profileSpan); centuries, people by century and years from their addresses; entries, state pages
+("s:<id>"), country histories ("c:<slug>", first state's founding to today) and speeches ("p:<slug>") from
+data/spans/<c>.json ({key: [first, (last,) name]}, one file per first character of the address's last part, 1.2 MB
+in all, only the files a reader's pages need, fetched when the section nears the screen; build-pages.ps1 "My timeline"
+writes them, deploy.sh DATA carries them, SPANS_V in passport.js). Hover or a first tap names a line, a click or a
+second tap opens it. window.epochPassport.timeline() / timelineCard() for tests (scratchpad pw/r5-tl.js).
 
 ## /games — History Games
 Hand page, ten client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
@@ -770,6 +798,27 @@ turn). Kids mode deals only cards with a picture that kidsGentle lets through, a
 /flashcards#<deck> opens a deck. Menu (Explore), footer, Research Hub (Play), search (SEARCH_PAGES), sitemap, poster
 page-flashcards.jpg; deploy.sh carries the page (PAGES) and data/cards (DATA).
 
+## Rise and Fall Race (/race)
+Hand page + race.js (needs shared-data.js and epoch-stats.js; ?v= on the page). Up to four polities (EMPIRES with
+points) race year by year: a state's standing is its power curve there (0-10, scaled to its own peak) times its weight,
+the mean of its militaryPower, territorialReach, economicStrength and historicalInfluence in EMPIRE_STATS_BY_NAME, over
+ten (the weight the century pages' great powers use), so a small kingdom at its peak does not tie a great empire. Bars
+sorted by standing glide to their places ("not yet" / "gone" outside a curve); below, every curve on one scale with the
+year's line and dots, a crosshair readout on hover, tap or drag to choose a year; play (Slow/Normal/Fast = 20/50/120
+years a second, localStorage epoch-race-speed; no year 0), a year slider, ten presets (the 2nd century's four empires,
+the steppe, the oceans, West Africa, the caliphates, China, the Andes, Persia, India, Rome and its heirs), "Show the
+numbers" (a table), Share (score poster, share-card.js `bars` layout). The address keeps ?p=<slugs>&y=<year>.
+Colours follow the state, never its rank: four slots (--rc-0..3: blue, gold, magenta, green, one set per theme,
+validated with the dataviz validator against #f4efe4, #0b0c10 and the Kids night sky); a removed state frees its slot.
+Every line is also named: at its peak, measured and placed above it, else below, else left out (phones), as the bars
+above name them all. A lone state in the address (the profiles' "Race its rivals →" beside "View on Explorer →":
+/race?p=<slug>) gets three rivals: contemporaries that shared a quarter of its years, of comparable weight (within 3)
+from its own region first, then from anywhere, strongest first (weight² × shared share), never one with a name word
+of a state already racing (Rome never races Roman Egypt; "United Kingdom" counts as Britain). window.epochRace
+exposes state, standing, presets and rivals for tests (scratchpad pw/r5-race.js). Menu (Explore), footer, Research
+Hub (Explore: six cards, .hub-6 = three columns), search, sitemap, llms.txt, poster page-race.jpg (the 2nd-century race
+on one scale: make-posters.js "race", poster.html curves with `abs`).
+
 ## Voice
 Write in a general, academic register about the past itself. The encyclopedia no longer says "the X profile
 treats/notes/describes …" (786 such frames were rewritten in Oct 2026: a clause after "notes that" stands alone;
@@ -787,7 +836,7 @@ dated events and people for Test yourself.
 ## Homepage and site search
 - Home (index): two-column hero (h1, search, the world in 1000 CE map from the builder, replaced after load and an idle
   moment by a slowly turning globe: /d3-geo.js and maps/globe-land.js, coasts thinned to about 0.3°, 30 frames a
-  second (20 on touch screens), colours read once and again on a theme or Kids change, drawn only while on screen and
+  second (15 on touch screens, at 1.5x at most; the sphere's glow and rim drawn once into canvases), colours read once and again on a theme or Kids change, drawn only while on screen and
   the tab is shown; the still map stays under reduced motion or Save-Data; a head script sets html.home-globe-on with the
   same tests, so the link keeps the globe's 25:14 box from the first paint and nothing moves when it swaps; the canvas's
   [hidden] must win over .home-map canvas, which once showed an empty box under the map), "Ways into history" doors
@@ -921,7 +970,7 @@ for a link shared before: its Sharing Debugger ("Scrape again") refreshes one.
 - scoreCard(spec) loads /share-card.js (SHARE_CARD_SRC in shared-nav.js: bump its ?v= when share-card.js changes)
   and draws a 1080x1350 score poster on a canvas (EpochCard.make): title, big score, unit, stars, and squares (Daily
   Ten), the grid's shape (Crossword: no letters), clue boxes (daily quiz: never the answer), pictures with years (Order the Ages, Which Came First?, Guess the
-  Year), emblems (Emblem Pairs), rounds (Globe Hunt), the solved picture (Picture Puzzle), found words (Word Hunt);
+  Year), emblems (Emblem Pairs), rounds (Globe Hunt), the solved picture (Picture Puzzle), found words (Word Hunt), up to four bars with emblems and values (`bars`: the Rise and Fall Race);
   Kids colours in Kids mode. games.js share() draws it as a finish card appears; quiz.js when its Share button is
   first touched.
 

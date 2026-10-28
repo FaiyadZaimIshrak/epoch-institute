@@ -1,7 +1,7 @@
 ErrorDocument 404 /404.html
 
 # Serve extensionless files as HTML
-<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write|faiths|flashcards)$">
+<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write|faiths|flashcards|race)$">
   ForceType text/html
 </FilesMatch>
 DirectoryIndex index

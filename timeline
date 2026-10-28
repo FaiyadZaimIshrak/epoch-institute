@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=60">
+<link rel="stylesheet" href="/shared.css?v=61">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"World Timeline"}]},{"@type":"WebPage","name":"World Timeline","url":"https://the-epoch-institute.org/timeline","description":"Every recorded state and empire on one timeline, region by region, from 3500 BCE to today.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
@@ -75,8 +75,8 @@
 </div>
 </main>
 
-<script src="/shared-nav.js?v=42"></script>
-<script src="/maps/atlas-data.js?v=b637909261"></script>
+<script src="/shared-nav.js?v=43"></script>
+<script src="/maps/atlas-data.js?v=e7c49a6f0f"></script>
 <script src="/timeline.js?v=2"></script>
 <script>initNav('timeline');</script>
 </body>

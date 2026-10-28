@@ -34,12 +34,12 @@ SSH_USER=${SSH_USER//[[:space:]]/}
 ROOT_FILES=('*.html' '*.css' '*.js' '*.csv' '*.json' .htaccess)  # line 8: each must match (generator.html is left out)
 ROOT_EXTRA=('*.txt' '*.xml' '*.svg' '*.png' '*.ico')              # line 9: copied when present
 PAGES=(index about research research-series profiles community contributors dataset explorer connections atlas quiz
-  contact start games kids search timeline passport write faiths flashcards)  # line 10
+  contact start games kids search timeline passport write faiths flashcards race)  # line 10
 GENERATED=(encyclopedia state today-in-history countries centuries paths speeches years people essays articles
   teachers)                                                        # line 11: the only folders synced with --delete
 DIRS=(sitemaps fonts)                                              # line 12
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
-  data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards)  # line 14
+  data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans)  # line 14
 PROFILES=(empire religion language logos images maps)              # line 15
 KINDS=(culture ideology movement)                                  # line 16: copied when present
 

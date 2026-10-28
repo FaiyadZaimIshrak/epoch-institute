@@ -1,13 +1,14 @@
 // search-pages.js - written by scripts/build-pages.ps1. Do not edit. The site's own pages for the search (header and /search):
 // [name, address, kind, other names]; SEARCH_YEARS: the years that have a page (/years/<y>), BCE negative.
 var SEARCH_PAGES = [
-["World Atlas","/atlas","page","atlas|map|maps|world map|globe|historical maps"],
+["World Atlas","/atlas","page","atlas|map|maps|world map|globe|historical maps|what was here|history near me|states near me|history of my town"],
 ["World Timeline","/timeline","page","timeline|chronology|time line"],
 ["Country Histories","/countries/","page","countries|country histories"],
 ["History by Century","/centuries/","page","centuries|century"],
 ["Year by Year","/years/","page","years|year pages"],
 ["People in History","/people/","page","people|who lived when"],
 ["Empire Explorer","/explorer","page","explorer|power curves|rise and fall chart"],
+["Rise and Fall Race","/race","page","race|rise and fall race|empire race|bar chart race|compare empires|strongest empire"],
 ["Connections Map","/connections","page","connections map|relations|network of states"],
 ["Reading Paths","/paths/","page","paths|reading paths|where to start reading"],
 ["Great Speeches","/speeches/","page","speeches|famous speeches"],
@@ -16,10 +17,11 @@ var SEARCH_PAGES = [
 ["History Quiz","/quiz","page","quiz|daily quiz|trivia"],
 ["Flashcards","/flashcards","page","flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition"],
 ["History Games","/games","page","games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages"],
+["Who Said It?","/games#said","page","who said it|quotes|famous quotes|quotations|sayings"],
 ["Kids Corner","/kids","page","kids|children|for kids|kids mode"],
 ["Glossary","/encyclopedia/glossary","page","glossary|terms|definitions"],
 ["Find Your Way In","/start","page","start|where to begin|beginners|what kind of reader"],
-["My Passport","/passport","page","passport|my history|stamps|my reading"],
+["My Passport","/passport","page","passport|my history|stamps|my reading|my timeline|reading history"],
 ["Today in History","/today-in-history/","page","today in history|on this day|this day in history|anniversaries"],
 ["Encyclopedia","/encyclopedia/","page","encyclopedia|a-z|entries"],
 ["States","/state/","page","states|register of states|kingdoms"],

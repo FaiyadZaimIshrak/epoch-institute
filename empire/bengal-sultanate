@@ -37,6 +37,7 @@
 .empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
 .empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
 .empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
 .empire-nav-row .ref-crumbs { margin:0; }
 @media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
 </style>
@@ -49,7 +50,7 @@
 <main id="main" class="empire-page">
   <div class="empire-nav-row">
     <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?region=South%20%26%20Southeast%20Asia">South &amp; Southeast Asia</a></li><li aria-current="page">Bengal Sultanate</li></ol></nav>
-    <a href="/explorer#//Bengal%20Sultanate" class="empire-view-explorer">View on Explorer →</a>
+    <span class="empire-nav-acts"><a href="/explorer#//Bengal%20Sultanate" class="empire-view-explorer">View on Explorer →</a><a href="/race?p=bengal-sultanate" class="empire-view-explorer">Race its rivals →</a></span>
   </div>
 
   <div class="profile-detail-inner">

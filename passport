@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=60">
+<link rel="stylesheet" href="/shared.css?v=61">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"My Passport"}]},{"@type":"WebPage","name":"My Passport","url":"https://the-epoch-institute.org/passport","description":"A passport of everything read and played at The Epoch Institute, kept in the reader's own browser."}]}</script>
@@ -53,6 +53,16 @@
     <div><h3 class="pass-h3">By kind of page</h3><ul class="pass-bars" id="pass-kinds"></ul></div>
     <div><h3 class="pass-h3">Profiles by region</h3><ul class="pass-bars" id="pass-regions"></ul></div>
   </div>
+</section>
+
+<section class="pass-tl-sec" id="pass-tl-sec" aria-labelledby="pass-tl-t">
+  <h2 class="ref-sec-title" id="pass-tl-t">My timeline <span class="n" id="pass-tl-n"></span></h2>
+  <p class="pass-tl-lede" id="pass-tl-lede">Everything you have read, placed in time: profiles, entries, states, centuries, years and speeches, each where it belongs.</p>
+  <ul class="pass-tl-key" id="pass-tl-key"></ul>
+  <figure class="pass-tl"><svg id="pass-tl-svg" role="img" aria-label="Your reading on one line of years"></svg><div class="pass-tl-tip" id="pass-tl-tip" role="status" hidden></div></figure>
+  <p class="pass-note" id="pass-tl-note"></p>
+  <details class="pass-tl-list" id="pass-tl-list" hidden><summary>Show them as a list</summary><ol id="pass-tl-ol"></ol></details>
+  <div class="pass-acts"><button type="button" class="gm-share" id="pass-tl-share" hidden>Share my timeline</button></div>
 </section>
 
 <section aria-labelledby="pass-cent-t">
@@ -90,8 +100,8 @@
 </main>
 
 <script src="/shared-data.js?v=10"></script>
-<script src="/shared-nav.js?v=42"></script>
+<script src="/shared-nav.js?v=43"></script>
 <script>initNav('passport');</script>
-<script src="/passport.js?v=4"></script>
+<script src="/passport.js?v=5"></script>
 </body>
 </html>

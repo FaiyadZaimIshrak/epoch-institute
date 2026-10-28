@@ -29,7 +29,7 @@
 <meta name="twitter:description" content="Five thousand years of states, empires and civilisations: profiles, an encyclopedia, an atlas, country histories and century pages.">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
-<link rel="stylesheet" href="/shared.css?v=60">
+<link rel="stylesheet" href="/shared.css?v=61">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -236,7 +236,7 @@
 </div>
 
 <script src="/shared-data.js?v=10"></script>
-<script src="/shared-nav.js?v=42"></script>
+<script src="/shared-nav.js?v=43"></script>
 <script src="/home-data.js?v=16"></script>
 <script src="/reading-paths.js?v=3"></script>
 <script src="/quiz.js?v=6"></script>
@@ -687,12 +687,24 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
     }).filter(Boolean);
     var geo = { type: 'MultiPolygon', coordinates: polys }, grat = d3.geoGraticule().step([20, 20])();
     var ctx = cv.getContext('2d'), proj = d3.geoOrthographic().clipAngle(90), path = d3.geoPath(proj, ctx);
-    var dpr = Math.min(2, window.devicePixelRatio || 1), lng = 20, running = true, looping = false, last = null, lastDraw = 0;
-    var step = matchMedia('(pointer: coarse)').matches ? 50 : 33;   // 20 or 30 frames a second: the turn is slow enough to look the same
-    var g, gold, text;   // the theme's colours, read once and again when the theme or Kids mode changes
+    // a phone: 15 frames a second at 1.5x at most (the turn is slow enough to look the same; a slowed phone spent 100 ms a frame)
+    var coarse = matchMedia('(pointer: coarse)').matches, dpr = Math.min(coarse ? 1.5 : 2, window.devicePixelRatio || 1), lng = 20, running = true, looping = false, last = null, lastDraw = 0;
+    var step = coarse ? 66 : 33;
+    var g, gold, text, bg = document.createElement('canvas'), rim = document.createElement('canvas');   // the sphere's glow and rim never turn: drawn once
     function colours() {
       var cs = getComputedStyle(document.documentElement); g = (cs.getPropertyValue('--gold-rgb') || '201,168,76').trim();
       gold = (cs.getPropertyValue('--gold') || '#c9a84c').trim(); text = (cs.getPropertyValue('--text') || '#e8e0d0').trim();
+      still();
+    }
+    function still() {
+      if (!cv.width) return;
+      proj.scale(Math.min(cv.width, cv.height) / 2 - 6 * dpr).translate([cv.width / 2, cv.height / 2]);
+      bg.width = rim.width = cv.width; bg.height = rim.height = cv.height;
+      var b = bg.getContext('2d'), r = rim.getContext('2d'), pb = d3.geoPath(proj, b), pr = d3.geoPath(proj, r);
+      b.save(); b.shadowColor = 'rgba(' + g + ',0.35)'; b.shadowBlur = 14 * dpr;
+      b.beginPath(); pb({ type: 'Sphere' }); b.fillStyle = 'rgba(' + g + ',0.05)'; b.fill(); b.restore();
+      r.beginPath(); pr({ type: 'Sphere' }); r.strokeStyle = 'rgba(' + g + ',0.4)'; r.lineWidth = dpr; r.stroke();
+      lastDraw = 0;
     }
     colours();
     new MutationObserver(colours).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-kids'] });
@@ -700,7 +712,7 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
     function size() {
       var w = cv.parentNode.clientWidth, h = Math.round(w * 0.56);
       if (!document.documentElement.classList.contains('home-globe-on')) cv.style.height = h + 'px';   // else the CSS box held for it
-      cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); lastDraw = 0;
+      cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); lastDraw = 0; still();
     }
     size(); window.addEventListener('resize', size);
     cv.removeAttribute('hidden');
@@ -717,12 +729,11 @@ document.addEventListener('visibilitychange', refreshAnnouncements);
       last = now;
       proj.scale(Math.min(cv.width, cv.height) / 2 - 6 * dpr).translate([cv.width / 2, cv.height / 2]).rotate([-lng, -16, 0]);
       ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, cv.width, cv.height);
-      ctx.save(); ctx.shadowColor = 'rgba(' + g + ',0.35)'; ctx.shadowBlur = 14 * dpr;
-      ctx.beginPath(); path({ type: 'Sphere' }); ctx.fillStyle = 'rgba(' + g + ',0.05)'; ctx.fill(); ctx.restore();
+      ctx.drawImage(bg, 0, 0);
       ctx.beginPath(); path(grat); ctx.strokeStyle = 'rgba(' + g + ',0.13)'; ctx.lineWidth = 0.6 * dpr; ctx.stroke();
       ctx.beginPath(); path(geo); ctx.fillStyle = 'rgba(' + g + ',0.14)'; ctx.fill();
       ctx.strokeStyle = 'rgba(' + g + ',0.5)'; ctx.lineWidth = 0.7 * dpr; ctx.lineJoin = 'round'; ctx.stroke();
-      ctx.beginPath(); path({ type: 'Sphere' }); ctx.strokeStyle = 'rgba(' + g + ',0.4)'; ctx.lineWidth = dpr; ctx.stroke();
+      ctx.drawImage(rim, 0, 0);
       var cl = lng * D2R, cp = -16 * D2R, ax = Math.cos(cp) * Math.cos(cl), ay = Math.cos(cp) * Math.sin(cl), az = Math.sin(cp);
       ctx.fillStyle = text; ctx.globalAlpha = 0.7; ctx.beginPath();
       for (var i = 0; i < pts.length; i++) {

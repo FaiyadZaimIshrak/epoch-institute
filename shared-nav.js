@@ -111,7 +111,7 @@ function sharePoster(o) {
 // the line, the address and a button: the old signature, kept for the pages that call it
 function shareThis(text, url, btn) { sharePoster({ text: text, url: url, btn: btn }); }
 // a score poster (share-card.js, fetched the first time a result is shown): { p: promise of the picture, b: once drawn }
-var SHARE_CARD_SRC = '/share-card.js?v=4', CARD_LIB = null;
+var SHARE_CARD_SRC = '/share-card.js?v=6', CARD_LIB = null;
 function scoreCard(spec) {
   CARD_LIB = CARD_LIB || new Promise(function (ok, no) {
     if (window.EpochCard) return ok();
@@ -492,7 +492,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=3dd927b3fa';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=dfed24a319';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=00af7f34e8';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null;
@@ -677,6 +677,7 @@ function initNav(activePage) {
     ['countries', '/countries/', 'Country Histories', 'Each land through time'],
     ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['years', '/years/', 'Year by Year', 'What happened in any year'],
     ['people', '/people/', 'People', 'Who lived when'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
+    ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'],
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
     ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
     ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
@@ -778,6 +779,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/atlas">Atlas</a>
         <a class="footer-link" href="/timeline">World Timeline</a>
         <a class="footer-link" href="/explorer">Empire Explorer</a>
+        <a class="footer-link" href="/race">Rise and Fall Race</a>
         <a class="footer-link" href="/connections">Connections</a>
         <a class="footer-link" href="/paths/">Reading Paths</a>
         <a class="footer-link" href="/speeches/">Great Speeches</a>

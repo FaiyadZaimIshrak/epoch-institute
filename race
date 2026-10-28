@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>The Rise and Fall Race: Empires Through the Centuries — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Race up to four states and empires through the years and watch them rise and fall: Rome against Han, the steppe empires, the empires of the oceans and more.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/race">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Rise and Fall Race — The Epoch Institute">
+<meta property="og:description" content="Up to four states and empires racing through the years: who led, when, and for how long.">
+<meta property="og:url" content="https://the-epoch-institute.org/race">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-race.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-race.jpg">
+<link rel="stylesheet" href="/shared.css?v=61">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"The Rise and Fall Race"}]},{"@type":"WebPage","name":"The Rise and Fall Race","url":"https://the-epoch-institute.org/race","description":"An interactive comparison of the power curves of up to four states and empires, year by year."}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<main id="main" class="rc-page ref-page">
+<div class="rc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">The Rise and Fall Race</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">The Rise and Fall Race</h1>
+  <p class="ref-lede">Pick up to four states and empires and watch them rise and fall, year by year: who led the world&#8217;s stage, when they overtook each other, and how long each held on.</p>
+</header>
+
+<section class="rc" id="race" aria-label="The race"><noscript><p class="pass-note">The race needs JavaScript; the <a href="/explorer">Empire Explorer</a> shows the same curves.</p></noscript></section>
+
+<section class="rc-how" aria-labelledby="rc-how-t">
+  <h2 class="ref-sec-title" id="rc-how-t">How the race is scored</h2>
+  <p>Every state and empire profile has a power curve: the Institute&#8217;s judgement of the state&#8217;s strength through its history, from the works cited in its profile, on a scale of 0 to 10 that is scaled to its own peak. Alone, that cannot tell a great empire from a small kingdom: both reach 10. So the race weighs each curve by the state&#8217;s weight in the Institute&#8217;s analysis, the mean of its military power, territorial reach, economic strength and historical influence, also out of 10. A state&#8217;s standing in a year is its curve there times its weight, divided by ten. The same weight ranks the great powers on the century pages.</p>
+  <p>These are interpretive judgements, not measurements: read a lead of a point or two as close. The curves and the scores are free to download as <a href="/dataset">open data</a>, and the <a href="/explorer">Empire Explorer</a> draws every curve side by side.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-data.js?v=10"></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/shared-nav.js?v=43"></script>
+<script>initNav('race');</script>
+<script src="/race.js?v=1"></script>
+</body>
+</html>
