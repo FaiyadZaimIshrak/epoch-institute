@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Congo Free State"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Congo Free State was King <a class="enc-link" href="/encyclopedia/leopold-ii">Leopold II</a>’s private colony in <a class="enc-link" href="/encyclopedia/central-africa">Central Africa</a>, where forced collection of wild <a class="enc-link" href="/encyclopedia/rubber">rubber</a> caused mass death and suffering; the international campaign against it became a landmark of human rights activism, and its borders and methods shaped the Belgian Congo and the modern <a class="enc-link" href="/encyclopedia/democratic-republic-of-the-congo">Democratic Republic of the Congo</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="congo-free-state"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Belgium annexes the territory as the Belgian Congo","o":["1891","1898","1885","1908"],"a":3,"w":"1908: Belgium annexes the territory as the Belgian Congo."},{"p":"Which came first?","q":"","o":["Roger Casement’s report is published and the Congo Reform Association is founded","Henry Morton Stanley begins building stations on the Congo River for Leopold"],"a":1,"w":"1904: Roger Casement’s report is published and the Congo Reform Association is founded · 1879: Henry Morton Stanley begins building stations on the Congo River for Leopold."},{"p":"Which city was a capital of the Congo Free State?","q":"","o":["Vivi","Lealui","El Fasher","Cape Town"],"a":0,"w":"Capital: Vivi (1885–1886); Boma."},{"p":"Who founded the Congo Free State?","q":"","o":["Mboo","Leopold II of Belgium","Great Britain","Suleiman Solong"],"a":1,"w":"Founder: Leopold II of Belgium."},{"p":"Which state came after the Congo Free State?","q":"","o":["Belgian Congo","Union of South Africa","Zambia","Anglo-Egyptian Sudan"],"a":0,"w":"Succeeded by: Belgian Congo."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Congo Free State",slug="congo-free-state",url="https://the-epoch-institute.org/empire/congo-free-state";

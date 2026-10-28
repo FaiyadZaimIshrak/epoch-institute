@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="State of the Teutonic Order"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The State of the <a class="enc-link" href="/encyclopedia/teutonic-order">Teutonic Order</a> turned a <a class="enc-link" href="/encyclopedia/crusade">crusade</a> against the pagan <a class="enc-link" href="/encyclopedia/old-prussians">Prussians</a> into one of the best-administered territories of medieval <a class="enc-link" href="/encyclopedia/europe">Europe</a>, colonising the south-eastern Baltic with German settlers and Hanseatic towns until defeat by <a class="enc-link" href="/encyclopedia/poland">Poland</a> and <a class="enc-link" href="/encyclopedia/lithuania">Lithuania</a> reduced it and its last Grand Master made it the Lutheran <a class="enc-link" href="/encyclopedia/duchy-of-prussia">Duchy of Prussia</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="state-of-the-teutonic-order"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Great Prussian Uprising begins, lasting until 1274","o":["1410","1466","1226","1260"],"a":3,"w":"1260: The Great Prussian Uprising begins, lasting until 1274."},{"p":"Which came first?","q":"","o":["The Grand Master moves his seat from Venice to Marienburg","The Order absorbs the Livonian Brothers of the Sword"],"a":1,"w":"1309: The Grand Master moves his seat from Venice to Marienburg · 1237: The Order absorbs the Livonian Brothers of the Sword."},{"p":"Which city was a capital of the State of the Teutonic Order?","q":"","o":["Bruges","Zürich","Saint Helier","Marienburg"],"a":3,"w":"Capital: Marienburg (Malbork), 1309–1457; later Königsberg."},{"p":"Who founded the State of the Teutonic Order?","q":"","o":["Hermann von Salza","Count Frederick of Zollern","Baldwin I Iron Arm","Reginar Longneck"],"a":0,"w":"Founder: Hermann von Salza (Grand Master); Hermann Balk (first Landmeister in Prussia)."},{"p":"Which state came after the State of the Teutonic Order?","q":"","o":["Department of Jemmapes","Helvetic Republic","Duchy of Prussia","Burgundian State"],"a":2,"w":"Succeeded by: Duchy of Prussia; Royal Prussia (Poland)."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="State of the Teutonic Order",slug="state-of-the-teutonic-order",url="https://the-epoch-institute.org/empire/state-of-the-teutonic-order";

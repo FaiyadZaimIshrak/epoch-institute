@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Bunyoro"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Kingdom of Bunyoro, heir to the Kitara tradition, dominated the <a class="enc-link" href="/encyclopedia/great-lakes">Great Lakes</a> region in the sixteenth and seventeenth centuries through its armies, salt and iron, lost ground to Buganda, revived under <a class="enc-link" href="/encyclopedia/kabalega">Kabalega</a> and became the emblem of resistance to British conquest before its abolition in 1967 and restoration as a cultural kingdom.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-bunyoro"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"British and Ganda forces invade Bunyoro","o":["1899","1872","1893","1964"],"a":2,"w":"1893: British and Ganda forces invade Bunyoro."},{"p":"Which came first?","q":"","o":["Kabalega forces Samuel Baker to retreat after fighting at Masindi","The monarchy is abolished; it is restored as a cultural institution in 1993"],"a":0,"w":"1872: Kabalega forces Samuel Baker to retreat after fighting at Masindi · 1967: The monarchy is abolished; it is restored as a cultural institution in 1993."},{"p":"Which city was a capital of the Kingdom of Bunyoro?","q":"","o":["Masindi","Addis Ababa","Mbarara","Gondar"],"a":0,"w":"Capital: Shifting royal enclosures; Masindi under Kabalega; later Hoima."},{"p":"Who founded the Kingdom of Bunyoro?","q":"","o":["Yekuno Amlak","Isingoma Mpuga Rukidi","Kintu","Ruhinda"],"a":1,"w":"Founder: Isingoma Mpuga Rukidi (traditionally)."},{"p":"Which state came after the Kingdom of Bunyoro?","q":"","o":["Derg","Republic of Rwanda","Uganda Protectorate","Uganda"],"a":2,"w":"Succeeded by: Uganda Protectorate."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Bunyoro",slug="kingdom-of-bunyoro",url="https://the-epoch-institute.org/empire/kingdom-of-bunyoro";

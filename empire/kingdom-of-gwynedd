@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Gwynedd"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Gwynedd was the most durable of the Welsh kingdoms, rooted in <a class="enc-link" href="/encyclopedia/snowdonia">Snowdonia</a> and <a class="enc-link" href="/encyclopedia/anglesey">Anglesey</a>, whose rulers from <a class="enc-link" href="/encyclopedia/maelgwn-gwynedd">Maelgwn Gwynedd</a> to <a class="enc-link" href="/encyclopedia/llywelyn-ap-gruffudd">Llywelyn ap Gruffudd</a> repeatedly led native <a class="enc-link" href="/encyclopedia/wales">Wales</a>, created the idea of a Welsh principality and sustained a flowering of court poetry before <a class="enc-link" href="/encyclopedia/edward-i-of-england">Edward I</a> conquered it in 1282–1283.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-gwynedd"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Llywelyn ap Gruffudd is killed near Cilmeri","o":["1165","855","1282","633"],"a":2,"w":"1282: Llywelyn ap Gruffudd is killed near Cilmeri."},{"p":"Which came first?","q":"","o":["Maelgwn Gwynedd, the king Gildas called the dragon of the island, dies of plague","The Treaty of Montgomery recognises Llywelyn ap Gruffudd as Prince of Wales"],"a":0,"w":"547: Maelgwn Gwynedd, the king Gildas called the dragon of the island, dies of plague · 1267: The Treaty of Montgomery recognises Llywelyn ap Gruffudd as Prince of Wales."},{"p":"Which city was a capital of the Kingdom of Gwynedd?","q":"","o":["Nicaea","Regensburg","Constantinople","Aberffraw"],"a":3,"w":"Capital: Aberffraw; later also Abergwyngregyn."},{"p":"Who founded the Kingdom of Gwynedd?","q":"","o":["Garibald I","Cunedda","Cadell Ddyrnllug","Constantine the Great"],"a":1,"w":"Founder: Cunedda (traditional)."},{"p":"Which state came after the Kingdom of Gwynedd?","q":"","o":["Kingdom of England","Powys Fadog","Ottoman Empire","Electorate of Bavaria"],"a":0,"w":"Succeeded by: Kingdom of England (Principality of Wales)."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Gwynedd",slug="kingdom-of-gwynedd",url="https://the-epoch-institute.org/empire/kingdom-of-gwynedd";

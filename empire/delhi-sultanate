@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Delhi Sultanate"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Delhi Sultanate's enduring significance lies in its creation of the Indo-Islamic cultural and administrative synthesis that shaped South Asian civilisation through the centuries of Muslim-ruled states, above all the <a class="enc-link" href="/encyclopedia/mughal-empire">Mughal Empire</a>, that followed it.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="delhi-sultanate"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Babur defeats Ibrahim Lodi at the First Battle of Panipat","o":["1526","1229","1206","1347"],"a":0,"w":"1526: Babur defeats Ibrahim Lodi at the First Battle of Panipat."},{"p":"Which came first?","q":"","o":["Alauddin Khalji's forces turn back a Mongol army that reaches Delhi's outskirts","Timur sacks Delhi and carries off its artisans to Samarkand"],"a":0,"w":"1299: Alauddin Khalji's forces turn back a Mongol army that reaches Delhi's outskirts · 1398: Timur sacks Delhi and carries off its artisans to Samarkand."},{"p":"Which city was a capital of the Delhi Sultanate?","q":"","o":["Shamakhi","Delhi","Samarra","Baghdad"],"a":1,"w":"Capital: Delhi, Agra."},{"p":"Which state came after the Delhi Sultanate?","q":"","o":["Ilkhanate","Safavid Empire","Mamluk Sultanate","Mughal Empire"],"a":3,"w":"Succeeded by: Mughal Empire."},{"p":"In which year?","q":"The Bahmani Sultanate breaks away in the Deccan","o":["1398","1327","1299","1347"],"a":3,"w":"1347: The Bahmani Sultanate breaks away in the Deccan."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Delhi Sultanate",slug="delhi-sultanate",url="https://the-epoch-institute.org/empire/delhi-sultanate";

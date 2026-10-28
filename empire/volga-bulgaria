@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Volga Bulgaria"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em><a class="enc-link" href="/encyclopedia/volga">Volga</a> <a class="enc-link" href="/encyclopedia/bulgaria">Bulgaria</a> made the middle Volga a meeting point of the northern forests and the Islamic world, becoming the first state of eastern <a class="enc-link" href="/encyclopedia/europe">Europe</a> to adopt <a class="enc-link" href="/encyclopedia/islam">Islam</a> in 922 and growing rich on <a class="enc-link" href="/encyclopedia/fur-trade">furs</a> and <a class="enc-link" href="/encyclopedia/silver">silver</a> until the <a class="enc-link" href="/encyclopedia/mongols">Mongols</a> destroyed it in 1236, leaving a legacy claimed by <a class="enc-link" href="/encyclopedia/tatars">Tatars</a> and <a class="enc-link" href="/encyclopedia/chuvash-people">Chuvash</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="volga-bulgaria"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Sviatoslav I of Kiev breaks Khazar power, ending Bulgar tribute","o":["965","1223","1164","922"],"a":0,"w":"965: Sviatoslav I of Kiev breaks Khazar power, ending Bulgar tribute."},{"p":"Which came first?","q":"","o":["Sviatoslav I of Kiev breaks Khazar power, ending Bulgar tribute","Vladimir of Kiev campaigns against the Bulgars and makes peace"],"a":0,"w":"965: Sviatoslav I of Kiev breaks Khazar power, ending Bulgar tribute · 985: Vladimir of Kiev campaigns against the Bulgars and makes peace."},{"p":"Which city was a capital of Volga Bulgaria?","q":"","o":["Nicaea","Constantinople","Regensburg","Bolghar"],"a":3,"w":"Capital: Bolghar; later Bilyar."},{"p":"Which state came after Volga Bulgaria?","q":"","o":["Golden Horde","Electorate of Bavaria","Kingdom of England","Ottoman Empire"],"a":0,"w":"Succeeded by: Golden Horde."},{"p":"In which year?","q":"Vladimir of Kiev campaigns against the Bulgars and makes peace","o":["965","985","1164","1223"],"a":1,"w":"985: Vladimir of Kiev campaigns against the Bulgars and makes peace."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Volga Bulgaria",slug="volga-bulgaria",url="https://the-epoch-institute.org/empire/volga-bulgaria";

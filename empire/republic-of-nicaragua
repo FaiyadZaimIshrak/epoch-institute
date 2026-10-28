@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of Nicaragua"></div>
@@ -120,6 +120,13 @@
 
     <p class="profile-summary" id="summary"><em>Nicaragua shows how geography can shape a small state’s fate: its potential canal route drew filibusters, British protectors and <a class="enc-link" href="/encyclopedia/united-states-marine-corps">American Marines</a>, and its struggles against the <a class="enc-link" href="/encyclopedia/somoza-family">Somoza</a> dictatorship and in the <a class="enc-link" href="/encyclopedia/contras">Contra</a> war made it a central battleground of anti-imperialism and of the late <a class="enc-link" href="/encyclopedia/cold-war">Cold War</a> in <a class="enc-link" href="/encyclopedia/latin-america">Latin America</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="republic-of-nicaragua"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The American filibuster William Walker makes himself president","o":["1838","1856","1934","1852"],"a":1,"w":"1856: The American filibuster William Walker makes himself president."},{"p":"Which came first?","q":"","o":["The Sandinista revolution overthrows Anastasio Somoza Debayle","Augusto César Sandino is murdered on the orders of Anastasio Somoza García"],"a":1,"w":"1979: The Sandinista revolution overthrows Anastasio Somoza Debayle · 1934: Augusto César Sandino is murdered on the orders of Anastasio Somoza García."},{"p":"Which city was a capital of the Republic of Nicaragua?","q":"","o":["León","La Paz","Onondaga","Sucre"],"a":0,"w":"Capital: León and Granada (contested); Managua from 1852."},{"p":"In which year?","q":"The Sandinista revolution overthrows Anastasio Somoza Debayle","o":["1894","1979","1856","1934"],"a":1,"w":"1979: The Sandinista revolution overthrows Anastasio Somoza Debayle."},{"p":"Which came first?","q":"","o":["Managua is chosen as a compromise capital between León and Granada","Violeta Barrios de Chamorro defeats Daniel Ortega, ending the Contra war"],"a":0,"w":"1852: Managua is chosen as a compromise capital between León and Granada · 1990: Violeta Barrios de Chamorro defeats Daniel Ortega, ending the Contra war."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -161,6 +168,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Republic of Nicaragua",slug="republic-of-nicaragua",url="https://the-epoch-institute.org/empire/republic-of-nicaragua";

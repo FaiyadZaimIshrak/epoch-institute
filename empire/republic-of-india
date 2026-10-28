@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of India"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>The Republic of <a class="enc-link" href="/encyclopedia/india">India</a> matters as the largest democracy in history, a federal union that has held together over 1.4 billion people of many languages and faiths through regular elections since 1951, and as a nuclear-armed rising power whose economy, technology, culture and diplomacy now carry global weight.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="republic-of-india"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The constitution comes into force and India becomes a republic on 26 January","o":["2023","1998","1950","1991"],"a":2,"w":"1950: The constitution comes into force and India becomes a republic on 26 January."},{"p":"Which came first?","q":"","o":["Nuclear tests at Pokhran; India declares itself a nuclear-weapon state","India's victory in the Bangladesh Liberation War creates Bangladesh"],"a":1,"w":"1998: Nuclear tests at Pokhran; India declares itself a nuclear-weapon state · 1971: India's victory in the Bangladesh Liberation War creates Bangladesh."},{"p":"Which city was a capital of the Republic of India?","q":"","o":["Kota Batu","Jakarta","Brunei Town","New Delhi"],"a":3,"w":"Capital: New Delhi."},{"p":"Who founded the Republic of India?","q":"","o":["Muhammad Shah","Jawaharlal Nehru","Sukarno","Mohammad Hatta"],"a":1,"w":"Founder: Jawaharlal Nehru, B.R. Ambedkar and the Constituent Assembly."},{"p":"In which year?","q":"Chandrayaan-3 lands near the Moon's south pole; India hosts the G20 summit","o":["1962","2023","1975","1971"],"a":1,"w":"2023: Chandrayaan-3 lands near the Moon's south pole; India hosts the G20 summit."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Republic of India",slug="republic-of-india",url="https://the-epoch-institute.org/empire/republic-of-india";

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Duchy of Burgundy"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Duchy of <a class="enc-link" href="/encyclopedia/burgundy">Burgundy</a> was the principality around <a class="enc-link" href="/encyclopedia/dijon">Dijon</a> that nurtured the Cistercian order and <a class="enc-link" href="/encyclopedia/europe">Europe</a>’s most celebrated vineyards, and under its <a class="enc-link" href="/encyclopedia/house-of-valois">Valois</a> dukes it became the base of a Burgundian power whose wealth, court culture and rivalry with <a class="enc-link" href="/encyclopedia/france">France</a> shaped late medieval Europe until <a class="enc-link" href="/encyclopedia/charles-the-bold">Charles the Bold</a>’s death at <a class="enc-link" href="/encyclopedia/battle-of-nancy">Nancy</a> in 1477.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="duchy-of-burgundy"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Robert of Molesme founds Cîteaux, mother house of the Cistercian order","o":["1098","1435","1363","1361"],"a":0,"w":"1098: Robert of Molesme founds Cîteaux, mother house of the Cistercian order."},{"p":"Which came first?","q":"","o":["Henry I of France grants the duchy to his brother Robert, founding the Capetian line","Robert of Molesme founds Cîteaux, mother house of the Cistercian order"],"a":0,"w":"1032: Henry I of France grants the duchy to his brother Robert, founding the Capetian line · 1098: Robert of Molesme founds Cîteaux, mother house of the Cistercian order."},{"p":"Which city was a capital of the Duchy of Burgundy?","q":"","o":["Dijon","Bruges","Mons","Lille"],"a":0,"w":"Capital: Dijon."},{"p":"Who founded the Duchy of Burgundy?","q":"","o":["Reginar Longneck","Baldwin I Iron Arm","Garibald I","Richard the Justiciar"],"a":3,"w":"Founder: Richard the Justiciar."},{"p":"Which state came after the Duchy of Burgundy?","q":"","o":["Department of Jemmapes","Kingdom of France","Burgundian State","French Hainaut"],"a":1,"w":"Succeeded by: Kingdom of France."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Duchy of Burgundy",slug="duchy-of-burgundy",url="https://the-epoch-institute.org/empire/duchy-of-burgundy";

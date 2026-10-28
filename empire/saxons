@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Saxons"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>The <a class="enc-link" href="/encyclopedia/saxons">Saxons</a> were the <a class="enc-link" href="/encyclopedia/north-sea">North Sea</a> confederation whose raiders troubled Roman <a class="enc-link" href="/encyclopedia/britain">Britain</a> and <a class="enc-link" href="/encyclopedia/gaul">Gaul</a>, whose settlers helped create <a class="enc-link" href="/encyclopedia/anglo-saxons">Anglo-Saxon England</a>, and whose long resistance to <a class="enc-link" href="/encyclopedia/charlemagne">Charlemagne</a> ended in conquest and forced conversion, after which <a class="enc-link" href="/encyclopedia/saxony">Saxony</a> became a core region of medieval <a class="enc-link" href="/encyclopedia/germany">Germany</a> and gave it a royal dynasty.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="saxons"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Widukind is baptised at Attigny with Charlemagne as godfather","o":["782","804","785","772"],"a":2,"w":"785: Widukind is baptised at Attigny with Charlemagne as godfather."},{"p":"Which came first?","q":"","o":["Saxons join the 'barbarian conspiracy' that overruns Roman Britain","Charlemagne takes the Eresburg and destroys the Irminsul"],"a":0,"w":"367: Saxons join the 'barbarian conspiracy' that overruns Roman Britain · 772: Charlemagne takes the Eresburg and destroys the Irminsul."},{"p":"Which state came after Saxons?","q":"","o":["Ottoman Empire","Carolingian Empire","Powys Fadog","Kingdom of Alba"],"a":1,"w":"Succeeded by: Carolingian Empire; later the Duchy of Saxony."},{"p":"In which year?","q":"Saxons defeat the Franks in the Süntel hills; mass execution at Verden","o":["772","782","785","804"],"a":1,"w":"782: Saxons defeat the Franks in the Süntel hills; mass execution at Verden."},{"p":"Which came first?","q":"","o":["Saxons defeat the Franks in the Süntel hills; mass execution at Verden","Deportation of the Nordalbingian Saxons ends the Saxon Wars"],"a":0,"w":"782: Saxons defeat the Franks in the Süntel hills; mass execution at Verden · 804: Deportation of the Nordalbingian Saxons ends the Saxon Wars."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Saxons",slug="saxons",url="https://the-epoch-institute.org/empire/saxons";

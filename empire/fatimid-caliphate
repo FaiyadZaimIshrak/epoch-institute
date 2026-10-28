@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Fatimid Caliphate"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Fatimid Caliphate stands as history's most instructive case of an empire whose political existence was constitutively theological, and whose end came not through military conquest but through the quiet exhaustion of the ideological claim that had made it possible in the first place.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="fatimid-caliphate"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Saladin restores prayers for the Abbasid caliph; the last Fatimid caliph al-Adid dies","o":["910","1094","970","1171"],"a":3,"w":"1171: Saladin restores prayers for the Abbasid caliph; the last Fatimid caliph al-Adid dies."},{"p":"Which came first?","q":"","o":["Badr al-Jamali arrives and takes over as vizier and commander after years of chaos","Abdallah al-Mahdi Billah is proclaimed caliph at Raqqada after the Kutama overthrow the Aghlabids"],"a":1,"w":"1073: Badr al-Jamali arrives and takes over as vizier and commander after years of chaos · 910: Abdallah al-Mahdi Billah is proclaimed caliph at Raqqada after the Kutama overthrow the Aghlabids."},{"p":"Which city was a capital of the Fatimid Caliphate?","q":"","o":["Cairo","Marrakesh","Seville","Old Dongola"],"a":0,"w":"Capital: Cairo, Mahdia, al-Mansuriyya."},{"p":"Which state came after the Fatimid Caliphate?","q":"","o":["Ayyubid Sultanate","Marinid Sultanate","Kingdom of Dotawo","Almohad Caliphate"],"a":0,"w":"Succeeded by: Ayyubid Sultanate."},{"p":"In which year?","q":"The al-Azhar mosque is begun, later developing into a great teaching institution","o":["1094","1171","970","910"],"a":2,"w":"970: The al-Azhar mosque is begun, later developing into a great teaching institution."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Fatimid Caliphate",slug="fatimid-caliphate",url="https://the-epoch-institute.org/empire/fatimid-caliphate";

@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -117,6 +117,13 @@
 
     <p class="profile-summary" id="summary"><em>Quechua, a family of Andean languages that grew in central <a class="enc-link" href="/encyclopedia/peru">Peru</a> in the first millennium CE, became the common language of the Inca empire and spread further under Spanish rule as a language of preaching. Written in the <a class="enc-link" href="/encyclopedia/latin">Latin</a> alphabet since the 16th century, it is spoken today by millions of people from Ecuador to <a class="enc-link" href="/encyclopedia/argentina">Argentina</a>, the most widely spoken Indigenous language family of the <a class="enc-link" href="/encyclopedia/americas">Americas</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="quechua"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"A doctoral thesis written entirely in Quechua is defended for the first time, at the University of San Marcos in Lima","o":["1975","1438","1584","2019"],"a":3,"w":"2019: A doctoral thesis written entirely in Quechua is defended for the first time, at the University of San Marcos in Lima."},{"p":"Which came first?","q":"","o":["A catechism in Spanish, Quechua and Aymara becomes the first book printed in South America","A doctoral thesis written entirely in Quechua is defended for the first time, at the University of San Marcos in Lima"],"a":0,"w":"1584: A catechism in Spanish, Quechua and Aymara becomes the first book printed in South America · 2019: A doctoral thesis written entirely in Quechua is defended for the first time, at the University of San Marcos in Lima."},{"p":"In which year?","q":"Domingo de Santo Tomás publishes the first grammar and dictionary of Quechua","o":["1584","1438","1975","1560"],"a":3,"w":"1560: Domingo de Santo Tomás publishes the first grammar and dictionary of Quechua."},{"p":"Which came first?","q":"","o":["The Inca ruler Pachacuti begins the expansion that makes Quechua the language of an empire, by tradition","Domingo de Santo Tomás publishes the first grammar and dictionary of Quechua"],"a":0,"w":"1438: The Inca ruler Pachacuti begins the expansion that makes Quechua the language of an empire, by tradition · 1560: Domingo de Santo Tomás publishes the first grammar and dictionary of Quechua."},{"p":"In which year?","q":"The Inca ruler Pachacuti begins the expansion that makes Quechua the language of an empire, by tradition","o":["1438","2019","1560","1975"],"a":0,"w":"1438: The Inca ruler Pachacuti begins the expansion that makes Quechua the language of an empire, by tradition."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -150,6 +157,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Quechua",slug="quechua",url="https://the-epoch-institute.org/language/quechua";

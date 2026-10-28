@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Old Turkic</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Old Turkic</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,13 @@
 
     <p class="profile-summary" id="summary"><em>Old Turkic, the earliest recorded Turkic language, was first written in the 8th century on the runic monuments of the Turkic <a class="enc-link" href="/encyclopedia/khagan">khagans</a> in <a class="enc-link" href="/encyclopedia/mongolia">Mongolia</a> and then by the <a class="enc-link" href="/encyclopedia/uyghurs">Uyghurs</a> in a rich Buddhist, Manichaean and Christian literature, followed by the Islamic works of the <a class="enc-link" href="/encyclopedia/kara-khanid-khanate">Karakhanids</a>. Deciphered in 1893, it marks the beginning of the written history of the Turkic languages, spoken today by some 200 million people.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="old-turkic"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Yusuf Khass Hajib completes the Kutadgu Bilig, the first great Islamic work in Turkic","o":["552","1893","840","1069"],"a":3,"w":"1069: Yusuf Khass Hajib completes the Kutadgu Bilig, the first great Islamic work in Turkic."},{"p":"Which came first?","q":"","o":["Yusuf Khass Hajib completes the Kutadgu Bilig, the first great Islamic work in Turkic","Vilhelm Thomsen deciphers the Old Turkic runic script"],"a":0,"w":"1069: Yusuf Khass Hajib completes the Kutadgu Bilig, the first great Islamic work in Turkic · 1893: Vilhelm Thomsen deciphers the Old Turkic runic script."},{"p":"In which year?","q":"The memorial inscription of Kul Tigin is raised in the Orkhon valley","o":["840","1069","732","1893"],"a":2,"w":"732: The memorial inscription of Kul Tigin is raised in the Orkhon valley."},{"p":"Which came first?","q":"","o":["The memorial inscription of Kul Tigin is raised in the Orkhon valley","Vilhelm Thomsen deciphers the Old Turkic runic script"],"a":0,"w":"732: The memorial inscription of Kul Tigin is raised in the Orkhon valley · 1893: Vilhelm Thomsen deciphers the Old Turkic runic script."},{"p":"In which year?","q":"Bumin founds the Turkic Khaganate, the first state to bear the name Türk","o":["1893","552","1069","840"],"a":1,"w":"552: Bumin founds the Turkic Khaganate, the first state to bear the name Türk."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -156,6 +163,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){

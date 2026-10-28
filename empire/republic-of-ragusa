@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of Ragusa"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>The Republic of Ragusa was a small aristocratic merchant republic that kept its independence for 450 years between <a class="enc-link" href="/encyclopedia/venice">Venice</a> and the <a class="enc-link" href="/encyclopedia/ottoman-empire">Ottoman Empire</a> through trade, tribute and diplomacy, leaving behind a rich archive, a body of Croatian literature, early quarantine measures and the walled city of <a class="enc-link" href="/encyclopedia/dubrovnik">Dubrovnik</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="republic-of-ragusa"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Marshal Marmont abolishes the republic","o":["1377","1808","1458","1699"],"a":1,"w":"1808: Marshal Marmont abolishes the republic."},{"p":"Which came first?","q":"","o":["The Treaty of Zadar ends Venetian rule; Ragusa becomes a self-governing republic","The city statute codifies Ragusan law"],"a":1,"w":"1358: The Treaty of Zadar ends Venetian rule; Ragusa becomes a self-governing republic · 1272: The city statute codifies Ragusan law."},{"p":"Which city was a capital of the Republic of Ragusa?","q":"","o":["Ragusa","Hamburg","Andorra la Vella","Saint Helier"],"a":0,"w":"Capital: Ragusa (Dubrovnik)."},{"p":"Which state came after the Republic of Ragusa?","q":"","o":["Crown of Castile","Czechoslovakia","French Empire","Kingdom of the Two Sicilies"],"a":2,"w":"Succeeded by: French Empire (Illyrian Provinces); later the Austrian Empire."},{"p":"In which year?","q":"The Treaty of Zadar ends Venetian rule; Ragusa becomes a self-governing republic","o":["1358","1808","1272","1667"],"a":0,"w":"1358: The Treaty of Zadar ends Venetian rule; Ragusa becomes a self-governing republic."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Republic of Ragusa",slug="republic-of-ragusa",url="https://the-epoch-institute.org/empire/republic-of-ragusa";

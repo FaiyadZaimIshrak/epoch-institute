@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Venezuela"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>Venezuela, the <a class="enc-link" href="/encyclopedia/bantustan">homeland</a> of <a class="enc-link" href="/encyclopedia/simon-bolivar">Simón Bolívar</a> that left <a class="enc-link" href="/encyclopedia/esztergom">Gran</a> Colombia in 1830, was transformed by the world’s largest oil reserves from an impoverished land of caudillos into a founder of <a class="enc-link" href="/encyclopedia/opec">OPEC</a> and a stable democracy, before the Bolivarian revolution and economic collapse made it the centre of a regional crisis.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="venezuela"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Treaty of Coche ends the Federal War","o":["1863","1976","1830","1854"],"a":0,"w":"1863: The Treaty of Coche ends the Federal War."},{"p":"Which came first?","q":"","o":["Slavery is abolished under President José Gregorio Monagas","The oil industry is nationalised and PDVSA is created"],"a":0,"w":"1854: Slavery is abolished under President José Gregorio Monagas · 1976: The oil industry is nationalised and PDVSA is created."},{"p":"Which city was a capital of Venezuela?","q":"","o":["Sucre","La Paz","Caracas","Onondaga"],"a":2,"w":"Capital: Caracas."},{"p":"Who founded Venezuela?","q":"","o":["Simón Bolívar","Antonio José de Sucre","José Antonio Páez","Hiawatha"],"a":2,"w":"Founder: José Antonio Páez."},{"p":"In which year?","q":"Venezuela co-founds OPEC at Baghdad","o":["1922","1830","1960","1863"],"a":2,"w":"1960: Venezuela co-founds OPEC at Baghdad."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Venezuela",slug="venezuela",url="https://the-epoch-institute.org/empire/venezuela";

@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Sikhism, founded by Guru Nanak in the <a class="enc-link" href="/encyclopedia/punjab">Punjab</a> around 1500 and shaped by nine Gurus after him, teaches devotion to one God, honest work, sharing and the equality of all people. The <a class="enc-link" href="/encyclopedia/khalsa">Khalsa</a> founded by <a class="enc-link" href="/encyclopedia/guru-gobind-singh">Guru Gobind Singh</a> in 1699 and the Guru Granth Sahib, its living scripture, define its community, which today numbers some 25 to 30 million people in the Punjab and around the world.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="sikhism"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Guru Arjan is executed under the Mughal emperor Jahangir","o":["1984","1606","1577","1799"],"a":1,"w":"1606: Guru Arjan is executed under the Mughal emperor Jahangir."},{"p":"Which came first?","q":"","o":["Guru Tegh Bahadur is executed in Delhi on the orders of Aurangzeb","Ranjit Singh takes Lahore and goes on to found the Sikh Empire"],"a":0,"w":"1675: Guru Tegh Bahadur is executed in Delhi on the orders of Aurangzeb · 1799: Ranjit Singh takes Lahore and goes on to found the Sikh Empire."},{"p":"In which year?","q":"Guru Tegh Bahadur is executed in Delhi on the orders of Aurangzeb","o":["1606","1675","1984","1604"],"a":1,"w":"1675: Guru Tegh Bahadur is executed in Delhi on the orders of Aurangzeb."},{"p":"Which came first?","q":"","o":["Ranjit Singh takes Lahore and goes on to found the Sikh Empire","The Indian army’s Operation Blue Star at the Golden Temple, followed by the assassination of Indira Gandhi and anti-Sikh violence"],"a":0,"w":"1799: Ranjit Singh takes Lahore and goes on to found the Sikh Empire · 1984: The Indian army’s Operation Blue Star at the Golden Temple, followed by the assassination of Indira Gandhi and anti-Sikh violence."},{"p":"In which year?","q":"Guru Arjan installs the Adi Granth, the Sikh scripture, in the Harmandir Sahib at Amritsar","o":["1604","1675","1577","1984"],"a":0,"w":"1604: Guru Arjan installs the Adi Granth, the Sikh scripture, in the Harmandir Sahib at Amritsar."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -156,6 +163,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Sikhism",slug="sikhism",url="https://the-epoch-institute.org/religion/sikhism";

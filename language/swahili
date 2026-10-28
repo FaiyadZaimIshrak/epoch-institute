@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -116,6 +116,13 @@
 
     <p class="profile-summary" id="summary"><em>Swahili, a Bantu language that grew in the merchant towns of the East African coast from around the 8th century, absorbed words from Arabic and other languages of the <a class="enc-link" href="/encyclopedia/indian-ocean">Indian Ocean</a>, developed a written poetry in Arabic script and spread inland with the 19th-century caravans. Promoted by colonial rulers and independent Tanzania, it is today the common language of <a class="enc-link" href="/encyclopedia/east-africa">East Africa</a>, spoken by well over a hundred million people.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="swahili"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Ibn Battuta visits Mombasa and Kilwa and describes the wealth of the Swahili coast","o":["1728","2022","1331","1967"],"a":2,"w":"1331: Ibn Battuta visits Mombasa and Kilwa and describes the wealth of the Swahili coast."},{"p":"Which came first?","q":"","o":["Ibn Battuta visits Mombasa and Kilwa and describes the wealth of the Swahili coast","Letters in Arabic script written at Kilwa, later seized by the Portuguese and kept at Goa, are the oldest known documents in Swahili"],"a":0,"w":"1331: Ibn Battuta visits Mombasa and Kilwa and describes the wealth of the Swahili coast · 1711: Letters in Arabic script written at Kilwa, later seized by the Portuguese and kept at Goa, are the oldest known documents in Swahili."},{"p":"In which year?","q":"A committee of the British East African territories standardises Swahili on the dialect of Zanzibar","o":["2022","1728","1930","1967"],"a":2,"w":"1930: A committee of the British East African territories standardises Swahili on the dialect of Zanzibar."},{"p":"Which came first?","q":"","o":["Tanzania makes Swahili the language of government and of primary schooling","The first World Kiswahili Language Day is celebrated on 7 July, proclaimed by UNESCO"],"a":0,"w":"1967: Tanzania makes Swahili the language of government and of primary schooling · 2022: The first World Kiswahili Language Day is celebrated on 7 July, proclaimed by UNESCO."},{"p":"In which year?","q":"The Utendi wa Tambuka, the oldest dated epic poem in Swahili, is composed","o":["1711","1967","1728","2022"],"a":2,"w":"1728: The Utendi wa Tambuka, the oldest dated epic poem in Swahili, is composed."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -149,6 +156,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Swahili",slug="swahili",url="https://the-epoch-institute.org/language/swahili";

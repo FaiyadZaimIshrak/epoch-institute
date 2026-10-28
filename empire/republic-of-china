@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of China"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Republic of <a class="enc-link" href="/encyclopedia/china">China</a> ended two millennia of imperial rule, led China through warlordism and the war against <a class="enc-link" href="/encyclopedia/japan">Japan</a>, and after losing the mainland in 1949 rebuilt itself on <a class="enc-link" href="/encyclopedia/taiwan">Taiwan</a>, where an authoritarian one-party state became a wealthy democracy whose international status is still contested.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="republic-of-china"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"First direct presidential election, won by Lee Teng-hui","o":["1928","1996","1911","1987"],"a":1,"w":"1996: First direct presidential election, won by Lee Teng-hui."},{"p":"Which came first?","q":"","o":["War with Japan begins after the Marco Polo Bridge Incident","UN Resolution 2758 transfers China’s seat to the People’s Republic"],"a":0,"w":"1937: War with Japan begins after the Marco Polo Bridge Incident · 1971: UN Resolution 2758 transfers China’s seat to the People’s Republic."},{"p":"Which city was a capital of the Republic of China?","q":"","o":["Sygnak","Edo","Nanjing","Tokyo"],"a":2,"w":"Capital: Nanjing (1912); Beijing (1912–28); Nanjing (1928–49, wartime Chongqing); Taipei from 1949."},{"p":"Who founded the Republic of China?","q":"","o":["Sun Yat-sen","Mao Zedong","Emperor Meiji","Nurhaci"],"a":0,"w":"Founder: Sun Yat-sen."},{"p":"Which state came after the Republic of China?","q":"","o":["Qing Empire","State of Japan","Empire of Japan","People’s Republic of China"],"a":3,"w":"Succeeded by: People’s Republic of China (on the mainland, 1949)."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Republic of China",slug="republic-of-china",url="https://the-epoch-institute.org/empire/republic-of-china";

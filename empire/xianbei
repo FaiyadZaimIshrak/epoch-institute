@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Xianbei"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The <a class="enc-link" href="/encyclopedia/xianbei">Xianbei</a> succeeded the <a class="enc-link" href="/encyclopedia/xiongnu-empire">Xiongnu</a> as the dominant people of the Mongolian steppe, built under Tanshihuai a vast but short-lived confederation that defeated Han armies, and gave rise to the <a class="enc-link" href="/encyclopedia/murong-xianbei">Murong</a>, <a class="enc-link" href="/encyclopedia/tuoba">Tuoba</a> and other peoples whose states, above all the Northern Wei, reshaped northern <a class="enc-link" href="/encyclopedia/china">China</a> and its later dynasties.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">4 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="xianbei"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which came first?","q":"","o":["Kebineng marches to Beidi in support of Zhuge Liang","Tanshihuai routs a three-pronged Han expedition into the steppe"],"a":1,"w":"231: Kebineng marches to Beidi in support of Zhuge Liang · 177: Tanshihuai routs a three-pronged Han expedition into the steppe."},{"p":"Who founded Xianbei?","q":"","o":["Liu Bang","Jumong","Bak Hyeokgeose","Tanshihuai"],"a":3,"w":"Founder: Tanshihuai (as united confederation)."},{"p":"Which state came after Xianbei?","q":"","o":["Cao Wei","Balhae","Murong","Goryeo"],"a":2,"w":"Succeeded by: Murong, Tuoba, Duan and Yuwen Xianbei."},{"p":"Which came first?","q":"","o":["Kebineng is assassinated on the orders of Wang Xiong of Cao Wei","Tanshihuai routs a three-pronged Han expedition into the steppe"],"a":1,"w":"235: Kebineng is assassinated on the orders of Wang Xiong of Cao Wei · 177: Tanshihuai routs a three-pronged Han expedition into the steppe."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Xianbei",slug="xianbei",url="https://the-epoch-institute.org/empire/xianbei";

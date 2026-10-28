@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Hebrew</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Hebrew</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Hebrew, the Canaanite language of ancient Israel and <a class="enc-link" href="/encyclopedia/judah">Judah</a>, is the language of the <a class="enc-link" href="/encyclopedia/hebrew-bible">Hebrew Bible</a>. Replaced in daily speech by <a class="enc-link" href="/encyclopedia/aramaic">Aramaic</a> and other languages, it remained for two thousand years the language of Jewish prayer, law, poetry and learning, and was revived as a spoken language from the late 19th century to become the language of Israel, spoken by some 9 million people.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="hebrew"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The British Mandate for Palestine recognises Hebrew as an official language beside English and Arabic","o":["1953","1922","1881","1947"],"a":1,"w":"1922: The British Mandate for Palestine recognises Hebrew as an official language beside English and Arabic."},{"p":"Which came first?","q":"","o":["The first Dead Sea Scrolls, including the oldest known manuscripts of the Hebrew Bible, are found near Qumran","The British Mandate for Palestine recognises Hebrew as an official language beside English and Arabic"],"a":1,"w":"1947: The first Dead Sea Scrolls, including the oldest known manuscripts of the Hebrew Bible, are found near Qumran · 1922: The British Mandate for Palestine recognises Hebrew as an official language beside English and Arabic."},{"p":"In which year?","q":"The first Dead Sea Scrolls, including the oldest known manuscripts of the Hebrew Bible, are found near Qumran","o":["1947","1881","1922","1953"],"a":0,"w":"1947: The first Dead Sea Scrolls, including the oldest known manuscripts of the Hebrew Bible, are found near Qumran."},{"p":"Which came first?","q":"","o":["The British Mandate for Palestine recognises Hebrew as an official language beside English and Arabic","Eliezer Ben-Yehuda settles in Jerusalem and begins his campaign to revive spoken Hebrew"],"a":1,"w":"1922: The British Mandate for Palestine recognises Hebrew as an official language beside English and Arabic · 1881: Eliezer Ben-Yehuda settles in Jerusalem and begins his campaign to revive spoken Hebrew."},{"p":"In which year?","q":"Eliezer Ben-Yehuda settles in Jerusalem and begins his campaign to revive spoken Hebrew","o":["1947","1953","1922","1881"],"a":3,"w":"1881: Eliezer Ben-Yehuda settles in Jerusalem and begins his campaign to revive spoken Hebrew."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -155,6 +162,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Abbasid Caliphate"></div>
@@ -121,6 +121,13 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Abbasid Caliphate endured in one form or another for 767 years, a testament to the remarkable resilience of its religious legitimacy even as its political substance was repeatedly hollowed out. Its fall marked the definitive end of a unified caliphal authority and the permanent fragmentation of the caliphal institution. It survives in historical memory as the civilisation that gave the medieval world <a class="enc-link" href="/encyclopedia/algebra">algebra</a>, advances in <a class="enc-link" href="/encyclopedia/babylonian-astronomy">astronomy</a> and medicine, and the preservation of classical learning, an intellectual legacy that outlasted by centuries the political empire that produced it.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="abbasid-caliphate"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Al-Mu'tasim moves the capital to Samarra to house his Turkic slave army","o":["750","836","1258","945"],"a":1,"w":"836: Al-Mu'tasim moves the capital to Samarra to house his Turkic slave army."},{"p":"Which came first?","q":"","o":["Hulagu Khan's Mongols sack Baghdad and execute Caliph al-Musta'sim","Al-Mansur founds the Round City of Baghdad on the Tigris"],"a":1,"w":"1258: Hulagu Khan's Mongols sack Baghdad and execute Caliph al-Musta'sim · 762: Al-Mansur founds the Round City of Baghdad on the Tigris."},{"p":"Which city was a capital of the Abbasid Caliphate?","q":"","o":["Shamakhi","Tbilisi","Baghdad","Kutaisi"],"a":2,"w":"Capital: Baghdad, Samarra."},{"p":"Which state came after the Abbasid Caliphate?","q":"","o":["Kingdom of Kartli","Safavid Empire","Ilkhanate","Kingdom of Kakheti"],"a":2,"w":"Succeeded by: Ilkhanate, Mamluk Sultanate."},{"p":"In which year?","q":"Al-Mansur founds the Round City of Baghdad on the Tigris","o":["762","945","1258","750"],"a":0,"w":"762: Al-Mansur founds the Round City of Baghdad on the Tigris."}]</script>
+    </section>
 
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
@@ -165,6 +172,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Abbasid Caliphate",slug="abbasid-caliphate",url="https://the-epoch-institute.org/empire/abbasid-caliphate";

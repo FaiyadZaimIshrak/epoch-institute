@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Second Bulgarian Empire"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Second Bulgarian Empire restored Bulgarian independence after nearly two centuries of Byzantine rule, destroyed a <a class="enc-link" href="/encyclopedia/latin">Latin</a> crusader army at <a class="enc-link" href="/encyclopedia/edirne">Adrianople</a> in 1205 and briefly dominated the <a class="enc-link" href="/encyclopedia/balkans">Balkans</a> under <a class="enc-link" href="/encyclopedia/ivan-asen-ii">Ivan Asen II</a>, while the <a class="enc-link" href="/encyclopedia/veliko-tarnovo">Tarnovo</a> literary school it fostered shaped <a class="enc-link" href="/encyclopedia/eastern-orthodox-church">Orthodox</a> Slavic culture from <a class="enc-link" href="/encyclopedia/serbia">Serbia</a> and Wallachia to <a class="enc-link" href="/encyclopedia/russia">Russia</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="second-bulgarian-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Kaloyan destroys the Latin crusader army at Adrianople and captures Emperor Baldwin I","o":["1205","1185","1235","1242"],"a":0,"w":"1205: Kaloyan destroys the Latin crusader army at Adrianople and captures Emperor Baldwin I."},{"p":"Which came first?","q":"","o":["The Ottomans capture Tarnovo after a three-month siege","Ivan Asen II defeats and captures Theodore of Epirus at Klokotnitsa"],"a":1,"w":"1393: The Ottomans capture Tarnovo after a three-month siege · 1230: Ivan Asen II defeats and captures Theodore of Epirus at Klokotnitsa."},{"p":"Which city was a capital of the Second Bulgarian Empire?","q":"","o":["Constantinople","Bruges","Tarnovo","Nicaea"],"a":2,"w":"Capital: Tarnovo."},{"p":"Who founded the Second Bulgarian Empire?","q":"","o":["Peter","Constantine the Great","Reginar Longneck","Baldwin I Iron Arm"],"a":0,"w":"Founder: Peter and Asen (Ivan Asen I)."},{"p":"Which state came after the Second Bulgarian Empire?","q":"","o":["Department of Jemmapes","Ottoman Empire","Burgundian State","French Hainaut"],"a":1,"w":"Succeeded by: Ottoman Empire."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Second Bulgarian Empire",slug="second-bulgarian-empire",url="https://the-epoch-institute.org/empire/second-bulgarian-empire";

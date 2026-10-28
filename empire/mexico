@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Mexico"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em><a class="enc-link" href="/encyclopedia/mexico">Mexico</a> matters as the republic that defeated a European-imposed monarchy in 1867, went through the first great social revolution of the twentieth century and built one of the world’s most durable one-party systems, before a peaceful transition in 2000 made it a major democratic and industrial economy.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="mexico"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Lázaro Cárdenas expropriates foreign oil companies","o":["1994","1867","1938","1910"],"a":2,"w":"1938: Lázaro Cárdenas expropriates foreign oil companies."},{"p":"Which came first?","q":"","o":["Francisco I. Madero’s call to revolt begins the Mexican Revolution","Maximilian is executed at Querétaro and Benito Juárez restores the republic"],"a":1,"w":"1910: Francisco I. Madero’s call to revolt begins the Mexican Revolution · 1867: Maximilian is executed at Querétaro and Benito Juárez restores the republic."},{"p":"Which city was a capital of Mexico?","q":"","o":["Mexico City","Onondaga","Ottawa","Buenos Aires"],"a":0,"w":"Capital: Mexico City."},{"p":"Who founded Mexico?","q":"","o":["Benito Juárez","Bartolomé Mitre","John A. Macdonald","Hiawatha"],"a":0,"w":"Founder: Benito Juárez (restored republic)."},{"p":"In which year?","q":"NAFTA comes into force and the Zapatistas rise in Chiapas","o":["1929","1938","1994","2000"],"a":2,"w":"1994: NAFTA comes into force and the Zapatistas rise in Chiapas."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Mexico",slug="mexico",url="https://the-epoch-institute.org/empire/mexico";

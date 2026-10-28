@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Chimor"></div>
@@ -117,6 +117,13 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Kingdom of Chimor was the largest Andean state before the <a class="enc-link" href="/encyclopedia/inca-empire">Incas</a>, ruling some 1,000 kilometres of the Peruvian coast from <a class="enc-link" href="/encyclopedia/chan-chan">Chan Chan</a>, a vast adobe city of walled royal compounds; its irrigation works, metalwork and administration impressed the Incas, who conquered it around 1470 and carried its craftsmen to <a class="enc-link" href="/encyclopedia/cusco">Cusco</a>.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">3 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-chimor"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which city was a capital of the Kingdom of Chimor?","q":"","o":["Mayapan","Chan Chan","Tula","Cahokia"],"a":1,"w":"Capital: Chan Chan."},{"p":"Who founded the Kingdom of Chimor?","q":"","o":["Ce Acatl Topiltzin Quetzalcoatl","Tariácuri","Hunac Ceel","Taycanamo"],"a":3,"w":"Founder: Taycanamo (legendary)."},{"p":"Which state came after the Kingdom of Chimor?","q":"","o":["New Kingdom of Granada","Sotuta","Inca Empire","Culhuacan"],"a":2,"w":"Succeeded by: Inca Empire."}]</script>
+    </section>
 
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
@@ -158,6 +165,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Chimor",slug="kingdom-of-chimor",url="https://the-epoch-institute.org/empire/kingdom-of-chimor";

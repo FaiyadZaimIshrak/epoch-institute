@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Shinto, “the way of the kami”, is the native religion of <a class="enc-link" href="/encyclopedia/japan">Japan</a>: the worship of the sacred powers of nature, ancestors and great people at shrines, without a founder or a single scripture. Organised around the imperial court in the 7th and 8th centuries and intertwined with <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> for a thousand years, it was made the creed of the state from 1868 to 1945, and it remains woven into the festivals and life of modern Japan.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="shinto"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Kojiki records the myths of the kami and the descent of the emperors from the sun goddess","o":["1868","712","690","927"],"a":1,"w":"712: The Kojiki records the myths of the kami and the descent of the emperors from the sun goddess."},{"p":"Which came first?","q":"","o":["The Engishiki lists 2,861 shrines and the court’s rituals and prayers","The first ritual rebuilding of the Grand Shrine of Ise"],"a":1,"w":"927: The Engishiki lists 2,861 shrines and the court’s rituals and prayers · 690: The first ritual rebuilding of the Grand Shrine of Ise."},{"p":"In which year?","q":"The Allied occupation’s Shinto Directive ends State Shinto","o":["927","1869","1945","690"],"a":2,"w":"1945: The Allied occupation’s Shinto Directive ends State Shinto."},{"p":"Which came first?","q":"","o":["The Kojiki records the myths of the kami and the descent of the emperors from the sun goddess","The Engishiki lists 2,861 shrines and the court’s rituals and prayers"],"a":0,"w":"712: The Kojiki records the myths of the kami and the descent of the emperors from the sun goddess · 927: The Engishiki lists 2,861 shrines and the court’s rituals and prayers."},{"p":"In which year?","q":"The Engishiki lists 2,861 shrines and the court’s rituals and prayers","o":["690","927","712","1868"],"a":1,"w":"927: The Engishiki lists 2,861 shrines and the court’s rituals and prayers."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -156,6 +163,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Shinto",slug="shinto",url="https://the-epoch-institute.org/religion/shinto";

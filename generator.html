@@ -165,10 +165,11 @@ function readingMinutes(profile, emp) {
   var words = text.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 230));
 }
-function tocHtml(sectionKeys, profile, lead) {
+function tocHtml(sectionKeys, profile, lead, tail) {
   if (!profile) return '';
   var items = (lead || []).concat(sectionKeys.filter(function (p) { return profile[p[0]]; }).map(function (p) { return [p[0], p[1]]; }));
   if (profile.summary) items.push(['summary', 'Summary']);
+  (tail || []).forEach(function (t) { items.push(t); });
   if (Array.isArray(profile.references) && profile.references.length) items.push(['detail-references', 'References']);
   return '<nav class="empire-toc" aria-label="On this page">\n      <p class="empire-toc-title">On this page</p>\n      <ul>' +
     items.map(function (it) { return '<li><a href="#' + it[0] + '">' + it[1] + '</a></li>'; }).join('') + '</ul>\n    </nav>';
@@ -287,6 +288,80 @@ function faithMapHtml(emp) {
     '    </section>';
 }
 
+// "Test yourself" (test-yourself.js): up to five questions built only from the profile's own key events (empire-glance.js,
+// firm years) and facts (empire-facts.js), the wrong answers from profiles of the same kind and region, nearest in time
+// first. Seeded by the name, so the page comes out the same on every run. Shown when there are at least three.
+function tyRng(seed) {
+  var h = 2166136261; for (var i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
+  return function () { h = Math.imul(h ^ (h >>> 15), 2246822507); h = Math.imul(h ^ (h >>> 13), 3266489909); h ^= h >>> 16; return (h >>> 0) / 4294967296; };
+}
+function tyShuffle(a, r) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+function tyFirm(t) { var m = /^(\d{1,4})( BCE)?$/.exec(String(t).trim()); return m ? (m[2] ? -m[1] : +m[1]) : null; }
+function tyYear(y) { return y < 0 ? -y + ' BCE' : String(y); }
+// clean proper names from a facts value ("Winchester; later London", "No common capital; chief cities Kano" -> names only)
+var TY_BAD = /^(no|none|various|several|many|shifting|itinerant|uncertain|unknown|multiple|royal|citizens|chief|the|a|an)\b/i;
+var TY_ADJ = /^(Senior|Middle|Junior|Upper|Lower|Northern|Southern|Eastern|Western|Central|Greater|Lesser|Inner|Outer|Little|Great|New|Old|Later|Early|Late)$/;
+var TY_PART = /^(of|de|la|le|del|al|el|the|and|du|des|da|di|von|van|ibn|bin|upon|on|in|y|zu|ad|an|en|na|ul|ud|ad-din|al-din)$/;
+function tyNames(s) {
+  return String(s || '').replace(/\([^)]*\)/g, ' ').split(/;|,|\/| and | then | later /).map(function (x) {
+    // "Honolulu under Kamehameha I", "Kutaisi in the west"; "in" with a capital stays: French Establishments in Oceania
+    return x.replace(/\s+(?:(?:under|until|from|after|before|during)\s|in\s+[a-z0-9]).*$/, '').replace(/\s+/g, ' ').trim();
+  }).filter(function (x) {
+    return x && /^[A-ZÀ-ɏʻ]/.test(x) && !/\d/.test(x) && !TY_BAD.test(x) && !TY_ADJ.test(x) && x.split(' ').length <= 5 &&
+      x.split(' ').every(function (w) { return /^[A-ZÀ-ɏʻ'’-]/.test(w) || TY_PART.test(w) || /^[IVX]+$/.test(w); }) &&
+      !/\b(capital|capitals|court|seat|seats|city-states|tribes|chiefs|clans|towns)\b/i.test(x);
+  });
+}
+function tyThe(n) { return /^(Kingdom|Empire|Republic|Duchy|Grand|County|Principality|Sultanate|Caliphate|State|Khanate|Emirate|Free|Federal|United|Union|Commonwealth|Crown|Margraviate|Electorate|Bailiwick|Canton|Prince-Bishopric|Holy|Old|First|Second|Later|Neo|Western|Eastern|Northern|Southern|Middle)\b/.test(n) || /(Empire|Caliphate|Dynasty|dynasty|Kingdom|kingdom|Sultanate|Shogunate|Khanate|Khaganate|Confederacy|Confederation|League|Republic|Raj|State|Nation|Union|Commonwealth|Horde|Monarchy|Order|Company)$/.test(n) ? 'the ' + n : n; }
+function tyNear(emp) {   // same kind and region: overlapping spans first (longest overlap), then the nearest in time
+  var y = profileSpan(emp);
+  return EMPIRES.filter(function (e) { return e !== emp && profileKind(e) === profileKind(emp) && e.region === emp.region; }).map(function (e) {
+    var z = profileSpan(e), ov = Math.min(y[1], z[1]) - Math.max(y[0], z[0]);
+    return { e: e, s: ov > 0 ? 100000 + ov : -Math.abs((z[0] + z[1]) / 2 - (y[0] + y[1]) / 2) };
+  }).sort(function (a, b) { return b.s - a.s || a.e.name.localeCompare(b.e.name); }).map(function (x) { return x.e; });
+}
+function tyQuestions(emp) {
+  var name = emp.name, r = tyRng(name), qs = [], g = glanceOf(name), f = (typeof EMPIRE_FACTS !== 'undefined' && EMPIRE_FACTS[name]) || {};
+  var evs = ((g && g.ev) || []).map(function (e) { return [tyFirm(e[0]), e[1]]; }).filter(function (e) { return e[0] !== null; });
+  var years = [], firsts = [];
+  // in which year: one key event, the other options the years of its other key events
+  if (evs.length >= 4) tyShuffle(evs, r).forEach(function (pick) {
+    var others = tyShuffle(evs.filter(function (e) { return e[0] !== pick[0]; }), r).filter(function (e, i, a) { return a.findIndex(function (x) { return x[0] === e[0]; }) === i; }).slice(0, 3);
+    if (others.length < 3) return;
+    var opts = tyShuffle([pick].concat(others), r).map(function (e) { return tyYear(e[0]); });
+    years.push({ p: 'In which year?', q: pick[1], o: opts, a: opts.indexOf(tyYear(pick[0])), w: tyYear(pick[0]) + ': ' + pick[1] + '.' });
+  });
+  // which came first: two key events at least 20 years apart
+  var pairs = [];
+  for (var i = 0; i < evs.length; i++) for (var j = i + 1; j < evs.length; j++) if (Math.abs(evs[i][0] - evs[j][0]) >= 20) pairs.push([evs[i], evs[j]]);
+  tyShuffle(pairs, r).forEach(function (pr) {
+    var opts = tyShuffle(pr, r), first = pr[0][0] < pr[1][0] ? pr[0] : pr[1];
+    firsts.push({ p: 'Which came first?', q: '', o: opts.map(function (e) { return e[1]; }), a: opts.indexOf(first), w: opts.map(function (e) { return tyYear(e[0]) + ': ' + e[1]; }).join(' · ') + '.' });
+  });
+  // a fact (capital, founder, successor): the profile's own value against the same fact of its neighbours
+  function fact(key, prompt, label) {
+    var mine = tyNames(f[key]); if (!mine.length) return null;
+    var ans = mine[0], wrong = [];
+    tyNear(emp).forEach(function (o) { var of = (typeof EMPIRE_FACTS !== 'undefined' && EMPIRE_FACTS[o.name]) || {}; tyNames(of[key]).forEach(function (x) { if (wrong.length < 3 && mine.indexOf(x) < 0 && wrong.indexOf(x) < 0 && x !== name) wrong.push(x); }); });
+    if (wrong.length < 3) return null;
+    var opts = tyShuffle([ans].concat(wrong), r);
+    return { p: prompt, q: '', o: opts, a: opts.indexOf(ans), w: label + ': ' + String(f[key]).replace(/\s+/g, ' ') + '.' };
+  }
+  var facts = profileKind(emp) === 'polity' ? [fact('capital', 'Which city was a capital of ' + tyThe(name) + '?', 'Capital'), fact('founder', 'Who founded ' + tyThe(name) + '?', 'Founder'), fact('successor', 'Which state came after ' + tyThe(name) + '?', 'Succeeded by')].filter(Boolean) : [];
+  // five: a year, which came first, the facts, then more years and pairs while there is room
+  [years.shift(), firsts.shift()].concat(facts, [years.shift(), firsts.shift(), years.shift()]).forEach(function (q) { if (q && qs.length < 5) qs.push(q); });
+  return qs;
+}
+function testHtml(emp) {
+  var qs = tyQuestions(emp); if (qs.length < 3) return '';
+  return '<section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">\n' +
+    '      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>\n' +
+    '      <p class="ty-lede">' + qs.length + ' questions on this page, from its key events and facts.</p>\n' +
+    '      <div class="ty" data-ty="' + toSlug(emp.name) + '"><p class="ty-loading">The questions open here once the page has loaded.</p></div>\n' +
+    '      <script type="application/json" class="ty-data">' + JSON.stringify(qs).replace(/</g, '\\u003c') + '\x3C/script>\n' +
+    '    </section>';
+}
+
 // One picture per profile section (empire-section-images.js), linked to its encyclopedia entry, with credit.
 function sectionFigure(empireName, key) {
   var f = typeof SECTION_IMAGES !== 'undefined' && SECTION_IMAGES[empireName] && SECTION_IMAGES[empireName][key];
@@ -343,6 +418,8 @@ function buildPage(emp) {
   var summaryHtml = (profile && profile.summary)
     ? '<p class="profile-summary" id="summary"><em>'+linkify(esc(profile.summary), name)+'</em></p>'
     : (info ? '<p class="profile-summary">'+linkify(esc(info), name)+'</p>' : '');
+
+  var tyHtml = testHtml(emp);   // "Test yourself", after the summary
 
   var referencesHtml = '';
   if (profile && Array.isArray(profile.references) && profile.references.length) {
@@ -431,7 +508,7 @@ factRows(name, emp) +
 '      </div>\n' +
 '    </div>\n\n' +
 (glanceOf(name) ? '    ' + glanceHtml(name) + '\n\n' : '') +
-'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasFaithMap(emp) ? [['faith-map', 'Spread through the centuries']] : [], hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : [])) + '\n\n' +
+'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasFaithMap(emp) ? [['faith-map', 'Spread through the centuries']] : [], hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : []), tyHtml ? [['test-yourself', 'Test yourself']] : []) + '\n\n' +
 (isPolity ? '    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' : '') +
 '    ' + riseFallHtml(emp, name, isPolity) + '\n\n' +
 (hasFaithMap(emp) ? '    ' + faithMapHtml(emp) + '\n\n' : '') +
@@ -439,6 +516,7 @@ factRows(name, emp) +
 noProfileNote + '\n' +
 (sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
 (summaryHtml ? '\n    ' + summaryHtml + '\n' : '') +
+(tyHtml ? '\n    ' + tyHtml + '\n' : '') +
 (referencesHtml ? '\n    ' + referencesHtml + '\n' : '') +
 (isPolity ? '\n    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>\n      <p class="profile-references-title" id="mini-cx-title">Connections</p>\n      <div class="cx-map" id="mini-cx" data-id="' + slug + '"></div>\n      <a class="mini-connections-more" href="/connections#' + slug + '">Open the full connections map →</a>\n    </section>\n' : '') +
 '\n    ' + (isPolity ? relatedHtml(emp) : kindRelatedHtml(emp)) + '\n' +
@@ -459,6 +537,7 @@ noProfileNote + '\n' +
 '<script src="/connections-map.js?v=13" defer>\x3C/script>\n' +
 '<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});\x3C/script>\n' : '') +
 (hasFaithMap(emp) ? '<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
+(tyHtml ? '<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();\x3C/script>\n' : '') +
 (hasScribe(emp) ? '<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
 '<script>\n' +
 '(function(){\n' +

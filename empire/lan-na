@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Lan Na"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Lan Na was the principal kingdom of northern <a class="enc-link" href="/encyclopedia/thailand">Thailand</a> for nearly five centuries, a centre of Pali scholarship whose <a class="enc-link" href="/encyclopedia/tai-tham-script">Tai Tham script</a>, law code and architecture defined a northern Thai civilisation that survived Burmese domination and still shapes the identity of the region today.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="lan-na"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Thonburi forces and northern lords take Chiang Mai from the Burmese","o":["1292","1369","1775","1296"],"a":2,"w":"1775: Thonburi forces and northern lords take Chiang Mai from the Burmese."},{"p":"Which came first?","q":"","o":["A revolt in Chiang Mai expels the Burmese governor","The monk Sumana founds a new Buddhist lineage at Wat Suan Dok"],"a":1,"w":"1727: A revolt in Chiang Mai expels the Burmese governor · 1369: The monk Sumana founds a new Buddhist lineage at Wat Suan Dok."},{"p":"Which city was a capital of Lan Na?","q":"","o":["Garhgaon","Rangpur","Chiang Mai","Charaideo"],"a":2,"w":"Capital: Chiang Mai."},{"p":"Who founded Lan Na?","q":"","o":["Bappa Rawal","U Thong","Mangrai","Sukaphaa"],"a":2,"w":"Founder: Mangrai."},{"p":"Which state came after Lan Na?","q":"","o":["Kingdom of Chiang Mai","United State of Rajasthan","Thonburi Kingdom","Mysore State"],"a":0,"w":"Succeeded by: Kingdom of Chiang Mai (under Siam)."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Lan Na",slug="lan-na",url="https://the-epoch-institute.org/empire/lan-na";

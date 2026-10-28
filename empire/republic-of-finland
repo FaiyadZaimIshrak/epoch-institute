@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of Finland"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>The Republic of <a class="enc-link" href="/encyclopedia/finland">Finland</a> is a small Nordic state that won independence from <a class="enc-link" href="/encyclopedia/russia">Russia</a> in 1917 and kept it through a civil war and two wars against the <a class="enc-link" href="/encyclopedia/soviet-union">Soviet Union</a>, then built a prosperous welfare democracy and moved from <a class="enc-link" href="/encyclopedia/cold-war">Cold War</a> neutrality into the <a class="enc-link" href="/encyclopedia/european-union">European Union</a> and <a class="enc-link" href="/encyclopedia/nato">NATO</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="republic-of-finland"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Finland joins the European Union","o":["1939","1918","1919","1995"],"a":3,"w":"1995: Finland joins the European Union."},{"p":"Which came first?","q":"","o":["Finland joins the European Union","The Soviet Union attacks, starting the Winter War"],"a":1,"w":"1995: Finland joins the European Union · 1939: The Soviet Union attacks, starting the Winter War."},{"p":"Which city was a capital of the Republic of Finland?","q":"","o":["Hamburg","Andorra la Vella","Saint Helier","Helsinki"],"a":3,"w":"Capital: Helsinki."},{"p":"Who founded the Republic of Finland?","q":"","o":["Count Adolf III of Schauenburg","Pehr Evind Svinhufvud","Roger-Bernard III","Congress of Vienna"],"a":1,"w":"Founder: Pehr Evind Svinhufvud and the Senate of Finland."},{"p":"In which year?","q":"The Soviet Union attacks, starting the Winter War","o":["1919","1944","1939","1918"],"a":2,"w":"1939: The Soviet Union attacks, starting the Winter War."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Republic of Finland",slug="republic-of-finland",url="https://the-epoch-institute.org/empire/republic-of-finland";

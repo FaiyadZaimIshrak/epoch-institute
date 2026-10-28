@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Roman Republic"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Roman Republic turned a city-state in <a class="enc-link" href="/encyclopedia/latium">Latium</a> into the master of the <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a> through its citizen army and allied manpower, created institutions and law that shaped <a class="enc-link" href="/encyclopedia/europe">Europe</a> and later republics, and destroyed itself in a century of civil wars that ended in the monarchy of Augustus.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="roman-republic"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Hannibal destroys a Roman army at the Battle of Cannae","o":["133 BCE","146 BCE","216 BCE","27 BCE"],"a":2,"w":"216 BCE: Hannibal destroys a Roman army at the Battle of Cannae."},{"p":"Which came first?","q":"","o":["Traditional expulsion of Tarquinius Superbus and election of the first consuls","The tribune Tiberius Gracchus is killed, opening an age of political violence"],"a":0,"w":"509 BCE: Traditional expulsion of Tarquinius Superbus and election of the first consuls · 133 BCE: The tribune Tiberius Gracchus is killed, opening an age of political violence."},{"p":"Which city was a capital of the Roman Republic?","q":"","o":["Byzantium","Seuthopolis","Rome","Knossos"],"a":2,"w":"Capital: Rome."},{"p":"Who founded the Roman Republic?","q":"","o":["Teres I","Theseus","Spartocus I","Lucius Junius Brutus"],"a":3,"w":"Founder: Lucius Junius Brutus (traditionally)."},{"p":"Which state came after the Roman Republic?","q":"","o":["Byzantine Empire","Hispania Citerior","Hunnic Empire","Roman Empire"],"a":3,"w":"Succeeded by: Roman Empire."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Roman Republic",slug="roman-republic",url="https://the-epoch-institute.org/empire/roman-republic";

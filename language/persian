@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Persian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Persian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Persian, the Iranian language of the Achaemenid kings, the Sasanian empire and, reborn after the Arab conquest, of Ferdowsi, <a class="enc-link" href="/encyclopedia/rumi">Rumi</a> and <a class="enc-link" href="/encyclopedia/hafez">Hafez</a>, became the language of courts and culture from <a class="enc-link" href="/encyclopedia/anatolia">Anatolia</a> to <a class="enc-link" href="/encyclopedia/india">India</a>. Spoken and written for some two and a half thousand years, it remains the language of <a class="enc-link" href="/encyclopedia/iran">Iran</a>, <a class="enc-link" href="/encyclopedia/afghanistan">Afghanistan</a> and Tajikistan, and one of the great literary languages of the world.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="persian"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Mughal emperor Akbar makes Persian the language of all government records in his empire","o":["1837","1582","651","1273"],"a":1,"w":"1582: The Mughal emperor Akbar makes Persian the language of all government records in his empire."},{"p":"Which came first?","q":"","o":["The Mughal emperor Akbar makes Persian the language of all government records in his empire","Death of the poet Rumi, author of the Masnavi"],"a":1,"w":"1582: The Mughal emperor Akbar makes Persian the language of all government records in his empire · 1273: Death of the poet Rumi, author of the Masnavi."},{"p":"In which year?","q":"Death of the poet Rumi, author of the Masnavi","o":["1837","1273","651","1582"],"a":1,"w":"1273: Death of the poet Rumi, author of the Masnavi."},{"p":"Which came first?","q":"","o":["Persian is replaced by English and local languages as the official language of British India","The fall of the Sasanian empire to the Arab conquerors makes Arabic the language of government"],"a":1,"w":"1837: Persian is replaced by English and local languages as the official language of British India · 651: The fall of the Sasanian empire to the Arab conquerors makes Arabic the language of government."},{"p":"In which year?","q":"Persian is replaced by English and local languages as the official language of British India","o":["1582","1837","1273","651"],"a":1,"w":"1837: Persian is replaced by English and local languages as the official language of British India."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -157,6 +164,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){

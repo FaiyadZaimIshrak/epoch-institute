@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Gurjara-Pratihara"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Gurjara-Pratiharas built the largest empire of northern <a class="enc-link" href="/encyclopedia/india">India</a> between <a class="enc-link" href="/encyclopedia/harsha">Harsha</a> and the <a class="enc-link" href="/encyclopedia/delhi-sultanate">Delhi Sultanate</a>, held Arab power in check in <a class="enc-link" href="/encyclopedia/sindh">Sindh</a> and <a class="enc-link" href="/encyclopedia/multan">Multan</a> for generations, and made <a class="enc-link" href="/encyclopedia/kannauj">Kannauj</a> the prize of the tripartite struggle, while their feudatories became the <a class="enc-link" href="/encyclopedia/rajputs">Rajput</a> dynasties that ruled the north after them.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="gurjara-pratihara"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which came first?","q":"","o":["Mahmud of Ghazni takes Kannauj after Rajyapala abandons it","An Arab merchant praises the cavalry and security of the Gurjara kingdom"],"a":1,"w":"1018: Mahmud of Ghazni takes Kannauj after Rajyapala abandons it · 851: An Arab merchant praises the cavalry and security of the Gurjara kingdom."},{"p":"Which city was a capital of Gurjara-Pratihara?","q":"","o":["Kannauj","Palembang","Jambi","Pakuan Pajajaran"],"a":0,"w":"Capital: Ujjain or Jalor (uncertain); Kannauj from c. 816."},{"p":"Who founded Gurjara-Pratihara?","q":"","o":["Dapunta Hyang Sri Jayanasa","Nagabhata I","Tarusbawa","Bappa Rawal"],"a":1,"w":"Founder: Nagabhata I."},{"p":"Which state came after Gurjara-Pratihara?","q":"","o":["Chandela","Majapahit","Banten Sultanate","Malacca Sultanate"],"a":0,"w":"Succeeded by: Gahadavala dynasty; Chandela and Paramara dynasties."},{"p":"Which came first?","q":"","o":["An Arab merchant praises the cavalry and security of the Gurjara kingdom","Last inscription of the dynasty, issued by Yashahpala"],"a":0,"w":"851: An Arab merchant praises the cavalry and security of the Gurjara kingdom · 1036: Last inscription of the dynasty, issued by Yashahpala."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Gurjara-Pratihara",slug="gurjara-pratihara",url="https://the-epoch-institute.org/empire/gurjara-pratihara";

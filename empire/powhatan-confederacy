@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Powhatan Confederacy"></div>
@@ -119,6 +119,13 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Powhatan paramount chiefdom united some 30 Algonquian peoples of coastal <a class="enc-link" href="/encyclopedia/virginia">Virginia</a> under <a class="enc-link" href="/encyclopedia/wahunsenacah">Wahunsenacah</a>, met the founders of <a class="enc-link" href="/encyclopedia/jamestown">Jamestown</a> on its own terms and twice nearly destroyed the colony, before English expansion broke it into tributary tribes whose descendants, among them the <a class="enc-link" href="/encyclopedia/pamunkey">Pamunkey</a> and Mattaponi, still hold reservations in Virginia.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="powhatan-confederacy"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Pocahontas marries John Rolfe, ending the First Anglo-Powhatan War","o":["1677","1614","1646","1622"],"a":1,"w":"1614: Pocahontas marries John Rolfe, ending the First Anglo-Powhatan War."},{"p":"Which came first?","q":"","o":["Pocahontas marries John Rolfe, ending the First Anglo-Powhatan War","Cockacoeske signs the Treaty of Middle Plantation"],"a":0,"w":"1614: Pocahontas marries John Rolfe, ending the First Anglo-Powhatan War · 1677: Cockacoeske signs the Treaty of Middle Plantation."},{"p":"Which city was a capital of the Powhatan Confederacy?","q":"","o":["Werowocomoco","Onondaga","Quebec","Mexico City"],"a":0,"w":"Capital: Werowocomoco (to 1609); Orapax (from 1609); Matchut (by 1614); later Pamunkey towns under Opechancanough."},{"p":"Who founded the Powhatan Confederacy?","q":"","o":["Hiawatha","Samuel de Champlain","Hernán Cortés","Wahunsenacah"],"a":3,"w":"Founder: Wahunsenacah (Powhatan)."},{"p":"In which year?","q":"Cockacoeske signs the Treaty of Middle Plantation","o":["1677","1622","1646","1570"],"a":0,"w":"1677: Cockacoeske signs the Treaty of Middle Plantation."}]</script>
+    </section>
 
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
@@ -161,6 +168,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Powhatan Confederacy",slug="powhatan-confederacy",url="https://the-epoch-institute.org/empire/powhatan-confederacy";

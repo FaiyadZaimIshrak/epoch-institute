@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Grand Duchy of Lithuania"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Grand Duchy of Lithuania grew from a pagan Baltic realm into one of the largest states of medieval <a class="enc-link" href="/encyclopedia/europe">Europe</a>, ruling most of present-day <a class="enc-link" href="/encyclopedia/belarus">Belarus</a> and <a class="enc-link" href="/encyclopedia/ukraine">Ukraine</a>, and through its union with <a class="enc-link" href="/encyclopedia/poland">Poland</a> it shaped the religious, legal and national history of eastern Europe for more than five centuries.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="grand-duchy-of-lithuania"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Mindaugas is crowned king of Lithuania","o":["1387","1569","1236","1253"],"a":3,"w":"1253: Mindaugas is crowned king of Lithuania."},{"p":"Which came first?","q":"","o":["Vytautas and the Poles defeat the Teutonic Order at the Battle of Grunwald","Lithuanians destroy the Livonian Brothers of the Sword at the Battle of Saule"],"a":1,"w":"1410: Vytautas and the Poles defeat the Teutonic Order at the Battle of Grunwald · 1236: Lithuanians destroy the Livonian Brothers of the Sword at the Battle of Saule."},{"p":"Which city was a capital of the Grand Duchy of Lithuania?","q":"","o":["Bruges","Zürich","Saint Helier","Vilnius"],"a":3,"w":"Capital: Vilnius (from the early 14th century); earlier seats included Kernavė and Trakai."},{"p":"Who founded the Grand Duchy of Lithuania?","q":"","o":["Henry I of Brabant","Reginar Longneck","Mindaugas","Baldwin I Iron Arm"],"a":2,"w":"Founder: Mindaugas."},{"p":"Which state came after the Grand Duchy of Lithuania?","q":"","o":["Helvetic Republic","Russian Empire","Burgundian State","Department of Jemmapes"],"a":1,"w":"Succeeded by: Russian Empire."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Grand Duchy of Lithuania",slug="grand-duchy-of-lithuania",url="https://the-epoch-institute.org/empire/grand-duchy-of-lithuania";

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="First Bulgarian Empire"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The First Bulgarian Empire was the first lasting independent state established on former imperial land in the <a class="enc-link" href="/encyclopedia/balkans">Balkans</a>, a rival of <a class="enc-link" href="/encyclopedia/byzantine-empire">Byzantium</a> for three centuries, and the cradle of Slavonic Christian literature and the Cyrillic alphabet, which through its schools at <a class="enc-link" href="/encyclopedia/preslav">Preslav</a> and <a class="enc-link" href="/encyclopedia/ohrid">Ohrid</a> spread across the <a class="enc-link" href="/encyclopedia/eastern-orthodox-church">Orthodox</a> Slavic world.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="first-bulgarian-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Boris I receives the disciples of Cyril and Methodius","o":["886","1018","1014","927"],"a":0,"w":"886: Boris I receives the disciples of Cyril and Methodius."},{"p":"Which came first?","q":"","o":["Krum destroys the army of Nikephoros I, who is killed","Basil II destroys Samuel's army at the Battle of Kleidion"],"a":0,"w":"811: Krum destroys the army of Nikephoros I, who is killed · 1014: Basil II destroys Samuel's army at the Battle of Kleidion."},{"p":"Which city was a capital of the First Bulgarian Empire?","q":"","o":["Regensburg","Constantinople","Nicaea","Pliska"],"a":3,"w":"Capital: Pliska; Preslav from 893; later Prespa and Ohrid under Samuel."},{"p":"Who founded the First Bulgarian Empire?","q":"","o":["Asparuh","Garibald I","Constantine the Great","Cunedda"],"a":0,"w":"Founder: Asparuh."},{"p":"Which state came after the First Bulgarian Empire?","q":"","o":["Byzantine Empire","Kingdom of England","Electorate of Bavaria","Ottoman Empire"],"a":0,"w":"Succeeded by: Byzantine Empire (later the Second Bulgarian Empire, 1185)."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="First Bulgarian Empire",slug="first-bulgarian-empire",url="https://the-epoch-institute.org/empire/first-bulgarian-empire";

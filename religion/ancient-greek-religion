@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Ancient Greek religion, from the Mycenaean age to the end of antiquity, worshipped <a class="enc-link" href="/encyclopedia/zeus">Zeus</a>, the Olympian gods, heroes and local powers through sacrifice, festivals, games, oracles and mysteries, without a sacred book or a priestly caste. Woven into the life of every city, it inspired the <a class="enc-link" href="/encyclopedia/parthenon">Parthenon</a>, drama and the Olympic Games, and its myths remain one of the foundations of Western culture.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="ancient-greek-religion"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The last ancient Olympic Games are held, by tradition","o":["776 BCE","438 BCE","393","399 BCE"],"a":2,"w":"393: The last ancient Olympic Games are held, by tradition."},{"p":"Which came first?","q":"","o":["The last ancient Olympic Games are held, by tradition","Pheidias’s gold and ivory statue of Athena is dedicated in the Parthenon"],"a":1,"w":"393: The last ancient Olympic Games are held, by tradition · 438 BCE: Pheidias’s gold and ivory statue of Athena is dedicated in the Parthenon."},{"p":"In which year?","q":"Justinian forbids pagans to teach; the Platonic school of Athens closes","o":["399 BCE","438 BCE","529","392"],"a":2,"w":"529: Justinian forbids pagans to teach; the Platonic school of Athens closes."},{"p":"Which came first?","q":"","o":["Pheidias’s gold and ivory statue of Athena is dedicated in the Parthenon","The emperor Theodosius bans all pagan sacrifice and worship"],"a":0,"w":"438 BCE: Pheidias’s gold and ivory statue of Athena is dedicated in the Parthenon · 392: The emperor Theodosius bans all pagan sacrifice and worship."},{"p":"In which year?","q":"The first Olympic Games are held in honour of Zeus, by tradition","o":["393","529","399 BCE","776 BCE"],"a":3,"w":"776 BCE: The first Olympic Games are held in honour of Zeus, by tradition."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -158,6 +165,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Ancient Greek religion",slug="ancient-greek-religion",url="https://the-epoch-institute.org/religion/ancient-greek-religion";

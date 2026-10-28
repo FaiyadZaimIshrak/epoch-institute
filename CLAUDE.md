@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
@@ -16,14 +16,14 @@ Plus 404.html and generator.html (generator is NOT deployed — see scripts/depl
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, My Passport, Kids Corner,
+Year, People, Empire Explorer, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -60,7 +60,9 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   cards and rules): one rule at the end of the file sets it on every bordered input, select and textarea not focused.
   Layout shift (CLS) fixed Oct 2026, keep it so: nothing above content may arrive late. The atlas's region buttons are
   in its HTML (build:atlas-presets, written from $PRESETS), /state/'s empty list holds a screen's height until the
-  register arrives, the explorer's tabs have a fixed line height and the page preloads Source Sans 3. On a slow
+  register arrives, the explorer's tabs have a fixed line height and the page preloads Source Sans 3, and the century
+  bar (.ref-centuries, century and people pages) is a grid of equal cells above 700 px, so a late font re-wraps no
+  chip (it moved one a line up: CLS 0.08). Test with scratchpad pw/cls-trace2.js and FONT_DELAY=1500. On a slow
   connection the fonts come seconds after the page (the live crawl of 28 Oct measured CLS up to 0.23 from the swap):
   the tokens name fallback faces sized like the fonts ('Crimson Pro Fallback', 'Cinzel Fallback' on local Georgia,
   'Source Sans 3 Fallback' on Arial; size-adjust calibrated so 95% of 3,128 paragraphs and 99% of titles keep their
@@ -106,12 +108,15 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   faith-map.js and Globe Hunt (games.js) as `/d3-geo.js?v=1`. Only the explorer still loads full d3 (charts) from cdnjs.
 - /empire-profiles.js — EMPIRE_PROFILES, loaded only by profiles and generator.html
 - /epoch-stats.js — radar-chart stats, loaded by profiles and empire pages
+- /test-yourself.js — TestYourself.mount(el): the "Test yourself" section at the foot of profiles, century and path
+  pages (see "Test yourself"); loaded when the section nears the screen, without `?v=` (10-minute cache)
+- /flashcards.js — the Flashcards page (see "Flashcards")
 - favicon.svg / favicon.ico / apple-touch-icon.png / logo.png (Organization logo in the home page's JSON-LD)
 
 Caching (.htaccess): scripts a year, CSS a month, JSON a week, HTML always revalidated. shared.css, shared-data.js,
 shared-nav.js and enc-page.js are kept only 10 minutes (then stale-while-revalidate): the 460 profile pages and the
 ~38,000 generated pages load them WITHOUT `?v=`, so changing them needs no rebuild (so are scribe.js and faith-map.js,
-which the language and religion profiles load without `?v=`). Every other script tag carries a `?v=N` cache-buster: when you
+which the language and religion profiles load without `?v=`, and test-yourself.js). Every other script tag carries a `?v=N` cache-buster: when you
 change such a file, bump its `?v=` on every page that loads it (hand-written pages also use `?v=` for the four shared
 files; bump those too). data/*.json are sent as text/javascript (data/.htaccess) because the server does not compress
 application/json.
@@ -220,12 +225,15 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
 - `/centuries/<nth-century[-bce]>` + `/centuries/` — 51 pages (30th century BCE – 21st): counts, world map at
   mid-century, great powers (epoch-stats military + territory + economy + influence, times the share of the century
   alive, times strength on the profile's own curve), key events, people, works and ideas (ranked by profile and
-  state mentions and a picture), states founded / ended, On this day, prev/next. Century labels follow the
-  encyclopedia's Century(): 13th century = 1200–1299, 5th century BCE = 499–400 BCE.
+  state mentions and a picture), states founded / ended, On this day, Test yourself (see "Test yourself"), prev/next.
+  Century labels follow the encyclopedia's Century(): 13th century = 1200–1299, 5th century BCE = 499–400 BCE. Dates
+  are read by [EpochBuild.W]::Span: since Oct 2026 a year beside a century counts too ("c. 985–15th century" is
+  985–1499, "13th century–1707" 1200–1707: 48 entries had been filed by the century alone) and a shortened second year
+  is expanded ("1895–96": the Fourth Anglo-Ashanti War had been filed under the 1st century).
 - `/encyclopedia/glossary` — the 723 term entries A–Z (DefinedTermSet JSON-LD).
 - `/paths/<slug>` + `/paths/` — the 28 reading paths from reading-paths.js, each tagged with the /start reader types it suits (types:[…] in paths.json; shown as "Suits the …" on the page and card); /paths#slug forwards to /paths/slug.
   The picture strips (PathThumbs) never repeat a picture (compared by its Commons source) and put maps, plans and
-  diagrams last (PicIsChart).
+  diagrams last (PicIsChart). Each path page ends with Test yourself.
 - Lists of entries show a type glyph where an entry has no picture (PhSpan: `.ph .ph-person/-conflict/-place/…`,
   masked SVG icons in shared.css).
 - `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — 939 year pages, one for every year with at least 6 items,
@@ -260,7 +268,8 @@ EMPIRES or epoch-stats.js (about 15 minutes; -SkipEntries skips the entry pages,
 scripts/check-site.ps1 (every internal link resolves; one h1, title, description <= 160, canonical, JSON-LD per page).
 PowerShell 5.1 traps met in this script: variable names ignore case ($POS = $pos, $SM = $sm …: give script-level
 tables distinct names); @($list) fails on New-Object generic lists (use foreach); ForEach-Object unrolls arrays it
-outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) / 2, c)` needs parentheses).
+outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) / 2, c)` needs parentheses); "$rr:" in a
+double-quoted string is read as a drive-qualified variable and stops the parse (write "${rr}:").
 
 ## Atlas and maps
 - `data/land.json` — present-day country outlines (Natural Earth 1:50m, public domain) projected with Equal Earth to a
@@ -404,18 +413,19 @@ Hand page (noindex) + passport.js: what this browser has read and played, kept i
 as "My History"; renamed My Passport, the name readers look for). shared-nav.js
 records every reading page in epoch-seen (profiles of every kind, entries, states, countries, centuries, years,
 people, days, speeches, paths, essays, articles; at most 3000) and the UTC days with a visit in epoch-visits. The
-page shows pages read, days, the visit run, 26 stamps with their rules and progress (earned stamps are kept in
-epoch-badges, so a broken streak does not take one away; quiz, Daily Ten and Connections streaks keep their best run
-as b), pages by kind, profiles by region (EMPIRES), the 51 centuries visited, paths finished (epoch-paths +
-epoch-seen), games played, recent pages. Share sends a poster of the stamps (share-card.js stamps layout). A backup
+page shows pages read, days, the visit run, 28 stamps with their rules and progress (earned stamps are kept in
+epoch-badges, so a broken streak does not take one away; quiz, Daily Ten, Connections, Crossword and Who Said It?
+streaks keep their best run as b), pages by kind, profiles by region (EMPIRES), the 51 centuries visited, paths
+finished (epoch-paths + epoch-seen), Test yourself (epoch-tests: passed at 80% of a page's best score; the "Examined"
+stamp for 10 passed), games played (of 10), recent pages. Share sends a poster of the stamps (share-card.js stamps layout). A backup
 code (`EPOCH1.` + base64 JSON of the epoch-* keys) carries the passport to another browser, e.g. out of an in-app
 browser; restoring adds to what is there (lists joined, best runs kept). Clear asks twice. Linked from the Explore
 menu (desktop and phone), the shelf menu, the footer, the Research Hub ("Play") and the home page's "Continue where you
 left off" header.
 
 ## /games — History Games
-Hand page, nine client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
-#words #year #conn #cross; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
+Hand page, ten client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
+#words #year #conn #cross #said; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
 (bump games.js?v= on the page). Level switches (segmented buttons) and bests are kept in localStorage epoch-games; in
 Kids mode an unchosen level starts easy. Every game carries a round token (P.id, O.id, F.id …) that its timers check:
 a timer left from an earlier round (New round pressed mid-flip) does nothing. Sounds: tiny WebAudio tones (no
@@ -505,7 +515,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   The finish card: time and help, every answer linked to its entry, the countdown, Share ("Epoch Crossword #N: 7:42, no
   help"; the score poster's cw layout draws the grid's shape, no letters), the newsletter line; earlier puzzles are
   replayed for practice (not kept). The home page shows today's number and result beside Connections; the passport
-  counts it (games of 9, the "Crossword" stamp for a solve with no help).
+  counts it (the "Crossword" stamp for a solve with no help).
   Data: scripts/crossword-words.tsv (ANSWER, a plain clue, the entry it links to; 774 answers, picked from entries that
   exist and checked against each entry's lede; no grim answers) and scripts/crosswords.tsv, which
   scripts/make-crosswords.ps1 [-Count N] only ever APPENDS to (a C# placer: every answer crosses another, all joined,
@@ -514,6 +524,34 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   [answer, clue, entry], p: [[answer, 0 across or 1 down, row, column, ...]]}) and stamps its ?v= into /games (CW_SRC;
   games.js loads it when the tab first opens), and STOPS on an answer without a clue or an unknown entry. Scratchpad
   cw/verify.js re-checks every puzzle on its own (stray runs, joins, crossings, repeats).
+- Who Said It? (#said): five quotations a day for everyone (UTC; #1 = 28 Oct 2026; in the file's order, repeated
+  after the last), each with four portraits to choose from; the answer names the work, the translation and the source
+  (linked). epoch-games said-<number> {m: '10110', done}, said-streak {n, last, b}; the finish card lists the five
+  with their speakers, the squares, the countdown, Share ("Epoch Who Said It? #N: 4/5" + squares; the score poster's
+  squares layout), the newsletter line; earlier rounds are replayed for practice (not kept). The home page shows today's
+  number and score beside the Crossword; the passport counts it ("Well quoted": all five right).
+  Quotations are NEVER typed: scripts/quote-sources.tsv (speaker slug, page, "start".."end" phrase, work, credit,
+  note) lists where each one is, and scripts/fetch-quotes.ps1 imports the exact words into data/quotes.json (build
+  input, not deployed) with the cleaning and selecting of scripts/lib/source-text.ps1 (shared with
+  fetch-speech-texts.ps1): 5–45 words, never a word of the speaker's name, "…" where a quotation starts or ends
+  mid-sentence. -Peek <url> -Find a,b shows a page's paragraphs; -Test <file> prints rows as the game shows them.
+  Sources: words first published in English before 1930, translations published before 1930 (translator named),
+  works of the US federal government; Wikisource, Gutenberg, Avalon, Fordham, presidential libraries. Oct 2026: 326
+  quotations by 114 people (66 days before the first round comes back), gathered by four agents with scratchpad
+  r4/QUOTES-GUIDE.md and read one by one: left out were retellings pieced together later (Tecumseh's "Sell a country",
+  Gurd 1912) and lines chiefly about contempt. Words that reach us through someone else stay, with the note saying so
+  ("Plutarch's account", "as William Wirt reconstructed it", "spoken by Mr Micawber", "spoken by Socrates in the
+  dialogue"): the note is shown with the answer. The builder writes said-data.js (SAID {p: [slug, name, dates,
+  picture], q: [text, speaker, work, credit, url, source, licence, [three others], note]}; the others: three of the
+  speaker's eight likeliest companions, drawn by the quotation's id: people with a picture that shows them (PicFace
+  -Strict: not in scripts/no-portrait.tsv, the scenes, maps and faceless coins found by eye on contact sheets, and no
+  map, diagram, coin, seal, stele or inscription by the Commons file name; a speaker in no-portrait.tsv gets a
+  monogram) who lived within a century of the speaker, 60 years after 1500, other speakers first, then the same region
+  and the best known; never one
+  sharing a name with the speaker, nor anyone named in the quotation's work or note, so Plato is never a wrong answer
+  for Socrates) and stamps its ?v= into /games (SAID_SRC); it STOPS on a speaker who is not a person entry or who has
+  too few companions (a speaker needs dates: 28 undated speakers got theirs in person-dates.tsv). Add quotations at the
+  END of quote-sources.tsv, so the rounds already played keep theirs; re-run fetch-quotes.ps1, then build.
 
 ## Kids mode and the Kids corner (/kids)
 - Kids mode is site-wide: html[data-kids="1"], set before first paint by the head snippet from localStorage
@@ -695,6 +733,43 @@ same on every build, never the answer's order). The answer key is a folded detai
 .ws-print buttons open or close it and print; @media print in shared.css sets A4, hides the tools and puts the key
 on a page of its own. Menu: More → Teachers' Corner; footer Institute column; Research Hub card (hub-5 row).
 
+## Test yourself (profiles, century and path pages)
+Up to five questions at the foot of a page, built ONLY from what that page shows (never a made-up claim), shown when
+there are at least three: the questions ride in the page as `script.ty-data` JSON ([{p prompt, q, o options, a answer,
+w why, l link}]) and test-yourself.js (TestYourself.mount, loaded when the section nears the screen or at once for
+#test-yourself) asks them one at a time with the answer explained; "Try again" reshuffles the options. Scores go to
+localStorage epoch-tests {path: {b best, t questions, n tries, d last day}}; My Passport counts a test passed at 80%.
+- Profiles (generator.html tyQuestions, seeded by the name so a regen is byte-stable): "In which year?" (a key event
+  with a firm year, the other options the years of its other key events), "Which came first?" (two key events at least
+  20 years apart), and for polities the capital, founder and successor from empire-facts.js against the same fact of
+  profiles of the same kind and region, overlapping in time first (tyNames keeps only proper names: no "Royal seats",
+  "Senior", tails like "under Kamehameha I" or "in the west"). 427 of 460 profiles (Oct 2026); scratchpad
+  r4/ty-harness.js prints them and r4/ty-scan.js every fact option, for reading.
+- Century pages (build-pages.ps1 TyFirst/TyLived/TyPower/TyYear, from the events, people and great powers on the page;
+  only plainly dated events, never "captured Jerusalem 1099"): which came first, who lived these dates, which was a
+  great power of the century (three of the ten strongest profiles of other ages, by the century's seed, no two sharing
+  a core word), in which year. 27 of 51: the early BCE centuries and the 2nd century CE have too little.
+- Path pages (TyWhy, TyFirst, TyLived): which stop is on the path for this reason (a reason that names neither its stop
+  nor another option: ClueOwnFault), who was born / which began / which came first, who lived these dates. 22 of 28.
+Orders come from a seeded shuffle (TyShuffle, which may keep the given order: WsShuffle never does, and two options
+would always swap). Hidden in print; outside the Kids-mode fold.
+
+## Flashcards (/flashcards)
+Hand page + flashcards.js. build-pages.ps1 ("Flashcards") writes the decks as data/cards/<deck>.json ({id, t, ask, pf
+(0 the picture on the back, 1 only the picture in front: "who is this?", 2 picture and name in front), cards [[id,
+front, back, picture, link, hint]]}) and lists them in the page's build:fc-decks block with each file's ?v=: the
+glossary (the terms the profiles mention most first, everyday words in $WSSTOP left out), the 40 best-known people
+of each century with a picture that shows them (PicFace -Strict, as Who Said It?; centuries with fewer than twelve
+share a deck), the capitals (empire-facts.js) and the
+dated key events (empire-glance.js, firm years) of the profiles by region, and every reading path (stop → its reason).
+Leitner boxes in localStorage epoch-cards {deck: {c: {card: [box 1-5, due UTC day]}, d}}: a round deals up to 20 cards,
+the due ones first, then up to 12 new; Knew it moves a card up a box (back in 1, 2, 4, 8, 16 days), Again puts it in
+box 1 and once more at the end of the round (known then, it stays in box 1, back tomorrow); box 4 or higher counts as
+learned. Space/Enter turns, 1/Left again, 2/Right knew it; a turned card swipes (the stage moves, so the card keeps its
+turn). Kids mode deals only cards with a picture that kidsGentle lets through, and hides decks with fewer than five.
+/flashcards#<deck> opens a deck. Menu (Explore), footer, Research Hub (Play), search (SEARCH_PAGES), sitemap, poster
+page-flashcards.jpg; deploy.sh carries the page (PAGES) and data/cards (DATA).
+
 ## Voice
 Write in a general, academic register about the past itself. The encyclopedia no longer says "the X profile
 treats/notes/describes …" (786 such frames were rewritten in Oct 2026: a clause after "notes that" stands alone;
@@ -704,6 +779,10 @@ Institute and its register are still named where they are defined and credited (
 ## Roadmap (not built yet)
 Cultures and movements through history as further profile kinds, by the §"Kinds of profile" recipe. Yoruba religion
 has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.
+1,019 people of the encyclopedia have no dates (Charles V, Timur, Barbarossa, Constantine, Kublai Khan, Suleiman … the
+28 quoted in Who Said It? got theirs in Oct 2026; scratchpad r4/undated.js lists them, r4/wd-dates.js reads Wikidata):
+an undated person is on no century or people page and in no year's births and deaths. The 2nd century CE has too few
+dated events and people for Test yourself.
 
 ## Homepage and site search
 - Home (index): two-column hero (h1, search, the world in 1000 CE map from the builder, replaced after load and an idle

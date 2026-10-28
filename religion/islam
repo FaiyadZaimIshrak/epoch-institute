@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Islam, proclaimed by the prophet Muhammad in 7th-century <a class="enc-link" href="/encyclopedia/arabia">Arabia</a>, teaches submission to the one God revealed in the <a class="enc-link" href="/encyclopedia/quran">Quran</a>, expressed in the five pillars of faith, prayer, charity, fasting and pilgrimage. Spread by conquest, trade and <a class="enc-link" href="/encyclopedia/sufism">Sufi</a> teachers from <a class="enc-link" href="/encyclopedia/spain">Spain</a> to <a class="enc-link" href="/encyclopedia/indonesia">Indonesia</a>, it shaped a great civilisation of law, learning and art and is today the faith of about two billion people.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="islam"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Republic of Turkey abolishes the Ottoman caliphate","o":["680","632","1924","711"],"a":2,"w":"1924: The Republic of Turkey abolishes the Ottoman caliphate."},{"p":"Which came first?","q":"","o":["The Hijra: Muhammad and his followers migrate from Mecca to Medina, the start of the Islamic calendar","The Republic of Turkey abolishes the Ottoman caliphate"],"a":0,"w":"622: The Hijra: Muhammad and his followers migrate from Mecca to Medina, the start of the Islamic calendar · 1924: The Republic of Turkey abolishes the Ottoman caliphate."},{"p":"In which year?","q":"Husayn, Muhammad’s grandson, is killed at Karbala, an event central to Shia Islam","o":["632","680","1924","711"],"a":1,"w":"680: Husayn, Muhammad’s grandson, is killed at Karbala, an event central to Shia Islam."},{"p":"Which came first?","q":"","o":["Muhammad dies in Medina; Abu Bakr becomes the first caliph","The Republic of Turkey abolishes the Ottoman caliphate"],"a":0,"w":"632: Muhammad dies in Medina; Abu Bakr becomes the first caliph · 1924: The Republic of Turkey abolishes the Ottoman caliphate."},{"p":"In which year?","q":"Muhammad dies in Medina; Abu Bakr becomes the first caliph","o":["1924","632","622","680"],"a":1,"w":"632: Muhammad dies in Medina; Abu Bakr becomes the first caliph."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -158,6 +165,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Islam",slug="islam",url="https://the-epoch-institute.org/religion/islam";

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Northumbria"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Northumbria was the largest <a class="enc-link" href="/encyclopedia/anglo-saxons">Anglo-Saxon</a> kingdom of the 7th century and the home of the <a class="enc-link" href="/encyclopedia/northumbrian-renaissance">Northumbrian Renaissance</a>, whose monasteries produced <a class="enc-link" href="/encyclopedia/bede">Bede</a>, <a class="enc-link" href="/encyclopedia/alcuin-of-york">Alcuin</a>, the <a class="enc-link" href="/encyclopedia/lindisfarne-gospels">Lindisfarne Gospels</a> and the <a class="enc-link" href="/encyclopedia/codex-amiatinus">Codex Amiatinus</a>, shaping learning across <a class="enc-link" href="/encyclopedia/britain">Britain</a> and <a class="enc-link" href="/encyclopedia/francia">Francia</a> before <a class="enc-link" href="/encyclopedia/vikings">Viking</a> conquest divided it and it passed to the English crown in 954.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-northumbria"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Synod of Whitby adopts Roman practice for dating Easter","o":["655","954","664","731"],"a":2,"w":"664: The Synod of Whitby adopts Roman practice for dating Easter."},{"p":"Which came first?","q":"","o":["The Synod of Whitby adopts Roman practice for dating Easter","The Picts defeat and kill Ecgfrith at the Battle of Nechtansmere"],"a":0,"w":"664: The Synod of Whitby adopts Roman practice for dating Easter · 685: The Picts defeat and kill Ecgfrith at the Battle of Nechtansmere."},{"p":"Which city was a capital of the Kingdom of Northumbria?","q":"","o":["Constantinople","Nicaea","Bamburgh","Regensburg"],"a":2,"w":"Capital: Bamburgh; later York."},{"p":"Who founded the Kingdom of Northumbria?","q":"","o":["Garibald I","Æthelfrith","Cunedda","Constantine the Great"],"a":1,"w":"Founder: Æthelfrith (first union, c. 604); Oswiu (lasting union, 650s)."},{"p":"Which state came after the Kingdom of Northumbria?","q":"","o":["Electorate of Bavaria","Powys Fadog","Kingdom of York","Ottoman Empire"],"a":2,"w":"Succeeded by: Kingdom of York; Earldom of Bamburgh; Kingdom of England."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Northumbria",slug="kingdom-of-northumbria",url="https://the-epoch-institute.org/empire/kingdom-of-northumbria";

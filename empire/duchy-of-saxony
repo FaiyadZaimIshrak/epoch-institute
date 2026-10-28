@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Duchy of Saxony"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Duchy of <a class="enc-link" href="/encyclopedia/saxony">Saxony</a> was the <a class="enc-link" href="/encyclopedia/bantustan">homeland</a> of the Ottonian kings who founded the <a class="enc-link" href="/encyclopedia/holy-roman-empire">Holy Roman Empire</a>, the base of German expansion east of the <a class="enc-link" href="/encyclopedia/elbe">Elbe</a> and, under <a class="enc-link" href="/encyclopedia/henry-the-lion">Henry the Lion</a>, the founder of <a class="enc-link" href="/encyclopedia/lubeck">Lübeck</a>; its break-up in 1180 reshaped the map of northern <a class="enc-link" href="/encyclopedia/germany">Germany</a> and carried its name up the Elbe.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="duchy-of-saxony"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Frederick Barbarossa deposes Henry the Lion and divides Saxony","o":["1180","1115","919","852"],"a":0,"w":"1180: Frederick Barbarossa deposes Henry the Lion and divides Saxony."},{"p":"Which came first?","q":"","o":["Saxon princes defeat Emperor Henry V at Welfesholz","Duke Henry is elected king of East Francia"],"a":1,"w":"1115: Saxon princes defeat Emperor Henry V at Welfesholz · 919: Duke Henry is elected king of East Francia."},{"p":"Which city was a capital of the Duchy of Saxony?","q":"","o":["Regensburg","Nicaea","Brunswick","Constantinople"],"a":2,"w":"Capital: No fixed capital; Brunswick under Henry the Lion."},{"p":"Who founded the Duchy of Saxony?","q":"","o":["Garibald I","Constantine the Great","Liudolf","Otto I"],"a":2,"w":"Founder: Liudolf (count, d. 866)."},{"p":"Which state came after the Duchy of Saxony?","q":"","o":["Duchy of Saxe-Lauenburg","Confederation of the Rhine","Ottoman Empire","Electorate of Bavaria"],"a":0,"w":"Succeeded by: Duchy of Saxe-Lauenburg; Duchy of Saxe-Wittenberg; Duchy of Westphalia."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Duchy of Saxony",slug="duchy-of-saxony",url="https://the-epoch-institute.org/empire/duchy-of-saxony";

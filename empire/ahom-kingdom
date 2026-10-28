@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Ahom kingdom"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Ahom kingdom ruled the <a class="enc-link" href="/encyclopedia/brahmaputra">Brahmaputra</a> valley for six centuries, turning a band of Tai migrants into the dominant power of <a class="enc-link" href="/encyclopedia/assam">Assam</a> through the paik labour system, resisting the <a class="enc-link" href="/encyclopedia/mughal-empire">Mughal Empire</a> at <a class="enc-link" href="/encyclopedia/battle-of-saraighat">Saraighat</a> and leaving the chronicles, monuments and identity on which modern Assam was built.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="ahom-kingdom"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Lachit Borphukan defeats the Mughals at the Battle of Saraighat","o":["1817","1662","1671","1523"],"a":2,"w":"1671: Lachit Borphukan defeats the Mughals at the Battle of Saraighat."},{"p":"Which came first?","q":"","o":["Suhungmung annexes the Chutia kingdom","Treaty of Asurar Ali fixes a frontier with the Mughal Empire"],"a":0,"w":"1523: Suhungmung annexes the Chutia kingdom · 1639: Treaty of Asurar Ali fixes a frontier with the Mughal Empire."},{"p":"Which city was a capital of the Ahom kingdom?","q":"","o":["Ahar","Nagda","Chittor","Charaideo"],"a":3,"w":"Capital: Charaideo; later Garhgaon, Rangpur and Jorhat."},{"p":"Who founded the Ahom kingdom?","q":"","o":["Muhammad Shah","Mangrai","Bappa Rawal","Sukaphaa"],"a":3,"w":"Founder: Sukaphaa."},{"p":"In which year?","q":"Mir Jumla's Mughal army occupies the Ahom capital Garhgaon","o":["1662","1639","1523","1826"],"a":0,"w":"1662: Mir Jumla's Mughal army occupies the Ahom capital Garhgaon."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Ahom kingdom",slug="ahom-kingdom",url="https://the-epoch-institute.org/empire/ahom-kingdom";

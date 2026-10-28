@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Denmark-Norway"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Denmark-<a class="enc-link" href="/encyclopedia/norway">Norway</a> joined two Scandinavian kingdoms under the Oldenburg kings for nearly three centuries, building a Lutheran absolute monarchy, a strong navy and a small overseas empire while losing the struggle for the Baltic to <a class="enc-link" href="/encyclopedia/sweden">Sweden</a>, and its break-up in 1814 shaped modern <a class="enc-link" href="/encyclopedia/denmark">Denmark</a>, Norway, Iceland and <a class="enc-link" href="/encyclopedia/greenland">Greenland</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="denmark-norway"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Christian III introduces the Lutheran Reformation","o":["1536","1721","1613","1814"],"a":0,"w":"1536: Christian III introduces the Lutheran Reformation."},{"p":"Which came first?","q":"","o":["Christian III introduces the Lutheran Reformation","Treaty of Roskilde cedes Scania and other provinces to Sweden"],"a":0,"w":"1536: Christian III introduces the Lutheran Reformation · 1658: Treaty of Roskilde cedes Scania and other provinces to Sweden."},{"p":"Which city was a capital of Denmark-Norway?","q":"","o":["Andorra la Vella","Copenhagen","Chambéry","Saint Helier"],"a":1,"w":"Capital: Copenhagen."},{"p":"Who founded Denmark-Norway?","q":"","o":["Frederick I of Denmark","Count Adolf III of Schauenburg","Amadeus VIII of Savoy","Roger-Bernard III"],"a":0,"w":"Founder: Frederick I of Denmark."},{"p":"Which state came after Denmark-Norway?","q":"","o":["Czechoslovakia","Kingdom of the Two Sicilies","Kingdom of Sardinia","Kingdom of Denmark"],"a":3,"w":"Succeeded by: Kingdom of Denmark; Kingdom of Norway (1814); Sweden-Norway."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Denmark-Norway",slug="denmark-norway",url="https://the-epoch-institute.org/empire/denmark-norway";

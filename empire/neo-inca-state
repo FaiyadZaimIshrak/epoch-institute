@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Neo-Inca State"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Neo-<a class="enc-link" href="/encyclopedia/inca-empire">Inca</a> State, founded by <a class="enc-link" href="/encyclopedia/manco-inca">Manco Inca</a> in the mountains of Vilcabamba after his failed siege of <a class="enc-link" href="/encyclopedia/cusco">Cusco</a>, preserved an independent Inca monarchy for 35 years, bargained with the Spanish authorities for years and left, through Titu Cusi’s account and <a class="enc-link" href="/encyclopedia/tupac-amaru">Túpac Amaru</a>’s execution in 1572, an enduring memory of Andean resistance.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="neo-inca-state"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Manco Inca is murdered at Vitcos by Spanish fugitives he had sheltered","o":["1572","1544","1558","1536"],"a":1,"w":"1544: Manco Inca is murdered at Vitcos by Spanish fugitives he had sheltered."},{"p":"Which came first?","q":"","o":["Sayri Túpac renounces his claims in Lima and settles at Yucay","Manco Inca rebels and besieges Spanish-held Cusco for some ten months"],"a":1,"w":"1558: Sayri Túpac renounces his claims in Lima and settles at Yucay · 1536: Manco Inca rebels and besieges Spanish-held Cusco for some ten months."},{"p":"Which city was a capital of the Neo-Inca State?","q":"","o":["Quebec","Vitcos","Onondaga","Mexico City"],"a":1,"w":"Capital: Vitcos; later Vilcabamba (Espíritu Pampa)."},{"p":"Who founded the Neo-Inca State?","q":"","o":["Hernán Cortés","Samuel de Champlain","Manco Inca","Hiawatha"],"a":2,"w":"Founder: Manco Inca."},{"p":"Which state came after the Neo-Inca State?","q":"","o":["Province of Quebec","Viceroyalty of Peru","Republic of Peru","First Mexican Empire"],"a":1,"w":"Succeeded by: Viceroyalty of Peru."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Neo-Inca State",slug="neo-inca-state",url="https://the-epoch-institute.org/empire/neo-inca-state";

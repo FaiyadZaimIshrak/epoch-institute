@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Median Empire"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>The Median Empire stands as the bridge between Assyrian and Persian power: it united the tribes of the <a class="enc-link" href="/encyclopedia/zagros-mountains">Zagros</a>, helped bring down <a class="enc-link" href="/encyclopedia/assyrian-empire">Assyria</a> with the fall of <a class="enc-link" href="/encyclopedia/nineveh">Nineveh</a> in 612 BCE, and passed its institutions and nobility intact to the <a class="enc-link" href="/encyclopedia/achaemenid-empire">Achaemenid Empire</a> that absorbed it.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="median-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which came first?","q":"","o":["War with Lydia ends after the battle of the eclipse, fixing the Halys River frontier","Cyaxares and Nabopolassar of Babylon destroy Nineveh"],"a":1,"w":"585 BCE: War with Lydia ends after the battle of the eclipse, fixing the Halys River frontier · 612 BCE: Cyaxares and Nabopolassar of Babylon destroy Nineveh."},{"p":"Which city was a capital of the Median Empire?","q":"","o":["Byblos","Ecbatana","Anshan","Susa"],"a":1,"w":"Capital: Ecbatana."},{"p":"Who founded the Median Empire?","q":"","o":["Kutik-Inshushinak","Rehoboam","Gyges","Deioces"],"a":3,"w":"Founder: Deioces (traditionally)."},{"p":"Which state came after the Median Empire?","q":"","o":["Achaemenid Empire","Chaldean Empire","Macedonian Empire","Himyarite Kingdom"],"a":0,"w":"Succeeded by: Achaemenid Empire."},{"p":"Which came first?","q":"","o":["The Medes capture Ashur","War with Lydia ends after the battle of the eclipse, fixing the Halys River frontier"],"a":0,"w":"614 BCE: The Medes capture Ashur · 585 BCE: War with Lydia ends after the battle of the eclipse, fixing the Halys River frontier."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Median Empire",slug="median-empire",url="https://the-epoch-institute.org/empire/median-empire";

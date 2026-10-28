@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Ancient Greek</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Ancient Greek</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Ancient Greek, the Indo-European language of the <a class="enc-link" href="/encyclopedia/greeks">Greeks</a>, written from the Mycenaean tablets of the 14th century BCE, was the language of <a class="enc-link" href="/encyclopedia/homer">Homer</a>, Athenian drama, history and philosophy, and, as the <a class="enc-link" href="/encyclopedia/koine-greek">Koine</a> after Alexander, of the eastern <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a> and the <a class="enc-link" href="/encyclopedia/new-testament">New Testament</a>. Its alphabet became the model of <a class="enc-link" href="/encyclopedia/latin">Latin</a> and Cyrillic, and it lives on in Modern Greek and in the vocabulary of science.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="ancient-greek"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Alexander the Great begins the conquests that carry Greek to Egypt, Persia and India","o":["334 BCE","403 BCE","1976","1397"],"a":0,"w":"334 BCE: Alexander the Great begins the conquests that carry Greek to Egypt, Persia and India."},{"p":"Which came first?","q":"","o":["Greece makes Demotic, the popular form of the language, its official language","Alexander the Great begins the conquests that carry Greek to Egypt, Persia and India"],"a":1,"w":"1976: Greece makes Demotic, the popular form of the language, its official language · 334 BCE: Alexander the Great begins the conquests that carry Greek to Egypt, Persia and India."},{"p":"In which year?","q":"Greece makes Demotic, the popular form of the language, its official language","o":["334 BCE","403 BCE","1397","1976"],"a":3,"w":"1976: Greece makes Demotic, the popular form of the language, its official language."},{"p":"Which came first?","q":"","o":["Greece makes Demotic, the popular form of the language, its official language","Manuel Chrysoloras begins teaching Greek in Florence, reviving its study in western Europe"],"a":1,"w":"1976: Greece makes Demotic, the popular form of the language, its official language · 1397: Manuel Chrysoloras begins teaching Greek in Florence, reviving its study in western Europe."},{"p":"In which year?","q":"Manuel Chrysoloras begins teaching Greek in Florence, reviving its study in western Europe","o":["1976","403 BCE","334 BCE","1397"],"a":3,"w":"1397: Manuel Chrysoloras begins teaching Greek in Florence, reviving its study in western Europe."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -157,6 +164,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Later Le dynasty"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Later Lê dynasty, founded by <a class="enc-link" href="/encyclopedia/le-loi">Lê Lợi</a> after expelling the Ming in 1428, built <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>'s most complete Confucian state under <a class="enc-link" href="/encyclopedia/le-thanh-tong">Lê Thánh Tông</a> and conquered the <a class="enc-link" href="/encyclopedia/cham">Cham</a> heartland in 1471, then reigned for more than two centuries as figureheads while the Trịnh and <a class="enc-link" href="/encyclopedia/nguyen-lords">Nguyễn lords</a> divided the country.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="later-le-dynasty"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Mạc Đăng Dung seizes the throne and founds the Mạc dynasty","o":["1527","1592","1786","1789"],"a":0,"w":"1527: Mạc Đăng Dung seizes the throne and founds the Mạc dynasty."},{"p":"Which came first?","q":"","o":["Lê and Trịnh forces retake Thăng Long from the Mạc","Lê Lợi launches his revolt against Ming rule at Lam Sơn"],"a":1,"w":"1592: Lê and Trịnh forces retake Thăng Long from the Mạc · 1418: Lê Lợi launches his revolt against Ming rule at Lam Sơn."},{"p":"Which city was a capital of the Later Le dynasty?","q":"","o":["Thăng Long","Charaideo","Garhgaon","Rangpur"],"a":0,"w":"Capital: Thăng Long (Đông Kinh)."},{"p":"Who founded the Later Le dynasty?","q":"","o":["Muhammad Shah","Sukaphaa","Yaduraya","Lê Lợi"],"a":3,"w":"Founder: Lê Lợi (Lê Thái Tổ)."},{"p":"In which year?","q":"Quang Trung defeats the Qing at Đống Đa; Lê Chiêu Thống flees to China","o":["1418","1789","1428","1471"],"a":1,"w":"1789: Quang Trung defeats the Qing at Đống Đa; Lê Chiêu Thống flees to China."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Later Le dynasty",slug="later-le-dynasty",url="https://the-epoch-institute.org/empire/later-le-dynasty";

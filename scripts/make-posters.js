@@ -162,7 +162,10 @@ page('default', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Historical & 
   chips: [EMPIRES.length + ' profiles', fmt(HOME_COUNTS.entries) + ' encyclopedia entries', fmt(nStates) + ' states', '365 days in history'] });
 page('profiles', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Profiles', title: 'States and empires', sub: EMPIRES.length + ' profiles, from Elam to the present', chips: ['Rise and fall', 'Key events', 'Emblems', 'Sources'], url: 'the-epoch-institute.org/profiles' });
 page('games', { kind: 'mosaic', pics: pick(['great-wall-of-china', 'cleopatra-vii', 'rosetta-stone', 'bayeux-tapestry', 'borobudur', 'napoleon']), kicker: 'History games', title: 'Play with the past',
-  tease: 'Nine games built from real pictures and real dates, with a daily crossword, Connections and Daily Ten for everyone.', chips: ['Crossword', 'Connections', 'Emblem Pairs', 'Globe Hunt', 'Which Came First?', 'Picture Puzzle', 'Word Hunt', 'Guess the Year'], url: 'the-epoch-institute.org/games' });
+  tease: 'Ten games built from real pictures and real dates, with a daily crossword, Connections, Who Said It? and Daily Ten for everyone.', chips: ['Crossword', 'Connections', 'Who Said It?', 'Emblem Pairs', 'Globe Hunt', 'Which Came First?', 'Picture Puzzle', 'Word Hunt', 'Guess the Year'], url: 'the-epoch-institute.org/games' });
+const DECKS = (read('flashcards').match(/data-deck="/g) || []).length, CARDS = (read('flashcards').match(/data-n="(\d+)"/g) || []).reduce((a, m) => a + +m.slice(8, -1), 0);
+page('flashcards', { kind: 'mosaic', pics: pick(['confucius', 'akbar', 'code-of-hammurabi', 'charlemagne', 'elizabeth-i', 'mansa-musa']), kicker: 'Flashcards', title: 'Learn a few cards a day',
+  tease: fmt(CARDS) + ' cards in ' + DECKS + ' decks: the words of history, the faces of every century, the capitals and the turning points of the profiles.', chips: ['Glossary', 'Faces of the past', 'Capitals', 'Key events', 'Reading paths'], url: 'the-epoch-institute.org/flashcards' });
 page('quiz', { kind: 'mosaic', pics: pick(['genghis-khan', 'machu-picchu', 'mansa-musa', 'hagia-sophia', 'joan-of-arc', 'confucius']), kicker: 'History quiz', title: 'A new puzzle every day',
   tease: 'Four clues, one answer: a profile, a person, an event, a place, an idea or a work.', url: 'the-epoch-institute.org/quiz' });
 page('speeches', { kind: 'mosaic', pics: pick(SPEECHES.map(s => s.speakerSlug)).filter((p, i, a) => a.findIndex(q => q.src === p.src) === i).slice(0, 6), kicker: 'Great speeches', title: 'The words that moved history',
@@ -179,7 +182,7 @@ page('today', { kind: 'mosaic', pics: pick(['julius-caesar', 'storming-of-the-ba
   tease: 'What happened on every day of the year, from the ancient world to the present.', chips: ['365 days', 'Anniversaries', 'International days'], url: 'the-epoch-institute.org/today-in-history/' });
 const KIDSDOORS = read('scripts/kids-corner.tsv').split(/\r?\n/).filter(l => l.startsWith('@')).map(l => l.split('\t')[3]).filter(Boolean);
 page('kids', { kind: 'mosaic', theme: 'kids', pics: pick(KIDSDOORS).slice(0, 6), kicker: 'Kids corner', title: 'History for young explorers',
-  tease: 'Pictures, facts and games about the past, made for young readers.', chips: ['Fact of the day', 'Eight themes', 'Games and a crossword'], url: 'the-epoch-institute.org/kids' });
+  tease: 'Pictures, facts and games about the past, made for young readers.', chips: ['Fact of the day', 'Sixteen themes', 'Games and a crossword'], url: 'the-epoch-institute.org/kids' });
 const mapOf = c => (JOBS.centuries.find(j => j.file === 'century-' + c + '.jpg') || JOBS.centuries[0] || {}).map;
 page('atlas', { kind: 'century', map: mapOf('16th-century'), kicker: 'The atlas', title: 'The world in any year', sub: '3500 BCE to today', stats: [[fmt(nStates), 'states'], ['5,500', 'years']], powers: [], url: 'the-epoch-institute.org/atlas' });
 page('states', { kind: 'century', map: mapOf('13th-century'), kicker: 'States', title: 'Every recorded state', sub: 'Kingdoms, empires, republics and chiefdoms', stats: [[fmt(nStates), 'states'], [fmt(POL.links.length), 'relations']], powers: [], url: 'the-epoch-institute.org/state/' });

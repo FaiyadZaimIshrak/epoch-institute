@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="British Raj"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The <a class="enc-link" href="/encyclopedia/british-raj">British Raj</a> ruled the <a class="enc-link" href="/encyclopedia/indian-subcontinent">Indian subcontinent</a> as the centrepiece of the <a class="enc-link" href="/encyclopedia/british-empire">British Empire</a> for nearly ninety years, building the railways, armies, laws and civil services inherited by <a class="enc-link" href="/encyclopedia/south-asia">South Asia</a>’s modern states, while its economic policies, famines and communal politics fuelled the nationalist movements that ended it in independence and partition in 1947.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="british-raj"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Government of India Act transfers the East India Company’s territories to the Crown","o":["1858","1877","1911","1942"],"a":0,"w":"1858: The Government of India Act transfers the East India Company’s territories to the Crown."},{"p":"Which came first?","q":"","o":["The Indian National Congress is founded in Bombay","Independence and partition create India and Pakistan on 14–15 August"],"a":0,"w":"1885: The Indian National Congress is founded in Bombay · 1947: Independence and partition create India and Pakistan on 14–15 August."},{"p":"Which city was a capital of the British Raj?","q":"","o":["Brunei Town","Kota Batu","Calcutta","Batavia"],"a":2,"w":"Capital: Calcutta; later New Delhi (from 1911/1931); Simla in summer."},{"p":"Who founded the British Raj?","q":"","o":["British Crown","Alauddin Riayat Shah II","Asaf Jah I","Muhammad Shah"],"a":0,"w":"Founder: British Crown (Government of India Act 1858); first viceroy Lord Canning."},{"p":"Which state came after the British Raj?","q":"","o":["Dominion of India","Federal Democratic Republic of Nepal","Indonesia","Netherlands New Guinea"],"a":0,"w":"Succeeded by: Dominion of India; Dominion of Pakistan."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="British Raj",slug="british-raj",url="https://the-epoch-institute.org/empire/british-raj";

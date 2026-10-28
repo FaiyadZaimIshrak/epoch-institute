@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Portugal"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Kingdom of Portugal kept borders that have barely changed since 1297 and, from a small Atlantic base, opened sea routes to <a class="enc-link" href="/encyclopedia/africa">Africa</a>, Asia and <a class="enc-link" href="/encyclopedia/brazil">Brazil</a>, creating the first global maritime empire and spreading the <a class="enc-link" href="/encyclopedia/portuguese-language">Portuguese language</a> and the <a class="enc-link" href="/encyclopedia/atlantic-slave-trade">Atlantic slave trade</a> across several continents.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-portugal"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"John I defeats Castile at the Battle of Aljubarrota","o":["1139","1385","1640","1147"],"a":1,"w":"1385: John I defeats Castile at the Battle of Aljubarrota."},{"p":"Which came first?","q":"","o":["John I defeats Castile at the Battle of Aljubarrota","Afonso Henriques begins to style himself king after the Battle of Ourique"],"a":1,"w":"1385: John I defeats Castile at the Battle of Aljubarrota · 1139: Afonso Henriques begins to style himself king after the Battle of Ourique."},{"p":"Which city was a capital of the Kingdom of Portugal?","q":"","o":["Roskilde","Jelling","Coimbra","Copenhagen"],"a":2,"w":"Capital: Coimbra; Lisbon from the mid-13th century (Rio de Janeiro 1808–1821)."},{"p":"Who founded the Kingdom of Portugal?","q":"","o":["Gorm the Old","Eric the Victorious","Harald Fairhair","Afonso I"],"a":3,"w":"Founder: Afonso I (Afonso Henriques)."},{"p":"Which state came after the Kingdom of Portugal?","q":"","o":["First Portuguese Republic","Kingdom of Italy","Vatican City","Czechoslovakia"],"a":0,"w":"Succeeded by: First Portuguese Republic."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Portugal",slug="kingdom-of-portugal",url="https://the-epoch-institute.org/empire/kingdom-of-portugal";

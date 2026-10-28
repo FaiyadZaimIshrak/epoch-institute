@@ -1,7 +1,7 @@
-# Applies the hand-checked person dates (scripts/person-dates.tsv) to encyclopedia-data.js and data/enc-preview, writes
-# the house style "b. N" / "d. N" for people dated "born N" / "died N", and drops the doubled "around c." of some
-# descriptions. Idempotent: a second run changes nothing. Run it after every enc-merge (which starts again from the
-# saved originals), then make-previews, make-home-data and build-pages.
+# Applies the hand-checked person dates (scripts/person-dates.tsv) to encyclopedia-data.js and data/enc-preview (adding
+# the field where an entry had none), writes the house style "b. N" / "d. N" for people dated "born N" / "died N", and
+# drops the doubled "around c." of some descriptions. Idempotent: a second run changes nothing. Run it after every
+# enc-merge (which starts again from the saved originals), then make-previews, make-home-data and build-pages.
 #   powershell -ExecutionPolicy Bypass -File scripts\apply-person-dates.ps1
 param([string]$Repo = (Split-Path $PSScriptRoot))
 $ErrorActionPreference = 'Stop'
@@ -30,6 +30,9 @@ for ($i = 0; $i -lt $lines.Length; $i++) {
         $new = $new.Substring(0, $dm.Groups[1].Index) + $want.Replace('\', '\\').Replace('"', '\"') + $new.Substring($dm.Groups[1].Index + $dm.Groups[1].Length)
         if ($fix.ContainsKey($slug)) { $nFix++ } else { $nStyle++ }
       }
+    } elseif ($fix.ContainsKey($slug)) {   # an entry without dates gets the field, before its description
+      $dp = $new.IndexOf(',desc:"')
+      if ($dp -gt 0) { $seen[$slug] = 1; $new = $new.Substring(0, $dp) + ',dates:"' + $fix[$slug].Replace('\', '\\').Replace('"', '\"') + '"' + $new.Substring($dp); $nFix++ }
     }
   }
   if ($rxAround.IsMatch($new)) { $new = $rxAround.Replace($new, 'around '); $nAround++ }

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Baekje"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Baekje, the south-western kingdom of <a class="enc-link" href="/encyclopedia/three-kingdoms-of-korea">Korea's Three Kingdoms</a> period, created a refined Buddhist and literate court culture and served as the main bridge between the Korean peninsula and <a class="enc-link" href="/encyclopedia/japan">Japan</a>, transmitting writing, <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> and craftsmanship to Yamato before Silla and the Tang destroyed it in 660.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="baekje"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Tang and Silla defeat Baekje loyalists and a Yamato fleet at Baekgang","o":["663","660","18 BCE","475"],"a":0,"w":"663: Tang and Silla defeat Baekje loyalists and a Yamato fleet at Baekgang."},{"p":"Which came first?","q":"","o":["King Seong moves the capital to Sabi","Goguryeo takes Hanseong; the court moves to Ungjin"],"a":1,"w":"538: King Seong moves the capital to Sabi · 475: Goguryeo takes Hanseong; the court moves to Ungjin."},{"p":"Which city was a capital of Baekje?","q":"","o":["Jolbon","Pyongyang","Wiryeseong","Gungnae"],"a":2,"w":"Capital: Wiryeseong/Hanseong (Seoul); Ungjin (Gongju) from 475; Sabi (Buyeo) from 538."},{"p":"Who founded Baekje?","q":"","o":["Onjo","Jumong","Bak Hyeokgeose","Kujula Kadphises"],"a":0,"w":"Founder: Onjo, by tradition."},{"p":"Which state came after Baekje?","q":"","o":["Goryeo","Unified Silla","Balhae","Kushano-Sasanian Kingdom"],"a":1,"w":"Succeeded by: Unified Silla (after brief Tang rule)."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Baekje",slug="baekje",url="https://the-epoch-institute.org/empire/baekje";

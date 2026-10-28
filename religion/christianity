@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Christianity, founded on the life, death and resurrection of <a class="enc-link" href="/encyclopedia/jesus">Jesus of Nazareth</a>, grew from a Jewish movement in Roman Judea into the religion of the <a class="enc-link" href="/encyclopedia/roman-empire">Roman Empire</a> and the foundation of European civilisation. Divided between East and West and by the <a class="enc-link" href="/encyclopedia/protestant-reformation">Reformation</a>, and spread worldwide by missions and empires, it is today the largest religion in the world, with about 2.3 billion followers.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="christianity"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Theodosius I makes Nicene Christianity the religion of the Roman Empire","o":["1054","380","325","1517"],"a":1,"w":"380: Theodosius I makes Nicene Christianity the religion of the Roman Empire."},{"p":"Which came first?","q":"","o":["Theodosius I makes Nicene Christianity the religion of the Roman Empire","Constantine and Licinius grant Christians freedom of worship, the so-called Edict of Milan"],"a":1,"w":"380: Theodosius I makes Nicene Christianity the religion of the Roman Empire · 313: Constantine and Licinius grant Christians freedom of worship, the so-called Edict of Milan."},{"p":"In which year?","q":"Martin Luther’s Ninety-five Theses begin the Protestant Reformation","o":["1517","325","313","380"],"a":0,"w":"1517: Martin Luther’s Ninety-five Theses begin the Protestant Reformation."},{"p":"Which came first?","q":"","o":["The Council of Nicaea, called by Constantine, defines the faith in the Nicene Creed","Martin Luther’s Ninety-five Theses begin the Protestant Reformation"],"a":0,"w":"325: The Council of Nicaea, called by Constantine, defines the faith in the Nicene Creed · 1517: Martin Luther’s Ninety-five Theses begin the Protestant Reformation."},{"p":"In which year?","q":"The Council of Nicaea, called by Constantine, defines the faith in the Nicene Creed","o":["1517","1054","325","313"],"a":2,"w":"325: The Council of Nicaea, called by Constantine, defines the faith in the Nicene Creed."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -158,6 +165,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Christianity",slug="christianity",url="https://the-epoch-institute.org/religion/christianity";

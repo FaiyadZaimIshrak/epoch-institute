@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Aceh Sultanate"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Aceh Sultanate, the leading Muslim power of northern <a class="enc-link" href="/encyclopedia/sumatra">Sumatra</a> from the sixteenth century, controlled much of the <a class="enc-link" href="/encyclopedia/pepper">pepper</a> trade, fought the Portuguese for the <a class="enc-link" href="/encyclopedia/strait-of-malacca">Strait of Malacca</a>, became a centre of Malay Islamic scholarship and resisted <a class="enc-link" href="/encyclopedia/dutch">Dutch</a> conquest for thirty years until 1903.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="aceh-sultanate"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Iskandar Muda sacks Batu Sawar, the capital of Johor","o":["1613","1903","1874","1524"],"a":0,"w":"1613: Iskandar Muda sacks Batu Sawar, the capital of Johor."},{"p":"Which came first?","q":"","o":["A Dutch expedition captures the sultan's palace","Taj ul-Alam Safiatuddin becomes the first of four ruling queens"],"a":1,"w":"1874: A Dutch expedition captures the sultan's palace · 1641: Taj ul-Alam Safiatuddin becomes the first of four ruling queens."},{"p":"Which city was a capital of the Aceh Sultanate?","q":"","o":["Brunei Town","Buansa","Kota Batu","Bandar Aceh Darussalam"],"a":3,"w":"Capital: Bandar Aceh Darussalam (later Kutaraja, now Banda Aceh)."},{"p":"Who founded the Aceh Sultanate?","q":"","o":["Alauddin Riayat Shah II","Muhammad Shah","Bappa Rawal","Ali Mughayat Syah"],"a":3,"w":"Founder: Ali Mughayat Syah."},{"p":"Which state came after the Aceh Sultanate?","q":"","o":["Dutch East Indies","United State of Rajasthan","Philippines","British North Borneo"],"a":0,"w":"Succeeded by: Dutch East Indies."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Aceh Sultanate",slug="aceh-sultanate",url="https://the-epoch-institute.org/empire/aceh-sultanate";

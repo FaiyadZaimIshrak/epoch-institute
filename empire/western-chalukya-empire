@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Western Chalukya Empire"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Western Chalukya Empire restored <a class="enc-link" href="/encyclopedia/chalukya-dynasty">Chalukya</a> rule over the <a class="enc-link" href="/encyclopedia/deccan">Deccan</a> in 973 and contested south <a class="enc-link" href="/encyclopedia/india">India</a> with the <a class="enc-link" href="/encyclopedia/chola-empire">Cholas</a> for two centuries, while its courts produced the <a class="enc-link" href="/encyclopedia/mitakshara">Mitakshara</a>, a golden age of <a class="enc-link" href="/encyclopedia/kannada">Kannada</a> literature and an ornate temple style, and its feudatories grew into the <a class="enc-link" href="/encyclopedia/hoysala-empire">Hoysala</a>, <a class="enc-link" href="/encyclopedia/seuna-yadava-dynasty">Yadava</a> and Kakatiya kingdoms.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="western-chalukya-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Someshvara III compiles the Manasollasa","o":["1129","1054","1076","1162"],"a":0,"w":"1129: Someshvara III compiles the Manasollasa."},{"p":"Which came first?","q":"","o":["Vikramaditya VI takes the throne and begins the Chalukya-Vikrama era","The Chola king Rajadhiraja I is killed at the Battle of Koppam"],"a":1,"w":"1076: Vikramaditya VI takes the throne and begins the Chalukya-Vikrama era · 1054: The Chola king Rajadhiraja I is killed at the Battle of Koppam."},{"p":"Which city was a capital of the Western Chalukya Empire?","q":"","o":["Manyakheta","Angkor","Hariharalaya","Koh Ker"],"a":0,"w":"Capital: Manyakheta; later Kalyani (Basavakalyan)."},{"p":"Who founded the Western Chalukya Empire?","q":"","o":["Jayavarman II","Anawrahta","Tailapa II","Pyinbya"],"a":2,"w":"Founder: Tailapa II."},{"p":"Which state came after the Western Chalukya Empire?","q":"","o":["Myinsaing Kingdom","Post-Angkorian Cambodia","Hoysala Empire","Hanthawaddy Kingdom"],"a":2,"w":"Succeeded by: Seuna Yadava dynasty; Hoysala Empire; Kakatiya dynasty."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Western Chalukya Empire",slug="western-chalukya-empire",url="https://the-epoch-institute.org/empire/western-chalukya-empire";

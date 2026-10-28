@@ -170,13 +170,31 @@ public static class W {
   }
   // first and last year written in a date ("c. 1390–1441", "27 BCE – 14 CE", "5th–4th century BCE"); null = none
   static readonly Regex CentW = new Regex("(\\d+)(?:st|nd|rd|th)(?:\\s*[–-]\\s*(\\d+)(?:st|nd|rd|th))?\\s+centur(?:y|ies)", RegexOptions.IgnoreCase), NumEra = new Regex("(\\d{1,4})(?:\\s*(BCE|BC|CE|AD)\\b)?");
+  static readonly Regex YearW = new Regex("(?<!\\d)(\\d{1,4})(?!\\d|st\\b|nd\\b|rd\\b|th\\b)(?:\\s*(BCE|BC|CE|AD)\\b)?"), EraW = new Regex("\\b(BCE|BC|CE|AD)\\b");
   public static int[] Span(string s) {
     s = Clean(s); if (string.IsNullOrEmpty(s) || !Regex.IsMatch(s, "\\d")) return null;
     bool bce = Regex.IsMatch(s, "\\b(BCE|BC)\\b"); var c = CentW.Match(s);
-    if (c.Success) { int a = int.Parse(c.Groups[1].Value), b = c.Groups[2].Success ? int.Parse(c.Groups[2].Value) : a; return bce ? new[] { -a * 100 + 1, -(b - 1) * 100 } : new[] { (a - 1) * 100, b * 100 - 1 }; }
+    if (c.Success) {
+      int a = int.Parse(c.Groups[1].Value), b = c.Groups[2].Success ? int.Parse(c.Groups[2].Value) : a;
+      var r = bce ? new[] { -a * 100 + 1, -(b - 1) * 100 } : new[] { (a - 1) * 100, b * 100 - 1 };
+      // a year written beside the century counts too ("c. 985–15th century", "13th century–1707", "9th century–221 BCE");
+      // a bare year takes the era written after it, else CE ("1st century BCE–668")
+      foreach (Match y in YearW.Matches(s)) {
+        if (y.Index >= c.Index && y.Index < c.Index + c.Length) continue;
+        string era = y.Groups[2].Value; if (era == "") { var e = EraW.Match(s, y.Index + y.Length); if (e.Success) era = e.Groups[1].Value; }
+        int v = int.Parse(y.Groups[1].Value); if (era.StartsWith("BC")) v = -v;
+        if (v < r[0]) r[0] = v; if (v > r[1]) r[1] = v;
+      }
+      return r;
+    }
     var ms = NumEra.Matches(s); int n = ms.Count; if (n == 0) return null;
     var ys = new int[n];
     for (int i = 0; i < n; i++) { string era = ms[i].Groups[2].Value; for (int j = i + 1; era == "" && j < n; j++) era = ms[j].Groups[2].Value; int v = int.Parse(ms[i].Groups[1].Value); ys[i] = era.StartsWith("BC") ? -v : v; }
+    // "1895–96": a shortened second year takes the first one's century
+    for (int i = 1; i < n; i++) {
+      string p0 = ms[i - 1].Groups[1].Value, p1 = ms[i].Groups[1].Value, gap = s.Substring(ms[i - 1].Index + ms[i - 1].Length, ms[i].Index - ms[i - 1].Index - ms[i - 1].Length).Trim();
+      if (ys[i - 1] > 0 && ys[i] > 0 && p0.Length >= 3 && p1.Length <= 2 && p1.Length < p0.Length && (gap == "–" || gap == "-")) { int m = p1.Length == 1 ? 10 : 100, v = ys[i - 1] / m * m + ys[i]; ys[i] = v < ys[i - 1] ? v + m : v; }
+    }
     int lo = ys[0], hi = ys[0]; foreach (int y in ys) { if (y < lo) lo = y; if (y > hi) hi = y; }
     return new[] { lo, hi };
   }
@@ -1400,6 +1418,141 @@ Emit '/countries/' (Page @{ title = $title; desc = $desc; path = '/countries/'; 
 Say "country pages: $($CPAGE.Count)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Test yourself (test-yourself.js) on the century and path pages: up to five questions built only from what the page
+# shows, as the Teachers' corner worksheets are (their helpers WsShuffle, WsSpread, WsItem and WsSteps are defined
+# here, before both). The profiles carry their own, written by generator.html. A page gets the section with three.
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+function WsShuffle($items, [string]$seed) {   # the same order on every build, never the order of the answer
+  $a = @($items); if ($a.Count -lt 2) { return $a }
+  $rnd = New-Object Random ([Convert]::ToInt32(([EpochBuild.W]::Sha1($seed)).Substring(0, 7), 16))
+  for ($i = $a.Count - 1; $i -gt 0; $i--) { $j = $rnd.Next($i + 1); $t = $a[$i]; $a[$i] = $a[$j]; $a[$j] = $t }
+  $same = $true; for ($i = 0; $i -lt $a.Count; $i++) { if (-not [object]::ReferenceEquals($a[$i], @($items)[$i])) { $same = $false; break } }
+  if ($same) { $a = @($a[1..($a.Count - 1)]) + @($a[0]) }
+  return $a
+}
+# items with a first year, in their order of priority: up to max of them, no two within gap years of each other
+function WsSpread($items, [int]$max, [int]$gap) {
+  $out = New-Object Collections.Generic.List[object]
+  foreach ($it in $items) { if ($null -eq $it.y) { continue }; $ok = $true; foreach ($o in $out) { if ([Math]::Abs($o.y - $it.y) -lt $gap) { $ok = $false; break } }; if ($ok) { $out.Add($it); if ($out.Count -ge $max) { break } } }
+  return @($out | Sort-Object { $_.y })
+}
+# an encyclopedia entry as a worksheet item: a person's birth (a lifespan only), an event's or a work's first year
+function WsItem($e, [string]$name) {
+  $o = [pscustomobject]@{ name = $(if ($name) { $name } else { $e.name }); slug = $e.slug; e = $e; y = $null; life = $false; dates = [string]$e.dates; kind = ''; href = '/encyclopedia/' + $e.slug }
+  if ($e.type -eq 'person') { $o.kind = 'person'; if ([EpochBuild.W]::Range($e.dates)) { $o.life = $true; $sp = [EpochBuild.W]::Span($e.dates); if ($sp) { $o.y = $sp[0] } } }
+  elseif ($e.type -eq 'event' -or $e.type -eq 'work' -or $e.conflict) { $o.kind = 'event'; $sp = [EpochBuild.W]::Span($e.dates); if ($sp -and $e.dates -notmatch 'centur') { $o.y = $sp[0] } }
+  elseif ($e.type -eq 'polity') { $o.kind = 'state'; $sp = [EpochBuild.W]::Span($e.dates); if ($sp -and $e.dates -notmatch 'centur') { $o.y = $sp[0] } }
+  return $o
+}
+# a path's stops as items (an entry's dates, a profile's first year), with their number, reason and address
+function WsSteps($p) {
+  $steps = New-Object Collections.Generic.List[object]; $k = 0
+  foreach ($st in @($p['steps'])) {
+    $k++; $h = [string]$st['href']; $it = $null
+    if ($h -match '^/encyclopedia/(.+)$' -and $BY.ContainsKey($Matches[1])) { $it = WsItem $BY[$Matches[1]] ([string]$st['name']) }
+    elseif ($EMPURL.ContainsKey($h) -and $EMPURL[$h]['points']) { $em = $EMPURL[$h]; $pts0 = $em['points']; $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = [int][double]$pts0[0][0]; life = $false; dates = (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]); kind = 'state'; href = $h } }
+    else { $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = $null; life = $false; dates = ''; kind = ''; href = $h } }
+    $it | Add-Member n $k; $it | Add-Member why ([string]$st['why']); $steps.Add($it)
+  }
+  return , $steps
+}
+# a seeded order that may also keep the given one (WsShuffle never does: two options would always swap)
+function TyShuffle($items, [string]$seed) {
+  $a = @($items); $rnd = New-Object Random ([Convert]::ToInt32(([EpochBuild.W]::Sha1($seed)).Substring(0, 7), 16))
+  for ($i = $a.Count - 1; $i -gt 0; $i--) { $j = $rnd.Next($i + 1); $t = $a[$i]; $a[$i] = $a[$j]; $a[$j] = $t }
+  return $a
+}
+function TyQ([string]$p, [string]$q, [string]$ans, $wrong, [string]$w, [string]$l, [string]$seed) {   # one question
+  $opts = [string[]]@(TyShuffle (@($ans) + @($wrong)) $seed)
+  [pscustomobject]@{ p = $p; q = $q; o = $opts; a = [array]::IndexOf($opts, $ans); w = $w; l = $l }
+}
+function TyJson($qs) {
+  '[' + (($qs | ForEach-Object { '{"p":' + (Js $_.p) + ',"q":' + (Js $_.q) + ',"o":[' + ((@($_.o) | ForEach-Object { Js $_ }) -join ',') + '],"a":' + $_.a + ',"w":' + (Js $_.w) + $(if ($_.l) { ',"l":' + (Js $_.l) } else { '' }) + '}' }) -join ',') + ']'
+}
+function TyWhen($it) { if ($it.kind -eq 'person') { 'born ' + $(if ($it.dates -match '^\s*c\.') { 'c. ' } else { '' }) + (YearLabel $it.y) } elseif ($it.kind -eq 'state') { 'from ' + (YearLabel $it.y) } else { $it.dates } }
+# which came first: two items of one kind (two people by their births, two events, two states), at least gap years
+# apart, a hundred when a date is approximate; used: names already asked about
+function TyFirst($items, [int]$gap, [string]$seed, [hashtable]$used) {
+  $its = @(TyShuffle @($items | Where-Object { $null -ne $_.y -and $_.kind -and ($_.kind -ne 'person' -or $_.life) -and ($_.kind -eq 'state' -or [EpochBuild.W]::PlainDates($_.dates)) }) $seed)   # (never "captured Jerusalem 1099")
+  for ($i = 0; $i -lt $its.Count; $i++) { for ($j = $i + 1; $j -lt $its.Count; $j++) {
+    $a = $its[$i]; $b = $its[$j]
+    if ($a.kind -ne $b.kind -or $used.ContainsKey($a.name) -or $used.ContainsKey($b.name)) { continue }
+    $need = if ($a.dates -match '^\s*c\.' -or $b.dates -match '^\s*c\.') { 100 } else { $gap }
+    if ([Math]::Abs($a.y - $b.y) -lt $need) { continue }
+    $f = if ($a.y -lt $b.y) { $a } else { $b }; $l = if ($a.y -lt $b.y) { $b } else { $a }
+    $used[$a.name] = 1; $used[$b.name] = 1
+    $p = switch ($a.kind) { 'person' { 'Who was born first?' } 'state' { 'Which began first?' } default { 'Which came first?' } }
+    return (TyQ $p '' $f.name @($l.name) (($f.name + ': ' + (TyWhen $f) + ' · ' + $l.name + ': ' + (TyWhen $l)) + '.') $f.href ($seed + '|' + $f.name))
+  } }
+  return $null
+}
+# who lived these dates: a person with a lifespan of two years; the others: people of the same page born apart
+function TyLived($items, [string]$seed, [hashtable]$used) {
+  $pp = @($items | Where-Object { $_.kind -eq 'person' -and $_.life -and $_.dates -match '\d\s*[–-]\s*\d' })
+  foreach ($x in @(TyShuffle $pp $seed)) {
+    if ($used.ContainsKey($x.name)) { continue }
+    $wrong = @(TyShuffle @($pp | Where-Object { $_.name -ne $x.name -and $_.dates -ne $x.dates -and [Math]::Abs($_.y - $x.y) -ge 8 }) ($seed + '|' + $x.name) | Select-Object -First 3)
+    if ($wrong.Count -lt 3) { continue }
+    $used[$x.name] = 1
+    return (TyQ ('Who lived ' + $x.dates + '?') '' $x.name @($wrong | ForEach-Object { $_.name }) ($x.name + ': ' + $x.dates + '.') $x.href ($seed + '|o|' + $x.name))
+  }
+  return $null
+}
+# in which year: an event with one firm year; the others: the firm years of the page's other events
+function TyYear($items, [string]$seed, [hashtable]$used) {
+  $firm = @($items | Where-Object { $_.kind -eq 'event' } | ForEach-Object { $y = [EpochBuild.W]::Firm($_.dates, $false); if ($y -ne [int]::MinValue) { [pscustomobject]@{ it = $_; y = $y } } })
+  foreach ($x in @(TyShuffle $firm $seed)) {
+    if ($used.ContainsKey($x.it.name)) { continue }
+    $wrong = @(TyShuffle @($firm | Where-Object { $_.y -ne $x.y } | ForEach-Object { $_.y } | Select-Object -Unique) ($seed + '|' + $x.it.name) | Select-Object -First 3)
+    if ($wrong.Count -lt 3) { return $null }
+    $used[$x.it.name] = 1
+    return (TyQ 'In which year?' $x.it.name (YearLabel $x.y) @($wrong | ForEach-Object { YearLabel $_ }) ($x.it.dates + ': ' + $x.it.name + '.') $x.it.href ($seed + '|o|' + $x.it.name))
+  }
+  return $null
+}
+function TySpan($em) { $pts0 = $em['points']; (YearLabel ([int][double]$pts0[0][0])) + '–' + $(if ($null -eq $em['end'] -and [double]$pts0[-1][0] -ge 2025) { 'present' } else { YearLabel ([int][double]$pts0[-1][0]) }) }
+# a great power of the century: one of its first three, against the great powers of other ages: three of the ten
+# strongest profiles (the Institute's overall score, the same region first) that had ended or not yet begun a hundred
+# years either side, picked by the century's seed, never two that share a core word (Roman Empire and Roman Republic,
+# United Kingdom and United Kingdom of Great Britain and Ireland)
+$TYGEN = '^(empire|kingdom|dynasty|republic|caliphate|sultanate|state|states|united|great|khanate|khaganate|confederacy|confederation|league|union|peoples|federal|principality|duchy|grand|holy|first|second|third|later|early|eastern|western|northern|southern)$'
+function TyCore([string]$n) {   # (every British name is one: United Kingdom, Great Britain, British Empire)
+  $sl = [EpochBuild.W]::ToSlug($n); $w = @($sl -split '-' | Where-Object { $_.Length -ge 4 -and $_ -notmatch $TYGEN } | ForEach-Object { $_.Substring(0, 4) })
+  if ($sl -match 'united-kingdom|britain|british') { $w += 'brit' }; if ($w.Count) { $w } else { @($sl) }
+}
+function TyPower([string]$c, $rg, $pw, [string]$seed) {
+  if (-not @($pw).Count) { return $null }
+  $ans = @(TyShuffle @($pw | Select-Object -First 3) $seed)[0]; $an = [string]$ans['name']; $reg = [string]$ans['region']
+  $pool = @($POLS | Where-Object { [double]$_['points'][-1][0] -lt $rg[0] - 100 -or [double]$_['points'][0][0] -gt $rg[1] + 100 } |
+    Sort-Object @{ e = { if ([string]$_['region'] -eq $reg) { 0 } else { 1 } } }, @{ e = { if ($STATS.ContainsKey([string]$_['name'])) { -[double]$STATS[[string]$_['name']][1] } else { 0 } } }, @{ e = { [string]$_['name'] } } | Select-Object -First 10)
+  $taken = @(TyCore $an); $far = New-Object Collections.Generic.List[object]
+  foreach ($e in @(TyShuffle $pool ($seed + '|far'))) { $cw = @(TyCore ([string]$e['name'])); if (@($cw | Where-Object { $taken -contains $_ }).Count) { continue }; $far.Add($e); $taken += $cw; if ($far.Count -ge 3) { break } }
+  if ($far.Count -lt 3) { return $null }
+  $w = 'A great power of the ' + $c + ': ' + $an + ' (' + (TySpan $ans) + '). Not yet begun or already gone: ' + (ProseList @($far | ForEach-Object { [string]$_['name'] + ' (' + (TySpan $_) + ')' })) + '.'
+  return (TyQ ('Which of these was a great power of the ' + $c + '?') '' $an @($far | ForEach-Object { [string]$_['name'] }) $w (ProfUrl $an) ($seed + '|o'))
+}
+# which stop is on the path for this reason: a reason that names neither its stop nor any other option
+function TyFoldName([string]$s) { ((($s.Normalize([Text.NormalizationForm]::FormD) -replace '\p{Mn}', '').ToUpperInvariant()) -replace '[^A-Z ]', ' ' -replace '\s+', ' ').Trim() }
+function TyWhy($steps, [string]$seed, [hashtable]$used) {
+  $all = @(foreach ($x in $steps) { $x })   # (@() fails on a generic List in PowerShell 5.1)
+  foreach ($x in @(TyShuffle $all $seed)) {
+    if ($used.ContainsKey($x.name) -or -not $x.why -or (ClueOwnFault (TyFoldName $x.name) $x.why)) { continue }
+    $wrong = @(TyShuffle @($all | Where-Object { $_.name -ne $x.name -and -not (ClueOwnFault (TyFoldName $_.name) $x.why) }) ($seed + '|' + $x.name) | Select-Object -First 3)
+    if ($wrong.Count -lt 3) { continue }
+    $used[$x.name] = 1
+    return (TyQ 'Which stop is on the path for this reason?' ([string][char]0x201C + $x.why + [string][char]0x201D) $x.name @($wrong | ForEach-Object { $_.name }) ('Stop ' + $x.n + ': ' + $x.name + '.') $x.href ($seed + '|o|' + $x.name))
+  }
+  return $null
+}
+$TYLOAD = '<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>'
+$TYN = @{ century = 0; path = 0 }
+function TySection($qs, [string]$on) {   # the section with its questions inline, and the loader
+  $qs = @($qs | Where-Object { $_ } | Select-Object -First 5); if ($qs.Count -lt 3) { return '' }
+  '<section class="ty-sec" id="test-yourself" aria-labelledby="ty-title"><h2 class="ref-sec-title" id="ty-title">Test yourself</h2><p class="ty-lede">' + $qs.Count + ' questions on ' + $on + '.</p>' +
+    '<div class="ty" data-ty=""><p class="ty-loading">The questions open here once the page has loaded.</p></div><script type="application/json" class="ty-data">' + (TyJson $qs) + "</script></section>`n" + $TYLOAD + "`n"
+}
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Centuries: /centuries/<slug>, /centuries/
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 Say 'century pages'
@@ -1461,6 +1614,11 @@ for ($ci = 0; $ci -lt $CENTPAGES.Count; $ci++) {
   }
   $cyrs = @($YEARLIST | Where-Object { $_ -ge $rg[0] -and $_ -le $rg[1] })
   if ($cyrs.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Year by year <span class="n">' + $cyrs.Count + '</span></h2><p class="cty-note">The years of the ' + (Hx $c) + ' with a page of their own: their events, births and deaths, and the states founded and ended.</p><ul class="cty-chips yr-chips">' + (($cyrs | ForEach-Object { '<li><a href="' + (YearHref $_) + '">' + (Hx (YearLabel $_)) + '</a></li>' }) -join '') + "</ul></section>`n") }
+  # Test yourself: from the key events, people and great powers shown above
+  $tyU = @{}; $tyS = 'ty-' + $slug
+  $tyEv = @($evs | Where-Object { $_.dates -notmatch '^\s*c\.' -and [EpochBuild.W]::PlainDates($_.dates) } | ForEach-Object { WsItem $_ '' }); $tyPp = @($ppl | ForEach-Object { WsItem $_ '' })
+  $tyH = TySection @((TyFirst $tyEv 10 ($tyS + '-f1') $tyU), (TyLived $tyPp ($tyS + '-l') $tyU), (TyPower $c $rg $pw ($tyS + '-p')), (TyYear $tyEv ($tyS + '-y') $tyU), (TyFirst $tyEv 10 ($tyS + '-f2') $tyU)) ('the ' + (Hx $c) + ': its events, people and great powers')
+  if ($tyH) { $TYN.century++ }; [void]$sb.Append($tyH)
   $pv = if ($ci -gt 0) { $CENTPAGES[$ci - 1] } else { $null }; $nx = if ($ci -lt $CENTPAGES.Count - 1) { $CENTPAGES[$ci + 1] } else { $null }
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring centuries">' + $(if ($pv) { '<a class="prev" rel="prev" href="/centuries/' + (CenturySlug $pv) + '"><span class="lbl">&larr; Previous century</span><span class="nm">' + (Hx (CentTitle $pv)) + '</span></a>' } else { '' }) +
     $(if ($nx) { '<a class="next" rel="next" href="/centuries/' + (CenturySlug $nx) + '"><span class="lbl">Next century &rarr;</span><span class="nm">' + (Hx (CentTitle $nx)) + '</span></a>' } else { '' }) + "</nav>`n")
@@ -1521,6 +1679,15 @@ $RP = @($JSS.DeserializeObject([EpochBuild.W]::QuoteKeys($rpText.Substring($i0, 
 # there is nothing else
 function PicSource([string]$img) { if ($img -match '^/images/encyclopedia/(.+)\.jpg$' -and $BY.ContainsKey($Matches[1]) -and $BY[$Matches[1]].cr) { [string]$BY[$Matches[1]].cr['source'] } else { '' } }
 function PicIsChart([string]$src) { $src -match '(?i)\.svg$' -or $src -match '(?i)(?<![a-z])(map|maps|mapa|carte|karte|locator|location|diagram|plan|territor(y|ies)|extent)(?![a-z])' }
+# a person's picture that shows the person (Who Said It?, the "Who is this?" flashcards): never one of
+# scripts/no-portrait.tsv (scenes, maps, a burial suit: checked by eye) nor a map or diagram; -Strict also leaves out
+# coins, seals, steles and inscriptions by the Commons file name (fine for a speaker, poor as a portrait to guess)
+$NOFACE = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\no-portrait.tsv", $U8)) { if ($l -and -not $l.StartsWith('#')) { $NOFACE[$l.Split("`t")[0]] = 1 } }
+function PicFace($e, [switch]$Strict) {
+  if (-not $e.img -or $NOFACE.ContainsKey($e.slug)) { return $false }
+  $src = PicSource ([string]$e.img); if (PicIsChart $src) { return $false }
+  -not $Strict -or $src -notmatch '(?i)(?<![a-z])(coins?|dinars?|dirhams?|deniers?|staters?|drachms?|tetradrachms?|solidus|aureus|follis|penny|siliqua|tremissis|seals?|stel[ae]|tablets?|inscriptions?|obverse|reverse)(?![a-z])'
+}
 function PathThumbs($p) {
   $seen = @{}; $all = New-Object Collections.Generic.List[object]
   foreach ($st in @($p['steps'])) { $im = [string]$st['img']; if (-not $im) { continue }; $src = PicSource $im; $key = if ($src) { $src } else { $im }; if ($seen.ContainsKey($key)) { continue }; $seen[$key] = 1; $all.Add([pscustomobject]@{ im = $im; chart = [bool](PicIsChart $src) }) }
@@ -1546,6 +1713,10 @@ for ($pi2 = 0; $pi2 -lt $RP.Count; $pi2++) {
       '<span class="path-step-body"><span class="path-step-kind">' + ($k + 1) + ' · ' + (Hx ([string]$s['meta'])) + '</span><span class="path-step-name">' + (Hx ([string]$s['name'])) + '</span><span class="path-step-why">' + (Hx ([string]$s['why'])) + '</span></span></a></li>')
   }
   [void]$sb.Append("</ol>`n")
+  # Test yourself: from the stops, their dates and the reasons the path gives for them
+  $tyU = @{}; $tySt = WsSteps $p; $tyS = 'ty-path-' + $slug
+  $tyH = TySection @((TyWhy $tySt ($tyS + '-w1') $tyU), (TyFirst $tySt 20 ($tyS + '-f1') $tyU), (TyLived $tySt ($tyS + '-l') $tyU), (TyWhy $tySt ($tyS + '-w2') $tyU), (TyFirst $tySt 20 ($tyS + '-f2') $tyU)) 'this path and its stops'
+  if ($tyH) { $TYN.path++ }; [void]$sb.Append($tyH)
   $pv = $RP[($pi2 - 1 + $RP.Count) % $RP.Count]; $nx = $RP[($pi2 + 1) % $RP.Count]
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other reading paths"><a class="prev" rel="prev" href="/paths/' + $pv['slug'] + '"><span class="lbl">&larr; Previous path</span><span class="nm">' + (Hx ([string]$pv['title'])) + '</span></a><a class="next" rel="next" href="/paths/' + $nx['slug'] + '"><span class="lbl">Next path &rarr;</span><span class="nm">' + (Hx ([string]$nx['title'])) + "</span></a></nav>`n")
   [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/paths/">All reading paths &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n")
@@ -1565,7 +1736,7 @@ $body = "<script>(function(){var h=location.hash.slice(1);if(/^[a-z0-9-]+`$/.tes
 $title = 'Reading Paths Through World History — The Epoch Institute'
 $desc = 'Curated routes through world history: the Silk Road, the steppe empires, the crusades, great conquerors and explorers, one stop at a time.'
 Emit '/paths/' (Page @{ title = $title; desc = $desc; path = '/paths/'; type = 'website'; img = (Poster 'page-paths'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/paths/") + '}'); nav = 'paths'; body = $body })
-Say "glossary: $($TERMS.Count) terms; reading paths: $($RP.Count)"
+Say "glossary: $($TERMS.Count) terms; reading paths: $($RP.Count); Test yourself on $($TYN.century) century and $($TYN.path) path pages"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Great Speeches: /speeches/<slug> (the setting, the famous words and their source, what followed, connected entries)
@@ -1832,28 +2003,7 @@ Say "community articles: $($CMART.Count)"
 # screen; "Print with the answers" (enc-page.js) opens it, and it prints on a page of its own.
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 Say 'teachers corner'
-function WsShuffle($items, [string]$seed) {   # the same order on every build, never the order of the answer
-  $a = @($items); if ($a.Count -lt 2) { return $a }
-  $rnd = New-Object Random ([Convert]::ToInt32(([EpochBuild.W]::Sha1($seed)).Substring(0, 7), 16))
-  for ($i = $a.Count - 1; $i -gt 0; $i--) { $j = $rnd.Next($i + 1); $t = $a[$i]; $a[$i] = $a[$j]; $a[$j] = $t }
-  $same = $true; for ($i = 0; $i -lt $a.Count; $i++) { if (-not [object]::ReferenceEquals($a[$i], @($items)[$i])) { $same = $false; break } }
-  if ($same) { $a = @($a[1..($a.Count - 1)]) + @($a[0]) }
-  return $a
-}
-# items with a first year, in their order of priority: up to max of them, no two within gap years of each other
-function WsSpread($items, [int]$max, [int]$gap) {
-  $out = New-Object Collections.Generic.List[object]
-  foreach ($it in $items) { if ($null -eq $it.y) { continue }; $ok = $true; foreach ($o in $out) { if ([Math]::Abs($o.y - $it.y) -lt $gap) { $ok = $false; break } }; if ($ok) { $out.Add($it); if ($out.Count -ge $max) { break } } }
-  return @($out | Sort-Object { $_.y })
-}
-# an encyclopedia entry as a worksheet item: a person's birth (a lifespan only), an event's or a work's first year
-function WsItem($e, [string]$name) {
-  $o = [pscustomobject]@{ name = $(if ($name) { $name } else { $e.name }); slug = $e.slug; e = $e; y = $null; life = $false; dates = [string]$e.dates; kind = '' }
-  if ($e.type -eq 'person') { $o.kind = 'person'; if ([EpochBuild.W]::Range($e.dates)) { $o.life = $true; $sp = [EpochBuild.W]::Span($e.dates); if ($sp) { $o.y = $sp[0] } } }
-  elseif ($e.type -eq 'event' -or $e.type -eq 'work' -or $e.conflict) { $o.kind = 'event'; $sp = [EpochBuild.W]::Span($e.dates); if ($sp -and $e.dates -notmatch 'centur') { $o.y = $sp[0] } }
-  elseif ($e.type -eq 'polity') { $o.kind = 'state'; $sp = [EpochBuild.W]::Span($e.dates); if ($sp -and $e.dates -notmatch 'centur') { $o.y = $sp[0] } }
-  return $o
-}
+# (WsShuffle, WsSpread, WsItem and WsSteps are defined before the century pages, with Test yourself)
 # glossary terms: whole words, case apart; everyday words that are also terms (materials, crops, coins of the realm)
 # are left out, and a sheet takes the rarest of those it mentions
 $WSSTOP = @{}; foreach ($w in 'Well', 'Talent', 'Theatre', 'Silver', 'Silk', 'Tea', 'Cotton', 'Camel', 'Cattle', 'Copper', 'Bronze', 'Rice', 'Steel', 'Timber', 'Tin', 'Leather', 'Coal', 'Bead', 'Flax', 'Pepper', 'Yang', 'Skat', 'Riesling', 'Terp', 'Vogt', 'Charcoal', 'Cinnamon', 'Cloves', 'Nutmeg', 'Maize', 'Potato', 'Tomato', 'Peanut', 'Groundnut', 'Sorghum', 'Millet', 'Rye', 'Sesame', 'Pulses', 'Indigo', 'Rubber', 'Shawl', 'Kora', 'Tanka', 'Rajab', 'Insulin', 'Gamay', 'Pinot noir', 'Percheron', 'Union Flag', 'Flag of Denmark', 'Iron Curtain', 'Hellanodikai', 'Tin', 'Ebony', 'Natron', 'Phosphate', 'Calabash', 'Benzoin resin', 'Camphor', 'Myrrh', 'Incense', 'Sugarcane', 'Cassava', 'Sweet potato', 'Olive oil', 'Palm oil', 'Oil palm', 'Kola nut', 'Yerba mate', 'Cacao', 'Sling', 'Lance', 'Pike', 'Archery', 'Well') { $WSSTOP[$w] = 1 }
@@ -1870,14 +2020,7 @@ $NODEBYP = @{}; foreach ($n in $POL['nodes']) { if ($n['p']) { $NODEBYP[[string]
 $WSDEG = @{}; foreach ($l in $POL['links']) { $WSDEG[[string]$l['s']] = 1 + [int]$WSDEG[[string]$l['s']]; $WSDEG[[string]$l['t']] = 1 + [int]$WSDEG[[string]$l['t']] }
 $SHEETS = New-Object Collections.Generic.List[object]; $TERMDF = @{}
 foreach ($p in $RP) {
-  $steps = New-Object Collections.Generic.List[object]; $k = 0
-  foreach ($st in @($p['steps'])) {
-    $k++; $h = [string]$st['href']; $it = $null
-    if ($h -match '^/encyclopedia/(.+)$' -and $BY.ContainsKey($Matches[1])) { $it = WsItem $BY[$Matches[1]] ([string]$st['name']) }
-    elseif ($EMPURL.ContainsKey($h) -and $EMPURL[$h]['points']) { $em = $EMPURL[$h]; $pts0 = $em['points']; $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = [int][double]$pts0[0][0]; life = $false; dates = (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]); kind = 'state' } }
-    else { $it = [pscustomobject]@{ name = [string]$st['name']; slug = ''; e = $null; y = $null; life = $false; dates = ''; kind = '' } }
-    $it | Add-Member n $k; $it | Add-Member why ([string]$st['why']); $it | Add-Member href $h; $steps.Add($it)
-  }
+  $steps = WsSteps $p
   $shT = WsTermsIn (([string]$p['intro']) + ' ' + ((@($p['steps']) | ForEach-Object { [string]$_['why'] }) -join ' '))
   foreach ($t in $shT) { $TERMDF[$t.slug] = 1 + [int]$TERMDF[$t.slug] }
   $SHEETS.Add([pscustomobject]@{ kind = 'path'; slug = 'path-' + [string]$p['slug']; p = $p; steps = $steps; terms = $shT })
@@ -2377,6 +2520,81 @@ $t = [IO.File]::ReadAllText("$Repo\faith-map.js", $U8); $t2 = [regex]::Replace($
 Say ("faith maps: {0} of {1} religions, {2} areas" -f $fmOut.Count, $FAITH.Count, (($fmOut.Values | ForEach-Object { $_.areas.Count } | Measure-Object -Sum).Sum))
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Flashcards (/flashcards, flashcards.js): decks made from the data, written as data/cards/<deck>.json and listed in the
+# page's build:fc-decks block with each file's ?v=. A card is [id, front, back, picture, link, hint]; a deck {id, t
+# title, ask (the question on the front), pf (0 the picture on the back, 1 only the picture in front: "who is this?",
+# 2 the picture and the front text), cards}. The decks: the glossary (a term, its first sentence), the best-known people
+# of each century with a picture, the profiles' capitals (empire-facts.js) and their key events with a firm year
+# (empire-glance.js) by region, and the stops of each reading path with the path's reason for each.
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Say 'flashcards'
+New-Item -ItemType Directory -Force "$Repo\data\cards" | Out-Null
+$FCD = New-Object Collections.Generic.List[object]
+function FcCard([string]$id, [string]$f, [string]$b, [string]$img, [string]$l, [string]$h) { [pscustomobject]@{ id = $id; f = $f; b = $b; img = $img; l = $l; h = $h } }
+function FcDeck([string]$id, [string]$g, [string]$t, [string]$s, [string]$d, [string]$ask, [int]$pf, $cards, [string]$img) {   # s: the tile's short label
+  $cs = @($cards | Where-Object { $_ }); if ($cs.Count -lt 5) { return }
+  $js = '{"id":' + (Js $id) + ',"t":' + (Js $t) + ',"ask":' + (Js $ask) + ',"pf":' + $pf + ',"cards":[' + "`n" + (($cs | ForEach-Object { '[' + (Js $_.id) + ',' + (Js $_.f) + ',' + (Js $_.b) + ',' + (Js $_.img) + ',' + (Js $_.l) + ',' + (Js $_.h) + ']' }) -join ",`n") + "`n]}`n"
+  if ([EpochBuild.W]::WriteIfChanged("$Repo\data\cards\$id.json", $js)) { $script:NWRITE++ }
+  $pic = @($cs | Where-Object { $_.img }); $first = if ($img) { $img } elseif ($pic.Count) { $pic[0].img } else { '' }
+  $script:FCD.Add([pscustomobject]@{ id = $id; g = $g; t = $t; s = $(if ($s) { $s } else { $t }); d = $d; n = $cs.Count; pics = $pic.Count; img = $(if ($first -like '/images/*') { ThumbOf $first } else { $first }); v = [EpochBuild.W]::Sha1($js).Substring(0, 10) })
+}
+# words: the glossary, the terms the profiles mention most first (not the everyday words the worksheets also leave out)
+$fcTerms = @($TERMS | Where-Object { -not $WSSTOP.ContainsKey($_.name) })
+FcDeck 'glossary' 'words' 'The glossary' '' ("$($fcTerms.Count) terms of the glossary: offices, institutions, laws and ideas, each with its first sentence.") 'What does it mean?' 0 @(
+  $fcTerms | Sort-Object @{ e = { $ESCORE[$_.slug] }; Descending = $true }, @{ e = { $_.name } } | ForEach-Object { FcCard $_.slug $_.name ([EpochBuild.W]::FirstSentence($_.desc, 240)) ([string]$_.img) ('/encyclopedia/' + $_.slug) 'A term' }) $(if ($BY.ContainsKey('code-of-hammurabi')) { [string]$BY['code-of-hammurabi'].img } else { '' })
+# faces: each century's 40 best-known people with a picture that shows them (PicFace); centuries with fewer than twelve share a deck
+function FcPeople($cs, $lst) {
+  $lbl = if ($cs.Count -eq 1) { $cs[0] } else { (($cs[0] -replace ' century', '') -replace ' BCE', '') + ' to ' + $cs[-1] }   # "26th to 14th century BCE"
+  if ($cs.Count -gt 1 -and ($cs[0] -match 'BCE') -ne ($cs[-1] -match 'BCE')) { $lbl = $cs[0] + ' to the ' + $cs[-1] }
+  $top = @($lst | Sort-Object @{ e = { $_.sc }; Descending = $true }, @{ e = { $_.e.i } } | Select-Object -First 40)
+  FcDeck ('people-' + (CenturySlug $cs[0]) + $(if ($cs.Count -gt 1) { '-to-' + (CenturySlug $cs[-1]) } else { '' })) 'people' ('People of the ' + $lbl) ($lbl.Substring(0, 1).ToUpperInvariant() + $lbl.Substring(1)) ("The best-known people of the $lbl with a picture: who is who?") 'Who is this?' 1 @(
+    $top | ForEach-Object { FcCard $_.e.slug $_.e.name ([EpochBuild.W]::FirstSentence($_.e.desc, 200)) ([string]$_.e.img) ('/encyclopedia/' + $_.e.slug) ([string]$_.e.dates + $(if ($_.r) { ' · ' + $_.r } else { '' })) }) ''
+}
+$fcBufC = New-Object Collections.Generic.List[string]; $fcBuf = New-Object Collections.Generic.List[object]
+foreach ($c in $PCENTS) {
+  $lst = @($PBYC[$c] | Where-Object { PicFace $_.e -Strict })
+  if ($lst.Count -lt 12) { $fcBufC.Add($c); foreach ($x in $lst) { $fcBuf.Add($x) }; continue }
+  if ($fcBufC.Count) { FcPeople $fcBufC.ToArray() $fcBuf.ToArray(); $fcBufC.Clear(); $fcBuf.Clear() }
+  FcPeople @($c) $lst
+}
+if ($fcBufC.Count) { FcPeople $fcBufC.ToArray() $fcBuf.ToArray() }
+# capitals and key events, by the region of the profile, oldest first
+$FCCAP = @{}; foreach ($m in [regex]::Matches([IO.File]::ReadAllText("$Repo\empire-facts.js", $U8), '(?m)^  "([^"]+)": \{capital:"((?:[^"\\]|\\.)*)"')) { $FCCAP[$m.Groups[1].Value] = [regex]::Unescape($m.Groups[2].Value) }
+function FcSpan($em) { $sp = if ($em['points']) { @([double]$em['points'][0][0], [double]$em['points'][-1][0]) } else { @([double]$em['start'], $(if ($null -eq $em['end']) { 2025 } else { [double]$em['end'] })) }; (YearLabel ([int]$sp[0])) + '–' + $(if ($null -eq $em['end'] -and $sp[1] -ge 2025) { 'present' } else { YearLabel ([int]$sp[1]) }) }
+foreach ($rr in $BREG) {
+  $ems = @($EMPS | Where-Object { [string]$_['region'] -eq $rr } | Sort-Object @{ e = { if ($_['points']) { [double]$_['points'][0][0] } else { [double]$_['start'] } } }, @{ e = { [string]$_['name'] } })
+  $rs = [EpochBuild.W]::ToSlug($rr)
+  FcDeck ('capitals-' + $rs) 'capitals' ('Capitals: ' + $rr) $rr ("The capitals of the profiled states and empires of $rr, from their key facts.") 'What was its capital?' 2 @(
+    $ems | Where-Object { -not $_['kind'] -and $FCCAP[[string]$_['name']] } | ForEach-Object { $nm = [string]$_['name']; FcCard ([EpochBuild.W]::ToSlug($nm)) $nm $FCCAP[$nm] $(if ($LOGO.ContainsKey($nm)) { '/logos/thumbs/' + [Uri]::EscapeDataString($nm) + '.png' } else { '' }) (ProfUrl $nm) (FcSpan $_) }) ''
+  $evc = New-Object Collections.Generic.List[object]
+  foreach ($em in $ems) {
+    $nm = [string]$em['name']; if (-not $GLANCE.Contains($nm)) { continue }; $k = 0
+    foreach ($gev in @($GLANCE[$nm]['ev'])) { $k++; $yv = [EpochBuild.W]::Firm([string]$gev[0], $false); if ($yv -eq $MINV) { continue }; $evc.Add((FcCard ([EpochBuild.W]::ToSlug($nm) + '-' + $k) ([string]$gev[1]) (YearLabel $yv) '' (ProfUrl $nm) $nm)) }
+  }
+  $evImg = @($ems | Where-Object { $LOGO.ContainsKey([string]$_['name']) } | Select-Object -First 1)
+  FcDeck ('events-' + $rs) 'events' ('Key events: ' + $rr) $rr ("The dated key events of the profiles of ${rr}: in which year?") 'In which year?' 0 $evc $(if ($evImg.Count) { '/logos/thumbs/' + [Uri]::EscapeDataString([string]$evImg[0]['name']) + '.png' } else { '' })
+}
+# paths: each stop and the path's reason for it
+foreach ($p in $RP) {
+  FcDeck ('path-' + [string]$p['slug']) 'paths' ([string]$p['title']) '' ([string]$p['tagline']) 'Why is it on the path?' 2 @(
+    @($p['steps']) | ForEach-Object { FcCard ([string]$_['href'] -replace '^/(encyclopedia|empire|religion|language|state)/', '') ([string]$_['name']) ([string]$_['why']) ([string]$_['img']) ([string]$_['href']) ([string]$_['meta']) }) ''
+}
+$FCG = [ordered]@{ words = @('Words of history', 'The terms historians use, one card each.'); people = @('Faces of the past', 'A portrait on the front: who is it?'); capitals = @('Capitals', 'The seats of the profiled states and empires, region by region.'); events = @('Key events', 'The turning points of the profiles: the year on the back.'); paths = @('Reading paths', 'The stops of a path and why each one is on it.') }
+$fcb = New-Object Text.StringBuilder
+foreach ($g in $FCG.Keys) {
+  $ds = @($FCD | Where-Object { $_.g -eq $g }); if (-not $ds.Count) { continue }
+  [void]$fcb.Append('<section class="fc-group" aria-labelledby="fc-g-' + $g + '"><h2 class="ref-sec-title" id="fc-g-' + $g + '">' + $FCG[$g][0] + ' <span class="n">' + $ds.Count + $(if ($ds.Count -eq 1) { ' deck' } else { ' decks' }) + '</span></h2><p class="fc-gnote">' + $FCG[$g][1] + '</p><ul class="fc-decks' + $(if ($ds.Count -gt 12) { ' fc-many' } else { '' }) + '">')
+  foreach ($dk in $ds) {
+    [void]$fcb.Append('<li><a class="fc-deck" href="#' + $dk.id + '" data-deck="' + $dk.id + '" data-title="' + (Hx $dk.t) + '" data-v="' + $dk.v + '" data-n="' + $dk.n + '" data-pics="' + $dk.pics + '">' + $(if ($dk.img) { '<span class="fc-deck-img"><img src="' + (Hx $dk.img) + '" alt="" loading="lazy" width="48" height="48"></span>' } else { '<span class="fc-deck-img fc-deck-mono" aria-hidden="true">' + (Hx $dk.s.Substring(0, 1)) + '</span>' }) +
+      '<span class="fc-deck-b"><span class="fc-deck-t">' + (Hx $dk.s) + '</span><span class="fc-deck-n">' + $dk.n + ' cards</span><span class="fc-deck-s"></span></span></a></li>')
+  }
+  [void]$fcb.Append("</ul></section>`n")
+}
+SetBlock "$Repo\flashcards" 'fc-decks' $fcb.ToString().TrimEnd()
+$FCN = ($FCD | Measure-Object -Property n -Sum).Sum
+Say ("flashcards: {0} decks, {1:N0} cards" -f $FCD.Count, $FCN)
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Generated blocks in the hand-written index pages, enc-page.js version, stale pages, sitemaps
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
@@ -2505,6 +2723,53 @@ $cwJs = "// crossword-data.js - built by scripts/build-pages.ps1 from scripts/cr
 if ([EpochBuild.W]::WriteIfChanged("$Repo\crossword-data.js", $cwJs)) { $NWRITE++ }; $CWV = [EpochBuild.W]::Sha1($cwJs).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'crossword-data\.js\?v=[0-9a-f]*', "crossword-data.js?v=$CWV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
 Say ("crossword: {0} answers, {1} puzzles, crossword-data.js {2:N0} KB" -f $cwRows.Count, $cwPz.Count, ($cwJs.Length / 1KB))
+# Who Said It? (#said): data/quotes.json (scripts/fetch-quotes.ps1 imports each quotation's exact words from a free
+# source listed in scripts/quote-sources.tsv; nothing is typed) -> said-data.js, loaded when the tab first opens (SAID_SRC
+# in /games, its ?v= stamped here). Five quotations a day in the file's order, repeated after the last. Each has three
+# other people to choose from, all with a picture: other speakers of about the same time first, then the best known of
+# the speaker's age and region; never one who shares a name with the speaker (the two Plinys). An unknown speaker stops
+# the build. SAID = {p: [[slug, name, dates, picture]], q: [[text, speaker, work, credit, url, source, licence, [others], note]]}
+if (Test-Path "$Repo\data\quotes.json") {
+  $QTS = @($JSS.DeserializeObject([IO.File]::ReadAllText("$Repo\data\quotes.json", $U8)))
+  $sdBad = New-Object Collections.Generic.List[string]
+  function SdMid([string]$slug) { $sp = $EYRS[$slug]; if ($sp) { ([double]$sp[0] + [double]$sp[1]) / 2 } else { $null } }
+  function SdWords([string]$n) { @(([EpochBuild.W]::ToSlug($n)) -split '-' | Where-Object { $_.Length -ge 4 -and $_ -notmatch '^(the|of|and|great|saint|king|queen|emperor|elder|younger)$' }) }
+  $sdSpk = @{}; foreach ($q in $QTS) { $sl = [string]$q['speaker']; if (-not $BY.ContainsKey($sl) -or $BY[$sl].type -ne 'person') { $sdBad.Add("speaker $sl") } else { $sdSpk[$sl] = 1 } }
+  if ($sdBad.Count) { throw ('data/quotes.json: ' + (($sdBad | Select-Object -Unique) -join ', ')) }
+  # the people who can stand beside a speaker: with a picture and years (their middle year and name words worked out once)
+  $sdPool = @($PPL | Where-Object { $_.sp -and (PicFace $_.e -Strict) } | ForEach-Object { [pscustomobject]@{ slug = $_.e.slug; mid = ([double]$_.sp[0] + [double]$_.sp[1]) / 2; w = @(SdWords $_.e.name); r = $_.r; sc = [int]$_.sc } })
+  $sdP = New-Object Collections.Generic.List[string]; $sdIx = @{}
+  function SdPerson([string]$slug) { if (-not $sdIx.ContainsKey($slug)) { $e = $BY[$slug]; $sdIx[$slug] = $sdP.Count; $sdP.Add('[' + (Js $slug) + ',' + (Js $e.name) + ',' + (Js ([string]$e.dates)) + ',' + (Js $(if (PicFace $e) { ThumbOf $e.img } else { '' })) + ']') }; return $sdIx[$slug] }
+  # a speaker's eight likeliest companions; each quotation draws three of them by its id, never the writer through whom
+  # the words reach us (named in its work or note: Plato for Socrates, Thucydides for Pericles, Voltaire for Peter)
+  $sdQ = New-Object Collections.Generic.List[string]; $sdCand = @{}; $sdRx = @{}
+  function SdNamed([string]$slug, [string]$text) {
+    if (-not $sdRx.ContainsKey($slug)) { $nm = [string]$BY[$slug].name; $last = @($nm -split ' ')[-1]; $alts = @($nm) + @($(if ($last -ne $nm -and $last.Length -ge 5 -and $last -notmatch '^(Great|Elder|Younger|Saint|First|Second|Third|Fourth)$') { $last })); $sdRx[$slug] = New-Object Regex ('\b(?:' + (($alts | ForEach-Object { [regex]::Escape($_) }) -join '|') + ')\b') }
+    $sdRx[$slug].IsMatch($text)
+  }
+  foreach ($q in $QTS) {
+    $sl = [string]$q['speaker']; $me = $BY[$sl]
+    if (-not $sdCand.ContainsKey($sl)) {
+      $mid = SdMid $sl; $myW = SdWords $me.name; $myR = PersonRegion $me
+      $win = if ($mid -gt 1500) { 60 } else { 100 }
+      $cand = @(foreach ($o in $sdPool) {
+        if ($null -eq $mid -or $o.slug -eq $sl) { continue }; $d = [Math]::Abs($o.mid - $mid); if ($d -gt $win) { continue }
+        if (@($o.w | Where-Object { $myW -contains $_ }).Count) { continue }
+        [pscustomobject]@{ slug = $o.slug; sc = $(if ($sdSpk.ContainsKey($o.slug)) { 1000 } else { 0 }) + $(if ($o.r -and $o.r -eq $myR) { 200 } else { 0 }) + $o.sc - $d / 4 }
+      })
+      $sdCand[$sl] = @($cand | Sort-Object @{ e = { $_.sc }; Descending = $true }, @{ e = { $_.slug } } | Select-Object -First 8 | ForEach-Object { $_.slug })
+    }
+    $via = [string]$q['work'] + ' ' + [string]$q['note']
+    $others = @(TyShuffle @($sdCand[$sl] | Where-Object { -not (SdNamed $_ $via) }) ('said|' + [string]$q['id']) | Select-Object -First 3)
+    if ($others.Count -lt 3) { $sdBad.Add("too few people beside $sl") }
+    $sdQ.Add('[' + (Js ([string]$q['text'])) + ',' + (SdPerson $sl) + ',' + (Js ([string]$q['work'])) + ',' + (Js ([string]$q['credit'])) + ',' + (Js ([string]$q['url'])) + ',' + (Js ([string]$q['source'])) + ',' + (Js ([string]$q['licence'])) + ',[' + (($others | ForEach-Object { SdPerson $_ }) -join ',') + '],' + (Js ([string]$q['note'])) + ']')
+  }
+  if ($sdBad.Count) { throw ('Who Said It?: ' + (($sdBad | Select-Object -Unique) -join ', ')) }
+  $sdJs = "// said-data.js - built by scripts/build-pages.ps1 from data/quotes.json (scripts/fetch-quotes.ps1, scripts/quote-sources.tsv). Do not edit.`n// p: [slug, name, dates, picture]; q: [text, speaker, work, credit, url, source, licence, [three others], note]: five a day, in order.`nvar SAID = {p:[`n" + ($sdP -join ",`n") + "`n],`nq:[`n" + ($sdQ -join ",`n") + "`n]};`n"
+  if ([EpochBuild.W]::WriteIfChanged("$Repo\said-data.js", $sdJs)) { $NWRITE++ }; $SAIDV = [EpochBuild.W]::Sha1($sdJs).Substring(0, 10)
+  $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'said-data\.js\?v=[0-9a-f]*', "said-data.js?v=$SAIDV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
+  Say ("who said it: {0} quotations by {1} people, {2} days before the first comes back" -f $QTS.Count, $sdSpk.Count, [Math]::Floor($QTS.Count / 5))
+}
 # The Kids corner: scripts/kids-corner.tsv (@theme lines, entry lines with a line for young readers, ! facts)
 $kdThemes = New-Object Collections.Generic.List[object]; $kdFacts = New-Object Collections.Generic.List[string]; $kdBad = New-Object Collections.Generic.List[string]; $kdT = $null
 foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\kids-corner.tsv", $U8)) {
@@ -2584,6 +2849,7 @@ $SECTIONS = [ordered]@{
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
   games        = @{ t = 'Games'; h = '/games'; k = 'Nine games'; d = 'Picture puzzles, word hunts, timelines, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  flashcards   = @{ t = 'Flashcards'; h = '/flashcards'; k = "$($FCN.ToString('N0')) cards"; d = 'Terms, faces, capitals and dates in decks of cards: the ones you miss come back sooner, the ones you know wait longer.'; pic = @('house-of-wisdom', 'imperial-examination') }
   passport     = @{ t = 'My Passport'; h = '/passport'; k = 'Your stamps'; d = 'The pages you read, the centuries you visit and the games you play, with stamps to collect. Kept in your own browser.'; pic = @('xuanzang') }
   kids         = @{ t = 'Kids corner'; h = '/kids'; k = 'For young explorers'; d = 'Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.'; pic = @('great-pyramid-of-giza') }
   start        = @{ t = 'Find Your Way In'; h = '/start'; k = 'Four questions'; d = 'Tell us what draws you to history and get the reading paths and tools that suit you.'; pic = @('piri-reis-map', 'cantino-planisphere', 'tabula-rogeriana') }
@@ -2603,7 +2869,7 @@ SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
 $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
   @('Through time', @('atlas', 'timeline', 'faiths', 'centuries', 'years')), @('Explore', @('explorer', 'connections', 'paths', 'write', 'start')),
-  @('Play', @('quiz', 'games', 'kids', 'passport')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors')))
+  @('Play', @('quiz', 'games', 'flashcards', 'kids', 'passport')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(if (@($_[1]).Count -eq 5) { ' hub-5' } else { '' }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'countries', 'atlas', 'centuries', 'explorer', 'paths', 'today', 'speeches', 'games', 'kids') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
@@ -2747,6 +3013,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Connections Map', '/connections', 'connections map|relations|network of states'), @('Reading Paths', '/paths/', 'paths|reading paths|where to start reading'),
   @('Great Speeches', '/speeches/', 'speeches|famous speeches'), @('Write in Ancient Scripts', '/write', 'write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe'),
   @('Faith Maps', '/faiths', 'faith maps|spread of religions|religion maps'), @('History Quiz', '/quiz', 'quiz|daily quiz|trivia'),
+  @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'),
   @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'),
   @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('My Passport', '/passport', 'passport|my history|stamps|my reading'),
@@ -2815,7 +3082,7 @@ if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\shared-nav.js", $t2)) 
 Say ("search-pages.js: {0} rows, {1} years; search-index.js: {2:N0} entries ({3:N0} slugs made from the name), {4:N0} states, {5:N0} KB" -f $sgRows.Count, $YEARLIST.Count, $nE, $nZero, $nS, ($siText2.Length / 1KB))
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

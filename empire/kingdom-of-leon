@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of León"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>León was the leading Christian kingdom of <a class="enc-link" href="/encyclopedia/iberia">Iberia</a> in the tenth and eleventh centuries, carrying the Visigothic legacy of <a class="enc-link" href="/encyclopedia/asturias">Asturias</a> south to the <a class="enc-link" href="/encyclopedia/douro">Douro</a> and <a class="enc-link" href="/encyclopedia/tagus">Tagus</a>, producing the Beatus <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> and the Pantheon of <a class="enc-link" href="/encyclopedia/basilica-of-san-isidoro">San Isidoro</a>, and summoning in 1188 an assembly with town representatives often called <a class="enc-link" href="/encyclopedia/europe">Europe</a>'s first parliament.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-leon"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Alfonso VI captures Toledo","o":["1135","910","1085","997"],"a":2,"w":"1085: Alfonso VI captures Toledo."},{"p":"Which came first?","q":"","o":["Ferdinand I of Castile kills Bermudo III at Tamarón and takes León","Almanzor sacks Santiago de Compostela"],"a":1,"w":"1037: Ferdinand I of Castile kills Bermudo III at Tamarón and takes León · 997: Almanzor sacks Santiago de Compostela."},{"p":"Which city was a capital of the Kingdom of León?","q":"","o":["Nicaea","Bruges","Constantinople","León"],"a":3,"w":"Capital: León."},{"p":"Who founded the Kingdom of León?","q":"","o":["Reginar Longneck","Constantine the Great","García I","Baldwin I Iron Arm"],"a":2,"w":"Founder: García I."},{"p":"Which state came after the Kingdom of León?","q":"","o":["Ottoman Empire","Crown of Castile","Burgundian State","Department of Jemmapes"],"a":1,"w":"Succeeded by: Crown of Castile."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of León",slug="kingdom-of-leon",url="https://the-epoch-institute.org/empire/kingdom-of-leon";

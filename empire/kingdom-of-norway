@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Norway"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em><a class="enc-link" href="/encyclopedia/norway">Norway</a> matters as a <a class="enc-link" href="/encyclopedia/bantustan">homeland</a> of the <a class="enc-link" href="/encyclopedia/vikings">Viking</a> expansion across the North Atlantic, as one of <a class="enc-link" href="/encyclopedia/europe">Europe</a>'s oldest kingdoms with an early national law code, and as a state that survived four centuries of union with <a class="enc-link" href="/encyclopedia/denmark">Denmark</a> and <a class="enc-link" href="/encyclopedia/sweden">Sweden</a> to re-emerge between 1814 and 1905 as a democratic <a class="enc-link" href="/encyclopedia/constitutional-monarchy">constitutional monarchy</a>, now among the world's wealthiest.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-norway"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Olaf Haraldsson is killed at Stiklestad and soon venerated as Saint Olaf","o":["1905","1030","1814","1380"],"a":1,"w":"1030: Olaf Haraldsson is killed at Stiklestad and soon venerated as Saint Olaf."},{"p":"Which came first?","q":"","o":["Olaf IV inherits Norway, beginning the union with Denmark","Magnus the Lawmender issues a national law code"],"a":1,"w":"1380: Olaf IV inherits Norway, beginning the union with Denmark · 1274: Magnus the Lawmender issues a national law code."},{"p":"Which city was a capital of the Kingdom of Norway?","q":"","o":["Copenhagen","Roskilde","Jelling","Nidaros"],"a":3,"w":"Capital: Nidaros and Bergen; later Oslo (Christiania 1624–1925)."},{"p":"Who founded the Kingdom of Norway?","q":"","o":["Gorm the Old","Olof Skötkonung","Harald Fairhair","Eric the Victorious"],"a":2,"w":"Founder: Harald Fairhair (traditional)."},{"p":"In which year?","q":"Olaf IV inherits Norway, beginning the union with Denmark","o":["1380","1274","1905","1814"],"a":0,"w":"1380: Olaf IV inherits Norway, beginning the union with Denmark."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Norway",slug="kingdom-of-norway",url="https://the-epoch-institute.org/empire/kingdom-of-norway";

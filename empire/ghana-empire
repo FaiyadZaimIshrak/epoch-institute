@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Ghana Empire"></div>
@@ -118,6 +118,13 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Ghana Empire's enduring significance lies in demonstrating that territorial control is not the only foundation of imperial power: for centuries, Wagadou dominated one of the medieval world's most lucrative trade corridors without owning a single goldfield, sustained by the fiscal genius of taxing what it could not possess.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="ghana-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Al-Bakri completes his famous description of the gilded royal court","o":["1068","1054","1076","1087"],"a":0,"w":"1068: Al-Bakri completes his famous description of the gilded royal court."},{"p":"Which came first?","q":"","o":["The Almoravids seize Awdaghast, ending some sixty years of Ghanaian control","Death of the Almoravid leader Abu Bakr ibn Umar lets the Soninke regain independence"],"a":0,"w":"1054: The Almoravids seize Awdaghast, ending some sixty years of Ghanaian control · 1087: Death of the Almoravid leader Abu Bakr ibn Umar lets the Soninke regain independence."},{"p":"Which city was a capital of the Ghana Empire?","q":"","o":["Njimi","Ngazargamu","Aksum","Koumbi Saleh"],"a":3,"w":"Capital: Koumbi Saleh."},{"p":"Who founded the Ghana Empire?","q":"","o":["Bagauda","Dinga Cissé","Ifikuanim","Eri"],"a":1,"w":"Founder: Dinga Cissé (traditionally)."},{"p":"Which state came after the Ghana Empire?","q":"","o":["Kano Emirate","Sokoto Caliphate","Abuja","Mali Empire"],"a":3,"w":"Succeeded by: Sosso kingdom, Mali Empire."}]</script>
+    </section>
 
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
@@ -161,6 +168,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Ghana Empire",slug="ghana-empire",url="https://the-epoch-institute.org/empire/ghana-empire";

@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Tanzania"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>Tanzania joined Tanganyika and Zanzibar in one of <a class="enc-link" href="/encyclopedia/africa">Africa</a>’s few lasting unions of independent states, and under <a class="enc-link" href="/encyclopedia/julius-nyerere">Julius Nyerere</a> it became the rear base of southern Africa’s liberation struggles, a leading experiment in African socialism and, held together by <a class="enc-link" href="/encyclopedia/swahili">Swahili</a>, one of the continent’s most stable nations.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="tanzania"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Tanganyika and Zanzibar unite on 26 April; the name Tanzania is adopted in October","o":["1967","1964","1975","2021"],"a":1,"w":"1964: Tanganyika and Zanzibar unite on 26 April; the name Tanzania is adopted in October."},{"p":"Which came first?","q":"","o":["Tanzanian forces capture Kampala and overthrow Idi Amin","Samia Suluhu Hassan becomes the first woman president"],"a":0,"w":"1979: Tanzanian forces capture Kampala and overthrow Idi Amin · 2021: Samia Suluhu Hassan becomes the first woman president."},{"p":"Which city was a capital of Tanzania?","q":"","o":["Pretoria","Cape Town","Dodoma","Monrovia"],"a":2,"w":"Capital: Dar es Salaam; Dodoma (designated 1973)."},{"p":"Who founded Tanzania?","q":"","o":["Joseph Jenkins Roberts","Hendrik Verwoerd","American Colonization Society","Julius Nyerere"],"a":3,"w":"Founder: Julius Nyerere and Abeid Karume."},{"p":"In which year?","q":"Dodoma is designated the future capital","o":["1964","2021","1967","1973"],"a":3,"w":"1973: Dodoma is designated the future capital."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Tanzania",slug="tanzania",url="https://the-epoch-institute.org/empire/tanzania";

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Israel"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Kingdom of Israel was the larger and wealthier of the two <a class="enc-link" href="/encyclopedia/hebrew">Hebrew</a> kingdoms, a regional military power under <a class="enc-link" href="/encyclopedia/omri">Omri</a> and <a class="enc-link" href="/encyclopedia/ahab">Ahab</a>, and the setting of the prophets <a class="enc-link" href="/encyclopedia/elijah">Elijah</a>, <a class="enc-link" href="/encyclopedia/amos-prophet">Amos</a> and <a class="enc-link" href="/encyclopedia/hosea">Hosea</a>; its destruction by <a class="enc-link" href="/encyclopedia/assyrian-empire">Assyria</a> in 722 BCE shaped the <a class="enc-link" href="/encyclopedia/hebrew-bible">Hebrew Bible</a> and the legend of the <a class="enc-link" href="/encyclopedia/ten-lost-tribes">Ten Lost Tribes</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-israel"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Ahab fights Shalmaneser III of Assyria at the Battle of Qarqar","o":["720 BCE","722 BCE","853 BCE","732 BCE"],"a":2,"w":"853 BCE: Ahab fights Shalmaneser III of Assyria at the Battle of Qarqar."},{"p":"Which came first?","q":"","o":["Tiglath-pileser III annexes Galilee and Gilead","Ahab fights Shalmaneser III of Assyria at the Battle of Qarqar"],"a":1,"w":"732 BCE: Tiglath-pileser III annexes Galilee and Gilead · 853 BCE: Ahab fights Shalmaneser III of Assyria at the Battle of Qarqar."},{"p":"Which city was a capital of the Kingdom of Israel?","q":"","o":["Nimrud","Assur","Nineveh","Shechem"],"a":3,"w":"Capital: Shechem; later Tirzah; from c. 880 BCE Samaria."},{"p":"Who founded the Kingdom of Israel?","q":"","o":["Jeroboam I","Rehoboam","Kutik-Inshushinak","Puzur-Ashur I"],"a":0,"w":"Founder: Jeroboam I."},{"p":"In which year?","q":"Samaria falls to the Assyrians after a long siege","o":["732 BCE","722 BCE","853 BCE","720 BCE"],"a":1,"w":"722 BCE: Samaria falls to the Assyrians after a long siege."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Israel",slug="kingdom-of-israel",url="https://the-epoch-institute.org/empire/kingdom-of-israel";

@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="State of Qi"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>Qi was the great eastern state of ancient <a class="enc-link" href="/encyclopedia/china">China</a> for eight centuries: under Duke Huan and <a class="enc-link" href="/encyclopedia/guan-zhong">Guan Zhong</a> it created the first hegemony over the <a class="enc-link" href="/encyclopedia/zhou-dynasty">Zhou</a> states, its salt, iron and textile wealth made <a class="enc-link" href="/encyclopedia/linzi">Linzi</a> one of the largest cities of its age, and its <a class="enc-link" href="/encyclopedia/jixia-academy">Jixia Academy</a> shaped classical Chinese philosophy.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="state-of-qi"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Sun Bin's strategy defeats Wei at the Battle of Maling","o":["342 BCE","651 BCE","386 BCE","685 BCE"],"a":0,"w":"342 BCE: Sun Bin's strategy defeats Wei at the Battle of Maling."},{"p":"Which came first?","q":"","o":["Tian Dan breaks the siege of Jimo and restores Qi","Duke Huan presides over the covenant of Kuiqiu as hegemon"],"a":1,"w":"279 BCE: Tian Dan breaks the siege of Jimo and restores Qi · 651 BCE: Duke Huan presides over the covenant of Kuiqiu as hegemon."},{"p":"Which city was a capital of the State of Qi?","q":"","o":["Ying","Yingqiu","Chen","Danyang"],"a":1,"w":"Capital: Yingqiu, traditionally identified with Linzi."},{"p":"Who founded the State of Qi?","q":"","o":["Feizi","Jiang Ziya","Xiong Yi","King Wu of Zhou"],"a":1,"w":"Founder: Jiang Ziya (Lord Taigong)."},{"p":"In which year?","q":"The Zhou king recognises Tian He as ruler of Qi","o":["386 BCE","284 BCE","342 BCE","279 BCE"],"a":0,"w":"386 BCE: The Zhou king recognises Tian He as ruler of Qi."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="State of Qi",slug="state-of-qi",url="https://the-epoch-institute.org/empire/state-of-qi";

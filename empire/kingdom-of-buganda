@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Buganda"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>Buganda grew from a small lakeside kingdom into the most centralised state of the <a class="enc-link" href="/encyclopedia/great-lakes">Great Lakes</a> region, became the gateway for <a class="enc-link" href="/encyclopedia/islam">Islam</a> and <a class="enc-link" href="/encyclopedia/christianity">Christianity</a> into <a class="enc-link" href="/encyclopedia/east-africa">East Africa</a>, gave its name and many institutions to Uganda, and remains a powerful symbol of identity as a restored cultural monarchy.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-buganda"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Buganda Agreement makes the kingdom a privileged part of the Uganda Protectorate","o":["1966","1862","1900","1967"],"a":2,"w":"1900: The Buganda Agreement makes the kingdom a privileged part of the Uganda Protectorate."},{"p":"Which came first?","q":"","o":["Troops under Idi Amin storm the kabaka’s palace at Mengo","Christian converts are executed at Namugongo on the orders of Mwanga II"],"a":1,"w":"1966: Troops under Idi Amin storm the kabaka’s palace at Mengo · 1886: Christian converts are executed at Namugongo on the orders of Mwanga II."},{"p":"Which city was a capital of the Kingdom of Buganda?","q":"","o":["Addis Ababa","Gondar","Nri","Mengo"],"a":3,"w":"Capital: Royal capitals moved with each reign; later Mengo (Kampala)."},{"p":"Who founded the Kingdom of Buganda?","q":"","o":["Kintu","Eri","Yekuno Amlak","Ifikuanim"],"a":0,"w":"Founder: Kintu and Kato Kimera (traditionally)."},{"p":"Which state came after the Kingdom of Buganda?","q":"","o":["Niger Coast Protectorate","Sokoto Caliphate","Derg","Uganda Protectorate"],"a":3,"w":"Succeeded by: Uganda Protectorate; Uganda."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Buganda",slug="kingdom-of-buganda",url="https://the-epoch-institute.org/empire/kingdom-of-buganda";

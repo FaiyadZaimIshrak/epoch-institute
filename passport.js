@@ -1,12 +1,12 @@
 // passport.js - My Passport (/passport): what this browser has read and played at the Institute, as a passport with
 // stamps. Everything comes from localStorage (epoch-seen: the reading pages, epoch-visits: the days with a visit,
-// epoch-paths, epoch-games, epoch-quiz-streak, epoch-shelf, epoch-recent) and nothing is sent anywhere. A stamp, once
+// epoch-paths, epoch-games, epoch-tests, epoch-quiz-streak, epoch-shelf, epoch-recent) and nothing is sent anywhere. A stamp, once
 // earned, is kept in epoch-badges. A backup code (EPOCH1. + base64 JSON of those keys) carries the passport to another
 // browser; restoring adds to what is there.
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var KEYS = ['epoch-seen', 'epoch-visits', 'epoch-shelf', 'epoch-recent', 'epoch-paths', 'epoch-games', 'epoch-quiz-streak', 'epoch-quiz-best', 'epoch-badges', 'epoch-reader-type'];
+  var KEYS = ['epoch-seen', 'epoch-visits', 'epoch-shelf', 'epoch-recent', 'epoch-paths', 'epoch-games', 'epoch-quiz-streak', 'epoch-quiz-best', 'epoch-badges', 'epoch-reader-type', 'epoch-tests'];
   function get(k, d) { try { var v = JSON.parse(localStorage.getItem(k) || 'null'); return v == null ? d : v; } catch (e) { return d; } }
   function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -38,15 +38,20 @@
     S.days = days.length; S.run = 0;
     for (var d = days.indexOf(TODAY) >= 0 ? TODAY : TODAY - 1; days.indexOf(d) >= 0; d--) S.run++;
     function sk(o) { return o && typeof o === 'object' ? { n: o.last >= TODAY - 1 ? o.n || 0 : 0, b: Math.max(o.b || 0, o.n || 0) } : { n: 0, b: 0 }; }
-    S.quiz = sk(get('epoch-quiz-streak', null)); S.ten = sk(games['daily-streak']); S.conn = sk(games['conn-streak']); S.cw = sk(games['cw-streak']);
+    S.quiz = sk(get('epoch-quiz-streak', null)); S.ten = sk(games['daily-streak']); S.conn = sk(games['conn-streak']); S.cw = sk(games['cw-streak']); S.said = sk(games['said-streak']);
     S.tenPerfect = Object.keys(games).some(function (k) { return /^daily-\d+$/.test(k) && games[k] && games[k].m === '1111111111'; });
     S.connPerfect = Object.keys(games).some(function (k) { var g = games[k]; return /^conn-\d+$/.test(k) && g && g.done && g.s && g.s.length === 4 && !g.m; });
     S.connSolved = Object.keys(games).filter(function (k) { var g = games[k]; return /^conn-\d+$/.test(k) && g && g.done && g.s && g.s.length === 4; }).length;
     S.cwSolved = Object.keys(games).filter(function (k) { var g = games[k]; return /^cw-\d+$/.test(k) && g && g.done && !g.gave; }).length;
+    S.saidPerfect = Object.keys(games).some(function (k) { var g = games[k]; return /^said-\d+$/.test(k) && g && g.done && g.m === '11111'; });
+    S.saidPlayed = Object.keys(games).filter(function (k) { var g = games[k]; return /^said-\d+$/.test(k) && g && g.done; }).length;
     S.cwClean = Object.keys(games).some(function (k) { var g = games[k]; return /^cw-\d+$/.test(k) && g && g.done && !g.gave && !g.c && !g.r; });
     var played = { pairs: games.pairs, order: games.order, year: games.year, puzzle: games['pz-solved'] };
-    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; });
+    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; if (/^said-\d/.test(k)) played.said = 1; });
     S.games = Object.keys(played).filter(function (k) { return played[k]; }).length;
+    // Test yourself (test-yourself.js): passed at 80%, by the best score of each page
+    var tests = get('epoch-tests', {}) || {}; S.tests = 0; S.testsPassed = 0;
+    Object.keys(tests).forEach(function (k) { var r = tests[k]; if (!r || !r.t) return; S.tests++; if (r.b / r.t >= 0.8) S.testsPassed++; });
     var shelf = get('epoch-shelf', []); S.shelf = Array.isArray(shelf) ? shelf.length : 0;
     return S;
   }
@@ -63,7 +68,8 @@
       ['path', 'Pathfinder', 'Finish a reading path', S.pathsDone, 1], ['paths', 'Wayfarer', 'Finish 3 reading paths', S.pathsDone, 3],
       ['regular', 'Regular', 'Come back on 7 different days', S.days, 7], ['devoted', 'Devoted', 'Come back on 30 different days', S.days, 30],
       ['quiz', 'Quiz streak', 'Solve the daily quiz 7 days in a row', S.quiz.b, 7], ['ten', 'Ten out of ten', 'Get all of a Daily Ten right', S.tenPerfect ? 1 : 0, 1],
-      ['conn', 'No mistakes', 'Solve a Connections puzzle without a mistake', S.connPerfect ? 1 : 0, 1], ['crossword', 'Crossword', 'Solve a crossword with no help', S.cwClean ? 1 : 0, 1], ['gamer', 'Games room', 'Play 5 different games', S.games, 5],
+      ['conn', 'No mistakes', 'Solve a Connections puzzle without a mistake', S.connPerfect ? 1 : 0, 1], ['crossword', 'Crossword', 'Solve a crossword with no help', S.cwClean ? 1 : 0, 1], ['said', 'Well quoted', 'Get all five of a Who Said It? right', S.saidPerfect ? 1 : 0, 1], ['gamer', 'Games room', 'Play 5 different games', S.games, 5],
+      ['tests', 'Examined', 'Pass 10 Test yourself quizzes (80% right or better)', S.testsPassed, 10],
       ['shelf', 'Collector', 'Save 5 pages to your shelf', S.shelf, 5]
     ];
   }
@@ -98,7 +104,9 @@
       ['Daily Ten', S.ten.n ? S.ten.n + ' days in a row now' + (S.ten.b > S.ten.n ? ' (best ' + S.ten.b + ')' : '') : S.ten.b ? 'Best run: ' + S.ten.b + ' days' : 'Not played yet', '/games#first-daily'],
       ['Connections', S.connSolved ? S.connSolved + ' solved' + (S.conn.n > 1 ? ', ' + S.conn.n + ' days in a row' : '') : 'Not solved yet', '/games#conn'],
       ['Crossword', S.cwSolved ? S.cwSolved + ' solved' + (S.cw.n > 1 ? ', ' + S.cw.n + ' days in a row' : '') : 'Not solved yet', '/games#cross'],
-      ['Games', S.games + ' of 9 played', '/games']
+      ['Test yourself', S.tests ? S.testsPassed + ' passed of ' + S.tests + ' taken' : 'At the foot of every profile, century and path', '/profiles'],
+      ['Who Said It?', S.saidPlayed ? S.saidPlayed + ' played' + (S.said.n > 1 ? ', ' + S.said.n + ' days in a row' : '') : 'Not played yet', '/games#said'],
+      ['Games', S.games + ' of 10 played', '/games']
     ];
     $('pass-play').innerHTML = play.map(function (p) { return '<li><a href="' + p[2] + '"><span class="pass-play-t">' + esc(p[0]) + '</span><span class="pass-play-d">' + esc(p[1]) + '</span></a></li>'; }).join('');
     var rec = get('epoch-recent', []);
@@ -152,6 +160,8 @@
       });
       put(k, here);
     });
+    var tv = from('epoch-tests'), th = get('epoch-tests', {}) || {};   // each page keeps its best score and all its tries
+    if (tv && typeof tv === 'object') { Object.keys(tv).forEach(function (x) { var a = th[x], b = tv[x]; if (!b) return; if (!a) th[x] = b; else { a.b = Math.max(a.b || 0, b.b || 0); a.n = (a.n || 0) + (b.n || 0); a.t = Math.max(a.t || 0, b.t || 0); a.d = a.d > b.d ? a.d : b.d; } }); put('epoch-tests', th); }
     var q = from('epoch-quiz-streak'), qh = get('epoch-quiz-streak', null); if (q) { if (!qh) put('epoch-quiz-streak', q); else { qh.b = Math.max(qh.b || 0, q.b || 0, q.n || 0); put('epoch-quiz-streak', qh); } }
     ['epoch-quiz-best', 'epoch-reader-type'].forEach(function (k) { if (o[k] && localStorage.getItem(k) == null) { try { localStorage.setItem(k, o[k]); } catch (e) {} } });
     $('pass-in').value = ''; poster = null; cur = render();

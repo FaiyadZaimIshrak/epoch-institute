@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Confucianism, grown from the teaching of <a class="enc-link" href="/encyclopedia/confucius">Confucius</a> in 5th-century BCE <a class="enc-link" href="/encyclopedia/china">China</a>, is a tradition of ethics, ritual and learning centred on humaneness, family duty and government by virtue. Adopted by the Han and made the basis of the imperial examinations, it was the orthodoxy of the Chinese empire for two thousand years, shaped <a class="enc-link" href="/encyclopedia/korea">Korea</a>, <a class="enc-link" href="/encyclopedia/japan">Japan</a> and <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, and remains a living influence in <a class="enc-link" href="/encyclopedia/east-asia">East Asia</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="confucianism"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Zhu Xi publishes the Four Books with his commentaries, the core of Neo-Confucianism","o":["551 BCE","1190","605","479 BCE"],"a":1,"w":"1190: Zhu Xi publishes the Four Books with his commentaries, the core of Neo-Confucianism."},{"p":"Which came first?","q":"","o":["The Sui dynasty founds the imperial examinations, later based on the Confucian classics","The Qing government abolishes the imperial examinations"],"a":0,"w":"605: The Sui dynasty founds the imperial examinations, later based on the Confucian classics · 1905: The Qing government abolishes the imperial examinations."},{"p":"In which year?","q":"The Qing government abolishes the imperial examinations","o":["605","1905","479 BCE","213 BCE"],"a":1,"w":"1905: The Qing government abolishes the imperial examinations."},{"p":"Which came first?","q":"","o":["Confucius is born in the state of Lu, by the traditional date","The Sui dynasty founds the imperial examinations, later based on the Confucian classics"],"a":0,"w":"551 BCE: Confucius is born in the state of Lu, by the traditional date · 605: The Sui dynasty founds the imperial examinations, later based on the Confucian classics."},{"p":"In which year?","q":"The Sui dynasty founds the imperial examinations, later based on the Confucian classics","o":["1905","1190","213 BCE","605"],"a":3,"w":"605: The Sui dynasty founds the imperial examinations, later based on the Confucian classics."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -158,6 +165,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Confucianism",slug="confucianism",url="https://the-epoch-institute.org/religion/confucianism";

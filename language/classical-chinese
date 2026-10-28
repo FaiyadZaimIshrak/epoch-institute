@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Classical Chinese</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Classical Chinese</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Classical Chinese, the written language of the Zhou classics, rooted in the oracle-bone inscriptions of the Shang, remained the standard written language of <a class="enc-link" href="/encyclopedia/china">China</a> for more than two thousand years and the shared written language of <a class="enc-link" href="/encyclopedia/korea">Korea</a>, <a class="enc-link" href="/encyclopedia/japan">Japan</a> and <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>. Replaced by the vernacular after 1919, it survives in the characters, idioms and literature of <a class="enc-link" href="/encyclopedia/east-asia">East Asia</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="classical-chinese"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"China’s Ministry of Education orders primary schools to teach the vernacular instead of Classical Chinese","o":["1716","1920","868","100"],"a":1,"w":"1920: China’s Ministry of Education orders primary schools to teach the vernacular instead of Classical Chinese."},{"p":"Which came first?","q":"","o":["The First Emperor of Qin standardises the Chinese script across his empire","The Kangxi Dictionary is completed, listing more than 47,000 characters"],"a":0,"w":"221 BCE: The First Emperor of Qin standardises the Chinese script across his empire · 1716: The Kangxi Dictionary is completed, listing more than 47,000 characters."},{"p":"In which year?","q":"Xu Shen completes the Shuowen Jiezi, the first dictionary to analyse the structure of characters","o":["1716","100","868","1920"],"a":1,"w":"100: Xu Shen completes the Shuowen Jiezi, the first dictionary to analyse the structure of characters."},{"p":"Which came first?","q":"","o":["China’s Ministry of Education orders primary schools to teach the vernacular instead of Classical Chinese","King Sejong of Korea promulgates the Hangul alphabet as an alternative to Chinese characters"],"a":1,"w":"1920: China’s Ministry of Education orders primary schools to teach the vernacular instead of Classical Chinese · 1446: King Sejong of Korea promulgates the Hangul alphabet as an alternative to Chinese characters."},{"p":"In which year?","q":"The Kangxi Dictionary is completed, listing more than 47,000 characters","o":["221 BCE","100","1716","1920"],"a":2,"w":"1716: The Kangxi Dictionary is completed, listing more than 47,000 characters."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -157,6 +164,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){

@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Mapungubwe"></div>
@@ -117,6 +117,13 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Kingdom of Mapungubwe, ruled from a hilltop above the Shashe–<a class="enc-link" href="/encyclopedia/limpopo">Limpopo</a> confluence between about 1220 and 1290, is widely regarded as southern <a class="enc-link" href="/encyclopedia/africa">Africa</a>’s first class-based state with a sacred king; its gold, its trade with the <a class="enc-link" href="/encyclopedia/indian-ocean">Indian Ocean</a> and its royal seclusion set the pattern later followed at <a class="enc-link" href="/encyclopedia/great-zimbabwe">Great Zimbabwe</a>.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">4 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-mapungubwe"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which came first?","q":"","o":["The University of Pretoria begins excavations on Mapungubwe Hill","South Africa institutes the Order of Mapungubwe, its highest honour"],"a":0,"w":"1933: The University of Pretoria begins excavations on Mapungubwe Hill · 2002: South Africa institutes the Order of Mapungubwe, its highest honour."},{"p":"Which city was a capital of the Kingdom of Mapungubwe?","q":"","o":["Zaria","Mapungubwe Hill","Katsina","Benin City"],"a":1,"w":"Capital: Mapungubwe Hill."},{"p":"Which state came after the Kingdom of Mapungubwe?","q":"","o":["Niger Coast Protectorate","Abuja","Sokoto Caliphate","Kingdom of Zimbabwe"],"a":3,"w":"Succeeded by: Kingdom of Zimbabwe."},{"p":"Which came first?","q":"","o":["The Mapungubwe Cultural Landscape becomes a UNESCO World Heritage Site","The University of Pretoria begins excavations on Mapungubwe Hill"],"a":1,"w":"2003: The Mapungubwe Cultural Landscape becomes a UNESCO World Heritage Site · 1933: The University of Pretoria begins excavations on Mapungubwe Hill."}]</script>
+    </section>
 
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
@@ -159,6 +166,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Mapungubwe",slug="kingdom-of-mapungubwe",url="https://the-epoch-institute.org/empire/kingdom-of-mapungubwe";

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Orange Free State"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Orange Free State was the smaller of the two <a class="enc-link" href="/encyclopedia/boers">Boer</a> republics, a farming state between the Orange and <a class="enc-link" href="/encyclopedia/vaal-river">Vaal</a> rivers whose constitution and orderly government earned it the name of a model republic, and whose wars with the <a class="enc-link" href="/encyclopedia/sotho-people">Basotho</a> and loyalty to the <a class="enc-link" href="/encyclopedia/transvaal">Transvaal</a> shaped Lesotho, <a class="enc-link" href="/encyclopedia/afrikaners">Afrikaner</a> nationalism and modern <a class="enc-link" href="/encyclopedia/south-africa">South Africa</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="orange-free-state"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Defensive alliance with the South African Republic","o":["1854","1897","1902","1848"],"a":1,"w":"1897: Defensive alliance with the South African Republic."},{"p":"Which came first?","q":"","o":["Britain defeats Boers under Andries Pretorius at Boomplaats and rules the Orange River Sovereignty","Defensive alliance with the South African Republic"],"a":0,"w":"1848: Britain defeats Boers under Andries Pretorius at Boomplaats and rules the Orange River Sovereignty · 1897: Defensive alliance with the South African Republic."},{"p":"Which city was a capital of the Orange Free State?","q":"","o":["Bloemfontein","Kumasi","Cape Town","Lealui"],"a":0,"w":"Capital: Bloemfontein."},{"p":"Who founded the Orange Free State?","q":"","o":["Great Britain","Josias Hoffman","Mboo","Osei Tutu I"],"a":1,"w":"Founder: Josias Hoffman (first president)."},{"p":"Which state came after the Orange Free State?","q":"","o":["Orange River Colony","Zambia","Union of South Africa","Ashanti Colony"],"a":0,"w":"Succeeded by: Orange River Colony."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Orange Free State",slug="orange-free-state",url="https://the-epoch-institute.org/empire/orange-free-state";

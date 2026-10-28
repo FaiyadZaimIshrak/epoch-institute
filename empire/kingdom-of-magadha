@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Magadha"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em><a class="enc-link" href="/encyclopedia/magadha">Magadha</a>, the kingdom of south <a class="enc-link" href="/encyclopedia/bihar">Bihar</a> ruled by the <a class="enc-link" href="/encyclopedia/haryanka-dynasty">Haryanka</a> and <a class="enc-link" href="/encyclopedia/shishunaga-dynasty">Shishunaga</a> dynasties, absorbed its rivals among the great realms of the <a class="enc-link" href="/encyclopedia/ganges-plain">Ganges</a> valley, sheltered the early Buddhist and Jain communities and founded <a class="enc-link" href="/encyclopedia/pataliputra">Pataliputra</a>, creating the core from which the <a class="enc-link" href="/encyclopedia/nanda-dynasty">Nanda</a> and <a class="enc-link" href="/encyclopedia/maurya-empire">Maurya</a> empires unified most of the <a class="enc-link" href="/encyclopedia/indian-subcontinent">Indian subcontinent</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">3 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-magadha"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which city was a capital of the Kingdom of Magadha?","q":"","o":["Pratishthana","Dhanyakataka","Rajagriha","Ujjain"],"a":2,"w":"Capital: Rajagriha (Girivraja); later Pataliputra."},{"p":"Who founded the Kingdom of Magadha?","q":"","o":["Chandragupta Maurya","Bimbisara","Sri Gupta","Simuka"],"a":1,"w":"Founder: Bimbisara (Haryanka dynasty)."},{"p":"Which state came after the Kingdom of Magadha?","q":"","o":["Nanda Empire","Abhira","Shunga Empire","Ikshvaku"],"a":0,"w":"Succeeded by: Nanda Empire."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -161,6 +168,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Magadha",slug="kingdom-of-magadha",url="https://the-epoch-institute.org/empire/kingdom-of-magadha";

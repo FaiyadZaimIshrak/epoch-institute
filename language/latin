@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -117,6 +117,13 @@
 
     <p class="profile-summary" id="summary"><em>Latin, the language of ancient <a class="enc-link" href="/encyclopedia/rome">Rome</a>, spread with Roman rule across the western <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a>, produced one of the world’s great literatures and became the parent of the Romance languages. For more than a thousand years after the fall of the <a class="enc-link" href="/encyclopedia/western-roman-empire">Western Roman Empire</a> it remained the written language of the Church, scholarship, science and law in <a class="enc-link" href="/encyclopedia/europe">Europe</a>, and its alphabet and vocabulary are used around the world today.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="latin"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Isaac Newton publishes his Principia in Latin","o":["813","240 BCE","1687","842"],"a":2,"w":"1687: Isaac Newton publishes his Principia in Latin."},{"p":"Which came first?","q":"","o":["Livius Andronicus stages the first Latin play adapted from a Greek original","Isaac Newton publishes his Principia in Latin"],"a":0,"w":"240 BCE: Livius Andronicus stages the first Latin play adapted from a Greek original · 1687: Isaac Newton publishes his Principia in Latin."},{"p":"In which year?","q":"Livius Andronicus stages the first Latin play adapted from a Greek original","o":["813","240 BCE","842","1687"],"a":1,"w":"240 BCE: Livius Andronicus stages the first Latin play adapted from a Greek original."},{"p":"Which came first?","q":"","o":["Livius Andronicus stages the first Latin play adapted from a Greek original","The Council of Tours orders sermons to be preached in the “rustic Roman tongue” or in German"],"a":0,"w":"240 BCE: Livius Andronicus stages the first Latin play adapted from a Greek original · 813: The Council of Tours orders sermons to be preached in the “rustic Roman tongue” or in German."},{"p":"In which year?","q":"The Oaths of Strasbourg, the earliest surviving text in an early form of French","o":["1687","842","813","240 BCE"],"a":1,"w":"842: The Oaths of Strasbourg, the earliest surviving text in an early form of French."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -150,6 +157,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Latin",slug="latin",url="https://the-epoch-institute.org/language/latin";

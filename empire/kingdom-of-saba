@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Kingdom of Saba"></div>
@@ -119,6 +119,13 @@
 
     <p class="profile-summary" id="summary"><em>Saba was the oldest and most enduring of the ancient <a class="enc-link" href="/encyclopedia/south-arabia">South Arabian</a> kingdoms, whose irrigation at <a class="enc-link" href="/encyclopedia/marib">Marib</a> and control of the <a class="enc-link" href="/encyclopedia/incense">incense</a> routes created a literate, wealthy civilisation for a thousand years, spread its script and gods to <a class="enc-link" href="/encyclopedia/ethiopia">Ethiopia</a>, and lives on in the story of the <a class="enc-link" href="/encyclopedia/queen-of-sheba">Queen of Sheba</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">3 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kingdom-of-saba"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which came first?","q":"","o":["Aelius Gallus besieges Marib for six days and retreats","Itamra the Sabaean sends gifts to Sargon II of Assyria"],"a":1,"w":"25 BCE: Aelius Gallus besieges Marib for six days and retreats · 715 BCE: Itamra the Sabaean sends gifts to Sargon II of Assyria."},{"p":"Which city was a capital of the Kingdom of Saba?","q":"","o":["Marib","Tbilisi","Mtskheta","Byblos"],"a":0,"w":"Capital: Marib (with Sirwah as an early centre)."},{"p":"Which state came after the Kingdom of Saba?","q":"","o":["Principality of Iberia","Himyarite Kingdom","Macedonian Empire","Aksumite Yemen"],"a":1,"w":"Succeeded by: Himyarite Kingdom."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -159,6 +166,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Kingdom of Saba",slug="kingdom-of-saba",url="https://the-epoch-institute.org/empire/kingdom-of-saba";

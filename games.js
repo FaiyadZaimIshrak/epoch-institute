@@ -1,7 +1,8 @@
 // games.js - the games of /games: Emblem Pairs, Order the Ages, Globe Hunt, Which Came First?, Picture Puzzle,
-// Word Hunt, Guess the Year and History Connections. Needs shared-nav.js (initNav, escHtml), games-emblems.js,
-// games-data.js and connections-data.js (built by scripts/build-pages.ps1: curated pictures with their years, puzzle
-// sets, Word Hunt themes, the Connections puzzles). Bump games.js?v= in /games.
+// Word Hunt, Guess the Year, History Connections, the History Crossword and Who Said It?. Needs shared-nav.js (initNav,
+// escHtml), games-emblems.js, games-data.js and connections-data.js (built by scripts/build-pages.ps1: curated pictures
+// with their years, puzzle sets, Word Hunt themes, the Connections puzzles; the crossword and the quotations load when
+// their tab first opens). Bump games.js?v= in /games.
 initNav('games');
 (function () {
   'use strict';
@@ -130,7 +131,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   function showGame(g, focus, sub) {
     if (GAMES.indexOf(g) < 0) g = 'pairs';
@@ -1486,6 +1487,96 @@ initNav('games');
     } };
   })();
   MODS.cross = Cross;
+
+  // ── Who Said It? ─────────────────────────────────────────────────────────────
+  // Five quotations a day, the same for everyone (UTC; #1 is 28 October 2026), from said-data.js (loaded when the tab
+  // first opens; scripts/fetch-quotes.ps1 imports each quotation's exact words from a free source, nothing is typed):
+  // choose who said it among four portraits, in an order fixed for the day. The answer names the work, the translation
+  // and the source. The day's answers and the streak are kept in epoch-games (said-<number> {m: '10110', done},
+  // said-streak); an earlier round can be played again for practice, which is not kept.
+  var Said = (function () {
+    var D = null, N = 5, QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 9, 28) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var K = { id: 0, num: 0, qs: [], i: 0, m: '', done: false, practice: false, answered: false }, board = $('said-board');
+    function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+    function round(num) { var out = []; for (var k = 0; k < N; k++) out.push(D.q[((num - 1) * N + k) % D.q.length]); return out; }
+    function person(i) { var p = D.p[i]; return { slug: p[0], name: p[1], dates: p[2], img: p[3] }; }
+    function save() { if (!K.practice) setBest('said-' + K.num, { m: K.m, done: K.done }); }
+    function load(num, practice) {
+      K.id++; K.num = num; K.practice = practice; K.qs = round(num);
+      var sv = practice ? null : best('said-' + num);
+      K.m = sv && sv.m ? String(sv.m) : ''; K.done = !!(sv && sv.done); K.i = K.m.length; K.answered = false;
+      $('said-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Who Said It? <b>#' + num + '</b>';
+      var sk = best('said-streak'); $('said-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+      $('said-done').hidden = true; $('said-done').innerHTML = '';
+      if (K.done || K.i >= N) finish(true); else ask();
+    }
+    function dots() { return '<ol class="gm-said-dots" aria-hidden="true">' + K.qs.map(function (q, k) { return '<li class="' + (k < K.m.length ? (K.m.charAt(k) === '1' ? 'ok' : 'no') : k === K.i && !K.done ? 'now' : '') + '"></li>'; }).join('') + '</ol>'; }
+    function order(q, k) {   // the speaker and the three others, shuffled the same way for everyone that day
+      var a = [q[1]].concat(q[7]), r = rng(K.num * 131 + k * 17 + 7);
+      for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; }
+      return a;
+    }
+    function face(p, cls) { return p.img ? '<img class="' + cls + '" src="' + escHtml(p.img) + '" alt="" width="64" height="64" loading="lazy">' : '<span class="' + cls + ' gm-said-mono" aria-hidden="true">' + escHtml(p.name.charAt(0)) + '</span>'; }
+    function source(q) {   // the work, the translation ("original": written in English), how the words reach us, the page
+      return '<p class="gm-said-src">' + escHtml(q[2]) + (q[3] && q[3] !== 'original' ? ', ' + escHtml(q[3]) : '') + (q[8] ? '; ' + escHtml(q[8]) : '') + '. <a href="' + escHtml(q[4]) + '" target="_blank" rel="noopener">' + escHtml(q[5]) + '</a>' + (q[6] ? ' &middot; ' + escHtml(q[6]) : '') + '</p>';
+    }
+    function ask() {
+      var q = K.qs[K.i]; K.answered = false;
+      board.innerHTML = dots() + '<figure class="gm-said-q"><blockquote><p>' + escHtml(q[0]) + '</p></blockquote><figcaption>Quotation ' + (K.i + 1) + ' of ' + N + ': who said it?</figcaption></figure>' +
+        '<div class="gm-said-opts" role="group" aria-label="Who said it?">' + order(q, K.i).map(function (pi) { var p = person(pi); return '<button type="button" class="gm-said-o" data-p="' + pi + '">' + face(p, 'gm-said-img') + '<span class="gm-said-n">' + escHtml(p.name) + '</span><span class="gm-said-d">' + escHtml(p.dates) + '</span></button>'; }).join('') + '</div>' +
+        '<div class="gm-said-res" aria-live="polite"></div>';
+    }
+    function pick(pi) {
+      if (K.answered || K.done) return; K.answered = true;
+      var q = K.qs[K.i], ok = pi === q[1], sp = person(q[1]);
+      K.m += ok ? '1' : '0'; save(); Sfx.play(ok ? 'good' : 'bad');
+      [].forEach.call(board.querySelectorAll('.gm-said-o'), function (b) { var p = +b.getAttribute('data-p'); b.disabled = true; if (p === q[1]) b.classList.add('is-right'); else if (p === pi) b.classList.add('is-wrong'); });
+      board.querySelector('.gm-said-dots').outerHTML = dots();
+      board.querySelector('.gm-said-res').innerHTML = '<p class="gm-said-who"><b>' + (ok ? 'Right!' : 'Not this time.') + '</b> ' + escHtml(sp.name) + ' <span>(' + escHtml(sp.dates) + ')</span></p>' + source(q) +
+        '<p class="gm-said-acts"><a href="/encyclopedia/' + encodeURIComponent(sp.slug) + '">About ' + escHtml(sp.name) + ' &rarr;</a><button type="button" class="hero-cta" data-next>' + (K.i + 1 < N ? 'Next quotation &rarr;' : 'See your score') + '</button></p>';
+      var nb = board.querySelector('[data-next]'); if (nb) nb.focus({ preventScroll: true });
+    }
+    board.addEventListener('click', function (e) {
+      var b = e.target.closest('.gm-said-o'); if (b) { pick(+b.getAttribute('data-p')); return; }
+      if (e.target.closest('[data-next]')) { K.i++; if (K.i < N) { ask(); var f = board.querySelector('.gm-said-o'); if (f) f.focus({ preventScroll: true }); } else finish(); }
+    });
+    // the end: the score and its squares, the five quotations with their speakers and sources, the countdown, Share
+    function finish(again) {
+      K.done = true; save();
+      var n = K.m.split('').filter(function (x) { return x === '1'; }).length, s = n === N ? 3 : n >= 4 ? 2 : n >= 2 ? 1 : 0;
+      var squares = K.m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join(''), sk = best('said-streak') || { n: 0, last: 0 };
+      if (!K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('said-streak', sk); }
+      board.innerHTML = dots() + '<ol class="gm-said-rev">' + K.qs.map(function (q, k) { var sp = person(q[1]); return '<li class="' + (K.m.charAt(k) === '1' ? 'ok' : 'no') + '">' + face(sp, 'gm-said-img') + '<div><p class="gm-said-rq">&ldquo;' + escHtml(q[0]) + '&rdquo;</p><p class="gm-said-who"><a href="/encyclopedia/' + encodeURIComponent(sp.slug) + '">' + escHtml(sp.name) + '</a> <span>(' + escHtml(sp.dates) + ')</span></p>' + source(q) + '</div></li>'; }).join('') + '</ol>';
+      var dn = $('said-done');
+      dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (n === N ? 'All five right!' : n + ' of ' + N + ' right') + '</p>' +
+        '<p class="gm-daily-sq" aria-label="Your answers: ' + n + ' right">' + squares + '</p>' +
+        '<p class="gm-done-s">Who Said It? #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new quotations in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('said')) + '</div>';
+      share(dn, 'Epoch Who Said It? #' + K.num + ': ' + n + '/' + N + '\n' + squares, 'said', { title: 'Who Said It? #' + K.num, score: n + '/' + N, unit: 'right today', stars: s, squares: K.m,
+        note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'Five quotations every day', url: 'the-epoch-institute.org/games#said' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && n >= 4) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    // earlier rounds, for practice
+    var pickEl = $('said-pick');
+    function options() {
+      var n = Math.min(TODAY - 1, 60), h = '<option value="' + TODAY + '">Today&rsquo;s quotations (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best('said-' + i) && best('said-' + i).done ? ' (played)' : '') + '</option>';
+      pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
+    }
+    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best('said-' + n) && best('said-' + n).done)); });
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      var s = document.createElement('script'); s.src = typeof SAID_SRC !== 'undefined' ? SAID_SRC : '/said-data.js';
+      s.onload = function () { D = typeof SAID !== 'undefined' ? SAID : null; if (!D || !D.q.length) { board.innerHTML = '<p class="gm-howto">The quotations are on their way.</p>'; return; } options(); load(TODAY, false); };
+      s.onerror = function () { board.innerHTML = '<p class="gm-howto">The quotations could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    } };
+  })();
+  MODS.said = Said;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the last one played
   var hp = location.hash.slice(1).split('-'), startGame = hp[0], startSub = hp.slice(1).join('-');

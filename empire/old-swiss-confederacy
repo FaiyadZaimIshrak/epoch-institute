@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Old Swiss Confederacy"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Old Swiss Confederacy, a league of rural and urban communities that defeated <a class="enc-link" href="/encyclopedia/habsburg-dynasty">Habsburg</a> and Burgundian armies, produced <a class="enc-link" href="/encyclopedia/europe">Europe</a>'s most feared infantry and the Zwinglian <a class="enc-link" href="/encyclopedia/protestant-reformation">Reformation</a>, and its self-governing cantons, consensus-based <a class="enc-link" href="/encyclopedia/tagsatzung">Diet</a> and habit of neutrality are the direct roots of modern <a class="enc-link" href="/encyclopedia/switzerland">Switzerland</a>'s federalism and direct democracy.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="old-swiss-confederacy"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"French invasion ends the Confederacy; the Helvetic Republic is proclaimed","o":["1648","1798","1515","1315"],"a":1,"w":"1798: French invasion ends the Confederacy; the Helvetic Republic is proclaimed."},{"p":"Which came first?","q":"","o":["Uri, Schwyz and Unterwalden conclude the Federal Charter","Zwingli is killed in the Second Kappel War"],"a":0,"w":"1291: Uri, Schwyz and Unterwalden conclude the Federal Charter · 1531: Zwingli is killed in the Second Kappel War."},{"p":"Who founded the Old Swiss Confederacy?","q":"","o":["Henry of Laach","Count Adolf III of Schauenburg","Roger-Bernard III","Uri"],"a":3,"w":"Founder: Uri, Schwyz and Unterwalden."},{"p":"Which state came after the Old Swiss Confederacy?","q":"","o":["Bavaria","Confederation of the Rhine","Electorate of Baden","Helvetic Republic"],"a":3,"w":"Succeeded by: Helvetic Republic."},{"p":"In which year?","q":"Defeat by Francis I at Marignano ends Swiss great-power ambitions","o":["1291","1648","1798","1515"],"a":3,"w":"1515: Defeat by Francis I at Marignano ends Swiss great-power ambitions."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Old Swiss Confederacy",slug="old-swiss-confederacy",url="https://the-epoch-institute.org/empire/old-swiss-confederacy";

@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Ayutthaya Kingdom"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>Ayutthaya matters as the Siamese kingdom that for over four centuries combined <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada Buddhist</a> kingship, the sakdina order and a cosmopolitan royal trade to dominate mainland <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>, survived Burmese conquest under <a class="enc-link" href="/encyclopedia/naresuan">Naresuan</a>, and passed its institutions to Thonburi, <a class="enc-link" href="/encyclopedia/bangkok">Bangkok</a> and modern <a class="enc-link" href="/encyclopedia/thailand">Thailand</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="ayutthaya-kingdom"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"U Thong founds Ayutthaya and reigns as Ramathibodi I","o":["1351","1438","1767","1593"],"a":0,"w":"1351: U Thong founds Ayutthaya and reigns as Ramathibodi I."},{"p":"Which came first?","q":"","o":["U Thong founds Ayutthaya and reigns as Ramathibodi I","Naresuan defeats the Burmese at the Battle of Nong Sarai"],"a":0,"w":"1351: U Thong founds Ayutthaya and reigns as Ramathibodi I · 1593: Naresuan defeats the Burmese at the Battle of Nong Sarai."},{"p":"Which city was a capital of the Ayutthaya Kingdom?","q":"","o":["Rangpur","Ayutthaya","Garhgaon","Charaideo"],"a":1,"w":"Capital: Ayutthaya; Phitsanulok under Borommatrailokkanat."},{"p":"Who founded the Ayutthaya Kingdom?","q":"","o":["Mangrai","Bappa Rawal","Sukaphaa","U Thong"],"a":3,"w":"Founder: U Thong (Ramathibodi I)."},{"p":"Which state came after the Ayutthaya Kingdom?","q":"","o":["Mysore State","Thonburi Kingdom","Kingdom of Chiang Mai","United State of Rajasthan"],"a":1,"w":"Succeeded by: Thonburi Kingdom."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Ayutthaya Kingdom",slug="ayutthaya-kingdom",url="https://the-epoch-institute.org/empire/ayutthaya-kingdom";

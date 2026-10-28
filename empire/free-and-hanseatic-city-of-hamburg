@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Free and Hanseatic City of Hamburg"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em><a class="enc-link" href="/encyclopedia/hamburg">Hamburg</a> rose from a Carolingian fort and a twelfth-century merchant town to become the <a class="enc-link" href="/encyclopedia/hanseatic-league">Hanseatic League</a>'s <a class="enc-link" href="/encyclopedia/north-sea">North Sea</a> gateway, a free imperial city and <a class="enc-link" href="/encyclopedia/germany">Germany</a>'s greatest port, and it survives as a self-governing city-state of the Federal Republic, a rare continuity of urban republican government since the <a class="enc-link" href="/encyclopedia/middle-ages">Middle Ages</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="free-and-hanseatic-city-of-hamburg"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Hamburg becomes a state of the Federal Republic of Germany","o":["1949","1241","1842","1189"],"a":0,"w":"1949: Hamburg becomes a state of the Federal Republic of Germany."},{"p":"Which came first?","q":"","o":["The Great Fire destroys about a quarter of the old town","Denmark recognises Hamburg as a free imperial city in the Gottorp Settlement"],"a":1,"w":"1842: The Great Fire destroys about a quarter of the old town · 1768: Denmark recognises Hamburg as a free imperial city in the Gottorp Settlement."},{"p":"Which city was a capital of the Free and Hanseatic City of Hamburg?","q":"","o":["Roskilde","Jelling","Hamburg","Bremen"],"a":2,"w":"Capital: Hamburg."},{"p":"Who founded the Free and Hanseatic City of Hamburg?","q":"","o":["Gorm the Old","Harald Fairhair","Eric the Victorious","Count Adolf III of Schauenburg"],"a":3,"w":"Founder: Count Adolf III of Schauenburg (merchant new town, c. 1188)."},{"p":"In which year?","q":"Operation Gomorrah's firestorm kills around 35,000 people","o":["1241","1558","1943","1949"],"a":2,"w":"1943: Operation Gomorrah's firestorm kills around 35,000 people."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Free and Hanseatic City of Hamburg",slug="free-and-hanseatic-city-of-hamburg",url="https://the-epoch-institute.org/empire/free-and-hanseatic-city-of-hamburg";

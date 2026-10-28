@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Merina Kingdom"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>The Merina Kingdom turned a cluster of highland <a class="enc-link" href="/encyclopedia/rice">rice</a>-growing chiefdoms into the Kingdom of <a class="enc-link" href="/encyclopedia/madagascar">Madagascar</a>, conquering most of the island with British-trained armies, adopting writing, <a class="enc-link" href="/encyclopedia/protestantism">Protestant Christianity</a> and modern administration, and leaving the capital, language and institutions on which colonial and independent Madagascar were built after <a class="enc-link" href="/encyclopedia/france">France</a> abolished it in 1897.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="merina-kingdom"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Code of 305 Articles is promulgated","o":["1869","1817","1881","1835"],"a":2,"w":"1881: The Code of 305 Articles is promulgated."},{"p":"Which came first?","q":"","o":["French troops under General Duchesne take Antananarivo","Ranavalona II and Rainilaiarivony are baptised; the royal talismans are burned"],"a":1,"w":"1895: French troops under General Duchesne take Antananarivo · 1869: Ranavalona II and Rainilaiarivony are baptised; the royal talismans are burned."},{"p":"Which city was a capital of the Merina Kingdom?","q":"","o":["Antananarivo","Addis Ababa","Gondar","Benin City"],"a":0,"w":"Capital: Antananarivo; Ambohimanga under Andrianampoinimerina before c. 1794."},{"p":"Who founded the Merina Kingdom?","q":"","o":["Andriamanelo","Yekuno Amlak","Ewuare the Great","Eweka I"],"a":0,"w":"Founder: Andriamanelo (traditionally); reunified by Andrianampoinimerina."},{"p":"Which state came after the Merina Kingdom?","q":"","o":["French Madagascar","Uganda","Niger Coast Protectorate","Derg"],"a":0,"w":"Succeeded by: French Madagascar."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Merina Kingdom",slug="merina-kingdom",url="https://the-epoch-institute.org/empire/merina-kingdom";

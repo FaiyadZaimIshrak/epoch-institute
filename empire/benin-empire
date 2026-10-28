@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Benin Empire"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Benin Empire's most enduring legacy is the <a class="enc-link" href="/encyclopedia/benin-bronzes">Benin Bronzes</a> — several thousand works in brass, <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> and wood, looted in the British <a class="enc-link" href="/encyclopedia/benin-expedition-of-1897">Punitive Expedition</a> of 1897 and dispersed to museums worldwide — which stand today as both a supreme artistic achievement of pre-colonial <a class="enc-link" href="/encyclopedia/west-africa">West Africa</a> and the most actively contested artefacts in the debate over cultural <a class="enc-link" href="/encyclopedia/repatriation-of-cultural-property">restitution</a>, embodying in a single body of treasures what colonial conquest took and what its descendants are still seeking to recover.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">3 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="benin-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"Which city was a capital of the Benin Empire?","q":"","o":["Nri","Ngazargamu","Benin City","Njimi"],"a":2,"w":"Capital: Benin City."},{"p":"Who founded the Benin Empire?","q":"","o":["Ifikuanim","Eri","Bagauda of Kano","Eweka I"],"a":3,"w":"Founder: Eweka I, Ewuare the Great."},{"p":"Which state came after the Benin Empire?","q":"","o":["Abuja","Niger Coast Protectorate","Maradi","Sokoto Caliphate"],"a":1,"w":"Succeeded by: Niger Coast Protectorate."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Benin Empire",slug="benin-empire",url="https://the-epoch-institute.org/empire/benin-empire";

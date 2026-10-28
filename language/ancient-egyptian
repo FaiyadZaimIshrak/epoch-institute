@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Ancient Egyptian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#write">Write in Ancient Egyptian</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Ancient Egyptian, the Afroasiatic language of the <a class="enc-link" href="/encyclopedia/pharaoh">pharaohs</a>, was written in hieroglyphs from about 3250 BCE and in hieratic, demotic and finally Coptic, giving it one of the longest recorded histories of any language. Displaced by Greek and then by Arabic, it ceased to be spoken by about the 17th century, survives in the Coptic liturgy, and was recovered through Champollion’s decipherment of 1822.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="ancient-egyptian"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Jean-François Champollion announces the decipherment of hieroglyphs","o":["196 BCE","394","452","1822"],"a":3,"w":"1822: Jean-François Champollion announces the decipherment of hieroglyphs."},{"p":"Which came first?","q":"","o":["Jean-François Champollion announces the decipherment of hieroglyphs","The last known hieroglyphic inscription is carved at the temple of Philae"],"a":1,"w":"1822: Jean-François Champollion announces the decipherment of hieroglyphs · 394: The last known hieroglyphic inscription is carved at the temple of Philae."},{"p":"In which year?","q":"The last known inscription in demotic is written at Philae","o":["452","1822","394","196 BCE"],"a":0,"w":"452: The last known inscription in demotic is written at Philae."},{"p":"Which came first?","q":"","o":["Jean-François Champollion announces the decipherment of hieroglyphs","The last known inscription in demotic is written at Philae"],"a":1,"w":"1822: Jean-François Champollion announces the decipherment of hieroglyphs · 452: The last known inscription in demotic is written at Philae."},{"p":"In which year?","q":"The last known hieroglyphic inscription is carved at the temple of Philae","o":["196 BCE","452","1822","394"],"a":3,"w":"394: The last known hieroglyphic inscription is carved at the temple of Philae."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -157,6 +164,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
 <script>
 (function(){

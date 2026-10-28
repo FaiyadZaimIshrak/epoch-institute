@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="South Yemen"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>South Yemen was born from the anti-colonial struggle against British rule in <a class="enc-link" href="/encyclopedia/aden">Aden</a>, became the Arab world’s only Marxist–Leninist state and a Soviet ally, transformed society and women’s rights in the south, and after a ruinous party civil war in 1986 united with North <a class="enc-link" href="/encyclopedia/yemen">Yemen</a> in 1990.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="south-yemen"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Unification with North Yemen forms the Republic of Yemen on 22 May","o":["1990","1963","1979","1969"],"a":0,"w":"1990: Unification with North Yemen forms the Republic of Yemen on 22 May."},{"p":"Which came first?","q":"","o":["The NLF begins its armed uprising in the Radfan mountains","Party civil war in Aden kills thousands, including Abdul Fattah Ismail"],"a":0,"w":"1963: The NLF begins its armed uprising in the Radfan mountains · 1986: Party civil war in Aden kills thousands, including Abdul Fattah Ismail."},{"p":"Which city was a capital of South Yemen?","q":"","o":["Aden","Sanaa","Sharjah","Abu Dhabi"],"a":0,"w":"Capital: Aden."},{"p":"Who founded South Yemen?","q":"","o":["Ali Abdullah Saleh","Zayed bin Sultan Al Nahyan","National Liberation Front","Rashid bin Saeed Al Maktoum"],"a":2,"w":"Founder: National Liberation Front (Qahtan al-Shaabi)."},{"p":"Which state came after South Yemen?","q":"","o":["Republic of Yemen","United Arab Emirates","Pahlavi Iran","Durrani Empire"],"a":0,"w":"Succeeded by: Republic of Yemen."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="South Yemen",slug="south-yemen",url="https://the-epoch-institute.org/empire/south-yemen";

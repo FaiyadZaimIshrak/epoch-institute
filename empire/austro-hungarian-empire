@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Austro-Hungarian Empire"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Austro-Hungarian Empire's fifty-one-year lifespan produced one of history's most paradoxical legacies: a state that was at once a cradle of some of the twentieth century's most transformative intellectual achievements, from <a class="enc-link" href="/encyclopedia/sigmund-freud">Freud</a> to <a class="enc-link" href="/encyclopedia/gustav-mahler">Mahler</a> and <a class="enc-link" href="/encyclopedia/gustav-klimt">Klimt</a>, and the political powder keg whose crisis over the assassination of its heir ignited the war that destroyed the old European order.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="austro-hungarian-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Austria-Hungary occupies Bosnia-Herzegovina","o":["1907","1918","1916","1878"],"a":3,"w":"1878: Austria-Hungary occupies Bosnia-Herzegovina."},{"p":"Which came first?","q":"","o":["Gavrilo Princip assassinates Archduke Franz Ferdinand in Sarajevo","Prussia defeats Austria at Königgrätz, excluding it from German affairs"],"a":1,"w":"1914: Gavrilo Princip assassinates Archduke Franz Ferdinand in Sarajevo · 1866: Prussia defeats Austria at Königgrätz, excluding it from German affairs."},{"p":"Which city was a capital of the Austro-Hungarian Empire?","q":"","o":["Vienna","London","Saint Helier","Andorra la Vella"],"a":0,"w":"Capital: Vienna, Budapest."},{"p":"Who founded the Austro-Hungarian Empire?","q":"","o":["Franz Joseph I","Louis I of Hesse","Count Adolf III of Schauenburg","Roger-Bernard III"],"a":0,"w":"Founder: Franz Joseph I."},{"p":"Which state came after the Austro-Hungarian Empire?","q":"","o":["Suriname","Austria","Commonwealth of Nations","Indonesia"],"a":1,"w":"Succeeded by: Austria, Hungary."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Austro-Hungarian Empire",slug="austro-hungarian-empire",url="https://the-epoch-institute.org/empire/austro-hungarian-empire";

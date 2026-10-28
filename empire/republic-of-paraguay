@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of Paraguay"></div>
@@ -120,6 +120,13 @@
 
     <p class="profile-summary" id="summary"><em>The Republic of <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>, independent since 1811, passed from Francia’s isolation and the López state to near destruction in the War of the Triple Alliance, recovered to win the Chaco War, lived under Stroessner’s long dictatorship and since 1992 has been a bilingual democracy exporting soya, beef and hydroelectric power.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="republic-of-paraguay"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"José Gaspar Rodríguez de Francia becomes supreme dictator","o":["1811","1954","1814","1992"],"a":2,"w":"1814: José Gaspar Rodríguez de Francia becomes supreme dictator."},{"p":"Which came first?","q":"","o":["A congress formally declares Paraguay’s independence","Alfredo Stroessner seizes power and rules until 1989"],"a":0,"w":"1842: A congress formally declares Paraguay’s independence · 1954: Alfredo Stroessner seizes power and rules until 1989."},{"p":"Which city was a capital of the Republic of Paraguay?","q":"","o":["Paramaribo","Philadelphia","Onondaga","Asunción"],"a":3,"w":"Capital: Asunción."},{"p":"Who founded the Republic of Paraguay?","q":"","o":["Abraham Crijnssen","Hiawatha","Fulgencio Yegros","Thomas Jefferson"],"a":2,"w":"Founder: Fulgencio Yegros and José Gaspar Rodríguez de Francia."},{"p":"In which year?","q":"A congress formally declares Paraguay’s independence","o":["1842","1954","1814","1984"],"a":0,"w":"1842: A congress formally declares Paraguay’s independence."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -161,6 +168,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Republic of Paraguay",slug="republic-of-paraguay",url="https://the-epoch-institute.org/empire/republic-of-paraguay";

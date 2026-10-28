@@ -77,7 +77,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Into the Present</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of Lithuania"></div>
@@ -121,6 +121,13 @@
 
     <p class="profile-summary" id="summary"><em>The Republic of <a class="enc-link" href="/encyclopedia/lithuania">Lithuania</a> re-created a Lithuanian state in 1918 after more than a century of Russian rule; extinguished by Soviet annexation in 1940, it was restored in 1990 as the first Soviet republic to break away, helping to bring down the <a class="enc-link" href="/encyclopedia/soviet-union">Soviet Union</a>, and is now a member of the <a class="enc-link" href="/encyclopedia/european-union">European Union</a> and <a class="enc-link" href="/encyclopedia/nato">NATO</a>.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="republic-of-lithuania"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Council of Lithuania signs the Act of Independence on 16 February","o":["1991","1926","1918","1920"],"a":2,"w":"1918: The Council of Lithuania signs the Act of Independence on 16 February."},{"p":"Which came first?","q":"","o":["The Supreme Council declares the restoration of independence on 11 March","The Council of Lithuania signs the Act of Independence on 16 February"],"a":1,"w":"1990: The Supreme Council declares the restoration of independence on 11 March · 1918: The Council of Lithuania signs the Act of Independence on 16 February."},{"p":"Which city was a capital of the Republic of Lithuania?","q":"","o":["Andorra la Vella","Hamburg","Saint Helier","Vilnius"],"a":3,"w":"Capital: Vilnius (proclaimed); Kaunas (temporary, 1920–1939); Vilnius (from 1939)."},{"p":"Who founded the Republic of Lithuania?","q":"","o":["Congress of Vienna","Council of Lithuania","Count Adolf III of Schauenburg","Roger-Bernard III"],"a":1,"w":"Founder: Council of Lithuania (Taryba) under Antanas Smetona."},{"p":"In which year?","q":"Lithuania takes over the Klaipėda Region","o":["1923","1940","1926","1990"],"a":0,"w":"1923: Lithuania takes over the Klaipėda Region."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Republic of Lithuania",slug="republic-of-lithuania",url="https://the-epoch-institute.org/empire/republic-of-lithuania";

@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -120,6 +120,13 @@
 
     <p class="profile-summary" id="summary"><em>The Bahá’í Faith, heralded by the Báb in <a class="enc-link" href="/encyclopedia/shiraz">Shiraz</a> in 1844 and founded by Bahá’u’lláh, who proclaimed his mission in <a class="enc-link" href="/encyclopedia/baghdad">Baghdad</a> in 1863, teaches the oneness of God, of religion and of humanity, progressive revelation through a line of divine messengers, and a peaceful world order. Persecuted in <a class="enc-link" href="/encyclopedia/iran">Iran</a> and spread from its world centre in <a class="enc-link" href="/encyclopedia/haifa">Haifa</a> and <a class="enc-link" href="/encyclopedia/acre">Acre</a>, it has communities in almost every country.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="bahai-faith"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Báb declares his mission in Shiraz","o":["1850","1844","1912","1892"],"a":1,"w":"1844: The Báb declares his mission in Shiraz."},{"p":"Which came first?","q":"","o":["Bahá’u’lláh is exiled to the Ottoman prison city of Acre","ʻAbdu’l-Bahá travels across North America, speaking in churches, synagogues and universities"],"a":0,"w":"1868: Bahá’u’lláh is exiled to the Ottoman prison city of Acre · 1912: ʻAbdu’l-Bahá travels across North America, speaking in churches, synagogues and universities."},{"p":"In which year?","q":"Bahá’u’lláh is exiled to the Ottoman prison city of Acre","o":["1963","1844","1892","1868"],"a":3,"w":"1868: Bahá’u’lláh is exiled to the Ottoman prison city of Acre."},{"p":"Which came first?","q":"","o":["Bahá’u’lláh dies near Acre; his son ʻAbdu’l-Bahá leads the faith","The Báb is executed by a firing squad in Tabriz"],"a":1,"w":"1892: Bahá’u’lláh dies near Acre; his son ʻAbdu’l-Bahá leads the faith · 1850: The Báb is executed by a firing squad in Tabriz."},{"p":"In which year?","q":"ʻAbdu’l-Bahá travels across North America, speaking in churches, synagogues and universities","o":["1863","1844","1963","1912"],"a":3,"w":"1912: ʻAbdu’l-Bahá travels across North America, speaking in churches, synagogues and universities."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -154,6 +161,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Bahá'í Faith",slug="bahai-faith",url="https://the-epoch-institute.org/religion/bahai-faith";

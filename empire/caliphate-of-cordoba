@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Caliphate of Córdoba"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The <a class="enc-link" href="/encyclopedia/caliphate">Caliphate</a> of <a class="enc-link" href="/encyclopedia/cordoba">Córdoba</a> made <a class="enc-link" href="/encyclopedia/al-andalus">al-Andalus</a> the wealthiest and most cultured state of tenth-century western <a class="enc-link" href="/encyclopedia/europe">Europe</a>, rivalling the <a class="enc-link" href="/encyclopedia/abbasid-caliphate">Abbasids</a> and <a class="enc-link" href="/encyclopedia/fatimid-caliphate">Fatimids</a>, and its mosque, palaces, libraries and science left an enduring legacy, even though its sudden collapse in civil war after 1009 broke Muslim <a class="enc-link" href="/encyclopedia/iberia">Iberia</a> into rival <a class="enc-link" href="/encyclopedia/taifa">taifa</a> kingdoms.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="caliphate-of-cordoba"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"A revolt in Córdoba begins the Fitna, the civil war of al-Andalus","o":["1009","939","1031","997"],"a":0,"w":"1009: A revolt in Córdoba begins the Fitna, the civil war of al-Andalus."},{"p":"Which came first?","q":"","o":["Ramiro II of León defeats the caliph at the Battle of Simancas","The notables of Córdoba abolish the caliphate"],"a":0,"w":"939: Ramiro II of León defeats the caliph at the Battle of Simancas · 1031: The notables of Córdoba abolish the caliphate."},{"p":"Which city was a capital of the Caliphate of Córdoba?","q":"","o":["Nicaea","Córdoba","Bruges","Constantinople"],"a":1,"w":"Capital: Córdoba; court at Madinat al-Zahra."},{"p":"In which year?","q":"Ramiro II of León defeats the caliph at the Battle of Simancas","o":["1009","997","939","1031"],"a":2,"w":"939: Ramiro II of León defeats the caliph at the Battle of Simancas."},{"p":"Which came first?","q":"","o":["A revolt in Córdoba begins the Fitna, the civil war of al-Andalus","Abd al-Rahman III proclaims himself caliph"],"a":1,"w":"1009: A revolt in Córdoba begins the Fitna, the civil war of al-Andalus · 929: Abd al-Rahman III proclaims himself caliph."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -163,6 +170,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Caliphate of Córdoba",slug="caliphate-of-cordoba",url="https://the-epoch-institute.org/empire/caliphate-of-cordoba";

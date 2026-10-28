@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Viceroyalty of Peru"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The <a class="enc-link" href="/encyclopedia/viceroyalty-of-peru">Viceroyalty of Peru</a> was the centre of Spanish power in <a class="enc-link" href="/encyclopedia/south-america">South America</a> for almost three centuries, and the <a class="enc-link" href="/encyclopedia/silver">silver</a> that its <a class="enc-link" href="/encyclopedia/mita">mita</a> labourers dug at <a class="enc-link" href="/encyclopedia/potosi">Potosí</a> financed the Spanish monarchy and linked <a class="enc-link" href="/encyclopedia/europe">Europe</a>, the <a class="enc-link" href="/encyclopedia/americas">Americas</a> and <a class="enc-link" href="/encyclopedia/china">China</a> in the first truly global trading system.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="viceroyalty-of-peru"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"An earthquake and tsunami destroy much of Lima and the port of Callao","o":["1746","1551","1776","1824"],"a":0,"w":"1746: An earthquake and tsunami destroy much of Lima and the port of Callao."},{"p":"Which came first?","q":"","o":["Sucre defeats the royalists at the Battle of Ayacucho","Silver is discovered at the Cerro Rico of Potosí"],"a":1,"w":"1824: Sucre defeats the royalists at the Battle of Ayacucho · 1545: Silver is discovered at the Cerro Rico of Potosí."},{"p":"Which city was a capital of Viceroyalty of Peru?","q":"","o":["Mexico City","Onondaga","Lima","Quebec"],"a":2,"w":"Capital: Lima."},{"p":"Who founded Viceroyalty of Peru?","q":"","o":["Hernán Cortés","Hiawatha","Antonio de Mendoza","Charles V"],"a":3,"w":"Founder: Charles V (by the New Laws of 1542)."},{"p":"Which state came after Viceroyalty of Peru?","q":"","o":["Province of Quebec","United States","Republic of Peru","First Mexican Empire"],"a":2,"w":"Succeeded by: Republic of Peru; Viceroyalties of New Granada and the Río de la Plata."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Viceroyalty of Peru",slug="viceroyalty-of-peru",url="https://the-epoch-institute.org/empire/viceroyalty-of-peru";

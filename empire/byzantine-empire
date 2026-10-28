@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Byzantine Empire"></div>
@@ -121,6 +121,13 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Byzantine Empire's most extraordinary achievement was not territorial but temporal: surviving for 1,123 years — one of the longest continuous imperial histories on record — through <a class="enc-link" href="/encyclopedia/constantinople">Constantinople</a>'s formidable defences, the long stability of the gold <a class="enc-link" href="/encyclopedia/solidus">solidus</a>, the legal framework of the <a class="enc-link" href="/encyclopedia/corpus-juris-civilis">Corpus Juris Civilis</a> and a diplomatic sophistication that repeatedly turned potential conquerors into clients and partners, carrying Roman civilisation into the medieval world and preserving the Greek intellectual heritage that would help ignite the European <a class="enc-link" href="/encyclopedia/renaissance">Renaissance</a>.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="byzantine-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Fourth Crusade sacks Constantinople and founds a Latin Empire","o":["1204","537","1453","330"],"a":0,"w":"1204: The Fourth Crusade sacks Constantinople and founds a Latin Empire."},{"p":"Which came first?","q":"","o":["Seljuk Turks defeat and capture Romanos IV Diogenes at Manzikert","Michael VIII Palaiologos recovers Constantinople from the Latins"],"a":0,"w":"1071: Seljuk Turks defeat and capture Romanos IV Diogenes at Manzikert · 1261: Michael VIII Palaiologos recovers Constantinople from the Latins."},{"p":"Which city was a capital of the Byzantine Empire?","q":"","o":["Regensburg","Aberffraw","Munich","Constantinople"],"a":3,"w":"Capital: Constantinople, Nicaea."},{"p":"Who founded the Byzantine Empire?","q":"","o":["Paolo Lucio Anafesto","Cunedda","Garibald I","Constantine the Great"],"a":3,"w":"Founder: Constantine the Great."},{"p":"Which state came after the Byzantine Empire?","q":"","o":["Habsburg Monarchy","Electorate of Bavaria","Ottoman Empire","Kingdom of England"],"a":2,"w":"Succeeded by: Ottoman Empire."}]</script>
+    </section>
 
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
@@ -165,6 +172,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Byzantine Empire",slug="byzantine-empire",url="https://the-epoch-institute.org/empire/byzantine-empire";

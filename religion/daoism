@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
 
     <p class="profile-summary" id="summary"><em>Daoism, the Chinese tradition of the Dao, the Way underlying all things, grew from the <a class="enc-link" href="/encyclopedia/daodejing">Daodejing</a> and the <a class="enc-link" href="/encyclopedia/zhuangzi">Zhuangzi</a> of the <a class="enc-link" href="/encyclopedia/warring-states-period">Warring States period</a> and became an organised religion with the <a class="enc-link" href="/encyclopedia/way-of-the-five-pecks-of-rice">Celestial Masters</a> from 142 CE. Seeking harmony with nature, long life and transcendence through ritual, meditation and alchemy, it was patronised by emperors, shaped Chinese art, medicine and science, and remains a living tradition in <a class="enc-link" href="/encyclopedia/china">China</a>, <a class="enc-link" href="/encyclopedia/taiwan">Taiwan</a> and beyond.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="daoism"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Quanzhen master Qiu Chuji meets Genghis Khan in the Hindu Kush","o":["1167","184","666","1222"],"a":3,"w":"1222: The Quanzhen master Qiu Chuji meets Genghis Khan in the Hindu Kush."},{"p":"Which came first?","q":"","o":["Wang Chongyang founds the monastic school of Complete Perfection (Quanzhen)","The Yellow Turban rebellion of the Way of Great Peace shakes the Han dynasty"],"a":1,"w":"1167: Wang Chongyang founds the monastic school of Complete Perfection (Quanzhen) · 184: The Yellow Turban rebellion of the Way of Great Peace shakes the Han dynasty."},{"p":"In which year?","q":"Zhang Daoling receives a revelation from the deified Laozi and founds the Way of the Celestial Masters","o":["1445","142","442","184"],"a":1,"w":"142: Zhang Daoling receives a revelation from the deified Laozi and founds the Way of the Celestial Masters."},{"p":"Which came first?","q":"","o":["The Quanzhen master Qiu Chuji meets Genghis Khan in the Hindu Kush","The Ming court completes the printing of the Daoist Canon"],"a":0,"w":"1222: The Quanzhen master Qiu Chuji meets Genghis Khan in the Hindu Kush · 1445: The Ming court completes the printing of the Daoist Canon."},{"p":"In which year?","q":"The Northern Wei emperor Taiwu receives Daoist registers, making Daoism the religion of his state","o":["442","184","142","1167"],"a":0,"w":"442: The Northern Wei emperor Taiwu receives Daoist registers, making Daoism the religion of his state."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -158,6 +165,7 @@
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Daoism",slug="daoism",url="https://the-epoch-institute.org/religion/daoism";

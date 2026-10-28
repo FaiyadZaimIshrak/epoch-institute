@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Duchy of Bavaria"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>For more than a thousand years the Duchy of <a class="enc-link" href="/encyclopedia/bavaria">Bavaria</a> was one of the great territorial units of central <a class="enc-link" href="/encyclopedia/europe">Europe</a>, spreading <a class="enc-link" href="/encyclopedia/christianity">Christianity</a> and German speech into the eastern <a class="enc-link" href="/encyclopedia/alps">Alps</a>, giving rise to <a class="enc-link" href="/encyclopedia/austria">Austria</a>, and under the <a class="enc-link" href="/encyclopedia/house-of-wittelsbach">Wittelsbachs</a> becoming the leading Catholic power of the Empire before its elevation to an electorate in 1623.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="duchy-of-bavaria"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Charlemagne deposes Duke Tassilo III, ending Agilolfing rule","o":["1180","1623","788","739"],"a":2,"w":"788: Charlemagne deposes Duke Tassilo III, ending Agilolfing rule."},{"p":"Which came first?","q":"","o":["The Landshut War of Succession ends; Albert IV reunites Bavaria","Maximilian I receives the electoral dignity; Bavaria becomes an electorate"],"a":0,"w":"1505: The Landshut War of Succession ends; Albert IV reunites Bavaria · 1623: Maximilian I receives the electoral dignity; Bavaria becomes an electorate."},{"p":"Which city was a capital of the Duchy of Bavaria?","q":"","o":["Malamocco","Regensburg","Heraclea","Venice"],"a":1,"w":"Capital: Regensburg; later Munich (with Landshut, Ingolstadt and Straubing during partitions)."},{"p":"Who founded the Duchy of Bavaria?","q":"","o":["Garibald I","Paolo Lucio Anafesto","Constantine the Great","Pope Stephen II"],"a":0,"w":"Founder: Garibald I."},{"p":"Which state came after the Duchy of Bavaria?","q":"","o":["Kingdom of Italy","Habsburg Monarchy","Ottoman Empire","Electorate of Bavaria"],"a":3,"w":"Succeeded by: Electorate of Bavaria."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -162,6 +169,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Duchy of Bavaria",slug="duchy-of-bavaria",url="https://the-epoch-institute.org/empire/duchy-of-bavaria";

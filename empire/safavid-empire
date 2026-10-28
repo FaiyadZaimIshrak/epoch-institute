@@ -78,7 +78,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Safavid Empire"></div>
@@ -122,6 +122,13 @@
 
     <p class="profile-summary" id="summary"><em>The Safavid Empire's most enduring legacy is the Shia Islamic identity of <a class="enc-link" href="/encyclopedia/iran">Iran</a>, a transformation so thorough and so institutionally embedded that it outlived the dynasty by three centuries and continues to shape Iranian culture, statecraft and geopolitical orientation.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="safavid-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Shah Abbas I's reformed army recovers Herat and Khorasan from the Uzbeks","o":["1598","1736","1501","1722"],"a":0,"w":"1598: Shah Abbas I's reformed army recovers Herat and Khorasan from the Uzbeks."},{"p":"Which came first?","q":"","o":["Nader Quli Afshar is proclaimed Shah on the Mughan plain, ending the Safavid dynasty","The Treaty of Zuhab fixes a Safavid-Ottoman frontier close to today's Iran-Iraq border"],"a":1,"w":"1736: Nader Quli Afshar is proclaimed Shah on the Mughan plain, ending the Safavid dynasty · 1639: The Treaty of Zuhab fixes a Safavid-Ottoman frontier close to today's Iran-Iraq border."},{"p":"Which city was a capital of the Safavid Empire?","q":"","o":["Constantinople","Kutaisi","Isfahan","Bursa"],"a":2,"w":"Capital: Isfahan, Tabriz, Qazvin."},{"p":"Who founded the Safavid Empire?","q":"","o":["David VI Narin","Babur","Osman I","Ismail I"],"a":3,"w":"Founder: Ismail I."},{"p":"In which year?","q":"Ismail I defeats the Aq Qoyunlu, seizes Tabriz and proclaims Twelver Shiism the state religion","o":["1639","1622","1501","1722"],"a":2,"w":"1501: Ismail I defeats the Aq Qoyunlu, seizes Tabriz and proclaims Twelver Shiism the state religion."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -164,6 +171,7 @@
 <script src="/epoch-stats.js?v=4"></script>
 <script src="/connections-map.js?v=13" defer></script>
 <script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Safavid Empire",slug="safavid-empire",url="https://the-epoch-institute.org/empire/safavid-empire";

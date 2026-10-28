@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -116,6 +116,13 @@
 
     <p class="profile-summary" id="summary"><em>Nahuatl, the Uto-Aztecan language of the <a class="enc-link" href="/encyclopedia/aztec-empire">Aztecs</a>, was the common language of trade and empire in <a class="enc-link" href="/encyclopedia/mesoamerica">Mesoamerica</a> and, written in the <a class="enc-link" href="/encyclopedia/latin">Latin</a> alphabet after the Spanish conquest, produced one of the richest Indigenous literatures of the <a class="enc-link" href="/encyclopedia/americas">Americas</a>, from annals and poetry to the <a class="enc-link" href="/encyclopedia/florentine-codex">Florentine Codex</a>. Spoken by about 1.7 million people in <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> today, it has given the world words such as chocolate, <a class="enc-link" href="/encyclopedia/tomato">tomato</a> and avocado.</em></p>
 
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="nahuatl"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Malintzin, a Nahuatl-speaking woman, becomes the interpreter of Hernán Cortés","o":["1536","2003","1770","1519"],"a":3,"w":"1519: Malintzin, a Nahuatl-speaking woman, becomes the interpreter of Hernán Cortés."},{"p":"Which came first?","q":"","o":["The Mexica found Tenochtitlan, by tradition, on an island in Lake Texcoco","Alonso de Molina publishes his great dictionary of Nahuatl and Spanish"],"a":0,"w":"1325: The Mexica found Tenochtitlan, by tradition, on an island in Lake Texcoco · 1571: Alonso de Molina publishes his great dictionary of Nahuatl and Spanish."},{"p":"In which year?","q":"The Mexica found Tenochtitlan, by tradition, on an island in Lake Texcoco","o":["1770","1325","1519","1571"],"a":1,"w":"1325: The Mexica found Tenochtitlan, by tradition, on an island in Lake Texcoco."},{"p":"Which came first?","q":"","o":["Alonso de Molina publishes his great dictionary of Nahuatl and Spanish","The College of Santa Cruz de Tlatelolco opens, teaching Latin, Spanish and Nahuatl to young Nahua nobles"],"a":1,"w":"1571: Alonso de Molina publishes his great dictionary of Nahuatl and Spanish · 1536: The College of Santa Cruz de Tlatelolco opens, teaching Latin, Spanish and Nahuatl to young Nahua nobles."},{"p":"In which year?","q":"The College of Santa Cruz de Tlatelolco opens, teaching Latin, Spanish and Nahuatl to young Nahua nobles","o":["1770","1536","2003","1325"],"a":1,"w":"1536: The College of Santa Cruz de Tlatelolco opens, teaching Latin, Spanish and Nahuatl to young Nahua nobles."}]</script>
+    </section>
+
     <div id="detail-references" class="profile-references">
       <p class="profile-references-title">References</p>
       <ul class="profile-references-list">
@@ -149,6 +156,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
 <script>
 (function(){
   var name="Nahuatl",slug="nahuatl",url="https://the-epoch-institute.org/language/nahuatl";
