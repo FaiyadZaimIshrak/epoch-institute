@@ -1786,3 +1786,25 @@ Every event was checked against its calendar date; events that did not happen on
 - **12-28, 1908**: Replaced: the Bretton Woods agreements entered into force on 27 December 1945, not 28 December.
 - **12-29, 1940**: Corrected: it was one of the most destructive raids of the Blitz, but not the heaviest.
 - **12-30, 1916**: Replaced: the Great Storm of 1703 struck on 26-27 November (Old Style), not 30 December.
+
+### Second pass (28 Oct 2026)
+
+- **BCE years**: 23 events shown as BCE ("49 BCE") carried a positive year (49), so they were sorted among the CE
+  events, dated "1,977 years ago" instead of 2,074, and filed under the CE year and century pages. Their years now
+  carry the sign, and "years ago" counts no year 0 (49 BCE was 2,074 years before 2026) (Ruspina, the Rubicon, Jimmu, the Aegates Islands, Nebuchadnezzar at Jerusalem, Megiddo, Troy, the
+  eclipse battle, Trasimene, Pydna, Alexander's birth, Alexandria, Pharsalus, Actium, Marathon, Augustus's birth, the
+  Temple of Venus Genetrix, Pompey's murder, Gaugamela, the Hebrew calendar epoch, Zama, the Catilinarians, Cicero).
+- **Profile tags**: 98 of the 247 related-profile tags were wrong or loose (Bell's telephone patent tagged the
+  Brazilian Empire, Eisenhower's birth the British Empire, Guadalcanal the Ethiopian Empire, Louis XIV's reign the
+  Dutch Empire, Caesar's career the Roman Empire or the Ptolemaic Empire). Each tag is now the state where the event
+  happened or whose ruler or army acted, alive that year (Roman Republic, Kingdom of France, United States, Kingdom of
+  England, Papal States …); 12 with no fitting profile lost their tag (de Gaulle's presidency, the IMF, Gandhi's
+  assassination after independence). Two tags keep a profile just outside its span on purpose: Augustus's birth (Roman
+  Empire) and Sekigahara (Tokugawa Shogunate).
+- **10-04, 610**: Removed "Heraclius reaches Constantinople to overthrow Phocas": Heraclius arrived outside
+  Constantinople on 3 October 610 and took the city and the crown on 5 October (the Phocas and Heraclius articles);
+  both days now carry their own event.
+- **New events (28 Oct 2026)**: every day was brought to at least eight events. Each new event's day and year were
+  first confirmed in the text of its Wikipedia article (or the article's lead), and its words drafted only from that
+  article, Wikipedia's On this day line and the Institute's entries, then read by eye; drafts whose sources disagreed
+  on the day or year, gave only an approximate day, or repeated an event already on the day were left out.

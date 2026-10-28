@@ -214,13 +214,31 @@ function playwright() {   // from scripts/node_modules, else wherever Node finds
 }
 async function launch() {
   const pw = playwright();
-  if (process.platform === 'win32') { try { return await pw.chromium.launch({ channel: 'msedge' }); } catch (e) {} }
+  if (process.platform === 'win32') {
+    try { return await pw.chromium.launch({ channel: 'msedge' }); } catch (e) {}
+    // Edge 156 hands its start to a second process and the first exits, which closes Playwright's pipe: start it with a
+    // debugging port instead (a port outlives the hand-over) and end it with Browser.close
+    const exe = path.join(process.env['ProgramFiles(x86)'] || 'C:\\Program Files (x86)', 'Microsoft', 'Edge', 'Application', 'msedge.exe');
+    if (fs.existsSync(exe)) {
+      const port = 9400 + Math.floor(Math.random() * 500), ud = path.join(require('os').tmpdir(), 'posters-edge-' + port);
+      require('child_process').spawn(exe, ['--headless', '--no-first-run', '--disable-sync', '--hide-scrollbars', '--remote-debugging-port=' + port, '--user-data-dir=' + ud, 'about:blank'], { stdio: 'ignore' });
+      for (let i = 0; i < 40; i++) {
+        await new Promise(r => setTimeout(r, 250));
+        try {
+          const b = await pw.chromium.connectOverCDP('http://127.0.0.1:' + port), close = b.close.bind(b);
+          b.close = async () => { try { await (await b.newBrowserCDPSession()).send('Browser.close'); } catch (e) {} try { await close(); } catch (e) {} };
+          return b;
+        } catch (e) {}
+      }
+    }
+  }
   return pw.chromium.launch();
 }
 // the same poster rasterised a hair differently (the rotated emblem fields vary by a few levels from run to run):
 // every pixel within 40 of 255 of the old one, where any real change of words or picture moves some by far more
 function nearlySame(pg, oldBuf, buf) {
-  return pg.evaluate(async ([a, b]) => {
+  // an old file that will not decode (a run stopped mid-write) counts as changed
+  return pg.evaluate(async ([a, b]) => { try {
     const load = s => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = s; });
     const [x, y] = await Promise.all([load(a), load(b)]);
     if (x.width !== y.width || x.height !== y.height) return false;
@@ -230,7 +248,7 @@ function nearlySame(pg, oldBuf, buf) {
     g.drawImage(y, 0, 0); const q = g.getImageData(0, 0, c.width, c.height).data;
     for (let i = 0; i < p.length; i++) if (Math.abs(p[i] - q[i]) > 40) return false;
     return true;
-  }, ['data:image/jpeg;base64,' + oldBuf.toString('base64'), 'data:image/jpeg;base64,' + buf.toString('base64')]);
+  } catch (e) { return false; } }, ['data:image/jpeg;base64,' + oldBuf.toString('base64'), 'data:image/jpeg;base64,' + buf.toString('base64')]);
 }
 (async () => {
   const list = (KINDS.length ? KINDS : Object.keys(JOBS)).flatMap(k => { if (!JOBS[k]) throw new Error('unknown kind ' + k); return JOBS[k]; })

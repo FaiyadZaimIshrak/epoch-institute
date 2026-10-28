@@ -1,7 +1,7 @@
 # The pictures the games may use: chosen by eye from contact sheets of well-known entries (no maps, coins, seals,
 # documents, collages, or pictures that do not show their subject). Read by scripts/build-pages.ps1 for games-data.js.
 # slug<TAB>puzzle set (empty = Which Came First? / Guess the Year only, when the dates allow)<TAB>order in the set
-# sets: Wonders of the World | Treasures | Famous Faces
+# sets: Wonders of the World | Treasures | Famous Faces | Art Through the Ages | Great Cities | Sacred Places
 napoleon	Famous Faces	1
 charles-v-holy-roman-emperor		
 timur		
@@ -390,3 +390,40 @@ mesha-stele
 teatro-farnese		
 medracen		
 pyramid-of-the-sun	Wonders of the World	6
+# 28 Oct 2026: three more puzzle sets, chosen by eye on contact sheets (no grim scenes, inscriptions, modern skylines)
+standard-of-ur	Art Through the Ages	1
+lion-hunt-of-ashurbanipal	Art Through the Ages	2
+sarcophagus-of-the-spouses	Art Through the Ages	3
+charioteer-of-delphi	Art Through the Ages	4
+venus-de-milo	Art Through the Ages	5
+admonitions-of-the-instructress-to-the-court-ladies	Art Through the Ages	6
+book-of-kells	Art Through the Ages	7
+ghent-altarpiece	Art Through the Ages	8
+the-last-supper-leonardo	Art Through the Ages	9
+sistine-madonna	Art Through the Ages	10
+las-meninas	Art Through the Ages	11
+bani-thani	Art Through the Ages	12
+kyoto	Great Cities	1
+samarkand	Great Cities	2
+isfahan	Great Cities	3
+madurai	Great Cities	4
+istanbul	Great Cities	5
+jerusalem	Great Cities	6
+moscow	Great Cities	7
+prague	Great Cities	8
+florence	Great Cities	9
+rome	Great Cities	10
+tunis	Great Cities	11
+potosi	Great Cities	12
+temple-of-aphaia	Sacred Places	1
+temple-of-the-feathered-serpent	Sacred Places	2
+kandariya-mahadeva-temple	Sacred Places	3
+wat-phra-kaew	Sacred Places	4
+tran-quoc-pagoda	Sacred Places	5
+nyatapola-temple	Sacred Places	6
+sheikh-lotfollah-mosque	Sacred Places	7
+great-mosque-of-kilwa	Sacred Places	8
+saint-sophia-cathedral-kyiv	Sacred Places	9
+scrovegni-chapel	Sacred Places	10
+sumela-monastery	Sacred Places	11
+mikve-israel-emanuel-synagogue	Sacred Places	12

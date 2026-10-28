@@ -1145,7 +1145,26 @@ function EvImg($ev, $titleSlugs) {
   return $null
 }
 function LinkedSlugs([string]$html) { @([regex]::Matches($html, 'href="/encyclopedia/([^"]+)"') | ForEach-Object { $_.Groups[1].Value }) }
-function YearsAgo([double]$y) { [int]($YEAR - $y) }
+function YearsAgo([double]$y) { [int]($YEAR - $y - $(if ($y -lt 0) { 1 } else { 0 })) }   # no year 0: 49 BCE to 2026 is 2,074 years
+# Born and died on this day: scripts/day-people.tsv (mm-dd, b or d, year, slug), Wikipedia's "On this day" births and
+# deaths kept only where Wikidata gives the same day and the entry the same year (scratchpad days\r3-people.js)
+$DAYPPL = @{}
+if (Test-Path "$Repo\scripts\day-people.tsv") {
+  foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\day-people.tsv", $U8)) {
+    if (-not $l -or $l.StartsWith('#')) { continue }; $c = $l.Split("`t"); if ($c.Count -lt 4 -or -not $BY.ContainsKey($c[3])) { continue }
+    if (-not $DAYPPL.ContainsKey($c[0])) { $DAYPPL[$c[0]] = New-Object Collections.Generic.List[object] }
+    $DAYPPL[$c[0]].Add([pscustomobject]@{ k = $c[1]; y = [int]$c[2]; o = $BY[$c[3]] })
+  }
+}
+# the 12 best known (profiles that mention them, a picture) in year order, the rest folded
+function DayPplList($rows) {
+  $top = @($rows | Sort-Object @{ e = { $_.o.emp.Count * 3 + $(if ($_.o.img) { 4 } else { 0 }) }; Descending = $true }, @{ e = { $_.y } } | Select-Object -First 12 | Sort-Object y)
+  $rest = @($rows | Where-Object { $top -notcontains $_ } | Sort-Object y)
+  $li = { param($r) '<li><a href="/encyclopedia/' + $r.o.slug + '">' + $(if ($r.o.img) { '<img src="' + (ThumbOf $r.o.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $r.o) }) + '<span><span class="nm">' + (Hx $r.o.name) + '</span><span class="tp">' + (Hx ([string]$r.o.dates)) + '</span></span></a></li>' }
+  $h = '<ul class="enc-seealso">' + (($top | ForEach-Object { & $li $_ }) -join '') + '</ul>'
+  if ($rest.Count) { $h += '<details class="cen-all"><summary>Show ' + $rest.Count + ' more</summary><ul class="enc-seealso">' + (($rest | ForEach-Object { & $li $_ }) -join '') + '</ul></details>' }
+  $h
+}
 New-Item -ItemType Directory -Force "$Repo\data\days" | Out-Null
 $daysAll = New-Object Text.StringBuilder; $nDayPics = 0; $nDayLinks = 0
 for ($di = 0; $di -lt $DAYS.Count; $di++) {
@@ -1191,6 +1210,12 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
     $ej.Add('{"year":' + ([double]$ev['year']).ToString($INV) + ',"yearDisplay":' + (Js $yd) + ',"title":' + (Js ([string]$ev['title'])) + ',"description":' + (Js ([string]$ev['description'])) + ',"html":' + (Js $DH[$ei]) + ',"links":[' + ($lkJs -join ',') + ']' + $(if ($ev['profile']) { ',"profile":[' + (Js ([string]$ev['profile'][0])) + ',' + (Js ([string]$ev['profile'][1])) + ']' } else { '' }) + '}')
   }
   [void]$sb.Append("</ol>`n")
+  if ($DAYPPL.ContainsKey($k)) {
+    $bo = @($DAYPPL[$k] | Where-Object { $_.k -eq 'b' }); $de = @($DAYPPL[$k] | Where-Object { $_.k -eq 'd' })
+    if ($bo.Count) { [void]$sb.Append('<section class="day-ppl" aria-labelledby="day-born"><h2 class="ref-sec-title" id="day-born">Born on ' + $lbl + ' <span class="n">' + $bo.Count + '</span></h2>' + (DayPplList $bo) + "</section>`n") }
+    if ($de.Count) { [void]$sb.Append('<section class="day-ppl" aria-labelledby="day-died"><h2 class="ref-sec-title" id="day-died">Died on ' + $lbl + ' <span class="n">' + $de.Count + '</span></h2>' + (DayPplList $de) + "</section>`n") }
+    [void]$sb.Append('<p class="day-ppl-note">Dates as the sources give them: in the Julian calendar before 1582, and in some countries for longer (Britain until 1752, Russia until 1918). Only people whose day of birth or death the records agree on are listed.</p>' + "`n")
+  }
   # data/days/<mm-dd>.json: one day for the home page strip and the Today in History page (not the whole year)
   $dayJs = '{"k":' + (Js $k) + ',"events":[' + ($ej -join ',') + '],"hero":' + $heroIdx + ',"pic":' + $(if ($heroImg) { '[' + (Js $heroImg[0]) + ',' + (Js $heroImg[1]) + ']' } else { 'null' }) + ',"intl":' + $(if ($intlDay) { '{"name":' + (Js ([string]$intlDay['name'])) + ',"description":' + (Js ([string]$intlDay['description'])) + '}' } else { 'null' }) + "}`n"
   if ([EpochBuild.W]::WriteIfChanged("$Repo\data\days\$k.json", $dayJs)) { $NWRITE++ }

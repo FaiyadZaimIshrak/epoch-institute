@@ -192,10 +192,21 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
 - `/today-in-history/<month>-<day>` — 365 day pages: event pictures (EvImg: the entry named in the title first, so
   Chaucer's portrait rather than London), descriptions gold-linked by LinkDesc with the event's year as context (so
   they get the hover previews), "N years ago" chips, the anniversary-of-the-day hero card (roundest centenary),
-  international-day banner, own share poster (images/og/day-<slug>.jpg, see "Share posters"). The builder also writes
+  international-day banner, own share poster (images/og/day-<slug>.jpg, see "Share posters"), and "Born on / Died on
+  <day>" lists (the 12 best known with portraits, the rest folded; a note on Julian dates) from scripts/day-people.tsv
+  (mm-dd, b or d, year, slug: 4,177 rows from Wikipedia's On this day births and deaths, kept only where Wikidata gives
+  the same day, in its own calendar, and the entry the same year; scratchpad days\r3-people.js). In history.json a BCE
+  event's year is negative (23 carried "49 BCE" with year 49 until Oct 2026: sorted, dated and filed as CE), and a
+  `profile` tag names the state where the event happened or whose ruler or army acted, alive that year (98 of 247 were
+  wrong: Bell's patent tagged the Brazilian Empire; profile-changes.md). Every day has at least eight events (3,122;
+  921 added 28 Oct 2026, mostly BCE and 500-1499, outside Europe where the sources allowed): each new event's day and
+  year were first found in the text of its Wikipedia article, then agents wrote it only from that article, the On this
+  day line and the entries (scratchpad days\r3: R3-GUIDE.md, check-drafts.js flags any number or name not in the
+  material, decisions.json holds the editor's drops and edits, merge-r3.js refuses an event the day already has). Add
+  events the same way: a day with "c." or a disputed day is left out. The builder also writes
   `data/days/<mm-dd>.json` ({k, events [{year, yearDisplay, title, description, html (linked), links, profile}],
-  hero, pic [img, slug], intl}, ~2 KB): the home strip and the Today in History index read only today's file instead
-  of history.json (228 KB); its DAYS_V is stamped into both pages. With -SkipEntries (no linker) the day pages and
+  hero, pic [img, slug], intl}, ~4 KB): the home strip and the Today in History index read only today's file instead
+  of history.json (1.1 MB); its DAYS_V is stamped into both pages. With -SkipEntries (no linker) the day pages and
   data/days are left as they are. (data/tih-thumbs.json is gone.)
 - `/countries/<slug>` + `/countries/` — 190 country histories (present-day countries with at least 3 states): map
   with the states' seats (inline outlines, the country lit up), a share poster of its own (images/og/country-<slug>.jpg;
@@ -444,10 +455,13 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   (epoch-games daily-<day> {m: answers}, resumed after a reload) with a streak (daily-streak {n, last}). The finish
   card shows 🟩🟥 squares, "Daily Ten #N" (#1 = 26 Oct 2026), the countdown to the next one, Share
   ("Epoch Daily Ten #N: 8/10" + squares + link) and the newsletter line. Every other game's finish card has Share.
-- Picture Puzzle: the GAME_PUZZLES sets in order, 3×3/4×4/5×5, a square crop drawn on a canvas, a deal in which no
+- Picture Puzzle: the GAME_PUZZLES sets in order (six: Wonders of the World, Treasures, Famous Faces, Art Through the
+  Ages, Great Cities, Sacred Places), 3×3/4×4/5×5, a square crop drawn on a canvas, a deal in which no
   tile starts in place, swaps by tap, drag or keyboard, tiles in place lock, Peek; solved pictures (pz-solved) fill
   a strip.
-- Word Hunt: scripts/word-hunt.tsv: `@key, title, introduction, picture` lines, then `WORD, clue, entry slug` (A–Z,
+- Word Hunt (16 themes, the Kids corner's 16: Egypt, Greece, Rome, knights, Vikings, explorers, inventions, buildings,
+  China, Africa's kingdoms, Aztecs/Maya/Inca, Pacific voyagers, India, the Islamic Golden Age, Japan, Mesopotamia):
+  scripts/word-hunt.tsv: `@key, title, introduction, picture` lines, then `WORD, clue, entry slug` (A–Z,
   3–12 letters). Easy 8×8 across and down (6 words of up to 8 letters), Medium 10×10 with diagonals (8), Hard 12×12
   in all eight directions with clues only (10). Grids are made in the browser and kept only when every word reads
   exactly once. Drag, tap the first and last letters, or type the word.
@@ -474,6 +488,12 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   entry or page. Every group's facts are checked against the entries; "Born in / Died in <year>" groups are read
   with [EpochBuild.W]::Life (scratchpad conn/years-check.ps1). Each tile belongs to exactly one group: a decoy that
   seems to fit two (Beethoven: composer, but born in 1770) works only because the other group has four without it.
+  129 puzzles (they run out on 3 March 2027: append more, never reorder). #61-#129 (Oct 2026): groups proposed with
+  six candidate tiles, each with a quotation from its own entry that proves it (scratchpad conn2: GROUPS-GUIDE.md,
+  verify-proposals.js checks the quotations, weights and repeats of published groups), assembled by assemble2.js
+  (levels spread 1-4, at most one year and one wordplay group, no entry twice within 30 puzzles, no tile that is
+  another group's candidate or names a year group's year) and read by eye: edits.txt holds the editor's tile
+  changes (two tiles telling one story, loose fits, obscure hidden words), plan-fix.txt the swapped groups.
 - History Crossword (#cross): a 12 x 12 criss-cross crossword a day for everyone (UTC; #1 = 27 Oct 2026; the puzzles in
   order, repeated after the last), plain clues, 13-17 answers. Tap a square (again to turn), type (keyboard: letters,
   Backspace, arrows, Tab / Shift+Tab to the next clue, Space turns; on touch screens the letters on screen, #cw-kb, so
@@ -510,7 +530,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   CSS shows it only in Kids mode. Games start easy, timers are hidden, sounds are on.
 - /kids is a hand page (always in Kids mode: html data-kids="1" data-kids-always; the star there changes only the
   other pages): an inline-SVG owl (Hoot), picture and fact of the day (chosen by the date), doors to the games and the crossword,
-  eight themes, a site-wide switch, a note for grown-ups. Its build blocks (kids-doors, kids-themes, kids-facts =
+  sixteen themes, a site-wide switch, a note for grown-ups. Its build blocks (kids-doors, kids-themes, kids-facts =
   KIDS_FACTS) come from scripts/kids-corner.tsv: `@key, title, introduction, door picture` lines, then
   `entry slug, a line for young readers` (8–12 per theme, pictures checked by eye), and `!, fact, link` lines
   (facts checked: keep them true and simple). Each theme ends with its Word Hunt (/games#words-<key>, same keys as
@@ -788,8 +808,10 @@ server, download empire-pages.zip, extract into empire/, commit and push.
 ## Share posters (link previews)
 `images/og/*.jpg` (1200x630, ~95 KB) are the pictures Facebook, Messenger, WhatsApp, X and the rest show for a shared
 link, drawn by `node scripts/make-posters.js [kinds] [--only=words] [--out=dir]` (Node; Playwright once with
-`npm install --prefix scripts playwright-core`, which drives the installed Edge on Windows): it serves the repository, opens scripts/posters/poster.html (the template: render(job) per poster, check()
-reports text that overflows) and screenshots each poster, writing only changed files (re-runs are byte-stable). Kinds:
+`npm install --prefix scripts playwright-core`, which drives the installed Edge on Windows; since Edge 156 closes
+Playwright's pipe at start-up, the script then starts Edge with a debugging port and connects over CDP): it serves the repository, opens scripts/posters/poster.html (the template: render(job) per poster, check()
+reports text that overflows) and screenshots each poster, writing only changed files (re-runs are byte-stable; an old
+file that will not decode, from a run stopped mid-write, is simply redrawn). Kinds:
 profiles `<slug>.jpg` (emblem as a seal on the HOME_PICS picture, dates, teaser, the rise-and-fall curve, or for religions
 and languages a gold band for their span on the timeline of recorded history; no emblem for profiles marked `hide` in
 home-pictures.tsv; `--dump=jobs.json` writes the jobs without drawing: where Playwright is not installed, scratchpad

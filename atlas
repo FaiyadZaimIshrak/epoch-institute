@@ -109,7 +109,7 @@
 <script src="/shared-nav.js?v=41"></script>
 <script src="/maps/basemap.js?v=4478c4912d"></script>
 <script src="/maps/atlas-data.js?v=b637909261"></script>
-<script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=47369e946f', ATLAS_YEARS_SRC = '/data/years.json?v=aef0231202';</script>
+<script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=47369e946f', ATLAS_YEARS_SRC = '/data/years.json?v=74830d9cf7';</script>
 <script src="/atlas.js?v=7"></script>
 <script>initNav('atlas');</script>
 </body>
