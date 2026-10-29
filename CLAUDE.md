@@ -235,7 +235,7 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   985–1499, "13th century–1707" 1200–1707: 48 entries had been filed by the century alone) and a shortened second year
   is expanded ("1895–96": the Fourth Anglo-Ashanti War had been filed under the 1st century).
 - `/encyclopedia/glossary` — the 723 term entries A–Z (DefinedTermSet JSON-LD).
-- `/paths/<slug>` + `/paths/` — the 28 reading paths from reading-paths.js, each tagged with the /start reader types it suits (types:[…] in paths.json; shown as "Suits the …" on the page and card); /paths#slug forwards to /paths/slug.
+- `/paths/<slug>` + `/paths/` — the 38 reading paths from reading-paths.js, each tagged with the /start reader types it suits (types:[…] in paths.json; shown as "Suits the …" on the page and card) and the eras it covers, main one first (eras:[…]: ancient, medieval, earlymodern, modern; used only by /start); /paths#slug forwards to /paths/slug.
   The picture strips (PathThumbs) never repeat a picture (compared by its Commons source) and put maps, plans and
   diagrams last (PicIsChart). Each path page ends with Test yourself.
 - Lists of entries show a type glyph where an entry has no picture (PhSpan: `.ph .ph-person/-conflict/-place/…`,
@@ -332,7 +332,7 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
 ## Encyclopedia
 - `encyclopedia/` index page (top-level nav item): search, type and conflict filters, 50 results a page, A–Z and
   century lists when nothing is searched; every entry has its own page at `/encyclopedia/<slug>`.
-- `encyclopedia-data.js` — 32,011 entries (slug, name, type, aka, dates, desc, img, credit, tags, war, empires), 22,548
+- `encyclopedia-data.js` — 32,011 entries (slug, name, type, aka, dates, desc, img, credit, tags, war, empires), 22,549
   with a picture. Generated.
   The entries added in Oct 2026 (people, places, events named in the state histories and profiles) were merged by scratchpad
   states/desc/enc-merge.ps1, which always starts from the saved originals (enc-orig/). Duplicate subjects are folded via
@@ -340,7 +340,9 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   were chosen by eye on 28 Oct 2026 for the most-linked entries that had none (the Wikidata image and Wikipedia lead
   image, on contact sheets: the subject itself, a map only for a place, people, war or battle, never a namesake or a
   modern imagined portrait): scripts/entry-pictures.tsv, written in by scripts/apply-entry-pictures.ps1 (idempotent;
-  an entry that has a picture keeps it).
+  an entry that has a picture keeps it). John F. Kennedy's White House portrait joined them on 29 Oct (for his Berlin
+  speech page); as make-home-data was not re-run (it reshuffles the daily quiz), his rows in search-index.js and
+  search-facets.js got their picture flag by hand.
 - Conflicts & Resolutions: entries carry `tags` (battle, siege, war, campaign, revolt, revolution, crisis, treaty, peace;
   2,528 entries) and `war:"<slug>"` (the war a battle/treaty belongs to). Written by enc2/apply-conflicts.ps1 — run it
   once on fresh enc-merge output (a rerun drops names).
@@ -427,8 +429,9 @@ page filters by kind (?kind=).
 A one-question-at-a-time wizard (progress dots, Back, auto-advance on choice, the optional region question can be
 skipped; without JS the four questions show as one form). Four questions (pull, era, pace, region) score six reader
 types (Strategist, Navigator, Thinker, Chronicler, Builder, Timekeeper). Recommendations come from reading-paths.js:
-the paths whose types[] lists the reader type (first-listed type first), the region answer swapping in the last
-one; plus two tools. All client-side (epoch-reader-type; "Save these to My shelf" writes the paths into
+the paths whose types[] lists the reader type, ranked by the era answer (main era first, then paths reaching into it;
+the type's own paths before shared ones, then paths keeping to fewer eras; "All of it" keeps the catalogue order), the
+region answer (seven regions with Oceania) swapping in the last one; plus two tools. All client-side (epoch-reader-type; "Save these to My shelf" writes the paths into
 epoch-shelf). Linked from the Explore menu, the footer and the homepage first-visit banner (epoch-start-seen),
 which never shows once a reader type exists. The homepage also shows "Continue where you left off" (epoch-recent,
 ≥2 items) instead of the banner.
@@ -610,7 +613,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   word-hunt.tsv).
 
 ## Great Speeches (/speeches/)
-speeches-data.js (SPEECHES, 60 speeches, Pericles to Reagan) → build-pages.ps1 writes /speeches/<slug> (The
+speeches-data.js (SPEECHES, 80 speeches, Xerxes to Reagan, ten to fifteen in each era) → build-pages.ps1 writes /speeches/<slug> (The
 setting, Key passage, What followed + "What it led to" chips, Connected chips) and /speeches/ grouped by era
 (ancient, medieval, earlymodern, revolutions, nineteenth, twentieth = to 1945, postwar). Each speech carries its
 key passage, a sentence or two, with a source line, and full:"url|source" links the complete text where a free,
@@ -618,15 +621,16 @@ reliable copy exists (Wikisource, Avalon Project, Hansard, Fordham Sourcebooks, 
 Foundation). Each URL was checked to hold the quoted speech itself, not just to load: a page of the same collection
 can hold another speech (the Wikisource "To the Army in Italy" is Napoleon's April 1796 proclamation, not the March
 one quoted; the March text comes from "Napoleon's Addresses").
-Full texts (38 speeches, "The full speech" section; open up to 600 words, else folded with words and reading time;
+Full texts (57 speeches, "The full speech" section; open up to 600 words, else folded with words and reading time;
 a lang attribute for the Spanish Bolívar and Turkish Atatürk originals; a credit line): ONLY public-domain or
 freely licensed texts, IMPORTED by scripts/fetch-speech-texts.ps1 from scripts/speech-sources.tsv (slug, page,
 part: `all`, paragraphs `@a..@b`, sections `#a..#b` or `"start phrase".."end phrase"`, translator, licence) into
 data/speech-texts/<slug>.json (build input, not deployed). NEVER type or paraphrase a speech text from memory: fix
 a slip of the source in the script's $FIXES and re-run it (-Only <slug>; -Peek <url> -Find <words> shows a page's
-paragraph numbers). The script prints only counts and the first and last words: check the boundaries there.
+paragraph numbers); a paragraph split by a plate or page break of the scanned book is joined again by $JOINS (Mazzini).
+The script prints only counts and the first and last words: check the boundaries there.
 Excluded on purpose: copyrighted or estate-held texts (Churchill ×2, King, Mandela, de Gaulle, Mao, Nkrumah) and
-speeches with no free full text (Gandhi, Jinnah, Nasser, Lumumba, Bismarck, Genghis Khan, Tariq, Muhammad,
+speeches with no free full text (Gandhi's Quit India, Jinnah, Nasser, Lumumba, Macmillan, Bismarck, Genghis Khan, Tariq, Muhammad,
 Charles I, Cromwell, Garibaldi, Joan of Arc, Cixi, Toussaint, John Ball). The builder reads SPEECHES before
 the entry pages, and every entry named as speaker, in links or in led lists those speeches ("Great speeches",
 above See also). copyright:true (Churchill, King,
@@ -638,6 +642,12 @@ before QuoteKeys (never put a line break inside a string). speeches/ has a build
 and for /games. The speaker's portrait (SpPortrait: the speaker entry's picture) heads each speech page and its
 index card; "Share this quote" (data-share-text) sits under the key passage, and "Read the full speech ↓" shows only
 when the full text is folded (over 600 words).
+The 20 added on 29 Oct 2026 fill the thin eras and voices beyond Europe and the US (Xerxes, Claudius on the Gauls,
+Theodora, Abu Bakr, Gregory VII, Savonarola, Cranmer, Elizabeth I's Golden Speech, Raleigh, Winthrop, Frederick at
+Parchwitz, Pitt, Red Jacket, Mazzini, Kossuth, Garvey, Gandhi's trial statement, Sun Yat-sen, Macmillan, Kennedy in
+Berlin): their settings and aftermaths were checked against the entries and Wikipedia, every date against a source
+(Parchwitz: Carlyle, from Retzow, "night of December 3d, 1757"), and their links use only entries that exist (no
+entry yet for the Investiture Controversy, Young Italy, the UNIA, the Nika riots, Truman, Brandt, Tilak, Lafayette …).
 
 ## Write in ancient scripts (/write, the language profiles' #write)
 scribe.js: a keyboard for the 12 languages with scripts of their own (Latin, Nahuatl, Swahili and Quechua, written in
@@ -757,7 +767,7 @@ BUILT_ARTICLES.
 
 ## Teachers' Corner (/teachers/)
 build-pages.ps1 writes the guide (/teachers/: the worksheets, ideas for the classroom, ages, citing and picture
-licences) and the worksheets: /teachers/path-<slug> and /teachers/century-<slug>, only where the data gives a task (two for a century; Oct 2026: 25 paths, 33 centuries - three paths are about undated people or terms, the early BCE centuries are thin).
+licences) and the worksheets: /teachers/path-<slug> and /teachers/century-<slug>, only where the data gives a task (two for a century; Oct 2026: 35 paths, 33 centuries - three paths are about undated people or terms, the early BCE centuries are thin).
 Every task comes from the data, never from made-up claims: stops or events put in order by their first year
 (WsSpread: no two within 10 years on a path, 3 in a century; century events dated "c." are left out), people matched to
 their lifespans ([EpochBuild.W]::Range: a plain two-part lifespan), the numbered states of a century map (profiles
@@ -785,7 +795,7 @@ localStorage epoch-tests {path: {b best, t questions, n tries, d last day}}; My 
   great power of the century (three of the ten strongest profiles of other ages, by the century's seed, no two sharing
   a core word), in which year. 27 of 51: the early BCE centuries and the 2nd century CE have too little.
 - Path pages (TyWhy, TyFirst, TyLived): which stop is on the path for this reason (a reason that names neither its stop
-  nor another option: ClueOwnFault), who was born / which began / which came first, who lived these dates. 23 of 28.
+  nor another option: ClueOwnFault), who was born / which began / which came first, who lived these dates. 32 of 38.
 Orders come from a seeded shuffle (TyShuffle, which may keep the given order: WsShuffle never does, and two options
 would always swap). Hidden in print; outside the Kids-mode fold.
 
@@ -958,7 +968,7 @@ home-pictures.tsv; `--dump=jobs.json` writes the jobs without drawing: where Pla
 kinds/render-posters.ps1 draws them through the same poster.html in headless Edge over CDP), days `day-<month>-<day>.jpg` (events and the day's picture, a
 calendar plate when there is none), countries `country-<slug>.jpg` and centuries `century-<slug>.jpg` (maps taken
 from their pages), speeches `speech-<slug>.jpg` (key passage + portrait; "In substance" for paraphrases), paths
-`path-<slug>.jpg` (six step pictures + stops), and the sections `page-<name>.jpg` (games, quiz, kids, atlas, profiles,
+`path-<slug>.jpg` (six step pictures, one per Commons file and maps last as in the path strips, + stops), and the sections `page-<name>.jpg` (games, quiz, kids, atlas, profiles,
 explorer — the real power curves —, connections, start, encyclopedia, states, today, countries, centuries, speeches,
 paths) and `default.jpg` (home and every page without a poster). Pictures carry their credit (licence) line.
 Re-draw after changes to the profiles, the day data, a build that changed country/century pages, speeches or paths,
@@ -1001,7 +1011,7 @@ left translateY(0) there, which made the header, search, Back to top and the sha
 it uses "backwards".
 
 ## Reading paths
-`reading-paths.js` (READING_PATHS: themed routes of profiles and encyclopedia entries, each step with a one-line reason) feeds the pages /paths/<slug> and /paths/ (built by build-pages.ps1) and the homepage teaser. Generated from scratchpad design2/paths.json by make-paths.ps1, which validates every profile name and entry slug.
+`reading-paths.js` (READING_PATHS: themed routes of profiles and encyclopedia entries, each step with a one-line reason) feeds the pages /paths/<slug> and /paths/ (built by build-pages.ps1) and the homepage teaser. Generated from scratchpad design2/paths.json by make-paths.ps1, which validates every profile name and entry slug and slugs profile names as toSlug does (accents dropped). Every reason rests on the stop's own page. 29 Oct 2026: ten more (Voyagers of the Pacific, The Story of Writing, Revolutions in Asia, The First Cities, The Indian Ocean World, Al-Andalus, The Bronze Age Collapse, Decolonisation, The Renaissance, The Cold War; scratchpad r7/new-paths.js, merged by r7/merge-paths.js).
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

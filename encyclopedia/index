@@ -61,7 +61,7 @@
 <!-- build:enc-counts -->
 <script>var ENC_COUNTS = {total:32011,types:[["person","People","Person",12931],["conflict","Conflicts & Resolutions","Conflict / resolution",2543],["event","Events","Event",548],["place","Places","Place",8469],["polity","States & dynasties","State",558],["group","Peoples & groups","People / group",2084],["institution","Institutions & offices","Institution",1265],["term","Terms","Term",723],["idea","Religions & ideas","Religion / idea",602],["work","Works & monuments","Work / monument",2233],["factor","Factors","Historical factor",55]]};</script>
 <!-- /build:enc-counts -->
-<script>var ENC_INDEX_SRC = '/encyclopedia/index-data.js?v=808af7674c';</script>
+<script>var ENC_INDEX_SRC = '/encyclopedia/index-data.js?v=03d72fa5fb';</script>
 <script>
 initNav('encyclopedia');
 (function () {

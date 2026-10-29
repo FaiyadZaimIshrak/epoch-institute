@@ -5786,7 +5786,7 @@ var PEOPLE = [
 ["john-eliot-missionary","John Eliot (missionary)","1604–1690",1604,1690,0,7,1,5],
 ["john-endecott","John Endecott","c. 1601–1665",1601,1665,0,7,1,5],
 ["john-ernest-iv-duke-of-saxe-coburg-saalfeld","John Ernest IV, Duke of Saxe-Coburg-Saalfeld","1658–1729",1658,1729,0,3,1,5],
-["john-f-kennedy","John F. Kennedy","1917–1963",1917,1963,0,-1,0,0],
+["john-f-kennedy","John F. Kennedy","1917–1963",1917,1963,0,-1,1,4],
 ["john-fenwick-quaker","John Fenwick (Quaker)","1618–1683",1618,1683,0,7,0,1],
 ["john-forrest","John Forrest","1847–1918",1847,1918,0,8,1,5],
 ["john-frederick-i-elector-of-saxony","John Frederick I, Elector of Saxony","1503–1554",1503,1554,0,-1,1,4],

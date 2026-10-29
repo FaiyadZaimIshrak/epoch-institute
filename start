@@ -89,6 +89,7 @@
         <label class="fp-opt"><input type="radio" name="region" value="southasia"><span><b>South Asia</b></span></label>
         <label class="fp-opt"><input type="radio" name="region" value="europe"><span><b>Europe</b></span></label>
         <label class="fp-opt"><input type="radio" name="region" value="mideast"><span><b>The Middle East</b></span></label>
+        <label class="fp-opt"><input type="radio" name="region" value="oceania"><span><b>Oceania</b></span></label>
         <label class="fp-opt"><input type="radio" name="region" value=""><span><b>Everywhere</b></span></label>
       </div>
     </fieldset>
@@ -116,7 +117,7 @@
   </section>
 </main>
 
-<script src="/reading-paths.js?v=3"></script>
+<script src="/reading-paths.js?v=4"></script>
 <script src="/shared-nav.js?v=43"></script>
 <script>
 initNav('start');
@@ -138,15 +139,21 @@ initNav('start');
   // the path catalogue (titles, taglines and reader types) comes from reading-paths.js, one source for the whole site
   var PATHS = {};
   (window.READING_PATHS || []).forEach(function (p) { PATHS[p.slug] = p; });
-  function pathsFor(t) {
-    var prim = [], sec = [];
-    (window.READING_PATHS || []).forEach(function (p) {
+  // the paths whose main era (eras[0]) is the one chosen, then those that reach into it, then the rest; at each step the
+  // type's own paths before those it shares, then (in the era) the paths that keep to fewer eras, then the catalogue's
+  // order ("All of it": the type's own paths, then the shared ones, in the catalogue's order)
+  function pathsFor(t, era) {
+    var cand = [], any = !era || era === 'all';
+    (window.READING_PATHS || []).forEach(function (p, i) {
       if (!p.types) return;
-      if (p.types[0] === t) prim.push(p.slug); else if (p.types.indexOf(t) > 0) sec.push(p.slug);
+      var k = p.types.indexOf(t); if (k < 0) return;
+      var eras = p.eras || [], e = any ? 0 : eras[0] === era ? 0 : eras.indexOf(era) > 0 ? 1 : 2;
+      cand.push({ s: p.slug, r: e * 2 + (k ? 1 : 0), n: any || e === 2 ? 0 : eras.length, i: i });
     });
-    return prim.concat(sec).slice(0, 3);
+    cand.sort(function (a, b) { return a.r - b.r || a.n - b.n || a.i - b.i; });
+    return cand.slice(0, 3).map(function (c) { return c.s; });
   }
-  var REGION_PATH = { africa: 'empires-of-africa', americas: 'the-americas-before-columbus', eastasia: 'china-dynasty-by-dynasty', southasia: 'india-through-the-ages', europe: 'the-fall-of-rome', mideast: 'religion-and-power' };
+  var REGION_PATH = { africa: 'empires-of-africa', americas: 'the-americas-before-columbus', eastasia: 'china-dynasty-by-dynasty', southasia: 'india-through-the-ages', europe: 'the-fall-of-rome', mideast: 'religion-and-power', oceania: 'pacific-voyagers' };
   var ERA_BONUS = { ancient: ['timekeeper', 'builder'], medieval: ['navigator', 'chronicler'], earlymodern: ['navigator', 'strategist'], modern: ['chronicler', 'thinker'], all: ['timekeeper', 'timekeeper'] };
   var PACE_BONUS = { short: ['chronicler'], long: ['thinker', 'timekeeper'] };
 
@@ -164,7 +171,7 @@ initNav('start');
     var best = pull;   // the first question breaks every tie
     Object.keys(score).forEach(function (k) { if (score[k] > score[best]) best = k; });
     var T = TYPES[best];
-    var paths = pathsFor(best);
+    var paths = pathsFor(best, era);
     if (!paths.length) paths = T.paths.slice();
     if (region && REGION_PATH[region] && paths.indexOf(REGION_PATH[region]) < 0) paths[paths.length - 1] = REGION_PATH[region];
     document.getElementById('fp-type').textContent = T.n;

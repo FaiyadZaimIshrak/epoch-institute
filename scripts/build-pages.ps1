@@ -1811,7 +1811,7 @@ $ib = New-Object Text.StringBuilder
 [void]$ib.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n")
 $spWhole = @($SPS | Where-Object { $SPTXT.ContainsKey([string]$_['slug']) }).Count
 $spFull = @($SPS | Where-Object { $_['full'] -and -not $SPTXT.ContainsKey([string]$_['slug']) }).Count
-[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Great Speeches</h1><p class="ref-lede">' + $SPS.Count + ' speeches that moved history, from Pericles to Reagan. Each gives the setting, the key passage with its source, what followed and what it led to. ' + $spWhole + ' carry their full text, and ' + $spFull + ' more link to it at a free source.</p></header>' + "`n")
+[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Great Speeches</h1><p class="ref-lede">' + $SPS.Count + ' speeches that moved history, from Xerxes to Reagan. Each gives the setting, the key passage with its source, what followed and what it led to. ' + $spWhole + ' carry their full text, and ' + $spFull + ' more link to it at a free source.</p></header>' + "`n")
 foreach ($era in $SPERA.Keys) {
   $grp = @($SPS | Where-Object { [string]$_['era'] -eq $era }); if (-not $grp.Count) { continue }
   [void]$ib.Append('<section class="sp-era"><h2 class="ref-sec-title">' + $SPERA[$era] + '</h2><div class="sp-grid">')
@@ -1823,7 +1823,7 @@ foreach ($era in $SPERA.Keys) {
 }
 [void]$ib.Append("</div>`n</main>`n")
 $title = 'Great Speeches in History: The Words That Moved the World — The Epoch Institute'
-$desc = 'Great speeches that moved history, from Pericles to Reagan: the setting, the key passage, what followed, and the full text of every speech in the public domain.'
+$desc = 'Great speeches that moved history, from Xerxes to Reagan: the setting, the key passage, what followed, and the full text of every speech in the public domain.'
 Emit '/speeches/' (Page @{ title = $title; desc = $desc; path = '/speeches/'; type = 'website'; img = (Poster 'page-speeches'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/speeches/") + '}'); nav = 'speeches'; body = $ib.ToString() })
 Say "great speeches: $($SPS.Count) ($spWhole with their full text, $spFull more linked to it)"
 if ($spMiss.Count) { Say ("great speeches: unknown encyclopedia links " + (($spMiss | Sort-Object -Unique) -join ', ')) }

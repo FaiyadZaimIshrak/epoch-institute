@@ -14680,7 +14680,7 @@ rows:[
 ["john-eliot-missionary","John Eliot (missionary)",0,"1604–1690","",1,""],
 ["john-endecott","John Endecott",0,"c. 1601–1665","",1,"John Endicott"],
 ["john-ernest-iv-duke-of-saxe-coburg-saalfeld","John Ernest IV, Duke of Saxe-Coburg-Saalfeld",0,"1658–1729","",1,""],
-["john-f-kennedy","John F. Kennedy",0,"1917–1963","",0,"JFK | John Fitzgerald Kennedy"],
+["john-f-kennedy","John F. Kennedy",0,"1917–1963","",1,"JFK | John Fitzgerald Kennedy"],
 ["john-fenwick-quaker","John Fenwick (Quaker)",0,"1618–1683","",0,"John Fenwick (colonist)"],
 ["john-forrest","John Forrest",0,"1847–1918","",1,"Sir John Forrest"],
 ["john-frederick-i-elector-of-saxony","John Frederick I, Elector of Saxony",0,"1503–1554","",1,"John Frederick the Magnanimous"],

@@ -119,7 +119,7 @@
   // data/spans/<c>.json (written by build-pages.ps1, which stamps SPANS_V; only the files these pages need), the
   // profiles from EMPIRES (profileSpan), centuries, people by century and years from their addresses. Lanes on one
   // axis of years, coloured by kind (the --cat slots), drawn when the section nears the screen; a list for the same.
-  var SPANS_V = 'fefbfbc25e';
+  var SPANS_V = '2405d6d07c';
   var TLK = [['Profiles', 1, 'Profiles', 'Profile'], ['Encyclopedia entries', 0, 'Entries', 'Encyclopedia entry'], ['States', 2, 'States', 'State'], ['Centuries, years, countries and speeches', 3, 'Other pages', '']];   // [label, colour slot, short, one]
   var PROF = {}; if (typeof EMPIRES !== 'undefined' && typeof profileUrl === 'function') EMPIRES.forEach(function (e) { PROF[profileUrl(e)] = e; });
   function yl(y) { return y < 0 ? -y + ' BCE' : y < 1000 ? y + ' CE' : String(y); }

@@ -222,7 +222,8 @@ R.century.after = function () { fit(document.getElementById('ttl'), 160, 44); };
 R.mosaic = function (j) {
   var pics = j.pics || [], n = pics.length, cols = n >= 6 ? 3 : 2, rows = Math.ceil(Math.min(n, cols * 3) / cols);
   var W = cols === 3 ? 470 : 400, H = 520;
-  var grid = '<div class="mosaic" style="right:58px;top:55px;width:' + W + 'px;height:' + H + 'px;grid-template-columns:repeat(' + cols + ',1fr);grid-template-rows:repeat(' + rows + ',1fr)">' +
+  // minmax(0, 1fr): a plain 1fr row grows to a tall picture's own height and pushed the last row out of the frame
+  var grid = '<div class="mosaic" style="right:58px;top:55px;width:' + W + 'px;height:' + H + 'px;grid-template-columns:repeat(' + cols + ',minmax(0,1fr));grid-template-rows:repeat(' + rows + ',minmax(0,1fr))">' +
     pics.slice(0, cols * rows).map(function (p) { return '<img src="' + esc(p.src || p) + '"' + (p.top != null ? ' style="object-position:center ' + p.top + '%"' : '') + '>'; }).join('') + '</div>';
   return BRAND + grid + '<div class="col" id="col" style="width:' + (1200 - W - 58 - 60 - 40) + 'px"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.title) + '</h1>' +
     (j.sub ? '<p class="sub">' + j.sub + '</p>' : '') + (j.tease ? '<p class="tease" id="tease">' + esc(j.tease) + '</p>' : '') +

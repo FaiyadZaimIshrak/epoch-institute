@@ -44,6 +44,20 @@ $MD = [string][char]0x2014
 $FIXES = @{
   'cicero-against-catiline' = @(, @('do you mean to ease abusing', 'do you mean to cease abusing'))   # an OCR slip in the Wikisource copy
   'urban-ii-at-clermont'    = @(@('beloved by Godas shines', ('beloved by God' + $MD + 'as shines')), @('your works set apart from all nations', ('your works' + $MD + 'set apart from all nations')))   # dashes lost in the Sourcebook copy (Munro 1895 has them)
+  'xerxes-to-the-persian-nobles' = @(, @('as rich as our own nay', 'as rich as our own - nay'))   # the transcription's dash lost
+  'gregory-vii-deposes-henry-iv' = @(@('seized thy throne . for', 'seized thy throne for'), @('deserted-holding', ('deserted' + $MD + 'holding')), @('rend it-I bind', ('rend it' + $MD + 'I bind')))   # Henderson prints dashes
+  'savonarola-defies-the-pope'   = @(, @('send me to help!', 'send me to hell!'))   # "mandami all'inferno"
+  'cranmer-last-speech'          = @(, @('glorified and yon edified', 'glorified and you edified'))
+  'frederick-before-leuthen'     = @(, @('Sehweidnitz', 'Schweidnitz'))
+  'pitt-on-taxing-america'       = @(@('arbitrary reigns. Parliaments', 'arbitrary reigns, Parliaments'), @('they are ail inhabitants', 'they are all inhabitants'))
+  'red-jacket-to-the-missionary' = @(@('Their feats extended', 'Their seats extended'), @('strong and powerfal', 'strong and powerful'))   # a long s read as f
+  'kossuth-in-new-york'          = @(@('fatherland-lost', ('fatherland' + $MD + 'lost')), @('your, glorious peace', 'your glorious peace'))
+  'gandhi-at-his-trial'          = @(@('Chauri Chuara', 'Chauri Chaura'), @('extenating', 'extenuating'), @('I do not except that kind', 'I do not expect that kind'))
+}
+# paragraphs split by a page break or a plate in the scanned book: the paragraph that ends with the given words is
+# joined to the next one (after $FIXES)
+$JOINS = @{
+  'mazzini-to-the-young-men-of-italy' = @('Could Attilio and Emilio')   # the plate of Mazzini stands between the halves
 }
 $rows = @(); $titles = @{}
 $sd = [IO.File]::ReadAllText((Join-Path $Repo 'speeches-data.js'), [Text.Encoding]::UTF8)
@@ -65,6 +79,13 @@ foreach ($slug in $slugs) {
     if (-not $paras.Count) { throw 'no text' }
     # obvious slips of the scanned copies, corrected (old -> new, matched exactly)
     if ($FIXES.ContainsKey($slug)) { for ($x = 0; $x -lt $paras.Count; $x++) { foreach ($fx in $FIXES[$slug]) { $paras[$x] = $paras[$x].Replace($fx[0], $fx[1]) } } }
+    if ($JOINS.ContainsKey($slug)) {
+      foreach ($jn in $JOINS[$slug]) {
+        $x = -1; for ($k = 0; $k -lt $paras.Count - 1; $k++) { if ($paras[$k].TrimEnd().EndsWith($jn)) { $x = $k; break } }
+        if ($x -lt 0) { throw "join: no paragraph ends with '$jn'" }
+        $paras[$x] = $paras[$x].TrimEnd() + ' ' + $paras[$x + 1].TrimStart(); $paras.RemoveAt($x + 1)
+      }
+    }
     # paragraph numbers some translations print at the start of a paragraph ("2 In the first place ...")
     $oq = [string][char]0x201C   # an opening curly quote may stand between the number and the text: 36"I shall ...
     for ($x = 0; $x -lt $paras.Count; $x++) { $paras[$x] = [regex]::Replace($paras[$x], ('^\d{1,2} ?(?=["' + $oq + ']?[A-Z])'), '') }

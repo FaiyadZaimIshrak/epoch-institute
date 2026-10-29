@@ -18961,7 +18961,7 @@ var SEARCH_INDEX = [
 [0,"Frederick Douglass","person","Frederick Augustus Washington Bailey"],
 [0,"Susan B. Anthony","person","Susan Brownell Anthony"],
 [0,"Chief Joseph","person","Hinmatóowyalahtq̓it|Joseph the Younger"],
-[0,"John F. Kennedy","person","JFK|John Fitzgerald Kennedy"],
+[0,"John F. Kennedy","person","JFK|John Fitzgerald Kennedy",1,1],
 [0,"Muhammad","person","The Prophet Muhammad|Muhammad ibn Abdullah"],
 [0,"Laozi","person","Lao Tzu|Lao-tze"],
 [0,"Zoroaster","person","Zarathustra|Zartosht"],

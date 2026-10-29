@@ -146,9 +146,14 @@ SPEECHES.forEach(s => {
     by: s.speaker, what: s.title, pic: pic && { src: pic.src, top: 18 }, url: 'the-epoch-institute.org/speeches/' + s.slug, credit: pic ? pic.credit : '' });
 });
 
+// as the path pages' strips (build-pages.ps1 PathThumbs): one picture per Commons file (two entries can share one),
+// maps, plans and diagrams last (PicIsChart, read from the file's Commons address)
+const ENC_SRC = {}; ENCYCLOPEDIA.forEach(e => { if (e.img && e.credit && e.credit.source) ENC_SRC[e.img] = e.credit.source; });
+const isChart = src => /\.svg$/i.test(src) || /(?<![a-z])(map|maps|mapa|carte|karte|locator|location|diagram|plan|territory|territories|extent)(?![a-z])/i.test(src);
 READING_PATHS.forEach(p => {
-  const pics = [], seen = {};
-  p.steps.forEach(st => { if (st.img && !seen[st.img] && pics.length < 6) { seen[st.img] = 1; pics.push({ src: st.img, top: 25 }); } });
+  const all = [], seen = {};
+  p.steps.forEach(st => { if (!st.img) return; const src = ENC_SRC[st.img] || '', key = src || st.img; if (seen[key]) return; seen[key] = 1; all.push({ src: st.img, top: 25, chart: isChart(src) }); });
+  const pics = all.filter(x => !x.chart).concat(all.filter(x => x.chart)).slice(0, 6).map(x => ({ src: x.src, top: x.top }));
   JOBS.paths.push({ kind: 'mosaic', file: 'path-' + p.slug + '.jpg', kicker: 'Reading path · ' + p.steps.length + ' stops', title: p.title, tease: p.tagline, pics,
     chips: p.steps.slice(0, 5).map(st => st.name.length > 30 ? st.name.slice(0, st.name.lastIndexOf(' ', 28)) + '…' : st.name),
     url: 'the-epoch-institute.org/paths/' + p.slug, credit: 'Pictures: Wikimedia Commons, credited on the page' });
@@ -172,7 +177,7 @@ page('flashcards', { kind: 'mosaic', pics: pick(['confucius', 'akbar', 'code-of-
 page('quiz', { kind: 'mosaic', pics: pick(['genghis-khan', 'machu-picchu', 'mansa-musa', 'hagia-sophia', 'joan-of-arc', 'confucius']), kicker: 'History quiz', title: 'A new puzzle every day',
   tease: 'Four clues, one answer: a profile, a person, an event, a place, an idea or a work.', url: 'the-epoch-institute.org/quiz' });
 page('speeches', { kind: 'mosaic', pics: pick(SPEECHES.map(s => s.speakerSlug)).filter((p, i, a) => a.findIndex(q => q.src === p.src) === i).slice(0, 6), kicker: 'Great speeches', title: 'The words that moved history',
-  tease: SPEECHES.length + ' speeches from Pericles to Reagan: the setting, the key passage and what followed.', url: 'the-epoch-institute.org/speeches/' });
+  tease: SPEECHES.length + ' speeches from Xerxes to Reagan: the setting, the key passage and what followed.', url: 'the-epoch-institute.org/speeches/' });
 page('write', { kind: 'mosaic', pics: pick(['rosetta-stone', 'behistun-inscription', 'edicts-of-ashoka', 'linear-b', 'mesha-stele', 'cyrus-cylinder']), kicker: 'Write in ancient scripts', title: 'Write like a scribe',
   tease: 'Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: twelve languages of the past, every sign with its sound.', chips: ['12 languages', '18 scripts', 'Save it as a picture'], url: 'the-epoch-institute.org/write' });
 page('faiths', { kind: 'mosaic', pics: pick(['borobudur', 'golden-temple', 'dome-of-the-rock', 'hagia-sophia', 'angkor-wat', 'pyramid-of-the-sun']), kicker: 'Faith maps', title: 'How the religions spread',
