@@ -1,8 +1,13 @@
 ErrorDocument 404 /404.html
 
-# Serve extensionless files as HTML
+# Serve extensionless files as HTML. ExpiresByType (below) never reaches them, as it goes by the type before
+# ForceType: without this header browsers guessed a freshness of their own and could show an old page for hours after a
+# deploy. Revalidated like every other page.
 <FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write|faiths|flashcards|race)$">
   ForceType text/html
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=0"
+  </IfModule>
 </FilesMatch>
 DirectoryIndex index
 AddType font/woff2 .woff2

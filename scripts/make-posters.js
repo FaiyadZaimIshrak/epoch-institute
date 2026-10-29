@@ -247,7 +247,8 @@ async function launch() {
         await new Promise(r => setTimeout(r, 250));
         try {
           const b = await pw.chromium.connectOverCDP('http://127.0.0.1:' + port), close = b.close.bind(b);
-          b.close = async () => { try { await (await b.newBrowserCDPSession()).send('Browser.close'); } catch (e) {} try { await close(); } catch (e) {} };
+          // and remove its profile folder (about 0.5 GB each; Edge holds the files for a moment after closing)
+          b.close = async () => { try { await (await b.newBrowserCDPSession()).send('Browser.close'); } catch (e) {} try { await close(); } catch (e) {} await new Promise(r => setTimeout(r, 500)); try { fs.rmSync(ud, { recursive: true, force: true, maxRetries: 20, retryDelay: 250 }); } catch (e) {} };
           return b;
         } catch (e) {}
       }

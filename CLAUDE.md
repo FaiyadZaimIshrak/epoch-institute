@@ -46,7 +46,10 @@ otherwise a letter.
 data/history.json, data/international-days.json — Today in History data (built by scripts/); data/days/<mm-dd>.json —
 one day each for the home strip and the Today in History index (written by build-pages.ps1, see the day pages)
 Every page head: theme-color metas (dark #0b0c10 / light #f4efe4) and the inline theme snippet, which honours the
-OS scheme on a first visit (stored epoch-theme wins) and sets data-kids="1" when epoch-kids is stored. The snippet
+OS scheme on a first visit (stored epoch-theme wins) and sets data-kids="1" when epoch-kids is stored. In Kids mode
+(that, or /kids's own data-kids="1") it also preloads the two Kids fonts (nunito-normal-latin, baloo-2-latin), so they
+come with the stylesheet instead of after it: arriving late, Nunito re-wrapped long facts and moved the page (38 of 192
+Kids page/width pairs, 29 Oct 2026). The snippet
 lives in build-pages.ps1 ($THEME), generator.html and every hand page; the builder hashes pages without it (sitemap
 lastmod), so changing it dates no page ($THEME0, the pre-Kids snippet, only bridges the old hashes). llms.txt at the root describes the site for AI crawlers.
 Analytics (every page head, one line: $GTAG in build-pages.ps1, generator.html, the hand pages): the page view is
@@ -120,13 +123,16 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
 - /flashcards.js — the Flashcards page (see "Flashcards")
 - favicon.svg / favicon.ico / apple-touch-icon.png / logo.png (Organization logo in the home page's JSON-LD)
 
-Caching (.htaccess): scripts a year, CSS a month, JSON a week, HTML always revalidated. shared.css, shared-data.js,
-shared-nav.js and enc-page.js are kept only 10 minutes (then stale-while-revalidate): the 490 profile pages and the
-~38,000 generated pages load them WITHOUT `?v=`, so changing them needs no rebuild (so are scribe.js and faith-map.js,
-which the language and religion profiles load without `?v=`, and test-yourself.js). Every other script tag carries a `?v=N` cache-buster: when you
-change such a file, bump its `?v=` on every page that loads it (hand-written pages also use `?v=` for the four shared
-files; bump those too). data/*.json are sent as text/javascript (data/.htaccess) because the server does not compress
-application/json.
+Caching (.htaccess): scripts a year, CSS a month, JSON a week, HTML always revalidated (the extensionless hand pages
+get their Cache-Control in the FilesMatch block: ExpiresByType never reached them, and until 29 Oct 2026 they went out
+with no cache header, so browsers kept them as long as they guessed). shared.css, shared-data.js,
+shared-nav.js and enc-page.js are kept only 10 minutes (then stale-while-revalidate): EVERY page loads them WITHOUT
+`?v=`, so changing them needs no rebuild and one cached copy serves the whole site (so are scribe.js and faith-map.js,
+which the language and religion profiles load without `?v=`, and test-yourself.js). Until 29 Oct 2026 the hand pages
+loaded them with `?v=`, a second address: a reader going from the home page to an entry downloaded 102-169 KB again
+(+0.25-0.45 s first paint from Stockholm). Never give them a `?v=` again. Every other script tag carries a `?v=N`
+cache-buster: when you change such a file, bump its `?v=` on every page that loads it. data/*.json are sent as
+text/javascript (data/.htaccess) because the server does not compress application/json.
 
 ## Key variables (shared-data.js)
 EPOCH_API_URL — Google Apps Script (articles, opinions, announcements, confirmed_articles)
@@ -136,9 +142,9 @@ FORMSPREE_URL — contact page and newsletter forms (fields name, email, topic, 
 CONTRIB_URL — separate Apps Script for contributors (list); CONTRIB_APPLY_URL — the "Apply to contribute" form
 The Apps Scripts are not in this repo. Checked 26 Oct 2026: `confirmed_articles` works again (it failed with
 "getOrCreateProcessedFolder is not defined" earlier in the month); `articles` no longer returns emails but still lists
-every submission, reviewed or not, with its author, affiliation and profession, to anyone. No page uses it: delete
-that action in the Apps Script (then Deploy → Manage deployments → edit the existing one → New version, so the /exec
-address stays the same).
+every submission, reviewed or not, with its author, affiliation and profession, to anyone (6 rows on 29 Oct 2026, one
+of them approved). No page uses it: docs/APPS-SCRIPT.md is the owner's step-by-step guide to deleting it (edit the
+existing deployment → New version, so the /exec address stays the same).
 
 ## Contact, contributors and open data
 - `/contact`: six topic cards (correction, suggest, write, data, press, other: heading, hint, placeholder and the
@@ -155,7 +161,14 @@ address stays the same).
 ## Deployment
 Push to master → GitHub Actions (.github/workflows/deploy.yml) runs scripts/deploy.sh, which copies the site to
 /home/theeiorh/public_html/ over SSH with rsync (server905.web-hosting.com, port 21098; repository secrets
-SSH_PRIVATE_KEY, SSH_HOST, SSH_PORT, SSH_USER; the host key comes from ssh-keyscan). docs/DEPLOY.md has the setup, dry
+SSH_PRIVATE_KEY, SSH_HOST, SSH_PORT, SSH_USER; the host key comes from ssh-keyscan). The server is in SINGAPORE
+(server905-2.web-hosting.com, 209.74.67.182, LiteSpeed, HTTP/2, brotli, no HTTP/3): from Stockholm a round trip is
+0.2 s, a cold page's first byte 0.75-1.0 s and its first paint 1.9-2.6 s, and about 1 connection in 15 loses its first
+packet (measured 29 Oct 2026, scratchpad pw/live-speed.js, live-warm.js, ab-critical.js: dropping the font preloads or
+lowering the scripts' priority gave no dependable gain). The domain's DNS is at
+Cloudflare (name servers clara/cesar.ns.cloudflare.com) with the records DNS only, so visitors reach the server
+directly; docs/CLOUDFLARE.md is the owner's guide to turning the proxy on, the real cure for that distance (Full (strict) first, `mail` stays DNS only,
+Bot Fight Mode off for the workflows' checks). docs/DEPLOY.md has the setup, dry
 runs (Run workflow with "Dry run", the default; runs from any branch but master are always dry; DRY_RUN=1 by hand),
 deploys by hand (Linux, macOS or WSL: Git Bash has no rsync) and rollbacks (revert and push, or Run workflow with a
 Commit). Until 27 Oct 2026 cPanel deployed from its own clone of the repository by running .cpanel.yml; the clone
@@ -918,10 +931,11 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
 - Entries of profiled states do not link their profile: make-enc-states.ps1 maps only states without one, and
   data/enc-states.json was not re-run after R8, so the Kingdom of Zimbabwe and Purépecha entries still have the link a
   re-run would drop. Map profiled states too and name the link "Full profile".
-- Kids mode: a long fact in the facts box of a religion, language, culture or movement profile can change its line
-  count when Nunito replaces 'Nunito Fallback', and everything below jumps (38 of 192 page and width pairs, 22–44 px;
-  /movement/renaissance-humanism at desktop: CLS 0.138; pw/kids-swap-scan.js). Preloading the Kids fonts from the
-  head snippet when epoch-kids is set would remove most of it.
+- (Done 29 Oct 2026) Kids mode: a long fact in the facts box of a religion, language, culture or movement profile
+  changed its line count when Nunito replaced 'Nunito Fallback', and everything below jumped (38 of 192 page and width
+  pairs; /movement/renaissance-humanism at desktop: CLS 0.138). The head snippet now preloads the Kids fonts: CLS 0 on
+  the 25 pages that jumped, at desktop and phone. Kids pages still fetch the two static normal-font preloads they do not
+  use (73 KB): moving those into the snippet too would spare them.
 
 ## Homepage and site search
 - Home (index): two-column hero (h1, search, the world in 1000 CE map from the builder, replaced after load and an idle
