@@ -200,7 +200,9 @@ it was taken off cPanel's Git list and deleted (201,865 → 106,147 inodes) and 
 it). cPanel's Git list still holds the-epoch-institute, an April 2026 clone of Rimonis/the-epoch-institute (324
 inodes): never press Deploy there, its old .cpanel.yml would copy April's files over the site. deploy.sh reproduces
 .cpanel.yml line by line (each step names its line): its lists at the top are the copy rules. New top-level files must match a root pattern there (*.html, *.css, *.js, *.csv, *.json,
-.htaccess; *.txt, *.xml, *.svg, *.png, *.ico) or they won't be deployed. rsync writes to a temporary file and renames
+.htaccess, send.php and .user.ini by name; *.txt, *.xml, *.svg, *.png, *.ico) or they won't be deployed. send.php is the
+forms' mail handler (PHP on the host: see docs/MAIL.md); .user.ini gives it a 10 MB upload limit and hides PHP's
+warnings, and .htaccess keeps .user.ini from being served. rsync writes to a temporary file and renames
 it, so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
 the broken copy in its cache - Oct 2026). Files are compared by checksum (--checksum --no-times: a fresh checkout gives
 every file a new time), so only changed files are sent and unchanged ones keep their time and Last-Modified; the

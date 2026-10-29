@@ -31,7 +31,8 @@ SSH_PORT=${SSH_PORT//[[:space:]]/}
 SSH_USER=${SSH_USER//[[:space:]]/}
 
 # What .cpanel.yml copied, line by line
-ROOT_FILES=('*.html' '*.css' '*.js' '*.csv' '*.json' .htaccess)  # line 8: each must match (generator.html is left out)
+ROOT_FILES=('*.html' '*.css' '*.js' '*.csv' '*.json' .htaccess  # line 8: each must match (generator.html is left out)
+  send.php .user.ini)                                              # + the forms' mail handler and its PHP settings (Oct 2026)
 ROOT_EXTRA=('*.txt' '*.xml' '*.svg' '*.png' '*.ico')              # line 9: copied when present
 PAGES=(index about research research-series profiles community contributors dataset explorer connections atlas quiz
   contact start games kids search timeline passport write faiths flashcards race)  # line 10
