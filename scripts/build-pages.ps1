@@ -1952,13 +1952,14 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\feed.xml", $fx.ToString())) { $NWRITE+
 Say "research essays: $($ESSAYS.Count) ($((($ESSAYS | ForEach-Object { $_.words }) | Measure-Object -Sum).Sum) words)"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-# Community articles: /articles/<slug> from data/community/articles.json (scripts/fetch-community.ps1: a snapshot of the
-# articles approved in the Apps Script, so a build never needs the network) and the build:articles block of
-# /community, which links its cards to these pages. The texts are the authors' own; only their layout is made here:
-# leading short lines in capitals are the title (with the next as its second half and a third as the subtitle),
-# "PART n …" lines are sections, other short unpunctuated lines subheadings (leading emoji dropped), "Source: …"
-# lines source notes, "— End of Document —" is dropped. scripts/community-overrides.tsv: snapshot title, slug, title,
-# subtitle, author (an empty field keeps what the text gives; no author = "A community contributor").
+# Community articles: /articles/<slug> from data/community/articles.json and the build:articles block of /community,
+# which links its cards to these pages. An article the Institute accepts (sent through the /community form or by
+# email) is added to the file by hand: {title: a key, author, ts: the date in milliseconds, content: [paragraphs]}
+# (until Oct 2026 it was a snapshot of the articles approved in a Google Apps Script). The texts are the authors' own;
+# only their layout is made here: leading short lines in capitals are the title (with the next as its second half and
+# a third as the subtitle), "PART n …" lines are sections, other short unpunctuated lines subheadings (leading emoji
+# dropped), "Source: …" lines source notes, "— End of Document —" is dropped. scripts/community-overrides.tsv: the key
+# (title), slug, title, subtitle, author (an empty field keeps what the text gives; no author = "A community contributor").
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 $CMOV = @{}
 if (Test-Path "$PSScriptRoot\community-overrides.tsv") { foreach ($l in [IO.File]::ReadAllLines("$PSScriptRoot\community-overrides.tsv", $U8)) { if ($l.Trim() -and -not $l.StartsWith('#')) { $c = $l.Split("`t"); $CMOV[$c[0]] = $c } } }
@@ -1971,7 +1972,8 @@ function CmTitleCase([string]$s) {   # "SATI PRATHA" -> "Sati Pratha"; small wor
 function CmHead([string]$s) { return ($s -replace '^[^\p{L}\p{N}"“(]+', '').Trim() }   # a heading without its leading emoji
 $CMART = New-Object Collections.Generic.List[object]
 $cmFile = "$Repo\data\community\articles.json"
-$cmList = if (Test-Path $cmFile) { @([IO.File]::ReadAllText($cmFile, $U8) | ConvertFrom-Json) } else { @() }
+# (ConvertFrom-Json hands an array over whole: unrolled here, or "[]" would be one empty article)
+$cmList = if (Test-Path $cmFile) { @(([IO.File]::ReadAllText($cmFile, $U8) | ConvertFrom-Json) | ForEach-Object { $_ }) } else { @() }
 foreach ($x in $cmList) {
   $ov = $CMOV[[string]$x.title]
   $paras = @($x.content | ForEach-Object { ([string]$_).Trim() } | Where-Object { $_ -and $_ -notmatch '^[—–-]+\s*End of Document\s*[—–-]+$' })
@@ -2014,8 +2016,7 @@ foreach ($x in $cmList) {
   Emit $path (Page @{ title = $title + ' — Community — The Epoch Institute'; desc = $desc; path = $path; type = 'article'; ld = $ld; nav = 'community'; body = $sb.ToString() })
   $CMART.Add([pscustomobject]@{ key = [string]$x.title; path = $path; title = $title; author = $author; iso = $iso; excerpt = $(if ($first.Length -gt 180) { $first.Substring(0, $first.LastIndexOf(' ', 178)) + '…' } else { $first }) })
 }
-# /community: the approved articles that have a page open it (newer approvals still open inside the page); if the
-# Apps Script feed is down, these are the articles it shows
+# /community: its article cards, each opening the article's page
 SetBlock "$Repo\community" 'articles' ('<script>var BUILT_ARTICLES = {' + (($CMART | ForEach-Object { (Js $_.key) + ':{h:' + (Js $_.path) + ',t:' + (Js $_.title) + ',a:' + (Js $_.author) + ',d:' + (Js $_.iso) + ',e:' + (Js $_.excerpt) + '}' }) -join ',') + '};</script>')
 Say "community articles: $($CMART.Count)"
 

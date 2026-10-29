@@ -1,4 +1,5 @@
 ErrorDocument 404 /404.html
+ErrorDocument 410 /404.html
 
 # Serve extensionless files as HTML. ExpiresByType (below) never reaches them, as it goes by the type before
 # ForceType: without this header browsers guessed a freshness of their own and could show an old page for hours after a
@@ -27,6 +28,8 @@ AddType font/woff2 .woff2
   RewriteRule ^(encyclopedia|state|today-in-history|countries|centuries|paths|speeches|years|people|teachers)$ /$1/ [R=301,L]
   RewriteRule ^essays/?$ /research-series [R=301,L]
   RewriteRule ^articles/?$ /community [R=301,L]
+  # a community article withdrawn in Oct 2026: 410 Gone, so search engines drop it (readers get the 404 page)
+  RewriteRule ^articles/sati-pratha$ - [G,L]
   # the profile folders have no index page: their kind's list on /profiles
   RewriteRule ^(religion|language|culture|movement)/?$ /profiles?kind=$1 [R=301,L]
   RewriteRule ^empire/?$ /profiles [R=301,L]

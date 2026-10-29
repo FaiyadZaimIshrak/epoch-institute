@@ -425,10 +425,6 @@ section { scroll-margin-top: 54px; }
     75%  { transform: translateX(4px); }
     100% { opacity: 1; transform: translateX(0); }
   }
-@keyframes pulse-dot {
-    0%, 100% { transform: scale(1);   opacity: 0.75; }
-    50%       { transform: scale(1.5); opacity: 0.4; }
-  }
 #about { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 24px; text-align: center; scroll-margin-top: 60px; }
 .nav-hamburger { display: none; }
 @media (max-width: 480px) {
@@ -1068,7 +1064,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 @keyframes fm-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes fm-show { from { opacity: 0; } to { opacity: 1; } }
 .gm-fc-img img, .gm-ocard img, .gm-pz-strip img, .gm-wt img, .path-thumbs img, .path-step img, .enc-thumb, .enc-seealso img,
-.enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .announcement-card-img, .quiz-img, .tih-strip-pic img,
+.enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .quiz-img, .tih-strip-pic img,
 .kd-potd img, .kd-door-img img, .profile-section-fig img, .contributor-avatar img { object-position: center 25%; }
 @media (pointer: coarse) {
 .ref-crumbs a { display: inline-block; padding: 10px 4px; margin: -10px -4px; }
@@ -1127,7 +1123,7 @@ body::before, body::after { display: none !important; }
 #site-nav, #site-footer, .skip-link, .to-top, .read-progress, .path-journey, .site-search, .enc-preview, #contact-modal, .modal-overlay,
   .empire-toc, .info-share-row, .detail-cite-row, .empire-view-explorer, .tih-share-btn, .tih-share-dropdown, .home-search,
   .ref-prevnext, .ref-updated a, .ref-copy, .enc-controls, .enc-random, .st-filters, .st-random, .st-more, .st-mapwrap,
-  .mini-connections, #connections, .quiz, #newsletter-section, #announcements, .explorer-teaser, .playback-bar,
+  .mini-connections, #connections, .quiz, #newsletter-section, .explorer-teaser, .playback-bar,
   .atl-time, .atl-jumps, .atl-tools, .atl-zoom, .qz-cats, .gl-letters, .ty-sec { display: none !important; }
 .empire-page, .enc-page, .st-page, .day-page, main { padding-top: 0 !important; min-height: 0 !important; }
 a { color: #111 !important; }

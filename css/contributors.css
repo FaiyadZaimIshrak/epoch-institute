@@ -450,10 +450,6 @@ section { scroll-margin-top: 54px; }
     100% { opacity: 1; transform: translateX(0); }
   }
 .modal-form { display: flex; flex-direction: column; gap: 20px; }
-@keyframes pulse-dot {
-    0%, 100% { transform: scale(1);   opacity: 0.75; }
-    50%       { transform: scale(1.5); opacity: 0.4; }
-  }
 #about { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 24px; text-align: center; scroll-margin-top: 60px; }
 .nav-hamburger { display: none; }
 @media (max-width: 480px) {
@@ -974,6 +970,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .nav-group-menu-wide a { white-space: normal; padding: 9px 12px; border-radius: 2px; }
 .nav-group-menu-wide a b { display: block; font-weight: 600; }
 .nav-group-menu-wide a span { display: block; margin-top: 2px; text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 12px; color: var(--muted); }
+.ct-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .ct-status { margin: 0; font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
 .ct-status:empty { display: none; }
 .ct-status b { color: var(--gold-light); }
@@ -1015,7 +1012,6 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .contributor-bio { font-size: 15px; line-height: 1.55; color: var(--text); margin: 0; }
 .contributor-join { border-style: dashed; }
 .contributor-join .contributor-avatar { background: none; border: 1px dashed var(--gold); }
-.contributors-loading { font-family: var(--font-ui); font-size: 13px; color: var(--muted); text-align: center; padding: 24px 0; }
 @media (max-width: 860px) {
 .wf-ways { grid-template-columns: 1fr; }
 .wf-apply { grid-template-columns: 1fr; padding: 20px; }
@@ -1124,7 +1120,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 @keyframes fm-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes fm-show { from { opacity: 0; } to { opacity: 1; } }
 .gm-fc-img img, .gm-ocard img, .gm-pz-strip img, .gm-wt img, .path-thumbs img, .path-step img, .enc-thumb, .enc-seealso img,
-.enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .announcement-card-img, .quiz-img, .tih-strip-pic img,
+.enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .quiz-img, .tih-strip-pic img,
 .kd-potd img, .kd-door-img img, .profile-section-fig img, .contributor-avatar img { object-position: center 25%; }
 :root[data-kids="1"] {
   --bg: #17123a; --surface: #221b4f; --border: #3d3480; --field-border: #7a6fc0; --text: #f6f1ff; --muted: #b9addf;
@@ -1180,7 +1176,7 @@ body::before, body::after { display: none !important; }
 #site-nav, #site-footer, .skip-link, .to-top, .read-progress, .path-journey, .site-search, .enc-preview, #contact-modal, .modal-overlay,
   .empire-toc, .info-share-row, .detail-cite-row, .empire-view-explorer, .tih-share-btn, .tih-share-dropdown, .home-search,
   .ref-prevnext, .ref-updated a, .ref-copy, .enc-controls, .enc-random, .st-filters, .st-random, .st-more, .st-mapwrap,
-  .mini-connections, #connections, .quiz, #newsletter-section, #announcements, .explorer-teaser, .playback-bar,
+  .mini-connections, #connections, .quiz, #newsletter-section, .explorer-teaser, .playback-bar,
   .atl-time, .atl-jumps, .atl-tools, .atl-zoom, .qz-cats, .gl-letters, .ty-sec { display: none !important; }
 .empire-page, .enc-page, .st-page, .day-page, main { padding-top: 0 !important; min-height: 0 !important; }
 a { color: #111 !important; }

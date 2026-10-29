@@ -62,13 +62,19 @@
             <input class="form-input" id="ap-name" type="text" placeholder="Your full name" autocomplete="name">
           </div>
           <div class="form-row">
+            <label class="form-label" for="ap-email">Email <span class="form-required">*</span></label>
+            <input class="form-input" id="ap-email" type="email" placeholder="your@email.com" autocomplete="email">
+          </div>
+        </div>
+        <div class="wf-two">
+          <div class="form-row">
             <label class="form-label" for="ap-role">Role or title <span class="form-required">*</span></label>
             <input class="form-input" id="ap-role" type="text" placeholder="e.g. PhD candidate, teacher">
           </div>
-        </div>
-        <div class="form-row">
-          <label class="form-label" for="ap-region">Country or region <span class="form-required">*</span></label>
-          <input class="form-input" id="ap-region" type="text" placeholder="e.g. United Kingdom, Bangladesh">
+          <div class="form-row">
+            <label class="form-label" for="ap-region">Country or region <span class="form-required">*</span></label>
+            <input class="form-input" id="ap-region" type="text" placeholder="e.g. United Kingdom, Bangladesh">
+          </div>
         </div>
         <div class="form-row">
           <label class="form-label" for="ap-area">Research interests <span class="form-required">*</span></label>
@@ -78,6 +84,7 @@
           <label class="form-label" for="ap-message">Why would you like to contribute?</label>
           <textarea class="form-input form-textarea" id="ap-message" placeholder="A little about yourself and what you would like to write…"></textarea>
         </div>
+        <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button type="submit" class="form-submit" id="ap-submit">Send my application &rarr;</button>
         <p class="ct-status" id="ap-status" role="status" aria-live="polite"></p>
       </form>
@@ -89,8 +96,11 @@
   </div>
 
   <h2 class="wf-title wf-list-title">Contributors</h2>
-  <p class="contributors-loading" id="contributors-loading">Loading contributors…</p>
-  <div class="contributors-grid" id="contributors-grid" style="display:none;"></div>
+  <!-- One card per contributor (the avatar: initials, or an <img> from /images), the newest before "Your name here" -->
+  <div class="contributors-grid" id="contributors-grid">
+    <div class="contributor-card visible"><div class="contributor-avatar">TE</div><p class="contributor-name">The Epoch Institute Research Team</p><p class="contributor-role">Core Research</p><p class="contributor-role contributor-region">🌍 International</p><p class="contributor-bio">Empire trajectory data · Scholarly profiles · Dataset compilation</p></div>
+    <a class="contributor-card visible contributor-join" href="#apply"><div class="contributor-avatar">+</div><p class="contributor-name">Your name here</p><p class="contributor-bio">Apply to contribute</p></a>
+  </div>
 </section>
 
 </main>
@@ -100,50 +110,22 @@
 <script>
 initNav('contributors');
 
-// ── Contributors (from the contributors' sheet; cached for a day) ──────────────
+// ── Apply to contribute: Formspree (FORMSPREE_URL, as on /contact), which emails the application to the Institute ──
 (function () {
-  var loading = document.getElementById('contributors-loading'), grid = document.getElementById('contributors-grid');
-  var CACHE_KEY = 'epoch_contributors', CACHE_TTL = 24 * 60 * 60 * 1000;
-  var FALLBACK = [{ name: 'The Epoch Institute Research Team', role: 'Core research', region: 'International', area: 'Profiles · Encyclopedia · States register' }];
-  function initials(name) { return (name || '?').split(' ').slice(0, 2).map(function (w) { return w[0]; }).join(''); }
-  function render(list) {
-    loading.style.display = 'none';
-    if (!list || !list.length) list = FALLBACK;
-    grid.style.display = 'grid';
-    grid.innerHTML = list.map(function (c) {
-      var avatar = c.photoUrl ? '<img src="' + escHtml(c.photoUrl) + '" alt="' + escHtml(c.name || '') + '" onerror="this.style.display=\'none\'">' : escHtml(initials(c.name));
-      return '<div class="contributor-card visible"><div class="contributor-avatar">' + avatar + '</div>' +
-        '<p class="contributor-name">' + escHtml(c.name || 'Anonymous') + '</p>' +
-        '<p class="contributor-role">' + escHtml(c.role || c.profession || 'Contributor') + '</p>' +
-        ((c.flag || c.region) ? '<p class="contributor-role contributor-region">' + escHtml((c.flag ? c.flag + ' ' : '') + (c.region || '')) + '</p>' : '') +
-        (c.area ? '<p class="contributor-bio">' + escHtml(c.area) + '</p>' : '') + '</div>';
-    }).join('') +
-      '<a class="contributor-card visible contributor-join" href="#apply"><div class="contributor-avatar">+</div><p class="contributor-name">Your name here</p><p class="contributor-bio">Apply to contribute</p></a>';
-  }
-  if (typeof CONTRIB_URL === 'undefined' || !CONTRIB_URL) return render([]);
-  try { var c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); if (c && Date.now() - c.ts < CACHE_TTL) return render(c.data); } catch (e) {}
-  fetch(CONTRIB_URL + '?action=contributors').then(function (r) { return r.json(); }).then(function (list) {
-    var data = Array.isArray(list) ? list : [];
-    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch (e) {}
-    render(data);
-  }).catch(function () { render([]); });
-})();
-
-// ── Apply to contribute ────────────────────────────────────────────────────────
-(function () {
-  var REQ = ['ap-name', 'ap-role', 'ap-region', 'ap-area'];
+  var REQ = ['ap-name', 'ap-email', 'ap-role', 'ap-region', 'ap-area'];
   REQ.forEach(function (id) { document.getElementById(id).addEventListener('input', function () { var el = document.getElementById(id); el.classList.remove('form-input-error'); el.removeAttribute('aria-invalid'); }); });
   document.getElementById('apply-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    var v = {}; REQ.concat('ap-message').forEach(function (id) { v[id] = document.getElementById(id).value.trim(); });
+    var form = e.target, v = {}; REQ.concat('ap-message').forEach(function (id) { v[id] = document.getElementById(id).value.trim(); });
     var first = null;
-    REQ.forEach(function (id) { var bad = !v[id], el = document.getElementById(id); el.classList.toggle('form-input-error', bad); bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid'); if (bad && !first) first = el; });
+    REQ.forEach(function (id) { var bad = !v[id] || (id === 'ap-email' && !isValidEmail(v[id])), el = document.getElementById(id); el.classList.toggle('form-input-error', bad); bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid'); if (bad && !first) first = el; });
     var status = document.getElementById('ap-status');
     if (first) { status.textContent = 'Please fill in the marked fields.'; first.focus(); return; }
     var btn = document.getElementById('ap-submit'); btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = '';
-    fetch(CONTRIB_APPLY_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ name: v['ap-name'], role: v['ap-role'], region: v['ap-region'], area: v['ap-area'], message: v['ap-message'] }) })
-      .then(function () { e.target.hidden = true; var d = document.getElementById('ap-success'); d.hidden = false; d.focus(); })
+    fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name: v['ap-name'], email: v['ap-email'], role: v['ap-role'], region: v['ap-region'], interests: v['ap-area'], message: v['ap-message'],
+        _subject: 'Application to contribute — The Epoch Institute', _gotcha: form.querySelector('.ct-hp').value }) })
+      .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); form.hidden = true; var d = document.getElementById('ap-success'); d.hidden = false; d.focus(); })
       .catch(function () { btn.disabled = false; btn.innerHTML = 'Send my application &rarr;'; status.textContent = 'Your application could not be sent. Please try again in a moment.'; });
   });
 })();

@@ -88,8 +88,7 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   700-900), from t/kidsmetrics.html and t/kidscal.html at Kids sizes (89-94% of text and interface lines, 99.6-99.8%
   of titles): Kids pages with the fonts 1.5 s late went from CLS 0.08-0.10 to about 0 (KIDS=1 FONT_DELAY=1500
   pw/cls-trace2.js). Re-measure if a font file changes.
-- /shared-nav.js — initNav(activePage), escHtml(), jsonp() (gives up after 10 s: an Apps Script error is an HTML
-  page with status 200 that never calls back), buildPagination(), isValidEmail(), sharing (sharePoster, the share
+- /shared-nav.js — initNav(activePage), escHtml(), buildPagination(), isValidEmail(), sharing (sharePoster, the share
   panel, scoreCard: see "Sharing"), in-app browser detection (EPOCH_INAPP, see "In-app browsers"). The old contact modal
   is gone; openContactModal() now just opens /contact. Also: the "My shelf" nav bookmark (saved pages + recently
   viewed, localStorage epoch-shelf/epoch-recent, reading pages only), the reading-progress line on /empire and
@@ -110,7 +109,7 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   EMPIRES when present, else from /search-profiles.js (SEARCH_PROFILES, written by build-pages.ps1) — the generated
   pages do NOT load shared-data.js. The theme toggle also rewrites the theme-color metas. The page-transition click handler reads a link's address as
   text: an SVG `<a>`'s .href is an SVGAnimatedString (it once sent the country bubbles to /countries/[object …]).
-- /shared-data.js — core data: API URLs, EMPIRES (490: 94 empires, 332 state profiles with an `id`, 18 religions, 16 languages, 15 cultures and 15 movements with a `kind`), EMPIRE_INFO, REGIONS, ERAS, EVENTS, TRANSLATIONS, toSlug().
+- /shared-data.js — core data: FORMSPREE_URL, EMPIRES (490: 94 empires, 332 state profiles with an `id`, 18 religions, 16 languages, 15 cultures and 15 movements with a `kind`), EMPIRE_INFO, REGIONS, ERAS, EVENTS, TRANSLATIONS, toSlug().
   Loaded by the profiles and the hand pages that use it (index, profiles, explorer, quiz, faiths, passport, search,
   community, contact, contributors, 404). Since Oct 2026 NOT by about, atlas, connections, dataset, research,
   research-series, timeline, write and the encyclopedia/, state/ and today-in-history/ indexes (they used nothing in
@@ -147,23 +146,30 @@ cache-buster: when you change such a file, bump its `?v=` on every page that loa
 text/javascript (data/.htaccess) because the server does not compress application/json.
 
 ## Key variables (shared-data.js)
-EPOCH_API_URL — Google Apps Script (articles, opinions, announcements, confirmed_articles)
-FORMSPREE_URL — contact page and newsletter forms (fields name, email, topic, message, page, _subject, _gotcha
-  honeypot). Until Oct 2026 the unpublished Research Series essays had "Notify me" forms: those sign-ups are in
-  Formspree with the subject "Notify me: Series 0N — …"
-CONTRIB_URL — separate Apps Script for contributors (list); CONTRIB_APPLY_URL — the "Apply to contribute" form
-The Apps Scripts are not in this repo. Checked 26 Oct 2026: `confirmed_articles` works again (it failed with
-"getOrCreateProcessedFolder is not defined" earlier in the month); `articles` no longer returns emails but still lists
-every submission, reviewed or not, with its author, affiliation and profession, to anyone (6 rows on 29 Oct 2026, one
-of them approved). No page uses it: docs/APPS-SCRIPT.md is the owner's step-by-step guide to deleting it (edit the
-existing deployment → New version, so the /exec address stays the same).
+FORMSPREE_URL — the Institute's one Formspree form, which emails every message to the owner: /contact (fields name,
+  email, topic, message, page), the newsletter forms, and on /community the article submissions (name, email,
+  profession, affiliation, title, article: the text pasted, as the free plan takes no files; a Word file goes by email
+  to research@) and the opinions (name, opinion), and /contributors' applications (name, email, role, region,
+  interests, message); each with its own _subject and the _gotcha honeypot. The free plan takes 50 submissions a month
+  across all of them. shared-nav.js keeps the same address as NEWSLETTER_URL for the pages without shared-data.js.
+  Until Oct 2026 the unpublished Research Series essays had "Notify me" forms: those sign-ups are in Formspree with
+  the subject "Notify me: Series 0N — …"
+No Google service but Analytics: until 29 Oct 2026 two Google Apps Scripts (not in this repo, run from the owner's
+Google account over Drive and Sheets) served the home page's announcements (a Drive folder), /community's articles and
+opinions and its two forms, and /contributors' list and form. The site no longer calls them (the user's choice: no
+dependency on Gmail or Drive; Analytics kept): the one opinion and the contributors' row were copied into the pages,
+the announcement poster and the only community article (Sati Pratha: /articles/sati-pratha answers 410 Gone, root
+.htaccess) were removed. docs/APPS-SCRIPT.md is the owner's guide to saving what only Drive holds (five article
+submissions never published, the opinions and applications sheets) and archiving both web apps (one still lists
+every submission publicly until then). Do not bring Drive, Docs or Apps Script back into the site.
 
 ## Contact, contributors and open data
 - `/contact`: six topic cards (correction, suggest, write, data, press, other: heading, hint, placeholder and the
   Formspree _subject follow the topic), `?topic=` and `?page=` preselect them; thank-you panel with next steps and a
   newsletter field; side column with the three addresses (copy buttons; mailto links fail for readers without a mail
   program), social links and short answers. ContactPage + contactPoint JSON-LD.
-- `/contributors` is "Write for the Institute": three ways to take part, the application form inline, the list.
+- `/contributors` is "Write for the Institute": three ways to take part, the application form inline (Formspree, see
+  "Key variables"), the list of contributors (static cards in the page: add one before "Your name here").
 - `/dataset` is "Open Data". build-pages.ps1 writes the downloads as root files: epoch-institute-states.csv,
   epoch-institute-state-relations.csv, epoch-institute-states.json (the register; empire capitals from
   empire-facts.js), epoch-institute-power-curves.csv/.json (one row per point), and the page's `build:open-data`
@@ -836,20 +842,22 @@ unchanged; 03–05 were written then, their "What the Data Shows" figures comput
 EMPIRES), the register (data/polities.json) and epoch-stats.js. The Listen button reads article.essay-view (h1,
 .essay-sub, .essay-body h2/p/li): keep Further Reading and the contents list outside .essay-body.
 
-## Community articles (/articles/<slug>)
-scripts/fetch-community.ps1 saves the Apps Script's `confirmed_articles` (title, author, ts, content = the paragraphs)
-to data/community/articles.json, a committed snapshot (build input, not deployed; -Check only reports): run it after
-approving an article, then build, so a build never needs the network. build-pages.ps1 writes /articles/<slug>
+## Community articles (/articles/<slug>) and opinions
+data/community/articles.json (build input, not deployed; `[]` since the Sati Pratha article was withdrawn on 29 Oct
+2026) holds the community articles the Institute accepts, added by hand: {title (the key), author, ts (milliseconds),
+content: [paragraphs]} (until Oct 2026 a snapshot of a Google Apps Script's approved articles, written by the deleted
+scripts/fetch-community.ps1). build-pages.ps1 writes /articles/<slug>
 (kicker with date and reading time, title, subtitle, byline, Share, the readers' note .cm-note: the author's own views,
 not checked by the Institute, with Suggest a correction and Write for the Institute; body; Article JSON-LD with a Person
 author) and the `build:articles` block of /community (BUILT_ARTICLES {snapshot title: {h page, t title, a author,
 d date, e excerpt}}). Only the layout is made, never the words: leading short lines in capitals are the title (the
 next line its second half, a third the subtitle), "PART n —" lines h2, other short unpunctuated lines h3 (leading emoji
 dropped), "Source: …" lines source notes (.cm-src, which Listen skips), "— End of Document —" dropped.
-scripts/community-overrides.tsv: snapshot title, slug, title, subtitle, author (an empty field keeps what the text
-gives; no author = "A community contributor"). /community: a card whose title is in BUILT_ARTICLES links its page,
-newer approvals still open inside the page, and when the feed fails (jsonp gives up after 10 s) the cards come from
-BUILT_ARTICLES.
+scripts/community-overrides.tsv: title key, slug, title, subtitle, author (an empty field keeps what the text
+gives; no author = "A community contributor"). /community draws its article cards (BUILT_ARTICLES, each opening its
+page; the "Be the first to publish here" invite when there are none) and the readers' opinions (the page's own
+OPINIONS list {name, text, ts}: one sent with the form is added there once read) in an inline script placed before
+shared-data.js and shared-nav.js, so they are drawn before the first paint and nothing moves (no "Loading…" lines).
 
 ## Teachers' Corner (/teachers/)
 build-pages.ps1 writes the guide (/teachers/: the worksheets, ideas for the classroom, ages, citing and picture
@@ -970,7 +978,7 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
   with live counts (builder), On this day (one row: the anniversary event's picture with its year and title as a
   caption, then the international day and/or events in year order, never the pictured one again; links today's day
   page), featured profiles + era/region chips, centuries
-  strip and country chips (builder), reading paths, daily quiz + entry of the day, announcements, newsletter.
+  strip and country chips (builder), reading paths, daily quiz + entry of the day, newsletter (the announcements, a Google Drive folder, were removed on 29 Oct 2026).
   The mission paragraph is on About.
 - Daily quiz (quiz.js, on index and /quiz): rotates profile → person → event → place → profile → idea → work. Profiles of every kind (title from PROFILE_KINDS), entry puzzles from the encyclopedia with the name masked in the clues. `?quizday=N` previews another day. /quiz adds practice rounds by category with a score and best run.
   An entry puzzle's first clue names the kind (the subtype: "A river", "A siege"…), the dates and the entry's region

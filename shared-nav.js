@@ -189,19 +189,6 @@ function shareSheet(o) {
   setTimeout(function () { var x = box.querySelector('.shr-x'); if (x) x.focus({ preventScroll: true }); }, 30);
 }
 
-function jsonp(url, cb) {
-  // an Apps Script error comes back as an HTML page (status 200): it never calls back, so give up after 10 s
-  const fn = '_ep_' + Date.now() + '_' + Math.random().toString(36).slice(2);
-  let done = false;
-  const finish = data => { if (done) return; done = true; clearTimeout(timer); window[fn] = function () {}; if (s.parentNode) s.parentNode.removeChild(s); cb(data); };
-  window[fn] = finish;
-  const s = document.createElement('script');
-  s.src = url + '&callback=' + fn;
-  s.onerror = function() { finish([]); };
-  const timer = setTimeout(function () { finish([]); }, 10000);
-  document.head.appendChild(s);
-}
-
 function buildPagination(totalPages, currentPage, fnName) {
   if (totalPages <= 1) return '';
   let html = '';

@@ -1,4 +1,3 @@
 # Community articles (data/community/articles.json): what build-pages.ps1 cannot read from the text itself.
-# Columns: the title in the snapshot <TAB> slug <TAB> title <TAB> subtitle <TAB> author; an empty field keeps what the
-# text gives (title and subtitle from its leading lines, the author from the submission, else "A community contributor").
-Copy of sati_pratha	sati-pratha
+# Columns: the article's title key in that file <TAB> slug <TAB> title <TAB> subtitle <TAB> author; an empty field keeps
+# what the text gives (title and subtitle from its leading lines, the author from the file, else "A community contributor").

@@ -86,11 +86,7 @@
   font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.02em;
   color: var(--muted); opacity: 0.6; margin-top: auto;
 }
-.blog-loading, .opinions-loading {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.02em;
-  color: var(--muted); opacity: 0.5; padding: 24px 0; text-align: center;
-}
-.blog-empty, .opinions-empty {
+.blog-empty {
   font-family: var(--font-text); font-size: 17px;
   color: var(--muted); opacity: 0.6; text-align: center; padding: 16px 0;
 }
@@ -144,28 +140,12 @@
 .pagination-btn:hover { border-color: var(--gold); color: var(--gold); }
 .pagination-btn.active { border-color: var(--gold); color: var(--gold); }
 
-/* ── Drop zone ── */
-.drop-zone {
-  position: relative;
-  border: 1px dashed var(--border); border-radius: 6px;
-  padding: 32px 24px; text-align: center; cursor: pointer;
-  transition: border-color 0.2s, background 0.2s; margin-bottom: 16px;
+/* ── Submit an article: pasted as text, or the Word file by email ── */
+.sf-text { min-height: 220px; }
+.sf-alt {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 6px 0 0;
+  font-family: var(--font-text); font-size: 15px; color: var(--muted);
 }
-.drop-zone.dragover { border-color: var(--gold); background: rgba(var(--gold-rgb),0.06); }
-.drop-zone-label {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--muted); font-weight: 600;}
-.drop-zone-sub {
-  font-family: var(--font-text); font-size: 15px;
-  color: var(--muted); opacity: 0.6; margin-top: 6px;
-}
-.drop-zone-file {
-  font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.02em;
-  color: var(--gold); margin-top: 8px;
-}
-
-/* ── Article detail ── */
-#article-detail .profile-detail-inner { padding-top: 40px; }
 
 /* ── Share modal ── */
 .modal-overlay {
@@ -243,7 +223,6 @@
       <p class="community-section-sub">Essays and research submitted by our community of historians, researchers, and curious minds.</p>
     </div>
     <div class="blog-grid" id="blog-grid"></div>
-    <p class="blog-loading" id="blog-loading">Loading articles…</p>
     <div class="comm-invite" id="blog-empty" style="display:none;">
       <p class="comm-invite-title">Be the first to publish here</p>
       <p class="comm-invite-text">Community articles are essays by readers on history, society and civilisation. Send yours in: every piece is read by the Institute before it appears.</p>
@@ -256,11 +235,9 @@
   <div class="community-section" id="community-opinions-display" style="margin-top:40px;">
     <div class="community-section-hd">
       <h3 class="community-section-title">Community Opinions</h3>
-      <p class="community-section-sub">Voices from our readers — unfiltered perspectives on history, society, and civilisation.</p>
+      <p class="community-section-sub">Voices from our readers: their perspectives on history, society and civilisation.</p>
     </div>
     <div id="opinions-list"></div>
-    <p class="opinions-loading" id="opinions-loading">Loading opinions…</p>
-    <p class="opinions-empty" id="opinions-empty" style="display:none;">No opinions yet. Be the first to share a perspective using the form below.</p>
     <button class="blog-see-more" id="opinions-view-more" style="display:none;">View More Opinions →</button>
   </div>
 
@@ -277,7 +254,7 @@
   <div class="community-section" id="community-opinion" style="padding-bottom:60px;">
     <div class="community-section-hd" style="margin-top:40px;">
       <h3 class="community-section-title">Your Opinion</h3>
-      <p class="community-section-sub">Share a quick thought — no article needed.</p>
+      <p class="community-section-sub">Share a quick thought — no article needed. It appears on this page once the Institute has read it.</p>
     </div>
     <form class="modal-form" id="opinion-form" novalidate style="max-width:600px;">
       <div class="form-row">
@@ -288,8 +265,9 @@
         <label class="form-label" for="op-text">Your Opinion <span class="form-required">*</span></label>
         <textarea class="form-input form-textarea" id="op-text" placeholder="Write your thoughts here…" required style="min-height:120px;"></textarea>
       </div>
+      <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="form-submit">Submit Opinion</button>
-      <p class="form-success" id="op-success" style="display:none;">Thank you — your opinion has been received.</p>
+      <p class="form-success" id="op-success" style="display:none;">Thank you — your opinion has been received. It will appear here once the Institute has read it.</p>
       <p id="op-error" aria-live="polite" style="display:none;font-family:var(--font-text);font-size:15px;color:var(--error);margin-top:4px;">Couldn't send — please check your connection and try again.</p>
     </form>
   </div>
@@ -302,7 +280,7 @@
   <div class="explorer-header">
     <p class="explorer-label">COMMUNITY</p>
     <h2 class="explorer-title">Community Opinions</h2>
-    <p class="explorer-description">Unfiltered perspectives from our readers on history, society, and civilisation.</p>
+    <p class="explorer-description">Perspectives from our readers on history, society and civilisation.</p>
   </div>
   <div class="community-page-inner">
     <div id="opinions-page-list"></div>
@@ -325,28 +303,13 @@
   </div>
 </div>
 
-<!-- ── Article detail ── -->
-<div id="article-detail" class="comm-section">
-  <button class="explorer-back-btn" id="article-detail-back" style="margin:80px 0 0 40px;">← Articles</button>
-  <div class="profile-detail-inner">
-    <div class="profile-detail-header" style="border-bottom:1px solid var(--border);margin-bottom:36px;padding-bottom:28px;">
-      <div>
-        <p class="profile-detail-region" id="article-detail-meta"></p>
-        <h2 class="profile-detail-name" id="article-detail-title"></h2>
-      </div>
-    </div>
-    <div id="article-detail-body" class="profile-section-body"></div>
-    <button class="profile-back-gallery-btn bottom" id="article-detail-back-bottom">← Articles</button>
-  </div>
-</div>
-
 </main>
 
 <!-- ── Share / Submit Article Modal ── -->
-<div id="share-modal" class="modal-overlay" role="dialog" aria-modal="true">
+<div id="share-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
   <div class="modal-box">
     <button class="modal-close" id="share-modal-close" aria-label="Close">✕</button>
-    <h3 class="modal-title">Submit Your Article</h3>
+    <h3 class="modal-title" id="share-modal-title">Submit Your Article</h3>
     <form class="modal-form" id="share-form" novalidate>
       <div class="form-row">
         <label class="form-label" for="sf-name">Name <span class="form-required">*</span></label>
@@ -376,30 +339,73 @@
         <input class="form-input" id="sf-email" type="email" placeholder="your@email.com" required>
       </div>
       <div class="form-row">
-        <label class="form-label">Article (DOCX) <span class="form-required">*</span></label>
-        <div class="drop-zone" id="drop-zone">
-          <p class="drop-zone-label">Drag &amp; drop your .docx file here</p>
-          <p class="drop-zone-sub">or click to browse</p>
-          <p class="drop-zone-file" id="drop-zone-filename" style="display:none;"></p>
-          <input type="file" id="sf-file" accept=".docx" style="position:absolute;inset:0;opacity:0;cursor:pointer;">
-        </div>
-        <p id="drop-zone-error" aria-live="polite" style="display:none;font-family:var(--font-text);font-size:15px;color:var(--error);margin-top:4px;"></p>
+        <label class="form-label" for="sf-title">Title <span class="form-required">*</span></label>
+        <input class="form-input" id="sf-title" type="text" placeholder="The title of your article" required>
       </div>
+      <div class="form-row">
+        <label class="form-label" for="sf-text">Your article <span class="form-required">*</span></label>
+        <textarea class="form-input form-textarea sf-text" id="sf-text" placeholder="Paste the whole text of your article here…" required></textarea>
+        <p class="ct-err" id="sf-text-err" hidden>Please paste the whole article (at least 100 words), or email the Word file.</p>
+        <p class="sf-alt">Prefer to send a Word file? Email it to <span class="ct-mail">research@the-epoch-institute.org</span> <button type="button" class="ct-copy" data-copy="research@the-epoch-institute.org">Copy</button></p>
+      </div>
+      <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="form-submit">Submit →</button>
-      <p class="form-success" id="sf-success" style="display:none;">Thank you! We'll review your submission and be in touch.</p>
+      <p class="form-success" id="sf-success" style="display:none;">Thank you! We'll read your article and reply by email.</p>
       <p id="sf-error" aria-live="polite" style="display:none;font-family:var(--font-text);font-size:15px;color:var(--error);margin-top:4px;">Couldn't send — please check your connection and try again.</p>
     </form>
   </div>
 </div>
 
-<script src="/shared-data.js"></script>
-<script src="/shared-nav.js"></script>
 <!-- build:articles -->
-<script>var BUILT_ARTICLES = {"Copy of sati_pratha":{h:"/articles/sati-pratha",t:"Sati Pratha: The Practice of Widow Immolation",a:"A community contributor",d:"2026-10-24",e:"Sati Pratha was a Hindu custom in which the widow of a dead man immolated herself willingly by sitting on her husband's funeral pyre. The practice of Sati in ancient times was…"}};</script>
+<script>var BUILT_ARTICLES = {};</script>
 <!-- /build:articles -->
 <script>
+// The readers' opinions on this page. One sent with the form below (Formspree, by email) is added here once the
+// Institute has read it: { name, text, ts } (ts: when it was sent, in milliseconds).
+var OPINIONS = [
+  { name: "Faiyad Zaim Ishrak", text: "Arguably one of the richest datasets on the internet regarding history and civilizations. I didn't even know Africa had such a rich heritage before going through The Epoch Institute's database.", ts: 1778234740978 }
+];
+
+// ── Articles and opinions: drawn here, before the shared scripts load, so nothing moves when those arrive ───────────
+var OPINIONS_PER_PAGE = 20, OPINIONS_PREVIEW = 3, ARTICLES_PER_PAGE = 20, ARTICLES_PREVIEW = 6;
+var _allOpinions = OPINIONS.slice().sort(function (a, b) { return b.ts - a.ts; });
+// the articles with a page of their own (BUILT_ARTICLES, written by the build from data/community/articles.json), newest first
+var _confirmedArticles = Object.keys(BUILT_ARTICLES).map(function (k) { return BUILT_ARTICLES[k]; })
+  .sort(function (a, b) { return a.d < b.d ? 1 : a.d > b.d ? -1 : 0; });
+function cmEsc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function cmMonth(t) { return t ? new Date(t).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }) : ''; }
+
+function renderOpinionItem(op, idx) {
+  var date = cmMonth(op.ts);
+  return '<div class="opinion-item" style="animation-delay:' + (idx * 0.06) + 's">' +
+    '<span class="opinion-item-name">' + cmEsc(op.name) + '</span>' +
+    '<p class="opinion-item-text">' + cmEsc(op.text) + '</p>' +
+    (date ? '<span class="opinion-item-date">' + date + '</span>' : '') +
+  '</div>';
+}
+
+function renderArticleCard(b, delay) {
+  return '<a class="blog-card" style="animation-delay:' + (delay * 0.07) + 's" href="' + cmEsc(b.h) + '">' +
+    '<h4 class="blog-card-title">' + cmEsc(b.t) + '</h4>' +
+    (b.e ? '<p class="blog-card-excerpt">' + cmEsc(b.e) + '</p>' : '') +
+    '<p class="blog-card-meta">' + cmMonth(Date.parse(b.d)) + ' · ' + cmEsc(b.a) + '</p></a>';
+}
+
+(function () {
+  if (_confirmedArticles.length) {
+    document.getElementById('blog-grid').innerHTML = _confirmedArticles.slice(0, ARTICLES_PREVIEW).map(renderArticleCard).join('');
+    if (_confirmedArticles.length > ARTICLES_PREVIEW) document.getElementById('blog-see-more').style.display = 'block';
+  } else document.getElementById('blog-empty').style.display = '';
+  if (!_allOpinions.length) { document.getElementById('community-opinions-display').hidden = true; return; }   // the form below invites the first one
+  document.getElementById('opinions-list').innerHTML = _allOpinions.slice(0, OPINIONS_PREVIEW).map(renderOpinionItem).join('');
+  if (_allOpinions.length > OPINIONS_PREVIEW) document.getElementById('opinions-view-more').style.display = 'block';
+})();
+</script>
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
 // ── Section management ────────────────────────────────────────────────────────
-var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page', 'article-detail'];
+var ALL_COMM_SECTIONS = ['community-page', 'opinions-page', 'articles-page'];
 
 function showCommSection(id) {
   ALL_COMM_SECTIONS.forEach(function(s) {
@@ -417,49 +423,9 @@ function showCommSection(id) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── Data state ────────────────────────────────────────────────────────────────
-var _allOpinions       = [];
-var _confirmedArticles = [];
-var _opinionsPage      = 1;
-var _articlesPage      = 1;
-var _dataLoaded        = false;
-var OPINIONS_PER_PAGE  = 20;
-var OPINIONS_PREVIEW   = 3;
-var ARTICLES_PER_PAGE  = 20;
-var ARTICLES_PREVIEW   = 6;
-
-// ── Opinions ──────────────────────────────────────────────────────────────────
-function loadOpinions() {
-  if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
-    document.getElementById('community-opinions-display').hidden = true;
-    return;
-  }
-  jsonp(EPOCH_API_URL + '?action=opinions', function(data) {
-    _allOpinions = Array.isArray(data) ? data : [];
-    renderOpinionsPreview();
-  });
-}
-
-function renderOpinionItem(op, idx) {
-  var date = op.ts ? new Date(op.ts).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }) : '';
-  return '<div class="opinion-item" style="animation-delay:' + (idx * 0.06) + 's">' +
-    '<span class="opinion-item-name">' + escHtml(op.name) + '</span>' +
-    '<p class="opinion-item-text">' + escHtml(op.text) + '</p>' +
-    (date ? '<span class="opinion-item-date">' + date + '</span>' : '') +
-  '</div>';
-}
-
-function renderOpinionsPreview() {
-  var container = document.getElementById('opinions-list');
-  var loading   = document.getElementById('opinions-loading');
-  var empty     = document.getElementById('opinions-empty');
-  var viewMore  = document.getElementById('opinions-view-more');
-  loading.style.display = 'none';
-  if (!_allOpinions.length) { document.getElementById('community-opinions-display').hidden = true; return; }   // the form below invites the first one
-  empty.style.display = 'none';
-  container.innerHTML = _allOpinions.slice(0, OPINIONS_PREVIEW).map(renderOpinionItem).join('');
-  viewMore.style.display = _allOpinions.length > OPINIONS_PREVIEW ? 'block' : 'none';
-}
+// ── All the opinions and all the articles ("View More", "See All") ────────────
+var _opinionsPage = 1;
+var _articlesPage = 1;
 
 function openOpinionsPage() {
   _opinionsPage = 1;
@@ -483,50 +449,6 @@ function goOpinionsPage(p) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── Articles ──────────────────────────────────────────────────────────────────
-function loadConfirmedArticles() {
-  if (!EPOCH_API_URL || EPOCH_API_URL.includes('PASTE')) {
-    document.getElementById('blog-loading').style.display = 'none';
-    document.getElementById('blog-empty').style.display = '';
-    return;
-  }
-  jsonp(EPOCH_API_URL + '?action=confirmed_articles', function(data) {
-    // the feed down (jsonp gives up with []): the articles that have a page of their own (BUILT_ARTICLES, build block)
-    _confirmedArticles = Array.isArray(data) && data.length ? data : builtArticles();
-    renderArticlesPreview();
-  });
-}
-function builtArticles() {
-  if (typeof BUILT_ARTICLES === 'undefined') return [];
-  return Object.keys(BUILT_ARTICLES).map(function (k) { var b = BUILT_ARTICLES[k]; return { title: k, ts: Date.parse(b.d), content: [b.e] }; });
-}
-
-function renderArticleCard(a, globalIdx, delay) {
-  // an article with a page of its own (written by the build) opens it; a newer approval opens inside this page
-  var b = typeof BUILT_ARTICLES !== 'undefined' && BUILT_ARTICLES.hasOwnProperty(a.title) ? BUILT_ARTICLES[a.title] : null;
-  var date    = a.ts ? new Date(a.ts).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }) : '';
-  var excerpt = b ? b.e : (a.content && a.content.length ? a.content[0].slice(0, 180) + (a.content[0].length > 180 ? '…' : '') : '');
-  var inner = '<h4 class="blog-card-title">' + escHtml(b ? b.t : (a.title || 'Untitled')) + '</h4>' +
-    (excerpt ? '<p class="blog-card-excerpt">' + escHtml(excerpt) + '</p>' : '') +
-    '<p class="blog-card-meta">' + date + (b ? ' · ' + escHtml(b.a) : '') + '</p>';
-  if (b) return '<a class="blog-card" style="animation-delay:' + (delay * 0.07) + 's" href="' + escHtml(b.h) + '">' + inner + '</a>';
-  return '<div class="blog-card" style="animation-delay:' + (delay * 0.07) + 's" onclick="openArticleDetailPage(' + globalIdx + ')">' + inner + '</div>';
-}
-
-function renderArticlesPreview() {
-  var grid    = document.getElementById('blog-grid');
-  var loading = document.getElementById('blog-loading');
-  var empty   = document.getElementById('blog-empty');
-  var seeMore = document.getElementById('blog-see-more');
-  loading.style.display = 'none';
-  if (!_confirmedArticles.length) { empty.style.display = ''; return; }
-  grid.innerHTML = _confirmedArticles.slice(0, ARTICLES_PREVIEW).map(function(a, i) { return renderArticleCard(a, i, i); }).join('');
-  if (_confirmedArticles.length > ARTICLES_PREVIEW) {
-    seeMore.textContent = 'See All Articles →';
-    seeMore.style.display = 'block';
-  }
-}
-
 function openArticlesPage() {
   _articlesPage = 1;
   showCommSection('articles-page');
@@ -541,7 +463,7 @@ function renderArticlesPage() {
   var slice = _confirmedArticles.slice(start, start + ARTICLES_PER_PAGE);
   var total = Math.ceil(_confirmedArticles.length / ARTICLES_PER_PAGE);
   if (!slice.length) { empty.style.display = 'block'; grid.innerHTML = ''; pager.innerHTML = ''; return; }
-  grid.innerHTML = slice.map(function(a, i) { return renderArticleCard(a, start + i, i); }).join('');
+  grid.innerHTML = slice.map(renderArticleCard).join('');
   pager.innerHTML = buildPagination(total, _articlesPage, 'goArticlesPage');
 }
 
@@ -551,59 +473,23 @@ function goArticlesPage(p) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function openArticleDetailPage(idx) {
-  var a = _confirmedArticles[idx];
-  if (!a) return;
-  document.getElementById('article-detail-title').textContent = a.title || 'Untitled';
-  document.getElementById('article-detail-meta').textContent  = a.ts
-    ? new Date(a.ts).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
-  document.getElementById('article-detail-body').innerHTML = (a.content || []).map(function(p) {
-    return '<p>' + escHtml(p) + '</p>';
-  }).join('');
-  var fromArticles = document.getElementById('articles-page').classList.contains('active');
-  ['article-detail-back', 'article-detail-back-bottom'].forEach(function(id) {
-    document.getElementById(id).dataset.from = fromArticles ? 'articles' : 'community';
-  });
-  showCommSection('article-detail');
-}
-
-function closeArticleDetail() {
-  var from = document.getElementById('article-detail-back').dataset.from;
-  if (from === 'articles') { showCommSection('articles-page'); renderArticlesPage(); }
-  else { showCommSection('community-page'); }
-}
-
-// ── Load on init ──────────────────────────────────────────────────────────────
-function loadCommunityData() {
-  if (_dataLoaded) return;
-  _dataLoaded = true;
-  loadConfirmedArticles();
-  loadOpinions();
-}
-loadCommunityData();
-
 // ── Event wiring ──────────────────────────────────────────────────────────────
 document.getElementById('opinions-view-more').addEventListener('click', openOpinionsPage);
 document.getElementById('blog-see-more').addEventListener('click', openArticlesPage);
 document.getElementById('opinions-page-back').addEventListener('click', function() { showCommSection('community-page'); });
 document.getElementById('articles-page-back').addEventListener('click', function() { showCommSection('community-page'); });
-document.getElementById('article-detail-back').addEventListener('click', closeArticleDetail);
-document.getElementById('article-detail-back-bottom').addEventListener('click', closeArticleDetail);
 
-// ── Share modal ───────────────────────────────────────────────────────────────
-var _shareFile = null;
-var MAX_ARTICLE_BYTES = 10 * 1024 * 1024;
-
-// Apps Script POSTs use no-cors, so the response is opaque: a resolved fetch
-// means the request reached Google, a rejected one means it never left.
-function postToApi(payload) {
-  return fetch(EPOCH_API_URL, {
-    method: 'POST', mode: 'no-cors',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify(payload)
-  });
+// ── The forms go to Formspree (FORMSPREE_URL, as on /contact), which emails them to the Institute ───────────────
+// It answers in JSON, so a failure shows. _gotcha is the honeypot: filled in, Formspree drops the message as spam.
+function postForm(fields, form) {
+  fields._gotcha = form.querySelector('.ct-hp').value;
+  return fetch(FORMSPREE_URL, {
+    method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(fields)
+  }).then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res; });
 }
 
+// ── Share modal ───────────────────────────────────────────────────────────────
 document.getElementById('open-share-btn').addEventListener('click', function() {
   var submitBtn = document.querySelector('#share-form button[type="submit"]');
   submitBtn.disabled = false;
@@ -648,34 +534,15 @@ document.addEventListener('click', function (e) {
   goSubmit();
 });
 
-// Drop zone
-(function() {
-  var zone     = document.getElementById('drop-zone');
-  var fileInput = document.getElementById('sf-file');
-  var label    = document.getElementById('drop-zone-filename');
-
-  function setFile(file) {
-    var tooBig = file && file.size > MAX_ARTICLE_BYTES;
-    if (!file || !file.name.toLowerCase().endsWith('.docx') || tooBig) {
-      var errEl = document.getElementById('drop-zone-error');
-      errEl.textContent = tooBig ? 'File is too large (max 10 MB).' : 'Please select a .docx file.';
-      errEl.style.display = 'block';
-      setTimeout(function() { errEl.style.display = 'none'; }, 4000);
-      return;
-    }
-    _shareFile = file;
-    label.textContent = '📄 ' + file.name;
-    label.style.display = 'block';
-  }
-
-  fileInput.addEventListener('change', function() { if (this.files[0]) setFile(this.files[0]); });
-  zone.addEventListener('dragover',  function(e) { e.preventDefault(); zone.classList.add('dragover'); });
-  zone.addEventListener('dragleave', function()  { zone.classList.remove('dragover'); });
-  zone.addEventListener('drop', function(e) {
-    e.preventDefault(); zone.classList.remove('dragover');
-    if (e.dataTransfer.files[0]) setFile(e.dataTransfer.files[0]);
+// Copy the address for the Word file (mail links do nothing for readers without a mail program)
+document.querySelectorAll('.ct-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    function ok() { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); }
+    function select() { var r = document.createRange(); r.selectNodeContents(b.previousElementSibling); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(b.getAttribute('data-copy')).then(ok, select);
+    else select();
   });
-})();
+});
 
 // Profession → affiliation row
 document.getElementById('sf-profession').addEventListener('change', function() {
@@ -686,58 +553,58 @@ document.getElementById('sf-profession').addEventListener('change', function() {
   document.getElementById('sf-affil').required = needsAffil;
   document.getElementById('sf-affil-star').style.display = needsAffil ? '' : 'none';
 });
+['sf-name', 'sf-profession', 'sf-affil', 'sf-email', 'sf-title', 'sf-text'].forEach(function (id) {
+  document.getElementById(id).addEventListener('input', function () {
+    this.classList.remove('form-input-error');
+    if (id === 'sf-text') document.getElementById('sf-text-err').hidden = true;
+  });
+});
 
-// Share form submit
+// Share form submit: the article pasted as text (Formspree's free plan takes no files; a Word file goes by email)
 document.getElementById('share-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var name  = document.getElementById('sf-name').value.trim();
   var prof  = document.getElementById('sf-profession').value;
   var affil = document.getElementById('sf-affil').value.trim();
   var email = document.getElementById('sf-email').value.trim();
+  var title = document.getElementById('sf-title').value.trim();
+  var text  = document.getElementById('sf-text').value.trim();
+  var short = text.split(/\s+/).filter(Boolean).length < 100;
   var affilReq = ['Teacher', 'Student', 'Researcher', 'Academic'].indexOf(prof) !== -1;
-  var ok = true;
+  var first = null;
 
-  [['sf-name', !name], ['sf-profession', !prof],
-   ['sf-affil', affilReq && !affil], ['sf-email', !isValidEmail(email)],
-   ['drop-zone', !_shareFile]].forEach(function(pair) {
+  [['sf-name', !name], ['sf-profession', !prof], ['sf-affil', affilReq && !affil], ['sf-email', !isValidEmail(email)],
+   ['sf-title', !title], ['sf-text', short]].forEach(function(pair) {
     var el = document.getElementById(pair[0]);
-    if (el) el.classList.toggle('form-input-error', pair[1]);
-    if (pair[1]) ok = false;
+    el.classList.toggle('form-input-error', pair[1]);
+    if (pair[1] && !first) first = el;
   });
+  document.getElementById('sf-text-err').hidden = !short;
+  if (first) { first.focus(); return; }
 
-  if (!ok) return;
-
-  var submitBtn = this.querySelector('button[type="submit"]');
+  var form = this;
+  var submitBtn = form.querySelector('button[type="submit"]');
   var errEl = document.getElementById('sf-error');
   errEl.style.display = 'none';
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending…';
-  function failed() {
+  postForm({
+    name: name, email: email, profession: prof, affiliation: affil, title: title, article: text,
+    _subject: 'Article submission: ' + title + ' — The Epoch Institute'
+  }, form).then(function() {
+    document.getElementById('sf-success').style.display = 'block';
+    submitBtn.textContent = 'Sent ✓';
+    form.reset();
+    document.getElementById('sf-profession').dispatchEvent(new Event('change'));
+    setTimeout(closeShareModal, 2500);
+  }).catch(function() {
     errEl.style.display = 'block';
     submitBtn.disabled = false;
     submitBtn.textContent = 'Submit →';
-  }
-
-  var file = _shareFile;
-  var reader = new FileReader();
-  reader.onerror = failed;
-  reader.onload = function() {
-    var base64 = reader.result.split(',')[1];
-    postToApi({
-      type: 'article', name: name, profession: prof, affil: affil, email: email,
-      title: file.name.replace(/\.docx$/i, ''),
-      filename: file.name, fileBase64: base64
-    }).then(function() {
-      document.getElementById('sf-success').style.display = 'block';
-      submitBtn.textContent = 'Sent ✓';
-      _shareFile = null;
-      setTimeout(closeShareModal, 2500);
-    }).catch(failed);
-  };
-  reader.readAsDataURL(file);
+  });
 });
 
-// ── Opinion form ──────────────────────────────────────────────────────────────
+// ── Opinion form: read by the Institute before it appears on the page (added to OPINIONS above) ─────────────────
 document.getElementById('opinion-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var name = document.getElementById('op-name').value.trim();
@@ -756,9 +623,7 @@ document.getElementById('opinion-form').addEventListener('submit', function(e) {
   document.getElementById('op-success').style.display = 'none';
   submitBtn.disabled = true;
 
-  postToApi({ type: 'opinion', name: name, text: text }).then(function() {
-    _allOpinions.unshift({ name: name, text: text, ts: Date.now() });
-    renderOpinionsPreview();
+  postForm({ name: name, opinion: text, _subject: 'Opinion for the Community page — The Epoch Institute' }, form).then(function() {
     document.getElementById('op-success').style.display = 'block';
     form.reset();
   }).catch(function() {

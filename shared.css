@@ -1291,70 +1291,6 @@
     .blog-grid { grid-template-columns: 1fr; gap: 12px; }
     .modal-box { padding: 28px 18px; }
     .opinion-form { max-width: 100%; }
-    .article-modal-box { height: 95vh; }
-    .article-modal-header { padding: 20px 18px 14px; }
-    .announcements-inner { padding: 80px 16px 32px; }
-    .announcements-grid { grid-template-columns: 1fr; }
-  }
-  /* ── Announcements ── */
-  #announcements {
-    padding-top: 60px; /* clear fixed nav */
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-  }
-  .announcements-inner {
-    max-width: 1200px; margin: 0 auto; padding: 32px 40px 36px;
-  }
-  .announcements-hd {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 24px;
-  }
-  .announcements-label {
-    font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--gold); opacity: 0.85; font-weight: 600;}
-  .announcements-live-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--gold); opacity: 0.75;
-    animation: pulse-dot 2s ease-in-out infinite;
-  }
-  @keyframes pulse-dot {
-    0%, 100% { transform: scale(1);   opacity: 0.75; }
-    50%       { transform: scale(1.5); opacity: 0.4; }
-  }
-  .announcements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-    gap: 20px;
-  }
-  .announcement-card {
-    border: 1px solid var(--border); cursor: pointer; overflow: hidden;
-    transition: border-color 0.2s, background 0.2s;
-    display: flex; flex-direction: column;
-  }
-  .announcement-card:hover { border-color: var(--gold); background: rgba(var(--gold-rgb),0.04); }
-  .announcement-card-img {
-    width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
-    background: var(--surface);
-  }
-  .announcement-card-body {
-    padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1;
-  }
-  .announcement-card-type {
-    font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--gold); opacity: 0.7; font-weight: 600;}
-  .announcement-card-name {
-    font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em;
-    color: var(--text); line-height: 1.4;
-  }
-  .announcement-card-cta {
-    font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--gold); margin-top: 6px; font-weight: 600;}
-  .announcements-empty {
-    font-family: var(--font-text); font-size: 17px;
-    color: var(--muted); opacity: 0.5; padding: 8px 0; margin: 0;
-  }
-  .announcements-loading {
-    font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.02em;
-    color: var(--muted); opacity: 0.5; padding: 12px 0; margin: 0;
   }
   /* ── Blog dynamic loading ── */
   .blog-loading, .opinions-loading {
@@ -1389,20 +1325,6 @@
   .opinion-item-date {
     font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.02em;
     color: var(--muted); opacity: 0.6;
-  }
-  /* ── Article preview modal ── */
-  .article-modal-box {
-    max-width: 860px; height: 88vh;
-    display: flex; flex-direction: column; padding: 0;
-  }
-  .article-modal-header {
-    padding: 28px 40px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0;
-  }
-  .article-modal-meta {
-    font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--gold); opacity: 0.75; margin: 0 0 6px; font-weight: 600;}
-  .article-modal-frame {
-    flex: 1; border: none; width: 100%; background: var(--surface);
   }
   /* ── Thank You modal ── */
   .thankyou-overlay {
@@ -2704,7 +2626,6 @@ body.shr-open { overflow: hidden; }
 .enc-day-name { font-family: var(--font-display); font-size: clamp(22px, 2.6vw, 30px); color: var(--gold-light); line-height: 1.2; }
 .enc-day-desc { font-family: var(--font-text); font-size: 18px; line-height: 1.65; }
 #tih-strip { margin-top: 0; }
-#announcements { margin-top: 64px; }
 #newsletter-section { margin-top: 32px; }
 @media (max-width: 900px) {
   .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2777,9 +2698,9 @@ html, body { overflow-x: clip; }
   .series-notify-input, .series-notify-btn { min-height: 42px; }
   #about a[href^="mailto:"] { display: inline-block; padding: 10px 0; }
   .dataset-licence-badge { min-height: 40px; display: inline-flex; align-items: center; }
-}#announcements .announcements-inner { max-width: 1100px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+}
 #community-page .community-section { max-width: 1020px; width: calc(100% - 80px); padding-left: 0; padding-right: 0; }
-@media (max-width: 768px) { #community-page .community-section { width: calc(100% - 32px); } #announcements .announcements-inner { padding-left: 16px; padding-right: 16px; } }
+@media (max-width: 768px) { #community-page .community-section { width: calc(100% - 32px); } }
 @media (max-width: 420px) { .nav-logo-text { font-size: 13px; letter-spacing: 0.1em; white-space: nowrap; } }
 input[type=checkbox], input[type=radio] { accent-color: var(--gold); }
 
@@ -5144,7 +5065,7 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 /* pictures cropped to fill their box keep the upper part, where faces and the tops of buildings are (the centre cut
    Louis IX's head off in Which Came First?); emblems drawn whole (contain) stay centred */
 .gm-fc-img img, .gm-ocard img, .gm-pz-strip img, .gm-wt img, .path-thumbs img, .path-step img, .enc-thumb, .enc-seealso img,
-.enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .announcement-card-img, .quiz-img, .tih-strip-pic img,
+.enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .quiz-img, .tih-strip-pic img,
 .kd-potd img, .kd-door-img img, .profile-section-fig img, .contributor-avatar img { object-position: center 25%; }
 .enc-thumb.srch-emblem { object-position: center; }
 /* Connections: Submit is a pill in line with Shuffle and Deselect (as a .hero-cta it kept a 48px top margin) */
@@ -5334,7 +5255,7 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
   #site-nav, #site-footer, .skip-link, .to-top, .read-progress, .path-journey, .site-search, .enc-preview, #contact-modal, .modal-overlay,
   .empire-toc, .info-share-row, .detail-cite-row, .empire-view-explorer, .tih-share-btn, .tih-share-dropdown, .home-search,
   .ref-prevnext, .ref-updated a, .ref-copy, .enc-controls, .enc-random, .st-filters, .st-random, .st-more, .st-mapwrap,
-  .mini-connections, #connections, .quiz, #newsletter-section, #announcements, .explorer-teaser, .playback-bar,
+  .mini-connections, #connections, .quiz, #newsletter-section, .explorer-teaser, .playback-bar,
   .atl-time, .atl-jumps, .atl-tools, .atl-zoom, .qz-cats, .gl-letters, .ty-sec { display: none !important; }
   .empire-page, .enc-page, .st-page, .day-page, main { padding-top: 0 !important; min-height: 0 !important; }
   a { color: #111 !important; }
