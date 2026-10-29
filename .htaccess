@@ -23,7 +23,7 @@ AddType font/woff2 .woff2
   RewriteRule ^essays/?$ /research-series [R=301,L]
   RewriteRule ^articles/?$ /community [R=301,L]
   # the profile folders have no index page: their kind's list on /profiles
-  RewriteRule ^(religion|language)/?$ /profiles?kind=$1 [R=301,L]
+  RewriteRule ^(religion|language|culture|movement)/?$ /profiles?kind=$1 [R=301,L]
   RewriteRule ^empire/?$ /profiles [R=301,L]
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.+)/$ /$1 [R=301,L]

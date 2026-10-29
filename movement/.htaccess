@@ -1,0 +1,3 @@
+<FilesMatch "^[a-z0-9-]+$">
+  ForceType text/html
+</FilesMatch>

@@ -1,6 +1,6 @@
 # The Epoch Institute
 
-> A historical research site: 460 full profiles of empires, states, religions and languages, a 32,011-entry encyclopedia, a register of
+> A historical research site: 490 full profiles of empires, states, religions, languages, cultures and movements, a 32,149-entry encyclopedia, a register of
 > 5,468 states and their 11,296 connections, country histories, century overviews, an interactive world atlas
 > (3500 BCE to today), and the data behind them, free to download.
 
@@ -11,12 +11,14 @@ century pages and reading paths end with "Test yourself": a few questions built 
 - [Profiles](https://the-epoch-institute.org/profiles): the 426 in-depth profiles of empires and states, from Rome and the Mughals to Tonga, Cahokia and Great Zimbabwe (history, power curve, key facts, references) at /empire/<slug>
 - [Religions](https://the-epoch-institute.org/profiles?kind=religion): 18 profiles of faiths, from Hinduism and Judaism to Norse religion and the Bahá'í Faith, at /religion/<slug> (origins, beliefs, texts, spread, community, legacy)
 - [Languages](https://the-epoch-institute.org/profiles?kind=language): 16 profiles of languages, from Sumerian and Latin to Nahuatl and Swahili, at /language/<slug> (origins, structure, speakers, literature, change, legacy)
+- [Cultures](https://the-epoch-institute.org/profiles?kind=culture): 15 profiles of cultures and civilisations, from the Indus Valley, the Minoans and the Olmecs to the Lapita, the Vikings and the Ancestral Puebloans, at /culture/<slug> (origins, society, beliefs, arts, exchange, legacy)
+- [Movements](https://the-epoch-institute.org/profiles?kind=movement): 15 profiles of movements, from Renaissance humanism and the Reformation to the Bhakti saints, the Nahda and the civil rights and anti-apartheid movements, at /movement/<slug> (background, aims, events, people, outcomes, legacy)
 - [Encyclopedia](https://the-epoch-institute.org/encyclopedia/): people, events, places, ideas and works; one page per entry at /encyclopedia/<slug>
 - [States register](https://the-epoch-institute.org/state/): every recorded state at /state/<id>, with origins, rule and legacy
 - [Country histories](https://the-epoch-institute.org/countries/): the states that ruled each present-day country
 - [Centuries](https://the-epoch-institute.org/centuries/): one page per century, 30th century BCE to the 21st
 - [Year by year](https://the-epoch-institute.org/years/): what happened in a single year, at /years/<year> (/years/1453, /years/480-bce)
-- [People](https://the-epoch-institute.org/people/): the encyclopedia's 12,935 people by century and region, at /people/<century>
+- [People](https://the-epoch-institute.org/people/): the encyclopedia's 12,992 people by century and region, at /people/<century>
 - [Today in history](https://the-epoch-institute.org/today-in-history/): a page for each day of the year, with at least eight events and the people born and died that day (dates as the sources give them, Julian before 1582)
 - [Great speeches](https://the-epoch-institute.org/speeches/): 80 speeches from Xerxes to Reagan, with the setting, a key passage and, where free, the full text
 - [Reading paths](https://the-epoch-institute.org/paths/): 38 guided routes through the profiles and the encyclopedia

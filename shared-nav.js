@@ -491,8 +491,8 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=0468d48272';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=2de866f300';
+var SEARCH_INDEX_SRC = '/search-index.js?v=383edf3937';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_PAGES_SRC = '/search-pages.js?v=dc408450c8';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null;
@@ -923,7 +923,7 @@ function initNav(activePage) {
     var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
       [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path'],
       [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech'], [/^\/essays\/[a-z0-9-]+$/, 'essay'],
-      [/^\/(religion|language)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article']];
+      [/^\/(religion|language|culture|movement)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article']];
     var kind = null;
     if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
       KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
@@ -1000,11 +1000,18 @@ function initNav(activePage) {
     // the short version first (shared.css shows these only in Kids mode): an entry's first sentence, and on profiles
     // and state pages a button that reveals the full history
     function openAll() { html.classList.add('kd-open'); }
+    // the builder's sentence rules (build-pages.ps1 Sentences): no stop after an abbreviation ("c.", "St.", "v."), an
+    // initial ("W. E. B. Du Bois", "H. V. Evatt") or inside "U.S."; a regnal numeral ("Charles V. He ...") and "D.C." end one
     function firstSentence(t) {
       var re = /[.!?]["'”’)\]]*\s+(?=["'“‘(]?[A-Z0-9])/g, m;
       while ((m = re.exec(t))) {
-        var before = t.slice(0, m.index), w = (/(\S+)$/.exec(before) || ['', ''])[1].replace(/^[("'“‘]+/, '');
-        if (/^(c|ca|fl|r|b|d|St|Mt|Mr|Mrs|Ms|Dr|Jr|Sr|vs|No|Nos|vol|ed|eds|tr|e\.g|i\.e|[A-Z])$/.test(w)) continue;   // abbreviations and initials
+        if (t[m.index] === '.') {
+          var before = t.slice(0, m.index), prev = (/(\S+)\s+\S+$/.exec(before) || ['', ''])[1],
+            w = (/(\S+)$/.exec(before) || ['', ''])[1].replace(/^[("'“‘]+/, '').split(/[–—-]/).pop();
+          if (/^(c|ca|fl|r|b|d|St|Mt|Ft|Mr|Mrs|Ms|Dr|Jr|Sr|vs|v|vz|No|Nos|vol|ed|eds|tr|Co|Bros|Gen|Col|Capt|Lt|Sgt|Rev|Fr|Sen|Gov|Hon|Prof)$/.test(w) ||
+            (/^([A-Za-z]\.)+[A-Za-z]$/.test(w) && w !== 'D.C')) continue;   // abbreviations, U.S., e.g.
+          if (/^[A-Z]$/.test(w) && !('IVX'.indexOf(w) >= 0 && !/^[A-Z]\.$/.test(prev) && !/^[A-Z]\./.test(t.slice(re.lastIndex)))) continue;   // an initial, not a numeral
+        }
         return t.slice(0, m.index + 1);
       }
       return t;
@@ -1075,7 +1082,7 @@ function initNav(activePage) {
     var here = location.pathname.replace(/\/+$/, '') || '/', seen = get('epoch-seen', []);
     if (!Array.isArray(seen)) seen = [];
     // every reading page counts (the passport at /passport reads epoch-seen); epoch-visits: the UTC days with a visit
-    if (/^\/(empire|religion|language|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
+    if (/^\/(empire|religion|language|culture|movement|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
     var vday = Math.floor(Date.now() / 864e5), visits = get('epoch-visits', []);
     if (Array.isArray(visits) && visits[visits.length - 1] !== vday) { visits.push(vday); put('epoch-visits', visits.slice(-400)); }
     function isSeen(h) { return seen.indexOf(String(h || '').replace(/\/+$/, '')) >= 0; }
@@ -1123,7 +1130,7 @@ function initNav(activePage) {
 
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
   (function () {
-    if (!/^\/(empire|religion|language|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
+    if (!/^\/(empire|religion|language|culture|movement|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
     var bar = document.createElement('div'); bar.className = 'read-progress'; bar.setAttribute('aria-hidden', 'true');
     document.body.appendChild(bar);
     var ticking = false;

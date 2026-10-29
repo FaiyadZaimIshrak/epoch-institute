@@ -159,6 +159,12 @@ function factRows(name, emp) {
   });
   return rows;
 }
+// a kind that states its own period (cultures, movements: "c. 3300–1300 BCE: the Early Harappan phase …") shows that
+// row instead of the bare span
+function kindFact(name, emp, key) {
+  var kf = PROFILE_KINDS[profileKind(emp)].facts, f = (typeof EMPIRE_FACTS !== 'undefined' && EMPIRE_FACTS[name]) || {};
+  return !!(kf && f[key] && kf.some(function (r) { return r[0] === key; }));
+}
 function readingMinutes(profile, emp) {
   if (!profile) return 0;
   var text = PROFILE_KINDS[profileKind(emp)].sections.map(function (s) { return s[0]; }).concat(['summary']).map(function (k) { return profile[k] || ''; }).join(' ');
@@ -502,7 +508,7 @@ function buildPage(emp) {
 '        <div class="info-stats" style="margin-top:10px;">\n' +
 (isPolity ? '          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">'+peakStr+'</span></div>\n' +
 '          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">'+duration+' yrs</span></div>\n' : '') +
-'          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">'+period+'</span></div>\n' +
+(kindFact(name, emp, 'period') ? '' : '          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">'+period+'</span></div>\n') +
 factRows(name, emp) +
 '        </div>\n' +
 (profile ? '        <p class="empire-meta">' + readingMinutes(profile, emp) + ' min read · Last reviewed October 2026</p>\n' : '') +

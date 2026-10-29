@@ -7,13 +7,13 @@
 <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
 <link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
-<title>Profiles of States, Empires, Religions and Languages — The Epoch Institute</title>
+<title>Profiles of States, Empires, Faiths, Languages, Cultures and Movements — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="In-depth profiles of 394 states and empires, 18 religions and 16 languages: origins, great ages, decline and legacy, with historical emblems and sources.">
-<meta property="og:title" content="Profiles of States, Empires, Religions and Languages — The Epoch Institute">
-<meta property="og:description" content="Explore detailed chronicles of 426 states and empires, 18 religions and 16 languages across five millennia of human history.">
+<meta name="description" content="In-depth profiles of 426 states and empires, 18 religions, 16 languages, 15 cultures and 15 movements: origins, great ages and legacy, with sources.">
+<meta property="og:title" content="Profiles of States, Empires, Faiths, Languages, Cultures and Movements — The Epoch Institute">
+<meta property="og:description" content="Explore detailed chronicles of 426 states and empires, 18 religions, 16 languages, 15 cultures and 15 movements across five millennia of human history.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/profiles">
 <meta property="og:site_name" content="The Epoch Institute">
@@ -107,7 +107,7 @@
   <div class="explorer-header">
     <p class="explorer-label">HISTORICAL RECORDS</p>
     <h1 class="explorer-title">Profiles</h1>
-    <p class="explorer-description">In-depth profiles of states and empires, religions and languages across five millennia — how each began and grew, what it built, believed and wrote, and what it left behind.</p>
+    <p class="explorer-description">In-depth profiles of states and empires, religions, languages, cultures and movements across five millennia — how each began and grew, what it built, believed and wrote, and what it left behind.</p>
   </div>
 
   <div class="profile-kinds" id="profile-kinds" role="group" aria-label="Kind of profile" hidden></div>
@@ -153,8 +153,8 @@
 
 </main>
 
-<script src="/shared-data.js?v=10"></script>
-<script src="/shared-nav.js?v=43"></script>
+<script src="/shared-data.js?v=11"></script>
+<script src="/shared-nav.js?v=44"></script>
 <script src="/epoch-stats.js?v=4"></script>
 <script>
 // ── Era classifier ────────────────────────────────────────────────────────────

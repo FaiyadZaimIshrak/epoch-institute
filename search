@@ -64,13 +64,13 @@
   </div>
 </main>
 
-<script src="/shared-data.js?v=10"></script>
-<script src="/shared-nav.js?v=43"></script>
+<script src="/shared-data.js?v=11"></script>
+<script src="/shared-nav.js?v=44"></script>
 <script>
 initNav('search');
 (function () {
   var $ = function (id) { return document.getElementById(id); };
-  var PER = 50, FACETS_SRC = '/search-facets.js?v=6';
+  var PER = 50, FACETS_SRC = '/search-facets.js?v=7';
   // kinds: [key, label, test on a result]
   var KINDS = [['', 'All', function () { return true; }], ['profile', 'Profiles', function (r) { return r.k === 'profile'; }],
     ['state', 'States', function (r) { return r.k === 'state' || r.k === 'polity'; }], ['person', 'People', function (r) { return r.k === 'person'; }],

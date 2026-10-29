@@ -90,8 +90,11 @@ EMPIRES.forEach(e => {
     // a religion or language: its kind and region (the page header already reads "Religion · <region>"), its span as
     // a band on the timeline of recorded history instead of a power curve
     const c = s => s ? 'c. ' : '';
+    // a culture's or movement's Period row is its own sentence on the period ("c. 1500 BCE to around the turn of the
+    // Common Era: Early Nok …"): the poster gives the span instead, and the teaser keeps its room
+    const own = (pk.facts || []).some(r => r[0] === 'period');
     JOBS.profiles.push({ kind: 'profile', file: slug + '.jpg', name: e.name, kicker: region === e.region ? pk.single + ' · ' + region : region,
-      sub: esc(period || ctx.profileSpanText(e)), tease: firstSentence(EMPIRE_INFO[e.name], 170), emblem: logo ? encodeURI(logo) : '',
+      sub: esc(own ? ctx.profileSpanText(e) : (period || ctx.profileSpanText(e))), tease: firstSentence(EMPIRE_INFO[e.name], 170), emblem: logo ? encodeURI(logo) : '',
       pic: pic ? { src: pic.src, w: pic.w, h: pic.h, top: pic.top } : null, points: [],
       span: [e.start, e.end == null ? 2025 : e.end, c(e.circa) + yr(e.start), e.end == null ? 'today' : c(e.endCirca) + yr(e.end)],
       url: 'the-epoch-institute.org' + url, credit: pic ? pic.credit : '' });
@@ -200,7 +203,7 @@ const CURVED = ['Achaemenid Empire', 'Roman Empire', 'Abbasid Caliphate', 'Mongo
   .map(n => EMPIRES.find(e => e.name === n)).filter(Boolean);
 page('explorer', { kind: 'curves', lines: CURVED.map(e => ({ name: e.name, points: e.points, color: e.color || '#c9a84c' })), from: -650, to: 2020,
   ticks: [[-500, '500 BCE'], [1, '1 CE'], [500, '500'], [1000, '1000'], [1500, '1500'], [2000, '2000']],
-  kicker: 'Empire explorer', title: 'Rise and fall compared', sub: 'The power curves of ' + EMPIRES.length + ' states and empires on one time line', url: 'the-epoch-institute.org/explorer' });
+  kicker: 'Empire explorer', title: 'Rise and fall compared', sub: 'The power curves of ' + EMPIRES.filter(e => e.points).length + ' states and empires on one time line', url: 'the-epoch-institute.org/explorer' });
 // the race's first race as race.js scores it: each curve times the state's weight (the mean of four scores) over ten,
 // in the race's colours for the dark theme
 const RACERS = ['Roman Empire', 'Han Dynasty', 'Parthian Empire', 'Kushan Empire'].map(n => EMPIRES.find(e => e.name === n)).filter(Boolean);

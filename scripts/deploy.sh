@@ -40,7 +40,7 @@ GENERATED=(encyclopedia state today-in-history countries centuries paths speeche
 DIRS=(sitemaps fonts)                                              # line 12
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
   data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans)  # line 14
-PROFILES=(empire religion language logos images maps)              # line 15
+PROFILES=(empire religion language culture movement logos images maps)              # line 15
 KINDS=(culture ideology movement)                                  # line 16: copied when present
 
 say() { printf '%s\n' "$*"; }
