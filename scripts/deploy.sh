@@ -37,7 +37,7 @@ PAGES=(index about research research-series profiles community contributors data
   contact start games kids search timeline passport write faiths flashcards race)  # line 10
 GENERATED=(encyclopedia state today-in-history countries centuries paths speeches years people essays articles
   teachers)                                                        # line 11: the only folders synced with --delete
-DIRS=(sitemaps fonts)                                              # line 12
+DIRS=(sitemaps fonts css)                                          # line 12 (css/: scripts/split-css.js, Oct 2026)
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
   data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans)  # line 14
 PROFILES=(empire religion language culture movement logos images maps)              # line 15
@@ -188,9 +188,10 @@ for d in ${GENERATED[*]}; do [ -f "\${DEPLOYPATH}\$d" ] && /bin/rm -f "\${DEPLOY
 EOF
 send "root files (line 8)" "${root[@]}" "$T:$P"
 if [ ${#extra[@]} -gt 0 ]; then send "more root files (line 9)" "${extra[@]}" "$T:$P"; fi
+# before the pages: they link the stylesheets in css/, which must be there first (a page sent earlier would load none)
+send "sitemaps, fonts and stylesheets (line 12)" "${DIRS[@]}" "$T:$P"
 send "root pages (line 10)" "${PAGES[@]}" "$T:$P"
 send "generated folders, with --delete (line 11)" --delete "${GENERATED[@]}" "$T:$P"
-send "sitemaps and fonts (line 12)" "${DIRS[@]}" "$T:$P"
 send "feeds/.htaccess (line 13)" feeds/.htaccess "$T:${P}feeds/"
 send "data (line 14)" "${DATA[@]}" "$T:${P}data/"
 send "profiles, logos, images and maps (line 15)" "${PROFILES[@]}" "$T:$P"

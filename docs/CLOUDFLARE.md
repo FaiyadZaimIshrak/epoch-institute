@@ -13,6 +13,17 @@ over. Measured from Stockholm on 29 Oct 2026:
   altogether.
 - **For comparison:** a site served from a nearby edge, such as GitHub, answers in 0.06 s.
 
+The host's own network makes it worse. Measured on the evening of 29 Oct 2026, over the same connection:
+
+| A 100 KB file from | Average | Slowest | Over 8 s |
+|---|---|---|---|
+| The Institute's host (Namecheap, Singapore) | 4.9 s | 24.7 s | 8 of 49 tries |
+| Another company's server in Singapore (Vultr) | 1.7 s | 3.1 s | none |
+
+So it is not only the distance. In a bad spell a page took 10 to 80 seconds; minutes later the same pages showed in
+under 2 seconds. From Jakarta, next to the server, a file takes 0.09 s, so the server itself is quick. With Cloudflare
+in front, readers get the files from Cloudflare's copy near them, and the host's network carries far less.
+
 Cloudflare's free plan answers visitors from a data centre in their own city. It keeps copies of the pictures, scripts,
 styles and fonts there, compresses them better, and carries the long trip to Singapore over its own network. The pages
 themselves (HTML) still come fresh from the server, as now.
@@ -58,6 +69,7 @@ Turning the cloud orange ("Proxied") on two records sends visitors through Cloud
 | Caching → Configuration | Browser Cache TTL | **Respect Existing Headers** (the site's `.htaccess` already decides: pages always rechecked, `?v=` files a year, the shared files 10 minutes) |
 | SSL/TLS → Edge Certificates | Always Use HTTPS | **On** |
 | Speed → Settings → Protocol Optimization | HTTP/3 | **On** |
+| Caching → Tiered Cache | Tiered Cache: **On**; Tiered Cache Topology: **Smart** | Free. Cloudflare then fetches from the host only through its data centre next to the server in Singapore, so the host's slow routes abroad are hardly used |
 
 ## Step 4: turn on the proxy
 

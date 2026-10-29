@@ -448,7 +448,8 @@ function Page($p) {
   [void]$sb.Append("<meta property=`"og:image`" content=`"$img`">`n")
   if ($w -and $h) { [void]$sb.Append("<meta property=`"og:image:width`" content=`"$w`">`n<meta property=`"og:image:height`" content=`"$h`">`n") }
   [void]$sb.Append("<meta name=`"twitter:card`" content=`"$card`">`n<meta name=`"twitter:site`" content=`"@Epoch_Institute`">`n<meta name=`"twitter:image`" content=`"$img`">`n")
-  [void]$sb.Append("<link rel=`"stylesheet`" href=`"/shared.css`">`n<link rel=`"preload`" href=`"/fonts/crimson-pro-normal-latin.woff2`" as=`"font`" type=`"font/woff2`" crossorigin>`n<link rel=`"preload`" href=`"/fonts/cinzel-normal-latin.woff2`" as=`"font`" type=`"font/woff2`" crossorigin>`n")
+  # css/pages.css: the rules of shared.css that these pages and the profiles can use (scripts/split-css.js, run at the end)
+  [void]$sb.Append("<link rel=`"stylesheet`" href=`"/css/pages.css`">`n<link rel=`"preload`" href=`"/fonts/crimson-pro-normal-latin.woff2`" as=`"font`" type=`"font/woff2`" crossorigin>`n<link rel=`"preload`" href=`"/fonts/cinzel-normal-latin.woff2`" as=`"font`" type=`"font/woff2`" crossorigin>`n")
   [void]$sb.Append('<script type="application/ld+json">{"@context":"https://schema.org","@graph":[' + $p.ld + "]}</script>`n$GTAG`n</head>`n<body data-nav=`"" + $p.nav + "`">`n`n")
   [void]$sb.Append($p.body)
   # no shared-data.js here: these pages use none of it, and the header search gets the profiles from /search-profiles.js
@@ -503,6 +504,8 @@ $SMNEW = @{}; $CHANGED = @{}
 function Stamp([string]$path, [string]$content) {   # content may hold @@MOD@@ (dateModified): hashed without it
   # a picture's small copy (images/<folder>/thumbs/, Oct 2026) is the same picture: moving to it dates no page either
   $c = $content.Replace("`r`n", "`n").Replace('/images/encyclopedia/thumbs/', '/images/encyclopedia/').Replace('/images/states/thumbs/', '/images/states/').Replace($GTAG, $GTAG0)
+  # the stylesheet a page links (css/<file>.css since Oct 2026, cut from shared.css) is not content either
+  $c = [regex]::Replace($c, 'href="/css/[\w-]+\.css"', 'href="/shared.css"')
   $hash = [EpochBuild.W]::Sha1($c.Replace($THEME, ''))   # the head snippet is not content: changing it dates no page
   # until every page has been stamped once without the snippet: a hash of the page with the snippet as it was before Kids mode
   $old = if ($SM.ContainsKey($path) -and $SM[$path][0] -ne $hash) { [EpochBuild.W]::Sha1($c.Replace($THEME, $THEME0)) } else { '' }
@@ -3201,4 +3204,8 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\sitemap.xml", $idx)) { $NWRITE++ }
 $chg = New-Object System.Collections.Generic.List[string]
 foreach ($p in ($CHANGED.Keys | Sort-Object)) { $chg.Add($SITE + $p) }
 [IO.File]::WriteAllLines("$PSScriptRoot\changed-urls.txt", $chg, $U8)
+# the stylesheets cut from shared.css for each kind of page (css/), now that every page is written
+$NODE = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $NODE) { $NODE = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
+if (Test-Path $NODE) { foreach ($l in (& $NODE --max-old-space-size=6000 "$PSScriptRoot\split-css.js")) { Say "css: $l" }; if ($LASTEXITCODE) { throw 'split-css.js failed' } }
+else { Write-Warning 'node not found: run  node scripts/split-css.js  before deploying, or css/ stays as it was' }
 Say "done: $NWRITE files written, $nDel stale pages deleted, $($SMNEW.Count) URLs in the sitemaps, $($chg.Count) changed URLs"

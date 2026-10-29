@@ -57,8 +57,19 @@ queued in dataLayer at once and gtag.js itself loads after `load` and an idle mo
 it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippet ($GTAG0), so the change dated none.
 
 ## Shared files
-- /shared.css — all CSS (fonts: self-hosted variable woff2 in /fonts, @font-face at the top; pages preload the latin
-  Crimson Pro and Cinzel files). A picture cropped to fill its box (object-fit: cover) keeps its upper part
+- /shared.css — all CSS, the one stylesheet to edit (fonts: self-hosted variable woff2 in /fonts, @font-face at the
+  top; pages preload the latin Crimson Pro and Cinzel files). Pages do NOT load it (since 29 Oct 2026): scripts/split-css.js
+  cuts it into css/pages.css (every generated page and profile: 30 KB compressed) and css/<page>.css (each hand page
+  and 404: 14-21 KB), where a page used to wait for all of it (67 KB) before its first paint. A rule goes into a file
+  when every class and id its selector needs can occur on those pages (their class/id attributes - all pages, not a
+  sample -, their inline scripts, every script they load including the lazy ones they name, generator.html's
+  template, the builder's class strings; names put together in scripts count by their stem, 'gm-cl' + n). Rules keep
+  their order and @media blocks, so a page renders exactly as with the whole file: checked by comparing every computed
+  style of every element of 70 pages, desktop, phone (dark) and Kids mode, with search, share panel and menu open
+  (scratchpad speed2/css-equal.js). build-pages.ps1 runs the split at the end; after editing only shared.css or a hand
+  page's markup run `node scripts/split-css.js` yourself (check-site.ps1 fails while css/ is out of date). A new hand
+  page needs its name in HAND there and a <link href="/css/<page>.css">. shared.css stays deployed for the poster
+  template (scripts/posters/poster.html). A picture cropped to fill its box (object-fit: cover) keeps its upper part
   (object-position: center 25%, the "Alignment pass" block: the centre cut heads off portraits); emblems drawn whole
   (contain) stay centred. Checked by eye and by a layout audit of 59 pages at 390/768/1024/1280 px and in Kids mode
   (scratchpad audit/layout-audit.ps1: anything wider than the page, overlapping or cut text, broken pictures).
@@ -130,7 +141,8 @@ shared-nav.js and enc-page.js are kept only 10 minutes (then stale-while-revalid
 `?v=`, so changing them needs no rebuild and one cached copy serves the whole site (so are scribe.js and faith-map.js,
 which the language and religion profiles load without `?v=`, and test-yourself.js). Until 29 Oct 2026 the hand pages
 loaded them with `?v=`, a second address: a reader going from the home page to an entry downloaded 102-169 KB again
-(+0.25-0.45 s first paint from Stockholm). Never give them a `?v=` again. Every other script tag carries a `?v=N`
+(+0.25-0.45 s first paint from Stockholm). Never give them a `?v=` again. The stylesheets in css/ are kept the same
+10 minutes (css/.htaccess) and are linked without `?v=` too. Every other script tag carries a `?v=N`
 cache-buster: when you change such a file, bump its `?v=` on every page that loads it. data/*.json are sent as
 text/javascript (data/.htaccess) because the server does not compress application/json.
 
@@ -165,7 +177,12 @@ SSH_PRIVATE_KEY, SSH_HOST, SSH_PORT, SSH_USER; the host key comes from ssh-keysc
 (server905-2.web-hosting.com, 209.74.67.182, LiteSpeed, HTTP/2, brotli, no HTTP/3): from Stockholm a round trip is
 0.2 s, a cold page's first byte 0.75-1.0 s and its first paint 1.9-2.6 s, and about 1 connection in 15 loses its first
 packet (measured 29 Oct 2026, scratchpad pw/live-speed.js, live-warm.js, ab-critical.js: dropping the font preloads or
-lowering the scripts' priority gave no dependable gain). The domain's DNS is at
+lowering the scripts' priority gave no dependable gain). The host's own network is the weak link, not the distance: on
+the evening of 29 Oct 2026 a 100 KB file took 4.9 s on average from here (max 24.7 s, 8 of 49 tries over 8 s) and the
+same size from Vultr's Singapore server 1.7 s (max 3.1 s), over the same line; pages then took 10-80 s, and minutes
+later under 2 s (scratchpad speed2/probe.tsv, pw/waterfall.js; check-host.net: 0.09 s from Jakarta, 0.7-2.8 s from
+Europe). The owner's PC also has Avast's HTTPS scanning in every connection, which queues the files further. Every KB
+counts on that line: hence css/ (above). The domain's DNS is at
 Cloudflare (name servers clara/cesar.ns.cloudflare.com) with the records DNS only, so visitors reach the server
 directly; docs/CLOUDFLARE.md is the owner's guide to turning the proxy on, the real cure for that distance (Full (strict) first, `mail` stays DNS only,
 Bot Fight Mode off for the workflows' checks). docs/DEPLOY.md has the setup, dry
@@ -186,7 +203,7 @@ countries/, centuries/, paths/, speeches/, years/, people/, essays/, articles/ a
 --delete, so pages removed from the repo also disappear from the server (a FILE of the same name at the root is
 removed first: /paths was a file until Oct 2026); nothing else in public_html is deleted except the old files of
 .cpanel.yml's last three lines. Root pages are copied by name (PAGES: index, about, … write, faiths): add new ones
-there. The script deploys only a clean checkout of a commit (no changed, untracked or ignored deployed files, no CRLF
+there. css/ is one of DIRS and goes out before the pages, which link it. The script deploys only a clean checkout of a commit (no changed, untracked or ignored deployed files, no CRLF
 from core.autocrlf), stops before sending anything if a listed file or folder is missing, and fails loudly on any
 SSH or rsync error; the workflow then checks that the home page answers.
 After deploying, run scripts/ping-indexnow.ps1: it submits the pages the last build changed

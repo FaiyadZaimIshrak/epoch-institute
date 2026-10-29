@@ -1,0 +1,8 @@
+# The stylesheets scripts/split-css.js cuts from shared.css, one per kind of page. Pages load them without ?v=, so like
+# shared.css they are kept 10 minutes, then used while they are checked again in the background.
+<IfModule mod_headers.c>
+  <FilesMatch "\.css$">
+    Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
+    Header unset Expires
+  </FilesMatch>
+</IfModule>

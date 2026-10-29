@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Epoch_Institute">
 <meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-kids.jpg">
-<link rel="stylesheet" href="/shared.css">
+<link rel="stylesheet" href="/css/kids.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Kids Corner"}]},{"@type":"WebPage","name":"Kids Corner","url":"https://the-epoch-institute.org/kids","description":"History for young explorers: pharaohs, knights, Vikings and great explorers in real pictures, a fact of the day and seven history games.","inLanguage":"en-GB","audience":{"@type":"PeopleAudience","suggestedMinAge":7,"suggestedMaxAge":12},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
 <!-- Google tag (gtag.js) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>

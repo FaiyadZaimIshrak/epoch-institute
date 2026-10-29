@@ -3,6 +3,7 @@
 #     or to a state that state/.htaccess redirects to its profile
 #   - every page has one <h1>, a <title>, a meta description of at most 160 characters, a canonical URL equal to its
 #     own address, og:title and og:url, and JSON-LD that parses
+#   - the stylesheets in css/ are what scripts/split-css.js cuts from shared.css for the pages as they are (needs node)
 #   powershell -ExecutionPolicy Bypass -File scripts\check-site.ps1
 param([string]$Repo = (Split-Path $PSScriptRoot), [int]$Show = 25)
 $ErrorActionPreference = 'Stop'
@@ -55,6 +56,10 @@ foreach ($f in $pages) {
   if ($h -notmatch 'property="og:title"' -or $h -notmatch 'property="og:url"') { $bad.Add("$self : og:title/og:url missing") }
   foreach ($j in [regex]::Matches($h, '(?s)<script type="application/ld\+json">(.*?)</script>')) { try { [void]$JSS.DeserializeObject($j.Groups[1].Value) } catch { $bad.Add("$self : JSON-LD does not parse ($($_.Exception.Message.Substring(0, 60)))") } }
 }
+# the stylesheets in css/ must be what scripts/split-css.js cuts from shared.css and the pages as they are now
+$NODE = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $NODE) { $NODE = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
+if (Test-Path $NODE) { $cssOut = & $NODE --max-old-space-size=6000 "$Repo\scripts\split-css.js" --check; if ($LASTEXITCODE) { $bad.Add("css/ : $cssOut") } }
+else { $bad.Add('css/ : node not found, so the stylesheets cut from shared.css could not be checked') }
 "pages: $nPages  internal links checked: $nLinks  problems: $($bad.Count)  ($([int]$clock.Elapsed.TotalSeconds) s)"
 if ($noLogo.Count) { "profiles without an emblem file (image hidden on the page): " + (@($noLogo.Keys | ForEach-Object { [Uri]::UnescapeDataString(($_ -replace '^/logos/(thumbs/)?', '' -replace '\.png$', '')) } | Sort-Object -Unique) -join ', ') }
 $bad | Group-Object { $_ -replace '^.*? : ', '' -replace '/[a-z0-9-]+(\?|#|$)', '/*$1' } | Sort-Object Count -Descending | Select-Object -First 10 | ForEach-Object { "  {0,6} x {1}" -f $_.Count, $_.Name }
