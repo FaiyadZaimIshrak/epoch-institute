@@ -495,10 +495,10 @@ var SEARCH_INDEX_SRC = '/search-index.js?v=383edf3937';   // also loaded by quiz
 var SEARCH_PAGES_SRC = '/search-pages.js?v=dc408450c8';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
-var searchLoading = null;
+var searchLoading = null, searchReady = false;
 function loadSearchData(cb) {
   if (!searchLoading) searchLoading = new Promise(function (ok) {
-    var left = 1, done = function () { if (--left === 0) ok(); };
+    var left = 1, done = function () { if (--left === 0) { searchReady = true; ok(); } };
     function get(src) { left++; var s = document.createElement('script'); s.src = src; s.onload = done; s.onerror = done; document.head.appendChild(s); }
     if (typeof EMPIRES === 'undefined' && typeof SEARCH_PROFILES === 'undefined') get(SEARCH_PROFILES_SRC);
     if (typeof SEARCH_INDEX === 'undefined') get(SEARCH_INDEX_SRC);
@@ -568,7 +568,14 @@ function initSiteSearch() {
   input.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
-    else if (e.key === 'Enter') { if (timer) { clearTimeout(timer); timer = null; render(); } var li = options()[Math.max(active, 0)], a = li && li.querySelector('a'); if (a) { e.preventDefault(); a.click(); } }
+    else if (e.key === 'Enter') {
+      if (timer) { clearTimeout(timer); timer = null; render(); }
+      // the index still on its way (a quick Enter, a slow connection): the suggestions so far come from the small page
+      // list ("napolean" gave Napoleon's speech, not Napoleon), so the search page takes the query and waits for it
+      var q = input.value.trim();
+      if (!searchReady && active < 0 && q.length >= 2) { e.preventDefault(); searchRemember(q); close(); location.href = '/search?q=' + encodeURIComponent(q); return; }
+      var li = options()[Math.max(active, 0)], a = li && li.querySelector('a'); if (a) { e.preventDefault(); a.click(); }
+    }
     else if (e.key === 'Escape') { e.preventDefault(); close(); }
   });
   list.addEventListener('click', function (e) {

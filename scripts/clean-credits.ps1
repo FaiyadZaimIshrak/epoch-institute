@@ -15,6 +15,9 @@ function CleanAuthor([string]$s) {
   $a = $s
   for ($k = 0; $k -lt 3; $k++) { $d = [Web.HttpUtility]::HtmlDecode($a); if ($d -eq $a) { break }; $a = $d }
   $a = $a -creplace "[\s$([char]0xA0)]+", ' '   # no-break spaces by char code: this file stays ASCII
+  # wiki template markup nobody filled in names no one: File:Georgius_Agricola.jpg's Artist field is "{{creator:|Year = }}"
+  $a = $a -replace '\{\{[^{}]*\}\}', ''
+  if (-not $a.Trim() -and $s -match '\{\{') { return 'Unknown author' }
   # "(talk)", "(talk, middle dot, contribs)", "(talk, middle dot, contrib..." cut short
   $a = $a -replace "\s*\((?:talk|discussion|disc|contribs?)(?:\s*[$([char]0xB7)|]\s*contribs?\.?)?[^)]{0,12}(?:\)|\.\.\.|$)", ''
   # Commons' own wording when the uploader is taken to be the author

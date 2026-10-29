@@ -443,7 +443,8 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   encyclopedia-data.js, empire-section-images.js and data/states/*.json in place: Commons' Artist field arrives as
   flattened HTML, which had left entities escaped twice ("W. &amp;amp; D. Downey" on 173 pages), "(talk)" links,
   "User:" prefixes, file names of the maps a derivative was drawn from, URLs, doubled text ("Unknown authorUnknown
-  author") and texts cut mid-word. A derivative becomes "Author; derivative work by Other"; a credit is at most 140
+  author"), texts cut mid-word and wiki templates nobody filled in (Agricola's "{{creator:|Year = }}" is now
+  "Unknown author"). A derivative becomes "Author; derivative work by Other"; a credit is at most 140
   characters, cut where a part or sentence ends (the source link carries the rest). scripts/credit-overrides.tsv
   gives the full Commons text for the 191 cut short at import (`File:<title>` TAB author). Run it after every
   enc-merge (which starts from the originals). build-pages.ps1 and generator.html also decode a credit before
@@ -994,6 +995,9 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
     century first. A profile and the entry of the same name are twins: the dropdown shows the profile with a small
     "Encyclopedia entry" link, /search lists the entry right after it. Results show the 112 px thumbnail, the
     profile's emblem or the kind's glyph; an empty field shows the last 8 searches (localStorage epoch-search-recent).
+    Enter opens the first suggestion, but while the index is still on its way it opens /search?q= instead: until
+    then the suggestions come from the small page list alone (a quick Enter on "napolean" opened Napoleon's speech,
+    not Napoleon; fixed 29 Oct 2026, scratchpad pw/search-enter.js).
   siteSearchAll(q) returns every match (with k: kind, src: 'p'/'P'/'e'/'s'/'g' (site page)/'y' (year) and i: its row);
   siteSearch(q) is its first 12; loadSearchData(cb) loads the index, the pages and (without shared-data.js) the profiles.
 - `/search` (hand page, noindex): every result, 50 a page, kind chips with counts, region and century filters, "with a
