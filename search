@@ -70,7 +70,7 @@
 initNav('search');
 (function () {
   var $ = function (id) { return document.getElementById(id); };
-  var PER = 50, FACETS_SRC = '/search-facets.js?v=4';
+  var PER = 50, FACETS_SRC = '/search-facets.js?v=5';
   // kinds: [key, label, test on a result]
   var KINDS = [['', 'All', function () { return true; }], ['profile', 'Profiles', function (r) { return r.k === 'profile'; }],
     ['state', 'States', function (r) { return r.k === 'state' || r.k === 'polity'; }], ['person', 'People', function (r) { return r.k === 'person'; }],

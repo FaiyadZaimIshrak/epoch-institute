@@ -240,7 +240,7 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   diagrams last (PicIsChart). Each path page ends with Test yourself.
 - Lists of entries show a type glyph where an entry has no picture (PhSpan: `.ph .ph-person/-conflict/-place/…`,
   masked SVG icons in shared.css).
-- `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — 1,020 year pages, one for every year with at least 6 items,
+- `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — 1,027 year pages, one for every year with at least 6 items,
   2 of them events. Only FIRM years count ([EpochBuild.W]::Firm, Range, Life: "1453", "29 May 1453", "480 BCE"; never
   "c. 1450", "1450s", "1066 or 1067", a reign or a century): entry events and conflicts dated to the year, wars that
   began or ended in it, day events (history.json; their linked text from data/days), profile key events (empire-glance.js
@@ -332,11 +332,15 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
 ## Encyclopedia
 - `encyclopedia/` index page (top-level nav item): search, type and conflict filters, 50 results a page, A–Z and
   century lists when nothing is searched; every entry has its own page at `/encyclopedia/<slug>`.
-- `encyclopedia-data.js` — 32,011 entries (slug, name, type, aka, dates, desc, img, credit, tags, war, empires), 21,801
+- `encyclopedia-data.js` — 32,011 entries (slug, name, type, aka, dates, desc, img, credit, tags, war, empires), 22,548
   with a picture. Generated.
   The entries added in Oct 2026 (people, places, events named in the state histories and profiles) were merged by scratchpad
   states/desc/enc-merge.ps1, which always starts from the saved originals (enc-orig/). Duplicate subjects are folded via
-  enc-dupes.tsv, and pictures come from enc-images.ps1 / enc-img-credits.json.
+  enc-dupes.tsv, and pictures come from enc-images.ps1 / enc-img-credits.json (new entries only). 747 more pictures
+  were chosen by eye on 28 Oct 2026 for the most-linked entries that had none (the Wikidata image and Wikipedia lead
+  image, on contact sheets: the subject itself, a map only for a place, people, war or battle, never a namesake or a
+  modern imagined portrait): scripts/entry-pictures.tsv, written in by scripts/apply-entry-pictures.ps1 (idempotent;
+  an entry that has a picture keeps it).
 - Conflicts & Resolutions: entries carry `tags` (battle, siege, war, campaign, revolt, revolution, crisis, treaty, peace;
   2,528 entries) and `war:"<slug>"` (the war a battle/treaty belongs to). Written by enc2/apply-conflicts.ps1 — run it
   once on fresh enc-merge output (a rerun drops names).
@@ -350,7 +354,10 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   them as born/died) was compared with Wikidata's P569/P570 (scratchpad days/wd-persons.js, compare-dates.js) and with
   the entry's own text (terms-from-desc.js): 12 were terms of office (Albuquerque's 1509–1515 governorship, Baji Rao's
   years as Peshwa …) and are fixed here; most other disagreements were Wikidata namesakes or disputed births, left alone.
-- Pipeline after a merge: apply-conflicts, apply-person-dates, scripts/clean-credits.ps1 (see the pictures below), enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
+  Same day: 564 of the 1,019 people who had no dates at all got them (Napoleon, Charlemagne, Timur, Kublai Khan …;
+  Wikidata's dates read by eye against each entry, a reign where the birth is unknown; scratchpad r6/dates-decisions.tsv
+  says why the other 455 stay undated: legendary or biblical, no reliable item, or dates too uncertain).
+- Pipeline after a merge: apply-conflicts, apply-person-dates, apply-entry-pictures, scripts/clean-credits.ps1 (see the pictures below), enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
   run-scan -Page t-encprof + prof/enc-prof-apply, enc2/prof-forms, link-state-texts, make-previews, make-home-data,
   make-search-states, build-state-data, make-enc-states, prof/section-images, prof/regen (460 pages), then verify-pages
   and prof/verify, then scripts/build-pages.ps1 and scripts/check-site.ps1. Headless Edge pages that touch all profiles run in slices of 30–40 (one page for all crashes the
@@ -750,7 +757,7 @@ BUILT_ARTICLES.
 
 ## Teachers' Corner (/teachers/)
 build-pages.ps1 writes the guide (/teachers/: the worksheets, ideas for the classroom, ages, citing and picture
-licences) and the worksheets: /teachers/path-<slug> and /teachers/century-<slug>, only where the data gives a task (two for a century; Oct 2026: 23 paths, 32 centuries - five paths are about undated people or terms, the early BCE centuries are thin).
+licences) and the worksheets: /teachers/path-<slug> and /teachers/century-<slug>, only where the data gives a task (two for a century; Oct 2026: 25 paths, 33 centuries - three paths are about undated people or terms, the early BCE centuries are thin).
 Every task comes from the data, never from made-up claims: stops or events put in order by their first year
 (WsSpread: no two within 10 years on a path, 3 in a century; century events dated "c." are left out), people matched to
 their lifespans ([EpochBuild.W]::Range: a plain two-part lifespan), the numbered states of a century map (profiles
@@ -778,7 +785,7 @@ localStorage epoch-tests {path: {b best, t questions, n tries, d last day}}; My 
   great power of the century (three of the ten strongest profiles of other ages, by the century's seed, no two sharing
   a core word), in which year. 27 of 51: the early BCE centuries and the 2nd century CE have too little.
 - Path pages (TyWhy, TyFirst, TyLived): which stop is on the path for this reason (a reason that names neither its stop
-  nor another option: ClueOwnFault), who was born / which began / which came first, who lived these dates. 22 of 28.
+  nor another option: ClueOwnFault), who was born / which began / which came first, who lived these dates. 23 of 28.
 Orders come from a seeded shuffle (TyShuffle, which may keep the given order: WsShuffle never does, and two options
 would always swap). Hidden in print; outside the Kids-mode fold.
 
@@ -828,16 +835,21 @@ Institute and its register are still named where they are defined and credited (
 ## Roadmap (not built yet)
 Cultures and movements through history as further profile kinds, by the §"Kinds of profile" recipe. Yoruba religion
 has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.
-1,019 people of the encyclopedia have no dates (Charles V, Timur, Barbarossa, Constantine, Kublai Khan, Suleiman … the
-28 quoted in Who Said It? got theirs in Oct 2026; scratchpad r4/undated.js lists them, r4/wd-dates.js reads Wikidata):
-an undated person is on no century or people page and in no year's births and deaths. The 2nd century CE has too few
+455 people of the encyclopedia still have no dates (legendary and biblical figures, and people whose Wikidata dates are
+missing or doubtful; scratchpad r6/dates-decisions.tsv): an undated person is on no century or people page and in no
+year's births and deaths. The 2nd century CE has too few
 dated events and people for Test yourself.
 
 ## Homepage and site search
 - Home (index): two-column hero (h1, search, the world in 1000 CE map from the builder, replaced after load and an idle
-  moment by a slowly turning globe: /d3-geo.js and maps/globe-land.js, coasts thinned to about 0.3°, 30 frames a
-  second (15 on touch screens, at 1.5x at most; the sphere's glow and rim drawn once into canvases), colours read once and again on a theme or Kids change, drawn only while on screen and
-  the tab is shown; the still map stays under reduced motion or Save-Data; a head script sets html.home-globe-on with the
+  moment by a slowly turning globe drawn by /home-globe.js (?v= in index's GLOBE_JS) IN A WORKER on an OffscreenCanvas
+  (canvas.transferControlToOffscreen; the worker imports /d3-geo.js and maps/globe-land.js itself), so the page stays
+  free while it turns: on a slowed phone each frame on the page had been a long task (60 in 6 s, 2.8 s of blocking; now
+  2 and 0.16 s). Without OffscreenCanvas (Safari before 16.4) the same file draws on the page. Coasts thinned to about
+  0.3°, 30 frames a second (15 on touch screens, at 1.5x at most; the sphere's glow and rim drawn once), colours read
+  on the page and posted again on a theme or Kids change, turning only while on screen and the tab is shown (the page
+  posts that too); the canvas is shown once the worker has drawn ('ready'); the still map stays under reduced motion or
+  Save-Data; a head script sets html.home-globe-on with the
   same tests, so the link keeps the globe's 25:14 box from the first paint and nothing moves when it swaps; the canvas's
   [hidden] must win over .home-map canvas, which once showed an empty box under the map), "Ways into history" doors
   with live counts (builder), On this day (one row: the anniversary event's picture with its year and title as a
@@ -1007,7 +1019,11 @@ it uses "backwards".
   (successor-of, merged-into, split-from), lazy mini map, dated connections. Text and pictures come from `data/states/<first char>.json`
   ({t, o, r, e, ru, re, la, c confidence, img, cr {a, l, s}}); pictures in `images/states/<id>.jpg` (Wikipedia lead
   image, free Commons licence only, 320px JPEG; credit shown). Built by scratchpad states/desc scripts
-  (DESC-GUIDE.md for the writers, check.ps1, build-state-data.ps1, pick-state-images.ps1, shrink-images.ps1).
+  (DESC-GUIDE.md for the writers, check.ps1, build-state-data.ps1, pick-state-images.ps1, shrink-images.ps1). 123 more
+  pictures were chosen by eye on 28 Oct 2026 from the 369 states with any candidate left (Wikidata flag, arms or image,
+  Wikipedia lead images): a flag, arms or a period object or picture, never a modern map or a flag invented for a
+  pre-modern state (scratchpad r6: state-picks.tsv, apply-states.js; img-credits.json has them, so build-state-data
+  keeps them). The rest of the 1,722 states without a picture have no free picture of their own.
 - Site search also covers states: `SEARCH_STATES` at the end of search-index.js (states/desc/make-search-states.ps1);
   the builder packs it and stamps its ?v= (see "Homepage and site search").
 - merge.ps1 dedupes only when lifespans overlap and modern countries agree; ambiguous names ("Kingdom of Hungary") resolve to the state alive at the relation's date; relations to Rome before 27 BCE go to the Roman Republic. Bump `polities.json?v=` in connections-map.js (and connections-map.js?v= on all pages) after each merge.

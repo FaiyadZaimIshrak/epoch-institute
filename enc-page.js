@@ -2,7 +2,7 @@
 // days of Today in History; built by scripts/build-pages.ps1). Loaded without ?v= (cached for an hour), after
 // shared-data.js and shared-nav.js. IDX_V is set by the builder: the version of /encyclopedia/index-data.js.
 (function () {
-  var IDX_V = 'cdbdfeb698';
+  var IDX_V = '808af7674c';
   if (typeof initNav === 'function') initNav(document.body.getAttribute('data-nav') || '');
 
   // today's date in citations ("Accessed 23 October 2026")
