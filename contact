@@ -46,7 +46,8 @@
 
 <div class="ct-layout">
   <section class="ct-main" aria-label="Contact form">
-    <form class="ct-form" id="ct-form" action="https://formspree.io/f/mpqkezdj" method="POST" novalidate>
+    <form class="ct-form" id="ct-form" action="/send.php" method="POST" novalidate>
+      <input type="hidden" name="kind" value="contact">
       <fieldset class="ct-topics">
         <legend class="ct-step"><span class="ct-num">1</span> What is your message about?</legend>
         <div class="ct-topic-grid">
@@ -84,7 +85,6 @@
           <p class="ct-err" id="ct-message-err" hidden>Your message is a little short: a sentence or two helps us help you.</p>
         </div>
         <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="_subject" id="ct-subject" value="Message — The Epoch Institute">
         <div class="ct-send-row">
           <button type="submit" class="form-submit ct-send" id="ct-send">Send message &rarr;</button>
           <p class="ct-privacy">We use your email only to reply to you.</p>
@@ -141,18 +141,18 @@
 </div>
 </main>
 
-<script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>
 initNav('contact');
 (function () {
+  // box: the Institute's mailbox that receives the topic (send.php routes it there: keep the two in step)
   var TOPICS = {
-    correction: { label: 'a correction', step: 'Tell us what is wrong', hint: 'Which page, what it says, and what it should say. A source helps us check it quickly.', ph: 'The page says … but it should say … (source: …)', subject: 'Correction' },
-    suggest: { label: 'a suggestion', step: 'What should we add?', hint: 'A state, empire, person, event or theme you would like the Institute to cover, and why it matters.', ph: 'I would like to read about …', subject: 'Suggestion' },
-    write: { label: 'writing for us', step: 'Your idea', hint: 'Finished article? <a href="/community#submit">Submit it on the Community page</a>. Want to join as a contributor? <a href="/contributors">Apply here</a>. Or tell us your idea below.', ph: 'I would like to write about …', subject: 'Writing for the Institute' },
-    data: { label: 'our data and images', step: 'How would you like to use them?', hint: 'Our data is free under CC BY 4.0 (<a href="/dataset">Open Data</a>); pictures carry their own licences, shown under each one.', ph: 'I am working on … and would like to …', subject: 'Data and images' },
-    press: { label: 'press and partnerships', step: 'Tell us about your project', hint: 'Who you are, what you have in mind, and any dates.', ph: 'I am writing from … about …', subject: 'Press and partnerships' },
-    other: { label: 'your message', step: 'Your message', hint: 'Questions, feedback, or just to say hello.', ph: 'Write your message…', subject: 'Message' }
+    correction: { label: 'a correction', step: 'Tell us what is wrong', hint: 'Which page, what it says, and what it should say. A source helps us check it quickly.', ph: 'The page says … but it should say … (source: …)', box: 'research', team: 'the research team' },
+    suggest: { label: 'a suggestion', step: 'What should we add?', hint: 'A state, empire, person, event or theme you would like the Institute to cover, and why it matters.', ph: 'I would like to read about …', box: 'research', team: 'the research team' },
+    write: { label: 'writing for us', step: 'Your idea', hint: 'Finished article? <a href="/community#submit">Submit it on the Community page</a>. Want to join as a contributor? <a href="/contributors">Apply here</a>. Or tell us your idea below.', ph: 'I would like to write about …', box: 'research', team: 'the research team' },
+    data: { label: 'our data and images', step: 'How would you like to use them?', hint: 'Our data is free under CC BY 4.0 (<a href="/dataset">Open Data</a>); pictures carry their own licences, shown under each one.', ph: 'I am working on … and would like to …', box: 'research', team: 'the research team' },
+    press: { label: 'press and partnerships', step: 'Tell us about your project', hint: 'Who you are, what you have in mind, and any dates.', ph: 'I am writing from … about …', box: 'outreach', team: 'our outreach team' },
+    other: { label: 'your message', step: 'Your message', hint: 'Questions, feedback, or just to say hello.', ph: 'Write your message…', box: 'info', team: 'the Institute' }
   };
   var form = document.getElementById('ct-form'), msg = document.getElementById('ct-message'), pageRow = document.getElementById('ct-page-row'), page = document.getElementById('ct-page');
   var topic = 'other';
@@ -162,7 +162,6 @@ initNav('contact');
     document.getElementById('ct-hint').innerHTML = d.hint;
     msg.placeholder = d.ph;
     pageRow.hidden = t !== 'correction';
-    document.getElementById('ct-subject').value = d.subject + ' — The Epoch Institute';
     var r = form.querySelector('input[name="topic"][value="' + t + '"]'); if (r) r.checked = true;
     if (focus) (t === 'correction' && !page.value ? page : document.getElementById('ct-name')).focus({ preventScroll: true });
   }
@@ -170,7 +169,7 @@ initNav('contact');
   // ?topic=correction&page=/state/x (the "Suggest a correction" link in every page's footer)
   var q = new URLSearchParams(location.search);
   if (q.get('page')) page.value = q.get('page').replace(/[^\w\-\/.#?=&%]/g, '');
-  if (TOPICS[q.get('topic')]) setTopic(q.get('topic'), false); else document.getElementById('ct-subject').value = 'Message — The Epoch Institute';
+  if (TOPICS[q.get('topic')]) setTopic(q.get('topic'), false);
 
   function err(id, bad) { document.getElementById(id + '-err').hidden = !bad; var el = document.getElementById(id); el.classList.toggle('form-input-error', bad); bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid'); return bad; }
   ['ct-name', 'ct-email', 'ct-message'].forEach(function (id) { document.getElementById(id).addEventListener('input', function () { err(id, false); }); });
@@ -181,19 +180,20 @@ initNav('contact');
     var firstBad = ['ct-name', 'ct-email', 'ct-message'][bad.indexOf(true)]; if (firstBad) { document.getElementById(firstBad).focus(); return; }
     var btn = document.getElementById('ct-send'), status = document.getElementById('ct-status');
     btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = '';
-    var body = { name: name, email: email, topic: TOPICS[topic].subject, message: text, _subject: document.getElementById('ct-subject').value, _gotcha: form.querySelector('.ct-hp').value };
-    if (topic === 'correction' && page.value.trim()) body.page = page.value.trim();
-    fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(body) })
-      .then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
+    // to the Institute's own mail handler (send.php), which mails it to the topic's mailbox with the reader as Reply-To
+    var fd = new FormData(form); fd.set('topic', topic);
+    if (topic !== 'correction' || !page.value.trim()) fd.delete('page');
+    fetch('/send.php', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd })
+      .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { if (!res.ok || !j.ok) throw new Error(j.error || ''); }); })
+      .then(function () {
         form.hidden = true;
         document.getElementById('ct-done-title').textContent = 'Thank you, ' + name.split(' ')[0] + '.';
-        document.getElementById('ct-done-text').textContent = (topic === 'other' ? 'Your message' : 'Your message about ' + TOPICS[topic].label) + ' is with the research team. We will reply to ' + email + '.';
+        document.getElementById('ct-done-text').textContent = (topic === 'other' ? 'Your message' : 'Your message about ' + TOPICS[topic].label) + ' is with ' + TOPICS[topic].team + '. We will reply to ' + email + '.';
         var done = document.getElementById('ct-done'); done.hidden = false; done.focus();
       })
-      .catch(function () {
+      .catch(function (x) {
         btn.disabled = false; btn.innerHTML = 'Send message &rarr;';
-        status.innerHTML = 'Your message could not be sent. Please try again, or write to <b>research@the-epoch-institute.org</b>.';
+        status.innerHTML = escHtml(x.message || 'Your message could not be sent. Please try again.') + ' You can also write to <b>' + TOPICS[topic].box + '@the-epoch-institute.org</b>.';
       });
   });
   // newsletter in the thank-you panel
@@ -201,8 +201,8 @@ initNav('contact');
     e.preventDefault();
     var em = document.getElementById('ct-nl-email').value.trim(), st = document.getElementById('ct-nl-status');
     if (!isValidEmail(em)) { st.textContent = 'Please enter a valid email address.'; return; }
-    fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email: em, _subject: 'Newsletter signup', source: 'contact page' }) })
-      .then(function (res) { if (!res.ok) throw new Error(); e.target.querySelector('.ct-nl-row').hidden = true; st.textContent = 'Subscribed. Thank you!'; })
+    subscribeNewsletter(em, 'contact page')
+      .then(function () { e.target.querySelector('.ct-nl-row').hidden = true; st.textContent = 'Subscribed. Thank you!'; })
       .catch(function () { st.textContent = 'That did not work; please try again later.'; });
   });
   // copy an address (mail links do nothing for readers without a mail program)

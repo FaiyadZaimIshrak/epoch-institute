@@ -12,15 +12,12 @@ function kidsGentle(title, desc) {
     !/\b(shot|shoot\w*|raid\w*|sack(s|ed)?|troops|arm(y|ies|ed)|coup|defeats?|routs?|occup(y|ies|ied)|captur\w*|bombard\w*|destroys?|surrender\w*|conquer\w*)\b/i.test(title || '');
 }
 
-// The newsletter (Formspree): the same form as FORMSPREE_URL in shared-data.js, which the generated reference pages
-// do not load. Resolves when Formspree accepted the address.
-var NEWSLETTER_URL = 'https://formspree.io/f/mpqkezdj';
+// The newsletter: a sign-up goes to the Institute's own mail handler (send.php), which mails it to info@ and adds the
+// address to the private subscriber list. Resolves when it was accepted; the source names where it was given.
 function subscribeNewsletter(email, source) {
-  return fetch(typeof FORMSPREE_URL !== 'undefined' ? FORMSPREE_URL : NEWSLETTER_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({ email: email, _subject: 'Newsletter signup — ' + source, source: source })
-  }).then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res; });
+  var fd = new FormData(); fd.append('kind', 'newsletter'); fd.append('email', email); fd.append('source', source);
+  return fetch('/send.php', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd })
+    .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { if (!res.ok || !j.ok) throw new Error(j.error || 'HTTP ' + res.status); return j; }); });
 }
 
 // After a daily challenge: the weekly newsletter in one line (none once this browser has signed up). The form is

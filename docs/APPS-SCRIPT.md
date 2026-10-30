@@ -3,8 +3,8 @@
 Since 29 October 2026 the website no longer uses Google Drive or Google Apps Script:
 
 - The opinion on the community page and the contributors list are now part of the site itself.
-- The forms (submit an article, share an opinion, apply to contribute) go to Formspree, like the contact form.
-  Formspree emails each one to you.
+- The forms (submit an article, share an opinion, apply to contribute, contact, newsletter) go to the Institute's own
+  mailboxes, through a small program on the Institute's hosting: see docs/MAIL.md.
 - The home page's announcement poster and the Sati Pratha article were removed.
 
 Google Analytics still counts visitors and is not affected.
@@ -53,15 +53,9 @@ Nothing on the website uses them any more.
 
 ## 4. Where the site's messages go now
 
-Every form on the site posts to one Formspree form, which emails the address of the Formspree account. If that is a
-Gmail address and you would rather receive them at, for example, research@the-epoch-institute.org:
-
-1. On formspree.io, open **Account** and add that address as a linked email. Confirm it.
-2. Click the form in the left sidebar. In its **Workflow** panel, open the **Email** action (the ⋮ icon, then
-   **Settings**) and set the target email to the new address.
-
-On the free plan, Formspree accepts 50 submissions a month across all the forms together. That includes contact
-messages, newsletter sign-ups, articles, opinions and applications.
+Since 29 October 2026 every form goes to the Institute's own mailboxes: research@, outreach@ and info@. Formspree is
+no longer used. docs/MAIL.md says which mailbox gets what, and how to take the old newsletter sign-ups out of
+Formspree before deleting its form.
 
 ## 5. Optional: email forwarding
 
@@ -70,9 +64,4 @@ If research@, outreach@ or info@the-epoch-institute.org forward to a Gmail addre
 
 ## Adding things to the site from now on
 
-Ask Claude, or make these changes yourself:
-
-- **An opinion sent through the form:** add it to the `OPINIONS` list in the `community` page.
-- **An article you accept:** add it to `data/community/articles.json` (title, author, date, paragraphs). The next
-  build makes its page.
-- **A new contributor:** add a card to the list in the `contributors` page.
+docs/MAIL.md, "Putting what arrives on the site", covers articles, opinions, corrections and new contributors.

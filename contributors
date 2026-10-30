@@ -105,12 +105,11 @@
 
 </main>
 
-<script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>
 initNav('contributors');
 
-// ── Apply to contribute: Formspree (FORMSPREE_URL, as on /contact), which emails the application to the Institute ──
+// ── Apply to contribute: the Institute's own mail handler (send.php), which mails it to research@ ───────────────────
 (function () {
   var REQ = ['ap-name', 'ap-email', 'ap-role', 'ap-region', 'ap-area'];
   REQ.forEach(function (id) { document.getElementById(id).addEventListener('input', function () { var el = document.getElementById(id); el.classList.remove('form-input-error'); el.removeAttribute('aria-invalid'); }); });
@@ -122,11 +121,13 @@ initNav('contributors');
     var status = document.getElementById('ap-status');
     if (first) { status.textContent = 'Please fill in the marked fields.'; first.focus(); return; }
     var btn = document.getElementById('ap-submit'); btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = '';
-    fetch(FORMSPREE_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ name: v['ap-name'], email: v['ap-email'], role: v['ap-role'], region: v['ap-region'], interests: v['ap-area'], message: v['ap-message'],
-        _subject: 'Application to contribute — The Epoch Institute', _gotcha: form.querySelector('.ct-hp').value }) })
-      .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); form.hidden = true; var d = document.getElementById('ap-success'); d.hidden = false; d.focus(); })
-      .catch(function () { btn.disabled = false; btn.innerHTML = 'Send my application &rarr;'; status.textContent = 'Your application could not be sent. Please try again in a moment.'; });
+    var fd = new FormData(), f = { kind: 'application', name: v['ap-name'], email: v['ap-email'], role: v['ap-role'], region: v['ap-region'], interests: v['ap-area'],
+      message: v['ap-message'], _gotcha: form.querySelector('.ct-hp').value };
+    Object.keys(f).forEach(function (k) { fd.append(k, f[k]); });
+    fetch('/send.php', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd })
+      .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { if (!res.ok || !j.ok) throw new Error(j.error || ''); }); })
+      .then(function () { form.hidden = true; var d = document.getElementById('ap-success'); d.hidden = false; d.focus(); })
+      .catch(function (x) { btn.disabled = false; btn.innerHTML = 'Send my application &rarr;'; status.textContent = (x.message || 'Your application could not be sent. Please try again in a moment.') + ' You can also write to research@the-epoch-institute.org.'; });
   });
 })();
 </script>

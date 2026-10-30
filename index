@@ -597,12 +597,7 @@ initNav('home');
     if (!isValidEmail(email)) return;
     var btn = form.querySelector('button');
     btn.disabled = true; btn.textContent = 'Subscribing…';
-    fetch(FORMSPREE_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ email: email, _subject: 'Newsletter signup', source: 'homepage' })
-    }).then(function(res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
+    subscribeNewsletter(email, 'homepage').then(function() {
       var msg = document.getElementById('newsletter-msg');
       msg.textContent = "You're subscribed.";
       msg.style.display = 'block';

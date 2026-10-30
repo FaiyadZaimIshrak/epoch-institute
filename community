@@ -140,8 +140,15 @@
 .pagination-btn:hover { border-color: var(--gold); color: var(--gold); }
 .pagination-btn.active { border-color: var(--gold); color: var(--gold); }
 
-/* ── Submit an article: pasted as text, or the Word file by email ── */
-.sf-text { min-height: 220px; }
+/* ── Submit an article: a file, the text pasted, or the file by email ── */
+.sf-text { min-height: 160px; }
+.sf-file { padding: 10px 12px; cursor: pointer; }
+.sf-file::file-selector-button {
+  margin-right: 12px; padding: 6px 14px; cursor: pointer;
+  font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 2px;
+}
+.sf-file::file-selector-button:hover { border-color: var(--gold); }
 .sf-alt {
   display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 6px 0 0;
   font-family: var(--font-text); font-size: 15px; color: var(--muted);
@@ -343,10 +350,15 @@
         <input class="form-input" id="sf-title" type="text" placeholder="The title of your article" required>
       </div>
       <div class="form-row">
-        <label class="form-label" for="sf-text">Your article <span class="form-required">*</span></label>
-        <textarea class="form-input form-textarea sf-text" id="sf-text" placeholder="Paste the whole text of your article here…" required></textarea>
-        <p class="ct-err" id="sf-text-err" hidden>Please paste the whole article (at least 100 words), or email the Word file.</p>
-        <p class="sf-alt">Prefer to send a Word file? Email it to <span class="ct-mail">research@the-epoch-institute.org</span> <button type="button" class="ct-copy" data-copy="research@the-epoch-institute.org">Copy</button></p>
+        <label class="form-label" for="sf-file">Your article <span class="form-required">*</span></label>
+        <input class="form-input sf-file" id="sf-file" type="file" accept=".docx,.doc,.odt,.rtf,.pdf,.txt">
+        <p class="sf-alt">A Word, OpenDocument, RTF, PDF or text file, up to 10 MB. Or paste the text below.</p>
+      </div>
+      <div class="form-row">
+        <label class="form-label" for="sf-text">Or paste the text</label>
+        <textarea class="form-input form-textarea sf-text" id="sf-text" placeholder="Paste the whole text of your article here…"></textarea>
+        <p class="ct-err" id="sf-text-err" hidden>Please attach your article, or paste the whole text (at least 100 words).</p>
+        <p class="sf-alt">Prefer email? Send it to <span class="ct-mail">research@the-epoch-institute.org</span> <button type="button" class="ct-copy" data-copy="research@the-epoch-institute.org">Copy</button></p>
       </div>
       <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="form-submit">Submit →</button>
@@ -401,7 +413,6 @@ function renderArticleCard(b, delay) {
   if (_allOpinions.length > OPINIONS_PREVIEW) document.getElementById('opinions-view-more').style.display = 'block';
 })();
 </script>
-<script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
 <script>
 // ── Section management ────────────────────────────────────────────────────────
@@ -479,14 +490,23 @@ document.getElementById('blog-see-more').addEventListener('click', openArticlesP
 document.getElementById('opinions-page-back').addEventListener('click', function() { showCommSection('community-page'); });
 document.getElementById('articles-page-back').addEventListener('click', function() { showCommSection('community-page'); });
 
-// ── The forms go to Formspree (FORMSPREE_URL, as on /contact), which emails them to the Institute ───────────────
-// It answers in JSON, so a failure shows. _gotcha is the honeypot: filled in, Formspree drops the message as spam.
-function postForm(fields, form) {
-  fields._gotcha = form.querySelector('.ct-hp').value;
-  return fetch(FORMSPREE_URL, {
-    method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(fields)
-  }).then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res; });
+// ── The forms go to the Institute's own mail handler (send.php: articles to research@, opinions to info@) ─────────
+// It answers {ok} or {ok: false, error}. _gotcha is the honeypot: filled in, the handler drops the message. Sent with
+// XMLHttpRequest for its upload progress: a Word file can take a while on a slow line.
+function postForm(fields, form, file, progress) {
+  var fd = new FormData();
+  Object.keys(fields).forEach(function (k) { fd.append(k, fields[k]); });
+  fd.append('_gotcha', form.querySelector('.ct-hp').value);
+  if (file) fd.append('file', file);
+  return new Promise(function (resolve, reject) {
+    var x = new XMLHttpRequest();
+    x.open('POST', '/send.php');
+    x.setRequestHeader('Accept', 'application/json');
+    if (progress && x.upload) x.upload.onprogress = function (e) { if (e.lengthComputable) progress(Math.round(e.loaded / e.total * 100)); };
+    x.onload = function () { var j = {}; try { j = JSON.parse(x.responseText); } catch (e) {} if (x.status === 200 && j.ok) resolve(j); else reject(new Error(j.error || '')); };
+    x.onerror = function () { reject(new Error('')); };
+    x.send(fd);
+  });
 }
 
 // ── Share modal ───────────────────────────────────────────────────────────────
@@ -553,14 +573,15 @@ document.getElementById('sf-profession').addEventListener('change', function() {
   document.getElementById('sf-affil').required = needsAffil;
   document.getElementById('sf-affil-star').style.display = needsAffil ? '' : 'none';
 });
-['sf-name', 'sf-profession', 'sf-affil', 'sf-email', 'sf-title', 'sf-text'].forEach(function (id) {
-  document.getElementById(id).addEventListener('input', function () {
+['sf-name', 'sf-profession', 'sf-affil', 'sf-email', 'sf-title', 'sf-text', 'sf-file'].forEach(function (id) {
+  document.getElementById(id).addEventListener(id === 'sf-file' ? 'change' : 'input', function () {
     this.classList.remove('form-input-error');
-    if (id === 'sf-text') document.getElementById('sf-text-err').hidden = true;
+    if (id === 'sf-text' || id === 'sf-file') { document.getElementById('sf-text-err').hidden = true; document.getElementById('sf-file').classList.remove('form-input-error'); document.getElementById('sf-text').classList.remove('form-input-error'); }
   });
 });
 
-// Share form submit: the article pasted as text (Formspree's free plan takes no files; a Word file goes by email)
+// Share form submit: the article as a file (send.php checks it again: these types, 10 MB at most) or as pasted text
+var ARTICLE_FILES = /\.(docx|doc|odt|rtf|pdf|txt)$/i, ARTICLE_MAX = 10 * 1024 * 1024;
 document.getElementById('share-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var name  = document.getElementById('sf-name').value.trim();
@@ -569,17 +590,22 @@ document.getElementById('share-form').addEventListener('submit', function(e) {
   var email = document.getElementById('sf-email').value.trim();
   var title = document.getElementById('sf-title').value.trim();
   var text  = document.getElementById('sf-text').value.trim();
-  var short = text.split(/\s+/).filter(Boolean).length < 100;
+  var file  = document.getElementById('sf-file').files[0] || null;
+  var errText = document.getElementById('sf-text-err');
+  var fileBad = file && (!ARTICLE_FILES.test(file.name) || file.size > ARTICLE_MAX);
+  var none = !file && text.split(/\s+/).filter(Boolean).length < 100;
   var affilReq = ['Teacher', 'Student', 'Researcher', 'Academic'].indexOf(prof) !== -1;
   var first = null;
 
   [['sf-name', !name], ['sf-profession', !prof], ['sf-affil', affilReq && !affil], ['sf-email', !isValidEmail(email)],
-   ['sf-title', !title], ['sf-text', short]].forEach(function(pair) {
+   ['sf-title', !title], ['sf-file', fileBad || none], ['sf-text', none]].forEach(function(pair) {
     var el = document.getElementById(pair[0]);
     el.classList.toggle('form-input-error', pair[1]);
     if (pair[1] && !first) first = el;
   });
-  document.getElementById('sf-text-err').hidden = !short;
+  errText.textContent = fileBad ? (file.size > ARTICLE_MAX ? 'That file is over 10 MB: please email it to research@the-epoch-institute.org.' : 'Please attach a Word, OpenDocument, RTF, PDF or text file.')
+    : 'Please attach your article, or paste the whole text (at least 100 words).';
+  errText.hidden = !(fileBad || none);
   if (first) { first.focus(); return; }
 
   var form = this;
@@ -588,16 +614,16 @@ document.getElementById('share-form').addEventListener('submit', function(e) {
   errEl.style.display = 'none';
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending…';
-  postForm({
-    name: name, email: email, profession: prof, affiliation: affil, title: title, article: text,
-    _subject: 'Article submission: ' + title + ' — The Epoch Institute'
-  }, form).then(function() {
+  postForm({ kind: 'article', name: name, email: email, profession: prof, affiliation: affil, title: title, article: text }, form, file,
+    function (p) { submitBtn.textContent = p < 100 ? 'Sending… ' + p + '%' : 'Sending…'; }
+  ).then(function() {
     document.getElementById('sf-success').style.display = 'block';
     submitBtn.textContent = 'Sent ✓';
     form.reset();
     document.getElementById('sf-profession').dispatchEvent(new Event('change'));
     setTimeout(closeShareModal, 2500);
-  }).catch(function() {
+  }).catch(function(x) {
+    errEl.textContent = (x.message || 'Couldn’t send — please check your connection and try again.') + ' You can also email it to research@the-epoch-institute.org.';
     errEl.style.display = 'block';
     submitBtn.disabled = false;
     submitBtn.textContent = 'Submit →';
@@ -623,10 +649,11 @@ document.getElementById('opinion-form').addEventListener('submit', function(e) {
   document.getElementById('op-success').style.display = 'none';
   submitBtn.disabled = true;
 
-  postForm({ name: name, opinion: text, _subject: 'Opinion for the Community page — The Epoch Institute' }, form).then(function() {
+  postForm({ kind: 'opinion', name: name, opinion: text }, form).then(function() {
     document.getElementById('op-success').style.display = 'block';
     form.reset();
-  }).catch(function() {
+  }).catch(function(x) {
+    errEl.textContent = x.message || 'Couldn’t send — please check your connection and try again.';
     errEl.style.display = 'block';
   }).then(function() {
     submitBtn.disabled = false;
@@ -646,19 +673,9 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
     document.getElementById('nl-success').style.display = 'block';
   }
 
-  if (typeof FORMSPREE_URL !== 'undefined' && FORMSPREE_URL && !FORMSPREE_URL.includes('PASTE')) {
-    fetch(FORMSPREE_URL, {
-      method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, _subject: 'Newsletter Signup' })
-    }).then(function(res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      showNlSuccess();
-    }).catch(function() {
-      input.classList.add('form-input-error');
-    });
-  } else {
-    showNlSuccess();
-  }
+  subscribeNewsletter(email, 'community').then(showNlSuccess).catch(function() {
+    input.classList.add('form-input-error');
+  });
 });
 document.getElementById('nl-email').addEventListener('input', function() {
   this.classList.remove('form-input-error');

@@ -98,9 +98,9 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   speculationrules block (prefetch, eagerness moderate, same-site links except /contact, /feeds/ and data files;
   Chrome and Edge, others ignore it; only with a mouse, (hover: hover) and (pointer: fine): matching the rules against
   every link cost a slowed phone up to 200 ms on long lists, for a gain only at the tap). Startup measuring (back-to-top, reading progress, enc-page.js's century bar)
-  waits for requestAnimationFrame: reading layout at once forced a whole layout mid-build (363 ms on /about, phone). Newsletter: subscribeNewsletter(email, source) posts to Formspree
-  (FORMSPREE_URL, else its own copy NEWSLETTER_URL: the generated pages have no shared-data.js and the footer form
-  used to throw there); newsletterPrompt(source) is the one-line form shown after the daily quiz and the Daily Ten
+  waits for requestAnimationFrame: reading layout at once forced a whole layout mid-build (363 ms on /about, phone). Newsletter: subscribeNewsletter(email, source) posts
+  {kind: newsletter, email, source} to /send.php (see "The site's mail"); every newsletter form calls it, so a page
+  never needs more than shared-nav.js for it; newsletterPrompt(source) is the one-line form shown after the daily quiz and the Daily Ten
   (form[data-nl], handled in initNav; hidden once localStorage epoch-nl is set). shareThis(text, url, btn):
   navigator.share, else copy; any button with data-share-text (+ data-share-url) shares on click. Reading-path
   journeys: reading pages visited are kept in epoch-seen (capped at 3000); a path page ticks them, shows the
@@ -109,11 +109,12 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   EMPIRES when present, else from /search-profiles.js (SEARCH_PROFILES, written by build-pages.ps1) — the generated
   pages do NOT load shared-data.js. The theme toggle also rewrites the theme-color metas. The page-transition click handler reads a link's address as
   text: an SVG `<a>`'s .href is an SVGAnimatedString (it once sent the country bubbles to /countries/[object …]).
-- /shared-data.js — core data: FORMSPREE_URL, EMPIRES (490: 94 empires, 332 state profiles with an `id`, 18 religions, 16 languages, 15 cultures and 15 movements with a `kind`), EMPIRE_INFO, REGIONS, ERAS, EVENTS, TRANSLATIONS, toSlug().
+- /shared-data.js — core data: EMPIRES (490: 94 empires, 332 state profiles with an `id`, 18 religions, 16 languages, 15 cultures and 15 movements with a `kind`), EMPIRE_INFO, REGIONS, ERAS, EVENTS, TRANSLATIONS, toSlug().
   Loaded by the profiles and the hand pages that use it (index, profiles, explorer, quiz, faiths, passport, search,
-  community, contact, contributors, 404). Since Oct 2026 NOT by about, atlas, connections, dataset, research,
-  research-series, timeline, write and the encyclopedia/, state/ and today-in-history/ indexes (they used nothing in
-  it; 59 KB compressed each): a page that starts to need it must load it again.
+  404). Since Oct 2026 NOT by about, atlas, connections, dataset, research, research-series, timeline, write, community,
+  contact, contributors (these three used it only for the Formspree address until 29 Oct) and the encyclopedia/,
+  state/ and today-in-history/ indexes (they used nothing in it; 59 KB compressed each): a page that starts to need it
+  must load it again.
 - /enc-page.js — script of the generated pages (initNav from body[data-nav], random entry/state, citation copy,
   lazy state mini map, century bars scrolled to the current century on phones); its IDX_V is written by build-pages.ps1
 - /share-card.js — EpochCard: score posters for the games and the daily quiz (see "Sharing"); loaded on demand
@@ -145,15 +146,35 @@ loaded them with `?v=`, a second address: a reader going from the home page to a
 cache-buster: when you change such a file, bump its `?v=` on every page that loads it. data/*.json are sent as
 text/javascript (data/.htaccess) because the server does not compress application/json.
 
-## Key variables (shared-data.js)
-FORMSPREE_URL — the Institute's one Formspree form, which emails every message to the owner: /contact (fields name,
-  email, topic, message, page), the newsletter forms, and on /community the article submissions (name, email,
-  profession, affiliation, title, article: the text pasted, as the free plan takes no files; a Word file goes by email
-  to research@) and the opinions (name, opinion), and /contributors' applications (name, email, role, region,
-  interests, message); each with its own _subject and the _gotcha honeypot. The free plan takes 50 submissions a month
-  across all of them. shared-nav.js keeps the same address as NEWSLETTER_URL for the pages without shared-data.js.
-  Until Oct 2026 the unpublished Research Series essays had "Notify me" forms: those sign-ups are in Formspree with
-  the subject "Notify me: Series 0N — …"
+## The site's mail (send.php)
+Every form posts to /send.php, the Institute's own PHP mail handler on the hosting (PHP 8.2 there, written for 7.4+;
+`GET /send.php` is a health check: php, mail, uploads, maxUpload, private folder), which mails it to the Institute's
+mailboxes on the same server (Exim; MX mail.the-epoch-institute.org), routed by `kind` and /contact's `topic` in ROUTES
+at the top of the file: research@ gets articles, corrections, topic ideas, writing and data questions and applications;
+outreach@ press and partnerships; info@ opinions, newsletter sign-ups and other messages. The recipient never comes
+from the request. Subjects say what it is ("Correction: /page", "Article submission: <title>"); the reader is the
+Reply-To (names always quoted or encoded: "Eve Bcc: x@y" must stay a name); From is "Epoch Institute website" <the
+mailbox>, sent with -f the mailbox. Forms and fields (FIELDS): contact (name, email, page, message), article (name,
+email, profession, affiliation, title, article text, file: .docx .doc .odt .rtf .pdf .txt checked by their first
+bytes, 10 MB; a file or at least 100 words), opinion (name, opinion; at most 5 links), application (name, email, role,
+region, interests, message), newsletter (email, source). Only https://the-epoch-institute.org may post (Origin, else
+Referer); `_gotcha` is the honeypot (thanked, not sent); limits per sender (hashed IP, CF-Connecting-IP first) 5 in
+10 minutes and 30 a day, 300 a day in all (429 with the mailbox to write to). Answers JSON to fetch/XHR (Accept:
+application/json), else a small thank-you or error page (/contact without JavaScript: its form's action is /send.php
+with a hidden kind=contact). The private folder /home/theeiorh/epoch-mail (outside public_html; never deployed; falls
+back to public_html/.epoch-mail with its own deny .htaccess if PHP may not write there) keeps inbox/<year-month>/ (a
+copy of every message and file, pruned after 30 days), subscribers.csv (date, email, source; no address twice: the
+newsletter list), log/<year-month>.log (time, form, mailbox, size, result; no content), rate/ and salt. .user.ini asks
+for a 12 MB request limit and display_errors Off, but the host does not read it (29 Oct 2026: GET still showed its own
+1 GB limit): send.php's own 10 MB check and its ini_set('display_errors', '0') do the work. Only a request over the
+host's post_max_size would print PHP's warning before the script runs (PHP 8), turning the JSON into a page. Pages post with fetch (contact,
+contributors, subscribeNewsletter in shared-nav.js) or XMLHttpRequest (/community's postForm, for upload progress),
+and on failure show the handler's reason and the mailbox to write to. Tests: scratchpad mail/test-send.js (the
+handler under PHP 7.4 and 8.3, with EPOCH_MAIL_TEST: .eml files instead of mail(); portable PHP in
+%LOCALAPPDATA%\epoch-tools\php74 and php83) and mail/test-forms.js (every form in the browser, /send.php routed to
+the local PHP). docs/MAIL.md is the owner's guide. Until 29 Oct 2026 the forms went to Formspree (formspree.io/f/
+mpqkezdj; its old newsletter sign-ups and the Research Series "Notify me" sign-ups are still there: the owner copies
+them, then deletes the form). Do not bring a third-party form service back.
 No Google service but Analytics: until 29 Oct 2026 two Google Apps Scripts (not in this repo, run from the owner's
 Google account over Drive and Sheets) served the home page's announcements (a Drive folder), /community's articles and
 opinions and its two forms, and /contributors' list and form. The site no longer calls them (the user's choice: no
@@ -164,12 +185,13 @@ submissions never published, the opinions and applications sheets) and archiving
 every submission publicly until then). Do not bring Drive, Docs or Apps Script back into the site.
 
 ## Contact, contributors and open data
-- `/contact`: six topic cards (correction, suggest, write, data, press, other: heading, hint, placeholder and the
-  Formspree _subject follow the topic), `?topic=` and `?page=` preselect them; thank-you panel with next steps and a
-  newsletter field; side column with the three addresses (copy buttons; mailto links fail for readers without a mail
-  program), social links and short answers. ContactPage + contactPoint JSON-LD.
-- `/contributors` is "Write for the Institute": three ways to take part, the application form inline (Formspree, see
-  "Key variables"), the list of contributors (static cards in the page: add one before "Your name here").
+- `/contact`: six topic cards (correction, suggest, write, data, press, other: heading, hint, placeholder, the mailbox
+  (`box`, as send.php's ROUTES) and the team named in the thank-you follow the topic), `?topic=` and `?page=` preselect
+  them; thank-you panel with next steps and a newsletter field; side column with the three addresses (copy buttons;
+  mailto links fail for readers without a mail program), social links and short answers. ContactPage + contactPoint
+  JSON-LD. It posts to /send.php (see "The site's mail").
+- `/contributors` is "Write for the Institute": three ways to take part, the application form inline (to research@
+  through /send.php), the list of contributors (static cards in the page: add one before "Your name here").
 - `/dataset` is "Open Data". build-pages.ps1 writes the downloads as root files: epoch-institute-states.csv,
   epoch-institute-state-relations.csv, epoch-institute-states.json (the register; empire capitals from
   empire-facts.js), epoch-institute-power-curves.csv/.json (one row per point), and the page's `build:open-data`
@@ -201,8 +223,8 @@ it). cPanel's Git list still holds the-epoch-institute, an April 2026 clone of R
 inodes): never press Deploy there, its old .cpanel.yml would copy April's files over the site. deploy.sh reproduces
 .cpanel.yml line by line (each step names its line): its lists at the top are the copy rules. New top-level files must match a root pattern there (*.html, *.css, *.js, *.csv, *.json,
 .htaccess, send.php and .user.ini by name; *.txt, *.xml, *.svg, *.png, *.ico) or they won't be deployed. send.php is the
-forms' mail handler (PHP on the host: see docs/MAIL.md); .user.ini gives it a 10 MB upload limit and hides PHP's
-warnings, and .htaccess keeps .user.ini from being served. rsync writes to a temporary file and renames
+forms' mail handler (PHP on the host: see "The site's mail" and docs/MAIL.md); .user.ini holds its PHP settings (which
+this host ignores), and .htaccess keeps .user.ini from being served. rsync writes to a temporary file and renames
 it, so a page opened during a deploy never gets a half-written shared.css/shared-nav.js (with cp it could, and kept
 the broken copy in its cache - Oct 2026). Files are compared by checksum (--checksum --no-times: a fresh checkout gives
 every file a new time), so only changed files are sent and unchanged ones keep their time and Last-Modified; the
