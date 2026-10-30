@@ -11,12 +11,12 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Ten history games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, a globe hunt, picture puzzles and word hunts.">
+<meta name="description" content="Eleven history games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, a globe hunt, picture puzzles and word hunts.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://the-epoch-institute.org/games">
 <meta property="og:type" content="website">
 <meta property="og:title" content="History Games — The Epoch Institute">
-<meta property="og:description" content="Ten games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
+<meta property="og:description" content="Eleven games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="/css/games.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Nine history games for every age: a daily crossword and Connections, emblem pairs, timelines, a globe hunt, which came first, picture puzzles, word hunts and guess the year.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games"}]},{"@type":"WebPage","name":"History Games","url":"https://the-epoch-institute.org/games","description":"Eleven history games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, a globe hunt, picture puzzles and word hunts.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
 <!-- Google tag (gtag.js) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
@@ -40,7 +40,7 @@
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Ten games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Eleven games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
@@ -48,6 +48,7 @@
     <span class="gm-tab-ink" aria-hidden="true"></span>
     <button class="gm-tab" id="tab-pairs" role="tab" aria-selected="true" aria-controls="game-pairs"><span class="gm-tab-ic" aria-hidden="true">&#10022;</span><span class="gm-tab-t">Emblem Pairs</span></button>
     <button class="gm-tab" id="tab-order" role="tab" aria-selected="false" aria-controls="game-order" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#8645;</span><span class="gm-tab-t">Order the Ages</span></button>
+    <button class="gm-tab" id="tab-ranks" role="tab" aria-selected="false" aria-controls="game-ranks" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9650;</span><span class="gm-tab-t">Order the Ranks</span></button>
     <button class="gm-tab" id="tab-hunt" role="tab" aria-selected="false" aria-controls="game-hunt" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9673;</span><span class="gm-tab-t">Globe Hunt</span></button>
     <button class="gm-tab" id="tab-first" role="tab" aria-selected="false" aria-controls="game-first" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9878;</span><span class="gm-tab-t">Which Came First?</span></button>
     <button class="gm-tab" id="tab-puzzle" role="tab" aria-selected="false" aria-controls="game-puzzle" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10070;</span><span class="gm-tab-t">Picture Puzzle</span></button>
@@ -87,6 +88,22 @@
     </div>
     <div class="gm-board"><ol class="gm-order" id="order-list"></ol><div class="gm-done gm-done-inline" id="order-done" hidden></div></div>
     <div class="gm-actions"><button type="button" class="hero-cta" id="order-check">Check the order</button></div>
+  </section>
+
+  <!-- Order the Ranks -->
+  <section class="gm-game" id="game-ranks" role="tabpanel" aria-labelledby="tab-ranks" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">Who stood above whom? Put these ranks of one society in order, the highest at the top. Drag a card by its handle, use the arrows, or tap two cards to swap them, then check.</p>
+      <div class="gm-seg" data-for="ranks" role="group" aria-label="Number of ranks"><button type="button" data-v="4">4 ranks</button><button type="button" data-v="5">5 ranks</button><button type="button" data-v="6">6 ranks</button></div>
+    </div>
+    <p class="gm-rk-soc" id="ranks-soc" aria-live="polite"></p>
+    <div class="gm-stats">
+      <span class="gm-stat"><b id="ranks-checks">0</b> checks</span>
+      <span class="gm-stat gm-stat-best" id="ranks-best"></span>
+      <button type="button" class="gm-again" id="ranks-new">New society &#8635;</button>
+    </div>
+    <div class="gm-board"><ol class="gm-order" id="ranks-list"></ol><div class="gm-done gm-done-inline" id="ranks-done" hidden></div></div>
+    <div class="gm-actions"><button type="button" class="hero-cta" id="ranks-check">Check the order</button></div>
   </section>
 
   <!-- Globe Hunt -->
@@ -262,11 +279,12 @@
 
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=e7c49a6f0f' };</script>
 <script src="/games-emblems.js?v=1"></script>
-<script src="/games-data.js?v=b9d3c1a468"></script>
+<script src="/games-data.js?v=2a1fc29c88"></script>
 <script src="/connections-data.js?v=2d8f39d95d"></script>
 <script src="/shared-nav.js"></script>
-<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=f318e93626';</script>
-<script src="/games.js?v=8"></script>
+<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=0779df309c';</script>
+<script>var RANKS_SRC = '/ranks-data.js?v=30969ee45d';</script>
+<script src="/games.js?v=9"></script>
 
 </body>
 </html>

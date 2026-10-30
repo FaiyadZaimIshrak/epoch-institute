@@ -2,7 +2,7 @@
 // The stylesheets the pages load: shared.css (389 KB, every style of the site, the one file to edit) split by the pages
 // that can use each rule. A page used to load all of it before its first paint, 67 KB compressed; an entry page needed
 // a fifth. Measured 29 Oct 2026: from Europe the host sends a 100 KB file in 4.9 s on average, up to 25 s.
-//   css/pages.css      the generated pages (entries, states, days, countries, centuries, years, people, paths,
+//   css/pages.css      the generated pages (entries, states, days, countries, centuries, years, people, paths, ladders,
 //                      speeches, essays, articles, teachers) and the profiles of every kind
 //   css/<page>.css     each hand page (index, games, atlas ... and 404)
 // A rule goes into a file when every class and id its selector needs can occur on those pages: in their class and id
@@ -18,7 +18,7 @@ const fs = require('fs'), path = require('path'), zlib = require('zlib');
 const R = path.resolve(__dirname, '..'), CHECK = process.argv.includes('--check');
 const HAND = ['index', 'research', 'research-series', 'about', 'contributors', 'dataset', 'explorer', 'profiles', 'community', 'connections', 'atlas', 'quiz',
   'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'write', 'faiths', 'flashcards', 'race', '404.html'];
-const GENERATED = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers'];
+const GENERATED = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies'];
 const PROFILES = ['empire', 'religion', 'language', 'culture', 'movement'];
 // every script counts, data files too: epoch-stats.js looks like data but draws the profiles' radar panel (its title,
 // tags and bars), whose rules a first cut without it left out. The data's words add a few rules (0.4 KB), never miss one.

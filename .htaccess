@@ -30,7 +30,7 @@ AddType font/woff2 .woff2
   RewriteRule ^(about|research|research-series|profiles|community|contributors|dataset|explorer|today-in-history|encyclopedia|paths|connections|state)\.html$ /$1 [R=301,L]
   RewriteRule ^empire/([a-z0-9-]+)\.html$ /empire/$1 [R=301,L]
   RewriteRule ^epoch-institute-empire-dataset\.(csv|json)$ /epoch-institute-power-curves.$1 [R=301,L]
-  RewriteRule ^(encyclopedia|state|today-in-history|countries|centuries|paths|speeches|years|people|teachers)$ /$1/ [R=301,L]
+  RewriteRule ^(encyclopedia|state|today-in-history|countries|centuries|paths|speeches|years|people|teachers|societies)$ /$1/ [R=301,L]
   RewriteRule ^essays/?$ /research-series [R=301,L]
   RewriteRule ^articles/?$ /community [R=301,L]
   # a community article withdrawn in Oct 2026: 410 Gone, so search engines drop it (readers get the 404 page)

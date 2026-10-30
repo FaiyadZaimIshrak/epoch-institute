@@ -81,7 +81,7 @@ initNav('search');
     ['pages', 'Site pages', function (r) { return r.src === 'g' || r.src === 'y'; }]];   // countries, centuries, years, speeches, paths, tools
   var KIND = {}; KINDS.forEach(function (k) { KIND[k[0]] = k; });
   var GLYPH = { person: 'person', event: 'event', place: 'place', work: 'work', idea: 'idea', group: 'group', institution: 'institution', polity: 'polity', state: 'polity', profile: 'polity',
-    country: 'place', century: 'event', year: 'event', speech: 'work', path: 'idea', essay: 'work', page: 'term', term: 'term', factor: 'factor' };
+    country: 'place', century: 'event', year: 'event', speech: 'work', path: 'idea', essay: 'work', ladder: 'group', page: 'term', term: 'term', factor: 'factor' };
   function ord(n) { var a = n % 100, b = n % 10; return n + ((a > 10 && a < 14) ? 'th' : b === 1 ? 'st' : b === 2 ? 'nd' : b === 3 ? 'rd' : 'th'); }
   function centLabel(c) { return c < 0 ? ord(-c) + ' century BCE' : ord(c) + ' century'; }
   function cent(y) { y = Math.round(y); return y < 0 ? -(Math.floor(-y / 100) + 1) : Math.floor(y / 100) + 1; }

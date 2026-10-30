@@ -7,8 +7,9 @@
 //   centuries  images/og/century-<slug>.jpg     the world map of the century, its counts and great powers
 //   speeches   images/og/speech-<slug>.jpg      the key passage and the speaker's portrait
 //   paths      images/og/path-<slug>.jpg        the path's pictures
+//   societies  images/og/society-<slug>.jpg    the social ladder: its pictures and ranks (data/societies)
 //   pages      images/og/page-<name>.jpg, images/og/default.jpg   the main sections
-// Usage: node scripts/make-posters.js [profiles|days|countries|centuries|speeches|paths|pages ...] [--only=a,b] [--out=dir]
+// Usage: node scripts/make-posters.js [profiles|days|countries|centuries|speeches|paths|societies|pages ...] [--only=a,b] [--out=dir]
 // (no kind: all of them; --only: posters whose file name contains one of the words; --out: write there instead,
 // for a look before replacing; --dump=file.json: write the jobs and stop, for another driver of poster.html).
 // Writes a poster only when its bytes changed. Needs Node and Playwright: once,
@@ -73,7 +74,7 @@ const yr = y => y < 0 ? (-y) + ' BCE' : y + ' CE';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // ── jobs ─────────────────────────────────────────────────────────────────────────────────────────────────────────
-const JOBS = { profiles: [], days: [], countries: [], centuries: [], speeches: [], paths: [], pages: [] };
+const JOBS = { profiles: [], days: [], countries: [], centuries: [], speeches: [], paths: [], societies: [], pages: [] };
 
 // profiles kept out of the home page's featured rotation (scripts/home-pictures.tsv "hide") get no emblem on the poster
 const HIDDEN = {}; read('scripts/home-pictures.tsv').split(/\r?\n/).forEach(l => { const c = l.split('\t'); if (c[2] && /\bhide\b/.test(c[2])) HIDDEN[c[0]] = 1; });
@@ -162,6 +163,17 @@ READING_PATHS.forEach(p => {
     url: 'the-epoch-institute.org/paths/' + p.slug, credit: 'Pictures: Wikimedia Commons, credited on the page' });
 });
 
+// the social ladders (data/societies/<slug>.json, written by build-pages.ps1): the society's picture and its ranks'
+// pictures, full size (the data names the 112 px copies), and its ranks from the top. An even number of pictures (6, 4
+// or 2): the mosaic has two columns below six, and an odd count left a hole in the grid
+const fullPic = p => p ? p.replace('/thumbs/', '/') : p;
+const SOCS = fs.existsSync(path.join(ROOT, 'data', 'societies')) ? fs.readdirSync(path.join(ROOT, 'data', 'societies')).filter(f => f.endsWith('.json')).map(f => JSON.parse(read('data/societies/' + f))) : [];
+SOCS.forEach(d => {
+  const all = [d.img].concat(d.tiers.map(t => t.pic)).filter(Boolean).map(fullPic).filter((p, i, a) => a.indexOf(p) === i);
+  const pics = all.slice(0, all.length >= 6 ? 6 : all.length >= 4 ? 4 : all.length >= 2 ? 2 : 1).map(src => ({ src, top: 25 }));
+  JOBS.societies.push({ kind: 'mosaic', file: 'society-' + d.slug + '.jpg', kicker: 'Social ladder · ' + d.period.replace(/\s*\(.*\)\s*$/, ''), title: 'Social Hierarchy of ' + d.of, tease: (d.title || '').split(/:\s*/)[1] || '',
+    pics, chips: d.tiers.slice(0, 6).map(t => t.name), url: 'the-epoch-institute.org/societies/' + d.slug, credit: 'Pictures: Wikimedia Commons, credited on the page' });
+});
 // the main sections
 const fmt = n => Number(n).toLocaleString('en-GB');
 const EMB = EMPIRES.filter(e => !e.id).map(e => '/logos/thumbs/' + e.name + '.png').filter(exists).map(encodeURI);
@@ -211,6 +223,8 @@ const weight = e => { const s = EMPIRE_STATS_BY_NAME[e.name] && EMPIRE_STATS_BY_
 page('race', { kind: 'curves', abs: 10, lines: RACERS.map((e, k) => ({ name: e.name, points: e.points.map(p => [p[0], p[1] * weight(e) / 10]), color: ['#3987e5', '#c98500', '#d55181', '#008300'][k] })),
   from: -260, to: 490, ticks: [[-200, '200 BCE'], [1, '1 CE'], [200, '200 CE'], [400, '400 CE']],
   kicker: 'The rise and fall race', title: 'Who led, and when?', sub: 'Race any four of ' + EMPIRES.filter(e => e.points).length + ' states and empires, year by year', url: 'the-epoch-institute.org/race' });
+page('societies', { kind: 'mosaic', pics: SOCS.map(x => x.img && { src: fullPic(x.img), top: 25 }).filter(Boolean).slice(0, 6), kicker: 'Social ladders', title: 'From emperor to enslaved',
+  tease: 'How ' + SOCS.length + ' societies ranked their people: who stood where, how many they were, and how people rose or fell.', chips: ['Born into history', 'Compare two societies', 'Order the Ranks'], url: 'the-epoch-institute.org/societies/' });
 page('connections', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Connections', title: 'The states as a network', sub: 'Who ruled, succeeded and conquered whom', url: 'the-epoch-institute.org/connections' });
 page('start', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Find your way in', title: 'Where should you start?', sub: 'Four questions, and reading paths that suit you', url: 'the-epoch-institute.org/start' });
 

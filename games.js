@@ -131,7 +131,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   function showGame(g, focus, sub) {
     if (GAMES.indexOf(g) < 0) g = 'pairs';
@@ -224,107 +224,118 @@ initNav('games');
   $('pairs-new').addEventListener('click', newPairs);
   newPairs();
 
+  // ── Order the Ages and Order the Ranks: one board ────────────────────────────
+  // put cards in order: drag one by its grip (the others slide out of its way), use the arrows, or tap two cards to
+  // swap them; each change glides (FLIP). A check marks every card right or wrong, one after another. G: { pre (the
+  // ids: <pre>-list, -checks, -check, -done), key, label, img, reveal (shown on the card once solved), rank (the order
+  // to reach, ascending), onWin(S) }. Returns the board's state, with deal(items) and render(deal).
+  function orderBoard(G) {
+    var S = { id: 0, items: [], sel: null, checks: 0, done: false }, list = $(G.pre + '-list'), drag = null;
+    function render(deal) {
+      list.classList.toggle('is-solved', S.done);
+      list.innerHTML = S.items.map(function (e, i) {
+        return '<li class="gm-orow' + (S.done ? ' is-right' : '') + (deal && !reduce ? ' is-deal' : '') + '" data-k="' + escHtml(G.key(e)) + '" style="--d:' + (reduce ? 0 : i * (S.done ? 130 : 60)) + 'ms">' +
+          '<button type="button" class="gm-ocard" data-i="' + i + '" aria-label="' + escHtml(G.label(e)) + ', position ' + (i + 1) + ' of ' + S.items.length + '"' + (S.done ? ' disabled' : '') + '>' +
+          (G.img(e) ? '<img src="' + escHtml(G.img(e)) + '" alt="" draggable="false">' : '<span class="gm-oph">' + (i + 1) + '</span>') +
+          '<span class="gm-on">' + escHtml(G.label(e)) + (S.done && G.reveal(e) ? '<span class="gm-oy">' + escHtml(G.reveal(e)) + '</span>' : '') + '</span></button>' +
+          (S.done ? '' : '<span class="gm-omove"><button type="button" data-mv="-1" data-i="' + i + '" aria-label="Move up"' + (i === 0 ? ' disabled' : '') + '>&#9650;</button><button type="button" data-mv="1" data-i="' + i + '" aria-label="Move down"' + (i === S.items.length - 1 ? ' disabled' : '') + '>&#9660;</button></span><span class="gm-grip" data-i="' + i + '" title="Drag to move" aria-hidden="true">&#10303;</span>') +
+          '</li>';
+      }).join('');
+    }
+    // re-render with every card gliding from where it was to where it now is (FLIP)
+    function flipRender(mutate) {
+      var first = {};
+      Array.prototype.forEach.call(list.children, function (r) { first[r.getAttribute('data-k')] = r.getBoundingClientRect().top; });
+      mutate(); render(false);
+      if (reduce) return;
+      Array.prototype.forEach.call(list.children, function (r) {
+        var f = first[r.getAttribute('data-k')]; if (f == null) return;
+        var dy = f - r.getBoundingClientRect().top; if (!dy) return;
+        r.style.transition = 'none'; r.style.transform = 'translateY(' + dy + 'px)';
+        requestAnimationFrame(function () { requestAnimationFrame(function () { r.style.transition = ''; r.style.transform = ''; }); });
+      });
+    }
+    function moveItem(from, to, focusMv) {
+      if (S.done || to < 0 || to >= S.items.length || from === to) return;
+      S.sel = null;
+      flipRender(function () { var it = S.items.splice(from, 1)[0]; S.items.splice(to, 0, it); });
+      if (focusMv) { var b = list.querySelector('[data-mv="' + focusMv + '"][data-i="' + to + '"]'); if (b && !b.disabled) b.focus(); else { var c = list.querySelector('.gm-ocard[data-i="' + to + '"]'); if (c) c.focus(); } }
+    }
+    list.addEventListener('click', function (e) {
+      var mv = e.target.closest('[data-mv]');
+      if (mv) { var i = +mv.getAttribute('data-i'), d = +mv.getAttribute('data-mv'); moveItem(i, i + d, d); return; }
+      var card = e.target.closest('.gm-ocard'); if (!card || S.done) return;
+      var j = +card.getAttribute('data-i'), rows = list.children;
+      if (S.sel === null) { S.sel = j; rows[j].classList.add('is-sel'); return; }
+      if (S.sel === j) { S.sel = null; rows[j].classList.remove('is-sel'); return; }
+      var a = S.sel; S.sel = null;
+      flipRender(function () { var t = S.items[a]; S.items[a] = S.items[j]; S.items[j] = t; });
+    });
+    // drag by the handle: the card follows the pointer and the others slide out of its way
+    list.addEventListener('pointerdown', function (e) {
+      var g = e.target.closest('.gm-grip'); if (!g || S.done) return;
+      e.preventDefault();
+      var rows = Array.prototype.slice.call(list.children), i = +g.getAttribute('data-i');
+      var rects = rows.map(function (r) { return r.getBoundingClientRect(); });
+      drag = { i: i, to: i, row: rows[i], rows: rows, rects: rects, y0: e.clientY, id: e.pointerId, slot: rects.length > 1 ? rects[1].top - rects[0].top : rects[0].height };
+      try { g.setPointerCapture(e.pointerId); } catch (err) {}
+      drag.row.classList.add('is-drag');
+    });
+    list.addEventListener('pointermove', function (e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      var dy = e.clientY - drag.y0, r0 = drag.rects[drag.i], c = r0.top + r0.height / 2 + dy, to = drag.i;
+      drag.rects.forEach(function (r, k) { var mid = r.top + r.height / 2; if (k < drag.i && c < mid) to = Math.min(to, k); if (k > drag.i && c > mid) to = Math.max(to, k); });
+      drag.to = to;
+      drag.row.style.transform = 'translateY(' + dy + 'px)';
+      drag.rows.forEach(function (r, k) {
+        if (k === drag.i) return;
+        var s = (drag.i < to && k > drag.i && k <= to) ? -drag.slot : (drag.i > to && k >= to && k < drag.i) ? drag.slot : 0;
+        r.style.transform = s ? 'translateY(' + s + 'px)' : '';
+      });
+    });
+    function endDrag(e) {
+      if (!drag || (e && e.pointerId !== drag.id)) return;
+      var d = drag; drag = null; d.row.classList.remove('is-drag');
+      if (d.to === d.i) { d.rows.forEach(function (r) { r.style.transform = ''; }); return; }
+      S.sel = null;
+      flipRender(function () { var it = S.items.splice(d.i, 1)[0]; S.items.splice(d.to, 0, it); });
+    }
+    list.addEventListener('pointerup', endDrag);
+    list.addEventListener('pointercancel', endDrag);
+    $(G.pre + '-check').addEventListener('click', function () {
+      if (S.done) return;
+      S.checks++; $(G.pre + '-checks').textContent = S.checks; bump($(G.pre + '-checks'));
+      var sorted = S.items.slice().sort(function (a, b) { return G.rank(a) - G.rank(b); }), all = true, rows = list.children, id = S.id;
+      S.items.forEach(function (it, i) {
+        var ok = G.rank(it) === G.rank(sorted[i]); if (!ok) all = false;
+        var r = rows[i]; r.classList.remove('is-right', 'is-wrong', 'is-sel');
+        setTimeout(function () { if (id === S.id) r.classList.add(ok ? 'is-right' : 'is-wrong'); }, reduce ? 0 : i * 110);
+      });
+      S.sel = null; Sfx.play(all ? 'good' : 'bad');
+      if (all) { $(G.pre + '-check').disabled = true; setTimeout(function () { if (id === S.id) { S.done = true; render(false); $(G.pre + '-check').hidden = true; Sfx.play('win'); G.onWin(S); } }, reduce ? 0 : S.items.length * 110 + 300); }
+    });
+    S.deal = function (items) {
+      S.id++; S.items = items; S.sel = null; S.checks = 0; S.done = false; drag = null;
+      $(G.pre + '-checks').textContent = '0'; $(G.pre + '-done').hidden = true; $(G.pre + '-check').disabled = false; $(G.pre + '-check').hidden = false;
+      render(true);
+    };
+    S.render = render;
+    return S;
+  }
+
   // ── Order the Ages ───────────────────────────────────────────────────────────
   // cards from the curated pictures, ordered by the year the builder worked out (an event's first year, a person's
   // birth); the cards of a round lie far enough apart to tell (more cards: closer together)
   function yearOf(e) { return e.lo; }
-  var O = { id: 0, items: [], sel: null, checks: 0, done: false };
+  var O = orderBoard({ pre: 'order', key: function (e) { return e.slug; }, label: function (e) { return e.name; }, img: function (e) { return e.img; }, reveal: function (e) { return e.dates; }, rank: yearOf, onWin: orderWin });
   var orderLevel = seg('order', 5, function () { newOrder(); }, 4);
   function newOrder() {
     var n = +orderLevel(), gap = n <= 4 ? 150 : n === 5 ? 80 : 40, pool = shuffle(DATED.filter(function (c) { return !kids() || c.kid; })), pick = [];
     for (var i = 0; i < pool.length && pick.length < n; i++) { if (pick.every(function (p) { return Math.abs(p.lo - pool[i].lo) >= gap; })) pick.push(pool[i]); }
-    O.id++; O.items = shuffle(pick); O.sel = null; O.checks = 0; O.done = false; drag = null;
-    $('order-checks').textContent = '0'; $('order-done').hidden = true; $('order-check').disabled = false; $('order-check').hidden = false;
     var b = best('order' + n); $('order-best').textContent = b ? 'Best ' + b + (b === 1 ? ' check' : ' checks') : '';
-    renderOrder(true);
+    O.deal(shuffle(pick));
   }
-  function renderOrder(deal) {
-    var list = $('order-list');
-    list.classList.toggle('is-solved', O.done);
-    list.innerHTML = O.items.map(function (e, i) {
-      return '<li class="gm-orow' + (O.done ? ' is-right' : '') + (deal && !reduce ? ' is-deal' : '') + '" data-k="' + escHtml(e.slug) + '" style="--d:' + (reduce ? 0 : i * (O.done ? 130 : 60)) + 'ms">' +
-        '<button type="button" class="gm-ocard" data-i="' + i + '" aria-label="' + escHtml(e.name) + ', position ' + (i + 1) + ' of ' + O.items.length + '"' + (O.done ? ' disabled' : '') + '>' +
-        (e.img ? '<img src="' + escHtml(e.img) + '" alt="" draggable="false">' : '<span class="gm-oph">' + (i + 1) + '</span>') +
-        '<span class="gm-on">' + escHtml(e.name) + (O.done ? '<span class="gm-oy">' + escHtml(e.dates) + '</span>' : '') + '</span></button>' +
-        (O.done ? '' : '<span class="gm-omove"><button type="button" data-mv="-1" data-i="' + i + '" aria-label="Move up"' + (i === 0 ? ' disabled' : '') + '>&#9650;</button><button type="button" data-mv="1" data-i="' + i + '" aria-label="Move down"' + (i === O.items.length - 1 ? ' disabled' : '') + '>&#9660;</button></span><span class="gm-grip" data-i="' + i + '" title="Drag to move" aria-hidden="true">&#10303;</span>') +
-        '</li>';
-    }).join('');
-  }
-  // re-render with every card gliding from where it was to where it now is (FLIP)
-  function flipRender(mutate) {
-    var list = $('order-list'), first = {};
-    Array.prototype.forEach.call(list.children, function (r) { first[r.getAttribute('data-k')] = r.getBoundingClientRect().top; });
-    mutate(); renderOrder(false);
-    if (reduce) return;
-    Array.prototype.forEach.call(list.children, function (r) {
-      var f = first[r.getAttribute('data-k')]; if (f == null) return;
-      var dy = f - r.getBoundingClientRect().top; if (!dy) return;
-      r.style.transition = 'none'; r.style.transform = 'translateY(' + dy + 'px)';
-      requestAnimationFrame(function () { requestAnimationFrame(function () { r.style.transition = ''; r.style.transform = ''; }); });
-    });
-  }
-  function moveItem(from, to, focusMv) {
-    if (O.done || to < 0 || to >= O.items.length || from === to) return;
-    O.sel = null;
-    flipRender(function () { var it = O.items.splice(from, 1)[0]; O.items.splice(to, 0, it); });
-    if (focusMv) { var b = $('order-list').querySelector('[data-mv="' + focusMv + '"][data-i="' + to + '"]'); if (b && !b.disabled) b.focus(); else { var c = $('order-list').querySelector('.gm-ocard[data-i="' + to + '"]'); if (c) c.focus(); } }
-  }
-  $('order-list').addEventListener('click', function (e) {
-    var mv = e.target.closest('[data-mv]');
-    if (mv) { var i = +mv.getAttribute('data-i'), d = +mv.getAttribute('data-mv'); moveItem(i, i + d, d); return; }
-    var card = e.target.closest('.gm-ocard'); if (!card || O.done) return;
-    var j = +card.getAttribute('data-i'), rows = $('order-list').children;
-    if (O.sel === null) { O.sel = j; rows[j].classList.add('is-sel'); return; }
-    if (O.sel === j) { O.sel = null; rows[j].classList.remove('is-sel'); return; }
-    var a = O.sel; O.sel = null;
-    flipRender(function () { var t = O.items[a]; O.items[a] = O.items[j]; O.items[j] = t; });
-  });
-  // drag by the handle: the card follows the pointer and the others slide out of its way
-  var drag = null;
-  $('order-list').addEventListener('pointerdown', function (e) {
-    var g = e.target.closest('.gm-grip'); if (!g || O.done) return;
-    e.preventDefault();
-    var rows = Array.prototype.slice.call($('order-list').children), i = +g.getAttribute('data-i');
-    var rects = rows.map(function (r) { return r.getBoundingClientRect(); });
-    drag = { i: i, to: i, row: rows[i], rows: rows, rects: rects, y0: e.clientY, id: e.pointerId, slot: rects.length > 1 ? rects[1].top - rects[0].top : rects[0].height };
-    try { g.setPointerCapture(e.pointerId); } catch (err) {}
-    drag.row.classList.add('is-drag');
-  });
-  $('order-list').addEventListener('pointermove', function (e) {
-    if (!drag || e.pointerId !== drag.id) return;
-    var dy = e.clientY - drag.y0, r0 = drag.rects[drag.i], c = r0.top + r0.height / 2 + dy, to = drag.i;
-    drag.rects.forEach(function (r, k) { var mid = r.top + r.height / 2; if (k < drag.i && c < mid) to = Math.min(to, k); if (k > drag.i && c > mid) to = Math.max(to, k); });
-    drag.to = to;
-    drag.row.style.transform = 'translateY(' + dy + 'px)';
-    drag.rows.forEach(function (r, k) {
-      if (k === drag.i) return;
-      var s = (drag.i < to && k > drag.i && k <= to) ? -drag.slot : (drag.i > to && k >= to && k < drag.i) ? drag.slot : 0;
-      r.style.transform = s ? 'translateY(' + s + 'px)' : '';
-    });
-  });
-  function endDrag(e) {
-    if (!drag || (e && e.pointerId !== drag.id)) return;
-    var d = drag; drag = null; d.row.classList.remove('is-drag');
-    if (d.to === d.i) { d.rows.forEach(function (r) { r.style.transform = ''; }); return; }
-    O.sel = null;
-    flipRender(function () { var it = O.items.splice(d.i, 1)[0]; O.items.splice(d.to, 0, it); });
-  }
-  $('order-list').addEventListener('pointerup', endDrag);
-  $('order-list').addEventListener('pointercancel', endDrag);
-  $('order-check').addEventListener('click', function () {
-    if (O.done) return;
-    O.checks++; $('order-checks').textContent = O.checks; bump($('order-checks'));
-    var sorted = O.items.slice().sort(function (a, b) { return yearOf(a) - yearOf(b); }), all = true, rows = $('order-list').children, id = O.id;
-    O.items.forEach(function (it, i) {
-      var ok = it === sorted[i]; if (!ok) all = false;
-      var r = rows[i]; r.classList.remove('is-right', 'is-wrong', 'is-sel');
-      setTimeout(function () { if (id === O.id) r.classList.add(ok ? 'is-right' : 'is-wrong'); }, reduce ? 0 : i * 110);
-    });
-    O.sel = null; Sfx.play(all ? 'good' : 'bad');
-    if (all) { $('order-check').disabled = true; setTimeout(function () { if (id === O.id) orderWin(); }, reduce ? 0 : O.items.length * 110 + 300); }
-  });
   function orderWin() {
-    O.done = true; renderOrder(false); $('order-check').hidden = true; Sfx.play('win');
     var n = O.items.length, s = O.checks === 1 ? 3 : O.checks === 2 ? 2 : 1, b = best('order' + n), isBest = !b || O.checks < b;
     if (isBest) { setBest('order' + n, O.checks); $('order-best').textContent = 'Best ' + O.checks + (O.checks === 1 ? ' check' : ' checks'); }
     var d = $('order-done');
@@ -337,6 +348,53 @@ initNav('games');
   }
   $('order-new').addEventListener('click', newOrder);
   newOrder();
+
+  // ── Order the Ranks ──────────────────────────────────────────────────────────
+  // a society's ranks, highest first (ranks-data.js, from the social ladders: only the ranks whose place the sources
+  // agree on, one per level; loaded when the tab first opens). Easy, Medium, Hard = 4, 5, 6 ranks of one society; a
+  // society that has too few for the level sits it out, and no society comes twice in a row. In Kids mode only the
+  // ladders written for children, and each rank's line for young readers when solved.
+  var RK = { all: null, loading: false, last: null, soc: null };
+  var R = orderBoard({ pre: 'ranks', key: function (t) { return String(t[6]); }, label: function (t) { return t[0]; }, img: function (t) { return t[5]; }, reveal: function (t) { return t[1]; }, rank: function (t) { return t[2]; }, onWin: ranksWin });
+  var ranksLevel = seg('ranks', 5, function () { newRanks(); }, 4);
+  function ranksLoad(then) {
+    if (RK.all) return then();
+    if (RK.loading) return;
+    RK.loading = true; $('ranks-soc').textContent = 'Loading the ladders…';
+    var s = document.createElement('script'); s.src = typeof RANKS_SRC !== 'undefined' ? RANKS_SRC : '/ranks-data.js';
+    s.onload = function () { RK.all = window.GAME_RANKS || []; RK.loading = false; then(); };
+    s.onerror = function () { RK.loading = false; $('ranks-soc').textContent = 'The ladders could not load. Check your connection and try again.'; };
+    document.head.appendChild(s);
+  }
+  function newRanks() {
+    ranksLoad(function () {
+      var n = +ranksLevel(), pool = RK.all.filter(function (x) { return x[4].length >= n && (!kids() || x[3]) && x[0] !== RK.last; });
+      if (!pool.length) pool = RK.all.filter(function (x) { return x[4].length >= n; });
+      if (!pool.length) return;
+      var so = pool[Math.floor(Math.random() * pool.length)], pick = shuffle(so[4].slice()).slice(0, n), deal = shuffle(pick.slice());
+      for (var k = 0; k < 6 && deal.every(function (t, i) { return i === 0 || deal[i - 1][2] < t[2]; }); k++) deal = shuffle(pick.slice());   // never dealt in order
+      RK.last = so[0]; RK.soc = so;
+      $('ranks-soc').innerHTML = '<a href="/societies/' + escHtml(so[0]) + '">' + escHtml(so[2]) + '</a>';
+      var b = best('ranks' + n); $('ranks-best').textContent = b ? 'Best ' + b + (b === 1 ? ' check' : ' checks') : '';
+      R.deal(deal);
+    });
+  }
+  function ranksWin() {
+    var so = RK.soc, n = R.items.length, s = R.checks === 1 ? 3 : R.checks === 2 ? 2 : 1, b = best('ranks' + n), isBest = !b || R.checks < b;
+    if (isBest) { setBest('ranks' + n, R.checks); $('ranks-best').textContent = 'Best ' + R.checks + (R.checks === 1 ? ' check' : ' checks'); }
+    var d = $('ranks-done');
+    d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (R.checks === 1 ? 'Right first time!' : 'In order after ' + R.checks + ' checks') + '</p>' +
+      (isBest ? '<p class="gm-newbest">New best!</p>' : '') +
+      '<ol class="gm-rk-why">' + R.items.map(function (t) { return '<li><b>' + escHtml(t[0]) + '</b> ' + escHtml(kids() ? t[4] : t[3]) + '</li>'; }).join('') + '</ol>' +
+      '<p class="gm-rk-more"><a href="/societies/' + escHtml(so[0]) + '">The whole ladder of ' + escHtml(so[2]) + ' &rarr;</a></p>' +
+      '<div class="gm-done-row">' + shareBtn() + '<button type="button" class="hero-cta gm-done-btn">Next round</button></div></div>';
+    share(d, 'Order the Ranks (' + so[1] + '): ' + (R.checks === 1 ? 'right first time' : 'in order after ' + R.checks + ' checks') + ' at The Epoch Institute', 'ranks', { title: 'Order the Ranks', score: n + '/' + n,
+      unit: so[1] + (R.checks === 1 ? ', right first time' : ', after ' + R.checks + ' checks'), stars: s, pics: R.items.map(function (t, i) { return { src: t[5], label: t[0], sub: String(i + 1) }; }) });
+    d.hidden = false; confetti(d);
+    d.querySelector('.gm-done-btn').addEventListener('click', function () { newRanks(); $('ranks-list').scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' }); });
+  }
+  $('ranks-new').addEventListener('click', newRanks);
+  MODS.ranks = { show: function () { if (!R.items.length) newRanks(); } };
 
   // ── Globe Hunt ───────────────────────────────────────────────────────────────
   var Hunt = (function () {

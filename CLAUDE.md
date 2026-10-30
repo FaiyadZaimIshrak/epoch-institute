@@ -8,7 +8,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
 index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
-countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ (each has an .htaccess forcing text/html;
+countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ · societies/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
 articles/ likewise holds the community article pages (/articles → /community).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
@@ -16,14 +16,14 @@ Plus 404.html and generator.html (generator is NOT deployed — see scripts/depl
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Rise and Fall Race, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
+Year, People, Empire Explorer, Rise and Fall Race, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, Social Ladders, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, race, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -239,7 +239,7 @@ it, so a page opened during a deploy never gets a half-written shared.css/shared
 the broken copy in its cache - Oct 2026). Files are compared by checksum (--checksum --no-times: a fresh checkout gives
 every file a new time), so only changed files are sent and unchanged ones keep their time and Last-Modified; the
 server reads the whole site once per deploy to compare (a few minutes). encyclopedia/, state/, today-in-history/,
-countries/, centuries/, paths/, speeches/, years/, people/, essays/, articles/ and teachers/ (GENERATED) use rsync
+countries/, centuries/, paths/, speeches/, years/, people/, essays/, articles/, teachers/ and societies/ (GENERATED) use rsync
 --delete, so pages removed from the repo also disappear from the server (a FILE of the same name at the root is
 removed first: /paths was a file until Oct 2026); nothing else in public_html is deleted except the old files of
 .cpanel.yml's last three lines. Root pages are copied by name (PAGES: index, about, … write, faiths): add new ones
@@ -443,6 +443,20 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   enc2/prof-forms (it rebuilds the rows after fs): it sets the entries' rows back and restores the forms. It also
   gives every entry an `empires` list where it has none: the 55 entries of the speeches release had no list, so
   enc-prof-apply could never record a profile naming them (Frederick Douglass's page listed no profile).
+  Since 30 Oct 2026 the file is edited directly (the R9 composer is not run again). Fixes found while checking the
+  social ladders: chonin (Confucian theory, not law, ranked them below peasants), faxian (his journey 399–412, dates
+  "fl. 399–414"), xiang-jun (the prefectural armies, not the standing army), millet-system (Braude's dating),
+  benin-bronzes (from the 14th century, not Portuguese contact; dates "14th century–1897"), mamluk (often freed);
+  "patterns" kiwalao "Kīwalaʻō"; ibn-battuta's dates are in person-dates.tsv. A fix's old text is replaced everywhere
+  in the entry's line, so a fix whose text also stands in the dates goes after the one that changes the description.
+  "drop" also takes out five names that linked wrongly almost everywhere: "homeland" (Bantustan: 171 entries, 45
+  profiles, 39 state texts), "king of kings" (Negus nagast), "Moon" (Muhu: the Space Race linked an Estonian island),
+  "Kitab" (Kitob) and "astronomy" (Babylonian astronomy); profile-only forms keep the right uses (South Africa's
+  homelands, Aksum's king of kings), and "exclude" ([slug, profile] into ENC_LINKS.ex, which generator.html and the
+  scans honour) keeps the Kitob form off the Sokoto and Ghaznavid profiles, where "Kitab" names books. After the drop
+  the five entries' mention lists were rewritten from the pages (r9b/page-mentions.js + mentions-from-pages.js: 44
+  removed), the state texts unlinked where wrong (scratchpad soc/unlink-states.js: 24 made plain, 9 kept; linked.json
+  in step) and data/enc-states.json patched for those entries only (make-enc-states fresh + r9b/enc-states-patch.js).
   The state and empire profiles were then scanned for these entries alone (the R9 entries, the 56 without a list and
   those given new names): scratchpad t/design/t-encemp-r9.html (polities only, honours ENC_LINKS.ex and self, writes
   base64: --dump-dom reaches PowerShell through the console code page, which once turned "Canton of Zürich" into a
@@ -566,12 +580,12 @@ which never shows once a reader type exists. The homepage also shows "Continue w
 Hand page (noindex) + passport.js: what this browser has read and played, kept in localStorage only (built in Oct 2026
 as "My History"; renamed My Passport, the name readers look for). shared-nav.js
 records every reading page in epoch-seen (profiles of every kind, entries, states, countries, centuries, years,
-people, days, speeches, paths, essays, articles; at most 3000) and the UTC days with a visit in epoch-visits. The
+people, days, speeches, paths, essays, articles, social ladders; at most 3000) and the UTC days with a visit in epoch-visits. The
 page shows pages read, days, the visit run, 28 stamps with their rules and progress (earned stamps are kept in
 epoch-badges, so a broken streak does not take one away; quiz, Daily Ten, Connections, Crossword and Who Said It?
 streaks keep their best run as b), pages by kind, profiles by region (EMPIRES), the 51 centuries visited, paths
 finished (epoch-paths + epoch-seen), Test yourself (epoch-tests: passed at 80% of a page's best score; the "Examined"
-stamp for 10 passed), games played (of 10), recent pages. Share sends a poster of the stamps (share-card.js stamps layout). A backup
+stamp for 10 passed), games played (of 11), recent pages. Share sends a poster of the stamps (share-card.js stamps layout). A backup
 code (`EPOCH1.` + base64 JSON of the epoch-* keys) carries the passport to another browser, e.g. out of an in-app
 browser; restoring adds to what is there (lists joined, best runs kept). Clear asks twice. Linked from the Explore
 menu (desktop and phone), the shelf menu, the footer, the Research Hub ("Play") and the home page's "Continue where you
@@ -588,7 +602,7 @@ writes them, deploy.sh DATA carries them, SPANS_V in passport.js). Hover or a fi
 second tap opens it. window.epochPassport.timeline() / timelineCard() for tests (scratchpad pw/r5-tl.js).
 
 ## /games — History Games
-Hand page, ten client-side games behind tabs with a sliding marker (deep links #pairs #order #hunt #first #puzzle
+Hand page, eleven client-side games behind tabs with a sliding marker (deep links #pairs #order #ranks #hunt #first #puzzle
 #words #year #conn #cross #said; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
 (bump games.js?v= on the page). Level switches (segmented buttons) and bests are kept in localStorage epoch-games; in
 Kids mode an unchosen level starts easy. Every game carries a round token (P.id, O.id, F.id …) that its timers check:
@@ -611,7 +625,14 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   credit, the 94 empires by labelled contact sheets) and games/emblem-final.ps1 (hand list of look-alikes, 8x6
   colour signatures). Re-run both when logos change and bump games-emblems.js?v=.
 - Order the Ages: 4/5/6 dated pictures at least 150/80/40 years apart, ordered by their first year; drag by the
-  grip, arrows, or tap two cards to swap (FLIP animation), a staggered check, then the years.
+  grip, arrows, or tap two cards to swap (FLIP animation), a staggered check, then the years. Its board is
+  orderBoard(G) ({pre, key, label, img, reveal, rank, onWin}: deal, render, drag, arrows, tap-swap, FLIP and check),
+  shared with Order the Ranks.
+- Order the Ranks (#ranks): 4/5/6 ranks of one society (Easy/Medium/Hard), put in order from the top; only `firm`
+  ranks at distinct levels are dealt (see "Social ladders"), from ranks-data.js (GAME_RANKS [slug, short, of, kids,
+  [[name, term, level, why, kid, picture, n]]], written by build-pages.ps1, RANKS_SRC stamped into /games). The check
+  shows each rank's "why"; the finish card links the ladder and shares a pics poster. Kids mode starts at 4 and deals
+  only the Kids ladders.
 - Globe Hunt: d3-geo orthographic globe (/d3-geo.js) loaded on first open; HUNT_SRC in the page holds the ?v= of maps/globe-land.js
   and maps/atlas-data.js (stamped by build-pages.ps1). Famous states (profiles) or all states; five rounds in five
   different regions (no state twice); drag with inertia, wheel/pinch/± zoom, keyboard (arrows turn, +/− zoom, Enter
@@ -731,7 +752,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   military ones only in the title; about 40% of the events). shared-nav.js inserts all of this on every page; the
   CSS shows it only in Kids mode. Games start easy, timers are hidden, sounds are on.
 - /kids is a hand page (always in Kids mode: html data-kids="1" data-kids-always; the star there changes only the
-  other pages): an inline-SVG owl (Hoot), picture and fact of the day (chosen by the date), doors to the games and the crossword,
+  other pages): an inline-SVG owl (Hoot), picture and fact of the day (chosen by the date), doors to the games and the crossword, "Who was who?" (the eight Kids ladders, build:kids-ladders: see "Social ladders"),
   sixteen themes, a site-wide switch, a note for grown-ups. Its build blocks (kids-doors, kids-themes, kids-facts =
   KIDS_FACTS) come from scripts/kids-corner.tsv: `@key, title, introduction, door picture` lines, then
   `entry slug, a line for young readers` (8–12 per theme, pictures checked by eye), and `!, fact, link` lines
@@ -921,7 +942,7 @@ localStorage epoch-tests {path: {b best, t questions, n tries, d last day}}; My 
 - Century pages (build-pages.ps1 TyFirst/TyLived/TyPower/TyYear, from the events, people and great powers on the page;
   only plainly dated events, never "captured Jerusalem 1099"): which came first, who lived these dates, which was a
   great power of the century (three of the ten strongest profiles of other ages, by the century's seed, no two sharing
-  a core word), in which year. 27 of 51: the early BCE centuries and the 2nd century CE have too little.
+  a core word), in which year. 28 of 51: the centuries before the 7th century BCE have too little.
 - Path pages (TyWhy, TyFirst, TyLived): which stop is on the path for this reason (a reason that names neither its stop
   nor another option: ClueOwnFault), who was born / which began / which came first, who lived these dates. 32 of 38.
 Orders come from a seeded shuffle (TyShuffle, which may keep the given order: WsShuffle never does, and two options
@@ -964,6 +985,66 @@ exposes state, standing, presets and rivals for tests (scratchpad pw/r5-race.js)
 Hub (Explore: six cards, .hub-6 = three columns), search, sitemap, llms.txt, poster page-race.jpg (the 2nd-century race
 on one scale: make-posters.js "race", poster.html curves with `abs`).
 
+## Social ladders (/societies/)
+The rank order of 30 societies, ruler to enslaved (Oct 2026): New Kingdom Egypt, Old Babylonia, Achaemenid Persia,
+Athens, Sparta, Rome, Byzantium, feudal Europe, the Vikings, Ancien Régime France, the Russian Empire, the Abbasids, the
+Mamluks, the Ottomans, Classical India, the Mughals, Han, Song and Yuan China, Joseon, Tokugawa Japan, Mali, Benin,
+Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue and Hawaii under the kapu.
+- Source: scripts/societies/<slug>.txt, one file each. Header lines: name, of, short, in, year, period, region,
+  population ("lo-hi million | whose estimate" or "?"), profiles (profile names, comma-separated), nolink (optional:
+  entries the prose's gold links never go to on this page, a name inside a longer one: "Medina" in Deir el-Medina, or
+  another age's thing: the Qing bannermen on Tokugawa; checked against the entries), picture, kids (yes/no: the eight
+  Kids ladders), title (≤70), desc (≤160), intro. Then "== tier" blocks from the top down: level (1 = top; equal levels
+  stand side by side), band (ruler, nobility, religious, specialists, commoners, dependent, outcast, enslaved), name,
+  term (the period's own words), share, sharenote (whose estimate), firm (its place in the order is agreed: only these
+  go into the Order the Ranks game, one per level), terms and people (entry slugs; people are members of the rank,
+  never its rulers), picture (optional: an entry slug chosen by eye, "-" for none; else the first person or term with a
+  picture), text, rise, you (Born into history: every fact in it is in the text), kid (≤140, Kids mode); then
+  "== mobility", "== women", "== sources" (real works only); "== checked", NOTE: and MISSING: lines are the editor's.
+- Shares are honest (the writers' guide, scratchpad soc/SOCIETIES-GUIDE.md): a percentage of the whole population only
+  where a scholar or source gives a number (the writer's arithmetic from one is labelled "roughly"), "?" where nobody
+  counted, "rest" for everyone else (one rank), 0 for a ruler. Labels (SocShare): "No reliable count", "One ruler"
+  (only when the sharenote starts with "One"; else "A handful": Sparta's two kings, Saint-Domingue's governor and
+  intendant), "lo–hi%", "Fewer than 1 in 1,000", and for the rest "About N% (the rest)", or, when some ranks were never counted,
+  "At most N% (the rest)" / "Most people (the rest)" (the `most` flag: the rest then also holds the uncounted ranks).
+- build-pages.ps1 "Social ladders" (script-level names all start with soc: PowerShell names ignore case, $sec would be
+  $SEC) STOPS on a missing key, an unknown band, region, entry, profile or nolink, levels out of order, a malformed
+  share or numbered shares that leave nothing for the rest. It writes /societies/<slug> (header; intro with picture and
+  facts; the ladder as a pyramid with a By rank / To scale switch, bars as wide as the shares, uncounted ranks dashed;
+  a card per rank: picture, kid line, text, "Moving in or out", "How many?", chips; Born into history; mobility;
+  women; Compare; Test yourself: highest of four, lowest of four, "which rank was known as …", "which rank did X belong
+  to"; sources and method; Cite; previous/next; Article JSON-LD; poster society-<slug>.jpg when drawn) and /societies/
+  (Born into history with a society select, Compare, the ladders by region, how to read them), data/societies/<slug>.json
+  ({slug, name, title, of, short, in, year, yl, period, region, pop, img, tiers [n, lv, band, name, term, lbl, w, firm,
+  most, pic, you, kid, rise, why, people]}), ranks-data.js (see /games), scripts/society-links.js (SOCIETY_LINKS
+  {profile: [[url, of]]}: generator.html puts "The social ladder of X →" after the profile's socioeconomy or society
+  section, so regenerate the profiles after a ladder is added or renamed) and the build:kids-ladders block of /kids
+  ("Who was who?": the eight Kids ladders, a picture or rung number and the kid line per rank). The prose (intro, text,
+  rise, mobility, women) is gold-linked by LinkDesc with the society's year ±200 as context (SocLink; without the link
+  tables, as in scratchpad soc/run.ps1, it is only escaped).
+- societies.js (?v= the file's hash, written by the builder): To scale; Born into history draws a rank weighted by the
+  share midpoints ("?" ranks never), says how many in a hundred lived so and the odds of being the ruler (one in the
+  population midpoint), shares a rows poster (share-card.js) and keeps the draws in localStorage epoch-lives; a ladder
+  whose only counted rank is the rest offers "Be born somewhere else" (on the index another society; on a ladder page
+  a link to /societies/?born=1#born, which draws at once). Compare: two ladders side by side, ranks lined up by band,
+  share bars on one scale, the address keeps ?a=&b= (no #compare: the page goes to the comparison itself, after load
+  and the fonts and only if the reader has not scrolled; scrolled there at once, text rewrapping above it when the
+  fonts came moved it, CLS 0.22 in Kids mode on phones; scratchpad soc/cmp-scroll.js). Kids mode shows the kid lines and folds the rest behind "Read the
+  whole story". window.epochSocieties {draw, odds, load} for tests (scratchpad soc/born-test.js: 100,000 draws a ladder
+  within 0.2 points of the weights).
+- Writing: agents drafted in batches of at most five from Wikipedia articles (scratchpad soc/batches, the guide, the
+  reference ladder ref-ancient-rome.txt); every ladder was read in full and its claims checked against the saved
+  articles (soc/wp) or standard scholarship, changes logged in soc/factcheck.md (originals in soc/out-orig). Slavery,
+  caste and colonial ranks of descent and colour are written as the period's law and ideology, never as a natural order,
+  without euphemism, with the people at the bottom given their own lives and resistance. Pictures were chosen by eye on
+  contact sheets (soc/sheet.js; the choices in soc/picks.js, which writes the picture: lines): period objects and
+  depictions only, no modern statues or imagined portraits, maps, logos or another age's picture of a generic term; the
+  "Slavery" entry's picture is an abolitionist medallion, so enslaved ranks have "-" unless the period gives one.
+- Wiring: Explore menu, phone menu and footer; Research Hub card; search pages (kind "ladder", glyph group); shelf
+  and My Passport kind; sitemap; llms.txt; posters (make-posters.js "societies": a mosaic per ladder, and
+  page-societies.jpg); deploy.sh GENERATED and DATA (data/societies); split-css GENERATED; check-site's folders; the
+  root /societies → /societies/ redirect.
+
 ## Voice
 Write in a general, academic register about the past itself. The encyclopedia no longer says "the X profile
 treats/notes/describes …" (786 such frames were rewritten in Oct 2026: a clause after "notes that" stands alone;
@@ -971,12 +1052,22 @@ others read "Accounts of the X describe …"); ledes say "recorded states", not 
 Institute and its register are still named where they are defined and credited (/dataset, About, method notes).
 
 ## Roadmap (not built yet)
+Found while building the social ladders (30 Oct 2026), not done yet:
+- The ladders' MISSING lines name the rank terms and people the encyclopedia lacks (helots, perioikoi, metics,
+  zamindar, yangban, nobi, awlad al-nas, kurtaš, nyamakala, aclla, grands blancs …): add them by the R9 entries process,
+  then the ladders' terms and people lines.
+- The acllahuasi entry's picture is Herrera's portrait of Lloque Yupanqui, not an acllahuasi: give it a true one.
+- Generic link names still linking one thing everywhere, handled on the ladders by nolink: "printing" (the printing
+  press, also for Song woodblock and movable type), "slave trade" (the Atlantic slave trade, also for Viking and Maya
+  trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the
+  messianic figure, also the caliph al-Mahdi).
+- Ladders where only "the rest" is counted (Egypt, the Vikings, India, the Abbasids, Babylonia, Persia, the Maya,
+  Mali, Benin, Kongo, Hawaii) give Born into history one life: a sourced share for a large rank would add another.
 Ideologies as a further profile kind, by the §"Kinds of profile" recipe. Yoruba religion
 has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.
 455 people of the encyclopedia still have no dates (legendary and biblical figures, and people whose Wikidata dates are
 missing or doubtful; scratchpad r6/dates-decisions.tsv): an undated person is on no century or people page and in no
-year's births and deaths. The 2nd century CE has too few
-dated events and people for Test yourself.
+year's births and deaths.
 Found in the R9 checks (29 Oct 2026), not fixed yet:
 - 111 events have no dates, among them both world wars, Waterloo, Carrhae, the Black Death, the Crusades, the Treaty
   of Versailles and the Industrial Revolution, so they are on no century or year page; the Russo-Japanese War says 1905

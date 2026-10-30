@@ -14,7 +14,8 @@
   var TODAY = Math.floor(Date.now() / 864e5);
   var KIND = [['profile', /^\/(empire|religion|language|culture|movement)\//, 'Profiles'], ['entry', /^\/encyclopedia\//, 'Encyclopedia entries'], ['state', /^\/state\//, 'States'],
     ['country', /^\/countries\//, 'Country histories'], ['century', /^\/centuries\//, 'Centuries'], ['year', /^\/years\//, 'Years'], ['day', /^\/today-in-history\//, 'Days of the year'],
-    ['speech', /^\/speeches\//, 'Great speeches'], ['path', /^\/paths\//, 'Reading paths'], ['people', /^\/people\//, 'People by century'], ['essay', /^\/(essays|articles)\//, 'Essays and articles']];
+    ['speech', /^\/speeches\//, 'Great speeches'], ['path', /^\/paths\//, 'Reading paths'], ['people', /^\/people\//, 'People by century'], ['essay', /^\/(essays|articles)\//, 'Essays and articles'],
+    ['ladder', /^\/societies\//, 'Social ladders']];
   function ord(n) { var s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
   var CENTS = [];
   for (var c = 30; c >= 1; c--) CENTS.push([ord(c) + '-century-bce', ord(c) + ' BCE']);
@@ -47,7 +48,7 @@
     S.saidPlayed = Object.keys(games).filter(function (k) { var g = games[k]; return /^said-\d+$/.test(k) && g && g.done; }).length;
     S.cwClean = Object.keys(games).some(function (k) { var g = games[k]; return /^cw-\d+$/.test(k) && g && g.done && !g.gave && !g.c && !g.r; });
     var played = { pairs: games.pairs, order: games.order, year: games.year, puzzle: games['pz-solved'] };
-    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; if (/^said-\d/.test(k)) played.said = 1; });
+    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; if (/^said-\d/.test(k)) played.said = 1; if (/^ranks\d$/.test(k)) played.ranks = 1; });
     S.games = Object.keys(played).filter(function (k) { return played[k]; }).length;
     // Test yourself (test-yourself.js): passed at 80%, by the best score of each page
     var tests = get('epoch-tests', {}) || {}; S.tests = 0; S.testsPassed = 0;
@@ -106,7 +107,7 @@
       ['Crossword', S.cwSolved ? S.cwSolved + ' solved' + (S.cw.n > 1 ? ', ' + S.cw.n + ' days in a row' : '') : 'Not solved yet', '/games#cross'],
       ['Test yourself', S.tests ? S.testsPassed + ' passed of ' + S.tests + ' taken' : 'At the foot of every profile, century and path', '/profiles'],
       ['Who Said It?', S.saidPlayed ? S.saidPlayed + ' played' + (S.said.n > 1 ? ', ' + S.said.n + ' days in a row' : '') : 'Not played yet', '/games#said'],
-      ['Games', S.games + ' of 10 played', '/games']
+      ['Games', S.games + ' of 11 played', '/games']
     ];
     $('pass-play').innerHTML = play.map(function (p) { return '<li><a href="' + p[2] + '"><span class="pass-play-t">' + esc(p[0]) + '</span><span class="pass-play-d">' + esc(p[1]) + '</span></a></li>'; }).join('');
     var rec = get('epoch-recent', []);
@@ -119,7 +120,7 @@
   // data/spans/<c>.json (written by build-pages.ps1, which stamps SPANS_V; only the files these pages need), the
   // profiles from EMPIRES (profileSpan), centuries, people by century and years from their addresses. Lanes on one
   // axis of years, coloured by kind (the --cat slots), drawn when the section nears the screen; a list for the same.
-  var SPANS_V = '6c6effa275';
+  var SPANS_V = '0ca7fafb31';
   var TLK = [['Profiles', 1, 'Profiles', 'Profile'], ['Encyclopedia entries', 0, 'Entries', 'Encyclopedia entry'], ['States', 2, 'States', 'State'], ['Centuries, years, countries and speeches', 3, 'Other pages', '']];   // [label, colour slot, short, one]
   var PROF = {}; if (typeof EMPIRES !== 'undefined' && typeof profileUrl === 'function') EMPIRES.forEach(function (e) { PROF[profileUrl(e)] = e; });
   function yl(y) { return y < 0 ? -y + ' BCE' : y < 1000 ? y + ' CE' : String(y); }

@@ -299,7 +299,7 @@ var SEARCH_TYPES = { person: 'Person', event: 'Event', place: 'Place', polity: '
   institution: 'Institution', term: 'Term', idea: 'Idea', work: 'Work', factor: 'Factor' };
 // the site's own pages (search-pages.js, written by the builder): their label and how much they count for. A tool
 // named like the query is usually what was meant ("atlas", "games"), so pages count most.
-var SEARCH_PAGE_KINDS = { page: ['Page', 25], country: ['Country history', 12], century: ['Century', 15], speech: ['Speech', 5], path: ['Reading path', 5], essay: ['Essay', 5] };
+var SEARCH_PAGE_KINDS = { page: ['Page', 25], country: ['Country history', 12], century: ['Century', 15], speech: ['Speech', 5], path: ['Reading path', 5], essay: ['Essay', 5], ladder: ['Social ladder', 6] };
 function searchFold(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'ʿʾ]/g, ''); }
 // "hastings" means the Battle of Hastings as much as Hastings Banda: a name's words after a leading "Battle of",
 // "Kingdom of" … count almost as its beginning
@@ -476,7 +476,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=383edf3937';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=dc408450c8';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=af3342c0b8';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -672,6 +672,7 @@ function initNav(activePage) {
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
     ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
     ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
+    ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
     ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
     ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'],
     ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'],
@@ -776,6 +777,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/speeches/">Great Speeches</a>
         <a class="footer-link" href="/write">Write in Ancient Scripts</a>
         <a class="footer-link" href="/faiths">Faith Maps</a>
+        <a class="footer-link" href="/societies/">Social Ladders</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
         <a class="footer-link" href="/games">History Games</a>
         <a class="footer-link" href="/flashcards">Flashcards</a>
@@ -914,7 +916,7 @@ function initNav(activePage) {
     var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
       [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path'],
       [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech'], [/^\/essays\/[a-z0-9-]+$/, 'essay'],
-      [/^\/(religion|language|culture|movement)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article']];
+      [/^\/(religion|language|culture|movement)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article'], [/^\/societies\/[a-z0-9-]+$/, 'social ladder']];
     var kind = null;
     if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
       KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
@@ -1073,7 +1075,7 @@ function initNav(activePage) {
     var here = location.pathname.replace(/\/+$/, '') || '/', seen = get('epoch-seen', []);
     if (!Array.isArray(seen)) seen = [];
     // every reading page counts (the passport at /passport reads epoch-seen); epoch-visits: the UTC days with a visit
-    if (/^\/(empire|religion|language|culture|movement|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
+    if (/^\/(empire|religion|language|culture|movement|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles|societies)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
     var vday = Math.floor(Date.now() / 864e5), visits = get('epoch-visits', []);
     if (Array.isArray(visits) && visits[visits.length - 1] !== vday) { visits.push(vday); put('epoch-visits', visits.slice(-400)); }
     function isSeen(h) { return seen.indexOf(String(h || '').replace(/\/+$/, '')) >= 0; }
