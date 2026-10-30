@@ -372,8 +372,8 @@
 <script>var BUILT_ARTICLES = {};</script>
 <!-- /build:articles -->
 <script>
-// The readers' opinions on this page. One sent with the form below (Formspree, by email) is added here once the
-// Institute has read it: { name, text, ts } (ts: when it was sent, in milliseconds).
+// The readers' opinions on this page. One sent with the form below reaches info@ by email (send.php) and is added here
+// once the Institute has read it: { name, text, ts } (ts: when it was sent, in milliseconds).
 var OPINIONS = [
   { name: "Faiyad Zaim Ishrak", text: "Arguably one of the richest datasets on the internet regarding history and civilizations. I didn't even know Africa had such a rich heritage before going through The Epoch Institute's database.", ts: 1778234740978 }
 ];
