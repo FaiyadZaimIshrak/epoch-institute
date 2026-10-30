@@ -12,7 +12,10 @@
 # Sikhism profiles only): a row after fs, put first in byEmpire[profile], and the profile named on the entry with those
 # sections. "drop" takes a name out of an existing entry's row ([slug, text, mode]: "the Thirty", an aka of the Thirty
 # Tyrants, starts further left than "Thirty Years' War" or "Thirty Comrades", so it took them on 155 pages, and "the
-# Combat of the Thirty" on that entry's own page). Idempotent: a second run changes nothing.
+# Combat of the Thirty" on that entry's own page; 30 Oct 2026: "homeland" for Bantustan, "king of kings" for Negus
+# nagast, "Moon" for Muhu, "Kitab" for Kitob and "astronomy" for Babylonian astronomy linked wrongly almost everywhere).
+# "exclude" keeps an entry off one profile's page ([slug, profile] into ENC_LINKS.ex: the Kitob form "Kitab" names book
+# titles on the Sokoto and Ghaznavid profiles). Idempotent: a second run changes nothing.
 # Run it after apply-entry-pictures (that is, after every enc-merge), then clean-credits, make-previews,
 # make-home-data and build-pages; the profiles link the new entries after their next scan (run-scan, enc-prof-apply)
 # and regen-profiles. A scan rebuilds byEmpire and enc2/prof-forms the rows after fs, so run it again after either
@@ -163,7 +166,15 @@ foreach ($x in @($A.forms | Where-Object { $_ })) {
     $L.byEmpire | Add-Member -NotePropertyName $p.Name -NotePropertyValue @(@($ix) + $cur) -Force; $nFirst++
   }
 }
-if ($ins.Count -or $nY -or $nPat -or $nSet -or $nForm -or $nFirst -or $nDrop) {
+$nEx = 0   # "exclude": [slug, profile]: that profile's page never links the entry (ENC_LINKS.ex, which generator.html and the scans honour)
+foreach ($x in @($A.exclude | Where-Object { $_ })) {
+  $s = [string]$x[0]; $p = [string]$x[1]
+  if ($null -eq $L.PSObject.Properties['ex']) { $L | Add-Member -NotePropertyName ex -NotePropertyValue ([pscustomobject]@{}) }
+  $cur = if ($null -ne $L.ex.PSObject.Properties[$p]) { @($L.ex.$p | ForEach-Object { [string]$_ }) } else { @() }
+  if ($cur -contains $s) { continue }
+  $L.ex | Add-Member -NotePropertyName $p -NotePropertyValue @($cur + $s) -Force; $nEx++
+}
+if ($ins.Count -or $nY -or $nPat -or $nSet -or $nForm -or $nFirst -or $nDrop -or $nEx) {
   [IO.File]::WriteAllText("$Repo\encyclopedia-links.js", $el.Substring(0, $i0) + (EncJson $L) + $el.Substring($i1 + 1), $u8)
 }
-"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  pictures replaced: $nPic  descriptions fixed: $nFix"
+"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  exclusions: $nEx  pictures replaced: $nPic  descriptions fixed: $nFix"

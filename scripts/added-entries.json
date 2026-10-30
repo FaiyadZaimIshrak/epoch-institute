@@ -3655,6 +3655,11 @@
    0
   ],
   [
+   "kiwalao",
+   "Kīwalaʻō",
+   0
+  ],
+  [
    "catilinarian-conspiracy",
    "Catilinarian conspiracy",
    0
@@ -4128,6 +4133,46 @@
    "self-strengthening-movement",
    "from the 1860s to the 1880s",
    "from 1861 to 1895"
+  ],
+  [
+   "chonin",
+   "Officially ranked below samurai and peasants in the Tokugawa Shogunate's social hierarchy, they grew wealthy through commerce in cities such as Edo and Osaka.",
+   "Confucian theory placed them below the samurai and the peasants, though historians now hold that in law the commoners were classed, not ranked, beneath the samurai. They grew wealthy through commerce in cities such as Edo and Osaka."
+  ],
+  [
+   "faxian",
+   "399–414 CE in India",
+   "fl. 399–414"
+  ],
+  [
+   "faxian",
+   "staying there during 399–414 CE.",
+   "a journey that lasted from 399 to 412, about ten years of it in India."
+  ],
+  [
+   "xiang-jun",
+   "The xiang jun was the professional standing army of the Song Dynasty. It was very large, with estimates of over one million men under arms at its peak. However, it was notoriously ill-disciplined",
+   "The xiang jun were the prefectural armies of the Song Dynasty: professional troops stationed in the provinces and used largely for labour and transport, while the imperial army (jinjun) was the fighting core. At its peak the whole Song army numbered over one million men, notoriously ill-disciplined"
+  ],
+  [
+   "millet-system",
+   "The system helped the Ottomans govern a diverse population.",
+   "The system helped the Ottomans govern a diverse population. Historians such as Benjamin Braude argue that the formal system of officially recognised millets took shape only in the 18th and 19th centuries; earlier arrangements were looser and varied from place to place."
+  ],
+  [
+   "benin-bronzes",
+   "The site dates the tradition to 1485–1897, from early contact with the Portuguese to the British expedition that looted them from Benin City.",
+   "The oldest date from the 14th century and most from the 15th and 16th, long before the British expedition that looted them from Benin City in 1897; late-19th-century scholars wrongly credited the craft to contact with the Portuguese."
+  ],
+  [
+   "benin-bronzes",
+   "1485–1897",
+   "14th century–1897"
+  ],
+  [
+   "mamluk",
+   "A mamluk was an enslaved soldier, usually of Turkic or Caucasian origin, bought and trained for military service in Islamic states.",
+   "A mamluk was a soldier of slave origin, usually Turkic or Caucasian, bought as a boy and trained for military service in Islamic states, and often freed when his training ended."
   ]
  ],
  "forms": [
@@ -4227,6 +4272,29 @@
      "background"
     ]
    }
+  ],
+  [
+   "bantustan",
+   "homeland",
+   1,
+   {
+    "Republic of South Africa": [
+     "governance"
+    ],
+    "Union of South Africa": [
+     "decline"
+    ]
+   }
+  ],
+  [
+   "negus-nagast",
+   "king of kings",
+   1,
+   {
+    "Aksumite Empire": [
+     "governance"
+    ]
+   }
   ]
  ],
  "drop": [
@@ -4234,6 +4302,41 @@
    "thirty-tyrants",
    "the Thirty",
    2
+  ],
+  [
+   "bantustan",
+   "homeland",
+   1
+  ],
+  [
+   "negus-nagast",
+   "king of kings",
+   1
+  ],
+  [
+   "muhu",
+   "Moon",
+   0
+  ],
+  [
+   "kitob",
+   "Kitab",
+   0
+  ],
+  [
+   "babylonian-astronomy",
+   "astronomy",
+   1
+  ]
+ ],
+ "exclude": [
+  [
+   "kitob",
+   "Sokoto Caliphate"
+  ],
+  [
+   "kitob",
+   "Ghaznavid Empire"
   ]
  ]
 }
