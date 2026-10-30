@@ -132,7 +132,17 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
 - /test-yourself.js — TestYourself.mount(el): the "Test yourself" section at the foot of profiles, century and path
   pages (see "Test yourself"); loaded when the section nears the screen, without `?v=` (10-minute cache)
 - /flashcards.js — the Flashcards page (see "Flashcards")
-- favicon.svg / favicon.ico / apple-touch-icon.png / logo.png (Organization logo in the home page's JSON-LD)
+- favicon.svg / favicon.ico / apple-touch-icon.png / logo.png (Organization logo in the home page's JSON-LD) /
+  favicon-192.png (logo.png downscaled). The icon beside Google's results comes from the HOME PAGE's icon links only, and
+  Google's favicon guide takes BMP, GIF, ICO, PNG or JPEG (not SVG), larger than 48 px: so index lists favicon-192.png
+  first, then the .ico, then the SVG (the other pages keep svg + ico; changing all 40,000 heads would only churn their
+  lastmod). The icons first went up on 23 Oct 2026, so Google's results showed a globe for a while; Search Console's
+  Request indexing on the home page hurries it (docs/SEARCH-CONSOLE.md, the owner's guide: a Domain property verified
+  by a DNS TXT record at Cloudflare, since the late-loaded Analytics tag may fail Google's Analytics check).
+  Every hand page but 404 carries JSON-LD (BreadcrumbList + its page: WebPage, CollectionPage, AboutPage, ContactPage,
+  Map …; the description is the page's own meta description); the home page's Organization and WebSite name
+  alternateName "Epoch Institute" (Google's site name). build-pages.ps1 keeps /connections' "Connections Map of N
+  States" (title, og:title) at the register's count.
 
 Caching (.htaccess): scripts a year, CSS a month, JSON a week, HTML always revalidated (the extensionless hand pages
 get their Cache-Control in the FilesMatch block: ExpiresByType never reached them, and until 29 Oct 2026 they went out

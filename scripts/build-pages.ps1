@@ -2954,6 +2954,10 @@ $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'p
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(switch (@($_[1]).Count) { 5 { ' hub-5' } 6 { ' hub-6' } default { '' } }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'countries', 'atlas', 'centuries', 'explorer', 'paths', 'today', 'speeches', 'games', 'kids') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
+# /connections names the register's size in its title and og:title ("Connections Map of 5,468 States"): kept current
+$cnF = "$Repo\connections"; $cnT = [IO.File]::ReadAllText($cnF, $U8)
+$cnT2 = [regex]::Replace($cnT, 'Connections Map of [\d,]+ States', 'Connections Map of ' + @($POL['nodes']).Count.ToString('N0', $INV) + ' States')
+if ([EpochBuild.W]::WriteIfChanged($cnF, $cnT2)) { $NWRITE++ }
 $hm = WorldDots 1000
 # the hero globe's points: the states of 1000 CE as [lng100, lat100, profile] triplets (the page spins them client-side)
 $hg = New-Object Text.StringBuilder

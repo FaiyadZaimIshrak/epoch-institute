@@ -8,8 +8,9 @@
 <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
 <title>The Epoch Institute — States, Empires and World History</title>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="Five thousand years of history: 490 profiles of states, empires, faiths, cultures and movements, a 32,149-entry encyclopedia and an atlas of 5,468 states.">
 <meta property="og:title" content="The Epoch Institute — States, Empires and World History">
@@ -40,6 +41,7 @@
       "@type": "Organization",
       "@id": "https://the-epoch-institute.org/#org",
       "name": "The Epoch Institute",
+      "alternateName": "Epoch Institute",
       "url": "https://the-epoch-institute.org/",
       "logo": { "@type": "ImageObject", "url": "https://the-epoch-institute.org/logo.png", "width": 512, "height": 512 },
       "description": "The Epoch Institute researches human civilisation: the rise and fall of states and empires across five millennia, through profiles, an encyclopedia, an atlas and open data.",
@@ -56,6 +58,7 @@
       "@type": "WebSite",
       "@id": "https://the-epoch-institute.org/#website",
       "name": "The Epoch Institute",
+      "alternateName": "Epoch Institute",
       "url": "https://the-epoch-institute.org/",
       "inLanguage": "en-GB",
       "publisher": { "@id": "https://the-epoch-institute.org/#org" }
