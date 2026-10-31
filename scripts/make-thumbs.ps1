@@ -1,4 +1,4 @@
-# Small copies of the encyclopedia and state pictures for the places that show them at 56 px or less (list tiles 44 px,
+# Small copies of the encyclopedia, state and social-ladder pictures for the places that show them at 56 px or less (list tiles 44 px,
 # result thumbnails 56 px, chart avatars 28 px): images/encyclopedia/thumbs/<slug>.jpg and images/states/thumbs/<id>.jpg,
 # the shorter side 112 px (twice 56, for sharp phone screens), JPEG quality 80: about a quarter of the picture's bytes.
 # The pages' bigger pictures keep the full files. build-pages.ps1 runs this first and links a thumb only where one
@@ -74,7 +74,7 @@ public static class EpochThumbs {
 }
 '@
 }
-foreach ($d in 'encyclopedia', 'states') {
+foreach ($d in 'encyclopedia', 'states', 'societies') {
   $dir = Join-Path $Repo "images\$d"
   if (Test-Path $dir) { [EpochThumbs]::Run($dir, $Short, $Quality, [bool]$Force) }
 }

@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The pharaoh
 term: nesu (king), hem (Majesty), per-aa (pharaoh)
+local: Nesu
 share: 0
 sharenote: One ruler, with the royal family.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: High officials
 term: tjaty (vizier), ser (official), pat (the elite)
-share: ?
-sharenote: No reliable count: the great officials and their families were a very small part of a population of perhaps 2–3 million.
+local: Seru
+share: est 0.05-0.2
+sharenote: Estimate: the vizier, the great officials and the elite the texts call the pat, with their families, a few thousand people among some 2–3 million.
 firm: yes
 terms: vizier, viceroy-of-kush
 people: amenhotep-huy, panehesy
@@ -50,8 +52,9 @@ level: 3
 band: religious
 name: Priests
 term: hem-netjer (god's servant), wab (pure one)
-share: ?
-sharenote: No reliable count: on modern estimates a great temple had well over 150 full- or part-time priests, a mid-sized one 10–25 and the smallest only one.
+local: Hem-netjer
+share: est 0.5-1.5
+sharenote: Estimate: a great temple had well over 150 full- or part-time priests, a mid-sized one 10–25 and the smallest one; most priests served in rotation a month at a time.
 firm: no
 terms: karnak, amun, harris-papyrus, gods-wife-of-amun
 people: herihor
@@ -65,8 +68,9 @@ level: 4
 band: specialists
 name: Scribes
 term: sesh
-share: ?
-sharenote: No reliable count: on estimates for early Egypt probably less than 1 per cent of the people could read and write, and those few included the officials and priests above.
+local: Sesh
+share: est 0.3-0.7
+sharenote: Estimate: probably less than 1 per cent of Egyptians could read and write, and those few included the officials and priests above.
 firm: no
 terms: egyptian-hieroglyphs, papyrus, thoth
 people:
@@ -80,8 +84,9 @@ level: 5
 band: specialists
 name: Soldiers
 term: mesha (army), seneny (chariot warriors)
-share: ?
-sharenote: No reliable count: Ramesses II led four divisions to Kadesh in 1274 BCE, but the size of the whole army, with its garrisons and families, is unknown.
+local: Mesha
+share: est 2-4
+sharenote: Estimate: an army of some 20,000–30,000 men in the 13th century BCE (Ramesses II took four divisions to Kadesh in 1274 BCE), with garrisons and their families.
 firm: no
 terms: chariot, battle-of-kadesh, medjay
 people:
@@ -96,8 +101,9 @@ level: 6
 band: specialists
 name: Artisans
 term: hemu (craftsmen), sedjem-ash (servants in the Place of Truth)
-share: ?
-sharenote: No reliable count: the royal tomb-builders' village of Deir el-Medina had about 68 houses, but Egypt's craftsmen as a whole were never counted.
+local: Hemu
+share: est 4-8
+sharenote: Estimate: the craftsmen of the temples, the palace and the towns, from the royal tomb-builders of Deir el-Medina (about 68 houses) to village potters and weavers.
 firm: no
 terms:
 people:
@@ -111,8 +117,9 @@ level: 7
 band: commoners
 name: Farmers
 term: ihwty (cultivators), nemhu (free private people)
+local: Ihwty
 share: rest
-sharenote: Everyone not counted in the other ranks: the great majority of Egyptians, most of them farmers and their families. Because no rank below the pharaoh has a reliable count, this also takes in the officials, priests, scribes, soldiers, craftsmen and enslaved people.
+sharenote: Everyone not counted in the other ranks: the great majority of Egyptians, most of them farmers and their families. The other ranks below the pharaoh are estimates, so this share is one too.
 firm: yes
 terms: corvee-labour
 people:
@@ -126,8 +133,9 @@ level: 8
 band: enslaved
 name: Enslaved people
 term: hem, bak (servants), sekeru-ankh (living captives)
-share: ?
-sharenote: No reliable count: royal inscriptions boast of captives by the thousand, but there is no estimate of how many people in Egypt were enslaved.
+local: Bak
+share: est 1-3
+sharenote: Estimate: royal inscriptions boast of captives by the thousand, settled on temple estates and in households; slaves remained a small part of a mostly free farming people.
 firm: yes
 terms: slavery
 people:

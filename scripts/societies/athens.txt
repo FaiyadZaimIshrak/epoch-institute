@@ -18,8 +18,9 @@ level: 1
 band: nobility
 name: Richest citizens
 term: pentakosiomedimnoi (five-hundred-measure men)
-share: ?
-sharenote: No reliable count of the class itself: the richest Athenians who paid for warships and festival choruses, the "liturgical class", are estimated at 300 to 1,200 men, or as many as 1,500–2,000.
+local: Pentakosiomedimnoi
+share: est 0.5-2
+sharenote: Estimate: the liturgical class of 300 to 1,200 men (on some estimates 1,500–2,000), with their families, among 250,000–300,000 people.
 firm: yes
 terms: areopagus
 people: pericles, cimon, alcibiades
@@ -33,8 +34,9 @@ level: 2
 band: nobility
 name: Knights
 term: hippeis (horsemen)
-share: ?
-sharenote: No reliable count: by 431 BCE Athens kept 1,000 citizen cavalrymen, with 200 mounted archers, drawn from this class and the one above, but the class itself was never counted.
+local: Hippeis
+share: est 1-3
+sharenote: Estimate: the 1,000 cavalrymen of 431 BCE and the rest of their class, perhaps 1,000–2,000 men, with their families.
 firm: yes
 terms:
 people:
@@ -48,8 +50,9 @@ level: 3
 band: commoners
 name: Hoplite class
 term: zeugitai (yoked men)
-share: ?
-sharenote: No reliable count: in 431 BCE Thucydides counts 13,000 hoplites in the field army and 16,000 more on garrison duty, the oldest and youngest citizens and the metic hoplites, and scholars debate how many of them were zeugitai.
+local: Zeugitai
+share: est 12-20
+sharenote: Estimate: perhaps 10,000–15,000 citizen men of the hoplite census in 431 BCE (Thucydides counts 13,000 hoplites in the field army and 16,000 more on garrison duty, among them metics), with their families.
 firm: yes
 terms: hoplite, battle-of-marathon
 people: socrates
@@ -63,8 +66,9 @@ level: 4
 band: commoners
 name: Poorer citizens
 term: thetes
+local: Thetes
 share: rest
-sharenote: Everyone not counted in the other ranks: the citizens and their families, among whom the thetes were the majority; adult male citizens numbered perhaps 60,000 in the mid-5th century and about 30,000 in the 4th. This count also takes in the three richer classes, whose numbers are unknown.
+sharenote: Everyone not counted in the other ranks: the citizens and their families among whom the thetes were the majority; adult male citizens numbered perhaps 60,000 in the mid-5th century and about 30,000 in the 4th. The three richer classes are estimates, so this share is one too.
 firm: yes
 terms: battle-of-salamis
 people:
@@ -79,6 +83,7 @@ level: 5
 band: commoners
 name: Metics
 term: metoikoi (resident foreigners)
+local: Metoikoi
 share: 10-20
 sharenote: Roughly: a census of about 317 BCE counted 10,000 metics beside 21,000 citizens (adult men in both cases), and one modern estimate (in James Renshaw's survey) puts the metic men of 431 BCE at about 25,000; with their families perhaps a tenth to a fifth of the population.
 firm: yes
@@ -94,6 +99,7 @@ level: 6
 band: enslaved
 name: Enslaved people
 term: douloi, andrapoda; demosioi (public slaves)
+local: Douloi
 share: 25-40
 sharenote: Roughly: modern estimates put the slaves of Attica at about 80,000 or more in the 5th century, a quarter to a third or more of a population of 250,000–300,000; the 150,000 claimed by the orator Hyperides and the 400,000 of a later census are thought exaggerated.
 firm: yes

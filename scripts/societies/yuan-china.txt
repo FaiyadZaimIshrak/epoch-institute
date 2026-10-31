@@ -16,8 +16,9 @@ intro: Yuan China was ruled by a conquering minority. Kublai Khan, Great Khan of
 == tier
 level: 1
 band: ruler
-name: The emperor (Great Khan)
+name: The emperor and Great Khan
 term: huangdi, khagan (qa'an)
+local: Qa'an
 share: 0
 sharenote: One man, with the imperial family of the Borjigin clan.
 firm: yes
@@ -33,8 +34,9 @@ level: 2
 band: nobility
 name: Mongol princes and imperial in-laws
 term: wang (princes), küregen (imperial sons-in-law)
-share: ?
-sharenote: No reliable count: the princes of Genghis Khan's line and the families that married into it were few, but their households and followers were never counted apart.
+local: Wang
+share: est 0.01-0.05
+sharenote: Estimate: the princes of Genghis Khan's line and the families that married into it were few, though their households and followers were large.
 firm: yes
 terms: borjigin, appanage, kurultai
 people:
@@ -49,8 +51,9 @@ level: 3
 band: nobility
 name: Officials
 term: guan (officials), darughachi (overseers)
-share: ?
-sharenote: No reliable count: offices were few, and the most powerful were reserved for Mongols and semu.
+local: Guan
+share: est 0.1-0.2
+sharenote: Estimate: some 20,000–26,000 officials in the empire, the most powerful offices reserved for Mongols and semu, with their families.
 firm: yes
 terms: semu, imperial-examination
 people: ahmad-fanakati, guo-shoujing, toghto
@@ -65,8 +68,9 @@ level: 4
 band: religious
 name: Clergy
 term: dishi (Imperial Preceptor), toyin (Buddhist monks), xiansheng (Daoist masters), erke'üd (Christian clergy)
-share: ?
-sharenote: No reliable count was found: the clergy of every faith were registered in households of their own.
+local: Toyin
+share: est 0.3-0.6
+sharenote: Estimate: in 1291 the empire registered some 42,000 Buddhist monasteries and 213,000 monks and nuns, with the clergy of other faiths in households of their own.
 firm: no
 terms: tibetan-buddhism, church-of-the-east, quanzhen-school
 people: drogon-chogyal-phagpa, rabban-sauma
@@ -80,8 +84,9 @@ level: 5
 band: religious
 name: Confucian scholars
 term: ru, ruhu (Confucian households)
-share: ?
-sharenote: No reliable count: Confucian scholars were registered in households of their own, but no total for the empire was found.
+local: Ru
+share: est 0.3-1
+sharenote: Estimate: Confucian scholars were registered in households of their own, most of them in the south.
 firm: no
 terms: imperial-examination, neo-confucianism, zaju
 people:
@@ -96,8 +101,9 @@ level: 6
 band: specialists
 name: Merchants
 term: ortogh (partner merchants), shang (merchants)
-share: ?
-sharenote: No reliable count of merchants, from the ortogh partners of the court to the shopkeepers of the southern cities.
+local: Ortogh
+share: est 2-4
+sharenote: Estimate: from the ortogh partners of the court to the shopkeepers of the southern cities.
 firm: no
 terms: paper-money, quanzhou
 people:
@@ -111,8 +117,9 @@ level: 7
 band: specialists
 name: Soldiers
 term: junhu (military households), tammachi, hanjun (Han army), xinfujun ("Newly Adhered" army)
-share: ?
-sharenote: No reliable count for the whole empire: in 1241, before the period, military households made up one household in seven in North China.
+local: Junhu
+share: est 3-6
+sharenote: Estimate: in 1241, before the period, military households made up one household in seven in North China; the empire's military households were a smaller share of the whole.
 firm: no
 terms: tumen
 people:
@@ -126,6 +133,7 @@ level: 8
 band: commoners
 name: Northern Chinese
 term: Han ren
+local: Hanren
 share: 8-14
 sharenote: The census of 1290 recorded some 2 million households in North China against some 12 million in the south: roughly one registered household in seven was northern, and fewer if, as some historians think, millions of southerners escaped the census.
 firm: yes
@@ -141,8 +149,9 @@ level: 9
 band: commoners
 name: Southern Chinese
 term: nanren ("southerners"), manzi
+local: Nanren
 share: rest
-sharenote: Everyone not counted in the other tiers: chiefly the farmers and townspeople of the former Song lands, some 12 million registered households in 1290 and the great majority. This count also takes in the princes, officials, clergy, scholars, merchants, soldiers and enslaved people, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: chiefly the farmers and townspeople of the former Song lands, some 12 million registered households in 1290. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: song-dynasty, red-turban-rebellion
 people:
@@ -157,8 +166,9 @@ level: 10
 band: enslaved
 name: Enslaved people
 term: qukou ("driven people"), nubi
-share: ?
-sharenote: No reliable count: a Yuan scholar, Song Zichen, estimated that the captives held by princes, dignitaries and commanders made up half the people of North China after the conquest of the Jin, but no figure exists for the empire as a whole.
+local: Qukou
+share: est 2-5
+sharenote: Estimate: a Yuan scholar, Song Zichen, estimated that the captives held by princes, dignitaries and commanders made up half the people of North China after the conquest of the Jin; far fewer in the south.
 firm: yes
 terms: slavery
 people:

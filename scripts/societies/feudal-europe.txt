@@ -18,6 +18,7 @@ level: 1
 band: ruler
 name: The king
 term: rex, roi, König, imperator
+local: Rex
 share: 0
 sharenote: One king in each kingdom, with the royal family; in the German lands the king, chosen by the princes, also sought the imperial crown in Rome.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: Great lords
 term: duces, comites, barones, magnates
-share: ?
-sharenote: No reliable count: a small circle of families in each kingdom.
+local: Magnates
+share: est 0.05-0.2
+sharenote: Estimate: a small circle of dukes, counts and barons in each kingdom, with their families, among 30–34 million people.
 firm: yes
 terms: vassal, feudalism, magna-carta
 people: henry-the-lion, william-fitzosbern, theobald-ii-count-of-champagne, simon-de-montfort-6th-earl-of-leicester
@@ -49,8 +51,9 @@ level: 2
 band: religious
 name: Bishops and abbots
 term: episcopi, abbates, prelati
-share: ?
-sharenote: No reliable count: a very small group, though their churches held more than a quarter of the manors of England, by value, in 1086.
+local: Prelati
+share: est 0.005-0.02
+sharenote: Estimate: some 300 bishops and a few thousand abbots in France, England and the German lands.
 firm: yes
 terms: bishop, concordat-of-worms
 people: lanfranc, anselm-of-canterbury, suger, bernard-of-clairvaux
@@ -64,8 +67,9 @@ level: 3
 band: nobility
 name: Knights
 term: milites, chevaliers, Ritter, ministeriales
-share: ?
-sharenote: No reliable count: the number of knights changed greatly over three centuries and was never counted for western Europe.
+local: Milites
+share: est 0.5-1.5
+sharenote: Estimate: England had perhaps 4,500–5,000 knights around 1200 among some 4 million people; with their families roughly 0.5 per cent there, more in France and the German lands.
 firm: yes
 terms: knighthood
 people: william-marshal-1st-earl-of-pembroke, wolfram-von-eschenbach
@@ -80,8 +84,9 @@ level: 4
 band: religious
 name: Priests, monks and nuns
 term: clerici, sacerdotes, monachi, moniales
-share: ?
-sharenote: No reliable count: in England by 1300 about one town-dweller in twenty was a cleric, but their share of the whole population is unknown.
+local: Clerici
+share: est 1-2
+sharenote: Estimate: in England by 1300 about one town-dweller in twenty was a cleric; with the rural parish priests, monks and nuns, perhaps 1–2 per cent of the people.
 firm: no
 terms: cistercians, franciscans, dominican-order
 people: orderic-vitalis, albertus-magnus
@@ -96,6 +101,7 @@ level: 5
 band: commoners
 name: Townspeople
 term: burgenses, bourgeois, Bürger
+local: Burgenses
 share: 5-10
 sharenote: In England, the best-measured kingdom, estimates put town-dwellers at about 5.5 per cent of the people in 1086 and up to 10 per cent by 1377; no comparable count exists for France or the German lands.
 firm: yes
@@ -112,8 +118,9 @@ level: 5
 band: commoners
 name: Jewish communities
 term: Iudaei, servi camerae
-share: ?
-sharenote: No reliable count: England, which kept the best records, had perhaps 5,000 Jews in the mid-13th century and 2,000–3,000 by the 1270s; the figure of 100,000 often given for France in 1306 has no sound basis.
+local: Iudaei
+share: est 0.1-0.5
+sharenote: Estimate: England had perhaps 5,000 Jews in the mid-13th century, about a tenth of a per cent of its people; the communities of France and the German lands were larger, though the figure of 100,000 often given for France in 1306 has no sound basis.
 firm: no
 terms: jews, ashkenazi-jews
 people:
@@ -128,6 +135,7 @@ level: 5
 band: commoners
 name: Free peasants
 term: liberi homines, sokemanni
+local: Liberi homines
 share: 10-15
 sharenote: In England, Domesday Book (1086) listed about 12 per cent of the people it records as freeholders; the share varied widely by region, and no count exists for France or the German lands.
 firm: yes
@@ -144,8 +152,9 @@ level: 6
 band: dependent
 name: Serfs and villeins
 term: servi, villani, nativi, bordarii
+local: Villani
 share: rest
-sharenote: Everyone not counted in the other tiers: the dependent peasants, the great majority (in England in 1086 about two-thirds of the people Domesday Book lists were villeins, bordars and cottars). This count also takes in the lords, knights, clergy, Jewish communities and enslaved people, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: the dependent peasants, the great majority (in England in 1086 about two-thirds of the people Domesday Book lists were villeins, bordars and cottars). Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: villein, serfdom
 people:
@@ -159,8 +168,9 @@ level: 7
 band: enslaved
 name: Enslaved people
 term: servi, theows
-share: ?
-sharenote: No count for the period as a whole: Domesday Book recorded about 28,000 slaves in England in 1086, roughly a tenth of the people it lists, but slavery had disappeared there by the mid-12th century.
+local: Servi
+share: est 0.1-0.5
+sharenote: Estimate: Domesday Book recorded about 28,000 slaves in England in 1086, roughly a tenth of the people it lists, but slavery had disappeared there by the mid-12th century and was rare in France and the German lands by 1200.
 firm: yes
 terms: slavery
 people:

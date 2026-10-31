@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The governor-general and the intendant
 term: gouverneur général, intendant
+local: Gouverneur général
 share: 0
 sharenote: Two royal officials with their households; the king of France ruled from Versailles.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: Great planters and merchants
 term: grands blancs
-share: ?
-sharenote: No count: a small group within the 40,000–45,000 whites of 1789; the colony had some 800 sugar estates, and many of their owners lived in France.
+local: Grands blancs
+share: est 0.3-0.8
+sharenote: Estimate: a small group within the 40,000–45,000 whites of 1789; the colony had some 800 sugar estates, and many of their owners lived in France.
 firm: yes
 terms: grands-blancs, sugarcane
 people:
@@ -50,6 +52,7 @@ level: 3
 band: commoners
 name: Poorer whites
 term: petits blancs
+local: Petits blancs
 share: 6-8
 sharenote: Roughly: the whites numbered some 40,000–45,000 in 1789, about 7–8 per cent of the people, and most of them were petits blancs.
 firm: yes
@@ -65,6 +68,7 @@ level: 4
 band: commoners
 name: Free people of colour
 term: gens de couleur libres, affranchis
+local: Gens de couleur libres
 share: 5-6
 sharenote: About 28,000–32,000 in 1789, almost as many as the whites, against some 452,000 enslaved people: about 5–6 per cent of the population.
 firm: yes
@@ -80,8 +84,9 @@ level: 5
 band: enslaved
 name: Enslaved drivers, craftsmen and house servants
 term: commandeurs, esclaves à talents, domestiques
-share: ?
-sharenote: No count for the colony as a whole: every large estate had its drivers, skilled workers and house servants, most of them born in the colony.
+local: Esclaves à talents
+share: est 8-12
+sharenote: Estimate: every large estate had its drivers, skilled workers and house servants, roughly one enslaved person in eight to ten.
 firm: no
 terms:
 people: jean-jacques-dessalines
@@ -95,8 +100,9 @@ level: 6
 band: enslaved
 name: Enslaved field workers
 term: esclaves de jardin; bossales (born in Africa)
+local: Esclaves de jardin
 share: rest
-sharenote: Everyone not counted above: some 452,000 of the colony's 520,000 people were enslaved in 1789 by one count (406,000–465,000 on others), nearly nine in ten. This count also takes in the grands blancs, the enslaved drivers, craftsmen and house servants, and the maroons, whose numbers are unknown.
+sharenote: Everyone not counted above: the field workers, the great majority of the 406,000–465,000 enslaved people of 1789. The grands blancs, the enslaved drivers, craftsmen and house servants and the maroons are estimates, so this share is one too.
 firm: yes
 terms: slavery, atlantic-slave-trade, haitian-vodou, haitian-creole
 people:
@@ -111,8 +117,9 @@ level: 6
 band: enslaved
 name: Maroons
 term: marrons (Haitian Creole: mawon)
-share: ?
-sharenote: No count: maroon bands sometimes numbered in the thousands, and many more people ran away for short spells.
+local: Marrons
+share: est 0.3-1.5
+sharenote: Estimate: maroon bands sometimes numbered in the thousands, and many more people ran away for short spells.
 firm: no
 terms: maroons
 people:

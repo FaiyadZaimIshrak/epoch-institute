@@ -19,13 +19,20 @@
     return fetch('/data/societies/' + encodeURIComponent(slug) + '.json?v=' + vOf(slug)).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (d) { CACHE[slug] = d; return d; });
   }
-  // "about 85 in every 100 people", "about 1 in 670 people"
-  function odds(w, most) {
-    if (most) return w >= 90 ? 'most people around you' : 'at most ' + Math.round(w) + ' in every 100 people';
-    if (w >= 1) return 'about ' + Math.round(w) + ' in every 100 people';
-    var n = 100 / w, p = Math.pow(10, Math.max(0, Math.floor(Math.log10(n)) - 1));
-    return 'about 1 in ' + (Math.round(n / p) * p).toLocaleString('en-GB') + ' people';
+  // "about 85 in every 100 people", "about 1 in 670 people"; an estimated share says so
+  function odds(w, est) {
+    var s;
+    if (w >= 1) s = 'about ' + Math.round(w) + ' in every 100 people';
+    else { var n = 100 / w, p = Math.pow(10, Math.max(0, Math.floor(Math.log10(n)) - 1)); s = 'about 1 in ' + (Math.round(n / p) * p).toLocaleString('en-GB') + ' people'; }
+    return est ? s + ' (an estimate)' : s;
   }
+  // a rank's name: its own word first, the English name in brackets (t.loc; t.one when they are the same word)
+  function title(t) { return t.loc ? (t.one ? t.loc : t.loc + ' (' + t.name + ')') : t.name; }
+  // a hyphenated word stays on one line ("al-dhimma", "governor-general"), as on the ladder pages
+  function nw(h) { return h.replace(/[^\s<>()]*\w-\w[^\s<>()]*/g, '<span class="soc-nw">$&</span>'); }
+  function titleHtml(t) { return t.loc && !t.one ? '<span class="soc-loc">' + nw(esc(t.loc)) + '</span> <span class="soc-en">(' + nw(esc(t.name)) + ')</span>' : '<span class="soc-loc">' + nw(esc(t.loc || t.name)) + '</span>'; }
+  function lowerFirst(s) { s = String(s).replace(/^The\s+/, ''); return /^\p{Lu}\p{Ll}/u.test(s) ? s.charAt(0).toLowerCase() + s.slice(1) : s; }
+  function inline(t) { return t.loc && !t.one ? t.loc + ' (' + lowerFirst(t.name) + ')' : lowerFirst(t.name); }   // "the pipiltin (nobles)"
   function bigNum(n) {
     if (n >= 1e6) return (Math.round(n / 1e5) / 10).toLocaleString('en-GB') + ' million';
     if (n >= 1e3) return Math.round(n).toLocaleString('en-GB');
@@ -61,19 +68,19 @@
   function lifeHtml(d, t, here) {
     var ruler = d.tiers.filter(function (x) { return x.band === 'ruler' && x.w === 0 && x.lbl === 'One ruler'; })[0];
     var pop = d.pop ? (d.pop[0] + d.pop[1]) / 2 : 0, rank = (here ? '' : '/societies/' + d.slug) + '#rank-' + t.n;
-    var unk = d.tiers.filter(function (x) { return x.w == null; }).length;
+    var est = d.tiers.filter(function (x) { return x.est; }).length;
     var ppl = (t.people || []).slice(0, 3).map(function (p) { return '<a class="tih-tag enc-link" href="/encyclopedia/' + esc(p[0]) + '">' + esc(p[1]) + '</a>'; }).join('');
     return '<div class="soc-life">' + (t.pic ? '<img class="soc-life-pic" src="' + esc(t.pic) + '" alt="" width="88" height="88">' : '') +
       '<div class="soc-life-b"><p class="soc-life-k">You were born in ' + esc(d['in']) + ', around ' + esc(d.yl) + '</p>' +
-      '<h3 class="soc-life-t">' + esc(t.name) + (t.term ? ' <span class="soc-term">' + esc(t.term) + '</span>' : '') + '</h3>' +
-      '<p class="soc-life-odds">Like ' + esc(odds(t.w, t.most)) + '.</p>' +
+      '<h3 class="soc-life-t">' + titleHtml(t) + '</h3>' + (t.term ? '<p class="soc-term">' + esc(t.term) + '</p>' : '') +
+      '<p class="soc-life-odds">Like ' + esc(odds(t.w, t.est)) + '.</p>' +
       '<p class="soc-life-you">' + esc(kids() ? t.kid : t.you) + '</p>' +
       (kids() ? '' : '<p class="soc-life-rise"><b>Could you rise?</b> ' + esc(t.rise) + '</p>') +
       (ppl ? '<div class="tih-tags"><span class="soc-life-ppl">Born to this rank, or reaching it:</span>' + ppl + '</div>' : '') +
       '<div class="soc-life-btns">' + againHtml(d, here) + '<a class="soc-life-more" href="' + esc(rank) + '">About this rank &rarr;</a><button type="button" class="soc-life-share">Share</button></div>' +
-      (ruler && pop ? '<p class="soc-life-note">Your odds of being ' + esc(ruler.name.toLowerCase()) + ' were about one in ' + esc(bigNum(pop)) + '.</p>' : '') +
-      '<p class="soc-life-note">Drawn at random, weighted by each rank&#8217;s share of the people: rough estimates from the sources named on the ladder' +
-      (unk ? '. Ranks no one has counted (' + unk + ' here) are never drawn' : '') + '.</p></div></div>';
+      (ruler && pop ? '<p class="soc-life-note">Your odds of being ' + esc(ruler.loc && !ruler.one ? ruler.loc + ' (' + ruler.name.toLowerCase() + ')' : ruler.name.toLowerCase()) + ' were about one in ' + esc(bigNum(pop)) + '.</p>' : '') +
+      '<p class="soc-life-note">Drawn at random, weighted by each rank&#8217;s share of the people, from the sources named on the ladder' +
+      (est ? '; shares marked est. (' + est + ' here) are estimates where no count survives' : '') + '.</p></div></div>';
   }
   function bornBox(box) {
     var btn = $('.soc-born-btn', box), out = $('.soc-born-out', box), pick = $('#soc-born-pick'), here = $('#soc-data');
@@ -93,12 +100,12 @@
         var again = $('button.soc-again', out);
         if (again) again.addEventListener('click', function () { go(again.hasAttribute('data-other') ? d.slug : null); });
         // the score poster (share-card.js rows): the whole ladder, your rank marked; drawn now, ready when Share is tapped
-        var poster = typeof scoreCard === 'function' ? scoreCard({ title: 'Born into history', score: t.name, unit: d['in'] + ', around ' + d.yl, kids: kids(),
-          rows: d.tiers.map(function (x) { return [x.name, x.lbl, x.n === t.n ? '◀ you' : '']; }), note: 'Like ' + odds(t.w, t.most), cta: 'Where would you have stood?', url: 'the-epoch-institute.org/societies' }) : null;
+        var poster = typeof scoreCard === 'function' ? scoreCard({ title: 'Born into history', score: title(t), unit: d['in'] + ', around ' + d.yl, kids: kids(),
+          rows: d.tiers.map(function (x) { return [title(x), x.lbl, x.n === t.n ? '◀ you' : '']; }), note: 'Like ' + odds(t.w, t.est), cta: 'Where would you have stood?', url: 'the-epoch-institute.org/societies' }) : null;
         $('.soc-life-share', out).addEventListener('click', function (e) {
-          var text = 'I was born among the ' + t.name.toLowerCase() + ' of ' + d['in'] + ', like ' + odds(t.w, t.most) + '. Where would you have stood?';
+          var text = 'I was born among the ' + inline(t) + ' of ' + d['in'] + ', like ' + odds(t.w, t.est) + '. Where would you have stood?';
           var url = 'https://the-epoch-institute.org/societies/' + d.slug + '#born';
-          if (window.sharePoster) window.sharePoster({ text: text, url: url, title: 'Born into history', heading: 'Share your life', image: poster, file: 'epoch-born-' + d.slug + '.jpg', alt: 'Born into history: ' + t.name + ', ' + d['in'] });
+          if (window.sharePoster) window.sharePoster({ text: text, url: url, title: 'Born into history', heading: 'Share your life', image: poster, file: 'epoch-born-' + d.slug + '.jpg', alt: 'Born into history: ' + title(t) + ', ' + d['in'] });
           else if (window.shareThis) window.shareThis(text, url, e.currentTarget);
         });
       }).catch(function () { out.innerHTML = '<p class="soc-life-note">The ladder could not be loaded. Please try again.</p>'; })
@@ -113,8 +120,8 @@
     var ts = d.tiers.filter(function (t) { return t.band === band; });
     if (!ts.length) return '<div class="soc-cmp-cell soc-cmp-none">No such rank</div>';
     return '<div class="soc-cmp-cell">' + ts.map(function (t) {
-      return '<a class="soc-cmp-rank" href="/societies/' + esc(d.slug) + '#rank-' + t.n + '"><span class="soc-cmp-n">' + esc(t.name) + '</span>' + (t.term ? '<span class="soc-term">' + esc(t.term) + '</span>' : '') +
-        '<span class="soc-cmp-bar' + (t.w == null ? ' soc-unk' : t.most ? ' soc-most' : '') + '"><i style="width:' + (t.w == null ? 100 : Math.max(0.6, Math.min(100, t.w))) + '%"></i></span><span class="soc-cmp-s">' + esc(t.lbl) + '</span></a>';
+      return '<a class="soc-cmp-rank" href="/societies/' + esc(d.slug) + '#rank-' + t.n + '"><span class="soc-cmp-n">' + titleHtml(t) + '</span>' + (t.term ? '<span class="soc-term">' + esc(t.term) + '</span>' : '') +
+        '<span class="soc-cmp-bar' + (t.est ? ' soc-est' : '') + '"><i style="width:' + (t.w == null ? 0 : Math.max(0.6, Math.min(100, t.w))) + '%"></i></span><span class="soc-cmp-s">' + esc(t.lbl) + '</span></a>';
     }).join('') + '</div>';
   }
   function compare(a, b, out) {
@@ -124,7 +131,7 @@
       var rows = BANDS.filter(function (bd) { return A.tiers.some(function (t) { return t.band === bd[0]; }) || B.tiers.some(function (t) { return t.band === bd[0]; }); });
       out.innerHTML = '<div class="soc-cmp-grid"><div class="soc-cmp-h"></div><div class="soc-cmp-h"><a href="/societies/' + esc(A.slug) + '">' + esc(A.of) + '</a><span>' + esc(A.period) + '</span></div><div class="soc-cmp-h"><a href="/societies/' + esc(B.slug) + '">' + esc(B.of) + '</a><span>' + esc(B.period) + '</span></div>' +
         rows.map(function (bd) { return '<div class="soc-cmp-band">' + esc(bd[1]) + '</div>' + cmpCol(A, bd[0]) + cmpCol(B, bd[0]); }).join('') + '</div>' +
-        '<p class="soc-life-note">Bars show each rank&#8217;s share of its own society&#8217;s people, on one scale; dashed bars: no one has counted.</p>';
+        '<p class="soc-life-note">Bars show each rank&#8217;s share of its own society&#8217;s people, on one scale; dashed bars are estimates where no count survives.</p>';
     }).catch(function () { out.innerHTML = '<p class="soc-life-note">The ladders could not be loaded. Please try again.</p>'; })
       .then(function () { out.removeAttribute('aria-busy'); });
   }

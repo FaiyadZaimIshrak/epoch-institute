@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The king
 term: wang, imgeum
+local: Wang
 share: 0
 sharenote: One man, with the royal family and the women of the palace.
 firm: yes
@@ -32,10 +33,11 @@ kid: Joseon kings ruled with the help of scholar-officials, and King Sejong gave
 == tier
 level: 2
 band: nobility
-name: Yangban
+name: Scholar-aristocrats
 term: yangban (munban, civil; muban, military), sadaebu
-share: ?
-sharenote: No national count for the 15th and 16th centuries: in the household registers of Daegu, the best-known sample, about 9 per cent of the people were yangban in 1690, and the share may have reached 30 per cent by 1800 as status was bought.
+local: Yangban
+share: est 4-10
+sharenote: Estimate: in the household registers of Daegu about 9 per cent of the people were yangban in 1690; the share was smaller in the 15th and 16th centuries, before status could be bought.
 firm: yes
 terms: yangban, gyeongguk-daejeon, neo-confucianism
 people: jeong-do-jeon, yi-hwang, yi-i, jeong-yak-yong
@@ -50,8 +52,9 @@ level: 3
 band: specialists
 name: Middle people
 term: jungin (chungin), hyangni (local clerks), seoeol (sons of concubines)
-share: ?
-sharenote: No reliable count: the smallest of the status groups.
+local: Jungin
+share: est 0.5-2
+sharenote: Estimate: the smallest of the status groups: the technical officials, interpreters, physicians and local clerks.
 firm: yes
 terms:
 people: kim-hong-do
@@ -65,8 +68,9 @@ level: 4
 band: commoners
 name: Commoners
 term: sangmin, yangin ("good people")
+local: Sangmin
 share: rest
-sharenote: Everyone not counted in the other tiers: chiefly farming families, the majority. This count also takes in the yangban, the middle people and the outcasts, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: chiefly farming families, the majority. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: hangul
 people:
@@ -81,6 +85,7 @@ level: 5
 band: enslaved
 name: Enslaved people
 term: nobi; gongnobi (state-owned), sanobi (privately owned)
+local: Nobi
 share: 30-40
 sharenote: At least 30 per cent of the people in the 15th–17th centuries, and perhaps 40 per cent in the south, on the estimates usually cited (James Palais and others); far fewer in the north; in the registers of Daegu only about 1.5 per cent by 1858.
 firm: yes
@@ -97,8 +102,9 @@ level: 5
 band: outcast
 name: Outcasts
 term: baekjeong, mudang (shamans), gwangdae (entertainers)
-share: ?
-sharenote: No reliable count of the outcast communities.
+local: Baekjeong
+share: est 1-3
+sharenote: Estimate: the baekjeong butchers and tanners, the shamans and the entertainers, a small part of the lowborn.
 firm: yes
 terms: cheonmin
 people:

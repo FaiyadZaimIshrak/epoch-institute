@@ -5,7 +5,7 @@ in: the Abbasid Caliphate
 year: 850
 period: 750–945 (from the Abbasid Revolution to the Buyid takeover of Baghdad)
 region: Islamic Caliphates & Middle East
-population: ? | no estimate exists for the caliphate as a whole; a modern model by Robert Allen and Leander Heldring (2016) puts Iraq alone at about 5.8 million people around 800
+population: est 30-50 million | Estimate: the sum of modern figures for its lands around 850, with Iraq about 5.8 million (Robert Allen and Leander Heldring's model), Egypt 3–5 million, and Iran, Syria, Arabia and North Africa together some 20–35 million more; no estimate for the whole caliphate rests on a count
 profiles: Abbasid Caliphate
 nolink: ashina-clan, mahdi
 picture: house-of-wisdom
@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The caliph
 term: khalīfa, amīr al-muʾminīn
+local: Khalīfa
 share: 0
 sharenote: One man, with his household and harem.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: The Hashimite family
 term: Banū Hāshim, Hāshimī
-share: ?
-sharenote: No reliable count of the Abbasid and Alid families.
+local: Banū Hāshim
+share: est 0.02-0.1
+sharenote: Estimate: the Abbasid and Alid lines and their households, a few thousand to some tens of thousands of people by the 9th century, among 30–50 million.
 firm: no
 terms: banu-hashim, alids
 people: al-muwaffaq
@@ -50,8 +52,9 @@ level: 3
 band: nobility
 name: Viziers and secretaries
 term: wazīr, kātib (pl. kuttāb)
-share: ?
-sharenote: No reliable count of the secretaries in the government offices.
+local: Kuttāb
+share: est 0.02-0.1
+sharenote: Estimate: a few thousand secretaries in the government offices of Baghdad, Samarra and the provinces, with their families.
 firm: no
 terms: vizier, barmakids
 people:
@@ -66,8 +69,9 @@ level: 3
 band: specialists
 name: Soldiers
 term: jund, abnāʾ al-dawla, ghilmān
-share: ?
-sharenote: No count of the empire's people allows a share: al-Mu'tasim's Turkish guard numbered perhaps three to four thousand at his accession in 833, and Michael the Syrian put his army against Amorium in 838 at 80,000.
+local: Jund
+share: est 0.5-1.5
+sharenote: Estimate: an army of some 100,000 men at its height (Michael the Syrian put the force against Amorium in 838 at 80,000; al-Muʿtasim's Turkish guard numbered 3,000–4,000 in 833), with their families.
 firm: no
 terms: ghulam, mamluk, samarra, anarchy-at-samarra
 people: abu-muslim, tahir-ibn-husayn, al-afshin, bugha-the-elder
@@ -82,8 +86,9 @@ level: 4
 band: religious
 name: Scholars of religious law
 term: ʿulamāʾ, faqīh, qāḍī
-share: ?
-sharenote: No reliable count of the scholars and judges.
+local: ʿUlamāʾ
+share: est 0.3-1
+sharenote: Estimate: the judges, jurists, teachers and prayer leaders of the towns with their families, a small fraction of the townspeople.
 firm: no
 terms: ulama, qadi, hanafi-school, mutazilism
 people:
@@ -98,8 +103,9 @@ level: 4
 band: specialists
 name: Merchants and bankers
 term: tājir (pl. tujjār), jahbadh
-share: ?
-sharenote: No reliable count of the merchant families.
+local: Tujjār
+share: est 1-2
+sharenote: Estimate: the merchant and banking families of the towns, a few per cent of an urban population that may have reached a tenth to a fifth of the people.
 firm: no
 terms:
 people:
@@ -113,8 +119,9 @@ level: 5
 band: commoners
 name: Muslim townspeople
 term: ʿāmma, mawālī
-share: ?
-sharenote: No reliable count: Baghdad alone may have held hundreds of thousands of people, on some estimates over a million, and a modern model puts some 1.8 million of Iraq's roughly 5.8 million people around 800 outside farming.
+local: ʿĀmma
+share: est 8-12
+sharenote: Estimate: the Muslim craftsmen, labourers and shopkeepers of the towns; Baghdad alone may have held several hundred thousand people, and a modern model puts some 1.8 million of Iraq's 5.8 million outside farming.
 firm: no
 terms: mawali, baghdad
 people:
@@ -129,8 +136,9 @@ level: 5
 band: commoners
 name: Protected non-Muslims
 term: ahl al-dhimma, dhimmī
-share: ?
-sharenote: No count for the whole caliphate: Richard Bulliet's estimate that Muslims were only about 40 per cent of Iran's people by the mid-9th century suggests that non-Muslims long remained a large part of the population. Non-Muslim villagers are counted with the peasants.
+local: Ahl al-dhimma
+share: est 5-10
+sharenote: Estimate: the Christian, Jewish and Zoroastrian communities outside the villages (non-Muslim villagers are counted with the peasants); Richard Bulliet's figures suggest that Muslims were still a minority in Iran by the mid-9th century.
 firm: no
 terms: dhimmi, jizya, church-of-the-east, zoroastrianism
 people:
@@ -145,8 +153,9 @@ level: 5
 band: commoners
 name: Peasants
 term: fallāḥ (pl. fallāḥūn)
+local: Fallāḥūn
 share: rest
-sharenote: Everyone not counted in the other tiers: the great majority, cultivators of every faith (the model of Robert Allen and Leander Heldring puts the farming population of Iraq around 800 at some 4 million of about 5.8 million). This share also takes in the Hashimites, secretaries, soldiers, scholars, merchants, townspeople, dhimmis and slaves, whose numbers are unknown.
+sharenote: Everyone not counted in the other ranks: the great majority, cultivators of every faith (Robert Allen and Leander Heldring's model puts the farming population of Iraq around 800 at some 4 million of about 5.8 million). Several of the other ranks are estimates, so this share is one too.
 firm: no
 terms: kharaj
 people:
@@ -160,8 +169,9 @@ level: 6
 band: enslaved
 name: Enslaved people
 term: ʿabd, jāriya, khādim
-share: ?
-sharenote: No reliable count: slaves were imported in large numbers from Africa, the steppe and Europe, but never counted.
+local: ʿAbīd
+share: est 2-5
+sharenote: Estimate: slaves were imported in large numbers from Africa, the steppe and Europe for households, armies and the drainage work of southern Iraq, where the Zanj revolt of 869–883 drew tens of thousands; more in the towns than in the countryside.
 firm: yes
 terms: zanj, zanj-rebellion, eunuch, baqt
 people:

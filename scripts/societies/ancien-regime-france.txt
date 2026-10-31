@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The king
 term: roi, Roi Très Chrétien
+local: Roi
 share: 0
 sharenote: One man, with the royal family and the princes of the blood.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: religious
 name: Bishops and abbots
 term: haut clergé, prélats
-share: ?
-sharenote: No reliable count: about 135 bishops and archbishops, the abbots of the great abbeys and the canons of the cathedral chapters, a small part of the 115,000–150,000 clergy.
+local: Haut clergé
+share: est 0.02-0.05
+sharenote: Estimate: about 135 bishops and archbishops, the abbots of the great abbeys and the canons of the cathedral chapters, perhaps 5,000–15,000 people of the 115,000–150,000 clergy.
 firm: yes
 terms: bishop, concordat-of-bologna
 people: charles-maurice-de-talleyrand
@@ -49,6 +51,7 @@ level: 2
 band: nobility
 name: Nobles
 term: noblesse, noblesse d'épée, noblesse de robe
+local: Noblesse
 share: 0.4-1.4
 sharenote: Modern estimates for 1789 run from about 120,000 to 400,000 people (William Doyle's range; François Bluche gave 140,000, Gordon Wright 300,000), roughly 0.4–1.4 per cent of 28 million.
 firm: yes
@@ -64,6 +67,7 @@ level: 3
 band: religious
 name: Parish priests, monks and nuns
 term: bas clergé, curés, vicaires, religieux, religieuses
+local: Bas clergé
 share: 0.4-0.5
 sharenote: The clergy as a whole numbered about 115,000–150,000 in 1789 (the range in Paul Hanson's and Timothy Tackett's accounts), roughly 0.4–0.5 per cent of the people; the parish clergy, monks and nuns were nearly all of them.
 firm: no
@@ -79,6 +83,7 @@ level: 4
 band: specialists
 name: The bourgeoisie
 term: bourgeoisie, bourgeois
+local: Bourgeoisie
 share: 7.7-10
 sharenote: About 7.7 per cent of the people on Christian Morrisson and Wayne Snyder's estimate, and almost 10 per cent by 1789 on Lauren Clay's, the middle class having roughly tripled since 1715.
 firm: yes
@@ -94,8 +99,9 @@ level: 5
 band: commoners
 name: Artisans and workers of the towns
 term: maîtres, compagnons, apprentis, menu peuple
-share: ?
-sharenote: No reliable count: about a fifth of the French lived in towns in 1789 (Silvia Marzagalli's estimate), and in Paris, the largest, most people belonged to the working class or the poor.
+local: Maîtres et compagnons
+share: est 7-10
+sharenote: Estimate: about a fifth of the French lived in towns in 1789 (Silvia Marzagalli); less the bourgeoisie, the clergy and the nobles there, the masters, journeymen, apprentices, servants and labourers of the towns.
 firm: yes
 terms: third-estate, guild
 people:
@@ -110,8 +116,9 @@ level: 5
 band: commoners
 name: Peasants
 term: paysans, laboureurs, métayers, journaliers
+local: Paysans
 share: rest
-sharenote: Everyone not counted in the other tiers: chiefly the peasants, whom modern estimates put at some 82–88 per cent of the people. This count also takes in the bishops and abbots, the artisans and workers of the towns and the enslaved, whose numbers are unknown.
+sharenote: Everyone not counted in the other ranks: chiefly the peasants, whom modern estimates put at some 82–88 per cent of the people (with the serfs among them). Two of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: third-estate
 people:
@@ -125,6 +132,7 @@ level: 6
 band: dependent
 name: Serfs
 term: mainmortables, serfs
+local: Mainmortables
 share: 0.5-5
 sharenote: Estimates of the serfs left in 1789 run from 140,000 to 1.5 million people, roughly 0.5–5 per cent of the population: the uncertainty is great.
 firm: yes
@@ -141,8 +149,9 @@ level: 7
 band: enslaved
 name: Enslaved people
 term: esclaves
-share: ?
-sharenote: No count of the enslaved people held in France itself, where the law did not recognise slavery; in the colonies, outside the kingdom's 28 million, Saint-Domingue alone held 406,000–465,000 around 1789.
+local: Esclaves
+share: est 0.01-0.02
+sharenote: Estimate: a few thousand Black servants, most of them enslaved in the colonies and brought to France, where the law did not recognise slavery; in the colonies, outside the kingdom's 28 million, Saint-Domingue alone held 406,000–465,000 around 1789.
 firm: yes
 terms: code-noir, saint-domingue, slavery
 people: toussaint-louverture

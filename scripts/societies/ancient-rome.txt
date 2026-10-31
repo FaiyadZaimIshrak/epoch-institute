@@ -18,6 +18,7 @@ level: 1
 band: ruler
 name: The emperor
 term: princeps, imperator, Augustus
+local: Princeps
 share: 0
 sharenote: One man, with the imperial family (the domus Augusta).
 firm: yes
@@ -33,6 +34,7 @@ level: 2
 band: nobility
 name: Senators
 term: ordo senatorius
+local: Ordo senatorius
 share: 0.004-0.006
 sharenote: About 600 senators, the number Augustus fixed; with their families a few thousand people in an empire of 60–75 million.
 firm: yes
@@ -49,6 +51,7 @@ level: 3
 band: nobility
 name: Equestrians
 term: ordo equester, equites
+local: Equites
 share: 0.1-0.2
 sharenote: About 25,000 men of equestrian rank in the 2nd century, a modern estimate; with their families roughly 0.1–0.2 per cent of the population.
 firm: yes
@@ -64,8 +67,9 @@ level: 4
 band: nobility
 name: Town councillors
 term: decuriones, ordo decurionum
-share: ?
-sharenote: No reliable count: every town had its own council, drawn from its leading families.
+local: Decuriones
+share: est 0.5-1
+sharenote: Estimate: some 2,000 towns, each with a council of about 100 men; with their families perhaps 400,000–800,000 people among 60–75 million.
 firm: yes
 terms:
 people:
@@ -79,6 +83,7 @@ level: 5
 band: specialists
 name: Soldiers
 term: milites (legionaries and auxiliaries)
+local: Milites
 share: 0.3-0.6
 sharenote: About 250,000 men under arms at the death of Augustus, and some 450,000 by 211 CE.
 firm: no
@@ -94,8 +99,9 @@ level: 6
 band: commoners
 name: Free people
 term: plebs, peregrini (free non-citizens), humiliores
+local: Plebs
 share: rest
-sharenote: Everyone else who was free: the great majority, most of them farmers. This count also takes in the town councillors and freed slaves, whose numbers are unknown.
+sharenote: Everyone else who was free: the great majority, most of them farmers. The town councillors and freed slaves are estimates, so this share is one too.
 firm: yes
 terms: plebeians, constitutio-antoniniana, latifundium
 people:
@@ -110,8 +116,9 @@ level: 7
 band: commoners
 name: Freed slaves
 term: liberti, libertini
-share: ?
-sharenote: Numerous, above all in Rome and the towns of Italy, but never counted.
+local: Liberti
+share: est 2-5
+sharenote: Estimate: freed slaves were numerous, above all in Rome and the towns of Italy, where funerary inscriptions name them in great numbers; far fewer in the countryside of the provinces.
 firm: yes
 terms: freedmen
 people:
@@ -125,6 +132,7 @@ level: 8
 band: enslaved
 name: Enslaved people
 term: servi
+local: Servi
 share: 10-15
 sharenote: Modern estimates put the enslaved at about 10–15 per cent of the empire's people: far more in Italy, far fewer in Egypt and North Africa.
 firm: yes

@@ -379,6 +379,11 @@ initNav('games');
       R.deal(deal);
     });
   }
+  // the pictures' credits (ranks-data.js: author and licence, the Commons page), one line a rank
+  function rkCredits(items) {
+    var l = items.filter(function (t) { return t[7]; }).map(function (t) { return '<b>' + escHtml(t[0]) + '</b>: ' + escHtml(t[7]) + (t[8] ? ' &middot; <a href="' + escHtml(t[8]) + '" target="_blank" rel="noopener">Wikimedia Commons</a>' : ''); });
+    return l.length ? '<p class="gm-credit gm-rk-cr">Pictures: ' + l.join('<br>') + '</p>' : '';
+  }
   function ranksWin() {
     var so = RK.soc, n = R.items.length, s = R.checks === 1 ? 3 : R.checks === 2 ? 2 : 1, b = best('ranks' + n), isBest = !b || R.checks < b;
     if (isBest) { setBest('ranks' + n, R.checks); $('ranks-best').textContent = 'Best ' + R.checks + (R.checks === 1 ? ' check' : ' checks'); }
@@ -387,6 +392,7 @@ initNav('games');
       (isBest ? '<p class="gm-newbest">New best!</p>' : '') +
       '<ol class="gm-rk-why">' + R.items.map(function (t) { return '<li><b>' + escHtml(t[0]) + '</b> ' + escHtml(kids() ? t[4] : t[3]) + '</li>'; }).join('') + '</ol>' +
       '<p class="gm-rk-more"><a href="/societies/' + escHtml(so[0]) + '">The whole ladder of ' + escHtml(so[2]) + ' &rarr;</a></p>' +
+      rkCredits(R.items) +
       '<div class="gm-done-row">' + shareBtn() + '<button type="button" class="hero-cta gm-done-btn">Next round</button></div></div>';
     share(d, 'Order the Ranks (' + so[1] + '): ' + (R.checks === 1 ? 'right first time' : 'in order after ' + R.checks + ' checks') + ' at The Epoch Institute', 'ranks', { title: 'Order the Ranks', score: n + '/' + n,
       unit: so[1] + (R.checks === 1 ? ', right first time' : ', after ' + R.checks + ' checks'), stars: s, pics: R.items.map(function (t, i) { return { src: t[5], label: t[0], sub: String(i + 1) }; }) });

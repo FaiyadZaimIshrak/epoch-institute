@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The viceroy
 term: virrey
+local: Virrey
 share: 0
 sharenote: One man in each viceroyalty, with his household and court; the king himself remained in Spain.
 firm: yes
@@ -34,6 +35,7 @@ level: 2
 band: nobility
 name: Spanish-born Spaniards
 term: peninsulares; gachupines (Mexico), chapetones (Peru)
+local: Peninsulares
 share: 0.2-0.3
 sharenote: Roughly: independent Mexico expelled some 10,000–20,000 Spanish-born residents in the 1820s and 1830s, about 0.2–0.3 per cent of its people; earlier figures are uncertain.
 firm: no
@@ -49,6 +51,7 @@ level: 3
 band: commoners
 name: American-born Spaniards
 term: criollos, españoles americanos
+local: Criollos
 share: 18-22
 sharenote: Spaniards made up about 18–22 per cent of New Spain's people in its census of 1793, on different authors' reckonings, nearly all of them born in America.
 firm: no
@@ -64,8 +67,9 @@ level: 3
 band: religious
 name: The clergy
 term: clero secular (parish priests), clero regular (friars), monjas (nuns)
-share: ?
-sharenote: No count for the whole population: in 17th-century Lima, a city of some 26,000, about one person in ten was a priest, friar or nun.
+local: Clero
+share: est 0.15-0.4
+sharenote: Estimate: in 17th-century Lima about one person in ten was a priest, friar or nun, but across the viceroyalties the clergy were a few thousand among millions.
 firm: no
 terms: patronato-real, jesuits, franciscans, dominican-order, spanish-inquisition
 people: sor-juana-ines-de-la-cruz, carlos-de-siguenza-y-gongora, miguel-hidalgo-y-costilla, junipero-serra
@@ -79,8 +83,9 @@ level: 4
 band: nobility
 name: Indigenous nobles
 term: caciques, cacicas, principales (New Spain); kurakas, curacas (Peru)
-share: ?
-sharenote: No reliable count of the caciques, kurakas and their families for either viceroyalty.
+local: Caciques
+share: est 0.5-2
+sharenote: Estimate: the caciques, kurakas and principales of the Indigenous towns, with their families.
 firm: no
 terms:
 people: tupac-amaru-ii
@@ -95,6 +100,7 @@ level: 5
 band: commoners
 name: Mestizos
 term: mestizos, castizos (castas)
+local: Mestizos
 share: 11-15
 sharenote: Roughly: the census of 1793 counted the castas together at 21–25 per cent of New Spain's people, on different authors' reckonings, and about 10 per cent were of African descent, which leaves some 11–15 per cent of Spanish and Indigenous descent.
 firm: no
@@ -110,8 +116,9 @@ level: 6
 band: commoners
 name: Indigenous commoners
 term: indios, macehuales, tributarios
+local: Indios tributarios
 share: rest
-sharenote: Everyone not counted in the other ranks: the census of 1793 counted 51–61 per cent of New Spain's people as Indigenous, on different authors' reckonings. This count also takes in the clergy and the Indigenous nobles, whose numbers are unknown.
+sharenote: Everyone not counted in the other ranks: the census of 1793 counted 51–61 per cent of New Spain's people as Indigenous, on different authors' reckonings. The clergy and the Indigenous nobles are estimates, so this share is one too.
 firm: no
 terms: mita, encomienda, new-laws
 people:
@@ -125,6 +132,7 @@ level: 6
 band: commoners
 name: Free people of African descent
 term: mulatos, pardos, morenos (castas)
+local: Pardos y morenos
 share: 10
 sharenote: About 10 per cent of New Spain's people at the end of the 18th century, more than 370,000 people, nearly all of them free (modern estimates).
 firm: no
@@ -140,6 +148,7 @@ level: 7
 band: enslaved
 name: Enslaved people
 term: esclavos; bozales (born in Africa), ladinos (Spanish-speaking), criollos (born in the colonies)
+local: Esclavos
 share: 0.2
 sharenote: About 10,000 enslaved people in New Spain by 1810, under 0.2 per cent of its people (a modern estimate); Peru, whose coastal estates still bought Africans into the 1800s, had proportionally more, but there is no figure for the two together.
 firm: yes

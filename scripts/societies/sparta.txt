@@ -5,7 +5,7 @@ in: the Spartan state
 year: -480
 period: c. 600–371 BCE (to the defeat at Leuctra)
 region: Europe
-population: ? | no census survives; Paul Cartledge estimates 170,000–224,000 helots alone in the early 4th century BCE
+population: est 250-350 thousand | Estimate: Paul Cartledge puts the helots at 170,000–224,000 people in the early 4th century BCE; with the perioikoi of at least 33 towns and the Spartiates, about 250,000–350,000 in all
 profiles: Sparta
 nolink: moses
 picture: leonidas-i
@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The two kings
 term: basileis, archagetai
+local: Basileis
 share: 0
 sharenote: Two kings at a time, one from each royal house, with their families.
 firm: yes
@@ -34,6 +35,7 @@ level: 2
 band: nobility
 name: Spartiates
 term: Spartiatai, homoioi
+local: Spartiatai
 share: 3-10
 sharenote: Paul Cartledge puts those of Spartiate status at between a tenth and a thirty-second of the population, a share that fell as the citizen body shrank from about 8,000 men in 480 BCE (Herodotus) to fewer than 1,000 in Aristotle's day.
 firm: yes
@@ -50,8 +52,9 @@ level: 3
 band: commoners
 name: Inferiors
 term: hypomeiones
-share: ?
-sharenote: No reliable count: they appear in Xenophon's account of the conspiracy of Cinadon in 399 BCE, but nobody counted them.
+local: Hypomeiones
+share: est 1-3
+sharenote: Estimate: Spartiates who had lost their full rights, chiefly for failing to pay their mess dues; they appear in Xenophon's account of the conspiracy of Cinadon in 399 BCE.
 firm: no
 terms:
 people:
@@ -65,8 +68,9 @@ level: 3
 band: commoners
 name: Foster brothers
 term: mothakes
-share: ?
-sharenote: No count survives: ancient writers name only a few of them.
+local: Mothakes
+share: est 0.1-0.5
+sharenote: Estimate: a few hundred boys raised beside Spartiate sons; ancient writers name only a few of them.
 firm: no
 terms:
 people: lysander, gylippus
@@ -78,10 +82,11 @@ kid: Some boys who were not citizens were raised and trained with Spartan boys, 
 == tier
 level: 4
 band: commoners
-name: Perioikoi
+name: Dwellers around
 term: perioikoi
-share: ?
-sharenote: No reliable count: they lived in at least 33 towns (Graham Shipley's count) and, according to Herodotus, sent 5,000 hoplites to Plataea in 479 BCE, as many as the Spartiates.
+local: Perioikoi
+share: est 15-25
+sharenote: Estimate: they lived in at least 33 towns (Graham Shipley's count) and, according to Herodotus, sent 5,000 hoplites to Plataea in 479 BCE, as many as the Spartiates.
 firm: no
 terms: perioeci
 people:
@@ -95,8 +100,9 @@ level: 5
 band: commoners
 name: Freed helots
 term: neodamodeis
-share: ?
-sharenote: No reliable count: they are attested from about 420 to 369 BCE, and 2,000 of them served with Agesilaus II in Asia Minor in 396–394 BCE.
+local: Neodamodeis
+share: est 0.5-1.5
+sharenote: Estimate: attested from about 420 to 369 BCE; 2,000 of them served with Agesilaus II in Asia Minor in 396–394 BCE.
 firm: no
 terms: helots
 people:
@@ -110,8 +116,9 @@ level: 6
 band: dependent
 name: Helots
 term: heilotes
+local: Heilotes
 share: rest
-sharenote: Everyone not counted in the other tiers: above all the helots, the great majority, whom Paul Cartledge puts at 170,000–224,000 people, women and children included, in the early 4th century BCE; this count also takes in the perioikoi, inferiors, mothakes and freed helots, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: above all the helots, the great majority, whom Paul Cartledge puts at 170,000–224,000 people, women and children included, in the early 4th century BCE. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: helots, messenians
 people:

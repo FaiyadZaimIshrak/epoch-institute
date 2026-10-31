@@ -19,8 +19,9 @@ level: 1
 band: ruler
 name: The emperor and the court nobles
 term: kinri (the emperor and his palace), kuge (court nobles)
-share: ?
-sharenote: No reliable count: one emperor with his family and about 130 houses of the higher court nobility (dōjō kuge), a tiny fraction of some 30 million people.
+local: Kinri and kuge
+share: est 0.005-0.01
+sharenote: Estimate: one emperor with his family and about 130 houses of the higher court nobility (dōjō kuge), a few thousand people among some 30 million.
 firm: no
 terms:
 people:
@@ -34,6 +35,7 @@ level: 2
 band: ruler
 name: The shogun
 term: shōgun (sei-i taishōgun), kubō
+local: Shōgun
 share: 0
 sharenote: One man, the head of the Tokugawa house, with his family.
 firm: no
@@ -49,6 +51,7 @@ level: 3
 band: nobility
 name: Daimyo
 term: daimyō
+local: Daimyō
 share: 0.01-0.02
 sharenote: About 260–270 daimyo; with their families perhaps a few thousand people among some 30 million, roughly 0.01–0.02 per cent.
 firm: yes
@@ -64,6 +67,7 @@ level: 4
 band: nobility
 name: Samurai
 term: bushi, samurai
+local: Bushi
 share: 5-7
 sharenote: About 400,000 samurai men; with their families and the lords above them about 6 per cent of the people, a common modern estimate (others run from 5 to 10 per cent).
 firm: yes
@@ -80,8 +84,9 @@ level: 5
 band: religious
 name: Buddhist and Shinto clergy
 term: sōryo (Buddhist clergy), kannushi (Shinto priests)
-share: ?
-sharenote: No reliable count: Buddhist and Shinto clergy stood outside the four classes.
+local: Sōryo
+share: est 0.5-1.5
+sharenote: Estimate: the Buddhist clergy of the temples, every household being registered at one, and the Shinto priests of the shrines.
 firm: no
 terms: buddhism, shinto
 people:
@@ -95,6 +100,7 @@ level: 6
 band: commoners
 name: Peasants
 term: hyakushō
+local: Hyakushō
 share: 80
 sharenote: About 80 per cent of the people were peasants, the usual modern estimate.
 firm: yes
@@ -110,8 +116,9 @@ level: 6
 band: commoners
 name: Artisans
 term: shokunin (craftsmen), chōnin (townspeople)
-share: ?
-sharenote: No separate count: townspeople, artisans and merchants together, were perhaps 5–6 per cent of the people around 1700, about half of an urban population of 10–12 per cent, a modern estimate.
+local: Shokunin
+share: est 2-3
+sharenote: Estimate: townspeople, artisans and merchants together, were perhaps 5–6 per cent of the people around 1700, about half of an urban population of 10–12 per cent (a modern estimate); the artisans perhaps half of them.
 firm: no
 terms: chonin, ukiyo-e
 people: katsushika-hokusai
@@ -125,8 +132,9 @@ level: 6
 band: commoners
 name: Merchants
 term: shōnin (merchants), chōnin (townspeople)
-share: ?
-sharenote: No separate count: townspeople, merchants and artisans together, were perhaps 5–6 per cent of the people around 1700, about half of an urban population of 10–12 per cent, a modern estimate.
+local: Shōnin
+share: est 2.5-3.5
+sharenote: Estimate: townspeople, merchants and artisans together, were perhaps 5–6 per cent of the people around 1700 (a modern estimate); the merchants perhaps half of them.
 firm: no
 terms: chonin, kabuki
 people:
@@ -138,10 +146,11 @@ kid: Merchants were ranked low in theory, but many became very rich by trading r
 == tier
 level: 7
 band: outcast
-name: Kawata outcasts
+name: Outcasts of the leather trades
 term: kawata, eta (the official term, now a slur)
-share: ?
-sharenote: No reliable count: small and scattered in the 17th century, kawata communities grew larger later, perhaps by as much as 300 per cent between 1720 and 1850.
+local: Kawata
+share: est 0.5-1
+sharenote: Estimate: the Meiji government counted some 280,000 people of this status in 1871, under 1 per cent of 33 million; the communities were smaller in the mid-18th century and grew afterwards.
 firm: yes
 terms: burakumin, kyoho-reforms
 people:
@@ -153,10 +162,11 @@ kid: Kawata families did jobs such as leatherwork that others thought unclean, a
 == tier
 level: 7
 band: outcast
-name: Hinin outcasts
+name: Outcasts of the streets
 term: hinin
-share: ?
-sharenote: No reliable count: the hinin included both people born to the status and commoners reduced to it.
+local: Hinin
+share: est 0.05-0.2
+sharenote: Estimate: the Meiji government counted some 23,000 hinin in 1871; the hinin included both people born to the status and commoners reduced to it.
 firm: yes
 terms: hinin, burakumin
 people:

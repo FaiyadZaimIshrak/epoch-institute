@@ -562,7 +562,7 @@ function PhSpan($e) { '<span class="ph ph-' + $(if ($e.conflict) { 'conflict' } 
 # a picture shown at 56 px or less (list tiles, speech portraits on the index, chart avatars) uses its 112 px copy in
 # images/<folder>/thumbs/ (scripts/make-thumbs.ps1, run above); a picture without one keeps the full file
 $THUMBSET = New-Object 'Collections.Generic.HashSet[string]'
-foreach ($thDir in 'encyclopedia', 'states') { if (Test-Path "$Repo\images\$thDir\thumbs") { foreach ($thFile in [IO.Directory]::GetFiles("$Repo\images\$thDir\thumbs", '*.jpg')) { [void]$THUMBSET.Add("/images/$thDir/" + [IO.Path]::GetFileName($thFile)) } } }
+foreach ($thDir in 'encyclopedia', 'states', 'societies') { if (Test-Path "$Repo\images\$thDir\thumbs") { foreach ($thFile in [IO.Directory]::GetFiles("$Repo\images\$thDir\thumbs", '*.jpg')) { [void]$THUMBSET.Add("/images/$thDir/" + [IO.Path]::GetFileName($thFile)) } } }
 function ThumbOf([string]$img) { if ($THUMBSET.Contains($img)) { $img.Insert($img.LastIndexOf('/') + 1, 'thumbs/') } else { $img } }
 
 Say 'reading encyclopedia-links.js'
@@ -1927,10 +1927,12 @@ if ($spMiss.Count) { Say ("great speeches: unknown encyclopedia links " + (($spM
 # Social ladders: /societies/<slug> and /societies/, from scripts/societies/<slug>.txt (one society each: "key: value"
 # header lines, "== tier" blocks from the top of the ladder down, then "== mobility", "== women" and "== sources";
 # "== checked" and NOTE: or MISSING: lines are the editor's). A tier: level (1 = top; equal levels stand side by
-# side), band ($SOCBAND), name, term, share (per cent of the whole population: a range, 0, rest or ?), sharenote, firm
+# side), band ($SOCBAND), name (in English), term, local (the rank's own name, shown first with the English name in
+# brackets; "-" for none), share (per cent of the whole population: a range, 0, rest, or "est" and a range where no
+# count survives, shown as "c. 3–6% (est.)"; the header's population may be "est" too), sharenote, firm
 # (its place in the order is agreed: only these go into the Order the Ranks game), terms and people (entry slugs),
-# picture (an entry slug; else the first person or term that has one), text, rise, you (Born into history) and kid
-# (Kids mode). Writes data/societies/<slug>.json (societies.js: Born into history and Compare), ranks-data.js
+# picture (an entry slug, "-" for none; else the first person or term that has one; a rank with no fitting entry picture
+# has one of its own in scripts/society-pictures.tsv), text, rise, you (Born into history) and kid (Kids mode). Writes data/societies/<slug>.json (societies.js: Born into history and Compare), ranks-data.js
 # (games.js #ranks; its ?v= goes into /games as RANKS_SRC), the build:kids-ladders block of /kids and
 # scripts/society-links.js (the profiles' "Social ladder" links, read by generator.html). Stops on a missing key, an
 # unknown band, region, entry or profile, levels out of order, a malformed share, or numbered shares that leave
@@ -1972,6 +1974,19 @@ function SocParas($lines) {   # a section's paragraphs (blank lines between them
   if ($cur.Count) { $ps.Add($cur -join ' ') }
   return , $ps
 }
+# pictures of the ranks that have no fitting entry picture (31 Oct 2026, the user: "find generalized pictures that fit the
+# description"): scripts/society-pictures.tsv (slug, rank number, caption, Commons file, author, licence, crop; chosen by
+# eye: period art first, else later engravings, paintings or museum pieces), images/societies/<slug>-<rank>.jpg (320 px,
+# scratchpad soc2/encode-soc.ps1) with a 112 px copy in thumbs/ (scripts/make-thumbs.ps1); credited on the rank's card
+$SOCPICS = @{}; $socPicUsed = @{}
+foreach ($socL in [IO.File]::ReadAllLines("$Repo\scripts\society-pictures.tsv", $U8)) {
+  if (-not $socL.Trim() -or $socL.StartsWith('#')) { continue }
+  $socC = $socL -split "`t"; $socPk = $socC[0] + '-' + $socC[1]
+  if ($socC.Count -lt 6 -or -not ($socC[2] -and $socC[3] -and $socC[5])) { $socBad.Add("scripts/society-pictures.tsv: $socPk has no caption, file or licence"); continue }
+  if (-not (Test-Path "$Repo\images\societies\$socPk.jpg")) { $socBad.Add("scripts/society-pictures.tsv: no images/societies/$socPk.jpg"); continue }
+  $SOCPICS[$socPk] = [pscustomobject]@{ slug = ''; img = "/images/societies/$socPk.jpg"; name = $socC[2]; gen = $true
+    cr = @{ artist = $(if ($socC[4]) { $socC[4] } else { 'Unknown author' }); licence = $socC[5]; source = 'https://commons.wikimedia.org/wiki/File:' + [Uri]::EscapeDataString($socC[3].Replace(' ', '_')) } }
+}
 foreach ($socF in @(Get-ChildItem "$Repo\scripts\societies\*.txt" -ErrorAction SilentlyContinue | Sort-Object Name)) {
   $socW = 'scripts/societies/' + $socF.Name; $socH = @{}; $socTr = New-Object Collections.Generic.List[hashtable]; $socSec = @{}; $socCur = $null; $socBuf = $null
   foreach ($socL in [IO.File]::ReadAllLines($socF.FullName, $U8)) {
@@ -1996,14 +2011,14 @@ foreach ($socF in @(Get-ChildItem "$Repo\scripts\societies\*.txt" -ErrorAction S
   # el-Medina, "Moses" in Moses Finley; or another age's thing: the Qing bannermen, the Atlantic slave trade)
   $socNo = @(([string]$socH['nolink'] -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ })
   foreach ($socX in $socNo) { if (-not $BY.ContainsKey($socX)) { $socBad.Add("$socW`: nolink '$socX' is no entry") } }
-  # population: "59-76 million | whose estimate, and when" or "?"
+  # population: "59-76 million | whose estimate, and when"; "est 4-6 million | what it rests on" where no scholar has
+  # counted (31 Oct 2026, the user: estimated figures everywhere, marked as estimates, instead of "not known")
   $socPp = ([string]$socH['population']) -split '\|', 2; $socPopNote = if ($socPp.Count -gt 1) { $socPp[1].Trim() } else { '' }; $socPopLo = $null; $socPopHi = $null
-  if ($socPp[0].Trim() -ne '?') {
-    if ($socPp[0] -match '^\s*([\d.,]+)\s*(?:[-–]\s*([\d.,]+))?\s*(million|thousand)?\s*$') {
-      $socMul = switch ($Matches[3]) { 'million' { 1e6 } 'thousand' { 1e3 } default { 1 } }
-      $socPopLo = (SocNum ($Matches[1] -replace ',', '')) * $socMul; $socPopHi = $(if ($Matches[2]) { (SocNum ($Matches[2] -replace ',', '')) * $socMul } else { $socPopLo })
-    } else { $socBad.Add("$socW`: population '$($socPp[0])'") }
-  }
+  $socPop0 = $socPp[0].Trim(); $socPopEst = $false; if ($socPop0 -match '^est\s+(.+)$') { $socPopEst = $true; $socPop0 = $Matches[1].Trim() }
+  if ($socPop0 -match '^([\d.,]+)\s*(?:[-–]\s*([\d.,]+))?\s*(million|thousand)?$') {
+    $socMul = switch ($Matches[3]) { 'million' { 1e6 } 'thousand' { 1e3 } default { 1 } }
+    $socPopLo = (SocNum ($Matches[1] -replace ',', '')) * $socMul; $socPopHi = $(if ($Matches[2]) { (SocNum ($Matches[2] -replace ',', '')) * $socMul } else { $socPopLo })
+  } else { $socBad.Add("$socW`: population '$($socPp[0])' (a number, a range or est and a range)") }
   if ($socTr.Count -lt 4 -or $socTr.Count -gt 12) { $socBad.Add("$socW`: $($socTr.Count) tiers") }
   $socLast = 0; $socSum = 0.0; $socRest = 0; $socT = New-Object Collections.Generic.List[object]; $socN = 0
   foreach ($socTi in $socTr) {
@@ -2014,10 +2029,13 @@ foreach ($socF in @(Get-ChildItem "$Repo\scripts\societies\*.txt" -ErrorAction S
     if ($socTi['band'] -and -not $SOCBAND.Contains([string]$socTi['band'])) { $socBad.Add("$socTw`: band '$($socTi['band'])'") }
     if ($socTi['firm'] -notin 'yes', 'no') { $socBad.Add("$socTw`: firm '$($socTi['firm'])'") }
     if (([string]$socTi['kid']).Length -gt 140) { $socBad.Add("$socTw`: a kid line over 140 characters") }
-    $socSh = ([string]$socTi['share']).Trim(); $socLo = $null; $socHi = $null
-    if ($socSh -eq 'rest') { $socRest++ } elseif ($socSh -ne '?') {
+    # share: a range from the scholarship, 0 (a ruler), rest, or "est 3-6", an estimate where no one counted (marked est.
+    # wherever it is shown); "?" is no longer allowed
+    $socSh = ([string]$socTi['share']).Trim(); $socLo = $null; $socHi = $null; $socEst = $false
+    if ($socSh -match '^est\s+(.+)$') { $socEst = $true; $socSh = $Matches[1].Trim() }
+    if ($socSh -eq 'rest') { $socRest++ } else {
       if ($socSh -match '^([\d.]+)(?:\s*[-–]\s*([\d.]+))?$') { $socLo = SocNum $Matches[1]; $socHi = $(if ($Matches[2]) { SocNum $Matches[2] } else { $socLo }) }
-      if ($null -eq $socLo -or $null -eq $socHi -or $socHi -lt $socLo -or $socHi -gt 100) { $socBad.Add("$socTw`: share '$socSh'"); $socLo = $null; $socHi = $null } else { $socSum += ($socLo + $socHi) / 2 }
+      if ($null -eq $socLo -or $null -eq $socHi -or $socHi -lt $socLo -or $socHi -gt 100) { $socBad.Add("$socTw`: share '$socSh' (a number, a range, rest, or est and a range)"); $socLo = $null; $socHi = $null } else { $socSum += ($socLo + $socHi) / 2 }
     }
     $socPpl = SocEnts ([string]$socTi['people']) $socTw; $socTrm = SocEnts ([string]$socTi['terms']) $socTw
     $socTp = $null
@@ -2026,45 +2044,77 @@ foreach ($socF in @(Get-ChildItem "$Repo\scripts\societies\*.txt" -ErrorAction S
     if ($socTi['picture'] -and -not $socNoPic) { if ($BY.ContainsKey([string]$socTi['picture']) -and $BY[[string]$socTi['picture']].img) { $socTp = $BY[[string]$socTi['picture']] } else { $socBad.Add("$socTw`: picture '$($socTi['picture'])'") } }
     if (-not $socTp -and -not $socNoPic) { foreach ($socE in $socPpl) { if ($socE.img) { $socTp = $socE; break } } }
     if (-not $socTp -and -not $socNoPic) { foreach ($socE in $socTrm) { if ($socE.img) { $socTp = $socE; break } } }
-    $socT.Add([pscustomobject]@{ n = $socN; lv = $socLv; band = [string]$socTi['band']; name = [string]$socTi['name']; term = [string]$socTi['term']; share = $socSh; lo = $socLo; hi = $socHi; sn = (SocTypo ([string]$socTi['sharenote'])); firm = ($socTi['firm'] -eq 'yes')
+    $socPk = $socF.BaseName + '-' + $socN
+    if ($SOCPICS.ContainsKey($socPk)) { if ($socTp) { $socBad.Add("$socTw`: an entry picture and one in society-pictures.tsv") } else { $socTp = $SOCPICS[$socPk]; $socPicUsed[$socPk] = 1 } }
+    if (-not $socTp) { $socBad.Add("$socTw`: no picture (an entry's, or a row of scripts/society-pictures.tsv)") }
+    # local: the rank's own name, shown first with the English name in brackets ("-": none attested; 31 Oct 2026)
+    $socLoc = ([string]$socTi['local']).Trim(); if (-not $socTi.ContainsKey('local')) { $socBad.Add("$socTw`: no 'local' line") }; if ($socLoc -eq '-') { $socLoc = '' }
+    $socT.Add([pscustomobject]@{ n = $socN; lv = $socLv; band = [string]$socTi['band']; name = [string]$socTi['name']; loc = $socLoc; term = [string]$socTi['term']; share = $socSh; est = $socEst; lo = $socLo; hi = $socHi; sn = (SocTypo ([string]$socTi['sharenote'])); firm = ($socTi['firm'] -eq 'yes')
         terms = $socTrm; people = $socPpl; pic = $socTp; text = (SocTypo ([string]$socTi['text'])); rise = (SocTypo ([string]$socTi['rise'])); you = (SocTypo ([string]$socTi['you'])); kid = (SocTypo ([string]$socTi['kid'])); w = $null })
   }
   if ($socRest -gt 1) { $socBad.Add("$socW`: more than one 'rest'") }
   if ($socSum -ge 100) { $socBad.Add("$socW`: the numbered shares' midpoints add up to $socSum per cent") }
-  # the rest: everyone the numbered ranks leave; when some ranks were never counted it is only "most people", an upper bound
-  $socUnk = @($socT | Where-Object { $_.share -eq '?' }).Count
-  foreach ($st in $socT) { $st.w = $(if ($st.share -eq 'rest') { [Math]::Round(100 - $socSum, 3) } elseif ($null -ne $st.lo) { ($st.lo + $st.hi) / 2 } else { $null }); $st | Add-Member most ($st.share -eq 'rest' -and $socUnk -gt 0) }
+  # the rest: everyone the numbered ranks leave, itself an estimate when any of them is
+  $socAnyEst = @($socT | Where-Object { $_.est }).Count -gt 0
+  foreach ($st in $socT) { $st.w = $(if ($st.share -eq 'rest') { [Math]::Round(100 - $socSum, 3) } elseif ($null -ne $st.lo) { ($st.lo + $st.hi) / 2 } else { $null }); if ($st.share -eq 'rest' -and $socAnyEst) { $st.est = $true } }
   foreach ($socK in 'mobility', 'women', 'sources') { if (-not $socSec.ContainsKey($socK) -or -not (($socSec[$socK] -join '').Trim())) { $socBad.Add("$socW`: no section '$socK'") } }
   $SOCS.Add([pscustomobject]@{ slug = $socF.BaseName; name = [string]$socH['name']; of = [string]$socH['of']; short = [string]$socH['short']; in = [string]$socH['in']; year = [int]$socYr; period = [string]$socH['period']; region = [string]$socH['region']
-      popLo = $socPopLo; popHi = $socPopHi; popNote = $socPopNote; profiles = $socProfs; nolink = $socNo; pic = $socPic; kids = ($socH['kids'] -eq 'yes'); title = [string]$socH['title']; desc = (SocTypo ([string]$socH['desc'])); intro = (SocTypo ([string]$socH['intro'])); tiers = $socT
+      popLo = $socPopLo; popHi = $socPopHi; popEst = $socPopEst; popNote = $socPopNote; profiles = $socProfs; nolink = $socNo; pic = $socPic; kids = ($socH['kids'] -eq 'yes'); title = [string]$socH['title']; desc = (SocTypo ([string]$socH['desc'])); intro = (SocTypo ([string]$socH['intro'])); tiers = $socT
       mobility = @($(if ($null -ne $socSec['mobility']) { SocParas $socSec['mobility'] }) | ForEach-Object { SocTypo $_ }); women = @($(if ($null -ne $socSec['women']) { SocParas $socSec['women'] }) | ForEach-Object { SocTypo $_ })
       sources = @(foreach ($socL in $socSec['sources']) { if ($socL.Trim()) { $socL.Trim() } }) })
 }
+foreach ($socPk in $SOCPICS.Keys) { if (-not $socPicUsed.ContainsKey($socPk)) { $socBad.Add("scripts/society-pictures.tsv: $socPk is no rank without a picture") } }
 if ($socBad.Count) { throw ('social ladders: ' + ($socBad -join '; ')) }
 # by region (the profiles' order of regions), then by year
 $SOCS = @($SOCS | Sort-Object @{ e = { [array]::IndexOf($SOCREG, $_.region) } }, @{ e = { $_.year } })
 function SocPct([double]$v) { if ($v -lt 1) { $v.ToString('0.##', $INV) } else { $v.ToString('0.#', $INV) } }
-function SocShare($t) {   # the share as words: "10–15%", "About 86% (the rest)", "Fewer than 1 in 1,000"
-  if ($t.share -eq '?') { return 'No reliable count' }
-  if ($t.share -eq 'rest') { return $(if ($t.most -and $t.w -ge 90) { 'Most people (the rest)' } elseif ($t.most) { 'At most ' + [Math]::Round($t.w) + '% (the rest)' } else { 'About ' + [Math]::Round($t.w) + '% (the rest)' }) }
+function SocShare($t) {   # the share as words: "10–15%", "c. 3–6% (est.)", "About 86% (the rest)", "Fewer than 1 in 1,000"
+  $e = if ($t.est) { ' (est.)' } else { '' }
+  if ($t.share -eq 'rest') { return 'About ' + [Math]::Round($t.w) + '% (the rest' + $(if ($t.est) { ', est.' } else { '' }) + ')' }
   # "One ruler" only where the note says one (Sparta's two kings, Saint-Domingue's governor and intendant: a handful)
   if ($t.hi -eq 0) { return $(if ($t.band -eq 'ruler' -and $t.sn -match '^One\b') { 'One ruler' } else { 'A handful' }) }
-  if ($t.hi -lt 0.01) { return 'Fewer than 1 in 10,000' }
-  if ($t.hi -lt 0.1) { return 'Fewer than 1 in 1,000' }
-  if ($t.lo -eq $t.hi) { return (SocPct $t.lo) + '%' }
-  return (SocPct $t.lo) + '–' + (SocPct $t.hi) + '%'
+  if ($t.hi -lt 0.01) { return 'Fewer than 1 in 10,000' + $e }
+  if ($t.hi -lt 0.1) { return 'Fewer than 1 in 1,000' + $e }
+  $c = if ($t.est) { 'c. ' } else { '' }
+  if ($t.lo -eq $t.hi) { return $c + (SocPct $t.lo) + '%' + $e }
+  return $c + (SocPct $t.lo) + '–' + (SocPct $t.hi) + '%' + $e
+}
+# a rank's name: its own word first, the English name in brackets ("Pipiltin (Nobles)"); one name where they are the
+# same word ("Shōgun", "Bourgeoisie") or no word of its own is attested
+function SocFold([string]$s) { ([regex]::Replace($s.Normalize([Text.NormalizationForm]::FormD), '\p{Mn}', '')).ToLowerInvariant() -replace '^the\s+', '' -replace '[^a-z]', '' }
+function SocOne($t) { if (-not $t.loc) { return $true }; $a = SocFold $t.loc; $b = SocFold $t.name; return ($a -eq $b -or "${a}s" -eq $b -or $a -eq "${b}s") }
+function SocTitle($t) { if (-not $t.loc) { $t.name } elseif (SocOne $t) { $t.loc } else { $t.loc + ' (' + $t.name + ')' } }
+# a hyphenated word of a rank's name stays on one line ("al-dhimma", "governor-general"): the user wants no word broken
+function SocNw([string]$h) { [regex]::Replace($h, '[^\s<>()]*\w-\w[^\s<>()]*', '<span class="soc-nw">$0</span>') }
+function SocTitleHtml($t) {
+  if (-not $t.loc) { return '<span class="soc-loc">' + (SocNw (Hx $t.name)) + '</span>' }
+  if (SocOne $t) { return '<span class="soc-loc">' + (SocNw (Hx $t.loc)) + '</span>' }
+  return '<span class="soc-loc">' + (SocNw (Hx $t.loc)) + '</span> <span class="soc-en">(' + (SocNw (Hx $t.name)) + ')</span>'
+}
+function SocOtherTerms($t) {   # the term line without the word already shown as the title
+  if (-not $t.loc) { return $t.term }
+  $f = SocFold $t.loc
+  return ((@(([string]$t.term -split '[;,]') | ForEach-Object { $_.Trim() } | Where-Object { $_ -and (SocFold ($_ -replace '\([^)]*\)', '')) -ne $f })) -join ', ')
 }
 function SocYear([int]$y) { if ($y -lt 0) { "$(-$y) BCE" } else { "$y" } }
 function SocPicOf($e) { if ($e -and $e.img) { ThumbOf $e.img } else { '' } }
+function SocCredit($e) {   # "Author · licence" of a rank's picture (an entry's credit, or its row of society-pictures.tsv)
+  if (-not $e -or -not $e.cr) { return '' }
+  return ((@([Net.WebUtility]::HtmlDecode([string]$e.cr['artist']), [string]$e.cr['licence']) | Where-Object { $_ }) -join ' · ')
+}
+function SocPicCredit($e) {   # the credit line of a picture that is no entry's (an entry's credit is on its own page)
+  if (-not $e -or -not $e.gen) { return '' }
+  return '<p class="soc-pic-cr">Picture: ' + (Hx $e.name) + ' · ' + (Hx (SocCredit $e)) + ' · <a href="' + (Hx ([string]$e.cr['source'])) + '" rel="noopener">Wikimedia Commons</a></p>'
+}
 function SocJson($s) {   # data/societies/<slug>.json: what Born into history and Compare need
   $ts = foreach ($t in $s.tiers) {
-    '{"n":' + $t.n + ',"lv":' + $t.lv + ',"band":' + (Js $t.band) + ',"name":' + (Js $t.name) + ',"term":' + (Js $t.term) + ',"lbl":' + (Js (SocShare $t)) +
-      ',"w":' + $(if ($null -eq $t.w) { 'null' } else { $t.w.ToString('0.#####', $INV) }) + ',"firm":' + $(if ($t.firm) { 1 } else { 0 }) + $(if ($t.most) { ',"most":1' } else { '' }) + ',"pic":' + (Js (SocPicOf $t.pic)) +
+    '{"n":' + $t.n + ',"lv":' + $t.lv + ',"band":' + (Js $t.band) + ',"name":' + (Js $t.name) + $(if ($t.loc -and -not (SocOne $t)) { ',"loc":' + (Js $t.loc) } elseif ($t.loc) { ',"loc":' + (Js $t.loc) + ',"one":1' } else { '' }) + ',"term":' + (Js (SocOtherTerms $t)) + ',"lbl":' + (Js (SocShare $t)) +
+      ',"w":' + $(if ($null -eq $t.w) { 'null' } else { $t.w.ToString('0.#####', $INV) }) + ',"firm":' + $(if ($t.firm) { 1 } else { 0 }) + $(if ($t.est) { ',"est":1' } else { '' }) + ',"pic":' + (Js (SocPicOf $t.pic)) +
       ',"you":' + (Js $t.you) + ',"kid":' + (Js $t.kid) + ',"rise":' + (Js $t.rise) + ',"why":' + (Js ([EpochBuild.W]::FirstSentence($t.text, 220))) +
       ',"people":[' + ((@(foreach ($e in $t.people) { '[' + (Js $e.slug) + ',' + (Js $e.name) + ']' })) -join ',') + ']}'
   }
   '{"slug":' + (Js $s.slug) + ',"name":' + (Js $s.name) + ',"title":' + (Js $s.title) + ',"of":' + (Js $s.of) + ',"short":' + (Js $s.short) + ',"in":' + (Js $s.in) + ',"year":' + $s.year + ',"yl":' + (Js (SocYear $s.year)) +
-    ',"period":' + (Js $s.period) + ',"region":' + (Js $s.region) + ',"pop":' + $(if ($null -ne $s.popLo) { '[' + $s.popLo.ToString('0', $INV) + ',' + $s.popHi.ToString('0', $INV) + ']' } else { 'null' }) +
+    ',"period":' + (Js $s.period) + ',"region":' + (Js $s.region) + ',"pop":' + $(if ($null -ne $s.popLo) { '[' + $s.popLo.ToString('0', $INV) + ',' + $s.popHi.ToString('0', $INV) + ']' } else { 'null' }) + $(if ($s.popEst) { ',"popEst":1' } else { '' }) +
     ',"img":' + (Js (SocPicOf $s.pic)) + ',"tiers":[' + ($ts -join ',') + ']}'
 }
 function SocLadder($s) {   # the pyramid: rows by level (equal levels side by side), "By rank" or "To scale"
@@ -2075,7 +2125,7 @@ function SocLadder($s) {   # the pyramid: rows by level (equal levels side by si
     [void]$sb.Append('<li class="soc-row" style="--rw:' + $rw + '%;--k:' + $r + '">')
     foreach ($t in $row) {
       $sw = if ($null -eq $t.w) { 0 } else { [Math]::Max(0.4, [Math]::Min(100, $t.w)) }
-      [void]$sb.Append('<a class="soc-bar soc-b-' + $t.band + $(if ($null -eq $t.w) { ' soc-unk' } elseif ($t.most) { ' soc-most' } else { '' }) + '" href="#rank-' + $t.n + '" style="--sw:' + $sw.ToString('0.##', $INV) + '%"><span class="soc-bar-n">' + (Hx $t.name) + '</span><span class="soc-bar-s">' + (Hx (SocShare $t)) + '</span></a>')
+      [void]$sb.Append('<a class="soc-bar soc-b-' + $t.band + $(if ($t.est) { ' soc-est' } else { '' }) + '" href="#rank-' + $t.n + '" style="--sw:' + $sw.ToString('0.##', $INV) + '%"><span class="soc-bar-n">' + (SocTitleHtml $t) + '</span><span class="soc-bar-s">' + (Hx (SocShare $t)) + '</span></a>')
     }
     [void]$sb.Append('</li>')
   }
@@ -2089,7 +2139,7 @@ function SocChips($t) {
 }
 function SocCard($s) {   # a ladder as a card on /societies/
   '<a class="soc-card" href="/societies/' + $s.slug + '">' + $(if ($s.pic -and $s.pic.img) { '<span class="soc-card-pic"><img src="' + (ThumbOf $s.pic.img) + '" alt="" loading="lazy" width="64" height="64"></span>' } else { '<span class="soc-card-pic">' + (PhSpan ([pscustomobject]@{ type = 'group'; conflict = $false })) + '</span>' }) +
-    '<span class="soc-card-b"><span class="soc-card-k">' + (Hx $s.period) + '</span><span class="soc-card-t">' + (Hx $s.of) + '</span><span class="soc-card-r">' + (Hx ($s.tiers[0].name + ' to ' + $s.tiers[$s.tiers.Count - 1].name.ToLowerInvariant())) + ' · ' + $s.tiers.Count + ' ranks</span></span></a>'
+    '<span class="soc-card-b"><span class="soc-card-k">' + (Hx $s.period) + '</span><span class="soc-card-t">' + (Hx $s.of) + '</span><span class="soc-card-r">' + (Hx ((SocTitle $s.tiers[0]) + ' to ' + (SocTitle $s.tiers[$s.tiers.Count - 1]))) + ' · ' + $s.tiers.Count + ' ranks</span></span></a>'
 }
 function SocOptions([string]$except, [string]$sel) {   # the choices of a society picker: every other ladder, by region
   $o = New-Object Text.StringBuilder
@@ -2120,22 +2170,23 @@ for ($socI = 0; $socI -lt $SOCS.Count; $socI++) {
     $socFig = '<figure class="soc-fig"><a href="/encyclopedia/' + $so.pic.slug + '"><img src="' + $so.pic.img + '" alt="' + (Hx $so.pic.name) + '"></a><figcaption><a href="/encyclopedia/' + $so.pic.slug + '">' + (Hx $so.pic.name) + '</a>' +
       $(if ($socCr -and $socCr['artist']) { '<span class="soc-credit">' + (Hx ([string]$socCr['artist'])) + $(if ($socLic) { ' · ' + (Hx $socLic) } else { '' }) + '</span>' } else { '' }) + '</figcaption></figure>'
   }
-  $socPopTxt = if ($null -eq $so.popLo) { 'not known' } elseif ($so.popLo -ge 1e6) { (Hx $(if ($so.popLo -eq $so.popHi) { ($so.popLo / 1e6).ToString('0.#', $INV) } else { ($so.popLo / 1e6).ToString('0.#', $INV) + '–' + ($so.popHi / 1e6).ToString('0.#', $INV) })) + ' million' } else { (Hx $(if ($so.popLo -eq $so.popHi) { $so.popLo.ToString('N0', $INV) } else { $so.popLo.ToString('N0', $INV) + '–' + $so.popHi.ToString('N0', $INV) })) }
+  $socPopTxt = if ($so.popLo -ge 1e6) { (Hx $(if ($so.popLo -eq $so.popHi) { ($so.popLo / 1e6).ToString('0.#', $INV) } else { ($so.popLo / 1e6).ToString('0.#', $INV) + '–' + ($so.popHi / 1e6).ToString('0.#', $INV) })) + ' million' } else { (Hx $(if ($so.popLo -eq $so.popHi) { $so.popLo.ToString('N0', $INV) } else { $so.popLo.ToString('N0', $INV) + '–' + $so.popHi.ToString('N0', $INV) })) }
+  if ($so.popEst) { $socPopTxt = 'c. ' + $socPopTxt + ' (est.)' }
   [void]$sb.Append('<div class="soc-intro">' + $socFig + '<p class="soc-lede">' + (SocLink $so.intro) + '</p>' +
     '<p class="soc-facts"><span><b>Period</b> ' + (Hx $so.period) + '</span><span><b>People</b> ' + $socPopTxt + '</span><span><b>Ranks</b> ' + $so.tiers.Count + '</span>' +
     $(if ($so.profiles.Count) { '<span><b>Profile</b> ' + ((@($so.profiles | ForEach-Object { '<a href="' + (ProfUrl $_) + '">' + (Hx $_) + '</a>' })) -join ', ') + '</span>' } else { '' }) + "</p></div>`n")
   # the ladder, then a card for each rank
   [void]$sb.Append('<section class="soc-ladder-sec" aria-labelledby="soc-ladder-t"><div class="soc-ladder-head"><h2 class="ref-sec-title" id="soc-ladder-t">The ladder</h2>' +
     '<div class="soc-scale" role="group" aria-label="How to draw the ladder"><button type="button" class="soc-scale-btn" data-scale="0" aria-pressed="true">By rank</button><button type="button" class="soc-scale-btn" data-scale="1" aria-pressed="false">To scale</button></div></div>' +
-    (SocLadder $so) + '<p class="soc-scale-note">By rank, the ladder is drawn as a pyramid. To scale, each bar is as wide as that rank&#8217;s share of the people; ranks no one has counted are dashed.</p>' + "</section>`n")
+    (SocLadder $so) + '<p class="soc-scale-note">By rank, the ladder is drawn as a pyramid. To scale, each bar is as wide as that rank&#8217;s share of the people. Shares marked est. are estimates where no count survives; their boxes and bars are dashed.</p>' + "</section>`n")
   [void]$sb.Append('<button type="button" class="kd-story soc-kd-open">Read the whole story</button>' + "`n<section class=`"soc-ranks`" aria-label=`"The ranks, from the top`">")
   foreach ($st in $so.tiers) {
     [void]$sb.Append('<article class="soc-rank soc-b-' + $st.band + '" id="rank-' + $st.n + '">' +
-      $(if ($st.pic) { '<a class="soc-rank-pic" href="/encyclopedia/' + $st.pic.slug + '" tabindex="-1" aria-hidden="true"><img src="' + (ThumbOf $st.pic.img) + '" alt="" loading="lazy" width="88" height="88"></a>' } else { '<span class="soc-rank-pic soc-rank-ph" aria-hidden="true">' + $st.n + '</span>' }) +
+      $(if ($st.pic.gen) { '<span class="soc-rank-pic" aria-hidden="true"><img src="' + (ThumbOf $st.pic.img) + '" alt="" loading="lazy" width="88" height="88"></span>' } else { '<a class="soc-rank-pic" href="/encyclopedia/' + $st.pic.slug + '" tabindex="-1" aria-hidden="true"><img src="' + (ThumbOf $st.pic.img) + '" alt="" loading="lazy" width="88" height="88"></a>' }) +
       '<div class="soc-rank-b"><p class="soc-rank-k"><span>' + (Hx $SOCBAND[$st.band]) + '</span> · <span>' + (Hx (SocShare $st)) + '</span></p>' +
-      '<h3 class="soc-rank-t">' + (Hx $st.name) + $(if ($st.term) { ' <span class="soc-term">' + (Hx $st.term) + '</span>' } else { '' }) + '</h3>' +
+      '<h3 class="soc-rank-t">' + (SocTitleHtml $st) + '</h3>' + $(if (SocOtherTerms $st) { '<p class="soc-term">' + (SocNw (Hx (SocOtherTerms $st))) + '</p>' } else { '' }) +
       '<p class="soc-kid">' + (Hx $st.kid) + '</p>' +
-      '<div class="soc-more"><p class="soc-text">' + (SocLink $st.text) + '</p><p class="soc-rise"><b>Moving in or out.</b> ' + (SocLink $st.rise) + '</p><p class="soc-sn"><b>How many?</b> ' + (Hx $st.sn) + '</p>' + (SocChips $st) + '</div></div></article>')
+      '<div class="soc-more"><p class="soc-text">' + (SocLink $st.text) + '</p><p class="soc-rise"><b>Moving in or out.</b> ' + (SocLink $st.rise) + '</p><p class="soc-sn"><b>How many?</b> ' + (Hx $st.sn) + '</p>' + (SocChips $st) + '</div>' + (SocPicCredit $st.pic) + '</div></article>')
   }
   [void]$sb.Append("</section>`n")
   # Born into history: societies.js draws a rank from the data below
@@ -2150,10 +2201,10 @@ for ($socI = 0; $socI -lt $SOCS.Count; $socI++) {
   $socDist = @($socByLv.Values | Sort-Object lv)
   if ($socDist.Count -ge 4) {   # the highest of four agreed ranks; with five or more, also the lowest of four
     $socOrd = @(TyShuffle $socDist ($tyS + '-h') | Select-Object -First 4 | Sort-Object lv)
-    $socQ.Add((TyQ ('Which of these ranks stood highest in ' + $so.of + '?') '' $socOrd[0].name @($socOrd[1..3] | ForEach-Object { $_.name }) ('From the top: ' + ((@($socOrd | ForEach-Object { $_.name })) -join ', then ') + '.') ('#rank-' + $socOrd[0].n) ($tyS + '-oh')))
+    $socQ.Add((TyQ ('Which of these ranks stood highest in ' + $so.of + '?') '' (SocTitle $socOrd[0]) @($socOrd[1..3] | ForEach-Object { SocTitle $_ }) ('From the top: ' + ((@($socOrd | ForEach-Object { SocTitle $_ })) -join ', then ') + '.') ('#rank-' + $socOrd[0].n) ($tyS + '-oh')))
     if ($socDist.Count -ge 5) {
       $socOrd = @(TyShuffle $socDist ($tyS + '-l') | Select-Object -First 4 | Sort-Object lv)
-      $socQ.Add((TyQ ('Which of these ranks stood lowest in ' + $so.of + '?') '' $socOrd[3].name @($socOrd[0..2] | ForEach-Object { $_.name }) ('From the top: ' + ((@($socOrd | ForEach-Object { $_.name })) -join ', then ') + '.') ('#rank-' + $socOrd[3].n) ($tyS + '-ol')))
+      $socQ.Add((TyQ ('Which of these ranks stood lowest in ' + $so.of + '?') '' (SocTitle $socOrd[3]) @($socOrd[0..2] | ForEach-Object { SocTitle $_ }) ('From the top: ' + ((@($socOrd | ForEach-Object { SocTitle $_ })) -join ', then ') + '.') ('#rank-' + $socOrd[3].n) ($tyS + '-ol')))
     }
   }
   foreach ($st in @(TyShuffle @($so.tiers | Where-Object { $_.term -and $_.term -notmatch '[,(]' -and $_.term.Length -le 30 }) ($tyS + '-t') | Select-Object -First 2)) {
@@ -2161,12 +2212,12 @@ for ($socI = 0; $socI -lt $SOCS.Count; $socI++) {
     if ($socWrong.Count -eq 3) { $socQ.Add((TyQ ('Which rank was known as ' + [char]0x201C + $st.term + [char]0x201D + '?') '' $st.name $socWrong ($st.term + ': ' + $st.name + '. ' + [EpochBuild.W]::FirstSentence($st.text, 200)) ('#rank-' + $st.n) ($tyS + '-o' + $st.n))) }
   }
   foreach ($st in @(TyShuffle @($so.tiers | Where-Object { $_.people.Count }) ($tyS + '-p') | Select-Object -First 1)) {
-    $socE = $st.people[0]; $socWrong = @(TyShuffle @($so.tiers | Where-Object { $_.n -ne $st.n -and $_.lv -ne $st.lv } | ForEach-Object { $_.name }) ($tyS + '-p' + $st.n) | Select-Object -First 3)
-    if ($socWrong.Count -eq 3) { $socQ.Add((TyQ ('Which rank did ' + $socE.name + ' belong to?') '' $st.name $socWrong ($socE.name + ': ' + $st.name + '.') ('/encyclopedia/' + $socE.slug) ($tyS + '-q' + $st.n))) }
+    $socE = $st.people[0]; $socWrong = @(TyShuffle @($so.tiers | Where-Object { $_.n -ne $st.n -and $_.lv -ne $st.lv } | ForEach-Object { SocTitle $_ }) ($tyS + '-p' + $st.n) | Select-Object -First 3)
+    if ($socWrong.Count -eq 3) { $socQ.Add((TyQ ('Which rank did ' + $socE.name + ' belong to?') '' (SocTitle $st) $socWrong ($socE.name + ': ' + (SocTitle $st) + '.') ('/encyclopedia/' + $socE.slug) ($tyS + '-q' + $st.n))) }
   }
   [void]$sb.Append((TySection $socQ ('the ladder of ' + $so.of)))
   [void]$sb.Append('<section class="soc-sec"><h2 class="ref-sec-title">Sources and further reading</h2><ul class="essay-refs">' + ((@($so.sources | ForEach-Object { '<li>' + (Hx $_) + '</li>' })) -join '') + '</ul>' +
-    '<p class="soc-method">The shares are rough estimates of the whole population, children included, from the scholarship named on each rank; where no one has counted, the ladder says so. ' + $(if ($so.popNote) { 'Population: ' + (Hx $so.popNote) + '.' } else { '' }) + "</p></section>`n")
+    '<p class="soc-method">The shares are of the whole population, children included. Where a scholar has counted or estimated a rank, its share follows that work, named on the rank; where no count survives, the share is an estimate, marked est. and drawn dashed, made from what the rank was and did, from related figures and from the same rank in comparable societies, and its note says what it rests on. ' + $(if ($so.popNote) { 'Population: ' + (Hx $so.popNote) + '.' } else { '' }) + "</p></section>`n")
   [void]$sb.Append((CiteBox ('Social Hierarchy of ' + $so.of) ($SITE + $path) 'Social Ladders'))
   $pv = $SOCS[($socI - 1 + $SOCS.Count) % $SOCS.Count]; $nx = $SOCS[($socI + 1) % $SOCS.Count]
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other ladders"><a class="prev" rel="prev" href="/societies/' + $pv.slug + '"><span class="lbl">&larr; Previous ladder</span><span class="nm">' + (Hx $pv.of) + '</span></a><a class="next" rel="next" href="/societies/' + $nx.slug + '"><span class="lbl">Next ladder &rarr;</span><span class="nm">' + (Hx $nx.of) + "</span></a></nav>`n")
@@ -2190,7 +2241,7 @@ foreach ($socRg in $SOCREG) {
   $socGrp = @($SOCS | Where-Object { $_.region -eq $socRg }); if (-not $socGrp.Count) { continue }
   [void]$ib.Append('<section class="soc-region"><h2 class="ref-sec-title">' + (Hx $socRg) + '</h2><div class="soc-grid">' + ((@($socGrp | ForEach-Object { SocCard $_ })) -join '') + "</div></section>`n")
 }
-[void]$ib.Append('<section class="soc-sec soc-howto"><h2 class="ref-sec-title">How to read the ladders</h2><p>Each ladder runs from the top of its society to the bottom, by rank in law and honour rather than by wealth alone: a rich Roman freedman still stood below the freeborn. Every rank has a share of the whole population, children included, where scholars have estimated one, and says so where nobody has counted. To compare societies, every rank is also placed in one of eight broad kinds: ' + (Hx ((@($SOCBAND.Values | ForEach-Object { $_.ToLowerInvariant() })) -join ', ')) + '.</p></section>' + "`n")
+[void]$ib.Append('<section class="soc-sec soc-howto"><h2 class="ref-sec-title">How to read the ladders</h2><p>Each ladder runs from the top of its society to the bottom, by rank in law and honour rather than by wealth alone: a rich Roman freedman still stood below the freeborn. Every rank has a share of the whole population, children included: from the scholarship where scholars have counted or estimated one, and otherwise an estimate, marked est. and drawn dashed, made from related figures and from the same rank in comparable societies. To compare societies, every rank is also placed in one of eight broad kinds: ' + (Hx ((@($SOCBAND.Values | ForEach-Object { $_.ToLowerInvariant() })) -join ', ')) + '.</p></section>' + "`n")
 [void]$ib.Append("</div>`n</main>`n<script type=`"application/json`" id=`"soc-index`">[" + ((@($SOCS | ForEach-Object { '[' + (Js $_.slug) + ',' + (Js $_.short) + ',' + (Js $_.in) + ',' + (Js $SOCV[$_.slug]) + ']' })) -join ',') + "]</script>`n<script src=`"/societies.js?v=$SOCJSV`" defer></script>")
 $title = 'Social Hierarchies in History: From Emperors to the Enslaved — The Epoch Institute'
 $desc = 'The social ladders of ' + $SOCS.Count + ' societies, from Rome and the Mughals to feudal Europe and the Aztecs: every rank, how many it held, and how people rose or fell.'
@@ -2199,9 +2250,9 @@ Emit '/societies/' (Page @{ title = $title; desc = $desc; path = '/societies/'; 
 $socRk = foreach ($so in $SOCS) {
   $socRb = [ordered]@{}; foreach ($st in $so.tiers) { if ($st.firm -and -not $socRb.Contains([string]$st.lv)) { $socRb[[string]$st.lv] = $st } }
   if ($socRb.Count -lt 4) { continue }
-  '[' + (Js $so.slug) + ',' + (Js $so.short) + ',' + (Js $so.of) + ',' + $(if ($so.kids) { 1 } else { 0 }) + ',[' + ((@($socRb.Values | ForEach-Object { '[' + (Js $_.name) + ',' + (Js $_.term) + ',' + $_.lv + ',' + (Js ([EpochBuild.W]::FirstSentence($_.text, 200))) + ',' + (Js $_.kid) + ',' + (Js (SocPicOf $_.pic)) + ',' + $_.n + ']' })) -join ',') + ']]'
+  '[' + (Js $so.slug) + ',' + (Js $so.short) + ',' + (Js $so.of) + ',' + $(if ($so.kids) { 1 } else { 0 }) + ',[' + ((@($socRb.Values | ForEach-Object { '[' + (Js (SocTitle $_)) + ',' + (Js (SocOtherTerms $_)) + ',' + $_.lv + ',' + (Js ([EpochBuild.W]::FirstSentence($_.text, 200))) + ',' + (Js $_.kid) + ',' + (Js (SocPicOf $_.pic)) + ',' + $_.n + ',' + (Js (SocCredit $_.pic)) + ',' + (Js $(if ($_.pic -and $_.pic.cr) { [string]$_.pic.cr['source'] } else { '' })) + ']' })) -join ',') + ']]'
 }
-$rkText = "// ranks-data.js - written by scripts/build-pages.ps1 from scripts/societies/. Do not edit. The Order the Ranks game:`n// [slug, short name, of, for Kids mode, [[rank, its own word, level, why, line for children, picture, rank number]]], firm ranks only.`nvar GAME_RANKS = [`n" + ($socRk -join ",`n") + "`n];`n"
+$rkText = "// ranks-data.js - written by scripts/build-pages.ps1 from scripts/societies/. Do not edit. The Order the Ranks game:`n// [slug, short name, of, for Kids mode, [[rank (its own name, the English one in brackets), its other words, level, why, line for children, picture, rank number,`n// picture credit, its source]]], firm ranks only.`nvar GAME_RANKS = [`n" + ($socRk -join ",`n") + "`n];`n"
 if ([EpochBuild.W]::WriteIfChanged("$Repo\ranks-data.js", $rkText)) { $NWRITE++ }
 $RANKSV = [EpochBuild.W]::Sha1($rkText).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, "var RANKS_SRC = '/ranks-data\.js\?v=[^']*';", "var RANKS_SRC = '/ranks-data.js?v=$RANKSV';"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
@@ -2214,7 +2265,7 @@ $socKl = New-Object Text.StringBuilder
 foreach ($so in @($SOCS | Where-Object { $_.kids })) {
   $socLvs = @($so.tiers | ForEach-Object { $_.lv } | Select-Object -Unique); $socRows = foreach ($socLv in $socLvs) { @($so.tiers | Where-Object { $_.lv -eq $socLv })[0] }
   [void]$socKl.Append('<article class="kc-ladder"><h3 class="kc-ladder-t"><a href="/societies/' + $so.slug + '">' + (Hx $so.of) + '</a></h3><ol class="kc-ladder-l">' +
-    ((@($socRows | ForEach-Object { $socK2 = [array]::IndexOf(@($socRows), $_) + 1; '<li>' + $(if ($_.pic) { '<img src="' + (ThumbOf $_.pic.img) + '" alt="" loading="lazy" width="44" height="44">' } else { '<span class="kc-rung" aria-hidden="true">' + $socK2 + '</span>' }) + '<span><b>' + (Hx $_.name) + '</b> ' + (Hx $_.kid) + '</span></li>' })) -join '') + '</ol></article>')
+    ((@($socRows | ForEach-Object { $socK2 = [array]::IndexOf(@($socRows), $_) + 1; '<li>' + $(if ($_.pic) { '<img src="' + (ThumbOf $_.pic.img) + '" alt="" loading="lazy" width="44" height="44">' } else { '<span class="kc-rung" aria-hidden="true">' + $socK2 + '</span>' }) + '<span><b>' + (Hx (SocTitle $_)) + '</b> ' + (Hx $_.kid) + '</span></li>' })) -join '') + '</ol></article>')
 }
 if ([IO.File]::ReadAllText("$Repo\kids", $U8).Contains('<!-- build:kids-ladders -->')) { SetBlock "$Repo\kids" 'kids-ladders' $socKl.ToString() }
 Say ("social ladders: {0} societies, {1} ranks; {2} in the Order the Ranks game, {3} for children" -f $SOCS.Count, (($SOCS | ForEach-Object { $_.tiers.Count } | Measure-Object -Sum).Sum), @($socRk).Count, @($SOCS | Where-Object { $_.kids }).Count)

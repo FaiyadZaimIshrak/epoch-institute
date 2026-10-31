@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The emperor
 term: imperator, tsar, samoderzhets
+local: Imperator
 share: 0
 sharenote: One man, with the imperial family.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: Nobles
 term: dvoryanstvo, potomstvennye dvoryane, lichnye dvoryane
-share: ?
-sharenote: No count for these decades in the sources used: some 100,000 landowners held serfs on the eve of 1861, many nobles owned none (62.8 per cent of the empire's nobles in 1858 were the Polish gentry of the western provinces), and at the 1897 census nobles of both kinds were about 1.4 per cent of the people.
+local: Dvoryanstvo
+share: est 1-1.5
+sharenote: Estimate: the hereditary and personal nobles of the empire, including the Polish gentry of the western provinces (62.8 per cent of its nobles in 1858), perhaps 600,000–900,000 people.
 firm: yes
 terms: table-of-ranks, decembrists
 people: alexander-pushkin, leo-tolstoy, mikhail-speransky
@@ -49,8 +51,9 @@ level: 3
 band: religious
 name: Orthodox clergy
 term: dukhovenstvo, beloe dukhovenstvo (white clergy), chernoe dukhovenstvo (black clergy)
-share: ?
-sharenote: No count for these decades in the sources used: a small estate, though larger than the clergy themselves, since parish priests married and their families belonged to it.
+local: Dukhovenstvo
+share: est 0.8-1.2
+sharenote: Estimate: the Orthodox clergy with their wives and children, who belonged to the estate: parish priests married.
 firm: no
 terms: holy-synod
 people:
@@ -65,8 +68,9 @@ level: 4
 band: specialists
 name: Merchants
 term: kupechestvo, kuptsy
-share: ?
-sharenote: No count for these decades in the sources used: the merchants of the three guilds were few, and as late as 1851 only 8 per cent of Russians lived in towns.
+local: Kupechestvo
+share: est 0.3-0.6
+sharenote: Estimate: the merchants of the three guilds with their families; as late as 1851 only 8 per cent of Russians lived in towns.
 firm: yes
 terms:
 people:
@@ -80,8 +84,9 @@ level: 5
 band: commoners
 name: Townspeople
 term: meshchane, tsekhovye
-share: ?
-sharenote: No count for these decades in the sources used: as late as 1851 only 8 per cent of Russians lived in towns, and some town-dwellers were registered as peasants.
+local: Meshchane
+share: est 4-7
+sharenote: Estimate: the meshchane and guild craftsmen of the towns; as late as 1851 only 8 per cent of Russians lived in towns, and some town-dwellers were registered as peasants.
 firm: yes
 terms: guild
 people:
@@ -96,8 +101,9 @@ level: 5
 band: specialists
 name: Cossacks
 term: kazaki, kazachye voisko
-share: ?
-sharenote: No count for these decades in the sources used: in 1884 the Don Host alone, the largest of ten, had 425,000 male members, and the Cossacks numbered 4.5 million at the start of the 20th century.
+local: Kazaki
+share: est 2-4
+sharenote: Estimate: the Don Host alone, the largest of ten, had 425,000 male members in 1884, and the Cossacks numbered 4.5 million at the start of the 20th century, about 3 per cent of the empire's people.
 firm: no
 terms: cossacks
 people: matvei-platov
@@ -111,6 +117,7 @@ level: 6
 band: specialists
 name: Soldiers
 term: soldaty, rekruty, nizhnie chiny
+local: Soldaty
 share: 1.5-2
 sharenote: Over one million men under arms in the decades after the Napoleonic Wars (E. Willis Brooks's figure), roughly 1.5–2 per cent of the people.
 firm: no
@@ -126,6 +133,7 @@ level: 6
 band: commoners
 name: State and crown peasants
 term: gosudarstvennye krestyane, udelnye krestyane
+local: Gosudarstvennye krestyane
 share: 43-44
 sharenote: In the official count of 1857–1859, 23.1 million state peasants and 3.3 million peasants of the imperial family's appanages and other departments: together about 43.5 per cent of 60.9 million people.
 firm: yes
@@ -141,6 +149,7 @@ level: 7
 band: dependent
 name: Serfs
 term: krepostnye krestyane, pomeshchichi krestyane
+local: Krepostnye krestyane
 share: 35-36
 sharenote: The official count of 1857–1859 gave 23.0 million peasants on proprietors' lands, 37.8 per cent of 60.9 million people; less the household serfs, about 6.8 per cent of them, roughly 35 per cent.
 firm: yes
@@ -157,6 +166,7 @@ level: 7
 band: dependent
 name: Household serfs
 term: dvorovye lyudi
+local: Dvorovye lyudi
 share: 2-3
 sharenote: 6.79 per cent of the serfs on the eve of emancipation, up from 4.14 per cent in 1835: about 1.5 million people in the count of 1857–1859, roughly 2.5 per cent of the population.
 firm: yes

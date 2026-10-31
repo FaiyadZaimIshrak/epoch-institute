@@ -18,6 +18,7 @@ level: 1
 band: ruler
 name: The Sapa Inca and the Coya
 term: sapa inka, qhapaq inka, quya (coya)
+local: Sapa Inka
 share: 0
 sharenote: One man and his principal wife, the Coya, with the royal household.
 firm: yes
@@ -34,6 +35,7 @@ level: 2
 band: nobility
 name: Inca nobles
 term: panaqa (royal lineage), Inka, orejones (the Spaniards' name: "big ears")
+local: Inka
 share: 0.15-0.4
 sharenote: Gordon McEwan puts the Inca nobility at perhaps 15,000 to 40,000 people in an empire of about 10 million, roughly 0.15–0.4 per cent; it is not clear whether the figure takes in the Incas by privilege.
 firm: yes
@@ -50,8 +52,9 @@ level: 3
 band: nobility
 name: Incas by privilege
 term: incas de privilegio (the chroniclers' Spanish term)
-share: ?
-sharenote: No reliable count: they were peoples of the Cusco region, never counted apart from the Inca nobility.
+local: Incas de privilegio
+share: est 0.2-0.5
+sharenote: Estimate: the peoples of the Cusco region raised to Inca status, a few tens of thousands of people.
 firm: no
 terms:
 people:
@@ -65,6 +68,7 @@ level: 4
 band: nobility
 name: Curacas
 term: kuraka (curaca), hatun kuraka (great lord), pachaka kuraka (lord of a hundred)
+local: Kuraka
 share: 1
 sharenote: Roughly 1 per cent, by arithmetic: the decimal scheme gave every hundred taxpaying households a hereditary curaca, with the higher lords drawn from among them; the scheme was not applied everywhere, so this is only an order of size.
 firm: no
@@ -80,8 +84,9 @@ level: 5
 band: religious
 name: Priests
 term: willaq umu (high priest of the Sun)
-share: ?
-sharenote: No reliable count: priests served the Sun and the other state gods in Cusco and the provinces, and every local shrine had its keepers.
+local: Umu
+share: est 0.3-1
+sharenote: Estimate: priests served the Sun and the other state gods in Cusco and the provinces, and every local shrine had its keepers.
 firm: no
 terms: coricancha, inti-raymi
 people:
@@ -96,8 +101,9 @@ level: 6
 band: specialists
 name: Chosen women
 term: aklla (aclla), mamakuna (senior chosen women, priestesses)
-share: ?
-sharenote: No reliable count: a provincial house of chosen women might hold up to about 200 women, but the houses were never counted.
+local: Aklla
+share: est 0.1-0.3
+sharenote: Estimate: a provincial house of chosen women might hold up to about 200 women, and there were houses in Cusco and the provincial centres.
 firm: no
 terms: aclla, acllahuasi
 people:
@@ -112,8 +118,9 @@ level: 7
 band: commoners
 name: Commoners
 term: hatun runa (household head), ayllu (kin group)
+local: Hatun runa
 share: rest
-sharenote: Everyone not counted in the other ranks: the great majority, most of them farmers and herders. This count also takes in the Incas by privilege, the priests, the chosen women and the retainers, whose numbers are unknown.
+sharenote: Everyone not counted in the other ranks: the great majority, most of them farmers and herders. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: ayllu, mita, qhapaq-nan
 people:
@@ -128,6 +135,7 @@ level: 7
 band: commoners
 name: Resettled colonists
 term: mitmaq (pl. mitmaqkuna), mitimaes (Spanish)
+local: Mitmaqkuna
 share: 25-33
 sharenote: Terence D'Altroy's estimate, from anthropological and linguistic studies: perhaps a quarter to a third of the empire's people had been resettled; a rough figure.
 firm: no
@@ -143,8 +151,9 @@ level: 8
 band: dependent
 name: Retainers
 term: yana (pl. yanakuna)
-share: ?
-sharenote: No reliable count for the Inca period.
+local: Yanakuna
+share: est 0.5-2
+sharenote: Estimate: the yanakuna, retainers bound to the Inca, his kin and the temples, grew in number in the empire's last decades.
 firm: no
 terms:
 people:

@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The king
 term: mwene Kongo, manikongo
+local: Mwene Kongo
 share: 0
 sharenote: One man, with the royal household.
 firm: yes
@@ -35,8 +36,9 @@ level: 2
 band: nobility
 name: Royal kin and great nobles
 term: mwissikongo; duque, marquês, conde
-share: ?
-sharenote: No reliable count: a small group of great houses, never counted.
+local: Mwissikongo
+share: est 0.5-1.5
+sharenote: Estimate: the great houses of the royal kin, with their households and dependants.
 firm: yes
 terms: soyo, nsundi, mbata, mpemba
 people: mpanzu-a-kitima
@@ -51,8 +53,9 @@ level: 3
 band: nobility
 name: Lesser nobles and officials
 term: mwene (mani); fidalgos
-share: ?
-sharenote: No reliable count: some 5,000 heavy infantry, counted as nobles, fought at Mbwila in 1665, but the size of the noble class is not known.
+local: Mwene
+share: est 2-4
+sharenote: Estimate: some 5,000 heavy infantry, counted as nobles, fought at Mbwila in 1665; with their families perhaps 15,000–25,000 people among 500,000–780,000.
 firm: yes
 terms: mbanza-kongo
 people:
@@ -66,8 +69,9 @@ level: 3
 band: religious
 name: Clergy and lay teachers
 term: mestres, alongi a aleke
-share: ?
-sharenote: No reliable count: ordained priests were always few, and the number of lay teachers is not known.
+local: Mestres
+share: est 0.1-0.3
+sharenote: Estimate: ordained priests were always few; the lay teachers who taught and baptised in the villages numbered in the hundreds.
 firm: no
 terms: jesuits, capuchins
 people: henrique-of-kongo
@@ -81,8 +85,9 @@ level: 4
 band: commoners
 name: Free villagers
 term:
+local: -
 share: rest
-sharenote: Everyone not counted in the other tiers: the great majority, most of them villagers. No other rank was counted, so this also takes in the nobles, the clergy and the enslaved, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: the great majority, most of them villagers. The other ranks are estimates, so this share is one too.
 firm: yes
 terms:
 people:
@@ -96,8 +101,9 @@ level: 5
 band: enslaved
 name: Enslaved people
 term:
-share: ?
-sharenote: No reliable count: war captives were settled in large numbers around the capital, whose region held about 100,000 people by the 1620s, but how many of them were enslaved is not known.
+local: -
+share: est 10-20
+sharenote: Estimate: war captives were settled in large numbers around the capital, whose region held about 100,000 people by the 1620s, and nobles kept enslaved dependants on their estates.
 firm: yes
 terms: slavery, atlantic-slave-trade
 people:

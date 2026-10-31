@@ -630,9 +630,10 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   shared with Order the Ranks.
 - Order the Ranks (#ranks): 4/5/6 ranks of one society (Easy/Medium/Hard), put in order from the top; only `firm`
   ranks at distinct levels are dealt (see "Social ladders"), from ranks-data.js (GAME_RANKS [slug, short, of, kids,
-  [[name, term, level, why, kid, picture, n]]], written by build-pages.ps1, RANKS_SRC stamped into /games). The check
-  shows each rank's "why"; the finish card links the ladder and shares a pics poster. Kids mode starts at 4 and deals
-  only the Kids ladders.
+  [[title (the rank's own name, the English one in brackets), its other words, level, why, kid, picture, n, picture
+  credit, its source]]], written by build-pages.ps1, RANKS_SRC stamped into /games). Every rank has a picture (no
+  numbers on the cards since 31 Oct 2026). The check shows each rank's "why"; the finish card links the ladder, lists
+  the pictures' credits (rkCredits) and shares a pics poster. Kids mode starts at 4 and deals only the Kids ladders.
 - Globe Hunt: d3-geo orthographic globe (/d3-geo.js) loaded on first open; HUNT_SRC in the page holds the ?v= of maps/globe-land.js
   and maps/atlas-data.js (stamped by build-pages.ps1). Famous states (profiles) or all states; five rounds in five
   different regions (no state twice); drag with inertia, wheel/pinch/± zoom, keyboard (arrows turn, +/− zoom, Enter
@@ -991,48 +992,60 @@ Athens, Sparta, Rome, Byzantium, feudal Europe, the Vikings, Ancien Régime Fran
 Mamluks, the Ottomans, Classical India, the Mughals, Han, Song and Yuan China, Joseon, Tokugawa Japan, Mali, Benin,
 Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue and Hawaii under the kapu.
 - Source: scripts/societies/<slug>.txt, one file each. Header lines: name, of, short, in, year, period, region,
-  population ("lo-hi million | whose estimate" or "?"), profiles (profile names, comma-separated), nolink (optional:
+  population ("lo-hi million | whose estimate", or "est lo-hi million | what the estimate rests on"), profiles
+  (profile names, comma-separated), nolink (optional:
   entries the prose's gold links never go to on this page, a name inside a longer one: "Medina" in Deir el-Medina, or
   another age's thing: the Qing bannermen on Tokugawa; checked against the entries), picture, kids (yes/no: the eight
   Kids ladders), title (≤70), desc (≤160), intro. Then "== tier" blocks from the top down: level (1 = top; equal levels
   stand side by side), band (ruler, nobility, religious, specialists, commoners, dependent, outcast, enslaved), name,
-  term (the period's own words), share, sharenote (whose estimate), firm (its place in the order is agreed: only these
+  term (the period's own words), local (the rank's own name, shown first with the English name in brackets wherever a
+  rank is named: boxes, cards, Compare, Born into history, the game, the Kids corner, the posters, "Pipiltin (Nobles)";
+  one name where both are the same word, "Shōgun"; "-" where no word of its own is attested; SocTitle, SocTitleHtml,
+  societies.js title/titleHtml/inline, make-posters.js socChip; a hyphenated word stays whole, SocNw / .soc-nw), share,
+  sharenote (whose estimate), firm (its place in the order is agreed: only these
   go into the Order the Ranks game, one per level), terms and people (entry slugs; people are members of the rank,
   never its rulers), picture (optional: an entry slug chosen by eye, "-" for none; else the first person or term with a
-  picture), text, rise, you (Born into history: every fact in it is in the text), kid (≤140, Kids mode); then
+  picture; a rank left without one has its own in scripts/society-pictures.tsv, below), text, rise, you (Born into
+  history: every fact in it is in the text), kid (≤140, Kids mode); then
   "== mobility", "== women", "== sources" (real works only); "== checked", NOTE: and MISSING: lines are the editor's.
-- Shares are honest (the writers' guide, scratchpad soc/SOCIETIES-GUIDE.md): a percentage of the whole population only
-  where a scholar or source gives a number (the writer's arithmetic from one is labelled "roughly"), "?" where nobody
-  counted, "rest" for everyone else (one rank), 0 for a ruler. Labels (SocShare): "No reliable count", "One ruler"
-  (only when the sharenote starts with "One"; else "A handful": Sparta's two kings, Saint-Domingue's governor and
-  intendant), "lo–hi%", "Fewer than 1 in 1,000", and for the rest "About N% (the rest)", or, when some ranks were never counted,
-  "At most N% (the rest)" / "Most people (the rest)" (the `most` flag: the rest then also holds the uncounted ranks).
+- Shares (31 Oct 2026, the user: estimated figures everywhere, marked as estimates, never "no reliable count"): a
+  percentage of the whole population, from the scholarship where a scholar or source gives a number (the writer's
+  arithmetic from one is labelled "roughly"); where nobody counted, an estimate, written `est lo-hi`, its note starting
+  "Estimate:" and saying what it rests on (related counts, the same rank in comparable societies, a share another
+  figure implies; scratchpad soc2/est.tsv: 145 shares and 8 populations, applied by soc2/apply-est.js); "rest" for
+  everyone else (one rank, itself an estimate when any other is), 0 for a ruler. "?" is refused. Labels (SocShare):
+  "lo–hi%", "c. 3–6% (est.)", "Fewer than 1 in 1,000 (est.)", "One ruler" (only when the sharenote starts with "One";
+  else "A handful": Sparta's two kings, Saint-Domingue's governor and intendant), "About N% (the rest, est.)"; an
+  estimated population reads "c. 4–6 million (est.)". Estimated bars are dashed and lighter in the pyramid, To scale
+  and Compare. The Russian and Tokugawa ladders have no rest: their ranks, counted or estimated, add up to 93–95%.
 - build-pages.ps1 "Social ladders" (script-level names all start with soc: PowerShell names ignore case, $sec would be
   $SEC) STOPS on a missing key, an unknown band, region, entry, profile or nolink, levels out of order, a malformed
-  share or numbered shares that leave nothing for the rest. It writes /societies/<slug> (header; intro with picture and
-  facts; the ladder as a pyramid with a By rank / To scale switch, bars as wide as the shares, uncounted ranks dashed;
+  share, numbered shares that leave nothing for the rest, a rank without a picture, or a society-pictures.tsv row
+  without its file or for a rank that has an entry picture. It writes /societies/<slug> (header; intro with picture and
+  facts; the ladder as a pyramid with a By rank / To scale switch, bars as wide as the shares, estimated ranks dashed;
   a card per rank: picture, kid line, text, "Moving in or out", "How many?", chips; Born into history; mobility;
   women; Compare; Test yourself: highest of four, lowest of four, "which rank was known as …", "which rank did X belong
   to"; sources and method; Cite; previous/next; Article JSON-LD; poster society-<slug>.jpg when drawn) and /societies/
   (Born into history with a society select, Compare, the ladders by region, how to read them), data/societies/<slug>.json
-  ({slug, name, title, of, short, in, year, yl, period, region, pop, img, tiers [n, lv, band, name, term, lbl, w, firm,
-  most, pic, you, kid, rise, why, people]}), ranks-data.js (see /games), scripts/society-links.js (SOCIETY_LINKS
+  ({slug, name, title, of, short, in, year, yl, period, region, pop, popEst, img, tiers [n, lv, band, name, loc, one,
+  term, lbl, w, firm, est, pic, you, kid, rise, why, people]}), ranks-data.js (see /games), scripts/society-links.js (SOCIETY_LINKS
   {profile: [[url, of]]}: generator.html puts "The social ladder of X →" after the profile's socioeconomy or society
   section, so regenerate the profiles after a ladder is added or renamed) and the build:kids-ladders block of /kids
-  ("Who was who?": the eight Kids ladders, a picture or rung number and the kid line per rank). The prose (intro, text,
+  ("Who was who?": the eight Kids ladders, a picture and the kid line per rank). The prose (intro, text,
   rise, mobility, women) is gold-linked by LinkDesc with the society's year ±200 as context (SocLink; without the link
   tables, as in scratchpad soc/run.ps1, it is only escaped). A -SkipEntries build compiles no patterns, so it keeps the
   ladder pages as they are, like the entry and day pages (31 Oct 2026: it had rewritten all 30 without their links).
 - societies.js (?v= the file's hash, written by the builder): To scale; Born into history draws a rank weighted by the
-  share midpoints ("?" ranks never), says how many in a hundred lived so and the odds of being the ruler (one in the
-  population midpoint), shares a rows poster (share-card.js) and keeps the draws in localStorage epoch-lives; a ladder
-  whose only counted rank is the rest offers "Be born somewhere else" (on the index another society; on a ladder page
-  a link to /societies/?born=1#born, which draws at once). Compare: two ladders side by side, ranks lined up by band,
+  share midpoints (every rank but the ruler; an estimate is said to be one), says how many in a hundred lived so and
+  the odds of being the ruler (one in the population midpoint), shares a rows poster (share-card.js) and keeps the
+  draws in localStorage epoch-lives; a ladder with a single rank to draw would offer "Be born somewhere else" (on the
+  index another society; on a ladder page a link to /societies/?born=1#born, which draws at once): none has since the
+  estimates. Compare: two ladders side by side, ranks lined up by band,
   share bars on one scale, the address keeps ?a=&b= (no #compare: the page goes to the comparison itself, after load
   and the fonts and only if the reader has not scrolled; scrolled there at once, text rewrapping above it when the
   fonts came moved it, CLS 0.22 in Kids mode on phones; scratchpad soc/cmp-scroll.js). Kids mode shows the kid lines and folds the rest behind "Read the
   whole story". window.epochSocieties {draw, odds, load} for tests (scratchpad soc/born-test.js: 100,000 draws a ladder
-  within 0.2 points of the weights).
+  within 0.35 points of the weights).
 - Writing: agents drafted in batches of at most five from Wikipedia articles (scratchpad soc/batches, the guide, the
   reference ladder ref-ancient-rome.txt); every ladder was read in full and its claims checked against the saved
   articles (soc/wp) or standard scholarship, changes logged in soc/factcheck.md (originals in soc/out-orig). Slavery,
@@ -1041,6 +1054,18 @@ Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue a
   contact sheets (soc/sheet.js; the choices in soc/picks.js, which writes the picture: lines): period objects and
   depictions only, no modern statues or imagined portraits, maps, logos or another age's picture of a generic term; the
   "Slavery" entry's picture is an abolitionist medallion, so enslaved ranks have "-" unless the period gives one.
+- Every rank has a picture (31 Oct 2026, the user: no numbers on the game's cards; "any fitting picture"): the 142
+  ranks that had none, or "-", have one of their own in scripts/society-pictures.tsv (slug, rank number, caption,
+  Commons file, author, licence, crop), chosen by eye on contact sheets of Commons searches (scratchpad soc2:
+  rank-queries.tsv, rank-cands.js, rank-sheets.js, rank-picks.tsv, apply-picks.js, then encode-soc.ps1 and
+  pick-preview.js for the crops): period art first, else a later engraving, painting, photograph or museum piece of the
+  same people; never fantasy art, film stills or a degrading scene. Files images/societies/<slug>-<n>.jpg (cropped, at
+  most 320 px wide) with 112 px copies in thumbs/ (make-thumbs.ps1); the author is the photographer where Commons'
+  Artist names the object's maker (CC licences credit the photo). Credited on the rank's card (.soc-pic-cr: caption,
+  author, licence, Commons link; such a picture links nowhere) and in the game's finish card. upload.wikimedia.org
+  answers 429 with Retry-After 600 after about 60 thumbnails in a row, and the block re-arms on every request made
+  during it: wait it out, then fetch one every 3-6 s (soc2/thumbs-slow.js, GAP= for apply-picks.js); a pick without a
+  crop can use its 330 px candidate thumbnail instead (soc2/fill-from-thumbs.js).
 - Wiring: Explore menu, phone menu and footer; Research Hub card; search pages (kind "ladder", glyph group); shelf
   and My Passport kind; sitemap; llms.txt; posters (make-posters.js "societies": a mosaic per ladder, and
   page-societies.jpg); deploy.sh GENERATED and DATA (data/societies); split-css GENERATED; check-site's folders; the
@@ -1137,8 +1162,6 @@ Found while building the social ladders (30 Oct 2026), not done yet:
   press, also for Song woodblock and movable type), "slave trade" (the Atlantic slave trade, also for Viking and Maya
   trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the
   messianic figure, also the caliph al-Mahdi).
-- Ladders where only "the rest" is counted (Egypt, the Vikings, India, the Abbasids, Babylonia, Persia, the Maya,
-  Mali, Benin, Kongo, Hawaii) give Born into history one life: a sourced share for a large rank would add another.
 Ideologies as a further profile kind, by the §"Kinds of profile" recipe. Yoruba religion
 has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.
 455 people of the encyclopedia still have no dates (legendary and biblical figures, and people whose Wikidata dates are

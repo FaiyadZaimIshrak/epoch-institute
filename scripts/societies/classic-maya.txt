@@ -5,7 +5,7 @@ in: a Classic Maya kingdom
 year: 700
 period: c. 250–900 CE (the Classic period)
 region: Americas
-population: ? | no agreed figure for the Classic Maya as a whole; the largest cities held 50,000–120,000 people, estimates for Tikal run from 10,000 to 90,000, and the Copán valley held 18,000–25,000 in the Late Classic
+population: est 5-10 million | Estimate: airborne laser surveys of the central lowlands suggest some 7–11 million people in the Late Classic (Canuto and others, 2018); older estimates were lower, and the largest cities held 50,000–120,000 people
 profiles: Maya civilisation
 nolink: atlantic-slave-trade
 picture: temple-of-the-inscriptions
@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: Holy lords and overlords
 term: k'uhul ajaw ("holy lord"), kaloomte' (overlord)
+local: K'uhul ajaw
 share: 0
 sharenote: One royal family in each kingdom.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: Nobles
 term: ajaw ("lord"), sajal ("feared one", a subordinate lord), ch'ok ("youth", a young noble)
-share: ?
-sharenote: No reliable count: commoners are estimated at over 90 per cent of the people, which leaves the nobility, with its scribes and priests, under a tenth.
+local: Ajaw
+share: est 3-8
+sharenote: Estimate: commoners are estimated at over 90 per cent of the people, which leaves the nobility, with its scribes and priests, under a tenth.
 firm: yes
 terms: ajaw
 people:
@@ -49,8 +51,9 @@ level: 2
 band: religious
 name: Scribes and priests
 term: aj tz'ib ("he of the writing"), aj k'uhuun
-share: ?
-sharenote: No reliable count: scribes and priests came from the nobility, itself a small fraction of the people.
+local: Aj tz'ib
+share: est 0.5-1.5
+sharenote: Estimate: scribes and priests came from the nobility, itself under a tenth of the people.
 firm: no
 terms: mesoamerican-codices, mesoamerican-long-count-calendar
 people:
@@ -64,8 +67,9 @@ level: 3
 band: specialists
 name: Craftsmen and traders
 term:
-share: ?
-sharenote: No reliable count: craftsmen and traders ranged from noble artists to village potters, and were never counted.
+local: -
+share: est 3-8
+sharenote: Estimate: from noble artists to village potters and traders; workshops for stone tools, pottery and textiles stood in many households.
 firm: no
 terms: cacao
 people:
@@ -79,8 +83,9 @@ level: 3
 band: commoners
 name: Commoners
 term:
+local: -
 share: rest
-sharenote: Commoners are estimated at over 90 per cent of the population; this count takes in everyone outside the nobility, including the craftsmen, traders and captives, whose numbers are unknown.
+sharenote: Everyone outside the nobility, the craftsmen and the captives: the farmers of the villages and the outskirts of the cities. The other ranks are estimates, so this share is one too.
 firm: yes
 terms:
 people:
@@ -94,8 +99,9 @@ level: 4
 band: enslaved
 name: Captives and the enslaved
 term: baak ("captive")
-share: ?
-sharenote: No reliable count: the inscriptions name only noble captives, and whether the Classic Maya kept slaves at all is debated.
+local: Baak
+share: est 0.5-2
+sharenote: Estimate: the inscriptions name only noble captives, and whether the Classic Maya kept slaves at all is debated; captives taken in war served or were sacrificed.
 firm: yes
 terms: human-sacrifice
 people:

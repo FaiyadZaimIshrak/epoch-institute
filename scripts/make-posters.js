@@ -167,12 +167,14 @@ READING_PATHS.forEach(p => {
 // pictures, full size (the data names the 112 px copies), and its ranks from the top. An even number of pictures (6, 4
 // or 2): the mosaic has two columns below six, and an odd count left a hole in the grid
 const fullPic = p => p ? p.replace('/thumbs/', '/') : p;
+// a rank as a chip: its own name first, the English one in brackets while the chip stays short ("Pipiltin (Nobles)")
+const socChip = t => !t.loc ? t.name : t.one ? t.loc : (t.loc + ' (' + t.name + ')').length <= 30 ? t.loc + ' (' + t.name + ')' : t.loc;
 const SOCS = fs.existsSync(path.join(ROOT, 'data', 'societies')) ? fs.readdirSync(path.join(ROOT, 'data', 'societies')).filter(f => f.endsWith('.json')).map(f => JSON.parse(read('data/societies/' + f))) : [];
 SOCS.forEach(d => {
   const all = [d.img].concat(d.tiers.map(t => t.pic)).filter(Boolean).map(fullPic).filter((p, i, a) => a.indexOf(p) === i);
   const pics = all.slice(0, all.length >= 6 ? 6 : all.length >= 4 ? 4 : all.length >= 2 ? 2 : 1).map(src => ({ src, top: 25 }));
   JOBS.societies.push({ kind: 'mosaic', file: 'society-' + d.slug + '.jpg', kicker: 'Social ladder · ' + d.period.replace(/\s*\(.*\)\s*$/, ''), title: 'Social Hierarchy of ' + d.of, tease: (d.title || '').split(/:\s*/)[1] || '',
-    pics, chips: d.tiers.slice(0, 6).map(t => t.name), url: 'the-epoch-institute.org/societies/' + d.slug, credit: 'Pictures: Wikimedia Commons, credited on the page' });
+    pics, chips: d.tiers.slice(0, 6).map(socChip), url: 'the-epoch-institute.org/societies/' + d.slug, credit: 'Pictures: Wikimedia Commons, credited on the page' });
 });
 // the main sections
 const fmt = n => Number(n).toLocaleString('en-GB');

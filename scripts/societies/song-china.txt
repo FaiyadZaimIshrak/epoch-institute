@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The emperor
 term: huangdi, tianzi
+local: Huangdi
 share: 0
 sharenote: One man, with the imperial family: the empress, the consorts and the emperor's children.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: The imperial clan
 term: zongshi
-share: ?
-sharenote: No reliable count of the emperor's kin, who grew more numerous with every generation.
+local: Zongshi
+share: est 0.02-0.05
+sharenote: Estimate: the emperor's kin grew more numerous with every generation, some tens of thousands by the 12th century.
 firm: no
 terms:
 people:
@@ -49,6 +51,7 @@ level: 3
 band: nobility
 name: Scholar-officials
 term: shidafu, guanhu (official households)
+local: Shidafu
 share: 0.1-0.2
 sharenote: About 20,000 officials in the 11th century (18,700 posts in 1046, and 38,870 by 1213); with their families roughly 0.1–0.2 per cent of some 90–100 million people.
 firm: yes
@@ -64,8 +67,9 @@ level: 4
 band: nobility
 name: Local gentry and landlords
 term: shi (scholars)
-share: ?
-sharenote: No reliable count: some 79,000 men sat the prefectural examinations around 1100 and more than 400,000 by the 13th century, but many came from the same families, and landlords who never sat them were not counted.
+local: Shi
+share: est 3-6
+sharenote: Estimate: some 79,000 men sat the prefectural examinations around 1100 and more than 400,000 by the 13th century; with the upper-grade landlord households who never sat them, a few per cent of the people.
 firm: no
 terms: neo-confucianism
 people:
@@ -79,8 +83,9 @@ level: 5
 band: commoners
 name: Landowning farmers
 term: nong (farmers), zhuhu (main households)
+local: Zhuhu
 share: rest
-sharenote: Everyone not counted in the other tiers: chiefly the landowning farm families, the majority. This count also takes in the imperial clan, the local gentry, artisans, merchants and bondservants, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: chiefly the landowning farm families. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: champa-rice, green-sprouts-law, new-policies-song
 people:
@@ -94,6 +99,7 @@ level: 6
 band: commoners
 name: Tenant farmers
 term: dianhu (tenants), kehu (guest households)
+local: Kehu
 share: 30-35
 sharenote: The Song household registers of the late 11th century counted roughly a third of all households as landless "guest households" (kehu), most of them tenants.
 firm: no
@@ -109,8 +115,9 @@ level: 7
 band: commoners
 name: Artisans
 term: gong
-share: ?
-sharenote: No reliable count: the historian Xie Qia estimates that over 100,000 households worked in textile production alone, and about 12 per cent of the people lived in towns.
+local: Gong
+share: est 4-8
+sharenote: Estimate: the historian Xie Qia estimates that over 100,000 households worked in textile production alone, and about 12 per cent of the people lived in towns.
 firm: no
 terms: movable-type, porcelain
 people: bi-sheng
@@ -125,8 +132,9 @@ level: 8
 band: specialists
 name: Merchants
 term: shang
-share: ?
-sharenote: No reliable count of the merchant households, from great shippers to street peddlers.
+local: Shang
+share: est 3-6
+sharenote: Estimate: the merchant households, from great shippers to street peddlers, in an economy of busy markets and paper money.
 firm: no
 terms: paper-money, jiaozi, quanzhou
 people:
@@ -141,6 +149,7 @@ level: 9
 band: specialists
 name: Soldiers
 term: bing (soldiers), jinjun (imperial army), xiangjun (prefectural army)
+local: Bing
 share: 0.9-1.1
 sharenote: About a million soldiers at the army's height, and fewer than 900,000 after Emperor Shenzong's cuts, in a population of some 90–100 million: roughly 1 per cent, counting the men alone.
 firm: no
@@ -156,8 +165,9 @@ level: 10
 band: enslaved
 name: Bondservants and slaves
 term: nubi (slaves), jianmin ("mean people")
-share: ?
-sharenote: No reliable count: slavery declined under the Song, and servants who were bought or hired were never counted apart.
+local: Nubi
+share: est 1-3
+sharenote: Estimate: slavery declined under the Song, and servants who were bought or hired worked mostly in rich households.
 firm: yes
 terms: slavery
 people:

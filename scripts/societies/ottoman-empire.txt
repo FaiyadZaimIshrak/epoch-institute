@@ -18,6 +18,7 @@ level: 1
 band: ruler
 name: The sultan
 term: sultan, padişah
+local: Padişah
 share: 0
 sharenote: One man, with the imperial family.
 firm: yes
@@ -33,6 +34,7 @@ level: 2
 band: nobility
 name: Viziers, governors and palace officers
 term: vezir, paşa, beylerbeyi, sancakbeyi, kul
+local: Vezir
 share: 0.01-0.05
 sharenote: A few thousand men: about 300 pages in the palace school and 1,000–2,000 in its outer colleges (Miller's estimate), the viziers, and the governors of 8 provinces in 1527 and 32 in 1609 with their district governors; with their families roughly 0.01–0.05 per cent of 12–30 million people.
 firm: yes
@@ -48,6 +50,7 @@ level: 3
 band: nobility
 name: Provincial cavalry
 term: tımarlı sipahi
+local: Tımarlı sipahi
 share: 0.7-1.7
 sharenote: Some 39,000 timariots in 1475 (22,000 in Rumelia and 17,000 in Anatolia, by a contemporary claim) and about 40,000 on David Nicolle's estimate; with households of five, roughly 0.7–1.7 per cent of 12–30 million people.
 firm: no
@@ -63,8 +66,9 @@ level: 3
 band: religious
 name: Religious scholars and judges
 term: ulema, kadı, müftü, müderris
-share: ?
-sharenote: No reliable count of the judges, teachers, preachers and prayer leaders.
+local: Ulema
+share: est 0.3-1
+sharenote: Estimate: the judges, teachers, preachers and prayer leaders of the towns and larger villages, with their families.
 firm: no
 terms: ulama, qadi, madrasa
 people:
@@ -79,6 +83,7 @@ level: 4
 band: specialists
 name: Janissaries and household troops
 term: yeniçeri, kapıkulu
+local: Yeniçeri
 share: 0.05-0.3
 sharenote: About 6,000 Janissaries in 1475 (David Nicolle) and about 40,000 by 1609, when the sultan's standing troops of every kind numbered some 100,000; roughly 0.05–0.3 per cent of 12–30 million people, few of them married before the late 16th century.
 firm: no
@@ -95,8 +100,9 @@ level: 5
 band: commoners
 name: Merchants and guild craftsmen
 term: tüccar, esnaf
-share: ?
-sharenote: No reliable count of the merchants, craftsmen and shopkeepers of the towns, Muslim, Christian and Jewish; they were a minority beside the peasants.
+local: Esnaf
+share: est 6-10
+sharenote: Estimate: the merchants, craftsmen and shopkeepers of the towns, Muslim, Christian and Jewish, a minority beside the peasants.
 firm: yes
 terms: guild, caravanserai
 people: joseph-nasi
@@ -111,8 +117,9 @@ level: 5
 band: commoners
 name: Peasants and herders
 term: reaya, yörük
+local: Reaya
 share: rest
-sharenote: Everyone not counted in the other tiers: chiefly the peasants and herders, Muslim and Christian alike. This count also takes in the religious scholars, the merchants and craftsmen, the Christians and Jews of the towns and the enslaved, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: chiefly the peasants and herders, Muslim and Christian alike. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: reaya
 people:
@@ -127,8 +134,9 @@ level: 5
 band: commoners
 name: Christian and Jewish subjects
 term: zimmi
-share: ?
-sharenote: No reliable count for the whole empire: Christians were the majority in most of the Balkans (about two to one in present-day Bulgaria in the 1580s, on a modern estimate) and a minority in Anatolia, and there were some 150,000 Jews by 1600. Christian villagers are counted with the peasants and herders.
+local: Zimmi
+share: est 3-6
+sharenote: Estimate: the Christians and Jews of the towns (Christian villagers are counted with the peasants); Christians were the majority in most of the Balkans and a minority in Anatolia, and there were some 150,000 Jews by 1600.
 firm: no
 terms: dhimmi, jizya, millet-system, devshirme
 people:
@@ -143,8 +151,9 @@ level: 6
 band: enslaved
 name: Enslaved people
 term: köle, cariye, esir
-share: ?
-sharenote: No count for the empire: perhaps a fifth of Istanbul's people in the 16th and 17th centuries, but far fewer in the countryside.
+local: Köle
+share: est 1-3
+sharenote: Estimate: perhaps a fifth of Istanbul's people in the 16th and 17th centuries were slaves, but far fewer in the countryside.
 firm: yes
 terms: slavery, eunuch, galley, crimean-tatars
 people:

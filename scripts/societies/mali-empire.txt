@@ -5,7 +5,7 @@ in: the Mali Empire
 year: 1350
 period: c. 1235–1460 (from Sundiata Keita to the loss of the northern provinces)
 region: Sub-Saharan Africa
-population: ? | No reliable estimate exists for the empire at its height in the 14th century
+population: est 5-20 million | Estimate: modern guesses for the empire at its height range widely, from under 10 million to 20 million and more; none rests on a count
 profiles: Mali Empire
 picture: djinguereber-mosque
 kids: no
@@ -16,8 +16,9 @@ intro: The Mali Empire, founded by Sundiata Keita around 1235, ranked people abo
 == tier
 level: 1
 band: ruler
-name: The mansa
+name: The emperor
 term: mansa
+local: Mansa
 share: 0
 sharenote: One man, with the royal family of the Keita lineage.
 firm: yes
@@ -33,8 +34,9 @@ level: 2
 band: nobility
 name: Noble clans and governors
 term: farin, farba, tontajon
-share: ?
-sharenote: No reliable count of the noble lineages and their households.
+local: Tontajon
+share: est 1-4
+sharenote: Estimate: the noble warrior lineages, the clans of the quiver-bearers, and the provincial governors, with their households.
 firm: yes
 terms: farba, kouroukan-fouga
 people:
@@ -49,8 +51,9 @@ level: 3
 band: religious
 name: Muslim scholars and judges
 term: ulama, qadi, mori
-share: ?
-sharenote: No reliable count; the Tarikh al-Sudan remembers Timbuktu in the early 15th century as thronged with West African students.
+local: Mori
+share: est 0.2-0.5
+sharenote: Estimate: the scholars, judges and teachers of the towns, among them the Tarikh al-Sudan's crowds of students in early 15th-century Timbuktu.
 firm: no
 terms: ulama, qadi, sankore-madrasah, djinguereber-mosque
 people: abu-ishaq-al-sahili
@@ -65,8 +68,9 @@ level: 4
 band: specialists
 name: Merchants
 term: Wangara, juula
-share: ?
-sharenote: No reliable count of the merchant families.
+local: Wangara
+share: est 1-3
+sharenote: Estimate: the Wangara and other merchant families of the trading towns and routes.
 firm: no
 terms: wangara, trans-saharan-trade, gold-trade
 people:
@@ -81,8 +85,9 @@ level: 4
 band: commoners
 name: Free farmers, fishers and herders
 term: horon
+local: Horon
 share: rest
-sharenote: Everyone not counted in the other tiers: the free farming, fishing and herding families, the great majority. This count also takes in the nobles, scholars, merchants, griots and craft groups and the enslaved, whose numbers are unknown; Ibn Battuta noted that Malians vied with one another in the number of their slaves.
+sharenote: Everyone not counted in the other tiers: the free farming, fishing and herding families, the great majority. The other ranks are estimates, so this share is one too.
 firm: no
 terms:
 people:
@@ -96,8 +101,9 @@ level: 5
 band: specialists
 name: Griots, smiths and other craft groups
 term: nyamakala, jeli, numu, garanke
-share: ?
-sharenote: No reliable count.
+local: Nyamakala
+share: est 5-10
+sharenote: Estimate: in Mande societies the hereditary craft groups of griots, smiths, leatherworkers and weavers made up a substantial minority.
 firm: no
 terms: griots, nyamakala
 people:
@@ -111,8 +117,9 @@ level: 6
 band: enslaved
 name: Enslaved people
 term: jon
-share: ?
-sharenote: No reliable count; Ibn Battuta noted that Malians vied with one another in the number of slaves they owned.
+local: Jon
+share: est 10-25
+sharenote: Estimate: Ibn Battuta noted that Malians vied with one another in the number of slaves they owned, and slaves farmed for the king and the nobles; later Sahelian states often held a fifth to a third of their people in slavery.
 firm: yes
 terms: slavery
 people:

@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The emperor
 term: basileus, autokrator
+local: Basileus
 share: 0
 sharenote: One man, with the imperial family; co-emperors, usually his young sons, were often crowned beside him.
 firm: yes
@@ -35,8 +36,9 @@ level: 2
 band: nobility
 name: The powerful
 term: dynatoi, archontes
-share: ?
-sharenote: No reliable count: historians have identified only about 80 civil and 64 military noble families in the 11th and 12th centuries.
+local: Dynatoi
+share: est 0.05-0.2
+sharenote: Estimate: historians have identified some 80 civil and 64 military noble families in the 11th and 12th centuries; with their households and retainers, a few thousand to some tens of thousands of people among 12–18 million.
 firm: yes
 terms: dynatoi, strategos
 people: john-kourkouas, bardas-skleros
@@ -50,8 +52,9 @@ level: 2
 band: religious
 name: The patriarch and bishops
 term: patriarches, metropolitai, episkopoi
-share: ?
-sharenote: No reliable count: a small group of senior churchmen.
+local: Episkopoi
+share: est 0.003-0.01
+sharenote: Estimate: the patriarch, some 50 metropolitans and several hundred bishops, with their households.
 firm: yes
 terms: ecumenical-patriarch-of-constantinople
 people: nicholas-i-mystikos
@@ -65,8 +68,9 @@ level: 3
 band: nobility
 name: Officials
 term: logothetai, asekretis, notarioi
-share: ?
-sharenote: No reliable count: in Constantinople there were hundreds, if not thousands, of officials at any time.
+local: Logothetai
+share: est 0.1-0.3
+sharenote: Estimate: hundreds, if not thousands, of officials in Constantinople at any time, with those of the provinces and their families.
 firm: yes
 terms: eunuch
 people:
@@ -81,6 +85,7 @@ level: 4
 band: specialists
 name: Soldiers
 term: stratiotai
+local: Stratiotai
 share: 3-6
 sharenote: About 140,000 soldiers in the late 10th century, a modern estimate; with their families roughly 3–6 per cent of 12–18 million people.
 firm: no
@@ -97,8 +102,9 @@ level: 4
 band: religious
 name: Monks, nuns and parish clergy
 term: monachoi, monachai, hiereis
-share: ?
-sharenote: No reliable count: monasteries were numerous, but no one counted their monks and nuns, or the parish clergy.
+local: Monachoi
+share: est 1-3
+sharenote: Estimate: monasteries were numerous, from the great houses of Constantinople and Mount Athos to small rural foundations, and every village had its priest.
 firm: no
 terms: mount-athos, great-lavra
 people: athanasios-the-athonite
@@ -112,8 +118,9 @@ level: 5
 band: specialists
 name: Merchants and craftsmen of the guilds
 term: emporoi, technitai, systemata
-share: ?
-sharenote: No reliable count: Constantinople alone had perhaps 400,000–500,000 people around 1200, but most townspeople did not belong to a guild.
+local: Emporoi kai technitai
+share: est 2-4
+sharenote: Estimate: Constantinople alone may have held 400,000–500,000 people around 1200, but most townspeople did not belong to a guild.
 firm: no
 terms: guild
 people:
@@ -128,8 +135,9 @@ level: 6
 band: commoners
 name: Free peasants
 term: penetes, georgoi
+local: Georgoi
 share: rest
-sharenote: Everyone not counted in the other tiers: mostly the peasants of the villages, the backbone of society in the 10th century. This count also takes in the dependent peasants (paroikoi), the townspeople outside the guilds, the clergy, the monks and the enslaved, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: mostly the free peasants of the villages, the backbone of society in the 10th century. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms:
 people:
@@ -143,8 +151,9 @@ level: 7
 band: dependent
 name: Dependent peasants
 term: paroikoi
-share: ?
-sharenote: No reliable count: tenants of this kind grew in number from the 10th century and were widespread by the 13th.
+local: Paroikoi
+share: est 15-30
+sharenote: Estimate: tenants on the estates of the powerful, the church and the monasteries, a share that grew from the 10th century until such tenants were widespread by the 13th.
 firm: yes
 terms: pronoia
 people:
@@ -158,8 +167,9 @@ level: 8
 band: enslaved
 name: Enslaved people
 term: douloi
-share: ?
-sharenote: No reliable count: slavery reached its height in the 10th century, mostly in rich urban households, and was a minor urban phenomenon by about 1200.
+local: Douloi
+share: est 1-3
+sharenote: Estimate: slavery reached its height in the 10th century, mostly in rich urban households, and was a minor urban phenomenon by about 1200.
 firm: yes
 terms: slavery
 people:

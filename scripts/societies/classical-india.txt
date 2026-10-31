@@ -18,6 +18,7 @@ level: 1
 band: ruler
 name: The king
 term: rājan, mahārājādhirāja
+local: Rājan
 share: 0
 sharenote: One ruler, with the royal family and the women of the palace.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: religious
 name: Brahmins
 term: brāhmaṇa
-share: ?
-sharenote: No count survives: Megasthenes wrote only that his class of "philosophers", Brahmins and ascetics, was small in number but the most honoured.
+local: Brāhmaṇa
+share: est 4-8
+sharenote: Estimate: Megasthenes called his class of "philosophers" small but the most honoured; in the census of 1931, the first to count castes in detail, Brahmins were about 5–6 per cent of Hindus.
 firm: no
 terms: brahmins, varna, dharmashastra
 people: chanakya
@@ -50,8 +52,9 @@ level: 2
 band: religious
 name: Buddhist and Jain monks and nuns
 term: bhikkhu, bhikkhunī, śramaṇa, saṅgha
-share: ?
-sharenote: No reliable count: monks and nuns were never counted across India.
+local: Śramaṇa
+share: est 0.5-1
+sharenote: Estimate: Faxian and later Xuanzang counted monks by the thousand in great monasteries, but monks and nuns were a small part of the people.
 firm: no
 terms: buddhism, jainism, nalanda, ajivika
 people: mahinda-buddhist-monk, ashvaghosha
@@ -66,8 +69,9 @@ level: 3
 band: nobility
 name: Kshatriyas
 term: kṣatriya, rājanya
-share: ?
-sharenote: No count survives. Megasthenes thought soldiers the second most numerous of his seven classes, but soldiers came from every varna.
+local: Kṣatriya
+share: est 3-8
+sharenote: Estimate: the ruling and warrior lineages; Megasthenes thought soldiers the second most numerous of his seven classes, but soldiers came from every varna.
 firm: no
 terms: kshatriya, varna, licchavi
 people:
@@ -82,8 +86,9 @@ level: 4
 band: commoners
 name: Vaishyas
 term: vaiśya, śreṣṭhin, sārthavāha
-share: ?
-sharenote: No count survives for any varna.
+local: Vaiśya
+share: est 5-10
+sharenote: Estimate: the merchant and trading castes, with landowners and moneylenders among them.
 firm: yes
 terms: vaishya, guild, varna
 people:
@@ -98,8 +103,9 @@ level: 5
 band: commoners
 name: Shudras
 term: śūdra
+local: Śūdra
 share: rest
-sharenote: Everyone not counted in the other tiers, since no count of any varna survives: in the texts the labouring people, and by the 7th century, Xuanzang wrote, the farmers. This share also holds the Brahmins, monks and nuns, Kshatriyas, Vaishyas, Chandalas and dasas, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: in the texts the labouring people, and by the 7th century, Xuanzang wrote, the farmers. The other varnas are estimates, so this share is one too.
 firm: yes
 terms: shudra, varna
 people:
@@ -113,8 +119,9 @@ level: 6
 band: outcast
 name: Chandalas and other outcastes
 term: caṇḍāla, śvapaca
-share: ?
-sharenote: No count survives.
+local: Caṇḍāla
+share: est 2-6
+sharenote: Estimate: in the census of 1931 the castes then called "depressed" were about 15 per cent of Hindus; the Chandalas and the outcastes of the texts were a smaller group in the 4th–6th centuries.
 firm: yes
 terms:
 people:
@@ -128,8 +135,9 @@ level: 6
 band: enslaved
 name: Enslaved people
 term: dāsa, dāsī
-share: ?
-sharenote: No reliable count: slaves were never counted, and historians such as Romila Thapar hold that they were not the main labour force.
+local: Dāsa
+share: est 1-3
+sharenote: Estimate: slaves were never counted, and historians such as Romila Thapar hold that they were not the main labour force; most served in households.
 firm: yes
 terms: slavery
 people:

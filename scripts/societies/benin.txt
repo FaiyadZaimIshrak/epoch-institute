@@ -5,7 +5,7 @@ in: the Kingdom of Benin
 year: 1550
 period: c. 1440–1690 (from Oba Ewuare to the civil war of the 1690s)
 region: Sub-Saharan Africa
-population: ? | No reliable estimate exists for the kingdom in the 16th and 17th centuries
+population: est 0.5-1 million | Estimate: Benin City is thought to have held some 60,000–100,000 people in the 16th and 17th centuries, and the kingdom's heartland several hundred thousand more; no figure for the period rests on a count
 profiles: Benin Empire
 picture: benin-bronzes
 kids: no
@@ -16,8 +16,9 @@ intro: The Kingdom of Benin ranked its people around a sacred king, the Oba, who
 == tier
 level: 1
 band: ruler
-name: The Oba
+name: The king
 term: Oba, Omo n'Oba
+local: Oba
 share: 0
 sharenote: One man, with the royal family.
 firm: yes
@@ -32,10 +33,11 @@ kid: The Oba was Benin's king, and his people believed he was sacred.
 == tier
 level: 2
 band: nobility
-name: The Uzama
+name: Hereditary chiefs
 term: Uzama
-share: ?
-sharenote: No reliable count: a handful of hereditary title-holders and their households, in a kingdom whose population is not known.
+local: Uzama
+share: est 0.01-0.05
+sharenote: Estimate: seven hereditary title-holders, the Uzama, with their households.
 firm: yes
 terms: uzama
 people:
@@ -49,8 +51,9 @@ level: 3
 band: nobility
 name: Palace chiefs
 term: Eghaevbo n'Ogbe
-share: ?
-sharenote: No reliable count: a small body of title-holders and their households.
+local: Eghaevbo n'Ogbe
+share: est 0.1-0.3
+sharenote: Estimate: a small body of title-holders with their large households and followers.
 firm: yes
 terms:
 people:
@@ -64,8 +67,9 @@ level: 3
 band: nobility
 name: Town chiefs
 term: Eghaevbo n'Ore
-share: ?
-sharenote: No reliable count: a small body of title-holders and their households.
+local: Eghaevbo n'Ore
+share: est 0.1-0.3
+sharenote: Estimate: a small body of title-holders with their large households and followers.
 firm: yes
 terms:
 people:
@@ -79,8 +83,9 @@ level: 4
 band: specialists
 name: Royal craft guilds
 term: Igun Eronmwon (brass casters), Igun Ematon (blacksmiths), Igbesanmwan (ivory and wood carvers)
-share: ?
-sharenote: No reliable count: the guilds were a small part of the people of Benin City, whose own size is not known.
+local: -
+share: est 0.5-1
+sharenote: Estimate: the brass casters, blacksmiths, carvers and some forty other guilds of Benin City, each living in its own quarter.
 firm: no
 terms: igun-eronmwon, benin-bronzes, benin-bronze-plaques
 people:
@@ -95,8 +100,9 @@ level: 5
 band: commoners
 name: Free villagers
 term:
+local: -
 share: rest
-sharenote: Everyone not counted in the other tiers: the great majority, most of them farmers in the villages. No rank of Benin was counted in this period, so this also takes in the chiefs' households, the guilds and the enslaved, whose numbers are unknown.
+sharenote: Everyone not counted in the other ranks: the great majority, most of them farmers in the villages. The other ranks are estimates, so this share is one too.
 firm: yes
 terms: edo-people
 people:
@@ -111,8 +117,9 @@ level: 6
 band: enslaved
 name: Enslaved people
 term:
-share: ?
-sharenote: No reliable count: chiefs owned many slaves, but no source for this period counts them.
+local: -
+share: est 5-15
+sharenote: Estimate: chiefs owned many slaves and settled captives in villages of their own; a common share for West African kingdoms of the period, where slavery was widespread.
 firm: yes
 terms: slavery, atlantic-slave-trade
 people:

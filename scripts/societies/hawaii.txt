@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The paramount chief
 term: aliʻi nui, mōʻī
+local: Aliʻi nui
 share: 0
 sharenote: One ruler for each island kingdom until Kamehameha I united them between 1795 and 1810, then one king, with their households.
 firm: yes
@@ -35,8 +36,9 @@ level: 2
 band: nobility
 name: High chiefs
 term: aliʻi, aliʻi ʻaimoku (district chiefs), nīʻaupiʻo (the highest grade)
-share: ?
-sharenote: No reliable count: the chiefly class was a small minority, and no estimate of its size is known for the period.
+local: Aliʻi
+share: est 0.5-2
+sharenote: Estimate: the chiefly class was a small minority; its highest grades were a few families in each island kingdom.
 firm: yes
 terms: alii
 people:
@@ -50,8 +52,9 @@ level: 3
 band: nobility
 name: Lesser chiefs and land agents
 term: kaukaualiʻi (lesser chiefs), konohiki (land agents)
-share: ?
-sharenote: No reliable count: each land division (ahupuaʻa) had its konohiki, but no estimate of the number of lesser chiefs is known.
+local: Kaukaualiʻi
+share: est 1-3
+sharenote: Estimate: each land division (ahupuaʻa) had its konohiki, and the lesser chiefs served the high chiefs in every district.
 firm: no
 terms: alii
 people:
@@ -65,8 +68,9 @@ level: 3
 band: religious
 name: Priests and experts
 term: kahuna, kahuna nui (high priest)
-share: ?
-sharenote: No reliable count: priests served at temples across the islands and every craft had its masters, but they were never counted.
+local: Kahuna
+share: est 1-3
+sharenote: Estimate: priests served at temples across the islands, and every craft, from canoe building to healing, had its masters.
 firm: no
 terms: piilanihale
 people:
@@ -81,8 +85,9 @@ level: 4
 band: commoners
 name: Commoners
 term: makaʻāinana
+local: Makaʻāinana
 share: rest
-sharenote: Everyone not counted in the other ranks: the great majority, farmers and fishers. This count also takes in the high and lesser chiefs, the priests and experts and the kauwā, whose numbers are unknown.
+sharenote: Everyone not counted in the other ranks: the great majority, farmers and fishers. The other ranks are estimates, so this share is one too.
 firm: yes
 terms: makaainana
 people:
@@ -94,10 +99,11 @@ kid: Most Hawaiians were farmers and fishers who grew taro, caught fish and gave
 == tier
 level: 5
 band: outcast
-name: Kauwā outcasts
+name: Outcasts
 term: kauwā
-share: ?
-sharenote: No reliable count: the sources describe the kauwā but give no numbers.
+local: Kauwā
+share: est 0.5-2
+sharenote: Estimate: the sources describe the kauwā as a small hereditary class and give no numbers.
 firm: yes
 terms:
 people:

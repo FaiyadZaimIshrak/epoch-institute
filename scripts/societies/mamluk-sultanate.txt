@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The sultan
 term: sultan, al-malik
+local: Al-Malik
 share: 0
 sharenote: One man, with his household and family.
 firm: yes
@@ -34,8 +35,9 @@ level: 2
 band: nobility
 name: Amirs
 term: amir; amir mi'a (of a hundred), amir tablkhana (of forty), amir 'ashara (of ten)
-share: ?
-sharenote: No reliable count: the amirs were the senior part of the mamluk caste, which numbered about 10,000 men around 1293.
+local: Umarāʾ
+share: est 0.05-0.15
+sharenote: Estimate: a few hundred amirs among the 10,000 mamluks of around 1293, each with a large household of his own mamluks and servants.
 firm: yes
 terms: emir, iqta, mamluk
 people:
@@ -50,6 +52,7 @@ level: 3
 band: nobility
 name: Mamluk soldiers
 term: mamluk (pl. mamalik), al-mamalik al-sultaniyya (the royal mamluks)
+local: Mamālīk
 share: 0.1-0.2
 sharenote: About 10,000 mamluks, amirs included, in the sultanate by 1293, a modern estimate, among some 6 million people around 1500 and more before the plague: roughly 0.1–0.2 per cent, counting the men alone.
 firm: yes
@@ -65,8 +68,9 @@ level: 4
 band: nobility
 name: Sons of mamluks
 term: awlad al-nas
-share: ?
-sharenote: No reliable count of the sons and grandsons of mamluks.
+local: Awlād al-nās
+share: est 0.1-0.3
+sharenote: Estimate: the sons and grandsons of mamluks with their families.
 firm: no
 terms: awlad-al-nas, mamluk
 people:
@@ -81,8 +85,9 @@ level: 5
 band: religious
 name: Scholars and judges
 term: ulama, qadi al-qudat (chief judge), shaykh
-share: ?
-sharenote: No reliable count of the scholars, judges, teachers and Sufi shaykhs.
+local: ʿUlamāʾ
+share: est 0.5-1
+sharenote: Estimate: the scholars, judges, teachers and Sufi shaykhs of Cairo, Damascus, Aleppo and the smaller towns, with their families.
 firm: no
 terms: ulama, qadi, madrasa, sufism
 people: ibn-khaldun, ibn-hajar-al-asqalani, al-maqrizi
@@ -97,8 +102,9 @@ level: 6
 band: specialists
 name: Officials and scribes
 term: kuttab (sing. katib), arbab al-aqlam ("men of the pen")
-share: ?
-sharenote: No reliable count of the scribes and officials of the chancery, the army bureau and the treasuries.
+local: Kuttāb
+share: est 0.2-0.5
+sharenote: Estimate: the scribes and officials of the chancery, the army bureau and the treasuries, with their families.
 firm: no
 terms: copts
 people: al-umari
@@ -112,8 +118,9 @@ level: 7
 band: commoners
 name: Townspeople
 term: ʿamma (the common people), tujjar (merchants)
-share: ?
-sharenote: No reliable count of the towns' share: Cairo alone had close to half a million people by 1340, and between 150,000 and 300,000 in the 15th century, after the plagues.
+local: ʿĀmma
+share: est 10-15
+sharenote: Estimate: Cairo alone had close to half a million people by 1340; with Damascus, Aleppo, Alexandria and the smaller towns, perhaps a tenth to a sixth of the people lived in towns.
 firm: no
 terms: cairo
 people:
@@ -128,8 +135,9 @@ level: 7
 band: commoners
 name: Peasants
 term: fallahin (sing. fallah)
+local: Fallāḥūn
 share: rest
-sharenote: Everyone not counted in the other tiers: chiefly the peasants of the Nile valley and the Syrian countryside, the great majority. This count also takes in the amirs, the sons of mamluks, the scholars, the scribes, the townspeople, the Bedouin and the enslaved, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: chiefly the peasants of the Nile valley and the Syrian countryside, and the Bedouin. Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: iqta
 people:
@@ -143,6 +151,7 @@ level: 7
 band: commoners
 name: Christians and Jews
 term: dhimmi, ahl al-dhimma ("people of the pact")
+local: Ahl al-dhimma
 share: 9-10
 sharenote: By the end of the period Muslims may have outnumbered Christians in Egypt by ten to one, roughly 9 per cent Christian; the share was higher around 1300, before the conversions of the 14th century, and the Jews and the Christians of Syria add more.
 firm: no
@@ -159,8 +168,9 @@ level: 8
 band: enslaved
 name: Enslaved people
 term: ʿabd (slave), jariya (slave woman), umm walad, tawashi (eunuch)
-share: ?
-sharenote: No reliable count: slaves served in households across the realm, and women always outnumbered men among them.
+local: ʿAbīd
+share: est 1-3
+sharenote: Estimate: slaves served in households across the realm, and women always outnumbered men among them.
 firm: yes
 terms: slavery, eunuch
 people:

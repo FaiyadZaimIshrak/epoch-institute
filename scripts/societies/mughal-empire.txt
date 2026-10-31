@@ -19,6 +19,7 @@ level: 1
 band: ruler
 name: The emperor
 term: pādshāh
+local: Pādshāh
 share: 0
 sharenote: One man, with the imperial family and the women of the imperial household.
 firm: yes
@@ -34,6 +35,7 @@ level: 2
 band: nobility
 name: Ranked nobles and officers
 term: mansabdār, umarā
+local: Mansabdār
 share: 0.02-0.06
 sharenote: About 8,000 mansabdars around 1650 (Stephen Blake's count); with their families, roughly 0.02–0.06 per cent of the population.
 firm: yes
@@ -49,8 +51,9 @@ level: 3
 band: nobility
 name: Landholders and chiefs
 term: zamīndār
-share: ?
-sharenote: No reliable count of the zamindars and their families.
+local: Zamīndār
+share: est 1-2
+sharenote: Estimate: the zamindars, great and small, with their families; Arif Qandhari counted two to three hundred autonomous chiefs under Akbar alone.
 firm: no
 terms: zamindar, rajputs, jats
 people: isa-khan
@@ -65,8 +68,9 @@ level: 3
 band: religious
 name: Religious scholars and holy men
 term: ulamā, qāzī, shaikh, brāhmaṇ
-share: ?
-sharenote: No reliable count: Muslim scholars, Sufi shaikhs and Brahmin priests were never counted.
+local: Ulamā
+share: est 1-2
+sharenote: Estimate: the Muslim scholars and judges, the Sufi shaikhs and the Brahmin priests, with their families.
 firm: no
 terms: ulama, qazi, sufism, brahmins, fatawa-i-alamgiri
 people: tulsidas
@@ -81,8 +85,9 @@ level: 4
 band: specialists
 name: Merchants and bankers
 term: sarrāf
-share: ?
-sharenote: No reliable count of the merchant and banking families.
+local: Sarrāf
+share: est 2-4
+sharenote: Estimate: the merchant and banking families, among them the Bania castes, the Bohras and the Khatris.
 firm: no
 terms: bohras, parsis
 people:
@@ -97,8 +102,9 @@ level: 5
 band: commoners
 name: Artisans and townspeople
 term:
-share: ?
-sharenote: No reliable count: estimates of the share of people living in towns around 1600 run from under 9 per cent (Tim Dyson) to about 15 per cent (Irfan Habib, Shireen Moosvi), and many artisans lived in villages.
+local: -
+share: est 10-15
+sharenote: Estimate: estimates of the share of people living in towns around 1600 run from under 9 per cent (Tim Dyson) to about 15 per cent (Irfan Habib, Shireen Moosvi), and many artisans lived in villages.
 firm: yes
 terms:
 people:
@@ -112,8 +118,9 @@ level: 5
 band: commoners
 name: Peasants
 term: raiyat, khud-kāsht, pāhī-kāsht
+local: Raiyat
 share: rest
-sharenote: Everyone not counted in the other tiers: the great majority (Shireen Moosvi reckons 82 per cent of the late-16th-century labour force rural). This count also takes in the zamindars, religious men, merchants, townspeople, lowest castes and enslaved, whose numbers are unknown.
+sharenote: Everyone not counted in the other tiers: the great majority (Shireen Moosvi reckons 82 per cent of the late-16th-century labour force rural). Several of the other ranks are estimates, so this share is one too.
 firm: yes
 terms: zabt-system
 people:
@@ -127,8 +134,9 @@ level: 6
 band: outcast
 name: The lowest castes
 term:
-share: ?
-sharenote: No reliable count for the period.
+local: -
+share: est 8-14
+sharenote: Estimate: the castes then called "depressed" were about 14 per cent of the people of British India in the census of 1931; the share in the 17th century was probably of the same order.
 firm: yes
 terms: caste, varna
 people:
@@ -142,8 +150,9 @@ level: 6
 band: enslaved
 name: Enslaved people
 term: ghulām
-share: ?
-sharenote: No reliable count: slavery was mostly domestic, and household slaves were never counted.
+local: Ghulām
+share: est 0.5-2
+sharenote: Estimate: slavery was mostly domestic, in the households of nobles and the well-off; famines and wars also drove people into bondage.
 firm: yes
 terms: slavery, ghulam, eunuch
 people:
