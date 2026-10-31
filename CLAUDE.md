@@ -28,7 +28,10 @@ Profiles · Encyclopedia · Maps & Time ▾ · Themes ▾ · Play ▾ · Today i
 - More (the Institute): About, Research Hub, Open Data, Teachers' Corner, Community, Submit an Article, Write for Us
   (/contributors), Newsletter, Contact.
 Every item has a short line under its name; the panels (.nav-mega, columns with .nav-col-h headings) open on hover,
-click or ArrowDown and are shifted to stay 12 px inside the window (place()); opening one closes the others. A new
+click or ArrowDown and are shifted to stay 12 px inside the window (place()); opening one closes the others. A click
+after the pointer has opened a panel keeps it open and a second click closes it (until 31 Oct 2026 that first click
+closed it, so a menu clicked with a mouse or tapped on a tablet wide enough for the bar only flashed; scratchpad
+gov/menu-test.js: mouse, keys, Edge touch, WebKit iPad). A new
 page goes into MENUS (or MORE) with its page key, and into the footer. The bar is centred on one line (gap 24 px up to
 1365 px) and gives way to the menu button at 1160 px and below; between 600 and 1160 px the phone menu opens as a 420 px
 panel at the right. The phone menu: the Display row, Profiles, Encyclopedia, Today in History, then one folding group

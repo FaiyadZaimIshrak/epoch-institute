@@ -1489,10 +1489,15 @@ function initNav(activePage) {
         if (r.left + dx < 12) dx = 12 - r.left;
         if (dx) menu.style.marginLeft = Math.round(dx) + 'px';
       }
+      // a panel the pointer opened on its way to the button is kept open by the click that follows: until 31 Oct 2026
+      // the click closed it again at once, so a menu clicked with a mouse (or tapped on a tablet wide enough for the
+      // bar, which sends mouseenter before the click) only flashed. A second click closes it.
+      var hoverOpened = false;
       wrap.addEventListener('mouseenter', function() {
         clearTimeout(timers[i]);
         // the menus stand side by side: entering one closes the others at once
         wraps.forEach(function(w, j) { if (j !== i && w.classList.contains('open')) { clearTimeout(timers[j]); timers[j] = null; w.classList.remove('open'); var b2 = w.querySelector('.nav-parent-btn'); if (b2) b2.setAttribute('aria-expanded', 'false'); } });
+        if (!wrap.classList.contains('open')) hoverOpened = true;
         wrap.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
         place();
@@ -1501,19 +1506,21 @@ function initNav(activePage) {
         timers[i] = setTimeout(function() {
           wrap.classList.remove('open');
           btn.setAttribute('aria-expanded', 'false');
-          timers[i] = null;
+          timers[i] = null; hoverOpened = false;
         }, 300);
       });
 
       btn.addEventListener('click', function(e) {
         var isOpen = wrap.classList.contains('open');
+        e.stopPropagation();
+        if (isOpen && hoverOpened) { hoverOpened = false; return; }
         closeAll();
         if (!isOpen) {
           wrap.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
           place();
+          hoverOpened = false;
         }
-        e.stopPropagation();
       });
 
       btn.addEventListener('keydown', function(e) {
