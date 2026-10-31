@@ -1142,7 +1142,15 @@ council of generals, 1170; elective monarchy: the Fourth Council of Toledo, 633)
   build:gov-lede, gov-forms, gov-chart, gov-table. Menu Themes -> Societies and ideas, footer, Research Hub (Explore;
   write moved to Play and start to The Institute so each group fills its rows), search (SEARCH_PAGES), sitemap,
   llms.txt, poster page-governance.jpg (make-posters.js page "governance"). window.epochGov for tests.
-- Not yet: the "Design your state" wizard and essay 06 ("Who Should Rule?"); encyclopedia entries for the forms that
+- "Design your state" (#design, after the six forms; governance.js, .gv-wiz): seven questions one at a time as on /start
+  (who has the final say, how rulers are chosen, what limits them, the state's size, what holds the people together, who
+  defends it, how power changes hands), each answer weighting the forms it describes; the result is the closest form
+  with its emblem, teaser and profile (read from the page's own cards) and the next two. Colonial rule is never a
+  result. Weights were tuned until 16 real states land on their form (gov/wizard-personas.js: Louis XIV's France,
+  Britain, the United States, Athens, Venice, the Mongols, the Soviet Union, a junta, Iran, a feudal kingdom, Hawaii, a
+  Greek tyrant, Poland-Lithuania, the Roman Republic, Roman nobles, Napoleon) and every form can win (gov/wizard-check.js
+  runs all 78,125 answer sets); window.epochGovWizard.answer([...]) for tests (gov/wizard-test.js, gov/hub-test.js).
+- Not yet: essay 06 ("Who Should Rule?"); encyclopedia entries for the forms that
   have none (only constitutional and elective monarchy, feudalism and federalism have one), which would let the
   encyclopedia's own texts link to the forms.
 
