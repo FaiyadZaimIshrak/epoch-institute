@@ -14,14 +14,24 @@ articles/ likewise holds the community article pages (/articles → /community).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
 Plus 404.html and generator.html (generator is NOT deployed — see scripts/deploy.sh).
 
-## Menu (shared-nav.js navHtml)
-Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Rise and Fall Race, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, Social Ladders, Inventions Tree, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
-Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
-Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
-Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
-pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
-(/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
+## Menu (shared-nav.js initNav: MENUS, MORE)
+Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and looked cramped):
+Profiles · Encyclopedia · Maps & Time ▾ · Themes ▾ · Play ▾ · Today in History · More ▾.
+- Maps & Time: Maps (Atlas, Faith Maps, Connections, States) | Time (World Timeline, Centuries, Year by Year, Country
+  Histories, Rise and Fall Race, Empire Explorer).
+- Themes: Societies and ideas (People, Social Ladders, Inventions Tree, Great Speeches) | Read and discover (Reading
+  Paths, Research Series, Glossary, Find Your Way In).
+- Play: History Quiz, History Games, Flashcards, Write in Ancient Scripts, Kids Corner, My Passport, and "Surprise me".
+- More (the Institute): About, Research Hub, Open Data, Teachers' Corner, Community, Submit an Article, Write for Us
+  (/contributors), Newsletter, Contact.
+Every item has a short line under its name; the panels (.nav-mega, columns with .nav-col-h headings) open on hover,
+click or ArrowDown and are shifted to stay 12 px inside the window (place()); opening one closes the others. A new
+page goes into MENUS (or MORE) with its page key, and into the footer. The bar is centred on one line (gap 24 px up to
+1365 px) and gives way to the menu button at 1160 px and below; between 600 and 1160 px the phone menu opens as a 420 px
+panel at the right. The phone menu: the Display row, Profiles, Encyclopedia, Today in History, then one folding group
+(details.nav-dd-sec) per menu, the group of the current page open. The footer has four columns (Collections / Maps &
+Time / Themes & Play / Institute) and the newsletter; the footer of every page except /contact starts with "Spotted a
+mistake on this page? Suggest a correction" (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
 community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, home. The header also
 carries the Kids mode star
@@ -344,6 +354,21 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   `sitemap.xml` (an index) + `sitemaps/{pages,profiles,encyclopedia,states,years}.xml` with image entries; lastmod changes
   only when a page's content changes (scripts/sitemap-state.tsv); `search-profiles.js` (the profiles for the header
   search: the generated pages load it instead of shared-data.js); `scripts/changed-urls.txt` (for ping-indexnow.ps1).
+SEO rules (31 Oct 2026, scratchpad nav/seo-audit.js checks all 40,211 pages: titles, descriptions, thin pages,
+canonicals, JSON-LD, h1, sitemap coverage):
+- Titles: Page() runs FitTitle: over 70 characters a title loses " — The Epoch Institute" (Google shows the site name
+  above it), then its section label (" — Encyclopedia", " — States" …), which until then keeps an entry and a state of
+  the same name apart; NameYears adds a name's years only when the name does not already hold them ("1931 Constitution
+  of Ethiopia", "Duchy of Estonia (1219-1346)" said them twice). generator.html does the same for the profiles: years
+  without "CE" on each ("Abbasid Caliphate (750–1517): History, Rise and Fall", "Roman Empire (27 BCE – 476 CE)") and no
+  Institute name past 70 characters. Before: 5,046 titles over 70 and 488 with doubled years; after: 21, all essays,
+  ladders and speeches whose own names are that long.
+- State descriptions name their state: a teaser that does not contain the state's name (3,971 did: "A minor chiefship of
+  southern Kathiawar …", four pairs identical) is prefixed "Name (years): " with a leading A/An/The lowered.
+- Entry pages never end in a dead end: every description is linked in a first pass ($DESCH, $LINKIN), and an entry with
+  no "See also" from the profiles or the state histories gets one from the entries that mention it and those its
+  description names (LinkedNear: pictured first, then the most mentioned; 2,462 pages had none). The pass replaces the
+  loop's own LinkDesc call, so the build takes no longer.
 Run it after any change to encyclopedia-data.js, encyclopedia-links.js, data/*.json, reading-paths.js, shared-data.js
 EMPIRES or epoch-stats.js (about 15 minutes; -SkipEntries skips the entry pages, ~3 minutes, for testing), then
 scripts/check-site.ps1 (every internal link resolves; one h1, title, description <= 160, canonical, JSON-LD per page).
@@ -1219,12 +1244,20 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
   posts that too); the canvas is shown once the worker has drawn ('ready'); the still map stays under reduced motion or
   Save-Data; a head script sets html.home-globe-on with the
   same tests, so the link keeps the globe's 25:14 box from the first paint and nothing moves when it swaps; the canvas's
-  [hidden] must win over .home-map canvas, which once showed an empty box under the map), "Ways into history" doors
-  with live counts (builder), On this day (one row: the anniversary event's picture with its year and title as a
-  caption, then the international day and/or events in year order, never the pictured one again; links today's day
-  page), featured profiles + era/region chips, centuries
-  strip and country chips (builder), reading paths, daily quiz + entry of the day, newsletter (the announcements, a Google Drive folder, were removed on 29 Oct 2026).
-  The mission paragraph is on About.
+  [hidden] must win over .home-map canvas, which once showed an empty box under the map), then (regrouped 31 Oct 2026,
+  the user: more engaging, nothing cramped, no gaps): "Continue where you left off" (returning readers), On this day
+  (one row: the anniversary event's picture with its year and title as a caption, then the international day and/or
+  events in year order, never the pictured one again; links today's day page), "Try it yourself" (build:home-try,
+  $HOMETRY in the builder: six picture cards for the interactive tools, each with what to do: be born into history,
+  trace an invention, race the empires, write in hieroglyphs, watch a faith spread, the Kids Corner), the daily row
+  (Daily Quiz beside "Today's Puzzles", a 2 x 2 of the Daily Ten, Connections, the Crossword and Who Said It?, then
+  "From the Encyclopedia", the entry of the day, as a wide card), "Ways into history" (build:home-doors: eight doors,
+  picture on top, with the short line `s` of $SECTIONS: profiles, encyclopedia, states, atlas, countries, centuries,
+  people, paths), featured profiles + era/region chips, centuries strip and country chips (builder), reading paths,
+  newsletter (the announcements, a Google Drive folder, were removed on 29 Oct 2026). On phones the featured profiles
+  and the chip rows scroll sideways (.browse-cols > div needs min-width: 0, or the column grows to the unwrapped chips
+  and they cannot scroll), and the doors stand two to a row. Sections fade in a little before they reach the screen
+  (IntersectionObserver rootMargin 20% at the bottom). The mission paragraph is on About.
 - Daily quiz (quiz.js, on index and /quiz): rotates profile → person → event → place → profile → idea → work. Profiles of every kind (title from PROFILE_KINDS), entry puzzles from the encyclopedia with the name masked in the clues. `?quizday=N` previews another day. /quiz adds practice rounds by category with a score and best run.
   An entry puzzle's first clue names the kind (the subtype: "A river", "A siege"…), the dates and the entry's region
   (as the search filter, see /people/: "A battle · 31 BCE · Egypt and North Africa"; the clues of all 197 puzzles

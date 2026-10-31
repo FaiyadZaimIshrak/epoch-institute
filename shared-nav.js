@@ -663,28 +663,40 @@ function initNav(activePage) {
     return activePage === page ? ' aria-current="page"' : '';
   }
 
-  // Explore: the ways into the collections; More: the Institute's other pages
-  const EXPLORE = [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['timeline', '/timeline', 'World Timeline', 'Every state on one line'],
-    ['countries', '/countries/', 'Country Histories', 'Each land through time'],
-    ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['years', '/years/', 'Year by Year', 'What happened in any year'],
-    ['people', '/people/', 'People', 'Who lived when'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared'],
-    ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'],
-    ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
-    ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
-    ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
-    ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'], ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'],
-    ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
-    ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'],
-    ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'],
-    ['kids', '/kids', 'Kids Corner', 'History for young explorers'],
-    ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'],
-    ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']];
-  const MORE = [['series', '/research-series', 'Research Series'], ['dataset', '/dataset', 'Open Data'], ['research', '/research', 'Research Hub'],
-    ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'], ['', '/#newsletter-section', 'Newsletter'],
-    ['about', '/about', 'About the Institute'], ['contributors', '/contributors', 'Write for Us'], ['contact', '/contact', 'Contact']];
-  const exploreActive = EXPLORE.some(x => x[0] === activePage);
+  // The menu (31 Oct 2026, the user: Explore was too cramped; "themed menus" chosen): Profiles, Encyclopedia and Today
+  // in History as links; three menus of headed columns (Maps & Time, Themes, Play), each item [page key, address, name,
+  // line]; and More, the Institute's pages. The phone menu has the same groups, folded, the group of the page open.
+  const MENUS = [
+    ['maps', 'Maps &amp; Time', [
+      ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
+        ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States', 'Every state on record']]],
+      ['Time', [['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
+        ['years', '/years/', 'Year by Year', 'What happened in any year'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
+        ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared']]]]],
+    ['themes', 'Themes', [
+      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
+        ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history']]],
+      ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history'], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
+        ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'], ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']]]]],
+    ['play', 'Play', [
+      ['', [['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
+        ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'], ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
+        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks']]]]]];
+  const MORE = [['about', '/about', 'About the Institute'], ['research', '/research', 'Research Hub'], ['dataset', '/dataset', 'Open Data'],
+    ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
+    ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['contact', '/contact', 'Contact']];
+  const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
   const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}</a>`;
+  const surprise = '<a href="#" id="nav-surprise" class="nav-surprise"><b>Surprise me</b><span>A random leap into history</span></a>';
+  const menuHtml = m => `
+    <div class="nav-group-wrap" id="nav-${m[0]}-wrap">
+      <button class="nav-parent-btn${inMenu(m) ? ' active-group' : ''}" id="nav-${m[0]}-btn" aria-haspopup="true" aria-expanded="false">${m[1]} ▾</button>
+      <div class="nav-group-menu nav-mega" id="nav-${m[0]}-menu">
+        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}</div>`).join('\n        ')}
+      </div>
+    </div>`;
+  const ddSec = (label, open, links) => `<details class="nav-dd-sec"${open ? ' open' : ''}><summary class="nav-dd-sum">${label}</summary><div class="nav-dd-list">${links}</div></details>`;
 
   const navHtml = `
 <a class="skip-link" href="#main">Skip to content</a>
@@ -694,19 +706,11 @@ function initNav(activePage) {
   </a>
   <div class="nav-links">
     <a href="/profiles" class="nav-link"${activeStyle('profiles')}>Profiles</a>
-    <a href="/encyclopedia/" class="nav-link"${activeStyle('encyclopedia')}>Encyclopedia</a>
-    <a href="/state/" class="nav-link"${activeStyle('states')}>States</a>
-    <div class="nav-group-wrap" id="nav-explore-wrap">
-      <button class="nav-parent-btn${exploreActive ? ' active-group' : ''}" id="nav-explore-btn" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
-      <div class="nav-group-menu nav-group-menu-wide" id="nav-explore-menu" role="menu">
-        ${EXPLORE.map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}</b><span>${x[3]}</span></a>`).join('\n        ')}
-        <a href="#" id="nav-surprise" class="nav-surprise"><b>Surprise me</b><span>A random leap into history</span></a>
-      </div>
-    </div>
+    <a href="/encyclopedia/" class="nav-link"${activeStyle('encyclopedia')}>Encyclopedia</a>${MENUS.map(menuHtml).join('')}
     <a href="/today-in-history/" class="nav-link"${activeStyle('today')}>Today in History</a>
     <div class="nav-group-wrap" id="nav-more-wrap">
       <button class="nav-parent-btn${moreActive ? ' active-group' : ''}" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">More ▾</button>
-      <div class="nav-group-menu" id="nav-more-menu" role="menu">
+      <div class="nav-group-menu" id="nav-more-menu">
         ${MORE.map(x => navItem(x)).join('\n        ')}
       </div>
     </div>
@@ -718,12 +722,10 @@ function initNav(activePage) {
   </div>
   <div id="nav-dropdown" class="nav-dropdown">
     <div class="nav-dd-display" role="group" aria-label="Display"><button type="button" class="nav-dd-btn" id="nav-dd-theme"></button><button type="button" class="nav-dd-btn" id="nav-dd-kids"></button></div>
-    ${[['profiles', '/profiles', 'Profiles'], ['encyclopedia', '/encyclopedia/', 'Encyclopedia'], ['states', '/state/', 'States'], ['today', '/today-in-history/', 'Today in History']].map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
-    <span class="nav-dropdown-group">Explore</span>
-    ${EXPLORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
-    <a href="#" class="nav-dropdown-link" data-surprise>Surprise me</a>
-    <span class="nav-dropdown-group">More</span>
-    ${MORE.map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
+    ${[['profiles', '/profiles', 'Profiles'], ['encyclopedia', '/encyclopedia/', 'Encyclopedia'], ['today', '/today-in-history/', 'Today in History']].map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
+    ${MENUS.map(m => ddSec(m[1], inMenu(m), m[2].map(c => c[1].map(x => navItem(x, 'nav-dropdown-link nav-dd-sub')).join('')).join('') +
+      (m[0] === 'play' ? '<a href="#" class="nav-dropdown-link nav-dd-sub" data-surprise>Surprise me</a>' : ''))).join('\n    ')}
+    ${ddSec('More', moreActive, MORE.map(x => navItem(x, 'nav-dropdown-link nav-dd-sub')).join(''))}
   </div>
 </nav>`;
 
@@ -760,39 +762,42 @@ function initNav(activePage) {
         <a class="footer-link" href="/encyclopedia/">Encyclopedia</a>
         <a class="footer-link" href="/state/">States</a>
         <a class="footer-link" href="/countries/">Country Histories</a>
-        <a class="footer-link" href="/centuries/">Centuries</a>
-        <a class="footer-link" href="/years/">Year by Year</a>
         <a class="footer-link" href="/people/">People</a>
         <a class="footer-link" href="/today-in-history/">Today in History</a>
         <a class="footer-link" href="/encyclopedia/glossary">Glossary</a>
       </div>
       <div class="footer-col">
-        <span class="footer-col-title">Explore</span>
+        <span class="footer-col-title">Maps &amp; Time</span>
         <a class="footer-link" href="/atlas">Atlas</a>
         <a class="footer-link" href="/timeline">World Timeline</a>
-        <a class="footer-link" href="/explorer">Empire Explorer</a>
-        <a class="footer-link" href="/race">Rise and Fall Race</a>
-        <a class="footer-link" href="/connections">Connections</a>
-        <a class="footer-link" href="/paths/">Reading Paths</a>
-        <a class="footer-link" href="/speeches/">Great Speeches</a>
-        <a class="footer-link" href="/write">Write in Ancient Scripts</a>
         <a class="footer-link" href="/faiths">Faith Maps</a>
+        <a class="footer-link" href="/centuries/">Centuries</a>
+        <a class="footer-link" href="/years/">Year by Year</a>
+        <a class="footer-link" href="/race">Rise and Fall Race</a>
+        <a class="footer-link" href="/explorer">Empire Explorer</a>
+        <a class="footer-link" href="/connections">Connections</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Themes &amp; Play</span>
         <a class="footer-link" href="/societies/">Social Ladders</a>
         <a class="footer-link" href="/inventions">Inventions Tree</a>
+        <a class="footer-link" href="/speeches/">Great Speeches</a>
+        <a class="footer-link" href="/paths/">Reading Paths</a>
+        <a class="footer-link" href="/research-series">Research Series</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
         <a class="footer-link" href="/games">History Games</a>
         <a class="footer-link" href="/flashcards">Flashcards</a>
+        <a class="footer-link" href="/write">Write in Ancient Scripts</a>
         <a class="footer-link" href="/kids">Kids Corner</a>
-        <a class="footer-link" href="/start">Find Your Way In</a>
         <a class="footer-link" href="/passport">My Passport</a>
-        <a class="footer-link" href="/research-series">Research Series</a>
-        <a class="footer-link" href="/dataset">Open Data</a>
+        <a class="footer-link" href="/start">Find Your Way In</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Institute</span>
         <a class="footer-link" href="/about">About the Institute</a>
         <a class="footer-link" href="/about#methodology">Methodology</a>
         <a class="footer-link" href="/research">Research Hub</a>
+        <a class="footer-link" href="/dataset">Open Data</a>
         <a class="footer-link" href="/teachers/">Teachers&#8217; Corner</a>
         <a class="footer-link" href="/contributors">Write for Us</a>
         <a class="footer-link" href="/community">Community</a>
@@ -1475,10 +1480,21 @@ function initNav(activePage) {
       var menu = wrap.querySelector('.nav-group-menu');
       if (!btn || !menu) return;
 
+      // a panel stays on the screen: centred under its button, moved in by as much as it would stick out
+      function place() {
+        menu.style.marginLeft = '0px';
+        var r = menu.getBoundingClientRect(), vw = document.documentElement.clientWidth, dx = 0;
+        if (r.right > vw - 12) dx = vw - 12 - r.right;
+        if (r.left + dx < 12) dx = 12 - r.left;
+        if (dx) menu.style.marginLeft = Math.round(dx) + 'px';
+      }
       wrap.addEventListener('mouseenter', function() {
         clearTimeout(timers[i]);
+        // the menus stand side by side: entering one closes the others at once
+        wraps.forEach(function(w, j) { if (j !== i && w.classList.contains('open')) { clearTimeout(timers[j]); timers[j] = null; w.classList.remove('open'); var b2 = w.querySelector('.nav-parent-btn'); if (b2) b2.setAttribute('aria-expanded', 'false'); } });
         wrap.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
+        place();
       });
       wrap.addEventListener('mouseleave', function() {
         timers[i] = setTimeout(function() {
@@ -1494,6 +1510,7 @@ function initNav(activePage) {
         if (!isOpen) {
           wrap.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
+          place();
         }
         e.stopPropagation();
       });
@@ -1503,6 +1520,7 @@ function initNav(activePage) {
           e.preventDefault();
           wrap.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
+          place();
           var first = menu.querySelector('a, button');
           if (first) first.focus();
         } else if (e.key === 'Escape') { closeAll(); }

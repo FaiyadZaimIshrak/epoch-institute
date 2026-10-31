@@ -431,8 +431,27 @@ function Crumbs($items) {   # items: @(@(name, path or $null), ...); returns @(h
   return @(('<nav class="ref-crumbs" aria-label="Breadcrumb"><ol>' + $li + '</ol></nav>'), ('{"@type":"BreadcrumbList","itemListElement":[' + $ld + ']}'))
 }
 # p: hashtable title, desc, path, type (og:type), img (site path), imgW, imgH, card, ld (JSON-LD objects joined by ','), nav, body
+# a title that search results show whole (Google cuts them at about 600 px): over 70 characters it first loses the
+# Institute's name, which Google shows above the title anyway, then its section label (" — Encyclopedia"), which keeps an
+# entry and a state of the same name apart until then (31 Oct 2026: 5,046 titles were longer, the profiles, ladders,
+# essays and speeches nearly all)
+function FitTitle([string]$t) {
+  if ($t.Length -le 70) { return $t }
+  $t2 = $t -replace ' — The Epoch Institute$', ''
+  if ($t2.Length -le 70) { return $t2 }
+  return ($t2 -replace " — (Encyclopedia|States|Great Speeches|Teachers' Corner|Community)$", '')
+}
+# a name with its years, unless the name already holds them ("Duchy of Estonia (1219-1346)", "1931 Constitution of Ethiopia":
+# 488 titles said their years twice)
+function NameYears([string]$nm, [string]$yrs) {
+  if (-not $yrs) { return $nm }
+  $y1 = [regex]::Match($yrs, '\d+').Value
+  if ($y1 -and $nm -match ('(?<!\d)' + $y1 + '(?!\d)')) { return $nm }
+  return "$nm ($yrs)"
+}
 function Page($p) {
   $url = $SITE + $p.path; $img = if ($p.img) { $SITE + $p.img } else { "$SITE/images/og/default.jpg" }
+  $p.title = FitTitle $p.title
   $w = if ($p.img) { $p.imgW } else { 1200 }; $h = if ($p.img) { $p.imgH } else { 630 }
   $card = if ($p.img -and [int]$w -lt 600) { 'summary' } else { 'summary_large_image' }   # a page picture is a small card; a rendered 1200x630 card is a large one
   $sb = New-Object Text.StringBuilder(8192)
@@ -923,11 +942,32 @@ function InvCredits($nd) {   # people, then the societies and states credited, l
 
 Say 'encyclopedia entry pages'
 $nLinks = 0
+# every description is linked first, so that an entry no other list reaches can show the entries that mention it and those
+# it names (31 Oct 2026: 2,462 entry pages had no "See also" and 2,049 nothing below the description, dead ends for readers
+# and crawlers alike)
+$DESCH = @{}; $LINKIN = @{}
+if (-not $SkipEntries) {
+  foreach ($e in $ENT) {
+    $encDh = if ($e.desc) { LinkDesc $e.desc $e.slug (EncYears $e.dates) } else { 'Description coming soon.' }
+    $DESCH[$e.slug] = $encDh
+    foreach ($m in [regex]::Matches($encDh, 'href="/encyclopedia/([a-z0-9-]+)"')) {
+      $lt = $m.Groups[1].Value
+      if ($lt -ne $e.slug) { if (-not $LINKIN.ContainsKey($lt)) { $LINKIN[$lt] = New-Object Collections.Generic.List[int] }; if (-not $LINKIN[$lt].Contains($e.i)) { $LINKIN[$lt].Add($e.i) } }
+    }
+  }
+}
+function LinkedNear($e) {   # the entries that mention this one, then those its description names: pictured first, then the most mentioned
+  $c = New-Object Collections.Generic.List[int]
+  if ($LINKIN.ContainsKey($e.slug)) { foreach ($i in $LINKIN[$e.slug]) { $c.Add($i) } }
+  foreach ($m in [regex]::Matches($DESCH[$e.slug], 'href="/encyclopedia/([a-z0-9-]+)"')) { $o = $BY[$m.Groups[1].Value]; if ($o -and $o.i -ne $e.i -and -not $c.Contains($o.i)) { $c.Add($o.i) } }
+  $k = 0
+  @($c | ForEach-Object { [pscustomobject]@{ i = $_; k = $k++ } } | Sort-Object @{ e = { if ($ENT[$_.i].img) { 0 } else { 1 } } }, @{ e = { -$ENT[$_.i].emp.Count } }, @{ e = { $_.k } } | Select-Object -First 8 | ForEach-Object { $_.i })
+}
 foreach ($e in $ENT) {
   $path = '/encyclopedia/' + $e.slug; $url = $SITE + $path
   if ($SkipEntries) { $WROTE[(Join-Path $Repo ('encyclopedia\' + $e.slug)).ToLowerInvariant()] = 1; $SMNEW[$path] = if ($SM.ContainsKey($path)) { $SM[$path] } else { @('', $TODAY) }; continue }
   $ctx = EncYears $e.dates
-  $descHtml = if ($e.desc) { LinkDesc $e.desc $e.slug $ctx } else { 'Description coming soon.' }
+  $descHtml = $DESCH[$e.slug]
   $nLinks += ([regex]::Matches($descHtml, 'class="enc-link"')).Count
   $crumb = Crumbs @(@('Home', '/'), @('Encyclopedia', '/encyclopedia/'), @((LetterLabel $e.L), $PAGEOF[$e.slug]), @($e.name, $null))
   $invNd = $INVN[$e.slug]
@@ -988,7 +1028,7 @@ foreach ($e in $ENT) {
     foreach ($spx in $SPBY[$e.slug]) { [void]$body.Append('<a href="/speeches/' + $spx['slug'] + '">' + (Hx ([string]$spx['title'])) + '<span class="secs">' + (Hx ([string]$spx['display'])) + '</span></a>') }
     [void]$body.Append("</div></section>`n")
   }
-  $related = @($SEE[$e.i]); if (-not $related.Count) { $related = @($SEE2[$e.i]) }
+  $related = @($SEE[$e.i]); if (-not $related.Count) { $related = @($SEE2[$e.i]) }; if (-not $related.Count) { $related = @(LinkedNear $e) }
   if ($related.Count) {
     [void]$body.Append('<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso">')
     foreach ($ix in $related) { $o = $ENT[$ix]; [void]$body.Append('<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + (Hx $(if ($o.conflict) { TagLabel $o } else { $SING[$o.type] })) + '</span></span></a></li>') }
@@ -1000,9 +1040,9 @@ foreach ($e in $ENT) {
   [void]$body.Append((CiteBox $e.name $url 'The Epoch Institute Encyclopedia') + "`n")
   [void]$body.Append('<p class="ref-updated"><span>Last reviewed ' + $Reviewed + '</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>' + "`n</article>`n</div>`n</main>`n")
   $kind = KindOf $e; $desc = [EpochBuild.W]::Summary($(if ($e.desc) { $e.desc } else { "$($e.name): an entry in The Epoch Institute Encyclopedia." }), 155)
-  $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { " ($($e.dates))" } else { '' }
+  $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { $e.dates } else { '' }
   $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd)
-  Emit $path (Page @{ title = "$($e.name)$tDates — Encyclopedia — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; body = $body.ToString() })
+  Emit $path (Page @{ title = "$(NameYears $e.name $tDates) — Encyclopedia — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; body = $body.ToString() })
   if (($e.i % 2000) -eq 1999) { Say "  $($e.i + 1) entries" }
 }
 Say "entry pages: $NENT, gold links in descriptions: $nLinks"
@@ -1204,11 +1244,15 @@ foreach ($n in $POL['nodes']) {
     $(if ($rg) { '<p class="enc-article-foot"><a class="enc-random-link" href="/state/browse/' + $rg + '">More states of ' + (Hx $rgl) + ' &rarr;</a></p>' + "`n" } else { '' }) +
     (CiteBox $name $url 'The Epoch Institute States Register') + "`n" +
     '<p class="ref-updated"><span>Last reviewed ' + $Reviewed + '</span><a class="enc-random-link" href="/state/" data-random="state">Random state &#8635;</a></p>' + "`n</article>`n</div>`n</main>`n"
+  $tYears = SpanShort $n['s'] $n['e']
   $teaser = if ($d['t']) { [string]$d['t'] } else { "$name ($yrs): a $(TypeLabel $n['t']) of $rgl, with its lineage and connections." }
+  # the description names its state (31 Oct 2026: 3,971 teasers began "A minor chiefship of …", and four pairs of states
+  # shared one): "Abdallab Sheikhdom (1504–1821): the Arab sheikhdom of Qerri, …"
+  $stCore = ($name -replace '^(the )?((Grand|Prince|Arch)[ -])?(Kingdom|Principality|Duchy|County|Emirate|Sultanate|Republic|Empire|Khanate|Margraviate|Bishopric|Lordship|Chiefdom|Caliphate|Imamate|Confederation|Federation|Colony|Protectorate|Territory|State|Dominion|Electorate|Landgraviate|Despotate|Exarchate|Satrapy|Province|Free City|City|Kingdoms) of (the )?', '') -replace ' \(.*$', ''
+  if ($teaser.IndexOf($stCore, [StringComparison]::OrdinalIgnoreCase) -lt 0) { $teaser = (NameYears $name $tYears) + ': ' + $(if ($teaser -cmatch '^(A|An|The) ') { $teaser.Substring(0, 1).ToLowerInvariant() + $teaser.Substring(1) } else { $teaser }) }
   $desc = [EpochBuild.W]::Summary($teaser, 155)
   $ld = $crumb[1] + ',' + (ArticleLd $name $desc $path 'Country' $name @($n['a'] | Where-Object { $_ }) $imgLd)
-  $tYears = SpanShort $n['s'] $n['e']
-  Emit $path (Page @{ title = "$name$(if ($tYears) { " ($tYears)" }) — States — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'states'; body = $body })
+  Emit $path (Page @{ title = "$(NameYears $name $tYears) — States — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'states'; body = $body })
   $nState++; if (($nState % 1000) -eq 0) { Say "  $nState states" }
 }
 Say "state pages: $nState, redirects to profiles: $($redirects.Count)"
@@ -3368,19 +3412,19 @@ SetBlock "$Repo\today-in-history\index" 'calendar' ('<section class="day-cal-wra
 function PicOf($slugs) { foreach ($s in $slugs) { if ($BY.ContainsKey($s) -and $BY[$s].img) { return $BY[$s].img } }; Say "  no picture among: $($slugs -join ', ')"; return '' }
 $nImg = @($ENT | Where-Object { $_.img }).Count; $nTih = 0; foreach ($k in $DAYS) { $nTih += @($HIST[$k]).Count }
 $SECTIONS = [ordered]@{
-  profiles     = @{ t = 'Profiles'; h = '/profiles'; k = "$($EMPS.Count) profiles"; d = 'In-depth histories of states and empires, religions, languages, cultures and movements: their origins, great ages and legacies, with key facts and timelines.'; pic = @('colosseum', 'augustus', 'hagia-sophia') }
-  encyclopedia = @{ t = 'Encyclopedia'; h = '/encyclopedia/'; k = $NENT.ToString('N0') + ' entries'; d = "People, places, events, institutions and ideas, with $($nImg.ToString('N0')) historical pictures."; pic = @('library-of-alexandria', 'house-of-wisdom', 'encyclopedie') }
-  states       = @{ t = 'States'; h = '/state/'; k = $POL['nodes'].Count.ToString('N0') + ' states'; d = 'Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.'; pic = @('peace-of-westphalia', 'congress-of-vienna') }
-  atlas        = @{ t = 'Atlas'; h = '/atlas'; k = 'From ' + (Yr $minS) + ' to today'; d = 'The world in any year: slide through five thousand years and watch states appear and vanish.'; pic = @('catalan-atlas', 'tabula-rogeriana', 'cantino-planisphere', 'piri-reis-map') }
-  countries    = @{ t = 'Country Histories'; h = '/countries/'; k = "$($CPAGE.Count) countries"; d = 'The history of each present-day country, told through the states that lay on its soil.'; pic = @('great-wall-of-china', 'machu-picchu', 'petra') }
-  centuries    = @{ t = 'Centuries'; h = '/centuries/'; k = "$($CENTPAGES.Count) centuries"; d = 'World history one century at a time: the great powers, key events, people and a map.'; pic = @('bayeux-tapestry', 'battle-of-hastings', 'magna-carta') }
+  profiles     = @{ t = 'Profiles'; s = 'Histories of states and empires, faiths, languages, cultures and movements.'; h = '/profiles'; k = "$($EMPS.Count) profiles"; d = 'In-depth histories of states and empires, religions, languages, cultures and movements: their origins, great ages and legacies, with key facts and timelines.'; pic = @('colosseum', 'augustus', 'hagia-sophia') }
+  encyclopedia = @{ t = 'Encyclopedia'; s = 'People, places, events and ideas, most of them with a picture.'; h = '/encyclopedia/'; k = $NENT.ToString('N0') + ' entries'; d = "People, places, events, institutions and ideas, with $($nImg.ToString('N0')) historical pictures."; pic = @('library-of-alexandria', 'house-of-wisdom', 'encyclopedie') }
+  states       = @{ t = 'States'; s = 'Every recorded kingdom, republic and chiefdom, with its lineage.'; h = '/state/'; k = $POL['nodes'].Count.ToString('N0') + ' states'; d = 'Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.'; pic = @('peace-of-westphalia', 'congress-of-vienna') }
+  atlas        = @{ t = 'Atlas'; s = 'Slide through five thousand years and watch states come and go.'; h = '/atlas'; k = 'From ' + (Yr $minS) + ' to today'; d = 'The world in any year: slide through five thousand years and watch states appear and vanish.'; pic = @('catalan-atlas', 'tabula-rogeriana', 'cantino-planisphere', 'piri-reis-map') }
+  countries    = @{ t = 'Country Histories'; s = 'Each present-day country, told through the states on its soil.'; h = '/countries/'; k = "$($CPAGE.Count) countries"; d = 'The history of each present-day country, told through the states that lay on its soil.'; pic = @('great-wall-of-china', 'machu-picchu', 'petra') }
+  centuries    = @{ t = 'Centuries'; s = 'World history one century at a time, with a map of each.'; h = '/centuries/'; k = "$($CENTPAGES.Count) centuries"; d = 'World history one century at a time: the great powers, key events, people and a map.'; pic = @('bayeux-tapestry', 'battle-of-hastings', 'magna-carta') }
   years        = @{ t = 'Year by Year'; h = '/years/'; k = $YEARLIST.Count.ToString('N0') + ' years'; d = 'What happened in a single year: its events, the people born and the people who died, the states founded and ended.'; pic = @('primary-chronicle') }
-  people       = @{ t = 'People'; h = '/people/'; k = $PPL.Count.ToString('N0') + ' people'; d = 'Rulers, thinkers, artists and explorers, century by century and region by region, with a chart of who lived when.'; pic = @('las-meninas') }
+  people       = @{ t = 'People'; s = 'Rulers, thinkers and explorers, century by century.'; h = '/people/'; k = $PPL.Count.ToString('N0') + ' people'; d = 'Rulers, thinkers, artists and explorers, century by century and region by region, with a chart of who lived when.'; pic = @('las-meninas') }
   timeline     = @{ t = 'World Timeline'; h = '/timeline'; k = 'Every state'; d = 'Five thousand years of states and empires on one line, region by region: see who lived alongside whom.'; pic = @('standard-of-ur') }
   explorer     = @{ t = 'Empire Explorer'; h = '/explorer'; k = 'Power curves'; d = 'Compare the rise and fall of nearly four hundred states and empires on one timeline.'; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
   race         = @{ t = 'Rise and Fall Race'; h = '/race'; k = "$($POLS.Count) to race"; d = 'Up to four states and empires race year by year: who led, when they overtook each other and how long each held on.'; pic = @('charioteer-of-delphi') }
   connections  = @{ t = 'Connections'; h = '/connections'; k = $POL['links'].Count.ToString('N0') + ' links'; d = 'Who succeeded, conquered, ruled or merged with whom: the states as one network.'; pic = @('congress-of-berlin', 'treaty-of-tordesillas', 'congress-of-vienna') }
-  paths        = @{ t = 'Reading Paths'; h = '/paths/'; k = "$($RP.Count) paths"; d = 'Themed routes across profiles and entries, from the Silk Road to the steppe empires.'; pic = @('marco-polo', 'ibn-battuta', 'zheng-he') }
+  paths        = @{ t = 'Reading Paths'; s = 'Themed routes, from the Silk Road to the steppe empires.'; h = '/paths/'; k = "$($RP.Count) paths"; d = 'Themed routes across profiles and entries, from the Silk Road to the steppe empires.'; pic = @('marco-polo', 'ibn-battuta', 'zheng-he') }
   write        = @{ t = 'Write in Ancient Scripts'; h = '/write'; k = '12 languages'; d = 'Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: a keyboard that shows every sign with its sound, and your writing as a picture.'; pic = @('rosetta-stone', 'code-of-hammurabi') }
   faiths       = @{ t = 'Faith Maps'; h = '/faiths'; k = '18 religions'; d = 'Where each religion began, how it spread and where it last lived on, century by century on a turning globe.'; pic = @('borobudur', 'hagia-sophia') }
   speeches     = @{ t = 'Great Speeches'; h = '/speeches/'; k = "$($SPS.Count) speeches"; d = 'The words that moved history: the setting, the key passage, what followed, and the complete text where it is free to read.'; pic = @('pericles', 'cicero', 'abraham-lincoln') }
@@ -3403,7 +3447,7 @@ $SECTIONS = [ordered]@{
 function HubCard($s, [string]$cls) {
   $img = PicOf $s.pic
   '<li><a class="' + $cls + '" href="' + $s.h + '">' + $(if ($img) { '<span class="' + $cls + '-img"><img src="' + $img + '" alt="" loading="lazy"></span>' } else { '<span class="' + $cls + '-img ' + $cls + '-mono" aria-hidden="true">' + (Hx $s.t.Substring(0, 1)) + '</span>' }) +
-    '<span class="' + $cls + '-b"><span class="' + $cls + '-k">' + (Hx $s.k) + '</span><span class="' + $cls + '-t">' + (Hx $s.t) + '</span><span class="' + $cls + '-d">' + (Hx $s.d) + '</span></span></a></li>'
+    '<span class="' + $cls + '-b"><span class="' + $cls + '-k">' + (Hx $s.k) + '</span><span class="' + $cls + '-t">' + (Hx $s.t) + '</span><span class="' + $cls + '-d">' + (Hx $(if ($cls -eq 'door' -and $s.s) { $s.s } else { $s.d })) + '</span></span></a></li>'
 }
 SetBlock "$Repo\atlas" 'atlas-presets' (($PRESETS | ForEach-Object { '<button type="button">' + (Hx $_[0]) + '</button>' }) -join '')   # in the page, so the map does not move when atlas.js runs
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
@@ -3413,7 +3457,17 @@ $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'p
   @('Play', @('quiz', 'games', 'flashcards', 'kids', 'passport', 'start')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(switch (@($_[1]).Count) { 5 { ' hub-5' } 6 { ' hub-6' } default { '' } }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
-SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'countries', 'atlas', 'centuries', 'explorer', 'paths', 'today', 'speeches', 'games', 'kids') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
+SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'atlas', 'countries', 'centuries', 'people', 'paths') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
+# "Try it yourself" on the home page (31 Oct 2026, to draw readers in): the interactive tools, each with a big picture, a
+# line and what to do: [section, title, line, call, address]
+$HOMETRY = @(@('societies', 'Be born into history', 'Chance places you in a society of the past, as birth placed most people: emperor, peasant or enslaved.', 'Be born', '/societies/?born=1#born'),
+  @('inventions', 'Trace an invention back', 'From the World Wide Web back to stone tools: what each invention built on, and who made it first.', 'Open the tree', '/inventions'),
+  @('race', 'Race the empires', 'Pick up to four states and empires and watch them rise and fall, year by year, on one track.', 'Start a race', '/race'),
+  @('write', 'Write your name in hieroglyphs', 'Or in cuneiform, runes or Linear B: every sign with its sound, and your writing as a picture.', 'Start writing', '/write#ancient-egyptian'),
+  @('faiths', 'Watch a faith spread', 'Where each of eighteen religions began and how it travelled, century by century on a turning globe.', 'Open the maps', '/faiths'),
+  @('kids', 'For young explorers', 'Pyramids, knights and Vikings: picture stories, a fact of the day and games for younger readers.', 'Visit the Kids Corner', '/kids'))
+SetBlock "$Repo\index" 'home-try' ('<ul class="tries">' + ((@($HOMETRY | ForEach-Object { $trS = $SECTIONS[$_[0]]; $trImg = PicOf $trS.pic
+  '<li><a class="try" href="' + $_[4] + '"><span class="try-img">' + $(if ($trImg) { '<img src="' + $trImg + '" alt="" loading="lazy">' } else { '' }) + '</span><span class="try-b"><span class="try-k">' + (Hx $trS.t) + '</span><span class="try-t">' + (Hx $_[1]) + '</span><span class="try-d">' + (Hx $_[2]) + '</span><span class="try-go">' + (Hx $_[3]) + ' &rarr;</span></span></a></li>' })) -join '') + '</ul>')
 # /connections names the register's size in its title and og:title ("Connections Map of 5,468 States"): kept current
 $cnF = "$Repo\connections"; $cnT = [IO.File]::ReadAllText($cnF, $U8)
 $cnT2 = [regex]::Replace($cnT, 'Connections Map of [\d,]+ States', 'Connections Map of ' + @($POL['nodes']).Count.ToString('N0', $INV) + ' States')

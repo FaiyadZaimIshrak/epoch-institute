@@ -121,20 +121,41 @@
   </div>
 </section>
 
-<!-- Daily quiz and the entry of the day -->
-<section class="home-section home-two" aria-label="Daily quiz and entry of the day">
-  <div class="home-col">
-    <div class="home-section-hd">
-      <h2 class="home-section-title" id="quiz-title">Daily Quiz</h2>
-      <span class="quiz-streak" id="quiz-streak"></span>
-    </div>
-    <div class="quiz quiz-compact" id="quiz"></div>
-    <a class="home-daily-ten" id="home-daily-ten" href="/games#first-daily"><span class="hdt-k">Today&rsquo;s other challenges</span><b>The Daily Ten</b><span class="hdt-d">Ten pairs, the same for everyone today: which came first?</span><span class="hdt-go">Play &rarr;</span></a>
-    <a class="home-daily-ten home-conn" id="home-conn" href="/games#conn"><b>History Connections</b><span class="hdt-d">Sixteen names from history, four groups of four: a new puzzle every day.</span><span class="hdt-go">Play &rarr;</span></a>
-    <a class="home-daily-ten home-conn" id="home-cw" href="/games#cross"><b>History Crossword</b><span class="hdt-d">A twelve-by-twelve crossword of history with plain clues: a new one every day.</span><span class="hdt-go">Play &rarr;</span></a>
-    <a class="home-daily-ten home-conn" id="home-said" href="/games#said"><b>Who Said It?</b><span class="hdt-d">Five quotations from history, word for word: who said each one?</span><span class="hdt-go">Play &rarr;</span></a>
+<!-- Try it yourself: the interactive tools, with big pictures (build:home-try) -->
+<section class="home-section" aria-labelledby="try-title">
+  <div class="home-section-hd">
+    <h2 class="home-section-title" id="try-title">Try it yourself</h2>
+    <a class="home-section-more" href="/research">Everything to explore &rarr;</a>
   </div>
-  <div class="home-col">
+  <!-- build:home-try -->
+<ul class="tries"><li><a class="try" href="/societies/?born=1#born"><span class="try-img"><img src="/images/encyclopedia/feudalism.jpg" alt="" loading="lazy"></span><span class="try-b"><span class="try-k">Social Ladders</span><span class="try-t">Be born into history</span><span class="try-d">Chance places you in a society of the past, as birth placed most people: emperor, peasant or enslaved.</span><span class="try-go">Be born &rarr;</span></span></a></li><li><a class="try" href="/inventions"><span class="try-img"><img src="/images/encyclopedia/printing-press.jpg" alt="" loading="lazy"></span><span class="try-b"><span class="try-k">Inventions Tree</span><span class="try-t">Trace an invention back</span><span class="try-d">From the World Wide Web back to stone tools: what each invention built on, and who made it first.</span><span class="try-go">Open the tree &rarr;</span></span></a></li><li><a class="try" href="/race"><span class="try-img"><img src="/images/encyclopedia/charioteer-of-delphi.jpg" alt="" loading="lazy"></span><span class="try-b"><span class="try-k">Rise and Fall Race</span><span class="try-t">Race the empires</span><span class="try-d">Pick up to four states and empires and watch them rise and fall, year by year, on one track.</span><span class="try-go">Start a race &rarr;</span></span></a></li><li><a class="try" href="/write#ancient-egyptian"><span class="try-img"><img src="/images/encyclopedia/rosetta-stone.jpg" alt="" loading="lazy"></span><span class="try-b"><span class="try-k">Write in Ancient Scripts</span><span class="try-t">Write your name in hieroglyphs</span><span class="try-d">Or in cuneiform, runes or Linear B: every sign with its sound, and your writing as a picture.</span><span class="try-go">Start writing &rarr;</span></span></a></li><li><a class="try" href="/faiths"><span class="try-img"><img src="/images/encyclopedia/borobudur.jpg" alt="" loading="lazy"></span><span class="try-b"><span class="try-k">Faith Maps</span><span class="try-t">Watch a faith spread</span><span class="try-d">Where each of eighteen religions began and how it travelled, century by century on a turning globe.</span><span class="try-go">Open the maps &rarr;</span></span></a></li><li><a class="try" href="/kids"><span class="try-img"><img src="/images/encyclopedia/great-pyramid-of-giza.jpg" alt="" loading="lazy"></span><span class="try-b"><span class="try-k">Kids corner</span><span class="try-t">For young explorers</span><span class="try-d">Pyramids, knights and Vikings: picture stories, a fact of the day and games for younger readers.</span><span class="try-go">Visit the Kids Corner &rarr;</span></span></a></li></ul>
+<!-- /build:home-try -->
+</section>
+
+<!-- The daily quiz beside the day's other puzzles, then the entry of the day as a wide card -->
+<section class="home-section" aria-label="Daily quiz, today's puzzles and the entry of the day">
+  <div class="home-two">
+    <div class="home-col">
+      <div class="home-section-hd">
+        <h2 class="home-section-title" id="quiz-title">Daily Quiz</h2>
+        <span class="quiz-streak" id="quiz-streak"></span>
+      </div>
+      <div class="quiz quiz-compact" id="quiz"></div>
+    </div>
+    <div class="home-col home-challenges">
+      <div class="home-section-hd">
+        <h2 class="home-section-title">Today&rsquo;s Puzzles</h2>
+        <a class="home-section-more" href="/games">All games &rarr;</a>
+      </div>
+      <div class="home-challenges-row">
+        <a class="home-daily-ten" id="home-daily-ten" href="/games#first-daily"><b>The Daily Ten</b><span class="hdt-d">Ten pairs, the same for everyone today: which came first?</span><span class="hdt-go">Play &rarr;</span></a>
+        <a class="home-daily-ten home-conn" id="home-conn" href="/games#conn"><b>History Connections</b><span class="hdt-d">Sixteen names from history, four groups of four.</span><span class="hdt-go">Play &rarr;</span></a>
+        <a class="home-daily-ten home-conn" id="home-cw" href="/games#cross"><b>History Crossword</b><span class="hdt-d">Twelve by twelve, with plain clues.</span><span class="hdt-go">Play &rarr;</span></a>
+        <a class="home-daily-ten home-conn" id="home-said" href="/games#said"><b>Who Said It?</b><span class="hdt-d">Five quotations from history: who said each one?</span><span class="hdt-go">Play &rarr;</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="home-entry">
     <div class="home-section-hd">
       <h2 class="home-section-title" id="enc-day-title">From the Encyclopedia</h2>
       <a class="home-section-more" href="/encyclopedia/">Browse all entries &rarr;</a>
@@ -150,7 +171,7 @@
     <a class="home-section-more" href="/research">Everything we publish →</a>
   </div>
   <!-- build:home-doors -->
-<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">490 profiles</span><span class="door-t">Profiles</span><span class="door-d">In-depth histories of states and empires, religions, languages, cultures and movements: their origins, great ages and legacies, with key facts and timelines.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">32,334 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events, institutions and ideas, with 22,870 historical pictures.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,468 states</span><span class="door-t">States</span><span class="door-d">Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">The history of each present-day country, told through the states that lay on its soil.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">The world in any year: slide through five thousand years and watch states appear and vanish.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time: the great powers, key events, people and a map.</span></span></a></li><li><a class="door" href="/explorer"><span class="door-img"><img src="/images/encyclopedia/trajans-column.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">Power curves</span><span class="door-t">Empire Explorer</span><span class="door-d">Compare the rise and fall of nearly four hundred states and empires on one timeline.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">38 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes across profiles and entries, from the Silk Road to the steppe empires.</span></span></a></li><li><a class="door" href="/today-in-history/"><span class="door-img"><img src="/images/encyclopedia/mesoamerican-long-count-calendar.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">3,122 events</span><span class="door-t">Today in History</span><span class="door-d">What happened on each day of the year, across five thousand years.</span></span></a></li><li><a class="door" href="/speeches/"><span class="door-img"><img src="/images/encyclopedia/pericles.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">80 speeches</span><span class="door-t">Great Speeches</span><span class="door-d">The words that moved history: the setting, the key passage, what followed, and the complete text where it is free to read.</span></span></a></li><li><a class="door" href="/games"><span class="door-img"><img src="/images/encyclopedia/pythian-games.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">Eleven games</span><span class="door-t">Games</span><span class="door-d">Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.</span></span></a></li><li><a class="door" href="/kids"><span class="door-img"><img src="/images/encyclopedia/great-pyramid-of-giza.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">For young explorers</span><span class="door-t">Kids corner</span><span class="door-d">Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.</span></span></a></li></ul>
+<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">490 profiles</span><span class="door-t">Profiles</span><span class="door-d">Histories of states and empires, faiths, languages, cultures and movements.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">32,334 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events and ideas, most of them with a picture.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,468 states</span><span class="door-t">States</span><span class="door-d">Every recorded kingdom, republic and chiefdom, with its lineage.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">Slide through five thousand years and watch states come and go.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">Each present-day country, told through the states on its soil.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time, with a map of each.</span></span></a></li><li><a class="door" href="/people/"><span class="door-img"><img src="/images/encyclopedia/las-meninas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">12,992 people</span><span class="door-t">People</span><span class="door-d">Rulers, thinkers and explorers, century by century.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">38 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes, from the Silk Road to the steppe empires.</span></span></a></li></ul>
 <!-- /build:home-doors -->
 </section>
 
@@ -158,7 +179,7 @@
 <section class="home-section" aria-labelledby="featured-title">
   <div class="home-section-hd">
     <h2 class="home-section-title" id="featured-title">Featured Profiles</h2>
-    <a class="home-section-more" href="/profiles">All 428 profiles →</a>
+    <a class="home-section-more" href="/profiles">All profiles &rarr;</a>
   </div>
   <div class="featured-grid" id="featured-grid"></div>
   <div class="browse-cols">
@@ -526,13 +547,14 @@ initNav('home');
   }
 })();
 
-// ── A gentle reveal as the sections scroll in (none under reduced motion) ──
+// ── A gentle reveal as the sections scroll in (none under reduced motion). It starts a little before a section reaches
+// the screen: started only once it was inside, a quick scroll showed blank stretches where sections were still hidden ──
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
   var els = document.querySelectorAll('.home-section');
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px' });
+  }, { rootMargin: '0px 0px 20% 0px' });
   els.forEach(function (el) { el.classList.add('home-reveal'); io.observe(el); });
 })();
 

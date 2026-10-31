@@ -452,7 +452,13 @@ function buildPage(emp) {
 
   var canonicalUrl = 'https://the-epoch-institute.org' + profileUrl(emp);
   var encodedName  = encodeURIComponent(name);
-  var pageTitle    = name + (isPolity ? ' (' + period + '): History' + (living ? '' : ', Rise and Fall') : ': ' + (kind.title || 'Profile')) + ' — The Epoch Institute';
+  // the title's years without "CE" on each ("750–1517", "280–146 BCE", "27 BCE – 1453 CE"), and over 70 characters without
+  // the Institute's name, which search results show above the title anyway (31 Oct 2026: 379 of 426 polity titles were longer)
+  var A = Math.round(startY), B = Math.round(endY);
+  var titleSpan    = living ? (A < 0 ? Math.abs(A) + ' BCE – present' : A + '–present')
+                   : A < 0 && B < 0 ? Math.abs(A) + '–' + Math.abs(B) + ' BCE' : A < 0 ? Math.abs(A) + ' BCE – ' + B + ' CE' : A + '–' + B;
+  var pageTitle    = name + (isPolity ? ' (' + titleSpan + '): History' + (living ? '' : ', Rise and Fall') : ': ' + (kind.title || 'Profile')) + ' — The Epoch Institute';
+  if (pageTitle.length > 70) pageTitle = pageTitle.replace(/ — The Epoch Institute$/, '');
   // the breadcrumb's third step: the region for states and empires, the kind (Religions & faiths, Languages) for the rest
   var regionUrl    = isPolity ? '/profiles?region=' + encodeURIComponent(region) : '/profiles?kind=' + profileKind(emp);
   var crumbName    = isPolity ? region : kind.label;
