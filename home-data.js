@@ -490,7 +490,27 @@ var HOME_PICS = {
   "Anti-apartheid movement": {img:"/images/encyclopedia/apartheid.jpg",name:"Apartheid",slug:"apartheid",credit:"Guinnog, CC BY-SA 3.0"},
   "Bhakti movement": {img:"/images/encyclopedia/mirabai.jpg",name:"Mirabai",slug:"mirabai",credit:"Unknown author, Public domain"},
   "Nahda": {img:"/images/encyclopedia/rifaa-al-tahtawi.jpg",name:"Rifa'a al-Tahtawi",slug:"rifaa-al-tahtawi",credit:"Unknown author, Public domain"},
-  "Self-Strengthening Movement": {img:"/images/encyclopedia/jiangnan-arsenal.jpg",name:"Jiangnan Arsenal",slug:"jiangnan-arsenal",credit:"Unknown author, Public domain"}
+  "Self-Strengthening Movement": {img:"/images/encyclopedia/jiangnan-arsenal.jpg",name:"Jiangnan Arsenal",slug:"jiangnan-arsenal",credit:"Unknown author, Public domain"},
+  "Absolute monarchy": {img:"/images/encyclopedia/louis-xiv.jpg",name:"Louis XIV",slug:"louis-xiv",credit:"Hyacinthe Rigaud, Public domain",top:12},
+  "Constitutional monarchy": {img:"/images/encyclopedia/glorious-revolution.jpg",name:"Glorious Revolution",slug:"glorious-revolution",credit:"Johan Herman Isings, Public domain"},
+  "Elective monarchy": {img:"/images/encyclopedia/prince-elector.jpg",name:"Prince-elector",slug:"prince-elector",credit:"Unknown author, Public domain"},
+  "Tyranny": {img:"/images/encyclopedia/polycrates.jpg",name:"Polycrates",slug:"polycrates",credit:"AnonymousUnknown author Published in 1890, Public domain"},
+  "Dictatorship": {img:"/images/encyclopedia/napoleon.jpg",name:"Napoleon",slug:"napoleon",credit:"Jacques-Louis David, Public domain",top:15},
+  "Aristocracy": {img:"/images/encyclopedia/third-estate.jpg",name:"Third Estate",slug:"third-estate",credit:"M. P., Public domain",top:20},
+  "Oligarchy": {img:"/images/encyclopedia/ludovico-manin.jpg",name:"Ludovico Manin",slug:"ludovico-manin",credit:"Bernardino Castelli, Public domain",top:12},
+  "Theocracy": {img:"/images/encyclopedia/5th-dalai-lama.jpg",name:"5th Dalai Lama",slug:"5th-dalai-lama",credit:"Unknown author, Public domain"},
+  "Military junta": {img:"/images/encyclopedia/augusto-pinochet.jpg",name:"Augusto Pinochet",slug:"augusto-pinochet",credit:"Ministerio de Relaciones Exteriores de Chile, CC BY 2.0 cl",hide:1},
+  "One-party state": {img:"/images/encyclopedia/julius-nyerere.jpg",name:"Julius Nyerere",slug:"julius-nyerere",credit:"Rob Mieremet / Anefo, CC0",top:15},
+  "Direct democracy": {img:"/images/encyclopedia/landsgemeinde.jpg",name:"Landsgemeinde",slug:"landsgemeinde",credit:"Marc Schlumpf, www.icarus-design.ch, CC BY-SA 3.0"},
+  "Republic": {img:"/images/encyclopedia/roman-senate.jpg",name:"Roman Senate",slug:"roman-senate",credit:"Cesare Maccari, Public domain"},
+  "Parliamentary democracy": {img:"/images/encyclopedia/westminster-system.jpg",name:"Westminster system",slug:"westminster-system",credit:"Adrian Pingstone, Public domain"},
+  "Presidential democracy": {img:"/images/encyclopedia/george-washington.jpg",name:"George Washington",slug:"george-washington",credit:"Gilbert Stuart, Public domain",top:12},
+  "Federation": {img:"/images/encyclopedia/james-madison.jpg",name:"James Madison",slug:"james-madison",credit:"John Vanderlyn, Public domain",top:12},
+  "Chiefdom": {img:"/images/encyclopedia/kalaniopuu.jpg",name:"Kalaniʻōpuʻu",slug:"kalaniopuu",credit:"Mark Miller, CC BY-SA 3.0"},
+  "Nomadic confederation": {img:"/images/encyclopedia/kurultai.jpg",name:"Kurultai",slug:"kurultai",credit:"British Library, Public domain"},
+  "City-state": {img:"/images/encyclopedia/polis.jpg",name:"Polis",slug:"polis",credit:"A.Savin, CC BY-SA 3.0"},
+  "Feudalism": {img:"/images/encyclopedia/vassal.jpg",name:"Vassal",slug:"vassal",credit:"Myrabella, Public domain"},
+  "Colonial rule": {img:"/images/encyclopedia/berlin-conference.jpg",name:"Berlin Conference",slug:"berlin-conference",credit:"Adalbert von Roessler, Public domain"}
 };
 
 var HOME_ENTRIES = [

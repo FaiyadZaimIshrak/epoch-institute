@@ -1,6 +1,6 @@
 # The Epoch Institute
 
-> A historical research site: 490 full profiles of empires, states, religions, languages, cultures and movements, a 32,149-entry encyclopedia, a register of
+> A historical research site: 510 full profiles of empires, states, religions, languages, cultures, movements and forms of government, a 32,149-entry encyclopedia, a register of
 > 5,468 states and their 11,296 connections, country histories, century overviews, an interactive world atlas
 > (3500 BCE to today), and the data behind them, free to download.
 
@@ -13,6 +13,7 @@ century pages and reading paths end with "Test yourself": a few questions built 
 - [Languages](https://the-epoch-institute.org/profiles?kind=language): 16 profiles of languages, from Sumerian and Latin to Nahuatl and Swahili, at /language/<slug> (origins, structure, speakers, literature, change, legacy)
 - [Cultures](https://the-epoch-institute.org/profiles?kind=culture): 15 profiles of cultures and civilisations, from the Indus Valley, the Minoans and the Olmecs to the Lapita, the Vikings and the Ancestral Puebloans, at /culture/<slug> (origins, society, beliefs, arts, exchange, legacy)
 - [Movements](https://the-epoch-institute.org/profiles?kind=movement): 15 profiles of movements, from Renaissance humanism and the Reformation to the Bhakti saints, the Nahda and the civil rights and anti-apartheid movements, at /movement/<slug> (background, aims, events, people, outcomes, legacy)
+- [Forms of government](https://the-epoch-institute.org/governance): 20 profiles of forms of government, from the chiefdom and the city-state to absolute monarchy, parliamentary democracy and the one-party state, at /government/<slug> (how each works, origins, history, strengths and weaknesses as argued by named writers, legacy), with a hub comparing them and charting the register's states by kind
 - [Encyclopedia](https://the-epoch-institute.org/encyclopedia/): people, events, places, ideas and works; one page per entry at /encyclopedia/<slug>
 - [States register](https://the-epoch-institute.org/state/): every recorded state at /state/<id>, with origins, rule and legacy
 - [Country histories](https://the-epoch-institute.org/countries/): the states that ruled each present-day country

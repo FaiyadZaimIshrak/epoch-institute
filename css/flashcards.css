@@ -1116,6 +1116,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 @media (pointer: coarse) {
 .ref-crumbs a { display: inline-block; padding: 10px 4px; margin: -10px -4px; }
 }
+:root { --gv-other: #6f6a60; }
+[data-theme="light"] { --gv-other: #a7a092; }
 :root[data-kids="1"] {
   --bg: #17123a; --surface: #221b4f; --border: #3d3480; --field-border: #7a6fc0; --text: #f6f1ff; --muted: #b9addf;
   --gold: #ffc247; --gold-light: #ffd97a; --gold-rgb: 255,194,71; --gold-light-rgb: 255,217,122;

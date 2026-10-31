@@ -12,7 +12,7 @@
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
   function num(n) { return Number(n).toLocaleString('en-GB'); }
   var TODAY = Math.floor(Date.now() / 864e5);
-  var KIND = [['profile', /^\/(empire|religion|language|culture|movement)\//, 'Profiles'], ['entry', /^\/encyclopedia\//, 'Encyclopedia entries'], ['state', /^\/state\//, 'States'],
+  var KIND = [['profile', /^\/(empire|religion|language|culture|movement|government)\//, 'Profiles'], ['entry', /^\/encyclopedia\//, 'Encyclopedia entries'], ['state', /^\/state\//, 'States'],
     ['country', /^\/countries\//, 'Country histories'], ['century', /^\/centuries\//, 'Centuries'], ['year', /^\/years\//, 'Years'], ['day', /^\/today-in-history\//, 'Days of the year'],
     ['speech', /^\/speeches\//, 'Great speeches'], ['path', /^\/paths\//, 'Reading paths'], ['people', /^\/people\//, 'People by century'], ['essay', /^\/(essays|articles)\//, 'Essays and articles'],
     ['ladder', /^\/societies\//, 'Social ladders']];

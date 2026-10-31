@@ -3778,5 +3778,163 @@ var SECTION_IMAGES = {
     people:{slug:"li-hongzhang",name:"Li Hongzhang",img:"/images/encyclopedia/li-hongzhang.jpg",artist:"Russell & Sons",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Li_Hung_Chang_in_1896(cropped).jpg"},
     outcomes:{slug:"treaty-of-shimonoseki",name:"Treaty of Shimonoseki",img:"/images/encyclopedia/treaty-of-shimonoseki.jpg",artist:"World Imaging",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Japan_China_Peace_Treaty_17_April_1895.jpg"},
     legacy:{slug:"hundred-days-reform",name:"Hundred Days' Reform",img:"/images/encyclopedia/hundred-days-reform.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:W._A._P._Martin_%26_faculty.jpg"}
+  },
+  "Absolute monarchy": {
+    works:{slug:"louis-xiv",name:"Louis XIV",img:"/images/encyclopedia/louis-xiv.jpg",artist:"Hyacinthe Rigaud",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_XIV_of_France.jpg"},
+    origins:{slug:"james-vi-and-i",name:"James VI and I",img:"/images/encyclopedia/james-vi-and-i.jpg",artist:"Attributed to John de Critz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JamesIEngland_(cropped_2).jpg"},
+    history:{slug:"cardinal-richelieu",name:"Cardinal Richelieu",img:"/images/encyclopedia/cardinal-richelieu.jpg",artist:"Philippe de Champaigne",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Champaigne_portrait_richelieu_eb.jpg"},
+    strengths:{slug:"thomas-hobbes",name:"Thomas Hobbes",img:"/images/encyclopedia/thomas-hobbes.jpg",artist:"John Michael Wright",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thomas_Hobbes_by_John_Michael_Wright_(colour)_(3x4_cropped).jpg"},
+    weaknesses:{slug:"john-locke",name:"John Locke",img:"/images/encyclopedia/john-locke.jpg",artist:"Godfrey Kneller",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Godfrey_Kneller_-_Portrait_of_John_Locke_(Hermitage).jpg"},
+    legacy:{slug:"alexis-de-tocqueville",name:"Alexis de Tocqueville",img:"/images/encyclopedia/alexis-de-tocqueville.jpg",artist:"Théodore Chassériau",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Alexis_de_Tocqueville.jpg"}
+  },
+  "Aristocracy": {
+    works:{slug:"areopagus",name:"Areopagus",img:"/images/encyclopedia/areopagus.jpg",artist:"O.Mustafin",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Areopagus_hill.jpg"},
+    origins:{slug:"tarquinius-superbus",name:"Tarquinius Superbus",img:"/images/encyclopedia/tarquinius-superbus.jpg",artist:"Published by Guillaume Rouille (1518?-1589)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tarquinius-Superbus.jpg"},
+    history:{slug:"magna-carta",name:"Magna Carta",img:"/images/encyclopedia/magna-carta.jpg",artist:"Original authors were the barons and King John of England. Uploaded by Earthsound.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Magna_Carta_(British_Library_Cotton_MS_Augustus_II.106).jpg"},
+    strengths:{slug:"edmund-burke",name:"Edmund Burke",img:"/images/encyclopedia/edmund-burke.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Joshua_Reynolds_-_Edmund_Burke,_1729_-_1797._Statesman,_orator_and_author_-_PG_2362_-_National_Galleries_of_Scotland_(cropped).jpg"},
+    weaknesses:{slug:"third-estate",name:"Third Estate",img:"/images/encyclopedia/third-estate.jpg",artist:"M. P.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Troisordres.jpg"},
+    legacy:{slug:"polybius",name:"Polybius",img:"/images/encyclopedia/polybius.jpg",artist:"Jona Lendering, Livius Onderwijs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stele_des_Polybios.jpg"}
+  },
+  "Chiefdom": {
+    works:{slug:"kalaniopuu",name:"Kalaniʻōpuʻu",img:"/images/encyclopedia/kalaniopuu.jpg",artist:"Mark Miller",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kalani%CA%BB%C5%8Dpu%CA%BBu_%CA%BBAhu_%CA%BBula_and_mahiole.jpg"},
+    origins:{slug:"ubaid-period",name:"Ubaid period",img:"/images/encyclopedia/ubaid-period.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Bowl_MET_DP104228_(cropped).jpg"},
+    history:{slug:"hernando-de-soto",name:"Hernando de Soto",img:"/images/encyclopedia/hernando-de-soto.jpg",artist:"John Sartain",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:De_Soto_by_Telfer_%26_Sartain.jpg"},
+    strengths:{slug:"monks-mound",name:"Monks Mound",img:"/images/encyclopedia/monks-mound.jpg",artist:"Skubasteve834",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Monks_Mound_in_July.JPG"},
+    legacy:{slug:"seretse-khama",name:"Seretse Khama",img:"/images/encyclopedia/seretse-khama.jpg",artist:"European Communities Director: Allan Watson Architect: Jean Polak,Jean Gilson,Lucien De Vestel,André Polak",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Seretse_Khama_1977_(2).png"}
+  },
+  "City-state": {
+    works:{slug:"polis",name:"Polis",img:"/images/encyclopedia/polis.jpg",artist:"A.Savin",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg"},
+    origins:{slug:"stele-of-the-vultures",name:"Stele of the Vultures",img:"/images/encyclopedia/stele-of-the-vultures.jpg",artist:"Background: Kikuyu3 Elements: Eric Gaba (Sting) Composite: पाटलिपुत्र 10:52, 30 April 2020 (UTC)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Stele_of_the_Vultures_in_the_Louvre_Museum_(enhanced_composite).jpg"},
+    history:{slug:"battle-of-legnano",name:"Battle of Legnano",img:"/images/encyclopedia/battle-of-legnano.jpg",artist:"The original uploader was Faberh at Italian Wikipedia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BattagliaLegnano.jpg"},
+    strengths:{slug:"liber-abaci",name:"Liber Abaci",img:"/images/encyclopedia/liber-abaci.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liber_abbaci_magliab_f124r.jpg"},
+    weaknesses:{slug:"sack-of-rome-1527",name:"Sack of Rome (1527)",img:"/images/encyclopedia/sack-of-rome-1527.jpg",artist:"Johannes Lingelbach",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sack_of_Rome_of_1527_by_Johannes_Lingelbach_17th_century.jpg"},
+    legacy:{slug:"niccolo-machiavelli",name:"Niccolò Machiavelli",img:"/images/encyclopedia/niccolo-machiavelli.jpg",artist:"Santi di Tito",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg"}
+  },
+  "Colonial rule": {
+    works:{slug:"council-of-the-indies",name:"Council of the Indies",img:"/images/encyclopedia/council-of-the-indies.jpg",artist:"Unknown Author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Royal_Emblem_of_the_Council_of_the_Indies.jpg"},
+    origins:{slug:"bartolome-de-las-casas",name:"Bartolomé de las Casas",img:"/images/encyclopedia/bartolome-de-las-casas.jpg",artist:"anonymous / Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fray_Bartolom%C3%A9_de_las_Casas.jpg"},
+    history:{slug:"berlin-conference",name:"Berlin Conference",img:"/images/encyclopedia/berlin-conference.jpg",artist:"Adalbert von Roessler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kongokonferenz.jpg"},
+    strengths:{slug:"frederick-lugard",name:"Frederick Lugard",img:"/images/encyclopedia/frederick-lugard.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LordLugard.jpg"},
+    weaknesses:{slug:"roger-casement",name:"Roger Casement",img:"/images/encyclopedia/roger-casement.jpg",artist:"Internet Archive Book Images",licence:"No restrictions",source:"https://commons.wikimedia.org/wiki/File:Celebrated_spies_and_famous_mysteries_of_the_great_war_(1919)_(14765772825).jpg"},
+    legacy:{slug:"kwame-nkrumah",name:"Kwame Nkrumah",img:"/images/encyclopedia/kwame-nkrumah.jpg",artist:"USSR Post",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_on_a_Soviet_stamp_(80th_anniversary_of_his_birth)_1989_CPA_6101.jpg"}
+  },
+  "Constitutional monarchy": {
+    works:{slug:"constitutional-monarchy",name:"Constitutional monarchy",img:"/images/encyclopedia/constitutional-monarchy.jpg",artist:"Ludvig Forbech",licence:"CC BY-SA 3.0 no",source:"https://commons.wikimedia.org/wiki/File:Trekongem%C3%B8tet_1917_OB.F16064.jpg"},
+    origins:{slug:"james-ii-of-england",name:"James II of England",img:"/images/encyclopedia/james-ii-of-england.jpg",artist:"School of Peter Lely",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:James_II_by_Peter_Lely.jpg"},
+    history:{slug:"robert-walpole",name:"Robert Walpole",img:"/images/encyclopedia/robert-walpole.jpg",artist:"Studio of Jean-Baptiste van Loo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Robert-Walpole-1st-Earl-of-Orford.jpg"},
+    strengths:{slug:"georg-wilhelm-friedrich-hegel",name:"Georg Wilhelm Friedrich Hegel",img:"/images/encyclopedia/georg-wilhelm-friedrich-hegel.jpg",artist:"Jakob Schlesinger",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jakob_Schlesinger_-_Hegel_1831.jpg"},
+    weaknesses:{slug:"victor-emmanuel-iii",name:"Victor Emmanuel III",img:"/images/encyclopedia/victor-emmanuel-iii.jpg",artist:"Mario Nunes Vais",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vitorio_Emanuel_III_(cropped).jpg"},
+    legacy:{slug:"glorious-revolution",name:"Glorious Revolution",img:"/images/encyclopedia/glorious-revolution.jpg",artist:"Johan Herman Isings",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_of_Orange_III_and_his_Dutch_army_land_in_Brixham,_1688.jpg"}
+  },
+  "Dictatorship": {
+    works:{slug:"fascist-italy",name:"Fascist Italy",img:"/images/encyclopedia/fascist-italy.jpg",artist:"Keystone-France/Gamma-Keystone",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Benito_Mussolini_1930.png"},
+    origins:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    history:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    strengths:{slug:"niccolo-machiavelli",name:"Niccolò Machiavelli",img:"/images/encyclopedia/niccolo-machiavelli.jpg",artist:"Santi di Tito",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg"},
+    weaknesses:{slug:"holocaust",name:"Holocaust",img:"/images/encyclopedia/holocaust.jpg",artist:"Bernhard Walter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Selection_on_the_ramp_at_Auschwitz-Birkenau,_1944_(Auschwitz_Album)_1b.jpg"},
+    legacy:{slug:"giuseppe-garibaldi",name:"Giuseppe Garibaldi",img:"/images/encyclopedia/giuseppe-garibaldi.jpg",artist:"Salvatore Lo Forte",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Giuseppe_Garibaldi.jpg"}
+  },
+  "Direct democracy": {
+    works:{slug:"athens",name:"Athens",img:"/images/encyclopedia/athens.jpg",artist:"Andrew Parlette",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Athens_Acropolis_at_Daybreak.jpg"},
+    origins:{slug:"solon",name:"Solon",img:"/images/encyclopedia/solon.jpg",artist:"Sailko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ignoto,_c.d._solone,_replica_del_90_dc_ca_da_orig._greco_del_110_ac._ca,_6143.JPG"},
+    history:{slug:"jean-jacques-rousseau",name:"Jean-Jacques Rousseau",img:"/images/encyclopedia/jean-jacques-rousseau.jpg",artist:"Maurice Quentin de La Tour (Life time: 1788)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Maurice_Quentin_de_La_Tour_-_Portrait_of_Jean-Jacques_Rousseau_-_adjusted.jpg"},
+    strengths:{slug:"pericles",name:"Pericles",img:"/images/encyclopedia/pericles.jpg",artist:"Copy of Kresilas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pericles_Pio-Clementino_Inv269_n2.jpg"},
+    weaknesses:{slug:"socrates",name:"Socrates",img:"/images/encyclopedia/socrates.jpg",artist:"Copy of Lysippos (?)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg"},
+    legacy:{slug:"landsgemeinde",name:"Landsgemeinde",img:"/images/encyclopedia/landsgemeinde.jpg",artist:"Marc Schlumpf, www.icarus-design.ch",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Landsgemeinde_Glarus,_2009.jpg"}
+  },
+  "Elective monarchy": {
+    works:{slug:"prince-elector",name:"Prince-elector",img:"/images/encyclopedia/prince-elector.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Balduineum_Wahl_Heinrich_VII.jpg"},
+    origins:{slug:"harold-godwinson",name:"Harold Godwinson",img:"/images/encyclopedia/harold-godwinson.jpg",artist:"~",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bayeux_tapestry_stitches_detail..jpg"},
+    history:{slug:"stanislaw-august-poniatowski",name:"Stanisław August Poniatowski",img:"/images/encyclopedia/stanislaw-august-poniatowski.jpg",artist:"Marcello Bacciarelli",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stanis%C5%82aw_II_August_Poniatowski_in_coronation_clothes.PNG"},
+    strengths:{slug:"golden-bull-of-1356",name:"Golden Bull of 1356",img:"/images/encyclopedia/golden-bull-of-1356.jpg",artist:"Karl IV.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Goldene_Bulle_Nahaufnahme.jpg"},
+    weaknesses:{slug:"philip-of-swabia",name:"Philip of Swabia",img:"/images/encyclopedia/philip-of-swabia.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vad-0321_040_Philipp_von_Schwaben.jpg"},
+    legacy:{slug:"college-of-cardinals",name:"College of Cardinals",img:"/images/encyclopedia/college-of-cardinals.jpg",artist:"The White House",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cardinals_in_red_vestments_during_the_funeral_mass_for_Pope_Francis_in_2025_(cropped).jpg"}
+  },
+  "Federation": {
+    works:{slug:"james-madison",name:"James Madison",img:"/images/encyclopedia/james-madison.jpg",artist:"John Vanderlyn",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:James_Madison.jpg"},
+    origins:{slug:"federal-charter-of-1291",name:"Federal Charter of 1291",img:"/images/encyclopedia/federal-charter-of-1291.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bundesbrief.jpg"},
+    history:{slug:"abraham-lincoln",name:"Abraham Lincoln",img:"/images/encyclopedia/abraham-lincoln.jpg",artist:"Alexander Gardner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"},
+    strengths:{slug:"alexis-de-tocqueville",name:"Alexis de Tocqueville",img:"/images/encyclopedia/alexis-de-tocqueville.jpg",artist:"Théodore Chassériau",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Alexis_de_Tocqueville.jpg"},
+    weaknesses:{slug:"racial-segregation",name:"Racial segregation",img:"/images/encyclopedia/racial-segregation.jpg",artist:"Esther Bubley",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1943_Colored_Waiting_Room_Sign.jpg"},
+    legacy:{slug:"winston-churchill",name:"Winston Churchill",img:"/images/encyclopedia/winston-churchill.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Winston_Churchill_-_19086236948_(restored).jpg"}
+  },
+  "Feudalism": {
+    works:{slug:"vassal",name:"Vassal",img:"/images/encyclopedia/vassal.jpg",artist:"Myrabella",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene23_Harold_sacramentum_fecit_Willelmo_duci.jpg"},
+    origins:{slug:"charles-martel",name:"Charles Martel",img:"/images/encyclopedia/charles-martel.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_Martel_divise_le_royaume_entre_P%C3%A9pin_et_Carloman.jpg"},
+    history:{slug:"william-the-conqueror",name:"William the Conqueror",img:"/images/encyclopedia/william-the-conqueror.jpg",artist:"Myrabella",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_the_Conqueror_(TFA).jpg"},
+    strengths:{slug:"cortes-of-leon-of-1188",name:"Cortes of León of 1188",img:"/images/encyclopedia/cortes-of-leon-of-1188.jpg",artist:"José Luis Filpo Cabana",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_San_Isidoro_de_Le%C3%B3n._Claustro.jpg"},
+    weaknesses:{slug:"adam-smith",name:"Adam Smith",img:"/images/encyclopedia/adam-smith.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Adam_Smith_The_Muir_portrait.jpg"},
+    legacy:{slug:"joseph-bonaparte",name:"Joseph Bonaparte",img:"/images/encyclopedia/joseph-bonaparte.jpg",artist:"François Gérard",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Joseph-Bonaparte.jpg"}
+  },
+  "Military junta": {
+    works:{slug:"augusto-pinochet",name:"Augusto Pinochet",img:"/images/encyclopedia/augusto-pinochet.jpg",artist:"Ministerio de Relaciones Exteriores de Chile",licence:"CC BY 2.0 cl",source:"https://commons.wikimedia.org/wiki/File:Augusto_Pinochet_foto_oficial(b).jpg"},
+    origins:{slug:"oliver-cromwell",name:"Oliver Cromwell",img:"/images/encyclopedia/oliver-cromwell.jpg",artist:"After Samuel Cooper",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oliver_Cromwell_by_Samuel_Cooper.jpg"},
+    history:{slug:"miguel-primo-de-rivera",name:"Miguel Primo de Rivera",img:"/images/encyclopedia/miguel-primo-de-rivera.jpg",artist:"Kaulak",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Miguel_Primo_de_Rivera,_Kaulak_(cropped).jpg"},
+    strengths:{slug:"ne-win",name:"Ne Win",img:"/images/encyclopedia/ne-win.jpg",artist:"Moshe Pridan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ne_Win_in_1959,_Jerusalem.jpg"},
+    legacy:{slug:"jorge-rafael-videla",name:"Jorge Rafael Videla",img:"/images/encyclopedia/jorge-rafael-videla.jpg",artist:"Argentine government",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jorge_Rafael_Videla_(cropped).png"}
+  },
+  "Nomadic confederation": {
+    works:{slug:"kurultai",name:"Kurultai",img:"/images/encyclopedia/kurultai.jpg",artist:"British Library",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Folio_248._Entertainment_given_by_Timur,_on_his_arrival_in_Samarkand._Zafarnama,_1533_(British_Library,_I.O._Islamic_137).jpg"},
+    origins:{slug:"sima-qian",name:"Sima Qian",img:"/images/encyclopedia/sima-qian.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Si_maqian.jpg"},
+    history:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"},
+    strengths:{slug:"sorghaghtani-beki",name:"Sorghaghtani Beki",img:"/images/encyclopedia/sorghaghtani-beki.jpg",artist:"Rashid al-Din",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TuluiWithQueenSorgaqtani.jpg"},
+    weaknesses:{slug:"hulagu-khan",name:"Hulagu Khan",img:"/images/encyclopedia/hulagu-khan.jpg",artist:"Rashid-al-Din Hamadani",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hulagu_Khan.jpg"},
+    legacy:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"}
+  },
+  "Oligarchy": {
+    works:{slug:"aristotle",name:"Aristotle",img:"/images/encyclopedia/aristotle.jpg",artist:"After Lysippos",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg"},
+    origins:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    history:{slug:"ludovico-manin",name:"Ludovico Manin",img:"/images/encyclopedia/ludovico-manin.jpg",artist:"Bernardino Castelli",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lodovico_Manin.jpg"},
+    strengths:{slug:"xenophon",name:"Xenophon",img:"/images/encyclopedia/xenophon.jpg",artist:"Carole Raddato",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Xenophon.jpg"},
+    weaknesses:{slug:"cosimo-de-medici",name:"Cosimo de' Medici",img:"/images/encyclopedia/cosimo-de-medici.jpg",artist:"Workshop of Bronzino",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cosimo_di_Medici_(Bronzino).jpg"},
+    legacy:{slug:"jean-jacques-rousseau",name:"Jean-Jacques Rousseau",img:"/images/encyclopedia/jean-jacques-rousseau.jpg",artist:"Maurice Quentin de La Tour (Life time: 1788)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Maurice_Quentin_de_La_Tour_-_Portrait_of_Jean-Jacques_Rousseau_-_adjusted.jpg"}
+  },
+  "One-party state": {
+    works:{slug:"mao-zedong",name:"Mao Zedong",img:"/images/encyclopedia/mao-zedong.jpg",artist:"Chen Zhengqing (1917–1966)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg"},
+    origins:{slug:"vladimir-lenin",name:"Vladimir Lenin",img:"/images/encyclopedia/vladimir-lenin.jpg",artist:"Unknown, presumably official",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lenin_in_1920_(cropped).jpg"},
+    history:{slug:"francisco-franco",name:"Francisco Franco",img:"/images/encyclopedia/francisco-franco.jpg",artist:"Unknown author",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Francisco_Franco_posed_portrait_photograph.jpg"},
+    strengths:{slug:"julius-nyerere",name:"Julius Nyerere",img:"/images/encyclopedia/julius-nyerere.jpg",artist:"Rob Mieremet / Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:President_Nyerere_van_Tanzania,_koppen,_Bestanddeelnr_928-2879_(cropped).jpg"},
+    weaknesses:{slug:"peng-dehuai",name:"Peng Dehuai",img:"/images/encyclopedia/peng-dehuai.jpg",artist:"​《新华社》记者 郑景康",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:General_Peng_Dehuai_(cropped).jpg"},
+    legacy:{slug:"budapest",name:"Budapest",img:"/images/encyclopedia/budapest.jpg",artist:"Visions of Domino",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:View_from_Gell%C3%A9rt_Hill_to_the_Danube,_Hungary_-_Budapest_(28493220635).jpg"}
+  },
+  "Parliamentary democracy": {
+    works:{slug:"westminster-system",name:"Westminster system",img:"/images/encyclopedia/westminster-system.jpg",artist:"Adrian Pingstone",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Houses.of.parliament.overall.arp.jpg"},
+    origins:{slug:"alfonso-ix-of-leon",name:"Alfonso IX of León",img:"/images/encyclopedia/alfonso-ix-of-leon.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Adeffonsus,_king_of_Galicia_and_Leon_(detail).jpg"},
+    history:{slug:"constitution-of-japan",name:"Constitution of Japan",img:"/images/encyclopedia/constitution-of-japan.jpg",artist:"Japanese government",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nihon_Kenpo01.jpg"},
+    strengths:{slug:"winston-churchill",name:"Winston Churchill",img:"/images/encyclopedia/winston-churchill.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Winston_Churchill_-_19086236948_(restored).jpg"},
+    weaknesses:{slug:"paul-von-hindenburg",name:"Paul von Hindenburg",img:"/images/encyclopedia/paul-von-hindenburg.jpg",artist:"Unknown author.",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-C06886,_Paul_v._Hindenburg_(cropped)(2).jpg"},
+    legacy:{slug:"european-commission",name:"European Commission",img:"/images/encyclopedia/european-commission.jpg",artist:"EmDee",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Belgique_-_Bruxelles_-_Schuman_-_Berlaymont_-_01.jpg"}
+  },
+  "Presidential democracy": {
+    works:{slug:"constitution-of-the-united-states",name:"Constitution of the United States",img:"/images/encyclopedia/constitution-of-the-united-states.jpg",artist:"Constitutional Convention",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Constitution_of_the_United_States_-_DPLA_-_9ca804144bd5965e992ae3528bc3c6a3_(page_1).jpg"},
+    origins:{slug:"alexander-hamilton",name:"Alexander Hamilton",img:"/images/encyclopedia/alexander-hamilton.jpg",artist:"John Trumbull / Giuseppe Ceracchi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Hamilton_(NPG).jpg"},
+    history:{slug:"george-washington",name:"George Washington",img:"/images/encyclopedia/george-washington.jpg",artist:"Gilbert Stuart",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"},
+    strengths:{slug:"american-civil-war",name:"American Civil War",img:"/images/encyclopedia/american-civil-war.jpg",artist:"Nathaniel Currier and James Merritt Ives",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Gettysburg,_by_Currier_and_Ives.png"},
+    weaknesses:{slug:"salvador-allende",name:"Salvador Allende",img:"/images/encyclopedia/salvador-allende.jpg",artist:"Biblioteca del Congreso Nacional de Chile",licence:"CC BY 3.0 cl",source:"https://commons.wikimedia.org/wiki/File:Salvador_Allende_Gossens-.jpg"},
+    legacy:{slug:"benito-juarez",name:"Benito Juárez",img:"/images/encyclopedia/benito-juarez.jpg",artist:"Unknown photographer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Photograph_of_Benito_Juarez.jpg"}
+  },
+  "Republic": {
+    works:{slug:"roman-senate",name:"Roman Senate",img:"/images/encyclopedia/roman-senate.jpg",artist:"Cesare Maccari",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cicero_Denounces_Catiline_in_the_Roman_Senate_by_Cesare_Maccari.png"},
+    origins:{slug:"cicero",name:"Cicero",img:"/images/encyclopedia/cicero.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"},
+    history:{slug:"tiberius-gracchus",name:"Tiberius Gracchus",img:"/images/encyclopedia/tiberius-gracchus.jpg",artist:"Jean-Baptiste Claude Eugène Guillaume",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Eugene_Guillaume_-_the_Gracchi_(cropped).jpg"},
+    strengths:{slug:"leonardo-bruni",name:"Leonardo Bruni",img:"/images/encyclopedia/leonardo-bruni.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Walker_Art_Gallery,_Leonard_Bruni.jpg"},
+    weaknesses:{slug:"dante-alighieri",name:"Dante Alighieri",img:"/images/encyclopedia/dante-alighieri.jpg",artist:"Wolfgang Sauber",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bargello_-_Kapelle_Fresko_2a.jpg"},
+    legacy:{slug:"montesquieu",name:"Montesquieu",img:"/images/encyclopedia/montesquieu.jpg",artist:"After Jacques-Antoine Dassier",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_Montesquieu.jpg"}
+  },
+  "Theocracy": {
+    works:{slug:"kashag",name:"Kashag",img:"/images/encyclopedia/kashag.jpg",artist:"Ernst Schäfer",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_135-S-13-11-31,_Tibetexpedition,_Minister.jpg"},
+    origins:{slug:"josephus",name:"Josephus",img:"/images/encyclopedia/josephus.jpg",artist:"Scan by NYPL",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Joseph,_son_of_Gorian,_called_Flavius_Josephus_(cropped).jpg"},
+    history:{slug:"5th-dalai-lama",name:"5th Dalai Lama",img:"/images/encyclopedia/5th-dalai-lama.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thangka_of_the_5th_Dalai_Lama.jpg"},
+    strengths:{slug:"pope-boniface-viii",name:"Pope Boniface VIII",img:"/images/encyclopedia/pope-boniface-viii.jpg",artist:"Giotto",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giotto_-_Bonifatius_VIII_(cropped).jpg"},
+    weaknesses:{slug:"galileo-galilei",name:"Galileo Galilei",img:"/images/encyclopedia/galileo-galilei.jpg",artist:"Justus Sustermans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Galileo_Galilei_(1564-1642)_RMG_BHC2700.tiff"},
+    legacy:{slug:"lateran-treaty",name:"Lateran Treaty",img:"/images/encyclopedia/lateran-treaty.jpg",artist:"Unknown author.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Group_of_Vatican_and_Italian_government_notables_posing_at_the_Lateran_Palace_before_the_signing_of_the_treaty.jpg"}
+  },
+  "Tyranny": {
+    works:{slug:"peisistratus",name:"Peisistratus",img:"/images/encyclopedia/peisistratus.jpg",artist:"Statens Museum for Kunst via Europeana website",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Statue_of_Peisistratos.jpg"},
+    origins:{slug:"archilochus",name:"Archilochus",img:"/images/encyclopedia/archilochus.jpg",artist:"shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Archilochus_01_pushkin.jpg"},
+    history:{slug:"polycrates",name:"Polycrates",img:"/images/encyclopedia/polycrates.jpg",artist:"AnonymousUnknown author Published in 1890",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Polykrates_with_Pharao_Amasis_II.jpg"},
+    strengths:{slug:"tunnel-of-eupalinos",name:"Tunnel of Eupalinos",img:"/images/encyclopedia/tunnel-of-eupalinos.jpg",artist:"Moumouza at English Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Eupalinian_aqueduct.JPG"},
+    weaknesses:{slug:"plato",name:"Plato",img:"/images/encyclopedia/plato.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plato_Silanion_Musei_Capitolini_MC1377.png"},
+    legacy:{slug:"cicero",name:"Cicero",img:"/images/encyclopedia/cicero.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"}
   }
 };

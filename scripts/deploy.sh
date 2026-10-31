@@ -35,13 +35,13 @@ ROOT_FILES=('*.html' '*.css' '*.js' '*.csv' '*.json' .htaccess  # line 8: each m
   send.php .user.ini)                                              # + the forms' mail handler and its PHP settings (Oct 2026)
 ROOT_EXTRA=('*.txt' '*.xml' '*.svg' '*.png' '*.ico')              # line 9: copied when present
 PAGES=(index about research research-series profiles community contributors dataset explorer connections atlas quiz
-  contact start games kids search timeline passport write faiths flashcards race inventions)  # line 10
+  contact start games kids search timeline passport write faiths flashcards race inventions governance)  # line 10
 GENERATED=(encyclopedia state today-in-history countries centuries paths speeches years people essays articles
   teachers societies)                                              # line 11: the only folders synced with --delete (societies: Oct 2026)
 DIRS=(sitemaps fonts css)                                          # line 12 (css/: scripts/split-css.js, Oct 2026)
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
   data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans data/societies data/inventions.json)  # line 14
-PROFILES=(empire religion language culture movement logos images maps)              # line 15
+PROFILES=(empire religion language culture movement government logos images maps)              # line 15
 KINDS=(culture ideology movement)                                  # line 16: copied when present
 
 say() { printf '%s\n' "$*"; }

@@ -36,7 +36,7 @@ AddType font/woff2 .woff2
   # a community article withdrawn in Oct 2026: 410 Gone, so search engines drop it (readers get the 404 page)
   RewriteRule ^articles/sati-pratha$ - [G,L]
   # the profile folders have no index page: their kind's list on /profiles
-  RewriteRule ^(religion|language|culture|movement)/?$ /profiles?kind=$1 [R=301,L]
+  RewriteRule ^(religion|language|culture|movement|government)/?$ /profiles?kind=$1 [R=301,L]
   RewriteRule ^empire/?$ /profiles [R=301,L]
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.+)/$ /$1 [R=301,L]

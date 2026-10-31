@@ -996,13 +996,6 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .essay-body p { font-size: 18.5px; line-height: 1.7; }
 .essay-body > h2:first-child + p::first-letter { font-size: 3em; }
 }
-.hub-group .hub-grid.hub-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-@media (max-width: 980px) {
-.hub-group .hub-grid.hub-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 560px) {
-.hub-group .hub-grid.hub-5 { grid-template-columns: minmax(0, 1fr); }
-}
 .hub-group .hub-grid.hub-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 980px) {
 .hub-group .hub-grid.hub-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1053,6 +1046,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .gm-fc-img img, .gm-ocard img, .gm-pz-strip img, .gm-wt img, .path-thumbs img, .path-step img, .enc-thumb, .enc-seealso img,
 .enc-preview img, .hub-card-img img, .door-img img, .rs-pic img, .quiz-img, .tih-strip-pic img,
 .kd-potd img, .kd-door-img img, .profile-section-fig img, .contributor-avatar img { object-position: center 25%; }
+:root { --gv-other: #6f6a60; }
+[data-theme="light"] { --gv-other: #a7a092; }
 :root[data-kids="1"] {
   --bg: #17123a; --surface: #221b4f; --border: #3d3480; --field-border: #7a6fc0; --text: #f6f1ff; --muted: #b9addf;
   --gold: #ffc247; --gold-light: #ffd97a; --gold-rgb: 255,194,71; --gold-light-rgb: 255,217,122;

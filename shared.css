@@ -5527,6 +5527,115 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
   .ref-copy { min-height: 34px; }
 }
 
+/* ── Forms of government (/governance, governance.js; Release C, 31 Oct 2026) ── */
+/* Aristotle's six forms as a grid, the twenty forms by who rules, the register's states by recorded kind as a stacked
+   area chart (the categorical slots in stack order gold, blue, magenta, green, violet, then a neutral Other: adjacent
+   pairs validated on #0b0c10 and #f4efe4; the light gold and magenta sit under 3:1, so the chart has a legend, a
+   readout and a table), and the facts compared in a table that scrolls sideways on phones. */
+:root { --gv-other: #6f6a60; }
+[data-theme="light"] { --gv-other: #a7a092; }
+.gv-wrap { max-width: 1080px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.gv-p { font-family: var(--font-text); font-size: 18px; line-height: 1.65; color: var(--text); max-width: 760px; margin: 0 0 14px; }
+.gv-grid6 { display: grid; gap: 8px; margin: 18px 0; max-width: 760px; }
+.gv-g6-row { display: grid; grid-template-columns: 150px minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+.gv-g6-h span { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 0 4px; }
+.gv-g6-k { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); align-self: center; }
+.gv-g6-c { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.gv-g6-c.gv-bad { border-style: dashed; }
+.gv-g6-c b { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--gold-light); }
+.gv-g6-c b a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(var(--gold-rgb), 0.45); }
+.gv-g6-c b a:hover { border-bottom-color: var(--gold); }
+.gv-g6-c i { font-family: var(--font-text); font-size: 15px; color: var(--muted); }
+.gv-g6-c small { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.gv-g6-c small a { color: var(--gold); }
+.gv-group { margin: 26px 0 0; }
+.gv-group-t { font-family: var(--font-ui); font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin: 0 0 4px; }
+.gv-group-t .n { color: var(--muted); font-weight: 600; margin-left: 4px; }
+.gv-group-d { font-family: var(--font-text); font-size: 16px; font-style: italic; color: var(--muted); margin: 0 0 12px; }
+.gv-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.gv-cards > li { min-width: 0; }
+.gv-card { display: flex; gap: 14px; align-items: flex-start; height: 100%; padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+.gv-card:hover, .gv-card:focus-visible { border-color: var(--gold); }
+.gv-card img { flex: none; width: 52px; height: 52px; }
+.gv-card-b { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.gv-card-t { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--gold-light); }
+.gv-card-y { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.gv-card-d { font-family: var(--font-text); font-size: 16px; line-height: 1.45; }
+.gv-chart { margin: 14px 0 10px; }
+.gv-chart-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; margin-bottom: 10px; }
+.gv-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--font-ui); font-size: 14px; color: var(--text); }
+.gv-legend li { display: inline-flex; align-items: center; gap: 7px; }
+.gv-sw { display: inline-block; flex: none; width: 12px; height: 12px; border-radius: 3px; }
+.gv-sw.gv-k0 { background: var(--cat-0); } .gv-sw.gv-k1 { background: var(--cat-1); } .gv-sw.gv-k2 { background: var(--cat-2); }
+.gv-sw.gv-k3 { background: var(--cat-3); } .gv-sw.gv-k4 { background: var(--cat-4); } .gv-sw.gv-k5 { background: var(--gv-other); }
+.gv-seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; padding: 3px; }
+.gv-seg button { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--muted); background: none; border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.gv-seg button[aria-pressed="true"] { color: var(--bg); background: var(--gold); }
+.gv-plot { position: relative; }
+.gv-plot svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.gv-area { stroke: var(--bg); stroke-width: 2px; stroke-linejoin: round; }
+.gv-area.gv-k0 { fill: var(--cat-0); } .gv-area.gv-k1 { fill: var(--cat-1); } .gv-area.gv-k2 { fill: var(--cat-2); }
+.gv-area.gv-k3 { fill: var(--cat-3); } .gv-area.gv-k4 { fill: var(--cat-4); } .gv-area.gv-k5 { fill: var(--gv-other); }
+.gv-grid line, .gv-axis line { stroke: var(--border); stroke-width: 1px; }
+.gv-grid text, .gv-axis text { fill: var(--muted); font-family: var(--font-ui); font-size: 13px; }
+.gv-cross { stroke: var(--text); stroke-width: 1px; opacity: 0.55; pointer-events: none; }
+.gv-tip { position: absolute; top: 6px; min-width: 220px; padding: 10px 12px; font-family: var(--font-ui); font-size: 14px; line-height: 1.45; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 6px 18px var(--shadow); pointer-events: none; z-index: 2; }
+.gv-tip b { display: block; font-weight: 600; color: var(--gold-light); }
+.gv-tip-n { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+.gv-tip-r { display: flex; align-items: center; gap: 8px; }
+.gv-tip-r em { margin-left: auto; padding-left: 12px; font-style: normal; font-variant-numeric: tabular-nums; }
+.gv-numbers { margin: 8px 0 0; }
+.gv-numbers summary { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); cursor: pointer; }
+.gv-numbers[open] summary { margin-bottom: 10px; }
+.gv-tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: var(--radius); }
+.gv-ntable, .gv-cmp { width: 100%; border-collapse: collapse; }
+.gv-ntable { min-width: 680px; font-family: var(--font-ui); font-size: 14px; font-variant-numeric: tabular-nums; }
+.gv-ntable th, .gv-ntable td { padding: 6px 10px; text-align: right; border-bottom: 1px solid var(--border); }
+.gv-ntable th[scope="row"], .gv-ntable thead th:first-child { text-align: left; white-space: nowrap; }
+.gv-ntable thead th { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: var(--muted); background: var(--surface); }
+.gv-cmp { min-width: 780px; font-family: var(--font-text); font-size: 15.5px; line-height: 1.45; }
+.gv-cmp th, .gv-cmp td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.gv-cmp thead th { font-family: var(--font-ui); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); background: var(--surface); }
+.gv-cmp tbody th[scope="row"] { font-family: var(--font-display); font-size: 15px; font-weight: 600; min-width: 150px; }
+.gv-cmp tbody th[scope="row"] a { color: var(--gold-light); text-decoration: none; }
+.gv-cmp tbody th[scope="row"] a:hover { color: var(--gold); }
+.gv-cmp-g th { font-family: var(--font-ui); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(var(--gold-rgb), 0.06); }
+@media (max-width: 600px) {
+  .gv-p { font-size: 17px; }
+  .gv-g6-row { grid-template-columns: 76px minmax(0, 1fr) minmax(0, 1fr); gap: 6px; }
+  .gv-g6-k { font-size: 12.5px; }
+  .gv-g6-c { padding: 10px; }
+  .gv-g6-c b { font-size: 15px; }
+  .gv-cards { grid-template-columns: minmax(0, 1fr); }
+  .gv-tip { min-width: 0; width: 200px; font-size: 13px; }
+}
+
+/* "Design your state" (governance.js): one question at a time, as on /start */
+.gv-wiz { max-width: 760px; padding: 22px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.gv-wiz-dots { list-style: none; display: flex; gap: 6px; margin: 0 0 12px; padding: 0; }
+.gv-wiz-dots li { width: 26px; height: 4px; border-radius: 2px; background: var(--border); }
+.gv-wiz-dots li.done { background: var(--gold); }
+.gv-wiz-dots li.now { background: var(--gold-light); }
+.gv-wiz-n { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+.gv-wiz-q { font-family: var(--font-display); font-size: 22px; line-height: 1.3; color: var(--gold-light); margin: 0 0 14px; outline: none; }
+.gv-wiz-opts { display: grid; gap: 8px; }
+.gv-wiz-opt { text-align: left; font-family: var(--font-text); font-size: 17px; line-height: 1.4; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 11px 14px; cursor: pointer; transition: border-color 0.2s; }
+.gv-wiz-opt:hover, .gv-wiz-opt:focus-visible, .gv-wiz-opt.on { border-color: var(--gold); }
+.gv-wiz-back { margin-top: 12px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 0; padding: 6px 0; cursor: pointer; }
+.gv-wiz-again { margin-top: 16px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--gold); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+.gv-wiz-res { display: flex; gap: 16px; align-items: flex-start; }
+.gv-wiz-res img { flex: none; width: 72px; height: 72px; }
+.gv-wiz-res > div { min-width: 0; }
+.gv-wiz-d { font-family: var(--font-text); font-size: 17px; line-height: 1.55; color: var(--text); margin: 0 0 10px; }
+.gv-wiz-go { font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--gold); }
+.gv-wiz-more, .gv-wiz-note { font-family: var(--font-text); font-size: 16px; line-height: 1.5; color: var(--muted); margin: 14px 0 0; }
+.gv-wiz-more a { color: var(--gold); }
+@media (max-width: 600px) {
+  .gv-wiz { padding: 16px; }
+  .gv-wiz-q { font-size: 19px; }
+  .gv-wiz-res img { width: 56px; height: 56px; }
+}
+
 /* ── Kids mode (html[data-kids="1"], set before first paint from localStorage epoch-kids; always on for /kids) ──────
    Brighter colours (a night sky with the dark theme, warm paper with the light one), rounder type and corners,
    bigger text; long pages show their short version first ("In short", "Read the whole story"). */

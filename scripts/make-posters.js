@@ -230,6 +230,8 @@ page('societies', { kind: 'mosaic', pics: SOCS.map(x => x.img && { src: fullPic(
 const INVN = read('scripts/inventions.tsv').split(/\r?\n/).filter(l => l.trim() && !l.startsWith('#')).length;
 page('inventions', { kind: 'mosaic', pics: pick(['antikythera-mechanism', 'quipu', 'oracle-bone-script', 'astrolabe', 'voltaic-pile', 'x-ray']), kicker: 'Inventions tree', title: 'What led to what',
   tease: INVN + ' inventions and discoveries, from stone tools to the World Wide Web: what each was built on, what it led to, and who made it first.', chips: ['Trace the road', 'By civilisation', 'Eleven lanes'], url: 'the-epoch-institute.org/inventions' });
+page('governance', { kind: 'mosaic', pics: pick(['roman-senate', 'prince-elector', 'landsgemeinde', 'westminster-system', 'kurultai', 'louis-xiv']), kicker: 'Forms of government', title: 'Who should rule?',
+  tease: 'Twenty forms of government, from the chiefdom and the city-state to monarchy, democracy and dictatorship: how each works, and the case for and against it.', chips: ['20 forms', 'Aristotle’s six', 'Compared'], url: 'the-epoch-institute.org/governance' });
 page('connections', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Connections', title: 'The states as a network', sub: 'Who ruled, succeeded and conquered whom', url: 'the-epoch-institute.org/connections' });
 page('start', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Find your way in', title: 'Where should you start?', sub: 'Four questions, and reading paths that suit you', url: 'the-epoch-institute.org/start' });
 
