@@ -17,7 +17,8 @@ $clock = [Diagnostics.Stopwatch]::StartNew()
 # countries/, centuries/, paths/, speeches/ and the other generated folders) and 404.html
 $pages = New-Object System.Collections.Generic.List[object]
 foreach ($f in Get-ChildItem $Repo -File) { if (-not $f.Extension -and $f.Name -notmatch '^\.') { $pages.Add($f) } }
-foreach ($d in 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies') {
+$FOLDERS = 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies'
+foreach ($d in $FOLDERS) {
   foreach ($f in Get-ChildItem (Join-Path $Repo $d) -File -ErrorAction SilentlyContinue) { if (-not $f.Extension) { $pages.Add($f) } }
 }
 $redir = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\state\.htaccess", $U8)) { if ($l -match '^Redirect 301 (\S+) ') { $redir[$Matches[1]] = 1 } }
@@ -55,6 +56,34 @@ foreach ($f in $pages) {
   $cm = [regex]::Match($h, '<link rel="canonical" href="([^"]*)"'); if (-not $cm.Success) { $bad.Add("$self : no canonical") } elseif ($cm.Groups[1].Value -ne ($SITE + $self)) { $bad.Add("$self : canonical is $($cm.Groups[1].Value)") }
   if ($h -notmatch 'property="og:title"' -or $h -notmatch 'property="og:url"') { $bad.Add("$self : og:title/og:url missing") }
   foreach ($j in [regex]::Matches($h, '(?s)<script type="application/ld\+json">(.*?)</script>')) { try { [void]$JSS.DeserializeObject($j.Groups[1].Value) } catch { $bad.Add("$self : JSON-LD does not parse ($($_.Exception.Message.Substring(0, 60)))") } }
+}
+# every extensionless page must go out as text/html (31 Oct 2026: /governance was missing from the root .htaccess list,
+# so it went out with no type under nosniff and browsers would not show it): a root page is named in the root
+# .htaccess's FilesMatch and in deploy.sh's PAGES; a folder's pages match the FilesMatch of its own .htaccess or, for
+# browse/ and conflicts/, its parent's. Apache matches case-sensitively, hence -cnotmatch.
+$htm = [regex]::Match([IO.File]::ReadAllText("$Repo\.htaccess", $U8), '<FilesMatch "\^\(([^)]*)\)\$">\s*ForceType text/html')
+$depm = [regex]::Match([IO.File]::ReadAllText("$Repo\scripts\deploy.sh", $U8), '(?s)\nPAGES=\(([^)]*)\)')
+if (-not $htm.Success) { $bad.Add('/.htaccess : no FilesMatch list forcing text/html') }
+if (-not $depm.Success) { $bad.Add('scripts/deploy.sh : no PAGES list') }
+$htNames = @($htm.Groups[1].Value -split '\|'); $depNames = @($depm.Groups[1].Value -split '\s+' | Where-Object { $_ })
+foreach ($f in Get-ChildItem $Repo -File) {
+  if ($f.Extension -or $f.Name -match '^\.') { continue }
+  if ($htNames -cnotcontains $f.Name) { $bad.Add("/$($f.Name) : not in the root .htaccess list served as text/html") }
+  if ($depNames -cnotcontains $f.Name) { $bad.Add("/$($f.Name) : not in scripts/deploy.sh PAGES") }
+}
+foreach ($d in $FOLDERS) {
+  $dir = Join-Path $Repo $d; if (-not (Test-Path -LiteralPath $dir)) { continue }
+  $web = '/' + ($d -replace '\\', '/') + '/'; $rxHtml = $null; $at = $dir
+  while ($at.Length -gt $Repo.Length) {
+    $hf = Join-Path $at '.htaccess'
+    if (Test-Path -LiteralPath $hf) {
+      $fmm = [regex]::Match([IO.File]::ReadAllText($hf, $U8), '(?:<FilesMatch "([^"]+)">\s*)?ForceType text/html')
+      if ($fmm.Success) { $rxHtml = if ($fmm.Groups[1].Success) { $fmm.Groups[1].Value } else { '.' }; break }
+    }
+    $at = Split-Path $at
+  }
+  if (-not $rxHtml) { $bad.Add("$web : no .htaccess forcing text/html"); continue }
+  foreach ($f in Get-ChildItem -LiteralPath $dir -File) { if (-not $f.Extension -and $f.Name -notmatch '^\.' -and $f.Name -cnotmatch $rxHtml) { $bad.Add("$web$($f.Name) : not served as text/html (outside $rxHtml)") } }
 }
 # the stylesheets in css/ must be what scripts/split-css.js cuts from shared.css and the pages as they are now
 $NODE = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $NODE) { $NODE = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }

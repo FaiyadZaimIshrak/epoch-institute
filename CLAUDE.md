@@ -7,6 +7,9 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
 index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race · inventions · governance
+A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
+it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
+hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ · societies/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
@@ -374,7 +377,8 @@ canonicals, JSON-LD, h1, sitemap coverage):
   loop's own LinkDesc call, so the build takes no longer.
 Run it after any change to encyclopedia-data.js, encyclopedia-links.js, data/*.json, reading-paths.js, shared-data.js
 EMPIRES or epoch-stats.js (about 15 minutes; -SkipEntries skips the entry pages, ~3 minutes, for testing), then
-scripts/check-site.ps1 (every internal link resolves; one h1, title, description <= 160, canonical, JSON-LD per page).
+scripts/check-site.ps1 (every internal link resolves; one h1, title, description <= 160, canonical, JSON-LD per page;
+every page served as text/html by an .htaccess; css/ up to date).
 PowerShell 5.1 traps met in this script: variable names ignore case ($POS = $pos, $SM = $sm …: give script-level
 tables distinct names); @($list) fails on New-Object generic lists (use foreach); ForEach-Object unrolls arrays it
 outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) / 2, c)` needs parentheses); "$rr:" in a
