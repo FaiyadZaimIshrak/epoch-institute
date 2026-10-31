@@ -908,7 +908,7 @@ localStorage epoch-faith-view; /faiths also ?view=flat):
   images/og/page-faiths.jpg, sitemap. faith-map.js has no ?v= on the profiles (10-minute cache in .htaccess).
 
 ## Research Series (/research-series, /essays/<slug>)
-Five essays, sources in scripts/essays/NN-slug.html: a comment of `key: value` lines (title, subtitle, card = the
+Six essays, sources in scripts/essays/NN-slug.html: a comment of `key: value` lines (title, subtitle, card = the
 text of its card, desc ≤ 160, published yyyy-mm-dd, picture `entry slug|caption` (the games' 800 px copy when
 images/games/<slug>.jpg exists, else the entry's thumbnail; the entry's credit is shown) or cover `path|alt`,
 profiles = slugs for "Profiles in this essay"), then the essay's HTML: `<h2 id="sN-…">` sections, the last one
@@ -917,7 +917,8 @@ profiles = slugs for "Profiles in this essay"), then the essay's HTML: `<h2 id="
 build-pages.ps1 writes /essays/<slug> (kicker with date and reading time, Share, figure, contents list, body, Further
 Reading, profile cards, Cite this essay, previous/next; Article JSON-LD with datePublished, wordCount and the works as
 citation), the cards of /research-series (`build:essays`, with a script forwarding the old #series-0N addresses) and
-feed.xml (guid = the old research-series#series-NN, so readers see no essay twice). It stops on a link to an unknown
+feed.xml (guid = the old research-series#series-NN, so readers see no essay twice). A title ending in "?" or "!" joins
+its subtitle with a space in the page title and share text ("Who Should Rule? One, Few or Many…"). It stops on a link to an unknown
 entry, profile or state. 01 and 02 (May 2026) were moved out of the page's script in Oct 2026 with their text
 unchanged; 03–05 were written then, their "What the Data Shows" figures computed from the power curves (shared-data.js
 EMPIRES), the register (data/polities.json) and epoch-stats.js. The Listen button reads article.essay-view (h1,
@@ -1150,7 +1151,11 @@ council of generals, 1170; elective monarchy: the Fourth Council of Toledo, 633)
   Britain, the United States, Athens, Venice, the Mongols, the Soviet Union, a junta, Iran, a feudal kingdom, Hawaii, a
   Greek tyrant, Poland-Lithuania, the Roman Republic, Roman nobles, Napoleon) and every form can win (gov/wizard-check.js
   runs all 78,125 answer sets); window.epochGovWizard.answer([...]) for tests (gov/wizard-test.js, gov/hub-test.js).
-- Not yet: essay 06 ("Who Should Rule?"); encyclopedia entries for the forms that
+- Essay 06, "Who Should Rule? One, Few or Many: Forms of Government Compared" (Research Series, 31 Oct 2026): drafted
+  by an agent from the 20 checked profiles and gov/register-counts.txt (the register by recorded kind per century,
+  computed as the hub's chart counts it), every figure checked by gov/essay-numbers.js and every outside claim read
+  (gov/essay/NOTES.md lists them).
+- Not yet: encyclopedia entries for the forms that
   have none (only constitutional and elective monarchy, feudalism and federalism have one), which would let the
   encyclopedia's own texts link to the forms.
 

@@ -2372,7 +2372,7 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
   [void]$sb.Append('<main id="main" class="essay-page ref-page">' + "`n<div class=`"essay-wrap`">`n" + $crumb[0] + "`n<article class=`"essay-view`">`n")
   [void]$sb.Append('<header class="essay-head"><p class="essay-kicker"><a href="/research-series">Research Series</a> · Essay ' + $ey.num + ' · <time datetime="' + $hd['published'] + '">' + $dateTxt + '</time> · ' + $mins + ' min read</p>' +
     '<h1 class="essay-title">' + (Hx $title) + '</h1><p class="essay-sub">' + (Hx $hd['subtitle']) + '</p>' +
-    '<p class="page-share-row"><button type="button" class="sp-share page-share" data-share-text="' + (Hx ($title + ': ' + $hd['subtitle'])) + '" data-share-title="' + (Hx $title) + '" data-share-heading="Share this essay" data-share-url="' + $url + '"' + $(if ($ogImg -like '/images/og/*') { ' data-share-img="' + $ogImg + '"' } else { '' }) + '>Share</button></p></header>' + "`n")
+    '<p class="page-share-row"><button type="button" class="sp-share page-share" data-share-text="' + (Hx ($title + $(if ($title -match '[?!]$') { ' ' } else { ': ' }) + $hd['subtitle'])) + '" data-share-title="' + (Hx $title) + '" data-share-heading="Share this essay" data-share-url="' + $url + '"' + $(if ($ogImg -like '/images/og/*') { ' data-share-img="' + $ogImg + '"' } else { '' }) + '>Share</button></p></header>' + "`n")
   if ($fig) { [void]$sb.Append($fig + "`n") }
   [void]$sb.Append('<nav class="essay-toc" aria-label="Contents"><p class="essay-toc-k">Contents</p><ol>' + (($secs | ForEach-Object { '<li><a href="#' + $_.Groups[1].Value + '">' + $_.Groups[2].Value + '</a></li>' }) -join '') + "</ol></nav>`n")
   [void]$sb.Append('<div class="essay-body">' + "`n" + $main + "`n</div>`n")
@@ -2396,7 +2396,8 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
     ',"inLanguage":"en-GB","datePublished":"' + $hd['published'] + '","dateModified":"@@MOD@@","wordCount":' + $words + ',"author":' + $ORG + ',"publisher":' + $ORG +
     ',"isPartOf":{"@type":"CreativeWorkSeries","name":"Research Series","url":"' + $SITE + '/research-series"},"position":' + [int]$ey.num +
     $(if ($imgLd) { ',"image":' + $imgLd } elseif ($ogImg) { ',"image":' + (Js ($SITE + $ogImg)) } else { '' }) + $(if ($cites.Count) { ',"citation":[' + ($cites -join ',') + ']' } else { '' }) + '}'
-  Emit $path (Page @{ title = $title + ': ' + $hd['subtitle'] + ' — The Epoch Institute'; desc = $hd['desc']; path = $path; type = 'article'; img = $ogImg; imgW = $ogW; imgH = $ogH; ld = $ld; nav = 'series'; body = $sb.ToString() })
+  $esJoin = if ($title -match '[?!]$') { ' ' } else { ': ' }   # "Who Should Rule? One, Few or Many", not "Rule?: One"
+  Emit $path (Page @{ title = $title + $esJoin + $hd['subtitle'] + ' — The Epoch Institute'; desc = $hd['desc']; path = $path; type = 'article'; img = $ogImg; imgW = $ogW; imgH = $ogH; ld = $ld; nav = 'series'; body = $sb.ToString() })
 }
 if ($esMiss.Count) { throw ("essays: unknown links " + (($esMiss | Sort-Object -Unique) -join ', ')) }
 # the cards of /research-series, and its old addresses (the essays opened inside that page: #series-01 ...) forwarded

@@ -401,6 +401,7 @@ var SEARCH_PAGES = [
 ["The Collapse Problem","/essays/the-collapse-problem","essay",""],
 ["Cross-Cultural Exchange","/essays/cross-cultural-exchange","essay",""],
 ["The Military Revolution","/essays/the-military-revolution","essay",""],
+["Who Should Rule?","/essays/who-should-rule","essay",""],
 ["Social Hierarchy of Old Babylonia","/societies/old-babylonia","ladder","social classes of Old Babylonia|social structure of Old Babylonia|Old Babylonia social hierarchy|Old Babylonia social classes"],
 ["Social Hierarchy of the Achaemenid Empire","/societies/achaemenid-persia","ladder","social classes of the Achaemenid Empire|social structure of the Achaemenid Empire|Achaemenid Persia social hierarchy|Achaemenid Persia social classes"],
 ["Social Hierarchy of Ancient Egypt","/societies/ancient-egypt","ladder","social classes of Ancient Egypt|social structure of Ancient Egypt|New Kingdom Egypt social hierarchy|New Kingdom Egypt social classes"],
