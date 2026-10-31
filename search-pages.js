@@ -15,6 +15,7 @@ var SEARCH_PAGES = [
 ["Write in Ancient Scripts","/write","page","write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe"],
 ["Faith Maps","/faiths","page","faith maps|spread of religions|religion maps"],
 ["History Quiz","/quiz","page","quiz|daily quiz|trivia"],
+["Inventions Tree","/inventions","page","inventions|inventions tree|history of inventions|timeline of inventions|inventions and discoveries|discoveries|history of technology|who invented|first invented|history of science|history of medicine"],
 ["Social Ladders","/societies/","page","social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks"],
 ["Flashcards","/flashcards","page","flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition"],
 ["History Games","/games","page","games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages"],

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Quantum mechanics (1900–1927) — Encyclopedia — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Quantum mechanics is the physical theory that describes the behaviour of matter and light at and below the scale of atoms; it arose from early theories…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/quantum-mechanics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quantum mechanics (1900–1927) — Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="Quantum mechanics is the physical theory that describes the behaviour of matter and light at and below the scale of atoms; it arose from early theories…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/quantum-mechanics">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/encyclopedia/quantum-mechanics.jpg">
+<meta property="og:image:width" content="320">
+<meta property="og:image:height" content="232">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/encyclopedia/quantum-mechanics.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"Q","item":"https://the-epoch-institute.org/encyclopedia/browse/q-2"},{"@type":"ListItem","position":4,"name":"Quantum mechanics"}]},{"@type":"Article","headline":"Quantum mechanics","description":"Quantum mechanics is the physical theory that describes the behaviour of matter and light at and below the scale of atoms; it arose from early theories…","url":"https://the-epoch-institute.org/encyclopedia/quantum-mechanics","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/quantum-mechanics","inLanguage":"en-GB","dateModified":"2026-10-31","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"DefinedTerm","name":"Quantum mechanics","alternateName":["Quantum physics","Quantum theory"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/quantum-mechanics.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/quantum-mechanics.jpg","width":320,"height":232,"license":"https://creativecommons.org/publicdomain/mark/1.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Solvay_conference_1927.jpg","creditText":"Benjamin Couprie","creator":{"@type":"Person","name":"Benjamin Couprie"},"copyrightNotice":"Benjamin Couprie"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/q-2">Q</a></li><li aria-current="page">Quantum mechanics</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=quantum-mechanics">Inventions &amp; Discoveries</a> · Science and discovery</p><h1 class="enc-title">Quantum mechanics</h1><p class="enc-meta"><span class="dates"><a href="/years/1900">1900</a>–<a href="/years/1927">1927</a></span> · <a href="/centuries/20th-century">20th century</a> · Also known as Quantum physics, Quantum theory</p></header>
+<div class="enc-body"><p class="enc-desc">Quantum mechanics is the physical theory that describes the behaviour of matter and light at and below the scale of atoms; it arose from early theories such as Max Planck's hypothesis of 1900 that energy is radiated and absorbed in discrete &quot;quanta&quot;. <a class="enc-link" href="/encyclopedia/albert-einstein">Albert Einstein</a> used the idea in 1905 to explain the photoelectric effect, and modern quantum mechanics was born in 1925, when Werner Heisenberg, Max Born and Pascual Jordan developed matrix mechanics and Erwin Schrödinger invented wave mechanics. Its applications include the laser, the <a class="enc-link" href="/encyclopedia/transistor">transistor</a> and magnetic resonance imaging.</p><figure class="enc-fig"><img src="/images/encyclopedia/quantum-mechanics.jpg" alt="Quantum mechanics" width="320" height="232" fetchpriority="high"><figcaption>Image: Benjamin Couprie · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Solvay_conference_1927.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>1900</dd></div><div><dt>Credited to</dt><dd>Max Planck · Werner Heisenberg · Erwin Schrödinger</dd></div></dl><p class="inv-entry-note"><span class="inv-k">Note</span>Planck’s quantum hypothesis of 1900 began it; modern quantum mechanics was formulated in 1925–1926.</p><div class="inv-entry-rel"><span class="inv-k">Led to</span><a class="inv-chip" href="/encyclopedia/nuclear-fission">Nuclear fission<span>1938</span></a><a class="inv-chip" href="/encyclopedia/transistor">Transistor<span>1947</span></a></div><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=quantum-mechanics">See it on the inventions tree &rarr;</a></p></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/quanrong"><span class="lbl">&larr; Previous entry</span><span class="nm">Quanrong</span></a><a class="next" rel="next" href="/encyclopedia/quanzhen-school"><span class="lbl">Next entry &rarr;</span><span class="nm">Quanzhen School</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Quantum mechanics. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/quantum-mechanics</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Quantum mechanics.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/quantum-mechanics. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Quantum mechanics.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/quantum-mechanics.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Quantum mechanics&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/quantum-mechanics (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

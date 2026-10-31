@@ -225,6 +225,9 @@ page('race', { kind: 'curves', abs: 10, lines: RACERS.map((e, k) => ({ name: e.n
   kicker: 'The rise and fall race', title: 'Who led, and when?', sub: 'Race any four of ' + EMPIRES.filter(e => e.points).length + ' states and empires, year by year', url: 'the-epoch-institute.org/race' });
 page('societies', { kind: 'mosaic', pics: SOCS.map(x => x.img && { src: fullPic(x.img), top: 25 }).filter(Boolean).slice(0, 6), kicker: 'Social ladders', title: 'From emperor to enslaved',
   tease: 'How ' + SOCS.length + ' societies ranked their people: who stood where, how many they were, and how people rose or fell.', chips: ['Born into history', 'Compare two societies', 'Order the Ranks'], url: 'the-epoch-institute.org/societies/' });
+const INVN = read('scripts/inventions.tsv').split(/\r?\n/).filter(l => l.trim() && !l.startsWith('#')).length;
+page('inventions', { kind: 'mosaic', pics: pick(['antikythera-mechanism', 'quipu', 'oracle-bone-script', 'astrolabe', 'voltaic-pile', 'x-ray']), kicker: 'Inventions tree', title: 'What led to what',
+  tease: INVN + ' inventions and discoveries, from stone tools to the World Wide Web: what each was built on, what it led to, and who made it first.', chips: ['Trace the road', 'By civilisation', 'Eleven lanes'], url: 'the-epoch-institute.org/inventions' });
 page('connections', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Connections', title: 'The states as a network', sub: 'Who ruled, succeeded and conquered whom', url: 'the-epoch-institute.org/connections' });
 page('start', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Find your way in', title: 'Where should you start?', sub: 'Four questions, and reading paths that suit you', url: 'the-epoch-institute.org/start' });
 

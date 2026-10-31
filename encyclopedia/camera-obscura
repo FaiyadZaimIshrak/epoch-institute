@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Camera obscura — Encyclopedia — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="A camera obscura is a dark chamber or box in which light passing through a small hole projects an inverted image of the scene outside onto the opposite…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/camera-obscura">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Camera obscura — Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="A camera obscura is a dark chamber or box in which light passing through a small hole projects an inverted image of the scene outside onto the opposite…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/camera-obscura">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/encyclopedia/camera-obscura.jpg">
+<meta property="og:image:width" content="320">
+<meta property="og:image:height" content="182">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/encyclopedia/camera-obscura.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"C","item":"https://the-epoch-institute.org/encyclopedia/browse/c-2"},{"@type":"ListItem","position":4,"name":"Camera obscura"}]},{"@type":"Article","headline":"Camera obscura","description":"A camera obscura is a dark chamber or box in which light passing through a small hole projects an inverted image of the scene outside onto the opposite…","url":"https://the-epoch-institute.org/encyclopedia/camera-obscura","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/camera-obscura","inLanguage":"en-GB","dateModified":"2026-10-31","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"DefinedTerm","name":"Camera obscura"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/camera-obscura.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/camera-obscura.jpg","width":320,"height":182,"license":"https://creativecommons.org/publicdomain/mark/1.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:1646_Athanasius_Kircher_-_Camera_obscura.jpg","creditText":"Athanasius Kircher","creator":{"@type":"Person","name":"Athanasius Kircher"},"copyrightNotice":"Athanasius Kircher"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/c-2">C</a></li><li aria-current="page">Camera obscura</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=camera-obscura">Inventions &amp; Discoveries</a> · Science and discovery</p><h1 class="enc-title">Camera obscura</h1><p class="enc-meta"><span class="dates">4th century BCE</span> · <a href="/centuries/4th-century-bce">4th century BCE</a></p></header>
+<div class="enc-body"><p class="enc-desc">A camera obscura is a dark chamber or box in which light passing through a small hole projects an inverted image of the scene outside onto the opposite surface; one of the earliest known written records of the effect is the Chinese text Mozi, of the 4th century BCE. Ibn al-Haytham studied it extensively in the early 11th century. Fitted with a lens from the second half of the 16th century, it became a popular drawing aid, and in the first half of the 19th century it developed into the photographic camera.</p><figure class="enc-fig"><img src="/images/encyclopedia/camera-obscura.jpg" alt="Camera obscura" width="320" height="182" fetchpriority="high"><figcaption>Image: Athanasius Kircher · Public domain · <a href="https://commons.wikimedia.org/wiki/File:1646_Athanasius_Kircher_-_Camera_obscura.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>4th century BCE</dd></div><div><dt>Where</dt><dd>China</dd></div><div><dt>Credited to</dt><dd>Mozi · <a href="/encyclopedia/zhou-dynasty">Zhou dynasty</a></dd></div></dl><p class="inv-entry-note"><span class="inv-k">Also arose independently</span>Greece (Aristotle’s school) (4th century BCE)</p><p class="inv-entry-note"><span class="inv-k">Note</span>The article mentions possible earlier traces: perforated gnomons projecting a pinhole image of the sun in the Chinese Zhoubi Suanjing (1046 BC–256 BC, with material added until c. 220 AD), and theories that camera obscura effects inspired Paleolithic cave paintings or played a role in Neolithic structures.</p><div class="inv-entry-rel"><span class="inv-k">Led to</span><a class="inv-chip" href="/encyclopedia/photography">Photography<span>1826–1827</span></a></div><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=camera-obscura">See it on the inventions tree &rarr;</a></p></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/camera-degli-sposi"><span class="lbl">&larr; Previous entry</span><span class="nm">Camera degli Sposi</span></a><a class="next" rel="next" href="/encyclopedia/camerino"><span class="lbl">Next entry &rarr;</span><span class="nm">Camerino</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Camera obscura. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/camera-obscura</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Camera obscura.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/camera-obscura. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Camera obscura.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/camera-obscura.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Camera obscura&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/camera-obscura (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

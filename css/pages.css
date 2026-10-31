@@ -241,6 +241,12 @@ header p {
 .profile-ladder { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
 .profile-ladder a { display: inline-flex; align-items: center; padding: 8px 14px; border: 1px solid rgba(var(--gold-rgb), 0.55); border-radius: 22px; background: rgba(var(--gold-rgb), 0.08); font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold-light); text-decoration: none; }
 .profile-ladder a:hover, .profile-ladder a:focus-visible { background: rgba(var(--gold-rgb), 0.18); border-color: var(--gold); }
+.profile-inv { margin: 18px 0 0; padding: 12px 14px; border: 0.5px solid var(--border); border-radius: 3px; background: rgba(var(--gold-rgb), 0.04); }
+.profile-inv-k { margin: 0 0 8px; font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.profile-inv-l { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.profile-inv-l a { display: inline-flex; flex-direction: column; padding: 5px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); font-family: var(--font-ui); font-size: 13px; font-weight: 600; line-height: 1.3; color: var(--text); text-decoration: none; }
+.profile-inv-l a span { font-size: 11px; font-weight: 400; color: var(--muted); }
+.profile-inv-l a:hover, .profile-inv-l a:focus-visible { border-color: var(--gold); }
 .profile-summary {
     font-family: var(--font-text);
     font-style: italic; font-weight: 300; font-size: 19px;
@@ -1652,6 +1658,22 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .pp-status { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 10px 0 12px; }
 .shelf-passport { display: block; margin-top: 8px; padding: 9px 12px 4px; border-top: 0.5px solid var(--border); font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); text-decoration: none; }
 .shelf-passport:hover { text-decoration: underline; text-underline-offset: 3px; }
+.inv-panel a, .inv-entry a:not(.inv-chip):not(.enc-random-link), .inv-list a { color: var(--gold); text-decoration: none; }
+.inv-panel a:hover, .inv-entry a:not(.inv-chip):not(.enc-random-link):hover, .inv-list a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.inv-k { display: block; margin-bottom: 2px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.inv-p-r, .inv-entry-rel { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.inv-p-r .inv-k, .inv-entry-rel .inv-k { flex-basis: 100%; }
+.inv-chip { display: inline-flex; flex-direction: column; align-items: flex-start; padding: 5px 10px; min-height: 36px; text-align: left; text-decoration: none; font: inherit; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
+.inv-chip span { font-size: 11px; font-weight: 400; color: var(--muted); }
+.inv-chip:hover { border-color: var(--gold); }
+.inv-cat { margin: 18px 0 8px; font-family: var(--font-display); font-size: 20px; color: var(--gold-light); }
+.inv-list { list-style: none; margin: 0; padding: 0; columns: 3 260px; column-gap: 24px; }
+.inv-list li { break-inside: avoid; padding: 4px 0; font-family: var(--font-ui); font-size: 14px; }
+.inv-list li span { font-size: 12.5px; color: var(--muted); }
+.inv-entry-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px 16px; margin: 0 0 10px; font-family: var(--font-ui); font-size: 14px; }
+.inv-entry-facts dt { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.inv-entry-facts dd { margin: 2px 0 0; }
+.inv-entry-note { margin: 6px 0; font-family: var(--font-ui); font-size: 14px; color: var(--text); }
 .gl-letters { position: sticky; top: 60px; z-index: 5; background: var(--bg); }
 .gl-letter, .gl-list > div { scroll-margin-top: 130px; }
 .gl-letter h2 { font-family: var(--font-display); font-size: 30px; color: var(--gold); margin: 28px 0 6px; border-bottom: 0.5px solid var(--border); padding-bottom: 6px; }

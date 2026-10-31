@@ -3,7 +3,8 @@
 # is appended to ENCYCLOPEDIA with its picture and credit and gets a row of link patterns in encyclopedia-links.js
 # ([slug, [[text, mode], ...]]: mode 0 proper name, 1 lowercase term, 2 name with either-case first letter). The row
 # goes in front of the profile-only rows when they exist (index fs: every later row moves up and byEmpire follows),
-# else at the end; an event also gets its years in y. A row that a rebuild of the links file wrote differently is set
+# else at the end; an event also gets its years in y. An entry given no patterns (31 Oct 2026, the inventions tree: a
+# common noun such as Pottery or Wheel, which would link everywhere) gets no row. A row that a rebuild of the links file wrote differently is set
 # back to these patterns. "patterns" give an existing entry another name to be found by ([slug, text, mode]; an entry
 # that has no row at all gets one), "pictures" replace the picture of an existing entry ([slug, artist, licence,
 # source]; the file is images/encyclopedia/<slug>.jpg) and "fixes" correct the description of an existing entry
@@ -91,9 +92,9 @@ $L = $el.Substring($i0, $i1 - $i0 + 1) | ConvertFrom-Json
 $fsNow = if ($null -ne $L.PSObject.Properties['fs']) { [int]$L.fs } else { $L.e.Count }
 $rowAt = @{}   # the main rows (profile-only forms after fs are not an entry's row)
 for ($i = 0; $i -lt $fsNow; $i++) { if ([string]$L.e[$i][0] -ne '@g') { $rowAt[[string]$L.e[$i][0]] = $i } }
-$ins = New-Object Collections.Generic.List[object]; $nSet = 0
+$ins = New-Object Collections.Generic.List[object]; $nSet = 0; $nBare = 0
 foreach ($e in @($A.entries)) {
-  if (-not $e.links) { throw "no link patterns for $($e.slug)" }
+  if (-not $e.links) { $nBare++; continue }   # a common noun (Pottery, Wheel): no row, so no text links it by mistake
   $pats = @(@($e.links) | ForEach-Object { , @([string]$_[0], [int]$_[1]) })
   foreach ($p in $pats) { [void](EncRx $p[0] $p[1]) }   # a pattern that does not compile stops the run
   if ($rowAt.ContainsKey($e.slug)) {   # a rebuilt links file may have written the row from the name: set it back
@@ -177,4 +178,4 @@ foreach ($x in @($A.exclude | Where-Object { $_ })) {
 if ($ins.Count -or $nY -or $nPat -or $nSet -or $nForm -or $nFirst -or $nDrop -or $nEx) {
   [IO.File]::WriteAllText("$Repo\encyclopedia-links.js", $el.Substring(0, $i0) + (EncJson $L) + $el.Substring($i1 + 1), $u8)
 }
-"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  exclusions: $nEx  pictures replaced: $nPic  descriptions fixed: $nFix"
+"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  exclusions: $nEx  pictures replaced: $nPic  descriptions fixed: $nFix  entries without a link row: $nBare"

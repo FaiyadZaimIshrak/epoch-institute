@@ -862,6 +862,65 @@ function YearLabel([int]$yv) { if ($yv -lt 0) { "$(-$yv) BCE" } elseif ($yv -lt 
 function YearHref([int]$yv) { '/years/' + [EpochBuild.W]::YearSlug($yv) }
 Say "year pages: $($YEARLIST.Count) ($(YearLabel $YEARLIST[0]) - $(YearLabel $YEARLIST[-1]))"
 
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Inventions and discoveries (/inventions, inventions.js), read here so that each entry page can show its place on the
+# tree; data/inventions.json, its ?v= (INV_SRC in /inventions), the page's list and scripts/invention-links.js (the
+# profiles' "Inventions and discoveries" chips, read by generator.html) are written further down. scripts/inventions.tsv,
+# one row a node: slug (an entry), label (the card), category, year (negative BCE), circa (1), date (as shown), place,
+# civ (the profiles or entries credited, ';'), people (entry slugs, or '=Name' for someone without one, ';'), also
+# (independent origins, 'place|date', ';'), built (the earlier nodes it built on, ','), contested (a note) and source
+# (the Wikipedia article the facts were checked against). Stops on an unknown entry, profile, category or parent, a
+# parent dated after its child, or a cycle. (Script-level names start with inv: PowerShell's names ignore case.)
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+$INVCATS = [ordered]@{ tools = 'Tools and materials'; farming = 'Farming and food'; building = 'Building and engineering'; transport = 'Transport and navigation'
+  weapons = 'Weapons and war'; writing = 'Writing and counting'; science = 'Science and discovery'; chemistry = 'Chemistry'; medicine = 'Medicine and health'
+  energy = 'Energy and power'; communication = 'Communication and computing' }
+$INVPROF = @{}; foreach ($m in [regex]::Matches([IO.File]::ReadAllText("$Repo\shared-data.js", $U8), '\{"name": ("(?:[^"\\]|\\.)*"), "region": ')) { $INVPROF[$JSS.Deserialize($m.Groups[1].Value, [string])] = 1 }
+$INVN = [ordered]@{}; $invBad = New-Object Collections.Generic.List[string]; $invLn = 0
+if (Test-Path "$Repo\scripts\inventions.tsv") {
+  foreach ($invL in [IO.File]::ReadAllLines("$Repo\scripts\inventions.tsv", $U8)) {
+    $invLn++; if (-not $invL.Trim() -or $invL.StartsWith('#')) { continue }
+    $invC = $invL.Split("`t"); $invW = "inventions.tsv:$invLn"
+    if ($invC.Count -ne 13) { $invBad.Add("$invW`: $($invC.Count) columns, not 13"); continue }
+    $invS = $invC[0].Trim()
+    if (-not $BY.ContainsKey($invS)) { $invBad.Add("$invW`: no entry '$invS'"); continue }
+    if ($INVN.Contains($invS)) { $invBad.Add("$invW`: '$invS' twice"); continue }
+    if (-not $INVCATS.Contains($invC[2])) { $invBad.Add("$invW`: category '$($invC[2])'") }
+    $invY = 0; if (-not [int]::TryParse($invC[3].Trim(), [ref]$invY)) { $invBad.Add("$invW`: year '$($invC[3])'") }
+    if (-not $invC[1].Trim() -or -not $invC[5].Trim()) { $invBad.Add("$invW`: no label or date") }
+    $invCiv = New-Object Collections.Generic.List[object]
+    foreach ($invT in ($invC[7] -split ';')) { $invT = $invT.Trim(); if (-not $invT) { continue }
+      if ($INVPROF.ContainsKey($invT)) { $invCiv.Add(@{ n = $invT; u = (ProfUrl $invT); p = $true }) } elseif ($BY.ContainsKey($invT)) { $invCiv.Add(@{ n = $BY[$invT].name; u = '/encyclopedia/' + $invT; p = $false; s = $invT }) } else { $invBad.Add("$invW`: civ '$invT' is no profile or entry") } }
+    $invPpl = New-Object Collections.Generic.List[object]
+    foreach ($invT in ($invC[8] -split ';')) { $invT = $invT.Trim(); if (-not $invT) { continue }
+      if ($invT.StartsWith('=')) { $invPpl.Add(@{ n = $invT.Substring(1).Trim(); u = '' }) } elseif ($BY.ContainsKey($invT)) { $invPpl.Add(@{ n = $BY[$invT].name; u = '/encyclopedia/' + $invT }) } else { $invBad.Add("$invW`: person '$invT' is no entry") } }
+    $invAlso = New-Object Collections.Generic.List[object]
+    foreach ($invT in ($invC[9] -split ';')) { $invT = $invT.Trim(); if (-not $invT) { continue }; $invP = $invT -split '\|', 2; $invAlso.Add(@($invP[0].Trim(), $(if ($invP.Count -gt 1) { $invP[1].Trim() } else { '' }))) }
+    $INVN[$invS] = [pscustomobject]@{ slug = $invS; label = $invC[1].Trim(); cat = $invC[2]; y = $invY; circa = ($invC[4].Trim() -eq '1'); date = $invC[5].Trim(); place = $invC[6].Trim()
+      civ = $invCiv; ppl = $invPpl; also = $invAlso; built = @(($invC[10] -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ }); led = New-Object Collections.Generic.List[string]
+      contested = $invC[11].Trim(); src = $invC[12].Trim(); e = $BY[$invS] }
+  }
+  foreach ($invNd in $INVN.Values) {
+    foreach ($invP in $invNd.built) {
+      if (-not $INVN.Contains($invP)) { $invBad.Add("$($invNd.slug): built on '$invP', not on the tree"); continue }
+      if ($INVN[$invP].y -gt $invNd.y) { $invBad.Add("$($invNd.slug) ($($invNd.y)) is built on $invP, dated later ($($INVN[$invP].y))") }
+      $INVN[$invP].led.Add($invNd.slug)
+    }
+  }
+  # a cycle would send "Trace the road" round for ever: depth first, a node met again on its own path
+  $invState = @{}
+  function InvVisit([string]$s, [string]$trail) {
+    if ($script:invState[$s] -eq 2) { return }; if ($script:invState[$s] -eq 1) { $script:invBad.Add("cycle:$trail > $s"); return }
+    $script:invState[$s] = 1; foreach ($p in $script:INVN[$s].built) { if ($script:INVN.Contains($p)) { InvVisit $p "$trail > $s" } }; $script:invState[$s] = 2
+  }
+  foreach ($invS in @($INVN.Keys)) { InvVisit $invS '' }
+  if ($invBad.Count) { throw ('scripts/inventions.tsv: ' + ($invBad -join '; ')) }
+}
+function InvChip([string]$s) { $o = $INVN[$s]; '<a class="inv-chip" href="/encyclopedia/' + $s + '">' + (Hx $o.label) + '<span>' + (Hx $o.date) + '</span></a>' }
+function InvCredits($nd) {   # people, then the societies and states credited, linked
+  @(@($nd.ppl | ForEach-Object { if ($_.u) { '<a href="' + $_.u + '">' + (Hx $_.n) + '</a>' } else { Hx $_.n } }) + @($nd.civ | ForEach-Object { '<a href="' + $_.u + '">' + (Hx $_.n) + '</a>' })) -join ' · '
+}
+
 Say 'encyclopedia entry pages'
 $nLinks = 0
 foreach ($e in $ENT) {
@@ -871,7 +930,9 @@ foreach ($e in $ENT) {
   $descHtml = if ($e.desc) { LinkDesc $e.desc $e.slug $ctx } else { 'Description coming soon.' }
   $nLinks += ([regex]::Matches($descHtml, 'class="enc-link"')).Count
   $crumb = Crumbs @(@('Home', '/'), @('Encyclopedia', '/encyclopedia/'), @((LetterLabel $e.L), $PAGEOF[$e.slug]), @($e.name, $null))
+  $invNd = $INVN[$e.slug]
   $kicker = if ($e.conflict) { '<a href="/encyclopedia/conflicts/' + (CenturySlug (Century $e.year)) + '">Conflicts &amp; Resolutions</a> · ' + (Hx (TagLabel $e)) }
+            elseif ($invNd) { '<a href="/inventions?focus=' + $e.slug + '">Inventions &amp; Discoveries</a> · ' + (Hx $INVCATS[$invNd.cat]) }
             elseif ($e.type -eq 'term') { '<a href="/encyclopedia/glossary#' + $e.slug + '">Glossary</a> · Term' + $(if ($e.sub) { ' · ' + (Hx $e.sub) } else { '' }) }
             else { (Hx $SING[$e.type]) + $(if ($e.sub -and $e.sub -ne 'other' -and $e.type -ne 'polity' -and $e.type -ne 'factor') { ' · ' + (Hx $e.sub) } else { '' }) }
   $meta = @(); if ($e.dates) { $meta += '<span class="dates">' + [EpochBuild.W]::LinkYears($e.dates, $YEARSET) + '</span>' }
@@ -891,6 +952,16 @@ foreach ($e in $ENT) {
   [void]$body.Append('<main id="main" class="enc-page ref-page">' + "`n" + '<div class="enc-wrap">' + "`n" + $crumb[0] + "`n" + '<article class="enc-article">' + "`n")
   [void]$body.Append('<header><p class="enc-kicker">' + $kicker + '</p><h1 class="enc-title">' + (Hx $e.name) + '</h1>' + $(if ($meta.Count) { '<p class="enc-meta">' + ($meta -join ' · ') + '</p>' } else { '' }) + "</header>`n")
   [void]$body.Append('<div class="enc-body"><p class="enc-desc">' + $descHtml + '</p>' + $fig + "</div>`n")
+  if ($invNd) {   # its place on the inventions tree: when, where, who, and the inventions before and after it
+    $invCr = InvCredits $invNd
+    [void]$body.Append('<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>' + (Hx $invNd.date) + '</dd></div>' +
+      $(if ($invNd.place) { '<div><dt>Where</dt><dd>' + (Hx $invNd.place) + '</dd></div>' } else { '' }) + $(if ($invCr) { '<div><dt>Credited to</dt><dd>' + $invCr + '</dd></div>' } else { '' }) + '</dl>' +
+      $(if ($invNd.also.Count) { '<p class="inv-entry-note"><span class="inv-k">Also arose independently</span>' + (($invNd.also | ForEach-Object { (Hx $_[0]) + $(if ($_[1]) { ' (' + (Hx $_[1]) + ')' } else { '' }) }) -join '; ') + '</p>' } else { '' }) +
+      $(if ($invNd.contested) { '<p class="inv-entry-note"><span class="inv-k">Note</span>' + (Hx $invNd.contested) + '</p>' } else { '' }) +
+      $(if ($invNd.built.Count) { '<div class="inv-entry-rel"><span class="inv-k">Built on</span>' + (($invNd.built | Sort-Object { $INVN[$_].y } | ForEach-Object { InvChip $_ }) -join '') + '</div>' } else { '' }) +
+      $(if ($invNd.led.Count) { '<div class="inv-entry-rel"><span class="inv-k">Led to</span>' + (($invNd.led | Sort-Object { $INVN[$_].y } | ForEach-Object { InvChip $_ }) -join '') + '</div>' } else { '' }) +
+      '<p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=' + $e.slug + '">See it on the inventions tree &rarr;</a></p></section>' + "`n")
+  }
   if ($e.emp.Count) {
     [void]$body.Append('<section><h2 class="enc-section-title">Mentioned in ' + $e.emp.Count + ' profile' + $(if ($e.emp.Count -eq 1) { '' } else { 's' }) + '</h2><div class="enc-mentions">')
     foreach ($m in $e.emp) { $ps = [string]$m['slug']; if (-not $ps) { $ps = [EpochBuild.W]::ToSlug([string]$m['name']) }; [void]$body.Append('<a href="' + $(if ($PROFURL.ContainsKey([string]$m['name'])) { $PROFURL[[string]$m['name']] } else { '/empire/' }) + $ps + '">' + (Hx ([string]$m['name'])) + '<span class="secs">' + (Hx ((@($m['sections']) | ForEach-Object { if ($SEC.ContainsKey([string]$_)) { $SEC[[string]$_] } else { [string]$_ } }) -join ', ')) + '</span></a>') }
@@ -2035,6 +2106,9 @@ foreach ($socF in @(Get-ChildItem "$Repo\data\societies\*.json" -ErrorAction Sil
 $SOCJSV = [EpochBuild.W]::Sha1([IO.File]::ReadAllText("$Repo\societies.js", $U8)).Substring(0, 8)
 for ($socI = 0; $socI -lt $SOCS.Count; $socI++) {
   $so = $SOCS[$socI]; $path = '/societies/' + $so.slug; $socTt = $so.title -split ':\s*', 2; $socCtx = @(($so.year - 200), ($so.year + 200))
+  # the prose is linked with the encyclopedia's patterns, compiled only in full builds: -SkipEntries keeps the pages as
+  # they are (31 Oct 2026: it had rewritten all 30 without their gold links)
+  if (($SkipEntries -or -not $SOCLINK) -and (Test-Path "$Repo\societies\$($so.slug)")) { $WROTE[(Join-Path $Repo ('societies\' + $so.slug)).ToLowerInvariant()] = 1; $SMNEW[$path] = if ($SM.ContainsKey($path)) { $SM[$path] } else { @('', $TODAY) }; continue }
   $socNoSet.Clear(); foreach ($socX in $so.nolink) { [void]$socNoSet.Add($socX) }
   $crumb = Crumbs @(@('Home', '/'), @('Social Ladders', '/societies/'), @($so.short, $null))
   $sb = New-Object Text.StringBuilder(30000)
@@ -2857,6 +2931,39 @@ $t = [IO.File]::ReadAllText("$Repo\faith-map.js", $U8); $t2 = [regex]::Replace($
 Say ("faith maps: {0} of {1} religions, {2} areas" -f $fmOut.Count, $FAITH.Count, (($fmOut.Values | ForEach-Object { $_.areas.Count } | Measure-Object -Sum).Sum))
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Inventions and discoveries, written (the nodes were read before the entry pages): data/inventions.json for
+# inventions.js ({cats [[key, label]], n [[slug, label, cat, year, circa, date, place, [[civ, url, emblem]],
+# [[person, url]], [[place, date]], [built-on indices], contested, picture, entry name, first sentence, source]]}, in
+# date order), its ?v= into /inventions (INV_SRC), the page's lede and its list of every node by category (the tree's
+# text for readers without JavaScript and for search engines), and scripts/invention-links.js (INVENTION_LINKS
+# {profile: [[slug, label, date]]}: generator.html puts "Inventions and discoveries credited here" on those profiles).
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+if ($INVN.Count) {
+  $invOrd = @($INVN.Values | Sort-Object @{ e = { $_.y } }, @{ e = { $_.label } }); $invIx = @{}; for ($invK = 0; $invK -lt $invOrd.Count; $invK++) { $invIx[$invOrd[$invK].slug] = $invK }
+  $invRows = foreach ($invNo in $invOrd) {
+    $invE = $invNo.e
+    $civJ = ($invNo.civ | ForEach-Object { '[' + (Js $_.n) + ',' + (Js $_.u) + ',' + (Js $(if ($_.p) { if ($LOGO.ContainsKey($_.n)) { '/logos/thumbs/' + [Uri]::EscapeDataString($_.n) + '.png' } else { '' } } elseif ($BY[$_.s].img) { ThumbOf $BY[$_.s].img } else { '' })) + ']' }) -join ','
+    '[' + (Js $invNo.slug) + ',' + (Js $invNo.label) + ',' + (Js $invNo.cat) + ',' + $invNo.y + ',' + $(if ($invNo.circa) { 1 } else { 0 }) + ',' + (Js $invNo.date) + ',' + (Js $invNo.place) + ',[' + $civJ + '],[' +
+      (($invNo.ppl | ForEach-Object { '[' + (Js $_.n) + ',' + (Js $_.u) + ']' }) -join ',') + '],[' + (($invNo.also | ForEach-Object { '[' + (Js $_[0]) + ',' + (Js $_[1]) + ']' }) -join ',') + '],[' +
+      (($invNo.built | Sort-Object { $INVN[$_].y } | ForEach-Object { $invIx[$_] }) -join ',') + '],' + (Js $invNo.contested) + ',' + (Js $(if ($invE.img) { ThumbOf $invE.img } else { '' })) + ',' + (Js $invE.name) + ',' +
+      (Js $(if ($invE.desc) { [EpochBuild.W]::FirstSentence($invE.desc, 240) } else { '' })) + ',' + (Js $invNo.src) + ']'
+  }
+  $invJs = '{"cats":[' + (($INVCATS.Keys | ForEach-Object { '[' + (Js $_) + ',' + (Js $INVCATS[$_]) + ']' }) -join ',') + '],"n":[' + "`n" + ($invRows -join ",`n") + "`n]}`n"
+  if ([EpochBuild.W]::WriteIfChanged("$Repo\data\inventions.json", $invJs)) { $NWRITE++ }
+  $INVV = [EpochBuild.W]::Sha1($invJs).Substring(0, 10)
+  $t = [IO.File]::ReadAllText("$Repo\inventions", $U8); $t2 = [regex]::Replace($t, "var INV_SRC = '/data/inventions\.json\?v=[^']*';", "var INV_SRC = '/data/inventions.json?v=$INVV';"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\inventions", $t2)) { $NWRITE++ }
+  SetBlock "$Repo\inventions" 'inv-lede' ('From stone tools to the World Wide Web: when and where each of ' + $INVN.Count + ' inventions and discoveries first appeared, who is credited, and what each one led to.')
+  SetBlock "$Repo\inventions" 'inv-list' (($INVCATS.Keys | ForEach-Object { $invCk = $_; $invNs = @($invOrd | Where-Object { $_.cat -eq $invCk }); if ($invNs.Count) {
+    '<h3 class="inv-cat">' + (Hx $INVCATS[$invCk]) + '</h3><ul class="inv-list">' + (($invNs | ForEach-Object { '<li><a href="/encyclopedia/' + $_.slug + '">' + (Hx $_.label) + '</a> <span>' + (Hx $_.date) + $(if ($_.place) { ' · ' + (Hx $_.place) } else { '' }) + '</span></li>' }) -join '') + '</ul>' } }) -join "`n")
+  # the profiles credited, for generator.html
+  $invLk = [ordered]@{}
+  foreach ($invNo in $invOrd) { foreach ($invCv in $invNo.civ) { if (-not $invCv.p) { continue }; if (-not $invLk.Contains($invCv.n)) { $invLk[$invCv.n] = New-Object Collections.Generic.List[string] }; $invLk[$invCv.n].Add('[' + (Js $invNo.slug) + ',' + (Js $invNo.label) + ',' + (Js $invNo.date) + ']') } }
+  $invLkJs = "// scripts/invention-links.js - written by scripts/build-pages.ps1. Do not edit. Read by generator.html: each profile's inventions and discoveries.`nvar INVENTION_LINKS = {`n" + (($invLk.Keys | ForEach-Object { (Js $_) + ':[' + ($invLk[$_] -join ',') + ']' }) -join ",`n") + "`n};`n"
+  if ([EpochBuild.W]::WriteIfChanged("$Repo\scripts\invention-links.js", $invLkJs)) { $NWRITE++ }
+  Say ("inventions: {0} on the tree, {1} links, {2} profiles credited; data/inventions.json {3:N0} KB" -f $INVN.Count, (($INVN.Values | ForEach-Object { $_.built.Count } | Measure-Object -Sum).Sum), $invLk.Count, ($invJs.Length / 1KB))
+}
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Flashcards (/flashcards, flashcards.js): decks made from the data, written as data/cards/<deck>.json and listed in the
 # page's build:fc-decks block with each file's ?v=. A card is [id, front, back, picture, link, hint]; a deck {id, t
 # title, ask (the question on the front), pf (0 the picture on the back, 1 only the picture in front: "who is this?",
@@ -2916,7 +3023,14 @@ foreach ($p in $RP) {
   FcDeck ('path-' + [string]$p['slug']) 'paths' ([string]$p['title']) '' ([string]$p['tagline']) 'Why is it on the path?' 2 @(
     @($p['steps']) | ForEach-Object { FcCard ([string]$_['href'] -replace '^/(encyclopedia|empire|religion|language|culture|movement|state)/', '') ([string]$_['name']) ([string]$_['why']) ([string]$_['img']) ([string]$_['href']) ([string]$_['meta']) }) ''
 }
-$FCG = [ordered]@{ words = @('Words of history', 'The terms historians use, one card each.'); people = @('Faces of the past', 'A portrait on the front: who is it?'); capitals = @('Capitals', 'The seats of the profiled states and empires, region by region.'); events = @('Key events', 'The turning points of the profiles: the year on the back.'); paths = @('Reading paths', 'The stops of a path and why each one is on it.') }
+# inventions: each category of the inventions tree, when and where each one first appeared and who is credited
+foreach ($invCk in $INVCATS.Keys) {
+  $invNs = @($INVN.Values | Where-Object { $_.cat -eq $invCk } | Sort-Object @{ e = { $_.y } }, @{ e = { $_.label } })
+  FcDeck ('inventions-' + $invCk) 'inventions' ('Inventions: ' + $INVCATS[$invCk]) $INVCATS[$invCk] ("The inventions and discoveries of the tree in $($INVCATS[$invCk].ToLowerInvariant()): when and where each first appeared, and who is credited.") 'When and where did it first appear?' 2 @(
+    $invNs | ForEach-Object { $invCr = @(@($_.ppl | ForEach-Object { $_.n }) + @($_.civ | ForEach-Object { $_.n })) -join ', '
+      FcCard $_.slug $_.label ($_.date + $(if ($_.place) { ' · ' + $_.place } else { '' }) + $(if ($invCr) { '. Credited to ' + $invCr + '.' } else { '' })) ([string]$_.e.img) ('/encyclopedia/' + $_.slug) $(if ($_.e.name -ne $_.label) { $_.e.name } else { '' }) }) ''
+}
+$FCG = [ordered]@{ words = @('Words of history', 'The terms historians use, one card each.'); people = @('Faces of the past', 'A portrait on the front: who is it?'); capitals = @('Capitals', 'The seats of the profiled states and empires, region by region.'); events = @('Key events', 'The turning points of the profiles: the year on the back.'); paths = @('Reading paths', 'The stops of a path and why each one is on it.'); inventions = @('Inventions and discoveries', 'When and where each first appeared, category by category.') }
 $fcb = New-Object Text.StringBuilder
 foreach ($g in $FCG.Keys) {
   $ds = @($FCD | Where-Object { $_.g -eq $g }); if (-not $ds.Count) { continue }
@@ -3223,6 +3337,7 @@ $SECTIONS = [ordered]@{
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
   games        = @{ t = 'Games'; h = '/games'; k = 'Eleven games'; d = 'Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  inventions   = @{ t = 'Inventions Tree'; h = '/inventions'; k = "$($INVN.Count) inventions"; d = 'From stone tools to the World Wide Web: when and where each invention and discovery first appeared, what it built on and what it led to.'; pic = @('printing-press', 'magnetic-compass') }
   societies    = @{ t = 'Social Ladders'; h = '/societies/'; k = "$($SOCS.Count) societies"; d = 'From emperor to enslaved: how societies ranked their people, how many stood on each rung and how they rose or fell. Be born into one by chance.'; pic = @('feudalism', 'standard-of-ur') }
   flashcards   = @{ t = 'Flashcards'; h = '/flashcards'; k = "$($FCN.ToString('N0')) cards"; d = 'Terms, faces, capitals and dates in decks of cards: the ones you miss come back sooner, the ones you know wait longer.'; pic = @('house-of-wisdom', 'imperial-examination') }
   passport     = @{ t = 'My Passport'; h = '/passport'; k = 'Your stamps'; d = 'The pages you read, the centuries you visit and the games you play, with stamps to collect. Kept in your own browser.'; pic = @('xuanzang') }
@@ -3243,7 +3358,7 @@ SetBlock "$Repo\atlas" 'atlas-presets' (($PRESETS | ForEach-Object { '<button ty
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
 $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
-  @('Through time', @('atlas', 'timeline', 'faiths', 'centuries', 'years')), @('Explore', @('explorer', 'race', 'connections', 'paths', 'write', 'societies')),
+  @('Through time', @('atlas', 'timeline', 'faiths', 'centuries', 'years', 'inventions')), @('Explore', @('explorer', 'race', 'connections', 'paths', 'write', 'societies')),
   @('Play', @('quiz', 'games', 'flashcards', 'kids', 'passport', 'start')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(switch (@($_[1]).Count) { 5 { ' hub-5' } 6 { ' hub-6' } default { '' } }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
@@ -3393,6 +3508,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Connections Map', '/connections', 'connections map|relations|network of states'), @('Reading Paths', '/paths/', 'paths|reading paths|where to start reading'),
   @('Great Speeches', '/speeches/', 'speeches|famous speeches'), @('Write in Ancient Scripts', '/write', 'write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe'),
   @('Faith Maps', '/faiths', 'faith maps|spread of religions|religion maps'), @('History Quiz', '/quiz', 'quiz|daily quiz|trivia'),
+  @('Inventions Tree', '/inventions', 'inventions|inventions tree|history of inventions|timeline of inventions|inventions and discoveries|discoveries|history of technology|who invented|first invented|history of science|history of medicine'),
   @('Social Ladders', '/societies/', 'social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks'),
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
@@ -3464,7 +3580,7 @@ if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\shared-nav.js", $t2)) 
 Say ("search-pages.js: {0} rows, {1} years; search-index.js: {2:N0} entries ({3:N0} slugs made from the name), {4:N0} states, {5:N0} KB" -f $sgRows.Count, $YEARLIST.Count, $nE, $nZero, $nS, ($siText2.Length / 1KB))
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

@@ -9,7 +9,7 @@ ErrorDocument 410 /404.html
 # Serve extensionless files as HTML. ExpiresByType (below) never reaches them, as it goes by the type before
 # ForceType: without this header browsers guessed a freshness of their own and could show an old page for hours after a
 # deploy. Revalidated like every other page.
-<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write|faiths|flashcards|race)$">
+<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write|faiths|flashcards|race|inventions)$">
   ForceType text/html
   <IfModule mod_headers.c>
     Header set Cache-Control "public, max-age=0"

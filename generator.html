@@ -45,6 +45,7 @@
 <script src="empire-facts.js"></script>
 <script src="empire-glance.js"></script>
 <script src="scripts/society-links.js"></script>
+<script src="scripts/invention-links.js"></script>
 <script>
 // ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
 // Wikipedia convention: link the first mention of each entry per section, never inside tags,
@@ -414,6 +415,9 @@ function buildPage(emp) {
   var sectionKeys = living ? kind.sections.map(function (s) { return s[0] === 'decline' ? ['decline', 'Into the Present'] : s; }) : kind.sections;
 
   var sectionsHtml = '';
+  // the inventions and discoveries credited to it (scripts/invention-links.js, written by build-pages.ps1): after its
+  // impact or legacy section, else its last one; each opens the inventions tree at that invention
+  var invKey = (function () { var ks = sectionKeys.map(function (s) { return s[0]; }); return ks.indexOf('impact') >= 0 ? 'impact' : ks.indexOf('legacy') >= 0 ? 'legacy' : ks[ks.length - 1]; })();
   if (profile) {
     sectionsHtml = sectionKeys.map(function(pair) {
       var key = pair[0], label = pair[1];
@@ -421,7 +425,9 @@ function buildPage(emp) {
       // the society's social ladder (scripts/society-links.js, written by build-pages.ps1), after its society section
       var ladder = (key === 'socioeconomy' || key === 'society') && typeof SOCIETY_LINKS !== 'undefined' && SOCIETY_LINKS[name]
         ? '<p class="profile-ladder">' + SOCIETY_LINKS[name].map(function (l) { return '<a href="' + l[0] + '">The social ladder of ' + esc(l[1]) + ' &rarr;</a>'; }).join(' ') + '</p>' : '';
-      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + ladder + '\n      </div>';
+      var inv = key === invKey && typeof INVENTION_LINKS !== 'undefined' && INVENTION_LINKS[name]
+        ? '<div class="profile-inv"><p class="profile-inv-k">Inventions and discoveries credited here</p><p class="profile-inv-l">' + INVENTION_LINKS[name].map(function (l) { return '<a href="/inventions?focus=' + l[0] + '">' + esc(l[1]) + '<span>' + esc(l[2]) + '</span></a>'; }).join('') + '</p></div>' : '';
+      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + ladder + inv + '\n      </div>';
     }).join('\n      ');
   }
 

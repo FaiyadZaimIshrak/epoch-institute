@@ -475,8 +475,8 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=383edf3937';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=af3342c0b8';
+var SEARCH_INDEX_SRC = '/search-index.js?v=1c9df8d8f8';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_PAGES_SRC = '/search-pages.js?v=77c0962520';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -672,7 +672,7 @@ function initNav(activePage) {
     ['connections', '/connections', 'Connections', 'The states as a network'], ['paths', '/paths/', 'Reading Paths', 'Themed routes through history'],
     ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
     ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
-    ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
+    ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'], ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'],
     ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
     ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'],
     ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'],
@@ -778,6 +778,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/write">Write in Ancient Scripts</a>
         <a class="footer-link" href="/faiths">Faith Maps</a>
         <a class="footer-link" href="/societies/">Social Ladders</a>
+        <a class="footer-link" href="/inventions">Inventions Tree</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
         <a class="footer-link" href="/games">History Games</a>
         <a class="footer-link" href="/flashcards">Flashcards</a>

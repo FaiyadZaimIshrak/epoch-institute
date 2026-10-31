@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race · inventions
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
 countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ · societies/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
@@ -16,14 +16,14 @@ Plus 404.html and generator.html (generator is NOT deployed — see scripts/depl
 
 ## Menu (shared-nav.js navHtml)
 Profiles · Encyclopedia · States · Explore ▾ (EXPLORE: Atlas, World Timeline, Country Histories, Centuries, Year by
-Year, People, Empire Explorer, Rise and Fall Race, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, Social Ladders, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
+Year, People, Empire Explorer, Rise and Fall Race, Connections, Reading Paths, Great Speeches, Write in Ancient Scripts, Faith Maps, Social Ladders, Inventions Tree, History Quiz, History Games, Flashcards, My Passport, Kids Corner,
 Glossary, Find Your Way In; two columns with a line each) · Today in History · More ▾ (MORE:
 Research Series, Open Data, Research Hub, Teachers' Corner, Community, Submit an Article, Newsletter, About, Write for Us (/contributors),
 Contact (/contact)). The phone menu and the three-column footer (Collections / Explore / Institute) list the same
 pages; the footer of every page except /contact starts with "Spotted a mistake on this page? Suggest a correction"
 (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -1021,7 +1021,8 @@ Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue a
   section, so regenerate the profiles after a ladder is added or renamed) and the build:kids-ladders block of /kids
   ("Who was who?": the eight Kids ladders, a picture or rung number and the kid line per rank). The prose (intro, text,
   rise, mobility, women) is gold-linked by LinkDesc with the society's year ±200 as context (SocLink; without the link
-  tables, as in scratchpad soc/run.ps1, it is only escaped).
+  tables, as in scratchpad soc/run.ps1, it is only escaped). A -SkipEntries build compiles no patterns, so it keeps the
+  ladder pages as they are, like the entry and day pages (31 Oct 2026: it had rewritten all 30 without their links).
 - societies.js (?v= the file's hash, written by the builder): To scale; Born into history draws a rank weighted by the
   share midpoints ("?" ranks never), says how many in a hundred lived so and the odds of being the ruler (one in the
   population midpoint), shares a rows poster (share-card.js) and keeps the draws in localStorage epoch-lives; a ladder
@@ -1045,6 +1046,78 @@ Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue a
   page-societies.jpg); deploy.sh GENERATED and DATA (data/societies); split-css GENERATED; check-site's folders; the
   root /societies → /societies/ redirect.
 
+## Inventions tree (/inventions)
+218 inventions and discoveries in eleven lanes (tools and materials, farming and food, building and engineering,
+transport and navigation, weapons and war, writing and counting, science and discovery, chemistry, medicine and health,
+energy and power, communication and computing), from stone tools (3.3 million years ago) to the World Wide Web
+(Oct 2026). Each node is an encyclopedia entry; its date is the earliest firm evidence its source accepts (not a
+claim the source calls speculative), and it is credited to a civilisation only where the source supports it (a
+profile or an entry: the Kingdom of Lydia for coinage, CERN for the Web; nuclear fission and the jet engine are
+credited to no state).
+- Source: scripts/inventions.tsv, one row a node: slug, label (the card), category, year (negative BCE), circa (1),
+  date (as shown), place, civ (profiles or entry slugs, `;`), people (entry slugs or `=Name`, `;`), also (independent
+  origins, `place|date`, `;`: writing in Mesopotamia, China and Mesoamerica), built (the earlier nodes it built on,
+  `,`), contested (a note, shown as "Note") and source (the Wikipedia article the facts were checked against).
+  build-pages.ps1 ("Inventions and discoveries", script-level names start with inv) STOPS on an unknown entry,
+  profile, person or category, a parent not on the tree, a parent dated after its child, or a cycle. It writes
+  data/inventions.json ({cats, n: [[slug, label, cat, year, circa, date, place, [[civ, url, emblem]], [[person, url]],
+  [[place, date]], [built-on indices], contested, picture, entry name, first sentence, source]]}; INV_SRC with its ?v=
+  stamped into /inventions), the page's build:inv-lede and build:inv-list blocks (the accessible list, by lane),
+  scripts/invention-links.js (INVENTION_LINKS {profile: [[slug, label, date]]}: generator.html puts "Inventions and
+  discoveries credited here" chips after the profile's impact or legacy section, so regenerate the profiles after the
+  file changes), on each node's entry page a kicker link to /inventions?focus=<slug> and the section "On the
+  inventions tree" (date, place, credited, also, Note, Built on / Led to chips by year), and a flashcard deck for each
+  lane (inventions-<lane>, "When and where did it first appear?").
+- The rows were drafted by agents in ten batches (scratchpad inv/INVENTIONS-GUIDE.md, one Wikipedia article each,
+  every builtOn link given a verdict) and checked one by one against the saved articles (inv/wp); the editor's
+  decisions are inv/edits.json (field by field), inv/make-facts.js writes the table and the new entries and stops on a
+  parent dated after its child or an entry date the site's parser would misread (five-digit years, "million": the
+  Ishango bone's and the stone tools' dates live in the table only). 149 of the nodes were new entries
+  (scripts/added-entries.json, applied by scripts/apply-added-entries.ps1), with pictures chosen by eye on contact
+  sheets (inv/sheets, inv/pic-picks.tsv): the period object or depiction where one reads at a glance (the Antikythera
+  mechanism, Röntgen's X-ray of his wife's hand, Dalton's symbols, Faraday's induction ring, Pasteur's flask, the first
+  web server), a reconstruction where it does not (the trireme Olympias), three with none.
+- inventions.js (?v= on the page): the tree is HTML cards (160 x 52, a 40 px picture) on one transformed layer with
+  the SVG curves beneath; time runs left to right in bands (BANDS) whose width follows how many cards one lane holds
+  there, so 3.3 million years of prehistory and the crowded 19th century both read; one row per lane, a card placed
+  by its year inside its band, links between non-adjacent cards of one lane arched above the row. Hover or a first
+  tap lights a card's whole lineage (ancestors and descendants) and dims the rest; the panel (a bottom sheet at 700 px
+  and below) gives the picture, date, place, credited, also, Note, Built on / Led to and the entry; "Trace the road
+  to" lights only the ancestors and fits them, following a long road from its end; a search field finds and traces.
+  Zoom 0.1 to 1.6 (KMIN, KMAX): below 0.55 the dates and below 0.38 the labels give way (inv-far, inv-tiny), leaving
+  the pictures as a map of the whole tree. Drag or the arrow keys move; Ctrl + wheel, pinch and the + and - keys zoom;
+  the plain wheel scrolls the tree only after a click on it (the mouse leaving gives the wheel back to the page). On a
+  touch screen one finger drags the tree sideways and vertical swipes scroll the page (touch-action pan-y: the stage
+  is most of a phone's screen, and with none it trapped the page), two fingers zoom and move it in any direction, and
+  the first touch shows a hint saying so. On a phone the tree starts below the first screen, at prehistory. Era
+  buttons, lane switches, a civilisation filter; views Tree, By civilisation ("What the Abbasids gave the world") and
+  List. The address keeps ?focus=&view=&civ=&hide=. Kids mode starts without the weapons lane (a switch brings it
+  back). window.epochInventions for tests (scratchpad inv/feature-test.js: every card, no overlaps, the lineage of 25
+  nodes against the data, lanes, filter and address, the views, search; touch pan and pinch in Edge; WebKit).
+- Wiring: Explore menu ("Inventions Tree: what led to what, and who made it first"), phone menu and footer; Research
+  Hub ("Through time"); search (SEARCH_PAGES); sitemap; llms.txt; poster page-inventions.jpg (make-posters.js page
+  "inventions"); deploy.sh PAGES and DATA (data/inventions.json); split-css HAND; .htaccess (extensionless page).
+- Link patterns of the new entries only where the name cannot mean something else (inv/link-patterns.tsv, tested
+  with r9/links-check.js and inv/newdesc-check.js): no bare common nouns (wheel, sail, arch, pottery, irrigation,
+  coinage, radio, television), "quarantine regulations" rather than "quarantine" (Kennedy's naval "quarantine" of
+  Cuba), "Brahmi script" rather than "Brahmi" (inside Tamil-Brahmi on its own page). Words whose capitalised form
+  names a company or an instrument match lower case only (mode 0: automobile, aeroplane/airplane, telescope, telephone,
+  jarl; "Boeing Airplane Company", "Hubble Space Telescope", "Nippon Telegraph and Telephone", "Birger Jarl"); the
+  check is inv/newdesc-check.js plus a scan of capitalised mid-sentence matches in the entries and the day events. The Cannon entry has none:
+  "cannon" still links Field artillery (its row has ["cannon", 1]); moving it needs the drop, the state texts'
+  [[e:field-artillery|cannon]] relinked and a profile scan (22 profiles), or the profiles lose the links.
+- The rank terms the social ladders lacked (36 entries: awīlum, muškēnum, kurtaš, metic, helots, perioikoi, dynatoi,
+  pronoia, villein, thrall, jarl, the Third Estate, sosloviye, awlad al-nas, reaya, jati, vaishya, zamindar,
+  yangban, nobi, cheonmin, hyakushō, hinin, nyamakala, pipiltin, macehualtin, ajaw, kuraka, ayllu, aclla, casta,
+  peninsulares, gens de couleur libres, grands blancs, aliʻi, makaʻāinana) came with this release (agents with the
+  entries guide, checked against the saved articles; inv/rank-edits.json holds the editor's changes: the Persepolis
+  workers called kurtaš, villein status inherited, cheonmin as the lowborn set apart from the yangin, kawata for eta)
+  and stand on their ranks' terms lines; "jeli" became a name of the Griots entry, whose text was rewritten. Lower-case
+  patterns only for jati (Sunan Gunung Jati) and ajaw (rulers' names such as Bahlam Ajaw).
+- Release B also corrected caravel (13th-century fishing boats before the Portuguese ships), gunpowder, the Maxim gun
+  (its colonial effect "often embellished"), steamship (Nemesis, Perry; no "profiles describe") and the Royal Road
+  (nine days, as the article has it) through added-entries "fixes".
+
 ## Voice
 Write in a general, academic register about the past itself. The encyclopedia no longer says "the X profile
 treats/notes/describes …" (786 such frames were rewritten in Oct 2026: a clause after "notes that" stands alone;
@@ -1053,10 +1126,13 @@ Institute and its register are still named where they are defined and credited (
 
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
-- The ladders' MISSING lines name the rank terms and people the encyclopedia lacks (helots, perioikoi, metics,
-  zamindar, yangban, nobi, awlad al-nas, kurtaš, nyamakala, aclla, grands blancs …): add them by the R9 entries process,
-  then the ladders' terms and people lines.
-- The acllahuasi entry's picture is Herrera's portrait of Lloque Yupanqui, not an acllahuasi: give it a true one.
+- The ladders' MISSING lines still name the people and some terms the encyclopedia lacks (bandaka, magi, Parnaka,
+  horon, jon, numu, Balla Fasséké, calpolli, mayeque, tlacotin, calmecac …; the 36 rank terms came with the inventions
+  release, 31 Oct 2026): add them by the R9 entries process, then the ladders' terms and people lines.
+- The 185 entries added on 31 Oct 2026 (the inventions tree and the rank terms) are linked from the entries, the day
+  pages, the ladders and the tree, but not yet from the profiles or the state texts: a profile scan (run-scan t-encemp
+  and t-encprof, enc-empires-apply, enc-prof-apply, then apply-added-entries and regen-profiles) and link-state-texts
+  would add them, and could move "cannon" from Field artillery to Cannon (see "Inventions tree").
 - Generic link names still linking one thing everywhere, handled on the ladders by nolink: "printing" (the printing
   press, also for Song woodblock and movable type), "slave trade" (the Atlantic slave trade, also for Viking and Maya
   trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the
