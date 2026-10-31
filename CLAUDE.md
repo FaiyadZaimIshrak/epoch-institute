@@ -354,15 +354,18 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   `sitemap.xml` (an index) + `sitemaps/{pages,profiles,encyclopedia,states,years}.xml` with image entries; lastmod changes
   only when a page's content changes (scripts/sitemap-state.tsv); `search-profiles.js` (the profiles for the header
   search: the generated pages load it instead of shared-data.js); `scripts/changed-urls.txt` (for ping-indexnow.ps1).
-SEO rules (31 Oct 2026, scratchpad nav/seo-audit.js checks all 40,211 pages: titles, descriptions, thin pages,
+SEO rules (31 Oct 2026, scratchpad nav/seo-audit.js checks all 40,235 pages: titles, descriptions, thin pages,
 canonicals, JSON-LD, h1, sitemap coverage):
 - Titles: Page() runs FitTitle: over 70 characters a title loses " — The Epoch Institute" (Google shows the site name
   above it), then its section label (" — Encyclopedia", " — States" …), which until then keeps an entry and a state of
   the same name apart; NameYears adds a name's years only when the name does not already hold them ("1931 Constitution
   of Ethiopia", "Duchy of Estonia (1219-1346)" said them twice). generator.html does the same for the profiles: years
   without "CE" on each ("Abbasid Caliphate (750–1517): History, Rise and Fall", "Roman Empire (27 BCE – 476 CE)") and no
-  Institute name past 70 characters. Before: 5,046 titles over 70 and 488 with doubled years; after: 21, all essays,
-  ladders and speeches whose own names are that long.
+  Institute name past 70 characters. Before: 5,046 titles over 70 and 488 with doubled years; after: 11, five essays
+  (title and subtitle), two profiles ("United Kingdom of Great Britain and Ireland (1801–1922): History, Rise and
+  Fall") and four names that long on their own or with their years (the Panama Canal neutrality treaty, Stedman's
+  Narrative, the US Military Government of the Philippine Islands (1898–1902); William & Mary is 69 on screen, 73 only
+  with its &amp;). No duplicate titles or descriptions, and no description under 70 characters.
 - State descriptions name their state: a teaser that does not contain the state's name (3,971 did: "A minor chiefship of
   southern Kathiawar …", four pairs identical) is prefixed "Name (years): " with a leading A/An/The lowered.
 - Entry pages never end in a dead end: every description is linked in a first pass ($DESCH, $LINKIN), and an entry with
