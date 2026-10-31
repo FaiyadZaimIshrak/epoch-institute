@@ -1102,23 +1102,44 @@ credited to no state).
   sheets (inv/sheets, inv/pic-picks.tsv): the period object or depiction where one reads at a glance (the Antikythera
   mechanism, Röntgen's X-ray of his wife's hand, Dalton's symbols, Faraday's induction ring, Pasteur's flask, the first
   web server), a reconstruction where it does not (the trireme Olympias), three with none.
-- inventions.js (?v= on the page): the tree is HTML cards (160 x 52, a 40 px picture) on one transformed layer with
-  the SVG curves beneath; time runs left to right in bands (BANDS) whose width follows how many cards one lane holds
-  there, so 3.3 million years of prehistory and the crowded 19th century both read; one row per lane, a card placed
-  by its year inside its band, links between non-adjacent cards of one lane arched above the row. Hover or a first
-  tap lights a card's whole lineage (ancestors and descendants) and dims the rest; the panel (a bottom sheet at 700 px
-  and below) gives the picture, date, place, credited, also, Note, Built on / Led to and the entry; "Trace the road
-  to" lights only the ancestors and fits them, following a long road from its end; a search field finds and traces.
-  Zoom 0.1 to 1.6 (KMIN, KMAX): below 0.55 the dates and below 0.38 the labels give way (inv-far, inv-tiny), leaving
-  the pictures as a map of the whole tree. Drag or the arrow keys move; Ctrl + wheel, pinch and the + and - keys zoom;
-  the plain wheel scrolls the tree only after a click on it (the mouse leaving gives the wheel back to the page). On a
-  touch screen one finger drags the tree sideways and vertical swipes scroll the page (touch-action pan-y: the stage
-  is most of a phone's screen, and with none it trapped the page), two fingers zoom and move it in any direction, and
-  the first touch shows a hint saying so. On a phone the tree starts below the first screen, at prehistory. Era
-  buttons, lane switches, a civilisation filter; views Tree, By civilisation ("What the Abbasids gave the world") and
-  List. The address keeps ?focus=&view=&civ=&hide=. Kids mode starts without the weapons lane (a switch brings it
-  back). window.epochInventions for tests (scratchpad inv/feature-test.js: every card, no overlaps, the lineage of 25
-  nodes against the data, lanes, filter and address, the views, search; touch pan and pinch in Edge; WebKit).
+- inventions.js (?v= on the page; redesigned 31 Oct 2026, the user: "better formatted and better looking"): the
+  eleven lanes stand in five families, one colour each (.inv-f-*: making = tools, building, energy, --cat-2 magenta;
+  living = farming, medicine, --cat-3 green; moving = transport, weapons, --cat-0 blue; knowing = writing, science,
+  chemistry, --cat-1 gold; connecting = communication, --cat-4 violet, a fifth slot added for it), in that order so
+  neighbouring lanes differ most (checked with the dataviz validator, adjacent pairs, on #f4efe4, #0b0c10 and the
+  Kids surfaces; the light gold and magenta sit under 3:1, so every lane is also named and has its icon, .inv-ic-*,
+  masked SVGs). Every card, curve, chip, tile, list tag and strip dot carries its lane's colour.
+  Wide screens: one toolbar row (view switch, "Trace the road to…" search, civilisation filter, a Lanes menu of
+  checkboxes that keeps itself on screen, zoom − + ⟳); an era strip above the tree draws all of history at the tree's
+  own scale, the five ages (AGES) as buttons that fit the age, a dot for every invention and a window on the part in
+  view (drag it, or press anywhere on the strip to go there); the tree is HTML cards (200 x 58, a 48 px picture, a
+  two-line name, the date, the lane's colour at the left) on one transformed layer with the SVG curves beneath, and a
+  sticky column of lane names with icons and counts at the left that the cards pass under (176 px; its icons alone,
+  46 px, below zoom 0.45: labW(k) knows both, so a fit leaves room for the column it will have). Time runs left to
+  right in bands (BANDS) whose width follows how many cards one lane holds there, so 3.3 million years of prehistory
+  and the crowded 19th century both read; a card sits at its year inside its band, links between non-adjacent cards
+  of one lane arch above the row. The tree opens with every lane in view (the stage is the screen's height less the
+  bar and strip; zoom never below 0.72 there). Hover or a first tap lights a card's whole lineage (ancestors and
+  descendants) and dims the rest; the panel gives the picture, the lane tag, date, place, credited, also, Note, Built
+  on / Led to and the entry; "Trace the road to" lights only the ancestors and fits them, following a long road from
+  its end. Zoom 0.12 to 1.6 (KMIN, KMAX): below 0.55 the dates and below 0.38 the names give way (inv-far,
+  inv-tiny), leaving the pictures as a map. Drag or the arrow keys move; Ctrl + wheel, pinch and the + and - keys
+  zoom; the plain wheel scrolls the tree only after a click on it. On a touch screen one finger drags sideways and
+  vertical swipes scroll the page (touch-action pan-y), two fingers zoom and move it.
+  Phones (700 px and below, matchMedia, switching live): no stage, a vertical timeline instead: every invention in
+  date order under the five ages and period headings (periodOf: deep-time stretches, millennia, centuries, half
+  centuries after 1800), each a card with its picture, name, date, place and lane tag on a line of dots; a sticky bar
+  (top 64 px) of the ages (they scroll) and lane switches; a tap opens the bottom sheet (z-index 950, above the to-top
+  button) and dims all but the card's lineage, "Only its line" keeps just that line; ?focus= jumps to the card
+  ('instant': the site's CSS smooth scrolling would glide through 10,000 px) and again once the fonts are in.
+  By civilisation shows picture tiles; the list has lane tags, a header that sticks under the site's header, and on
+  phones each invention as a block of its own. The address keeps ?focus=&view=&civ=&hide=. Kids mode starts without
+  the weapons lane. window.epochInventions (nodes, cats, civs, state, layout, select, setView, fitYears, ages,
+  families, fam, strip) for tests: scratchpad inv2/feature-test2.js (31 checks: every card, no overlaps, curves and
+  colours by family, lane order and column, the era strip's fit and drag, the lineage of 25 nodes against the data,
+  the lanes menu and the address, filter and views, focus and search; the phone timeline's order, ages, lane switches,
+  sheet, lineage dimming, "Only its line" and ?focus=; WebKit). The layout audit's overlaps on a panned tree are cards
+  passing under the opaque lane column and panel, by design.
 - Wiring: Explore menu ("Inventions Tree: what led to what, and who made it first"), phone menu and footer; Research
   Hub ("Through time"); search (SEARCH_PAGES); sitemap; llms.txt; poster page-inventions.jpg (make-posters.js page
   "inventions"); deploy.sh PAGES and DATA (data/inventions.json); split-css HAND; .htaccess (extensionless page).

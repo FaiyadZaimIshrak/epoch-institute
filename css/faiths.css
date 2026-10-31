@@ -1058,8 +1058,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .fm-more a { color: var(--gold); text-decoration: none; }
 .fm-more a:hover { text-decoration: underline; }
 .ty { max-width: 760px; min-height: 220px; }
-:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; }
-[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; }
+:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; --cat-4: #8a7be8; }
+[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; --cat-4: #6250d6; }
 .fm-loading { font-family: var(--font-ui); font-size: 14px; color: var(--muted); padding: 24px; border: 1px dashed var(--border); border-radius: var(--border-radius-lg); text-align: center; }
 .fm { display: grid; gap: 12px; }
 .fm-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }

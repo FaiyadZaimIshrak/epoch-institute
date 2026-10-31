@@ -1082,8 +1082,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 :root[data-kids="1"] { --fm-a: #ffc247; --fm-b: #7fd6ff; }
 :root[data-kids="1"][data-theme="light"] { --fm-a: #ea580c; --fm-b: #0e7490; }
 .ty { max-width: 760px; min-height: 220px; }
-:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; }
-[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; }
+:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; --cat-4: #8a7be8; }
+[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; --cat-4: #6250d6; }
 .rc-s0 { background: var(--cat-0); }
 .rc-s1 { background: var(--cat-1); }
 .rc-s2 { background: var(--cat-2); }

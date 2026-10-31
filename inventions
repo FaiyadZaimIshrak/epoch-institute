@@ -46,15 +46,16 @@ From stone tools to the World Wide Web: when and where each of 218 inventions an
 </header>
 
 <section class="atl-app inv-app" aria-label="Tree of inventions and discoveries">
-  <div class="atl-tools">
+  <div class="inv-bar">
     <div class="atl-viewtog" role="group" aria-label="View">
       <button type="button" data-view="tree" aria-pressed="true">Tree</button><button type="button" data-view="civ" aria-pressed="false">By civilisation</button><button type="button" data-view="list" aria-pressed="false">List</button>
     </div>
-    <label class="inv-civ-l"><span class="sr-only">Civilisation</span><select id="inv-civ"><option value="">Every civilisation</option></select></label>
     <div class="atl-search inv-search"><input type="search" id="inv-q" placeholder="Trace the road to…" autocomplete="off" aria-label="Trace the road to an invention or discovery" aria-controls="inv-sugg"><ul id="inv-sugg" class="atl-sugg" role="listbox" hidden></ul></div>
+    <label class="inv-civ-pick"><span class="sr-only">Civilisation</span><select id="inv-civ"><option value="">Every civilisation</option></select></label>
+    <details class="inv-lanes-menu"><summary>Lanes <span id="inv-cat-n"></span></summary><div class="inv-lanes-pop" id="inv-cats" role="group" aria-label="Lanes shown"></div></details>
+    <div class="inv-zoom" role="group" aria-label="Zoom"><button type="button" id="inv-zout" aria-label="Zoom out">&minus;</button><button type="button" id="inv-zin" aria-label="Zoom in">+</button><button type="button" id="inv-fit" aria-label="Show all time">&#8634;</button></div>
   </div>
-  <details class="tl-regions-wrap inv-cats-wrap"><summary>Categories <span id="inv-cat-n"></span></summary><div class="tl-regions" id="inv-cats" role="group" aria-label="Categories shown"></div></details>
-  <div class="tl-eras inv-eras" id="inv-eras" role="group" aria-label="Go to an age"></div>
+  <div class="inv-strip" id="inv-strip" role="group" aria-label="All of history at the tree's scale: pick an age, or drag the window to move the tree"></div>
   <div class="inv-box" id="inv-box">
     <div class="inv-stage" id="inv-stage" tabindex="0" role="application" aria-label="Tree of inventions and discoveries, in lanes by category with time running left to right. Drag or use the arrow keys to move, plus and minus to zoom (on a touch screen, drag sideways to move through time and use two fingers to zoom); the list view and the list below the tree give the same inventions as text.">
       <div class="inv-world" id="inv-world"></div>
@@ -62,9 +63,12 @@ From stone tools to the World Wide Web: when and where each of 218 inventions an
       <div class="inv-lanes" id="inv-lanes" aria-hidden="true"></div>
       <p class="inv-hint" id="inv-hint" hidden>Click the tree to scroll it, or hold Ctrl and scroll to zoom</p>
     </div>
-    <div class="atl-zoom"><button type="button" id="inv-zin" aria-label="Zoom in">+</button><button type="button" id="inv-zout" aria-label="Zoom out">&minus;</button><button type="button" id="inv-fit" aria-label="Show all time">&#8634;</button></div>
     <aside class="inv-panel" id="inv-panel" aria-live="polite" hidden></aside>
     <noscript><p class="atl-none">The tree needs JavaScript. Every invention and discovery is listed below, by category.</p></noscript>
+  </div>
+  <div class="inv-vwrap" id="inv-vwrap" hidden>
+    <div class="inv-vbar" id="inv-vbar"><div class="inv-vages" id="inv-vages" role="group" aria-label="Go to an age"></div><div class="inv-vlanes" id="inv-vlanes" role="group" aria-label="Lanes shown"></div></div>
+    <div class="inv-vlist" id="inv-vlist"></div>
   </div>
   <div class="inv-civview" id="inv-civview" hidden></div>
   <div class="inv-listview" id="inv-listview" hidden></div>
@@ -73,7 +77,7 @@ From stone tools to the World Wide Web: when and where each of 218 inventions an
 
 <section class="atl-about inv-about">
   <h2 class="ref-sec-title">How to read the tree</h2>
-  <p>Each card is an invention or discovery, placed at its first known date, the earliest firm evidence historians accept, which is often earlier than the version that spread. A line joins it to what it built on. Time runs left to right, but not evenly: each age gets room by how many inventions it holds, so a few centuries of the industrial age are as wide as tens of thousands of years of prehistory. &ldquo;Credited to&rdquo; names the society or state where it first appeared and the people the sources name; many inventions arose more than once, and where the record shows that, the card says so. Dates and credits come from the encyclopedia entry of each invention and the works it cites, and they are debated more often than textbooks suggest: the card says so where they are.</p>
+  <p>Each card is an invention or discovery, placed at its first known date, the earliest firm evidence historians accept, which is often earlier than the version that spread. A line joins it to what it built on. The eleven lanes stand in five families, each with its own colour: making (tools, building, energy), living (farming, medicine), moving (transport, weapons), knowing (writing, science, chemistry) and connecting (communication). Time runs left to right, but not evenly: each age gets room by how many inventions it holds, so a few centuries of the industrial age are as wide as tens of thousands of years of prehistory; the strip above the tree shows all of history at that scale, with a window on the part in view. On a phone the tree becomes a timeline from top to bottom, and a tap on an invention lights the line it belongs to. &ldquo;Credited to&rdquo; names the society or state where it first appeared and the people the sources name; many inventions arose more than once, and where the record shows that, the card says so. Dates and credits come from the encyclopedia entry of each invention and the works it cites, and they are debated more often than textbooks suggest: the card says so where they are.</p>
   <h2 class="ref-sec-title">Every invention and discovery, by category</h2>
 <!-- build:inv-list -->
 <h3 class="inv-cat">Tools and materials</h3><ul class="inv-list"><li><a href="/encyclopedia/stone-tools">Stone tools</a> <span>3.3 million years ago · Lomekwi, near Lake Turkana, Kenya</span></li><li><a href="/encyclopedia/control-of-fire">Control of fire</a> <span>c. 1 million years ago · Wonderwerk Cave, South Africa</span></li><li><a href="/encyclopedia/pottery">Pottery</a> <span>c. 18,000 BCE · Xianren Cave, Jiangxi, China</span></li><li><a href="/encyclopedia/cotton">Cotton</a> <span>c. 6000 BCE · Nanchoc, Peru</span></li><li><a href="/encyclopedia/copper-smelting">Copper smelting</a> <span>c. 5000 BCE · Belovode, Serbia</span></li><li><a href="/encyclopedia/bronze">Bronze</a> <span>c. 4650 BCE · Pločnik, Serbia (Vinča culture)</span></li><li><a href="/encyclopedia/potters-wheel">Potter's wheel</a> <span>c. 4500 BCE · Western Ukraine (Cucuteni–Trypillia culture)</span></li><li><a href="/encyclopedia/sericulture">Silk</a> <span>c. 3500 BCE · Nancun, Hebei, China</span></li><li><a href="/encyclopedia/glassmaking">Glassmaking</a> <span>c. 2500 BCE · Mesopotamia, Syria or Egypt</span></li><li><a href="/encyclopedia/iron-smelting">Iron smelting</a> <span>c. 2500 BCE · Anatolia (Turkey)</span></li><li><a href="/encyclopedia/rubber">Rubber</a> <span>c. 1600 BCE · Mesoamerica</span></li><li><a href="/encyclopedia/cast-iron">Cast iron</a> <span>8th century BCE · Jiangsu, China</span></li><li><a href="/encyclopedia/crucible-steel">Crucible steel</a> <span>c. 300 BCE · Southern India and Sri Lanka</span></li><li><a href="/encyclopedia/papermaking">Papermaking</a> <span>179–141 BCE · Fangmatan, Gansu, China</span></li><li><a href="/encyclopedia/glassblowing">Glassblowing</a> <span>1st century BCE · The Levant (Lebanon and Israel)</span></li><li><a href="/encyclopedia/porcelain">Porcelain</a> <span>25–220 CE · China</span></li><li><a href="/encyclopedia/spinning-wheel">Spinning wheel</a> <span>2nd century CE · China</span></li><li><a href="/encyclopedia/cotton-gin">Cotton gin</a> <span>5th century · Ajanta Caves, India</span></li><li><a href="/encyclopedia/eyeglasses">Eyeglasses</a> <span>c. 1290 · Pisa or Florence, Italy</span></li><li><a href="/encyclopedia/mechanical-clock">Mechanical clock</a> <span>by 1300 · Western Europe</span></li><li><a href="/encyclopedia/spinning-jenny">Spinning jenny</a> <span>c. 1764 · Stanhill, Lancashire, England</span></li><li><a href="/encyclopedia/jacquard-machine">Jacquard machine</a> <span>1804 · France</span></li><li><a href="/encyclopedia/bessemer-process">Bessemer process</a> <span>1856 · England</span></li><li><a href="/encyclopedia/bakelite">Plastics</a> <span>1907 · Yonkers, New York</span></li></ul>
@@ -94,7 +98,7 @@ From stone tools to the World Wide Web: when and where each of 218 inventions an
 
 <script src="/shared-nav.js"></script>
 <script>var INV_SRC = '/data/inventions.json?v=8f6c0de6ee';</script>
-<script src="/inventions.js?v=3"></script>
+<script src="/inventions.js?v=4"></script>
 <script>initNav('inventions');</script>
 </body>
 </html>

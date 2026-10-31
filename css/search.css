@@ -1072,8 +1072,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 :root[data-kids="1"] { --fm-a: #ffc247; --fm-b: #7fd6ff; }
 :root[data-kids="1"][data-theme="light"] { --fm-a: #ea580c; --fm-b: #0e7490; }
 .ty { max-width: 760px; min-height: 220px; }
-:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; }
-[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; }
+:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; --cat-4: #8a7be8; }
+[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; --cat-4: #6250d6; }
 @keyframes fm-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes fm-show { from { opacity: 0; } to { opacity: 1; } }
 .gm-fc-img img, .gm-ocard img, .gm-pz-strip img, .gm-wt img, .path-thumbs img, .path-step img, .enc-thumb, .enc-seealso img,

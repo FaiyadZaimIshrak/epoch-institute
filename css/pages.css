@@ -1663,7 +1663,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .inv-k { display: block; margin-bottom: 2px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .inv-p-r, .inv-entry-rel { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
 .inv-p-r .inv-k, .inv-entry-rel .inv-k { flex-basis: 100%; }
-.inv-chip { display: inline-flex; flex-direction: column; align-items: flex-start; padding: 5px 10px; min-height: 36px; text-align: left; text-decoration: none; font: inherit; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
+.inv-chip { display: inline-flex; flex-direction: column; align-items: flex-start; min-height: 36px; padding: 5px 10px; text-align: left; text-decoration: none; font: inherit; font-family: var(--font-ui); font-size: 13px; font-weight: 600; line-height: 1.25; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--lc, var(--border)); border-radius: 6px; cursor: pointer; }
 .inv-chip span { font-size: 11px; font-weight: 400; color: var(--muted); }
 .inv-chip:hover { border-color: var(--gold); }
 .inv-cat { margin: 18px 0 8px; font-family: var(--font-display); font-size: 20px; color: var(--gold-light); }
@@ -2326,8 +2326,8 @@ p.soc-term { font-size: 15px; line-height: 1.4; }
 .ty-opts { grid-template-columns: minmax(0, 1fr); }
 .ty-card { padding: 14px 14px 16px; }
 }
-:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; }
-[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; }
+:root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; --cat-4: #8a7be8; }
+[data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; --cat-4: #6250d6; }
 .fc-group { margin: 28px 0 8px; }
 .fc-gnote { font-family: var(--font-text); font-size: 17px; color: var(--muted); margin: -4px 0 12px; }
 .fc-decks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
