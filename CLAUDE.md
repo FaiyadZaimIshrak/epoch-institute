@@ -890,6 +890,12 @@ Spanish labels; repeat signs 𝄆 𝄇 are always dropped; noetc also drops "и 
   or re-uploads of albums, chosen by looking at each (scripts/songs/yt-search.js lists a search's results).
   node scripts/songs/check-videos.js checks each through YouTube's oEmbed (exists, embeddable) into
   videos-checked.json: RE-RUN IT before a release; make-data.js STOPS on a video that failed or was not checked.
+  A title alone does not show what a video is: node scripts/songs/audit-videos.js reads each watch page (category,
+  length, description) into videos-audit.tsv and flags what may not be a performance. 2 Nov 2026 (the user: "some
+  links are news links and explanations") eleven picks were talks, news clips, a singing lesson or promotions
+  (CNEWS's Marseillaise, DD News, TV UNAM on a book launch, "The Story Behind the Happy Birthday Song", France
+  Musique's Culture prime, "Recitation Methods Explained", "how to sing" Sōran Bushi, All Blacks promotions):
+  replaced by performances, Cantares mexicanos left without one. Only a performance of the song, never a video about it.
   The page shows a play button; songs.js loads youtube-nocookie.com's player only when it is pressed, plus a link out.
 - Build: build-pages.ps1 runs scripts/songs/make-data.js before the entry pages (it STOPS on a missing key, an unknown
   type or region, public-domain words missing without a stated gap, copyright words present, a bad video row) and
