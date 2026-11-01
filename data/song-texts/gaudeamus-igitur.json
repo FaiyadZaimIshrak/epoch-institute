@@ -55,7 +55,9 @@
    "url": "https://la.wikisource.org/wiki/Gaudeamus_Igitur",
    "licence": "",
    "source": "la",
-   "own": false
+   "page": "Gaudeamus Igitur",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -113,6 +115,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "lines 1.3 and 5.3: ':,:' is the original's repeat sign (the line is sung twice) and is kept as it stands.",

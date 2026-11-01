@@ -26,7 +26,9 @@
    "url": "https://tr.wikisource.org/wiki/%C3%9Csk%C3%BCdar%E2%80%99a_Gider_%C4%B0ken",
    "licence": "",
    "source": "tr",
-   "own": false
+   "page": "Üsküdar’a Gider İken",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -55,6 +57,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.1: 'gider iken aldı da bir yağmur' gives no subject for 'going'; 'we' is supplied from the sense (it can equally be 'I'); 'aldı' is literally 'took', i.e. the rain caught them. The particle 'da', put in to fill the tune (1.1, 2.2, 3.2), is not translated.",

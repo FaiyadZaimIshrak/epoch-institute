@@ -32,7 +32,9 @@
    "url": "https://ja.wikisource.org/wiki/%E8%8D%92%E5%9F%8E%E3%81%AE%E6%9C%88",
    "licence": "{{PD-Japan-auto-expired|deathyear=1952}}",
    "source": "ja",
-   "own": false
+   "page": "荒城の月",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -97,6 +99,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "modified Hepburn",
  "notes": [
   "Romanization: modified Hepburn of the words as they are read and sung; the historical kana spelling of the original is not transliterated letter by letter (沿ひし soishi, 変はらぬ kawaranu, 歌ふ utau, 映さむ utsusan, いづこ izuko). Kanji readings are the ones the song is sung with (高楼 kōrō, 陣営 jin'ei, 夜半 yowa, 栄枯 eiko, 天上 tenjō, 誰 ta).",

@@ -38,7 +38,9 @@
    "url": "https://he.wikisource.org/wiki/%D7%AA%D7%94%D7%9C%D7%99%D7%9D_%D7%9B%D7%92",
    "licence": "",
    "source": "he",
-   "own": false
+   "page": "תהלים כג",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -65,7 +67,9 @@
    "url": "https://en.wikisource.org/wiki/Bible_(King_James)%2FPsalms",
    "licence": "",
    "source": "en",
-   "own": false
+   "page": "Bible (King James)/Psalms",
+   "own": false,
+   "also": []
   },
   "rom": {
    "stanzas": [
@@ -106,6 +110,9 @@
  },
  "aligned": false,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "SBL general-purpose",
  "notes": [
   "SHAPE: orig has 6 stanzas of 2, 2, 2, 5, 4, 3 lines (by verse, split at the accents); the KJV 'en' in texts/psalm-23.json has 6 stanzas of ONE line each, and its first verse lacks the superscription 'A Psalm of David', which orig has as line 1.1. The KJV must be split to orig's lines (or orig joined to one line per verse) before the two can stand side by side.",

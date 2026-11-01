@@ -15,7 +15,7 @@ for (const f of fs.readdirSync(path.join(D, 'imported'))) {
   const slug = f.replace(/\.json$/, ''), t = JSON.parse(fs.readFileSync(path.join(D, 'imported', f), 'utf8'));
   const tr = fs.existsSync(path.join(D, 'translations', f)) ? JSON.parse(fs.readFileSync(path.join(D, 'translations', f), 'utf8')) : null;
   const P = {};
-  for (const [k, p] of Object.entries(t.parts)) P[k] = { stanzas: p.stanzas, credit: p.credit, url: p.url, licence: (p.licences || []).join(' '), source: p.site, own: false };
+  for (const [k, p] of Object.entries(t.parts)) P[k] = { stanzas: p.stanzas, credit: p.credit, url: p.url, licence: (p.licences || []).join(' '), source: p.site, page: p.page, own: false, also: p.also || [] };
   if (tr) {
     for (const k of ['en', 'rom']) if (tr[k]) {
       if (P[k]) { problems.push(slug + ': both an imported and an Institute ' + k); continue; }
@@ -25,7 +25,7 @@ for (const f of fs.readdirSync(path.join(D, 'imported'))) {
   }
   for (const [k, st, ln, line] of FIX[slug] || []) { if (!P[k] || !P[k].stanzas[st - 1] || P[k].stanzas[st - 1][ln - 1] === undefined) throw new Error(slug + ' fix ' + k + ' ' + st + '.' + ln); P[k].stanzas[st - 1][ln - 1] = line; }
   if (REGROUP[slug]) for (const k of Object.keys(P)) if (P[k].own || k === 'orig') P[k].stanzas = regroup(P[k].stanzas, REGROUP[slug]);
-  const out = { slug, parts: P, aligned: !!(P.orig && P.en && shape(P.orig.stanzas) === shape(P.en.stanzas)), tentative: TENTATIVE.includes(slug), scheme: tr && tr.scheme || null, notes: tr && tr.notes || [] };
+  const out = { slug, parts: P, aligned: !!(P.orig && P.en && shape(P.orig.stanzas) === shape(P.en.stanzas)), tentative: TENTATIVE.includes(slug), heads: tr && tr.heads || null, label: tr && tr.label || null, lang: tr && tr.lang || null, scheme: tr && tr.scheme || null, notes: tr && tr.notes || [] };
   fs.writeFileSync(path.join(D, '..', '..', 'data', 'song-texts', f), JSON.stringify(out, null, 1)); n++;
 }
 console.log(n, 'merged;', problems.length, 'problems'); problems.forEach(p => console.log('  ' + p));

@@ -44,7 +44,9 @@
    "url": "https://en.wikisource.org/wiki/Burns'_Popular_Songs%2FAuld_Lang_Syne",
    "licence": "",
    "source": "en",
-   "own": false
+   "page": "Burns' Popular Songs/Auld Lang Syne",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -91,6 +93,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "'auld lang syne' is literally 'old long since': the old days, times long past. It is rendered 'old times long ago' throughout, and 'days o' lang syne' (1.4) as 'the days of long ago'.",

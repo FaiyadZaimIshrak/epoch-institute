@@ -99,7 +99,9 @@
    "url": "https://la.wikisource.org/wiki/The_seven_great_hymns_of_the_mediaeval_church%2FDies_Ir%C3%A6%2FTommaso",
    "licence": "",
    "source": "la",
-   "own": false
+   "page": "The seven great hymns of the mediaeval church/Dies Iræ/Tommaso",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -199,11 +201,16 @@
    "url": "https://en.wikisource.org/wiki/The_seven_great_hymns_of_the_mediaeval_church%2FDies_Ir%C3%A6%2FIrons",
    "licence": "",
    "source": "en",
-   "own": false
+   "page": "The seven great hymns of the mediaeval church/Dies Iræ/Irons",
+   "own": false,
+   "also": []
   }
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": []
 }

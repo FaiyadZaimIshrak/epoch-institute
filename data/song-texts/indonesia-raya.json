@@ -70,7 +70,9 @@
    "url": "https://id.wikisource.org/wiki/Indonesia_Raya",
    "licence": "",
    "source": "id",
-   "own": false
+   "page": "Indonesia Raya",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -143,6 +145,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "The 1928 spelling: oe = u, dj = j, tj = c, j = y, so 'Raja' is 'Raya' (great), not 'raja' (king); 'rajat' is 'rakyat' (the people).",

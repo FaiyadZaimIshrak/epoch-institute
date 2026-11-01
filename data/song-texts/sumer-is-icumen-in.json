@@ -30,7 +30,9 @@
    "url": "https://en.wikisource.org/wiki/Sumer_is_icumen_in_(MS_Harley_978)",
    "licence": "{{PD-old}}",
    "source": "en",
-   "own": false
+   "page": "Sumer is icumen in (MS Harley 978)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -63,6 +65,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.1: 'icumen in' is 'come in', arrived; 'Svmer' is 'Sumer' with the manuscript's V for U.",

@@ -14,7 +14,9 @@
    "url": "https://en.wikipedia.org/wiki/Seikilos_epitaph",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Seikilos epitaph",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -43,6 +45,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "classical transliteration",
  "notes": [
   "line 1.1: 'phainou' is 'appear, show yourself, shine': be seen, be bright while you live.",

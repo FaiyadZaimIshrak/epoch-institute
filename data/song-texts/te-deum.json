@@ -65,7 +65,9 @@
    "url": "https://la.wikisource.org/wiki/Te_Deum",
    "licence": "",
    "source": "la",
-   "own": false
+   "page": "Te Deum",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -133,6 +135,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "General: the accents in the Latin (laudámus, Dóminum) only mark stress for singing; they do not change the sense.",

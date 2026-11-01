@@ -21,7 +21,9 @@
    "url": "https://pl.wikisource.org/wiki/Bogurodzica_(pie%C5%9B%C5%84)",
    "licence": "{{PD-old-tekst}}",
    "source": "pl",
-   "own": false
+   "page": "Bogurodzica (pieśń)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -45,6 +47,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "IMPORT: the '¦' in line 2.3 ('modlitwo¦ yo¦sz') stands for the manuscript's nasal-vowel letter, lost in the import (read 'modlitwę, jąż'). Line 2.6 'pzbith' is missing the manuscript's abbreviation mark (read 'przebyt'), and 'ky’eleyson' has an apostrophe for an abbreviation sign. Check orig against the manuscript image or a diplomatic edition before publishing.",

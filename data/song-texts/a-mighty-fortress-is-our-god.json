@@ -52,7 +52,9 @@
    "url": "https://de.wikisource.org/wiki/Ein_feste_Burg_ist_unser_Gott",
    "licence": "",
    "source": "de",
-   "own": false
+   "page": "Ein feste Burg ist unser Gott",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -107,6 +109,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.1: 'Burg' is a castle or stronghold.",

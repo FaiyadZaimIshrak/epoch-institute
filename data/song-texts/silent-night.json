@@ -48,7 +48,9 @@
    "url": "https://de.wikisource.org/wiki/Weyhnachts-Lied",
    "licence": "",
    "source": "de",
-   "own": false
+   "page": "Weyhnachts-Lied",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -98,11 +100,16 @@
    "url": "https://en.wikisource.org/wiki/The_Army_and_Navy_Hymnal%2FHymns%2FSilent_Night%2C_Holy_Night",
    "licence": "",
    "source": "en",
-   "own": false
+   "page": "The Army and Navy Hymnal/Hymns/Silent Night, Holy Night",
+   "own": false,
+   "also": []
   }
  },
  "aligned": false,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": []
 }

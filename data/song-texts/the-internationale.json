@@ -76,7 +76,9 @@
    "url": "https://fr.wikisource.org/wiki/L%E2%80%99Internationale",
    "licence": "",
    "source": "fr",
-   "own": false
+   "page": "L’Internationale",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -153,11 +155,16 @@
    "url": "https://en.wikisource.org/wiki/The_Internationale_(Kerr)",
    "licence": "{{PD/US|1944}}",
    "source": "en",
-   "own": false
+   "page": "The Internationale (Kerr)",
+   "own": false,
+   "also": []
   }
  },
  "aligned": false,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": []
 }

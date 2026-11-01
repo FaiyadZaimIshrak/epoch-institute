@@ -38,7 +38,9 @@
    "url": "https://en.wikipedia.org/wiki/P%C5%8Dkarekare_Ana",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Pōkarekare Ana",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -79,6 +81,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.1: 'Pōkarekare' is to be agitated, rough, choppy (of water); used of the troubled heart as well.",

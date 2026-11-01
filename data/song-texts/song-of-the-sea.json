@@ -28,7 +28,9 @@
    "url": "https://he.wikisource.org/wiki/%D7%A9%D7%9E%D7%95%D7%AA_%D7%98%D7%95",
    "licence": "",
    "source": "he",
-   "own": false
+   "page": "שמות טו",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -91,7 +93,9 @@
    "url": "https://en.wikisource.org/wiki/Bible_(King_James)%2FExodus%2FChapter_15",
    "licence": "",
    "source": "en",
-   "own": false
+   "page": "Bible (King James)/Exodus/Chapter 15",
+   "own": false,
+   "also": []
   },
   "rom": {
    "stanzas": [
@@ -122,6 +126,9 @@
  },
  "aligned": false,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "SBL general-purpose",
  "notes": [
   "SHAPE: orig is ONE stanza of 18 lines (one per verse, Exodus 15:1-18); the KJV 'en' in texts/song-of-the-sea.json is 18 stanzas of one line each. Same verses, different nesting: one of the two needs reshaping before they are paired.",

@@ -25,7 +25,9 @@
    "url": "https://he.wikisource.org/wiki/%D7%90%D7%93%D7%95%D7%9F_%D7%A2%D7%95%D7%9C%D7%9D",
    "licence": "",
    "source": "he",
-   "own": false
+   "page": "אדון עולם",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -76,6 +78,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "SBL general-purpose",
  "notes": [
   "The Wikisource text carries editorial source references in parentheses inside the lines (Isaiah 45:7 and the Yotser Or blessing, 1 Kings 9:11, Tractate Soferim 14:4, Ecclesiastes 4:8, Psalm 31:6, Psalm 118:6). They are not part of the hymn and are left out of en and rom; the editor may want them stripped from orig as well, or shown as notes.",

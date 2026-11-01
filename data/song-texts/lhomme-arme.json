@@ -15,7 +15,9 @@
    "url": "https://en.wikipedia.org/wiki/L'homme_arm%C3%A9",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "L'homme armé",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -33,6 +35,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "lines 1 and 5: 'doubter' is Middle French for 'to fear, to dread' (modern 'redouter'), not modern 'douter', to doubt.",

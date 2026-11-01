@@ -12,7 +12,9 @@
    "url": "https://sa.wikisource.org/wiki/%E0%A4%8B%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%83_%E0%A4%B8%E0%A5%82%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%82_%E0%A5%A9.%E0%A5%AC%E0%A5%A8",
    "licence": "",
    "source": "sa",
-   "own": false
+   "page": "ऋग्वेदः सूक्तं ३.६२",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -37,6 +39,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "IAST",
  "notes": [
   "line 1.1: dhīmahi is disputed. Grammatically it is most often taken from dhā- 'to place, receive' ('may we receive / take to ourselves'); the traditional reading takes it from dhī- 'to think' ('may we meditate on'). Either can be printed; the editor may prefer 'may we meditate on' as the sense most readers know.",

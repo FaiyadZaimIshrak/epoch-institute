@@ -24,7 +24,9 @@
    "url": "https://zh.wikisource.org/wiki/%E8%A9%A9%E7%B6%93%2F%E9%97%9C%E9%9B%8E",
    "licence": "",
    "source": "zh",
-   "own": false
+   "page": "詩經/關雎",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -73,6 +75,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "Hanyu Pinyin (tone marks, modern readings)",
  "notes": [
   "EDITOR FIRST: the imported orig carries Wikisource's inline variant notes in three lines: 1.2 '一作「仇」', 2.3 '一作「弗」', 3.3 '一作「薅」' ('one version has ...'). They are not part of the poem; en and rom leave them out. Strip them from orig (or show them as notes) before publishing.",

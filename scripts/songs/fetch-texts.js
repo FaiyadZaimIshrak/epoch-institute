@@ -66,7 +66,7 @@ function pick(st, sel) {
   if (fl.includes('firstline')) out = out.map(s => [s[0]]);   // a block holds the original and its translation side by side
   if (fl.includes('alt0')) out = out.filter((s, i) => i % 2 === 0);   // original and translation alternate block by block
   if (fl.includes('alt1')) out = out.filter((s, i) => i % 2 === 1);
-  if (fl.includes('nolabels')) out = out.map(s => s.filter(l => !/^((\d+\s+)?verse|chorus|chor|refrain|hui|\d+|[IVX]+)[,:.]?$/i.test(l.trim()))).filter(s => s.length);
+  if (fl.includes('nolabels')) out = out.map(s => s.filter(l => !/^((\d+\s+)?verse|chorus|chor|refrain|estribillo|coro|hui|\d+|[IVX]+)[,:.]?$/i.test(l.trim()))).filter(s => s.length);
   if (fl.includes('nonum')) out = out.map(s => [s[0].replace(/^(\d+|[一二三四五六七八九十]+)[.、．]?\s*/, ''), ...s.slice(1)]);
   if (fl.includes('novariants')) out = out.map(s => s.map(l => l.replace(/[，,]?\s*一作「[^」]*」/g, '')));   // Wikisource's "one version has …" notes
   if (fl.includes('noruby')) out = out.map(s => s.map(l => l.replace(/（[぀-ヿー]+）/g, '')));   // kana readings in brackets after the characters
@@ -104,7 +104,9 @@ const words = (st, n, end) => { const w = st.flat().join(' ').split(' '); return
     console.log([...new Set((p.wikitext.match(/\[\[[^\]|#]+/g) || []).map(x => x.slice(2)).filter(x => !/^(Category|Kategorie|Catégorie|Kategoria|Author|Autor|Auteur|d:|w:|wikipedia:|File|Image|:)/i.test(x)))].join('\n')); return; }
   const peek = arg('peek');
   if (peek) { const [site, ...t] = peek.split(':'); const p = await page(site, t.join(':')); const st = stz(p); console.log(p.title, '|', st.length, 'stanzas |', JSON.stringify(meta(p.wikitext)));
-    st.forEach((s, i) => console.log(String(i + 1).padStart(4), String(s.length).padStart(3) + ' lines:', s[0].slice(0, 50))); return; }
+    // --full: every line with its stanza number (find-lines.js searches them)
+    if (process.argv.includes('--full')) st.forEach((s, i) => s.forEach((l, j) => console.log(String(i + 1).padStart(4) + '.' + (j + 1), l)));
+    else st.forEach((s, i) => console.log(String(i + 1).padStart(4), String(s.length).padStart(3) + ' lines:', s[0].slice(0, 50))); return; }
   const only = arg('only') ? arg('only').split(',') : null;
   const rows = fs.readFileSync(path.join(D, 'sources.tsv'), 'utf8').split(/\r?\n/).filter(l => l && !l.startsWith('#')).map(l => l.split('\t'));
   fs.mkdirSync(OUT, { recursive: true }); const done = {};
@@ -113,10 +115,12 @@ const words = (st, n, end) => { const w = st.flat().join(' ').split(' '); return
     try {
       const p = await page(site, title), m = meta(p.wikitext); let st = pick(stz(p), select);
       // slips of an import fixed by hand, each logged in text-fixes.json ("slug|part": [[old, new], ...]), each matching once
-      for (const [a, b] of (FIX[slug + '|' + part] || [])) { const all = st.flat().join('\n'); if (all.split(a).length !== 2) throw new Error('fix must match once: ' + a); st = st.map(s => s.map(l => l.split(a).join(b))); }
+      for (const [a, b] of (FIX[slug + '|' + part] || [])) { const all = st.flat().join('\n'); if (all.split(a).length !== 2) throw new Error('fix must match once: ' + a); st = st.map(s => s.flatMap(l => l.split(a).join(b).split('\n'))); }   // a "\n" in a fix splits the line (half-lines a page's columns ran together)
       const o = done[slug] || (done[slug] = { slug, parts: {} });
       const url = p.pg ? `https://www.gutenberg.org/ebooks/${p.pg}` : `https://${host(site)}/wiki/${encodeURIComponent(p.title.replace(/ /g, '_'))}`;
-      o.parts[part] = { site, page: p.title, url, ...m, credit: credit || '', stanzas: st };
+      // a second row for the same part adds its stanzas (verses gathered from several pages: Martí's Versos sencillos)
+      if (o.parts[part]) { const q = o.parts[part]; q.stanzas.push(...st); (q.also || (q.also = [])).push({ site, page: p.title, url }); }
+      else o.parts[part] = { site, page: p.title, url, ...m, credit: credit || '', stanzas: st };
       console.log(slug.padEnd(30), part.padEnd(4), String(st.length).padStart(3), 'st', String(st.flat().length).padStart(4), 'ln |', m.licences.join(' ').slice(0, 40), '|', words(st, 5), '…', words(st, 4, true));
     } catch (e) { console.log(slug.padEnd(30), part.padEnd(4), 'ERROR', e.message.slice(0, 120)); }
   }

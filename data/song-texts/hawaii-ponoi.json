@@ -32,7 +32,9 @@
    "url": "https://en.wikipedia.org/wiki/Hawai%CA%BBi_Pono%CA%BB%C4%AB",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Hawaiʻi Ponoʻī",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -67,6 +69,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.1 (and 3.1, 4.1): 'Hawaiʻi ponoʻī' is 'Hawaiʻi's own', i.e. the true, native people of Hawaiʻi, whom the song addresses.",

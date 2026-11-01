@@ -32,7 +32,9 @@
    "url": "https://ja.wikisource.org/wiki/%E8%9B%8D%E3%81%AE%E5%85%89_(%E5%B0%8F%E5%AD%A6%E5%94%B1%E6%AD%8C%E9%9B%86%E5%88%9D%E7%B7%A8)",
    "licence": "{{PD-old}}",
    "source": "ja",
-   "own": false
+   "page": "蛍の光 (小学唱歌集初編)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -97,6 +99,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "modified Hepburn",
  "notes": [
   "Romanization: modified Hepburn of the words as they are read and sung; the historical kana spelling of the original is not transliterated letter by letter (おもふ omou, うたふ utau, きはみ kiwami, とほく tōku, おきなは Okinawa, いさをしく isaoshiku). If the editor wants the written kana transliterated instead, these are the forms to change: omofu, utafu, kihami, tohoku, Okinaha, isawoshiku.",

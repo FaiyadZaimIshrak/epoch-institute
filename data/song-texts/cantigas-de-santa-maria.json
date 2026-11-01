@@ -40,7 +40,9 @@
    "url": "https://gl.wikisource.org/wiki/Cantiga_X_%3A_Rosa_das_rosas",
    "licence": "",
    "source": "gl",
-   "own": false
+   "page": "Cantiga X : Rosa das rosas",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -83,6 +85,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.2 and throughout: 'Sennor' (later 'senhor') is the form the troubadour lyric uses for the beloved lady, as her feudal lord; it is kept as 'Lord' because the song sets 'Dona' (Lady) and 'Sennor' side by side. 'Lady of ladies, Lady of lords' is a possible reading of the second half.",

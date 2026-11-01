@@ -20,7 +20,9 @@
    "url": "https://en.wikipedia.org/wiki/Tala%CA%BD_al-Badru_%CA%BDAlayna",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Talaʽ al-Badru ʽAlayna",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -61,6 +63,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "ALA-LC",
  "notes": [
   "Source text (line 2.2): 'ﺑﺎلأمر' is typed with Arabic presentation-form characters (U+FE91, U+FE8E) for its first two letters; normalise them to the ordinary letters ب ا before display or search.",

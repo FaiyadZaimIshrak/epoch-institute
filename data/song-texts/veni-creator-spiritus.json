@@ -50,7 +50,9 @@
    "url": "https://la.wikisource.org/wiki/Veni%2C_Creator_Spiritus_(Libreria_Editrice_Vaticana)",
    "licence": "",
    "source": "la",
-   "own": false
+   "page": "Veni, Creator Spiritus (Libreria Editrice Vaticana)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -103,6 +105,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 2.1: 'Paraclete' (Greek parakletos) is the Gospel of John's name for the Spirit: one called to stand by, a helper, advocate or comforter. Kept as a name.",

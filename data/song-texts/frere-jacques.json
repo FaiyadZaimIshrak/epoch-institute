@@ -14,7 +14,9 @@
    "url": "https://fr.wikisource.org/wiki/Fr%C3%A8re_Jacques_(texte)",
    "licence": "",
    "source": "fr",
-   "own": false
+   "page": "Frère Jacques (texte)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -31,6 +33,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1: 'Frère' is a friar or monk, 'Brother' as a title; Jacques is kept as a name (English versions of the round often call him John).",

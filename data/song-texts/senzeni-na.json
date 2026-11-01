@@ -15,7 +15,9 @@
    "url": "https://en.wikipedia.org/wiki/Senzeni_Na%3F",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Senzeni Na?",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -33,6 +35,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.1: 'Senzeni na?' is literally 'What have we done?'.",

@@ -24,7 +24,9 @@
    "url": "https://la.wikisource.org/wiki/Salve_Regina",
    "licence": "",
    "source": "la",
-   "own": false
+   "page": "Salve Regina",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -51,6 +53,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "lines 1 and 3: 'Salve' is a greeting ('hail', literally 'be well'); it opens line 1 and closes line 3.",

@@ -44,7 +44,9 @@
    "url": "https://de.wikisource.org/wiki/Ich_wei%C3%9F_nicht%2C_was_soll_es_bedeuten",
    "licence": "",
    "source": "de",
-   "own": false
+   "page": "Ich weiß nicht, was soll es bedeuten",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -91,6 +93,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.3: 'Mährchen' is the old spelling of 'Märchen': a tale, legend or fairy tale.",

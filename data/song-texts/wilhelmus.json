@@ -158,7 +158,9 @@
    "url": "https://nl.wikisource.org/wiki/Het_Wilhelmus",
    "licence": "",
    "source": "nl",
-   "own": false
+   "page": "Het Wilhelmus",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -319,6 +321,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "The first letters of the fifteen stanzas spell WILLEM VAN NASSOV (William of Nassau); the acrostic is lost in translation and could be mentioned on the page.",

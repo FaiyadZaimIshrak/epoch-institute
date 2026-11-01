@@ -97,7 +97,9 @@
    "url": "https://de.wikisource.org/wiki/Alrerst_lebe_ich_mir_werde",
    "licence": "",
    "source": "de",
-   "own": false
+   "page": "Alrerst lebe ich mir werde",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -197,6 +199,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "The text is a diplomatic transcription of one manuscript (folio change [126v] in line 8.5 is left out of the translation); its wording differs in places from the usual critical editions, and the translation follows what this manuscript has.",

@@ -12,8 +12,8 @@ const TYPES = ['sacred', 'lament', 'celebration', 'love', 'lullaby', 'work', 'wa
 const REGIONS = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
 const KEYS = ['title', 'local', 'status', 'lyricist', 'composer', 'culture', 'language', 'place', 'date', 'year', 'region', 'types', 'kids', 'kid'];
 // songs in the public domain whose words no free, reliable edition holds yet (their pages say so)
-const GAPS = ['al-burda', 'chhaap-tilak-sab-chheeni', 'delphic-hymns', 'dle-yaman', 'go-down-moses', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya', 'kumulipo',
-  'la-cucaracha', 'llibre-vermell-de-montserrat', 'ninkasi', 'oxyrhynchus-hymn', 'raghupati-raghava-raja-ram', 'rasa-sayang', 'tizita'];
+const GAPS = ['delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
+  'ninkasi', 'raghupati-raghava-raja-ram', 'tizita'];
 // the era bands of the Great Speeches, by the song's year
 const era = y => y < 500 ? 'ancient' : y < 1500 ? 'medieval' : y < 1750 ? 'earlymodern' : y < 1815 ? 'revolutions' : y < 1900 ? 'nineteenth' : y < 1946 ? 'twentieth' : 'postwar';
 const fold = s => s.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase().replace(/[‘’ʻʼ'"“”]/g, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();

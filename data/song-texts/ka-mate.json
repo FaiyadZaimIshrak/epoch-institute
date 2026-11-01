@@ -20,7 +20,9 @@
    "url": "https://en.wikisource.org/wiki/Haka_Ka_Mate_Attribution_Act_2014",
    "licence": "{{PD-NZGov}}",
    "source": "en",
-   "own": false
+   "page": "Haka Ka Mate Attribution Act 2014",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -43,6 +45,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.1-4: 'Ka mate' / 'Ka ora' can be read as 'I die' / 'I live' or 'it is death' / 'it is life'; Te Rauparaha is said to have chanted it while hiding from his pursuers, unsure whether he would be found.",

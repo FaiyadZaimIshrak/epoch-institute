@@ -19,7 +19,9 @@
    "url": "https://ru.wikisource.org/wiki/%D0%AD%D0%B9%2C_%D1%83%D1%85%D0%BD%D0%B5%D0%BC%2F%D0%91%D0%B0%D0%BB%D0%B0%D0%BA%D0%B8%D1%80%D0%B5%D0%B2_(%D0%A1%D0%9E)",
    "licence": "{{PD-folklore}}",
    "source": "ru",
-   "own": false
+   "page": "Эй, ухнем/Балакирев (СО)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -58,6 +60,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "scientific transliteration",
  "notes": [
   "line 1.3: '} 2 раза' is the edition's repeat sign (the two lines above are sung twice), not a sung line; kept as a label ('} twice'). The page may want to show it as a note or drop it with its line in all three parts.",

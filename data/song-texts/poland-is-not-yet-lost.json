@@ -48,7 +48,9 @@
    "url": "https://pl.wikisource.org/wiki/Mazurek_D%C4%85browskiego",
    "licence": "",
    "source": "pl",
-   "own": false
+   "page": "Mazurek Dąbrowskiego",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -99,6 +101,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.2: 'Kiedy' here means 'while, as long as' (not 'when'); Wybicki's 1797 manuscript has 'Póki' with the same sense. This is the official text of 1927, which differs from the 1797 original in wording and stanzas.",

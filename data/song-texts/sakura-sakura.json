@@ -13,7 +13,9 @@
    "url": "https://ja.wikisource.org/wiki/%E3%81%95%E3%81%8F%E3%82%89%E3%81%95%E3%81%8F%E3%82%89",
    "licence": "{{PD-old}}",
    "source": "ja",
-   "own": false
+   "page": "さくらさくら",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -40,6 +42,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "modified Hepburn",
  "notes": [
   "Romanization: modified Hepburn of the words as they are read and sung (modern pronunciation); the historical kana spelling of the original is not transliterated letter by letter (にほひ nioi, いづる izuru, ゆかむ yukan). If the editor wants the written kana instead: nihohi, idzuru, yukamu. 櫻 and 彌生 are old character forms (桜, 弥生), read sakura, Yayoi. 〳〵 is the repeat sign for いざや, written out (iza ya, iza ya). The 。 phrase marks become commas, with a full stop where the sense ends.",

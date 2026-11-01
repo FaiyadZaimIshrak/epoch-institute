@@ -49,7 +49,9 @@
    "url": "https://bn.wikisource.org/wiki/%E0%A6%97%E0%A7%80%E0%A6%A4%E0%A6%AC%E0%A6%BF%E0%A6%A4%E0%A6%BE%E0%A6%A8%2F%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%A6%E0%A7%87%E0%A6%B6%2F%E0%A7%A7%E0%A7%AA",
    "licence": "",
    "source": "bn",
-   "own": false
+   "page": "গীতবিতান/স্বদেশ/১৪",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -78,7 +80,9 @@
    "url": "https://en.wikisource.org/wiki/The_Morning_Song_of_India",
    "licence": "{{PD-US|1941}}",
    "source": "en",
-   "own": false
+   "page": "The Morning Song of India",
+   "own": false,
+   "also": []
   },
   "rom": {
    "stanzas": [
@@ -130,6 +134,9 @@
  },
  "aligned": false,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "ISO 15919",
  "notes": [
   "en is null: Tagore's own translation (The Morning Song of India, part 'en') is used. It is prose, 2 paragraphs a stanza (2/2/2/2/2 against orig's 7/6/6/6/6), so it cannot be set line against line.",

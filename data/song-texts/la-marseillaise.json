@@ -76,7 +76,9 @@
    "url": "https://fr.wikisource.org/wiki/La_Marseillaise_(1792)",
    "licence": "",
    "source": "fr",
-   "own": false
+   "page": "La Marseillaise (1792)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -155,6 +157,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "General: this is the 1792 text of six stanzas; the 'children's stanza' ('Nous entrerons dans la carrière') was added later and is not in it. 'enfans' is the period spelling of 'enfants'. '(bis)' and 'etc.' are the source's repeat signs, kept as they stand.",

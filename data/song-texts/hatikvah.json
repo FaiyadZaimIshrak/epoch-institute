@@ -20,7 +20,9 @@
    "url": "https://he.wikisource.org/wiki/%D7%94%D7%AA%D7%A7%D7%95%D7%95%D7%94",
    "licence": "",
    "source": "he",
-   "own": false
+   "page": "התקווה",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -61,6 +63,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "SBL general-purpose",
  "notes": [
   "This is the anthem's text (two stanzas), not Imber's 1878 poem 'Tikvatenu', whose first stanza and refrain differ (from memory, to be checked against the 1886 printing: the refrain spoke of returning to the land of our fathers, the city where David encamped). The credit line should say so.",

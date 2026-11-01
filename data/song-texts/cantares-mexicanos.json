@@ -74,7 +74,9 @@
    "url": "https://www.gutenberg.org/ebooks/12219",
    "licence": "{{PD-Gutenberg}}",
    "source": "pg",
-   "own": false
+   "page": "Ancient Nahuatl Poetry, Containing the Nahuatl Text of XXVII Ancient Mexican Poems",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -153,11 +155,16 @@
    "url": "https://www.gutenberg.org/ebooks/12219",
    "licence": "{{PD-Gutenberg}}",
    "source": "pg",
-   "own": false
+   "page": "Ancient Nahuatl Poetry, Containing the Nahuatl Text of XXVII Ancient Mexican Poems",
+   "own": false,
+   "also": []
   }
  },
  "aligned": false,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": []
 }

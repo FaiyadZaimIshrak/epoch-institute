@@ -59,7 +59,9 @@
    "url": "https://en.wikipedia.org/wiki/Nkosi_Sikelel'_iAfrika",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Nkosi Sikelel' iAfrika",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -121,6 +123,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "line 1.2: 'upondo' is a horn; 'may its horn be raised' is the biblical image of strength and glory (as in the Psalms), not a musical horn.",

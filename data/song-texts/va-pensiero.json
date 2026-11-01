@@ -32,7 +32,9 @@
    "url": "https://en.wikipedia.org/wiki/Va%2C_pensiero",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Va, pensiero",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -67,6 +69,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "The source file names Edward Downes as translator; this English is a new line-by-line translation of the Italian, not his.",

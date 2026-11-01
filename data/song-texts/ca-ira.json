@@ -64,7 +64,9 @@
    "url": "https://fr.wikisource.org/wiki/%C3%87a_ira_(Ladr%C3%A9)",
    "licence": "",
    "source": "fr",
-   "own": false
+   "page": "Ça ira (Ladré)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -131,6 +133,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "General (the refrain): 'ça ira', literally 'it will go', means 'it will work out, it will succeed'; translated literally each time it stands. This is Ladré's 1790 text, from the time of the Fête de la Fédération; the later, violent refrain ('les aristocrates à la lanterne') is not in it.",

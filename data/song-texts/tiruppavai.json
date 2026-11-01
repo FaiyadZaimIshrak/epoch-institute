@@ -18,7 +18,9 @@
    "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%B5%E0%AF%88",
    "licence": "",
    "source": "ta",
-   "own": false
+   "page": "திருப்பாவை",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -55,6 +57,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "ISO 15919",
  "notes": [
   "EDITOR FIRST: lines 2, 3, 5 and 6 of orig carry square-bracketed glosses in modern Tamil added by the Wikisource editors ([போது = வா; …], [சீர் = செல்வம் …], [ஏர் = அழகு …], [மதியம் = முழுநிலா]). They are not part of the poem: en and rom translate and romanize the verse only. Strip the brackets from orig so the three columns match.",

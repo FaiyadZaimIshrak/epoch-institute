@@ -862,10 +862,19 @@ copyright gets its entry WITHOUT its words; one performance per song, hand-picke
   pinyin with tones, scientific transliteration), translation-fixes.json the editor's line fixes. merge-texts.js →
   data/song-texts/<slug>.json (build input, not deployed; {parts: {orig, rom, en: {stanzas, credit, url, source,
   own}}, aligned, tentative, scheme, notes}); a part with the original's shape stands beside it line by line, any
-  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 78 songs
-  carry words; 32 are in copyright (o sole mio too: Mazzucchi's share of the music, 2002 ruling; We Shall Overcome:
-  printed only once its free status is beyond doubt); 16 public-domain songs have no free edition found (make-data.js
-  GAPS: their pages say so), the Great Hymn to the Aten only Budge's 1923 translation.
+  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 91 songs
+  carry words; 27 are in copyright (We Shall Overcome: printed only once its free status is beyond doubt); 8
+  public-domain songs have no free edition found (make-data.js GAPS: their pages say so), the Great Hymn to the Aten
+  only Budge's 1923 translation. Cielito Lindo, 'O sole mio and Hava Nagila are printed as published before 1930
+  (public domain in the United States; the user's choice, 1 Nov 2026), though protected in Mexico, in Italy (Mazzucchi's
+  share of the music, 2002 ruling) and wherever Nathanson counts as Hava Nagila's author: their status lines say so.
+  Guantanamera prints only Martí's Versos sencillos, never the refrain. 13 songs (1 Nov 2026) came from the user's
+  document of texts and translations, written from memory: their originals were imported from the pages that hold
+  them (rows from "# Nov 2026" in sources.tsv; a "\n" in a text fix splits a line; several rows of one part add up,
+  each page credited; translations "heads" title the pieces of the Llibre Vermell), the document's translations
+  aligned to those lines, and lines it lacked translated. Its Hanuman Chalisa, Dle Yaman, Delphic hymns, Ninkasi and
+  Kumbaya found no edition (Ninkasi's is ETCSL's, under the Oxford project's copyright; Kumbaya's versions on
+  Wikipedia are cited to videos) and stay without words.
 - Performances: scripts/songs/videos.tsv (slug, id, channel, note; 124 songs; none for Kumbaya and Ninkasi): the
   performers' own channels, "- Topic" releases, choirs, ensembles, institutions and old records, never compilations
   or re-uploads of albums, chosen by looking at each (scripts/songs/yt-search.js lists a search's results).
@@ -1336,8 +1345,8 @@ Found while building the social ladders (30 Oct 2026), not done yet:
   trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the
   messianic figure, also the caliph al-Mahdi).
 Songs in History, not yet: "Songs" chips on the profiles (a scripts/song-links.js read by generator.html, then
-regen-profiles) and on the country histories; posters of their own (song-<slug>.jpg); the words of the 16 public-domain
-songs without a free edition (Dle Yaman, the Kumulipo, Tizita, the Hanuman Chalisa …); encyclopedia entries for the
+regen-profiles) and on the country histories; posters of their own (song-<slug>.jpg); the words of the 8 public-domain
+songs without a free edition (Dle Yaman, Tizita, the Hanuman Chalisa, the Delphic hymns …); encyclopedia entries for the
 songs (only God Save the King, Advance Australia Fair and the Gita Govinda have one); more songs by the same files.
 Ideologies as a further profile kind, by the §"Kinds of profile" recipe. Yoruba religion
 has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.

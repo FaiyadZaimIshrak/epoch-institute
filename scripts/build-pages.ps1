@@ -2374,13 +2374,15 @@ function SongSrcName([string]$site) { if ($SONGSITE.ContainsKey($site)) { $SONGS
 # the words: the parts with the original's shape side by side, line by line (original, romanized, English); a part of
 # another shape as a block of its own. Long texts show their first stanzas and fold the rest.
 function SongLines($st, [string]$cls, [string]$attr) { (@($st) | ForEach-Object { '<span class="' + $cls + '"' + $attr + '>' + (Hx ([string]$_)) + '</span>' }) }
-function SongBlock($parts, $keys, $labels, $attrs, [int]$total) {
+# heads: {stanza index: title} for texts that gather several pieces (the Llibre Vermell's songs), over the leading block only
+function SongBlock($parts, $keys, $labels, $attrs, [int]$total, $heads) {
   $sb = New-Object Text.StringBuilder; $n = @($keys).Count
   $cls = @{ orig = 'sg-o'; rom = 'sg-r'; en = 'sg-e' }
   [void]$sb.Append('<div class="sg-lyrics sg-cols-' + $n + '"><div class="sg-colhead" aria-hidden="true">' + ((@($keys) | ForEach-Object { '<span class="' + $cls[$_] + '">' + (Hx $labels[$_]) + '</span>' }) -join '') + '</div>')
   $stz = @($parts[@($keys)[0]]['stanzas']); $shown = 0; $folded = $false
   for ($i = 0; $i -lt $stz.Count; $i++) {
     if (-not $folded -and $total -gt 40 -and $shown -ge 16) { [void]$sb.Append('<details class="sg-more"><summary>Show all ' + $total + ' lines</summary>'); $folded = $true }
+    if ($heads -and $heads.ContainsKey([string]$i)) { [void]$sb.Append('<p class="sg-sthead">' + (Hx ([string]$heads[[string]$i])) + '</p>') }
     [void]$sb.Append('<div class="sg-st">')
     $len = @($stz[$i]).Count
     for ($j = 0; $j -lt $len; $j++) {
@@ -2394,8 +2396,10 @@ function SongBlock($parts, $keys, $labels, $attrs, [int]$total) {
   return $sb.Append('</div>').ToString()
 }
 function SongWords($sg) {
-  $tx = $sg['text']; $parts = $tx['parts']; $code = SongLang $sg; $lname = if (@($sg['langs']).Count) { [string]@($sg['langs'])[0]['name'] } else { 'Original' }
-  $lname = ($lname -replace '\s*\(.*$', '')
+  # the original's column is named after the song's first language, unless the translation file says what the printed
+  # text is (label, lang: the Llibre Vermell's pieces are "Latin and Catalan", la)
+  $tx = $sg['text']; $parts = $tx['parts']; $code = if ($tx['lang']) { [string]$tx['lang'] } else { SongLang $sg }
+  $lname = if ($tx['label']) { [string]$tx['label'] } elseif (@($sg['langs']).Count) { ([string]@($sg['langs'])[0]['name']) -replace '\s*\(.*$', '' } else { 'Original' }
   $shape = { param($p) (@($p['stanzas']) | ForEach-Object { @($_).Count }) -join ',' }
   $dir = if ($SONGRTL -contains $code) { ' dir="rtl"' } else { '' }
   $attrs = @{ orig = $(if ($code -and $code -ne 'en') { ' lang="' + $code + '"' + $dir } else { ' data-say' }); rom = $(if ($code) { ' lang="' + $code + '-Latn"' } else { '' }); en = ' data-say' }
@@ -2411,17 +2415,20 @@ function SongWords($sg) {
   if ($keys.Count -gt 1) {
     [void]$sb.Append('<div class="sg-show" role="group" aria-label="Show these columns">' + (($keys | ForEach-Object { '<button type="button" aria-pressed="true" data-col="' + $_ + '">' + (Hx $labels[$_]) + '</button>' }) -join '') + '</div>')
   }
-  [void]$sb.Append('<div class="sg-blocks' + $(if ($own.Count) { ' sg-blocks-2' } else { '' }) + '">' + (SongBlock $parts $keys $labels $attrs $total))
+  [void]$sb.Append('<div class="sg-blocks' + $(if ($own.Count) { ' sg-blocks-2' } else { '' }) + '">' + (SongBlock $parts $keys $labels $attrs $total $tx['heads']))
   foreach ($k in $own) { $t2 = 0; foreach ($st in @($parts[$k]['stanzas'])) { $t2 += @($st).Count }; [void]$sb.Append((SongBlock $parts @($k) $labels $attrs $t2)) }
   [void]$sb.Append('</div>')
   # where each part comes from: an imported text names its edition and page; our own translations and romanizations say so
   $cr = New-Object Collections.Generic.List[string]
   foreach ($k in 'orig', 'rom', 'en') {
-    if (-not $parts.ContainsKey($k)) { continue }; $p = $parts[$k]; $what = $labels[$k]
+    if (-not $parts.ContainsKey($k)) { continue }; $p = $parts[$k]
     if ($p['own']) {
       $cr.Add($(if ($k -eq 'en') { 'The English is the Institute&#8217;s own translation, made from the original for this page.' } else { 'The romanization is the Institute&#8217;s own (' + (Hx ([string]$tx['scheme'])) + ').' }))
     } else {
-      $cr.Add($(if ($k -eq 'orig') { $(if ($isEn) { 'Words' } else { 'Original' }) } elseif ($k -eq 'en') { 'English' } else { 'Romanized' }) + ': ' + (Hx ([string]$p['credit'])) + '. Text from <a href="' + (Hx ([string]$p['url'])) + '" target="_blank" rel="noopener">' + (SongSrcName ([string]$p['source'])) + '</a>; public domain.')
+      # a text gathered from several pages (Martí's poems, the Llibre Vermell's songs) names each page
+      $also = @($p['also'] | Where-Object { $_ })
+      $src = if ($also.Count) { (SongSrcName ([string]$p['source'])) + ' (' + ((@(@{ url = $p['url']; page = $p['page'] }) + $also | Group-Object { [string]$_['url'] } | ForEach-Object { $_.Group[0] } | ForEach-Object { '<a href="' + (Hx ([string]$_['url'])) + '" target="_blank" rel="noopener">' + (Hx ([string]$_['page'])) + '</a>' }) -join ', ') + ')' } else { '<a href="' + (Hx ([string]$p['url'])) + '" target="_blank" rel="noopener">' + (SongSrcName ([string]$p['source'])) + '</a>' }
+      $cr.Add($(if ($k -eq 'orig') { $(if ($isEn) { 'Words' } else { 'Original' }) } elseif ($k -eq 'en') { 'English' } else { 'Romanized' }) + ': ' + (Hx ([string]$p['credit'])) + '. Text from ' + $src + '; ' + $(if ([string]$sg['status'] -match 'United States') { 'in the public domain in the United States' } else { 'public domain' }) + '.')
     }
   }
   if ($tx['tentative']) { $cr.Add('The original is hard to read in places, and our translation of those lines is tentative.') }
@@ -2453,7 +2460,7 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   $crumb = Crumbs @(@('Home', '/'), @('Songs in History', '/songs/'), @($title, $null))
   $sb = New-Object Text.StringBuilder(16000)
   [void]$sb.Append('<main id="main" class="sg-page ref-page">' + "`n<div class=`"sg-wrap`">`n" + $crumb[0] + "`n<article class=`"sg-view`">`n")
-  $loc = [string]$sg['local']; $locLang = if ($code -and $code -ne 'en') { ' lang="' + $code + '"' + $(if ($SONGRTL -contains $code) { ' dir="rtl"' } else { '' }) } else { '' }
+  $loc = [string]$sg['local']
   [void]$sb.Append('<header class="sg-head"><p class="featured-region">' + (Hx (SongTypes $sg)) + ' · ' + (Hx (SongYear $sg)) + ' · ' + (Hx ([string]$sg['region'])) + '</p><h1 class="sg-title">' + (Hx $title) + '</h1>' +
     $(if ($loc) { '<p class="sg-local">' + (SongLocal $loc $code) + '</p>' } else { '' }) + '<p class="sg-kid" data-say>' + (Hx ([string]$sg['kid'])) + "</p></header>`n")
   # where it comes from

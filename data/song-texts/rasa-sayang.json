@@ -1,0 +1,92 @@
+{
+ "slug": "rasa-sayang",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "Rasa sayang hey!",
+     "Rasa sayang sayang hey!",
+     "Hey lihat nona jauh,",
+     "Rasa sayang sayang hey!"
+    ],
+    [
+     "Buah cempedak di luar pagar,",
+     "Ambil galah tolong jolokkan,",
+     "Saya budak baru belajar,",
+     "Kalau salah tolong tunjukkan,"
+    ],
+    [
+     "Pulau pandan jauh ke tengah,",
+     "Gunung Daik bercabang tiga,",
+     "Hancur badan dikandung tanah,",
+     "Budi yang baik dikenang juga,"
+    ],
+    [
+     "Dua tiga kucing berlari,",
+     "Mana sama si kucing belang,",
+     "Dua tiga boleh kucari,",
+     "Mana sama abang seorang,"
+    ],
+    [
+     "Pisang emas dibawa berlayar,",
+     "Masak sebiji di atas peti,",
+     "Hutang emas boleh dibayar,",
+     "Hutang budi dibawa mati,"
+    ]
+   ],
+   "credit": "Traditional: the chorus and four pantun, as quoted in the Malay Wikipedia's article",
+   "url": "https://ms.wikipedia.org/wiki/Rasa_Sayang",
+   "licence": "",
+   "source": "w-ms",
+   "page": "Rasa Sayang",
+   "own": false,
+   "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "I feel love, hey!",
+     "I feel love, love, hey!",
+     "Hey, see that girl far off,",
+     "I feel love, love, hey!"
+    ],
+    [
+     "The cempedak fruit is outside the fence,",
+     "take a pole and please knock it down;",
+     "I am a child just learning,",
+     "if I am wrong please show me."
+    ],
+    [
+     "Pandan Island lies far out to sea,",
+     "Mount Daik has three peaks;",
+     "though the body crumbles in the earth,",
+     "a good deed is still remembered."
+    ],
+    [
+     "Two, three cats are running;",
+     "none is like the striped cat.",
+     "Two, three I could find;",
+     "none is like my one beloved."
+    ],
+    [
+     "Golden bananas taken on a voyage,",
+     "one ripens on top of a chest;",
+     "a debt of gold can be repaid,",
+     "a debt of kindness is carried to the grave."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
+ "scheme": null,
+ "notes": [
+  "The verses are pantun, the Malay quatrain: the first two lines give an image, the last two the message, tied to the image by rhyme rather than sense. Any pantun can be sung to the tune between the choruses.",
+  "Stanza 4: abang (here \"my one beloved\") is literally \"elder brother\", the usual word for a sweetheart in Malay songs."
+ ]
+}

@@ -1950,6 +1950,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .sg-colhead, .sg-ln { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: 26px; }
 .sg-colhead { padding: 0 0 8px; margin: 0 0 12px; border-bottom: 1px solid var(--border); font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .sg-st { margin: 0 0 18px; }
+.sg-sthead { margin: 22px 0 8px; font-family: var(--font-display); font-size: 18px; color: var(--gold-light); }
+.sg-lyrics > .sg-sthead:first-of-type, .sg-colhead + .sg-sthead { margin-top: 0; }
 .sg-ln { margin: 0; padding: 2px 6px; margin-inline: -6px; border-radius: 4px; }
 .sg-ln:hover { background: rgba(var(--gold-rgb), 0.07); }
 .sg-ln > span { min-width: 0; overflow-wrap: break-word; }

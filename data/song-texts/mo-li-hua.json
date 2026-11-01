@@ -11,7 +11,9 @@
    "url": "https://zh.wikisource.org/wiki/%E8%8C%89%E8%8E%89%E8%8A%B1",
    "licence": "{{PD-old}}",
    "source": "zh",
-   "own": false
+   "page": "茉莉花",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -34,6 +36,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": "Hanyu Pinyin (tone marks)",
  "notes": [
   "EDITOR FIRST: the imported text is one long line (the whole song); kept as one line in en and rom. It is in simplified characters.",

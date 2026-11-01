@@ -152,7 +152,9 @@
    "url": "https://de.wikisource.org/wiki/An_die_Freude_(Schiller)",
    "licence": "",
    "source": "de",
-   "own": false
+   "page": "An die Freude (Schiller)",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -307,6 +309,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "This is the 1786 text (Thalia), not the 1803 revision Beethoven set in 1824: lines 1.6-1.7 here read 'what the sword of fashion divided; beggars become brothers of princes', where 1803 has 'what fashion strictly divided; all men become brothers'. The 1803 text also drops the last stanza pair (17-18 here). Do not present this translation as the words of Beethoven's Ninth.",

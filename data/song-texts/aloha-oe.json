@@ -34,7 +34,9 @@
    "url": "https://en.wikipedia.org/wiki/Aloha_%CA%BBOe",
    "licence": "",
    "source": "w-en",
-   "own": false
+   "page": "Aloha ʻOe",
+   "own": false,
+   "also": []
   },
   "en": {
    "stanzas": [
@@ -71,6 +73,9 @@
  },
  "aligned": true,
  "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
  "scheme": null,
  "notes": [
   "Stanza breaks: the import's stanzas do not follow the song. The chorus is 2.1-2.4 plus 3.1 ('Until we meet again'); the second verse is 3.2-4.2; the third verse is 4.3-5.2. The editor may want to re-divide orig (and en with it) into verse 1 (4 lines), chorus (5), verse 2 (5), verse 3 (4).",
