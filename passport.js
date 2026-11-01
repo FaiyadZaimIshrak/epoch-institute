@@ -15,7 +15,7 @@
   var KIND = [['profile', /^\/(empire|religion|language|culture|movement|government)\//, 'Profiles'], ['entry', /^\/encyclopedia\//, 'Encyclopedia entries'], ['state', /^\/state\//, 'States'],
     ['country', /^\/countries\//, 'Country histories'], ['century', /^\/centuries\//, 'Centuries'], ['year', /^\/years\//, 'Years'], ['day', /^\/today-in-history\//, 'Days of the year'],
     ['speech', /^\/speeches\//, 'Great speeches'], ['path', /^\/paths\//, 'Reading paths'], ['people', /^\/people\//, 'People by century'], ['essay', /^\/(essays|articles)\//, 'Essays and articles'],
-    ['ladder', /^\/societies\//, 'Social ladders']];
+    ['ladder', /^\/societies\//, 'Social ladders'], ['song', /^\/songs\//, 'Songs']];
   function ord(n) { var s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
   var CENTS = [];
   for (var c = 30; c >= 1; c--) CENTS.push([ord(c) + '-century-bce', ord(c) + ' BCE']);

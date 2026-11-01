@@ -442,7 +442,7 @@ function FitTitle([string]$t) {
   if ($t.Length -le 70) { return $t }
   $t2 = $t -replace ' — The Epoch Institute$', ''
   if ($t2.Length -le 70) { return $t2 }
-  return ($t2 -replace " — (Encyclopedia|States|Great Speeches|Teachers' Corner|Community)$", '')
+  return ($t2 -replace " — (Encyclopedia|States|Great Speeches|Songs in History|Teachers' Corner|Community)$", '')
 }
 # a name with its years, unless the name already holds them ("Duchy of Estonia (1219-1346)", "1931 Constitution of Ethiopia":
 # 488 titles said their years twice)
@@ -818,6 +818,27 @@ foreach ($spx in $SPS) {
   $spRefs = @([string]$spx['speakerSlug']) + @(@($spx['links']) + @($spx['led']) | ForEach-Object { if ([string]$_ -match '^/encyclopedia/([^|]+)\|') { $Matches[1] } })
   foreach ($spRef in ($spRefs | Where-Object { $_ } | Select-Object -Unique)) { if (-not $SPBY.ContainsKey($spRef)) { $SPBY[$spRef] = New-Object Collections.Generic.List[object] }; $SPBY[$spRef].Add($spx) }
 }
+# Songs in History are read here for the same reason: an entry page lists the songs that name it among their people,
+# places and events. scripts/songs/make-data.js checks the song files, texts and performances and writes songs.json
+# (it stops the build on a problem); their pages are written further down ("Songs in History").
+$songExe = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $songExe) { $songExe = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
+foreach ($songL in (& $songExe "$PSScriptRoot\songs\make-data.js")) { Say $songL }
+if ($LASTEXITCODE) { throw 'Songs in History: scripts/songs/make-data.js found problems (above)' }
+$SONGS = @($JSS.DeserializeObject([IO.File]::ReadAllText("$PSScriptRoot\songs\songs.json", $U8)))
+# a name the songs give (a person, place or event) links the entry of exactly that name, when only one entry has it
+$SONGNAME = @{}
+foreach ($e in $ENT) { $songK = $e.name.ToLowerInvariant(); if ($SONGNAME.ContainsKey($songK)) { $SONGNAME[$songK] = '' } else { $SONGNAME[$songK] = $e.slug } }
+# a song's year as a short label: "c. 1400 BCE", "c. 1250", "1792" (circa where its date says so, or before 1000)
+function SongYear($sg) { $y = [int]$sg['year']; $(if ($y -lt 1000 -or [string]$sg['date'] -match '(?i)\bc\.|centur|circa|traditional') { 'c. ' } else { '' }) + $(if ($y -lt 0) { "$(-$y) BCE" } else { "$y" }) }
+function SongEnt([string]$n) { $k = $n.Trim().ToLowerInvariant(); if ($SONGNAME.ContainsKey($k) -and $SONGNAME[$k]) { $SONGNAME[$k] } else { '' } }
+$SONGBY = @{}
+foreach ($sg in $SONGS) {
+  foreach ($songN in (@($sg['people']) + @($sg['places']) + @($sg['events']))) {
+    $songE = SongEnt ([string]$songN); if (-not $songE) { continue }
+    if (-not $SONGBY.ContainsKey($songE)) { $SONGBY[$songE] = New-Object Collections.Generic.List[object] }
+    if (-not $SONGBY[$songE].Contains($sg)) { $SONGBY[$songE].Add($sg) }
+  }
+}
 
 # Years: /years/<y> for every year with enough firm-dated material (6 items, 2 of them events), gathered here so that
 # the entry, day and century pages can link to them (the pages are written after the centuries). Only firm years:
@@ -1029,6 +1050,11 @@ foreach ($e in $ENT) {
   if ($SPBY.ContainsKey($e.slug)) {
     [void]$body.Append('<section><h2 class="enc-section-title">Great speeches</h2><div class="enc-mentions">')
     foreach ($spx in $SPBY[$e.slug]) { [void]$body.Append('<a href="/speeches/' + $spx['slug'] + '">' + (Hx ([string]$spx['title'])) + '<span class="secs">' + (Hx ([string]$spx['display'])) + '</span></a>') }
+    [void]$body.Append("</div></section>`n")
+  }
+  if ($SONGBY.ContainsKey($e.slug)) {
+    [void]$body.Append('<section><h2 class="enc-section-title">Songs in history</h2><div class="enc-mentions">')
+    foreach ($sg in $SONGBY[$e.slug]) { [void]$body.Append('<a href="/songs/' + $sg['slug'] + '">' + (Hx ([string]$sg['title'])) + '<span class="secs">' + (Hx (SongYear $sg)) + '</span></a>') }
     [void]$body.Append("</div></section>`n")
   }
   $related = @($SEE[$e.i]); if (-not $related.Count) { $related = @($SEE2[$e.i]) }; if (-not $related.Count) { $related = @(LinkedNear $e) }
@@ -2318,6 +2344,210 @@ if ([IO.File]::ReadAllText("$Repo\kids", $U8).Contains('<!-- build:kids-ladders 
 Say ("social ladders: {0} societies, {1} ranks; {2} in the Order the Ranks game, {3} for children" -f $SOCS.Count, (($SOCS | ForEach-Object { $_.tiers.Count } | Measure-Object -Sum).Sum), @($socRk).Count, @($SOCS | Where-Object { $_.kids }).Count)
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Songs in History: /songs/<slug> and /songs/, from $SONGS (read before the entry pages: scripts/songs/make-data.js
+# joins scripts/songs/<slug>.txt, data/song-texts/<slug>.json and the checked performances of scripts/songs/videos.tsv).
+# A song's page: who made it, where and in what language, its story and meaning, its words (only where they are in the
+# public domain: imported, never typed) in the original, romanized and in English, line by line where the three have
+# the same shape, a performance (YouTube's player loads only when the reader presses play: songs.js), the songs it
+# led to and came from, the people, places and events it names, sources. The prose is gold-linked as the ladders' is.
+# (Script-level names start with song: PowerShell's names ignore case.)
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Say 'songs in history'
+$SONGTYPE = [ordered]@{ sacred = 'Sacred'; lament = 'Lament'; celebration = 'Celebration'; love = 'Love song'; lullaby = 'Lullaby'; work = 'Work song'; war = 'War and march'
+  anthem = 'Anthem'; protest = 'Protest and freedom'; ballad = 'Ballad'; dance = 'Dance' }
+$SONGERA = [ordered]@{ ancient = 'The ancient world'; medieval = 'The medieval world'; earlymodern = 'The early modern world'; revolutions = 'The age of revolutions'; nineteenth = 'The nineteenth century'; twentieth = 'The early twentieth century'; postwar = 'The world since 1945' }
+$SONGRTL = @('he', 'hbo', 'ar', 'fa', 'ur', 'yi', 'syc', 'arc')
+$SONGSITE = @{ pg = 'Project Gutenberg' }
+$songProf = New-Object 'Collections.Generic.HashSet[string]'; foreach ($em in $EMPS) { [void]$songProf.Add([string]$em['name']) }
+$songJsV = [EpochBuild.W]::Sha1([IO.File]::ReadAllText("$Repo\songs.js", $U8)).Substring(0, 8)
+$SONGLINK = [bool](Get-Command LinkDesc -ErrorAction SilentlyContinue)
+function SongLink([string]$s, $ctx) { if ($script:SONGLINK) { LinkDesc $s '' $ctx } else { Hx $s } }
+function SongTypes($sg) { (@($sg['types']) | ForEach-Object { $SONGTYPE[[string]$_] }) -join ' · ' }
+function SongLang($sg) { $l = @($sg['langs']); if ($l.Count) { [string]$l[0]['code'] } else { '' } }
+# a name the song gives, as a chip: its profile, else the one entry of that name, else plain
+function SongChip([string]$n) {
+  if ($songProf.Contains($n)) { return '<a class="tih-tag tih-tag-profile" href="' + (ProfUrl $n) + '">' + (Hx $n) + '</a>' }
+  $sl = SongEnt $n; if ($sl) { return '<a class="tih-tag enc-link" href="/encyclopedia/' + $sl + '">' + (Hx $n) + '</a>' }
+  return '<span class="tih-tag sg-tag-plain">' + (Hx $n) + '</span>'
+}
+function SongSrcName([string]$site) { if ($SONGSITE.ContainsKey($site)) { $SONGSITE[$site] } elseif ($site -like 'w-*') { 'Wikipedia' } else { 'Wikisource' } }
+# the words: the parts with the original's shape side by side, line by line (original, romanized, English); a part of
+# another shape as a block of its own. Long texts show their first stanzas and fold the rest.
+function SongLines($st, [string]$cls, [string]$attr) { (@($st) | ForEach-Object { '<span class="' + $cls + '"' + $attr + '>' + (Hx ([string]$_)) + '</span>' }) }
+function SongBlock($parts, $keys, $labels, $attrs, [int]$total) {
+  $sb = New-Object Text.StringBuilder; $n = @($keys).Count
+  $cls = @{ orig = 'sg-o'; rom = 'sg-r'; en = 'sg-e' }
+  [void]$sb.Append('<div class="sg-lyrics sg-cols-' + $n + '"><div class="sg-colhead" aria-hidden="true">' + ((@($keys) | ForEach-Object { '<span class="' + $cls[$_] + '">' + (Hx $labels[$_]) + '</span>' }) -join '') + '</div>')
+  $stz = @($parts[@($keys)[0]]['stanzas']); $shown = 0; $folded = $false
+  for ($i = 0; $i -lt $stz.Count; $i++) {
+    if (-not $folded -and $total -gt 40 -and $shown -ge 16) { [void]$sb.Append('<details class="sg-more"><summary>Show all ' + $total + ' lines</summary>'); $folded = $true }
+    [void]$sb.Append('<div class="sg-st">')
+    $len = @($stz[$i]).Count
+    for ($j = 0; $j -lt $len; $j++) {
+      [void]$sb.Append('<p class="sg-ln">')
+      foreach ($k in $keys) { $line = [string]@(@($parts[$k]['stanzas'])[$i])[$j]; [void]$sb.Append('<span class="' + $cls[$k] + '"' + $attrs[$k] + '>' + $(if ($line) { Hx $line } else { '&#160;' }) + '</span>') }
+      [void]$sb.Append('</p>')
+    }
+    [void]$sb.Append('</div>'); $shown += $len
+  }
+  if ($folded) { [void]$sb.Append('</details>') }
+  return $sb.Append('</div>').ToString()
+}
+function SongWords($sg) {
+  $tx = $sg['text']; $parts = $tx['parts']; $code = SongLang $sg; $lname = if (@($sg['langs']).Count) { [string]@($sg['langs'])[0]['name'] } else { 'Original' }
+  $lname = ($lname -replace '\s*\(.*$', '')
+  $shape = { param($p) (@($p['stanzas']) | ForEach-Object { @($_).Count }) -join ',' }
+  $dir = if ($SONGRTL -contains $code) { ' dir="rtl"' } else { '' }
+  $attrs = @{ orig = $(if ($code -and $code -ne 'en') { ' lang="' + $code + '"' + $dir } else { ' data-say' }); rom = $(if ($code) { ' lang="' + $code + '-Latn"' } else { '' }); en = ' data-say' }
+  $isEn = ($code -eq 'en' -and -not $parts.ContainsKey('en'))
+  $labels = @{ orig = $(if ($isEn) { 'The words' } else { $lname }); rom = 'Romanized'; en = 'In English' }
+  $keys = New-Object Collections.Generic.List[string]; $own = New-Object Collections.Generic.List[string]
+  # the first part present leads (the original; a song known only in an old translation, the Aten hymn, has none)
+  $base = @('orig', 'rom', 'en' | Where-Object { $parts.ContainsKey($_) })[0]
+  $o = & $shape $parts[$base]
+  foreach ($k in 'orig', 'rom', 'en') { if ($parts.ContainsKey($k)) { if ($k -eq $base -or (& $shape $parts[$k]) -eq $o) { $keys.Add($k) } else { $own.Add($k) } } }
+  $total = 0; foreach ($st in @($parts[$base]['stanzas'])) { $total += @($st).Count }
+  $sb = New-Object Text.StringBuilder
+  if ($keys.Count -gt 1) {
+    [void]$sb.Append('<div class="sg-show" role="group" aria-label="Show these columns">' + (($keys | ForEach-Object { '<button type="button" aria-pressed="true" data-col="' + $_ + '">' + (Hx $labels[$_]) + '</button>' }) -join '') + '</div>')
+  }
+  [void]$sb.Append('<div class="sg-blocks' + $(if ($own.Count) { ' sg-blocks-2' } else { '' }) + '">' + (SongBlock $parts $keys $labels $attrs $total))
+  foreach ($k in $own) { $t2 = 0; foreach ($st in @($parts[$k]['stanzas'])) { $t2 += @($st).Count }; [void]$sb.Append((SongBlock $parts @($k) $labels $attrs $t2)) }
+  [void]$sb.Append('</div>')
+  # where each part comes from: an imported text names its edition and page; our own translations and romanizations say so
+  $cr = New-Object Collections.Generic.List[string]
+  foreach ($k in 'orig', 'rom', 'en') {
+    if (-not $parts.ContainsKey($k)) { continue }; $p = $parts[$k]; $what = $labels[$k]
+    if ($p['own']) {
+      $cr.Add($(if ($k -eq 'en') { 'The English is the Institute&#8217;s own translation, made from the original for this page.' } else { 'The romanization is the Institute&#8217;s own (' + (Hx ([string]$tx['scheme'])) + ').' }))
+    } else {
+      $cr.Add($(if ($k -eq 'orig') { $(if ($isEn) { 'Words' } else { 'Original' }) } elseif ($k -eq 'en') { 'English' } else { 'Romanized' }) + ': ' + (Hx ([string]$p['credit'])) + '. Text from <a href="' + (Hx ([string]$p['url'])) + '" target="_blank" rel="noopener">' + (SongSrcName ([string]$p['source'])) + '</a>; public domain.')
+    }
+  }
+  if ($tx['tentative']) { $cr.Add('The original is hard to read in places, and our translation of those lines is tentative.') }
+  [void]$sb.Append('<div class="sg-credit">' + (($cr | ForEach-Object { '<p>' + $_ + '</p>' }) -join '') + '</div>')
+  $nt = @($tx['notes'] | Where-Object { $_ })
+  if ($nt.Count) { [void]$sb.Append('<details class="sg-notes"><summary>Notes on the translation (' + $nt.Count + ')</summary><ul>' + (($nt | ForEach-Object { '<li>' + (Hx ([string]$_)) + '</li>' }) -join '') + '</ul></details>') }
+  return $sb.ToString()
+}
+function SongChain($items) {
+  '<ul class="sg-chain">' + ((@($items) | ForEach-Object {
+    $t = if ($_['slug']) { '<a href="/songs/' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + '</a>' } else { '<span class="sg-chain-n">' + (Hx ([string]$_['title'])) + '</span>' }
+    '<li>' + $t + $(if ($_['year']) { ' <span class="sg-chain-y">' + (Hx ([string]$_['year'])) + '</span>' } else { '' }) + $(if ($_['how']) { '<span class="sg-chain-h">' + (Hx ([string]$_['how'])) + '</span>' } else { '' }) + '</li>' }) -join '') + '</ul>'
+}
+$SONGURL = [Text.RegularExpressions.MatchEvaluator] { param($m) '<a href="' + $m.Value + '" target="_blank" rel="noopener">' + $m.Value + '</a>' }
+# a song's own title, "its script / its romanization": each half marked with its language, the first right to left
+# where the script is (one span for both ran the Latin half backwards into the Arabic)
+function SongLocal([string]$loc, [string]$code) {
+  $parts = $loc -split ' / ', 2; $rtl = $SONGRTL -contains $code
+  $a = if ($code -and $code -ne 'en') { ' lang="' + $code + '"' + $(if ($rtl) { ' dir="rtl"' } else { '' }) } else { '' }
+  if ($parts.Count -eq 2) { return '<bdi' + $a + '>' + (Hx $parts[0]) + '</bdi> / <bdi' + $(if ($code -and $code -ne 'en') { ' lang="' + $code + '-Latn"' } else { '' }) + '>' + (Hx $parts[1]) + '</bdi>' }
+  return '<bdi' + $a + '>' + (Hx $loc) + '</bdi>'
+}
+function SongPerson([string]$s) { $s -and $s -notmatch '^(?i)(traditional|anonymous|not known|unknown)\b' }
+$songNoText = 0
+for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
+  $sg = $SONGS[$songI]; $slug = [string]$sg['slug']; $path = '/songs/' + $slug
+  $title = [string]$sg['title']; $code = SongLang $sg; $yr = [int]$sg['year']
+  $songCtx = @(($yr - 200), ($yr + 200))
+  $crumb = Crumbs @(@('Home', '/'), @('Songs in History', '/songs/'), @($title, $null))
+  $sb = New-Object Text.StringBuilder(16000)
+  [void]$sb.Append('<main id="main" class="sg-page ref-page">' + "`n<div class=`"sg-wrap`">`n" + $crumb[0] + "`n<article class=`"sg-view`">`n")
+  $loc = [string]$sg['local']; $locLang = if ($code -and $code -ne 'en') { ' lang="' + $code + '"' + $(if ($SONGRTL -contains $code) { ' dir="rtl"' } else { '' }) } else { '' }
+  [void]$sb.Append('<header class="sg-head"><p class="featured-region">' + (Hx (SongTypes $sg)) + ' · ' + (Hx (SongYear $sg)) + ' · ' + (Hx ([string]$sg['region'])) + '</p><h1 class="sg-title">' + (Hx $title) + '</h1>' +
+    $(if ($loc) { '<p class="sg-local">' + (SongLocal $loc $code) + '</p>' } else { '' }) + '<p class="sg-kid" data-say>' + (Hx ([string]$sg['kid'])) + "</p></header>`n")
+  # where it comes from
+  $langs = (@($sg['langs']) | ForEach-Object { [string]$_['name'] }) -join ', '
+  $facts = @(@('Words', [string]$sg['lyricist']), @('Music', [string]$sg['composer']), @('Culture', [string]$sg['culture']), @('Language', $langs), @('Place', [string]$sg['place']), @('Date', [string]$sg['date']))
+  $stat = if ($sg['pd']) { 'Public domain (' + [string]$sg['status'] + ')' } else { 'In copyright (' + [string]$sg['status'] + ')' }
+  [void]$sb.Append('<dl class="sg-facts">' + ((@($facts | Where-Object { $_[1] -and $_[1] -notmatch '^(?i)not known$' }) | ForEach-Object { '<div><dt>' + $_[0] + '</dt><dd>' + (Hx $_[1]) + '</dd></div>' }) -join '') +
+    '<div><dt>Type</dt><dd>' + (Hx (SongTypes $sg)) + '</dd></div><div><dt>The words</dt><dd>' + (Hx $stat) + "</dd></div></dl>`n")
+  if (-not $sg['kids']) {
+    [void]$sb.Append('<p class="kd-note">This song is about hard things from the past, like war, cruelty or death. You can read about it with a grown-up.</p><button type="button" class="kd-story sg-kd-open">Read about this song</button>' + "`n")
+  }
+  [void]$sb.Append('<div class="sg-body' + $(if (-not $sg['kids']) { ' sg-fold' } else { '' }) + '">' + "`n")
+  [void]$sb.Append('<section class="sg-sec" id="story"><h2>The story</h2>' + ((@($sg['story']) | ForEach-Object { '<p>' + (SongLink ([string]$_) $songCtx) + '</p>' }) -join '') + "</section>`n")
+  [void]$sb.Append('<section class="sg-sec" id="meaning"><h2>What it says</h2>' + ((@($sg['meaning']) | ForEach-Object { '<p>' + (SongLink ([string]$_) $songCtx) + '</p>' }) -join '') + "</section>`n")
+  [void]$sb.Append('<section class="sg-sec" id="words"><h2>The words</h2>')
+  if ($sg['text']) { [void]$sb.Append((SongWords $sg)) }
+  elseif (-not $sg['pd']) { [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are still in copyright, so they are not printed here. &#8220;What it says&#8221; above gives their theme in our own words' + $(if ($sg['video']) { ', and the performance below lets you hear them' } else { '' }) + '.</p>') }
+  else { $songNoText++; [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are in the public domain, but no free, reliable edition of them has been found yet to import them from, and the Institute never types a song&#8217;s words from memory. &#8220;What it says&#8221; above tells what they are about.</p>') }
+  [void]$sb.Append("</section>`n</div>`n")
+  $v = $sg['video']
+  if ($v) {
+    $vid = [string]$v['id']
+    [void]$sb.Append('<section class="sg-sec" id="listen"><h2>Listen</h2><div class="sg-video" data-yt="' + (Hx $vid) + '" data-title="' + (Hx ($title + ': ' + [string]$v['note'])) + '"><button type="button" class="sg-play"><span class="sg-play-ic" aria-hidden="true"></span><span class="sg-play-t">Play the performance</span><span class="sg-play-n">' + (Hx ([string]$v['note'])) + '</span></button></div>' +
+      '<p class="sg-video-cr">On YouTube, from the channel ' + (Hx ([string]$v['channel'])) + '. Pressing play loads YouTube&#8217;s player. <a href="https://www.youtube.com/watch?v=' + (Hx $vid) + '" target="_blank" rel="noopener">Watch on YouTube<span aria-hidden="true"> &#8599;</span></a></p>' + "</section>`n")
+  }
+  $ins = @($sg['inspired']); $insBy = @($sg['inspiredBy'])
+  if ($ins.Count) { [void]$sb.Append('<section class="sg-sec" id="inspired"><h2>What it inspired</h2>' + (SongChain $ins) + "</section>`n") }
+  if ($insBy.Count) { [void]$sb.Append('<section class="sg-sec" id="inspired-by"><h2>What it drew on</h2>' + (SongChain $insBy) + "</section>`n") }
+  $chips = @(@($sg['people']) + @($sg['places']) + @($sg['events']) | Where-Object { $_ } | Select-Object -Unique)
+  if ($chips.Count) { [void]$sb.Append('<section class="sg-sec"><h2>People, places and events</h2><div class="tih-tags">' + (($chips | ForEach-Object { SongChip ([string]$_) }) -join '') + "</div></section>`n") }
+  $srcs = @($sg['sources'])
+  if ($srcs.Count) { [void]$sb.Append('<section class="sg-sec sg-sources"><h2>Sources</h2><ul class="essay-refs">' + (($srcs | ForEach-Object { '<li>' + ([regex]::Replace((Hx ([string]$_)), 'https?://[^\s,;<]+', $SONGURL)) + '</li>' }) -join '') + "</ul></section>`n") }
+  [void]$sb.Append((CiteBox $title ($SITE + $path) 'Songs in History') + "`n")
+  $pv = $SONGS[($songI - 1 + $SONGS.Count) % $SONGS.Count]; $nx = $SONGS[($songI + 1) % $SONGS.Count]
+  [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other songs"><a class="prev" rel="prev" href="/songs/' + $pv['slug'] + '"><span class="lbl">&larr; Earlier song</span><span class="nm">' + (Hx ([string]$pv['title'])) + '</span></a><a class="next" rel="next" href="/songs/' + $nx['slug'] + '"><span class="lbl">Later song &rarr;</span><span class="nm">' + (Hx ([string]$nx['title'])) + "</span></a></nav>`n")
+  [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/songs/">All songs in history &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n<script src=`"/songs.js?v=$songJsV`" defer></script>`n")
+  $hasWords = [bool]$sg['text']
+  # the longest subtitle that keeps the title within 70 characters (FitTitle drops the labels after it first)
+  $ptName = $title + $(if ($loc -and $loc -ne $title -and ($title.Length + $loc.Length) -lt 40) { ' (' + $loc + ')' } else { '' })
+  $ptSub = @($(if ($hasWords) { ': Story, Meaning and Lyrics'; ': History and Lyrics' } else { ': Story and Meaning'; ': History' }) | Where-Object { ($ptName + $_).Length -le 70 })
+  $pt = $ptName + $(if ($ptSub.Count) { $ptSub[0] } else { '' }) + ' — Songs in History — The Epoch Institute'
+  $desc = [EpochBuild.W]::Summary(([string]@($sg['story'])[0]), 155)
+  $ld = $crumb[1] + ',{"@type":"MusicComposition","name":' + (Js $title) + $(if ($loc) { ',"alternateName":' + (Js $loc) } else { '' }) + ',"url":' + (Js ($SITE + $path)) + ',"description":' + (Js $desc) +
+    ',"genre":[' + ((@($sg['types']) | ForEach-Object { Js $SONGTYPE[[string]$_] }) -join ',') + ']' + $(if (@($sg['langs']).Count) { ',"inLanguage":[' + ((@($sg['langs']) | ForEach-Object { Js ([string]$_['code']) }) -join ',') + ']' } else { '' }) +
+    $(if (SongPerson ([string]$sg['lyricist'])) { ',"lyricist":{"@type":"Person","name":' + (Js ([string]$sg['lyricist'])) + '}' } else { '' }) + $(if (SongPerson ([string]$sg['composer'])) { ',"composer":{"@type":"Person","name":' + (Js ([string]$sg['composer'])) + '}' } else { '' }) +
+    ',"isPartOf":{"@type":"CollectionPage","name":"Songs in History","url":"' + $SITE + '/songs/"},"publisher":' + $ORG + '}'
+  $ogS = Poster ('song-' + $slug)
+  Emit $path (Page @{ title = $pt; desc = $desc; path = $path; type = 'article'; img = $(if ($ogS) { $ogS } else { Poster 'page-songs' }); imgW = 1200; imgH = 630; ld = $ld; nav = 'songs'; body = $sb.ToString() })
+}
+# the index: every song by era, with filters (songs.js) and the songs that led to other songs
+$crumb = Crumbs @(@('Home', '/'), @('Songs in History', $null))
+$ib = New-Object Text.StringBuilder(120000)
+$songW = @($SONGS | Where-Object { $_['text'] }).Count; $songV = @($SONGS | Where-Object { $_['video'] }).Count
+$songLangs = @($SONGS | ForEach-Object { @($_['langs']) | ForEach-Object { [string]$_['code'] } } | Sort-Object -Unique).Count
+[void]$ib.Append('<main id="main" class="sg-page sg-index ref-page">' + "`n<div class=`"sg-wrap`">`n" + $crumb[0] + "`n")
+[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Songs in History</h1><p class="ref-lede">' + $SONGS.Count + ' songs that people have sung and handed down, in ' + $songLangs + ' languages, from a Sumerian hymn to the goddess of beer, copied about 1800 BCE, to songs of the last years of apartheid and of the Cold War. Each gives who made it, where and in what language, its story, what it says and the songs it led to. ' + $songW + ' carry their words: in the original and, for the songs not in English, romanized and translated line by line. ' + $songV + ' have a performance to listen to.</p></header>' + "`n")
+# filters: words in the name, type, era, region, with words, with a performance (songs.js; without it every song shows)
+[void]$ib.Append('<form class="sg-filters" role="search" aria-label="Find a song" onsubmit="return false"><label class="sg-f-q"><span class="sr-only">Find a song</span><input type="search" id="sg-q" placeholder="Find a song, a language, a place…" autocomplete="off"></label>' +
+  '<div class="sg-f-types" role="group" aria-label="Type of song"><button type="button" class="sg-f-type" data-t="" aria-pressed="true">All <span>' + $SONGS.Count + '</span></button>' +
+  ((@($SONGTYPE.Keys | ForEach-Object { $tk = $_; $tn = @($SONGS | Where-Object { @($_['types']) -contains $tk }).Count; if ($tn) { '<button type="button" class="sg-f-type" data-t="' + $tk + '" aria-pressed="false">' + $SONGTYPE[$tk] + ' <span>' + $tn + '</span></button>' } })) -join '') + '</div>' +
+  '<div class="sg-f-row"><label><span>Era</span><select id="sg-era"><option value="">All eras</option>' + ((@($SONGERA.Keys | ForEach-Object { '<option value="' + $_ + '">' + $SONGERA[$_] + '</option>' })) -join '') + '</select></label>' +
+  '<label><span>Region</span><select id="sg-region"><option value="">All regions</option>' + ((@($SONGS | ForEach-Object { [string]$_['region'] } | Sort-Object -Unique) | ForEach-Object { '<option>' + (Hx $_) + '</option>' }) -join '') + '</select></label>' +
+  '<label class="sg-f-chk"><input type="checkbox" id="sg-w"> With the words</label><label class="sg-f-chk"><input type="checkbox" id="sg-v"> With a performance</label></div>' +
+  '<p class="sg-f-count" id="sg-count" aria-live="polite"></p></form>' + "`n")
+foreach ($era in $SONGERA.Keys) {
+  $grp = @($SONGS | Where-Object { [string]$_['era'] -eq $era }); if (-not $grp.Count) { continue }
+  [void]$ib.Append('<section class="sg-era" data-era="' + $era + '"><h2 class="ref-sec-title">' + $SONGERA[$era] + '</h2><div class="sg-grid">')
+  foreach ($sg in $grp) {
+    $code = SongLang $sg; $loc = [string]$sg['local']
+    $q = ([string]$sg['title'] + ' ' + $loc + ' ' + [string]$sg['culture'] + ' ' + ((@($sg['langs']) | ForEach-Object { [string]$_['name'] }) -join ' ') + ' ' + [string]$sg['place'] + ' ' + [string]$sg['lyricist'] + ' ' + [string]$sg['composer'])
+    [void]$ib.Append('<a class="sg-card" href="/songs/' + $sg['slug'] + '" data-t="' + ((@($sg['types'])) -join ' ') + '" data-e="' + $era + '" data-r="' + (Hx ([string]$sg['region'])) + '" data-w="' + $(if ($sg['text']) { 1 } else { 0 }) + '" data-v="' + $(if ($sg['video']) { 1 } else { 0 }) + '" data-k="' + $(if ($sg['kids']) { 1 } else { 0 }) + '" data-q="' + (Hx $q) + '">' +
+      '<span class="sg-card-k">' + (Hx (SongTypes $sg)) + ' · ' + (Hx (SongYear $sg)) + '</span><span class="sg-card-t">' + (Hx ([string]$sg['title'])) + '</span>' +
+      $(if ($loc) { '<span class="sg-card-l">' + (SongLocal $loc $code) + '</span>' } else { '' }) +
+      '<span class="sg-card-m">' + (Hx ((@([string]$sg['culture'], ((@($sg['langs']) | ForEach-Object { ([string]$_['name']) -replace '\s*\(.*$', '' }) -join ', ')) | Where-Object { $_ }) -join ' · ')) + '</span>' +
+      '<span class="sg-card-f">' + $(if ($sg['text']) { '<span class="sg-badge sg-badge-w">Words</span>' } elseif (-not $sg['pd']) { '<span class="sg-badge sg-badge-c">In copyright</span>' } else { '' }) + $(if ($sg['video']) { '<span class="sg-badge sg-badge-v">Listen</span>' } else { '' }) + '</span></a>')
+  }
+  [void]$ib.Append("</div></section>`n")
+}
+[void]$ib.Append('<p class="sg-none" id="sg-none" hidden>No song matches these choices. <button type="button" id="sg-reset">Show every song</button></p>' + "`n")
+# songs that led to other songs in the library
+$songFam = New-Object Collections.Generic.List[string]
+foreach ($sg in $SONGS) { foreach ($x in @($sg['inspired'])) { if ($x['slug'] -and -not $x['back']) { $to = @($SONGS | Where-Object { $_['slug'] -eq $x['slug'] })[0]
+  $songFam.Add('<li><a href="/songs/' + $sg['slug'] + '">' + (Hx ([string]$sg['title'])) + '</a> <span class="sg-fam-arrow" aria-label="led to">&rarr;</span> <a href="/songs/' + $to['slug'] + '">' + (Hx ([string]$to['title'])) + '</a>' + $(if ($x['how']) { '<span class="sg-chain-h">' + (Hx ([string]$x['how'])) + '</span>' } else { '' }) + '</li>') } } }
+foreach ($sg in $SONGS) { foreach ($x in @($sg['inspiredBy'])) { if ($x['slug'] -and -not $x['back']) { $fr = @($SONGS | Where-Object { $_['slug'] -eq $x['slug'] })[0]
+  $songFam.Add('<li><a href="/songs/' + $fr['slug'] + '">' + (Hx ([string]$fr['title'])) + '</a> <span class="sg-fam-arrow" aria-label="led to">&rarr;</span> <a href="/songs/' + $sg['slug'] + '">' + (Hx ([string]$sg['title'])) + '</a>' + $(if ($x['how']) { '<span class="sg-chain-h">' + (Hx ([string]$x['how'])) + '</span>' } else { '' }) + '</li>') } } }
+if ($songFam.Count) { [void]$ib.Append('<section class="sg-sec sg-fam"><h2 class="ref-sec-title">Songs that led to songs</h2><p>Tunes travel: an anthem borrows a hymn&#8217;s melody, a farewell song becomes a graduation song on the other side of the world. These are the links between the songs in this library; every song&#8217;s page lists many more.</p><ul class="sg-chain">' + ($songFam -join '') + "</ul></section>`n") }
+[void]$ib.Append('<section class="sg-sec sg-howto"><h2 class="ref-sec-title">How the songs are told</h2><p>The words of a song appear only where they are in the public domain: traditional and anonymous songs, and words whose authors died long ago or that were published before 1930. They are imported from the editions that hold them (Wikisource, Project Gutenberg, or the public-domain words quoted in Wikipedia&#8217;s articles), never typed from memory, and each names its edition. Where no older translation is free to use, the English and the romanization are the Institute&#8217;s own, made line by line from the original; notes say where a line can be read more than one way. Songs whose words are still in copyright have their story and their theme, told in our own words, but not their words.</p><p>Each performance was chosen by ear and by its source: the performers&#8217; own channels, choirs, ensembles and institutions, and old recordings. YouTube&#8217;s player loads only when you press play.</p></section>' + "`n")
+[void]$ib.Append("</div>`n</main>`n<script src=`"/songs.js?v=$songJsV`" defer></script>`n")
+$title = 'Songs in History: Hymns, Anthems, Laments and Folk Songs — The Epoch Institute'
+$desc = "$($SONGS.Count) songs handed down through history, from ancient hymns to protest songs: who made them, what they say, their words and their meaning, and a performance."
+Emit '/songs/' (Page @{ title = $title; desc = $desc; path = '/songs/'; type = 'website'; img = (Poster 'page-songs'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/songs/") + '}'); nav = 'songs'; body = $ib.ToString() })
+Say ("songs in history: {0} songs ({1} with their words, {2} with a performance, {3} public-domain songs still without a text)" -f $SONGS.Count, $songW, $songV, $songNoText)
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Research Series: /essays/<slug> from scripts/essays/NN-slug.html, the cards of /research-series (build:essays) and
 # feed.xml. Each source starts with a comment of "key: value" lines (title, subtitle, card: the text of its card,
 # desc, published: yyyy-mm-dd, picture: "entry slug|caption" or cover: "path|alt", profiles: slugs), then the essay:
@@ -3437,6 +3667,7 @@ $SECTIONS = [ordered]@{
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
   games        = @{ t = 'Games'; h = '/games'; k = 'Eleven games'; d = 'Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
   inventions   = @{ t = 'Inventions Tree'; h = '/inventions'; k = "$($INVN.Count) inventions"; d = 'From stone tools to the World Wide Web: when and where each invention and discovery first appeared, what it built on and what it led to.'; pic = @('printing-press', 'magnetic-compass') }
+  songs        = @{ t = 'Songs in History'; h = '/songs/'; k = "$($SONGS.Count) songs"; d = 'Hymns, anthems, laments and folk songs handed down through history: who made them, what they say, their words in the original and in English, and a performance.'; pic = @('cantigas-de-santa-maria', 'god-save-the-king') }
   societies    = @{ t = 'Social Ladders'; h = '/societies/'; k = "$($SOCS.Count) societies"; d = 'From emperor to enslaved: how societies ranked their people, how many stood on each rung and how they rose or fell. Be born into one by chance.'; pic = @('feudalism', 'standard-of-ur') }
   governance   = @{ t = 'Forms of Government'; h = '/governance'; k = "$(@($EMPS | Where-Object { [string]$_['kind'] -eq 'government' }).Count) forms"; d = 'Who should rule? From chiefdoms and city-states to monarchies, republics, democracies and dictatorships: how each form works, and the case for and against it.'; pic = @('roman-senate', 'althing', 'magna-carta') }
   flashcards   = @{ t = 'Flashcards'; h = '/flashcards'; k = "$($FCN.ToString('N0')) cards"; d = 'Terms, faces, capitals and dates in decks of cards: the ones you miss come back sooner, the ones you know wait longer.'; pic = @('house-of-wisdom', 'imperial-examination') }
@@ -3538,10 +3769,10 @@ function HubCard($s, [string]$cls) {
 SetBlock "$Repo\atlas" 'atlas-presets' (($PRESETS | ForEach-Object { '<button type="button">' + (Hx $_[0]) + '</button>' }) -join '')   # in the page, so the map does not move when atlas.js runs
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
-$HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'today', 'glossary')),
+$HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'songs', 'today', 'glossary')),
   @('Through time', @('atlas', 'timeline', 'faiths', 'centuries', 'years', 'inventions')), @('Explore', @('explorer', 'race', 'connections', 'paths', 'societies', 'governance')),
   @('Play', @('quiz', 'games', 'flashcards', 'write', 'kids', 'passport')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors', 'start')))
-SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(switch (@($_[1]).Count) { 5 { ' hub-5' } 6 { ' hub-6' } default { '' } }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
+SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(switch (@($_[1]).Count) { 5 { ' hub-5' } 6 { ' hub-6' } 9 { ' hub-6' } default { '' } }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'atlas', 'countries', 'centuries', 'people', 'paths') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
 # "Try it yourself" on the home page (31 Oct 2026, to draw readers in): the interactive tools, each with a big picture, a
@@ -3670,9 +3901,9 @@ Say ("open data: {0} states ({1} placed), {2} relations, {3} curve points" -f $o
 
 # stale generated pages (entries, states or days that no longer exist)
 $htPlain = "# Generated by scripts/build-pages.ps1: the pages in this folder are extensionless HTML.`n<FilesMatch `"^[a-z0-9-]+$`">`n  ForceType text/html`n</FilesMatch>`n"
-foreach ($dir in 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
+foreach ($dir in 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs') { if ([EpochBuild.W]::WriteIfChanged("$Repo\$dir\.htaccess", $htPlain)) { $NWRITE++ } }
 $nDel = 0
-foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies') {
+foreach ($dir in 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs') {
   $full = Join-Path $Repo $dir; if (-not (Test-Path $full)) { continue }
   foreach ($f in Get-ChildItem $full -File) {
     if ($f.Extension -or $f.Name -eq 'index' -or $f.Name.StartsWith('.')) { continue }
@@ -3697,7 +3928,8 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('People in History', '/people/', 'people|who lived when'), @('Empire Explorer', '/explorer', 'explorer|power curves|rise and fall chart'),
   @('Rise and Fall Race', '/race', 'race|rise and fall race|empire race|bar chart race|compare empires|strongest empire'),
   @('Connections Map', '/connections', 'connections map|relations|network of states'), @('Reading Paths', '/paths/', 'paths|reading paths|where to start reading'),
-  @('Great Speeches', '/speeches/', 'speeches|famous speeches'), @('Write in Ancient Scripts', '/write', 'write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe'),
+  @('Great Speeches', '/speeches/', 'speeches|famous speeches'), @('Songs in History', '/songs/', 'songs|song|music|folk songs|hymns|anthems|national anthems|lyrics|song lyrics|protest songs|laments|lullabies|work songs|spirituals|history of music|old songs|ancient songs'),
+@('Write in Ancient Scripts', '/write', 'write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe'),
   @('Faith Maps', '/faiths', 'faith maps|spread of religions|religion maps'), @('History Quiz', '/quiz', 'quiz|daily quiz|trivia'),
   @('Inventions Tree', '/inventions', 'inventions|inventions tree|history of inventions|timeline of inventions|inventions and discoveries|discoveries|history of technology|who invented|first invented|history of science|history of medicine'),
   @('Forms of Government', '/governance', 'forms of government|types of government|systems of government|political systems|government|governments|who should rule|six forms of government|kinds of government'),
@@ -3720,6 +3952,7 @@ foreach ($c in $CENTPAGES) {   # "15th century": also "fifteenth century" and "1
   SgRow (CentTitle $c) ('/centuries/' + (CenturySlug $c)) 'century' $al
 }
 foreach ($spx in $SPS) { SgRow ([string]$spx['title']) ('/speeches/' + [string]$spx['slug']) 'speech' ([string]$spx['speaker']) }
+foreach ($sg in $SONGS) { $songAl = @([string]$sg['local'], ([string]$sg['title'] + ' lyrics'), ([string]$sg['title'] + ' meaning'), ([string]$sg['title'] + ' song')) | Where-Object { $_ -and $_ -ne [string]$sg['title'] }; SgRow ([string]$sg['title']) ('/songs/' + [string]$sg['slug']) 'song' ($songAl -join '|') }
 foreach ($p in $RP) { SgRow ([string]$p['title']) ('/paths/' + [string]$p['slug']) 'path' '' }
 foreach ($ey in $ESSAYS) { SgRow ([string]$ey.hd['title']) ('/essays/' + $ey.slug) 'essay' '' }
 foreach ($so in $SOCS) { SgRow ('Social Hierarchy of ' + $so.of) ('/societies/' + $so.slug) 'ladder' ('social classes of ' + $so.of + '|social structure of ' + $so.of + '|' + $so.short + ' social hierarchy|' + $so.short + ' social classes') }
@@ -3798,6 +4031,7 @@ foreach ($e in $ENT) { if ($e.img) { $IMGOF['/encyclopedia/' + $e.slug] = $e.img
 foreach ($p in $PROF) { $og = '/images/og/' + $p.Substring($p.LastIndexOf('/') + 1) + '.jpg'; if (Test-Path (Join-Path $Repo ($og.TrimStart('/') -replace '/', '\'))) { $IMGOF[$p] = $og } }
 foreach ($ey in $ESSAYS) { if ($ey.pic) { $IMGOF['/essays/' + $ey.slug] = $ey.pic } }
 foreach ($so in $SOCS) { $og = Poster ('society-' + $so.slug); if ($og) { $IMGOF['/societies/' + $so.slug] = $og } elseif ($so.pic -and $so.pic.img) { $IMGOF['/societies/' + $so.slug] = $so.pic.img } }
+foreach ($sg in $SONGS) { $og = Poster ('song-' + [string]$sg['slug']); if ($og) { $IMGOF['/songs/' + [string]$sg['slug']] = $og } }
 foreach ($kv in $STX.GetEnumerator()) { $im = [string]$kv.Value['img']; if ($im -and (Test-Path (Join-Path $Repo ($im.TrimStart('/') -replace '/', '\')))) { $IMGOF['/state/' + $kv.Key] = $im } }
 $SMG = [ordered]@{ pages = New-Object System.Collections.Generic.List[string]; profiles = New-Object System.Collections.Generic.List[string]; encyclopedia = New-Object System.Collections.Generic.List[string]; states = New-Object System.Collections.Generic.List[string]; years = New-Object System.Collections.Generic.List[string] }
 $LATEST = @{}

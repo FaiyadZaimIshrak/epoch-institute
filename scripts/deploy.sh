@@ -37,7 +37,7 @@ ROOT_EXTRA=('*.txt' '*.xml' '*.svg' '*.png' '*.ico')              # line 9: copi
 PAGES=(index about research research-series profiles community contributors dataset explorer connections atlas quiz
   contact start games kids search timeline passport write faiths flashcards race inventions governance)  # line 10
 GENERATED=(encyclopedia state today-in-history countries centuries paths speeches years people essays articles
-  teachers societies)                                              # line 11: the only folders synced with --delete (societies: Oct 2026)
+  teachers societies songs)                                        # line 11: the only folders synced with --delete (societies: Oct 2026; songs: Nov 2026)
 DIRS=(sitemaps fonts css)                                          # line 12 (css/: scripts/split-css.js, Oct 2026)
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
   data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans data/societies data/inventions.json)  # line 14

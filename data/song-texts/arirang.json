@@ -1,0 +1,93 @@
+{
+ "slug": "arirang",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "아리랑 아리랑 아라리요",
+     "아리랑 고개로 넘어간다",
+     "나를 버리고 가시는 님은",
+     "십리도 못가서 발병난다"
+    ],
+    [
+     "아리랑 아리랑 아라리요",
+     "아리랑 고개로 넘어간다",
+     "청천하늘엔 잔 별도 많고",
+     "우리네 가슴엔 꿈도 많다"
+    ],
+    [
+     "아리랑 아리랑 아라리요",
+     "아리랑 고개로 넘어간다",
+     "저기 저 산이 백두산이라지",
+     "동지 섣달에도 꽃만 핀다"
+    ]
+   ],
+   "credit": "Traditional (the Gyeonggi or standard Arirang)",
+   "url": "https://ko.wikisource.org/wiki/%EC%95%84%EB%A6%AC%EB%9E%91",
+   "licence": "",
+   "source": "ko",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Arirang, arirang, arariyo,",
+     "over Arirang Pass one goes.",
+     "My love, who leaves me behind and goes,",
+     "will not go even ten ri before his feet fall sick."
+    ],
+    [
+     "Arirang, arirang, arariyo,",
+     "over Arirang Pass one goes.",
+     "In the clear blue sky there are many small stars,",
+     "and in our hearts there are many dreams."
+    ],
+    [
+     "Arirang, arirang, arariyo,",
+     "over Arirang Pass one goes.",
+     "That mountain over there, they say, is Baekdusan;",
+     "even in the eleventh and twelfth months, only flowers bloom."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Arirang arirang arariyo",
+     "Arirang gogaero neomeoganda",
+     "Nareul beorigo gasineun nimeun",
+     "Simnido motgaseo balbyeongnanda"
+    ],
+    [
+     "Arirang arirang arariyo",
+     "Arirang gogaero neomeoganda",
+     "Cheongcheonhaneuren jan byeoldo manko",
+     "Urine gaseumen kkumdo manta"
+    ],
+    [
+     "Arirang arirang arariyo",
+     "Arirang gogaero neomeoganda",
+     "Jeogi jeo sani Baekdusaniraji",
+     "Dongji seotdaredo kkonman pinda"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (Revised Romanization of Korean)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "Revised Romanization of Korean",
+ "notes": [
+  "lines 1.1, 2.1, 3.1: 'arirang' and 'arariyo' are refrain words with no agreed meaning; kept untranslated. 'Arirang' in line 2 is the name of the pass (gogae, a hill pass), real or imagined.",
+  "line 1.2 (and 2.2, 3.2): the subject is unstated; 'one goes' (literally 'crosses over by Arirang Pass'). It can be read as the singer or the departing lover.",
+  "line 1.3: 'nim' is a respectful word for the beloved; the honorific verb 'gasineun' ('who goes', honorific) shows respect even in reproach. The beloved's sex is not stated; 'his' is a choice.",
+  "line 1.4: ten ri (sim-ri) is about 4 km, i.e. not far at all; 'balbyeong nanda' = 'gets foot sickness', sore or lame feet.",
+  "line 2.4: other sung versions have 'sorrows' or 'worries' (e.g. 수심) here instead of 'dreams' (꿈); the imported text has 꿈.",
+  "line 3.3: Baekdusan (Mount Paektu), the highest mountain of Korea, on the border with China; kept as a name.",
+  "line 3.4: 'dongji seotdal' = the month of the winter solstice (the 11th lunar month) and the last (12th) lunar month, i.e. the depth of winter.",
+  "rom: RR follows pronunciation, so 십리 is 'simni', 많고/많다 'manko'/'manta', 꽃만 'kkonman'; spacing as in the original (못가서 one word)."
+ ]
+}

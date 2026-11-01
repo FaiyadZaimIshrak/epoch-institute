@@ -299,7 +299,7 @@ var SEARCH_TYPES = { person: 'Person', event: 'Event', place: 'Place', polity: '
   institution: 'Institution', term: 'Term', idea: 'Idea', work: 'Work', factor: 'Factor' };
 // the site's own pages (search-pages.js, written by the builder): their label and how much they count for. A tool
 // named like the query is usually what was meant ("atlas", "games"), so pages count most.
-var SEARCH_PAGE_KINDS = { page: ['Page', 25], country: ['Country history', 12], century: ['Century', 15], speech: ['Speech', 5], path: ['Reading path', 5], essay: ['Essay', 5], ladder: ['Social ladder', 6] };
+var SEARCH_PAGE_KINDS = { page: ['Page', 25], country: ['Country history', 12], century: ['Century', 15], speech: ['Speech', 5], path: ['Reading path', 5], essay: ['Essay', 5], ladder: ['Social ladder', 6], song: ['Song', 6] };
 function searchFold(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'ʿʾ]/g, ''); }
 // "hastings" means the Battle of Hastings as much as Hastings Banda: a name's words after a leading "Battle of",
 // "Kingdom of" … count almost as its beginning
@@ -476,7 +476,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=1c9df8d8f8';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=e484f10289';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=004236d7e1';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -675,7 +675,8 @@ function initNav(activePage) {
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
       ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
-        ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history']]],
+        ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
+        ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]],
       ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history'], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
         ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'], ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']]]]],
     ['play', 'Play', [
@@ -783,6 +784,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/societies/">Social Ladders</a>
         <a class="footer-link" href="/inventions">Inventions Tree</a>
         <a class="footer-link" href="/speeches/">Great Speeches</a>
+        <a class="footer-link" href="/songs/">Songs in History</a>
         <a class="footer-link" href="/paths/">Reading Paths</a>
         <a class="footer-link" href="/research-series">Research Series</a>
         <a class="footer-link" href="/quiz">History Quiz</a>
@@ -923,7 +925,7 @@ function initNav(activePage) {
     var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
       [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path'],
       [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech'], [/^\/essays\/[a-z0-9-]+$/, 'essay'],
-      [/^\/(religion|language|culture|movement|government)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article'], [/^\/societies\/[a-z0-9-]+$/, 'social ladder']];
+      [/^\/(religion|language|culture|movement|government)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article'], [/^\/societies\/[a-z0-9-]+$/, 'social ladder'], [/^\/songs\/[a-z0-9-]+$/, 'song']];
     var kind = null;
     if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
       KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
@@ -1082,7 +1084,7 @@ function initNav(activePage) {
     var here = location.pathname.replace(/\/+$/, '') || '/', seen = get('epoch-seen', []);
     if (!Array.isArray(seen)) seen = [];
     // every reading page counts (the passport at /passport reads epoch-seen); epoch-visits: the UTC days with a visit
-    if (/^\/(empire|religion|language|culture|movement|government|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles|societies)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
+    if (/^\/(empire|religion|language|culture|movement|government|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles|societies|songs)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
     var vday = Math.floor(Date.now() / 864e5), visits = get('epoch-visits', []);
     if (Array.isArray(visits) && visits[visits.length - 1] !== vday) { visits.push(vday); put('epoch-visits', visits.slice(-400)); }
     function isSeen(h) { return seen.indexOf(String(h || '').replace(/\/+$/, '')) >= 0; }
@@ -1156,6 +1158,7 @@ function initNav(activePage) {
       ['main.day-page', 'h1, .ref-lede, .day-events .tih-event-card'],
       ['main.yr-year', 'h1, .yr-head .ref-lede, .yr-events .tih-event-card, .yr-prof li'],
       ['article.essay-view:not(.cm-article)', 'h1, .essay-sub, .essay-body h2, .essay-body h3, .essay-body p, .essay-body li'],
+      ['article.sg-view', 'h1, header [data-say], #story > *, #meaning > *, #words > h2, #words [data-say]'],
       ['article.cm-article', 'h1, .essay-sub, .cm-by, .cm-body h2, .cm-body h3, .cm-body p:not(.cm-src)']
     ];
     var type = null, root = null;

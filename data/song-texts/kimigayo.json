@@ -1,0 +1,53 @@
+{
+ "slug": "kimigayo",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "君が代。ちよにやちよに。",
+     "さゞれいしの。巖となりて。",
+     "こけのむすまで。"
+    ]
+   ],
+   "credit": "Kokin Wakashū (c. 905); as published with the national melody (1893)",
+   "url": "https://ja.wikisource.org/wiki/%E5%90%9B%E3%81%8C%E4%BB%A3_(%E7%A5%9D%E6%97%A5%E5%A4%A7%E7%A5%AD%E6%97%A5%E6%AD%8C%E8%A9%9E%E4%B8%A6%E6%A5%BD%E8%AD%9C)",
+   "licence": "{{PD-old}}",
+   "source": "ja",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Thousands of years of happy reign be thine!",
+     "Rule on, my Lord, till what are pebbles now,",
+     "By age united, to great rocks shall grow,",
+     "Whose venerable sides the moss doth line."
+    ]
+   ],
+   "credit": "Translated by Basil Hall Chamberlain",
+   "url": "https://en.wikisource.org/wiki/Kimi_ga_Yo_(Chamberlain)",
+   "licence": "{{PD-US}}",
+   "source": "en",
+   "own": false
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Kimigayo, chiyo ni yachiyo ni,",
+     "sazareishi no, iwao to narite,",
+     "koke no musu made."
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (modified Hepburn)",
+   "own": true
+  }
+ },
+ "aligned": false,
+ "tentative": false,
+ "scheme": "modified Hepburn",
+ "notes": [
+  "Romanization: modified Hepburn of the words as they are read and sung (modern pronunciation); the historical kana spelling of the original is not transliterated letter by letter (in this short text no kana spelling differs from the sung form). 巖 is read iwao; in さゞれいし the voiced repeat sign ゞ is written out (sazareishi). The 。 phrase marks become commas, with a full stop at the end.",
+  "line 1: this 1893 printing has 君が代 without the particle は (wa) that the anthem as now sung has after it (Kimigayo wa); the romanization follows the text as printed. The editor may want to say so beside it.",
+  "en is null as instructed (Chamberlain's translation is used). It has four lines in one stanza and this text has three, so the two cannot be shown line by line against each other."
+ ]
+}

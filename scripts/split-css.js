@@ -18,7 +18,7 @@ const fs = require('fs'), path = require('path'), zlib = require('zlib');
 const R = path.resolve(__dirname, '..'), CHECK = process.argv.includes('--check');
 const HAND = ['index', 'research', 'research-series', 'about', 'contributors', 'dataset', 'explorer', 'profiles', 'community', 'connections', 'atlas', 'quiz',
   'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'write', 'faiths', 'flashcards', 'race', 'inventions', 'governance', '404.html'];
-const GENERATED = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies'];
+const GENERATED = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs'];
 const PROFILES = ['empire', 'religion', 'language', 'culture', 'movement', 'government'];
 // every script counts, data files too: epoch-stats.js looks like data but draws the profiles' radar panel (its title,
 // tags and bars), whose rules a first cut without it left out. The data's words add a few rules (0.4 KB), never miss one.

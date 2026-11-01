@@ -11,7 +11,7 @@ A new root page goes into the FilesMatch list at the top of the root .htaccess a
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
 Folders with an `index` page (DirectoryIndex) and generated pages: encyclopedia/ · state/ · today-in-history/ ·
-countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ · societies/ (each has an .htaccess forcing text/html;
+countries/ · centuries/ · paths/ · speeches/ · years/ · people/ · teachers/ · societies/ · songs/ (each has an .htaccess forcing text/html;
 /folder redirects to /folder/). essays/ holds the generated essay pages only: /essays and /essays/ redirect to /research-series;
 articles/ likewise holds the community article pages (/articles → /community).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
@@ -22,7 +22,7 @@ Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and l
 Profiles · Encyclopedia · Maps & Time ▾ · Themes ▾ · Play ▾ · Today in History · More ▾.
 - Maps & Time: Maps (Atlas, Faith Maps, Connections, States) | Time (World Timeline, Centuries, Year by Year, Country
   Histories, Rise and Fall Race, Empire Explorer).
-- Themes: Societies and ideas (People, Forms of Government, Social Ladders, Inventions Tree, Great Speeches) | Read and discover (Reading
+- Themes: Societies and ideas (People, Forms of Government, Social Ladders, Inventions Tree, Great Speeches, Songs in History) | Read and discover (Reading
   Paths, Research Series, Glossary, Find Your Way In).
 - Play: History Quiz, History Games, Flashcards, Write in Ancient Scripts, Kids Corner, My Passport, and "Surprise me".
 - More (the Institute): About, Research Hub, Open Data, Teachers' Corner, Community, Submit an Article, Write for Us
@@ -39,7 +39,7 @@ panel at the right. The phone menu: the Display row, Profiles, Encyclopedia, Tod
 Time / Themes & Play / Institute) and the newsletter; the footer of every page except /contact starts with "Spotted a
 mistake on this page? Suggest a correction" (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, songs, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -832,6 +832,60 @@ Berlin): their settings and aftermaths were checked against the entries and Wiki
 (Parchwitz: Carlyle, from Retzow, "night of December 3d, 1757"), and their links use only entries that exist (no
 entry yet for the Investiture Controversy, Young Italy, the UNIA, the Nika riots, Truman, Brandt, Tilak, Lafayette …).
 
+## Songs in History (/songs/, /songs/<slug>; Nov 2026)
+126 songs handed down through history (the user's brief: origin, writer, culture, language and place, type, the words
+in the original, romanized and in English, what they inspired, a YouTube performance), from the Hymn to Ninkasi
+(c. 1800 BCE) to Wind of Change (1990), every region, 61 languages. The user's choices: about 120 songs; a song still in
+copyright gets its entry WITHOUT its words; one performance per song, hand-picked and checked.
+- Source: scripts/songs/<slug>.txt, one song each: header lines (title, local: its own title in its script / its
+  romanization, status: "pd | reason" or "copyright | reason" (shown as "The words"), lyricist, composer, culture,
+  language: "code | name ; code | name", place, date (as shown), year (sorting, the era band and the card's
+  "c. …"), region (REGIONS), types (sacred, lament, celebration, love, lullaby, work, war, anthem, protest, ballad,
+  dance), people, places, events (";": chips to the profile of that name, else the one entry of that name, else
+  plain; the entry pages list their songs, "Songs in history"), kids (yes/no: "no" folds story, meaning and words in
+  Kids mode behind a note) and kid), then "== story", "== meaning" (for a song in copyright its THEME only, in our
+  words, never a paraphrase of its lines), "== inspired" and "== inspired-by" (lines "title | year | how"; a title
+  that is another song's title or local title links it, and that song gets the reverse line; an album named after a
+  song never matches), "== sources"; "== lyrics-source" and "== notes" are the editor's (a block header is a line
+  "== name" alone: a note line "== meaning: …" once swallowed a meaning). Drafted by agents from saved Wikipedia
+  articles (scripts/songs/SONGS-GUIDE.md), every fact checked (the scratchpad's factcheck.md), then cleaned of drafting
+  notes ("death year not given in the article" …); era is derived from the year.
+- The words: NEVER typed. scripts/songs/sources.tsv (slug, part orig|en|rom, site: a Wikisource language code, w-xx
+  for the public-domain words quoted in a Wikipedia article, pg for Project Gutenberg, page, select, credit) →
+  scripts/songs/fetch-texts.js (selects: all, #n..#m, "a".."b", L"a".."b"; flags: nonum, noruby, norefs, nolabels,
+  dropcap … at its top; text-fixes.json for a source's slips, each matching once: Greensleeves' lost drop cap A;
+  cache %LOCALAPPDATA%\epoch-tools\song-cache; --peek=site:Page shows a page's stanzas) → imported/<slug>.json.
+  Only public-domain words: traditional or anonymous, authors dead long since, published before 1930 (US). Where no
+  free old translation exists, the English and the romanization are the Institute's own, made line by line
+  (translations/<slug>.json {en, rom, scheme, notes}: scripts/songs/TRANSLATION-GUIDE.md, every line checked;
+  schemes: SBL Hebrew, ALA-LC Arabic, IAST/ISO 15919, modified Hepburn as sung, Revised Romanization,
+  pinyin with tones, scientific transliteration), translation-fixes.json the editor's line fixes. merge-texts.js →
+  data/song-texts/<slug>.json (build input, not deployed; {parts: {orig, rom, en: {stanzas, credit, url, source,
+  own}}, aligned, tentative, scheme, notes}); a part with the original's shape stands beside it line by line, any
+  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 78 songs
+  carry words; 32 are in copyright (o sole mio too: Mazzucchi's share of the music, 2002 ruling; We Shall Overcome:
+  printed only once its free status is beyond doubt); 16 public-domain songs have no free edition found (make-data.js
+  GAPS: their pages say so), the Great Hymn to the Aten only Budge's 1923 translation.
+- Performances: scripts/songs/videos.tsv (slug, id, channel, note; 124 songs; none for Kumbaya and Ninkasi): the
+  performers' own channels, "- Topic" releases, choirs, ensembles, institutions and old records, never compilations
+  or re-uploads of albums, chosen by looking at each (scripts/songs/yt-search.js lists a search's results).
+  node scripts/songs/check-videos.js checks each through YouTube's oEmbed (exists, embeddable) into
+  videos-checked.json: RE-RUN IT before a release; make-data.js STOPS on a video that failed or was not checked.
+  The page shows a play button; songs.js loads youtube-nocookie.com's player only when it is pressed, plus a link out.
+- Build: build-pages.ps1 runs scripts/songs/make-data.js before the entry pages (it STOPS on a missing key, an unknown
+  type or region, public-domain words missing without a stated gap, copyright words present, a bad video row) and
+  reads scripts/songs/songs.json; "Songs in History" writes the pages (prose gold-linked with the year ±200; facts box;
+  the words with Original / Romanized / English switches, epoch-song-cols; over 40 lines the rest folds; credits and
+  "Notes on the translation"; Listen; What it inspired / What it drew on; chips; Sources; Cite; MusicComposition
+  JSON-LD) and /songs/ (filters by words, type, era, region, with the words, with a performance, kept in the address;
+  "Songs that led to songs"; how the songs are told). Titles "X: Story, Meaning and Lyrics" (or "Story and Meaning")
+  with " — Songs in History" (FitTitle drops it past 70). Listen reads the title, kid line, story, meaning and the
+  English lines ([data-say]: class names in shared-nav.js would pull song rules into every hand page's css).
+- Wiring: menu Themes → Societies and ideas, footer, Research Hub (Read: nine cards, three columns), search
+  (SEARCH_PAGES kind song, "X lyrics", "X meaning"), shelf and My Passport kind, sitemap, llms.txt, poster
+  page-songs.jpg (make-posters.js page "songs"), deploy.sh GENERATED, split-css GENERATED, check-site FOLDERS, the
+  root /songs → /songs/ redirect. Kids mode: the kid line, the "no" songs folded and left off the index.
+
 ## Write in ancient scripts (/write, the language profiles' #write)
 scribe.js: a keyboard for the 12 languages with scripts of their own (Latin, Nahuatl, Swahili and Quechua, written in
 the Latin alphabet, have none): Sumerian and Akkadian cuneiform, Egyptian hieroglyphs, Greek and Linear B, Imperial
@@ -1281,6 +1335,10 @@ Found while building the social ladders (30 Oct 2026), not done yet:
   press, also for Song woodblock and movable type), "slave trade" (the Atlantic slave trade, also for Viking and Maya
   trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the
   messianic figure, also the caliph al-Mahdi).
+Songs in History, not yet: "Songs" chips on the profiles (a scripts/song-links.js read by generator.html, then
+regen-profiles) and on the country histories; posters of their own (song-<slug>.jpg); the words of the 16 public-domain
+songs without a free edition (Dle Yaman, the Kumulipo, Tizita, the Hanuman Chalisa …); encyclopedia entries for the
+songs (only God Save the King, Advance Australia Fair and the Gita Govinda have one); more songs by the same files.
 Ideologies as a further profile kind, by the §"Kinds of profile" recipe. Yoruba religion
 has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.
 455 people of the encyclopedia still have no dates (legendary and biblical figures, and people whose Wikidata dates are

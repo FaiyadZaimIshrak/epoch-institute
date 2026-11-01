@@ -1,0 +1,86 @@
+{
+ "slug": "aloha-oe",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "Haʻaheo e ka ua i nā pali",
+     "Ke nihi aʻela i ka nahele",
+     "E hahai (uhai) ana paha i ka liko",
+     "Pua ʻāhihi lehua o uka"
+    ],
+    [
+     "Aloha ʻoe, aloha ʻoe",
+     "E ke onaona noho i ka lipo",
+     "One fond embrace,",
+     "A hoʻi aʻe au",
+     "Until we meet again"
+    ],
+    [
+     "ʻO ka haliʻa aloha i hiki mai",
+     "Ke hone aʻe nei i",
+     "Kuʻu manawa",
+     "ʻO ʻoe nō kuʻu ipo aloha",
+     "A loko e hana nei"
+    ],
+    [
+     "Maopopo kuʻu ʻike i ka nani",
+     "Nā pua rose o Maunawili",
+     "I laila hiaʻai nā manu",
+     "Mikiʻala i ka nani o ka liko"
+    ]
+   ],
+   "credit": "Liliʻuokalani (1878); the Hawaiian text as quoted in Wikipedia's article",
+   "url": "https://en.wikipedia.org/wiki/Aloha_%CA%BBOe",
+   "licence": "",
+   "source": "w-en",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Proud is the rain on the cliffs",
+     "Creeping stealthily through the forest",
+     "Following (pursuing) perhaps the leaf bud",
+     "The ʻāhihi lehua flower of the uplands"
+    ],
+    [
+     "Farewell to you, farewell to you",
+     "O fragrant one who dwells in the deep dark blue [?]",
+     "One fond embrace,",
+     "And then I go [?]",
+     "Until we meet again"
+    ],
+    [
+     "The fond remembrance that has come",
+     "Is sweetly stirring my",
+     "Heart [?]",
+     "You indeed are my beloved sweetheart",
+     "Within (me), at work now [?]"
+    ],
+    [
+     "I know clearly the beauty",
+     "The rose flowers of Maunawili",
+     "There the birds delight",
+     "Alert to the beauty of the leaf bud"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": null,
+ "notes": [
+  "Stanza breaks: the import's stanzas do not follow the song. The chorus is 2.1-2.4 plus 3.1 ('Until we meet again'); the second verse is 3.2-4.2; the third verse is 4.3-5.2. The editor may want to re-divide orig (and en with it) into verse 1 (4 lines), chorus (5), verse 2 (5), verse 3 (4).",
+  "lines 2.3 and 3.1: 'One fond embrace,' and 'Until we meet again' are in English in the original (Liliʻuokalani's own words); kept as they are.",
+  "line 1.3: the source gives the variant '(uhai)' beside 'hahai'; both mean to follow, chase, pursue. Kept as one line.",
+  "line 1.4: ʻāhihi is a kind of lehua (ʻōhiʻa) blossom; 'o uka' is 'of the uplands, inland'.",
+  "line 2.2: 'lipo' is the deep blue-black of depths or of distant forest; 'noho i ka lipo' can be 'dwelling in the dim (forest) depths'. 'Onaona' is fragrant, also gentle, sweet.",
+  "line 2.4: 'A hoʻi aʻe au' is literally 'and I return (go back)': taken as 'before I go'.",
+  "line 3.4: 'manawa' is time, and also the seat of the feelings (literally the fontanelle); here 'my heart, my feelings', though 'my time' is a possible reading.",
+  "line 4.2: 'A loko e hana nei' is elliptic: 'within, working now', i.e. stirring inside me. Sense uncertain.",
+  "Maunawili: a place on windward Oʻahu, kept as a name."
+ ]
+}

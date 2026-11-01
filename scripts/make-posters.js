@@ -232,6 +232,9 @@ page('inventions', { kind: 'mosaic', pics: pick(['antikythera-mechanism', 'quipu
   tease: INVN + ' inventions and discoveries, from stone tools to the World Wide Web: what each was built on, what it led to, and who made it first.', chips: ['Trace the road', 'By civilisation', 'Eleven lanes'], url: 'the-epoch-institute.org/inventions' });
 page('governance', { kind: 'mosaic', pics: pick(['roman-senate', 'prince-elector', 'landsgemeinde', 'westminster-system', 'kurultai', 'louis-xiv']), kicker: 'Forms of government', title: 'Who should rule?',
   tease: 'Twenty forms of government, from the chiefdom and the city-state to monarchy, democracy and dictatorship: how each works, and the case for and against it.', chips: ['20 forms', 'Aristotle’s six', 'Compared'], url: 'the-epoch-institute.org/governance' });
+const SONGN = fs.readdirSync(path.join(ROOT, 'scripts', 'songs')).filter(f => f.endsWith('.txt')).length;
+page('songs', { kind: 'mosaic', pics: pick(['cantigas-de-santa-maria', 'god-save-the-king', 'amir-khusrau', 'griots', 'nine-songs', 'book-of-psalms']), kicker: 'Songs in history', title: 'The songs that came down to us',
+  tease: SONGN + ' hymns, anthems, laments and folk songs handed down through history: who made them, what they say, and their words in English.', chips: ['Words and meaning', 'Romanized', 'Listen'], url: 'the-epoch-institute.org/songs/' });
 page('connections', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Connections', title: 'The states as a network', sub: 'Who ruled, succeeded and conquered whom', url: 'the-epoch-institute.org/connections' });
 page('start', { kind: 'tiles', tiles: EMB.slice(0, 96), kicker: 'Find your way in', title: 'Where should you start?', sub: 'Four questions, and reading paths that suit you', url: 'the-epoch-institute.org/start' });
 

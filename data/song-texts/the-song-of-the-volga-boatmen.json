@@ -1,0 +1,71 @@
+{
+ "slug": "the-song-of-the-volga-boatmen",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "Эй, ухнем! Эй, ухнем!",
+     "Ещё разик, ещё раз!",
+     "} 2 раза"
+    ],
+    [
+     "Разовьём мы березу́,",
+     "Разовьём мы кудряву́!",
+     "Ай-да, да, ай-да! Ай-да, да, ай-да!",
+     "Разовьём мы кудряву́!"
+    ]
+   ],
+   "credit": "Traditional; as collected by Mily Balakirev (published 1866)",
+   "url": "https://ru.wikisource.org/wiki/%D0%AD%D0%B9%2C_%D1%83%D1%85%D0%BD%D0%B5%D0%BC%2F%D0%91%D0%B0%D0%BB%D0%B0%D0%BA%D0%B8%D1%80%D0%B5%D0%B2_(%D0%A1%D0%9E)",
+   "licence": "{{PD-folklore}}",
+   "source": "ru",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Hey, let's heave! Hey, let's heave!",
+     "Once more, once again!",
+     "} twice"
+    ],
+    [
+     "We shall untwine the birch,",
+     "We shall untwine the curly one!",
+     "Ai-da, da, ai-da! Ai-da, da, ai-da!",
+     "We shall untwine the curly one!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Èj, uxnem! Èj, uxnem!",
+     "Eščë razik, eščë raz!",
+     "} 2 raza"
+    ],
+    [
+     "Razovʹëm my berezú,",
+     "Razovʹëm my kudrjavú!",
+     "Aj-da, da, aj-da! Aj-da, da, aj-da!",
+     "Razovʹëm my kudrjavú!"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (scientific transliteration)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "scientific transliteration",
+ "notes": [
+  "line 1.3: '} 2 раза' is the edition's repeat sign (the two lines above are sung twice), not a sung line; kept as a label ('} twice'). The page may want to show it as a note or drop it with its line in all three parts.",
+  "IMPORT: every line of stanza 2 begins with an invisible left-to-right mark (U+200E) from Wikisource; strip it from orig. en and rom leave it out.",
+  "lines 2.1, 2.2, 2.4: the acute accents on 'березу́', 'кудряву́' are the edition's stress marks (sung stress moved to the end, for the rhythm); kept in rom as 'ú'.",
+  "line 1.1: 'ухнем' is 'let us heave' with the cry 'ukh' in it: a hauling call, often rendered 'heave-ho'.",
+  "lines 2.1-2.4: 'разовьём' (we shall untwine, unwind, uncurl) and its object are disputed: the folk custom of curling and then uncurling birch branches in the spring rites (Semik), or a working image for unwinding the tow-rope; 'the curly one' is the birch. Rendered literally.",
+  "line 2.3: 'Ai-da, da, ai-da' is a refrain cry with no fixed sense, kept as sound.",
+  "line 2.1: 'березу' is written with е, not ё; romanized as written ('berezú')."
+ ]
+}

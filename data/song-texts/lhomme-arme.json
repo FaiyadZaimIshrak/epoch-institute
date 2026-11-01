@@ -1,0 +1,43 @@
+{
+ "slug": "lhomme-arme",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "L'homme armé doibt on doubter.",
+     "On a fait partout crier",
+     "Que chascun se viegne armer",
+     "D'un haubregon de fer.",
+     "L'homme armé doibt on doubter."
+    ]
+   ],
+   "credit": "Anonymous (15th century); as quoted in Wikipedia's article",
+   "url": "https://en.wikipedia.org/wiki/L'homme_arm%C3%A9",
+   "licence": "",
+   "source": "w-en",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "The armed man is to be feared.",
+     "Everywhere it has been proclaimed",
+     "That each man should come and arm himself",
+     "With a coat of iron mail.",
+     "The armed man is to be feared."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": null,
+ "notes": [
+  "lines 1 and 5: 'doubter' is Middle French for 'to fear, to dread' (modern 'redouter'), not modern 'douter', to doubt.",
+  "line 2: 'On a fait partout crier' is literally 'they have had it cried everywhere': announced by public criers.",
+  "line 4: 'haubregon' (haubergeon) is a short coat of mail, lighter than a hauberk.",
+  "Who the 'armed man' was meant to be (a soldier in general, the Turk, a crusader, a pun on a name) is disputed; the translation keeps it general."
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "slug": "ka-mate",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "Ka Mate! Ka Mate!",
+     "Ka Ora! Ka Ora!",
+     "Ka Mate! Ka Mate!",
+     "Ka Ora! Ka Ora!",
+     "Tenei te tangata",
+     "Puhuruhuru nana nei i tiki mai",
+     "Whakawhiti te ra!",
+     "Upane, ka Upane",
+     "Upane, ka Upane",
+     "Whiti te ra!"
+    ]
+   ],
+   "credit": "Te Rauparaha, Ngāti Toa Rangatira (c. 1820); the text as set out in the Haka Ka Mate Attribution Act 2014 (New Zealand)",
+   "url": "https://en.wikisource.org/wiki/Haka_Ka_Mate_Attribution_Act_2014",
+   "licence": "{{PD-NZGov}}",
+   "source": "en",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "It is death! It is death!",
+     "It is life! It is life!",
+     "It is death! It is death!",
+     "It is life! It is life!",
+     "This is the man",
+     "The hairy one, who himself fetched",
+     "And made the sun shine!",
+     "One step up, another step up",
+     "One step up, another step up",
+     "The sun shines!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": null,
+ "notes": [
+  "line 1.1-4: 'Ka mate' / 'Ka ora' can be read as 'I die' / 'I live' or 'it is death' / 'it is life'; Te Rauparaha is said to have chanted it while hiding from his pursuers, unsure whether he would be found.",
+  "line 1.6: the source splits the phrase 'tangata puhuruhuru / nana nei i tiki mai / whakawhiti te ra' differently from the usual lineation; translated line by line as given. 'Puhuruhuru' is hairy; who the hairy man is (traditionally the chief Te Wharerangi, who sheltered him, though this is debated) is disputed, so it stays literal.",
+  "line 1.7: 'Whakawhiti te ra' is 'caused the sun to shine (or to cross over)'; the clause is 'who fetched (the sun) and made it shine'.",
+  "line 1.8-9: 'Upane' is a step, a terrace or a rank (of warriors); 'step by step, upward' is the usual sense, but the word is disputed.",
+  "Macrons: the Act's text as imported has none (Tenei for Tēnei, Puhuruhuru for Pūhuruhuru, Nana for Nāna, ra for rā); left as it stands."
+ ]
+}

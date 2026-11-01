@@ -1,0 +1,28 @@
+{"slug": "psalm-23", "scheme": "SBL general-purpose",
+ "en": null,
+ "rom": [
+  ["mizmor ledavid",
+   "YHWH ro'i lo ekhsar"],
+  ["bin'ot deshe yarbitseni",
+   "'al-mei menukhot yenahaleni"],
+  ["nafshi yeshovev",
+   "yankheni vema'gelei-tsedek lema'an shemo"],
+  ["gam ki-elekh begei tsalmavet",
+   "lo-ira ra'",
+   "ki-attah 'immadi",
+   "shivtekha umish'antekha",
+   "hemmah yenakhamuni"],
+  ["ta'arokh lefanai shulkhan",
+   "neged tsorerai",
+   "dishanta vashemen roshi",
+   "kosi revayah"],
+  ["akh tov vakhesed yirdefuni",
+   "kol-yemei khayyai",
+   "veshavti beveit-YHWH le'orekh yamim"]
+ ],
+ "notes": [
+  "SHAPE: orig has 6 stanzas of 2, 2, 2, 5, 4, 3 lines (by verse, split at the accents); the KJV 'en' in texts/psalm-23.json has 6 stanzas of ONE line each, and its first verse lacks the superscription 'A Psalm of David', which orig has as line 1.1. The KJV must be split to orig's lines (or orig joined to one line per verse) before the two can stand side by side.",
+  "The divine name is romanized as written, YHWH (the pointing is for the reading Adonai); the editor may prefer 'Adonai', as it is sung.",
+  "Cantillation marks and the paseq (|) are not romanized; qamats katan read as o (kol-yemei).",
+  "Romanization: initial aleph unmarked, other aleph and all ayin as '; dagesh forte doubled except in the digraphs sh, ts, kh; maqqef as a hyphen."
+ ]}

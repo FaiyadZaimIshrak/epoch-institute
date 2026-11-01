@@ -1,0 +1,123 @@
+{
+ "slug": "korobeiniki",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "«Ой, полна, полна коробушка,",
+     "Есть и ситцы и парча.",
+     "Пожалей, моя зазнобушка,",
+     "Молодецкого плеча!",
+     "Выди, выди в рожь высокую!",
+     "Там до ночки погожу,",
+     "А завижу черноокую —",
+     "Все товары разложу.",
+     "Цены сам платил не малые.",
+     "Не торгуйся, не скупись:",
+     "Подставляй-ка губы алые,",
+     "Ближе к милому садись!»"
+    ],
+    [
+     "Вот и пала ночь туманная,",
+     "Ждет удалый молодец.",
+     "Чу, идет! — пришла желанная,",
+     "Продает товар купец.",
+     "Катя бережно торгуется,",
+     "Всё боится передать.",
+     "Парень с девицей цалуется,",
+     "Просит цену набавлять.",
+     "Знает только ночь глубокая,",
+     "Как поладили они.",
+     "Распрямись ты, рожь высокая,",
+     "Тайну свято сохрани!"
+    ]
+   ],
+   "credit": "Nikolay Nekrasov, Korobeiniki (1861), the opening",
+   "url": "https://ru.wikisource.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%B1%D0%B5%D0%B9%D0%BD%D0%B8%D0%BA%D0%B8_(%D0%9D%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D0%B2)",
+   "licence": "",
+   "source": "ru",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "“Oh, full, full is my little box,",
+     "There are calicoes and brocade.",
+     "Take pity, my sweetheart,",
+     "On a young fellow's shoulder!",
+     "Come out, come out into the tall rye!",
+     "There I will wait until nightfall,",
+     "And when I catch sight of the dark-eyed one —",
+     "I will lay out all my wares.",
+     "I paid no small prices myself.",
+     "Do not haggle, do not be stingy:",
+     "Come, hold up your scarlet lips,",
+     "Sit closer to your dear one!”"
+    ],
+    [
+     "And now the misty night has fallen,",
+     "The bold young fellow waits.",
+     "Hark, she comes! — the longed-for one has come,",
+     "The merchant sells his wares.",
+     "Katya bargains carefully,",
+     "She keeps fearing to pay too much.",
+     "The lad and the girl kiss,",
+     "He asks her to raise the price.",
+     "Only the deep night knows",
+     "How they came to terms.",
+     "Straighten up, you tall rye,",
+     "Keep the secret sacredly!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "«Oj, polna, polna korobuška,",
+     "Estʹ i sitcy i parča.",
+     "Požalej, moja zaznobuška,",
+     "Molodeckogo pleča!",
+     "Vydi, vydi v rožʹ vysokuju!",
+     "Tam do nočki pogožu,",
+     "A zavižu černookuju —",
+     "Vse tovary razložu.",
+     "Ceny sam platil ne malye.",
+     "Ne torgujsja, ne skupisʹ:",
+     "Podstavljaj-ka guby alye,",
+     "Bliže k milomu sadisʹ!»"
+    ],
+    [
+     "Vot i pala nočʹ tumannaja,",
+     "Žaet udalyj molodec.",
+     "Ču, idet! — prišla želannaja,",
+     "Prodaet tovar kupec.",
+     "Katja berežno torguetsja,",
+     "Vsë boitsja peredatʹ.",
+     "Parenʹ s devicej caluetsja,",
+     "Prosit cenu nabavljatʹ.",
+     "Znaet tolʹko nočʹ glubokaja,",
+     "Kak poladili oni.",
+     "Rasprjamisʹ ty, rožʹ vysokaja,",
+     "Tajnu svjato soxrani!"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (scientific transliteration)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "scientific transliteration",
+ "notes": [
+  "IMPORT: orig lines 1.8 and 2.6 begin with Wikisource's verse numbers ('20 Все товары разложу.', '30 Всё боится передать.'): strip them from orig; en and rom leave them out.",
+  "line 1.1: 'коробушка' is a diminutive of 'короб', the pedlar's box or pack carried on the back (the korobeiniki are the pedlars who carry it).",
+  "line 1.3-1.4: 'take pity on a young fellow's shoulder' means: buy something and lighten the load he carries.",
+  "line 1.5: 'Выди' is a folk/poetic form of 'выйди' (come out).",
+  "line 2.6: 'передать' here means to overpay, to give more than the thing is worth.",
+  "line 2.7: 'цалуется' is the older spelling of 'целуется' (kisses); romanized as written.",
+  "line 2.8: 'asks her to raise the price' plays on the bargaining: he asks for more in return (more kisses). The subject is the lad.",
+  "line 1.3: 'зазнобушка', an affectionate folk word for a sweetheart (from 'зазноба')."
+ ]
+}

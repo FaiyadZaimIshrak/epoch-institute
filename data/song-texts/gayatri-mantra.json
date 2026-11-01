@@ -1,0 +1,47 @@
+{
+ "slug": "gayatri-mantra",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि ।",
+     "धियो यो नः प्रचोदयात् ॥१०॥"
+    ]
+   ],
+   "credit": "Rigveda 3.62.10",
+   "url": "https://sa.wikisource.org/wiki/%E0%A4%8B%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%83_%E0%A4%B8%E0%A5%82%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%82_%E0%A5%A9.%E0%A5%AC%E0%A5%A8",
+   "licence": "",
+   "source": "sa",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "That desirable radiance of the god Savitr may we meditate on,",
+     "who shall spur on our thoughts. (10)"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "tatsaviturvareṇyaṃ bhargo devasya dhīmahi |",
+     "dhiyo yo naḥ pracodayāt ||10||"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (IAST)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "IAST",
+ "notes": [
+  "line 1.1: dhīmahi is disputed. Grammatically it is most often taken from dhā- 'to place, receive' ('may we receive / take to ourselves'); the traditional reading takes it from dhī- 'to think' ('may we meditate on'). Either can be printed; the editor may prefer 'may we meditate on' as the sense most readers know.",
+  "line 1.2: yo (masculine 'who') refers to Savitr, the god, not to bhargas (neuter 'radiance'). dhiyaḥ: thoughts, insights, also prayers / poetic visions. pracodayāt: 'may he impel, urge on' (optative-like subjunctive).",
+  "Savitr (Savitṛ), 'the Impeller', a solar god of the Rigveda; kept as a name. vareṇya: 'to be chosen, choice, excellent'.",
+  "The text is the bare Rigveda verse 3.62.10, without the oṃ bhūr bhuvaḥ svaḥ that is prefixed in recitation; romanized with the sandhi joins as written (tatsaviturvareṇyaṃ = tat savitur vareṇyaṃ). The verse number ||10|| is kept."
+ ]
+}

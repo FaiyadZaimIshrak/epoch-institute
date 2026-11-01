@@ -1,0 +1,73 @@
+{
+ "slug": "tala-al-badru-alayna",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "طلع البدر علينا",
+     "من ثنيات الوداع",
+     "وجب الشكر علينا",
+     "ما دعا للـه داع"
+    ],
+    [
+     "أيها المبعوث فينا",
+     "جئت بالأمر المطاع",
+     "جئت شرفت المدينة",
+     "مرحبا يا خير داع"
+    ]
+   ],
+   "credit": "Traditional; the Arabic text as quoted in Wikipedia's article",
+   "url": "https://en.wikipedia.org/wiki/Tala%CA%BD_al-Badru_%CA%BDAlayna",
+   "licence": "",
+   "source": "w-en",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "The full moon has risen over us",
+     "from the passes of al-Wadaʿ;",
+     "giving thanks is our duty",
+     "for as long as any caller calls to God."
+    ],
+    [
+     "O you who were sent among us,",
+     "you have come with the command to be obeyed;",
+     "you have come, you have honoured the city:",
+     "welcome, O best of callers!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Talaʿa al-badru ʿalaynā",
+     "min thanīyāt al-wadāʿ",
+     "wajaba al-shukru ʿalaynā",
+     "mā daʿā lillāhi dāʿ"
+    ],
+    [
+     "Ayyuhā al-mabʿūthu fīnā",
+     "jiʾta bi-al-amri al-mutāʿ",
+     "jiʾta sharrafta al-Madīnah",
+     "marhaban yā khayra dāʿ"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (ALA-LC)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "ALA-LC",
+ "notes": [
+  "Source text (line 2.2): 'ﺑﺎلأمر' is typed with Arabic presentation-form characters (U+FE91, U+FE8E) for its first two letters; normalise them to the ordinary letters ب ا before display or search.",
+  "line 1.1: 'al-badr' is the full moon; in the tradition it stands for Muhammad.",
+  "line 1.2: 'Thaniyyat al-Wadaʿ' is a place name, a pass (or passes) by Medina, literally 'the passes of farewell'; kept as a name. The pass is usually placed on the north side of the city, on the road to Syria, which is why some writers doubt the traditional link with Muhammad's arrival from Mecca in 622: the editor may want the page to state the occasion as tradition.",
+  "line 1.4: 'mā daʿā lillāhi dāʿ' is durational ('as long as a caller calls to God'); 'dāʿ' (here and in 2.4) is the pausal form of 'dāʿin', 'one who calls, summons'.",
+  "line 2.4: 'khayra dāʿ' can also be read 'best of those who summon (to God)'.",
+  "Romanization: ALA-LC without dots under letters, as the guide asks (so ṭ and ḥ in 'talaʿa', 'marhaban', 'mutāʿ' appear as t and h); the source is unvocalised, so the vowels are those of the usual sung reading; tāʾ marbūṭah in pausa as -ah (al-Madīnah); 'thanīyāt' follows ALA-LC's īy for the doubled yāʾ."
+ ]
+}

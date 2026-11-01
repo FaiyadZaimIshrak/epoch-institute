@@ -1,0 +1,110 @@
+{
+ "slug": "kojo-no-tsuki",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "春高楼の花の宴",
+     "巡る盃影さして",
+     "千代の松が枝分け出でし",
+     "昔の光今いづこ"
+    ],
+    [
+     "秋陣営の霜の色",
+     "鳴きゆく雁の数見せて",
+     "植うる剣に照り沿ひし",
+     "昔の光今いづこ"
+    ],
+    [
+     "今荒城の夜半の月",
+     "変はらぬ光誰がためぞ",
+     "垣に残るはただ葛",
+     "松に歌ふはただ嵐"
+    ],
+    [
+     "天上影は変はらねど",
+     "栄枯は移る世の姿",
+     "映さむとてか今も尚",
+     "ああ荒城の夜半の月"
+    ]
+   ],
+   "credit": "Doi Bansui (1901)",
+   "url": "https://ja.wikisource.org/wiki/%E8%8D%92%E5%9F%8E%E3%81%AE%E6%9C%88",
+   "licence": "{{PD-Japan-auto-expired|deathyear=1952}}",
+   "source": "ja",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "In spring, the flower banquet in the high tower;",
+     "the cups going round, with the light falling into them;",
+     "through the branches of the thousand-year pines it came out:",
+     "that light of old, where is it now?"
+    ],
+    [
+     "In autumn, the colour of frost on the camp,",
+     "showing the count of the wild geese crying as they pass;",
+     "it shone along the swords stood in the ground:",
+     "that light of old, where is it now?"
+    ],
+    [
+     "Now, the midnight moon over the ruined castle:",
+     "its light, unchanged, for whom is it?",
+     "What remains on the wall is only kudzu;",
+     "what sings in the pines is only the storm."
+    ],
+    [
+     "Above in heaven its light does not change, but",
+     "flourishing and withering pass on: the shape of the world.",
+     "Is it to mirror this that even now, still,",
+     "ah, the midnight moon over the ruined castle?"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Haru kōrō no hana no en",
+     "meguru sakazuki kage sashite",
+     "chiyo no matsu ga e wakeideshi",
+     "mukashi no hikari ima izuko"
+    ],
+    [
+     "Aki jin'ei no shimo no iro",
+     "naki yuku kari no kazu misete",
+     "uuru tsurugi ni teri soishi",
+     "mukashi no hikari ima izuko"
+    ],
+    [
+     "Ima kōjō no yowa no tsuki",
+     "kawaranu hikari ta ga tame zo",
+     "kaki ni nokoru wa tada kazura",
+     "matsu ni utau wa tada arashi"
+    ],
+    [
+     "Tenjō kage wa kawaranedo",
+     "eiko wa utsuru yo no sugata",
+     "utsusan to te ka ima mo nao",
+     "ā kōjō no yowa no tsuki"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (modified Hepburn)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "modified Hepburn",
+ "notes": [
+  "Romanization: modified Hepburn of the words as they are read and sung; the historical kana spelling of the original is not transliterated letter by letter (沿ひし soishi, 変はらぬ kawaranu, 歌ふ utau, 映さむ utsusan, いづこ izuko). Kanji readings are the ones the song is sung with (高楼 kōrō, 陣営 jin'ei, 夜半 yowa, 栄枯 eiko, 天上 tenjō, 誰 ta).",
+  "'kage' (lines 1.2, 4.1) is the moon's light, not 'shadow' (its modern sense); 'the light of old' in the refrain is the same moonlight as it shone on the castle's past.",
+  "line 1.3: the subject of 'wakeideshi' (came out, parting [the branches]) is the moonlight, unnamed in the original; 'it' keeps that.",
+  "line 2.2: 'misete', the moonlight 'showing' (making visible) the number of the geese against the sky.",
+  "line 2.3: 'uuru tsurugi', literally 'planted swords': usually taken as swords thrust upright in the ground at the camp (or rows of swords standing like a planted field); the sense is not certain.",
+  "line 3.3: 'kaki', a fence or wall (here the castle's ruined wall); 'kazura', a creeping vine, taken as kudzu.",
+  "line 4.3: the subject is the moon: is it shining to reflect the world's rise and fall?"
+ ]
+}

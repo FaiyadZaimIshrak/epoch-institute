@@ -1,0 +1,71 @@
+{
+ "slug": "hatikvah",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "כָּל עוֹד בַּלֵּבָב פְּנִימָה",
+     "נֶפֶשׁ יְהוּדִי הוֹמִיָּה",
+     "וּלְפַאֲתֵי מִזְרָח קָדִימָה",
+     "עַיִן לְצִיּוֹן צוֹפִיָּה"
+    ],
+    [
+     "עוֹד לֹא אָבְדָה תִּקְוָתֵנוּ",
+     "הַתִּקְוָה בַּת שְׁנוֹת אַלְפַּיִם",
+     "לִהְיוֹת עַם חָפְשִׁי בְּאַרְצֵנוּ",
+     "אֶרֶץ צִיּוֹן וִירוּשָׁלַיִם"
+    ]
+   ],
+   "credit": "The anthem text, after the poem by Naftali Herz Imber (1878)",
+   "url": "https://he.wikisource.org/wiki/%D7%94%D7%AA%D7%A7%D7%95%D7%95%D7%94",
+   "licence": "",
+   "source": "he",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "As long as within the heart, inside,",
+     "a Jewish soul yearns,",
+     "and toward the edges of the east, forward,",
+     "an eye looks out to Zion,"
+    ],
+    [
+     "our hope is not yet lost,",
+     "the hope two thousand years old,",
+     "to be a free people in our land,",
+     "the land of Zion and Jerusalem."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "kol 'od balevav penimah",
+     "nefesh yehudi homiyyah",
+     "ulefa'atei mizrakh kadimah",
+     "'ayin letsiyyon tsofiyyah"
+    ],
+    [
+     "'od lo avedah tikvatenu",
+     "hattikvah bat shenot alpayim",
+     "lihyot 'am khofshi be'artsenu",
+     "erets tsiyyon virushalayim"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (SBL general-purpose)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "SBL general-purpose",
+ "notes": [
+  "This is the anthem's text (two stanzas), not Imber's 1878 poem 'Tikvatenu', whose first stanza and refrain differ (from memory, to be checked against the 1886 printing: the refrain spoke of returning to the land of our fathers, the city where David encamped). The credit line should say so.",
+  "line 1.2: 'homiyyah' is literally 'murmurs, stirs, moans'; rendered 'yearns'.",
+  "line 1.3: 'pa'atei mizrach' is literally 'the corners/edges of the east'; 'kadimah' is both 'eastward' and 'forward'.",
+  "Zion and Jerusalem stay as names in en; romanized as tsiyyon, yerushalayim (here with the prefix: virushalayim)."
+ ]
+}

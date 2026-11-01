@@ -1,0 +1,52 @@
+{
+ "slug": "sakura-sakura",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "櫻さくら。彌生の空は。見渡すかぎり。",
+     "霞か雲か。にほひぞいづる。いざや〳〵。",
+     "見にゆかむ。"
+    ]
+   ],
+   "credit": "Traditional (Edo period); as printed in 1888",
+   "url": "https://ja.wikisource.org/wiki/%E3%81%95%E3%81%8F%E3%82%89%E3%81%95%E3%81%8F%E3%82%89",
+   "licence": "{{PD-old}}",
+   "source": "ja",
+   "own": false
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Cherry blossoms, cherry blossoms! The sky of Yayoi, as far as the eye can see:",
+     "is it mist, or is it cloud? A fragrance comes forth. Come now, come now,",
+     "let us go and see."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Sakura, sakura, Yayoi no sora wa, miwatasu kagiri,",
+     "kasumi ka kumo ka, nioi zo izuru. Iza ya, iza ya,",
+     "mi ni yukan."
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (modified Hepburn)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "scheme": "modified Hepburn",
+ "notes": [
+  "Romanization: modified Hepburn of the words as they are read and sung (modern pronunciation); the historical kana spelling of the original is not transliterated letter by letter (にほひ nioi, いづる izuru, ゆかむ yukan). If the editor wants the written kana instead: nihohi, idzuru, yukamu. 櫻 and 彌生 are old character forms (桜, 弥生), read sakura, Yayoi. 〳〵 is the repeat sign for いざや, written out (iza ya, iza ya). The 。 phrase marks become commas, with a full stop where the sense ends.",
+  "The import's line division is kept: three phrases on each of the first two lines, the last phrase alone.",
+  "line 1: Yayoi, the third month of the old lunar calendar (roughly April), kept as a name.",
+  "line 2: 'mist or cloud' are the masses of blossom seen from afar (implied, not said).",
+  "line 2: 'nioi' in classical Japanese is a fragrance but also a glowing colour or beauty; 'a fragrance comes forth' keeps the commoner reading, with the visual sense possible.",
+  "line 2: 'iza ya', 'come now', an urging call."
+ ]
+}
