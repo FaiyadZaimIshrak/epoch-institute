@@ -833,10 +833,19 @@ Berlin): their settings and aftermaths were checked against the entries and Wiki
 entry yet for the Investiture Controversy, Young Italy, the UNIA, the Nika riots, Truman, Brandt, Tilak, Lafayette …).
 
 ## Songs in History (/songs/, /songs/<slug>; Nov 2026)
-126 songs handed down through history (the user's brief: origin, writer, culture, language and place, type, the words
-in the original, romanized and in English, what they inspired, a YouTube performance), from the Hymn to Ninkasi
-(c. 1800 BCE) to Wind of Change (1990), every region, 61 languages. The user's choices: about 120 songs; a song still in
+233 songs handed down through history (the user's brief: origin, writer, culture, language and place, type, the words
+in the original, romanized and in English, what they inspired, a YouTube performance), from the Lament for Ur
+(c. 2000 BCE) to Wind of Change (1990), every region, 78 languages. The user's choices: about 120 songs; a song still in
 copyright gets its entry WITHOUT its words; one performance per song, hand-picked and checked.
+Second wave (1-2 Nov 2026, the user: "find more songs, including a soudarded"): 107 more, chosen as the first
+(scripts/songs/LIST2.tsv, candidates2/3-scored.tsv: Wikipedia language editions and article length, quotas for the
+thin regions and eras), among them the Breton "Ar soudarded 'zo gwisket e ruz" the user remembered ("dim dim dam";
+Max Ar Fur, c. 1880; in copyright, as its publication date is unknown). Same process: fetch-wp.js, agents with
+SONGS-GUIDE.md, check-drafts.js (every number and name not in the article flagged) and the editor's decisions
+(scratchpad songs2/decisions.json, apply-decisions.js); find-sources.js lists a song's Wikisource pages through
+Wikidata and peeks their verse blocks. A year written "~1850" sorts only: the page says "date unknown" (make-data
+`undated`). New select flags: nobis ("bis" marks and refrain cues), nodash, nolabels also takes Korean, Arabic and
+Spanish labels; repeat signs 𝄆 𝄇 are always dropped; noetc also drops "и д.".
 - Source: scripts/songs/<slug>.txt, one song each: header lines (title, local: its own title in its script / its
   romanization, status: "pd | reason" or "copyright | reason" (shown as "The words"), lyricist, composer, culture,
   language: "code | name ; code | name", place, date (as shown), year (sorting, the era band and the card's
@@ -862,8 +871,8 @@ copyright gets its entry WITHOUT its words; one performance per song, hand-picke
   pinyin with tones, scientific transliteration), translation-fixes.json the editor's line fixes. merge-texts.js →
   data/song-texts/<slug>.json (build input, not deployed; {parts: {orig, rom, en: {stanzas, credit, url, source,
   own}}, aligned, tentative, scheme, notes}); a part with the original's shape stands beside it line by line, any
-  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 91 songs
-  carry words; 27 are in copyright (We Shall Overcome: printed only once its free status is beyond doubt); 8
+  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 162 songs
+  carry words; 46 are in copyright (We Shall Overcome: printed only once its free status is beyond doubt); 25
   public-domain songs have no free edition found (make-data.js GAPS: their pages say so), the Great Hymn to the Aten
   only Budge's 1923 translation. Cielito Lindo, 'O sole mio and Hava Nagila are printed as published before 1930
   (public domain in the United States; the user's choice, 1 Nov 2026), though protected in Mexico, in Italy (Mazzucchi's
@@ -875,7 +884,8 @@ copyright gets its entry WITHOUT its words; one performance per song, hand-picke
   aligned to those lines, and lines it lacked translated. Its Hanuman Chalisa, Dle Yaman, Delphic hymns, Ninkasi and
   Kumbaya found no edition (Ninkasi's is ETCSL's, under the Oxford project's copyright; Kumbaya's versions on
   Wikipedia are cited to videos) and stay without words.
-- Performances: scripts/songs/videos.tsv (slug, id, channel, note; 124 songs; none for Kumbaya and Ninkasi): the
+- Performances: scripts/songs/videos.tsv (slug, id, channel, note; 215 songs; 18 without one, among them Kumbaya,
+  Ninkasi and anthems with no fitting channel): the
   performers' own channels, "- Topic" releases, choirs, ensembles, institutions and old records, never compilations
   or re-uploads of albums, chosen by looking at each (scripts/songs/yt-search.js lists a search's results).
   node scripts/songs/check-videos.js checks each through YouTube's oEmbed (exists, embeddable) into

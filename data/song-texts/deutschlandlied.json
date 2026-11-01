@@ -1,0 +1,94 @@
+{
+ "slug": "deutschlandlied",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "Deutschland, Deutschland über Alles,",
+     "Über Alles in der Welt,",
+     "Wenn es stets zu Schutz und Trutze",
+     "Brüderlich zusammenhält.",
+     "Von der Maas bis an die Memel,",
+     "Von der Etsch bis an den Belt,",
+     "Deutschland, Deutschland über Alles,",
+     "Über Alles in der Welt!"
+    ],
+    [
+     "Deutsche Frauen, Deutsche Treue,",
+     "Deutscher Wein und Deutscher Sang",
+     "Sollen in der Welt behalten",
+     "Ihren alten schönen Klang,",
+     "Uns zu edler That begeistern",
+     "Unser ganzes Leben lang —",
+     "Deutsche Frauen, Deutsche Treue,",
+     "Deutscher Wein und Deutscher Sang!"
+    ],
+    [
+     "Einigkeit und Recht und Freiheit",
+     "Für das Deutsche Vaterland!",
+     "Danach laßt uns alle streben",
+     "Brüderlich mit Herz und Hand!",
+     "Einigkeit und Recht und Freiheit",
+     "Sind des Glückes Unterpfand —",
+     "Blüh’ im Glanze dieses Glückes,",
+     "Blühe Deutsches Vaterland!"
+    ]
+   ],
+   "credit": "August Heinrich Hoffmann von Fallersleben (1841)",
+   "url": "https://de.wikisource.org/wiki/Lied_der_Deutschen",
+   "licence": "",
+   "source": "de",
+   "page": "Lied der Deutschen",
+   "own": false,
+   "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Germany, Germany above all,",
+     "Above all in the world,",
+     "When, for protection and defiance, it always",
+     "Holds together like brothers.",
+     "From the Meuse to the Memel,",
+     "From the Adige to the Belt,",
+     "Germany, Germany above all,",
+     "Above all in the world!"
+    ],
+    [
+     "German women, German loyalty,",
+     "German wine and German song",
+     "Shall keep in the world",
+     "Their old, beautiful sound,",
+     "Shall inspire us to noble deeds",
+     "All our life long —",
+     "German women, German loyalty,",
+     "German wine and German song!"
+    ],
+    [
+     "Unity and justice and freedom",
+     "For the German fatherland!",
+     "Let us all strive for that",
+     "Like brothers, with heart and hand!",
+     "Unity and justice and freedom",
+     "Are the pledge of happiness —",
+     "Bloom in the radiance of this happiness,",
+     "Bloom, German fatherland!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
+ "scheme": null,
+ "notes": [
+  "line 1.1: 'über Alles' means 'above everything' (to be put before all else), not a claim to rule over other lands.",
+  "line 1.3: 'zu Schutz und Trutze' is a fixed pair: for defence and for resistance (against attack).",
+  "lines 1.5-1.6: Maas = the Meuse (river, west), Memel = the Neman (river, east), Etsch = the Adige (river, south), Belt = the Little Belt (strait, north, in Denmark).",
+  "line 3.1: 'Recht' means both 'right' and 'law'; 'justice' is used here."
+ ]
+}

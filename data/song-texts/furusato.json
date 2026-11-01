@@ -1,0 +1,95 @@
+{
+ "slug": "furusato",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "兎追いし 彼の山",
+     "小鮒釣りし 彼の川",
+     "夢は今も 巡りて",
+     "忘れ難き 故郷"
+    ],
+    [
+     "如何にいます 父母",
+     "恙無しや 友がき",
+     "雨に風に つけても",
+     "思い出づる 故郷"
+    ],
+    [
+     "志を 果たして",
+     "いつの日にか 帰らん",
+     "山は青き 故郷",
+     "水は清き 故郷"
+    ]
+   ],
+   "credit": "Takano Tatsuyuki (1914); as quoted in Wikipedia's article",
+   "url": "https://en.wikipedia.org/wiki/Furusato_(children's_song)",
+   "licence": "",
+   "source": "w-en",
+   "page": "Furusato (children's song)",
+   "own": false,
+   "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "That mountain where I chased hares,",
+     "that river where I fished for little crucian carp:",
+     "even now my dreams go round to them,",
+     "my old home, hard to forget."
+    ],
+    [
+     "How are you, father and mother?",
+     "Are you without harm, my friends?",
+     "In the rain, in the wind, at every turn",
+     "I call to mind my old home."
+    ],
+    [
+     "When I have fulfilled my purpose,",
+     "on some day I shall return:",
+     "my old home where the mountains are green,",
+     "my old home where the waters are clear."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Usagi oishi kano yama",
+     "kobuna tsurishi kano kawa",
+     "yume wa ima mo megurite",
+     "wasuregataki furusato"
+    ],
+    [
+     "Ika ni imasu chichi haha",
+     "tsutsuganashi ya tomogaki",
+     "ame ni kaze ni tsukete mo",
+     "omoiizuru furusato"
+    ],
+    [
+     "Kokorozashi o hatashite",
+     "itsu no hi ni ka kaeran",
+     "yama wa aoki furusato",
+     "mizu wa kiyoki furusato"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (modified Hepburn)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
+ "scheme": "modified Hepburn",
+ "notes": [
+  "line 1.1: 'oishi' is the classical past form, 'chased' (often misheard by children as 'oishii', delicious).",
+  "line 2.1: 'imasu' is an old honorific 'to be'; 'ika ni imasu', how are (you), respectfully.",
+  "line 2.2: 'tsutsuganashi', without illness or trouble; 'tomogaki', an old word for friends.",
+  "line 2.3: 'tsukete mo', literally 'attaching (my thoughts) even to': whenever rain or wind comes.",
+  "line 3.3: 'aoki' (青き) covers both blue and green; the mountains' green is meant."
+ ]
+}

@@ -13,7 +13,11 @@ const REGIONS = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Afric
 const KEYS = ['title', 'local', 'status', 'lyricist', 'composer', 'culture', 'language', 'place', 'date', 'year', 'region', 'types', 'kids', 'kid'];
 // songs in the public domain whose words no free, reliable edition holds yet (their pages say so)
 const GAPS = ['delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
-  'ninkasi', 'raghupati-raghava-raja-ram', 'tizita'];
+  'ninkasi', 'raghupati-raghava-raja-ram', 'tizita',
+  // second wave (Nov 2026)
+  'agincourt-carol', 'can-vei-la-lauzeta-mover', 'chakrulo', 'cherubikon', 'day-o', 'fengyang-flower-drum',
+  'harpers-songs', 'himno-de-riego', 'john-henry', 'la-adelita', 'la-bamba', 'la-llorona', 'lament-for-ur',
+  'mahishasura-mardini-stotra', 'om-jai-jagdish-hare', 'plaisir-damour', 'soran-bushi'];
 // the era bands of the Great Speeches, by the song's year
 const era = y => y < 500 ? 'ancient' : y < 1500 ? 'medieval' : y < 1750 ? 'earlymodern' : y < 1815 ? 'revolutions' : y < 1900 ? 'nineteenth' : y < 1946 ? 'twentieth' : 'postwar';
 const fold = s => s.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase().replace(/[‘’ʻʼ'"“”]/g, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
@@ -36,7 +40,8 @@ for (const f of fs.readdirSync(D).filter(f => f.endsWith('.txt')).sort()) {
   const types = H.types.split(',').map(s => s.trim());
   for (const t of types) if (!TYPES.includes(t)) bad.push(slug + ': type ' + t);
   if (!REGIONS.includes(H.region)) bad.push(slug + ': region ' + H.region);
-  const year = +H.year; if (!Number.isFinite(year)) bad.push(slug + ': year ' + H.year);
+  // "~1800": a year for sorting only (the song is undated: its page says so)
+  const undated = /^~/.test(H.year), year = +H.year.replace(/^~/, ''); if (!Number.isFinite(year)) bad.push(slug + ': year ' + H.year);
   if (!/^(yes|no)$/.test(H.kids)) bad.push(slug + ': kids ' + H.kids);
   const langs = none(H.language) ? [] : H.language.split(';').map(s => { const [c, ...n] = s.split('|').map(x => x.trim()); return { code: c, name: n.join(' | ') }; });
   let text = null; const tf = path.join(REPO, 'data', 'song-texts', slug + '.json');
@@ -47,7 +52,7 @@ for (const f of fs.readdirSync(D).filter(f => f.endsWith('.txt')).sort()) {
   songs.push({
     slug, title: H.title, local: (H.local === H.title || none(H.local)) ? '' : H.local, pd: st === 'pd', status: why.join(' | '),
     lyricist: H.lyricist, composer: H.composer, culture: H.culture, langs, place: H.place, date: H.date, year, era: era(year),
-    region: H.region, types, people: list('people'), places: list('places'), events: list('events'), kids: H.kids === 'yes', kid: H.kid,
+    undated, region: H.region, types, people: list('people'), places: list('places'), events: list('events'), kids: H.kids === 'yes', kid: H.kid,
     story: paras('story'), meaning: paras('meaning'), inspired: links('inspired'), inspiredBy: links('inspired-by'),
     sources: (B.sources || []).map(l => l.trim()).filter(Boolean), text, gap: GAPS.includes(slug), video: null
   });

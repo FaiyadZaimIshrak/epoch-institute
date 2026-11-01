@@ -1,0 +1,65 @@
+{
+ "slug": "kagome-kagome",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "かごめかごめ",
+     "籠の中の鳥は",
+     "いついつ出やる",
+     "夜明けの晩に",
+     "鶴と亀と滑った",
+     "後ろの正面だあれ？"
+    ]
+   ],
+   "credit": "Traditional; the commonest version, as quoted in Wikipedia's article (Japanese Wikipedia)",
+   "url": "https://ja.wikipedia.org/wiki/%E3%81%8B%E3%81%94%E3%82%81%E3%81%8B%E3%81%94%E3%82%81",
+   "licence": "",
+   "source": "w-ja",
+   "page": "かごめかごめ",
+   "own": false,
+   "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Kagome, kagome,",
+     "the bird inside the cage,",
+     "when, oh when will it come out?",
+     "In the evening of the dawn,",
+     "the crane and the tortoise slipped.",
+     "Who is it, right behind you?"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Kagome kagome",
+     "kago no naka no tori wa",
+     "itsu itsu deyaru",
+     "yoake no ban ni",
+     "tsuru to kame to subetta",
+     "ushiro no shōmen dāre?"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (modified Hepburn)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
+ "scheme": "modified Hepburn",
+ "notes": [
+  "line 1: 'kagome' has no agreed meaning: it is read as 'kago me', the eyes or mesh of a basket, as 'kagame', crouch down, or as 'kakome', surround (the children circle the one in the middle); kept untranslated.",
+  "line 3: 'deyaru' is an old or dialect form of 'deru', to come out.",
+  "line 4: 'yoake no ban', 'the evening of the dawn', is a contradiction in the original and is kept as one.",
+  "line 5: the crane and the tortoise are emblems of long life; why they 'slipped' is unexplained.",
+  "line 6: literally 'the face-front of behind, who is it?': the person standing directly behind the child in the middle, who must guess the name."
+ ]
+}

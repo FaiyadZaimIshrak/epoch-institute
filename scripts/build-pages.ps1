@@ -829,7 +829,7 @@ $SONGS = @($JSS.DeserializeObject([IO.File]::ReadAllText("$PSScriptRoot\songs\so
 $SONGNAME = @{}
 foreach ($e in $ENT) { $songK = $e.name.ToLowerInvariant(); if ($SONGNAME.ContainsKey($songK)) { $SONGNAME[$songK] = '' } else { $SONGNAME[$songK] = $e.slug } }
 # a song's year as a short label: "c. 1400 BCE", "c. 1250", "1792" (circa where its date says so, or before 1000)
-function SongYear($sg) { $y = [int]$sg['year']; $(if ($y -lt 1000 -or [string]$sg['date'] -match '(?i)\bc\.|centur|circa|traditional') { 'c. ' } else { '' }) + $(if ($y -lt 0) { "$(-$y) BCE" } else { "$y" }) }
+function SongYear($sg) { if ($sg['undated']) { return 'date unknown' }; $y = [int]$sg['year']; $(if ($y -lt 1000 -or [string]$sg['date'] -match '(?i)\bc\.|centur|circa|traditional') { 'c. ' } else { '' }) + $(if ($y -lt 0) { "$(-$y) BCE" } else { "$y" }) }
 function SongEnt([string]$n) { $k = $n.Trim().ToLowerInvariant(); if ($SONGNAME.ContainsKey($k) -and $SONGNAME[$k]) { $SONGNAME[$k] } else { '' } }
 $SONGBY = @{}
 foreach ($sg in $SONGS) {

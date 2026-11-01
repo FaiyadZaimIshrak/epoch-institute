@@ -59,21 +59,25 @@ function pick(st, sel) {
   // flags after the range: " /N" regroups the lines into stanzas of N lines (pages that put every line in a block of
   // its own), " nonum" drops a stanza's leading verse number ("1 Amazing grace" -> "Amazing grace")
   const sm = (sel || 'all').match(/^(L?"[^"]*"\.\."[^"]*"|\S+)\s*(.*)$/), range = sm[1], fl = sm[2] ? sm[2].split(' ') : [];
-  let out = range0(st, range);
+  let out = range0(st, range).map(s => s.map(l => l.replace(/\s*[𝄆𝄇]\s*/gu, ' ').trim()).filter(Boolean)).filter(s => s.length);   // repeat signs are notation, not words
   const ev = fl.find(f => /^every\d+:\d+$/.test(f));   // columns read across: keep block k of every n (Arabic | pronunciation | English)
   if (ev) { const [n, k] = ev.slice(5).split(':').map(Number); out = out.filter((s, i) => i % n === k); }
   if (fl.includes('splitbar')) out = out.map(s => s.flatMap(l => l.split(/\s+\|\s+/)));   // verse lines run together with " | "
   if (fl.includes('firstline')) out = out.map(s => [s[0]]);   // a block holds the original and its translation side by side
   if (fl.includes('alt0')) out = out.filter((s, i) => i % 2 === 0);   // original and translation alternate block by block
   if (fl.includes('alt1')) out = out.filter((s, i) => i % 2 === 1);
-  if (fl.includes('nolabels')) out = out.map(s => s.filter(l => !/^((\d+\s+)?verse|chorus|chor|refrain|estribillo|coro|hui|\d+|[IVX]+)[,:.]?$/i.test(l.trim()))).filter(s => s.length);
+  if (fl.includes('nodash')) out = out.map(s => s.map(l => l.replace(/^[—–]\s*/, '')));   // a chorus set off by dashes
+  if (fl.includes('nobis')) out = out.map(s => s.map(l => l.replace(/\s*('’bis’'|\(bis\))/g, '').trim()).filter(l => !/^'?’?refrain’?'?$/i.test(l))).filter(s => s.length);   // "bis" (sung twice) and refrain cues
+  if (fl.includes('nolabels')) out = out.map(s => s.filter(l => !/^((\d+\s+)?verse|chorus|chor|refrain|estribillo|coro|hui|huryeom|후렴|كورال|\d+\s*절|[\d٠-٩]+|\d+\.?ª\.?|[IVX]+)[,:.]?$/i.test(l.trim()))).filter(s => s.length);
+  if (fl.includes('nocaps')) out = out.map(s => s.filter(l => !/^[^a-zà-ÿ]*$/.test(l) || !/[A-ZÀ-Þ]{3}/.test(l))).filter(s => s.length);   // speakers' names set in capitals (UNE MÈRE DE FAMILLE.)
+  if (fl.includes('noetc')) out = out.map(s => s.filter(l => !/(,?\s*etc\.?|\s+и\s+д\.)\s*$/i.test(l.trim()))).filter(s => s.length);   // refrain cues: "La république, etc."
   if (fl.includes('nonum')) out = out.map(s => [s[0].replace(/^(\d+|[一二三四五六七八九十]+)[.、．]?\s*/, ''), ...s.slice(1)]);
   if (fl.includes('novariants')) out = out.map(s => s.map(l => l.replace(/[，,]?\s*一作「[^」]*」/g, '')));   // Wikisource's "one version has …" notes
   if (fl.includes('noruby')) out = out.map(s => s.map(l => l.replace(/（[぀-ヿー]+）/g, '')));   // kana readings in brackets after the characters
   if (fl.includes('norefs')) out = out.map(s => s.map(l => l.replace(/\s*\([^)]{3,}\)/g, '').trim()));   // an edition's source references in parentheses
   if (fl.includes('nobrackets')) out = out.map(s => s.map(l => l.replace(/\s*\[[^\]]*\]/g, '').trim()));   // an editor's glosses inside the line
   if (fl.includes('nolinenum')) out = out.map(s => s.map(l => l.replace(/^\d+\s+(?=\S)/, '')));   // Wikisource's line numbers (every fifth or tenth line)
-  if (fl.includes('hebnum')) out = out.map(s => s.map(l => l.replace(/^([א-ת]{1,2}\s+){1,2}(?=[א-ת][֑-ׇ])/, '')));   // chapter and verse letters ("כג א") before a pointed word, on every line
+  if (fl.includes('hebnum')) out = out.map(s => s.map(l => l.replace(/^([א-ת]{1,3}\s+){1,2}(?=[א-ת][֑-ׇ])/, '')));   // chapter and verse letters ("כג א") before a pointed word, on every line
   const nl = fl.find(f => /^nolast\d*$/.test(f));   // drop the last n lines (a verse past the song's end)
   if (nl) { const n = +(nl.slice(6) || 1); const ls = out.flat().length - n; let c = 0; out = out.map(s => s.filter(() => c++ < ls)).filter(s => s.length); }
   if (fl.includes('join2')) { const j = []; for (let i = 0; i < out.length; i += 2) j.push(out[i].concat(out[i + 1] || [])); out = j; }   // a stanza split in two blocks
@@ -115,7 +119,7 @@ const words = (st, n, end) => { const w = st.flat().join(' ').split(' '); return
     try {
       const p = await page(site, title), m = meta(p.wikitext); let st = pick(stz(p), select);
       // slips of an import fixed by hand, each logged in text-fixes.json ("slug|part": [[old, new], ...]), each matching once
-      for (const [a, b] of (FIX[slug + '|' + part] || [])) { const all = st.flat().join('\n'); if (all.split(a).length !== 2) throw new Error('fix must match once: ' + a); st = st.map(s => s.flatMap(l => l.split(a).join(b).split('\n'))); }   // a "\n" in a fix splits the line (half-lines a page's columns ran together)
+      for (const [a, b] of (FIX[slug + '|' + part] || [])) { const all = st.flat().join('\n'); if (all.split(a).length !== 2) throw new Error('fix must match once: ' + a); st = st.map(s => s.flatMap(l => l.split(a).join(b).split('\n')).filter(l => l !== '')); }   // a "\n" in a fix splits the line (half-lines a page's columns ran together)
       const o = done[slug] || (done[slug] = { slug, parts: {} });
       const url = p.pg ? `https://www.gutenberg.org/ebooks/${p.pg}` : `https://${host(site)}/wiki/${encodeURIComponent(p.title.replace(/ /g, '_'))}`;
       // a second row for the same part adds its stanzas (verses gathered from several pages: Martí's Versos sencillos)
