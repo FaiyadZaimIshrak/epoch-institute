@@ -1,7 +1,8 @@
 // Songs in History: what each chosen video really is. Reads videos.tsv, fetches each watch page and writes
 // videos-audit.tsv (slug, id, channel, category, length, title, first words of the description) with a flag where the
 // video may not be a performance: a category other than Music, Entertainment or People & Blogs, a talk-like title
-// (news, explained, history of, documentary, lecture, story behind …), or a length under 40 s or over 15 min.
+// (news, explained, history of, documentary, lecture, story behind …), a length under 40 s or over 15 min, or instruments
+// named with no voice named (INSTR?: a song with words should be heard sung).
 //   node scripts/songs/audit-videos.js [slug ...]
 const fs = require('fs'), path = require('path'), D = __dirname, sleep = ms => new Promise(r => setTimeout(r, ms));
 const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', 'Accept-Language': 'en' };
@@ -27,6 +28,9 @@ const TALK = /\bnews\b|explain|history of|documentary|lecture|story (of|behind)|
     if (cat && !/^(Music|Entertainment|People & Blogs)$/.test(cat)) flags.push('CAT');
     if (TALK.test(title)) flags.push('TITLE');
     if (title && (len < 40 || len > 900)) flags.push('LEN');
+    // a song with words should be heard sung: instruments named and no voice named
+    const td = title + ' ' + desc;
+    if (/instrumental|fife|military band|band version|orchestra|koto|guitar|lyre|kithara|piano|organ|marimba/i.test(td) && !/choir|chorus|coro|chœur|choeur|vocal|voice|sung|sings|singer|soprano|tenor|bass|chant|合唱|歌|합창|kórus/i.test(td)) flags.push('INSTR?');
     out.push([slug, id, flags.join(','), ch, cat, len, title, desc].join('\t'));
     process.stdout.write((flags.length ? '!' : '.'));
     await sleep(1200);

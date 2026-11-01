@@ -1988,6 +1988,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .sg-chain-h { display: block; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
 .sg-tag-plain { cursor: default; }
 .sg-sources .essay-refs { margin: 0; }
+.sg-sources a { color: var(--gold); overflow-wrap: anywhere; }
+.sg-sources a:hover { color: var(--gold-light); }
 .sg-filters { display: grid; gap: 14px; margin: 0 0 30px; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 .sg-f-q input { width: 100%; box-sizing: border-box; padding: 11px 14px; border: 1px solid var(--field-border, var(--border)); border-radius: 10px; background: var(--bg); color: var(--text); font-family: var(--font-ui); font-size: 15px; }
 .sg-f-types { display: flex; flex-wrap: wrap; gap: 8px; }

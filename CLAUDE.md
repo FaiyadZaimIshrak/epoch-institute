@@ -845,7 +845,14 @@ SONGS-GUIDE.md, check-drafts.js (every number and name not in the article flagge
 (scratchpad songs2/decisions.json, apply-decisions.js); find-sources.js lists a song's Wikisource pages through
 Wikidata and peeks their verse blocks. A year written "~1850" sorts only: the page says "date unknown" (make-data
 `undated`). New select flags: nobis ("bis" marks and refrain cues), nodash, nolabels also takes Korean, Arabic and
-Spanish labels; repeat signs 𝄆 𝄇 are always dropped; noetc also drops "и д.".
+Spanish labels; repeat signs 𝄆 𝄇 are always dropped; noetc also drops "и д." and "&c."; splitdanda breaks a
+Sanskrit verse at its danda; an editor's raised dot (<sup>.</sup>, Appel's Occitan no·m) is kept as "·". The user's
+second document (2 Nov 2026, texts and translations "written from knowledge") gave four more songs their words, each
+imported from an edition and its translation fitted to the lines: Can vei la lauzeta mover (Appel 1915), Plaisir
+d'amour (La Chanson française du XVe au XXe siècle), the Agincourt Carol (Percy's Reliques, 1765) and the Mahishasura
+Mardini Stotra (Sanskrit Wikisource). Its other texts found no edition (Fengyang's Wikisource text is Li Jinhui's 1934
+version, protected) and its Lament for Ur and Harper's Song renderings follow copyrighted translations closely, so
+they were not used; its Breton text contradicts the sources for Ar soudarded and was not used either.
 - Source: scripts/songs/<slug>.txt, one song each: header lines (title, local: its own title in its script / its
   romanization, status: "pd | reason" or "copyright | reason" (shown as "The words"), lyricist, composer, culture,
   language: "code | name ; code | name", place, date (as shown), year (sorting, the era band and the card's
@@ -871,8 +878,8 @@ Spanish labels; repeat signs 𝄆 𝄇 are always dropped; noetc also drops "и 
   pinyin with tones, scientific transliteration), translation-fixes.json the editor's line fixes. merge-texts.js →
   data/song-texts/<slug>.json (build input, not deployed; {parts: {orig, rom, en: {stanzas, credit, url, source,
   own}}, aligned, tentative, scheme, notes}); a part with the original's shape stands beside it line by line, any
-  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 162 songs
-  carry words; 46 are in copyright (We Shall Overcome: printed only once its free status is beyond doubt); 25
+  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 166 songs
+  carry words; 46 are in copyright (We Shall Overcome: printed only once its free status is beyond doubt); 21
   public-domain songs have no free edition found (make-data.js GAPS: their pages say so), the Great Hymn to the Aten
   only Budge's 1923 translation. Cielito Lindo, 'O sole mio and Hava Nagila are printed as published before 1930
   (public domain in the United States; the user's choice, 1 Nov 2026), though protected in Mexico, in Italy (Mazzucchi's
@@ -896,6 +903,9 @@ Spanish labels; repeat signs 𝄆 𝄇 are always dropped; noetc also drops "и 
   (CNEWS's Marseillaise, DD News, TV UNAM on a book launch, "The Story Behind the Happy Birthday Song", France
   Musique's Culture prime, "Recitation Methods Explained", "how to sing" Sōran Bushi, All Blacks promotions):
   replaced by performances, Cantares mexicanos left without one. Only a performance of the song, never a video about it.
+  And a song with words is heard SUNG (the user, 2 Nov 2026: Yankee Doodle had fifes and drums): twelve instrumental
+  picks (military band, koto, lyre, orchestra, guitar) became sung ones; audit-videos.js flags INSTR? (instruments
+  named, no voice). El Cóndor Pasa keeps Los Incas: its 1913 melody is instrumental, its words later and protected.
   The page shows a play button; songs.js loads youtube-nocookie.com's player only when it is pressed, plus a link out.
 - Build: build-pages.ps1 runs scripts/songs/make-data.js before the entry pages (it STOPS on a missing key, an unknown
   type or region, public-domain words missing without a stated gap, copyright words present, a bad video row) and

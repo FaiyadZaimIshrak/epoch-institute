@@ -42,6 +42,7 @@ function stanzas(html) {
   if (cut.length) html = html.slice(0, html.lastIndexOf('<', Math.min(...cut)));
   let h = html.replace(/<(style|script)[\s\S]*?<\/\1>/g, '')
     .replace(/<(div|table|span)[^>]*class="[^"]*(ws-noexport|noprint|mw-editsection|reference|wst-header|headertemplate|licenseContainer|licenseBanner|ws-header)[^"]*"[\s\S]*?<\/\1>/g, '')
+    .replace(/<sup[^>]*>\.<\/sup>/g, '·')   // an editor's raised dot (Appel's Occitan: e·s, no·m), not a footnote
     .replace(/<sup[\s\S]*?<\/sup>/g, '').replace(/<span class="pagenum[\s\S]*?<\/span>/g, '');
   h = h.replace(/[ \t]*\n[ \t]*(?=[^<\n])/g, ' ')   // a newline inside running HTML is a space; lines end only at <br> or a block's end
     .replace(/<br\s*\/?>\s*/g, '\n').replace(/<\/(p|div|h\d|li|tr|dd|dt)>/g, '\n\n').replace(/<[^>]+>/g, '');
@@ -62,6 +63,7 @@ function pick(st, sel) {
   let out = range0(st, range).map(s => s.map(l => l.replace(/\s*[𝄆𝄇]\s*/gu, ' ').trim()).filter(Boolean)).filter(s => s.length);   // repeat signs are notation, not words
   const ev = fl.find(f => /^every\d+:\d+$/.test(f));   // columns read across: keep block k of every n (Arabic | pronunciation | English)
   if (ev) { const [n, k] = ev.slice(5).split(':').map(Number); out = out.filter((s, i) => i % n === k); }
+  if (fl.includes('splitdanda')) out = out.map(s => s.flatMap(l => l.split(/(?<=।)\s+/)));   // a verse printed as one line: its halves end at the danda
   if (fl.includes('splitbar')) out = out.map(s => s.flatMap(l => l.split(/\s+\|\s+/)));   // verse lines run together with " | "
   if (fl.includes('firstline')) out = out.map(s => [s[0]]);   // a block holds the original and its translation side by side
   if (fl.includes('alt0')) out = out.filter((s, i) => i % 2 === 0);   // original and translation alternate block by block
@@ -70,7 +72,7 @@ function pick(st, sel) {
   if (fl.includes('nobis')) out = out.map(s => s.map(l => l.replace(/\s*('’bis’'|\(bis\))/g, '').trim()).filter(l => !/^'?’?refrain’?'?$/i.test(l))).filter(s => s.length);   // "bis" (sung twice) and refrain cues
   if (fl.includes('nolabels')) out = out.map(s => s.filter(l => !/^((\d+\s+)?verse|chorus|chor|refrain|estribillo|coro|hui|huryeom|후렴|كورال|\d+\s*절|[\d٠-٩]+|\d+\.?ª\.?|[IVX]+)[,:.]?$/i.test(l.trim()))).filter(s => s.length);
   if (fl.includes('nocaps')) out = out.map(s => s.filter(l => !/^[^a-zà-ÿ]*$/.test(l) || !/[A-ZÀ-Þ]{3}/.test(l))).filter(s => s.length);   // speakers' names set in capitals (UNE MÈRE DE FAMILLE.)
-  if (fl.includes('noetc')) out = out.map(s => s.filter(l => !/(,?\s*etc\.?|\s+и\s+д\.)\s*$/i.test(l.trim()))).filter(s => s.length);   // refrain cues: "La république, etc."
+  if (fl.includes('noetc')) out = out.map(s => s.filter(l => !/(,?\s*etc\.?|,?\s*&c\.|\s+и\s+д\.)\s*$/i.test(l.trim()))).filter(s => s.length);   // refrain cues: "La république, etc."
   if (fl.includes('nonum')) out = out.map(s => [s[0].replace(/^(\d+|[一二三四五六七八九十]+)[.、．]?\s*/, ''), ...s.slice(1)]);
   if (fl.includes('novariants')) out = out.map(s => s.map(l => l.replace(/[，,]?\s*一作「[^」]*」/g, '')));   // Wikisource's "one version has …" notes
   if (fl.includes('noruby')) out = out.map(s => s.map(l => l.replace(/（[぀-ヿー]+）/g, '')));   // kana readings in brackets after the characters
