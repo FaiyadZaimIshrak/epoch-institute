@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>What's New — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="What is new at The Epoch Institute: release notes, newest first, and every page added in the last 30 days, from encyclopedia entries to songs and profiles.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/new">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What's New — The Epoch Institute">
+<meta property="og:description" content="What is new at The Epoch Institute: release notes, newest first, and every page added in the last 30 days, from encyclopedia entries to songs and profiles.">
+<meta property="og:url" content="https://the-epoch-institute.org/new">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"What's new"}]},{"@type":"WebPage","name":"What's new","description":"What is new at The Epoch Institute: release notes, newest first, and every page added in the last 30 days, from encyclopedia entries to songs and profiles.","url":"https://the-epoch-institute.org/new"}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="new">
+
+<main id="main" class="wn-page ref-page">
+<div class="wn-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">What's new</li></ol></nav>
+<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">What&#8217;s new</h1><p class="ref-lede">What the Institute has added and changed, newest first, and every page that appeared in the last 30 days. Follow it with the <a href="/whats-new.xml">feed</a>.</p></header>
+<section class="wn-notes" aria-labelledby="wn-notes-t"><h2 class="ref-sec-title" id="wn-notes-t">Release notes</h2><ol class="wn-list"><li class="wn-note"><p class="wn-d"><time datetime="2026-11-02">2 November 2026</time></p><h3 class="wn-t">Songs of states and causes, and a dozen new features</h3><p class="wn-s">Sixty-six songs of states, parties and causes join Songs in History, from Rule, Britannia! and the Soviet anthem to the songs of Mao's China, North Korea, fascist Italy and the Hong Kong protests, each told as history. New: compare any two profiles side by side; a timeline view of the profiles; Where Is This Song From?, a daily song game; Born on This Day on the home page; Next to read; search inside the songs' words; the encyclopedia filtered by era and by picture; levels in My Passport; an On This Day card for other websites; reading paths read aloud as a guided tour; this What's new page; worksheets on the cultures and the songs; and the Epic of Gilgamesh now in Sumerian.</p><p class="wn-links"><a href="/songs/">The songs</a> <a href="/compare">Compare two profiles</a> <a href="/games#songq">The song game</a> <a href="/teachers/">Worksheets</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-11-02">2 November 2026</time></p><h3 class="wn-t">Encyclopedia, offline reading, Meanwhile in the world</h3><p class="wn-s">229 songs and 16 forms of government have entries of their own; entries and songs show what else was happening in the world that year; the home page has a Song of the Day; pages already read open without a connection, and the site can be added to a phone's home screen.</p><p class="wn-links"><a href="/songs/">The songs</a> <a href="/governance">Forms of government</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-11-02">2 November 2026</time></p><h3 class="wn-t">Thirty new cultures</h3><p class="wn-s">The culture archive grows from 15 to 45, with more of Asia and South Asia: Mehrgarh, the Vedic civilisation, Sangam-age Tamilakam, Jōmon, Yayoi, Liangzhu, Sanxingdui, Dong Son, the Ainu and more, from the Natufians and the Yamnaya to the Taíno, the Thule people and the Māori.</p><p class="wn-links"><a href="/profiles?kind=culture">Cultures</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-11-02">2 November 2026</time></p><h3 class="wn-t">The Epic of Gilgamesh, and better performances</h3><p class="wn-s">The Epic of Gilgamesh joins Songs in History with Peter Pringle's performance in Sumerian; eight songs have a better recording.</p><p class="wn-links"><a href="/songs/epic-of-gilgamesh">The Epic of Gilgamesh</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-11-01">1 November 2026</time></p><h3 class="wn-t">Songs in History</h3><p class="wn-s">233 songs handed down through history, from a Sumerian hymn to songs of the Cold War: their story, their words in the original, romanized and in English where they are in the public domain, and a sung performance.</p><p class="wn-links"><a href="/songs/">Songs in History</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-10-31">31 October 2026</time></p><h3 class="wn-t">Forms of government</h3><p class="wn-s">Twenty forms of government, from absolute monarchy to the city-state and colonial rule, each with how it works, its history, its strengths and weaknesses; a hub that compares them and lets you design a state; and an essay, Who Should Rule?</p><p class="wn-links"><a href="/governance">Forms of government</a> <a href="/essays/who-should-rule">The essay</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-10-31">31 October 2026</time></p><h3 class="wn-t">The inventions tree</h3><p class="wn-s">218 inventions and discoveries in eleven lanes, from stone tools to the World Wide Web: what each built on, what it led to and who made it first.</p><p class="wn-links"><a href="/inventions">Inventions tree</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-10-30">30 October 2026</time></p><h3 class="wn-t">Social ladders</h3><p class="wn-s">How thirty societies ranked their people, ruler to enslaved, with how many stood on each rung; be born into one by chance, compare two, or put the ranks in order in a game.</p><p class="wn-links"><a href="/societies/">Social ladders</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-10-29">29 October 2026</time></p><h3 class="wn-t">Thirty cultures and movements, speeches and paths</h3><p class="wn-s">The first cultures and movements, 138 new encyclopedia entries, twenty more great speeches and ten more reading paths.</p><p class="wn-links"><a href="/speeches/">Great speeches</a> <a href="/paths/">Reading paths</a></p></li><li class="wn-note"><p class="wn-d"><time datetime="2026-10-28">28 October 2026</time></p><h3 class="wn-t">Rise and Fall Race, Flashcards, Who Said It?</h3><p class="wn-s">Race empires through the centuries, learn with flashcards, guess who said a quotation, test yourself at the end of a profile, and see everything you have read on My timeline.</p><p class="wn-links"><a href="/race">Rise and Fall Race</a> <a href="/flashcards">Flashcards</a> <a href="/games">Games</a></p></li></ol></section>
+<section class="wn-pages" aria-labelledby="wn-pages-t"><h2 class="ref-sec-title" id="wn-pages-t">New pages in the last 30 days <span class="n">0</span></h2><p>The list starts with the next pages to appear: the Institute began keeping the day each page first appeared on 2 November 2026.</p></section>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

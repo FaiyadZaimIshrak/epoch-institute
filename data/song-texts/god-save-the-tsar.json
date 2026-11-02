@@ -1,0 +1,63 @@
+{
+ "slug": "god-save-the-tsar",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "Боже, Царя храни!",
+     "Сильный, державный,",
+     "Царствуй на славу нам,",
+     "Царствуй на страх врагам,",
+     "Царь православный;",
+     "Боже, Царя храни!"
+    ]
+   ],
+   "credit": "Vasily Zhukovsky (1833)",
+   "url": "https://ru.wikisource.org/wiki/%D0%93%D0%B8%D0%BC%D0%BD_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D0%B8",
+   "licence": "",
+   "source": "ru",
+   "page": "Гимн Российской империи",
+   "own": false,
+   "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "God, save the Tsar!",
+     "Strong, sovereign,",
+     "reign for our glory,",
+     "reign for the dread of [our] enemies,",
+     "Orthodox Tsar;",
+     "God, save the Tsar!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Bože, Carja xrani!",
+     "Silʹnyj, deržavnyj,",
+     "Carstvuj na slavu nam,",
+     "Carstvuj na strax vragam,",
+     "Carʹ pravoslavnyj;",
+     "Bože, Carja xrani!"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (scientific transliteration)",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
+ "scheme": "scientific transliteration",
+ "notes": [
+  "Romanization: scientific transliteration (х = x, ц = c, ж = ž, й = j, ы = y, я = ja, ь = ʹ). This text is printed in the modern spelling (no ъ, і or ѣ), so there is nothing of the old orthography to transliterate.",
+  "line 2: державный (deržavnyj) is 'sovereign, ruling', from держава, 'realm' and also the orb of royal power.",
+  "lines 3-4: на славу нам / на страх врагам: literally 'to glory for us' / 'to fear for enemies', i.e. reign so that we have glory and the enemies dread; 'our' before enemies is supplied."
+ ]
+}

@@ -476,7 +476,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=1c9df8d8f8';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=9254023a56';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=be113ba2b1';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -678,12 +678,13 @@ function initNav(activePage) {
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
         ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]],
       ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history'], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
-        ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'], ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']]]]],
+        ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'], ['compare', '/compare', 'Compare Two Profiles', 'Two cultures, states or faiths side by side'],
+        ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']]]]],
     ['play', 'Play', [
       ['', [['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
         ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'], ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
         ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks']]]]]];
-  const MORE = [['about', '/about', 'About the Institute'], ['research', '/research', 'Research Hub'], ['dataset', '/dataset', 'Open Data'],
+  const MORE = [['about', '/about', 'About the Institute'], ['new', '/new', 'What&#8217;s New'], ['research', '/research', 'Research Hub'], ['dataset', '/dataset', 'Open Data'],
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['contact', '/contact', 'Contact']];
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
@@ -794,11 +795,13 @@ function initNav(activePage) {
         <a class="footer-link" href="/kids">Kids Corner</a>
         <a class="footer-link" href="/passport">My Passport</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
+        <a class="footer-link" href="/compare">Compare Two Profiles</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Institute</span>
         <a class="footer-link" href="/about">About the Institute</a>
         <a class="footer-link" href="/about#methodology">Methodology</a>
+        <a class="footer-link" href="/new">What&#8217;s New</a>
         <a class="footer-link" href="/research">Research Hub</a>
         <a class="footer-link" href="/dataset">Open Data</a>
         <a class="footer-link" href="/teachers/">Teachers&#8217; Corner</a>
@@ -1130,6 +1133,44 @@ function initNav(activePage) {
     if (nx) bar.querySelector('.pj-next').addEventListener('click', function () { jp.i = at + 1; put('epoch-path', jp); });
   })();
 
+  // ── Next to read (Nov 2026): three pages this page links to that this reader has not read yet ──────────────────
+  // Chosen in the browser from epoch-seen alone: links in the page's "See also" and related lists count most, then the
+  // kinds of page the reader opens most, then how often the page links them. Shown at the foot of reading pages,
+  // after an idle moment (it moves nothing above it).
+  (function () {
+    var READ = /^\/(empire|religion|language|culture|movement|government|encyclopedia|state|speeches|countries|centuries|years|people|paths|essays|societies|songs)\/[^/?#]+$/;
+    var here = location.pathname.replace(/\/+$/, '');
+    if (!READ.test(here) || here === '/encyclopedia/glossary' || /^\/encyclopedia\/(browse|conflicts)\//.test(here)) return;
+    var main = document.getElementById('main'); if (!main) return;
+    (window.requestIdleCallback || function (f) { setTimeout(f, 400); })(function () {
+      var seen; try { seen = JSON.parse(localStorage.getItem('epoch-seen') || '[]'); } catch (e) { seen = []; } if (!Array.isArray(seen)) seen = [];
+      var seenSet = {}, kindN = {}; seen.forEach(function (p) { seenSet[p] = 1; var k = String(p).split('/')[1]; kindN[k] = (kindN[k] || 0) + 1; });
+      var total = seen.length || 1, cand = {};
+      [].forEach.call(main.querySelectorAll('a[href^="/"]'), function (a) {
+        if (a.closest('.ref-crumbs, .ref-prevnext, .ref-centuries, .ref-cite, .path-journey, nav, .listen-row, .next-read')) return;
+        var h = a.getAttribute('href').replace(/[?#].*$/, '').replace(/\/+$/, '');
+        if (h === here || seenSet[h] || !READ.test(h) || /^\/encyclopedia\/(browse|conflicts)\//.test(h)) return;
+        var name = ((a.querySelector('.nm, .name, .path-step-name, .disc-t, .sg-card-t') || a).textContent || '').replace(/\s+/g, ' ').trim();
+        if (!name || name.length > 90 || /^(previous|next|read more|see all)/i.test(name)) return;
+        var c = cand[h] || (cand[h] = { h: h, name: name, n: 0, rel: 0, img: '' });
+        c.n++; if (a.closest('.enc-seealso, [class*="related"], [class*="seealso"], .profile-related, .sp-chips, .sg-chips')) c.rel = 1;
+        var im = a.querySelector('img'); if (im && !c.img) c.img = im.getAttribute('src') || '';
+        if (name.length < c.name.length && name.length > 2) c.name = name;
+      });
+      var list = Object.keys(cand).map(function (k) { var c = cand[k], kind = k.split('/')[1]; c.score = c.rel * 3 + Math.min(c.n, 3) * 0.5 + 2 * (kindN[kind] || 0) / total + (c.img ? 0.5 : 0); return c; })
+        .sort(function (a, b) { return b.score - a.score || a.name.localeCompare(b.name); }).slice(0, 3);
+      if (list.length < 2) return;
+      var KIND = { empire: 'Profile', religion: 'Religion', language: 'Language', culture: 'Culture', movement: 'Movement', government: 'Form of government', encyclopedia: 'Encyclopedia', state: 'State', speeches: 'Speech', countries: 'Country history', centuries: 'Century', years: 'Year', people: 'People', paths: 'Reading path', essays: 'Essay', societies: 'Social ladder', songs: 'Song' };
+      var box = document.createElement('section'); box.className = 'next-read'; box.setAttribute('aria-labelledby', 'next-read-t');
+      box.innerHTML = '<h2 class="ref-sec-title" id="next-read-t">Next to read</h2><p class="next-read-d">' + (seen.length > 3 ? 'Pages this one leads to that you have not read yet.' : 'Where this page leads.') + '</p><ul>' + list.map(function (c) {
+        return '<li><a href="' + escHtml(c.h) + '">' + (c.img ? '<img src="' + escHtml(c.img) + '" alt="" loading="lazy" width="48" height="48">' : '<span class="nr-ph" aria-hidden="true">&#10022;</span>') + '<span class="nr-b"><span class="nr-k">' + escHtml(KIND[c.h.split('/')[1]] || '') + '</span><span class="nr-t">' + escHtml(c.name) + '</span></span></a></li>';
+      }).join('') + '</ul>';
+      var anchor = main.querySelector('.ref-prevnext');
+      if (anchor) anchor.parentNode.insertBefore(box, anchor); else (main.querySelector('article') || main.querySelector('.profile-detail, .enc-wrap, .st-wrap') || main).appendChild(box);
+      window.epochNextRead = list;
+    }, { timeout: 2500 });
+  })();
+
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
   (function () {
     if (!/^\/(empire|religion|language|culture|movement|government|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
@@ -1159,7 +1200,9 @@ function initNav(activePage) {
       ['main.yr-year', 'h1, .yr-head .ref-lede, .yr-events .tih-event-card, .yr-prof li'],
       ['article.essay-view:not(.cm-article)', 'h1, .essay-sub, .essay-body h2, .essay-body h3, .essay-body p, .essay-body li'],
       ['article.sg-view', 'h1, header [data-say], #story > *, #meaning > *, #words > h2, #words [data-say]'],
-      ['article.cm-article', 'h1, .essay-sub, .cm-by, .cm-body h2, .cm-body h3, .cm-body p:not(.cm-src)']
+      ['article.cm-article', 'h1, .essay-sub, .cm-by, .cm-body h2, .cm-body h3, .cm-body p:not(.cm-src)'],
+      // reading paths (Nov 2026): a guided tour, each stop with its number and the reason it is on the path
+      ['main.paths-page .path-view', 'h1.path-title, .path-tagline, .path-intro, .path-step']
     ];
     var type = null, root = null;
     for (var t = 0; t < TYPES.length && !root; t++) { root = document.querySelector(TYPES[t][0]); if (root) type = TYPES[t]; }
@@ -1179,6 +1222,11 @@ function initNav(activePage) {
     function textOf(el) {
       var c = el.cloneNode(true);
       [].forEach.call(c.querySelectorAll('button, figure, img, svg, .tih-ago, .tih-tags, .tih-hero-kicker, .tih-event-thumb, .ph, .sr-only, sup'), function (x) { x.remove(); });
+      if (el.classList.contains('path-step')) {   // a path's stop: "Stop 3. The Battle of Lepanto. Why: …"
+        var all = el.closest('.path-steps'), n = all ? [].indexOf.call(all.querySelectorAll('.path-step'), el) + 1 : 0;
+        var nm = c.querySelector('.path-step-name'), why = c.querySelector('.path-step-why');
+        return [n ? 'Stop ' + n + '.' : '', nm && nm.textContent.trim().replace(/[.:]?$/, '.'), why && why.textContent.trim()].filter(Boolean).join(' ');
+      }
       if (el.classList.contains('tih-event-card')) {   // a day's event: "1825. The Erie Canal opens. Governor …"
         var y = c.querySelector('.tih-event-year'), h = c.querySelector('.tih-event-title'), d = c.querySelector('.tih-event-desc');
         return [y && y.textContent, h && h.textContent, d && d.textContent].filter(Boolean).map(function (x) { return x.trim().replace(/[.:]?$/, '.'); }).join(' ');

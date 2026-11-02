@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race · inventions · governance
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card
 A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
@@ -854,7 +854,7 @@ Berlin): their settings and aftermaths were checked against the entries and Wiki
 entry yet for the Investiture Controversy, Young Italy, the UNIA, the Nika riots, Truman, Brandt, Tilak, Lafayette …).
 
 ## Songs in History (/songs/, /songs/<slug>; Nov 2026)
-234 songs handed down through history (the user's brief: origin, writer, culture, language and place, type, the words
+300 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states") (the user's brief: origin, writer, culture, language and place, type, the words
 in the original, romanized and in English, what they inspired, a YouTube performance), from the Lament for Ur
 (c. 2000 BCE) to Wind of Change (1990), every region, 78 languages. The user's choices: about 120 songs; a song still in
 copyright gets its entry WITHOUT its words; one performance per song, hand-picked and checked.
@@ -931,9 +931,13 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   (Harpa Dei, the Dumka choir, the National Gugak Center, Atrium Musicae, Peter Pringle's Psalm 23 …). El Cóndor Pasa keeps Los Incas: its 1913 melody is instrumental, its words later and protected.
   The page shows a play button; songs.js loads youtube-nocookie.com's player only when it is pressed, plus a link out.
 - The Epic of Gilgamesh (2 Nov 2026, the user: "include the epic of gilgamesh, the video is on youtube"): type epic, Peter
-  Pringle's sung opening (his title says Sumerian); its words are the Old Babylonian Pennsylvania Tablet in Jastrow and
-  Clay's 1920 edition (Wikisource), transliteration and translation alternating line by line (fetch-texts flags alt0/alt1,
-  gluednum for line numbers run into the line), labelled "Akkadian (transliteration)"; their reading "Gish" is explained.
+  Pringle's performance in Sumerian. It opens "ud re-a ud su₃-ra₂ re-a", the first line of the Sumerian poem Gilgamesh,
+  Enkidu and the Netherworld (the user heard it; the Akkadian Pennsylvania Tablet first printed here was replaced), so the
+  words are that poem's prologue, lines 1-26, from the Electronic Text Corpus of Sumerian Literature (ETCSL, Oxford), with
+  ETCSL's translation: licensed CC BY-NC-SA 3.0, which the user accepted for this non-commercial site (the credit line says
+  "licensed …, for non-commercial use with credit"). Imported by scripts/songs/fetch-etcsl.js (not typed: ETCSL's ASCII c,
+  j, h become š, ĝ, ḫ, index digits subscripts, determinatives in braces as in Oracc). ETCSL could also give Ninkasi and the
+  Lament for Ur their words the same way.
 - Build: build-pages.ps1 runs scripts/songs/make-data.js before the entry pages (it STOPS on a missing key, an unknown
   type or region, public-domain words missing without a stated gap, copyright words present, a bad video row) and
   reads scripts/songs/songs.json; "Songs in History" writes the pages (prose gold-linked with the year ±200; facts box;
@@ -1420,6 +1424,51 @@ Institute and its register are still named where they are defined and credited (
 - SEO (R7): scripts/tools/seo-audit.js (long and duplicate titles, short and duplicate descriptions, orphan pages, sitemap
   coverage, missing alt): 2 Nov 2026 it found the song entries' duplicate descriptions and /about linked only from the menus
   drawn in script (now linked from the home page's hero).
+
+## Nov 2026: songs of states, and the features of the ranked list (second set, 2 Nov 2026)
+- Songs of states and causes (the user: "add communist regime songs … I did not mean only communist, there are a lot of
+  other songs like that too"): 66 more songs in scripts/songs/ (LIST3.tsv): Soviet, Chinese, North Korean, East German,
+  Yugoslav, Cuban and Khmer Rouge songs, fascist and Nazi songs (Horst-Wessel-Lied, Giovinezza, Faccetta nera, Cara al Sol,
+  Erika), imperial anthems, wartime songs of both world wars, nationalist and protest songs (Rota, A Nation Once Again,
+  Glory to Hong Kong). SONGS-GUIDE.md has a paragraph for them: told as history, the regime's acts named where the sources
+  name them (the Khmer Rouge anthem names the Cambodian genocide from its own article), "the song presents X as Y", kids:
+  no for fascist, personality-cult and mass-killing regimes' songs. Thin English articles were joined by the song's own
+  language edition (<slug>.<lang>.txt in the scratchpad songs3/wp). Tachanka dropped (its article is about the cart).
+  make-data.js WITHHELD {slug: reason}: words in the public domain but not printed, the page saying why (the
+  Horst-Wessel-Lied, banned in Germany and Austria; the Marcha Real, an anthem without official words). 20 public-domain
+  texts imported (sources.tsv "# Nov 2026, third wave"), 11 translated by the Institute (translations/), 2 gaps (Heil dir
+  im Siegerkranz: only parodies quoted; Battōtai). Performances only from performers' own channels, Topic releases,
+  archives (Gosteleradiofond, CCTV) and choirs; none where only re-uploads exist (most North Korean songs, the Khmer Rouge
+  anthem, Uz maršala Tita) and none for the Horst-Wessel-Lied; the Falange's own channel is not embedded. 52 song titles
+  link their new entries (entry-links.tsv); the profiles were scanned for them (link-scan --entries).
+- encyclopedia-links.js byEmpire had "ilkhanate" (86 entries) and an empty "Ilkhanate": merged under "Ilkhanate", so the
+  Ilkhanate's page links its entries (apply-added-entries.ps1 stops on keys that differ only in case).
+- /compare (hand page, compare.js): any two profiles side by side: heads, their spans on one axis with the overlap or the
+  gap in years, takeaways, facts (each kind's, PROFILE_KINDS facts; polities capital/founder/predecessor/successor) and key
+  events merged by year; ?a=&b=; "Surprise me" deals two of one kind, other regions, alive together. Data
+  data/compare/<slug>.json (builder, COMPARE_V stamped). /profiles' compare panel links to it; menu Themes → Read and
+  discover; footer; hub (Explore).
+- /profiles View: Cards | Timeline (?view=timeline): a bar per profile by region on a log scale of years before 2025
+  (TL_MIN −15000), coloured by kind, name after, before or on its bar.
+- Where Is This Song From? (/games#songq, games.js SongQ, songq-data.js SONGQ): five songs a day (UTC, #1 = 3 Nov 2026),
+  four lines of the original (the English on request), four regions; epoch-games songq-<n> (Kids mode songq-k<n>, Kids songs
+  only), songq-streak; Share; the passport counts twelve games.
+- Born on This Day (home page): data/days "born" [slug, name, dates, thumb, year], the four best known with a picture.
+- Next to read (shared-nav.js, every reading page): three unread pages the page links, by See-also lists, the reader's
+  kinds (epoch-seen) and frequency; after idle, at the foot. window.epochNextRead.
+- Find a line (/songs/): data/song-lines.json, every printed line of the 187 songs with words, fetched on first use.
+- Encyclopedia filters: With a picture, Era (ancient to 499, medieval, early modern 1500–1799, modern, undated); ?pic=1&era=.
+- Passport levels: a point a page read, ten a stamp; eight levels Visitor to Sage of the Ages (window.epochPassportLevel).
+- Listen on reading paths: TYPES entry for main.paths-page; each stop read as "Stop n. Name. Why".
+- /new and whats-new.xml (generated root page, split-css GENERATED_ROOT): scripts/whats-new.tsv (release notes, written by
+  hand with each release) and the pages first seen in the last 30 days (scripts/first-seen.tsv: the day each path first
+  built; pages before 2 Nov 2026 have no day). The user chose a page only, no mailing.
+- /today-card: the embeddable On This Day card (self-contained, noindex, no analytics; ?theme=light, ?n=1-5; DAYS_V stamped);
+  .htaccess lets only it be framed (frame-ancestors *); the code to copy is on /today-in-history/.
+- Teachers' Corner: /teachers/cultures-<region> (order, homelands from the facts, takeaway questions) and
+  /teachers/songs-<era> (Kids songs: order, places, listening questions).
+- Home hero: on wide screens the globe is a square as tall as the text beside it (the figure a size container, the square
+  min(100cqw, 100cqh − caption)); phones keep 25:14.
 
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:

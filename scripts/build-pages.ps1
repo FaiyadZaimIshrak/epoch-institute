@@ -1417,6 +1417,11 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
     $sdStride = $(if ($SONGDAY.Count % 37) { 37 } else { 41 }); $sdS = $SONGDAY[($sdDoy * $sdStride) % $SONGDAY.Count]
     $dayJs = $dayJs.TrimEnd().Substring(0, $dayJs.TrimEnd().Length - 1) + ',"song":[' + (Js ([string]$sdS['slug'])) + ',' + (Js ([string]$sdS['title'])) + ',' + (Js ([string]$sdS['culture'])) + ',' + (Js (SongYear $sdS)) + ',' + (Js ([string]$sdS['kid'])) + ',' + $(if ($sdS['text']) { 1 } else { 0 }) + "]}`n"
   }
+  # born on this day (the home page's card): the four best known with a picture, in year order [slug, name, dates, thumb, year]
+  if ($DAYPPL.ContainsKey($k)) {
+    $bj = @($DAYPPL[$k] | Where-Object { $_.k -eq 'b' -and $_.o.img } | Sort-Object @{ e = { $_.o.emp.Count }; Descending = $true }, @{ e = { $_.y } } | Select-Object -First 4 | Sort-Object y | ForEach-Object { '[' + (Js $_.o.slug) + ',' + (Js $_.o.name) + ',' + (Js ([string]$_.o.dates)) + ',' + (Js (ThumbOf $_.o.img)) + ',' + $_.y + ']' })
+    if ($bj.Count) { $dayJs = $dayJs.TrimEnd().Substring(0, $dayJs.TrimEnd().Length - 1) + ',"born":[' + ($bj -join ',') + "]}`n" }
+  }
   if ([EpochBuild.W]::WriteIfChanged("$Repo\data\days\$k.json", $dayJs)) { $NWRITE++ }
   [void]$daysAll.Append($dayJs)
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring days"><a class="prev" rel="prev" href="/today-in-history/' + (DaySlug $pk) + '"><span class="lbl">&larr; Previous day</span><span class="nm">' + (DayLabel $pk) + '</span></a><a class="next" rel="next" href="/today-in-history/' + (DaySlug $nk) + '"><span class="lbl">Next day &rarr;</span><span class="nm">' + (DayLabel $nk) + "</span></a></nav>`n")
@@ -1429,7 +1434,7 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
 # the day files' version, stamped into the two pages that read them (var DAYS_V = '...')
 if (-not $SkipEntries) {
   $DAYSV = [EpochBuild.W]::Sha1($daysAll.ToString()).Substring(0, 10)
-  foreach ($f in @("$Repo\index", "$Repo\today-in-history\index")) {
+  foreach ($f in @("$Repo\index", "$Repo\today-in-history\index", "$Repo\today-card")) {
     $t = [IO.File]::ReadAllText($f, $U8); $t2 = [regex]::Replace($t, "var DAYS_V(\s*)= '[0-9a-f]*'", "var DAYS_V`$1= '$DAYSV'")
     if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged($f, $t2)) { $NWRITE++ }
   }
@@ -1490,6 +1495,26 @@ $mwJson = '{"p":[' + ($mwRows -join ",`n") + '],"y":[' + ($YEARLIST -join ',') +
 if ([EpochBuild.W]::WriteIfChanged("$Repo\data\meanwhile.json", $mwJson)) { $NWRITE++ }
 $MW_V = [EpochBuild.W]::Sha1($mwJson).Substring(0, 8)
 Say "meanwhile.json: $($mwRows.Count) profiles"
+# data/compare/<slug>.json (/compare, Nov 2026): each profile's takeaways, "Did you know?", key events and facts box, so the
+# page fetches only the two it shows ({t, dyk, ev: [[year text, text]], f: {fact: value}}); COMPARE_V stamped into /compare
+$CMPFACT = @{}
+foreach ($l in [IO.File]::ReadAllLines("$Repo\empire-facts.js", $U8)) {
+  $m = [regex]::Match($l, '^\s+"((?:[^"\\]|\\.)*)": (\{.*\}),?\s*$'); if (-not $m.Success) { continue }
+  $CMPFACT[[regex]::Unescape($m.Groups[1].Value)] = $JSS.DeserializeObject([EpochBuild.W]::QuoteKeys($m.Groups[2].Value))
+}
+New-Item -ItemType Directory -Force "$Repo\data\compare" | Out-Null
+$cmpAll = New-Object Text.StringBuilder; $cmpN = 0
+foreach ($em in $EMPS) {
+  $cn = [string]$em['name']; $g = $GLANCE[$cn]; $fx = $CMPFACT[$cn]
+  $cj = '{"t":[' + $(if ($g) { ((@($g['t']) | ForEach-Object { Js ([string]$_) }) -join ',') } else { '' }) + '],"dyk":' + $(if ($g -and $g['dyk']) { Js ([string]$g['dyk']) } else { 'null' }) +
+    ',"ev":[' + $(if ($g) { ((@($g['ev']) | ForEach-Object { '[' + (Js ([string]$_[0])) + ',' + (Js ([string]$_[1])) + ']' }) -join ',') } else { '' }) + ']' +
+    ',"f":{' + $(if ($fx) { ((@($fx.Keys) | ForEach-Object { (Js ([string]$_)) + ':' + (Js ([string]$fx[$_])) }) -join ',') } else { '' }) + '}}' + "`n"
+  if ([EpochBuild.W]::WriteIfChanged("$Repo\data\compare\" + [EpochBuild.W]::ToSlug($cn) + '.json', $cj)) { $NWRITE++ }
+  [void]$cmpAll.Append($cj); $cmpN++
+}
+$COMPARE_V = [EpochBuild.W]::Sha1($cmpAll.ToString()).Substring(0, 8)
+$t = [IO.File]::ReadAllText("$Repo\compare", $U8); $t2 = [regex]::Replace($t, "var COMPARE_V = '[^']*'", "var COMPARE_V = '$COMPARE_V'"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\compare", $t2)) { $NWRITE++ }
+Say "compare: $cmpN profiles"
 function PeakYear($em) { $best = -1; $yr = $null; foreach ($pt in $em['points']) { if ([double]$pt[1] -gt $best) { $best = [double]$pt[1]; $yr = [double]$pt[0] } }; return $yr }
 function PowerAt($em, [double]$y) {   # the profile's power curve (0-10, scaled to its own peak) at year y; 0 outside its years
   $pts = $em['points']; if ($y -lt [double]$pts[0][0] -or $y -gt [double]$pts[-1][0]) { return 0 }
@@ -2401,7 +2426,7 @@ $SONGTYPE = [ordered]@{ sacred = 'Sacred'; lament = 'Lament'; celebration = 'Cel
   anthem = 'Anthem'; protest = 'Protest and freedom'; ballad = 'Ballad'; epic = 'Epic'; dance = 'Dance' }
 $SONGERA = [ordered]@{ ancient = 'The ancient world'; medieval = 'The medieval world'; earlymodern = 'The early modern world'; revolutions = 'The age of revolutions'; nineteenth = 'The nineteenth century'; twentieth = 'The early twentieth century'; postwar = 'The world since 1945' }
 $SONGRTL = @('he', 'hbo', 'ar', 'fa', 'ur', 'yi', 'syc', 'arc')
-$SONGSITE = @{ pg = 'Project Gutenberg' }
+$SONGSITE = @{ pg = 'Project Gutenberg'; etcsl = 'the Electronic Text Corpus of Sumerian Literature (ETCSL)' }
 $songProf = New-Object 'Collections.Generic.HashSet[string]'; foreach ($em in $EMPS) { [void]$songProf.Add([string]$em['name']) }
 $songJsV = [EpochBuild.W]::Sha1([IO.File]::ReadAllText("$Repo\songs.js", $U8)).Substring(0, 8)
 $SONGLINK = [bool](Get-Command LinkDesc -ErrorAction SilentlyContinue)
@@ -2472,7 +2497,7 @@ function SongWords($sg) {
       # a text gathered from several pages (Martí's poems, the Llibre Vermell's songs) names each page
       $also = @($p['also'] | Where-Object { $_ })
       $src = if ($also.Count) { (SongSrcName ([string]$p['source'])) + ' (' + ((@(@{ url = $p['url']; page = $p['page'] }) + $also | Group-Object { [string]$_['url'] } | ForEach-Object { $_.Group[0] } | ForEach-Object { '<a href="' + (Hx ([string]$_['url'])) + '" target="_blank" rel="noopener">' + (Hx ([string]$_['page'])) + '</a>' }) -join ', ') + ')' } else { '<a href="' + (Hx ([string]$p['url'])) + '" target="_blank" rel="noopener">' + (SongSrcName ([string]$p['source'])) + '</a>' }
-      $cr.Add($(if ($k -eq 'orig') { $(if ($isEn) { 'Words' } else { 'Original' }) } elseif ($k -eq 'en') { 'English' } else { 'Romanized' }) + ': ' + (Hx ([string]$p['credit'])) + '. Text from ' + $src + '; ' + $(if ([string]$sg['status'] -match 'United States') { 'in the public domain in the United States' } else { 'public domain' }) + '.')
+      $cr.Add($(if ($k -eq 'orig') { $(if ($isEn) { 'Words' } else { 'Original' }) } elseif ($k -eq 'en') { 'English' } else { 'Romanized' }) + ': ' + (Hx ([string]$p['credit'])) + '. Text from ' + $src + '; ' + $(if ([string]$p['licence'] -match '^CC') { 'licensed ' + (Hx ([string]$p['licence'])) + ', for non-commercial use with credit' } elseif ([string]$sg['status'] -match 'United States') { 'in the public domain in the United States' } else { 'public domain' }) + '.')
     }
   }
   if ($tx['tentative']) { $cr.Add('The original is hard to read in places, and our translation of those lines is tentative.') }
@@ -2522,6 +2547,7 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   [void]$sb.Append('<section class="sg-sec" id="words"><h2>The words</h2>')
   if ($sg['text']) { [void]$sb.Append((SongWords $sg)) }
   elseif (-not $sg['pd']) { [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are still in copyright, so they are not printed here. &#8220;What it says&#8221; above gives their theme in our own words' + $(if ($sg['video']) { ', and the performance below lets you hear them' } else { '' }) + '.</p>') }
+  elseif ($sg['withheld']) { [void]$sb.Append('<p class="sg-nowords" data-say>' + (Hx ([string]$sg['withheld'])) + '</p>') }
   else { $songNoText++; [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are in the public domain, but no free, reliable edition of them has been found yet to import them from, and the Institute never types a song&#8217;s words from memory. &#8220;What it says&#8221; above tells what they are about.</p>') }
   [void]$sb.Append("</section>`n</div>`n")
   $v = $sg['video']
@@ -2594,6 +2620,34 @@ foreach ($sg in $SONGS) { foreach ($x in @($sg['inspiredBy'])) { if ($x['slug'] 
   $songFam.Add('<li><a href="/songs/' + $fr['slug'] + '">' + (Hx ([string]$fr['title'])) + '</a> <span class="sg-fam-arrow" aria-label="led to">&rarr;</span> <a href="/songs/' + $sg['slug'] + '">' + (Hx ([string]$sg['title'])) + '</a>' + $(if ($x['how']) { '<span class="sg-chain-h">' + (Hx ([string]$x['how'])) + '</span>' } else { '' }) + '</li>') } } }
 if ($songFam.Count) { [void]$ib.Append('<section class="sg-sec sg-fam"><h2 class="ref-sec-title">Songs that led to songs</h2><p>Tunes travel: an anthem borrows a hymn&#8217;s melody, a farewell song becomes a graduation song on the other side of the world. These are the links between the songs in this library; every song&#8217;s page lists many more.</p><ul class="sg-chain">' + ($songFam -join '') + "</ul></section>`n") }
 [void]$ib.Append('<section class="sg-sec sg-howto"><h2 class="ref-sec-title">How the songs are told</h2><p>The words of a song appear only where they are in the public domain: traditional and anonymous songs, and words whose authors died long ago or that were published before 1930. They are imported from the editions that hold them (Wikisource, Project Gutenberg, or the public-domain words quoted in Wikipedia&#8217;s articles), never typed from memory, and each names its edition. Where no older translation is free to use, the English and the romanization are the Institute&#8217;s own, made line by line from the original; notes say where a line can be read more than one way. Songs whose words are still in copyright have their story and their theme, told in our own words, but not their words.</p><p>Each performance was chosen by ear and by its source: the performers&#8217; own channels, choirs, ensembles and institutions, and old recordings. YouTube&#8217;s player loads only when you press play.</p></section>' + "`n")
+# search inside the words (Nov 2026): data/song-lines.json [[slug, title, [lines of the original, romanized and English]]],
+# fetched by songs.js only when the field is first used
+$slRows = New-Object Collections.Generic.List[string]
+foreach ($sg in $SONGS) {
+  if (-not $sg['text']) { continue }; $slP = $sg['text']['parts']; $slL = New-Object Collections.Generic.List[string]
+  foreach ($slk in 'orig', 'rom', 'en') { if ($slP.ContainsKey($slk)) { foreach ($st in @($slP[$slk]['stanzas'])) { foreach ($ln in @($st)) { if ([string]$ln) { $slL.Add((Js ([string]$ln))) } } } } }
+  if ($slL.Count) { $slRows.Add('[' + (Js ([string]$sg['slug'])) + ',' + (Js ([string]$sg['title'])) + ',[' + ($slL -join ',') + ']]') }
+}
+$slJson = '[' + ($slRows -join ",`n") + "]`n"
+# songq-data.js: "Where is this song from?" (/games#songq): the songs with their words, each with up to four lines of its
+# first stanza in the original and in English, its region, culture, place and date; in a fixed order (by a hash of the
+# slug, so a song added later takes its own place) that games.js deals five a day from.
+$sqRows = New-Object Collections.Generic.List[object]
+foreach ($sg in $SONGS) {
+  if (-not $sg['text']) { continue }; $sqP = $sg['text']['parts']; if (-not $sqP.ContainsKey('orig')) { continue }
+  $sqO = @(@(@($sqP['orig']['stanzas'])[0]) | Where-Object { [string]$_ } | Select-Object -First 4)
+  if ($sqO.Count -lt 2) { continue }
+  $sqE = if ($sqP.ContainsKey('en') -and $sqP['en']['stanzas']) { @(@(@($sqP['en']['stanzas'])[0]) | Where-Object { [string]$_ } | Select-Object -First 4) } else { @() }
+  $sqRows.Add([pscustomobject]@{ h = [EpochBuild.W]::Sha1([string]$sg['slug']); j = '[' + (Js ([string]$sg['slug'])) + ',' + (Js ([string]$sg['title'])) + ',' + (Js ([string]$sg['region'])) + ',' + (Js ([string]$sg['culture'])) + ',' + (Js ([string]$sg['place'])) + ',' + (Js (SongYear $sg)) + ',[' + (($sqO | ForEach-Object { Js ([string]$_) }) -join ',') + '],[' + (($sqE | ForEach-Object { Js ([string]$_) }) -join ',') + '],' + $(if ($sg['kids']) { 1 } else { 0 }) + ']' })
+}
+$sqJs = "// Generated by scripts/build-pages.ps1 for /games#songq. Do not edit.`n// [slug, title, region, culture, place, date, [original lines], [English lines], fit for Kids mode]`nvar SONGQ = [`n" + ((@($sqRows | Sort-Object h) | ForEach-Object { $_.j }) -join ",`n") + "`n];`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\songq-data.js", $sqJs)) { $NWRITE++ }
+$sqV = [EpochBuild.W]::Sha1($sqJs).Substring(0, 10)
+$t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, "SONGQ_SRC = '[^']*'", "SONGQ_SRC = '/songq-data.js?v=$sqV'"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
+if ([EpochBuild.W]::WriteIfChanged("$Repo\data\song-lines.json", $slJson)) { $NWRITE++ }
+$slV = [EpochBuild.W]::Sha1($slJson).Substring(0, 8)
+[void]$ib.Append('<section class="sg-sec sg-lines" aria-labelledby="sg-lines-t"><h2 class="ref-sec-title" id="sg-lines-t">Find a line</h2><p>Remember a line but not the song? Search the words of the ' + $slRows.Count + ' songs that carry them, in the original, romanized or in English.</p>' +
+  '<label class="sg-f-q"><span class="sr-only">A line or a few words</span><input type="search" id="sg-line" data-src="/data/song-lines.json?v=' + $slV + '" placeholder="A line or a few words…" autocomplete="off"></label><ol class="sg-line-res" id="sg-line-res" aria-live="polite"></ol></section>' + "`n")
 [void]$ib.Append("</div>`n</main>`n<script src=`"/songs.js?v=$songJsV`" defer></script>`n")
 $title = 'Songs in History: Hymns, Anthems, Laments and Folk Songs — The Epoch Institute'
 $desc = "$($SONGS.Count) songs handed down through history, from ancient hymns to protest songs: who made them, what they say, their words and their meaning, and a performance."
@@ -2908,14 +2962,61 @@ foreach ($sh in $SHEETS) {
     WsPage $sh 'Worksheet &middot; History by century' $title $lede $online 'Open the century page' $tasks $keys $desc; $wsN.century++
   }
 }
+# cultures by region and songs by era (Nov 2026): the same kinds of task, from the profiles' own dates, homelands and
+# takeaways, and from the songs' dates and places. A sheet needs at least three cultures or four dated songs.
+$wsN.culture = 0; $wsN.song = 0; $WSCULT = New-Object Collections.Generic.List[object]; $WSSONG = New-Object Collections.Generic.List[object]
+function WsCultSpan($em) { $a = [int]$em['start']; $s = $(if ($em['circa']) { 'c. ' } else { '' }) + (Yr $a); if ($null -eq $em['end']) { $s + ' to today' } else { $s + ' – ' + $(if ($em['endCirca']) { 'c. ' } else { '' }) + (Yr ([int]$em['end'])) } }
+foreach ($reg in @($EMPS | Where-Object { [string]$_['kind'] -eq 'culture' } | ForEach-Object { [string]$_['region'] } | Sort-Object -Unique)) {
+  $cs = @($EMPS | Where-Object { [string]$_['kind'] -eq 'culture' -and [string]$_['region'] -eq $reg } | Sort-Object { [int]$_['start'] })
+  if ($cs.Count -lt 3) { continue }
+  $slug = 'cultures-' + [EpochBuild.W]::ToSlug($reg); $sh = [pscustomobject]@{ slug = $slug }
+  $items = @($cs | ForEach-Object { [pscustomobject]@{ name = [string]$_['name']; kind = 'culture'; y = [int]$_['start']; dates = (WsCultSpan $_) } })
+  $tasks = New-Object Collections.Generic.List[object]; $keys = New-Object Collections.Generic.List[object]
+  $ord = @($items | Select-Object -First 7)
+  $r = WsOrderTask $ord $slug; $tasks.Add(@('Put the cultures in order', ('Number the cultures from 1 (the earliest to begin) to ' + $ord.Count + ' (the latest).'), $r[0])); $keys.Add(@('Put the cultures in order', $r[1]))
+  # their homelands: the first part of each profile's "Homeland" fact, up to its first colon, semicolon or full stop
+  $hm = @($cs | Where-Object { $CMPFACT[[string]$_['name']] -and $CMPFACT[[string]$_['name']]['homeland'] } | Select-Object -First 6 | ForEach-Object { $h = ([string]$CMPFACT[[string]$_['name']]['homeland'] -split '[:;.]')[0].Trim(); [pscustomobject]@{ name = [string]$_['name']; dates = $(if ($h.Length -gt 110) { $h.Substring(0, $h.LastIndexOf(' ', 107)) + '…' } else { $h }) } })
+  if ($hm.Count -ge 3) { $r = WsMatchTask $hm ($slug + '-h'); $tasks.Add(@('Match the cultures to their homelands', 'Write the number of the right homeland next to each culture. Their profiles will help.', $r[0])); $keys.Add(@('Match the cultures to their homelands', $r[1])) }
+  $qs = @(@($cs | Where-Object { $GLANCE[[string]$_['name']] -and @($GLANCE[[string]$_['name']]['t']).Count } | Select-Object -First 3) | ForEach-Object { '<b>' + (Hx ([string]$_['name'])) + '</b>. Its profile says: &#8220;' + (Hx ([string]@($GLANCE[[string]$_['name']]['t'])[0])) + '&#8221; Find one piece of evidence on the profile for this, and say how we know it.' })
+  $qs += 'Choose two of these cultures that lived at the same time. What did they have in common, and what set them apart?'
+  $tasks.Add(@('Think and discuss', '', ('<ol class="ws-qs">' + (($qs | ForEach-Object { '<li><p>' + $_ + '</p>' + (WsLines 3) + '</li>' }) -join '') + '</ol>'))); $keys.Add(@('Think and discuss', '<p class="ws-key-note">Open questions: answers will vary. Good answers use details from the profiles.</p>'))
+  $title = 'Worksheet: Cultures of ' + $(if ($reg -match '^(Americas|Ancient Near East)$') { 'the ' + $reg } else { $reg })
+  $lede = 'A worksheet on ' + $cs.Count + ' cultures of ' + (Hx $(if ($reg -match '^(Americas|Ancient Near East)$') { 'the ' + $reg } else { $reg })) + ', from the ' + (Hx ([string]$cs[0]['name'])) + ' to the ' + (Hx ([string]$cs[-1]['name'])) + '. Read their profiles, then answer.'
+  $desc = [EpochBuild.W]::Summary('A printable worksheet on the cultures of ' + $reg + ': put them in order, match them to their homelands and discuss what their profiles say, with an answer key.', 155)
+  WsPage $sh 'Worksheet &middot; Cultures' $title $lede ('/profiles?kind=culture&amp;region=' + [uri]::EscapeDataString($reg)) 'Open the cultures' $tasks $keys $desc; $wsN.culture++; $WSCULT.Add(@($slug, $title))
+}
+foreach ($era in $SONGERA.Keys) {
+  $ss = @($SONGS | Where-Object { [string]$_['era'] -eq $era -and -not $_['undated'] -and $_['kids'] } | Sort-Object { [int]$_['year'] })
+  if ($ss.Count -lt 4) { continue }
+  $slug = 'songs-' + $era; $sh = [pscustomobject]@{ slug = $slug }
+  $items = @($ss | ForEach-Object { [pscustomobject]@{ name = [string]$_['title']; kind = 'song'; y = [int]$_['year']; dates = (SongYear $_) } })
+  $ord = WsSpread $items 6 $(if ($era -eq 'ancient') { 200 } elseif ($era -eq 'medieval') { 40 } else { 8 })
+  if ($ord.Count -lt 4) { continue }
+  $tasks = New-Object Collections.Generic.List[object]; $keys = New-Object Collections.Generic.List[object]
+  $r = WsOrderTask $ord $slug; $tasks.Add(@('Put the songs in order', ('Number the songs from 1 (the oldest) to ' + $ord.Count + ' (the newest).'), $r[0])); $keys.Add(@('Put the songs in order', $r[1]))
+  $pl = @(@(WsShuffle $ss ($slug + '-p')) | Select-Object -First 6 | ForEach-Object { [pscustomobject]@{ name = [string]$_['title']; dates = [string]$_['place'] } })
+  $r = WsMatchTask $pl ($slug + '-pl'); $tasks.Add(@('Where was each song made?', 'Write the number of the right place next to each song. Their pages will help.', $r[0])); $keys.Add(@('Where was each song made?', $r[1]))
+  $ex = @($ss | Where-Object { $_['text'] } | Select-Object -First 2)
+  $qs = @($ex | ForEach-Object { 'Read the words of <b>' + (Hx ([string]$_['title'])) + '</b> on its page (in English if they are in another language). What is the song about, and who might have sung it?' })
+  $qs += 'Choose one song and listen to its performance. Which instruments or voices do you hear, and how does the music fit the words?'
+  $qs += 'Songs travel: find a song on these pages that was sung far from where it was made, or that gave its tune to another song. How did it travel?'
+  $tasks.Add(@('Think and discuss', '', ('<ol class="ws-qs">' + (($qs | ForEach-Object { '<li><p>' + $_ + '</p>' + (WsLines 3) + '</li>' }) -join '') + '</ol>'))); $keys.Add(@('Think and discuss', '<p class="ws-key-note">Open questions: answers will vary. Good answers quote the song pages.</p>'))
+  $title = 'Worksheet: Songs of ' + ($SONGERA[$era] -replace '^The ', 'the ')
+  $lede = 'A worksheet on ' + $ss.Count + ' songs of ' + (Hx ($SONGERA[$era] -replace '^The ', 'the ')) + ' in Songs in History: when and where they were made, what they say and how they sound.'
+  $desc = [EpochBuild.W]::Summary('A printable worksheet on the songs of ' + ($SONGERA[$era] -replace '^The ', 'the ') + ': put them in order, match them to their places and listen, with an answer key.', 155)
+  WsPage $sh 'Worksheet &middot; Songs in History' $title $lede ('/songs/?e=' + $era) 'Open the songs' $tasks $keys $desc; $wsN.song++; $WSSONG.Add(@($slug, $title))
+}
+Say "worksheets: $($wsN.culture) on cultures, $($wsN.song) on songs"
 # the guide: how to use the site in class, and every worksheet
 $crumb = Crumbs @(@('Home', '/'), @("Teachers' Corner", $null))
 $sb = New-Object Text.StringBuilder(40000)
 [void]$sb.Append('<main id="main" class="ws-page ref-page">' + "`n<div class=`"ws-wrap ws-guide`">`n" + $crumb[0] + "`n")
-[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Teachers&#8217; Corner</h1><p class="ref-lede">Free resources for teaching world history with the Institute: ' + ($wsN.path + $wsN.century) + ' printable worksheets with answer keys on the reading paths and the centuries, and ideas for using the atlas, the timeline and the games in class.</p></header>' + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Teachers&#8217; Corner</h1><p class="ref-lede">Free resources for teaching world history with the Institute: ' + ($wsN.path + $wsN.century + $wsN.culture + $wsN.song) + ' printable worksheets with answer keys on the reading paths, the centuries, the cultures and the songs, and ideas for using the atlas, the timeline and the games in class.</p></header>' + "`n")
 [void]$sb.Append('<section class="ws-guide-sec"><h2 class="ref-sec-title">Printable worksheets</h2><p>Each worksheet prints on a few A4 pages and draws only on the Institute&#8217;s pages: pupils read the reading path or the century page, then put stops or events in order, match people to their dates, explain key terms and answer open questions. The century sheets add a map with numbered states to name. The answer key prints on a page of its own: use <b>Print with the answers</b> on the sheet.</p>' +
   '<h3 class="ws-guide-h">Reading paths <span class="n">' + $wsN.path + '</span></h3><ul class="ws-guide-list">' + (($RP | Where-Object { $WSOK.ContainsKey('path-' + $_['slug']) } | ForEach-Object { '<li><a href="/teachers/path-' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + '</a></li>' }) -join '') + '</ul>' +
-  '<h3 class="ws-guide-h">Centuries <span class="n">' + $wsN.century + '</span></h3><ul class="ws-guide-list ws-guide-cents">' + (($CENTPAGES | Where-Object { $WSOK.ContainsKey('century-' + (CenturySlug $_)) } | ForEach-Object { '<li><a href="/teachers/century-' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + "</ul></section>`n")
+  '<h3 class="ws-guide-h">Centuries <span class="n">' + $wsN.century + '</span></h3><ul class="ws-guide-list ws-guide-cents">' + (($CENTPAGES | Where-Object { $WSOK.ContainsKey('century-' + (CenturySlug $_)) } | ForEach-Object { '<li><a href="/teachers/century-' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>' +
+  '<h3 class="ws-guide-h">Cultures <span class="n">' + $wsN.culture + '</span></h3><ul class="ws-guide-list">' + (($WSCULT | ForEach-Object { '<li><a href="/teachers/' + $_[0] + '">' + (Hx ($_[1] -replace '^Worksheet: ', '')) + '</a></li>' }) -join '') + '</ul>' +
+  '<h3 class="ws-guide-h">Songs in History <span class="n">' + $wsN.song + '</span></h3><ul class="ws-guide-list">' + (($WSSONG | ForEach-Object { '<li><a href="/teachers/' + $_[0] + '">' + (Hx ($_[1] -replace '^Worksheet: ', '')) + '</a></li>' }) -join '') + "</ul></section>`n")
 [void]$sb.Append('<section class="ws-guide-sec"><h2 class="ref-sec-title">Ideas for the classroom</h2><dl class="ws-ideas">' +
   '<dt><a href="/paths/">Reading paths</a></dt><dd>Twenty-eight guided routes of five to nine stops, each with a line on why it matters. Set a path as reading before a lesson, or give each group a different stop to present.</dd>' +
   '<dt><a href="/atlas">Atlas</a> and <a href="/timeline">World Timeline</a></dt><dd>On a projector, move the atlas&#8217;s year slider through a century and ask what appears and disappears; the timeline shows which states lived at the same time. <a href="/years/">Year pages</a> collect what happened in a single year.</dd>' +
@@ -3712,6 +3813,8 @@ $SECTIONS = [ordered]@{
   timeline     = @{ t = 'World Timeline'; h = '/timeline'; k = 'Every state'; d = 'Five thousand years of states and empires on one line, region by region: see who lived alongside whom.'; pic = @('standard-of-ur') }
   explorer     = @{ t = 'Empire Explorer'; h = '/explorer'; k = 'Power curves'; d = 'Compare the rise and fall of nearly four hundred states and empires on one timeline.'; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
   race         = @{ t = 'Rise and Fall Race'; h = '/race'; k = "$($POLS.Count) to race"; d = 'Up to four states and empires race year by year: who led, when they overtook each other and how long each held on.'; pic = @('charioteer-of-delphi') }
+  compare      = @{ t = 'Compare Two Profiles'; h = '/compare'; k = "$($EMPS.Count) profiles"; d = 'Any two side by side, cultures, states, religions or movements: when each lived, their facts and their key events on one line of time.'; pic = @('rosetta-stone') }
+  new          = @{ t = 'What' + [char]0x2019 + 's New'; h = '/new'; k = 'Release notes'; d = 'What the Institute has added and changed, newest first, and every page that appeared in the last thirty days.'; pic = @('printing-press') }
   connections  = @{ t = 'Connections'; h = '/connections'; k = $POL['links'].Count.ToString('N0') + ' links'; d = 'Who succeeded, conquered, ruled or merged with whom: the states as one network.'; pic = @('congress-of-berlin', 'treaty-of-tordesillas', 'congress-of-vienna') }
   paths        = @{ t = 'Reading Paths'; s = 'Themed routes, from the Silk Road to the steppe empires.'; h = '/paths/'; k = "$($RP.Count) paths"; d = 'Themed routes across profiles and entries, from the Silk Road to the steppe empires.'; pic = @('marco-polo', 'ibn-battuta', 'zheng-he') }
   write        = @{ t = 'Write in Ancient Scripts'; h = '/write'; k = '12 languages'; d = 'Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: a keyboard that shows every sign with its sound, and your writing as a picture.'; pic = @('rosetta-stone', 'code-of-hammurabi') }
@@ -3825,8 +3928,8 @@ SetBlock "$Repo\atlas" 'atlas-presets' (($PRESETS | ForEach-Object { '<button ty
 SetBlock "$Repo\atlas" 'atlas-centuries' ('<ul class="cty-chips atl-cents">' + (($CENTPAGES | ForEach-Object { '<li><a href="/centuries/' + (CenturySlug $_) + '">' + (Hx (CentTitle $_)) + '</a></li>' }) -join '') + '</ul>')
 # the hub in four groups that fill their rows: what to read, what to explore, what to play, the Institute itself
 $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'people', 'speeches', 'songs', 'today', 'glossary')),
-  @('Through time', @('atlas', 'timeline', 'faiths', 'centuries', 'years', 'inventions')), @('Explore', @('explorer', 'race', 'connections', 'paths', 'societies', 'governance')),
-  @('Play', @('quiz', 'games', 'flashcards', 'write', 'kids', 'passport')), @('The Institute', @('series', 'teachers', 'dataset', 'community', 'contributors', 'start')))
+  @('Through time', @('atlas', 'timeline', 'centuries', 'years', 'inventions')), @('Explore', @('explorer', 'race', 'compare', 'connections', 'faiths', 'paths', 'societies', 'governance', 'start')),
+  @('Play', @('quiz', 'games', 'flashcards', 'write', 'kids', 'passport')), @('The Institute', @('series', 'new', 'teachers', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(switch (@($_[1]).Count) { 5 { ' hub-5' } 6 { ' hub-6' } 9 { ' hub-6' } default { '' } }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
 SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'atlas', 'countries', 'centuries', 'people', 'paths') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
@@ -3982,6 +4085,9 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Country Histories', '/countries/', 'countries|country histories'), @('History by Century', '/centuries/', 'centuries|century'), @('Year by Year', '/years/', 'years|year pages'),
   @('People in History', '/people/', 'people|who lived when'), @('Empire Explorer', '/explorer', 'explorer|power curves|rise and fall chart'),
   @('Rise and Fall Race', '/race', 'race|rise and fall race|empire race|bar chart race|compare empires|strongest empire'),
+  @('Compare Two Profiles', '/compare', 'compare|compare cultures|compare civilisations|compare civilizations|compare religions|side by side|versus|vs'),
+  @("What's New", '/new', "what's new|whats new|new pages|recent additions|updates|release notes|changelog"),
+  @('Where Is This Song From?', '/games#songq', 'song game|where is this song from|guess the song|song quiz'),
   @('Connections Map', '/connections', 'connections map|relations|network of states'), @('Reading Paths', '/paths/', 'paths|reading paths|where to start reading'),
   @('Great Speeches', '/speeches/', 'speeches|famous speeches'), @('Songs in History', '/songs/', 'songs|song|music|folk songs|hymns|anthems|national anthems|lyrics|song lyrics|protest songs|laments|lullabies|work songs|spirituals|history of music|old songs|ancient songs'),
 @('Write in Ancient Scripts', '/write', 'write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe'),
@@ -4059,8 +4165,66 @@ $t2 = [regex]::Replace([regex]::Replace($t, "var SEARCH_INDEX_SRC = '/search-ind
 if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\shared-nav.js", $t2)) { $NWRITE++ }
 Say ("search-pages.js: {0} rows, {1} years; search-index.js: {2:N0} entries ({3:N0} slugs made from the name), {4:N0} states, {5:N0} KB" -f $sgRows.Count, $YEARLIST.Count, $nE, $nZero, $nS, ($siText2.Length / 1KB))
 
+# ── What's new (/new, whats-new.xml; Nov 2026) ───────────────────────────────────────────────────────────────────────
+# The release notes (scripts/whats-new.tsv: date, title, summary, links "label|/path" joined by " ; "; newest first, written
+# by hand with each release) and the pages that appeared in the last 30 days: scripts/first-seen.tsv keeps the day each
+# page was first built (pages that existed before the file are recorded with no day and never listed as new).
+$fsFile = "$PSScriptRoot\first-seen.tsv"; $FSEEN = @{}; $fsSeed = -not (Test-Path $fsFile)
+if (-not $fsSeed) { foreach ($l in [IO.File]::ReadAllLines($fsFile, $U8)) { $c = $l -split "`t"; if ($c.Count -ge 2) { $FSEEN[$c[0]] = $c[1] } } }
+foreach ($p in $SMNEW.Keys) { if (-not $FSEEN.ContainsKey($p)) { $FSEEN[$p] = $(if ($fsSeed) { '' } else { $TODAY }) } }
+[IO.File]::WriteAllLines($fsFile, [string[]]@($FSEEN.Keys | Sort-Object | ForEach-Object { $_ + "`t" + $FSEEN[$_] }), $U8)
+$wnNotes = @(); if (Test-Path "$PSScriptRoot\whats-new.tsv") { foreach ($l in [IO.File]::ReadAllLines("$PSScriptRoot\whats-new.tsv", $U8)) { if (-not $l -or $l.StartsWith('#')) { continue }; $c = $l -split "`t"; if ($c.Count -ge 3) { $wnNotes += [pscustomobject]@{ d = $c[0]; t = $c[1]; s = $c[2]; l = $(if ($c.Count -ge 4) { $c[3] } else { '' }) } } } }
+$wnCut = ([datetime]::ParseExact($TODAY, 'yyyy-MM-dd', $INV)).AddDays(-30).ToString('yyyy-MM-dd')
+$WNSEC = [ordered]@{ '/encyclopedia/' = 'Encyclopedia entries'; '/songs/' = 'Songs'; '/empire/' = 'Profiles'; '/culture/' = 'Profiles'; '/religion/' = 'Profiles'; '/language/' = 'Profiles'; '/movement/' = 'Profiles'; '/government/' = 'Profiles'; '/state/' = 'States'; '/years/' = 'Years'; '/teachers/' = "Teachers' Corner"; '/essays/' = 'Essays'; '/paths/' = 'Reading paths'; '/speeches/' = 'Speeches'; '/societies/' = 'Social ladders' }
+$wnGrp = [ordered]@{}
+foreach ($p in ($FSEEN.Keys | Where-Object { $FSEEN[$_] -and [string]::CompareOrdinal($FSEEN[$_], $wnCut) -ge 0 -and $_ -ne '/new' } | Sort-Object { $FSEEN[$_] } -Descending)) {
+  $sec = 'Pages'; foreach ($k in $WNSEC.Keys) { if ($p.StartsWith($k) -and $p.Length -gt $k.Length) { $sec = $WNSEC[$k]; break } }
+  if (-not $wnGrp.Contains($sec)) { $wnGrp[$sec] = New-Object Collections.Generic.List[string] }; $wnGrp[$sec].Add($p)
+}
+function WnTitle([string]$p) {   # a page's own title, from the file just written
+  $f = Join-Path $Repo ($p.TrimStart('/') -replace '/', '\'); if ($p.EndsWith('/')) { $f = Join-Path $f 'index' }
+  if (-not (Test-Path $f)) { return $p }
+  $m = [regex]::Match([IO.File]::ReadAllText($f, $U8), '<title>([^<]*)</title>'); if (-not $m.Success) { return $p }
+  [Net.WebUtility]::HtmlDecode($m.Groups[1].Value) -replace '\s+[—–-]\s+(The Epoch Institute|Encyclopedia|States|Songs in History|Year by Year)$', '' -replace '\s+[—–-]\s+(The Epoch Institute|Encyclopedia|States|Songs in History)$', ''
+}
+function WnDate([string]$d) { ([datetime]::ParseExact($d, 'yyyy-MM-dd', $INV)).ToString('d MMMM yyyy', $INV) }
+$crumb = Crumbs @(@('Home', '/'), @("What's new", $null))
+$wb = New-Object Text.StringBuilder(30000)
+[void]$wb.Append('<main id="main" class="wn-page ref-page">' + "`n<div class=`"wn-wrap`">`n" + $crumb[0] + "`n")
+[void]$wb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">What&#8217;s new</h1><p class="ref-lede">What the Institute has added and changed, newest first, and every page that appeared in the last 30 days. Follow it with the <a href="/whats-new.xml">feed</a>.</p></header>' + "`n")
+if ($wnNotes.Count) {
+  [void]$wb.Append('<section class="wn-notes" aria-labelledby="wn-notes-t"><h2 class="ref-sec-title" id="wn-notes-t">Release notes</h2><ol class="wn-list">')
+  foreach ($n in $wnNotes) {
+    $lk = @(($n.l -split ' ; ') | Where-Object { $_ -match '\|' } | ForEach-Object { $q = $_ -split '\|', 2; '<a href="' + (Hx $q[1].Trim()) + '">' + (Hx $q[0].Trim()) + '</a>' })
+    [void]$wb.Append('<li class="wn-note"><p class="wn-d"><time datetime="' + $n.d + '">' + (WnDate $n.d) + '</time></p><h3 class="wn-t">' + (Hx $n.t) + '</h3><p class="wn-s">' + (Hx $n.s) + '</p>' + $(if ($lk.Count) { '<p class="wn-links">' + ($lk -join ' ') + '</p>' } else { '' }) + '</li>')
+  }
+  [void]$wb.Append("</ol></section>`n")
+}
+$wnTotal = 0; foreach ($g in $wnGrp.Values) { $wnTotal += $g.Count }
+[void]$wb.Append('<section class="wn-pages" aria-labelledby="wn-pages-t"><h2 class="ref-sec-title" id="wn-pages-t">New pages in the last 30 days <span class="n">' + $wnTotal.ToString('N0', $INV) + '</span></h2>')
+if (-not $wnTotal) { [void]$wb.Append('<p>The list starts with the next pages to appear: the Institute began keeping the day each page first appeared on ' + (WnDate '2026-11-02') + '.</p>') }
+foreach ($sec in $wnGrp.Keys) {
+  $ps = $wnGrp[$sec]; $show = @($ps | Select-Object -First 60)
+  [void]$wb.Append('<h3 class="wn-sec">' + (Hx $sec) + ' <span class="n">' + $ps.Count.ToString('N0', $INV) + '</span></h3><ul class="wn-plist">' + (($show | ForEach-Object { '<li><a href="' + (Hx $_) + '">' + (Hx (WnTitle $_)) + '</a> <span>' + (WnDate $FSEEN[$_]) + '</span></li>' }) -join '') + '</ul>' + $(if ($ps.Count -gt 60) { '<p class="wn-more">and ' + ($ps.Count - 60).ToString('N0', $INV) + ' more</p>' } else { '' }))
+}
+[void]$wb.Append("</section>`n</div>`n</main>`n")
+$wnDesc = 'What is new at The Epoch Institute: release notes, newest first, and every page added in the last 30 days, from encyclopedia entries to songs and profiles.'
+Emit '/new' (Page @{ title = "What's New — The Epoch Institute"; desc = $wnDesc; path = '/new'; type = 'website'; img = (Poster 'default'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"WebPage","name":"What' + "'" + 's new","description":' + (Js $wnDesc) + ',"url":' + (Js "$SITE/new") + '}'); nav = 'new'; body = $wb.ToString() })
+# whats-new.xml: the release notes as a feed (guid = the date and title)
+$wx = New-Object Text.StringBuilder
+[void]$wx.Append('<?xml version="1.0" encoding="UTF-8"?>' + "`n" + '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">' + "`n  <channel>`n    <title>The Epoch Institute — What's new</title>`n    <link>$SITE/new</link>`n    <description>What the Institute has added and changed.</description>`n    <language>en-gb</language>`n    <atom:link href=`"$SITE/whats-new.xml`" rel=`"self`" type=`"application/rss+xml`"/>`n")
+foreach ($n in $wnNotes) {
+  $first = @(($n.l -split ' ; ') | Where-Object { $_ -match '\|' } | ForEach-Object { ($_ -split '\|', 2)[1].Trim() })
+  $lnk = if ($first.Count) { $SITE + $first[0] } else { "$SITE/new" }
+  $pub = ([datetime]::ParseExact($n.d, 'yyyy-MM-dd', $INV)).ToString('ddd, dd MMM yyyy 08:00:00 +0000', $INV)
+  [void]$wx.Append("    <item><title>" + (Hx $n.t) + "</title><link>" + (Hx $lnk) + "</link><guid isPermaLink=`"false`">" + (Hx ($n.d + ' ' + $n.t)) + "</guid><pubDate>$pub</pubDate><description>" + (Hx $n.s) + "</description></item>`n")
+}
+[void]$wx.Append("  </channel>`n</rss>`n")
+if ([EpochBuild.W]::WriteIfChanged("$Repo\whats-new.xml", $wx.ToString())) { $NWRITE++ }
+Say ("what's new: {0} release notes, {1} new pages in 30 days" -f $wnNotes.Count, $wnTotal)
+
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

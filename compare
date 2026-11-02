@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>Compare Two Profiles: Cultures, States, Religions — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Compare any two profiles side by side: two cultures, a state and a religion, a movement and a form of government. Their dates, facts and key events.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/compare">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compare Two Profiles — The Epoch Institute">
+<meta property="og:description" content="Compare any two profiles side by side: two cultures, a state and a religion, a movement and a form of government. Their dates, facts and key events.">
+<meta property="og:url" content="https://the-epoch-institute.org/compare">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-profiles.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-profiles.jpg">
+<link rel="stylesheet" href="/css/compare.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Compare two profiles"}]},{"@type":"WebPage","name":"Compare two profiles","url":"https://the-epoch-institute.org/compare","description":"Compare any two profiles side by side: two cultures, a state and a religion, a movement and a form of government. Their dates, facts and key events."}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<main id="main" class="cmp-page ref-page">
+<div class="cmp-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li aria-current="page">Compare</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">Compare Two Profiles</h1>
+  <p class="ref-lede">Any two of the Institute&#8217;s profiles side by side: two cultures, a state and a religion, a language and a movement. When each lived, whether they met in time, their facts and their key events on one line of time.</p>
+</header>
+<form class="cmp-pick" role="search" aria-label="Choose two profiles" onsubmit="return false">
+  <label class="cmp-f is-a"><span>First</span><input id="cmp-a" list="cmp-names" placeholder="A culture, a state, a religion…" autocomplete="off"></label>
+  <button type="button" class="cmp-btn" id="cmp-swap" aria-label="Swap the two">&#8646;</button>
+  <label class="cmp-f is-b"><span>Second</span><input id="cmp-b" list="cmp-names" placeholder="…and another" autocomplete="off"></label>
+  <button type="button" class="cmp-btn cmp-btn-r" id="cmp-random">Surprise me</button>
+</form>
+<div id="cmp-out" aria-live="polite"><noscript><p class="cmp-hint">The comparison needs JavaScript.</p></noscript></div>
+</div>
+</main>
+
+<script>var COMPARE_V = '0d235d73';</script>
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>initNav('compare');</script>
+<script src="/compare.js?v=1"></script>
+</body>
+</html>

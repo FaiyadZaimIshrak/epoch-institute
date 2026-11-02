@@ -75,5 +75,33 @@
   document.getElementById('sg-reset').addEventListener('click', function () { q.value = ''; setType(''); era.value = ''; reg.value = ''; w.checked = false; v.checked = false; run(); });
   document.addEventListener('epoch:kids', function () { run(true); });
   run(true);
+  // ── find a line (Nov 2026): the words of every song that carries them, data/song-lines.json, fetched on first use ──
+  var lf = document.getElementById('sg-line'), lr = document.getElementById('sg-line-res'), LINES = null, lt = 0;
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function loadLines() {
+    if (!LINES) LINES = fetch(lf.getAttribute('data-src')).then(function (r) { return r.json(); }).then(function (rows) {
+      return rows.map(function (r) { return { slug: r[0], title: r[1], lines: r[2], f: r[2].map(function (l) { return ' ' + fold(l) + ' '; }) }; });
+    });
+    return LINES;
+  }
+  function findLine() {
+    var words = fold(lf.value).split(' ').filter(Boolean);
+    if (!words.length || fold(lf.value).length < 3) { lr.innerHTML = ''; return; }
+    loadLines().then(function (rows) {
+      var out = [];
+      rows.forEach(function (s) {
+        for (var i = 0; i < s.f.length; i++) if (words.every(function (x) { return s.f[i].indexOf(' ' + x) >= 0; })) { out.push([s, i]); break; }
+      });
+      lr.innerHTML = out.length ? out.slice(0, 30).map(function (m) {
+        var line = esc(m[0].lines[m[1]]);
+        words.forEach(function (x) { if (x.length > 1) line = line.replace(new RegExp('(^|[^\\p{L}])(' + x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'giu'), '$1<mark>$2</mark>'); });
+        return '<li><a href="/songs/' + encodeURIComponent(m[0].slug) + '#words"><span class="sg-lr-t">' + esc(m[0].title) + '</span><span class="sg-lr-l">' + line + '</span></a></li>';
+      }).join('') + (out.length > 30 ? '<li class="sg-lr-more">and ' + (out.length - 30) + ' more: add a word</li>' : '') : '<li class="sg-lr-more">No line has all those words.</li>';
+    }).catch(function () { lr.innerHTML = '<li class="sg-lr-more">The words could not be loaded. Please try again.</li>'; LINES = null; });
+  }
+  if (lf && lr) {
+    ['focus', 'pointerdown'].forEach(function (k) { lf.addEventListener(k, function () { loadLines(); }, { once: true }); });
+    lf.addEventListener('input', function () { clearTimeout(lt); lt = setTimeout(findLine, 150); });
+  }
   window.epochSongs = { run: run, setType: setType, shown: function () { return cards.filter(function (c) { return !c.hidden; }).map(function (c) { return c.getAttribute('href'); }); } };
 })();

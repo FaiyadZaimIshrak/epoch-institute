@@ -131,7 +131,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   function showGame(g, focus, sub) {
     if (GAMES.indexOf(g) < 0) g = 'pairs';
@@ -1641,6 +1641,97 @@ initNav('games');
     } };
   })();
   MODS.said = Said;
+
+  // ── Where Is This Song From? (#songq, Nov 2026): five songs a day, the same for everyone (UTC; #1 = 3 Nov 2026), dealt
+  // in order from songq-data.js (SONGQ, by the builder: the songs whose words are printed). A few lines of each in its
+  // own words (the English below, shown on request), and four regions to choose from: the song's own and three others
+  // drawn by the day. epoch-games songq-<number> {m: '10110', done}, songq-streak {n, last, b}. Kids mode: Kids songs.
+  var SongQ = (function () {
+    var D = null, N = 5, QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 10, 3) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var K = { num: 0, qs: [], i: 0, m: '', done: false, practice: false, answered: false }, board = $('songq-board');
+    var REG = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
+    function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+    function pool() { return kids() ? D.filter(function (s) { return s[8]; }) : D; }
+    function round(num) { var P = pool(), out = []; for (var k = 0; k < N && P.length; k++) out.push(P[((num - 1) * N + k) % P.length]); return out; }
+    function key(num) { return 'songq-' + (kids() ? 'k' : '') + num; }
+    function save() { if (!K.practice) setBest(key(K.num), { m: K.m, done: K.done }); }
+    function load(num, practice) {
+      K.num = num; K.practice = practice; K.qs = round(num);
+      var sv = practice ? null : best(key(num));
+      K.m = sv && sv.m ? String(sv.m) : ''; K.done = !!(sv && sv.done); K.i = K.m.length; K.answered = false;
+      $('songq-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Where Is This Song From? <b>#' + num + '</b>';
+      var sk = best('songq-streak'); $('songq-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+      $('songq-done').hidden = true; $('songq-done').innerHTML = '';
+      if (K.done || K.i >= N) finish(true); else ask();
+    }
+    function dots() { return '<ol class="gm-said-dots" aria-hidden="true">' + K.qs.map(function (q, k) { return '<li class="' + (k < K.m.length ? (K.m.charAt(k) === '1' ? 'ok' : 'no') : k === K.i && !K.done ? 'now' : '') + '"></li>'; }).join('') + '</ol>'; }
+    function options(q, k) {   // the song's region and three others, the same for everyone that day
+      var r = rng(K.num * 97 + k * 13 + 3), others = REG.filter(function (x) { return x !== q[2]; });
+      for (var i = others.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = others[i]; others[i] = others[j]; others[j] = t; }
+      var a = [q[2]].concat(others.slice(0, 3));
+      for (i = a.length - 1; i > 0; i--) { j = Math.floor(r() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; }
+      return a;
+    }
+    function lines(arr) { return arr.map(function (l) { return '<span>' + escHtml(l) + '</span>'; }).join(''); }
+    function ask() {
+      var q = K.qs[K.i]; K.answered = false;
+      board.innerHTML = dots() + '<figure class="gm-said-q gm-songq-q"><blockquote><p class="gm-songq-l">' + lines(q[6]) + '</p></blockquote>' +
+        (q[7].length ? '<details class="gm-songq-en"><summary>Show the English</summary><p class="gm-songq-l">' + lines(q[7]) + '</p></details>' : '') +
+        '<figcaption>Song ' + (K.i + 1) + ' of ' + N + ': where is it from?</figcaption></figure>' +
+        '<div class="gm-said-opts gm-songq-opts" role="group" aria-label="Where is it from?">' + options(q, K.i).map(function (r) { return '<button type="button" class="gm-said-o gm-songq-o" data-r="' + escHtml(r) + '"><span class="gm-said-n">' + escHtml(r) + '</span></button>'; }).join('') + '</div>' +
+        '<div class="gm-said-res" aria-live="polite"></div>';
+    }
+    function pick(r) {
+      if (K.answered || K.done) return; K.answered = true;
+      var q = K.qs[K.i], ok = r === q[2];
+      K.m += ok ? '1' : '0'; save(); Sfx.play(ok ? 'good' : 'bad');
+      [].forEach.call(board.querySelectorAll('.gm-songq-o'), function (b) { var v = b.getAttribute('data-r'); b.disabled = true; if (v === q[2]) b.classList.add('is-right'); else if (v === r) b.classList.add('is-wrong'); });
+      board.querySelector('.gm-said-dots').outerHTML = dots();
+      board.querySelector('.gm-said-res').innerHTML = '<p class="gm-said-who"><b>' + (ok ? 'Right!' : 'Not this time.') + '</b> ' + escHtml(q[1]) + ' <span>(' + escHtml(q[5]) + ')</span></p>' +
+        '<p class="gm-said-src">' + escHtml(q[3]) + ' &middot; ' + escHtml(q[4]) + ' &middot; ' + escHtml(q[2]) + '</p>' +
+        '<p class="gm-said-acts"><a href="/songs/' + encodeURIComponent(q[0]) + '">Its story, words and a performance &rarr;</a><button type="button" class="hero-cta" data-next>' + (K.i + 1 < N ? 'Next song &rarr;' : 'See your score') + '</button></p>';
+      var nb = board.querySelector('[data-next]'); if (nb) nb.focus({ preventScroll: true });
+    }
+    board.addEventListener('click', function (e) {
+      var b = e.target.closest('.gm-songq-o'); if (b) { pick(b.getAttribute('data-r')); return; }
+      if (e.target.closest('[data-next]')) { K.i++; if (K.i < N) { ask(); var f = board.querySelector('.gm-songq-o'); if (f) f.focus({ preventScroll: true }); } else finish(); }
+    });
+    function finish(again) {
+      K.done = true; save();
+      var n = K.m.split('').filter(function (x) { return x === '1'; }).length, s = n === N ? 3 : n >= 4 ? 2 : n >= 2 ? 1 : 0;
+      var squares = K.m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join(''), sk = best('songq-streak') || { n: 0, last: 0 };
+      if (!K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('songq-streak', sk); }
+      board.innerHTML = dots() + '<ol class="gm-said-rev gm-songq-rev">' + K.qs.map(function (q, k) { return '<li class="' + (K.m.charAt(k) === '1' ? 'ok' : 'no') + '"><span class="gm-said-img gm-said-mono" aria-hidden="true">&#9835;</span><div><p class="gm-said-rq gm-songq-l">' + lines(q[6].slice(0, 2)) + '</p><p class="gm-said-who"><a href="/songs/' + encodeURIComponent(q[0]) + '">' + escHtml(q[1]) + '</a> <span>(' + escHtml(q[5]) + ')</span></p><p class="gm-said-src">' + escHtml(q[3]) + ' &middot; ' + escHtml(q[2]) + '</p></div></li>'; }).join('') + '</ol>';
+      var dn = $('songq-done');
+      dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (n === N ? 'All five placed!' : n + ' of ' + N + ' right') + '</p>' +
+        '<p class="gm-daily-sq" aria-label="Your answers: ' + n + ' right">' + squares + '</p>' +
+        '<p class="gm-done-s">Where Is This Song From? #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new songs in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('songq')) + '</div>';
+      share(dn, 'Epoch Where Is This Song From? #' + K.num + ': ' + n + '/' + N + '\n' + squares, 'songq', { title: 'Where Is This Song From? #' + K.num, score: n + '/' + N, unit: 'placed today', stars: s, squares: K.m,
+        note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'Five songs every day', url: 'the-epoch-institute.org/games#songq' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && n >= 4) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    var pickEl = $('songq-pick');
+    function opts() {
+      var n = Math.min(TODAY - 1, 60), h = '<option value="' + TODAY + '">Today&rsquo;s songs (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best(key(i)) && best(key(i)).done ? ' (played)' : '') + '</option>';
+      pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
+    }
+    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best(key(n)) && best(key(n)).done)); });
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      var s = document.createElement('script'); s.src = typeof SONGQ_SRC !== 'undefined' ? SONGQ_SRC : '/songq-data.js';
+      s.onload = function () { D = typeof SONGQ !== 'undefined' ? SONGQ : null; if (!D || !D.length) { board.innerHTML = '<p class="gm-howto">The songs are on their way.</p>'; return; } opts(); load(TODAY, false); };
+      s.onerror = function () { board.innerHTML = '<p class="gm-howto">The songs could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    }, round: function (n) { return round(n); } };
+  })();
+  MODS.songq = SongQ;
+  window.epochSongQ = SongQ;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the last one played
   var hp = location.hash.slice(1).split('-'), startGame = hp[0], startSub = hp.slice(1).join('-');

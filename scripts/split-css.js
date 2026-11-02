@@ -17,8 +17,10 @@
 const fs = require('fs'), path = require('path'), zlib = require('zlib');
 const R = path.resolve(__dirname, '..'), CHECK = process.argv.includes('--check');
 const HAND = ['index', 'research', 'research-series', 'about', 'contributors', 'dataset', 'explorer', 'profiles', 'community', 'connections', 'atlas', 'quiz',
-  'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'write', 'faiths', 'flashcards', 'race', 'inventions', 'governance', '404.html'];
+  'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'write', 'faiths', 'flashcards', 'race', 'inventions', 'governance', 'compare', '404.html'];
 const GENERATED = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs'];
+// generated pages at the root (build-pages.ps1 writes them like the folders' pages; they link css/pages.css)
+const GENERATED_ROOT = ['new'];
 const PROFILES = ['empire', 'religion', 'language', 'culture', 'movement', 'government'];
 // every script counts, data files too: epoch-stats.js looks like data but draws the profiles' radar panel (its title,
 // tags and bars), whose rules a first cut without it left out. The data's words add a few rules (0.4 KB), never miss one.
@@ -95,6 +97,7 @@ const groups = [];
 { // the generated pages and the profiles share one file
   const u = new Set(), refs = new Set();
   for (const d of GENERATED.concat(PROFILES)) for (const f of pagesIn(path.join(R, d))) addPage(f, u, refs);
+  for (const f of GENERATED_ROOT) if (fs.existsSync(path.join(R, f))) addPage(path.join(R, f), u, refs);
   const gen = fs.readFileSync(path.join(R, 'generator.html'), 'utf8'), gs = inline(gen); words(gs, u); scriptRefs(gs).forEach(r => refs.add(r));
   const b = fs.readFileSync(path.join(R, 'scripts', 'build-pages.ps1'), 'utf8');
   for (const m of b.matchAll(/class=`?["']([^"'`]+)/g)) m[1].split(/\s+/).forEach(x => /^[\w-]+$/.test(x) && u.add(x));

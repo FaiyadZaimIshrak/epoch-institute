@@ -17,7 +17,14 @@ const GAPS = ['delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 
   // second wave (Nov 2026)
   'chakrulo', 'cherubikon', 'day-o', 'fengyang-flower-drum',
   'harpers-songs', 'himno-de-riego', 'john-henry', 'la-adelita', 'la-bamba', 'la-llorona', 'lament-for-ur',
-  'om-jai-jagdish-hare', 'soran-bushi'];
+  'om-jai-jagdish-hare', 'soran-bushi',
+  // third wave (Nov 2026): no edition holds the words (Heil dir: only parodies are quoted; Battotai: none found)
+  'heil-dir-im-siegerkranz', 'battotai'];
+// public-domain songs whose words are not printed for another reason, given on the page (third wave, Nov 2026)
+const WITHHELD = {
+  'horst-wessel-lied': 'The words of this song are not printed here. They are in the public domain, but as a symbol of the Nazi regime the song is banned in Germany and Austria, outside teaching, research and the arts.',
+  'marcha-real': 'The Marcha Real is an instrumental anthem: it has no official words, and none of the words written for it over the years is printed here.'
+};
 // the era bands of the Great Speeches, by the song's year
 const era = y => y < 500 ? 'ancient' : y < 1500 ? 'medieval' : y < 1750 ? 'earlymodern' : y < 1815 ? 'revolutions' : y < 1900 ? 'nineteenth' : y < 1946 ? 'twentieth' : 'postwar';
 const fold = s => s.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase().replace(/[‘’ʻʼ'"“”]/g, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
@@ -47,14 +54,14 @@ for (const f of fs.readdirSync(D).filter(f => f.endsWith('.txt')).sort()) {
   let text = null; const tf = path.join(REPO, 'data', 'song-texts', slug + '.json');
   if (fs.existsSync(tf)) text = JSON.parse(fs.readFileSync(tf, 'utf8'));
   if (st === 'copyright' && text) bad.push(slug + ': in copyright but has a text');
-  if (st === 'pd' && !text && !GAPS.includes(slug)) bad.push(slug + ': public domain, no text and not a stated gap');
+  if (st === 'pd' && !text && !GAPS.includes(slug) && !WITHHELD[slug]) bad.push(slug + ': public domain, no text and not a stated gap');
   if (text && GAPS.includes(slug)) bad.push(slug + ': has a text but is listed as a gap');
   songs.push({
     slug, title: H.title, local: (H.local === H.title || none(H.local)) ? '' : H.local, pd: st === 'pd', status: why.join(' | '),
     lyricist: H.lyricist, composer: H.composer, culture: H.culture, langs, place: H.place, date: H.date, year, era: era(year),
     undated, region: H.region, types, people: list('people'), places: list('places'), events: list('events'), kids: H.kids === 'yes', kid: H.kid,
     story: paras('story'), meaning: paras('meaning'), inspired: links('inspired'), inspiredBy: links('inspired-by'),
-    sources: (B.sources || []).map(l => l.trim()).filter(Boolean), text, gap: GAPS.includes(slug), video: null
+    sources: (B.sources || []).map(l => l.trim()).filter(Boolean), text, gap: GAPS.includes(slug), withheld: WITHHELD[slug] || null, video: null
   });
 }
 // the chosen performances: only those that passed the last check

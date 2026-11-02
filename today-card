@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On This Day — The Epoch Institute</title>
+<meta name="description" content="An On This Day card from The Epoch Institute for other websites to show: today's events in history, a picture and a link to the whole day.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://the-epoch-institute.org/today-card">
+<meta property="og:title" content="On This Day — The Epoch Institute">
+<meta property="og:url" content="https://the-epoch-institute.org/today-card">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-today.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"On This Day card","url":"https://the-epoch-institute.org/today-card","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}</script>
+<!-- The embeddable "On this day" card (Nov 2026): other sites show it in an <iframe> (the snippet is on /today-in-history/).
+     Self-contained: its own small styles, no menus, no analytics; ?theme=light|dark, ?n=1-5 events. The day comes from
+     data/days/<mm-dd>.json (DAYS_V stamped by build-pages.ps1); every link opens the Institute in a new tab. -->
+<style>
+:root { --bg: #0b0c10; --surface: #14161c; --text: #e8e0d0; --muted: #a39d90; --gold: #c9a84c; --gold-light: #e3c97a; --border: rgba(201, 168, 76, 0.28); color-scheme: dark; }
+:root[data-theme="light"] { --bg: #f4efe4; --surface: #fbf8f1; --text: #2a251c; --muted: #6b6455; --gold: #8a6a1c; --gold-light: #6e5212; --border: rgba(138, 106, 28, 0.3); color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font-family: Georgia, 'Times New Roman', serif; padding: 14px; }
+a { color: inherit; text-decoration: none; }
+.tc { border: 1px solid var(--border); border-radius: 6px; background: var(--surface); overflow: hidden; max-width: 640px; margin: 0 auto; }
+.tc-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 12px 16px 8px; border-bottom: 1px solid var(--border); }
+.tc-k { font: 600 11px/1.2 system-ui, -apple-system, 'Segoe UI', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+h1 { margin: 2px 0 0; font-size: 22px; font-weight: 600; color: var(--gold-light); }
+.tc-pic { display: block; width: 100%; height: 150px; object-fit: cover; object-position: center 25%; }
+ol { list-style: none; margin: 0; padding: 4px 16px; }
+li { padding: 9px 0; border-bottom: 1px solid var(--border); }
+li:last-child { border-bottom: 0; }
+.tc-y { font: 600 12px/1.3 system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--gold); }
+.tc-t { display: block; font-size: 16px; line-height: 1.4; margin-top: 2px; }
+li a:hover .tc-t { color: var(--gold-light); text-decoration: underline; }
+.tc-foot { display: flex; justify-content: space-between; gap: 10px; padding: 8px 16px 12px; font: 600 12px/1.3 system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.tc-foot a { color: var(--gold); }
+.tc-src { color: var(--muted); font-weight: 400; }
+</style>
+</head>
+<body>
+<main class="tc" id="tc">
+  <div class="tc-head"><div><span class="tc-k">On this day</span><h1 id="tc-date">Today in history</h1></div></div>
+  <div id="tc-pic"></div>
+  <ol id="tc-list"><li><span class="tc-t">Loading today&#8217;s events…</span></li></ol>
+  <div class="tc-foot"><a id="tc-more" href="https://the-epoch-institute.org/today-in-history/" target="_blank" rel="noopener">See the whole day &rarr;</a><a class="tc-src" href="https://the-epoch-institute.org/" target="_blank" rel="noopener">The Epoch Institute</a></div>
+</main>
+<script>
+(function () {
+  var DAYS_V = 'fbdfd0bd8b';
+  var SITE = 'https://the-epoch-institute.org';
+  var P = new URLSearchParams(location.search);
+  if (P.get('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  var n = Math.min(5, Math.max(1, parseInt(P.get('n'), 10) || 3));
+  var MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+  var now = new Date(), mm = ('0' + (now.getMonth() + 1)).slice(-2), dd = ('0' + now.getDate()).slice(-2);
+  var slug = MONTHS[now.getMonth()] + '-' + now.getDate(), dayUrl = SITE + '/today-in-history/' + slug;
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  document.getElementById('tc-date').textContent = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+  document.getElementById('tc-more').href = dayUrl;
+  fetch('/data/days/' + mm + '-' + dd + '.json?v=' + DAYS_V).then(function (r) { if (!r.ok) throw new Error(); return r.json(); }).then(function (d) {
+    var evs = d.events || [], hero = d.hero >= 0 ? evs[d.hero] : null, pick = [];
+    if (hero) pick.push(hero);
+    // then the others spread across time: every k-th event, oldest first
+    var rest = evs.filter(function (e) { return e !== hero; }), k = Math.max(1, Math.floor(rest.length / Math.max(1, n - pick.length)));
+    for (var i = 0; i < rest.length && pick.length < n; i += k) pick.push(rest[i]);
+    pick.sort(function (a, b) { return a.year - b.year; });
+    if (d.pic && hero) document.getElementById('tc-pic').innerHTML = '<a href="' + dayUrl + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="tc-pic" src="' + esc(d.pic[0]) + '" alt=""></a>';
+    document.getElementById('tc-list').innerHTML = pick.map(function (e) {
+      return '<li><a href="' + dayUrl + '" target="_blank" rel="noopener"><span class="tc-y">' + esc(e.yearDisplay) + '</span><span class="tc-t">' + esc(e.title) + '</span></a></li>';
+    }).join('');
+  }).catch(function () {
+    document.getElementById('tc-list').innerHTML = '<li><a href="' + dayUrl + '" target="_blank" rel="noopener"><span class="tc-t">See what happened on this day &rarr;</span></a></li>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -48,7 +48,7 @@
     S.saidPlayed = Object.keys(games).filter(function (k) { var g = games[k]; return /^said-\d+$/.test(k) && g && g.done; }).length;
     S.cwClean = Object.keys(games).some(function (k) { var g = games[k]; return /^cw-\d+$/.test(k) && g && g.done && !g.gave && !g.c && !g.r; });
     var played = { pairs: games.pairs, order: games.order, year: games.year, puzzle: games['pz-solved'] };
-    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; if (/^said-\d/.test(k)) played.said = 1; if (/^ranks\d$/.test(k)) played.ranks = 1; });
+    Object.keys(games).forEach(function (k) { if (/^hunt-/.test(k)) played.hunt = 1; if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; if (/^said-\d/.test(k)) played.said = 1; if (/^songq-k?\d/.test(k)) played.songq = 1; if (/^ranks\d$/.test(k)) played.ranks = 1; });
     S.games = Object.keys(played).filter(function (k) { return played[k]; }).length;
     // Test yourself (test-yourself.js): passed at 80%, by the best score of each page
     var tests = get('epoch-tests', {}) || {}; S.tests = 0; S.testsPassed = 0;
@@ -75,6 +75,18 @@
     ];
   }
 
+  // ── levels (Nov 2026): a point for every page read and ten for every stamp earned ──
+  var LEVELS = [[0, 'Visitor'], [10, 'Reader'], [40, 'Student'], [120, 'Scholar'], [300, 'Historian'], [700, 'Chronicler'], [1500, 'Keeper of the Archive'], [3000, 'Sage of the Ages']];
+  function level(p) { var i = 0; while (i + 1 < LEVELS.length && p >= LEVELS[i + 1][0]) i++; return i; }
+  function levelHtml(p) {
+    var i = level(p), cur = LEVELS[i], nx = LEVELS[i + 1];
+    var pct = nx ? (p - cur[0]) / (nx[0] - cur[0]) * 100 : 100;
+    return '<div class="pass-level"><p class="pass-level-t"><span class="pass-level-k">Level ' + (i + 1) + ' of ' + LEVELS.length + '</span><b>' + esc(cur[1]) + '</b></p>' +
+      '<div class="pass-level-bar" role="progressbar" aria-valuemin="' + cur[0] + '" aria-valuemax="' + (nx ? nx[0] : p) + '" aria-valuenow="' + p + '" aria-label="Points towards the next level"><i style="width:' + pct.toFixed(1) + '%"></i></div>' +
+      '<p class="pass-level-n">' + num(p) + ' points' + (nx ? ': ' + num(nx[0] - p) + ' more to <b>' + esc(nx[1]) + '</b>' : ': the highest level') + '. A point for every page read, ten for every stamp.</p></div>';
+  }
+  window.epochPassportLevel = { levels: LEVELS, level: level };
+
   function render() {
     var S = stats(), ST = stamps(S), kept = get('epoch-badges', {}) || {}, changed = false;
     ST.forEach(function (b) { if (b[3] >= b[4] && !kept[b[0]]) { kept[b[0]] = TODAY; changed = true; } });
@@ -83,6 +95,7 @@
     // in numbers
     $('pass-summary').innerHTML = [[S.pages, S.pages === 1 ? 'page read' : 'pages read'], [S.days, S.days === 1 ? 'day with a visit' : 'days with a visit'], [earned.length, 'of ' + ST.length + ' stamps'], [S.run, S.run === 1 ? 'day in a row' : 'days in a row']]
       .map(function (x) { return '<div class="pass-num"><b>' + num(x[0]) + '</b><span>' + esc(x[1]) + '</span></div>'; }).join('') +
+      levelHtml(S.pages + 10 * earned.length) +
       (S.pages ? '' : '<p class="pass-note pass-empty">Nothing yet: open a <a href="/profiles">profile</a>, an <a href="/encyclopedia/">entry</a> or <a href="/today-in-history/">today in history</a>, and come back.</p>');
     // stamps
     $('pass-stamps-n').textContent = earned.length + ' of ' + ST.length;
@@ -107,7 +120,7 @@
       ['Crossword', S.cwSolved ? S.cwSolved + ' solved' + (S.cw.n > 1 ? ', ' + S.cw.n + ' days in a row' : '') : 'Not solved yet', '/games#cross'],
       ['Test yourself', S.tests ? S.testsPassed + ' passed of ' + S.tests + ' taken' : 'At the foot of every profile, century and path', '/profiles'],
       ['Who Said It?', S.saidPlayed ? S.saidPlayed + ' played' + (S.said.n > 1 ? ', ' + S.said.n + ' days in a row' : '') : 'Not played yet', '/games#said'],
-      ['Games', S.games + ' of 11 played', '/games']
+      ['Games', S.games + ' of 12 played', '/games']
     ];
     $('pass-play').innerHTML = play.map(function (p) { return '<li><a href="' + p[2] + '"><span class="pass-play-t">' + esc(p[0]) + '</span><span class="pass-play-d">' + esc(p[1]) + '</span></a></li>'; }).join('');
     var rec = get('epoch-recent', []);
@@ -120,7 +133,7 @@
   // data/spans/<c>.json (written by build-pages.ps1, which stamps SPANS_V; only the files these pages need), the
   // profiles from EMPIRES (profileSpan), centuries, people by century and years from their addresses. Lanes on one
   // axis of years, coloured by kind (the --cat slots), drawn when the section nears the screen; a list for the same.
-  var SPANS_V = 'd1b78de1ae';
+  var SPANS_V = 'efbeaf97a6';
   var TLK = [['Profiles', 1, 'Profiles', 'Profile'], ['Encyclopedia entries', 0, 'Entries', 'Encyclopedia entry'], ['States', 2, 'States', 'State'], ['Centuries, years, countries and speeches', 3, 'Other pages', '']];   // [label, colour slot, short, one]
   var PROF = {}; if (typeof EMPIRES !== 'undefined' && typeof profileUrl === 'function') EMPIRES.forEach(function (e) { PROF[profileUrl(e)] = e; });
   function yl(y) { return y < 0 ? -y + ' BCE' : y < 1000 ? y + ' CE' : String(y); }

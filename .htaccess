@@ -9,7 +9,7 @@ ErrorDocument 410 /404.html
 # Serve extensionless files as HTML. ExpiresByType (below) never reaches them, as it goes by the type before
 # ForceType: without this header browsers guessed a freshness of their own and could show an old page for hours after a
 # deploy. Revalidated like every other page.
-<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write|faiths|flashcards|race|inventions|governance)$">
+<FilesMatch "^(index|about|research|research-series|profiles|community|contributors|dataset|explorer|connections|atlas|quiz|contact|start|games|kids|search|timeline|passport|write|faiths|flashcards|race|inventions|governance|new|compare|today-card)$">
   ForceType text/html
   <IfModule mod_headers.c>
     Header set Cache-Control "public, max-age=0"
@@ -93,5 +93,10 @@ AddType font/woff2 .woff2
   <FilesMatch "^manifest\.json$">
     Header set Cache-Control "public, max-age=3600"
     Header unset Expires
+  </FilesMatch>
+  # the embeddable "On this day" card (Nov 2026): the one page other sites may show in a frame
+  <FilesMatch "^today-card$">
+    Header unset X-Frame-Options
+    Header set Content-Security-Policy "frame-ancestors *"
   </FilesMatch>
 </IfModule>

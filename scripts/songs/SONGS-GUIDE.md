@@ -24,6 +24,13 @@ the web. If a fact is not in the file, leave it out or write "not known".
 - For songs of slavery, war or oppression, give the history without euphemism, and the people's own voice and
   resistance.
 - For anthems, stay neutral. Present-day politics only as facts, with dates.
+- Songs of states, parties and causes (the third wave, Nov 2026: Soviet, Chinese, North Korean, fascist, imperial,
+  wartime songs …) are told as history: who made the song, for which state or movement, how it was used (schools,
+  parades, radio, purges, personality cults, bans), and what became of it. Name the regime's acts plainly where the
+  article does (the Holocaust, the Great Purge, the Cultural Revolution, the Khmer Rouge's killings), never in the
+  song's own terms, and never praise or mock. Write "the song presents X as Y", not "X was Y". kids: no for songs of
+  fascist and Nazi movements, of personality cults and of regimes of mass killing, unless the article shows the song
+  is also sung apart from them (a folk tune, an anthem of today); the kid line still says plainly what it was.
 
 ## File format (songs/out/<slug>.txt)
 
