@@ -89,7 +89,7 @@
     });
   }
   // a few pairs to start from: contemporaries of one kind in different regions
-  var START = [['Roman Empire', 'Han dynasty'], ['Maya civilization', 'Khmer Empire'], ['Jōmon culture', 'Natufians'], ['Vikings', 'Polynesians'], ['Buddhism', 'Christianity'], ['Absolute monarchy', 'Parliamentary democracy']];
+  var START = [['Roman Empire', 'Han Dynasty'], ['Maya civilisation', 'Khmer Empire'], ['Jōmon culture', 'Natufians'], ['Vikings', 'Lapita culture'], ['Buddhism', 'Christianity'], ['Absolute monarchy', 'Parliamentary democracy']];
   function suggestions() {
     var ok = START.filter(function (p) { return BY[p[0]] && BY[p[1]]; });
     return ok.length ? '<p class="cmp-start">Or start with: ' + ok.map(function (p) { return '<a href="?a=' + encodeURIComponent(p[0]) + '&amp;b=' + encodeURIComponent(p[1]) + '">' + esc(p[0]) + ' and ' + esc(p[1]) + '</a>'; }).join(' · ') + '</p>' : '';
