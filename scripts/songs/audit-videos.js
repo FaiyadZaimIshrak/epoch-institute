@@ -1,5 +1,5 @@
 // Songs in History: what each chosen video really is. Reads videos.tsv, fetches each watch page and writes
-// videos-audit.tsv (slug, id, channel, category, length, title, first words of the description) with a flag where the
+// videos-audit.tsv (slug, id, channel, category, length, views, title, first words of the description) with a flag where the
 // video may not be a performance: a category other than Music, Entertainment or People & Blogs, a talk-like title
 // (news, explained, history of, documentary, lecture, story behind …), a length under 40 s or over 15 min, or instruments
 // named with no voice named (INSTR?: a song with words should be heard sung).
@@ -11,15 +11,15 @@ const TALK = /\bnews\b|explain|history of|documentary|lecture|story (of|behind)|
   const only = process.argv.slice(2);
   const rows = fs.readFileSync(path.join(D, 'videos.tsv'), 'utf8').split(/\r?\n/).filter(l => l && !l.startsWith('#')).map(l => l.split('\t'))
     .filter(r => !only.length || only.includes(r[0]));
-  const out = ['slug\tid\tflag\tchannel\tcategory\tseconds\ttitle\tdescription'];
+  const out = ['slug\tid\tflag\tchannel\tcategory\tseconds\tviews\ttitle\tdescription'];
   for (const [slug, id] of rows) {
-    let cat = '', len = 0, title = '', ch = '', desc = '';
+    let cat = '', len = 0, title = '', ch = '', desc = '', views = 0;
     for (let t = 0; t < 3 && !title; t++) {
       try {
         const h = await (await fetch('https://www.youtube.com/watch?v=' + id + '&hl=en', { headers: UA })).text();
         const m = h.match(/ytInitialPlayerResponse\s*=\s*(\{.+?\});(?:var|<\/script>)/s);
         if (m) { const j = JSON.parse(m[1]), v = j.videoDetails || {}, mf = (j.microformat || {}).playerMicroformatRenderer || {};
-          title = v.title || ''; ch = v.author || ''; len = +v.lengthSeconds || 0; desc = (v.shortDescription || '').replace(/\s+/g, ' ').slice(0, 220); cat = mf.category || ''; }
+          title = v.title || ''; ch = v.author || ''; len = +v.lengthSeconds || 0; desc = (v.shortDescription || '').replace(/\s+/g, ' ').slice(0, 220); cat = mf.category || ''; views = +v.viewCount || 0; }
       } catch (e) {}
       if (!title) await sleep(5000);
     }
@@ -31,7 +31,7 @@ const TALK = /\bnews\b|explain|history of|documentary|lecture|story (of|behind)|
     // a song with words should be heard sung: instruments named and no voice named
     const td = title + ' ' + desc;
     if (/instrumental|fife|military band|band version|orchestra|koto|guitar|lyre|kithara|piano|organ|marimba/i.test(td) && !/choir|chorus|coro|chœur|choeur|vocal|voice|sung|sings|singer|soprano|tenor|bass|chant|合唱|歌|합창|kórus/i.test(td)) flags.push('INSTR?');
-    out.push([slug, id, flags.join(','), ch, cat, len, title, desc].join('\t'));
+    out.push([slug, id, flags.join(','), ch, cat, len, views, title, desc].join('\t'));
     process.stdout.write((flags.length ? '!' : '.'));
     await sleep(1200);
   }

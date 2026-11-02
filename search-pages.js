@@ -361,6 +361,7 @@ var SEARCH_PAGES = [
 ["Reagan: Tear Down This Wall","/speeches/reagan-tear-down-this-wall","speech","Ronald Reagan"],
 ["Lament for Ur","/songs/lament-for-ur","song","Lament for Ur lyrics|Lament for Ur meaning|Lament for Ur song"],
 ["Harper's Songs","/songs/harpers-songs","song","Harper's Songs lyrics|Harper's Songs meaning|Harper's Songs song"],
+["Epic of Gilgamesh","/songs/epic-of-gilgamesh","song","Shūtur eli sharrī (\"Surpassing All Other Kings\") / Sha naqba īmuru (\"He Who Saw the Deep\")|Epic of Gilgamesh lyrics|Epic of Gilgamesh meaning|Epic of Gilgamesh song"],
 ["Hymn to Ninkasi","/songs/ninkasi","song","Hymn to Ninkasi lyrics|Hymn to Ninkasi meaning|Hymn to Ninkasi song"],
 ["Hurrian Hymn No. 6 (Hymn to Nikkal)","/songs/hurrian-songs","song","Hurrian Hymn No. 6 (Hymn to Nikkal) lyrics|Hurrian Hymn No. 6 (Hymn to Nikkal) meaning|Hurrian Hymn No. 6 (Hymn to Nikkal) song"],
 ["Great Hymn to the Aten","/songs/great-hymn-to-the-aten","song","Great Hymn to the Aten lyrics|Great Hymn to the Aten meaning|Great Hymn to the Aten song"],

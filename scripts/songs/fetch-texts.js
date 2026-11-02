@@ -79,6 +79,7 @@ function pick(st, sel) {
   if (fl.includes('norefs')) out = out.map(s => s.map(l => l.replace(/\s*\([^)]{3,}\)/g, '').trim()));   // an edition's source references in parentheses
   if (fl.includes('nobrackets')) out = out.map(s => s.map(l => l.replace(/\s*\[[^\]]*\]/g, '').trim()));   // an editor's glosses inside the line
   if (fl.includes('nolinenum')) out = out.map(s => s.map(l => l.replace(/^\d+\s+(?=\S)/, '')));   // Wikisource's line numbers (every fifth or tenth line)
+  if (fl.includes('gluednum')) out = out.map(s => s.map(l => l.replace(/^\d+(?=[^\d\s.,])/, '')));   // an edition's line numbers run into the line ("5i-na bi-ri-it")
   if (fl.includes('hebnum')) out = out.map(s => s.map(l => l.replace(/^([א-ת]{1,3}\s+){1,2}(?=[א-ת][֑-ׇ])/, '')));   // chapter and verse letters ("כג א") before a pointed word, on every line
   const nl = fl.find(f => /^nolast\d*$/.test(f));   // drop the last n lines (a verse past the song's end)
   if (nl) { const n = +(nl.slice(6) || 1); const ls = out.flat().length - n; let c = 0; out = out.map(s => s.filter(() => c++ < ls)).filter(s => s.length); }

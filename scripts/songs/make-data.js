@@ -8,7 +8,7 @@
 // "== notes" are the editor's.
 const fs = require('fs'), path = require('path');
 const D = __dirname, REPO = path.join(D, '..', '..');
-const TYPES = ['sacred', 'lament', 'celebration', 'love', 'lullaby', 'work', 'war', 'anthem', 'protest', 'ballad', 'dance'];
+const TYPES = ['sacred', 'lament', 'celebration', 'love', 'lullaby', 'work', 'war', 'anthem', 'protest', 'ballad', 'epic', 'dance'];
 const REGIONS = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
 const KEYS = ['title', 'local', 'status', 'lyricist', 'composer', 'culture', 'language', 'place', 'date', 'year', 'region', 'types', 'kids', 'kid'];
 // songs in the public domain whose words no free, reliable edition holds yet (their pages say so)

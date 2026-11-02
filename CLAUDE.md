@@ -833,7 +833,7 @@ Berlin): their settings and aftermaths were checked against the entries and Wiki
 entry yet for the Investiture Controversy, Young Italy, the UNIA, the Nika riots, Truman, Brandt, Tilak, Lafayette …).
 
 ## Songs in History (/songs/, /songs/<slug>; Nov 2026)
-233 songs handed down through history (the user's brief: origin, writer, culture, language and place, type, the words
+234 songs handed down through history (the user's brief: origin, writer, culture, language and place, type, the words
 in the original, romanized and in English, what they inspired, a YouTube performance), from the Lament for Ur
 (c. 2000 BCE) to Wind of Change (1990), every region, 78 languages. The user's choices: about 120 songs; a song still in
 copyright gets its entry WITHOUT its words; one performance per song, hand-picked and checked.
@@ -857,8 +857,9 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   romanization, status: "pd | reason" or "copyright | reason" (shown as "The words"), lyricist, composer, culture,
   language: "code | name ; code | name", place, date (as shown), year (sorting, the era band and the card's
   "c. …"), region (REGIONS), types (sacred, lament, celebration, love, lullaby, work, war, anthem, protest, ballad,
-  dance), people, places, events (";": chips to the profile of that name, else the one entry of that name, else
-  plain; the entry pages list their songs, "Songs in history"), kids (yes/no: "no" folds story, meaning and words in
+  epic, dance), people, places, events (";": chips to the profile of that name, else the one entry of that name, else
+  plain; the entry pages list their songs, "Songs in history", and the entry with the song's own title lists it too:
+  God Save the King, the Epic of Gilgamesh), kids (yes/no: "no" folds story, meaning and words in
   Kids mode behind a note) and kid), then "== story", "== meaning" (for a song in copyright its THEME only, in our
   words, never a paraphrase of its lines), "== inspired" and "== inspired-by" (lines "title | year | how"; a title
   that is another song's title or local title links it, and that song gets the reverse line; an album named after a
@@ -878,7 +879,7 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   pinyin with tones, scientific transliteration), translation-fixes.json the editor's line fixes. merge-texts.js →
   data/song-texts/<slug>.json (build input, not deployed; {parts: {orig, rom, en: {stanzas, credit, url, source,
   own}}, aligned, tentative, scheme, notes}); a part with the original's shape stands beside it line by line, any
-  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 166 songs
+  other as a block of its own (Aloha ʻOe regrouped to its verses and chorus; Hanacpachap marked tentative). 167 songs
   carry words; 46 are in copyright (We Shall Overcome: printed only once its free status is beyond doubt); 21
   public-domain songs have no free edition found (make-data.js GAPS: their pages say so), the Great Hymn to the Aten
   only Budge's 1923 translation. Cielito Lindo, 'O sole mio and Hava Nagila are printed as published before 1930
@@ -891,7 +892,7 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   aligned to those lines, and lines it lacked translated. Its Hanuman Chalisa, Dle Yaman, Delphic hymns, Ninkasi and
   Kumbaya found no edition (Ninkasi's is ETCSL's, under the Oxford project's copyright; Kumbaya's versions on
   Wikipedia are cited to videos) and stay without words.
-- Performances: scripts/songs/videos.tsv (slug, id, channel, note; 215 songs; 18 without one, among them Kumbaya,
+- Performances: scripts/songs/videos.tsv (slug, id, channel, note; 216 songs; 18 without one, among them Kumbaya,
   Ninkasi and anthems with no fitting channel): the
   performers' own channels, "- Topic" releases, choirs, ensembles, institutions and old records, never compilations
   or re-uploads of albums, chosen by looking at each (scripts/songs/yt-search.js lists a search's results).
@@ -905,8 +906,13 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   replaced by performances, Cantares mexicanos left without one. Only a performance of the song, never a video about it.
   And a song with words is heard SUNG (the user, 2 Nov 2026: Yankee Doodle had fifes and drums): twelve instrumental
   picks (military band, koto, lyre, orchestra, guitar) became sung ones; audit-videos.js flags INSTR? (instruments
-  named, no voice). El Cóndor Pasa keeps Los Incas: its 1913 melody is instrumental, its words later and protected.
+  named, no voice); it also records the view count, and eight little-known picks became established performers
+  (Harpa Dei, the Dumka choir, the National Gugak Center, Atrium Musicae, Peter Pringle's Psalm 23 …). El Cóndor Pasa keeps Los Incas: its 1913 melody is instrumental, its words later and protected.
   The page shows a play button; songs.js loads youtube-nocookie.com's player only when it is pressed, plus a link out.
+- The Epic of Gilgamesh (2 Nov 2026, the user: "include the epic of gilgamesh, the video is on youtube"): type epic, Peter
+  Pringle's sung opening (his title says Sumerian); its words are the Old Babylonian Pennsylvania Tablet in Jastrow and
+  Clay's 1920 edition (Wikisource), transliteration and translation alternating line by line (fetch-texts flags alt0/alt1,
+  gluednum for line numbers run into the line), labelled "Akkadian (transliteration)"; their reading "Gish" is explained.
 - Build: build-pages.ps1 runs scripts/songs/make-data.js before the entry pages (it STOPS on a missing key, an unknown
   type or region, public-domain words missing without a stated gap, copyright words present, a bad video row) and
   reads scripts/songs/songs.json; "Songs in History" writes the pages (prose gold-linked with the year ±200; facts box;

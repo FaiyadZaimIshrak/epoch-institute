@@ -833,7 +833,8 @@ function SongYear($sg) { if ($sg['undated']) { return 'date unknown' }; $y = [in
 function SongEnt([string]$n) { $k = $n.Trim().ToLowerInvariant(); if ($SONGNAME.ContainsKey($k) -and $SONGNAME[$k]) { $SONGNAME[$k] } else { '' } }
 $SONGBY = @{}
 foreach ($sg in $SONGS) {
-  foreach ($songN in (@($sg['people']) + @($sg['places']) + @($sg['events']))) {
+  # the entry of the song itself (God Save the King, the Epic of Gilgamesh), then the names it gives
+  foreach ($songN in (@($sg['title']) + @($sg['people']) + @($sg['places']) + @($sg['events']))) {
     $songE = SongEnt ([string]$songN); if (-not $songE) { continue }
     if (-not $SONGBY.ContainsKey($songE)) { $SONGBY[$songE] = New-Object Collections.Generic.List[object] }
     if (-not $SONGBY[$songE].Contains($sg)) { $SONGBY[$songE].Add($sg) }
@@ -2354,7 +2355,7 @@ Say ("social ladders: {0} societies, {1} ranks; {2} in the Order the Ranks game,
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 Say 'songs in history'
 $SONGTYPE = [ordered]@{ sacred = 'Sacred'; lament = 'Lament'; celebration = 'Celebration'; love = 'Love song'; lullaby = 'Lullaby'; work = 'Work song'; war = 'War and march'
-  anthem = 'Anthem'; protest = 'Protest and freedom'; ballad = 'Ballad'; dance = 'Dance' }
+  anthem = 'Anthem'; protest = 'Protest and freedom'; ballad = 'Ballad'; epic = 'Epic'; dance = 'Dance' }
 $SONGERA = [ordered]@{ ancient = 'The ancient world'; medieval = 'The medieval world'; earlymodern = 'The early modern world'; revolutions = 'The age of revolutions'; nineteenth = 'The nineteenth century'; twentieth = 'The early twentieth century'; postwar = 'The world since 1945' }
 $SONGRTL = @('he', 'hbo', 'ar', 'fa', 'ur', 'yi', 'syc', 'arc')
 $SONGSITE = @{ pg = 'Project Gutenberg' }
