@@ -1609,3 +1609,18 @@ function initNav(activePage) {
     });
   })();
 }
+
+// The service worker (sw.js, Nov 2026): pages read before open without a connection, and repeat visits come from the
+// device on the slow line to the host. Registered after the page has loaded and gone idle, never on a page served from a
+// file or another host; with it the web app manifest, so the site can be installed (added to a home screen).
+(function () {
+  if (!('serviceWorker' in navigator) || location.protocol !== 'https:' || location.hostname !== 'the-epoch-institute.org') return;
+  function go() {
+    try {
+      if (!document.querySelector('link[rel="manifest"]')) { var l = document.createElement('link'); l.rel = 'manifest'; l.href = '/manifest.json'; document.head.appendChild(l); }
+      navigator.serviceWorker.register('/sw.js').catch(function () {});
+    } catch (e) {}
+  }
+  function idle() { if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 4000 }); else setTimeout(go, 1500); }
+  if (document.readyState === 'complete') idle(); else window.addEventListener('load', idle);
+})();

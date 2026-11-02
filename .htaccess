@@ -84,4 +84,14 @@ AddType font/woff2 .woff2
     Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
     Header unset Expires
   </FilesMatch>
+  # the service worker and the pages it falls back on are always checked with the server (a stale sw.js would keep its
+  # rules on readers' devices); the manifest an hour
+  <FilesMatch "^(sw\.js|offline\.html)$">
+    Header set Cache-Control "no-cache"
+    Header unset Expires
+  </FilesMatch>
+  <FilesMatch "^manifest\.json$">
+    Header set Cache-Control "public, max-age=3600"
+    Header unset Expires
+  </FilesMatch>
 </IfModule>

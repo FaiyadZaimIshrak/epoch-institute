@@ -40,7 +40,7 @@ $rxRef = New-Object Text.RegularExpressions.Regex('(?:href|src)="(/[^"]*)"')
 foreach ($f in $pages) {
   $h = [IO.File]::ReadAllText($f.FullName, $U8); $nPages++
   $rel = $f.FullName.Substring($Repo.Length).Replace('\', '/'); $self = if ($rel -eq '/index') { '/' } elseif ($rel.EndsWith('/index')) { $rel.Substring(0, $rel.Length - 5) } else { $rel }
-  if ($f.Name -eq '404.html') { $self = $null }
+  if ($f.Name -eq '404.html' -or $f.Name -eq 'offline.html') { $self = $null }   # not pages to index: the 404 page, the service worker's offline page
   # links (skip <script> bodies: links built in JavaScript are not real links of the page)
   $html = [regex]::Replace($h, '(?s)<script\b[^>]*>.*?</script>', '')
   foreach ($m in $rxRef.Matches($html)) {

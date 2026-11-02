@@ -3,7 +3,7 @@
 // ~420 characters), its span as the dates. Added to scripts/added-entries.json "entries" (form: true; a re-run replaces
 // them); apply-added-entries.ps1 writes them. Link patterns: lower-case terms (mode 1) only where the word names the form
 // alone ("oligarchy", "theocracy", "city-state"); none for "republic", "tyranny", "colonial rule" or "federation", which
-// stand in names ("Republic of Venice") or everyday speech. self.tsv makes each profile's own entry claimed, not linked.
+// stand in names ("Republic of Venice") or everyday speech, or for "aristocracy", which in the texts is the class. self.tsv makes each profile's own entry claimed, not linked.
 //   node scripts/kinds/make-form-entries.js
 const fs = require('fs'), path = require('path');
 const R = path.join(__dirname, '..', '..');
@@ -15,7 +15,7 @@ const FORMS = {
   'Absolute monarchy': ['absolute-monarchy', [['absolute monarchy', 1]]],
   'Tyranny': ['tyranny-ancient-greece', []],
   'Dictatorship': ['dictatorship', [['dictatorship', 1]]],
-  'Aristocracy': ['aristocracy', [['aristocracy', 1]]],
+  'Aristocracy': ['aristocracy', [['aristocratic rule', 1]]],   // not "aristocracy": "the Macedonian aristocracy" is the class
   'Oligarchy': ['oligarchy', [['oligarchy', 1]]],
   'Theocracy': ['theocracy', [['theocracy', 1]]],
   'Military junta': ['military-junta', [['military junta', 1]]],
@@ -38,7 +38,7 @@ function lede(t) {
 const out = [];
 for (const [name, [slug, links]] of Object.entries(FORMS)) {
   const e = SD.EMPIRES.find(x => x.name === name && x.kind === 'government'); if (!e) throw new Error('no profile ' + name);
-  if (ed.includes('{slug:"' + slug + '",')) throw new Error('entry exists: ' + slug);
+  // (an entry of that slug is either one this script wrote before or a clash: the applier skips existing slugs)
   const p = P[name]; if (!p || !p.summary) throw new Error('no summary ' + name);
   out.push({ slug, name: name === 'Tyranny' ? 'Tyranny (ancient Greece)' : name, type: 'term', subtype: 'government', dates: SD.profileSpanText(e), desc: lede(p.summary), links, form: true });
 }

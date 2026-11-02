@@ -1,8 +1,10 @@
 // enc-page.js - shared script of the generated reference pages (encyclopedia entries and index pages, state pages,
 // days of Today in History; built by scripts/build-pages.ps1). Loaded without ?v= (cached for an hour), after
-// shared-data.js and shared-nav.js. IDX_V is set by the builder: the version of /encyclopedia/index-data.js.
+// shared-data.js and shared-nav.js. IDX_V is set by the builder: the version of /encyclopedia/index-data.js; MW_V and
+// MWJS_V likewise, of data/meanwhile.json and /meanwhile.js.
 (function () {
-  var IDX_V = '43d091e12e';
+  var IDX_V = 'a1a4099dc6';
+  var MW_V = 'ce722665', MWJS_V = 'b31422fb';
   if (typeof initNav === 'function') initNav(document.body.getAttribute('data-nav') || '');
 
   // today's date in citations ("Accessed 23 October 2026")
@@ -69,5 +71,15 @@
       }).catch(function () { sec.hidden = true; });
     }, { rootMargin: '600px' });
     io.observe(sec);
+  }
+
+  // "Meanwhile in the world" (entry and song pages): meanwhile.js and its data, fetched when the strip nears the screen
+  var mw = document.querySelector('section.meanwhile[data-y]');
+  if (mw && 'IntersectionObserver' in window && window.fetch) {
+    var mio = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return; mio.disconnect();
+      window.MW = { v: MW_V }; loadScript('/meanwhile.js?v=' + MWJS_V).catch(function () {});
+    }, { rootMargin: '400px' });
+    mio.observe(mw);
   }
 })();

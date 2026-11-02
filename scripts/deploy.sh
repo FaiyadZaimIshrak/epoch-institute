@@ -40,7 +40,7 @@ GENERATED=(encyclopedia state today-in-history countries centuries paths speeche
   teachers societies songs)                                        # line 11: the only folders synced with --delete (societies: Oct 2026; songs: Nov 2026)
 DIRS=(sitemaps fonts css)                                          # line 12 (css/: scripts/split-css.js, Oct 2026)
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
-  data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans data/societies data/inventions.json)  # line 14
+  data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans data/societies data/inventions.json data/meanwhile.json)  # line 14
 PROFILES=(empire religion language culture movement government logos images maps)              # line 15
 KINDS=(culture ideology movement)                                  # line 16: copied when present
 

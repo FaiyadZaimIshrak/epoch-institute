@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>La Marseillaise — Encyclopedia — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="La Marseillaise (25 April 1792), a song: The monarchies of Europe feared that the French Revolution would spread, and in the War of the First Coalition…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/la-marseillaise">
+<meta property="og:type" content="article">
+<meta property="og:title" content="La Marseillaise — Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="La Marseillaise (25 April 1792), a song: The monarchies of Europe feared that the French Revolution would spread, and in the War of the First Coalition…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/la-marseillaise">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"L","item":"https://the-epoch-institute.org/encyclopedia/browse/l"},{"@type":"ListItem","position":4,"name":"La Marseillaise"}]},{"@type":"Article","headline":"La Marseillaise","description":"La Marseillaise (25 April 1792), a song: The monarchies of Europe feared that the French Revolution would spread, and in the War of the First Coalition…","url":"https://the-epoch-institute.org/encyclopedia/la-marseillaise","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/la-marseillaise","inLanguage":"en-GB","dateModified":"2026-11-02","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"CreativeWork","name":"La Marseillaise"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/l">L</a></li><li aria-current="page">La Marseillaise</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker">Work / monument · song</p><h1 class="enc-title">La Marseillaise</h1><p class="enc-meta"><span class="dates">25 April <a href="/years/1792">1792</a></span> · <a href="/centuries/18th-century">18th century</a></p></header>
+<div class="enc-body"><p class="enc-desc">The monarchies of <a class="enc-link" href="/encyclopedia/europe">Europe</a> feared that the <a class="enc-link" href="/encyclopedia/french-revolution">French Revolution</a> would spread, and in the <a class="enc-link" href="/encyclopedia/war-of-the-first-coalition">War of the First Coalition</a> they tried to stop it. The Kingdom of the French declared war on <a class="enc-link" href="/encyclopedia/austria">Austria</a>, the French army fared badly at first, and Coalition armies invaded <a class="enc-link" href="/encyclopedia/france">France</a>.</p></div>
+<section><h2 class="enc-section-title">Songs in history</h2><div class="enc-mentions"><a href="/songs/la-marseillaise">La Marseillaise<span class="secs">1792</span></a></div></section>
+<section class="meanwhile" data-y="1792" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/europe"><img src="/images/encyclopedia/thumbs/europe.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Europe</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/france"><img src="/images/encyclopedia/thumbs/france.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">France</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/austria"><img src="/images/encyclopedia/thumbs/austria.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Austria</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/french-revolution"><img src="/images/encyclopedia/thumbs/french-revolution.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">French Revolution</span><span class="tp">Revolution</span></span></a></li><li><a href="/encyclopedia/war-of-the-first-coalition"><img src="/images/encyclopedia/thumbs/war-of-the-first-coalition.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">War of the First Coalition</span><span class="tp">War</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/la-marsa-convention"><span class="lbl">&larr; Previous entry</span><span class="nm">La Marsa Convention</span></a><a class="next" rel="next" href="/encyclopedia/la-massana"><span class="lbl">Next entry &rarr;</span><span class="nm">La Massana</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). La Marseillaise. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/la-marseillaise</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;La Marseillaise.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/la-marseillaise. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;La Marseillaise.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/la-marseillaise.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;La Marseillaise&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/la-marseillaise (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

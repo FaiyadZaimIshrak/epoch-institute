@@ -16,7 +16,7 @@ for (const m of ed.matchAll(new RegExp('^  \\{slug:"([^"]+)",name:' + NAMEQ + ',
   slugs.add(m[1]); names.set(JSON.parse(m[2]).toLowerCase(), m[1]); if (m[3] === 'work') works.set(JSON.parse(m[2]).toLowerCase(), m[1]);
 }
 // titles that are names of the song alone (checked by eye against the entries, the state texts and the day events)
-const LINKABLE = new Set(fs.existsSync(path.join(D, 'entry-links.txt')) ? fs.readFileSync(path.join(D, 'entry-links.txt'), 'utf8').split(/\r?\n/).filter(l => l && !l.startsWith('#')) : []);
+const LINKABLE = new Set(fs.existsSync(path.join(D, 'entry-links.tsv')) ? fs.readFileSync(path.join(D, 'entry-links.tsv'), 'utf8').split(/\r?\n/).filter(l => l && !l.startsWith('#')) : []);
 // the first sentences of the story, cut at a sentence end (not after an initial, "c." or "St."), at most ~420 characters
 function lede(paras) {
   const t = paras.join(' ');

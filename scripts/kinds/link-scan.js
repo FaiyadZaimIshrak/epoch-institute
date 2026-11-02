@@ -55,10 +55,14 @@ const env = new Function('ENC_LINKS', 'ENC_FN', 'EMPIRES', '__S',
 
 const fsRow = ENC_LINKS.fs;
 const KEYS = ENC_LINKS.e.map(en => en[1].map(pt => { const w = (pt[0].match(/[\p{L}\p{N}]+/gu) || [pt[0]]).sort((x, y) => y.length - x.length)[0].toLowerCase(); return w.length > 2 && /y$/.test(w) ? w.slice(0, -1) : w; }));
+// --entries=<file of slugs>: only those entries' rows are added (see the loop)
+const ADD = opt('entries') ? (() => { const want = new Set(fs.readFileSync(opt('entries'), 'utf8').split(/\r?\n/).map(s => s.trim()).filter(Boolean));
+  const s = new Set(); ENC_LINKS.e.forEach((r, i) => { if (i < fsRow && (want.has(r[0]) || (r[0] === '@g' && r[2].some(x => want.has(x))))) s.add(i); }); return s; })() : null;
+const ADDSLUGS = opt('entries') ? new Set(fs.readFileSync(opt('entries'), 'utf8').split(/\r?\n/).map(s => s.trim()).filter(Boolean)) : null;
 // one compiled copy of the patterns for the whole run (ENC_RX lives inside it)
 const S = { rows: {}, hits: [] }, L = env(ENC_LINKS, ENC_FN, SD.EMPIRES, S);
 let names = argv.filter(a => !a.startsWith('--'));
-if (opt('kind')) names = SD.EMPIRES.filter(e => SD.profileKind(e) === opt('kind')).slice(+(opt('from') || 0)).map(e => e.name);
+if (opt('kind')) names = SD.EMPIRES.filter(e => SD.profileKind(e) === opt('kind')).slice(+(opt('from') || 0), +(opt('from') || 0) + (+(opt('count')) || 1e9)).map(e => e.name);   // --count=N: a slice
 const report = [['profile', 'section', 'entry', 'text', 'context'].join('\t')];
 const results = {};
 for (const n of names) {
@@ -69,8 +73,12 @@ for (const n of names) {
   // only rows that can match: the longest word of one of their names (lower case; a final y may be ies) is in the text. Running
   // all 38,000 patterns would compile each to machine code (over 1 GB) for the same result
   const hay = [...kind.sections.map(s => p[s[0]] || ''), p.summary || '', SD.EMPIRE_INFO[n] || '', ...Object.values(f), ...(g ? [...g.t, g.dyk, ...g.ev.map(x => x[1])] : [])].join(' | ').toLowerCase();
-  const all = []; for (let i = 0; i < fsRow; i++) if (KEYS[i].some(k => hay.includes(k))) all.push(i);
-  const saved = ENC_LINKS.byEmpire[n]; ENC_LINKS.byEmpire[n] = own.concat(all);
+  const all = []; for (let i = 0; i < fsRow; i++) if ((!ADD || ADD.has(i)) && KEYS[i].some(k => hay.includes(k))) all.push(i);
+  const saved = ENC_LINKS.byEmpire[n];
+  // --entries: append only. The rows the profile has keep their places and only the given entries' rows are tried, so
+  // nothing linked before moves (a profile scanned long ago keeps the links its page has)
+  const old = ADD ? (saved || []).filter(i => i < fsRow) : [];
+  ENC_LINKS.byEmpire[n] = own.concat(old, all.filter(i => !old.includes(i)));
   const rows = {}, secs = {};
   const run = (sec, html) => { if (!html) return; const hits = []; S.rows = rows; S.hits = hits; L.linkify(html, n);
     for (const h of hits) { (secs[h.slug] = secs[h.slug] || new Set()).add(sec); report.push([n, sec, h.slug, h.txt, h.ctx.replace(/\s+/g, ' ')].join('\t')); } };
@@ -81,7 +89,8 @@ for (const n of names) {
   for (const k of facts) run('summary', E(f[k]));
   if (g) { for (const t of g.t) run('summary', E(t)); run('summary', E(g.dyk)); for (const x of g.ev) run('summary', E(x[1])); }
   ENC_LINKS.byEmpire[n] = saved;
-  results[n] = { rows: own.concat(Object.keys(rows).map(Number).filter(i => i < fsRow).sort((a, b) => a - b)), secs, slug: SD.toSlug(n) };
+  const found = Object.keys(rows).map(Number).filter(i => i < fsRow).sort((a, b) => a - b);
+  results[n] = { rows: ADD ? own.concat(old, found.filter(i => !old.includes(i) && ADD.has(i))) : own.concat(found), secs, slug: SD.toSlug(n) };
   console.log(n.padEnd(34), Object.keys(secs).length, 'entries linked;', results[n].rows.length, 'rows');
 }
 if (opt('report')) fs.writeFileSync(opt('report'), report.join('\n') + '\n');
@@ -106,6 +115,7 @@ const nameJ = s => JSON.stringify(s).replace(/[<>&']/g, c => '\\u' + c.charCodeA
 ed = ed.replace(/^(  \{slug:"([^"]+)".*?empires:\[)(.*)(\]\},?)$/gm, (all, head, slug, inner, tail) => {
   let items = inner ? inner.split(/,(?=\{name:)/) : [];
   for (const [n, r] of Object.entries(results)) {
+    if (ADDSLUGS && !ADDSLUGS.has(slug)) continue;   // append mode: only the given entries' lists change
     const at = items.findIndex(x => x.startsWith('{name:' + nameJ(n) + ','));
     const s = r.secs[slug];
     if (!s) { if (at >= 0) { items.splice(at, 1); nDrop++; } continue; }

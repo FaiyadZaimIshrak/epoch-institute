@@ -1384,6 +1384,43 @@ treats/notes/describes …" (786 such frames were rewritten in Oct 2026: a claus
 others read "Accounts of the X describe …"); ledes say "recorded states", not "states of the register". The
 Institute and its register are still named where they are defined and credited (/dataset, About, method notes).
 
+## Nov 2026: entries, links, look, features, speed (R3–R7 of the 2 Nov plan)
+- Song entries (229) and form-of-government entries (16): scripts/songs/make-entries.js and scripts/kinds/make-form-entries.js
+  write them into scripts/added-entries.json (song: / form: markers; a re-run replaces its own), apply-added-entries.ps1
+  applies them. Descriptions come only from checked text (a song's story, a form's profile summary). Link patterns: song
+  titles listed in scripts/songs/entry-links.tsv (not .txt: make-data.js reads every .txt there as a song), never the
+  ambiguous ones (Imagine, Katyusha, Botany Bay, Wind of Change …); forms as lower-case terms, "aristocratic rule" only for
+  Aristocracy ("the Macedonian aristocracy" is the class). scripts/kinds/pattern-count.js <slugs> shows how often patterns
+  match the descriptions and day events, with samples: read it before patterns go live. A song entry's meta description
+  starts "Name (dates), a song:" so it differs from the song page's.
+- Profiles linked to the new entries by link-scan.js --entries=<slugs file> (append only: a profile's rows keep their places,
+  only the given entries' rows are tried, only their mention lists change), all 540 profiles in slices of 30 (--count).
+  self.tsv names each form profile's own entry.
+- scripts/song-links.js (SONG_LINKS, written by the builder from the songs' people, places and events that name a profile):
+  "Songs in history" chips after a profile's legacy/impact section (generator.html, the inventions chips' style).
+- Look (R4): scripts/tools/shots.js (contact sheets of every kind of page, --width --mode --per --col),
+  layout-audit.js (now skips what a clipped ancestor hides and float wraps). Fixed: the profile facts box is a grid of
+  labels and left-aligned values (right-aligned long facts were ragged blocks; on phones the label stands above);
+  /flashcards, /race and /governance had no container rule, so their breadcrumb sat under the fixed header.
+- "Meanwhile in the world" (R5): <section class="meanwhile" data-y> on entry pages (the entry's year, $EAT) and dated song
+  pages; enc-page.js loads meanwhile.js (MWJS_V) and data/meanwhile.json (MW_V; every profile with span, region, weight,
+  emblem, and the years with pages) when it nears the screen: the heaviest profile of each region alive that year, six at
+  most, then the year page (or the nearest within 25 years), the century and the atlas in that year.
+- Song of the Day (R5): data/days/<mm-dd>.json carries "song" ([slug, title, culture, year, kid line, has words]: of the songs
+  with a checked performance that suit Kids mode, by day of year times a prime stride); the home page's card after the entry
+  of the day keeps its size while the file loads.
+- Service worker (R5/R6): sw.js (network first for pages with a 4 s fallback to the kept copy, the 200 latest pages kept;
+  cache first for ?v= files, pictures, emblems and fonts; stale-while-revalidate for the unversioned shared files),
+  offline.html (lists the kept pages; exempt from check-site's page rules like 404.html), manifest.json; shared-nav.js
+  registers it after load and idle, on the live host only, and adds the manifest link. .htaccess: sw.js and offline.html
+  no-cache. Test: scripts/tools/sw-test.js (7 checks, localhost). To retire it, deploy a sw.js that unregisters itself.
+- Speed (R6): scripts/tools/live-speed.js (cold and warm visits, 4G and 4x CPU, TTFB/FCP/LCP/CLS/TBT/KB; --json). Baseline
+  2 Nov 2026 before the service worker: first paint 1.6–3.0 s cold, 0.4–1.0 s warm; the largest file on every page is
+  Analytics (178 KB, after idle); home-data.js 117 KB on the home page; /songs/ and /profiles block 0.9–1.2 s on a slow phone.
+- SEO (R7): scripts/tools/seo-audit.js (long and duplicate titles, short and duplicate descriptions, orphan pages, sitemap
+  coverage, missing alt): 2 Nov 2026 it found the song entries' duplicate descriptions and /about linked only from the menus
+  drawn in script (now linked from the home page's hero).
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - The ladders' MISSING lines still name the people and some terms the encyclopedia lacks (bandaka, magi, Parnaka,

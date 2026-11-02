@@ -86,6 +86,7 @@
     <div class="hero-ctas">
       <a href="/atlas" class="hero-cta">Open the atlas →</a>
       <a href="/profiles" class="hero-secondary-cta">Browse the profiles →</a>
+      <a href="/about" class="hero-secondary-cta">About the Institute →</a>
     </div>
   </div>
   <!-- build:home-map -->
@@ -162,6 +163,13 @@
     </div>
     <div id="enc-day"></div>
   </div>
+  <div class="home-entry home-song">
+    <div class="home-section-hd">
+      <h2 class="home-section-title">Song of the Day</h2>
+      <a class="home-section-more" href="/songs/">All the songs &rarr;</a>
+    </div>
+    <div id="song-day" class="song-day"><a class="song-day-card" href="/songs/"><span class="sd-k">Songs in History</span><span class="sd-t">Songs that people have sung and handed down</span><span class="sd-d">Their story, their words in the original and in English, and a performance to listen to.</span><span class="sd-go">Explore the songs &rarr;</span></a></div>
+  </div>
 </section>
 
 <!-- Ways in: the collections, with their sizes -->
@@ -171,7 +179,7 @@
     <a class="home-section-more" href="/research">Everything we publish →</a>
   </div>
   <!-- build:home-doors -->
-<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">540 profiles</span><span class="door-t">Profiles</span><span class="door-d">Histories of states and empires, faiths, languages, cultures and movements.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">32,334 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events and ideas, most of them with a picture.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,468 states</span><span class="door-t">States</span><span class="door-d">Every recorded kingdom, republic and chiefdom, with its lineage.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">Slide through five thousand years and watch states come and go.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">Each present-day country, told through the states on its soil.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time, with a map of each.</span></span></a></li><li><a class="door" href="/people/"><span class="door-img"><img src="/images/encyclopedia/las-meninas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">12,992 people</span><span class="door-t">People</span><span class="door-d">Rulers, thinkers and explorers, century by century.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">38 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes, from the Silk Road to the steppe empires.</span></span></a></li></ul>
+<ul class="doors"><li><a class="door" href="/profiles"><span class="door-img"><img src="/images/encyclopedia/hagia-sophia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">540 profiles</span><span class="door-t">Profiles</span><span class="door-d">Histories of states and empires, faiths, languages, cultures and movements.</span></span></a></li><li><a class="door" href="/encyclopedia/"><span class="door-img"><img src="/images/encyclopedia/library-of-alexandria.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">32,579 entries</span><span class="door-t">Encyclopedia</span><span class="door-d">People, places, events and ideas, most of them with a picture.</span></span></a></li><li><a class="door" href="/state/"><span class="door-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">5,468 states</span><span class="door-t">States</span><span class="door-d">Every recorded kingdom, republic and chiefdom, with its lineage.</span></span></a></li><li><a class="door" href="/atlas"><span class="door-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">From 3500 BCE to today</span><span class="door-t">Atlas</span><span class="door-d">Slide through five thousand years and watch states come and go.</span></span></a></li><li><a class="door" href="/countries/"><span class="door-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">190 countries</span><span class="door-t">Country Histories</span><span class="door-d">Each present-day country, told through the states on its soil.</span></span></a></li><li><a class="door" href="/centuries/"><span class="door-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">51 centuries</span><span class="door-t">Centuries</span><span class="door-d">World history one century at a time, with a map of each.</span></span></a></li><li><a class="door" href="/people/"><span class="door-img"><img src="/images/encyclopedia/las-meninas.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">12,992 people</span><span class="door-t">People</span><span class="door-d">Rulers, thinkers and explorers, century by century.</span></span></a></li><li><a class="door" href="/paths/"><span class="door-img"><img src="/images/encyclopedia/marco-polo.jpg" alt="" loading="lazy"></span><span class="door-b"><span class="door-k">38 paths</span><span class="door-t">Reading Paths</span><span class="door-d">Themed routes, from the Silk Road to the steppe empires.</span></span></a></li></ul>
 <!-- /build:home-doors -->
 </section>
 
@@ -458,12 +466,16 @@ initNav('home');
   })();
 
   // today's events, international day and picture: one small file per day (data/days, written by the builder)
-  var DAYS_V = 'bf07e9a025';
+  var DAYS_V = 'abd0d794a6';
   fetch('/data/days/' + key + '.json?v=' + DAYS_V).then(function(r) { if (!r.ok) throw new Error(); return r.json(); }).then(function(d) {
     var evs = d.events || [], pic = d.pic ? d.pic[0] : null, hero = evs[d.hero];
     // Kids mode: no picture from a battle or a killing
     if (pic && hero && document.documentElement.getAttribute('data-kids') === '1' && typeof kidsGentle === 'function' && !kidsGentle(hero.title, hero.description)) pic = null;
     renderStrip(evs, d.intl || null, pic, pic ? hero : null);
+    // the song of the day, from the same file: [slug, title, culture, year, a line for young readers, has its words]
+    var sg = d.song, sdEl = document.getElementById('song-day');
+    if (sg && sdEl) sdEl.innerHTML = '<a class="song-day-card" href="/songs/' + encodeURIComponent(sg[0]) + '"><span class="sd-k">' + escHtml(sg[3]) + ' &middot; ' + escHtml(sg[2]) + '</span>' +
+      '<span class="sd-t">' + escHtml(sg[1]) + '</span><span class="sd-d">' + escHtml(sg[4]) + '</span><span class="sd-go">' + (sg[5] ? 'Read the words and listen' : 'Its story, and a performance') + ' &rarr;</span></a>';
   }).catch(function() {
     document.getElementById('tih-strip').style.display = 'none';
   });

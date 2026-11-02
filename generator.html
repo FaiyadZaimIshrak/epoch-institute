@@ -46,6 +46,7 @@
 <script src="empire-glance.js"></script>
 <script src="scripts/society-links.js"></script>
 <script src="scripts/invention-links.js"></script>
+<script src="scripts/song-links.js"></script>
 <script>
 // ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
 // Wikipedia convention: link the first mention of each entry per section, never inside tags,
@@ -427,7 +428,10 @@ function buildPage(emp) {
         ? '<p class="profile-ladder">' + SOCIETY_LINKS[name].map(function (l) { return '<a href="' + l[0] + '">The social ladder of ' + esc(l[1]) + ' &rarr;</a>'; }).join(' ') + '</p>' : '';
       var inv = key === invKey && typeof INVENTION_LINKS !== 'undefined' && INVENTION_LINKS[name]
         ? '<div class="profile-inv"><p class="profile-inv-k">Inventions and discoveries credited here</p><p class="profile-inv-l">' + INVENTION_LINKS[name].map(function (l) { return '<a href="/inventions?focus=' + l[0] + '">' + esc(l[1]) + '<span>' + esc(l[2]) + '</span></a>'; }).join('') + '</p></div>' : '';
-      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + ladder + inv + '\n      </div>';
+      // the songs whose people, places or events name it (scripts/song-links.js, written by build-pages.ps1), with the inventions
+      var songs = key === invKey && typeof SONG_LINKS !== 'undefined' && SONG_LINKS[name]
+        ? '<div class="profile-inv"><p class="profile-inv-k">Songs in history</p><p class="profile-inv-l">' + SONG_LINKS[name].map(function (l) { return '<a href="/songs/' + l[0] + '">' + esc(l[1]) + '<span>' + esc(l[2]) + '</span></a>'; }).join('') + '</p></div>' : '';
+      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + ladder + inv + songs + '\n      </div>';
     }).join('\n      ');
   }
 

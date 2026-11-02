@@ -21,7 +21,10 @@ const PATHS = argv.filter(a => !a.startsWith('--')); const pages = PATHS.length 
       try { await pg.goto('http://localhost:8765' + p, { waitUntil: 'load', timeout: 60000 }); } catch (e) { console.log('LOAD', mode, w, p, e.message.slice(0, 80)); n++; continue; }
       await pg.evaluate(() => document.fonts.ready); await pg.waitForTimeout(300);
       const found = await pg.evaluate(() => {
-        const out = [], vis = el => { const r = el.getBoundingClientRect(), s = getComputedStyle(el); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none' && +s.opacity > 0 && !el.closest('[hidden],[aria-hidden="true"],.sr-only,.nav-mega,details:not([open]) > :not(summary)'); };
+        // shown at all: not hidden, and not clipped away by an ancestor that hides its overflow (a collapsed dropdown, a fold)
+        const clipped = (el, r) => { for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) { const s = getComputedStyle(a);
+          if (s.overflow !== 'visible' || s.overflowY !== 'visible' || s.overflowX !== 'visible') { const ra = a.getBoundingClientRect(); if (ra.height < 2 || ra.width < 2 || r.top >= ra.bottom || r.bottom <= ra.top || r.left >= ra.right || r.right <= ra.left) return true; } } return false; };
+        const out = [], vis = el => { const r = el.getBoundingClientRect(), s = getComputedStyle(el); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none' && +s.opacity > 0 && !el.closest('[hidden],[aria-hidden="true"],.sr-only,.nav-mega,details:not([open]) > :not(summary)') && !clipped(el, r); };
         const name = el => el.tagName.toLowerCase() + (el.id ? '#' + el.id : '') + (el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).slice(0, 2).join('.') : '');
         const wide = document.documentElement.scrollWidth - innerWidth;
         if (wide > 1) { let worst = null; for (const el of document.body.querySelectorAll('*')) { const r = el.getBoundingClientRect(); if (r.right > innerWidth + 1 && vis(el) && getComputedStyle(el).position !== 'fixed' && !el.closest('[style*="overflow"], .tl-wrap, pre, table') && (!worst || r.right > worst[1])) worst = [name(el), r.right]; }
@@ -30,10 +33,11 @@ const PATHS = argv.filter(a => !a.startsWith('--')); const pages = PATHS.length 
           if (!vis(el) || !el.textContent.trim()) continue; const s = getComputedStyle(el);
           if ((s.overflow === 'hidden' || s.overflowX === 'hidden' || s.overflow === 'clip') && s.textOverflow !== 'ellipsis' && el.scrollWidth > el.clientWidth + 2 && el.clientWidth > 0 && !/-webkit-box/.test(s.display)) out.push('OVER ' + name(el) + ' "' + el.textContent.trim().slice(0, 40) + '"');
         }
+        const floated = el => { for (let a = el; a && a !== document.body; a = a.parentElement) if (getComputedStyle(a).float !== 'none') return true; return false; };
         const blocks = [...document.querySelectorAll('main h1,main h2,main h3,main p,main li,main button,main figcaption, h1, .page-title')].filter(el => vis(el) && el.textContent.trim() && getComputedStyle(el).position !== 'absolute' && getComputedStyle(el).position !== 'fixed');
         const rs = blocks.map(el => [el, el.getBoundingClientRect()]);
         for (let i = 0; i < rs.length; i++) for (let j = i + 1; j < rs.length; j++) {
-          const [a, ra] = rs[i], [c, rc] = rs[j]; if (a.contains(c) || c.contains(a)) continue;
+          const [a, ra] = rs[i], [c, rc] = rs[j]; if (a.contains(c) || c.contains(a) || floated(a) || floated(c)) continue;   // text wraps round a float: boxes overlap, words do not
           const ox = Math.min(ra.right, rc.right) - Math.max(ra.left, rc.left), oy = Math.min(ra.bottom, rc.bottom) - Math.max(ra.top, rc.top);
           if (ox > 4 && oy > 4) { out.push('OVERLAP ' + name(a) + ' / ' + name(c) + ' "' + a.textContent.trim().slice(0, 30) + '"'); if (out.length > 40) return out; }
         }

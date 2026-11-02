@@ -772,7 +772,7 @@ function CentDecades([string]$label) {   # "the 1200s", "the 400s BCE"
 function CentTitle([string]$label) { $label.Substring(0, 1).ToUpperInvariant() + $label.Substring(1) }
 # when an entry belongs to: an event's (or work's, place's ...) first year; a person's working life (birth-death:
 # two thirds of the way; reign or "fl.": the middle; "d.": ten years before; "b.": 35 years after)
-$EYRS = @{}; $ENTCENT = @{}
+$EYRS = @{}; $ENTCENT = @{}; $EAT = @{}   # EAT: the year itself, for "Meanwhile in the world"
 foreach ($e in $ENT) {
   $sp = [EpochBuild.W]::Span($e.dates); if (-not $sp) { continue }
   $EYRS[$e.slug] = $sp; $lo = $sp[0]; $hi = $sp[1]
@@ -780,7 +780,7 @@ foreach ($e in $ENT) {
     $at = if ($e.dates -match '^\s*(r\.|fl\.)') { ($lo + $hi) / 2 } elseif ($e.dates -match '^\s*(d\.|died)') { $hi - 10 } elseif ($e.dates -match '^\s*(b\.|born)') { $lo + 35 } elseif ($hi -gt $lo) { $lo + ($hi - $lo) * 0.65 } else { $lo }
   } else { $at = $lo }
   if ($at -gt $YEAR) { continue }
-  $ENTCENT[$e.slug] = Century ([int][Math]::Floor($at))
+  $ENTCENT[$e.slug] = Century ([int][Math]::Floor($at)); $EAT[$e.slug] = [int][Math]::Floor($at)
 }
 $CSTAT = @{}   # century -> alive, founded, ended (node lists), entries (list)
 function CentOf($y) { if ($null -eq $y) { return $null }; Century ([int][Math]::Round([double]$y)) }
@@ -831,6 +831,7 @@ foreach ($e in $ENT) { $songK = $e.name.ToLowerInvariant(); if ($SONGNAME.Contai
 # a song's year as a short label: "c. 1400 BCE", "c. 1250", "1792" (circa where its date says so, or before 1000)
 function SongYear($sg) { if ($sg['undated']) { return 'date unknown' }; $y = [int]$sg['year']; $(if ($y -lt 1000 -or [string]$sg['date'] -match '(?i)\bc\.|centur|circa|traditional') { 'c. ' } else { '' }) + $(if ($y -lt 0) { "$(-$y) BCE" } else { "$y" }) }
 function SongEnt([string]$n) { $k = $n.Trim().ToLowerInvariant(); if ($SONGNAME.ContainsKey($k) -and $SONGNAME[$k]) { $SONGNAME[$k] } else { '' } }
+$SONGDAY = @($SONGS | Where-Object { $_['video'] -and $_['kids'] } | Sort-Object { [int]$_['year'] }, { [string]$_['slug'] })
 $SONGBY = @{}
 foreach ($sg in $SONGS) {
   # the entry of the song itself (God Save the King, the Epic of Gilgamesh), then the names it gives
@@ -1058,6 +1059,8 @@ foreach ($e in $ENT) {
     foreach ($sg in $SONGBY[$e.slug]) { [void]$body.Append('<a href="/songs/' + $sg['slug'] + '">' + (Hx ([string]$sg['title'])) + '<span class="secs">' + (Hx (SongYear $sg)) + '</span></a>') }
     [void]$body.Append("</div></section>`n")
   }
+  # "Meanwhile in the world": the great powers of other regions in the entry's year (meanwhile.js fills it as it nears the screen)
+  if ($EAT.ContainsKey($e.slug)) { [void]$body.Append('<section class="meanwhile" data-y="' + $EAT[$e.slug] + '" aria-label="Meanwhile in the world"></section>' + "`n") }
   $related = @($SEE[$e.i]); if (-not $related.Count) { $related = @($SEE2[$e.i]) }; if (-not $related.Count) { $related = @(LinkedNear $e) }
   if ($related.Count) {
     [void]$body.Append('<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso">')
@@ -1070,6 +1073,8 @@ foreach ($e in $ENT) {
   [void]$body.Append((CiteBox $e.name $url 'The Epoch Institute Encyclopedia') + "`n")
   [void]$body.Append('<p class="ref-updated"><span>Last reviewed ' + $Reviewed + '</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>' + "`n</article>`n</div>`n</main>`n")
   $kind = KindOf $e; $desc = [EpochBuild.W]::Summary($(if ($e.desc) { $e.desc } else { "$($e.name): an entry in The Epoch Institute Encyclopedia." }), 155)
+  # a song's entry and its page in Songs in History start from the same story: the entry's description says what it is first
+  if ($e.sub -eq 'song' -and $e.desc) { $desc = [EpochBuild.W]::Summary("$($e.name)" + $(if ($e.dates) { " ($($e.dates))" } else { '' }) + ', a song: ' + $e.desc, 155) }
   $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { $e.dates } else { '' }
   $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd)
   Emit $path (Page @{ title = "$(NameYears $e.name $tDates) — Encyclopedia — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; body = $body.ToString() })
@@ -1405,6 +1410,13 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
   }
   # data/days/<mm-dd>.json: one day for the home page strip and the Today in History page (not the whole year)
   $dayJs = '{"k":' + (Js $k) + ',"events":[' + ($ej -join ',') + '],"hero":' + $heroIdx + ',"pic":' + $(if ($heroImg) { '[' + (Js $heroImg[0]) + ',' + (Js $heroImg[1]) + ']' } else { 'null' }) + ',"intl":' + $(if ($intlDay) { '{"name":' + (Js ([string]$intlDay['name'])) + ',"description":' + (Js ([string]$intlDay['description'])) + '}' } else { 'null' }) + "}`n"
+  # the song of the day (the home page's "Song of the Day"): of the songs with a checked performance that suit Kids mode,
+  # in order of year, the one at the day of the year times a prime stride, so neighbouring days differ in age and place
+  if ($SONGDAY.Count) {
+    $sdDoy = ([datetime]::ParseExact("2024-$k", 'yyyy-MM-dd', [Globalization.CultureInfo]::InvariantCulture)).DayOfYear
+    $sdStride = $(if ($SONGDAY.Count % 37) { 37 } else { 41 }); $sdS = $SONGDAY[($sdDoy * $sdStride) % $SONGDAY.Count]
+    $dayJs = $dayJs.TrimEnd().Substring(0, $dayJs.TrimEnd().Length - 1) + ',"song":[' + (Js ([string]$sdS['slug'])) + ',' + (Js ([string]$sdS['title'])) + ',' + (Js ([string]$sdS['culture'])) + ',' + (Js (SongYear $sdS)) + ',' + (Js ([string]$sdS['kid'])) + ',' + $(if ($sdS['text']) { 1 } else { 0 }) + "]}`n"
+  }
   if ([EpochBuild.W]::WriteIfChanged("$Repo\data\days\$k.json", $dayJs)) { $NWRITE++ }
   [void]$daysAll.Append($dayJs)
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring days"><a class="prev" rel="prev" href="/today-in-history/' + (DaySlug $pk) + '"><span class="lbl">&larr; Previous day</span><span class="nm">' + (DayLabel $pk) + '</span></a><a class="next" rel="next" href="/today-in-history/' + (DaySlug $nk) + '"><span class="lbl">Next day &rarr;</span><span class="nm">' + (DayLabel $nk) + "</span></a></nav>`n")
@@ -1445,8 +1457,39 @@ foreach ($em in $EMPS) {
 }
 [void]$spb.Append("];`n")
 if ([EpochBuild.W]::WriteIfChanged("$Repo\search-profiles.js", $spb.ToString())) { $NWRITE++ }
+# scripts/song-links.js (SONG_LINKS {profile: [[song slug, title, year]]}): the songs whose people, places or events name a
+# profile, oldest first; generator.html shows them as "Songs in history" chips after the profile's legacy or impact
+# section, so regenerate the profiles after the file changes
+$songPL = [ordered]@{}; $songPN = @{}; foreach ($em in $EMPS) { $songPN[[string]$em['name']] = 1 }
+foreach ($sg in ($SONGS | Sort-Object { [int]$_['year'] })) {
+  foreach ($songN in (@($sg['people']) + @($sg['places']) + @($sg['events']))) {
+    $songN = ([string]$songN).Trim(); if (-not $songPN.ContainsKey($songN)) { continue }
+    if (-not $songPL.Contains($songN)) { $songPL[$songN] = New-Object Collections.Generic.List[string] }
+    $songIt = '[' + (Js ([string]$sg['slug'])) + ',' + (Js ([string]$sg['title'])) + ',' + (Js (SongYear $sg)) + ']'
+    if (-not $songPL[$songN].Contains($songIt)) { $songPL[$songN].Add($songIt) }
+  }
+}
+$songLkJs = "// scripts/song-links.js - written by scripts/build-pages.ps1. Do not edit. Read by generator.html: the songs of each profile.`nvar SONG_LINKS = {`n" + (($songPL.Keys | Sort-Object | ForEach-Object { (Js $_) + ':[' + ($songPL[$_] -join ',') + ']' }) -join ",`n") + "`n};`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\scripts\song-links.js", $songLkJs)) { $NWRITE++ }
+Say "song-links.js: $($songPL.Count) profiles with songs"
 $STATS = @{}; foreach ($m in [regex]::Matches([IO.File]::ReadAllText("$Repo\epoch-stats.js", $U8), "(?m)^\s*'((?:[^'\\]|\\.)*)':\s*\{\s*rank:(\d+),\s*overall:([\d.]+)")) { $STATS[($m.Groups[1].Value -replace "\\'", "'")] = @([int]$m.Groups[2].Value, [double]$m.Groups[3].Value) }
 $LOGO = @{}; foreach ($f in Get-ChildItem "$Repo\logos\thumbs" -Filter *.png) { $LOGO[$f.BaseName] = 1 }
+# data/meanwhile.json: "Meanwhile in the world" (meanwhile.js, loaded by enc-page.js when a page's .meanwhile section nears
+# the screen): every profile [name, address, region, first year, last year (living: this year), weight 0-10 (the
+# radar stats' overall mark; 4 for kinds without), 1 when it has an emblem] and the years that have a page (y)
+$mwRows = New-Object Collections.Generic.List[string]
+foreach ($em in $EMPS) {
+  $mwN = [string]$em['name']; $mwPts = $em['points']
+  if ($mwPts -and @($mwPts).Count) { $mwA = [int][double]@($mwPts)[0][0]; $mwB = [int][double]@($mwPts)[@($mwPts).Count - 1][0] }
+  else { $mwA = [int]$em['start']; $mwB = $(if ($null -eq $em['end']) { $YEAR } else { [int]$em['end'] }) }
+  $mwW = $(if ($STATS.ContainsKey($mwN)) { [Math]::Round([double]$STATS[$mwN][1], 1) } else { 4 })
+  $mwR = Js ([string]$em['region'])
+  $mwRows.Add('[' + (Js $mwN) + ',' + (Js (ProfUrl $mwN)) + ',' + $mwR + ',' + $mwA + ',' + $mwB + ',' + $mwW.ToString([Globalization.CultureInfo]::InvariantCulture) + ',' + $(if ($LOGO.ContainsKey($mwN)) { 1 } else { 0 }) + ']')
+}
+$mwJson = '{"p":[' + ($mwRows -join ",`n") + '],"y":[' + ($YEARLIST -join ',') + ']}'
+if ([EpochBuild.W]::WriteIfChanged("$Repo\data\meanwhile.json", $mwJson)) { $NWRITE++ }
+$MW_V = [EpochBuild.W]::Sha1($mwJson).Substring(0, 8)
+Say "meanwhile.json: $($mwRows.Count) profiles"
 function PeakYear($em) { $best = -1; $yr = $null; foreach ($pt in $em['points']) { if ([double]$pt[1] -gt $best) { $best = [double]$pt[1]; $yr = [double]$pt[0] } }; return $yr }
 function PowerAt($em, [double]$y) {   # the profile's power curve (0-10, scaled to its own peak) at year y; 0 outside its years
   $pts = $em['points']; if ($y -lt [double]$pts[0][0] -or $y -gt [double]$pts[-1][0]) { return 0 }
@@ -2493,6 +2536,8 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   $chips = @(@($sg['people']) + @($sg['places']) + @($sg['events']) | Where-Object { $_ } | Select-Object -Unique)
   if ($chips.Count) { [void]$sb.Append('<section class="sg-sec"><h2>People, places and events</h2><div class="tih-tags">' + (($chips | ForEach-Object { SongChip ([string]$_) }) -join '') + "</div></section>`n") }
   $srcs = @($sg['sources'])
+  # "Meanwhile in the world" in the song's year (not for an undated song)
+  if (-not $sg['undated']) { [void]$sb.Append('<section class="meanwhile" data-y="' + [int]$sg['year'] + '" aria-label="Meanwhile in the world"></section>' + "`n") }
   if ($srcs.Count) { [void]$sb.Append('<section class="sg-sec sg-sources"><h2>Sources</h2><ul class="essay-refs">' + (($srcs | ForEach-Object { '<li>' + ([regex]::Replace((Hx ([string]$_)), 'https?://[^\s,;<]+', $SONGURL)) + '</li>' }) -join '') + "</ul></section>`n") }
   [void]$sb.Append((CiteBox $title ($SITE + $path) 'Songs in History') + "`n")
   $pv = $SONGS[($songI - 1 + $SONGS.Count) % $SONGS.Count]; $nx = $SONGS[($songI + 1) % $SONGS.Count]
@@ -3647,7 +3692,9 @@ SetBlock "$Repo\encyclopedia\index" 'browse' ('<section class="ref-browse" id="e
   '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/glossary">Glossary: ' + $TERMS.Count + ' historical terms explained &rarr;</a> <a class="enc-random-link" href="/centuries/">History by century &rarr;</a></p>' +
   '<h2 class="ref-sec-title">Conflicts &amp; Resolutions by century</h2>' + $cents + '</section>')
 $t = [IO.File]::ReadAllText("$Repo\encyclopedia\index", $U8); $t2 = [regex]::Replace($t, 'index-data\.js\?v=[0-9a-f]*', "index-data.js?v=$IDXV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\encyclopedia\index", $t2)) { $NWRITE++ }
-$t = [IO.File]::ReadAllText("$Repo\enc-page.js", $U8); $t2 = [regex]::Replace($t, "var IDX_V = '[^']*';", "var IDX_V = '$IDXV';"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\enc-page.js", $t2)) { $NWRITE++ }
+$MWJS_V = [EpochBuild.W]::Sha1([IO.File]::ReadAllText("$Repo\meanwhile.js", $U8)).Substring(0, 8)
+$t = [IO.File]::ReadAllText("$Repo\enc-page.js", $U8); $t2 = [regex]::Replace($t, "var IDX_V = '[^']*';", "var IDX_V = '$IDXV';")
+$t2 = [regex]::Replace($t2, "var MW_V = '[^']*', MWJS_V = '[^']*';", "var MW_V = '$MW_V', MWJS_V = '$MWJS_V';"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\enc-page.js", $t2)) { $NWRITE++ }
 SetBlock "$Repo\state\index" 'regions' ('<section class="ref-browse" aria-labelledby="st-reg-title"><h2 class="ref-sec-title" id="st-reg-title">Browse by region</h2><ul class="ref-cent-list">' + (($REGIONS.Keys | Where-Object { $REGIONS[$_].Count } | ForEach-Object { '<li><a href="/state/browse/' + $_ + '">' + (Hx (RegionLabel $_)) + ' <span>' + $REGIONS[$_].Count + '</span></a></li>' }) -join '') + '</ul></section>')
 SetBlock "$Repo\today-in-history\index" 'calendar' ('<section class="day-cal-wrap day-cal-year" aria-labelledby="cal-title"><h2 class="ref-sec-title" id="cal-title">Every day of the year</h2><div class="day-cal-grid">' + ((1..12 | ForEach-Object { MonthCal $_ '' }) -join '') + '</div></section>')
 # the Research Hub's section cards and the home page's doors, map, centuries and countries (counts kept current)

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');}catch(e){}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>Offline — The Epoch Institute</title>
+<meta name="description" content="You are offline. The pages of The Epoch Institute you have read on this device are listed here and open without a connection.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="stylesheet" href="/css/404.css">
+<style>
+/* the page the service worker (sw.js) shows when a page cannot be fetched and no copy of it is kept */
+.off { max-width: 640px; margin: 0 auto; padding: 96px 24px 64px; }
+.off h1 { font-family: var(--font-display); color: var(--gold-light); font-size: clamp(28px, 5vw, 40px); margin: 0 0 12px; }
+.off p { font-family: var(--font-text); font-size: 18px; line-height: 1.6; color: var(--text); }
+.off-list { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 6px; }
+.off-list a { display: block; padding: 10px 14px; border: 1px solid var(--border); border-radius: 2px; color: var(--gold); text-decoration: none; font-family: var(--font-ui); font-size: 15px; background: var(--surface); }
+.off-list a:hover { border-color: var(--gold); }
+.off-k { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 28px 0 0; }
+</style>
+</head>
+<body>
+<main class="off">
+  <h1>You are offline</h1>
+  <p>This page could not be fetched, and it has not been read on this device before. The pages you have read here open without a connection; try again when you are back online.</p>
+  <p class="off-k" id="off-k" hidden>Pages you can read offline</p>
+  <ul class="off-list" id="off-list"></ul>
+  <p><a href="/" style="color: var(--gold);">Try the home page &rarr;</a></p>
+</main>
+<script>
+// the pages the service worker keeps (sw.js, cache "pages-…"): their titles are not stored, so the address is read back
+// into words ("/encyclopedia/battle-of-hastings" -> "Battle of hastings · Encyclopedia")
+(function () {
+  if (!window.caches) return;
+  var kinds = { encyclopedia: 'Encyclopedia', empire: 'Profile', culture: 'Culture', religion: 'Religion', language: 'Language', movement: 'Movement', government: 'Form of government', state: 'State', 'today-in-history': 'Today in History', countries: 'Country', centuries: 'Century', years: 'Year', people: 'People', paths: 'Reading path', speeches: 'Speech', songs: 'Song', societies: 'Social ladder', essays: 'Essay' };
+  caches.keys().then(function (ks) {
+    var k = ks.filter(function (x) { return x.indexOf('pages-') === 0; })[0]; if (!k) return;
+    return caches.open(k).then(function (c) { return c.keys(); }).then(function (reqs) {
+      var items = reqs.map(function (r) { return new URL(r.url).pathname; }).filter(function (p) { return p !== '/offline.html'; }).reverse().slice(0, 120);
+      if (!items.length) return;
+      document.getElementById('off-k').hidden = false;
+      document.getElementById('off-list').innerHTML = items.map(function (p) {
+        var parts = p.split('/').filter(Boolean), last = decodeURIComponent(parts[parts.length - 1] || 'home').replace(/-/g, ' ');
+        var name = last.charAt(0).toUpperCase() + last.slice(1), kind = kinds[parts[0]] || '';
+        return '<li><a href="' + p.replace(/"/g, '') + '">' + name.replace(/[<>&]/g, '') + (kind && parts.length > 1 ? ' &middot; ' + kind : '') + '</a></li>';
+      }).join('');
+    });
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>
