@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Yamnaya culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Yamnaya culture was a herding culture of the Pontic–Caspian steppe, c. 3300–2600 BCE, known for burial mounds and wagons and widely linked with the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Yamnaya culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Yamnaya culture was a herding culture of the Pontic–Caspian steppe, c. 3300–2600 BCE, known for burial mounds and wagons and widely linked with the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/yamnaya-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/yamnaya-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/yamnaya-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/yamnaya-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Yamnaya culture"}]},{"@type":"Article","headline":"Yamnaya culture","description":"The Yamnaya culture was a herding culture of the Pontic–Caspian steppe, c. 3300–2600 BCE, known for burial mounds and wagons and widely linked with the…","url":"https://the-epoch-institute.org/culture/yamnaya-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/yamnaya-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Yamnaya culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/yamnaya-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Yamnaya culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Yamnaya%20culture.png" alt="Yamnaya culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Europe</p>
+        <h1 class="profile-detail-name">Yamnaya culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">The <a class="enc-link" href="/encyclopedia/pontic-caspian-steppe">Pontic–Caspian steppe</a> between the <a class="enc-link" href="/encyclopedia/southern-bug">Southern Bug</a>, <a class="enc-link" href="/encyclopedia/dniester">Dniester</a> and Ural rivers, in present-day <a class="enc-link" href="/encyclopedia/ukraine">Ukraine</a> and southern <a class="enc-link" href="/encyclopedia/russia">Russia</a>; its core in the lower <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a>–Don steppe; the largest fortified site at Mikhailovka</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 3300–2600 BCE (also given as 3300–2500 BCE); core Yamnaya c. 3750–3350 BCE; early horizon spread c. 3400–3200 BCE; followed by the Catacomb (2800–2200 BCE) and Poltavka (2700–2100 BCE) cultures</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">pit graves under kurgans, with bodies covered in ochre; two-wheeled carts and four-wheeled wagons; nomadic or semi-nomadic herding; carved stone stelae; the <a class="enc-link" href="/encyclopedia/kurgan">Kurgan</a> hypothesis of Proto-Indo-European origins; ‘steppe ancestry’</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Excavated kurgan burials since Vasily Gorodtsov’s work of 1901–1903, grave goods and wagons, stable isotopes, and ancient DNA studies from 2015 on; no writing</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>‘Yamnaya’ is an archaeologists’ label from a Russian word meaning ‘related to pits’, after the pit graves under burial mounds that mark this herding culture of the steppe.</li><li>Its people moved their herds across the steppe in carts and wagons and were organised in chiefdoms; whether they also rode horses is disputed.</li><li>The widely accepted <a class="enc-link" href="/encyclopedia/kurgan">Kurgan</a> hypothesis holds that they spoke a stage of Proto-Indo-European, and DNA links them to much later European and South Asian ancestry, though critics question how far.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In some areas elite members of the Yamnaya culture were buried with complete wooden wagons.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 3750–3350 BCE</span><span class="rf-text">The core Yamnaya culture forms in the lower <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a>–Don steppe</span></li><li><span class="rf-year">c. 3400–3200 BCE</span><span class="rf-text">The early Yamnaya horizon spreads quickly across the <a class="enc-link" href="/encyclopedia/pontic-caspian-steppe">Pontic–Caspian steppes</a>, in David Anthony’s account</span></li><li><span class="rf-year">c. 2800 BCE</span><span class="rf-text">The Catacomb culture begins to succeed the Yamnaya in its western range</span></li><li><span class="rf-year">c. 2700 BCE</span><span class="rf-text">The Poltavka culture follows the Yamnaya on the middle <a class="enc-link" href="/encyclopedia/volga">Volga</a></span></li><li><span class="rf-year">1901–1903</span><span class="rf-text">Vasily Gorodtsov excavates near the Donets River and defines the culture</span></li><li><span class="rf-year">2015</span><span class="rf-text">Genetic studies model the Yamnaya as a roughly equal mix of Eastern European and <a class="enc-link" href="/encyclopedia/caucasus">Caucasus</a> hunter-gatherer ancestry</span></li><li><span class="rf-year">2025</span><span class="rf-text">Higher-resolution modelling traces about 80% of Yamnaya ancestry to a <a class="enc-link" href="/encyclopedia/caucasus">Caucasus</a>–Lower <a class="enc-link" href="/encyclopedia/volga">Volga</a> population</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/pontic-caspian-steppe"><img src="/images/encyclopedia/pontic-caspian-steppe.jpg" alt="Pontic–Caspian steppe" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/pontic-caspian-steppe">Pontic–Caspian steppe</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B1%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_%D0%90%D0%B7%D0%BE%D0%B2%D0%BE-%D0%A1%D0%B8%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%91%D0%B8%D1%80%D1%8E%D1%87%D0%B5%D0%BC_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5.jpg" target="_blank" rel="noopener">YegorGeologist, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Yamnaya culture, also called the Pit Grave or Ochre Grave culture, is the name archaeologists give to a late <a class="enc-link" href="/encyclopedia/copper">Copper</a> Age to early <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a> culture of the <a class="enc-link" href="/encyclopedia/pontic-caspian-steppe">Pontic–Caspian steppe</a>, between the <a class="enc-link" href="/encyclopedia/southern-bug">Southern Bug</a>, <a class="enc-link" href="/encyclopedia/dniester">Dniester</a> and Ural rivers, dated to about 3300–2600 BCE. Vasily Gorodtsov discovered it during excavations near the Donets River in 1901–1903 and defined it to distinguish it from the later Catacomb and Srubnaya cultures of the same area. The name comes from yamnaya, a Russian adjective meaning “related to pits”, after the simple pit chambers dug under burial mounds, or kurgans.</p><p>Its origins are still debated. Earlier steppe cultures preceded it: the Khvalynsk culture on the middle <a class="enc-link" href="/encyclopedia/volga">Volga</a> (4700–3800 BCE), the Repin culture on the Don (c. 3950–3300 BCE) and the closely related Sredny Stog culture in the western steppe (c. 4500–3500 BCE). David Anthony (2007) placed its beginning in the Don–Volga area around 3400 BCE, noting that late Khvalynsk and Repin pottery can barely be told apart from early Yamnaya pottery. Parpola (2015) instead linked it to the late Trypillia culture, while Dmytro Telegin saw Sredny Stog and Yamnaya as one continuum, a view that genetic analyses have recently supported. The Mikhailovka culture of the lower <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a> and Don (c. 3600–3400 BCE) bridges the gap between them. Archaeological and genetic data indicate that the core Yamnaya culture (3750–3350 BCE) arose in the lower Dnieper–Don steppe.</p><p>Pavel Dolukhanov suggested in 1996 that the culture grew out of several local cultures as social stratification and nomadic chiefdoms emerged. Anthony saw it as the visible expression of a social adjustment to high mobility: the political arrangements needed to manage larger herds from mobile homes on the steppe. In his account the early Yamnaya horizon spread quickly across the steppes between about 3400 and 3200 BCE.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>The people of the Yamnaya culture were nomads or semi-nomads whose economy rested on animal husbandry, fishing and foraging, together with making pottery, tools and weapons. Some agriculture was practised near rivers, and there were a few fortified sites, the largest at Mikhailovka. Stable isotopes from individuals in the <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a> valley suggest a diet based on land animals, with little from rivers or other waters. Anthony speculates that they ate meat, milk, yogurt, cheese and soups of seeds and wild vegetables, and probably drank mead.</p><p>Herds were managed over long distances. The Yamnaya used two-wheeled carts and four-wheeled wagons, thought to have been drawn by oxen at this time, and several skeletons show bone changes that may have been caused by long-term horse riding. This is disputed: the archaeozoologist William T. Taylor argues that the horse was domesticated long after the Yamnaya culture, and recent genetic studies place horse domestication after about 2700 BCE.</p><p>Society was organised in chiefdoms. Metalworkers and other craftsmen held a special status. Mallory and Adams suggested that Yamnaya society may have had three differentiated classes, but the available evidence does not demonstrate specific classes such as priests, warriors and farmers. The geneticist David Reich argues that the genetic evidence shows an oligarchy dominated by a small number of elite men, and he describes them as a “single, genetically coherent group”; studies of 2024 and 2025 confirmed that most Yamnaya genomes cluster tightly together.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/kurgan"><img src="/images/encyclopedia/kurgan.jpg" alt="Kurgan" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/kurgan">Kurgan</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:LYablonskyFilipovkaKurganR1.jpg" target="_blank" rel="noopener">Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>No writing survives from the Yamnaya culture, so what is known of its beliefs comes from its graves. The dead were laid on their backs with their knees bent and covered in ochre, in simple pits under kurgans, often with animal offerings. Some kurgans hold stratified sequences of graves, added one above another. <a class="enc-link" href="/encyclopedia/kurgan">Kurgan</a> burial may have been rare, perhaps reserved for special adults, who were predominantly male.</p><p>Some graves contain large stone stelae carved in human form, with heads, arms, hands, belts and weapons. Status and gender were marked by grave goods and by the position of the body, and in some areas elite individuals were buried with complete wooden wagons. Metal objects are sometimes found in large quantities in elite graves. Grave goods are more common in the east, where burials also include a higher share of men and more male-centred rituals than in the west.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>Yamnaya craftsmen made pottery, tools and weapons, and the culture saw new metalworking technologies and weapon designs. Pottery helps archaeologists trace the culture’s roots: late Khvalynsk and Repin pots can barely be distinguished from early Yamnaya ones.</p><p>Wheeled vehicles were central to Yamnaya life. Two-wheeled carts and four-wheeled wagons let herders travel long distances, and whole wooden wagons were placed in some elite graves. The large anthropomorphic stelae, carved with human heads, arms, hands, belts and weapons, are among the culture’s most striking works.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/andronovo-culture"><img src="/images/encyclopedia/andronovo-culture.jpg" alt="Andronovo culture" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/andronovo-culture">Andronovo culture</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Andronovo_area.png" target="_blank" rel="noopener">Stanislav Grigoriev, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Yamnaya stand at the centre of a long debate about migration. Genetic studies of 2015 by Jones and colleagues and Haak and colleagues modelled the Yamnaya as a mix, in roughly equal parts, of Eastern European hunter-gatherers and <a class="enc-link" href="/encyclopedia/caucasus">Caucasus</a> hunter-gatherers, an ancestry often called “steppe ancestry” or Western Steppe Herder ancestry, with some further ancestry from Anatolian and Levantine farmers. Recent work finds that the Anatolian-like part came from the Caucasus <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> population, not from European farmers, and higher-resolution modelling in 2025 traced about 80% of Yamnaya ancestry to a distinct Caucasus–Lower <a class="enc-link" href="/encyclopedia/volga">Volga</a> population. The commonest Y-DNA haplogroup among Yamnaya men is R1b, specifically its Z2103 branch.</p><p>Populations of the Corded Ware, Bell Beaker, Sintashta and <a class="enc-link" href="/encyclopedia/andronovo-culture">Andronovo cultures</a> drew large parts of their ancestry from the Yamnaya or a closely related population, with up to 75% Yamnaya-like ancestry in Corded Ware skeletons. Yamnaya-related ancestry makes up about 38.8–50.4% of the ancestry of modern Central and Northern Europeans, the most in <a class="enc-link" href="/encyclopedia/finland">Finland</a>, and it reached <a class="enc-link" href="/encyclopedia/south-asia">South Asia</a> through a later, secondary expansion. Yet the commonest Yamnaya male lineage is absent from Corded Ware men and from modern Western Europeans, so Heyd and colleagues (2023) think direct descent of the Corded Ware culture from the Yamnaya unlikely, at least along the paternal line. Leo Klejn and Balanovsky and colleagues have questioned the Yamnaya’s role in spreading <a class="enc-link" href="/encyclopedia/indo-european-languages">Indo-European languages</a> for the same reason.</p><p>To the east, Yamnaya material culture was very similar to that of the Afanasievo culture of southern <a class="enc-link" href="/encyclopedia/siberia">Siberia</a>, and the two populations are genetically indistinguishable. Either Yamnaya groups migrated to the <a class="enc-link" href="/encyclopedia/altai-mountains">Altai</a> region and founded the Afanasievo culture, or both developed from an earlier shared source.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/indo-european-languages"><img src="/images/encyclopedia/indo-european-languages.jpg" alt="Indo-European languages" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/indo-european-languages">Indo-European languages</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Indo-European_Language_Family_Branches_in_Eurasia.png" target="_blank" rel="noopener">Bill Williams, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Yamnaya culture was succeeded in its western range by the Catacomb culture (2800–2200 BCE) and in its eastern range by the Poltavka culture (2700–2100 BCE), both later followed by the Srubnaya culture (18th–12th centuries BCE). Its people, or a closely related population, contributed a large share of the ancestry of the Corded Ware and Bell Beaker cultures of <a class="enc-link" href="/encyclopedia/europe">Europe</a> and of the Sintashta and <a class="enc-link" href="/encyclopedia/andronovo-culture">Andronovo cultures</a> further east, and <a class="enc-link" href="/encyclopedia/iron-age">Iron Age</a> Scythian nomads can be described as a mixture of Yamnaya-related and East Asian-related ancestry.</p><p>Its importance today lies above all in the question of the <a class="enc-link" href="/encyclopedia/indo-european-languages">Indo-European languages</a>. In her <a class="enc-link" href="/encyclopedia/kurgan">Kurgan</a> hypothesis Marija Gimbutas identified the Yamnaya with the late Proto-Indo-Europeans, and this hypothesis is widely accepted. David Anthony regards the <a class="enc-link" href="/encyclopedia/pontic-caspian-steppe">Pontic–Caspian steppe</a> as the strongest candidate for the homeland of Proto-Indo-European, with the possible exception of the Anatolian languages, while Colin Renfrew has argued for a Near Eastern origin. Guus Kroonen and colleagues (2022) placed the early core Indo-European speakers in the westernmost Yamnaya horizon, around and west of the <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a>. David Reich’s group has suggested that the common source of the Anatolian and other Indo-European languages lay in West Asia and that the Yamnaya spread the latter, and studies of 2024 and 2025 shifted the origins of Proto-Indo-European towards the <a class="enc-link" href="/encyclopedia/caucasus">Caucasus</a>–Lower <a class="enc-link" href="/encyclopedia/volga">Volga</a> region.</p><p>The genetic case is therefore strong but not settled. Klejn has argued that steppe ancestry is lowest around the <a class="enc-link" href="/encyclopedia/danube">Danube</a> in <a class="enc-link" href="/encyclopedia/hungary">Hungary</a>, near the Yamnaya’s western limit, and highest in <a class="enc-link" href="/encyclopedia/northern-europe">Northern Europe</a>, the opposite of what a Yamnaya migration would predict. A 2022 study found that the typical Yamnaya individual had brown eyes, brown hair and intermediate skin colour, unlike some later steppe-descended groups.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Yamnaya culture was a herding culture of the <a class="enc-link" href="/encyclopedia/pontic-caspian-steppe">Pontic–Caspian steppe</a>, c. 3300–2600 BCE, named by archaeologists after its pit graves under kurgans. Its people lived as nomads or semi-nomads with carts and wagons. Under the widely accepted <a class="enc-link" href="/encyclopedia/kurgan">Kurgan</a> hypothesis they spoke a stage of Proto-Indo-European, and DNA studies trace much later European and Asian ancestry to them, though the details are still debated.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Anthony, D. W. (2007) The Horse, the Wheel, and Language: How Bronze-Age Riders from the Eurasian Steppes Shaped the Modern World. Princeton: Princeton University Press.</li>
+        <li>Haak, W. et al. (2015) Massive migration from the steppe was a source for Indo-European languages in Europe. Nature 522: 207–211.</li>
+        <li>Jones, E. R. et al. (2015) Upper Palaeolithic genomes reveal deep roots of modern Eurasians. Nature Communications 6: 8912.</li>
+        <li>Narasimhan, V. M. et al. (2019) The formation of human populations in South and Central Asia. Science 365 (6457).</li>
+        <li>Kroonen, G. et al. (2022) Indo-European cereal terminology suggests a Northwest Pontic homeland for the core Indo-European languages. PLOS ONE 17 (10): e0275744.</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/indus-valley-civilisation"><img src="/logos/thumbs/Indus%20Valley%20Civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Indus Valley Civilisation</span><span class="related-card-dates">c. 3300 BCE – c. 1300 BCE</span></a><a class="related-card" href="/culture/liangzhu-culture"><img src="/logos/thumbs/Liangzhu%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liangzhu culture</span><span class="related-card-dates">c. 3300 BCE – c. 2300 BCE</span></a><a class="related-card" href="/culture/minoan-civilisation"><img src="/logos/thumbs/Minoan%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Minoan civilisation</span><span class="related-card-dates">c. 3100 BCE – c. 1100 BCE</span></a><a class="related-card" href="/culture/caral-supe-civilisation"><img src="/logos/thumbs/Caral%E2%80%93Supe%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Caral–Supe civilisation</span><span class="related-card-dates">c. 3000 BCE – c. 1800 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/liangzhu-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Liangzhu%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liangzhu culture</span><span class="related-card-dates">c. 3300 BCE – c. 2300 BCE</span></a><a class="related-card" href="/culture/minoan-civilisation"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Minoan%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Minoan civilisation</span><span class="related-card-dates">c. 3100 BCE – c. 1100 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Yamnaya culture",slug="yamnaya-culture",url="https://the-epoch-institute.org/culture/yamnaya-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Yamnaya culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/yamnaya-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/yamnaya-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Yamnaya culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Yamnaya culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

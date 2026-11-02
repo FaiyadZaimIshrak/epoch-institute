@@ -510,7 +510,27 @@ var HOME_PICS = {
   "Nomadic confederation": {img:"/images/encyclopedia/kurultai.jpg",name:"Kurultai",slug:"kurultai",credit:"British Library, Public domain"},
   "City-state": {img:"/images/encyclopedia/polis.jpg",name:"Polis",slug:"polis",credit:"A.Savin, CC BY-SA 3.0"},
   "Feudalism": {img:"/images/encyclopedia/vassal.jpg",name:"Vassal",slug:"vassal",credit:"Myrabella, Public domain"},
-  "Colonial rule": {img:"/images/encyclopedia/berlin-conference.jpg",name:"Berlin Conference",slug:"berlin-conference",credit:"Adalbert von Roessler, Public domain"}
+  "Colonial rule": {img:"/images/encyclopedia/berlin-conference.jpg",name:"Berlin Conference",slug:"berlin-conference",credit:"Adalbert von Roessler, Public domain"},
+  "Ainu": {img:"/images/encyclopedia/ainu.jpg",name:"Ainu",slug:"ainu",credit:"Torbenbrinker, CC BY-SA 3.0"},
+  "Bell Beaker culture": {img:"/images/encyclopedia/knowth.jpg",name:"Knowth",slug:"knowth",credit:"Markiemcg1, CC BY-SA 4.0"},
+  "Caral–Supe civilisation": {img:"/images/encyclopedia/caral.jpg",name:"Caral",slug:"caral",credit:"Jon Gudorf Photography, CC BY-SA 2.0"},
+  "Dong Son culture": {img:"/images/encyclopedia/dong-son-culture.jpg",name:"Đông Sơn culture",slug:"dong-son-culture",credit:"Bình Giang, Public domain"},
+  "Igbo-Ukwu culture": {img:"/images/encyclopedia/igbo-ukwu.jpg",name:"Igbo-Ukwu",slug:"igbo-ukwu",credit:"Ochiwar, CC BY-SA 3.0"},
+  "Kerma culture": {img:"/images/encyclopedia/western-deffufa.jpg",name:"Western Deffufa",slug:"western-deffufa",credit:"walter callens, CC BY 2.0"},
+  "Māori": {img:"/images/encyclopedia/treaty-of-waitangi.jpg",name:"Treaty of Waitangi",slug:"treaty-of-waitangi",credit:"William Hobson, James Freeman, and James Busby (English version); Henry Williams and Edward Williams (Māori translation), Public domain"},
+  "Mapuche": {img:"/images/encyclopedia/lautaro.jpg",name:"Lautaro",slug:"lautaro",credit:"GringoInChile, CC BY 2.5"},
+  "Natufians": {img:"/images/encyclopedia/mount-carmel.jpg",name:"Mount Carmel",slug:"mount-carmel",credit:"Chadner, Public domain"},
+  "Nazca culture": {img:"/images/encyclopedia/nazca-lines.jpg",name:"Nazca Lines",slug:"nazca-lines",credit:"Diego Delso, CC BY-SA 4.0"},
+  "Oxus civilisation": {img:"/images/encyclopedia/oxus.jpg",name:"Oxus",slug:"oxus",credit:"Petar Milošević, CC BY-SA 4.0"},
+  "Sangam-age Tamilakam": {img:"/images/encyclopedia/kartikeya.jpg",name:"Kartikeya",slug:"kartikeya",credit:"Shesmax, CC BY-SA 4.0"},
+  "Sanxingdui culture": {img:"/images/encyclopedia/cancong.jpg",name:"Cancong",slug:"cancong",credit:"Tyg728, CC BY-SA 4.0"},
+  "Taíno": {img:"/images/encyclopedia/taino.jpg",name:"Taíno",slug:"taino",credit:"Tito Caraballo, CC BY-SA 2.0"},
+  "Thracians": {img:"/images/encyclopedia/seuthes-iii.jpg",name:"Seuthes III",slug:"seuthes-iii",credit:"Ann Wuyts, CC BY 2.0"},
+  "Ubaid culture": {img:"/images/encyclopedia/ubaid-period.jpg",name:"Ubaid period",slug:"ubaid-period",credit:", CC0"},
+  "Vedic civilisation": {img:"/images/encyclopedia/rigveda.jpg",name:"Rigveda",slug:"rigveda",credit:"Unknown author, Public domain"},
+  "Yamnaya culture": {img:"/images/encyclopedia/kurgan.jpg",name:"Kurgan",slug:"kurgan",credit:", Public domain"},
+  "Yangshao culture": {img:"/images/encyclopedia/yellow-river.jpg",name:"Yellow River",slug:"yellow-river",credit:"fading, CC BY-SA 3.0"},
+  "Yayoi culture": {img:"/images/encyclopedia/wet-rice-agriculture.jpg",name:"Wet-rice agriculture",slug:"wet-rice-agriculture",credit:"Kritzolina, CC BY-SA 4.0"}
 };
 
 var HOME_ENTRIES = [

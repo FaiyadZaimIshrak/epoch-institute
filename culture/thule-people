@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Thule people: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Thule, or proto-Inuit, were Arctic whale hunters who arose in coastal Alaska by 1000 CE and spread east across northern Canada to Greenland by the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Thule people: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Thule, or proto-Inuit, were Arctic whale hunters who arose in coastal Alaska by 1000 CE and spread east across northern Canada to Greenland by the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/thule-people">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/thule-people.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/thule-people.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/thule-people">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Thule people"}]},{"@type":"Article","headline":"Thule people","description":"The Thule, or proto-Inuit, were Arctic whale hunters who arose in coastal Alaska by 1000 CE and spread east across northern Canada to Greenland by the…","url":"https://the-epoch-institute.org/culture/thule-people","mainEntityOfPage":"https://the-epoch-institute.org/culture/thule-people","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Thule people"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/thule-people.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Thule people</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Thule%20people.png" alt="Thule people" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Americas</p>
+        <h1 class="profile-detail-name">Thule people</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">Coastal <a class="enc-link" href="/encyclopedia/alaska">Alaska</a> and the Bering Strait, then the Canadian Arctic (Baffin Island, <a class="enc-link" href="/encyclopedia/hudson-bay">Hudson Bay</a>, Foxe Basin, the Mackenzie Delta) and <a class="enc-link" href="/encyclopedia/greenland">Greenland</a>; named after Thule (Pituffik) in north-west Greenland, where Comer’s Midden was dug.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Forerunners: Old Bering Sea c. 200 BCE–500 CE, Punuk and Birnirk c. 800–1400 CE; eastward spread from c. 1000 CE; Classic Thule 1100–1400 CE; Post-Classic 1400–1600 CE, when local <a class="enc-link" href="/encyclopedia/inuit">Inuit</a> groups emerged.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">bowhead whaling from skin boats; dog sleds, kayaks and umiaks; semi-subterranean houses framed with whale bone; polished-slate tools and the ulu knife; meteoric and Norse iron; the eastward migration that replaced the Dorset culture</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Excavated houses, middens and tools (the Fifth Thule Expedition of 1921–1924 and later digs); Norse sources, which call Arctic peoples Skrælingjar; genetic studies of Thule burials (2014) and of Arctic ancestry (2019).</span></div>
+        </div>
+        <p class="empire-meta">7 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Thule were the direct ancestors of the <a class="enc-link" href="/encyclopedia/inuit">Inuit</a> and Yupik, who developed in coastal <a class="enc-link" href="/encyclopedia/alaska">Alaska</a> by 1000 CE and in a few centuries spread across the Canadian Arctic to <a class="enc-link" href="/encyclopedia/greenland">Greenland</a>.</li><li>Bowhead whales were at the heart of Classic Thule life, hunted by cooperating boat crews under a captain, the umialik, and used for food, fuel, house frames and tools.</li><li>Dog sleds, kayaks and large skin boats let the Thule range far and trade widely, and they displaced the earlier Dorset people across the eastern Arctic.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Long before European contact the Thule worked iron, some of it from meteorites such as the Cape <a class="enc-link" href="/encyclopedia/york">York</a> meteorite in <a class="enc-link" href="/encyclopedia/greenland">Greenland</a> and some traded from the Norse.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 200 BCE</span><span class="rf-text">The Old Bering Sea stage, an early phase of the Thule Tradition, begins around the Bering Strait</span></li><li><span class="rf-year">c. 800 CE</span><span class="rf-text">The Punuk and Birnirk stages develop on the Bering Strait islands and the coasts of northern and western <a class="enc-link" href="/encyclopedia/alaska">Alaska</a></span></li><li><span class="rf-year">c. 1000 CE</span><span class="rf-text">Thule culture has developed in coastal <a class="enc-link" href="/encyclopedia/alaska">Alaska</a>, and Thule groups begin moving east across the Canadian Arctic</span></li><li><span class="rf-year">11th century</span><span class="rf-text">The Norse reach the shores of <a class="enc-link" href="/encyclopedia/canada">Canada</a>, and contact with the Thule follows</span></li><li><span class="rf-year">13th century</span><span class="rf-text">Thule migrants reach <a class="enc-link" href="/encyclopedia/greenland">Greenland</a></span></li><li><span class="rf-year">c. 1300 CE</span><span class="rf-text">Thule populations have largely replaced the Dorset people of northern <a class="enc-link" href="/encyclopedia/canada">Canada</a> and <a class="enc-link" href="/encyclopedia/greenland">Greenland</a></span></li><li><span class="rf-year">c. 1600 CE</span><span class="rf-text">Colder climate ends whaling from boats in the High Arctic, which the Thule abandon; local <a class="enc-link" href="/encyclopedia/inuit">Inuit</a> groups emerge</span></li><li><span class="rf-year">1921–1924</span><span class="rf-text">Therkel Mathiassen of the Fifth Thule Expedition excavates sites and maps out the Thule culture</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/inuit"><img src="/images/encyclopedia/inuit.jpg" alt="Inuit" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/inuit">Inuit</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Distribution_of_Inuit_in_Canada_(2021).svg" target="_blank" rel="noopener">Dragon401k, CC BY 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Thule, also called the proto-<a class="enc-link" href="/encyclopedia/inuit">Inuit</a>, were the forerunners of all modern Inuit and Yupik peoples. Their name is an archaeologists’ label taken from Thule, now Pituffik, in north-west <a class="enc-link" href="/encyclopedia/greenland">Greenland</a>, where their remains were first found at Comer’s Midden. The culture was mapped out by the archaeologist and cartographer Therkel Mathiassen, who took part in the Fifth Thule Expedition led by Knud Rasmussen in 1921–1924. He excavated sites on Baffin Island and around north-western <a class="enc-link" href="/encyclopedia/hudson-bay">Hudson Bay</a> and argued, correctly, that they were the remains of a whaling culture that had begun in <a class="enc-link" href="/encyclopedia/alaska">Alaska</a> and moved into Arctic <a class="enc-link" href="/encyclopedia/canada">Canada</a> about a thousand years earlier.</p><p>Archaeologists trace a longer Thule Tradition around the Bering Strait from about 200 BCE to 1600 CE, in stages often called “Neo-Eskimo” to set them apart from the earlier Norton tradition. The Old Bering Sea stage, first described by Diamond Jenness from decorated <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> harpoon heads found on the <a class="enc-link" href="/encyclopedia/st-lawrence-river">St. Lawrence</a> and Diomede Islands, ran from about 200 BCE to 500 CE; how it relates to the Okvik style is still debated. The Punuk stage, defined by Henry Collins in 1928 from a deep midden on the Punuk Islands, and the Birnirk stage of coastal northern and western Alaska followed from about 800 CE.</p><p>Digs on St. Lawrence Island showed an unbroken sequence from Old Bering Sea through Punuk to later Inuit culture. Genetic studies add to the picture. A 2019 analysis concluded that the ancestors of the Thule emerged in Alaska between 2,700 and 4,900 years ago from a mixing of Paleo-Eskimo and Ocean Bay Tradition peoples, moved back to <a class="enc-link" href="/encyclopedia/siberia">Siberia</a> and later returned. A 2014 study of Thule burials found that they descended from Birnirk populations of north-western Alaska, whose roots lay in north-eastern Siberia.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Thule life differed sharply from that of the earlier Dorset people of the eastern Arctic. Access to bowhead whales let some Thule communities grow into the largest settlements of the prehistoric Arctic: in the best whaling areas a village usually held fifteen to twenty houses, and at least one known site had sixty. Houses often stood in clusters that may have sheltered extended families, and archaeologists have identified communal buildings that seem to have been used for ceremonies.</p><p>Not every household had the same standing. Differences in the size, form and contents of houses, including whaling gear and goods from far away, may reflect differences of wealth or rank between families, and some researchers see in them signs of hierarchy within certain communities. Open-sea whaling needed the coordinated work of several crews and skilled leadership; in some communities the hunt was directed by a captain, the umialik, a position still prominent in Alaskan Arctic communities today. One hunter struck the whale while others attached floats to slow and hold it, and once ashore its meat, blubber and bone were shared out through the community.</p><p>In winter the Thule lived in semi-subterranean houses, often framed with whale jawbones and covered with skins, sod and snow; in summer they moved into skin tents whose edges were held down by circles of stones. Eastern houses were rounder and more above ground, with stone sleeping platforms. A single whale gave meat for food, blubber for light and cooking, and bone for houses and tools. Away from the great whaling places, people relied heavily on fish, large marine mammals and caribou, and they tried to use as much of every animal as they could.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>The archaeological record gives only a few clues to what the Thule believed, and any picture of their religion rests on inference. The communal structures found among clusters of houses appear to have been used for ceremonial activities. Whaling, too, depended on cooperation, and a whale’s meat, blubber and bone were distributed through the community once it was ashore.</p><p>Thule art offers further hints. The Old Bering Sea stage decorated its tools with flowing curvilinear designs of dots, circles and short lines, which make its objects easy to recognise; Punuk art became simpler and more standardised, and the Birnirk people decorated almost nothing beyond spiral and concentric patterns on clay pots. Classic Thule artists put simple linear designs on household objects such as combs, showing people without arms or legs, animals and other figures. Archaeologists note that the Classic Thule placed much emphasis on the practical use of art; what these images meant to their makers is not known.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>Thule technology was built for a life at sea and on the ice. Kayaks and umiaks, large boats of skin on a frame, first appear in the archaeological record in the Old Bering Sea stage, and the umiak became central to bowhead whaling. Tool kits were dominated by polished slate rather than flaked stone: lance-shaped knives, projectile heads and the ulu, a knife with a blade set across the handle. The people of the Bering Strait also made a simple pottery and used bone and antler for harpoon heads, darts, spears, snow goggles, blubber scrapers, needles, awls and mattocks, and walrus shoulder blades for snow shovels.</p><p>Hunting tools grew more effective over time. Harpoons carried ice picks for seal hunting, and <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> plugs and mouthpieces were used to inflate floats on the harpoon line, so that large sea mammals could be held and recovered. The Punuk stage added armour made of bone, the bow and arrow, bone wrist guards, reinforced bows, bird bolas, heavy ivory net sinkers and blunt bird arrows, and engraved its tools with iron-tipped points. Birnirk people used sledges of the same basic design as the later dog sleds, and their harpoon heads, more often of antler than ivory, changed in shape from phase to phase.</p><p>Dog sleds, kayaks and umiaks let Thule hunters follow migrating game and sea mammals over great distances and carry heavy loads. The Thule worked iron long before European contact, carving and engraving with it: some came from meteorites, such as the Cape <a class="enc-link" href="/encyclopedia/york">York</a> meteorite in <a class="enc-link" href="/encyclopedia/greenland">Greenland</a>, and some through trade from the Norse, and they hammered the raw iron into tools themselves, though supply was never steady. In the east, people preferred soapstone household vessels to pottery.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/aleutian-islands"><img src="/images/encyclopedia/aleutian-islands.jpg" alt="Aleutian Islands" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/aleutian-islands">Aleutian Islands</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Aleutian_Islands_amo_2014135_lrg.jpg" target="_blank" rel="noopener">Jeff Schmaltz, NASA, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Around the beginning of the second millennium CE, Thule people began moving east. While western groups settled the northern and western coasts of <a class="enc-link" href="/encyclopedia/alaska">Alaska</a>, others crossed the Canadian Arctic as far as <a class="enc-link" href="/encyclopedia/greenland">Greenland</a>, which they reached by the 13th century. The distribution of early Alaskan-style harpoon heads shows two routes: one along the Beaufort Sea coast and Amundsen Gulf into the High Arctic through Parry Channel and Smith Sound, the other south along the western coast of <a class="enc-link" href="/encyclopedia/hudson-bay">Hudson Bay</a>. In the same period the use of polished slate and Thule methods of making pottery spread west to the <a class="enc-link" href="/encyclopedia/aleutian-islands">Aleutian Islands</a> and southern Alaska.</p><p>Why they moved is debated. R. McGhee’s cultural-ecological model holds that the first families followed bowhead whales, whose summer range spread east during a warm period between 900 and 1200 that reduced the pack ice. Other explanations point to warfare in Alaska or the search for new sources of iron. Wherever they went, the Thule displaced the Dorset people who had occupied the central and eastern Canadian Arctic: by about 1300 CE they had largely replaced them, and by the 15th century entirely. Evidence of contact between the two is scarce, the 2014 genetic study found the Thule genetically distinct from the Dorset, and how the succession happened remains poorly understood.</p><p>The Thule, and to a lesser degree the Dorset, were also in contact with the Norse, who reached the shores of <a class="enc-link" href="/encyclopedia/canada">Canada</a> in the 11th century; Norse sources call these peoples the Skrælingjar. Iron reached the Thule through Norse trade, yet the 2014 study found no sign of mixing between the Thule and the Greenlandic Norse, though both lived on the island for several centuries. Among the Thule themselves, native <a class="enc-link" href="/encyclopedia/copper">copper</a> from the western Arctic and meteoric iron from north-western Greenland passed from community to community.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Classic Thule culture, between 1100 and 1400 CE, spread across the High Arctic and south to the coasts of Hudson Strait, <a class="enc-link" href="/encyclopedia/hudson-bay">Hudson Bay</a>, Foxe Basin and the mainland from the Mackenzie Delta to the Melville Peninsula. Then the climate turned. A colder period between 1400 and 1600 limited the use of boats, reduced the number of whales and shortened the open-water hunting season. By the 16th century whaling from umiaks and kayaks had ended in the High Arctic, and by 1600 people had left the High Arctic altogether. Where whales were scarce, Post-Classic communities lived more on caribou, seal and fish; those near open water suffered less from the cold.</p><p>Out of these changes came the local groups known from later history, among them the <a class="enc-link" href="/encyclopedia/copper">Copper</a> <a class="enc-link" href="/encyclopedia/inuit">Inuit</a>, the Netsilik and the Inuit of the Igloolik area. Contact with Europeans grew in the 18th century, and together with the disruption already caused by the cold of the <a class="enc-link" href="/encyclopedia/little-ice-age">Little Ice Age</a> it broke the Thule communities apart. Their descendants became known to outsiders as Eskimo, a term now considered offensive, and later by their own names, Inuit and Yupik.</p><p>The Thule are thus not a vanished people but the ancestors of the Inuit and Yupik of today. Most of the Thule individuals sampled by geneticists belonged to the maternal lineage A2a, and the umialik, the whaling captain of Thule times, is still a prominent figure in Alaskan Arctic communities. The Thule migration, which carried one way of life from <a class="enc-link" href="/encyclopedia/alaska">Alaska</a> to <a class="enc-link" href="/encyclopedia/greenland">Greenland</a> in a few centuries, was the subject of the Canadian documentary Inuit Odyssey, first broadcast in 2009.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Thule were the proto-<a class="enc-link" href="/encyclopedia/inuit">Inuit</a>, Arctic hunters who developed in coastal <a class="enc-link" href="/encyclopedia/alaska">Alaska</a> by 1000 CE and within a few centuries spread across northern <a class="enc-link" href="/encyclopedia/canada">Canada</a> to <a class="enc-link" href="/encyclopedia/greenland">Greenland</a>, replacing the Dorset culture. Their life centred on bowhead whaling from skin boats, dog sleds and houses framed with whale bone. A colder climate after 1400 broke up the old whaling life, and their descendants are the Inuit and Yupik of today.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Bonvillain, Nancy (1995) The Inuit. Chelsea House Publishers.</li>
+        <li>Dumond, Don (1977) The Eskimos and Aleuts. Westview Press.</li>
+        <li>Schledermann, Peter (1971) The Thule Tradition in Northern Labrador. Memorial University of Newfoundland.</li>
+        <li>Tuck, James (1984) Newfoundland and Labrador Prehistory. Van Nostrand Reinhold.</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/igbo-ukwu-culture"><img src="/logos/thumbs/Igbo-Ukwu%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Igbo-Ukwu culture</span><span class="related-card-dates">c. 850 CE – c. 1050 CE</span></a><a class="related-card" href="/culture/ainu"><img src="/logos/thumbs/Ainu.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ainu</span><span class="related-card-dates">c. 1200 CE – present</span></a><a class="related-card" href="/culture/mississippian-culture"><img src="/logos/thumbs/Mississippian%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mississippian culture</span><span class="related-card-dates">c. 800 CE – c. 1600 CE</span></a><a class="related-card" href="/culture/taino"><img src="/logos/thumbs/Ta%C3%ADno.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Taíno</span><span class="related-card-dates">c. 800 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/igbo-ukwu-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Igbo-Ukwu%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Igbo-Ukwu culture</span><span class="related-card-dates">c. 850 CE – c. 1050 CE</span></a><a class="related-card" href="/culture/ainu"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Ainu.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ainu</span><span class="related-card-dates">c. 1200 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Thule people",slug="thule-people",url="https://the-epoch-institute.org/culture/thule-people";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Thule people on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/thule-people #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/thule-people"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Thule people",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Thule people",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

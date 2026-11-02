@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Hopewell culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Hopewell tradition was a network of Native American peoples of the Eastern Woodlands, from about 100 BCE to 500 CE, linked by long-distance exchange…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Hopewell culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Hopewell tradition was a network of Native American peoples of the Eastern Woodlands, from about 100 BCE to 500 CE, linked by long-distance exchange…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/hopewell-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/hopewell-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/hopewell-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/hopewell-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Hopewell culture"}]},{"@type":"Article","headline":"Hopewell culture","description":"The Hopewell tradition was a network of Native American peoples of the Eastern Woodlands, from about 100 BCE to 500 CE, linked by long-distance exchange…","url":"https://the-epoch-institute.org/culture/hopewell-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/hopewell-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Hopewell culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/hopewell-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Hopewell culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Hopewell%20culture.png" alt="Hopewell culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Americas</p>
+        <h1 class="profile-detail-name">Hopewell culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">River valleys of the Eastern Woodlands of <a class="enc-link" href="/encyclopedia/north-america">North America</a>, centred on the Scioto River and Paint Creek valleys around Chillicothe, <a class="enc-link" href="/encyclopedia/ohio">Ohio</a>; key sites the Hopewell Mound Group, Mound City, the Newark Earthworks, Portsmouth Earthworks and Pinson Mounds</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Middle Woodland period, c. 100 BCE–500 CE; regional groups such as the Goodall focus (c. 200 BCE–500 CE) and the Armstrong and Wilhelm cultures (c. 1–500 CE)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">geometric earthworks and burial mounds; carved stone platform pipes; ornaments of <a class="enc-link" href="/encyclopedia/copper">copper</a> and mica such as the Mica Hand; obsidian from Yellowstone; a trade network from Lake <a class="enc-link" href="/encyclopedia/ontario">Ontario</a> to <a class="enc-link" href="/encyclopedia/florida">Florida</a>; possible lunar and solar alignments</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">excavation of mounds and earthworks since Warren K. Moorehead’s work of 1891–1892; grave goods traced to their sources; surveys of earthwork alignments; regional pottery and pipe styles</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Hopewell was not one people but a widespread set of Native American communities, from Lake <a class="enc-link" href="/encyclopedia/ontario">Ontario</a> to <a class="enc-link" href="/encyclopedia/florida">Florida</a>, linked by trade and shared ceremony between about 100 BCE and 500 CE.</li><li>Living in small farming and foraging settlements, they built huge geometric earthworks and burial mounds, filled with goods made from materials carried hundreds of miles.</li><li>Around 500 CE the exchange ended and mound building stopped, but some Hopewell groups are thought to be ancestral to later peoples, among them the builders of Cahokia.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Grave goods at Mound City include hundreds of pounds of obsidian traceable to Yellowstone, and the <a class="enc-link" href="/encyclopedia/ohio">Ohio</a> Hopewell may have made pilgrimages there, a walk of about 2,000 miles (3,200 kilometres) each way.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 100 BCE</span><span class="rf-text">The Hopewell exchange network begins in the Middle Woodland period; the Toolesboro and Portsmouth earthworks are begun</span></li><li><span class="rf-year">c. 250 CE</span><span class="rf-text">Hopewell influence on the Point Peninsula complex of <a class="enc-link" href="/encyclopedia/ontario">Ontario</a> and <a class="enc-link" href="/encyclopedia/new-york">New York</a> ends</span></li><li><span class="rf-year">c. 500 CE</span><span class="rf-text">The Hopewell exchange ceases, mound building stops and the characteristic art is no longer made</span></li><li><span class="rf-year">1891–1892</span><span class="rf-text">Warren K. Moorehead explores the Hopewell Mound Group in Ross County, <a class="enc-link" href="/encyclopedia/ohio">Ohio</a>, giving the culture its name</span></li><li><span class="rf-year">1982</span><span class="rf-text">Ray Hively and Robert Horn publish their study of lunar sightlines at the Newark Earthworks</span></li><li><span class="rf-year">1983</span><span class="rf-text">Christopher Turner shows that the Hopeton earthworks align with sunrises and moonrises</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Hopewell tradition, also called the Hopewell culture or Hopewellian exchange, was not a single culture or society but a network of Native American peoples who lived along the rivers of the north-eastern and midwestern Eastern Woodlands from about 100 BCE to 500 CE, in the Middle Woodland period. What these peoples called themselves, and even which language families they spoke, is unknown; “Hopewell” is a label archaeologists apply to a broad range of cultures.</p><p>The name comes from the Hopewell Mound Group in Ross County, <a class="enc-link" href="/encyclopedia/ohio">Ohio</a>, which the American archaeologist Warren K. Moorehead explored in 1891 and 1892. The mound group was named after Mordecai Hopewell, whose family then owned the land. Where the tradition began is still discussed. One view holds that Hopewell populations came from western <a class="enc-link" href="/encyclopedia/new-york">New York</a> and moved south into Ohio, where they built on the local Adena mortuary tradition. Another holds that it began in western <a class="enc-link" href="/encyclopedia/illinois">Illinois</a> and spread by diffusion to southern Ohio, while the Havana Hopewell tradition spread up the Illinois River into south-western Michigan, giving rise to Goodall Hopewell.</p><p>Hopewell is sometimes described as a cultural climax of the Eastern Woodlands. Its peoples inherited much from the Adena before them, but made their art in greater variety and from more exotic materials.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Many Hopewell communities were small, temporary settlements of one to three households near rivers. They lived by a mixture of hunting, gathering and horticulture. The great ceremonial centres of <a class="enc-link" href="/encyclopedia/ohio">Ohio</a> had a burial mound and a geometric earthwork complex covering tens to hundreds of acres, but only sparse settlement around them, and there is little evidence of large populations living at the monuments.</p><p>From the Adena the Hopewell inherited the beginnings of social ranking, which reinforced settled life, the specialised use of resources and probably population growth. Most of the dead were cremated, and burial in a mound was kept for the most important people. At some sites hunters seem to have had higher status, with more elaborate graves and more goods. Hopewell leaders did not have the centralised power to command armies. Certain families probably held a privileged place, and some scholars see the rise of “big-men”, leaders whose influence rested on their skill at persuasion in trade and religion and on ties of mutual obligation, a step toward the more stratified chiefdoms of later times.</p><p>The trade routes that joined Hopewell settlements also served as lines of communication and brought people together for important ceremonies. Some groups built platform mounds: at Pinson Mounds and Ingomar Mound, on the edge of the Miller culture, archaeologists think these were for feasting rituals.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>Most surviving Hopewell work had religious meaning. The earthworks, the best-preserved remains of the tradition, are geometric enclosures of circles, squares and octagons, and their purpose is still debated. Many mounds hold human burials, some with precious grave goods: ornaments of <a class="enc-link" href="/encyclopedia/copper">copper</a>, mica and obsidian brought from hundreds of miles away, necklaces, carvings of bone and wood, decorated ceremonial pottery and pendants. Some graves were lined with woven mats, sheets of mica or stones.</p><p>Several researchers argue that some earthworks track the sky. Bradley T. Lepper and others suggest that the Octagon of the Newark Earthworks in <a class="enc-link" href="/encyclopedia/ohio">Ohio</a>, covering more than 50 acres (20 hectares), was a lunar observatory aligned to the 18.6-year cycle of the moon’s rising and setting points on the horizon. Ray Hively and Robert Horn of Earlham College analysed lunar sightlines at Newark (1982) and at the High Banks Works in Chillicothe (1984). Christopher Turner noted that the Fairground Circle at Newark aligns with sunrise on 4 May, and in 1983 showed that the Hopeton earthworks mark solstices, equinoxes and lunar extremes. These alignments are interpretations, and the debate continues.</p><p>Some objects hint at ceremonies now lost: a rare mask from Mound City uses a human skull as its face plate, and copper was shaped to look like the horns of Rocky Mountain bighorn sheep.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/copper"><img src="/images/encyclopedia/copper.jpg" alt="Copper" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/copper">Copper</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:NatCopper.jpg" target="_blank" rel="noopener">Jonathan Zander; derivative work by Materialscientist, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Hopewell artisans produced some of the finest craftwork of the <a class="enc-link" href="/encyclopedia/americas">Americas</a>. They worked grizzly bear teeth, freshwater pearls, sea shells, sharks’ teeth, <a class="enc-link" href="/encyclopedia/copper">copper</a> and small amounts of <a class="enc-link" href="/encyclopedia/silver">silver</a> into ornaments, and they were expert carvers of pipestone. The Mound of Pipes at Mound City held more than 200 stone smoking pipes in the form of animals and birds, carved in three dimensions, and more than 130 came from the Tremper site in Scioto County. Platform pipes of steatite were traded far and wide and have been found in graves well outside the <a class="enc-link" href="/encyclopedia/midwestern-united-states">Midwest</a>.</p><p>Hopewell artists showed the human form both realistically and abstractly. One tubular pipe is so exact that researchers identified its model as a person with achondroplasia, a form of dwarfism, and many figurines show dress, ornaments and hairstyles in detail. The “Mica Hand” from the Hopewell site, cut from a sheet of mica 11 by 6 inches (280 by 150 millimetres), was probably worn or carried for public display. They also made beadwork and carved human bone.</p><p>Their greatest works were the earthworks. The Portsmouth Earthworks, at the meeting of the Scioto and <a class="enc-link" href="/encyclopedia/ohio">Ohio</a> rivers, combined circular enclosures, two large horseshoe-shaped enclosures and three sets of parallel-walled roads, one of which crossed the <a class="enc-link" href="/encyclopedia/ohio-river">Ohio River</a> into Kentucky. Some mounds in the Chillicothe area rose as high as 70 feet (21 metres).</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/great-lakes"><img src="/images/encyclopedia/great-lakes.jpg" alt="Great Lakes" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/great-lakes">Great Lakes</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Great_Lakes,_No_Clouds_(4968915002)_Brighter.jpg" target="_blank" rel="noopener">NASA, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>At its greatest extent the Hopewell exchange system ran from the northern shores of Lake <a class="enc-link" href="/encyclopedia/ontario">Ontario</a> to the Crystal River mounds in <a class="enc-link" href="/encyclopedia/florida">Florida</a>, with most activity along the rivers that served as roads. Communities received raw materials from across what is now the mainland <a class="enc-link" href="/encyclopedia/united-states">United States</a>, turned them into finished goods in the main trading and manufacturing areas, and passed them on through local and regional networks. Obsidian at Mound City has been traced to Yellowstone, and the <a class="enc-link" href="/encyclopedia/ohio">Ohio</a> Hopewell may have travelled there in person.</p><p>Many regional cultures took part. The Havana Hopewell lived in the <a class="enc-link" href="/encyclopedia/illinois">Illinois</a> and <a class="enc-link" href="/encyclopedia/mississippi-river">Mississippi</a> valleys; the Goodall focus in Michigan and northern Indiana; the Armstrong culture in the Big Sandy valley of Kentucky and West <a class="enc-link" href="/encyclopedia/virginia">Virginia</a>, perhaps mingling peacefully with local Adena peoples; the Copena culture in <a class="enc-link" href="/encyclopedia/alabama">Alabama</a>, Mississippi and <a class="enc-link" href="/encyclopedia/tennessee">Tennessee</a>, named for its <a class="enc-link" href="/encyclopedia/copper">copper</a> and galena; the Crab Orchard culture along the <a class="enc-link" href="/encyclopedia/ohio-river">Ohio River</a>; the Marksville culture of the Lower Mississippi; the Miller culture of the upper Tombigbee; and the <a class="enc-link" href="/encyclopedia/kansas">Kansas</a> City Hopewell at the western edge, beyond which Hopewell-style pottery rarely appears.</p><p>To the north, the Point Peninsula complex of Ontario and <a class="enc-link" href="/encyclopedia/new-york">New York</a> was influenced by Ohio Hopewell until about 250 CE, after which it stopped its burial ceremonies, and the Laurel and Saugeen complexes lay in <a class="enc-link" href="/encyclopedia/canada">Canada</a> and the upper <a class="enc-link" href="/encyclopedia/great-lakes">Great Lakes</a>. In the south-east the Swift Creek culture lasted to around 700 CE.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/mississippian-culture"><img src="/images/encyclopedia/mississippian-culture.jpg" alt="Mississippian culture" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/mississippian-culture">Mississippian culture</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Willoughby_disc,_engraved_paint_palette,_Mississippian_tradition,_Moundville,_Alabama,_1300-1450_AD,_ploughed_up_1860,_shale_-_Native_American_collection_-_Peabody_Museum,_Harvard_University_-_DSC06065.jpg" target="_blank" rel="noopener">Daderot, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Around 500 CE the Hopewell exchange ceased, mound building stopped and the characteristic art forms were no longer made. The causes are not settled. Late Woodland villages grew larger and were protected by palisades and ditches, which points to war. A colder climate may have driven game north or west; the bow and arrow may have led to over-hunting and deadlier warfare; and with fewer people on the trade routes, shared traditions may have faded. The adoption of full-scale farming may also have broken down the old social order.</p><p>Hopewell peoples did not vanish. The Havana Hopewell are considered ancestral to the groups who formed the <a class="enc-link" href="/encyclopedia/mississippian-culture">Mississippian culture</a> that built Cahokia. The Marksville culture developed into the Baytown culture and later the Coles Creek and Plum Bayou cultures, the Miller culture area was absorbed into the Mississippian culture by about 1000 CE, and the Saugeen people of the Bruce Peninsula may have developed into the historic <a class="enc-link" href="/encyclopedia/odawa">Odawa</a>.</p><p>When colonial settlers first crossed the <a class="enc-link" href="/encyclopedia/appalachian-mountains">Appalachians</a> they were astonished by the earthworks. Many survive today. The Hopewell Culture National Historical Park near Chillicothe, <a class="enc-link" href="/encyclopedia/ohio">Ohio</a>, protects the mounds that gave the culture its name, and the Hopewell Ceremonial Earthworks are a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a> preserving Ohio Hopewell sites.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Hopewell tradition was a network of Native American peoples in the river valleys of the Eastern Woodlands, from about 100 BCE to 500 CE. Living in small settlements by hunting, gathering and gardening, they exchanged <a class="enc-link" href="/encyclopedia/copper">copper</a>, mica, shell and obsidian across much of <a class="enc-link" href="/encyclopedia/north-america">North America</a> and built great geometric earthworks and burial mounds. The network broke down around 500 CE, but its peoples fed into later cultures, among them the Mississippian.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Byers, A. M. and Wymer, D., eds. (2010) Hopewell Settlement Patterns, Subsistence, and Symbolic Landscapes. University Press of Florida.</li>
+        <li>Carr, C. and Case, D. T., eds. (2005) Gathering Hopewell: Society, Ritual, and Ritual Interaction. Springer.</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/nazca-culture"><img src="/logos/thumbs/Nazca%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Nazca culture</span><span class="related-card-dates">c. 100 BCE – c. 800 CE</span></a><a class="related-card" href="/culture/sangam-age-tamilakam"><img src="/logos/thumbs/Sangam-age%20Tamilakam.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sangam-age Tamilakam</span><span class="related-card-dates">c. 300 BCE – c. 300 CE</span></a><a class="related-card" href="/culture/yayoi-culture"><img src="/logos/thumbs/Yayoi%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Yayoi culture</span><span class="related-card-dates">c. 300 BCE – c. 300 CE</span></a><a class="related-card" href="/culture/mapuche"><img src="/logos/thumbs/Mapuche.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mapuche</span><span class="related-card-dates">c. 500 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/yayoi-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Yayoi%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Yayoi culture</span><span class="related-card-dates">c. 300 BCE – c. 300 CE</span></a><a class="related-card" href="/culture/nazca-culture"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Nazca%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Nazca culture</span><span class="related-card-dates">c. 100 BCE – c. 800 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Hopewell culture",slug="hopewell-culture",url="https://the-epoch-institute.org/culture/hopewell-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Hopewell culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/hopewell-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/hopewell-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Hopewell culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Hopewell culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Nazca culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Nazca culture flourished on the desert coast of southern Peru from about 100 BCE to 800 CE, painting polychrome pottery, weaving fine textiles and…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Nazca culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Nazca culture flourished on the desert coast of southern Peru from about 100 BCE to 800 CE, painting polychrome pottery, weaving fine textiles and…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/nazca-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/nazca-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/nazca-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/nazca-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Nazca culture"}]},{"@type":"Article","headline":"Nazca culture","description":"The Nazca culture flourished on the desert coast of southern Peru from about 100 BCE to 800 CE, painting polychrome pottery, weaving fine textiles and…","url":"https://the-epoch-institute.org/culture/nazca-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/nazca-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Nazca culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/nazca-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Nazca culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Nazca%20culture.png" alt="Nazca culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Americas</p>
+        <h1 class="profile-detail-name">Nazca culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">The arid southern coast of <a class="enc-link" href="/encyclopedia/peru">Peru</a>: the river valleys of the Río Grande de Nazca drainage and the Ica Valley, in today’s Ica Region; key sites the ceremonial centre of Cahuachi and the puquios of Cantalloc</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Proto Nazca c. 100 BCE–1 CE; Early Nazca c. 1–450 CE; Middle Nazca c. 450–550 CE; Late Nazca c. 550–750 CE; in decline from c. 500 CE and fallen by c. 750 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the <a class="enc-link" href="/encyclopedia/nazca-lines">Nazca Lines</a>; puquios, underground <a class="enc-link" href="/encyclopedia/aqueduct">aqueducts</a> still in use; polychrome pottery in at least twelve colours; textiles; the ceremonial centre of Cahuachi; trophy heads; trephination and shaped skulls</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">excavations at Cahuachi and other sites; burials preserved by the dry desert; the nine-phase pottery sequence; ceramic and textile iconography; chemical study of clays; AMS dating of rock varnish in the puquios</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Nazca lived in the river valleys of <a class="enc-link" href="/encyclopedia/peru">Peru</a>’s southern desert from about 100 BCE to 800 CE, farming with water drawn from underground channels, several dozen of which still work.</li><li>Their ceremonial centre at Cahuachi drew whole villages to feasts, where people received the fine painted pottery that carried Nazca images of gods and mythical beings.</li><li>They made the <a class="enc-link" href="/encyclopedia/nazca-lines">Nazca Lines</a>, vast figures and lines on the desert floor whose purpose is still debated, and declined after about 500 CE amid floods and erosion.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Some Nazca burials have a “head jar” in place of the missing head: a pot painted with a human face, sometimes with plants sprouting from it.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 100 BCE</span><span class="rf-text">Nazca culture emerges from the Paracas culture on the southern coast of <a class="enc-link" href="/encyclopedia/peru">Peru</a></span></li><li><span class="rf-year">c. 1–450 CE</span><span class="rf-text">In the Early Nazca period, the mounds and plazas of Cahuachi are the centre of ritual and feasting</span></li><li><span class="rf-year">c. 450 CE</span><span class="rf-text">Around the end of Nazca phase 3 or start of phase 4 Cahuachi is abandoned, probably after a drought across the Andes</span></li><li><span class="rf-year">c. 450–550 CE</span><span class="rf-text">In the Middle Nazca period the puquios, underground <a class="enc-link" href="/encyclopedia/aqueduct">aqueducts</a>, are built</span></li><li><span class="rf-year">c. 500 CE</span><span class="rf-text">Nazca society begins to decline</span></li><li><span class="rf-year">c. 650 CE</span><span class="rf-text">Power shifts from the coast to the highlands with the rise of the Wari culture</span></li><li><span class="rf-year">c. 750 CE</span><span class="rf-text">Nazca culture has fallen, probably after <a class="enc-link" href="/encyclopedia/el-nino">El Niño</a> floods on a landscape stripped of trees</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Nazca culture, also spelled Nasca, is the archaeologists’ name for the people who lived in the river valleys of the Río Grande de Nazca drainage and the Ica Valley on the dry southern coast of <a class="enc-link" href="/encyclopedia/peru">Peru</a> from about 100 BCE to 800 CE. The Nazca Province of the Ica Region is named after them. They grew out of the Paracas culture of the same coast, known for its complex textiles, and many Nazca traditions came from it.</p><p>The shift from Paracas to Nazca is marked in pottery. Paracas potters painted their vessels with resin after firing; Nazca potters began to paint with coloured slips before firing, and this change marks the start of Nazca-style pottery. The culture is generally divided into Proto Nazca (phase 1, c. 100 BCE–1 CE), Early Nazca (phases 2–4, c. 1–450 CE), Middle Nazca (phase 5, c. 450–550 CE) and Late Nazca (phases 6–7, c. 550–750 CE). It belongs to the Early Intermediate Period of Andean archaeology.</p><p>Much of what is known comes from the excavations at Cahuachi, the most important site for the study of Nazca culture, and from burials, whose textiles have been preserved by the dry desert. The pottery sequence, divided into nine phases by its changing style, is the main tool for dating Nazca sites, and phases 8 and 9 are now placed in the following Middle Horizon.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/maize"><img src="/images/encyclopedia/maize.jpg" alt="Maize" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/maize">Maize</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg" target="_blank" rel="noopener">Franz Eugen Köhler, Köhler's Medizinal-Pflanzen, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Early Nazca society was made up of local chiefdoms and regional centres of power that grew up around Cahuachi, a non-urban ceremonial site of earthwork mounds and plazas in the lower Nazca Valley, first occupied in the late Paracas phase. Its builders shaped natural hills into pyramid mounds. About 70% of the pottery found there is fine polychrome ware and only 30% plain, which led archaeologists to conclude that Cahuachi was a ceremonial centre rather than a town. At festivals people from the surrounding villages came to the centre to feast; ordinary people received valued goods such as painted pottery, while the elite strengthened their power and drew commoners into building work. Cahuachi was abandoned at the end of Nazca phase 3 or the start of phase 4, most scholars believe because of a drought across the Andes, and later Nazca society built fewer large complexes.</p><p>The Nazca lived mainly by farming. They ate <a class="enc-link" href="/encyclopedia/maize">maize</a>, squash, beans, sweet <a class="enc-link" href="/encyclopedia/potato">potato</a>, manioc, achira and <a class="enc-link" href="/encyclopedia/peanut">peanuts</a>, with some fish, and grew <a class="enc-link" href="/encyclopedia/cotton">cotton</a>, coca, the <a class="enc-link" href="/encyclopedia/san-pedro-cactus">San Pedro cactus</a> and gourds. Llamas carried loads and gave wool and meat, and llamas and guinea pigs were sacrificed at Cahuachi.</p><p>In the Middle Nazca period they built puquios to farm the desert: underground channels dug into hillsides until they reached the water table, lined with river stones laid without mortar so that water could seep in. The water flowed to irrigation canals or into small <a class="enc-link" href="/encyclopedia/reservoir">reservoirs</a>, and access holes called ojos let people climb down to clear and repair the channels.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/san-pedro-cactus"><img src="/images/encyclopedia/san-pedro-cactus.jpg" alt="San Pedro cactus" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/san-pedro-cactus">San Pedro cactus</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Starr_070320-5799_Echinopsis_pachanoi.jpg" target="_blank" rel="noopener">Forest &amp; Kim Starr, CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Nazca religion, probably shaped by the harsh desert, centred on farming and fertility. Their art shows powerful nature spirits as mythical beings that mix human, animal, bird and fish features: the killer whale, the harvesters, the spotted cat, a serpentine creature and, most often, the Anthropomorphic Mythical Being. Ceremonies took place at Cahuachi, where people worshipped these beings to help their crops grow.</p><p>Shamans seem to have played a large part. Pottery and textiles show masked figures, read as ritual specialists in altered states. Shamans apparently used the <a class="enc-link" href="/encyclopedia/san-pedro-cactus">San Pedro cactus</a> and snuffed the ground seeds of Anadenanthera, and such scenes appear on painted pots, though how to read them is debated and direct archaeological evidence of these plants is very limited.</p><p>Severed human heads, called trophy heads, were used in rituals and appear often in Nazca art. Each had a hole in the forehead for a cord, and over a hundred were mummified, a practice found only among the Nazca and the Paracas before them. Early images link them with plants and growth in the “Sprouting Head” motif, and burials suggest the heads may have been of Nazca people rather than outsiders. Their number grew in the Middle Nazca period, perhaps under the pressure of drought, and Late Nazca images suggest that taking heads added to a leader’s prestige. Many burials are partial, and some replace the missing head with a painted head jar.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/nazca-lines"><img src="/images/encyclopedia/nazca-lines.jpg" alt="Nazca Lines" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/nazca-lines">Nazca Lines</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:L%C3%ADneas_de_Nazca,_Nazca,_Per%C3%BA,_2015-07-29,_DD_49.JPG" target="_blank" rel="noopener">Diego Delso, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Nazca pottery is painted in at least twelve colours, in shapes such as double-spout bottles, bowls, cups, vases and effigies. Phase 1 shows fruits, plants, people and animals realistically; phases 2–4 set their subjects against bold red, black or white grounds; phase 5 adds rays and scrolls to supernatural figures; and in phases 6 and 7 the mythical figures sprout so many rays and tassels that the style is called “proliferous”, with more warlike scenes and some influence from the Moche culture of the north coast. Like other early South American societies, the Nazca had no writing; the images on their pottery carried meaning instead.</p><p>Nazca textiles, woven probably by women on backstrap looms from <a class="enc-link" href="/encyclopedia/cotton">cotton</a> and wool, carried the same motifs, often before they appeared on pots. Almost every body was buried wrapped in cloth, with <a class="enc-link" href="/encyclopedia/shawl">shawls</a>, dresses, tunics, belts and bags among the grave goods. Mary Frame’s study of textiles from Cahuachi showed that women had access to high-status materials and wore sacred imagery.</p><p>The <a class="enc-link" href="/encyclopedia/nazca-lines">Nazca Lines</a> are geometric shapes, long lines and huge animal figures, some as large as a football field, made by large organised work groups who removed the red surface pebbles to expose the lighter ground. Some think they were made for the gods to see, others that they were a calendar for planting and harvest, or paths for processions; no theory has been proved. The Nazca also practised trephination, removing pieces of skull from living people, some of whom survived, and shaped infants’ heads by binding.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>The Nazca world was linked by its ceremonial centre. Clays matching the chemical signature of polychrome pottery found across the southern Nazca region come from near Cahuachi, although there is no clear evidence that pottery was made there. The site was most likely a centre where fine pottery was handed out, and pilgrims and feasters carried it home, spreading the culture of the ruling class. Polychrome pottery has been found among all classes of Nazca society. Spondylus shells and traces of gold were also found at Cahuachi.</p><p>The Nazca shared the coast with other cultures. They inherited much from the Paracas, and Nazca art of phases 6 and 7 shows influence from the Moche of northern <a class="enc-link" href="/encyclopedia/peru">Peru</a>. Warlike motifs grew more common from phase 5, which some link to conflict caused by drought. In the last phases power shifted from the coast to the highlands, with the rise of the Wari culture around 650 CE, and the disjointed figures and geometric designs of Nazca phase 8 belong to this new age.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>From about 500 CE Nazca society declined, and by about 750 CE it had fallen. A likely cause is an <a class="enc-link" href="/encyclopedia/el-nino">El Niño</a> that brought widespread, destructive floods. The Nazca may have made these worse by gradually cutting down Prosopis pallida trees to clear land for <a class="enc-link" href="/encyclopedia/maize">maize</a> and <a class="enc-link" href="/encyclopedia/cotton">cotton</a>. These trees held the landscape together against river and wind erosion, and without them the land was exposed to sudden changes of climate, eroding the soil and leaving irrigation channels high and dry.</p><p>Much of their work survives. The dry desert has preserved the <a class="enc-link" href="/encyclopedia/nazca-lines">Nazca Lines</a> for centuries, and Nazca and Paracas textiles make up most of what is known about early weaving in the region. Several dozen puquios still carry water today, some altered with motor pumps and concrete-lined <a class="enc-link" href="/encyclopedia/reservoir">reservoirs</a>, and some of the best preserved are at Cantalloc.</p><p>The Nazca Lines have been studied by anthropologists, archaeologists and astronomers, who have not found conclusive evidence for any of the theories about their purpose. The term “trophy head”, coined by the archaeologist Max Uhle, comes from his reading of severed heads in ancient Peruvian art as trophies of war, though early Nazca pottery suggests that their first purpose may have been tied to farming.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Nazca culture flourished on the desert coast of southern <a class="enc-link" href="/encyclopedia/peru">Peru</a> from about 100 BCE to 800 CE, growing out of the Paracas culture. Its people farmed with water from underground puquios, gathered for feasts at the ceremonial centre of Cahuachi, and made polychrome pottery, fine textiles and the <a class="enc-link" href="/encyclopedia/nazca-lines">Nazca Lines</a>. Weakened by floods and erosion, the culture declined from about 500 CE as power passed to the highland Wari.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Proulx, D. A. (1968) Local Differences and Time Differences in Nasca Pottery. University of California Press.</li>
+        <li>Silverman, H. (1993) Cahuachi in the Ancient Nasca World. Iowa City: University of Iowa Press.</li>
+        <li>Silverman, H. and Proulx, D. A. (2002) The Nasca. Malden: Blackwell.</li>
+        <li>Schreiber, K. H. and Lancho Rojas, J. (2003) Irrigation and Society in the Peruvian Desert: The Puquios of Nasca. Lanham, Maryland: Lexington Books.</li>
+        <li>Frame, M. (2003/04) “What the Women Were Wearing”. Textile Museum Journal 42–43: 13–53.</li>
+        <li>Vaughn, K. J. (2004) “Households, Crafts and Feasting in the Ancient Andes: The Village Context of Early Nasca Craft Consumption”. Latin American Antiquity 15 (1): 61–88.</li>
+        <li>Lasaponara, R., Masini, N. and Orefici, G. (2016) The Ancient Nasca World: New Insights from Science and Archaeology. Springer.</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/hopewell-culture"><img src="/logos/thumbs/Hopewell%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hopewell culture</span><span class="related-card-dates">c. 100 BCE – c. 500 CE</span></a><a class="related-card" href="/culture/sangam-age-tamilakam"><img src="/logos/thumbs/Sangam-age%20Tamilakam.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sangam-age Tamilakam</span><span class="related-card-dates">c. 300 BCE – c. 300 CE</span></a><a class="related-card" href="/culture/yayoi-culture"><img src="/logos/thumbs/Yayoi%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Yayoi culture</span><span class="related-card-dates">c. 300 BCE – c. 300 CE</span></a><a class="related-card" href="/culture/mapuche"><img src="/logos/thumbs/Mapuche.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mapuche</span><span class="related-card-dates">c. 500 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/hopewell-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Hopewell%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hopewell culture</span><span class="related-card-dates">c. 100 BCE – c. 500 CE</span></a><a class="related-card" href="/culture/vikings"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Vikings.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Vikings</span><span class="related-card-dates">793 CE – 1066 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Nazca culture",slug="nazca-culture",url="https://the-epoch-institute.org/culture/nazca-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Nazca culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/nazca-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/nazca-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Nazca culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Nazca culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

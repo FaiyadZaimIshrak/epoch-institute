@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Mumun culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Mumun culture of the Korean Peninsula (c. 1500–300 BCE), named by archaeologists after its plain pottery, saw the rise of intensive farming, large…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Mumun culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Mumun culture of the Korean Peninsula (c. 1500–300 BCE), named by archaeologists after its plain pottery, saw the rise of intensive farming, large…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/mumun-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/mumun-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/mumun-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/mumun-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Mumun culture"}]},{"@type":"Article","headline":"Mumun culture","description":"The Mumun culture of the Korean Peninsula (c. 1500–300 BCE), named by archaeologists after its plain pottery, saw the rise of intensive farming, large…","url":"https://the-epoch-institute.org/culture/mumun-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/mumun-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Mumun culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/mumun-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Mumun culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Mumun%20culture.png" alt="Mumun culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Mumun culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">Southern and central <a class="enc-link" href="/encyclopedia/korea">Korea</a>: the <a class="enc-link" href="/encyclopedia/geum-river">Geum River</a> valleys of west-central Korea, the Nam River valley and the southern coast; key sites Daepyeong, Eoeun, Baekseok-dong, Deokcheon-ni, Igeum-dong and Namsan; its reach extended to <a class="enc-link" href="/encyclopedia/jeju-island">Jeju Island</a> and western <a class="enc-link" href="/encyclopedia/japan">Japan</a>.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1500–300 BCE: Early (Formative) Mumun c. 1500–850 BCE, Middle (Classic) Mumun c. 850–550 BCE, Late (Post-classic) Mumun 550–300 BCE; preceded by the Jeulmun pottery period (c. 8000–1500 BCE).</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">plain, undecorated cooking and storage pottery; red-burnished pottery; polished groundstone daggers; megalithic burials; pit-houses and long-houses; dry-field and paddy <a class="enc-link" href="/encyclopedia/rice">rice</a> farming beside <a class="enc-link" href="/encyclopedia/millet">millet</a>; lunate stone harvesting knives; early bronze and greenstone prestige goods</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Excavated settlements, fields and burials, above all since a boom in excavation from the mid-1990s; the study of pottery, tools and houses; linguists’ reconstructions of the region’s early languages.</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Mumun is an archaeologists’ label for Korean prehistory c. 1500–300 BCE, named after the Korean word for its plain, undecorated cooking and storage pottery.</li><li>Its farmers grew <a class="enc-link" href="/encyclopedia/millet">millets</a>, <a class="enc-link" href="/encyclopedia/rice">rice</a>, barley, wheat and legumes, and by the Middle Mumun worked large dry fields and paddy fields while still hunting and fishing.</li><li>Egalitarian villages gave way to large settlements, elite burials with bronze and jade and simple chiefdom-like polities, and finally to fortified hilltops in a time of conflict.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Early Mumun pit-houses could have as many as six hearths, which archaeologists read as homes shared by several generations of one household.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 1800–1500 BCE</span><span class="rf-text">Megalithic burials, Mumun pottery and large settlements appear in the <a class="enc-link" href="/encyclopedia/liao-river">Liao River</a> Basin and <a class="enc-link" href="/encyclopedia/north-korea">North Korea</a>, probable forerunners of the Mumun in the south</span></li><li><span class="rf-year">c. 1500 BCE</span><span class="rf-text">The Early Mumun begins, with shifting cultivation, pit-house villages and the first <a class="enc-link" href="/encyclopedia/rice">rice</a> farming beside <a class="enc-link" href="/encyclopedia/millet">millet</a></span></li><li><span class="rf-year">c. 850 BCE</span><span class="rf-text">The Middle Mumun begins; intensive dry-field and paddy farming support large settlements such as Daepyeong</span></li><li><span class="rf-year">c. 700–550 BCE</span><span class="rf-text">Burials with bronze artefacts and greenstone ornaments appear, and bronze production probably begins in southern <a class="enc-link" href="/encyclopedia/korea">Korea</a></span></li><li><span class="rf-year">550 BCE</span><span class="rf-text">The Late Mumun begins, with fewer, larger settlements, fortified hilltops such as Namsan and signs of conflict</span></li><li><span class="rf-year">c. 300 BCE</span><span class="rf-text">Iron and new hearth-ovens appear and bronze becomes the chief prestige good, closing the Mumun period</span></li><li><span class="rf-year">Mid-1990s</span><span class="rf-text">A boom in excavations greatly widens knowledge of the Mumun</span></li><li><span class="rf-year">2005</span><span class="rf-text">Songguk-ri Culture pit-houses are found deep in the interior of <a class="enc-link" href="/encyclopedia/gangwon-province">Gangwon Province</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Mumun pottery period is an archaeologists’ label for an era of Korean prehistory dated to about 1500–300 BCE. It is named after the Korean word for the undecorated, plain cooking and storage vessels that make up much of the pottery throughout the period, and above all between 850 and 550 BCE. It followed the Jeulmun pottery period (c. 8000–1500 BCE), a time of hunting, gathering and small-scale plant cultivation. The period is sometimes called the “Korean <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a>”, after Thomsen’s 19th-century three-age system, but the name can mislead: early bronze objects are rare, and bronze stays highly regional until after 300 BCE.</p><p>How the Mumun began is not well known. Megalithic burials, Mumun pottery and large settlements found in the <a class="enc-link" href="/encyclopedia/liao-river">Liao River</a> Basin and <a class="enc-link" href="/encyclopedia/north-korea">North Korea</a> around 1800–1500 BCE probably point to its origins. In southern <a class="enc-link" href="/encyclopedia/korea">Korea</a>, slash-and-burn cultivators who used Mumun pottery displaced people who lived in the Jeulmun way. Archaeologists divide the period into an Early or Formative Mumun (c. 1500–850 BCE), a Middle or Classic Mumun (c. 850–550 BCE) and a Late or Post-classic Mumun (550–300 BCE).</p><p>Knowledge of the period has grown quickly since a boom in excavations began in the mid-1990s. Some scholars would extend the Mumun to about the year 0, because a plain ware called jeomtodae was popular from 400 BCE to 0. It is usually described as ending, as a cultural and technical period, around 300 BCE, when bronze became central to ceremonial and elite life and iron tools spread in southern Korea.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/millet"><img src="/images/encyclopedia/millet.jpg" alt="Millet" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/millet">Millet</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Panicum_miliaceum0.jpg" target="_blank" rel="noopener">Kurt Stüber [1], CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Early Mumun people lived by shifting cultivation, fishing and hunting in separate villages of rectangular, semi-subterranean pit-houses, many of them in the valleys of tributaries of the <a class="enc-link" href="/encyclopedia/geum-river">Geum River</a> in west-central <a class="enc-link" href="/encyclopedia/korea">Korea</a>. One of the largest Early Mumun settlements, Eoeun, lies in the middle Nam River valley, and late in the sub-period settlements of many long-houses, such as Baekseok-dong near modern Cheonan, appeared. After about 900 BCE small square, round or oval pit-houses with a shallow work-pit instead of a hearth became the norm, which archaeologists read as a shift from multi-generation households to semi-independent nuclear families.</p><p>Farming grew more intensive. <a class="enc-link" href="/encyclopedia/rice">Rice</a> appeared in the Early Mumun beside the older <a class="enc-link" href="/encyclopedia/millet">millet</a> farming, but in the Early and Middle Mumun it was not the main crop: people also grew millets, barley, wheat and legumes, and went on hunting, fishing and foraging. By the Middle Mumun there were dry fields of about 32,500 square metres at Daepyeong, a sprawling settlement with several ditched enclosures and hundreds of pit-houses, and paddy fields in southern Korea. Households produced most goods, but specialised crafts, surplus production and a “big-man” style economy of redistributed prestige goods emerged.</p><p>Early Mumun communities were egalitarian, though competition within settlements and perhaps part-time big-man leaders appeared later. Middle Mumun sites show incipient elites, and burials and large raised-floor buildings at Deokcheon-ni and Igeum-dong suggest polities organised much like simple chiefdoms. In the Late Mumun many people lived on fortified hilltops. At Namsan, on a hill 100 metres above sea level in modern Changwon, pit-houses stood inside a ring-ditch 4.2 metres deep and 10 metres wide, and a nearby shell midden shows that shellfish were gathered too.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>What is known of Mumun beliefs comes from burials and ritual objects, and what they meant to the people who made them is inference. Long-lasting ceremonial and mortuary traditions began in the Early Mumun: the building of megalithic burials, the making of red-burnished pottery and the production of polished groundstone daggers. Megalithic burials, stone-cist burials and jar burials are all found.</p><p>Burials of the later Middle Mumun (c. 700–550 BCE) show growing differences of rank. Some were especially large and needed a great deal of labour to build, and a small number held prestige or ceremonial objects: bronze artefacts, greenstone or jade ornaments, groundstone daggers and red-burnished vessels. Near the southern coast, megalithic burials with deep shaft interments and substantial pavements of rounded cobblestones held bronze daggers, jade and red-burnished pottery. Archaeologists take these high-status burials, together with large raised-floor buildings, as evidence of growing social inequality.</p><p>The pattern deepened as the period closed. From about 300 BCE bronze objects became the most valued goods placed with the dead, and bronze became very important in ceremonial and elite life. That change, with the arrival of iron, is one reason the following centuries are set apart from the Mumun.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The pottery that names the period is plain and undecorated, used for cooking and storage, and is found throughout the period, especially from 850 to 550 BCE. Beside it potters made red-burnished ware, which also appears among the prestige goods in graves. An undecorated ware called jeomtodae was popular from 400 BCE to 0.</p><p>Stone remained the main material for tools. Farmers harvested with stone knives, in particular lunate and bay-shaped ones, and semi-lunar blades are common among their tools. Polished groundstone daggers were made from the Early Mumun onwards and served in ceremony and burial. Greenstone ornaments were valued and passed between communities.</p><p>Metal came late and slowly. Early bronze objects are rare, and bronze production probably began in southern <a class="enc-link" href="/encyclopedia/korea">Korea</a> only in the later Middle Mumun, around 700–550 BCE; bronze daggers then appear in high-status graves. Builders raised large pit-houses with up to six hearths, long-houses, raised-floor buildings, ditched enclosures and megalithic tombs, and laid out dry fields and paddy fields. The Mumun ends when iron appears in the archaeological record, together with pit-houses that had interior composite hearth-ovens, reminiscent of the agungi of the historic period.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>The Mumun probably began with influences from the north, from the <a class="enc-link" href="/encyclopedia/liao-river">Liao River</a> Basin and <a class="enc-link" href="/encyclopedia/north-korea">North Korea</a>, and its slash-and-burn farmers displaced communities living in the Jeulmun way. Within <a class="enc-link" href="/encyclopedia/korea">Korea</a>, greenstone ornaments, bronze objects and some kinds of red-burnished pottery moved along regional systems of exchange and redistribution.</p><p>The Middle Mumun culture that Korean archaeologists call Songguk-ri Culture is found in the Hoseo and Honam regions, western Yeongnam, the Ulsan and <a class="enc-link" href="/encyclopedia/gimhae">Gimhae</a> areas and, since a find in 2005, deep in the interior of <a class="enc-link" href="/encyclopedia/gangwon-province">Gangwon Province</a>; its farthest reach appears to have been <a class="enc-link" href="/encyclopedia/jeju-island">Jeju Island</a> and western <a class="enc-link" href="/encyclopedia/japan">Japan</a>. In the traditional Yayoi chronology, Mumun-like settlements appeared in northern <a class="enc-link" href="/encyclopedia/kyushu">Kyūshū</a> during the Late Mumun. The Neuk-do Island shell midden, of the Late Mumun and Early <a class="enc-link" href="/encyclopedia/iron-age">Iron Age</a>, held a few iron objects and Lelang and Yayoi pottery, showing that local societies were drawn into closer contact with the Late <a class="enc-link" href="/encyclopedia/zhou-dynasty">Zhou dynasty</a>, the Final Jōmon and the Early Yayoi.</p><p>The language of the Mumun is debated. Juha Janhunen and Alexander Vovin hold that Japonic languages were spoken in parts of the peninsula before Koreanic speakers replaced them, and Whitman and other researchers argue that proto-Japonic arrived around 1500 BCE and was carried to Japan by Yayoi <a class="enc-link" href="/encyclopedia/rice">rice</a> farmers between 700 and 300 BCE, linking it with both the Mumun and the Yayoi. The Late Mumun also saw conflict: fortified hilltops and massive ring-ditches suggest fighting between groups.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/rice"><img src="/images/encyclopedia/rice.jpg" alt="Rice" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/rice">Rice</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg" target="_blank" rel="noopener">Franz Eugen Köhler, Köhler's Medizinal-Pflanzen, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Late Mumun settlements were far fewer than those of the Middle Mumun, which suggests that people regrouped into a smaller number of larger settlements. Several reasons are offered: there are signs that conflict increased, or that climate change led to crop failures. The period ended, as a cultural and technical stage, around 300 BCE, when iron objects were first traded and then made in the peninsula and bronze became the most valued prestige good in a few high-status graves.</p><p>The Mumun left lasting marks. It began a long tradition of <a class="enc-link" href="/encyclopedia/rice">rice</a> farming in <a class="enc-link" href="/encyclopedia/korea">Korea</a> that links it with the present day, and Mumun-like villages appeared in northern <a class="enc-link" href="/encyclopedia/kyushu">Kyūshū</a>. If the linguists who connect the Mumun and the Yayoi with Japonic are right, Mumun communities had a part in the spread of the Japonic languages, while Koreanic speakers who came later coexisted with them and possibly assimilated them; the two language families went on influencing each other for a long time.</p><p>Since the mid-1990s, excavations at Mumun sites have greatly increased what is known about this formative period in the prehistory of <a class="enc-link" href="/encyclopedia/east-asia">East Asia</a>. The Mumun is now seen as the time when intensive agriculture and complex societies arose on both the Korean Peninsula and the Japanese archipelago.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Mumun pottery period (c. 1500–300 BCE) is the archaeologists’ name for the era of Korean prehistory when plain pottery, pit-house villages and <a class="enc-link" href="/encyclopedia/millet">millet</a> and <a class="enc-link" href="/encyclopedia/rice">rice</a> farming spread across the south. Over three phases its egalitarian villages grew into large settlements with intensive fields, elite megalithic burials and simple chiefdom-like polities. Its Late phase brought fortified hilltops and conflict, and it ended around 300 BCE as iron arrived.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Nelson, S. M. (1993) The Archaeology of Korea. Cambridge: Cambridge University Press.</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/ancestral-puebloans"><img src="/logos/thumbs/Ancestral%20Puebloans.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ancestral Puebloans</span><span class="related-card-dates">c. 1500 BCE – c. 1600 CE</span></a><a class="related-card" href="/culture/lapita-culture"><img src="/logos/thumbs/Lapita%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lapita culture</span><span class="related-card-dates">c. 1500 BCE – c. 500 BCE</span></a><a class="related-card" href="/culture/nok-culture"><img src="/logos/thumbs/Nok%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Nok culture</span><span class="related-card-dates">c. 1500 BCE – c. 1 CE</span></a><a class="related-card" href="/culture/vedic-civilisation"><img src="/logos/thumbs/Vedic%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Vedic civilisation</span><span class="related-card-dates">c. 1500 BCE – c. 500 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/lapita-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Lapita%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lapita culture</span><span class="related-card-dates">c. 1500 BCE – c. 500 BCE</span></a><a class="related-card" href="/culture/nok-culture"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Nok%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Nok culture</span><span class="related-card-dates">c. 1500 BCE – c. 1 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Mumun culture",slug="mumun-culture",url="https://the-epoch-institute.org/culture/mumun-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Mumun culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/mumun-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/mumun-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Mumun culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Mumun culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

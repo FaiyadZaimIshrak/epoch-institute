@@ -3936,5 +3936,163 @@ var SECTION_IMAGES = {
     strengths:{slug:"tunnel-of-eupalinos",name:"Tunnel of Eupalinos",img:"/images/encyclopedia/tunnel-of-eupalinos.jpg",artist:"Moumouza at English Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Eupalinian_aqueduct.JPG"},
     weaknesses:{slug:"plato",name:"Plato",img:"/images/encyclopedia/plato.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plato_Silanion_Musei_Capitolini_MC1377.png"},
     legacy:{slug:"cicero",name:"Cicero",img:"/images/encyclopedia/cicero.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"}
+  },
+  "Ainu": {
+    origins:{slug:"okhotsk-culture",name:"Okhotsk culture",img:"/images/encyclopedia/okhotsk-culture.jpg",artist:"Ozizo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Moyoro_Shell_Midden.jpg"},
+    society:{slug:"ainu",name:"Ainu",img:"/images/encyclopedia/ainu.jpg",artist:"Torbenbrinker",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:AinuSan.jpg"},
+    arts:{slug:"lacquerware",name:"Lacquerware",img:"/images/encyclopedia/lacquerware.jpg",artist:"Hiart",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Covered_box_from_Japan,_Momoyama_period,_1573-1615,_Honolulu_Museum_of_Art_4842.1.jpg"},
+    exchange:{slug:"nivkh-people",name:"Nivkh people",img:"/images/encyclopedia/nivkh-people.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nivkh_People.JPG"},
+    legacy:{slug:"meiji-restoration",name:"Meiji Restoration",img:"/images/encyclopedia/meiji-restoration.jpg",artist:"Takahashi Yuichi (1828-1894)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emperor_Meiji_by_Takahashi_Yuichi.jpg"}
+  },
+  "Ban Chiang culture": {
+    society:{slug:"rice",name:"Rice",img:"/images/encyclopedia/rice.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg"}
+  },
+  "Bell Beaker culture": {
+    origins:{slug:"tagus",name:"Tagus",img:"/images/encyclopedia/tagus.jpg",artist:"Mheberger",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Tagus_Watershed.jpg"},
+    society:{slug:"copper",name:"Copper",img:"/images/encyclopedia/copper.jpg",artist:"Jonathan Zander; derivative work by Materialscientist",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:NatCopper.jpg"},
+    arts:{slug:"tin",name:"Tin",img:"/images/encyclopedia/tin.jpg",artist:"Ondřej Mangl",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:C%C3%ADn.PNG"},
+    exchange:{slug:"lower-rhine",name:"Lower Rhine",img:"/images/encyclopedia/lower-rhine.jpg",artist:"BAW_Bundesanstalt für Wasserbau",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:D%C3%BCsseldorf_Rhein_(51720326377).jpg"},
+    legacy:{slug:"knowth",name:"Knowth",img:"/images/encyclopedia/knowth.jpg",artist:"Markiemcg1",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:County_Meath_-_Knowth_-_20210930145613.jpg"}
+  },
+  "Caral–Supe civilisation": {
+    origins:{slug:"caral",name:"Caral",img:"/images/encyclopedia/caral.jpg",artist:"Jon Gudorf Photography",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Mayor_Pyramid_and_circular_enclosure._Caral,_Peru.jpg"},
+    society:{slug:"cotton",name:"Cotton",img:"/images/encyclopedia/cotton.jpg",artist:"കാക്കര",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Cotton_-_%E0%B4%AA%E0%B4%B0%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BF_03.JPG"},
+    arts:{slug:"quipu",name:"Quipu",img:"/images/encyclopedia/quipu.jpg",artist:"Lyndsaruell at English Wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Inca_Quipu.jpg"},
+    legacy:{slug:"ruth-shady",name:"Ruth Shady",img:"/images/encyclopedia/ruth-shady.jpg",artist:"Ruth Madelen Luna Cruz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ruth_Shady_en_Caral_2014_(cropped).JPG"}
+  },
+  "Dong Son culture": {
+    society:{slug:"rice",name:"Rice",img:"/images/encyclopedia/rice.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg"},
+    arts:{slug:"dong-son-culture",name:"Đông Sơn culture",img:"/images/encyclopedia/dong-son-culture.jpg",artist:"Bình Giang",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dong_Son_axe.JPG"}
+  },
+  "Hopewell culture": {
+    arts:{slug:"copper",name:"Copper",img:"/images/encyclopedia/copper.jpg",artist:"Jonathan Zander; derivative work by Materialscientist",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:NatCopper.jpg"},
+    exchange:{slug:"great-lakes",name:"Great Lakes",img:"/images/encyclopedia/great-lakes.jpg",artist:"NASA",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Great_Lakes,_No_Clouds_(4968915002)_Brighter.jpg"},
+    legacy:{slug:"mississippian-culture",name:"Mississippian culture",img:"/images/encyclopedia/mississippian-culture.jpg",artist:"Daderot",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Willoughby_disc,_engraved_paint_palette,_Mississippian_tradition,_Moundville,_Alabama,_1300-1450_AD,_ploughed_up_1860,_shale_-_Native_American_collection_-_Peabody_Museum,_Harvard_University_-_DSC06065.jpg"}
+  },
+  "Igbo-Ukwu culture": {
+    arts:{slug:"igbo-ukwu",name:"Igbo-Ukwu",img:"/images/encyclopedia/igbo-ukwu.jpg",artist:"Ochiwar",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bronze_ornamental_staff_head,_9th_century,_Igbo-Ukwu.JPG"},
+    exchange:{slug:"bead",name:"Bead",img:"/images/encyclopedia/bead.jpg",artist:"pschemp",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Beads.jpg"},
+    legacy:{slug:"british-museum",name:"British Museum",img:"/images/encyclopedia/british-museum.jpg",artist:"Ham",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:British_Museum_from_NE_2.JPG"}
+  },
+  "Jōmon culture": {
+    arts:{slug:"lacquerware",name:"Lacquerware",img:"/images/encyclopedia/lacquerware.jpg",artist:"Hiart",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Covered_box_from_Japan,_Momoyama_period,_1573-1615,_Honolulu_Museum_of_Art_4842.1.jpg"},
+    exchange:{slug:"rice",name:"Rice",img:"/images/encyclopedia/rice.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg"},
+    legacy:{slug:"ainu",name:"Ainu",img:"/images/encyclopedia/ainu.jpg",artist:"Torbenbrinker",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:AinuSan.jpg"}
+  },
+  "Kerma culture": {
+    origins:{slug:"kerma",name:"Kerma",img:"/images/encyclopedia/kerma.jpg",artist:"Lassi",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Kerma_city.JPG"},
+    society:{slug:"cattle",name:"Cattle",img:"/images/encyclopedia/cattle.jpg",artist:"dr. Plamen Ivanov",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bulgarian_gray_cattle.jpg"},
+    beliefs:{slug:"western-deffufa",name:"Western Deffufa",img:"/images/encyclopedia/western-deffufa.jpg",artist:"walter callens",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Western_Deffufa_-_Kerma.jpg"},
+    exchange:{slug:"senusret-i",name:"Senusret I",img:"/images/encyclopedia/senusret-i.jpg",artist:"W. M. Flinders Petrie (1853-1942)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Statue_Senusret_I_Petrie_(cropped).jpg"},
+    legacy:{slug:"kushite-empire",name:"Kushite Empire",img:"/images/encyclopedia/kushite-empire.jpg",artist:"Matthias Gehricke",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rulers_of_Kush,_Kerma_Museum.jpg"}
+  },
+  "Liangzhu culture": {
+    origins:{slug:"yangtze-river",name:"Yangtze River",img:"/images/encyclopedia/yangtze-river.jpg",artist:"Andrew Hitchcock",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Dusk_on_the_Yangtze_River.jpg"},
+    society:{slug:"rice",name:"Rice",img:"/images/encyclopedia/rice.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg"},
+    arts:{slug:"silk",name:"Silk",img:"/images/encyclopedia/silk.jpg",artist:"Kuebi = Armin Kübelbeck",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Silk_raw_01a.jpg"}
+  },
+  "Māori": {
+    origins:{slug:"polynesia",name:"Polynesia",img:"/images/encyclopedia/polynesia.jpg",artist:"Hobe / Holger Behr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Map_OC-Polynesia.PNG"},
+    arts:{slug:"flax",name:"Flax",img:"/images/encyclopedia/flax.jpg",artist:"Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:K%C3%B6hler%27s_Medizinal-Pflanzen_in_naturgetreuen_Abbildungen_mit_kurz_erl%C3%A4uterndem_Texte_(Plate_16)_BHL303594.jpg"},
+    exchange:{slug:"treaty-of-waitangi",name:"Treaty of Waitangi",img:"/images/encyclopedia/treaty-of-waitangi.jpg",artist:"William Hobson, James Freeman, and James Busby (English version); Henry Williams and Edward Williams (Māori translation)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Treatyofwaitangi.jpg"}
+  },
+  "Mapuche": {
+    society:{slug:"maize",name:"Maize",img:"/images/encyclopedia/maize.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg"},
+    arts:{slug:"silver",name:"Silver",img:"/images/encyclopedia/silver.jpg",artist:"Alchemist-hp",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Silver_crystal.jpg"},
+    exchange:{slug:"lautaro",name:"Lautaro",img:"/images/encyclopedia/lautaro.jpg",artist:"GringoInChile",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Lautaro_Ca%C3%B1ete.jpg"},
+    legacy:{slug:"occupation-of-araucania",name:"Occupation of Araucanía",img:"/images/encyclopedia/occupation-of-araucania.jpg",artist:"Ccpchile",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Fuerte_de_Pur%C3%A9n_Chile.jpg"}
+  },
+  "Mehrgarh culture": {
+    society:{slug:"cattle",name:"Cattle",img:"/images/encyclopedia/cattle.jpg",artist:"dr. Plamen Ivanov",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bulgarian_gray_cattle.jpg"},
+    arts:{slug:"bead",name:"Bead",img:"/images/encyclopedia/bead.jpg",artist:"pschemp",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Beads.jpg"},
+    legacy:{slug:"indus-valley-civilisation",name:"Indus Valley Civilisation",img:"/images/encyclopedia/indus-valley-civilisation.jpg",artist:"Avantiputra7",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Indus_Valley_Civilization,_Mature_Phase_(2600-1900_BCE).png"}
+  },
+  "Mumun culture": {
+    society:{slug:"millet",name:"Millet",img:"/images/encyclopedia/millet.jpg",artist:"Kurt Stüber [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Panicum_miliaceum0.jpg"},
+    legacy:{slug:"rice",name:"Rice",img:"/images/encyclopedia/rice.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg"}
+  },
+  "Natufians": {
+    origins:{slug:"mount-carmel",name:"Mount Carmel",img:"/images/encyclopedia/mount-carmel.jpg",artist:"Chadner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Caiobadner_-_mount_carmel.JPG"},
+    arts:{slug:"british-museum",name:"British Museum",img:"/images/encyclopedia/british-museum.jpg",artist:"Ham",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:British_Museum_from_NE_2.JPG"},
+    legacy:{slug:"neolithic",name:"Neolithic",img:"/images/encyclopedia/neolithic.jpg",artist:"Sarah Murray from Palo Alto, CA",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Asikli_Hoyuk_sarah_c_murray_6176.jpg"}
+  },
+  "Nazca culture": {
+    society:{slug:"maize",name:"Maize",img:"/images/encyclopedia/maize.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg"},
+    beliefs:{slug:"san-pedro-cactus",name:"San Pedro cactus",img:"/images/encyclopedia/san-pedro-cactus.jpg",artist:"Forest & Kim Starr",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Starr_070320-5799_Echinopsis_pachanoi.jpg"},
+    arts:{slug:"nazca-lines",name:"Nazca Lines",img:"/images/encyclopedia/nazca-lines.jpg",artist:"Diego Delso",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:L%C3%ADneas_de_Nazca,_Nazca,_Per%C3%BA,_2015-07-29,_DD_49.JPG"}
+  },
+  "Oxus civilisation": {
+    origins:{slug:"oxus",name:"Oxus",img:"/images/encyclopedia/oxus.jpg",artist:"Petar Milošević",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Amudarya_by_Nukus,_Uzbekistan_(%D0%90%D0%BC%D1%83%D0%B4%D0%B0%D1%80%D1%8C%D1%8F_%D1%80%D1%8F%D0%B4%D0%BE%D0%BC_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0_%D0%9D%D1%83%D0%BA%D1%83%D1%81).jpg"},
+    exchange:{slug:"indus-script",name:"Indus script",img:"/images/encyclopedia/indus-script.jpg",artist:"World Imaging",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:IndusValleySeals.JPG"}
+  },
+  "Painted Grey Ware culture": {
+    origins:{slug:"painted-grey-ware-culture",name:"Painted Grey Ware culture",img:"/images/encyclopedia/painted-grey-ware-culture.jpg",artist:"Avantiputra7",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Painted_Grey_Ware_Culture_(1200-600_BCE).png"},
+    society:{slug:"cattle",name:"Cattle",img:"/images/encyclopedia/cattle.jpg",artist:"dr. Plamen Ivanov",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bulgarian_gray_cattle.jpg"},
+    beliefs:{slug:"kuru-kingdom",name:"Kuru kingdom",img:"/images/encyclopedia/kuru-kingdom.jpg",artist:"Roshan Krishna Dhanawade (Srimant ROSHAN)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_Kuru_Kingdom.jpg"},
+    exchange:{slug:"northern-black-polished-ware",name:"Northern Black Polished Ware",img:"/images/encyclopedia/northern-black-polished-ware.jpg",artist:"Avantiputra7",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Northern_Polished_Black_Ware_Culture_(700-200_BCE).png"}
+  },
+  "Sámi": {
+    exchange:{slug:"fur-trade",name:"Fur trade",img:"/images/encyclopedia/fur-trade.jpg",artist:"unknown / --Kuerschner 16:04, 24 March 2008 (UTC)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Irbit_-_Fur_market.jpg"}
+  },
+  "Sangam-age Tamilakam": {
+    origins:{slug:"tamilakam",name:"Tamilakam",img:"/images/encyclopedia/tamilakam.jpg",artist:"Yon Man33",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:South_India_in_Sangam_Period.jpg"},
+    society:{slug:"chera-dynasty",name:"Chera dynasty",img:"/images/encyclopedia/chera-dynasty.jpg",artist:"Adapted from the maps by Y. Subbarayalu for Rajan Gurukkal",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Chera_country_(early_historic_south_India).jpg"},
+    beliefs:{slug:"kartikeya",name:"Kartikeya",img:"/images/encyclopedia/kartikeya.jpg",artist:"Shesmax",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Batu_Caves,_Lord_Murugan_Statue._2019-12-01_10-49-22.jpg"},
+    exchange:{slug:"muziris",name:"Muziris",img:"/images/encyclopedia/muziris.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TabulaPeutingerianaMuziris.jpg"}
+  },
+  "Sanxingdui culture": {
+    arts:{slug:"bronze-casting",name:"Bronze casting",img:"/images/encyclopedia/bronze-casting.jpg",artist:"José-Manuel Benito",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Lost_Wax-Model_of_apple_in_plaster.jpg"},
+    exchange:{slug:"cancong",name:"Cancong",img:"/images/encyclopedia/cancong.jpg",artist:"Tyg728",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E9%9D%92%E9%93%9C%E7%BA%B5%E7%9B%AE%E9%9D%A2%E5%85%B7B.jpg"},
+    legacy:{slug:"jinsha-site",name:"Jinsha site",img:"/images/encyclopedia/jinsha-site.jpg",artist:"xiquinhosilva",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:%E9%87%91%E6%B2%99%E9%81%97%E5%9D%80_Jinsha_Site_2018.jpg"}
+  },
+  "South Indian megalithic culture": {
+    arts:{slug:"tamil-brahmi",name:"Tamil-Brahmi",img:"/images/encyclopedia/tamil-brahmi.jpg",artist:"Symphonicallyu",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Tamil_Brahmi.png"}
+  },
+  "Taíno": {
+    origins:{slug:"caribbean",name:"Caribbean",img:"/images/encyclopedia/caribbean.jpg",artist:"Central Intelligence Agency (CIA)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Central_America_and_the_Caribbean_Shaded_Relief_Map.png"},
+    society:{slug:"cassava",name:"Cassava",img:"/images/encyclopedia/cassava.jpg",artist:"David Monniaux",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Manihot_esculenta_dsc07325.jpg"},
+    beliefs:{slug:"taino",name:"Taíno",img:"/images/encyclopedia/taino.jpg",artist:"Tito Caraballo",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Estatua_de_Ag%C3%BCeyban%C3%A1_II,_El_Bravo,_en_el_Parque_Monumento_a_Ag%C3%BCeyban%C3%A1_II,_El_Bravo,_en_Ponce,_Puerto_Rico_(DSC02672C).jpg"},
+    exchange:{slug:"christopher-columbus",name:"Christopher Columbus",img:"/images/encyclopedia/christopher-columbus.jpg",artist:"Sebastiano del Piombo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_Man,_Said_to_be_Christopher_Columbus.jpg"}
+  },
+  "Thracians": {
+    origins:{slug:"homer",name:"Homer",img:"/images/encyclopedia/homer.jpg",artist:"Photograph by Mike Peel (www.mikepeel.net).",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Homer_At_the_British_Museum_2024_(3x4_cropped).jpg"},
+    society:{slug:"seuthes-iii",name:"Seuthes III",img:"/images/encyclopedia/seuthes-iii.jpg",artist:"Ann Wuyts",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:National_Archaeological_Museum_Sofia_-_Bronze_Head_from_the_Golyama_Kosmatka_Tumulus_near_Shipka.jpg"},
+    beliefs:{slug:"dionysus",name:"Dionysus",img:"/images/encyclopedia/dionysus.jpg",artist:"Marie-Lan Nguyen",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Dionysos_Louvre_Ma87_n2.jpg"},
+    exchange:{slug:"odrysians",name:"Odrysians",img:"/images/encyclopedia/odrysians.jpg",artist:"Alexikoua",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Odrysian.svg"},
+    legacy:{slug:"maximinus-thrax",name:"Maximinus Thrax",img:"/images/encyclopedia/maximinus-thrax.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Maximinus_Thrax_Musei_Capitolini_MC473.jpg"}
+  },
+  "Thule people": {
+    origins:{slug:"inuit",name:"Inuit",img:"/images/encyclopedia/inuit.jpg",artist:"Dragon401k",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Distribution_of_Inuit_in_Canada_(2021).svg"},
+    exchange:{slug:"aleutian-islands",name:"Aleutian Islands",img:"/images/encyclopedia/aleutian-islands.jpg",artist:"Jeff Schmaltz, NASA",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aleutian_Islands_amo_2014135_lrg.jpg"}
+  },
+  "Ubaid culture": {
+    origins:{slug:"leonard-woolley",name:"Leonard Woolley",img:"/images/encyclopedia/leonard-woolley.jpg",artist:"Hulton-Deutsch Collection",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Leonard_Woolley_Getty.jpg"},
+    society:{slug:"ubaid-period",name:"Ubaid period",img:"/images/encyclopedia/ubaid-period.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Bowl_MET_DP104228_(cropped).jpg"},
+    exchange:{slug:"arslantepe",name:"Arslantepe",img:"/images/encyclopedia/arslantepe.jpg",artist:"Zeynel Cebeci",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Hittite_lions,_Arslantepe_01.jpg"},
+    legacy:{slug:"uruk",name:"Uruk",img:"/images/encyclopedia/uruk.jpg",artist:"Picture taken by Marcus Cyron",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Part_of_front_of_Inanna_temple_of_Kara_Indasch_from_Uruk_Vorderasiatisches_Museum_Berlin.jpg"}
+  },
+  "Vedic civilisation": {
+    origins:{slug:"vedas",name:"Vedas",img:"/images/encyclopedia/vedas.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1500-1200_BCE_Rigveda,_manuscript_page_sample_i,_Mandala_1,_Hymn_1_(Sukta_1),_Adhyaya_1,_lines_1.1.1_to_1.1.9,_Sanskrit,_Devanagari.jpg"},
+    society:{slug:"cattle",name:"Cattle",img:"/images/encyclopedia/cattle.jpg",artist:"dr. Plamen Ivanov",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bulgarian_gray_cattle.jpg"},
+    beliefs:{slug:"indra",name:"Indra",img:"/images/encyclopedia/indra.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indra,_Chief_of_the_Gods_LACMA_M.69.13.4_(1_of_5).jpg"},
+    arts:{slug:"rigveda",name:"Rigveda",img:"/images/encyclopedia/rigveda.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rigveda_MS2097.jpg"},
+    exchange:{slug:"kuru-kingdom",name:"Kuru kingdom",img:"/images/encyclopedia/kuru-kingdom.jpg",artist:"Roshan Krishna Dhanawade (Srimant ROSHAN)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_Kuru_Kingdom.jpg"},
+    legacy:{slug:"upanishads",name:"Upanishads",img:"/images/encyclopedia/upanishads.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guru_and_DiscipleI.jpg"}
+  },
+  "Yamnaya culture": {
+    origins:{slug:"pontic-caspian-steppe",name:"Pontic–Caspian steppe",img:"/images/encyclopedia/pontic-caspian-steppe.jpg",artist:"YegorGeologist",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B1%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_%D0%90%D0%B7%D0%BE%D0%B2%D0%BE-%D0%A1%D0%B8%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%91%D0%B8%D1%80%D1%8E%D1%87%D0%B5%D0%BC_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5.jpg"},
+    beliefs:{slug:"kurgan",name:"Kurgan",img:"/images/encyclopedia/kurgan.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LYablonskyFilipovkaKurganR1.jpg"},
+    exchange:{slug:"andronovo-culture",name:"Andronovo culture",img:"/images/encyclopedia/andronovo-culture.jpg",artist:"Stanislav Grigoriev",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Andronovo_area.png"},
+    legacy:{slug:"indo-european-languages",name:"Indo-European languages",img:"/images/encyclopedia/indo-european-languages.jpg",artist:"Bill Williams",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Indo-European_Language_Family_Branches_in_Eurasia.png"}
+  },
+  "Yangshao culture": {
+    origins:{slug:"yellow-river",name:"Yellow River",img:"/images/encyclopedia/yellow-river.jpg",artist:"fading",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Yellow_River_-_panoramio.jpg"},
+    society:{slug:"millet",name:"Millet",img:"/images/encyclopedia/millet.jpg",artist:"Kurt Stüber [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Panicum_miliaceum0.jpg"}
+  },
+  "Yayoi culture": {
+    society:{slug:"rice",name:"Rice",img:"/images/encyclopedia/rice.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg"},
+    beliefs:{slug:"records-of-the-three-kingdoms",name:"Records of the Three Kingdoms",img:"/images/encyclopedia/records-of-the-three-kingdoms.jpg",artist:"猫猫的日记本 (Cat's diary)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:A_Fragment_of_Biography_of_Bu_Zhi_History_Books_of_Three_Kingdoms_01_2012-12.JPG"},
+    exchange:{slug:"emperor-guangwu-of-han",name:"Emperor Guangwu of Han",img:"/images/encyclopedia/emperor-guangwu-of-han.jpg",artist:"Yan Li-pen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Han_Guangwu_Di.jpg"},
+    legacy:{slug:"wet-rice-agriculture",name:"Wet-rice agriculture",img:"/images/encyclopedia/wet-rice-agriculture.jpg",artist:"Kritzolina",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Paddy_fields_in_Dinajpur_District_01.jpg"}
   }
 };
