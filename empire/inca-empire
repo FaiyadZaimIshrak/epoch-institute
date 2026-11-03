@@ -127,7 +127,7 @@
       <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
       <p class="ty-lede">3 questions on this page, from its key events and facts.</p>
       <div class="ty" data-ty="inca-empire"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
-      <script type="application/json" class="ty-data">[{"p":"Which city was a capital of the Inca Empire?","q":"","o":["Pátzcuaro","Cusco","Tenochtitlan","Tzintzuntzan"],"a":1,"w":"Capital: Cusco."},{"p":"Who founded the Inca Empire?","q":"","o":["Pachacuti","Itzcoatl","Tariácuri","Nezahualcoyotl"],"a":0,"w":"Founder: Pachacuti."},{"p":"Which state came after the Inca Empire?","q":"","o":["New Kingdom of Granada","Neo-Inca State","New Spain","First Mexican Empire"],"a":1,"w":"Succeeded by: Neo-Inca State; Spanish Viceroyalty of Peru."}]</script>
+      <script type="application/json" class="ty-data">[{"p":"Which city was a capital of the Inca Empire?","q":"","o":["Pátzcuaro","Cusco","Tenochtitlan","Tzintzuntzan"],"a":1,"w":"Capital: Cusco."},{"p":"Who founded the Inca Empire?","q":"","o":["Pachacuti","Itzcoatl","Tariácuri","Nezahualcoyotl"],"a":0,"w":"Founder: Pachacuti."},{"p":"Which state came after the Inca Empire?","q":"","o":["New Kingdom of Granada","Neo-Inca State","New Spain","Brazil"],"a":1,"w":"Succeeded by: Neo-Inca State; Spanish Viceroyalty of Peru."}]</script>
     </section>
 
     <div id="detail-references" class="profile-references">

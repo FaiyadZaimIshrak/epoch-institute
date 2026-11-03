@@ -8720,7 +8720,7 @@ rows:[
 ["e-m-forster","E. M. Forster",0,"1879–1970","",1,"Edward Morgan Forster"],
 ["ea-gamil","Ea-gamil",0,"15th century BCE","",0,""],
 ["ea-mukin-zeri","Ea-mukin-zeri",0,"r. c. 1008 BCE","",0,""],
-["ea-nasir","Ea-nasir",0,"fl. c. 1750 BCE","",0,""],
+["ea-nasir","Ea-nasir",0,"fl. c. 1750 BCE","",1,""],
 ["eadberht-of-northumbria","Eadberht of Northumbria",0,"d. 768","",1,""],
 ["eadberht-praen","Eadberht Præn",0,"r. 796–798","",1,"Eadberht III of Kent"],
 ["eadgyth","Eadgyth",0,"c. 910–946","",1,"Edith of England"],

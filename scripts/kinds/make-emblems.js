@@ -16,10 +16,14 @@ const EMBLEMS = [
   ['Natufians', 'N'], ['Ubaid culture', 'U'], ['Yamnaya culture', 'Я'], ['Bell Beaker culture', 'B'], ['Thracians', 'Θ'],
   ['Sámi', 'S'], ['Igbo-Ukwu culture', 'I'], ['Kerma culture', 'K'], ['Nazca culture', 'N'], ['Hopewell culture', 'H'],
   ['Taíno', 'T'], ['Thule people', 'T'], ['Mapuche', 'M'], ['Caral–Supe civilisation', 'C'], ['Māori', 'M'],
+  ["El Perú-Waka'", 'W'],   // the Maya city's own name, not the Spanish "Perú"
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
-const only = argv.filter(a => !a.startsWith('--')), rows = only.length ? EMBLEMS.filter(r => only.includes(r[0])) : EMBLEMS;
-if (only.length && rows.length !== only.length) { console.error('unknown name among: ' + only.join(', ')); process.exit(1); }
+// --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the
+// state profiles without a flag or arms have had since Oct 2026
+const initial = argv.includes('--initial'), GEN = /^(kingdom|empire|of|the|sultanate|republic|duchy|county|principality|emirate|khanate|dynasty|state|city|confederation|federation|union|commonwealth|grand|holy|free|first|second|new|and|united|states|province|colony|protectorate|mandate|territory|north|south|east|west|upper|lower|great|ancient|old|later|early|northern|southern|eastern|western|el|la|de|al|colonial|mandatory|socialist|federal|oriental|islamic|hellenic)$/i;
+const only = argv.filter(a => !a.startsWith('--')), rows = only.length ? only.map(n => EMBLEMS.find(r => r[0] === n) || (initial ? [n, (n.split(/[\s(-]+/).find(w => w && !GEN.test(w)) || n)[0].toUpperCase()] : null)) : EMBLEMS;
+if (rows.some(r => !r)) { console.error('unknown name among: ' + only.join(', ') + ' (pass --initial for a monogram)'); process.exit(1); }
 const font64 = f => fs.readFileSync(path.join(R, 'fonts', f)).toString('base64');
 const PAGE = `<!doctype html><meta charset="utf-8"><style>
 @font-face{font-family:'Crimson Pro';font-weight:200 900;src:url(data:font/woff2;base64,${font64('crimson-pro-normal-latin.woff2')}) format('woff2')}
