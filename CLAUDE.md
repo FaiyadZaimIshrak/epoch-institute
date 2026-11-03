@@ -523,6 +523,17 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   Same day: 564 of the 1,019 people who had no dates at all got them (Napoleon, Charlemagne, Timur, Kublai Khan …;
   Wikidata's dates read by eye against each entry, a reign where the birth is unknown; scratchpad r6/dates-decisions.tsv
   says why the other 455 stay undated: legendary or biblical, no reliable item, or dates too uncertain).
+- New entries since Nov 2026 (A7, scripts/entries/): candidates from what the site names and lacks
+  (harvest-names.js: proper names in the profiles of the newer kinds; the ladders' MISSING lines; the speeches' gaps),
+  prepare-list.js (titles through redirects, a slug as toSlug makes it, subjects that have an entry dropped),
+  scripts/kinds/fetch-articles.js, agents with ENTRIES-GUIDE.md (one article each, 380-700 characters), check-entries.js
+  (every number and name not in the article), the editor's read, merge-entries.js <wave> <links.json> <fixes.json> into
+  added-entries.json (marked "wave"; links default to the name, surnames only where unambiguous), pictures.js (cands,
+  fetch at 320 px with 3 s between files and Retry-After honoured, sheet, apply: free licences only, chosen by eye), then
+  apply-added-entries, clean-credits, pattern-count (wave 1 dropped "Bodin": Constantine Bodin; "Qutb": Qutb al-Din
+  Aibak; "Four Books": Palladio; "Orwell": the estuary), link-scan.js --write --entries=<slugs> over every kind in
+  slices of 30 (append only), apply-added-entries again, regen-profiles, a full build. The builder gives new entries
+  their search rows, facets and preview cards. Wave 1 (3 Nov 2026): 107 entries, 91 pictured, 261 profile links.
 - Pipeline after a merge: apply-conflicts, apply-person-dates, apply-entry-pictures, scripts/apply-added-entries.ps1, scripts/clean-credits.ps1 (see the pictures below), enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
   run-scan -Page t-encprof + prof/enc-prof-apply, enc2/prof-forms, link-state-texts, make-previews, make-home-data,
   make-search-states, build-state-data, make-enc-states, prof/section-images, prof/regen (490 pages), then verify-pages
