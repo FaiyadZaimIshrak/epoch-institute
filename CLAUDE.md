@@ -1038,7 +1038,7 @@ localStorage epoch-faith-view; /faiths also ?view=flat):
   images/og/page-faiths.jpg, sitemap. faith-map.js has no ?v= on the profiles (10-minute cache in .htaccess).
 
 ## Research Series (/research-series, /essays/<slug>)
-Six essays, sources in scripts/essays/NN-slug.html: a comment of `key: value` lines (title, subtitle, card = the
+Eight essays, sources in scripts/essays/NN-slug.html: a comment of `key: value` lines (title, subtitle, card = the
 text of its card, desc ≤ 160, published yyyy-mm-dd, picture `entry slug|caption` (the games' 800 px copy when
 images/games/<slug>.jpg exists, else the entry's thumbnail; the entry's credit is shown) or cover `path|alt`,
 profiles = slugs for "Profiles in this essay"), then the essay's HTML: `<h2 id="sN-…">` sections, the last one
@@ -1051,7 +1051,7 @@ feed.xml (guid = the old research-series#series-NN, so readers see no essay twic
 its subtitle with a space in the page title and share text ("Who Should Rule? One, Few or Many…"). It stops on a link to an unknown
 entry, profile or state. 01 and 02 (May 2026) were moved out of the page's script in Oct 2026 with their text
 unchanged; 03–05 were written then, their "What the Data Shows" figures computed from the power curves (shared-data.js
-EMPIRES), the register (data/polities.json) and epoch-stats.js. The Listen button reads article.essay-view (h1,
+EMPIRES), the register (data/polities.json) and epoch-stats.js. 07 Before the State (the 45 culture profiles: life before and without states, the five living cultures) and 08 How Songs Travel (the 300 songs: the oldest kept songs, hymn to anthem, the tune families, songs put to work by states, their impact) were written on 2 Nov 2026 from the profiles and the song pages alone, every paragraph mapped to its page (scratchpad essays/07-sources.md, 08-sources.md) and read against it; their figures come from scripts/tools/essay-numbers.js 07|08 (culture spans against the register, songs by type, era and region, the tune families) and are quoted, never typed. The Listen button reads article.essay-view (h1,
 .essay-sub, .essay-body h2/p/li): keep Further Reading and the contents list outside .essay-body.
 
 ## Community articles (/articles/<slug>) and opinions
