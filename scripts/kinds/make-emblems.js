@@ -42,6 +42,12 @@ const EMBLEMS = [
   ['Modernism', 'M'], ['Bauhaus', 'B'], ['Solidarity', 'S'], ['Velvet Revolution', 'V'], ['Environmental movement', 'E'],
   ['Taiping Rebellion', 'T'], ['May Fourth Movement', '五四', 'serif-cjk', 170], ['Non-Aligned Movement', 'N'], ['Harlem Renaissance', 'H'],
   ['Négritude', 'N'], ['Zionism', 'Z'], ['Tanzimat', 'T'], ['Young Turks', 'Y'], ['Arab Spring', 'A'], ['Meiji Restoration', '明', 'serif-cjk', 220],
+  // A6, 3 Nov 2026: ideologies take their initial (never a party's, movement's or regime's symbol: no hammer and sickle,
+  // fasces, rose or crescent); Legalism 法 (fa, "law, method", the word its school was named for)
+  ['Liberalism', 'L'], ['Conservatism', 'C'], ['Republicanism', 'R'], ['Nationalism', 'N'], ['Capitalism', 'C'], ['Socialism', 'S'],
+  ['Communism', 'C'], ['Anarchism', 'A'], ['Social democracy', 'S'], ['Maoism', 'M'], ['Fascism', 'F'], ['Legalism', '法', 'serif-cjk', 220],
+  ['Mercantilism', 'M'], ['Imperialism', 'I'], ['Kemalism', 'K'], ['Feminism', 'F'], ['Pan-Arabism', 'P'], ['Hindutva', 'H'],
+  ['Islamism', 'I'], ['Peronism', 'P'],
   ["El Perú-Waka'", 'W'],   // the Maya city's own name, not the Spanish "Perú"
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);

@@ -17,7 +17,7 @@ $clock = [Diagnostics.Stopwatch]::StartNew()
 # countries/, centuries/, paths/, speeches/ and the other generated folders) and 404.html
 $pages = New-Object System.Collections.Generic.List[object]
 foreach ($f in Get-ChildItem $Repo -File) { if (-not $f.Extension -and $f.Name -notmatch '^\.') { $pages.Add($f) } }
-$FOLDERS = 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs'
+$FOLDERS = 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'encyclopedia', 'encyclopedia\browse', 'encyclopedia\conflicts', 'state', 'state\browse', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs'
 foreach ($d in $FOLDERS) {
   foreach ($f in Get-ChildItem (Join-Path $Repo $d) -File -ErrorAction SilentlyContinue) { if (-not $f.Extension) { $pages.Add($f) } }
 }

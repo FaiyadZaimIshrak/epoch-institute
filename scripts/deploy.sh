@@ -42,7 +42,7 @@ DIRS=(sitemaps fonts css)                                          # line 12 (cs
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
   data/years.json data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans data/societies data/inventions.json data/meanwhile.json
   data/compare data/song-lines.json)  # line 14 (compare, song-lines: Nov 2026)
-PROFILES=(empire religion language culture movement government logos images maps)              # line 15
+PROFILES=(empire religion language culture movement government ideology logos images maps)              # line 15
 KINDS=(culture ideology movement)                                  # line 16: copied when present
 
 say() { printf '%s\n' "$*"; }

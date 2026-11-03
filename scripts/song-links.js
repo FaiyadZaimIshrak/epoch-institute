@@ -18,6 +18,7 @@ var SONG_LINKS = {
 "Mombasa":[["malaika","Malaika","1945"]],
 "Nazi Germany":[["lorelei","Die Lorelei","1837"],["deutschlandlied","Deutschlandlied","1841"],["horst-wessel-lied","Horst-Wessel-Lied","1929"],["peat-bog-soldiers","Peat Bog Soldiers","1933"],["erika","Erika","1938"]],
 "New Zealand":[["god-save-the-king","God Save the King","1745"],["ka-mate","Ka Mate","1820"],["hine-e-hine","Hine E Hine","c. 1907"],["now-is-the-hour","Now Is the Hour","1913"]],
+"Peronism":[["peronist-march","Peronist March","1948"]],
 "Protestant Reformation":[["psalm-23","Psalm 23","c. 500 BCE"],["a-mighty-fortress-is-our-god","A Mighty Fortress Is Our God","1528"]],
 "Rhodesia":[["god-save-the-king","God Save the King","1745"],["ode-to-joy","Ode to Joy","1785"]],
 "Russian Empire":[["god-save-the-king","God Save the King","1745"],["god-save-the-tsar","God Save the Tsar!","1833"]],

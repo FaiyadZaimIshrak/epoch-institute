@@ -24,13 +24,17 @@ const GEN = new Set(['kingdom', 'empire', 'of', 'the', 'sultanate', 'republic', 
 function mask(text, name) {   // every distinctive word of the name is hidden, as the file does ("the ████ Chronicle")
   let t = text; for (const w of name.split(/[\s()-]+/).filter(w => w.length > 2 && !GEN.has(w.toLowerCase()))) t = t.replace(new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(s|n|ns|ese|an|ans|ian|ians|ish|i|ite|ites)?\\b', 'gi'), '████'); return t;
 }
-let nP = 0, nQ = 0, out = [];
+let nP = 0, nQ = 0, nH = 0, out = [];
 for (const n of names) {
   const e = SD.find(x => x.name === n); if (!e) { out.push('no profile ' + n); continue; }
   if (!H.HOME_PICS[n] && pics[n] && pics[n].slug !== '-') {
     const en = entry(pics[n].slug); if (!en || !en.img) { out.push(n + ': home-pictures.tsv names ' + pics[n].slug + ', which has no picture'); }
-    else { const o = { img: en.img, name: en.name, slug: pics[n].slug, credit: [en.artist, en.licence].filter(Boolean).join(', ') }; const top = pics[n].opts.find(x => x.startsWith('top=')); if (top) o.top = +top.slice(4);
+    else { const o = { img: en.img, name: en.name, slug: pics[n].slug, credit: [en.artist, en.licence].filter(Boolean).join(', ') }; const top = pics[n].opts.find(x => x.startsWith('top=')); if (top) o.top = +top.slice(4); if (pics[n].opts.includes('hide')) o.hide = 1;
       const i = hd.indexOf('var HOME_PICS = {'), close = hd.indexOf(eol + '};', i); hd = hd.slice(0, close) + ',' + eol + '  ' + J(n) + ': ' + J(o) + hd.slice(close); nP++; }
+  }
+  // a profile marked hide that is already in the file without the flag gets it (until 3 Nov 2026 this script dropped it)
+  if (H.HOME_PICS[n] && pics[n] && pics[n].opts.includes('hide') && !H.HOME_PICS[n].hide) {
+    const key = eol + '  ' + J(n) + ': {', i = hd.indexOf(key); if (i < 0) out.push(n + ': cannot find its HOME_PICS line'); else { const close = hd.indexOf('}', i + key.length); hd = hd.slice(0, close) + (hd[i + key.length] === '"' ? ',"hide":1' : ',hide:1') + hd.slice(close); nH++; }
   }
   if (!e.kind && !H.HOME_QUIZ.profiles[n] && FA[n] && GL[n]) {
     const q = [mask(FA[n].capital || '', n), mask(FA[n].founder || '', n), mask(GL[n].dyk || '', n)];
@@ -40,4 +44,4 @@ for (const n of names) {
 const H2 = new Function(hd + ';return {HOME_PICS, HOME_QUIZ}')();
 for (const n of names) if (!H2.HOME_PICS[n] && !(pics[n] && pics[n].slug === '-')) out.push(n + ': still no home picture');
 fs.writeFileSync(path.join(R, 'home-data.js'), hd);
-console.log('home pictures added ' + nP + ', quiz profiles added ' + nQ + (out.length ? '\n  ' + out.join('\n  ') : ''));
+console.log('home pictures added ' + nP + ', hidden ' + nH + ', quiz profiles added ' + nQ + (out.length ? '\n  ' + out.join('\n  ') : ''));

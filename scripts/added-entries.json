@@ -7771,6 +7771,186 @@
      0
     ]
    ]
+  },
+  {
+   "slug": "anarchism",
+   "name": "Anarchism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "c. 1840 CE – present",
+   "desc": "Anarchism is a political philosophy and movement that seeks to replace the state, capitalism and all coercive hierarchy with voluntary associations. Taking shape in 19th-century Europe with Proudhon, Bakunin and Kropotkin, it flourished until the Spanish Civil War, was suppressed by the Bolsheviks and defeated by the communists in Spain, and has revived since the 1960s in protest movements.",
+   "links": [
+    [
+     "anarchism",
+     1
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "capitalism",
+   "name": "Capitalism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "c. 1500 CE – present",
+   "desc": "Capitalism is an economic system based on private ownership of the means of production, production for profit and the accumulation of capital through competitive markets and wage labour.",
+   "links": [
+    [
+     "capitalism",
+     1
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "communism",
+   "name": "Communism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "1793 CE – present",
+   "desc": "Communism is the ideology of a classless, stateless society based on common ownership. Given its modern definition by Marx and Engels in 1848, it took power in Russia in 1917 and later ruled more than a third of the world’s population; its one-party states industrialised and spread literacy, but also carried out purges, famines and repression whose death toll is still debated.",
+   "links": [
+    [
+     "communism",
+     1
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "conservatism",
+   "name": "Conservatism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "c. 1790 CE – present",
+   "desc": "Conservatism is a philosophy and ideology that seeks to preserve traditional institutions, customs and values, founded as a modern tradition by Edmund Burke in his opposition to the French Revolution.",
+   "links": [
+    [
+     "conservatism",
+     1
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "feminism",
+   "name": "Feminism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "1792 CE – present",
+   "desc": "Feminism is a range of movements and ideologies, originating in late 18th-century Europe, which hold that societies are patriarchal and seek the equality of the sexes.",
+   "links": [
+    [
+     "feminism",
+     1
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "hindutva",
+   "name": "Hindutva",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "1923 CE – present",
+   "desc": "Hindutva is the Hindu nationalist ideology that V. D. Savarkar formulated in 1923, defining Hindus as those who hold India their fatherland and holy land. Carried by the RSS from 1925, adopted by the Bharatiya Janata Party in 1989, it has shaped Indian government since 2014; its proponents call it cultural nationalism, while many scholars compare it to fascism; violence motivated by it, above all against Muslims, has risen since the mid-2010s.",
+   "links": [
+    [
+     "Hindutva",
+     0
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "imperialism",
+   "name": "Imperialism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "c. 1870 CE – present",
+   "desc": "Imperialism is the maintaining and extending of power over foreign nations. Named in the 19th century, it drove the European empires, joined by the United States and Japan, to conquer and rule much of the world, justified by a civilizing mission and theories of race and enforced with great violence.",
+   "links": [
+    [
+     "imperialism",
+     1
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "islamism",
+   "name": "Islamism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "c. 1922 CE – present",
+   "desc": "Islamism is a range of movements holding that Islam should shape politics and the state through sharia. Formed by Rashid Rida, Hassan al-Banna, Maududi and Qutb after the end of the Ottoman caliphate, it took power in Iran in 1979 and entered elections across the Muslim world, while militant Salafi jihadists from al-Qaeda to ISIL waged armed jihad; since about 2020 observers have seen it decline.",
+   "links": [
+    [
+     "Islamism",
+     0
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "kemalism",
+   "name": "Kemalism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "1923 CE – present",
+   "desc": "Kemalism is the ideology of Mustafa Kemal Atatürk, founder of the Republic of Turkey in 1923, built on six principles: republicanism, populism, nationalism, laicism, statism and reformism. Its reforms abolished the caliphate and Islamic law and remade Turkish society on Western models, inspiring modernizers abroad, while its nationalism long denied Kurdish identity.",
+   "links": [
+    [
+     "Kemalism",
+     0
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "liberalism",
+   "name": "Liberalism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "c. 1690 CE – present",
+   "desc": "Liberalism is a political and moral philosophy of individual rights, liberty, consent of the governed and equality before the law, first systematised by John Locke and carried by the revolutions of 1688, 1776 and 1789.",
+   "links": [
+    [
+     "liberalism",
+     1
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "maoism",
+   "name": "Maoism",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "c. 1935 CE – present",
+   "desc": "Maoism, officially Mao Zedong Thought, is Mao Zedong’s adaptation of Marxism–Leninism to agrarian China, built on peasant revolution, people’s war and the mass line.",
+   "links": [
+    [
+     "Maoism",
+     0
+    ]
+   ],
+   "ideology": true
+  },
+  {
+   "slug": "social-democracy",
+   "name": "Social democracy",
+   "type": "idea",
+   "subtype": "ideology",
+   "dates": "1844 CE – present",
+   "desc": "Social democracy is a centre-left ideology that seeks social equality through gradual, democratic reform within a regulated, mostly capitalist economy. Born in the 19th-century labour movement, it parted from communism after 1917 and built the welfare states of post-war Europe; since the 1970s it has contended with neoliberalism, the Third Way and electoral decline.",
+   "links": [
+    [
+     "social democracy",
+     1
+    ]
+   ],
+   "ideology": true
   }
  ],
  "patterns": [

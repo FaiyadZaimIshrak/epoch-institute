@@ -21,7 +21,7 @@ const HAND = ['index', 'research', 'research-series', 'about', 'contributors', '
 const GENERATED = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs'];
 // generated pages at the root (build-pages.ps1 writes them like the folders' pages; they link css/pages.css)
 const GENERATED_ROOT = ['new'];
-const PROFILES = ['empire', 'religion', 'language', 'culture', 'movement', 'government'];
+const PROFILES = ['empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology'];
 // every script counts, data files too: epoch-stats.js looks like data but draws the profiles' radar panel (its title,
 // tags and bars), whose rules a first cut without it left out. The data's words add a few rules (0.4 KB), never miss one.
 

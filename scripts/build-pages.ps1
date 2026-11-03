@@ -2718,7 +2718,7 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
   if ($profs.Count) {
     [void]$sb.Append('<section class="essay-profs"><h2 class="ref-sec-title">Profiles in this essay</h2><ul class="pcards">')
     foreach ($ps in $profs) {
-      $pu = @('/empire/', '/religion/', '/language/', '/culture/', '/movement/', '/government/') | ForEach-Object { $_ + $ps } | Where-Object { $EMPURL.ContainsKey($_) } | Select-Object -First 1; $em = if ($pu) { $EMPURL[$pu] } else { $null }; if (-not $em) { $esMiss.Add("$($ey.slug): profile $ps"); continue }
+      $pu = @('/empire/', '/religion/', '/language/', '/culture/', '/movement/', '/government/', '/ideology/') | ForEach-Object { $_ + $ps } | Where-Object { $EMPURL.ContainsKey($_) } | Select-Object -First 1; $em = if ($pu) { $EMPURL[$pu] } else { $null }; if (-not $em) { $esMiss.Add("$($ey.slug): profile $ps"); continue }
       $pts0 = $em['points']; [void]$sb.Append((ProfCard $pu ([string]$em['name']) $(if ($pts0) { (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]) } else { (Yr $em['start']) + ' – ' + $(if ($null -eq $em['end']) { 'present' } else { Yr $em['end'] }) }) ''))
     }
     [void]$sb.Append("</ul></section>`n")
@@ -3185,7 +3185,7 @@ function PersonRegion($e) {
     if ($tier -eq 'states') { if ($ESM -and $ESM[$e.slug]) { foreach ($st in @($ESM[$e.slug][1])) { $nd = $NODE[[string]$st[0]]; if ($nd) { $rr = [string]$nd['b']; if ($BREGIX.ContainsKey($rr)) { $cnt[$rr] = 1 + [int]$cnt[$rr]; if (-not $ord.Contains($rr)) { $ord.Add($rr) } } } } } }
     else {
       foreach ($pm in $e.emp) {
-        $k = $EKIND[[string]$pm['name']]; if (-not $k -or $(if ($tier -eq 'profiles') { $k -in 'culture', 'movement', 'government' } else { $k -ne $tier })) { continue }
+        $k = $EKIND[[string]$pm['name']]; if (-not $k -or $(if ($tier -eq 'profiles') { $k -in 'culture', 'movement', 'government', 'ideology' } else { $k -ne $tier })) { continue }
         $rr = $EREG[[string]$pm['name']]; if ($rr -and $BREGIX.ContainsKey($rr)) { $cnt[$rr] = 1 + [int]$cnt[$rr]; if (-not $ord.Contains($rr)) { $ord.Add($rr) } }
       }
     }
@@ -3504,7 +3504,7 @@ foreach ($rr in $BREG) {
 # paths: each stop and the path's reason for it
 foreach ($p in $RP) {
   FcDeck ('path-' + [string]$p['slug']) 'paths' ([string]$p['title']) '' ([string]$p['tagline']) 'Why is it on the path?' 2 @(
-    @($p['steps']) | ForEach-Object { FcCard ([string]$_['href'] -replace '^/(encyclopedia|empire|religion|language|culture|movement|government|state)/', '') ([string]$_['name']) ([string]$_['why']) ([string]$_['img']) ([string]$_['href']) ([string]$_['meta']) }) ''
+    @($p['steps']) | ForEach-Object { FcCard ([string]$_['href'] -replace '^/(encyclopedia|empire|religion|language|culture|movement|government|ideology|state)/', '') ([string]$_['name']) ([string]$_['why']) ([string]$_['img']) ([string]$_['href']) ([string]$_['meta']) }) ''
 }
 # inventions: each category of the inventions tree, when and where each one first appeared and who is credited
 foreach ($invCk in $INVCATS.Keys) {
@@ -3802,7 +3802,7 @@ SetBlock "$Repo\today-in-history\index" 'calendar' ('<section class="day-cal-wra
 function PicOf($slugs) { foreach ($s in $slugs) { if ($BY.ContainsKey($s) -and $BY[$s].img) { return $BY[$s].img } }; Say "  no picture among: $($slugs -join ', ')"; return '' }
 $nImg = @($ENT | Where-Object { $_.img }).Count; $nTih = 0; foreach ($k in $DAYS) { $nTih += @($HIST[$k]).Count }
 $SECTIONS = [ordered]@{
-  profiles     = @{ t = 'Profiles'; s = 'Histories of states and empires, faiths, languages, cultures and movements.'; h = '/profiles'; k = "$($EMPS.Count) profiles"; d = 'In-depth histories of states and empires, religions, languages, cultures and movements: their origins, great ages and legacies, with key facts and timelines.'; pic = @('colosseum', 'augustus', 'hagia-sophia') }
+  profiles     = @{ t = 'Profiles'; s = 'Histories of states and empires, faiths, languages, cultures, movements and ideas.'; h = '/profiles'; k = "$($EMPS.Count) profiles"; d = 'In-depth histories of states and empires, religions, languages, cultures and movements: their origins, great ages and legacies, with key facts and timelines.'; pic = @('colosseum', 'augustus', 'hagia-sophia') }
   encyclopedia = @{ t = 'Encyclopedia'; s = 'People, places, events and ideas, most of them with a picture.'; h = '/encyclopedia/'; k = $NENT.ToString('N0') + ' entries'; d = "People, places, events, institutions and ideas, with $($nImg.ToString('N0')) historical pictures."; pic = @('library-of-alexandria', 'house-of-wisdom', 'encyclopedie') }
   states       = @{ t = 'States'; s = 'Every recorded kingdom, republic and chiefdom, with its lineage.'; h = '/state/'; k = $POL['nodes'].Count.ToString('N0') + ' states'; d = 'Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.'; pic = @('peace-of-westphalia', 'congress-of-vienna') }
   atlas        = @{ t = 'Atlas'; s = 'Slide through five thousand years and watch states come and go.'; h = '/atlas'; k = 'From ' + (Yr $minS) + ' to today'; d = 'The world in any year: slide through five thousand years and watch states appear and vanish.'; pic = @('catalan-atlas', 'tabula-rogeriana', 'cantino-planisphere', 'piri-reis-map') }
@@ -4135,17 +4135,19 @@ $rxE = [regex]"^\[(?<s>$STRX|0),(?<n>$STRX),(?<t>$STRX)(?:,(?<a>$STRX))?(?:,(?<w
 $rxS = [regex]"^\[(?<s>$STRX),(?<n>$STRX),(?<t>$STRX)(?:,(?<a>$STRX))?(?:,[01])?\](?<c>,?)$"
 $siIn = [IO.File]::ReadAllText("$Repo\search-index.js", $U8).Replace("`r`n", "`n").TrimEnd("`n")
 $siOut = New-Object System.Collections.Generic.List[string]; $part = ''; $nZero = 0; $nE = 0; $nS = 0
+$siSeen = New-Object 'System.Collections.Generic.HashSet[string]'; $siEClose = -1
 foreach ($l in $siIn.Split("`n")) {
   if ($l.Contains('packed by scripts/build-pages.ps1')) { continue }
   if ($l.StartsWith('// search-index.js')) { $siOut.Add('// search-index.js - site-wide search over encyclopedia entries: [slug (0: made from the name, see the line after the list), name, type, aliases, weight 0-8, 1 if it has a picture]. Generated.'); continue }
   if ($l.StartsWith('// states (register')) { $siOut.Add('// states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.'); continue }
   if ($l.StartsWith('var SEARCH_INDEX')) { $part = 'e' } elseif ($l.StartsWith('var SEARCH_STATES')) { $part = 's' }
-  elseif ($l -eq '];') { $siOut.Add($l); if ($part -eq 'e') { $siOut.Add($SIDEC) }; $part = ''; continue }
+  elseif ($l -eq '];') { if ($part -eq 'e') { $siEClose = $siOut.Count }; $siOut.Add($l); if ($part -eq 'e') { $siOut.Add($SIDEC) }; $part = ''; continue }
   $m = if ($part -eq 'e') { $rxE.Match($l) } elseif ($part -eq 's') { $rxS.Match($l) } else { $null }
   if (-not $m -or -not $m.Success) { $siOut.Add($l); continue }
   $name = JsonStr $m.Groups['n'].Value
   if ($part -eq 'e') {
     $made = NameSlug $name; $slug = if ($m.Groups['s'].Value -eq '0') { if (-not $made) { throw "search-index.js: no slug for $name" }; $made } else { JsonStr $m.Groups['s'].Value }
+    [void]$siSeen.Add($slug)
     $pic = $BY.ContainsKey($slug) -and $BY[$slug].img
     $al = $m.Groups['a'].Value; $wt = $m.Groups['w'].Value
     $tail = if ($pic) { ',' + $(if ($al) { $al } else { '""' }) + ',' + $(if ($wt) { $wt } else { '0' }) + ',1' } else { $(if ($al) { ',' + $al } else { '' }) + $(if ($wt) { $(if ($al) { '' } else { ',""' }) + ',' + $wt } else { '' }) }
@@ -4157,6 +4159,62 @@ foreach ($l in $siIn.Split("`n")) {
     $siOut.Add('[' + $m.Groups['s'].Value + ',' + $m.Groups['n'].Value + ',' + $m.Groups['t'].Value + $(if ($al) { ',' + $al } elseif ($pic) { ',""' } else { '' }) + $(if ($pic) { ',1' } else { '' }) + ']' + $m.Groups['c'].Value); $nS++
   }
 }
+# Entries added since the index was last made (3 Nov 2026: the 325 entries added after 29 Oct, the songs, forms of
+# government, ideologies and others, had no search row, no /search filters and no preview card, as make-home-data was
+# not re-run): each gets a row at the end of SEARCH_INDEX (weight 0-8 = 1.5 x log2(1 + 2 x profiles naming it + state
+# histories naming it), + 1 for a picture), its facets at the end of SEARCH_FACETS.e (centuries by Span, region by
+# PersonRegion, as make-home-data wrote them; only when the facets matched the index before) and a preview card in
+# data/enc-preview (its first two sentences within 280 characters, as make-previews did). An entry is added once:
+# the next build finds its row.
+function SiCent([int]$siY) { if ($siY -lt 0) { [int](-([Math]::Floor(-$siY / 100) + 1)) } else { [int]([Math]::Floor($siY / 100) + 1) } }
+$siAdd = New-Object System.Collections.Generic.List[string]; $siFcAdd = New-Object System.Collections.Generic.List[string]
+$siFcText = [IO.File]::ReadAllText("$Repo\search-facets.js", $U8); $siFcN = [regex]::Match($siFcText, '\{n:(\d+),ns:'); $siFcR = [regex]::Match($siFcText, 'R:(\[[^\]]*\])')
+$siFcRI = @{}; if ($siFcR.Success) { $siI = 0; foreach ($siRn in [regex]::Matches($siFcR.Groups[1].Value, '"([^"]*)"')) { $siFcRI[$siRn.Groups[1].Value] = $siI; $siI++ } }
+$siPvHave = @{}; $siPvAdd = @{}
+foreach ($siF in Get-ChildItem "$Repo\data\enc-preview" -Filter *.json) { foreach ($siMm in [regex]::Matches([IO.File]::ReadAllText($siF.FullName, $U8), '"([a-z0-9-]+)":\{"n":')) { $siPvHave[$siMm.Groups[1].Value] = 1 } }
+foreach ($siE in $ENT) {
+  $siPic = [bool]$siE.img
+  if (-not $siSeen.Contains($siE.slug)) {
+    $siNp = @($siE.emp).Count; $siNst = if ($ESM -and $ESM[$siE.slug]) { @($ESM[$siE.slug][1]).Count } else { 0 }
+    $siW = [int][Math]::Round(1.5 * [Math]::Log(1 + 2 * $siNp + $siNst, 2)) + $(if ($siPic) { 1 } else { 0 }); if ($siW -gt 8) { $siW = 8 }
+    $siMade = NameSlug $siE.name
+    $siAdd.Add('[' + $(if ($siMade -ceq $siE.slug) { $nZero++; '0' } else { Js $siE.slug }) + ',' + (Js $siE.name) + ',' + (Js $siE.type) + ',' + (Js ((@($siE.aka) | Where-Object { $_ }) -join '|')) + ',' + $siW + $(if ($siPic) { ',1' } else { '' }) + ']')
+    $siSp = [EpochBuild.W]::Span($siE.dates); $siC1 = 0; $siC2 = 0; if ($siSp) { $siC1 = SiCent $siSp[0]; $siC2 = SiCent $siSp[$siSp.Length - 1] }
+    $siRg = PersonRegion $siE; $siRi = if ($siRg -and $siFcRI.ContainsKey([string]$siRg)) { $siFcRI[[string]$siRg] } else { -1 }
+    $siFcAdd.Add("[$siC1,$siC2,$siRi," + $(if ($siPic) { '1' } else { '0' }) + ']')
+  }
+  if (-not $siPvHave.ContainsKey($siE.slug)) {
+    $siSm = ''; $siK = 0
+    foreach ($siP in [EpochBuild.W]::Sentences($siE.desc)) { if ($siK -ge 2) { break }; $siCand = if ($siSm) { $siSm + ' ' + $siP } else { $siP }; if ($siCand.Length -gt 280) { break }; $siSm = $siCand; $siK++ }
+    if (-not $siSm) { $siSm = [EpochBuild.W]::Summary($siE.desc, 280) }
+    $siTy = if ($siE.type) { $siE.type.Substring(0, 1).ToUpperInvariant() + $siE.type.Substring(1) } else { '' }
+    $siPf = if ($siE.slug -match '^[a-z]') { $siE.slug.Substring(0, 1) } else { '0' }
+    if (-not $siPvAdd.ContainsKey($siPf)) { $siPvAdd[$siPf] = New-Object System.Collections.Generic.List[string] }
+    $siPvAdd[$siPf].Add((Js $siE.slug) + ':{"n":' + (Js $siE.name) + ',"t":' + (Js $siTy) + ',"d":' + (Js $siE.dates) + ',"s":' + (Js $siSm) + ',"i":' + (Js $siE.img) + '}')
+  }
+}
+if ($siAdd.Count) {
+  if ($siEClose -lt 1) { throw 'search-index.js: the end of SEARCH_INDEX was not found' }
+  if (-not $siOut[$siEClose - 1].EndsWith(',')) { $siOut[$siEClose - 1] = $siOut[$siEClose - 1] + ',' }
+  $siOut.InsertRange($siEClose, [string[]]@($siAdd | ForEach-Object -Begin { $siQ = 0 } -Process { $siQ++; $_ + $(if ($siQ -lt $siAdd.Count) { ',' } else { '' }) }))
+  if ($siFcN.Success -and [int]$siFcN.Groups[1].Value -eq $nE) {
+    $siFcL = $siFcText.Replace("`r`n", "`n").Split("`n"); $siFcDone = $false
+    for ($siI = 0; $siI -lt $siFcL.Count; $siI++) { if ($siFcL[$siI].StartsWith('e:[') -and $siFcL[$siI].EndsWith(']],')) { $siFcL[$siI] = $siFcL[$siI].Substring(0, $siFcL[$siI].Length - 2) + ',' + ($siFcAdd -join ',') + '],'; $siFcDone = $true; break } }
+    if (-not $siFcDone) { throw 'search-facets.js: the e rows were not found' }
+    $siFcNew = ($siFcL -join "`n") -replace '\{n:\d+,ns:', ('{n:' + ($nE + $siAdd.Count) + ',ns:')
+    if ([EpochBuild.W]::WriteIfChanged("$Repo\search-facets.js", $siFcNew)) { $NWRITE++ }
+    $siFcV = [EpochBuild.W]::Sha1($siFcNew).Substring(0, 10)
+    $siSx = [IO.File]::ReadAllText("$Repo\search", $U8); $siSx2 = [regex]::Replace($siSx, "search-facets\.js\?v=[^'`"]*", "search-facets.js?v=$siFcV")
+    if ($siSx2 -ne $siSx -and [EpochBuild.W]::WriteIfChanged("$Repo\search", $siSx2)) { $NWRITE++ }
+  } else { Say "search-facets.js: made for $($siFcN.Groups[1].Value) rows, the index had ${nE}: facets of the new rows not written (re-run make-home-data)" }
+  $nE += $siAdd.Count
+}
+foreach ($siPf in $siPvAdd.Keys) {
+  $siPvF = "$Repo\data\enc-preview\$siPf.json"; $siPvT = if (Test-Path $siPvF) { [IO.File]::ReadAllText($siPvF, $U8).TrimEnd() } else { '{}' }
+  $siPvT2 = $siPvT.Substring(0, $siPvT.Length - 1) + $(if ($siPvT.Length -gt 2) { ',' } else { '' }) + ($siPvAdd[$siPf] -join ',') + '}'
+  if ([EpochBuild.W]::WriteIfChanged($siPvF, $siPvT2)) { $NWRITE++ }
+}
+if ($siAdd.Count -or $siPvAdd.Count) { Say ("search: {0} entries added to the index, {1} preview cards written" -f $siAdd.Count, (@($siPvAdd.Values | ForEach-Object { $_.Count }) | Measure-Object -Sum).Sum) }
 $siText2 = ($siOut -join "`n") + "`n"
 if ([EpochBuild.W]::WriteIfChanged("$Repo\search-index.js", $siText2)) { $NWRITE++ }
 $SIV = [EpochBuild.W]::Sha1($siText2).Substring(0, 10)
@@ -4175,7 +4233,7 @@ foreach ($p in $SMNEW.Keys) { if (-not $FSEEN.ContainsKey($p)) { $FSEEN[$p] = $(
 [IO.File]::WriteAllLines($fsFile, [string[]]@($FSEEN.Keys | Sort-Object | ForEach-Object { $_ + "`t" + $FSEEN[$_] }), $U8)
 $wnNotes = @(); if (Test-Path "$PSScriptRoot\whats-new.tsv") { foreach ($l in [IO.File]::ReadAllLines("$PSScriptRoot\whats-new.tsv", $U8)) { if (-not $l -or $l.StartsWith('#')) { continue }; $c = $l -split "`t"; if ($c.Count -ge 3) { $wnNotes += [pscustomobject]@{ d = $c[0]; t = $c[1]; s = $c[2]; l = $(if ($c.Count -ge 4) { $c[3] } else { '' }) } } } }
 $wnCut = ([datetime]::ParseExact($TODAY, 'yyyy-MM-dd', $INV)).AddDays(-30).ToString('yyyy-MM-dd')
-$WNSEC = [ordered]@{ '/encyclopedia/' = 'Encyclopedia entries'; '/songs/' = 'Songs'; '/empire/' = 'Profiles'; '/culture/' = 'Profiles'; '/religion/' = 'Profiles'; '/language/' = 'Profiles'; '/movement/' = 'Profiles'; '/government/' = 'Profiles'; '/state/' = 'States'; '/years/' = 'Years'; '/teachers/' = "Teachers' Corner"; '/essays/' = 'Essays'; '/paths/' = 'Reading paths'; '/speeches/' = 'Speeches'; '/societies/' = 'Social ladders' }
+$WNSEC = [ordered]@{ '/encyclopedia/' = 'Encyclopedia entries'; '/songs/' = 'Songs'; '/empire/' = 'Profiles'; '/culture/' = 'Profiles'; '/religion/' = 'Profiles'; '/language/' = 'Profiles'; '/movement/' = 'Profiles'; '/government/' = 'Profiles'; '/ideology/' = 'Profiles'; '/state/' = 'States'; '/years/' = 'Years'; '/teachers/' = "Teachers' Corner"; '/essays/' = 'Essays'; '/paths/' = 'Reading paths'; '/speeches/' = 'Speeches'; '/societies/' = 'Social ladders' }
 $wnGrp = [ordered]@{}
 foreach ($p in ($FSEEN.Keys | Where-Object { $FSEEN[$_] -and [string]::CompareOrdinal($FSEEN[$_], $wnCut) -ge 0 -and $_ -ne '/new' } | Sort-Object { $FSEEN[$_] } -Descending)) {
   $sec = 'Pages'; foreach ($k in $WNSEC.Keys) { if ($p.StartsWith($k) -and $p.Length -gt $k.Length) { $sec = $WNSEC[$k]; break } }
@@ -4230,7 +4288,7 @@ foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }
-$PROF = @(); foreach ($dir in 'empire', 'religion', 'language', 'culture', 'movement', 'government') { foreach ($f in Get-ChildItem "$Repo\$dir" -File -ErrorAction SilentlyContinue | Where-Object { -not $_.Extension }) { $p = "/$dir/" + $f.Name; [void](Stamp $p ([IO.File]::ReadAllText($f.FullName, $U8))); $PROF += $p } }
+$PROF = @(); foreach ($dir in 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology') { foreach ($f in Get-ChildItem "$Repo\$dir" -File -ErrorAction SilentlyContinue | Where-Object { -not $_.Extension }) { $p = "/$dir/" + $f.Name; [void](Stamp $p ([IO.File]::ReadAllText($f.FullName, $U8))); $PROF += $p } }
 function UrlXml([string]$p, [string]$imgPath) {
   '<url><loc>' + (Hx ($SITE + $p)) + '</loc><lastmod>' + $SMNEW[$p][1] + '</lastmod>' + $(if ($imgPath) { '<image:image><image:loc>' + (Hx ($SITE + $imgPath)) + '</image:loc></image:image>' } else { '' }) + '</url>'
 }
@@ -4239,7 +4297,7 @@ function WriteSitemap([string]$name, $urls) {
   if ([EpochBuild.W]::WriteIfChanged("$Repo\sitemaps\$name", $x)) { $script:NWRITE++ }
 }
 function SitemapOf([string]$p) {
-  if ($p -like '/empire/*' -or $p -like '/religion/*' -or $p -like '/language/*' -or $p -like '/culture/*' -or $p -like '/government/*' -or $p -like '/movement/*') { return 'profiles' }
+  if ($p -like '/empire/*' -or $p -like '/religion/*' -or $p -like '/language/*' -or $p -like '/culture/*' -or $p -like '/government/*' -or $p -like '/movement/*' -or $p -like '/ideology/*') { return 'profiles' }
   if ($p -like '/encyclopedia/browse/*' -or $p -like '/encyclopedia/conflicts/*' -or $p -eq '/encyclopedia/' -or $p -eq '/encyclopedia/glossary') { return 'pages' }
   if ($p -like '/encyclopedia/*') { return 'encyclopedia' }
   if ($p -like '/state/browse/*' -or $p -eq '/state/') { return 'pages' }

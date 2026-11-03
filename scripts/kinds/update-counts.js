@@ -9,7 +9,7 @@ const check = process.argv.includes('--check');
 const sd = fs.readFileSync(path.join(R, 'shared-data.js'), 'utf8');
 const E = new Function(sd + ';return EMPIRES')();
 const n = k => E.filter(e => (e.kind || 'polity') === k).length;
-const C = { all: E.length, polity: n('polity'), religion: n('religion'), language: n('language'), culture: n('culture'), movement: n('movement'), government: n('government') };
+const C = { all: E.length, polity: n('polity'), religion: n('religion'), language: n('language'), culture: n('culture'), movement: n('movement'), government: n('government'), ideology: n('ideology') };
 const ONES = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
 const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 const word = x => x < 20 ? ONES[x] : TENS[Math.floor(x / 10)] + (x % 10 ? '-' + ONES[x % 10] : '');
@@ -17,14 +17,17 @@ const cap = s => s[0].toUpperCase() + s.slice(1);
 const NUMW = '(?:' + [...ONES.slice(10), ...TENS.slice(2).flatMap(t => [t, ...ONES.slice(1, 10).map(o => t + '-' + o)])].join('|') + ')';
 const RULES = [
   ['index', /\b\d+ profiles of states, empires/g, () => C.all + ' profiles of states, empires'],
-  ['profiles', /\b\d+ states and empires, \d+ religions, \d+ languages, \d+ cultures, \d+ movements and \d+ forms/g,
-    () => `${C.polity} states and empires, ${C.religion} religions, ${C.language} languages, ${C.culture} cultures, ${C.movement} movements and ${C.government} forms`],
+  ['profiles', /\b\d+ states and empires, \d+ religions, \d+ languages, \d+ cultures, \d+ movements(?:,| and) \d+ forms of government(?: and \d+ ideologies)?/g,
+    () => `${C.polity} states and empires, ${C.religion} religions, ${C.language} languages, ${C.culture} cultures, ${C.movement} movements, ${C.government} forms of government and ${C.ideology} ideologies`],
   ['faiths', new RegExp('\\b(' + NUMW + ') religions', 'gi'), m => (/^[A-Z]/.test(m) ? cap(word(C.religion)) : word(C.religion)) + ' religions'],
   ['llms.txt', /the \d+ in-depth profiles of empires and states/g, () => `the ${C.polity} in-depth profiles of empires and states`],
   ['llms.txt', /\): \d+ profiles of faiths/g, () => `): ${C.religion} profiles of faiths`],
   ['llms.txt', /\): \d+ profiles of languages/g, () => `): ${C.language} profiles of languages`],
   ['llms.txt', /\): \d+ profiles of cultures/g, () => `): ${C.culture} profiles of cultures`],
   ['llms.txt', /\): \d+ profiles of movements/g, () => `): ${C.movement} profiles of movements`],
+  ['llms.txt', /\): \d+ profiles of ideologies/g, () => `): ${C.ideology} profiles of ideologies`],
+  ['llms.txt', /\b\d+ full profiles of empires, states, religions, languages, cultures, movements(?:,| and) forms of government(?: and ideologies)?/g,
+    () => `${C.all} full profiles of empires, states, religions, languages, cultures, movements, forms of government and ideologies`],
   ['llms.txt', new RegExp('\\b' + NUMW + ' religions on a turning globe', 'g'), () => word(C.religion) + ' religions on a turning globe'],
 ];
 const files = {}, bad = []; let changed = 0;
