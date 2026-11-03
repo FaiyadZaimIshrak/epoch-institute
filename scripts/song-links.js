@@ -1,6 +1,7 @@
 // scripts/song-links.js - written by scripts/build-pages.ps1. Do not edit. Read by generator.html: the songs of each profile.
 var SONG_LINKS = {
 "Anti-apartheid movement":[["senzeni-na","Senzeni Na?","1950"],["siyahamba","Siyahamba","1952"]],
+"Arab Spring":[["el-pueblo-unido-jamas-sera-vencido","El pueblo unido jamás será vencido","1973"]],
 "Armenia":[["mer-hayrenik","Mer Hayrenik (Our Fatherland)","c. 1859"],["dle-yaman","Dle Yaman","c. 1900"]],
 "Athens":[["delphic-hymns","Delphic Hymns","c. 128 BCE"],["mo-li-hua","Mo Li Hua","1765"],["misirlou","Misirlou","1927"]],
 "British Raj":[["magnificat","Magnificat","c. 80"]],
@@ -11,6 +12,7 @@ var SONG_LINKS = {
 "Indian independence movement":[["vande-mataram","Vande Mataram","1876"],["ekla-chalo-re","Ekla Chalo Re","1905"],["sarfaroshi-ki-tamanna","Sarfaroshi Ki Tamanna","1921"],["raghupati-raghava-raja-ram","Raghupati Raghava Raja Ram","1930"]],
 "Indonesia":[["gayatri-mantra","Gayatri Mantra","c. 1200 BCE"],["patriotic-march","Patriotic March","1937"],["tian-mi-mi","Tian Mi Mi","1979"]],
 "Liberia":[["all-hail-liberia-hail","All Hail, Liberia, Hail!","1847"]],
+"Meiji Restoration":[["kimigayo","Kimigayo","c. 1880"]],
 "Mexico":[["la-cucaracha","La Cucaracha","c. 1819"],["las-mananitas","Las Mañanitas","date unknown"],["la-llorona","La Llorona","date unknown"],["besame-mucho","Bésame Mucho","1932"]],
 "Middle Kingdom of Egypt":[["harpers-songs","Harper's Songs","c. 1900 BCE"]],
 "Mombasa":[["malaika","Malaika","1945"]],
@@ -25,5 +27,6 @@ var SONG_LINKS = {
 "Tanzania":[["nkosi-sikelel-iafrika","Nkosi Sikelel' iAfrika","1897"],["jambo-bwana","Jambo Bwana","1982"]],
 "United States":[["over-there","Over There","1917"],["besame-mucho","Bésame Mucho","1932"],["wide-is-my-motherland","Wide Is My Motherland","1936"],["pata-pata","Pata Pata","1956"],["sukiyaki","Sukiyaki (Ue o Muite Arukō)","1961"],["gracias-a-la-vida","Gracias a la vida","1966"]],
 "Ur":[["lament-for-ur","Lament for Ur","c. 2000 BCE"]],
-"Uruk":[["lament-for-ur","Lament for Ur","c. 2000 BCE"],["epic-of-gilgamesh","Epic of Gilgamesh","c. 1800 BCE"]]
+"Uruk":[["lament-for-ur","Lament for Ur","c. 2000 BCE"],["epic-of-gilgamesh","Epic of Gilgamesh","c. 1800 BCE"]],
+"Velvet Revolution":[["we-shall-overcome","We Shall Overcome","1945"]]
 };

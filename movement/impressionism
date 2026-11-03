@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Impressionism: Aims, Course and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Impressionism was a 19th-century art movement of Paris-based painters who, defying the Académie and its Salon, showed eight independent exhibitions…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Impressionism: Aims, Course and Legacy — The Epoch Institute">
+<meta property="og:description" content="Impressionism was a 19th-century art movement of Paris-based painters who, defying the Académie and its Salon, showed eight independent exhibitions…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/movement/impressionism">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/impressionism.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/impressionism.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/movement/impressionism">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Movements & revolutions","item":"https://the-epoch-institute.org/profiles?kind=movement"},{"@type":"ListItem","position":4,"name":"Impressionism"}]},{"@type":"Article","headline":"Impressionism","description":"Impressionism was a 19th-century art movement of Paris-based painters who, defying the Académie and its Salon, showed eight independent exhibitions…","url":"https://the-epoch-institute.org/movement/impressionism","mainEntityOfPage":"https://the-epoch-institute.org/movement/impressionism","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Impressionism"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/impressionism.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=movement">Movements &amp; revolutions</a></li><li aria-current="page">Impressionism</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Impressionism.png" alt="Impressionism" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Movement · Europe</p>
+        <h1 class="profile-detail-name">Impressionism</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/france">France</a>, above all <a class="enc-link" href="/encyclopedia/paris">Paris</a>, its cafés, boulevards and the studio of the photographer Nadar, and the countryside where the painters worked in the open air; later shown in <a class="enc-link" href="/encyclopedia/london">London</a> and <a class="enc-link" href="/encyclopedia/new-york">New York</a> and taken up across <a class="enc-link" href="/encyclopedia/europe">Europe</a>, the <a class="enc-link" href="/encyclopedia/americas">Americas</a>, <a class="enc-link" href="/encyclopedia/australia">Australia</a> and <a class="enc-link" href="/encyclopedia/japan">Japan</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">the core painters meet in the early 1860s; Salon des Refusés 1863; Société anonyme founded December 1873; first exhibition April 1874; eight group exhibitions 1874–1886; Post-Impressionism from the 1880s</span></div>
+          <div class="info-stat"><span class="info-stat-label">Leading figures</span><span class="info-stat-val">Claude Monet, the most prolific and stereotypical Impressionist; Pierre-Auguste Renoir; Alfred Sisley; Camille Pissarro, the only one to show at all eight exhibitions; Berthe Morisot; Edgar Degas, who despised the term; Paul Cézanne; Mary Cassatt; Gustave Caillebotte; Édouard Manet, regarded as their leader though he never exhibited with them</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">few financial rewards from the exhibitions, but gradual public acceptance; by the early 1880s diluted Impressionist methods were commonplace in Salon art, and the movement became a precursor of Post-Impressionism, Fauvism and Cubism</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Impressionist painters worked in the open air to catch the passing effects of sunlight, laying short, broken strokes of pure colour side by side instead of the smooth, blended finish the Académie demanded.</li><li>Shut out by the Salon jury, they founded their own society in December 1873 and held eight independent exhibitions from 1874 to 1886; a critic’s mocking review of the first gave them their name.</li><li>First met with harsh opposition, the style gradually won public acceptance and opened the way to Post-Impressionism, Fauvism and Cubism, with echoes in music, literature, sculpture and film.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The name came from a joke: in a satirical review of the 1874 exhibition in Le Charivari, the critic Louis Leroy played on the title of Claude Monet’s Impression, Sunrise and wrote that wallpaper in its embryonic state was more finished than that seascape.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#background">Background</a></li><li><a href="#aims">Aims</a></li><li><a href="#events">Course of Events</a></li><li><a href="#people">People</a></li><li><a href="#outcomes">Outcomes</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1863</span><span class="rf-text">The Salon jury rejects Édouard Manet’s Le déjeuner sur l’herbe, and <a class="enc-link" href="/encyclopedia/napoleon-iii">Napoleon III</a> allows a Salon des Refusés, which draws more visitors than the Salon</span></li><li><span class="rf-year">1870</span><span class="rf-text">Frédéric Bazille dies in the <a class="enc-link" href="/encyclopedia/franco-prussian-war">Franco-Prussian War</a></span></li><li><span class="rf-year">1873</span><span class="rf-text">Monet, Renoir, Pissarro, Sisley, Cézanne, Morisot, Degas and others found a society to exhibit their work independently</span></li><li><span class="rf-year">1874</span><span class="rf-text">Thirty artists show at the first exhibition in Nadar’s studio, and Louis Leroy’s review gives the group its name</span></li><li><span class="rf-year">1881</span><span class="rf-text">Edgar Degas’s Little Dancer of Fourteen Years, his only sculpture shown in his lifetime, appears at the sixth exhibition</span></li><li><span class="rf-year">1882</span><span class="rf-text">The seventh exhibition, the most selective, shows only nine “true” Impressionists</span></li><li><span class="rf-year">1886</span><span class="rf-text">The group divides over the invitations to Paul Signac and Georges Seurat at the eighth and last exhibition</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ukiyo-e"><img src="/images/encyclopedia/ukiyo-e.jpg" alt="Ukiyo-e" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ukiyo-e">Ukiyo-e</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Toshusai_Sharaku-_Otani_Oniji,_1794.jpg" target="_blank" rel="noopener">Sharaku, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>In the middle of the 19th century, a time of rapid industrialisation and unsettling social change in <a class="enc-link" href="/encyclopedia/france">France</a>, the Académie des Beaux-Arts dominated French art. It valued historical subjects, religious themes and portraits over landscape and still life, and preferred carefully finished pictures of precise, blended brush strokes that hid the artist’s hand, their colour often toned down further by a thick golden varnish. Its annual juried show, the Salon de <a class="enc-link" href="/encyclopedia/paris">Paris</a>, brought prizes, commissions and prestige, and its juries favoured painters such as Jean-Léon Gérôme and Alexandre Cabanel. By the 1850s the Realist Gustave Courbet had drawn attention and censure by painting contemporary life without idealisation.</p><p>Others prepared the way: the Romantic colourist Eugène Delacroix, J. M. W. Turner, the painters of the Barbizon school such as Théodore Rousseau, and Johan Barthold Jongkind, Jean-Baptiste-Camille Corot and Eugène Boudin, who painted from nature in a direct, spontaneous style and befriended the younger artists. Painting in the open air, pioneered by artists such as John Constable, had become increasingly popular by mid-century.</p><p>New technology helped. Premixed paints in <a class="enc-link" href="/encyclopedia/tin">tin</a> tubes, introduced in the mid-century, let artists work more spontaneously, and vivid synthetic pigments such as cobalt blue, viridian and cadmium yellow had become available. <a class="enc-link" href="/encyclopedia/photography">Photography</a>, which seemed to devalue the painter’s skill in reproducing reality, and Japanese <a class="enc-link" href="/encyclopedia/ukiyo-e">ukiyo-e</a> prints, with their unusual angles, were further influences.</p></div>
+      </div>
+      <div class="profile-section-block" id="aims">
+        <h2 class="profile-section-title">Aims</h2>
+        <div class="profile-section-body"><p>The Impressionists set out to capture a moment as it is experienced. They painted realistic scenes of everyday life in natural settings, often outdoors, en plein air, to catch the momentary and transient effects of sunlight, and they portrayed overall visual effects rather than details. They built their pictures from freely brushed colour that took precedence over line and contour, using short “broken” strokes of mixed and pure colour, not blended or shaded as was customary, to achieve an effect of intense colour vibration. In 1876 the poet Stéphane Mallarmé wrote that the subject of such a painting “palpitates with movement, light, and life”.</p><p>Their methods were not new in themselves, but they were the first to use them all together and so consistently: colours placed side by side with little mixing, greys and darks mixed from complementary colours without black, wet paint laid into wet, white or light grounds, and shadows painted with the blue of the sky.</p><p>They also chose modern subjects: middle-class leisure, train stations, cafés, brothels, the <a class="enc-link" href="/encyclopedia/theatre">theatre</a> and dance, the new avenues of <a class="enc-link" href="/encyclopedia/paris">Paris</a>, and even the factories spreading through the countryside, which earlier landscape painters had avoided. Their compositions often resemble a snapshot, a part of a larger reality caught as if by chance. Rather than compete with <a class="enc-link" href="/encyclopedia/photography">photography</a> to imitate reality, they sought to express their own perceptions of nature, and were the first to offer a consciously subjective alternative to the photograph.</p></div>
+      </div>
+      <div class="profile-section-block" id="events">
+        <h2 class="profile-section-title">Course of Events</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/napoleon-iii"><img src="/images/encyclopedia/napoleon-iii.jpg" alt="Napoleon III" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/napoleon-iii">Napoleon III</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Alexandre_Cabanel_002.jpg" target="_blank" rel="noopener">Alexandre Cabanel, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>In the early 1860s Claude Monet, Pierre-Auguste Renoir, Alfred Sisley and Frédéric Bazille met while studying under the academic painter Charles Gleyre and began to paint landscapes together in the open air. At the Café Guerbois in <a class="enc-link" href="/encyclopedia/paris">Paris</a> their discussions were often led by Édouard Manet, and they were joined by Camille Pissarro, Paul Cézanne and Armand Guillaumin. The Salon jury routinely rejected about half their submissions. In 1863 it rejected Manet’s Le déjeuner sur l’herbe, and Emperor <a class="enc-link" href="/encyclopedia/napoleon-iii">Napoleon III</a> let the public judge the rejected works at a Salon des Refusés, which drew more visitors than the regular Salon.</p><p>In December 1873 Monet, Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot, Edgar Degas and others founded the Société anonyme des artistes peintres, sculpteurs, graveurs to exhibit independently, its members forswearing the Salon. Thirty artists showed at their first exhibition, in April 1874 in the studio of the photographer Nadar. The critic Louis Leroy derided it in Le Charivari as “The Exhibition of the Impressionists”, and the name was soon taken up by the public and the artists.</p><p>They exhibited together eight times between 1874 and 1886. Bazille died in the <a class="enc-link" href="/encyclopedia/franco-prussian-war">Franco-Prussian War</a> in 1870, and Cézanne, later Renoir, Sisley and Monet, stayed away to submit to the Salon. Degas brought in Mary Cassatt in 1879 along with realists whom Monet in 1880 called “first-come daubers”. The seventh exhibition, in 1882, showed only nine “true” Impressionists, and the group divided again over Paul Signac and Georges Seurat at the eighth, in 1886.</p></div>
+      </div>
+      <div class="profile-section-block" id="people">
+        <h2 class="profile-section-title">People</h2>
+        <div class="profile-section-body"><p>The Impressionists were a diverse group in style and temperament, united chiefly by their spirit of independence and rebellion. Claude Monet, Alfred Sisley, Berthe Morisot and Camille Pissarro may be considered the “purest” of them, in their constant pursuit of spontaneity, sunlight and colour; Monet was the most prolific and stereotypical, and Pissarro the only artist to show at all eight exhibitions. Edgar Degas, who despised the term, believed in the primacy of drawing over colour and belittled painting outdoors. Pierre-Auguste Renoir turned away from Impressionism for a time in the 1880s, and Paul Cézanne developed a highly individual vision and is more often called a Post-Impressionist. Gustave Caillebotte, younger than the others, joined them in the mid-1870s.</p><p>Édouard Manet, regarded by the Impressionists as their leader, never took part in their exhibitions and never gave up black, arguing that “the Salon is the real field of battle”. The dealer Paul Durand-Ruel kept their works before the public and arranged shows for them in <a class="enc-link" href="/encyclopedia/london">London</a> and <a class="enc-link" href="/encyclopedia/new-york">New York</a>.</p><p>Women took part under heavy limits: they were excluded from the cafés where the men formed their ideas, and critics praised their talent only within a narrow notion of femininity. Mary Cassatt, Eva Gonzalès, Marie Bracquemond and Berthe Morisot were known as the “Women Impressionists”; Morisot showed at seven of the exhibitions, Cassatt at four and Bracquemond at three, while Gonzalès, a follower of Manet, did not exhibit with the group.</p></div>
+      </div>
+      <div class="profile-section-block" id="outcomes">
+        <h2 class="profile-section-title">Outcomes</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/vincent-van-gogh"><img src="/images/encyclopedia/vincent-van-gogh.jpg" alt="Vincent van Gogh" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/vincent-van-gogh">Vincent van Gogh</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg" target="_blank" rel="noopener">Vincent van Gogh, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Impressionists faced harsh opposition from the conventional art community in <a class="enc-link" href="/encyclopedia/france">France</a>, and Monet and Cézanne received the harshest attacks. Leroy called Monet’s painting at most a sketch, hardly a finished work. Yet the public, at first hostile, gradually came to believe that they had captured a fresh and original vision, even while critics and the art establishment disapproved.</p><p>The exhibitions brought the individual artists few financial rewards, but their art slowly won acceptance and support. Renoir had a great success at the Salon in 1879, Monet became financially secure during the early 1880s and Pissarro by the early 1890s, though Sisley died in poverty in 1899. By the early 1880s Impressionist methods, in a diluted form, had become commonplace in Salon art: fashionable painters such as Jean Béraud and Henri Gervex found critical and financial success by brightening their palettes while keeping the smooth finish the Salon expected.</p><p>The group itself did not hold. Disputes over membership, over Guillaumin and the realists Degas invited, the defections of those who returned to the Salon and the quarrel over Signac and Seurat divided it. During the 1880s younger painters, <a class="enc-link" href="/encyclopedia/vincent-van-gogh">Vincent van Gogh</a>, <a class="enc-link" href="/encyclopedia/paul-gauguin">Paul Gauguin</a>, Georges Seurat and Henri de Toulouse-Lautrec, reacted against the Impressionists’ concern with reproducing the optical sensations of light and colour and turned to symbolic content and the expression of emotion. Pissarro briefly painted in a pointillist manner, and even Monet abandoned strict open-air painting.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>By recreating the sensation in the eye rather than delineating the details of a subject, Impressionism became a precursor of Post-Impressionism, Fauvism and Cubism. Its influence spread far beyond <a class="enc-link" href="/encyclopedia/france">France</a>: to the American Impressionists such as Childe Hassam, to the <a class="enc-link" href="/encyclopedia/heidelberg">Heidelberg</a> School in <a class="enc-link" href="/encyclopedia/australia">Australia</a>, to Max Liebermann and Lovis Corinth in <a class="enc-link" href="/encyclopedia/germany">Germany</a>, Joaquín Sorolla in <a class="enc-link" href="/encyclopedia/spain">Spain</a>, the Skagen Painters, Nazmi Ziya Güran, who brought it to <a class="enc-link" href="/encyclopedia/turkey">Turkey</a>, and Fujishima Takeji in <a class="enc-link" href="/encyclopedia/japan">Japan</a>. In 1904 Wynford Dewhurst’s Impressionist Painting: its genesis and development did much to popularise it in Great Britain.</p><p>The name passed to other arts. Degas’s Little Dancer of Fourteen Years, shown in 1881, struck some critics as overthrowing sculptural tradition as Impressionism had overthrown painting, and Auguste Rodin and Medardo Rosso have been called Impressionist sculptors. Musical Impressionism, characterised by suggestion and atmosphere, arose in France in the late 19th century; Claude Debussy and Maurice Ravel are generally considered its greatest composers, though Debussy called the term the invention of critics. The word has also been used for literature, for Pictorialist <a class="enc-link" href="/encyclopedia/photography">photography</a> and for French films of 1919 to 1929.</p><p>How Impressionism is remembered has changed. In the summer of 1945 René Huyghe and Georges Salles exhibited its core painters alongside earlier French masters as a line of French art. Its women painters were largely left out of the textbooks until Tamar Garb’s Women Impressionists of 1986.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Impressionism was a 19th-century art movement of Paris-based painters, among them Monet, Renoir, Pissarro, Sisley, Morisot and Degas, who painted light, movement and modern life in broken strokes of colour. Rejected by the Salon, they held eight independent exhibitions from 1874 to 1886, won gradual acceptance and prepared the way for Post-Impressionism and modern art.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">4 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="impressionism"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Thirty artists show at the first exhibition in Nadar’s studio, and Louis Leroy’s review gives the group its name","o":["1870","1886","1873","1874"],"a":3,"w":"1874: Thirty artists show at the first exhibition in Nadar’s studio, and Louis Leroy’s review gives the group its name."},{"p":"Which came first?","q":"","o":["The Salon jury rejects Édouard Manet’s Le déjeuner sur l’herbe, and Napoleon III allows a Salon des Refusés, which draws more visitors than the Salon","The group divides over the invitations to Paul Signac and Georges Seurat at the eighth and last exhibition"],"a":0,"w":"1863: The Salon jury rejects Édouard Manet’s Le déjeuner sur l’herbe, and Napoleon III allows a Salon des Refusés, which draws more visitors than the Salon · 1886: The group divides over the invitations to Paul Signac and Georges Seurat at the eighth and last exhibition."},{"p":"In which year?","q":"Monet, Renoir, Pissarro, Sisley, Cézanne, Morisot, Degas and others found a society to exhibit their work independently","o":["1873","1882","1874","1870"],"a":0,"w":"1873: Monet, Renoir, Pissarro, Sisley, Cézanne, Morisot, Degas and others found a society to exhibit their work independently."},{"p":"In which year?","q":"The seventh exhibition, the most selective, shows only nine “true” Impressionists","o":["1882","1881","1873","1886"],"a":0,"w":"1882: The seventh exhibition, the most selective, shows only nine “true” Impressionists."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Tamar Garb, Women Impressionists (1986)</li>
+        <li>Jean Leymarie, Impressionism (1955)</li>
+        <li>Wynford Dewhurst, Impressionist Painting: Its Genesis and Development (1904)</li>
+        <li>Monet’s Years at Giverny: Beyond Impressionism (Metropolitan Museum of Art, 1978)</li>
+        <li>Degas: The Artist’s Mind (Metropolitan Museum of Art, 1976)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other movements</p>
+      <div class="related-grid"><a class="related-card" href="/movement/modernism"><img src="/logos/thumbs/Modernism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Modernism</span><span class="related-card-dates">c. 1870 CE – c. 1945 CE</span></a><a class="related-card" href="/movement/zionism"><img src="/logos/thumbs/Zionism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Zionism</span><span class="related-card-dates">1882 CE – present</span></a><a class="related-card" href="/movement/environmental-movement"><img src="/logos/thumbs/Environmental%20movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Environmental movement</span><span class="related-card-dates">c. 1865 CE – present</span></a><a class="related-card" href="/movement/indian-independence-movement"><img src="/logos/thumbs/Indian%20independence%20movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Indian independence movement</span><span class="related-card-dates">1885 CE – 1947 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/movement/modernism"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Modernism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Modernism</span><span class="related-card-dates">c. 1870 CE – c. 1945 CE</span></a><a class="related-card" href="/movement/zionism"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Zionism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Zionism</span><span class="related-card-dates">1882 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Impressionism",slug="impressionism",url="https://the-epoch-institute.org/movement/impressionism";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Impressionism on The Epoch Institute — aims, course and legacy. https://the-epoch-institute.org/movement/impressionism #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/movement/impressionism"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Impressionism",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Impressionism",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

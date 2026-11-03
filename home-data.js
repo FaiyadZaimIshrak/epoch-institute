@@ -649,7 +649,26 @@ var HOME_PICS = {
   "Ge'ez": {"img":"/images/encyclopedia/kebra-nagast.jpg","name":"Kebra Nagast","slug":"kebra-nagast","credit":"CC BY-SA 3.0"},
   "Hawaiian": {"img":"/images/encyclopedia/kamehameha-iii.jpg","name":"Kamehameha III","slug":"kamehameha-iii","credit":"Hugo Stangenwald, Public domain"},
   "Phoenician": {"img":"/images/encyclopedia/ahiram-sarcophagus.jpg","name":"Ahiram sarcophagus","slug":"ahiram-sarcophagus","credit":"Matson Photo Service, Public domain"},
-  "Haitian Vodou": {"img":"/images/encyclopedia/haitian-vodou.jpg","name":"Haitian Vodou","slug":"haitian-vodou","credit":"Sam Fentress, CC BY-SA 2.0"}
+  "Haitian Vodou": {"img":"/images/encyclopedia/haitian-vodou.jpg","name":"Haitian Vodou","slug":"haitian-vodou","credit":"Sam Fentress, CC BY-SA 2.0"},
+  "Counter-Reformation": {"img":"/images/encyclopedia/counter-reformation.jpg","name":"Counter-Reformation","slug":"counter-reformation","credit":"Bartolomé Esteban Murillo, Public domain"},
+  "Chartism": {"img":"/images/encyclopedia/chartism.jpg","name":"Chartism","slug":"chartism","credit":"William Edward Kilburn, Public domain"},
+  "Luddites": {"img":"/images/encyclopedia/luddites.jpg","name":"Luddites","slug":"luddites","credit":"Unknown author, Public domain"},
+  "Decembrist revolt": {"img":"/images/encyclopedia/decembrists.jpg","name":"Decembrists","slug":"decembrists","credit":"Vasily Timm, Public domain"},
+  "Impressionism": {"img":"/images/encyclopedia/impressionism.jpg","name":"Impressionism","slug":"impressionism","credit":"Claude Monet, Public domain"},
+  "Modernism": {"img":"/images/encyclopedia/pablo-picasso.jpg","name":"Pablo Picasso","slug":"pablo-picasso","credit":"Argentina. Revista Vea y Lea, Public domain"},
+  "Bauhaus": {"img":"/images/encyclopedia/bauhaus.jpg","name":"Bauhaus","slug":"bauhaus","credit":"Spyrosdrakopoulos, CC BY-SA 4.0"},
+  "Solidarity": {"img":"/images/encyclopedia/lech-walesa.jpg","name":"Lech Wałęsa","slug":"lech-walesa","credit":"MEDEF, CC BY-SA 2.0"},
+  "Velvet Revolution": {"img":"/images/encyclopedia/velvet-revolution.jpg","name":"Velvet Revolution","slug":"velvet-revolution","credit":"ŠJů (cs:ŠJů), CC BY-SA 3.0"},
+  "Environmental movement": {"img":"/images/encyclopedia/deforestation.jpg","name":"Deforestation","slug":"deforestation","credit":"Ibama from Brasil, CC BY 2.0"},
+  "Taiping Rebellion": {"img":"/images/encyclopedia/taiping-rebellion.jpg","name":"Taiping Rebellion","slug":"taiping-rebellion","credit":"Wu Youru, Public domain"},
+  "May Fourth Movement": {"img":"/images/encyclopedia/lu-xun.jpg","name":"Lu Xun","slug":"lu-xun","credit":"Unknown author, Public domain"},
+  "Non-Aligned Movement": {"img":"/images/encyclopedia/bandung-conference.jpg","name":"Bandung Conference","slug":"bandung-conference","credit":"Foreign Ministry of the Republic of Indonesia, Public domain"},
+  "Harlem Renaissance": {"img":"/images/encyclopedia/w-e-b-du-bois.jpg","name":"W. E. B. Du Bois","slug":"w-e-b-du-bois","credit":"James E. Purdy / Adam Cuerden, CC0"},
+  "Négritude": {"img":"/images/encyclopedia/aime-cesaire.jpg","name":"Aimé Césaire","slug":"aime-cesaire","credit":"Jean Baptiste Devaux, CC BY-SA 4.0"},
+  "Zionism": {"img":"/images/encyclopedia/theodor-herzl.jpg","name":"Theodor Herzl","slug":"theodor-herzl","credit":"Carl Pietzner, Public domain"},
+  "Tanzimat": {"img":"/images/encyclopedia/tanzimat.jpg","name":"Tanzimat","slug":"tanzimat","credit":"Juris Tiltins, Public domain"},
+  "Young Turks": {"img":"/images/encyclopedia/enver-pasha.jpg","name":"Enver Pasha","slug":"enver-pasha","credit":"Nicola Perscheid, Public domain"},
+  "Meiji Restoration": {"img":"/images/encyclopedia/meiji-restoration.jpg","name":"Meiji Restoration","slug":"meiji-restoration","credit":"Takahashi Yuichi (1828-1894), Public domain"}
 };
 
 var HOME_ENTRIES = [

@@ -4932,5 +4932,121 @@ var SECTION_IMAGES = {
     origins:{slug:"byblos",name:"Byblos",img:"/images/encyclopedia/byblos.jpg",artist:"Orient at de.wikipedia",licence:"CC BY-SA 2.0 de",source:"https://commons.wikimedia.org/wiki/File:Byblos_Libanon_2003.JPG"},
     literature:{slug:"ahiram-sarcophagus",name:"Ahiram sarcophagus",img:"/images/encyclopedia/ahiram-sarcophagus.jpg",artist:"Matson Photo Service",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ahiram_sarcophag_from_Biblos_XIII-XBC.jpg"},
     legacy:{slug:"pyrgi-tablets",name:"Pyrgi Tablets",img:"/images/encyclopedia/pyrgi-tablets.jpg",artist:"Sailko",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Lamine_d'oro_in_lingua_etrusca_e_fenicia_con_dedica_di_un_luogo_sacro_a_pyrgi.jpg"}
+  },
+  "Counter-Reformation": {
+    background:{slug:"martin-luther",name:"Martin Luther",img:"/images/encyclopedia/martin-luther.jpg",artist:"Lucas Cranach the Elder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d.%C3%84._-_Martin_Luther,_1528_(Veste_Coburg).jpg"},
+    aims:{slug:"council-of-trent",name:"Council of Trent",img:"/images/encyclopedia/council-of-trent.jpg",artist:"Laurom",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Concilio_Trento_Museo_Buonconsiglio.jpg"},
+    events:{slug:"philip-ii-of-spain",name:"Philip II of Spain",img:"/images/encyclopedia/philip-ii-of-spain.jpg",artist:"Sofonisba Anguissola",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Philip_II_of_Spain_by_Sofonisba_Anguissola_-_002b.jpg"},
+    people:{slug:"ignatius-of-loyola",name:"Ignatius of Loyola",img:"/images/encyclopedia/ignatius-of-loyola.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ignatius_Loyola.jpg"},
+    outcomes:{slug:"galileo-galilei",name:"Galileo Galilei",img:"/images/encyclopedia/galileo-galilei.jpg",artist:"Justus Sustermans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Galileo_Galilei_(1564-1642)_RMG_BHC2700.tiff"},
+    legacy:{slug:"gian-lorenzo-bernini",name:"Gian Lorenzo Bernini",img:"/images/encyclopedia/gian-lorenzo-bernini.jpg",artist:"Gian Lorenzo Bernini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gian_Lorenzo_Bernini,_self-portrait,_c1623.jpg"}
+  },
+  "Chartism": {
+    people:{slug:"robert-owen",name:"Robert Owen",img:"/images/encyclopedia/robert-owen.jpg",artist:"William Henry Brooke",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Robert_Owen_by_William_Henry_Brooke.jpg"},
+    legacy:{slug:"eureka-rebellion",name:"Eureka Rebellion",img:"/images/encyclopedia/eureka-rebellion.jpg",artist:"John Black Henderson (1827-1918)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Eureka_stockade_battle.jpg"}
+  },
+  "Luddites": {
+    background:{slug:"napoleonic-wars",name:"Napoleonic Wars",img:"/images/encyclopedia/napoleonic-wars.jpg",artist:"Ruedi33a",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Napoleonic_Wars_(revision).jpg"},
+    people:{slug:"lord-byron",name:"Lord Byron",img:"/images/encyclopedia/lord-byron.jpg",artist:"Thomas Phillips",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Byron_1813_by_Phillips.jpg"},
+    outcomes:{slug:"arthur-wellesley-1st-duke-of-wellington",name:"Arthur Wellesley, 1st Duke of Wellington",img:"/images/encyclopedia/arthur-wellesley-1st-duke-of-wellington.jpg",artist:"Thomas Lawrence",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Arthur_Wellesley,_1st_Duke_of_Wellington.jpg"}
+  },
+  "Decembrist revolt": {
+    background:{slug:"alexander-i-of-russia",name:"Alexander I of Russia",img:"/images/encyclopedia/alexander-i-of-russia.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_I_of_Russia_by_G.Dawe_(1826,_Peterhof)-crop.jpg"},
+    people:{slug:"decembrists",name:"Decembrists",img:"/images/encyclopedia/decembrists.jpg",artist:"Vasily Timm",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Georg_Wilhelm_Timm_-_Dekabristen-Aufstand.jpg"},
+    outcomes:{slug:"alexander-ii-of-russia",name:"Alexander II of Russia",img:"/images/encyclopedia/alexander-ii-of-russia.jpg",artist:"Attributed to W. & D. Downey",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zar_Alexander_II_(cropped)_(cropped).jpg"},
+    legacy:{slug:"alexander-pushkin",name:"Alexander Pushkin",img:"/images/encyclopedia/alexander-pushkin.jpg",artist:"Orest Kiprensky",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Orest_Kiprensky_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%BF%D0%BE%D1%8D%D1%82%D0%B0_%D0%90.%D0%A1.%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0_-_Google_Art_Project.jpg"}
+  },
+  "Impressionism": {
+    background:{slug:"ukiyo-e",name:"Ukiyo-e",img:"/images/encyclopedia/ukiyo-e.jpg",artist:"Sharaku",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Toshusai_Sharaku-_Otani_Oniji,_1794.jpg"},
+    events:{slug:"napoleon-iii",name:"Napoleon III",img:"/images/encyclopedia/napoleon-iii.jpg",artist:"Alexandre Cabanel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexandre_Cabanel_002.jpg"},
+    outcomes:{slug:"vincent-van-gogh",name:"Vincent van Gogh",img:"/images/encyclopedia/vincent-van-gogh.jpg",artist:"Vincent van Gogh",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg"}
+  },
+  "Modernism": {
+    background:{slug:"charles-darwin",name:"Charles Darwin",img:"/images/encyclopedia/charles-darwin.jpg",artist:"Henry Maull (1829–1914) and John Fox (1832–1907) (Maull & Fox) [3]; derivative work by Beao",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_Darwin_seated_crop.jpg"},
+    aims:{slug:"wassily-kandinsky",name:"Wassily Kandinsky",img:"/images/encyclopedia/wassily-kandinsky.jpg",artist:"Vassily Kandinsky by Adolf Elnain Photo credits : Georges Meguerditchian - Centre Pompidou, MNAM-CCI /Dist. RMN-GP Im...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg"},
+    events:{slug:"pablo-picasso",name:"Pablo Picasso",img:"/images/encyclopedia/pablo-picasso.jpg",artist:"Argentina. Revista Vea y Lea",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pablo_picasso_1.jpg"},
+    people:{slug:"james-joyce",name:"James Joyce",img:"/images/encyclopedia/james-joyce.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Revolutionary_Joyce_Better_Contrast.jpg"}
+  },
+  "Bauhaus": {
+    background:{slug:"walter-gropius",name:"Walter Gropius",img:"/images/encyclopedia/walter-gropius.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:WalterGropius-1919.jpg"},
+    events:{slug:"dessau",name:"Dessau",img:"/images/encyclopedia/dessau.jpg",artist:"Sven Scharr",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:DessauRathaus.JPG"},
+    people:{slug:"wassily-kandinsky",name:"Wassily Kandinsky",img:"/images/encyclopedia/wassily-kandinsky.jpg",artist:"Vassily Kandinsky by Adolf Elnain Photo credits : Georges Meguerditchian - Centre Pompidou, MNAM-CCI /Dist. RMN-GP Im...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg"}
+  },
+  "Solidarity": {
+    background:{slug:"prague-spring",name:"Prague Spring",img:"/images/encyclopedia/prague-spring.jpg",artist:"The Central Intelligence Agency",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:10_Soviet_Invasion_of_Czechoslovakia_-_Flickr_-_The_Central_Intelligence_Agency.jpg"},
+    events:{slug:"gdansk",name:"Gdańsk",img:"/images/encyclopedia/gdansk.jpg",artist:"Diego Delso",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Calle_Dlugie_Pobrzeze,_Gdansk,_Polonia,_2013-05-20,_DD_06.jpg"},
+    people:{slug:"lech-walesa",name:"Lech Wałęsa",img:"/images/encyclopedia/lech-walesa.jpg",artist:"MEDEF",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Lech_Walesa_-_2009.jpg"},
+    outcomes:{slug:"sejm",name:"Sejm",img:"/images/encyclopedia/sejm.jpg",artist:"Jerzy Janiszewski",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sejm_RP_logo_and_wordmark.svg"}
+  },
+  "Velvet Revolution": {
+    background:{slug:"alexander-dubcek",name:"Alexander Dubček",img:"/images/encyclopedia/alexander-dubcek.jpg",artist:"CTK",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Alexander_Dubcek_in_August_23rd,_1968_(cropped).jpg"},
+    aims:{slug:"civic-forum",name:"Civic Forum",img:"/images/encyclopedia/civic-forum.jpg",artist:"Pavel Šťastný",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:OF_logo_vectorized.svg"},
+    events:{slug:"gustav-husak",name:"Gustáv Husák",img:"/images/encyclopedia/gustav-husak.jpg",artist:"kalendarakcii.bratislava.sk",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Gust%C3%A1v_Hus%C3%A1k_-_o%C5%99%C3%ADznuto.JPG"},
+    people:{slug:"vaclav-havel",name:"Václav Havel",img:"/images/encyclopedia/vaclav-havel.jpg",artist:"Kingkongphoto & www.celebrity-photos.com from Laurel Maryland, USA",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Vaclav_Havel.jpg"}
+  },
+  "Environmental movement": {
+    background:{slug:"william-wordsworth",name:"William Wordsworth",img:"/images/encyclopedia/william-wordsworth.jpg",artist:"William Shuter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Wordsworth_at_28_by_William_Shuter2.jpg"},
+    events:{slug:"lord-dalhousie",name:"Lord Dalhousie",img:"/images/encyclopedia/lord-dalhousie.jpg",artist:"George Richmond",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dalhousie.jpg"},
+    people:{slug:"william-blake",name:"William Blake",img:"/images/encyclopedia/william-blake.jpg",artist:"Thomas Phillips",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Blake_by_Thomas_Phillips.jpg"},
+    legacy:{slug:"deforestation",name:"Deforestation",img:"/images/encyclopedia/deforestation.jpg",artist:"Ibama from Brasil",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Opera%C3%A7%C3%A3o_Hymenaea,_Julho-2016_(29399454651).jpg"}
+  },
+  "Taiping Rebellion": {
+    background:{slug:"hong-xiuquan",name:"Hong Xiuquan",img:"/images/encyclopedia/hong-xiuquan.jpg",artist:"Ford & West Lith.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hong_Xiuquan.jpg"},
+    events:{slug:"xiang-army",name:"Xiang Army",img:"/images/encyclopedia/xiang-army.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:The-Xiang-Army.jpg"},
+    people:{slug:"zeng-guofan",name:"Zeng Guofan",img:"/images/encyclopedia/zeng-guofan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tseng_Kwo-Fan.tif"},
+    legacy:{slug:"self-strengthening-movement",name:"Self-Strengthening Movement",img:"/images/encyclopedia/self-strengthening-movement.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gun_transportation_at_Jiangnan_Arsenal.jpg"}
+  },
+  "May Fourth Movement": {
+    background:{slug:"yuan-shikai",name:"Yuan Shikai",img:"/images/encyclopedia/yuan-shikai.jpg",artist:"Photo by Rio V. De Sieux [1]",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanShikaiPresidente1915.jpg"},
+    aims:{slug:"treaty-of-versailles",name:"Treaty of Versailles",img:"/images/encyclopedia/treaty-of-versailles.jpg",artist:"David Lloyd George, Woodrow Wilson and Georges Clemenceau",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Treaty_of_Versailles,_English_version.jpg"},
+    events:{slug:"tiananmen",name:"Tiananmen",img:"/images/encyclopedia/tiananmen.jpg",artist:"Balon Greyjoy",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:20200110_Tiananmen-3.jpg"},
+    people:{slug:"lu-xun",name:"Lu Xun",img:"/images/encyclopedia/lu-xun.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LuXun1930.jpg"},
+    outcomes:{slug:"fourteen-points",name:"Fourteen Points",img:"/images/encyclopedia/fourteen-points.jpg",artist:"William Orpen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Orpen_Woodrow_Wilson_cropped.jpg"},
+    legacy:{slug:"mao-zedong",name:"Mao Zedong",img:"/images/encyclopedia/mao-zedong.jpg",artist:"Chen Zhengqing (1917–1966)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg"}
+  },
+  "Non-Aligned Movement": {
+    background:{slug:"bandung-conference",name:"Bandung Conference",img:"/images/encyclopedia/bandung-conference.jpg",artist:"Foreign Ministry of the Republic of Indonesia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plenary_session_during_the_Bandung_Conference.png"},
+    aims:{slug:"nelson-mandela",name:"Nelson Mandela",img:"/images/encyclopedia/nelson-mandela.jpg",artist:"Kingkongphoto & www.celebrity-photos.com from Laurel",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Nelson_Mandela_1994.jpg"},
+    events:{slug:"josip-broz-tito",name:"Josip Broz Tito",img:"/images/encyclopedia/josip-broz-tito.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Josip_Broz_Tito_uniform_portrait.jpg"},
+    people:{slug:"jawaharlal-nehru",name:"Jawaharlal Nehru",img:"/images/encyclopedia/jawaharlal-nehru.jpg",artist:"Harry Pot",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nehru_in_the_Netherlands,_1957.jpg"}
+  },
+  "Harlem Renaissance": {
+    aims:{slug:"w-e-b-du-bois",name:"W. E. B. Du Bois",img:"/images/encyclopedia/w-e-b-du-bois.jpg",artist:"James E. Purdy / Adam Cuerden",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:W.E.B._Du_Bois_by_James_E._Purdy,_1907_(cropped).jpg"},
+    events:{slug:"great-depression",name:"Great Depression",img:"/images/encyclopedia/great-depression.jpg",artist:"Unknown author or not provided",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone,_02-1931_-_NARA_-_541927.jpg"}
+  },
+  "Négritude": {
+    background:{slug:"toussaint-louverture",name:"Toussaint Louverture",img:"/images/encyclopedia/toussaint-louverture.jpg",artist:"Pierre-Charles Baquoy (1759-1829)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Toussaint_Louverture_par_Pierre-Charles_Baquoy.jpg"},
+    events:{slug:"aime-cesaire",name:"Aimé Césaire",img:"/images/encyclopedia/aime-cesaire.jpg",artist:"Jean Baptiste Devaux",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Aime_Cesaire_2003.jpg"},
+    people:{slug:"leopold-sedar-senghor",name:"Léopold Sédar Senghor",img:"/images/encyclopedia/leopold-sedar-senghor.jpg",artist:"Dominique Roger",licence:"CC BY-SA 3.0 igo",source:"https://commons.wikimedia.org/wiki/File:UNESCO_History,_Visite_de_S._Exc._M._L%C3%A9opold_Sedar_Senghor,_Pr%C3%A9sident_de_la_R%C3%A9publique_du_S%C3%A9n%C3%A9gal_-_UNESCO_-_PHOTO0000002688_0001_(cropped).tiff"}
+  },
+  "Zionism": {
+    background:{slug:"jerusalem",name:"Jerusalem",img:"/images/encyclopedia/jerusalem.jpg",artist:"Godot13",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Temple_Mount_(Aerial_view,_2007)_07.jpg"},
+    aims:{slug:"theodor-herzl",name:"Theodor Herzl",img:"/images/encyclopedia/theodor-herzl.jpg",artist:"Carl Pietzner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Theodor_Herzl_(3x4_cropped).jpg"},
+    events:{slug:"balfour-declaration",name:"Balfour Declaration",img:"/images/encyclopedia/balfour-declaration.jpg",artist:"United Kingdom Government signed by Arthur Balfour",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Balfour_declaration_unmarked.jpg"}
+  },
+  "Tanzimat": {
+    background:{slug:"mahmud-ii",name:"Mahmud II",img:"/images/encyclopedia/mahmud-ii.jpg",artist:"Henry Guillaume Schlesinger",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahmud_II.jpg"},
+    events:{slug:"topkapi-palace",name:"Topkapı Palace",img:"/images/encyclopedia/topkapi-palace.jpg",artist:"Carlos Delgado",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Topkap%C4%B1_-_01.jpg"},
+    people:{slug:"midhat-pasha",name:"Midhat Pasha",img:"/images/encyclopedia/midhat-pasha.jpg",artist:"Atelier Adèle",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Midhat_Pa%C5%9Fa_1877-1.1R_V01-1.1_cleaned.jpg"},
+    outcomes:{slug:"russo-turkish-war-1877-1878",name:"Russo-Turkish War (1877–1878)",img:"/images/encyclopedia/russo-turkish-war-1877-1878.jpg",artist:"Wiktor Mazurowski",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fight_near_Telish_1877.jpg"}
+  },
+  "Young Turks": {
+    aims:{slug:"positivism",name:"Positivism",img:"/images/encyclopedia/positivism.jpg",artist:"Johan Hendrik Hoffmeister",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Auguste_Comte.jpg"},
+    events:{slug:"balkan-wars",name:"Balkan Wars",img:"/images/encyclopedia/balkan-wars.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Luleburgaz_Battle_Postcard.jpg"},
+    people:{slug:"enver-pasha",name:"Enver Pasha",img:"/images/encyclopedia/enver-pasha.jpg",artist:"Nicola Perscheid",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Enver_Pasha_1911.jpg"},
+    legacy:{slug:"mustafa-kemal-ataturk",name:"Mustafa Kemal Atatürk",img:"/images/encyclopedia/mustafa-kemal-ataturk.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ataturk1930s.jpg"}
+  },
+  "Arab Spring": {
+    events:{slug:"hosni-mubarak",name:"Hosni Mubarak",img:"/images/encyclopedia/hosni-mubarak.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hosni_Mubarak_-_Official_Photo_(cropped).JPG"},
+    people:{slug:"muammar-gaddafi",name:"Muammar Gaddafi",img:"/images/encyclopedia/muammar-gaddafi.jpg",artist:"Stevan Kragujević",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Moamer_el_Gadafi_(cropped).jpg"},
+    outcomes:{slug:"mohamed-morsi",name:"Mohamed Morsi",img:"/images/encyclopedia/mohamed-morsi.jpg",artist:"Wilson Dias/ABr",licence:"CC BY 3.0 br",source:"https://commons.wikimedia.org/wiki/File:Mohamed_Morsi-05-2013.jpg"}
+  },
+  "Meiji Restoration": {
+    background:{slug:"tokugawa-shogunate",name:"Tokugawa Shogunate",img:"/images/encyclopedia/tokugawa-shogunate.jpg",artist:"Maproom",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_Japan_in_Provinces_in_time_of_Iyeyasu.jpg"},
+    aims:{slug:"charter-oath",name:"Charter Oath",img:"/images/encyclopedia/charter-oath.jpg",artist:"Government of Japan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5jo1.gif"},
+    events:{slug:"matthew-c-perry",name:"Matthew C. Perry",img:"/images/encyclopedia/matthew-c-perry.jpg",artist:"Mathew Benjamin Brady",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Commodore_Matthew_Calbraith_Perry.png"},
+    people:{slug:"emperor-meiji",name:"Emperor Meiji",img:"/images/encyclopedia/emperor-meiji.jpg",artist:"Uchida Kuichi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Meiji_Emperor_(cropped)(b).jpg"},
+    outcomes:{slug:"saigo-takamori",name:"Saigo Takamori",img:"/images/encyclopedia/saigo-takamori.jpg",artist:"C. Nakagawa (from signature)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saigo_Takamori_(b).jpg"},
+    legacy:{slug:"meiji-constitution",name:"Meiji Constitution",img:"/images/encyclopedia/meiji-constitution.jpg",artist:"Kantei",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Meiji-Constitution-Empire-of-Japan.png"}
   }
 };

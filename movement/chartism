@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Chartism: Aims, Course and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Chartism was a working-class movement for political reform in the United Kingdom from 1838 to 1857, which petitioned Parliament in millions for the six…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Chartism: Aims, Course and Legacy — The Epoch Institute">
+<meta property="og:description" content="Chartism was a working-class movement for political reform in the United Kingdom from 1838 to 1857, which petitioned Parliament in millions for the six…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/movement/chartism">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/chartism.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/chartism.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/movement/chartism">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Movements & revolutions","item":"https://the-epoch-institute.org/profiles?kind=movement"},{"@type":"ListItem","position":4,"name":"Chartism"}]},{"@type":"Article","headline":"Chartism","description":"Chartism was a working-class movement for political reform in the United Kingdom from 1838 to 1857, which petitioned Parliament in millions for the six…","url":"https://the-epoch-institute.org/movement/chartism","mainEntityOfPage":"https://the-epoch-institute.org/movement/chartism","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Chartism"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/chartism.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=movement">Movements &amp; revolutions</a></li><li aria-current="page">Chartism</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Chartism.png" alt="Chartism" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Movement · Europe</p>
+        <h1 class="profile-detail-name">Chartism</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val">the United Kingdom, strongest in <a class="enc-link" href="/encyclopedia/northern-england">Northern England</a>, the East <a class="enc-link" href="/encyclopedia/midlands">Midlands</a>, the <a class="enc-link" href="/encyclopedia/staffordshire">Staffordshire</a> Potteries, the Black Country and the <a class="enc-link" href="/encyclopedia/south-wales">South Wales</a> Valleys; meetings in <a class="enc-link" href="/encyclopedia/london">London</a>, Birmingham, <a class="enc-link" href="/encyclopedia/glasgow">Glasgow</a> and Manchester; smaller groups in Ireland and <a class="enc-link" href="/encyclopedia/scotland">Scotland</a>; later an influence in <a class="enc-link" href="/encyclopedia/australia">Australia</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">launched 1838; first petition and Newport Rising 1839; second petition and strike wave 1842; National Land Company 1844–1848; third petition and Kennington Common meeting 1848; decline in the 1850s, last <a class="enc-link" href="/encyclopedia/national-convention">National Convention</a> 1858</span></div>
+          <div class="info-stat"><span class="info-stat-label">Leading figures</span><span class="info-stat-val">Feargus O’Connor, owner of the Northern Star and its best-loved leader; William Lovett of the <a class="enc-link" href="/encyclopedia/london">London</a> Working Men’s Association; John Frost, leader of the Newport Rising; George Julian Harney, editor and advocate of physical force; Ernest Jones, barrister and socialist; Thomas Cooper, poet</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">all three petitions rejected and the movement suppressed; after it faded, five of its six points became law between 1867 and 1918, all but annual elections</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The People’s Charter of 1838 asked for six reforms: a vote for every man over twenty-one, the secret ballot, no property qualification for MPs, payment of MPs, equal constituencies and annual elections.</li><li>Petitions signed by 1.3 million people in 1839 and over three million in 1842 were rejected by the House of Commons, and the risings and strikes that followed were put down with arrests and transportation.</li><li>Chartism directly won no reform, but its demands were enacted later by other reformers: the secret ballot in 1872, payment of MPs in 1911 and full manhood suffrage in 1918.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In 2011 a small pamphlet of 16 hymns, previously unknown and uncatalogued, was discovered in Todmorden Library; it is believed to be the only Chartist hymnal in existence.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#background">Background</a></li><li><a href="#aims">Aims</a></li><li><a href="#events">Course of Events</a></li><li><a href="#people">People</a></li><li><a href="#outcomes">Outcomes</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1838</span><span class="rf-text">The People’s Charter is published, setting out the movement’s six aims</span></li><li><span class="rf-year">1839</span><span class="rf-text">A petition signed by 1.3 million working people is presented to the House of Commons, which votes not to hear the petitioners</span></li><li><span class="rf-year">1839</span><span class="rf-text">John Frost leads several thousand marchers to the Westgate Hotel in Newport, where more than twenty Chartists are killed</span></li><li><span class="rf-year">1842</span><span class="rf-text">A second petition of over three million signatures is rejected, and a wave of strikes spreads from the <a class="enc-link" href="/encyclopedia/staffordshire">Staffordshire</a> Potteries</span></li><li><span class="rf-year">1847</span><span class="rf-text">Feargus O’Connor is elected for <a class="enc-link" href="/encyclopedia/nottingham">Nottingham</a>, the only Chartist ever to become an MP</span></li><li><span class="rf-year">1848</span><span class="rf-text">A peaceful mass meeting on Kennington Common sends the third petition to Parliament, while 100,000 special constables stand by</span></li><li><span class="rf-year">1858</span><span class="rf-text">The final <a class="enc-link" href="/encyclopedia/national-convention">National Convention</a> is attended by only a handful of delegates</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/reform-act-1832">Reform Act 1832</a> failed to extend the vote beyond those who owned property, and the political leaders of the working class spoke of a great act of betrayal. That sense was strengthened by the Whig governments of the 1830s, above all by the hated Poor Law Amendment of 1834, which deprived working people of outdoor relief and drove the poor into workhouses, where families were separated. The massive wave of opposition to it in the north of <a class="enc-link" href="/encyclopedia/england">England</a> in the late 1830s made Chartism a mass movement: it seemed that only the vote for working men would change things.</p><p>In 1836 William Lovett and Henry Hetherington founded the <a class="enc-link" href="/encyclopedia/london">London</a> Working Men’s Association, and in the autumn of that year the <a class="enc-link" href="/encyclopedia/carmarthen">Carmarthen</a> Working Men’s Association began Chartism in <a class="enc-link" href="/encyclopedia/wales">Wales</a>. The movement was strongest where working people depended on single industries and suffered wild swings in economic activity, and weaker in places with more varied economies, such as <a class="enc-link" href="/encyclopedia/bristol">Bristol</a>.</p><p>A radical press prepared the ground. The Poor Man’s Guardian, edited by Hetherington in the 1830s, condemned the Reform Act and debated what its writers called moral against physical force. It was succeeded by the Northern Star, which in 1839 was the best-selling provincial newspaper in <a class="enc-link" href="/encyclopedia/britain">Britain</a>, with a circulation of 50,000, and was often read aloud in coffeehouses, workplaces and the open air.</p></div>
+      </div>
+      <div class="profile-section-block" id="aims">
+        <h2 class="profile-section-title">Aims</h2>
+        <div class="profile-section-body"><p>The People’s Charter set out six reforms: a vote for every man aged twenty-one and above, of sound mind and not undergoing punishment for a crime; the secret ballot; no property qualification for Members of Parliament; payment of Members, so that men of modest means could serve; equal constituencies; and annual parliamentary elections, as a check on bribery and intimidation. None of the demands was new, but the Charter became one of the most famous political manifestos of 19th-century <a class="enc-link" href="/encyclopedia/britain">Britain</a>.</p><p>Chartists saw themselves as fighting political corruption and working for democracy in an industrial society, but many supported them for economic reasons, against wage cuts and unemployment. At Kersal Moor in 1838 Joseph Rayner Stephens called Chartism “a knife and fork, a bread and cheese question”. Its strategy was constitutional: petitions and mass meetings were to show such support that politicians would concede manhood suffrage, although some Chartists prepared for insurrection.</p><p>Christian Chartists held that faith had to be carried into political life; more than 20 Chartist churches existed in <a class="enc-link" href="/encyclopedia/scotland">Scotland</a> by 1841, and some called for the absolute separation of church and state. Chartist papers also denounced imperialism, condemning the <a class="enc-link" href="/encyclopedia/first-opium-war">First Opium War</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="events">
+        <h2 class="profile-section-title">Course of Events</h2>
+        <div class="profile-section-body"><p>Chartism was launched in 1838 with large meetings in Birmingham, <a class="enc-link" href="/encyclopedia/glasgow">Glasgow</a> and the north of <a class="enc-link" href="/encyclopedia/england">England</a>. A <a class="enc-link" href="/encyclopedia/national-convention">National Convention</a> met in <a class="enc-link" href="/encyclopedia/london">London</a> early in 1839, and in June a petition signed by 1.3 million people was presented to the House of Commons, which voted by a large majority not to hear the petitioners. On the night of 3–4 November 1839 John Frost led several thousand marchers to the Westgate Hotel in Newport, which was held by soldiers; more than twenty Chartists were killed. Risings at Sheffield and Bradford the following January were betrayed by spies and easily quashed.</p><p>In early May 1842 a second petition of over three million signatures was rejected. A depression and wage cuts set off strikes in 14 English and 8 Scottish counties, known as the Plug Plot because strikers pulled the plugs from steam boilers; hundreds were imprisoned and dozens transported. From 1843 Feargus O’Connor promoted a Chartist Co-operative Land Company, which settled five estates between 1844 and 1848 before Parliament ordered it shut down.</p><p>News of revolution in <a class="enc-link" href="/encyclopedia/paris">Paris</a> in February 1848 revived the movement. For a meeting on Kennington Common on 10 April 1848 the authorities recruited 100,000 special constables; O’Connor cancelled the procession, and the third petition went to Parliament in three cabs. The movement declined rapidly afterwards, and the last National Convention, in 1858, drew only a handful of delegates.</p></div>
+      </div>
+      <div class="profile-section-block" id="people">
+        <h2 class="profile-section-title">People</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/robert-owen"><img src="/images/encyclopedia/robert-owen.jpg" alt="Robert Owen" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/robert-owen">Robert Owen</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Robert_Owen_by_William_Henry_Brooke.jpg" target="_blank" rel="noopener">William Henry Brooke, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>According to Dorothy Thompson, the preeminent historian of Chartism, its members, supporters and most of its leaders were working men, with a few shopkeepers, innkeepers and members of lesser professions. Feargus O’Connor, proprietor of the Northern Star, was its acknowledged leader and, in Thompson’s words, its “most well-loved man”: over six feet tall, with a voice that could carry to an open-air crowd of tens of thousands. In 1847 he became the only Chartist elected to Parliament. Early historians accused him of egotism, but he has lately been reassessed more favourably.</p><p>William Lovett sat on the committee that drew up the Charter and, like <a class="enc-link" href="/encyclopedia/robert-owen">Robert Owen</a>, sought an understanding with the middle classes. John Frost led the Newport Rising and was transported with Zephaniah Williams and William Jones. Samuel Holberry, leader of the Sheffield rising, died in prison and became a Chartist martyr. George Julian Harney, editor of the Northern Star from 1845 to 1850, was called by Tristram Hunt Chartism’s enfant terrible, an admirer of Robespierre who favoured physical force. Ernest Jones, born into the landed <a class="enc-link" href="/encyclopedia/gentry">gentry</a> and a barrister, gave the late movement a socialist direction; he and Harney knew <a class="enc-link" href="/encyclopedia/karl-marx">Karl Marx</a> and Friedrich Engels. Thomas Cooper wrote “The Purgatory of Suicides” in prison, and William Cuffay was transported to <a class="enc-link" href="/encyclopedia/australia">Australia</a> after 1848.</p></div>
+      </div>
+      <div class="profile-section-block" id="outcomes">
+        <h2 class="profile-section-title">Outcomes</h2>
+        <div class="profile-section-body"><p>In its own time Chartism failed. Parliament rejected all three petitions, and the state answered risings and strikes with soldiers, spies, trials and transportation. In 1842 O’Connor, Harney and Cooper were among the leaders arrested, though the Attorney General’s prosecution of O’Connor and 57 others won no conviction on the serious charges. In 1848 Parliament revived a statute of Charles II limiting how many could present a petition in person and made seditious acts felonies punishable by death or transportation. A joint conference with the middle-class National Complete Suffrage Union broke down in December 1842, when its leader Joseph Sturge withdrew.</p><p>Robert George Gammage, a veteran Chartist and later its historian, blamed the decline on O’Connor’s egotism and vanity; more recent historians, notably Dorothy Thompson, see the process as too complex to be put down to one man. Malcolm Chase argues that it was not a movement that failed but one marked by a multiplicity of small victories, and that Chartism collapsed but Chartists did not.</p><p>Chartism directly generated no reforms, but after 1848 its demands seemed less threatening and were gradually enacted by others. Part of the urban working men gained the vote under the Reform Act 1867, the secret ballot came in 1872, payment of MPs in 1911 and full manhood suffrage in 1918. Annual elections remain the only demand never implemented.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/eureka-rebellion"><img src="/images/encyclopedia/eureka-rebellion.jpg" alt="Eureka Rebellion" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/eureka-rebellion">Eureka Rebellion</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Eureka_stockade_battle.jpg" target="_blank" rel="noopener">John Black Henderson (1827-1918), Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Former Chartists carried the cause on: the Reform League campaigned for manhood suffrage in the 1860s with former Chartists in its ranks. In Manchester the movement had undermined the power of the old Tory-Anglican elite, and Chartism has been seen as a forerunner of the Labour Party. Taking part filled some working men with self-confidence: they learned to speak in public and to publish their writings, and many became journalists, poets, ministers and councillors.</p><p>Leaders transported to <a class="enc-link" href="/encyclopedia/australia">Australia</a> spread their beliefs there. In 1854 miners at the <a class="enc-link" href="/encyclopedia/eureka-rebellion">Eureka Stockade</a> at <a class="enc-link" href="/encyclopedia/ballarat">Ballarat</a>, Victoria, put forward Chartist demands, and within two years of the revolt’s suppression Victoria held its first elections with near-<a class="enc-link" href="/encyclopedia/universal-suffrage">universal male suffrage</a> and the secret ballot, which spread from Australia to the UK and <a class="enc-link" href="/encyclopedia/canada">Canada</a> in the 1870s. It has been argued that Chartist influence lay behind later Australian reforms such as women’s suffrage and compulsory voting. In the African colonies after 1920 a “colonial Chartism” occasionally appeared, calling for welfare, education, free speech and representation for native people.</p><p>Cottages built by the Land Company are still lived in, and Rosedene at Dodford, <a class="enc-link" href="/encyclopedia/worcestershire">Worcestershire</a>, is kept by the National Trust. A large mural by Tony Hollaway on the Brandon Estate in Kennington, commissioned in the early 1960s, commemorated the meeting of 10 April 1848.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Chartism was a British working-class movement of 1838 to 1857 that demanded the six points of the People’s Charter, above all a vote for every man. Its mass petitions of 1839, 1842 and 1848 were rejected and its risings and strikes suppressed, but after it faded five of its six demands were enacted between 1867 and 1918.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">4 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="chartism"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"A second petition of over three million signatures is rejected, and a wave of strikes spreads from the Staffordshire Potteries","o":["1848","1838","1842","1839"],"a":2,"w":"1842: A second petition of over three million signatures is rejected, and a wave of strikes spreads from the Staffordshire Potteries."},{"p":"Which came first?","q":"","o":["The People’s Charter is published, setting out the movement’s six aims","The final National Convention is attended by only a handful of delegates"],"a":0,"w":"1838: The People’s Charter is published, setting out the movement’s six aims · 1858: The final National Convention is attended by only a handful of delegates."},{"p":"In which year?","q":"A petition signed by 1.3 million working people is presented to the House of Commons, which votes not to hear the petitioners","o":["1842","1839","1847","1858"],"a":1,"w":"1839: A petition signed by 1.3 million working people is presented to the House of Commons, which votes not to hear the petitioners."},{"p":"In which year?","q":"Feargus O’Connor is elected for Nottingham, the only Chartist ever to become an MP","o":["1839","1847","1848","1838"],"a":1,"w":"1847: Feargus O’Connor is elected for Nottingham, the only Chartist ever to become an MP."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Malcolm Chase, Chartism: A New History (Manchester University Press, 2007)</li>
+        <li>Dorothy Thompson, The Chartists: Popular Politics in the Industrial Revolution (1984)</li>
+        <li>Dorothy Thompson, The Early Chartists (1971)</li>
+        <li>David J. V. Jones, The Last Rising: The Newport Insurrection 1839 (1985)</li>
+        <li>R. G. Gammage, History of the Chartist Movement 1837–1854</li>
+        <li>Asa Briggs, Chartist Studies (1959)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other movements</p>
+      <div class="related-grid"><a class="related-card" href="/movement/tanzimat"><img src="/logos/thumbs/Tanzimat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tanzimat</span><span class="related-card-dates">1839 CE – 1876 CE</span></a><a class="related-card" href="/movement/womens-suffrage-movement"><img src="/logos/thumbs/Women's%20suffrage%20movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Women's suffrage movement</span><span class="related-card-dates">1848 CE – 1971 CE</span></a><a class="related-card" href="/movement/taiping-rebellion"><img src="/logos/thumbs/Taiping%20Rebellion.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Taiping Rebellion</span><span class="related-card-dates">1850 CE – 1864 CE</span></a><a class="related-card" href="/movement/meiji-restoration"><img src="/logos/thumbs/Meiji%20Restoration.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Meiji Restoration</span><span class="related-card-dates">1853 CE – 1889 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/movement/nahda"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Nahda.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Nahda</span><span class="related-card-dates">c. 1820 CE – c. 1914 CE</span></a><a class="related-card" href="/movement/tanzimat"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Tanzimat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tanzimat</span><span class="related-card-dates">1839 CE – 1876 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Chartism",slug="chartism",url="https://the-epoch-institute.org/movement/chartism";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Chartism on The Epoch Institute — aims, course and legacy. https://the-epoch-institute.org/movement/chartism #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/movement/chartism"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Chartism",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Chartism",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

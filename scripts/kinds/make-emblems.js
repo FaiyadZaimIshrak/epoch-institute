@@ -36,6 +36,12 @@ const EMBLEMS = [
   ['Mesopotamian religion', 'M'], ['Canaanite religion', 'C'], ['Roman religion', 'R'], ['Celtic religion', 'C'], ['Slavic paganism', 'S'],
   ['Mithraism', 'M'], ['Tengrism', 'T'], ['Bon', 'བ', '"Microsoft Himalaya", serif', 260], ['Chinese folk religion', '神', 'serif-cjk', 220],
   ['Druze faith', 'D'], ['Yazidism', 'Y'], ['Haitian Vodou', 'V'],
+  // A5, 3 Nov 2026: movements take their initial, as the first fifteen do (no party, flag or regime symbol);
+  // the Meiji Restoration 明 ("Meiji", the era's first character), the May Fourth Movement 五四
+  ['Counter-Reformation', 'C'], ['Chartism', 'C'], ['Luddites', 'L'], ['Decembrist revolt', 'D'], ['Impressionism', 'I'],
+  ['Modernism', 'M'], ['Bauhaus', 'B'], ['Solidarity', 'S'], ['Velvet Revolution', 'V'], ['Environmental movement', 'E'],
+  ['Taiping Rebellion', 'T'], ['May Fourth Movement', '五四', 'serif-cjk', 170], ['Non-Aligned Movement', 'N'], ['Harlem Renaissance', 'H'],
+  ['Négritude', 'N'], ['Zionism', 'Z'], ['Tanzimat', 'T'], ['Young Turks', 'Y'], ['Arab Spring', 'A'], ['Meiji Restoration', '明', 'serif-cjk', 220],
   ["El Perú-Waka'", 'W'],   // the Maya city's own name, not the Spanish "Perú"
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Harlem Renaissance: Aims, Course and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Harlem Renaissance was an African-American intellectual and cultural movement in music, dance, art, literature, theatre, politics and scholarship…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Harlem Renaissance: Aims, Course and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Harlem Renaissance was an African-American intellectual and cultural movement in music, dance, art, literature, theatre, politics and scholarship…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/movement/harlem-renaissance">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/harlem-renaissance.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/harlem-renaissance.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/movement/harlem-renaissance">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Movements & revolutions","item":"https://the-epoch-institute.org/profiles?kind=movement"},{"@type":"ListItem","position":4,"name":"Harlem Renaissance"}]},{"@type":"Article","headline":"Harlem Renaissance","description":"The Harlem Renaissance was an African-American intellectual and cultural movement in music, dance, art, literature, theatre, politics and scholarship…","url":"https://the-epoch-institute.org/movement/harlem-renaissance","mainEntityOfPage":"https://the-epoch-institute.org/movement/harlem-renaissance","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Harlem Renaissance"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/harlem-renaissance.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=movement">Movements &amp; revolutions</a></li><li aria-current="page">Harlem Renaissance</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Harlem%20Renaissance.png" alt="Harlem Renaissance" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Movement · Americas</p>
+        <h1 class="profile-detail-name">Harlem Renaissance</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val">Harlem in <a class="enc-link" href="/encyclopedia/manhattan">Manhattan</a>, <a class="enc-link" href="/encyclopedia/new-york">New York</a> City, above all; other urban areas of the Northeastern and <a class="enc-link" href="/encyclopedia/midwestern-united-states">Midwestern United States</a>; and <a class="enc-link" href="/encyclopedia/paris">Paris</a>, where Josephine Baker performed and Francophone Black writers from the colonies took up its influence.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Roots in the end of the Civil War in 1865 and the Great Migration; a first stage from the late 1910s; its zenith from about 1924, when Opportunity held a party for Black writers attended by white publishers, to the stock-market crash of 1929; an abrupt decline in the <a class="enc-link" href="/encyclopedia/great-depression">Great Depression</a> of the 1930s.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Leading figures</span><span class="info-stat-val">Alain Locke, its “dean”, editor of The New Negro; the writers Langston Hughes, Claude McKay, Zora Neale Hurston, Countee Cullen, Jean Toomer, Jessie Fauset, Nella Larsen and James Weldon Johnson; Hubert Harrison, “The Father of Harlem Radicalism”; <a class="enc-link" href="/encyclopedia/w-e-b-du-bois">W. E. B. Du Bois</a>; Duke Ellington, Louis Armstrong and Bessie Smith in music; the painter Aaron Douglas and the sculptor Augusta Savage.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">Wider publication of Black writers by mainstream houses, Black music and <a class="enc-link" href="/encyclopedia/theatre">theatre</a> on Broadway and in the concert hall, a new racial pride that changed how <a class="enc-link" href="/encyclopedia/african-americans">African Americans</a> were seen, and a foundation for the civil rights movement; an abrupt end in the <a class="enc-link" href="/encyclopedia/great-depression">Great Depression</a>.</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Driven by the Great Migration out of the Jim Crow South and a renewed militancy in the struggle for civil rights, the movement made Harlem the centre of a flowering of African-American literature, music, <a class="enc-link" href="/encyclopedia/theatre">theatre</a> and art.</li><li>Its idea of the New Negro, named after Alain Locke’s 1925 anthology, held that through literature, art and music Black Americans could challenge racism and stereotypes and “uplift” the race.</li><li>It brought jazz to Broadway and Black writers into mainstream publishing, but it depended heavily on white patrons and publishers, and it ended abruptly in the <a class="enc-link" href="/encyclopedia/great-depression">Great Depression</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Shuffle Along, a musical of 1921 produced, composed, directed and written by <a class="enc-link" href="/encyclopedia/african-americans">African Americans</a>, ran for 504 performances on Broadway; Langston Hughes later wrote that <a class="enc-link" href="/encyclopedia/manhattan">Manhattan</a>’s Black Renaissance “began with Shuffle Along”.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#background">Background</a></li><li><a href="#aims">Aims</a></li><li><a href="#events">Course of Events</a></li><li><a href="#people">People</a></li><li><a href="#outcomes">Outcomes</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1917</span><span class="rf-text">Hubert Harrison founds the Liberty League and The Voice, the first organisation and first newspaper of the New Negro Movement</span></li><li><span class="rf-year">1919</span><span class="rf-text">Claude McKay publishes his militant sonnet “If We Must Die” in the year of the Red Summer</span></li><li><span class="rf-year">1921</span><span class="rf-text">Shuffle Along brings an African-American musical and jazz to Broadway</span></li><li><span class="rf-year">1924</span><span class="rf-text">Opportunity: A Journal of Negro Life holds a party for Black writers attended by many white publishers</span></li><li><span class="rf-year">1925</span><span class="rf-text">Alain Locke publishes the anthology The New Negro</span></li><li><span class="rf-year">1926</span><span class="rf-text">Langston Hughes publishes his essay “The Negro Artist and the Racial Mountain”</span></li><li><span class="rf-year">1929</span><span class="rf-text">The stock-market crash begins the <a class="enc-link" href="/encyclopedia/great-depression">Great Depression</a> and ends the movement’s zenith</span></li><li><span class="rf-year">1935</span><span class="rf-text">Augusta Savage’s call for artists to be paid leads to the start of the Harlem Artist Guild</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <div class="profile-section-body"><p>The roots of the Harlem Renaissance reach back to the end of the <a class="enc-link" href="/encyclopedia/american-civil-war">American Civil War</a> in 1865, when most <a class="enc-link" href="/encyclopedia/african-americans">African Americans</a> had been enslaved in the South; in the <a class="enc-link" href="/encyclopedia/reconstruction-era">Reconstruction era</a> the emancipated began to strive for civic participation, political equality and economic and cultural self-determination. Many of the movement’s leading figures came from a generation that remembered the gains and losses of Reconstruction, and their parents or grandparents, or they themselves, had sometimes been enslaved. In the early 20th century the Great Migration carried African Americans out of the Jim Crow South to the cities of the Northeast and <a class="enc-link" href="/encyclopedia/midwestern-united-states">Midwest</a>, in search of a better life and relief from institutionalised racism, while people of African descent came from the racially stratified communities of the <a class="enc-link" href="/encyclopedia/caribbean">Caribbean</a>.</p><p>Harlem, developed in the 19th century as an exclusive suburb for the white middle classes, became an African-American neighbourhood in the early 1900s; in 1910 African-American realtors and a church group bought a large block along 135th Street and Fifth Avenue. Many more arrived during <a class="enc-link" href="/encyclopedia/first-world-war">World War I</a>, when migration from <a class="enc-link" href="/encyclopedia/europe">Europe</a> virtually ceased and the war effort demanded unskilled industrial labour. Yet racism followed them north: Black soldiers of segregated units such as the Harlem Hellfighters came home to a nation that often did not respect their accomplishments, and race riots broke out across the country in the Red Summer of 1919.</p></div>
+      </div>
+      <div class="profile-section-block" id="aims">
+        <h2 class="profile-section-title">Aims</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/w-e-b-du-bois"><img src="/images/encyclopedia/w-e-b-du-bois.jpg" alt="W. E. B. Du Bois" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/w-e-b-du-bois">W. E. B. Du Bois</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:W.E.B._Du_Bois_by_James_E._Purdy,_1907_(cropped).jpg" target="_blank" rel="noopener">James E. Purdy / Adam Cuerden, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>At its centre stood the idea of the New Negro, an overt racial pride: through intellect and the making of literature, art and music, Black Americans would challenge pervading racism and stereotypes, promote progressive or socialist politics and racial and social integration, and “uplift” the race. The movement was prompted by a renewed militancy in the struggle for civil rights, and it sought to redefine African-American identity free from degrading stereotypes. Langston Hughes wrote that Harlem gave the courage “to express our individual dark-skinned selves without fear or shame”, and in “The Negro Artist and the Racial Mountain” (1926) he spoke for most of its artists in claiming the freedom to express themselves whatever Black or white readers thought.</p><p>No single form defined its art. It took in a Pan-African perspective, “high” and “low” culture, spirituals, blues and jazz, and traditional as well as experimental forms such as <a class="enc-link" href="/encyclopedia/modernism">modernism</a> and jazz poetry. Its themes included the influence of <a class="enc-link" href="/encyclopedia/slavery">slavery</a> and of emerging folk traditions on Black identity, the effects of institutional racism, the dilemmas of writing and performing for elite white audiences, and how to convey modern Black life in the urban North. <a class="enc-link" href="/encyclopedia/w-e-b-du-bois">W. E. B. Du Bois</a>’s ideas of the “talented tenth” and of “double consciousness” were part of its debates, as was an open critique of <a class="enc-link" href="/encyclopedia/christianity">Christianity</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="events">
+        <h2 class="profile-section-title">Course of Events</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/great-depression"><img src="/images/encyclopedia/great-depression.jpg" alt="Great Depression" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/great-depression">Great Depression</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone,_02-1931_-_NARA_-_541927.jpg" target="_blank" rel="noopener">Unknown author or not provided, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>A first stage began in the late 1910s. In 1917 Ridgely Torrence’s Plays for a Negro Theater, whose African-American actors rejected the stereotypes of blackface and the minstrel show, were called by James Weldon Johnson “the most important single event in the entire history of the Negro in the American Theater”. The same year Hubert Harrison founded the Liberty League and The Voice. In 1919 Claude McKay published his militant sonnet “If We Must Die”, in which Black readers heard defiance amid the race riots and lynchings of the time.</p><p>In 1921 Shuffle Along, written, composed and produced by <a class="enc-link" href="/encyclopedia/african-americans">African Americans</a>, brought jazz to Broadway and ran for 504 performances. The zenith came between about 1924, when Opportunity: A Journal of Negro Life held a party for Black writers attended by many white publishers, and 1929. Alain Locke’s anthology The New Negro appeared in 1925, and The Crisis and Opportunity published Black writers and gave them annual prizes. In 1932 Augusta Savage founded the Savage Studio of Arts and Crafts, and her encouragement led to the Harlem Artist Guild in 1935; in 1939 she was the only African American commissioned to create an exhibit for the <a class="enc-link" href="/encyclopedia/new-york">New York</a> World’s Fair. The <a class="enc-link" href="/encyclopedia/great-depression">Great Depression</a>, which began with the crash of 1929, brought the era to an abrupt end.</p></div>
+      </div>
+      <div class="profile-section-block" id="people">
+        <h2 class="profile-section-title">People</h2>
+        <div class="profile-section-body"><p>Alain Locke, the philosopher regarded as the movement’s “dean”, edited The New Negro, which brought together Zora Neale Hurston, Langston Hughes and Claude McKay, the communist poet from <a class="enc-link" href="/encyclopedia/jamaica">Jamaica</a>, with lesser-known writers such as the poet Anne Spencer. Hughes’s “The Weary Blues” was a notable jazz poem, and Countee Cullen’s “Heritage” weighed an African past against Christian culture. Jean Toomer, Jessie Fauset, Nella Larsen, Eric D. Walrond and James Weldon Johnson also became nationally known, and Richard Bruce Nugent explored experimental form and LGBT themes. Hubert Harrison argued in 1927 that the “Renaissance” was largely a white invention.</p><p>In music Duke Ellington, Louis Armstrong and Fletcher Henderson led bands, and Eubie Blake, Noble Sissle, Jelly Roll Morton, James P. Johnson, Fats Waller, Ethel Waters and Florence Mills performed. Ma Rainey and Bessie Smith sang openly of love between women, and Gladys Bentley ran the Clam House, a hub for queer patrons. Roland Hayes was the first African-American man widely recognised as a concert artist, and the composers William Grant Still and Florence Price set Black poets’ verse. Aaron Douglas, the “Father of African-American Art”, drew on ancient Egyptian and Native American motifs, and Augusta Savage put everyday Black people at the forefront of her sculpture. White patrons such as Carl Van Vechten and Charlotte Osgood Mason opened doors.</p></div>
+      </div>
+      <div class="profile-section-block" id="outcomes">
+        <h2 class="profile-section-title">Outcomes</h2>
+        <div class="profile-section-body"><p>The movement opened mainstream publishing houses and white periodicals to Black writers, whose novels, magazines and newspapers drew national attention. Shuffle Along proved that Black and white audiences would pay to see <a class="enc-link" href="/encyclopedia/african-americans">African Americans</a> on Broadway; all-black productions of George Gershwin’s Porgy and Bess and of Four Saints in Three Acts followed, and composers carried blues, spirituals and jazz into the concert hall. It brought the Black experience within the corpus of American cultural history and changed the image of the African American from rural, undereducated peasant to urban, cosmopolitan sophistication.</p><p>Its dependence on white patrons, publishers and audiences was also a weakness. <a class="enc-link" href="/encyclopedia/w-e-b-du-bois">Du Bois</a> criticised Claude McKay’s bestselling Home to Harlem (1928) for meeting the “prurient demand[s]” of white readers, and Black work was treated as exotic: once a publication had taken one, other Black authors had to look elsewhere. Some of the most famous clubs, such as the <a class="enc-link" href="/encyclopedia/cotton">Cotton</a> Club, where Ellington often played, admitted white audiences only. Critics argue that the movement could not separate itself from white, European culture, its intellectuals imitating white manners and etiquette. Sharing American progressivism’s faith in reform and in art as an agent of change, its artists were unprepared for the <a class="enc-link" href="/encyclopedia/great-depression">Great Depression</a>, and the movement ended abruptly on naïve assumptions about the centrality of culture.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Harlem Renaissance helped lay the foundation for the civil rights movement after <a class="enc-link" href="/encyclopedia/second-world-war">World War II</a>, giving the African-American community a spirit of self-determination, a growing sense of black urbanity and black militancy, and a base for the struggles of the 1950s and 1960s. Many Black artists who came to maturity afterwards were inspired by it, and <a class="enc-link" href="/encyclopedia/w-e-b-du-bois">Du Bois</a>’s idea of double consciousness was revived in the Black Pride movement of the early 1970s. Its new appreciation of folk roots and spirituals gave artists a rich source, and it is regarded as a creative crucible for African-American art and for its institutionalisation in white-dominated museums and cultural institutions.</p><p>Its reach was international: many Francophone Black writers from the African and <a class="enc-link" href="/encyclopedia/caribbean">Caribbean</a> colonies who lived in <a class="enc-link" href="/encyclopedia/paris">Paris</a> were influenced by it, and in Paris the dancer Josephine Baker set fashions for Black and white women alike. Later scholarship has widened its picture. Black feminist critics have re-evaluated the work of women whose contributions were overlooked at the time, and Nella Larsen and Jessie Fauset have gained renewed acclaim. Writers have also recovered its queer culture, from the drag balls of the Hamilton Lodge to the blues of the cabarets, though homosexual acts could still lead to arrest; Henry Louis Gates Jr. wrote in 1993 that the Harlem Renaissance “was surely as gay as it was black”.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Harlem Renaissance was the flowering of African-American literature, music, <a class="enc-link" href="/encyclopedia/theatre">theatre</a>, art and thought centred in Harlem in the 1920s and 1930s, known at the time as the New Negro Movement. Born of the Great Migration and a renewed militancy for civil rights, it helped redefine how <a class="enc-link" href="/encyclopedia/african-americans">African Americans</a> were seen and laid foundations for the civil rights movement, before the <a class="enc-link" href="/encyclopedia/great-depression">Great Depression</a> cut it short.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">3 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="harlem-renaissance"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Augusta Savage’s call for artists to be paid leads to the start of the Harlem Artist Guild","o":["1921","1926","1935","1919"],"a":2,"w":"1935: Augusta Savage’s call for artists to be paid leads to the start of the Harlem Artist Guild."},{"p":"In which year?","q":"Shuffle Along brings an African-American musical and jazz to Broadway","o":["1917","1921","1935","1925"],"a":1,"w":"1921: Shuffle Along brings an African-American musical and jazz to Broadway."},{"p":"In which year?","q":"The stock-market crash begins the Great Depression and ends the movement’s zenith","o":["1919","1924","1929","1935"],"a":2,"w":"1929: The stock-market crash begins the Great Depression and ends the movement’s zenith."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Wall, Cheryl A., The Harlem Renaissance: A Very Short Introduction (Oxford University Press, 2016)</li>
+        <li>Hutchinson, George (ed.), The Cambridge Companion to the Harlem Renaissance (Cambridge University Press, 2007)</li>
+        <li>Wintz, Cary D., and Paul Finkelman, Encyclopedia of the Harlem Renaissance (Routledge, 2012)</li>
+        <li>King, Shannon, Whose Harlem Is This, Anyway? Community Politics and Grassroots Activism during the New Negro Era (New York University Press, 2015)</li>
+        <li>Brown, Linda Rae, “William Grant Still, Florence Price, and William Dawson: Echoes of the Harlem Renaissance”, in Samuel A. Floyd Jr (ed.), Black Music in the Harlem Renaissance (University of Tennessee Press, 1990)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other movements</p>
+      <div class="related-grid"><a class="related-card" href="/movement/bauhaus"><img src="/logos/thumbs/Bauhaus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bauhaus</span><span class="related-card-dates">1919 CE – 1933 CE</span></a><a class="related-card" href="/movement/may-fourth-movement"><img src="/logos/thumbs/May%20Fourth%20Movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">May Fourth Movement</span><span class="related-card-dates">1919 CE – c. 1921 CE</span></a><a class="related-card" href="/movement/negritude"><img src="/logos/thumbs/N%C3%A9gritude.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Négritude</span><span class="related-card-dates">c. 1931 CE – c. 1974 CE</span></a><a class="related-card" href="/movement/pan-africanism"><img src="/logos/thumbs/Pan-Africanism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pan-Africanism</span><span class="related-card-dates">1900 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/movement/pan-africanism"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Pan-Africanism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pan-Africanism</span><span class="related-card-dates">1900 CE – present</span></a><a class="related-card" href="/movement/bauhaus"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Bauhaus.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bauhaus</span><span class="related-card-dates">1919 CE – 1933 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Harlem Renaissance",slug="harlem-renaissance",url="https://the-epoch-institute.org/movement/harlem-renaissance";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Harlem Renaissance on The Epoch Institute — aims, course and legacy. https://the-epoch-institute.org/movement/harlem-renaissance #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/movement/harlem-renaissance"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Harlem Renaissance",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Harlem Renaissance",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>
