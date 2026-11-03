@@ -4792,5 +4792,145 @@ var SECTION_IMAGES = {
   },
   "Hoabinhian": {
 
+  },
+  "Mesopotamian religion": {
+    beliefs:{slug:"inanna",name:"Inanna",img:"/images/encyclopedia/inanna.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ishtar_on_an_Akkadian_seal.jpg"},
+    texts:{slug:"epic-of-gilgamesh",name:"Epic of Gilgamesh",img:"/images/encyclopedia/epic-of-gilgamesh.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:British_Museum_Flood_Tablet.jpg"},
+    spread:{slug:"hammurabi",name:"Hammurabi",img:"/images/encyclopedia/hammurabi.jpg",artist:"Mbzt",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:F0182_Louvre_Code_Hammourabi_Bas-relief_Sb8_rwk.jpg"}
+  },
+  "Canaanite religion": {
+    origins:{slug:"ebla",name:"Ebla",img:"/images/encyclopedia/ebla.jpg",artist:"Mappo",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:HPIM3078_1.JPG"},
+    beliefs:{slug:"asherah",name:"Asherah",img:"/images/encyclopedia/asherah.jpg",artist:"Hanay",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hecht_Museum,_Israel_%E2%80%93_figurines_010.JPG"},
+    texts:{slug:"mesha-stele",name:"Mesha Stele",img:"/images/encyclopedia/mesha-stele.jpg",artist:"Unknown artist",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG"},
+    spread:{slug:"eshmun",name:"Eshmun",img:"/images/encyclopedia/eshmun.jpg",artist:"BlingBling10 at en.wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Eshmun_Temple.jpg"}
+  },
+  "Roman religion": {
+    origins:{slug:"numa-pompilius",name:"Numa Pompilius",img:"/images/encyclopedia/numa-pompilius.jpg",artist:"Classical Numismatic Group",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Numapisocng6371obverse.jpg"},
+    texts:{slug:"aeneid",name:"Aeneid",img:"/images/encyclopedia/aeneid.jpg",artist:"Federico Barocci",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aeneas%27_Flight_from_Troy_by_Federico_Barocci.jpg"},
+    spread:{slug:"cybele",name:"Cybele",img:"/images/encyclopedia/cybele.jpg",artist:"Marshall Astor",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Cybele_Getty_Villa_57.AA.19.jpg"},
+    community:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    legacy:{slug:"theodosius-i",name:"Theodosius I",img:"/images/encyclopedia/theodosius-i.jpg",artist:"www.livius.org",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Theodosius_I.jpg"}
+  },
+  "Celtic religion": {
+    beliefs:{slug:"lugus",name:"Lugus",img:"/images/encyclopedia/lugus.jpg",artist:"Talskubilos",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:PenalbaDeVillastar.jpg"},
+    texts:{slug:"cu-chulainn",name:"Cú Chulainn",img:"/images/encyclopedia/cu-chulainn.jpg",artist:"Stephen Reid",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cuslayshound.jpg"},
+    spread:{slug:"hill-of-tara",name:"Hill of Tara",img:"/images/encyclopedia/hill-of-tara.jpg",artist:"Paulzygmunt",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:The_Municipal_District_of_Ashbourne_-_Hill_of_Tara_-_2025-09-30_10-53-27_001.jpg"}
+  },
+  "Slavic paganism": {
+    texts:{slug:"primary-chronicle",name:"Primary Chronicle",img:"/images/encyclopedia/primary-chronicle.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:14_2_List_of_Radzivill_Chron.jpg"},
+    spread:{slug:"vladimir-the-great",name:"Vladimir the Great",img:"/images/encyclopedia/vladimir-the-great.jpg",artist:"Влад Федченко",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Coin_of_Vladimir_the_Great.JPG"},
+    community:{slug:"svantevit",name:"Svantevit",img:"/images/encyclopedia/svantevit.jpg",artist:"Original: W. Dollese; derivative work by Sławobóg",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Svetovit.png"}
+  },
+  "Mithraism": {
+    origins:{slug:"mount-nemrut",name:"Mount Nemrut",img:"/images/encyclopedia/mount-nemrut.jpg",artist:"Klearchos Kapoutsis from Santorini, Greece",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Mount_Nemrut_-_East_Terrace_(4961323529).jpg"},
+    beliefs:{slug:"mithra",name:"Mithra",img:"/images/encyclopedia/mithra.jpg",artist:"Philippe Chavin",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Taq-e_Bostan_-_High-relief_of_Ardeshir_II_investiture.jpg"}
+  },
+  "Tengrism": {
+    origins:{slug:"xiongnu-empire",name:"Xiongnu Empire",img:"/images/encyclopedia/xiongnu-empire.jpg",artist:"Gary Todd",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Warring_States_Xiongnu_Gold_Crown_-_b.jpg"},
+    texts:{slug:"secret-history-of-the-mongols",name:"Secret History of the Mongols",img:"/images/encyclopedia/secret-history-of-the-mongols.jpg",artist:"Цэндийн Дамдинсүрэн",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SecretHistoryMongols1947.jpg"},
+    spread:{slug:"bulgars",name:"Bulgars",img:"/images/encyclopedia/bulgars.jpg",artist:"Original: Constantine Manasses",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:53-manasses-chronicle.jpg"},
+    community:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    legacy:{slug:"ahmad-yasawi",name:"Ahmad Yasawi",img:"/images/encyclopedia/ahmad-yasawi.jpg",artist:"Cihangir ASHUROV",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ahmad_Yasawi_miniature.png"}
+  },
+  "Bon": {
+    origins:{slug:"mount-kailash",name:"Mount Kailash",img:"/images/encyclopedia/mount-kailash.jpg",artist:"Ondřej Žváček",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Kailash_north.JPG"},
+    spread:{slug:"trisong-detsen",name:"Trisong Detsen",img:"/images/encyclopedia/trisong-detsen.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emperor_Trisong_Detsen.jpg"},
+    community:{slug:"5th-dalai-lama",name:"5th Dalai Lama",img:"/images/encyclopedia/5th-dalai-lama.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thangka_of_the_5th_Dalai_Lama.jpg"}
+  },
+  "Chinese folk religion": {
+    beliefs:{slug:"guan-yu",name:"Guan Yu",img:"/images/encyclopedia/guan-yu.jpg",artist:"Unknown , uploaded by Tiangong83 on zh.wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guanyu-1.jpg"},
+    texts:{slug:"daodejing",name:"Daodejing",img:"/images/encyclopedia/daodejing.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mawangdui_LaoTsu_Ms2.JPG"},
+    spread:{slug:"hongwu-emperor",name:"Hongwu Emperor",img:"/images/encyclopedia/hongwu-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"}
+  },
+  "Druze faith": {
+    spread:{slug:"chouf",name:"Chouf",img:"/images/encyclopedia/chouf.jpg",artist:"Heretiq",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Chouf_mountains.jpg"},
+    legacy:{slug:"sultan-al-atrash",name:"Sultan al-Atrash",img:"/images/encyclopedia/sultan-al-atrash.jpg",artist:"American Colony (Jerusalem) Photography Dept. (photographer unnamed)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sultan_Pasha_Al-Atrash2.jpg"}
+  },
+  "Yazidism": {
+    beliefs:{slug:"yazidis",name:"Yazidis",img:"/images/encyclopedia/yazidis.jpg",artist:"Levi Clancy",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Ezidis_celebrating_Ezidi_New_Year_in_April_2018_at_Lalish_01.jpg"},
+    spread:{slug:"sinjar",name:"Sinjar",img:"/images/encyclopedia/sinjar.jpg",artist:"Amjad.sahep",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Sinjar.jpg"}
+  },
+  "Haitian Vodou": {
+    origins:{slug:"code-noir",name:"Code Noir",img:"/images/encyclopedia/code-noir.jpg",artist:"France, Louis XV, Prault pere",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Le_Code_Noir_1742_edition.jpg"},
+    spread:{slug:"haitian-revolution",name:"Haitian Revolution",img:"/images/encyclopedia/haitian-revolution.jpg",artist:"Aaron Martinet / Alphonse-Charles Masson",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Incendie_de_la_Plaine_du_Cap._Massacre_des_Blancs_par_les_esclaves_noirs_r%C3%A9volt%C3%A9s._France_militaire._Martinet_et_Masson.jpg"}
+  },
+  "Pali": {
+    origins:{slug:"ashoka",name:"Ashoka",img:"/images/encyclopedia/ashoka.jpg",artist:"Photo Dharma from Sadao, Thailand",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Ashoka%27s_visit_to_the_Ramagrama_stupa_Sanchi_Stupa_1_Southern_gateway.jpg"},
+    structure:{slug:"mongkut",name:"Mongkut",img:"/images/encyclopedia/mongkut.jpg",artist:"John Thomson",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:First_King_of_Siam_MET_DP-573-001_(cropped).jpg"},
+    speakers:{slug:"anuradhapura",name:"Anuradhapura",img:"/images/encyclopedia/anuradhapura.jpg",artist:"Thisaru Tharuka",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ruwanweli_Maha_Saaya.jpg"}
+  },
+  "Old English": {
+    origins:{slug:"anglo-saxons",name:"Anglo-Saxons",img:"/images/encyclopedia/anglo-saxons.jpg",artist:"Eadfrith",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LindisfarneChiRiho.jpg"},
+    speakers:{slug:"alfred-the-great",name:"Alfred the Great",img:"/images/encyclopedia/alfred-the-great.jpg",artist:"CNG - Classical Numismatic Group",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Alfred_the_Great,_silver_penny;_struck_875%E2%80%93880_(obverse).png"},
+    literature:{slug:"beowulf",name:"Beowulf",img:"/images/encyclopedia/beowulf.jpg",artist:"anonymous Anglo-Saxon poet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Beowulf_Cotton_MS_Vitellius_A_XV_f._132r.jpg"}
+  },
+  "Tamil": {
+    origins:{slug:"tamil-brahmi",name:"Tamil-Brahmi",img:"/images/encyclopedia/tamil-brahmi.jpg",artist:"Symphonicallyu",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Tamil_Brahmi.png"},
+    structure:{slug:"grantha-script",name:"Grantha script",img:"/images/encyclopedia/grantha-script.jpg",artist:"Symphonicallyu",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Grantha_aksharamala.png"},
+    speakers:{slug:"tamil-nadu",name:"Tamil Nadu",img:"/images/encyclopedia/tamil-nadu.jpg",artist:"pnglife (Flickr)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Mamallapuram_view.jpg"},
+    literature:{slug:"sangam-literature",name:"Sangam literature",img:"/images/encyclopedia/sangam-literature.jpg",artist:"Wikipedia Loves Art participant \"team_a",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:WLA_lacma_12th_century_Maharishi_Agastya.jpg"},
+    change:{slug:"thanjavur",name:"Thanjavur",img:"/images/encyclopedia/thanjavur.jpg",artist:"Arun2117dts 5",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Thanjavur_2.jpg"}
+  },
+  "Malay": {
+    origins:{slug:"old-malay",name:"Old Malay",img:"/images/encyclopedia/old-malay.jpg",artist:"L joo",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:KedukanBukit001.jpg"},
+    speakers:{slug:"srivijaya",name:"Srivijaya",img:"/images/encyclopedia/srivijaya.jpg",artist:"Gunawan Kartapranata",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Srivijaya_Empire.svg"},
+    literature:{slug:"terengganu-inscription-stone",name:"Terengganu Inscription Stone",img:"/images/encyclopedia/terengganu-inscription-stone.jpg",artist:"Earth",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:KlMuseumBatuBersurat.jpg"}
+  },
+  "Armenian": {
+    origins:{slug:"behistun-inscription",name:"Behistun Inscription",img:"/images/encyclopedia/behistun-inscription.jpg",artist:"Korosh.091",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%DA%A9%D8%AA%DB%8C%D8%A8%D9%87_%D8%AF%D8%A7%D8%B1%DB%8C%D9%88%D8%B4_(_%D8%A8%DB%8C%D8%B3%D8%AA%D9%88%D9%86(.jpg"},
+    structure:{slug:"mesrop-mashtots",name:"Mesrop Mashtots",img:"/images/encyclopedia/mesrop-mashtots.jpg",artist:"Stepanos Nersisyan (1815-84)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mesrop_Mashtots_1882_painting.jpg"},
+    change:{slug:"mount-ararat",name:"Mount Ararat",img:"/images/encyclopedia/mount-ararat.jpg",artist:"Սէրուժ Ուրիշեան (Serouj Ourishian)",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline_in_spring_(50mm).jpg"},
+    legacy:{slug:"treaty-of-lausanne",name:"Treaty of Lausanne",img:"/images/encyclopedia/treaty-of-lausanne.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Turkey-Greece-Bulgaria_on_Treaty_of_Lausanne.png"}
+  },
+  "Mongolian": {
+    speakers:{slug:"mongol-empire",name:"Mongol Empire",img:"/images/encyclopedia/mongol-empire.jpg",artist:"DannamEmpire",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif"},
+    literature:{slug:"secret-history-of-the-mongols",name:"Secret History of the Mongols",img:"/images/encyclopedia/secret-history-of-the-mongols.jpg",artist:"Цэндийн Дамдинсүрэн",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SecretHistoryMongols1947.jpg"}
+  },
+  "Ottoman Turkish": {
+    origins:{slug:"mehmed-ii",name:"Mehmed II",img:"/images/encyclopedia/mehmed-ii.jpg",artist:"Gentile Bellini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bellini,_Gentile_-_Sultan_Mehmet_II.jpg"},
+    literature:{slug:"tanzimat",name:"Tanzimat",img:"/images/encyclopedia/tanzimat.jpg",artist:"Juris Tiltins",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Ottoman_Empire_(1882%E2%80%931922).svg"},
+    change:{slug:"mustafa-kemal-ataturk",name:"Mustafa Kemal Atatürk",img:"/images/encyclopedia/mustafa-kemal-ataturk.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ataturk1930s.jpg"}
+  },
+  "Middle Persian": {
+    origins:{slug:"kaba-ye-zartosht",name:"Ka'ba-ye Zartosht",img:"/images/encyclopedia/kaba-ye-zartosht.jpg",artist:"Diego Delso",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Naghsh-e_rostam,_Ir%C3%A1n,_2016-09-24,_DD_14.jpg"},
+    speakers:{slug:"shapur-i",name:"Shapur I",img:"/images/encyclopedia/shapur-i.jpg",artist:"Unknown after Rawlinson, George, 1812-1902",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shapour_I_statue.gif"}
+  },
+  "Old Church Slavonic": {
+    origins:{slug:"thessaloniki",name:"Thessaloniki",img:"/images/encyclopedia/thessaloniki.jpg",artist:"Berthold Werner",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Tessaloniki_BW_2017-10-05_18-22-47.jpg"},
+    speakers:{slug:"preslav",name:"Preslav",img:"/images/encyclopedia/preslav.jpg",artist:"Izvora",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Preslav_fortress_11.jpg"},
+    literature:{slug:"cyril-and-methodius",name:"Cyril and Methodius",img:"/images/encyclopedia/cyril-and-methodius.jpg",artist:"painted by Zahari Zograf (Захарий Христович Димитров)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sv_Kiril_Metodij_Zahari_Zograf_Trojanski_mon_1848.jpg"},
+    change:{slug:"euthymius-of-tarnovo",name:"Euthymius of Tarnovo",img:"/images/encyclopedia/euthymius-of-tarnovo.jpg",artist:"Stolichanin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Euthymius_of_Tarnovo.jpg"}
+  },
+  "Gothic": {
+    origins:{slug:"goths",name:"Goths",img:"/images/encyclopedia/goths.jpg",artist:"Unknown author",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ostgoten-fibel.jpg"},
+    structure:{slug:"ulfilas",name:"Ulfilas",img:"/images/encyclopedia/ulfilas.jpg",artist:"Fondo Antiguo de la Biblioteca de la Universidad de Sevilla from Sevilla, España",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Germania,_1882_1020017_(4358323359)_(cropped).jpg"},
+    speakers:{slug:"codex-argenteus",name:"Codex Argenteus",img:"/images/encyclopedia/codex-argenteus.jpg",artist:"Magnus Hjalmarsson",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Codex_argenteus_-_Cover.png"}
+  },
+  "Guarani": {
+    origins:{slug:"guarani-people",name:"Guaraní people",img:"/images/encyclopedia/guarani-people.jpg",artist:"Roosewelt Pinheiro/ABr",licence:"CC BY 3.0 br",source:"https://commons.wikimedia.org/wiki/File:Xam%C3%A3_guarani.jpg"},
+    speakers:{slug:"asuncion",name:"Asunción",img:"/images/encyclopedia/asuncion.jpg",artist:"MosheA",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Palacio_de_los_L%C3%B3pez_Asunci%C3%B3n_2.jpg"}
+  },
+  "Georgian": {
+    literature:{slug:"shota-rustaveli",name:"Shota Rustaveli",img:"/images/encyclopedia/shota-rustaveli.jpg",artist:"DerFuchs",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Shota_Rustaveli_fresco_in_the_Monastery_of_the_Cross_in_Jerusalem.jpg"}
+  },
+  "Coptic": {
+    speakers:{slug:"abd-al-malik-ibn-marwan",name:"Abd al-Malik ibn Marwan",img:"/images/encyclopedia/abd-al-malik-ibn-marwan.jpg",artist:"PHGCOM",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:First_Umayyad_gold_dinar,_Caliph_Abd_al-Malik,_695_CE.jpg"},
+    literature:{slug:"anthony-the-great",name:"Anthony the Great",img:"/images/encyclopedia/anthony-the-great.jpg",artist:"Michael Damaskinos",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Anthony_(Damaskinos).png"}
+  },
+  "Ge'ez": {
+    origins:{slug:"ezana",name:"Ezana",img:"/images/encyclopedia/ezana.jpg",artist:"CNG Coins",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:AXUM._Ezanas._Circa_330-360.jpg"},
+    speakers:{slug:"kaleb",name:"Kaleb",img:"/images/encyclopedia/kaleb.jpg",artist:"Classical Numismatic Group",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kaleb.jpg"},
+    literature:{slug:"kebra-nagast",name:"Kebra Nagast",img:"/images/encyclopedia/kebra-nagast.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_De_ontmoeting_tussen_Solomon_en_Sheba_TMnr_5956-6.jpg"},
+    change:{slug:"amda-seyon-i",name:"Amda Seyon I",img:"/images/encyclopedia/amda-seyon-i.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amda_Seyon1.png"},
+    legacy:{slug:"tewodros-ii",name:"Tewodros II",img:"/images/encyclopedia/tewodros-ii.jpg",artist:"Uncredited; derivative work by Vob08",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:T%C3%A9wodros_II_-_2.jpg"}
+  },
+  "Hawaiian": {
+    speakers:{slug:"native-hawaiians",name:"Native Hawaiians",img:"/images/encyclopedia/native-hawaiians.jpg",artist:"Ron Ardis",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Hula_Kahiko_Hawaii_Volcanoes_National_Park_02.jpg"},
+    literature:{slug:"kamehameha-iii",name:"Kamehameha III",img:"/images/encyclopedia/kamehameha-iii.jpg",artist:"Hugo Stangenwald",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Photo_of_Kamehameha_III_(PP-97-7-003).jpg"}
+  },
+  "Phoenician": {
+    origins:{slug:"byblos",name:"Byblos",img:"/images/encyclopedia/byblos.jpg",artist:"Orient at de.wikipedia",licence:"CC BY-SA 2.0 de",source:"https://commons.wikimedia.org/wiki/File:Byblos_Libanon_2003.JPG"},
+    literature:{slug:"ahiram-sarcophagus",name:"Ahiram sarcophagus",img:"/images/encyclopedia/ahiram-sarcophagus.jpg",artist:"Matson Photo Service",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ahiram_sarcophag_from_Biblos_XIII-XBC.jpg"},
+    legacy:{slug:"pyrgi-tablets",name:"Pyrgi Tablets",img:"/images/encyclopedia/pyrgi-tablets.jpg",artist:"Sailko",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Lamine_d'oro_in_lingua_etrusca_e_fenicia_con_dedica_di_un_luogo_sacro_a_pyrgi.jpg"}
   }
 };

@@ -1054,3 +1054,403 @@ note	2001	Estimates range from about five to eight million Bahá'ís, in almost 
 src	Peter Smith, An Introduction to the Baha'i Faith (2008)
 src	Moojan Momen, The Bahá'í Faith: A Beginner's Guide (2007)
 src	Juan R. I. Cole, Modernity and the Millennium (1998)
+
+# A3, 3 Nov 2026: twelve more religions, drafted from their Wikipedia articles (scripts/kinds/RELIGIONS-GUIDE.md) and checked
+# with their profiles; the src lines name the article and the works it cites.
+
+@mesopotamian-religion
+area	Sumer	31.3,46.0	200	-3500	-1800	2	the first city-states, each with its patron god
+area	Babylonia	32.5,44.6	300	-1800	200	2	Marduk of Babylon raised to supremacy by Hammurabi
+area	Babylonia	32.5,44.6	300	200	500	1	the old gods fade as Christianity spreads
+area	Assyria	36.0,43.2	250	-2050	300	2	Ashur, god of the city of Assur and king of Assyria
+area	Assyria	36.0,43.2	250	300	500	1	temples to the old gods into the 4th century CE
+area	Lands ruled by Assyria	34.5,40.0	900	-1000	-539	1	worship conducted in Ashur's name across the Assyrian domain
+route	-2335	33.0,44.3 > 31.32,45.64	Sargon of Akkad unites Mesopotamia; Sumerian and Akkadian gods merge (c. 2335 BCE)
+route	-800	35.46,43.26 > 34.0,36.0	Ashur's worship carried west across the Assyrian domain
+route	-800	35.46,43.26 > 33.0,51.0	and east towards central Iran
+mark	origin	-3500	Uruk	31.32,45.64	One of the first Sumerian city-states; with the invention of writing around 3500 BCE comes the first evidence of Mesopotamian religion.
+mark	place	-3000	Girsu	31.43,46.14	A 5,000-year-old cultic area dedicated to Ningirsu, with more than 300 broken ceremonial cups, bowls and jars, was found here (announced 2020).
+mark	place	-2600	Abu Salabikh	32.27,45.08	A Sumerian list of about 560 deities from here and Fara, of about 2600 BCE, ranks five gods above the rest.
+mark	place	-2050	Assur	35.46,43.26	The city of the god Ashur, who alone bore the title of king; its ruler was his high priest and only “steward of Assur”.
+mark	place	-1750	Babylon	32.54,44.42	King Hammurabi raised Babylon's god Marduk to supremacy beside Anu and Enlil (18th century BCE).
+mark	last	400	Assyria	36.0,43.2	Temples to Ashur, Sin, Shamash, Hadad, Bel and Ishtar were still dedicated in Assyrian vassal states up to the 4th century CE.
+note	-3500	With writing, around 3500 BCE, comes the first evidence of a Mesopotamian religion: the worship of the forces of nature as providers of sustenance, in the city-states of Sumer.
+note	-2600	In the 3rd millennium BCE the powers of nature are personified as gods with their own functions; a list of about 2600 BCE ranks some 560 deities.
+note	-2335	Sargon of Akkad unites Mesopotamia around 2335 BCE; Sumerian and Akkadian gods are increasingly identified with one another.
+note	-1750	Hammurabi of Babylon raises Marduk to supremacy beside Anu and Enlil in southern Mesopotamia (18th century BCE).
+note	-1000	In the 2nd and 1st millennia BCE each state's national god heads its pantheon; Ashur, god of the city of Assur, becomes overlord of the Assyrian domain and is worshipped across it.
+note	-539	The Achaemenid Persians conquer Mesopotamia (539 BCE) but do not interfere with its religion; Alexander the Great takes the region in 330 BCE.
+note	-150	Under the Parthians a revival in Assyria dedicates temples once more to Ashur, Sin, Shamash, Hadad, Bel and Ishtar (2nd century BCE to 4th century CE).
+note	200	Christianity, introduced from the 2nd century CE, spreads among the Assyrians, and Assyria becomes a centre of the Church of the East.
+note	400	By about 400–500 CE the old religion has almost completely died out, its people having largely become Syriac Christians.
+src	Wikipedia: Ancient Mesopotamian religion
+src	Jean Bottéro, Religion in Ancient Mesopotamia (2001)
+
+@canaanite-religion
+area	Canaan	32.0,35.2	250	-3000	-300	2	the southern Levant
+area	Canaan	32.0,35.2	250	-300	400	1	Canaanite gods worshipped beside Greek religion, under Greek names
+area	Northern Syria	35.8,37.0	250	-2500	-1200	2	Ebla, Alalakh, Emar and Ugarit
+area	Amorite lands	35.3,40.5	200	-2200	-1800	1	Amorite personal names honour the same gods
+area	Phoenicia	33.8,35.5	150	-1000	-300	2	Melqart of Tyre, Eshmun of Sidon, the Lady of Byblos
+area	Aram	34.5,37.0	250	-900	-700	2	Aramean religion, close kin of the Canaanite
+area	Moab, Ammon and Edom	31.0,35.8	150	-1000	-500	2	the national gods Chemosh, Milcom and Qos
+area	Punic North Africa	36.0,9.5	400	-850	-150	2	Carthage and other Punic communities
+area	Punic North Africa	36.0,9.5	400	-150	400	1	Punic practice continues under Roman rule
+area	Western Sicily	37.9,12.8	120	-850	-250	2
+area	Sardinia	40.0,9.0	150	-850	-250	2
+area	Southern Spain	37.0,-5.0	250	-850	-200	2
+route	-2100	35.3,40.5 > 32.5,44.4	The Amorites, among whom Baal Hadad and El are worshipped, invade Mesopotamia (end of the Early Bronze Age)
+route	-850	33.6,35.4 > 36.85,10.33	Phoenicians found Carthage (9th century BCE)
+route	-850	33.6,35.4 > 37.8,12.45	Phoenician settlers to western Sicily
+route	-850	33.6,35.4 > 36.53,-6.29	Phoenician settlers to southern Spain
+mark	origin	-2400	Ebla	35.80,36.80	The Ebla tablets from Tell Mardikh, of the second half of the 3rd millennium BCE, list offerings to El, Baal and Dagon: the earliest evidence of Canaanite religion.
+mark	place	-1450	Alalakh	36.24,36.38	The inscriptions of Idrimi, king of Alalakh in the 15th century BCE, shed light on Canaanite religion.
+mark	place	-1275	Ugarit	35.60,35.78	More than three hundred tablets of about 1275 BCE, found at Ras Shamra since 1928, preserve the Baal Cycle and other myths, prayers and rites.
+mark	place	-850	Moab	31.4,35.8	The Mesha Stele (c. 850 BCE), one of the few sources for religion in the southern Levant beyond Israel and Judah.
+mark	place	-720	Karatepe	37.30,36.25	A Phoenician bilingual inscription of about 720 BCE, one of the sources for Phoenician religion.
+mark	place	-200	Carthage	36.85,10.33	The Carthage Tariff of about 200 BCE records Punic religious practice.
+mark	last	350	Punic North Africa	35.8,9.5	Punic religious practices outlived the Roman conquest, in some places until the 4th century CE.
+note	-3000	In the Early Bronze Age the peoples of the southern Levant sacrifice animals, among them donkeys brought from Egypt, at sites such as Tell es-Safi.
+note	-2400	The Ebla tablets list offerings to El, Baal and Dagon, the earliest written evidence of the Canaanite gods; Amorite personal names honour the same deities.
+note	-1500	In the Middle and Late Bronze Age Egyptian, Hurrian and Mitannian gods leave their mark: Baal is identified with Set and with Teshub, and the Hurrian goddess Hebat is worshipped in Jerusalem.
+note	-1275	At Ugarit more than three hundred texts of about 1275 BCE record the myths of El, Baal, Anat and Mot, with hymns, prayers and ritual lists; the city is destroyed around 1200 BCE.
+note	-1000	As Egyptian power over Canaan declines in the Iron Age, peoples and cities gather round patron gods: Chemosh of Moab, Milcom of Ammon, Qos of Edom, Yahweh of Israel, Melqart of Tyre, Eshmun of Sidon.
+note	-850	From the 9th century BCE Phoenician settlers carry their religion west, to Carthage, North Africa, southern Spain, Sardinia, western Sicily and Malta.
+note	-300	In the Hellenistic period Greek religion spreads alongside Canaanite traditions, and Canaanite gods are given the names of their Greek equivalents.
+note	-200	Rome conquers the Punic lands in the 3rd and 2nd centuries BCE, but Punic religious practice continues there.
+note	350	Punic religious practices survive in some places until the 4th century CE.
+src	Wikipedia: Canaanite religion
+
+@roman-religion
+area	Rome and Latium	41.8,12.6	120	-509	391	2	the state cults of the city and its Latin neighbours
+area	Italy	42.5,13.5	450	-264	391	2	Italian cults drawn into Rome's; temples vowed in the Punic Wars
+area	Greece	38.5,22.5	350	-195	391	1	divine honours to Roman magnates, later the Imperial cult
+area	Asia Minor	39.0,31.0	550	-27	391	1	the Imperial cult, developed first in the eastern provinces
+area	Gaul	46.5,2.5	500	14	391	1	Romanised cults, as at Vertault and Lugdunum
+area	Roman North Africa	35.0,9.0	450	50	391	1	the Capitolium of Sabratha and the forum of Cuicul
+area	Roman Britain	53.0,-1.5	350	100	391	1	soldiers' altars; around 250 binding spells found
+route	-217	38.03,12.59 > 41.89,12.48	The Venus of Eryx brought from Sicily to the Capitoline (217 BCE)
+route	-206	39.33,31.58 > 41.89,12.48	The Magna Mater brought from Pessinus (206 BCE)
+route	-27	41.89,12.48 > 38.5,27.0	The Imperial cult takes root first in the eastern provinces
+route	14	41.89,12.48 > 45.76,4.83	and then in the West, by the end of Augustus's reign
+route	270	34.55,38.27 > 41.89,12.48	Aurelian establishes the cult of the Palmyrene Sol Invictus in Rome (270–275)
+mark	origin	-509	Capitoline Hill, Rome	41.89,12.48	The temple of Jupiter, Juno and Minerva, founded in legend by Tarquinius Priscus, was the model for the highest official cult of the Roman world.
+mark	place	-217	Eryx	38.03,12.59	The Venus of Eryx was brought from here to a temple on the Capitoline hill in 217 BCE.
+mark	place	-206	Pessinus	39.33,31.58	On the advice of the Sibylline books the Magna Mater was brought from here in 206 BCE; she was installed on the Palatine in 191 BCE.
+mark	place	100	Sabratha	32.80,12.48	The newly municipal town built a Capitolium near its temple to Liber Pater and Serapis; by the end of the 1st century CE its tophet was no longer in use.
+mark	place	150	Cuicul	36.32,5.73	All the known statues from its 2nd-century CE forum are of emperors or Concordia.
+mark	last	391	Temple of Vesta, Rome	41.89,12.49	Theodosius I extinguished the Vestals' sacred fire and vacated their temple, ending official support for the old cults.
+note	-509	The Republic begins (509 BCE); its elected magistrates also serve as priests, and its religion is held to go back to the kings, above all Numa.
+note	-264	During the Punic Wars (264–146 BCE) generals vow new temples, and Rome brings in the Venus of Eryx (217 BCE) and the Magna Mater of Pessinus (206 BCE).
+note	-195	From at least 195 BCE Roman magnates receive divine honours in the Greek East; in 186 BCE the Senate restricts the Bacchanals.
+note	-63	Julius Caesar becomes pontifex maximus (63 BCE), as priestly and political offices draw ever closer together.
+note	-27	Augustus revives and reforms the state cults; the Imperial cult grows first in the eastern provinces, then in the West.
+note	100	Across the empire Roman and local gods are worshipped side by side, and traders and soldiers bring the cults of Cybele, Isis, Mithras and Sol Invictus.
+note	303	Diocletian's edicts against the Christians (303–304) order churches and Christian texts destroyed, then universal sacrifice to the traditional gods.
+note	313	The Edict of Milan (313) proclaims mutual toleration, and Constantine I funds the building of churches.
+note	380	Under Theodosius I, Nicene Christianity becomes the state religion of the Roman Empire (380).
+note	391	Theodosius I ends official support for all other cults and puts out the sacred fire of the Vestals (391).
+src	Wikipedia: Religion in ancient Rome
+src	Mary Beard, John North and Simon Price, Religions of Rome
+
+@celtic-religion
+area	Gaul	46.5,2.5	500	-550	300	2	the Gauls; conquered by Rome in 58–51 BCE, then Gallo-Roman religion
+area	Gaul	46.5,2.5	500	300	450	1	the Gauls convert gradually to Christianity from the 3rd century
+area	Southern Germany	48.8,9.5	250	-550	300	2	the Hirschlanden and Glauberg figures; ditched enclosures (viereckschanzen)
+area	Britain	53.0,-1.5	450	-550	410	2	conquered by Rome from 43; Romano-Celtic temples on Iron Age sites
+area	Western Britain	53.0,-4.0	250	410	600	1	the Celtic Britons convert gradually from the 5th century
+area	Ireland	53.4,-8.0	250	-550	450	2	circular sanctuaries such as Tara and Navan Fort; never conquered by Rome
+area	Ireland	53.4,-8.0	250	450	600	1	converted from the 5th century; the druids sidelined by the early 7th
+route	-58	41.9,12.5 > 46.5,2.5	The Roman conquest of Gaul (58–51 BCE) brings Gallo-Roman religion
+route	43	49.5,2.0 > 51.5,-0.5	The Roman conquest of southern Britain (43)
+mark	origin	-550	Hirschlanden	48.83,9.03	The Warrior of Hirschlanden, a stone figure of the 6th century BCE, is among the earliest Celtic monumental sculptures.
+mark	place	-450	Glauberg	50.31,9.01	The 5th-century BCE stone figure known as the “Glauberg Prince” comes from this site in Germany.
+mark	place	-150	Mšecké Žehrovice	50.17,13.92	A carved stone head, probably of the 2nd century BCE, was found here in Bohemia.
+mark	place	-50	Llyn Cerrig Bach	53.26,-4.53	Offerings, mostly of battle gear, were thrown into this lake on Anglesey in the late 1st century BCE or early 1st century CE.
+mark	place	14	Paris	48.85,2.35	The Pillar of the Boatmen, with many figures of gods, is dated by its dedication to the emperor Tiberius (r. from 14 CE).
+mark	place	150	Coligny	46.38,5.35	The Coligny calendar, the oldest attested Celtic calendar, dates to the 2nd century.
+note	-550	The Celtic peoples of Iron Age Europe worship many gods in groves, at springs and in timber shrines; the earliest stone figures, from southern Germany, date to the 6th and 5th centuries BCE.
+note	-350	Celtic coins, struck from the late 4th century BCE, carry heads and horses that may have had religious meaning; weapons are offered in rivers, lakes and bogs.
+note	-58	Rome conquers Gaul (58–51 BCE); Julius Caesar describes the druids and names the Gaulish gods after Roman ones.
+note	14	Under Augustus and Tiberius the druidic hierarchies are suppressed, and Celtic and Roman gods merge in a Gallo-Roman religion; Rome conquers southern Britain in 43.
+note	150	The Coligny calendar, the oldest attested Celtic calendar, is made in Roman Gaul in the 2nd century.
+note	250	The Gauls begin gradually to convert to Christianity, from the 3rd century onward.
+note	410	Roman rule in Britain ends (c. 410) and Anglo-Saxon paganism replaces Celtic paganism over much of England; the Celtic peoples of Britain and Ireland convert gradually from the 5th century.
+note	600	By the early 7th century the Irish church has relegated the druids to irrelevancy, while the filid keep much of their pre-Christian learning.
+src	Wikipedia: Ancient Celtic religion
+
+@slavic-paganism
+area	Middle Dnieper (Kiev)	50.45,30.52	400	500	988	2	the East Slavs; Vladimir’s pantheon at Kiev (980)
+area	Middle Dnieper (Kiev)	50.45,30.52	400	988	1331	1	common people keep the old gods for centuries after the baptism of 988
+area	Northern Rus’ (Novgorod, Suzdal, Belozersk)	58.0,36.0	500	800	988	2
+area	Northern Rus’ (Novgorod, Suzdal, Belozersk)	58.0,36.0	500	988	1331	1	where Slavic religion persisted longest after 988
+area	Great Moravia	49.0,17.5	250	500	863	2	the Moravians accept Christianity from 831; Great Moravia adopts it in 863
+area	Bohemia	50.0,14.5	200	500	845	2	the Bohemian dukes accept Christianity in 845
+area	Poland	52.0,19.0	350	500	966	2	until the baptism of Mieszko I (966)
+area	Poland	52.0,19.0	350	966	1100	1	popular resistance and the pagan reaction of the 11th century
+area	Polabian and Pomeranian Slavs	53.5,13.5	300	500	1168	2	the Baltic West Slavs, converted by force in the Northern Crusades
+area	Western Balkans (Croats and Serbs)	44.0,18.0	400	600	886	2	the South Slavs, converted by the end of Basil I’s reign (867–886)
+area	Bulgaria	42.7,25.0	300	600	864	2	Bulgaria adopts Christianity in 864
+route	600	50.0,20.0 > 44.0,18.0	The South Slavs settle in Southeastern Europe (6th–7th centuries)
+route	600	50.0,24.0 > 42.7,25.0	South Slavs reach the borders of the Byzantine Empire (6th–7th centuries)
+mark	origin	500	Lands of the Early Slavs	50.5,25.5	The Early Slavs, who lived across central, eastern and southeastern Europe from the 5th century, shared almost the same words for religious ideas.
+mark	place	980	Kiev	50.45,30.52	Vladimir raised idols of Perun, Dazhbog, Stribog, Simargl and Mokosh on a hill here in 980; after his baptism in 988 they were burned or thrown into the Dnieper.
+mark	place	1070	Wolin	53.84,14.62	Adam of Bremen described the Triglav of Wolin as “Neptune of the three natures”.
+mark	place	1168	Arkona	54.68,13.43	The temple-stronghold of the four-headed Svetovid on Rugia surrendered to King Valdemar I of Denmark in 1168, and Bishop Absalon destroyed the temple.
+mark	last	1331	Kobarid	46.25,13.58	A holy place of the old faith at Kobarid, in present-day Slovenia, was stamped out in a “crusade” in 1331.
+note	500	The Early Slavs live across central, eastern and southeastern Europe; Procopius (6th century) writes that they hold the god of lightning to be lord over all and sacrifice bulls to him.
+note	600	The South Slavs settle in Southeastern Europe and come into contact with Christianity under the emperor Heraclius (610–641).
+note	863	Great Moravia (863) and Bulgaria (864) adopt Christianity, after Cyril and Methodius create the first Slavic script (855); the Bohemian dukes had accepted it in 845.
+note	980	Mieszko I of Poland is baptised (966); Vladimir sets up a pantheon of Slavic gods at Kiev (980), then is baptised (988) and has the idols destroyed.
+note	1035	An uprising against Christianity breaks out among the West Slavs in the 1030s, rebellions follow among Poles and East Slavs through the 11th century, and volkhvs lead revolts in Rus’.
+note	1168	The Northern Crusades impose Catholicism on the Baltic West Slavs; Arkona falls to the Danes in 1168 and the temple of Svetovid is destroyed.
+note	1331	A holy place of the old faith at Kobarid is stamped out (1331); the old gods live on in folk religion and the “double faith”.
+src	Wikipedia: Slavic paganism
+src	Helmold of Bosau, Chronica Slavorum (12th century)
+src	The Primary Chronicle (Tale of Bygone Years), compiled in Kiev around 1111
+
+@mithraism
+area	Rome and Italy	42.0,12.8	300	80	400	1	the cult's centre; Rome may have had not less than 680 mithraea
+area	Rhine frontier	50.0,8.3	250	80	400	1	Nida and Mogontiacum in Germania
+area	Upper Danube	47.8,15.0	300	80	400	1	Pons Aeni, Virunum and Carnuntum
+area	Judaea	32.5,34.9	80	80	400	1	the only mithraeum in Palestine, at Caesarea Maritima
+area	Lower Danube (Moesia)	43.6,24.8	250	100	400	1	Novae and Oescus
+area	Roman Britain	54.0,-2.0	350	140	400	1	from Inveresk to Carrawburgh
+area	Dalmatia	43.8,16.5	200	160	400	1
+area	Roman Dacia	46.0,23.5	250	160	400	1	the cult's eastern reach in Europe
+area	Numidia and Roman Africa	36.0,6.5	400	160	400	1
+area	Roman Syria	35.0,38.5	400	160	400	1	only three mithraea, as far east as Dura-Europos
+area	Gallia Belgica	49.0,6.5	200	253	400	1	the mithraeum of Pons Sarravi (Sarrebourg)
+route	90	41.89,12.48 > 50.0,8.27	To the Rhine frontier (c. 80–120)
+route	100	41.89,12.48 > 32.50,34.89	To Caesarea Maritima in Judaea (c. 80–120)
+route	110	41.89,12.48 > 48.12,16.86	To the Danube, where a centurion makes the earliest military dedication (before 114)
+route	140	41.89,12.48 > 55.94,-3.05	To the northern frontier of Britain (140)
+route	160	41.89,12.48 > 34.75,40.73	Carried to Syria by soldiers and merchants
+mark	origin	80	Rome	41.89,12.48	The cult appears to have had its centre here, where an altar to Sol Invictus Mithras of about 80–100 CE and the earliest bull-slaying monument were found.
+mark	place	100	Caesarea Maritima	32.50,34.89	The only mithraeum in Palestine, among the cult's earliest places (c. 80–120 CE); its ceiling keeps traces of blue paint.
+mark	place	110	Carnuntum	48.12,16.86	The earliest military inscription to Mithras, by a centurion of the Fifteenth Legion, probably before 114.
+mark	place	140	Inveresk	55.94,-3.05	Two altars to Mithras of 140 CE, believed to come from the empire's most northerly temple of Mithras.
+mark	place	184	Virunum	46.70,14.37	A bronze plaque listed the initiates year by year and records a festival of commemoration on 26 June 184.
+mark	place	210	Carrawburgh	55.04,-2.22	An ordeal pit of the early 3rd century was identified in its mithraeum.
+mark	last	395	Pons Sarravi (Sarrebourg)	48.73,7.05	Votive coins from Gallienus to Theodosius I show the mithraeum in use until near the end of the 4th century, when it was destroyed.
+note	80	Mithraic temples appear suddenly in the last quarter of the 1st century CE, in Rome, on the Rhine and Danube and at Caesarea Maritima; Statius mentions Mithras in a cave about 80 CE.
+note	110	A centurion of the Fifteenth Legion dedicates an altar to Mithras at Carnuntum on the Danube, probably before 114, the earliest military inscription.
+note	140	Altars to Mithras are set up at Inveresk in Scotland (140 CE), believed to be the empire's most northerly temple of Mithras.
+note	160	Late in the reign of Antoninus Pius and under Marcus Aurelius the mysteries make their first important expansion, with all their key elements in place.
+note	200	In the 2nd and 3rd centuries Mithraism reaches the height of its popularity, spreading at an “astonishing” rate among soldiers, merchants and officials.
+note	275	By the later 3rd century the initiation ordeals are less severe, and ordeal pits are floored over.
+note	350	In the 4th century Mithraists face persecution from Christians, though senators of the pagan revival still list Mithras among their cults.
+note	395	Coins at Sarrebourg run to the reign of Theodosius I (379–395); by the end of the century the cult is suppressed, though it may linger in the Alps and Vosges.
+src	Wikipedia: Mithraism
+src	Maarten J. Vermaseren, Corpus Inscriptionum et Monumentorum Religionis Mithriacae
+src	Franz Cumont, Textes et monuments figurés relatifs aux mystères de Mithra (1894–1900)
+
+@tengrism
+area	Mongolian steppe	47.5,104.0	700	-350	1400	2	the Xiongnu (from 209 BCE), the Göktürks and the Mongol Empire
+area	Mongolian steppe	47.5,104.0	700	1400		1	absorbed into Mongolian Buddhism; a small share of Mongolians today
+area	Lake Khövsgöl and Lake Baikal	52.5,104.5	350	1400		1	Tengrism in purer forms; Buryatia
+area	Central Asian steppe	45.0,68.0	900	600	1400	2	Turkic khaganates; the Turkic and Mongolic peoples largely convert to Islam in the 14th century
+area	Carpathian Basin	47.2,19.5	300	900	1000	2	the Magyars until the end of the 10th century
+area	Golden Horde	48.0,45.0	700	1240	1340	2	until Özbeg Khan turns to Islam in the 14th century
+area	Ilkhanate	37.0,48.0	600	1260	1300	2	Hulegu and Arghun, Tengrist khans in Iran
+area	Sakha (Yakutia)	62.5,129.0	600	1400		1	traditional Tengrism persists; Kut-Siur, later Aiyy Faith (1990–1993)
+area	Tuva	51.7,94.5	250	1400		1	traditional Tengrism persists alongside other religions
+area	Kazakhstan	48.0,67.0	900	1991		1	over one million followers (2024), not officially recognised
+area	Kyrgyzstan	41.5,74.5	300	1991		1	about 50,000 followers (2014); Tengir Ordo (2005)
+area	Tatarstan and Bashkortostan	55.0,52.0	400	1991		1	advocated in intellectual circles since the 1990s
+area	Anatolia	39.0,35.0	600	1923		1	a revival encouraged by Turanism and Kemalism
+route	1240	47.20,102.82 > 48.0,45.0	The Golden Horde: Mongol khans on the western steppe
+route	1260	47.20,102.82 > 37.39,46.24	Hulegu’s Ilkhanate in Iran, ruled from Maragheh (1262)
+route	1814	46.3,44.3 > 48.85,2.35	Kalmyk regiments carry the banner of Daichin Tengri to Paris (1814)
+mark	origin	-350	Mongolian steppe (Xiongnu)	47.5,104.0	Chinese chronicles of the 4th century BCE record Tengri as the sky god of the Xiongnu.
+mark	place	750	Orkhon valley	47.56,102.84	The Old Turkic inscriptions of the Orkhon say that the khagans acted because “Heaven so ordained”.
+mark	place	1254	Karakorum	47.20,102.82	William of Rubruck heard Ariq Böke, Hulegu’s brother, say near Karakorum in 1254: “we know that the Messiah is God”.
+mark	place	1262	Maragheh	37.39,46.24	Hulegu Khan wrote from his capital here to Louis IX of France in 1262, in a letter that calls Christ “Messiah-Tengri”.
+mark	place	1290	Urmia	37.55,45.07	Arghun wrote here in 1290 to Pope Nicholas IV that prayer to Eternal Tengri with righteous thoughts was as much as baptism.
+mark	place	1990	Yakutsk	62.03,129.73	Seat of the International Fund of Tengri Research; the Tengrist organisation Kut-Siur was founded in Sakha in 1990–1993.
+mark	place	2002	Khakassia	53.72,91.43	Askar Akayev called his visit to the Yenisei inscriptions here in 2002 “like a pilgrimage to a holy place for the Kyrgyz people”.
+mark	place	2003	Bishkek	42.87,74.59	Tengir Ordo held the first international scientific symposium on Tengrism here in 2003.
+note	-350	Chinese chronicles record Tengri, the sky god of the Xiongnu, in the 4th century BCE.
+note	-209	The Xiongnu empire is founded (209 BCE), first of a line of steppe khanates and empires whose faith is Tengrism.
+note	750	The Göktürk khaganates record in the Orkhon inscriptions that their khagans rule because “Heaven so ordained”.
+note	850	The Irk Bitig, a 9th-century book of divination from the Uyghur Khaganate, calls Tengri the god of the Turks; the Magyars keep a form of Tengrism until the end of the 10th century.
+note	1240	Genghis Khan’s successors are Tengrist “shaman-kings”; the Secret History of the Mongols (1240) and the letters of Hulegu (1262) and Arghun (1290) invoke the power of Eternal Tengri.
+note	1340	Özbeg Khan of the Golden Horde turns to Islam, and the Turkic and Mongolic peoples of Central Asia largely convert during the 14th century; Tengrism is mostly submerged.
+note	1600	In Mongolia Tengrist formulas are absorbed into Buddhism; the 17th-century chronicle Altan Tobchi ends with a Tengrist prayer, and purer forms survive around Lake Khövsgöl and Lake Baikal.
+note	1814	Kalmyk regiments carry the banner of the war god Daichin Tengri through the Napoleonic Wars to Paris (1814).
+note	1923	Turanism and Kemalism encourage a Tengrist revival in Turkey after 1923; after the dissolution of the Soviet Union (1991) Tengrism is revived in Central Asia, Russia and Siberia.
+note	2005	Tengir Ordo is founded in Kyrgyzstan (2005); over one million people follow Tengrism in Kazakhstan (2024), where it is not officially recognised.
+src	Wikipedia: Tengrism
+src	The Secret History of the Mongols (1240)
+
+@bon
+area	Zhangzhung (Mount Kailash)	31.07,81.31	350	-100	780	2	the kingdom from which Bonpos hold that Bon came to Tibet
+area	Zhangzhung (Mount Kailash)	31.07,81.31	350	780		1	home of the 360 Kékhö; texts of the Northern Treasure revealed here
+area	Yarlung	29.2,91.8	200	-100	780	2	the royal cult of the Yarlung kings and the early Tibetan Empire
+area	Central Tibet (Ü and Tsang)	29.5,90.0	350	1000		1	Yungdrung Bon from the 10th–11th centuries; Menri monastery (1405)
+area	Eastern Tibet and Amdo	32.5,99.5	550	1360		1	New Bon from the 14th century; today the main Bon region
+area	Bhutan and southern Tibet	27.8,90.5	200	1000		1	the Southern Treasure; Buddhist Bon in Bhutan
+area	Nepal	28.2,84.0	300	1950		1	Bon establishments such as Triten Norbutse near Kathmandu
+area	Himachal Pradesh	30.9,77.1	150	1950		1	the refounded Menri monastery at Dolanji
+route	-100	31.07,81.31 > 29.2,91.8	Bonpos hold that Bon came first to Zhangzhung, then to Tibet
+route	1950	29.4,88.5 > 30.88,77.12	Into exile after 1950: Menri refounded at Dolanji
+route	1950	29.4,88.5 > 27.72,85.27	Into exile: Bon establishments in Nepal, among them Triten Norbutse
+mark	origin	-100	Mount Kailash	31.07,81.31	Bonpos hold that Bon was brought first to Zhangzhung, the kingdom around Mount Kailash, and then to Tibet.
+mark	place	-100	Yarlung	29.2,91.8	Robert Thurman dates a Bon court religion of the Yarlung kings to around 100 BCE, under King Pudegungyal.
+mark	place	1405	Menri	29.4,88.5	Menri, the most important Bon monastery, was built in Tsang in 1405.
+mark	place	1979	Dharamshala	32.22,76.32	Bonpo representatives came to the 14th Dalai Lama here in 1979, and the Central Tibetan Administration accepted Bon as a religious group.
+mark	place	2017	Dolanji	30.88,77.12	The refounded Menri, Bon’s leading monastery in India, where the successor of Lungtok Tenpai Nyima (1929–2017) presides.
+note	-100	Bonpos hold that Bon came from Olmo Lungring to Zhangzhung and then to Tibet; Robert Thurman dates a Bon court religion of the Yarlung kings to around 100 BCE.
+note	600	Bon priests serve the royal cult of the early Tibetan Empire; Bon tradition places the Zhangzhung Dzogchen master Tapihritsa in the 7th century.
+note	740	Under the Buddhist king Trisong Detsen (r. 740–797) Bon declines; Bon histories tell of persecution, and of texts hidden as treasures by masters such as Drenpa Namkha.
+note	1000	Yungdrung Bon takes shape in the 10th and 11th centuries, as treasure revealers such as Shenchen Luga (996–1035) bring out hidden texts.
+note	1360	Loden Nyingpo (1360–1385) reveals the Zibji, and New Bon begins in eastern Tibet.
+note	1405	Menri monastery is built in Tsang (1405); the Bon Kanjur is probably assembled by 1450.
+note	1650	The Fifth Dalai Lama converts some Bon monasteries to the Gelug school by force but officially recognises Bon as a Tibetan religion.
+note	1717	Many Bonpos are executed in the Dzungar invasion of Tibet (1717); New Bon treasures are still revealed in eastern Tibet.
+note	1850	Bon flourishes in eastern Tibet under lamas such as Shardza Tashi Gyaltsen; the canon is carved on woodblocks at Trochu.
+note	1950	China invades Tibet (1950), where there are about 300 Bon monasteries; Bon suffers in the Cultural Revolution, and in exile it is recognised by the Central Tibetan Administration (1979).
+note	2019	Scholars estimate about 400,000 Bonpos on the Tibetan Plateau (2019); Bon monasteries in Tibet have been rebuilt since 1980.
+src	Wikipedia: Bon
+src	Geoffrey Samuel, Civilized Shamans (1993)
+
+@chinese-folk-religion
+area	North China Plain	35.5,115.0	500	-1250		2	villages of many surnames worship tutelary gods of nature in communities of the gods
+area	Shandong	36.3,118.0	200	-202		2	the cult of Liu Zhang dates from the Han dynasty; folk Confucian groups grow fast here today
+area	Southern and southeastern China	25.0,113.5	700	960		2	lineage religion and ancestral temples prevail; Taoism dominates the rites along the coast
+area	Fujian	25.9,118.3	200	1550		2	Mazu and the Sanyi teaching, founded in the 16th century
+area	Northeast China	44.0,126.0	500	1930		2	fox gods and chumaxian shamanism; in the 1930s at least 25% of Manchuria's people belonged to one Confucian church
+area	Southwestern China	26.0,106.0	500	1980		1	indigenous religions of the Zhuang, Yi, Yao, Tujia and Miao are 'Taoised'; Nuo religion in the centre-south
+area	Tibet	31.0,91.0	500	1980		1	the cult of Gesar grows, with official support, also in Inner Mongolia and western China
+area	Taiwan	23.7,121.0	200	1895		2	very well preserved; 42.7% of adults are self-identified folk believers
+area	Malaysia and Southeast Asia	3.5,105.0	900	1900		1	Mazu is the most important deity of the Southeast Asian Chinese
+area	American West Coast	37.8,-122.4	300	1899		1	400 syncretic temples by 1899
+route	250	28.0,78.0 > 34.62,112.45	Influences from the Indian subcontinent arrive with Buddhism (from the 3rd century)
+route	1899	23.1,113.3 > 37.8,-122.4	Emigrants build temples on the American West Coast (400 by 1899)
+route	1900	24.5,118.1 > 3.1,101.7	Emigrants from the southeastern provinces carry Mazu to Southeast Asia
+route	1949	28.0,116.0 > 25.03,121.56	The 63rd Celestial Master, Zhang Enpu, flees to Taiwan (1940s)
+route	1990	25.03,121.56 > 34.0,113.6	Weixinism, based in Taiwan, builds its City of Eight Trigrams in Henan
+mark	origin	-1250	North China Plain	35.5,114.5	Divination, a major component of folk religion, had developed in China by 1250-1150 BCE; the worship of Shangdi is rooted in the tradition of the Shang dynasty.
+mark	place	-202	Shandong	36.3,118.0	The cult of Liu Zhang, a king in what is now Shandong, dates back to the Han dynasty (202 BCE - 220 CE).
+mark	place	1550	Putian	25.43,119.01	The Sanyi teaching, an organised folk religion founded in the 16th century, is legally recognised in the Putian region of Fujian.
+mark	place	1980	Yulin	38.29,109.73	A Chenghuang Temple used as a granary in the Cultural Revolution was restored in the 1980s after the seeds stored in it were always found to have rotted.
+mark	place	1988	Jilin City	43.84,126.55	The Chinese Society for Shamanic Studies was founded here in 1988, amid a revival of shamanism.
+mark	place	1995	Congluo Yu, Shanxi	37.8,112.5	The cult of the god Zhenwu, inactive until the mid-1990s, revived after a man with terminal cancer recovered when he prayed to him.
+note	-1250	The ancestors are the most honoured members of the family, and divination develops in China by 1250-1150 BCE; the worship of Shangdi is rooted in the Shang tradition.
+note	-1000	The Yijing and the Eight Trigrams are well established; under the Zhou, Tian becomes a more abstract and impersonal idea of God.
+note	-250	Yin and yang and the five phases develop by the third century BCE; under the Han dynasty (from 202 BCE) people worship in she, local communities gathered at the altar of an earth god or a deified virtuous person.
+note	250	From the 3rd century, with Buddhism, influences from the Indian subcontinent enter Chinese religion: processions of gods' images on carts and floats, with music and chanting.
+note	531	A cult of Ganesha, the Elephant-Head God, is attested in 531.
+note	960	By the Song dynasty (960-1279) folk practices blend with Buddhist, Confucian and Taoist teachings into the popular religion that lasts to the present day.
+note	1370	In the 14th century the Hongwu Emperor of the Ming strengthens and systematises the indigenous cults, which he calls Shendao.
+note	1550	The Sanyi teaching is founded in the Putian region of Fujian (16th century); imperial policy promotes some gods and suppresses others, and Ming edicts outlaw the martial sects.
+note	1898	Temples are destroyed in the Taiping and Boxer rebellions, and in 1898 Kang Youwei has temples confiscated for schools, an order soon reversed; by 1899 there are 400 Chinese temples on the American West Coast.
+note	1950	After 1911 modernisers condemn 'feudal superstition' and turn temples to other uses; Communist campaigns and the Cultural Revolution (1966-1976) try to destroy the religion, which revives after 1978 and is preserved in Taiwan.
+note	2012	Surveys find hundreds of millions worshipping gods and ancestors in China; under Xi Jinping temples may register as folk belief sites, and the religion lives on in Taiwan and among the overseas Chinese.
+src	Wikipedia: Chinese folk religion
+
+@druze-faith
+area	Fatimid Egypt	30.05,31.25	200	1017	1043	1	the call is preached in Cairo until persecution drives the faith underground
+area	Northern Syria	36.05,36.6	120	1017		1	the largest massacre of the mihna was at Antioch, then Aleppo; some 25,000 Druze live in 14 villages of Jabal al-Summaq today
+area	Wadi al-Taym and Mount Hermon	33.4,35.75	80	1017		2	generally considered the birthplace of the faith; Druze are the majority in Hasbaya and Rashaya
+area	Southern Lebanon	33.25,35.45	80	1017		1	with Wadi al-Taym a centre of the 11th-century mission, where survivors of the persecution were found
+area	Mount Lebanon (the Chouf and the Gharb)	33.72,35.58	80	1099		2	the Druze heartland of the Tanukh and Ma'an lords; the Chouf is still predominantly Druze
+area	Galilee and Mount Carmel	32.85,35.25	80	1600		1	19 Druze towns and villages; Druze have been Israeli citizens since 1948
+area	Jabal al-Druze (Hauran)	32.7,36.6	90	1685		2	settled in waves from 1685 and after 1711; more than 90 percent Druze
+area	Jordan	31.95,36.4	120	1918		1	about 32,000 Druze, from Azraq to Amman
+area	Venezuela	10.3,-67.0	300	1900		1	the largest Druze community outside the Middle East, about 60,000
+area	Southern California	34.05,-118.24	250	1998		1	the largest concentration of the 30,000 to 50,000 Druze in the United States
+route	1017	36.21,58.8 > 30.05,31.25	Hamza ibn Ali comes from Khorasan to Egypt (1014 or 1016)
+route	1017	39.77,64.42 > 30.05,31.25	Al-Darazi comes to Cairo, possibly from Bukhara (1015 or 1017)
+route	1017	30.05,31.25 > 33.4,35.69	Missionaries carry the epistles of the call from Egypt to Syria
+route	1711	33.78,35.73 > 32.71,36.57	Yamani Druze migrate to the Hauran after Ain Dara (1711)
+route	1918	32.71,36.57 > 31.88,36.82	22 families leave Jabal al-Druze for al-Azraq (1918)
+route	1900	33.7,35.6 > 10.49,-66.88	Emigrants from Lebanon and Syria to Venezuela (20th century)
+mark	origin	1017	Cairo	30.05,31.25	Hamza ibn Ali, meeting with scholars in the Raydan Mosque near the Al-Hakim Mosque, began to preach the Unitarian doctrine here in 1017.
+mark	place	1021	Antioch	36.2,36.16	In the persecution that began in 1021, the mihna, 5,000 prominent Druze were killed here, the largest massacre of all.
+mark	place	1150	Baaqlin	33.68,35.56	After the middle of the 12th century the Ma'an family made its headquarters here; it is still a leading Druze village.
+mark	place	1305	Keserwan	34.0,35.65	The Mamluk sultan al-Nasir Muhammad inflicted a disastrous defeat on the Druze here in 1305.
+mark	place	1711	Ain Dara	33.78,35.73	The battle of 1711 routed the Yamani faction and sent many Druze east to the Hauran.
+mark	place	2018	Suwayda	32.71,36.57	ISIS-affiliated attackers killed at least 258 people, most of them civilians, in this Druze city in 2018.
+note	1017	Hamza ibn Ali preaches the Unitarian doctrine in Cairo under the caliph al-Hakim (1017); from 1021 the Fatimid army persecutes the Druze, and in 1043 the faith closes to converts.
+note	1100	Under Crusader rule (1099–1291) the Druze of the Gharb and the Chouf hold Beirut and the coast for the rulers of Damascus; the Ma'an family rises after the middle of the 12th century.
+note	1250	The Druze chiefs of the Gharb serve the Mamluk sultans in ending what remains of Crusader rule on the coast.
+note	1305	After Ibn Taymiyya's fatwa, the Mamluk sultan al-Nasir Muhammad defeats the Druze at Keserwan (1305) and destroys Druze sanctuaries.
+note	1516	Under the Ottomans the Ma'ans are the feudal lords of southern Lebanon; an Ottoman expedition attacks the Druze at Saoufar (1585).
+note	1608	Under Fakhr-al-Din II Druze dominion reaches from the Antioch plain to Safad, until the sultan has him killed (1635); Druze begin to move to the Hauran (1685).
+note	1711	After the battle of Ain Dara (1711) many Druze leave Mount Lebanon for the Hauran, and Maronites become the dominant group in Mount Lebanon.
+note	1860	The civil conflict of 1860 ends in autonomy for Mount Lebanon; the Hauran becomes the headquarters of Druze power.
+note	1925	The Druze lead the Syrian Revolution of 1925–27; Israel recognises them as a distinct community (1957), and emigrants settle in Venezuela and the United States.
+note	2011	In the Syrian civil war the Druze are persecuted by Islamic extremists; an attack on Suwayda kills at least 258 people (2018).
+src	Wikipedia: Druze
+
+@yazidism
+area	Shekhan and Lalish	36.7,43.35	80	1100		2	the seat of the Mîr and the holiest site, the tomb of Sheikh Adi; one of the two largest Yazidi communities
+area	Hakkari	37.5,43.7	150	1100	1500	1	Sheikh Adi came to these mountains; one of the seven Yazidi centres from the 14th century
+area	The Kurdish emirates	37.6,40.5	400	1250	1500	2	Yazidism was the official religion of emirates such as Bohtan, Mahmudi and Kilis
+area	Sinjar (Shingal)	36.35,41.8	80	1300	2014	2	a Yazidi stronghold, one of the seven centres from the 14th century
+area	Sinjar (Shingal)	36.35,41.8	80	2014		1	after the genocide of 2014 most Yazidis were driven from their ancestral lands here
+area	Aleppo and Afrin	36.4,36.9	120	1300		1	a Yazidi centre from the 14th century; communities in the Kurd-Dagh today
+area	Tur Abdin, Van and Serhed	38.0,41.5	350	1500		1	Yazidis of Tur Abdin, Van and Kars; most later left for the Caucasus and Germany
+area	Armenia	40.15,44.1	100	1828		1	settled from 1828; 35,272 Yazidis in the 2011 census, the largest minority
+area	Georgia	41.7,44.8	120	1878		1	about 18,000 in the 2002 census
+area	Russia (Moscow)	55.75,37.6	250	1990		1
+area	Germany	52.3,9.0	350	1960		1	more than 230,000 Yazidis, around Hannover, Bielefeld, Celle, Bremen and Oldenburg
+area	Nebraska	40.8,-96.7	150	1998		1	refugees resettled from the late 1990s, in Lincoln and elsewhere
+route	1100	33.34,44.4 > 36.77,43.3	Sheikh Adi comes from Baghdad to Lalish, around the age of thirty
+route	1828	40.6,43.1 > 40.15,44.1	Yazidis flee to the Russian Empire in the Russo-Turkish wars (1828–1829, 1877–1878)
+route	1832	36.7,43.35 > 36.35,41.8	Survivors of the 1832 massacres flee to Shingal
+route	1892	36.7,43.35 > 36.4,41.7	Refugees from Sheikhan take shelter on Mount Sinjar (1892)
+route	1915	38.5,43.4 > 40.15,44.1	The Armenian genocide drives Yazidis from Van, Kars and Bazîd to Transcaucasia (1915)
+route	1960	37.4,41.3 > 52.3,9.0	Emigration from Turkey, and later Iraq, to Germany (20th century)
+route	2014	36.37,41.75 > 37.05,41.2	A corridor opened by Kurdish fighters leads Yazidis off Mount Sinjar into Rojava (2014)
+mark	origin	1100	Lalish	36.77,43.3	Sheikh Adi ibn Musafir settled in this valley, united the scattered Yazidi tribes and returned to them their ancient temple; his tomb is the holiest Yazidi site.
+mark	place	1640	Mount Sinjar	36.37,41.75	An Ottoman army under Melek Ahmed Pasha stormed the mountain in 1640; Evliya Çelebi reports that 3,060 Yazidis were killed.
+mark	place	1832	Gali Ali Beg	36.62,44.45	Yazidi captives taken to Rawanduz in 1832, among them the Mîr Ali Beg, were executed here when they refused to convert to Islam.
+mark	place	1918	Sardarabad	40.07,44.0	700 Yazidi cavalry fought with the Armenian force that stopped the Ottoman advance in May 1918.
+mark	place	2014	Sinjar	36.32,41.87	The Islamic State captured Sinjar in August 2014 and began the genocide of the Yazidis: over 5,000 were killed and thousands of women and girls enslaved.
+mark	place	2019	Aknalich	40.15,44.15	The largest Yazidi temple in the world, Quba Mere Diwane, opened here in 2019.
+note	1100	Sheikh Adi ibn Musafir settles at Lalish, unites the scattered Yazidi tribes and reforms their religion; after his death (1162) his nephew leads the community.
+note	1230	Sheikh Hasan brings the Sheikhan principality to its height and founds a Council of Holy Men; the ruler of Mosul has him killed (1246).
+note	1300	Yazidism is the religion of many Kurdish tribes and emirates, from Antioch to Sulaymaniyah; its lands form seven centres, each with its sacred sinjaq.
+note	1414	Sunni Kurdish tribes ransack Lalish (1414); many Yazidi chiefs are forcibly converted, and Yazidi power declines.
+note	1566	Under Ottoman rule Hussein Beg briefly governs Erbil (1534); fatwas of the Sheikh al-Islam legitimise the killing and enslavement of Yazidis (1566).
+note	1640	Ottoman expeditions strike the Yazidis of Shingal: in 1613 the Yazidis defeat them, but in 1640 an army storms Mount Sinjar and kills 3,060.
+note	1715	Ottoman campaigns against Sinjar and Sheikhan follow one another, some fifteen in the 18th century alone.
+note	1832	Muhammad Pasha of Rawanduz massacres the Yazidis of Sheikhan (1832); Yazidis flee to the Russian Empire, and in 1892 Lalish is turned into a madrasa.
+note	1915	Yazidis are killed in the Armenian genocide and flee to Transcaucasia; in the later 20th century many emigrate from Turkey to Germany.
+note	2014	The Islamic State captures Sinjar (2014): over 5,000 Yazidis are killed, thousands of women and girls enslaved and more than 500,000 flee.
+src	Wikipedia: Yazidis
+src	Wikipedia: Persecution of Yazidis
+src	Wikipedia: Yazidism
+src	John S. Guest, Survival Among the Kurds: A History of the Yezidis (1993)
+
+@haitian-vodou
+area	Hispaniola	19.0,-72.4	220	1512	1697	1	the Spanish colony, where enslaved West Africans, some of them priests of their religions, are brought from about 1512
+area	Saint-Domingue	19.0,-72.4	220	1697	1803	1	the French colony, where the Code Noir forbids African religions and Vodou takes form around 1750
+area	Haiti	19.0,-72.4	220	1803		2	the majority religion, practised by most Haitians alongside Catholicism
+area	Louisiana	30.0,-90.5	200	1791		1	Haitians fleeing the Revolution contribute to Louisiana Voodoo
+area	Eastern Cuba	20.4,-76.0	200	1900		1	brought by Haitian migrants in the early 20th century
+area	Dominican Republic	18.8,-70.2	150	1900		1
+area	Puerto Rico	18.2,-66.5	100	1900		1
+area	New York and the US East Coast	40.7,-74.0	300	1950		1	major temples in New York City, Boston and Washington, D.C.; pilgrims at Our Lady of Mount Carmel in East Harlem
+area	Miami	25.78,-80.2	120	1950		1
+area	Oakland	37.8,-122.27	100	1950		1
+area	France	46.6,2.4	400	1950		1
+area	Canada	45.5,-73.6	300	1950		1
+route	1512	6.4,2.3 > 19.0,-72.4	Enslaved West Africans are brought to Hispaniola (from about 1512)
+route	1750	6.66,2.15 > 19.0,-72.4	From Dahomey come the Fon roots of the Rada lwa, named after the city of Arada (18th century)
+route	1750	-6.27,14.24 > 19.0,-72.4	From Kongo come the roots of the Petwo lwa (18th century)
+route	1791	19.7,-72.2 > 30.0,-90.1	Haitians flee to Louisiana amid the Revolution
+route	1900	19.7,-72.2 > 20.4,-76.0	Haitian migrants take Vodou to eastern Cuba (early 20th century)
+route	1950	18.54,-72.34 > 40.7,-74.0	Later migrants introduce it to the United States
+mark	origin	1512	Hispaniola	19.0,-72.4	Enslaved West and Central Africans, brought here from about 1512, blended their religions with Catholicism; the result took the form of Vodou around the mid-18th century.
+mark	place	1791	Bois-Caïman	19.7,-72.25	According to legend a Vodou ritual here in 1791 sparked the Haitian Revolution; each July pilgrims gather at nearby Plaine du Nord.
+mark	place	1840	Saut d'Eau	18.82,-72.2	Near Ville-Bonheur, where the Virgin Mary (Èzili) allegedly appeared in the 1840s, pilgrims bathe under waterfalls each July.
+note	1512	After the Taíno population is decimated, the Spanish colonists of Hispaniola import enslaved West Africans from about 1512, some of them priests of African religions.
+note	1685	The French Code Noir (1685) forbids the open practice of African religions; Spain cedes western Hispaniola to France (1697), and the colony of Saint-Domingue is born.
+note	1750	In Saint-Domingue, where the slave trade grows, African religions blend with Catholic and Masonic elements into Vodou, practised in secret at night; legend says a Vodou ritual at Bois-Caïman sparked the Revolution of 1791.
+note	1805	The Catholic Church leaves Haiti (1805–1860), and Vodou becomes the dominant religion of a land of small farmers, though Haiti's first presidents fear it.
+note	1915	The US occupation (1915–1934) stirs interest in Vodou; migrants take it to eastern Cuba and the United States, the Church-backed Operation Nettoyage destroys many temples (1941), and the 1987 constitution enshrines freedom of religion.
+note	2003	Vodou is officially recognised (2003); Vodouists are attacked after the 2010 earthquake, and major temples stand in Miami, New York and other US cities.
+src	Wikipedia: Haitian Vodou

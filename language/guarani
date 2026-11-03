@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Guarani: History of the Language — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Guarani, or avañe'ẽ, is a Tupian language of South America, first written by Jesuit missionaries in the 17th century, spoken today by the majority of…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Guarani: History of the Language — The Epoch Institute">
+<meta property="og:description" content="Guarani, or avañe'ẽ, is a Tupian language of South America, first written by Jesuit missionaries in the 17th century, spoken today by the majority of…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/language/guarani">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/guarani.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/guarani.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/language/guarani">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Languages","item":"https://the-epoch-institute.org/profiles?kind=language"},{"@type":"ListItem","position":4,"name":"Guarani"}]},{"@type":"Article","headline":"Guarani","description":"Guarani, or avañe'ẽ, is a Tupian language of South America, first written by Jesuit missionaries in the 17th century, spoken today by the majority of…","url":"https://the-epoch-institute.org/language/guarani","mainEntityOfPage":"https://the-epoch-institute.org/language/guarani","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Language","name":"Guarani"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/guarani.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=language">Languages</a></li><li aria-current="page">Guarani</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Guarani.png" alt="Guarani" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Language · Americas</p>
+        <h1 class="profile-detail-name">Guarani</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1629 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Family</span><span class="info-stat-val">Tupian: the <a class="enc-link" href="/encyclopedia/tupi">Tupi</a>–Guarani branch; Paraguayan Guarani is part of a dialect chain, most of whose varieties are also called Guarani</span></div>
+          <div class="info-stat"><span class="info-stat-label">Writing</span><span class="info-stat-val">The <a class="enc-link" href="/encyclopedia/latin">Latin</a> alphabet, since the <a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> grammars and dictionary of 1629–1640; the letter y writes the vowel ɨ</span></div>
+          <div class="info-stat"><span class="info-stat-label">Earliest records</span><span class="info-stat-val">The <a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> Alonso de Aragona’s teaching grammar, completed in 1629 (printed in 1979); Antonio Ruiz de Montoya’s dictionary, the Tesoro de la Lengua Guaraní (1639), and grammar, the Arte de la lengua Guaraní (1640)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Status today</span><span class="info-stat-val">Living: more than four million speakers in <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>, <a class="enc-link" href="/encyclopedia/bolivia">Bolivia</a>, <a class="enc-link" href="/encyclopedia/brazil">Brazil</a> and <a class="enc-link" href="/encyclopedia/argentina">Argentina</a>; official in Paraguay beside Spanish (equal to it since the 1992 constitution), in Bolivia and in the Argentine province of <a class="enc-link" href="/encyclopedia/corrientes">Corrientes</a>, and one of the three official languages of <a class="enc-link" href="/encyclopedia/mercosur">Mercosur</a>; rated “vulnerable” by <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Guarani is a Tupian language that <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a> kept: where people across the <a class="enc-link" href="/encyclopedia/americas">Americas</a> shifted to the colonial languages, Paraguayans held on to Guarani while also adopting Spanish.</li><li><a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> missionaries first wrote it down, in grammars and a dictionary of 1629–1640; the Guarani of their missions built new words from its own roots, while the Guarani spoken outside took in Spanish words freely.</li><li>Banned from <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>’s state schools for over a hundred years, yet used by populists to stir national feeling, it was made equal to Spanish in the constitution of 1992.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Guarani marks time on nouns as well as verbs: tetã ruvichakue is “ex-president” and tetã ruvicharã “president-elect”, and pa'irãgue, “the ex-future priest”, is someone who studied for the priesthood but did not finish.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#structure">Sounds, Script &amp; Grammar</a></li><li><a href="#speakers">Speakers &amp; Spread</a></li><li><a href="#literature">Literature &amp; Learning</a></li><li><a href="#change">Change &amp; Descendants</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1629</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> Alonso de Aragona completes a teaching grammar of Guarani, not printed until 1979</span></li><li><span class="rf-year">1639</span><span class="rf-text">Antonio Ruiz de Montoya produces the Tesoro de la Lengua Guaraní, the first dictionary of its kind</span></li><li><span class="rf-year">1640</span><span class="rf-text">Ruiz de Montoya’s Arte de la lengua Guaraní becomes the starting point for all later grammars of the language</span></li><li><span class="rf-year">18th century</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/jesuits">Jesuits</a> are expelled, and the people of the reductions move towards <a class="enc-link" href="/encyclopedia/asuncion">Asunción</a>, where the mission Guarani gives way to the everyday Guarani of <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a></span></li><li><span class="rf-year">1992</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>’s new democratic constitution makes Guarani a language equal to Spanish</span></li><li><span class="rf-year">2004</span><span class="rf-text">Guarani becomes the second official language of the Argentine province of <a class="enc-link" href="/encyclopedia/corrientes">Corrientes</a></span></li><li><span class="rf-year">2010</span><span class="rf-text">The Brazilian town of Tacuru adopts Guarani as a co-official language</span></li><li><span class="rf-year">2022</span><span class="rf-text">Only 12% of Paraguayans now speak Guarani alone, against 28% in 2002, while Spanish monolingualism has not risen</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/guarani-people"><img src="/images/encyclopedia/guarani-people.jpg" alt="Guaraní people" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/guarani-people">Guaraní people</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Xam%C3%A3_guarani.jpg" target="_blank" rel="noopener">Roosewelt Pinheiro/ABr, CC BY 3.0 br</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Guarani, avañe'ẽ in the language itself, belongs to the <a class="enc-link" href="/encyclopedia/tupi">Tupi</a>–Guarani branch of the Tupian languages of <a class="enc-link" href="/encyclopedia/south-america">South America</a>. The name is used above all for the official language of <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>, but that language is one link in a dialect chain, a series of neighbouring varieties each close to the next, most of which are also called Guarani. Other languages of the same branch include Amanayé, now extinct, and Anambé, critically endangered. The <a class="enc-link" href="/encyclopedia/guarani-people">Guarani people</a>, more than 280,000 of them, live in <a class="enc-link" href="/encyclopedia/brazil">Brazil</a>, Paraguay, <a class="enc-link" href="/encyclopedia/bolivia">Bolivia</a> and <a class="enc-link" href="/encyclopedia/argentina">Argentina</a>.</p><p>Because Guarani was written down only after the <a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> missionaries arrived, its earlier history cannot be read from documents; it can be reconstructed only by comparing it with its relatives. Its written record begins with two Jesuits. Alonso de Aragona completed a teaching grammar in 1629, meant for those who wished to learn the language, though it was printed only in 1979. Antonio Ruiz de Montoya produced the Tesoro de la Lengua Guaraní in 1639, the first dictionary of its kind, with examples of how each word was used, and the Arte de la lengua Guaraní in 1640, a grammar whose analysis of Guarani words and sentences still stands.</p><p>Modern scholarship has shown that Guarani was always the main language of colonial Paraguay, both inside the Jesuit Reductions, the mission settlements where its Classical form was the only language spoken, and outside them, where Paraguayan Guarani has its roots.</p></div>
+      </div>
+      <div class="profile-section-block" id="structure">
+        <h2 class="profile-section-title">Sounds, Script &amp; Grammar</h2>
+        <div class="profile-section-body"><p>Guarani syllables are simple: a consonant and a vowel, or a vowel alone, so every syllable ends in a vowel. Besides a, e, i, o and u it has the vowel ɨ, written y, and every oral vowel has a nasal partner, a symmetry that many languages with nasal vowels lack. The glottal stop, called puso, is written only between vowels. Most striking is nasal harmony: when a stressed syllable is nasal, the nasality spreads through the word in both directions, across affixes and compounds, until it meets a stressed oral syllable, and the voiced consonants change with it, as in oral mbotɨ against nasal mõtɨ̃.</p><p>Guarani builds long words from many parts: it is highly agglutinative, often called polysynthetic, and can fold a noun into its verb. Verbs fall into two classes, areal for a participant who acts and chendal for one who undergoes, and “we” has two forms, one including the listener and one leaving them out. Negation wraps around the verb, as in ndajapomo'ãi, “I won’t do it”, and the usual word order is subject, verb, object.</p><p>Small endings carry fine shades of time and certainty. The suffix -kuri marks something just done, as ha'ukuri, “I just ate”; -va'ekue something long ago and really true; -ra'e a thing the speaker once doubted but is now sure of; -ta the near future, as oujeýta ag̃aite, “he’ll come back soon”; and -mi a habit of the past, as oumi, “he used to come a lot”.</p></div>
+      </div>
+      <div class="profile-section-block" id="speakers">
+        <h2 class="profile-section-title">Speakers &amp; Spread</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/asuncion"><img src="/images/encyclopedia/asuncion.jpg" alt="Asunción" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/asuncion">Asunción</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Palacio_de_los_L%C3%B3pez_Asunci%C3%B3n_2.jpg" target="_blank" rel="noopener">MosheA, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Guarani is spoken above all in <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>, by the majority of the population, and half of the rural population speak Guarani alone. Variants of it are spoken in northeastern <a class="enc-link" href="/encyclopedia/argentina">Argentina</a>, southeastern <a class="enc-link" href="/encyclopedia/bolivia">Bolivia</a> and southwestern <a class="enc-link" href="/encyclopedia/brazil">Brazil</a>, and across these regions there are more than four million speakers. Paraguay is unique in the <a class="enc-link" href="/encyclopedia/americas">Americas</a>: almost everywhere else in the Western Hemisphere people shifted to the European colonial languages, but Paraguayans kept their traditional language while also adopting Spanish. Guarani is the Indigenous language most widely spoken by non-Indigenous people in <a class="enc-link" href="/encyclopedia/south-america">South America</a>.</p><p>When the <a class="enc-link" href="/encyclopedia/jesuits">Jesuits</a> were expelled in the 18th century, the people of the reductions gradually moved north and west towards <a class="enc-link" href="/encyclopedia/asuncion">Asunción</a>, and the mission Guarani and the Guarani of everyday use met at length for the first time; most speakers left the regulated mission variety for the one that had grown up among Paraguayans. Today Jopara, a mixture of Spanish and Guarani, is spoken by an estimated 90% of Paraguayans, who move along a spectrum, with more Spanish for official and business matters and more Guarani in art and everyday life.</p><p><a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> rates the language “vulnerable”: most Guarani children speak it, but mainly in settings such as the family. In 2002, 28% of Paraguayans spoke only Guarani, and by 2022 only 12% did; yet Spanish monolingualism did not rise, a sign of Guarani’s continued life among people who speak both.</p></div>
+      </div>
+      <div class="profile-section-block" id="literature">
+        <h2 class="profile-section-title">Literature &amp; Learning</h2>
+        <div class="profile-section-body"><p>Guarani was not written until the <a class="enc-link" href="/encyclopedia/jesuits">Jesuits</a> came, and its first books were their tools for teaching: Aragona’s grammar of 1629, Ruiz de Montoya’s dictionary of 1639 and his grammar of 1640, which remains the seminal point of reference for every later grammar. To carry Christian ideas the missionaries built new words from Guarani parts rather than borrowing Spanish ones, which often gave long, highly synthetic terms: “communion” became Tupârahava, from Tupâ, “God”, where Paraguayans today say komuño.</p><p>Modern Guarani has a literature of its own. A newer translation of the whole Bible is known as Ñandejara Ñe'ẽ, and in 2019 Jehovah’s Witnesses released their New World Translation of the Holy Scriptures in Guarani, in print and online. Novels have been published in the language, among them Kalaito Pombero by Tadeo Zarratea (1981), Pore'ỹ rape by Hugo Centurión (2016) and Tatukua by Arnaldo Casco Villalba (2017). Writers in Guarani include Julio Correa, Manuel Ortiz Guerrero, Susy Delgado, Néstor Amarilla, Rigoberto Fontao Meza and David Galeano Olivera.</p><p>The language is cultivated by institutions such as the Guarani Language and Culture Athenaeum and the Yvy Marãe'ỹ Foundation. Guarani’s official status in <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>, together with the research that has followed, has made recent projects of standardization possible.</p></div>
+      </div>
+      <div class="profile-section-block" id="change">
+        <h2 class="profile-section-title">Change &amp; Descendants</h2>
+        <div class="profile-section-body"><p>Guarani is known in two historical forms. Classical Guarani, the language of the <a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> missions, was curated by the missionaries, who shied away from borrowing Spanish sounds. The Guarani spoken outside the missions was free and unregulated, and often simply took in Spanish words and phrases with little change. After the expulsion of the Jesuits the two met, and the everyday variety won; its contemporary spoken form is Jopara, “mixture”.</p><p>Long contact with Spanish has given Guarani many loanwords, often for things unknown in the <a class="enc-link" href="/encyclopedia/americas">Americas</a> before Spanish colonisation, and has changed its sounds: the Spanish trilled r, written rr, became a retroflex sibilant, a hissing sound made with the tongue curled back, while l entered through loanwords and is now an ordinary Guarani sound, and f, ð and ʎ appear in loans. Borrowed Spanish verbs all join the areal class, borrowed adjectives the chendal. Long polysynthetic words often have analytic paraphrases, keeping the words apart, which speakers today use more often.</p><p>Older processes still show. Where several glottal stops come close together they are dissimilated: 'a'y'u, “I drink water”, is pronounced hay'u, and such regular sound changes seem to explain irregular verb forms. Glottal stops are also dropped to varying degrees, so that aru'uka, “I have something brought”, becomes aruuka and aruka.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Guarani’s survival has been a matter of politics. Widely spoken, it was nevertheless repressed by Paraguayan governments for most of the country’s history since independence and was prohibited in state schools for over 100 years, while populists used pride in it to excite nationalist fervour and tell a story of social unity. Under the autocratic regime of <a class="enc-link" href="/encyclopedia/alfredo-stroessner">Alfredo Stroessner</a> his Colorado Party used Guarani to appeal to ordinary Paraguayans, though Stroessner himself never gave an address in it. With the coming of democracy in 1992, the new constitution established Guarani as a language equal to Spanish.</p><p>Its official reach has grown since. Guarani is an official language of <a class="enc-link" href="/encyclopedia/bolivia">Bolivia</a>, the second official language of the Argentine province of <a class="enc-link" href="/encyclopedia/corrientes">Corrientes</a> since 2004, and one of the three official languages of <a class="enc-link" href="/encyclopedia/mercosur">Mercosur</a>, beside Spanish and Portuguese. Towns have followed: the Brazilian town of Tacuru in 2010, Coronel Sapucaia in 2022 and the Argentine town of Caá Catí in 2026.</p><p>Ruiz de Montoya’s 17th-century analysis of its grammar still holds, and the language is studied and learned well beyond <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>. Its use is largely restricted to settings such as the family, so that <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> counts it vulnerable; but Guarani remains the language of a nation’s everyday life and art.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Guarani is a Tupian language of <a class="enc-link" href="/encyclopedia/south-america">South America</a>, first written down by <a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> missionaries in the 17th century and spoken today by most Paraguayans and by communities in <a class="enc-link" href="/encyclopedia/argentina">Argentina</a>, <a class="enc-link" href="/encyclopedia/bolivia">Bolivia</a> and <a class="enc-link" href="/encyclopedia/brazil">Brazil</a>, more than four million people in all. Repressed in <a class="enc-link" href="/encyclopedia/paraguay">Paraguay</a>’s state schools for over a century, it was made equal to Spanish in the constitution of 1992, and lives on in Jopara, its everyday mixture with Spanish.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="guarani"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Paraguay’s new democratic constitution makes Guarani a language equal to Spanish","o":["1629","1992","2022","1639"],"a":1,"w":"1992: Paraguay’s new democratic constitution makes Guarani a language equal to Spanish."},{"p":"Which came first?","q":"","o":["Antonio Ruiz de Montoya produces the Tesoro de la Lengua Guaraní, the first dictionary of its kind","Paraguay’s new democratic constitution makes Guarani a language equal to Spanish"],"a":0,"w":"1639: Antonio Ruiz de Montoya produces the Tesoro de la Lengua Guaraní, the first dictionary of its kind · 1992: Paraguay’s new democratic constitution makes Guarani a language equal to Spanish."},{"p":"In which year?","q":"Antonio Ruiz de Montoya produces the Tesoro de la Lengua Guaraní, the first dictionary of its kind","o":["1629","2004","1992","1639"],"a":3,"w":"1639: Antonio Ruiz de Montoya produces the Tesoro de la Lengua Guaraní, the first dictionary of its kind."},{"p":"Which came first?","q":"","o":["Paraguay’s new democratic constitution makes Guarani a language equal to Spanish","Only 12% of Paraguayans now speak Guarani alone, against 28% in 2002, while Spanish monolingualism has not risen"],"a":0,"w":"1992: Paraguay’s new democratic constitution makes Guarani a language equal to Spanish · 2022: Only 12% of Paraguayans now speak Guarani alone, against 28% in 2002, while Spanish monolingualism has not risen."},{"p":"In which year?","q":"The Jesuit Alonso de Aragona completes a teaching grammar of Guarani, not printed until 1979","o":["2010","1629","1639","1992"],"a":1,"w":"1629: The Jesuit Alonso de Aragona completes a teaching grammar of Guarani, not printed until 1979."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Fernando O. de Carvalho, “A new sound change for Guarani(an): glottal prothesis, internal classification, and the explanation of synchronic irregularities”, Folia Linguistica 56 (2022)</li>
+        <li>Bruno Estigarribia, A Grammar of Paraguayan Guarani (UCL Press)</li>
+        <li>Natalia Krivoshein de Canese, Gramática de la lengua guaraní (1983)</li>
+        <li>Natalia Krivoshein de Canese and Feliciano Acosta Alcatraz, Ñe'ẽryru: diccionario guaraní-español (1990)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other languages</p>
+      <div class="related-grid"><a class="related-card" href="/language/ottoman-turkish"><img src="/logos/thumbs/Ottoman%20Turkish.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ottoman Turkish</span><span class="related-card-dates">c. 1300 CE – 1928 CE</span></a><a class="related-card" href="/language/mongolian"><img src="/logos/thumbs/Mongolian.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mongolian</span><span class="related-card-dates">c. 1224 CE – present</span></a><a class="related-card" href="/language/old-church-slavonic"><img src="/logos/thumbs/Old%20Church%20Slavonic.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Old Church Slavonic</span><span class="related-card-dates">c. 863 CE – c. 1100 CE</span></a><a class="related-card" href="/language/swahili"><img src="/logos/thumbs/Swahili.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Swahili</span><span class="related-card-dates">c. 800 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/language/ottoman-turkish"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Ottoman%20Turkish.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ottoman Turkish</span><span class="related-card-dates">c. 1300 CE – 1928 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Guarani",slug="guarani",url="https://the-epoch-institute.org/language/guarani";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Guarani on The Epoch Institute — history of the language. https://the-epoch-institute.org/language/guarani #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/language/guarani"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Guarani",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Guarani",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

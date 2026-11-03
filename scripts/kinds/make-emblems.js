@@ -23,6 +23,19 @@ const EMBLEMS = [
   ['Clovis culture', 'C'], ['Paracas culture', 'P'], ['La Tène culture', 'L'], ['Hallstatt culture', 'H'], ['Cucuteni–Trypillia culture', 'C'],
   ['Nuragic civilisation', 'N'], ['Iberians', 'I'], ['Tocharians', 'T'], ['Longshan culture', '龍', 'serif-cjk', 220],
   ['Hongshan culture', '紅', 'serif-cjk', 220], ['Erlitou culture', '里', 'serif-cjk', 220], ['Hoabinhian', 'H'],
+  // A3 and A4, 3 Nov 2026: each language a letter of its own script (Sinhala for Pali, the script of the Sri Lankan canon;
+  // Glagolitic zhivete for Old Church Slavonic, as its A reads as a cross; Inscriptional Pahlavi; Gothic; Coptic shai; Ge'ez gi; Phoenician aleph), the
+  // Latin-written ones a letter of their own (Æ) or the initial; religions the initial, Bon a Tibetan ba (its yungdrung
+  // is a swastika, never drawn) and Chinese folk religion 神 ("spirit, god"); no sacred symbol of a living faith
+  ['Pali', 'ප', 'Nirmala UI, "Iskoola Pota", sans-serif', 220], ['Old English', 'Æ'], ['Tamil', 'த', 'Nirmala UI, Latha, sans-serif', 220],
+  ['Malay', 'M'], ['Armenian', 'Ա', 'Sylfaen, "Segoe UI", serif', 230], ['Mongolian', 'M'], ['Ottoman Turkish', 'O'],
+  ['Middle Persian', '\u{10B6F}', '"Segoe UI Historic", sans-serif', 230], ['Old Church Slavonic', 'Ⰶ', '"Segoe UI Historic", sans-serif', 230],
+  ['Gothic', '\u{10332}', '"Segoe UI Historic", sans-serif', 230], ['Guarani', 'G'], ['Georgian', 'ქ', 'Sylfaen, "Segoe UI", serif', 230],
+  ['Coptic', 'Ϣ', '"Segoe UI Historic", "Segoe UI", sans-serif', 230], ["Ge'ez", 'ግ', 'Ebrima, Nyala, sans-serif', 230], ['Hawaiian', 'H'],
+  ['Phoenician', '\u{10900}', '"Segoe UI Historic", sans-serif', 230],
+  ['Mesopotamian religion', 'M'], ['Canaanite religion', 'C'], ['Roman religion', 'R'], ['Celtic religion', 'C'], ['Slavic paganism', 'S'],
+  ['Mithraism', 'M'], ['Tengrism', 'T'], ['Bon', 'བ', '"Microsoft Himalaya", serif', 260], ['Chinese folk religion', '神', 'serif-cjk', 220],
+  ['Druze faith', 'D'], ['Yazidism', 'Y'], ['Haitian Vodou', 'V'],
   ["El Perú-Waka'", 'W'],   // the Maya city's own name, not the Spanish "Perú"
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
