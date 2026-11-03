@@ -12,6 +12,9 @@ const AE = JSON.parse(fs.readFileSync(path.join(R, 'scripts', 'added-entries.jso
 const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[ʻʼ’'`]/g, '').toLowerCase().replace(/^the /, '').replace(/[^a-z0-9]+/g, ' ').trim();
 const toSlug = n => n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const have = new Map(); for (const e of ENC.concat(AE.entries)) { for (const n of [e.name, e.slug.replace(/-/g, ' '), ...(e.aka || [])]) have.set(fold(n), e.slug); }
+// a profile's subject is not an entry too (the Harlem Renaissance, as 'New Negro movement')
+const SD = new Function(fs.readFileSync(path.join(R, 'shared-data.js'), 'utf8') + ';return EMPIRES')();
+for (const e of SD) if (!have.has(fold(e.name))) have.set(fold(e.name), 'profile: ' + e.name);
 const slugs = new Set(ENC.map(e => e.slug).concat(AE.entries.map(e => e.slug)));
 async function get(u) { for (let i = 0; i < 6; i++) { try { const r = await fetch(u, { headers: UA }); if (r.ok) return await r.json(); } catch (e) {} await sleep(3000 * (i + 1)); } return null; }
 (async () => {
