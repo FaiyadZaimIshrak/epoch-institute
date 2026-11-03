@@ -3865,6 +3865,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .wn-sec { font-family: var(--font-display); font-size: 19px; color: var(--gold-light); margin: 22px 0 8px; }
 .wn-plist { margin: 0; padding: 0 0 0 18px; columns: 2 300px; column-gap: 32px; font-family: var(--font-text); font-size: 16px; line-height: 1.7; }
 .wn-plist li { break-inside: avoid; }
+.wn-plist a { color: var(--gold); text-decoration-color: rgba(var(--gold-rgb), 0.45); }
+.wn-plist a:hover { color: var(--gold-light); }
 .wn-plist span { font-family: var(--font-ui); font-size: 12px; color: var(--muted); }
 .wn-more { font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
 .paths-wrap > .ref-crumbs { max-width: 860px; margin-left: auto; margin-right: auto; }
@@ -4947,6 +4949,8 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 @keyframes gm-in { from { opacity: 0; transform: translateY(14px); } }
 .gm-head { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; margin: 0 0 14px; }
 .gm-howto { font-family: var(--font-text); font-size: 17px; color: var(--text); margin: 0; flex: 1 1 320px; }
+.gm-howto a { color: var(--gold); text-decoration-color: rgba(var(--gold-rgb), 0.45); }
+.gm-howto a:hover { color: var(--gold-light); }
 .gm-seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface); }
 .gm-seg button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; transition: background 0.2s, color 0.2s; }
 .gm-seg button + button { border-left: 1px solid var(--border); }

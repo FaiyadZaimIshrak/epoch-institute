@@ -1125,6 +1125,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 @keyframes gm-in { from { opacity: 0; transform: translateY(14px); } }
 .gm-head { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; margin: 0 0 14px; }
 .gm-howto { font-family: var(--font-text); font-size: 17px; color: var(--text); margin: 0; flex: 1 1 320px; }
+.gm-howto a { color: var(--gold); text-decoration-color: rgba(var(--gold-rgb), 0.45); }
+.gm-howto a:hover { color: var(--gold-light); }
 .gm-seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface); }
 .gm-seg button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; transition: background 0.2s, color 0.2s; }
 .gm-seg button + button { border-left: 1px solid var(--border); }

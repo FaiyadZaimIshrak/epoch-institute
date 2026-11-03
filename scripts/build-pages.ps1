@@ -4184,7 +4184,9 @@ foreach ($p in ($FSEEN.Keys | Where-Object { $FSEEN[$_] -and [string]::CompareOr
 function WnTitle([string]$p) {   # a page's own title, from the file just written
   $f = Join-Path $Repo ($p.TrimStart('/') -replace '/', '\'); if ($p.EndsWith('/')) { $f = Join-Path $f 'index' }
   if (-not (Test-Path $f)) { return $p }
-  $m = [regex]::Match([IO.File]::ReadAllText($f, $U8), '<title>([^<]*)</title>'); if (-not $m.Success) { return $p }
+  $wt = [IO.File]::ReadAllText($f, $U8); $h = [regex]::Match($wt, '(?s)<h1[^>]*>(.*?)</h1>')   # the page's own heading first: a title carries its subtitle and section
+  if ($h.Success) { $h1 = [regex]::Replace($h.Groups[1].Value, '<[^>]+>', '').Trim(); if ($h1) { return [Net.WebUtility]::HtmlDecode($h1) } }
+  $m = [regex]::Match($wt, '<title>([^<]*)</title>'); if (-not $m.Success) { return $p }
   [Net.WebUtility]::HtmlDecode($m.Groups[1].Value) -replace '\s+[—–-]\s+(The Epoch Institute|Encyclopedia|States|Songs in History|Year by Year)$', '' -replace '\s+[—–-]\s+(The Epoch Institute|Encyclopedia|States|Songs in History)$', ''
 }
 function WnDate([string]$d) { ([datetime]::ParseExact($d, 'yyyy-MM-dd', $INV)).ToString('d MMMM yyyy', $INV) }

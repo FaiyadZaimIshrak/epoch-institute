@@ -6665,6 +6665,7 @@ rows:[
 ["chola-empire","Chola Empire",4,"","",1,"Chola | Cholas"],
 ["chola-invasion-of-srivijaya","Chola invasion of Srivijaya",1,"1025; 1068","campaign",1,"Chola raids | Chola retaliatory raid"],
 ["chola-chalukya-wars","Chola–Chalukya wars",1,"c. 992–1120","war",0,""],
+["chollima-movement","Chollima Movement",2,"1956–1961","",1,"Chʼŏllima Movement | 천리마 운동"],
 ["chollima-on-the-wing","Chollima on the Wing",9,"","",0,"천리마 달린다 | Chollima dallinda"],
 ["cholon","Cholon",3,"","",1,"Chợ Lớn | Cho Lon"],
 ["chones","Chones",5,"","",0,""],
