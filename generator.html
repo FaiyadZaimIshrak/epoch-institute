@@ -233,7 +233,8 @@ function glanceHtml(name) {
 function eventYear(s) {
   var bce = /BCE|BC\b/.test(s), m = s.match(/(\d{1,2})(?:st|nd|rd|th)\s+centur/i), n;
   if (m) n = (parseInt(m[1], 10) - 1) * 100 + 50;
-  else { m = s.match(/\d{1,4}/); if (!m) return null; n = parseInt(m[0], 10); }
+  else if ((m = s.match(/(\d{1,2})(?:st|nd|rd|th)\s+millenni/i))) n = (parseInt(m[1], 10) - 1) * 1000 + 500;
+  else { m = s.match(/\d{1,3}(?:,\d{3})+|\d+/); if (!m) return null; n = parseInt(m[0].replace(/,/g, ''), 10); }
   return bce ? -n : n;
 }
 function riseFallHtml(emp, name, isPolity) {

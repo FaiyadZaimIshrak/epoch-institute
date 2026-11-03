@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Hoabinhian: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Hoabinhian is a stone-tool tradition of mainland Southeast Asia, dated to c. 10,000–2000 BCE and named after Hòa Bình province in northern Vietnam…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Hoabinhian: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Hoabinhian is a stone-tool tradition of mainland Southeast Asia, dated to c. 10,000–2000 BCE and named after Hòa Bình province in northern Vietnam…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/hoabinhian">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/hoabinhian.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/hoabinhian.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/hoabinhian">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Hoabinhian"}]},{"@type":"Article","headline":"Hoabinhian","description":"The Hoabinhian is a stone-tool tradition of mainland Southeast Asia, dated to c. 10,000–2000 BCE and named after Hòa Bình province in northern Vietnam…","url":"https://the-epoch-institute.org/culture/hoabinhian","mainEntityOfPage":"https://the-epoch-institute.org/culture/hoabinhian","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Hoabinhian"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/hoabinhian.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Hoabinhian</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Hoabinhian.png" alt="Hoabinhian" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Hoabinhian</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">Mainland <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>: more than 120 sites in <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, among them those of Hòa Bình province and Da But; Spirit Cave, Sai Yok, Tham Lod and Ban Rai in <a class="enc-link" href="/encyclopedia/thailand">Thailand</a>; Pha Faen in <a class="enc-link" href="/encyclopedia/laos">Laos</a>; Gua Cha in Malaysia; sites in Terengganu, <a class="enc-link" href="/encyclopedia/sumatra">Sumatra</a>, Laos, Myanmar and <a class="enc-link" href="/encyclopedia/cambodia">Cambodia</a>; and Xiaodong in <a class="enc-link" href="/encyclopedia/yunnan">Yunnan</a>, <a class="enc-link" href="/encyclopedia/china">China</a>, the oldest and the only one in China.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Usually dated c. 10,000–2000 BCE, from the late Pleistocene to the Holocene; the 1994 <a class="enc-link" href="/encyclopedia/hanoi">Hanoi</a> conference set it at the “late-to-terminal Pleistocene to early-to-mid Holocene”. Xiaodong dates from 41,500 BCE, Vietnamese finds to 17,000 years before the present, Spirit Cave’s Hoabinhian levels to 12,000–8000 BP; the Bacsonian variant c. 8000–4000 BCE.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">flaked cobble tools, often worked on one face only; sumatraliths, cobbles flaked all over one side; grinding stones, often found with iron oxide; rock shelters near streams in limestone uplands; shell middens; edge-ground tools and cord-marked pottery in the upper layers; plant remains at Spirit Cave</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Madeleine Colani’s excavations in Hòa Bình province, published in 1927, and the 1932 definition of the First Congress of Prehistorians of the Far East; J. M. Matthews’s 1964 study at Sai Yok; Chester Gorman’s excavations and radiocarbon dates at Spirit Cave; the 1994 <a class="enc-link" href="/encyclopedia/hanoi">Hanoi</a> conference; ancient DNA from Pha Faen and Gua Cha.</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Hoabinhian is a tradition of <a class="enc-link" href="/encyclopedia/stone-tools">stone tools</a>, chiefly flaked river cobbles, left by hunter-gatherers across mainland <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a> from the late Pleistocene to the Holocene.</li><li>It was first defined from Madeleine Colani’s excavations in Hòa Bình province, northern <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, but later study showed that its tools form a continuous range of shapes and sizes rather than distinct types.</li><li>Ancient DNA from two Hoabinhian individuals shows a deeply branching East Asian ancestry, shared most closely today with peoples such as the Andamanese Onge and Jarawa, the Semang and the Maniq.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Madeleine Colani sorted just 82 artefacts from Sao Dong into 28 types; her typology proved so complicated that most Hoabinhian sites are identified simply by the presence of sumatraliths.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 8000–4000 BCE</span><span class="rf-text">The Bacsonian variant, richer in edge-ground cobble tools, is made in northern <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a></span></li><li><span class="rf-year">after 6800 BCE</span><span class="rf-text">Cord-marked pottery appears in the Hoabinhian levels of Spirit Cave in northwest <a class="enc-link" href="/encyclopedia/thailand">Thailand</a></span></li><li><span class="rf-year">1927</span><span class="rf-text">Madeleine Colani publishes her nine excavations in the northern Vietnamese province of Hòa Bình</span></li><li><span class="rf-year">1932</span><span class="rf-text">The First Congress of Prehistorians of the Far East defines the Hoabinhian</span></li><li><span class="rf-year">1964</span><span class="rf-text">J. M. Matthews shows that the cobble tools of Sai Yok form a continuous range rather than Colani’s distinct types</span></li><li><span class="rf-year">1994</span><span class="rf-text">A conference in <a class="enc-link" href="/encyclopedia/hanoi">Hanoi</a> votes to keep the term and to call the Hoabinhian an industry of the late Pleistocene to mid Holocene</span></li><li><span class="rf-year">2016</span><span class="rf-text">Hoabinhian artefacts dating from 41,500 BCE are recognised at the Xiaodong rock shelter in <a class="enc-link" href="/encyclopedia/yunnan">Yunnan</a>, 40 km from the border with Myanmar</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Hoabinhian is a lithic techno-complex: stone-tool assemblages found across <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a> from the late Pleistocene to the Holocene, dated to c. 10,000–2000 BCE and attributed to hunter-gatherer societies whose changes in technology over time are poorly understood. French archaeologists working in northern <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a> first used the term Hòa Bình culture for Holocene assemblages from rock shelters; the English “Hoabinhian” came to mean assemblages of mainland Southeast <a class="enc-link" href="/encyclopedia/asia">Asia</a> with flaked cobble tools. It once meant a particular ethnic group of a limited period; recent work, such as Shoocongdej’s, uses it for artefacts of certain forms.</p><p>Its age has been pushed back. Colani and others assumed it was Holocene because the animals in its layers were living species, and Chester Gorman’s radiocarbon dates confirmed a Holocene age. At a conference in <a class="enc-link" href="/encyclopedia/hanoi">Hanoi</a> in 1994 Vietnamese archaeologists presented Hoabinhian artefacts 17,000 years old, and in 2016 a rock shelter at Xiaodong in <a class="enc-link" href="/encyclopedia/yunnan">Yunnan</a>, <a class="enc-link" href="/encyclopedia/china">China</a>, produced Hoabinhian artefacts dating from 41,500 BCE. Below Hoabinhian layers at several sites Hà Văn Tấn found an older flake technology he named the Nguomian, after the Ngườm rock shelter in Thái Nguyên province; the Hoabinhian is also claimed to continue the Sonvian technology.</p><p>Ancient DNA from Pha Faen in <a class="enc-link" href="/encyclopedia/laos">Laos</a> (7888 ± 40 BP) and Gua Cha in Malaysia (4319 ± 64 BP) shows a lineage related to the main East Asian lineage but deeply diverged from it, of unknown Upper Paleolithic origin.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Hoabinhian people lived as hunter-gatherers, oriented towards rock shelters near freshwater streams in upland limestone country, though shell middens show at least one other way of life. Their food remains are much alike from site to site: living species of shellfish, fish, and small to medium-sized mammals. They drew food from three settings: limestone mountains gave land snails and small mammals; streams, small rivers, swamps and lakes gave snails and fish; and the valley floors gave nuts, fruits, fungi, vegetables, wild cereals and wild mammals.</p><p>At Da But in <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, occupied from about the fifth or sixth millennium BCE to the end of the third, Viet (2004) found that people ate mostly mountain shellfish, nuts and fruit, including an as-yet-unnamed freshwater clam of the genus Corbicula, which lives in swamps and lakes. Differences between the tools of different regions largely follow local resources and changing environments.</p><p><a class="enc-link" href="/encyclopedia/stone-tools">Stone tools</a> are also read for how people moved. Studies by Marwick and Shoocongdej at the Tham Lod and Ban Rai rock shelters in <a class="enc-link" href="/encyclopedia/thailand">Thailand</a> applied behavioural ecology models: at Tham Lod much pre-processing of stone went with residential mobility and a low intensity of occupation, a contradiction that a “multiple optima” model, allowing more than one best strategy, has been proposed to explain.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>The Hoabinhian is known almost entirely from <a class="enc-link" href="/encyclopedia/stone-tools">stone tools</a> and food remains, and nothing in that record states what its makers believed. No writing survives, and the two people whose remains have yielded ancient DNA, at Pha Faen in <a class="enc-link" href="/encyclopedia/laos">Laos</a> and Gua Cha in Malaysia, are known from their genomes rather than from any described rite.</p><p>Some finds hint at uses beyond food. Grinding stones made on rounded cobbles often occur with iron oxide, though what was ground on them is not recorded. At Spirit Cave Chester Gorman suggested that plants such as areca (betel), <a class="enc-link" href="/encyclopedia/pepper">pepper</a>, canarium and candlenut were used as foods, condiments, stimulants and for lighting, and stressed that the remains show an early, sophisticated use of species still culturally important in <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The Hoabinhian is defined by its <a class="enc-link" href="/encyclopedia/stone-tools">stone tools</a>. In 1932 the First Congress of Prehistorians of the Far East described it as a culture of tools flaked with varied workmanship, often worked on one face only, with hammerstones, implements of sub-triangular section, discs, short axes, almond-shaped pieces and an appreciable number of bone tools. Chester Gorman’s 1970 definition stressed a mainly one-sided flaking tradition on water-rounded pebbles and the large flakes struck from them; sumatraliths, pebbles flaked all over one side; grinding stones; many flakes used without further shaping; and edge-ground tools and cord-marked pottery in the upper layers.</p><p>Madeleine Colani’s typology was elaborate: she sorted 82 artefacts from Sao Dong into 28 types. In 1964 J. M. Matthews measured unifacial cobble tools from Sai Yok rock shelter in west-central <a class="enc-link" href="/encyclopedia/thailand">Thailand</a> and found that Colani’s types did not exist: the tools form a continuous range of shapes and sizes. The Bacsonian, often treated as a variant, has more edge-ground cobble tools (c. 8000–4000 BCE). Marwick’s experimental assemblage of 2008 showed the value of recording where cortex lies on a flake’s back to measure how intensively stone was worked. Spirit Cave’s Hoabinhian levels also produced cord-marked pottery, though not until after 6800 BCE.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>Hoabinhian sites are found across mainland and island <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>. More than 120 are known in <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, a concentration that reflects intensive research there rather than a centre of Hoabinhian activity. Sites in Terengganu, <a class="enc-link" href="/encyclopedia/sumatra">Sumatra</a>, <a class="enc-link" href="/encyclopedia/thailand">Thailand</a>, <a class="enc-link" href="/encyclopedia/laos">Laos</a>, Myanmar and <a class="enc-link" href="/encyclopedia/cambodia">Cambodia</a> have also been called Hoabinhian, though the quality of their descriptions varies, and some archaeologists see isolated Hoabinhian elements in <a class="enc-link" href="/encyclopedia/nepal">Nepal</a>, South <a class="enc-link" href="/encyclopedia/china">China</a>, <a class="enc-link" href="/encyclopedia/taiwan">Taiwan</a> and <a class="enc-link" href="/encyclopedia/australia">Australia</a>.</p><p>Whether Hoabinhian people farmed has been argued over. Gorman reported almond, Terminalia, betel, bean or pea, water caltrop, <a class="enc-link" href="/encyclopedia/pepper">pepper</a>, candlenut, a cucumber and other plants from Spirit Cave layers of c. 9800–8500 BP. None differed from wild forms, and he wrote that whether they were early cultigens remained to be established. In 1972 W. G. Solheim wrote in Scientific American of “an advanced knowledge of horticulture” there and put incipient agriculture in Southeast Asia at about 20,000 BCE; though he called his reconstruction “largely hypothetical”, his overstatement led to inflated claims of Hoabinhian agriculture.</p><p>Farming came with movements of people between southern China and Southeast <a class="enc-link" href="/encyclopedia/asia">Asia</a>, with which the <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> there is associated. Neolithic samples from the mainland carry mostly East Asian-related ancestry like that of ancient southern China, with a smaller share of Hoabinhian-related ancestry.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Hoabinhian ancestry, described as a “deeply branching East Asian ancestry”, is taken to represent the native pre-<a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> hunter-gatherers of much of <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>. It shows high genetic affinity with the Andamanese Onge and Jarawa, the Semang (also called “Malaysian Negritos”) and the Maniq, as well as with the Upper Paleolithic Tianyuan man of northern <a class="enc-link" href="/encyclopedia/china">China</a> and the Jōmon people of <a class="enc-link" href="/encyclopedia/japan">Japan</a>. Among living peoples the Maniq have one of the highest shares of Hoabinhian-related ancestry, alongside about 35% East Asian-related ancestry. In modern populations a mix of East Asian and deeply diverged Hoabinhian-related ancestry is most closely tied to Austroasiatic-speaking groups, and a 2026 study found that modern mainland Southeast Asians carry less of it than ancient samples, perhaps through later contact with South or East Asian-related populations.</p><p>The name itself has been debated. In 1994 archaeologists meeting in <a class="enc-link" href="/encyclopedia/hanoi">Hanoi</a> voted to keep it, to call the Hoabinhian an industry rather than a culture or techno-complex, to keep the term “sumatralith”, to speak of cobble rather than pebble tools, and not to call it “Mesolithic”. Spirit Cave, despite the inflated claims made for it, remains a site with well-preserved evidence of how people lived and of the environment of their time.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Hoabinhian is a stone-tool tradition of mainland <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>, usually dated c. 10,000–2000 BCE but reaching back much earlier at Xiaodong in <a class="enc-link" href="/encyclopedia/yunnan">Yunnan</a>. Its hunter-gatherer makers flaked river cobbles into sumatraliths and lived on shellfish, fish, game and wild plants, often in limestone rock shelters. Ancient DNA traces their deeply branching ancestry in peoples such as the Maniq and Onge.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="hoabinhian"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Hoabinhian artefacts dating from 41,500 BCE are recognised at the Xiaodong rock shelter in Yunnan, 40 km from the border with Myanmar","o":["1927","2016","1964","1994"],"a":1,"w":"2016: Hoabinhian artefacts dating from 41,500 BCE are recognised at the Xiaodong rock shelter in Yunnan, 40 km from the border with Myanmar."},{"p":"Which came first?","q":"","o":["The First Congress of Prehistorians of the Far East defines the Hoabinhian","A conference in Hanoi votes to keep the term and to call the Hoabinhian an industry of the late Pleistocene to mid Holocene"],"a":0,"w":"1932: The First Congress of Prehistorians of the Far East defines the Hoabinhian · 1994: A conference in Hanoi votes to keep the term and to call the Hoabinhian an industry of the late Pleistocene to mid Holocene."},{"p":"In which year?","q":"A conference in Hanoi votes to keep the term and to call the Hoabinhian an industry of the late Pleistocene to mid Holocene","o":["1927","1932","1964","1994"],"a":3,"w":"1994: A conference in Hanoi votes to keep the term and to call the Hoabinhian an industry of the late Pleistocene to mid Holocene."},{"p":"Which came first?","q":"","o":["A conference in Hanoi votes to keep the term and to call the Hoabinhian an industry of the late Pleistocene to mid Holocene","Madeleine Colani publishes her nine excavations in the northern Vietnamese province of Hòa Bình"],"a":1,"w":"1994: A conference in Hanoi votes to keep the term and to call the Hoabinhian an industry of the late Pleistocene to mid Holocene · 1927: Madeleine Colani publishes her nine excavations in the northern Vietnamese province of Hòa Bình."},{"p":"In which year?","q":"Madeleine Colani publishes her nine excavations in the northern Vietnamese province of Hòa Bình","o":["1964","2016","1927","1932"],"a":2,"w":"1927: Madeleine Colani publishes her nine excavations in the northern Vietnamese province of Hòa Bình."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Colani M. (1927) L'âge de la pierre dans la province de Hoa Binh. Mémoires du Service Géologique de l'Indochine 13</li>
+        <li>Gorman C. (1970) Excavations at Spirit Cave, North Thailand: Some interim interpretations. Asian Perspectives 13: 79-107</li>
+        <li>Gorman C. (1971) The Hoabinhian and After: Subsistence Patterns in Southeast Asia during the Late Pleistocene and Early Recent Periods. World Archaeology 2: 300-20</li>
+        <li>Matthews JM. (1964) The Hoabinhian in Southeast Asia and elsewhere. PhD thesis. Australian National University, Canberra</li>
+        <li>Shoocongdej R. (2000) Forager Mobility Organization in Seasonal Tropical Environments of Western Thailand. World Archaeology 32: 14–40.</li>
+        <li>Solheim, W.G. (1972) An earlier agricultural revolution. Scientific American 226: 34-41</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/clovis-culture"><img src="/logos/thumbs/Clovis%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Clovis culture</span><span class="related-card-dates">c. 11100 BCE – c. 10800 BCE</span></a><a class="related-card" href="/culture/san-people"><img src="/logos/thumbs/San%20people.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">San people</span><span class="related-card-dates">c. 8000 BCE – present</span></a><a class="related-card" href="/culture/mehrgarh-culture"><img src="/logos/thumbs/Mehrgarh%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mehrgarh culture</span><span class="related-card-dates">c. 7000 BCE – c. 2500 BCE</span></a><a class="related-card" href="/culture/natufians"><img src="/logos/thumbs/Natufians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Natufians</span><span class="related-card-dates">c. 13000 BCE – c. 9500 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/clovis-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Clovis%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Clovis culture</span><span class="related-card-dates">c. 11100 BCE – c. 10800 BCE</span></a><a class="related-card" href="/culture/san-people"><span class="related-card-label">Later →</span><img src="/logos/thumbs/San%20people.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">San people</span><span class="related-card-dates">c. 8000 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Hoabinhian",slug="hoabinhian",url="https://the-epoch-institute.org/culture/hoabinhian";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Hoabinhian on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/hoabinhian #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/hoabinhian"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Hoabinhian",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Hoabinhian",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

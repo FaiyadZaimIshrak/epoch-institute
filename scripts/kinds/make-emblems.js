@@ -16,6 +16,13 @@ const EMBLEMS = [
   ['Natufians', 'N'], ['Ubaid culture', 'U'], ['Yamnaya culture', 'Я'], ['Bell Beaker culture', 'B'], ['Thracians', 'Θ'],
   ['Sámi', 'S'], ['Igbo-Ukwu culture', 'I'], ['Kerma culture', 'K'], ['Nazca culture', 'N'], ['Hopewell culture', 'H'],
   ['Taíno', 'T'], ['Thule people', 'T'], ['Mapuche', 'M'], ['Caral–Supe civilisation', 'C'], ['Māori', 'M'],
+  // A2, 3 Nov 2026: a letter of the people's own script where one is in use (the Tifinagh yaz for the Tuareg, not ⵜ, which reads as a cross; Inuktitut syllabics
+  // for the Inuit), a character of the Chinese site name for the Chinese cultures (Erlitou: 里, as 二 reads as a sign), otherwise the initial
+  ['San people', 'S'], ['Khoekhoe', 'K'], ['Tuareg', 'ⵣ', 'Ebrima, "Noto Sans Tifinagh", sans-serif', 220], ['Aboriginal Australians', 'A'],
+  ['Kalinago', 'K'], ['Inuit', 'ᐃ', 'Gadugi, Euphemia, "Noto Sans Canadian Aboriginal", sans-serif', 220], ['Navajo', 'N'], ['Lakota people', 'L'],
+  ['Clovis culture', 'C'], ['Paracas culture', 'P'], ['La Tène culture', 'L'], ['Hallstatt culture', 'H'], ['Cucuteni–Trypillia culture', 'C'],
+  ['Nuragic civilisation', 'N'], ['Iberians', 'I'], ['Tocharians', 'T'], ['Longshan culture', '龍', 'serif-cjk', 220],
+  ['Hongshan culture', '紅', 'serif-cjk', 220], ['Erlitou culture', '里', 'serif-cjk', 220], ['Hoabinhian', 'H'],
   ["El Perú-Waka'", 'W'],   // the Maya city's own name, not the Spanish "Perú"
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);

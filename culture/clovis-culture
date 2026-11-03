@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Clovis culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Clovis culture was a Paleoindian archaeological culture of North America, dated to around 13,050 to 12,750 years ago, named after finds near Clovis…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Clovis culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Clovis culture was a Paleoindian archaeological culture of North America, dated to around 13,050 to 12,750 years ago, named after finds near Clovis…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/clovis-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/clovis-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/clovis-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/clovis-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Clovis culture"}]},{"@type":"Article","headline":"Clovis culture","description":"The Clovis culture was a Paleoindian archaeological culture of North America, dated to around 13,050 to 12,750 years ago, named after finds near Clovis…","url":"https://the-epoch-institute.org/culture/clovis-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/clovis-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Clovis culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/clovis-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Clovis culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Clovis%20culture.png" alt="Clovis culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Americas</p>
+        <h1 class="profile-detail-name">Clovis culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">Across <a class="enc-link" href="/encyclopedia/north-america">North America</a>, from southern <a class="enc-link" href="/encyclopedia/canada">Canada</a> to northern <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> and across the east and west of the continent; the type site Blackwater Draw locality No. 1 near Clovis, <a class="enc-link" href="/encyclopedia/new-mexico">New Mexico</a>, with the Dent site in <a class="enc-link" href="/encyclopedia/colorado">Colorado</a>, the Gault site in <a class="enc-link" href="/encyclopedia/texas">Texas</a>, Jake Bluff in <a class="enc-link" href="/encyclopedia/oklahoma">Oklahoma</a>, La Prele in Wyoming and the Anzick burial in <a class="enc-link" href="/encyclopedia/montana">Montana</a>.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">About 13,050 to 12,750 calibrated years Before Present, by a 2020 study of ten securely dated sites (some argue for sites as old as 13,500 years BP, others for a long chronology of about 1,500 years); succeeded from about 12,750–12,600 years BP by regional traditions such as Folsom.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">fluted, lanceolate Clovis points; blades, bifaces and bevelled rods of bone, antler and <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a>; caches of tools, over twenty known; hunting mammoths and other big game; red ochre and engraved stones; the Anzick-1 burial; the abandonment of the “Clovis First” model</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Excavation since the find at Blackwater Draw in 1929, by crews under Edgar Billings Howard and John L. Cotter from 1932 to 1937, and at many sites since; radiocarbon dating; studies of stone-tool making and wear; animal bones and isotope analysis; the genome of Anzick-1.</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Clovis is the earliest widely recognised archaeological culture of <a class="enc-link" href="/encyclopedia/north-america">North America</a>, found from southern <a class="enc-link" href="/encyclopedia/canada">Canada</a> to northern <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> around 13,050 to 12,750 years ago.</li><li>Its makers were highly mobile hunter-gatherers who carried fine <a class="enc-link" href="/encyclopedia/stone-tools">stone tools</a> hundreds of kilometres, relied on big game such as mammoths and bison, and also ate small animals and plants.</li><li>Older sites such as Monte Verde II in Chile show that Clovis people were not the first inhabitants of the <a class="enc-link" href="/encyclopedia/americas">Americas</a>, and most researchers have abandoned the “Clovis First” model since the beginning of the 21st century.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Isotope analysis of Anzick-1, a young boy buried in <a class="enc-link" href="/encyclopedia/montana">Montana</a> with over 100 stone and bone artefacts stained with red ochre, suggests that mammoth made up about 35–40 per cent of his group’s diet.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 11,100 BCE</span><span class="rf-text">Clovis points and tools come into use across <a class="enc-link" href="/encyclopedia/north-america">North America</a>, about 13,050 years ago by the dating of a 2020 study</span></li><li><span class="rf-year">c. 11,040–10,890 BCE</span><span class="rf-text">A young boy, Anzick-1, is buried about 12,990 to 12,840 years ago in <a class="enc-link" href="/encyclopedia/montana">Montana</a> with over 100 stone and bone artefacts stained with red ochre</span></li><li><span class="rf-year">c. 10,800–10,650 BCE</span><span class="rf-text">About 12,750 to 12,600 years ago Clovis gives way to regional traditions, among them the Folsom tradition of central <a class="enc-link" href="/encyclopedia/north-america">North America</a></span></li><li><span class="rf-year">1929</span><span class="rf-text">Ridgely Whiteman, aged 19, discovers the Clovis site at Blackwater Draw in eastern <a class="enc-link" href="/encyclopedia/new-mexico">New Mexico</a></span></li><li><span class="rf-year">1932–1937</span><span class="rf-text">Crews under Edgar Billings Howard and later John L. Cotter excavate the best-documented Clovis finds near Clovis, <a class="enc-link" href="/encyclopedia/new-mexico">New Mexico</a></span></li><li><span class="rf-year">1950s</span><span class="rf-text">Paul S. Martin proposes the overkill hypothesis, that human hunters, Clovis peoples among them, drove the North American megafauna to extinction</span></li><li><span class="rf-year">1968</span><span class="rf-text">The Anzick-1 burial is found near Wilsall, <a class="enc-link" href="/encyclopedia/montana">Montana</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Clovis culture is an archaeological culture of the Paleoindian period of <a class="enc-link" href="/encyclopedia/north-america">North America</a>. A 2020 study of ten securely radiocarbon-dated sites placed it between about 13,050 and 12,750 calibrated years Before Present, a span of a few centuries ending after the onset of the Younger Dryas; some authors argue for sites as old as 13,500 years, though their dating is not secure, and others for a long chronology of around 1,500 years. The type site is Blackwater Draw locality No. 1 near Clovis, <a class="enc-link" href="/encyclopedia/new-mexico">New Mexico</a>, where <a class="enc-link" href="/encyclopedia/stone-tools">stone tools</a> were found with the remains of Columbian mammoths in 1929. What its makers called themselves is unknown.</p><p>For much of the 20th century many scholars held to “Clovis First”, the view that Clovis people were the first inhabitants of the <a class="enc-link" href="/encyclopedia/americas">Americas</a> south of the ice sheets. Since the beginning of the 21st century most researchers have abandoned it: Monte Verde II in Chile (about 14,500 years ago), Paisley Caves in Oregon, Cooper’s Ferry in Idaho (about 15,800 years ago), Page-Ladson in <a class="enc-link" href="/encyclopedia/florida">Florida</a> and the Buttermilk Creek Complex in <a class="enc-link" href="/encyclopedia/texas">Texas</a> are all considered older, and the White Sands footprints in New <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> may date to around 23,000 years ago.</p><p>Where Clovis began is unclear. Fluted points seem to have developed south of the Laurentide Ice Sheet rather than in Beringia, and the culture may have come from the Dyuktai lithic style of Beringia. Scholars debate whether it spread as a tradition among people already present or with a single expanding population.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Clovis people are thought to have been highly mobile groups of hunter-gatherers, “high-technology foragers” who used refined tools to keep their access to resources over great distances. Tools are often found hundreds of kilometres from the outcrop of their stone, in one case more than 900 kilometres. Population density was probably low, but cultural networks were geographically extensive. In the Southern Plains they made large campsites near sources of workable stone, perhaps moving seasonally into the plains to hunt; in the southeast, large camps may have been “staging areas” where several bands gathered for social occasions.</p><p>It is generally agreed that they relied on big game for much of their diet. Proboscideans, mostly mammoths, are the animals most often found at Clovis sites, followed by bison, with mastodon, the gomphothere Cuvieronius and horses; jackrabbits appear at about 31 per cent of sites, and tortoises and easily gathered fruit were also eaten. Isotopes from Anzick-1 suggest mammoth made up about 35–40 per cent of his group’s diet, with elk and probably bison, and small animals only about 4 per cent. Some authors argue instead for generalist foragers who hunted megafauna only at times.</p><p>At Jake Bluff in <a class="enc-link" href="/encyclopedia/oklahoma">Oklahoma</a>, hunters seem to have trapped a herd of at least 22 Bison antiquus in a dead-end arroyo. Bone needles from La Prele in Wyoming, made from jackrabbit, red fox and cat bones, were likely used to sew clothes from fur.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>Only one human burial has been directly associated with Clovis tools: Anzick-1, a young boy found near Wilsall, <a class="enc-link" href="/encyclopedia/montana">Montana</a>, in 1968. He was buried with over 100 stone and bone artefacts, all stained with red ochre, and radiocarbon dating of the skeleton and the bone tools places the burial at about 12,990 to 12,840 years ago.</p><p>Clovis peoples, like other Paleoindian cultures, used red ochre for a variety of artistic and ritual purposes, including burials, and to cover objects left in caches, and they are known to have carried ochre 100 kilometres from its outcrop. The caches themselves, over twenty of them across <a class="enc-link" href="/encyclopedia/north-america">North America</a>, are collections of artefacts, usually <a class="enc-link" href="/encyclopedia/stone-tools">stone tools</a> such as Clovis points or bifaces, deliberately left in one place. Most are presumed to have been stored for later retrieval, but some authors interpret the deposits as ritual behaviour. Caching of this kind is generally not found in the cultures that came after.</p><p>Beyond these finds the evidence for Clovis belief is thin. A few artefacts are suspected to reflect creative expression, among them rock art, the use of red ochre and engraved stones. The best known are limestone nodules from the Gault site in <a class="enc-link" href="/encyclopedia/texas">Texas</a>, incised with geometric patterns, some of which mimic leaves. Clovis people are also thought to have made <a class="enc-link" href="/encyclopedia/bead">beads</a> from animal bones.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The hallmark of Clovis is the Clovis point: a bifacial stone point, flaked on both faces and usually fluted on both sides by removing a long flake from the base that runs a third to a half of its length. Points are parallel-sided to slightly convex with a concave base, made of siliceous cryptocrystalline rock, shaped by percussion flaking and finished by pressure flaking; the largest exceed 10 centimetres. They took great effort and often broke during fluting. They probably tipped spears or darts, perhaps thrown with a spear thrower, and wear shows that they also served for cutting. The flute may have absorbed the shock of impact, strengthened the hafting or been purely a matter of style.</p><p>Clovis knappers used overshot flaking, flakes struck from a prepared edge that travel across the face of the piece, though whether it was intended is debated. They struck long blades from conical or wedge-shaped cores, part of the global Upper Paleolithic blade tradition, and made them into endscrapers for hides, serrated tools and gravers. Bifaces served as cutting tools, as preforms and as portable sources of flakes.</p><p>Other tools include adzes, probably for woodwork, bone “shaft wrenches”, perhaps for straightening wooden shafts, and rods of bone, antler and <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> bevelled at one or both ends, read as foreshafts or as points. Clovis people also made projectile points of ivory and bone.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>Clovis toolkits moved across the continent. Points and blades are often found far from the outcrops of their stone, while blade cores seem rarely to have been carried far, only the blades travelling in the mobile toolkit. Such finds, from southern <a class="enc-link" href="/encyclopedia/canada">Canada</a> to northern <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>, point to thinly spread groups linked by wide cultural networks.</p><p>How the ancestors of Clovis people reached the interior is debated. An older view had them come south along the “ice-free corridor” between the Laurentide and Cordilleran ice sheets, but many later scholars think a route along the Pacific coast more likely, and a 2022 study proposed that the corridor could not be crossed until around 13,800 years ago. Another suggestion is that fluted points began south of the ice and were later carried north along the opening corridor. In western <a class="enc-link" href="/encyclopedia/north-america">North America</a>, Clovis was contemporaneous with, and perhaps preceded by, the Western Stemmed Tradition, which made unfluted points and continued for thousands of years after Clovis ended. In <a class="enc-link" href="/encyclopedia/south-america">South America</a>, the similar Fishtail or Fell points were in use at the same time and possibly developed from Clovis points.</p><p>Clovis hunters may have contributed to the extinction of the Late Pleistocene megafauna of North America. Paul S. Martin’s overkill hypothesis has been controversial, since the extinctions coincide with major climatic change, and in a 2012 survey 63 per cent of archaeologists said the extinctions were likely the result of a combination of factors.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Beginning around 12,750 to 12,600 years ago, Clovis was succeeded by regional traditions: Folsom in central <a class="enc-link" href="/encyclopedia/north-america">North America</a>, the Cumberland point in the mid-south, the Suwannee and Simpson points in the southeast and Gainey points in the Northeast and <a class="enc-link" href="/encyclopedia/great-lakes">Great Lakes</a>. Clovis and Folsom may have overlapped for around 80 to 400 years. The end may have come with the decline of the megafauna and decreasing mobility, which let local traditions diverge, and is generally seen as normal cultural change; there is no evidence that the Younger Dryas ended it or that Paleoindian numbers fell afterwards.</p><p>The genome of Anzick-1 shows that he belonged to the same population as most modern Native Americans, and in particular to the Southern Native American branch ancestral to Indigenous peoples of Central and <a class="enc-link" href="/encyclopedia/south-america">South America</a>. Like other Native Americans he carried East Asian-related and Ancient North Eurasian ancestry, confirming the Asian origin of the culture.</p><p>The culture was found in the wake of the discovery at Folsom, <a class="enc-link" href="/encyclopedia/new-mexico">New Mexico</a>, in 1927, the first evidence of Pleistocene humans in the <a class="enc-link" href="/encyclopedia/americas">Americas</a> seen by several archaeologists. In 1929 Ridgely Whiteman, aged 19, found the Clovis site at Blackwater Draw, and crews under Edgar Billings Howard and John L. Cotter dug there from 1932 to 1937. The Dent site in <a class="enc-link" href="/encyclopedia/colorado">Colorado</a> gave the first known association of Clovis points with mammoth bones.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Clovis culture was a Paleoindian culture of <a class="enc-link" href="/encyclopedia/north-america">North America</a>, dated to around 13,050 to 12,750 years ago and known for its fluted stone points. Its makers were highly mobile hunter-gatherers who hunted mammoths and other big game across the continent. Once thought the first Americans, they are now known to have had predecessors, and the Anzick-1 burial shows a close genetic link to Indigenous peoples of Central and <a class="enc-link" href="/encyclopedia/south-america">South America</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Dixon, E. James, Bones, Boats and Bison: Archeology and the First Colonization of Western North America (University of New Mexico Press, 1999)</li>
+        <li>Madsen, David B., Entering America: Northeast Asia and Beringia before the Last Glacial Maximum (University of Utah Press, 2004)</li>
+        <li>Carlson, Roy L. and Dalla Bona, Luke, eds., Early Human Occupation in British Columbia (UBC Press, 1996)</li>
+        <li>Schurr, Theodore G., “Mitochondrial DNA and the Peopling of the New World”, American Scientist 88 (3) (2000)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/hoabinhian"><img src="/logos/thumbs/Hoabinhian.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hoabinhian</span><span class="related-card-dates">c. 10000 BCE – c. 2000 BCE</span></a><a class="related-card" href="/culture/natufians"><img src="/logos/thumbs/Natufians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Natufians</span><span class="related-card-dates">c. 13000 BCE – c. 9500 BCE</span></a><a class="related-card" href="/culture/jomon-culture"><img src="/logos/thumbs/J%C5%8Dmon%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Jōmon culture</span><span class="related-card-dates">c. 14000 BCE – c. 300 BCE</span></a><a class="related-card" href="/culture/san-people"><img src="/logos/thumbs/San%20people.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">San people</span><span class="related-card-dates">c. 8000 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/natufians"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Natufians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Natufians</span><span class="related-card-dates">c. 13000 BCE – c. 9500 BCE</span></a><a class="related-card" href="/culture/hoabinhian"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Hoabinhian.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hoabinhian</span><span class="related-card-dates">c. 10000 BCE – c. 2000 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Clovis culture",slug="clovis-culture",url="https://the-epoch-institute.org/culture/clovis-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Clovis culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/clovis-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/clovis-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Clovis culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Clovis culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Hongshan culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Hongshan culture was a Neolithic culture of the West Liao river basin in northeast China (c. 4700–2900 BCE), known for its carved jade pig dragons…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Hongshan culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Hongshan culture was a Neolithic culture of the West Liao river basin in northeast China (c. 4700–2900 BCE), known for its carved jade pig dragons…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/hongshan-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/hongshan-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/hongshan-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/hongshan-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Hongshan culture"}]},{"@type":"Article","headline":"Hongshan culture","description":"The Hongshan culture was a Neolithic culture of the West Liao river basin in northeast China (c. 4700–2900 BCE), known for its carved jade pig dragons…","url":"https://the-epoch-institute.org/culture/hongshan-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/hongshan-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Hongshan culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/hongshan-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Hongshan culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Hongshan%20culture.png" alt="Hongshan culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Hongshan culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">The West Liao river basin in northeast <a class="enc-link" href="/encyclopedia/china">China</a>, from <a class="enc-link" href="/encyclopedia/inner-mongolia">Inner Mongolia</a> to <a class="enc-link" href="/encyclopedia/liaoning">Liaoning</a>; the type site of Hongshanhou in Hongshan District, Chifeng; the ritual complex of Niuheliang; Haminmangha.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 4700–2900 BCE, in Early, Middle and Late phases; preceded by the Xinglongwa (6200–5400 BCE), Xinle (5300–4800 BCE) and Zhaobaogou cultures, and followed by the Lower Xiajiadian culture (2200–1600 BCE).</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">some of the earliest known jade working; jade pig dragons and embryo dragons; the “Goddess Temple” at Niuheliang and its clay female head with jade-inlaid eyes; stone tombs under cairns; clay figurines, among them pregnant women; <a class="enc-link" href="/encyclopedia/millet">millet</a> farming; small <a class="enc-link" href="/encyclopedia/copper">copper</a> rings</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">The Hongshanhou site, discovered by Torii Ryūzō in 1908 and excavated extensively in 1935 by Kōsaku Hamada and Mizuno Seiichi; excavations at Niuheliang; isotope analyses of diet; ancient DNA studies of 2013, 2020, 2021 and 2025; a 2015 study of the region’s past environment.</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Hongshan culture farmed <a class="enc-link" href="/encyclopedia/millet">millet</a> in the West Liao river basin of northeast <a class="enc-link" href="/encyclopedia/china">China</a> from about 4700 to 2900 BCE; in its late phase millet made up as much as 80% of the diet.</li><li>Its burials hold some of the earliest known examples of jade working, including the jade pig dragons and embryo dragons for which the culture is known.</li><li>At Niuheliang it built a ritual complex of stone cairn tombs and an underground “Goddess Temple” holding clay figures up to three times life size.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The “Goddess Temple” at Niuheliang takes its name from a clay female head with eyes inlaid with jade, found among clay figures as large as three times the size of living people.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 4700 BCE</span><span class="rf-text">The Hongshan culture appears in the West Liao river basin, after the Xinglongwa, Xinle and Zhaobaogou cultures</span></li><li><span class="rf-year">3600–3300 BCE</span><span class="rf-text">Stone harvesting knives of Yangshao origin appear at Haminmangha, a sign of influence from the <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a> basin</span></li><li><span class="rf-year">c. 2900 BCE</span><span class="rf-text">The Hongshan culture comes to an end; the Lower Xiajiadian culture follows in the region from 2200 BCE</span></li><li><span class="rf-year">c. 2200 BCE</span><span class="rf-text">Climate change begins, about 4,200 years ago, to turn the West Liao region, once rich in lakes and forests, into desert</span></li><li><span class="rf-year">1908</span><span class="rf-text">The Japanese archaeologist Torii Ryūzō discovers the Hongshanhou site at Chifeng</span></li><li><span class="rf-year">1935</span><span class="rf-text">Kōsaku Hamada and Mizuno Seiichi excavate Hongshanhou extensively</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Hongshan culture was a <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> culture of the West Liao river basin in northeast <a class="enc-link" href="/encyclopedia/china">China</a>, with sites from <a class="enc-link" href="/encyclopedia/inner-mongolia">Inner Mongolia</a> to <a class="enc-link" href="/encyclopedia/liaoning">Liaoning</a> dated from about 4700 to 2900 BCE. It is named after Hongshanhou, a site in Hongshan District, Chifeng, discovered by the Japanese archaeologist Torii Ryūzō in 1908 and excavated extensively in 1935 by Kōsaku Hamada and Mizuno Seiichi. It followed the Xinglongwa culture (6200–5400 BCE), the Xinle culture (5300–4800 BCE) and the Zhaobaogou culture, and lived alongside the Yangshao culture of the <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a>, with which it interacted.</p><p>Ancient DNA shows a people of mixed descent. A 2013 study found that 63% of the samples from Hongshan sites belonged to a branch of the paternal haplogroup N, which it calculated to have been predominant in the region in the Neolithic. A 2021 study found that <a class="enc-link" href="/encyclopedia/millet">millet</a> farmers from <a class="enc-link" href="/encyclopedia/henan">Henan</a> and <a class="enc-link" href="/encyclopedia/shandong">Shandong</a> helped to form the Hongshan people, moving north by inland and coastal routes, and a 2025 study modelled them as a mixture of local Ancient Northeast Asian ancestry, probably from the Zhaobaogou culture, and that of Dawenkou-related farmers from Shandong. Their language is unknown: a 2020 study by Nelson and others tried to place the culture in a “Transeurasian” context, but a 2021 genomic study contradicted the idea that West Liao farmers spread those languages.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Like the Yangshao culture, the Hongshan people grew <a class="enc-link" href="/encyclopedia/millet">millet</a>, broomcorn millet in particular. Isotope analyses show that millet made up as much as 70% of the human diet in the Early Hongshan and up to 80% in the Late Hongshan. Around the Middle Hongshan, stone harvesting knives, a tool that originated in the Yangshao culture, appear at sites such as Haminmangha (3600–3300 BCE). Sarah M. Nelson describes <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> northeast <a class="enc-link" href="/encyclopedia/china">China</a> as a native farming society that planted millet, buckwheat, echinochloa and <a class="enc-link" href="/encyclopedia/rice">rice</a>, and doubts that large migrations of nomadic horse-riders can account for its sites.</p><p>The land was not then the desert it is now. A 2015 study found that from 12,000 to 4,000 years ago the region had deep lakes, forests and rich aquatic resources. Complex trading networks and monumental buildings, such as the Goddess Temple and the stepped stone tombs, point to a society organised as a <a class="enc-link" href="/encyclopedia/chiefdom">chiefdom</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>Niuheliang is a unique ritual complex of the Hongshan culture. Excavators found there an underground temple complex with an altar, and cairns on the hills nearby. The temple, about a metre below ground, was built of stone platforms with painted walls and murals. Archaeologists named it the “Goddess Temple” after a clay female head with eyes inlaid with jade. Inside were clay figures as large as three times life size, possibly deities, though of a religion reflected in no other Chinese culture. Painted pottery was also found in the temple, and it has been suggested that the Hongshan people performed religious sacrifice.</p><p>More than 60 nearby tombs were built of stone and covered by stone mounds, often with jade objects inside. On two hills stood round or square stepped tombs of piled limestone holding sculptures of dragons and tortoises. The round and square shapes of the ceremonial centres have been read as an early sign of the gaitian cosmography, “round heaven, square earth”, and of an early feng shui that looked to astronomy. The archaeologist Guo Dashun believes that the Hongshan had a mature system of ancestor worship, which remained important throughout Chinese history.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The Hongshan culture is known for its carved jade. Its burials hold some of the earliest known examples of jade working, among them the jade pig dragons and embryo dragons for which the culture is best known. Jade objects were often placed in the stone tombs at Niuheliang, and sculptures of dragons and tortoises lay in the stepped tombs on the hills there.</p><p>Clay figurines, including figures of pregnant women, are found throughout Hongshan sites, and the Goddess Temple held clay figures up to three times life size and a female head with jade-inlaid eyes. Potters made painted wares, and builders raised stone platforms, walls painted with murals and stepped tombs of piled limestone. Small <a class="enc-link" href="/encyclopedia/copper">copper</a> rings have also been excavated. The jades of Hongshan are closely akin to some jade objects of the much later Shang dynasty.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>The Hongshan culture lived beside the Yangshao culture of the <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a>, and the two interacted. Stone harvesting knives of Yangshao origin reached Haminmangha in the Middle Hongshan, and ancient DNA shows that <a class="enc-link" href="/encyclopedia/millet">millet</a> farmers from <a class="enc-link" href="/encyclopedia/henan">Henan</a> and <a class="enc-link" href="/encyclopedia/shandong">Shandong</a> helped to form the Hongshan population. A 2025 study traced part of this ancestry to farmers of the Dawenkou culture moving north from Shandong, who carried about 40% early Shandong hunter-gatherer and about 60% Yangshao-related ancestry. A 2020 study linked the growing reliance on millet in the Middle to Late <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> to a closer genetic affinity with the Yellow River basin.</p><p>Contact may also have run the other way. Material culture at Miaozigou in Ulanqab, <a class="enc-link" href="/encyclopedia/inner-mongolia">Inner Mongolia</a>, a northern branch of the Yangshao, resembles that of the <a class="enc-link" href="/encyclopedia/liao-river">Liao River</a> cultures, and three individuals there carried the N1 haplogroup found at Hongshan sites, which could be evidence that some Hongshan people migrated. Sarah M. Nelson notes that the region was influenced by ideas from beyond it, and its complex trading networks point to wide exchange.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Hongshan culture was followed by the Lower Xiajiadian culture (2200–1600 BCE), which was replaced by the different Upper Xiajiadian culture (1000–600 BCE), when farming gave way to pastoral nomadism, probably because of climate change; in historical times the West Liao basin was mainly peopled by nomads. Climate change that began about 4,200 years ago turned the region’s lakes and forests into desert, and some Hongshan people may have moved south to the <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a> valley about 4,000 years ago. After the Late <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> the region’s genetic profile shifted sharply towards that of the <a class="enc-link" href="/encyclopedia/amur-river">Amur River</a>.</p><p>Some Chinese archaeologists, such as Guo Dashun, see the Hongshan culture as an important stage of early Chinese civilisation, and it is believed to have influenced its development. Its jades are closely akin to some jade objects of the Shang dynasty; its ceremonial structures may have influenced the altars of heaven and earth of the Chinese emperors; and the culture may also have contributed to the growth of settlements in ancient <a class="enc-link" href="/encyclopedia/korea">Korea</a>.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Hongshan culture was a <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> <a class="enc-link" href="/encyclopedia/millet">millet</a>-farming culture of the West Liao river basin in northeast <a class="enc-link" href="/encyclopedia/china">China</a>, c. 4700–2900 BCE. It is known for some of the earliest carved jade, including pig dragons, and for the ritual complex at Niuheliang with its Goddess Temple and cairn tombs. Its people had both local and <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a> ancestors, and it is believed to have influenced early Chinese civilisation.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Allan, Sarah (ed), The Formation of Chinese Civilization: An Archaeological Perspective, ISBN 0-300-09382-9</li>
+        <li>Chang, Kwang-chih. The Archaeology of Ancient China, ISBN 0-300-03784-8</li>
+        <li>Nelson, Sarah Milledge (ed), The Archaeology of Northeast China: Beyond the Great Wall, ISBN 0-415-11755-0</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/yangshao-culture"><img src="/logos/thumbs/Yangshao%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Yangshao culture</span><span class="related-card-dates">c. 5000 BCE – c. 3000 BCE</span></a><a class="related-card" href="/culture/cucuteni-trypillia-culture"><img src="/logos/thumbs/Cucuteni%E2%80%93Trypillia%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cucuteni–Trypillia culture</span><span class="related-card-dates">c. 5050 BCE – c. 2950 BCE</span></a><a class="related-card" href="/culture/indus-valley-civilisation"><img src="/logos/thumbs/Indus%20Valley%20Civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Indus Valley Civilisation</span><span class="related-card-dates">c. 3300 BCE – c. 1300 BCE</span></a><a class="related-card" href="/culture/liangzhu-culture"><img src="/logos/thumbs/Liangzhu%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liangzhu culture</span><span class="related-card-dates">c. 3300 BCE – c. 2300 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/yangshao-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Yangshao%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Yangshao culture</span><span class="related-card-dates">c. 5000 BCE – c. 3000 BCE</span></a><a class="related-card" href="/culture/indus-valley-civilisation"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Indus%20Valley%20Civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Indus Valley Civilisation</span><span class="related-card-dates">c. 3300 BCE – c. 1300 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Hongshan culture",slug="hongshan-culture",url="https://the-epoch-institute.org/culture/hongshan-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Hongshan culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/hongshan-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/hongshan-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Hongshan culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Hongshan culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -4700,5 +4700,97 @@ var SECTION_IMAGES = {
     impact:{slug:"saint-nicholas",name:"Saint Nicholas",img:"/images/encyclopedia/saint-nicholas.jpg",artist:"Jaroslav Čermák",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jaroslav_%C4%8Cerm%C3%A1k_(1831_-_1878)_-_Sv._Mikul%C3%A1%C5%A1_(cropped).jpg"},
     decline:{slug:"edmund-andros",name:"Edmund Andros",img:"/images/encyclopedia/edmund-andros.jpg",artist:"Mary Beale",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Edmund_Andros_by_Beale.jpg"},
     summary:{slug:"peter-minuit",name:"Peter Minuit",img:"/images/encyclopedia/peter-minuit.jpg",artist:"Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peter_Minuit_(Minnewit)_old_portrait.jpg"}
+  },
+  "San people": {
+    arts:{slug:"drakensberg",name:"Drakensberg",img:"/images/encyclopedia/drakensberg.jpg",artist:"Diriye Amey from Locarno, Switzerland",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:South_Africa_-_Drakensberg_(16261357780).jpg"},
+    exchange:{slug:"trekboers",name:"Trekboers",img:"/images/encyclopedia/trekboers.jpg",artist:"Samuel Daniell",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Daniell_Trekboer.jpg"}
+  },
+  "Khoekhoe": {
+    society:{slug:"transhumance",name:"Transhumance",img:"/images/encyclopedia/transhumance.jpg",artist:"CamDib",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Transumanza_nel_Parc_National_des_Ecrins.jpg"},
+    beliefs:{slug:"griqua",name:"Griqua",img:"/images/encyclopedia/griqua.jpg",artist:"AnonymousUnknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Adam_Kok_III_-_Griqua_Captain_-_1848.jpg"},
+    arts:{slug:"oorlam",name:"Oorlam",img:"/images/encyclopedia/oorlam.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jan_Jonker_Afrikaner_Portrait.jpg"},
+    exchange:{slug:"francisco-de-almeida",name:"Francisco de Almeida",img:"/images/encyclopedia/francisco-de-almeida.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_D._Francisco_de_Almeida_(ap%C3%B3s_1545)_-_Autor_desconhecido.png"},
+    legacy:{slug:"group-areas-act",name:"Group Areas Act",img:"/images/encyclopedia/group-areas-act.jpg",artist:"Photo Division, Government of India",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mass_Meeting_at_Durban_on_May_28,_1950_to_protest_against_Group_Area_Bill_and_Suppression_of_Communism_Bill.jpg"}
+  },
+  "Tuareg": {
+    origins:{slug:"ahaggar-mountains",name:"Ahaggar Mountains",img:"/images/encyclopedia/ahaggar-mountains.jpg",artist:"Mohammed Amri",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%D8%A7%D8%B3%D9%83%D8%B1%D8%A7%D9%85_2_-_%D8%AA%D9%85%D9%86%D8%B1%D8%A7%D8%B3%D8%AA.jpg"},
+    society:{slug:"camel",name:"Camel",img:"/images/encyclopedia/camel.jpg",artist:"Jjron",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:07._Camel_Profile,_near_Silverton,_NSW,_07.07.2007.jpg"},
+    beliefs:{slug:"timbuktu",name:"Timbuktu",img:"/images/encyclopedia/timbuktu.jpg",artist:"Flickr Emilio Labrador Santiago de Chile 3059349393 (Flickr)",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Donkeys,_Timbuktu.jpg"},
+    arts:{slug:"charles-de-foucauld",name:"Charles de Foucauld",img:"/images/encyclopedia/charles-de-foucauld.jpg",artist:"Edsdet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_de_Foucauld.jpg"},
+    exchange:{slug:"moussa-ag-amastan",name:"Moussa ag Amastan",img:"/images/encyclopedia/moussa-ag-amastan.jpg",artist:"unknown; Public domainPublic domainfalsefalse This work is in the public domain in its country of origin and other countries and …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:MousaAgAmastane-Paris.jpg"},
+    legacy:{slug:"kidal",name:"Kidal",img:"/images/encyclopedia/kidal.jpg",artist:"The original uploader was Taguelmoust at French Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Maison_artisans.JPG"}
+  },
+  "Aboriginal Australians": {
+    society:{slug:"aboriginal-tasmanians",name:"Aboriginal Tasmanians",img:"/images/encyclopedia/aboriginal-tasmanians.jpg",artist:"Benjamin Duterrau (1768–1851)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Last_of_the_Tasmanians_Woodcut_6_-_Wooreddy.jpg"},
+    legacy:{slug:"kevin-rudd",name:"Kevin Rudd",img:"/images/encyclopedia/kevin-rudd.jpg",artist:"Department of Foreign Affairs and Trade",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Kevin_Michael_Rudd_HOM_2023_Portrait_(3x4_cropped).jpg"}
+  },
+  "Kalinago": {
+    origins:{slug:"kalina-people",name:"Kalina people",img:"/images/encyclopedia/kalina-people.jpg",artist:"We El at Dutch Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:School_children_Bigi_Poika.jpg"},
+    exchange:{slug:"garifuna",name:"Garifuna",img:"/images/encyclopedia/garifuna.jpg",artist:"Agostino Brunias (ca. 1730 – 2 April 1796)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Black_Caribs-family-St.-Vincent_by_Augustino_Brunias.jpg"},
+    legacy:{slug:"kalinago-territory",name:"Kalinago Territory",img:"/images/encyclopedia/kalinago-territory.jpg",artist:"Hans Hillewaert / CC BY-SA 4.0 / Biopics 8 February 2007, minor text change by Davidwr 29 July 2020",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Kalinago_Territory.svg"}
+  },
+  "Inuit": {
+
+  },
+  "Navajo": {
+    exchange:{slug:"kit-carson",name:"Kit Carson",img:"/images/encyclopedia/kit-carson.jpg",artist:"Mathew Brady or Levin C. Handy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kit_Carson_photograph_restored.jpg"}
+  },
+  "Lakota people": {
+    beliefs:{slug:"black-hills",name:"Black Hills",img:"/images/encyclopedia/black-hills.jpg",artist:"Runner1928",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Needles_Highway_05.jpg"},
+    exchange:{slug:"battle-of-the-little-bighorn",name:"Battle of the Little Bighorn",img:"/images/encyclopedia/battle-of-the-little-bighorn.jpg",artist:"Charles Marion Russell",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_Marion_Russell_-_The_Custer_Fight_(1903).jpg"},
+    legacy:{slug:"sitting-bull",name:"Sitting Bull",img:"/images/encyclopedia/sitting-bull.jpg",artist:"David F. Barry, Photographer, Bismarck, Dakota Territory",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sitting_Bull_by_D_F_Barry_ca_1883_Dakota_Territory.jpg"}
+  },
+  "Clovis culture": {
+
+  },
+  "Paracas culture": {
+    legacy:{slug:"trepanning",name:"Trepanning",img:"/images/encyclopedia/trepanning.jpg",artist:"Rama",licence:"CC BY-SA 3.0 fr",source:"https://commons.wikimedia.org/wiki/File:Trepanated_skull_of_a_woman-P4140363-black.jpg"}
+  },
+  "La Tène culture": {
+    origins:{slug:"lake-neuchatel",name:"Lake Neuchâtel",img:"/images/encyclopedia/lake-neuchatel.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Lac_de_neuchatel.jpg"},
+    society:{slug:"vercingetorix",name:"Vercingetorix",img:"/images/encyclopedia/vercingetorix.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vercing%C3%A9torix_stat%C3%A8re_Gallica_avers.jpg"},
+    beliefs:{slug:"bibracte",name:"Bibracte",img:"/images/encyclopedia/bibracte.jpg",artist:"Iijjccoo",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bibracte333.JPG"},
+    arts:{slug:"battersea-shield",name:"Battersea Shield",img:"/images/encyclopedia/battersea-shield.jpg",artist:"BabelStone",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:British_Museum_Battersea_Shield.jpg"},
+    exchange:{slug:"vix-grave",name:"Vix Grave",img:"/images/encyclopedia/vix-grave.jpg",artist:"Christophe Finot",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Chatillon-sur-Seine_-_Mus%C3%A9e_du_Pays_chatillonnais_-_Crat%C3%A8re_de_Vix_-_01_(cropped).jpg"},
+    legacy:{slug:"lutetia",name:"Lutetia",img:"/images/encyclopedia/lutetia.jpg",artist:"Traumrune",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Musee-Cluny-frigidarium_02.JPG"}
+  },
+  "Hallstatt culture": {
+    society:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    beliefs:{slug:"hochdorf-chieftains-grave",name:"Hochdorf Chieftain's Grave",img:"/images/encyclopedia/hochdorf-chieftains-grave.jpg",artist:"marsupium photography",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Hochdorf_Chieftain's_Grave_reconstruction.jpg"},
+    legacy:{slug:"la-tene-culture",name:"La Tène culture",img:"/images/encyclopedia/la-tene-culture.jpg",artist:"Dbachmann",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hallstatt_LaTene.png"}
+  },
+  "Cucuteni–Trypillia culture": {
+    exchange:{slug:"kurgan",name:"Kurgan",img:"/images/encyclopedia/kurgan.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:LYablonskyFilipovkaKurganR1.jpg"}
+  },
+  "Nuragic civilisation": {
+    exchange:{slug:"sea-peoples",name:"Sea Peoples",img:"/images/encyclopedia/sea-peoples.jpg",artist:"Unknown artistUnknown artist in pay of Ramesses III",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Medinet_Habu_Ramses_III._Tempel_Nordostwand_Abzeichnung_01.jpg"},
+    legacy:{slug:"mercenary-war",name:"Mercenary War",img:"/images/encyclopedia/mercenary-war.jpg",artist:"CNG",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Libyan_Revolt,_shekel,_241-238_BC.jpg"}
+  },
+  "Iberians": {
+    beliefs:{slug:"lady-of-baza",name:"Lady of Baza",img:"/images/encyclopedia/lady-of-baza.jpg",artist:"Relanzón, Santiago (photo)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Museo_Arqueol%C3%B3gico_Nacional_-_1969-68-155-123A_-_Dama_de_Baza_01.jpg"},
+    arts:{slug:"lady-of-elche",name:"Lady of Elche",img:"/images/encyclopedia/lady-of-elche.jpg",artist:"Luis Fernández García",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Dama_de_Elche_-_MAN_-_20241220e.jpg"},
+    exchange:{slug:"hannibal",name:"Hannibal",img:"/images/encyclopedia/hannibal.jpg",artist:"Fratelli Alinari",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hannibal_Barca_bust_from_Capua_photo.jpg"},
+    legacy:{slug:"ullastret",name:"Ullastret",img:"/images/encyclopedia/ullastret.jpg",artist:"Josep Renalias",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:MurallesUllastret.JPG"}
+  },
+  "Tocharians": {
+    origins:{slug:"tarim-basin",name:"Tarim Basin",img:"/images/encyclopedia/tarim-basin.jpg",artist:"NASA",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Wfm_tarim_basin.jpg"},
+    beliefs:{slug:"xuanzang",name:"Xuanzang",img:"/images/encyclopedia/xuanzang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Xuanzang_w.jpg"},
+    arts:{slug:"kizil-caves",name:"Kizil Caves",img:"/images/encyclopedia/kizil-caves.jpg",artist:"Hiroki Ogawa",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Kizil_sky.jpg"},
+    exchange:{slug:"yuezhi",name:"Yuezhi",img:"/images/encyclopedia/yuezhi.jpg",artist:"ALFGRN",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Khalchayan_Prince,_side_view.jpg"},
+    legacy:{slug:"gaochang",name:"Gaochang",img:"/images/encyclopedia/gaochang.jpg",artist:"Colegota",licence:"CC BY-SA 2.5 es",source:"https://commons.wikimedia.org/wiki/File:Turpan-gaochang-d10.jpg"}
+  },
+  "Longshan culture": {
+    society:{slug:"millet",name:"Millet",img:"/images/encyclopedia/millet.jpg",artist:"Kurt Stüber [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Panicum_miliaceum0.jpg"},
+    legacy:{slug:"erlitou-culture",name:"Erlitou culture",img:"/images/encyclopedia/erlitou-culture.jpg",artist:"Kanguole",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Erlitou_map.svg"}
+  },
+  "Hongshan culture": {
+
+  },
+  "Erlitou culture": {
+    exchange:{slug:"erligang-culture",name:"Erligang culture",img:"/images/encyclopedia/erligang-culture.jpg",artist:"Kanguole",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Erligang_map.svg"},
+    legacy:{slug:"records-of-the-grand-historian",name:"Records of the Grand Historian",img:"/images/encyclopedia/records-of-the-grand-historian.jpg",artist:"Zhonghua Book Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%8F%B2%E8%AE%B0.jpg"}
+  },
+  "Hoabinhian": {
+
   }
 };

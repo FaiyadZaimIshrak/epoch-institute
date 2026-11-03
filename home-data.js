@@ -591,7 +591,6 @@ var HOME_PICS = {
   "Qara Qoyunlu": {"img":"/images/encyclopedia/qara-iskander.jpg","name":"Qara Iskander","slug":"qara-iskander","credit":"1430 artist, Public domain"},
   "Armenian Kingdom of Cilicia": {"img":"/images/encyclopedia/toros-roslin.jpg","name":"Toros Roslin","slug":"toros-roslin","credit":"Benoît Prieur, CC0"},
   "Zengid dynasty": {"img":"/images/encyclopedia/imad-al-din-zengi.jpg","name":"Imad al-Din Zengi","slug":"imad-al-din-zengi","credit":"Unknown author, 1237 CE, Public domain"},
-  "Champa": {"img":"/images/encyclopedia/my-son.jpg","name":"Mỹ Sơn","slug":"my-son","credit":"Nguyenthuanduc, CC0"},
   "Indo-Greek Kingdom": {"img":"/images/encyclopedia/menander-i.jpg","name":"Menander I","slug":"menander-i","credit":"CNG Coins, CC BY-SA 3.0"},
   "Travancore": {"img":"/images/encyclopedia/marthanda-varma.jpg","name":"Marthanda Varma","slug":"marthanda-varma","credit":"Unknown author, Public domain"},
   "Malacca Sultanate": {"img":"/images/encyclopedia/parameswara.jpg","name":"Parameswara","slug":"parameswara","credit":"L joo., Public domain"},
@@ -609,7 +608,20 @@ var HOME_PICS = {
   "United Provinces of the Río de la Plata": {"img":"/images/encyclopedia/primera-junta.jpg","name":"Primera Junta","slug":"primera-junta","credit":"Francisco Fortuny, Public domain"},
   "El Perú-Waka'": {"img":"/images/encyclopedia/lady-kabel.jpg","name":"Lady K'abel","slug":"lady-kabel","credit":"CC0"},
   "Republic of Texas": {"img":"/images/encyclopedia/sam-houston.jpg","name":"Sam Houston","slug":"sam-houston","credit":"Oldag07, Public domain"},
-  "New Netherland": {"img":"/images/encyclopedia/new-amsterdam.jpg","name":"New Amsterdam","slug":"new-amsterdam","credit":"Jacob van Meurs, Public domain"}
+  "New Netherland": {"img":"/images/encyclopedia/new-amsterdam.jpg","name":"New Amsterdam","slug":"new-amsterdam","credit":"Jacob van Meurs, Public domain"},
+  "San people": {"img":"/images/encyclopedia/san-people.jpg","name":"San people","slug":"san-people","credit":"Velatrix, CC0"},
+  "Khoekhoe": {"img":"/images/encyclopedia/transhumance.jpg","name":"Transhumance","slug":"transhumance","credit":"CamDib, CC BY-SA 4.0"},
+  "Tuareg": {"img":"/images/encyclopedia/tuareg.jpg","name":"Tuareg","slug":"tuareg","credit":"Amine loua, CC BY-SA 4.0"},
+  "Aboriginal Australians": {"img":"/images/encyclopedia/aboriginal-tasmanians.jpg","name":"Aboriginal Tasmanians","slug":"aboriginal-tasmanians","credit":"Benjamin Duterrau (1768–1851), Public domain"},
+  "Kalinago": {"img":"/images/encyclopedia/garifuna.jpg","name":"Garifuna","slug":"garifuna","credit":"Agostino Brunias (ca. 1730 – 2 April 1796), Public domain"},
+  "Navajo": {"img":"/images/encyclopedia/navajo.jpg","name":"Navajo","slug":"navajo","credit":"Unknown author, Public domain"},
+  "Lakota people": {"img":"/images/encyclopedia/lakota-people.jpg","name":"Lakota people","slug":"lakota-people","credit":"David Francis Barry, Public domain"},
+  "Paracas culture": {"img":"/images/encyclopedia/trepanning.jpg","name":"Trepanning","slug":"trepanning","credit":"Rama, CC BY-SA 3.0 fr"},
+  "La Tène culture": {"img":"/images/encyclopedia/battersea-shield.jpg","name":"Battersea Shield","slug":"battersea-shield","credit":"BabelStone, CC0"},
+  "Hallstatt culture": {"img":"/images/encyclopedia/hochdorf-chieftains-grave.jpg","name":"Hochdorf Chieftain's Grave","slug":"hochdorf-chieftains-grave","credit":"marsupium photography, CC BY-SA 2.5"},
+  "Iberians": {"img":"/images/encyclopedia/iberians.jpg","name":"Iberians","slug":"iberians","credit":"Heparina1985, CC BY-SA 4.0"},
+  "Tocharians": {"img":"/images/encyclopedia/kizil-caves.jpg","name":"Kizil Caves","slug":"kizil-caves","credit":"Hiroki Ogawa, CC BY 3.0"},
+  "Champa": {"img":"/images/encyclopedia/kauthara.jpg","name":"Kauthara","slug":"kauthara","credit":"wileypics, CC BY 2.0"}
 };
 
 var HOME_ENTRIES = [
