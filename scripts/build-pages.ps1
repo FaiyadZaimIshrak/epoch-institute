@@ -2524,6 +2524,9 @@ function SongPerson([string]$s) { $s -and $s -notmatch '^(?i)(traditional|anonym
 $songNoText = 0
 for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   $sg = $SONGS[$songI]; $slug = [string]$sg['slug']; $path = '/songs/' + $slug
+  # as the ladders: the prose is linked only in full builds, so -SkipEntries keeps the pages as they are (4 Nov 2026: it
+  # had rewritten all 301 without their gold links)
+  if (($SkipEntries -or -not $SONGLINK) -and (Test-Path "$Repo\songs\$slug")) { $WROTE[(Join-Path $Repo ('songs\' + $slug)).ToLowerInvariant()] = 1; $SMNEW[$path] = if ($SM.ContainsKey($path)) { $SM[$path] } else { @('', $TODAY) }; continue }
   $title = [string]$sg['title']; $code = SongLang $sg; $yr = [int]$sg['year']
   $songCtx = @(($yr - 200), ($yr + 200))
   $crumb = Crumbs @(@('Home', '/'), @('Songs in History', '/songs/'), @($title, $null))

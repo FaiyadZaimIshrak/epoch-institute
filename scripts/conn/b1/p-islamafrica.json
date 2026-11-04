@@ -1,0 +1,2595 @@
+[
+ {
+  "name": "Cities of Morocco",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fez",
+    "slug": "fez",
+    "quote": "Fez is a city in northern Morocco"
+   },
+   {
+    "label": "Marrakesh",
+    "slug": "marrakesh",
+    "quote": "Marrakesh is a city in Morocco"
+   },
+   {
+    "label": "Rabat",
+    "slug": "rabat",
+    "quote": "Rabat is a city on the Atlantic coast of Morocco"
+   },
+   {
+    "label": "Meknes",
+    "slug": "meknes",
+    "quote": "Meknes is a city in northern Morocco"
+   },
+   {
+    "label": "Tangier",
+    "slug": "tangier",
+    "quote": "Tangier is a port city in northern Morocco"
+   },
+   {
+    "label": "Casablanca",
+    "slug": "casablanca",
+    "quote": "Casablanca is the largest city of Morocco"
+   },
+   {
+    "label": "Salé",
+    "slug": "sale",
+    "quote": "Salé is a city on the Atlantic coast of Morocco"
+   },
+   {
+    "label": "Agadir",
+    "slug": "agadir",
+    "quote": "Agadir is a city on the Atlantic coast of southern Morocco"
+   }
+  ]
+ },
+ {
+  "name": "Countries of North Africa",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Morocco",
+    "slug": "morocco",
+    "quote": "Morocco is a country in north-west Africa"
+   },
+   {
+    "label": "Algeria",
+    "slug": "algeria",
+    "quote": "Algeria is a country in north-western Africa"
+   },
+   {
+    "label": "Tunisia",
+    "slug": "tunisia",
+    "quote": "Tunisia is a country in North Africa"
+   },
+   {
+    "label": "Libya",
+    "slug": "libya",
+    "quote": "Libya is a country in North Africa"
+   },
+   {
+    "label": "Egypt",
+    "slug": "egypt",
+    "quote": "Egypt is a country in north-eastern Africa"
+   },
+   {
+    "label": "Mauritania",
+    "slug": "mauritania",
+    "quote": "Mauritania is a country in north-west Africa"
+   }
+  ]
+ },
+ {
+  "name": "Mountains of Africa",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kilimanjaro",
+    "slug": "mount-kilimanjaro",
+    "quote": "the highest mountain in Africa"
+   },
+   {
+    "label": "Atlas",
+    "slug": "atlas-mountains",
+    "quote": "The Atlas Mountains are a mountain range in north-western Africa"
+   },
+   {
+    "label": "Drakensberg",
+    "slug": "drakensberg",
+    "quote": "the highest mountain range of southern Africa"
+   },
+   {
+    "label": "Rwenzori",
+    "slug": "rwenzori-mountains",
+    "quote": "The Rwenzori Mountains are a range on the border between Uganda and the Democratic Republic of the Congo"
+   },
+   {
+    "label": "Ethiopian Highlands",
+    "slug": "ethiopian-highlands",
+    "quote": "a large mountainous plateau in the Horn of Africa"
+   },
+   {
+    "label": "Jebel Marra",
+    "slug": "marrah-mountains",
+    "quote": "are a volcanic massif in Darfur"
+   }
+  ]
+ },
+ {
+  "name": "Cities of the Arabian Peninsula",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Riyadh",
+    "slug": "riyadh",
+    "quote": "the capital and largest city of Saudi Arabia"
+   },
+   {
+    "label": "Jeddah",
+    "slug": "jeddah",
+    "quote": "Jeddah is a port city on the Red Sea coast of the Hejaz in Saudi Arabia"
+   },
+   {
+    "label": "Sanaa",
+    "slug": "sanaa",
+    "quote": "Sana'a is an ancient city in the highlands of Yemen"
+   },
+   {
+    "label": "Muscat",
+    "slug": "muscat",
+    "quote": "Muscat is a port city on the coast of Oman"
+   },
+   {
+    "label": "Aden",
+    "slug": "aden",
+    "quote": "Aden is a port city in southern Yemen"
+   },
+   {
+    "label": "Taif",
+    "slug": "taif",
+    "quote": "Taif is a city in the Hejaz mountains of western Saudi Arabia"
+   },
+   {
+    "label": "Najran",
+    "slug": "najran",
+    "quote": "Najran is an oasis city in south-western Saudi Arabia"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Iran",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shiraz",
+    "slug": "shiraz",
+    "quote": "Shiraz is a city in south-western Iran"
+   },
+   {
+    "label": "Mashhad",
+    "slug": "mashhad",
+    "quote": "Mashhad is a city in north-eastern Iran"
+   },
+   {
+    "label": "Tehran",
+    "slug": "tehran",
+    "quote": "Tehran is the capital and largest city of Iran"
+   },
+   {
+    "label": "Yazd",
+    "slug": "yazd",
+    "quote": "Yazd is a desert city in central Iran"
+   },
+   {
+    "label": "Hamadan",
+    "slug": "hamadan",
+    "quote": "Hamadan is a city in western Iran"
+   },
+   {
+    "label": "Nishapur",
+    "slug": "nishapur",
+    "quote": "Nishapur is a city in Khorasan in north-eastern Iran"
+   },
+   {
+    "label": "Kerman",
+    "slug": "kerman",
+    "quote": "Kerman is a city in south-eastern Iran"
+   }
+  ],
+  "note": "Bushehr (Hide a vehicle) and Rayy (Begin with a man's name) are Iranian too"
+ },
+ {
+  "name": "Muslim observances",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ramadan",
+    "slug": "ramadan",
+    "quote": "observed by Muslims as a month of fasting"
+   },
+   {
+    "label": "Hajj",
+    "slug": "hajj",
+    "quote": "one of the five pillars of Islam"
+   },
+   {
+    "label": "Zakat",
+    "slug": "zakat",
+    "quote": "the obligatory almsgiving of Islam"
+   },
+   {
+    "label": "Ashura",
+    "slug": "ashura",
+    "quote": "For Shia Muslims it is the day of mourning"
+   },
+   {
+    "label": "Mawlid",
+    "slug": "mawlid",
+    "quote": "held by many Muslims on 12 Rabi al-Awwal"
+   },
+   {
+    "label": "Eid al-Ghadir",
+    "slug": "eid-al-ghadir",
+    "quote": "a Shia Muslim festival held on 18 Dhu al-Hijja"
+   }
+  ]
+ },
+ {
+  "name": "Waters around Arabia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Red Sea",
+    "slug": "red-sea",
+    "quote": "between north-east Africa and the Arabian Peninsula"
+   },
+   {
+    "label": "Persian Gulf",
+    "slug": "persian-gulf",
+    "quote": "between Iran and the Arabian Peninsula"
+   },
+   {
+    "label": "Arabian Sea",
+    "slug": "arabian-sea",
+    "quote": "between Arabia and the Indian subcontinent"
+   },
+   {
+    "label": "Gulf of Aden",
+    "slug": "gulf-of-aden",
+    "quote": "between the Horn of Africa and the Arabian Peninsula"
+   },
+   {
+    "label": "Gulf of Oman",
+    "slug": "gulf-of-oman",
+    "quote": "Oman to the south"
+   },
+   {
+    "label": "Bab-el-Mandeb",
+    "slug": "bab-el-mandeb",
+    "quote": "between Yemen on the Arabian Peninsula"
+   }
+  ]
+ },
+ {
+  "name": "African capitals",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Addis Ababa",
+    "slug": "addis-ababa",
+    "quote": "the capital of Ethiopia"
+   },
+   {
+    "label": "Kampala",
+    "slug": "kampala",
+    "quote": "the capital and largest city of Uganda"
+   },
+   {
+    "label": "Accra",
+    "slug": "accra",
+    "quote": "the capital of Ghana"
+   },
+   {
+    "label": "Dakar",
+    "slug": "dakar-senegal",
+    "quote": "the capital of present-day Senegal"
+   },
+   {
+    "label": "Khartoum",
+    "slug": "khartoum",
+    "quote": "the capital of Sudan"
+   },
+   {
+    "label": "Kinshasa",
+    "slug": "kinshasa",
+    "quote": "the capital and largest city of the Democratic Republic of the Congo"
+   }
+  ],
+  "note": "Porto-Novo (Hide a drink) is the official capital of Benin"
+ },
+ {
+  "name": "Peoples of southern Africa",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Xhosa",
+    "slug": "xhosa-people",
+    "quote": "a Bantu-speaking people of the Eastern Cape in South Africa"
+   },
+   {
+    "label": "Sotho",
+    "slug": "sotho-people",
+    "quote": "a Bantu-speaking people of southern Africa"
+   },
+   {
+    "label": "Tswana",
+    "slug": "tswana-people",
+    "quote": "a Bantu-speaking people of southern Africa"
+   },
+   {
+    "label": "San",
+    "slug": "san-people",
+    "quote": "indigenous hunter-gatherer peoples of southern Africa"
+   },
+   {
+    "label": "Khoekhoe",
+    "slug": "khoekhoe",
+    "quote": "the indigenous pastoral peoples of south-western Africa"
+   },
+   {
+    "label": "Shona",
+    "slug": "shona",
+    "quote": "a Bantu-speaking people of the Zimbabwean plateau"
+   },
+   {
+    "label": "Herero",
+    "slug": "herero-people",
+    "quote": "a Bantu-speaking, cattle-herding people of central and northern Namibia"
+   }
+  ],
+  "note": "the Herero live in Namibia, the Shona on the Zimbabwean plateau"
+ },
+ {
+  "name": "Famous mosques",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Umayyad Mosque",
+    "slug": "umayyad-mosque",
+    "quote": "or Great Mosque of Damascus"
+   },
+   {
+    "label": "Al-Aqsa",
+    "slug": "al-aqsa-mosque",
+    "quote": "one of the most important sites in Islam"
+   },
+   {
+    "label": "Uqba's mosque",
+    "slug": "great-mosque-of-kairouan",
+    "quote": "the principal mosque of Kairouan in Tunisia"
+   },
+   {
+    "label": "Masjid al-Haram",
+    "slug": "masjid-al-haram",
+    "quote": "the Grand Mosque of Mecca, is the holiest site of Islam"
+   },
+   {
+    "label": "Djinguereber",
+    "slug": "djinguereber-mosque",
+    "quote": "the great mosque of Timbuktu in Mali"
+   }
+  ]
+ },
+ {
+  "name": "Countries of West Africa",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ghana",
+    "slug": "ghana",
+    "quote": "Ghana is a country in West Africa"
+   },
+   {
+    "label": "Nigeria",
+    "slug": "nigeria",
+    "quote": "Nigeria is a country in West Africa"
+   },
+   {
+    "label": "Senegal",
+    "slug": "senegal",
+    "quote": "now an independent country"
+   },
+   {
+    "label": "Mali",
+    "slug": "mali",
+    "quote": "now the Republic of Mali"
+   },
+   {
+    "label": "Guinea",
+    "slug": "guinea",
+    "quote": "Guinea is a country in West Africa"
+   },
+   {
+    "label": "Togo",
+    "slug": "togo",
+    "quote": "Togo is a country in West Africa"
+   },
+   {
+    "label": "Sierra Leone",
+    "slug": "sierra-leone",
+    "quote": "Sierra Leone is a country on the coast of West Africa"
+   }
+  ]
+ },
+ {
+  "name": "Countries of southern Africa",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Zambia",
+    "slug": "zambia",
+    "quote": "a landlocked country in south-central Africa"
+   },
+   {
+    "label": "Namibia",
+    "slug": "namibia",
+    "quote": "a country in south-western Africa"
+   },
+   {
+    "label": "Botswana",
+    "slug": "botswana",
+    "quote": "a landlocked country in southern Africa"
+   },
+   {
+    "label": "Angola",
+    "slug": "angola",
+    "quote": "a country in south-western Africa"
+   },
+   {
+    "label": "Mozambique",
+    "slug": "mozambique",
+    "quote": "a country on the coast of south-eastern Africa"
+   },
+   {
+    "label": "Zimbabwe",
+    "slug": "zimbabwe",
+    "quote": "a landlocked country in southern Africa"
+   }
+  ]
+ },
+ {
+  "name": "Rashidun caliphs",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Abu Bakr",
+    "slug": "abu-bakr-al-siddiq",
+    "quote": "the first caliph of the Rashidun Caliphate"
+   },
+   {
+    "label": "Umar",
+    "slug": "umar-ibn-al-khattab",
+    "quote": "the second caliph of the Rashidun Caliphate"
+   },
+   {
+    "label": "Uthman",
+    "slug": "uthman-ibn-affan",
+    "quote": "the third caliph of the Rashidun Caliphate"
+   },
+   {
+    "label": "Ali",
+    "slug": "ali-ibn-abi-talib",
+    "quote": "the fourth caliph of the Rashidun Caliphate"
+   },
+   {
+    "label": "Hasan",
+    "slug": "hasan-ibn-ali",
+    "quote": "he was briefly recognised as caliph in Kufa"
+   }
+  ],
+  "note": "Hasan was briefly caliph in 661; most lists stop at Ali. Umar's armies took Jerusalem and Egypt: keep apart from Took Jerusalem and Conquered Egypt"
+ },
+ {
+  "name": "Cities of Turkey",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ankara",
+    "slug": "ankara",
+    "quote": "is the capital of Turkey"
+   },
+   {
+    "label": "Bursa",
+    "slug": "bursa",
+    "quote": "a city in northwestern Anatolia"
+   },
+   {
+    "label": "Konya",
+    "slug": "konya",
+    "quote": "a city in central Anatolia"
+   },
+   {
+    "label": "Antalya",
+    "slug": "antalya",
+    "quote": "a city on the Mediterranean coast of south-western Turkey"
+   },
+   {
+    "label": "Kayseri",
+    "slug": "kayseri",
+    "quote": "a city in central Anatolia, Turkey"
+   },
+   {
+    "label": "Sivas",
+    "slug": "sivas",
+    "quote": "a city in central Anatolia, Turkey"
+   }
+  ],
+  "note": "Erzurum (Hide a drink) and Edirne (Begin with a man's name) are Turkish cities too"
+ },
+ {
+  "name": "Cities of South Africa",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Johannesburg",
+    "slug": "johannesburg",
+    "quote": "the largest city of South Africa"
+   },
+   {
+    "label": "Pretoria",
+    "slug": "pretoria",
+    "quote": "the administrative capital of South Africa"
+   },
+   {
+    "label": "Durban",
+    "slug": "durban",
+    "quote": "the largest city of KwaZulu-Natal, South Africa"
+   },
+   {
+    "label": "Cape Town",
+    "slug": "cape-town",
+    "quote": "a port city on Table Bay in south-western South Africa"
+   },
+   {
+    "label": "Kimberley",
+    "slug": "kimberley",
+    "quote": "a city in South Africa"
+   },
+   {
+    "label": "Bloemfontein",
+    "slug": "bloemfontein",
+    "quote": "a city in central South Africa"
+   }
+  ],
+  "note": "Pretoria and Durban are also named after people"
+ },
+ {
+  "name": "Wars of the modern Middle East",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Six-Day War",
+    "slug": "six-day-war",
+    "quote": "defeated Egypt, Jordan and Syria"
+   },
+   {
+    "label": "Yom Kippur War",
+    "slug": "yom-kippur-war",
+    "quote": "Egypt and Syria sought to recover the lands lost in 1967"
+   },
+   {
+    "label": "Iran–Iraq War",
+    "slug": "iran-iraq-war",
+    "quote": "after Saddam Hussein's Iraq invaded Iran"
+   },
+   {
+    "label": "Gulf War",
+    "slug": "gulf-war",
+    "quote": "Iraq's invasion and annexation of Kuwait"
+   },
+   {
+    "label": "Lebanese Civil War",
+    "slug": "lebanese-civil-war",
+    "quote": "fought from 1975 to 1990 among Lebanon's sectarian militias"
+   },
+   {
+    "label": "Suez Crisis",
+    "slug": "suez-crisis",
+    "quote": "Britain, France and Israel invaded Egypt"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Algeria",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Algiers",
+    "slug": "algiers",
+    "quote": "the capital of Algeria"
+   },
+   {
+    "label": "Oran",
+    "slug": "oran",
+    "quote": "a port city on the north-western coast of Algeria"
+   },
+   {
+    "label": "Tlemcen",
+    "slug": "tlemcen",
+    "quote": "a city in north-western Algeria"
+   },
+   {
+    "label": "Béjaïa",
+    "slug": "bejaia",
+    "quote": "north-eastern Algeria"
+   },
+   {
+    "label": "Constantine",
+    "slug": "constantine-algeria",
+    "quote": "a city in north-eastern Algeria"
+   }
+  ],
+  "note": "Timgad (Roman cities of North Africa) is also in Algeria"
+ },
+ {
+  "name": "Arab leaders after 1950",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Saddam Hussein",
+    "slug": "saddam-hussein",
+    "quote": "the Ba'athist ruler of Iraq"
+   },
+   {
+    "label": "Gaddafi",
+    "slug": "muammar-gaddafi",
+    "quote": "the ruler of Libya from 1969 to 2011"
+   },
+   {
+    "label": "Hafez al-Assad",
+    "slug": "hafez-al-assad",
+    "quote": "President of Syria from 1971 until his death in 2000"
+   },
+   {
+    "label": "Bourguiba",
+    "slug": "habib-bourguiba",
+    "quote": "the country's first president, from 1957 to 1987"
+   },
+   {
+    "label": "Qasim",
+    "slug": "abd-al-karim-qasim",
+    "quote": "led the revolution of 14 July 1958"
+   },
+   {
+    "label": "King Hussein",
+    "slug": "hussein-of-jordan",
+    "quote": "was King of Jordan from 1952"
+   }
+  ]
+ },
+ {
+  "name": "Ottoman victories",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kosovo",
+    "slug": "battle-of-kosovo",
+    "quote": "the Ottoman army of Sultan Murad I"
+   },
+   {
+    "label": "Nicopolis",
+    "slug": "battle-of-nicopolis",
+    "quote": "was routed by the Ottoman sultan Bayezid I"
+   },
+   {
+    "label": "Varna",
+    "slug": "battle-of-varna",
+    "quote": "the Ottoman army of Murad II defeated a crusading army"
+   },
+   {
+    "label": "Mohács",
+    "slug": "battle-of-mohacs",
+    "quote": "The Hungarian army was annihilated"
+   },
+   {
+    "label": "Preveza",
+    "slug": "battle-of-preveza",
+    "quote": "the Ottoman fleet under Hayreddin Barbarossa defeated the fleet of the Holy League"
+   },
+   {
+    "label": "Belgrade 1521",
+    "slug": "siege-of-belgrade-1521",
+    "quote": "the capture of the Hungarian fortress city by the Ottoman sultan Suleiman the Magnificent"
+   }
+  ],
+  "note": "Chaldiran (Hide a country) was an Ottoman victory too; the Siege of Vienna (1529) and Lepanto are Ottoman defeats"
+ },
+ {
+  "name": "Institutions of the Ottoman Empire",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Janissaries",
+    "slug": "janissaries",
+    "quote": "the elite infantry corps of the Ottoman Empire"
+   },
+   {
+    "label": "Devshirme",
+    "slug": "devshirme",
+    "quote": "the Ottoman system of levying boys"
+   },
+   {
+    "label": "Millet system",
+    "slug": "millet-system",
+    "quote": "the arrangement by which the Ottoman Empire organised its non-Muslim subjects"
+   },
+   {
+    "label": "Timar",
+    "slug": "timar",
+    "quote": "a grant of revenue from land in the Ottoman Empire"
+   },
+   {
+    "label": "Sublime Porte",
+    "slug": "sublime-porte",
+    "quote": "the central government of the Ottoman Empire"
+   },
+   {
+    "label": "Divan",
+    "slug": "divan",
+    "quote": "the imperial council of the Ottoman Empire"
+   }
+  ]
+ },
+ {
+  "name": "Safavid shahs",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ismail I",
+    "slug": "ismail-i",
+    "quote": "the founder of the Safavid dynasty"
+   },
+   {
+    "label": "Tahmasp I",
+    "slug": "tahmasp-i",
+    "quote": "the second shah of Safavid Iran"
+   },
+   {
+    "label": "Abbas the Great",
+    "slug": "abbas-i-of-persia",
+    "quote": "the most celebrated ruler of the Safavid Empire"
+   },
+   {
+    "label": "Shah Safi",
+    "slug": "safi-of-persia",
+    "quote": "the Safavid ruler of Iran from 1629 to 1642"
+   },
+   {
+    "label": "Abbas II",
+    "slug": "abbas-ii-of-persia",
+    "quote": "a Safavid shah who ruled from 1642 to 1666"
+   },
+   {
+    "label": "Sultan Husayn",
+    "slug": "sultan-husayn",
+    "quote": "the Safavid ruler of Iran from 1694 to 1722"
+   }
+  ]
+ },
+ {
+  "name": "Rulers of Egypt in the 20th and 21st centuries",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fuad I",
+    "slug": "fuad-i-of-egypt",
+    "quote": "took the title King of Egypt"
+   },
+   {
+    "label": "Farouk",
+    "slug": "farouk-of-egypt",
+    "quote": "king of Egypt from 1936 to 1952"
+   },
+   {
+    "label": "Naguib",
+    "slug": "muhammad-naguib",
+    "quote": "he became the first president of the Republic of Egypt"
+   },
+   {
+    "label": "Mubarak",
+    "slug": "hosni-mubarak",
+    "quote": "president of Egypt"
+   },
+   {
+    "label": "Morsi",
+    "slug": "mohamed-morsi",
+    "quote": "Egypt's first freely elected president"
+   }
+  ],
+  "note": "Nasser and Sadat (Born in 1918) also ruled Egypt"
+ },
+ {
+  "name": "Fought apartheid",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Desmond Tutu",
+    "slug": "desmond-tutu",
+    "quote": "anti-apartheid campaigner"
+   },
+   {
+    "label": "Steve Biko",
+    "slug": "steve-biko",
+    "quote": "South African anti-apartheid activist"
+   },
+   {
+    "label": "Robert Sobukwe",
+    "slug": "robert-sobukwe",
+    "quote": "South African anti-apartheid leader"
+   },
+   {
+    "label": "Albert Luthuli",
+    "slug": "albert-luthuli",
+    "quote": "South African anti-apartheid activist"
+   },
+   {
+    "label": "Oliver Tambo",
+    "slug": "oliver-tambo",
+    "quote": "South African anti-apartheid politician"
+   },
+   {
+    "label": "Chris Hani",
+    "slug": "chris-hani",
+    "quote": "South African anti-apartheid leader"
+   }
+  ],
+  "note": "Mandela is in Born in 1918"
+ },
+ {
+  "name": "Zulu kings",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shaka",
+    "slug": "shaka-zulu-king",
+    "quote": "the king of the Zulu"
+   },
+   {
+    "label": "Dingane",
+    "slug": "dingane",
+    "quote": "king of the Zulu from 1828 to 1840"
+   },
+   {
+    "label": "Mpande",
+    "slug": "mpande",
+    "quote": "king of the Zulu from 1840 to 1872"
+   },
+   {
+    "label": "Cetshwayo",
+    "slug": "cetshwayo",
+    "quote": "king of the Zulu from 1872 to 1879"
+   },
+   {
+    "label": "Dinuzulu",
+    "slug": "dinuzulu-kacetshwayo",
+    "quote": "king of the Zulu from 1884 to 1913"
+   }
+  ]
+ },
+ {
+  "name": "Emperors of Ethiopia after 1855",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tewodros II",
+    "slug": "tewodros-ii",
+    "quote": "Emperor of Ethiopia from 1855 until his death in 1868"
+   },
+   {
+    "label": "Yohannes IV",
+    "slug": "yohannes-iv",
+    "quote": "Emperor of Ethiopia from 1872 to 1889"
+   },
+   {
+    "label": "Menelik II",
+    "slug": "menelik-ii",
+    "quote": "Emperor of Ethiopia from 1889 to 1913"
+   },
+   {
+    "label": "Haile Selassie",
+    "slug": "haile-selassie",
+    "quote": "the last Emperor of Ethiopia"
+   },
+   {
+    "label": "Lij Iyasu",
+    "slug": "iyasu-v",
+    "quote": "the uncrowned emperor of Ethiopia from 1913 to 1916"
+   }
+  ]
+ },
+ {
+  "name": "Queens of Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Njinga",
+    "slug": "njinga-of-ndongo-and-matamba",
+    "quote": "queen of the Mbundu kingdoms of Ndongo and Matamba"
+   },
+   {
+    "label": "Amina",
+    "slug": "queen-amina",
+    "quote": "a warrior queen of Zazzau"
+   },
+   {
+    "label": "Yaa Asantewaa",
+    "slug": "yaa-asantewaa",
+    "quote": "the Queen Mother of Ejisu in the Ashanti Empire"
+   },
+   {
+    "label": "Sheba",
+    "slug": "queen-of-sheba",
+    "quote": "Queen of Sheba"
+   },
+   {
+    "label": "Amanirenas",
+    "slug": "amanirenas",
+    "quote": "a ruling queen, or kandake, of the Kingdom of Kush"
+   },
+   {
+    "label": "Ranavalona I",
+    "slug": "ranavalona-i",
+    "quote": "queen of the Merina kingdom of Madagascar"
+   }
+  ],
+  "note": "Yaa Asantewaa was a queen mother; the Queen of Sheba is a figure of tradition"
+ },
+ {
+  "name": "Battles of the early Islamic conquests",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yarmuk",
+    "slug": "battle-of-the-yarmuk",
+    "quote": "the armies of the Rashidun Caliphate decisively defeated the Byzantine army"
+   },
+   {
+    "label": "Qadisiyyah",
+    "slug": "battle-of-al-qadisiyyah",
+    "quote": "between the armies of the Rashidun Caliphate and the Sasanian Empire"
+   },
+   {
+    "label": "Nihawand",
+    "slug": "battle-of-nihawand",
+    "quote": "between the armies of the Rashidun Caliphate and the forces of the Sasanian Empire"
+   },
+   {
+    "label": "Tours",
+    "slug": "battle-of-tours",
+    "quote": "Frankish forces under Charles Martel defeated an Umayyad army"
+   },
+   {
+    "label": "Talas",
+    "slug": "battle-of-talas",
+    "quote": "a Tang army was defeated by an Abbasid-allied force"
+   },
+   {
+    "label": "Constantinople 674",
+    "slug": "first-arab-siege-of-constantinople",
+    "quote": "a series of attacks on the Byzantine capital by the Umayyad Caliphate"
+   }
+  ]
+ },
+ {
+  "name": "Battles of the Reconquista",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Las Navas de Tolosa",
+    "slug": "battle-of-las-navas-de-tolosa",
+    "quote": "between the Almohad Caliphate and a coalition of the Christian kingdoms"
+   },
+   {
+    "label": "Alarcos",
+    "slug": "battle-of-alarcos",
+    "quote": "between the Almohad caliph Abu Yusuf Yaqub al-Mansur and King Alfonso VIII of Castile"
+   },
+   {
+    "label": "Sagrajas",
+    "slug": "battle-of-sagrajas",
+    "quote": "Yusuf ibn Tashfin's Almoravid army shattered the forces of Alfonso VI of Castile"
+   },
+   {
+    "label": "Ourique",
+    "slug": "battle-of-ourique",
+    "quote": "Afonso Henriques defeated Muslim forces"
+   },
+   {
+    "label": "Simancas",
+    "slug": "battle-of-simancas",
+    "quote": "between Ramiro II of León and the army of Abd al-Rahman III"
+   },
+   {
+    "label": "Covadonga",
+    "slug": "battle-of-covadonga",
+    "quote": "between a Muslim force and Asturian rebels"
+   }
+  ]
+ },
+ {
+  "name": "Old names of African countries",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gold Coast",
+    "slug": "gold-coast",
+    "quote": "the coastal region of present-day Ghana"
+   },
+   {
+    "label": "Upper Volta",
+    "slug": "upper-volta",
+    "quote": "a French colony in West Africa"
+   },
+   {
+    "label": "Zaire",
+    "slug": "zaire",
+    "quote": "the official name of the Democratic Republic of the Congo from 1971 to 1997"
+   },
+   {
+    "label": "Tanganyika",
+    "slug": "tanganyika-territory",
+    "quote": "the British-ruled part of former German East Africa"
+   },
+   {
+    "label": "South West Africa",
+    "slug": "german-south-west-africa",
+    "quote": "a colony of the German Empire in present-day Namibia"
+   },
+   {
+    "label": "Northern Rhodesia",
+    "slug": "northern-rhodesia",
+    "quote": "roughly modern Zambia"
+   }
+  ]
+ },
+ {
+  "name": "First presidents in West Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Senghor",
+    "slug": "leopold-sedar-senghor",
+    "quote": "the first president of Senegal from 1960 to 1980"
+   },
+   {
+    "label": "Sékou Touré",
+    "slug": "ahmed-sekou-toure",
+    "quote": "the first president of independent Guinea"
+   },
+   {
+    "label": "Houphouët-Boigny",
+    "slug": "felix-houphouet-boigny",
+    "quote": "the first president of Ivory Coast"
+   },
+   {
+    "label": "Modibo Keïta",
+    "slug": "modibo-keita",
+    "quote": "the first president of Mali"
+   },
+   {
+    "label": "Hamani Diori",
+    "slug": "hamani-diori",
+    "quote": "the first President of Niger"
+   },
+   {
+    "label": "Nkrumah",
+    "slug": "kwame-nkrumah",
+    "quote": "the first prime minister and president of Ghana"
+   }
+  ],
+  "note": "Nkrumah also fits Pan-Africanists"
+ },
+ {
+  "name": "Led Iran after 1941",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mohammad Reza Pahlavi",
+    "slug": "mohammad-reza-pahlavi",
+    "quote": "the last shah of Iran, reigning from 1941"
+   },
+   {
+    "label": "Mosaddegh",
+    "slug": "mohammad-mosaddegh",
+    "quote": "served as prime minister from 1951 to 1953"
+   },
+   {
+    "label": "Khomeini",
+    "slug": "ruhollah-khomeini",
+    "quote": "became Supreme Leader of the Islamic Republic of Iran"
+   },
+   {
+    "label": "Khamenei",
+    "slug": "ali-khamenei",
+    "quote": "succeeded Ruhollah Khomeini as Supreme Leader in 1989"
+   },
+   {
+    "label": "Khatami",
+    "slug": "mohammad-khatami",
+    "quote": "President of Iran from 1997 to 2005"
+   }
+  ],
+  "note": "Reza Shah abdicated in 1941"
+ },
+ {
+  "name": "Under apartheid",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sharpeville",
+    "slug": "sharpeville-massacre",
+    "quote": "police fired on a crowd protesting against the pass laws"
+   },
+   {
+    "label": "Soweto uprising",
+    "slug": "soweto-uprising",
+    "quote": "marched against the compulsory use of Afrikaans"
+   },
+   {
+    "label": "Rivonia Trial",
+    "slug": "rivonia-trial",
+    "quote": "against leaders of the African National Congress"
+   },
+   {
+    "label": "Robben Island",
+    "slug": "robben-island",
+    "quote": "under apartheid it held political prisoners"
+   },
+   {
+    "label": "Freedom Charter",
+    "slug": "freedom-charter",
+    "quote": "the statement of principles adopted by the Congress of the People"
+   },
+   {
+    "label": "Bantustan",
+    "slug": "bantustan",
+    "quote": "a territory set aside for Black South Africans of a particular ethnic group under apartheid"
+   }
+  ]
+ },
+ {
+  "name": "Wars against colonial and minority rule in Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Algerian War",
+    "slug": "algerian-war",
+    "quote": "the war of independence fought by Algerian nationalists"
+   },
+   {
+    "label": "Mau Mau",
+    "slug": "mau-mau-rebellion",
+    "quote": "against British rule and European settlement on African land"
+   },
+   {
+    "label": "Angolan War",
+    "slug": "angolan-war-of-independence",
+    "quote": "between Portugal and the Angolan nationalist movements"
+   },
+   {
+    "label": "Bush War",
+    "slug": "rhodesian-bush-war",
+    "quote": "against the white minority government of Rhodesia"
+   },
+   {
+    "label": "Eritrean War",
+    "slug": "eritrean-war-of-independence",
+    "quote": "a thirty-year struggle by Eritrean nationalist fronts against Ethiopia"
+   },
+   {
+    "label": "Border War",
+    "slug": "south-african-border-war",
+    "quote": "between South Africa and the Namibian liberation movement SWAPO"
+   }
+  ]
+ },
+ {
+  "name": "Terms of Islamic law and learning",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sharia",
+    "slug": "sharia",
+    "quote": "Sharia refers to Islamic law"
+   },
+   {
+    "label": "Fatwa",
+    "slug": "fatwa",
+    "quote": "a formal legal opinion issued by a qualified Islamic jurist"
+   },
+   {
+    "label": "Ijtihad",
+    "slug": "ijtihad",
+    "quote": "the Islamic legal concept of independent reasoning"
+   },
+   {
+    "label": "Hadith",
+    "slug": "hadith",
+    "quote": "a principal source of Islamic law and practice"
+   },
+   {
+    "label": "Madrasa",
+    "slug": "madrasa",
+    "quote": "an Islamic institution of higher learning"
+   },
+   {
+    "label": "Jihad",
+    "slug": "jihad",
+    "quote": "an Islamic term meaning struggle or striving"
+   }
+  ]
+ },
+ {
+  "name": "Languages of Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Amharic",
+    "slug": "amharic",
+    "quote": "a Semitic language of Ethiopia"
+   },
+   {
+    "label": "Ge'ez",
+    "slug": "geez",
+    "quote": "an ancient Semitic language of Ethiopia and Eritrea"
+   },
+   {
+    "label": "Tigrinya",
+    "slug": "tigrinya-language",
+    "quote": "a Semitic language of the Horn of Africa"
+   },
+   {
+    "label": "Berber",
+    "slug": "berber-languages",
+    "quote": "spoken by the Amazigh peoples of North Africa"
+   },
+   {
+    "label": "Kikongo",
+    "slug": "kongo-language",
+    "quote": "a Bantu language spoken by the Kongo people"
+   },
+   {
+    "label": "siSwati",
+    "slug": "swazi-language",
+    "quote": "a Bantu language of the Nguni group"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Nigeria",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lagos",
+    "slug": "lagos",
+    "quote": "a coastal city in south-western Nigeria"
+   },
+   {
+    "label": "Ibadan",
+    "slug": "ibadan",
+    "quote": "a city in south-western Nigeria"
+   },
+   {
+    "label": "Abeokuta",
+    "slug": "abeokuta",
+    "quote": "a city in south-western Nigeria"
+   },
+   {
+    "label": "Calabar",
+    "slug": "calabar",
+    "quote": "a port city in southeastern Nigeria"
+   },
+   {
+    "label": "Ilorin",
+    "slug": "ilorin",
+    "quote": "a city in west-central Nigeria"
+   },
+   {
+    "label": "Benin City",
+    "slug": "benin-city",
+    "quote": "a city in present-day southern Nigeria"
+   }
+  ]
+ },
+ {
+  "name": "Ottoman defeats",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lepanto",
+    "slug": "battle-of-lepanto",
+    "quote": "between the fleet of the Holy League, led by Don John of Austria, and the Ottoman"
+   },
+   {
+    "label": "Vienna 1683",
+    "slug": "battle-of-vienna-1683",
+    "quote": "broke the Ottoman siege of the Habsburg capital"
+   },
+   {
+    "label": "Zenta",
+    "slug": "battle-of-zenta",
+    "quote": "Prince Eugene of Savoy surprised the Ottoman army of Sultan Mustafa II"
+   },
+   {
+    "label": "Navarino",
+    "slug": "battle-of-navarino",
+    "quote": "fleet destroyed the Ottoman and Egyptian fleet"
+   },
+   {
+    "label": "Ankara",
+    "slug": "battle-of-ankara",
+    "quote": "Timur won a crushing victory and captured Bayezid"
+   },
+   {
+    "label": "Vienna 1529",
+    "slug": "siege-of-vienna-1529",
+    "quote": "the first Ottoman attempt to capture the Habsburg capital"
+   }
+  ],
+  "note": "Mohács, Varna and Nicopolis were Ottoman victories (see Ottoman victories)"
+ },
+ {
+  "name": "Treaties signed by the Ottoman Empire",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Karlowitz",
+    "slug": "treaty-of-karlowitz",
+    "quote": "signed in 1699 between the Ottoman Empire and the Holy League"
+   },
+   {
+    "label": "Passarowitz",
+    "slug": "treaty-of-passarowitz",
+    "quote": "between the Ottoman Empire on one side and the Habsburg monarchy and Venice"
+   },
+   {
+    "label": "Küçük Kaynarca",
+    "slug": "treaty-of-kucuk-kaynarca",
+    "quote": "signed in 1774 between the Ottoman Empire and Russia"
+   },
+   {
+    "label": "Zsitvatorok",
+    "slug": "peace-of-zsitvatorok",
+    "quote": "ending the Long Turkish War between the Habsburg Monarchy and the Ottoman Empire"
+   },
+   {
+    "label": "Belgrade 1739",
+    "slug": "treaty-of-belgrade",
+    "quote": "ended the war of 1735–1739 in which Austria and Russia fought the Ottoman Empire"
+   },
+   {
+    "label": "Zuhab",
+    "slug": "treaty-of-zuhab",
+    "quote": "the peace agreement of 1639 between the Safavid Empire and the Ottoman Empire"
+   }
+  ]
+ },
+ {
+  "name": "Ottoman admirals",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Barbarossa",
+    "slug": "hayreddin-barbarossa",
+    "quote": "became grand admiral of the Ottoman fleet"
+   },
+   {
+    "label": "Piri Reis",
+    "slug": "piri-reis",
+    "quote": "an Ottoman admiral and cartographer"
+   },
+   {
+    "label": "Dragut",
+    "slug": "turgut-reis",
+    "quote": "an Ottoman corsair and admiral"
+   },
+   {
+    "label": "Oruç Reis",
+    "slug": "oruc-reis",
+    "quote": "an Ottoman corsair from Lesbos"
+   },
+   {
+    "label": "Uluj Ali",
+    "slug": "uluj-ali",
+    "quote": "an Italian-born Ottoman corsair and admiral"
+   },
+   {
+    "label": "Piyale Pasha",
+    "slug": "piyale-pasha",
+    "quote": "was an Ottoman admiral"
+   }
+  ]
+ },
+ {
+  "name": "Qajar shahs",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fath-Ali Shah",
+    "slug": "fath-ali-shah-qajar",
+    "quote": "the second Qajar shah of Iran"
+   },
+   {
+    "label": "Mohammad Shah",
+    "slug": "mohammad-shah-qajar",
+    "quote": "shah of Iran from 1834 to 1848"
+   },
+   {
+    "label": "Naser al-Din Shah",
+    "slug": "naser-al-din-shah-qajar",
+    "quote": "the Qajar shah of Iran from 1848 to 1896"
+   },
+   {
+    "label": "Mozaffar ad-Din Shah",
+    "slug": "mozaffar-ad-din-shah-qajar",
+    "quote": "shah of Iran from 1896 to 1907"
+   },
+   {
+    "label": "Mohammad Ali Shah",
+    "slug": "mohammad-ali-shah-qajar",
+    "quote": "shah of Iran from 1907 to 1909"
+   },
+   {
+    "label": "Ahmad Shah",
+    "slug": "ahmad-shah-qajar",
+    "quote": "the last shah of the Qajar dynasty of Iran"
+   }
+  ],
+  "note": "Agha Mohammad Khan, the first, is published in Rulers of Iran in the 1700s"
+ },
+ {
+  "name": "Timurid rulers",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Timur",
+    "slug": "timur",
+    "quote": "founded the Timurid Empire"
+   },
+   {
+    "label": "Shah Rukh",
+    "slug": "shah-rukh",
+    "quote": "ruled the Timurid Empire from 1409 to 1447"
+   },
+   {
+    "label": "Ulugh Beg",
+    "slug": "ulugh-beg",
+    "quote": "a Timurid ruler and astronomer"
+   },
+   {
+    "label": "Husayn Bayqara",
+    "slug": "husayn-bayqara",
+    "quote": "a Timurid ruler of Herat"
+   },
+   {
+    "label": "Abu Sa'id Mirza",
+    "slug": "abu-said-mirza",
+    "quote": "was a Timurid ruler, a great-grandson of Timur"
+   },
+   {
+    "label": "Babur",
+    "slug": "babur",
+    "quote": "a Timurid prince from Central Asia"
+   }
+  ],
+  "note": "Babur was a Timurid prince before he founded the Mughal Empire"
+ },
+ {
+  "name": "Umayyad rulers of Córdoba",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Abd al-Rahman I",
+    "slug": "abd-al-rahman-i",
+    "quote": "he established an independent Umayyad emirate"
+   },
+   {
+    "label": "Abd al-Rahman II",
+    "slug": "abd-al-rahman-ii",
+    "quote": "Umayyad emir of Córdoba from 822 to 852"
+   },
+   {
+    "label": "Hisham I",
+    "slug": "hisham-i-of-cordoba",
+    "quote": "the second Umayyad emir of Córdoba"
+   },
+   {
+    "label": "Al-Hakam I",
+    "slug": "al-hakam-i",
+    "quote": "the Umayyad emir of Córdoba from 796 to 822"
+   },
+   {
+    "label": "Al-Hakam II",
+    "slug": "al-hakam-ii",
+    "quote": "the second Umayyad caliph of Córdoba"
+   },
+   {
+    "label": "Hisham II",
+    "slug": "hisham-ii",
+    "quote": "the third Umayyad Caliph of Córdoba"
+   }
+  ],
+  "note": "Abd al-Rahman III is published (Caliphs); Almanzor ruled as hajib for Hisham II"
+ },
+ {
+  "name": "Scholars of al-Andalus",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Averroes",
+    "slug": "averroes",
+    "quote": "an Andalusian philosopher, physician and judge"
+   },
+   {
+    "label": "Maimonides",
+    "slug": "maimonides",
+    "quote": "born in Cordoba in the twelfth century"
+   },
+   {
+    "label": "Ibn Arabi",
+    "slug": "ibn-arabi",
+    "quote": "an Andalusian Sufi mystic, philosopher and poet"
+   },
+   {
+    "label": "Abulcasis",
+    "slug": "al-zahrawi",
+    "quote": "a physician of al-Andalus"
+   },
+   {
+    "label": "Ibn Tufayl",
+    "slug": "ibn-tufayl",
+    "quote": "an Andalusian philosopher, physician and court official"
+   },
+   {
+    "label": "Abbas ibn Firnas",
+    "slug": "abbas-ibn-firnas",
+    "quote": "an Andalusi polymath"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Kush",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kashta",
+    "slug": "kashta",
+    "quote": "a king of Kush in the eighth century BCE"
+   },
+   {
+    "label": "Piye",
+    "slug": "piye",
+    "quote": "a king of Kush in the eighth century BCE"
+   },
+   {
+    "label": "Shabaka",
+    "slug": "shabaka",
+    "quote": "a king of Kush and pharaoh of the Twenty-fifth Dynasty"
+   },
+   {
+    "label": "Taharqa",
+    "slug": "taharqa",
+    "quote": "a king of Kush and pharaoh of Egypt"
+   },
+   {
+    "label": "Tantamani",
+    "slug": "tantamani",
+    "quote": "the last king of the Kushite 25th Dynasty to rule Egypt"
+   }
+  ]
+ },
+ {
+  "name": "Obas of Benin",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ewuare",
+    "slug": "ewuare-the-great",
+    "quote": "an Oba of Benin"
+   },
+   {
+    "label": "Esigie",
+    "slug": "esigie",
+    "quote": "an Oba of Benin"
+   },
+   {
+    "label": "Ozolua",
+    "slug": "ozolua",
+    "quote": "an Oba of Benin"
+   },
+   {
+    "label": "Ovonramwen",
+    "slug": "ovonramwen",
+    "quote": "the last independent Oba of the Benin Empire"
+   },
+   {
+    "label": "Ehengbuda",
+    "slug": "ehengbuda",
+    "quote": "an Oba of Benin"
+   },
+   {
+    "label": "Oguola",
+    "slug": "oguola",
+    "quote": "an Oba of Benin"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Dahomey",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Houegbadja",
+    "slug": "houegbadja",
+    "quote": "king of Dahomey, in present-day Benin"
+   },
+   {
+    "label": "Agaja",
+    "slug": "agaja",
+    "quote": "a king of Dahomey in the early eighteenth century"
+   },
+   {
+    "label": "Tegbesu",
+    "slug": "tegbesu",
+    "quote": "king of Dahomey from 1740 to 1774"
+   },
+   {
+    "label": "Ghezo",
+    "slug": "ghezo",
+    "quote": "king of Dahomey, in present-day Benin, from 1818 to 1858"
+   },
+   {
+    "label": "Glele",
+    "slug": "glele",
+    "quote": "king of Dahomey from 1858 to 1889"
+   },
+   {
+    "label": "Béhanzin",
+    "slug": "behanzin",
+    "quote": "the last independent king of Dahomey"
+   }
+  ]
+ },
+ {
+  "name": "Rulers of Madagascar",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Andrianampoinimerina",
+    "slug": "andrianampoinimerina",
+    "quote": "king of Imerina in the central highlands of Madagascar"
+   },
+   {
+    "label": "Radama I",
+    "slug": "radama-i",
+    "quote": "king of the Merina kingdom of Madagascar from 1810 to 1828"
+   },
+   {
+    "label": "Radama II",
+    "slug": "radama-ii",
+    "quote": "king of Madagascar from 1861 to 1863"
+   },
+   {
+    "label": "Ranavalona II",
+    "slug": "ranavalona-ii",
+    "quote": "queen of the Merina kingdom of Madagascar from 1868 to 1883"
+   },
+   {
+    "label": "Ranavalona III",
+    "slug": "ranavalona-iii",
+    "quote": "the last monarch of the Merina kingdom of Madagascar"
+   },
+   {
+    "label": "Rainilaiarivony",
+    "slug": "rainilaiarivony",
+    "quote": "prime minister of the Merina kingdom of Madagascar from 1864 to 1895 and its real ruler"
+   }
+  ],
+  "note": "Ranavalona I is in Queens of Africa"
+ },
+ {
+  "name": "Battles fought by the Zulu",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Blood River",
+    "slug": "battle-of-blood-river",
+    "quote": "a much larger army of King"
+   },
+   {
+    "label": "Gqokli Hill",
+    "slug": "battle-of-gqokli-hill",
+    "quote": "between the Zulu under Shaka"
+   },
+   {
+    "label": "Isandlwana",
+    "slug": "battle-of-isandlwana",
+    "quote": "some 20,000 Zulu warriors overran the camp"
+   },
+   {
+    "label": "Ulundi",
+    "slug": "battle-of-ulundi",
+    "quote": "the last major battle of the Anglo-Zulu War"
+   },
+   {
+    "label": "Rorke's Drift",
+    "slug": "battle-of-rorkes-drift",
+    "quote": "during the Anglo-Zulu War"
+   },
+   {
+    "label": "Kambula",
+    "slug": "battle-of-kambula",
+    "quote": "during the Anglo-Zulu War"
+   },
+   {
+    "label": "Gingindlovu",
+    "slug": "battle-of-gingindlovu",
+    "quote": "during the Anglo-Zulu War"
+   }
+  ],
+  "note": "Isandlwana is published in Battles in Africa"
+ },
+ {
+  "name": "Founders of kingdoms in southern Africa",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mzilikazi",
+    "slug": "mzilikazi",
+    "quote": "founded the Ndebele kingdom in south-western Zimbabwe"
+   },
+   {
+    "label": "Moshoeshoe I",
+    "slug": "moshoeshoe-i",
+    "quote": "the founder of the Basotho nation and of the kingdom that became Lesotho"
+   },
+   {
+    "label": "Sobhuza I",
+    "slug": "sobhuza-i",
+    "quote": "He is regarded as a founder of the Swazi nation"
+   },
+   {
+    "label": "Soshangane",
+    "slug": "soshangane",
+    "quote": "founded the Gaza Empire in southern Mozambique"
+   },
+   {
+    "label": "Sebetwane",
+    "slug": "sebetwane",
+    "quote": "the founder of the Kololo kingdom"
+   }
+  ],
+  "note": "Shaka (Zulu kings) also built a kingdom in these years"
+ },
+ {
+  "name": "Mamluk sultans",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Aybak",
+    "slug": "aybak",
+    "quote": "the first sultan of the Mamluk Sultanate"
+   },
+   {
+    "label": "Qutuz",
+    "slug": "qutuz",
+    "quote": "a sultan of the Mamluk Sultanate in 1259–1260"
+   },
+   {
+    "label": "Qalawun",
+    "slug": "qalawun",
+    "quote": "a sultan of the Mamluk Sultanate in the late thirteenth century"
+   },
+   {
+    "label": "Al-Nasir Muhammad",
+    "slug": "al-nasir-muhammad",
+    "quote": "a sultan of the Mamluk Sultanate"
+   },
+   {
+    "label": "Al-Ashraf Khalil",
+    "slug": "al-ashraf-khalil",
+    "quote": "the Mamluk sultan of Egypt and Syria from 1290"
+   },
+   {
+    "label": "Qaitbay",
+    "slug": "qaitbay",
+    "quote": "Mamluk sultan of Egypt and Syria from 1468 to 1496"
+   }
+  ],
+  "note": "every Mamluk sultan began as a slave soldier: never in a puzzle with Slave soldiers who became rulers; Baybars (Hide a tree) and Tuman bay II (All in 1517) are Mamluk sultans too"
+ },
+ {
+  "name": "Historic places of Ethiopia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lalibela",
+    "slug": "lalibela",
+    "quote": "a town in northern Ethiopia famous for its rock-hewn churches"
+   },
+   {
+    "label": "Gondar",
+    "slug": "gondar",
+    "quote": "a city in north-western Ethiopia"
+   },
+   {
+    "label": "Harar",
+    "slug": "harar",
+    "quote": "a walled city in eastern Ethiopia"
+   },
+   {
+    "label": "Magdala",
+    "slug": "magdala",
+    "quote": "a mountain fortress in the Wollo highlands of northern Ethiopia"
+   },
+   {
+    "label": "Debre Libanos",
+    "slug": "debre-libanos",
+    "quote": "a monastery in the Shewa highlands"
+   },
+   {
+    "label": "Debre Markos",
+    "slug": "debre-markos",
+    "quote": "a town in the Amhara Region of Ethiopia"
+   }
+  ]
+ },
+ {
+  "name": "Settled by freed slaves",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Freetown",
+    "slug": "freetown",
+    "quote": "a settlement for freed slaves"
+   },
+   {
+    "label": "Monrovia",
+    "slug": "monrovia",
+    "quote": "founded in 1822 by free African Americans settled by the American Colonization Society"
+   },
+   {
+    "label": "Libreville",
+    "slug": "libreville",
+    "quote": "a settlement for Africans freed from the captured slave ship Elizia"
+   },
+   {
+    "label": "Krio",
+    "slug": "sierra-leone-creole-people",
+    "quote": "descendants of the freed slaves who settled in Freetown"
+   },
+   {
+    "label": "Sherbro Island",
+    "slug": "sherbro-island",
+    "quote": "landed its first settlers of free African Americans there"
+   }
+  ],
+  "note": "Monrovia and Sherbro Island took free African Americans, many of them freed slaves, sent by the American Colonization Society; the Krio descend from the Freetown settlers"
+ },
+ {
+  "name": "Roman cities of North Africa",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Leptis Magna",
+    "slug": "leptis-magna",
+    "quote": "later a prosperous Roman city"
+   },
+   {
+    "label": "Sabratha",
+    "slug": "sabratha",
+    "quote": "It prospered under Rome"
+   },
+   {
+    "label": "Dougga",
+    "slug": "dougga",
+    "quote": "it became a prosperous Roman municipality"
+   },
+   {
+    "label": "Volubilis",
+    "slug": "volubilis",
+    "quote": "one of the main cities of the Roman province of Mauretania Tingitana"
+   },
+   {
+    "label": "Timgad",
+    "slug": "timgad",
+    "quote": "founded by Trajan around 100 CE as a colony for veterans"
+   },
+   {
+    "label": "El Djem",
+    "slug": "el-djem",
+    "quote": "on the site of the Roman city of Thysdrus"
+   },
+   {
+    "label": "Bulla Regia",
+    "slug": "bulla-regia",
+    "quote": "it became a prosperous Roman town"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1918",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Nasser",
+    "slug": "gamal-abdel-nasser",
+    "quote": "1918–1970"
+   },
+   {
+    "label": "Sadat",
+    "slug": "anwar-sadat",
+    "quote": "1918–1981"
+   },
+   {
+    "label": "Mandela",
+    "slug": "nelson-mandela",
+    "quote": "1918–2013"
+   },
+   {
+    "label": "Sheikh Zayed",
+    "slug": "zayed-bin-sultan-al-nahyan",
+    "quote": "1918–2004"
+   },
+   {
+    "label": "Helmut Schmidt",
+    "slug": "helmut-schmidt",
+    "quote": "Helmut Schmidt (1918–2015)"
+   }
+  ],
+  "note": "Mandela fits Fought apartheid; Nasser and Sadat fit rulers of Egypt"
+ },
+ {
+  "name": "Born in 1925",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Idi Amin",
+    "slug": "idi-amin",
+    "quote": "c. 1925–2003"
+   },
+   {
+    "label": "Milton Obote",
+    "slug": "milton-obote",
+    "quote": "1925–2005"
+   },
+   {
+    "label": "Lumumba",
+    "slug": "patrice-lumumba",
+    "quote": "1925–1961"
+   },
+   {
+    "label": "Frantz Fanon",
+    "slug": "frantz-fanon",
+    "quote": "Frantz Fanon (1925–1961)"
+   },
+   {
+    "label": "Abel Muzorewa",
+    "slug": "abel-muzorewa",
+    "quote": "1925–2010"
+   }
+  ],
+  "note": "Malcolm X (1925) is in Made the pilgrimage to Mecca"
+ },
+ {
+  "name": "All in 1798",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Battle of the Nile",
+    "slug": "battle-of-the-nile",
+    "quote": "fought on 1–3 August 1798 in Aboukir Bay"
+   },
+   {
+    "label": "Battle of the Pyramids",
+    "slug": "battle-of-the-pyramids",
+    "quote": "fought on 21 July 1798 at Embabeh"
+   },
+   {
+    "label": "Institut d'Égypte",
+    "slug": "institut-degypte",
+    "quote": "founded in Cairo by Napoleon Bonaparte in August 1798"
+   },
+   {
+    "label": "Lyrical Ballads",
+    "slug": "lyrical-ballads",
+    "quote": "first published in 1798"
+   },
+   {
+    "label": "Helvetic Republic",
+    "slug": "helvetic-republic",
+    "quote": "proclaimed at Aarau on 12 April 1798"
+   },
+   {
+    "label": "French invasion of Switzerland",
+    "slug": "french-invasion-of-switzerland",
+    "quote": "took place in early 1798"
+   }
+  ],
+  "note": "Napoleon's campaign in Egypt, the Swiss revolution and English Romanticism"
+ },
+ {
+  "name": "All in 1517",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Ottoman conquest of Egypt",
+    "slug": "ottoman-conquest-of-egypt",
+    "quote": "ended Mamluk rule in 1517"
+   },
+   {
+    "label": "Ninety-five Theses",
+    "slug": "ninety-five-theses",
+    "quote": "written by Martin Luther in 1517"
+   },
+   {
+    "label": "Tuman bay II",
+    "slug": "tuman-bay-ii",
+    "quote": "d. 1517"
+   },
+   {
+    "label": "Collegium Trilingue",
+    "slug": "collegium-trilingue",
+    "quote": "founded at the University of Leuven in 1517"
+   },
+   {
+    "label": "Cardinal Cisneros",
+    "slug": "francisco-jimenez-de-cisneros",
+    "quote": "1436–1517"
+   }
+  ],
+  "note": "Tuman bay II was the last Mamluk sultan: keep apart from Mamluk sultans"
+ },
+ {
+  "name": "All in 1578",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Alcácer Quibir",
+    "slug": "battle-of-alcacer-quibir",
+    "quote": "fought in northern Morocco in 1578"
+   },
+   {
+    "label": "El Badi Palace",
+    "slug": "el-badi-palace",
+    "quote": "built by the Saadi sultan Ahmad al-Mansur from 1578"
+   },
+   {
+    "label": "Sebastian of Portugal",
+    "slug": "sebastian-of-portugal",
+    "quote": "King of Portugal from 1557 until 1578"
+   },
+   {
+    "label": "John of Austria",
+    "slug": "john-of-austria",
+    "quote": "1547–1578"
+   },
+   {
+    "label": "William Harvey",
+    "slug": "william-harvey",
+    "quote": "1578–1657"
+   }
+  ],
+  "note": "Sebastian of Portugal died at Alcácer Quibir"
+ },
+ {
+  "name": "All in 1920",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Treaty of Sèvres",
+    "slug": "treaty-of-sevres",
+    "quote": "the peace treaty of 1920"
+   },
+   {
+    "label": "Maysalun",
+    "slug": "battle-of-maysalun",
+    "quote": "fought on 24 July 1920"
+   },
+   {
+    "label": "Grand National Assembly",
+    "slug": "grand-national-assembly-of-turkey",
+    "quote": "opened by nationalist deputies in Ankara on 23 April 1920"
+   },
+   {
+    "label": "San Remo conference",
+    "slug": "san-remo-conference",
+    "quote": "held at Sanremo in Italy in April 1920"
+   },
+   {
+    "label": "Franco-Syrian War",
+    "slug": "franco-syrian-war",
+    "quote": "a short conflict in 1920"
+   },
+   {
+    "label": "Destour",
+    "slug": "destour",
+    "quote": "a Tunisian nationalist party founded in 1920"
+   }
+  ]
+ },
+ {
+  "name": "All in 1187",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Hattin",
+    "slug": "battle-of-hattin",
+    "quote": "fought in 1187 near Tiberias"
+   },
+   {
+    "label": "Siege of Jerusalem",
+    "slug": "siege-of-jerusalem-1187",
+    "quote": "The Siege of Jerusalem in 1187"
+   },
+   {
+    "label": "Raynald of Châtillon",
+    "slug": "raynald-of-chatillon",
+    "quote": "c. 1125–1187"
+   },
+   {
+    "label": "Raymond III of Tripoli",
+    "slug": "raymond-iii-of-tripoli",
+    "quote": "1140–1187"
+   },
+   {
+    "label": "Gerard of Cremona",
+    "slug": "gerard-of-cremona",
+    "quote": "c. 1114–1187"
+   }
+  ],
+  "note": "Saladin's year: Hattin and Jerusalem; Raynald was killed after Hattin"
+ },
+ {
+  "name": "Hide a drink",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Aleppo",
+    "slug": "aleppo",
+    "quote": "Aleppo is a major city in northern Syria"
+   },
+   {
+    "label": "Porto-Novo",
+    "slug": "porto-novo",
+    "quote": "Porto-Novo is a port city on the coast of present-day Benin"
+   },
+   {
+    "label": "Kul Tigin",
+    "slug": "kul-tigin",
+    "quote": "Kul Tigin was a prince and military commander of the Second Turkic Khaganate"
+   },
+   {
+    "label": "Kavad I",
+    "slug": "kavad-i",
+    "quote": "Sasanian King of Kings of Iran"
+   },
+   {
+    "label": "Erzurum",
+    "slug": "erzurum",
+    "quote": "a city on a high plateau in eastern Turkey"
+   },
+   {
+    "label": "Abeid Karume",
+    "slug": "abeid-karume",
+    "quote": "became President of Zanzibar"
+   }
+  ],
+  "note": "ALEppo, PORTo-Novo, Kul TiGIN, KAVAd, ErzuRUM, KaRUMe"
+ },
+ {
+  "name": "Hide a vehicle",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Carthage",
+    "slug": "carthage",
+    "quote": "a Phoenician city founded on the coast of present-day Tunisia"
+   },
+   {
+    "label": "Vandals",
+    "slug": "vandals",
+    "quote": "crossing into North Africa in 429 CE"
+   },
+   {
+    "label": "Bushehr",
+    "slug": "bushehr",
+    "quote": "a port city on the Persian Gulf coast of southern Iran"
+   },
+   {
+    "label": "Taxila",
+    "slug": "taxila",
+    "quote": "Taxila was an ancient city in the north-west of the Indian subcontinent, in present-day Pakistan"
+   },
+   {
+    "label": "Madagascar",
+    "slug": "madagascar",
+    "quote": "the world's fourth-largest island"
+   },
+   {
+    "label": "Arquebus",
+    "slug": "arquebus",
+    "quote": "an early form of matchlock firearm"
+   }
+  ],
+  "note": "CARthage, VANdals, BUShehr, TAXIla, madagasCAR, arqueBUS"
+ },
+ {
+  "name": "Hide a tree",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Elmina",
+    "slug": "elmina",
+    "quote": "a town on the coast of present-day Ghana"
+   },
+   {
+    "label": "Palmyra",
+    "slug": "palmyra",
+    "quote": "an ancient oasis city in the Syrian desert"
+   },
+   {
+    "label": "Baybars",
+    "slug": "baybars",
+    "quote": "a Mamluk sultan of Egypt and Syria"
+   },
+   {
+    "label": "Qizilbash",
+    "slug": "qizilbash",
+    "quote": "a confederation of Turkmen tribes"
+   },
+   {
+    "label": "Ashanti",
+    "slug": "ashanti-empire",
+    "quote": "an Akan state in present-day Ghana"
+   },
+   {
+    "label": "Harun al-Rashid",
+    "slug": "harun-al-rashid",
+    "quote": "Abbasid caliph who reigned from 786 to 809"
+   }
+  ],
+  "note": "ELMina, PALMyra, BAYbars, QizilbASH, ASHanti, Harun al-RASHid; Baybars is a Mamluk sultan, Elmina is on the Gold Coast"
+ },
+ {
+  "name": "Hide a country",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Chaldiran",
+    "slug": "battle-of-chaldiran",
+    "quote": "between the Ottoman sultan Selim I and the Safavid shah"
+   },
+   {
+    "label": "Malik-Shah I",
+    "slug": "malik-shah-i",
+    "quote": "sultan of the Seljuk Empire from 1072"
+   },
+   {
+    "label": "Kenyatta",
+    "slug": "jomo-kenyatta",
+    "quote": "a Kikuyu nationalist leader"
+   },
+   {
+    "label": "Ottoman Empire",
+    "slug": "ottoman-empire",
+    "quote": "a Turkish Muslim state founded by Osman I"
+   },
+   {
+    "label": "Antsiranana",
+    "slug": "antsiranana",
+    "quote": "a port city at the northern tip of Madagascar"
+   },
+   {
+    "label": "Romanos IV",
+    "slug": "romanos-iv-diogenes",
+    "quote": "a Byzantine emperor who reigned from 1068 to 1071"
+   }
+  ],
+  "note": "ChaldIRAN, MALIk-Shah, KENYAtta, OttOMAN Empire, AntsIRANana, ROMANos (Oman); Chaldiran was an Ottoman victory: keep apart from Ottoman victories"
+ },
+ {
+  "name": "Begin with a man's name",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Timbuktu",
+    "slug": "timbuktu",
+    "quote": "a city near the Niger River in present-day Mali"
+   },
+   {
+    "label": "Dongola",
+    "slug": "old-dongola",
+    "quote": "an abandoned town on the east bank of the Nile in northern Sudan"
+   },
+   {
+    "label": "Samarkand",
+    "slug": "samarkand",
+    "quote": "one of the major centres of the Silk Road"
+   },
+   {
+    "label": "Alexandria",
+    "slug": "alexandria",
+    "quote": "founded by Alexander the Great in 331 BCE"
+   },
+   {
+    "label": "Edirne",
+    "slug": "edirne",
+    "quote": "the ancient Adrianople"
+   },
+   {
+    "label": "Rayy",
+    "slug": "rayy",
+    "quote": "an ancient city in northern Iran"
+   }
+  ],
+  "note": "TIMbuktu, DONgola, SAMarkand, ALEXandria, EDirne, RAYy"
+ },
+ {
+  "name": "Slave soldiers who became rulers",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Qutb ud-Din Aibak",
+    "slug": "qutb-ud-din-aibak",
+    "quote": "a Turkic slave-general of the Ghurid ruler Muhammad of Ghor"
+   },
+   {
+    "label": "Iltutmish",
+    "slug": "iltutmish",
+    "quote": "a Turkic slave commander who seized the throne of Delhi"
+   },
+   {
+    "label": "Sabuktigin",
+    "slug": "sabuktigin",
+    "quote": "a Turkic slave commander who ruled Ghazni"
+   },
+   {
+    "label": "Alp Tegin",
+    "slug": "alp-tegin",
+    "quote": "a Turkic slave commander of the Samanid dynasty"
+   },
+   {
+    "label": "Kafur",
+    "slug": "abu-al-misk-kafur",
+    "quote": "once a slave, who became ruler of Ikhshidid Egypt"
+   },
+   {
+    "label": "Barquq",
+    "slug": "barquq",
+    "quote": "a Circassian Mamluk who became sultan of Egypt and Syria"
+   }
+  ],
+  "note": "all began as military slaves; Barquq and every Mamluk sultan fit, so never with Mamluk sultans; Qutb ud-Din Aibak and Iltutmish are also in the published Sultans of Delhi"
+ },
+ {
+  "name": "Made the pilgrimage to Mecca",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mansa Musa",
+    "slug": "mansa-musa",
+    "quote": "His pilgrimage to Mecca in 1324"
+   },
+   {
+    "label": "Askia Muhammad",
+    "slug": "askia-muhammad",
+    "quote": "His pilgrimage to Mecca strengthened his legitimacy"
+   },
+   {
+    "label": "Mansa Uli",
+    "slug": "mansa-uli",
+    "quote": "His pilgrimage to Mecca helped begin Mali's diplomatic ties"
+   },
+   {
+    "label": "Malcolm X",
+    "slug": "malcolm-x",
+    "quote": "made the pilgrimage to Mecca"
+   },
+   {
+    "label": "Richard Burton",
+    "slug": "richard-francis-burton",
+    "quote": "He had made a disguised pilgrimage to Mecca in 1853"
+   },
+   {
+    "label": "Yahya ibn Ibrahim",
+    "slug": "yahya-ibn-ibrahim",
+    "quote": "Returning from pilgrimage to Mecca around 1040"
+   }
+  ],
+  "note": "Burton went in disguise; Malcolm X was born in 1925"
+ },
+ {
+  "name": "Conquered Egypt",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cambyses II",
+    "slug": "cambyses-ii",
+    "quote": "He conquered Egypt"
+   },
+   {
+    "label": "Esarhaddon",
+    "slug": "esarhaddon",
+    "quote": "in 671 BCE invaded Egypt"
+   },
+   {
+    "label": "Amr ibn al-As",
+    "slug": "amr-ibn-al-as",
+    "quote": "He led the conquest of Egypt for the Rashidun Caliphate"
+   },
+   {
+    "label": "Zenobia",
+    "slug": "zenobia",
+    "quote": "She conquered Egypt in 270"
+   },
+   {
+    "label": "Jawhar",
+    "slug": "jawhar-al-siqilli",
+    "quote": "he led the conquest of Egypt for the Fatimid Caliphate"
+   },
+   {
+    "label": "Augustus",
+    "slug": "augustus-roman-emperor",
+    "quote": "annexed Egypt, ending the Ptolemaic Empire"
+   }
+  ],
+  "note": "Persia, Assyria, Arabia, Palmyra, the Fatimids and Rome; Piye (Kings of Kush) and Umar's armies (Rashidun) also conquered Egypt"
+ },
+ {
+  "name": "Took Jerusalem",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Saladin",
+    "slug": "saladin",
+    "quote": "recapture of Jerusalem"
+   },
+   {
+    "label": "Nebuchadnezzar II",
+    "slug": "nebuchadnezzar-ii",
+    "quote": "As king he captured Jerusalem"
+   },
+   {
+    "label": "Titus",
+    "slug": "titus",
+    "quote": "he captured Jerusalem after a long siege"
+   },
+   {
+    "label": "Shahrbaraz",
+    "slug": "shahrbaraz",
+    "quote": "He captured Jerusalem from the Byzantines in 614 CE"
+   },
+   {
+    "label": "Allenby",
+    "slug": "edmund-allenby",
+    "quote": "entered Jerusalem in December 1917"
+   },
+   {
+    "label": "Herod",
+    "slug": "herod-the-great",
+    "quote": "who took Jerusalem from the last Hasmonean king"
+   }
+  ],
+  "note": "Saladin's 1187 capture is also in All in 1187"
+ },
+ {
+  "name": "Pan-Africanists born in the Americas",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Marcus Garvey",
+    "slug": "marcus-garvey",
+    "quote": "a Jamaican political activist"
+   },
+   {
+    "label": "W. E. B. Du Bois",
+    "slug": "w-e-b-du-bois",
+    "quote": "an American sociologist, historian, writer and Pan-Africanist"
+   },
+   {
+    "label": "Edward Blyden",
+    "slug": "edward-wilmot-blyden",
+    "quote": "born in the Danish West Indies"
+   },
+   {
+    "label": "George Padmore",
+    "slug": "george-padmore",
+    "quote": "a Trinidadian Pan-Africanist"
+   },
+   {
+    "label": "Henry Sylvester Williams",
+    "slug": "henry-sylvester-williams",
+    "quote": "a Trinidadian lawyer, activist"
+   },
+   {
+    "label": "Walter Rodney",
+    "slug": "walter-rodney",
+    "quote": "a Guyanese historian"
+   }
+  ],
+  "note": "Jamaica, the US, the Danish West Indies, Trinidad (two) and Guyana"
+ }
+]

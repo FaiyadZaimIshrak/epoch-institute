@@ -1,0 +1,2619 @@
+[
+ {
+  "name": "Gods of Rome",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jupiter",
+    "slug": "jupiter-god",
+    "quote": "Jupiter was the chief god of the ancient Roman state religion, god of the"
+   },
+   {
+    "label": "Neptune",
+    "slug": "neptune",
+    "quote": "Neptune was the Roman god of fresh water and the sea, identified with"
+   },
+   {
+    "label": "Minerva",
+    "slug": "minerva",
+    "quote": "Minerva was the Roman goddess of wisdom, crafts and strategic war, identified"
+   },
+   {
+    "label": "Diana",
+    "slug": "diana-mythology",
+    "quote": "Diana was the Roman goddess of hunting, wild animals, the moon and"
+   },
+   {
+    "label": "Saturn",
+    "slug": "saturn-mythology",
+    "quote": "Saturn was an ancient Roman god of agriculture and wealth, identified with the"
+   },
+   {
+    "label": "Mars",
+    "slug": "mars-mythology",
+    "quote": "Mars was the Roman god of war and, in early times, also"
+   }
+  ]
+ },
+ {
+  "name": "Physicists",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Einstein",
+    "slug": "albert-einstein",
+    "quote": "Albert Einstein was a German-born physicist, born in Ulm, whose theories"
+   },
+   {
+    "label": "Faraday",
+    "slug": "michael-faraday",
+    "quote": "an English scientist who discovered electromagnetic induction in 1831, the principle behind"
+   },
+   {
+    "label": "Maxwell",
+    "slug": "james-clerk-maxwell",
+    "quote": "Clerk Maxwell was a Scottish physicist whose equations, published in the"
+   },
+   {
+    "label": "Bohr",
+    "slug": "niels-bohr",
+    "quote": "Niels Bohr was a Danish physicist who proposed the Bohr model"
+   },
+   {
+    "label": "Fermi",
+    "slug": "enrico-fermi",
+    "quote": "Enrico Fermi was an Italian physicist who built the first nuclear"
+   },
+   {
+    "label": "Huygens",
+    "slug": "christiaan-huygens",
+    "quote": "Huygens was a Dutch mathematician, physicist and astronomer"
+   }
+  ]
+ },
+ {
+  "name": "Inventors",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gutenberg",
+    "slug": "johannes-gutenberg",
+    "quote": "German craftsman who developed printing with movable metal type in Europe"
+   },
+   {
+    "label": "James Watt",
+    "slug": "james-watt",
+    "quote": "James Watt was a Scottish inventor and instrument maker whose improvements"
+   },
+   {
+    "label": "Graham Bell",
+    "slug": "alexander-graham-bell",
+    "quote": "and inventor credited with patenting the telephone in 1876"
+   },
+   {
+    "label": "Marconi",
+    "slug": "guglielmo-marconi",
+    "quote": "Guglielmo Marconi was an Italian inventor and engineer who developed practical"
+   },
+   {
+    "label": "Cai Lun",
+    "slug": "cai-lun",
+    "quote": "imperial workshops, presented an improved method of making paper to Emperor He in 105"
+   },
+   {
+    "label": "Bi Sheng",
+    "slug": "bi-sheng",
+    "quote": "of the Song Dynasty credited with inventing movable type printing using ceramic characters around"
+   }
+  ]
+ },
+ {
+  "name": "Pyramids",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Giza",
+    "slug": "great-pyramid-of-giza",
+    "quote": "Pyramid of Giza was built for the Fourth Dynasty pharaoh Khufu around 2560 BCE"
+   },
+   {
+    "label": "Djoser",
+    "slug": "pyramid-of-djoser",
+    "quote": "Step Pyramid, is a six-stepped stone pyramid at Saqqara in Egypt, built"
+   },
+   {
+    "label": "Sun (Teotihuacan)",
+    "slug": "pyramid-of-the-sun",
+    "quote": "building at Teotihuacan and one of the largest pyramids of Mesoamerica, about 65 metres high, raised"
+   },
+   {
+    "label": "Moon (Teotihuacan)",
+    "slug": "pyramid-of-the-moon",
+    "quote": "the Moon is the second-largest pyramid of Teotihuacan, standing at the northern end"
+   },
+   {
+    "label": "Cholula",
+    "slug": "great-pyramid-of-cholula",
+    "quote": "valley of Mexico, the largest pyramid in the world by volume"
+   },
+   {
+    "label": "Feathered Serpent",
+    "slug": "temple-of-the-feathered-serpent",
+    "quote": "Serpent Pyramid is the third-largest pyramid at Teotihuacan, built around 200 to 250"
+   }
+  ],
+  "note": "Labels avoid the word; Sun and Moon are both at Teotihuacan, keep one"
+ },
+ {
+  "name": "Novels",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Don Quixote",
+    "slug": "don-quixote",
+    "quote": "Don Quixote is a novel by Miguel de Cervantes, published"
+   },
+   {
+    "label": "Uncle Tom's Cabin",
+    "slug": "uncle-toms-cabin",
+    "quote": "Tom's Cabin is an American anti-slavery novel by Harriet Beecher Stowe, serialised"
+   },
+   {
+    "label": "Frankenstein",
+    "slug": "frankenstein",
+    "quote": "Modern Prometheus is a Gothic novel by the English author Mary Shelley, published anonymously in London on"
+   },
+   {
+    "label": "Max Havelaar",
+    "slug": "max-havelaar",
+    "quote": "Max Havelaar is a novel published in 1860 by Multatuli"
+   },
+   {
+    "label": "Salammbô",
+    "slug": "salammbo",
+    "quote": "Salammbô is a historical novel by the French writer Gustave Flaubert, published in 1862"
+   },
+   {
+    "label": "Oroonoko",
+    "slug": "oroonoko",
+    "quote": "Royal Slave, is a short novel by Aphra Behn published in 1688"
+   }
+  ]
+ },
+ {
+  "name": "Religions",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Zoroastrianism",
+    "slug": "zoroastrianism",
+    "quote": "Zoroastrianism is an ancient Iranian religion founded on the teachings of"
+   },
+   {
+    "label": "Shinto",
+    "slug": "shinto",
+    "quote": "Shinto is the indigenous religion of Japan, centred on the worship of"
+   },
+   {
+    "label": "Taoism",
+    "slug": "taoism",
+    "quote": "Daoism, is a Chinese philosophical and religious tradition centred on the Dao, or"
+   },
+   {
+    "label": "Manichaeism",
+    "slug": "manichaeism",
+    "quote": "Manichaeism was a religion founded by the prophet Mani in the third century CE"
+   },
+   {
+    "label": "Judaism",
+    "slug": "judaism",
+    "quote": "Judaism is the monotheistic religion of the Jewish people, based on the Hebrew Bible"
+   },
+   {
+    "label": "Christianity",
+    "slug": "christianity",
+    "quote": "Christianity is a monotheistic religion based on the life and teachings of Jesus of"
+   }
+  ]
+ },
+ {
+  "name": "Famous ships",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Argo",
+    "slug": "argo",
+    "quote": "Greek mythology, the Argo was the ship on which Jason and the Argonauts sailed from"
+   },
+   {
+    "label": "Bounty",
+    "slug": "hms-bounty",
+    "quote": "HMS Bounty was a Royal Navy ship sent under William Bligh to collect breadfruit plants on"
+   },
+   {
+    "label": "Gokstad",
+    "slug": "gokstad-ship",
+    "quote": "Gokstad ship is a Viking ship of about 890, found in a burial mound"
+   },
+   {
+    "label": "Santa María",
+    "slug": "santa-maria-ship",
+    "quote": "Santa María was the largest of the three ships of Christopher Columbus's first voyage in 1492 and"
+   },
+   {
+    "label": "Mayflower",
+    "slug": "mayflower",
+    "quote": "The Mayflower was an English merchant ship that carried about 102 passengers, among them"
+   },
+   {
+    "label": "Beagle",
+    "slug": "hms-beagle",
+    "quote": "HMS Beagle was a Royal Navy brig-sloop launched in 1820 and converted"
+   }
+  ]
+ },
+ {
+  "name": "National anthems",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "God Save the King",
+    "slug": "god-save-the-king",
+    "quote": "is female, is the national anthem of the United Kingdom, first published in the 1740s"
+   },
+   {
+    "label": "Advance Australia Fair",
+    "slug": "advance-australia-fair",
+    "quote": "Australia Fair is the national anthem of Australia, written by Peter Dodds McCormick"
+   },
+   {
+    "label": "La Brabançonne",
+    "slug": "la-brabanconne",
+    "quote": "La Brabançonne is the national anthem of Belgium, written during the Belgian Revolution"
+   },
+   {
+    "label": "March of the Volunteers",
+    "slug": "march-of-the-volunteers",
+    "quote": "the Volunteers\" is the national anthem of the People's Republic of China, and unlike"
+   },
+   {
+    "label": "Kimigayo",
+    "slug": "kimigayo",
+    "quote": "oldest words of any national anthem"
+   },
+   {
+    "label": "Aegukga",
+    "slug": "aegukga",
+    "quote": "use it means the national anthem of South Korea"
+   }
+  ],
+  "note": "Song entries have no pictures, so Kimigayo, March of the Volunteers and Aegukga weigh 0 though well known"
+ },
+ {
+  "name": "Books of the Bible",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Genesis",
+    "slug": "book-of-genesis",
+    "quote": "of Genesis is the first book of the Hebrew Bible and"
+   },
+   {
+    "label": "Exodus",
+    "slug": "book-of-exodus",
+    "quote": "The Book of Exodus is the second"
+   },
+   {
+    "label": "Psalms",
+    "slug": "book-of-psalms",
+    "quote": "The Book of Psalms is a collection"
+   },
+   {
+    "label": "Song of Songs",
+    "slug": "song-of-songs",
+    "quote": "of Solomon, is a book of the Hebrew Bible consisting"
+   },
+   {
+    "label": "Acts",
+    "slug": "acts-of-the-apostles",
+    "quote": "Apostles is the fifth book of the New Testament, written"
+   },
+   {
+    "label": "John",
+    "slug": "gospel-of-john",
+    "quote": "The Gospel of John is the fourth"
+   }
+  ]
+ },
+ {
+  "name": "Mosques",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Al-Aqsa",
+    "slug": "al-aqsa-mosque",
+    "quote": "Temple Mount, in Jerusalem, one of the most important sites in Islam"
+   },
+   {
+    "label": "Süleymaniye",
+    "slug": "suleymaniye-mosque",
+    "quote": "Süleymaniye Mosque is an imperial mosque in Istanbul built for Suleiman the Magnificent"
+   },
+   {
+    "label": "Qarawiyyin",
+    "slug": "qarawiyyin-mosque",
+    "quote": "Qarawiyyin Mosque is a mosque and centre of learning in Fez, Morocco, founded in 857 or"
+   },
+   {
+    "label": "Kilwa",
+    "slug": "great-mosque-of-kilwa",
+    "quote": "off southern Tanzania, is one of the oldest mosques on the East African coast, begun around the 11th century"
+   },
+   {
+    "label": "Sixty Dome",
+    "slug": "sixty-dome-mosque",
+    "quote": "Dome Mosque is a 15th-century brick mosque at Bagerhat in south-western Bangladesh"
+   },
+   {
+    "label": "Al-Zaytuna",
+    "slug": "al-zaytuna-mosque",
+    "quote": "Al-Zaytuna Mosque is the great mosque of the medina of Tunis, founded in the early 8th"
+   }
+  ]
+ },
+ {
+  "name": "Poets",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Homer",
+    "slug": "homer",
+    "quote": "Homer is the ancient Greek poet to whom the Iliad and the Odyssey are attributed"
+   },
+   {
+    "label": "Virgil",
+    "slug": "virgil",
+    "quote": "Virgil was a Roman poet of the Augustan age, author of the Eclogues, the"
+   },
+   {
+    "label": "Hafez",
+    "slug": "hafez",
+    "quote": "Hafez was a Persian poet of Shiraz, the most celebrated master of"
+   },
+   {
+    "label": "Pushkin",
+    "slug": "alexander-pushkin",
+    "quote": "Alexander Pushkin was a Russian poet, playwright and novelist of the early nineteenth century"
+   },
+   {
+    "label": "Bashō",
+    "slug": "matsuo-basho",
+    "quote": "Matsuo Basho was a Japanese poet of the seventeenth century, regarded as the greatest master"
+   },
+   {
+    "label": "Iqbal",
+    "slug": "muhammad-iqbal",
+    "quote": "Muhammad Iqbal was an Islamic philosopher and poet of British India, among the most influential Muslim"
+   }
+  ],
+  "note": "Hafez and Iqbal: a Persian and an Urdu poet; Homer, Virgil classical"
+ },
+ {
+  "name": "Great libraries",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alexandria",
+    "slug": "library-of-alexandria",
+    "quote": "of Alexandria was the great library founded under the Ptolemaic kings in Alexandria in the third"
+   },
+   {
+    "label": "House of Wisdom",
+    "slug": "house-of-wisdom",
+    "quote": "Bayt al-Hikma, was a major intellectual institution in Baghdad under the Abbasid Caliphate"
+   },
+   {
+    "label": "Vatican",
+    "slug": "vatican-library",
+    "quote": "Vatican Library is the library of the Holy See in Vatican City, formally established"
+   },
+   {
+    "label": "Bodleian",
+    "slug": "bodleian-library",
+    "quote": "Bodleian Library is the main research library of the University of Oxford, opened in 1602 through the"
+   },
+   {
+    "label": "Marciana",
+    "slug": "biblioteca-marciana",
+    "quote": "is one of the oldest public libraries in Italy and holds one of the"
+   },
+   {
+    "label": "Gyujanggak",
+    "slug": "gyujanggak",
+    "quote": "The Gyujanggak was the royal library and research institute founded by King Jeongjo in"
+   }
+  ],
+  "note": "Labels drop the word library"
+ },
+ {
+  "name": "German philosophers",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kant",
+    "slug": "immanuel-kant",
+    "quote": "Immanuel Kant was a German philosopher who spent almost all his"
+   },
+   {
+    "label": "Hegel",
+    "slug": "georg-wilhelm-friedrich-hegel",
+    "quote": "Friedrich Hegel was a German philosopher, the leading figure of German"
+   },
+   {
+    "label": "Leibniz",
+    "slug": "gottfried-wilhelm-leibniz",
+    "quote": "Wilhelm Leibniz was a German philosopher, mathematician and scholar"
+   },
+   {
+    "label": "Fichte",
+    "slug": "johann-gottlieb-fichte",
+    "quote": "Gottlieb Fichte was a German philosopher and a founding figure of"
+   },
+   {
+    "label": "Herder",
+    "slug": "johann-gottfried-herder",
+    "quote": "Gottfried Herder was a German philosopher, theologian and writer, born in Mohrungen in East"
+   },
+   {
+    "label": "Nicholas of Cusa",
+    "slug": "nicholas-of-cusa",
+    "quote": "of Cusa was a German philosopher, theologian and cardinal, author of On Learned Ignorance"
+   }
+  ],
+  "note": "Hegel was born in 1770 (published \"Born in 1770\")"
+ },
+ {
+  "name": "Towers and minarets",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Qutb Minar",
+    "slug": "qutb-minar",
+    "quote": "Qutb Minar is a tall minaret of red sandstone in Delhi, begun around the end of"
+   },
+   {
+    "label": "Belém",
+    "slug": "tower-of-belem",
+    "quote": "of Belém is a fortified tower on the Tagus estuary at Lisbon, built in the"
+   },
+   {
+    "label": "Hercules (A Coruña)",
+    "slug": "tower-of-hercules",
+    "quote": "of Hercules is a Roman lighthouse at A Coruña in Galicia, north-western Spain, built"
+   },
+   {
+    "label": "Vijay Stambha",
+    "slug": "vijay-stambha",
+    "quote": "of Victory, is a nine-storey tower in Chittor Fort built by Rana Kumbha of"
+   },
+   {
+    "label": "Kalyan",
+    "slug": "kalyan-minaret",
+    "quote": "Kalyan Minaret is a brick minaret in Bukhara, Uzbekistan, built in 1127 by"
+   },
+   {
+    "label": "Ghirlandina",
+    "slug": "ghirlandina",
+    "quote": "The Ghirlandina is the bell tower of Modena Cathedral, about 87 metres tall, begun"
+   }
+  ]
+ },
+ {
+  "name": "Archaeologists",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Schliemann",
+    "slug": "heinrich-schliemann",
+    "quote": "a German businessman and pioneering archaeologist who set out to prove"
+   },
+   {
+    "label": "Layard",
+    "slug": "austen-henry-layard",
+    "quote": "archaeologist and diplomat who excavated the Assyrian capitals of Nimrud and Nineveh between"
+   },
+   {
+    "label": "Woolley",
+    "slug": "leonard-woolley",
+    "quote": "was a British archaeologist best known for excavating Ur in southern Iraq from 1922"
+   },
+   {
+    "label": "Mortimer Wheeler",
+    "slug": "mortimer-wheeler",
+    "quote": "Mortimer Wheeler was a British archaeologist and army officer who directed"
+   },
+   {
+    "label": "Aurel Stein",
+    "slug": "aurel-stein",
+    "quote": "was a Hungarian-born British archaeologist and explorer who led four expeditions to"
+   },
+   {
+    "label": "Max Uhle",
+    "slug": "max-uhle",
+    "quote": "Max Uhle was a German archaeologist whose work in Peru, Chile"
+   }
+  ],
+  "note": "Arthur Evans left out: he is in Died in 1941"
+ },
+ {
+  "name": "Impressionists and Post-Impressionists",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Monet",
+    "slug": "claude-monet",
+    "quote": "a French painter and a founder of Impressionism, its most consistent practitioner in"
+   },
+   {
+    "label": "Degas",
+    "slug": "edgar-degas",
+    "quote": "Regarded as a founder of Impressionism, he helped organise the eight"
+   },
+   {
+    "label": "Pissarro",
+    "slug": "camille-pissarro",
+    "quote": "Pissarro was a Danish-French Impressionist and Neo-Impressionist painter, born in 1830 at Charlotte"
+   },
+   {
+    "label": "Manet",
+    "slug": "edouard-manet",
+    "quote": "pivotal figure in the transition from Realism to Impressionism"
+   },
+   {
+    "label": "Van Gogh",
+    "slug": "vincent-van-gogh",
+    "quote": "van Gogh was a Dutch Post-Impressionist painter whose expressive colour and brushwork"
+   },
+   {
+    "label": "Gauguin",
+    "slug": "paul-gauguin",
+    "quote": "Paul Gauguin was a French Post-Impressionist painter, sculptor and printmaker"
+   }
+  ],
+  "note": "Manet also died in 1883 (kept out of that group)"
+ },
+ {
+  "name": "Encyclopedias and great compendia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Encyclopédie",
+    "slug": "encyclopedie",
+    "quote": "The Encyclopédie was a French encyclopaedia edited by Denis Diderot and, until 1759, Jean le"
+   },
+   {
+    "label": "Yongle Encyclopedia",
+    "slug": "yongle-encyclopedia",
+    "quote": "Yongle Encyclopedia was a vast Chinese compendium commissioned by the Yongle Emperor"
+   },
+   {
+    "label": "Siku Quanshu",
+    "slug": "siku-quanshu",
+    "quote": "Four Treasuries, was a vast compilation of Chinese literature ordered by the Qianlong Emperor"
+   },
+   {
+    "label": "Canon of Medicine",
+    "slug": "the-canon-of-medicine",
+    "quote": "of Medicine is an encyclopedia of medicine in five books compiled by Ibn Sina (Avicenna)"
+   },
+   {
+    "label": "Dictionnaire de Trévoux",
+    "slug": "dictionnaire-de-trevoux",
+    "quote": "de Trévoux was a French dictionary and encyclopaedia first published in 1704 at"
+   },
+   {
+    "label": "Etymologies (Isidore)",
+    "slug": "isidore-of-seville",
+    "quote": "His Etymologies, an encyclopedia of ancient learning, was one"
+   }
+  ]
+ },
+ {
+  "name": "Inscriptions in stone",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hathigumpha",
+    "slug": "hathigumpha-inscription",
+    "quote": "Hathigumpha inscription is a long Prakrit inscription in Brahmi script carved in the 'Elephant Cave'"
+   },
+   {
+    "label": "Orkhon",
+    "slug": "orkhon-inscriptions",
+    "quote": "The Orkhon inscriptions are monumental stone texts erected in the Orkhon valley"
+   },
+   {
+    "label": "Kedukan Bukit",
+    "slug": "kedukan-bukit-inscription",
+    "quote": "Bukit inscription is a stone inscription dated 682 CE, found near Palembang in Sumatra"
+   },
+   {
+    "label": "Gwanggaeto",
+    "slug": "gwanggaeto-stele",
+    "quote": "Gwanggaeto Stele is a granite monument about six metres tall erected in 414 by King"
+   },
+   {
+    "label": "Mesha",
+    "slug": "mesha-stele",
+    "quote": "Moabite Stone, is a basalt slab inscribed around 840 BCE for King Mesha of Moab"
+   },
+   {
+    "label": "Ezana",
+    "slug": "ezana-stone",
+    "quote": "Ezana Stone is an inscribed stela at Aksum recording the deeds of King"
+   }
+  ],
+  "note": "Labels drop \"stele\"/\"inscription\""
+ },
+ {
+  "name": "Landmark books of science",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Almagest",
+    "slug": "almagest",
+    "quote": "The Almagest is the astronomical treatise of Claudius Ptolemy, written in Greek in Alexandria"
+   },
+   {
+    "label": "De revolutionibus",
+    "slug": "de-revolutionibus-orbium-coelestium",
+    "quote": "Spheres, is Nicolaus Copernicus's account of his heliocentric theory, printed in Nuremberg in 1543"
+   },
+   {
+    "label": "Principia",
+    "slug": "principia-mathematica-newton",
+    "quote": "called the Principia, is Isaac Newton's treatise on mechanics, published in Latin in London"
+   },
+   {
+    "label": "Origin of Species",
+    "slug": "on-the-origin-of-species",
+    "quote": "that set out the theory of evolution by natural selection"
+   },
+   {
+    "label": "Al-Jabr",
+    "slug": "al-kitab-al-mukhtasar-fi-hisab-al-jabr-wal-muqabala",
+    "quote": "hisab al-jabr wal-muqabala, the Compendious Book on Calculation by Completion and Balancing, is"
+   },
+   {
+    "label": "Rhind Papyrus",
+    "slug": "rhind-mathematical-papyrus",
+    "quote": "Mathematical Papyrus is the largest surviving mathematical text from ancient Egypt, copied by"
+   }
+  ]
+ },
+ {
+  "name": "Classics of political thought",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "The Prince",
+    "slug": "the-prince",
+    "quote": "The Prince is a political treatise by the Florentine Niccolò Machiavelli, written in 1513"
+   },
+   {
+    "label": "Spirit of the Laws",
+    "slug": "the-spirit-of-the-laws",
+    "quote": "des lois) is a treatise on political theory and a pioneering work of"
+   },
+   {
+    "label": "The Social Contract",
+    "slug": "the-social-contract",
+    "quote": "philosopher Jean-Jacques Rousseau on how to establish legitimate authority in a political community, one"
+   },
+   {
+    "label": "Two Treatises",
+    "slug": "two-treatises-of-government",
+    "quote": "of Government is the principal work of political philosophy of the English philosopher John"
+   },
+   {
+    "label": "Wealth of Nations",
+    "slug": "the-wealth-of-nations",
+    "quote": "of Nations, is a book by Adam Smith published in London in 1776"
+   },
+   {
+    "label": "Communist Manifesto",
+    "slug": "the-communist-manifesto",
+    "quote": "Communist Party, is a political pamphlet by Karl Marx and Friedrich Engels, commissioned by"
+   }
+  ]
+ },
+ {
+  "name": "Ancient statues",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Venus de Milo",
+    "slug": "venus-de-milo",
+    "quote": "of Milos, is an ancient Greek marble statue of a goddess, usually identified"
+   },
+   {
+    "label": "Laocoön",
+    "slug": "laocoon-and-his-sons",
+    "quote": "His Sons is a marble sculpture showing the Trojan priest Laocoön and his sons attacked"
+   },
+   {
+    "label": "Dying Gaul",
+    "slug": "dying-gaul",
+    "quote": "Dying Gaul is an ancient marble statue of a wounded Celtic warrior, now in the Capitoline Museums"
+   },
+   {
+    "label": "Chimera of Arezzo",
+    "slug": "chimera-of-arezzo",
+    "quote": "of Arezzo is an Etruscan bronze statue of the mythical fire-breathing lion"
+   },
+   {
+    "label": "Lady of Elche",
+    "slug": "lady-of-elche",
+    "quote": "of Elche is a limestone bust of a woman wearing elaborate jewellery and large"
+   },
+   {
+    "label": "Hirschlanden Warrior",
+    "slug": "warrior-of-hirschlanden",
+    "quote": "of Hirschlanden is a sandstone statue of a warrior, the oldest known Iron Age"
+   }
+  ]
+ },
+ {
+  "name": "Jesuits",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Francis Xavier",
+    "slug": "francis-xavier",
+    "quote": "a Navarrese priest and co-founder of the Society of Jesus who became the leading Catholic"
+   },
+   {
+    "label": "Nóbrega",
+    "slug": "manuel-da-nobrega",
+    "quote": "da Nóbrega was a Portuguese Jesuit who led the first Jesuit mission to Brazil, arriving with the"
+   },
+   {
+    "label": "Marquette",
+    "slug": "jacques-marquette",
+    "quote": "Jacques Marquette was a French Jesuit missionary in New France"
+   },
+   {
+    "label": "Pope Francis",
+    "slug": "pope-francis",
+    "quote": "Bergoglio in Buenos Aires, was a Jesuit who served as Archbishop of Buenos Aires from 1998"
+   },
+   {
+    "label": "De Nobili",
+    "slug": "roberto-de-nobili",
+    "quote": "de Nobili was an Italian Jesuit missionary who worked at Madurai from"
+   },
+   {
+    "label": "Anchieta",
+    "slug": "jose-de-anchieta",
+    "quote": "de Anchieta was a Spanish-born Jesuit missionary from Tenerife who worked in"
+   }
+  ],
+  "note": "Pope Francis is a decoy for \"Popes\""
+ },
+ {
+  "name": "Mystics",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Teresa of Ávila",
+    "slug": "teresa-of-avila",
+    "quote": "Ávila was a Spanish Carmelite nun and mystic who reformed her order, founding"
+   },
+   {
+    "label": "John of the Cross",
+    "slug": "john-of-the-cross",
+    "quote": "a Spanish Carmelite friar, priest and mystic who worked with Teresa of"
+   },
+   {
+    "label": "Ramon Llull",
+    "slug": "ramon-llull",
+    "quote": "Ramon Llull was a philosopher, mystic and missionary from Majorca, born soon after"
+   },
+   {
+    "label": "Ravidas",
+    "slug": "ravidas",
+    "quote": "Ravidas was an Indian mystic poet-saint of the Bhakti movement who"
+   },
+   {
+    "label": "Hadewijch",
+    "slug": "hadewijch",
+    "quote": "Hadewijch was a Brabantine mystic and poet of the thirteenth century, probably"
+   },
+   {
+    "label": "Jakob Böhme",
+    "slug": "jakob-bohme",
+    "quote": "Jakob Böhme was a German Lutheran mystic and philosopher, a shoemaker in"
+   }
+  ],
+  "note": "Kabir and Mirabai left for the Bhakti group"
+ },
+ {
+  "name": "Roman roads",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Appian Way",
+    "slug": "appian-way",
+    "quote": "Appian Way (Via Appia) was a Roman road begun in 312 BCE by the censor Appius Claudius"
+   },
+   {
+    "label": "Via Egnatia",
+    "slug": "via-egnatia",
+    "quote": "The Via Egnatia was a Roman road built in the later 2nd century"
+   },
+   {
+    "label": "Via Aemilia",
+    "slug": "via-aemilia",
+    "quote": "The Via Aemilia was a Roman road built in 187 BCE by the consul Marcus Aemilius"
+   },
+   {
+    "label": "Via Cassia",
+    "slug": "via-cassia",
+    "quote": "The Via Cassia was a Roman road running north from Rome through Etruria, past"
+   },
+   {
+    "label": "Fosse Way",
+    "slug": "fosse-way",
+    "quote": "The Fosse Way was a Roman road in Britain running about 370 kilometres from"
+   },
+   {
+    "label": "Ermine Street",
+    "slug": "ermine-street",
+    "quote": "Ermine Street was a major Roman road in Britain running north from London through"
+   }
+  ]
+ },
+ {
+  "name": "Built by the Khmer",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Angkor Wat",
+    "slug": "angkor-wat",
+    "quote": "the world and the best-known symbol of the Khmer Empire."
+   },
+   {
+    "label": "Angkor Thom",
+    "slug": "angkor-thom",
+    "quote": "a walled royal city built by the Khmer king Jayavarman VII in the late twelfth century"
+   },
+   {
+    "label": "Bayon",
+    "slug": "bayon",
+    "quote": "Cambodia, built as the state temple of Jayavarman VII in the late twelfth and"
+   },
+   {
+    "label": "West Baray",
+    "slug": "west-baray",
+    "quote": "West Baray is a huge rectangular reservoir at Angkor in Cambodia, about 8 kilometres"
+   },
+   {
+    "label": "Wat Phu",
+    "slug": "wat-phu",
+    "quote": "Wat Phu is a ruined Khmer temple complex in Champasak province in southern"
+   },
+   {
+    "label": "Ta Prohm",
+    "slug": "ta-prohm",
+    "quote": "the economic weight of Khmer religious foundations"
+   }
+  ]
+ },
+ {
+  "name": "Romance languages",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Portuguese",
+    "slug": "portuguese-language",
+    "quote": "Portuguese is a Romance language that originated in the western"
+   },
+   {
+    "label": "French",
+    "slug": "french-language",
+    "quote": "French is a Romance language that developed from Latin in"
+   },
+   {
+    "label": "Spanish",
+    "slug": "spanish-language",
+    "quote": "The Spanish language is a Romance language that originated in Castile"
+   },
+   {
+    "label": "Romansh",
+    "slug": "romansh",
+    "quote": "Romansh is a Romance language spoken in the canton of"
+   },
+   {
+    "label": "Galician-Portuguese",
+    "slug": "galician-portuguese",
+    "quote": "Galician-Portuguese was the Romance language of medieval Galicia and northern Portugal, from which"
+   },
+   {
+    "label": "Old French",
+    "slug": "old-french",
+    "quote": "It developed from the spoken Latin of the western Frankish lands"
+   }
+  ]
+ },
+ {
+  "name": "Astronomers of Asia and the Islamic world",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ulugh Beg",
+    "slug": "ulugh-beg",
+    "quote": "Ulugh Beg was a Timurid ruler and astronomer, a grandson of Timur, who"
+   },
+   {
+    "label": "Aryabhata",
+    "slug": "aryabhata",
+    "quote": "Aryabhata was an Indian mathematician and astronomer of the late 5th century"
+   },
+   {
+    "label": "Zu Chongzhi",
+    "slug": "zu-chongzhi",
+    "quote": "Zu Chongzhi was a Chinese mathematician and astronomer of the Liu Song and"
+   },
+   {
+    "label": "Al-Khwarizmi",
+    "slug": "al-khwarizmi",
+    "quote": "Al-Khwarizmi was a Persian mathematician, astronomer and geographer who worked in Baghdad during"
+   },
+   {
+    "label": "Guo Shoujing",
+    "slug": "guo-shoujing",
+    "quote": "Guo Shoujing was a Chinese astronomer, mathematician and hydraulic engineer of the"
+   },
+   {
+    "label": "Abbas ibn Firnas",
+    "slug": "abbas-ibn-firnas",
+    "quote": "A poet, astronomer and inventor, he is credited with a"
+   }
+  ]
+ },
+ {
+  "name": "Medieval manuscripts",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lindisfarne Gospels",
+    "slug": "lindisfarne-gospels",
+    "quote": "Lindisfarne Gospels is an illuminated manuscript of the four Gospels made at the monastery of"
+   },
+   {
+    "label": "Codex Manesse",
+    "slug": "codex-manesse",
+    "quote": "Codex Manesse is an illuminated songbook compiled in Zürich between about"
+   },
+   {
+    "label": "Melisende Psalter",
+    "slug": "melisende-psalter",
+    "quote": "Melisende Psalter is an illuminated psalter made in the scriptorium of"
+   },
+   {
+    "label": "Hrvoje's Missal",
+    "slug": "hrvojes-missal",
+    "quote": "Hrvoje's Missal is a Croatian liturgical book written in the Glagolitic script around 1403–1404 in Split for"
+   },
+   {
+    "label": "Cantigas de Santa Maria",
+    "slug": "cantigas-de-santa-maria",
+    "quote": "the Virgin, and the illuminated manuscripts, with musical notation and hundreds"
+   },
+   {
+    "label": "Codex Argenteus",
+    "slug": "codex-argenteus",
+    "quote": "Silver Bible, is a 6th-century manuscript of the Gospels in the Gothic translation made"
+   }
+  ],
+  "note": "Book of Kells kept for the \"Book of ___\" group"
+ },
+ {
+  "name": "Naturalists",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Darwin",
+    "slug": "charles-darwin",
+    "quote": "Charles Darwin was an English naturalist whose theory of evolution by"
+   },
+   {
+    "label": "Linnaeus",
+    "slug": "carl-linnaeus",
+    "quote": "Carl Linnaeus was a Swedish botanist, physician and zoologist, professor at Uppsala University, who"
+   },
+   {
+    "label": "Humboldt",
+    "slug": "alexander-von-humboldt",
+    "quote": "von Humboldt was a Prussian naturalist, geographer and explorer"
+   },
+   {
+    "label": "Georg Forster",
+    "slug": "georg-forster",
+    "quote": "Georg Forster was a German naturalist and writer who sailed with James Cook"
+   },
+   {
+    "label": "Edward Lhuyd",
+    "slug": "edward-lhuyd",
+    "quote": "Edward Lhuyd was a Welsh naturalist, antiquary and linguist, keeper of the Ashmolean Museum"
+   },
+   {
+    "label": "Georg Marcgraf",
+    "slug": "georg-marcgraf",
+    "quote": "Georg Marcgraf was a German naturalist, astronomer and cartographer who joined Johan"
+   }
+  ],
+  "note": "Darwin also died in 1882 (no such group here)"
+ },
+ {
+  "name": "Carved out of the rock",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lalibela churches",
+    "slug": "rock-hewn-churches-of-lalibela",
+    "quote": "group of medieval churches carved directly out of rock in the town of Lalibela"
+   },
+   {
+    "label": "Ellora",
+    "slug": "ellora-caves",
+    "quote": "a group of 34 rock-cut Buddhist, Hindu and Jain temples and monasteries near Aurangabad in"
+   },
+   {
+    "label": "Kizil",
+    "slug": "kizil-caves",
+    "quote": "Kucha in Xinjiang, China, carved into cliffs above the Muzat River between about the 3rd and"
+   },
+   {
+    "label": "Vardzia",
+    "slug": "vardzia",
+    "quote": "Vardzia is a cave monastery cut into the cliffs of Erusheti mountain above the"
+   },
+   {
+    "label": "Abu Simbel",
+    "slug": "abu-simbel",
+    "quote": "Nubia, southern Egypt, with two rock-cut temples built by Ramesses II in the 13th century BCE"
+   },
+   {
+    "label": "Petra",
+    "slug": "petra",
+    "quote": "incense and spices and carved tombs and temples into its"
+   }
+  ]
+ },
+ {
+  "name": "Stoics",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Marcus Aurelius",
+    "slug": "marcus-aurelius",
+    "quote": "the Meditations, is a classic of Stoic thought."
+   },
+   {
+    "label": "Posidonius",
+    "slug": "posidonius",
+    "quote": "Posidonius was a Greek Stoic philosopher, historian and scientist from Apamea"
+   },
+   {
+    "label": "Zeno of Citium",
+    "slug": "zeno-of-citium",
+    "quote": "from Kition in Cyprus who founded Stoicism"
+   },
+   {
+    "label": "Cato the Younger",
+    "slug": "cato-the-younger",
+    "quote": "Porcius Cato) was a Roman senator and Stoic, great-grandson of Cato the Elder"
+   },
+   {
+    "label": "Persaeus",
+    "slug": "persaeus",
+    "quote": "Persaeus of Citium was a Stoic philosopher, a pupil and housemate of"
+   },
+   {
+    "label": "Persius",
+    "slug": "persius",
+    "quote": "A pupil of the Stoic philosopher Cornutus in Rome, he died at"
+   }
+  ]
+ },
+ {
+  "name": "Neo-Confucian thinkers",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Zhu Xi",
+    "slug": "zhu-xi",
+    "quote": "Song Dynasty and the leading figure of Neo-Confucianism"
+   },
+   {
+    "label": "Wang Yangming",
+    "slug": "wang-yangming",
+    "quote": "the Ming dynasty, the most influential Neo-Confucian thinker after Zhu Xi"
+   },
+   {
+    "label": "Yi Hwang",
+    "slug": "yi-hwang",
+    "quote": "one of the two greatest Neo-Confucian philosophers of Joseon Korea"
+   },
+   {
+    "label": "Yi I",
+    "slug": "yi-i",
+    "quote": "one of the two greatest Neo-Confucian philosophers of Joseon Korea, alongside Yi"
+   },
+   {
+    "label": "Hayashi Razan",
+    "slug": "hayashi-razan",
+    "quote": "Hayashi Razan was a Japanese Neo-Confucian scholar who served the first four"
+   },
+   {
+    "label": "Jeong Do-jeon",
+    "slug": "jeong-do-jeon",
+    "quote": "Jeong Do-jeon was a Korean Neo-Confucian scholar and statesman who was the"
+   }
+  ],
+  "note": "China, Korea and Japan"
+ },
+ {
+  "name": "Devotional saints of India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kabir",
+    "slug": "kabir",
+    "quote": "Indian mystic poet and saint of Varanasi"
+   },
+   {
+    "label": "Mirabai",
+    "slug": "mirabai",
+    "quote": "Rajput princess and Hindu mystic poet of the bhakti movement, devoted to the god Krishna"
+   },
+   {
+    "label": "Tulsidas",
+    "slug": "tulsidas",
+    "quote": "Hindu poet-saint of 16th-century northern India, devoted to the god Rama"
+   },
+   {
+    "label": "Chaitanya",
+    "slug": "chaitanya-mahaprabhu",
+    "quote": "a devotional movement centred on Krishna and Radha"
+   },
+   {
+    "label": "Tukaram",
+    "slug": "tukaram",
+    "quote": "Marathi poet-saint of the Varkari tradition"
+   },
+   {
+    "label": "Namdev",
+    "slug": "namdev",
+    "quote": "taught that all could be saved by devotion"
+   }
+  ],
+  "note": "Ravidas is in Mystics"
+ },
+ {
+  "name": "Founded religious orders",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Saint Dominic",
+    "slug": "saint-dominic",
+    "quote": "in Castile, was the founder of the Order of Preachers, the Dominicans"
+   },
+   {
+    "label": "Ignatius of Loyola",
+    "slug": "ignatius-of-loyola",
+    "quote": "nobleman and soldier who founded the Society of Jesus"
+   },
+   {
+    "label": "Safi al-Din",
+    "slug": "safi-al-din-ardabili",
+    "quote": "north-western Iran and the founder of the Safaviyya order"
+   },
+   {
+    "label": "Shah Nimatullah",
+    "slug": "shah-nimatullah-wali",
+    "quote": "He founded the Nimatullahi order, one of the major Sufi"
+   },
+   {
+    "label": "Guru Gobind Singh",
+    "slug": "guru-gobind-singh",
+    "quote": "Guru, who in 1699 founded the Khalsa, the order of initiated Sikhs"
+   },
+   {
+    "label": "Robert of Molesme",
+    "slug": "robert-of-molesme",
+    "quote": "in 1222 and is honoured as one of the order's founders."
+   }
+  ],
+  "note": "Across faiths"
+ },
+ {
+  "name": "Towns known for silk weaving",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kanchipuram",
+    "slug": "kanchipuram",
+    "quote": "Perumal, and it is known for its silk weaving."
+   },
+   {
+    "label": "Lyon",
+    "slug": "lyon",
+    "quote": "France in 1312 and grew rich on banking, printing and silk weaving; the revolts of its silk"
+   },
+   {
+    "label": "Yazd",
+    "slug": "yazd",
+    "quote": "the Muzaffarid dynasty, and Marco Polo described its silk weaving"
+   },
+   {
+    "label": "Amarapura",
+    "slug": "amarapura",
+    "quote": "kilometres across Taungthaman Lake, and for silk weaving."
+   },
+   {
+    "label": "Patan",
+    "slug": "patan-gujarat",
+    "quote": "city is known for patola silk weaving."
+   },
+   {
+    "label": "Yonezawa",
+    "slug": "yonezawa",
+    "quote": "The city is known for its silk weaving and for Yonezawa beef."
+   }
+  ]
+ },
+ {
+  "name": "Keys to lost scripts",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rosetta Stone",
+    "slug": "rosetta-stone",
+    "quote": "Its parallel texts enabled Jean-François Champollion to decipher hieroglyphs in 1822."
+   },
+   {
+    "label": "Behistun",
+    "slug": "behistun-inscription",
+    "quote": "the trilingual text was key to deciphering cuneiform."
+   },
+   {
+    "label": "Karatepe",
+    "slug": "karatepe",
+    "quote": "and Luwian hieroglyphs that proved key to deciphering hieroglyphic Luwian"
+   },
+   {
+    "label": "Dougga",
+    "slug": "dougga",
+    "quote": "inscription from the town helped scholars decipher the Libyco-Berber script"
+   },
+   {
+    "label": "Michael Ventris",
+    "slug": "michael-ventris",
+    "quote": "architect and amateur linguist who deciphered Linear B, the script of the Mycenaean"
+   },
+   {
+    "label": "Proskouriakoff",
+    "slug": "tatiana-proskouriakoff",
+    "quote": "Her work opened the way to the decipherment of Maya hieroglyphs."
+   }
+  ],
+  "note": "Objects and people that cracked a script"
+ },
+ {
+  "name": "Not yet deciphered",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Linear A",
+    "slug": "linear-a",
+    "quote": "Linear A is the undeciphered script used by the Minoans of Crete for administration and"
+   },
+   {
+    "label": "Indus script",
+    "slug": "indus-script",
+    "quote": "text has been found, it remains undeciphered, and scholars disagree whether it"
+   },
+   {
+    "label": "Quipu",
+    "slug": "quipu",
+    "quote": "quipus recorded non-numeric information remains undeciphered and disputed; just under 1,400 pre-Columbian examples"
+   },
+   {
+    "label": "Cypro-Minoan",
+    "slug": "cypro-minoan-syllabary",
+    "quote": "Cypro-Minoan syllabary is an undeciphered script used on Cyprus in the Late Bronze Age"
+   },
+   {
+    "label": "Linear Elamite",
+    "slug": "linear-elamite",
+    "quote": "It has long been considered largely undeciphered, though recent scholarship has proposed"
+   },
+   {
+    "label": "Eteocretan",
+    "slug": "eteocretans",
+    "quote": "Greek alphabet in a still-undeciphered language, Eteocretan, down to the 3rd century"
+   }
+  ],
+  "note": "Scripts and one language; Linear Elamite has recent claims of decipherment, editor's call"
+ },
+ {
+  "name": "Each called \"the Apostle of\" a people or land",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ansgar",
+    "slug": "ansgar",
+    "quote": "Frankish monk and missionary, known as the Apostle of the North"
+   },
+   {
+    "label": "Otto of Bamberg",
+    "slug": "otto-of-bamberg",
+    "quote": "in 1189 and is honoured as the Apostle of Pomerania."
+   },
+   {
+    "label": "Hans Egede",
+    "slug": "hans-egede",
+    "quote": "Greenland, and he is known as the Apostle of Greenland."
+   },
+   {
+    "label": "Birinus",
+    "slug": "birinus",
+    "quote": "venerated as a saint, the apostle of Wessex."
+   },
+   {
+    "label": "Willibrord",
+    "slug": "willibrord",
+    "quote": "Anglo-Saxon missionary from Northumbria, known as the Apostle of the Frisians"
+   },
+   {
+    "label": "John Eliot",
+    "slug": "john-eliot-missionary",
+    "quote": "Colony, known as the \"Apostle to the Indians\""
+   }
+  ]
+ },
+ {
+  "name": "Landmarks of Isfahan",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Naqsh-e Jahan Square",
+    "slug": "naqsh-e-jahan-square",
+    "quote": "Jahan Square is a large public square in Isfahan, Iran, laid out under Shah"
+   },
+   {
+    "label": "Ali Qapu",
+    "slug": "ali-qapu",
+    "quote": "Ali Qapu is a palace on the western side of Naqsh-e Jahan Square in Isfahan, built under the"
+   },
+   {
+    "label": "Sheikh Lotfollah",
+    "slug": "sheikh-lotfollah-mosque",
+    "quote": "a mosque on the eastern side of the Naqsh-e Jahan Square in Isfahan, built under Shah Abbas I"
+   },
+   {
+    "label": "Jameh Mosque",
+    "slug": "jameh-mosque-of-isfahan",
+    "quote": "of Isfahan is the great congregational mosque of Isfahan in central Iran, rebuilt and"
+   },
+   {
+    "label": "Shah Mosque",
+    "slug": "shah-mosque",
+    "quote": "congregational mosque on the Naqsh-e Jahan Square in Isfahan, built under Shah Abbas I"
+   }
+  ]
+ },
+ {
+  "name": "Built by the Almohads",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Koutoubia",
+    "slug": "koutoubia-mosque",
+    "quote": "principal mosque of Marrakesh, built under the Almohad Caliphate in the twelfth century"
+   },
+   {
+    "label": "Hassan Tower",
+    "slug": "hassan-tower",
+    "quote": "mosque in Rabat, Morocco, begun under the Almohad caliph Yaqub al-Mansur in the late twelfth century"
+   },
+   {
+    "label": "Giralda",
+    "slug": "giralda",
+    "quote": "the minaret of the Great Mosque of Seville under the Almohad Caliphate in the late twelfth century"
+   },
+   {
+    "label": "Great Mosque of Seville",
+    "slug": "great-mosque-of-seville",
+    "quote": "Great Mosque of Seville was built by the Almohad Caliphate in the late twelfth century"
+   },
+   {
+    "label": "Kasbah of the Udayas",
+    "slug": "kasbah-of-the-udayas",
+    "quote": "It was built up by the Almohads in the twelfth century as part of their development"
+   },
+   {
+    "label": "Tinmel",
+    "slug": "tinmel",
+    "quote": "Its twelfth-century mosque, built under the Almohads, survives as an important monument."
+   }
+  ]
+ },
+ {
+  "name": "Waterworks of the ancient and medieval world",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Marib Dam",
+    "slug": "marib-dam",
+    "quote": "Marib Dam was an ancient dam across the Wadi Adhanah near Marib in Yemen, built"
+   },
+   {
+    "label": "Band-e Kaisar",
+    "slug": "band-e-kaisar",
+    "quote": "Band-e Kaisar was a combined bridge and dam on the Karun River at Shushtar in south-western Iran"
+   },
+   {
+    "label": "Band-e Amir",
+    "slug": "band-e-amir-dam",
+    "quote": "Band-e Amir is a dam on the Kur River in Fars, Iran, north-east of"
+   },
+   {
+    "label": "Tunnel of Eupalinos",
+    "slug": "tunnel-of-eupalinos",
+    "quote": "of Eupalinos is an aqueduct tunnel 1,036 metres long cut through Mount Kastro on"
+   },
+   {
+    "label": "Foggara",
+    "slug": "foggara",
+    "quote": "A foggara is an underground irrigation tunnel that taps groundwater and carries"
+   },
+   {
+    "label": "Stepwell",
+    "slug": "stepwell",
+    "quote": "stepwell, or vav, is a well, cistern or pond reached by a long corridor of steps down to the water, developed"
+   }
+  ]
+ },
+ {
+  "name": "Calendars and eras",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Julian",
+    "slug": "julian-calendar",
+    "quote": "Julian calendar is a solar calendar introduced by Julius Caesar in 46 BCE, with a"
+   },
+   {
+    "label": "Hijri",
+    "slug": "islamic-calendar",
+    "quote": "Islamic calendar is a lunar calendar of twelve months, dating its years from the"
+   },
+   {
+    "label": "Long Count",
+    "slug": "mesoamerican-long-count-calendar",
+    "quote": "counts the days elapsed since a fixed starting date"
+   },
+   {
+    "label": "Saka era",
+    "slug": "saka-era",
+    "quote": "Saka era is a calendar era beginning in 78 CE, used widely in India and"
+   },
+   {
+    "label": "Vikram Samvat",
+    "slug": "vikram-samvat",
+    "quote": "in India and the official calendar of Nepal"
+   },
+   {
+    "label": "Jalali",
+    "slug": "jalali-calendar",
+    "quote": "Jalali calendar is a solar calendar introduced in the late eleventh century under the Seljuk sultan Malik"
+   }
+  ]
+ },
+ {
+  "name": "Iranian languages",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pashto",
+    "slug": "pashto",
+    "quote": "Pashto is an Eastern Iranian language spoken by the Pashtuns of Afghanistan and north-western Pakistan"
+   },
+   {
+    "label": "Middle Persian",
+    "slug": "middle-persian",
+    "quote": "called Pahlavi, was the Iranian language of the Sasanian Empire, descended from Old Persian and"
+   },
+   {
+    "label": "Old Persian",
+    "slug": "old-persian",
+    "quote": "Old Persian is the ancient Iranian language of the Achaemenid kings, written in a cuneiform script"
+   },
+   {
+    "label": "Balochi",
+    "slug": "balochi-language",
+    "quote": "Balochi is an Iranian language spoken by the Baloch people in Pakistan's Balochistan province"
+   },
+   {
+    "label": "Alanic",
+    "slug": "alanic-language",
+    "quote": "Alanic was the Eastern Iranian language of the Alans, a nomadic people of the"
+   },
+   {
+    "label": "Gorani",
+    "slug": "gorani-language",
+    "quote": "Gorani is a Northwestern Iranian language spoken in parts of the"
+   }
+  ]
+ },
+ {
+  "name": "Creole languages",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Haitian",
+    "slug": "haitian-creole",
+    "quote": "Haitian Creole is a French-based creole language spoken by almost the whole"
+   },
+   {
+    "label": "Sranan Tongo",
+    "slug": "sranan-tongo",
+    "quote": "Sranan Tongo is an English-based creole language that arose among enslaved Africans"
+   },
+   {
+    "label": "Papiamento",
+    "slug": "papiamento",
+    "quote": "Papiamento is a creole language spoken on Aruba, Bonaire and Curaçao in the"
+   },
+   {
+    "label": "Tok Pisin",
+    "slug": "tok-pisin",
+    "quote": "Tok Pisin is an English-based creole language spoken across Papua New Guinea"
+   },
+   {
+    "label": "Kriolu",
+    "slug": "cape-verdean-creole",
+    "quote": "as Kriolu, is a Portuguese-based creole language spoken in Cape Verde and"
+   },
+   {
+    "label": "Antillean (Kwéyòl)",
+    "slug": "antillean-creole",
+    "quote": "Antillean Creole is a French-based creole language spoken in the Lesser Antilles"
+   }
+  ]
+ },
+ {
+  "name": "Long poems in Persian",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shahnameh",
+    "slug": "shahnameh",
+    "quote": "of Kings, is the national epic of Iran, completed by the poet Ferdowsi in about 1010 after some"
+   },
+   {
+    "label": "Masnavi",
+    "slug": "masnavi",
+    "quote": "Masnavi-ye Ma'navi, is a long Persian poem by Jalal al-Din Rumi, composed in Konya in the"
+   },
+   {
+    "label": "Layla and Majnun",
+    "slug": "layla-and-majnun",
+    "quote": "and Majnun is a Persian narrative poem by Nizami Ganjavi, completed in 1188 at the"
+   },
+   {
+    "label": "Hadiqat al-Haqiqa",
+    "slug": "hadiqat-al-haqiqa",
+    "quote": "of Truth, is a long didactic poem by the Persian poet Sana'i of Ghazni, completed around 1131"
+   },
+   {
+    "label": "Makhzan al-Asrar",
+    "slug": "makhzan-al-asrar",
+    "quote": "of Mysteries, is the first of the five long poems of the Persian poet Nizami Ganjavi, written in the"
+   },
+   {
+    "label": "Salaman and Absal",
+    "slug": "salaman-and-absal",
+    "quote": "and Absal is an allegorical poem in Persian by Jami, one of the seven narrative"
+   }
+  ]
+ },
+ {
+  "name": "Sites of famous observatories",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Maragha",
+    "slug": "maragha",
+    "quote": "Hulagu founded a famous astronomical observatory there, directed by the scholar Nasir"
+   },
+   {
+    "label": "Jaipur",
+    "slug": "jaipur",
+    "quote": "his kingdom, and he built the Jantar Mantar observatory there"
+   },
+   {
+    "label": "Gyeongju",
+    "slug": "gyeongju",
+    "quote": "Seokguram grotto and the Cheomseongdae observatory, and its historic areas are"
+   },
+   {
+    "label": "Ven",
+    "slug": "ven-island",
+    "quote": "the astronomer Tycho Brahe, who built the observatories of Uraniborg and Stjerneborg there"
+   },
+   {
+    "label": "Arcetri",
+    "slug": "arcetri",
+    "quote": "The Arcetri Astrophysical Observatory, founded in the nineteenth century"
+   },
+   {
+    "label": "Mahodayapuram",
+    "slug": "mahodayapuram",
+    "quote": "royal court, temples and an astronomical observatory associated with the astronomer Shankaranarayana"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1452",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Leonardo",
+    "slug": "leonardo-da-vinci",
+    "quote": "1452–1519"
+   },
+   {
+    "label": "Savonarola",
+    "slug": "girolamo-savonarola",
+    "quote": "1452–1498"
+   },
+   {
+    "label": "Ferdinand of Aragon",
+    "slug": "ferdinand-ii-of-aragon",
+    "quote": "1452–1516"
+   },
+   {
+    "label": "Ludovico Sforza",
+    "slug": "ludovico-sforza",
+    "quote": "1452–1508"
+   },
+   {
+    "label": "Richard III",
+    "slug": "richard-iii-of-england",
+    "quote": "1452–1485"
+   },
+   {
+    "label": "James III (Scots)",
+    "slug": "james-iii-of-scotland",
+    "quote": "1452–1488"
+   }
+  ],
+  "note": "Leonardo also died in 1519 (kept out of that group)"
+ },
+ {
+  "name": "Born in 1483",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Martin Luther",
+    "slug": "martin-luther",
+    "quote": "1483–1546"
+   },
+   {
+    "label": "Babur",
+    "slug": "babur",
+    "quote": "1483–1530"
+   },
+   {
+    "label": "Raphael",
+    "slug": "raphael",
+    "quote": "1483–1520"
+   },
+   {
+    "label": "Guicciardini",
+    "slug": "francesco-guicciardini",
+    "quote": "1483–1540"
+   },
+   {
+    "label": "Mạc Đăng Dung",
+    "slug": "mac-dang-dung",
+    "quote": "1483–1541"
+   },
+   {
+    "label": "Nicholas of Amsdorf",
+    "slug": "nicholas-of-amsdorf",
+    "quote": "1483–1565"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1564",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Galileo",
+    "slug": "galileo-galilei",
+    "quote": "1564–1642"
+   },
+   {
+    "label": "Shakespeare",
+    "slug": "william-shakespeare",
+    "quote": "1564–1616"
+   },
+   {
+    "label": "Marlowe",
+    "slug": "christopher-marlowe",
+    "quote": "1564–1593"
+   },
+   {
+    "label": "Shō Nei",
+    "slug": "sho-nei",
+    "quote": "1564–1620"
+   },
+   {
+    "label": "Henry Julius",
+    "slug": "henry-julius-duke-of-brunswick-luneburg",
+    "quote": "1564–1613"
+   },
+   {
+    "label": "Karel of Žerotín",
+    "slug": "karel-the-elder-of-zerotin",
+    "quote": "1564–1636"
+   }
+  ],
+  "note": "Do not set beside \"Died in 1564\" in one puzzle"
+ },
+ {
+  "name": "Born in 1632",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "John Locke",
+    "slug": "john-locke",
+    "quote": "1632–1704"
+   },
+   {
+    "label": "Spinoza",
+    "slug": "baruch-spinoza",
+    "quote": "1632–1677"
+   },
+   {
+    "label": "Leeuwenhoek",
+    "slug": "antonie-van-leeuwenhoek",
+    "quote": "1632–1723"
+   },
+   {
+    "label": "Vermeer",
+    "slug": "johannes-vermeer",
+    "quote": "1632–1675"
+   },
+   {
+    "label": "Phetracha",
+    "slug": "phetracha",
+    "quote": "1632–1703"
+   },
+   {
+    "label": "Adolf William (Saxe-Eisenach)",
+    "slug": "adolf-william-duke-of-saxe-eisenach",
+    "quote": "1632–1668"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1685",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Bach",
+    "slug": "johann-sebastian-bach",
+    "quote": "1685–1750"
+   },
+   {
+    "label": "Handel",
+    "slug": "george-frideric-handel",
+    "quote": "1685–1759"
+   },
+   {
+    "label": "George Berkeley",
+    "slug": "george-berkeley",
+    "quote": "1685–1753"
+   },
+   {
+    "label": "Charles VI (Emperor)",
+    "slug": "charles-vi-holy-roman-emperor",
+    "quote": "1685–1740"
+   },
+   {
+    "label": "Farrukhsiyar",
+    "slug": "farrukhsiyar",
+    "quote": "1685–1719"
+   },
+   {
+    "label": "La Vérendrye",
+    "slug": "pierre-gaultier-de-varennes-sieur-de-la-verendrye",
+    "quote": "1685–1749"
+   }
+  ],
+  "note": "Bach and Handel are both composers: a second link, keep at most two of them in or note"
+ },
+ {
+  "name": "Born in 1818",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Karl Marx",
+    "slug": "karl-marx",
+    "quote": "1818–1883"
+   },
+   {
+    "label": "Alexander II",
+    "slug": "alexander-ii-of-russia",
+    "quote": "1818–1881"
+   },
+   {
+    "label": "Semmelweis",
+    "slug": "ignaz-semmelweis",
+    "quote": "1818–1865"
+   },
+   {
+    "label": "Faidherbe",
+    "slug": "louis-faidherbe",
+    "quote": "1818–1889"
+   },
+   {
+    "label": "Wenxiang",
+    "slug": "wenxiang",
+    "quote": "1818–1876"
+   },
+   {
+    "label": "Frederick Douglass",
+    "slug": "frederick-douglass",
+    "quote": "c. 1818–1895"
+   }
+  ],
+  "note": "Douglass's birth year is \"c. 1818\""
+ },
+ {
+  "name": "Born in 1828",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Tolstoy",
+    "slug": "leo-tolstoy",
+    "quote": "1828–1910"
+   },
+   {
+    "label": "Ibsen",
+    "slug": "henrik-ibsen",
+    "quote": "1828–1906"
+   },
+   {
+    "label": "Saigo Takamori",
+    "slug": "saigo-takamori",
+    "quote": "1828–1877"
+   },
+   {
+    "label": "Henry Dunant",
+    "slug": "henry-dunant",
+    "quote": "1828–1910"
+   },
+   {
+    "label": "Rainilaiarivony",
+    "slug": "rainilaiarivony",
+    "quote": "1828–1896"
+   },
+   {
+    "label": "Yung Wing",
+    "slug": "yung-wing",
+    "quote": "1828–1912"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1889",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Nehru",
+    "slug": "jawaharlal-nehru",
+    "quote": "1889–1964"
+   },
+   {
+    "label": "Taha Hussein",
+    "slug": "taha-hussein",
+    "quote": "1889–1973"
+   },
+   {
+    "label": "Wittgenstein",
+    "slug": "ludwig-wittgenstein",
+    "quote": "1889–1951"
+   },
+   {
+    "label": "Gabriela Mistral",
+    "slug": "gabriela-mistral",
+    "quote": "1889–1957"
+   },
+   {
+    "label": "Salazar",
+    "slug": "antonio-de-oliveira-salazar",
+    "quote": "1889–1970"
+   },
+   {
+    "label": "Ben Badis",
+    "slug": "abdelhamid-ben-badis",
+    "quote": "1889–1940"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1519",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Maximilian I",
+    "slug": "maximilian-i-holy-roman-emperor",
+    "quote": "1459–1519"
+   },
+   {
+    "label": "Balboa",
+    "slug": "vasco-nunez-de-balboa",
+    "quote": "c. 1475–1519"
+   },
+   {
+    "label": "Lucrezia Borgia",
+    "slug": "lucrezia-borgia",
+    "quote": "1480–1519"
+   },
+   {
+    "label": "Hōjō Sōun",
+    "slug": "hojo-soun",
+    "quote": "1456–1519"
+   },
+   {
+    "label": "Husain Shah of Bengal",
+    "slug": "alauddin-husain-shah",
+    "quote": "d. 1519"
+   },
+   {
+    "label": "Madeleine de La Tour",
+    "slug": "madeleine-de-la-tour-dauvergne",
+    "quote": "1498–1519"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1564",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Michelangelo",
+    "slug": "michelangelo",
+    "quote": "1475–1564"
+   },
+   {
+    "label": "John Calvin",
+    "slug": "john-calvin",
+    "quote": "1509–1564"
+   },
+   {
+    "label": "Vesalius",
+    "slug": "andreas-vesalius",
+    "quote": "1514–1564"
+   },
+   {
+    "label": "Purandara Dasa",
+    "slug": "purandara-dasa",
+    "quote": "c. 1484–1564"
+   },
+   {
+    "label": "Ferdinand I (Emperor)",
+    "slug": "ferdinand-i-holy-roman-emperor",
+    "quote": "1503–1564"
+   },
+   {
+    "label": "Froschauer",
+    "slug": "christoph-froschauer",
+    "quote": "c. 1490–1564"
+   }
+  ],
+  "note": "Do not set beside \"Born in 1564\" in one puzzle"
+ },
+ {
+  "name": "Died in 1727",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Isaac Newton",
+    "slug": "isaac-newton",
+    "quote": "1643–1727"
+   },
+   {
+    "label": "Moulay Ismail",
+    "slug": "moulay-ismail",
+    "quote": "c. 1645–1727"
+   },
+   {
+    "label": "Tsewang Rabtan",
+    "slug": "tsewang-rabtan",
+    "quote": "1643–1727"
+   },
+   {
+    "label": "George I",
+    "slug": "george-i-of-great-britain",
+    "quote": "1660–1727"
+   },
+   {
+    "label": "Murshid Quli Khan",
+    "slug": "murshid-quli-khan",
+    "quote": "c. 1660–1727"
+   },
+   {
+    "label": "A. H. Francke",
+    "slug": "august-hermann-francke",
+    "quote": "1663–1727"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1832",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Goethe",
+    "slug": "johann-wolfgang-von-goethe",
+    "quote": "1749–1832"
+   },
+   {
+    "label": "Champollion",
+    "slug": "jean-francois-champollion",
+    "quote": "1790–1832"
+   },
+   {
+    "label": "Jeremy Bentham",
+    "slug": "jeremy-bentham",
+    "quote": "1748–1832"
+   },
+   {
+    "label": "Kaʻahumanu",
+    "slug": "ka-ahumanu",
+    "quote": "1768–1832"
+   },
+   {
+    "label": "Samuel Sharpe",
+    "slug": "samuel-sharpe",
+    "quote": "1801–1832"
+   },
+   {
+    "label": "José de la Serna",
+    "slug": "jose-de-la-serna",
+    "quote": "1770–1832"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1849",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Chopin",
+    "slug": "frederic-chopin",
+    "quote": "1810–1849"
+   },
+   {
+    "label": "Hokusai",
+    "slug": "katsushika-hokusai",
+    "quote": "1760–1849"
+   },
+   {
+    "label": "Muhammad Ali of Egypt",
+    "slug": "muhammad-ali-of-egypt",
+    "quote": "1769–1849"
+   },
+   {
+    "label": "Prešeren",
+    "slug": "france-preseren",
+    "quote": "1800–1849"
+   },
+   {
+    "label": "Anita Garibaldi",
+    "slug": "anita-garibaldi",
+    "quote": "1821–1849"
+   },
+   {
+    "label": "Bugeaud",
+    "slug": "thomas-robert-bugeaud",
+    "quote": "1784–1849"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1883",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Wagner",
+    "slug": "richard-wagner",
+    "quote": "1813–1883"
+   },
+   {
+    "label": "Sojourner Truth",
+    "slug": "sojourner-truth",
+    "quote": "c. 1797–1883"
+   },
+   {
+    "label": "Tự Đức",
+    "slug": "tu-duc",
+    "quote": "1829–1883"
+   },
+   {
+    "label": "Ranavalona II",
+    "slug": "ranavalona-ii",
+    "quote": "1829–1883"
+   },
+   {
+    "label": "Butrus al-Bustani",
+    "slug": "butrus-al-bustani",
+    "quote": "1819–1883"
+   },
+   {
+    "label": "Salar Jung I",
+    "slug": "salar-jung-i",
+    "quote": "1829–1883"
+   }
+  ],
+  "note": "Marx (born 1818) and Manet (Impressionists) kept out"
+ },
+ {
+  "name": "Died in 1941",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Tagore",
+    "slug": "rabindranath-tagore",
+    "quote": "1861–1941"
+   },
+   {
+    "label": "James Joyce",
+    "slug": "james-joyce",
+    "quote": "1882–1941"
+   },
+   {
+    "label": "Arthur Evans",
+    "slug": "arthur-evans",
+    "quote": "1851–1941"
+   },
+   {
+    "label": "Frederick Banting",
+    "slug": "frederick-banting",
+    "quote": "1891–1941"
+   },
+   {
+    "label": "Metaxas",
+    "slug": "ioannis-metaxas",
+    "quote": "1871–1941"
+   },
+   {
+    "label": "Prajadhipok",
+    "slug": "prajadhipok",
+    "quote": "1893–1941"
+   }
+  ]
+ },
+ {
+  "name": "Book of ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Kells",
+    "slug": "book-of-kells",
+    "quote": "Book of Kells"
+   },
+   {
+    "label": "Common Prayer",
+    "slug": "book-of-common-prayer",
+    "quote": "Book of Common Prayer"
+   },
+   {
+    "label": "Han",
+    "slug": "book-of-han",
+    "quote": "Book of Han"
+   },
+   {
+    "label": "Documents",
+    "slug": "book-of-documents",
+    "quote": "Book of Documents"
+   },
+   {
+    "label": "Optics",
+    "slug": "book-of-optics",
+    "quote": "Book of Optics"
+   },
+   {
+    "label": "Fixed Stars",
+    "slug": "book-of-fixed-stars",
+    "quote": "Book of Fixed Stars"
+   }
+  ],
+  "note": "Shahnameh (\"Book of Kings\") is in Long poems in Persian"
+ },
+ {
+  "name": "Hide a tree",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Palmyra",
+    "slug": "palmyra",
+    "quote": "Palmyra was an ancient oasis city"
+   },
+   {
+    "label": "Aldhelm",
+    "slug": "aldhelm",
+    "quote": "Aldhelm was an Anglo-Saxon scholar, poet"
+   },
+   {
+    "label": "Ashoka",
+    "slug": "ashoka",
+    "quote": "Ashoka was a Maurya emperor who"
+   },
+   {
+    "label": "Baybars",
+    "slug": "baybars",
+    "quote": "Baybars, or Baybars I, was a"
+   },
+   {
+    "label": "Oliver Goldsmith",
+    "slug": "oliver-goldsmith",
+    "quote": "Oliver Goldsmith was an Irish writer"
+   },
+   {
+    "label": "Porfirio Díaz",
+    "slug": "porfirio-diaz",
+    "quote": "Porfirio Díaz was a Mexican general"
+   }
+  ],
+  "note": "palm, elm, ash, bay, olive, fir"
+ },
+ {
+  "name": "Hide a country",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Romanesque",
+    "slug": "romanesque-architecture",
+    "quote": "Romanesque architecture is the style of"
+   },
+   {
+    "label": "Nebuchadnezzar",
+    "slug": "nebuchadnezzar-ii",
+    "quote": "Nebuchadnezzar II was the most famous"
+   },
+   {
+    "label": "Maliki school",
+    "slug": "maliki-school",
+    "quote": "The Maliki school is one of"
+   },
+   {
+    "label": "Tirant lo Blanc",
+    "slug": "tirant-lo-blanc",
+    "quote": "Tirant lo Blanc is a chivalric"
+   },
+   {
+    "label": "Perugino",
+    "slug": "perugino",
+    "quote": "Perugino, born Pietro Vannucci, was an"
+   },
+   {
+    "label": "Pico della Mirandola",
+    "slug": "giovanni-pico-della-mirandola",
+    "quote": "Giovanni Pico della Mirandola (1463–1494) was"
+   }
+  ],
+  "note": "Oman, Chad, Mali, Iran, Peru, Iran"
+ },
+ {
+  "name": "Begin with a Greek letter",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Xi'an",
+    "slug": "xian",
+    "quote": "Xi'an is the capital of Shaanxi"
+   },
+   {
+    "label": "Rhodes",
+    "slug": "rhodes",
+    "quote": "Rhodes is an island in the"
+   },
+   {
+    "label": "Philae",
+    "slug": "philae",
+    "quote": "Philae is an island in the"
+   },
+   {
+    "label": "Chichen Itza",
+    "slug": "chichen-itza",
+    "quote": "Chichen Itza was a large pre-Columbian"
+   },
+   {
+    "label": "Pindar",
+    "slug": "pindar",
+    "quote": "Pindar was a Greek lyric poet"
+   },
+   {
+    "label": "Nubia",
+    "slug": "nubia",
+    "quote": "Nubia is the region along the"
+   }
+  ],
+  "note": "Xi, Rho, Phi, Chi, Pi (Pindar), Nu"
+ },
+ {
+  "name": "Surnames that are trades",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Adam Smith",
+    "slug": "adam-smith",
+    "quote": "Adam Smith was a Scottish philosopher"
+   },
+   {
+    "label": "Margaret Thatcher",
+    "slug": "margaret-thatcher",
+    "quote": "Margaret Thatcher was a British Conservative"
+   },
+   {
+    "label": "James Cook",
+    "slug": "james-cook",
+    "quote": "James Cook was a British naval"
+   },
+   {
+    "label": "Samuel Baker",
+    "slug": "samuel-baker",
+    "quote": "Samuel Baker was an English explorer"
+   },
+   {
+    "label": "Whina Cooper",
+    "slug": "whina-cooper",
+    "quote": "Whina Cooper was a Māori leader"
+   },
+   {
+    "label": "John Hawley Glover",
+    "slug": "john-hawley-glover",
+    "quote": "John Hawley Glover was a Royal"
+   }
+  ],
+  "note": "smith, thatcher, cook, baker, cooper, glover"
+ },
+ {
+  "name": "Hide a weather word",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Galen",
+    "slug": "galen",
+    "quote": "Galen was a Greek physician of"
+   },
+   {
+    "label": "Themistocles",
+    "slug": "themistocles",
+    "quote": "Themistocles was an Athenian statesman and"
+   },
+   {
+    "label": "Gemistos Plethon",
+    "slug": "gemistos-plethon",
+    "quote": "George Gemistos Plethon was a Byzantine"
+   },
+   {
+    "label": "Haile Selassie",
+    "slug": "haile-selassie",
+    "quote": "Haile Selassie was the last Emperor"
+   },
+   {
+    "label": "Bahrain",
+    "slug": "bahrain",
+    "quote": "Bahrain is an island in the"
+   },
+   {
+    "label": "Asunción",
+    "slug": "asuncion",
+    "quote": "Asunción is the capital and largest"
+   }
+  ],
+  "note": "GALEn, theMISTocles, geMISTos, HAILe, bahRAIN, aSUNción"
+ },
+ {
+  "name": "Hide a drink",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Dante Alighieri",
+    "slug": "dante-alighieri",
+    "quote": "Dante Alighieri was a Florentine poet"
+   },
+   {
+    "label": "Rumi",
+    "slug": "rumi",
+    "quote": "Rumi, Jalal al-Din Muhammad, was a"
+   },
+   {
+    "label": "Septuagint",
+    "slug": "septuagint",
+    "quote": "The Septuagint is the earliest Greek"
+   },
+   {
+    "label": "Tchaikovsky",
+    "slug": "pyotr-ilyich-tchaikovsky",
+    "quote": "Pyotr Ilyich Tchaikovsky was a Russian"
+   },
+   {
+    "label": "Nicolaus Copernicus",
+    "slug": "nicolaus-copernicus",
+    "quote": "Nicolaus Copernicus was an astronomer born"
+   },
+   {
+    "label": "L'Anse aux Meadows",
+    "slug": "lanse-aux-meadows",
+    "quote": "L'Anse aux Meadows is an archaeological"
+   }
+  ],
+  "note": "danTE Alighieri (tea, across the space), RUMi, septuaGINt, tCHAIkovsky, niCOLAus Copernicus, l'Anse aux MEADows"
+ },
+ {
+  "name": "Hide a vehicle",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Columbus",
+    "slug": "christopher-columbus",
+    "quote": "Christopher Columbus was a Genoese navigator"
+   },
+   {
+    "label": "Cabral",
+    "slug": "pedro-alvares-cabral",
+    "quote": "Pedro Álvares Cabral was a Portuguese"
+   },
+   {
+    "label": "Wollstonecraft",
+    "slug": "mary-wollstonecraft",
+    "quote": "Mary Wollstonecraft was an English writer"
+   },
+   {
+    "label": "Descartes",
+    "slug": "rene-descartes",
+    "quote": "René Descartes was a French philosopher"
+   },
+   {
+    "label": "Taxila",
+    "slug": "taxila",
+    "quote": "Taxila was an ancient city in"
+   },
+   {
+    "label": "Giovanni Boccaccio",
+    "slug": "giovanni-boccaccio",
+    "quote": "Giovanni Boccaccio (1313–1375) was an Italian"
+   }
+  ],
+  "note": "bus (ColumBUS), cab (CABral), raft (WollstoneCRAFT), cart (DesCARTes), taxi (TAXIla), van (GioVANni Boccaccio: label must keep Giovanni)"
+ },
+ {
+  "name": "Hide a vegetable",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Kalevala",
+    "slug": "kalevala",
+    "quote": "The Kalevala is the Finnish national"
+   },
+   {
+    "label": "Omar Khayyam",
+    "slug": "omar-khayyam",
+    "quote": "Omar Khayyam was a Persian mathematician"
+   },
+   {
+    "label": "Lee Kuan Yew",
+    "slug": "lee-kuan-yew",
+    "quote": "Lee Kuan Yew was the first"
+   },
+   {
+    "label": "Peacock Throne",
+    "slug": "peacock-throne",
+    "quote": "The Peacock Throne was a jewelled"
+   },
+   {
+    "label": "Cornwall",
+    "slug": "cornwall",
+    "quote": "Cornwall is a county in the"
+   },
+   {
+    "label": "Richard I",
+    "slug": "richard-i-of-england",
+    "quote": "Richard I of England, known as"
+   }
+  ],
+  "note": "KALEvala, omar khaYYAM (yam), LEE Kuan (leek, across the space), PEAcock, CORNwall, riCHARD"
+ }
+]

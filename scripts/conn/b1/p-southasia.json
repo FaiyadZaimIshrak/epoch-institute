@@ -1,0 +1,2577 @@
+[
+ {
+  "name": "Capitals of Southeast Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jakarta",
+    "slug": "jakarta",
+    "quote": "became the capital of independent Indonesia"
+   },
+   {
+    "label": "Kuala Lumpur",
+    "slug": "kuala-lumpur",
+    "quote": "is now the capital of Malaysia"
+   },
+   {
+    "label": "Phnom Penh",
+    "slug": "phnom-penh",
+    "quote": "has been the capital of Cambodia since 1865"
+   },
+   {
+    "label": "Manila",
+    "slug": "manila",
+    "quote": "Manila is the capital of the Philippines"
+   },
+   {
+    "label": "Bangkok",
+    "slug": "bangkok",
+    "quote": "Bangkok is the capital and largest city of Thailand"
+   },
+   {
+    "label": "Naypyidaw",
+    "slug": "naypyidaw",
+    "quote": "Naypyidaw is the capital of Myanmar"
+   }
+  ],
+  "note": "Hanoi left out: its entry never says \"capital\"."
+ },
+ {
+  "name": "Countries of Southeast Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Burma",
+    "slug": "burma",
+    "quote": "is a country in mainland Southeast Asia"
+   },
+   {
+    "label": "Cambodia",
+    "slug": "cambodia",
+    "quote": "Cambodia is a country in mainland Southeast Asia"
+   },
+   {
+    "label": "Laos",
+    "slug": "laos",
+    "quote": "Laos is a landlocked country in mainland South-East Asia"
+   },
+   {
+    "label": "Thailand",
+    "slug": "thailand",
+    "quote": "Thailand is a country in mainland Southeast Asia"
+   },
+   {
+    "label": "Vietnam",
+    "slug": "vietnam",
+    "quote": "Vietnam is a country in mainland Southeast Asia"
+   },
+   {
+    "label": "East Timor",
+    "slug": "east-timor",
+    "quote": "is a country occupying the eastern half of the island of Timor in South-East Asia"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Pakistan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lahore",
+    "slug": "lahore",
+    "quote": "Lahore is a major city in the Punjab, in present-day Pakistan"
+   },
+   {
+    "label": "Karachi",
+    "slug": "karachi",
+    "quote": "Karachi is the largest city of Pakistan"
+   },
+   {
+    "label": "Peshawar",
+    "slug": "peshawar",
+    "quote": "Peshawar is a city in north-western Pakistan"
+   },
+   {
+    "label": "Multan",
+    "slug": "multan",
+    "quote": "Multan is an ancient city in the southern Punjab, in present-day Pakistan"
+   },
+   {
+    "label": "Islamabad",
+    "slug": "islamabad",
+    "quote": "Islamabad is the capital of Pakistan"
+   },
+   {
+    "label": "Hyderabad, Sindh",
+    "slug": "hyderabad-sindh",
+    "quote": "Hyderabad is a city on the Indus in Sindh, Pakistan"
+   }
+  ]
+ },
+ {
+  "name": "Indian cities under their old names",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bombay",
+    "slug": "mumbai",
+    "quote": "Mumbai, formerly Bombay"
+   },
+   {
+    "label": "Madras",
+    "slug": "chennai",
+    "quote": "Chennai, formerly Madras"
+   },
+   {
+    "label": "Calcutta",
+    "slug": "kolkata",
+    "quote": "Kolkata (Calcutta)"
+   },
+   {
+    "label": "Bangalore",
+    "slug": "bengaluru",
+    "quote": "Bengaluru, known until 2014 as Bangalore"
+   },
+   {
+    "label": "Poona",
+    "slug": "pune",
+    "quote": "Pune, formerly Poona"
+   },
+   {
+    "label": "Benares",
+    "slug": "varanasi",
+    "quote": "Varanasi, also called Benares or Kashi"
+   }
+  ],
+  "note": "Labels are the old names; Benares is Varanasi."
+ },
+ {
+  "name": "Prime ministers of India",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nehru",
+    "slug": "jawaharlal-nehru",
+    "quote": "He became the first prime"
+   },
+   {
+    "label": "Indira Gandhi",
+    "slug": "indira-gandhi",
+    "quote": "who served as prime minister from 1966 to 1977"
+   },
+   {
+    "label": "Rajiv Gandhi",
+    "slug": "rajiv-gandhi",
+    "quote": "Rajiv Gandhi was prime minister of India from 1984 to 1989"
+   },
+   {
+    "label": "Shastri",
+    "slug": "lal-bahadur-shastri",
+    "quote": "who succeeded Jawaharlal Nehru as prime minister in 1964"
+   },
+   {
+    "label": "Vajpayee",
+    "slug": "atal-bihari-vajpayee",
+    "quote": "prime minister briefly in 1996 and from 1998 to 2004"
+   },
+   {
+    "label": "Manmohan Singh",
+    "slug": "manmohan-singh",
+    "quote": "was prime minister from 2004 to 2014"
+   }
+  ],
+  "note": "Indira and Rajiv Gandhi can be decoys for a \"Gandhi\" theme; Shastri and Manmohan Singh are low-weight."
+ },
+ {
+  "name": "The Vietnam War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ho Chi Minh Trail",
+    "slug": "ho-chi-minh-trail",
+    "quote": "running from North Vietnam through Laos and Cambodia to South Vietnam"
+   },
+   {
+    "label": "Agent Orange",
+    "slug": "agent-orange",
+    "quote": "during the Vietnam War"
+   },
+   {
+    "label": "Viet Cong",
+    "slug": "viet-cong",
+    "quote": "founded in 1960 to overthrow the govern"
+   },
+   {
+    "label": "Lyndon B. Johnson",
+    "slug": "lyndon-b-johnson",
+    "quote": "escalated US involvement in the Vietnam War"
+   },
+   {
+    "label": "Ngo Dinh Diem",
+    "slug": "ngo-dinh-diem",
+    "quote": "became prime minister of the State of Vietnam in 1954"
+   },
+   {
+    "label": "Da Nang",
+    "slug": "da-nang",
+    "quote": "During the Vietnam War it was a major American air and naval base"
+   }
+  ]
+ },
+ {
+  "name": "In the Mahabharata",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Arjuna",
+    "slug": "arjuna",
+    "quote": "Arjuna is a hero of the Indian epic Mahabharata"
+   },
+   {
+    "label": "Yudhishthira",
+    "slug": "yudhishthira",
+    "quote": "Yudhishthira is the eldest of the five Pandava brothers in the Mahabharata"
+   },
+   {
+    "label": "Draupadi",
+    "slug": "draupadi",
+    "quote": "Draupadi is the heroine of the Sanskrit epic Mahabharata"
+   },
+   {
+    "label": "Ashvatthama",
+    "slug": "ashvatthama",
+    "quote": "Ashvatthama is a warrior in the Sanskrit epic Mahabharata"
+   },
+   {
+    "label": "Bhagavad Gita",
+    "slug": "bhagavad-gita",
+    "quote": "forming part of the Mahabharata epic"
+   },
+   {
+    "label": "Kurukshetra",
+    "slug": "kurukshetra",
+    "quote": "it is the battlefield of the Mahabharata war"
+   }
+  ]
+ },
+ {
+  "name": "Branches of Buddhism",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Theravada",
+    "slug": "theravada-buddhism",
+    "quote": "Theravada Buddhism is the branch of Buddhism that relies on the Pali canon"
+   },
+   {
+    "label": "Mahayana",
+    "slug": "mahayana-buddhism",
+    "quote": "Mahayana Buddhism is a major branch of Buddhism"
+   },
+   {
+    "label": "Vajrayana",
+    "slug": "vajrayana",
+    "quote": "is a form of Mahayana Buddhism that developed in India"
+   },
+   {
+    "label": "Zen",
+    "slug": "zen",
+    "quote": "Zen is a school of Mahayana Buddhism"
+   },
+   {
+    "label": "Tibetan",
+    "slug": "tibetan-buddhism",
+    "quote": "Tibetan Buddhism is the form of Buddhism that developed in Tibet"
+   },
+   {
+    "label": "Jōdo Shinshū",
+    "slug": "jodo-shinshu",
+    "quote": "is a school of Japanese Buddhism"
+   }
+  ]
+ },
+ {
+  "name": "Rivers of Southeast Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mekong",
+    "slug": "mekong-river",
+    "quote": "The Mekong is a major river of South-East Asia"
+   },
+   {
+    "label": "Irrawaddy",
+    "slug": "irrawaddy-river",
+    "quote": "is the principal river of Myanmar"
+   },
+   {
+    "label": "Chao Phraya",
+    "slug": "chao-phraya-river",
+    "quote": "The Chao Phraya is the main river of central Thailand"
+   },
+   {
+    "label": "Salween",
+    "slug": "salween",
+    "quote": "The Salween is a major river of South-East Asia"
+   },
+   {
+    "label": "Red River",
+    "slug": "red-river-asia",
+    "quote": "flows south-east through northern Vietnam to the Gulf of Tonkin"
+   },
+   {
+    "label": "Brantas",
+    "slug": "brantas-river",
+    "quote": "The Brantas River is the longest river in East Java"
+   }
+  ]
+ },
+ {
+  "name": "Rock-cut caves of India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ajanta",
+    "slug": "ajanta-caves",
+    "quote": "about thirty Buddhist rock-cut monasteries and prayer halls"
+   },
+   {
+    "label": "Ellora",
+    "slug": "ellora-caves",
+    "quote": "a group of 34 rock-cut Buddhist, Hindu and Jain temples"
+   },
+   {
+    "label": "Elephanta",
+    "slug": "elephanta-caves",
+    "quote": "The Elephanta Caves are rock-cut cave temples"
+   },
+   {
+    "label": "Karla",
+    "slug": "karla-caves",
+    "quote": "The Karla Caves are a complex of rock-cut Buddhist monuments"
+   },
+   {
+    "label": "Udayagiri and Khandagiri",
+    "slug": "udayagiri-and-khandagiri-caves",
+    "quote": "are rock-cut chambers in two neighbouring hills near Bhubaneswar"
+   },
+   {
+    "label": "Badami",
+    "slug": "badami",
+    "quote": "It is known for its 6th-century rock-cut cave temples"
+   }
+  ],
+  "note": "Badami's cave temples: check its entry; Kailasa (Ellora) is a decoy with the temples group."
+ },
+ {
+  "name": "Hindu temples of India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Konark",
+    "slug": "konark-sun-temple",
+    "quote": "is a 13th-century Hindu temple to the sun god Surya"
+   },
+   {
+    "label": "Somnath",
+    "slug": "somnath-temple",
+    "quote": "The Somnath temple is a Hindu temple of Shiva"
+   },
+   {
+    "label": "Meenakshi",
+    "slug": "meenakshi-temple",
+    "quote": "is a Hindu temple complex in the centre of Madurai"
+   },
+   {
+    "label": "Kailasa",
+    "slug": "kailasa-temple-ellora",
+    "quote": "is a Hindu temple to Shiva carved downward from a single mass of basalt rock"
+   },
+   {
+    "label": "Kailasanathar",
+    "slug": "kailasanathar-temple-kanchipuram",
+    "quote": "Dedicated to Shiva"
+   },
+   {
+    "label": "Lakshmana Temple",
+    "slug": "lakshmana-temple-khajuraho",
+    "quote": "The Lakshmana Temple is a Hindu temple at Khajuraho"
+   }
+  ],
+  "note": "Kailasa can also look like a cave (Ellora)."
+ },
+ {
+  "name": "Governors-general and viceroys of India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Curzon",
+    "slug": "george-curzon",
+    "quote": "was Viceroy of India from 1899 to 1905"
+   },
+   {
+    "label": "Mountbatten",
+    "slug": "louis-mountbatten",
+    "quote": "became the last Viceroy of India in 1947"
+   },
+   {
+    "label": "Canning",
+    "slug": "charles-canning-1st-earl-canning",
+    "quote": "was Governor-General of India from 1856 to 1862"
+   },
+   {
+    "label": "Cornwallis",
+    "slug": "charles-cornwallis-1st-marquess-cornwallis",
+    "quote": "Charles Cornwallis, 1st Marquess Cornwallis"
+   },
+   {
+    "label": "Hastings",
+    "slug": "warren-hastings",
+    "quote": "Warren Hastings was the first Governor-General of Bengal"
+   },
+   {
+    "label": "Wellesley",
+    "slug": "richard-wellesley-1st-marquess-wellesley",
+    "quote": "was Governor-General of India from 1798 to 1805"
+   }
+  ],
+  "note": "Hastings (Battle of Hastings) and Cornwallis (Yorktown) are natural decoys."
+ },
+ {
+  "name": "Kings of the Chakri dynasty",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mongkut",
+    "slug": "mongkut",
+    "quote": "Mongkut, King Rama IV of Siam, reigned from 1851 to 1868"
+   },
+   {
+    "label": "Chulalongkorn",
+    "slug": "chulalongkorn",
+    "quote": "Chulalongkorn, King Rama V of Siam, reigned from 1868 to 1910"
+   },
+   {
+    "label": "Vajiravudh",
+    "slug": "vajiravudh",
+    "quote": "Vajiravudh, Rama VI, was king of Siam from 1910 to 1925"
+   },
+   {
+    "label": "Prajadhipok",
+    "slug": "prajadhipok",
+    "quote": "Prajadhipok, King Rama VII of Siam, reigned from 1925 to 1935"
+   },
+   {
+    "label": "Ananda Mahidol",
+    "slug": "ananda-mahidol",
+    "quote": "Ananda Mahidol, Rama VIII, was king of Siam"
+   },
+   {
+    "label": "Bhumibol",
+    "slug": "bhumibol-adulyadej",
+    "quote": "also known as Rama IX, was king of Thailand from 1946"
+   }
+  ],
+  "note": "Labels avoid the \"Rama\" numbers."
+ },
+ {
+  "name": "Leaders of Pakistan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jinnah",
+    "slug": "muhammad-ali-jinnah",
+    "quote": "the founder of Pakistan"
+   },
+   {
+    "label": "Liaquat Ali Khan",
+    "slug": "liaquat-ali-khan",
+    "quote": "became the first prime minister of Pakistan in 1947"
+   },
+   {
+    "label": "Ayub Khan",
+    "slug": "ayub-khan",
+    "quote": "seized power in the coup of October 1958, ruling as president until 1969"
+   },
+   {
+    "label": "Zulfikar Ali Bhutto",
+    "slug": "zulfikar-ali-bhutto",
+    "quote": "he became president and then prime minister"
+   },
+   {
+    "label": "Benazir Bhutto",
+    "slug": "benazir-bhutto",
+    "quote": "She served as prime minister from 1988 to 1990 and from 1993 to 1996"
+   },
+   {
+    "label": "Zia-ul-Haq",
+    "slug": "muhammad-zia-ul-haq",
+    "quote": "ruled as military ruler and president until his death"
+   }
+  ]
+ },
+ {
+  "name": "Women who led their country's government",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Indira Gandhi",
+    "slug": "indira-gandhi",
+    "quote": "the only woman to hold the office"
+   },
+   {
+    "label": "Sirimavo Bandaranaike",
+    "slug": "sirimavo-bandaranaike",
+    "quote": "in 1960 became the world's first woman prime minister"
+   },
+   {
+    "label": "Benazir Bhutto",
+    "slug": "benazir-bhutto",
+    "quote": "She served as prime minister from 1988 to 1990 and from 1993 to 1996"
+   },
+   {
+    "label": "Corazon Aquino",
+    "slug": "corazon-aquino",
+    "quote": "the first woman to hold the office"
+   },
+   {
+    "label": "Sheikh Hasina",
+    "slug": "sheikh-hasina",
+    "quote": "She was prime minister from 1996 to 2001 and again from 2009 to 2024"
+   },
+   {
+    "label": "Khaleda Zia",
+    "slug": "khaleda-zia",
+    "quote": "She was Bangladesh's first woman prime minister"
+   }
+  ],
+  "note": "Benazir Bhutto and Indira Gandhi are also in other groups (Pakistan, Indian PMs)."
+ },
+ {
+  "name": "Cities of the Indus Valley Civilisation",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mohenjo-daro",
+    "slug": "mohenjo-daro",
+    "quote": "the remains of one of the largest cities of the Indus Valley Civilisation"
+   },
+   {
+    "label": "Harappa",
+    "slug": "harappa",
+    "quote": "the remains of a major city of the Indus Vall"
+   },
+   {
+    "label": "Dholavira",
+    "slug": "dholavira",
+    "quote": "the remains of a city of the Indu"
+   },
+   {
+    "label": "Lothal",
+    "slug": "lothal",
+    "quote": "one of the southernmost towns of the Indus Valley Civilisation"
+   },
+   {
+    "label": "Rakhigarhi",
+    "slug": "rakhigarhi",
+    "quote": "the remains of one of the five largest settlements o"
+   },
+   {
+    "label": "Kot Diji",
+    "slug": "kot-diji",
+    "quote": "Kot Diji is a site in Khairpur District of Sindh"
+   }
+  ],
+  "note": "Kot Diji is low-weight."
+ },
+ {
+  "name": "Poet-saints of the Bhakti movement",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kabir",
+    "slug": "kabir",
+    "quote": "whose verses influenced the Bhakti movement"
+   },
+   {
+    "label": "Mirabai",
+    "slug": "mirabai",
+    "quote": "Hindu mystic poet of the bhakti movement"
+   },
+   {
+    "label": "Tulsidas",
+    "slug": "tulsidas",
+    "quote": "Tulsidas was a Hindu poet-saint of 16th-century northern India"
+   },
+   {
+    "label": "Ravidas",
+    "slug": "ravidas",
+    "quote": "Ravidas was an Indian mystic poet-saint of the Bhakti movement"
+   },
+   {
+    "label": "Chaitanya",
+    "slug": "chaitanya-mahaprabhu",
+    "quote": "Chaitanya Mahaprabhu was a Bengali saint"
+   },
+   {
+    "label": "Basava",
+    "slug": "basava",
+    "quote": "was a 12th-century Kannada poet, philosopher and social reformer"
+   }
+  ],
+  "note": "Tukaram, Namdev, Dnyaneshwar are kept for \"Marathi poet-saints\"; do not deal both."
+ },
+ {
+  "name": "Writers in Sanskrit",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kalidasa",
+    "slug": "kalidasa",
+    "quote": "Kalidasa was a classical Sanskrit poet and dramatist"
+   },
+   {
+    "label": "Panini",
+    "slug": "panini",
+    "quote": "Panini was an ancient Indian grammarian"
+   },
+   {
+    "label": "Jayadeva",
+    "slug": "jayadeva",
+    "quote": "Jayadeva was a Sanskrit poet of the 12th century"
+   },
+   {
+    "label": "Ashvaghosha",
+    "slug": "ashvaghosha",
+    "quote": "one of the first great masters of classical Sanskrit poetry"
+   },
+   {
+    "label": "Dandin",
+    "slug": "dandin",
+    "quote": "Dandin was a Sanskrit writer of South India"
+   },
+   {
+    "label": "Bharavi",
+    "slug": "bharavi",
+    "quote": "Bharavi was a Sanskrit poet of the sixth century"
+   }
+  ],
+  "note": "Banabhatta and Bhavabhuti (weight 0) can replace any of these."
+ },
+ {
+  "name": "Wrote about their journeys to India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Megasthenes",
+    "slug": "megasthenes",
+    "quote": "described Indian geography, cities, peoples and a society of seven classes"
+   },
+   {
+    "label": "Faxian",
+    "slug": "faxian",
+    "quote": "Faxian was a Chinese Buddhist monk who travelled to India in search of Buddhist texts"
+   },
+   {
+    "label": "Xuanzang",
+    "slug": "xuanzang",
+    "quote": "who journeyed overland to India between 629 and 645"
+   },
+   {
+    "label": "Yijing",
+    "slug": "yijing",
+    "quote": "Yijing was a Chinese Buddhist monk who travelled by sea to India"
+   },
+   {
+    "label": "Al-Biruni",
+    "slug": "al-biruni",
+    "quote": "after travelling to India with Mahmud of Ghazni wrote a detailed study of Indian religion and science"
+   },
+   {
+    "label": "Ibn Battuta",
+    "slug": "ibn-battuta",
+    "quote": "He served at the court of Muhammad bin Tughluq in Delhi between 1334 and 1341"
+   }
+  ],
+  "note": "Xuanzang and Ibn Battuta are in the published \"Travellers of the Middle Ages\"; the group name differs."
+ },
+ {
+  "name": "Rulers of Nepal",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Prithvi Narayan Shah",
+    "slug": "prithvi-narayan-shah",
+    "quote": "the founder of modern Nepal"
+   },
+   {
+    "label": "Jang Bahadur Rana",
+    "slug": "jang-bahadur-rana",
+    "quote": "founded the Rana regime"
+   },
+   {
+    "label": "Bhimsen Thapa",
+    "slug": "bhimsen-thapa",
+    "quote": "was the chief minister (mukhtiyar) of Nepal from 1806 to 1837"
+   },
+   {
+    "label": "Mahendra",
+    "slug": "mahendra-of-nepal",
+    "quote": "Mahendra was King of Nepal from 1955 until his death in 1972"
+   },
+   {
+    "label": "Birendra",
+    "slug": "birendra-of-nepal",
+    "quote": "was king of Nepal from 1972 to 2001"
+   },
+   {
+    "label": "Gyanendra",
+    "slug": "gyanendra-of-nepal",
+    "quote": "Gyanendra was the last King of Nepal"
+   }
+  ],
+  "note": "Bhimsen Thapa and Jang Bahadur Rana were chief ministers who held the power, not kings."
+ },
+ {
+  "name": "Statesmen of Burma",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Aung San",
+    "slug": "aung-san",
+    "quote": "Aung San was a Burmese nationalist leader"
+   },
+   {
+    "label": "U Nu",
+    "slug": "u-nu",
+    "quote": "became the first prime minister of independent Burma in 1948"
+   },
+   {
+    "label": "Ne Win",
+    "slug": "ne-win",
+    "quote": "seized power in a coup in 1962 and ruled Burma for twenty-six years"
+   },
+   {
+    "label": "Than Shwe",
+    "slug": "than-shwe",
+    "quote": "led the country's military government from 1992 to 2011"
+   },
+   {
+    "label": "Aung San Suu Kyi",
+    "slug": "aung-san-suu-kyi",
+    "quote": "led the democracy movement against military rule from 1988"
+   },
+   {
+    "label": "U Thant",
+    "slug": "u-thant",
+    "quote": "U Thant was a Burmese diplomat"
+   }
+  ],
+  "note": "U Thant led the United Nations, not Burma: the name says \"statesmen\"."
+ },
+ {
+  "name": "Sikhism",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Guru Nanak",
+    "slug": "guru-nanak",
+    "quote": "Guru Nanak was the founder of Sikhism"
+   },
+   {
+    "label": "Golden Temple",
+    "slug": "golden-temple",
+    "quote": "is the holiest shrine of Sikhism"
+   },
+   {
+    "label": "Khalsa",
+    "slug": "khalsa",
+    "quote": "The Khalsa is the collective body of initiated Sikhs"
+   },
+   {
+    "label": "Guru Granth Sahib",
+    "slug": "guru-granth-sahib",
+    "quote": "is the central holy scripture of Sikhism"
+   },
+   {
+    "label": "Akal Takht",
+    "slug": "akal-takht",
+    "quote": "is the highest seat of temporal authority in Sikhism"
+   },
+   {
+    "label": "Amritsar",
+    "slug": "amritsar",
+    "quote": "the spiritual centre of Sikhism"
+   }
+  ],
+  "note": "Guru Gobind Singh is in the published \"Fought against the Mughals\"."
+ },
+ {
+  "name": "Languages of India",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Urdu",
+    "slug": "urdu",
+    "quote": "Urdu is an Indo-Aryan language"
+   },
+   {
+    "label": "Sanskrit",
+    "slug": "sanskrit",
+    "quote": "Sanskrit is a classical Indo-Aryan language of South Asia"
+   },
+   {
+    "label": "Kannada",
+    "slug": "kannada",
+    "quote": "Kannada is a Dravidian language spoken mainly in the Indian state of Karnataka"
+   },
+   {
+    "label": "Marathi",
+    "slug": "marathi",
+    "quote": "Marathi is an Indo-Aryan language spoken mainly in western India"
+   },
+   {
+    "label": "Telugu",
+    "slug": "telugu-language",
+    "quote": "Telugu is a Dravidian language of south-eastern India"
+   },
+   {
+    "label": "Odia",
+    "slug": "odia-language",
+    "quote": "is an Indo-Aryan language spoken mainly in Odisha, India"
+   }
+  ]
+ },
+ {
+  "name": "Islands of the Philippines",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Luzon",
+    "slug": "luzon",
+    "quote": "Luzon is the largest and most populous island of the Philippines"
+   },
+   {
+    "label": "Mindanao",
+    "slug": "mindanao",
+    "quote": "Mindanao is the second-largest island of the Philippines"
+   },
+   {
+    "label": "Palawan",
+    "slug": "palawan",
+    "quote": "Palawan is a long island in the western Philippines"
+   },
+   {
+    "label": "Cebu",
+    "slug": "cebu",
+    "quote": "Cebu is a long, narrow island in the central Visayas of the Philippines"
+   },
+   {
+    "label": "Bohol",
+    "slug": "bohol",
+    "quote": "Bohol is an island province in the Central Visayas of the Philippines"
+   },
+   {
+    "label": "Negros",
+    "slug": "negros",
+    "quote": "Negros is the fourth-largest island of the Philippines"
+   }
+  ]
+ },
+ {
+  "name": "Road to Indian independence",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Salt March",
+    "slug": "salt-march",
+    "quote": "The Salt March was a campaign of civil disobedience led by Mahatma Gandhi"
+   },
+   {
+    "label": "Quit India",
+    "slug": "quit-india-movement",
+    "quote": "demanding an immediate end to British rule"
+   },
+   {
+    "label": "Non-cooperation",
+    "slug": "non-cooperation-movement",
+    "quote": "against British rule in India"
+   },
+   {
+    "label": "Khilafat movement",
+    "slug": "khilafat-movement",
+    "quote": "The Khilafat movement was a political campaign of Muslims in British India"
+   },
+   {
+    "label": "Congress",
+    "slug": "indian-national-congress",
+    "quote": "became the leading organisation of the Indian independence movement"
+   },
+   {
+    "label": "Jallianwala Bagh",
+    "slug": "jallianwala-bagh-massacre",
+    "quote": "British Indian troops under Brigadier-General Reginald Dyer fired without warning"
+   }
+  ],
+  "note": "Jallianwala Bagh is a massacre: keep it only if the editor accepts it here."
+ },
+ {
+  "name": "Landmarks of Delhi",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Qutb Minar",
+    "slug": "qutb-minar",
+    "quote": "The Qutb Minar is a tall minaret of red sandstone in Delhi"
+   },
+   {
+    "label": "Red Fort",
+    "slug": "red-fort",
+    "quote": "the walled palace complex of the Mughal emperors in Delhi"
+   },
+   {
+    "label": "Humayun's Tomb",
+    "slug": "humayuns-tomb",
+    "quote": "Humayun's Tomb in Delhi is the mausoleum"
+   },
+   {
+    "label": "Purana Qila",
+    "slug": "purana-qila",
+    "quote": "is a fortress in Delhi"
+   },
+   {
+    "label": "Alai Darwaza",
+    "slug": "alai-darwaza",
+    "quote": "is a domed gateway in the Qutb Minar complex in Delhi"
+   }
+  ],
+  "note": "Red Fort and Humayun's Tomb are in the published \"Built by the Mughals\"; Alai Darwaza stands in the Qutb complex."
+ },
+ {
+  "name": "Cities of Sri Lanka",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Colombo",
+    "slug": "colombo",
+    "quote": "Colombo is the largest city and commercial capital of Sri Lanka"
+   },
+   {
+    "label": "Kandy",
+    "slug": "kandy",
+    "quote": "Kandy is a city in the central highlands of Sri Lanka"
+   },
+   {
+    "label": "Jaffna",
+    "slug": "jaffna",
+    "quote": "Jaffna is the main city of northern Sri Lanka"
+   },
+   {
+    "label": "Trincomalee",
+    "slug": "trincomalee",
+    "quote": "Trincomalee is a port city on the north-east coast of Sri Lanka"
+   },
+   {
+    "label": "Anuradhapura",
+    "slug": "anuradhapura",
+    "quote": "Anuradhapura is a city in north-central Sri Lanka"
+   },
+   {
+    "label": "Polonnaruwa",
+    "slug": "polonnaruwa",
+    "quote": "Polonnaruwa is a city in the North Central Province of Sri Lanka"
+   }
+  ],
+  "note": "Kandy, Anuradhapura and Polonnaruwa were royal capitals: the editor could use them for a sharper \"Capitals of Sri Lanka\"."
+ },
+ {
+  "name": "Founding leaders of Asian nations",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jinnah",
+    "slug": "muhammad-ali-jinnah",
+    "quote": "the founder of Pakistan"
+   },
+   {
+    "label": "Ho Chi Minh",
+    "slug": "ho-chi-minh",
+    "quote": "Ho Chi Minh was a Vietnamese revolutionary"
+   },
+   {
+    "label": "Aung San",
+    "slug": "aung-san",
+    "quote": "Aung San was a Burmese nationalist leader"
+   },
+   {
+    "label": "Sheikh Mujib",
+    "slug": "sheikh-mujibur-rahman",
+    "quote": "the founding leader of Bangladesh"
+   },
+   {
+    "label": "Lee Kuan Yew",
+    "slug": "lee-kuan-yew",
+    "quote": "Lee Kuan Yew was the first prime minister of Singapore"
+   },
+   {
+    "label": "Tunku Abdul Rahman",
+    "slug": "tunku-abdul-rahman",
+    "quote": "He negotiated Malaya's independence from Britain"
+   }
+  ],
+  "note": "Published \"Led their country to independence\" has Gandhi and Sukarno: none here."
+ },
+ {
+  "name": "Wars fought by independent India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "1965 war",
+    "slug": "indo-pakistani-war-of-1965",
+    "quote": "was fought between India and Pakistan from August to September 1965"
+   },
+   {
+    "label": "Kargil",
+    "slug": "kargil-war",
+    "quote": "The Kargil War was an armed conflict between India and Pakistan"
+   },
+   {
+    "label": "Bangladesh Liberation War",
+    "slug": "bangladesh-liberation-war",
+    "quote": "India intervened in December"
+   },
+   {
+    "label": "Sino-Indian War",
+    "slug": "sino-indian-war",
+    "quote": "was a border war fought between China and India"
+   },
+   {
+    "label": "Operation Polo",
+    "slug": "operation-polo",
+    "quote": "Operation Polo was the Indian military operation"
+   }
+  ]
+ },
+ {
+  "name": "Buddhist centres of learning",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nalanda",
+    "slug": "nalanda",
+    "quote": "Nalanda was a great Buddhist monastery and centre of learning"
+   },
+   {
+    "label": "Vikramashila",
+    "slug": "vikramashila",
+    "quote": "Vikramashila was a great Buddhist monastery and centre of learning"
+   },
+   {
+    "label": "Taxila",
+    "slug": "taxila",
+    "quote": "renowned as a centre of trade and learning"
+   },
+   {
+    "label": "Valabhi",
+    "slug": "valabhi",
+    "quote": "a centre of Buddhist learning comparable to Nalanda"
+   },
+   {
+    "label": "Somapura",
+    "slug": "somapura-mahavihara",
+    "quote": "is the ruin of a great Buddhist monastery at Paharpur"
+   }
+  ]
+ },
+ {
+  "name": "Built by the Khmer",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Angkor Wat",
+    "slug": "angkor-wat",
+    "quote": "built in the twelfth century under King Suryavarman II"
+   },
+   {
+    "label": "Angkor Thom",
+    "slug": "angkor-thom",
+    "quote": "Angkor Thom was a walled royal city built by the Khmer king Jayavarman VII"
+   },
+   {
+    "label": "Bayon",
+    "slug": "bayon",
+    "quote": "built as the state temple of Jayavarman VII"
+   },
+   {
+    "label": "Ta Prohm",
+    "slug": "ta-prohm",
+    "quote": "founded by Jayavarman VII in 1186"
+   },
+   {
+    "label": "West Baray",
+    "slug": "west-baray",
+    "quote": "One of the largest works of the Khmer water-management network"
+   },
+   {
+    "label": "Wat Phu",
+    "slug": "wat-phu",
+    "quote": "Wat Phu is a ruined Khmer temple complex"
+   }
+  ],
+  "note": "Wat Phu stands in Laos; the rest at Angkor."
+ },
+ {
+  "name": "Landmarks of Bangkok",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Wat Arun",
+    "slug": "wat-arun",
+    "quote": "is a Buddhist temple on the west bank of the Chao Phraya in Bangkok"
+   },
+   {
+    "label": "Wat Phra Kaew",
+    "slug": "wat-phra-kaew",
+    "quote": "is the royal temple within the Grand Palace in Bangkok"
+   },
+   {
+    "label": "Grand Palace",
+    "slug": "grand-palace",
+    "quote": "The Grand Palace is a complex of royal buildings in Bangkok"
+   },
+   {
+    "label": "Emerald Buddha",
+    "slug": "emerald-buddha",
+    "quote": "the palladium of Thailand"
+   },
+   {
+    "label": "Wat Pho",
+    "slug": "wat-pho",
+    "quote": "Wat Pho is a royal Buddhist temple in Bangkok"
+   },
+   {
+    "label": "Front Palace",
+    "slug": "front-palace",
+    "quote": "In Bangkok it stood north of the Grand Palace"
+   }
+  ],
+  "note": "Wat Phra Kaew houses the Emerald Buddha: two tiles, one story."
+ },
+ {
+  "name": "Cities on the Ganges",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Varanasi",
+    "slug": "varanasi",
+    "quote": "is a city on the Ganges in Uttar Pradesh"
+   },
+   {
+    "label": "Patna",
+    "slug": "patna",
+    "quote": "Patna is the capital of the Indian state of Bihar, located on the Ganges"
+   },
+   {
+    "label": "Kannauj",
+    "slug": "kannauj",
+    "quote": "Kannauj is an ancient city on the Ganges"
+   },
+   {
+    "label": "Prayagraj",
+    "slug": "prayagraj",
+    "quote": "at the confluence of the Ganges and Yamuna"
+   },
+   {
+    "label": "Rajmahal",
+    "slug": "rajmahal",
+    "quote": "Rajmahal is a town on the Ganges"
+   },
+   {
+    "label": "Farrukhabad",
+    "slug": "farrukhabad",
+    "quote": "Farrukhabad is a city on the Ganges in Uttar Pradesh"
+   }
+  ],
+  "note": "Varanasi is also Benares in \"Indian cities under their old names\"."
+ },
+ {
+  "name": "European footholds on the Hooghly",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kolkata",
+    "slug": "kolkata",
+    "quote": "where the English East India Company set up a trading settlement in 1690"
+   },
+   {
+    "label": "Chinsurah",
+    "slug": "chinsurah",
+    "quote": "Chinsurah is a town on the Hooghly River in West Bengal"
+   },
+   {
+    "label": "Chandannagar",
+    "slug": "chandannagar",
+    "quote": "Chandannagar, formerly Chandernagore, is a city on the Hooghly River"
+   },
+   {
+    "label": "Serampore",
+    "slug": "serampore",
+    "quote": "As Frederiksnagore it was a Danish trading settlement from 1755 to 1845"
+   },
+   {
+    "label": "Fort William",
+    "slug": "fort-william-kolkata",
+    "quote": "is a fortress on the east bank of the Hooghly in Kolkata"
+   },
+   {
+    "label": "Fort Gustavus",
+    "slug": "fort-gustavus",
+    "quote": "Fort Gustavus was the Dutch fort at Chinsurah on the Hooghly River"
+   }
+  ],
+  "note": "English Kolkata and Fort William, Dutch Chinsurah and Fort Gustavus (weight 0), French Chandannagar, Danish Serampore: keep one per nation."
+ },
+ {
+  "name": "Kings of Angkor",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jayavarman II",
+    "slug": "jayavarman-ii",
+    "quote": "Jayavarman II was a Khmer ruler who in 802 CE proclaimed himself universal monarch"
+   },
+   {
+    "label": "Yasovarman I",
+    "slug": "yasovarman-i",
+    "quote": "Yasovarman I was king of the Khmer Empire from 889 to about 910"
+   },
+   {
+    "label": "Suryavarman I",
+    "slug": "suryavarman-i",
+    "quote": "Suryavarman I was king of the Khmer Empire from about 1006 to 1050"
+   },
+   {
+    "label": "Suryavarman II",
+    "slug": "suryavarman-ii",
+    "quote": "Suryavarman II was a king of the Khmer Empire"
+   },
+   {
+    "label": "Jayavarman VII",
+    "slug": "jayavarman-vii",
+    "quote": "Jayavarman VII was a Khmer king of the late twelfth and early thirteenth century"
+   }
+  ]
+ },
+ {
+  "name": "Emperors of Vietnam's Nguyễn dynasty",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gia Long",
+    "slug": "gia-long",
+    "quote": "Gia Long, born Nguyen Phuc Anh"
+   },
+   {
+    "label": "Minh Mạng",
+    "slug": "minh-mang",
+    "quote": "Minh Mang was the second emperor of the Nguyen dynasty of Vietnam"
+   },
+   {
+    "label": "Thiệu Trị",
+    "slug": "thieu-tri",
+    "quote": "Thiệu Trị was the third emperor of the Nguyen dynasty of Vietnam"
+   },
+   {
+    "label": "Tự Đức",
+    "slug": "tu-duc",
+    "quote": "Tự Đức was emperor of Vietnam under the Nguyen dynasty from 1847 to 1883"
+   },
+   {
+    "label": "Khải Định",
+    "slug": "khai-dinh",
+    "quote": "Khải Định was emperor of Vietnam of the Nguyen dynasty from 1916 to 1925"
+   },
+   {
+    "label": "Duy Tân",
+    "slug": "duy-tan",
+    "quote": "Duy Tân was emperor of Vietnam of the Nguyễn dynasty from 1907 to 1916"
+   }
+  ],
+  "note": "Bảo Đại is in the published \"Last emperors (1889–1974)\"."
+ },
+ {
+  "name": "Peshwas of the Maratha state",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Balaji Vishwanath",
+    "slug": "balaji-vishwanath",
+    "quote": "Balaji Vishwanath was the first of the hereditary Peshwas of the Maratha state"
+   },
+   {
+    "label": "Baji Rao I",
+    "slug": "baji-rao-i",
+    "quote": "Baji Rao I was the Peshwa, or chief minister, of the Maratha state from 1720 to 1740"
+   },
+   {
+    "label": "Balaji Baji Rao",
+    "slug": "balaji-baji-rao",
+    "quote": "was Peshwa of the Maratha Empire from 1740 to 1761"
+   },
+   {
+    "label": "Madhavrao I",
+    "slug": "madhavrao-i",
+    "quote": "was Peshwa of the Maratha Empire from 1761 to 1772"
+   },
+   {
+    "label": "Baji Rao II",
+    "slug": "baji-rao-ii",
+    "quote": "Baji Rao II was the last Peshwa of the Maratha Empire"
+   }
+  ],
+  "note": "Baji Rao I is also a fit for \"Leaders of the Marathas\"; he is kept out of that group."
+ },
+ {
+  "name": "Chola kings",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Vijayalaya",
+    "slug": "vijayalaya-chola",
+    "quote": "Vijayalaya Chola was the founder of the imperial Chola dynasty"
+   },
+   {
+    "label": "Aditya I",
+    "slug": "aditya-i",
+    "quote": "Aditya I was king of the Chola dynasty of southern India"
+   },
+   {
+    "label": "Parantaka I",
+    "slug": "parantaka-i",
+    "quote": "Parantaka I was a king of the Chola dynasty"
+   },
+   {
+    "label": "Rajaraja I",
+    "slug": "rajaraja-i",
+    "quote": "Rajaraja I was emperor of the Chola Empire of southern India"
+   },
+   {
+    "label": "Rajendra I",
+    "slug": "rajendra-chola-i",
+    "quote": "Rajendra Chola I was an emperor of the Chola dynasty"
+   },
+   {
+    "label": "Karikala",
+    "slug": "karikala-chola",
+    "quote": "Karikala Chola was the most celebrated of the early Chola kings"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Sri Lanka",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Dutugemunu",
+    "slug": "dutugemunu",
+    "quote": "Dutugemunu was a Sinhalese king of the Anuradhapura Kingdom"
+   },
+   {
+    "label": "Parakramabahu I",
+    "slug": "parakramabahu-i",
+    "quote": "Parakramabahu I was king of Sri Lanka from 1153 to 1186"
+   },
+   {
+    "label": "Vijayabahu I",
+    "slug": "vijayabahu-i",
+    "quote": "Vijayabahu I was king of Sri Lanka from 1055 to 1110"
+   },
+   {
+    "label": "Sri Vikrama Rajasinha",
+    "slug": "sri-vikrama-rajasinha",
+    "quote": "Sri Vikrama Rajasinha was the last king of Kandy"
+   },
+   {
+    "label": "Parakramabahu VI",
+    "slug": "parakramabahu-vi",
+    "quote": "Parakramabahu VI was the last Sinhalese king to unify all of Sri Lanka"
+   },
+   {
+    "label": "Devanampiya Tissa",
+    "slug": "devanampiya-tissa",
+    "quote": "Devanampiya Tissa was a king of Anuradhapura in Sri Lanka"
+   }
+  ],
+  "note": "Devanampiya Tissa and Parakramabahu VI are weight 0."
+ },
+ {
+  "name": "Drove Chinese or Mongol armies out of Vietnam",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ngô Quyền",
+    "slug": "ngo-quyen",
+    "quote": "defeated a fleet of the Southern Han at the Battle of Bach Dang in 938"
+   },
+   {
+    "label": "Lê Lợi",
+    "slug": "le-loi",
+    "quote": "led a ten-year war of resistance, from 1418, against the Ming occupation of Vietnam"
+   },
+   {
+    "label": "Lý Thường Kiệt",
+    "slug": "ly-thuong-kiet",
+    "quote": "he defeated the Song counter-invasion"
+   },
+   {
+    "label": "Quang Trung",
+    "slug": "quang-trung",
+    "quote": "routed a Qing invasion at Dong Da in 1789"
+   },
+   {
+    "label": "Trần Nhân Tông",
+    "slug": "tran-nhan-tong",
+    "quote": "he defeated the Mongol Yuan invasions"
+   },
+   {
+    "label": "Dương Đình Nghệ",
+    "slug": "duong-dinh-nghe",
+    "quote": "expelled the Southern Han forces from the Red River delta in 931"
+   }
+  ],
+  "note": "Dương Đình Nghệ is weight 0."
+ },
+ {
+  "name": "Kings and ministers of Singhasari and Majapahit",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ken Arok",
+    "slug": "ken-arok",
+    "quote": "Ken Arok was the founder of the Singhasari kingdom in eastern Java"
+   },
+   {
+    "label": "Kertanegara",
+    "slug": "kertanegara",
+    "quote": "Kertanegara was the last king of Singhasari in eastern Java"
+   },
+   {
+    "label": "Gajah Mada",
+    "slug": "gajah-mada",
+    "quote": "Gajah Mada was the chief minister of the Majapahit Empire"
+   },
+   {
+    "label": "Hayam Wuruk",
+    "slug": "hayam-wuruk",
+    "quote": "Hayam Wuruk was king of Majapahit"
+   },
+   {
+    "label": "Adityawarman",
+    "slug": "adityawarman",
+    "quote": "who had served Majapahit before founding his own kingdom"
+   }
+  ],
+  "note": "Raden Wijaya is in the published \"Founders of Southeast Asian kingdoms\"; Adityawarman served Majapahit, then ruled in Sumatra."
+ },
+ {
+  "name": "Retellings of the Ramayana",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ramakien",
+    "slug": "ramakien",
+    "quote": "The Ramakien is the Thai national version of the Indian epic Ramayana"
+   },
+   {
+    "label": "Reamker",
+    "slug": "reamker",
+    "quote": "The Reamker is the Cambodian version of the Indian epic Ramayana"
+   },
+   {
+    "label": "Ramlila",
+    "slug": "ramlila",
+    "quote": "Ramlila is a dramatic re-enactment of the life of the god Rama"
+   },
+   {
+    "label": "Setubandha",
+    "slug": "setubandha",
+    "quote": "also called Ravanavaho, is an epic poem in Maharashtri Prakrit"
+   },
+   {
+    "label": "Uttararamacharita",
+    "slug": "uttararamacharita",
+    "quote": "('The Later Story of Rama') is a Sanskrit drama"
+   },
+   {
+    "label": "Krittibas Ojha",
+    "slug": "krittibas-ojha",
+    "quote": "a free retelling of the Sanskrit Ramayana in Bengali verse"
+   }
+  ],
+  "note": "Krittibas Ojha is a poet, the rest are works and a performance."
+ },
+ {
+  "name": "Royal capitals of Burma",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bago",
+    "slug": "bago",
+    "quote": "It was the capital of the Mon kingdom of Hanthawaddy from 1369"
+   },
+   {
+    "label": "Mandalay",
+    "slug": "mandalay",
+    "quote": "It was founded by King Mindon in 1857 as the royal c"
+   },
+   {
+    "label": "Amarapura",
+    "slug": "amarapura",
+    "quote": "Amarapura is a former royal capital of Burma"
+   },
+   {
+    "label": "Mrauk U",
+    "slug": "mrauk-u",
+    "quote": "that was the capital of the Arakanese kingdom from 1430 to 1785"
+   },
+   {
+    "label": "Naypyidaw",
+    "slug": "naypyidaw",
+    "quote": "Naypyidaw is the capital of Myanmar"
+   }
+  ],
+  "note": "Shwebo is in the published \"Became royal capitals, 1561–1786\"; Mrauk U was Arakan's capital, Naypyidaw today's."
+ },
+ {
+  "name": "Greeks in India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Menander I",
+    "slug": "menander-i",
+    "quote": "Menander I was the best-known Indo-Greek king"
+   },
+   {
+    "label": "Eucratides I",
+    "slug": "eucratides-i",
+    "quote": "fighting the Indo-Greek kings south of"
+   },
+   {
+    "label": "Megasthenes",
+    "slug": "megasthenes",
+    "quote": "Megasthenes was a Greek historian and diplomat"
+   },
+   {
+    "label": "Seleucus I",
+    "slug": "seleucus-i-nicator",
+    "quote": "built a realm stretching from Anatolia to the borders of India"
+   },
+   {
+    "label": "Antialcidas",
+    "slug": "antialcidas",
+    "quote": "Antialcidas was an Indo-Greek king who ruled from Taxila"
+   },
+   {
+    "label": "Heliodorus pillar",
+    "slug": "heliodorus-pillar",
+    "quote": "a Greek envoy from Taxila sent by the Indo-Greek king Antialcidas"
+   }
+  ],
+  "note": "Seleucus I is a decoy for Diadochi groups (published)."
+ },
+ {
+  "name": "French India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pondicherry",
+    "slug": "pondicherry",
+    "quote": "Founded as a French trading post by François Martin"
+   },
+   {
+    "label": "Chandannagar",
+    "slug": "chandannagar",
+    "quote": "Established as a French trading post in t"
+   },
+   {
+    "label": "Yanam",
+    "slug": "yanam",
+    "quote": "A French trading post from the 1720s"
+   },
+   {
+    "label": "Karaikal",
+    "slug": "karaikal",
+    "quote": "France acquired it from the Raja of Thanjavur"
+   },
+   {
+    "label": "Dupleix",
+    "slug": "joseph-francois-dupleix",
+    "quote": "was governor-general of French India at Pondicherry from 1742 to 1754"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Vietnam",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hanoi",
+    "slug": "hanoi",
+    "quote": "Hanoi is a city in northern Vietnam on the Red River"
+   },
+   {
+    "label": "Ho Chi Minh City",
+    "slug": "ho-chi-minh-city",
+    "quote": "is the largest city of Vietnam"
+   },
+   {
+    "label": "Huế",
+    "slug": "hue",
+    "quote": "is a city on the Perfume River in central Vietnam"
+   },
+   {
+    "label": "Da Nang",
+    "slug": "da-nang",
+    "quote": "Da Nang is a port city in central Vietnam"
+   },
+   {
+    "label": "Haiphong",
+    "slug": "haiphong",
+    "quote": "Haiphong is a port city in northern Vietnam"
+   }
+  ]
+ },
+ {
+  "name": "Leaders of the Marathas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shivaji",
+    "slug": "shivaji",
+    "quote": "was the founder of the Maratha state in western India"
+   },
+   {
+    "label": "Tarabai",
+    "slug": "tarabai",
+    "quote": "Tarabai was a Maratha queen"
+   },
+   {
+    "label": "Shahu I",
+    "slug": "shahu-i",
+    "quote": "Shahu I was the fifth Chhatrapati of the Maratha Empire"
+   },
+   {
+    "label": "Rajaram I",
+    "slug": "rajaram-i",
+    "quote": "Chhatrapati of the Maratha kingdom from 1689 to 1700"
+   },
+   {
+    "label": "Ahilyabai Holkar",
+    "slug": "ahilyabai-holkar",
+    "quote": "Ahilyabai Holkar was the Maratha queen"
+   },
+   {
+    "label": "Mahadji Scindia",
+    "slug": "mahadji-scindia",
+    "quote": "Mahadji Scindia was the Maratha ruler of Gwalior"
+   }
+  ],
+  "note": "Baji Rao I is kept for the Peshwas group."
+ },
+ {
+  "name": "Figures of the Indian Rebellion of 1857",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lakshmibai",
+    "slug": "lakshmibai",
+    "quote": "a leader of the Indian Rebellion of 1857"
+   },
+   {
+    "label": "Tatya Tope",
+    "slug": "tatya-tope",
+    "quote": "Tatya Tope was one of the leading commanders of the Indian Rebellion of 1857"
+   },
+   {
+    "label": "Begum Hazrat Mahal",
+    "slug": "begum-hazrat-mahal",
+    "quote": "a leader of the Indian Rebellion of 1857"
+   },
+   {
+    "label": "Bahadur Shah Zafar",
+    "slug": "bahadur-shah-ii",
+    "quote": "Bahadur Shah II, also known as Bahadur Shah Zafar"
+   },
+   {
+    "label": "Canning",
+    "slug": "charles-canning-1st-earl-canning",
+    "quote": "became the first Viceroy when the Crown took over from the East India Company in 1858"
+   },
+   {
+    "label": "Jayajirao Scindia",
+    "slug": "jayajirao-scindia",
+    "quote": "During the rebellion of 1857 he remained loyal to the British"
+   }
+  ],
+  "note": "Canning is also in the governors-general group; Jayajirao Scindia stayed loyal to the British (the name says \"figures\", not \"rebels\")."
+ },
+ {
+  "name": "Presidents of the Philippines",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Aguinaldo",
+    "slug": "emilio-aguinaldo",
+    "quote": "He became president of the First Philippine Republic in 1899"
+   },
+   {
+    "label": "Quezon",
+    "slug": "manuel-l-quezon",
+    "quote": "the first president of the Commonwealth of the Philippines"
+   },
+   {
+    "label": "Roxas",
+    "slug": "manuel-roxas",
+    "quote": "Manuel Roxas was the first president of the independent Republic of the Philippines"
+   },
+   {
+    "label": "Magsaysay",
+    "slug": "ramon-magsaysay",
+    "quote": "president of the Philippines from 1953 until his death"
+   },
+   {
+    "label": "Marcos",
+    "slug": "ferdinand-marcos",
+    "quote": "Ferdinand Marcos was President of the Philippines from 1965 to 1986"
+   },
+   {
+    "label": "Corazon Aquino",
+    "slug": "corazon-aquino",
+    "quote": "Corazon Aquino was president of the Philippines from 1986 to 1992"
+   }
+  ],
+  "note": "Aguinaldo is also in \"Filipinos who resisted Spain\"."
+ },
+ {
+  "name": "Filipinos who resisted Spain",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lapulapu",
+    "slug": "lapulapu",
+    "quote": "Lapulapu was a chief of Mactan, an island off Cebu in the central Philippines, who refused to submit to Spain"
+   },
+   {
+    "label": "Diego Silang",
+    "slug": "diego-silang",
+    "quote": "Diego Silang was the leader of a revolt in the Ilocos region of northern Luzon against Spanish rule"
+   },
+   {
+    "label": "Rizal",
+    "slug": "jose-rizal",
+    "quote": "exposed the abuses of Spanish colonial rule and the friars"
+   },
+   {
+    "label": "Bonifacio",
+    "slug": "andres-bonifacio",
+    "quote": "He launched the Philippine Revolution against Spain in August 1896"
+   },
+   {
+    "label": "Aguinaldo",
+    "slug": "emilio-aguinaldo",
+    "quote": "Emilio Aguinaldo was a leader of the Philippine Revolution against Spain from 1896"
+   }
+  ],
+  "note": "Lapulapu and Diego Silang are weight 0."
+ },
+ {
+  "name": "Sultanates of island Southeast Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Malacca",
+    "slug": "malacca",
+    "quote": "The Malacca Sultanate, founded around 1400"
+   },
+   {
+    "label": "Johor",
+    "slug": "johor",
+    "quote": "which became the seat of a Malay sultanate after the fall of Malacca"
+   },
+   {
+    "label": "Aceh",
+    "slug": "aceh",
+    "quote": "it was the seat of the Aceh Sultanate"
+   },
+   {
+    "label": "Demak",
+    "slug": "demak-sultanate",
+    "quote": "The Demak Sultanate was the first major Muslim state on Java"
+   },
+   {
+    "label": "Banten",
+    "slug": "banten",
+    "quote": "the centre of the Banten Sultanate"
+   },
+   {
+    "label": "Gowa",
+    "slug": "sultanate-of-gowa",
+    "quote": "The Sultanate of Gowa was a Makassarese state in south-western Sulawesi"
+   }
+  ]
+ },
+ {
+  "name": "Ports of the Malabar Coast",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Calicut",
+    "slug": "calicut",
+    "quote": "Calicut, now Kozhikode, is a port city on the Malabar coast"
+   },
+   {
+    "label": "Kochi",
+    "slug": "kochi",
+    "quote": "is a port city in Kerala on the Malabar Coast of India"
+   },
+   {
+    "label": "Kollam",
+    "slug": "kollam",
+    "quote": "Kollam, formerly Quilon, is a port city on the Malabar Coast of Kerala"
+   },
+   {
+    "label": "Kannur",
+    "slug": "kannur",
+    "quote": "is a city on the Malabar coast of northern Kerala"
+   },
+   {
+    "label": "Muziris",
+    "slug": "muziris",
+    "quote": "Muziris was an ancient port on the Malabar Coast"
+   }
+  ],
+  "note": "Kochi is also in the level-4 \"Taken from the Portuguese by the Dutch\"."
+ },
+ {
+  "name": "At the court of Akbar",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tansen",
+    "slug": "tansen",
+    "quote": "when he joined the court of the Mughal emperor Akbar"
+   },
+   {
+    "label": "Abu'l-Fazl",
+    "slug": "abul-fazl-ibn-mubarak",
+    "quote": "was the vizier, historian and close adviser of the Mughal emperor Akbar"
+   },
+   {
+    "label": "Todar Mal",
+    "slug": "todar-mal",
+    "quote": "Todar Mal was the finance minister of the Mughal emperor Akbar"
+   },
+   {
+    "label": "Abdul Rahim",
+    "slug": "abdul-rahim-khan-i-khanan",
+    "quote": "As one of Akbar's leading gen"
+   },
+   {
+    "label": "Man Singh I",
+    "slug": "man-singh-i",
+    "quote": "one of the leading generals of the Mughal emperor Akbar"
+   },
+   {
+    "label": "Rai Singh",
+    "slug": "rai-singh-of-bikaner",
+    "quote": "one of the leading Rajput generals of the Mughal emperor Akbar"
+   }
+  ],
+  "note": "Man Singh I is also a \"___ Singh\" decoy."
+ },
+ {
+  "name": "Sufis of the Indian subcontinent",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nizamuddin Auliya",
+    "slug": "nizamuddin-auliya",
+    "quote": "Nizamuddin Auliya was a Sufi saint of the Chishti order"
+   },
+   {
+    "label": "Baba Farid",
+    "slug": "baba-farid",
+    "quote": "was a Sufi master of the Chishti order in the Punjab"
+   },
+   {
+    "label": "Gesu Daraz",
+    "slug": "gesu-daraz",
+    "quote": "was a Sufi saint of the Chishti order"
+   },
+   {
+    "label": "Jayasi",
+    "slug": "malik-muhammad-jayasi",
+    "quote": "Malik Muhammad Jayasi was a Sufi poet from Jais in Awadh"
+   },
+   {
+    "label": "Amir Khusrau",
+    "slug": "amir-khusrau",
+    "quote": "was a disciple of the Sufi saint Nizamuddin Auliya"
+   }
+  ],
+  "note": "Amir Khusrau was a poet-disciple of Nizamuddin; Jahanara a Mughal princess who wrote a Sufi saint's life (weight 0)."
+ },
+ {
+  "name": "Taken from the Portuguese by the Dutch",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Colombo",
+    "slug": "colombo",
+    "quote": "fortified by the Portuguese in the early 16th century and taken by the Dutch in 1656"
+   },
+   {
+    "label": "Malacca",
+    "slug": "malacca",
+    "quote": "The Portuguese Empire captured it in 1511, and the Dutch Empire took it from them in 1641"
+   },
+   {
+    "label": "Kochi",
+    "slug": "kochi",
+    "quote": "The Portuguese built their first fort in India there in 1503, and the Dutch took it in 1663"
+   },
+   {
+    "label": "Galle",
+    "slug": "galle",
+    "quote": "it was fortified by the Portuguese in the late 16th century and captured by the Dutch East India Company in 1640"
+   },
+   {
+    "label": "Nagapattinam",
+    "slug": "nagapattinam",
+    "quote": "The Dutch took it from the Portuguese in 1658"
+   }
+  ],
+  "note": "Malacca is also in the sultanates group, Colombo in \"Cities of Sri Lanka\"."
+ },
+ {
+  "name": "Once ruled by Denmark",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tranquebar",
+    "slug": "tharangambadi",
+    "quote": "The Danish East India Company obtained it in 1620"
+   },
+   {
+    "label": "Nicobar Islands",
+    "slug": "nicobar-islands",
+    "quote": "Denmark claimed them from the 18th century"
+   },
+   {
+    "label": "Virgin Islands",
+    "slug": "united-states-virgin-islands",
+    "quote": "As the Danish West Indies they were a Danish colony"
+   },
+   {
+    "label": "Christiansborg",
+    "slug": "osu-castle",
+    "quote": "it was the headquarters of the Danish Gold Coast"
+   },
+   {
+    "label": "Faroe Islands",
+    "slug": "faroe-islands",
+    "quote": "remained Danish after 1814"
+   },
+   {
+    "label": "Greenland",
+    "slug": "greenland",
+    "quote": "an autonomous territory of the Kingdom of Denmark"
+   }
+  ],
+  "note": "Serampore (Danish too) is kept for the Hooghly group."
+ },
+ {
+  "name": "Fought at Panipat",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Babur",
+    "slug": "babur",
+    "quote": "he defeated the last Lodi sultan of Delhi at the Battle of Panipat"
+   },
+   {
+    "label": "Ibrahim Lodi",
+    "slug": "ibrahim-lodi",
+    "quote": "He was defeated and killed by Babur at the First Battle of Panipat in 1526"
+   },
+   {
+    "label": "Hemu",
+    "slug": "hemu",
+    "quote": "he was wounded by an arrow at the Second Battle of Panipat"
+   },
+   {
+    "label": "Ahmad Shah Durrani",
+    "slug": "ahmad-shah-abdali",
+    "quote": "defeated the Marathas at the Third Battle of Panipat in 1761"
+   },
+   {
+    "label": "Sadashivrao Bhau",
+    "slug": "sadashivrao-bhau",
+    "quote": "He was killed at the Third Battle of Panipat in 1761"
+   },
+   {
+    "label": "Mahadji Scindia",
+    "slug": "mahadji-scindia",
+    "quote": "Surviving the Maratha defeat at Panipat in 1761"
+   }
+  ],
+  "note": "Three battles (1526, 1556, 1761); Ibrahim Lodi is also in \"All in 1526\"."
+ },
+ {
+  "name": "All in 1526",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mohács",
+    "slug": "battle-of-mohacs",
+    "quote": "The Battle of Mohács was fought in 1526"
+   },
+   {
+    "label": "Panipat",
+    "slug": "first-battle-of-panipat",
+    "quote": "The First Battle of Panipat was fought in 1526"
+   },
+   {
+    "label": "Treaty of Madrid",
+    "slug": "treaty-of-madrid-1526",
+    "quote": "The Treaty of Madrid was signed on 14 January 1526"
+   },
+   {
+    "label": "Ibrahim Lodi",
+    "slug": "ibrahim-lodi",
+    "quote": "He was defeated and killed by Babur at the First Battle of Panipat in 1526"
+   },
+   {
+    "label": "Royal Hungary",
+    "slug": "royal-hungary",
+    "quote": "after the Battle of Mohács in 1526"
+   },
+   {
+    "label": "Bahadur Shah of Gujarat",
+    "slug": "bahadur-shah-of-gujarat",
+    "quote": "Bahadur Shah of Gujarat was sultan of Gujarat from 1526 to 1537"
+   }
+  ],
+  "note": "Panipat and Ibrahim Lodi tell one story; Royal Hungary follows from Mohács."
+ },
+ {
+  "name": "All in 1556",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Philip II",
+    "slug": "philip-ii-of-spain",
+    "quote": "Philip II was King of Spain from 1556 to 1598"
+   },
+   {
+    "label": "Akbar",
+    "slug": "akbar",
+    "quote": "Akbar was the third Mughal emperor, reigning from 1556 to 1605"
+   },
+   {
+    "label": "Ignatius of Loyola",
+    "slug": "ignatius-of-loyola",
+    "quote": "Ignatius of Loyola (1491–1556)"
+   },
+   {
+    "label": "Humayun",
+    "slug": "humayun",
+    "quote": "ruled from 1530 to 1540 and again in 1555–1556"
+   },
+   {
+    "label": "Thomas Cranmer",
+    "slug": "thomas-cranmer",
+    "quote": "he was tried for heresy and burnt at Oxford in 1556"
+   },
+   {
+    "label": "Second Panipat",
+    "slug": "second-battle-of-panipat",
+    "quote": "The Second Battle of Panipat was fought on 5 November 1556"
+   }
+  ],
+  "note": "Mixed: two accessions (Philip II, Akbar), three deaths, one battle. Humayun and Akbar together give the Mughal link away."
+ },
+ {
+  "name": "All in 1192",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Second Tarain",
+    "slug": "second-battle-of-tarain",
+    "quote": "The Second Battle of Tarain was fought in 1192"
+   },
+   {
+    "label": "Prithviraj Chauhan",
+    "slug": "prithviraj-chauhan",
+    "quote": "was defeated and killed after the second battle in 1192"
+   },
+   {
+    "label": "Treaty of Jaffa",
+    "slug": "third-crusade",
+    "quote": "the war ended with the Treaty of Jaffa in 1192"
+   },
+   {
+    "label": "Conrad of Montferrat",
+    "slug": "conrad-of-montferrat",
+    "quote": "was elected king in April 1192"
+   },
+   {
+    "label": "Kilij Arslan II",
+    "slug": "kilij-arslan-ii",
+    "quote": "Kilij Arslan II was sultan of the Seljuk Sultanate of Rum from 1156 to 1192"
+   },
+   {
+    "label": "Lugou Bridge",
+    "slug": "lugou-bridge",
+    "quote": "built under the Jin dynasty between 1189 and 1192"
+   }
+  ]
+ },
+ {
+  "name": "All in 1565",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Talikota",
+    "slug": "battle-of-talikota",
+    "quote": "The Battle of Talikota was fought in January 1565"
+   },
+   {
+    "label": "Manila galleon",
+    "slug": "manila-galleon",
+    "quote": "in operation from 1565 to 1815"
+   },
+   {
+    "label": "Haw Phra Kaew",
+    "slug": "haw-phra-kaew",
+    "quote": "built by King Setthathirath around 1565 to house the Emerald Buddha"
+   },
+   {
+    "label": "Chief Pleas",
+    "slug": "chief-pleas",
+    "quote": "under a charter from Elizabeth I in 1565"
+   },
+   {
+    "label": "Vasco de Quiroga",
+    "slug": "vasco-de-quiroga",
+    "quote": "c. 1470–1565"
+   },
+   {
+    "label": "Porta Pia",
+    "slug": "porta-pia",
+    "quote": "1561–1565"
+   }
+  ],
+  "note": "Haw Phra Kaew is \"around 1565\"; Chief Pleas is low-profile."
+ },
+ {
+  "name": "Died in 1799",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Tipu Sultan",
+    "slug": "tipu-sultan",
+    "quote": "1751–1799"
+   },
+   {
+    "label": "George Washington",
+    "slug": "george-washington",
+    "quote": "1732–1799"
+   },
+   {
+    "label": "Qianlong Emperor",
+    "slug": "qianlong-emperor",
+    "quote": "1711–1799"
+   },
+   {
+    "label": "Pigneau de Behaine",
+    "slug": "pierre-pigneau-de-behaine",
+    "quote": "1741–1799"
+   },
+   {
+    "label": "Pius VI",
+    "slug": "pope-pius-vi",
+    "quote": "1717–1799"
+   },
+   {
+    "label": "Patrick Henry",
+    "slug": "patrick-henry",
+    "quote": "1736–1799"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1948",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Gandhi",
+    "slug": "mahatma-gandhi",
+    "quote": "1869–1948"
+   },
+   {
+    "label": "Jinnah",
+    "slug": "muhammad-ali-jinnah",
+    "quote": "1876–1948"
+   },
+   {
+    "label": "Eisenstein",
+    "slug": "sergei-eisenstein",
+    "quote": "1898–1948"
+   },
+   {
+    "label": "Beneš",
+    "slug": "edvard-benes",
+    "quote": "1884–1948"
+   },
+   {
+    "label": "Gaitán",
+    "slug": "jorge-eliecer-gaitan",
+    "quote": "1903–1948"
+   },
+   {
+    "label": "Manuel Roxas",
+    "slug": "manuel-roxas",
+    "quote": "1892–1948"
+   }
+  ],
+  "note": "Gandhi and Jinnah, the two founders, both died in 1948."
+ },
+ {
+  "name": "Died in 1964",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Nehru",
+    "slug": "jawaharlal-nehru",
+    "quote": "1889–1964"
+   },
+   {
+    "label": "Aguinaldo",
+    "slug": "emilio-aguinaldo",
+    "quote": "1869–1964"
+   },
+   {
+    "label": "Phibun",
+    "slug": "plaek-phibunsongkhram",
+    "quote": "1897–1964"
+   },
+   {
+    "label": "MacArthur",
+    "slug": "douglas-macarthur",
+    "quote": "1880–1964"
+   },
+   {
+    "label": "Shishakli",
+    "slug": "adib-shishakli",
+    "quote": "1909–1964"
+   },
+   {
+    "label": "Karl Polanyi",
+    "slug": "karl-polanyi",
+    "quote": "1886–1964"
+   }
+  ]
+ },
+ {
+  "name": "All in 1947",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Partition of India",
+    "slug": "partition-of-india",
+    "quote": "on 14–15 August 1947"
+   },
+   {
+    "label": "Constitution of Japan",
+    "slug": "constitution-of-japan",
+    "quote": "The Constitution of Japan was adopted in 1947"
+   },
+   {
+    "label": "Panglong",
+    "slug": "panglong-conference",
+    "quote": "The Panglong Agreement of 12 February 1947"
+   },
+   {
+    "label": "Truman Doctrine",
+    "slug": "truman-doctrine",
+    "quote": "Truman on 12 March 1947"
+   },
+   {
+    "label": "Transistor",
+    "slug": "transistor",
+    "quote": "was invented in 1947 by John Bardeen"
+   },
+   {
+    "label": "Der Spiegel",
+    "slug": "der-spiegel",
+    "quote": "founded in Hanover in 1947"
+   }
+  ]
+ },
+ {
+  "name": "___ Singh",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Ranjit",
+    "slug": "ranjit-singh",
+    "quote": "Ranjit Singh"
+   },
+   {
+    "label": "Hari",
+    "slug": "hari-singh",
+    "quote": "Hari Singh"
+   },
+   {
+    "label": "Duleep",
+    "slug": "duleep-singh",
+    "quote": "Duleep Singh"
+   },
+   {
+    "label": "Bhagat",
+    "slug": "bhagat-singh",
+    "quote": "Bhagat Singh"
+   },
+   {
+    "label": "Manmohan",
+    "slug": "manmohan-singh",
+    "quote": "Manmohan Singh"
+   },
+   {
+    "label": "Gulab",
+    "slug": "gulab-singh",
+    "quote": "Gulab Singh"
+   }
+  ],
+  "note": "Manmohan is also in the prime ministers group, Man Singh I in Akbar's court."
+ },
+ {
+  "name": "___ Mahal",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Taj",
+    "slug": "taj-mahal",
+    "quote": "The Taj Mahal is a white marble mausoleum in Agra"
+   },
+   {
+    "label": "Noor",
+    "slug": "noor-mahal",
+    "quote": "Noor Mahal is a palace in Bahawalpur"
+   },
+   {
+    "label": "Aina",
+    "slug": "aina-mahal",
+    "quote": "The Aina Mahal ('hall of mirrors')"
+   },
+   {
+    "label": "Hindola",
+    "slug": "hindola-mahal",
+    "quote": "The Hindola Mahal ('swinging palace')"
+   },
+   {
+    "label": "Jahaz",
+    "slug": "jahaz-mahal",
+    "quote": "The Jahaz Mahal ('ship palace')"
+   },
+   {
+    "label": "Jahangir",
+    "slug": "jahangir-mahal",
+    "quote": "The Jahangir Mahal is a palace in Orchha"
+   }
+  ],
+  "note": "Jahangir is a decoy (the emperor)."
+ },
+ {
+  "name": "Hide a vehicle",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Taxila",
+    "slug": "taxila",
+    "quote": "Taxila was an ancient city in the north-west of the Indian subcontinent"
+   },
+   {
+    "label": "Vanga",
+    "slug": "vanga",
+    "quote": "Vanga was an ancient kingdom and region of the Ganges delta"
+   },
+   {
+    "label": "Cabral",
+    "slug": "pedro-alvares-cabral",
+    "quote": "Pedro Álvares Cabral was a Portuguese navigator"
+   },
+   {
+    "label": "Carnatic Wars",
+    "slug": "carnatic-wars",
+    "quote": "The Carnatic Wars were three conflicts in south-eastern India"
+   },
+   {
+    "label": "Subhas Chandra Bose",
+    "slug": "subhas-chandra-bose",
+    "quote": "Subhas Chandra Bose was an Indian nationalist leader"
+   },
+   {
+    "label": "Vandals",
+    "slug": "vandals",
+    "quote": "The Vandals were a Germanic people"
+   }
+  ],
+  "note": "taxi, van, cab, car, sub, van: Vanga and Vandals both hide \"van\"."
+ },
+ {
+  "name": "Hide a drink",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Gingee",
+    "slug": "gingee",
+    "quote": "Gingee, also called Senji, is a town in Viluppuram district of Tamil Nadu"
+   },
+   {
+    "label": "Palembang",
+    "slug": "palembang",
+    "quote": "Palembang is a city on the Musi River in southern Sumatra"
+   },
+   {
+    "label": "Colachel",
+    "slug": "battle-of-colachel",
+    "quote": "The Battle of Colachel was fought in August 1741"
+   },
+   {
+    "label": "Chaitanya",
+    "slug": "chaitanya-mahaprabhu",
+    "quote": "Chaitanya Mahaprabhu was a Bengali saint"
+   },
+   {
+    "label": "Saketa",
+    "slug": "saketa",
+    "quote": "Saketa was an ancient city in northern India"
+   },
+   {
+    "label": "Sodasa",
+    "slug": "sodasa",
+    "quote": "Sodasa was an Indo-Scythian ruler of Mathura"
+   }
+  ],
+  "note": "gin, ale, cola, chai, sake, soda. Chaitanya is also in the Bhakti group."
+ },
+ {
+  "name": "___ Mutiny",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Chenqiao",
+    "slug": "chenqiao-mutiny",
+    "quote": "The Chenqiao Mutiny was the coup of 960 CE"
+   },
+   {
+    "label": "Kiel",
+    "slug": "kiel-mutiny",
+    "quote": "The Kiel mutiny was a revolt by sailors of the German High Seas Fleet"
+   },
+   {
+    "label": "Yên Bái",
+    "slug": "yen-bai-mutiny",
+    "quote": "The Yên Bái mutiny was an uprising"
+   },
+   {
+    "label": "Vellore",
+    "slug": "vellore",
+    "quote": "The Vellore Mutiny of 1806"
+   },
+   {
+    "label": "Indian",
+    "slug": "indian-rebellion-of-1857",
+    "quote": "beginning with a mutiny of Indian soldiers"
+   },
+   {
+    "label": "Opis",
+    "slug": "opis",
+    "quote": "Alexander the Great faced a mutiny of his Macedonian troops at Opis"
+   }
+  ],
+  "note": "\"Indian Mutiny\" is the old British name of the 1857 rebellion; Vellore and Opis link the place entries."
+ }
+]

@@ -1,0 +1,2599 @@
+[
+ {
+  "name": "Maya cities",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chichen Itza",
+    "slug": "chichen-itza",
+    "quote": "Chichen Itza was a large pre-Columbian city built by the Maya people, whose ruins lie in Yucatán, Mexico, between Valladolid and Mérida"
+   },
+   {
+    "label": "Copán",
+    "slug": "copan",
+    "quote": "Copán is an archaeological site of the Maya civilization in the Copán Department of western Honduras, near the border with Guatemala"
+   },
+   {
+    "label": "Calakmul",
+    "slug": "calakmul",
+    "quote": "Calakmul is a Maya archaeological site in the Mexican state of Campeche, 35 kilometres from the Guatemalan border"
+   },
+   {
+    "label": "Palenque",
+    "slug": "palenque",
+    "quote": "Palenque, anciently known as Lakamha, is the site of a Maya city-state near the Usumacinta River in the Mexican state of Chiapas"
+   },
+   {
+    "label": "Naranjo",
+    "slug": "naranjo",
+    "quote": "Naranjo, called Wak Kab'nal in Mayan, is a Maya city in the Petén Basin of Guatemala, about 50"
+   },
+   {
+    "label": "Dos Pilas",
+    "slug": "dos-pilas",
+    "quote": "Dos Pilas is a Maya site in the Petexbatún region of Petén, Guatemala, founded by an offshoot of the Tikal dynasty in 629 CE to control trade along the Pasión River"
+   }
+  ]
+ },
+ {
+  "name": "The American Civil War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fort Sumter",
+    "slug": "battle-of-fort-sumter",
+    "quote": "April 1861, opened the American Civil War, when Confederate batteries bombarded the federal fort in the harbour of Charleston"
+   },
+   {
+    "label": "Gettysburg",
+    "slug": "battle-of-gettysburg",
+    "quote": "The Battle of Gettysburg, fought in Pennsylvania on 1–3 July 1863, was the largest battle of the American Civil War"
+   },
+   {
+    "label": "Vicksburg",
+    "slug": "siege-of-vicksburg",
+    "quote": "with the surrender of the Confederate fortress on the Mississippi River in Mississippi to Union forces under Ulysses"
+   },
+   {
+    "label": "Appomattox",
+    "slug": "battle-of-appomattox-court-house",
+    "quote": "The surrender led to the collapse of the Confederacy within weeks"
+   },
+   {
+    "label": "Emancipation Proclamation",
+    "slug": "emancipation-proclamation",
+    "quote": "January 1863, during the American Civil War, declaring free all enslaved people in the states then in rebellion against"
+   },
+   {
+    "label": "Robert E. Lee",
+    "slug": "robert-e-lee",
+    "quote": "Lee was an American soldier who commanded the Confederate Army of Northern Virginia during the American Civil War"
+   }
+  ],
+  "note": "Richmond, Montgomery and the seceding states are in \"Joined the Confederacy\""
+ },
+ {
+  "name": "The American Revolution",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Boston Tea Party",
+    "slug": "boston-tea-party",
+    "quote": "December 1773 in which American colonists, some disguised as Mohawk Indians, threw 342 chests of East India Company"
+   },
+   {
+    "label": "Lexington and Concord",
+    "slug": "battles-of-lexington-and-concord",
+    "quote": "The Battles of Lexington and Concord, fought on 19 April 1775 in Massachusetts, were the first military engagements of the American Revolutionary War"
+   },
+   {
+    "label": "Saratoga",
+    "slug": "battles-of-saratoga",
+    "quote": "Burgoyne's surrender on 17 October was a turning point of the American Revolutionary War, persuading France to enter into an alliance with the United States in 1778"
+   },
+   {
+    "label": "Yorktown",
+    "slug": "siege-of-yorktown",
+    "quote": "The Siege of Yorktown, in Virginia, was the last major battle of the American Revolutionary War"
+   },
+   {
+    "label": "Treaty of Paris (1783)",
+    "slug": "treaty-of-paris-1783",
+    "quote": "The Treaty of Paris of 1783 ended the American Revolutionary War"
+   },
+   {
+    "label": "Continental Congress",
+    "slug": "continental-congress",
+    "quote": "The Continental Congress was the assembly of delegates from the Thirteen Colonies that directed American resistance to Britain and then governed the United States"
+   }
+  ]
+ },
+ {
+  "name": "Pirates and privateers",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Blackbeard",
+    "slug": "blackbeard",
+    "quote": "Blackbeard, Edward Teach or Thatch, was an English pirate of the Caribbean and the American coast"
+   },
+   {
+    "label": "Henry Morgan",
+    "slug": "henry-morgan",
+    "quote": "Henry Morgan was a Welsh privateer based at Port Royal, Jamaica, who led raids on Spanish America, including Portobelo in 1668 and Maracaibo in 1669"
+   },
+   {
+    "label": "Francis Drake",
+    "slug": "francis-drake",
+    "quote": "1540–1596) was an English sea captain and privateer who raided Spain's American empire"
+   },
+   {
+    "label": "Calico Jack",
+    "slug": "calico-jack",
+    "quote": "Calico Jack, John Rackham, was an English pirate active in the Bahamas and Cuba from 1718 to 1720, late in the Golden Age of Piracy"
+   },
+   {
+    "label": "Piet Heyn",
+    "slug": "piet-heyn",
+    "quote": "Piet Heyn was a Dutch naval officer and privateer in the service of the Dutch West India Company"
+   },
+   {
+    "label": "Laurens de Graaf",
+    "slug": "laurens-de-graaf",
+    "quote": "Laurens de Graaf was a Dutch buccaneer who operated from French Saint-Domingue and raided Spanish shipping and ports in the Caribbean"
+   }
+  ]
+ },
+ {
+  "name": "State capitals of Australia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sydney",
+    "slug": "sydney",
+    "quote": "Sydney is the capital of New South Wales and the largest city in Australia, on Port Jackson on the south-east coast"
+   },
+   {
+    "label": "Melbourne",
+    "slug": "melbourne",
+    "quote": "Melbourne is the capital of Victoria and the second-largest city of Australia, on Port Phillip Bay at the mouth of the Yarra River"
+   },
+   {
+    "label": "Brisbane",
+    "slug": "brisbane",
+    "quote": "Brisbane is the capital of Queensland, Australia, on the Brisbane River near Moreton Bay"
+   },
+   {
+    "label": "Perth",
+    "slug": "perth",
+    "quote": "Perth is the capital of Western Australia, on the Swan River near the Indian Ocean coast"
+   },
+   {
+    "label": "Adelaide",
+    "slug": "adelaide",
+    "quote": "Adelaide is the capital of South Australia, on the plains between Gulf St Vincent and the Mount Lofty Ranges"
+   },
+   {
+    "label": "Hobart",
+    "slug": "hobart",
+    "quote": "Hobart is the capital of Tasmania, Australia, on the estuary of the Derwent River beneath Mount Wellington"
+   }
+  ],
+  "note": "Canberra is the federal capital, not a state capital: a decoy if needed"
+ },
+ {
+  "name": "Hawaiian Islands",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Oʻahu",
+    "slug": "oahu",
+    "quote": "Oʻahu is the third-largest of the Hawaiian Islands and the most populous, home to the state capital Honolulu, Waikīkī and Pearl Harbor"
+   },
+   {
+    "label": "Maui",
+    "slug": "maui",
+    "quote": "Maui is the second-largest island of Hawaii, formed by two volcanoes joined by an isthmus, with the summit of Haleakalā in the east"
+   },
+   {
+    "label": "Kauaʻi",
+    "slug": "kauai",
+    "quote": "Kauaʻi is the oldest and northernmost of the main Hawaiian Islands, separated from Oʻahu by the wide Kaʻieʻiewaho Channel"
+   },
+   {
+    "label": "Molokaʻi",
+    "slug": "molokai",
+    "quote": "Molokaʻi is one of the main Hawaiian Islands, lying between Oʻahu and Maui"
+   },
+   {
+    "label": "Lānaʻi",
+    "slug": "lanai",
+    "quote": "Lānaʻi is the sixth-largest of the main Hawaiian Islands, lying west of Maui and south of Molokaʻi"
+   }
+  ],
+  "note": "Only five main islands have entries"
+ },
+ {
+  "name": "Provinces of Canada",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ontario",
+    "slug": "ontario",
+    "quote": "Ontario is the most populous province of Canada, stretching from the Great Lakes to Hudson Bay, with Toronto"
+   },
+   {
+    "label": "Manitoba",
+    "slug": "manitoba",
+    "quote": "Manitoba is a province of central Canada, with Winnipeg as its capital"
+   },
+   {
+    "label": "Saskatchewan",
+    "slug": "saskatchewan",
+    "quote": "Saskatchewan is a prairie province of western Canada, between Alberta and Manitoba, with Regina as its capital"
+   },
+   {
+    "label": "British Columbia",
+    "slug": "british-columbia",
+    "quote": "British Columbia is the westernmost province of Canada, between the Rocky Mountains and the Pacific"
+   },
+   {
+    "label": "Nova Scotia",
+    "slug": "nova-scotia",
+    "quote": "Nova Scotia is a province on the Atlantic coast of Canada, originally part of French Acadia"
+   },
+   {
+    "label": "Alberta",
+    "slug": "alberta",
+    "quote": "Alberta is a province of western Canada, between British Columbia and Saskatchewan, with Edmonton as its capital and Calgary as its largest city"
+   }
+  ]
+ },
+ {
+  "name": "Battles of the Pacific War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Midway",
+    "slug": "battle-of-midway",
+    "quote": "The Battle of Midway was a naval and air battle fought in June 1942 near Midway Atoll in the central Pacific during the Second World War"
+   },
+   {
+    "label": "Guadalcanal",
+    "slug": "guadalcanal-campaign",
+    "quote": "Fought on land, at sea and in the air, it ended with Japanese withdrawal from the island"
+   },
+   {
+    "label": "Iwo Jima",
+    "slug": "battle-of-iwo-jima",
+    "quote": "The Battle of Iwo Jima was fought from 19 February to 26 March 1945, when United States Marines captured the volcanic island of Iwo Jima from Japan in the Pacific War"
+   },
+   {
+    "label": "Pearl Harbor",
+    "slug": "attack-on-pearl-harbor",
+    "quote": "The attack on Pearl Harbor was the surprise attack by the Empire of Japan's naval air forces on the United States Pacific Fleet in Hawaii on 7 December 1941"
+   },
+   {
+    "label": "Leyte",
+    "slug": "battle-of-leyte",
+    "quote": "Gulf destroyed much of the Japanese fleet, and by the end of 1944 the island was largely taken"
+   },
+   {
+    "label": "Tarawa",
+    "slug": "battle-of-tarawa",
+    "quote": "Marines stormed a strongly fortified Japanese garrison"
+   }
+  ]
+ },
+ {
+  "name": "Wars fought by the United States",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "War of 1812",
+    "slug": "war-of-1812",
+    "quote": "The War of 1812 was fought from 1812 to 1815 between the United States and the United Kingdom, with Britain's Canadian colonies and Native American allies"
+   },
+   {
+    "label": "Mexican–American War",
+    "slug": "mexican-american-war",
+    "quote": "The Mexican–American War was fought between the United States and Mexico from 1846 to 1848, following the American annexation of Texas and a border dispute"
+   },
+   {
+    "label": "Korean War",
+    "slug": "korean-war",
+    "quote": "A United Nations force led by the United States drove the North back towards the Chinese border, and the People's Republic of China then intervened with massive forces"
+   },
+   {
+    "label": "Vietnam War",
+    "slug": "vietnam-war",
+    "quote": "and South Vietnam and the United States on the other, with Australia, New Zealand, South Korea and others sending"
+   },
+   {
+    "label": "Gulf War",
+    "slug": "gulf-war",
+    "quote": "35 states led by the United States assembled forces in Saudi Arabia and, after an air campaign from January"
+   },
+   {
+    "label": "Spanish–American War",
+    "slug": "spanish-american-war",
+    "quote": "The Spanish–American War was fought in 1898 between Spain and the United States, arising from the Cuban struggle for independence"
+   }
+  ]
+ },
+ {
+  "name": "Built by the Incas",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Machu Picchu",
+    "slug": "machu-picchu",
+    "quote": "Machu Picchu is a 15th-century Inca site on a mountain ridge above the Urubamba valley in Peru"
+   },
+   {
+    "label": "Sacsayhuamán",
+    "slug": "sacsayhuaman",
+    "quote": "Sacsayhuamán is an Inca complex on a hill overlooking Cusco in Peru, famous for its zigzag walls of huge, precisely fitted stone blocks"
+   },
+   {
+    "label": "Coricancha",
+    "slug": "coricancha",
+    "quote": "The Coricancha was the most important temple of the Inca Empire, in Cusco, dedicated chiefly to the sun god Inti"
+   },
+   {
+    "label": "Ollantaytambo",
+    "slug": "ollantaytambo",
+    "quote": "Ollantaytambo is a town and Inca archaeological site in the Sacred Valley of the Urubamba, north-west of Cusco in Peru"
+   },
+   {
+    "label": "Ingapirca",
+    "slug": "ingapirca",
+    "quote": "Ingapirca is the largest Inca archaeological site in Ecuador, in Cañar province"
+   },
+   {
+    "label": "Qhapaq Ñan",
+    "slug": "qhapaq-nan",
+    "quote": "the road network of the Inca Empire, some 40,000 kilometres long, running along the Andes and the Pacific"
+   }
+  ]
+ },
+ {
+  "name": "Native American war leaders",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sitting Bull",
+    "slug": "sitting-bull",
+    "quote": "Sitting Bull was a Hunkpapa Lakota holy man and leader who united Lakota and Cheyenne bands against American expansion onto the Great Plains"
+   },
+   {
+    "label": "Crazy Horse",
+    "slug": "crazy-horse",
+    "quote": "Crazy Horse was an Oglala Lakota war leader who resisted American expansion onto the northern Plains"
+   },
+   {
+    "label": "Tecumseh",
+    "slug": "tecumseh",
+    "quote": "Tecumseh was a Shawnee leader who built a confederacy of Native American peoples to resist the expansion of the United States into the Old Northwest"
+   },
+   {
+    "label": "Osceola",
+    "slug": "osceola",
+    "quote": "Osceola was a Seminole war leader who led resistance to removal from Florida in the Second Seminole War"
+   },
+   {
+    "label": "Little Turtle",
+    "slug": "little-turtle",
+    "quote": "Little Turtle, Mihšihkinaahkwa in Miami, was a war leader of the Miami people"
+   },
+   {
+    "label": "Quanah Parker",
+    "slug": "quanah-parker",
+    "quote": "Quanah Parker was a war leader of the Kwahadi Comanche, the son of Peta Nocona and the captive Cynthia Ann Parker"
+   }
+  ]
+ },
+ {
+  "name": "The civil rights movement",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Montgomery bus boycott",
+    "slug": "montgomery-bus-boycott",
+    "quote": "The Montgomery bus boycott was a protest campaign against racial segregation on the buses of Montgomery, Alabama, and a foundational event of the civil rights movement"
+   },
+   {
+    "label": "March on Washington",
+    "slug": "march-on-washington",
+    "quote": "civil and economic rights for African Americans"
+   },
+   {
+    "label": "Selma marches",
+    "slug": "selma-to-montgomery-marches",
+    "quote": "were three protest marches for African American voting rights, held in 1965 along the 54-mile (87 km) highway from"
+   },
+   {
+    "label": "Brown v. Board of Education",
+    "slug": "brown-v-board-of-education",
+    "quote": "that state laws establishing racial segregation in public schools violated the Fourteenth Amendment's Equal Protection Clause"
+   },
+   {
+    "label": "Rosa Parks",
+    "slug": "rosa-parks",
+    "quote": "Rosa Parks was an American civil rights activist, best known for refusing on 1 December 1955 to give up"
+   },
+   {
+    "label": "Martin Luther King Jr.",
+    "slug": "martin-luther-king-jr",
+    "quote": "was an American Baptist minister and the best-known leader of the civil rights movement"
+   }
+  ]
+ },
+ {
+  "name": "Abolitionists",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Frederick Douglass",
+    "slug": "frederick-douglass",
+    "quote": "Frederick Douglass was an American abolitionist, writer and statesman who escaped slavery in Maryland in 1838 and became"
+   },
+   {
+    "label": "Harriet Tubman",
+    "slug": "harriet-tubman",
+    "quote": "Harriet Tubman was an American abolitionist and social activist who was born into slavery in Dorchester County, Maryland"
+   },
+   {
+    "label": "William Lloyd Garrison",
+    "slug": "william-lloyd-garrison",
+    "quote": "Lloyd Garrison was an American abolitionist, journalist and social reformer who founded the anti-slavery newspaper The Liberator in"
+   },
+   {
+    "label": "John Brown",
+    "slug": "john-brown-abolitionist",
+    "quote": "John Brown was an American abolitionist and evangelical Christian who believed he was an instrument of God raised"
+   },
+   {
+    "label": "Sojourner Truth",
+    "slug": "sojourner-truth",
+    "quote": "Sojourner Truth was an American abolitionist and campaigner for women's rights, born into slavery in New York as Isabella Baumfree"
+   },
+   {
+    "label": "Joaquim Nabuco",
+    "slug": "joaquim-nabuco",
+    "quote": "Joaquim Nabuco was a Brazilian statesman, diplomat and writer, a leading voice of his country's abolitionist movement"
+   }
+  ],
+  "note": "Sojourner Truth and Douglass also campaigned for women's rights (decoys for that group)"
+ },
+ {
+  "name": "Capitals in the Caribbean",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kingston",
+    "slug": "kingston-jamaica",
+    "quote": "Kingston is the capital and largest city of Jamaica, on a deep natural harbour on the south-east coast"
+   },
+   {
+    "label": "Santo Domingo",
+    "slug": "santo-domingo",
+    "quote": "Independence was proclaimed there in 1821 and again in 1844, and it is the capital of the Dominican Republic"
+   },
+   {
+    "label": "Port-au-Prince",
+    "slug": "port-au-prince",
+    "quote": "Port-au-Prince is the capital and largest city of Haiti, on a bay at the eastern end of the Gulf of Gonâve"
+   },
+   {
+    "label": "Port of Spain",
+    "slug": "port-of-spain",
+    "quote": "Port of Spain is the capital of Trinidad and Tobago, on the Gulf of Paria in north-western Trinidad"
+   },
+   {
+    "label": "Bridgetown",
+    "slug": "bridgetown",
+    "quote": "Bridgetown is the capital and main port of Barbados, on Carlisle Bay on the island's south-west coast"
+   },
+   {
+    "label": "San Juan",
+    "slug": "san-juan-puerto-rico",
+    "quote": "San Juan is the capital of Puerto Rico, on a bay on the island's north coast"
+   }
+  ]
+ },
+ {
+  "name": "The Texas Revolution",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "The Alamo",
+    "slug": "alamo-mission",
+    "quote": "During the Texas Revolution its small garrison was besieged by Santa Anna's army and killed on 6 March 1836, and 'Remember the Alamo' became the Texans' rallying cry"
+   },
+   {
+    "label": "San Jacinto",
+    "slug": "battle-of-san-jacinto",
+    "quote": "The Battle of San Jacinto was fought on 21 April 1836 near present-day Houston and decided the Texas Revolution"
+   },
+   {
+    "label": "Sam Houston",
+    "slug": "sam-houston",
+    "quote": "Sam Houston was an American soldier and politician who commanded the Texan army in the Texas Revolution"
+   },
+   {
+    "label": "Stephen F. Austin",
+    "slug": "stephen-f-austin",
+    "quote": "Austin (1793–1836) was an American empresario known as the Father of Texas"
+   },
+   {
+    "label": "Santa Anna",
+    "slug": "antonio-lopez-de-santa-anna",
+    "quote": "He helped overthrow the empire of Agustín de Iturbide, presided over the centralist republic, lost Texas in 1836 and commanded during the war with the United States"
+   },
+   {
+    "label": "Washington-on-the-Brazos",
+    "slug": "washington-on-the-brazos",
+    "quote": "to the Convention of 1836 declared Texas independent from Mexico on 2 March 1836 and drafted its constitution"
+   }
+  ]
+ },
+ {
+  "name": "Early Virginia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jamestown",
+    "slug": "jamestown",
+    "quote": "Jamestown was an English settlement in Virginia founded in 1607"
+   },
+   {
+    "label": "John Smith",
+    "slug": "john-smith-explorer",
+    "quote": "John Smith was an English soldier and explorer who helped found Jamestown in 1607 and led the Virginia colony as president of its council in 1608 and 1609"
+   },
+   {
+    "label": "John Rolfe",
+    "slug": "john-rolfe",
+    "quote": "His marriage to Pocahontas, daughter of the paramount chief Wahunsenacah, in 1614 brought a period of peace between the English and the Powhatan"
+   },
+   {
+    "label": "Pocahontas",
+    "slug": "pocahontas",
+    "quote": "Pocahontas was a daughter of Wahunsenacah, paramount chief of the Powhatan, in Virginia"
+   },
+   {
+    "label": "Starving Time",
+    "slug": "starving-time",
+    "quote": "The Starving Time was the winter of 1609–1610 at Jamestown, Virginia, when most of the English colonists died of famine and disease"
+   },
+   {
+    "label": "Wahunsenacah",
+    "slug": "wahunsenacah",
+    "quote": "Wahunsenacah, known to the English as Powhatan, was the paramount chief of the Powhatan Confederacy in Tidewater Virginia"
+   }
+  ]
+ },
+ {
+  "name": "Cuba and the United States",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bay of Pigs",
+    "slug": "bay-of-pigs-invasion",
+    "quote": "a failed landing in southern Cuba on 17–20 April 1961 by about 1,400 Cuban exiles trained and funded"
+   },
+   {
+    "label": "Cuban Missile Crisis",
+    "slug": "cuban-missile-crisis",
+    "quote": "The Cuban Missile Crisis of October 1962 was the closest the Cold War came to nuclear war"
+   },
+   {
+    "label": "Guantánamo Bay",
+    "slug": "guantanamo-bay-naval-base",
+    "quote": "Guantánamo Bay Naval Base is a United States naval base on Guantánamo Bay in south-eastern Cuba, leased under an agreement of 1903 that followed the Platt Amendment"
+   },
+   {
+    "label": "Platt Amendment",
+    "slug": "platt-amendment",
+    "quote": "The Platt Amendment was a 1901 rider to a United States army appropriations act that set the conditions for ending the American occupation of Cuba"
+   },
+   {
+    "label": "Santiago de Cuba (1898)",
+    "slug": "battle-of-santiago-de-cuba",
+    "quote": "The Battle of Santiago de Cuba was a naval battle fought on 3 July 1898 during the Spanish–American War"
+   },
+   {
+    "label": "Fulgencio Batista",
+    "slug": "fulgencio-batista",
+    "quote": "His corrupt dictatorship was overthrown by Fidel Castro's revolutionaries, and he fled Cuba on 1 January 1959"
+   }
+  ]
+ },
+ {
+  "name": "Figures of the Mexican Revolution",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pancho Villa",
+    "slug": "pancho-villa",
+    "quote": "Pancho Villa was a Mexican revolutionary general from northern Mexico who led the Division of the North in the Mexican Revolution"
+   },
+   {
+    "label": "Francisco Madero",
+    "slug": "francisco-i-madero",
+    "quote": "Plan of San Luis Potosí, beginning the Mexican Revolution"
+   },
+   {
+    "label": "Venustiano Carranza",
+    "slug": "venustiano-carranza",
+    "quote": "Venustiano Carranza was a Mexican politician who led the Constitutionalist movement against Victoriano Huerta from 1913 and was president from 1917 to 1920"
+   },
+   {
+    "label": "Álvaro Obregón",
+    "slug": "alvaro-obregon",
+    "quote": "Constitutionalist commander in the Mexican Revolution, he defeated Pancho Villa at the battles of Celaya in 1915 and"
+   },
+   {
+    "label": "Victoriano Huerta",
+    "slug": "victoriano-huerta",
+    "quote": "Victoriano Huerta was a Mexican general who seized power in February 1913 in a coup against President Francisco Madero, who was then murdered"
+   },
+   {
+    "label": "Porfirio Díaz",
+    "slug": "porfirio-diaz",
+    "quote": "His fraudulent re-election in 1910 sparked the Mexican Revolution, and he died in exile in Paris"
+   }
+  ]
+ },
+ {
+  "name": "Gods of the Maya and the Incas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chaac",
+    "slug": "chaac",
+    "quote": "Chaac is the Maya god of rain, lightning and storms, often shown with a long curling nose and an axe that strikes the clouds to bring rain"
+   },
+   {
+    "label": "Ix Chel",
+    "slug": "ix-chel",
+    "quote": "Ix Chel is a Maya goddess associated with the moon, childbirth, weaving and medicine"
+   },
+   {
+    "label": "Itzamna",
+    "slug": "itzamna",
+    "quote": "Itzamna was one of the principal gods of the Maya, a creator deity associated with the sky, writing, knowledge and healing, often shown as an old man"
+   },
+   {
+    "label": "Inti",
+    "slug": "inti",
+    "quote": "Inti was the sun god of the Incas and the divine ancestor claimed by the Sapa Inca, the emperor"
+   },
+   {
+    "label": "Pachamama",
+    "slug": "pachamama",
+    "quote": "Pachamama is the earth and fertility goddess of the Andean peoples, revered by Quechua and Aymara communities since before the Inca Empire"
+   },
+   {
+    "label": "Viracocha",
+    "slug": "viracocha",
+    "quote": "Viracocha was the creator god of the Inca and other Andean peoples, believed to have risen from Lake Titicaca and made the sun, moon, stars and the first humans"
+   }
+  ]
+ },
+ {
+  "name": "Prime ministers of Australia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Edmund Barton",
+    "slug": "edmund-barton",
+    "quote": "He became the first prime minister of the Commonwealth of Australia in 1901, when Parliament met in Melbourne, and his government passed the Immigration Restriction Act"
+   },
+   {
+    "label": "Alfred Deakin",
+    "slug": "alfred-deakin",
+    "quote": "Alfred Deakin was an Australian lawyer and politician from Victoria, a leader of the federation movement and the second prime minister of Australia"
+   },
+   {
+    "label": "Robert Menzies",
+    "slug": "robert-menzies",
+    "quote": "Sir Robert Menzies was Australia's longest-serving prime minister, in office from 1939 to 1941 and from 1949 to 1966"
+   },
+   {
+    "label": "John Curtin",
+    "slug": "john-curtin",
+    "quote": "John Curtin was an Australian Labor politician and prime minister from 1941 until his death in 1945"
+   },
+   {
+    "label": "Gough Whitlam",
+    "slug": "gough-whitlam",
+    "quote": "Gough Whitlam was the Labor prime minister of Australia from 1972 to 1975"
+   },
+   {
+    "label": "Bob Hawke",
+    "slug": "bob-hawke",
+    "quote": "Bob Hawke was the Labor prime minister of Australia from 1983 to 1991, after leading the Australian Council of Trade Unions"
+   }
+  ]
+ },
+ {
+  "name": "Dictators of Latin America",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rafael Trujillo",
+    "slug": "rafael-trujillo",
+    "quote": "Rafael Trujillo was dictator of the Dominican Republic from 1930 to 1961"
+   },
+   {
+    "label": "Alfredo Stroessner",
+    "slug": "alfredo-stroessner",
+    "quote": "Alfredo Stroessner was a Paraguayan general who seized power in 1954 and ruled as president until 1989, one of the longest dictatorships in Latin America"
+   },
+   {
+    "label": "Anastasio Somoza García",
+    "slug": "anastasio-somoza-garcia",
+    "quote": "was a Nicaraguan officer and dictator who, as director of the US-trained National Guard, had Augusto César Sandino"
+   },
+   {
+    "label": "Augusto Pinochet",
+    "slug": "augusto-pinochet",
+    "quote": "He ruled Chile as dictator until 1990, with widespread repression and free-market economic reforms, and imposed the constitution of 1980"
+   },
+   {
+    "label": "François Duvalier",
+    "slug": "francois-duvalier",
+    "quote": "He ruled through terror, using the Tonton Macoute militia to kill and intimidate opponents, and drew on Vodou imagery to support his power"
+   },
+   {
+    "label": "Juan Vicente Gómez",
+    "slug": "juan-vicente-gomez",
+    "quote": "Juan Vicente Gómez was a soldier from the Andes who seized power in Venezuela in 1908 and ruled as dictator until his death in 1935"
+   }
+  ]
+ },
+ {
+  "name": "The American women's movement",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Susan B. Anthony",
+    "slug": "susan-b-anthony",
+    "quote": "Anthony was an American campaigner for women's rights and the abolition of slavery, and the leading organiser of the movement for women's suffrage"
+   },
+   {
+    "label": "Elizabeth Cady Stanton",
+    "slug": "elizabeth-cady-stanton",
+    "quote": "Elizabeth Cady Stanton was an American writer and activist, a leader of the women's rights movement in the United States"
+   },
+   {
+    "label": "Lucretia Mott",
+    "slug": "lucretia-mott",
+    "quote": "Lucretia Mott was an American Quaker, abolitionist, women's rights activist and social reformer"
+   },
+   {
+    "label": "Seneca Falls Convention",
+    "slug": "seneca-falls-convention",
+    "quote": "The Seneca Falls Convention was the first women's rights convention, held in the Wesleyan Chapel at Seneca Falls, New York, on 19–20 July 1848"
+   },
+   {
+    "label": "Nineteenth Amendment",
+    "slug": "nineteenth-amendment-to-the-united-states-constitution",
+    "quote": "was the culmination of the women's suffrage movement that had begun at the Seneca Falls Convention of 1848"
+   },
+   {
+    "label": "Equal Rights Amendment",
+    "slug": "equal-rights-amendment",
+    "quote": "with the rise of the women's movement, passed the House of Representatives in 1971 and the Senate in"
+   }
+  ],
+  "note": "Sojourner Truth and Frederick Douglass (in Abolitionists) are decoys"
+ },
+ {
+  "name": "Explorers of the North American interior",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lewis and Clark",
+    "slug": "lewis-and-clark-expedition",
+    "quote": "The Lewis and Clark Expedition was a United States Army expedition led by Meriwether Lewis and William"
+   },
+   {
+    "label": "La Salle",
+    "slug": "rene-robert-cavelier-sieur-de-la-salle",
+    "quote": "René-Robert Cavelier, Sieur de La Salle, was a French explorer in North America"
+   },
+   {
+    "label": "Jacques Marquette",
+    "slug": "jacques-marquette",
+    "quote": "In 1673 he and the explorer Louis Jolliet travelled from the Great Lakes down the Mississippi as far"
+   },
+   {
+    "label": "Hernando de Soto",
+    "slug": "hernando-de-soto",
+    "quote": "Hernando de Soto was a Spanish conquistador who took part in the conquest of Peru and in 1539 led a large expedition into the south-eastern interior of North America"
+   },
+   {
+    "label": "Cabeza de Vaca",
+    "slug": "alvar-nunez-cabeza-de-vaca",
+    "quote": "de Vaca was a Spanish explorer, one of four survivors of the Narváez expedition to Florida of 1527"
+   },
+   {
+    "label": "Juan Bautista de Anza",
+    "slug": "juan-bautista-de-anza",
+    "quote": "in Sonora, who led overland expeditions to Alta California in 1774 and 1775–1776, bringing the settlers who founded"
+   }
+  ]
+ },
+ {
+  "name": "New France",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Samuel de Champlain",
+    "slug": "samuel-de-champlain",
+    "quote": "Samuel de Champlain was a French explorer, navigator and colonial administrator who founded Quebec in 1608"
+   },
+   {
+    "label": "Louis de Frontenac",
+    "slug": "louis-de-buade-de-frontenac",
+    "quote": "Louis de Buade de Frontenac was a French soldier who served twice as governor general of New France, from 1672 to 1682 and from 1689 to 1698"
+   },
+   {
+    "label": "Montcalm",
+    "slug": "louis-joseph-de-montcalm",
+    "quote": "Louis-Joseph de Montcalm was a French general who commanded the French army in North America during the Seven Years' War from 1756"
+   },
+   {
+    "label": "Acadia",
+    "slug": "acadia",
+    "quote": "Acadia was a French colony in north-eastern North America, covering parts of present-day Nova Scotia, New Brunswick and neighbouring areas"
+   },
+   {
+    "label": "Plains of Abraham",
+    "slug": "battle-of-the-plains-of-abraham",
+    "quote": "under General James Wolfe and French forces under the Marquis de Montcalm"
+   },
+   {
+    "label": "Jean Talon",
+    "slug": "jean-talon",
+    "quote": "Jean Talon was the first intendant of New France, serving from 1665 to 1668 and from 1670 to 1672 under Louis XIV and his minister Colbert"
+   }
+  ]
+ },
+ {
+  "name": "Colonial New England",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mayflower",
+    "slug": "mayflower",
+    "quote": "the Separatists later called the Pilgrims, from Plymouth in England to New England in 1620"
+   },
+   {
+    "label": "Puritans",
+    "slug": "puritans",
+    "quote": "I drove some 20,000 to New England in the Great Migration of the 1630s, where they founded the Massachusetts"
+   },
+   {
+    "label": "Squanto",
+    "slug": "tisquantum",
+    "quote": "Tisquantum, better known as Squanto, was a Patuxet man who acted as interpreter and guide for the Pilgrims of Plymouth Colony"
+   },
+   {
+    "label": "Metacom",
+    "slug": "metacom",
+    "quote": "In 1675 he led a coalition of Native peoples against the New England colonies in King Philip's War, and he was killed in August 1676 near Mount Hope in Rhode Island"
+   },
+   {
+    "label": "King Philip's War",
+    "slug": "king-philips-war",
+    "quote": "1675–1676 between English colonists in New England and Native peoples led by the Wampanoag sachem Metacom, known to the"
+   },
+   {
+    "label": "Salem",
+    "slug": "salem-massachusetts",
+    "quote": "Salem is a coastal city in Essex County, Massachusetts, north-east of Boston"
+   }
+  ]
+ },
+ {
+  "name": "The Cuban Revolution",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fidel Castro",
+    "slug": "fidel-castro",
+    "quote": "Cuban revolutionary who led the 26th of July Movement against the dictatorship of Fulgencio Batista, attacking the Moncada barracks in 1953"
+   },
+   {
+    "label": "Che Guevara",
+    "slug": "che-guevara",
+    "quote": "Ernesto 'Che' Guevara was an Argentine-born Marxist revolutionary, a leader of the Cuban Revolution with Fidel Castro and later a minister in Cuba"
+   },
+   {
+    "label": "Raúl Castro",
+    "slug": "raul-castro",
+    "quote": "Raúl Castro is a Cuban revolutionary and the younger brother of Fidel Castro"
+   },
+   {
+    "label": "Moncada Barracks",
+    "slug": "attack-on-the-moncada-barracks",
+    "quote": "The attack on the Moncada Barracks was an assault on an army post in Santiago de Cuba on 26 July 1953 by about 160 rebels led by Fidel Castro"
+   },
+   {
+    "label": "Sierra Maestra",
+    "slug": "sierra-maestra",
+    "quote": "and, from December 1956, Fidel Castro's guerrillas, who built there the army that overthrew Fulgencio Batista in 1959"
+   },
+   {
+    "label": "Granma",
+    "slug": "granma-yacht",
+    "quote": "The Granma is the yacht that carried Fidel Castro, Che Guevara and 80 other revolutionaries from Tuxpan, Mexico, to eastern Cuba in late 1956"
+   }
+  ]
+ },
+ {
+  "name": "Lakes of Latin America",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Titicaca",
+    "slug": "lake-titicaca",
+    "quote": "Lake Titicaca is a large freshwater lake in the high Andes on the border of Peru and Bolivia, at about 3,800 metres"
+   },
+   {
+    "label": "Nicaragua",
+    "slug": "lake-nicaragua",
+    "quote": "Lake Nicaragua is the largest lake in Central America, connected to the Caribbean by the San Juan River"
+   },
+   {
+    "label": "Maracaibo",
+    "slug": "lake-maracaibo",
+    "quote": "Lake Maracaibo is a large brackish tidal bay, usually called a lake, in north-western Venezuela, joined to the Gulf of Venezuela by a narrow strait"
+   },
+   {
+    "label": "Atitlán",
+    "slug": "lake-atitlan",
+    "quote": "Lake Atitlán is a deep crater lake in the highlands of south-western Guatemala, surrounded by volcanoes"
+   },
+   {
+    "label": "Guatavita",
+    "slug": "lake-guatavita",
+    "quote": "Lake Guatavita is a small circular lake in the eastern Andes of Colombia, north-east of Bogotá, sacred to the Muisca"
+   },
+   {
+    "label": "Petén Itzá",
+    "slug": "lake-peten-itza",
+    "quote": "Lake Petén Itzá is a lake in the Petén lowlands of northern Guatemala and the setting of several Maya polities"
+   }
+  ]
+ },
+ {
+  "name": "Pyramids of the Americas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cholula",
+    "slug": "great-pyramid-of-cholula",
+    "quote": "The Great Pyramid of Cholula, Tlachihualtepetl, is a huge temple platform in the Puebla valley of Mexico, the largest pyramid in the world by volume"
+   },
+   {
+    "label": "Templo Mayor",
+    "slug": "templo-mayor",
+    "quote": "The Templo Mayor was the great twin-temple pyramid at the centre of Tenochtitlan, dedicated to Huitzilopochtli and Tlaloc"
+   },
+   {
+    "label": "Temple of the Inscriptions",
+    "slug": "temple-of-the-inscriptions",
+    "quote": "The Temple of the Inscriptions is a stepped pyramid at Palenque in Chiapas, Mexico, built as the funerary monument of the 7th-century Maya ruler K'inich Janaab Pakal"
+   },
+   {
+    "label": "Huaca de la Luna",
+    "slug": "huaca-de-la-luna",
+    "quote": "The Huaca de la Luna, 'Temple of the Moon', is a great adobe temple at the Moche capital of Huacas de Moche, near Trujillo on the north coast of Peru"
+   },
+   {
+    "label": "Huaca Pucllana",
+    "slug": "huaca-pucllana",
+    "quote": "Huaca Pucllana is a large adobe and clay pyramid of the Lima culture in the Miraflores district of Lima, Peru, built between about 200 and 700 CE"
+   },
+   {
+    "label": "El Castillo",
+    "slug": "el-castillo-chichen-itza",
+    "quote": "El Castillo, also called the Temple of Kukulcán, is a step pyramid at the centre of the Maya"
+   }
+  ]
+ },
+ {
+  "name": "Wars between South American countries",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Paraguayan War",
+    "slug": "paraguayan-war",
+    "quote": "The Paraguayan War, fought from 1864 to 1870, was a conflict between Paraguay and the Triple Alliance of Brazil, Argentina and Uruguay"
+   },
+   {
+    "label": "War of the Pacific",
+    "slug": "war-of-the-pacific",
+    "quote": "The War of the Pacific was fought from 1879 to 1884 between Chile and an alliance of Bolivia and Peru over the nitrate-rich Atacama coast"
+   },
+   {
+    "label": "Chaco War",
+    "slug": "chaco-war",
+    "quote": "The Chaco War was fought between Bolivia and Paraguay from 1932 to 1935 over the northern Gran Chaco, a region believed to hold oil"
+   },
+   {
+    "label": "Cisplatine War",
+    "slug": "cisplatine-war",
+    "quote": "fought from 1825 to 1828 between the Brazilian Empire and the United Provinces of the Río de la"
+   },
+   {
+    "label": "Gran Colombia–Peru War",
+    "slug": "gran-colombia-peru-war",
+    "quote": "War was fought in 1828–1829 between Gran Colombia and Peru over the border provinces of Jaén and Maynas"
+   },
+   {
+    "label": "Ecuadorian–Peruvian War",
+    "slug": "ecuadorian-peruvian-war",
+    "quote": "The Ecuadorian–Peruvian War was a border war fought in July 1941 between Ecuador and Peru over disputed Amazonian and coastal territory"
+   }
+  ]
+ },
+ {
+  "name": "Gained by the United States",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Louisiana Purchase",
+    "slug": "louisiana-purchase",
+    "quote": "The Louisiana Purchase was the acquisition by the United States of France's territory of Louisiana in 1803 for about 15 million dollars"
+   },
+   {
+    "label": "Gadsden Purchase",
+    "slug": "gadsden-purchase",
+    "quote": "sale by Mexico to the United States of about 77,000 square kilometres of land south of the Gila River"
+   },
+   {
+    "label": "Treaty of Guadalupe Hidalgo",
+    "slug": "treaty-of-guadalupe-hidalgo",
+    "quote": "of its territory, to the United States in return for 15 million dollars and the settlement of American claims"
+   },
+   {
+    "label": "Adams–Onís Treaty",
+    "slug": "adams-onis-treaty",
+    "quote": "Florida from Spain to the United States"
+   },
+   {
+    "label": "Alaska",
+    "slug": "alaska",
+    "quote": "Russia sold it to the United States in 1867"
+   },
+   {
+    "label": "US Virgin Islands",
+    "slug": "united-states-virgin-islands",
+    "quote": "The United States bought them from Denmark in 1917, and they remain an unincorporated American territory"
+   }
+  ]
+ },
+ {
+  "name": "Capitals of Pacific island countries",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Suva",
+    "slug": "suva",
+    "quote": "Suva is the capital and largest city of Fiji, on the south-east coast of Viti Levu"
+   },
+   {
+    "label": "Nukuʻalofa",
+    "slug": "nukualofa",
+    "quote": "Nukuʻalofa is the capital of Tonga, on the north coast of the main island of Tongatapu"
+   },
+   {
+    "label": "Papeete",
+    "slug": "papeete",
+    "quote": "Papeete is the capital of French Polynesia, on the north-west coast of Tahiti"
+   },
+   {
+    "label": "Port Moresby",
+    "slug": "port-moresby",
+    "quote": "Port Moresby is the capital of Papua New Guinea, on the south coast of the island of New Guinea"
+   },
+   {
+    "label": "Honiara",
+    "slug": "honiara",
+    "quote": "Honiara is the capital of the Solomon Islands, on the north coast of Guadalcanal"
+   },
+   {
+    "label": "Avarua",
+    "slug": "avarua",
+    "quote": "Avarua is the capital of the Cook Islands, on the north coast of Rarotonga"
+   }
+  ]
+ },
+ {
+  "name": "Joined the Confederacy",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "South Carolina",
+    "slug": "south-carolina",
+    "quote": "In 1860 it was the first state to secede, triggering the formation of the Confederacy"
+   },
+   {
+    "label": "Alabama",
+    "slug": "alabama",
+    "quote": "Admitted to the Union in 1819, it became a cotton-growing slave state, a founding member of the Confederacy and later a centre of the civil rights movement"
+   },
+   {
+    "label": "Arkansas",
+    "slug": "arkansas",
+    "quote": "Admitted to the Union as a slave state in 1836, it seceded and joined the Confederacy in May 1861"
+   },
+   {
+    "label": "Tennessee",
+    "slug": "tennessee",
+    "quote": "It was the last state to secede to the Confederacy in 1861, the scene of major Civil War battles, and the first readmitted in 1866"
+   },
+   {
+    "label": "Richmond",
+    "slug": "richmond-virginia",
+    "quote": "It was the capital of the Confederate States of America from 1861 to 1865 and its main industrial centre, with the Tredegar Iron Works"
+   },
+   {
+    "label": "Montgomery",
+    "slug": "montgomery-alabama",
+    "quote": "In February 1861 delegates of seceding states met there to form the Confederate States of America, and it was the Confederate capital until May 1861"
+   }
+  ]
+ },
+ {
+  "name": "The Spanish conquest of the Aztecs",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "La Noche Triste",
+    "slug": "la-noche-triste",
+    "quote": "La Noche Triste, the 'Night of Sorrows', was the night in 1520 when Hernan Cortes and his Spanish forces and allies fled Tenochtitlan under attack by the Aztecs"
+   },
+   {
+    "label": "Fall of Tenochtitlan",
+    "slug": "fall-of-tenochtitlan",
+    "quote": "The fall of Tenochtitlan was the capture of the Aztec capital in 1521 by Spanish forces"
+   },
+   {
+    "label": "Tlaxcalans",
+    "slug": "tlaxcalans",
+    "quote": "When the Spanish arrived in 1519 the Tlaxcalans became their most important allies, providing thousands of warriors for the conquest of Tenochtitlan"
+   },
+   {
+    "label": "Cuitláhuac",
+    "slug": "cuitlahuac",
+    "quote": "Cuitláhuac was the ruler of Tenochtitlan who succeeded Moctezuma II in 1520"
+   },
+   {
+    "label": "Pedro de Alvarado",
+    "slug": "pedro-de-alvarado",
+    "quote": "Pedro de Alvarado was a Spanish conquistador and lieutenant of Hernán Cortés in the conquest of the Aztec Empire, after which he subdued Tututepec"
+   },
+   {
+    "label": "Bernal Díaz del Castillo",
+    "slug": "bernal-diaz-del-castillo",
+    "quote": "Bernal Díaz del Castillo was a Spanish conquistador who took part in Hernán Cortés's conquest of Mexico in the early sixteenth century"
+   }
+  ]
+ },
+ {
+  "name": "The Spanish conquest of the Incas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Manco Inca",
+    "slug": "manco-inca",
+    "quote": "Manco Inca was a son of Huayna Capac whom Francisco Pizarro installed as Inca ruler in 1533"
+   },
+   {
+    "label": "Diego de Almagro",
+    "slug": "diego-de-almagro",
+    "quote": "Diego de Almagro was a Spanish conquistador and partner of Francisco Pizarro in the conquest of Peru"
+   },
+   {
+    "label": "Gonzalo Pizarro",
+    "slug": "gonzalo-pizarro",
+    "quote": "Gonzalo Pizarro was a Spanish conquistador and younger half-brother of Francisco Pizarro"
+   },
+   {
+    "label": "Túpac Amaru",
+    "slug": "tupac-amaru",
+    "quote": "He succeeded his brother Titu Cusi Yupanqui and broke off negotiations with the Spanish"
+   },
+   {
+    "label": "Espíritu Pampa",
+    "slug": "espiritu-pampa",
+    "quote": "The Inca rulers held out there against the Spanish until 1572, when an expedition captured Túpac Amaru"
+   },
+   {
+    "label": "Vitcos",
+    "slug": "vitcos",
+    "quote": "Manco Inca made it a residence after withdrawing from Cusco in 1537, and he was killed there in 1544 by Spanish refugees he had sheltered"
+   }
+  ]
+ },
+ {
+  "name": "Society Islands",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bora Bora",
+    "slug": "bora-bora",
+    "quote": "Bora Bora is a volcanic island with a lagoon and barrier reef in the Leeward group of the Society Islands, in French Polynesia"
+   },
+   {
+    "label": "Moorea",
+    "slug": "moorea",
+    "quote": "Moorea is a volcanic island in the Society Islands of French Polynesia, about 17 kilometres north-west of Tahiti"
+   },
+   {
+    "label": "Huahine",
+    "slug": "huahine",
+    "quote": "Huahine is an island in the Leeward group of the Society Islands in French Polynesia, made up of two parts, Huahine Nui and Huahine Iti, joined by a narrow channel"
+   },
+   {
+    "label": "Tahaʻa",
+    "slug": "tahaa",
+    "quote": "Tahaʻa is an island in the Leeward Islands of French Polynesia, sharing a single lagoon with neighbouring Raiatea"
+   },
+   {
+    "label": "Maupiti",
+    "slug": "maupiti",
+    "quote": "high island of the Leeward Society Islands in French Polynesia, a small volcanic island surrounded by a lagoon and"
+   },
+   {
+    "label": "Maiao",
+    "slug": "maiao",
+    "quote": "Maiao is a small, low island in the Windward group of the Society Islands, about 80 kilometres west of Moorea, enclosing two lagoons"
+   }
+  ],
+  "note": "Tahaʻa: its entry says \"Leeward Islands of French Polynesia\", the leeward group of the Society Islands"
+ },
+ {
+  "name": "The Haudenosaunee (Iroquois)",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Great Law of Peace",
+    "slug": "great-law-of-peace",
+    "quote": "The Great Law of Peace is the oral constitution of the Haudenosaunee, or Iroquois Confederacy"
+   },
+   {
+    "label": "Hiawatha",
+    "slug": "hiawatha",
+    "quote": "Hiawatha is a co-founder of the Iroquois Confederacy in Haudenosaunee tradition, an Onondaga or Mohawk leader who became the spokesman of the Great Peacemaker"
+   },
+   {
+    "label": "Tadodaho",
+    "slug": "tadodaho",
+    "quote": "Tadodaho, in Haudenosaunee tradition, was a fearsome Onondaga chief, said to have snakes in his"
+   },
+   {
+    "label": "Hiawatha Belt",
+    "slug": "hiawatha-belt",
+    "quote": "The Hiawatha Belt is a wampum belt of purple and white shell beads that records the founding of the Haudenosaunee (Iroquois) Confederacy"
+   },
+   {
+    "label": "Onondaga Lake",
+    "slug": "onondaga-lake",
+    "quote": "Haudenosaunee tradition places the founding of the Iroquois Confederacy by the Peacemaker and Hiawatha on its shores"
+   },
+   {
+    "label": "Beaver Wars",
+    "slug": "beaver-wars",
+    "quote": "of conflicts in which the Iroquois Confederacy, armed through Dutch and then English trade, fought neighbouring peoples and"
+   }
+  ]
+ },
+ {
+  "name": "Maya kings and queens",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "18 Rabbit",
+    "slug": "waxaklajuun-ubaah-kawiil",
+    "quote": "Waxaklajuun Ub'aah K'awiil, often called 18 Rabbit, was the thirteenth king of the Maya city of Copán"
+   },
+   {
+    "label": "Jasaw Chan K'awiil",
+    "slug": "jasaw-chan-kawiil-i",
+    "quote": "Jasaw Chan K'awiil I was the ruler of the Maya city of Tikal, in modern Guatemala, from 682 to about 734"
+   },
+   {
+    "label": "Pakal",
+    "slug": "kinich-janaab-pakal",
+    "quote": "K'inich Janaab Pakal was king of Palenque from 615 to 683, the most celebrated ruler of the Classic Maya"
+   },
+   {
+    "label": "Yuknoom Yich'aak K'ahk'",
+    "slug": "yuknoom-yichaak-kahk",
+    "quote": "Yuknoom Yich'aak K'ahk' was a king of the Kaan dynasty of the Maya, ruling from Calakmul from 686"
+   },
+   {
+    "label": "Lady K'abel",
+    "slug": "lady-kabel",
+    "quote": "Lady K'abel was a princess of the Kaan dynasty of Calakmul who married K'inich B'ahlam II, king of Waka' (El Perú) in Guatemala, in the 7th century"
+   },
+   {
+    "label": "Yax Nuun Ayiin",
+    "slug": "yax-nuun-ayiin-i",
+    "quote": "Yax Nuun Ayiin I was a king of the Maya city of Tikal, installed as a boy in 379 after the arrival of Siyaj K'ak' and the death of King Chak Tok Ich'aak I"
+   }
+  ]
+ },
+ {
+  "name": "Teotihuacan",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pyramid of the Sun",
+    "slug": "pyramid-of-the-sun",
+    "quote": "is the largest building at Teotihuacan and one of the largest pyramids of Mesoamerica, about 65 metres high"
+   },
+   {
+    "label": "Pyramid of the Moon",
+    "slug": "pyramid-of-the-moon",
+    "quote": "The Pyramid of the Moon is the second-largest pyramid of Teotihuacan, standing at the northern end of the Avenue of the Dead with Cerro Gordo behind it"
+   },
+   {
+    "label": "Feathered Serpent Pyramid",
+    "slug": "temple-of-the-feathered-serpent",
+    "quote": "The Feathered Serpent Pyramid is the third-largest pyramid at Teotihuacan, built around 200 to 250 CE inside the Ciudadela"
+   },
+   {
+    "label": "Spearthrower Owl",
+    "slug": "spearthrower-owl",
+    "quote": "His name glyph combines an owl and a spear-thrower, emblems associated with Teotihuacan, and many scholars think he was a ruler of Teotihuacan itself"
+   },
+   {
+    "label": "Leopoldo Batres",
+    "slug": "leopoldo-batres",
+    "quote": "He led the first large-scale excavation and reconstruction of the Pyramid of the Sun at Teotihuacan, completed for the centenary of Mexican independence in 1910"
+   },
+   {
+    "label": "Sierra de las Navajas",
+    "slug": "sierra-de-las-navajas",
+    "quote": "Teotihuacan controlled and worked this obsidian, and green blades and points made from it travelled widely"
+   }
+  ]
+ },
+ {
+  "name": "Words of Aztec society",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Huey tlatoani",
+    "slug": "huey-tlatoani",
+    "quote": "Huey Tlatoani, meaning Great Speaker, was the title of the supreme ruler of Tenochtitlan and the Aztec Triple Alliance"
+   },
+   {
+    "label": "Tlacatecatl",
+    "slug": "tlacatecatl",
+    "quote": "The tlacatecatl was one of the highest military offices in the Aztec Empire, a senior commander of the Mexica army"
+   },
+   {
+    "label": "Chinampa",
+    "slug": "chinampa",
+    "quote": "They were a major source of food for Tenochtitlan and the Aztec Empire"
+   },
+   {
+    "label": "Calmecac",
+    "slug": "calmecac",
+    "quote": "for the sons of the Aztec nobility (pīpiltin) in the Late Postclassic period, where pupils entering at five"
+   },
+   {
+    "label": "Macehualtin",
+    "slug": "macehualtin",
+    "quote": "macehualli) were the commoners of Aztec society, most of them farmers working land that belonged to their calpolli"
+   },
+   {
+    "label": "Pochteca",
+    "slug": "pochteca",
+    "quote": "The pochteca were professional long-distance merchants in Aztec society"
+   }
+  ]
+ },
+ {
+  "name": "Words of the Inca world",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Quipu",
+    "slug": "quipu",
+    "quote": "The Inca stored numbers in its knots in a decimal positional system and used quipus for taxes, censuses and the calendar"
+   },
+   {
+    "label": "Mita",
+    "slug": "mita",
+    "quote": "The mita was a system of compulsory labour in the Andes, adapted by the Spanish Empire from an Inca institution"
+   },
+   {
+    "label": "Ayllu",
+    "slug": "ayllu",
+    "quote": "the traditional community of the Andes, especially among the Quechua and Aymara: a network of families, often with"
+   },
+   {
+    "label": "Aclla",
+    "slug": "aclla",
+    "quote": "The acllas, the 'chosen women' of the Inca Empire, were taken as tribute from the provinces at eight to ten years old, mostly from families of rank"
+   },
+   {
+    "label": "Kuraka",
+    "slug": "kuraka",
+    "quote": "A kuraka, or curaca, was an Andean aristocrat and magistrate who headed an ayllu or a federation of ayllus, an office often but not always inherited"
+   },
+   {
+    "label": "Yanakuna",
+    "slug": "yanakuna",
+    "quote": "yanakuna were people in the Inca Empire who left the ayllu system and worked full-time for the Inca"
+   }
+  ]
+ },
+ {
+  "name": "Earthwork builders of North America",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Monks Mound",
+    "slug": "monks-mound",
+    "quote": "Monks Mound is the largest earthwork at Cahokia, near modern St Louis, and the largest prehistoric earthen structure in the Americas"
+   },
+   {
+    "label": "Moundville",
+    "slug": "moundville-archaeological-site",
+    "quote": "its rectangular plaza, ringed by 29 surviving platform mounds, and a bastioned palisade date from the early 13th century"
+   },
+   {
+    "label": "Spiro Mounds",
+    "slug": "spiro-mounds",
+    "quote": "Mound, one of its twelve earthen mounds, held a hollow burial chamber, the Great Mortuary, that preserved textiles, feathers"
+   },
+   {
+    "label": "Cahokia Woodhenge",
+    "slug": "cahokia-woodhenge",
+    "quote": "Woodhenge is the name archaeologists give to a series of circles of large timber posts at Cahokia, near modern St Louis, built between about 900 and 1100"
+   },
+   {
+    "label": "Hopewell Culture park",
+    "slug": "hopewell-culture-national-historical-park",
+    "quote": "Ross County, Ohio, that preserves earthworks and burial mounds of the Hopewell culture, which flourished from about 200"
+   },
+   {
+    "label": "Mississippian culture",
+    "slug": "mississippian-culture",
+    "quote": "culture was a Native American mound-building civilisation that flourished in the Mississippi valley and the south-eastern United States"
+   }
+  ]
+ },
+ {
+  "name": "The Pueblo world",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Revolt of 1680",
+    "slug": "pueblo-revolt",
+    "quote": "The Pueblo Revolt was a coordinated uprising of the Pueblo peoples of New Mexico against Spanish rule that began on 10 August 1680"
+   },
+   {
+    "label": "Mesa Verde",
+    "slug": "mesa-verde",
+    "quote": "in south-western Colorado, where Ancestral Puebloans farmed until about 1285 and a national park now protects more than"
+   },
+   {
+    "label": "Acoma",
+    "slug": "acoma-pueblo",
+    "quote": "Acoma Pueblo is a Native American pueblo built on a sandstone mesa west of"
+   },
+   {
+    "label": "Taos",
+    "slug": "taos-new-mexico",
+    "quote": "Taos is a town in northern New Mexico beside Taos Pueblo, a multi-storey adobe village inhabited for about a thousand years and a UNESCO World Heritage Site"
+   },
+   {
+    "label": "Tewa",
+    "slug": "tewa",
+    "quote": "The Tewa are a group of Pueblo peoples of northern New Mexico who speak the Tewa language, a member of the Tanoan family"
+   },
+   {
+    "label": "Cliff Palace",
+    "slug": "cliff-palace",
+    "quote": "in North America, an Ancestral Puebloan village in an alcove of Mesa Verde, Colorado, built and lived in"
+   }
+  ]
+ },
+ {
+  "name": "The end of slavery in Brazil",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Law of the Free Womb",
+    "slug": "law-of-the-free-womb",
+    "quote": "The Law of the Free Womb was a law passed in the Brazilian Empire in 1871 declaring that children born to enslaved women would be free"
+   },
+   {
+    "label": "Lei Áurea",
+    "slug": "lei-aurea",
+    "quote": "The Lei Aurea, or Golden Law, was the law of 1888 that abolished slavery in the Brazilian Empire"
+   },
+   {
+    "label": "Eusébio de Queirós Law",
+    "slug": "eusebio-de-queiros-law",
+    "quote": "which effectively ended the transatlantic slave trade to the Brazilian Empire"
+   },
+   {
+    "label": "Sexagenarian Law",
+    "slug": "sexagenarian-law",
+    "quote": "The Sexagenarian Law was a Brazilian law passed in 1885 that freed enslaved people aged sixty and over"
+   },
+   {
+    "label": "Princess Isabel",
+    "slug": "isabel-princess-imperial-of-brazil",
+    "quote": "As regent in 1888, while her father was in Europe, she signed the Lei Áurea abolishing slavery in Brazil"
+   },
+   {
+    "label": "Joaquim Nabuco",
+    "slug": "joaquim-nabuco",
+    "quote": "Joaquim Nabuco was a Brazilian statesman, diplomat and writer, a leading voice of his country's abolitionist movement"
+   }
+  ],
+  "note": "Joaquim Nabuco is also in Abolitionists"
+ },
+ {
+  "name": "Presidents of Argentina",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Juan Perón",
+    "slug": "juan-peron",
+    "quote": "Juan Perón was an Argentine army officer who rose to power as labour minister after the 1943 coup and was elected president in 1946"
+   },
+   {
+    "label": "Sarmiento",
+    "slug": "domingo-faustino-sarmiento",
+    "quote": "Domingo Faustino Sarmiento was an Argentine writer, educator and statesman who served as president from 1868 to 1874"
+   },
+   {
+    "label": "Bartolomé Mitre",
+    "slug": "bartolome-mitre",
+    "quote": "As a leader of the State of Buenos Aires he defeated the Argentine Confederation at Pavón in 1861 and reunited the country, serving as president from 1862 to 1868"
+   },
+   {
+    "label": "Hipólito Yrigoyen",
+    "slug": "hipolito-yrigoyen",
+    "quote": "Union and the first Argentine president elected under the secret and compulsory male suffrage of the Sáenz Peña"
+   },
+   {
+    "label": "Cristina Fernández de Kirchner",
+    "slug": "cristina-fernandez-de-kirchner",
+    "quote": "her husband Néstor Kirchner as president, serving from 2007 to 2015, and was vice-president from 2019 to 2023"
+   },
+   {
+    "label": "Carlos Menem",
+    "slug": "carlos-menem",
+    "quote": "Carlos Menem was an Argentine Peronist politician, governor of La Rioja, who served as president from 1989 to 1999"
+   }
+  ]
+ },
+ {
+  "name": "Prime ministers of New Zealand",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Richard Seddon",
+    "slug": "richard-seddon",
+    "quote": "Richard Seddon was an English-born politician and the longest-serving prime minister of New Zealand, in office from 1893 until his death in 1906"
+   },
+   {
+    "label": "Michael Joseph Savage",
+    "slug": "michael-joseph-savage",
+    "quote": "Michael Joseph Savage was the first Labour prime minister of New Zealand, serving from 1935 until his death in 1940"
+   },
+   {
+    "label": "Peter Fraser",
+    "slug": "peter-fraser",
+    "quote": "Peter Fraser was a Scottish-born New Zealand Labour politician who was prime minister of New Zealand from 1940 to 1949"
+   },
+   {
+    "label": "Jacinda Ardern",
+    "slug": "jacinda-ardern",
+    "quote": "Jacinda Ardern is a New Zealand politician of the Labour Party who was prime minister from 2017 to 2023"
+   },
+   {
+    "label": "Robert Muldoon",
+    "slug": "robert-muldoon",
+    "quote": "Robert Muldoon was Prime Minister of New Zealand from 1975 to 1984 and also his own finance minister"
+   },
+   {
+    "label": "David Lange",
+    "slug": "david-lange",
+    "quote": "David Lange was Prime Minister of New Zealand from 1984 to 1989, leading the Fourth Labour Government"
+   }
+  ]
+ },
+ {
+  "name": "Gold-rush towns of Australia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ballarat",
+    "slug": "ballarat",
+    "quote": "Ballarat is a city in central Victoria, Australia, founded after gold was discovered there in August 1851"
+   },
+   {
+    "label": "Bendigo",
+    "slug": "bendigo",
+    "quote": "Bendigo is a city in central Victoria, Australia, which grew after gold was discovered there in 1851"
+   },
+   {
+    "label": "Kalgoorlie",
+    "slug": "kalgoorlie",
+    "quote": "Kalgoorlie is a city in the Goldfields of Western Australia, founded after Paddy Hannan found gold there in June 1893"
+   },
+   {
+    "label": "Coolgardie",
+    "slug": "coolgardie",
+    "quote": "Coolgardie is a town in the Goldfields region of Western Australia"
+   },
+   {
+    "label": "Gympie",
+    "slug": "gympie",
+    "quote": "James Nash found gold there in 1867, and the rush that followed is credited with rescuing the young colony of Queensland from bankruptcy"
+   },
+   {
+    "label": "Mount Morgan",
+    "slug": "mount-morgan-queensland",
+    "quote": "Mount Morgan is a town in central Queensland, Australia, south-west of Rockhampton, which grew around one of the world's richest gold mines"
+   }
+  ]
+ },
+ {
+  "name": "The fall of the Hawaiian monarchy",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bayonet Constitution",
+    "slug": "bayonet-constitution",
+    "quote": "forced on King Kalākaua of Hawaii in July 1887 by a group of mainly American planters and businessmen"
+   },
+   {
+    "label": "Sanford B. Dole",
+    "slug": "sanford-b-dole",
+    "quote": "Dole was a Hawaiian-born lawyer of American missionary parents who led the government formed after the overthrow of Queen Liliuokalani in 1893"
+   },
+   {
+    "label": "John L. Stevens",
+    "slug": "john-l-stevens",
+    "quote": "Stevens was the United States minister to the Kingdom of Hawaii from 1889 to 1893"
+   },
+   {
+    "label": "Liliʻuokalani",
+    "slug": "lili-uokalani",
+    "quote": "Liliʻuokalani was the only queen regnant and the last sovereign monarch of the Hawaiian Kingdom, ruling from 1891 until the monarchy was overthrown in 1893"
+   },
+   {
+    "label": "ʻIolani Palace",
+    "slug": "iolani-palace",
+    "quote": "ʻIolani Palace in Honolulu was the royal residence of the Kingdom of Hawaii, completed in 1882 for King Kalākaua and lit by electricity from 1887"
+   },
+   {
+    "label": "Kalākaua",
+    "slug": "kalakaua",
+    "quote": "Kalākaua was king of Hawaii from 1874 to 1891"
+   }
+  ]
+ },
+ {
+  "name": "Rapa Nui (Easter Island)",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Anakena",
+    "slug": "anakena",
+    "quote": "Anakena is a white-sand beach on the north coast of Rapa Nui (Easter Island)"
+   },
+   {
+    "label": "Orongo",
+    "slug": "orongo",
+    "quote": "Orongo is a ceremonial village on the rim of the Rano Kau crater at the south-western tip of Rapa Nui (Easter Island)"
+   },
+   {
+    "label": "Rano Raraku",
+    "slug": "rano-raraku",
+    "quote": "Rano Raraku is a volcanic crater on Rapa Nui (Easter Island) whose compressed volcanic ash was the quarry for nearly all of the island's moai statues"
+   },
+   {
+    "label": "Tangata manu",
+    "slug": "tangata-manu",
+    "quote": "The Tangata manu ('bird man') was the winner of a yearly competition on Rapa Nui (Easter Island), centred on the ceremonial village of Orongo"
+   },
+   {
+    "label": "Atamu Tekena",
+    "slug": "atamu-tekena",
+    "quote": "Atamu Tekena was ariki, or king, of Rapa Nui (Easter Island) in the late 19th century"
+   },
+   {
+    "label": "Policarpo Toro",
+    "slug": "policarpo-toro",
+    "quote": "Policarpo Toro was a Chilean naval officer who annexed Easter Island (Rapa Nui) for Chile"
+   }
+  ]
+ },
+ {
+  "name": "The Māori King movement",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tāwhiao",
+    "slug": "tawhiao",
+    "quote": "Tāwhiao was the second Māori King, succeeding his father Pōtatau Te Wherowhero in 1860"
+   },
+   {
+    "label": "Pōtatau Te Wherowhero",
+    "slug": "potatau-te-wherowhero",
+    "quote": "Pōtatau Te Wherowhero was a leading chief of the Waikato tribes and a noted warrior of the Musket Wars"
+   },
+   {
+    "label": "Ōrākau",
+    "slug": "battle-of-orakau",
+    "quote": "The Battle of Ōrākau was fought from 31 March to 2 April 1864 in the Waikato, New Zealand, the last major battle of the British invasion of the Waikato"
+   },
+   {
+    "label": "King Country",
+    "slug": "king-country",
+    "quote": "The King Country, in Māori Rohe Pōtae, is a region of the central North Island of New Zealand, between the Waikato and Taranaki, home mainly to Ngāti Maniapoto"
+   },
+   {
+    "label": "Ngāruawāhia",
+    "slug": "ngaruawahia",
+    "quote": "Ngāruawāhia is a town in the Waikato region of New Zealand's North Island, at the meeting of the Waikato and Waipā rivers"
+   },
+   {
+    "label": "Rangiriri",
+    "slug": "battle-of-rangiriri",
+    "quote": "The Battle of Rangiriri was fought on 20–21 November 1863 in the Waikato, New Zealand, during the British invasion of the Waikato"
+   }
+  ]
+ },
+ {
+  "name": "Russian America",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Vitus Bering",
+    "slug": "vitus-bering",
+    "quote": "Vitus Bering was a Danish-born navigator in Russian service who led two great expeditions to the North Pacific"
+   },
+   {
+    "label": "Sitka",
+    "slug": "sitka",
+    "quote": "Founded as New Archangel by Alexander Baranov in 1804, after the Tlingit had destroyed an earlier Russian fort in 1802, it became the capital of Russian America in 1808"
+   },
+   {
+    "label": "Fort Ross",
+    "slug": "fort-ross",
+    "quote": "Fort Ross was a Russian settlement on the coast of northern California, north of San Francisco, founded by the Russian-American Company in 1812"
+   },
+   {
+    "label": "Aleut",
+    "slug": "aleut",
+    "quote": "From the 1740s Russian fur traders forced them to hunt sea otters, and violence and disease greatly reduced their numbers"
+   },
+   {
+    "label": "Grigory Shelikhov",
+    "slug": "grigory-shelikhov",
+    "quote": "Grigory Shelikhov was a Russian merchant and fur trader who founded the first permanent Russian settlement in North America, at Three Saints Bay on Kodiak Island, in 1784"
+   },
+   {
+    "label": "Kodiak Island",
+    "slug": "kodiak-island",
+    "quote": "1784 Grigory Shelikhov founded the first permanent Russian settlement in America at Three Saints Bay there, and the town of Kodiak"
+   }
+  ]
+ },
+ {
+  "name": "Ports of Spain's silver trade",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Havana",
+    "slug": "havana",
+    "quote": "It became the gathering port of the treasure fleets and was heavily fortified"
+   },
+   {
+    "label": "Portobelo",
+    "slug": "portobelo",
+    "quote": "Portobelo is a port on the Caribbean coast of Panama, founded in 1597 to replace Nombre de Dios as the Atlantic end of the treasure route across the isthmus"
+   },
+   {
+    "label": "Callao",
+    "slug": "callao",
+    "quote": "Viceroyalty of Peru, from which silver was shipped to Panama, and it was rebuilt after a tsunami destroyed"
+   },
+   {
+    "label": "Acapulco",
+    "slug": "acapulco",
+    "quote": "the Manila galleons, which carried silver from New Spain to the Philippines and returned with Chinese silks, porcelain"
+   },
+   {
+    "label": "Cartagena",
+    "slug": "cartagena-colombia",
+    "quote": "Granada, a stop of the treasure fleets and a leading market of the transatlantic slave trade, protected by"
+   },
+   {
+    "label": "San Juan de Ulúa",
+    "slug": "san-juan-de-ulua",
+    "quote": "Built from the sixteenth century to guard the main harbour of New Spain and the treasure fleets, it was the scene of a defeat of John Hawkins and Francis Drake in 1568"
+   }
+  ]
+ },
+ {
+  "name": "Won the Nobel Peace Prize",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Theodore Roosevelt",
+    "slug": "theodore-roosevelt",
+    "quote": "He won the Nobel Peace Prize for mediating the end of the Russo-Japanese War in 1905"
+   },
+   {
+    "label": "Rigoberta Menchú",
+    "slug": "rigoberta-menchu",
+    "quote": "Rigoberta Menchú (born 1959) is a K'iche' Maya activist from Guatemala who received the Nobel Peace Prize in 1992 for her work for indigenous rights and reconciliation"
+   },
+   {
+    "label": "Carlos Saavedra Lamas",
+    "slug": "carlos-saavedra-lamas",
+    "quote": "for which he received the Nobel Peace Prize in 1936, the first Latin American to win a Nobel"
+   },
+   {
+    "label": "Lester B. Pearson",
+    "slug": "lester-b-pearson",
+    "quote": "As foreign minister he proposed the United Nations Emergency Force during the Suez Crisis of 1956, for which he received the Nobel Peace Prize in 1957"
+   },
+   {
+    "label": "Óscar Arias",
+    "slug": "oscar-arias",
+    "quote": "He drew up the Esquipulas peace plan to end the civil wars in Central America and received the Nobel Peace Prize in 1987 for that effort"
+   },
+   {
+    "label": "Juan Manuel Santos",
+    "slug": "juan-manuel-santos",
+    "quote": "Voters narrowly rejected the first text in a referendum, but a revised deal was approved by Congress, and he received the Nobel Peace Prize in 2016"
+   }
+  ]
+ },
+ {
+  "name": "Resistance to slavery in Jamaica",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Baptist War",
+    "slug": "baptist-war",
+    "quote": "The Baptist War, or Christmas Rebellion, was a rising of up to 60,000 enslaved people in western Jamaica that began on 25 December 1831"
+   },
+   {
+    "label": "Tacky's Revolt",
+    "slug": "tackys-revolt",
+    "quote": "Tacky's Revolt was a rising of enslaved Africans in Jamaica in 1760, led by Tacky, a Coromantee man from the Gold Coast"
+   },
+   {
+    "label": "Jamaican Maroons",
+    "slug": "jamaican-maroons",
+    "quote": "The Jamaican Maroons are descendants of Africans who escaped slavery in Jamaica, many during"
+   },
+   {
+    "label": "Nanny of the Maroons",
+    "slug": "nanny-of-the-maroons",
+    "quote": "Nanny of the Maroons was a leader of the Windward Maroons of eastern Jamaica in the early 18th century, during the First Maroon War against the British"
+   },
+   {
+    "label": "Cudjoe",
+    "slug": "cudjoe",
+    "quote": "Cudjoe was the leader of the Leeward Maroons of western Jamaica, communities of escaped enslaved Africans in the Cockpit Country"
+   },
+   {
+    "label": "Samuel Sharpe",
+    "slug": "samuel-sharpe",
+    "quote": "Samuel Sharpe was an enslaved Baptist deacon in Jamaica who planned and led the Christmas Rebellion of 1831–1832, known as the Baptist War"
+   }
+  ]
+ },
+ {
+  "name": "All in 1776",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Declaration of Independence",
+    "slug": "united-states-declaration-of-independence",
+    "quote": "The United States Declaration of Independence was adopted by the Second Continental Congress in Philadelphia on 4 July 1776"
+   },
+   {
+    "label": "The Wealth of Nations",
+    "slug": "the-wealth-of-nations",
+    "quote": "The Wealth of Nations, in full An Inquiry into the Nature and Causes of the Wealth of Nations, is a book by Adam Smith published in London in 1776"
+   },
+   {
+    "label": "Guatemala City",
+    "slug": "guatemala-city",
+    "quote": "Guatemala City was founded in 1776 as the new capital of the Captaincy General of Guatemala, after earthquakes ruined Santiago, now Antigua Guatemala"
+   },
+   {
+    "label": "Sullivan's Island",
+    "slug": "battle-of-sullivans-island",
+    "quote": "was fought on 28 June 1776, when a British fleet under Sir Peter Parker attacked the unfinished palmetto-log"
+   },
+   {
+    "label": "Halifax Resolves",
+    "slug": "halifax-resolves",
+    "quote": "The Halifax Resolves were adopted by North Carolina's Fourth Provincial Congress at Halifax on 12 April 1776"
+   },
+   {
+    "label": "Gyujanggak",
+    "slug": "gyujanggak",
+    "quote": "The Gyujanggak was the royal library and research institute founded by King Jeongjo in 1776 at Changdeokgung palace in Seoul"
+   }
+  ]
+ },
+ {
+  "name": "All in 1821",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Carabobo",
+    "slug": "battle-of-carabobo",
+    "quote": "The Battle of Carabobo was fought on 24 June 1821 south-west of Valencia, Venezuela"
+   },
+   {
+    "label": "Treaty of Córdoba",
+    "slug": "treaty-of-cordoba",
+    "quote": "The Treaty of Córdoba was signed on 24 August 1821 at Córdoba, Veracruz, by Agustín de Iturbide and Juan O'Donojú, the last Spanish head of government of New Spain"
+   },
+   {
+    "label": "Congress of Cúcuta",
+    "slug": "congress-of-cucuta",
+    "quote": "The Congress of Cúcuta was the constituent assembly of Gran Colombia, meeting at Villa del Rosario de Cúcuta from May to October 1821"
+   },
+   {
+    "label": "Napoleon",
+    "slug": "napoleon",
+    "quote": "1769–1821"
+   },
+   {
+    "label": "Order of the Sun of Peru",
+    "slug": "order-of-the-sun-of-peru",
+    "quote": "San Martín on 8 October 1821 to reward those who served the cause of independence"
+   },
+   {
+    "label": "Juan O'Donojú",
+    "slug": "juan-odonoju",
+    "quote": "Arriving in Mexico in 1821 to find the country almost entirely in the hands of Agustín de"
+   }
+  ],
+  "note": "Napoleon is in by his death"
+ },
+ {
+  "name": "All in 1822",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Grito do Ipiranga",
+    "slug": "grito-do-ipiranga",
+    "quote": "The Grito do Ipiranga was the declaration of Brazilian independence from Portugal made by Prince Pedro near the Ipiranga stream in São Paulo in 1822"
+   },
+   {
+    "label": "Pichincha",
+    "slug": "battle-of-pichincha",
+    "quote": "The Battle of Pichincha was fought on 24 May 1822 on the slopes of the Pichincha volcano above Quito"
+   },
+   {
+    "label": "Guayaquil Conference",
+    "slug": "guayaquil-conference",
+    "quote": "The Guayaquil Conference was the meeting of the two leading liberators of South America, Simón Bolívar and José de San Martín, at Guayaquil on 26 and 27 July 1822"
+   },
+   {
+    "label": "Monrovia",
+    "slug": "monrovia",
+    "quote": "It was founded in 1822 by free African Americans settled by the American Colonization Society and named in 1824 after President James Monroe"
+   },
+   {
+    "label": "Bomboná",
+    "slug": "battle-of-bombona",
+    "quote": "The Battle of Bomboná was fought on 7 April 1822 near Pasto in southern New Granada between Simón Bolívar's army and royalist forces under Colonel Basilio García"
+   },
+   {
+    "label": "Rhine Province",
+    "slug": "rhine-province",
+    "quote": "in western Germany, formed in 1822 from lands on both banks of the Rhine that Prussia gained at"
+   }
+  ]
+ },
+ {
+  "name": "All in 1824",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Ayacucho",
+    "slug": "battle-of-ayacucho",
+    "quote": "was fought on 9 December 1824 in the Peruvian highlands, where a patriot army under Antonio José de"
+   },
+   {
+    "label": "Junín",
+    "slug": "battle-of-junin",
+    "quote": "The Battle of Junín was a cavalry battle fought on 6 August 1824 on the high plain of Junín in the central Andes of Peru"
+   },
+   {
+    "label": "Anglo-Dutch Treaty",
+    "slug": "anglo-dutch-treaty-of-1824",
+    "quote": "The Anglo-Dutch Treaty of 1824 was an agreement between Britain and the Netherlands that divided their spheres of influence in maritime South-East Asia"
+   },
+   {
+    "label": "Nsamankow",
+    "slug": "battle-of-nsamankow",
+    "quote": "was fought on 22 January 1824 in the Gold Coast, where an army of the Ashanti Empire annihilated"
+   },
+   {
+    "label": "Lord Byron",
+    "slug": "lord-byron",
+    "quote": "He later supported the Greek War of Independence with money and leadership and died of fever at Missolonghi in 1824, becoming a hero in Greece"
+   },
+   {
+    "label": "Confederation of the Equator",
+    "slug": "confederation-of-the-equator",
+    "quote": "The Confederation of the Equator was a short-lived republican and separatist revolt in northeastern Brazil in 1824, centred on Pernambuco"
+   }
+  ],
+  "note": "Lord Byron is in by his death; Ayacucho and Junín both fought by Sucre and Bolívar's army"
+ },
+ {
+  "name": "All in 1863",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Red Cross",
+    "slug": "international-committee-of-the-red-cross",
+    "quote": "The International Committee of the Red Cross is a humanitarian organisation founded in Geneva in 1863 by Henry Dunant, Guillaume-Henri Dufour and three other citizens"
+   },
+   {
+    "label": "January Uprising",
+    "slug": "january-uprising",
+    "quote": "The January Uprising was a Polish and Lithuanian insurrection against Russian rule, beginning in January 1863 in Congress Poland"
+   },
+   {
+    "label": "Treaty of Coche",
+    "slug": "treaty-of-coche",
+    "quote": "The Treaty of Coche was the agreement signed in April 1863 at the Coche estate near Caracas that ended the Federal War in Venezuela"
+   },
+   {
+    "label": "Seventh-day Adventists",
+    "slug": "seventh-day-adventist-church",
+    "quote": "in the United States in 1863, which keeps Saturday as the Sabbath and emphasises the imminent Second Coming"
+   },
+   {
+    "label": "Shinsengumi",
+    "slug": "shinsengumi",
+    "quote": "The Shinsengumi was a special police force of masterless samurai formed in Kyoto in 1863 to protect the shogunate's representatives"
+   },
+   {
+    "label": "Bosque Redondo",
+    "slug": "bosque-redondo",
+    "quote": "some 400 Mescalero Apache from 1863"
+   }
+  ],
+  "note": "Gettysburg, Vicksburg and the Emancipation Proclamation (in The American Civil War) are decoys of the same year"
+ },
+ {
+  "name": "All in 1867",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Constitution Act (Canada)",
+    "slug": "constitution-act-1867",
+    "quote": "The Constitution Act, 1867, originally the British North America Act, is the act of the British"
+   },
+   {
+    "label": "Austro-Hungarian Compromise",
+    "slug": "austro-hungarian-compromise-of-1867",
+    "quote": "The Austro-Hungarian Compromise of 1867, or Ausgleich, was the agreement between the Habsburg monarchy and Hungary that created the dual monarchy of Austria-Hungary"
+   },
+   {
+    "label": "Tokugawa Yoshinobu",
+    "slug": "tokugawa-yoshinobu",
+    "quote": "Facing mounting pressure from anti-shogunate domains and the challenges posed by Western powers, he resigned his powers to the emperor in 1867"
+   },
+   {
+    "label": "Luxembourg Crisis",
+    "slug": "luxembourg-crisis",
+    "quote": "The Luxembourg Crisis of 1867 was a diplomatic confrontation between France and Prussia over the status of Luxembourg"
+   },
+   {
+    "label": "Mentana",
+    "slug": "battle-of-mentana",
+    "quote": "was fought on 3 November 1867 near Mentana, north-east of Rome, between the volunteers of Giuseppe Garibaldi, who"
+   },
+   {
+    "label": "Treaty of London (1867)",
+    "slug": "treaty-of-london-1867",
+    "quote": "The Treaty of London of 11 May 1867 settled the Luxembourg Crisis between France and Prussia"
+   }
+  ],
+  "note": "Alaska (sold in 1867) is in Gained by the United States"
+ },
+ {
+  "name": "All in 1879",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Angamos",
+    "slug": "battle-of-angamos",
+    "quote": "The Battle of Angamos was a naval battle fought on 8 October 1879 off the coast of Antofagasta during the War of the Pacific"
+   },
+   {
+    "label": "Iquique",
+    "slug": "battle-of-iquique",
+    "quote": "The Battle of Iquique was a naval battle fought on 21 May 1879 off the port of Iquique during the War of the Pacific"
+   },
+   {
+    "label": "Isandlwana",
+    "slug": "battle-of-isandlwana",
+    "quote": "was fought on 22 January 1879, at the start of the Anglo-Zulu War, when some 20,000 Zulu warriors"
+   },
+   {
+    "label": "Ulundi",
+    "slug": "battle-of-ulundi",
+    "quote": "The Battle of Ulundi, fought on 4 July 1879, was the last major battle of the Anglo-Zulu War"
+   },
+   {
+    "label": "Tarnovo Constitution",
+    "slug": "tarnovo-constitution",
+    "quote": "The Tarnovo Constitution was the first constitution of the Principality of Bulgaria, adopted by a constituent assembly at Veliko Tarnovo on 16 April 1879"
+   },
+   {
+    "label": "Gilchrist–Thomas process",
+    "slug": "gilchrist-thomas-process",
+    "quote": "Gilchrist and made public in 1879"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1743",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Thomas Jefferson",
+    "slug": "thomas-jefferson",
+    "quote": "1743–1826"
+   },
+   {
+    "label": "Toussaint Louverture",
+    "slug": "toussaint-louverture",
+    "quote": "1743–1803"
+   },
+   {
+    "label": "José Fernando de Abascal",
+    "slug": "jose-fernando-de-abascal",
+    "quote": "1743–1821"
+   },
+   {
+    "label": "Pōmare I",
+    "slug": "pomare-i",
+    "quote": "c. 1743–1803"
+   },
+   {
+    "label": "Joseph Brant",
+    "slug": "joseph-brant",
+    "quote": "c. 1743–1807"
+   },
+   {
+    "label": "Charles Robin",
+    "slug": "charles-robin",
+    "quote": "1743–1824"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1830",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Simón Bolívar",
+    "slug": "simon-bolivar",
+    "quote": "1783–1830"
+   },
+   {
+    "label": "Antonio José de Sucre",
+    "slug": "antonio-jose-de-sucre",
+    "quote": "1795–1830"
+   },
+   {
+    "label": "Benjamin Constant",
+    "slug": "benjamin-constant",
+    "quote": "1767–1830"
+   },
+   {
+    "label": "Red Jacket",
+    "slug": "red-jacket",
+    "quote": "c. 1750–1830"
+   },
+   {
+    "label": "George IV",
+    "slug": "george-iv-of-the-united-kingdom",
+    "quote": "1762–1830"
+   },
+   {
+    "label": "Toribio Montes",
+    "slug": "toribio-montes",
+    "quote": "1749–1830"
+   }
+  ]
+ },
+ {
+  "name": "Fort ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Orange",
+    "slug": "fort-orange",
+    "quote": "Fort Orange"
+   },
+   {
+    "label": "Christina",
+    "slug": "fort-christina",
+    "quote": "Fort Christina"
+   },
+   {
+    "label": "Duquesne",
+    "slug": "fort-duquesne",
+    "quote": "Fort Duquesne"
+   },
+   {
+    "label": "Frontenac",
+    "slug": "fort-frontenac",
+    "quote": "Fort Frontenac"
+   },
+   {
+    "label": "Niagara",
+    "slug": "fort-niagara",
+    "quote": "Fort Niagara"
+   },
+   {
+    "label": "Casimir",
+    "slug": "fort-casimir",
+    "quote": "Fort Casimir"
+   }
+  ],
+  "note": "Frontenac is also the governor of New France (tile \"Louis de Frontenac\" in New France); Orange also a royal house; Niagara also the falls"
+ },
+ {
+  "name": "Hide a tree",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Philippines",
+    "slug": "philippines",
+    "quote": "Philippines"
+   },
+   {
+    "label": "George Washington",
+    "slug": "george-washington",
+    "quote": "George Washington"
+   },
+   {
+    "label": "El Mirador",
+    "slug": "el-mirador",
+    "quote": "El Mirador"
+   },
+   {
+    "label": "Keith Holyoake",
+    "slug": "keith-holyoake",
+    "quote": "Keith Holyoake"
+   },
+   {
+    "label": "Plan of Iguala",
+    "slug": "plan-of-iguala",
+    "quote": "Plan of Iguala"
+   },
+   {
+    "label": "Tomás Estrada Palma",
+    "slug": "tomas-estrada-palma",
+    "quote": "Tomás Estrada Palma"
+   }
+  ],
+  "note": "PHILIPPINES (pine), WASHINGTON (ash), EL MIRADOR (elm), HOLYOAKE (oak), PLAN OF IGUALA (fig), ESTRADA PALMA (palm)"
+ },
+ {
+  "name": "Hide a drink",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Virginia",
+    "slug": "virginia",
+    "quote": "Virginia is a region on the Atlantic coast of North America, named in honour of Queen Elizabeth I"
+   },
+   {
+    "label": "Harry S. Truman",
+    "slug": "harry-s-truman",
+    "quote": "Harry S. Truman"
+   },
+   {
+    "label": "Nicolás Maduro",
+    "slug": "nicolas-maduro",
+    "quote": "Nicolás Maduro"
+   },
+   {
+    "label": "Diego Portales",
+    "slug": "diego-portales",
+    "quote": "Diego Portales"
+   },
+   {
+    "label": "White Australia policy",
+    "slug": "white-australia-policy",
+    "quote": "White Australia policy"
+   },
+   {
+    "label": "Aleutian Islands",
+    "slug": "aleutian-islands",
+    "quote": "Aleutian Islands"
+   }
+  ],
+  "note": "VIRGINIA (gin), TRUMAN (rum), MADURO (cola: NiCOLAs), PORTALES (port), WHITE AUSTRALIA (tea), ALEUTIAN (ale)"
+ },
+ {
+  "name": "Hide a fish",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Inti Raymi",
+    "slug": "inti-raymi",
+    "quote": "Inti Raymi"
+   },
+   {
+    "label": "Policarpo Bonilla",
+    "slug": "policarpo-bonilla",
+    "quote": "Policarpo Bonilla"
+   },
+   {
+    "label": "Codex Mendoza",
+    "slug": "codex-mendoza",
+    "quote": "Codex Mendoza"
+   },
+   {
+    "label": "Hunac Ceel",
+    "slug": "hunac-ceel",
+    "quote": "Hunac Ceel"
+   },
+   {
+    "label": "Basse-Terre",
+    "slug": "basse-terre",
+    "quote": "Basse-Terre"
+   },
+   {
+    "label": "Samuel Zemurray",
+    "slug": "samuel-zemurray",
+    "quote": "Samuel Zemurray"
+   }
+  ],
+  "note": "INTI RAYMI (ray), POLICARPO (carp), CODEX (cod), HUNAC CEEL (eel), BASSE-TERRE (bass), ZEMURRAY (ray)"
+ },
+ {
+  "name": "Emperors in the Americas after independence",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Agustín de Iturbide",
+    "slug": "agustin-de-iturbide",
+    "quote": "In May 1822 he was proclaimed Emperor Agustín I of the First Mexican Empire, but opposition from congress and the army forced him to abdicate in March 1823"
+   },
+   {
+    "label": "Pedro I",
+    "slug": "pedro-i-of-brazil",
+    "quote": "Pedro I was the founder and first emperor of Brazil, a prince of the Portuguese royal house who proclaimed Brazilian independence on 7 September 1822"
+   },
+   {
+    "label": "Pedro II",
+    "slug": "pedro-ii-of-brazil",
+    "quote": "Pedro II was the second and last emperor of Brazil, succeeding his father Pedro I as a child in 1831 and ruling in his own right from 1840"
+   },
+   {
+    "label": "Maximilian",
+    "slug": "maximilian-i-of-mexico",
+    "quote": "Maximilian I was an Austrian archduke, younger brother of Franz Joseph I, who accepted the throne of Mexico offered by conservatives backed by Napoleon III"
+   },
+   {
+    "label": "Faustin Soulouque",
+    "slug": "faustin-soulouque",
+    "quote": "He purged the mixed-race elite, proclaimed himself Emperor Faustin I in 1849 and built a lavish court"
+   }
+  ],
+  "note": "Only five: Dessalines declared himself emperor but his entry does not say so"
+ },
+ {
+  "name": "Named after explorers",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lake Champlain",
+    "slug": "lake-champlain",
+    "quote": "It is named after Samuel de Champlain, who reached it in 1609 and fought the Mohawk on its shores"
+   },
+   {
+    "label": "Hudson River",
+    "slug": "hudson-river",
+    "quote": "Named after Henry Hudson, who sailed up it for the Dutch in 1609, its valley was the core of New Netherland and the route between New York and Albany"
+   },
+   {
+    "label": "Wallis Island",
+    "slug": "wallis-island",
+    "quote": "Settled by Polynesians, it was conquered by Tonga in the 15th century and is named after the British navigator Samuel Wallis, who sighted it in 1767"
+   },
+   {
+    "label": "Bougainville Island",
+    "slug": "bougainville-island",
+    "quote": "Named after the French navigator Louis-Antoine de Bougainville, it was ruled by Germany and then Australia, and saw heavy fighting in the Second World War"
+   },
+   {
+    "label": "Livingstone",
+    "slug": "livingstone-zambia",
+    "quote": "Livingstone is a town in southern Zambia on the Zambezi River, close to the Victoria Falls, named after the explorer David Livingstone"
+   },
+   {
+    "label": "Finschhafen",
+    "slug": "finschhafen",
+    "quote": "German New Guinea Company and named after the explorer Otto Finsch, it was the first capital of German New"
+   }
+  ]
+ },
+ {
+  "name": "Capitals that lost the title",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rio de Janeiro",
+    "slug": "rio-de-janeiro",
+    "quote": "It became the seat of the Portuguese court in 1808 and then served as the capital of the Brazilian Empire throughout its existence"
+   },
+   {
+    "label": "Salvador",
+    "slug": "salvador",
+    "quote": "It served as the capital of Portuguese colonial Brazil until 1763 and was a major centre of the sugar economy and the Atlantic slave trade"
+   },
+   {
+    "label": "Antigua Guatemala",
+    "slug": "antigua-guatemala",
+    "quote": "After the earthquakes of 1773 the capital moved to Guatemala City"
+   },
+   {
+    "label": "Cartago",
+    "slug": "cartago-costa-rica",
+    "quote": "It was the colonial capital until 1823, when the capital moved to San José after a brief civil war between the towns"
+   },
+   {
+    "label": "Auckland",
+    "slug": "auckland",
+    "quote": "Governor William Hobson chose the site as the colonial capital in 1840, and it remained the capital until Wellington replaced it in 1865"
+   },
+   {
+    "label": "Levuka",
+    "slug": "levuka",
+    "quote": "It was the seat of Cakobau's government, the place where the Deed of Cession was signed in 1874, and the colony's first capital until 1882, when the capital moved to Suva"
+   }
+  ]
+ },
+ {
+  "name": "Algonquian-speaking peoples",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cheyenne",
+    "slug": "cheyenne",
+    "quote": "The Cheyenne are an Algonquian-speaking Indigenous people of the Great Plains, who moved west from the upper"
+   },
+   {
+    "label": "Ojibwe",
+    "slug": "ojibwe",
+    "quote": "The Ojibwe, also called Ojibwa or Chippewa, are an Algonquian-speaking Indigenous people of the Great Lakes region of Canada and the United States"
+   },
+   {
+    "label": "Lenape",
+    "slug": "lenape",
+    "quote": "called the Delaware, are an Algonquian-speaking Indigenous people whose homeland covered the Delaware River valley, New Jersey and"
+   },
+   {
+    "label": "Cree",
+    "slug": "cree",
+    "quote": "Indigenous peoples of Canada, speaking Algonquian languages, with lands stretching from Quebec and the Hudson Bay lowlands to"
+   },
+   {
+    "label": "Mi'kmaq",
+    "slug": "mikmaq",
+    "quote": "They speak an Algonquian language and were members of the Wabanaki Confederacy"
+   },
+   {
+    "label": "Innu",
+    "slug": "innu",
+    "quote": "Their language belongs to the Algonquian family"
+   }
+  ],
+  "note": "The Haudenosaunee are Iroquoian, not Algonquian"
+ }
+]

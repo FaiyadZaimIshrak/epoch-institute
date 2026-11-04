@@ -793,12 +793,19 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   entry or page. Every group's facts are checked against the entries; "Born in / Died in <year>" groups are read
   with [EpochBuild.W]::Life (scratchpad conn/years-check.ps1). Each tile belongs to exactly one group: a decoy that
   seems to fit two (Beethoven: composer, but born in 1770) works only because the other group has four without it.
-  129 puzzles (they run out on 3 March 2027: append more, never reorder). #61-#129 (Oct 2026): groups proposed with
+  249 puzzles (to 1 July 2027: append more, never reorder). #61-#129 (Oct 2026): groups proposed with
   six candidate tiles, each with a quotation from its own entry that proves it (scratchpad conn2: GROUPS-GUIDE.md,
   verify-proposals.js checks the quotations, weights and repeats of published groups), assembled by assemble2.js
   (levels spread 1-4, at most one year and one wordplay group, no entry twice within 30 puzzles, no tile that is
   another group's candidate or names a year group's year) and read by eye: edits.txt holds the editor's tile
   changes (two tiles telling one story, loose fits, obscure hidden words), plan-fix.txt the swapped groups.
+  #130-#249 (4 Nov 2026, release B1) the same way with tools now committed in scripts/conn/: GROUPS-GUIDE.md (the
+  proposers' brief), verify-proposals.js, assemble.js <count> <out.tsv> --edits=<edits.json> [--write] <proposals …>
+  (edits: drop, dropTile, rename, label, keep, level, and "apart": pairs of groups whose categories overlap without
+  sharing a tile, never in one puzzle: Mamluk sultans / Slave soldiers who became rulers) and check-puzzles.js [day]
+  [--from=N], which re-checks the whole file (#1-#129 carry 59 faults from before the 30-puzzle rule). Eight agents
+  proposed 560 groups by region and era (scripts/conn/b1: p-*.json, edits.json written by make-edits.js); 29 dropped as loose or as another file's theme,
+  9 tiles dropped, one level-3 group moved up (the level-4 pool is the one that runs short: propose more hard groups).
 - History Crossword (#cross): a 12 x 12 criss-cross crossword a day for everyone (UTC; #1 = 27 Oct 2026; the puzzles in
   order, repeated after the last), plain clues, 13-17 answers. Tap a square (again to turn), type (keyboard: letters,
   Backspace, arrows, Tab / Shift+Tab to the next clue, Space turns; on touch screens the letters on screen, #cw-kb, so

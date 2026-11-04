@@ -1,0 +1,2574 @@
+[
+ {
+  "name": "Provinces of China",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sichuan",
+    "slug": "sichuan",
+    "quote": "Sichuan is a province of south-western China"
+   },
+   {
+    "label": "Yunnan",
+    "slug": "yunnan",
+    "quote": "Yunnan is a province of south-western China"
+   },
+   {
+    "label": "Gansu",
+    "slug": "gansu",
+    "quote": "Gansu is a province of north-western China"
+   },
+   {
+    "label": "Shandong",
+    "slug": "shandong",
+    "quote": "Shandong is a coastal province of eastern China"
+   },
+   {
+    "label": "Fujian",
+    "slug": "fujian",
+    "quote": "Fujian is a mountainous province on the south-east coast of China"
+   },
+   {
+    "label": "Hunan",
+    "slug": "hunan",
+    "quote": "Hunan is a province of south-central China"
+   }
+  ]
+ },
+ {
+  "name": "Islands of Japan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Honshu",
+    "slug": "honshu",
+    "quote": "Honshu is the largest of the islands of Japan"
+   },
+   {
+    "label": "Kyushu",
+    "slug": "kyushu",
+    "quote": "Kyushu is the third-largest of Japan's main islands"
+   },
+   {
+    "label": "Hokkaido",
+    "slug": "hokkaido",
+    "quote": "Hokkaido is the second-largest and northernmost of Japan's main islands"
+   },
+   {
+    "label": "Shikoku",
+    "slug": "shikoku",
+    "quote": "Shikoku is the smallest of the four main islands of Japan"
+   },
+   {
+    "label": "Tanegashima",
+    "slug": "tanegashima",
+    "quote": "Tanegashima is an island south of Kyushu, Japan"
+   },
+   {
+    "label": "Tsushima",
+    "slug": "tsushima-island",
+    "quote": "Tsushima is a mountainous island in the Korea Strait"
+   }
+  ],
+  "note": "Tsushima is also a famous sea battle (1905): a decoy if the battle is in the puzzle"
+ },
+ {
+  "name": "Cities of Japan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hiroshima",
+    "slug": "hiroshima",
+    "quote": "Hiroshima is a city in western Japan"
+   },
+   {
+    "label": "Nagasaki",
+    "slug": "nagasaki",
+    "quote": "Nagasaki is a port city on the island of Kyushu in south-western Japan"
+   },
+   {
+    "label": "Osaka",
+    "slug": "osaka",
+    "quote": "Osaka is one of the largest cities of Japan"
+   },
+   {
+    "label": "Kobe",
+    "slug": "kobe",
+    "quote": "Kobe is a port city in western Japan"
+   },
+   {
+    "label": "Fukuoka",
+    "slug": "fukuoka",
+    "quote": "Fukuoka is the largest city of Kyushu in south-western Japan"
+   },
+   {
+    "label": "Hakodate",
+    "slug": "hakodate",
+    "quote": "Hakodate is a port city in southern Hokkaido, Japan"
+   }
+  ]
+ },
+ {
+  "name": "Battles of the Pacific War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pearl Harbor",
+    "slug": "attack-on-pearl-harbor",
+    "quote": "the surprise attack by the Empire of Japan's naval air forces on the United States Pacific Fleet"
+   },
+   {
+    "label": "Midway",
+    "slug": "battle-of-midway",
+    "quote": "United States forces sank four Japanese fleet carriers"
+   },
+   {
+    "label": "Guadalcanal",
+    "slug": "guadalcanal-campaign",
+    "quote": "it ended with Japanese withdrawal from the island"
+   },
+   {
+    "label": "Java Sea",
+    "slug": "battle-of-the-java-sea",
+    "quote": "a Japanese fleet defeated an Allied squadron of Dutch, British, Australian and American ships"
+   },
+   {
+    "label": "Okinawa",
+    "slug": "battle-of-okinawa",
+    "quote": "the largest battle of the Pacific War on Japanese territory"
+   },
+   {
+    "label": "Singapore",
+    "slug": "fall-of-singapore",
+    "quote": "the surrender of the British garrison to Japanese forces in February 1942"
+   }
+  ],
+  "note": "Pearl Harbor was used in 'Battlefields of the Second World War' (#?)"
+ },
+ {
+  "name": "Ming emperors",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hongwu",
+    "slug": "hongwu-emperor",
+    "quote": "founded the Ming dynasty in 1368"
+   },
+   {
+    "label": "Yongle",
+    "slug": "yongle-emperor",
+    "quote": "the third emperor of the Ming Empire"
+   },
+   {
+    "label": "Zhengtong",
+    "slug": "zhengtong-emperor",
+    "quote": "Zhu Qizhen, ruled Ming China from 1435 to 1449"
+   },
+   {
+    "label": "Wanli",
+    "slug": "wanli-emperor",
+    "quote": "the 14th emperor of the Ming dynasty"
+   },
+   {
+    "label": "Chongzhen",
+    "slug": "chongzhen-emperor",
+    "quote": "the last emperor of the Ming dynasty"
+   },
+   {
+    "label": "Yongli",
+    "slug": "yongli-emperor",
+    "quote": "the last emperor of the Southern Ming"
+   }
+  ]
+ },
+ {
+  "name": "Qing emperors",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shunzhi",
+    "slug": "shunzhi-emperor",
+    "quote": "the first emperor of the Qing Dynasty to rule over China"
+   },
+   {
+    "label": "Kangxi",
+    "slug": "kangxi-emperor",
+    "quote": "governing the Qing Empire from 1661 to 1722"
+   },
+   {
+    "label": "Yongzheng",
+    "slug": "yongzheng-emperor",
+    "quote": "the third Qing emperor to rule China"
+   },
+   {
+    "label": "Qianlong",
+    "slug": "qianlong-emperor",
+    "quote": "The Qianlong Emperor ruled the Qing Empire from 1735 to 1796"
+   },
+   {
+    "label": "Jiaqing",
+    "slug": "jiaqing-emperor",
+    "quote": "emperor of the Qing dynasty of China from 1796 to 1820"
+   },
+   {
+    "label": "Guangxu",
+    "slug": "guangxu-emperor",
+    "quote": "a late ruler of the Qing Empire"
+   }
+  ],
+  "note": "Puyi was used in 'Last emperors'"
+ },
+ {
+  "name": "Han emperors",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Liu Bang",
+    "slug": "liu-bang",
+    "quote": "the founder of the Han Dynasty, ruling as Emperor Gaozu from 202 BCE"
+   },
+   {
+    "label": "Emperor Wu",
+    "slug": "emperor-wu-of-han",
+    "quote": "the seventh emperor of the Han Dynasty"
+   },
+   {
+    "label": "Emperor Wen",
+    "slug": "emperor-wen-of-han",
+    "quote": "a son of Liu Bang who was made King of Dai before being chosen emperor in 180 BCE"
+   },
+   {
+    "label": "Guangwu",
+    "slug": "emperor-guangwu-of-han",
+    "quote": "restored the Han in 25 CE, founding the Eastern Han"
+   },
+   {
+    "label": "Emperor Xian",
+    "slug": "emperor-xian-of-han",
+    "quote": "the last emperor of the Eastern Han dynasty"
+   },
+   {
+    "label": "Emperor Jing",
+    "slug": "emperor-jing-of-han",
+    "quote": "the sixth emperor of the Western Han dynasty"
+   }
+  ]
+ },
+ {
+  "name": "Tang emperors",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gaozu (Li Yuan)",
+    "slug": "emperor-gaozu-of-tang",
+    "quote": "the founder of the Tang Dynasty"
+   },
+   {
+    "label": "Taizong (Li Shimin)",
+    "slug": "emperor-taizong-of-tang",
+    "quote": "the second emperor of the Tang Dynasty"
+   },
+   {
+    "label": "Xuanzong",
+    "slug": "emperor-xuanzong-of-tang",
+    "quote": "an emperor of the Tang Dynasty (r. 713–741)"
+   },
+   {
+    "label": "Zhongzong",
+    "slug": "emperor-zhongzong-of-tang",
+    "quote": "Emperor Zhongzong of Tang (656–710) was a son of Emperor Gaozong and Wu Zetian"
+   },
+   {
+    "label": "Zhaozong",
+    "slug": "emperor-zhaozong-of-tang",
+    "quote": "Emperor Zhaozong of Tang reigned from 888 to 904"
+   }
+  ],
+  "note": "Taizong and Wu Zetian were used in 'Chinese emperors'"
+ },
+ {
+  "name": "Cities of China",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shanghai",
+    "slug": "shanghai",
+    "quote": "Shanghai is China's largest city"
+   },
+   {
+    "label": "Guangzhou",
+    "slug": "guangzhou",
+    "quote": "a major port city in southern China on the Pearl River delta"
+   },
+   {
+    "label": "Wuhan",
+    "slug": "wuhan",
+    "quote": "Wuhan is the capital of Hubei province in central China"
+   },
+   {
+    "label": "Chengdu",
+    "slug": "chengdu",
+    "quote": "Chengdu is the capital of Sichuan province in south-western China"
+   },
+   {
+    "label": "Tianjin",
+    "slug": "tianjin",
+    "quote": "Tianjin is a major port city in northern China"
+   },
+   {
+    "label": "Harbin",
+    "slug": "harbin",
+    "quote": "Harbin is the capital of Heilongjiang province in north-east China"
+   }
+  ],
+  "note": "Chengdu is also the capital of Sichuan (Provinces of China)"
+ },
+ {
+  "name": "Arts of Japan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kabuki",
+    "slug": "kabuki",
+    "quote": "Kabuki is a form of Japanese theatre"
+   },
+   {
+    "label": "Haiku",
+    "slug": "haiku",
+    "quote": "Haiku is a short form of Japanese poetry"
+   },
+   {
+    "label": "Ukiyo-e",
+    "slug": "ukiyo-e",
+    "quote": "a genre of Japanese woodblock prints and paintings"
+   },
+   {
+    "label": "Tea ceremony",
+    "slug": "japanese-tea-ceremony",
+    "quote": "The Japanese tea ceremony is a ritual preparation and serving of powdered green tea"
+   },
+   {
+    "label": "Kenjutsu",
+    "slug": "kenjutsu",
+    "quote": "Kenjutsu is the Japanese art of swordsmanship"
+   }
+  ]
+ },
+ {
+  "name": "Schools of thought born in China",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Confucianism",
+    "slug": "confucianism",
+    "quote": "based on the teachings of Confucius, a Chinese philosopher"
+   },
+   {
+    "label": "Taoism",
+    "slug": "taoism",
+    "quote": "a Chinese philosophical and religious tradition centred on the Dao"
+   },
+   {
+    "label": "Legalism",
+    "slug": "legalism",
+    "quote": "a school of Chinese political thought"
+   },
+   {
+    "label": "Neo-Confucianism",
+    "slug": "neo-confucianism",
+    "quote": "a revived form of Confucian philosophy"
+   },
+   {
+    "label": "Huang-Lao",
+    "slug": "huang-lao-taoism",
+    "quote": "a school of thought combining Taoist ideas with practical statecraft"
+   },
+   {
+    "label": "Zen",
+    "slug": "zen",
+    "quote": "It arose in China as Chan"
+   }
+  ],
+  "note": "Zen: 'It arose in China as Chan'"
+ },
+ {
+  "name": "Capitals of Asian countries today",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Seoul",
+    "slug": "seoul",
+    "quote": "Seoul is the capital of South Korea"
+   },
+   {
+    "label": "Pyongyang",
+    "slug": "pyongyang",
+    "quote": "Pyongyang is the capital and largest city of North Korea"
+   },
+   {
+    "label": "Ulaanbaatar",
+    "slug": "ulaanbaatar",
+    "quote": "Ulaanbaatar is the capital of Mongolia"
+   },
+   {
+    "label": "Ashgabat",
+    "slug": "ashgabat",
+    "quote": "Ashgabat is the capital and largest city of Turkmenistan"
+   },
+   {
+    "label": "Tashkent",
+    "slug": "tashkent",
+    "quote": "Tashkent is the capital and largest city of Uzbekistan"
+   },
+   {
+    "label": "Dushanbe",
+    "slug": "dushanbe",
+    "quote": "Dushanbe is the capital and largest city of Tajikistan"
+   }
+  ],
+  "note": "Seoul and Pyongyang were used in 'Seats of Korean kings'"
+ },
+ {
+  "name": "Emperors of Japan",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Meiji",
+    "slug": "emperor-meiji",
+    "quote": "Emperor Meiji was emperor of Japan from 1867 to 1912"
+   },
+   {
+    "label": "Hirohito",
+    "slug": "hirohito",
+    "quote": "Hirohito was Emperor of Japan from 1926 until his death in 1989"
+   },
+   {
+    "label": "Kanmu",
+    "slug": "emperor-kanmu",
+    "quote": "Kanmu was emperor of Japan from 781 to 806"
+   },
+   {
+    "label": "Tenmu",
+    "slug": "emperor-tenmu",
+    "quote": "the 40th emperor of Japan, reigning from 673 to 686"
+   },
+   {
+    "label": "Go-Daigo",
+    "slug": "emperor-go-daigo",
+    "quote": "Emperor Go-Daigo of Japan reigned from 1318"
+   },
+   {
+    "label": "Go-Toba",
+    "slug": "emperor-go-toba",
+    "quote": "Go-Toba was emperor of Japan from 1183 to 1198"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Joseon",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Taejo (Yi Seong-gye)",
+    "slug": "taejo-of-joseon",
+    "quote": "Taejo of Joseon, born Yi Seong-gye"
+   },
+   {
+    "label": "Sejong",
+    "slug": "sejong-the-great",
+    "quote": "the fourth king of Joseon Korea, ruling from 1418 to 1450"
+   },
+   {
+    "label": "Sejo",
+    "slug": "sejo-of-joseon",
+    "quote": "Sejo was the seventh king of Joseon"
+   },
+   {
+    "label": "Seonjo",
+    "slug": "seonjo-of-joseon",
+    "quote": "Seonjo was the fourteenth king of Joseon"
+   },
+   {
+    "label": "Yeongjo",
+    "slug": "yeongjo-of-joseon",
+    "quote": "Yeongjo was the 21st king of Joseon Korea"
+   },
+   {
+    "label": "Jeongjo",
+    "slug": "jeongjo-of-joseon",
+    "quote": "Jeongjo was the 22nd king of Joseon Korea"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Goguryeo, Baekje and Silla",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gwanggaeto",
+    "slug": "gwanggaeto-the-great",
+    "quote": "the nineteenth king of Goguryeo, reigning from 391 to 413"
+   },
+   {
+    "label": "Jangsu",
+    "slug": "jangsu-of-goguryeo",
+    "quote": "Jangsu was king of Goguryeo from 413 to 491"
+   },
+   {
+    "label": "Muyeol",
+    "slug": "muyeol-of-silla",
+    "quote": "king of Silla from 654 to 661"
+   },
+   {
+    "label": "Munmu",
+    "slug": "munmu-of-silla",
+    "quote": "Munmu was king of Silla from 661 to 681"
+   },
+   {
+    "label": "Geunchogo",
+    "slug": "geunchogo-of-baekje",
+    "quote": "Geunchogo was king of Baekje from 346 to 375"
+   },
+   {
+    "label": "Seong",
+    "slug": "seong-of-baekje",
+    "quote": "Seong was king of Baekje from 523 to 554"
+   }
+  ]
+ },
+ {
+  "name": "The Imjin War",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yi Sun-sin",
+    "slug": "yi-sun-sin",
+    "quote": "led Joseon's navy against the Japanese invasions of 1592 to 1598"
+   },
+   {
+    "label": "Hansan Island",
+    "slug": "battle-of-hansan-island",
+    "quote": "fought on 14 August 1592 off the south coast of Korea during the Japanese invasion of Joseon"
+   },
+   {
+    "label": "Myeongnyang",
+    "slug": "battle-of-myeongnyang",
+    "quote": "during the second Japanese invasion"
+   },
+   {
+    "label": "Noryang",
+    "slug": "battle-of-noryang",
+    "quote": "the last major battle of the Japanese invasions of Korea"
+   },
+   {
+    "label": "Turtle ship",
+    "slug": "turtle-ship",
+    "quote": "The turtle ship (geobukseon) was a Korean warship"
+   },
+   {
+    "label": "Katō Kiyomasa",
+    "slug": "kato-kiyomasa",
+    "quote": "a leading commander in the invasions of Korea"
+   }
+  ],
+  "note": "Japan's invasions of Korea, 1592-1598"
+ },
+ {
+  "name": "Warlords at the fall of the Han",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cao Cao",
+    "slug": "cao-cao",
+    "quote": "Cao Cao was a Chinese warlord and statesman of the late Han period"
+   },
+   {
+    "label": "Liu Bei",
+    "slug": "liu-bei",
+    "quote": "Liu Bei was a warlord of the late Eastern Han"
+   },
+   {
+    "label": "Sun Quan",
+    "slug": "sun-quan",
+    "quote": "the founder of the state of Eastern Wu in southern China during the Three Kingdoms period"
+   },
+   {
+    "label": "Dong Zhuo",
+    "slug": "dong-zhuo",
+    "quote": "a Chinese general and warlord of the late Han dynasty"
+   },
+   {
+    "label": "Yuan Shao",
+    "slug": "yuan-shao",
+    "quote": "Yuan Shao was a Chinese warlord of the late Eastern Han dynasty"
+   },
+   {
+    "label": "Lü Bu",
+    "slug": "lu-bu",
+    "quote": "Lü Bu was a Chinese warlord of the late Eastern Han dynasty"
+   }
+  ]
+ },
+ {
+  "name": "Emperors of Tibet",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Songtsen Gampo",
+    "slug": "songtsen-gampo",
+    "quote": "the emperor who built the Tibetan Empire"
+   },
+   {
+    "label": "Trisong Detsen",
+    "slug": "trisong-detsen",
+    "quote": "Trisong Detsen was emperor of Tibet from 755"
+   },
+   {
+    "label": "Ralpachen",
+    "slug": "ralpachen",
+    "quote": "emperor of Tibet from about 815 to 838"
+   },
+   {
+    "label": "Langdarma",
+    "slug": "langdarma",
+    "quote": "the last emperor of a united Tibet"
+   },
+   {
+    "label": "Tridu Songtsen",
+    "slug": "tridu-songtsen",
+    "quote": "Tridu Songtsen was emperor of Tibet from 676 to 704"
+   },
+   {
+    "label": "Me Agtsom",
+    "slug": "me-agtsom",
+    "quote": "emperor of Tibet from 705 to 755"
+   }
+  ]
+ },
+ {
+  "name": "Masters of Tibetan Buddhism",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Padmasambhava",
+    "slug": "padmasambhava",
+    "quote": "was invited to Tibet by the emperor Trisong Detsen"
+   },
+   {
+    "label": "Tsongkhapa",
+    "slug": "tsongkhapa",
+    "quote": "a Tibetan Buddhist monk and scholar from Amdo whose teaching founded the Gelug school"
+   },
+   {
+    "label": "Phagpa",
+    "slug": "drogon-chogyal-phagpa",
+    "quote": "a Tibetan Buddhist lama of the Sakya school"
+   },
+   {
+    "label": "Sakya Pandita",
+    "slug": "sakya-pandita",
+    "quote": "a Tibetan Buddhist scholar and one of the five founding masters of the Sakya school"
+   },
+   {
+    "label": "Sonam Gyatso",
+    "slug": "sonam-gyatso",
+    "quote": "a leading lama of the Gelug school of Tibetan Buddhism"
+   },
+   {
+    "label": "Atisha",
+    "slug": "atisha",
+    "quote": "he arrived in western Tibet in 1042"
+   }
+  ],
+  "note": "The 5th or 14th Dalai Lama could stand in"
+ },
+ {
+  "name": "Khagans of the Göktürks",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bumin",
+    "slug": "bumin-qaghan",
+    "quote": "the founder of the Göktürk Empire"
+   },
+   {
+    "label": "Muqan",
+    "slug": "muqan-qaghan",
+    "quote": "ruler of the Gokturk Empire from 553 to 572"
+   },
+   {
+    "label": "Taspar",
+    "slug": "taspar-qaghan",
+    "quote": "ruler of the First Turkic Khaganate from 572 to 581"
+   },
+   {
+    "label": "Ilterish",
+    "slug": "ilterish-qaghan",
+    "quote": "revived Gokturk independence from Tang China in 682 CE"
+   },
+   {
+    "label": "Qapaghan",
+    "slug": "qapaghan-qaghan",
+    "quote": "a ruler of the Second Turkic Khaganate from 691 to 716"
+   },
+   {
+    "label": "Bilge",
+    "slug": "bilge-qaghan",
+    "quote": "a ruler of the Second Göktürk Khaganate"
+   }
+  ]
+ },
+ {
+  "name": "Kushan emperors",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kujula Kadphises",
+    "slug": "kujula-kadphises",
+    "quote": "the founder of the Kushan Empire in the 1st century CE"
+   },
+   {
+    "label": "Vima Takto",
+    "slug": "vima-takto",
+    "quote": "Vima Takto was a Kushan emperor of the late 1st century CE"
+   },
+   {
+    "label": "Vima Kadphises",
+    "slug": "vima-kadphises",
+    "quote": "Vima Kadphises was a Kushan emperor"
+   },
+   {
+    "label": "Kanishka",
+    "slug": "kanishka",
+    "quote": "the most famous ruler of the Kushan Empire"
+   },
+   {
+    "label": "Huvishka",
+    "slug": "huvishka",
+    "quote": "Huvishka was a Kushan emperor who succeeded Kanishka"
+   },
+   {
+    "label": "Vasudeva I",
+    "slug": "vasudeva-i",
+    "quote": "the last great emperor of the Kushan Empire"
+   }
+  ],
+  "note": "Kushan Empire profile tile was used in 'Empires of India'"
+ },
+ {
+  "name": "Ilkhans of Iran",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Abaqa",
+    "slug": "abaqa-khan",
+    "quote": "the second ruler of the Mongol Ilkhanate"
+   },
+   {
+    "label": "Arghun",
+    "slug": "arghun",
+    "quote": "the fourth Mongol Ilkhan of Iran"
+   },
+   {
+    "label": "Gaykhatu",
+    "slug": "gaykhatu",
+    "quote": "the Mongol ruler of the Ilkhanate in Iran from 1291 to 1295"
+   },
+   {
+    "label": "Ghazan",
+    "slug": "ghazan-khan",
+    "quote": "ruler of the Ilkhanate who died in 1304"
+   },
+   {
+    "label": "Öljeitü",
+    "slug": "oljeitu",
+    "quote": "a ruler of the Ilkhanate in the early fourteenth century"
+   },
+   {
+    "label": "Abu Sa'id",
+    "slug": "abu-said-bahadur-khan",
+    "quote": "the last effective ruler of the Ilkhanate"
+   }
+  ],
+  "note": "Hulagu (the first Ilkhan) was used in 'Mongol rulers'"
+ },
+ {
+  "name": "Timurid rulers",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Timur",
+    "slug": "timur",
+    "quote": "Timur, also known as Tamerlane, was a Turco-Mongol conqueror"
+   },
+   {
+    "label": "Shah Rukh",
+    "slug": "shah-rukh",
+    "quote": "ruled the Timurid Empire from 1409 to 1447"
+   },
+   {
+    "label": "Ulugh Beg",
+    "slug": "ulugh-beg",
+    "quote": "Ulugh Beg was a Timurid ruler and astronomer"
+   },
+   {
+    "label": "Husayn Bayqara",
+    "slug": "husayn-bayqara",
+    "quote": "a Timurid ruler of Herat who reigned from 1469 to 1506"
+   },
+   {
+    "label": "Abu Sa'id Mirza",
+    "slug": "abu-said-mirza",
+    "quote": "a Timurid ruler, a great-grandson of Timur"
+   },
+   {
+    "label": "Babur",
+    "slug": "babur",
+    "quote": "Babur was a Timurid prince from Central Asia"
+   }
+  ],
+  "note": "Babur: a Timurid prince who ruled Fergana, then founded the Mughal Empire (a decoy for Mughal groups)"
+ },
+ {
+  "name": "Grandsons of Genghis Khan",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Batu",
+    "slug": "batu-khan",
+    "quote": "Batu Khan was a grandson of Genghis Khan"
+   },
+   {
+    "label": "Möngke",
+    "slug": "mongke",
+    "quote": "a grandson of Genghis Khan. He sent his brother Hulagu"
+   },
+   {
+    "label": "Kublai",
+    "slug": "kublai-khan",
+    "quote": "Kublai Khan was a grandson of Genghis Khan"
+   },
+   {
+    "label": "Hulagu",
+    "slug": "hulagu-khan",
+    "quote": "a Mongol prince, a grandson of Genghis Khan"
+   },
+   {
+    "label": "Berke",
+    "slug": "berke",
+    "quote": "a grandson of Genghis Khan through Jochi"
+   },
+   {
+    "label": "Ariq Böke",
+    "slug": "ariq-boke",
+    "quote": "Ariq Böke was a grandson of Genghis Khan"
+   }
+  ],
+  "note": "Möngke, Kublai and Hulagu were in 'Mongol rulers'; Batu and Berke in 'Khans of the Golden Horde'"
+ },
+ {
+  "name": "Khans of the Kazakhs",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kerei",
+    "slug": "kerei-khan",
+    "quote": "with Janibek Khan, the founder of the Kazakh Khanate"
+   },
+   {
+    "label": "Janibek",
+    "slug": "janibek-khan",
+    "quote": "with Kerei Khan, founded the Kazakh Khanate"
+   },
+   {
+    "label": "Haqnazar",
+    "slug": "haqnazar-khan",
+    "quote": "Haqnazar Khan was khan of the Kazakhs from 1538 to 1580"
+   },
+   {
+    "label": "Esim",
+    "slug": "esim-khan",
+    "quote": "Esim Khan was khan of the Kazakhs from 1598 to 1628"
+   },
+   {
+    "label": "Abylai",
+    "slug": "abylai-khan",
+    "quote": "Abylai Khan was a Kazakh ruler of the Middle Juz"
+   },
+   {
+    "label": "Abulkhair",
+    "slug": "abulkhair-khan",
+    "quote": "khan of the Junior Juz, the western Kazakh horde"
+   }
+  ]
+ },
+ {
+  "name": "Buddhist cave temples of China",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Longmen",
+    "slug": "longmen-grottoes",
+    "quote": "The Longmen Grottoes are Buddhist cave temples"
+   },
+   {
+    "label": "Yungang",
+    "slug": "yungang-grottoes",
+    "quote": "The Yungang Grottoes are Buddhist cave temples near Datong"
+   },
+   {
+    "label": "Mogao",
+    "slug": "mogao-caves",
+    "quote": "a complex of nearly 500 Buddhist cave temples"
+   },
+   {
+    "label": "Kizil",
+    "slug": "kizil-caves",
+    "quote": "a complex of more than 230 Buddhist rock-cut caves near Kucha"
+   },
+   {
+    "label": "Bezeklik",
+    "slug": "bezeklik-caves",
+    "quote": "a complex of Buddhist cave temples in the Flaming Mountains near Turfan"
+   },
+   {
+    "label": "Xiangtangshan",
+    "slug": "xiangtangshan-caves",
+    "quote": "The Xiangtangshan Caves are Buddhist cave temples near Handan"
+   }
+  ]
+ },
+ {
+  "name": "Tokugawa shoguns",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ieyasu",
+    "slug": "tokugawa-ieyasu",
+    "quote": "he was appointed shogun by the imperial court in 1603"
+   },
+   {
+    "label": "Hidetada",
+    "slug": "tokugawa-hidetada",
+    "quote": "the second shogun of the Tokugawa Shogunate"
+   },
+   {
+    "label": "Iemitsu",
+    "slug": "tokugawa-iemitsu",
+    "quote": "the third Tokugawa shogun of Japan"
+   },
+   {
+    "label": "Yoshimune",
+    "slug": "tokugawa-yoshimune",
+    "quote": "became the eighth Tokugawa shogun in 1716"
+   },
+   {
+    "label": "Iemochi",
+    "slug": "tokugawa-iemochi",
+    "quote": "the fourteenth Tokugawa shogun"
+   },
+   {
+    "label": "Yoshinobu",
+    "slug": "tokugawa-yoshinobu",
+    "quote": "the fifteenth and last shogun of the Tokugawa Shogunate"
+   }
+  ],
+  "note": "Ieyasu was used in 'Unifiers and shoguns of Japan'"
+ },
+ {
+  "name": "Warlords of Japan's Sengoku period",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Takeda Shingen",
+    "slug": "takeda-shingen",
+    "quote": "a Japanese daimyo of the Sengoku period who ruled Kai province"
+   },
+   {
+    "label": "Uesugi Kenshin",
+    "slug": "uesugi-kenshin",
+    "quote": "a warlord of Echigo province in the Sengoku period"
+   },
+   {
+    "label": "Mōri Motonari",
+    "slug": "mori-motonari",
+    "quote": "a Japanese warlord of the Sengoku period from Aki province"
+   },
+   {
+    "label": "Imagawa Yoshimoto",
+    "slug": "imagawa-yoshimoto",
+    "quote": "Imagawa Yoshimoto was a Sengoku daimyo"
+   },
+   {
+    "label": "Hōjō Ujiyasu",
+    "slug": "hojo-ujiyasu",
+    "quote": "one of the leading Sengoku warlords"
+   },
+   {
+    "label": "Date Masamune",
+    "slug": "date-masamune",
+    "quote": "a daimyo of north-eastern Japan, known as the 'one-eyed dragon'"
+   }
+  ],
+  "note": "Date Masamune's quote says daimyo, not Sengoku (his dates fit)"
+ },
+ {
+  "name": "Samurai leaders of the Meiji Restoration",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Saigō Takamori",
+    "slug": "saigo-takamori",
+    "quote": "one of the leaders of the Meiji Restoration of 1868"
+   },
+   {
+    "label": "Ōkubo Toshimichi",
+    "slug": "okubo-toshimichi",
+    "quote": "one of the leading statesmen of the Meiji Restoration of 1868"
+   },
+   {
+    "label": "Kido Takayoshi",
+    "slug": "kido-takayoshi",
+    "quote": "one of the three great leaders of the Meiji Restoration"
+   },
+   {
+    "label": "Sakamoto Ryōma",
+    "slug": "sakamoto-ryoma",
+    "quote": "a leading figure in the movement to overthrow the Tokugawa shogunate"
+   },
+   {
+    "label": "Itagaki Taisuke",
+    "slug": "itagaki-taisuke",
+    "quote": "commanded troops for the new imperial government in the Boshin War"
+   }
+  ],
+  "note": "Near the published 'Brought down the Tokugawa shogunate' (events and domains): this one is people"
+ },
+ {
+  "name": "Battles of Japan, 1555–1584",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Miyajima",
+    "slug": "battle-of-miyajima",
+    "quote": "fought in 1555 on the island of Itsukushima in the Inland Sea of Japan"
+   },
+   {
+    "label": "Anegawa",
+    "slug": "battle-of-anegawa",
+    "quote": "fought in the summer of 1570 by the Ane river in northern Ōmi province, Japan"
+   },
+   {
+    "label": "Mikatagahara",
+    "slug": "battle-of-mikatagahara",
+    "quote": "fought on 25 January 1573 near Hamamatsu in Tōtōmi Province, Japan"
+   },
+   {
+    "label": "Tedorigawa",
+    "slug": "battle-of-tedorigawa",
+    "quote": "fought in 1577 at the Tedori River in Kaga Province, Japan"
+   },
+   {
+    "label": "Yamazaki",
+    "slug": "battle-of-yamazaki",
+    "quote": "Toyotomi Hideyoshi defeated Akechi Mitsuhide"
+   },
+   {
+    "label": "Shizugatake",
+    "slug": "battle-of-shizugatake",
+    "quote": "fought in 1583 near Lake Biwa in Omi province, Japan"
+   }
+  ],
+  "note": "Published 'Battles in Japan' had Sekigahara, Nagashino, Okehazama, Osaka: none of them here"
+ },
+ {
+  "name": "Peoples of East Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ainu",
+    "slug": "ainu",
+    "quote": "The Ainu are an indigenous people of Hokkaido"
+   },
+   {
+    "label": "Manchus",
+    "slug": "manchus",
+    "quote": "The Manchus are a people of north-east Asia"
+   },
+   {
+    "label": "Koreans",
+    "slug": "koreans",
+    "quote": "The Koreans are the people of the Korean Peninsula"
+   },
+   {
+    "label": "Tibetans",
+    "slug": "tibetans",
+    "quote": "The Tibetans are a people native to the Tibetan Plateau"
+   },
+   {
+    "label": "Han Chinese",
+    "slug": "han-chinese",
+    "quote": "the majority ethnic group of China"
+   },
+   {
+    "label": "Hakka",
+    "slug": "hakka-people",
+    "quote": "The Hakka are a Han Chinese people"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of Central Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tajiks",
+    "slug": "tajiks",
+    "quote": "a Persian-speaking people of Central Asia"
+   },
+   {
+    "label": "Turkmen",
+    "slug": "turkmen",
+    "quote": "Oghuz Turkic peoples historically associated with pastoral nomadism in Central Asia"
+   },
+   {
+    "label": "Kyrgyz",
+    "slug": "kyrgyz-people",
+    "quote": "The Kyrgyz are a Turkic people of Central Asia"
+   },
+   {
+    "label": "Kazakhs",
+    "slug": "kazakhs",
+    "quote": "a Turkic people of the Central Asian steppe"
+   },
+   {
+    "label": "Uzbeks",
+    "slug": "uzbeks",
+    "quote": "a Turkic people of Central Asia whose name derives"
+   },
+   {
+    "label": "Karakalpaks",
+    "slug": "karakalpaks",
+    "quote": "a Kipchak Turkic people living mainly in the Amu Darya delta"
+   }
+  ],
+  "note": "Kazakhs and Uzbeks were tiles of 'Turkic peoples': use at most one; Tajiks are Persian-speaking, not Turkic"
+ },
+ {
+  "name": "Branches and schools of Buddhism",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mahayana",
+    "slug": "mahayana-buddhism",
+    "quote": "a major branch of Buddhism emphasising the bodhisattva ideal"
+   },
+   {
+    "label": "Theravada",
+    "slug": "theravada-buddhism",
+    "quote": "the branch of Buddhism that relies on the Pali canon"
+   },
+   {
+    "label": "Tibetan",
+    "slug": "tibetan-buddhism",
+    "quote": "the form of Buddhism that developed in Tibet"
+   },
+   {
+    "label": "Vajrayana",
+    "slug": "vajrayana",
+    "quote": "a form of Mahayana Buddhism that developed in India"
+   },
+   {
+    "label": "Zen",
+    "slug": "zen",
+    "quote": "a school of Mahayana Buddhism that stresses meditation"
+   },
+   {
+    "label": "Gelug",
+    "slug": "gelug",
+    "quote": "the school of Tibetan Buddhism founded by the reformer Tsongkhapa"
+   }
+  ],
+  "note": "Zen is also in 'Schools of thought born in China'"
+ },
+ {
+  "name": "Regions on China's frontiers",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Manchuria",
+    "slug": "manchuria",
+    "quote": "Manchuria is a region of north-east China"
+   },
+   {
+    "label": "Xinjiang",
+    "slug": "xinjiang",
+    "quote": "a large region in north-western China"
+   },
+   {
+    "label": "Inner Mongolia",
+    "slug": "inner-mongolia",
+    "quote": "now an autonomous region of the People's Republic"
+   },
+   {
+    "label": "Tibet",
+    "slug": "tibet",
+    "quote": "It was brought under Qing overlordship in the eighteenth century"
+   },
+   {
+    "label": "Dzungaria",
+    "slug": "dzungaria",
+    "quote": "a region of northern Xinjiang in north-western China"
+   },
+   {
+    "label": "Hainan",
+    "slug": "hainan",
+    "quote": "the southernmost province of the People's Republic of China"
+   }
+  ]
+ },
+ {
+  "name": "Wars of the Empire of Japan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sino-Japanese War (1894)",
+    "slug": "first-sino-japanese-war",
+    "quote": "fought in 1894–1895 between the Qing Empire and the Empire of Japan"
+   },
+   {
+    "label": "Russo-Japanese War",
+    "slug": "russo-japanese-war",
+    "quote": "a conflict between the Russian Empire and the Empire of Japan"
+   },
+   {
+    "label": "Sino-Japanese War (1937)",
+    "slug": "second-sino-japanese-war",
+    "quote": "fought between China and Japan from 1937 to 1945"
+   },
+   {
+    "label": "Pacific War",
+    "slug": "pacific-war",
+    "quote": "chiefly between the Empire of Japan and the Allies"
+   },
+   {
+    "label": "Khalkhin Gol",
+    "slug": "battles-of-khalkhin-gol",
+    "quote": "known in Japan as the Nomonhan Incident"
+   }
+  ]
+ },
+ {
+  "name": "Seas and straits of East Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yellow Sea",
+    "slug": "yellow-sea",
+    "quote": "between mainland China and the Korean peninsula"
+   },
+   {
+    "label": "South China Sea",
+    "slug": "south-china-sea",
+    "quote": "a marginal sea of the Pacific bordered by southern China"
+   },
+   {
+    "label": "Sea of Japan",
+    "slug": "sea-of-japan",
+    "quote": "between the Japanese archipelago, Sakhalin, the Korean Peninsula and the Russian Far East"
+   },
+   {
+    "label": "Sea of Okhotsk",
+    "slug": "sea-of-okhotsk",
+    "quote": "a marginal sea of the north-western Pacific Ocean"
+   },
+   {
+    "label": "Taiwan Strait",
+    "slug": "taiwan-strait",
+    "quote": "separates Taiwan from the Chinese province of Fujian"
+   }
+  ],
+  "note": "Yellow Sea is also in the 'Yellow ___' wordplay group"
+ },
+ {
+  "name": "Rivers of China",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yangtze",
+    "slug": "yangtze-river",
+    "quote": "The Yangtze is the longest river in China"
+   },
+   {
+    "label": "Han",
+    "slug": "han-river",
+    "quote": "a major tributary of the Yangtze in central China"
+   },
+   {
+    "label": "Liao",
+    "slug": "liao-river",
+    "quote": "the main river of southern Manchuria in north-east China"
+   },
+   {
+    "label": "Fen",
+    "slug": "fen-river",
+    "quote": "the longest river of Shanxi province, China"
+   },
+   {
+    "label": "Huai",
+    "slug": "huai-river",
+    "quote": "The Huai River flows east across central China"
+   },
+   {
+    "label": "Wei",
+    "slug": "wei-river",
+    "quote": "the main tributary of the Yellow River"
+   }
+  ],
+  "note": "Han, Liao and Wei are also dynasty names: good decoys"
+ },
+ {
+  "name": "Mountains of China",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mount Tai",
+    "slug": "mount-tai",
+    "quote": "the most revered of China's five sacred peaks"
+   },
+   {
+    "label": "Mount Lu",
+    "slug": "mount-lu",
+    "quote": "a mountain range in northern Jiangxi, China"
+   },
+   {
+    "label": "Mount Li",
+    "slug": "mount-li",
+    "quote": "a mountain near Xi'an in Shaanxi, China"
+   },
+   {
+    "label": "Kunlun",
+    "slug": "kunlun-mountains",
+    "quote": "stretching about 3,000 km from the Pamirs into central China"
+   },
+   {
+    "label": "Qilian",
+    "slug": "qilian-mountains",
+    "quote": "a range on the north-eastern edge of the Tibetan Plateau"
+   },
+   {
+    "label": "Yin Shan",
+    "slug": "yin-shan",
+    "quote": "a range of mountains in Inner Mongolia"
+   }
+  ]
+ },
+ {
+  "name": "Gunpowder weapons first made in China",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fire lance",
+    "slug": "fire-lance",
+    "quote": "with the earliest evidence from China in 950"
+   },
+   {
+    "label": "Rocket",
+    "slug": "rocket",
+    "quote": "gunpowder rockets evolved in China under the Song dynasty"
+   },
+   {
+    "label": "Cannon",
+    "slug": "cannon",
+    "quote": "first securely attested in China in the 13th century"
+   },
+   {
+    "label": "Hand cannon",
+    "slug": "hand-cannon",
+    "quote": "It developed in China and spread widely"
+   },
+   {
+    "label": "Fire arrow",
+    "slug": "fire-arrow",
+    "quote": "The Song Dynasty developed and used gunpowder weapons, including fire arrows"
+   }
+  ],
+  "note": "Gunpowder itself was used in 'Invented in China'"
+ },
+ {
+  "name": "Peace treaties signed by China or Japan",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chanyuan",
+    "slug": "chanyuan-treaty",
+    "quote": "a peace agreement concluded in 1005 between the Song Dynasty and the Khitan Liao dynasty"
+   },
+   {
+    "label": "Nanjing",
+    "slug": "treaty-of-nanjing",
+    "quote": "ended the First Opium War between Britain and Qing China"
+   },
+   {
+    "label": "Tientsin (1885)",
+    "slug": "treaty-of-tientsin-1885",
+    "quote": "ending the Sino-French War"
+   },
+   {
+    "label": "Shimonoseki",
+    "slug": "treaty-of-shimonoseki",
+    "quote": "ended the First Sino-Japanese War"
+   },
+   {
+    "label": "Portsmouth",
+    "slug": "treaty-of-portsmouth",
+    "quote": "The Treaty of Portsmouth ended the Russo-Japanese War"
+   },
+   {
+    "label": "San Francisco",
+    "slug": "treaty-of-san-francisco",
+    "quote": "signed on 8 September 1951 by Japan and 48 Allied nations"
+   }
+  ],
+  "note": "Published 'Peace treaties' is a different set"
+ },
+ {
+  "name": "Founded by peoples from north of the Great Wall",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Liao",
+    "slug": "liao-dynasty",
+    "quote": "a state founded by the Khitans"
+   },
+   {
+    "label": "Jin",
+    "slug": "jurchen-jin-dynasty",
+    "quote": "The Jurchen Jin dynasty ruled northern China from 1115 until 1234"
+   },
+   {
+    "label": "Yuan",
+    "slug": "yuan-dynasty",
+    "quote": "the Mongol-ruled dynasty of China"
+   },
+   {
+    "label": "Qing",
+    "slug": "qing-empire",
+    "quote": "founded by the Manchus"
+   },
+   {
+    "label": "Former Yan",
+    "slug": "former-yan",
+    "quote": "a state of the Xianbei Murong clan in north-eastern China"
+   },
+   {
+    "label": "Tuoba (Northern Wei)",
+    "slug": "tuoba",
+    "quote": "a clan of the Xianbei people who founded the Northern Wei dynasty"
+   }
+  ],
+  "note": "Yuan was used in the Dynasties of China groups; the Northern Wei tile is the Tuoba entry"
+ },
+ {
+  "name": "Institutions of imperial China",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Examination system",
+    "slug": "imperial-examination",
+    "quote": "used in China to recruit government officials"
+   },
+   {
+    "label": "Censorate",
+    "slug": "censorate",
+    "quote": "a Chinese government agency responsible for monitoring the conduct of officials"
+   },
+   {
+    "label": "Jinshi",
+    "slug": "jinshi",
+    "quote": "the highest degree in the Chinese imperial examination system"
+   },
+   {
+    "label": "Equal-field system",
+    "slug": "equal-field-system",
+    "quote": "a land allocation system used in China from the Northern Wei to the Tang Dynasty"
+   },
+   {
+    "label": "Zongli Yamen",
+    "slug": "zongli-yamen",
+    "quote": "the office in charge of foreign policy in China under the late Qing dynasty"
+   },
+   {
+    "label": "Three Departments",
+    "slug": "three-departments-and-six-ministries",
+    "quote": "the central administrative structure of the Tang Dynasty"
+   }
+  ]
+ },
+ {
+  "name": "Led China after Mao",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hua Guofeng",
+    "slug": "hua-guofeng",
+    "quote": "succeeded Mao Zedong as chairman of the Chinese Communist Party"
+   },
+   {
+    "label": "Deng Xiaoping",
+    "slug": "deng-xiaoping",
+    "quote": "the paramount leader of the People's Republic of China from 1978"
+   },
+   {
+    "label": "Jiang Zemin",
+    "slug": "jiang-zemin",
+    "quote": "became general secretary of the party after the Tiananmen Square protests of 1989"
+   },
+   {
+    "label": "Hu Jintao",
+    "slug": "hu-jintao",
+    "quote": "general secretary of the Chinese Communist Party from 2002 to 2012"
+   },
+   {
+    "label": "Xi Jinping",
+    "slug": "xi-jinping",
+    "quote": "general secretary of the Chinese Communist Party since 2012"
+   }
+  ],
+  "note": "Deng was used in 'Leaders of communist China'"
+ },
+ {
+  "name": "Clans of Japan",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fujiwara",
+    "slug": "fujiwara-clan",
+    "quote": "a Japanese aristocratic family"
+   },
+   {
+    "label": "Hōjō",
+    "slug": "hojo-clan",
+    "quote": "a Japanese warrior family that controlled the Kamakura shogunate"
+   },
+   {
+    "label": "Toyotomi",
+    "slug": "toyotomi-clan",
+    "quote": "the family of Toyotomi Hideyoshi"
+   },
+   {
+    "label": "Shimazu",
+    "slug": "shimazu-clan",
+    "quote": "a samurai clan of southern Kyushu"
+   },
+   {
+    "label": "Oda",
+    "slug": "oda-clan",
+    "quote": "a Japanese samurai clan of Owari Province"
+   },
+   {
+    "label": "Takeda",
+    "slug": "takeda-clan",
+    "quote": "a Japanese samurai clan descended from the Minamoto"
+   }
+  ],
+  "note": "Shimazu was used in 'Brought down the Tokugawa shogunate'"
+ },
+ {
+  "name": "The end of imperial China, 1911–1912",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sun Yat-sen",
+    "slug": "sun-yat-sen",
+    "quote": "After the 1911 revolution he became provisional president of the Republic of China"
+   },
+   {
+    "label": "Tongmenghui",
+    "slug": "tongmenghui",
+    "quote": "to overthrow the Qing dynasty"
+   },
+   {
+    "label": "Wuchang Uprising",
+    "slug": "wuchang-uprising",
+    "quote": "an army mutiny in the city of Wuchang, now part of Wuhan, on 10 October 1911"
+   },
+   {
+    "label": "Yuan Shikai",
+    "slug": "yuan-shikai",
+    "quote": "In 1912 he arranged the abdication of the last emperor"
+   },
+   {
+    "label": "Puyi",
+    "slug": "puyi",
+    "quote": "Following the Xinhai Revolution, he abdicated on 12 February 1912"
+   },
+   {
+    "label": "Hubei",
+    "slug": "hubei",
+    "quote": "The Wuchang Uprising there in 1911 began the revolution that ended the Qing dynasty"
+   }
+  ]
+ },
+ {
+  "name": "China under Mao",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Great Leap Forward",
+    "slug": "great-leap-forward",
+    "quote": "a campaign launched by Mao Zedong in 1958"
+   },
+   {
+    "label": "Cultural Revolution",
+    "slug": "cultural-revolution",
+    "quote": "a political campaign launched by Mao Zedong in China in 1966"
+   },
+   {
+    "label": "Anti-Rightist Campaign",
+    "slug": "anti-rightist-campaign",
+    "quote": "a political purge in the People's Republic of China launched in 1957"
+   },
+   {
+    "label": "Red Guards",
+    "slug": "red-guards-china",
+    "quote": "militant student and youth groups mobilised by Mao Zedong"
+   },
+   {
+    "label": "Gang of Four",
+    "slug": "gang-of-four",
+    "quote": "the radical faction of the Chinese Communist Party that rose to power during the Cultural Revolution"
+   }
+  ]
+ },
+ {
+  "name": "Ways of war on the steppe",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Horse archer",
+    "slug": "horse-archer",
+    "quote": "Horse archers were the hallmark of steppe and Iranian armies"
+   },
+   {
+    "label": "Composite bow",
+    "slug": "composite-bow",
+    "quote": "It was the principal weapon of steppe and Iranian horse archers"
+   },
+   {
+    "label": "Feigned retreat",
+    "slug": "feigned-retreat",
+    "quote": "It was a hallmark of steppe warfare"
+   },
+   {
+    "label": "Mounted archer",
+    "slug": "mounted-archer",
+    "quote": "Mounted archers were the foundation of steppe military power"
+   },
+   {
+    "label": "Parthian shot",
+    "slug": "parthian-shot",
+    "quote": "a mounted archery tactic in which a horse archer"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Afghanistan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kabul",
+    "slug": "kabul",
+    "quote": "Kabul is a city in present-day Afghanistan"
+   },
+   {
+    "label": "Herat",
+    "slug": "herat",
+    "quote": "Herat is a city in western Afghanistan"
+   },
+   {
+    "label": "Kandahar",
+    "slug": "kandahar",
+    "quote": "Kandahar is a city in southern Afghanistan"
+   },
+   {
+    "label": "Ghazni",
+    "slug": "ghazni",
+    "quote": "Ghazni is a city in eastern Afghanistan"
+   },
+   {
+    "label": "Balkh",
+    "slug": "balkh",
+    "quote": "an ancient city in northern Afghanistan"
+   }
+  ],
+  "note": "Balkh is also a candidate in 'Sacked by the Mongols' (left out there)"
+ },
+ {
+  "name": "Sacked by the Mongols",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Otrar",
+    "slug": "otrar",
+    "quote": "the incident that provoked the Mongol invasion of the Khwarazmian Empire; the city fell after a long siege"
+   },
+   {
+    "label": "Gurganj",
+    "slug": "gurganj",
+    "quote": "The city was besieged and destroyed by the Mongols"
+   },
+   {
+    "label": "Zhongdu",
+    "slug": "zhongdu",
+    "quote": "The Mongols under Genghis Khan besieged and took it in 1215"
+   },
+   {
+    "label": "Kyiv",
+    "slug": "kyiv",
+    "quote": "Sacked by the Mongols in 1240"
+   },
+   {
+    "label": "Bukhara",
+    "slug": "bukhara",
+    "quote": "It was sacked by the Mongols"
+   },
+   {
+    "label": "Ryazan",
+    "slug": "ryazan",
+    "quote": "Old Ryazan, destroyed by the Mongols in 1237"
+   }
+  ],
+  "note": "Bukhara was used in 'Silk Road cities'; Balkh ('The Mongols sacked it in 1220') could stand in"
+ },
+ {
+  "name": "Landmarks and treasures of Korea",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tripitaka Koreana",
+    "slug": "tripitaka-koreana",
+    "quote": "a complete Buddhist canon carved on 81,258 wooden printing blocks by the Goryeo court"
+   },
+   {
+    "label": "Jikji",
+    "slug": "jikji",
+    "quote": "The Jikji is a Korean anthology of Seon (Zen) Buddhist teachings"
+   },
+   {
+    "label": "Cheomseongdae",
+    "slug": "cheomseongdae",
+    "quote": "Cheomseongdae is a stone tower at Gyeongju, South Korea"
+   },
+   {
+    "label": "Hwaseong Fortress",
+    "slug": "hwaseong-fortress",
+    "quote": "a walled fortress surrounding the centre of Suwon in South Korea"
+   },
+   {
+    "label": "Seokguram",
+    "slug": "seokguram",
+    "quote": "Seokguram is an artificial cave shrine on Mount Toham near Gyeongju, South Korea"
+   },
+   {
+    "label": "Bulguksa",
+    "slug": "bulguksa",
+    "quote": "Bulguksa is a Buddhist temple on the slopes of Mount Toham near Gyeongju, South Korea"
+   }
+  ]
+ },
+ {
+  "name": "Rivers of Central Asia and Mongolia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Oxus",
+    "slug": "oxus",
+    "quote": "a major river of Central Asia flowing from the Pamirs towards the Aral Sea"
+   },
+   {
+    "label": "Ili",
+    "slug": "ili-river",
+    "quote": "The Ili River flows from the Tian Shan mountains into Lake Balkhash in Central Asia"
+   },
+   {
+    "label": "Irtysh",
+    "slug": "irtysh",
+    "quote": "The Irtysh is a river of Central Asia and Siberia"
+   },
+   {
+    "label": "Selenga",
+    "slug": "selenga-river",
+    "quote": "The Selenga is a river of Mongolia and Russia"
+   },
+   {
+    "label": "Orkhon",
+    "slug": "orkhon-river",
+    "quote": "The Orkhon River flows through central Mongolia into the Selenga"
+   },
+   {
+    "label": "Zerafshan",
+    "slug": "zerafshan",
+    "quote": "The Zerafshan is a river of Central Asia"
+   }
+  ],
+  "note": "Syr Darya was used in 'Rivers of Asia'"
+ },
+ {
+  "name": "Painters and calligraphers of East Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hokusai",
+    "slug": "katsushika-hokusai",
+    "quote": "a Japanese painter and ukiyo-e printmaker of the late Edo period"
+   },
+   {
+    "label": "Sesshū",
+    "slug": "sesshu-toyo",
+    "quote": "a Japanese Zen monk and painter, the foremost master of ink painting"
+   },
+   {
+    "label": "Kim Hong-do",
+    "slug": "kim-hong-do",
+    "quote": "a Korean court painter of the late Joseon dynasty"
+   },
+   {
+    "label": "Gu Kaizhi",
+    "slug": "gu-kaizhi",
+    "quote": "a Chinese painter of the Eastern Jin dynasty"
+   },
+   {
+    "label": "Wang Xizhi",
+    "slug": "wang-xizhi",
+    "quote": "a Chinese calligrapher of the Eastern Jin dynasty"
+   },
+   {
+    "label": "Huizong",
+    "slug": "emperor-huizong",
+    "quote": "celebrated as a painter, calligrapher and patron of the arts"
+   }
+  ]
+ },
+ {
+  "name": "Capitals of the Mongol world",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Karakorum",
+    "slug": "karakorum",
+    "quote": "Karakorum was the capital of the Mongol Empire in central Mongolia"
+   },
+   {
+    "label": "Khanbaliq",
+    "slug": "khanbaliq",
+    "quote": "the capital built by Kublai Khan on the site of present-day Beijing"
+   },
+   {
+    "label": "Shangdu",
+    "slug": "shangdu",
+    "quote": "the summer capital of the Yuan dynasty"
+   },
+   {
+    "label": "Sarai",
+    "slug": "sarai",
+    "quote": "Sarai was the capital of the Golden Horde on the lower Volga"
+   },
+   {
+    "label": "Sultaniyya",
+    "slug": "sultaniyya",
+    "quote": "built as a capital of the Ilkhanate under Öljeitü"
+   },
+   {
+    "label": "Maragha",
+    "slug": "maragha",
+    "quote": "It served as an early capital of the Ilkhanate under Hulagu"
+   }
+  ],
+  "note": "Dadu (the same city as Khanbaliq) is in 'Described by Marco Polo'; Shangdu too could go there"
+ },
+ {
+  "name": "All in 1644",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Shunzhi",
+    "slug": "shunzhi-emperor",
+    "quote": "enthroned in Beijing in 1644 while still a child"
+   },
+   {
+    "label": "Chongzhen",
+    "slug": "chongzhen-emperor",
+    "quote": "The Chongzhen Emperor (1611–1644)"
+   },
+   {
+    "label": "Dorgon",
+    "slug": "dorgon",
+    "quote": "In 1644 he allied with the Ming"
+   },
+   {
+    "label": "Zhang Xianzhong",
+    "slug": "zhang-xianzhong",
+    "quote": "he took Chengdu in 1644"
+   },
+   {
+    "label": "Innocent X",
+    "slug": "pope-innocent-x",
+    "quote": "was pope from 1644 to 1655"
+   },
+   {
+    "label": "Shanhai Pass",
+    "slug": "shanhai-pass",
+    "quote": "In 1644 the Ming general Wu"
+   }
+  ],
+  "note": "Near the published 'Players in the fall of the Ming' (Li Zicheng, Wu Sangui, Hong Taiji, Koxinga): none of those here. Shunzhi is also in 'Qing emperors', Chongzhen in 'Ming emperors'"
+ },
+ {
+  "name": "All in 1868",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Meiji Restoration",
+    "slug": "meiji-restoration",
+    "quote": "the political revolution of 1868"
+   },
+   {
+    "label": "Charter Oath",
+    "slug": "charter-oath",
+    "quote": "a statement of five principles promulgated in 1868"
+   },
+   {
+    "label": "Tewodros II",
+    "slug": "tewodros-ii",
+    "quote": "Emperor of Ethiopia from 1855 until his death in 1868"
+   },
+   {
+    "label": "Mongkut",
+    "slug": "mongkut",
+    "quote": "Mongkut, King Rama IV of Siam, reigned from 1851 to 1868"
+   },
+   {
+    "label": "Tokyo",
+    "slug": "edo-tokyo",
+    "quote": "Edo, renamed Tokyo in 1868"
+   },
+   {
+    "label": "Céspedes",
+    "slug": "carlos-manuel-de-cespedes",
+    "quote": "on 10 October 1868, starting the Ten Years' War"
+   }
+  ]
+ },
+ {
+  "name": "All in 1279",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Yamen",
+    "slug": "battle-of-yamen",
+    "quote": "a naval battle fought in March 1279"
+   },
+   {
+    "label": "Song dynasty",
+    "slug": "song-dynasty",
+    "quote": "The Song Dynasty ruled China from 960 to 1279"
+   },
+   {
+    "label": "Emperor Bing",
+    "slug": "emperor-bing-of-song",
+    "quote": "the Song navy at Yamen in March 1279"
+   },
+   {
+    "label": "Lu Xiufu",
+    "slug": "lu-xiufu",
+    "quote": "Lu Xiufu (1236–1279)"
+   },
+   {
+    "label": "Castel Nuovo",
+    "slug": "castel-nuovo",
+    "quote": "begun in 1279 by Charles I of Anjou"
+   },
+   {
+    "label": "Denis of Portugal",
+    "slug": "denis-of-portugal",
+    "quote": "king of Portugal from 1279 to 1325"
+   }
+  ],
+  "note": "Emperor Bing is also in the crowned-as-children pool (left out there)"
+ },
+ {
+  "name": "All in 1206",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mongol Empire",
+    "slug": "mongol-empire",
+    "quote": "founded by Genghis Khan in 1206"
+   },
+   {
+    "label": "Kurultai",
+    "slug": "kurultai",
+    "quote": "At the kurultai of 1206"
+   },
+   {
+    "label": "Muhammad of Ghor",
+    "slug": "muhammad-of-ghor",
+    "quote": "After his assassination in 1206"
+   },
+   {
+    "label": "Bakhtiyar Khalji",
+    "slug": "bakhtiyar-khalji",
+    "quote": "but died in 1206 after a disastrous expedition"
+   },
+   {
+    "label": "Mamluk dynasty of Delhi",
+    "slug": "mamluk-dynasty-delhi",
+    "quote": "the first ruling line of the Delhi Sultanate, from 1206 to 1290"
+   },
+   {
+    "label": "Al-Jazari",
+    "slug": "ismail-al-jazari",
+    "quote": "Around 1206 he completed his Book"
+   }
+  ]
+ },
+ {
+  "name": "All in 1368",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Hongwu",
+    "slug": "hongwu-emperor",
+    "quote": "founded the Ming dynasty in 1368"
+   },
+   {
+    "label": "Toghon Temür",
+    "slug": "toghon-temur",
+    "quote": "In 1368, as Ming forces approached"
+   },
+   {
+    "label": "Khanbaliq",
+    "slug": "khanbaliq",
+    "quote": "After the Ming Empire drove out the Yuan in 1368"
+   },
+   {
+    "label": "Ashikaga Yoshimitsu",
+    "slug": "ashikaga-yoshimitsu",
+    "quote": "the third shogun of the Ashikaga shogunate, from 1368 to 1394"
+   },
+   {
+    "label": "Xu Da",
+    "slug": "xu-da",
+    "quote": "in 1368 led the northern expedition"
+   },
+   {
+    "label": "Confederation of Cologne",
+    "slug": "confederation-of-cologne",
+    "quote": "took Copenhagen in 1368"
+   }
+  ],
+  "note": "Hongwu is also in 'Ming emperors', Toghon Temür and Khanbaliq in Mongol groups"
+ },
+ {
+  "name": "All in 1405",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Timur",
+    "slug": "timur",
+    "quote": "1336–1405"
+   },
+   {
+    "label": "Otrar",
+    "slug": "otrar",
+    "quote": "Timur died there in February 1405"
+   },
+   {
+    "label": "Zheng He",
+    "slug": "zheng-he",
+    "quote": "for the Ming Empire between 1405 and 1433"
+   },
+   {
+    "label": "Padua",
+    "slug": "padua",
+    "quote": "the city came under Venetian rule in 1405"
+   },
+   {
+    "label": "Lord of Mann",
+    "slug": "lord-of-mann",
+    "quote": "The Stanley family, granted the island in 1405"
+   },
+   {
+    "label": "Theophanes the Greek",
+    "slug": "theophanes-the-greek",
+    "quote": "the iconostasis of the Cathedral of the Annunciation in 1405"
+   }
+  ],
+  "note": "Timur and Otrar both stand for Timur's death: keep only one"
+ },
+ {
+  "name": "All in 1227",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Genghis Khan",
+    "slug": "genghis-khan",
+    "quote": "c. 1162–1227"
+   },
+   {
+    "label": "Tanguts",
+    "slug": "tanguts",
+    "quote": "Their state was destroyed by Genghis Khan's Mongols in 1227"
+   },
+   {
+    "label": "Chagatai Khan",
+    "slug": "chagatai-khan",
+    "quote": "ruled from 1227 to 1242"
+   },
+   {
+    "label": "Gregory IX",
+    "slug": "pope-gregory-ix",
+    "quote": "Gregory IX was pope from 1227 to 1241"
+   },
+   {
+    "label": "Bornhöved",
+    "slug": "battle-of-bornhoved",
+    "quote": "fought on 22 July 1227 in Holstein"
+   },
+   {
+    "label": "Yinchuan",
+    "slug": "yinchuan",
+    "quote": "until the Mongol conquest of 1227"
+   }
+  ]
+ },
+ {
+  "name": "Grand ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Canal",
+    "slug": "grand-canal",
+    "quote": "The Grand Canal is a vast system of waterways in China"
+   },
+   {
+    "label": "Secretariat",
+    "slug": "grand-secretariat",
+    "quote": "The Grand Secretariat was a central institution of government in Ming and Qing China"
+   },
+   {
+    "label": "Council",
+    "slug": "grand-council-qing",
+    "quote": "The Grand Council was a small advisory body established by the Yongzheng Emperor"
+   },
+   {
+    "label": "Vizier",
+    "slug": "grand-vizier",
+    "quote": "The grand vizier was the chief minister of the Ottoman sultan"
+   },
+   {
+    "label": "Palace",
+    "slug": "grand-palace",
+    "quote": "The Grand Palace is a complex of royal buildings in Bangkok"
+   },
+   {
+    "label": "Duchy of Moscow",
+    "slug": "grand-duchy-of-moscow",
+    "quote": "The Grand Duchy of Moscow, or Muscovy"
+   }
+  ]
+ },
+ {
+  "name": "Yellow ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "River",
+    "slug": "yellow-river",
+    "quote": "The Yellow River is the second-longest river in China"
+   },
+   {
+    "label": "Sea",
+    "slug": "yellow-sea",
+    "quote": "The Yellow Sea is the northern part of the East China Sea"
+   },
+   {
+    "label": "Turbans",
+    "slug": "yellow-turban-rebellion",
+    "quote": "The Yellow Turban Rebellion was a large peasant uprising in China"
+   },
+   {
+    "label": "Ford",
+    "slug": "battle-of-the-yellow-ford",
+    "quote": "The Battle of the Yellow Ford was fought on 14 August 1598"
+   },
+   {
+    "label": "Uyghurs",
+    "slug": "yugurs",
+    "quote": "The Yugurs, also called Yellow Uyghurs"
+   }
+  ],
+  "note": "Yellow River (Rivers of Asia) and Yellow Turbans (Rebellions in China) were published as tiles; Yellow Sea is also in 'Seas and straits of East Asia'"
+ },
+ {
+  "name": "Hide a Chinese dynasty",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Tanganyika",
+    "slug": "lake-tanganyika",
+    "quote": "Lake Tanganyika is a long, deep lake in the African Great Rift Valley"
+   },
+   {
+    "label": "Songhai",
+    "slug": "songhai-empire",
+    "quote": "The Songhai Empire was a West African state centred on Gao"
+   },
+   {
+    "label": "Jinnah",
+    "slug": "muhammad-ali-jinnah",
+    "quote": "Muhammad Ali Jinnah was the leader of the All-India Muslim League"
+   },
+   {
+    "label": "Jesuits",
+    "slug": "jesuits",
+    "quote": "The Jesuits, or Society of Jesus, are a Catholic religious order"
+   },
+   {
+    "label": "Transoxiana",
+    "slug": "transoxiana",
+    "quote": "Transoxiana is the historical name for the region of Central Asia"
+   },
+   {
+    "label": "Hannibal",
+    "slug": "hannibal",
+    "quote": "Hannibal Barca was a Carthaginian general"
+   }
+  ],
+  "note": "TANGanyika, SONGhai, JINnah, jeSUIts, TransoXIAna, HANnibal (Santo DoMINGo could stand in)"
+ },
+ {
+  "name": "Eunuchs who rose high",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Zheng He",
+    "slug": "zheng-he",
+    "quote": "a Chinese admiral and court eunuch"
+   },
+   {
+    "label": "Cai Lun",
+    "slug": "cai-lun",
+    "quote": "Cai Lun was a Chinese court eunuch of the Eastern Han dynasty"
+   },
+   {
+    "label": "Narses",
+    "slug": "narses",
+    "quote": "Narses was an Armenian eunuch who rose to high office"
+   },
+   {
+    "label": "Kafur",
+    "slug": "abu-al-misk-kafur",
+    "quote": "a eunuch of African origin, once a slave, who became ruler of Ikhshidid Egypt"
+   },
+   {
+    "label": "Malik Sarwar",
+    "slug": "malik-sarwar",
+    "quote": "a eunuch noble of the Delhi Sultanate who founded the Jaunpur Sultanate"
+   },
+   {
+    "label": "Bagoas",
+    "slug": "bagoas",
+    "quote": "a powerful eunuch official at the Achaemenid court"
+   }
+  ],
+  "note": "An admiral, the maker of paper, a general and a ruler"
+ },
+ {
+  "name": "Came to the throne as children",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Puyi",
+    "slug": "puyi",
+    "quote": "enthroned as a small child"
+   },
+   {
+    "label": "Xizong of Tang",
+    "slug": "emperor-xizong-of-tang",
+    "quote": "Raised to the throne as a boy"
+   },
+   {
+    "label": "Louis XV",
+    "slug": "louis-xv",
+    "quote": "succeeding his great-grandfather Louis XIV at the age of five"
+   },
+   {
+    "label": "Otto III",
+    "slug": "otto-iii-holy-roman-emperor",
+    "quote": "Otto III became King of Germany at the age of three"
+   },
+   {
+    "label": "Severus Alexander",
+    "slug": "severus-alexander",
+    "quote": "who came to the throne as a boy"
+   },
+   {
+    "label": "Joash of Judah",
+    "slug": "joash-of-judah",
+    "quote": "crowned at the age of seven"
+   }
+  ],
+  "note": "Puyi is also in the 1911–1912 group; Emperor Bing, Tridu Songtsen and Me Agtsom fit too but are in other groups"
+ },
+ {
+  "name": "Rose from humble origins to rule",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hideyoshi",
+    "slug": "toyotomi-hideyoshi",
+    "quote": "rose from humble origins to complete the unification of Japan"
+   },
+   {
+    "label": "Basil I",
+    "slug": "basil-i",
+    "quote": "A peasant from Thrace who rose"
+   },
+   {
+    "label": "Maximinus Thrax",
+    "slug": "maximinus-thrax",
+    "quote": "a soldier of humble Thracian origin proclaimed by the army"
+   },
+   {
+    "label": "Shō En",
+    "slug": "sho-en",
+    "quote": "A man of humble origins from Izena Island"
+   },
+   {
+    "label": "Liu Yu",
+    "slug": "emperor-wu-of-liu-song",
+    "quote": "a general of humble origins who rose to dominate the Eastern Jin court"
+   },
+   {
+    "label": "Liu Bang",
+    "slug": "liu-bang",
+    "quote": "A commoner who rose in the revolts against the Qin"
+   }
+  ],
+  "note": "Liu Bang is also in 'Han emperors'; Hongwu ('a peasant-born rebel leader') fits too"
+ },
+ {
+  "name": "Described by Marco Polo",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yazd",
+    "slug": "yazd",
+    "quote": "Marco Polo described its silk weaving"
+   },
+   {
+    "label": "Kollam",
+    "slug": "kollam",
+    "quote": "described by Marco Polo and Ibn Battuta"
+   },
+   {
+    "label": "Khambhat",
+    "slug": "khambhat",
+    "quote": "it was visited by Marco Polo"
+   },
+   {
+    "label": "Chao (paper money)",
+    "slug": "chao-currency",
+    "quote": "described with astonishment by Marco Polo"
+   },
+   {
+    "label": "Dadu",
+    "slug": "dadu",
+    "quote": "impressed visitors such as Marco Polo"
+   },
+   {
+    "label": "Ngasaunggyan",
+    "slug": "battle-of-ngasaunggyan",
+    "quote": "a battle described by Marco Polo"
+   }
+  ],
+  "note": "Dadu is the same city as Khanbaliq ('Capitals of the Mongol world')"
+ },
+ {
+  "name": "Seen by the pilgrim Xuanzang",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nalanda",
+    "slug": "nalanda",
+    "quote": "including the Chinese pilgrims Xuanzang"
+   },
+   {
+    "label": "Harsha",
+    "slug": "harsha",
+    "quote": "described by the Chinese pilgrim Xuanzang"
+   },
+   {
+    "label": "Kanishka stupa",
+    "slug": "kanishka-stupa",
+    "quote": "The Chinese pilgrims Faxian and Xuanzang described it"
+   },
+   {
+    "label": "Iron Gate",
+    "slug": "iron-gate-central-asia",
+    "quote": "described by the Chinese pilgrim Xuanzang in the 7th century"
+   },
+   {
+    "label": "Kapisa",
+    "slug": "kapisa",
+    "quote": "The Chinese pilgrim Xuanzang described it in 630"
+   },
+   {
+    "label": "Samatata",
+    "slug": "samatata",
+    "quote": "the Chinese pilgrim Xuanzang visited it in the 7th century"
+   }
+  ],
+  "note": "Xuanzang himself was used in 'Travellers of the Middle Ages'"
+ },
+ {
+  "name": "Sogdian people and places",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "An Lushan",
+    "slug": "an-lushan",
+    "quote": "a general of Sogdian and Turkic descent"
+   },
+   {
+    "label": "Afrasiab",
+    "slug": "afrasiab",
+    "quote": "it was the Sogdian capital known to the Greeks as Maracanda"
+   },
+   {
+    "label": "Maniakh",
+    "slug": "maniakh",
+    "quote": "Maniakh was a Sogdian merchant and diplomat"
+   },
+   {
+    "label": "Balasagun",
+    "slug": "balasagun",
+    "quote": "Founded by Sogdian settlers"
+   },
+   {
+    "label": "Shahrisabz",
+    "slug": "shahrisabz",
+    "quote": "it was a Sogdian principality"
+   },
+   {
+    "label": "Panjikent",
+    "slug": "panjikent",
+    "quote": "a Sogdian town of the 5th to 8th centuries"
+   }
+  ]
+ },
+ {
+  "name": "Chinese dynasties that lasted under 40 years",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Qin",
+    "slug": "qin-dynasty",
+    "quote": "collapse within about fifteen years"
+   },
+   {
+    "label": "Sui",
+    "slug": "sui-dynasty",
+    "quote": "reunified China in 581–589 after centuries of division and ruled until 618"
+   },
+   {
+    "label": "Xin",
+    "slug": "xin-dynasty",
+    "quote": "the short-lived regime of Wang Mang"
+   },
+   {
+    "label": "Northern Qi",
+    "slug": "northern-qi",
+    "quote": "ruled north-eastern China from 550 to 577 CE"
+   },
+   {
+    "label": "Northern Zhou",
+    "slug": "northern-zhou",
+    "quote": "ruled north-western China from 557 to 581 CE"
+   }
+  ],
+  "note": "Qin and Sui were tiles of the published 'Dynasties of China'"
+ }
+]

@@ -1,0 +1,2613 @@
+[
+ {
+  "name": "Leaders of the Soviet Union",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lenin",
+    "slug": "vladimir-lenin",
+    "quote": "Soviet Russia through the Civil War and founded the Soviet Union in 1922"
+   },
+   {
+    "label": "Stalin",
+    "slug": "joseph-stalin",
+    "quote": "Stalin (1878–1953) was the leader of the Soviet Union from the late 1920s until his"
+   },
+   {
+    "label": "Khrushchev",
+    "slug": "nikita-khrushchev",
+    "quote": "Nikita Khrushchev was leader of the Soviet Union from the mid-1950s to 1964, as first"
+   },
+   {
+    "label": "Brezhnev",
+    "slug": "leonid-brezhnev",
+    "quote": "Leonid Brezhnev led the Soviet Union as first secretary, later general secretary, of"
+   },
+   {
+    "label": "Gorbachev",
+    "slug": "mikhail-gorbachev",
+    "quote": "Mikhail Gorbachev (1931–2022) was the last leader of the Soviet Union, general secretary of the Communist Party from"
+   }
+  ],
+  "note": "Only five: Andropov, Chernenko and Malenkov have no entry. Trotsky (no leader) is the natural decoy; Gorbachev also fits \"Won the Nobel Peace Prize\", Stalin \"Died in 1953\""
+ },
+ {
+  "name": "The American Civil War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gettysburg",
+    "slug": "battle-of-gettysburg",
+    "quote": "Pennsylvania on 1–3 July 1863, was the largest battle of the American Civil War"
+   },
+   {
+    "label": "Vicksburg",
+    "slug": "siege-of-vicksburg",
+    "quote": "1863, ended with the surrender of the Confederate fortress on the Mississippi River in Mississippi to"
+   },
+   {
+    "label": "Fort Sumter",
+    "slug": "battle-of-fort-sumter",
+    "quote": "of Fort Sumter, on 12–13 April 1861, opened the American Civil War, when Confederate batteries"
+   },
+   {
+    "label": "Appomattox",
+    "slug": "battle-of-appomattox-court-house",
+    "quote": "Virginia on 9 April 1865, was the last engagement of Robert E"
+   },
+   {
+    "label": "Grant",
+    "slug": "ulysses-s-grant",
+    "quote": "As commander of the Union armies he defeated the Confederacy in the Civil"
+   },
+   {
+    "label": "Robert E. Lee",
+    "slug": "robert-e-lee",
+    "quote": "was an American soldier who commanded the Confederate Army of Northern Virginia during the American"
+   }
+  ],
+  "note": "Grant and Lee are people, the rest battles"
+ },
+ {
+  "name": "Inventors of the industrial age",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "James Watt",
+    "slug": "james-watt",
+    "quote": "James Watt was a Scottish inventor and instrument maker whose improvements made the"
+   },
+   {
+    "label": "Arkwright",
+    "slug": "richard-arkwright",
+    "quote": "Richard Arkwright was an English inventor and industrialist, often called the father of"
+   },
+   {
+    "label": "Eli Whitney",
+    "slug": "eli-whitney",
+    "quote": "Eli Whitney was an American inventor who patented the cotton gin in 1794"
+   },
+   {
+    "label": "Hargreaves",
+    "slug": "james-hargreaves",
+    "quote": "English weaver and carpenter from Lancashire who invented the spinning jenny around 1764"
+   },
+   {
+    "label": "Graham Bell",
+    "slug": "alexander-graham-bell",
+    "quote": "Graham Bell was a Scottish-born scientist and inventor credited with patenting the telephone in 1876"
+   },
+   {
+    "label": "Marconi",
+    "slug": "guglielmo-marconi",
+    "quote": "Guglielmo Marconi was an Italian inventor and engineer who developed practical long-distance radio"
+   }
+  ],
+  "note": "Bell and Nobel are decoys for the inventions group (telephone, dynamite)"
+ },
+ {
+  "name": "Political ideologies",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Liberalism",
+    "slug": "liberalism",
+    "quote": "Liberalism is a political and moral philosophy of individual rights, liberty, consent of the"
+   },
+   {
+    "label": "Socialism",
+    "slug": "socialism",
+    "quote": "Socialism is a political and economic ideology advocating collective or state ownership and the"
+   },
+   {
+    "label": "Communism",
+    "slug": "communism",
+    "quote": "Communism is the ideology of a classless, stateless society based on"
+   },
+   {
+    "label": "Fascism",
+    "slug": "fascism",
+    "quote": "Fascism is an authoritarian nationalist ideology that arose in Italy after the First"
+   },
+   {
+    "label": "Conservatism",
+    "slug": "conservatism",
+    "quote": "Conservatism is a philosophy and ideology that seeks to preserve traditional institutions, customs"
+   },
+   {
+    "label": "Anarchism",
+    "slug": "anarchism",
+    "quote": "Anarchism is a political philosophy and movement that seeks to replace the"
+   }
+  ]
+ },
+ {
+  "name": "Wars of the 1800s",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Crimean War",
+    "slug": "crimean-war",
+    "quote": "The Crimean War was fought from 1853 to 1856 between the Russian"
+   },
+   {
+    "label": "First Opium War",
+    "slug": "first-opium-war",
+    "quote": "The First Opium War was fought in 1839–1842 between Britain and the Qing"
+   },
+   {
+    "label": "War of the Pacific",
+    "slug": "war-of-the-pacific",
+    "quote": "The War of the Pacific was fought from 1879 to 1884 between Chile and"
+   },
+   {
+    "label": "Mexican–American War",
+    "slug": "mexican-american-war",
+    "quote": "The Mexican–American War was fought between the United States and Mexico from"
+   },
+   {
+    "label": "Franco-Prussian War",
+    "slug": "franco-prussian-war",
+    "quote": "The Franco-Prussian War of 1870–1871 was fought between France and a German"
+   },
+   {
+    "label": "Second Boer War",
+    "slug": "second-boer-war",
+    "quote": "The Second Boer War was fought from 1899 to 1902 between the British"
+   }
+  ]
+ },
+ {
+  "name": "Crises of the Cold War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Berlin Airlift",
+    "slug": "berlin-airlift",
+    "quote": "air in 1948–1949, after the Soviet Union blockaded road, rail and canal access to the"
+   },
+   {
+    "label": "Missiles in Cuba",
+    "slug": "cuban-missile-crisis",
+    "quote": "of October 1962 was the closest the Cold War came to nuclear war"
+   },
+   {
+    "label": "Suez",
+    "slug": "suez-crisis",
+    "quote": "The Suez Crisis was the international crisis of 1956 in"
+   },
+   {
+    "label": "Bay of Pigs",
+    "slug": "bay-of-pigs-invasion",
+    "quote": "Bay of Pigs invasion was a failed landing in southern Cuba on 17–20 April 1961"
+   },
+   {
+    "label": "Prague Spring",
+    "slug": "prague-spring",
+    "quote": "The Prague Spring was the period of reform in Czechoslovakia that began when Alexander Dubček"
+   },
+   {
+    "label": "Korean War",
+    "slug": "korean-war",
+    "quote": "on 25 June 1950 when North Korea invaded South Korea"
+   }
+  ]
+ },
+ {
+  "name": "Leaders of Nazi Germany",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hitler",
+    "slug": "adolf-hitler",
+    "quote": "Adolf Hitler was the leader of the Nazi Party and dictator of Germany from 1933"
+   },
+   {
+    "label": "Göring",
+    "slug": "hermann-goring",
+    "quote": "Hermann Göring was a leading Nazi, a First World War fighter pilot who"
+   },
+   {
+    "label": "Goebbels",
+    "slug": "joseph-goebbels",
+    "quote": "Joseph Goebbels was a Nazi politician and Hitler's Minister of Propaganda from"
+   },
+   {
+    "label": "Himmler",
+    "slug": "heinrich-himmler",
+    "quote": "Heinrich Himmler was Reichsführer of the SS from 1929 and from 1936 chief of"
+   },
+   {
+    "label": "Heydrich",
+    "slug": "reinhard-heydrich",
+    "quote": "Reinhard Heydrich was a senior SS officer, head of the Reich Security Main"
+   },
+   {
+    "label": "Speer",
+    "slug": "albert-speer",
+    "quote": "Albert Speer was a German architect and Nazi politician who became Hitler's favourite architect and"
+   }
+  ]
+ },
+ {
+  "name": "Painters of 19th-century France",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Monet",
+    "slug": "claude-monet",
+    "quote": "Claude Monet was a French painter and a founder of Impressionism, its most"
+   },
+   {
+    "label": "Manet",
+    "slug": "edouard-manet",
+    "quote": "Édouard Manet was a French painter, one of the first 19th-century artists to"
+   },
+   {
+    "label": "Degas",
+    "slug": "edgar-degas",
+    "quote": "Edgar Degas was a French artist known for his pastels and oil paintings"
+   },
+   {
+    "label": "Pissarro",
+    "slug": "camille-pissarro",
+    "quote": "Pissarro was a Danish-French Impressionist and Neo-Impressionist painter, born in 1830 at Charlotte Amalie on"
+   },
+   {
+    "label": "Gauguin",
+    "slug": "paul-gauguin",
+    "quote": "Paul Gauguin was a French Post-Impressionist painter, sculptor and printmaker"
+   },
+   {
+    "label": "Delacroix",
+    "slug": "eugene-delacroix",
+    "quote": "Eugène Delacroix was a French Romantic artist regarded as the leader of the French"
+   }
+  ],
+  "note": "Van Gogh (Dutch) left out on purpose"
+ },
+ {
+  "name": "Campaigners for women's rights",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Susan B. Anthony",
+    "slug": "susan-b-anthony",
+    "quote": "Anthony was an American campaigner for women's rights and the abolition of slavery, and the"
+   },
+   {
+    "label": "Elizabeth Cady Stanton",
+    "slug": "elizabeth-cady-stanton",
+    "quote": "writer and activist, a leader of the women's rights movement in the United States"
+   },
+   {
+    "label": "Emmeline Pankhurst",
+    "slug": "emmeline-pankhurst",
+    "quote": "activist who led the militant campaign for women's suffrage"
+   },
+   {
+    "label": "Mary Wollstonecraft",
+    "slug": "mary-wollstonecraft",
+    "quote": "philosopher, regarded as one of the founding feminist philosophers"
+   },
+   {
+    "label": "Olympe de Gouges",
+    "slug": "olympe-de-gouges",
+    "quote": "and political activist, best known for her Declaration of the Rights of Woman and of"
+   },
+   {
+    "label": "Millicent Fawcett",
+    "slug": "millicent-garrett-fawcett",
+    "quote": "writer who led the National Union of Women's Suffrage Societies, Britain's largest women's rights association"
+   }
+  ],
+  "note": "Sojourner Truth and Lucretia Mott fit both this and the abolitionists"
+ },
+ {
+  "name": "The American civil rights movement",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Martin Luther King",
+    "slug": "martin-luther-king-jr",
+    "quote": "minister and the best-known leader of the civil rights movement"
+   },
+   {
+    "label": "Malcolm X",
+    "slug": "malcolm-x",
+    "quote": "was an African American Muslim minister and civil rights leader"
+   },
+   {
+    "label": "Rosa Parks",
+    "slug": "rosa-parks",
+    "quote": "Rosa Parks was an American civil rights activist, best known for refusing on 1"
+   },
+   {
+    "label": "Fannie Lou Hamer",
+    "slug": "fannie-lou-hamer",
+    "quote": "Fannie Lou Hamer was an American voting and women's rights activist, community organiser and"
+   },
+   {
+    "label": "W. E. B. Du Bois",
+    "slug": "w-e-b-du-bois",
+    "quote": "an American sociologist, historian, writer and Pan-Africanist civil rights activist, the first African American to earn"
+   },
+   {
+    "label": "March on Washington",
+    "slug": "march-on-washington",
+    "quote": "The March on Washington for Jobs and Freedom, held"
+   }
+  ],
+  "note": "King also won the Nobel Peace Prize"
+ },
+ {
+  "name": "Economists",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Adam Smith",
+    "slug": "adam-smith",
+    "quote": "Adam Smith was a Scottish philosopher and economist of the Scottish Enlightenment"
+   },
+   {
+    "label": "David Ricardo",
+    "slug": "david-ricardo",
+    "quote": "David Ricardo was a British political economist and one of the leading classical economists"
+   },
+   {
+    "label": "Keynes",
+    "slug": "john-maynard-keynes",
+    "quote": "John Maynard Keynes was an English economist whose General Theory of Employment, Interest and"
+   },
+   {
+    "label": "Hayek",
+    "slug": "friedrich-hayek",
+    "quote": "Friedrich Hayek was an Austrian economist and philosopher of the Austrian school of"
+   },
+   {
+    "label": "Milton Friedman",
+    "slug": "milton-friedman",
+    "quote": "Milton Friedman was an American economist and statistician, born in Brooklyn, New York"
+   },
+   {
+    "label": "Amartya Sen",
+    "slug": "amartya-sen",
+    "quote": "Amartya Sen is an Indian economist and philosopher, born in 1933 in Santiniketan"
+   }
+  ],
+  "note": "Marx left out (decoy elsewhere)"
+ },
+ {
+  "name": "Inventions of the 1800s",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Telephone",
+    "slug": "telephone",
+    "quote": "and Alexander Graham Bell, who in March 1876 received the first United States patent for"
+   },
+   {
+    "label": "Photography",
+    "slug": "photography",
+    "quote": "1826 or 1827"
+   },
+   {
+    "label": "Dynamite",
+    "slug": "dynamite",
+    "quote": "or diatomaceous earth, and stabilisers, invented in 1866 by the Swedish chemist Alfred Nobel, who"
+   },
+   {
+    "label": "Bicycle",
+    "slug": "bicycle",
+    "quote": "1817"
+   },
+   {
+    "label": "Automobile",
+    "slug": "automobile",
+    "quote": "the modern car was invented in 1886, when the German inventor Carl Benz patented"
+   },
+   {
+    "label": "Telegraph",
+    "slug": "telegraph",
+    "quote": "long distances by electrical signals along wires, developed in the nineteenth century"
+   }
+  ]
+ },
+ {
+  "name": "The French Revolution",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bastille",
+    "slug": "storming-of-the-bastille",
+    "quote": "The storming of the Bastille was the capture of the Bastille, a"
+   },
+   {
+    "label": "Reign of Terror",
+    "slug": "reign-of-terror",
+    "quote": "The Reign of Terror was the period of the French Revolution"
+   },
+   {
+    "label": "Jacobins",
+    "slug": "jacobin-club",
+    "quote": "The Jacobin Club was the most influential political club"
+   },
+   {
+    "label": "Robespierre",
+    "slug": "maximilien-robespierre",
+    "quote": "lawyer and leading Jacobin of the French Revolution"
+   },
+   {
+    "label": "Estates-General",
+    "slug": "estates-general-france",
+    "quote": "Third Estate proclaiming itself the National Assembly, beginning the French Revolution"
+   },
+   {
+    "label": "Rights of Man",
+    "slug": "declaration-of-the-rights-of-man-and-of-the-citizen",
+    "quote": "became a founding text of the French Revolution and of modern human rights"
+   }
+  ]
+ },
+ {
+  "name": "Russia in 1917",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "October Revolution",
+    "slug": "october-revolution",
+    "quote": "Party under Vladimir Lenin on 25 October 1917 by the old Russian calendar, 7 November"
+   },
+   {
+    "label": "February Revolution",
+    "slug": "february-revolution",
+    "quote": "The February Revolution of 1917 was the uprising in Petrograd that forced"
+   },
+   {
+    "label": "Bolsheviks",
+    "slug": "bolsheviks",
+    "quote": "seized power in the October Revolution of 1917 and suppressed opposition during the Russian Civil"
+   },
+   {
+    "label": "Kerensky",
+    "slug": "alexander-kerensky",
+    "quote": "Russian socialist lawyer who served in the Provisional Government after the February Revolution of 1917"
+   },
+   {
+    "label": "Nicholas II",
+    "slug": "nicholas-ii",
+    "quote": "last emperor of the Russian Empire, who abdicated in 1917"
+   },
+   {
+    "label": "Cheka",
+    "slug": "cheka",
+    "quote": "first Soviet secret police, founded in December 1917 under Felix Dzerzhinsky to fight counter-revolution and"
+   }
+  ],
+  "note": "Lenin and Trotsky fit the Soviet leaders too"
+ },
+ {
+  "name": "Famous ships",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bounty",
+    "slug": "hms-bounty",
+    "quote": "of the crew, led by Fletcher Christian, mutinied and set Bligh adrift"
+   },
+   {
+    "label": "Beagle",
+    "slug": "hms-beagle",
+    "quote": "the world, carrying the young naturalist Charles Darwin, whose observations, including those in the Galápagos"
+   },
+   {
+    "label": "Bismarck",
+    "slug": "bismarck-battleship",
+    "quote": "Bismarck was a German battleship built by Blohm & Voss at Hamburg"
+   },
+   {
+    "label": "Dreadnought",
+    "slug": "hms-dreadnought-1906",
+    "quote": "HMS Dreadnought was a Royal Navy battleship launched in 1906 whose design, with a"
+   },
+   {
+    "label": "Mayflower",
+    "slug": "mayflower",
+    "quote": "The Mayflower was an English merchant ship that carried about 102 passengers, among them"
+   },
+   {
+    "label": "Granma",
+    "slug": "granma-yacht",
+    "quote": "The Granma is the yacht that carried Fidel Castro, Che Guevara and"
+   }
+  ],
+  "note": "Granma is also a tile of The Cuban Revolution; the Mayflower is older (1620)"
+ },
+ {
+  "name": "Philosophers of the 1800s",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hegel",
+    "slug": "georg-wilhelm-friedrich-hegel",
+    "quote": "Georg Wilhelm Friedrich Hegel was a German philosopher, the leading figure of German idealism after"
+   },
+   {
+    "label": "Kierkegaard",
+    "slug": "soren-kierkegaard",
+    "quote": "Søren Kierkegaard was a Danish philosopher and theologian, regarded as the first existentialist"
+   },
+   {
+    "label": "Comte",
+    "slug": "auguste-comte",
+    "quote": "Auguste Comte was a French philosopher of the nineteenth century and the founder"
+   },
+   {
+    "label": "John Stuart Mill",
+    "slug": "john-stuart-mill",
+    "quote": "John Stuart Mill was an English philosopher, economist and Liberal member of Parliament, the"
+   },
+   {
+    "label": "Bentham",
+    "slug": "jeremy-bentham",
+    "quote": "Jeremy Bentham was an English philosopher, jurist and social reformer regarded as the"
+   },
+   {
+    "label": "Marx",
+    "slug": "karl-marx",
+    "quote": "Karl Marx was a German philosopher, political theorist and revolutionary socialist whose theory"
+   }
+  ]
+ },
+ {
+  "name": "Breakthroughs in medicine",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Smallpox vaccine",
+    "slug": "smallpox-vaccine",
+    "quote": "The smallpox vaccine is the first vaccine developed against a"
+   },
+   {
+    "label": "Penicillin",
+    "slug": "penicillin",
+    "quote": "Penicillin is a β-lactam antibiotic first obtained from Penicillium moulds"
+   },
+   {
+    "label": "Insulin",
+    "slug": "insulin",
+    "quote": "sugar, and its absence or failure causes diabetes"
+   },
+   {
+    "label": "X-rays",
+    "slug": "x-ray",
+    "quote": "physicist Wilhelm Conrad Röntgen on 8 November 1895"
+   },
+   {
+    "label": "Anaesthesia",
+    "slug": "general-anaesthesia",
+    "quote": "General anaesthesia is a drug-induced loss of consciousness from"
+   },
+   {
+    "label": "Pasteur",
+    "slug": "louis-pasteur",
+    "quote": "scientist whose work on microbes, fermentation and vaccines founded modern microbiology"
+   }
+  ]
+ },
+ {
+  "name": "Hitler's allies in the Second World War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mussolini",
+    "slug": "benito-mussolini",
+    "quote": "His alliance with Nazi Germany and the military failures of the Second"
+   },
+   {
+    "label": "Pierre Laval",
+    "slug": "pierre-laval",
+    "quote": "1942 to 1944 he worked closely with Nazi Germany, sending French workers to the Reich and"
+   },
+   {
+    "label": "Antonescu",
+    "slug": "ion-antonescu",
+    "quote": "the Soviet Union as an ally of Germany, while his regime deported and killed hundreds"
+   },
+   {
+    "label": "Horthy",
+    "slug": "miklos-horthy",
+    "quote": "almost twenty-five years, allying Hungary with Nazi Germany to regain lost territories"
+   },
+   {
+    "label": "Pavelić",
+    "slug": "ante-pavelic",
+    "quote": "Ante Pavelić was the founder of the fascist Ustaše movement and leader, as Poglavnik, of"
+   },
+   {
+    "label": "Pétain",
+    "slug": "philippe-petain",
+    "quote": "1940, as prime minister, he sought an armistice with Germany, and on 10 July parliament"
+   }
+  ],
+  "note": "Laval and Pétain led collaborating Vichy France rather than an Axis member; Mussolini and Horthy also fit the strongmen groups"
+ },
+ {
+  "name": "Campaigners against slavery",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Wilberforce",
+    "slug": "william-wilberforce",
+    "quote": "who led the parliamentary campaign against the slave trade"
+   },
+   {
+    "label": "Clarkson",
+    "slug": "thomas-clarkson",
+    "quote": "Clarkson was an English campaigner against the slave trade"
+   },
+   {
+    "label": "Granville Sharp",
+    "slug": "granville-sharp",
+    "quote": "British activists for the abolition of the slave trade"
+   },
+   {
+    "label": "Frederick Douglass",
+    "slug": "frederick-douglass",
+    "quote": "Frederick Douglass was an American abolitionist, writer and statesman who escaped slavery in"
+   },
+   {
+    "label": "Sojourner Truth",
+    "slug": "sojourner-truth",
+    "quote": "Sojourner Truth was an American abolitionist and campaigner for women's rights, born into"
+   },
+   {
+    "label": "Lucretia Mott",
+    "slug": "lucretia-mott",
+    "quote": "Lucretia Mott was an American Quaker, abolitionist, women's rights activist and social reformer"
+   }
+  ],
+  "note": "Sojourner Truth and Lucretia Mott also fit \"Campaigners for women's rights\""
+ },
+ {
+  "name": "Won the Nobel Peace Prize",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mandela",
+    "slug": "nelson-mandela",
+    "quote": "1994, serving until 1999, and shared the Nobel Peace Prize in 1993"
+   },
+   {
+    "label": "Desmond Tutu",
+    "slug": "desmond-tutu",
+    "quote": "He won the Nobel Peace Prize in 1984 for his non-violent"
+   },
+   {
+    "label": "Rigoberta Menchú",
+    "slug": "rigoberta-menchu",
+    "quote": "Maya activist from Guatemala who received the Nobel Peace Prize in 1992 for her work"
+   },
+   {
+    "label": "Theodore Roosevelt",
+    "slug": "theodore-roosevelt",
+    "quote": "He won the Nobel Peace Prize for mediating the end of"
+   },
+   {
+    "label": "Jimmy Carter",
+    "slug": "jimmy-carter",
+    "quote": "He won the Nobel Peace Prize in 2002 for his later"
+   },
+   {
+    "label": "Dalai Lama",
+    "slug": "14th-dalai-lama",
+    "quote": "He received the Nobel Peace Prize in 1989"
+   }
+  ],
+  "note": "King and Gorbachev decoys"
+ },
+ {
+  "name": "The Mexican Revolution",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pancho Villa",
+    "slug": "pancho-villa",
+    "quote": "Pancho Villa was a Mexican revolutionary general from northern Mexico who led the"
+   },
+   {
+    "label": "Madero",
+    "slug": "francisco-i-madero",
+    "quote": "Mexican landowner and politician who challenged Porfirio Díaz in the 1910 election and, after his"
+   },
+   {
+    "label": "Carranza",
+    "slug": "venustiano-carranza",
+    "quote": "Mexican politician who led the Constitutionalist movement against Victoriano Huerta from 1913 and was president from 1917"
+   },
+   {
+    "label": "Obregón",
+    "slug": "alvaro-obregon",
+    "quote": "A leading Constitutionalist commander in the Mexican Revolution, he defeated Pancho Villa at the battles"
+   },
+   {
+    "label": "Huerta",
+    "slug": "victoriano-huerta",
+    "quote": "1913 in a coup against President Francisco Madero, who was then murdered"
+   },
+   {
+    "label": "Porfirio Díaz",
+    "slug": "porfirio-diaz",
+    "quote": "fraudulent re-election in 1910 sparked the Mexican Revolution, and he died in exile in Paris"
+   }
+  ]
+ },
+ {
+  "name": "The making of a united Germany",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bismarck",
+    "slug": "otto-von-bismarck",
+    "quote": "von Bismarck was a Prussian statesman who unified Germany and served as the first chancellor"
+   },
+   {
+    "label": "Wilhelm I",
+    "slug": "wilhelm-i",
+    "quote": "of Prussia from 1861 and the first emperor of the German Empire from 1871 until"
+   },
+   {
+    "label": "Moltke",
+    "slug": "helmuth-von-moltke-the-elder",
+    "quote": "Helmuth von Moltke the Elder was a Prussian field marshal and long-serving chief of the"
+   },
+   {
+    "label": "Zollverein",
+    "slug": "zollverein",
+    "quote": "The Zollverein was the customs union of German states led by Prussia"
+   },
+   {
+    "label": "Königgrätz",
+    "slug": "battle-of-koniggratz",
+    "quote": "and was the decisive battle of the Austro-Prussian War"
+   },
+   {
+    "label": "Versailles, 1871",
+    "slug": "proclamation-of-the-german-empire",
+    "quote": "King Wilhelm I of Prussia was proclaimed German Emperor"
+   }
+  ]
+ },
+ {
+  "name": "Strongmen of Latin America",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pinochet",
+    "slug": "augusto-pinochet",
+    "quote": "a Chilean general who led the military coup of 11 September 1973 that overthrew Salvador"
+   },
+   {
+    "label": "Trujillo",
+    "slug": "rafael-trujillo",
+    "quote": "Rafael Trujillo was dictator of the Dominican Republic from 1930 to"
+   },
+   {
+    "label": "Batista",
+    "slug": "fulgencio-batista",
+    "quote": "a Cuban army sergeant who rose to power after the revolution of 1933 and dominated"
+   },
+   {
+    "label": "Stroessner",
+    "slug": "alfredo-stroessner",
+    "quote": "Alfredo Stroessner was a Paraguayan general who seized power in 1954 and ruled as president until"
+   },
+   {
+    "label": "Papa Doc",
+    "slug": "francois-duvalier",
+    "quote": "François Duvalier, known as Papa Doc, was a Haitian physician elected president in"
+   },
+   {
+    "label": "Videla",
+    "slug": "jorge-rafael-videla",
+    "quote": "an Argentine general who led the military coup of 24 March 1976 and served as"
+   }
+  ],
+  "note": "Pinochet and Videla also fit \"Took power in a coup\""
+ },
+ {
+  "name": "Took power in a coup",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Idi Amin",
+    "slug": "idi-amin",
+    "quote": "Amin was a Ugandan army officer who seized power from Milton Obote in 1971"
+   },
+   {
+    "label": "Suharto",
+    "slug": "suharto",
+    "quote": "Suharto was an Indonesian army general who took power after the failed coup of 1965, during"
+   },
+   {
+    "label": "Ne Win",
+    "slug": "ne-win",
+    "quote": "and dictator who seized power in a coup in 1962 and ruled Burma for twenty-six"
+   },
+   {
+    "label": "Gaddafi",
+    "slug": "muammar-gaddafi",
+    "quote": "A young army officer, he led the coup of 1 September 1969 that overthrew King"
+   },
+   {
+    "label": "Ayub Khan",
+    "slug": "ayub-khan",
+    "quote": "in 1951 and seized power in the coup of October 1958, ruling as president until"
+   },
+   {
+    "label": "Nasser",
+    "slug": "gamal-abdel-nasser",
+    "quote": "army officer who led the Free Officers' coup of 1952 and became president of Egypt"
+   }
+  ],
+  "note": "Pinochet and Videla are decoys in \"Strongmen of Latin America\"; Nasser in \"Ba'athists\"? no"
+ },
+ {
+  "name": "Independence leaders of Southeast Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sukarno",
+    "slug": "sukarno",
+    "quote": "Sukarno was the leader of the Indonesian independence movement and the first president of Indonesia"
+   },
+   {
+    "label": "Mohammad Hatta",
+    "slug": "mohammad-hatta",
+    "quote": "cooperated with the Japanese occupation to advance independence and signed the proclamation of 17 August"
+   },
+   {
+    "label": "Ho Chi Minh",
+    "slug": "ho-chi-minh",
+    "quote": "August Revolution of 1945 he proclaimed the independence of the Democratic Republic of Vietnam in"
+   },
+   {
+    "label": "Aung San",
+    "slug": "aung-san",
+    "quote": "Burmese nationalist leader who founded the Burma Independence Army with Japanese help in 1941"
+   },
+   {
+    "label": "Tunku Abdul Rahman",
+    "slug": "tunku-abdul-rahman",
+    "quote": "He negotiated Malaya's independence from Britain, proclaiming it in 1957, and"
+   },
+   {
+    "label": "U Nu",
+    "slug": "u-nu",
+    "quote": "nationalist and statesman who became the first prime minister of independent Burma in 1948"
+   }
+  ]
+ },
+ {
+  "name": "Wars in Vietnam",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Dien Bien Phu",
+    "slug": "battle-of-dien-bien-phu",
+    "quote": "of Dien Bien Phu was fought in 1954 in northern Vietnam between the French army"
+   },
+   {
+    "label": "Viet Minh",
+    "slug": "viet-minh",
+    "quote": "The Viet Minh was a Vietnamese independence movement founded in"
+   },
+   {
+    "label": "Viet Cong",
+    "slug": "viet-cong",
+    "quote": "formally the National Liberation Front for South Vietnam, was the communist-led political and military organisation"
+   },
+   {
+    "label": "Sino-French War",
+    "slug": "sino-french-war",
+    "quote": "1884 to April 1885 over control of Tonkin in northern Vietnam"
+   },
+   {
+    "label": "Third Indochina War",
+    "slug": "third-indochina-war",
+    "quote": "given to the conflicts that followed the Vietnamese invasion of Cambodia in December 1978"
+   },
+   {
+    "label": "First Indochina War",
+    "slug": "first-indochina-war",
+    "quote": "War was fought between France and the Viet Minh, led by Ho Chi Minh, after"
+   }
+  ]
+ },
+ {
+  "name": "Conferences and congresses",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Vienna, 1815",
+    "slug": "congress-of-vienna",
+    "quote": "The Congress of Vienna was a conference of European powers held in 1814–1815 to"
+   },
+   {
+    "label": "Berlin, 1884",
+    "slug": "berlin-conference",
+    "quote": "The Berlin Conference was a meeting of European powers and"
+   },
+   {
+    "label": "Berlin, 1878",
+    "slug": "congress-of-berlin",
+    "quote": "The Congress of Berlin was a meeting of the"
+   },
+   {
+    "label": "Paris, 1919",
+    "slug": "paris-peace-conference-1919-1920",
+    "quote": "The Paris Peace Conference was the meeting of the victorious Allied"
+   },
+   {
+    "label": "Munich, 1938",
+    "slug": "munich-agreement",
+    "quote": "The Munich Agreement was concluded on 29–30 September 1938 by"
+   },
+   {
+    "label": "Bandung, 1955",
+    "slug": "bandung-conference",
+    "quote": "The Asian–African Conference, or Bandung Conference, was a meeting of"
+   }
+  ]
+ },
+ {
+  "name": "Halves of a divided country or city",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "East Germany",
+    "slug": "east-germany",
+    "quote": "state formed in October 1949 from the Soviet occupation zone of Germany"
+   },
+   {
+    "label": "West Germany",
+    "slug": "west-germany",
+    "quote": "Formed from the American, British and French occupation zones with Bonn as its capital, it became"
+   },
+   {
+    "label": "North Korea",
+    "slug": "north-korea",
+    "quote": "the Soviet occupation zone north of the 38th parallel, where the Soviet authorities brought Kim Il"
+   },
+   {
+    "label": "South Korea",
+    "slug": "south-korea",
+    "quote": "of Korea) is a state in the southern part of the Korean peninsula, established in 1948"
+   },
+   {
+    "label": "South Yemen",
+    "slug": "south-yemen",
+    "quote": "by the civil war of 1986, it united with North Yemen in 1990"
+   },
+   {
+    "label": "West Berlin",
+    "slug": "west-berlin",
+    "quote": "West Berlin was the western part of Berlin, formed from the American, British and French"
+   }
+  ]
+ },
+ {
+  "name": "Old names of today's countries",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ceylon",
+    "slug": "ceylon",
+    "quote": "Ceylon is the former name of Sri Lanka, an island south of India famous for"
+   },
+   {
+    "label": "Gold Coast",
+    "slug": "gold-coast",
+    "quote": "Coast was the coastal region of present-day Ghana, named for its gold trade with Europeans"
+   },
+   {
+    "label": "Zaire",
+    "slug": "zaire",
+    "quote": "name of the Democratic Republic of the Congo from 1971 to 1997, adopted by Mobutu"
+   },
+   {
+    "label": "Upper Volta",
+    "slug": "upper-volta",
+    "quote": "Republic of Upper Volta, which was renamed Burkina Faso in 1984"
+   },
+   {
+    "label": "Northern Rhodesia",
+    "slug": "northern-rhodesia",
+    "quote": "British territory in south-central Africa, roughly modern Zambia"
+   },
+   {
+    "label": "Persia",
+    "slug": "persia",
+    "quote": "Persia is the historical name for Iran, derived from the region of Pars in"
+   }
+  ]
+ },
+ {
+  "name": "Railways",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Trans-Siberian",
+    "slug": "trans-siberian-railway",
+    "quote": "The Trans-Siberian Railway is the railway line linking European Russia"
+   },
+   {
+    "label": "Uganda",
+    "slug": "uganda-railway",
+    "quote": "The Uganda Railway is a metre-gauge railway built by the"
+   },
+   {
+    "label": "Panama",
+    "slug": "panama-railroad",
+    "quote": "The Panama Railroad is a railway across the isthmus of"
+   },
+   {
+    "label": "Gotthard",
+    "slug": "gotthard-railway",
+    "quote": "The Gotthard Railway is a Swiss trans-Alpine line linking central"
+   },
+   {
+    "label": "Trans-Indochinese",
+    "slug": "trans-indochinese-railway",
+    "quote": "The Trans-Indochinese Railway is the metre-gauge line of about 1,700"
+   },
+   {
+    "label": "Matadi–Kinshasa",
+    "slug": "matadi-kinshasa-railway",
+    "quote": "The Matadi–Kinshasa Railway, built from 1890 to 1898 as the"
+   }
+  ]
+ },
+ {
+  "name": "The Cuban Revolution",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fidel Castro",
+    "slug": "fidel-castro",
+    "quote": "Fidel Castro was a Cuban revolutionary who led the 26th of July Movement"
+   },
+   {
+    "label": "Che Guevara",
+    "slug": "che-guevara",
+    "quote": "Argentine-born Marxist revolutionary, a leader of the Cuban Revolution with Fidel Castro and later a"
+   },
+   {
+    "label": "Raúl Castro",
+    "slug": "raul-castro",
+    "quote": "Raúl Castro is a Cuban revolutionary and the younger brother of Fidel Castro"
+   },
+   {
+    "label": "Granma",
+    "slug": "granma-yacht",
+    "quote": "Granma is the yacht that carried Fidel Castro, Che Guevara and 80 other revolutionaries from"
+   },
+   {
+    "label": "Moncada",
+    "slug": "attack-on-the-moncada-barracks",
+    "quote": "by about 160 rebels led by Fidel Castro"
+   },
+   {
+    "label": "Sierra Maestra",
+    "slug": "sierra-maestra",
+    "quote": "of independence and, from December 1956, Fidel Castro's guerrillas, who built there the army that"
+   }
+  ],
+  "note": "Batista (Strongmen of Latin America) and the Bay of Pigs (Crises of the Cold War) are decoys; Granma also in Famous ships"
+ },
+ {
+  "name": "Pan-Africanists",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Blyden",
+    "slug": "edward-wilmot-blyden",
+    "quote": "Race (1887) argued for the dignity of African cultures, becoming a founding thinker of Pan-Africanism"
+   },
+   {
+    "label": "Marcus Garvey",
+    "slug": "marcus-garvey",
+    "quote": "a Jamaican political activist who founded the Universal Negro Improvement Association in 1914 and led a"
+   },
+   {
+    "label": "George Padmore",
+    "slug": "george-padmore",
+    "quote": "George Padmore was a Trinidadian Pan-Africanist, journalist and author"
+   },
+   {
+    "label": "Sylvester Williams",
+    "slug": "henry-sylvester-williams",
+    "quote": "and writer, among the founders of the Pan-African movement"
+   },
+   {
+    "label": "Amy Ashwood Garvey",
+    "slug": "amy-ashwood-garvey",
+    "quote": "Amy Ashwood Garvey was a Jamaican Pan-Africanist activist, born in Port Antonio, who with"
+   },
+   {
+    "label": "Du Bois",
+    "slug": "w-e-b-du-bois",
+    "quote": "was an American sociologist, historian, writer and Pan-Africanist civil rights activist, the first African American"
+   }
+  ],
+  "note": "Du Bois also in civil rights; Nkrumah could fit too"
+ },
+ {
+  "name": "Statesmen of Meiji Japan",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Itō Hirobumi",
+    "slug": "ito-hirobumi",
+    "quote": "from the Chōshū domain and the first prime minister of Japan, serving four times between 1885"
+   },
+   {
+    "label": "Yamagata Aritomo",
+    "slug": "yamagata-aritomo",
+    "quote": "First Sino-Japanese War and twice served as prime minister, in 1889–91 and 1898–1900"
+   },
+   {
+    "label": "Ōkubo Toshimichi",
+    "slug": "okubo-toshimichi",
+    "quote": "one of the leading statesmen of the Meiji Restoration of 1868"
+   },
+   {
+    "label": "Saigō Takamori",
+    "slug": "saigo-takamori",
+    "quote": "and one of the leaders of the Meiji Restoration of 1868"
+   },
+   {
+    "label": "Kido Takayoshi",
+    "slug": "kido-takayoshi",
+    "quote": "of the three great leaders of the Meiji Restoration"
+   },
+   {
+    "label": "Iwakura Mission",
+    "slug": "iwakura-mission",
+    "quote": "The Iwakura Mission was a Japanese embassy that toured the United States and"
+   }
+  ]
+ },
+ {
+  "name": "Strongmen of interwar Europe",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Franco",
+    "slug": "francisco-franco",
+    "quote": "winning the civil war in 1939 he ruled Spain as dictator until his death in"
+   },
+   {
+    "label": "Salazar",
+    "slug": "antonio-de-oliveira-salazar",
+    "quote": "Portugal from 1932 to 1968, heading the Estado Novo regime"
+   },
+   {
+    "label": "Metaxas",
+    "slug": "ioannis-metaxas",
+    "quote": "general and politician who ruled Greece as dictator from 4 August 1936 until his death"
+   },
+   {
+    "label": "Piłsudski",
+    "slug": "jozef-pilsudski",
+    "quote": "1920 and ruled as strongman after his coup of 1926"
+   },
+   {
+    "label": "Smetona",
+    "slug": "antanas-smetona",
+    "quote": "and returned to power after the military coup of December 1926"
+   },
+   {
+    "label": "Ulmanis",
+    "slug": "karlis-ulmanis",
+    "quote": "He set up an authoritarian regime after a coup in 1934, and"
+   }
+  ],
+  "note": "Horthy and Antonescu are also Hitler's allies"
+ },
+ {
+  "name": "Battles of the Seven Years' War",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Plassey",
+    "slug": "battle-of-plassey",
+    "quote": "of Plassey was fought on 23 June 1757 near Palashi in Bengal, where a British"
+   },
+   {
+    "label": "Plains of Abraham",
+    "slug": "battle-of-the-plains-of-abraham",
+    "quote": "of Abraham was fought on 13 September 1759 outside Quebec City between British forces under"
+   },
+   {
+    "label": "Quiberon Bay",
+    "slug": "battle-of-quiberon-bay",
+    "quote": "was a naval battle fought in November 1759 off the coast of Brittany during the"
+   },
+   {
+    "label": "Leuthen",
+    "slug": "battle-of-leuthen",
+    "quote": "of Leuthen was fought on 5 December 1757 west of Breslau in Silesia during the"
+   },
+   {
+    "label": "Minden",
+    "slug": "battle-of-minden",
+    "quote": "of Minden was fought on 1 August 1759 near Minden in Westphalia during the Seven"
+   },
+   {
+    "label": "Kunersdorf",
+    "slug": "battle-of-kunersdorf",
+    "quote": "of Kunersdorf was fought on 12 August 1759 near Frankfurt an der Oder in the"
+   }
+  ]
+ },
+ {
+  "name": "Self-Strengthening reformers of Qing China",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Li Hongzhang",
+    "slug": "li-hongzhang",
+    "quote": "suppressing the Taiping Rebellion and promoted the Self-Strengthening Movement, building arsenals, industries and a modern"
+   },
+   {
+    "label": "Zeng Guofan",
+    "slug": "zeng-guofan",
+    "quote": "was also a leading figure in the Self-Strengthening Movement"
+   },
+   {
+    "label": "Zuo Zongtang",
+    "slug": "zuo-zongtang",
+    "quote": "suppress the Taiping Rebellion, founded the Fuzhou Navy Yard and crushed the Dungan revolt in"
+   },
+   {
+    "label": "Prince Gong",
+    "slug": "prince-gong",
+    "quote": "Daoguang Emperor and a leader of China's Self-Strengthening Movement"
+   },
+   {
+    "label": "Wenxiang",
+    "slug": "wenxiang",
+    "quote": "and one of the architects of the Self-Strengthening Movement"
+   },
+   {
+    "label": "Jiangnan Arsenal",
+    "slug": "jiangnan-arsenal",
+    "quote": "by Li Hongzhang in 1865 during the Self-Strengthening Movement"
+   }
+  ]
+ },
+ {
+  "name": "Leaders of Republican China",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sun Yat-sen",
+    "slug": "sun-yat-sen",
+    "quote": "revolution he became provisional president of the Republic of China in January 1912 but soon"
+   },
+   {
+    "label": "Yuan Shikai",
+    "slug": "yuan-shikai",
+    "quote": "abdication of the last emperor and became President of the Republic of China, then dissolved"
+   },
+   {
+    "label": "Chiang Kai-shek",
+    "slug": "chiang-kai-shek",
+    "quote": "military and political leader who headed the Nationalist Party, the Kuomintang, after Sun Yat-sen"
+   },
+   {
+    "label": "Zhang Zuolin",
+    "slug": "zhang-zuolin",
+    "quote": "Zhang Zuolin was a Chinese warlord who rose from bandit leader to master"
+   },
+   {
+    "label": "Duan Qirui",
+    "slug": "duan-qirui",
+    "quote": "leader of the Anhui clique of the Beiyang Army"
+   },
+   {
+    "label": "Wang Jingwei",
+    "slug": "wang-jingwei",
+    "quote": "was a leading figure of the Chinese Nationalist Party, a close associate of Sun Yat-sen"
+   }
+  ]
+ },
+ {
+  "name": "Kings of the Zulu",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shaka",
+    "slug": "shaka-zulu-king",
+    "quote": "Shaka was the king of the Zulu who built the Zulu kingdom into a"
+   },
+   {
+    "label": "Dingane",
+    "slug": "dingane",
+    "quote": "Dingane was king of the Zulu from 1828 to 1840, after taking part"
+   },
+   {
+    "label": "Mpande",
+    "slug": "mpande",
+    "quote": "Mpande kaSenzangakhona was king of the Zulu from 1840 to 1872, a half-brother of"
+   },
+   {
+    "label": "Cetshwayo",
+    "slug": "cetshwayo",
+    "quote": "Cetshwayo kaMpande was king of the Zulu from 1872 to 1879"
+   },
+   {
+    "label": "Dinuzulu",
+    "slug": "dinuzulu-kacetshwayo",
+    "quote": "Dinuzulu kaCetshwayo was king of the Zulu from"
+   },
+   {
+    "label": "Senzangakhona",
+    "slug": "senzangakhona",
+    "quote": "Senzangakhona was chief of the small Zulu chiefdom in what is now KwaZulu-Natal in"
+   }
+  ],
+  "note": "Shaka also fits the Mfecane group"
+ },
+ {
+  "name": "Shaka's contemporaries in southern Africa",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mzilikazi",
+    "slug": "mzilikazi",
+    "quote": "a nineteenth-century military leader who founded the Ndebele kingdom in south-western Zimbabwe"
+   },
+   {
+    "label": "Moshoeshoe I",
+    "slug": "moshoeshoe-i",
+    "quote": "Moshoeshoe I was the founder of the Basotho nation and of the kingdom that became"
+   },
+   {
+    "label": "Soshangane",
+    "slug": "soshangane",
+    "quote": "over Zwide around 1819 and founded the Gaza Empire in southern Mozambique"
+   },
+   {
+    "label": "Sobhuza I",
+    "slug": "sobhuza-i",
+    "quote": "known as Somhlolo, was king of the Swazi from about 1815 to 1836"
+   },
+   {
+    "label": "Zwide",
+    "slug": "zwide",
+    "quote": "Zwide was king of the Ndwandwe in present-day northern KwaZulu-Natal in the late"
+   },
+   {
+    "label": "Dingiswayo",
+    "slug": "dingiswayo",
+    "quote": "Dingiswayo was the paramount chief of the Mthethwa in present-day KwaZulu-Natal, South Africa, from about"
+   }
+  ],
+  "note": "Shaka himself (Zulu kings) is the decoy; Mzilikazi, Moshoeshoe, Soshangane founded kingdoms in the Mfecane"
+ },
+ {
+  "name": "Monarchs of Madagascar",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Andrianampoinimerina",
+    "slug": "andrianampoinimerina",
+    "quote": "Andrianampoinimerina was king of Imerina in the central"
+   },
+   {
+    "label": "Radama I",
+    "slug": "radama-i",
+    "quote": "Radama I was king of the Merina kingdom of Madagascar from 1810 to 1828"
+   },
+   {
+    "label": "Ranavalona I",
+    "slug": "ranavalona-i",
+    "quote": "Ranavalona I was queen of the Merina kingdom of Madagascar from 1828 to 1861"
+   },
+   {
+    "label": "Radama II",
+    "slug": "radama-ii",
+    "quote": "Radama II was king of Madagascar from 1861 to 1863, the son of"
+   },
+   {
+    "label": "Ranavalona II",
+    "slug": "ranavalona-ii",
+    "quote": "Ranavalona II was queen of the Merina kingdom of Madagascar from 1868 to 1883"
+   },
+   {
+    "label": "Ranavalona III",
+    "slug": "ranavalona-iii",
+    "quote": "III was the last monarch of the Merina kingdom of Madagascar, reigning from 1883 to"
+   }
+  ]
+ },
+ {
+  "name": "Rulers of the Sikh Empire",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ranjit Singh",
+    "slug": "ranjit-singh",
+    "quote": "was the founder and Maharaja of the Sikh Empire, who lived from 1780 to 1839"
+   },
+   {
+    "label": "Kharak Singh",
+    "slug": "kharak-singh",
+    "quote": "was the eldest son and successor of Ranjit Singh, founder of the Sikh Empire"
+   },
+   {
+    "label": "Nau Nihal Singh",
+    "slug": "nau-nihal-singh",
+    "quote": "Nau Nihal Singh was a grandson of Ranjit Singh and briefly a ruler of the"
+   },
+   {
+    "label": "Sher Singh",
+    "slug": "sher-singh",
+    "quote": "Sher Singh was a son of Maharaja Ranjit Singh who ruled the Sikh Empire for"
+   },
+   {
+    "label": "Duleep Singh",
+    "slug": "duleep-singh",
+    "quote": "Duleep Singh was the last maharaja of the Sikh Empire, installed as a"
+   },
+   {
+    "label": "Jind Kaur",
+    "slug": "jind-kaur",
+    "quote": "She acted as regent for her young son from 1843, and"
+   }
+  ],
+  "note": "Jind Kaur ruled as regent"
+ },
+ {
+  "name": "Qajar shahs of Iran",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fath-Ali Shah",
+    "slug": "fath-ali-shah-qajar",
+    "quote": "Fath-Ali Shah Qajar was the second Qajar shah of"
+   },
+   {
+    "label": "Mohammad Shah",
+    "slug": "mohammad-shah-qajar",
+    "quote": "Mohammad Shah Qajar was shah of Iran from 1834"
+   },
+   {
+    "label": "Naser al-Din Shah",
+    "slug": "naser-al-din-shah-qajar",
+    "quote": "Naser al-Din Shah was the Qajar shah of Iran from"
+   },
+   {
+    "label": "Mozaffar ad-Din",
+    "slug": "mozaffar-ad-din-shah-qajar",
+    "quote": "Mozaffar ad-Din Shah Qajar was shah of Iran from 1896"
+   },
+   {
+    "label": "Mohammad Ali Shah",
+    "slug": "mohammad-ali-shah-qajar",
+    "quote": "Mohammad Ali Shah Qajar was shah of Iran from 1907"
+   },
+   {
+    "label": "Ahmad Shah",
+    "slug": "ahmad-shah-qajar",
+    "quote": "Ahmad Shah Qajar was the last shah of the"
+   }
+  ]
+ },
+ {
+  "name": "Reformers and rulers of the late Ottoman Empire",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Selim III",
+    "slug": "selim-iii",
+    "quote": "Selim III was Ottoman sultan from 1789 to 1807"
+   },
+   {
+    "label": "Mahmud II",
+    "slug": "mahmud-ii",
+    "quote": "Mahmud II was Ottoman sultan from 1808 to 1839"
+   },
+   {
+    "label": "Midhat Pasha",
+    "slug": "midhat-pasha",
+    "quote": "Midhat Pasha was an Ottoman statesman and reformer"
+   },
+   {
+    "label": "Enver Pasha",
+    "slug": "enver-pasha",
+    "quote": "Enver Pasha was an Ottoman officer and politician, a leader of the"
+   },
+   {
+    "label": "Djemal Pasha",
+    "slug": "djemal-pasha",
+    "quote": "Djemal Pasha was an Ottoman officer and politician, one of the three"
+   },
+   {
+    "label": "Tanzimat",
+    "slug": "tanzimat",
+    "quote": "was a period of reform in the Ottoman Empire from 1839 to 1876"
+   }
+  ]
+ },
+ {
+  "name": "Reformers and writers of the Arab Nahda",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Muhammad Abduh",
+    "slug": "muhammad-abduh",
+    "quote": "Muhammad Abduh was an Egyptian Islamic scholar, judge and reformer, a central figure"
+   },
+   {
+    "label": "Al-Afghani",
+    "slug": "jamal-al-din-al-afghani",
+    "quote": "al-Din al-Afghani was a political activist and Islamic thinker who travelled across the Muslim world"
+   },
+   {
+    "label": "Qasim Amin",
+    "slug": "qasim-amin",
+    "quote": "marriage and the lack of education for women, and his book The Liberation of Women"
+   },
+   {
+    "label": "Jurji Zaydan",
+    "slug": "jurji-zaydan",
+    "quote": "Lebanese novelist, journalist and teacher of the Nahda who settled in Cairo and founded the"
+   },
+   {
+    "label": "Al-Tahtawi",
+    "slug": "rifaa-al-tahtawi",
+    "quote": "Rifa'a al-Tahtawi was a 19th-century Egyptian writer, teacher and translator, an early figure"
+   },
+   {
+    "label": "Butrus al-Bustani",
+    "slug": "butrus-al-bustani",
+    "quote": "Mount Lebanon, a major figure of the Nahda, the Arab renaissance"
+   }
+  ],
+  "note": "Abduh, al-Afghani, Rida and Amin are Islamic modernists of the same age; their entries do not use the word Nahda"
+ },
+ {
+  "name": "Emperors of the Nguyễn dynasty",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gia Long",
+    "slug": "gia-long",
+    "quote": "Gia Long, born Nguyen Phuc Anh, was a survivor of the"
+   },
+   {
+    "label": "Minh Mạng",
+    "slug": "minh-mang",
+    "quote": "Mang was the second emperor of the Nguyen dynasty of Vietnam, ruling from 1820 to"
+   },
+   {
+    "label": "Thiệu Trị",
+    "slug": "thieu-tri",
+    "quote": "Trị was the third emperor of the Nguyen dynasty of Vietnam, ruling from 1841 to"
+   },
+   {
+    "label": "Tự Đức",
+    "slug": "tu-duc",
+    "quote": "Đức was emperor of Vietnam under the Nguyen dynasty from 1847 to 1883, its longest-reigning"
+   },
+   {
+    "label": "Khải Định",
+    "slug": "khai-dinh",
+    "quote": "Khải Định was emperor of Vietnam of the Nguyen dynasty from"
+   },
+   {
+    "label": "Bảo Đại",
+    "slug": "bao-dai",
+    "quote": "Bảo Đại was the last emperor of the Nguyễn dynasty of Vietnam, reigning"
+   }
+  ],
+  "note": "The Gia Long Code is a tile of \"All in 1815\""
+ },
+ {
+  "name": "Linked to Martinique",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Joséphine",
+    "slug": "josephine-de-beauharnais",
+    "quote": "de Beauharnais was born at Trois-Îlets on Martinique into a planter family"
+   },
+   {
+    "label": "Aimé Césaire",
+    "slug": "aime-cesaire",
+    "quote": "was a poet, playwright and politician from Martinique, one of the founders of the Négritude"
+   },
+   {
+    "label": "Frantz Fanon",
+    "slug": "frantz-fanon",
+    "quote": "was a psychiatrist and political philosopher from Martinique"
+   },
+   {
+    "label": "Paulette Nardal",
+    "slug": "paulette-nardal",
+    "quote": "was a French writer and journalist from Martinique and one of the drivers of the"
+   },
+   {
+    "label": "Victor Schoelcher",
+    "slug": "victor-schoelcher",
+    "quote": "Empire, freeing about 250,000 people in Guadeloupe, Martinique, Réunion and elsewhere"
+   },
+   {
+    "label": "Saint-Pierre",
+    "slug": "saint-pierre-martinique",
+    "quote": "a town on the north-west coast of Martinique, founded in 1635 by Pierre Belain d'Esnambuc"
+   }
+  ],
+  "note": "Césaire and Nardal could also fit a Négritude group"
+ },
+ {
+  "name": "Vienna around 1900",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Klimt",
+    "slug": "gustav-klimt",
+    "quote": "painter and a leading figure of the Vienna Secession, known for decorative works such as"
+   },
+   {
+    "label": "Schiele",
+    "slug": "egon-schiele",
+    "quote": "Egon Schiele was an Austrian expressionist painter active in Vienna in the"
+   },
+   {
+    "label": "Mahler",
+    "slug": "gustav-mahler",
+    "quote": "He served as director of the Vienna Court Opera"
+   },
+   {
+    "label": "Freud",
+    "slug": "sigmund-freud",
+    "quote": "Austrian neurologist who founded psychoanalysis, working in Vienna from the late nineteenth century"
+   },
+   {
+    "label": "Schoenberg",
+    "slug": "arnold-schoenberg",
+    "quote": "as part of the cultural innovation of Vienna in the final decades of the Austro-Hungarian"
+   },
+   {
+    "label": "Wittgenstein",
+    "slug": "ludwig-wittgenstein",
+    "quote": "Ludwig Wittgenstein was a philosopher born in Vienna in 1889 into one of the wealthiest"
+   }
+  ]
+ },
+ {
+  "name": "Governors-general and viceroys of India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Curzon",
+    "slug": "george-curzon",
+    "quote": "George Curzon, Lord Curzon, was Viceroy of India from 1899 to 1905"
+   },
+   {
+    "label": "Dalhousie",
+    "slug": "lord-dalhousie",
+    "quote": "Lord Dalhousie was Governor-General of India from 1848 to 1856"
+   },
+   {
+    "label": "Canning",
+    "slug": "charles-canning-1st-earl-canning",
+    "quote": "Charles Canning, 1st Earl Canning, was Governor-General of India from 1856 to 1862 and"
+   },
+   {
+    "label": "Mountbatten",
+    "slug": "louis-mountbatten",
+    "quote": "British naval officer who became the last Viceroy of India in 1947"
+   },
+   {
+    "label": "Cornwallis",
+    "slug": "charles-cornwallis-1st-marquess-cornwallis",
+    "quote": "He later served as Governor-General of India, where his Permanent Settlement of"
+   },
+   {
+    "label": "Warren Hastings",
+    "slug": "warren-hastings",
+    "quote": "Warren Hastings was the first Governor-General of Bengal, heading the East India Company's"
+   }
+  ]
+ },
+ {
+  "name": "Treaties that opened Asian ports",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nanjing",
+    "slug": "treaty-of-nanjing",
+    "quote": "It ceded Hong Kong to Britain, opened five ports to British"
+   },
+   {
+    "label": "Kanagawa",
+    "slug": "convention-of-kanagawa",
+    "quote": "It opened two ports to American vessels and ended Japan's policy"
+   },
+   {
+    "label": "Harris Treaty",
+    "slug": "harris-treaty",
+    "quote": "It opened ports to trade and granted extraterritoriality and fixed"
+   },
+   {
+    "label": "Ganghwa",
+    "slug": "treaty-of-ganghwa",
+    "quote": "it opened Busan and later two other ports to Japanese trade, gave Japanese residents extraterritorial"
+   },
+   {
+    "label": "Bowring Treaty",
+    "slug": "bowring-treaty",
+    "quote": "Similar treaties with other Western powers followed, opening Siam's economy to world trade, above all in"
+   },
+   {
+    "label": "Saigon, 1862",
+    "slug": "treaty-of-saigon-1862",
+    "quote": "Poulo Condore, to France, paid an indemnity, opened ports to trade and allowed Catholic missionaries to"
+   }
+  ]
+ },
+ {
+  "name": "Federations that broke apart",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Central America",
+    "slug": "federal-republic-of-central-america",
+    "quote": "It broke up between 1838 and 1841"
+   },
+   {
+    "label": "United Arab Republic",
+    "slug": "united-arab-republic",
+    "quote": "the backlash led to the Syrian coup of 28 September 1961 and Syria's secession"
+   },
+   {
+    "label": "Mali Federation",
+    "slug": "mali-federation",
+    "quote": "Senghor and Modibo Keïta led Senegal to withdraw in August 1960"
+   },
+   {
+    "label": "Rhodesia and Nyasaland",
+    "slug": "federation-of-rhodesia-and-nyasaland",
+    "quote": "It was dissolved in 1963, after which Zambia and Malawi"
+   },
+   {
+    "label": "Czechoslovakia",
+    "slug": "dissolution-of-czechoslovakia",
+    "quote": "The dissolution of Czechoslovakia, known as the Velvet Divorce"
+   },
+   {
+    "label": "West Indies",
+    "slug": "west-indies",
+    "quote": "The British islands formed the short-lived West Indies Federation from 1958 to 1962"
+   }
+  ]
+ },
+ {
+  "name": "Prime ministers of Australia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Barton",
+    "slug": "edmund-barton",
+    "quote": "He became the first prime minister of the Commonwealth of Australia in 1901"
+   },
+   {
+    "label": "Deakin",
+    "slug": "alfred-deakin",
+    "quote": "of the federation movement and the second prime minister of Australia"
+   },
+   {
+    "label": "Whitlam",
+    "slug": "gough-whitlam",
+    "quote": "Gough Whitlam was the Labor prime minister of Australia from 1972 to 1975"
+   },
+   {
+    "label": "Menzies",
+    "slug": "robert-menzies",
+    "quote": "Sir Robert Menzies was Australia's longest-serving prime minister, in office from 1939 to 1941 and"
+   },
+   {
+    "label": "John Curtin",
+    "slug": "john-curtin",
+    "quote": "Curtin was an Australian Labor politician and prime minister from 1941 until his death in 1945"
+   },
+   {
+    "label": "Bob Hawke",
+    "slug": "bob-hawke",
+    "quote": "Bob Hawke was the Labor prime minister of Australia from 1983 to 1991, after"
+   }
+  ]
+ },
+ {
+  "name": "Caudillos of Spanish America",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rafael Carrera",
+    "slug": "rafael-carrera",
+    "quote": "Rafael Carrera was a Guatemalan caudillo of humble origins who in 1837 led"
+   },
+   {
+    "label": "Estanislao López",
+    "slug": "estanislao-lopez",
+    "quote": "death and one of the leading Federalist caudillos"
+   },
+   {
+    "label": "Francisco Ramírez",
+    "slug": "francisco-ramirez",
+    "quote": "Francisco Ramírez was a caudillo of Entre Ríos and a lieutenant of"
+   },
+   {
+    "label": "Juan Manuel de Rosas",
+    "slug": "juan-manuel-de-rosas",
+    "quote": "de Rosas was a rancher and Federalist caudillo who governed Buenos Aires from 1829 to"
+   },
+   {
+    "label": "Fructuoso Rivera",
+    "slug": "fructuoso-rivera",
+    "quote": "Fructuoso Rivera was a Uruguayan caudillo and soldier who became the first constitutional"
+   },
+   {
+    "label": "Facundo Quiroga",
+    "slug": "juan-facundo-quiroga",
+    "quote": "Juan Facundo Quiroga was an Argentine caudillo from La Rioja and one of the"
+   }
+  ]
+ },
+ {
+  "name": "All in 1789",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Bastille",
+    "slug": "storming-of-the-bastille",
+    "quote": "Paris, by armed crowds on 14 July 1789"
+   },
+   {
+    "label": "Bounty mutiny",
+    "slug": "hms-bounty",
+    "quote": "In April 1789 part of the crew, led by Fletcher"
+   },
+   {
+    "label": "Inconfidência Mineira",
+    "slug": "inconfidencia-mineira",
+    "quote": "landowners of Vila Rica, Minas Gerais, in 1789"
+   },
+   {
+    "label": "Đống Đa",
+    "slug": "battle-of-ngoc-hoi-dong-da",
+    "quote": "fought around Thăng Long (Hanoi) in early 1789, when Nguyen Hue, who had just proclaimed"
+   },
+   {
+    "label": "First US Congress",
+    "slug": "united-states-congress",
+    "quote": "first met in New York in March 1789, succeeding the Congress of the Confederation"
+   },
+   {
+    "label": "Brabant Revolution",
+    "slug": "brabant-revolution",
+    "quote": "Beginning in Brabant in 1789, rebels drove out the Austrian forces and"
+   }
+  ],
+  "note": "Đống Đa (Vietnam) has weight 0 but keeps the group from being only Europe and the Americas"
+ },
+ {
+  "name": "All in 1815",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Waterloo",
+    "slug": "battle-of-waterloo",
+    "quote": "Battle of Waterloo was fought in June 1815 in present-day Belgium, where an Anglo-allied army"
+   },
+   {
+    "label": "Congress of Vienna",
+    "slug": "congress-of-vienna",
+    "quote": "a conference of European powers held in 1814–1815 to reorganise Europe after the Napoleonic Wars"
+   },
+   {
+    "label": "Corn Laws",
+    "slug": "corn-laws",
+    "quote": "in the United Kingdom, in force from 1815 to 1846, which kept bread prices high"
+   },
+   {
+    "label": "Kandyan Convention",
+    "slug": "kandyan-convention",
+    "quote": "was the agreement signed on 2 March 1815 between the British and the chiefs of"
+   },
+   {
+    "label": "Gia Long Code",
+    "slug": "gia-long-code",
+    "quote": "dynasty, promulgated by Emperor Gia Long in 1815"
+   },
+   {
+    "label": "Second Serbian Uprising",
+    "slug": "second-serbian-uprising",
+    "quote": "Ottoman rule, launched at Takovo in April 1815 under Miloš Obrenović"
+   }
+  ]
+ },
+ {
+  "name": "All in 1868",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Meiji Restoration",
+    "slug": "meiji-restoration",
+    "quote": "Meiji Restoration was the political revolution of 1868 that ended the Tokugawa Shogunate and restored"
+   },
+   {
+    "label": "Charter Oath",
+    "slug": "charter-oath",
+    "quote": "a statement of five principles promulgated in 1868 at the start of the Meiji era"
+   },
+   {
+    "label": "Ten Years' War",
+    "slug": "ten-years-war",
+    "quote": "The Ten Years' War of 1868–1878 was the first major Cuban war of"
+   },
+   {
+    "label": "Grito de Lares",
+    "slug": "grito-de-lares",
+    "quote": "rule in Puerto Rico on 23 September 1868, planned by Ramón Emeterio Betances from exile"
+   },
+   {
+    "label": "Glorious Revolution (Spain)",
+    "slug": "glorious-revolution-spain",
+    "quote": "The Glorious Revolution of September 1868 was a military rising led by Generals"
+   },
+   {
+    "label": "Fort Laramie treaty",
+    "slug": "treaty-of-fort-laramie-1868",
+    "quote": "The Treaty of Fort Laramie of 1868 was an agreement between the United States"
+   }
+  ]
+ },
+ {
+  "name": "All in 1919",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Treaty of Versailles",
+    "slug": "treaty-of-versailles",
+    "quote": "Versailles was the peace treaty signed in 1919 between the Allied powers and Germany after"
+   },
+   {
+    "label": "March First Movement",
+    "slug": "march-first-movement",
+    "quote": "colonial rule that began on 1 March 1919 with the reading of a Declaration of"
+   },
+   {
+    "label": "Weimar Constitution",
+    "slug": "weimar-constitution",
+    "quote": "National Assembly at Weimar on 31 July 1919 by 262 votes to 75, it created"
+   },
+   {
+    "label": "Comintern",
+    "slug": "communist-international",
+    "quote": "communist parties founded in Moscow in March 1919 under the leadership of Lenin and the"
+   },
+   {
+    "label": "Third Anglo-Afghan War",
+    "slug": "third-anglo-afghan-war",
+    "quote": "War was a brief conflict in May 1919, when Emir Amanullah Khan of Afghanistan sent"
+   },
+   {
+    "label": "Spartacist uprising",
+    "slug": "spartacist-uprising",
+    "quote": "in Berlin from 5 to 12 January 1919, led by the newly founded Communist Party"
+   }
+  ]
+ },
+ {
+  "name": "All in 1947",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Partition of India",
+    "slug": "partition-of-india",
+    "quote": "dominions, India and Pakistan, on 14–15 August 1947"
+   },
+   {
+    "label": "Truman Doctrine",
+    "slug": "truman-doctrine",
+    "quote": "Truman on 12 March 1947, pledging support to countries threatened by communist"
+   },
+   {
+    "label": "Constitution of Japan",
+    "slug": "constitution-of-japan",
+    "quote": "The Constitution of Japan was adopted in 1947 under the Allied occupation after the Second"
+   },
+   {
+    "label": "Transistor",
+    "slug": "transistor",
+    "quote": "one, a point-contact transistor, was invented in 1947 by John Bardeen, Walter Brattain and William"
+   },
+   {
+    "label": "Panglong Conference",
+    "slug": "panglong-conference",
+    "quote": "Panglong in the Shan States in February 1947, at which Aung San, representing the interim"
+   },
+   {
+    "label": "Ba'ath Party",
+    "slug": "baath-party",
+    "quote": "and socialist party founded in Damascus in 1947 by Michel Aflaq and Salah al-Din al-Bitar"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1769",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Napoleon",
+    "slug": "napoleon",
+    "quote": "1769–1821"
+   },
+   {
+    "label": "Muhammad Ali of Egypt",
+    "slug": "muhammad-ali-of-egypt",
+    "quote": "1769–1849"
+   },
+   {
+    "label": "Wellington",
+    "slug": "arthur-wellesley-1st-duke-of-wellington",
+    "quote": "1769–1852"
+   },
+   {
+    "label": "Humboldt",
+    "slug": "alexander-von-humboldt",
+    "quote": "1769–1859"
+   },
+   {
+    "label": "Michel Ney",
+    "slug": "michel-ney",
+    "quote": "1769–1815"
+   },
+   {
+    "label": "Mahmud Shah Durrani",
+    "slug": "mahmud-shah-durrani",
+    "quote": "1769–1829"
+   }
+  ],
+  "note": "Wellington also fits Napoleon-era groups"
+ },
+ {
+  "name": "Born in 1818",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Karl Marx",
+    "slug": "karl-marx",
+    "quote": "1818–1883"
+   },
+   {
+    "label": "Tewodros II",
+    "slug": "tewodros-ii",
+    "quote": "c. 1818–1868"
+   },
+   {
+    "label": "Frederick Douglass",
+    "slug": "frederick-douglass",
+    "quote": "c. 1818–1895"
+   },
+   {
+    "label": "Alexander II",
+    "slug": "alexander-ii-of-russia",
+    "quote": "1818–1881"
+   },
+   {
+    "label": "Faidherbe",
+    "slug": "louis-faidherbe",
+    "quote": "1818–1889"
+   },
+   {
+    "label": "Semmelweis",
+    "slug": "ignaz-semmelweis",
+    "quote": "1818–1865"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1889",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Hitler",
+    "slug": "adolf-hitler",
+    "quote": "1889–1945"
+   },
+   {
+    "label": "Nehru",
+    "slug": "jawaharlal-nehru",
+    "quote": "1889–1964"
+   },
+   {
+    "label": "Salazar",
+    "slug": "antonio-de-oliveira-salazar",
+    "quote": "1889–1970"
+   },
+   {
+    "label": "Taha Hussein",
+    "slug": "taha-hussein",
+    "quote": "1889–1973"
+   },
+   {
+    "label": "Wittgenstein",
+    "slug": "ludwig-wittgenstein",
+    "quote": "1889–1951"
+   },
+   {
+    "label": "Gabriela Mistral",
+    "slug": "gabriela-mistral",
+    "quote": "1889–1957"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1953",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Stalin",
+    "slug": "joseph-stalin",
+    "quote": "1878–1953"
+   },
+   {
+    "label": "Ibn Saud",
+    "slug": "ibn-saud",
+    "quote": "1875–1953"
+   },
+   {
+    "label": "Prokofiev",
+    "slug": "sergei-prokofiev",
+    "quote": "1891–1953"
+   },
+   {
+    "label": "Klement Gottwald",
+    "slug": "klement-gottwald",
+    "quote": "1896–1953"
+   },
+   {
+    "label": "Carol II",
+    "slug": "carol-ii-of-romania",
+    "quote": "1893–1953"
+   },
+   {
+    "label": "Lavrentiy Beria",
+    "slug": "lavrentiy-beria",
+    "quote": "1899–1953"
+   }
+  ]
+ },
+ {
+  "name": "Follow \"Red\"",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Army",
+    "slug": "red-army",
+    "quote": "The Red Army was the army of Soviet Russia and"
+   },
+   {
+    "label": "Guards",
+    "slug": "red-guards-china",
+    "quote": "Red Guards (China)"
+   },
+   {
+    "label": "Square",
+    "slug": "red-square",
+    "quote": "Red Square"
+   },
+   {
+    "label": "Fort",
+    "slug": "red-fort",
+    "quote": "The Red Fort is the walled palace complex of the"
+   },
+   {
+    "label": "Vienna",
+    "slug": "red-vienna",
+    "quote": "Red Vienna"
+   },
+   {
+    "label": "Jacket",
+    "slug": "red-jacket",
+    "quote": "Red Jacket"
+   }
+  ]
+ },
+ {
+  "name": "Follow \"White\"",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Lotus",
+    "slug": "white-lotus-rebellion",
+    "quote": "White Lotus Rebellion"
+   },
+   {
+    "label": "Australia",
+    "slug": "white-australia-policy",
+    "quote": "White Australia policy"
+   },
+   {
+    "label": "Movement",
+    "slug": "white-movement",
+    "quote": "White movement"
+   },
+   {
+    "label": "Revolution",
+    "slug": "white-revolution",
+    "quote": "White Revolution"
+   },
+   {
+    "label": "Nile",
+    "slug": "white-nile",
+    "quote": "White Nile"
+   },
+   {
+    "label": "Sea",
+    "slug": "white-sea",
+    "quote": "The White Sea is an inlet of the Barents Sea"
+   }
+  ]
+ },
+ {
+  "name": "___ Plan",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Schlieffen",
+    "slug": "schlieffen-plan",
+    "quote": "Schlieffen Plan"
+   },
+   {
+    "label": "Marshall",
+    "slug": "marshall-plan",
+    "quote": "Marshall Plan"
+   },
+   {
+    "label": "Colombo",
+    "slug": "colombo-plan",
+    "quote": "Colombo Plan"
+   },
+   {
+    "label": "Monnet",
+    "slug": "monnet-plan",
+    "quote": "Monnet Plan"
+   },
+   {
+    "label": "Four-Year",
+    "slug": "four-year-plan",
+    "quote": "Four Year Plan"
+   },
+   {
+    "label": "Briggs",
+    "slug": "briggs-plan",
+    "quote": "Briggs Plan"
+   }
+  ]
+ },
+ {
+  "name": "Hide a country",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Disraeli",
+    "slug": "benjamin-disraeli",
+    "quote": "Benjamin Disraeli"
+   },
+   {
+    "label": "Machado",
+    "slug": "gerardo-machado",
+    "quote": "Gerardo Machado"
+   },
+   {
+    "label": "Miranda",
+    "slug": "francisco-de-miranda",
+    "quote": "Francisco de Miranda"
+   },
+   {
+    "label": "Chilembwe",
+    "slug": "john-chilembwe",
+    "quote": "John Chilembwe"
+   },
+   {
+    "label": "Romanticism",
+    "slug": "romanticism",
+    "quote": "Romanticism was a cultural and intellectual movement of"
+   },
+   {
+    "label": "Magnitogorsk",
+    "slug": "magnitogorsk",
+    "quote": "Magnitogorsk is an industrial city in the southern"
+   }
+  ]
+ },
+ {
+  "name": "Trained as doctors",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Allende",
+    "slug": "salvador-allende",
+    "quote": "Salvador Allende was a Chilean Socialist physician and politician who won the presidential election"
+   },
+   {
+    "label": "Papa Doc",
+    "slug": "francois-duvalier",
+    "quote": "known as Papa Doc, was a Haitian physician elected president in 1957 who declared himself"
+   },
+   {
+    "label": "Hastings Banda",
+    "slug": "hastings-banda",
+    "quote": "Hastings Kamuzu Banda was a Malawian physician and politician who led Nyasaland to independence"
+   },
+   {
+    "label": "Kubitschek",
+    "slug": "juscelino-kubitschek",
+    "quote": "Juscelino Kubitschek was a doctor and politician, governor of Minas Gerais, who"
+   },
+   {
+    "label": "Ramgoolam",
+    "slug": "seewoosagur-ramgoolam",
+    "quote": "Seewoosagur Ramgoolam was a Mauritian physician and politician who led the Labour Party"
+   },
+   {
+    "label": "José Rizal",
+    "slug": "jose-rizal",
+    "quote": "José Rizal was a Filipino physician, writer and reformer, and the national hero"
+   }
+  ]
+ },
+ {
+  "name": "Defeats of colonial armies",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Adwa",
+    "slug": "battle-of-adwa",
+    "quote": "The Ethiopians won a decisive victory, forcing Italy to recognise Ethiopian independence"
+   },
+   {
+    "label": "Isandlwana",
+    "slug": "battle-of-isandlwana",
+    "quote": "It was one of the worst defeats suffered by a British army against an"
+   },
+   {
+    "label": "Dogali",
+    "slug": "battle-of-dogali",
+    "quote": "when an Ethiopian army under Ras Alula destroyed an Italian column of some 500 men"
+   },
+   {
+    "label": "Little Bighorn",
+    "slug": "battle-of-the-little-bighorn",
+    "quote": "by Sitting Bull, Crazy Horse and others destroyed five companies of the US 7th Cavalry"
+   },
+   {
+    "label": "Majuba Hill",
+    "slug": "battle-of-majuba-hill",
+    "quote": "but Boer riflemen climbed the slopes and routed it, killing Colley"
+   },
+   {
+    "label": "Khartoum, 1885",
+    "slug": "khartoum",
+    "quote": "January 1885 Mahdist forces took it and killed General Charles Gordon, after which the Mahdists ruled from Omdurman"
+   }
+  ],
+  "note": "Little Bighorn (US Army) and Majuba Hill (Boers over the British) stretch the name a little; Dien Bien Phu (Wars in Vietnam) would fit too"
+ },
+ {
+  "name": "Given a throne by Napoleon",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Joseph Bonaparte",
+    "slug": "joseph-bonaparte",
+    "quote": "elder brother of Napoleon, who made him king of Naples in 1806"
+   },
+   {
+    "label": "Louis Bonaparte",
+    "slug": "louis-bonaparte",
+    "quote": "younger brother of Napoleon, who made him king of Holland in 1806"
+   },
+   {
+    "label": "Jérôme Bonaparte",
+    "slug": "jerome-bonaparte",
+    "quote": "youngest brother of Napoleon, who made him king of Westphalia from 1807 to 1813, with"
+   },
+   {
+    "label": "Joachim Murat",
+    "slug": "joachim-murat",
+    "quote": "Grand Duke of Berg in 1806 and King of Naples in 1808, where he ruled"
+   },
+   {
+    "label": "Elisa Bonaparte",
+    "slug": "elisa-bonaparte",
+    "quote": "eldest surviving sister, was made Princess of Lucca and Piombino in 1805 and ruled it"
+   },
+   {
+    "label": "Maximilian I Joseph",
+    "slug": "maximilian-i-joseph-of-bavaria",
+    "quote": "as Maximilian IV Joseph from 1799, he allied with Napoleon, gained Franconia, Swabian lands and imperial cities"
+   }
+  ]
+ },
+ {
+  "name": "Settled by freed slaves",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Freetown",
+    "slug": "freetown",
+    "quote": "Sierra Leone Company as a settlement for freed slaves, including Black Loyalists from Nova Scotia"
+   },
+   {
+    "label": "Monrovia",
+    "slug": "monrovia",
+    "quote": "It was founded in 1822 by free African Americans settled by the American Colonization Society and"
+   },
+   {
+    "label": "Libreville",
+    "slug": "libreville",
+    "quote": "French navy as a settlement for Africans freed from the captured slave ship Elizia, hence"
+   },
+   {
+    "label": "Black Loyalists",
+    "slug": "black-loyalists",
+    "quote": "of them sailed to Sierra Leone and founded Freetown"
+   },
+   {
+    "label": "Krio",
+    "slug": "sierra-leone-creole-people",
+    "quote": "Creoles, or Krio, are descendants of the freed slaves who settled in Freetown from 1787: Black"
+   },
+   {
+    "label": "Maryland Colonization Society",
+    "slug": "maryland-state-colonization-society",
+    "quote": "that from 1831 organised the emigration of free Black Americans from Maryland to Africa, with funds from"
+   }
+  ]
+ },
+ {
+  "name": "Crowned in the Americas after independence",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pedro I",
+    "slug": "pedro-i-of-brazil",
+    "quote": "Pedro I was the founder and first emperor of Brazil, a prince of the Portuguese"
+   },
+   {
+    "label": "Pedro II",
+    "slug": "pedro-ii-of-brazil",
+    "quote": "Pedro II was the second and last emperor of Brazil, succeeding his father Pedro I"
+   },
+   {
+    "label": "Iturbide",
+    "slug": "agustin-de-iturbide",
+    "quote": "In May 1822 he was proclaimed Emperor Agustín I of the First Mexican Empire"
+   },
+   {
+    "label": "Maximilian of Mexico",
+    "slug": "maximilian-i-of-mexico",
+    "quote": "of Franz Joseph I, who accepted the throne of Mexico offered by conservatives backed by"
+   },
+   {
+    "label": "Henri Christophe",
+    "slug": "henri-christophe",
+    "quote": "of Haiti in the north, proclaiming himself King Henri I in 1811"
+   },
+   {
+    "label": "Soulouque",
+    "slug": "faustin-soulouque",
+    "quote": "He purged the mixed-race elite, proclaimed himself Emperor Faustin I in 1849 and built a"
+   }
+  ]
+ }
+]
