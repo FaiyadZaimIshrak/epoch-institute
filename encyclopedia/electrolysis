@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Electrolysis (1800) — Encyclopedia — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Electrolysis is the use of a direct electric current to drive a chemical reaction that would not otherwise occur, as in separating elements from ores and…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/electrolysis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electrolysis (1800) — Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="Electrolysis is the use of a direct electric current to drive a chemical reaction that would not otherwise occur, as in separating elements from ores and…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/electrolysis">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"E","item":"https://the-epoch-institute.org/encyclopedia/browse/e-4"},{"@type":"ListItem","position":4,"name":"Electrolysis"}]},{"@type":"Article","headline":"Electrolysis","description":"Electrolysis is the use of a direct electric current to drive a chemical reaction that would not otherwise occur, as in separating elements from ores and…","url":"https://the-epoch-institute.org/encyclopedia/electrolysis","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/electrolysis","inLanguage":"en-GB","dateModified":"2026-11-04","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"DefinedTerm","name":"Electrolysis"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/e-4">E</a></li><li aria-current="page">Electrolysis</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=electrolysis">Inventions &amp; Discoveries</a> · Chemistry</p><h1 class="enc-title">Electrolysis</h1><p class="enc-meta"><span class="dates"><a href="/years/1800">1800</a></span> · <a href="/centuries/19th-century">19th century</a></p></header>
+<div class="enc-body"><p class="enc-desc">Electrolysis is the use of a direct electric current to drive a chemical reaction that would not otherwise occur, as in separating elements from ores and compounds. In 1800 William Nicholson and Anthony <a class="enc-link" href="/encyclopedia/carlisle">Carlisle</a>, furthering <a class="enc-link" href="/encyclopedia/volta-river">Volta</a>’s experiments, placed the wires of a <a class="enc-link" href="/encyclopedia/voltaic-pile">voltaic pile</a> in water and saw hydrogen and oxygen bubble from them. Humphry Davy discovered potassium, sodium, barium, calcium and magnesium by electrolysis by 1808, and his assistant <a class="enc-link" href="/encyclopedia/michael-faraday">Michael Faraday</a> published two laws of electrolysis and introduced the word in 1834. The method later yielded gallium in 1875, fluorine in 1886 and, through the <a class="enc-link" href="/encyclopedia/hall-heroult-process">Hall–Héroult process</a> of the same year, aluminium.</p></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>1800</dd></div><div><dt>Credited to</dt><dd>William Nicholson · Anthony Carlisle · <a href="/encyclopedia/michael-faraday">Michael Faraday</a></dd></div></dl><p class="inv-entry-note"><span class="inv-k">Note</span>In 1785 Martinus van Marum reduced tin, zinc and antimony from their salts with an electrostatic generator without knowing the process, and in 1789 Adriaan Paets van Troostwijk and Jan Rudolph Deiman split small amounts of water; Johann Ritter also demonstrated it in 1800.</p><div class="inv-entry-rel"><span class="inv-k">Built on</span><a class="inv-chip" href="/encyclopedia/voltaic-pile">Electric battery<span>1800</span></a></div><div class="inv-entry-rel"><span class="inv-k">Led to</span><a class="inv-chip" href="/encyclopedia/hall-heroult-process">Hall–Héroult process<span>1886</span></a></div><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=electrolysis">See it on the inventions tree &rarr;</a></p></section>
+<section class="meanwhile" data-y="1800" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/volta-river"><img src="/images/encyclopedia/thumbs/volta-river.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Volta River</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/michael-faraday"><img src="/images/encyclopedia/thumbs/michael-faraday.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Michael Faraday</span><span class="tp">Person</span></span></a></li><li><a href="/encyclopedia/voltaic-pile"><img src="/images/encyclopedia/thumbs/voltaic-pile.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Voltaic pile</span><span class="tp">Term</span></span></a></li><li><a href="/encyclopedia/carlisle"><img src="/images/encyclopedia/thumbs/carlisle.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Carlisle</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/hall-heroult-process"><span class="ph ph-term" aria-hidden="true"></span><span><span class="nm">Hall–Héroult process</span><span class="tp">Term</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/electric-motor"><span class="lbl">&larr; Previous entry</span><span class="nm">Electric motor</span></a><a class="next" rel="next" href="/encyclopedia/electromagnetic-induction"><span class="lbl">Next entry &rarr;</span><span class="nm">Electromagnetic induction</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Electrolysis. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/electrolysis</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Electrolysis.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/electrolysis. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Electrolysis.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/electrolysis.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Electrolysis&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/electrolysis (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

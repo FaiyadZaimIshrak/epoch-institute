@@ -1382,7 +1382,7 @@ council of generals, 1170; elective monarchy: the Fourth Council of Toledo, 633)
   encyclopedia's own texts link to the forms.
 
 ## Inventions tree (/inventions)
-218 inventions and discoveries in eleven lanes (tools and materials, farming and food, building and engineering,
+291 inventions and discoveries (218 until 4 Nov 2026) in eleven lanes (tools and materials, farming and food, building and engineering,
 transport and navigation, weapons and war, writing and counting, science and discovery, chemistry, medicine and health,
 energy and power, communication and computing), from stone tools (3.3 million years ago) to the World Wide Web
 (Oct 2026). Each node is an encyclopedia entry; its date is the earliest firm evidence its source accepts (not a
@@ -1450,6 +1450,21 @@ credited to no state).
   the lanes menu and the address, filter and views, focus and search; the phone timeline's order, ages, lane switches,
   sheet, lineage dimming, "Only its line" and ?focus=; WebKit). The layout audit's overlaps on a panned tree are cards
   passing under the opaque lane column and panel, by design.
+- A13 (4 Nov 2026): 73 more nodes, 291 in all, the thin lanes first (farming, building, chemistry, communication,
+  energy, medicine): from the sewing needle (Denisova Cave, about 50,000 years ago), Kuk Swamp, wine, cheese, the loom,
+  fired brick, Egyptian blue and lacquerware to the shadoof, water clock, sundial, screw, lathe and crane, the
+  seismoscope, wheelbarrow, kite, horseshoe and junk, the pencil, barometer and thermometer, canning, the stethoscope,
+  lithography, the telegraph cable, Morse code, Braille and the phonograph, the electric motor, alternating current,
+  the diesel engine, hydroelectricity, radar, the personal computer, email and the lithium-ion battery. Tools in
+  scripts/inventions/: INVENTIONS-GUIDE.md (each agent writes the entry and the tree row from one saved article: the
+  year of the earliest firm evidence the article accepts, claims it doubts in "contested", a state credited only where
+  the article names it), check-inventions.js <drafts…> <wp dir> (lane, year, label, civ, people, parents on the tree or
+  among the drafts and dated no later, numbers and names not in the article), merge-inventions.js [--write]
+  [--edits=] <entries.json> <drafts…> (appends the rows; the entries go through scripts/entries/merge-entries.js as wave
+  a13); the drafts, edits, link patterns and picture picks in scripts/inventions/a13/. Link patterns: none for bare
+  everyday words (wine, cheese, coffee, loom, screw, crane, kite, pencil, junk, horseshoe, sewing needle), lower case
+  only for words that are also surnames (canning, braille), either case for technical terms. Left out: the windcatcher
+  (no date in the article), the sanitary sewer and faience (no early dated evidence), the dhow (no firm first evidence).
 - Wiring: Explore menu ("Inventions Tree: what led to what, and who made it first"), phone menu and footer; Research
   Hub ("Through time"); search (SEARCH_PAGES); sitemap; llms.txt; poster page-inventions.jpg (make-posters.js page
   "inventions"); deploy.sh PAGES and DATA (data/inventions.json); split-css HAND; .htaccess (extensionless page).

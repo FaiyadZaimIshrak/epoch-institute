@@ -1,0 +1,19 @@
+[
+ ["email","row.built","",[]],
+ ["canning","row.civ","",[]],
+ ["blood-transfusion","row.civ","",[]],
+ ["sulfonamide","row.civ","",[]],
+ ["artificial-cardiac-pacemaker","row.civ","",[]],
+ ["organ-transplantation","row.civ","",[]],
+ ["diesel-engine","row.civ","",[]],
+ ["hydroelectricity","row.civ","",[]],
+ ["artificial-cardiac-pacemaker","row.built","",["voltaic-pile"]],
+ ["diesel-engine","row.built","",["internal-combustion-engine"]],
+ ["hydroelectricity","row.built","",["water-wheel","electric-generator"]],
+ ["seismoscope","row.built","",[]],
+ ["thermometer","row.built","",[]],
+ ["barometer","row.place","",""],
+ ["thermometer","row.place","",""],
+ ["dhow","skip","","no firm first evidence: most scholars place its origin in India between 600 BCE and 600 CE"],
+ ["parachute","row.place","",""]
+]
