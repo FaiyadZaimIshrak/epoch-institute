@@ -533,7 +533,16 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   apply-added-entries, clean-credits, pattern-count (wave 1 dropped "Bodin": Constantine Bodin; "Qutb": Qutb al-Din
   Aibak; "Four Books": Palladio; "Orwell": the estuary), link-scan.js --write --entries=<slugs> over every kind in
   slices of 30 (append only), apply-added-entries again, regen-profiles, a full build. The builder gives new entries
-  their search rows, facets and preview cards. Wave 1 (3 Nov 2026): 107 entries, 91 pictured, 261 profile links.
+  their search rows, facets and preview cards. Wave 1 (3 Nov 2026): 107 entries, 91 pictured, 261 profile links; wave 2
+  (3 Nov): 137; wave 3 (4 Nov): 184, the ladders' ranks and people; wave 4 (4 Nov): the ladders' remaining names, the
+  people and events the songs and speeches name. A row of encyclopedia-links.js is never deleted (byEmpire holds row
+  INDICES: a deleted row shifts every later profile link); a pattern that must go is replaced by text that cannot
+  match ("Indica of Megasthenes"). "dates" in added-entries.json ([slug, dates, "no-y"?]) date existing entries and
+  their preview cards: 67 of the undated events (4 Nov 2026), each from its article (six left out: the crusade as a
+  concept, the Dano-Swedish wars, decolonisation, the Literary Inquisition, the Sahel mission, Urshu). An event gets
+  its years in ENC_LINKS.y unless "no-y": the world wars, the Reformation, the Black Death, the Treaty of Versailles,
+  the Dutch Revolt, the Franco-Prussian, Livonian and Italian Wars stand beside other years in running text ("after
+  the First World War, in 1920") and would have lost 31, 29, 8 … right links (scratchpad a7/ev/lost.js measured it).
 - Pipeline after a merge: apply-conflicts, apply-person-dates, apply-entry-pictures, scripts/apply-added-entries.ps1, scripts/clean-credits.ps1 (see the pictures below), enc2/enc-links-pack, design/run-scan.ps1 -Page t-encemp + enc-empires-apply,
   run-scan -Page t-encprof + prof/enc-prof-apply, enc2/prof-forms, link-state-texts, make-previews, make-home-data,
   make-search-states, build-state-data, make-enc-states, prof/section-images, prof/regen (490 pages), then verify-pages
@@ -1537,10 +1546,8 @@ has pictures in only two sections: the encyclopedia has no pictured entries for 
 missing or doubtful; scratchpad r6/dates-decisions.tsv): an undated person is on no century or people page and in no
 year's births and deaths.
 Found in the R9 checks (29 Oct 2026), not fixed yet:
-- 111 events have no dates, among them both world wars, Waterloo, Carrhae, the Black Death, the Crusades, the Treaty
-  of Versailles and the Industrial Revolution, so they are on no century or year page; the Russo-Japanese War says 1905
-  (1904–1905). Dating an event also adds it to ENC_LINKS.y, after which it is not linked beside a contradicting year:
-  check what that unlinks.
+- (Done 4 Nov 2026, A7 wave 4: 67 events dated, see "Encyclopedia") The rest of the 111 undated events are concepts,
+  festivals, legendary events or ones whose article gives no year.
 - The state and empire profiles' mention lists still disagree with their pages (r9b/mention-compare.js: 3,291
   recorded mentions no page links, 2,805 links no list records): the polity scans count names inside longer ones as
   the kinds' did. Some of those page links are wrong too (Arad, Romania on the Kingdom of Judah; Louis IX, Duke of

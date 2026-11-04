@@ -3,8 +3,8 @@
 // shared-data.js and shared-nav.js. IDX_V is set by the builder: the version of /encyclopedia/index-data.js; MW_V and
 // MWJS_V likewise, of data/meanwhile.json and /meanwhile.js.
 (function () {
-  var IDX_V = 'ca1cedf4b7';
-  var MW_V = 'ed06cb37', MWJS_V = 'b31422fb';
+  var IDX_V = '659feaa050';
+  var MW_V = '8948c036', MWJS_V = 'b31422fb';
   if (typeof initNav === 'function') initNav(document.body.getAttribute('data-nav') || '');
 
   // today's date in citations ("Accessed 23 October 2026")

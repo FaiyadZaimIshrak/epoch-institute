@@ -8,7 +8,7 @@
 # back to these patterns. "patterns" give an existing entry another name to be found by ([slug, text, mode]; an entry
 # that has no row at all gets one), "pictures" replace the picture of an existing entry ([slug, artist, licence,
 # source]; the file is images/encyclopedia/<slug>.jpg) and "fixes" correct the description of an existing entry
-# ([slug, old text, new text]). "forms" are profile-only short names ([slug, text, mode, {profile: [sections]}]: "Kabir"
+# ([slug, old text, new text]), "dates" set the dates of an existing entry ([slug, dates]; an event gets its years in y). "forms" are profile-only short names ([slug, text, mode, {profile: [sections]}]: "Kabir"
 # would also link inside "Ali Bey al-Kabir" in the entries and state texts, so it is a form of the Bhakti, Hinduism and
 # Sikhism profiles only): a row after fs, put first in byEmpire[profile], and the profile named on the entry with those
 # sections. "drop" takes a name out of an existing entry's row ([slug, text, mode]: "the Thirty", an aka of the Thirty
@@ -65,6 +65,22 @@ foreach ($x in @($A.fixes | Where-Object { $_ })) {
   if (-not $line.Contains($o)) { Write-Warning "fixes: the old text is not in $($x[0])"; continue }
   $text = $text.Substring(0, $m.Index) + $line.Replace($o, $n) + $text.Substring($m.Index + $m.Length); $nFix++
 }
+$nDate = 0   # "dates": the dates of an existing entry, set or added ([slug, dates]: A7 wave 4, the undated events dated from their articles)
+foreach ($x in @($A.dates | Where-Object { $_ })) {
+  $m = [regex]::Match($text, '(?m)^  \{slug:"' + [regex]::Escape([string]$x[0]) + '".*$'); if (-not $m.Success) { Write-Warning "dates: no entry $($x[0])"; continue }
+  $line = $m.Value; $want = ',dates:' + (Js $x[1]); $d = [regex]::Match($line, ',dates:"(?:[^"\\]|\\.)*"')
+  if ($d.Success) { if ($d.Value -eq $want) { continue }; $line2 = $line.Substring(0, $d.Index) + $want + $line.Substring($d.Index + $d.Length) }
+  else { $dp = $line.IndexOf(',desc:"'); if ($dp -lt 0) { Write-Warning "dates: no description in $($x[0])"; continue }; $line2 = $line.Substring(0, $dp) + $want + $line.Substring($dp) }
+  $text = $text.Substring(0, $m.Index) + $line2 + $text.Substring($m.Index + $m.Length); $nDate++
+}
+$nPrevD = 0   # their preview cards (data/enc-preview: "d", written once when a card is made)
+foreach ($x in @($A.dates | Where-Object { $_ })) {
+  $s = [string]$x[0]; $pf = "$Repo\data\enc-preview\$($s.Substring(0, 1)).json"; if (-not (Test-Path $pf)) { continue }
+  $pt = [IO.File]::ReadAllText($pf, $u8)
+  $pm = [regex]::Match($pt, '"' + [regex]::Escape($s) + '":\{"n":"(?:[^"\\]|\\.)*","t":"(?:[^"\\]|\\.)*","d":"((?:[^"\\]|\\.)*)"'); if (-not $pm.Success) { continue }
+  $want = (Js $x[1]).Trim('"'); if ($pm.Groups[1].Value -eq $want) { continue }
+  $g = $pm.Groups[1]; [IO.File]::WriteAllText($pf, $pt.Substring(0, $g.Index) + $want + $pt.Substring($g.Index + $g.Length), $u8); $nPrevD++
+}
 # every entry carries an "empires" list, empty or not: the 55 entries of the speeches release (24-25 Oct 2026) had
 # none, so enc-prof-apply could never record the profiles that name them
 $nEmp = 0
@@ -108,6 +124,15 @@ foreach ($e in @($A.entries)) {
   if ($e.type -ne 'event' -or -not $e.dates -or $null -ne $L.y.PSObject.Properties[$e.slug]) { continue }
   $r = EncYears $e.dates; if (-not $r) { continue }
   $L.y | Add-Member -NotePropertyName $e.slug -NotePropertyValue @([int]$r[0], [int]$r[1], 'e'); $nY++
+}
+foreach ($x in @($A.dates | Where-Object { $_ })) {   # a dated event: its years in y, so it is not linked beside a contradicting year
+  # "no-y" (third field): a long, unambiguous event whose name stands beside other years in running text ("after the
+  # First World War, in 1920"): years there would unlink its right mentions (31 for the First World War)
+  if (@($x).Count -gt 2 -and [string]$x[2] -eq 'no-y') { continue }
+  $s = [string]$x[0]; if (-not [regex]::IsMatch($text, '(?m)^  \{slug:"' + [regex]::Escape($s) + '",name:"(?:[^"\\]|\\.)*",type:"event"')) { continue }
+  $r = EncYears ([string]$x[1]); if (-not $r) { continue }
+  if ($null -eq $L.y.PSObject.Properties[$s]) { $L.y | Add-Member -NotePropertyName $s -NotePropertyValue @([int]$r[0], [int]$r[1], 'e'); $nY++ }
+  else { $cur = $L.y.$s; if ([int]$cur[0] -ne [int]$r[0] -or [int]$cur[1] -ne [int]$r[1]) { $L.y.$s = @([int]$r[0], [int]$r[1], [string]$cur[2]); $nY++ } }
 }
 foreach ($x in @($A.fixes | Where-Object { $_ })) {   # a corrected date: the event's years in y follow
   if ($null -eq $L.y.PSObject.Properties[[string]$x[0]]) { continue }
@@ -178,4 +203,4 @@ foreach ($x in @($A.exclude | Where-Object { $_ })) {
 if ($ins.Count -or $nY -or $nPat -or $nSet -or $nForm -or $nFirst -or $nDrop -or $nEx) {
   [IO.File]::WriteAllText("$Repo\encyclopedia-links.js", $el.Substring(0, $i0) + (EncJson $L) + $el.Substring($i1 + 1), $u8)
 }
-"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  exclusions: $nEx  pictures replaced: $nPic  descriptions fixed: $nFix  entries without a link row: $nBare"
+"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  exclusions: $nEx  pictures replaced: $nPic  descriptions fixed: $nFix  dates set: $nDate (preview cards: $nPrevD)  entries without a link row: $nBare"
