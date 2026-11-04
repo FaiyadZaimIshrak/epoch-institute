@@ -33197,7 +33197,21 @@ var SEARCH_INDEX = [
 [0,"Woody Guthrie","person","Woodrow Wilson Guthrie",1,1],
 [0,"Ziamet","term","zeamet",0],
 [0,"Zoltán Kodály","person","Kodály Zoltán",1,1],
-["zubaidah-bint-jafar","Zubaidah bint Ja'far","person","Zubayda|Umm Ja'far|Amat al-'Aziz",0]
+["zubaidah-bint-jafar","Zubaidah bint Ja'far","person","Zubayda|Umm Ja'far|Amat al-'Aziz",0],
+["black-hawk-sauk-leader","Black Hawk","person","Mahkatêwe-meshi-kêhkêhkwa|Black Sparrow Hawk",1,1],
+[0,"Booker T. Washington","person","Booker Taliaferro Washington",1,1],
+[0,"Canassatego","person","Canasatego",0],
+[0,"Chief Seattle","person","Seattle|Si'ahl|Sealth|Noah Seattle",1,1],
+[0,"Daniel Webster","person","",1,1],
+[0,"David Lloyd George","person","Lloyd George",1,1],
+[0,"Eugene V. Debs","person","Eugene Victor Debs|Eugene Debs",1,1],
+[0,"George C. Marshall","person","George Catlett Marshall|George Marshall",1,1],
+[0,"Logan the Orator","person","Logan",0],
+[0,"Patrick Pearse","person","Pádraig Pearse|Pádraic Pearse|Pádraig Anraí Mac Piarais",1,1],
+[0,"Powhatan","person","Wahunsenacawh|Wahunsunacock|Chief Powhatan",1,1],
+[0,"Red Cloud","person","Maȟpíya Lúta",1,1],
+[0,"Richard Rumbold","person","",0],
+[0,"Robert Emmet","person","",1,1]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.

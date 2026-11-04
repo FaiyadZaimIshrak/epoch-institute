@@ -9,9 +9,11 @@
 # Pages are cached raw in -Cache (default: a folder under %TEMP%), so a rerun only cleans again.
 # Prints, per speech, the word count and the first and last words, to check the boundaries. Usage:
 #   powershell -File scripts\fetch-speech-texts.ps1 [-Only slug1,slug2] [-Refresh] [-Cache <dir>]
+#   ... -Sources <tsv> -OutDir <dir>   reads another sources file (speeches not yet in speeches-data.js are allowed,
+#   titled by their slug) and writes there: drafts are imported and checked before they join the site.
 #   ... -Peek <url> -Find <word>   lists the paragraphs of a (cached) page that contain <word>, as short snippets with
 #   their numbers and the paragraph count, to choose start and end phrases without reading the whole page.
-param([string[]]$Only, [switch]$Refresh, [string]$Cache = (Join-Path $env:TEMP 'epoch-speech-cache'), [string]$Peek, [string[]]$Find)
+param([string[]]$Only, [switch]$Refresh, [string]$Sources, [string]$OutDir, [string]$Cache = (Join-Path $env:TEMP 'epoch-speech-cache'), [string]$Peek, [string[]]$Find)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Web.Extensions
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -20,7 +22,7 @@ $J = New-Object Web.Script.Serialization.JavaScriptSerializer; $J.MaxJsonLength 
 $U8 = New-Object Text.UTF8Encoding($false)
 $UA = 'EpochInstituteBuild/1.0 (https://the-epoch-institute.org; speech texts from public-domain sources)'
 if (-not (Test-Path $Cache)) { New-Item -ItemType Directory -Path $Cache | Out-Null }
-$outDir = Join-Path $Repo 'data\speech-texts'
+$outDir = if ($OutDir) { $OutDir } else { Join-Path $Repo 'data\speech-texts' }
 if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Null }
 
 # fetching, cleaning and selecting: shared with scripts/fetch-quotes.ps1
@@ -52,20 +54,33 @@ $FIXES = @{
   'pitt-on-taxing-america'       = @(@('arbitrary reigns. Parliaments', 'arbitrary reigns, Parliaments'), @('they are ail inhabitants', 'they are all inhabitants'))
   'red-jacket-to-the-missionary' = @(@('Their feats extended', 'Their seats extended'), @('strong and powerfal', 'strong and powerful'))   # a long s read as f
   'kossuth-in-new-york'          = @(@('fatherland-lost', ('fatherland' + $MD + 'lost')), @('your, glorious peace', 'your glorious peace'))
+  'eisenhower-atoms-for-peace'   = @(@('I, who has spent', 'I, who have spent'), @('not idle works', 'not idle words'), @('These is at least', 'There is at least'), @('we much start', 'we must start'), @('the United Stats', 'the United States'), @('lead this work out of fear', 'lead this world out of fear'))   # the transcription's slips ("who have spent" as the article quotes it)
+  'jefferson-first-inaugural'    = @(, @('his long- lost liberty', 'his long-lost liberty'))   # a line-end hyphen kept by the transcription
+  'emmet-speech-from-the-dock'   = @(, @('character; when. my country', 'character; when my country'))
+  'seattle-speech'               = @(, @('Washington [1], can', 'Washington, can'))   # the transcription's note marker
+  'napoleon-farewell-to-the-guard' = @(, @('found you On the road', 'found you on the road'))
+  'caesar-on-the-catilinarians'  = @(, @('wisdom m those', 'wisdom in those'))
+  'wu-speech-at-mu'              = @(@('he has received);* he', 'he has received); he'), @('appointed by Heaven.* In', 'appointed by Heaven. In'))   # Legge's footnote marks (the notes are not printed)
+  'richard-ii-at-smithfield'     = @(@("yonder abbey.'[66]", "yonder abbey.'"), @("dearly abye it.'[67]", "dearly abye it.'"), @('a great outrage;[68]', 'a great outrage;'), @("the king's draper,[69]", "the king's draper,"))   # the edition's footnote marks
+  'powhatan-to-john-smith'       = @(, @('my [III.76.] brethren', 'my brethren'))   # the reprint's page mark
+  'rumbold-on-the-scaffold'      = @(, @('there should be. so many', 'there should be so many'))
+  'washington-at-newburgh'       = @(@('much credit for, the goodness', 'much credit for the goodness'), @('such measures?. Can', 'such measures? Can'))
   'gandhi-at-his-trial'          = @(@('Chauri Chuara', 'Chauri Chaura'), @('extenating', 'extenuating'), @('I do not except that kind', 'I do not expect that kind'))
 }
 # paragraphs split by a page break or a plate in the scanned book: the paragraph that ends with the given words is
 # joined to the next one (after $FIXES)
 $JOINS = @{
   'mazzini-to-the-young-men-of-italy' = @('Could Attilio and Emilio')   # the plate of Mazzini stands between the halves
+  'richard-ii-at-smithfield'          = @('a great outrage;', "the king's draper,")   # page breaks of the Harvard Classics
 }
 $rows = @(); $titles = @{}
 $sd = [IO.File]::ReadAllText((Join-Path $Repo 'speeches-data.js'), [Text.Encoding]::UTF8)
 foreach ($m in [regex]::Matches($sd, '\{slug:"([^"]+)",title:"([^"]+)"')) { $titles[$m.Groups[1].Value] = $m.Groups[2].Value }
-foreach ($line in [IO.File]::ReadAllLines((Join-Path $PSScriptRoot 'speech-sources.tsv'), [Text.Encoding]::UTF8)) {
+$srcFile = if ($Sources) { $Sources } else { Join-Path $PSScriptRoot 'speech-sources.tsv' }
+foreach ($line in [IO.File]::ReadAllLines($srcFile, [Text.Encoding]::UTF8)) {
   if (-not $line.Trim() -or $line.StartsWith('#')) { continue }
   $c = $line.Split("`t"); if ($c.Count -lt 5) { throw "speech-sources.tsv: 5 columns expected: $line" }
-  if (-not $titles.ContainsKey($c[0])) { throw "speech-sources.tsv: unknown speech $($c[0])" }
+  if (-not $titles.ContainsKey($c[0])) { if ($Sources) { $titles[$c[0]] = $c[0] } else { throw "speech-sources.tsv: unknown speech $($c[0])" } }
   $rows += , @($c[0], $c[1], $c[2], $c[3], $c[4])
 }
 $slugs = @($rows | ForEach-Object { $_[0] } | Select-Object -Unique)

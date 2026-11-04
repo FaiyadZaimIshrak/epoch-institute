@@ -194,7 +194,7 @@ page('flashcards', { kind: 'mosaic', pics: pick(['confucius', 'akbar', 'code-of-
 page('quiz', { kind: 'mosaic', pics: pick(['genghis-khan', 'machu-picchu', 'mansa-musa', 'hagia-sophia', 'joan-of-arc', 'confucius']), kicker: 'History quiz', title: 'A new puzzle every day',
   tease: 'Four clues, one answer: a profile, a person, an event, a place, an idea or a work.', url: 'the-epoch-institute.org/quiz' });
 page('speeches', { kind: 'mosaic', pics: pick(SPEECHES.map(s => s.speakerSlug)).filter((p, i, a) => a.findIndex(q => q.src === p.src) === i).slice(0, 6), kicker: 'Great speeches', title: 'The words that moved history',
-  tease: SPEECHES.length + ' speeches from Xerxes to Reagan: the setting, the key passage and what followed.', url: 'the-epoch-institute.org/speeches/' });
+  tease: SPEECHES.length + ' speeches from King Wu of Zhou to Reagan: the setting, the key passage and what followed.', url: 'the-epoch-institute.org/speeches/' });
 page('write', { kind: 'mosaic', pics: pick(['rosetta-stone', 'behistun-inscription', 'edicts-of-ashoka', 'linear-b', 'mesha-stele', 'cyrus-cylinder']), kicker: 'Write in ancient scripts', title: 'Write like a scribe',
   tease: 'Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: twelve languages of the past, every sign with its sound.', chips: ['12 languages', '18 scripts', 'Save it as a picture'], url: 'the-epoch-institute.org/write' });
 page('faiths', { kind: 'mosaic', pics: pick(['borobudur', 'golden-temple', 'dome-of-the-rock', 'hagia-sophia', 'angkor-wat', 'pyramid-of-the-sun']), kicker: 'Faith maps', title: 'How the religions spread',

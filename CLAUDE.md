@@ -893,7 +893,7 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   word-hunt.tsv).
 
 ## Great Speeches (/speeches/)
-speeches-data.js (SPEECHES, 80 speeches, Xerxes to Reagan, ten to fifteen in each era) → build-pages.ps1 writes /speeches/<slug> (The
+speeches-data.js (SPEECHES, 115 speeches, King Wu of Zhou to Reagan) → build-pages.ps1 writes /speeches/<slug> (The
 setting, Key passage, What followed + "What it led to" chips, Connected chips) and /speeches/ grouped by era
 (ancient, medieval, earlymodern, revolutions, nineteenth, twentieth = to 1945, postwar). Each speech carries its
 key passage, a sentence or two, with a source line, and full:"url|source" links the complete text where a free,
@@ -928,6 +928,22 @@ Parchwitz, Pitt, Red Jacket, Mazzini, Kossuth, Garvey, Gandhi's trial statement,
 Berlin): their settings and aftermaths were checked against the entries and Wikipedia, every date against a source
 (Parchwitz: Carlyle, from Retzow, "night of December 3d, 1757"), and their links use only entries that exist (no
 entry yet for the Investiture Controversy, Young Italy, the UNIA, the Nika riots, Truman, Brandt, Tilak, Lafayette …).
+A9 (4 Nov 2026): 35 more, 115 in all, drafted by six agents with scripts/speeches/SPEECHES-GUIDE.md from saved Wikipedia
+articles (the setting and what followed) and the speech's own imported text (the key passage, copied exactly). Tools in
+scripts/speeches/: check-speeches.js <drafts> <texts dir> <wp dir> (keys, era against year, lengths, praise words, every
+link, the excerpt found in the imported text, numbers and names not in the articles or the text), merge-speeches.js
+[--write] [--edits=] (appends records and source rows; edits: the editor's [slug, field, old, new], "skip" to leave a
+draft out, "full" "" for a speech printed with its key passage only, which then adds no source row), and the agents'
+drafts, sources and edits.json in scripts/speeches/a9/. fetch-speech-texts.ps1 -Sources <tsv> -OutDir <dir> imports
+drafts into a scratch folder before they join the site. Kept with the key passage only (no clean free text): al-Hajjaj
+at Kufa (de Goeje in the 1911 Britannica), Itō's rising sun speech (Lanman 1872, OCR only), Stanton's Solitude of Self
+(an unsourced transcription), Lloyd George at Limehouse (a biography's extracts). Left out: the Buddha's first sermon
+(no clean Rhys Davids text), the Sermon on the Mount (no date: every speech is placed in a year), Canassatego, Red
+Cloud, Parkes at Tenterfield, Gladstone at Midlothian, Naoroji's 1906 address and Lamartine (OCR scans only), Black
+Hawk (Stevens 1903 only "reported" it), Debs (an abridged text of unknown source). Ancient speeches say the words are
+the historian's (Thucydides, Livy, Sallust, Plutarch); Powhatan, Logan, Seattle and Lenin (John Reed's report) say
+through whom they reach us. 14 speakers got entries (wave a9 of added-entries.json; portraits by eye, none for Rumbold,
+Canassatego or Logan: the candidates were a house and a modern statue).
 
 ## Songs in History (/songs/, /songs/<slug>; Nov 2026)
 300 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states") (the user's brief: origin, writer, culture, language and place, type, the words

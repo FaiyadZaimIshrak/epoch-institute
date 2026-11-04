@@ -2006,6 +2006,10 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   $full = if ($s['full']) { [string]$s['full'] -split '\|', 2 } else { $null }
   $ft = $SPTXT[$slug]; $ftw = 0; $ftm = 0
   if ($ft) { $ftw = [int]$ft['words']; $ftm = [Math]::Max(1, [int][Math]::Round($ftw / 200.0)) }
+  # a text the source gives in part or at second hand (its credit says passages, extracts, abridged, reported) is
+  # headed "From the speech", not "The full speech"
+  $ftPart = $ft -and ([string]$ft['credit'] -match '\b(passages|extracts|abridged|reported|reports)\b')
+  $ftH = if ($ftPart) { 'From the speech' } else { 'The full speech' }; $ftRead = if ($ftPart) { 'Read the text' } else { 'Read the full speech' }
   $sb = New-Object Text.StringBuilder(9000)
   [void]$sb.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n<article class=`"sp-view`">`n")
   # the speaker's portrait (the speaker's entry picture; its credit is on that entry)
@@ -2017,7 +2021,7 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
     '<p class="sp-source">' + (Hx ([string]$s['source'])) + $(if ($isCopy) { ' Quoted briefly: the full text is still under copyright.' } else { '' }) + '</p>' +
     '<div class="sp-full">' +
     # a short full text stands open just below: the button is only for a folded one
-    $(if ($ft -and $ftw -gt 600) { '<a class="sp-full-link" href="#full-text">Read the full speech<span aria-hidden="true"> &#8595;</span></a><span class="sp-full-src">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' min</span>' }
+    $(if ($ft -and $ftw -gt 600) { '<a class="sp-full-link" href="#full-text">' + $ftRead + '<span aria-hidden="true"> &#8595;</span></a><span class="sp-full-src">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' min</span>' }
       elseif (-not $ft -and $full) { '<a class="sp-full-link" href="' + (Hx $full[0]) + '" target="_blank" rel="noopener">Read the complete text<span aria-hidden="true"> &#8599;</span></a><span class="sp-full-src">' + (Hx $full[1]) + '</span>' } else { '' }) +
     $(if (-not $isPara) { '<button type="button" class="sp-share" data-share-text="' + (Hx ([string][char]0x201C + [string]$s['excerpt'] + [string][char]0x201D + ' ' + [string][char]0x2014 + ' ' + [string]$s['speaker'] + ', ' + [string]$s['title'])) + '"' + $(if ($ogS) { ' data-share-img="' + $ogS + '"' } else { '' }) + '>Share this quote</button>' } else { '' }) +
     "</div></section>`n")
@@ -2026,8 +2030,8 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
     foreach ($fp in @($ft['paras'])) { [void]$ftb.Append('<p>' + ((Hx ([string]$fp)) -replace "`n", '<br>') + '</p>') }
     $ftLang = if ($ft['lang'] -and [string]$ft['lang'] -ne 'en') { ' lang="' + $ft['lang'] + '"' } else { '' }
     $ftBody = '<div class="sp-ft-body"' + $ftLang + '>' + $ftb.ToString() + '</div>'
-    [void]$sb.Append('<section class="sp-sec sp-ft" id="full-text"><h2>The full speech</h2>' +
-      $(if ($ftw -le 600) { $ftBody } else { '<details class="sp-ft-fold"><summary><span class="sp-ft-open">Read the full speech</span><span class="sp-ft-meta">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' minutes</span></summary>' + $ftBody + '</details>' }) +
+    [void]$sb.Append('<section class="sp-sec sp-ft" id="full-text"><h2>' + $ftH + '</h2>' +
+      $(if ($ftw -le 600) { $ftBody } else { '<details class="sp-ft-fold"><summary><span class="sp-ft-open">' + $ftRead + '</span><span class="sp-ft-meta">' + $ftw.ToString('N0') + ' words · about ' + $ftm + ' minutes</span></summary>' + $ftBody + '</details>' }) +
       '<p class="sp-ft-credit">Text: <a href="' + (Hx ([string]$ft['url'])) + '" target="_blank" rel="noopener">' + (Hx ([string]$ft['source'])) + '</a>' + $(if ($ft['credit']) { ', ' + (Hx ([string]$ft['credit'])) } else { '' }) + '. ' + (Hx ([string]$ft['licence'])) + "</p></section>`n")
   }
   [void]$sb.Append('<section class="sp-sec"><h2>What followed</h2><p>' + (Hx ([string]$s['after'])) + '</p>' +
@@ -2048,7 +2052,7 @@ $ib = New-Object Text.StringBuilder
 [void]$ib.Append('<main id="main" class="sp-page ref-page">' + "`n<div class=`"sp-wrap`">`n" + $crumb[0] + "`n")
 $spWhole = @($SPS | Where-Object { $SPTXT.ContainsKey([string]$_['slug']) }).Count
 $spFull = @($SPS | Where-Object { $_['full'] -and -not $SPTXT.ContainsKey([string]$_['slug']) }).Count
-[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Great Speeches</h1><p class="ref-lede">' + $SPS.Count + ' speeches that moved history, from Xerxes to Reagan. Each gives the setting, the key passage with its source, what followed and what it led to. ' + $spWhole + ' carry their full text, and ' + $spFull + ' more link to it at a free source.</p></header>' + "`n")
+[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Great Speeches</h1><p class="ref-lede">' + $SPS.Count + ' speeches that moved history, from King Wu of Zhou to Reagan. Each gives the setting, the key passage with its source, what followed and what it led to. ' + $spWhole + ' carry their full text, and ' + $spFull + ' more link to it at a free source.</p></header>' + "`n")
 foreach ($era in $SPERA.Keys) {
   $grp = @($SPS | Where-Object { [string]$_['era'] -eq $era }); if (-not $grp.Count) { continue }
   [void]$ib.Append('<section class="sp-era"><h2 class="ref-sec-title">' + $SPERA[$era] + '</h2><div class="sp-grid">')
@@ -2060,7 +2064,7 @@ foreach ($era in $SPERA.Keys) {
 }
 [void]$ib.Append("</div>`n</main>`n")
 $title = 'Great Speeches in History: The Words That Moved the World — The Epoch Institute'
-$desc = 'Great speeches that moved history, from Xerxes to Reagan: the setting, the key passage, what followed, and the full text of every speech in the public domain.'
+$desc = 'Speeches that moved history, from King Wu of Zhou to Reagan: the setting, the key passage, what followed, and the full text wherever it is free to print.'
 Emit '/speeches/' (Page @{ title = $title; desc = $desc; path = '/speeches/'; type = 'website'; img = (Poster 'page-speeches'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js "$SITE/speeches/") + '}'); nav = 'speeches'; body = $ib.ToString() })
 Say "great speeches: $($SPS.Count) ($spWhole with their full text, $spFull more linked to it)"
 if ($spMiss.Count) { Say ("great speeches: unknown encyclopedia links " + (($spMiss | Sort-Object -Unique) -join ', ')) }
