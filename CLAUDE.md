@@ -854,6 +854,14 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   for Socrates) and stamps its ?v= into /games (SAID_SRC); it STOPS on a speaker who is not a person entry or who has
   too few companions (a speaker needs dates: 28 undated speakers got theirs in person-dates.tsv). Add quotations at the
   END of quote-sources.tsv, so the rounds already played keep theirs; re-run fetch-quotes.ps1, then build.
+  B2 (4 Nov 2026): 921 more, to 3 July 2027 (1,247 by 343 people, at most six each), gathered by six agents by
+  age and region plus two extra batches of new speakers, every quotation read. Tools now in scripts/quotes/:
+  QUOTES-GUIDE.md (the agents' brief), check-speakers.js (who can speak: a person entry with dates and a picture not in
+  no-portrait.tsv; --all-people lists them) and assemble-quotes.js (puts new rows in the game's order and appends them:
+  one from each age a day where it can, no speaker twice a day nor again within 7 days, the most overdue speaker first so
+  a speaker's rows spread over the season, a cap of six each, exact repeats and the editor's drop list left out); the
+  agents' files and drop.txt are in scripts/quotes/b2/. Translator years a page does not print are left off the credit
+  rather than given from memory.
 
 ## Kids mode and the Kids corner (/kids)
 - Kids mode is site-wide: html[data-kids="1"], set before first paint by the head snippet from localStorage
