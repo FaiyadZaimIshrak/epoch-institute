@@ -473,7 +473,7 @@ initNav('home');
   })();
 
   // today's events, international day and picture: one small file per day (data/days, written by the builder)
-  var DAYS_V = 'b10866c8b7';
+  var DAYS_V = 'fee68906bc';
   fetch('/data/days/' + key + '.json?v=' + DAYS_V).then(function(r) { if (!r.ok) throw new Error(); return r.json(); }).then(function(d) {
     var evs = d.events || [], pic = d.pic ? d.pic[0] : null, hero = evs[d.hero];
     // Kids mode: no picture from a battle or a killing

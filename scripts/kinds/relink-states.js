@@ -5,6 +5,8 @@
 // row of encyclopedia-links.js taking part, so that a new short name never links inside an older, longer one. Only links
 // to the entries named in --entries are ADDED; nothing already linked moves. Rows from fs on (profile-only forms) are
 // ignored, as are the state's own entry (same name or slug) and the [[e:…]] and [[s:…]] links already in the text.
+// scripts/kinds/state-link-exclusions.tsv (state id, entry slug, why) keeps a namesake from being linked: its text stays
+// claimed, so no shorter name inside it links either.
 //   node scripts/kinds/relink-states.js --entries=<file of slugs> [--report=<file.tsv>] [--write] [--only=<state id,…>]
 // --write: rewrites the changed fields in place (the files mix escaped and raw apostrophes: each field is replaced in the
 // form it was found) and data/enc-states.json (an entry's count, and its list of up to 12 states when there is room).
@@ -21,6 +23,8 @@ const L = new Function(fs.readFileSync(path.join(R, 'encyclopedia-links.js'), 'u
 const { ENC_LINKS, ENC_FN } = L;
 const ENC = new Map(new Function(fs.readFileSync(path.join(R, 'encyclopedia-data.js'), 'utf8') + ';return ENCYCLOPEDIA')().map(e => [e.slug, e.name]));
 const BYNAME = new Map(); for (const [s, n] of ENC) { if (!BYNAME.has(n)) BYNAME.set(n, []); BYNAME.get(n).push(s); }
+const EXCL = new Map(); for (const l of fs.readFileSync(path.join(__dirname, 'state-link-exclusions.tsv'), 'utf8').split(/\r?\n/)) {
+  if (!l.trim() || l.startsWith('#')) continue; const [id, slug] = l.split('\t'); if (!EXCL.has(id)) EXCL.set(id, []); EXCL.get(id).push(slug); }
 const POL = new Map(JSON.parse(fs.readFileSync(path.join(R, 'data', 'polities.json'), 'utf8')).nodes.map(n => [n.id, n]));
 const fold = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 // rows: those before fs (the profile-only forms are not used outside their profiles); each row's literal words, to try
@@ -75,7 +79,7 @@ for (const f of fs.readdirSync(D).filter(f => f.endsWith('.json'))) {
   for (const [id, st] of Object.entries(J)) {
     if (ONLY.size && !ONLY.has(id)) continue;
     const node = POL.get(id) || {}, ctx = node.s != null ? [node.s, node.e == null ? 2025 : node.e] : null;
-    const self = new Set([id, ...(BYNAME.get(node.n) || [])]);
+    const self = new Set([id, ...(BYNAME.get(node.n) || []), ...(EXCL.get(id) || [])]);   // still claimed, never linked
     let any = false;
     for (const k of ['o', 'r', 'e']) {
       if (!st[k]) continue;

@@ -593,6 +593,8 @@ $i0 = $elText.IndexOf('var ENC_LINKS = ') + 16; $i1 = $elText.IndexOf("};`n", $i
 $EL = $JSS.DeserializeObject($elText.Substring($i0, $i1 - $i0 + 1)); $elText = $null
 $ROWS = $EL['e']; $FS = if ($EL.ContainsKey('fs')) { [int]$EL['fs'] } else { $ROWS.Count }
 $Y = @{}; foreach ($kv in $EL['y'].GetEnumerator()) { $Y[$kv.Key] = $kv.Value }
+# a profile's own entry (ENC_LINKS.self: profile name -> entry slug), so the entry page can link "Full profile"
+$SELFP = @{}; if ($EL.ContainsKey('self')) { foreach ($kv in $EL['self'].GetEnumerator()) { $SELFP[[string]$kv.Value] = [string]$kv.Key } }
 $KW = New-Object 'System.Collections.Generic.Dictionary[string,System.Collections.Generic.List[object]]'; $nPat = 0; $ALWAYS = New-Object System.Collections.Generic.List[object]
 for ($ri = 0; $ri -lt $(if ($SkipEntries) { 0 } else { $FS }); $ri++) {
   $row = $ROWS[$ri]; $rs = [string]$row[0]; $grp = $null
@@ -1041,6 +1043,7 @@ foreach ($e in $ENT) {
   }
   $own = if ($ESP) { $ESP[$e.slug] } else { $null }
   if ($own -and $NODE.ContainsKey([string]$own)) { [void]$body.Append('<p class="enc-article-foot"><a class="enc-random-link" href="' + (StateUrl $NODE[[string]$own]) + '">State page: history, lineage and connections &rarr;</a></p>' + "`n") }
+  elseif ($SELFP.ContainsKey($e.slug) -and $INVPROF.ContainsKey($SELFP[$e.slug])) { [void]$body.Append('<p class="enc-article-foot"><a class="enc-random-link" href="' + (ProfUrl $SELFP[$e.slug]) + '">Full profile: ' + (Hx $SELFP[$e.slug]) + ' &rarr;</a></p>' + "`n") }
   $stm = if ($ESM) { $ESM[$e.slug] } else { $null }
   if ($stm) {
     $tot = [int]$stm[0]; $shown = @($stm[1])
@@ -2688,7 +2691,7 @@ foreach ($f in @(Get-ChildItem "$PSScriptRoot\essays\*.html" | Sort-Object Name)
   $ESSAYS.Add([pscustomobject]@{ num = $esName.Groups[1].Value; slug = $esName.Groups[2].Value; hd = $hd; html = $raw.Substring($esHead.Length).Trim()
       date = [datetime]::ParseExact($hd['published'], 'yyyy-MM-dd', $INV) })
 }
-$esMiss = New-Object Collections.Generic.List[string]
+$esMiss = New-Object Collections.Generic.List[string]; $ESSLK = [ordered]@{}
 for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
   $ey = $ESSAYS[$ei]; $hd = $ey.hd; $path = '/essays/' + $ey.slug; $url = $SITE + $path; $title = $hd['title']
   # every link inside the essay must lead somewhere (check-site checks again on the written pages)
@@ -2739,6 +2742,11 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
     }
     [void]$sb.Append("</ul></section>`n")
   }
+  # the profiles this essay names (its list and its links), for their "In the Research Series" line (scripts/essay-links.js)
+  $esPr = New-Object Collections.Generic.List[string]
+  foreach ($ps in $profs) { foreach ($pre in '/empire/', '/religion/', '/language/', '/culture/', '/movement/', '/government/', '/ideology/') { if ($EMPURL.ContainsKey($pre + $ps)) { $esPr.Add([string]$EMPURL[$pre + $ps]['name']); break } } }
+  foreach ($m in [regex]::Matches($ey.html, 'href="(/(?:empire|religion|language|culture|movement|government|ideology)/[^"#]+)"')) { if ($EMPURL.ContainsKey($m.Groups[1].Value)) { $esPr.Add([string]$EMPURL[$m.Groups[1].Value]['name']) } }
+  $esSeen = @{}; foreach ($pn in $esPr) { if ($esSeen.ContainsKey($pn)) { continue }; $esSeen[$pn] = 1; if (-not $ESSLK.Contains($pn)) { $ESSLK[$pn] = New-Object Collections.Generic.List[string] }; $ESSLK[$pn].Add('[' + (Js $path) + ',' + (Js $title) + ']') }
   [void]$sb.Append((CiteBox $title $url 'Research Series') + "`n")
   $pv = if ($ei -gt 0) { $ESSAYS[$ei - 1] } else { $null }; $nx = if ($ei -lt $ESSAYS.Count - 1) { $ESSAYS[$ei + 1] } else { $null }
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other essays">' + $(if ($pv) { '<a class="prev" rel="prev" href="/essays/' + $pv.slug + '"><span class="lbl">&larr; Essay ' + $pv.num + '</span><span class="nm">' + (Hx $pv.hd['title']) + '</span></a>' } else { '' }) +
@@ -2753,6 +2761,9 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
   Emit $path (Page @{ title = $title + $esJoin + $hd['subtitle'] + ' — The Epoch Institute'; desc = $hd['desc']; path = $path; type = 'article'; img = $ogImg; imgW = $ogW; imgH = $ogH; ld = $ld; nav = 'series'; body = $sb.ToString() })
 }
 if ($esMiss.Count) { throw ("essays: unknown links " + (($esMiss | Sort-Object -Unique) -join ', ')) }
+# the profiles' links to the essays that name them (generator.html reads it: "In the Research Series", after the legacy)
+$esText = "// scripts/essay-links.js - written by scripts/build-pages.ps1. Do not edit. Read by generator.html: the Research Series essays that list or link each profile.`nvar ESSAY_LINKS = {`n" + ((@($ESSLK.Keys | ForEach-Object { (Js $_) + ':[' + ($ESSLK[$_] -join ',') + ']' })) -join ",`n") + "`n};`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\scripts\essay-links.js", $esText)) { $NWRITE++ }
 # the cards of /research-series, and its old addresses (the essays opened inside that page: #series-01 ...) forwarded
 SetBlock "$Repo\research-series" 'essays' ('<script>(function(){var s={' + (($ESSAYS | ForEach-Object { '"' + $_.num + '":"' + $_.slug + '"' }) -join ',') + '},m=/^#series-(\d\d)$/.exec(location.hash);if(m&&s[m[1]])location.replace("/essays/"+s[m[1]]);})();</script>' + "`n" +
   '<ul class="rs-grid">' + (($ESSAYS | ForEach-Object {

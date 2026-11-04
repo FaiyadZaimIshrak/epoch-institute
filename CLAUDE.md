@@ -1145,6 +1145,10 @@ entry, profile or state. 01 and 02 (May 2026) were moved out of the page's scrip
 unchanged; 03–05 were written then, their "What the Data Shows" figures computed from the power curves (shared-data.js
 EMPIRES), the register (data/polities.json) and epoch-stats.js. 07 Before the State (the 45 culture profiles: life before and without states, the five living cultures) and 08 How Songs Travel (the 300 songs: the oldest kept songs, hymn to anthem, the tune families, songs put to work by states, their impact) were written on 2 Nov 2026 from the profiles and the song pages alone, every paragraph mapped to its page (scratchpad essays/07-sources.md, 08-sources.md) and read against it; their figures come from scripts/tools/essay-numbers.js 07|08 (culture spans against the register, songs by type, era and region, the tune families) and are quoted, never typed. The Listen button reads article.essay-view (h1,
 .essay-sub, .essay-body h2/p/li): keep Further Reading and the contents list outside .essay-body.
+Since 4 Nov 2026 (C3) the builder also writes scripts/essay-links.js (ESSAY_LINKS {profile name: [[/essays/slug, title]]}:
+the profiles an essay lists in its header or links in its text), and generator.html adds "In the Research Series" with
+those essays after a profile's legacy section, beside its inventions and songs: regenerate the profiles after an essay
+is added or its profiles change.the profiles an essay lists in its header or links in its text), and generator.html adds "In the Research Series" withthose essays after a profile's legacy section, beside its inventions and songs: regenerate the profiles after an essayis added or its profiles change.
 
 ## Community articles (/articles/<slug>) and opinions
 data/community/articles.json (build input, not deployed; `[]` since the Sati Pratha article was withdrawn on 29 Oct
@@ -1474,9 +1478,9 @@ credited to no state).
   Cuba), "Brahmi script" rather than "Brahmi" (inside Tamil-Brahmi on its own page). Words whose capitalised form
   names a company or an instrument match lower case only (mode 0: automobile, aeroplane/airplane, telescope, telephone,
   jarl; "Boeing Airplane Company", "Hubble Space Telescope", "Nippon Telegraph and Telephone", "Birger Jarl"); the
-  check is inv/newdesc-check.js plus a scan of capitalised mid-sentence matches in the entries and the day events. The Cannon entry has none:
-  "cannon" still links Field artillery (its row has ["cannon", 1]); moving it needs the drop, the state texts'
-  [[e:field-artillery|cannon]] relinked and a profile scan (22 profiles), or the profiles lose the links.
+  check is inv/newdesc-check.js plus a scan of capitalised mid-sentence matches in the entries and the day events. The Cannon entry links
+  "cannon" (lower case, mode 0, so the surname Cannon never matches) since 4 Nov 2026; until then Field artillery's row
+  held it (["cannon", 1]): the move took the drop, the state texts' links moved and a profile rescan of both entries.
 - The rank terms the social ladders lacked (36 entries: awīlum, muškēnum, kurtaš, metic, helots, perioikoi, dynatoi,
   pronoia, villein, thrall, jarl, the Third Estate, sosloviye, awlad al-nas, reaya, jati, vaishya, zamindar,
   yangban, nobi, cheonmin, hyakushō, hinin, nyamakala, pipiltin, macehualtin, ajaw, kuraka, ayllu, aclla, casta,
@@ -1587,8 +1591,14 @@ Found while building the social ladders (30 Oct 2026), not done yet:
   release, 31 Oct 2026): add them by the R9 entries process, then the ladders' terms and people lines.
 - The 185 entries added on 31 Oct 2026 (the inventions tree and the rank terms): the profiles were scanned for them on
   4 Nov 2026 (scripts/kinds/link-scan.js --entries over every kind, the 104 that had patterns and no profile mention):
-  no profile names any of them, so nothing changed. The state texts are still to be relinked for them
-  (link-state-texts), which could also move "cannon" from Field artillery to Cannon (see "Inventions tree").
+  no profile names any of them, so nothing changed. The state texts were relinked on 4 Nov 2026 (C2:
+  scripts/kinds/relink-states.js --entries=<slugs> [--report] [--write]: generator.html's linkify rules over every row, so a new
+  short name never links inside an older, longer one; only links to the given entries are added, first mention per
+  field; namesakes kept out by scripts/kinds/state-link-exclusions.tsv, e.g. "fief" on Chinese and Japanese states;
+  data/enc-states.json counts kept in step): 463 links in 390 states for the entries of scripts/added-entries.json
+  (chiefdom 141, fief 54, the Bolsheviks, forms of government, cacique, zamindar, Mycenaean and Maya sites …).
+  "cannon" moved from Field artillery to the Cannon entry the same day (drop + pattern in added-entries.json, the 8 state
+  links moved, every profile rescanned for both entries: 19 profiles now link Cannon).
 - Generic link names still linking one thing everywhere, handled on the ladders by nolink: "printing" (the printing
   press, also for Song woodblock and movable type), "slave trade" (the Atlantic slave trade, also for Viking and Maya
   trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the
@@ -1611,7 +1621,8 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
   Bavaria on the County of Toulouse; Ferdinand II of Aragon on the Kingdom of León): audit the polities' links as the
   kinds' were (kinds/audit-links.ps1), then rewrite the lists from the pages. The Ilkhanate's byEmpire key is spelt
   "ilkhanate", so its page links almost nothing.
-- Entries of profiled states do not link their profile: make-enc-states.ps1 maps only states without one, and
+- (Done 4 Nov 2026, C3: build-pages.ps1 links an entry to its profile, "Full profile: <name> →", from ENC_LINKS.self,
+  where it has no plain state page.) Entries of profiled states did not link their profile: make-enc-states.ps1 maps only states without one, and
   data/enc-states.json was not re-run after R8, so the Kingdom of Zimbabwe and Purépecha entries still have the link a
   re-run would drop. Map profiled states too and name the link "Full profile".
 - (Done 29 Oct 2026) Kids mode: a long fact in the facts box of a religion, language, culture or movement profile
