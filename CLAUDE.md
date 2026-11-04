@@ -1513,6 +1513,9 @@ Institute and its register are still named where they are defined and credited (
 - Where Is This Song From? (/games#songq, games.js SongQ, songq-data.js SONGQ): five songs a day (UTC, #1 = 3 Nov 2026),
   four lines of the original (the English on request), four regions; epoch-games songq-<n> (Kids mode songq-k<n>, Kids songs
   only), songq-streak; Share; the passport counts twelve games.
+  Every stanza is in the data (B3, 4 Nov 2026): a song dealt again, every 37 days or so, shows its next stanza (pass n,
+  stanza n mod its count; choruses sung again and one-line stanzas left out). node scripts/tools/songq-test.js [day] deals
+  every day to 30 June 2027 for both pools: 428 dealings still repeat lines, those of the 33 songs with one stanza.
 - Born on This Day (home page): data/days "born" [slug, name, dates, thumb, year], the four best known with a picture.
 - Next to read (shared-nav.js, every reading page): three unread pages the page links, by See-also lists, the reader's
   kinds (epoch-seen) and frequency; after idle, at the foot. window.epochNextRead.

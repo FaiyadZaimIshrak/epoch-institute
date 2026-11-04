@@ -1652,7 +1652,9 @@ initNav('games');
     var REG = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
     function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
     function pool() { return kids() ? D.filter(function (s) { return s[8]; }) : D; }
-    function round(num) { var P = pool(), out = []; for (var k = 0; k < N && P.length; k++) out.push(P[((num - 1) * N + k) % P.length]); return out; }
+    // a song dealt again (the pool goes round every P.length / 5 days) shows its next stanza: pass n, stanza n mod count
+    function stanza(s, pass) { var o = s[6]; if (!o.length || typeof o[0] === 'string') return s; var j = pass % o.length, q = s.slice(); q[6] = o[j]; q[7] = s[7][j] || []; return q; }
+    function round(num) { var P = pool(), out = []; for (var k = 0; k < N && P.length; k++) { var i = (num - 1) * N + k; out.push(stanza(P[i % P.length], Math.floor(i / P.length))); } return out; }
     function key(num) { return 'songq-' + (kids() ? 'k' : '') + num; }
     function save() { if (!K.practice) setBest(key(K.num), { m: K.m, done: K.done }); }
     function load(num, practice) {
