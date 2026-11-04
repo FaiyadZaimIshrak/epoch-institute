@@ -46,7 +46,8 @@ foreach ($e in @($A.entries)) {
 }
 if ($add.Count) {
   $end = $text.IndexOf("`n];", $text.IndexOf('var ENCYCLOPEDIA = ['))
-  $text = $text.Substring(0, $end) + ",`n" + ($add -join ",`n") + $text.Substring($end)
+  $head = $text.Substring(0, $end).TrimEnd(',')   # the last entry may already end in a comma: ",," would leave a hole in the array
+  $text = $head + ",`n" + ($add -join ",`n") + $text.Substring($end)
 }
 $nPic = 0
 foreach ($x in @($A.pictures | Where-Object { $_ })) {

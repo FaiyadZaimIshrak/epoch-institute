@@ -1,0 +1,139 @@
+{
+ "label": "A10b (4 Nov 2026): the wave of scripts/songs/LIST5.tsv (merge-wave.js; decisions in scripts/songs/a10b/decisions.json)",
+ "drop": {
+  "lamma-bada-yatathanna": "the article holds nothing of what the song says: no meaning could be written from it"
+ },
+ "nowords": {
+  "taba-naba": "a claimed author: its free status is not beyond doubt",
+  "santa-lucia": "no free edition found",
+  "ganggangsullae": "no fixed words; no free edition found",
+  "odes-of-solomon": "no free edition found",
+  "kesh-temple-hymn": "the only full text is ETCSL's (not yet imported)",
+  "hymn-of-the-pearl": "the free Wikisource text is rearranged after a 1962 edition, not Wright's 1871 translation as printed",
+  "ive-been-working-on-the-railroad": "the date of its later verses is not known, so their free status is not beyond doubt",
+  "oh-susanna": "no clean free edition found: the 1848 sheet lacks the first verse",
+  "the-wearing-of-the-green": "the only free copy has the words inside the sheet music",
+  "deep-river": "no free edition found",
+  "sometimes-i-feel-like-a-motherless-child": "no free edition found",
+  "japji-sahib": "Macauliffe's 1909 English carries his footnote numbers and headings between the lines; no clean free edition"
+ },
+ "withheld": {
+  "old-folks-at-home": "The original words, written in the dialect of the minstrel stage, use a racial slur in the chorus; they are not printed here."
+ },
+ "edits": [
+  [
+   "bhaja-govindam",
+   "year: 800\n",
+   "year: ~800\n"
+  ],
+  [
+   "japji-sahib",
+   "year: 1530\n",
+   "year: ~1530\n"
+  ],
+  [
+   "ganggangsullae",
+   "year: 1592\n",
+   "year: ~1592\n"
+  ],
+  [
+   "tevaram",
+   "year: 650\n",
+   "year: ~650\n"
+  ],
+  [
+   "psalm-104",
+   "year: -950\n",
+   "year: ~-950\n"
+  ],
+  [
+   "hallel",
+   "year: 50\n",
+   "year: ~50\n"
+  ],
+  [
+   "deep-river",
+   "A slow spiritual of longing and faith, whose image, as its title says, is a deep river to be crossed. Its mood is solemn and yearning.",
+   "An anonymous African-American spiritual, a sacred song; the account used here does not describe its words."
+  ],
+  [
+   "abide-with-me",
+   "to his people at Brixham",
+   "to his people"
+  ],
+  [
+   "abide-with-me",
+   "place: Brixham, Devon, England",
+   "place: England"
+  ],
+  [
+   "la-paloma",
+   "region: Americas",
+   "region: Europe"
+  ]
+ ],
+ "fixes": {
+  "god-rest-ye-merry-gentlemen|orig": [
+   [
+    "Saviour was born on Christmas day.",
+    "Saviour was born on Christmas ⁂"
+   ],
+   [
+    "born on Christmas day.",
+    ""
+   ],
+   [
+    "Christmas ⁂",
+    "Christmas day."
+   ]
+  ],
+  "torna-a-surriento|orig": [
+   [
+    "(napoletano)",
+    ""
+   ],
+   [
+    "«",
+    ""
+   ],
+   [
+    "»",
+    ""
+   ]
+  ],
+  "ubi-caritas|orig": [
+   [
+    "(Ant.) ",
+    ""
+   ]
+  ],
+  "ubi-caritas|en": [
+   [
+    "(Ant.) ",
+    ""
+   ]
+  ],
+  "o-tannenbaum|orig": [
+   [
+    "(Text nach dem Erstdruck 1824)",
+    ""
+   ]
+  ],
+  "song-of-songs|orig": [
+   [
+    "א א א ",
+    ""
+   ],
+   [
+    "יד יוֹנָתִ֞י",
+    "יוֹנָתִ֞י"
+   ]
+  ],
+  "hallel|orig": [
+   [
+    "קיח א ",
+    ""
+   ]
+  ]
+ }
+}

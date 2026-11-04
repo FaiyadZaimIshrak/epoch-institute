@@ -15,7 +15,7 @@ const bad = [], files = {};
 // the songs the site has, by their titles and local titles (folded): a draft under another slug is still a duplicate
 // (4 Nov 2026: the wave's İstiklal Marşı was the site's "Independence March", istiklal-marsi)
 const fold = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-const heads = t => { const g = k => (t.match(new RegExp('^' + k + ':\\s*(.*)$', 'm')) || [])[1] || ''; return [g('title'), ...g('local').split(' / ')].map(fold).filter(Boolean); };
+const heads = t => { const g = k => (t.match(new RegExp('^' + k + ':\\s*(.*)$', 'm')) || [])[1] || ''; return [g('title'), ...g('local').split(' / ')].map(fold).filter(k => k && k !== 'not known'); };
 const HAVE = new Map(); for (const f of fs.readdirSync(SD).filter(f => /^[a-z0-9-]+\.txt$/.test(f))) for (const k of heads(fs.readFileSync(path.join(SD, f), 'utf8'))) HAVE.set(k, f.slice(0, -4));
 for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.txt'))) {
   const slug = f.slice(0, -4); if (drop[slug]) continue;

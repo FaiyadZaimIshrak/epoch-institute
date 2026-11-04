@@ -968,7 +968,7 @@ through whom they reach us. 14 speakers got entries (wave a9 of added-entries.js
 Canassatego or Logan: the candidates were a house and a modern statue).
 
 ## Songs in History (/songs/, /songs/<slug>; Nov 2026)
-339 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states"; 38 more
+406 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states"; 38 more
 in A10a, 4 Nov 2026, below) (the user's brief: origin, writer, culture, language and place, type, the words
 in the original, romanized and in English, what they inspired, a YouTube performance), from the Lament for Ur
 (c. 2000 BCE) to Wind of Change (1990), every region, 78 languages. The user's choices: about 120 songs; a song still in
@@ -1076,6 +1076,21 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   (istiklal-marsi, "Independence March"): removed, its link row pointed at the older entry. merge-wave.js now refuses a
   draft whose title or local title (folded) is a song the site has. make-entries.js keeps in added-entries.json only
   the song entries not yet applied: run it after make-data.js, which refreshes songs.json.
+- A10b (4 Nov 2026): 67 more, 406 in all, from scripts/songs/LIST5.tsv: the 47 scored candidates left (score.js) and
+  titles added for the thin regions, the songs the site has removed first (by title, local title, slug and the article
+  named in the sources; most of the thin regions' best-known songs were already in). Eight agents, one brief (scripts/songs/
+  a10b/drafts-notes holds their notes); the editor's decisions in scripts/songs/a10b/decisions.json: Lamma Bada
+  Yatathanna dropped (its article says nothing of the words), Ethiopia, Be Happy and Alouette never drafted (a
+  three-sentence article, a disambiguation page), twelve without words (no clean free edition: Japji Sahib's 1909
+  English carries Macauliffe's footnote numbers; Taba Naba's author is claimed; the Railroad's later verses are undated),
+  Old Folks at Home withheld (its only free text is in minstrel dialect with a slur in the chorus), Take Me Out to the
+  Ball Game and Pelo Telefone printed as public domain in the United States, the Song of Songs cut to two chapters.
+  45 have their words; no Institute translations yet for the originals without a free English (Aogeba Tōtoshi,
+  Funiculì, Torna a Surriento, Ríu Ríu Chíu, Sari Gelin, La Paloma, the Bhaja Govindam, the Tevaram …). Tools changed:
+  merge-wave.js ignores a local title "not known" in its duplicate check (it had matched the Seikilos epitaph);
+  fetch-texts.js lets a fix of a part gathered from several rows match once in one of them (a verse number in one
+  chapter of the Song of Songs). 56 titles link their entries (entry-links.tsv; pattern-count: only Tevaram and the
+  Kesh Temple Hymn match, rightly).
 - Wiring: menu Themes → Societies and ideas, footer, Research Hub (Read: nine cards, three columns), search
   (SEARCH_PAGES kind song, "X lyrics", "X meaning"), shelf and My Passport kind, sitemap, llms.txt, poster
   page-songs.jpg (make-posters.js page "songs"), deploy.sh GENERATED, split-css GENERATED, check-site FOLDERS, the

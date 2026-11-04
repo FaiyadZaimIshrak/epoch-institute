@@ -116,13 +116,15 @@ const words = (st, n, end) => { const w = st.flat().join(' ').split(' '); return
     else st.forEach((s, i) => console.log(String(i + 1).padStart(4), String(s.length).padStart(3) + ' lines:', s[0].slice(0, 50))); return; }
   const only = arg('only') ? arg('only').split(',') : null;
   const rows = fs.readFileSync(path.join(D, 'sources.tsv'), 'utf8').split(/\r?\n/).filter(l => l && !l.startsWith('#')).map(l => l.split('\t'));
-  fs.mkdirSync(OUT, { recursive: true }); const done = {};
+  fs.mkdirSync(OUT, { recursive: true }); const done = {}, USED = {};
   for (const [slug, part, site, title, select, credit] of rows) {
     if (only && !only.includes(slug)) continue;
     try {
       const p = await page(site, title), m = meta(p.wikitext); let st = pick(stz(p), select);
       // slips of an import fixed by hand, each logged in text-fixes.json ("slug|part": [[old, new], ...]), each matching once
-      for (const [a, b] of (FIX[slug + '|' + part] || [])) { const all = st.flat().join('\n'); if (all.split(a).length !== 2) throw new Error('fix must match once: ' + a); st = st.map(s => s.flatMap(l => l.split(a).join(b).split('\n')).filter(l => l !== '')); }   // a "\n" in a fix splits the line (half-lines a page's columns ran together)
+      // a part gathered from several rows (pages or chapters): a fix must match once in one of its rows and in none of the others
+      const many = rows.filter(r => r[0] === slug && r[1] === part).length > 1;
+      for (const [a, b] of (FIX[slug + '|' + part] || [])) { const all = st.flat().join('\n'), n = all.split(a).length - 1; if (many && n === 0) continue; if (n !== 1) throw new Error('fix must match once: ' + a); (USED[slug + '|' + part] || (USED[slug + '|' + part] = new Set())).add(a); st = st.map(s => s.flatMap(l => l.split(a).join(b).split('\n')).filter(l => l !== '')); }   // a "\n" in a fix splits the line (half-lines a page's columns ran together)
       const o = done[slug] || (done[slug] = { slug, parts: {} });
       const url = p.pg ? `https://www.gutenberg.org/ebooks/${p.pg}` : `https://${host(site)}/wiki/${encodeURIComponent(p.title.replace(/ /g, '_'))}`;
       // a second row for the same part adds its stanzas (verses gathered from several pages: Martí's Versos sencillos)
@@ -131,5 +133,6 @@ const words = (st, n, end) => { const w = st.flat().join(' ').split(' '); return
       console.log(slug.padEnd(30), part.padEnd(4), String(st.length).padStart(3), 'st', String(st.flat().length).padStart(4), 'ln |', m.licences.join(' ').slice(0, 40), '|', words(st, 5), '…', words(st, 4, true));
     } catch (e) { console.log(slug.padEnd(30), part.padEnd(4), 'ERROR', e.message.slice(0, 120)); }
   }
+  for (const k of Object.keys(USED)) for (const [a] of FIX[k]) if (!USED[k].has(a)) console.log(k.padEnd(35), 'ERROR fix matched in none of its rows:', a.slice(0, 60));
   for (const o of Object.values(done)) fs.writeFileSync(path.join(OUT, o.slug + '.json'), JSON.stringify(o, null, 1));
 })();

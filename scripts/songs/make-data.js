@@ -12,7 +12,7 @@ const TYPES = ['sacred', 'lament', 'celebration', 'love', 'lullaby', 'work', 'wa
 const REGIONS = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
 const KEYS = ['title', 'local', 'status', 'lyricist', 'composer', 'culture', 'language', 'place', 'date', 'year', 'region', 'types', 'kids', 'kid'];
 // songs in the public domain whose words no free, reliable edition holds yet (their pages say so)
-const GAPS = ["enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "red-river-valley", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
+const GAPS = ["japji-sahib", "taba-naba", "santa-lucia", "ganggangsullae", "odes-of-solomon", "kesh-temple-hymn", "hymn-of-the-pearl", "ive-been-working-on-the-railroad", "oh-susanna", "the-wearing-of-the-green", "deep-river", "sometimes-i-feel-like-a-motherless-child", "enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "red-river-valley", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
   'ninkasi', 'raghupati-raghava-raja-ram', 'tizita',
   // second wave (Nov 2026)
   'chakrulo', 'cherubikon', 'day-o', 'fengyang-flower-drum',
@@ -22,6 +22,7 @@ const GAPS = ["enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fi
   'heil-dir-im-siegerkranz', 'battotai'];
 // public-domain songs whose words are not printed for another reason, given on the page (third wave, Nov 2026)
 const WITHHELD = {
+  "old-folks-at-home": "The original words, written in the dialect of the minstrel stage, use a racial slur in the chorus; they are not printed here.",
   "ghost-dance": "The words of these songs are not printed here: they are sacred songs of a ceremony that some peoples still hold in private.",
   'horst-wessel-lied': 'The words of this song are not printed here. They are in the public domain, but as a symbol of the Nazi regime the song is banned in Germany and Austria, outside teaching, research and the arts.',
   'marcha-real': 'The Marcha Real is an instrumental anthem: it has no official words, and none of the words written for it over the years is printed here.'
