@@ -1483,7 +1483,7 @@
   /* phones: the bar keeps search, shelf and the menu; theme and Kids mode move into the menu's Display row */
   .nav-dd-display { display: none; }
   @media (max-width: 480px) {
-    #theme-toggle, #nav-kids-btn { display: none; }
+    #theme-toggle, #nav-kids-btn, #nav-surprise-btn { display: none; }
     .nav-dd-display { display: flex; gap: 8px; padding: 12px 24px; border-bottom: 1px solid var(--border); }
     .nav-dd-btn { flex: 1; min-height: 44px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; cursor: pointer; }
     .nav-dd-btn:hover, .nav-dd-btn[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); }
@@ -2508,6 +2508,9 @@ h2.profile-section-title { font-weight: 400; }
   transition: color 0.2s, border-color 0.2s;
 }
 .nav-search-btn:hover { color: var(--gold); border-color: var(--gold); }
+/* the "Surprise me" dice leaves the bar just above the menu-button width, where the links fill it (Kids mode's wider
+   fonts ran into the buttons at 1161-1199 px); the Play menu still has "Surprise me" there */
+@media (min-width: 1161px) and (max-width: 1279px) { #nav-surprise-btn { display: none; } }
 .site-search { position: fixed; inset: 0; z-index: 3000; background: var(--overlay); display: flex; justify-content: center; align-items: flex-start; padding: 12vh 16px 16px; }
 .site-search[hidden] { display: none; }
 .site-search-box { width: min(640px, 100%); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 20px 60px var(--shadow); overflow: hidden; }
@@ -2655,10 +2658,25 @@ body.shr-open { overflow: hidden; }
 .sd-t { font-family: var(--font-display); font-size: 22px; color: var(--gold-light); line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .sd-d { font-family: var(--font-text); font-size: 17px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 3em; }
 .sd-go { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); }
+/* the Song of the Day's own play button, under the card: the player takes its place only when pressed */
+.sd-listen { display: inline-flex; align-items: center; gap: 8px; max-width: 100%; white-space: nowrap; overflow: hidden; margin-top: 10px; padding: 8px 16px; min-height: 40px; font-family: var(--font-ui); font-size: 14px; font-weight: 600;
+  color: var(--gold); background: transparent; border: 1px solid var(--gold); border-radius: 999px; cursor: pointer; }
+.sd-listen:hover, .sd-listen:focus-visible { background: rgba(var(--gold-rgb), 0.12); }
+.sd-by { font-weight: 400; color: var(--muted); min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.sd-listen.sd-wait { visibility: hidden; }   /* the page's own placeholder: keeps the button's room until the day's file arrives */
+.sd-video { margin-top: 10px; position: relative; width: 100%; max-width: 640px; aspect-ratio: 16 / 9; background: #000; border-radius: 4px; overflow: hidden; }
+.sd-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 @media (max-width: 600px) { .song-day-card { grid-template-columns: 44px minmax(0, 1fr); column-gap: 14px; padding: 18px; }
   .song-day-card::before { width: 44px; height: 44px; font-size: 20px; } .sd-t { font-size: 19px; -webkit-line-clamp: 2; min-height: 2.5em; } }
 /* Born on This Day (index: "born" in today's data/days file): four cards that hold their size while the file loads */
 .home-born { margin-top: 28px; }
+.home-num { margin-top: 28px; }
+.num-day { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 20px; row-gap: 4px; align-items: center; padding: 18px 22px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 0.2s; }
+.num-day:hover { border-color: var(--gold); }
+.nd-n { grid-row: 1 / span 2; font-family: var(--font-display); font-size: 40px; line-height: 1; color: var(--gold-light); }
+.nd-t { font-family: var(--font-text); font-size: 17px; line-height: 1.45; }
+.nd-go { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); }
+@media (max-width: 600px) { .nd-n { font-size: 32px; } .num-day { padding: 16px; column-gap: 14px; } }
 .born-day { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .born-day li { min-width: 0; min-height: 178px; }
 .born-day .bd-ph { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); opacity: 0.5; }
@@ -5852,6 +5870,8 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .fc-page, .rc-page, .gv-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
 .gv-wrap { max-width: 1080px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 .gv-p { font-family: var(--font-text); font-size: 18px; line-height: 1.65; color: var(--text); max-width: 760px; margin: 0 0 14px; }
+.gv-p a, .kd-sub a { color: var(--gold); text-decoration-color: rgba(var(--gold-rgb), 0.45); }
+.gv-p a:hover, .kd-sub a:hover { color: var(--gold-light); }
 .gv-grid6 { display: grid; gap: 8px; margin: 18px 0; max-width: 760px; }
 .gv-g6-row { display: grid; grid-template-columns: 150px minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
 .gv-g6-h span { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 0 4px; }
@@ -6116,6 +6136,19 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .srch-dym { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 8px 0 0; }
 .srch-dym a { color: var(--gold); font-weight: 600; }
 
+/* "Print this path": a booklet of the stops, each with its reason and the first sentence of its page (print only) */
+.path-step-lede { display: none; }
+.path-print-row { margin: 14px 0 0; }
+.path-print { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: transparent; border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; min-height: 36px; cursor: pointer; }
+.path-print:hover, .path-print:focus-visible { border-color: var(--gold); }
+@media print {
+  .path-print-row, .paths-page .ref-crumbs, .paths-page .enc-article-foot, .paths-page .page-share-row, .paths-page .next-read { display: none !important; }
+  .path-step { break-inside: avoid; border-color: #ccc !important; background: #fff !important; }
+  .path-steps li { break-inside: avoid; }
+  .path-step img { width: 22mm; height: 22mm; }
+  .path-step-lede { display: block; margin-top: 4px; font-size: 10.5pt; line-height: 1.45; color: #333; }
+  .path-title { font-size: 22pt; }
+}
 @media print {
   :root, :root[data-theme="dark"], :root[data-theme="light"] { --bg: #fff; --surface: #fff; --text: #111; --muted: #555; --gold: #6b4f12; --gold-light: #6b4f12; --border: #ccc; }
   html, body { background: #fff !important; color: #111 !important; }

@@ -20,11 +20,14 @@ Plus 404.html and generator.html (generator is NOT deployed — see scripts/depl
 ## Menu (shared-nav.js initNav: MENUS, MORE)
 Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and looked cramped):
 Profiles · Encyclopedia · Maps & Time ▾ · Themes ▾ · Play ▾ · Today in History · More ▾.
-- Maps & Time: Maps (Atlas, Faith Maps, Connections, States) | Time (World Timeline, Centuries, Year by Year, Country
-  Histories, Rise and Fall Race, Empire Explorer).
+- Maps & Time: Maps (Atlas, Faith Maps, Connections, States Register) | Time (World Timeline, Centuries, Year by Year, Country
+  Histories, Rise and Fall Race, Power Curves). "States Register" and "Power Curves" (/state/ and /explorer; the page titles
+  kept) since 4 Nov 2026.
 - Themes: Societies and ideas (People, Forms of Government, Social Ladders, Inventions Tree, Great Speeches, Songs in History) | Read and discover (Reading
   Paths, Research Series, Glossary, Find Your Way In).
-- Play: History Quiz, History Games, Flashcards, Write in Ancient Scripts, Kids Corner, My Passport, and "Surprise me".
+- Play: History Quiz, History Games, Flashcards, Write in Ancient Scripts, Kids Corner, My Passport, and "Surprise me" (also a dice
+  button in the header since 4 Nov 2026, #nav-surprise-btn [data-surprise]: hidden at 480 px and below, where the phone
+  menu has it, and at 1161-1279 px, where the links fill the bar and Kids mode's wider fonts ran into the buttons).
 - More (the Institute): About, Research Hub, Open Data, Teachers' Corner, Community, Submit an Article, Write for Us
   (/contributors), Newsletter, Contact.
 Every item has a short line under its name; the panels (.nav-mega, columns with .nav-col-h headings) open on hover,
@@ -337,7 +340,7 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   diagrams last (PicIsChart). Each path page ends with Test yourself.
 - Lists of entries show a type glyph where an entry has no picture (PhSpan: `.ph .ph-person/-conflict/-place/…`,
   masked SVG icons in shared.css).
-- `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — 1,030 year pages, one for every year with at least 6 items,
+- `/years/<y>` (/years/1453, /years/480-bce) + `/years/` — year pages, one for every year with at least 4 items (6 until 4 Nov 2026, when 1,030 years had a page),
   2 of them events. Only FIRM years count ([EpochBuild.W]::Firm, Range, Life: "1453", "29 May 1453", "480 BCE"; never
   "c. 1450", "1450s", "1066 or 1067", a reign or a century): entry events and conflicts dated to the year, wars that
   began or ended in it, day events (history.json; their linked text from data/days), profile key events (empire-glance.js
@@ -359,6 +362,10 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   "who lived when" chart of the 40 best known (lifespans bright, reigns and "fl." pale) and picture tiles by region.
   people-data.js ([slug, name, dates, first, last, kind, region, picture, weight]; ?v= written into /people/) feeds
   people.js, the chart tool on /people/ (region, from/to century, with a picture; kept in the address).
+  People by region (/people/<region>, approved 3 Nov 2026) waits for an audit of PersonRegion: a first build (4 Nov 2026)
+  put Saint Nicholas and Wilfrid in the Americas, Louis Philippe in Oceania, Euclid, Crassus and Galen in the Islamic
+  Caliphates and Mani and Athanasius in Sub-Saharan Africa (the mentioning profiles' regions mislead): set such people in
+  scripts/entry-regions.tsv first, then restore the pages (the code is in git history, 4 Nov 2026).
 - `maps/atlas-data.js`, `maps/basemap.js`, `maps/world.svg` (see "Atlas and maps"), their ?v= stamped into /atlas.
 - The `<!-- build:... -->` blocks of encyclopedia/index (with the Discover row: 8 notable entries with pictures, one
   kind each, re-picked daily by a small inline script from 10 per kind), state/index, today-in-history/index,
@@ -946,7 +953,8 @@ through whom they reach us. 14 speakers got entries (wave a9 of added-entries.js
 Canassatego or Logan: the candidates were a house and a modern statue).
 
 ## Songs in History (/songs/, /songs/<slug>; Nov 2026)
-300 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states") (the user's brief: origin, writer, culture, language and place, type, the words
+340 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states"; 39 more
+in A10a, 4 Nov 2026, below) (the user's brief: origin, writer, culture, language and place, type, the words
 in the original, romanized and in English, what they inspired, a YouTube performance), from the Lament for Ur
 (c. 2000 BCE) to Wind of Change (1990), every region, 78 languages. The user's choices: about 120 songs; a song still in
 copyright gets its entry WITHOUT its words; one performance per song, hand-picked and checked.
@@ -1039,6 +1047,17 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   "Songs that led to songs"; how the songs are told). Titles "X: Story, Meaning and Lyrics" (or "Story and Meaning")
   with " — Songs in History" (FitTitle drops it past 70). Listen reads the title, kid line, story, meaning and the
   English lines ([data-say]: class names in shared-nav.js would pull song rules into every hand page's css).
+- A10a (4 Nov 2026): 39 songs of scripts/songs/LIST4.tsv (the scored candidates not yet taken, the thin regions first:
+  the Ballad of Mulan, the Epic of Sundiata, the Song of Deborah, the Enūma Eliš, Kassia, the Akathist, Ma'oz Tzur,
+  anthems of Turkey, Brazil, Odisha and the Nordic countries, the Ghost Dance songs, spirituals, hymns and ballads), drafted
+  by six agents with SONGS-GUIDE.md and scripts/songs/WORDS-VIDEOS-GUIDE.md (the agents also propose the words rows and
+  one performance each, checked by oEmbed and audit-videos.js). scripts/songs/merge-wave.js <drafts> <decisions.json>
+  <rows.tsv> <videos.tsv> [--write] copies the drafts, appends the rows and performances, merges text fixes and adds the
+  gaps to make-data.js (GAPS, WITHHELD); the editor's decisions are scripts/songs/a10/decisions.json (Ja nus hons pris
+  dropped: its article is the king's; seven songs without words; the Ghost Dance songs withheld as sacred songs of a
+  ceremony held in private, and given no performance). 31 have their words. make-entries.js HASENTRY skips a song whose
+  entry exists under another spelling (Enūma Eliš: enuma-elish). Six of the list were already on the site (the scored
+  lists hold titles, not slugs: check scripts/songs/<slug>.txt before a wave).
 - Wiring: menu Themes → Societies and ideas, footer, Research Hub (Read: nine cards, three columns), search
   (SEARCH_PAGES kind song, "X lyrics", "X meaning"), shelf and My Passport kind, sitemap, llms.txt, poster
   page-songs.jpg (make-posters.js page "songs"), deploy.sh GENERATED, split-css GENERATED, check-site FOLDERS, the
@@ -1523,7 +1542,16 @@ Institute and its register are still named where they are defined and credited (
   most, then the year page (or the nearest within 25 years), the century and the atlas in that year.
 - Song of the Day (R5): data/days/<mm-dd>.json carries "song" ([slug, title, culture, year, kid line, has words]: of the songs
   with a checked performance that suit Kids mode, by day of year times a prime stride); the home page's card after the entry
-  of the day keeps its size while the file loads.
+  of the day keeps its size while the file loads. Since 4 Nov 2026 the tuple ends with the performance's video id and
+  channel, and a "Play the performance" button under the card loads YouTube's no-cookie player in its place when pressed;
+  the page's static markup holds an invisible placeholder button (.sd-listen.sd-wait) so nothing moves when it arrives.
+- Today's Number (home page, 4 Nov 2026): build:home-numbers holds HOME_NUMS [[number, text, address]], figures counted by
+  build-pages.ps1 from the data (entries, states, profiles of each kind, speeches, songs, inventions and each lane, paths,
+  ladders, people, the states founded in each century with ten or more); an inline script after the card shows one a day
+  (UTC day x 29) before the first paint.
+- Link colours: scripts/tools/link-colour-audit.js [--kids] [paths] opens a sample of every kind of page in both themes and
+  flags links in running text left in the browser's default colour or in the colour of their text (4 Nov 2026: the
+  /governance paragraphs and the Kids corner's subtitle; fixed, 0 flagged).
 - Service worker (R5/R6): sw.js (network first for pages with a 4 s fallback to the kept copy, the 200 latest pages kept;
   cache first for ?v= files, pictures, emblems and fonts; stale-while-revalidate for the unversioned shared files),
   offline.html (lists the kept pages; exempt from check-site's page rules like 404.html), manifest.json; shared-nav.js
@@ -1812,6 +1840,9 @@ it uses "backwards".
 
 ## Reading paths
 `reading-paths.js` (READING_PATHS: themed routes of profiles and encyclopedia entries, each step with a one-line reason) feeds the pages /paths/<slug> and /paths/ (built by build-pages.ps1) and the homepage teaser. Generated from scratchpad design2/paths.json by make-paths.ps1, which validates every profile name and entry slug and slugs profile names as toSlug does (accents dropped). Every reason rests on the stop's own page. 29 Oct 2026: ten more (Voyagers of the Pacific, The Story of Writing, Revolutions in Asia, The First Cities, The Indian Ocean World, Al-Andalus, The Bronze Age Collapse, Decolonisation, The Renaissance, The Cold War; scratchpad r7/new-paths.js, merged by r7/merge-paths.js). 4 Nov 2026 (A11): 24 more, 62 in all (Ideas That Shaped Modern Politics, Forms of Government through History, Abolition and the End of Slavery, Votes for Women, The Living Peoples, Before the State, The Ancient Gods, Faiths of the Persian World, The Ancient Near East, Languages and Their Peoples, Empires of the Sea, The Reformation and Its Wars, Mesoamerica, the Andes, West Africa's Golden Age, East and Southern Africa, The Mongol World, Japan, Korea, Kingdoms of Southeast Asia, The Ottoman Centuries, Russia, Nations Born in the Nineteenth Century, Inventions That Changed the World), written by six agents with scripts/paths/PATHS-GUIDE.md from the stops' own pages (scripts/paths/stop.js prints what a stop's page says) and appended by scripts/paths/make-paths.js, which computes each step's name, picture and label as the old generator did; the agents' files are in scripts/paths/a11/.
+Print this path (4 Nov 2026): a button under a path's header (.ws-print, the worksheets' handler in enc-page.js) prints
+the path as a booklet: the stops with their reasons and, in print only, the first sentence of each stop's entry (or of a
+profile's own entry, ENC_LINKS.self); menus, share, Test yourself and the prev/next links are left out (@media print).
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

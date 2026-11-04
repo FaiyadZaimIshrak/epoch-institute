@@ -25,11 +25,14 @@ function lede(paras) {
   if (cut > 520) cut = ends.find(i => i > 160) || t.length;
   return t.slice(0, cut).trim();
 }
+// songs whose entry exists under another spelling of the title (song slug: entry slug), so no second entry is written
+const HASENTRY = { 'enuma-elis': 'enuma-elish' };
 const out = [];
 for (const s of S) {
   // a song whose title (without a bracketed translation) is an entry's name has its entry: God Save the King, the Cantigas …
   // (the short title counts only for a work: "Jerusalem (And did those feet …)" is not the city)
   if (names.has(s.title.toLowerCase()) || works.has(s.title.replace(/\s*\(.*\)$/, '').toLowerCase())) continue;
+  if (HASENTRY[s.slug]) continue;
   let slug = s.slug; if (slugs.has(slug)) slug = s.slug + '-song';
   if (slugs.has(slug)) { console.error('no free slug for ' + s.slug); process.exit(1); }
   const e = { slug, name: s.title, type: 'work', subtype: 'song' };

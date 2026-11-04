@@ -902,7 +902,7 @@ foreach ($yv in @($YEARB.Keys)) {
   $yb.cov = $cov; $yb.tl = $tl; $yb.tw = $tw
   $nEv = $yb.days.Count + $yb.gl.Count; foreach ($bk in 'ents', 'began', 'ended') { foreach ($o in $yb[$bk]) { if (-not (YCovered $yb $o)) { $nEv++ } } }
   $nAll = $nEv + $yb.born.Count + $yb.died.Count + $yb.wks.Count + $yb.sf.Count + $yb.se.Count + $yb.sp.Count
-  if ($nAll -ge 6 -and $nEv -ge 2) { [void]$YEARSET.Add([int]$yv) }
+  if ($nAll -ge 4 -and $nEv -ge 2) { [void]$YEARSET.Add([int]$yv) }
 }
 $YEARLIST = @($YEARSET | Sort-Object)
 function YearLabel([int]$yv) { if ($yv -lt 0) { "$(-$yv) BCE" } elseif ($yv -lt 1000) { "$yv CE" } else { "$yv" } }
@@ -1418,7 +1418,7 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
   if ($SONGDAY.Count) {
     $sdDoy = ([datetime]::ParseExact("2024-$k", 'yyyy-MM-dd', [Globalization.CultureInfo]::InvariantCulture)).DayOfYear
     $sdStride = $(if ($SONGDAY.Count % 37) { 37 } else { 41 }); $sdS = $SONGDAY[($sdDoy * $sdStride) % $SONGDAY.Count]
-    $dayJs = $dayJs.TrimEnd().Substring(0, $dayJs.TrimEnd().Length - 1) + ',"song":[' + (Js ([string]$sdS['slug'])) + ',' + (Js ([string]$sdS['title'])) + ',' + (Js ([string]$sdS['culture'])) + ',' + (Js (SongYear $sdS)) + ',' + (Js ([string]$sdS['kid'])) + ',' + $(if ($sdS['text']) { 1 } else { 0 }) + "]}`n"
+    $dayJs = $dayJs.TrimEnd().Substring(0, $dayJs.TrimEnd().Length - 1) + ',"song":[' + (Js ([string]$sdS['slug'])) + ',' + (Js ([string]$sdS['title'])) + ',' + (Js ([string]$sdS['culture'])) + ',' + (Js (SongYear $sdS)) + ',' + (Js ([string]$sdS['kid'])) + ',' + $(if ($sdS['text']) { 1 } else { 0 }) + ',' + (Js ([string]$sdS['video']['id'])) + ',' + (Js ([string]$sdS['video']['channel'])) + "]}`n"
   }
   # born on this day (the home page's card): the four best known with a picture, in year order [slug, name, dates, thumb, year]
   if ($DAYPPL.ContainsKey($k)) {
@@ -1946,11 +1946,17 @@ for ($pi2 = 0; $pi2 -lt $RP.Count; $pi2++) {
   $crumb = Crumbs @(@('Home', '/'), @('Reading Paths', '/paths/'), @([string]$p['title'], $null))
   $sb = New-Object Text.StringBuilder(20000)
   [void]$sb.Append('<main id="main" class="paths-page ref-page">' + "`n<div class=`"paths-wrap`">`n" + $crumb[0] + "`n<article class=`"path-view`">`n")
-  [void]$sb.Append('<div class="path-head"><p class="featured-region">Reading path · ' + $steps.Count + ' stops</p><h1 class="path-title">' + (Hx ([string]$p['title'])) + '</h1><p class="path-tagline">' + (Hx ([string]$p['tagline'])) + '</p><p class="path-intro">' + (Hx ([string]$p['intro'])) + '</p>' + (PathTypes $p) + "</div>`n<ol class=`"path-steps`">")
+  [void]$sb.Append('<div class="path-head"><p class="featured-region">Reading path · ' + $steps.Count + ' stops</p><h1 class="path-title">' + (Hx ([string]$p['title'])) + '</h1><p class="path-tagline">' + (Hx ([string]$p['tagline'])) + '</p><p class="path-intro">' + (Hx ([string]$p['intro'])) + '</p>' + (PathTypes $p) + '<p class="path-print-row"><button type="button" class="ws-print path-print">Print this path</button></p>' + "</div>`n<ol class=`"path-steps`">")
   for ($k = 0; $k -lt $steps.Count; $k++) {
     $s = $steps[$k]
+    # the stop's first sentence, shown only in print (the booklet "Print this path" makes): its entry's, or for a profile
+    # the profile's own entry's (ENC_LINKS.self)
+    $psHr = [string]$s['href']; $psDe = $null
+    if ($psHr -match '^/encyclopedia/([^/#?]+)$' -and $BY.ContainsKey($Matches[1])) { $psDe = $BY[$Matches[1]].desc }
+    elseif ($EMPURL.ContainsKey($psHr)) { $psPn = [string]$EMPURL[$psHr]['name']; if ($EL['self'].ContainsKey($psPn) -and $BY.ContainsKey([string]$EL['self'][$psPn])) { $psDe = $BY[[string]$EL['self'][$psPn]].desc } }
+    $psLede = if ($psDe) { '<span class="path-step-lede">' + (Hx (@([EpochBuild.W]::Sentences([string]$psDe)) | Select-Object -First 1)) + '</span>' } else { '' }
     [void]$sb.Append('<li><a class="path-step" href="' + (Hx ([string]$s['href'])) + '">' + $(if ($s['img']) { '<img src="' + (Hx ([string]$s['img'])) + '" alt="" loading="lazy" width="96" height="96">' } else { '<span class="path-step-ph">' + ($k + 1) + '</span>' }) +
-      '<span class="path-step-body"><span class="path-step-kind">' + ($k + 1) + ' · ' + (Hx ([string]$s['meta'])) + '</span><span class="path-step-name">' + (Hx ([string]$s['name'])) + '</span><span class="path-step-why">' + (Hx ([string]$s['why'])) + '</span></span></a></li>')
+      '<span class="path-step-body"><span class="path-step-kind">' + ($k + 1) + ' · ' + (Hx ([string]$s['meta'])) + '</span><span class="path-step-name">' + (Hx ([string]$s['name'])) + '</span><span class="path-step-why">' + (Hx ([string]$s['why'])) + '</span>' + $psLede + '</span></a></li>')
   }
   [void]$sb.Append("</ol>`n")
   # Test yourself: from the stops, their dates and the reasons the path gives for them
@@ -3838,7 +3844,7 @@ $SECTIONS = [ordered]@{
   years        = @{ t = 'Year by Year'; h = '/years/'; k = $YEARLIST.Count.ToString('N0') + ' years'; d = 'What happened in a single year: its events, the people born and the people who died, the states founded and ended.'; pic = @('primary-chronicle') }
   people       = @{ t = 'People'; s = 'Rulers, thinkers and explorers, century by century.'; h = '/people/'; k = $PPL.Count.ToString('N0') + ' people'; d = 'Rulers, thinkers, artists and explorers, century by century and region by region, with a chart of who lived when.'; pic = @('las-meninas') }
   timeline     = @{ t = 'World Timeline'; h = '/timeline'; k = 'Every state'; d = 'Five thousand years of states and empires on one line, region by region: see who lived alongside whom.'; pic = @('standard-of-ur') }
-  explorer     = @{ t = 'Empire Explorer'; h = '/explorer'; k = 'Power curves'; d = 'Compare the rise and fall of nearly four hundred states and empires on one timeline.'; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
+  explorer     = @{ t = 'Power Curves'; h = '/explorer'; k = 'Rise and fall charts'; d = 'Compare the rise and fall of nearly four hundred states and empires on one timeline.'; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
   race         = @{ t = 'Rise and Fall Race'; h = '/race'; k = "$($POLS.Count) to race"; d = 'Up to four states and empires race year by year: who led, when they overtook each other and how long each held on.'; pic = @('charioteer-of-delphi') }
   compare      = @{ t = 'Compare Two Profiles'; h = '/compare'; k = "$($EMPS.Count) profiles"; d = 'Any two side by side, cultures, states, religions or movements: when each lived, their facts and their key events on one line of time.'; pic = @('rosetta-stone') }
   new          = @{ t = 'What' + [char]0x2019 + 's New'; h = '/new'; k = 'Release notes'; d = 'What the Institute has added and changed, newest first, and every page that appeared in the last thirty days.'; pic = @('printing-press') }
@@ -3970,6 +3976,28 @@ $HOMETRY = @(@('societies', 'Be born into history', 'Chance places you in a soci
   @('kids', 'For young explorers', 'Pyramids, knights and Vikings: picture stories, a fact of the day and games for younger readers.', 'Visit the Kids Corner', '/kids'))
 SetBlock "$Repo\index" 'home-try' ('<ul class="tries">' + ((@($HOMETRY | ForEach-Object { $trS = $SECTIONS[$_[0]]; $trImg = PicOf $trS.pic
   '<li><a class="try" href="' + $_[4] + '"><span class="try-img">' + $(if ($trImg) { '<img src="' + $trImg + '" alt="" loading="lazy">' } else { '' }) + '</span><span class="try-b"><span class="try-k">' + (Hx $trS.t) + '</span><span class="try-t">' + (Hx $_[1]) + '</span><span class="try-d">' + (Hx $_[2]) + '</span><span class="try-go">' + (Hx $_[3]) + ' &rarr;</span></span></a></li>' })) -join '') + '</ul>')
+# "Today's Number" on the home page (4 Nov 2026): figures counted from the data, each with the page it comes from; the
+# page's inline script shows one a day (UTC day times a prime stride), drawn before the first paint (build:home-numbers)
+$hnL = New-Object Collections.Generic.List[string]
+function HomeNum([int]$n, [string]$t, [string]$h) { $script:hnL.Add('[' + $n + ',' + (Js $t) + ',' + (Js $h) + ']') }
+HomeNum $NENT 'entries in the encyclopedia: people, places, wars, works and ideas' '/encyclopedia/'
+HomeNum @($POL['nodes']).Count 'states on record, from the first city-states to the countries of today' '/state/'
+HomeNum $EMPS.Count 'profiles of states, empires, faiths, languages, cultures, movements and ideas' '/profiles'
+foreach ($hk in @(@('religion', 'religions'), @('language', 'languages'), @('culture', 'cultures and peoples'), @('movement', 'movements'), @('government', 'forms of government'), @('ideology', 'ideologies'))) {
+  $hc = @($EMPS | Where-Object { [string]$_['kind'] -eq $hk[0] }).Count; if ($hc) { HomeNum $hc ($hk[1] + ' with a full profile of their own') ('/profiles?kind=' + $hk[0]) } }
+HomeNum $SPS.Count 'great speeches, each with its setting and what followed' '/speeches/'
+HomeNum $SONGS.Count 'songs handed down through history, with their stories' '/songs/'
+HomeNum $INVN.Count 'inventions and discoveries on the tree, each linked to what it built on' '/inventions'
+HomeNum $RP.Count 'reading paths through history, stop by stop' '/paths/'
+HomeNum $SOCS.Count 'societies whose ranks, from ruler to enslaved, the social ladders set out' '/societies/'
+HomeNum $PPL.Count 'people in the encyclopedia, from rulers and rebels to thinkers and explorers' '/people/'
+# states founded in each century, where the register records ten or more
+$hnF = @{}; foreach ($hn in $POL['nodes']) { if ($null -ne $hn['s'] -and -not $hn['x']) { $hcc = Century ([int]$hn['s']); if ($CENTSET.ContainsKey($hcc)) { $hnF[$hcc] = 1 + $(if ($hnF.ContainsKey($hcc)) { $hnF[$hcc] } else { 0 }) } } }
+foreach ($hcc in $CENTPAGES) { if ($hnF.ContainsKey($hcc) -and $hnF[$hcc] -ge 10) { HomeNum $hnF[$hcc] ('states on record were founded in the ' + $hcc) ('/centuries/' + (CenturySlug $hcc)) } }
+# the inventions of each lane
+foreach ($hl in $INVCATS.Keys) { $hc = @($INVN.Values | Where-Object { $_.cat -eq $hl }).Count; if ($hc) { HomeNum $hc ('inventions and discoveries in the lane ' + $INVCATS[$hl].ToLowerInvariant()) ('/inventions') } }
+SetBlock "$Repo\index" 'home-numbers' ('<script>var HOME_NUMS=[' + ($hnL -join ',') + '];</script>')
+Say "home page: $($hnL.Count) numbers for Today's Number"
 # /connections names the register's size in its title and og:title ("Connections Map of 5,468 States"): kept current
 $cnF = "$Repo\connections"; $cnT = [IO.File]::ReadAllText($cnF, $U8)
 $cnT2 = [regex]::Replace($cnT, 'Connections Map of [\d,]+ States', 'Connections Map of ' + @($POL['nodes']).Count.ToString('N0', $INV) + ' States')
@@ -4110,7 +4138,7 @@ function SgRow([string]$n, [string]$h, [string]$k, [string]$a) { $sgRows.Add('['
 # the tools and section pages under plain names, and the words people use for them
 $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical maps|what was here|history near me|states near me|history of my town'), @('World Timeline', '/timeline', 'timeline|chronology|time line'),
   @('Country Histories', '/countries/', 'countries|country histories'), @('History by Century', '/centuries/', 'centuries|century'), @('Year by Year', '/years/', 'years|year pages'),
-  @('People in History', '/people/', 'people|who lived when'), @('Empire Explorer', '/explorer', 'explorer|power curves|rise and fall chart'),
+  @('People in History', '/people/', 'people|who lived when'), @('Power Curves', '/explorer', 'empire explorer|explorer|power curves|rise and fall chart'),
   @('Rise and Fall Race', '/race', 'race|rise and fall race|empire race|bar chart race|compare empires|strongest empire'),
   @('Compare Two Profiles', '/compare', 'compare|compare cultures|compare civilisations|compare civilizations|compare religions|side by side|versus|vs'),
   @("What's New", '/new', "what's new|whats new|new pages|recent additions|updates|release notes|changelog"),

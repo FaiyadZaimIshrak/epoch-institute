@@ -475,8 +475,8 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=07038c291e';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=a1d30a6d4d';
+var SEARCH_INDEX_SRC = '/search-index.js?v=62751bda13';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_PAGES_SRC = '/search-pages.js?v=01ea29f069';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -669,10 +669,10 @@ function initNav(activePage) {
   const MENUS = [
     ['maps', 'Maps &amp; Time', [
       ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
-        ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States', 'Every state on record']]],
+        ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States Register', 'Every state on record']]],
       ['Time', [['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
         ['years', '/years/', 'Year by Year', 'What happened in any year'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
-        ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Empire Explorer', 'Rise and fall compared']]]]],
+        ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
       ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
@@ -719,6 +719,7 @@ function initNav(activePage) {
   </div>
   <div class="nav-toggles">
     <button class="nav-search-btn" id="nav-search-btn" aria-label="Search the site" title="Search (/)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button>
+    <button type="button" class="nav-search-btn" id="nav-surprise-btn" data-surprise aria-label="Surprise me: a random page of history" title="Surprise me"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="1.4" fill="currentColor" stroke="none"/></svg></button>
     <button class="nav-toggle-btn" id="theme-toggle">&#x2600;</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-dropdown">&#x2630;</button>
   </div>
@@ -762,7 +763,7 @@ function initNav(activePage) {
         <span class="footer-col-title">Collections</span>
         <a class="footer-link" href="/profiles">Profiles</a>
         <a class="footer-link" href="/encyclopedia/">Encyclopedia</a>
-        <a class="footer-link" href="/state/">States</a>
+        <a class="footer-link" href="/state/">States Register</a>
         <a class="footer-link" href="/countries/">Country Histories</a>
         <a class="footer-link" href="/people/">People</a>
         <a class="footer-link" href="/today-in-history/">Today in History</a>
@@ -776,7 +777,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/centuries/">Centuries</a>
         <a class="footer-link" href="/years/">Year by Year</a>
         <a class="footer-link" href="/race">Rise and Fall Race</a>
-        <a class="footer-link" href="/explorer">Empire Explorer</a>
+        <a class="footer-link" href="/explorer">Power Curves</a>
         <a class="footer-link" href="/connections">Connections</a>
       </div>
       <div class="footer-col">
