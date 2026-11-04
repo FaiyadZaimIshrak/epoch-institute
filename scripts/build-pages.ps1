@@ -3194,6 +3194,24 @@ Emit '/years/' (Page @{ title = $title; desc = $desc; path = '/years/'; type = '
 $yearsJs = '[' + ($YEARLIST -join ',') + "]`n"; $YEARSV = [EpochBuild.W]::Sha1($yearsJs).Substring(0, 10)
 if ([EpochBuild.W]::WriteIfChanged("$Repo\data\years.json", $yearsJs)) { $NWRITE++ }
 $t = [IO.File]::ReadAllText("$Repo\atlas", $U8); $t2 = [regex]::Replace($t, 'data/years\.json\?v=[0-9a-f]*', "data/years.json?v=$YEARSV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\atlas", $t2)) { $NWRITE++ }
+# Songs on the atlas (4 Nov 2026): data/songs-by-country.json {country page slug: [[song slug, title, year label]]}, from
+# each song's place (the last present-day country named in it, by any of its names, as a whole word), oldest first;
+# atlas.js lists them as "Songs from here" when "What was here?" finds the country (ATLAS_SONGS_SRC, stamped below)
+$sbcNames = New-Object Collections.Generic.List[object]
+foreach ($k in $CTRY.Keys) { $cn = [string]$CTRY[$k]['n']; if ($CPAGE.ContainsKey($cn)) { $sbcNames.Add(@($k, $CPAGE[$cn])) } }
+$sbc = [ordered]@{}; $sbcN = 0
+foreach ($so in @($SONGS | Sort-Object { [int]$_['year'] })) {
+  $pl = [string]$so['place']; if (-not $pl) { continue }; $best = $null; $bestAt = -1
+  foreach ($nm in $sbcNames) { $mm = [regex]::Matches($pl, '(?<![\p{L}])' + [regex]::Escape($nm[0]) + '(?![\p{L}])'); if ($mm.Count -and $mm[$mm.Count - 1].Index -gt $bestAt) { $bestAt = $mm[$mm.Count - 1].Index; $best = $nm[1] } }
+  if (-not $best) { continue }
+  if (-not $sbc.Contains($best)) { $sbc[$best] = New-Object Collections.Generic.List[string] }
+  $sbc[$best].Add('[' + (Js ([string]$so['slug'])) + ',' + (Js ([string]$so['title'])) + ',' + (Js (SongYear $so)) + ']'); $sbcN++
+}
+$sbcText = '{' + ((@($sbc.Keys | ForEach-Object { (Js $_) + ':[' + ($sbc[$_] -join ',') + ']' })) -join ',') + "}`n"
+if ([EpochBuild.W]::WriteIfChanged("$Repo\data\songs-by-country.json", $sbcText)) { $NWRITE++ }
+$SBCV = [EpochBuild.W]::Sha1($sbcText).Substring(0, 10)
+$t = [IO.File]::ReadAllText("$Repo\atlas", $U8); $t2 = [regex]::Replace($t, 'data/songs-by-country\.json\?v=[0-9a-f]*', "data/songs-by-country.json?v=$SBCV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\atlas", $t2)) { $NWRITE++ }
+Say "songs on the atlas: $sbcN songs in $($sbc.Count) countries"
 Say "year pages: $($YEARLIST.Count), events on them: $nYrEv"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -4167,7 +4185,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
   @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'),
-  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
+  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
   @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
   @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
   @('Research Series', '/research-series', 'research series|essays'), @('Open Data', '/dataset', 'open data|dataset|download|csv'),

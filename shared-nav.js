@@ -476,7 +476,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=62751bda13';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=01ea29f069';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=5b9e025e12';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -683,7 +683,7 @@ function initNav(activePage) {
     ['play', 'Play', [
       ['', [['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
         ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'], ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
-        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks']]]]]];
+        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games']]]]]];
   const MORE = [['about', '/about', 'About the Institute'], ['new', '/new', 'What&#8217;s New'], ['research', '/research', 'Research Hub'], ['dataset', '/dataset', 'Open Data'],
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['contact', '/contact', 'Contact']];
@@ -795,6 +795,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/write">Write in Ancient Scripts</a>
         <a class="footer-link" href="/kids">Kids Corner</a>
         <a class="footer-link" href="/passport">My Passport</a>
+        <a class="footer-link" href="/weekly">My Week of Games</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
         <a class="footer-link" href="/compare">Compare Two Profiles</a>
       </div>

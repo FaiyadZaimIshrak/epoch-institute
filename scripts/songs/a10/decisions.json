@@ -1,7 +1,8 @@
 {
  "label": "A10a (4 Nov 2026): the wave of scripts/songs/LIST4.tsv (merge-wave.js; decisions in scripts/songs/a10/decisions.json)",
  "drop": {
-  "ja-nus-hons-pris": "the Richard I article gives the song two short passages: no story of the song itself"
+  "ja-nus-hons-pris": "the Richard I article gives the song two short passages: no story of the song itself",
+  "istiklal-mars": "a duplicate: the site has the anthem as istiklal-marsi (\"Independence March\"); its link row now points there"
  },
  "nowords": {
   "enuma-elis": "Budge's 1921 English has notes and illustrations between its lines; no free Akkadian text",
@@ -16,11 +17,6 @@
   "ghost-dance": "The words of these songs are not printed here: they are sacred songs of a ceremony that some peoples still hold in private."
  },
  "edits": [
-  [
-   "istiklal-mars",
-   "words by Mehmet Âkif Ersoy, published in 1921 (he died in 1936);",
-   "words by Mehmet Âkif Ersoy, published in 1921;"
-  ],
   [
    "pastime-with-good-company",
    "words and music by Henry VIII (d. 1547); oldest copy c. 1513",

@@ -903,8 +903,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .map-key i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
 .map-key .k-p { background: var(--gold); }
 .map-key .k-s { background: var(--text); opacity: 0.55; width: 6px; height: 6px; }
-.cty-page, .cen-page, .yr-page, .pp-page, .pass-page, .qz-page, .atl-page, .write-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
-.cty-wrap, .cen-wrap, .yr-wrap, .pp-wrap, .pass-wrap, .qz-wrap, .atl-wrap { margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.cty-page, .cen-page, .yr-page, .pp-page, .pass-page, .wk-page, .qz-page, .atl-page, .write-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
+.cty-wrap, .cen-wrap, .yr-wrap, .pp-wrap, .pass-wrap, .wk-wrap, .qz-wrap, .atl-wrap { margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 .atl-wrap { max-width: 1280px; }
 .cty-head .research-title, .cen-head .research-title, .yr-head .research-title { margin: 2px 0 4px; }
 .ref-sec-title .n { font-family: var(--font-ui); font-size: 14px; color: var(--muted); font-weight: 600; margin-left: 6px; }

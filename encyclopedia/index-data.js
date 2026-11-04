@@ -14416,7 +14416,6 @@ rows:[
 ["isthmus-of-corinth","Isthmus of Corinth",3,"","",1,""],
 ["isthmus-of-panama","Isthmus of Panama",3,"","",1,"Isthmus of Darién"],
 ["isthmus-of-tehuantepec","Isthmus of Tehuantepec",3,"","",1,""],
-["istiklal-mars","İstiklal Marşı",9,"adopted by the Grand National Assembly on 12 March 1921; music adopted 1930","",0,"İstiklâl Marşı"],
 ["istiqlal-party","Istiqlal Party",5,"1944","",1,"Independence Party (Morocco)"],
 ["istituto-per-la-ricostruzione-industriale","Istituto per la Ricostruzione Industriale",6,"1933–2002","",1,"IRI | Institute for Industrial Reconstruction"],
 ["istvan-bethlen","István Bethlen",0,"1874–1946","",1,""],

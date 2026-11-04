@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card
 A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
@@ -434,7 +434,10 @@ double-quoted string is read as a drive-qualified variable and stops the parse (
   13th field); the country's history linked (the smallest ring of globe-land.js around the point, fetched when
   needed); the place and its 250 km drawn on the map (a d3.geoCircle on the globe, a projected circle on the flat map).
   The flat map's point comes from atlas.js's Equal Earth port (EE.fwd/inv, as geo.cs; checked against the rows' x, y).
-  "Seats, not borders" is said on the panel. window.epochAtlas for tests (scratchpad pw/r5-here.js). An address's
+  "Seats, not borders" is said on the panel. Songs from here (4 Nov 2026): the panel also lists the songs of Songs in History whose
+  place lies in the country under the point (data/songs-by-country.json {country page slug: [[song, title, year]]}, written
+  by build-pages.ps1 from each song's place, the last present-day country named in it as a whole word; ATLAS_SONGS_SRC
+  stamped into /atlas; deploy.sh DATA). window.epochAtlas for tests (scratchpad pw/r5-here.js). An address's
   place gets its panel before the first paint (the country line, with room kept for it on phones, and the places known
   only by their country fill in when globe-land.js arrives: globeData() fetches it once for the globe and the lookup).
   The page opens on ?focus=, ?c= or ?at= without a glide (rotateTo/animateTo "now"): the 650 ms turn redrew all
@@ -728,6 +731,12 @@ in all, only the files a reader's pages need, fetched when the section nears the
 writes them, deploy.sh DATA carries them, SPANS_V in passport.js). Hover or a first tap names a line, a click or a
 second tap opens it. window.epochPassport.timeline() / timelineCard() for tests (scratchpad pw/r5-tl.js).
 
+## /weekly — My Week of Daily Games (4 Nov 2026)
+Hand page (noindex, not in the sitemap, like /passport): the last seven UTC days of the daily games side by side, read
+from the games' own records in localStorage epoch-games (daily-<day>, conn-<n>, cw-<n>, said-<n>, songq-<n>, each game's
+#1 day as in games.js), with the week's totals and Share (a share-card.js rows poster and text). Linked from the Play
+menu, the footer, the top of /games and the site search. The daily quiz keeps only today (epoch-quiz), so it is not in it.
+
 ## /games — History Games
 Hand page, eleven client-side games behind tabs with a sliding marker (deep links #pairs #order #ranks #hunt #first #puzzle
 #words #year #conn #cross #said; #words-<theme> opens a Word Hunt theme; last tab in localStorage epoch-games-tab). The logic is games.js
@@ -959,7 +968,7 @@ through whom they reach us. 14 speakers got entries (wave a9 of added-entries.js
 Canassatego or Logan: the candidates were a house and a modern statue).
 
 ## Songs in History (/songs/, /songs/<slug>; Nov 2026)
-340 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states"; 39 more
+339 songs handed down through history (234, then 66 songs of states and causes: see "Nov 2026: songs of states"; 38 more
 in A10a, 4 Nov 2026, below) (the user's brief: origin, writer, culture, language and place, type, the words
 in the original, romanized and in English, what they inspired, a YouTube performance), from the Lament for Ur
 (c. 2000 BCE) to Wind of Change (1990), every region, 78 languages. The user's choices: about 120 songs; a song still in
@@ -1053,7 +1062,7 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   "Songs that led to songs"; how the songs are told). Titles "X: Story, Meaning and Lyrics" (or "Story and Meaning")
   with " — Songs in History" (FitTitle drops it past 70). Listen reads the title, kid line, story, meaning and the
   English lines ([data-say]: class names in shared-nav.js would pull song rules into every hand page's css).
-- A10a (4 Nov 2026): 39 songs of scripts/songs/LIST4.tsv (the scored candidates not yet taken, the thin regions first:
+- A10a (4 Nov 2026): 38 songs of scripts/songs/LIST4.tsv (the scored candidates not yet taken, the thin regions first:
   the Ballad of Mulan, the Epic of Sundiata, the Song of Deborah, the Enūma Eliš, Kassia, the Akathist, Ma'oz Tzur,
   anthems of Turkey, Brazil, Odisha and the Nordic countries, the Ghost Dance songs, spirituals, hymns and ballads), drafted
   by six agents with SONGS-GUIDE.md and scripts/songs/WORDS-VIDEOS-GUIDE.md (the agents also propose the words rows and
@@ -1063,7 +1072,10 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   dropped: its article is the king's; seven songs without words; the Ghost Dance songs withheld as sacred songs of a
   ceremony held in private, and given no performance). 31 have their words. make-entries.js HASENTRY skips a song whose
   entry exists under another spelling (Enūma Eliš: enuma-elish). Six of the list were already on the site (the scored
-  lists hold titles, not slugs: check scripts/songs/<slug>.txt before a wave).
+  lists hold titles, not slugs), and a seventh, İstiklal Marşı, was found after the release under another slug
+  (istiklal-marsi, "Independence March"): removed, its link row pointed at the older entry. merge-wave.js now refuses a
+  draft whose title or local title (folded) is a song the site has. make-entries.js keeps in added-entries.json only
+  the song entries not yet applied: run it after make-data.js, which refreshes songs.json.
 - Wiring: menu Themes → Societies and ideas, footer, Research Hub (Read: nine cards, three columns), search
   (SEARCH_PAGES kind song, "X lyrics", "X meaning"), shelf and My Passport kind, sitemap, llms.txt, poster
   page-songs.jpg (make-posters.js page "songs"), deploy.sh GENERATED, split-css GENERATED, check-site FOLDERS, the

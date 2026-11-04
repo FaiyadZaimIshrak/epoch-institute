@@ -1668,6 +1668,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .kd-owl, .kd-owl .kd-blink, [data-kids="1"] .nav-kids-btn { animation: none; }
 }
 :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="submit"], [type="button"], [type="reset"], [type="color"], [type="hidden"], [type="image"], [type="file"]), select, textarea):not(:focus) { border-color: var(--field-border); }
+.wk-link { margin: -6px 0 18px; font-family: var(--font-ui); font-size: 14px; }
+.wk-link a { color: var(--gold); font-weight: 600; text-decoration: none; }
 @media print {
 .path-print-row, .paths-page .ref-crumbs, .paths-page .enc-article-foot, .paths-page .page-share-row, .paths-page .next-read { display: none !important; }
 .path-step { break-inside: avoid; border-color: #ccc !important; background: #fff !important; }

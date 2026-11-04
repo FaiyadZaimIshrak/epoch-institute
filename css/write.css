@@ -906,7 +906,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .day-events .tih-event-title { font-size: 21px; margin: 0; }
 .map { display: block; width: 100%; height: auto; }
 @keyframes map-light { from { fill: rgba(var(--gold-rgb), 0.06); filter: drop-shadow(0 0 0 rgba(var(--gold-rgb), 0)); } 60% { filter: drop-shadow(0 0 14px rgba(var(--gold-rgb), 0.8)); } }
-.cty-page, .cen-page, .yr-page, .pp-page, .pass-page, .qz-page, .atl-page, .write-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
+.cty-page, .cen-page, .yr-page, .pp-page, .pass-page, .wk-page, .qz-page, .atl-page, .write-page { position: relative; z-index: 1; padding: 96px 0 72px; min-height: 100vh; }
 .cty-head .research-title, .cen-head .research-title, .yr-head .research-title { margin: 2px 0 4px; }
 .ref-sec-title .n { font-family: var(--font-ui); font-size: 14px; color: var(--muted); font-weight: 600; margin-left: 6px; }
 .yr-events .tih-event-title a { color: inherit; text-decoration: none; }

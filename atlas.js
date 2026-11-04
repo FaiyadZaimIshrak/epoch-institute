@@ -729,15 +729,33 @@
     $('atl-here-at').innerHTML = (HERE.mine ? 'Your location: ' : 'Near ') + escHtml(fmtLL(HERE.lat, HERE.lng)) + (cname ? ', in present-day ' + escHtml(theCountry(cname)) : '') +
       (cname ? '. <a href="/countries/' + escHtml(slug) + '">The history of ' + escHtml(theCountry(cname)) + ' &rarr;</a>' : '.');
   }
+  // the songs of Songs in History whose place lies in the present-day country (data/songs-by-country.json, fetched once)
+  var songsBy = null, songsWait = [];
+  function songsReady(cb) {
+    if (songsBy) return cb(songsBy); songsWait.push(cb); if (songsWait.length > 1) return;
+    if (!window.fetch || typeof ATLAS_SONGS_SRC !== 'string') { songsBy = {}; return cb(songsBy); }
+    fetch(ATLAS_SONGS_SRC).then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (j) { songsBy = j || {}; songsWait.splice(0).forEach(function (f) { f(songsBy); }); });
+  }
+  function paintSongs(slug, cname) {
+    var box = $('atl-here-songs'); if (!box) { box = document.createElement('div'); box.id = 'atl-here-songs'; $('atl-here-more').insertAdjacentElement('afterend', box); }
+    box.innerHTML = ''; if (!slug) return;
+    songsReady(function (S) {
+      if (!HERE) return; var L = S[slug] || []; if (!L.length) { box.innerHTML = ''; return; }
+      box.innerHTML = '<p class="atl-here-note">Songs from ' + escHtml(theCountry(cname)) + ' in Songs in History (' + L.length + '):</p><p class="atl-here-chips">' +
+        L.slice(0, 24).map(function (s) { return '<a href="/songs/' + encodeURIComponent(s[0]) + '">' + escHtml(s[1]) + ' <span>' + escHtml(s[2]) + '</span></a>'; }).join('') +
+        (L.length > 24 ? ' <a href="/songs/">and ' + (L.length - 24) + ' more</a>' : '') + '</p>';
+    });
+  }
   function paintCountry(slug, cname, approx) {
     hereAt(slug, cname);
+    paintSongs(slug, cname);
     var more = $('atl-here-more'), show = approx.slice(0, 40);
     more.innerHTML = approx.length ? '<p class="atl-here-note">Placed only by their present-day country, with no known seat (' + approx.length + '):</p><p class="atl-here-chips">' +
       show.map(function (r) { return '<a href="' + escHtml(r.url) + '">' + escHtml(r.n) + ' <span>' + escHtml(span(r)) + '</span></a>'; }).join('') + (approx.length > show.length ? ' <span class="atl-here-and">and ' + (approx.length - show.length) + ' more in the country history</span>' : '') + '</p>' : '';
   }
   function paintHere(near, total, scroll) {
     var lo = near.length ? near[0].r.s : MINY, sp = Math.max(1, MAXY - lo);
-    hereAt('', ''); $('atl-here-more').innerHTML = '';
+    hereAt('', ''); $('atl-here-more').innerHTML = ''; var sgb = $('atl-here-songs'); if (sgb) sgb.innerHTML = '';
     $('atl-here-n').innerHTML = total ? '<b>' + total.toLocaleString('en-GB') + '</b> recorded ' + (total === 1 ? 'state had its' : 'states had their') + ' seat within ' + HERE_KM + ' km of this place' +
       (total > HERE_MAX ? ' (the ' + HERE_MAX + ' nearest are listed)' : '') + ', oldest first. Gold: those that existed in <span id="atl-here-yr">' + fmtYear(year) + '</span>.' :
       'No recorded state had its seat within ' + HERE_KM + ' km of this place.';

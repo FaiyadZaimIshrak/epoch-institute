@@ -12,10 +12,16 @@ const D = JSON.parse(fs.readFileSync(decF, 'utf8')), drop = D.drop || {}, noword
 const rows = fs.readFileSync(rowsF, 'utf8').split(/\r?\n/).filter(l => l.trim() && !l.startsWith('#'));
 const vids = fs.readFileSync(vidF, 'utf8').split(/\r?\n/).filter(l => l.trim() && !l.startsWith('#'));
 const bad = [], files = {};
+// the songs the site has, by their titles and local titles (folded): a draft under another slug is still a duplicate
+// (4 Nov 2026: the wave's İstiklal Marşı was the site's "Independence March", istiklal-marsi)
+const fold = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const heads = t => { const g = k => (t.match(new RegExp('^' + k + ':\\s*(.*)$', 'm')) || [])[1] || ''; return [g('title'), ...g('local').split(' / ')].map(fold).filter(Boolean); };
+const HAVE = new Map(); for (const f of fs.readdirSync(SD).filter(f => /^[a-z0-9-]+\.txt$/.test(f))) for (const k of heads(fs.readFileSync(path.join(SD, f), 'utf8'))) HAVE.set(k, f.slice(0, -4));
 for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.txt'))) {
   const slug = f.slice(0, -4); if (drop[slug]) continue;
   if (fs.existsSync(path.join(SD, f))) { bad.push(slug + ': the site has this song'); continue; }
   let t = fs.readFileSync(path.join(dir, f), 'utf8');
+  const dup = heads(t).find(k => HAVE.has(k)); if (dup) { bad.push(slug + ': the site has this song as ' + HAVE.get(dup) + ' ("' + dup + '")'); continue; }
   for (const [s, o, n] of D.edits || []) if (s === slug) { if (t.split(o).length !== 2) bad.push(slug + ': edit not found once: ' + o); else t = t.replace(o, () => n); }
   files[slug] = t;
 }

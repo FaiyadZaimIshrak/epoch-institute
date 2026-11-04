@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>My Week of Daily Games — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Your last seven days of the daily history games side by side, from the Daily Ten to the Crossword, to share as one picture.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://the-epoch-institute.org/weekly">
+<meta property="og:type" content="website">
+<meta property="og:title" content="My Week of Daily Games — The Epoch Institute">
+<meta property="og:description" content="Seven days of the daily history games at The Epoch Institute, side by side.">
+<meta property="og:url" content="https://the-epoch-institute.org/weekly">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/page-games.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/page-games.jpg">
+<link rel="stylesheet" href="/css/weekly.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Games","item":"https://the-epoch-institute.org/games"},{"@type":"ListItem","position":3,"name":"My Week of Daily Games","item":"https://the-epoch-institute.org/weekly"}]},{"@type":"WebPage","name":"My Week of Daily Games","url":"https://the-epoch-institute.org/weekly","description":"Your last seven days of the daily history games side by side, kept in your own browser."}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<main id="main" class="wk-page ref-page">
+<div class="wk-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/games">History Games</a></li><li aria-current="page">My Week</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">My Week of Daily Games</h1>
+  <p class="ref-lede">The last seven days of the daily games, side by side: the Daily Ten, History Connections, the Crossword, Who Said It? and Where Is This Song From? Kept in this browser only, as the games keep them.</p>
+</header>
+
+<section aria-labelledby="wk-t">
+  <h2 class="ref-sec-title" id="wk-t">The last seven days <span class="n" id="wk-n"></span></h2>
+  <div class="wk-scroll"><table class="wk-table" id="wk-table">
+    <thead><tr><th scope="col">Day</th><th scope="col"><a href="/games#first-daily">Daily Ten</a></th><th scope="col"><a href="/games#conn">Connections</a></th><th scope="col"><a href="/games#cross">Crossword</a></th><th scope="col"><a href="/games#said">Who Said It?</a></th><th scope="col"><a href="/games#songq">Song game</a></th></tr></thead>
+    <tbody id="wk-body"><tr><td colspan="6">The week needs JavaScript.</td></tr></tbody>
+  </table></div>
+  <p class="pass-note" id="wk-sum"></p>
+  <div class="pass-acts"><button type="button" class="gm-share" id="wk-share" hidden>Share my week</button><a class="gm-again" href="/games">Play today&rsquo;s games &rarr;</a></div>
+  <p class="pass-note">Days are counted in UTC, as the games count them. Your stamps and streaks are in <a href="/passport">My Passport</a>.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>initNav('games');</script>
+<script>
+(function () {
+  // the games' own records (games.js: localStorage epoch-games), by each game's day number: #1 of the Daily Ten and
+  // Connections is 26 October 2026, of the Crossword 27 October, of Who Said It? 28 October, of the song game 3 November
+  var G = {}; try { G = JSON.parse(localStorage.getItem('epoch-games') || '{}') || {}; } catch (e) {}
+  var kids = document.documentElement.getAttribute('data-kids') === '1';
+  var Q = Math.floor(Date.now() / 864e5), d0 = function (m, d) { return Math.floor(Date.UTC(2026, m, d) / 864e5); };
+  var GAMES = [
+    { k: 'ten', n: 'Daily Ten', day0: d0(9, 26), get: function (q) { var r = G['daily-' + q]; if (!r || !r.m) return null; var s = (r.m.match(/1/g) || []).length; return { pts: s, max: 10, t: s + '/10' + (r.m.length < 10 ? ' so far' : ''), sq: r.m }; } },
+    { k: 'conn', n: 'Connections', day0: d0(9, 26), get: function (q, num) { var r = G['conn-' + num]; if (!r) return null; var f = (r.s || []).length, m = r.m || 0;
+      return { pts: f, max: 4, t: f === 4 ? 'Solved' + (m ? ', ' + m + (m === 1 ? ' mistake' : ' mistakes') : ', no mistakes') : r.done ? f + ' of 4 groups' : f + ' of 4 so far', sq: f === 4 ? '1' : '0' }; } },
+    { k: 'cw', n: 'Crossword', day0: d0(9, 27), get: function (q, num) { var r = G['cw-' + num]; if (!r) return null; var t = r.t || 0, mm = Math.floor(t / 60) + ':' + ('0' + (t % 60)).slice(-2);
+      if (r.gave) return { pts: 0, max: 1, t: 'Answers shown', sq: '0' }; if (!r.done) return { pts: 0, max: 1, t: 'In progress', sq: '0' };
+      return { pts: 1, max: 1, t: mm + ((r.r || 0) ? ', with reveals' : (r.c || 0) ? ', with checks' : ', no help'), sq: '1' }; } },
+    { k: 'said', n: 'Who Said It?', day0: d0(9, 28), get: function (q, num) { var r = G['said-' + num]; if (!r || !r.m) return null; var s = (r.m.match(/1/g) || []).length; return { pts: s, max: 5, t: s + '/5' + (r.m.length < 5 ? ' so far' : ''), sq: r.m }; } },
+    { k: 'song', n: 'Song game', day0: d0(10, 3), get: function (q, num) { var r = G['songq-' + (kids ? 'k' : '') + num]; if (!r || !r.m) return null; var s = (r.m.match(/1/g) || []).length; return { pts: s, max: 5, t: s + '/5' + (r.m.length < 5 ? ' so far' : ''), sq: r.m }; } }];
+  var esc = typeof escHtml === 'function' ? escHtml : function (s) { return String(s); };
+  var rows = [], tot = GAMES.map(function () { return { days: 0, pts: 0, max: 0 }; }), played = 0;
+  for (var k = 6; k >= 0; k--) {
+    var q = Q - k, date = new Date(q * 864e5), lbl = k === 0 ? 'Today' : k === 1 ? 'Yesterday' : date.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short', timeZone: 'UTC' });
+    var any = false, cells = GAMES.map(function (g, i) {
+      var num = q - g.day0 + 1; if (num < 1) return '<td class="wk-na">&ndash;</td>';
+      var r = g.get(q, num); if (!r) return '<td class="wk-none">' + (k === 0 ? '<a href="/games#' + { ten: 'first-daily', conn: 'conn', cw: 'cross', said: 'said', song: 'songq' }[g.k] + '">Play</a>' : 'Not played') + '</td>';
+      any = true; tot[i].days++; tot[i].pts += r.pts; tot[i].max += r.max;
+      return '<td class="wk-done"><span class="wk-sq" aria-hidden="true">' + String(r.sq).split('').map(function (c) { return c === '1' ? '&#x1F7E9;' : '&#x1F7E5;'; }).join('') + '</span>' + esc(r.t) + '</td>';
+    });
+    if (any) played++;
+    rows.push('<tr' + (k === 0 ? ' class="wk-today"' : '') + '><th scope="row">' + esc(lbl) + '</th>' + cells.join('') + '</tr>');
+  }
+  document.getElementById('wk-body').innerHTML = rows.join('');
+  document.getElementById('wk-n').textContent = played + ' of 7 days played';
+  var lines = GAMES.map(function (g, i) { var t = tot[i]; return t.days ? g.n + ': ' + t.days + (t.days === 1 ? ' day, ' : ' days, ') + t.pts + ' of ' + t.max : ''; }).filter(Boolean);
+  document.getElementById('wk-sum').textContent = lines.length ? 'This week: ' + lines.join('; ') + '.' : 'No daily game played this week yet: today’s are waiting.';
+  // share: the week as one poster (share-card.js rows: a line per game) and as text
+  var sb = document.getElementById('wk-share'); if (!played || !sb) return;
+  sb.hidden = false;
+  var spec = { title: 'My week of history games', score: String(played), unit: 'of 7 days played', rows: GAMES.map(function (g, i) { var t = tot[i]; return [g.n, t.days + ' of 7 days', t.days ? t.pts + '/' + t.max : '–']; }), url: 'the-epoch-institute.org/weekly', kids: kids };
+  var poster = null;
+  sb.addEventListener('pointerenter', function () { if (!poster && typeof scoreCard === 'function') poster = scoreCard(spec); }, { once: true });
+  sb.addEventListener('click', function () {
+    if (!poster && typeof scoreCard === 'function') poster = scoreCard(spec);
+    var text = 'My week of history games at The Epoch Institute: ' + played + ' of 7 days played. ' + lines.join('; ') + '.';
+    if (typeof sharePoster === 'function') sharePoster({ text: text, url: 'https://the-epoch-institute.org/weekly', title: 'My week of history games', heading: 'Share your week', image: poster, file: 'epoch-week.jpg', alt: 'My week of history games' });
+  });
+})();
+</script>
+</body>
+</html>
