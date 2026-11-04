@@ -1,0 +1,21 @@
+Notes on check-events.js flags for p1-00.json (15 remaining, all checked by hand)
+
+The checker joins the title and description with a space, so a description's first word gets read as part of
+the title's last capitalised name ("Doraha Sheltering", "Great Britain Meeting", "Kingdom of Jerusalem
+Ecclesiastical", "Pope Clement IV After", "Saint Thomas Christians | They", "Soon", "Little", "Its"). Each of the
+names on its own is in the material (Doraha, Great Britain, Kingdom of Jerusalem, Pope Clement IV).
+
+Possessives and plurals of names in the article: Hadım Suleiman Pasha's, Constans's, Confederacy's (On this day
+line), Japan's, Fastolf's, Lady Chapel's, Isa ibn Musa's (Abbasid is in the article), Spain's / Admiral Miguel de
+Horna's Armada of Flanders ("Spanish admiral Miguel de Horna, commander of the Armada of Flanders"),
+Afro-Brazilians ("Afro-Brazilian people"), Saint Thomas Christians ("Saint Thomas Christian community").
+
+Editorial notes:
+- 02-02 880: the On this day line names Louis III of France; the article on the battle says the army was King
+  Louis the Younger's, so the event follows the article. The outcome (a defeat) is from the On this day line.
+- 01-23 1870: the On this day line says 173 killed; the article says approximately 200, which is used.
+- 01-07 1738: the On this day line speaks of Jai Singh II; the dated passage has the Nizam signing at Doraha, which
+  is what the event says.
+- 01-06 1322: "brother" as in the Stefan Konstantin lead (the On this day line says half-brother).
+- Profiles left out where unsure: -27 (Republic or Empire), 1038 (the article names no dynasty), 1797, 1810, the
+  natural disasters outside a profiled state.

@@ -301,7 +301,15 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   year were first found in the text of its Wikipedia article, then agents wrote it only from that article, the On this
   day line and the entries (scratchpad days\r3: R3-GUIDE.md, check-drafts.js flags any number or name not in the
   material, decisions.json holds the editor's drops and edits, merge-r3.js refuses an event the day already has). Add
-  events the same way: a day with "c." or a disputed day is left out. The builder also writes
+  events the same way: a day with "c." or a disputed day is left out. 4 Nov 2026 (A8): 557 more, 3,679 in all, with
+  tools now in scripts/days/: otd-candidates.js (Wikipedia's On this day feed, cached in %LOCALAPPDATA%\epoch-tools\
+  otd-cache; per day the events of years the day lacks, older and outside Europe first; --leads saves each page's lead),
+  check-dates.js (kept only where the main article, or another page's lead, states the day with the year), DAYS-GUIDE.md
+  (the agents' brief), check-events.js (lengths, links, profiles, every number and name not in the material),
+  profiles-alive.js and merge-events.js (--fixes: the editor's skips and edits); drafts and fixes in scripts/days/a8/.
+  Wikipedia throttled whole-article downloads to about one a minute, so the second half of the year rests mostly on
+  leads; 39 candidates were skipped as slight or unsupported (a fraternity, a television station, a single crash). The
+  builder also writes
   `data/days/<mm-dd>.json` ({k, events [{year, yearDisplay, title, description, html (linked), links, profile}],
   hero, pic [img, slug], intl}, ~4 KB): the home strip and the Today in History index read only today's file instead
   of history.json (1.1 MB); its DAYS_V is stamped into both pages. With -SkipEntries (no linker) the day pages and
@@ -1546,10 +1554,10 @@ Found while building the social ladders (30 Oct 2026), not done yet:
 - The ladders' MISSING lines still name the people and some terms the encyclopedia lacks (bandaka, magi, Parnaka,
   horon, jon, numu, Balla Fasséké, calpolli, mayeque, tlacotin, calmecac …; the 36 rank terms came with the inventions
   release, 31 Oct 2026): add them by the R9 entries process, then the ladders' terms and people lines.
-- The 185 entries added on 31 Oct 2026 (the inventions tree and the rank terms) are linked from the entries, the day
-  pages, the ladders and the tree, but not yet from the profiles or the state texts: a profile scan (run-scan t-encemp
-  and t-encprof, enc-empires-apply, enc-prof-apply, then apply-added-entries and regen-profiles) and link-state-texts
-  would add them, and could move "cannon" from Field artillery to Cannon (see "Inventions tree").
+- The 185 entries added on 31 Oct 2026 (the inventions tree and the rank terms): the profiles were scanned for them on
+  4 Nov 2026 (scripts/kinds/link-scan.js --entries over every kind, the 104 that had patterns and no profile mention):
+  no profile names any of them, so nothing changed. The state texts are still to be relinked for them
+  (link-state-texts), which could also move "cannon" from Field artillery to Cannon (see "Inventions tree").
 - Generic link names still linking one thing everywhere, handled on the ladders by nolink: "printing" (the printing
   press, also for Song woodblock and movable type), "slave trade" (the Atlantic slave trade, also for Viking and Maya
   trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the

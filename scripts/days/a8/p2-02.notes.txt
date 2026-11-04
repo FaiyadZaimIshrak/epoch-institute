@@ -1,0 +1,35 @@
+Notes on check-events.js flags for p2-02.json (76 written, 6 skipped; 28 remaining flags, all checked by hand)
+
+Every remaining flag is a "names not in article" artefact; no number, length, hype, link or profile flag is left.
+
+Possessives of names that are in the material (the checker does not strip 's): Marathas' (Maratha), Tibet's,
+Breckinridge's, Joseph Barbara's, Hong Kong's, Song's, New Zealand's, Lincoln's, Sztáray's, Italy's, Mackenzie's,
+Chile's (Chilean), Warmoth's, Birger's, Mexico City's, Cromwell's, Edward I's, Thomas Paine's, Moscow's, The Bishop of
+Utrecht's ("bishop of Utrecht"), Tagore's, Bragg's, Rosecrans's.
+
+Title and description joined by the checker, or a capital word starting a sentence: "Brigadier General Ulysses"
+(the article has "Brig. Gen. Ulysses S. Grant"), Police, Through, Rival, Enslaved, Fifty (the article's "50"), Its,
+During, Sun (in "Venus crosses the Sun": the transit of Venus), "Calcutta Rabindranath" (Calcutta Session and
+Rabindranath Tagore are both in the article), "Tennessee Bragg's".
+
+Editorial notes:
+- 11-25 1833: the On this day line gives magnitude 8.7-9.2; the article gives 8.8-9.2, which is used.
+- 11-22 498: Laurentius was elected "at the Basilica Saint Mariae" (his lead); the On this day line names Santa Maria
+  Maggiore, as written.
+- 12-26 1481: the battle article calls it a battle between the prince-bishopric of Utrecht and the county of Holland,
+  while the On this day line has the bishop's army attacking men from the city of Utrecht; the event follows the line
+  (David of Burgundy, his army of 4,000 to 5,000, the Westbroek massacre) and says only what both allow.
+- 12-06 1865: the amendment "was ratified by the required 27 of the then 36 states on December 6, 1865", the day the
+  On this day line has Georgia ratify; the event says it reached 27 that day, not that Georgia was named the 27th.
+- 11-28 1893: neither the suffrage lead nor the election lead says this was the first election with women voting;
+  the event says only that New Zealand voted as the first nation where all women had the right to vote.
+- 12-11 1317: the article says the brothers "were imprisoned" (passive), so the title says they were seized at the
+  banquet and leaves the order to Birger unstated.
+- Profiles left out where unsure or none fits: 1183 (no Japanese polity profile alive), 1227 (no Polish profile),
+  1755 Morocco, 1893 New Zealand, 1908 Manastir (the material never says Ottoman), 1967 Hong Kong, 1847 Montreal,
+  1287 Low Countries, 1655 (England under Cromwell: the Kingdom of England profile spans it but the Protectorate is not
+  named), 1882, 1833, 583 Palenque, 498, 687 and 640 (the Papal States profile starts in 754), 1481.
+
+Skips (6): SS Vestris (shipwreck), Caister lifeboat disaster, the steamboat Louisiana (boiler explosion), the American
+Statistical Association (founding of a society), the 1783 New Jersey earthquake (M 5.3), the Ashtabula River railroad
+disaster (rail crash).

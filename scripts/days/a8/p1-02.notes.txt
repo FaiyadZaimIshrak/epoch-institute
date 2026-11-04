@@ -1,0 +1,42 @@
+p1-02: why the remaining check-events.js flags are fine (17 events)
+
+None of these flags is an unsupported fact. Each is one of the following:
+
+Sentence-initial words or possessives that the name check reads as names:
+- 04-15_1861 "Those Southern": "Southern states" is in the American Civil War lead.
+- 04-15_1642 "Ormonde's Royalist": "Earl of Ormonde" and "Royalist army" are in the Battle of Kilrush lead.
+- 04-22_1889 "Settlers": a sentence start (the article has "settlement").
+- 04-26_1326 "The Scottish": "deputation (delegation) from Scotland".
+- 04-26_1777 "Sybil Ludington's": a possessive of the article's subject.
+- 04-29_1521 "Their": a sentence start.
+- 05-07_351 "Around", "Gallus's": a sentence start, and the possessive of Gallus.
+- 05-13_1780 "Some": a sentence start. "Cumberland Compact" is the article title.
+- 05-14_1097 "Fearing", "The": sentence starts. "Seljuk-held Nicaea" comes from "under the control of the Seljuk Turks".
+- 05-15_1525 "Princes", "Thomas Müntzer's": "Princes" stands for the Landgrave of Hesse and the Duke of Saxony, and the second is a possessive.
+- 05-20_685 "Bridei's": a possessive ("Bridei son of Beli", ~2).
+- 05-22_192 "Encouraged": a sentence start ("with encouragement from Interior Minister Wang Yun").
+- 05-28_1644 "Prince Rupert's Royalists": "Royalist forces under Prince Rupert".
+
+Other spellings:
+- 05-02_1388 "Nerio Acciaioli's", "Catalan Athens", "Besieged": a possessive, "Catalan rule in Athens", and a sentence start.
+- 05-05_553 "Catholic Churches": the plural of "the Eastern Orthodox Church and the Catholic Church".
+- 05-05_1809 "United States": the article and the On this day line write "U.S. patent".
+- 05-25_1807 "Bosphorus": the article misspells it "Bosphorous" ("minister of Bosphorous"). The events use the correct spelling.
+
+Skipped (7):
+- 04-16_682: the year of Leo II's election is unclear.
+- 04-22_1876: a baseball game.
+- 05-07_1685: no outcome in the material.
+- 05-14_1800: the article gives the day only for a Senate officer's election.
+- 05-25_1865: a single accidental explosion.
+- 05-26_1783: a local celebration.
+- 05-29_526: the day is uncertain ("probably between 20 and 29 May").
+
+Choices made:
+- 04-16_69: Otho's suicide, written from the Otho lead (~1) and the Vitellius article.
+- 05-11_973: written as a consecration. The article says historians debate whether it was a first coronation.
+- 05-27_1120: "died within a few months" follows the article, not the On this day line's "two weeks".
+- 05-28_1644: Prince Rupert commanded, as the Storming of Bolton article says. The On this day line names the Earl of Derby, and no article supports that, so he is left out.
+- 04-14_1775: Franklin and Rush are left out. Only the On this day line names them; the article does not.
+- 05-16_1771: neither the article nor the line says who won, so the title says "clash".
+- 05-07_351: the revolt's day is hedged in the article, so the event is Gallus's arrival at Antioch, with the revolt "around this time".
