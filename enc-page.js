@@ -41,6 +41,30 @@
   });
   if (location.hash === '#answers') { var wk = document.querySelector('.ws-key'); if (wk) wk.open = true; }
 
+  // country pages: a tap or click on the map opens the atlas's "What was here?" at that spot (/atlas?at=lat,lng). The map
+  // is drawn in the atlas's own plane (Equal Earth, tenths of a unit), so its inverse gives the place (atlas.js EE.inv)
+  (function () {
+    var maps = document.querySelectorAll('svg.map-cty'); if (!maps.length) return;
+    var D2R = Math.PI / 180, A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2, PW = 1000;
+    function raw(lat) { var l = Math.asin(M * Math.sin(lat * D2R)), l2 = l * l, l6 = l2 * l2 * l2; return l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2)); }
+    var XMAX = Math.PI / (M * A1), S = PW / (2 * XMAX), PH = 2 * raw(90) * S;
+    function inv(x10, y10) {
+      var x = (x10 / 10 - PW / 2) / S, y = (PH / 2 - y10 / 10) / S, l = y;
+      for (var i = 0; i < 12; i++) { var l2 = l * l, l6 = l2 * l2 * l2, f = l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2)) - y; l -= f / (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2)); if (Math.abs(f) < 1e-12) break; }
+      var k2 = l * l, k6 = k2 * k2 * k2;
+      return [M * x * (A1 + 3 * A2 * k2 + k6 * (7 * A3 + 9 * A4 * k2)) / Math.cos(l) / D2R, Math.asin(Math.max(-1, Math.min(1, Math.sin(l) / M))) / D2R];
+    }
+    Array.prototype.forEach.call(maps, function (svg) {
+      svg.classList.add('map-here');
+      svg.addEventListener('click', function (ev) {
+        var m = svg.getScreenCTM(); if (!m || !svg.createSVGPoint) return;
+        var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY; var p = pt.matrixTransform(m.inverse()), ll = inv(p.x, p.y);
+        if (!isFinite(ll[0]) || !isFinite(ll[1]) || Math.abs(ll[0]) > 180) return;
+        location.href = '/atlas?at=' + ll[1].toFixed(2) + ',' + ll[0].toFixed(2);
+      });
+    });
+  })();
+
   // random entry / random state
   function loadScript(src) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
   document.addEventListener('click', function (ev) {

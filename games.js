@@ -62,12 +62,17 @@ initNav('games');
   });
   var BYSLUG = {}; CARDS.forEach(function (c) { BYSLUG[c.slug] = c; });
   var DATED = CARDS.filter(function (c) { return c.lo != null && c.hi != null; });
+  // the cultures, movements, ideologies, religions and languages of the profiles, by their first year (Which Came First?
+  // "Cultures and ideas"): their own list, so the Daily Ten and Order the Ages keep to the pictures of the encyclopedia
+  var IDEAS = (typeof GAME_IDEAS !== 'undefined' ? GAME_IDEAS : []).map(function (c) {
+    return { slug: 'p' + c[0], url: c[0], name: c[1], kind: c[2], lo: c[3], hi: c[3], dates: c[4], img: c[5], credit: c[6], src: c[7], kid: c[8] };
+  });
   function fmtYear(y) { y = Math.round(y); var a = Math.abs(y) || 1, s = a >= 10000 ? a.toLocaleString('en-GB') : String(a); return s + (y < 0 ? ' BCE' : ' CE'); }
   function credit(c) {
     if (!c || (!c.credit && !c.src)) return '';
     return 'Picture: ' + escHtml(c.credit || 'Wikimedia Commons') + (c.src ? ' &middot; <a href="' + escHtml(c.src) + '" target="_blank" rel="noopener">Wikimedia Commons</a>' : '');
   }
-  function entryLink(c, text) { return '<a href="/encyclopedia/' + encodeURIComponent(c.slug) + '">' + (text || escHtml(c.name)) + '</a>'; }
+  function entryLink(c, text) { return '<a href="' + (c.url ? escHtml(c.url) : '/encyclopedia/' + encodeURIComponent(c.slug)) + '">' + (text || escHtml(c.name)) + '</a>'; }
 
   // ── sounds: tiny tones made on the spot (no files); on by default only in Kids mode ──────────────────────────────
   // A page may start sound only inside a tap, and the in-app browsers of Instagram, Facebook and Messenger hold to
@@ -728,11 +733,13 @@ initNav('games');
     var LADDER = [[3, 800, 0], [6, 300, 2200], [10, 120, 900], [15, 50, 400], [1e9, 15, 180]];   // [while the streak is below, nearest gap, widest gap (0: any)]
     function pool() {
       var lv = level(), k = kids();
+      if (lv === 'ideas') return IDEAS.filter(function (c) { return !k || c.kid; });
       return DATED.filter(function (c) { return (!k || c.kid) && (lv === 'all' || (lv === 'people' ? c.kind === 'Person' : c.kind !== 'Person')); });
     }
     function band() { for (var i = 0; i < LADDER.length; i++) if (F.streak < LADDER[i][0]) return kids() ? [Math.max(300, LADDER[i][1]), 0] : [LADDER[i][1], LADDER[i][2]]; return [15, 0]; }
     function pick() {
       var all = pool(), p = all.filter(function (c) { return !F.used[c.slug]; }), b = band();
+      if (level() === 'ideas') b = [Math.max(b[0], 100), b[1] ? Math.max(b[1], 1500) : 0];   // a culture's first year is often approximate
       if (p.length < 12) { F.used = {}; p = all; }
       if (p.length < 2) return null;
       for (var t = 0; t < 800; t++) {

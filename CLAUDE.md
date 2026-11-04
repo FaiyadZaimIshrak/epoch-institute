@@ -325,6 +325,9 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   century of founding, encyclopedia entries naming the country, shared histories. TheCountry() adds "the" (the
   United Kingdom, the Netherlands …) and StateThe() does the same for states in running text: names that are or end
   in a state noun ($STATENOUN: the Kingdom of …, the French Fifth Republic) and one-word plural peoples (the Ligures).
+  What was here? (4 Nov 2026): a tap or click on a country's map opens the atlas's lookup at that spot
+  (/atlas?at=lat,lng; enc-page.js turns the map's point back into a place with the atlas's Equal Earth inverse; the
+  caption says so, .cty-here).
   Index: bubble map + countries by continent.
 - `/centuries/<nth-century[-bce]>` + `/centuries/` — 51 pages (30th century BCE – 21st): counts, world map at
   mid-century, great powers (epoch-stats military + territory + economy + influence, times the share of the century
@@ -766,7 +769,10 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   only retargets its zoom (replacing the animation dropped the reveal callback and the round never ended); a pinch
   that ends as a one-finger drag starts a fresh drag (a stale start made the rotation NaN; a non-finite rotation
   falls back to the last good one); size() skips a hidden canvas (0 px) and showing the tab sizes it again.
-- Which Came First?: two pictures, tap the earlier one. A ladder of gaps, not a lottery: at least 800 years apart,
+- Which Came First?: two pictures, tap the earlier one. "Cultures and ideas" (4 Nov 2026) deals the profiles of cultures,
+  movements, ideologies, religions and languages instead (GAME_IDEAS in games-data.js: the first year of each and the
+  picture of home-pictures.tsv; ideologies left out of Kids mode), at least 100 years apart, as their first years are
+  often approximate; the Daily Ten and Order the Ages keep to GAME_CARDS. A ladder of gaps, not a lottery: at least 800 years apart,
   then 300/120/50/15 as the streak grows (never under 300 in Kids mode); no picture twice in a game, the kinds of
   pair alternate, three lives, best streak per choice (everything / people / events and works).
   The first choice, and what newcomers get, is the Daily Ten (#first-daily; the home page's "Today's challenges"
@@ -1164,6 +1170,9 @@ entry, profile or state. 01 and 02 (May 2026) were moved out of the page's scrip
 unchanged; 03–05 were written then, their "What the Data Shows" figures computed from the power curves (shared-data.js
 EMPIRES), the register (data/polities.json) and epoch-stats.js. 07 Before the State (the 45 culture profiles: life before and without states, the five living cultures) and 08 How Songs Travel (the 300 songs: the oldest kept songs, hymn to anthem, the tune families, songs put to work by states, their impact) were written on 2 Nov 2026 from the profiles and the song pages alone, every paragraph mapped to its page (scratchpad essays/07-sources.md, 08-sources.md) and read against it; their figures come from scripts/tools/essay-numbers.js 07|08 (culture spans against the register, songs by type, era and region, the tune families) and are quoted, never typed. The Listen button reads article.essay-view (h1,
 .essay-sub, .essay-body h2/p/li): keep Further Reading and the contents list outside .essay-body.
+Essays are capped at about 4,500 words (approved 3 Nov 2026): on 4 Nov 07 and 08 were cut from about 6,100 and 6,200 by
+deletion only (whole paragraphs, sentences and clauses; seven connecting words added, listed in the commit; the figures,
+headers and Further Reading untouched), checked by a longest-common-subsequence comparison with the originals.
 Since 4 Nov 2026 (C3) the builder also writes scripts/essay-links.js (ESSAY_LINKS {profile name: [[/essays/slug, title]]}:
 the profiles an essay lists in its header or links in its text), and generator.html adds "In the Research Series" with
 those essays after a profile's legacy section, beside its inventions and songs: regenerate the profiles after an essay

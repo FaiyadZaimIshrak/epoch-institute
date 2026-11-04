@@ -1584,6 +1584,8 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .cty-map, .cen-map, .cty-bubbles { margin: 0 0 8px; border: 0.5px solid var(--border); border-radius: 2px; padding: 10px; background: radial-gradient(ellipse at 50% 45%, rgba(var(--gold-rgb), 0.07), transparent 70%), var(--surface); }
 .cty-map figcaption, .cen-map figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin-top: 8px; }
 .cty-map figcaption a, .cen-map figcaption a { margin-left: auto; color: var(--gold); font-weight: 600; text-decoration: none; }
+svg.map-here { cursor: crosshair; }
+.cty-here { flex-basis: 100%; order: 9; font-style: italic; }
 .st-locator { margin: 0; border: 0.5px solid var(--border); background: var(--surface); padding: 6px; }
 .st-locator > a { display: block; }
 .st-locator > a:hover .map { opacity: 0.9; }

@@ -1597,7 +1597,7 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
     $nAp = @($CLIST | Where-Object { $q = $STATEXY[[string]$_['id']]; -not $q -or $q[2] }).Count
     $hiRings = $CRING[[string]$ct['n']]   # the country itself, lit up; the dots get a dark halo to stand out on it
     $mapHtml = '<figure class="cty-map">' + (MapSvg $view ((DotPath 'map-dot-bg' $pts) + (DotPath 'map-dot-s' $pts) + (DotPath 'map-dot-p' $pp)) "Map of the states of $(TheCountry $m), with $(TheCountry $m) highlighted" 'map-cty' -Outlines -Hi $hiRings) +
-      '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State (capital or seat)</span>' + $(if ($nAp) { '<span>' + $nAp + ' without a known seat not shown</span>' } else { '' }) + '<a href="/atlas?c=' + $slug + '">Open in the atlas &rarr;</a></figcaption></figure>'
+      '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State (capital or seat)</span>' + $(if ($nAp) { '<span>' + $nAp + ' without a known seat not shown</span>' } else { '' }) + '<span class="cty-here">What was here? Tap or click the map to see the states seated near that spot.</span><a href="/atlas?c=' + $slug + '">Open in the atlas &rarr;</a></figcaption></figure>'
   }
   $crumb = Crumbs @(@('Home', '/'), @('Countries', '/countries/'), @($m, $null))
   $sb = New-Object Text.StringBuilder(60000)
@@ -3661,8 +3661,22 @@ foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\word-hunt.tsv", $U8)) {
 }
 FlushTheme
 if ($wFaults.Count) { throw ('scripts/word-hunt.tsv: clues that give an answer away: ' + ($wFaults -join '; ')) }
+# Which Came First? "Cultures and ideas" (4 Nov 2026): the profiles of cultures, movements, ideologies, religions and
+# languages, each dated by its first year and pictured by the entry chosen by eye for it (scripts/home-pictures.tsv):
+# GAME_IDEAS [profile address, name, kind, first year, the date shown, picture, credit, its source, fit for Kids mode]
+$gHomePic = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\home-pictures.tsv", $U8)) { if (-not $l -or $l.StartsWith('#')) { continue }; $c = $l.Split("`t"); if ($c.Count -ge 2 -and $c[1] -and $c[1] -ne '-') { $gHomePic[$c[0]] = $c[1] } }
+$gIdeas = New-Object Collections.Generic.List[string]
+$gKindL = @{ culture = 'Culture'; movement = 'Movement'; ideology = 'Ideology'; religion = 'Religion'; language = 'Language' }
+foreach ($em in $EMPS) {
+  $gk = [string]$em['kind']; if (-not $gKindL.ContainsKey($gk) -or $null -eq $em['start']) { continue }
+  $gn = [string]$em['name']; $gpe = if ($gHomePic.ContainsKey($gn) -and $BY.ContainsKey($gHomePic[$gn])) { $BY[$gHomePic[$gn]] } else { $null }; if (-not $gpe -or -not $gpe.img) { continue }
+  $gy = [int][Math]::Round([double]$em['start']); $gd = $(if ($em['circa']) { 'c. ' } else { '' }) + (Yr $gy)
+  $gIdeas.Add('[' + (Js (ProfUrl $gn)) + ',' + (Js $gn) + ',' + (Js $gKindL[$gk]) + ',' + $gy + ',' + (Js $gd) + ',' + (Js $gpe.img) + ',' + (Js (GameCredit $gpe)) + ',' + (Js $(if ($gpe.cr) { [string]$gpe.cr['source'] } else { '' })) + ',' + $(if ($gk -eq 'ideology') { 0 } else { 1 }) + ']')
+}
+Say "games: $($gIdeas.Count) cultures and ideas for Which Came First?"
 $gameJs = "// games-data.js - built by scripts/build-pages.ps1 from scripts/game-pictures.tsv and scripts/word-hunt.tsv. Do not edit.`n" +
-  "var GAME_CARDS = [`n" + ($gCards -join ",`n") + "`n];`nvar GAME_PUZZLES = [" + $gPuzJs + "];`nvar GAME_WORDS = [`n" + ($gWords -join ",`n") + "`n];`n"
+  "var GAME_CARDS = [`n" + ($gCards -join ",`n") + "`n];`nvar GAME_PUZZLES = [" + $gPuzJs + "];`nvar GAME_WORDS = [`n" + ($gWords -join ",`n") + "`n];`n" +
+  "var GAME_IDEAS = [`n" + ($gIdeas -join ",`n") + "`n];`n"
 [void][EpochBuild.W]::WriteIfChanged("$Repo\games-data.js", $gameJs); $GAMESV = [EpochBuild.W]::Sha1($gameJs).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'games-data\.js\?v=[0-9a-f]*', "games-data.js?v=$GAMESV")
 if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
