@@ -6,7 +6,7 @@
 const fs = require('fs'), path = require('path'), D = __dirname;
 const FIX = JSON.parse(fs.readFileSync(path.join(D, 'translation-fixes.json'), 'utf8'));
 const REGROUP = { 'aloha-oe': [4, 5, 5, 4] };   // the song's own verses and chorus (tr-check.md T13)
-const TENTATIVE = ['hanacpachap-cussicuinin'];
+const TENTATIVE = ['hanacpachap-cussicuinin', 'tevaram', 'charyapada'];   // old texts whose sense is disputed in places (their notes say where)
 const shape = st => st ? st.map(s => s.length).join(',') : '';
 const regroup = (st, ns) => { const ls = st.flat(), out = []; let i = 0; for (const n of ns) { out.push(ls.slice(i, i + n)); i += n; } if (i !== ls.length) throw new Error('regroup leaves lines'); return out; };
 fs.mkdirSync(path.join(D, '..', '..', 'data', 'song-texts'), { recursive: true });

@@ -25,13 +25,39 @@
    "page": "Du gamla, du fria (Dybeck)",
    "own": false,
    "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "You ancient, you free, you mountain-high North,",
+     "you quiet, you joyful fair one!",
+     "I greet you, loveliest land upon earth,",
+     "your sun, your sky, your green meadows,",
+     "your sun, your sky, your green meadows."
+    ],
+    [
+     "You are enthroned on memories of great days of old,",
+     "when, honoured, your name flew across the earth.",
+     "I know that you are and will be what you were.",
+     "Yes, I want to live, I want to die in the North!",
+     "Yes, I want to live, I want to die in the North!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
   }
  },
- "aligned": false,
+ "aligned": true,
  "tentative": false,
  "heads": null,
  "label": null,
  "lang": null,
  "scheme": null,
- "notes": []
+ "notes": [
+  "line 1.1: 'Nord' is 'the North', the land addressed throughout.",
+  "line 1.2: 'glädjerika' is 'rich in joy'; 'sköna' is 'beautiful one, fair one'.",
+  "line 1.4: 'ängder' is 'meadows, fields, open country'.",
+  "line 2.1: 'fornstora dar' is 'days great in olden times'; 'tronar' is 'sits enthroned'.",
+  "line 2.4: 'Norden' is 'the North' (also the usual word for the Nordic countries)."
+ ]
 }

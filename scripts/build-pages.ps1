@@ -2534,6 +2534,8 @@ function SongWords($sg) {
     }
   }
   if ($tx['tentative']) { $cr.Add('The original is hard to read in places, and our translation of those lines is tentative.') }
+  # words not in English and no translation beside them (the Huron Carol's Wendat): say so rather than leave it unexplained
+  if (-not $isEn -and $code -ne 'en' -and -not $parts.ContainsKey('en')) { $cr.Add('There is no English translation here yet: the Institute translates a song only where every line can be rendered with confidence.') }
   [void]$sb.Append('<div class="sg-credit">' + (($cr | ForEach-Object { '<p>' + $_ + '</p>' }) -join '') + '</div>')
   $nt = @($tx['notes'] | Where-Object { $_ })
   if ($nt.Count) { [void]$sb.Append('<details class="sg-notes"><summary>Notes on the translation (' + $nt.Count + ')</summary><ul>' + (($nt | ForEach-Object { '<li>' + (Hx ([string]$_)) + '</li>' }) -join '') + '</ul></details>') }
@@ -2592,7 +2594,12 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   else { $songNoText++; [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are in the public domain, but no free, reliable edition of them has been found yet to import them from, and the Institute never types a song&#8217;s words from memory. &#8220;What it says&#8221; above tells what they are about.</p>') }
   if ($sg['genius'] -and -not $sg['text'] -and -not $sg['withheld']) {
     $sgG = $sg['genius']
-    [void]$sb.Append('<div class="sg-genius" data-genius="' + [int]$sgG['id'] + '"><button type="button" class="sg-genius-btn">Show the lyrics from Genius</button><p class="sg-genius-note">Genius shows the lyrics in its own frame, under its own licence: nothing loads from Genius until you press the button. <a href="' + (Hx ([string]$sgG['url'])) + '" target="_blank" rel="noopener">The song on Genius</a>.</p></div>')
+    $sgGE = $sg['geniusEn']
+    # Genius's English translation of a song not sung in English (genius-en.tsv), shown the same way, beside the lyrics
+    [void]$sb.Append('<div class="sg-genius"><div class="sg-genius-btns"><button type="button" class="sg-genius-btn" data-genius="' + [int]$sgG['id'] + '" data-what="Lyrics">Show the lyrics from Genius</button>' +
+      $(if ($sgGE) { '<button type="button" class="sg-genius-btn sg-genius-btn-en" data-genius="' + [int]$sgGE['id'] + '" data-what="English translation">Show the English translation from Genius</button>' } else { '' }) +
+      '</div><div class="sg-genius-frames"></div><p class="sg-genius-note">Genius shows the ' + $(if ($sgGE) { 'lyrics and their translation' } else { 'lyrics' }) + ' in its own frame, under its own licence: nothing loads from Genius until you press a button. <a href="' + (Hx ([string]$sgG['url'])) + '" target="_blank" rel="noopener">The song on Genius</a>' +
+      $(if ($sgGE) { ' &middot; <a href="' + (Hx ([string]$sgGE['url'])) + '" target="_blank" rel="noopener">its English translation</a>' } else { '' }) + '.</p></div>')
   }
   [void]$sb.Append("</section>`n</div>`n")
   $v = $sg['video']
@@ -2633,6 +2640,7 @@ $ib = New-Object Text.StringBuilder(120000)
 $songW = @($SONGS | Where-Object { $_['text'] }).Count; $songV = @($SONGS | Where-Object { $_['video'] }).Count
 $songLangs = @($SONGS | ForEach-Object { @($_['langs']) | ForEach-Object { [string]$_['code'] } } | Sort-Object -Unique).Count
 $songG = @($SONGS | Where-Object { -not $_['text'] -and $_['genius'] -and -not $_['withheld'] }).Count
+$songGE = @($SONGS | Where-Object { -not $_['text'] -and $_['genius'] -and $_['geniusEn'] -and -not $_['withheld'] }).Count
 $songNoneC = @($SONGS | Where-Object { -not $_['text'] -and -not $_['genius'] -and -not $_['pd'] }).Count
 $songNoneP = @($SONGS | Where-Object { -not $_['text'] -and -not $_['genius'] -and $_['pd'] -and -not $_['withheld'] }).Count
 $songHeldN = @($SONGS | Where-Object { -not $_['text'] -and $_['withheld'] }).Count
@@ -2645,7 +2653,7 @@ if ($songHeldN) { $songNoneParts.Add([string]$songHeldN + ' withheld, the page s
 $songNoneTxt = $(if ($songNone) { 'The other ' + $songNone + ' have no words here yet (' + ($songNoneParts -join ', ') + '). ' } else { '' })
 [void]$ib.Append('<main id="main" class="sg-page sg-index ref-page">' + "`n<div class=`"sg-wrap`">`n" + $crumb[0] + "`n")
 [void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Songs in History</h1><p class="ref-lede">' + $SONGS.Count + ' songs that people have sung and handed down, in ' + $songLangs + ' languages, from a Sumerian hymn to the goddess of beer, copied about 1800 BCE, to songs of the last years of apartheid and of the Cold War. Each gives who made it, where and in what language, its story, what it says and the songs it led to.</p>' +
-  '<p class="ref-lede sg-lede-words">The words of <b>' + $songW + '</b> are printed here, imported from free editions and never typed: in the original and, for the songs not in English, romanized and translated line by line. For <b>' + $songG + '</b> more, still in copyright or with no free edition yet, Genius shows the lyrics at the press of a button, under its own licence. ' +
+  '<p class="ref-lede sg-lede-words">The words of <b>' + $songW + '</b> are printed here, imported from free editions and never typed: in the original and, for the songs not in English, romanized and translated line by line. For <b>' + $songG + '</b> more, still in copyright or with no free edition yet, Genius shows the lyrics at the press of a button' + $(if ($songGE) { ' (and, for ' + $songGE + ' not sung in English, its English translation)' } else { '' }) + ', under its own licence. ' +
   $songNoneTxt +
   '<b>' + $songV + '</b> have a performance to listen to.</p></header>' + "`n")
 # filters: words in the name, type, era, region, with words, with a performance (songs.js; without it every song shows)

@@ -19,13 +19,30 @@
    "page": "Pelo Telefone",
    "own": false,
    "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "The chief of the revelry",
+     "by telephone",
+     "sent word to tell me",
+     "that, with joy,",
+     "let there be no arguing [?]",
+     "about having fun."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
   }
  },
- "aligned": false,
+ "aligned": true,
  "tentative": false,
  "heads": null,
  "label": null,
  "lang": null,
  "scheme": null,
- "notes": []
+ "notes": [
+  "line 1.1: 'folia' is carnival merrymaking, revelry; 'o chefe da folia' is the leader of the revels.",
+  "lines 1.5-1.6: 'Não se questione / Para se brincar' is loosely put; read as 'let no one question (or quarrel over) joining in the fun'. 'questionar' can be 'to question' or 'to dispute, argue'; 'brincar' is 'to play', in carnival 'to revel'."
+ ]
 }

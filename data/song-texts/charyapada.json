@@ -23,13 +23,63 @@
    "page": "হাজার বছরের পুরাণ বাঙ্গালা ভাষায় বৌদ্ধগান ও দোহা (১৯১৬)/চর্য্যাচর্য্য-বিনিশ্চয়/১",
    "own": false,
    "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "The body is the finest of trees; five are its branches.",
+     "Into the restless mind Time has entered. ||||",
+     "Make it firm, and take the measure of the Great Bliss:",
+     "Lui says, ask the guru and know. || refrain ||",
+     "All the samādhis [?]: what are they done for?",
+     "Through pleasure and pain one surely dies. || refrain ||",
+     "Cast off the bond of desire [?] and the hope in the craft [?] of the senses [?];",
+     "take the side of the Void [?] close to you. || refrain ||",
+     "Lui says: I have seen it in meditation [?];",
+     "dhamaṇa and camaṇa, the two, I sat on as my seat [?]. || refrain ||"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "kāā tarubara pañca bi ḍāla",
+     "cañcala cīe pa:iṭho kāla ||||",
+     "diṭa karia mahāsuha parimāṇa",
+     "lui bhaṇa:i guru pucchia jāṇa || dhru ||",
+     "saala sa[mā]hia kāhi karia:i",
+     "sukha dukhetem̐ nicita mariāi || dhru ||",
+     "eṛieu chāndaka bāndha karaṇaka pāṭera āsa",
+     "sunupākha bhiti lāhu re pāsa || dhru ||",
+     "bhaṇa:i lui āmhe sāṇe diṭhā",
+     "dhamaṇa camaṇa beṇi pāṇḍi ba:iṇa || dhru ||"
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (ISO 15919)",
+   "own": true
   }
  },
- "aligned": false,
- "tentative": false,
+ "aligned": true,
+ "tentative": true,
  "heads": null,
  "label": null,
  "lang": null,
- "scheme": null,
- "notes": []
+ "scheme": "ISO 15919",
+ "notes": [
+  "The language of the Charyapada (an early stage of Bengali, close to the Apabhraṃśa of the time) is old and the songs speak in a deliberately veiled 'twilight language' (sandhyābhāṣā) of Buddhist tantric practice: many words have more than one accepted reading, and editors and translators differ on several lines of this song. The translation follows the plainest sense of the words; the [?] marks show where it is least sure.",
+  "Romanization: ISO 15919 applied to the Bengali letters of Shastri's edition, as on the site's other Bengali songs: the inherent vowel written (ḍāla, kāla), ব as b, ড় as ṛ, ঁ as m̐; the colon marks a vowel letter standing after a (pa:iṭho, bhaṇa:i, karia:i, ba:iṇa), so that a + i is not read as the diphthong ai. The double dandas are given as ||; the editor's bracketed letters (স[মা]হিঅ) are kept.",
+  "|| refrain ||: ধ্রু (dhru, for dhruvapada) is the edition's mark of the refrain; the doubled double danda after line 2 (॥॥) is printed as in the source.",
+  "line 1: kāā is the body (kāya); tarubara, 'the best of trees'; 'pañca bi ḍāla', 'five (are) the branches': commonly read as the five senses or the five aggregates (skandhas) of Buddhist teaching.",
+  "line 2: cīe, 'in the mind' (citta); kāla is time and also death; pa:iṭho, 'has entered'.",
+  "line 3: diṭa, 'firm' (dṛḍha); 'what is to be made firm' is not said: usually taken as the mind. mahāsuha (mahāsukha), the Great Bliss of tantric Buddhism.",
+  "line 4: Lui (Luipa) names himself, as each Charyapada poet does.",
+  "line 5: sa[mā]hia, the edition's restoration, read as samādhi (meditative absorption) [?]; kāhi, 'why, for what'. Readers differ on whether the line asks what samādhi is for or says that all of it is useless.",
+  "line 6: nicita, 'surely' (niścita); mariāi, '(one) dies'. Often read as saying that one who clings to pleasure and pain, even through such practices, still dies.",
+  "line 7: the line is among the least certain [?]: chāndaka bāndha, 'the binding of chanda' (desire, will; also deceit or a scheme); karaṇaka pāṭera āsa, 'the hope of the karaṇa's pāṭa' (karaṇa: the senses, or ritual practices; pāṭa: craft, order, a seat). eṛieu, 'give up, cast off'.",
+  "line 8: sunu, 'the Void' (śūnya); pākha, 'side, wing' (pakṣa); bhiti is read as 'clinging, drawing near' or as 'wall'; 'lāhu re pāsa', 'take (it) to your side'. The sense of the whole line is disputed [?].",
+  "line 9: āmhe, 'we, I'; sāṇe is read as 'in meditation' (dhyāna) [?]; diṭhā, 'seen'.",
+  "line 10: dhamaṇa and camaṇa are left untranslated: they are usually explained as two channels or two breaths of the yogic body, sometimes as two contrary forces, which the yogi masters; pāṇḍi read as 'seat' [?], ba:iṇa as 'sat, seated' [?]; beṇi, 'both, the two'."
+ ]
 }

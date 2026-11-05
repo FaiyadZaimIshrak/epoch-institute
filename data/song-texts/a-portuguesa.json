@@ -68,13 +68,83 @@
    "page": "A Portuguesa",
    "own": false,
    "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Heroes of the sea, noble people,",
+     "valiant, immortal nation,",
+     "raise up today once more",
+     "the splendour of Portugal!"
+    ],
+    [
+     "Among the mists of memory,",
+     "O Homeland, is felt the voice",
+     "of your illustrious forefathers",
+     "that shall guide you to victory!"
+    ],
+    [
+     "To arms, to arms!",
+     "Over the land, over the sea,",
+     "to arms, to arms!",
+     "To fight for the Homeland,",
+     "against the cannons march, march!"
+    ],
+    [
+     "Unfurl the unconquered Flag",
+     "in the living light of your sky!",
+     "Let Europe cry out to the whole earth:",
+     "Portugal has not perished"
+    ],
+    [
+     "Your joyful soil is kissed",
+     "by the ocean, roaring with love,",
+     "and your victorious Arm",
+     "gave new worlds to the world!"
+    ],
+    [
+     "To arms, to arms!",
+     "Over the land, over the sea,",
+     "to arms, to arms!",
+     "To fight for the Homeland,",
+     "against the cannons march, march!"
+    ],
+    [
+     "Salute the Sun that is rising",
+     "over a smiling future;",
+     "let the echo of an affront",
+     "be the signal to rise again."
+    ],
+    [
+     "Rays of that strong dawn",
+     "are like a mother's kisses,",
+     "which guard us, sustain us,",
+     "against the injuries of fortune."
+    ],
+    [
+     "To arms, to arms!",
+     "Over the land, over the sea,",
+     "to arms, to arms!",
+     "To fight for the Homeland,",
+     "against the cannons march, march!"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
   }
  },
- "aligned": false,
+ "aligned": true,
  "tentative": false,
  "heads": null,
  "label": null,
  "lang": null,
  "scheme": null,
- "notes": []
+ "notes": [
+  "line 2.2: 'sente-se a voz' is 'the voice is felt' or 'one hears the voice'.",
+  "line 2.3: 'avós' is literally 'grandparents', here 'forefathers, ancestors'; 'egrégios' is 'illustrious, eminent'.",
+  "line 4.1: 'Desfralda' is addressed to the Homeland ('unfurl', singular).",
+  "lines 5.1-5.2: the original order is 'Kisses your joyful soil / the ocean, roaring with love': the ocean is the subject. 'jucundo' is 'joyful, pleasant'.",
+  "line 7.3: 'afronta' is an affront or insult: the echo of an insult is to be the signal of rising again.",
+  "line 8.4: 'sorte' is 'fortune, fate'."
+ ]
 }

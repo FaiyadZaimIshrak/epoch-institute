@@ -1062,6 +1062,18 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   backgrounds overridden, gold links and titles), repainted when the theme or Kids mode changes; the "Loading" line is
   hidden once the embed has drawn beside it. Such a song's note under "The words" says Genius shows them below
   (.sg-nowords-g), and the /songs/ intro counts the words printed, shown by Genius and still missing (by reason).
+  Genius's own English translations (6 Nov 2026, the user: "for the genius.com ones, make the translations"): the
+  Institute does not translate words still in copyright, nor words it has no free edition of, so for the songs of
+  genius.tsv not sung in English scripts/songs/genius-translations.js reads the API's translation_songs (language en)
+  into scripts/songs/genius-en.tsv (22: 18 linked on Genius, 4 found by searching "Genius English Translations" and
+  chosen by eye; La Llorona's are of other singers' versions, left out); make-data.js gives the song geniusEn, and the
+  page a second button, "Show the English translation from Genius" (.sg-genius-btn-en), whose frame joins the
+  lyrics' in .sg-genius-frames.
+  The Institute's own translations of the public-domain songs printed without English (6 Nov 2026): 18 by four
+  agents with TRANSLATION-GUIDE.md, every line read against the original by the editor; the Bhaja Govindam's ten
+  slips of the Wikisource text and the Odia anthem's stray bar went into text-fixes.json; Tevaram and the Charyapada
+  are marked tentative (merge-texts.js TENTATIVE). The Huron Carol's Wendat has none (its page says so: no line can be
+  rendered with confidence). Amhrán na bhFiann prints Kearney's English, so its translations file sets lang en.
 - Performances: scripts/songs/videos.tsv (slug, id, channel, note; 216 songs; 18 without one, among them Kumbaya,
   Ninkasi and anthems with no fitting channel): the
   performers' own channels, "- Topic" releases, choirs, ensembles, institutions and old records, never compilations

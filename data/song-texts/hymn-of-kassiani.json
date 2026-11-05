@@ -29,13 +29,71 @@
    "page": "Τροπάριο της Κασσιανής",
    "own": false,
    "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Lord, the woman who had fallen into many sins,",
+     "perceiving your divinity, taking up the part of a myrrh-bearer,",
+     "lamenting, brings you myrrh before your burial.",
+     "\"Alas!\" she says, \"for night is upon me, a frenzy of licentiousness,",
+     "dark and moonless, the love of sin.",
+     "Receive the springs of my tears,",
+     "you who by the clouds draw out the water of the sea;",
+     "bend to me, to the groanings of my heart,",
+     "you who bowed the heavens by your ineffable self-emptying.",
+     "I will kiss your spotless feet,",
+     "and wipe them again with the locks of my head,",
+     "whose footfall Eve in paradise, at evening,",
+     "having heard it sound in her ears, hid herself in fear.",
+     "The multitudes of my sins and the abysses of your judgements,",
+     "who will search them out, saviour of souls, my Saviour?",
+     "Do not disregard me, your handmaid, you who have mercy without measure.\""
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "Kyrie, hē en pollais hamartiais peripesousa gynē,",
+     "tēn sēn aisthomenē theotēta, myrophorou analabousa taxin,",
+     "odyromenē, myra soi, pro tou entaphiasmou komizei.",
+     "Oimoi! legousa, hoti nyx moi hyparchei, oistros akolasias,",
+     "zophōdēs te kai aselēnos erōs tēs hamartias.",
+     "Dexai mou tas pēgas tōn dakryōn,",
+     "ho nephelais diexagōn tēs thalassēs to hydōr",
+     "kamphthēti moi pros tous stenagmous tēs kardias,",
+     "ho klinas tous ouranous tēi aphatōi sou kenōsei.",
+     "Kataphilēsō tous achrantous sou podas,",
+     "aposmēxō toutous de palin tois tēs kephalēs mou bostrychois",
+     "hōn en tōi paradeisōi Eua to deilinon,",
+     "kroton tois ōsin ēchētheisa, tōi phobōi ekrybē.",
+     "Hamartiōn mou ta plēthē kai krimatōn sou abyssous",
+     "tis exichniasei, psychosōsta Sōtēr mou;",
+     "Mē me tēn sēn doulēn paridēis, ho ametrēton echōn to eleos."
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (classical transliteration (accents omitted; rough breathing as h; iota subscript written as i))",
+   "own": true
   }
  },
- "aligned": false,
+ "aligned": true,
  "tentative": false,
  "heads": null,
  "label": null,
  "lang": null,
- "scheme": null,
- "notes": []
+ "scheme": "classical transliteration (accents omitted; rough breathing as h; iota subscript written as i)",
+ "notes": [
+  "Line 1.2: 'myrrh-bearer' (myrophoros) is the name given to the women who brought myrrh to anoint the body of Jesus.",
+  "Line 1.4: oistros akolasias, literally 'a gadfly (goad, frenzy) of licentiousness'.",
+  "Line 1.5: erōs tēs hamartias can be read as 'love of sin' or 'desire for sin'.",
+  "Line 1.7: diexagōn, 'drawing out' or 'leading through': the water of the sea is drawn up by the clouds.",
+  "Line 1.9: kenōsis, 'self-emptying', the theological term for God taking on human nature.",
+  "Lines 1.12-1.13: 'whose' (hōn) refers to the feet: Eve heard their footfall (kroton) in paradise in the evening and hid (Genesis 3:8). The Greek is one relative clause running over both lines.",
+  "Line 1.13: ēchētheisa, literally 'having been made to ring' in her ears with the sound.",
+  "Line 1.16: doulē, a female servant or slave; 'handmaid' in the biblical sense.",
+  "Line 1.15: the romanization keeps the Greek question mark ';' as written."
+ ]
 }

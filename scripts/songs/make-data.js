@@ -74,6 +74,10 @@ for (const f of fs.readdirSync(D).filter(f => f.endsWith('.txt')).sort()) {
 // printed here, never a withheld one
 const GENIUS = {};
 if (fs.existsSync(path.join(D, 'genius.tsv'))) for (const l of fs.readFileSync(path.join(D, 'genius.tsv'), 'utf8').split(/\r?\n/)) { if (!l || l.startsWith('#')) continue; const [slug, id, url, title] = l.split('\t'); GENIUS[slug] = { id: +id, url, title }; }
+// Genius's own English translation of such a song when it is not sung in English (scripts/songs/genius-en.tsv,
+// genius-translations.js): the Institute does not translate words still in copyright, nor words it has no edition of
+const GENIUS_EN = {};
+if (fs.existsSync(path.join(D, 'genius-en.tsv'))) for (const l of fs.readFileSync(path.join(D, 'genius-en.tsv'), 'utf8').split(/\r?\n/)) { if (!l || l.startsWith('#')) continue; const [slug, id, url, title] = l.split('\t'); GENIUS_EN[slug] = { id: +id, url, title }; }
 const VC = fs.existsSync(path.join(D, 'videos-checked.json')) ? JSON.parse(fs.readFileSync(path.join(D, 'videos-checked.json'), 'utf8')) : {};
 const BYS = Object.fromEntries(songs.map(s => [s.slug, s]));
 for (const l of fs.readFileSync(path.join(D, 'videos.tsv'), 'utf8').split(/\r?\n/)) {
@@ -90,6 +94,11 @@ for (const [slug, g] of Object.entries(GENIUS)) {
   if (s.text) { bad.push('genius.tsv: ' + slug + ' has its words printed here'); continue; }
   if (s.withheld) { bad.push('genius.tsv: ' + slug + ' is withheld'); continue; }
   s.genius = g;
+}
+for (const [slug, g] of Object.entries(GENIUS_EN)) {
+  const s = BYS[slug]; if (!s) { bad.push('genius-en.tsv: no song ' + slug); continue; }
+  if (!s.genius) { bad.push('genius-en.tsv: ' + slug + ' has no Genius lyrics'); continue; }
+  s.geniusEn = g;
 }
 // inspired chains: a line whose title is another song's title (or its title in its own language) links to it, and that
 // song lists this one as its source; "Inspired by" lines likewise

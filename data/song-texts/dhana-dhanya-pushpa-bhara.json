@@ -46,13 +46,104 @@
    "page": "ধনধান্য পুষ্প ভরা আমাদের এই বসুন্ধরা",
    "own": false,
    "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Full of wealth, of grain and flowers, is this earth of ours;",
+     "in its midst there is one land—the best of all lands;—",
+     "O, it is made of dreams, that land, ringed round with memories;",
+     "such a land you will find nowhere, search as you may,",
+     "O, she is the queen of all lands—she is the land of my birth."
+    ],
+    [
+     "Moon, sun, planets, stars—where do they shine in such a way?",
+     "Where does the lightning play like this, in clouds as black as these!",
+     "To the calls of her birds I rise from sleep, waking to the calls of birds;",
+     "such a land you will find nowhere, search as you may,",
+     "O, she is the queen of all lands—she is the land of my birth."
+    ],
+    [
+     "Whose are rivers so gentle, where are hills so misty!",
+     "Where do such green fields melt into the foot of the sky!",
+     "In whose land does the wind play like this in waves over the rice!",
+     "such a land you will find nowhere, search as you may,",
+     "O, she is the queen of all lands—she is the land of my birth."
+    ],
+    [
+     "Trees full of flower upon flower; in bower upon bower the birds sing;",
+     "humming, the bees come rushing, swarm upon swarm—",
+     "they fall asleep upon the flowers, having drunk the flowers' honey;",
+     "such a land you will find nowhere, search as you may,",
+     "O, she is the queen of all lands—she is the land of my birth."
+    ],
+    [
+     "Where could anyone go and find such love of brother and of mother!—",
+     "O Mother, I hold your two feet to my breast;",
+     "my birth was in this land—may I die in this land—",
+     "such a land you will find nowhere, search as you may,",
+     "O, she is the queen of all lands—she is the land of my birth."
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  },
+  "rom": {
+   "stanzas": [
+    [
+     "dhanadhānya puṣpabharā āmādera ei basundharā",
+     "tāhāra mājhe āche deśa eka–sakala deśera serā;–",
+     "o se, svapna diẏe tairi se-deśa, smr̥ti diẏe gherā;",
+     "emana deśaṭi kothāo khum̐je pābe nāko tumi,",
+     "o se sakala deśera rāni se ye–āmāra janmabhūmi."
+    ],
+    [
+     "candra sūrya graha tārā, kothāẏa ujala emana dhārā.",
+     "kothāẏa emana khele taṛit emana kālo meghe!",
+     "tāra pākhira ḍāke ghumiẏe uṭhi, pākhira ḍāke jege;",
+     "emana deśaṭi kothāo khum̐je pābe nāko tumi,",
+     "o se sakala deśera rāni se ye–āmāra janmabhūmi."
+    ],
+    [
+     "eta snigdha nadī kāhāra, kothāẏa emana dhūmra pāhāṛa!",
+     "kothāẏa emana haritkṣetra ākāśatale miśe!",
+     "emana dhānera upara ḍheu khele yāẏa bātāsa kāhāra deśe!",
+     "emana deśaṭi kothāo khum̐je pābe nāko tumi,",
+     "o se sakala deśera rāni se ye–āmāra janmabhūmi."
+    ],
+    [
+     "puṣpe puṣpe bharā śākhī; kuñje kuñje gāhe pākhi;",
+     "guñjariẏā āse ali puñje puñje dheẏe–",
+     "tārā, phulera upara ghumiẏe paṛe phulera madhu kheẏe;",
+     "emana deśaṭi kothāo khum̐je pābe nāko tumi,",
+     "o se sakala deśera rāni se ye–āmāra janmabhūmi."
+    ],
+    [
+     "bhāẏera māẏera eta sneha kothāẏa gele pābe keha!–",
+     "o mā tomāra caraṇa duṭi bakṣe āmāra dhari,",
+     "āmāra ei deśete janma–yena ei deśete mari–",
+     "emana deśaṭi kothāo khum̐je pābe nāko tumi,",
+     "o se sakala deśera rāni se ye–āmāra janmabhūmi."
+    ]
+   ],
+   "credit": "Romanization: The Epoch Institute (ISO 15919)",
+   "own": true
   }
  },
- "aligned": false,
+ "aligned": true,
  "tentative": false,
  "heads": null,
  "label": null,
  "lang": null,
- "scheme": null,
- "notes": []
+ "scheme": "ISO 15919",
+ "notes": [
+  "Romanization: ISO 15919 as a strict transliteration of the Bengali letters, as on the site's other Bengali songs: the inherent vowel written wherever the script has no hasanta (āmādera, sung āmāder; deśa, sung deś); ব is b (basundharā, bātāsa), য় ẏ, য y, ড় ṛ, ং ṁ, ঁ m̐, ৃ r̥, ৎ t; the danda । is given as a full stop. The source's dashes and its ';–' are kept.",
+  "lines x.3 and x.5: 'o se', 'O, it / O, she': ও is a sung exclamation and se 'it, she' the land; the land is she where it is the queen (x.5).",
+  "line 1.5 and refrain: janmabhūmi, 'the land of (my) birth', often rendered 'motherland'. 'nāko' is an emphatic 'not'.",
+  "line 2.1: dhārā, 'manner, way' (also 'stream, flow'): 'where do they shine in such a way'.",
+  "line 2.3: as printed here the line reads 'ghumiẏe uṭhi', 'I rise from sleep', so both halves speak of waking to the birds.",
+  "line 3.1: snigdha, 'gentle, soft, cool, soothing'; dhūmra, 'smoke-coloured, misty'.",
+  "line 4.1: śākhī, 'tree' (literally 'that which has branches').",
+  "line 4.2: ali, the bee; puñje puñje, 'in heaps, in swarm upon swarm'."
+ ]
 }

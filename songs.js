@@ -49,15 +49,17 @@
     var l = d.querySelector('.rg_embed_link'); if (l && l.getAttribute('data-ep-wait') && l.textContent === l.getAttribute('data-ep-wait') && [].some.call(d.body.children, function (c) { return c !== l && !/^(SCRIPT|STYLE|LINK)$/.test(c.tagName); })) l.hidden = true;
     f.style.background = getComputedStyle(document.documentElement).getPropertyValue('--surface'); } catch (e) {} }
   new MutationObserver(function () { gFrames.forEach(gPaint); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-kids'] });
-  $$('.sg-genius').forEach(function (box) {
-    var b = box.querySelector('.sg-genius-btn'); if (!b) return;
+  $$('.sg-genius-btn').forEach(function (b) {
+    var box = b.closest('.sg-genius'), slot = box && box.querySelector('.sg-genius-frames');
     b.addEventListener('click', function () {
-      var id = parseInt(box.getAttribute('data-genius'), 10); if (!id) return;
-      var f = document.createElement('iframe'); f.className = 'sg-genius-frame'; f.title = 'Lyrics from Genius';
+      var id = parseInt(b.getAttribute('data-genius') || box.getAttribute('data-genius'), 10); if (!id) return;
+      var what = b.getAttribute('data-what') || 'Lyrics';
+      var f = document.createElement('iframe'); f.className = 'sg-genius-frame'; f.title = what + ' from Genius';
       f.srcdoc = '<!doctype html><html><head><meta charset="utf-8"><base target="_blank"><style id="ep-theme">' + gTheme() + '</style></head><body>' +
-        '<div id="rg_embed_link_' + id + '" class="rg_embed_link" data-song-id="' + id + '" data-ep-wait="Loading the lyrics from Genius…">Loading the lyrics from Genius&hellip;</div>' +
+        '<div id="rg_embed_link_' + id + '" class="rg_embed_link" data-song-id="' + id + '" data-ep-wait="Loading from Genius…">Loading from Genius&hellip;</div>' +
         '<script crossorigin src="https://genius.com/songs/' + id + '/embed.js"></script></body></html>';
-      b.replaceWith(f); gFrames.push(f);
+      if (slot) { slot.appendChild(f); b.hidden = true; } else b.replaceWith(f);
+      gFrames.push(f);
       // the embed adds its own styles as it loads: the site's are put back after them, and the frame grows to the lyrics
       var n = 0, fit = function () { gPaint(f); try { var h = f.contentDocument && f.contentDocument.body.scrollHeight; if (h) f.style.height = (h + 2) + 'px'; } catch (e) {} if (++n < 40) setTimeout(fit, 500); };
       f.addEventListener('load', fit);
