@@ -12,7 +12,7 @@ const TYPES = ['sacred', 'lament', 'celebration', 'love', 'lullaby', 'work', 'wa
 const REGIONS = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
 const KEYS = ['title', 'local', 'status', 'lyricist', 'composer', 'culture', 'language', 'place', 'date', 'year', 'region', 'types', 'kids', 'kid'];
 // songs in the public domain whose words no free, reliable edition holds yet (their pages say so)
-const GAPS = ["japji-sahib", "taba-naba", "santa-lucia", "ganggangsullae", "odes-of-solomon", "kesh-temple-hymn", "hymn-of-the-pearl", "ive-been-working-on-the-railroad", "oh-susanna", "the-wearing-of-the-green", "deep-river", "sometimes-i-feel-like-a-motherless-child", "enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "red-river-valley", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
+const GAPS = ["japji-sahib", "taba-naba", "santa-lucia", "ganggangsullae", "odes-of-solomon", "kesh-temple-hymn", "hymn-of-the-pearl", "ive-been-working-on-the-railroad", "the-wearing-of-the-green", "deep-river", "sometimes-i-feel-like-a-motherless-child", "enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "red-river-valley", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
   'ninkasi', 'raghupati-raghava-raja-ram', 'tizita',
   // second wave (Nov 2026)
   'chakrulo', 'cherubikon', 'day-o', 'fengyang-flower-drum',
@@ -21,10 +21,13 @@ const GAPS = ["japji-sahib", "taba-naba", "santa-lucia", "ganggangsullae", "odes
   // third wave (Nov 2026): no edition holds the words (Heil dir: only parodies are quoted; Battotai: none found)
   'heil-dir-im-siegerkranz', 'battotai'];
 // public-domain songs whose words are not printed for another reason, given on the page (third wave, Nov 2026)
+const CAUTION = {
+  "horst-wessel-lied": "These are the words of the anthem of the Nazi Party, printed as the historical record for study. They glorify the SA, the party's paramilitary force, and call for the Nazi flag to fly over every street. Since 1945 the song and its tune have been banned in Germany and Austria, outside teaching, research and the arts.",
+  "ghost-dance": "These songs are sacred songs of the Ghost Dance, given here as James Mooney recorded them from Paiute, Lakota and Caddo singers and published them in 1896, with his translations. Some peoples still hold the ceremony in private; the songs are printed as the historical record of a faith that the United States Army met with the massacre at Wounded Knee.",
+  "old-folks-at-home": "These are Foster's words as they were first sung and printed, in the mock dialect of the blackface minstrel stage, put in the mouth of an enslaved man who longs for the plantation. The chorus calls Black people by a racial slur of the time. They are printed as the historical record; Florida sang \u201cbrothers\u201d in its place from 1978, and adopted revised words in 2008.",
+  "oh-susanna": "These are the words of an 1848 edition, in the mock dialect of the blackface minstrel stage. The second verse jokes about killing Black people with a racial slur of the time. They are printed as the historical record; the verses were later dropped, and the song is now sung with the chorus and the first verse alone. This edition prints its first verse only under the music, so it is not given here."
+};
 const WITHHELD = {
-  "old-folks-at-home": "The original words, written in the dialect of the minstrel stage, use a racial slur in the chorus; they are not printed here.",
-  "ghost-dance": "The words of these songs are not printed here: they are sacred songs of a ceremony that some peoples still hold in private.",
-  'horst-wessel-lied': 'The words of this song are not printed here. They are in the public domain, but as a symbol of the Nazi regime the song is banned in Germany and Austria, outside teaching, research and the arts.',
   'marcha-real': 'The Marcha Real is an instrumental anthem: it has no official words, and none of the words written for it over the years is printed here.'
 };
 // the era bands of the Great Speeches, by the song's year
@@ -63,10 +66,14 @@ for (const f of fs.readdirSync(D).filter(f => f.endsWith('.txt')).sort()) {
     lyricist: H.lyricist, composer: H.composer, culture: H.culture, langs, place: H.place, date: H.date, year, era: era(year),
     undated, region: H.region, types, people: list('people'), places: list('places'), events: list('events'), kids: H.kids === 'yes', kid: H.kid,
     story: paras('story'), meaning: paras('meaning'), inspired: links('inspired'), inspiredBy: links('inspired-by'),
-    sources: (B.sources || []).map(l => l.trim()).filter(Boolean), text, gap: GAPS.includes(slug), withheld: WITHHELD[slug] || null, video: null
+    sources: (B.sources || []).map(l => l.trim()).filter(Boolean), text, gap: GAPS.includes(slug), withheld: WITHHELD[slug] || null, caution: CAUTION[slug] || null, video: null
   });
 }
 // the chosen performances: only those that passed the last check
+// the Genius embed (scripts/songs/genius.tsv, genius-find.js and genius-confirm.js): only for a song whose words are not
+// printed here, never a withheld one
+const GENIUS = {};
+if (fs.existsSync(path.join(D, 'genius.tsv'))) for (const l of fs.readFileSync(path.join(D, 'genius.tsv'), 'utf8').split(/\r?\n/)) { if (!l || l.startsWith('#')) continue; const [slug, id, url, title] = l.split('\t'); GENIUS[slug] = { id: +id, url, title }; }
 const VC = fs.existsSync(path.join(D, 'videos-checked.json')) ? JSON.parse(fs.readFileSync(path.join(D, 'videos-checked.json'), 'utf8')) : {};
 const BYS = Object.fromEntries(songs.map(s => [s.slug, s]));
 for (const l of fs.readFileSync(path.join(D, 'videos.tsv'), 'utf8').split(/\r?\n/)) {
@@ -77,6 +84,12 @@ for (const l of fs.readFileSync(path.join(D, 'videos.tsv'), 'utf8').split(/\r?\n
   if (!c || c.id !== id) { bad.push('videos.tsv: ' + slug + ' not checked (run node scripts/songs/check-videos.js)'); continue; }
   if (!c.ok) { bad.push('videos.tsv: ' + slug + ' failed its check (' + id + ')'); continue; }
   BYS[slug].video = { id, channel: (c.channel || channel).trim(), note: note || '', title: c.title || '', checked: c.checked };
+}
+for (const [slug, g] of Object.entries(GENIUS)) {
+  const s = BYS[slug]; if (!s) { bad.push('genius.tsv: no song ' + slug); continue; }
+  if (s.text) { bad.push('genius.tsv: ' + slug + ' has its words printed here'); continue; }
+  if (s.withheld) { bad.push('genius.tsv: ' + slug + ' is withheld'); continue; }
+  s.genius = g;
 }
 // inspired chains: a line whose title is another song's title (or its title in its own language) links to it, and that
 // song lists this one as its source; "Inspired by" lines likewise

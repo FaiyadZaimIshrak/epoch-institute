@@ -158,7 +158,7 @@ var ConnectionsMap = (function () {
       function linkActive(l) { return Y == null || ((l.f == null || l.f <= Y) && (l.u == null || l.u >= Y)); }
       // the same map drawn again (year slider) shows its lines at once; a new one draws them out from the centre
       var key = id + '|' + (opts.expand || ''), still = el.getAttribute('data-cm') === key, used = {};
-      var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="cm-svg' + (still ? ' cm-still' : '') + '" role="img" aria-label="Connections of ' + esc(h.c.n) + '">' +
+      var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="cm-svg' + (still ? ' cm-still' : '') + '" role="group" aria-label="Connections of ' + esc(h.c.n) + '">' +
         '<defs><filter id="cm-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
         '<filter id="cm-glow2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
       function curve(a, b) { var mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2, dx = b[0] - a[0], dy = b[1] - a[1]; return 'M' + a[0].toFixed(1) + ' ' + a[1].toFixed(1) + ' Q' + (mx - dy * 0.12).toFixed(1) + ' ' + (my + dx * 0.12).toFixed(1) + ' ' + b[0].toFixed(1) + ' ' + b[1].toFixed(1); }

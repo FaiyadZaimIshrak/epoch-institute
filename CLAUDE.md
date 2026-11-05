@@ -92,6 +92,13 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   (object-position: center 25%, the "Alignment pass" block: the centre cut heads off portraits); emblems drawn whole
   (contain) stay centred. Checked by eye and by a layout audit of 59 pages at 390/768/1024/1280 px and in Kids mode
   (scratchpad audit/layout-audit.ps1: anything wider than the page, overlapping or cut text, broken pictures).
+  WCAG 2.2 AA pass (6 Nov 2026): scripts/tools/a11y-audit.js runs axe-core (EPOCH_AXE or EPOCH_PW: a folder with axe-core;
+  [--modes=light,dark,kids] [--phone] [--json=] [paths]) over lib.js KINDS. Fixed: labels drawn at partial opacity in the
+  light theme (2.2-4.2:1) drawn whole, links among text underlined (.gl-list dt, .inv-list, .st-ties, method notes),
+  maps holding links are role="group" not "img" (MapSvg, connections-map.js), picture credit links 24 px tall, essay
+  tables focusable regions named by their caption, Galician-Portuguese tagged gl. Left as they are: the /centuries/ bar
+  (narrow columns; the same centuries are linked full size below it, the 2.5.8 equivalent exception) and lang="wdt"
+  (Wendat: a registered subtag that axe's list lacks). The block is the "WCAG 2.2 AA" section near the end of shared.css.
   Form fields take --field-border (3:1 against the page in both themes and Kids mode; --border, 1.4-1.7:1, is for
   cards and rules): one rule at the end of the file sets it on every bordered input, select and textarea not focused.
   Layout shift (CLS) fixed Oct 2026, keep it so: nothing above content may arrive late. The atlas's region buttons are
@@ -1041,6 +1048,16 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   aligned to those lines, and lines it lacked translated. Its Hanuman Chalisa, Dle Yaman, Delphic hymns, Ninkasi and
   Kumbaya found no edition (Ninkasi's is ETCSL's, under the Oxford project's copyright; Kumbaya's versions on
   Wikipedia are cited to videos) and stay without words.
+- Lyrics from Genius (6 Nov 2026, the user: "they have an embed option"): for a song whose words the site does not print
+  (in copyright, or public domain with no free edition; never a WITHHELD one), Genius's official embed, which Genius serves
+  under its own licence: the site copies no words. scripts/songs/genius-find.js searches the official API (token in
+  GENIUS_TOKEN or %LOCALAPPDATA%epoch-toolsgenius-token.txt, never in the repository; the public search and the embed
+  script sit behind a bot wall that headless browsers do not pass), accepting a match only where the title and a writer or
+  performer agree; the editor chooses the rest (the song itself in its own words: no namesakes, instrumentals or
+  adaptations); scripts/songs/genius-confirm.js checks each choice has complete lyrics and writes scripts/songs/genius.tsv
+  (slug, id, page, title). make-data.js gives the song genius {id, url, title}; its page shows "Show the lyrics from
+  Genius" (.sg-genius), and songs.js builds the embed only on that press, in a same-origin srcdoc frame (the embed writes
+  into its page as it loads) that grows to the lyrics. 91 songs (6 Nov 2026); the ancient texts have no Genius page.
 - Performances: scripts/songs/videos.tsv (slug, id, channel, note; 216 songs; 18 without one, among them Kumbaya,
   Ninkasi and anthems with no fitting channel): the
   performers' own channels, "- Topic" releases, choirs, ensembles, institutions and old records, never compilations
@@ -1083,7 +1100,7 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   <rows.tsv> <videos.tsv> [--write] copies the drafts, appends the rows and performances, merges text fixes and adds the
   gaps to make-data.js (GAPS, WITHHELD); the editor's decisions are scripts/songs/a10/decisions.json (Ja nus hons pris
   dropped: its article is the king's; seven songs without words; the Ghost Dance songs withheld as sacred songs of a
-  ceremony held in private, and given no performance). 31 have their words. make-entries.js HASENTRY skips a song whose
+  ceremony held in private, and given no performance; printed since 6 Nov 2026, see below). 31 have their words. make-entries.js HASENTRY skips a song whose
   entry exists under another spelling (Enūma Eliš: enuma-elish). Six of the list were already on the site (the scored
   lists hold titles, not slugs), and a seventh, İstiklal Marşı, was found after the release under another slug
   (istiklal-marsi, "Independence March"): removed, its link row pointed at the older entry. merge-wave.js now refuses a
@@ -1096,7 +1113,10 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   Yatathanna dropped (its article says nothing of the words), Ethiopia, Be Happy and Alouette never drafted (a
   three-sentence article, a disambiguation page), twelve without words (no clean free edition: Japji Sahib's 1909
   English carries Macauliffe's footnote numbers; Taba Naba's author is claimed; the Railroad's later verses are undated),
-  Old Folks at Home withheld (its only free text is in minstrel dialect with a slur in the chorus), Take Me Out to the
+  Old Folks at Home and Oh! Susanna printed as the historical record (the user, 6 Nov 2026: "that is what they actually
+  said, and people should know"): Foster's minstrel-dialect words with their slurs, a note above them (make-data.js
+  CAUTION, .sg-caution), kids: no; Oh! Susanna from the 1848 edition's verses 2-4 (its first verse is printed only under
+  the music). Take Me Out to the
   Ball Game and Pelo Telefone printed as public domain in the United States, the Song of Songs cut to two chapters.
   45 have their words; no Institute translations yet for the originals without a free English (Aogeba Tōtoshi,
   Funiculì, Torna a Surriento, Ríu Ríu Chíu, Sari Gelin, La Paloma, the Bhaja Govindam, the Tevaram …). Tools changed:
@@ -1644,7 +1664,11 @@ Institute and its register are still named where they are defined and credited (
   no for fascist, personality-cult and mass-killing regimes' songs. Thin English articles were joined by the song's own
   language edition (<slug>.<lang>.txt in the scratchpad songs3/wp). Tachanka dropped (its article is about the cart).
   make-data.js WITHHELD {slug: reason}: words in the public domain but not printed, the page saying why (the
-  Horst-Wessel-Lied, banned in Germany and Austria; the Marcha Real, an anthem without official words). 20 public-domain
+  Marcha Real, an anthem without official words; the Horst-Wessel-Lied was withheld too until 6 Nov 2026, when the user
+  asked for it, the Ghost Dance songs and Foster's minstrel songs to be printed as the historical record: make-data.js
+  CAUTION gives each a note above its words, .sg-caution; the Horst-Wessel-Lied as English Wikipedia quotes it with its
+  translation, the Ghost Dance songs as James Mooney recorded and translated them in 1896, Project Gutenberg 74335: a
+  Paiute, a Lakota and a Caddo song; fetch-texts.js noital drops Gutenberg's _italic_ marks). 20 public-domain
   texts imported (sources.tsv "# Nov 2026, third wave"), 11 translated by the Institute (translations/), 2 gaps (Heil dir
   im Siegerkranz: only parodies quoted; Battōtai). Performances only from performers' own channels, Topic releases,
   archives (Gosteleradiofond, CCTV) and choirs; none where only re-uploads exist (most North Korean songs, the Khmer Rouge

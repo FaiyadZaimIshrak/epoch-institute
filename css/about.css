@@ -1187,6 +1187,13 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .path-steps li { break-inside: avoid; }
 .path-step img { width: 22mm; height: 22mm; }
 .path-title { font-size: 22pt; }
+}
+[data-theme="light"] .footer-col-title { opacity: 1; color: var(--gold); }
+[data-theme="light"] .footer-nl-label { opacity: 1; color: var(--gold); }
+[data-theme="light"] div[data-era] > h2 { opacity: 1; color: var(--gold); }
+kbd { opacity: 1; color: var(--muted); }
+[data-theme="light"] .tih-event-desc { opacity: 1; }
+@media print {
 :root, :root[data-theme="dark"], :root[data-theme="light"] { --bg: #fff; --surface: #fff; --text: #111; --muted: #555; --gold: #6b4f12; --gold-light: #6b4f12; --border: #ccc; }
 html, body { background: #fff !important; color: #111 !important; }
 body::before, body::after { display: none !important; }

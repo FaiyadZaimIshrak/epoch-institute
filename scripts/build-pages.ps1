@@ -736,7 +736,7 @@ function MapSvg($view, [string]$inner, [string]$label, [string]$cls, [switch]$Ou
     $bg = '<path class="map-land" d="' + [EpochGeo.G]::PathData($RINGS, $BOXES, ($view[2] / 700), 0, $clip, 10) + '"/>'
     if ($Hi) { $bg += '<path class="map-land-hi" d="' + [EpochGeo.G]::PathData($Hi[0], $Hi[1], ($view[2] / 700), 0, $clip, 10) + '"/>' }
   } else { $bg = '<image href="/maps/world.svg" x="0" y="0" width="10000" height="' + (Fx $MAPH) + '"/>' }
-  return '<svg class="map' + $(if ($cls) { ' ' + $cls } else { '' }) + '" viewBox="' + $vb + '" role="img" aria-label="' + (Hx $label) + '">' + $bg + $inner + '</svg>'
+  return '<svg class="map' + $(if ($cls) { ' ' + $cls } else { '' }) + '" viewBox="' + $vb + '" role="' + $(if ($inner -match '<a ') { 'group' } else { 'img' }) + '" aria-label="' + (Hx $label) + '">' + $bg + $inner + '</svg>'
 }
 function FitView($pts, [double]$minW, [double]$aspect, [double]$pad) {   # rectangle around points, at least minW wide, w/h = aspect
   $x0 = 1e9; $y0 = 1e9; $x1 = -1e9; $y1 = -1e9
@@ -2581,10 +2581,16 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   [void]$sb.Append('<section class="sg-sec" id="story"><h2>The story</h2>' + ((@($sg['story']) | ForEach-Object { '<p>' + (SongLink ([string]$_) $songCtx) + '</p>' }) -join '') + "</section>`n")
   [void]$sb.Append('<section class="sg-sec" id="meaning"><h2>What it says</h2>' + ((@($sg['meaning']) | ForEach-Object { '<p>' + (SongLink ([string]$_) $songCtx) + '</p>' }) -join '') + "</section>`n")
   [void]$sb.Append('<section class="sg-sec" id="words"><h2>The words</h2>')
+  # a note above words printed as the historical record (make-data.js CAUTION: Foster's minstrel-stage words)
+  if ($sg['text'] -and $sg['caution']) { [void]$sb.Append('<p class="sg-caution" data-say>' + (Hx ([string]$sg['caution'])) + '</p>') }
   if ($sg['text']) { [void]$sb.Append((SongWords $sg)) }
   elseif (-not $sg['pd']) { [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are still in copyright, so they are not printed here. &#8220;What it says&#8221; above gives their theme in our own words' + $(if ($sg['video']) { ', and the performance below lets you hear them' } else { '' }) + '.</p>') }
   elseif ($sg['withheld']) { [void]$sb.Append('<p class="sg-nowords" data-say>' + (Hx ([string]$sg['withheld'])) + '</p>') }
   else { $songNoText++; [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are in the public domain, but no free, reliable edition of them has been found yet to import them from, and the Institute never types a song&#8217;s words from memory. &#8220;What it says&#8221; above tells what they are about.</p>') }
+  if ($sg['genius'] -and -not $sg['text'] -and -not $sg['withheld']) {
+    $sgG = $sg['genius']
+    [void]$sb.Append('<div class="sg-genius" data-genius="' + [int]$sgG['id'] + '"><button type="button" class="sg-genius-btn">Show the lyrics from Genius</button><p class="sg-genius-note">Genius shows the lyrics in its own frame, under its own licence: nothing loads from Genius until you press the button. <a href="' + (Hx ([string]$sgG['url'])) + '" target="_blank" rel="noopener">The song on Genius</a>.</p></div>')
+  }
   [void]$sb.Append("</section>`n</div>`n")
   $v = $sg['video']
   if ($v) {
@@ -2757,6 +2763,8 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
     '<p class="page-share-row"><button type="button" class="sp-share page-share" data-share-text="' + (Hx ($title + $(if ($title -match '[?!]$') { ' ' } else { ': ' }) + $hd['subtitle'])) + '" data-share-title="' + (Hx $title) + '" data-share-heading="Share this essay" data-share-url="' + $url + '"' + $(if ($ogImg -like '/images/og/*') { ' data-share-img="' + $ogImg + '"' } else { '' }) + '>Share</button></p></header>' + "`n")
   if ($fig) { [void]$sb.Append($fig + "`n") }
   [void]$sb.Append('<nav class="essay-toc" aria-label="Contents"><p class="essay-toc-k">Contents</p><ol>' + (($secs | ForEach-Object { '<li><a href="#' + $_.Groups[1].Value + '">' + $_.Groups[2].Value + '</a></li>' }) -join '') + "</ol></nav>`n")
+  # a table wider than the screen scrolls sideways: it takes the keyboard focus and is named by its caption (WCAG 2.1.1)
+  $main = [regex]::Replace($main, '<div class="essay-table-wrap">(\s*<table class="essay-table">\s*<caption>([^<]*)</caption>)', { param($m) '<div class="essay-table-wrap" tabindex="0" role="region" aria-label="' + $m.Groups[2].Value.Replace('"', '&quot;') + '">' + $m.Groups[1].Value })
   [void]$sb.Append('<div class="essay-body">' + "`n" + $main + "`n</div>`n")
   if ($refs) { [void]$sb.Append('<section class="essay-reading">' + "`n" + $refs + "`n</section>`n") }
   $profs = @(($hd['profiles'] -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ })

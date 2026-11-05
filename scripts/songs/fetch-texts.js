@@ -68,6 +68,7 @@ function pick(st, sel) {
   if (fl.includes('firstline')) out = out.map(s => [s[0]]);   // a block holds the original and its translation side by side
   if (fl.includes('alt0')) out = out.filter((s, i) => i % 2 === 0);   // original and translation alternate block by block
   if (fl.includes('alt1')) out = out.filter((s, i) => i % 2 === 1);
+  if (fl.includes('noital')) out = out.map(s => s.map(l => l.replace(/_([^_]+)_/g, '$1')));   // Gutenberg's _italic_ marks
   if (fl.includes('nodash')) out = out.map(s => s.map(l => l.replace(/^[—–]\s*/, '')));   // a chorus set off by dashes
   if (fl.includes('nobis')) out = out.map(s => s.map(l => l.replace(/\s*('’bis’'|\(bis\))/g, '').trim()).filter(l => !/^'?’?refrain’?'?$/i.test(l))).filter(s => s.length);   // "bis" (sung twice) and refrain cues
   if (fl.includes('nolabels')) out = out.map(s => s.filter(l => !/^((\d+\s+)?verse|chorus|chor|refrain|estribillo|coro|hui|huryeom|후렴|كورال|\d+\s*절|[\d٠-٩]+|\d+\.?ª\.?|[IVX]+)[,:.]?$/i.test(l.trim()))).filter(s => s.length);

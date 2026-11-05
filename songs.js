@@ -24,6 +24,21 @@
       try { f.focus(); } catch (e) {}
     });
   });
+  // the lyrics from Genius (songs whose words are not printed here): Genius's official embed, loaded only when asked, in a
+  // frame of the page's own origin so that its script may write as it loads; the frame grows to the lyrics
+  $$('.sg-genius').forEach(function (box) {
+    var b = box.querySelector('.sg-genius-btn'); if (!b) return;
+    b.addEventListener('click', function () {
+      var id = parseInt(box.getAttribute('data-genius'), 10); if (!id) return;
+      var f = document.createElement('iframe'); f.className = 'sg-genius-frame'; f.title = 'Lyrics from Genius';
+      f.srcdoc = '<!doctype html><meta charset="utf-8"><base target="_blank"><style>body{margin:0;font:16px/1.5 Georgia,serif}</style>' +
+        '<div id="rg_embed_link_' + id + '" class="rg_embed_link" data-song-id="' + id + '">Loading the lyrics from Genius&hellip;</div>' +
+        '<script crossorigin src="https://genius.com/songs/' + id + '/embed.js"></script>';
+      b.replaceWith(f);
+      var n = 0, fit = function () { try { var h = f.contentDocument && f.contentDocument.documentElement.scrollHeight; if (h) f.style.height = h + 'px'; } catch (e) {} if (++n < 40) setTimeout(fit, 500); };
+      f.addEventListener('load', fit);
+    });
+  });
   var shows = $$('.sg-show button');
   if (shows.length) {
     var hidden = get('epoch-song-cols', {}) || {};

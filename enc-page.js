@@ -88,7 +88,7 @@
     sec.hidden = false;
     var io = new IntersectionObserver(function (es) {
       if (!es[0].isIntersecting) return; io.disconnect();
-      loadScript('/connections-map.js?v=12').then(function () { return ConnectionsMap.load(); }).then(function () {
+      loadScript('/connections-map.js?v=14').then(function () { return ConnectionsMap.load(); }).then(function () {
         var id = map.getAttribute('data-id');
         if (!ConnectionsMap.degree(id)) { sec.hidden = true; return; }
         ConnectionsMap.render(map, id, { compact: true, onSelect: function (o) { var n = ConnectionsMap.get(o); location.href = n && n.p ? n.p : '/state/' + o; } });
