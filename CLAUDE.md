@@ -372,10 +372,21 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   "who lived when" chart of the 40 best known (lifespans bright, reigns and "fl." pale) and picture tiles by region.
   people-data.js ([slug, name, dates, first, last, kind, region, picture, weight]; ?v= written into /people/) feeds
   people.js, the chart tool on /people/ (region, from/to century, with a picture; kept in the address).
-  People by region (/people/<region>, approved 3 Nov 2026) waits for an audit of PersonRegion: a first build (4 Nov 2026)
-  put Saint Nicholas and Wilfrid in the Americas, Louis Philippe in Oceania, Euclid, Crassus and Galen in the Islamic
-  Caliphates and Mani and Athanasius in Sub-Saharan Africa (the mentioning profiles' regions mislead): set such people in
-  scripts/entry-regions.tsv first, then restore the pages (the code is in git history, 4 Nov 2026).
+  People by region (/people/<region>, 6 Nov 2026): the nine regions' pages (PRegSlug: ancient-near-east,
+  egypt-and-north-africa … oceania; the best known, then century by century; a region with 20 dated people), "By region"
+  cards on /people/, the century pages' region headings linking them. First the audit of PersonRegion (a first build of
+  4 Nov had put Saint Nicholas and Wilfrid in the Americas, Louis Philippe in Oceania, Galen in the Islamic Caliphates
+  and Mani in Sub-Saharan Africa): scripts/tools/person-regions-wd.js looks every person up on Wikidata (the article's
+  item, accepted only when a human whose years agree), places their birth, death and work places by coordinates on
+  maps/globe-land.js (overseas territories by where they lie: Martinique is the Americas, Raiatea Oceania), maps the
+  country to a region by the register (most of its states, those ended before 640 apart) and lists the people whose
+  region is none of those; scripts/tools/person-regions-text.js reads the first sentences of the people Wikidata could
+  not place ("a Persian prophet"). Five agents decided the 2,046 listed by one principle (a person belongs where their
+  life's significance lies: a conquistador with the Americas, Richelieu with Europe) and the editor read every change
+  between regions and set the groups by their profiles' regions (Ayyubid and Mamluk sultans: the Islamic Caliphates, as
+  their profiles; the Hellenistic kings of Anatolia: the Ancient Near East, as Pontus and Lydia; the Fatimids and Cairo's
+  historians: Egypt and North Africa): 1,252 rows in scripts/entry-regions.tsv (386 corrected, 866 placed that had no
+  region).
 - `maps/atlas-data.js`, `maps/basemap.js`, `maps/world.svg` (see "Atlas and maps"), their ?v= stamped into /atlas.
 - The `<!-- build:... -->` blocks of encyclopedia/index (with the Discover row: 8 notable entries with pictures, one
   kind each, re-picked daily by a small inline script from 10 per kind), state/index, today-in-history/index,

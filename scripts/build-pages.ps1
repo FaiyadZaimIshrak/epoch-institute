@@ -3318,6 +3318,9 @@ function LifeChart($rows, [string]$caption) {
   return $h + '</ol><figcaption>' + $caption + '</figcaption></figure>'
 }
 $PCINFO = @{}
+# the regions with a people page (/people/<region>, below), so the century pages can link them
+$PREGS = @($BREG | Where-Object { $rr = $_; @($PPL | Where-Object { $_.r -eq $rr -and $_.c }).Count -ge 20 })
+function PRegSlug([string]$r) { (($r -replace '&', 'and').ToLowerInvariant() -replace '[^a-z0-9]+', '-').Trim('-') }
 for ($pi3 = 0; $pi3 -lt $PCENTS.Count; $pi3++) {
   $c = $PCENTS[$pi3]; $slug = CenturySlug $c; $path = '/people/' + $slug; $ct = CentTitle $c
   $lst = @($PBYC[$c] | Sort-Object @{ e = { $_.sc }; Descending = $true }, @{ e = { $_.e.i } })
@@ -3332,7 +3335,7 @@ for ($pi3 = 0; $pi3 -lt $PCENTS.Count; $pi3++) {
   if ($ch.Count -ge 5) { [void]$sb.Append('<section><h2 class="ref-sec-title">Who lived when</h2>' + (LifeChart $ch ('The ' + $ch.Count + ' best-known people of the century with dates. Bright bars: lifespans; pale bars: reigns or years of activity. <a href="/people/">Draw your own chart &rarr;</a>')) + "</section>`n") }
   foreach ($rr in @($BREG) + @('')) {
     $grp = @($lst | Where-Object { $(if ($rr) { $_.r -eq $rr } else { -not $_.r }) }); if (-not $grp.Count) { continue }
-    [void]$sb.Append('<section class="ref-group"><h2>' + $(if ($rr) { Hx $rr } else { 'Other people of the century' }) + ' <span class="n">' + $grp.Count + '</span></h2><ul class="enc-seealso">' + (($grp | Select-Object -First 24 | ForEach-Object { YrTile $_.e $_.e.dates }) -join '') + '</ul>')
+    [void]$sb.Append('<section class="ref-group"><h2>' + $(if ($rr -and $PREGS -contains $rr) { '<a href="/people/' + (PRegSlug $rr) + '">' + (Hx $rr) + '</a>' } elseif ($rr) { Hx $rr } else { 'Other people of the century' }) + ' <span class="n">' + $grp.Count + '</span></h2><ul class="enc-seealso">' + (($grp | Select-Object -First 24 | ForEach-Object { YrTile $_.e $_.e.dates }) -join '') + '</ul>')
     if ($grp.Count -gt 24) { [void]$sb.Append('<details class="cen-all"><summary>All ' + $grp.Count + '</summary><ul class="ref-cent-list cen-states">' + (($grp | Select-Object -Skip 24 | ForEach-Object { '<li><a href="/encyclopedia/' + $_.e.slug + '">' + (Hx $_.e.name) + ' <span>' + (Hx $_.e.dates) + '</span></a></li>' }) -join '') + '</ul></details>') }
     [void]$sb.Append("</section>`n")
   }
@@ -3343,6 +3346,44 @@ for ($pi3 = 0; $pi3 -lt $PCENTS.Count; $pi3++) {
   [void]$sb.Append((CiteBox "People of the $ct" ($SITE + $path) 'The Epoch Institute Encyclopedia') + "`n</div>`n</main>`n")
   $title = "People of the $($ct -replace ' century', ' Century'): $($lst.Count.ToString('N0')) Historical Figures — The Epoch Institute"
   $desc = [EpochBuild.W]::Summary("$($lst.Count.ToString('N0')) people of the $c ($(CentDecades $c)) by region, from $(ProseList @($PCINFO[$c].top)) to the less known, with a chart of who lived when.", 155)
+  $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'people'; body = $sb.ToString() })
+}
+# people by region (/people/<region>): the same people by the region of their lives (PersonRegion, with the corrections of
+# scripts/entry-regions.tsv, audited against Wikidata's places of birth, death and work: scripts/tools/person-regions-wd.js),
+# the best known first, then century by century
+$PREGNAME = @{ 'Ancient Near East' = 'the Ancient Near East'; 'Egypt & North Africa' = 'Egypt and North Africa'; 'Sub-Saharan Africa' = 'Sub-Saharan Africa'; 'Europe' = 'Europe'
+  'Islamic Caliphates & Middle East' = 'the Islamic Caliphates and the Middle East'; 'Central & East Asia' = 'Central and East Asia'; 'South & Southeast Asia' = 'South and Southeast Asia'; 'Americas' = 'the Americas'; 'Oceania' = 'Oceania' }
+function PRegName([string]$r) { if ($PREGNAME.ContainsKey($r)) { $PREGNAME[$r] } else { $r } }
+$PCORDER = @{}; for ($i = 0; $i -lt $CENTPAGES.Count; $i++) { $PCORDER[$CENTPAGES[$i]] = $i }
+$PRINFO = @{}
+$PREGBAR = '<nav class="ref-letters ref-regions" aria-label="Regions">' + (($PREGS | ForEach-Object { '<a href="/people/' + (PRegSlug $_) + '"__CUR_' + (PRegSlug $_) + '__>' + (Hx $_) + '</a>' }) -join '') + '</nav>'
+for ($ri3 = 0; $ri3 -lt $PREGS.Count; $ri3++) {
+  $rg = $PREGS[$ri3]; $rslug = PRegSlug $rg; $path = '/people/' + $rslug; $rname = PRegName $rg
+  $lst = @($PPL | Where-Object { $_.r -eq $rg -and $_.c -and $PCORDER.ContainsKey($_.c) } | Sort-Object @{ e = { $_.sc }; Descending = $true }, @{ e = { $_.e.i } })
+  $cs = @($lst | ForEach-Object { $_.c } | Select-Object -Unique | Sort-Object { $PCORDER[$_] })
+  $PRINFO[$rg] = @{ n = $lst.Count; top = @($lst | Select-Object -First 3 | ForEach-Object { $_.e.name }); pic = @($lst | Where-Object { $_.e.img } | Select-Object -First 1) }
+  $crumb = Crumbs @(@('Home', '/'), @('People', '/people/'), @($rg, $null))
+  $sb = New-Object Text.StringBuilder(120000)
+  [void]$sb.Append('<main id="main" class="pp-page ref-page">' + "`n<div class=`"pp-wrap`">`n" + $crumb[0] + "`n")
+  $cap = $rname.Substring(0, 1).ToUpperInvariant() + $rname.Substring(1)
+  [void]$sb.Append('<header class="ref-head cen-head"><p class="cty-kicker">People · ' + (Hx $rg) + '</p><h1 class="research-title">People of ' + (Hx $rname) + '</h1><p class="ref-lede">' + $lst.Count.ToString('N0') + ' people of the encyclopedia whose lives belong to ' + (Hx $rname) + ', from the ' + (Hx $cs[0]) + ' to the ' + (Hx $cs[-1]) + ': ' + (Hx (ProseList @($PRINFO[$rg].top))) + ' first among them, then century by century.</p></header>' + "`n")
+  [void]$sb.Append(($PREGBAR -replace ('__CUR_' + [regex]::Escape($rslug) + '__'), ' aria-current="page"' -replace '__CUR_[a-z0-9-]+__', '') + "`n")
+  [void]$sb.Append('<section><h2 class="ref-sec-title">The best known</h2><ul class="enc-seealso">' + (($lst | Where-Object { $_.e.img } | Select-Object -First 12 | ForEach-Object { YrTile $_.e $_.e.dates }) -join '') + "</ul></section>`n")
+  foreach ($c in $cs) {
+    $grp = @($lst | Where-Object { $_.c -eq $c })
+    [void]$sb.Append('<section class="ref-group"><h2>' + $(if ($PBYC.ContainsKey($c) -and $PCENTS -contains $c) { '<a href="/people/' + (CenturySlug $c) + '">' + (Hx (CentTitle $c)) + '</a>' } else { Hx (CentTitle $c) }) + ' <span class="n">' + $grp.Count + '</span></h2><ul class="enc-seealso">' + (($grp | Select-Object -First 12 | ForEach-Object { YrTile $_.e $_.e.dates }) -join '') + '</ul>')
+    if ($grp.Count -gt 12) { [void]$sb.Append('<details class="cen-all"><summary>All ' + $grp.Count + '</summary><ul class="ref-cent-list cen-states">' + (($grp | Select-Object -Skip 12 | ForEach-Object { '<li><a href="/encyclopedia/' + $_.e.slug + '">' + (Hx $_.e.name) + ' <span>' + (Hx $_.e.dates) + '</span></a></li>' }) -join '') + '</ul></details>') }
+    [void]$sb.Append("</section>`n")
+  }
+  [void]$sb.Append('<p class="cty-note">How a person is placed: by the region of the state, empire, religion and language profiles that name them (else of the state histories, cultures or movements), checked against the places of their birth, death and work, with the cases where the two disagree decided one by one.</p>' + "`n")
+  $pv = if ($ri3 -gt 0) { $PREGS[$ri3 - 1] } else { $null }; $nx = if ($ri3 -lt $PREGS.Count - 1) { $PREGS[$ri3 + 1] } else { $null }
+  [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other regions">' + $(if ($pv) { '<a class="prev" rel="prev" href="/people/' + (PRegSlug $pv) + '"><span class="lbl">&larr; Previous region</span><span class="nm">' + (Hx $pv) + '</span></a>' } else { '' }) +
+    $(if ($nx) { '<a class="next" rel="next" href="/people/' + (PRegSlug $nx) + '"><span class="lbl">Next region &rarr;</span><span class="nm">' + (Hx $nx) + '</span></a>' } else { '' }) + "</nav>`n")
+  [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/people/">All people &rarr;</a></p>' + "`n")
+  [void]$sb.Append((CiteBox "People of $cap" ($SITE + $path) 'The Epoch Institute Encyclopedia') + "`n</div>`n</main>`n")
+  $title = "People of $cap in History: $($lst.Count.ToString('N0')) Figures — The Epoch Institute"
+  $desc = [EpochBuild.W]::Summary("$($lst.Count.ToString('N0')) people of $rname in history, from $(ProseList @($PRINFO[$rg].top)) to the less known, century by century from the $($cs[0]) to the $($cs[-1]).", 155)
   $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
   Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'people'; body = $sb.ToString() })
 }
@@ -3365,6 +3406,7 @@ $sb = New-Object Text.StringBuilder(40000)
 $opts = ($PCENTS | ForEach-Object { $r0 = CentRange $_; '<option value="' + (CenturySlug $_) + '" data-a="' + $r0[0] + '" data-b="' + $r0[1] + '">' + (Hx (CentTitle $_)) + '</option>' }) -join ''
 [void]$sb.Append('<section aria-labelledby="pp-tool-t"><h2 class="ref-sec-title" id="pp-tool-t">Who lived when</h2><form class="srch-row pp-form" id="pp-form"><label>Region <select id="pp-r"><option value="-1">All regions</option>' + (($BREG | ForEach-Object { '<option value="' + $BREGIX[$_] + '">' + (Hx $_) + '</option>' }) -join '') + '</select></label><label>From <select id="pp-from">' + $opts + '</select></label><label>To <select id="pp-to">' + $opts + '</select></label><label class="srch-check"><input type="checkbox" id="pp-pic"> With a picture</label></form>' +
   '<p class="pp-status" id="pp-status" aria-live="polite">The chart needs JavaScript; the centuries below list everyone.</p><div id="pp-out"></div></section>' + "`n")
+[void]$sb.Append('<section><h2 class="ref-sec-title">By region</h2><ul class="cen-cards">' + (($PREGS | ForEach-Object { $ii = $PRINFO[$_]; '<li><a href="/people/' + (PRegSlug $_) + '"><span class="cen-c-t">' + (Hx $_) + '</span><span class="cen-c-n">' + $ii.n.ToString('N0') + ' people</span><span class="cen-c-p">' + (Hx ($ii.top -join ' · ')) + '</span></a></li>' }) -join '') + "</ul></section>`n")
 [void]$sb.Append('<section><h2 class="ref-sec-title">By century</h2><ul class="cen-cards">' + (($PCENTS | ForEach-Object { $ii = $PCINFO[$_]; '<li><a href="/people/' + (CenturySlug $_) + '"><span class="cen-c-t">' + (Hx (CentTitle $_)) + '</span><span class="cen-c-d">' + (Hx (CentDecades $_)) + '</span><span class="cen-c-n">' + $ii.n.ToString('N0') + ' people</span><span class="cen-c-p">' + (Hx ($ii.top -join ' · ')) + '</span></a></li>' }) -join '') + "</ul></section>`n")
 [void]$sb.Append("<script src=`"/people-data.js?v=$PEOPLEV`" defer></script>`n<script src=`"/people.js?v=2`" defer></script>`n</div>`n</main>`n")
 $title = 'People in History: ' + $PPL.Count.ToString('N0') + ' Rulers, Thinkers and Explorers — The Epoch Institute'
