@@ -822,8 +822,9 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   (epoch-games daily-<day> {m: answers}, resumed after a reload) with a streak (daily-streak {n, last}). The finish
   card shows 🟩🟥 squares, "Daily Ten #N" (#1 = 26 Oct 2026), the countdown to the next one, Share
   ("Epoch Daily Ten #N: 8/10" + squares + link) and the newsletter line. Every other game's finish card has Share.
-- Picture Puzzle: the GAME_PUZZLES sets in order (six: Wonders of the World, Treasures, Famous Faces, Art Through the
-  Ages, Great Cities, Sacred Places), 3×3/4×4/5×5, a square crop drawn on a canvas, a deal in which no
+- Picture Puzzle: the GAME_PUZZLES sets in order (nine: Wonders of the World, Treasures, Famous Faces, Art Through the
+  Ages, Great Cities, Sacred Places, Great Buildings, and since 6 Nov 2026 Ships and Voyages and Statues and Sculpture, twelve
+  each, chosen by eye on square crops as the puzzle cuts them: 30% from the top), 3×3/4×4/5×5, a square crop drawn on a canvas, a deal in which no
   tile starts in place, swaps by tap, drag or keyboard, tiles in place lock, Peek; solved pictures (pz-solved) fill
   a strip.
 - Word Hunt (16 themes, the Kids corner's 16: Egypt, Greece, Rome, knights, Vikings, explorers, inventions, buildings,
@@ -1169,6 +1170,8 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   ("Great speeches" on the song page) and the speech the song ("In song"): $SPSONGS and $SGSPEECH in the builder, names
   compared whole (62 songs: Luther's hymns, Gandhi's bhajans, Mandela's songs of the struggle, Mao's anthems …). Each country
   history lists "Songs from here" ($SONGCTY: the same reading of a song's place as data/songs-by-country.json for the atlas).
+  It also lists "Social ladders" ($SOCCTY, 6 Nov 2026): scripts/society-countries.tsv (ladder slug TAB the present-day
+  countries of its heartland, | between, as country-page slugs; the builder STOPS on a ladder or country without a page).
 - Wiring: menu Themes → Societies and ideas, footer, Research Hub (Read: nine cards, three columns), search
   (SEARCH_PAGES kind song, "X lyrics", "X meaning"), shelf and My Passport kind, sitemap, llms.txt, poster
   page-songs.jpg (make-posters.js page "songs"), deploy.sh GENERATED, split-css GENERATED, check-site FOLDERS, the

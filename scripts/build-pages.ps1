@@ -857,6 +857,20 @@ foreach ($so in @($SONGS | Sort-Object { [int]$_['year'] })) {
   if (-not $SONGCTY.ContainsKey($best)) { $SONGCTY[$best] = New-Object Collections.Generic.List[object] }
   $SONGCTY[$best].Add($so)
 }
+# the social ladders of each present-day country (scripts/society-countries.tsv: the society's heartland), for the
+# "Social ladders" chips of its history; a country without a page stops the build
+$SOCCTY = @{}
+foreach ($scL in [IO.File]::ReadAllLines("$Repo\scripts\society-countries.tsv", $U8)) {
+  if (-not $scL -or $scL.StartsWith('#')) { continue }; $scC = $scL.Split("`t")
+  $scF = "$Repo\scripts\societies\$($scC[0]).txt"; if (-not (Test-Path $scF)) { throw "society-countries.tsv: no ladder $($scC[0])" }
+  $scT = [IO.File]::ReadAllText($scF, $U8)
+  $scN = [regex]::Match($scT, '(?m)^name:\s*(.+?)\s*$').Groups[1].Value
+  $scYr = [int][regex]::Match($scT, '(?m)^year:\s*(-?\d+)').Groups[1].Value
+  foreach ($scY in $scC[1].Split('|')) {
+    if (-not $CPAGE.ContainsKey($scY)) { throw "society-countries.tsv: no country page for $scY" }
+    if (-not $SOCCTY.ContainsKey($scY)) { $SOCCTY[$scY] = New-Object Collections.Generic.List[object] }; $SOCCTY[$scY].Add(@($scC[0], $scN, $scYr))
+  }
+}
 function SongEnt([string]$n) { $k = $n.Trim().ToLowerInvariant(); if ($SONGNAME.ContainsKey($k) -and $SONGNAME[$k]) { $SONGNAME[$k] } else { '' } }
 $SONGDAY = @($SONGS | Where-Object { $_['video'] -and $_['kids'] } | Sort-Object { [int]$_['year'] }, { [string]$_['slug'] })
 $SONGBY = @{}
@@ -1667,6 +1681,7 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
   [void]$sb.Append("</ol></section>`n")
   $ents = if ($CTENT.ContainsKey($m)) { TopEntries $CTENT[$m] 12 } else { @() }
   if ($ents.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">In the encyclopedia</h2><ul class="enc-seealso">' + (($ents | ForEach-Object { EntTile $_ }) -join '') + "</ul></section>`n") }
+  if ($SOCCTY.ContainsKey($m)) { [void]$sb.Append('<section><h2 class="ref-sec-title">Social ladders</h2><p class="cty-note">How societies here ranked their people, from the ruler to the enslaved:</p><ul class="cty-chips">' + (($SOCCTY[$m].ToArray() | Sort-Object { $_[2] } | ForEach-Object { '<li><a href="/societies/' + $_[0] + '">' + (Hx ([string]$_[1])) + '</a></li>' }) -join '') + "</ul></section>`n") }
   if ($SONGCTY.ContainsKey($m)) { [void]$sb.Append('<section><h2 class="ref-sec-title">Songs from here</h2><ul class="cty-chips">' + (($SONGCTY[$m].ToArray() | ForEach-Object { '<li><a href="/songs/' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + ' <span>' + (Hx (SongYear $_)) + '</span></a></li>' }) -join '') + "</ul></section>`n") }
   $nb = @{}; foreach ($n in $CLIST) { foreach ($o in @($n['mo'])) { $o = [string]$o; if ($o -and $o -ne $m -and $CPAGE.ContainsKey($o)) { $nb[$o] = 1 + [int]$nb[$o] } } }
   $nbs = @($nb.Keys | Sort-Object @{ e = { $nb[$_] }; Descending = $true }, @{ e = { $_ } } | Select-Object -First 12)

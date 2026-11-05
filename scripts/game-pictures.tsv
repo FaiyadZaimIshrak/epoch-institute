@@ -1,7 +1,7 @@
 # The pictures the games may use: chosen by eye from contact sheets of well-known entries (no maps, coins, seals,
 # documents, collages, or pictures that do not show their subject). Read by scripts/build-pages.ps1 for games-data.js.
 # slug<TAB>puzzle set (empty = Which Came First? / Guess the Year only, when the dates allow)<TAB>order in the set
-# sets: Wonders of the World | Treasures | Famous Faces | Art Through the Ages | Great Cities | Sacred Places | Great Buildings
+# sets: Wonders of the World | Treasures | Famous Faces | Art Through the Ages | Great Cities | Sacred Places | Great Buildings | Ships and Voyages | Statues and Sculpture
 napoleon	Famous Faces	1
 charles-v-holy-roman-emperor		
 timur		
@@ -636,3 +636,29 @@ leo-tolstoy
 li-hongzhang		
 lord-dalhousie		
 matthew-c-perry		
+# 6 Nov 2026: the puzzle set Ships and Voyages, chosen by eye (the ship itself filling the picture; no close-ups of a sail, sketches or maps)
+oseberg-ship	Ships and Voyages	1
+carrack	Ships and Voyages	2
+mayflower	Ships and Voyages	3
+hms-bounty	Ships and Voyages	4
+kalmar-nyckel	Ships and Voyages	5
+trireme	Ships and Voyages	6
+junk-ship	Ships and Voyages	7
+steamship	Ships and Voyages	8
+santa-maria-ship	Ships and Voyages	9
+galleon	Ships and Voyages	10
+jong-ship	Ships and Voyages	11
+outrigger-canoe	Ships and Voyages	12
+# 6 Nov 2026: the puzzle set Statues and Sculpture, chosen by eye (the work itself filling the picture, from every region; no nudes or grim subjects, as the set is in Kids mode)
+mask-of-agamemnon	Statues and Sculpture	1
+lady-of-elche	Statues and Sculpture	2
+priest-king	Statues and Sculpture	3
+chimera-of-arezzo	Statues and Sculpture	4
+statue-of-ebih-il	Statues and Sculpture	5
+mask-of-warka	Statues and Sculpture	6
+golden-madonna-of-essen	Statues and Sculpture	7
+bamberg-horseman	Statues and Sculpture	8
+mahamuni-buddha	Statues and Sculpture	9
+lady-of-baza	Statues and Sculpture	10
+descent-of-the-ganges	Statues and Sculpture	11
+bremen-roland	Statues and Sculpture	12
