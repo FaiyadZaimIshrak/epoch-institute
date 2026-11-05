@@ -2584,8 +2584,11 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   # a note above words printed as the historical record (make-data.js CAUTION: Foster's minstrel-stage words)
   if ($sg['text'] -and $sg['caution']) { [void]$sb.Append('<p class="sg-caution" data-say>' + (Hx ([string]$sg['caution'])) + '</p>') }
   if ($sg['text']) { [void]$sb.Append((SongWords $sg)) }
+  # where Genius has the lyrics (genius.tsv), the note says so instead of sending the reader away without them
+  elseif (-not $sg['pd'] -and $sg['genius']) { [void]$sb.Append('<p class="sg-nowords sg-nowords-g" data-say>The words of this song are still in copyright, so the Institute does not print them itself: Genius shows them below, under its own licence.</p>') }
   elseif (-not $sg['pd']) { [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are still in copyright, so they are not printed here. &#8220;What it says&#8221; above gives their theme in our own words' + $(if ($sg['video']) { ', and the performance below lets you hear them' } else { '' }) + '.</p>') }
   elseif ($sg['withheld']) { [void]$sb.Append('<p class="sg-nowords" data-say>' + (Hx ([string]$sg['withheld'])) + '</p>') }
+  elseif ($sg['genius']) { $songNoText++; [void]$sb.Append('<p class="sg-nowords sg-nowords-g" data-say>The words of this song are in the public domain, but no free, reliable edition has been found yet to import them from, and the Institute never types a song&#8217;s words from memory: Genius shows them below, under its own licence.</p>') }
   else { $songNoText++; [void]$sb.Append('<p class="sg-nowords" data-say>The words of this song are in the public domain, but no free, reliable edition of them has been found yet to import them from, and the Institute never types a song&#8217;s words from memory. &#8220;What it says&#8221; above tells what they are about.</p>') }
   if ($sg['genius'] -and -not $sg['text'] -and -not $sg['withheld']) {
     $sgG = $sg['genius']
@@ -2629,8 +2632,22 @@ $crumb = Crumbs @(@('Home', '/'), @('Songs in History', $null))
 $ib = New-Object Text.StringBuilder(120000)
 $songW = @($SONGS | Where-Object { $_['text'] }).Count; $songV = @($SONGS | Where-Object { $_['video'] }).Count
 $songLangs = @($SONGS | ForEach-Object { @($_['langs']) | ForEach-Object { [string]$_['code'] } } | Sort-Object -Unique).Count
+$songG = @($SONGS | Where-Object { -not $_['text'] -and $_['genius'] -and -not $_['withheld'] }).Count
+$songNoneC = @($SONGS | Where-Object { -not $_['text'] -and -not $_['genius'] -and -not $_['pd'] }).Count
+$songNoneP = @($SONGS | Where-Object { -not $_['text'] -and -not $_['genius'] -and $_['pd'] -and -not $_['withheld'] }).Count
+$songHeldN = @($SONGS | Where-Object { -not $_['text'] -and $_['withheld'] }).Count
+$songNone = $songNoneC + $songNoneP + $songHeldN
+$songNoneParts = New-Object Collections.Generic.List[string]
+if ($songNoneC) { $songNoneParts.Add([string]$songNoneC + ' still in copyright') }
+if ($songNoneP) { $songNoneParts.Add([string]$songNoneP + ' in the public domain with no free edition found') }
+if ($songHeldN) { $songNoneParts.Add([string]$songHeldN + ' withheld, the page saying why') }
+# the words counted for the index intro: printed here (imported from free editions), shown by Genius's embed, or not yet
+$songNoneTxt = $(if ($songNone) { 'The other ' + $songNone + ' have no words here yet (' + ($songNoneParts -join ', ') + '). ' } else { '' })
 [void]$ib.Append('<main id="main" class="sg-page sg-index ref-page">' + "`n<div class=`"sg-wrap`">`n" + $crumb[0] + "`n")
-[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Songs in History</h1><p class="ref-lede">' + $SONGS.Count + ' songs that people have sung and handed down, in ' + $songLangs + ' languages, from a Sumerian hymn to the goddess of beer, copied about 1800 BCE, to songs of the last years of apartheid and of the Cold War. Each gives who made it, where and in what language, its story, what it says and the songs it led to. ' + $songW + ' carry their words: in the original and, for the songs not in English, romanized and translated line by line. ' + $songV + ' have a performance to listen to.</p></header>' + "`n")
+[void]$ib.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Songs in History</h1><p class="ref-lede">' + $SONGS.Count + ' songs that people have sung and handed down, in ' + $songLangs + ' languages, from a Sumerian hymn to the goddess of beer, copied about 1800 BCE, to songs of the last years of apartheid and of the Cold War. Each gives who made it, where and in what language, its story, what it says and the songs it led to.</p>' +
+  '<p class="ref-lede sg-lede-words">The words of <b>' + $songW + '</b> are printed here, imported from free editions and never typed: in the original and, for the songs not in English, romanized and translated line by line. For <b>' + $songG + '</b> more, still in copyright or with no free edition yet, Genius shows the lyrics at the press of a button, under its own licence. ' +
+  $songNoneTxt +
+  '<b>' + $songV + '</b> have a performance to listen to.</p></header>' + "`n")
 # filters: words in the name, type, era, region, with words, with a performance (songs.js; without it every song shows)
 [void]$ib.Append('<form class="sg-filters" role="search" aria-label="Find a song" onsubmit="return false"><label class="sg-f-q"><span class="sr-only">Find a song</span><input type="search" id="sg-q" placeholder="Find a song, a language, a place…" autocomplete="off"></label>' +
   '<div class="sg-f-types" role="group" aria-label="Type of song"><button type="button" class="sg-f-type" data-t="" aria-pressed="true">All <span>' + $SONGS.Count + '</span></button>' +

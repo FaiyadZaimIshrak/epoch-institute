@@ -25,17 +25,41 @@
     });
   });
   // the lyrics from Genius (songs whose words are not printed here): Genius's official embed, loaded only when asked, in a
-  // frame of the page's own origin so that its script may write as it loads; the frame grows to the lyrics
+  // frame of the page's own origin so that its script may write as it loads; the frame grows to the lyrics. The frame
+  // wears the site's own colours and fonts (read from the page's tokens, so both themes and Kids mode), restyled again
+  // when the reader switches theme or Kids mode; Genius's name and its link to the song stay as they are.
+  var gFrames = [];
+  function gTheme() {
+    var cs = getComputedStyle(document.documentElement), v = function (k) { return cs.getPropertyValue(k).trim(); };
+    var face = function (fam, file, w, style) { return '@font-face{font-family:"' + fam + '";font-style:' + (style || 'normal') + ';font-weight:' + w + ';font-display:swap;src:url(/fonts/' + file + '.woff2) format("woff2")}'; };
+    return face('Crimson Pro', 'crimson-pro-normal-latin', '200 900') + face('Crimson Pro', 'crimson-pro-italic-latin', '200 900', 'italic') + face('Cinzel', 'cinzel-normal-latin', '400 900') +
+      face('Nunito', 'nunito-normal-latin', '200 1000') + face('Baloo 2', 'baloo-2-latin', '400 800') +
+      'html,body{margin:0;padding:0;background:' + v('--surface') + ';color:' + v('--text') + ';font-family:' + v('--font-text') + ';font-size:18px;line-height:1.65}' +
+      'body{padding:18px 22px}' +
+      // every element of the embed: no backgrounds, borders or colours of its own (the :not(#ep) lifts these over the embed's own rules)
+      'body *:not(#ep){background:transparent!important;background-image:none!important;color:inherit!important;border-color:' + v('--border') + '!important;box-shadow:none!important;text-shadow:none!important;font-family:inherit!important}' +
+      'body a:not(#ep),body a:not(#ep) *{color:' + v('--gold-light') + '!important;text-decoration-color:' + v('--gold') + '!important}' +
+      'body h1:not(#ep),body h2:not(#ep),body h3:not(#ep),body [class*="title"]:not(#ep),body [class*="header"]:not(#ep) a{font-family:' + v('--font-display') + '!important;color:' + v('--gold') + '!important;letter-spacing:.02em}' +
+      'body [class*="header"]:not(#ep),body [class*="footer"]:not(#ep){border-color:' + v('--border') + '!important;font-family:' + v('--font-ui') + '!important;font-size:14px!important;color:' + v('--muted') + '!important}' +
+      'body img:not(#ep){max-width:72px!important;height:auto!important;border-radius:6px}' +
+      'body hr:not(#ep){border:0!important;border-top:1px solid ' + v('--border') + '!important}';
+  }
+  function gPaint(f) { try { var d = f.contentDocument; if (!d || !d.head) return; var s = d.getElementById('ep-theme'); if (!s) { s = d.createElement('style'); s.id = 'ep-theme'; } s.textContent = gTheme(); d.head.appendChild(s);
+    // the loading line goes once the embed has drawn beside it (kept if the embed writes into it instead)
+    var l = d.querySelector('.rg_embed_link'); if (l && l.getAttribute('data-ep-wait') && l.textContent === l.getAttribute('data-ep-wait') && [].some.call(d.body.children, function (c) { return c !== l && !/^(SCRIPT|STYLE|LINK)$/.test(c.tagName); })) l.hidden = true;
+    f.style.background = getComputedStyle(document.documentElement).getPropertyValue('--surface'); } catch (e) {} }
+  new MutationObserver(function () { gFrames.forEach(gPaint); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-kids'] });
   $$('.sg-genius').forEach(function (box) {
     var b = box.querySelector('.sg-genius-btn'); if (!b) return;
     b.addEventListener('click', function () {
       var id = parseInt(box.getAttribute('data-genius'), 10); if (!id) return;
       var f = document.createElement('iframe'); f.className = 'sg-genius-frame'; f.title = 'Lyrics from Genius';
-      f.srcdoc = '<!doctype html><meta charset="utf-8"><base target="_blank"><style>body{margin:0;font:16px/1.5 Georgia,serif}</style>' +
-        '<div id="rg_embed_link_' + id + '" class="rg_embed_link" data-song-id="' + id + '">Loading the lyrics from Genius&hellip;</div>' +
-        '<script crossorigin src="https://genius.com/songs/' + id + '/embed.js"></script>';
-      b.replaceWith(f);
-      var n = 0, fit = function () { try { var h = f.contentDocument && f.contentDocument.documentElement.scrollHeight; if (h) f.style.height = h + 'px'; } catch (e) {} if (++n < 40) setTimeout(fit, 500); };
+      f.srcdoc = '<!doctype html><html><head><meta charset="utf-8"><base target="_blank"><style id="ep-theme">' + gTheme() + '</style></head><body>' +
+        '<div id="rg_embed_link_' + id + '" class="rg_embed_link" data-song-id="' + id + '" data-ep-wait="Loading the lyrics from Genius…">Loading the lyrics from Genius&hellip;</div>' +
+        '<script crossorigin src="https://genius.com/songs/' + id + '/embed.js"></script></body></html>';
+      b.replaceWith(f); gFrames.push(f);
+      // the embed adds its own styles as it loads: the site's are put back after them, and the frame grows to the lyrics
+      var n = 0, fit = function () { gPaint(f); try { var h = f.contentDocument && f.contentDocument.body.scrollHeight; if (h) f.style.height = (h + 2) + 'px'; } catch (e) {} if (++n < 40) setTimeout(fit, 500); };
       f.addEventListener('load', fit);
     });
   });

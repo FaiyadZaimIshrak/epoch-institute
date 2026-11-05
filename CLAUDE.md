@@ -1058,6 +1058,10 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   (slug, id, page, title). make-data.js gives the song genius {id, url, title}; its page shows "Show the lyrics from
   Genius" (.sg-genius), and songs.js builds the embed only on that press, in a same-origin srcdoc frame (the embed writes
   into its page as it loads) that grows to the lyrics. 91 songs (6 Nov 2026); the ancient texts have no Genius page.
+  The frame wears the site's look (gTheme: the page's tokens and fonts, every embed element's own colours and
+  backgrounds overridden, gold links and titles), repainted when the theme or Kids mode changes; the "Loading" line is
+  hidden once the embed has drawn beside it. Such a song's note under "The words" says Genius shows them below
+  (.sg-nowords-g), and the /songs/ intro counts the words printed, shown by Genius and still missing (by reason).
 - Performances: scripts/songs/videos.tsv (slug, id, channel, note; 216 songs; 18 without one, among them Kumbaya,
   Ninkasi and anthems with no fitting channel): the
   performers' own channels, "- Topic" releases, choirs, ensembles, institutions and old records, never compilations

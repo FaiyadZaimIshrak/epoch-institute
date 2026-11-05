@@ -2012,7 +2012,7 @@ svg.map-here { cursor: crosshair; }
 .sg-genius-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .sg-genius-note { margin: 8px 0 0 !important; font-family: var(--font-ui); font-size: 13px !important; line-height: 1.5; color: var(--muted); }
 .sg-genius-note a { color: var(--gold); }
-.sg-genius-frame { display: block; width: 100%; min-height: 320px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
+.sg-genius-frame { display: block; width: 100%; min-height: 160px; border: 1px solid rgba(var(--gold-rgb), 0.45); border-left: 3px solid var(--gold); border-radius: var(--radius); background: var(--surface); }
 .sg-show { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
 .sg-show button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 20px; border: 1px solid var(--border); background: none; color: var(--muted); cursor: pointer; }
 .sg-show button[aria-pressed="true"] { border-color: var(--gold); background: rgba(var(--gold-rgb), 0.12); color: var(--gold-light); }
