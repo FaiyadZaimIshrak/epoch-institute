@@ -893,6 +893,16 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   agents' files and drop.txt are in scripts/quotes/b2/. Translator years a page does not print are left off the credit
   rather than given from memory.
 
+- Six Degrees (#six, Nov 2026): one puzzle a day (UTC; #1 = 6 Nov 2026): from one entry to another by the gold links of
+  each entry's description (the links LinkDesc makes). build-pages.ps1 writes data/sixdeg/<c>.json ({slug: [name, dates,
+  picture 0/1, [[linked slug, its name], ...]]}, by the slug's first character; deploy.sh DATA) and runs
+  scripts/tools/make-six-degrees.js, which appends puzzles to scripts/six-degrees.tsv (start, target: well-known pictured
+  entries named by 3+ profiles, no wars or atrocities, 3 or 4 clicks apart, no entry again within 60 puzzles; never
+  reordered), re-solves every puzzle on the current links (stops if one no longer solves) and writes sixdeg-data.js
+  (SIXD {v, p: [[start, target, shortest, route]], n: names}; SIXD_SRC stamped into /games). games.js SixD: the current
+  entry with its links as buttons, Back (the click still counts), Show a route; epoch-games sixd-<n> {p, c, done, gave},
+  sixd-streak; stars 3 at the shortest, 2 within two more; Share. Counted on My Passport (13 games) and My Week.
+
 ## Kids mode and the Kids corner (/kids)
 - Kids mode is site-wide: html[data-kids="1"], set before first paint by the head snippet from localStorage
   epoch-kids, switched by the star button in the header (shared-nav.js: window.setKidsMode(on), kidsModeOn(), the
@@ -912,7 +922,10 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   KIDS_FACTS) come from scripts/kids-corner.tsv: `@key, title, introduction, door picture` lines, then
   `entry slug, a line for young readers` (8–12 per theme, pictures checked by eye), and `!, fact, link` lines
   (facts checked: keep them true and simple). Each theme ends with its Word Hunt (/games#words-<key>, same keys as
-  word-hunt.tsv).
+  word-hunt.tsv). 24 themes since A14 (5 Nov 2026): the Mongols, ancient Persia, the Silk Road, Byzantium, the Celts, the
+  Renaissance, the Ottomans and the Industrial Revolution added, every line from its entry's own text, the cards' pictures
+  looked at by eye. A14 also added 208 game pictures (game-pictures.tsv; people only with a plain lifespan, nothing grim:
+  no Hitler, Stalin, Holocaust) and the Picture Puzzle set Great Buildings.
 
 ## Great Speeches (/speeches/)
 speeches-data.js (SPEECHES, 115 speeches, King Wu of Zhou to Reagan) → build-pages.ps1 writes /speeches/<slug> (The
@@ -1204,6 +1217,12 @@ Since 4 Nov 2026 (C3) the builder also writes scripts/essay-links.js (ESSAY_LINK
 the profiles an essay lists in its header or links in its text), and generator.html adds "In the Research Series" with
 those essays after a profile's legacy section, beside its inventions and songs: regenerate the profiles after an essay
 is added or its profiles change.the profiles an essay lists in its header or links in its text), and generator.html adds "In the Research Series" withthose essays after a profile's legacy section, beside its inventions and songs: regenerate the profiles after an essayis added or its profiles change.
+
+A14 (5 Nov 2026): essays 09 Faiths on the Move, 10 Who Invented It First?, 11 From Ruler to Enslaved and 12 The Written Word,
+drafted by four agents with scripts/essays/ESSAYS-GUIDE.md from the site's own pages and data, their figures from
+scripts/tools/essay-numbers.js 09-12 (essay-numbers-2.js; a faith-map area with no end year counts as alive), each paragraph
+mapped in scripts/essays/notes/NN-sources.md, every number in each essay checked against those sources. Essays 07 and 08
+now say their figures date from November 2026 (the site has since grown).
 
 ## Community articles (/articles/<slug>) and opinions
 data/community/articles.json (build input, not deployed; `[]` since the Sati Pratha article was withdrawn on 29 Oct

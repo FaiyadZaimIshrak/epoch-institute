@@ -1,5 +1,6 @@
-// The figures quoted in Research Series essays 07 (Before the State) and 08 (How Songs Travel), computed from the data so
-// that none is typed: node scripts/tools/essay-numbers.js 07 | 08. Re-run after a change to the cultures, the register or
+// The figures quoted in Research Series essays 07 (Before the State), 08 (How Songs Travel), 09 (Faiths on the Move),
+// 10 (Who Invented It First?), 11 (From Ruler to Enslaved) and 12 (The Written Word), computed from the data so that none
+// is typed: node scripts/tools/essay-numbers.js 07 | 08 | 09 | 10 | 11 | 12. Re-run after a change to the cultures, the register or
 // the songs, and compare with the essays' "What the Data Shows".
 const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..', '..');
 const rd = f => fs.readFileSync(path.join(R, f), 'utf8');
@@ -32,7 +33,7 @@ if (which === '07') {
   }
   const byReg = {}; cs.forEach(c => { (byReg[c.region] = byReg[c.region] || []).push(c.name); });
   console.log('by region:', Object.keys(byReg).map(r => r + ' ' + byReg[r].length).join('; '));
-} else {
+} else if (which === '08') {
   const S = JSON.parse(rd('scripts/songs/songs.json')); const songs = Array.isArray(S) ? S : S.songs || Object.values(S);
   const langs = new Set(); songs.forEach(s => (s.langs || []).forEach(l => langs.add(l.code)));
   console.log('songs', songs.length, 'languages', langs.size, 'with words', songs.filter(s => s.text).length, 'in copyright', songs.filter(s => !s.pd).length, 'with a performance', songs.filter(s => s.video).length);
@@ -56,4 +57,6 @@ if (which === '07') {
   fams.forEach(([k, v]) => console.log('  ' + name[k] + ' -> ' + v.map(x => name[x]).join(', ')));
   const anth = songs.filter(s => (s.types || []).includes('anthem')), anthFrom = anth.filter(s => (s.inspiredBy || []).some(i => i.slug)).length;
   console.log('anthems', anth.length, 'of which with a named source song', anthFrom);
+} else {
+  require('./essay-numbers-2.js')(which, { rd, YEAR, yl, median, mean });
 }

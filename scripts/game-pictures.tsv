@@ -1,7 +1,7 @@
 # The pictures the games may use: chosen by eye from contact sheets of well-known entries (no maps, coins, seals,
 # documents, collages, or pictures that do not show their subject). Read by scripts/build-pages.ps1 for games-data.js.
 # slug<TAB>puzzle set (empty = Which Came First? / Guess the Year only, when the dates allow)<TAB>order in the set
-# sets: Wonders of the World | Treasures | Famous Faces | Art Through the Ages | Great Cities | Sacred Places
+# sets: Wonders of the World | Treasures | Famous Faces | Art Through the Ages | Great Cities | Sacred Places | Great Buildings
 napoleon	Famous Faces	1
 charles-v-holy-roman-emperor		
 timur		
@@ -337,10 +337,10 @@ tower-of-belem	Wonders of the World	9
 templo-mayor		
 balfour-declaration-of-1926		
 osu-castle		
-bagrati-cathedral		
+bagrati-cathedral	Great Buildings	7
 uraniborg		
 gwanggaeto-stele		
-svetitskhoveli-cathedral		
+svetitskhoveli-cathedral	Great Buildings	6
 hagia-sophia	Wonders of the World	3
 peacock-throne	Treasures	7
 jeronimos-monastery		
@@ -352,22 +352,22 @@ koutoubia-mosque
 benin-bronzes	Treasures	5
 behistun-inscription	Treasures	8
 stele-of-the-vultures		
-wat-xieng-thong		
+wat-xieng-thong	Great Buildings	12
 bayeux-tapestry	Treasures	2
 milan-cathedral	Wonders of the World	10
 tel-dan-stele		
 borobudur	Wonders of the World	5
 mont-orgueil		
-red-fort		
-wat-chet-yot		
+red-fort	Great Buildings	10
+wat-chet-yot	Great Buildings	11
 band-e-amir-dam		
-ibrahim-rauza		
+ibrahim-rauza	Great Buildings	9
 somapura-mahavihara		
-gol-gumbaz		
+gol-gumbaz	Great Buildings	8
 adina-mosque		
-certosa-di-pavia		
+certosa-di-pavia	Great Buildings	3
 sixty-dome-mosque		
-el-escorial		
+el-escorial	Great Buildings	4
 tripitaka-koreana		
 serpent-column		
 minaret-of-jam		
@@ -382,12 +382,12 @@ siloam-tunnel
 lindisfarne-gospels	Treasures	6
 palazzo-della-pilotta		
 valle-crucis-abbey		
-aachen-cathedral		
-cefalu-cathedral		
+aachen-cathedral	Great Buildings	1
+cefalu-cathedral	Great Buildings	2
 rhind-mathematical-papyrus	Treasures	9
 alhambra	Wonders of the World	4
 mesha-stele		
-teatro-farnese		
+teatro-farnese	Great Buildings	5
 medracen		
 pyramid-of-the-sun	Wonders of the World	6
 # 28 Oct 2026: three more puzzle sets, chosen by eye on contact sheets (no grim scenes, inscriptions, modern skylines)
@@ -427,3 +427,212 @@ saint-sophia-cathedral-kyiv	Sacred Places	9
 scrovegni-chapel	Sacred Places	10
 sumela-monastery	Sacred Places	11
 mikve-israel-emanuel-synagogue	Sacred Places	12
+# A14 (5 Nov 2026): 208 more, chosen by eye from contact sheets of the most-mentioned entries with a dated picture (people only with a plain lifespan)
+sargon-of-akkad		
+jesus		
+montesquieu		
+jean-jacques-rousseau		
+karl-marx		
+ibn-battuta		
+john-locke		
+napoleonic-wars		
+war-of-the-spanish-succession		
+mithridates-vi-of-pontus		
+russian-revolution		
+vladimir-lenin		
+cicero		
+adam-smith		
+voltaire		
+confucius		
+otto-von-bismarck		
+mao-zedong		
+tiberius		
+james-madison		
+woodrow-wilson		
+edmund-burke		
+cultural-revolution		
+friedrich-engels		
+mongke		
+mustafa-kemal-ataturk		
+second-boer-war		
+sennacherib		
+thomas-aquinas		
+gamal-abdel-nasser		
+ibn-khaldun		
+augustine-of-hippo		
+socrates		
+franklin-d-roosevelt		
+nero		
+josephus		
+vatican-city		
+akhenaten		
+first-opium-war		
+francisco-de-almeida		
+jean-jacques-dessalines		
+julius-nyerere		
+victor-emmanuel-iii		
+james-cook		
+jawaharlal-nehru		
+josip-broz-tito		
+john-calvin		
+aeschylus		
+sophocles		
+thomas-jefferson		
+erasmus		
+suharto		
+declaration-of-the-rights-of-man-and-of-the-citizen		
+john-stuart-mill		
+new-deal		
+amenhotep-iii		
+ariq-boke		
+battle-of-manzikert		
+charles-martel		
+clovis-i		
+cyaxares		
+great-northern-war		
+haitian-revolution		
+jean-baptiste-colbert		
+toussaint-louverture		
+ur-nammu		
+xerxes-i		
+augusto-pinochet		
+euripides		
+galileo-galilei		
+pindar		
+attila		
+aristophanes		
+ernest-renan		
+licinius		
+tupac-amaru-ii		
+thomas-hobbes		
+alexis-de-tocqueville		
+william-pitt-the-younger		
+clement-attlee		
+alexander-hamilton		
+deng-xiaoping		
+zhuangzi		
+knossos		
+mary-wollstonecraft		
+max-weber		
+john-adams		
+alcuin-of-york		
+alexander-pushkin		
+an-lushan		
+bartolome-de-las-casas		
+battle-of-cannae		
+battle-of-lechfeld		
+bernardino-de-sahagun		
+euclid		
+francisco-de-vitoria		
+french-wars-of-religion		
+hugo-grotius		
+hulagu-khan		
+opium-wars		
+qianlong-emperor		
+russo-japanese-war		
+spanish-armada		
+tewodros-ii		
+sun-yat-sen		
+new-orleans		
+gustav-i-of-sweden		
+ho-chi-minh		
+marcus-aurelius		
+nelson-mandela		
+hugo-chavez		
+huldrych-zwingli		
+james-vi-and-i		
+johannes-kepler		
+pericles		
+snorri-sturluson		
+tupac-amaru		
+winston-churchill		
+tertullian		
+atahualpa		
+flavius-aetius		
+abraham-lincoln		
+jerome		
+b-r-ambedkar		
+sallust		
+ambrose		
+richard-wagner		
+statuto-albertino		
+jeremiah		
+camillo-benso-count-of-cavour		
+solon		
+john-i-tzimiskes		
+kenneth-kaunda		
+pope-francis		
+dadabhai-naoroji		
+vietnam-war		
+gonzalo-fernandez-de-cordoba		
+council-of-trent		
+leopold-von-ranke		
+tycho-brahe		
+isaac-newton		
+david-hume		
+ignatius-of-loyola		
+frederick-ii-elector-of-brandenburg		
+leon-trotsky		
+zhou-enlai		
+salvador-allende		
+leonardo-bruni		
+lucretius		
+ronald-reagan		
+john-maynard-keynes		
+theodore-roosevelt		
+mohamed-morsi		
+andrew-jackson		
+han-fei		
+mencius		
+robert-owen		
+thomas-more		
+jean-bodin		
+chichen-itza		
+edward-said		
+robert-peel		
+seymour-martin-lipset		
+adil-shah		
+ahmad-sanjar		
+ahmed-sekou-toure		
+alexander-i-of-russia		
+alfonso-viii		
+amr-ibn-al-as		
+anglo-dutch-wars		
+antonio-de-oliveira-salazar		
+astyages		
+attack-on-pearl-harbor		
+averroes		
+battle-of-breitenfeld-1631		
+battle-of-navarino		
+battle-of-roncevaux-pass		
+battle-of-sagrajas		
+bohdan-khmelnytsky		
+charles-xi-of-sweden		
+cisplatine-war		
+claudius-ptolemy		
+constantius-ii		
+einhard		
+emperor-meiji		
+emperor-taizu-of-song		
+enheduanna		
+fernando-alvarez-de-toledo-3rd-duke-of-alba		
+fourteen-points		
+galen		
+garnet-wolseley		
+hattusili-iii		
+hayreddin-barbarossa		
+honorius		
+ibrahim-lodi		
+isabella-i-of-castile		
+jami		
+jayavarman-vii		
+johannes-gutenberg		
+johannes-van-den-bosch		
+john-i-of-portugal		
+kalidasa		
+kangxi-emperor		
+al-khwarizmi		
+leo-tolstoy		
+li-hongzhang		
+lord-dalhousie		
+matthew-c-perry		

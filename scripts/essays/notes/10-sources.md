@@ -1,0 +1,78 @@
+# Essay 10, "Who Invented It First?": sources by paragraph
+
+Abbreviations. TSV = scripts/inventions.tsv (fields: date, place, civ, people, also, built, contested = "note").
+JSON = data/inventions.json (node first sentences, field 14). ENC = encyclopedia-data.js entry desc (by slug).
+PAGE = the /inventions page's "How to read the tree" text (file `inventions`, root). NUM = numbers-10.txt, line named.
+"Built on" chains are the TSV `built` column. No web, no memory.
+
+Header
+- card/desc: NUM line 1 (291); TSV stone-tools, world-wide-web.
+- picture: ENC clay-tokens ("small shaped pieces of clay that stood for animals and goods, first used to keep records in the ancient Near East around 8000–7500 BCE … around 3100 BCE … the tokens gave way to pictographic tablets, the beginning of Sumerian cuneiform"). The entry has an image (images/encyclopedia/clay-tokens.jpg); no images/games copy.
+- profiles: all linked in the text; slugs from JSON civ urls (empire/…, culture/…), files checked to exist.
+
+## s10-nameless: Firsts Without Names
+1. TSV + JSON/ENC stone-tools (Lomekwi, 3.3 million years, a million years before Homo; note: maker unknown, the three candidates); TSV control-of-fire (Wonderwerk, c. 1 million years), archery (Obi-Rakhmat, c. 80,000 years), sewing-needle (Denisova, c. 50,000), coal (Petřkovice, 25,000–23,000 BCE). Five oldest = NUM "oldest five". "None credited": civ and people fields empty for all five in TSV.
+2. PAGE quotation ("at its first known date, the earliest firm evidence historians accept, which is often earlier than the version that spread"). Notes: TSV control-of-fire (1.5–2 million claims; wood ash c. 1 million firmest support); archery (indirect evidence, small stone points; Holmegaard c. 9000 BCE); coal (Neanderthals, lignite, Les Canalettes, c. 70,000 years). Last sentence: the essay's reading.
+3. TSV dugout-canoe (Pesse, 8040–7510 BCE; note on massive wood vs bark canoes); JSON dugout-canoe ("the oldest boat type archaeologists have found"); ENC pottery (sherds most common artefacts; Xianren Cave 20,000–19,000 years ago). Last sentence: the essay's reading of the dugout note.
+4. TSV lacquer (Kakinoshima, Hakodate, Hokkaido; c. 7000 BCE; civ Jōmon culture; also Zhejiang, Hemudu, 5th millennium BCE; note: experts divided independent vs Chinese techniques). "First card credited to any people": TSV sorted by year, every earlier row (stone-tools … kuk-swamp, rice, maize at -7000) has an empty civ field; checked by reading the rows, no figure quoted.
+
+## s10-many: Invented More Than Once
+1. PAGE quotation ("many inventions arose more than once …"). Thirty-eight: NUM "with independent origins elsewhere 38".
+2. TSV neolithic-revolution (Fertile Crescent c. 10,000 BCE; note 12,000–8000; also field with the six other regions and dates); ENC kuk-swamp (drainage ditches from 9,000 years ago, taro, bananas and sugar cane 6,900–6,400 years ago, developed agriculture independently); TSV rice (Yangtze c. 7000 BCE; also West Africa, African rice, about 3,000 years ago), maize (Balsas River valley, c. 7000 BCE), potato (Lake Titicaca region, 8000–5000 BCE), cotton (Nanchoc, Peru, c. 6000 BCE; also Mehrgarh, 6th millennium BCE).
+3. TSV pottery also (Ounjougou by 9400 BCE; Brazil 9,500–5,000 years ago); TSV/JSON copper-smelting (Belovode c. 5000 BCE, "oldest securely dated evidence"; also the Andes; the Aïr Mountains 3000–2500 BCE); TSV iron-smelting (Anatolia c. 2500 BCE; also sub-Saharan Africa by c. 2000 BCE; note: Hittite monopoly no longer accepted); TSV/JSON wheel (north of the Black Sea, before 4000 BCE; also Mesoamerica wheeled toys c. 1500 BCE).
+4. TSV cuneiform (Uruk c. 3300 BCE, civ Uruk, built clay-tokens; note: contrarian view on tokens); ENC clay-tokens (records since 8000–7500 BCE); TSV egyptian-hieroglyphs (Abydos c. 3250 BCE; note: debated, Abydos signs 3400 BCE); TSV/JSON oracle-bone-script (Anyang c. 1250 BCE, civ Shang dynasty, "Late Shang royal family"; built field empty; note: mature form, no older writing); TSV/JSON maya-script (San Bartolo, Chakjobon, 3rd century BCE; note: Olmec or Epi-Olmec, murals of 2005).
+5. ENC zero (Jain text internally dated 458 CE; Mesoamerica independently, Long Count dates from 36 BCE); TSV zero also (earliest at Chiapa de Corzo) and note (Babylonian placeholder zeros c. 700 BCE); TSV mesoamerican-long-count-calendar (36 BCE, Chiapa de Corzo); TSV sexagesimal (Sumer; also Ekari, Western New Guinea).
+6. ENC electromagnetic-induction (Faraday 29 August 1831; Henry independently 1832); ENC on-the-origin-of-species (Darwin, 1859); TSV on-the-origin-of-species also (Wallace, Maluku Islands, 1858); TSV photography (Niépce, Daguerre, Le Gras 1826–1827; also Florence 1832–1833, Talbot 1835); TSV calculus note (Newton 1665–1666, Leibniz published 1684, independently, credit bitterly disputed). First two sentences: the essay's reading of the dates.
+
+## s10-credit: Credit Given and Withheld
+1. PAGE ("'Credited to' names the society or state where it first appeared"). NUM "credited to a civilisation 127 44% | credited to none 164". TSV coinage (civ Kingdom of Lydia), world-wide-web (civ cern; ENC world-wide-web: Berners-Lee, CERN, 1989), nuclear-fission (no civ; place Berlin), jet-engine (no civ; von Ohain, Whittle; Germany and England).
+2. NUM "most credited" (US 16, Han 8, Zhou 6, Song 6). The lists of each state's cards read from TSV civ column: US rows elevator (1852, the earliest), skyscraper, aeroplane, transistor, arpanet among the 16; Han: porcelain, papermaking, tea, sternpost-rudder, woodblock-printing, acupuncture, wheelbarrow, seismoscope (=Zhang Heng, 132 CE); Zhou: cast-iron, iron-plough, three-field-system, crossbow, trebuchet, camera-obscura; Song: pound-lock, magnetic-compass, rocket, movable-type, paper-money, junk-ship. Counts match NUM.
+3. TSV coinage note (Guanzhuang oldest securely dated minting site; Aegina) and ENC coinage (factory at Guanzhuang in Henan, shovel-shaped bronze coins 640–550 BCE); TSV tyrian-purple (civ Minoan civilisation, Crete, 20th–18th century BCE; note) and ENC tyrian-purple (named after Tyre); ENC chinampa (plot of mud and vegetation in shallow lake beds) and TSV chinampa (Valley of Mexico, no civ; note: Culhuacan c. 1100, Aztecs did not invent them); TSV plough (Kalibangan c. 2800 BCE, civ Indus Valley Civilisation; note on ards); TSV quipu (c. 600–1000 CE, civ Wari Empire; note: proto-quipu from Caral 3000–1800 BCE).
+4. TSV papermaking (Fangmatan, 179–141 BCE; note: Cai Lun 105 CE, older paper, date and inventor unknown); ENC cai-lun (court eunuch, improved method presented to Emperor He in 105 CE); TSV tea note (Shennong legend); TSV kite note (Mozi and Lu Ban, wooden kites); TSV wheelbarrow (118 CE Chengdu; note: Records of the Three Kingdoms, Zhuge Liang 231 CE); TSV eyeglasses note (Salvino degli Armati false); TSV astrolabe note (Hypatia, misreading); TSV quinine note (Countess of Chinchón myth); TSV horseshoe note (no hard evidence the Druids invented it). Last sentence: the essay's reading.
+
+## s10-names: The Named Inventor and the Anonymous Many
+1. NUM "with named people 155 53% | before 1500 CE 38 of 165 | from 1500 117 of 126". Last sentence: the essay's reading.
+2. TSV pyramid-of-djoser (27th century BCE, Saqqara; people imhotep; note: credit that of modern Egyptologists); ENC imhotep (name and titles on the base of a statue of Djoser); TSV anji-bridge (Zhao County; =Li Chun; note: no record from the time, later chronicles); TSV lighthouse-of-alexandria note (Pliny, Sostratus, disputed); ENC sostratus-of-cnidus (dedication in his name); ENC kallinikos (Theophanes, c. 672) and TSV greek-fire note (chemists of Constantinople rather than one man); TSV hangul (1443, Joseon, sejong-the-great) and ENC hangul first sentence; ENC bi-sheng (c. 1040, method recorded by Shen Kuo); ENC shen-kuo.
+3. TSV steam-engine (people Ayanz, Savery, Newcomen; note: 1606 patent, 1698 first commercial, c. 1712 first to drive machinery); TSV smallpox-vaccine note (Jesty from 1774; Jenner first to publish); ENC telephone (Reis, Frankfurt, 26 October 1861; credit disputed among five; Bell first US patent March 1876); TSV mechanical-reaper note (1861 ruling, Obed Hussey, McCormick); TSV eniac note (1973 court ruling, Atanasoff–Berry Computer prototyped 1939). "More often than not" credit to first to publish or patent: the essay's reading of these notes.
+4. TSV insulin, dna-double-helix, nuclear-fission people fields; TSV nuclear-fission note (Hahn and Strassmann in Berlin; Meitner and Frisch explained it January 1939, in exile); TSV tank note (no single inventor can be named); TSV radar note (developed in secret by several countries before and during World War II); TSV typewriter note (some form invented 52 times).
+5. NUM "led to most" (Agriculture 14; Irrigation 9; Electric battery 9); TSV neolithic-revolution and irrigation people fields empty; TSV voltaic-pile (=Alessandro Volta); TSV sail, wheel, pottery, plough, cuneiform, egyptian-hieroglyphs, oracle-bone-script, maya-script, proto-sinaitic-script: people fields empty. Women: TSV radioactivity (=Marie Curie, 1896), dna-double-helix (=Rosalind Franklin, 1953), nuclear-fission (=Lise Meitner, 1938), artemisinin (=Tu Youyou, 1972; ENC artemisinin: leaves of sweet wormwood), pencil (=Simonio Bernacotti, =Lyndiana Bernacotti, 1560s). Checked all people fields in JSON for other women: none found (search, no figure quoted).
+
+## s10-roads: From One Idea to the Next
+1. NUM "built on: nodes with parents 216 | … most: Cannon 3; Wind turbine 3"; TSV cannon built (fire-lance, bronze, cast-iron), wind-turbine built (windmill, electric-generator, voltaic-pile); NUM "led to most" (the six-each group). Ties checked in JSON: no other card has 3 parents; no other card led to 6 or more.
+2. NUM "years from a parent to its child: median 800 | before 1500 CE children 2300 | from 1800 75". ENC clay-tokens (8000–7500 BCE, Zagros; marks on clay tablets replaced them; around 3100 BCE pictographic tablets, the beginning of Sumerian cuneiform); TSV cuneiform built clay-tokens; TSV sexagesimal built cuneiform; JSON sexagesimal (originated with the Sumerians, 3rd millennium BCE, passed to the Babylonians); TSV babylonian-astronomy (c. 1800 BCE, built cuneiform, sexagesimal); TSV astrolabe (4th century CE, Alexandria, built babylonian-astronomy, euclids-elements).
+3. TSV papyrus (c. 3000 BCE), codex (1st century CE, Rome, built papyrus), papermaking (179–141 BCE), woodblock-printing (before 220 CE, built papermaking; note: prints on silk), movable-type (c. 1040, built woodblock-printing), printing-press (c. 1440, Mainz, johannes-gutenberg; built movable-type, papermaking), newspaper (1605, built printing-press), de-humani-corporis-fabrica (1543, built printing-press, galen); ENC de-humani-corporis-fabrica (Vesalius, printed in Basel in 1543); TSV movable-type note (whether Asian movable type influenced Gutenberg is debated).
+4. JSON aeolipile (vessel spinning as steam escapes through bent nozzles, Hero, 1st century CE); TSV steam-turbine (1551, Ottoman Egypt, built aeolipile; note: Taqi al-Din's turbine turned a roasting spit; Parsons 1884). Gunpowder chain from TSV dates and built fields: gunpowder (808, Tang Dynasty), fire-lance (950), cannon (by 1288, Yuan Dynasty), arquebus (1411, Europe), musket (by 1521), gatling-gun (1861), maxim-gun (1884), tank (1915).
+5. TSV built fields: telegraph (1816), electromagnetic-induction, electric-motor, solar-cell, artificial-cardiac-pacemaker all built on voltaic-pile (1800); telephone (1861) and radio (1895) on telegraph; television (1909) on radio; arpanet (1969) on eniac; world-wide-web (1989) on arpanet; JSON eniac (completed in 1945). TSV wind-turbine (1883, Vienna, Friedländer; note: windwheel of Hero, vertical-axle windmills in Sistan from the 7th century; first to generate electricity); electric-generator 1831.
+
+## s10-contested: Why First Is Contested
+1. NUM "with a contested note 231". "Four reasons": the essay's grouping of the notes below.
+2. TSV notes: porcelain (stricter definitions, late Sui and early Tang; Shang proto-porcelain); glassmaking (faience); submarine (Drebbel 1620 submersible, Bushnell's Turtle 1775); chariot (Sintashta carts; Near Eastern, early 2nd millennium BCE); algebra (Rhind papyrus to Diophantus and Brahmagupta).
+3. TSV solar-cell (=Edmond Becquerel 1839; note: Bell Laboratories 1954); alternating-current (=Hippolyte Pixii 1832; note: transformers of the 1880s); transistor note (Lilienfeld 1925–1928, Heil 1934, no working device); incandescent-light-bulb (1802, =Humphry Davy first; note: Edison vs Swan, first practical bulb).
+4. TSV notes: ishango-bone (9000 BCE to 44,000 years ago; marks mathematical debated); proto-sinaitic-script (c. 1850 vs c. 1550 BCE, Egypt or Canaan); sushruta-samhita (2000 BCE to 6th century CE); antikythera-mechanism (205 to 87 BCE).
+5. TSV notes: cast-iron (Europe's blast furnaces, 12th–13th centuries); windmill (vertical windmill of 12th-century Europe); mechanical-clock (Derek de Solla Price, Tang escapements 723–725); sternpost-rudder (Joseph Needham); alchemy (open question). Last sentence: the essay's reading of how the tree presents such cards (PAGE: "the card says so where they are").
+6. Conclusion, the essay's reading of the sections above; ENC cai-lun (105 CE improved method); kuk-swamp and Abydos as named above.
+
+## s10-data: What the Data Shows
+1. NUM "inventions 291 | lanes 11"; "by lane" (all eleven counts); "by period" (all six counts); "oldest five"; "places named most" (China 23 … London 4; the blank key " 29" = rows with an empty place field, checked in JSON: 29 nodes with place ""; no other place reaches 4).
+2. NUM "credited to a civilisation 127 44% | credited to none 164"; "most credited" (every name and count as in the file); "with named people 155 53% | before 1500 CE 38 of 165 | from 1500 117 of 126"; "with a contested note 231"; "built on: nodes with parents 216 | mean parents 0.95 | most: Cannon 3; Wind turbine 3" (the 2-parent cards left out: many cards have 2, checked in JSON); "led to most"; "years from a parent to its child".
+3. NUM "with independent origins elsewhere 38". Selection caveat: the essay's.
+- Table: NUM "with independent origins elsewhere 38", every row copied from that line in its order (dates left out, as the line gives none; "the Andes" and "the Aïr Mountains, Niger" kept apart as the TSV also field has them).
+- Closing sentence: the essay's reading of the table (older rows from the TSV are continents apart; newer ones, photography 1826/1832/1835 to transistor 1947/1948, a few years apart).
+
+## s10-reading: Further Reading
+Every work is printed in the references of a profile linked in the essay (empire-profiles.js `references`):
+- Chang, Shang Civilization; Keightley, Sources of Shang History: Shang dynasty.
+- Coe, Breaking the Maya Code: Maya civilisation.
+- Gernet, Daily Life in China; Mote, Imperial China, 900–1800: Song Dynasty (Mote also Yuan Dynasty).
+- Howe, What Hath God Wrought: United States.
+- Kenoyer, Ancient Cities of the Indus Valley Civilization: Indus Valley Civilisation.
+- Kobayashi, Jōmon Reflections: Jōmon culture.
+- Lee, A New History of Korea: Joseon.
+- Nissen, Damerow and Englund, Archaic Bookkeeping: Uruk.
+- Roosevelt, The Archaeology of Lydia: Kingdom of Lydia.
+- Schreiber, Wari Imperialism in Middle Horizon Peru: Wari Empire.
+- Wang, Han Civilization: Han Dynasty.
+
+## Links
+126 distinct links, each used once; every /inventions?focus= slug is a TSV row, every /encyclopedia/ slug an entry in
+encyclopedia-data.js, every /empire/ and /culture/ path an existing profile file (scratchpad check10.js).

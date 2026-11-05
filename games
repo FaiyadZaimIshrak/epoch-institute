@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://the-epoch-institute.org/games">
 <meta property="og:type" content="website">
 <meta property="og:title" content="History Games — The Epoch Institute">
-<meta property="og:description" content="Twelve games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
+<meta property="og:description" content="Thirteen games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -40,7 +40,7 @@
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Twelve games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Thirteen games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
@@ -59,6 +59,7 @@
     <button class="gm-tab" id="tab-cross" role="tab" aria-selected="false" aria-controls="game-cross" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9636;</span><span class="gm-tab-t">Crossword</span></button>
     <button class="gm-tab" id="tab-said" role="tab" aria-selected="false" aria-controls="game-said" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10077;</span><span class="gm-tab-t">Who Said It?</span></button>
     <button class="gm-tab" id="tab-songq" role="tab" aria-selected="false" aria-controls="game-songq" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9835;</span><span class="gm-tab-t">Where Is This Song From?</span></button>
+    <button class="gm-tab" id="tab-six" role="tab" aria-selected="false" aria-controls="game-six" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#8644;</span><span class="gm-tab-t">Six Degrees</span></button>
   </div>
 
   <!-- Emblem Pairs -->
@@ -291,16 +292,30 @@
     </div>
     <p class="gm-conn-more"><label>Play another <select id="songq-pick"></select></label></p>
   </section>
+  <section class="gm-game" id="game-six" role="tabpanel" aria-labelledby="tab-six" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">One puzzle a day, the same for everyone: get from the first entry to the second by following the links in each entry&rsquo;s description. Every click counts; the shortest route is shown at the end.</p>
+    </div>
+    <div class="gm-stats">
+      <span class="gm-stat" id="six-num"></span>
+      <span class="gm-stat gm-stat-best" id="six-best"></span>
+    </div>
+    <div class="gm-board gm-six">
+      <div id="six-board"><p class="gm-howto">The puzzle is loading&hellip;</p></div>
+      <div class="gm-done" id="six-done" hidden></div>
+    </div>
+    <p class="gm-conn-more"><label>Play another <select id="six-pick"></select></label></p>
+  </section>
 </main>
 
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=fe84e9163d' };</script>
 <script src="/games-emblems.js?v=1"></script>
-<script src="/games-data.js?v=c1431ca395"></script>
+<script src="/games-data.js?v=4646bc5815"></script>
 <script src="/connections-data.js?v=5ec8624973"></script>
 <script src="/shared-nav.js"></script>
-<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=bb788fee3a', SONGQ_SRC = '/songq-data.js?v=830edf5c77';</script>
+<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=bb788fee3a', SONGQ_SRC = '/songq-data.js?v=830edf5c77', SIXD_SRC = '/sixdeg-data.js?v=c234a41402';</script>
 <script>var RANKS_SRC = '/ranks-data.js?v=c3bcef4336';</script>
-<script src="/games.js?v=13"></script>
+<script src="/games.js?v=14"></script>
 
 </body>
 </html>

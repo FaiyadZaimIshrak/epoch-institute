@@ -984,6 +984,26 @@ if (-not $SkipEntries) {
     }
   }
 }
+# Six Degrees (/games#six, Nov 2026): every entry's gold links, the entries its description names, by the first character
+# two characters of its slug (data/sixdeg/<cc>.json, fetched as the player moves); scripts/tools/make-six-degrees.js reads them to deal the
+# daily puzzles into scripts/six-degrees.tsv (appended, never reordered) and writes sixdeg-data.js (its ?v= into /games)
+if (-not $SkipEntries) {
+  $sdgBy = @{}
+  foreach ($e in $ENT) {
+    $sdgL = New-Object Collections.Generic.List[string]
+    foreach ($m in [regex]::Matches($DESCH[$e.slug], 'href="/encyclopedia/([a-z0-9-]+)"')) { $sdgV = $m.Groups[1].Value; if ($sdgV -ne $e.slug -and $BY.ContainsKey($sdgV) -and -not $sdgL.Contains($sdgV)) { $sdgL.Add($sdgV) } }
+    $sdgC = $e.slug.Substring(0, [Math]::Min(2, $e.slug.Length)); if (-not $sdgBy.ContainsKey($sdgC)) { $sdgBy[$sdgC] = New-Object Collections.Generic.List[string] }
+    # slug: [name, dates, 1 if it has a picture, [[linked slug, its name], …]]: the names travel with the links, so a move
+    # needs only the next entry's file
+    $sdgBy[$sdgC].Add((Js $e.slug) + ':[' + (Js $e.name) + ',' + (Js ([string]$e.dates)) + ',' + $(if ($e.img) { 1 } else { 0 }) + ',[' + ((@($sdgL) | ForEach-Object { '[' + (Js $_) + ',' + (Js $BY[$_].name) + ']' }) -join ',') + ']]')
+  }
+  New-Item -ItemType Directory -Force "$Repo\data\sixdeg" | Out-Null
+  foreach ($sdgC in $sdgBy.Keys) { if ([EpochBuild.W]::WriteIfChanged("$Repo\data\sixdeg\$sdgC.json", '{' + ($sdgBy[$sdgC] -join ',') + '}')) { $NWRITE++ } }
+  foreach ($sdgL2 in (& $songExe "$PSScriptRoot\tools\make-six-degrees.js")) { Say $sdgL2 }
+  if ($LASTEXITCODE) { throw 'Six Degrees: scripts/tools/make-six-degrees.js failed (above)' }
+  $sdgJs = [IO.File]::ReadAllText("$Repo\sixdeg-data.js", $U8); $SIXDV = [EpochBuild.W]::Sha1($sdgJs).Substring(0, 10)
+  $sdgG = [IO.File]::ReadAllText("$Repo\games", $U8); $sdgG2 = [regex]::Replace($sdgG, 'sixdeg-data\.js\?v=[0-9a-f]*', "sixdeg-data.js?v=$SIXDV"); if ($sdgG2 -ne $sdgG -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $sdgG2)) { $NWRITE++ }
+}
 function LinkedNear($e) {   # the entries that mention this one, then those its description names: pictured first, then the most mentioned
   $c = New-Object Collections.Generic.List[int]
   if ($LINKIN.ContainsKey($e.slug)) { foreach ($i in $LINKIN[$e.slug]) { $c.Add($i) } }
@@ -3888,7 +3908,7 @@ $SECTIONS = [ordered]@{
   today        = @{ t = 'Today in History'; h = '/today-in-history/'; k = $nTih.ToString('N0') + ' events'; d = 'What happened on each day of the year, across five thousand years.'; pic = @('mesoamerican-long-count-calendar', 'anglo-saxon-chronicle') }
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
-  games        = @{ t = 'Games'; h = '/games'; k = 'Eleven games'; d = 'Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  games        = @{ t = 'Games'; h = '/games'; k = 'Thirteen games'; d = 'Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
   inventions   = @{ t = 'Inventions Tree'; h = '/inventions'; k = "$($INVN.Count) inventions"; d = 'From stone tools to the World Wide Web: when and where each invention and discovery first appeared, what it built on and what it led to.'; pic = @('printing-press', 'magnetic-compass') }
   songs        = @{ t = 'Songs in History'; h = '/songs/'; k = "$($SONGS.Count) songs"; d = 'Hymns, anthems, laments and folk songs handed down through history: who made them, what they say, their words in the original and in English, and a performance.'; pic = @('cantigas-de-santa-maria', 'god-save-the-king') }
   societies    = @{ t = 'Social Ladders'; h = '/societies/'; k = "$($SOCS.Count) societies"; d = 'From emperor to enslaved: how societies ranked their people, how many stood on each rung and how they rose or fell. Be born into one by chance.'; pic = @('feudalism', 'standard-of-ur') }

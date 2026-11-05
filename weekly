@@ -43,7 +43,7 @@
 <section aria-labelledby="wk-t">
   <h2 class="ref-sec-title" id="wk-t">The last seven days <span class="n" id="wk-n"></span></h2>
   <div class="wk-scroll"><table class="wk-table" id="wk-table">
-    <thead><tr><th scope="col">Day</th><th scope="col"><a href="/games#first-daily">Daily Ten</a></th><th scope="col"><a href="/games#conn">Connections</a></th><th scope="col"><a href="/games#cross">Crossword</a></th><th scope="col"><a href="/games#said">Who Said It?</a></th><th scope="col"><a href="/games#songq">Song game</a></th></tr></thead>
+    <thead><tr><th scope="col">Day</th><th scope="col"><a href="/games#first-daily">Daily Ten</a></th><th scope="col"><a href="/games#conn">Connections</a></th><th scope="col"><a href="/games#cross">Crossword</a></th><th scope="col"><a href="/games#said">Who Said It?</a></th><th scope="col"><a href="/games#songq">Song game</a></th><th scope="col"><a href="/games#six">Six Degrees</a></th></tr></thead>
     <tbody id="wk-body"><tr><td colspan="6">The week needs JavaScript.</td></tr></tbody>
   </table></div>
   <p class="pass-note" id="wk-sum"></p>
@@ -70,14 +70,15 @@
       if (r.gave) return { pts: 0, max: 1, t: 'Answers shown', sq: '0' }; if (!r.done) return { pts: 0, max: 1, t: 'In progress', sq: '0' };
       return { pts: 1, max: 1, t: mm + ((r.r || 0) ? ', with reveals' : (r.c || 0) ? ', with checks' : ', no help'), sq: '1' }; } },
     { k: 'said', n: 'Who Said It?', day0: d0(9, 28), get: function (q, num) { var r = G['said-' + num]; if (!r || !r.m) return null; var s = (r.m.match(/1/g) || []).length; return { pts: s, max: 5, t: s + '/5' + (r.m.length < 5 ? ' so far' : ''), sq: r.m }; } },
-    { k: 'song', n: 'Song game', day0: d0(10, 3), get: function (q, num) { var r = G['songq-' + (kids ? 'k' : '') + num]; if (!r || !r.m) return null; var s = (r.m.match(/1/g) || []).length; return { pts: s, max: 5, t: s + '/5' + (r.m.length < 5 ? ' so far' : ''), sq: r.m }; } }];
+    { k: 'song', n: 'Song game', day0: d0(10, 3), get: function (q, num) { var r = G['songq-' + (kids ? 'k' : '') + num]; if (!r || !r.m) return null; var s = (r.m.match(/1/g) || []).length; return { pts: s, max: 5, t: s + '/5' + (r.m.length < 5 ? ' so far' : ''), sq: r.m }; } },
+    { k: 'six', n: 'Six Degrees', day0: d0(10, 6), get: function (q, num) { var r = G['sixd-' + num]; if (!r) return null; if (r.gave) return { pts: 0, max: 1, t: 'Route shown', sq: '0' }; if (!r.done) return { pts: 0, max: 1, t: (r.c || 0) + ' clicks so far', sq: '0' }; return { pts: 1, max: 1, t: 'Solved in ' + r.c + ' clicks', sq: '1' }; } }];
   var esc = typeof escHtml === 'function' ? escHtml : function (s) { return String(s); };
   var rows = [], tot = GAMES.map(function () { return { days: 0, pts: 0, max: 0 }; }), played = 0;
   for (var k = 6; k >= 0; k--) {
     var q = Q - k, date = new Date(q * 864e5), lbl = k === 0 ? 'Today' : k === 1 ? 'Yesterday' : date.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short', timeZone: 'UTC' });
     var any = false, cells = GAMES.map(function (g, i) {
       var num = q - g.day0 + 1; if (num < 1) return '<td class="wk-na">&ndash;</td>';
-      var r = g.get(q, num); if (!r) return '<td class="wk-none">' + (k === 0 ? '<a href="/games#' + { ten: 'first-daily', conn: 'conn', cw: 'cross', said: 'said', song: 'songq' }[g.k] + '">Play</a>' : 'Not played') + '</td>';
+      var r = g.get(q, num); if (!r) return '<td class="wk-none">' + (k === 0 ? '<a href="/games#' + { ten: 'first-daily', conn: 'conn', cw: 'cross', said: 'said', song: 'songq', six: 'six' }[g.k] + '">Play</a>' : 'Not played') + '</td>';
       any = true; tot[i].days++; tot[i].pts += r.pts; tot[i].max += r.max;
       return '<td class="wk-done"><span class="wk-sq" aria-hidden="true">' + String(r.sq).split('').map(function (c) { return c === '1' ? '&#x1F7E9;' : '&#x1F7E5;'; }).join('') + '</span>' + esc(r.t) + '</td>';
     });

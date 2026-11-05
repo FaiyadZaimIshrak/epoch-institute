@@ -136,7 +136,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   function showGame(g, focus, sub) {
     if (GAMES.indexOf(g) < 0) g = 'pairs';
@@ -1741,6 +1741,99 @@ initNav('games');
   })();
   MODS.songq = SongQ;
   window.epochSongQ = SongQ;
+
+  // ── Six Degrees (#six, Nov 2026): one puzzle a day, the same for everyone (UTC; #1 = 6 Nov 2026): go from one entry to
+  // another by following the gold links in each entry's description. sixdeg-data.js (SIXD: the puzzles with a shortest
+  // route, by scripts/tools/make-six-degrees.js) is loaded when the tab first opens; the links of each entry come from
+  // data/sixdeg/<first character>.json, fetched as the player moves. epoch-games sixd-<number> {p: route so far, c:
+  // clicks, done, gave}, sixd-streak {n, last, b}. Back undoes a step (the click still counts); Show a route ends the game.
+  var SixD = (function () {
+    var D = null, QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 10, 6) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var K = { num: 0, pz: null, p: [], c: 0, done: false, gave: false, practice: false }, board = $('six-board'), files = {}, names = {}, busy = false;
+    function file(s) {
+      var ch = s.slice(0, 2);
+      if (!files[ch]) files[ch] = fetch('/data/sixdeg/' + ch + '.json?v=' + D.v).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+      return files[ch].then(function (j) { return j[s] || null; });
+    }
+    function pic(s, has, cls) {
+      var u = encodeURIComponent(s);
+      return has ? '<img class="' + cls + '" src="/images/encyclopedia/thumbs/' + u + '.jpg" alt="" loading="lazy" data-full="/images/encyclopedia/' + u + '.jpg">' : '<span class="' + cls + ' gm-six-mono" aria-hidden="true"></span>';
+    }
+    // a picture without a 112 px copy falls back to the full one
+    board.addEventListener('error', function (e) { var im = e.target; if (im.tagName === 'IMG' && im.getAttribute('data-full') && im.src.indexOf('/thumbs/') > 0) im.src = im.getAttribute('data-full'); }, true);
+    function name(s) { return (D.n[s] && D.n[s][0]) || names[s] || s.replace(/-/g, ' '); }
+    function end(s) { var n = D.n[s]; return '<span class="gm-six-end">' + pic(s, n[2], 'gm-six-img') + '<span><b>' + escHtml(n[0]) + '</b>' + (n[1] ? '<i>' + escHtml(n[1]) + '</i>' : '') + '</span></span>'; }
+    function goal() { return '<div class="gm-six-goal"><span class="gm-six-pair"><span class="gm-six-lbl">From</span>' + end(K.pz[0]) + '</span><span class="gm-six-pair"><span class="gm-six-lbl">to</span>' + end(K.pz[1]) + '</span></div>'; }
+    function trail(route, links) { return '<ol class="gm-six-trail' + (links ? ' gm-six-best' : '') + '">' + route.map(function (s) { return '<li>' + (links ? '<a href="/encyclopedia/' + encodeURIComponent(s) + '">' + escHtml(name(s)) + '</a>' : escHtml(name(s))) + '</li>'; }).join('') + '</ol>'; }
+    function save() { if (!K.practice) setBest('sixd-' + K.num, { p: K.p, c: K.c, done: K.done, gave: K.gave }); }
+    function load(num, practice) {
+      K.num = num; K.pz = D.p[(num - 1) % D.p.length]; K.practice = practice;
+      var sv = practice ? null : best('sixd-' + num);
+      K.p = sv && sv.p && sv.p.length ? sv.p.slice() : [K.pz[0]]; K.c = sv ? +sv.c || 0 : 0; K.done = !!(sv && sv.done); K.gave = !!(sv && sv.gave);
+      $('six-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Six Degrees <b>#' + num + '</b>';
+      var sk = best('sixd-streak'); $('six-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+      $('six-done').hidden = true; $('six-done').innerHTML = '';
+      // the names of a saved route come back with its entries' files
+      Promise.all(K.p.map(function (s) { return file(s).then(function (r) { if (r) names[s] = r[0]; }); })).catch(function () {}).then(function () { if (K.done) finish(true); else draw(); });
+    }
+    function draw() {
+      var here = K.p[K.p.length - 1];
+      board.innerHTML = goal() + '<p class="gm-six-count">Clicks: <b>' + K.c + '</b> &middot; the shortest route takes ' + K.pz[2] + '</p>' + trail(K.p) + '<div class="gm-six-here"><p class="gm-howto">Loading&hellip;</p></div>';
+      file(here).then(function (r) {
+        var box = board.querySelector('.gm-six-here');
+        if (!r) { box.innerHTML = '<p class="gm-howto">This entry could not be found.</p>'; busy = false; return; }
+        names[here] = r[0];
+        var links = r[3].slice().sort(function (a, b) { return a[1].localeCompare(b[1]); });
+        links.forEach(function (l) { names[l[0]] = l[1]; });
+        box.innerHTML = '<div class="gm-six-card">' + pic(here, r[2], 'gm-six-big') + '<div><p class="gm-six-now">You are at <a href="/encyclopedia/' + encodeURIComponent(here) + '" target="_blank" rel="noopener">' + escHtml(r[0]) + '</a>' + (r[1] ? ' <i>' + escHtml(r[1]) + '</i>' : '') + '</p>' +
+          '<p class="gm-six-hint">' + (links.length ? 'Its description links ' + links.length + (links.length === 1 ? ' entry' : ' entries') + '. Choose the next step:' : 'Its description links no other entry: go back a step.') + '</p></div></div>' +
+          '<div class="gm-six-links" role="group" aria-label="Linked entries">' + links.map(function (l) { return '<button type="button" class="gm-six-l" data-s="' + escHtml(l[0]) + '">' + escHtml(l[1]) + '</button>'; }).join('') + '</div>' +
+          '<p class="gm-six-acts">' + (K.p.length > 1 ? '<button type="button" class="gm-six-back">&larr; Back a step</button>' : '') + '<button type="button" class="gm-six-give">Show a route</button></p>';
+        busy = false;
+      }).catch(function () { board.querySelector('.gm-six-here').innerHTML = '<p class="gm-howto">The links could not be loaded. Please try again later.</p>'; busy = false; });
+    }
+    board.addEventListener('click', function (e) {
+      if (K.done || busy) return;
+      var b = e.target.closest('.gm-six-l');
+      if (b) { busy = true; var s = b.getAttribute('data-s'); K.c++; K.p.push(s); if (s === K.pz[1]) K.done = true; save(); Sfx.play('good'); if (K.done) { busy = false; finish(); } else draw(); return; }
+      if (e.target.closest('.gm-six-back')) { busy = true; K.p.pop(); save(); draw(); return; }
+      if (e.target.closest('.gm-six-give')) { K.gave = true; K.done = true; save(); finish(); }
+    });
+    function finish(again) {
+      var won = K.p[K.p.length - 1] === K.pz[1] && !K.gave, par = K.pz[2], s = !won ? 0 : K.c <= par ? 3 : K.c <= par + 2 ? 2 : 1;
+      var sk = best('sixd-streak') || { n: 0, last: 0 };
+      if (won && !K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('sixd-streak', sk); }
+      board.innerHTML = goal() + (won ? '<p class="gm-six-count">Your route, in ' + K.c + ' click' + (K.c === 1 ? '' : 's') + ':</p>' + trail(K.p, true) : '') +
+        '<p class="gm-six-count">A shortest route, in ' + par + ' clicks:</p>' + trail(K.pz[3], true);
+      var dn = $('six-done');
+      dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (won ? (K.c <= par ? 'The shortest route!' : 'You got there in ' + K.c + ' clicks') : 'A route is shown above') + '</p>' +
+        '<p class="gm-done-s">Six Degrees #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 && won ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new puzzle in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('six')) + '</div>';
+      share(dn, 'Epoch Six Degrees #' + K.num + ': ' + (won ? name(K.pz[0]) + ' to ' + name(K.pz[1]) + ' in ' + K.c + ' clicks (shortest ' + par + ')' : 'not this time'), 'six',
+        { title: 'Six Degrees #' + K.num, score: won ? String(K.c) : '-', unit: won ? (K.c === 1 ? 'click' : 'clicks') + ' (shortest ' + par + ')' : 'route shown', stars: s, cta: 'From one entry to another, a new pair every day', url: 'the-epoch-institute.org/games#six' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && won) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    var pickEl = $('six-pick');
+    function options() {
+      var h = '<option value="' + TODAY + '">Today&rsquo;s puzzle (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - 60); i--) h += '<option value="' + i + '">#' + i + (best('sixd-' + i) && best('sixd-' + i).done ? ' (played)' : '') + '</option>';
+      pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
+    }
+    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best('sixd-' + n) && best('sixd-' + n).done)); });
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      var s = document.createElement('script'); s.src = typeof SIXD_SRC !== 'undefined' ? SIXD_SRC : '/sixdeg-data.js';
+      s.onload = function () { D = typeof SIXD !== 'undefined' ? SIXD : null; if (!D || !D.p.length) { board.innerHTML = '<p class="gm-howto">The puzzles are on their way.</p>'; return; } options(); load(TODAY, false); };
+      s.onerror = function () { board.innerHTML = '<p class="gm-howto">The puzzle could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    }, state: function () { return K; } };
+  })();
+  MODS.six = SixD;
+  window.epochSixD = SixD;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the last one played
   var hp = location.hash.slice(1).split('-'), startGame = hp[0], startSub = hp.slice(1).join('-');

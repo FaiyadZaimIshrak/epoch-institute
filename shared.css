@@ -5371,6 +5371,41 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .gm-said-rev li.no { border-left-color: var(--error); }
 .gm-said-rev .gm-said-img { width: 56px; height: 56px; }
 .gm-said-rq { margin: 0 0 4px; font-family: var(--font-text); font-size: 17px; font-style: italic; line-height: 1.45; }
+/* Six Degrees (/games#six): from one entry to another by the gold links of their descriptions */
+.gm-six-goal { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 14px; margin: 0 0 12px; }
+.gm-six-pair { display: inline-flex; align-items: center; gap: 10px; min-width: 0; max-width: 100%; }
+.gm-six-lbl { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.gm-six-end { display: inline-flex; align-items: center; gap: 10px; min-width: 0; max-width: 100%; padding: 6px 12px 6px 6px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+.gm-six-end b { display: block; font-family: var(--font-display); font-size: 15px; font-weight: 600; line-height: 1.25; color: var(--gold-light); }
+.gm-six-end i { display: block; font-family: var(--font-ui); font-size: 12px; font-style: normal; color: var(--muted); }
+.gm-six-img { flex: none; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: center 25%; background: var(--surface); }
+.gm-six-mono { display: inline-block; border: 1px solid var(--border); }
+.gm-six-count { margin: 6px 0 8px; text-align: center; font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
+.gm-six-count b { color: var(--text); font-size: 16px; }
+.gm-six-trail { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; list-style: none; margin: 0 0 14px; padding: 0; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.gm-six-trail li + li::before { content: '\2192'; margin: 0 8px; color: var(--gold); }
+.gm-six-trail a { color: var(--gold); text-decoration: none; }
+.gm-six-trail a:hover { text-decoration: underline; }
+.gm-six-best { font-size: 14px; }
+.gm-six-card { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 14px; align-items: center; padding: 12px; margin: 0 0 12px; border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: var(--radius); background: var(--surface); }
+.gm-six-big { width: 72px; height: 72px; border-radius: var(--radius); object-fit: cover; object-position: center 25%; }
+.gm-six-now { margin: 0 0 4px; font-family: var(--font-text); font-size: 18px; color: var(--text); }
+.gm-six-now a { color: var(--gold-light); text-decoration: none; }
+.gm-six-now a:hover { text-decoration: underline; }
+.gm-six-now i { font-family: var(--font-ui); font-size: 13px; font-style: normal; color: var(--muted); }
+.gm-six-hint { margin: 0; font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+.gm-six-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.gm-six-l { min-height: 40px; padding: 8px 14px; font-family: var(--font-ui); font-size: 14px; line-height: 1.3; text-align: left; color: var(--text); background: transparent; border: 1px solid var(--field-border); border-radius: 999px; cursor: pointer; }
+.gm-six-l:hover { border-color: var(--gold); background: rgba(var(--gold-rgb), 0.08); }
+.gm-six-l:focus-visible, .gm-six-back:focus-visible, .gm-six-give:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.gm-six-acts { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 14px 0 0; }
+.gm-six-back, .gm-six-give { min-height: 40px; padding: 8px 14px; font-family: var(--font-ui); font-size: 14px; color: var(--muted); background: transparent; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; }
+.gm-six-back:hover, .gm-six-give:hover { color: var(--text); border-color: var(--gold); }
+@media (max-width: 560px) {
+  .gm-six-card { grid-template-columns: 56px minmax(0, 1fr); }
+  .gm-six-big { width: 56px; height: 56px; }
+  .gm-six-l { font-size: 15px; }
+}
 @media (max-width: 560px) {
   .gm-said-q { padding: 18px 16px 14px; }
   .gm-said-q p { font-size: 20px; }
