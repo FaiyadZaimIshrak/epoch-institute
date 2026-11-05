@@ -1,0 +1,153 @@
+name: The Republic of Venice
+of: the Republic of Venice
+short: Venice
+in: the city of Venice
+year: 1550
+period: 1500–1600 (the city of Venice in the 16th century)
+region: Europe
+population: 124,000-175,000 | the city of Venice: about 168,000 in 1563 and 175,000 in 1575, falling to 124,000 by 1581 after the plague of 1575–76
+profiles: Republic of Venice
+nolink: gla, silver, zaccaria, portuguese-inquisition, prince-elector, mark-the-evangelist, fur-trade
+picture: venice
+kids: yes
+title: Social Hierarchy of the Republic of Venice: From Doge to the Ghetto
+desc: Venice's social ladder in the 16th century: doge, patricians of the Great Council, clergy, citizens, common people, foreigners and the Jews of the Ghetto.
+intro: The Republic of Venice ranked its people by birth. Its society was divided into three bodies: the patricians, the citizens and the foreigners. Since the lockout (Serrata) of the Great Council in 1297, only the men of the noble families enrolled in the Golden Book sat in the Great Council, the supreme body of the state, and filled its councils and offices; the doge, elected for life from among them, reigned within strict limits. The citizens were a middle order created after the Serrata, and those born to old Venetian families staffed the state's chancellery and the professions. Below them lived the broad mass of the common people (popolo): fishermen, salt workers, glassmakers, shipwrights and other workers, most of a city of 124,000 to 175,000 people. Jews, denied citizenship, were confined from 1516 to the Ghetto.
+
+== tier
+level: 1
+band: ruler
+name: The doge
+term: dux, doge
+local: Doge
+share: 0
+sharenote: One man, elected for life.
+firm: yes
+terms:
+people:
+picture: francesco-foscari
+text: The doge was head of state for life. From 1268 forty-one electors chose him at the end of a long chain of lots and votes in the Great Council, designed to limit the influence of the great families. He promulgated the laws and commanded the army in war. Yet he swore an oath, the promissione ducale, recognising the limits of his power, and he was closely watched: he could not open dispatches from foreign powers without other officials present, own property abroad or name his successor, and after his death inquisitors judged his acts and could fine his estate. On Ascension Day he cast a ring into the sea from the state barge, the Bucentaur.
+rise: The doge was elected from among the patricians, usually a man of the inner circle of powerful families. Most ruled until death, but a few were forced out, and in 1355 the Council of Ten condemned Doge Marino Faliero to death for trying to make himself lord of Venice.
+you: Forty-one electors have chosen you for life and you promulgate the laws, but you may not open a foreign dispatch alone, and after your death inquisitors will judge your acts and may fine your estate.
+kid: The doge was the head of Venice, chosen for life, but the councils kept a close watch on everything he did.
+
+== tier
+level: 2
+band: nobility
+name: Patricians
+term: patrizio, nobil homo, case vecchie, case nuove
+local: Patriziato
+share: est 3-6
+sharenote: Estimate: 2,746 noblemen were entitled to sit in the Great Council in 1527, and up to 2,095 attended a session in the 16th century (all men of 25 and over); with their wives and children perhaps 6,000–9,000 people in a city of 124,000–175,000.
+firm: yes
+terms: libro-doro, serrata-del-maggior-consiglio
+people:
+picture: -
+text: The patricians alone sat in the Great Council. After the Serrata of 1297 and the laws of 1319–1323 membership was hereditary, and every nobleman entered the Council at 25. The families were registered in the Golden Book (Libro d'Oro), whose records of noble births and marriages, begun in 1506 and 1526, were kept by the Avogadori de Comùn. In law all patricians were equal: every vote, the doge's included, counted the same. In black togas they filled every council and magistracy, governed the subject cities as podestà and commanded the galleys, mostly for a year and for little pay. They drew their wealth from trade with the East rather than from land, and some 20 to 30 families dominated the state.
+rise: Birth alone made a patrician: a son of a noble father registered in the Golden Book, but not a son born to a mother of lower status. From 1498 a noble who followed a career in the Church lost his seat, and new families were admitted only rarely, as in 1381 after the War of Chioggia.
+you: You were entered in the Golden Book at birth and take your seat in the Great Council at twenty-five; you wear the black toga in office, and you may be sent to govern a mainland city or command a galley for a year.
+kid: Noble men ran the government of Venice together, and their names were written in a register called the Golden Book.
+
+== tier
+level: 3
+band: religious
+name: Clergy
+term: -
+local: -
+share: est 1-3
+sharenote: Estimate: the priests, monks and nuns of the city's parishes and convents; the articles give no count.
+firm: no
+terms: catholicism, roman-inquisition
+people:
+picture: -
+text: Catholicism was the state religion, but the Republic kept its clergy in check. In 1451 Pope Nicholas V erected the Patriarchate of Venice, whose cathedral was San Pietro di Castello, not St Mark's. The government regulated the building of churches, limited bequests to the Church and watched the priests who preached against it, sometimes expelling them from the state. The Inquisition was active in Venice from 1542 and tried 3,620 defendants before 1794, but lay magistrates sat at its trials, sometimes softened its punishments, and it had no power over Jews or other non-Christians. Every Easter Monday the abbess of San Zaccaria presented the doge with a new linen cap made by her nuns.
+rise: From 1498 a noble who chose a career in the Church was barred from the Great Council, so a patrician's son had to choose between the councils and the clergy.
+you: You serve one of the city's parishes; the Republic watches what you preach from the pulpit and may expel you from its lands if you speak against the government.
+kid: Priests, monks and nuns served Venice's many churches, but the government kept a close eye on what they said.
+
+== tier
+level: 3
+band: specialists
+name: Citizens
+term: cittadini, cittadini originari, cittadini de intra, cittadini de extra
+local: Cittadini
+share: est 5-8
+sharenote: Estimate: the citizens by birth with their families, and those granted citizenship; the articles give no count, and this middle order is taken here as about one to two times as many people as the nobility.
+firm: yes
+terms:
+people:
+picture: -
+text: After the Serrata closed the Great Council, the citizens (cittadini) were instituted as a middle order between the nobility and the common people, a place for ambitious families of wealth and distinction. Original citizens (cittadini originari), natives of Venice or of Venetian families to the third degree, could hold public office: they served as chancellors, secretaries, lawyers and notaries. Families of ancient Venetian origin and of "civilization" and "honour" were listed in a Silver Book and staffed the state bureaucracy, above all the chancellery in the Doge's Palace. Citizens joined together in scholae, religious and professional confraternities that gave their members mutual aid and set the rules of the trades. Newcomers could be granted citizenship on merit.
+rise: A family were citizens by birth, as natives of Venice or of Venetian families to the third degree, or by a grant on merit: de intra to work within the city, de extra to sail and trade abroad as Venetians. Jews were excluded.
+you: You were born in Venice to an old Venetian family, so you may serve the Republic as a secretary or notary in the Doge's Palace, though only the nobles sit in its councils.
+kid: Citizens were the middle rank of Venice: they worked as the state's secretaries, lawyers and notaries.
+
+== tier
+level: 4
+band: commoners
+name: Common people
+term: popolo
+local: Popolo
+share: rest
+sharenote: Everyone else: fishermen, salt workers, craftsmen, shipbuilders, labourers and their families, the great majority of the city. The other shares are estimates, so this one is too.
+firm: yes
+terms: guild, murano
+people:
+picture: murano
+text: The common people (popolo) were the great majority of the city. In the lagoon they fished and salted the catch and worked the salt pans, which the great families owned and rented to salt workers' families, who maintained them and organised themselves in consortia. Glass was made only on the island of Murano, to keep fires out of the city, and shipwrights built and armed the fleet in the state Arsenal; others made naval rope from imported hemp, tanned hides and spun wool on the Giudecca. Tailors and other trades were organised in guilds, and by the end of the 16th century some 200 printing businesses worked in Venice. The people's old assembly, the Concio, had been abolished in 1423.
+rise: The Great Council was closed to commoners except in rare emergencies: in 1381 thirty commoners who had given most to the War of Chioggia were made nobles. A family of wealth and distinction could hope to rise into the citizens.
+you: You make naval rope or build galleys in the state Arsenal, belong to your trade's guild, and have no voice in the councils that govern you.
+kid: Most Venetians were fishermen, salt workers, shipbuilders, glassmakers and other workers.
+
+== tier
+level: 4
+band: commoners
+name: Foreign communities
+term: -
+local: -
+share: est 2-4
+sharenote: Estimate: the Greek, German, Armenian and other communities of the city; the articles give no count. In 1770 Orthodox Greeks were 13.3 per cent of the whole Republic, most of them in its lands overseas.
+firm: no
+terms: eastern-orthodox-church, fondaco-dei-tedeschi
+people:
+picture: fondaco-dei-tedeschi
+text: Venetian society counted foreigners as a body of their own, beside the patricians and the citizens. Orthodox Greeks had the church of San Biagio from 1456, the only church where they could celebrate their rites, and in 1514, when it grew overcrowded, were allowed to build San Giorgio dei Greci. Armenians had lived in Venice since the mid-13th century. Ottoman merchants stayed at the Fondaco dei Turchi, which held a small mosque, but did not settle. Foreigners led the printing trade: the German Johann of Speyer obtained the first printing privilege in 1469, and by the end of the 15th century the German and French communities, the French led by Nicolas Jenson, owned most of the city's presses.
+rise: A newcomer could be granted Venetian citizenship on merit, to work within the city or to sail and trade as a Venetian; Jews were excluded.
+you: You are an Orthodox Greek in Venice; you may celebrate your rites only in your community's own church, San Giorgio dei Greci, built when San Biagio grew too crowded.
+kid: Greeks, Germans, Armenians and Ottoman merchants lived or traded in Venice, and the Greeks had a church of their own.
+
+== tier
+level: 5
+band: outcast
+name: Jews of the Ghetto
+term: ghetto
+local: -
+share: est 1-3
+sharenote: Estimate: the communities of the Ghetto, founded in 1516 and enlarged for the Levantine Jews in 1541; the articles give no count for the 16th century, and the census of 1770 found 5,026 Jews, about 0.2 per cent of the whole Republic.
+firm: yes
+terms: jews
+people:
+picture: -
+text: Jews had no Venetian citizenship and for long no right to live in the city. Moneylenders, whose loans the city's business needed, were admitted with permits renewed every five or ten years, and were first allowed to live in the lagoon in 1385; Jews had to wear a distinctive sign, a yellow circle that in the 16th century became a red cloth. After the defeat at Agnadello in 1509 brought refugees from Vicenza and Conegliano and tensions with the Christians grew, the Venetian Ghetto was established on 29 March 1516 and enlarged in 1541 for the Levantine Jews. Under the magistrates in Cattaver they ran the Ghetto's pawnshops and traded in second-hand goods. Each community of origin had its own synagogue.
+rise: Birth decided it: the law excluded Jews from Venetian citizenship, and the Ghetto was their only lawful home in the city.
+you: You live in the Ghetto and wear the red cloth that marks you as a Jew; you may run a pawnshop or deal in second-hand goods and pray in your community's synagogue, but you can never be a citizen of Venice.
+kid: Venice's Jews had to live in one district, the Ghetto, and wear a red cloth, but they had their own synagogues there.
+
+== mobility
+Venice's ladder was closed at the top. The Serrata of 1297 first widened the Great Council, which more than doubled to over 1,100 members by 1300, and then shut it: by 1323 membership was hereditary, and the new ruling class of almost 200 families monopolised the higher offices. Not everyone accepted it: in 1300 a commoner, Marin Bocconio, who thought he should have been admitted, was hanged for plotting to kill Doge Pietro Gradenigo. The citizens were created as the way up for families of wealth and distinction, and the nobility opened again only in emergencies, as in 1381, when thirty commoners who had given most to the War of Chioggia were made nobles; mainland families who gave the Republic military support received the title too, mostly as an honour. In the 15th and 16th centuries the aristocracy was numerous and poor nobles a minority, and trade with the East and the new workshops of the lagoon could raise a noble family quickly. Later the gates opened for money: in the 17th and 18th centuries the state sold the title for 100,000 ducats, and 134 families were admitted.
+
+== women
+A woman took her rank from her family and her husband. Noblewomen bore the title Nobilis Domina (N.D.) but had no seat in the Great Council, which only noble men attended. The law forbade nobles to marry outside the nobility, and a son born to a mother of lower status could not sit in the Council; the Golden Book recorded noble marriages as well as births. Marriage ties with the old houses had helped some commoner families to be chosen for the nobility in 1381. Noblewomen dressed in long embroidered silk with trailing cloaks and furs, and sumptuary laws from 1488 and, from 1514, a magistracy watching spending on parties and clothes tried to curb the expense. The nuns of San Zaccaria made the doge's linen cap each year.
+
+== sources
+Brown, H. F. (1887) Venetian Studies. London: Kegan Paul, Trench & Co.
+Lane, F. C. (1973) Venice, A Maritime Republic. Baltimore: Johns Hopkins University Press.
+Madden, T. F. (2012) Venice: A New History. New York: Viking.
+Raines, D. (2003) "Cooptazione, aggregazione e presenza al Maggior Consiglio: le casate del patriziato veneziano, 1297–1797", Storia di Venezia – Rivista 1: 2–64.
+Todesco, M.-T. (1989) "Andamento demografico della nobiltà veneziana allo specchio delle votazioni nel Maggior Consiglio (1297–1797)", Ateneo Veneto 176.
+
+== checked
+Republic of Venice; Doge of Venice; Great Council of Venice; Venetian nobility; Cittadini
+NOTE: the saved "Cittadini" article is a list of people with that surname; the citizens' rank rests on the Republic of Venice and Great Council articles only.
+NOTE: the articles say nothing of enslaved people in 16th-century Venice beyond the Concio's exclusion of slaves, so the ladder has no enslaved rank.
+MISSING: Doge of Venice, Great Council of Venice, Venetian nobility (patriciate), Council of Ten, Signoria of Venice, Avogadoria de Comùn, cittadini (Venetian citizens), Venetian Arsenal, Venetian Ghetto, Patriarchate of Venice, San Giorgio dei Greci, Fondaco dei Turchi, Leonardo Loredan, Andrea Gritti, Johann of Speyer, Nicolas Jenson, Bucentaur, Marriage of the Sea

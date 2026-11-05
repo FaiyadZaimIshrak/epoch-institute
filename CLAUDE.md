@@ -1294,7 +1294,7 @@ Hub (Explore: six cards, .hub-6 = three columns), search, sitemap, llms.txt, pos
 on one scale: make-posters.js "race", poster.html curves with `abs`).
 
 ## Social ladders (/societies/)
-The rank order of 30 societies, ruler to enslaved (Oct 2026): New Kingdom Egypt, Old Babylonia, Achaemenid Persia,
+The rank order of 40 societies, ruler to enslaved (30 in Oct 2026, ten more in Nov 2026: see A12a below): New Kingdom Egypt, Old Babylonia, Achaemenid Persia,
 Athens, Sparta, Rome, Byzantium, feudal Europe, the Vikings, Ancien Régime France, the Russian Empire, the Abbasids, the
 Mamluks, the Ottomans, Classical India, the Mughals, Han, Song and Yuan China, Joseon, Tokugawa Japan, Mali, Benin,
 Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue and Hawaii under the kapu.
@@ -1373,6 +1373,16 @@ Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue a
   answers 429 with Retry-After 600 after about 60 thumbnails in a row, and the block re-arms on every request made
   during it: wait it out, then fetch one every 3-6 s (soc2/thumbs-slow.js, GAP= for apply-picks.js); a pick without a
   crop can use its 330 px candidate thumbnail instead (soc2/fill-from-thumbs.js).
+- A12a (5 Nov 2026): ten more, Qing China, Heian Japan, Ayutthaya, Safavid Iran, Ptolemaic Egypt, Gaul, the Asante, Dahomey,
+  Venice and the Soviet Union, drafted by five agents with scripts/societies/SOCIETIES-GUIDE.md (rebuilt: the October guide
+  was lost with its session) from saved Wikipedia articles, every number checked against them and every source line found
+  in them (places of publication the agents added from memory were cut where the articles do not print them). Population
+  and shares nobody counted are estimates, marked est with what they rest on (the Soviet population: none of the articles
+  gives a 1930s total, so the range is kept wide and says so). Rank pictures: scripts/societies/rank-pictures.js (need |
+  cands | fetch | sheet | apply: Commons searches, contact sheets, picks by eye, crops, 320 px JPEGs and the rows of
+  scripts/society-pictures.tsv; PowerShell names ignore case, so its sizes are $sw/$sh and $dw/$dh: $W was $w and every
+  first picture came out as a 320 px strip). 49 ranks needed one; 47 came from three rounds of searches, two from entries
+  (the Royal Palaces of Abomey, the Faiyum). Heian Japan links the Shinto profile, the only Japanese profile before 1868.
 - Wiring: Explore menu, phone menu and footer; Research Hub card; search pages (kind "ladder", glyph group); shelf
   and My Passport kind; sitemap; llms.txt; posters (make-posters.js "societies": a mosaic per ladder, and
   page-societies.jpg); deploy.sh GENERATED and DATA (data/societies); split-css GENERATED; check-site's folders; the

@@ -1,0 +1,140 @@
+name: Gaul
+of: Gaul
+short: Gaul
+in: Gaul
+year: -60
+period: c. 121–52 BCE (free Gaul in the time of Julius Caesar)
+region: Europe
+population: est 10-14 million | implied by the estimate that the one million people who died in Caesar's Gallic Wars were probably one Gaul in twelve
+profiles: Celts, La Tène culture
+nolink: equites, atlantic-slave-trade, roman-empire
+picture: bibracte
+kids: yes
+title: Social Hierarchy of Ancient Gaul: From Kings to the Enslaved
+desc: The social ladder of Gaul before the Roman conquest: kings and magistrates, druids, warrior nobles, smiths, the free people and the enslaved.
+intro: Gaul in the 1st century BCE was a land of many tribes, never united under a single ruler or government. Each tribe had a council of elders and at first a king; by Caesar's day several, such as the Aedui and the Helvetii, were governed instead by magistrates elected every year. Julius Caesar, who conquered Gaul between 58 and 51 BCE, wrote that two classes were held in honour: the druids, the learned priests and judges, and the equites, the warrior nobility. He also described ties of patron and client much like those of Rome. Most ancient descriptions of the Celtic peoples divide them into three groups: a warrior aristocracy, a learned class of druids, poets and jurists, and everyone else. Below the free stood the enslaved. Nearly all that is known comes from Greek and Roman writers, above all Caesar, whose reliability is still debated, and from archaeology, for the Gauls left few writings of their own.
+
+== tier
+level: 1
+band: ruler
+name: Kings and chief magistrates
+term: rex (king, in Caesar's Latin), vergobret (chief magistrate of the Aedui)
+local: Vergobret
+share: est 0.01-0.03
+sharenote: Estimate: one king or chief magistrate in each tribe, with their families; the Gallic Wars are said to have subjugated some 300 clans, among 10–14 million people.
+firm: yes
+terms:
+people: vercingetorix, bituitus, ambiorix
+picture: vercingetorix
+text: The tribe, made up of one or more smaller units the Romans called pagi, was the basic unit of Gallic politics. Each tribe had a council of elders and, at first, a king. Later many tribes chose an executive magistrate every year: among the Aedui he held the title of vergobret, a post much like a king's, but his powers were held in check by rules the council laid down. Kings still ruled elsewhere: Bituitus, king of the Arverni, led an army against Rome in 121 BCE and was defeated. Gaul as a whole stayed divided, and only in a time of crisis, Caesar's invasion, did the Gauls unite under one leader, the Arvernian chieftain Vercingetorix, in 52 BCE.
+rise: In many tribes the rule of kings gave way to magistrates elected for a year, whose powers the council of elders limited. In a time of crisis the tribes could unite under a single war leader, as they did under Vercingetorix, though even then the factions remained.
+you: You have been chosen vergobret of the Aedui for a year: your power is much like a king's, but the council's rules bind you.
+kid: Each Gallic tribe had a council of elders and a leader, at first a king and later often a leader chosen every year.
+
+== tier
+level: 2
+band: religious
+name: Druids
+term: druides (druids), bards, vates (seers)
+local: Druides
+share: est 0.1-0.5
+sharenote: Estimate: no ancient figure survives; a learned order under one head for all Gaul, whose pupils might study for up to twenty years, with the bards and seers beside them.
+firm: no
+terms:
+people: diviciacus-aedui
+picture: -
+text: The druids were the learned class: priests, judges, teachers and keepers of religious and legal tradition. According to Caesar they performed public and private sacrifices, judged nearly all disputes over crime, inheritance and boundaries, and could bar the disobedient from the sacrifices, the harshest of penalties. They had a single head, who held office for life, and met once a year at a sacred place in the land of the Carnutes, reckoned the centre of all Gaul. They paid no taxes and did no military service, educated the aristocracy, and taught that the soul does not die. Greek writers name bards and seers (vates) beside them. Cicero knew one druid, Diviciacus of the Aedui.
+rise: Pupils might stay in training for up to twenty years, learning a great body of verse by heart, since the druids held it unlawful to write their teaching down. Caesar says their teaching came from Britain, and that Gauls who wished to study it closely went there.
+you: You perform the sacrifices of your people and judge their disputes over crimes, inheritances and boundaries, and you pay no taxes and do no military service.
+kid: Druids were priests and teachers who learned everything by heart, settled quarrels and led the ceremonies for the gods.
+
+== tier
+level: 2
+band: nobility
+name: Warrior nobles
+term: equites (horsemen, in Caesar's Latin)
+local: -
+share: est 1-3
+sharenote: Estimate: no ancient figure survives; the warrior aristocracy of every tribe with their families, set somewhat above the knights of medieval Europe with their families (about 0.5–1.5 per cent), since each of the many tribes had a nobility of its own.
+firm: yes
+terms:
+people: orgetorix, dumnorix
+picture: orgetorix
+text: The second honoured class, in Caesar's account, was the equites, the "horsemen": a warrior aristocracy. Caesar and other writers describe ties of patron and client among the Gauls much like those of Rome. Warfare between tribes was a regular part of life, a way to exert political control, to harass rivals and to win wealth. Greek writers say that the nobles shaved their cheeks but let their moustaches grow over the mouth, and that warriors hung the heads of enemies slain in battle from their horses' necks and nailed them up outside their homes. The rich wore silk among their wool and linen, and the most famous ornament was the torc, a neck collar of metal, sometimes of gold.
+rise: The sources say little of how a man entered the nobility. After the conquest the Gaulish upper class took up Roman ways quickly, and Gauls served Rome as horsemen.
+you: You ride to war at the head of your followers, a torc at your neck and your moustache grown over your mouth; your standing rests on war and on the men who look to you as their patron.
+kid: Noble warriors rode horses into battle and wore metal neck rings called torcs, some of them made of gold.
+
+== tier
+level: 3
+band: specialists
+name: Smiths and craftsmen
+term: -
+local: -
+share: est 3-8
+sharenote: Estimate: no ancient figure survives; the smiths and metalworkers, the miners and the traders of the oppida and the countryside.
+firm: no
+terms: la-tene-culture
+people:
+picture: -
+text: Gaul was rich in metals. Its lands held tin, lead, iron, silver and gold, and archaeologists know of at least 200 pre-Roman gold mines in the Pyrenees alone. Celtic smiths and metalworkers made weapons and jewellery for trade far afield, above all with the Romans. La Tène metalwork in bronze, iron and gold, with its leafy palmettes, spirals and S-scrolls, adorned fine vessels, helmets, shields, horse trappings and the torcs and brooches of the elite. From the 3rd century BCE the Gauls minted coins: gold for trade, and potin, a bronze with much tin, of low value. Large fortified towns, the oppida, such as Bibracte, Avaricum and Gergovia, were centres of population, and Roman merchants came to trade.
+rise: The sources do not say how a smith learned his craft or whether it passed from father to son. As Rome's demand for gold grew, gold production in the Celtic lands rose sharply.
+you: You work bronze and gold, hammering spirals and S-scrolls into a noble's torc or helmet, and Roman merchants come to buy your weapons and jewellery.
+kid: Gallic smiths made beautiful things from gold and bronze, decorated with swirling patterns.
+
+== tier
+level: 3
+band: commoners
+name: The free people
+term: -
+local: -
+share: rest
+sharenote: Everyone not counted in the other ranks: the free majority and their families. The other ranks are estimates, so this share is one too.
+firm: yes
+terms:
+people:
+picture: -
+text: Of the free Gauls who were neither nobles nor druids, the great majority, the ancient writers say least. They lived in scattered settlements and in the large towns, with hill forts used as refuges in time of war. The druids kept the yearly farming calendar and set the seasonal festivals. People wore long-sleeved tunics and the trousers the Romans called braccae, of wool or linen, with cloaks in winter. They worshipped many gods, among them the thunder god Taranis, Lugus, a god of skills and crafts, and the horse goddess Epona, held ceremonies in sacred groves and offered treasured things in rivers, wetlands and shafts. Caesar's wars fell on them hardest: as many as a million Gauls died.
+rise: The sources record no path upward for ordinary Gauls. A free person could fall into slavery for debt or as a punishment, and the Romans enslaved about a million Gauls in the Gallic Wars.
+you: You are one of the free people of your tribe; the druids keep the calendar that tells you when the seasons and festivals come, and when war comes you take refuge behind the ramparts of a hill fort.
+kid: Most Gauls were ordinary free people who wore warm trousers and worshipped many gods of nature.
+
+== tier
+level: 4
+band: enslaved
+name: Enslaved people
+term: -
+local: -
+share: est 5-10
+sharenote: Estimate: no ancient figure survives. Celtic slavery is thought to have resembled the better documented slavery of Greece and Rome; the range is set below the 10–15 per cent modern scholars give for the Roman Empire, as nothing in the sources suggests slavery on the Roman scale.
+firm: yes
+terms: slavery
+people:
+picture: -
+text: Slavery among the Celts was very likely much like that of Greece and Rome. People were enslaved in war and in raids, as punishment and for debt; slavery passed from parent to child, though slaves could be freed. The Old Irish and Welsh words for a slave, cacht and caeth, are related to the Latin captus, "captive", which suggests that the slave trade was an early link between the Latin and Celtic worlds. Caesar reports human sacrifices by the druids, and the historian Bruce Lincoln argues that those killed were as a rule condemned criminals and prisoners of war. The Roman conquest made slaves on a vast scale: about a million Gauls were enslaved, among them most of the surviving Helvetii.
+rise: Freedom came only by manumission, which was possible but is not described; a slave's children were born into slavery.
+you: You were taken in a raid on a neighbouring tribe and now belong to another; your children will be born slaves unless your owner sets you free.
+kid: Some people in Gaul were enslaved, often after being captured in war, and their children were enslaved too.
+
+== mobility
+The sources describe the Gallic order more than movement within it. The great change of the 1st century BCE took place at the top: in many tribes the rule of kings gave way to magistrates elected each year and checked by a council of elders, such as the vergobret of the Aedui, while kings still ruled in other tribes, as Bituitus had among the Arverni in 121 BCE. Learning was a ladder of its own: the druids trained their pupils for as long as twenty years. War and debt worked the other way, carrying free people into slavery. The conquest overturned the whole order. As many as a million Gauls died, another million were enslaved, and 300 clans were subjugated; the upper class soon took up Roman ways, the druids lost their standing and were banned by the emperors in the 1st century CE, and the tribes became the civitates through which Rome governed Gaul. Some scholars argue that the druids were already a declining force before the conquest; others hold that the decline came after it.
+
+== women
+Very few reliable sources survive on how the Gauls saw the roles of women and men, and archaeology suggests their views may have differed from the Greek and Roman. At Vix in north-eastern Gaul a person of high rank, buried with a woman's jewellery and with weaponry, has raised questions about the gender of some people buried with weapons, though it has been suggested that weapons in such graves mark high rank rather than a man. Roman writers describe Celtic women urging on, joining and even leading battles, and Plutarch says that Celtic women acted as ambassadors to prevent a war among the Celts of the Po valley in the 4th century BCE; modern historians such as Barry Cunliffe and Lisa Bitel warn that such stories were often meant to show the "barbarians" as a world turned upside down. The classical accounts of the druids say nothing of women. Genetic studies of La Tène cemeteries suggest that the Gauls were patrilineal and patrilocal, with wives coming to their husbands' families, in agreement with the archaeological and written evidence.
+
+== sources
+Birkhan, H. (1997) Die Kelten. Vienna.
+Drinkwater, J. F. (2014) [1983] Roman Gaul: The Three Provinces, 58 BC–AD 260. Abingdon: Routledge.
+Kendrick, T. D. (1927) The Druids.
+Piggott, S. (1968) The Druids.
+
+== checked
+Gaul; Gauls; Celts; Druid
+NOTE: "equites" in nolink: the encyclopedia's Equites entry is the Roman order, not Caesar's Gallic horsemen.
+NOTE: The population is implied, not stated: the Gaul article says the dead of the Gallic Wars were "probably 1 in 12 of the Gauls", giving about 12 million; the range 10–14 million is mine.
+NOTE: The articles do not quote Caesar's famous description of the common people (Gallic War 6.13); the free people's tier therefore says only what the articles give. If the editor's sources allow it, Caesar's remark on the commoners and the clients could be added there.
+NOTE: Druids and warrior nobles share level 2 because Caesar names them as the two honoured classes without ranking them. The druids are firm: no, since their power in Caesar's account is debated (Hutton, Pailler, Maier).
+NOTE: The smiths share level 3 with the free people: the sources do not rank craftsmen above other commoners.
+NOTE: The druids' banning in the mobility section is the druid article's "imperial prohibitions in the 1st century CE" (Augustus, Tiberius, Claudius).
+NOTE: Vix (c. 470 BCE) is older than the period; it is used only in the women's section, as the Celts article uses it.
+MISSING: druid, bard, vates, vergobret, oppidum, torc, potin, braccae, Aedui, Arverni, Helvetii, Carnutes, Remi, Taranis, Epona, Gallia Comata, Alesia (the town)
