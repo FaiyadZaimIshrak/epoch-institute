@@ -38,7 +38,7 @@ title: Social Hierarchy of Qing China: From Emperor to Bondservant   (at most 70
 desc: …                                (at most 160 characters: the meta description, naming the ranks)
 intro: …                               (one paragraph: how the society ranked people, by law, birth, wealth, office)
 ```
-Then one `== tier` block for each rank, from the top down:
+Then one `== tier` block for each rank, from the top down (4 to 12 ranks: the builder stops on more):
 ```
 == tier
 level: 1                (1 = top; ranks of equal standing share a level and stand side by side)
@@ -67,7 +67,9 @@ How people moved between ranks, and how often.
 == women
 How women's place differed from men's in each rank.
 == sources
-Only real works the articles cite (author, year, title, place: publisher), one a line; at least three.
+Only real works the articles cite, one a line, at least three: author, year, title, and the place and
+publisher ONLY where the article prints them (never from memory: the editor checks every line against the articles).
+Never cite a work the articles do not name.
 == checked
 The titles of the articles you used, separated by "; ".
 ```

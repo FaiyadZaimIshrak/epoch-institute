@@ -1294,7 +1294,7 @@ Hub (Explore: six cards, .hub-6 = three columns), search, sitemap, llms.txt, pos
 on one scale: make-posters.js "race", poster.html curves with `abs`).
 
 ## Social ladders (/societies/)
-The rank order of 40 societies, ruler to enslaved (30 in Oct 2026, ten more in Nov 2026: see A12a below): New Kingdom Egypt, Old Babylonia, Achaemenid Persia,
+The rank order of 50 societies, ruler to enslaved (30 in Oct 2026, twenty more in Nov 2026: see A12a below): New Kingdom Egypt, Old Babylonia, Achaemenid Persia,
 Athens, Sparta, Rome, Byzantium, feudal Europe, the Vikings, Ancien Régime France, the Russian Empire, the Abbasids, the
 Mamluks, the Ottomans, Classical India, the Mughals, Han, Song and Yuan China, Joseon, Tokugawa Japan, Mali, Benin,
 Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue and Hawaii under the kapu.
@@ -1383,6 +1383,11 @@ Kongo, the Aztecs, the Classic Maya, the Inca, Spanish America, Saint-Domingue a
   scripts/society-pictures.tsv; PowerShell names ignore case, so its sizes are $sw/$sh and $dw/$dh: $W was $w and every
   first picture came out as a 320 px strip). 49 ranks needed one; 47 came from three rounds of searches, two from entries
   (the Royal Palaces of Abomey, the Faiyum). Heian Japan links the Shinto profile, the only Japanese profile before 1868.
+- A12b (5 Nov 2026): ten more, Ming China, Kievan Rus', the Khmer Empire, Majapahit, the Delhi Sultanate, Aksum, the Zulu
+  Kingdom, the Haudenosaunee, the Dutch Republic and British India c. 1900, the same way; 49 rank pictures (two from entries:
+  Rajputs, Angkor Thom; the Haudenosaunee's False Face masks were left out, as sacred objects the Confederacy asks not to be
+  shown). Shares nobody counted, and the populations of Kievan Rus', Aksum, Majapahit and the Khmer Empire, are wide estimates
+  that say so; British India's Brahmin and untouchable shares lean on present-day figures, as their notes say.
 - Wiring: Explore menu, phone menu and footer; Research Hub card; search pages (kind "ladder", glyph group); shelf
   and My Passport kind; sitemap; llms.txt; posters (make-posters.js "societies": a mosaic per ladder, and
   page-societies.jpg); deploy.sh GENERATED and DATA (data/societies); split-css GENERATED; check-site's folders; the
