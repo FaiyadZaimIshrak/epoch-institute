@@ -33389,7 +33389,17 @@ var SEARCH_INDEX = [
 [0,"Ya Mustafa","work","يا مصطفى|Yā Muṣṭafā",0],
 [0,"One Thousand and One Nights","work","",4,1],
 [0,"The Tale of Genji","work","",1,1],
-[0,"Terracotta Army","work","",4,1]
+[0,"Terracotta Army","work","",4,1],
+["adolf-hitlers-rise-to-power","Adolf Hitler's rise to power","event","Hitler's rise to power",1,1],
+[0,"De-Stalinization","event","De-Stalinisation",0],
+[0,"The Exodus","event","",1,1],
+[0,"Hawaiian sovereignty movement","idea","ke ea Hawaiʻi",2],
+[0,"Joe Hill","person","Joel Emmanuel Hägglund|Joseph Hillstrom",1,1],
+[0,"Marquis de Lafayette","person","Lafayette|La Fayette|Gilbert du Motier|Hero of the Two Worlds",1,1],
+[0,"McCarthyism","idea","Second Red Scare",1,1],
+[0,"Meiji era","idea","Meiji period|Meiji jidai",3,1],
+[0,"Orange Revolution","event","Pomarancheva revoliutsiia",1,1],
+["proclamation-of-the-peoples-republic-of-china","Proclamation of the People's Republic of China","event","founding of the People's Republic of China",1,1]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.

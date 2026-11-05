@@ -574,7 +574,10 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   slices of 30 (append only), apply-added-entries again, regen-profiles, a full build. The builder gives new entries
   their search rows, facets and preview cards. Wave 1 (3 Nov 2026): 107 entries, 91 pictured, 261 profile links; wave 2
   (3 Nov): 137; wave 3 (4 Nov): 184, the ladders' ranks and people; wave 4 (4 Nov): the ladders' remaining names, the
-  people and events the songs and speeches name. A row of encyclopedia-links.js is never deleted (byEmpire holds row
+  people and events the songs and speeches name; wave a7w5 (6 Nov): the ten wave 4 left when Wikipedia throttled it
+  (McCarthyism, De-Stalinization, the Exodus, Hitler's rise to power, the Orange Revolution, the Hawaiian sovereignty
+  movement, the proclamation of the PRC, the Meiji era, Lafayette, Joe Hill; bare "Lafayette" is no pattern: the town
+  in Indiana). A row of encyclopedia-links.js is never deleted (byEmpire holds row
   INDICES: a deleted row shifts every later profile link); a pattern that must go is replaced by text that cannot
   match ("Indica of Megasthenes"). "dates" in added-entries.json ([slug, dates, "no-y"?]) date existing entries and
   their preview cards: 67 of the undated events (4 Nov 2026), each from its article (six left out: the crusade as a
