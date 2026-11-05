@@ -33386,7 +33386,10 @@ var SEARCH_INDEX = [
 [0,"Twinkle, Twinkle, Little Star","work","",0],
 [0,"Ubi caritas","work","Ubi caritas et amor",0],
 [0,"The Wearing of the Green","work","",0],
-[0,"Ya Mustafa","work","يا مصطفى|Yā Muṣṭafā",0]
+[0,"Ya Mustafa","work","يا مصطفى|Yā Muṣṭafā",0],
+[0,"One Thousand and One Nights","work","",4,1],
+[0,"The Tale of Genji","work","",1,1],
+[0,"Terracotta Army","work","",4,1]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.

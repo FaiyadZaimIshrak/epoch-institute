@@ -687,7 +687,27 @@ var HOME_PICS = {
   "Feminism": {"img":"/images/encyclopedia/mary-wollstonecraft.jpg","name":"Mary Wollstonecraft","slug":"mary-wollstonecraft","credit":"John Opie, Public domain"},
   "Pan-Arabism": {"img":"/images/encyclopedia/hussein-bin-ali-king-of-hejaz.jpg","name":"Hussein bin Ali, King of Hejaz","slug":"hussein-bin-ali-king-of-hejaz","credit":"Unknown author, Public domain"},
   "Islamism": {"img":"/images/encyclopedia/jamal-al-din-al-afghani.jpg","name":"Jamal al-Din al-Afghani","slug":"jamal-al-din-al-afghani","credit":"Unknown author, Public domain"},
-  "Peronism": {"img":"/images/encyclopedia/juan-peron.jpg","name":"Juan Perón","slug":"juan-peron","credit":"Unknown author, Public domain"}
+  "Peronism": {"img":"/images/encyclopedia/juan-peron.jpg","name":"Juan Perón","slug":"juan-peron","credit":"Unknown author, Public domain"},
+  "Epic of Gilgamesh": {"img":"/images/encyclopedia/epic-of-gilgamesh.jpg","name":"Epic of Gilgamesh","slug":"epic-of-gilgamesh","credit":"CC0"},
+  "Code of Hammurabi": {"img":"/images/encyclopedia/code-of-hammurabi.jpg","name":"Code of Hammurabi","slug":"code-of-hammurabi","credit":"Mbzt, CC BY 3.0","top":5},
+  "Iliad": {"img":"/images/encyclopedia/iliad.jpg","name":"Iliad","slug":"iliad","credit":"Homer, Public domain"},
+  "Mahabharata": {"img":"/images/encyclopedia/mahabharata.jpg","name":"Mahabharata","slug":"mahabharata","credit":"Public domain"},
+  "Analects": {"img":"/images/encyclopedia/analects.jpg","name":"Analects","slug":"analects","credit":"Confucius and his disciples, Public domain"},
+  "Shahnameh": {"img":"/images/encyclopedia/shahnameh.jpg","name":"Shahnameh","slug":"shahnameh","credit":"Attributed to Sultan Muhammad, Public domain"},
+  "One Thousand and One Nights": {"img":"/images/encyclopedia/one-thousand-and-one-nights.jpg","name":"One Thousand and One Nights","slug":"one-thousand-and-one-nights","credit":"Al-Mubashshir ibn Fatik, Public domain"},
+  "The Tale of Genji": {"img":"/images/encyclopedia/the-tale-of-genji.jpg","name":"The Tale of Genji","slug":"the-tale-of-genji","credit":"Imperial Palace Kyoto, Public domain"},
+  "Divine Comedy": {"img":"/images/encyclopedia/divine-comedy.jpg","name":"Divine Comedy","slug":"divine-comedy","credit":"Domenico di Michelino / After Alesso Baldovinetti, Public domain"},
+  "Popol Vuh": {"img":"/images/encyclopedia/popol-vuh.jpg","name":"Popol Vuh","slug":"popol-vuh","credit":"Francisco Ximénez, Public domain"},
+  "Great Pyramid of Giza": {"img":"/images/encyclopedia/great-pyramid-of-giza.jpg","name":"Great Pyramid of Giza","slug":"great-pyramid-of-giza","credit":"Douwe C. van der Zee, CC BY-SA 4.0"},
+  "Parthenon": {"img":"/images/encyclopedia/parthenon.jpg","name":"Parthenon","slug":"parthenon","credit":"Steve Swayne, CC BY 2.0"},
+  "Great Wall of China": {"img":"/images/encyclopedia/great-wall-of-china.jpg","name":"Great Wall of China","slug":"great-wall-of-china","credit":"Severin.stalder, CC BY-SA 3.0"},
+  "Terracotta Army": {"img":"/images/encyclopedia/terracotta-army.jpg","name":"Terracotta Army","slug":"terracotta-army","credit":"xiquinhosilva, CC BY 2.0"},
+  "Hagia Sophia": {"img":"/images/encyclopedia/hagia-sophia.jpg","name":"Hagia Sophia","slug":"hagia-sophia","credit":"Adli Wahid, CC BY-SA 3.0"},
+  "Angkor Wat": {"img":"/images/encyclopedia/angkor-wat.jpg","name":"Angkor Wat","slug":"angkor-wat","credit":"Bjørn Christian Tørrissen, CC BY-SA 4.0"},
+  "Borobudur": {"img":"/images/encyclopedia/borobudur.jpg","name":"Borobudur","slug":"borobudur","credit":"Heri nugroho, CC BY-SA 4.0"},
+  "Rock-hewn churches of Lalibela": {"img":"/images/encyclopedia/rock-hewn-churches-of-lalibela.jpg","name":"Rock-hewn churches of Lalibela","slug":"rock-hewn-churches-of-lalibela","credit":"Sailko, CC BY 3.0"},
+  "Machu Picchu": {"img":"/images/encyclopedia/machu-picchu.jpg","name":"Machu Picchu","slug":"machu-picchu","credit":"Draceane, CC BY-SA 4.0"},
+  "Taj Mahal": {"img":"/images/encyclopedia/taj-mahal.jpg","name":"Taj Mahal","slug":"taj-mahal","credit":"Yann; edited by Jim Carter, CC BY-SA 4.0"}
 };
 
 var HOME_ENTRIES = [

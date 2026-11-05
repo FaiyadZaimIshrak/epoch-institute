@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>The Tale of Genji: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Tale of Genji is a long prose tale of the Heian court, said to have been written by the noblewoman and lady-in-waiting Murasaki Shikibu in the early…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="The Tale of Genji: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Tale of Genji is a long prose tale of the Heian court, said to have been written by the noblewoman and lady-in-waiting Murasaki Shikibu in the early…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/the-tale-of-genji">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/the-tale-of-genji.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/the-tale-of-genji.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/the-tale-of-genji">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"The Tale of Genji"}]},{"@type":"Article","headline":"The Tale of Genji","description":"The Tale of Genji is a long prose tale of the Heian court, said to have been written by the noblewoman and lady-in-waiting Murasaki Shikibu in the early…","url":"https://the-epoch-institute.org/work/the-tale-of-genji","mainEntityOfPage":"https://the-epoch-institute.org/work/the-tale-of-genji","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"The Tale of Genji"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/the-tale-of-genji.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">The Tale of Genji</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/The%20Tale%20of%20Genji.png" alt="The Tale of Genji" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">The Tale of Genji</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1008 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Murasaki Shikibu, noblewoman, poet and lady-in-waiting at the Heian court, to whom it is attributed; how much of it she wrote has been debated for centuries, and some scholars doubt her authorship of the later chapters</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">Prose fiction (monogatari) in Heian court Japanese, written mostly in hiragana, with many poems in the <a class="enc-link" href="/encyclopedia/tanka">tanka</a> form; 54 chapters in three parts and some four hundred characters</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">The original <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> is lost; some 300 later manuscript copies exist, among them chapters in Fujiwara Teika's own hand; the 12th-century illustrated scrolls are in the Tokugawa Art Museum in <a class="enc-link" href="/encyclopedia/nagoya">Nagoya</a> and the Gotoh Museum in Tokyo</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Hikaru Genji, the “Shining Genji”; Lady Fujitsubo and Murasaki no Ue; the Uji chapters and the abrupt ending; poems woven into conversation; characters named by rank and role; the Genji Monogatari Emaki scrolls; the debate over the “first novel”</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Written mostly in hiragana, the script then associated with women's writing, it follows Genji's loves, exile and return at court and then two of his descendants, through 54 chapters and some four hundred characters who age in step.</li><li>The original <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> is lost and its authorship debated; the 13th-century editions of Minamoto no Chikayuki and Fujiwara Teika became the basis of most later copies.</li><li>Often called the first novel, a claim much debated, it is staple reading in Japanese schools, appears on the 2000 yen banknote and gave <a class="enc-link" href="/encyclopedia/japan">Japan</a> its Classics Day, 1 November.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In the <a class="enc-link" href="/encyclopedia/incense">incense</a> game Genjikō, players matched the scents of five incense samples without being told their names, and each possible combination had a symbol, a genji-mon, standing for a chapter of the tale.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1008</span><span class="rf-text">An entry in Murasaki's diary refers to the tale, the oldest dated reference to it</span></li><li><span class="rf-year">1021</span><span class="rf-text">The author of the Sarashina Nikki records her joy at acquiring a complete copy of over 50 chapters</span></li><li><span class="rf-year">12th century</span><span class="rf-text">The Genji Monogatari Emaki, the earliest extant Japanese picture scroll, illustrates scenes from the tale</span></li><li><span class="rf-year">1236–1255</span><span class="rf-text">Minamoto no Chikayuki edits the differing <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> into the version known as the Kawachibon</span></li><li><span class="rf-year">1882</span><span class="rf-text">Suematsu Kenchō publishes the first, partial English translation, of seventeen chapters</span></li><li><span class="rf-year">1925–1933</span><span class="rf-text">Arthur Waley publishes his translation of all but the 38th chapter in six volumes</span></li><li><span class="rf-year">1976</span><span class="rf-text">Edward Seidensticker publishes the first complete English translation</span></li><li><span class="rf-year">2019</span><span class="rf-text">An original copy of the fifth chapter, Wakamurasaki, in Fujiwara Teika's hand is found in Tokyo</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Murasaki Shikibu lived at the height of the <a class="enc-link" href="/encyclopedia/fujiwara-clan">Fujiwara clan</a>'s power, when Fujiwara no Michinaga was the regent in all but name and the most significant political figure of his day; she is believed to have formed the character of Genji partly through her experience of him. The tale was written to entertain the Japanese court of the 11th century, and it may have been written chapter by chapter, as she delivered installments to aristocratic women, the ladies-in-waiting.</p><p>In the Heian period monogatari meant prose fiction in the vernacular of the time, thought suitable only for women and children who could not read Chinese, the official language of government and religion. Writing in kanji, the Chinese characters used for more prestigious literature, was a masculine pursuit, and women were generally discreet in using it. Genji is written mostly in kana, specifically hiragana, in a style associated with women's writing, and outside the vocabulary of politics and <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> it contains remarkably few Chinese loan words.</p><p>Poetry ran through court conversation. Modifying or rephrasing a classic poem to suit the moment was expected behaviour and often carried thinly veiled allusions. The tale's poems are often in the classic <a class="enc-link" href="/encyclopedia/tanka">tanka</a> form, and because many were well known to its first readers, usually only the first few lines are given, leaving the rest unspoken. Court manners also made it unacceptably familiar to use a person's given name, so almost no character is named.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The first part, chapters 1 to 33, follows the early life and loves of Hikaru Genji, the “Shining Genji”, son of the emperor known to readers as Emperor Kiritsubo and a low-ranking concubine. For political reasons the emperor removes him from the succession, making him a commoner with the surname Minamoto. Genji loves his stepmother, Lady Fujitsubo, who bears him a secret son, Reizei; he kidnaps a ten-year-old girl, Murasaki no Ue, Fujitsubo's niece, raises her to resemble his ideal and later marries her. When an affair with a concubine of the new Emperor Suzaku is exposed, he is exiled to Suma, where he has a daughter, a future Empress, by the Akashi Novice's daughter. Pardoned, he returns to <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>, and Reizei, now emperor and aware of his true father, raises him to the highest rank.</p><p>The second part, chapters 34 to 41, tells of his decline after the age of 40. He marries the Third Princess, whom his nephew Kashiwagi rapes and who bears Kaoru, legally Genji's son; Murasaki dies, and the blank chapter Kumogakure, “Vanished into the Clouds”, implies Genji's death. After transitional chapters, the Uji chapters, 45 to 54, follow Kaoru and his friend Niou, Genji's grandson, in their rivalry over the daughters of a prince living at Uji. The tale ends abruptly, with Kaoru wondering whether Niou is hiding his former lover from him.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>The original <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> is lost, and how much of the tale Murasaki wrote has been debated for centuries. Her diary refers to the tale and applies the name “Murasaki” to herself in an allusion to its heroine, an entry internal evidence dates to 1008. It is generally accepted that the work was finished in its present form by 1021, when the author of the Sarashina Nikki described acquiring a complete copy of over 50 chapters. Murasaki often went back and edited early manuscripts, introducing discrepancies from earlier copies.</p><p>The poet Yosano Akiko believed that Murasaki wrote only chapters 1 to 33 and that the later chapters were by her daughter, Daini no Sanmi. Other scholars have doubted chapters 42 to 54, especially 44, which contains continuity mistakes rare elsewhere, and Royall Tyler reports that computer analysis has found “statistically significant” differences of style between chapters 45 to 54 and the rest. Whether the abrupt ending was intended is also disputed: Arthur Waley believed the work finished, Ivan Morris that later chapters were missing, and Edward Seidensticker that Murasaki had no planned ending and wrote for as long as she could.</p><p>When the chapters acquired their titles is not known; early mentions refer to chapter numbers, which may suggest that the titles were added later. Some scholars have posited a lost chapter between the first and the second. The work was made in the orihon or “concertina” style, sheets of paper pasted together and folded alternately one way and the other.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>Written in an archaic court language, the tale was difficult to read without specialised study a century after its completion, and annotated and illustrated versions existed as early as the 12th century. Its scenes were painted again and again: the Genji Monogatari Emaki of the 12th century is the earliest extant Japanese picture scroll; Tosa Mitsuoki, who lived from 1617 to 1691, painted complete scrolls closely based on the Heian style; and the tale was a popular theme of <a class="enc-link" href="/encyclopedia/ukiyo-e">ukiyo-e</a> prints in the <a class="enc-link" href="/encyclopedia/edo-period">Edo period</a>. Its chapter names became central to Genjikō, an <a class="enc-link" href="/encyclopedia/incense">incense</a> game popular among the nobility.</p><p>In the early 20th century the poet Akiko Yosano translated it into modern Japanese, followed by the novelists Jun'ichirō Tanizaki and Fumiko Enchi; such translations made it easier to read but changed some meaning and gave the characters names, and many Japanese readers still use annotated versions. In English, Suematsu Kenchō's partial version of 1882 is considered of poor quality. Arthur Waley's (1925–1933) was eagerly received and is still widely read, though some purists criticised his changes and his free manner. Edward Seidensticker (1976) kept more closely to the original but named most characters; Royall Tyler (2001) kept their titles instead and added extensive notes, and Dennis Washburn's version (2015) was criticised for over-clarifying the text.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>According to Ikeda Kikan some 300 later <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> copies exist, each differing from the others. They fall into three categories. In the 13th century Minamoto no Chikayuki and Fujiwara Teika made two major attempts to edit the differing manuscripts: Chikayuki's Kawachibon, edited from 1236 to 1255, and Teika's Aobyōshibon, whose more conservative edits are thought to better represent the original. Both became the basis of many later copies; the third category, the Beppon, holds all the rest, including older but incomplete manuscripts.</p><p>Finds continue. In 2008 a late <a class="enc-link" href="/encyclopedia/kamakura">Kamakura</a> manuscript of the sixth chapter, Suetsumuhana, found in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>, showed that non-Teika manuscripts were being read in that period; the same year Konan Women's University announced a copy of the 32nd chapter, Umegae, dated to between 1240 and 1280, the oldest extant copy of that chapter, which differs from the Aobyōshi manuscripts in at least four places. In 2019 an original copy of the fifth chapter, Wakamurasaki, in Teika's hand was found in Tokyo at the home of the head of the Okochi-Matsudaira clan, one of five original volumes of the Aobyōshibon known to exist.</p><p>Of the 12th-century Emaki, believed to have covered all 54 chapters, only 19 illustrations and 65 pages of text survive, estimated at 15% of the whole. The scrolls, National Treasures of <a class="enc-link" href="/encyclopedia/japan">Japan</a>, are so fragile that the Tokugawa Art Museum shows them only for around a week each November.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Tale of Genji is an important work of world literature, noted for its internal consistency, psychological depiction and characterization. <a class="enc-link" href="/encyclopedia/jorge-luis-borges">Jorge Luis Borges</a> called it a psychological novel written “with an almost miraculous naturalness”, and Yasunari Kawabata, in his <a class="enc-link" href="/encyclopedia/nobel-prize">Nobel Prize</a> acceptance speech, called it “the highest pinnacle of Japanese literature”. Its influence on Japanese literature has been compared to that of Philip Sidney's Arcadia on English literature.</p><p>It is often called “the first novel”, though there is considerable debate over this: the 7th-century <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> Kādambari and Greek and Roman novels such as Daphnis and Chloe and the Satyricon came earlier, and in <a class="enc-link" href="/encyclopedia/japan">Japan</a> the slightly earlier Ochikubo Monogatari has also been proposed. Ivan Morris held that its psychological insight, complexity and unity qualify it as a novel; others find such arguments subjective. Critics have almost consistently described it as the oldest, first or greatest novel in Japanese literature.</p><p>It is staple reading in Japanese schools. The Bank of Japan's 2000 yen banknote, issued in Murasaki's honour, carries a scene based on the 12th-century scroll, and because the diary entry of 1 November 1008 is the oldest date for a reference to the tale, 1 November is Japan's official day for celebrating the classics. It has been retold in films from Kōzaburō Yoshimura's of 1951, in at least five manga, among them Waki Yamato's Asaki Yume Mishi (1980), in Takarazuka Revue productions and in an opera by Miki Minoru (2000), and translated into languages from Russian and Italian to Hindi.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Tale of Genji, attributed to the lady-in-waiting Murasaki Shikibu and finished by about 1021, follows a prince's loves and fortunes at the Heian court and then his heirs, in a vernacular prose rich in poetry. Lost in its original but kept in some 300 copies and painted from the 12th century on, it stands at the head of Japanese literature and in the debate over the first novel.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="the-tale-of-genji"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Edward Seidensticker publishes the first complete English translation","o":["1021","2019","1976","1882"],"a":2,"w":"1976: Edward Seidensticker publishes the first complete English translation."},{"p":"Which came first?","q":"","o":["Suematsu Kenchō publishes the first, partial English translation, of seventeen chapters","An original copy of the fifth chapter, Wakamurasaki, in Fujiwara Teika's hand is found in Tokyo"],"a":0,"w":"1882: Suematsu Kenchō publishes the first, partial English translation, of seventeen chapters · 2019: An original copy of the fifth chapter, Wakamurasaki, in Fujiwara Teika's hand is found in Tokyo."},{"p":"In which year?","q":"Suematsu Kenchō publishes the first, partial English translation, of seventeen chapters","o":["1008","1882","1021","1976"],"a":1,"w":"1882: Suematsu Kenchō publishes the first, partial English translation, of seventeen chapters."},{"p":"Which came first?","q":"","o":["An original copy of the fifth chapter, Wakamurasaki, in Fujiwara Teika's hand is found in Tokyo","An entry in Murasaki's diary refers to the tale, the oldest dated reference to it"],"a":1,"w":"2019: An original copy of the fifth chapter, Wakamurasaki, in Fujiwara Teika's hand is found in Tokyo · 1008: An entry in Murasaki's diary refers to the tale, the oldest dated reference to it."},{"p":"In which year?","q":"An original copy of the fifth chapter, Wakamurasaki, in Fujiwara Teika's hand is found in Tokyo","o":["1976","2019","1008","1882"],"a":1,"w":"2019: An original copy of the fifth chapter, Wakamurasaki, in Fujiwara Teika's hand is found in Tokyo."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Ivan Morris, The World of the Shining Prince: Court Life in Ancient Japan (Kodansha International, 1964)</li>
+        <li>Richard John Bowring, Murasaki Shikibu, The Tale of Genji (Cambridge University Press, 1988)</li>
+        <li>Norma Field, The Splendor of Longing in the Tale of Genji (Princeton University Press, 1987)</li>
+        <li>Haruo Shirane, The Bridge of Dreams: A Poetics of the Tale of Genji (Stanford University Press, 1987)</li>
+        <li>Haruo Shirane, Envisioning the Tale of Genji: Media, Gender, and Cultural Production (Columbia University Press, 2008)</li>
+        <li>Miyeko Murase, The Tale of Genji: Legends and Paintings (G. Braziller, 2001)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/shahnameh"><img src="/logos/thumbs/Shahnameh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shahnameh</span><span class="related-card-dates">c. 977 CE – present</span></a><a class="related-card" href="/work/angkor-wat"><img src="/logos/thumbs/Angkor%20Wat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Angkor Wat</span><span class="related-card-dates">1122 CE – present</span></a><a class="related-card" href="/work/rock-hewn-churches-of-lalibela"><img src="/logos/thumbs/Rock-hewn%20churches%20of%20Lalibela.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rock-hewn churches of Lalibela</span><span class="related-card-dates">c. 1181 CE – present</span></a><a class="related-card" href="/work/borobudur"><img src="/logos/thumbs/Borobudur.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Borobudur</span><span class="related-card-dates">c. 780 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/shahnameh"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Shahnameh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shahnameh</span><span class="related-card-dates">c. 977 CE – present</span></a><a class="related-card" href="/work/angkor-wat"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Angkor%20Wat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Angkor Wat</span><span class="related-card-dates">1122 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="The Tale of Genji",slug="the-tale-of-genji",url="https://the-epoch-institute.org/work/the-tale-of-genji";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring The Tale of Genji on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/the-tale-of-genji #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/the-tale-of-genji"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"The Tale of Genji",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"The Tale of Genji",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

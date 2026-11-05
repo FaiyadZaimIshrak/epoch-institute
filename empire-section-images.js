@@ -5173,5 +5173,139 @@ var SECTION_IMAGES = {
     power:{slug:"isabel-peron",name:"Isabel Perón",img:"/images/encyclopedia/isabel-peron.jpg",artist:"Archivo General de la Nación",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Isabel_Martinez_de_Peron.jpg"},
     critiques:{slug:"jorge-luis-borges",name:"Jorge Luis Borges",img:"/images/encyclopedia/jorge-luis-borges.jpg",artist:"Grete Stern",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jorge_Luis_Borges_1951,_by_Grete_Stern_(full).jpg"},
     legacy:{slug:"juan-manuel-de-rosas",name:"Juan Manuel de Rosas",img:"/images/encyclopedia/juan-manuel-de-rosas.jpg",artist:"Helen Bramwell Norris",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Juan_Manuel_de_Rosas_by_Norris.jpg"}
+  },
+  "Epic of Gilgamesh": {
+    origins:{slug:"uruk",name:"Uruk",img:"/images/encyclopedia/uruk.jpg",artist:"Picture taken by Marcus Cyron",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Part_of_front_of_Inanna_temple_of_Kara_Indasch_from_Uruk_Vorderasiatisches_Museum_Berlin.jpg"},
+    content:{slug:"gilgamesh",name:"Gilgamesh",img:"/images/encyclopedia/gilgamesh.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hero_lion_Dur-Sharrukin_Louvre_AO19862.jpg"},
+    making:{slug:"ziusudra",name:"Ziusudra",img:"/images/encyclopedia/ziusudra.jpg",artist:"Gts-tg",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Sumerian_King_List,_1800_BC,_Larsa,_Iraq_(detail).jpg"},
+    reception:{slug:"ashurbanipal",name:"Ashurbanipal",img:"/images/encyclopedia/ashurbanipal.jpg",artist:"KeyolTranslater",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:AshurbanipalKingOfAssyria.jpg"},
+    survival:{slug:"hormuzd-rassam",name:"Hormuzd Rassam",img:"/images/encyclopedia/hormuzd-rassam.jpg",artist:"Philip Henry Delamotte (England: 1820 - 1889)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hormuzd.Rassam.reclined.jpg"},
+    legacy:{slug:"hebrew-bible",name:"Hebrew Bible",img:"/images/encyclopedia/hebrew-bible.jpg",artist:"LGLou",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Tanach.jpg"}
+  },
+  "Code of Hammurabi": {
+    origins:{slug:"lipit-ishtar",name:"Lipit-Ishtar",img:"/images/encyclopedia/lipit-ishtar.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Votive_cone_with_cuneiform_inscription_of_Lipit-Eshtar_MET_DP360673.jpg"},
+    content:{slug:"hammurabi",name:"Hammurabi",img:"/images/encyclopedia/hammurabi.jpg",artist:"Mbzt",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:F0182_Louvre_Code_Hammourabi_Bas-relief_Sb8_rwk.jpg"},
+    reception:{slug:"ashurbanipal",name:"Ashurbanipal",img:"/images/encyclopedia/ashurbanipal.jpg",artist:"KeyolTranslater",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:AshurbanipalKingOfAssyria.jpg"},
+    survival:{slug:"susa",name:"Susa",img:"/images/encyclopedia/susa.jpg",artist:"Carole Raddato from Frankfurt, Germany",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Apadana,_a_large_hypostyle_room_of_36_columns_in_the_Palace_of_Darius,_Susa,_capital_of_Elam_and_of_the_Achaemenid_Empire,_Iran_(46950284624).jpg"},
+    legacy:{slug:"gortyn-code",name:"Gortyn Code",img:"/images/encyclopedia/gortyn-code.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Federico_Halbherr_Gortyn.jpg"}
+  },
+  "Iliad": {
+    origins:{slug:"troy",name:"Troy",img:"/images/encyclopedia/troy.jpg",artist:"CherryX",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Walls_of_Troy_(2).jpg"},
+    content:{slug:"achilles",name:"Achilles",img:"/images/encyclopedia/achilles.jpg",artist:"Jona Lendering",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Achilles_fighting_against_Memnon_Leiden_Rijksmuseum_voor_Oudheden.jpg"},
+    making:{slug:"diomedes",name:"Diomedes",img:"/images/encyclopedia/diomedes.jpg",artist:"Copy of Nausykles or Kresilas (?)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diomedes_Louvre_Ma890_n3.jpg"},
+    reception:{slug:"panathenaea",name:"Panathenaea",img:"/images/encyclopedia/panathenaea.jpg",artist:"George E. Koronaios",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:The_Panathenaic_Stadium_(Kallimarmaro)_of_Athens.jpg"},
+    survival:{slug:"homer",name:"Homer",img:"/images/encyclopedia/homer.jpg",artist:"Photograph by Mike Peel (www.mikepeel.net).",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Homer_At_the_British_Museum_2024_(3x4_cropped).jpg"},
+    legacy:{slug:"trojan-war",name:"Trojan War",img:"/images/encyclopedia/trojan-war.jpg",artist:"Sosias (potter, signed). Painting attributed to the Sosias Painter (name piece for Beazley, overriding attribution) or the …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg"}
+  },
+  "Mahabharata": {
+    origins:{slug:"vedas",name:"Vedas",img:"/images/encyclopedia/vedas.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1500-1200_BCE_Rigveda,_manuscript_page_sample_i,_Mandala_1,_Hymn_1_(Sukta_1),_Adhyaya_1,_lines_1.1.1_to_1.1.9,_Sanskrit,_Devanagari.jpg"},
+    content:{slug:"pandavas",name:"Pandavas",img:"/images/encyclopedia/pandavas.jpg",artist:"Raja Ravi Varma",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Draupadi_and_Pandavas.jpg"},
+    making:{slug:"ganesha",name:"Ganesha",img:"/images/encyclopedia/ganesha.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg"},
+    reception:{slug:"andhra-mahabharatam",name:"Andhra Mahabharatam",img:"/images/encyclopedia/andhra-mahabharatam.jpg",artist:"bazaar art",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bazaar_art_print_of_Bhavadgita,_c._mid-1900%27s.jpg"},
+    survival:{slug:"virata",name:"Virata",img:"/images/encyclopedia/virata.jpg",artist:"Ravi Varma Press",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Virata%27s_Palace.jpg"},
+    legacy:{slug:"bhagavad-gita",name:"Bhagavad Gita",img:"/images/encyclopedia/bhagavad-gita.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg"}
+  },
+  "Analects": {
+    origins:{slug:"mencius",name:"Mencius",img:"/images/encyclopedia/mencius.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_(%E5%AD%9F%E8%BB%BB).jpg"},
+    content:{slug:"confucius",name:"Confucius",img:"/images/encyclopedia/confucius.jpg",artist:"Anonymous Chinese painter of the Western Han period",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Confucius,_fresco_from_a_Western_Han_tomb_of_Dongping_County,_Shandong_province,_China_(cropped).jpg"},
+    reception:{slug:"zhu-xi",name:"Zhu Xi",img:"/images/encyclopedia/zhu-xi.jpg",artist:"向史公哲曰",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E5%94%AF%E4%B8%80%E5%8F%AF%E9%9D%A0%E7%9A%84%E6%9C%B1%E7%86%B9%E7%94%BB%E5%83%8F.jpg"},
+    survival:{slug:"dunhuang",name:"Dunhuang",img:"/images/encyclopedia/dunhuang.jpg",artist:"慕尼黑啤酒",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Jiucenglou_of_Mogao_Caves.jpg"},
+    legacy:{slug:"voltaire",name:"Voltaire",img:"/images/encyclopedia/voltaire.jpg",artist:"Nicolas de Largillière",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_(1694-1778)_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_(cropped).jpg"}
+  },
+  "Shahnameh": {
+    origins:{slug:"khosrow-ii",name:"Khosrow II",img:"/images/encyclopedia/khosrow-ii.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:KhosrauIIGoldCoinCroppedHistoryofIran.jpg"},
+    content:{slug:"rostam",name:"Rostam",img:"/images/encyclopedia/rostam.jpg",artist:"Artists of the court of Bāysunghur in Herat.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rostam_and_the_White_Div_from_Baysanghar_Shahnameh.jpg"},
+    making:{slug:"mahmud-of-ghazni",name:"Mahmud of Ghazni",img:"/images/encyclopedia/mahmud-of-ghazni.jpg",artist:"1314-15",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahmud_of_Ghazni,_Ghaznavid_ruler,_conquering_Qasdar_(modern_Khuzdar)_in_India,_miniature_from_the_Jami%CA%BF_al-Tawarikh_of_Rashid_al-Din_Il-Khanid_Tabriz_Ms_Or_20_f.108v.jpg"},
+    reception:{slug:"tahmasp-i",name:"Tahmasp I",img:"/images/encyclopedia/tahmasp-i.jpg",artist:"Artist circa 1575",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shah_Tahmasp_I_(1514-1576)_in_a_landscape_(painted_circa_1575).jpg"},
+    survival:{slug:"persian-miniature",name:"Persian miniature",img:"/images/encyclopedia/persian-miniature.jpg",artist:"Kamāl ud-Dīn Behzād",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Yusef_Zuleykha.jpg"},
+    legacy:{slug:"alexander-romance",name:"Alexander Romance",img:"/images/encyclopedia/alexander-romance.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_romance._Armenian_illuminated_manuscript_of_XIV_century_(Venice,_San_Lazzaro,_424).jpg"}
+  },
+  "One Thousand and One Nights": {
+    content:{slug:"harun-al-rashid",name:"Harun al-Rashid",img:"/images/encyclopedia/harun-al-rashid.jpg",artist:"8/9th-century master(s)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Gold_dinar_of_Harun_al-Rashid,_AH_170-193.jpg"},
+    reception:{slug:"richard-francis-burton",name:"Richard Francis Burton",img:"/images/encyclopedia/richard-francis-burton.jpg",artist:"Rischgitz/Stringer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Richard_Francis_Burton_by_Rischgitz,_1864.jpg"},
+    legacy:{slug:"jorge-luis-borges",name:"Jorge Luis Borges",img:"/images/encyclopedia/jorge-luis-borges.jpg",artist:"Grete Stern",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jorge_Luis_Borges_1951,_by_Grete_Stern_(full).jpg"}
+  },
+  "The Tale of Genji": {
+
+  },
+  "Divine Comedy": {
+    origins:{slug:"black-and-white-guelphs",name:"Black and White Guelphs",img:"/images/encyclopedia/black-and-white-guelphs.jpg",artist:"Giovanni Sercambi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Communal_fight_in_Bologna_(Sercambi).jpg"},
+    content:{slug:"virgil",name:"Virgil",img:"/images/encyclopedia/virgil.jpg",artist:"Boyd Dwyer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Virgil_mosaic_in_the_Bardo_National_Museum_(Tunis)_(12241228546).jpg"},
+    making:{slug:"dante-alighieri",name:"Dante Alighieri",img:"/images/encyclopedia/dante-alighieri.jpg",artist:"Wolfgang Sauber",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bargello_-_Kapelle_Fresko_2a.jpg"},
+    reception:{slug:"giovanni-boccaccio",name:"Giovanni Boccaccio",img:"/images/encyclopedia/giovanni-boccaccio.jpg",artist:"Andrea del Castagno",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Andrea_del_Castagno_Giovanni_Boccaccio_c_1450.jpg"},
+    survival:{slug:"council-of-constance",name:"Council of Constance",img:"/images/encyclopedia/council-of-constance.jpg",artist:"Václav Brožík",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vaclav_Brozik_-_Hus.jpg"},
+    legacy:{slug:"henry-wadsworth-longfellow",name:"Henry Wadsworth Longfellow",img:"/images/encyclopedia/henry-wadsworth-longfellow.jpg",artist:"Julia Margaret Cameron",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_Wadsworth_Longfellow,_photographed_by_Julia_Margaret_Cameron_in_1868.jpg"}
+  },
+  "Popol Vuh": {
+    origins:{slug:"el-mirador",name:"El Mirador",img:"/images/encyclopedia/el-mirador.jpg",artist:"Konjiki1",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Pirámide_de_la_Danta,_Petén.jpg"},
+    content:{slug:"maize",name:"Maize",img:"/images/encyclopedia/maize.jpg",artist:"Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg"},
+    making:{slug:"kiche-people",name:"K'iche' people",img:"/images/encyclopedia/kiche-people.jpg",artist:"Bruno Rijsman",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Chichicastenango_Market_(Guatemala,_March_2020)_-_2_women.jpg"},
+    survival:{slug:"francisco-morazan",name:"Francisco Morazán",img:"/images/encyclopedia/francisco-morazan.jpg",artist:"Aquiles Bigot",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francisco_Moraz%C3%A1n_Quesada.JPG"},
+    legacy:{slug:"diego-rivera",name:"Diego Rivera",img:"/images/encyclopedia/diego-rivera.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diego_Rivera_-_Google_Art_Project_(cropped).jpg"}
+  },
+  "Great Pyramid of Giza": {
+    origins:{slug:"khufu",name:"Khufu",img:"/images/encyclopedia/khufu.jpg",artist:"UserPpPp",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Statue_of_Khufu_in_the_Cairo_Egyptian_Museum.jpg"},
+    reception:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    legacy:{slug:"seven-wonders-of-the-ancient-world",name:"Seven Wonders of the Ancient World",img:"/images/encyclopedia/seven-wonders-of-the-ancient-world.jpg",artist:"The original uploader was Mark22 at English Wikipedia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SevenWondersOfTheWorld.png"}
+  },
+  "Parthenon": {
+    origins:{slug:"pericles",name:"Pericles",img:"/images/encyclopedia/pericles.jpg",artist:"Copy of Kresilas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pericles_Pio-Clementino_Inv269_n2.jpg"},
+    content:{slug:"athena",name:"Athena",img:"/images/encyclopedia/athena.jpg",artist:"Jastrow",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mattei_Athena_Louvre_Ma530_n2.jpg"},
+    making:{slug:"phidias",name:"Phidias",img:"/images/encyclopedia/phidias.jpg",artist:"Yair-haklai",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:The_Sculptor_Phidias-Ny_Carlsberg_Glyptotek.jpg"},
+    reception:{slug:"basil-ii",name:"Basil II",img:"/images/encyclopedia/basil-ii.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Basilios_II.jpg"},
+    survival:{slug:"francesco-morosini",name:"Francesco Morosini",img:"/images/encyclopedia/francesco-morosini.jpg",artist:"Didier Descouens",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:(Venice)_Portrait_of_doge_Francesco_Morosini_-_Museo_Correr.jpg"},
+    legacy:{slug:"le-corbusier",name:"Le Corbusier",img:"/images/encyclopedia/le-corbusier.jpg",artist:"Joop van Bilsen for Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Le_Corbusier_(1964).jpg"}
+  },
+  "Great Wall of China": {
+    origins:{slug:"xiongnu-empire",name:"Xiongnu Empire",img:"/images/encyclopedia/xiongnu-empire.jpg",artist:"Gary Todd",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Warring_States_Xiongnu_Gold_Crown_-_b.jpg"},
+    content:{slug:"shanxi",name:"Shanxi",img:"/images/encyclopedia/shanxi.jpg",artist:"Underbar dk",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Yanmenguan3.JPG"},
+    making:{slug:"qi-jiguang",name:"Qi Jiguang",img:"/images/encyclopedia/qi-jiguang.jpg",artist:"Thomas Chen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Qi_Jiguang_Portrait.jpg"},
+    reception:{slug:"ibn-battuta",name:"Ibn Battuta",img:"/images/encyclopedia/ibn-battuta.jpg",artist:"Léon Benett",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Handmade_oil_painting_reproduction_of_Ibn_Battuta_in_Egypt,_a_painting_by_Hippolyte_Leon_Benett..jpg"},
+    survival:{slug:"shanhai-pass",name:"Shanhai Pass",img:"/images/encyclopedia/shanhai-pass.jpg",artist:"Prince Roy",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Old_Dragon%27s_Head_of_Great_Wall.jpg"}
+  },
+  "Terracotta Army": {
+    origins:{slug:"qin-shi-huang",name:"Qin Shi Huang",img:"/images/encyclopedia/qin-shi-huang.jpg",artist:"Unknown (18??–18??)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:QinShiHuang19century.jpg"},
+    content:{slug:"mount-li",name:"Mount Li",img:"/images/encyclopedia/mount-li.jpg",artist:"Yuan Jiang (袁江) activity :1680-1730.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Yuan_Jiang-At_Mount_Li_Escaping_the_Heat.jpg"},
+    reception:{slug:"khalchayan",name:"Khalchayan",img:"/images/encyclopedia/khalchayan.jpg",artist:"ALFGRN",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Kushan_prince_portrait.jpg"},
+    survival:{slug:"xiang-yu",name:"Xiang Yu",img:"/images/encyclopedia/xiang-yu.jpg",artist:"Unknown Chinese artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Xiang_Wang.jpg"}
+  },
+  "Hagia Sophia": {
+    origins:{slug:"justinian-i",name:"Justinian I",img:"/images/encyclopedia/justinian-i.jpg",artist:"Petar Milošević",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_(Ravenna).jpg"},
+    content:{slug:"allah",name:"Allah",img:"/images/encyclopedia/allah.jpg",artist:"The original uploader was Mr100percent at Wikipedia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Allah-green.svg"},
+    reception:{slug:"mehmed-ii",name:"Mehmed II",img:"/images/encyclopedia/mehmed-ii.jpg",artist:"Gentile Bellini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bellini,_Gentile_-_Sultan_Mehmet_II.jpg"},
+    survival:{slug:"crusader-states",name:"Crusader states",img:"/images/encyclopedia/crusader-states.jpg",artist:"Jean Colombe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:CouncilofClermont.jpg"},
+    legacy:{slug:"suleymaniye-mosque",name:"Süleymaniye Mosque",img:"/images/encyclopedia/suleymaniye-mosque.jpg",artist:"Hunanuk",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:S%C3%BCleymaniyeMosqueIstanbul_(cropped).jpg"}
+  },
+  "Angkor Wat": {
+    origins:{slug:"suryavarman-ii",name:"Suryavarman II",img:"/images/encyclopedia/suryavarman-ii.jpg",artist:"Michael Gunther",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Suryavarman_II_Angkor_Wat_0869.jpg"},
+    content:{slug:"vishnu",name:"Vishnu",img:"/images/encyclopedia/vishnu.jpg",artist:"Manaku of Guler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vishnu_from_Gita_Govinda.jpg"},
+    reception:{slug:"jayavarman-vii",name:"Jayavarman VII",img:"/images/encyclopedia/jayavarman-vii.jpg",artist:"Suzan Black",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg"}
+  },
+  "Borobudur": {
+    origins:{slug:"kedu-plain",name:"Kedu Plain",img:"/images/encyclopedia/kedu-plain.jpg",artist:"Original uploader was Gunkarta at en.wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Borobudur_Panoramic_View.jpg"},
+    making:{slug:"sailendra-dynasty",name:"Sailendra dynasty",img:"/images/encyclopedia/sailendra-dynasty.jpg",artist:"Gunawan Kartapranata",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Sailendra_King_and_Queen,_Borobudur.jpg"},
+    reception:{slug:"nagarakretagama",name:"Nagarakretagama",img:"/images/encyclopedia/nagarakretagama.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nagarakertagama.jpg"},
+    survival:{slug:"stamford-raffles",name:"Stamford Raffles",img:"/images/encyclopedia/stamford-raffles.jpg",artist:"George Francis Joseph",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:George_Francis_Joseph_-_Sir_Thomas_Stamford_Bingley_Raffles.jpg"},
+    legacy:{slug:"mendut",name:"Mendut",img:"/images/encyclopedia/mendut.jpg",artist:"Chainwit.",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Candi_Mendut_-_facade_north_(2025)_-_img_01.jpg"}
+  },
+  "Rock-hewn churches of Lalibela": {
+    origins:{slug:"saladin",name:"Saladin",img:"/images/encyclopedia/saladin.jpg",artist:"Classical Numismatic Group (CNG)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Al-Nasir_I_Salah_al-Din_Yusuf_(Saladin)._AH_564-589_(1169-1193_CE)_%C3%86_Dirham_(30.1mm,_13.28_g,_6h)._Without_mint-name._Dated_AH_586_(AD_1190-91)._Sultan_sitting_facing,_cross-legged,_on_high-backed_throne_(obverse).jpg"},
+    content:{slug:"lalibela",name:"Lalibela",img:"/images/encyclopedia/lalibela.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Lalibela,_san_giorgio,_esterno_24.jpg"},
+    making:{slug:"aksumite-empire",name:"Aksumite Empire",img:"/images/encyclopedia/aksumite-empire.jpg",artist:"PHGCOM",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:KingEndybisEthiopia227-235CE.jpg"},
+    reception:{slug:"dawit-ii",name:"Dawit II",img:"/images/encyclopedia/dawit-ii.jpg",artist:"Cristofano dell'Altissimo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cristofano_dell%E2%80%99Altissimo,_Portrait_of_Lebn%C3%A4-Dengel._c._1552-1568.jpg"},
+    legacy:{slug:"ethiopian-orthodox-church",name:"Ethiopian Orthodox Church",img:"/images/encyclopedia/ethiopian-orthodox-church.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Addis_abeba,_chiesa_della_trinit%C3%A0,_esterno_05.jpg"}
+  },
+  "Machu Picchu": {
+    origins:{slug:"pachacuti",name:"Pachacuti",img:"/images/encyclopedia/pachacuti.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Pachacuti,_Tenth_Inca,_1_of_14_Portraits_of_Inca_Kings_(cropped).jpg"},
+    content:{slug:"acllahuasi",name:"Acllahuasi",img:"/images/encyclopedia/acllahuasi.jpg",artist:"Guaman Poma de Ayala",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Acllacuna.jpg"},
+    making:{slug:"anden",name:"Andén",img:"/images/encyclopedia/anden.jpg",artist:"www.janto.com.ar",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Pisaq_02.JPG"},
+    legacy:{slug:"inti",name:"Inti",img:"/images/encyclopedia/inti.jpg",artist:"Felipe Guaman Poma de Ayala",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:C%C3%A1pac_Inti_Raimi.jpg"}
+  },
+  "Taj Mahal": {
+    origins:{slug:"shah-jahan",name:"Shah Jahan",img:"/images/encyclopedia/shah-jahan.jpg",artist:"Bichitr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%27Jujhar_Singh_Bundela_Kneels_in_Submission_to_Shah_Jahan%27,_painted_by_Bichitr,_c._1630,_Chester_Beatty_Library_(cropped2).jpg"},
+    making:{slug:"fatehpur-sikri",name:"Fatehpur Sikri",img:"/images/encyclopedia/fatehpur-sikri.jpg",artist:"Marcin Białek",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg"},
+    reception:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Cordanrad; derivative work by Rani nurmai",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
+    survival:{slug:"george-curzon",name:"George Curzon",img:"/images/encyclopedia/george-curzon.jpg",artist:"George Grantham Bain Collection (Library of Congress)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:George_Curzon2.jpg"},
+    legacy:{slug:"caravanserai",name:"Caravanserai",img:"/images/encyclopedia/caravanserai.jpg",artist:"Bernard Gagnon",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Izadkhvast_Caravanserai_01.jpg"}
   }
 };

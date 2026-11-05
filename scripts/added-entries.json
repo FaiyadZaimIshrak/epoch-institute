@@ -23463,6 +23463,85 @@
    "desc": "\"E Ipo\" (\"My Darling\") is a song of 1982 written by Prince Tui Teka and Ngoi Pēwhairangi in tribute to Teka's wife, Missy, and sung in both Māori and English. Its melody was based on \"Mimpi Sedih\", a popular Indonesian love song by Aloysius Riyanto, which Teka had heard from New Zealand soldiers stationed in Singapore while he was performing overseas between 1980 and 1982.",
    "links": [],
    "song": "e-ipo"
+  },
+  {
+   "slug": "one-thousand-and-one-nights",
+   "name": "One Thousand and One Nights",
+   "type": "work",
+   "subtype": "text",
+   "dates": "8th–19th century",
+   "desc": "One Thousand and One Nights grew over many centuries from Persian and Indian roots into a large and changing Arabic collection of tales, framed by Scheherazade's storytelling to save her life.",
+   "links": [
+    [
+     "One Thousand and One Nights",
+     0
+    ],
+    [
+     "Thousand and One Nights",
+     0
+    ],
+    [
+     "Arabian Nights",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/one-thousand-and-one-nights.jpg",
+   "credit": {
+    "artist": "Al-Mubashshir ibn Fatik",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sughrat.jpg"
+   }
+  },
+  {
+   "slug": "the-tale-of-genji",
+   "name": "The Tale of Genji",
+   "type": "work",
+   "subtype": "text",
+   "dates": "early 11th century",
+   "desc": "The Tale of Genji, attributed to the lady-in-waiting Murasaki Shikibu and finished by about 1021, follows a prince's loves and fortunes at the Heian court and then his heirs, in a vernacular prose rich in poetry.",
+   "links": [
+    [
+     "The Tale of Genji",
+     0
+    ],
+    [
+     "Tale of Genji",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/the-tale-of-genji.jpg",
+   "credit": {
+    "artist": "Imperial Palace Kyoto",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Genji_emaki_01003_002.jpg"
+   }
+  },
+  {
+   "slug": "terracotta-army",
+   "name": "Terracotta Army",
+   "type": "work",
+   "subtype": "artifact",
+   "dates": "c. 246–209 BCE",
+   "desc": "The Terracotta Army is a collection of life-sized terracotta figures of soldiers, chariots and horses buried with Qin Shi Huang, the first emperor of China, in 210–209 BCE to protect him in the afterlife.",
+   "links": [
+    [
+     "Terracotta Army",
+     0
+    ],
+    [
+     "terracotta army",
+     1
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/terracotta-army.jpg",
+   "credit": {
+    "artist": "xiquinhosilva",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:51714-Terracota-Army.jpg"
+   }
   }
  ],
  "patterns": [

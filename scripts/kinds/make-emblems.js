@@ -49,6 +49,18 @@ const EMBLEMS = [
   ['Mercantilism', 'M'], ['Imperialism', 'I'], ['Kemalism', 'K'], ['Feminism', 'F'], ['Pan-Arabism', 'P'], ['Hindutva', 'H'],
   ['Islamism', 'I'], ['Peronism', 'P'],
   ["El Perú-Waka'", 'W'],   // the Maya city's own name, not the Spanish "Perú"
+  // great works (Nov 2026): a letter or sign of the work's own language and name where its script is at hand (cuneiform
+  // GIŠ, the first sign of Gilgamesh's name, and HA of Hammurabi's; the Iliad's first letter, Μ of Μῆνιν; the hieroglyph
+  // mr, "pyramid"; 論 of Lunyu, 長 of Changcheng, 俑 "figure", 源 of Genji; Persian shin of Shahnameh and te of Taj; Arabic
+  // alf, "thousand", its title's first word; Khmer a of Angkor; Javanese ba of Borobudur; Ge'ez la of Lalibela), otherwise the initial
+  ['Epic of Gilgamesh', '\u{12111}', '"Segoe UI Historic", sans-serif', 230], ['Code of Hammurabi', '\u{12129}', '"Segoe UI Historic", sans-serif', 230],
+  ['Iliad', 'Μ'], ['Mahabharata', 'म', 'Nirmala UI, Mangal, sans-serif', 230], ['Analects', '論', 'serif-cjk', 220],
+  ['Shahnameh', 'ش', '"Segoe UI", Tahoma, sans-serif', 230], ['One Thousand and One Nights', 'ألف', '"Segoe UI", Tahoma, sans-serif', 170],
+  ['The Tale of Genji', '源', 'serif-cjk', 220], ['Divine Comedy', 'D'], ['Popol Vuh', 'P'],
+  ['Great Pyramid of Giza', '\u{13274}', '"Segoe UI Historic", sans-serif', 230], ['Parthenon', 'Π'], ['Great Wall of China', '長', 'serif-cjk', 220],
+  ['Terracotta Army', '俑', 'serif-cjk', 220], ['Hagia Sophia', 'Σ'], ['Angkor Wat', 'អ', '"Khmer UI", "Leelawadee UI", sans-serif', 230],
+  ['Borobudur', 'ꦧ', '"Javanese Text", sans-serif', 230], ['Rock-hewn churches of Lalibela', 'ላ', 'Ebrima, Nyala, sans-serif', 230],
+  ['Machu Picchu', 'M'], ['Taj Mahal', 'ت', '"Segoe UI", Tahoma, sans-serif', 230],
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
 // --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the

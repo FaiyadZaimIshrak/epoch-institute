@@ -676,6 +676,20 @@ Since 2 Nov 2026 the tools are committed in scripts/kinds/ (the scratchpad tools
   text is the entry's own name, so the scratchpad a6/caps.js also lists links standing next to another capitalised word.
   Ideologies stay out of PersonRegion (as the forms of government: they name people from everywhere). home-pics.js now
   writes the hide option (it had dropped it, so the Derg, Manchukuo, Rhodesia and the Confederacy were featured).
+- great works (6 Nov 2026), a new kind (PROFILE_KINDS work: sections origins, content "What It Is", making "How It Was
+  Made", reception, survival "Survival & Rediscovery", legacy; facts made "Made by", form, where "Where it is now", known; title
+  "History, Meaning and Legacy", alive "surviving today"; folder work/, wired as the ideologies were: .htaccess, deploy.sh,
+  the builder's kind lists, check-site, split-css, shared-nav, passport, seo-audit, update-counts, llms.txt, a gold-dotted
+  bar on /profiles' timeline, .tl-k-work; a work places no person, PersonRegion): ten texts (the Epic of Gilgamesh, the Code
+  of Hammurabi, the Iliad, the Mahabharata, the Analects, the Shahnameh, One Thousand and One Nights, The Tale of Genji, the
+  Divine Comedy, the Popol Vuh) and ten monuments (the Great Pyramid of Giza, the Parthenon, the Great Wall, the Terracotta
+  Army, the Hagia Sophia, Angkor Wat, Borobudur, the rock-hewn churches of Lalibela, Machu Picchu, the Taj Mahal). WORKS-GUIDE.md
+  is the brief (authorship and dating as the article hedges them; sacred texts as believers hold them; removals such as the
+  Parthenon sculptures with each side attributed; no place "discovered" that its people knew); every draft read against its
+  article. make-work-entries.js wrote entries for the three without one (pictures chosen by eye); self.tsv names all twenty;
+  22 namesakes excluded (Ezra Pound as the prophet, Vishnu Sukthankar as the god, Rimsky-Korsakov as Korsakov, New South
+  Wales as South Wales …). Emblems: a sign of each work's own script or name (make-emblems.js). Genji has no section pictures
+  (every candidate was another age's thing or a flag).
 - sources: scripts/kinds/src/<slug>.json ({name, region, start, end, circa, endCirca, info, facts, t, dyk, ev, sections
   (<p> HTML), summary, references, notes}), drafted by agents from saved Wikipedia articles, then fact-checked by three
   other agents, each fix an exact old/new pair with the article's words (125 for the 30 cultures, applied after review;

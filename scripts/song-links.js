@@ -13,6 +13,7 @@ var SONG_LINKS = {
 "Delphi":[["delphic-hymns","Delphic Hymns","c. 128 BCE"]],
 "Ghana Empire":[["epic-of-sundiata","Epic of Sundiata","c. 1255"]],
 "Habsburg monarchy":[["kde-domov-muj","Kde domov můj","1834"]],
+"Hagia Sophia":[["akathist","Akathist Hymn","c. 500"],["cherubikon","Cherubikon (the Cherubic Hymn)","c. 570"]],
 "Hungary":[["himnusz","Himnusz","1823"]],
 "Indian independence movement":[["vande-mataram","Vande Mataram","1876"],["ekla-chalo-re","Ekla Chalo Re","1905"],["sarfaroshi-ki-tamanna","Sarfaroshi Ki Tamanna","1921"],["raghupati-raghava-raja-ram","Raghupati Raghava Raja Ram","1930"]],
 "Indonesia":[["gayatri-mantra","Gayatri Mantra","c. 1200 BCE"],["patriotic-march","Patriotic March","1937"],["tian-mi-mi","Tian Mi Mi","1979"]],
