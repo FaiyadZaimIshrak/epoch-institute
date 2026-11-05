@@ -48,6 +48,7 @@
 <script src="scripts/invention-links.js"></script>
 <script src="scripts/song-links.js"></script>
 <script src="scripts/essay-links.js"></script>
+<script src="scripts/kids-stories.js"></script>
 <script>
 // ── Encyclopedia links: gold, clickable mentions of encyclopedia entries ──────
 // Wikipedia convention: link the first mention of each entry per section, never inside tags,
@@ -222,6 +223,18 @@ function relatedHtml(emp) {
 
 // ── At a glance (takeaways + did you know), rise-and-fall chart, key events (empire-glance.js) ──
 function glanceOf(name) { return (typeof GLANCE !== 'undefined' && GLANCE[name]) || null; }
+// ── Kids story (scripts/kids-stories.js, culture profiles): a short picture story shown only in Kids mode (shared.css
+// .kid-tale), before the profile, which Kids mode folds; "Read it to me" reads it (shared-nav.js Listen) ──
+function kidTaleHtml(name) {
+  var s = typeof KIDS_STORIES !== 'undefined' && KIDS_STORIES[name]; if (!s) return '';
+  return '<section class="kid-tale" aria-labelledby="kid-tale-title">\n' +
+    '      <h2 class="kid-tale-title" id="kid-tale-title">' + esc(s.title) + '</h2>\n' +
+    '      <ol class="kid-tale-pages">' + s.pages.map(function (p) {
+      return '<li' + (p.img ? '' : ' class="kid-tale-np"') + '>' + (p.img ? '<figure><img src="' + esc(p.img) + '" alt="' + esc(p.alt) + '" loading="lazy" width="320" height="220"><figcaption>' + esc(p.alt) + (p.credit ? ' <span class="kid-tale-cr">' + esc(p.credit) + '</span>' : '') + '</figcaption></figure>' : '') +
+        p.text.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('') + '</li>';
+    }).join('') + '</ol>\n' +
+    '    </section>';
+}
 function glanceHtml(name) {
   var g = glanceOf(name); if (!g) return '';
   return '<section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">\n' +
@@ -539,6 +552,7 @@ factRows(name, emp) +
 (profile ? '        <p class="empire-meta">' + readingMinutes(profile, emp) + ' min read · Last reviewed October 2026</p>\n' : '') +
 '      </div>\n' +
 '    </div>\n\n' +
+(kidTaleHtml(name) ? '    ' + kidTaleHtml(name) + '\n\n' : '') +
 (glanceOf(name) ? '    ' + glanceHtml(name) + '\n\n' : '') +
 '    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasFaithMap(emp) ? [['faith-map', 'Spread through the centuries']] : [], hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : []), tyHtml ? [['test-yourself', 'Test yourself']] : []) + '\n\n' +
 (isPolity ? '    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' : '') +

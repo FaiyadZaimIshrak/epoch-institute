@@ -42,6 +42,8 @@ function CleanAuthor([string]$s) {
   # doubled text: "Unknown authorUnknown author", "UnknownUnknown"
   if ($a.Length -ge 6 -and $a.Length % 2 -eq 0) { $h = $a.Length / 2; if ($a.Substring(0, $h) -ceq $a.Substring($h)) { $a = $a.Substring(0, $h) } }
   $a = $a -replace '\b(Unknown author|Unknown)\s*\1\b', '$1'
+  # Commons' "Anonymous" creator template run together with "Unknown author" (Rollo's portrait, 6 Nov 2026: 231 entries)
+  $a = $a -replace '\bAnonymousUnknown author\b', 'Unknown author'
   # "*Original work: X" bullets, later steps of a derivative chain, names repeated
   $a = ($a -replace '\s*\*\s*', '; ') -replace '(?i)\bderivative work\s*:\s*(?:by\s+)?', 'derivative work by '
   $seen = @{}; $a = (@($a -split '\s*;\s*' | Where-Object { $k = $_.ToLowerInvariant(); if (-not $_ -or $seen[$k]) { $false } else { $seen[$k] = 1; $true } }) -join '; ')

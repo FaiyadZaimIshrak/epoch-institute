@@ -1156,6 +1156,22 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   page-songs.jpg (make-posters.js page "songs"), deploy.sh GENERATED, split-css GENERATED, check-site FOLDERS, the
   root /songs → /songs/ redirect. Kids mode: the kid line, the "no" songs folded and left off the index.
 
+## Kids stories of the cultures (Kids mode on /culture/<slug>, 6 Nov 2026)
+In Kids mode each of the 65 culture profiles opens with a short picture story (.kid-tale, after the facts box; hidden
+outside Kids mode, so grown-ups' pages are unchanged): a title and 4-6 numbered pages of one picture and one or two
+sentences, 8-12 sentences of at most 22 words, read by "Read it to me" (shared-nav.js Listen: the profile selector lists
+.kid-tale-title and .kid-tale-pages p; hidden elements are never read). Tools in scripts/kinds/: kids-packs.js <dir>
+writes each culture's source pack (facts, takeaways, key events, sections, the section and home pictures and the pictured
+entries the profile names); KIDS-STORIES-GUIDE.md is the writers' brief (every fact from the pack; living peoples in the
+present tense; hard history plain and gentle; "src" names the pack's words behind each sentence); the stories are
+scripts/kinds/kids-stories/<slug>.json, each read against its pack by the editor; kids-stories-merge.js [--check] checks
+them, resolves the pictures and writes scripts/kids-stories.js (KIDS_STORIES, read by generator.html kidTaleHtml) and the
+build:kids-tales block of /kids ("Stories of the peoples": every story, oldest first). Every page's picture was looked at on
+contact sheets: kids-stories/no-pictures.txt lists those not shown (maps, satellite views, flags, modern cities, and other
+peoples' objects a child would take for the culture's own: modern trade beads, a Mesopotamian bronze, Turkish Neolithic
+houses, the British Museum's building); such a page shows its words alone (.kid-tale-np; 88 of 359 pages, 698 sentences in all). Regenerate the
+profiles after a story changes.
+
 ## Write in ancient scripts (/write, the language profiles' #write)
 scribe.js: a keyboard for the 12 languages with scripts of their own (Latin, Nahuatl, Swahili and Quechua, written in
 the Latin alphabet, have none): Sumerian and Akkadian cuneiform, Egyptian hieroglyphs, Greek and Linear B, Imperial
