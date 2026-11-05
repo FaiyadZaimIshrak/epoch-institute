@@ -1165,6 +1165,10 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   fetch-texts.js lets a fix of a part gathered from several rows match once in one of them (a verse number in one
   chapter of the Song of Songs). 56 titles link their entries (entry-links.tsv; pattern-count: only Tevaram and the
   Kesh Temple Hymn match, rightly).
+- Speeches and songs (6 Nov 2026): a song that names a speech's speaker among its people or events links the speech
+  ("Great speeches" on the song page) and the speech the song ("In song"): $SPSONGS and $SGSPEECH in the builder, names
+  compared whole (62 songs: Luther's hymns, Gandhi's bhajans, Mandela's songs of the struggle, Mao's anthems …). Each country
+  history lists "Songs from here" ($SONGCTY: the same reading of a song's place as data/songs-by-country.json for the atlas).
 - Wiring: menu Themes → Societies and ideas, footer, Research Hub (Read: nine cards, three columns), search
   (SEARCH_PAGES kind song, "X lyrics", "X meaning"), shelf and My Passport kind, sitemap, llms.txt, poster
   page-songs.jpg (make-posters.js page "songs"), deploy.sh GENERATED, split-css GENERATED, check-site FOLDERS, the
@@ -1880,6 +1884,10 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
     not Napoleon; fixed 29 Oct 2026, scratchpad pw/search-enter.js).
   siteSearchAll(q) returns every match (with k: kind, src: 'p'/'P'/'e'/'s'/'g' (site page)/'y' (year) and i: its row);
   siteSearch(q) is its first 12; loadSearchData(cb) loads the index, the pages and (without shared-data.js) the profiles.
+- Person regions in the search filters and the quiz (6 Nov 2026): every build sets each person row of search-facets.js to
+  PersonRegion (rows matched to the index by order), so the filters follow scripts/entry-regions.tsv; the daily quiz's
+  person clues ("A person · dates · region") are rewritten in place by scripts/tools/quiz-person-regions.js [--write]
+  (only that clue: the quiz keeps its order), then home-data.js?v= on index and quiz is bumped.
 - `/search` (hand page, noindex): every result, 50 a page, kind chips with counts, region and century filters, "with a
   picture"; the address keeps the state (?q=&k=&r=&from=&to=&pic=1&p=). The filters read `search-facets.js`
   (SEARCH_FACETS: one row per SEARCH_INDEX row and per SEARCH_STATES row, [first century, last century (BCE

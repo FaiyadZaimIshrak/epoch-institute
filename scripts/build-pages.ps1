@@ -827,11 +827,36 @@ $songExe = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $so
 foreach ($songL in (& $songExe "$PSScriptRoot\songs\make-data.js")) { Say $songL }
 if ($LASTEXITCODE) { throw 'Songs in History: scripts/songs/make-data.js found problems (above)' }
 $SONGS = @($JSS.DeserializeObject([IO.File]::ReadAllText("$PSScriptRoot\songs\songs.json", $U8)))
+# speeches and songs of the same person (Nov 2026): a song that names a speech's speaker among its people or events, so
+# the speech page lists the song and the song page the speech (names compared whole, ignoring case)
+$SPSONGS = @{}; $SGSPEECH = @{}; $spBySpeaker = @{}
+foreach ($spx in $SPS) { $spk = ([string]$spx['speaker']).ToLowerInvariant(); if (-not $spBySpeaker.ContainsKey($spk)) { $spBySpeaker[$spk] = New-Object System.Collections.Generic.List[object] }; $spBySpeaker[$spk].Add($spx) }
+foreach ($sgx in $SONGS) {
+  foreach ($nmx in @(@($sgx['people']) + @($sgx['events']) | Where-Object { $_ } | Select-Object -Unique)) {
+    $spk = ([string]$nmx).ToLowerInvariant(); if (-not $spBySpeaker.ContainsKey($spk)) { continue }
+    foreach ($spx in $spBySpeaker[$spk]) {
+      if (-not $SPSONGS.ContainsKey([string]$spx['slug'])) { $SPSONGS[[string]$spx['slug']] = New-Object System.Collections.Generic.List[object] }; $SPSONGS[[string]$spx['slug']].Add($sgx)
+      if (-not $SGSPEECH.ContainsKey([string]$sgx['slug'])) { $SGSPEECH[[string]$sgx['slug']] = New-Object System.Collections.Generic.List[object] }; $SGSPEECH[[string]$sgx['slug']].Add($spx)
+    }
+  }
+}
 # a name the songs give (a person, place or event) links the entry of exactly that name, when only one entry has it
 $SONGNAME = @{}
 foreach ($e in $ENT) { $songK = $e.name.ToLowerInvariant(); if ($SONGNAME.ContainsKey($songK)) { $SONGNAME[$songK] = '' } else { $SONGNAME[$songK] = $e.slug } }
 # a song's year as a short label: "c. 1400 BCE", "c. 1250", "1792" (circa where its date says so, or before 1000)
 function SongYear($sg) { if ($sg['undated']) { return 'date unknown' }; $y = [int]$sg['year']; $(if ($y -lt 1000 -or [string]$sg['date'] -match '(?i)\bc\.|centur|circa|traditional') { 'c. ' } else { '' }) + $(if ($y -lt 0) { "$(-$y) BCE" } else { "$y" }) }
+# the songs of each present-day country (Nov 2026: "Songs from here" on its country history): a song's place, the last
+# present-day country named in it as a whole word, as the atlas reads it (data/songs-by-country.json below)
+$SONGCTY = @{}
+$sgcNames = New-Object Collections.Generic.List[object]
+foreach ($k in $CTRY.Keys) { $cn = [string]$CTRY[$k]['n']; if ($CPAGE.ContainsKey($cn)) { $sgcNames.Add(@($k, $cn)) } }
+foreach ($so in @($SONGS | Sort-Object { [int]$_['year'] })) {
+  $pl = [string]$so['place']; if (-not $pl) { continue }; $best = $null; $bestAt = -1
+  foreach ($nm in $sgcNames) { $mm = [regex]::Matches($pl, '(?<![\p{L}])' + [regex]::Escape($nm[0]) + '(?![\p{L}])'); if ($mm.Count -and $mm[$mm.Count - 1].Index -gt $bestAt) { $bestAt = $mm[$mm.Count - 1].Index; $best = $nm[1] } }
+  if (-not $best) { continue }
+  if (-not $SONGCTY.ContainsKey($best)) { $SONGCTY[$best] = New-Object Collections.Generic.List[object] }
+  $SONGCTY[$best].Add($so)
+}
 function SongEnt([string]$n) { $k = $n.Trim().ToLowerInvariant(); if ($SONGNAME.ContainsKey($k) -and $SONGNAME[$k]) { $SONGNAME[$k] } else { '' } }
 $SONGDAY = @($SONGS | Where-Object { $_['video'] -and $_['kids'] } | Sort-Object { [int]$_['year'] }, { [string]$_['slug'] })
 $SONGBY = @{}
@@ -1642,6 +1667,7 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
   [void]$sb.Append("</ol></section>`n")
   $ents = if ($CTENT.ContainsKey($m)) { TopEntries $CTENT[$m] 12 } else { @() }
   if ($ents.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">In the encyclopedia</h2><ul class="enc-seealso">' + (($ents | ForEach-Object { EntTile $_ }) -join '') + "</ul></section>`n") }
+  if ($SONGCTY.ContainsKey($m)) { [void]$sb.Append('<section><h2 class="ref-sec-title">Songs from here</h2><ul class="cty-chips">' + (($SONGCTY[$m].ToArray() | ForEach-Object { '<li><a href="/songs/' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + ' <span>' + (Hx (SongYear $_)) + '</span></a></li>' }) -join '') + "</ul></section>`n") }
   $nb = @{}; foreach ($n in $CLIST) { foreach ($o in @($n['mo'])) { $o = [string]$o; if ($o -and $o -ne $m -and $CPAGE.ContainsKey($o)) { $nb[$o] = 1 + [int]$nb[$o] } } }
   $nbs = @($nb.Keys | Sort-Object @{ e = { $nb[$_] }; Descending = $true }, @{ e = { $_ } } | Select-Object -First 12)
   if ($nbs.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">Shared histories</h2><p class="cty-note">States that also lay in other present-day countries:</p><ul class="cty-chips">' + (($nbs | ForEach-Object { '<li><a href="/countries/' + $CPAGE[$_] + '">' + (Hx $_) + ' <span>' + $nb[$_] + '</span></a></li>' }) -join '') + "</ul></section>`n") }
@@ -2066,6 +2092,7 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   [void]$sb.Append('<section class="sp-sec"><h2>What followed</h2><p>' + (Hx ([string]$s['after'])) + '</p>' +
     $(if ($led.Length) { '<div class="sp-led"><h3 class="sp-led-k">What it led to</h3><div class="tih-tags">' + $led.ToString() + '</div></div>' } else { '' }) + "</section>`n")
   if ($chips.Length) { [void]$sb.Append('<section class="sp-sec"><h2>Connected</h2><div class="tih-tags">' + $chips.ToString() + "</div></section>`n") }
+  if ($SPSONGS.ContainsKey([string]$s['slug'])) { [void]$sb.Append('<section class="sp-sec"><h2>In song</h2><p>Songs in History that name ' + (Hx ([string]$s['speaker'])) + ':</p><div class="tih-tags">' + (($SPSONGS[[string]$s['slug']].ToArray() | Sort-Object { [double]$_['year'] } | ForEach-Object { '<a class="tih-tag" href="/songs/' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + '</a>' }) -join '') + "</div></section>`n") }
   $pv = $SPS[($si - 1 + $SPS.Count) % $SPS.Count]; $nx = $SPS[($si + 1) % $SPS.Count]
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other speeches"><a class="prev" rel="prev" href="/speeches/' + $pv['slug'] + '"><span class="lbl">&larr; Earlier speech</span><span class="nm">' + (Hx ([string]$pv['title'])) + '</span></a><a class="next" rel="next" href="/speeches/' + $nx['slug'] + '"><span class="lbl">Later speech &rarr;</span><span class="nm">' + (Hx ([string]$nx['title'])) + "</span></a></nav>`n")
   [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/speeches/">All great speeches &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n")
@@ -2613,6 +2640,7 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   if ($insBy.Count) { [void]$sb.Append('<section class="sg-sec" id="inspired-by"><h2>What it drew on</h2>' + (SongChain $insBy) + "</section>`n") }
   $chips = @(@($sg['people']) + @($sg['places']) + @($sg['events']) | Where-Object { $_ } | Select-Object -Unique)
   if ($chips.Count) { [void]$sb.Append('<section class="sg-sec"><h2>People, places and events</h2><div class="tih-tags">' + (($chips | ForEach-Object { SongChip ([string]$_) }) -join '') + "</div></section>`n") }
+  if ($SGSPEECH.ContainsKey([string]$sg['slug'])) { [void]$sb.Append('<section class="sg-sec"><h2>Great speeches</h2><p>Speeches by people this song names:</p><div class="tih-tags">' + (($SGSPEECH[[string]$sg['slug']].ToArray() | Sort-Object { [double]$_['year'] } | ForEach-Object { '<a class="tih-tag" href="/speeches/' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + '</a>' }) -join '') + "</div></section>`n") }
   $srcs = @($sg['sources'])
   # "Meanwhile in the world" in the song's year (not for an undated song)
   if (-not $sg['undated']) { [void]$sb.Append('<section class="meanwhile" data-y="' + [int]$sg['year'] + '" aria-label="Meanwhile in the world"></section>' + "`n") }
@@ -4317,7 +4345,7 @@ $rxE = [regex]"^\[(?<s>$STRX|0),(?<n>$STRX),(?<t>$STRX)(?:,(?<a>$STRX))?(?:,(?<w
 $rxS = [regex]"^\[(?<s>$STRX),(?<n>$STRX),(?<t>$STRX)(?:,(?<a>$STRX))?(?:,[01])?\](?<c>,?)$"
 $siIn = [IO.File]::ReadAllText("$Repo\search-index.js", $U8).Replace("`r`n", "`n").TrimEnd("`n")
 $siOut = New-Object System.Collections.Generic.List[string]; $part = ''; $nZero = 0; $nE = 0; $nS = 0
-$siSeen = New-Object 'System.Collections.Generic.HashSet[string]'; $siEClose = -1
+$siSeen = New-Object 'System.Collections.Generic.HashSet[string]'; $siEClose = -1; $siRowSlugs = New-Object System.Collections.Generic.List[string]
 foreach ($l in $siIn.Split("`n")) {
   if ($l.Contains('packed by scripts/build-pages.ps1')) { continue }
   if ($l.StartsWith('// search-index.js')) { $siOut.Add('// search-index.js - site-wide search over encyclopedia entries: [slug (0: made from the name, see the line after the list), name, type, aliases, weight 0-8, 1 if it has a picture]. Generated.'); continue }
@@ -4329,7 +4357,7 @@ foreach ($l in $siIn.Split("`n")) {
   $name = JsonStr $m.Groups['n'].Value
   if ($part -eq 'e') {
     $made = NameSlug $name; $slug = if ($m.Groups['s'].Value -eq '0') { if (-not $made) { throw "search-index.js: no slug for $name" }; $made } else { JsonStr $m.Groups['s'].Value }
-    [void]$siSeen.Add($slug)
+    [void]$siSeen.Add($slug); $siRowSlugs.Add($slug)
     $pic = $BY.ContainsKey($slug) -and $BY[$slug].img
     $al = $m.Groups['a'].Value; $wt = $m.Groups['w'].Value
     $tail = if ($pic) { ',' + $(if ($al) { $al } else { '""' }) + ',' + $(if ($wt) { $wt } else { '0' }) + ',1' } else { $(if ($al) { ',' + $al } else { '' }) + $(if ($wt) { $(if ($al) { '' } else { ',""' }) + ',' + $wt } else { '' }) }
@@ -4363,6 +4391,7 @@ foreach ($siE in $ENT) {
     $siAdd.Add('[' + $(if ($siMade -ceq $siE.slug) { $nZero++; '0' } else { Js $siE.slug }) + ',' + (Js $siE.name) + ',' + (Js $siE.type) + ',' + (Js ((@($siE.aka) | Where-Object { $_ }) -join '|')) + ',' + $siW + $(if ($siPic) { ',1' } else { '' }) + ']')
     $siSp = [EpochBuild.W]::Span($siE.dates); $siC1 = 0; $siC2 = 0; if ($siSp) { $siC1 = SiCent $siSp[0]; $siC2 = SiCent $siSp[$siSp.Length - 1] }
     $siRg = PersonRegion $siE; $siRi = if ($siRg -and $siFcRI.ContainsKey([string]$siRg)) { $siFcRI[[string]$siRg] } else { -1 }
+    $siRowSlugs.Add($siE.slug)
     $siFcAdd.Add("[$siC1,$siC2,$siRi," + $(if ($siPic) { '1' } else { '0' }) + ']')
   }
   if (-not $siPvHave.ContainsKey($siE.slug)) {
@@ -4390,6 +4419,29 @@ if ($siAdd.Count) {
     if ($siSx2 -ne $siSx -and [EpochBuild.W]::WriteIfChanged("$Repo\search", $siSx2)) { $NWRITE++ }
   } else { Say "search-facets.js: made for $($siFcN.Groups[1].Value) rows, the index had ${nE}: facets of the new rows not written (re-run make-home-data)" }
   $nE += $siAdd.Count
+}
+# every person row's region follows PersonRegion (scripts/entry-regions.tsv, audited 6 Nov 2026), so the /search filters
+# agree with the people pages; rows are matched to the index by their order (the facets were made row for row)
+$siFcText = [IO.File]::ReadAllText("$Repo\search-facets.js", $U8); $siFcL = $siFcText.Replace("`r`n", "`n").Split("`n"); $siRgFix = 0
+for ($siI = 0; $siI -lt $siFcL.Count; $siI++) {
+  if (-not $siFcL[$siI].StartsWith('e:[')) { continue }
+  $siRows = [regex]::Matches($siFcL[$siI], '\[(-?\d+),(-?\d+),(-?\d+),([01])\]')
+  if ($siRows.Count -ne $siRowSlugs.Count) { Say "search-facets.js: $($siRows.Count) rows for $($siRowSlugs.Count) index rows: person regions not refreshed"; break }
+  $siParts = New-Object System.Collections.Generic.List[string]
+  for ($siJ = 0; $siJ -lt $siRows.Count; $siJ++) {
+    $siG = $siRows[$siJ].Groups; $siRi = [int]$siG[3].Value; $siSl = $siRowSlugs[$siJ]
+    if ($BY.ContainsKey($siSl) -and $BY[$siSl].type -eq 'person') { $siRg = PersonRegion $BY[$siSl]; $siNr = if ($siRg -and $siFcRI.ContainsKey([string]$siRg)) { $siFcRI[[string]$siRg] } else { -1 }; if ($siNr -ne $siRi) { $siRi = $siNr; $siRgFix++ } }
+    $siParts.Add('[' + $siG[1].Value + ',' + $siG[2].Value + ',' + $siRi + ',' + $siG[4].Value + ']')
+  }
+  if ($siRgFix) {
+    $siFcL[$siI] = 'e:[' + ($siParts -join ',') + '],'; $siFcNew = $siFcL -join "`n"
+    if ([EpochBuild.W]::WriteIfChanged("$Repo\search-facets.js", $siFcNew)) { $NWRITE++ }
+    $siFcV = [EpochBuild.W]::Sha1($siFcNew).Substring(0, 10)
+    $siSx = [IO.File]::ReadAllText("$Repo\search", $U8); $siSx2 = [regex]::Replace($siSx, "search-facets\.js\?v=[^'`"]*", "search-facets.js?v=$siFcV")
+    if ($siSx2 -ne $siSx -and [EpochBuild.W]::WriteIfChanged("$Repo\search", $siSx2)) { $NWRITE++ }
+    Say "search-facets.js: $siRgFix person regions refreshed from PersonRegion"
+  }
+  break
 }
 foreach ($siPf in $siPvAdd.Keys) {
   $siPvF = "$Repo\data\enc-preview\$siPf.json"; $siPvT = if (Test-Path $siPvF) { [IO.File]::ReadAllText($siPvF, $U8).TrimEnd() } else { '{}' }
