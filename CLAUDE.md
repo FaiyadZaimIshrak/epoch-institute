@@ -1811,7 +1811,7 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
 - (Done 4 Nov 2026, A7 wave 4: 67 events dated, see "Encyclopedia") The rest of the 111 undated events are concepts,
   festivals, legendary events or ones whose article gives no year.
 - (Done 6 Nov 2026, C1) The state and empire profiles' links audited and their mention lists rewritten from the pages.
-  scripts/tools/link-audit.js <joined link-scan report> caps|forms|period lists, for reading by eye, the links whose text
+  scripts/tools/link-audit.js <joined link-scan report> caps|forms|period|years lists, for reading by eye, the links whose text
   stands next to another capitalised word (a name inside a longer name: "Gran Colombia" linked Esztergom, "El Salvador"
   the Brazilian city, "Hindu Kush" Hinduism, "Ras Shamra" the Ethiopian title), the profile-only forms, and the people
   linked far outside the profile's years (the forms had handed bare regnal names to namesakes: "Louis IX" the Duke of
@@ -1824,7 +1824,10 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
   "Latin American" goes to Latin America), the state texts unlinked to match (54 links) and data/enc-states.json
   recounted for those entries. Then link-scan.js --write over every profile of every kind, five at a time, so each
   page's links and the recorded mentions agree. A person namesake linked inside a profile's own years can still slip
-  through: the period test cannot see it.
+  through the period test; the years mode catches those with a year written beside the link ("Charles III" had linked
+  the Prince of Monaco on the United Kingdom, "Afonso I" the King of Kongo on Portugal, "Charles VII" the emperor on
+  France: 22 exclusions and 18 right forms). The other kinds' 607 caps groups were read the same day (14 exclusions:
+  "Tin Hinan", "Ras Shamra", "Ezra Pound", "Möngke Tengri" …).
 - (Done 4 Nov 2026, C3: build-pages.ps1 links an entry to its profile, "Full profile: <name> →", from ENC_LINKS.self,
   where it has no plain state page.) Entries of profiled states did not link their profile: make-enc-states.ps1 maps only states without one, and
   data/enc-states.json was not re-run after R8, so the Kingdom of Zimbabwe and Purépecha entries still have the link a

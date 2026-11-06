@@ -5,6 +5,8 @@
 //   node scripts/tools/link-audit.js <report.tsv> forms    links made by profile-only forms (rows from ENC_LINKS.fs on)
 //   node scripts/tools/link-audit.js <report.tsv> period   people linked more than 60 years outside the profile's span
 //        (profileSpan), forms and ordinary rows apart: a namesake ("Louis IX" -> the Duke of Bavaria on France)
+//   node scripts/tools/link-audit.js <report.tsv> years    a person linked where a year written beside the link fits
+//        another person entry of the same name better ("Charles III" -> the Prince of Monaco on the United Kingdom)
 // Wrong links go into scripts/kinds/link-exclusions.tsv (profile, entry, what the text really meant), or, when a name is
 // wrong more often than right everywhere, into scripts/added-entries.json "drop"; then link-scan.js --write.
 const fs = require('fs'), path = require('path'), vm = require('vm'), R = path.join(__dirname, '..', '..');
@@ -45,4 +47,24 @@ if (mode === 'caps') {
     console.log((f ? 'FORM ' : '     ') + p + ' | ' + t + ' -> ' + (en.name || e) + ' (' + (en.dates || '') + ') :: ' + ctx(t, cx));
   }
   console.error(n + ' links');
-} else { console.error('mode: caps, forms or period'); process.exit(1); }
+} else if (mode === 'years') {
+  const yrs = d => { if (!d) return null; const bce = /BCE|BC\b/.test(d) && !/\bCE\b/.test(d.replace(/BCE/g, ''));
+    if (/century/.test(d) && !/\d{3,4}/.test(d)) return null;
+    const m = [...d.matchAll(/\d{1,4}/g)].map(x => +x[0] * (bce ? -1 : 1)); return m.length ? [Math.min(...m), Math.max(...m)] : null; };
+  const persons = Object.values(E).filter(e => e.type === 'person'), cache = {};
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const cands = t => cache[t] || (cache[t] = (re => persons.filter(e => re.test(e.name) || (e.aka || []).some(a => re.test(a))))(new RegExp('^' + esc(t) + '(?![\\p{L}])', 'u')));
+  const fit = (y, e) => { const r = yrs(e.dates); return r ? y >= r[0] - 80 && y <= r[1] + 5 : null; };
+  const seen = new Set(); let n = 0;
+  for (const [p, , slug, t, c] of rows) {
+    const e = E[slug]; if (!e || e.type !== 'person') continue;
+    const cs = cands(t.replace(/['’]s$/, '')); if (cs.length < 2) continue;
+    const i = Math.max(0, c.indexOf(t)), win = c.slice(Math.max(0, i - 60), i + t.length + 60);
+    const ys = [...win.matchAll(/\b(\d{3,4})(\s*BCE)?\b/g)].map(m => +m[1] * (m[2] ? -1 : 1)).filter(y => (y > 200 && y < 2030) || y < 0);
+    if (!ys.length || fit(ys[0], e) !== false) continue;
+    const better = cs.filter(x => x.slug !== slug && fit(ys[0], x)); if (!better.length) continue;
+    const k = p + '|' + slug; if (seen.has(k)) continue; seen.add(k); n++;
+    console.log(p + ' | ' + t + ' -> ' + e.name + ' (' + e.dates + '); fits ' + better.map(b => b.name + ' (' + b.dates + ')').join(', ') + ' :: ' + win.replace(/\s+/g, ' '));
+  }
+  console.error(n + ' links');
+} else { console.error('mode: caps, forms, period or years'); process.exit(1); }

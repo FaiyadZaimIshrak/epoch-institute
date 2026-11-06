@@ -24672,6 +24672,11 @@
    "samo",
    "Samo’s",
    0
+  ],
+  [
+   "gao",
+   "Gao, Mali",
+   0
   ]
  ],
  "pictures": [
@@ -25026,6 +25031,238 @@
      "military"
     ]
    }
+  ],
+  [
+   "demosthenes",
+   "Demosthenes",
+   0,
+   {
+    "Bosporan Kingdom": [
+     "socioeconomy"
+    ]
+   }
+  ],
+  [
+   "antigonus-iii-doson",
+   "Antigonus",
+   0,
+   {
+    "Achaean League": [
+     "decline"
+    ]
+   }
+  ],
+  [
+   "ramiro-i-of-asturias",
+   "Ramiro",
+   0,
+   {
+    "Kingdom of Asturias": [
+     "military",
+     "impact",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "otto-i",
+   "Otto I",
+   0,
+   {
+    "Duchy of Saxony": [
+     "military",
+     "governance"
+    ],
+    "Duchy of Lorraine": [
+     "foundation"
+    ]
+   }
+  ],
+  [
+   "baldwin-i-latin-emperor",
+   "Baldwin VI",
+   0,
+   {
+    "County of Hainaut": [
+     "foundation",
+     "military",
+     "governance",
+     "impact",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "harald-bluetooth",
+   "Harald",
+   0,
+   {
+    "Kingdom of Denmark": [
+     "foundation"
+    ]
+   }
+  ],
+  [
+   "otto-ii-holy-roman-emperor",
+   "Otto II",
+   0,
+   {
+    "Prince-Bishopric of Liège": [
+     "foundation"
+    ]
+   }
+  ],
+  [
+   "charles-vii-of-france",
+   "Charles VII",
+   0,
+   {
+    "Kingdom of France": [
+     "military",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "ramiro-i-of-aragon",
+   "Ramiro",
+   0,
+   {
+    "Kingdom of Aragon": [
+     "foundation",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "sancho-iv-of-navarre",
+   "Sancho IV",
+   0,
+   {
+    "Kingdom of Aragon": [
+     "foundation"
+    ]
+   }
+  ],
+  [
+   "afonso-i-of-portugal",
+   "Afonso I",
+   0,
+   {
+    "Kingdom of Portugal": [
+     "foundation",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "henry-vii-holy-roman-emperor",
+   "Henry VII",
+   0,
+   {
+    "Kingdom of Naples": [
+     "military"
+    ]
+   }
+  ],
+  [
+   "frederick-the-great",
+   "Frederick II",
+   0,
+   {
+    "Kingdom of Prussia": [
+     "socioeconomy",
+     "impact",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "frederick-william-i-of-prussia",
+   "Frederick William I",
+   0,
+   {
+    "Kingdom of Prussia": [
+     "foundation",
+     "socioeconomy",
+     "military",
+     "governance"
+    ]
+   }
+  ],
+  [
+   "charles-iii-of-the-united-kingdom",
+   "Charles III",
+   0,
+   {
+    "United Kingdom": [
+     "governance",
+     "decline"
+    ]
+   }
+  ],
+  [
+   "eudokia-palaiologina",
+   "Eudokia",
+   0,
+   {
+    "Empire of Trebizond": [
+     "governance"
+    ]
+   }
+  ],
+  [
+   "muhammad-bin-tughluq",
+   "Ulugh Khan",
+   0,
+   {
+    "Later Pandyan Empire": [
+     "decline",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "sikandar-adil-shah",
+   "Sikandar",
+   0,
+   {
+    "Bijapur Sultanate": [
+     "decline"
+    ]
+   }
+  ],
+  [
+   "gao",
+   "Gao",
+   0,
+   {
+    "Igbo-Ukwu culture": [
+     "exchange"
+    ],
+    "Kingdom of Ife": [
+     "impact",
+     "socioeconomy",
+     "summary"
+    ],
+    "Mali Empire": [
+     "socioeconomy"
+    ],
+    "Saadi Sultanate": [
+     "impact",
+     "military"
+    ],
+    "Songhai Empire": [
+     "decline",
+     "foundation",
+     "socioeconomy",
+     "summary"
+    ],
+    "Tuareg": [
+     "exchange",
+     "summary"
+    ]
+   }
   ]
  ],
  "drop": [
@@ -25082,6 +25319,11 @@
   [
    "yijing",
    "I Ching",
+   0
+  ],
+  [
+   "gao",
+   "Gao",
    0
   ]
  ],
