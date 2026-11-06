@@ -5350,7 +5350,7 @@
    "desc": "The Antikythera mechanism is an ancient Greek hand-powered orrery, a geared model of the Solar System, built in the 2nd century BCE and recovered in 1901 from a shipwreck off the Greek island of Antikythera. The oldest known example of an analogue computer, it could predict astronomical positions and eclipses decades in advance and track the four-year cycle of the ancient Olympic Games. Scans made in 2005 suggest that it had 35 meshing bronze gears. Its 82 fragments are kept at the National Archaeological Museum in Athens.",
    "img": "/images/encyclopedia/antikythera-mechanism.jpg",
    "credit": {
-    "artist": "No machine-readable author provided. Marsyas assumed (based on copyright claims).",
+    "artist": "Marsyas",
     "licence": "CC BY 2.5",
     "source": "https://commons.wikimedia.org/wiki/File:NAMA_Machine_d'Anticyth%C3%A8re_1.jpg"
    },
@@ -23784,6 +23784,417 @@
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Joe_hill002.jpg"
    }
+  },
+  {
+   "slug": "kayak",
+   "name": "Kayak",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "qajaq"
+   ],
+   "desc": "A kayak is a small, narrow boat with an enclosed deck, propelled by a long double-bladed paddle; its name comes from the Inuktitut word qajaq. It was first used by Aleut, Inuit and Yupik hunters, and possibly the Ainu, in the subarctic, and is believed to be at least 4,000 years old. The first kayaks were made of stitched seal or other animal skins stretched over a frame of wood or whalebone, each built by the man who used it to fit his own body. Hunters used them for seals above all, and in some areas for whales and caribou; skin-on-frame kayaks are still used for hunting by Inuit in Greenland.",
+   "links": [
+    [
+     "kayak",
+     1
+    ],
+    [
+     "kayaks",
+     1
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/kayak.jpg",
+   "credit": {
+    "artist": "Ville Miettinen",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Greenland_kayak_seal_hunter_2006.jpg"
+   }
+  },
+  {
+   "slug": "umiak",
+   "name": "Umiak",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "umiaq",
+    "umialak",
+    "oomiak"
+   ],
+   "desc": "The umiak is an open skin boat of the Yupik and Inuit, once found along all the coasts from Siberia to Greenland and first used in Thule times. Its frame of driftwood or whalebone, pegged and lashed together, was covered with walrus or bearded seal skins, about seven for a large boat of 9.1 metres. Much larger than the kayak, it could carry up to 15 passengers yet was light enough for a few people to carry over the ice to open water. It was used in summer to move people and their belongings to seasonal hunting grounds and to hunt whales and walrus, rowed by women or paddled by men.",
+   "links": [
+    [
+     "umiak",
+     1
+    ],
+    [
+     "umiaks",
+     1
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/umiak.jpg",
+   "credit": {
+    "artist": "Gchacon at English Wikipedia",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Umiak_Anchorage_Museum_George_Chacon_26_May_2007.JPG"
+   }
+  },
+  {
+   "slug": "inuit-art",
+   "name": "Inuit art",
+   "type": "idea",
+   "subtype": "concept",
+   "aka": [
+    "Eskimo art"
+   ],
+   "desc": "Inuit art is the art made by the Inuit and related peoples of the circumpolar north. Its oldest forebears are the small carvings of the Dorset culture, which from around 600 BCE worked walrus ivory, bone and caribou antler into birds, bears, walruses, seals, human figures and tiny masks, often worn as amulets. For centuries walrus ivory remained the favoured material. Since markets for Inuit art opened in the south in 1945, prints and figures carved in soft stone such as soapstone, serpentinite and argillite have also become popular. The Winnipeg Art Gallery holds the largest public collection of contemporary Inuit art.",
+   "links": [
+    [
+     "Inuit art",
+     2
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/inuit-art.jpg",
+   "credit": {
+    "artist": "Palaya Qiatsuq (Cape Dorset, Nunavut Territory, Canada)",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:PaQi_2.jpg"
+   }
+  },
+  {
+   "slug": "amesbury-archer",
+   "name": "Amesbury Archer",
+   "type": "person",
+   "dates": "c. 2340–2300 BCE",
+   "desc": "The Amesbury Archer was an early Bronze Age man of the Bell Beaker culture whose grave was found in May 2002 at Amesbury, near Stonehenge in England. He died in middle age around 2300 BCE and is named for the sixteen barbed flint arrowheads buried with him. His grave held more objects than any other early Bronze Age burial in Britain, including five Beaker pots, three copper knives, a stone wrist-guard, metalworking tools that suggest he was a coppersmith, and the earliest known gold objects found in England. Isotope analysis of his teeth shows that he spent his childhood in Central Europe, probably in the Western Alps.",
+   "links": [
+    [
+     "Amesbury Archer",
+     0
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/amesbury-archer.jpg",
+   "credit": {
+    "artist": "Pasicles",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Amesbury_Archer_-_Salisbury_and_South_Wiltshire_Museum.jpg"
+   }
+  },
+  {
+   "slug": "clovis-point",
+   "name": "Clovis point",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "Clovis points"
+   ],
+   "desc": "Clovis points are the fluted stone projectile points of the Clovis culture of prehistoric North America, all dated to roughly 13,400 to 12,700 years ago. A typical point is a lance-shaped blade about 10 centimetres long, shaped by careful pressure flaking, with a concave base from which grooves, called flutes, were removed on one or both faces so that it could be hafted. They are found in dense concentrations across much of North America. They are named after Clovis, New Mexico, where examples were first found in 1929. Whether they tipped thrusting spears, thrown darts or were also used for butchering is debated.",
+   "links": [
+    [
+     "Clovis point",
+     2
+    ],
+    [
+     "Clovis points",
+     2
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/clovis-point.jpg",
+   "credit": {
+    "artist": "Daderot",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Clovis_point,_11500-9000_BC,_Sevier_County,_Utah,_chert_-_Natural_History_Museum_of_Utah_-_DSC07376.JPG"
+   }
+  },
+  {
+   "slug": "sumatralith",
+   "name": "Sumatralith",
+   "type": "work",
+   "subtype": "artifact",
+   "desc": "A sumatralith is a stone tool made by flaking one face of a rounded river cobble around its edge, leaving the other side unworked. Made from quartzite or andesite by hunter-gatherers of Southeast Asia from the late Pleistocene to the middle Holocene, it is the tool most closely associated with the Hoabinhian, and archaeologists treat it as the chief sign of a Hoabinhian site. The name comes from North Sumatra in Indonesia, where J. Neumann first recovered such tools from a shell midden at Batu Kenong in 1920. Because so little of the cobble is shaped, a sumatralith could be resharpened again and again.",
+   "links": [
+    [
+     "sumatralith",
+     1
+    ],
+    [
+     "sumatraliths",
+     1
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/sumatralith.jpg",
+   "credit": {
+    "artist": "瑞丽江的河水",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:临沧考古博物馆-旧石器时代-农克硝洞遗址-苏门答腊器1.jpg"
+   }
+  },
+  {
+   "slug": "nuraghe",
+   "name": "Nuraghe",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "nuraghi",
+    "nuraghes",
+    "nurhag"
+   ],
+   "dates": "1900–730 BCE",
+   "desc": "The nuraghe is the main type of ancient megalithic building of Sardinia, raised during the Nuragic Age between 1900 and 730 BCE and today the symbol of the island and its Nuragic civilisation. A typical nuraghe is a tower shaped like a cone with its top cut off, built of layers of stones that grow smaller towards the top, with a corridor leading to a round chamber roofed by a corbelled dome. More than 7,000 have been found, and archaeologists believe there were once more than 10,000. Their purpose is still debated: fortresses, religious places, refuges or the seats of village chiefs.",
+   "links": [
+    [
+     "nuraghe",
+     1
+    ],
+    [
+     "nuraghi",
+     1
+    ],
+    [
+     "nuraghes",
+     1
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/nuraghe.jpg",
+   "credit": {
+    "artist": "Jack Aubrey",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Nuraghe_Losa.jpg"
+   }
+  },
+  {
+   "slug": "nuragic-bronze-statuettes",
+   "name": "Nuragic bronze statuettes",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "bronzetti"
+   ],
+   "desc": "The Nuragic bronze statuettes, bronzetti in Italian, are small bronze sculptures made in Sardinia at the end of the Bronze Age and in the early Iron Age. More than 500 have been found, mostly in places of worship such as holy wells and temples, but also in villages and nuraghes, and some in Etruscan tombs of central Italy. Probably cast by the lost-wax method and up to 39 centimetres tall, they show chiefs, warriors, divinities, people of every rank, animals, everyday objects and ships. They were long dated to the 9th to 6th centuries BCE, but fragments found at Orroli and Ballao have called that into question.",
+   "links": [
+    [
+     "Nuragic bronze statuettes",
+     2
+    ],
+    [
+     "bronzetti",
+     1
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/nuragic-bronze-statuettes.jpg",
+   "credit": {
+    "artist": "Shardan",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Bronz.sardo.JPG"
+   }
+  },
+  {
+   "slug": "heuneburg",
+   "name": "Heuneburg",
+   "type": "place",
+   "subtype": "site",
+   "desc": "The Heuneburg is a prehistoric Celtic hillfort above the Danube near Herbertingen in Baden-Württemberg, southern Germany, one of the most important early Celtic centres of Central Europe in the time of the Hallstatt culture. Its citadel, about 300 by 150 metres, stood on a spur 40 metres above the river and is thought to have controlled more than 1,000 square kilometres of settlements, roads and cemeteries. For a time it was walled with sun-dried mudbrick on a limestone base, a wall destroyed in 530 BCE. Called the oldest city north of the Alps, it has been identified with Pyrene, the Celtic city named by Herodotus.",
+   "links": [
+    [
+     "Heuneburg",
+     0
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/heuneburg.jpg",
+   "credit": {
+    "artist": "Ulf at German Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Heuneburg.jpg"
+   }
+  },
+  {
+   "slug": "gochang-hwasun-and-ganghwa-dolmen-sites",
+   "name": "Gochang, Hwasun and Ganghwa Dolmen Sites",
+   "type": "place",
+   "subtype": "site",
+   "aka": [
+    "Korean dolmens"
+   ],
+   "desc": "The Gochang, Hwasun and Ganghwa Dolmen Sites in South Korea hold more than 1,000 stone dolmens, used as grave markers and for rituals during the first millennium BCE. The Korean Peninsula has over 35,000 dolmens, about 40% of all in the world. They mark the graves of the ruling elite, and pottery, comma-shaped jewels, bronzes and stone tools have been excavated from them. Dolmens in Korea date from the seventh century BCE, at places such as Gochang, until around the third century BCE. Excavation began in 1965, and the sites were made a UNESCO World Heritage Site in 2000.",
+   "links": [
+    [
+     "Gochang, Hwasun and Ganghwa Dolmen Sites",
+     0
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/gochang-hwasun-and-ganghwa-dolmen-sites.jpg",
+   "credit": {
+    "artist": "Taewangkorea",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dolmen_at_Ganghwa_Island.jpg"
+   }
+  },
+  {
+   "slug": "ain-sakhri-figurine",
+   "name": "Ain Sakhri figurine",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "Ain Sakhri Lovers"
+   ],
+   "desc": "The Ain Sakhri figurine, or Ain Sakhri Lovers, is a Natufian stone sculpture of a couple, about 11,000 years old, found in one of the Ain Sakhri caves near Bethlehem. Carved from a single calcite cobble and without faces or other details, it is thought to be the oldest known representation of two people in sexual intercourse. The prehistorian René Neuville identified it in 1933 among finds kept by the French Fathers at Bethlehem and traced it to the caves, which had been lived in during the Natufian period. The British Museum bought it in 1958.",
+   "links": [
+    [
+     "Ain Sakhri figurine",
+     0
+    ],
+    [
+     "Ain Sakhri Lovers",
+     0
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/ain-sakhri-figurine.jpg",
+   "credit": {
+    "artist": "Joyofmuseums",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ain_Sakhri_Lovers_-_British_Museum_-_Joy_of_Museums.jpg"
+   }
+  },
+  {
+   "slug": "makassan-contact-with-australia",
+   "name": "Makassan contact with Australia",
+   "type": "event",
+   "subtype": "other",
+   "aka": [
+    "Macassan contact with Australia",
+    "Makassan trepangers"
+   ],
+   "desc": "From around the middle of the 18th century, Makassarese merchants and Sama-Bajau fishermen from southern Sulawesi in Indonesia sailed each year to the coast of northern Australia, first to the Kimberley region and some decades later to Arnhem Land. They came to gather and process trepang, the sea cucumber, which was boiled, dried and smoked for sale in Chinese markets. The visits left their mark on the Aboriginal peoples of the coast: the Makassar word for trepang, for one, entered the Aboriginal languages of the Cobourg Peninsula. The name Makassan is used for all the trepangers who came to northern Australia.",
+   "links": [
+    [
+     "Makassan contact with Australia",
+     0
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/makassan-contact-with-australia.jpg",
+   "credit": {
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Macassan_prau.jpg"
+   }
+  },
+  {
+   "slug": "su-nuraxi",
+   "name": "Su Nuraxi",
+   "type": "place",
+   "subtype": "site",
+   "aka": [
+    "Su Nuraxi di Barumini"
+   ],
+   "desc": "Su Nuraxi is a Nuragic archaeological site at Barumini in Sardinia, whose name means simply \"the nuraghe\" in Campidanese Sardinian. Its oldest part is a central tower of basalt blocks with three chambers one above another, 18.6 metres high, built between the 17th and 13th centuries BCE; in the Late Bronze Age four corner towers joined by a wall were built around it, and a village inhabited from the 13th to the 6th century BCE grew up around the whole. First explored by the archaeologist Giovanni Lilliu, its discoverer, it is considered the most impressive expression of the Nuragic civilisation and became a UNESCO World Heritage Site in 1997.",
+   "links": [
+    [
+     "Su Nuraxi",
+     0
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/su-nuraxi.jpg",
+   "credit": {
+    "artist": "Norbert Nagel",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nuraghe_Su_Nuraxi_-_Barumini_-_Sardinia_-_Italy_-_30.jpg"
+   }
+  },
+  {
+   "slug": "dogu",
+   "name": "Dogū",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "dogu"
+   ],
+   "desc": "Dogū, \"earthen figures\", are small clay figurines of people and animals made in the later part of the Jōmon period of prehistoric Japan and no longer made in the Yayoi period that followed. Typically 10 to 30 centimetres high, most appear to be female, with big eyes, small waists and wide hips, and many take them to represent goddesses. Some 15,000 to 18,000 are known, from all of Japan except Okinawa and mostly from the east. Their purpose is unknown; some scholars suggest that illnesses were thought to pass into them before they were broken. They are not to be confused with the later haniwa.",
+   "links": [
+    [
+     "dogū",
+     2
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/dogu.jpg",
+   "credit": {
+    "artist": "World Imaging",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dogu_Miyagi_1000_BCE_400_BCE.jpg"
+   }
+  },
+  {
+   "slug": "dong-son-drum",
+   "name": "Dong Son drum",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "Đông Sơn drum",
+    "Heger Type I drum"
+   ],
+   "dates": "c. 600 BCE–3rd century CE",
+   "desc": "The Dong Son drums are ancient bronze drums made by the Dong Son culture of the Red River Delta in what is now Vietnam, from about 600 BCE or earlier until the third century CE. Cast by the lost-wax method, they stand up to a metre high and weigh up to 100 kilograms, and seem to have been both musical instruments and objects of worship. Their surfaces show geometric patterns, scenes of daily life, farming and war, animals, birds such as the Lạc bird, and boats. More than 200 have been found, from eastern Indonesia to Vietnam and parts of southern China, carried as trade goods and kept as heirlooms.",
+   "links": [
+    [
+     "Dong Son drum",
+     2
+    ],
+    [
+     "Dong Son drums",
+     2
+    ],
+    [
+     "Đông Sơn drum",
+     2
+    ],
+    [
+     "Đông Sơn drums",
+     2
+    ]
+   ],
+   "wave": "a7k",
+   "img": "/images/encyclopedia/dong-son-drum.jpg",
+   "credit": {
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tambour-song-da2.jpg"
+   }
+  },
+  {
+   "slug": "samos",
+   "name": "Samos",
+   "type": "place",
+   "subtype": "island",
+   "aka": [
+    "Sámos"
+   ],
+   "desc": "Samos is a Greek island in the eastern Aegean Sea, separated from Anatolia by the Mycale Strait. In ancient times it was a rich and powerful city-state, known for its vineyards and wine, and it reached the height of its prosperity under the tyrant Polycrates in the 6th century BCE, when the engineer Eupalinos dug a tunnel through a mountain to bring water to the city. The Heraion of Samos, a temple of Hera, and the Eupalinian aqueduct are a UNESCO World Heritage Site. Pythagoras, Epicurus and the astronomer Aristarchus of Samos were born there. From 1835 the island was a semi-autonomous principality under Ottoman suzerainty, until it joined Greece in 1913.",
+   "links": [
+    [
+     "Samos",
+     0
+    ]
+   ],
+   "wave": "c1",
+   "img": "/images/encyclopedia/samos.jpg",
+   "credit": {
+    "artist": "Pe-sa",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samos_049_2009.JPG"
+   }
   }
  ],
  "patterns": [
@@ -24246,6 +24657,21 @@
    "cannon",
    "cannon",
    0
+  ],
+  [
+   "latin-america",
+   "Latin American",
+   0
+  ],
+  [
+   "samo",
+   "Samo's",
+   0
+  ],
+  [
+   "samo",
+   "Samo’s",
+   0
   ]
  ],
  "pictures": [
@@ -24557,6 +24983,49 @@
      "governance"
     ]
    }
+  ],
+  [
+   "abu-bakr-al-siddiq",
+   "Abu Bakr",
+   0,
+   {
+    "Rashidun Caliphate": [
+     "foundation",
+     "decline",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "abu-bakr-ibn-muhammad",
+   "Abu Bakr",
+   0,
+   {
+    "Adal Sultanate": [
+     "governance",
+     "summary"
+    ]
+   }
+  ],
+  [
+   "louis-ix-of-france",
+   "Louis IX",
+   0,
+   {
+    "Kingdom of France": [
+     "governance",
+     "impact"
+    ],
+    "County of Toulouse": [
+     "decline"
+    ],
+    "Duchy of Aquitaine": [
+     "decline"
+    ],
+    "Duchy of Burgundy": [
+     "military"
+    ]
+   }
   ]
  ],
  "drop": [
@@ -24594,6 +25063,26 @@
    "field-artillery",
    "cannon",
    1
+  ],
+  [
+   "esztergom",
+   "Gran",
+   0
+  ],
+  [
+   "viceroy-of-india",
+   "viceroy",
+   1
+  ],
+  [
+   "samo",
+   "Samo",
+   0
+  ],
+  [
+   "yijing",
+   "I Ching",
+   0
   ]
  ],
  "exclude": [

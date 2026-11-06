@@ -26,6 +26,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/makassan-contact-with-australia.jpg",
+    "alt": "Makassan contact with Australia",
+    "credit": "Unknown author, Public domain",
     "text": [
      "More than 350 years ago, fishers from Indonesia sailed to the north coast and brought dugout canoes.",
      "From 1788 settlers from Britain took the land, and disease and fighting killed many Aboriginal people, who fought back."
@@ -359,6 +362,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/clovis-point.jpg",
+    "alt": "Clovis point",
+    "credit": "Daderot, CC0",
     "text": [
      "Clovis points, their best-known tools, are stone tips with a long groove at the base.",
      "They also made bone needles, probably to sew clothes from fur."
@@ -454,6 +460,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/dong-son-drum.jpg",
+    "alt": "Dong Son drum",
+    "credit": "Unknown author, Public domain",
     "text": [
      "The drums show a sun, frogs, warships and warriors wearing feather headdresses.",
      "They were beaten in war, at feasts and when people mourned their dead."
@@ -605,6 +614,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/heuneburg.jpg",
+    "alt": "Heuneburg",
+    "credit": "Ulf at German Wikipedia, CC BY-SA 3.0",
     "text": [
      "From Greeks and Etruscans in the south came amber, ivory, fine pots and probably wine.",
      "A Celtic city named by the Greek writer Herodotus may be one of their forts, the Heuneburg."
@@ -640,6 +652,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/sumatralith.jpg",
+    "alt": "Sumatralith",
+    "credit": "瑞丽江的河水, CC BY-SA 4.0",
     "text": [
      "They made tools by chipping big river stones, often on one side only.",
      "The oldest of these tools, found in a rock shelter in Yunnan in China, are more than 40,000 years old."
@@ -933,12 +948,18 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/kayak.jpg",
+    "alt": "Kayak",
+    "credit": "Ville Miettinen, CC BY 2.0",
     "text": [
      "For centuries Inuit lived by hunting whales, seals, caribou and fish, and they shared food with the whole community.",
      "They travelled by dog sled and by qajaq, a one-person sealskin boat that others copied as the kayak."
     ]
    },
    {
+    "img": "/images/encyclopedia/inuit-art.jpg",
+    "alt": "Inuit art",
+    "credit": "Palaya Qiatsuq (Cape Dorset, Nunavut Territory, Canada), CC BY-SA 2.5",
     "text": [
      "Inuit carved small animals and people from ivory and bone, and today they also make prints and stone sculptures.",
      "In the old beliefs, every person, animal and thing had a spirit, so hunters showed respect to the animals."
@@ -971,6 +992,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/dogu.jpg",
+    "alt": "Dogū",
+    "credit": "World Imaging, CC BY-SA 3.0",
     "text": [
      "The Jōmon left no writing, so we learn about their beliefs from the things they made.",
      "Curved stone beads called magatama were placed in graves with the dead."
@@ -1759,6 +1783,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/gochang-hwasun-and-ganghwa-dolmen-sites.jpg",
+    "alt": "Gochang, Hwasun and Ganghwa Dolmen Sites",
+    "credit": "Taewangkorea, CC BY-SA 4.0",
     "text": [
      "Later, some important people were buried in large stone tombs with bronze daggers and jade.",
      "Bronze was rare, though, and most of their tools were still made of stone."
@@ -1875,6 +1902,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/ain-sakhri-figurine.jpg",
+    "alt": "Ain Sakhri figurine",
+    "credit": "Joyofmuseums, CC BY-SA 4.0",
     "text": [
      "Their artists liked to carve animals most of all.",
      "One small stone carving of a couple is now in the British Museum."
@@ -2039,6 +2069,9 @@ var KIDS_STORIES = {
   "title": "The story of the Nuragic civilisation",
   "pages": [
    {
+    "img": "/images/encyclopedia/nuraghe.jpg",
+    "alt": "Nuraghe",
+    "credit": "Jack Aubrey, CC BY-SA 2.5",
     "text": [
      "About 3,800 years ago, people on Sardinia began to build stone towers called nuraghi.",
      "Chiefs lived in the biggest towers, and others lived nearby in round stone houses."
@@ -2050,6 +2083,9 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/nuragic-bronze-statuettes.jpg",
+    "alt": "Nuragic bronze statuettes",
+    "credit": "Shardan, CC BY 2.5",
     "text": [
      "Their metalworkers cast small bronze statues of chiefs, warriors, musicians, animals and ships.",
      "Sardinia was rich in copper, and its people became some of Europe’s main metal makers."
@@ -2807,12 +2843,18 @@ var KIDS_STORIES = {
     ]
    },
    {
+    "img": "/images/encyclopedia/umiak.jpg",
+    "alt": "Umiak",
+    "credit": "Gchacon at English Wikipedia, CC BY 2.5",
     "text": [
      "They hunted bowhead whales from boats made of skins, with crews working together under a captain.",
      "One whale gave meat for food, blubber for light and bone for houses and tools."
     ]
    },
    {
+    "img": "/images/encyclopedia/kayak.jpg",
+    "alt": "Kayak",
+    "credit": "Ville Miettinen, CC BY 2.0",
     "text": [
      "With dog sleds, kayaks and skin boats, they spread across northern Canada to Greenland.",
      "There they took the place of the Dorset people, who had lived there before."

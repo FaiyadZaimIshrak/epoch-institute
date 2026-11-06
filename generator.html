@@ -98,7 +98,8 @@ function linkify(html, empireName) {
   cands.forEach(function (c) {
     if (c.p === lastP && c.s < lastEnd) return;
     if (!c.slug) { lastP = c.p; lastEnd = c.e; return; }
-    if (used[c.slug]) return;
+    // a name already linked in this section still claims its text, so no shorter name inside it links
+    if (used[c.slug]) { lastP = c.p; lastEnd = c.e; return; }
     used[c.slug] = 1; (chosen[c.p] = chosen[c.p] || []).push(c); lastP = c.p; lastEnd = c.e;
   });
   Object.keys(chosen).forEach(function (p) {

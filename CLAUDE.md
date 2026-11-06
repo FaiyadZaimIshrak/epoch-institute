@@ -605,6 +605,9 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   - `y` {slug: [from, to, kind]}, `ex` {profile: [slugs not linked there]}, `byEmpire`, `self`.
   - `ENC_FN` is the file's footer (scratchpad enc2/enc-fn.js); enc2/enc-fn.ps1 is the PowerShell port used by
     link-state-texts.ps1 — keep them in step (design/t-pick.html + enc2/pick-test.ps1 check both on the same cases).
+  - A name linked once in a section still CLAIMS its later mentions (generator.html linkify, build-pages.ps1 LinkDesc;
+    6 Nov 2026): until then a second "Hindu Kush" or "Scipio Aemilianus" claimed nothing, so "Hindu" (Hinduism) and "Scipio"
+    (Africanus) linked inside it. relink-states.js always claimed.
 - `images/encyclopedia/<slug>.jpg` — freely licensed Wikimedia Commons thumbnails; author/licence/source
   are in each entry's `credit` and shown under the image. Keep the credit if an image is reused.
   Credits are plain text. scripts/clean-credits.ps1 (idempotent; -Check, -Review <file>) cleans the author field of
@@ -825,8 +828,8 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   (epoch-games daily-<day> {m: answers}, resumed after a reload) with a streak (daily-streak {n, last}). The finish
   card shows 🟩🟥 squares, "Daily Ten #N" (#1 = 26 Oct 2026), the countdown to the next one, Share
   ("Epoch Daily Ten #N: 8/10" + squares + link) and the newsletter line. Every other game's finish card has Share.
-- Picture Puzzle: the GAME_PUZZLES sets in order (nine: Wonders of the World, Treasures, Famous Faces, Art Through the
-  Ages, Great Cities, Sacred Places, Great Buildings, and since 6 Nov 2026 Ships and Voyages and Statues and Sculpture, twelve
+- Picture Puzzle: the GAME_PUZZLES sets in order (ten: Wonders of the World, Treasures, Famous Faces, Art Through the
+  Ages, Great Cities, Sacred Places, Great Buildings, and since 6 Nov 2026 Ships and Voyages, Statues and Sculpture and Machines and Inventions, twelve
   each, chosen by eye on square crops as the puzzle cuts them: 30% from the top), 3×3/4×4/5×5, a square crop drawn on a canvas, a deal in which no
   tile starts in place, swaps by tap, drag or keyboard, tiles in place lock, Peek; solved pictures (pz-solved) fill
   a strip.
@@ -1193,7 +1196,10 @@ them, resolves the pictures and writes scripts/kids-stories.js (KIDS_STORIES, re
 build:kids-tales block of /kids ("Stories of the peoples": every story, oldest first). Every page's picture was looked at on
 contact sheets: kids-stories/no-pictures.txt lists those not shown (maps, satellite views, flags, modern cities, and other
 peoples' objects a child would take for the culture's own: modern trade beads, a Mesopotamian bronze, Turkish Neolithic
-houses, the British Museum's building); such a page shows its words alone (.kid-tale-np; 88 of 359 pages, 698 sentences in all). Regenerate the
+houses, the British Museum's building); such a page shows its words alone (.kid-tale-np; 74 of 359 pages, 698 sentences in all: 14 pages got
+pictures on 6 Nov 2026 from fifteen new entries of the peoples' own things, wave a7k of added-entries.json: the kayak, umiak, Inuit
+art, Clovis point, sumatralith, nuraghe, Nuragic bronzes, Su Nuraxi, Heuneburg, the Korean dolmens, the Ain Sakhri figurine,
+dogū, the Dong Son drum, Makassan contact and the Amesbury Archer, whose grave is not shown to children). Regenerate the
 profiles after a story changes.
 
 ## Write in ancient scripts (/write, the language profiles' #write)
@@ -1804,12 +1810,21 @@ year's births and deaths.
 Found in the R9 checks (29 Oct 2026), not fixed yet:
 - (Done 4 Nov 2026, A7 wave 4: 67 events dated, see "Encyclopedia") The rest of the 111 undated events are concepts,
   festivals, legendary events or ones whose article gives no year.
-- The state and empire profiles' mention lists still disagree with their pages (r9b/mention-compare.js: 3,291
-  recorded mentions no page links, 2,805 links no list records): the polity scans count names inside longer ones as
-  the kinds' did. Some of those page links are wrong too (Arad, Romania on the Kingdom of Judah; Louis IX, Duke of
-  Bavaria on the County of Toulouse; Ferdinand II of Aragon on the Kingdom of León): audit the polities' links as the
-  kinds' were (kinds/audit-links.ps1), then rewrite the lists from the pages. The Ilkhanate's byEmpire key is spelt
-  "ilkhanate", so its page links almost nothing.
+- (Done 6 Nov 2026, C1) The state and empire profiles' links audited and their mention lists rewritten from the pages.
+  scripts/tools/link-audit.js <joined link-scan report> caps|forms|period lists, for reading by eye, the links whose text
+  stands next to another capitalised word (a name inside a longer name: "Gran Colombia" linked Esztergom, "El Salvador"
+  the Brazilian city, "Hindu Kush" Hinduism, "Ras Shamra" the Ethiopian title), the profile-only forms, and the people
+  linked far outside the profile's years (the forms had handed bare regnal names to namesakes: "Louis IX" the Duke of
+  Bavaria on Saint Louis's France, "William IX" the Elector of Hesse on Aquitaine, "Abu Bakr" a 13th-century namesake
+  on the Rashidun Caliphate, "Pelagius" the king of Asturias on Roman Britain). 1,402 groups and 800 person links were
+  read; 188 profile/entry pairs went into kinds/link-exclusions.tsv (each line says what the text really meant),
+  three right forms were added (added-entries.json "forms": the caliph Abu Bakr, Abu Bakr of Adal, Louis IX of France),
+  names wrong more often than right were dropped site-wide ("Gran" for Esztergom, "viceroy" for the Viceroy of India,
+  "I Ching" for the monk Yijing, "Samo", which the plural rule let match "Samos": the new Samos entry now claims it, and
+  "Latin American" goes to Latin America), the state texts unlinked to match (54 links) and data/enc-states.json
+  recounted for those entries. Then link-scan.js --write over every profile of every kind, five at a time, so each
+  page's links and the recorded mentions agree. A person namesake linked inside a profile's own years can still slip
+  through: the period test cannot see it.
 - (Done 4 Nov 2026, C3: build-pages.ps1 links an entry to its profile, "Full profile: <name> →", from ENC_LINKS.self,
   where it has no plain state page.) Entries of profiled states did not link their profile: make-enc-states.ps1 maps only states without one, and
   data/enc-states.json was not re-run after R8, so the Kingdom of Zimbabwe and Purépecha entries still have the link a

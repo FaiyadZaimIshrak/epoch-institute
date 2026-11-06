@@ -1,7 +1,7 @@
 # The pictures the games may use: chosen by eye from contact sheets of well-known entries (no maps, coins, seals,
 # documents, collages, or pictures that do not show their subject). Read by scripts/build-pages.ps1 for games-data.js.
 # slug<TAB>puzzle set (empty = Which Came First? / Guess the Year only, when the dates allow)<TAB>order in the set
-# sets: Wonders of the World | Treasures | Famous Faces | Art Through the Ages | Great Cities | Sacred Places | Great Buildings | Ships and Voyages | Statues and Sculpture
+# sets: Wonders of the World | Treasures | Famous Faces | Art Through the Ages | Great Cities | Sacred Places | Great Buildings | Ships and Voyages | Statues and Sculpture | Machines and Inventions
 napoleon	Famous Faces	1
 charles-v-holy-roman-emperor		
 timur		
@@ -662,3 +662,16 @@ mahamuni-buddha	Statues and Sculpture	9
 lady-of-baza	Statues and Sculpture	10
 descent-of-the-ganges	Statues and Sculpture	11
 bremen-roland	Statues and Sculpture	12
+# 6 Nov 2026: the puzzle set Machines and Inventions, chosen by eye from the inventions tree's pictures (the object itself, oldest first; no drawings, diagrams or portraits of inventors)
+antikythera-mechanism	Machines and Inventions	1
+astrolabe	Machines and Inventions	2
+armillary-sphere	Machines and Inventions	3
+noria	Machines and Inventions	4
+mechanical-clock	Machines and Inventions	5
+printing-press	Machines and Inventions	6
+telescope	Machines and Inventions	7
+windmill	Machines and Inventions	8
+spinning-jenny	Machines and Inventions	9
+analytical-engine	Machines and Inventions	10
+typewriter	Machines and Inventions	11
+bicycle	Machines and Inventions	12

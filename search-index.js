@@ -33399,7 +33399,23 @@ var SEARCH_INDEX = [
 [0,"McCarthyism","idea","Second Red Scare",1,1],
 [0,"Meiji era","idea","Meiji period|Meiji jidai",3,1],
 [0,"Orange Revolution","event","Pomarancheva revoliutsiia",1,1],
-["proclamation-of-the-peoples-republic-of-china","Proclamation of the People's Republic of China","event","founding of the People's Republic of China",1,1]
+["proclamation-of-the-peoples-republic-of-china","Proclamation of the People's Republic of China","event","founding of the People's Republic of China",1,1],
+[0,"Ain Sakhri figurine","work","Ain Sakhri Lovers",1,1],
+[0,"Amesbury Archer","person","",3,1],
+[0,"Clovis point","work","Clovis points",3,1],
+[0,"Dogū","work","dogu",3,1],
+[0,"Dong Son drum","work","Đông Sơn drum|Heger Type I drum",3,1],
+[0,"Gochang, Hwasun and Ganghwa Dolmen Sites","place","Korean dolmens",1,1],
+[0,"Heuneburg","place","",4,1],
+[0,"Inuit art","idea","Eskimo art",3,1],
+[0,"Kayak","work","qajaq",4,1],
+[0,"Makassan contact with Australia","event","Macassan contact with Australia|Makassan trepangers",1,1],
+[0,"Nuraghe","work","nuraghi|nuraghes|nurhag",3,1],
+[0,"Nuragic bronze statuettes","work","bronzetti",3,1],
+[0,"Samos","place","Sámos",7,1],
+[0,"Su Nuraxi","place","Su Nuraxi di Barumini",3,1],
+[0,"Sumatralith","work","",3,1],
+[0,"Umiak","work","umiaq|umialak|oomiak",3,1]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.

@@ -635,7 +635,8 @@ function LinkDesc([string]$text, [string]$self, $ctx) {
   foreach ($c in ($cands | Sort-Object @{ e = { $_.s } }, @{ e = { $_.e - $_.s }; Descending = $true }, @{ e = { [int][bool]$_.slug }; Descending = $true }, @{ e = { $_.q } })) {
     if ($c.s -lt $pos) { continue }
     if (-not $c.slug) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue }
-    if ($used.ContainsKey($c.slug) -or -not $BY.ContainsKey($c.slug)) { continue }
+    # a name already linked (or without a page) still claims its text, so no shorter name inside it links
+    if ($used.ContainsKey($c.slug) -or -not $BY.ContainsKey($c.slug)) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue }
     $used[$c.slug] = 1
     $tx = $text.Substring($c.s, $c.e - $c.s); $tail = ''
     $pm = [regex]::Match($tx, '([''\u2019]s)$'); if ($pm.Success) { $tail = $pm.Groups[1].Value; $tx = $tx.Substring(0, $tx.Length - $tail.Length) }
