@@ -23,7 +23,7 @@ local: Vergobret
 share: est 0.01-0.03
 sharenote: Estimate: one king or chief magistrate in each tribe, with their families; the Gallic Wars are said to have subjugated some 300 clans, among 10–14 million people.
 firm: yes
-terms:
+terms: vergobret, aedui, arverni
 people: vercingetorix, bituitus, ambiorix
 picture: vercingetorix
 text: The tribe, made up of one or more smaller units the Romans called pagi, was the basic unit of Gallic politics. Each tribe had a council of elders and, at first, a king. Later many tribes chose an executive magistrate every year: among the Aedui he held the title of vergobret, a post much like a king's, but his powers were held in check by rules the council laid down. Kings still ruled elsewhere: Bituitus, king of the Arverni, led an army against Rome in 121 BCE and was defeated. Gaul as a whole stayed divided, and only in a time of crisis, Caesar's invasion, did the Gauls unite under one leader, the Arvernian chieftain Vercingetorix, in 52 BCE.
@@ -40,7 +40,7 @@ local: Druides
 share: est 0.1-0.5
 sharenote: Estimate: no ancient figure survives; a learned order under one head for all Gaul, whose pupils might study for up to twenty years, with the bards and seers beside them.
 firm: no
-terms:
+terms: druid, vates, carnutes
 people: diviciacus-aedui
 picture: -
 text: The druids were the learned class: priests, judges, teachers and keepers of religious and legal tradition. According to Caesar they performed public and private sacrifices, judged nearly all disputes over crime, inheritance and boundaries, and could bar the disobedient from the sacrifices, the harshest of penalties. They had a single head, who held office for life, and met once a year at a sacred place in the land of the Carnutes, reckoned the centre of all Gaul. They paid no taxes and did no military service, educated the aristocracy, and taught that the soul does not die. Greek writers name bards and seers (vates) beside them. Cicero knew one druid, Diviciacus of the Aedui.
@@ -57,7 +57,7 @@ local: -
 share: est 1-3
 sharenote: Estimate: no ancient figure survives; the warrior aristocracy of every tribe with their families, set somewhat above the knights of medieval Europe with their families (about 0.5–1.5 per cent), since each of the many tribes had a nobility of its own.
 firm: yes
-terms:
+terms: torc
 people: orgetorix, dumnorix
 picture: orgetorix
 text: The second honoured class, in Caesar's account, was the equites, the "horsemen": a warrior aristocracy. Caesar and other writers describe ties of patron and client among the Gauls much like those of Rome. Warfare between tribes was a regular part of life, a way to exert political control, to harass rivals and to win wealth. Greek writers say that the nobles shaved their cheeks but let their moustaches grow over the mouth, and that warriors hung the heads of enemies slain in battle from their horses' necks and nailed them up outside their homes. The rich wore silk among their wool and linen, and the most famous ornament was the torc, a neck collar of metal, sometimes of gold.
@@ -74,7 +74,7 @@ local: -
 share: est 3-8
 sharenote: Estimate: no ancient figure survives; the smiths and metalworkers, the miners and the traders of the oppida and the countryside.
 firm: no
-terms: la-tene-culture
+terms: la-tene-culture, oppidum, potin
 people:
 picture: -
 text: Gaul was rich in metals. Its lands held tin, lead, iron, silver and gold, and archaeologists know of at least 200 pre-Roman gold mines in the Pyrenees alone. Celtic smiths and metalworkers made weapons and jewellery for trade far afield, above all with the Romans. La Tène metalwork in bronze, iron and gold, with its leafy palmettes, spirals and S-scrolls, adorned fine vessels, helmets, shields, horse trappings and the torcs and brooches of the elite. From the 3rd century BCE the Gauls minted coins: gold for trade, and potin, a bronze with much tin, of low value. Large fortified towns, the oppida, such as Bibracte, Avaricum and Gergovia, were centres of population, and Roman merchants came to trade.
@@ -91,7 +91,7 @@ local: -
 share: rest
 sharenote: Everyone not counted in the other ranks: the free majority and their families. The other ranks are estimates, so this share is one too.
 firm: yes
-terms:
+terms: braccae, taranis, epona
 people:
 picture: -
 text: Of the free Gauls who were neither nobles nor druids, the great majority, the ancient writers say least. They lived in scattered settlements and in the large towns, with hill forts used as refuges in time of war. The druids kept the yearly farming calendar and set the seasonal festivals. People wore long-sleeved tunics and the trousers the Romans called braccae, of wool or linen, with cloaks in winter. They worshipped many gods, among them the thunder god Taranis, Lugus, a god of skills and crafts, and the horse goddess Epona, held ceremonies in sacred groves and offered treasured things in rivers, wetlands and shafts. Caesar's wars fell on them hardest: as many as a million Gauls died.
@@ -137,4 +137,4 @@ NOTE: Druids and warrior nobles share level 2 because Caesar names them as the t
 NOTE: The smiths share level 3 with the free people: the sources do not rank craftsmen above other commoners.
 NOTE: The druids' banning in the mobility section is the druid article's "imperial prohibitions in the 1st century CE" (Augustus, Tiberius, Claudius).
 NOTE: Vix (c. 470 BCE) is older than the period; it is used only in the women's section, as the Celts article uses it.
-MISSING: druid, bard, vates, vergobret, oppidum, torc, potin, braccae, Aedui, Arverni, Helvetii, Carnutes, Remi, Taranis, Epona, Gallia Comata, Alesia (the town)
+MISSING: bard, Gallia Comata, Alesia (the town)

@@ -131,11 +131,8 @@
  "lang": null,
  "scheme": "SBL general-purpose",
  "notes": [
-  "SHAPE: orig is ONE stanza of 18 lines (one per verse, Exodus 15:1-18); the KJV 'en' in texts/song-of-the-sea.json is 18 stanzas of one line each. Same verses, different nesting: one of the two needs reshaping before they are paired.",
-  "KJV import slip, verse 8: 'the floods floods stood upright as an heap' has 'floods' twice (KJV: 'the floods stood upright'). Fix in the import.",
-  "line 1.10: the source has a stray U+FB1E (Hebrew point judeo-spanish varika) in 'tsalelu' (צָֽלְﬞלוּ), a typographic mark of the Wikisource edition; ignored in rom, worth cleaning in orig.",
   "line 1.1 begins with the narrative frame ('Then Moses and the children of Israel sang this song to YHWH and said:'), not part of the song itself.",
-  "The divine name is romanized as written, YHWH (read Adonai), and YAH as yah (line 1.2); line 1.17 writes Adonai itself (אדני) and is romanized so. The editor may prefer 'Adonai' for YHWH throughout.",
+  "The divine name is romanized as written, YHWH (read Adonai), and YAH as yah (line 1.2); line 1.17 writes Adonai itself (אדני) and is romanized so.",
   "Cantillation marks and the paseq are not romanized; qamats katan read as o (kodshekha, 'ozzekha). Initial aleph unmarked, other aleph and all ayin as '; dagesh forte doubled except in sh, ts, kh; maqqef as a hyphen."
  ]
 }

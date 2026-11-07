@@ -23,7 +23,7 @@ local: Doge
 share: 0
 sharenote: One man, elected for life.
 firm: yes
-terms:
+terms: doge-of-venice, bucentaur, marriage-of-the-sea-ceremony
 people:
 picture: francesco-foscari
 text: The doge was head of state for life. From 1268 forty-one electors chose him at the end of a long chain of lots and votes in the Great Council, designed to limit the influence of the great families. He promulgated the laws and commanded the army in war. Yet he swore an oath, the promissione ducale, recognising the limits of his power, and he was closely watched: he could not open dispatches from foreign powers without other officials present, own property abroad or name his successor, and after his death inquisitors judged his acts and could fine his estate. On Ascension Day he cast a ring into the sea from the state barge, the Bucentaur.
@@ -40,7 +40,7 @@ local: Patriziato
 share: est 3-6
 sharenote: Estimate: 2,746 noblemen were entitled to sit in the Great Council in 1527, and up to 2,095 attended a session in the 16th century (all men of 25 and over); with their wives and children perhaps 6,000–9,000 people in a city of 124,000–175,000.
 firm: yes
-terms: libro-doro, serrata-del-maggior-consiglio
+terms: libro-doro, serrata-del-maggior-consiglio, venetian-nobility, council-of-ten, avogadoria-de-comun
 people:
 picture: -
 text: The patricians alone sat in the Great Council. After the Serrata of 1297 and the laws of 1319–1323 membership was hereditary, and every nobleman entered the Council at 25. The families were registered in the Golden Book (Libro d'Oro), whose records of noble births and marriages, begun in 1506 and 1526, were kept by the Avogadori de Comùn. In law all patricians were equal: every vote, the doge's included, counted the same. In black togas they filled every council and magistracy, governed the subject cities as podestà and commanded the galleys, mostly for a year and for little pay. They drew their wealth from trade with the East rather than from land, and some 20 to 30 families dominated the state.
@@ -57,7 +57,7 @@ local: -
 share: est 1-3
 sharenote: Estimate: the priests, monks and nuns of the city's parishes and convents; the articles give no count.
 firm: no
-terms: catholicism, roman-inquisition
+terms: catholicism, roman-inquisition, patriarchate-of-venice
 people:
 picture: -
 text: Catholicism was the state religion, but the Republic kept its clergy in check. In 1451 Pope Nicholas V erected the Patriarchate of Venice, whose cathedral was San Pietro di Castello, not St Mark's. The government regulated the building of churches, limited bequests to the Church and watched the priests who preached against it, sometimes expelling them from the state. The Inquisition was active in Venice from 1542 and tried 3,620 defendants before 1794, but lay magistrates sat at its trials, sometimes softened its punishments, and it had no power over Jews or other non-Christians. Every Easter Monday the abbess of San Zaccaria presented the doge with a new linen cap made by her nuns.
@@ -108,8 +108,8 @@ local: -
 share: est 2-4
 sharenote: Estimate: the Greek, German, Armenian and other communities of the city; the articles give no count. In 1770 Orthodox Greeks were 13.3 per cent of the whole Republic, most of them in its lands overseas.
 firm: no
-terms: eastern-orthodox-church, fondaco-dei-tedeschi
-people:
+terms: eastern-orthodox-church, fondaco-dei-tedeschi, san-giorgio-dei-greci, fondaco-dei-turchi
+people: nicolas-jenson, johann-and-wendelin-of-speyer
 picture: fondaco-dei-tedeschi
 text: Venetian society counted foreigners as a body of their own, beside the patricians and the citizens. Orthodox Greeks had the church of San Biagio from 1456, the only church where they could celebrate their rites, and in 1514, when it grew overcrowded, were allowed to build San Giorgio dei Greci. Armenians had lived in Venice since the mid-13th century. Ottoman merchants stayed at the Fondaco dei Turchi, which held a small mosque, but did not settle. Foreigners led the printing trade: the German Johann of Speyer obtained the first printing privilege in 1469, and by the end of the 15th century the German and French communities, the French led by Nicolas Jenson, owned most of the city's presses.
 rise: A newcomer could be granted Venetian citizenship on merit, to work within the city or to sail and trade as a Venetian; Jews were excluded.
@@ -125,7 +125,7 @@ local: -
 share: est 1-3
 sharenote: Estimate: the communities of the Ghetto, founded in 1516 and enlarged for the Levantine Jews in 1541; the articles give no count for the 16th century, and the census of 1770 found 5,026 Jews, about 0.2 per cent of the whole Republic.
 firm: yes
-terms: jews
+terms: jews, venetian-ghetto
 people:
 picture: -
 text: Jews had no Venetian citizenship and for long no right to live in the city. Moneylenders, whose loans the city's business needed, were admitted with permits renewed every five or ten years, and were first allowed to live in the lagoon in 1385; Jews had to wear a distinctive sign, a yellow circle that in the 16th century became a red cloth. After the defeat at Agnadello in 1509 brought refugees from Vicenza and Conegliano and tensions with the Christians grew, the Venetian Ghetto was established on 29 March 1516 and enlarged in 1541 for the Levantine Jews. Under the magistrates in Cattaver they ran the Ghetto's pawnshops and traded in second-hand goods. Each community of origin had its own synagogue.
@@ -150,4 +150,4 @@ Todesco, M.-T. (1989) "Andamento demografico della nobiltà veneziana allo specc
 Republic of Venice; Doge of Venice; Great Council of Venice; Venetian nobility; Cittadini
 NOTE: the saved "Cittadini" article is a list of people with that surname; the citizens' rank rests on the Republic of Venice and Great Council articles only.
 NOTE: the articles say nothing of enslaved people in 16th-century Venice beyond the Concio's exclusion of slaves, so the ladder has no enslaved rank.
-MISSING: Doge of Venice, Great Council of Venice, Venetian nobility (patriciate), Council of Ten, Signoria of Venice, Avogadoria de Comùn, cittadini (Venetian citizens), Venetian Arsenal, Venetian Ghetto, Patriarchate of Venice, San Giorgio dei Greci, Fondaco dei Turchi, Leonardo Loredan, Andrea Gritti, Johann of Speyer, Nicolas Jenson, Bucentaur, Marriage of the Sea
+MISSING: cittadini (Venetian citizens)

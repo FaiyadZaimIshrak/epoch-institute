@@ -55,8 +55,8 @@ local: Mori
 share: est 0.2-0.5
 sharenote: Estimate: the scholars, judges and teachers of the towns, among them the Tarikh al-Sudan's crowds of students in early 15th-century Timbuktu.
 firm: no
-terms: ulama, qadi, sankore-madrasah, djinguereber-mosque
-people: abu-ishaq-al-sahili
+terms: ulama, qadi, sankore-madrasah, djinguereber-mosque, jakhanke
+people: abu-ishaq-al-sahili, al-hajj-salim-suwari
 picture: sankore-madrasah
 text: Islam had reached the Manding by the 10th century, and the mansas, their courts and the trading towns professed it, while most villagers kept the older religion. The Muslim learned, many from clerical families, served as imams, scribes and teachers of the Quran and as qadis, judges of Islamic law, in the towns and at court. Mansa Musa brought scholars back from his pilgrimage, among them Maliki jurists and the Andalusi poet Abu Ishaq al-Sahili; the great mosque of Timbuktu, the Djinguereber, was built under him in 1327, and he sent West African scholars to study at Fez. Timbuktu and Djenné grew into centres of learning, and before Mali lost Timbuktu in 1433 a jurist from the Hejaz found the city full of West African scholars who knew more law than he did. Some clerical towns, such as Dia, were left to govern themselves by Islamic law alone under the Jakhanke, followers of the quietist teaching of al-Hajj Salim Suwari.
 rise: Learning ran in clerical families, but the mansas sponsored scholarship, sending students to Fez and welcoming foreign scholars at court and in Timbuktu.
@@ -72,7 +72,7 @@ local: Wangara
 share: est 1-3
 sharenote: Estimate: the Wangara and other merchant families of the trading towns and routes.
 firm: no
-terms: wangara, trans-saharan-trade, gold-trade
+terms: wangara, trans-saharan-trade, gold-trade, takedda
 people:
 picture: -
 text: Trade made Mali rich. Mande-speaking Muslim merchants, the Wangara or Dyula, carried gold from the fields of Bambuk and Bure, kola nuts from the forest and cotton cloth, and brought back salt cut by slaves at Taghaza in the desert and copper from Takedda; they met North African traders at Walata and Timbuktu, where the caravans crossing the Sahara arrived. By the early 14th century Mali supplied almost half the gold of the Old World. The mansa taxed every load of gold, copper and salt that crossed his borders, and payments were made in gold dust, salt, copper and cowrie shells. Ibn Battuta praised the security of the roads, on which neither traveller nor resident had anything to fear. Merchants travelled with slaves who carried their goods, and slaves were themselves traded: the caravan Ibn Battuta joined for home in 1353 took 600 enslaved women north. Merchant families also spread Islam along the trade routes, far into the forest zone.
@@ -106,7 +106,7 @@ share: est 5-10
 sharenote: Estimate: in Mande societies the hereditary craft groups of griots, smiths, leatherworkers and weavers made up a substantial minority.
 firm: no
 terms: griots, nyamakala
-people:
+people: balla-fasseke
 text: Beside the freeborn stood the nyamakala, hereditary groups who practised special crafts and married only among themselves: the griots (jeli), musicians, praise-singers and keepers of genealogies; the smiths (numu), who made the tools and weapons of an empire rich in iron; and the leatherworkers (garanke). Their name links them to nyama, a vital force, dangerous as well as powerful, believed to flow through their work, so they were both needed and feared. At court the griot was tutor to the princes, master of ceremonies and adviser to the mansa, and in Mande memory Sundiata's own griot, Balla Fasséké, founded the Kouyaté line of griots that still exists. Every noble family had its griots, who could praise or shame the mighty in public. Historians debate how far these groups already formed castes in the 14th century: Tal Tamari dates the rise of castes in West Africa to about the 13th century, Susan McIntosh to about the 10th. Later Mande society ranked the nyamakala below the freeborn.
 rise: Membership came by birth and marriage stayed within the group; a griot rose by the favour of a great patron, and the mansa's griot was among the most influential men at court.
 you: You were born into a family of griots and sing the genealogies of the noble family you serve, whose name your words can raise or shame.
@@ -146,4 +146,4 @@ Gomez, M. A. (2018) African Dominion: A New History of Empire in Early and Medie
 == checked
 Mali Empire; Sundiata Keita; Mansa Musa; Mansa Suleyman; Sakura (mansa); Mansa (title); Ibn Battuta; Ibn Fadlallah al-Umari; Kouroukan Fouga; Timbuktu; Griot; Nyamakala; Mandinka people; Caste systems in Africa; Slavery in Mali; Trans-Saharan slave trade
 NOTE: The ibn-battuta entry gives his dates as "1334–1341 at Delhi", which are the years he served at Delhi, not his lifespan (1304–1368 or 1369); its description also says nothing of his visit to Mali in 1352–53.
-MISSING: horon, jon, numu, sofa, Balla Fasséké, Qasa, Sogolon, Jakhanke, al-Hajj Salim Suwari, Takedda
+MISSING: horon, jon, numu, sofa, Sogolon

@@ -87,7 +87,7 @@ local: Caciques
 share: est 0.5-2
 sharenote: Estimate: the caciques, kurakas and principales of the Indigenous towns, with their families.
 firm: no
-terms:
+terms: cacique, kuraka
 people: tupac-amaru-ii
 picture: -
 text: Spanish rule rested on the Indigenous nobility. The crown recognised the old ruling families of central Mexico and the Andes as nobles so long as they were loyal and Catholic: caciques in New Spain, kurakas in Peru, where Inca nobles who proved their descent could be recognised as hidalgos of Castile. They bore the titles don and doña, paid no tribute, could ride horses and carry swords or firearms, and some held entailed estates (cacicazgos). They governed the Indigenous towns, collected the tribute and supplied men for the labour drafts. Many prospered as ranchers, traders and muleteers, and some owned enslaved Africans. A cacique family petitioning the viceroy of New Spain in 1769 listed what it expected: a seat apart from commoners at public functions, freedom from tribute and from jail for debt, and its name among the nobles in official registers. In the 18th century rising royal demands squeezed them between the state and their communities; in 1780 the kuraka Túpac Amaru II led the Andean rebellion.
@@ -104,7 +104,7 @@ local: Mestizos
 share: 11-15
 sharenote: Roughly: the census of 1793 counted the castas together at 21–25 per cent of New Spain's people, on different authors' reckonings, and about 10 per cent were of African descent, which leaves some 11–15 per cent of Spanish and Indigenous descent.
 firm: no
-terms: casta
+terms: casta, mestizo, castizo
 people:
 text: Mestizos, the descendants of Spaniards and Indigenous people, were the first and the most favoured of the castas, the people of mixed descent. Early on, many were raised by their Spanish fathers; others grew up in their mothers' communities. The law counted them in the república de españoles. Unlike Indigenous commoners and people of African descent, mestizos paid no tribute, and they could be licensed to carry weapons and, by a grant of Philip II, ordained as priests. They were forbidden to live in Indigenous towns, though some did and even rose to office there. As early as 1543 officials in Mexico classed them with vagabonds (vagabundos), and colonial writers held that the "stain" of Indigenous ancestry disappeared in three generations of marriage with Spaniards: a mestizo and a Spaniard had a castizo, a castizo and a Spaniard a Spaniard. In the towns and on the estates mestizos worked as artisans, traders, foremen and labourers.
 rise: An Indigenous villager who learned Spanish, lived as a mestizo and moved to a town could be recorded as one and so escape tribute; a mestizo family that married Spaniards could, in two generations, be written down as Spanish.
@@ -120,7 +120,7 @@ local: Indios tributarios
 share: rest
 sharenote: Everyone not counted in the other ranks: the census of 1793 counted 51–61 per cent of New Spain's people as Indigenous, on different authors' reckonings. The clergy and the Indigenous nobles are estimates, so this share is one too.
 firm: no
-terms: mita, encomienda, new-laws
+terms: mita, encomienda, new-laws, repartimiento, general-indian-court-new-spain
 people:
 text: Most people were Indigenous commoners, legally free vassals of the king, grouped in the república de indios. They lived in their own towns, with Indigenous councils (cabildos), community land, churches and confraternities (cofradías), and non-Indians were forbidden to settle among them. Commoners paid the crown a yearly tribute, and their towns owed labour drafts. In Peru the mita, organised by Viceroy Francisco de Toledo from 1573, took one adult man in seven from much of the southern Andes to the silver mines of Potosí, and others to the mercury mines of Huancavelica, work so feared that many fled their villages. In New Spain the repartimiento drafted smaller numbers for a few weeks a year, for a wage. District officials also forced goods on them at high prices. Yet the law also protected them: they were outside the Inquisition's reach, and in Mexico a General Indian Court, funded by a half-real tax, heard their cases. Communities sued to defend their land and water, and when lawsuits failed they rose in revolt.
 rise: Moving to a Spanish town, estate or mine, learning Spanish and passing as a mestizo could free a man from tribute and the labour draft; a few proved noble descent in court and joined the nobility.
@@ -153,7 +153,7 @@ share: 0.2
 sharenote: About 10,000 enslaved people in New Spain by 1810, under 0.2 per cent of its people (a modern estimate); Peru, whose coastal estates still bought Africans into the 1800s, had proportionally more, but there is no figure for the two together.
 firm: yes
 terms: slavery, atlantic-slave-trade, asiento, siete-partidas, maroons
-people:
+people: gaspar-yanga
 picture: -
 text: From the 16th century some 200,000 enslaved Africans reached New Spain and some 95,000 Peru, by modern estimates, many under the asiento contracts the crown sold to foreign traders. Captives born in Africa were called bozales, those who spoke Spanish ladinos, and those born in the colonies criollos. They were property, and could be bought, sold, punished and separated from their families. Many lived in the cities as servants, cooks, laundresses and skilled artisans, often hired out; others worked on the sugar estates of Veracruz and coastal Peru, in vineyards and in textile workshops (obrajes). In New Spain slavery declined after 1640; by 1810 few enslaved people remained. Spanish law, from the Siete Partidas on, left them some rights: to marry in church, to keep savings and to buy their freedom, often in instalments (coartación), and freedom was commoner in towns than in the countryside. Many resisted by running away, changing masters or forming maroon communities (palenques): in 1609 Gaspar Yanga's maroons near Orizaba won recognition as a free town.
 rise: Freedom came by purchase, often in instalments, by an owner's grant in life or in a will, or by flight; a child followed its mother's status, so a free mother's children were born free.
@@ -176,4 +176,4 @@ Walker, C. F. (2014) The Tupac Amaru Rebellion. Cambridge, MA: Belknap Press of 
 
 == checked
 Casta; New Spain; Mexicans of European descent; Mestizos in Mexico; Mestizo; Criollo people; Peninsulars; Gachupín; Viceroyalty of Peru; Demographics of Peru; History of Lima; Spanish colonization of the Americas; Spanish Empire; Mexican War of Independence; Indigenous peoples of Mexico; Afro-Mexicans; Afro-Peruvians; Slavery in Mexico; Slavery in colonial Spanish America; Mit'a; Kuraka; Cacique; Túpac Amaru II; History of the Catholic Church in Mexico; Catholic Church in Mexico; Juana Inés de la Cruz; Martín de Porres; Vicente Guerrero
-MISSING: mestizo, castizo, cacique, kuraka, cacicazgo, repartimiento, república de indios, General Indian Court, fuero eclesiástico, capellanía, coartación, palenque, gracias al sacar, Royal Pragmatic on Marriage, Gaspar Yanga, Micaela Bastidas
+MISSING: república de indios, fuero eclesiástico, capellanía, coartación, palenque, gracias al sacar

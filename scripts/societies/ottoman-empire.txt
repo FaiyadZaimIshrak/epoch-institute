@@ -23,7 +23,7 @@ share: 0
 sharenote: One man, with the imperial family.
 firm: yes
 terms: kanun, topkapi-palace
-people: mehmed-ii, bayezid-ii, selim-i, suleiman-the-magnificent
+people: mehmed-ii, bayezid-ii, selim-i, suleiman-the-magnificent, mehmed-iii
 text: The sultan, the padişah or "lord of kings", was the source of every office and, in law, the owner of the empire's farmland. He governed through the sharia and through kanun, the dynastic law issued in his own name, and Suleiman the Magnificent was remembered as Kanuni, "the Lawgiver". After Selim I conquered the Mamluk Sultanate in 1516–1517, the sultans also claimed the title of caliph. Everyone in the ruling class held his post, his fortune and his life at the sultan's pleasure: Suleiman had his grand vizier and boyhood friend Pargalı Ibrahim Pasha strangled in 1536. From the 15th century the sultans had their heirs by slave concubines rather than by foreign princesses. No rule fixed the succession. Princes governed provinces until their father died and then fought for the throne, and under Mehmed II the law allowed the victor to put his brothers to death: Mehmed III had nineteen executed in 1595. From the late 16th century the sultans left day-to-day government to the grand vizier.
 rise: Only a son of the dynasty could reign, and the throne went to the prince who prevailed over his brothers, sometimes before his father's death: Selim I forced his father Bayezid II to abdicate in 1512.
 you: Every office, fortune and life in the ruling class is yours to give or take, and in law the empire's farmland is yours, but you fought your brothers for the throne, and the law let you put them to death.
@@ -39,7 +39,7 @@ share: 0.01-0.05
 sharenote: A few thousand men: about 300 pages in the palace school and 1,000–2,000 in its outer colleges (Miller's estimate), the viziers, and the governors of 8 provinces in 1527 and 32 in 1609 with their district governors; with their families roughly 0.01–0.05 per cent of 12–30 million people.
 firm: yes
 terms: grand-vizier, vizier, devshirme
-people: pargali-ibrahim-pasha, koca-sinan-pasha, hadim-suleiman-pasha
+people: pargali-ibrahim-pasha, koca-sinan-pasha, hadim-suleiman-pasha, sokollu-mehmed-pasha, candarl-halil-pasha-the-younger
 text: At the top of the ruling class stood the grand vizier, the sultan's deputy, with the other viziers of the imperial council (divan), the governors-general of the provinces (beylerbeyi), eight in 1527 and 32 by 1609, and the district governors (sancakbeyi) under them. After Mehmed II had his grand vizier Çandarlı Halil Pasha executed in 1453, these posts went more and more to the sultan's kul, his "slaves": boys taken from Christian families by the devshirme, converted to Islam and trained in the palace school, some 300 of them inside Topkapı Palace. Here lay the paradox. The most powerful men of the empire were legally the sultan's slaves: they commanded armies, drew revenue grants (has) worth over 100,000 akçes a year and owned slaves themselves, yet their posts, fortunes and lives were his to take. The historian Halil İnalcık argued that a convert was no longer a slave in the ordinary sense. Sokollu Mehmed Pasha, born an Orthodox Christian in Herzegovina, was grand vizier from 1565 to 1579.
 rise: Pages left the palace for posts as officers and governors, and a governor could rise to vizier. A word from the sultan could end a career: Bayezid II had the grand vizier Gedik Ahmed Pasha executed in 1482.
 you: You were taken from a Christian family as a boy and trained in the sultan's palace; now you command armies and own slaves yourself, but in law you are still the sultan's slave, and your post, your fortune and your life are his to take.
@@ -54,7 +54,7 @@ local: Tımarlı sipahi
 share: 0.7-1.7
 sharenote: Some 39,000 timariots in 1475 (22,000 in Rumelia and 17,000 in Anatolia, by a contemporary claim) and about 40,000 on David Nicolle's estimate; with households of five, roughly 0.7–1.7 per cent of 12–30 million people.
 firm: no
-terms: timar, sipahi
+terms: timar, sipahi, battle-of-keresztes
 people:
 text: The provincial cavalry, the timariot sipahis, made up the bulk of the classical Ottoman army. Each held a timar: not land but the right to collect taxes worth up to 20,000 akçes a year from named villages, in place of a salary, in return for riding to war with armed retainers (cebelü) in proportion to his revenue; officers held larger grants (zeamet) of up to 100,000 akçes. The timariot kept order in his villages and saw that their fields stayed in cultivation, and the peasants owed some days' work on his own plot, but he could punish no one without a judge's verdict. A timar was not hereditary, though it was often given to a son who served, and a sipahi who missed campaigns for seven years lost it. Some timariots were Christians in the 15th century; by the 16th almost all were Muslims. Firearms and long wars reduced their value, and after the Battle of Keresztes in 1596 some 30,000 absentees were stripped of their timars.
 rise: Timars went to cavalrymen's sons who served, and as rewards to Janissaries and other servants of the sultan; a commoner who distinguished himself in war might also win one.
@@ -70,8 +70,8 @@ local: Ulema
 share: est 0.3-1
 sharenote: Estimate: the judges, teachers, preachers and prayer leaders of the towns and larger villages, with their families.
 firm: no
-terms: ulama, qadi, madrasa
-people:
+terms: ulama, qadi, madrasa, shaykh-al-islam, kazasker
+people: ebussuud-efendi
 picture: -
 text: The ulama, scholars of Islamic law trained in the madrasas, formed the learned branch of the ruling class and, like the rest of it, paid no taxes. Unlike the kul, they were freeborn Muslims. They taught in the madrasas, led prayers and preached, and above all served as judges: in every district a qadi (kadı) heard cases, drew up inheritances and endowment deeds and checked the officials, for even a timariot needed his verdict to punish a peasant. Two chief judges, the kadıaskers of Rumelia and Anatolia, sat in the imperial council and proposed candidates for judgeships, and the chief mufti of Istanbul, the şeyhülislam, headed the hierarchy. Over the 16th century the learned career became a graded ladder from madrasa teacher to judge of a great city. Ebussuud Efendi, şeyhülislam from 1545 to 1574, worked with Suleiman the Magnificent to reconcile the sultan's law (kanun) with the sharia, and issued thousands of legal opinions (fatwas), on matters from land tenure to the drinking of coffee.
 rise: Any Muslim boy could enter a madrasa, many of them paid for by pious endowments, so the poor could rise by learning; graduates who took a town judgeship at once were paid sooner but rarely rose as high as those who began as teachers.
@@ -104,7 +104,7 @@ local: Esnaf
 share: est 6-10
 sharenote: Estimate: the merchants, craftsmen and shopkeepers of the towns, Muslim, Christian and Jewish, a minority beside the peasants.
 firm: yes
-terms: guild, caravanserai
+terms: guild, caravanserai, esnaf
 people: joseph-nasi
 picture: -
 text: The townspeople were reaya, taxpayers, but the sultans needed them. Mehmed II resettled Muslims, Christians and Jews in Constantinople to revive it after 1453, and Bayezid II welcomed Jews expelled from Spain in 1492, who settled in Istanbul, Salonica and other towns. Craftsmen and shopkeepers belonged to guilds (esnaf), which kept up standards, limited production and helped members in hard times, and through which the state watched over the bazaars and the townspeople; by the 1580s the guilds were a fixture of town life, as the account of the great procession of 1582 for the circumcision of Murad III's son shows. Merchants traded along the overland routes between Europe and Asia and lodged in caravanserais, and Cairo prospered on the new trade in Yemeni coffee. Jews, Greeks and Armenians were prominent in trade and finance; the Jewish financier Joseph Nasi rose so high at court that Selim II made him duke of Naxos in 1566. The levy of boys spared the great cities and the craftsmen's sons.
@@ -180,4 +180,4 @@ Braude, B. and Lewis, B. (eds) (1982) Christians and Jews in the Ottoman Empire:
 == checked
 Ottoman Empire; Social structure of the Ottoman Empire; Demographics of the Ottoman Empire; Askeri; Rayah; Devshirme; Janissary; Kapıkulu; Timar; Sipahi; Celali rebellions; Ilmiye; Shaykh al-Islām; Kazasker; Ebussuud Efendi; Enderun School; Eyalet; Sanjak; Rumelia; Rumelia Eyalet; Ottoman dynasty; Imperial Harem; Hürrem Sultan; Women in the Ottoman Empire; Slavery in the Ottoman Empire; Millet (Ottoman Empire); Rum millet; Dhimmi; Jizya; Christianity in the Ottoman Empire; History of the Jews in the Ottoman Empire; Ottoman Bulgaria; Taxation in the Ottoman Empire; Economic history of the Ottoman Empire; Turkification; Pargalı Ibrahim Pasha; Sokollu Mehmed Pasha; Koca Sinan Pasha; Mimar Sinan; Defter
 NOTE: The millet-system entry describes the millet system as the standing arrangement by which the empire organised its non-Muslim subjects, with no date; recent scholarship (Benjamin Braude, followed by the Wikipedia article) holds that the formal system of officially recognised millets dates from the 18th and 19th centuries and did not exist in the 15th, so the entry should say when it applies.
-MISSING: askeri, kul, Sokollu Mehmed Pasha, Çandarlı Halil Pasha, Ebussuud Efendi, şeyhülislam, kadıasker, zeamet, Enderun School, esnaf, Celali rebellions, Battle of Keresztes, Hürrem Sultan, Esther Handali, Selim II, Murad III, Mehmed III
+MISSING: kul

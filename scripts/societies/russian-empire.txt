@@ -39,7 +39,7 @@ local: Dvoryanstvo
 share: est 1-1.5
 sharenote: Estimate: the hereditary and personal nobles of the empire, including the Polish gentry of the western provinces (62.8 per cent of its nobles in 1858), perhaps 600,000–900,000 people.
 firm: yes
-terms: table-of-ranks, decembrists
+terms: table-of-ranks, decembrists, charter-to-the-gentry
 people: alexander-pushkin, leo-tolstoy, mikhail-speransky
 text: The nobility (dvoryanstvo) was the first estate. It included old princely families, Baltic German barons and, after the partitions of Poland, a mass of Polish gentry, 62.8 per cent of the empire's nobles in 1858. Nobility was hereditary or personal: Peter the Great's Table of Ranks granted personal nobility in its lower grades and hereditary nobility higher up, until 1845 at the eighth civil grade. Since 1762 nobles had been free of compulsory service, and the Charter to the Gentry of 1785 confirmed their privileges: freedom from the poll tax and corporal punishment, full rights over their estates and serfs, and assemblies of the nobility in every province. Most still served for some years as officers or officials. Wealth was very unequal: in 1858 some 1,400 great landowners held three million serfs, while 79,000 small ones held two million between them, and by 1859 two-thirds of all serfs were mortgaged to banks or the state. In 1825 noble officers, the Decembrists, rose for a constitution and were crushed.
 rise: Nobility came by birth, by imperial grant, or by rising through the Table of Ranks: Mikhail Speransky, a village priest's son, rose through the civil service to become Alexander I's leading adviser and was made a count in 1839.
@@ -56,7 +56,7 @@ share: est 0.8-1.2
 sharenote: Estimate: the Orthodox clergy with their wives and children, who belonged to the estate: parish priests married.
 firm: no
 terms: holy-synod
-people:
+people: philaret-drozdov
 picture: -
 text: The Orthodox clergy was the second estate free of the poll tax and of the recruit levy, but it was divided. The black (monastic) clergy lived in monasteries under vows of celibacy, and all bishops were drawn from them. The white clergy were the parish priests and deacons, who were expected to marry and could do so only before ordination. In practice they formed a hereditary class, whose sons trained in the seminaries and were expected to become priests. Most parish priests were poor and closer to the peasants than to the bishops. Since Peter the Great the church had been governed by the Holy Synod, under a lay procurator who answered to the emperor; in 1764 Catherine II took most of its lands and closed 569 of its 954 monasteries, and from 1797 bishops, not parishioners, chose parish priests. Philaret Drozdov, a cleric's son who became a monk in 1808, headed the see of Moscow from 1821 to 1867 and was the church's leading figure.
 rise: Priests' sons usually followed their fathers, but the seminaries also fed the civil service: Mikhail Speransky, a village priest's son, taught at the seminary in Saint Petersburg before entering state service and rising to the top.
@@ -72,8 +72,8 @@ local: Kupechestvo
 share: est 0.3-0.6
 sharenote: Estimate: the merchants of the three guilds with their families; as late as 1851 only 8 per cent of Russians lived in towns.
 firm: yes
-terms:
-people:
+terms: kupechestvo
+people: savva-morozov
 text: The merchants (kupechestvo) were enrolled in three guilds according to the capital they declared, under Catherine II's rules of 1775, each guild with its own trading rights. Membership was paid for and not simply inherited: a merchant registered with the state for a fee, his relatives could trade on his behalf, but his grown sons had to qualify on their own, so a family that could no longer meet the requirements fell back among the townspeople. Rich merchants founded factories, and the law let them buy serfs to work in them from 1721 to 1762 and again from 1798 to 1816; in 1825 about half of all factory workers were serfs. From 1832 the most distinguished could become honorary citizens, ranking between the merchants and the nobles, free of the poll tax, the recruit levy and corporal punishment. Yet the merchants had little political weight and were looked down on by the nobility, though only the nobles were more literate.
 rise: Anyone who could declare enough capital and pay the fees could enrol in a guild, and some merchants began as townspeople or even serfs: Savva Morozov, a serf, bought freedom for himself and his sons in 1820, and the family went on to found the Morozov textile companies.
 you: You have declared your capital and enrolled in a merchant guild, and your business may grow rich, but the nobles look down on you and you have no say in how the empire is ruled.
@@ -121,8 +121,9 @@ local: Soldaty
 share: 1.5-2
 sharenote: Over one million men under arms in the decades after the Napoleonic Wars (E. Willis Brooks's figure), roughly 1.5–2 per cent of the people.
 firm: no
-terms: conscription
+terms: conscription, military-settlement
 people:
+picture: -
 text: The army's rank and file were recruits drawn from the estates that paid the poll tax, above all the peasants. Each levy demanded a quota of men aged about twenty; village elders or landlords chose whom to send, often by lot, and landlords used the levy to rid themselves of troublesome serfs. From 1793 a recruit served for 25 years; in 1834 the term was cut to 20 years with 5 more in the reserve, and in 1855 to 12 years with 3 in the reserve. A serf taken as a recruit left his master's power, and a soldier who survived his service was a free man, but the service was long and harsh, far from home. Literate recruits might become clerks, and good soldiers non-commissioned officers, while officers' commissions went overwhelmingly to nobles: in the Crimean War nine officers in ten were noble. Some villages of state peasants were turned into military settlements, where the men were soldiers and farmers at once.
 rise: A few soldiers of humble birth rose to officer's rank, which brought nobility under the Table of Ranks.
 you: You were chosen as a recruit by your village or your master and serve for twenty years or more, far from home; if you survive, you will come home a free man.
@@ -153,7 +154,7 @@ local: Krepostnye krestyane
 share: 35-36
 sharenote: The official count of 1857–1859 gave 23.0 million peasants on proprietors' lands, 37.8 per cent of 60.9 million people; less the household serfs, about 6.8 per cent of them, roughly 35 per cent.
 firm: yes
-terms: serfdom, sobornoe-ulozhenie, emancipation-reform-of-1861
+terms: serfdom, sobornoe-ulozhenie, emancipation-reform-of-1861, poll-tax, serfdom-in-russia
 people:
 picture: -
 text: Serfs were peasants owned, with the land they lived on, by noble landlords, and bound to it since the Law Code of 1649. Most lived in villages whose commune (mir) shared out the strips of land among households, while the lord answered to the state for their poll tax. They served their lord by labour on his fields (barshchina), commonly three days a week, which Paul I's decree of 1797 called normal, or by a quit-rent (obrok) in money or kind, often earned away from home. Landlords took at least a third of their peasants' income. The lord judged and punished his serfs, had to approve their marriages, could send them into the army or at times into Siberian exile, and could sell them with or without land. The law forbade him to kill them; Alexander I banned advertising serfs for sale without land (1801) and selling them at fairs (1808), and from 1833 families could not be split at public sales. Serfs resisted by flight and revolt.
@@ -171,7 +172,8 @@ share: 2-3
 sharenote: 6.79 per cent of the serfs on the eve of emancipation, up from 4.14 per cent in 1835: about 1.5 million people in the count of 1857–1859, roughly 2.5 per cent of the population.
 firm: yes
 terms:
-people:
+people: taras-shevchenko, praskovia-kovalyova-zhemchugova
+picture: -
 text: Beside the field serfs lived the household serfs (dvorovye), who had no land and served in their master's house and stables as cooks, coachmen, grooms, maids, footmen, nurses and stewards. Having no land, they could be sold on their own. Their share of the serfs grew from 4.14 per cent in 1835 to 6.79 per cent by 1858, as landlords who expected emancipation turned field serfs into servants. Great households kept many of them, and some were trained as musicians, painters, singers or actors: the Sheremetev counts ran a serf theatre whose star, the soprano Praskovia Zhemchugova, was a serf blacksmith's daughter. Household serfs lived closest to their owners, which could bring favour or cruelty. Taras Shevchenko, born a serf in 1814, was made a house servant of his lord at fourteen and whipped for drawing at night; his talent won him friends in Saint Petersburg, who raised 2,500 roubles in 1838 to buy his freedom. At emancipation in 1861 household serfs were freed, but received no land.
 rise: Freedom came by an owner's grace or by purchase: Count Nikolai Sheremetev freed Praskovia Zhemchugova in 1798 and married her in secret in 1801.
 you: You live in your master's house as a cook, a groom or a maid, with no land of your own; he can sell you on your own, and his favour or cruelty rules your life.
@@ -193,4 +195,4 @@ Wirtschafter, E. K. (2008) Russia's Age of Serfdom, 1649–1861. Malden, MA: Bla
 
 == checked
 Serfdom in Russia; Emancipation reform of 1861; Russian nobility; Table of Ranks; Social estates in the Russian Empire (Sosloviye); Russian Empire; Tsarist Russia; Estates of the realm; Serfdom; Corvée; State peasants; Cossacks; Don Cossacks; Merchant guild; History of the Russian Orthodox Church; Secular clergy (White clergy); Conscription in the Russian Empire; Russian Empire Census; Pomeshchik; Women in Russia; Taras Shevchenko; Mikhail Speransky; Philaret Drozdov; Ivan Savvich Morozov; Praskovia Kovalyova-Zhemchugova
-MISSING: Nicholas I of Russia, Charter to the Gentry, meshchane, kupechestvo, honorary citizen (Russian Empire), state peasants, household serfs (dvorovye), barshchina, obrok, poll tax (Russia), mir (peasant commune), military settlements, Pavel Kiselyov, Philaret Drozdov, Taras Shevchenko, Praskovia Zhemchugova, Savva Morozov
+MISSING: meshchane, honorary citizen (Russian Empire), state peasants, household serfs (dvorovye), barshchina, obrok

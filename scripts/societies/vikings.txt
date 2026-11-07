@@ -39,8 +39,8 @@ local: Jarlar
 share: est 0.01-0.05
 sharenote: Estimate: the title belonged to a few great families and to the deputies of kings.
 firm: yes
-terms: jarl
-people: hakon-sigurdsson, thorfinn-the-mighty
+terms: jarl, rigs-ula
+people: hakon-sigurdsson, thorfinn-the-mighty, ulf-jarl
 text: A jarl (earl) was the greatest lord below a king. The title could mark an independent ruler or a king's deputy. In Norway the jarls of Lade ruled Trøndelag and Hålogaland with as much power as many kings, and Håkon Sigurdsson (Haakon Jarl) governed most of Norway from about 975 to 995, at first under the Danish king. The earls of Orkney ruled the Northern Isles under the Norwegian crown, among them Thorfinn the Mighty in the 11th century. In Denmark the jarl was the king's deputy, as Ulf Jarl was to Cnut the Great, and when Cnut conquered England he made Eric of Lade earl of Northumbria. Jarls owned great estates with large halls, horses and many thralls, kept their own armed followers and showed their rank in silk clothing, brooches and arm rings. Rígsþula pictures Jarl as a warrior who rides, hunts with hawks and hounds, and wins eighteen estates by war.
 rise: The title passed within great families such as the jarls of Lade and the earls of Orkney, or was granted by a king to a deputy; a jarl who lost a struggle with a king could lose everything, as Håkon Sigurdsson did when Olaf Tryggvason seized Norway in 995.
 you: You hold great estates and a hall full of armed followers and thralls, and you rule a whole region, for a king or in his place.
@@ -55,8 +55,8 @@ local: Hersar
 share: est 0.3-1
 sharenote: Estimate: the hersar, goðar and other chieftains with their households; Iceland, the only land with a fixed number, recognised 36 chieftaincies (goðorð), later 39.
 firm: yes
-terms: althing
-people: thorgeir-ljosvetningagodi
+terms: althing, hersir, gothi
+people: thorgeir-ljosvetningagodi, erling-skjalgsson
 picture: -
 text: Below the jarls stood the chieftains of districts, wealthy landowners who led their neighbours in war and law. In Norway a hersir commanded the men of his district and owed loyalty to a jarl or king; the later sagas give each jarl four or more hersar. Iceland, settled from about 870 and without a king, was led by its goðar: there were 36 chieftaincies (goðorð), later 39, which could be inherited, bought or shared. Every free farmer of means had to follow a goði of his choice, who backed him in lawsuits and could call on him for armed support, and the goðar ran the local assemblies, sat in the law council of the Althing and named its judges. Pagan worship had no separate order of priests: chieftains kept the halls where the communal sacrifices and feasts were held, and three runestones on the Danish island of Funen name local men as goði. From the early 11th century Norwegian kings drew chieftains into their service as "landed men" (lendir menn).
 rise: Chieftaincy passed mostly within families, but land, followers and success in feuds and raids could make a rich farmer a chieftain, and in Iceland a goðorð could simply be bought.
@@ -72,7 +72,7 @@ local: Húskarlar
 share: est 0.5-1.5
 sharenote: Estimate: every king, jarl and chieftain kept his own armed household, from a few men to several hundred.
 firm: no
-terms: varangian-guard, varangians
+terms: varangian-guard, varangians, hird, housecarl
 people:
 text: Kings, jarls and chieftains kept armed households of free men, called lið and in later sources hirð, who lived with their lord, fought at his side and were rewarded with gifts and pay. Such a retainer was a housecarl (húskarl) or a drengr, a "warrior"; the skald Sigvatr Þórðarson called the retainers of Olaf II of Norway heiðþegar, "receivers of pay". They were bound to their lord and expected to avenge him if he was killed. The best equipped had a helmet, a mail shirt and a sword, marks of wealth beyond most farmers. Many served far from home. The Turinge runestone in Sweden remembers Þorsteinn, who fell "in the east in Garðar" (Russia) as commander of a retinue. So many Swedes joined the Byzantine emperor's Varangian Guard, formed in the late 10th century, that a law of Västergötland barred anyone staying in "Greece" from inheriting, and Cnut's conquest brought a royal guard of housecarls to England, which fought for Harold Godwinson at the Battle of Hastings in 1066.
 rise: Free men skilled in arms joined a lord's following by his favour, and loyal service was rewarded with gifts; in Norway the king's men could rise to be his landed men (lendir menn), the highest rank in the royal household.
@@ -88,7 +88,7 @@ local: Bœndr
 share: rest
 sharenote: Everyone not counted in the other tiers: the free majority of farmers, fishers, craftsmen and traders with their households. The other ranks are estimates, so this share is one too.
 firm: yes
-terms: gulating, frostating
+terms: gulating, frostating, bondi, thing-assembly
 people:
 picture: -
 text: Most free Scandinavians were farmers (bœndr), the karlar of Rígsþula, who worked their own land with their households. A farm centred on a longhouse; its people grew barley, rye, oats and flax, kept cattle, sheep and pigs, fished, hunted and made woollen cloth. Wealth ranged from great farms with many thralls to small farms with one or two, or none. A free man was expected to own weapons, typically a spear, a shield and a knife, and to answer the call to war, in Norway through the ship levy (leiðangr), first recorded in the late 10th century. He had a voice at the thing, the assembly of free men of full age, which made law, judged disputes and acclaimed kings. Few farmers were ever raiders: others sailed as traders or settled in Iceland, the British Isles and the lands to the east. In trading towns such as Hedeby, Birka and Kaupang lived craftsmen and merchants, and free but landless servants (húskarlar) worked on other men's farms.
@@ -105,7 +105,7 @@ local: Leysingjar
 share: est 1-3
 sharenote: Estimate: freed slaves, who often stayed on as dependants of their former owners.
 firm: yes
-terms: freedmen
+terms: freedmen, leysingi
 people:
 text: A thrall could be freed by the owner, in the owner's will, or by buying freedom with money earned; according to the sagas the Norwegian magnate Erling Skjalgsson set each of his thralls a price and let them earn it by working for themselves. The freed slave (leysingi) was free but not equal. He still owed loyalty to his former master and had to support him at the assembly; if he died without children, the former master inherited his land and goods; and the penalty for killing a freed slave was lower than for a freeborn man. Only after at least two generations did a family become fully free. Freedom often came with land to farm: Aud the Deep-Minded, who settled in Iceland in the late 9th century, freed the thralls she brought with her and gave them land, according to Landnámabók. Most of these rules are known from laws written down in the 12th and 13th centuries.
 rise: Freedom came only by the owner's choice, by will or by purchase; the freed slave's grandchildren could expect to count as fully free.
@@ -145,4 +145,4 @@ Winroth, A. (2014) The Age of the Vikings. Princeton: Princeton University Press
 
 == checked
 Viking Age; Vikings; Thrall; Jarl; Hersir; Rígsþula; Thing (assembly); Gothi; Housecarl; Hird; Leidang; Lendmann; Odelsrett; Slavery in medieval Europe; Birka grave Bj 581; Shield-maiden; Hillersjö stone; Aud the Deep-Minded (Ketilsdóttir); Medieval demography
-MISSING: hersir, goði, bóndi, leysingi, hird, housecarl, leiðangr, thing (assembly), Rígsþula, Ulf Jarl, Eric of Lade, Erling Skjalgsson, Aud the Deep-Minded, Hillersjö stone, Birka grave Bj 581
+MISSING: Eric of Lade

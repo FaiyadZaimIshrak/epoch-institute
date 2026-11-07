@@ -39,7 +39,7 @@ local: Inka
 share: 0.15-0.4
 sharenote: Gordon McEwan puts the Inca nobility at perhaps 15,000 to 40,000 people in an empire of about 10 million, roughly 0.15–0.4 per cent; it is not clear whether the figure takes in the Incas by privilege.
 firm: yes
-terms: machu-picchu
+terms: machu-picchu, panakas
 people:
 picture: -
 text: The Inca nobles were the descendants of the rulers of Cusco, grouped in royal lineages (panaqa). The chroniclers name ten or eleven of them, one for each past ruler, divided between Upper and Lower Cusco (Hanan and Hurin). Each lineage kept its founder's mummy, served his shrines and held his palaces in the city and his country estates, such as Machu Picchu, probably Pachacuti's, worked by retainers who served it for life. Nobles wore fine tapestry cloth (qompi) and large ear spools, for which the Spaniards called them orejones, "big ears". Their sons were initiated at the December festival of Qhapaq Raymi and schooled at the yachaywasi, the "house of knowledge" in Cusco, in language, accounting, astronomy and war. Nobles led the armies, governed the four quarters of the empire and served as the ruler's inspectors, the highest of whom was usually his close kinsman. Rank within a lineage depended on the mother's standing as well as the father's, and the lineages competed over each succession.
@@ -88,7 +88,7 @@ local: Umu
 share: est 0.3-1
 sharenote: Estimate: priests served the Sun and the other state gods in Cusco and the provinces, and every local shrine had its keepers.
 firm: no
-terms: coricancha, inti-raymi
+terms: coricancha, inti-raymi, villac-umu
 people:
 picture: coricancha
 text: A large priesthood served the state religion. At its head stood the Willaq Umu, the high priest of the Sun, usually a brother of the ruler and second only to him. Under him, priests served the Sun, the Moon, the Thunder and the creator god Viracocha in Cusco, above all at the Coricancha, the gold-clad temple of the Sun, and at the state temples the Incas built in conquered provinces, while every people kept its own priests for its local shrines (wak'a), some of which, like the oracle of Pachacamac, the Incas honoured too. Priests consulted the shrines, made offerings of llamas, cloth, coca and maize beer, and conducted the festivals of the calendar, above all Inti Raymi at the June solstice. Before great ceremonies they fasted, giving up salt, chilli and meat. The harvests of the fields set aside for the Sun across the empire paid for the cult, and in Cusco the royal lineages shared the care of some 328 shrines on lines running out from the Coricancha.
@@ -105,7 +105,7 @@ local: Aklla
 share: est 0.1-0.3
 sharenote: Estimate: a provincial house of chosen women might hold up to about 200 women, and there were houses in Cusco and the provincial centres.
 firm: no
-terms: aclla, acllahuasi
+terms: aclla, acllahuasi, capacocha
 people:
 picture: -
 text: Each year officials toured the provinces to choose girls of about eight to ten, most of them daughters of curacas and other families of rank, for their looks, skill and intelligence. They were taken into houses of chosen women (acllawasi) in the provincial centres, each holding up to 200 women, and the most favoured were sent on to Cusco. For about four years they learned religion, spinning and weaving, cooking and the brewing of maize beer (chicha). They then wove the fine cloth the rulers gave as gifts and prepared the food and drink of the state's feasts and festivals. Some stayed for life as mamakuna, priestesses of the Sun and other gods; others were given by the ruler as wives to nobles, curacas and men who had served him well, or became secondary wives of the Sapa Inca himself. A few were chosen for the capacocha sacrifice. They had to remain chaste, on pain of death, and the families of chosen women rose in standing.
@@ -139,7 +139,7 @@ local: Mitmaqkuna
 share: 25-33
 sharenote: Terence D'Altroy's estimate, from anthropological and linguistic studies: perhaps a quarter to a third of the empire's people had been resettled; a rough figure.
 firm: no
-terms:
+terms: mitma
 people:
 text: The Incas moved whole communities from their homelands to other parts of the empire, a policy called mitma, and the settlers were known as mitmaqkuna. Loyal peoples were planted in newly conquered or restless provinces to hold them for the empire, garrison the frontiers and watch the natives; rebellious peoples were sent the other way, into regions the Incas held firmly. Other communities of specialists, such as metalworkers from the conquered kingdom of Chimor, were moved to Cusco or elsewhere to work for the state. For their first two years the settlers could draw on the state's storehouses, and the local people were made to help provide for them. They had to keep their own dress and customs, so that officials could tell them from their neighbours, but they were forbidden to return home, on pain of severe punishment. On modern estimates a quarter to a third of the empire's people may have been moved, and their movements helped spread Quechua to regions where it is still spoken.
 rise: Communities were moved by order of the state: loyal ones to hold new provinces, rebellious ones as punishment, skilled ones to work for the state; their descendants stayed where they had been placed.
@@ -155,7 +155,7 @@ local: Yanakuna
 share: est 0.5-2
 sharenote: Estimate: the yanakuna, retainers bound to the Inca, his kin and the temples, grew in number in the empire's last decades.
 firm: no
-terms:
+terms: yanakuna
 people:
 text: The yanakuna were people who had left their ayllus to serve a master full-time and for life: the Sapa Inca, the Coya, the royal lineages and nobles, or the temples. Some were born to the status, which passed from parents to children; some were chosen by nobles; others left their ayllus to take it up. They herded the nobles' llamas, farmed their estates, fished, made pottery, built and kept house, and they lived and served at royal estates such as Machu Picchu. Because they no longer belonged to an ayllu, they owed it no share in the community's labour turns; their work belonged to their master. Their standing varied widely. A few retainers of the ruler enjoyed high status and were appointed to office, and some owned property and farmed plots of their own, while most led humble lives in service. Whether they should be called slaves is debated: the Inca state had no money and no slave market, and yanakuna were not bought or sold.
 rise: The ruler, the nobles and the temples took people from their ayllus as yanakuna, and their children inherited the status; a trusted retainer of the ruler could be raised to office.
@@ -178,5 +178,5 @@ Silverblatt, I. (1987) Moon, Sun, and Witches: Gender Ideologies and Class in In
 
 == checked
 Inca Empire; Inca society; Sapa Inca; Panakas; Kuraka; Aclla; Ayllu; Mit'a; Mitma; Yanakuna; Religion in the Inca Empire; Villac Umu; Chalcuchima; Inca Garcilaso de la Vega; Population history of the Indigenous peoples of the Americas; Slavery among the indigenous peoples of the Americas
-MISSING: panaqa, mitma, yanakuna, coya, willaq umu, khipu, capacocha, hatun runa, Incas by privilege
+MISSING: coya, hatun runa, Incas by privilege
 NOTE: The picture of the encyclopedia entry "acllahuasi" is not an acllahuasi: it is Antonio de Herrera's engraved portrait of Lloque Yupanqui, labelled "Lloqui yupangui Terzero ynga" (Commons file Lloque.JPG), the third ruler of Cusco.

@@ -23,8 +23,8 @@ local: Huangdi
 share: 0
 sharenote: One man, with the imperial family.
 firm: yes
-terms: mandate-of-heaven, grand-secretariat
-people: hongwu-emperor, yongle-emperor, wanli-emperor
+terms: mandate-of-heaven, grand-secretariat, forbidden-city
+people: hongwu-emperor, yongle-emperor, wanli-emperor, jiajing-emperor
 picture: wanli-emperor
 text: The emperor stood on a social and legal tier above everyone else, embodying a heavenly mandate to judicial and executive authority. Under the Mandate of Heaven the right to rule rested on virtue, not birth: the Ming founder, the Hongwu Emperor, had been a penniless peasant and Buddhist monk. In 1380 he executed his chancellor, abolished the office and took charge of the Six Ministries himself. Later emperors worked through the Grand Secretariat. The Wanli Emperor (r. 1572–1620) began with able advisers, among them the Grand Secretary Zhang Juzheng, but grew tired of his quarrelling ministers and stayed behind the walls of the Forbidden City, where officials had to bribe powerful eunuchs to have their messages carried to him.
 rise: The throne passed within the founder's house, and the reigning emperor named his heir: the Hongwu Emperor chose his grandson. It could also be won by war, as the Yongle Emperor took it from his nephew in 1402, and lost by capture: when the Oirats seized the Zhengtong Emperor in 1449 his brother took the throne, and he won it back only by a coup in 1457.
@@ -40,8 +40,8 @@ local: Wang
 share: est 0.01-0.05
 sharenote: Estimate: the descendants of the founder made princes, with the consorts of imperial princesses and the ennobled relatives; the articles give no count.
 firm: yes
-terms:
-people:
+terms: imperial-clan-court
+people: zhu-zaiyu
 text: Descendants of the first Ming emperor were made princes and given military commands, usually nominal, annual stipends and large estates. Their title was "king" (wang), but unlike the princes of the Han and Jin dynasties they held no feudatories: they served no administrative function and took part in military affairs only under the first two emperors. The Yongle Emperor, himself once the Prince of Yan, disarmed his brothers and moved their fiefs away from the militarized northern border. The princes, the consorts of imperial princesses and ennobled relatives staffed the Imperial Clan Court, which kept the imperial genealogy. Some turned to learning: Zhu Zaiyu, a sixth-generation descendant of the Hongxi Emperor, discovered equal temperament in music.
 rise: Princely rank came by descent from the founder, and the emperor could take a prince's power away, as Yongle did his brothers'. Only near the end of the dynasty were some princes allowed to sit the examinations and serve as officials.
 you: You are a prince of the imperial house, with the title of king, a stipend and a great estate far from the northern border, but no say at all in the government.
@@ -56,8 +56,8 @@ local: Shidafu
 share: est 0.05-0.1
 sharenote: Estimate: Charles Hucker counted perhaps 100,000 lesser functionaries, who outnumbered the officials four to one, so roughly 25,000 officials; with their families perhaps 0.05–0.1 per cent of 160–200 million.
 firm: yes
-terms: scholar-officials, imperial-examination, jinshi, grand-secretariat, censorate
-people: wang-yangming
+terms: scholar-officials, imperial-examination, jinshi, grand-secretariat, censorate, hanlin-academy
+people: wang-yangming, zhang-juzheng, xu-guangqi
 picture: scholar-officials
 text: After 1384, when the founder stopped staffing his bureaus by recommendation only, the officials were recruited through the examinations. They were classed in nine grades, each of two degrees, with salaries nominally paid in piculs of rice. The Six Ministries, of Personnel, Revenue, Rites, War, Justice and Public Works, did the government's work, and the Grand Secretaries, drawn from the Hanlin Academy, coordinated them. Every three years senior officials graded their juniors, who were promoted, kept or demoted; the longest tenure in one office was nine years, and censors could impeach an official at any time. A district magistrate could not serve in his home district.
 rise: Office came through the examinations: provincial graduates began in low posts, while those who passed the palace examination became jinshi and were assured high positions. There were only two to four thousand jinshi at any time, "on the order of one out of 10,000 adult males", in Ebrey's words.
@@ -74,7 +74,7 @@ share: 0.03-0.06
 sharenote: About 70,000 eunuchs served the emperor at the end of the dynasty, and 100,000 at their height, among 160–200 million people.
 firm: no
 terms: eunuch
-people: zheng-he
+people: zheng-he, wei-zhongxian, liu-jin
 picture: -
 text: Eunuchs gained unprecedented power under the Ming. The Hongwu Emperor forbade them to read or to meddle in politics, but from Yongle's reign they ran huge imperial workshops, commanded armies, went as envoys and took part in appointing and promoting officials; the eunuch Zheng He led seven great voyages into the Indian Ocean. They had a bureaucracy of their own, parallel to the civil service, with ranks in four grades, and the Directorate of Ceremonial oversaw the secret police of the Eastern and Western Depots. In the 1590s the Wanli Emperor let them collect provincial taxes. Officials depicted them as greedy and cunning, and castration broke the Confucian duty to leave a male heir.
 rise: Many men castrated themselves for a place in the palace or in an official's household, for them the only way into a life of privilege; others were prisoners of war, tribute from neighbouring lands, or boys punished for their fathers' crimes. A few rose to rule the court, as Wang Zhen, Liu Jin and Wei Zhongxian did.
@@ -90,7 +90,7 @@ local: Shenshi
 share: est 0.2-0.5
 sharenote: Estimate: about 100,000 shengyuan, the lowest tier of graduates, by the 16th century, with the higher degree-holders and their families.
 firm: yes
-terms: gentry, imperial-examination, jinshi
+terms: gentry, imperial-examination, jinshi, eight-legged-essay, juren
 people:
 picture: jinshi
 text: Below the officials stood the gentry, landholding families whose men had earned examination degrees: by the 16th century some 100,000 shengyuan, "government students", the lowest tier of graduates, with the provincial and metropolitan graduates above them. The examinations tested the Confucian classics, above all the Four Books outlined by Zhu Xi, and from 1487 the intricate "eight-legged essay". Since only a select few could become officials, most of the gentry stayed at home as local leaders: they ran charities and private schools, helped settle minor disputes, supervised community projects, kept order, led Confucian ceremonies and helped collect taxes, and the magistrate depended on their advice. Some kept company with well-educated courtesans outside marriage.
@@ -158,7 +158,7 @@ local: Gong
 share: est 3-6
 sharenote: Estimate: the craftsmen of the towns, the workshops and the imperial kilns; the articles give no count.
 firm: no
-terms: porcelain
+terms: porcelain, jingdezhen
 people:
 picture: -
 text: Artisans came third in the four occupations, respected more than merchants in theory because they made useful things, though, often having no land of their own, they paid little to the state. Their skills were handed down orally from father to son. Some worked for the government: the Ministry of Public Works hired artisans and labourers for temporary service, and the imperial kilns at Jingdezhen made the famous blue and white porcelain, while the Dehua factories in Fujian made export porcelain for European tastes by the late 16th century. In late Ming workshops in textiles, paper and other industries, small teams worked for wages under a master craftsman. Artisans formed guilds of their own.
@@ -239,4 +239,4 @@ NOTE: The gentry entry (lower-case "gentry" links it) describes the Ming gentry,
 NOTE: The intro's "Soldiers, monks, eunuchs, servants and slaves fell outside the four" rests on the Four occupations article's "Unclassified occupations" section (soldiers, clergy, eunuchs, domestic servants and slaves), which it states for imperial China in general.
 NOTE: The order of the ranks below the gentry is not agreed: the articles set the clerks, soldiers and clergy outside the four occupations, not above or below them, so they share a level and are not firm.
 NOTE: The intro's "silver from the Americas ran through the economy" paraphrases "a massive influx of South American silver ... re-monetized the Ming economy".
-MISSING: Forbidden City, Zhang Juzheng, Jiajing Emperor, Wei Zhongxian, Liu Jin, Wang Zhen (eunuch), Eastern Depot, Embroidered Uniform Guard, Six Ministries, Hanlin Academy, eight-legged essay, shengyuan, juren, lesser functionaries, Imperial Clan Court, Zhu Zaiyu, Matteo Ricci, Xu Guangqi, Jingdezhen, He Chaozong, huiguan and gongsuo, jianmin and liangmin, geji (courtesans), Wang Gen, Li Zhi, Huai'en, Qiu Jun
+MISSING: Wang Zhen (eunuch), Six Ministries, shengyuan, lesser functionaries, huiguan and gongsuo, jianmin and liangmin, Wang Gen, Li Zhi, Huai'en, Qiu Jun

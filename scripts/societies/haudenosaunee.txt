@@ -74,7 +74,7 @@ local: -
 share: est 0.5-2
 sharenote: Estimate: faithkeepers were part-time specialists, men and women; with the healers and the leaders of the medicine societies, perhaps one or two people in a hundred.
 firm: no
-terms:
+terms: false-face-society
 people:
 picture: -
 text: Faithkeepers are part-time specialists who conduct the religious ceremonies. Both men and women are appointed by the elders, and some personal names are reserved for faithkeepers, as for chiefs. The ceremonies follow the farming year, from the Maple and Planting festivals to the Strawberry, Green Corn and Harvest festivals and Midwinter, the New Year; in the 17th century Europeans counted seventeen festivals. Male and female healers knew the use of herbs, dressed wounds, set broken bones and performed surgery, and fortune-tellers sought the spiritual causes of illness. The medicine societies, brotherhoods entered by formal initiation, held curing rites: in the best known, the False Face Society, masked dancers sought to frighten away the spirits believed to cause illness.
@@ -108,7 +108,7 @@ local: -
 share: rest
 sharenote: Everyone not counted in the other tiers: the women, children and older men of the clans. The other ranks are estimates, so this share is one too.
 firm: yes
-terms:
+terms: mohawk-people, seneca-people, oneida-people, onondaga-people
 people: kateri-tekakwitha
 picture: kateri-tekakwitha
 text: Most people lived in palisaded villages that Europeans called castles, one to four for each nation at a time, moved every five to twenty years as soil and firewood ran out. Between two and twenty families shared a longhouse of elm bark, with fires down the middle. Clans of about 50 to 200 people were grouped into two halves (moieties), and marrying within one's own clan was incest. Farming was women's work: they planted, harvested and cooked the corn, beans and squash called the Three Sisters, and gathered with the children, while men hunted deer and went to war. No one owned land; women were held to be its stewards. Some became Christians, among them the Mohawk-Algonquin Kateri Tekakwitha.
@@ -126,7 +126,7 @@ share: est 15-30
 sharenote: Estimate: in 1658 the Jesuits noted more adopted foreigners than natives, and in 1668 two-thirds of an Oneida village were assimilated Algonquians and Hurons; many adoptees in time became full members of their clans, so the share of those still in lesser places is put lower.
 firm: yes
 terms:
-people:
+people: pierre-esprit-radisson
 picture: -
 text: The mourning wars brought captives into the villages to replace the dead. All captives were stripped, tied to poles and burned, and some had fingernails pulled out; then the families decided for each whether to adopt or kill. Women and children were adopted more often than older men. Adoptees were renamed and expected to reject their former lives; those who made a sincere effort were embraced and could take the place of the person they replaced, though many were adopted to fill lesser places and did chores for their families. Those who did not were swiftly executed, and runaways were punished: the recaptured French teenager Pierre-Esprit Radisson had his fingernails pulled out.
 rise: Capture and adoption brought people here; an adoptee who lived up to the dead person's place could rise with it, and in time many became full members, while one who resisted or fled could be killed.
@@ -171,4 +171,4 @@ NOTE: The articles give no Haudenosaunee word for clan mother, pine tree chief, 
 NOTE: Molly Brant is listed among the clan mothers because her entry calls her "a respected clan matron"; the articles say only that her patronage made her brother Joseph a war chief. Drop her from the people line if that is not enough.
 NOTE: The Clan Mother article is only a disambiguation page; the clan mothers' tier rests on the Haudenosaunee article's "Women in society" and "Government" sections and on Tooker as quoted there.
 NOTE: Shares overlap less than the ranks do: warriors are the men of fighting age born into the clans (Lescarbot's one in five), the adopted are counted apart, and the people of the longhouse are the rest.
-MISSING: clan mother, Jigonhsasee, Teganissorens, Pierre-Esprit Radisson, Peter Hendricks, False Face Society, Three Sisters (agriculture), Sullivan Expedition, mourning war, Mohawk people, Seneca people, Oneida people, Onondaga people, Erie people, Susquehannock, Neutral Nation
+MISSING: clan mother, Peter Hendricks, Three Sisters (agriculture), mourning war

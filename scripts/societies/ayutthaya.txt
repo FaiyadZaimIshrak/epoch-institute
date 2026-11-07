@@ -23,7 +23,7 @@ share: 0
 sharenote: One king, with his wives, who usually numbered in the dozens, and their children.
 firm: yes
 terms: devaraja, bodhisattva, wat-phra-si-sanphet
-people: ekathotsarot, prasat-thong, narai, phetracha
+people: ekathotsarot, prasat-thong, narai, phetracha, songtham
 picture: phetracha
 text: From the 17th century the king of Ayutthaya was an absolute monarch with a semi-religious standing. Hindu tradition cast him as an incarnation of Vishnu, Indra or Shiva; Buddhist thought made him a righteous ruler and a bodhisattva, whose duty was to build temples and Buddha images. His subjects called him Phra Chao Phaendin, "Lord of the Land", and court etiquette required a royal language, Rachasap, for speaking to him or of him. In theory he commanded all manpower and so owned all land; since Naresuan every phrai was bound to him directly. He appointed ministers and governors, sat at times as the highest judge over traitors and rebels, and held a virtual monopoly of the kingdom's income. François-Timoléon de Choisy wrote in 1685 that "the king has absolute power".
 rise: No settled law fixed the succession. The king often named a preferred successor as uparaja, but any man of the royal clan could claim the throne by defeating his rivals: in the 17th century, as one study puts it, "the method of royal succession at Ayutthaya … was battle". Officials took it too: the Kalahom Prasat Thong in 1629, and Phetracha, Narai's elephant commander, in 1688.
@@ -39,8 +39,9 @@ local: -
 share: est 0.01-0.05
 sharenote: Estimate: the king's sons and brothers and their households, some hundreds to a few thousand people, kept in the capital since Naresuan's reign.
 firm: yes
-terms:
+terms: three-seals-law, uparaja
 people:
+picture: -
 text: The king's kin stood above every official. The highest of them was the uparaja, an office created by Borommatrailokkanat and usually held by the king's senior son or full brother; the Three Seals Law gave the Maha Uparat a sakdina of 100,000, ten times a chief minister's. Meant to settle the succession in a polygamous dynasty, the office bred rivalry between king and heir. The chronicles distinguish legitimate sons from the sons of concubines: Songtham, a son by a first-class concubine, became king only after both legitimate sons of Ekathotsarot had died. After Naresuan no princes governed provinces. They were kept in the capital, and their struggles for power went on there, under the king's eye.
 rise: Princes were born to the rank. Thai tradition favoured brothers over sons, but nearly every succession was contested, and the losers often died: Prince Sisin, the late king's brother, was captured and executed in 1628, and King Chai was deposed and executed by his uncle in 1656.
 you: You are a son of the king by one of his many wives and must live in the capital under his eye; if you are named uparaja you may reign one day, should you outlast your brothers and uncles.
@@ -55,7 +56,7 @@ local: Mun nai
 share: est 0.3-1
 sharenote: Estimate: a service nobility of a few thousand men, with their families, among 1.5–3 million people.
 firm: yes
-terms: kalahom, mahatthai
+terms: kalahom, mahatthai, sakdina
 people: constantine-phaulkon, kosa-pan
 picture: kosa-pan
 text: A service nobility of a few thousand men governed the kingdom. Each held a title and a sakdina, up to 10,000 for a chief minister, and his allotment answered to the number of phrai he commanded. Two prime ministers headed the court: the Samuha Nayok for civil affairs, over the four ministries, and the Samuha Kalahom over the armed forces. The king appointed the governors of the cities, each watched by an inspector, the yokkrabat. Officials were rewarded with rice fields, not salaries. As mun nai, lords, they raised their own phrai for war and royal works, which made them powerful in politics. Ministries and governorships, with their sakdina, usually passed within a few families, often tied to the king by marriage.
@@ -72,7 +73,7 @@ local: Sangha
 share: est 1-2
 sharenote: Estimate: no count survives; the sangha was open to men of every class, and phrai entered it to escape labour service; monks are counted without families, and the court Brahmins were a small group.
 firm: no
-terms: theravada-buddhism, brahmins
+terms: theravada-buddhism, brahmins, sangha
 people:
 picture: -
 text: Theravada Buddhism was the kingdom's main religion, and its monastic community, the sangha, stood partly outside the sakdina order, for men of every class could join it. The Three Seals Law gave a learned monk a sakdina of 600, thirty times a commoner's. Building temples was one of a king's chief duties: Songtham raised a great temple at Wat Phra Phutthabat, and Borommakot, celebrated as a pious king, sent two Siamese monks to reform Buddhism in Sri Lanka in 1753. The court Brahmins conducted the coronation and the rites of divine kingship, for many elements of the political order came from Hindu scripture. The Buddhist clergy resented the favour Narai showed to French interests and the Catholic missionaries.
@@ -89,7 +90,7 @@ local: -
 share: est 0.5-2
 sharenote: Estimate: the Chinese of the capital possibly tripled from 1680 to 1767, when they reached 30,000; the Japanese quarter held about 1,500 people (some estimates say 7,000); Persians, Malays, Chams, Dutch and Portuguese lived there too.
 firm: no
-terms: mercenary
+terms: mercenary, japanese-village-ayutthaya
 people: yamada-nagamasa
 picture: yamada-nagamasa
 text: Ayutthaya was a great port, and its foreign communities had a place of their own. The Chinese were not obliged to register for labour service and could move about the kingdom and trade at will; by the 16th century they controlled its internal trade and held important posts in civil and military service. The Japanese quarter, Ban Yipun, under a chief the Thai authorities appointed, held traders, Christians fleeing persecution and former samurai. Persian, Malay, Cham, Makassar, Dutch and Portuguese communities lived and traded there too. The kings hired foreign mercenaries, and foreigners, lacking ties within the kingdom, often rose high at court: Yamada Nagamasa's Japanese served as King Songtham's royal guard.
@@ -145,6 +146,6 @@ Marcinkowski, M. I. (2005) From Isfahan to Ayutthaya: Contacts between Iran and 
 
 == checked
 Ayutthaya Kingdom; Sakdina; Slavery in Thailand
-MISSING: sakdina (rank system), phrai, that (Siamese slave status), Three Seals Law, uparaja, sangha, Songtham, Ramathibodi II, Simon de la Loubère, François-Timoléon de Choisy, Ban Yipun (Japanese quarter), Samuha Nayok
+MISSING: phrai, that (Siamese slave status), Samuha Nayok
 NOTE: the population is an estimate with no figure in the sources; please supply a scholar's figure if one is known.
 NOTE: the commoner's sakdina is 20 in the Sakdina article (Three Seals Law) but 25 in the Ayutthaya Kingdom article; the ladder uses 20.

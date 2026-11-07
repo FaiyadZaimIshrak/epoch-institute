@@ -23,8 +23,8 @@ local: Devaraja
 share: 0
 sharenote: One king, with the wives and concubines who rode behind him in procession under more than a hundred gold-flecked parasols.
 firm: yes
-terms: devaraja, angkor-wat, bayon
-people: jayavarman-vii
+terms: devaraja, angkor-wat, bayon, chakravarti-sanskrit-term, lingam
+people: jayavarman-vii, jayavarman-viii, indravarman-iii
 picture: jayavarman-vii
 text: Since Jayavarman II proclaimed himself chakravartin, "universal ruler", and devaraja, "god-king", in 802, Khmer kings were held to have the divine quality of living gods, incarnations of Shiva or Vishnu. At the heart of a royal city stood a temple-mountain whose central lingam bore the king's own name. Jayavarman VII, a Mahayana Buddhist, represented himself instead as the bodhisattva Avalokiteshvara in the face towers of the Bayon. The king and his officials ran the canals and reservoirs on which the harvests depended, and kings led large armies against Champa and Dai Viet. Zhou Daguan saw the king ride out standing on an elephant whose tusks were encased in gold, holding his sacred sword.
 rise: No settled rule governed the succession: of the 27 rulers of Kambuja, eleven lacked a legitimate claim to power. Suryavarman I took the throne by seizing Angkor, Jayavarman VII by retaking it from the Cham, and in 1295 Jayavarman VIII was deposed by his son-in-law Srindravarman.
@@ -57,7 +57,7 @@ local: -
 share: est 0.1-0.5
 sharenote: Estimate: no count survives; a priestly class whose Hindu rites were held mostly among the king's family, the nobles and the ruling class, small beside the farming majority.
 firm: no
-terms: brahmins, shaivism, vaishnavism
+terms: brahmins, shaivism, vaishnavism, pre-rup
 people:
 picture: -
 text: Hinduism was the state religion for most of the empire's history, and its ceremonies and rituals were performed by Brahmins, usually only among the king's family, the nobles and the ruling class. The rite by which Jayavarman II made himself god-king in 802 was taken from the Hindu tradition, and the royal cult was housed in temples to Shiva and Vishnu, from Pre Rup to Angkor Wat. Zhou Daguan had little to say about the Brahmans, except that they were often employed as high officials. Beside them he saw a third group, whom he called by a Chinese name and who appear to have been Shaivites: the only image they revered, he wrote, was a block of stone.
@@ -74,7 +74,7 @@ local: -
 share: est 0.5-2
 sharenote: Estimate: no count survives; by 1296 Theravada Buddhism was the dominant religion and its monks a common sight, but how many there were is not known.
 firm: no
-terms: theravada-buddhism, mahayana-buddhism
+terms: theravada-buddhism, mahayana-buddhism, avalokitesvara
 people:
 picture: -
 text: For most of the Angkor period Buddhism came after Hinduism in popularity, though kings built Buddhist temples and monasteries beside their Hindu shrines, and Jayavarman VII founded Ta Prohm for his mother and Preah Khan for his father. During the 13th century Theravada Buddhism, which had come from Sri Lanka by way of the kingdoms of Dvaravati and Haripunchai, spread even among the lower classes. When Zhou Daguan arrived in 1296 it was the dominant religion: its monks had shaven heads and wore yellow robes, and its temples impressed him with their simplicity, their Buddha images made of gilded plaster. Srindravarman, who took the throne in 1295, was a follower of Theravada Buddhism.
@@ -108,7 +108,7 @@ local: -
 share: rest
 sharenote: Everyone not counted in the other ranks: the large majority of the people. The empire's population and several other ranks are estimates, so this share is one too.
 firm: yes
-terms:
+terms: baray, prahok
 people:
 picture: -
 text: Rice farmers and fishermen formed the large majority. They planted rice by the banks of the lake and rivers, in the irrigated plains around their villages, or in the hills when the lowlands flooded, and canals and great reservoirs, the barays, watered their fields. Orchards gave palm sugar, coconuts, fruit and vegetables. Fish was the main source of protein, often made into prahok, a fish paste; pigs, cattle and poultry were kept beneath houses of woven bamboo raised on stilts against the floods. Zhou Daguan saw peasant men and women go barefoot with bare chests, wearing only a cloth around the waist. The reliefs of the Bayon show them fishing, butchering, playing a chess-like game and gambling on cockfights.
@@ -125,7 +125,7 @@ local: -
 share: est 1-3
 sharenote: Estimate: an inscription at Ta Prohm counts 12,640 people serving that one temple, and the Angkor area holds over a thousand temples; how many served temples full time across the empire is not known.
 firm: no
-terms: ta-prohm
+terms: ta-prohm, preah-khan, banteay-kdei, neak-pean
 people:
 picture: ta-prohm
 text: Only the gods had a right to houses of stone, so the temples were the empire's great buildings, and they needed a great workforce. A stone carving at Ta Prohm, the monastery Jayavarman VII founded for his mother, states that 12,640 people serviced that single temple complex, and one estimate puts at some 300,000 the agricultural workers needed to feed the temples' servants. Most surviving stone inscriptions record the religious foundations of kings and other potentates, so the temples' people are known mostly as numbers. In the reign of Jayavarman VII alone Ta Prohm, Preah Khan, Banteay Kdei and Neak Pean were built, beside the Bayon at the centre of Angkor Thom.
@@ -166,7 +166,6 @@ Zhou Daguan (2007) The Customs of Cambodia. The Siam Society.
 
 == checked
 Khmer Empire; Angkor; Zhou Daguan
-MISSING: Jayavarman VIII (Shaivite king, r. 1243–1295), Srindravarman (Indravarman III, r. 1295–1309), Indravarman II (r. 1219–1243), chakravartin, lingam, baray, Preah Khan, Banteay Kdei, Neak Pean, Pre Rup, Avalokiteshvara, prahok, sampot
 NOTE: the slaves' rank is thin: the articles say only that slaves were the lowest class and that Zhou wrote about slavery. The editor may wish to add what The Customs of Cambodia itself records, from a source the editor can check.
 NOTE: the year is 1240, the middle of 1181–1297; the brief asked for "c. 1200", and the period runs from Jayavarman VII to Zhou Daguan's visit so that both fit.
 NOTE: Zhou Daguan's king is Indravarman III in the Zhou Daguan and Angkor articles and Srindravarman (r. 1295–1309) in the Khmer Empire article; the ladder calls him Srindravarman, as the article giving his dates does.

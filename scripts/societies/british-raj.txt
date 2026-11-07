@@ -23,7 +23,7 @@ local: Viceroy
 share: 0
 sharenote: One man, appointed by the Crown, typically for five years; the monarch, proclaimed Empress or Emperor of India, remained in Britain.
 firm: yes
-terms: viceroy-of-india, delhi-durbar
+terms: viceroy-of-india, delhi-durbar, secretary-of-state-for-india
 people: george-curzon, louis-mountbatten
 picture: george-curzon
 text: After 1858 the governor-general of India was more commonly called the viceroy, from his second role as the Crown's representative to the princely states. Appointed by the Crown, he headed the Government of India from Calcutta with an Executive Council whose members each ran a department, and he answered to the Secretary of State for India in London and through him to Parliament. Laws made in India needed the Secretary of State's assent, which led Sir Charles Wood to call the Government of India "a despotism controlled from home". Lord Curzon (1899–1905) reformed everything from irrigation and the police to the universities and in 1905 divided Bengal. In 1911 a move of the capital to Delhi was announced.
@@ -57,7 +57,7 @@ local: -
 share: est 0.01-0.05
 sharenote: Estimate: the ruling houses of nearly 600 states (565 were recognised in 1947) with their families; the Imperial Gazetteer counted some 2,000 ruling chiefs with the title raja or maharaja.
 firm: no
-terms: princely-state, maharaja, nizam-of-hyderabad
+terms: princely-state, maharaja, nizam-of-hyderabad, mayo-college, aitchison-college, doctrine-of-lapse
 people: sayajirao-gaekwad-iii, bhupinder-singh-of-patiala, tukoji-rao-holkar-iii
 picture: sayajirao-gaekwad-iii
 text: Nearly 600 princely states, covering 40 per cent of the land and 23 per cent of its people in 1947, were ruled by Indian princes under British paramountcy. By treaty Britain controlled their external affairs, defence and most communications, and a British resident or agent watched over them; the princes could not deal with foreign states or fight one another, and their armies served for ceremony and policing. The British translated every title, maharaja, nawab or nizam, as "prince", so that no ruler seemed a king equal to the British monarch, and ranked the rulers by gun salutes, from 3 guns to 21. Many states were tiny: some two hundred covered less than 25 square kilometres.
@@ -74,7 +74,7 @@ local: Zamindar
 share: est 1-2
 sharenote: Estimate: the zamindars, great and small, with their families; the articles give no count. The Imperial Gazetteer reckoned some 2,000 ruling chiefs with royal titles and ten times as many holders of lesser noble titles, and the princely states held thousands of zamindari estates and jagirs besides.
 firm: yes
-terms: zamindar, jagir, rajputs, bhumihar, kayastha
+terms: zamindar, jagir, rajputs, bhumihar, kayastha, permanent-settlement
 people: rabindranath-tagore
 picture: zamindar
 text: The zamindars held the great estates of the north and east. Under the Mughals zamindars had not owned the land, only the right to collect its revenue, but in 1793 the Permanent Settlement made the zamindars of Bengal, Bihar and Orissa proprietors of their land in return for a fixed annual rent. If a zamindar could not pay by sunset, parts of his estate were auctioned, which created a new class of zamindars. After 1857 their armies were abolished, save a few forces for policing. Most of the great zamindars were of the Hindu high castes, Brahmin, Rajput, Bhumihar or Kayastha, and the British gave loyal ones titles such as Raja, Rai Bahadur, Nawab or Khan Bahadur.
@@ -91,7 +91,7 @@ local: Brahmin
 share: est 4-7
 sharenote: Estimate: the articles give no count for the period; at the present day the forward castes, of whom the Brahmins are one, are estimated at 26 per cent of India's Hindus.
 firm: no
-terms: brahmins, varna, kshatriya, shudra
+terms: brahmins, varna, kshatriya, shudra, sanskritisation
 people:
 picture: brahmins
 text: The varna scheme of the ancient texts placed the Brahmins, the priests, at the head of four orders, above the Kshatriyas (rulers and warriors), the Vaishyas (traders) and the Shudras (labourers), with Dalits and Adivasis outside. Scholars of the Vedas call it "a social ideal rather than a social reality", but colonial rule made caste central to administration. Under East India Company rule, Brahmins became the authorities on Hindu law; the census from 1881 ranked thousands of jatis by supposed purity; and between 1860 and 1920 the Raj gave administrative jobs and senior appointments only to the upper castes. After 1857 the Brahmin and Muslim units of the United Provinces, the core of the rebellion, were disbanded.
@@ -108,7 +108,7 @@ local: -
 share: est 0.5-1
 sharenote: Estimate: some 60,000 Indians had matriculated by 1890, and in 1911 the colleges enrolled 36,000 students; with the clerks, teachers and lawyers of the towns and their families, perhaps one person in a hundred or two hundred.
 firm: no
-terms: indian-national-congress
+terms: indian-national-congress, ilbert-bill, servants-of-india-society
 people: bal-gangadhar-tilak, mahatma-gandhi, muhammad-ali-jinnah
 picture: bal-gangadhar-tilak
 text: By 1880 a new middle class had arisen across the country. The universities of Calcutta, Bombay and Madras opened in 1857, and by 1890 some 60,000 Indians had matriculated, chiefly in arts or law; a third entered public administration and another third became lawyers. In 1887 Hindus and Muslims held 52 per cent of 21,000 mid-level civil service posts, but almost none of the thousand at the top. Racial discrimination angered them, and the partial reversal in 1883 of the Ilbert Bill, which would have put Indian judges in Bengal on an equal footing with British ones, turned discontent into politics: in December 1885 seventy of them, many familiar with British political thought, founded the Indian National Congress.
@@ -126,7 +126,7 @@ share: est 2-4
 sharenote: Estimate: the articles give no count; taken here at about the share estimated for the merchants and bankers of Mughal India.
 firm: no
 terms: vaishya, tata-steel, jamshedpur
-people:
+people: jamsetji-tata
 picture: -
 text: In the varna scheme trade belonged to the Vaishyas. As railways carried cotton and grain to the ports for export, many small farmers dependent on faraway markets lost their land, animals and equipment to moneylenders. Indians also built industry: in 1877 Jamsetji Tata began a spinning and weaving company in Bombay whose finer yarn, spun from Egyptian cotton on American ring spindles, could compete with British imports, and in 1908 his son's Tata Iron and Steel Company began a steelworks at Jamshedpur, its surplus steel promised a buyer in the Raj. Yet the government's Stores Policy shut most Indian firms out of railway contracts. Most big businessmen were nationalists who distrusted the Congress as too socialist.
 rise: Wealth could buy land, but in the north-west the Land Alienation Act of 1900 listed the castes that could own land and barred its transfer to non-agricultural castes. The reforms of 1909 favoured rich landowners and businessmen, and those of 1919 reserved seats for businessmen.
@@ -142,7 +142,7 @@ local: Ryot
 share: rest
 sharenote: Everyone else: the peasants who tilled the land, with their families, the great majority of the people. The other shares are estimates, so this one is too.
 firm: yes
-terms: ryot, famine
+terms: ryot, famine, ryotwari, kurmi, ahir
 people:
 picture: -
 text: Most Indians were peasants, the ryots, living at subsistence level. The Raj's finances rested on the land tax, collected through the zamindars in the north and, in the south, under the ryotwari system, from cultivators the government treated as landowners. Taxpayers, chiefly farmers and farm labourers, also bore the railways' £50 million of risk. Many small farmers lost their land to moneylenders, and great famines struck: the Great Famine of 1876–1878 killed 6.1 to 10.39 million people while, as Mike Davis notes, wheat exports to Britain went on unchecked, and the famine of 1899–1900 between 1.25 and 10 million. From 1880 the Famine Codes set out relief; in the newly irrigated Punjab a more prosperous peasantry grew.
@@ -176,7 +176,7 @@ local: -
 share: est 12-18
 sharenote: Estimate: the articles give no count for the period; in 2001 the Scheduled Castes, the communities once treated as untouchable, were 16.2 per cent of India's population.
 firm: yes
-terms: scheduled-castes, caste, jati
+terms: scheduled-castes, caste, jati, communal-award, poona-pact, dalit, chamar
 people: b-r-ambedkar
 picture: b-r-ambedkar
 text: Outside the four varnas stood the communities treated as untouchable, the Dalits. Caste rules held them apart: the dominant caste lived at the centre of a village and others on its edges, there were minute rules on the food and drink the upper castes would accept from lower castes, and a caste considered impure might not draw water from a well used by others. By the late 19th century the Criminal Tribes Act reached most untouchable castes, such as the Chamars. Jyotirao Phule rejected every claim that caste was natural or ordained by the Creator, and Gokhale's Servants of India Society worked among them. From the 1920s the government reserved a share of its jobs for the lower castes.
@@ -193,7 +193,7 @@ local: -
 share: est 0.5-2
 sharenote: Estimate: the articles give no count; hundreds of communities came under the Criminal Tribes Act, 237 castes and tribes in the Madras Presidency alone by 1931.
 firm: no
-terms: jats, gurjars, maravar
+terms: jats, gurjars, maravar, criminal-tribes-act
 people:
 picture: -
 text: The Criminal Tribes Act of 1871 declared that all who belonged to certain castes were born with criminal tendencies. It first covered castes such as the Ahirs, Gurjars and Jats, and by the late 19th century its enforcement reached most Shudras and untouchables, Sannyasis and hill tribes. Castes suspected of rebellion, such as the Kallars and Maravars of the south, once ruling families, were called "predatory and barbarian", some with no record of crime, only forefathers who had risen against the Mughals or the British. Registered members were restricted in where they could go and with whom they could mix; in some regions whole caste groups were arrested, their children taken from them, and held in penal colonies without conviction.
@@ -210,7 +210,7 @@ local: -
 share: est 0.03-0.08
 sharenote: Estimate: they lived overseas, outside India's population; 525,482 Indians emigrated to British and French colonies between 1842 and 1870, some 19,000 a year on five-year contracts, so perhaps 100,000 were under indenture at any one time, about 0.04 per cent of India's people. More than 1.6 million went in all.
 firm: no
-terms: sugar-plantation
+terms: sugar-plantation, indian-indenture-system
 people:
 picture: -
 text: From 1834, when the ship Atlas carried 36 labourers from Calcutta to Mauritius, more than 1.6 million Indians were shipped to European colonies whose planters wanted cheap labour after slavery was abolished, from Trinidad to Fiji. Officials called it "free" migration, but many recruits were deceived, coerced or kidnapped. A labourer bound himself for five years: under the agreement of 1912 he worked nine hours a day, five days a week, and five on Saturdays, cutting cane and digging channels, for a shilling a day, a woman for nine pence. In British Guiana absence from work was a crime punishable by prison, and overseers flogged and beat. Historians such as Hugh Tinker call it "a new form of slavery".
@@ -239,4 +239,4 @@ British Raj; Caste system in India; Indian indenture system; Indian Civil Servic
 NOTE: the saved file british-raj--indentured-servitude.txt holds the "Indian indenture system" article.
 NOTE: the British Raj article puts the "first census" in 1881 but also cites a census of 1861; both are quoted as it gives them.
 NOTE: the indentured labourers lived overseas; their share is of India's population and rests on the writer's arithmetic from the 1842–1870 total.
-MISSING: Indian indenture system (girmit), Criminal Tribes Act, Permanent Settlement, ryotwari, Dalits, Depressed Classes, Sanskritisation, Communal Award, Poona Pact, Ilbert Bill, Servants of India Society, Gopal Krishna Gokhale, Jyotirao Phule, Pandita Ramabai, Jamsetji Tata, Mayo College, Aitchison College, doctrine of lapse, Secretary of State for India, Charles Wood, Ahirs, Kurmis, Chamars, Kallars (the Tamil caste: the entry "kallar" is a namesake, a 9th-century minister, so it is in nolink), Sannyasis, Hugh Tinker, Lee Commission
+MISSING: Depressed Classes, Charles Wood, Kallars (the Tamil caste: the entry "kallar" is a namesake, a 9th-century minister, so it is in nolink), Sannyasis, Lee Commission

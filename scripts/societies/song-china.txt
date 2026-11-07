@@ -40,7 +40,7 @@ share: est 0.02-0.05
 sharenote: Estimate: the emperor's kin grew more numerous with every generation, some tens of thousands by the 12th century.
 firm: no
 terms:
-people:
+people: zhao-tingmei
 text: The descendants of the founder Taizu, of his brother and successor Taizong and of their younger brother Zhao Tingmei formed the imperial clan, the most honoured family in the empire after the emperor's own. Earlier dynasties had seen princes seize thrones and fight civil wars, and the Song gave its princes titles, residences in Kaifeng and stipends, but no posts of substance: the clan was kept from power. As it grew, the cost of supporting it rose, and Emperor Shenzong's reforms of the late 1060s cut off the distant kin from titles and stipends while allowing them to sit the examinations and marry more freely. In the Southern Song clansmen took the examinations and served as officials like other scholars, and many settled in Fujian, at Fuzhou and Quanzhou. Clanswomen married into official and even merchant families: between 1086 and 1093 one married a man from the foreign quarter of Guangzhou, and the Pu, a family of foreign merchants, sought marriages with the clan.
 rise: Birth alone made a clan member. The distant kin cut off by Shenzong's reforms had to make their way like other gentry, by study, office or land.
 you: You are a kinsman of the emperor, honoured with a title and kept on a state stipend, but barred from any post that carries real power.
@@ -56,7 +56,7 @@ share: 0.1-0.2
 sharenote: About 20,000 officials in the 11th century (18,700 posts in 1046, and 38,870 by 1213); with their families roughly 0.1–0.2 per cent of some 90–100 million people.
 firm: yes
 terms: scholar-officials, imperial-examination, jinshi
-people: wang-anshi, shen-kuo, zhu-xi
+people: wang-anshi, shen-kuo, zhu-xi, wen-yanbo-song-dynasty
 text: The scholar-officials (shidafu) governed the empire, and their households formed the privileged "official households" (guanhu), largely spared labour service. Office came above all through the civil service examinations, which took years of costly study and were held every three years at the prefectural, metropolitan and palace levels; papers were anonymous and recopied by clerks so that examiners could not recognise a candidate's hand. Active holders of the highest degree, the jinshi, numbered 5,000 to 10,000 and filled 7,085 of the 18,700 posts in 1046. Sons and kinsmen of high officials could still enter office by "protection" (yin) without examination, but the examinations were the main road to the higher posts. Officials were ranked in grades marked by the colour of their silk robes; they began their careers in counties outside their home prefecture and served three or four years in each post. In the late 11th century they split into factions over Wang Anshi's New Policies, and the losers were sent to govern malarial regions of the south.
 rise: Most entered through the examinations: in the lists of 1148 and 1256 about 57 per cent of the graduates had no father, grandfather or great-grandfather in office, though most had other relatives in the bureaucracy. Demotion and exile awaited those on the losing side of a faction.
 you: You have passed the examinations after years of study and govern a county outside your home prefecture, in the robe of your grade; one wrong step in the quarrels at court could send you to the malarial south.
@@ -119,7 +119,7 @@ local: Gong
 share: est 4-8
 sharenote: Estimate: the historian Xie Qia estimates that over 100,000 households worked in textile production alone, and about 12 per cent of the people lived in towns.
 firm: no
-terms: movable-type, porcelain
+terms: movable-type, porcelain, dream-pool-essays
 people: bi-sheng
 picture: porcelain
 text: Artisans ranked third in the Confucian scheme, below farmers but above merchants: scholar-officials saw them as essential producers rather than parasites. They made the porcelain, silks, iron tools, waterwheels and chain pumps, ships and printed books of the Song economy. Many worked in their own shops, organised by trade in guilds through which the state requisitioned goods and assessed taxes; others worked in state workshops and mines, or in private works such as the iron foundries of Hancheng, where some 700 smelting households hired local labourers. Skills passed from father to son by word of mouth, though the official Li Jie's building manual, sponsored by Emperor Huizong, was printed for literate craftsmen across the empire. Around 1040 the artisan Bi Sheng invented printing with movable clay type, as the scholar Shen Kuo recorded in his Dream Pool Essays. Skill could bring prosperity, but artisans could not sit for the jinshi examination.
@@ -154,7 +154,7 @@ share: 0.9-1.1
 sharenote: About a million soldiers at the army's height, and fewer than 900,000 after Emperor Shenzong's cuts, in a population of some 90–100 million: roughly 1 per cent, counting the men alone.
 firm: no
 terms: xiang-jun, bureau-of-military-affairs
-people: yue-fei, han-shizhong
+people: yue-fei, han-shizhong, di-qing
 text: The Song kept a huge standing army, about a million men at its height, and in the 1060s defence consumed some 83 per cent of the state's cash income. Soldiers were professionals, recruited for pay from poor peasants, debtors fleeing their creditors, amnestied bandits and vagrants, and many were tattooed, often on the face, as convicts also were. They stood outside the four occupations and were held in low esteem: a proverb said that "good iron isn't used for nails; good men aren't used as soldiers". Mindful of the 10th-century generals who had made and unmade dynasties, the Song placed the army under civil officials: civilians headed the Bureau of Military Affairs and commanded on the front line, commanders were moved after each campaign, and successful generals were distrusted, as Yue Fei, executed in 1142, discovered. Ordinary soldiers drew small pay and were often set to menial labour, while in the early 12th century corrupt generals kept for themselves the funds drawn for the troops on their rolls.
 rise: For a man without education the army was the quickest road up. Di Qing, born to a poor family and tattooed on the face, rose to the Bureau of Military Affairs, and Yue Fei rose from the ranks to command the armies that fought the Jin.
 you: You enlisted for pay, perhaps to escape a debt, and bear a tattoo, as convicts do; civil officials command you and look down on you, and your pay is small.
@@ -194,4 +194,4 @@ Twitchett, D. and Smith, P. J. (eds) (2009) The Cambridge History of China, Volu
 == checked
 Song dynasty; Society of the Song dynasty; Economy of the Song dynasty; Economic history of China before 1912; Imperial examination; Scholar-official; Four occupations; Slavery in China; New Policies (Song dynasty); Wang Anshi; Emperor Shenzong of Song; Di Qing; Fan Zhongyan; Ouyang Xiu; Li Qingzhao
 NOTE: The xiang-jun entry calls the xiangjun "the professional standing army of the Song Dynasty" with "over one million men under arms at its peak". In standard accounts the main standing army was the Imperial Army (jinjun); the xiangjun were prefectural troops used largely for labour, and the figure of about a million covers the whole army.
-MISSING: imperial clan (zongshi), Zhao Tingmei, Emperor Xiaozong, Emperor Zhezong, Grand Empress Dowager Gao, Wen Yanbo, official households (guanhu), yin (protection) privilege, main and guest households (zhuhu, kehu), tenant farming (dianhu), Fan Zhongyan, Ouyang Xiu, Di Qing, Li Jie, Dream Pool Essays, Cheng Yi, Li Qingzhao, Pu Yali, jinjun
+MISSING: imperial clan (zongshi), Emperor Xiaozong, Grand Empress Dowager Gao, official households (guanhu), yin (protection) privilege, main and guest households (zhuhu, kehu), tenant farming (dianhu), Li Jie, Pu Yali, jinjun

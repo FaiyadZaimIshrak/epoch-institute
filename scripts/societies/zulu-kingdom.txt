@@ -55,8 +55,8 @@ local: Izinduna
 share: est 0.1-0.5
 sharenote: Estimate: an induna led each regiment of 400 to 4,000 men, with junior izinduna under him and senior ones over the corps; with the officials of the districts and the king's councillors, a few hundred to a thousand men among some 250,000.
 firm: yes
-terms:
-people: mzilikazi
+terms: induna
+people: mzilikazi, ndlela-kasompisi
 text: An induna (plural izinduna) was a senior official appointed by the king or a chief and held in high esteem for leadership, bravery or service: an adviser, ambassador, headman or commander. Izinduna met in council, an indaba, to discuss important matters. In the older order they settled disputes and collected taxes for their chiefs and led their districts' fighting men; in the Zulu army an induna guided each regiment, senior izinduna commanded the corps, and elder izinduna of long experience directed the whole host, while officers carried the half-moon axe as a sign of rank. Ndlela kaSompisi, a general of Shaka and Dingane, was Dingane's chief adviser; Ntshingwayo kaMahole commanded the army that won at Isandlwana.
 rise: The king appointed izinduna for their leadership, bravery or service and could destroy them: Ndlela, who repeatedly refused Dingane's order to kill Mpande, was strangled for it. Mzilikazi, a general of Shaka's, fled his service and founded a kingdom of his own.
 you: The king has made you an induna: you command a regiment, give counsel at the indaba and carry the half-moon axe of your rank, but a refused order could cost you your life.
@@ -88,7 +88,7 @@ local: Amabutho
 share: 20-25
 sharenote: Roughly: the article on Shaka gives more than 50,000 warriors among the 250,000 people he ruled at his death in 1828; the senior regiments included married men.
 firm: yes
-terms:
+terms: impi, assegai
 people:
 picture: battle-of-isandlwana
 text: After their twentieth birthdays young men were enrolled in a regiment (ibutho, plural amabutho), by age rather than by clan or region, and swore loyalty to the king. Each regiment built its own ikhanda, a stockade of huts around a cattle corral, where it gathered when summoned, with its own name, headdress and shield colours. Active service lasted until a man married, a privilege only the king bestowed; the men of senior regiments wore the head-ring (isicoco) of married men. Shaka armed them with the short stabbing spear, the iklwa, and kept them under an iron discipline: a man seen to hesitate before closing with the enemy was executed after the fight.
@@ -132,4 +132,4 @@ Morris, D. R. (1965) The Washing of the Spears: The Rise of the Zulu Nation. New
 Zulu Kingdom; Shaka; Impi; InDuna
 NOTE: The articles give the Zulu kings no title of their own; "inkosi" is the title they give Dingiswayo of the Mthethwa and Zwide, "king of the Ndwandwe". Keep it or set term and local to "-".
 NOTE: No tier for diviners (izangoma) or for captives: the articles name one sangoma (Ntombazi) and an isAngoma's "ministrations" in 1879, and say only that it is "sometimes held" that light forces raided for "tribute in cattle and slaves"; too little for a rank.
-MISSING: Mbopa (induna, Shaka's assassin), Ndlela kaSompisi, Ntshingwayo kaMahole, Nandi (Shaka's mother), Ntombazi, Zihlandlo of the Mkhize, Phakathwayo, Nathaniel Isaacs, induna, impi, iklwa (assegai), ibutho/amabutho, ikhanda, isicoco
+MISSING: Mbopa (induna, Shaka's assassin), Ntshingwayo kaMahole, Nandi (Shaka's mother), Ntombazi, Zihlandlo of the Mkhize, Phakathwayo, ibutho/amabutho, ikhanda, isicoco

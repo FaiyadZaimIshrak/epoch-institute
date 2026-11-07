@@ -24,7 +24,7 @@ share: 0
 sharenote: One king, who often ruled jointly with a queen of the royal house, in later reigns his sister and wife.
 firm: yes
 terms: basileus, pharaoh
-people: ptolemy-i-soter, ptolemy-ii-philadelphus, ptolemy-iii-euergetes, ptolemy-iv-philopator, berenice-ii
+people: ptolemy-i-soter, ptolemy-ii-philadelphus, ptolemy-iii-euergetes, ptolemy-iv-philopator, berenice-ii, arsinoe-ii
 picture: ptolemy-i-soter
 text: The king was a Macedonian Greek. Ptolemy I Soter, a general of Alexander the Great, took the titles of basileus and pharaoh in 305 BCE, and every male king of his line was named Ptolemy. To the Egyptians he was presented as pharaoh, shown on monuments in Egyptian style and dress, building temples and endowing the priesthood. In theory, if not always in practice, he commanded the whole economy through layers of officials, and the crown controlled the making and sale of papyrus, olive oil, linen and beer. From Ptolemy II, who married his sister Arsinoe II, the kings followed the Egyptian custom of marrying their sisters, and Arsinoe was worshipped as a goddess in sanctuaries of her own.
 rise: The crown passed within the dynasty, usually to the king's son, often first as co-ruler: Ptolemy I shared his rule with Ptolemy II in 285 BCE. Under Ptolemy IV royal favourites controlled the government, and in 205 BCE a priest, Horwennefer, proclaimed himself pharaoh in Upper Egypt.
@@ -40,8 +40,8 @@ local: -
 share: est 0.05-0.2
 sharenote: Estimate: the ministers of the court at Alexandria, the governors and stewards of the nomes with their Greek staffs, and the scholars the crown kept, with their families: a few thousand people among 3–4 million.
 firm: yes
-terms: strategos, nome, mouseion, library-of-alexandria
-people: euclid, aristarchus-of-samos, eratosthenes
+terms: strategos, nome, mouseion, library-of-alexandria, oikonomos
+people: euclid, aristarchus-of-samos, eratosthenes, callimachus, theocritus
 picture: -
 text: Around the king stood a Greek court and a complex bureaucracy built to extract Egypt's wealth for the crown. At court a chief finance minister, a chief accountant and a few other ministers ran the government. Each nome, or province, was governed by a strategos, with an oikonomos for its economic affairs, and each village had its chief administrator, the komarches. Macedonians and other Greeks held virtually all the higher posts and formed the new upper class. The court also kept scholars and poets: Ptolemy II paid stipends to Callimachus and Theocritus, the mathematician Euclid worked under his patronage, and the chief librarian of the Library of Alexandria was also the crown prince's tutor.
 rise: Office came by the king's appointment, and Greeks held nearly all of it; over time Egyptians who spoke Greek could rise further. Favour could also be lost: under Ptolemy IV a circle of royal favourites took control of the government.
@@ -57,7 +57,7 @@ local: -
 share: est 0.5-1.5
 sharenote: Estimate: no count survives; the range is the one estimated for the priests of pharaonic Egypt, since the Ptolemies kept the temples and their priesthoods in their old privileged place.
 firm: no
-terms: rosetta-stone, edfu, serapis, memphis-egypt
+terms: rosetta-stone, edfu, serapis, memphis-egypt, decree-of-canopus, temple-of-edfu
 people: manetho
 picture: rosetta-stone
 text: Priests and other religious officials remained overwhelmingly Egyptian and kept much of their old privilege and prestige, because the Ptolemies relied on Egyptian religion to legitimise their rule. The first three kings built and restored temples on a large scale: Ptolemy III began the Temple of Horus at Edfu in 237 BCE. The kings called the priests of all Egypt to synods, at Canopus in 238 BCE and at Memphis in 217 BCE; the decree of 217 BCE, in hieroglyphs, Demotic and Greek, presented the king as Horus and set up his statue in every temple. The High Priests of Ptah at Memphis had great influence, even with the kings, yet the crown taxed temple property heavily.
@@ -74,7 +74,7 @@ local: Klerouchoi
 share: est 3-7
 sharenote: Estimate: tens of thousands of Greek soldiers and mercenaries settled with their families, beginning with Ptolemy I's roughly 6,500 Macedonians and the 8,000 prisoners settled after Gaza in 312 BCE, besides the Greeks of Alexandria, Naucratis and Ptolemais; in the Faiyum cleruchs and their descendants made up as much as 29 per cent of the adults in the mid-3rd century BCE.
 firm: yes
-terms: karanis, faiyum, naucratis, alexandria, gymnasium, koine-greek
+terms: karanis, faiyum, naucratis, alexandria, gymnasium, koine-greek, philadelphia, cleruchy
 people:
 picture: karanis
 text: Macedonians and other Greeks were the kingdom's privileged minority. Some lived in its three Greek cities, Alexandria, Naucratis and Ptolemais; most were soldiers settled on land grants (kleroi) across the country, the cleruchs, who farmed in peacetime and could be called to war at any time. A grant's size followed the soldier's rank: in the 3rd century BCE a cavalryman received 100 arouras and an infantryman 30. Many were settled in the Faiyum, which the Ptolemies drained and colonised with Greeks and Egyptians, founding villages such as Philadelphia and Karanis. Greeks lived under Greek law and were tried in Greek courts; their young men trained in the gymnasium, and their dialects merged into the common Koine Greek.
@@ -91,7 +91,7 @@ local: Machimoi
 share: est 1-3
 sharenote: Estimate: no count survives; the native soldiers with their families, granted lots of at least five arouras from about 230 BCE and numerous enough to prove themselves at Raphia in 217 BCE.
 firm: no
-terms: battle-of-raphia
+terms: battle-of-raphia, machimoi
 people:
 picture: -
 text: The machimoi were lower-ranking infantry, usually of Egyptian origin. Native troops served in the army from its founding; they were well regarded as fighters, but were sometimes looked down upon and distrusted for a reputation for disloyalty and for aiding local revolts. At least from about 230 BCE they too received land grants: lots of at least five arouras, considered enough for one family. They were sometimes made guards for officials, or helped to enforce the collection of taxes, and their standing was higher than that of the average Egyptian. At the Battle of Raphia in 217 BCE Egyptian soldiers fought beside the Greeks, and after it the ranks they reached and the lands they were given grew.
@@ -169,4 +169,4 @@ NOTE: Hölbl's place of publication is not given in the article (only "Routledge
 NOTE: The army section says Ptolemy V's reforms were "in the early third century BC", which cannot be right (he reigned 204–180 BCE); the tier says only "under the reforms of Ptolemy V".
 NOTE: The enslaved tier's "rise" rests on "Documentary evidence of escape from slavery is virtually nonexistent before the Ptolemaic Period" (Slavery in ancient Egypt).
 NOTE: The priests' share borrows the New Kingdom ladder's estimate (0.5–1.5 per cent); the articles give no count of Ptolemaic priests.
-MISSING: Callimachus, Theocritus, Arsinoe II, Horwennefer, Ankhwennefer, Great Theban Revolt, cleruch (klerouchos), machimoi, politeuma, Zeno of Caunus and the Zenon papyri, Canopus Decree, Raphia Decree, Temple of Horus at Edfu (only the town has an entry), Ptolemais Hermiou, Philadelphia (Faiyum), Heracleopolis, oikonomos, komarches, Demotic, aroura
+MISSING: Ankhwennefer, politeuma, Zeno of Caunus and the Zenon papyri, Heracleopolis, komarches, Demotic, aroura

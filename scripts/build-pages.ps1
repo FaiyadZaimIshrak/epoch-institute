@@ -3425,8 +3425,8 @@ for ($ri3 = 0; $ri3 -lt $PREGS.Count; $ri3++) {
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other regions">' + $(if ($pv) { '<a class="prev" rel="prev" href="/people/' + (PRegSlug $pv) + '"><span class="lbl">&larr; Previous region</span><span class="nm">' + (Hx $pv) + '</span></a>' } else { '' }) +
     $(if ($nx) { '<a class="next" rel="next" href="/people/' + (PRegSlug $nx) + '"><span class="lbl">Next region &rarr;</span><span class="nm">' + (Hx $nx) + '</span></a>' } else { '' }) + "</nav>`n")
   [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/people/">All people &rarr;</a></p>' + "`n")
-  [void]$sb.Append((CiteBox "People of $cap" ($SITE + $path) 'The Epoch Institute Encyclopedia') + "`n</div>`n</main>`n")
-  $title = "People of $cap in History: $($lst.Count.ToString('N0')) Figures — The Epoch Institute"
+  [void]$sb.Append((CiteBox "People of $rname" ($SITE + $path) 'The Epoch Institute Encyclopedia') + "`n</div>`n</main>`n")
+  $title = "People of $rname in History: $($lst.Count.ToString('N0')) Figures — The Epoch Institute"; if ($title.Length -gt 92) { $title = $title.Replace(" in History:", ":") }
   $desc = [EpochBuild.W]::Summary("$($lst.Count.ToString('N0')) people of $rname in history, from $(ProseList @($PRINFO[$rg].top)) to the less known, century by century from the $($cs[0]) to the $($cs[-1]).", 155)
   $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
   Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'people'; body = $sb.ToString() })

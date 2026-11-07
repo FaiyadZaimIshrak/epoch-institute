@@ -39,7 +39,7 @@ local: Brāhmaṇa
 share: est 4-8
 sharenote: Estimate: Megasthenes called his class of "philosophers" small but the most honoured; in the census of 1931, the first to count castes in detail, Brahmins were about 5–6 per cent of Hindus.
 firm: no
-terms: brahmins, varna, dharmashastra
+terms: brahmins, varna, dharmashastra, manusmriti
 people: chanakya
 picture: -
 text: The Brahmanical texts placed Brahmins first. With the Kshatriyas and Vaishyas they were "twice-born", initiated into the study of the Vedas, which were learned by heart; but only Brahmins could teach the Vedas, perform sacrifices for others and live on gifts. The Manusmriti told kings never to tax a learned Brahmin and never to put a Brahmin to death, whatever his crime. Megasthenes counted Brahmins among his "philosophers", few in number but the most honoured, exempt from public duties and hired to perform sacrifices and funeral rites. In practice many Brahmins lived as farmers or officials, and some as generals, and Buddhist texts show them in many trades. The Maurya kings patronised Buddhists, Jains and Ajivikas as well as Brahmins; the Guptas favoured Brahmins, performing Vedic sacrifices and granting them villages, with their revenue and free of tax, by charters engraved on copper plates. Brahmins wrote the law books, and Brahmin ministers served kings.
@@ -56,8 +56,8 @@ local: Śramaṇa
 share: est 0.5-1
 sharenote: Estimate: Faxian and later Xuanzang counted monks by the thousand in great monasteries, but monks and nuns were a small part of the people.
 firm: no
-terms: buddhism, jainism, nalanda, ajivika
-people: mahinda-buddhist-monk, ashvaghosha
+terms: buddhism, jainism, nalanda, ajivika, sangha
+people: mahinda-buddhist-monk, ashvaghosha, sanghamitta
 picture: ajivika
 text: Buddhist and Jain monks and nuns, and the ascetics of smaller orders such as the Ajivikas, left household life and stood outside the varna order: the Buddhist order took people of every varna, though not slaves or debtors. Ashoka's edicts paired "Brahmins and shramanas" as the holy men to be honoured, and Megasthenes counted ascetics with the Brahmins among his "philosophers". Monks and nuns shaved their heads, wore robes and owned little beyond them and an alms bowl; Buddhist monks lived by a code of more than two hundred rules, kept celibate and ate only before noon. Kings, merchants and guilds gave the orders caves, monasteries and land: Ashoka gave the Ajivikas caves in the Barabar Hills and, by Sri Lankan tradition, sent his son Mahinda and his daughter Sanghamitta to take Buddhism to Sri Lanka. Under the Guptas, who favoured Brahmins but tolerated other faiths, great monasteries such as Nalanda became centres of learning, though the Huna king Mihirakula destroyed many others in the early 6th century.
 rise: Anyone free of debt and servitude could take the robe, whatever their varna, and a monk or nun could leave the order and return to household life.
@@ -123,7 +123,7 @@ local: Caṇḍāla
 share: est 2-6
 sharenote: Estimate: in the census of 1931 the castes then called "depressed" were about 15 per cent of Hindus; the Chandalas and the outcastes of the texts were a smaller group in the 4th–6th centuries.
 firm: yes
-terms:
+terms: chandala
 people:
 text: Below and outside the four varnas the texts placed groups they held to be impure, above all the Chandalas, along with the Shvapachas and peoples such as the Nishadas. The law books explained the Chandala as the child of a Shudra father and a Brahmin mother, the most condemned of mixed unions. The Manusmriti ordered that Chandalas live outside the village, own only dogs and donkeys, wear the clothes of the dead and eat from broken dishes, and gave them the work of carrying away the corpses of people with no kin and executing condemned criminals. Faxian, around 400, found that the Chandalas lived apart; when they entered a town or a market they struck a piece of wood so that others could avoid touching them, and only they hunted, fished and sold meat. Historians such as Vivekanand Jha see untouchability spreading over these centuries and reaching its height after 600; Patrick Olivelle notes that the law books speak of the impurity of individuals rather than of whole varnas.
 rise: The texts made the status hereditary, but over generations groups could move: a forest people that settled to farming could be absorbed among the Shudras.
@@ -139,7 +139,7 @@ local: Dāsa
 share: est 1-3
 sharenote: Estimate: slaves were never counted, and historians such as Romila Thapar hold that they were not the main labour force; most served in households.
 firm: yes
-terms: slavery
+terms: slavery, dasa
 people:
 picture: -
 text: Slavery existed throughout these centuries, but historians such as Romila Thapar note that slaves were not the main labour force, as they were in Greece; most served in households as servants, nurses and attendants, and some worked the land beside hired labourers. Megasthenes thought India had no slaves, perhaps because slaves there could buy back their freedom. Ashoka's edicts urged proper treatment of slaves and servants, and his edict on the Kalinga war records 150,000 people deported. The Manusmriti lists seven kinds of slave: the war captive, the one who serves for food, the house-born, the bought, the given, the inherited and the one enslaved as punishment. The Arthashastra forbade selling a free Arya into slavery, though a man in distress might pledge himself. It let slaves keep their earnings and inheritance, and an owner who abused a slave, or forced himself on a slave woman, lost the price he had paid; she went free.
@@ -164,4 +164,3 @@ Thapar, R. (2002) Early India: From the Origins to AD 1300. London: Allen Lane.
 == checked
 Maurya Empire; Gupta Empire; Varna (Hinduism); Brahmin; Kshatriya; Vaishya; Shudra; Chandala; Jāti; Caste system in India; Untouchability; Dasa; Slavery in India; Arthashastra; Manusmriti; Megasthenes; Indica (Megasthenes); Faxian; Edicts of Ashoka; Kalinga War; Pushyamitra Shunga; Aśvaghoṣa; Sangha; Bhikkhunī; Śreṇi; Kayastha; Agrahara; Prabhavatigupta; Sati (practice)
 NOTE: faxian: the entry says Faxian stayed in India "during 399–414 CE"; 399 is the year he set out from Chang'an and he was back in China by 412 (Wikipedia, Faxian), with about ten years in India (the Gupta Empire article puts his stay at about 405–411); 399–414 is the span of his whole travels and record.
-MISSING: Manusmriti, Chandala, dasa, sangha, shreni, Sanghamitta, Vakataka dynasty, agrahara, Indica (Megasthenes)

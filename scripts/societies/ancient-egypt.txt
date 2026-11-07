@@ -24,7 +24,7 @@ share: 0
 sharenote: One ruler, with the royal family.
 firm: yes
 terms: pharaoh
-people: hatshepsut, thutmose-iii, akhenaten, ramesses-ii
+people: hatshepsut, thutmose-iii, akhenaten, ramesses-ii, tausret
 text: The king stood apart from all other Egyptians. In theory he owned all the land, made the laws, collected the taxes and commanded the army, and every temple rite was performed in his name, since he alone stood between the gods and humankind. His task was to uphold maat, the right order of the world, by defending the borders, feeding the people and honouring the gods. Inscriptions called him the "good god", and in the New Kingdom his subjects began to speak of him as per-aa, "the great house", the palace, from which the word pharaoh comes. The throne usually passed from father to son, but Hatshepsut and Tausret ruled as kings in their own right. New Kingdom pharaohs led their armies into Nubia and the Levant, filled the temples of Amun with the spoils, and built on a vast scale: Ramesses II raised the rock temples of Abu Simbel.
 rise: Kingship passed by birth, usually to the king's son, but when a dynasty failed the throne could go to the men who served it: Ay and the general Horemheb rose from the royal court, and Horemheb's vizier became king as Ramesses I in 1292 BCE.
 you: You are hailed as the "good god": in theory you own all the land and command the army, and you alone stand between Egypt and its gods.
@@ -40,7 +40,7 @@ share: est 0.05-0.2
 sharenote: Estimate: the vizier, the great officials and the elite the texts call the pat, with their families, a few thousand people among some 2–3 million.
 firm: yes
 terms: vizier, viceroy-of-kush
-people: amenhotep-huy, panehesy
+people: amenhotep-huy, panehesy, rekhmire
 picture: -
 text: Below the king stood the small circle of officials who ran his government, the elite that Egyptian texts called the pat. In the New Kingdom there were two viziers, one for Upper and one for Lower Egypt, who oversaw land surveys, the granaries, the treasury, building works and the archives, and sat as judges in the high court. Beneath them served the treasurers, the overseers of granaries and of works, the mayors of the towns, the generals and the Viceroy of Kush, who governed conquered Nubia. They were trained as scribes, wore fine white linen, and were rewarded by the king: Thutmose III gave his official Minmose more than 150 captive "dependents". They built painted tombs in the hills of Thebes, where the tomb of Rekhmire, vizier of Thutmose III, sets out the duties of his office. Many posts passed from father to son, but every appointment depended on the king's favour, and some high priests of Amun also served as vizier.
 rise: Most officials were the sons of officials and had trained as scribes, but the king could raise a capable outsider, such as Bay, a commoner of West Asian origin who became chancellor and the power behind the throne at the end of the 19th Dynasty.
@@ -56,7 +56,7 @@ local: Hem-netjer
 share: est 0.5-1.5
 sharenote: Estimate: a great temple had well over 150 full- or part-time priests, a mid-sized one 10–25 and the smallest one; most priests served in rotation a month at a time.
 firm: no
-terms: karnak, amun, harris-papyrus, gods-wife-of-amun
+terms: karnak, amun, harris-papyrus, gods-wife-of-amun, wilbour-papyrus
 people: herihor
 text: Priests served the gods in the king's place. Each morning the officiating priest opened the shrine, cleaned, clothed and anointed the god's statue and offered it a meal, which was afterwards shared out and eaten by the priests. A great temple was run by its high priest, with up to three grades of priests beneath him; in the New Kingdom these higher posts became full-time, while ordinary priests served in shifts and spent the rest of the year at their own work. Before entering the sanctuary they shaved their heads and bodies, washed several times a day and wore only clean linen, but they could marry. The temples were also great landowners. Kings gave them fields, captives and the spoils of war, above all to Amun of Karnak, and modern reckonings from the Harris Papyrus and the Wilbour Papyrus put roughly 13–18 per cent of Egypt's farmland in their hands under the Ramesside kings, most of it Amun's. Priestly offices were lucrative and often passed from father to son.
 rise: The king appointed the high priests, often as a reward for a favoured official, while lesser posts passed from father to son or were filled by the priests themselves; at the end of the period the army officer Herihor became High Priest of Amun and ruled Upper Egypt (about 1080 BCE).
@@ -72,7 +72,7 @@ local: Sesh
 share: est 0.3-0.7
 sharenote: Estimate: probably less than 1 per cent of Egyptians could read and write, and those few included the officials and priests above.
 firm: no
-terms: egyptian-hieroglyphs, papyrus, thoth
+terms: egyptian-hieroglyphs, papyrus, thoth, hieratic
 people:
 text: Scribes kept the records on which the state ran. They counted harvests and herds for taxes, surveyed fields, issued rations, wrote letters and recorded court cases for the king, the temples, the army and the great estates. Most were the sons of scribes who learned the craft at school or from their fathers, copying set texts in the cursive hieratic script, and only a small minority of Egyptians could read and write. A favourite school text, the "Satire of the Trades", told pupils that every other trade was misery and that writing would spare them hard labour and beatings; it was among the most copied texts in the schools of Thebes under the 20th Dynasty. Scribes were indeed spared the corvée that farmers owed. Their badge was the scribe's palette, their patron the god Thoth, and the most able rose into the high offices of state.
 rise: Boys, mostly the sons of scribes, learned the craft at school or from their fathers; a gifted scribe could rise into the high offices of state, which were closed to men who could not write.
@@ -88,8 +88,8 @@ local: Mesha
 share: est 2-4
 sharenote: Estimate: an army of some 20,000–30,000 men in the 13th century BCE (Ramesses II took four divisions to Kadesh in 1274 BCE), with garrisons and their families.
 firm: no
-terms: chariot, battle-of-kadesh, medjay
-people:
+terms: chariot, battle-of-kadesh, medjay, khopesh
+people: horemheb
 picture: battle-of-kadesh
 text: The New Kingdom was born in the war against the Hyksos, and its pharaohs turned the old levies into a standing professional army. Infantry with bows, spears and the curved khopesh sword fought beside the chariotry, two-man chariots carrying a driver and an archer, whose crews came from the upper classes. The army fought in Nubia and the Levant: Ramesses II marched to the Battle of Kadesh in 1274 BCE with four divisions named after the gods Amun, Ra, Ptah and Seth. Soldiers were paid, and the brave won the "gold of valour" and captives: Ahmose, son of Ebana, who fought the Hyksos at Avaris, received gold and slaves from his kings. Veterans were granted plots of farmland. Foreigners served too, Nubian Medjay, Libyans and Sherden from among the Sea Peoples, many of them prisoners who had been made soldiers.
 rise: War was the quickest way up for an able man: soldiers won rewards and land, and Horemheb, a general under Tutankhamun, became king himself.
@@ -105,8 +105,9 @@ local: Hemu
 share: est 4-8
 sharenote: Estimate: the craftsmen of the temples, the palace and the towns, from the royal tomb-builders of Deir el-Medina (about 68 houses) to village potters and weavers.
 firm: no
-terms:
+terms: deir-el-medina, valley-of-the-kings
 people:
+picture: -
 text: Craftsmen ranked above farmers, but most worked for the state or the temples, in workshops attached to the temples and palaces, and were paid in rations from their stores. Masons, carpenters, sculptors, painters, metalworkers and weavers produced everything from statues to coffins. The best documented are the tomb-builders of Deir el-Medina, the "servants in the Place of Truth", who cut and decorated the royal tombs in the Valley of the Kings; their village dates from the time of Thutmose I. They lived with their families in a walled village of about 68 houses and worked in two gangs under foremen, eight days out of ten, for a monthly ration of about 5½ sacks of grain (7½ for a foreman), up to three times a field hand's pay; many of them could read. In the 29th year of Ramesses III (about 1157 BCE), when their rations were weeks late, they downed tools in the first recorded strike.
 rise: Places in the royal crew were prized and usually passed from father to son; the village was abandoned under Ramesses XI, when tomb robbery, Libyan raids and civil war brought the work to an end.
 you: You cut and paint the pharaoh's tomb eight days out of ten and are paid in grain from the state's stores; when the rations fail to come, you and your crew lay down your tools.
@@ -161,4 +162,4 @@ Spalinger, A. J. (2005) War in Ancient Egypt: The New Kingdom. Malden, MA: Black
 
 == checked
 New Kingdom of Egypt; Ancient Egypt; Pharaoh; Rekhyt; Vizier (Ancient Egypt); High Priest of Amun; Egyptian temple; Papyrus Harris I; Wilbour Papyrus; Scribe; The Satire of the Trades; Literacy; Military of ancient Egypt; Battle of Kadesh; Ahmose, son of Ebana; Deir el-Medina; Ramesses III; Ancient Egyptian agriculture; Slavery in ancient Egypt; Women in ancient Egypt; Will of Naunakhte
-MISSING: Deir el-Medina, Valley of the Kings, Satire of the Trades, Wilbour Papyrus, hieratic, khopesh, Rekhmire, Horemheb, Tutankhamun, Ahmose son of Ebana, Naunakhte, Tiye, Nefertari, Tausret
+MISSING: Satire of the Trades, Ahmose son of Ebana

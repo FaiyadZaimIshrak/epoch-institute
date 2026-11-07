@@ -39,7 +39,7 @@ local: Zhuhou
 share: est 0.01-0.05
 sharenote: Estimate: twenty kingdoms and some hundreds of marquessates in 2 CE, with their households.
 firm: yes
-terms:
+terms: rebellion-of-the-seven-states
 people: han-xin, ying-bu
 text: Below the emperor stood the kings, his brothers, uncles, nephews and sons other than the heir. Liu Bang first gave kingdoms to his generals, but by 196 BCE all the kings save one were his kin, and an edict reserved kingdoms for the Liu. In the early Western Han the kingdoms covered two-thirds of the empire and their kings appointed most of their own officials. After the Rebellion of the Seven States in 154 BCE the court cut their powers: from 145 BCE they could appoint no official above 400 bushels and became nominal lords, living on a share of their kingdom's taxes. Below them were the marquesses, the top two of the twenty ranks: a full marquess (liehou) drew part of the taxes of a fief the size of a county, an ordinary marquess only a pension. Kings' sons, princesses' husbands and high officials were made marquesses, and a marquess of a thousand households drew some 200,000 cash a year.
 rise: Kingdoms passed to the king's eldest son by his queen, but from 127 BCE all a king's sons were made marquesses with fiefs from his lands, so kingdoms shrank with each generation. A king who rebelled, or even murdered a slave, could lose his kingdom.
@@ -56,7 +56,7 @@ share: est 0.5-1
 sharenote: Estimate: about 130,000 officials and clerks in 5 BCE (120,285 in the History of the Former Han), with their families; the Imperial Academy alone had some 30,000 students by the 2nd century CE.
 firm: yes
 terms: imperial-academy, confucianism, scholar-officials
-people: xiao-he, sima-qian
+people: xiao-he, sima-qian, dong-zhongshu
 text: Those who served in government held a privileged place just below the nobles. An official could not be arrested without the emperor's leave, and one condemned to death was often allowed to take his own life instead. Officials were graded by salary in bushels of grain, about half paid in coin: the three highest ministers drew 10,000 bushels, the Nine Ministers 2,000 and the lowest clerks 100. Men entered office by recommendation. From 134 BCE, on Dong Zhongshu's advice, Emperor Wu had every commandery send men judged "filial and incorrupt" (xiaolian) to the capital each year, and in 124 BCE he founded the Imperial Academy (Taixue) to teach the Confucian classics; it had fifty students at first and some 30,000 by the 2nd century CE. Office was open in principle to educated commoners other than merchants, but in the Eastern Han the same families filled the high posts: a third of the officials with biographies in the Book of Later Han were sons or grandsons of officials.
 rise: A young man rose by study, a patron's recommendation or service as a clerk in his commandery. Wealth could also buy office when the court sold posts, as it did on a large scale under Emperor Ling (168–189).
 you: You have studied the Confucian classics and been recommended as filial and incorrupt; now you draw a salary in grain and coin and cannot be arrested without the emperor's leave.
@@ -122,7 +122,8 @@ share: est 2-5
 sharenote: Estimate: the merchant households, from great traders whom the state taxed and barred from office to small shopkeepers.
 firm: no
 terms: salt-and-iron-monopoly, silk-road
-people:
+people: sang-hongyang
+picture: -
 text: Merchants came last of the four occupations, scorned by scholars as parasites, yet many were rich. Registered merchants, mostly small shopkeepers of the city markets, paid commercial taxes and a double poll tax of 240 coins, had to wear white, and from Liu Bang's reign were barred from wearing silk, riding horses and holding office. They could be singled out for conscription and sent to settle the malarial south, and in 119 BCE Emperor Wu forbade them to buy land. Great traders who moved goods between cities often escaped registration, and a fortune of ten million cash, fifty times a marquess's yearly income, marked a great merchant. To break the salt and iron magnates, some of whom employed a thousand peasants or more, Emperor Wu nationalised both industries by 117 BCE and put former merchants such as Sang Hongyang in charge. Trade along the new Silk Road carried Chinese silk to Central Asia and India.
 rise: Merchants bought land with their profits despite the bans, and a few entered office when the court needed their skills, as under Emperor Wu, though an edict of 7 BCE again barred them from the bureaucracy.
 you: You may grow richer than a marquess trading salt, iron or silk, but as a registered merchant you must wear white, pay a double poll tax and may never hold office.
@@ -138,7 +139,7 @@ share: 0.5-1.5
 sharenote: Roughly 1 per cent of the population, the figure given by Michael Loewe and A. F. P. Hulsewé.
 firm: yes
 terms: slavery
-people:
+people: jin-midi
 picture: -
 text: Slaves (nubi) were few, perhaps one person in a hundred, far fewer than in the Roman world. Some belonged to the state: prisoners of war, the families of men convicted of treason, gifts from foreign rulers and slaves confiscated from their owners, put to work in palaces, offices, workshops and stables. Others were privately owned, often peasants who had sold themselves for debt; they cooked, served, guarded their masters or performed as musicians, dancers and acrobats, and fewer worked the fields, where tenants were probably cheaper. Owners paid a poll tax of 240 coins a year on each slave, and slaves' children were born slaves. Masters could beat their slaves but not kill them: kings lost their kingdoms for murdering slaves. The emperor could free state slaves for old age or merit, and private slaves could buy their freedom. In 9 CE Wang Mang banned the buying and selling of slaves, but the ban was lifted in 12.
 rise: Freedom came by the emperor's grant, a master's choice or purchase. In one exceptional case the former slave Jin Midi rose to be one of the regents of the empire.
@@ -161,4 +162,4 @@ Twitchett, D. and Loewe, M. (eds) (1986) The Cambridge History of China, Volume 
 
 == checked
 Han dynasty; Society and culture of the Han dynasty; Government of the Han dynasty; Economy of the Han dynasty; Xiaolian; Four occupations; Slavery in China; Wei Qing
-MISSING: haozu, xiaolian, twenty ranks (jue), Ban Zhao, Lessons for Women, Dong Zhongshu, Gongsun Hong, Jin Midi, Sang Hongyang, Chao Cuo, Rebellion of the Seven States, Wei Zifu
+MISSING: haozu, twenty ranks (jue)

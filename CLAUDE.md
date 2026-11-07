@@ -577,7 +577,15 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   people and events the songs and speeches name; wave a7w5 (6 Nov): the ten wave 4 left when Wikipedia throttled it
   (McCarthyism, De-Stalinization, the Exodus, Hitler's rise to power, the Orange Revolution, the Hawaiian sovereignty
   movement, the proclamation of the PRC, the Meiji era, Lafayette, Joe Hill; bare "Lafayette" is no pattern: the town
-  in Indiana). A row of encyclopedia-links.js is never deleted (byEmpire holds row
+  in Indiana); waves a7m, a7y and a7s (7 Nov 2026): 255 entries for the names the ladders' MISSING lines gave
+  (Venice's councils, the Heian court, the Gulag, Gaul's peoples, the Khmer temples …; pictures by eye for 171), the
+  ten Yoruba subjects the religion's profile names (Ifá, the orisha, Oshun, Shango, Ogun, Yemọja, Eshu, Obatala,
+  Olorun, the Osun-Osogbo grove; "Ogun" is no pattern: the state, the river, the prince; only "Ògún") and Seneca the
+  Younger ("Seneca" alone is the Seneca people; a profile-only form gives the philosopher on Alans, Latin and
+  Renaissance humanism). Five a7m entries came out as namesakes of what the ladders meant, through the article titles
+  (Mehu the Egyptian vizier, Jige the Korean pack frame, Otrok the Cuman khan, Halāyudha the mathematician, honorary
+  citizenship in general): their patterns match nothing on the site (pattern-count 0) and the ladders keep those
+  names in MISSING. A row of encyclopedia-links.js is never deleted (byEmpire holds row
   INDICES: a deleted row shifts every later profile link); a pattern that must go is replaced by text that cannot
   match ("Indica of Megasthenes"). "dates" in added-entries.json ([slug, dates, "no-y"?]) date existing entries and
   their preview cards: 67 of the undated events (4 Nov 2026), each from its article (six left out: the crusade as a
@@ -1715,6 +1723,16 @@ Institute and its register are still named where they are defined and credited (
 - Link colours: scripts/tools/link-colour-audit.js [--kids] [paths] opens a sample of every kind of page in both themes and
   flags links in running text left in the browser's default colour or in the colour of their text (4 Nov 2026: the
   /governance paragraphs and the Kids corner's subtitle; fixed, 0 flagged).
+- Site crawl (7 Nov 2026), three tools beside check-site.ps1: scripts/tools/crawl-static.js [--json=] [--max=] reads
+  every built page (root pages and all the generated and profile folders) for missing local resources (img, srcset,
+  script, link, svg image, og:image posters), text left over from templates or data ("undefined", NaN, [object …],
+  "[[e:", "{{", a stray null), mojibake, entities escaped twice, stray spacing, JSON-LD that does not parse, duplicate
+  ids, empty links and pictures without alt; scripts/tools/crawl-browser.js [--per=N] [--phone] [--kids] [--dark]
+  [paths] opens lib.js KINDS and a seeded sample of each folder in headless Edge, scrolled to the end, for script and
+  console errors, same-site requests that fail, pictures that do not decode and pages wider than the screen (paths from
+  Git Bash need MSYS_NO_PATHCONV=1); scripts/tools/crawl-live.js [--per=N] asks the live host for every root page,
+  each folder's index and redirect and a sample of its pages, the shared files, 404/410 answers and a sample of every
+  sitemap, for status, Content-Type and Cache-Control.
 - Service worker (R5/R6): sw.js (network first for pages with a 4 s fallback to the kept copy, the 200 latest pages kept;
   cache first for ?v= files, pictures, emblems and fonts; stale-while-revalidate for the unversioned shared files),
   offline.html (lists the kept pages; exempt from check-site's page rules like 404.html), manifest.json; shared-nav.js
@@ -1781,9 +1799,11 @@ Institute and its register are still named where they are defined and credited (
 
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
-- The ladders' MISSING lines still name the people and some terms the encyclopedia lacks (bandaka, magi, Parnaka,
-  horon, jon, numu, Balla Fasséké, calpolli, mayeque, tlacotin, calmecac …; the 36 rank terms came with the inventions
-  release, 31 Oct 2026): add them by the R9 entries process, then the ladders' terms and people lines.
+- (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their
+  ranks' terms and people lines (the rank whose own words name them; people only as members of the rank, a ruler
+  only on the ruler's rank), and the names that now have an entry taken out of MISSING (553 of 777). What is left there has
+  no entry yet, or only a namesake (mehu, jige, otrok, Halayudha, Li Zhi, the maroon palenque, the Yuan minister Sangha,
+  Nandi, Allahverdi Khan): 224 names, mostly rank words of their own language (bandaka, horon, kpojito, sajal …).
 - The 185 entries added on 31 Oct 2026 (the inventions tree and the rank terms): the profiles were scanned for them on
   4 Nov 2026 (scripts/kinds/link-scan.js --entries over every kind, the 104 that had patterns and no profile mention):
   no profile names any of them, so nothing changed. The state texts were relinked on 4 Nov 2026 (C2:
@@ -1796,14 +1816,13 @@ Found while building the social ladders (30 Oct 2026), not done yet:
   links moved, every profile rescanned for both entries: 19 profiles now link Cannon).
 - Generic link names still linking one thing everywhere, handled on the ladders by nolink: "printing" (the printing
   press, also for Song woodblock and movable type), "slave trade" (the Atlantic slave trade, also for Viking and Maya
-  trades), "Gao" (the Malian city, also the Chinese surname), "magnates" (Polish-Lithuanian), "Mahdi" (the
-  messianic figure, also the caliph al-Mahdi).
-Songs in History, not yet: "Songs" chips on the profiles (a scripts/song-links.js read by generator.html, then
-regen-profiles) and on the country histories; posters of their own (song-<slug>.jpg); the words of the 8 public-domain
-songs without a free edition (Dle Yaman, Tizita, the Hanuman Chalisa, the Delphic hymns …); encyclopedia entries for the
-songs (only God Save the King, Advance Australia Fair and the Gita Govinda have one); more songs by the same files.
-Yoruba religion
-has pictures in only two sections: the encyclopedia has no pictured entries for the orisha or Ifá yet.
+  trades), "magnates" (Polish-Lithuanian), "Mahdi" (the messianic figure, also the caliph al-Mahdi). "Gao" was
+  handled on 6 Nov 2026: the bare name is a profile-only form on the six profiles where it is the Malian city, the
+  pattern elsewhere is "Gao, Mali", and the state texts' Chinese Gao were unlinked.
+Songs in History, not yet: posters of their own (song-<slug>.jpg); the words of the public-domain songs without a free
+edition (make-data.js GAPS: Dle Yaman, Tizita, the Hanuman Chalisa, the Delphic hymns …). Done since: the "Songs in
+history" chips on the profiles (scripts/song-links.js), "Songs from here" on the country histories, entries for the songs.
+(Done 7 Nov 2026) Yoruba religion has section pictures in five sections now, from the orisha entries of wave a7y.
 455 people of the encyclopedia still have no dates (legendary and biblical figures, and people whose Wikidata dates are
 missing or doubtful; scratchpad r6/dates-decisions.tsv): an undated person is on no century or people page and in no
 year's births and deaths.

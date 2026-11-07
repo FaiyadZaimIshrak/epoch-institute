@@ -40,7 +40,7 @@ local: Nomenklatura
 share: est 0.3-1
 sharenote: Estimate: the holders of the posts on the party committees' basic lists, from the Politburo's ministers and ambassadors down to the districts and towns, with their families; the articles give no count for the 1930s.
 firm: yes
-terms: communist-party-of-the-soviet-union
+terms: communist-party-of-the-soviet-union, nomenklatura
 people: lavrentiy-beria
 picture: politburo
 text: The nomenklatura were the people who held, or were listed as fit to hold, the key posts in government, industry, agriculture and education, posts filled only with the party's approval. Every party committee, from the all-union level in Moscow down to the districts and towns, kept two lists: a basic list (osnovnoi spisok) of the posts it filled and a registration list (uchyotny spisok) of people suitable for them; the Politburo filled the ministerial and ambassadorial posts. Lenin had named the criteria: reliability, political attitude, qualifications and administrative ability. Virtually all were party members. The Yugoslav politician Milovan Đilas, a critic of Stalin, called them a "new class", seen by ordinary citizens as a privileged bureaucratic elite that had replaced the old capitalist one.
@@ -57,7 +57,7 @@ local: -
 share: est 20-30
 sharenote: Estimate: peasants had been 80 per cent of the people when the Bolsheviks took power; the towns grew as millions moved for training and new jobs, until the passport restrictions of 1932 stopped their growth (R. W. Davies and Stephen Wheatcroft).
 firm: no
-terms: five-year-plans-of-the-soviet-union, proletariat
+terms: five-year-plans-of-the-soviet-union, proletariat, internal-passport
 people:
 picture: -
 text: The party counted the working class as its social base, and millions moved through the country to train, take new jobs or escape repression as supposed kulaks. In December 1932 a decree of the Central Executive Committee and Sovnarkom brought back the internal passport, required mainly in the largest cities and the border zones. Into it the police wrote a residence permit, the propiska; a permanent propiska confirmed its holder's right to a dwelling. Passports and "labour books" recording work discipline were meant to restore order and, above all, keep peasants fleeing the famine out of the towns. In 1940 alone 1.8 million workers were sentenced to six months of forced labour at a quarter of their pay, and 60,000 were imprisoned for absence from work.
@@ -74,7 +74,7 @@ local: Kolkhozniki
 share: rest
 sharenote: Everyone else: the peasants, four in five of the people when the Bolsheviks took power, who by the late 1930s worked mostly in collective farms, and the salaried workers of the state farms. The other shares are estimates, so this one is too.
 firm: yes
-terms: holodomor, kazakh-famine-of-1930-1933
+terms: holodomor, kazakh-famine-of-1930-1933, kolkhoz, law-of-spikelets
 people:
 picture: -
 text: Collectivization made the peasants members of collective farms (kolkhozy). The Standard Charter, law from the early 1930s, called the kolkhoz a cooperative of peasants who "voluntarily unite" and manage it democratically. In practice membership was forced, members had no right to leave and could take nothing with them if they did, and the farm's assembly rubber-stamped the plans of district and provincial officials. Members worked in brigades and were paid a share of the harvest by labour days, often with no cash; the state bought the grain at low fixed prices that hardly changed between 1929 and 1953. Private plots of about an acre, 3.9 per cent of the sown land in 1938, gave 21.5 per cent of farm output in 1937.
@@ -91,7 +91,7 @@ local: Lishentsy
 share: est 1-3
 sharenote: Estimate: the categories the constitutions of 1918 and 1924 named, among them employers of hired labour, private traders, clergy and the old regime's police and officers, and those added by later decrees; the articles give no count.
 firm: yes
-terms: russian-orthodox-church
+terms: russian-orthodox-church, lishenets
 people:
 picture: -
 text: The constitutions of 1918 and 1924 deprived whole categories of people of the right to vote or to be elected: those who hired labour for profit or lived on unearned income, private merchants and brokers, monks and clergy of all denominations, and the policemen and military officers of the old regime. The Bolsheviks used disenfranchisement as repression against those they classed as "enemies of the working people", and decrees added new categories. A lishenets (plural lishentsy) lost far more than the vote: he could hold no government post, receive no higher or technical education, join no collective farm or other cooperative, and was denied the help others had for jobs, housing and pensions. The Constitution of 1936 brought universal suffrage and abolished the category.
@@ -108,7 +108,7 @@ local: Spetspereselentsy
 share: est 0.5-1
 sharenote: Estimate: 1,317,022 of the people deported as kulaks in 1930–1931 reached their destinations, 389,521 died in the colonies in 1932–1940, and deportations went on on a smaller scale; perhaps 1 to 1.5 million at mid-decade, of an estimated 150–180 million.
 firm: no
-terms: ogpu
+terms: ogpu, kulak
 people:
 picture: -
 text: In Marxist–Leninist theory the kulaks, the better-off peasants, were class enemies of the poor. A decree of May 1929 defined a kulak household by hired labour, machinery, renting out equipment or trade; in Robert Conquest's words, peasants with "a couple of cows or five or six acres more than their neighbors" were labelled kulaks. On 30 January 1930 the Politburo approved the dissolving of the kulaks as a class, sending them to the camps, to distant regions such as the north Urals and Kazakhstan, or elsewhere in their home provinces. In 1930 and 1931 alone 1,803,392 people were sent to labour colonies and camps. The deported and their families, "special settlers" as the government called them, lived on starvation rations, and many tried to escape.
@@ -125,7 +125,7 @@ local: -
 share: est 0.7-1
 sharenote: Estimate: the camps and colonies held 1,196,369 people at the end of 1936 by the archival count and upwards of 1.6 million in 1939 (V. P. Kozlov), of an estimated 150–180 million.
 firm: yes
-terms: gulag, nkvd, great-purge
+terms: gulag, nkvd, great-purge, article-58, nkvd-troika, nkvd-order-no-00447
 people:
 picture: -
 text: The Gulag, the Main Directorate of Correctional Labour Camps, was set up under the OGPU in 1930 and run by the NKVD from 1934. Its camps held ordinary criminals and political prisoners, many sentenced without trial by NKVD troikas; petty crimes and jokes about the government could bring a term, and Article 58 punished "counterrevolutionary activities". Most camps lay in remote north-eastern Siberia, the far north and the steppes of Kazakhstan, where prisoners felled timber, mined, and built canals and railways. Naftaly Frenkel's "nourishment scale", which tied food to output, often killed weaker prisoners within weeks. From 1934 to 1940 deaths in the camps ran four to six times the Soviet average, and under NKVD Order No. 00447 tens of thousands of inmates were executed in 1937–1938.
@@ -155,4 +155,4 @@ NOTE: the population is an estimate: none of the six articles gives a total for 
 NOTE: the brief's "the official ideology called it classless" is not in the six articles, so the intro attributes only what they say (the working class as the party's social base, the kulaks as class enemies, Đilas's "new class").
 NOTE: the Gulag prisoners and the deported are given the band "outcast", not "enslaved": the articles call their work forced labour, not slavery. The collective farmers are "dependent" (no free exit, no passport); "commoners" would also do.
 NOTE: Lewin 1966 is given as the Kulak article cites it (Europe-Asia Studies 18(2)); the journal bore another title in 1966, so please check the citation. The places of publication in the sources list are not in the articles.
-MISSING: nomenklatura, kolkhoz (collective farm), collectivization in the Soviet Union, kulak, dekulakization, lishenets, propiska, internal passport (Soviet Union), Law of Spikelets, Article 58, NKVD troika, NKVD Order No. 00447, special settlements, Standard Charter of the kolkhoz, Milovan Đilas, Naftaly Frenkel, Genrikh Yagoda, Nikolai Yezhov, Yevgenia Ginzburg, Vasily Grossman, Robert Conquest, Richard Pipes, Solovki prison camp, White Sea–Baltic Canal, Kolyma
+MISSING: propiska, special settlements, Standard Charter of the kolkhoz

@@ -19,7 +19,9 @@ function CleanAuthor([string]$s) {
   $a = $a -replace '\{\{[^{}]*\}\}', ''
   if (-not $a.Trim() -and $s -match '\{\{') { return 'Unknown author' }
   # "(talk)", "(talk, middle dot, contribs)", "(talk, middle dot, contrib..." cut short
-  $a = $a -replace "\s*\((?:talk|discussion|disc|contribs?)(?:\s*[$([char]0xB7)|]\s*contribs?\.?)?[^)]{0,12}(?:\)|\.\.\.|$)", ''
+  $a = $a -replace "\s*\(\s*(?:talk|discussion|disc|contribs?|uploads)(?:\s*[$([char]0xB7)|]\s*contribs?\.?)?[^)]{0,12}(?:\)|\.\.\.|$)", ''
+  # the spaces flattened HTML leaves inside brackets and before commas ("JMCC1 ( talk )", "USACE HQ , JIM GORDAN")
+  $a = ($a -replace '\(\s+', '(' -replace '\s+\)', ')') -replace '\s+([,;])', '$1'
   # Commons' own wording when the uploader is taken to be the author
   $a = $a -replace '^No machine-readable author provided\.\s*(.+?)\s+assumed\s*\(based on copyright claims\)\.?$', '$1'
   # derivative works: "Map.svg: Author derivative work: Other" -> "Author; derivative work by Other"

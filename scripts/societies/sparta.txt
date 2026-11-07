@@ -24,7 +24,7 @@ share: 0
 sharenote: Two kings at a time, one from each royal house, with their families.
 firm: yes
 terms:
-people: leonidas-i, cleomenes-i, agesilaus-ii
+people: leonidas-i, cleomenes-i, agesilaus-ii, demaratus
 text: Sparta had two kings at once, one from each of two hereditary houses, the Agiads and the Eurypontids, both claiming descent from Heracles. The kings commanded the army in war, a kingship Aristotle called "a kind of unlimited and perpetual generalship", and were the state's chief priests, offering its sacrifices and keeping its links with the oracle at Delphi. Both sat in the council of elders, the Gerousia. At home their power was limited. By Herodotus' time their judicial role covered only heiresses, adoptions and the public roads, and the five ephors, elected every year, watched over them; two ephors went with a king on campaign. A king could be put on trial before the elders, the ephors and the other king, as King Pausanias was in 403 BCE. Kings were honoured as heroes after death, and the heirs to the two thrones were the only Spartan boys exempt from the agoge.
 rise: The throne passed by birth within the two royal houses, but a king could be deposed: in 491 BCE Demaratus lost his throne after his fellow king Cleomenes I bribed the oracle at Delphi to declare him illegitimate, and he fled to Persia.
 you: You command Sparta's army and offer the city's sacrifices, but five ephors elected each year watch over you and can join in putting you on trial.
@@ -39,7 +39,7 @@ local: Spartiatai
 share: 3-10
 sharenote: Paul Cartledge puts those of Spartiate status at between a tenth and a thirty-second of the population, a share that fell as the citizen body shrank from about 8,000 men in 480 BCE (Herodotus) to fewer than 1,000 in Aristotle's day.
 firm: yes
-terms: spartiates, ephor
+terms: spartiates, ephor, gerousia, agoge
 people: brasidas
 picture: -
 text: The Spartiates, or homoioi ("equals"), were the full citizens. A Spartiate was born to Spartiate parents, passed through the agoge, the state upbringing that took boys from the age of seven, and was elected to a common mess (syssition) of about fifteen men, to which he owed a fixed contribution of food. Each held an allotment of land (kleros) worked by helots. The law barred Spartiates from trade and crafts so that they could be full-time hoplites, liable to serve until sixty, and a man could not live with his family until he was thirty. Together they formed the assembly, which elected the five ephors each year and, by shouting, the 28 elders of the Gerousia, men over sixty who served for life. Their equality was an ideal: wealth was unequal from early on. Their numbers fell steeply: Herodotus reckons about 8,000 men in 480 BCE; at Leuctra in 371 BCE about 400 of the 700 Spartiates present were killed; and Aristotle put them at fewer than a thousand.
@@ -56,7 +56,7 @@ local: Hypomeiones
 share: est 1-3
 sharenote: Estimate: Spartiates who had lost their full rights, chiefly for failing to pay their mess dues; they appear in Xenophon's account of the conspiracy of Cinadon in 399 BCE.
 firm: no
-terms:
+terms: conspiracy-of-cinadon
 people:
 text: The inferiors (hypomeiones) were men of Spartiate descent who had lost, or never gained, full citizenship. Most had grown too poor: a citizen who could no longer pay his share to his mess lost his place among the equals, and a young man who was not elected to a mess never gained it. Cowardice in battle could also cost a man his rights. Inferiors remained free, but they had no vote in the assembly and could hold no office. The name is known from Xenophon's account of the conspiracy of 399 BCE led by Cinadon, a young man "not one of the equals". According to the informer who betrayed him, Cinadon had pointed out that only about forty of some 4,000 people in the agora were Spartiates, and counted on the hatred of helots, freed helots, inferiors and perioikoi. He was arrested and the plot crushed; asked why he had plotted, he said he wished to be inferior to no one in Lacedaemon.
 rise: Men fell into this rank through poverty, failure to win a place in a mess or cowardice in battle; with no regular way back, their number grew as land passed into fewer hands.
@@ -72,8 +72,8 @@ local: Mothakes
 share: est 0.1-0.5
 sharenote: Estimate: a few hundred boys raised beside Spartiate sons; ancient writers name only a few of them.
 firm: no
-terms:
-people: lysander, gylippus
+terms: mothax
+people: lysander, gylippus, callicratidas
 text: The mothakes, "foster brothers", were boys of free birth but not of full Spartiate standing who were brought up in the agoge beside Spartiate boys, their costs usually paid by wealthy families. They are thought to have been sons of Spartiate fathers and helot mothers or sons of impoverished Spartiates, though the evidence is thin and debated. Unable to pay their own way into a common mess, they were not among the equals, but they fought in the army alongside the perioikoi, and according to Aelian some became full citizens. A few rose to the highest commands. Ancient writers name as mothakes Lysander, who destroyed the Athenian fleet at the Battle of Aegospotami in 405 BCE and blockaded Athens into surrender, Gylippus, who organised the defence of Syracuse and destroyed the Athenian expedition in 413 BCE, and Callicratidas. The term appears above all for the time of the Peloponnesian War (431–404 BCE).
 rise: A wealthy family's sponsorship brought a boy into the agoge beside its own sons; some mothakes later became citizens, while others remained soldiers without a vote.
 you: You grew up in the agoge as the foster brother of Spartiate boys, your way paid by a wealthy family; you fight for Sparta and might rise to high command, but you are not one of the equals.
@@ -104,7 +104,7 @@ local: Neodamodeis
 share: est 0.5-1.5
 sharenote: Estimate: attested from about 420 to 369 BCE; 2,000 of them served with Agesilaus II in Asia Minor in 396–394 BCE.
 firm: no
-terms: helots
+terms: helots, neodamodes
 people:
 text: From the late 5th century Sparta freed helots in return for service as hoplites. The 700 helots who marched with Brasidas to the Chalcidice in 424 BCE were later freed and known as the Brasidians, and freed helots in general were called neodamodeis, a name taken to mean something like "new members of the people". They are attested from about 420 BCE and served in Sparta's army, often far from home: 2,000 of them went with Agesilaus II to Asia Minor in 396 BCE. They never became citizens; their standing seems to have been close to that of the perioikoi. Freedom was also promised for single services: in 425 BCE helots who smuggled food to the Spartiates trapped on the island of Sphacteria were offered their liberty. The historian Moses Finley saw in the arming of helots a grave flaw in the Spartan system, since a hoplite's place in the battle line was a mark of the citizen.
 rise: Freedom came only by decision of the state, chiefly as the reward for service as a hoplite; it made a helot free, but never a citizen.
@@ -120,7 +120,7 @@ local: Heilotes
 share: rest
 sharenote: Everyone not counted in the other tiers: above all the helots, the great majority, whom Paul Cartledge puts at 170,000–224,000 people, women and children included, in the early 4th century BCE. Several of the other ranks are estimates, so this share is one too.
 firm: yes
-terms: helots, messenians
+terms: helots, messenians, crypteia
 people:
 picture: -
 text: The helots were the subject people of Laconia and Messenia, descended from Greeks conquered by Sparta, above all the Messenians. They were bound to the land and belonged to the Spartan state rather than to individual citizens. They worked the Spartiates' allotments and handed over part of the harvest, a fixed amount according to Plutarch and half in the words of the poet Tyrtaeus, keeping the rest; they lived in families, kept some property and practised their own cults, and some served as household servants, nurses or attendants on campaign. At Plataea in 479 BCE there were, says Herodotus, seven helots for every Spartiate. Spartan rule rested on fear. Each year the ephors declared war on the helots, so that killing one brought no religious pollution, and in the Krypteia, according to Plutarch, young Spartiates were sent into the countryside to kill helots. Thucydides tells how about 2,000 helots promised their freedom were made to disappear. The helots answered with revolt, above all the great rising of 464 BCE.
@@ -144,4 +144,4 @@ Herodotus (1998) The Histories. Translated by R. Waterfield. Oxford: Oxford Univ
 
 == checked
 Sparta; Helots; Perioeci; Spartiate; Neodamodes; Mothax; Agoge; Crypteia; Gerousia; Ephor; Battle of Leuctra; Battle of Plataea; Spartan army; Women in ancient Sparta; Conspiracy of Cinadon; Demaratus; List of kings of Sparta; Slavery in ancient Greece; Battle of Thermopylae
-MISSING: hypomeiones, mothakes, neodamodeis, Gerousia, agoge, Krypteia, syssitia, Cinadon, Demaratus (king of Sparta), Gorgo, Cynisca, Callicratidas
+MISSING: hypomeiones

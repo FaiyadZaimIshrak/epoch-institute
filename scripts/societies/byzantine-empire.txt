@@ -23,7 +23,7 @@ local: Basileus
 share: 0
 sharenote: One man, with the imperial family; co-emperors, usually his young sons, were often crowned beside him.
 firm: yes
-terms: basileus, macedonian-dynasty, komnenian-dynasty
+terms: basileus, macedonian-dynasty, komnenian-dynasty, born-in-the-purple, de-ceremoniis
 people: basil-i, constantine-vii, basil-ii, alexios-i-komnenos
 picture: constantine-vii
 text: The emperor (basileus) was held to be chosen by God and to be the living law (nomos empsychos), and his court, whose ceremonies Constantine VII had set down in the Book of Ceremonies, was meant to mirror the order of heaven. He commanded the armies, made the law and appointed every official. Yet no law fixed the succession. In principle the Senate, the army and the people acclaimed each emperor; in practice emperors crowned their sons as co-emperors in childhood, and a son born to a reigning emperor in the palace's purple chamber was called porphyrogennetos, "born in the purple". Usurpation was common: generals seized the throne, and fallen emperors were blinded, forced into monasteries or murdered. In the 10th century emperors legislated to protect peasants and soldiers' lands from the great landowners, and from 1081 the Komnenian emperors ruled through their own extended family.
@@ -72,8 +72,8 @@ local: Logothetai
 share: est 0.1-0.3
 sharenote: Estimate: hundreds, if not thousands, of officials in Constantinople at any time, with those of the provinces and their families.
 firm: yes
-terms: eunuch
-people:
+terms: eunuch, parakoimomenos, logothete
+people: michael-psellos, basil-lekapenos
 picture: -
 text: The empire was governed by a large, literate bureaucracy: in Constantinople there were hundreds, if not thousands, of officials at any time. They served in the great bureaus under the logothetes, who handled the land tax, the army's pay, the post and diplomacy, and in the themes, where tax officials assessed and collected the land tax village by village. Officials usually held a court title, granted by the emperor, as well as their office, and the titles were ranked in a strict order of precedence, in which a magistros stood far above an imperial messenger (mandator); officials wore elaborate dress, often with huge hats, that showed their rank. Eunuchs had a separate set of titles and could rise very high precisely because they could never become emperor: in the 9th and 10th centuries the parakoimomenos, the eunuch chamberlain who slept in the emperor's bedchamber, often acted as chief minister. Learning was the usual way in: Michael Psellos began as a secretary and became adviser to several emperors.
 rise: Education in law and letters and a patron at court opened the way into the bureaus, and promotion came by the emperor's grant; a change of emperor could end a career.
@@ -122,7 +122,7 @@ local: Emporoi kai technitai
 share: est 2-4
 sharenote: Estimate: Constantinople alone may have held 400,000–500,000 people around 1200, but most townspeople did not belong to a guild.
 firm: no
-terms: guild
+terms: guild, book-of-the-prefect
 people:
 picture: -
 text: Constantinople, with perhaps 400,000 to 500,000 people around 1200, was by far the largest city of the empire, and its trades were organised in guilds. The Book of the Eparch, compiled by the later 10th century for the city's governor, the eparch, sets out the rules of its guilds, among them the notaries, the bullion dealers and bankers, several guilds of silk merchants, dressers and dyers, and the linen and perfume merchants, grocers, saddlers, butchers, fishmongers, bakers and innkeepers. The rules fixed entry fees and elections, prices and profit margins, and the parts of the city where each trade could work. The guilds were exclusive and privileged: not everyone in a trade belonged, and silk dressers outside the guild paid more for raw silk. Below the masters worked hired labourers (misthioi) and slaves. In the 11th and 12th centuries Venetian, Genoese and Pisan merchants took over much of the empire's long-distance trade, at the expense of native merchants.
@@ -195,4 +195,4 @@ Treadgold, W. (1997) A History of the Byzantine State and Society. Stanford: Sta
 
 == checked
 Byzantine Empire; Byzantine aristocracy and bureaucracy; Dynatoi; Paroikoi; Pronoia; Strateia; Theme (Byzantine district); Byzantine Empire under the Macedonian dynasty; Book of the Eparch; Slavery in the Byzantine Empire; Women in the Byzantine Empire; Ecumenical Patriarch of Constantinople; Clerical celibacy; Mount Athos; Eunuch; Basil I; Romanos I Lekapenos; Michael Psellos; John Axouch; Medieval demography
-MISSING: paroikoi, stratiotai, strateia, tagmata, allelengyon, parakoimomenos, logothete, porphyrogennetos, Kletorologion, Book of Ceremonies, Book of the Eparch, Basilika, East–West Schism, Leo VI the Wise, Michael Psellos, Anna Komnene, Zoe Porphyrogenita, Theodora Porphyrogenita, Danielis, Basil Lekapenos, John Axouch, Bardas Phokas
+MISSING: paroikoi, stratiotai, Bardas Phokas

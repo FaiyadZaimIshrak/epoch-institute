@@ -57,7 +57,7 @@ share: est 0.5-2
 sharenote: Estimate: the smallest of the status groups: the technical officials, interpreters, physicians and local clerks.
 firm: yes
 terms:
-people: kim-hong-do
+people: kim-hong-do, huibin-jang
 text: Between the yangban and the commoners stood the jungin, the "middle people": the hereditary technical specialists of the government and their families. Interpreters of Chinese, Mongolian, Jurchen and Japanese, physicians, astronomers, accountants and legal experts entered service through the miscellaneous examinations (japgwa), which the yangban looked down on: under their pressure the graduates' certificates were changed from crimson, the colour of the literary degree, to white, entitling them only to lower ranks. Court painters shared their standing, and in the provinces hereditary local clerks (hyangni) staffed the county offices under the magistrates sent from the capital. The sons of yangban by concubines (seoeol) were held to a similar station, barred from yangban family status, from the literary examinations and from high office. The jungin married mostly among themselves, lived in the centre of Seoul, and from the late 17th century wrote poetry and formed poetry societies of their own. One jungin woman, Jang Ok-jeong, became a consort of King Sukjong and was queen from 1689 to 1694.
 rise: Status passed from father to son, and the miscellaneous examinations kept the technical posts within the same families. King Jeongjo opened a door in the late 18th century, appointing sons of concubines as scholars in his royal library, the Gyujanggak.
 you: You serve the government as an interpreter or a physician, as your father did, after passing the miscellaneous examination that the yangban look down on, and it opens only the lower ranks to you.
@@ -72,7 +72,7 @@ local: Sangmin
 share: rest
 sharenote: Everyone not counted in the other tiers: chiefly farming families, the majority. Several of the other ranks are estimates, so this share is one too.
 firm: yes
-terms: hangul
+terms: hangul, sangmin
 people:
 picture: -
 text: Most Koreans were commoners (sangmin), the free "good people" (yangin) of the law: farmers above all, with artisans, merchants and fishermen. They bore the state's burdens. Farmers paid the land tax and local tribute in kind and owed labour on public works, and every adult man owed military service or, increasingly, a tax in cotton cloth to support those who served; in 1750 King Yeongjo halved this military cloth tax from two bolts to one. Many farmed small fields of their own, while others rented land from yangban for half the crop. Each man carried a tag (hopae) recording his name and status. In law commoners could sit the examinations, but few could spare the years of study to pass them. Sumptuary laws kept them to plain white clothes of cotton, and they wore straw shoes or wooden clogs. In famine years some sold themselves into slavery to escape taxes and military service, while in the 18th century markets and commercial farming made other commoners rich.
@@ -89,7 +89,7 @@ local: Nobi
 share: 30-40
 sharenote: At least 30 per cent of the people in the 15th–17th centuries, and perhaps 40 per cent in the south, on the estimates usually cited (James Palais and others); far fewer in the north; in the registers of Daegu only about 1.5 per cent by 1858.
 firm: yes
-terms: cheonmin, nobi, slavery
+terms: cheonmin, nobi, slavery, kisaeng
 people: jang-yeong-sil
 picture: -
 text: The nobi were the core of the lowborn (cheonmin), and in the 15th to 17th centuries, the system's height, they made up at least 30 per cent of the people. Status was hereditary, and the child of a mixed marriage generally took the lower status. State nobi (gongnobi) served government offices or paid a yearly levy; private nobi (sanobi), owned mostly by yangban, could be bought, sold, given away and inherited. Most private nobi lived apart from their owners, with houses, families, land and even nobi of their own, and owed their masters labour or the harvest of one of their plots, but their property reverted to the owner at death; others served in the master's household. Historians therefore still debate whether to call them slaves or serfs. Most had no surnames and many bore degrading names; runaways were severely punished, and an owner was not held responsible if a nobi died of a beating. Gisaeng, the female entertainers of the court and local offices, were government nobi.
@@ -106,8 +106,9 @@ local: Baekjeong
 share: est 1-3
 sharenote: Estimate: the baekjeong butchers and tanners, the shamans and the entertainers, a small part of the lowborn.
 firm: yes
-terms: cheonmin
+terms: cheonmin, paekchong, mu-shaman
 people:
+picture: -
 text: Beside the nobi among the lowborn stood groups despised for their work rather than owned. The baekjeong descended from wandering groups of the Goryeo period, the yangsucheok and hwacheok, who made willow baskets, slaughtered animals and performed. King Sejong tried to settle them as ordinary farmers under the old name for commoners, baekjeong, putting them on the registers and giving them land, but neighbours and even officials went on shunning them, and the name itself became an insult. They lived apart as butchers, tanners, basket-makers and executioners, work that Buddhist ideas of pollution led others to avoid. Custom forbade them tiled roofs, silk clothes, leather shoes and the gat hat; outside their houses they wore bamboo hats, they had to humble themselves before commoners, and they were buried in separate graveyards. They were denied surnames and barred from the examinations. Shamans (mudang), who held rites for the villagers, and travelling entertainers shared the low status of the lowborn.
 rise: There was almost no way out: outcast status was inherited, and the baekjeong could not sit the examinations. Their legal disabilities ended only with the Gabo Reforms of 1894, and discrimination lasted far longer.
 you: You slaughter animals and tan their hides in a settlement set apart from your neighbours; outside your house you must wear a bamboo hat, you may not wear silk or live under a tiled roof, and you have no surname.
@@ -129,4 +130,4 @@ Seth, M. J. (2010) A History of Korea: From Antiquity to the Present. Lanham, MD
 
 == checked
 Joseon; Yangban; Jungin (Chungin); Sangmin; Cheonmin; Nobi; Slavery in Korea; Baekjeong; Gisaeng; Gwageo; Women in Joseon; Japanese invasions of Korea (1592–1598); Jang Yeong-sil; Kim Hong-do; List of countries by population in 1500; List of countries by population in 1600
-MISSING: jungin, sangmin, baekjeong, gisaeng, gwageo, japgwa, hyangni, seoeol, hyangan, hopae, mudang, Sinmun Office, State Council of Joseon, Office of Censors, Danjong of Joseon, Jang Ok-jeong (Royal Noble Consort Hui), Sukbin Choe, Hwang Jini, Sin Saimdang, Lady Hyegyeong, Kim Man-deok, Hong Gyeong-nae
+MISSING: jungin, japgwa, hyangni, seoeol, hyangan, Sinmun Office, Office of Censors, Sin Saimdang

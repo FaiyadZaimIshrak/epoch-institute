@@ -4,7 +4,7 @@
 var SECTION_IMAGES = {
   "Abbasid Caliphate": {
     foundation:{slug:"abu-muslim",name:"Abu Muslim",img:"/images/encyclopedia/abu-muslim.jpg",artist:"1598 author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Abu_Muslim_(d._755)_from_the_genealogy_(silsilan%C4%81ma),_Cream_of_Histories_(Z%C3%BCbdet-%C3%BCt_Tevarih,_1598).jpg"},
-    socioeconomy:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ , JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
+    socioeconomy:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ, JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
     military:{slug:"harun-al-rashid",name:"Harun al-Rashid",img:"/images/encyclopedia/harun-al-rashid.jpg",artist:"8/9th-century master(s)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Gold_dinar_of_Harun_al-Rashid,_AH_170-193.jpg"},
     governance:{slug:"al-mamun",name:"al-Ma'mun",img:"/images/encyclopedia/al-mamun.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Abbasid_Caliph_al-Ma%27mun.jpg"},
     impact:{slug:"al-kitab-al-mukhtasar-fi-hisab-al-jabr-wal-muqabala",name:"Al-Kitāb al-mukhtaṣar fī ḥisāb al-jabr wal-muqābala",img:"/images/encyclopedia/al-kitab-al-mukhtasar-fi-hisab-al-jabr-wal-muqabala.jpg",artist:"Muḥammad ibn Musa al-Khwarizmi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Image-Al-Kit%C4%81b_al-mu%E1%B8%ABta%E1%B9%A3ar_f%C4%AB_%E1%B8%A5is%C4%81b_al-%C4%9Fabr_wa-l-muq%C4%81bala.jpg"},
@@ -348,7 +348,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"ala-ad-din-tekish",name:"Ala ad-Din Tekish",img:"/images/encyclopedia/ala-ad-din-tekish.jpg",artist:"Circa 1425 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Takash,_Sultan_of_Khwarazm,_Congratulated_by_Rashid_al-Din-i_Vatvat,_Yale_University_Art_Gallery,_accession_number_1983-94-10_(Takash_portrait)_Contrast.jpg"},
     socioeconomy:{slug:"gurganj",name:"Gurganj",img:"/images/encyclopedia/gurganj.jpg",artist:"The original uploader was Atilin at French Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Urgench.jpg"},
     military:{slug:"ala-ad-din-muhammad-ii",name:"Ala ad-Din Muhammad II",img:"/images/encyclopedia/ala-ad-din-muhammad-ii.jpg",artist:"Jami' al-tawarikh, Rashid al-Din, 15th century",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_II_portrait_in_a_1430_manuscript_of_the_Jami%27_al-tawarikh_by_Rashid-al-Din_Hamadani.jpg"},
-    impact:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ , JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
+    impact:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ, JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
     decline:{slug:"bukhara",name:"Bukhara",img:"/images/encyclopedia/bukhara.jpg",artist:"Euyasik",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kalon-Ensemble_Buchara.jpg"}
   },
   "Kongo Empire": {
@@ -600,7 +600,7 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"nishapur",name:"Nishapur",img:"/images/encyclopedia/nishapur.jpg",artist:"Masoud Kameli",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%D8%A2%D8%B1%D8%A7%D9%85%DA%AF%D8%A7%D9%87_%D8%B9%D9%85%D8%B1_%D8%AE%DB%8C%D8%A7%D9%85.jpg"},
     military:{slug:"alp-arslan",name:"Alp Arslan",img:"/images/encyclopedia/alp-arslan.jpg",artist:"Hafiz-i Abru",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alp_Arslan_on_throne_Majma_al-Tawarikh_by_Hafiz_Abru_(cropped).png"},
     governance:{slug:"nizam-al-mulk",name:"Nizam al-Mulk",img:"/images/encyclopedia/nizam-al-mulk.jpg",artist:"Themanlonewolf",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Nizam_Al-Mulk.png"},
-    impact:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ , JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
+    impact:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ, JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
     decline:{slug:"battle-of-qatwan",name:"Battle of Qatwan",img:"/images/encyclopedia/battle-of-qatwan.jpg",artist:"SY",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Qatwan.png"}
   },
   "Sikh Empire": {
@@ -835,7 +835,7 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"cabimas",name:"Cabimas",img:"/images/encyclopedia/cabimas.jpg",artist:"Zulianito",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Autopista_lara_zulia_en_cabimas.jpg"},
     military:{slug:"federal-war",name:"Federal War",img:"/images/encyclopedia/federal-war.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Combate_de_Maiquetia,_el_2_de_septiembre_de_1859.jpg"},
     governance:{slug:"jose-antonio-paez",name:"José Antonio Páez",img:"/images/encyclopedia/jose-antonio-paez.jpg",artist:"John J. Peoli",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_J._Peoli_-_General_Jose_Antonio_Paez_-_1910.10.4_-_Smithsonian_American_Art_Museum.jpg"},
-    impact:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ , JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
+    impact:{slug:"baghdad",name:"Baghdad",img:"/images/encyclopedia/baghdad.jpg",artist:"USACE HQ, JIM GORDAN, CIV, USACE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:5628442718_b10fc2c47f_o.jpg"},
     decline:{slug:"caracazo",name:"Caracazo",img:"/images/encyclopedia/caracazo.jpg",artist:"Yrmauhili",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Una_v%C3%ADctima_del_Caracazo_en_Petare.jpg"}
   },
   "Republic of Ecuador": {
@@ -2585,7 +2585,7 @@ var SECTION_IMAGES = {
     military:{slug:"pulakeshin-ii",name:"Pulakeshin II",img:"/images/encyclopedia/pulakeshin-ii.jpg",artist:"Unknown",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Pulakeshin_statue,_badami.png"},
     governance:{slug:"mattavilasa-prahasana",name:"Mattavilasa Prahasana",img:"/images/encyclopedia/mattavilasa-prahasana.jpg",artist:"Original uploaded by: Sreekanthv",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mani_damodara_Chakyar-mattavilasa.jpg"},
     impact:{slug:"descent-of-the-ganges",name:"Descent of the Ganges",img:"/images/encyclopedia/descent-of-the-ganges.jpg",artist:"Bernard Gagnon",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg"},
-    decline:{slug:"aditya-i",name:"Aditya I",img:"/images/encyclopedia/aditya-i.jpg",artist:"Venu62 (Uploads)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Aditya_territories.png"}
+    decline:{slug:"aditya-i",name:"Aditya I",img:"/images/encyclopedia/aditya-i.jpg",artist:"Venu62",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Aditya_territories.png"}
   },
   "Satavahana dynasty": {
     foundation:{slug:"simuka",name:"Simuka",img:"/images/encyclopedia/simuka.jpg",artist:"Photograph by Kevin Standage Rubbing by J. Burgess (1883, d. 1892)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Simuka_inscription_at_Naneghat_Caves.jpg"},
@@ -3338,13 +3338,16 @@ var SECTION_IMAGES = {
   "Swahili": {
     origins:{slug:"ibn-battuta",name:"Ibn Battuta",img:"/images/encyclopedia/ibn-battuta.jpg",artist:"Léon Benett",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Handmade_oil_painting_reproduction_of_Ibn_Battuta_in_Egypt,_a_painting_by_Hippolyte_Leon_Benett..jpg"},
     speakers:{slug:"tippu-tip",name:"Tippu Tip",img:"/images/encyclopedia/tippu-tip.jpg",artist:"John Kirk (Life time: Subject died 14/6/1905 AD, author died 15/1/1922 AD)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Photo_of_the_famous_slave_trader_Tippu_Tip.jpg"},
-    literature:{slug:"utendi-wa-tambuka",name:"Utendi wa Tambuka",img:"/images/encyclopedia/utendi-wa-tambuka.jpg",artist:"19th century manuscript, Mwana, Kupona, 1810-1860 ( Author, Primary ), Kijuma, Muhammad ( scribe )",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Utenzi_wa_Hirqal_(MS_45022a).png"},
+    literature:{slug:"utendi-wa-tambuka",name:"Utendi wa Tambuka",img:"/images/encyclopedia/utendi-wa-tambuka.jpg",artist:"19th century manuscript, Mwana, Kupona, 1810-1860 (Author, Primary), Kijuma, Muhammad (scribe)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Utenzi_wa_Hirqal_(MS_45022a).png"},
     change:{slug:"julius-nyerere",name:"Julius Nyerere",img:"/images/encyclopedia/julius-nyerere.jpg",artist:"Rob Mieremet / Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:President_Nyerere_van_Tanzania,_koppen,_Bestanddeelnr_928-2879_(cropped).jpg"},
     legacy:{slug:"kilwa-kisiwani",name:"Kilwa Kisiwani",img:"/images/encyclopedia/kilwa-kisiwani.jpg",artist:"Khalidsalewa",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Great_Mosque_Kilwa_Interior.jpg"}
   },
   "Yoruba religion": {
     origins:{slug:"oduduwa",name:"Oduduwa",img:"/images/encyclopedia/oduduwa.jpg",artist:"Tunde Akangbe",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Oduduwa_02.jpg"},
-    community:{slug:"ife",name:"Ife",img:"/images/encyclopedia/ife.jpg",artist:"Oramfe",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Ile_Ife_aerial_scape.jpg"}
+    beliefs:{slug:"eshu",name:"Eshu",img:"/images/encyclopedia/eshu.jpg",artist:"Unknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Wooden_figure_representing_the_god_Eshu,_Nigeria,_1880-1920_Wellcome_L0057651.jpg"},
+    spread:{slug:"candomble",name:"Candomblé",img:"/images/encyclopedia/candomble.jpg",artist:"André Koehne",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Caetit%C3%A9_baianas.jpg"},
+    community:{slug:"osun-osogbo",name:"Osun-Osogbo Sacred Grove",img:"/images/encyclopedia/osun-osogbo.jpg",artist:"ABORISADEADETONA",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Osun_groove_Osogbo.jpg"},
+    legacy:{slug:"orisha",name:"Orisha",img:"/images/encyclopedia/orisha.jpg",artist:"Turismo Bahia",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Dique_do_Tororó_-_Foto_-_Tereza_Torres_-_Setur_(15659893633).jpg"}
   },
   "Zoroastrianism": {
     origins:{slug:"cyrus-the-great",name:"Cyrus the Great",img:"/images/encyclopedia/cyrus-the-great.jpg",artist:"Surenae",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cyrus_II_(The_Great)_(cropped).jpg"},
@@ -3486,7 +3489,7 @@ var SECTION_IMAGES = {
   "Cherokee Nation": {
     foundation:{slug:"new-echota",name:"New Echota",img:"/images/encyclopedia/new-echota.jpg",artist:"Thomson200",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Council_House,_New_Echota,_GA_July_2017.jpg"},
     socioeconomy:{slug:"cherokee",name:"Cherokee",img:"/images/encyclopedia/cherokee.jpg",artist:"Henry Inman",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_Inman_-_Sequoyah_-_Google_Art_Project.jpg"},
-    military:{slug:"creek-war",name:"Creek War",img:"/images/encyclopedia/creek-war.jpg",artist:"John Reuben Chapin, 1823-1894 , artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jackson_and_Weatherford.jpg"},
+    military:{slug:"creek-war",name:"Creek War",img:"/images/encyclopedia/creek-war.jpg",artist:"John Reuben Chapin, 1823-1894, artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jackson_and_Weatherford.jpg"},
     impact:{slug:"john-marshall",name:"John Marshall",img:"/images/encyclopedia/john-marshall.jpg",artist:"Henry Inman",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Marshall_by_Henry_Inman,_1832.jpg"}
   },
   "Comancheria": {
@@ -4838,7 +4841,7 @@ var SECTION_IMAGES = {
     community:{slug:"5th-dalai-lama",name:"5th Dalai Lama",img:"/images/encyclopedia/5th-dalai-lama.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thangka_of_the_5th_Dalai_Lama.jpg"}
   },
   "Chinese folk religion": {
-    beliefs:{slug:"guan-yu",name:"Guan Yu",img:"/images/encyclopedia/guan-yu.jpg",artist:"Unknown , uploaded by Tiangong83 on zh.wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guanyu-1.jpg"},
+    beliefs:{slug:"guan-yu",name:"Guan Yu",img:"/images/encyclopedia/guan-yu.jpg",artist:"Unknown, uploaded by Tiangong83 on zh.wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guanyu-1.jpg"},
     texts:{slug:"daodejing",name:"Daodejing",img:"/images/encyclopedia/daodejing.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mawangdui_LaoTsu_Ms2.JPG"},
     spread:{slug:"hongwu-emperor",name:"Hongwu Emperor",img:"/images/encyclopedia/hongwu-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"}
   },

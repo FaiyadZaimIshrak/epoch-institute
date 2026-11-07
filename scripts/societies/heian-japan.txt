@@ -22,8 +22,8 @@ local: Tennō
 share: 0
 sharenote: One man, with the imperial family.
 firm: no
-terms:
-people: emperor-kanmu
+terms: ritsuryo
+people: emperor-kanmu, emperor-daigo, emperor-uda, emperor-go-sanjo, emperor-shirakawa
 text: The emperor stood at the head of the ritsuryō state and ruled from Heian-kyō, the capital Emperor Kanmu founded in 794 on the model of the Tang capital Chang'an. Kanmu and his successors down to Emperor Saga governed in person, and Emperor Daigo ruled directly from 897 to 930. By 1000 the imperial house had power only on the surface. Most emperors had Fujiwara mothers and, by the custom of the time, were raised in their mother's household and owed loyalty to their Fujiwara grandfather. Fujiwara no Michinaga could enthrone and dethrone emperors at will. Even so, the Fujiwara never tried to replace the dynasty, and the succession stayed within the imperial family.
 rise: The throne passed by heredity within the imperial family, but in the age of the regents the head of the Fujiwara decided who would reign. Branches of the imperial line grew into clans of their own: the Taira and Minamoto both descended from the imperial family.
 you: You reign from the palace in Heian-kyō as head of the court and the state, but you grew up in your Fujiwara mother's household, and your grandfather the regent decides much of what is done in your name.
@@ -39,7 +39,7 @@ share: 0
 sharenote: One man at a time: the head of the Northern (Hokke) branch of the Fujiwara, with his household.
 firm: no
 terms: fujiwara-clan
-people:
+people: fujiwara-no-michinaga, fujiwara-no-yoshifusa
 text: The real power lay with the Fujiwara, descendants of Nakatomi no Kamatari, and their way to it was marriage: Fujiwara daughters became the consorts of emperors, and the clan's heads were the fathers-in-law, uncles and grandfathers of the next. In 858 Fujiwara no Yoshifusa became the first man outside the imperial family to act as regent for a child emperor, his grandson; his adopted son Mototsune was made kampaku, regent for an adult emperor, a newly invented post. The Northern branch made the regency hereditary. Fujiwara no Michinaga (966–1027), grandfather of three emperors and father of six empresses or imperial consorts, never took the title of kampaku: he had no need of it. Government passed through the family's private administration: the historian George Sansom called the Fujiwara "hereditary dictators".
 rise: The regency stayed within the Northern Fujiwara, and its hold rested on Fujiwara daughters married into the imperial family. An emperor born of another mother could slip their hold: Emperor Uda regained much of the government, and Emperor Go-Sanjō, from 1068, curbed the Fujiwara and began the rule of retired emperors.
 you: You head the Northern Fujiwara: your daughters are empresses, your grandson sits on the throne, and the business of state passes through your own household's offices.
@@ -55,8 +55,9 @@ local: Kizoku
 share: 0.1
 sharenote: About 5,000 aristocrats "in a land of perhaps five million", the Heian period article's figure.
 firm: yes
-terms: kuge
-people:
+terms: kuge, kugyo, the-pillow-book
+people: murasaki-shikibu, sei-shonagon
+picture: -
 text: The codes gave every public post a court rank, from the first rank down to the eighth and an initial rank below it, divided into senior and junior and, below the third rank, into upper and lower. Holders of the fifth rank and above were the aristocrats (kizoku), and their rice income rose steeply: a fifth-rank noble might draw 225 koku a year and a third-rank one as much as 6,957. Hereditary high ranks let a few families, the Fujiwara, Minamoto, Taira and Tachibana, monopolise the great posts. The nobles preferred life at court to governing the provinces. Poetry was a staple of their lives, any occasion called for a verse, and a poor hand was taken as a sign of poor breeding.
 rise: Rank came largely with birth: the children of high officials were granted a minimal rank of their own, and promotion was slow and bureaucratic. A noble out of favour could lose everything: when the warrior Taira no Kiyomori ruled after 1159, he removed and exiled 45 court officials.
 you: You hold the fifth court rank or higher, live in Heian-kyō on the rice of your offices and estates, and must answer every occasion with a well-made poem in a fine hand.
@@ -71,8 +72,8 @@ local: -
 share: est 0.3-1
 sharenote: Estimate: the monks of the great monasteries of Heian-kyō, Nara, Mount Hiei and Mount Kōya and the priests of the shrines; the articles give no count.
 firm: no
-terms: buddhism, shinto, mount-hiei, enryaku-ji, lotus-sutra
-people:
+terms: buddhism, shinto, mount-hiei, enryaku-ji, lotus-sutra, tendai, shingon-buddhism, mount-koya
+people: kukai, saicho
 picture: lotus-sutra
 text: Two new schools of Buddhism rose with the Heian court. Tendai, brought from China by the monk Saichō, rested on the Lotus Sutra and taught that enlightenment was open to "every creature"; its monastery on Mount Hiei, above the capital, grew close to the court and taught great reverence for the emperor. Shingon, brought by the monk Kūkai, who founded the monastery of Mount Kōya in 819, worked through symbols, rituals, incantations and mandalas. Both sought the support of the aristocracy, the "aristocratic Buddhism" of the age. The great temples of Heian-kyō and Nara held tax-free estates, and the temples and shrines formed guard units of their own. Literacy was common only among the court and the Buddhist clergy.
 rise: Saichō sought the right to ordain Tendai monks independently. Emperors too could take the robe: in 1087 Emperor Shirakawa abdicated and became a Buddhist monk, the first of the cloistered emperors.
@@ -104,8 +105,8 @@ local: Bushi
 share: est 0.5-2
 sharenote: Estimate: the provincial upper class that was turning into a military elite, with the district heads and the warrior posts of the court; the articles give no count.
 firm: no
-terms: samurai, seiwa-genji
-people:
+terms: samurai, seiwa-genji, taira-clan
+people: taira-no-kiyomori, fujiwara-no-sumitomo
 text: When Emperor Kanmu abandoned universal conscription in 792, local power holders again became the source of military strength. The court had no army and relied on professional warriors: the oryōshi, appointed to a province, and the tsuibushi, appointed over a circuit or for a task. Estate holders had men at their command, and with stronger bows, armour, horses and better swords, military service became part of estate life; on the estates, local chiefs of the peasants also served as district heads (gunji) and recruited their labour. Gradually the provincial upper class became a new military elite of samurai, who helped suppress the risings in Hitachi in the east and of Fujiwara no Sumitomo in the west; final authority still rested with the court.
 rise: Regional military families formed around members of the court aristocracy who had become provincial figures, and gained prestige from court-granted military titles; the Taira and Minamoto were among the most prominent. After 1156 warriors took control of court affairs, and in 1185 the Minamoto founded the shogunate at Kamakura.
 you: You are a mounted warrior of a provincial family, armed with a powerful bow, guarding an estate for its owner and hoping for a military title from the court.
@@ -166,4 +167,4 @@ NOTE: The Heian period article says "The aristocratic beneficiaries of Heian cul
 NOTE: The Heian period and Fujiwara clan articles say the Fujiwara, Taira and Minamoto "all ... had descended from the imperial family"; the Fujiwara clan article itself derives the Fujiwara from Nakatomi no Kamatari. The ladder says it only of the Taira and Minamoto.
 NOTE: The kuge entry has no picture; the court nobles' rank needs one (a Heian court painting or emaki, if the editor finds a free one).
 NOTE: The Lotus Sutra entry's picture (Sugawara Mitsushige's illustrated Lotus Sutra) is probably of the 13th century, after the period; chosen as the nearest to the age, for the editor to judge. The page picture (heian-kyo) is a plan of the palace enclosure.
-MISSING: Fujiwara no Michinaga, Fujiwara no Yoshifusa, Fujiwara no Mototsune, Murasaki Shikibu, Sei Shōnagon, Tale of Genji, Pillow Book, Kagerō Nikki, Kūkai, Saichō, Tendai, Shingon, Mount Kōya, shōen, ritsuryō, sesshō and kampaku, kugyō, jige, ryōmin and senmin, kana (hiragana, katakana), Emperor Daigo, Emperor Uda, Emperor Go-Sanjō, Emperor Shirakawa, cloistered rule (insei), Taira clan, Minamoto clan, Taira no Kiyomori, Fujiwara no Sumitomo, Hōgen Rebellion, jūnihitoe
+MISSING: Tale of Genji, sesshō and kampaku, jige, ryōmin and senmin

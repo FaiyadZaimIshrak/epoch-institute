@@ -22,7 +22,7 @@ local: Qa'an
 share: 0
 sharenote: One man, with the imperial family of the Borjigin clan.
 firm: yes
-terms: khagan, kurultai, mandate-of-heaven
+terms: khagan, kurultai, mandate-of-heaven, war-of-the-two-capitals
 people: kublai-khan, ayurbarwada-buyantu-khan, toghon-temur
 text: The Yuan ruler was at once emperor (huangdi) to his Chinese subjects and khagan, Great Khan, to the Mongols. Kublai, a grandson of Genghis Khan, was elected Great Khan by an assembly (kurultai) at Kaiping in 1260, while a rival assembly chose his brother Ariq Böke, who surrendered in 1264. Kublai proclaimed the Great Yuan in 1271 and ruled from a new capital, Khanbaliq (Dadu), with a summer capital at Shangdu. He followed Confucian rites and ancestor veneration while keeping the customs of the steppe, and received Tibetan Buddhist initiation from the lama Phagpa. No law fixed the succession: any descendant of Kublai might rule, and the assemblies debated the choice until 1311, after which empress dowagers, the guards and great ministers made emperors. Most emperors spoke Chinese but could not master its writing. Reigns grew short after Kublai's death in 1294: a group of princes murdered Emperor Gegeen in 1323, and in 1328 a civil war, the War of the Two Capitals, decided the throne.
 rise: Any descendant of Kublai could rule, chosen by an assembly of princes or, later, by whichever faction held the guards and the capital. The last emperor, Toghon Temür, fled north to the steppe in 1368 as the Ming army approached.
@@ -38,7 +38,7 @@ local: Wang
 share: est 0.01-0.05
 sharenote: Estimate: the princes of Genghis Khan's line and the families that married into it were few, though their households and followers were large.
 firm: yes
-terms: borjigin, appanage, kurultai
+terms: borjigin, appanage, kurultai, khongirad
 people:
 picture: kurultai
 text: Below the emperor stood the Golden Lineage, the princes descended from Genghis Khan, and the families that married into it. Princes held appanages, grants of land and households whose revenue they drew: as early as 1236 Kublai had received an estate of 10,000 households in North China. They sat in the assemblies that chose the khagan, commanded armies and kept their own followers, and they were the dynasty's greatest danger. Prince Nayan, a descendant of one of Genghis Khan's brothers, rose against Kublai in 1287 and was executed in the way reserved for princes, smothered under felt carpets, and his followers' troops were shared out among the imperial family. Custom bound the emperors in marriage to a few Mongol clans, above all the Onggirat and the Ikires, whose daughters became empresses and whose sons married imperial princesses. Even the crown prince of Goryeo in Korea, the future King Chungnyeol, married a daughter of Kublai, making the kings of Goryeo imperial sons-in-law.
@@ -55,7 +55,7 @@ local: Guan
 share: est 0.1-0.2
 sharenote: Estimate: some 20,000–26,000 officials in the empire, the most powerful offices reserved for Mongols and semu, with their families.
 firm: yes
-terms: semu, imperial-examination
+terms: semu, imperial-examination, darughachi
 people: ahmad-fanakati, guo-shoujing, toghto
 picture: -
 text: The Yuan kept the institutions of a Chinese state, a Central Secretariat, a Bureau of Military Affairs and a Censorate, but filled the posts by origin. The two grand chancellors could only be Mongols or semu, and the four managers of affairs below them only occasionally included a northern Chinese and never a southerner. In each district a darughachi, a Mongol or semu overseer, served beside the Chinese administrators. Kublai would not revive the civil service examinations: he chose officials by recommendation and by the hereditary privilege of officials' sons, and he relied on Central Asians for finance, above all the Muslim Ahmad Fanakati, his finance minister for some twenty years until his murder in 1282. Chinese advisers kept real influence, and Chinese experts such as Guo Shoujing, director of the observatory from 1283 and head of the Water Works Bureau from 1292, held technical posts. Later Mongol chancellors such as Toghto had a Confucian education. In the 1320s the court even sold offices.
@@ -72,7 +72,7 @@ local: Toyin
 share: est 0.3-0.6
 sharenote: Estimate: in 1291 the empire registered some 42,000 Buddhist monasteries and 213,000 monks and nuns, with the clergy of other faiths in households of their own.
 firm: no
-terms: tibetan-buddhism, church-of-the-east, quanzhen-school
+terms: tibetan-buddhism, church-of-the-east, quanzhen-school, imperial-preceptor, xuanzheng-yuan
 people: drogon-chogyal-phagpa, rabban-sauma
 text: The Mongols honoured the holy men of every faith. A decree of Genghis Khan, renewed until the end of the dynasty, exempted Buddhist monks, Daoist priests, Christian clergy and Muslim clerics from taxes and labour service, though from 1264 Kublai taxed clergy who farmed or traded. Highest stood the lamas of Tibetan Buddhism, the favoured faith of the court. Kublai made the Sakya lama Phagpa his State Preceptor in 1260 and later Imperial Preceptor (dishi), with authority over all the empire's Buddhist monks, and a bureau founded in 1264, from 1288 called the Bureau of Buddhist and Tibetan Affairs, governed both the monks and Tibet. Tibetan monks made free use of the official post-stations and won pardons for prisoners who bribed them; in 1309 their bureau decreed that anyone who struck a monk should lose a hand, until the emperor repealed it. Daoists lost ground to the Buddhists, while Christians of the Church of the East, such as the monk Rabban Sauma, had an office of their own.
 rise: Men and women entered the clergy by taking vows, and service to the court could lead far: Sangha, who rose through the Buddhist bureau, became the dynasty's chief fiscal officer in 1286. In 1329 foreign clerics, Muslims among them, lost their tax exemptions.
@@ -89,7 +89,7 @@ share: est 0.3-1
 sharenote: Estimate: Confucian scholars were registered in households of their own, most of them in the south.
 firm: no
 terms: imperial-examination, neo-confucianism, zaju
-people:
+people: zhao-mengfu
 picture: -
 text: The Confucian literati, who under the Song had filled the bureaucracy through the examinations, lost their road to power. The Mongols counted Confucian scholars among the learned men of the empire's faiths and, like the clergy, exempted them from labour service and at first from taxes, but Kublai refused to restore the examinations, believing that Confucian learning was not needed for government. Southern scholars, heirs of the Song elite, suffered most. Many became teachers, clerks, physicians or writers: medicine paid well and suited Confucian ethics, and the zaju drama flourished as literati turned to the stage. Song loyalist writers complained that the new order ranked Confucians ninth of ten grades of people, just above beggars, a bitter jest rather than a law. Emperor Ayurbarwada, who had been taught by a Confucian tutor, restored the examinations by an edict of 1313; the first metropolitan examination was held in 1315 on Zhu Xi's commentaries to the classics, but the degrees averaged only about twenty-one a year.
 rise: From 1315 a scholar could again win office by examination, though southerners competed for a quarter of the places. Others reached office by recommendation, as the scholar and painter Zhao Mengfu, a descendant of the Song emperors, did after Kublai received him in 1286.
@@ -105,7 +105,7 @@ local: Ortogh
 share: est 2-4
 sharenote: Estimate: from the ortogh partners of the court to the shopkeepers of the southern cities.
 firm: no
-terms: paper-money, quanzhou
+terms: paper-money, quanzhou, ortogh, jiaochao
 people:
 text: Trade prospered under Mongol rule, and the richest merchants were partners of the rulers themselves. The ortogh, from a Turkic word for "partner", were semu merchants, many of them Muslims and Uyghurs, to whom princes, nobles and the state entrusted silver to invest in caravans and moneylending. They received high commissions, cheap loans from an office Kublai set up in 1268 and the use of the official post-stations, and, to the anger of Chinese officials, the right to bear arms; their lending at high interest made them hated. After the conquest of the Song, Muslim, Uyghur and Chinese merchants sailed from the southern ports such as Quanzhou to the South China Sea and the Indian Ocean, and from 1286 maritime trade was taxed through the Office of Market Taxes. Paper money, the jiaochao, issued from 1260, circulated across the empire, though over-issue later brought inflation. Most merchants were Chinese traders and shopkeepers, and the busy commerce of the south let southern manufacturers and merchants prosper.
 rise: Trade could bring influence: in Quanzhou, Muslim merchant families combined commerce with political power. At the end of the dynasty their wealth drew a violent backlash from the Chinese.
@@ -153,7 +153,7 @@ local: Nanren
 share: rest
 sharenote: Everyone not counted in the other tiers: chiefly the farmers and townspeople of the former Song lands, some 12 million registered households in 1290. Several of the other ranks are estimates, so this share is one too.
 firm: yes
-terms: song-dynasty, red-turban-rebellion
+terms: song-dynasty, red-turban-rebellion, nanren
 people:
 picture: -
 text: The southerners (nanren), the subjects of the Southern Song conquered in the 1270s, were by far the largest group and the lowest of the four, because they had resisted longest. Their land was the richest in the empire: by about 1250 three-quarters of China's people lived south of the Yangtze, most of them growing rice. Most southerners were farmers, many of them tenants of great landlords, and townspeople of cities such as Hangzhou, the former Song capital and the largest city of the Yuan realm. Commerce flourished, and southern manufacturers and merchants prospered, yet southerners were kept from high office: none sat among the grand chancellors or the managers of affairs, and in the restored examinations they had the same quota as the far smaller Mongol and semu groups. The censuses may have missed many of them, as many as 40 million people on one estimate. Taxes, the inflation of the paper money and the famines of the 1340s fed the Red Turban Rebellion of 1351.
@@ -194,4 +194,4 @@ Rossabi, M. (1988) Khubilai Khan: His Life and Times. Berkeley: University of Ca
 
 == checked
 Yuan dynasty; Semu; Kublai Khan; Military of the Yuan dynasty; Imperial examination; Tibet under Yuan rule; Religion in the Mongol Empire; Ortogh; Darughachi; Slave trade in the Mongol Empire; Slavery in China; Destruction under the Mongol Empire; Economic history of China before 1912; Population history of China; Mongol conquest of China; Chinese Buddhism; Hongwu Emperor; Empress Gi; Huang Daopo; Zhao Mengfu; Guo Shoujing; Toghto; Guan Hanqing; Yelü Chucai
-MISSING: darughachi, ortogh, Imperial Preceptor (dishi), Bureau of Buddhist and Tibetan Affairs, Sangha (Yuan minister), Han ren, nanren, Confucian households (ruhu), qukou, military households (junhu), Tammachi, Han army, Newly Adhered Army, suwei, Onggirat, Ikires, Nayan, Emperor Gegeen, War of the Two Capitals, School for the Sons of the State, jiaochao, Song Zichen, Zhao Mengfu, Guan Daosheng, Huang Daopo, Empress Gi
+MISSING: Sangha (Yuan minister), Han ren, Confucian households (ruhu), qukou, military households (junhu), Tammachi, Han army, Newly Adhered Army, suwei, Ikires, Nayan, Emperor Gegeen, School for the Sons of the State, Song Zichen

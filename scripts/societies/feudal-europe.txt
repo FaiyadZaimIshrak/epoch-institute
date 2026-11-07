@@ -56,7 +56,7 @@ share: est 0.005-0.02
 sharenote: Estimate: some 300 bishops and a few thousand abbots in France, England and the German lands.
 firm: yes
 terms: bishop, concordat-of-worms
-people: lanfranc, anselm-of-canterbury, suger, bernard-of-clairvaux
+people: lanfranc, anselm-of-canterbury, suger, bernard-of-clairvaux, thomas-becket
 text: Bishops governed the dioceses of the Church, and abbots and abbesses the great monasteries. Most came from noble families and lived as great lords: their churches held vast estates, more than a quarter of the manors of England by value in 1086, and they kept households and courts of their own. In England and the German lands they owed knights to the king for their lands, and many German bishops and abbots ruled whole territories as princes of the Empire. Kings relied on their learning and loyalty, and many served as royal advisers, as Suger, abbot of Saint-Denis, did for Louis VI and Louis VII. Who should choose them lay at the heart of the struggle between popes and emperors that ended with the Concordat of Worms in 1122, when the emperor gave up investing bishops with ring and staff. As clergy, prelates answered to church courts rather than the king's.
 rise: Bishops were elected by the clergy of their cathedrals and abbots by their monks, though kings and great lords often decided the choice. Learning and royal service could carry a man of modest birth to these offices: Thomas Becket, a London merchant's son, became Archbishop of Canterbury in 1162.
 you: You rule a diocese or a great abbey with wide estates, advise the king and answer only to church courts, and like most prelates you were probably born into a noble family.
@@ -71,7 +71,7 @@ local: Milites
 share: est 0.5-1.5
 sharenote: Estimate: England had perhaps 4,500–5,000 knights around 1200 among some 4 million people; with their families roughly 0.5 per cent there, more in France and the German lands.
 firm: yes
-terms: knighthood
+terms: knighthood, fief, ministerialis, peace-and-truce-of-god
 people: william-marshal-1st-earl-of-pembroke, wolfram-von-eschenbach
 picture: wolfram-von-eschenbach
 text: Knights were mounted warriors in mail armour, the elite of every army. A knight usually lived from a fief, often a single manor, held from a lord in return for homage and military service, commonly forty days a year; in England the service could be paid off in money (scutage). Horse, armour and weapons were costly, so a knight lived from the labour of the peasants on his land. Over the 12th century knighthood became a rank of the lesser nobility: boys of knightly families were trained in a lord's household and dubbed knights in a ceremony, and the Church tried to restrain their violence through the Peace and Truce of God and to turn it towards the crusades. In the German lands most knights were ministeriales, legally unfree servants of the emperor, princes and bishops, who nevertheless ranked above free commoners and by the 13th century had merged with the lesser nobility.
@@ -123,7 +123,7 @@ share: est 0.1-0.5
 sharenote: Estimate: England had perhaps 5,000 Jews in the mid-13th century, about a tenth of a per cent of its people; the communities of France and the German lands were larger, though the figure of 100,000 often given for France in 1306 has no sound basis.
 firm: no
 terms: jews, ashkenazi-jews
-people:
+people: rashi
 picture: -
 text: Jewish communities lived in the towns of France, England and the Rhineland, outside the Christian orders and under the protection of the ruler. In law they belonged to him: a 12th-century English law book declared that "the Jews themselves and all their chattels are the king's", and in 1236 Emperor Frederick II made all the Jews of Germany servants of his treasury (servi camerae). Rulers could therefore tax them at will. Kept to few occupations, many lent money at interest, which the Church forbade Christians to do; others traded, and the commentary of Rashi of Troyes (1040–1105) is printed in every edition of the Talmud. They suffered massacres during the First Crusade in 1096 and repeated violence later, and the Fourth Council of the Lateran (1215) ordered Jews to wear distinctive dress. Philip II of France expelled them from his lands in 1182 and recalled them in 1198; Edward I of England expelled all Jews from his kingdom in 1290, and Philip IV of France did the same in 1306.
 rise: Standing in the community came from learning and wealth, but both rested on the ruler's protection, which a new tax, a confiscation or an expulsion could end.
@@ -139,7 +139,7 @@ local: Liberi homines
 share: 10-15
 sharenote: In England, Domesday Book (1086) listed about 12 per cent of the people it records as freeholders; the share varied widely by region, and no count exists for France or the German lands.
 firm: yes
-terms: domesday-book
+terms: domesday-book, tithe
 people:
 picture: -
 text: Free peasants held land without the marks of serfdom. In England they were freeholders and sokemen, most numerous in the east, who could buy and sell their land and paid money rents instead of working on the lord's fields. Some were prosperous, others had only a few acres, and all still paid tithe and attended the lord's manor court. Lords who needed settlers to clear forests and marshes, or to farm the lands east of the Elbe opened by German settlement (the Ostsiedlung), offered them easier terms. What set free peasants apart was the law: they could leave, marry without paying the lord a fine, and in England, once the reforms of Henry II had built the common law, take a dispute with their lord to the king's courts. Free status could be lost, however, and after 1066 many English free peasants sank into dependence.
@@ -196,4 +196,4 @@ Reynolds, S. (1994) Fiefs and Vassals: The Medieval Evidence Reinterpreted. Oxfo
 
 == checked
 Feudalism; Estates of the realm; Adalbero of Laon; Serfdom; Villein; Manorialism; Peasant; Medieval demography; Domesday Book; Slavery in medieval Europe; Slavery in Britain; Norman Conquest; Economy of England in the Middle Ages; England in the Middle Ages; Feudalism in England; Knight; Knight's fee; Ministerialis; Medieval commune; History of the Jews in England; History of the Jews in France; Servi camerae regis; Women in the Middle Ages; Suger; Thomas Becket; William Marshal, 1st Earl of Pembroke; Peasants' Revolt
-MISSING: manorialism, fief, ministeriales, Peace and Truce of God, Investiture Controversy, tithe, Ostsiedlung, Edict of Expulsion, Thomas Becket, Hildegard of Bingen, Rashi, Adalbero of Laon, Gerard of Cambrai
+MISSING: Gerard of Cambrai

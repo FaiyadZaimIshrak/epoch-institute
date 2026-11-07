@@ -56,8 +56,9 @@ local: Boyare
 share: est 0.05-0.2
 sharenote: Estimate: the senior men of the princes' retinues with their families; the articles give no count, but Ibrahim ibn Yaqub reckoned the whole retinue of Mieszko I of Poland in 961–62 at 3,000 paid men, and the boyars were only its senior part.
 firm: yes
-terms:
+terms: boyar
 people:
+picture: -
 text: The boyars were the senior members of the prince's druzhina and the highest nobility of Rus', second only to the princes. They wielded power through their military support of the princes, and their power and prestige came to depend almost completely on service, on a family history of service and, to a lesser extent, on land. They held the highest offices, military, domestic and urban, and through a council (duma) they advised the grand prince; they received extensive grants of land and were the chief legislators of Kievan Rus'. In appearance they were very like knights. Their loyalty was to the prince in person, so a druzhina could, to a degree, choose whom to support.
 rise: A boyar's standing came from service to a prince and from his family's record of service, rewarded with offices and land. Because the bond was personal it could break: when Boris refused the throne of Kiev that his father's druzhina offered him in 1015, the druzhina dispersed, and his brother Sviatopolk's agents murdered him.
 you: You are a senior man of the prince's druzhina: you sit in his council, command in his wars and run a town for him, and he rewards you with land, but your fortune lasts only as long as you and he keep faith with each other.
@@ -72,7 +73,7 @@ local: Mladshaia druzhina
 share: est 0.3-1
 sharenote: Estimate: the princes' armed men, stewards and officials with their families; the articles give no count, but a Polish duke of the 960s paid a retinue of 3,000 men, and every prince of Rus' kept one.
 firm: no
-terms: varangians
+terms: varangians, druzhina
 people:
 picture: -
 text: Below the boyars stood the rank and file of the druzhina, the "youths" of the junior retinue, and the prince's servants. At its core the druzhina was the prince's permanent bodyguard; more broadly it was his household, his court. A wise prince was expected to keep it close, feast with it, consult it and reward it. It had its own hierarchy and offices, and military and administrative work ran together: the "swordman" (mechnik) also had a part in gathering tribute. The law of Yaroslav's sons made a community answer more heavily for killing the prince's men on its land: his tiuns, privileged servants of princes and boyars; his starostas, low-ranking administrators; his otroks, low-ranking soldiers; and his other servants.
@@ -124,7 +125,7 @@ local: Smerdy
 share: rest
 sharenote: Everyone not counted in the other ranks: the peasants of the countryside, the great majority. The other ranks are estimates, so this share is one too.
 firm: no
-terms:
+terms: smerd
 people:
 text: Most people of Rus' were peasants: the Slavs were above all farmers, growing cereals and raising livestock. In the law they were smerds, a word from a root meaning "ordinary man" or "dependent man". Free at first, the smerds gradually lost their freedom, in part or wholly, and their legal status differed from group to group. Unlike slaves they had their own property and paid fines for their offences, yet they never held full rights: a smerd's killer paid the same fine as a kholop's, and the prince inherited a dead smerd's property. The Pravda forbade torturing a smerd under examination in court without the prince's consent. Their villages formed communes (verv, hromada) within a volost.
 rise: Debt pulled smerds down: a peasant who took a loan became a zakup until he repaid it, and one sold for his debts became a kholop.
@@ -157,7 +158,7 @@ local: Kholopy
 share: est 5-10
 sharenote: Estimate: the articles give no count; until the late 15th century kholops were the majority of the servants who worked the lords' lands, and slaves were among the chief exports of Rus'.
 firm: yes
-terms: slavery
+terms: slavery, kholop
 people:
 picture: -
 text: Kholops were the unfree of Rus': in the 11th and 12th centuries the word covered several kinds of dependent people, and especially slaves. A master had unlimited power over a kholop: he could kill him, sell him or hand him over to settle a debt, though he answered for his kholop's deeds, such as insulting a free man or stealing. People became kholops through capture, by selling themselves, by being sold for their debts, after committing crimes, or by marrying a kholop. Slaves were also a trade good: the Rus' floated them down the Dnieper to Byzantium, and some subject tribes paid their tribute in slaves. Some, mainly house serfs, worked in trades, farming or administration.
@@ -186,4 +187,4 @@ NOTE: The order of the smerds, zakups and kholops follows the Russkaya Pravda ar
 NOTE: The Russkaya Pravda article glosses the kholop as "a feudal-dependent peasant" and the Kholop article as "a type of feudal serf", but both describe a master's unlimited power to kill or sell him, and the Kholop article says the term meant "especially slaves" in the 11th–12th centuries: hence band enslaved.
 NOTE: The Pravda of Yaroslav's sons (most likely 1072) names, beside the princes Iziaslav, Vsevolod and Sviatoslav, three men "Kosniachko Pereneg, Mikyfor the Kievan, and Chudin Mikula"; the article does not say they were boyars, so they are left out.
 NOTE: The poliudie (the winter tribute round) is described in the Economy section without a date; the grand prince's text keeps it in general terms ("the ruler of Kiev").
-MISSING: boyar, druzhina, smerd, kholop, zakup, tiun, otrok, poliudie, Boris (son of Vladimir), Kiev uprising of 1113, Pravda of Yaroslav's sons (Pravda Yaroslavichey)
+MISSING: zakup, tiun, otrok, Boris (son of Vladimir), Kiev uprising of 1113, Pravda of Yaroslav's sons (Pravda Yaroslavichey)

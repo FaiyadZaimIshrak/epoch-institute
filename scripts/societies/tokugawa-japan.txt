@@ -23,7 +23,7 @@ local: Kinri and kuge
 share: est 0.005-0.01
 sharenote: Estimate: one emperor with his family and about 130 houses of the higher court nobility (dōjō kuge), a few thousand people among some 30 million.
 firm: no
-terms:
+terms: kuge
 people:
 text: Highest in honour stood the emperor in Kyoto. He was the official ruler of Japan and the source of court ranks and titles, the shogun's included, but he had virtually no power. The shogunate's Laws for the Imperial and Court Officials of 1615 told him to devote himself to scholarship and poetry, a shogunal deputy, the Kyoto shoshidai, oversaw the court, and the emperor lived secluded in his palace on revenues granted by the shogunate. Around him lived the court nobles (kuge), about 130 families of the higher dōjō rank, among the most honoured families in Japan. Each house could rise only to the court offices its rank allowed, and the regency was reserved for five houses of the Fujiwara line. With little income of their own, the kuge earned fees by licensing pupils in the arts of the court, such as waka poetry and the biwa lute; their pupils included daimyo and rich commoners. In the 1860s, as the shogunate weakened, the court regained political weight.
 rise: Birth decided everything: the throne passed within the imperial family, and court offices within the kuge houses by the rank of each house. The court went on granting ranks to the daimyo, but only on the shogunate's recommendation.
@@ -71,7 +71,7 @@ local: Bushi
 share: 5-7
 sharenote: About 400,000 samurai men; with their families and the lords above them about 6 per cent of the people, a common modern estimate (others run from 5 to 10 per cent).
 firm: yes
-terms: samurai, bushido
+terms: samurai, bushido, ronin
 people: yamamoto-tsunetomo, yoshida-shoin, sakamoto-ryoma, saigo-takamori
 picture: bushido
 text: The samurai were the hereditary warrior class, perhaps 400,000 men. They alone could carry the long sword, and from 1629 those on duty wore two swords, the long and the short; they bore surnames and, in law, could cut down a commoner who failed to show them respect, though how often they did so is unknown. From the late 16th century most were moved off the land into their lord's castle town and paid hereditary stipends in rice, and in the long peace they became the officials, clerks, police, guards and teachers of the shogun and the domains. The class was finely graded: the shogun's bannermen (hatamoto) could approach him in audience, the highest retainers of a great domain drew more than some daimyo, and the lowest ranks earned little more than subsistence. Forbidden to farm or trade, many fell into debt as prices rose and their stipends did not. On one estimate almost all samurai could read by 1800.
@@ -192,4 +192,4 @@ Totman, C. (1993) Early Modern Japan. Berkeley: University of California Press.
 == checked
 Edo society; Edo period; Tokugawa shogunate; Four occupations; Samurai; Shizoku; Kuge; Daimyo; Chōnin; Burakumin; Hinin; Danka system; Ōoku; Women in Japan; Hokusai
 NOTE: The chonin entry says the chōnin were "officially ranked below samurai and peasants". The four-class order was a Confucian ideal; since the 1990s historians hold that peasants, artisans and merchants were not legally ranked against one another, and Japanese textbooks have dropped the old chart (Edo society; Edo period; Four occupations), so "officially ranked below ... peasants" overstates it.
-MISSING: kuge, kawata, danka system, buke shohatto, hatamoto, rōnin, Ōoku
+MISSING: kawata

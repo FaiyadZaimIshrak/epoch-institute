@@ -23,7 +23,7 @@ local: K'uhul ajaw
 share: 0
 sharenote: One royal family in each kingdom.
 firm: yes
-terms: ajaw, temple-of-the-inscriptions
+terms: ajaw, temple-of-the-inscriptions, copan, palenque, calakmul, naranjo, dos-pilas, quirigua
 people: kinich-janaab-pakal, yuknoom-cheen-ii, jasaw-chan-kawiil-i, lady-six-sky
 text: Each kingdom was ruled by a holy lord, the k'uhul ajaw, who stood between his people and the gods. He was identified with the young maize god, served as the highest priest, offered his own blood in ritual and dedicated the temples, and as war leader he was expected to take captives himself. The throne normally passed from father to eldest son. The heir, the b'aah ch'ok or "head youth", had to prove himself in war, and at his accession sat on a jaguar-skin cushion and received a jade headband and a sceptre of the god K'awiil. Kings recorded their births, accessions, wars and rituals on stone stelae dated in the Long Count calendar, and were buried in pyramid temples such as the Temple of the Inscriptions at Palenque. The most powerful took the title kaloomte' and ruled other kings as vassals: in the 7th century Yuknoom Ch'een II of Calakmul controlled the kings of Dos Pilas, Cancuén and Naranjo. Defeat could mean capture and a sacrificial death.
 rise: Kings were born to their thrones, but war could unmake them: in 648 Yuknoom Ch'een II of Calakmul captured B'ajlaj Chan K'awiil of Dos Pilas and restored him as his vassal, and in 738 Copán's king Waxaklajuun Ub'aah K'awiil was captured and beheaded by his own vassal, the ruler of Quiriguá.
@@ -87,8 +87,9 @@ local: -
 share: rest
 sharenote: Everyone outside the nobility, the craftsmen and the captives: the farmers of the villages and the outskirts of the cities. The other ranks are estimates, so this share is one too.
 firm: yes
-terms:
+terms: joya-de-ceren
 people:
+picture: -
 text: The great majority were commoners: farmers, labourers and servants, and also craftsmen and a few minor officials. They grew maize, beans and squash in fields cleared from the forest, on terraces and raised fields and in house gardens with fruit trees and chillies, and some grew cotton and cacao. Their houses of poles, wattle and thatch, sometimes on low platforms, have mostly vanished. The village of Joya de Cerén, buried by volcanic ash around 600, preserves such houses: about 200 people lived there, in households with kitchens, storehouses and workshops, a shared sweat bath, and buildings for festivals and divination, and each household kept some seventy pots. Commoners buried their dead beneath their house floors with offerings, paid taxes to the nobles in maize, flour and game, built their lords' temples and palaces, and were called up in war, where they fought with the blowguns they used for hunting. A lakam, or standard-bearer, perhaps the only non-noble office at court, collected the taxes of districts in the largest cities.
 rise: Birth fixed most lives, but commoners could advance by proving themselves as outstanding warriors, and skilled and enterprising commoners could become influential. Drought, war and the collapse of the 9th century drove many from their land.
 you: You farm maize, beans and squash near your house of poles and thatch, bury your dead beneath its floor, pay taxes to the nobles in maize and game, and go to war when you are called.
@@ -126,4 +127,4 @@ Sheets, P. D. (1992) The Cerén Site: A Prehistoric Village Buried by Volcanic A
 
 == checked
 Maya civilization; Maya society; Lady Six Sky; Yohl Ik'nal; Women rulers in Maya society; K'inich Janaab Pakal I; Copán; Tikal; Joya de Cerén; Classic Maya collapse; Maya Lowlands; Slavery among the indigenous peoples of the Americas; History of slavery; Population history of the Indigenous peoples of the Americas
-MISSING: k'uhul ajaw, kaloomte', sajal, ch'ok, aj tz'ib, aj k'uhuun, lakam, Copán, Palenque, Calakmul, Naranjo, Dos Pilas, Quiriguá, Joya de Cerén, Yohl Ik'nal, Sak K'uk'
+MISSING: k'uhul ajaw, kaloomte', sajal, ch'ok, aj tz'ib, aj k'uhuun, lakam

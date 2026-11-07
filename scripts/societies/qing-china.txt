@@ -39,8 +39,8 @@ local: -
 share: est 0.01-0.05
 sharenote: Estimate: the statute's "comparatively minuscule aristocracy", the imperial clan and the Manchu houses with noble titles, at most some tens of thousands of people among 200–250 million.
 firm: yes
-terms: manchus
-people: dorgon
+terms: manchus, house-of-aisin-gioro
+people: dorgon, empress-xiaozhuangwen
 text: Above the officials stood a small hereditary aristocracy: the princes of the imperial Aisin Gioro house and the Manchu nobles of the "Eight Great Houses", who held noble titles, as against the commoner bannermen (irgen). Imperial princes had led the Banners against the Ming, and the Inner Court was dominated by the imperial family and the Manchu nobility. Appointments in the six Boards were split between Manchu noblemen and Han examination graduates. Princesses of the imperial house were married to Han generals who had gone over to the Qing and to the sons of Han officials. The emperors watched their kinsmen closely: the regent Dorgon had ruled at the expense of rival princes, many of whom he demoted or imprisoned.
 rise: Noble rank came by birth or by the emperor's grant, and the father and brothers of an emperor's mother were raised into the Upper Three Manchu Banners. Rank could be lost as quickly: after his death in 1650 Dorgon was stripped of his titles and his family and associates purged.
 you: You are a prince of the imperial house: you may command a banner, sit in the Inner Court and marry your daughters into the families of generals, but the emperor watches every prince who might threaten the throne.
@@ -56,7 +56,7 @@ share: est 0.02-0.1
 sharenote: Estimate: the article gives no count of posts. 26,747 men earned the highest degree, the jinshi, in the 261 years of the examinations, about 240 every three years, and degree-holders far outnumbered the posts; with their families, a small fraction of one per cent.
 firm: yes
 terms: scholar-officials, manchu-han-dyarchy, grand-council-qing
-people:
+people: heshen
 text: The Qing kept the Ming bureaucracy and divided its posts into civil and military, each in nine grades, from a Grand Secretary down to a deputy jail warden. In the capital each post had a Manchu and a Han Chinese holder: the Han official did the substantive work and the Manchu ensured his loyalty. In the provinces, eight viceroys, the governors and prefects stood over the county magistrate, who by rule could not serve in his home district. Salaries grew less and less adequate, and officials came to rely on "squeeze", irregular payments; in Qianlong's last years his favourite Heshen became one of the most corrupt officials of the dynasty.
 rise: Office came chiefly through the examinations: graduates of the metropolitan examination were assured influential posts, but qualified men so far exceeded the vacancies that many waited years, and purchase of office became common in the 19th century. Appointments ran for three years, with an evaluation at the end, and Qianlong's son forced Heshen to commit suicide.
 you: You passed the palace examination and now govern a county far from your home, judging cases and collecting the land tax on a salary so small that you live on irregular fees.
@@ -71,7 +71,7 @@ local: Shenshi
 share: est 1-2
 sharenote: Estimate: the article gives no count. The gentry were the holders of examination degrees, most of them the lowest, the shengyuan, together with their wives and some relatives; for every shengyuan only one in three thousand would ever become a jinshi.
 firm: yes
-terms: imperial-examination, jinshi
+terms: imperial-examination, jinshi, juren
 people:
 text: The gentry were defined by law: a man who had passed at least the first level of the examinations held a degree that qualified him for office, and his wife and some relatives shared his status. He could wear gentry robes and speak to officials as an equal; the shengyuan, or xiucai, were exempt from statute labour and partly from corporal punishment. Informally the gentry presided over local society: they influenced the magistrate, acquired land, lent money, ran schools and charities, settled disputes, helped gather the taxes and led Confucian ceremonies. Those who failed the higher examinations became tutors, secretaries or managers of guilds and temples. They travelled by sedan chair and collected scholars' stones and porcelain.
 rise: Any commoner of good status could sit the examinations, but years of study, travel and gifts to examiners made a candidate the burden of his whole family, and in the Ming and Qing only about one candidate in a hundred passed the provincial examination. Merchant families could also buy degrees.
@@ -170,7 +170,7 @@ local: Booi
 share: est 0.05-0.2
 sharenote: Estimate: the hereditary servile households within a banner population of about 1.5 million; the articles give no count.
 firm: no
-terms: eight-banners
+terms: eight-banners, imperial-household-department, booi-aha
 people:
 picture: -
 text: The booi aha, "household people", were hereditarily servile members of the banners, often translated "bondservants". There were company servants, half-company servants and estate bannermen; booi usually did domestic service, while aha worked in the fields. The historian Mark C. Elliott warns that calling them slaves conveys the wrong meaning, for Chinese society had no matching status: booi often held powerful positions and were sometimes intimates of the emperor. The Imperial Household Department, which managed the palace in place of most eunuchs and ran trade in jade, ginseng, salt and furs, the Jiangnan textile factories and dealings with the salt merchants, was staffed by booi of the Upper Three Banners.
@@ -233,4 +233,4 @@ NOTE: The gentry entry (lower-case "gentry" links it) describes the Ming gentry,
 NOTE: The Eight Banners article's paragraphs on adopted Han bannermen speak of "infiltrators" who "stole" Manchus' status; the ladder states the facts (adoption, separate registers, their share of soldiers' places) without that framing.
 NOTE: "qinwang" romanizes the 親王 ("prince of the blood") the Qing dynasty article gives in characters only; "nubi" romanizes the 奴婢 of the Four occupations article. Romanizations, not facts, but the editor may prefer to drop them.
 NOTE: The Forbidden City in the emperor's kid line rests on the article (the Shunzhi Emperor enthroned there; the Outer and Inner Courts in its southern and northern parts).
-MISSING: Forbidden City, Imperial Household Department, booi aha, Aisin Gioro, Heshen, shengyuan (xiucai), juren, eight-legged essay, jianmin and liangmin (mean and good people), foot binding, Queue Order, huiguan and gongsuo (guild halls), Empress Xiaoyichun, Empress Dowager Xiaozhuang, Pu Songling, Oboi, Ma Jinlu, Jahriyya revolt
+MISSING: shengyuan (xiucai), jianmin and liangmin (mean and good people), Queue Order, huiguan and gongsuo (guild halls), Ma Jinlu
