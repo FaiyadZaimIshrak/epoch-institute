@@ -6,10 +6,11 @@
 //   countries  images/og/country-<slug>.jpg     the country lit up on its map (from the country page)
 //   centuries  images/og/century-<slug>.jpg     the world map of the century, its counts and great powers
 //   speeches   images/og/speech-<slug>.jpg      the key passage and the speaker's portrait
+//   songs      images/og/song-<slug>.jpg        the title, its own name, the first lines of its words
 //   paths      images/og/path-<slug>.jpg        the path's pictures
 //   societies  images/og/society-<slug>.jpg    the social ladder: its pictures and ranks (data/societies)
 //   pages      images/og/page-<name>.jpg, images/og/default.jpg   the main sections
-// Usage: node scripts/make-posters.js [profiles|days|countries|centuries|speeches|paths|societies|pages ...] [--only=a,b] [--out=dir]
+// Usage: node scripts/make-posters.js [profiles|days|countries|centuries|speeches|songs|paths|societies|pages ...] [--only=a,b] [--out=dir]
 // (no kind: all of them; --only: posters whose file name contains one of the words; --out: write there instead,
 // for a look before replacing; --dump=file.json: write the jobs and stop, for another driver of poster.html).
 // Writes a poster only when its bytes changed. Needs Node and Playwright: once,
@@ -74,7 +75,7 @@ const yr = y => y < 0 ? (-y) + ' BCE' : y + ' CE';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // ── jobs ─────────────────────────────────────────────────────────────────────────────────────────────────────────
-const JOBS = { profiles: [], days: [], countries: [], centuries: [], speeches: [], paths: [], societies: [], pages: [] };
+const JOBS = { profiles: [], days: [], countries: [], centuries: [], speeches: [], songs: [], paths: [], societies: [], pages: [] };
 
 // profiles kept out of the home page's featured rotation (scripts/home-pictures.tsv "hide") get no emblem on the poster
 const HIDDEN = {}; read('scripts/home-pictures.tsv').split(/\r?\n/).forEach(l => { const c = l.split('\t'); if (c[2] && /\bhide\b/.test(c[2])) HIDDEN[c[0]] = 1; });
@@ -148,6 +149,28 @@ SPEECHES.forEach(s => {
   const pic = picOf(s.speakerSlug, 18), para = s.kind === 'paraphrase';
   JOBS.speeches.push({ kind: 'speech', file: 'speech-' + s.slug + '.jpg', kicker: 'Great speeches · ' + s.display, quote: para ? s.excerpt : s.excerpt, para,
     by: s.speaker, what: s.title, pic: pic && { src: pic.src, top: 18 }, url: 'the-epoch-institute.org/speeches/' + s.slug, credit: pic ? pic.credit : '' });
+});
+
+// songs (Nov 2026): song-<slug>.jpg, from scripts/songs/songs.json (written by make-data.js): the title, its own name and
+// date, the first lines of the printed words (never a withheld song's, nor one under a caution note), else the story's
+// first line
+const SONGS = JSON.parse(read('scripts/songs/songs.json'));
+SONGS.forEach(s => {
+  const loc = String(s.local || '').split(' / ')[0].trim(), lang = (s.langs && s.langs[0] && s.langs[0].code) || '';
+  const own = loc && loc.toLowerCase() !== String(s.title).toLowerCase() ? loc : '';
+  const big = own && /[^\u0000-ɏḀ-ỿ]/.test(own) && [...own].length <= 8 ? own : '';
+  const d0 = String(s.date || ''), d1 = d0.split(/;s*/)[0];
+  const when = s.undated ? 'date unknown' : d0.length <= 40 ? d0 : d1.length <= 44 ? d1 : (s.year < 0 ? 'c. ' + (-s.year) + ' BCE' : 'c. ' + s.year);
+  const chips = [...(s.types || []).slice(0, 2), ...(s.langs || []).map(l => l.name).slice(0, 2), s.region].filter(Boolean);
+  let lines = [], en = [];
+  const t = s.text && !s.withheld && !s.caution ? s.text.parts : null;
+  if (t && t.orig) {
+    lines = t.orig.stanzas.flat().filter(l => l.trim()).slice(0, 4);
+    if (lang !== 'en' && s.text.aligned && t.en) en = t.en.stanzas.flat().filter(l => l.trim()).slice(0, 4);
+  }
+  JOBS.songs.push({ kind: 'song', file: 'song-' + s.slug + '.jpg', kicker: 'Songs in history · ' + String(s.culture).split(/;s*/)[0], title: s.title, chips,
+    sub: [own, when].filter(Boolean).join(' · '), lang, big, lines, en, tease: s.kid || firstSentence(text(s.story), 220),
+    url: 'the-epoch-institute.org/songs/' + s.slug });
 });
 
 // as the path pages' strips (build-pages.ps1 PathThumbs): one picture per Commons file (two entries can share one),
@@ -251,8 +274,8 @@ function serve() {
     srv.listen(0, '127.0.0.1', () => res(srv));
   });
 }
-function playwright() {   // from scripts/node_modules, else wherever Node finds it
-  for (const m of ['playwright', 'playwright-core']) for (const paths of [[__dirname], null]) {
+function playwright() {   // from scripts/node_modules, EPOCH_PW (a folder whose node_modules has it, as scripts/tools/lib.js), else wherever Node finds it
+  for (const m of ['playwright', 'playwright-core']) for (const paths of [[__dirname], process.env.EPOCH_PW ? [process.env.EPOCH_PW] : null, null]) {
     try { return require(paths ? require.resolve(m, { paths }) : m); } catch (e) {}
   }
   throw new Error('Playwright not found: npm install --prefix scripts playwright-core');

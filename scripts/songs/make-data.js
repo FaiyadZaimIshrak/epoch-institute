@@ -12,8 +12,8 @@ const TYPES = ['sacred', 'lament', 'celebration', 'love', 'lullaby', 'work', 'wa
 const REGIONS = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
 const KEYS = ['title', 'local', 'status', 'lyricist', 'composer', 'culture', 'language', 'place', 'date', 'year', 'region', 'types', 'kids', 'kid'];
 // songs in the public domain whose words no free, reliable edition holds yet (their pages say so)
-const GAPS = ["japji-sahib", "taba-naba", "santa-lucia", "ganggangsullae", "odes-of-solomon", "kesh-temple-hymn", "hymn-of-the-pearl", "ive-been-working-on-the-railroad", "the-wearing-of-the-green", "deep-river", "sometimes-i-feel-like-a-motherless-child", "enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "red-river-valley", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
-  'ninkasi', 'raghupati-raghava-raja-ram', 'tizita',
+const GAPS = ["japji-sahib", "taba-naba", "santa-lucia", "ganggangsullae", "odes-of-solomon", "hymn-of-the-pearl", "ive-been-working-on-the-railroad", "the-wearing-of-the-green", "deep-river", "sometimes-i-feel-like-a-motherless-child", "enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "red-river-valley", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
+  'raghupati-raghava-raja-ram', 'tizita',
   // second wave (Nov 2026)
   'chakrulo', 'cherubikon', 'day-o', 'fengyang-flower-drum',
   'harpers-songs', 'himno-de-riego', 'john-henry', 'la-adelita', 'la-bamba', 'la-llorona', 'lament-for-ur',

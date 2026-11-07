@@ -1164,8 +1164,12 @@ they were not used; its Breton text contradicts the sources for Ar soudarded and
   words are that poem's prologue, lines 1-26, from the Electronic Text Corpus of Sumerian Literature (ETCSL, Oxford), with
   ETCSL's translation: licensed CC BY-NC-SA 3.0, which the user accepted for this non-commercial site (the credit line says
   "licensed …, for non-commercial use with credit"). Imported by scripts/songs/fetch-etcsl.js (not typed: ETCSL's ASCII c,
-  j, h become š, ĝ, ḫ, index digits subscripts, determinatives in braces as in Oracc). ETCSL could also give Ninkasi and the
-  Lament for Ur their words the same way.
+  j, h become š, ĝ, ḫ, index digits subscripts, determinatives in braces as in Oracc). The Hymn to Ninkasi (ETCSL 4.23.1,
+  all 48 lines) and the Kesh Temple Hymn (4.80.2, lines 1-20) were imported the same way on 7 Nov 2026; fetch-etcsl.js
+  now takes several translation paragraphs (one English stanza each), allows a line break inside <sub>, ends the last
+  line at </p>, drops the editors' "(2 mss. have instead: …)" notes, brackets "(1 line damaged)", does not split the
+  English after "......" and spells the translation's ASCII "Kec" as Keš. The Lament for Ur (ETCSL 2.2.2) is no song
+  of the site yet.
 - Build: build-pages.ps1 runs scripts/songs/make-data.js before the entry pages (it STOPS on a missing key, an unknown
   type or region, public-domain words missing without a stated gap, copyright words present, a bad video row) and
   reads scripts/songs/songs.json; "Songs in History" writes the pages (prose gold-linked with the year ±200; facts box;
@@ -1846,9 +1850,13 @@ Found while building the social ladders (30 Oct 2026), not done yet:
   trades), "magnates" (Polish-Lithuanian), "Mahdi" (the messianic figure, also the caliph al-Mahdi). "Gao" was
   handled on 6 Nov 2026: the bare name is a profile-only form on the six profiles where it is the Malian city, the
   pattern elsewhere is "Gao, Mali", and the state texts' Chinese Gao were unlinked.
-Songs in History, not yet: posters of their own (song-<slug>.jpg); the words of the public-domain songs without a free
-edition (make-data.js GAPS: Dle Yaman, Tizita, the Hanuman Chalisa, the Delphic hymns …). Done since: the "Songs in
-history" chips on the profiles (scripts/song-links.js), "Songs from here" on the country histories, entries for the songs.
+Songs in History, not yet: the words of the public-domain songs without a free edition (make-data.js GAPS, 39: Dle
+Yaman, Tizita, the Hanuman Chalisa, the Delphic hymns …). Done since: the "Songs in history" chips on the profiles
+(scripts/song-links.js), "Songs from here" on the country histories, entries for the songs, posters of their own (7 Nov
+2026: make-posters.js songs, song-<slug>.jpg: the title, its own name and date, up to four lines of the printed words
+with the English beside them (never a withheld song's or one under a caution note), else the kid line; five staff
+lines and the song's own name in its script, large and faint, at the right, no drawn melody; types, languages and region
+as chips; a long name is drawn faint only up to 8 characters), and the words of Ninkasi and the Kesh Temple Hymn (ETCSL).
 (Done 7 Nov 2026) Yoruba religion has section pictures in five sections now, from the orisha entries of wave a7y.
 455 people of the encyclopedia still have no dates (legendary and biblical figures, and people whose Wikidata dates are
 missing or doubtful; scratchpad r6/dates-decisions.tsv): an undated person is on no century or people page and in no
@@ -2015,7 +2023,7 @@ Scratchpad r9/sent-compare.js checks that the three give the same first sentence
 ## Share posters (link previews)
 `images/og/*.jpg` (1200x630, ~95 KB) are the pictures Facebook, Messenger, WhatsApp, X and the rest show for a shared
 link, drawn by `node scripts/make-posters.js [kinds] [--only=words] [--out=dir]` (Node; Playwright once with
-`npm install --prefix scripts playwright-core`, which drives the installed Edge on Windows; since Edge 156 closes
+`npm install --prefix scripts playwright-core`, or EPOCH_PW = a folder that has it, which drives the installed Edge on Windows; since Edge 156 closes
 Playwright's pipe at start-up, the script then starts Edge with a debugging port and connects over CDP): it serves the repository, opens scripts/posters/poster.html (the template: render(job) per poster, check()
 reports text that overflows) and screenshots each poster, writing only changed files (re-runs are byte-stable; an old
 file that will not decode, from a run stopped mid-write, is simply redrawn). Kinds:
@@ -2024,7 +2032,7 @@ and languages a gold band for their span on the timeline of recorded history; no
 home-pictures.tsv; `--dump=jobs.json` writes the jobs without drawing: where Playwright is not installed, scratchpad
 kinds/render-posters.ps1 draws them through the same poster.html in headless Edge over CDP), days `day-<month>-<day>.jpg` (events and the day's picture, a
 calendar plate when there is none), countries `country-<slug>.jpg` and centuries `century-<slug>.jpg` (maps taken
-from their pages), speeches `speech-<slug>.jpg` (key passage + portrait; "In substance" for paraphrases), paths
+from their pages), speeches `speech-<slug>.jpg` (key passage + portrait; "In substance" for paraphrases), songs `song-<slug>.jpg` (first lines of the words or the kid line, its own name faint behind a staff), paths
 `path-<slug>.jpg` (six step pictures, one per Commons file and maps last as in the path strips, + stops), and the sections `page-<name>.jpg` (games, quiz, kids, atlas, profiles,
 explorer — the real power curves —, connections, start, encyclopedia, states, today, countries, centuries, speeches,
 paths) and `default.jpg` (home and every page without a poster). Pictures carry their credit (licence) line.

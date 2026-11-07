@@ -66,6 +66,14 @@
   .ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
   .ring-cap { position: absolute; z-index: 9; right: 84px; width: 316px; top: calc(50% + 152px); text-align: center; font: 600 16px/1.3 var(--font-ui); letter-spacing: 0.06em; color: var(--gl); }
 
+  /* song: its first lines, its own name faint behind a staff */
+  .slines { margin: 22px 0 0; display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; }
+  .sl { margin: 0; font: italic 400 27px/1.25 var(--font-text); color: #f4ecdc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sl span { display: block; font: 400 17px/1.3 var(--font-ui); font-style: normal; color: var(--m); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .schips { position: absolute; z-index: 9; right: 56px; width: 400px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+  .schips span { font: 600 15px/1 var(--font-ui); letter-spacing: 0.06em; text-transform: uppercase; color: #e6dcc6; padding: 8px 13px; border: 1px solid rgba(201,168,76,0.45); border-radius: 999px; background: rgba(11,12,16,0.6); }
+  .sbig { position: absolute; z-index: 2; right: 60px; top: 130px; max-width: 470px; text-align: right; font: 600 150px/1.05 var(--font-display); color: rgba(201,168,76,0.16); white-space: nowrap; overflow: hidden; }
+
   /* maps: country and century */
   .mapbox { position: absolute; z-index: 6; }
   .mapbox svg { display: block; width: 100%; height: 100%; }
@@ -201,6 +209,31 @@ R.speech.after = function () {
   var col = document.getElementById('col'), q = document.getElementById('q'), n = q.textContent.length, px = n < 70 ? 58 : n < 130 ? 50 : 46, room = 630 - 136 - 84;
   q.style.fontSize = px + 'px';
   while (used(col) > room && px > 22) { px -= 1; q.style.fontSize = px + 'px'; }
+};
+// song: the title, its own name and date, the first lines of its words (the original, the English beside them) where
+// the site prints them, else its story's first line; five staff lines and the song's own name, large and faint, at the
+// right (no notes: a drawn melody would not be the song's)
+R.song = function (j) {
+  var staff = '';
+  for (var i = 0; i < 5; i++) staff += '<line x1="0" x2="560" y1="' + (i * 26) + '" y2="' + (i * 26) + '" stroke="rgba(201,168,76,' + (0.42 - i * 0.03) + ')" stroke-width="1.6"/>';
+  var lines = (j.lines || []).map(function (l, k) {
+    return '<p class="sl"' + (/[^\u0000-\u024f\u1e00-\u1eff\u2000-\u206f]/.test(l) ? ' style="font-style:normal"' : '') + '>' + esc(l) + (j.en && j.en[k] ? '<span>' + esc(j.en[k]) + '</span>' : '') + '</p>';
+  }).join('');
+  return BRAND + (j.big ? '<div class="sbig" lang="' + esc(j.lang || '') + '">' + esc(j.big) + '</div>' : '') +
+    '<svg class="staff" viewBox="0 0 560 106" style="position:absolute;right:56px;top:' + (j.big ? 300 : 236) + 'px;width:400px;height:106px;z-index:3" preserveAspectRatio="none">' + staff + '</svg>' +
+    (j.chips && j.chips.length ? '<div class="schips" style="top:' + (j.big ? 436 : 372) + 'px">' + j.chips.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div>' : '') +
+    '<div class="shade" style="background:linear-gradient(90deg,#0b0c10 0%,rgba(11,12,16,0.94) 48%,rgba(11,12,16,0.25) 80%,rgba(11,12,16,0.1) 100%)"></div>' +
+    '<div class="col" id="col" style="width:650px"><p class="kick">' + esc(j.kicker) + '</p><h1 class="ttl" id="ttl">' + esc(j.title) + '</h1>' +
+    (j.sub ? '<p class="sub" lang="' + esc(j.lang || '') + '">' + esc(j.sub) + '</p>' : '') +
+    (lines ? '<div class="slines" id="tease">' + lines + '</div>' : '<p class="tease" id="tease">' + esc(j.tease) + '</p>') + '</div>' + foot(j.url, j.credit);
+};
+R.song.after = function () {
+  var big = document.querySelector('.sbig'), px = 150;
+  while (big && big.scrollWidth > big.clientWidth + 1 && px > 56) { px -= 4; big.style.fontSize = px + 'px'; }
+  fit(document.getElementById('ttl'), 146, 40);
+  var col = document.getElementById('col'), lim = 630 - 96 - 76, sl = col.querySelectorAll('.sl');
+  for (var i = sl.length - 1; i > 0 && used(col) > lim; i--) sl[i].parentNode.removeChild(sl[i]);
+  if (!sl.length) settle(col, lim, document.getElementById('tease'), 0);
 };
 R.country = function (j) {
   return BRAND + '<div class="mapbox fade" style="right:24px;top:40px;width:620px;height:550px">' + j.map + '</div>' +
