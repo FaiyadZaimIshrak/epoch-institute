@@ -1,0 +1,2814 @@
+[
+ {
+  "name": "Capitals of South America",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Quito",
+    "slug": "quito",
+    "quote": "Quito is the capital of Ecuador, set in an Andean basin at about 2,850 metres just south of the equator"
+   },
+   {
+    "label": "Caracas",
+    "slug": "caracas",
+    "quote": "Caracas is the capital and largest city of Venezuela, in a mountain valley near the Caribbean coast"
+   },
+   {
+    "label": "Asunción",
+    "slug": "asuncion",
+    "quote": "Asunción is the capital and largest city of Paraguay, on the east bank of the Paraguay river"
+   },
+   {
+    "label": "Montevideo",
+    "slug": "montevideo",
+    "quote": "Montevideo is the capital and largest city of Uruguay, on the northern shore of the Río de la Plata"
+   },
+   {
+    "label": "La Paz",
+    "slug": "la-paz",
+    "quote": "La Paz is a city in the Andes of western Bolivia, founded by the Spanish in 1548 and today the seat of Bolivia's government"
+   },
+   {
+    "label": "Brasília",
+    "slug": "brasilia",
+    "quote": "Brasília is the capital of Brazil, built on the central plateau and inaugurated on 21 April 1960 under President Juscelino Kubitschek"
+   }
+  ]
+ },
+ {
+  "name": "Capitals of Central America",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "San Salvador",
+    "slug": "san-salvador",
+    "quote": "San Salvador is the capital of El Salvador, founded by the Spanish in 1525 and re-established in 1528 after Pipil resistance"
+   },
+   {
+    "label": "Tegucigalpa",
+    "slug": "tegucigalpa",
+    "quote": "Tegucigalpa is the capital and largest city of Honduras, in a highland valley of the south-centre"
+   },
+   {
+    "label": "Managua",
+    "slug": "managua",
+    "quote": "Managua is the capital and largest city of Nicaragua, on the southern shore of Lake Managua"
+   },
+   {
+    "label": "San José",
+    "slug": "san-jose-costa-rica",
+    "quote": "San José is the capital and largest city of Costa Rica, in the Central Valley"
+   },
+   {
+    "label": "Belmopan",
+    "slug": "belmopan",
+    "quote": "Belmopan is the capital of Belize, a planned city built in the interior of the country in the 1960s"
+   },
+   {
+    "label": "Guatemala City",
+    "slug": "guatemala-city",
+    "quote": "Guatemala City was founded in 1776 as the new capital of the Captaincy General of Guatemala, after earthquakes ruined Santiago, now Antigua Guatemala"
+   }
+  ]
+ },
+ {
+  "name": "Founding texts of the United States",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Declaration of Independence",
+    "slug": "united-states-declaration-of-independence",
+    "quote": "The United States Declaration of Independence was adopted by the Second Continental Congress in Philadelphia on 4 July 1776"
+   },
+   {
+    "label": "Articles of Confederation",
+    "slug": "articles-of-confederation",
+    "quote": "The Articles of Confederation were the first constitution of the United States, adopted by the Continental Congress in 1777 and in force from 1781 to 1789"
+   },
+   {
+    "label": "Constitution",
+    "slug": "constitution-of-the-united-states",
+    "quote": "The Constitution of the United States was drafted by the Philadelphia Convention in 1787, ratified in 1788 and in force from 1789"
+   },
+   {
+    "label": "Bill of Rights",
+    "slug": "united-states-bill-of-rights",
+    "quote": "The United States Bill of Rights is the first ten amendments to the United States Constitution, proposed by Congress in 1789 and ratified in 1791"
+   },
+   {
+    "label": "Mayflower Compact",
+    "slug": "mayflower-compact",
+    "quote": "The Mayflower Compact was an agreement signed by 41 men aboard the Mayflower off Cape Cod on 11 November 1620 (Old Style), before the settlers went ashore"
+   },
+   {
+    "label": "Virginia Declaration of Rights",
+    "slug": "virginia-declaration-of-rights",
+    "quote": "The Virginia Declaration of Rights was adopted by the Virginia Convention on 12 June 1776, drafted mainly by George Mason"
+   }
+  ]
+ },
+ {
+  "name": "Cold War presidents of the United States",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Truman",
+    "slug": "harry-s-truman",
+    "quote": "Truman was the 33rd president of the United States, serving from 1945 to 1953"
+   },
+   {
+    "label": "Eisenhower",
+    "slug": "dwight-d-eisenhower",
+    "quote": "Eisenhower was a US general and President of the United States from 1953 to 1961"
+   },
+   {
+    "label": "Kennedy",
+    "slug": "john-f-kennedy",
+    "quote": "Kennedy was the thirty-fifth president of the United States, serving from 1961 until his assassination in Dallas in November 1963"
+   },
+   {
+    "label": "Lyndon B. Johnson",
+    "slug": "lyndon-b-johnson",
+    "quote": "Lyndon Baines Johnson was the 36th president of the United States, serving from 1963 to 1969"
+   },
+   {
+    "label": "Nixon",
+    "slug": "richard-nixon",
+    "quote": "Richard Nixon was the 37th president of the United States, from 1969 to 1974"
+   },
+   {
+    "label": "Reagan",
+    "slug": "ronald-reagan",
+    "quote": "Ronald Reagan was the 40th president of the United States, serving from 1981 to 1989, after careers as a film actor and governor of California"
+   }
+  ]
+ },
+ {
+  "name": "Islands of the Americas",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Galápagos",
+    "slug": "galapagos-islands",
+    "quote": "The Galápagos Islands are a volcanic archipelago in the Pacific Ocean about 1,000 km west of the coast of Ecuador, which annexed them in 1832"
+   },
+   {
+    "label": "Tierra del Fuego",
+    "slug": "tierra-del-fuego",
+    "quote": "Tierra del Fuego is an archipelago at the southern tip of South America, separated from the mainland by the Strait of Magellan"
+   },
+   {
+    "label": "Chiloé",
+    "slug": "chiloe",
+    "quote": "Chiloé is an island, the largest of an archipelago of the same name, off the coast of southern Chile"
+   },
+   {
+    "label": "Manhattan",
+    "slug": "manhattan",
+    "quote": "Manhattan is an island at the mouth of the Hudson River and the central borough of New York City"
+   },
+   {
+    "label": "Bermuda",
+    "slug": "bermuda",
+    "quote": "Bermuda is a British Overseas Territory consisting of a group of small islands in the North Atlantic, about 1,000 kilometres east of North Carolina"
+   },
+   {
+    "label": "Prince Edward Island",
+    "slug": "prince-edward-island",
+    "quote": "Prince Edward Island is the smallest province of Canada, an island in the Gulf of St"
+   }
+  ]
+ },
+ {
+  "name": "States of Mexico",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chiapas",
+    "slug": "chiapas",
+    "quote": "Chiapas is a state in southern Mexico, bordering Guatemala"
+   },
+   {
+    "label": "Oaxaca",
+    "slug": "oaxaca",
+    "quote": "Oaxaca is a state of southern Mexico on the Pacific coast, with its capital at Oaxaca de Juárez"
+   },
+   {
+    "label": "Campeche",
+    "slug": "campeche",
+    "quote": "Campeche is a state of Mexico on the western side of the Yucatán Peninsula, facing the Gulf of Mexico"
+   },
+   {
+    "label": "Tabasco",
+    "slug": "tabasco",
+    "quote": "Tabasco is a state in south-eastern Mexico on the Gulf of Mexico, with its capital at Villahermosa"
+   },
+   {
+    "label": "Jalisco",
+    "slug": "jalisco",
+    "quote": "Jalisco is a state of western Mexico, with its capital at Guadalajara, the country's second-largest city"
+   },
+   {
+    "label": "Sonora",
+    "slug": "sonora",
+    "quote": "Sonora is a state of north-western Mexico bordering Arizona, with its capital at Hermosillo"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Brazil",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rio de Janeiro",
+    "slug": "rio-de-janeiro",
+    "quote": "Rio de Janeiro is a major port city on the south-eastern coast of Brazil"
+   },
+   {
+    "label": "São Paulo",
+    "slug": "sao-paulo",
+    "quote": "São Paulo is a region of south-eastern Brazil, now a state, centred on the city of the same name"
+   },
+   {
+    "label": "Salvador",
+    "slug": "salvador",
+    "quote": "Salvador is a city on the north-eastern coast of Brazil, founded in 1549 by the first Governor-General, Tomé de Sousa"
+   },
+   {
+    "label": "Olinda",
+    "slug": "olinda",
+    "quote": "Olinda is a colonial town on the coast of Pernambuco, Brazil, founded in 1535 by the donatary Duarte Coelho as the capital of his captaincy"
+   },
+   {
+    "label": "Ouro Preto",
+    "slug": "ouro-preto",
+    "quote": "Ouro Preto, formerly Vila Rica, is a town in the mountains of Minas Gerais, Brazil, founded during the gold rush of the late 17th and early 18th centuries"
+   },
+   {
+    "label": "Belém",
+    "slug": "belem",
+    "quote": "Belém is a port city near the mouth of the Amazon in northern Brazil and the capital of the state of Pará"
+   }
+  ]
+ },
+ {
+  "name": "Volcanoes of the Americas",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Iztaccíhuatl",
+    "slug": "iztaccihuatl",
+    "quote": "Iztaccíhuatl is a dormant volcano in central Mexico, at 5,230 metres the country's third-highest mountain, on the border of the states of Mexico and Puebla"
+   },
+   {
+    "label": "Momotombo",
+    "slug": "momotombo",
+    "quote": "Momotombo is a conical stratovolcano rising to about 1,300 metres on the northern shore of Lake Managua in western Nicaragua"
+   },
+   {
+    "label": "Mount Pelée",
+    "slug": "mount-pelee",
+    "quote": "Mount Pelée is an active volcano at the northern end of Martinique in the French Antilles"
+   },
+   {
+    "label": "La Soufrière",
+    "slug": "la-soufriere-saint-vincent",
+    "quote": "La Soufrière is an active volcano forming the northern part of Saint Vincent in the Caribbean, the island's highest peak at about 1,234 metres"
+   },
+   {
+    "label": "Chimborazo",
+    "slug": "chimborazo",
+    "quote": "Chimborazo is an inactive stratovolcano in the Andes of central Ecuador, rising to 6,263 metres"
+   },
+   {
+    "label": "Soufrière Hills",
+    "slug": "soufriere-hills",
+    "quote": "The Soufrière Hills is an active volcano in the south of the Caribbean island of Montserrat"
+   }
+  ]
+ },
+ {
+  "name": "Spread by the Columbian exchange",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tomato",
+    "slug": "tomato",
+    "quote": "The tomato is a fruit-bearing plant native to the Americas that spread to Europe and the rest of the world after the Spanish conquests of the sixteenth century"
+   },
+   {
+    "label": "Peanut",
+    "slug": "peanut",
+    "quote": "The peanut is a legume native to South America that spread worldwide after the Columbian exchange"
+   },
+   {
+    "label": "Sweet potato",
+    "slug": "sweet-potato",
+    "quote": "The sweet potato is a starchy root crop native to the Americas that spread across the world after the sixteenth century through Spanish and Portuguese trade networks"
+   },
+   {
+    "label": "Smallpox",
+    "slug": "smallpox",
+    "quote": "Brought to the Americas by Europeans, it devastated Indigenous populations with no prior immunity"
+   },
+   {
+    "label": "Measles",
+    "slug": "measles",
+    "quote": "Introduced to the Americas by Europeans, it caused devastating epidemics among indigenous populations who had no immunity"
+   },
+   {
+    "label": "Typhus",
+    "slug": "typhus",
+    "quote": "It was among the Eurasian diseases introduced into the Americas after European contact"
+   }
+  ]
+ },
+ {
+  "name": "Ancient wonders of the Americas",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nazca Lines",
+    "slug": "nazca-lines",
+    "quote": "The Nazca Lines are huge geoglyphs scraped into the desert surface between the Nazca and Palpa"
+   },
+   {
+    "label": "Machu Picchu",
+    "slug": "machu-picchu",
+    "quote": "Machu Picchu is a 15th-century Inca site on a mountain ridge above the Urubamba valley in Peru"
+   },
+   {
+    "label": "Pyramid of the Sun",
+    "slug": "pyramid-of-the-sun",
+    "quote": "The Pyramid of the Sun is the largest building at Teotihuacan and one of the largest pyramids of Mesoamerica, about 65"
+   },
+   {
+    "label": "Chan Chan",
+    "slug": "chan-chan",
+    "quote": "Chan Chan was the capital of the Chimú kingdom on the north coast of Peru, near modern Trujillo, and the largest adobe city of the pre-Columbian Americas"
+   },
+   {
+    "label": "Monks Mound",
+    "slug": "monks-mound",
+    "quote": "Monks Mound is the largest earthwork at Cahokia, near modern St Louis, and the largest prehistoric earthen structure in the Americas"
+   },
+   {
+    "label": "Caral",
+    "slug": "caral",
+    "quote": "Caral is an archaeological site in the Supe valley of Peru, about 23 km from the coast, and the largest centre of the Norte Chico or Caral-Supe civilisation"
+   }
+  ]
+ },
+ {
+  "name": "Rivers of the eastern United States",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ohio",
+    "slug": "ohio-river",
+    "quote": "The Ohio River is a major river of the eastern United States, flowing about 1,580 km from Pittsburgh to join the Mississippi at Cairo, Illinois"
+   },
+   {
+    "label": "Hudson",
+    "slug": "hudson-river",
+    "quote": "The Hudson River flows about 500 kilometres south from the Adirondack Mountains of New York to the Atlantic at New York City"
+   },
+   {
+    "label": "Potomac",
+    "slug": "potomac-river",
+    "quote": "The Potomac River flows about 650 kilometres from the Appalachian Mountains to Chesapeake Bay, forming much of the border between Maryland and Virginia"
+   },
+   {
+    "label": "Susquehanna",
+    "slug": "susquehanna-river",
+    "quote": "Maryland, making it the longest river on the east coast of the United States"
+   },
+   {
+    "label": "James",
+    "slug": "james-river",
+    "quote": "The James River is a river in Virginia, United States, flowing about 560 kilometres from the Appalachian Mountains to Chesapeake Bay at Hampton Roads"
+   },
+   {
+    "label": "Connecticut",
+    "slug": "connecticut-river",
+    "quote": "The Connecticut River is the longest river in New England, flowing south from near the Canadian border to Long Island Sound"
+   }
+  ]
+ },
+ {
+  "name": "Early presidents of the United States",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Washington",
+    "slug": "george-washington",
+    "quote": "He presided over the Constitutional Convention of 1787 and served as the first President of the United States from 1789 to 1797, setting the precedent of two terms"
+   },
+   {
+    "label": "John Adams",
+    "slug": "john-adams",
+    "quote": "John Adams was a Founding Father and the second president of the United States, serving from 1797 to 1801 after two terms as its first vice president"
+   },
+   {
+    "label": "Jefferson",
+    "slug": "thomas-jefferson",
+    "quote": "the Declaration of Independence in 1776 and the third President of the United States from 1801 to 1809"
+   },
+   {
+    "label": "Madison",
+    "slug": "james-madison",
+    "quote": "James Madison was the fourth president of the United States, from 1809 to 1817, and a principal author of the US Constitution and the Bill of Rights"
+   },
+   {
+    "label": "Monroe",
+    "slug": "james-monroe",
+    "quote": "James Monroe was the fifth President of the United States, serving from 1817 to 1825, after"
+   },
+   {
+    "label": "Andrew Jackson",
+    "slug": "andrew-jackson",
+    "quote": "Andrew Jackson was an American general and the seventh President of the United States, serving from 1829 to 1837"
+   }
+  ]
+ },
+ {
+  "name": "Once under Mexican rule",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "California",
+    "slug": "california",
+    "quote": "with missions and presidios as Alta California, it passed to Mexico in 1821 and was ceded to the United States after"
+   },
+   {
+    "label": "Texas",
+    "slug": "texas",
+    "quote": "New Spain from the late 17th century and part of Mexico after 1821, it broke away in 1836 as the Republic"
+   },
+   {
+    "label": "New Mexico",
+    "slug": "new-mexico",
+    "quote": "It passed to Mexico in 1821 and to the United States in 1848"
+   },
+   {
+    "label": "Arizona",
+    "slug": "arizona",
+    "quote": "and other peoples, it was a frontier of New Spain and Mexico until most of it passed to the United States in"
+   },
+   {
+    "label": "Los Angeles",
+    "slug": "los-angeles",
+    "quote": "It was founded in 1781 as a Spanish farming pueblo on the Los Angeles River, remained a small ranching town under Mexican rule, and passed to the United States in 1848"
+   },
+   {
+    "label": "San Francisco",
+    "slug": "san-francisco",
+    "quote": "It passed to Mexico and then, in 1848, to the United States, and the California gold rush turned it into the main city of the American West"
+   }
+  ]
+ },
+ {
+  "name": "Founded by the French in North America",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Quebec",
+    "slug": "quebec",
+    "quote": "Samuel de Champlain founded it in 1608 as the capital of New France and the centre of the fur trade"
+   },
+   {
+    "label": "Montreal",
+    "slug": "montreal",
+    "quote": "Founded as Ville-Marie in 1642 by French Catholic settlers, it became the centre of the New France fur trade and surrendered to the British in 1760"
+   },
+   {
+    "label": "New Orleans",
+    "slug": "new-orleans",
+    "quote": "New Orleans is a port city on the Mississippi River near its mouth, founded in 1718 by Jean-Baptiste Le Moyne de Bienville"
+   },
+   {
+    "label": "Detroit",
+    "slug": "detroit",
+    "quote": "It was founded in 1701 by Antoine de la Mothe Cadillac as Fort Pontchartrain du Détroit, a French fur-trading post, and passed to Britain in 1760"
+   },
+   {
+    "label": "Trois-Rivières",
+    "slug": "trois-rivieres",
+    "quote": "Founded in 1634 by Laviolette on Samuel de Champlain's orders, it was the second permanent French settlement on the St Lawrence and a fur-trading post"
+   },
+   {
+    "label": "Biloxi",
+    "slug": "biloxi",
+    "quote": "d'Iberville built Fort Maurepas across Biloxi Bay, the first French settlement in Louisiana, and a later settlement on the present site"
+   }
+  ]
+ },
+ {
+  "name": "Countries of South America",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Peru",
+    "slug": "peru",
+    "quote": "Peru is a country on the Pacific coast of South America, formerly the heartland of the Inca Empire"
+   },
+   {
+    "label": "Bolivia",
+    "slug": "bolivia",
+    "quote": "Bolivia is a country in central South America, which in the colonial period formed part of the Spanish Viceroyalty of Peru as the region of Upper Peru"
+   },
+   {
+    "label": "Argentina",
+    "slug": "argentina",
+    "quote": "Argentina is a country in southern South America that emerged from the Spanish viceroyalty of the Río de la Plata"
+   },
+   {
+    "label": "Uruguay",
+    "slug": "uruguay",
+    "quote": "Uruguay is a country in South America on the east bank of the Río de la Plata"
+   },
+   {
+    "label": "Paraguay",
+    "slug": "paraguay",
+    "quote": "Paraguay is a landlocked country in central South America"
+   },
+   {
+    "label": "Brazil",
+    "slug": "brazil",
+    "quote": "Brazil is the largest country in South America, colonised by Portugal from the sixteenth century"
+   }
+  ]
+ },
+ {
+  "name": "Won the Nobel Prize in Literature",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gabriela Mistral",
+    "slug": "gabriela-mistral",
+    "quote": "In 1945 she became the first Latin American writer to win the Nobel Prize in Literature"
+   },
+   {
+    "label": "Pablo Neruda",
+    "slug": "pablo-neruda",
+    "quote": "A Communist senator and ally of Salvador Allende, he won the Nobel Prize in Literature in 1971 and died days after the 1973 coup"
+   },
+   {
+    "label": "Octavio Paz",
+    "slug": "octavio-paz",
+    "quote": "Octavio Paz was a Mexican poet, essayist and diplomat who received the Nobel Prize in Literature in 1990"
+   },
+   {
+    "label": "Miguel Ángel Asturias",
+    "slug": "miguel-angel-asturias",
+    "quote": "Miguel Ángel Asturias (1899–1974) was a Guatemalan novelist, poet and diplomat who received the Nobel Prize in Literature in 1967"
+   },
+   {
+    "label": "Mario Vargas Llosa",
+    "slug": "mario-vargas-llosa",
+    "quote": "Mario Vargas Llosa was a Peruvian novelist and essayist, a leading figure of the Latin American literary boom, who won the Nobel Prize in Literature in 2010"
+   },
+   {
+    "label": "Alice Munro",
+    "slug": "alice-munro",
+    "quote": "She was awarded the Nobel Prize in Literature in 2013, the first Canadian writer to receive it"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of the Great Plains",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cheyenne",
+    "slug": "cheyenne",
+    "quote": "Cheyenne are an Algonquian-speaking Indigenous people of the Great Plains, who moved west from the upper Mississippi region and took"
+   },
+   {
+    "label": "Assiniboine",
+    "slug": "assiniboine",
+    "quote": "The Assiniboine, or Nakoda, are a Siouan-speaking Indigenous people of the northern Great Plains, in present-day Saskatchewan, Alberta, Montana and North Dakota"
+   },
+   {
+    "label": "Siksika",
+    "slug": "siksika",
+    "quote": "The Siksika, or Blackfoot proper, are one of the nations of the Blackfoot Confederacy of the northern Great Plains, together with the Kainai and the Piikani"
+   },
+   {
+    "label": "Kainai",
+    "slug": "kainai-nation",
+    "quote": "Bison hunters of the northern plains, they signed Treaty 7 with Canada in 1877"
+   },
+   {
+    "label": "Comanche",
+    "slug": "comanche",
+    "quote": "The Comanche, who call themselves Numunuu, are a Native American people who split from the Shoshone and moved onto the southern Plains in the early 18th century"
+   },
+   {
+    "label": "Lakota",
+    "slug": "lakota-people",
+    "quote": "Moving west from Minnesota in the 18th century, they became mounted bison hunters and the leading power of the northern Plains, reaching the Black Hills by around 1776"
+   }
+  ]
+ },
+ {
+  "name": "Colonial colleges of British America",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Harvard",
+    "slug": "harvard-university",
+    "quote": "Harvard University, founded as Harvard College in 1636 by vote of the General Court of the Massachusetts Bay"
+   },
+   {
+    "label": "Yale",
+    "slug": "yale-university",
+    "quote": "Yale University is a private research university in New Haven, Connecticut, founded in 1701 and one of the oldest institutions of higher learning in the United States"
+   },
+   {
+    "label": "Columbia",
+    "slug": "columbia-university",
+    "quote": "Columbia University is a private research university in New York City, founded in 1754"
+   },
+   {
+    "label": "Princeton",
+    "slug": "princeton-university",
+    "quote": "Princeton University is a private university in Princeton, New Jersey, chartered in 1746 as the College of New Jersey, the fourth college founded in British North America"
+   },
+   {
+    "label": "Rutgers",
+    "slug": "rutgers-university",
+    "quote": "Rutgers University is the state university of New Jersey, founded in 1766 as Queen's College by ministers of the Dutch Reformed Church"
+   },
+   {
+    "label": "William & Mary",
+    "slug": "college-of-william-and-mary",
+    "quote": "The College of William & Mary is a public university in Williamsburg, Virginia, founded by royal charter in 1693 under King William III and Queen Mary II"
+   }
+  ]
+ },
+ {
+  "name": "Saints of the Americas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rose of Lima",
+    "slug": "rose-of-lima",
+    "quote": "Canonised by Pope Clement X in 1671, she was the first person born in the Americas to be declared a saint"
+   },
+   {
+    "label": "Martin de Porres",
+    "slug": "martin-de-porres",
+    "quote": "Known for his care for the sick and the poor, he became one of the most popular saints of Latin America and was canonised in 1962 as the first Black saint of the Americas"
+   },
+   {
+    "label": "Juan Diego",
+    "slug": "juan-diego",
+    "quote": "He was canonised by Pope John Paul II in 2002 as the first indigenous saint of the Americas"
+   },
+   {
+    "label": "Óscar Romero",
+    "slug": "oscar-romero",
+    "quote": "He was canonised in 2018"
+   },
+   {
+    "label": "François de Laval",
+    "slug": "francois-de-laval",
+    "quote": "Canonised in 2014, he gives his name to Université Laval"
+   },
+   {
+    "label": "Marie of the Incarnation",
+    "slug": "marie-of-the-incarnation-ursuline",
+    "quote": "She was canonised in 2014"
+   }
+  ]
+ },
+ {
+  "name": "The Six Nations",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mohawk",
+    "slug": "mohawk-people",
+    "quote": "Indigenous people of the Northeastern Woodlands and the easternmost nation of the Haudenosaunee, or Iroquois Confederacy, known as the Keepers"
+   },
+   {
+    "label": "Oneida",
+    "slug": "oneida-people",
+    "quote": "the Northeastern Woodlands and one of the five founding nations of the Haudenosaunee Confederacy, traditionally living between the Mohawk and"
+   },
+   {
+    "label": "Onondaga",
+    "slug": "onondaga-people",
+    "quote": "of the Hills, are one of the five original nations of the Haudenosaunee Confederacy, with their homeland in and around"
+   },
+   {
+    "label": "Cayuga",
+    "slug": "cayuga-people",
+    "quote": "are an Iroquoian people, one of the five original nations of the Haudenosaunee (Iroquois) Confederacy, whose homeland lay around Cayuga"
+   },
+   {
+    "label": "Seneca",
+    "slug": "seneca-people",
+    "quote": "who historically lived south of Lake Ontario, the westernmost nation of the Haudenosaunee (Iroquois League), called the Keepers of the"
+   },
+   {
+    "label": "Tuscarora",
+    "slug": "tuscarora-people",
+    "quote": "1711–1713, most moved north and around 1722 were adopted into the Iroquois Confederacy under Oneida sponsorship, which then became"
+   }
+  ]
+ },
+ {
+  "name": "Tiwanaku",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gateway of the Sun",
+    "slug": "gateway-of-the-sun",
+    "quote": "The Gateway of the Sun is a monolithic stone portal at Tiwanaku, near Lake Titicaca in Bolivia, carved from a single block of andesite about 3 metres high"
+   },
+   {
+    "label": "Akapana",
+    "slug": "akapana",
+    "quote": "The Akapana is the largest structure at Tiwanaku, near Lake Titicaca in Bolivia: a terraced platform mound about"
+   },
+   {
+    "label": "Kalasasaya",
+    "slug": "kalasasaya",
+    "quote": "The Kalasasaya is a large rectangular platform enclosure at Tiwanaku, near Lake Titicaca in Bolivia, bounded by walls of tall upright stone pillars"
+   },
+   {
+    "label": "Semi-Subterranean Temple",
+    "slug": "semi-subterranean-temple",
+    "quote": "The Semi-Subterranean Temple is a sunken rectangular court at Tiwanaku, near Lake Titicaca in Bolivia, and among the oldest structures on the site"
+   },
+   {
+    "label": "Max Uhle",
+    "slug": "max-uhle",
+    "quote": "von Grumbkow, the first in-depth scientific account of Tiwanaku"
+   },
+   {
+    "label": "Moquegua",
+    "slug": "moquegua",
+    "quote": "a meeting ground of two Andean states, with Tiwanaku colonies on the valley floor and the Wari stronghold of Cerro"
+   }
+  ]
+ },
+ {
+  "name": "The Olmecs",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "La Venta",
+    "slug": "la-venta",
+    "quote": "La Venta is an archaeological site of the Olmec civilisation in Tabasco, Mexico, on an island in a coastal"
+   },
+   {
+    "label": "San Lorenzo",
+    "slug": "san-lorenzo-tenochtitlan",
+    "quote": "Tenochtitlán is the collective name for three related Olmec archaeological sites in south-eastern Veracruz, Mexico: San Lorenzo, Tenochtitlán and"
+   },
+   {
+    "label": "Tres Zapotes",
+    "slug": "tres-zapotes",
+    "quote": "mountains in Veracruz, Mexico, sometimes called the third Olmec capital, though it remained a regional centre for some 2,000"
+   },
+   {
+    "label": "Colossal heads",
+    "slug": "olmec-colossal-heads",
+    "quote": "The Olmec colossal heads are seventeen heads carved from basalt boulders by"
+   },
+   {
+    "label": "Tuxtla Mountains",
+    "slug": "tuxtla-mountains",
+    "quote": "Their basalt was quarried by the Olmecs and hauled to San Lorenzo and other centres to carve colossal heads, table-thrones and other monuments"
+   },
+   {
+    "label": "Coatzacoalcos River",
+    "slug": "coatzacoalcos-river",
+    "quote": "Its floodplain was the heartland of the early Olmec civilisation, whose first great centre, San Lorenzo, stood on a plateau above the river from about 1400 BCE"
+   }
+  ]
+ },
+ {
+  "name": "Companies that ran colonies in the Americas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hudson's Bay Company",
+    "slug": "hudsons-bay-company",
+    "quote": "The Hudson's Bay Company was chartered by Charles II in 1670 with a monopoly of trade in all lands draining into Hudson Bay, a territory called Rupert's Land"
+   },
+   {
+    "label": "Massachusetts Bay Company",
+    "slug": "massachusetts-bay-company",
+    "quote": "The Massachusetts Bay Company was an English joint-stock company chartered by Charles I in 1629 to settle and trade in New England"
+   },
+   {
+    "label": "New Netherland Company",
+    "slug": "new-netherland-company",
+    "quote": "by the States General in 1614 with a monopoly of the fur trade in North America between latitudes 40"
+   },
+   {
+    "label": "One Hundred Associates",
+    "slug": "company-of-one-hundred-associates",
+    "quote": "created by Cardinal Richelieu in 1627 and given ownership of New France and a monopoly of the fur trade, in return for"
+   },
+   {
+    "label": "Society of Suriname",
+    "slug": "society-of-suriname",
+    "quote": "Sommelsdijck, each holding a third, to own and govern the colony of Suriname"
+   },
+   {
+    "label": "Russian-American Company",
+    "slug": "russian-american-company",
+    "quote": "The Russian-American Company was a state-chartered trading company that held a monopoly over the fur trade and governed Russian America from 1799 until 1867"
+   }
+  ]
+ },
+ {
+  "name": "Building the Panama Canal",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bunau-Varilla",
+    "slug": "philippe-bunau-varilla",
+    "quote": "engineer who worked on Ferdinand de Lesseps's failed Panama canal and later lobbied the United States to buy the French"
+   },
+   {
+    "label": "Gorgas",
+    "slug": "william-c-gorgas",
+    "quote": "physician who, as chief sanitary officer of the Panama Canal from 1904, brought yellow fever and malaria under control by"
+   },
+   {
+    "label": "Goethals",
+    "slug": "george-washington-goethals",
+    "quote": "George Washington Goethals was a US Army engineer who directed the construction of the Panama Canal from 1907 until its opening in August 1914"
+   },
+   {
+    "label": "Gatun Lake",
+    "slug": "gatun-lake",
+    "quote": "an artificial lake in Panama formed by the Gatun Dam on the Chagres River, built between 1907 and 1913, and"
+   },
+   {
+    "label": "Lesseps",
+    "slug": "ferdinand-de-lesseps",
+    "quote": "launched a French company to build a sea-level canal across Panama in 1881, but disease, landslides and engineering problems overwhelmed the"
+   },
+   {
+    "label": "Zonians",
+    "slug": "zonians",
+    "quote": "Zonians were the American civilians who lived and worked in the Panama Canal Zone under United States administration from 1904 to 1979"
+   }
+  ]
+ },
+ {
+  "name": "Wars of the United States against Native nations",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Creek War",
+    "slug": "creek-war",
+    "quote": "The Creek War of 1813 to 1814 began as a civil war among the Muscogee between the Red Sticks, who resisted American expansion, and those friendly to the United States"
+   },
+   {
+    "label": "Red River War",
+    "slug": "red-river-war",
+    "quote": "War of 1874–1875 was a campaign of the United States Army against the Comanche, Kiowa, Southern Cheyenne and Arapaho on the"
+   },
+   {
+    "label": "Great Sioux War",
+    "slug": "great-sioux-war-of-1876",
+    "quote": "the Black Hills War, was fought between the United States and the Lakota and Northern Cheyenne after gold was found"
+   },
+   {
+    "label": "First Seminole War",
+    "slug": "first-seminole-war",
+    "quote": "The First Seminole War was a conflict of 1817 to 1818 in which American forces under Andrew Jackson invaded Spanish Florida against the Seminole and Black Seminoles"
+   },
+   {
+    "label": "Second Seminole War",
+    "slug": "second-seminole-war",
+    "quote": "The Second Seminole War was fought from 1835 to 1842 between the United States and the Seminole of Florida, who resisted removal to Indian Territory"
+   },
+   {
+    "label": "Tecumseh's War",
+    "slug": "tecumsehs-war",
+    "quote": "Tecumseh's War was the conflict between the United States and a confederacy of Native American nations led by the"
+   }
+  ]
+ },
+ {
+  "name": "Congresses of Spanish American independence",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tucumán",
+    "slug": "congress-of-tucuman",
+    "quote": "The Congress of Tucumán was the assembly of deputies from the United Provinces of the Río de la Plata that met in San Miguel de Tucumán from March 1816"
+   },
+   {
+    "label": "Angostura",
+    "slug": "congress-of-angostura",
+    "quote": "The Congress of Angostura was the assembly convened by Simón Bolívar at Angostura, now Ciudad Bolívar, on the Orinoco, which opened in February 1819"
+   },
+   {
+    "label": "Cúcuta",
+    "slug": "congress-of-cucuta",
+    "quote": "The Congress of Cúcuta was the constituent assembly of Gran Colombia, meeting at Villa del Rosario de Cúcuta from May to October 1821"
+   },
+   {
+    "label": "Chilpancingo",
+    "slug": "congress-of-chilpancingo",
+    "quote": "of Chilpancingo, or Congress of Anáhuac, was the first independent legislative assembly of Mexico, convened by José María Morelos at Chilpancingo in"
+   },
+   {
+    "label": "Assembly of the Year XIII",
+    "slug": "assembly-of-the-year-xiii",
+    "quote": "The Assembly of the Year XIII was the general constituent assembly of the United Provinces of the Río de la Plata, which met in Buenos Aires from 1813"
+   },
+   {
+    "label": "Panama",
+    "slug": "congress-of-panama",
+    "quote": "The Congress of Panama was a meeting of Spanish American republics called by Simón Bolívar and held in Panama City in"
+   }
+  ]
+ },
+ {
+  "name": "British laws and decrees for the American colonies",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Navigation Acts",
+    "slug": "navigation-acts",
+    "quote": "The Navigation Acts were a series of English laws from the mid-seventeenth century that restricted colonial trade to English ships and English ports"
+   },
+   {
+    "label": "Quebec Act",
+    "slug": "quebec-act",
+    "quote": "The Quebec Act was a British law of 1774 for the government of the Province of Quebec"
+   },
+   {
+    "label": "Intolerable Acts",
+    "slug": "intolerable-acts",
+    "quote": "The Intolerable Acts, called the Coercive Acts in Britain, were four punitive laws passed by the British Parliament in 1774 after the Boston Tea Party"
+   },
+   {
+    "label": "Townshend Acts",
+    "slug": "townshend-acts",
+    "quote": "were a series of laws passed by the British Parliament in 1767 and 1768, named after the chancellor of the"
+   },
+   {
+    "label": "Proclamation of 1763",
+    "slug": "royal-proclamation-of-1763",
+    "quote": "The Royal Proclamation of 1763 was issued by George III after Britain gained France's North American territories in the Treaty of Paris"
+   },
+   {
+    "label": "Stamp Act",
+    "slug": "stamp-act-1765",
+    "quote": "The Stamp Act of 1765 was a British law requiring printed materials in the American colonies, such as legal documents, newspapers and playing cards, to carry a tax stamp"
+   }
+  ]
+ },
+ {
+  "name": "The pirates of the Bahamas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Woodes Rogers",
+    "slug": "woodes-rogers",
+    "quote": "Appointed first royal governor of the Bahamas, he arrived at Nassau in 1718 with a royal pardon, broke up the pirates' republic and hanged those who returned to piracy"
+   },
+   {
+    "label": "Charles Vane",
+    "slug": "charles-vane",
+    "quote": "Charles Vane was an English pirate who operated from Nassau in the Bahamas between 1716 and 1719"
+   },
+   {
+    "label": "Benjamin Hornigold",
+    "slug": "benjamin-hornigold",
+    "quote": "Benjamin Hornigold was an English pirate based at Nassau in the Bahamas, one of the founders of the pirate community known as the Republic of Pirates"
+   },
+   {
+    "label": "Blackbeard",
+    "slug": "blackbeard",
+    "quote": "Associated with the pirate base at Nassau, he captured a French slave ship in 1717, renamed it Queen Anne's Revenge and blockaded Charleston in 1718"
+   },
+   {
+    "label": "Flying Gang",
+    "slug": "flying-gang",
+    "quote": "The Flying Gang was the name given to the pirates based at Nassau in the Bahamas between about 1716 and 1718, the period known as the Republic of Pirates"
+   },
+   {
+    "label": "Calico Jack",
+    "slug": "calico-jack",
+    "quote": "Calico Jack, John Rackham, was an English pirate active in the Bahamas and Cuba from 1718 to 1720, late in the Golden Age of Piracy"
+   }
+  ]
+ },
+ {
+  "name": "Cities of the Valley of Mexico",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tenochtitlan",
+    "slug": "tenochtitlan",
+    "quote": "Tenochtitlan was the capital city of the Mexica and of the Aztec Empire, founded in the fourteenth century on an island in Lake Texcoco in the Valley of Mexico"
+   },
+   {
+    "label": "Texcoco",
+    "slug": "texcoco",
+    "quote": "Texcoco was a major city-state on the eastern shore of Lake Texcoco in the Valley of Mexico and one of the three members of the Aztec Triple Alliance"
+   },
+   {
+    "label": "Tlacopan",
+    "slug": "tlacopan",
+    "quote": "Tlacopan was a Tepanec city-state on the western shore of Lake Texcoco and the third member of the Aztec Triple Alliance, alongside Tenochtitlan and Texcoco"
+   },
+   {
+    "label": "Tlatelolco",
+    "slug": "tlatelolco",
+    "quote": "Tlatelolco was a Mexica city adjacent to Tenochtitlan, founded on the same island in Lake Texcoco and later absorbed into it"
+   },
+   {
+    "label": "Azcapotzalco",
+    "slug": "azcapotzalco",
+    "quote": "Azcapotzalco was the capital of the Tepanec state in the Valley of Mexico, which dominated the region in the late fourteenth and early fifteenth centuries"
+   },
+   {
+    "label": "Cuicuilco",
+    "slug": "cuicuilco",
+    "quote": "Cuicuilco is an archaeological site in the south of Mexico City, the remains of one of the earliest large centres of the Valley of Mexico"
+   }
+  ]
+ },
+ {
+  "name": "Islands of the Lesser Antilles",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Barbuda",
+    "slug": "barbuda",
+    "quote": "Barbuda is a flat coral island in the Leeward Islands of the Caribbean, about 45 kilometres north of Antigua"
+   },
+   {
+    "label": "Anguilla",
+    "slug": "anguilla",
+    "quote": "Anguilla is a low coral island in the northern Leeward Islands of the Caribbean and a British Overseas Territory"
+   },
+   {
+    "label": "Saint Kitts",
+    "slug": "saint-kitts",
+    "quote": "Saint Kitts, formally Saint Christopher, is a Caribbean island in the Leeward Islands"
+   },
+   {
+    "label": "Saint Barthélemy",
+    "slug": "saint-barthelemy",
+    "quote": "Saint Barthélemy is a small island in the Leeward Islands of the Caribbean and an overseas collectivity of France"
+   },
+   {
+    "label": "Grenadines",
+    "slug": "grenadines",
+    "quote": "The Grenadines are a chain of about 600 small islands and islets in the Windward Islands of the Caribbean, between Saint Vincent and Grenada"
+   },
+   {
+    "label": "Tobago",
+    "slug": "tobago",
+    "quote": "Tobago is a Caribbean island north-east of Trinidad, with which it forms the Republic of Trinidad and Tobago"
+   }
+  ]
+ },
+ {
+  "name": "Spanish fortresses of the Americas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Morro Castle",
+    "slug": "morro-castle-havana",
+    "quote": "Morro Castle (Castillo de los Tres Reyes Magos del Morro) is the fortress guarding the entrance to Havana harbour, built by the Spanish from 1589 to about 1630"
+   },
+   {
+    "label": "La Cabaña",
+    "slug": "la-cabana",
+    "quote": "Spain built it after the British capture of the city in 1762, and it was the largest Spanish fortification in the Americas"
+   },
+   {
+    "label": "San Felipe del Morro",
+    "slug": "castillo-san-felipe-del-morro",
+    "quote": "Castillo San Felipe del Morro is a Spanish citadel on the headland guarding the entrance to San Juan Bay in Puerto Rico"
+   },
+   {
+    "label": "San Cristóbal",
+    "slug": "castillo-san-cristobal",
+    "quote": "Castillo San Cristóbal is a Spanish fortress in Old San Juan, Puerto Rico, built mainly between 1634 and 1783 to defend the city against attack by land"
+   },
+   {
+    "label": "San Juan de Ulúa",
+    "slug": "san-juan-de-ulua",
+    "quote": "San Juan de Ulúa is a fortress on an island off the port of Veracruz, Mexico"
+   },
+   {
+    "label": "San Marcos",
+    "slug": "castillo-de-san-marcos",
+    "quote": "The Castillo de San Marcos is a Spanish masonry fort at St"
+   }
+  ]
+ },
+ {
+  "name": "Follow \"Rio\"",
+  "level": 2,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Grande",
+    "slug": "rio-grande",
+    "quote": "The Rio Grande is a river that rises in Colorado and flows south through New Mexico, then forms the border between Texas and Mexico to the Gulf of Mexico"
+   },
+   {
+    "label": "de Janeiro",
+    "slug": "rio-de-janeiro",
+    "quote": "Rio de Janeiro is a major port city on the south-eastern coast of Brazil"
+   },
+   {
+    "label": "de la Plata",
+    "slug": "rio-de-la-plata",
+    "quote": "The Río de la Plata is the broad estuary formed by the Paraná and Uruguay rivers on the border of modern Argentina and Uruguay, and by extension the surrounding region"
+   },
+   {
+    "label": "Negro",
+    "slug": "rio-negro",
+    "quote": "The Rio Negro is the largest left-bank tributary of the Amazon and the largest blackwater river in the world, rising in Colombia and flowing through Venezuela and Brazil"
+   },
+   {
+    "label": "Grande do Norte",
+    "slug": "rio-grande-do-norte",
+    "quote": "Rio Grande do Norte is a state in north-eastern Brazil on the Atlantic coast, at the north-eastern corner of South America, with its capital at Natal"
+   },
+   {
+    "label": "Pongo",
+    "slug": "rio-pongo",
+    "quote": "The Rio Pongo is a river estuary on the coast of Guinea, north of Conakry, with many channels and creeks among mangrove swamps"
+   }
+  ],
+  "note": "labels drop \"Rio\"; Rio Pongo is in Guinea (a decoy outside the Americas)"
+ },
+ {
+  "name": "Wars of colonial North America",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pequot War",
+    "slug": "pequot-war",
+    "quote": "New England between the Pequot people and the colonies of Massachusetts Bay, Plymouth and Connecticut, with their Narragansett and"
+   },
+   {
+    "label": "King Philip's War",
+    "slug": "king-philips-war",
+    "quote": "King Philip's War was fought in 1675–1676 between English colonists in New England and Native peoples led by the Wampanoag"
+   },
+   {
+    "label": "Dummer's War",
+    "slug": "dummers-war",
+    "quote": "Father Rale's War, was fought in 1722–1725 between New England and the Wabanaki Confederacy, supported by New France, over English"
+   },
+   {
+    "label": "Tuscarora War",
+    "slug": "tuscarora-war",
+    "quote": "The Tuscarora War was fought in North Carolina from 1711 to 1715 between the Tuscarora and their allies and British colonists"
+   },
+   {
+    "label": "Yamasee War",
+    "slug": "yamasee-war",
+    "quote": "1715 to 1717 was a conflict between the Province of Carolina and the Yamasee, Muscogee and other Native peoples angered by"
+   },
+   {
+    "label": "Beaver Wars",
+    "slug": "beaver-wars",
+    "quote": "Confederacy, armed through Dutch and then English trade, fought neighbouring peoples and the French for control of the fur trade and"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of the American Southwest",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Apache",
+    "slug": "apache",
+    "quote": "The Apache are a group of culturally related Indigenous peoples of the American Southwest and northern Mexico, speaking Southern Athabaskan languages"
+   },
+   {
+    "label": "Navajo",
+    "slug": "navajo",
+    "quote": "The Navajo, who call themselves Diné, are an Athabaskan-speaking Native American people of the south-western United States, related to the Apache"
+   },
+   {
+    "label": "Pueblo",
+    "slug": "pueblo-peoples",
+    "quote": "Pueblo peoples are Native American communities of the south-western United States, chiefly in New Mexico and Arizona, who live in compact"
+   },
+   {
+    "label": "Tewa",
+    "slug": "tewa",
+    "quote": "The Tewa are a group of Pueblo peoples of northern New Mexico who speak the Tewa language, a member of the Tanoan family"
+   },
+   {
+    "label": "Yaqui",
+    "slug": "yaqui",
+    "quote": "The Yaqui are an Indigenous people of the Yaqui river valley in Sonora, north-western Mexico, with communities also in Arizona"
+   }
+  ],
+  "note": "five candidates only: no further Southwest people has an entry"
+ },
+ {
+  "name": "The Paraguayan War",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Solano López",
+    "slug": "francisco-solano-lopez",
+    "quote": "intervention in Uruguay's civil war led to the War of the Triple Alliance from 1864 to 1870 against Brazil, Argentina and Uruguay, in"
+   },
+   {
+    "label": "Caxias",
+    "slug": "luis-alves-de-lima-e-silva-duke-of-caxias",
+    "quote": "He suppressed regional revolts such as the Balaiada and ended the Ragamuffin War in 1845 through negotiation, then commanded allied forces in the Paraguayan War"
+   },
+   {
+    "label": "Pedro II",
+    "slug": "pedro-ii-of-brazil",
+    "quote": "His long reign was the most stable period of the Brazilian Empire, with competent fiscal management and victory in the Paraguayan War"
+   },
+   {
+    "label": "Triple Alliance treaty",
+    "slug": "treaty-of-the-triple-alliance",
+    "quote": "The Treaty of the Triple Alliance was signed in secret on 1 May 1865 in Buenos Aires by Argentina, Brazil and Uruguay after Paraguay invaded Argentine territory"
+   },
+   {
+    "label": "Curupayty",
+    "slug": "battle-of-curupayty",
+    "quote": "Argentine and Brazilian troops under Bartolomé Mitre assaulted Paraguayan entrenchments near Humaitá"
+   },
+   {
+    "label": "Ironclads",
+    "slug": "ironclad",
+    "quote": "During the Paraguayan War, the Brazilian Empire built a navy of modern ironclads"
+   }
+  ]
+ },
+ {
+  "name": "The Moche",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Huaca de la Luna",
+    "slug": "huaca-de-la-luna",
+    "quote": "The Huaca de la Luna, 'Temple of the Moon', is a great adobe temple at the Moche capital of Huacas de Moche, near Trujillo on the north coast of Peru"
+   },
+   {
+    "label": "Huaca del Sol",
+    "slug": "huaca-del-sol",
+    "quote": "de Moche near Trujillo, Peru, built by the Moche culture between about 100 and 800 CE"
+   },
+   {
+    "label": "Lord of Sipán",
+    "slug": "lord-of-sipan",
+    "quote": "of Sipán is the name given to a Moche ruler whose undisturbed tomb was discovered in 1987 at Huaca Rajada"
+   },
+   {
+    "label": "Lady of Cao",
+    "slug": "lady-of-cao",
+    "quote": "of Cao is the name given to a Moche woman of high rank whose richly furnished tomb was found in"
+   },
+   {
+    "label": "Pampa Grande",
+    "slug": "pampa-grande",
+    "quote": "Pampa Grande is an archaeological site in the Lambayeque valley on the north coast of Peru, the largest centre of the late Moche period around 600 to 700 CE"
+   },
+   {
+    "label": "Chicama Valley",
+    "slug": "chicama-valley",
+    "quote": "by irrigation since ancient times, it was a heartland of the Moche culture, whose major site of El Brujo stands near its mouth"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Chile",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Allende",
+    "slug": "salvador-allende",
+    "quote": "Salvador Allende was a Chilean Socialist physician and politician who won the presidential election of 1970 at the head of the Popular Unity coalition"
+   },
+   {
+    "label": "Frei Montalva",
+    "slug": "eduardo-frei-montalva",
+    "quote": "Eduardo Frei Montalva was a founder of Chile's Christian Democratic Party and president from 1964 to 1970"
+   },
+   {
+    "label": "Aylwin",
+    "slug": "patricio-aylwin",
+    "quote": "Patricio Aylwin was a Chilean Christian Democrat politician and the first president after the military regime of Augusto Pinochet"
+   },
+   {
+    "label": "Bulnes",
+    "slug": "manuel-bulnes",
+    "quote": "Manuel Bulnes was a Chilean general and president"
+   },
+   {
+    "label": "Prieto",
+    "slug": "joaquin-prieto",
+    "quote": "As president from 1831 to 1841, with Diego Portales as his leading"
+   },
+   {
+    "label": "Balmaceda",
+    "slug": "jose-manuel-balmaceda",
+    "quote": "José Manuel Balmaceda was president of Chile from 1886 to 1891"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Venezuela",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hugo Chávez",
+    "slug": "hugo-chavez",
+    "quote": "Hugo Chávez was a Venezuelan army officer who led a failed coup in 1992 and was elected president in 1998"
+   },
+   {
+    "label": "Nicolás Maduro",
+    "slug": "nicolas-maduro",
+    "quote": "Nicolás Maduro is a Venezuelan politician, a former bus driver and trade unionist who served as foreign minister under Hugo Chávez and succeeded him as president in 2013"
+   },
+   {
+    "label": "Guzmán Blanco",
+    "slug": "antonio-guzman-blanco",
+    "quote": "Antonio Guzmán Blanco was a Venezuelan general and statesman who dominated the country from 1870 to 1888 as president or through allies"
+   },
+   {
+    "label": "Cipriano Castro",
+    "slug": "cipriano-castro",
+    "quote": "Cipriano Castro was a Venezuelan military leader from the Andean state of Táchira who seized power in 1899 and ruled as president until 1908"
+   },
+   {
+    "label": "Carlos Andrés Pérez",
+    "slug": "carlos-andres-perez",
+    "quote": "Carlos Andrés Pérez was a Venezuelan politician of Democratic Action who was president of Venezuela from 1974 to 1979 and from 1989 to 1993"
+   },
+   {
+    "label": "López Contreras",
+    "slug": "eleazar-lopez-contreras",
+    "quote": "Eleazar López Contreras was a Venezuelan army officer and politician who was president of Venezuela from 1935 to 1941"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Bolivia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Paz Estenssoro",
+    "slug": "victor-paz-estenssoro",
+    "quote": "Víctor Paz Estenssoro was a Bolivian statesman who founded the Revolutionary Nationalist Movement (MNR) and served as president four times"
+   },
+   {
+    "label": "Evo Morales",
+    "slug": "evo-morales",
+    "quote": "Evo Morales is a Bolivian coca growers' leader of Aymara origin who became the country's first indigenous president in 2006"
+   },
+   {
+    "label": "Barrientos",
+    "slug": "rene-barrientos",
+    "quote": "He ruled Bolivia, as junta leader and then elected president, until his death in a helicopter crash in 1969"
+   },
+   {
+    "label": "Melgarejo",
+    "slug": "mariano-melgarejo",
+    "quote": "Mariano Melgarejo was a Bolivian general who seized power in 1864 and ruled as president until 1871"
+   },
+   {
+    "label": "Ballivián",
+    "slug": "jose-ballivian",
+    "quote": "José Ballivián was a Bolivian general and president from 1841 to 1847"
+   },
+   {
+    "label": "Santa Cruz",
+    "slug": "andres-de-santa-cruz",
+    "quote": "Andrés de Santa Cruz was President of Bolivia from 1829 to 1839"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Ecuador",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "García Moreno",
+    "slug": "gabriel-garcia-moreno",
+    "quote": "Gabriel García Moreno was twice president of Ecuador, from 1861 to 1865 and from 1869 until his assassination in Quito in 1875"
+   },
+   {
+    "label": "Eloy Alfaro",
+    "slug": "eloy-alfaro",
+    "quote": "Eloy Alfaro was the leader of Ecuador's Liberal Revolution of 1895 and president from 1895 to 1901 and from 1906 to 1911"
+   },
+   {
+    "label": "Velasco Ibarra",
+    "slug": "jose-maria-velasco-ibarra",
+    "quote": "Ecuadorian politics for four decades, who held the presidency five times between 1934 and 1972 but completed only one full term"
+   },
+   {
+    "label": "Rafael Correa",
+    "slug": "rafael-correa",
+    "quote": "Rafael Correa is an Ecuadorian economist who was president from 2007 to 2017"
+   },
+   {
+    "label": "Juan José Flores",
+    "slug": "juan-jose-flores",
+    "quote": "When it broke away in 1830 as Ecuador, he became the new republic's first president and annexed the Galápagos Islands in 1832"
+   },
+   {
+    "label": "Roldós",
+    "slug": "jaime-roldos-aguilera",
+    "quote": "Jaime Roldós Aguilera was a lawyer from Guayaquil who became the first president of Ecuador's restored democracy in 1979, after nearly a decade of military rule"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Guatemala",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Árbenz",
+    "slug": "jacobo-arbenz",
+    "quote": "Jacobo Árbenz was a Guatemalan army officer and politician who was president of Guatemala from 1951 to 1954"
+   },
+   {
+    "label": "Arévalo",
+    "slug": "juan-jose-arevalo",
+    "quote": "educator and philosopher who became the country's first democratically elected president after the revolution of 1944, serving from 1945 to 1951"
+   },
+   {
+    "label": "Ubico",
+    "slug": "jorge-ubico",
+    "quote": "Jorge Ubico (1878–1946) was a Guatemalan general who ruled as president from 1931 to 1944"
+   },
+   {
+    "label": "Estrada Cabrera",
+    "slug": "manuel-estrada-cabrera",
+    "quote": "Estrada Cabrera (1857–1924) was a Guatemalan lawyer who ruled the country as president from 1898 to 1920, one of the longest dictatorships in"
+   },
+   {
+    "label": "Castillo Armas",
+    "slug": "carlos-castillo-armas",
+    "quote": "As president from 1954 he reversed the land reform, banned opposition parties and persecuted the left"
+   },
+   {
+    "label": "Justo Rufino Barrios",
+    "slug": "justo-rufino-barrios",
+    "quote": "Justo Rufino Barrios was a Guatemalan general who led the Liberal Revolution of 1871 and ruled as president from 1873 to 1885"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Haiti",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Boyer",
+    "slug": "jean-pierre-boyer",
+    "quote": "Jean-Pierre Boyer was president of Haiti from 1818 to 1843"
+   },
+   {
+    "label": "Baby Doc",
+    "slug": "jean-claude-duvalier",
+    "quote": "Jean-Claude Duvalier, known as 'Baby Doc', was President of Haiti from 1971 to 1986, succeeding his father François Duvalier at the age of 19"
+   },
+   {
+    "label": "Geffrard",
+    "slug": "fabre-geffrard",
+    "quote": "Fabre Geffrard was a Haitian general who overthrew Emperor Faustin I in December 1858 and served as president of Haiti from 1859 to 1867"
+   },
+   {
+    "label": "Jovenel Moïse",
+    "slug": "jovenel-moise",
+    "quote": "Jovenel Moïse was a Haitian businessman and banana exporter who was President of Haiti from February 2017 until his death"
+   },
+   {
+    "label": "Aristide",
+    "slug": "jean-bertrand-aristide",
+    "quote": "Jean-Bertrand Aristide is a Haitian former Catholic priest and politician who became Haiti's first democratically elected president in 1990"
+   },
+   {
+    "label": "Soulouque",
+    "slug": "faustin-soulouque",
+    "quote": "Faustin Soulouque was a Haitian general chosen president by the senate in 1847 as a supposedly pliable figure"
+   }
+  ]
+ },
+ {
+  "name": "Native peoples of New England",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mohegan",
+    "slug": "mohegan",
+    "quote": "The Mohegan are an Algonquian-speaking Native American people of south-eastern Connecticut"
+   },
+   {
+    "label": "Narragansett",
+    "slug": "narragansett-people",
+    "quote": "The Narragansett are an Algonquian-speaking Native American people of what is now Rhode Island, around Narragansett Bay"
+   },
+   {
+    "label": "Abenaki",
+    "slug": "abenaki",
+    "quote": "The Abenaki are an Algonquian-speaking Indigenous people of northern New England and southern Quebec, members of the Wabanaki Confederacy"
+   },
+   {
+    "label": "Penobscot",
+    "slug": "penobscot",
+    "quote": "The Penobscot are an Algonquian-speaking Indigenous people of the Penobscot river valley in Maine, members of the Wabanaki Confederacy"
+   },
+   {
+    "label": "Passamaquoddy",
+    "slug": "passamaquoddy",
+    "quote": "The Passamaquoddy are an Algonquian-speaking Indigenous people of the Passamaquoddy Bay and St Croix river region on the border of Maine and New Brunswick"
+   },
+   {
+    "label": "Wampanoag",
+    "slug": "wampanoag-tribe-of-gay-head-aquinnah",
+    "quote": "The Wampanoag Tribe of Gay Head (Aquinnah) is a Native American tribe based at Aquinnah, formerly Gay Head, at the western end of Martha's Vineyard in Massachusetts"
+   }
+  ]
+ },
+ {
+  "name": "Maya peoples",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "K'iche'",
+    "slug": "kiche-people",
+    "quote": "The K'iche' are a Maya people of the western highlands of Guatemala, centred on the departments of El Quiché, Totonicapán and Quetzaltenango"
+   },
+   {
+    "label": "Kaqchikel",
+    "slug": "kaqchikel-people",
+    "quote": "The Kaqchikel are a Maya people of the central highlands of Guatemala"
+   },
+   {
+    "label": "Mam",
+    "slug": "mam-people",
+    "quote": "The Mam are a Maya people of the western highlands of Guatemala, mainly in Huehuetenango and San Marcos, and of neighbouring Chiapas in Mexico"
+   },
+   {
+    "label": "Tz'utujil",
+    "slug": "tzutujil-people",
+    "quote": "The Tz'utujil are a Maya people living around Lake Atitlán in the highlands of Guatemala"
+   },
+   {
+    "label": "Itza",
+    "slug": "itza-people",
+    "quote": "The Itza are a Maya people of the Petén lakes in northern Guatemala"
+   },
+   {
+    "label": "Lacandon",
+    "slug": "lacandon-maya",
+    "quote": "The Lacandon Maya are a Maya people of the rainforest of eastern Chiapas in Mexico, near the Guatemalan border"
+   }
+  ]
+ },
+ {
+  "name": "Indigenous peoples of Brazil",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kayapó",
+    "slug": "kayapo",
+    "quote": "The Kayapó are Gê-speaking indigenous peoples of central Brazil"
+   },
+   {
+    "label": "Xavante",
+    "slug": "xavante",
+    "quote": "The Xavante are a Gê-speaking indigenous people of central Brazil"
+   },
+   {
+    "label": "Tupinambá",
+    "slug": "tupinamba",
+    "quote": "The Tupinambá were Tupi-speaking peoples who lived along much of the Brazilian coast when the Portuguese arrived in 1500"
+   },
+   {
+    "label": "Aimoré",
+    "slug": "aimore",
+    "quote": "were Macro-Jê-speaking peoples of the Atlantic forest of eastern Brazil, in southern Bahia, Espírito Santo and Minas Gerais, later called"
+   },
+   {
+    "label": "Goitacá",
+    "slug": "goitaca",
+    "quote": "The Goitacá were an indigenous people of the coastal plain of south-eastern Brazil, around the lower Paraíba do Sul river between Espírito Santo and Rio de Janeiro"
+   },
+   {
+    "label": "Caeté",
+    "slug": "caete",
+    "quote": "The Caeté were a Tupi-speaking people of the north-eastern coast of Brazil, between Pernambuco and the São Francisco river"
+   }
+  ]
+ },
+ {
+  "name": "Mesoamerican codices",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Dresden",
+    "slug": "dresden-codex",
+    "quote": "The Dresden Codex is a Maya book of the 11th or 12th century, probably from the region of Chichén Itzá in Mexico, and one of four Maya hieroglyphic books to survive"
+   },
+   {
+    "label": "Mendoza",
+    "slug": "codex-mendoza",
+    "quote": "The Codex Mendoza is an Aztec pictorial manuscript produced in Mexico City around 1541, probably for the viceroy Antonio de Mendoza, with Spanish glosses and commentary"
+   },
+   {
+    "label": "Bodley",
+    "slug": "codex-bodley",
+    "quote": "The Codex Bodley is a pre-Hispanic Mixtec manuscript painted on a folded strip of deerskin, now in the Bodleian Library at Oxford"
+   },
+   {
+    "label": "Zouche-Nuttall",
+    "slug": "codex-zouche-nuttall",
+    "quote": "The Codex Zouche-Nuttall is a pre-Hispanic Mixtec manuscript painted on deerskin and folded like a screen, now in the British Museum"
+   },
+   {
+    "label": "Florentine",
+    "slug": "florentine-codex",
+    "quote": "The Florentine Codex is a sixteenth-century encyclopedic work on the Aztec world compiled by the Franciscan friar Bernardino de Sahagún with Nahua informants"
+   },
+   {
+    "label": "Calkiní",
+    "slug": "codex-of-calkini",
+    "quote": "The Codex of Calkiní is a colonial document written in Yucatec Maya in the Latin alphabet, compiled from the late 16th century in Calkiní, Campeche"
+   }
+  ]
+ },
+ {
+  "name": "American companies in Latin America",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "United Fruit",
+    "slug": "united-fruit-company",
+    "quote": "The United Fruit Company was an American corporation, founded in 1899, that dominated banana growing and trade in Central America and the Caribbean"
+   },
+   {
+    "label": "Cuyamel Fruit",
+    "slug": "cuyamel-fruit-company",
+    "quote": "The Cuyamel Fruit Company was an American banana company founded by Samuel Zemurray in 1911, with plantations in the"
+   },
+   {
+    "label": "Standard Fruit",
+    "slug": "standard-fruit-company",
+    "quote": "The Standard Fruit Company was an American fruit company that grew out of the banana business founded on the"
+   },
+   {
+    "label": "Rosario Mining",
+    "slug": "new-york-and-honduras-rosario-mining-company",
+    "quote": "The New York and Honduras Rosario Mining Company was an American company founded in 1880 to work silver mines at San Juancito, north-east of Tegucigalpa"
+   },
+   {
+    "label": "Accessory Transit",
+    "slug": "accessory-transit-company",
+    "quote": "The Accessory Transit Company was an American firm founded by Cornelius Vanderbilt that from 1851 carried travellers bound"
+   },
+   {
+    "label": "International Petroleum",
+    "slug": "international-petroleum-company",
+    "quote": "International Petroleum Company was a Canadian-registered subsidiary of Standard Oil of New Jersey that controlled the La Brea y Pariñas"
+   }
+  ]
+ },
+ {
+  "name": "Treaties over a canal across Central America",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hay–Herrán",
+    "slug": "hay-herran-treaty",
+    "quote": "The Hay–Herrán Treaty was signed in January 1903 by US Secretary of State John Hay and the Colombian chargé d'affaires Tomás Herrán"
+   },
+   {
+    "label": "Hay–Bunau-Varilla",
+    "slug": "hay-bunau-varilla-treaty",
+    "quote": "The Hay–Bunau-Varilla Treaty was signed on 18 November 1903 by US Secretary of State John Hay and Philippe Bunau-Varilla, acting for the newly independent Panama"
+   },
+   {
+    "label": "Torrijos–Carter",
+    "slug": "torrijos-carter-treaties",
+    "quote": "The Panama Canal Treaty abolished the Canal Zone in 1979 and provided for joint"
+   },
+   {
+    "label": "Clayton–Bulwer",
+    "slug": "clayton-bulwer-treaty",
+    "quote": "Both powers agreed that neither would seek exclusive control of a future canal across Central America or colonise any part of the region"
+   },
+   {
+    "label": "Bryan–Chamorro",
+    "slug": "bryan-chamorro-treaty",
+    "quote": "the United States perpetual rights to build a canal through Nicaragua, leases on the Corn Islands and the right"
+   },
+   {
+    "label": "Hull–Alfaro",
+    "slug": "hull-alfaro-treaty",
+    "quote": "and it raised the annual payment for the canal"
+   }
+  ]
+ },
+ {
+  "name": "Treaties with Native American nations",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Canandaigua",
+    "slug": "treaty-of-canandaigua",
+    "quote": "United States, represented by Timothy Pickering, and the Six Nations of the Iroquois"
+   },
+   {
+    "label": "New Echota",
+    "slug": "treaty-of-new-echota",
+    "quote": "was signed on 29 December 1835 at the Cherokee capital, New Echota in Georgia, by US commissioners and a"
+   },
+   {
+    "label": "Greenville",
+    "slug": "treaty-of-greenville",
+    "quote": "the United States and the nations of the Western Confederacy after their defeat at the Battle of Fallen Timbers"
+   },
+   {
+    "label": "Big Tree",
+    "slug": "treaty-of-big-tree",
+    "quote": "The Treaty of Big Tree was signed in 1797 at Geneseo, New York, between the Seneca and the financier Robert Morris"
+   },
+   {
+    "label": "Dancing Rabbit Creek",
+    "slug": "treaty-of-dancing-rabbit-creek",
+    "quote": "The Treaty of Dancing Rabbit Creek was signed on 27 September 1830 in Noxubee County, Mississippi, the first removal treaty concluded under the Indian Removal Act"
+   },
+   {
+    "label": "Middle Plantation",
+    "slug": "treaty-of-middle-plantation",
+    "quote": "1677 was concluded between the English Crown and Native peoples of Virginia, among them the Pamunkey under Cockacoeske, after the violence of"
+   }
+  ]
+ },
+ {
+  "name": "Rebellions in Brazil",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cabanagem",
+    "slug": "cabanagem",
+    "quote": "The Cabanagem was a popular revolt in the province of Grão-Pará in the Amazon region of Brazil, lasting from 1835 to 1840"
+   },
+   {
+    "label": "Ragamuffin War",
+    "slug": "ragamuffin-war",
+    "quote": "The Ragamuffin War, or Farroupilha, was a republican and separatist revolt in the southern Brazilian province of Rio Grande do Sul, lasting from 1835 to 1845"
+   },
+   {
+    "label": "Confederation of the Equator",
+    "slug": "confederation-of-the-equator",
+    "quote": "The Confederation of the Equator was a short-lived republican and separatist revolt in northeastern Brazil in 1824, centred on Pernambuco"
+   },
+   {
+    "label": "Inconfidência Mineira",
+    "slug": "inconfidencia-mineira",
+    "quote": "The Inconfidência Mineira was a conspiracy for independence from Portugal among officers, priests, poets and landowners of Vila Rica, Minas Gerais, in 1789"
+   },
+   {
+    "label": "Canudos",
+    "slug": "war-of-canudos",
+    "quote": "War of Canudos was a conflict between the Brazilian Republic and the religious community of Canudos in the backlands of"
+   },
+   {
+    "label": "Constitutionalist Revolution",
+    "slug": "constitutionalist-revolution",
+    "quote": "The Constitutionalist Revolution was an armed uprising of the state of São Paulo against the provisional government of Getúlio Vargas, fought from July to October 1932"
+   }
+  ]
+ },
+ {
+  "name": "Uprisings in colonial and early America",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bacon's Rebellion",
+    "slug": "bacons-rebellion",
+    "quote": "Bacon's Rebellion was an armed uprising in the Colony of Virginia in 1676, led by the planter Nathaniel Bacon against Governor William Berkeley"
+   },
+   {
+    "label": "Shays' Rebellion",
+    "slug": "shays-rebellion",
+    "quote": "Shays' Rebellion was an armed uprising in western Massachusetts in 1786–1787 by indebted farmers, led by"
+   },
+   {
+    "label": "Regulator Movement",
+    "slug": "regulator-movement",
+    "quote": "The Regulator Movement was an uprising of backcountry farmers in North Carolina, with a parallel movement in South Carolina, in the late 1760s and early 1770s"
+   },
+   {
+    "label": "Leisler's Rebellion",
+    "slug": "leislers-rebellion",
+    "quote": "Leisler's Rebellion was an uprising in colonial New York from 1689 to 1691, after news of the Glorious Revolution and the collapse of the Dominion of New England"
+   },
+   {
+    "label": "Stono Rebellion",
+    "slug": "stono-rebellion",
+    "quote": "The Stono Rebellion was a revolt of enslaved Africans that began on 9 September 1739 near the Stono River in South Carolina"
+   },
+   {
+    "label": "Paxton Boys",
+    "slug": "paxton-boys",
+    "quote": "The Paxton Boys were frontier settlers from around Paxton in central Pennsylvania who, during Pontiac's War"
+   }
+  ]
+ },
+ {
+  "name": "First prime ministers in the Caribbean",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Eric Williams",
+    "slug": "eric-williams",
+    "quote": "Eric Williams was a historian and the first Prime Minister of Trinidad and Tobago, leading the country from 1956 until his death in 1981"
+   },
+   {
+    "label": "Vere Bird",
+    "slug": "vere-bird",
+    "quote": "self-governing colony, and from independence in 1981 the first prime minister of Antigua and Barbuda, he dominated politics until 1994, when"
+   },
+   {
+    "label": "Errol Barrow",
+    "slug": "errol-barrow",
+    "quote": "He led the island to independence in 1966 and served as its first Prime Minister until 1976, expanding free education and social welfare"
+   },
+   {
+    "label": "John Compton",
+    "slug": "john-compton",
+    "quote": "led the United Workers Party and became the first prime minister when Saint Lucia gained independence from Britain on 22 February"
+   },
+   {
+    "label": "Bustamante",
+    "slug": "alexander-bustamante",
+    "quote": "He campaigned against the West Indies Federation and became Jamaica's first prime minister at independence in 1962, serving until 1967"
+   },
+   {
+    "label": "Eric Gairy",
+    "slug": "eric-gairy",
+    "quote": "He became chief minister, then premier, and led Grenada to independence in 1974 as its first prime minister"
+   }
+  ]
+ },
+ {
+  "name": "Rivers of the Amazon basin",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Solimões",
+    "slug": "solimoes",
+    "quote": "Solimões is the name used in Brazil for the upper course of the Amazon from the Peruvian border to its confluence with the Rio Negro near Manaus"
+   },
+   {
+    "label": "Napo",
+    "slug": "napo-river",
+    "quote": "The Napo River is a tributary of the Amazon that rises on the slopes of the Ecuadorian Andes and"
+   },
+   {
+    "label": "Juruá",
+    "slug": "jurua-river",
+    "quote": "The Juruá River is a major southern tributary of the Amazon, rising in eastern Peru and flowing more than 3,000 km"
+   },
+   {
+    "label": "Marañón",
+    "slug": "maranon-river",
+    "quote": "The Marañón is the main headwater of the Amazon, rising in the Andes of central Peru and flowing about"
+   },
+   {
+    "label": "Branco",
+    "slug": "branco-river",
+    "quote": "The Branco River is the main tributary of the Rio Negro, flowing through the Brazilian state of Roraima"
+   },
+   {
+    "label": "Huallaga",
+    "slug": "huallaga-river",
+    "quote": "Huánuco and through the San Martín region to join the Marañón"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Cuba",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Estrada Palma",
+    "slug": "tomas-estrada-palma",
+    "quote": "Tomás Estrada Palma was a veteran of the Cuban independence struggle who became the first President of Cuba in 1902, when the United States military government withdrew"
+   },
+   {
+    "label": "Gerardo Machado",
+    "slug": "gerardo-machado",
+    "quote": "Gerardo Machado was a Cuban general of the independence war who was elected president in 1924 and took office in 1925"
+   },
+   {
+    "label": "Grau San Martín",
+    "slug": "ramon-grau-san-martin",
+    "quote": "He founded the Auténtico Party and was elected president in 1944, serving until 1948, but his government became known for corruption and gang violence"
+   },
+   {
+    "label": "Prío Socarrás",
+    "slug": "carlos-prio-socarras",
+    "quote": "Carlos Prío Socarrás was a Cuban politician of the Auténtico Party who was elected president in 1948"
+   },
+   {
+    "label": "José Miguel Gómez",
+    "slug": "jose-miguel-gomez",
+    "quote": "José Miguel Gómez was a Cuban general of the War of Independence and leader of the Liberal Party who served as president of Cuba from 1909 to 1913"
+   },
+   {
+    "label": "Batista",
+    "slug": "fulgencio-batista",
+    "quote": "He was elected president in 1940 and seized power again in a coup in 1952"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1793",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Lucretia Mott",
+    "slug": "lucretia-mott",
+    "quote": "1793–1880"
+   },
+   {
+    "label": "Juan Manuel de Rosas",
+    "slug": "juan-manuel-de-rosas",
+    "quote": "1793–1877"
+   },
+   {
+    "label": "Diego Portales",
+    "slug": "diego-portales",
+    "quote": "1793–1837"
+   },
+   {
+    "label": "Sam Houston",
+    "slug": "sam-houston",
+    "quote": "1793–1863"
+   },
+   {
+    "label": "Stephen F. Austin",
+    "slug": "stephen-f-austin",
+    "quote": "1793–1836"
+   },
+   {
+    "label": "Du Petit-Thouars",
+    "slug": "abel-aubert-du-petit-thouars",
+    "quote": "1793–1864"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1792",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Francisco Morazán",
+    "slug": "francisco-morazan",
+    "quote": "1792–1842"
+   },
+   {
+    "label": "Gulab Singh",
+    "slug": "gulab-singh",
+    "quote": "1792–1857"
+   },
+   {
+    "label": "Santander",
+    "slug": "francisco-de-paula-santander",
+    "quote": "1792–1840"
+   },
+   {
+    "label": "Carlos Antonio López",
+    "slug": "carlos-antonio-lopez",
+    "quote": "1792–1862"
+   },
+   {
+    "label": "Lord Durham",
+    "slug": "john-lambton-1st-earl-of-durham",
+    "quote": "1792–1840"
+   },
+   {
+    "label": "Pope Pius IX",
+    "slug": "pope-pius-ix",
+    "quote": "1792–1878"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1795",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Sucre",
+    "slug": "antonio-jose-de-sucre",
+    "quote": "1795–1830"
+   },
+   {
+    "label": "José Gregorio Monagas",
+    "slug": "jose-gregorio-monagas",
+    "quote": "1795–1858"
+   },
+   {
+    "label": "William Lyon Mackenzie",
+    "slug": "william-lyon-mackenzie",
+    "quote": "1795–1861"
+   },
+   {
+    "label": "Robert F. Stockton",
+    "slug": "robert-f-stockton",
+    "quote": "1795–1866"
+   },
+   {
+    "label": "Leopold von Ranke",
+    "slug": "leopold-von-ranke",
+    "quote": "1795–1886"
+   },
+   {
+    "label": "Frederick William IV",
+    "slug": "frederick-william-iv-of-prussia",
+    "quote": "1795–1861"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1786",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Estanislao López",
+    "slug": "estanislao-lopez",
+    "quote": "1786–1838"
+   },
+   {
+    "label": "Francisco Ramírez",
+    "slug": "francisco-ramirez",
+    "quote": "1786–1821"
+   },
+   {
+    "label": "Joaquín Prieto",
+    "slug": "joaquin-prieto",
+    "quote": "1786–1854"
+   },
+   {
+    "label": "José María Vargas",
+    "slug": "jose-maria-vargas",
+    "quote": "1786–1854"
+   },
+   {
+    "label": "Guadalupe Victoria",
+    "slug": "guadalupe-victoria",
+    "quote": "1786–1843"
+   },
+   {
+    "label": "Louis-Joseph Papineau",
+    "slug": "louis-joseph-papineau",
+    "quote": "1786–1871"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1801",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Urquiza",
+    "slug": "justo-jose-de-urquiza",
+    "quote": "1801–1870"
+   },
+   {
+    "label": "Samuel Sharpe",
+    "slug": "samuel-sharpe",
+    "quote": "1801–1832"
+   },
+   {
+    "label": "José Joaquín Pérez",
+    "slug": "jose-joaquin-perez",
+    "quote": "1801–1889"
+   },
+   {
+    "label": "Pedro Santana",
+    "slug": "pedro-santana",
+    "quote": "1801–1864"
+   },
+   {
+    "label": "Brigham Young",
+    "slug": "brigham-young",
+    "quote": "1801–1877"
+   },
+   {
+    "label": "George Maclean",
+    "slug": "george-maclean",
+    "quote": "1801–1847"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1794",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mariano Gálvez",
+    "slug": "mariano-galvez",
+    "quote": "1794–1862"
+   },
+   {
+    "label": "Jehudi Ashmun",
+    "slug": "jehudi-ashmun",
+    "quote": "1794–1828"
+   },
+   {
+    "label": "Francisco Ferrera",
+    "slug": "francisco-ferrera",
+    "quote": "1794–1851"
+   },
+   {
+    "label": "Cornelius Vanderbilt",
+    "slug": "cornelius-vanderbilt",
+    "quote": "1794–1877"
+   },
+   {
+    "label": "Matthew C. Perry",
+    "slug": "matthew-c-perry",
+    "quote": "1794–1858"
+   },
+   {
+    "label": "Stephen W. Kearny",
+    "slug": "stephen-w-kearny",
+    "quote": "1794–1848"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1908",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Salvador Allende",
+    "slug": "salvador-allende",
+    "quote": "1908–1973"
+   },
+   {
+    "label": "Lyndon B. Johnson",
+    "slug": "lyndon-b-johnson",
+    "quote": "1908–1973"
+   },
+   {
+    "label": "Rómulo Betancourt",
+    "slug": "romulo-betancourt",
+    "quote": "1908–1981"
+   },
+   {
+    "label": "Thurgood Marshall",
+    "slug": "thurgood-marshall",
+    "quote": "1908–1993"
+   },
+   {
+    "label": "Simone de Beauvoir",
+    "slug": "simone-de-beauvoir",
+    "quote": "1908–1986"
+   },
+   {
+    "label": "Enver Hoxha",
+    "slug": "enver-hoxha",
+    "quote": "1908–1985"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1895",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Juan Perón",
+    "slug": "juan-peron",
+    "quote": "1895–1974"
+   },
+   {
+    "label": "Lázaro Cárdenas",
+    "slug": "lazaro-cardenas",
+    "quote": "1895–1970"
+   },
+   {
+    "label": "Augusto César Sandino",
+    "slug": "augusto-cesar-sandino",
+    "quote": "1895–1934"
+   },
+   {
+    "label": "Haya de la Torre",
+    "slug": "victor-raul-haya-de-la-torre",
+    "quote": "1895–1979"
+   },
+   {
+    "label": "George VI",
+    "slug": "george-vi",
+    "quote": "1895–1952"
+   },
+   {
+    "label": "Liaquat Ali Khan",
+    "slug": "liaquat-ali-khan",
+    "quote": "1895–1951"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1911",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Ronald Reagan",
+    "slug": "ronald-reagan",
+    "quote": "1911–2004"
+   },
+   {
+    "label": "José María Arguedas",
+    "slug": "jose-maria-arguedas",
+    "quote": "1911–1969"
+   },
+   {
+    "label": "Eric Williams",
+    "slug": "eric-williams",
+    "quote": "1911–1981"
+   },
+   {
+    "label": "Ernesto Sabato",
+    "slug": "ernesto-sabato",
+    "quote": "1911–2011"
+   },
+   {
+    "label": "Marshall McLuhan",
+    "slug": "marshall-mcluhan",
+    "quote": "1911–1980"
+   },
+   {
+    "label": "Eduardo Frei Montalva",
+    "slug": "eduardo-frei-montalva",
+    "quote": "1911–1982"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1913",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Aimé Césaire",
+    "slug": "aime-cesaire",
+    "quote": "1913–2008"
+   },
+   {
+    "label": "Richard Nixon",
+    "slug": "richard-nixon",
+    "quote": "1913–1994"
+   },
+   {
+    "label": "Jacobo Árbenz",
+    "slug": "jacobo-arbenz",
+    "quote": "1913–1971"
+   },
+   {
+    "label": "Rosa Parks",
+    "slug": "rosa-parks",
+    "quote": "1913–2005"
+   },
+   {
+    "label": "Albert Camus",
+    "slug": "albert-camus",
+    "quote": "1913–1960"
+   },
+   {
+    "label": "Willy Brandt",
+    "slug": "willy-brandt",
+    "quote": "1913–1992"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1917",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "John F. Kennedy",
+    "slug": "john-f-kennedy",
+    "quote": "1917–1963"
+   },
+   {
+    "label": "Juan Rulfo",
+    "slug": "juan-rulfo",
+    "quote": "1917–1986"
+   },
+   {
+    "label": "Óscar Romero",
+    "slug": "oscar-romero",
+    "quote": "1917–1980"
+   },
+   {
+    "label": "Fannie Lou Hamer",
+    "slug": "fannie-lou-hamer",
+    "quote": "1917–1977"
+   },
+   {
+    "label": "Indira Gandhi",
+    "slug": "indira-gandhi",
+    "quote": "1917–1984"
+   },
+   {
+    "label": "Ferdinand Marcos",
+    "slug": "ferdinand-marcos",
+    "quote": "1917–1989"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1850",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "José de San Martín",
+    "slug": "jose-de-san-martin",
+    "quote": "1778–1850"
+   },
+   {
+    "label": "Jean-Pierre Boyer",
+    "slug": "jean-pierre-boyer",
+    "quote": "1776–1850"
+   },
+   {
+    "label": "José Gervasio Artigas",
+    "slug": "jose-gervasio-artigas",
+    "quote": "1764–1850"
+   },
+   {
+    "label": "Vicente Filísola",
+    "slug": "vicente-filisola",
+    "quote": "1789–1850"
+   },
+   {
+    "label": "Robert Peel",
+    "slug": "robert-peel",
+    "quote": "1788–1850"
+   },
+   {
+    "label": "William Wordsworth",
+    "slug": "william-wordsworth",
+    "quote": "1770–1850"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1867",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Faustin Soulouque",
+    "slug": "faustin-soulouque",
+    "quote": "1782–1867"
+   },
+   {
+    "label": "Maximilian of Mexico",
+    "slug": "maximilian-i-of-mexico",
+    "quote": "1832–1867"
+   },
+   {
+    "label": "Ramón Castilla",
+    "slug": "ramon-castilla",
+    "quote": "1797–1867"
+   },
+   {
+    "label": "Santiago Derqui",
+    "slug": "santiago-derqui",
+    "quote": "1809–1867"
+   },
+   {
+    "label": "Miguel Miramón",
+    "slug": "miguel-miramon",
+    "quote": "1831–1867"
+   },
+   {
+    "label": "Michael Faraday",
+    "slug": "michael-faraday",
+    "quote": "1791–1867"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1973",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Eleazar López Contreras",
+    "slug": "eleazar-lopez-contreras",
+    "quote": "1883–1973"
+   },
+   {
+    "label": "Taha Hussein",
+    "slug": "taha-hussein",
+    "quote": "1889–1973"
+   },
+   {
+    "label": "Fulgencio Batista",
+    "slug": "fulgencio-batista",
+    "quote": "1901–1973"
+   },
+   {
+    "label": "Pablo Neruda",
+    "slug": "pablo-neruda",
+    "quote": "1904–1973"
+   },
+   {
+    "label": "Pablo Picasso",
+    "slug": "pablo-picasso",
+    "quote": "1881–1973"
+   },
+   {
+    "label": "David Ben-Gurion",
+    "slug": "david-ben-gurion",
+    "quote": "1886–1973"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1877",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Walter Bagehot",
+    "slug": "walter-bagehot",
+    "quote": "1826–1877"
+   },
+   {
+    "label": "José de Alencar",
+    "slug": "jose-de-alencar",
+    "quote": "1829–1877"
+   },
+   {
+    "label": "James Douglas",
+    "slug": "james-douglas-governor",
+    "quote": "1803–1877"
+   },
+   {
+    "label": "Henry Meiggs",
+    "slug": "henry-meiggs",
+    "quote": "1811–1877"
+   },
+   {
+    "label": "Crazy Horse",
+    "slug": "crazy-horse",
+    "quote": "c. 1840–1877"
+   },
+   {
+    "label": "Saigō Takamori",
+    "slug": "saigo-takamori",
+    "quote": "1828–1877"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1974",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Juan Perón",
+    "slug": "juan-peron",
+    "quote": "1895–1974"
+   },
+   {
+    "label": "Siqueiros",
+    "slug": "david-alfaro-siqueiros",
+    "quote": "1896–1974"
+   },
+   {
+    "label": "Miguel Ángel Asturias",
+    "slug": "miguel-angel-asturias",
+    "quote": "1899–1974"
+   },
+   {
+    "label": "Eurico Gaspar Dutra",
+    "slug": "eurico-gaspar-dutra",
+    "quote": "1883–1974"
+   },
+   {
+    "label": "U Thant",
+    "slug": "u-thant",
+    "quote": "1909–1974"
+   },
+   {
+    "label": "Peng Dehuai",
+    "slug": "peng-dehuai",
+    "quote": "1898–1974"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1957",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Diego Rivera",
+    "slug": "diego-rivera",
+    "quote": "1886–1957"
+   },
+   {
+    "label": "Gabriela Mistral",
+    "slug": "gabriela-mistral",
+    "quote": "1889–1957"
+   },
+   {
+    "label": "Haakon VII",
+    "slug": "haakon-vii",
+    "quote": "1872–1957"
+   },
+   {
+    "label": "Washington Luís",
+    "slug": "washington-luis",
+    "quote": "1869–1957"
+   },
+   {
+    "label": "Jean Sibelius",
+    "slug": "jean-sibelius",
+    "quote": "1865–1957"
+   },
+   {
+    "label": "Arturo Toscanini",
+    "slug": "arturo-toscanini",
+    "quote": "1867–1957"
+   }
+  ]
+ },
+ {
+  "name": "All in 1903",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Treaty of Petrópolis",
+    "slug": "treaty-of-petropolis",
+    "quote": "The Treaty of Petrópolis, signed on 17 November 1903, ended the dispute between Bolivia and Brazil over Acre, a"
+   },
+   {
+    "label": "Hay–Bunau-Varilla",
+    "slug": "hay-bunau-varilla-treaty",
+    "quote": "The Hay–Bunau-Varilla Treaty was signed on 18 November 1903 by US Secretary of State John Hay and Philippe Bunau-Varilla, acting for the newly independent Panama"
+   },
+   {
+    "label": "Aeroplane",
+    "slug": "aeroplane",
+    "quote": "the Wright brothers invented and flew the Wright Flyer in 1903, in what is recognised as the first sustained and controlled heavier-than-air powered flight"
+   },
+   {
+    "label": "Kalinago Territory",
+    "slug": "kalinago-territory",
+    "quote": "the east coast of Dominica set aside in 1903 for the island's indigenous Kalinago, or Island Caribs, and known"
+   },
+   {
+    "label": "Ilinden Uprising",
+    "slug": "ilinden-preobrazhenie-uprising",
+    "quote": "The Ilinden–Preobrazhenie Uprising was a revolt against Ottoman rule organised by the Internal Macedonian-Adrianople Revolutionary Organisation in August 1903"
+   },
+   {
+    "label": "École William Ponty",
+    "slug": "ecole-william-ponty",
+    "quote": "The École William Ponty was a teacher-training college in French West Africa, founded at Saint-Louis in Senegal in 1903, moved to Gorée in 1913 and later to Sébikotane"
+   }
+  ]
+ },
+ {
+  "name": "Named after kings and queens",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Louisiana",
+    "slug": "louisiana",
+    "quote": "Louisiana was a vast French colonial territory in North America covering the Mississippi basin, named after Louis XIV"
+   },
+   {
+    "label": "Gustavia",
+    "slug": "gustavia",
+    "quote": "rule as Le Carénage, it was renamed after King Gustav III when France ceded the island to Sweden in 1784, and"
+   },
+   {
+    "label": "São Luís",
+    "slug": "sao-luis-maranhao",
+    "quote": "It grew from Fort Saint-Louis, built in 1612 by the French colonists of Equinoctial France and named after Louis XIII"
+   },
+   {
+    "label": "Annapolis Royal",
+    "slug": "annapolis-royal",
+    "quote": "As Port-Royal it was the capital of French Acadia, and after a New England expedition captured it in 1710 it was renamed after Queen Anne"
+   },
+   {
+    "label": "Regina",
+    "slug": "regina-saskatchewan",
+    "quote": "Founded in 1882 as the capital of the North-West Territories and named in honour of Queen Victoria, it became the headquarters of the North-West Mounted Police"
+   },
+   {
+    "label": "James River",
+    "slug": "james-river",
+    "quote": "Named after King James I, it was the site of Jamestown, the first permanent English settlement in America, founded in 1607"
+   }
+  ]
+ },
+ {
+  "name": "Early synagogues of the Americas",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Recife",
+    "slug": "recife",
+    "quote": "the first synagogue in the Americas opened there"
+   },
+   {
+    "label": "Newport",
+    "slug": "newport-rhode-island",
+    "quote": "to an early Jewish community with the Touro Synagogue"
+   },
+   {
+    "label": "Jodensavanne",
+    "slug": "jodensavanne",
+    "quote": "Jodensavanne, the \"Jewish Savanna\", was a settlement of Sephardic Jewish planters on the Suriname River, south of Paramaribo"
+   },
+   {
+    "label": "Willemstad",
+    "slug": "mikve-israel-emanuel-synagogue",
+    "quote": "Mikvé Israel-Emanuel Synagogue in Willemstad, Curaçao, houses the oldest Jewish congregation in continuous existence in the Americas, founded by Sephardic Jews"
+   },
+   {
+    "label": "Touro",
+    "slug": "touro-synagogue",
+    "quote": "The Touro Synagogue in Newport, Rhode Island, is the oldest surviving synagogue building in the United States, dedicated in 1763"
+   },
+   {
+    "label": "Kahal Zur Israel",
+    "slug": "kahal-zur-israel-synagogue",
+    "quote": "The Kahal Zur Israel Synagogue in Recife, Brazil, founded around 1636 under Dutch rule, was the first synagogue in the Americas"
+   }
+  ],
+  "note": "Recife and Kahal Zur Israel, Newport and Touro tell one story each: keep one of each pair"
+ },
+ {
+  "name": "Follow \"Santa\"",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Marta",
+    "slug": "santa-marta",
+    "quote": "Santa Marta is a port city on the Caribbean coast of Colombia, founded by Rodrigo de Bastidas in 1525 and one of the oldest Spanish towns in South America"
+   },
+   {
+    "label": "Fe",
+    "slug": "santa-fe-argentina",
+    "quote": "Santa Fe is a city on the Paraná river in northern Argentina, founded by Juan de Garay in 1573 as a stopping place between Asunción and the Río de la Plata"
+   },
+   {
+    "label": "Catarina",
+    "slug": "santa-catarina",
+    "quote": "Santa Catarina is a state of southern Brazil on the Atlantic coast, with its capital at Florianópolis on Santa Catarina Island"
+   },
+   {
+    "label": "Elena",
+    "slug": "santa-elena-province",
+    "quote": "Santa Elena is a province on the Pacific coast of Ecuador, covering the Santa Elena peninsula, the westernmost part of the country's coast"
+   },
+   {
+    "label": "Anna",
+    "slug": "antonio-lopez-de-santa-anna",
+    "quote": "Antonio López de Santa Anna was a Mexican general and politician who dominated the country's affairs from the 1820s to the 1850s and served as president several times"
+   },
+   {
+    "label": "Cruz",
+    "slug": "andres-de-santa-cruz",
+    "quote": "Andrés de Santa Cruz was President of Bolivia from 1829 to 1839"
+   }
+  ],
+  "note": "labels drop \"Santa\": Santa Marta, Santa Fe, Santa Catarina, Santa Elena, Santa Anna, Santa Cruz"
+ },
+ {
+  "name": "Hidden animals",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Popocatépetl",
+    "slug": "popocatepetl",
+    "quote": "Popocatépetl is an active volcano in central Mexico, at about 5,400 metres the country's second-highest peak, on the borders of the states of Puebla, Morelos and Mexico"
+   },
+   {
+    "label": "Appomattox",
+    "slug": "battle-of-appomattox-court-house",
+    "quote": "The Battle of Appomattox Court House, fought in Virginia on 9 April 1865, was the last engagement of Robert E"
+   },
+   {
+    "label": "Hiram Bingham",
+    "slug": "hiram-bingham-iii",
+    "quote": "Hiram Bingham III was an American academic, explorer and politician who in 1911 led the Yale expedition that brought Machu Picchu to international attention"
+   },
+   {
+    "label": "Saratoga",
+    "slug": "battles-of-saratoga",
+    "quote": "The Battles of Saratoga were two battles fought near Saratoga, New York, in September"
+   },
+   {
+    "label": "Antigua Guatemala",
+    "slug": "antigua-guatemala",
+    "quote": "Antigua Guatemala is a city in the central highlands of Guatemala, founded in 1543 as Santiago de los Caballeros after the destruction of the previous capital"
+   },
+   {
+    "label": "Gaspé",
+    "slug": "gaspe-peninsula",
+    "quote": "The Gaspé Peninsula is a peninsula in eastern Quebec, Canada, between the estuary of the St Lawrence and the Bay of Chaleur"
+   }
+  ],
+  "note": "popoCATépetl, appomattOX, hiRAM Bingham, saRATOga, ANTigua, gASPé"
+ }
+]

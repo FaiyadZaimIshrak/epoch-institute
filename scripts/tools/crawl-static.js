@@ -2,7 +2,7 @@
 // does not look at: local resources that do not exist (img src/srcset, script src, link href, poster, og:image), text
 // left over from templates or data ("undefined", "NaN", "[object Object]", "[[e:", "{{", a stray "null"), mojibake
 // ("Ã©", "â€™"), entities escaped twice ("&amp;amp;", "&amp;#"), JSON-LD that does not parse, ids used twice in a page,
-// empty links, and pictures without alt.   node scripts/tools/crawl-static.js [--json=out.json] [--max=N per rule]
+// empty links, and pictures without alt.   node scripts/tools/crawl-static.js [--json=out.json] [--max=N per rule] [--strict]
 const fs = require('fs'), path = require('path');
 const R = path.join(__dirname, '..', '..');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const m = a.match(/^--([^=]+)=?(.*)$/); return m ? [m[1], m[2] || true] : [a, true]; }));
@@ -48,17 +48,19 @@ for (const rel of files) {
   for (const m of html.matchAll(/<meta\s+(?:property|name)="(?:og:image|twitter:image)"\s+content="https:\/\/the-epoch-institute\.org(\/[^"]+)"/gi)) if (!localOk(m[1])) add('missing poster', page, m[1]);
   for (const m of html.matchAll(/<image\b[^>]*\bhref="([^"]+)"/gi)) if (!localOk(m[1])) add('missing resource', page, 'svg image ' + m[1]);
   // visible text
-  const body = strip(html), text = body.replace(/<\/?(?:a|span|em|strong|i|b|abbr|sup|sub|small|cite|mark|q|bdi|time)\b[^>]*>/gi, '').replace(/<[^>]+>/g, ' ');
+  // the cite box (details.ref-cite) holds the access date only once a script fills it in: not read for text
+  const body = strip(html), text = body.replace(/<details class="ref-cite"[\s\S]*?<\/details>/g, ' ').replace(/<\/?(?:a|span|em|strong|i|b|abbr|sup|sub|small|cite|mark|q|bdi|time)\b[^>]*>/gi, '').replace(/<[^>]+>/g, ' ');
   const t = (re, rule) => { const m = text.match(re); if (m) add(rule, page, text.slice(Math.max(0, m.index - 50), m.index + 70).replace(/\s+/g, ' ')); };
   t(/\bundefined\b/, 'text: undefined');
   t(/\bNaN\b/, 'text: NaN');
   t(/\[object \w+\]/, 'text: [object]');
   t(/\[\[[es]:|\{\{|\}\}/, 'text: template markup');
-  t(/(?:^|[\s(>])null(?=[\s,.)<])/, 'text: null');
+  { const m = body.match(/>\s*(?:null|undefined|NaN)\s*</); if (m) add('text: a bare null/undefined/NaN', page, body.slice(Math.max(0, m.index - 80), m.index + 40).replace(/\s+/g, ' ')); }
   t(/Ã[\u0080-¿©¨§¡³¶¼½¾]|â€[™œ“”˜¦\u009d]|Â[ -¿]/, 'text: mojibake');
   t(/&amp;(?:amp|quot|lt|gt|#\d+|nbsp);/, 'text: escaped twice');
   t(/�/, 'text: replacement character');
-  t(/ ,| \.(?![\d.])|,,|\.\.(?!\.)|\( | \)/, 'text: stray spacing');
+  { const tx = text.replace(/Accessed \./g, '').replace(/\(Accessed: \)/g, '').replace(/\. \. \./g, '…').replace(/\.\.\./g, '…'); const m = tx.match(/ ,| \.(?![\d.])|,,|\.\.|\( | \)/); if (m) add('text: stray spacing', page, tx.slice(Math.max(0, m.index - 50), m.index + 70).replace(/\s+/g, ' ')); }
+  t(/\b(?:the editor (?:may|should|wants)|as instructed|EDITOR FIRST|IMPORT:|the import's|before publishing)/, 'text: a note to the editor');
   // attributes and structure
   const ids = {}; for (const m of body.matchAll(/\sid="([^"]+)"/g)) ids[m[1]] = (ids[m[1]] || 0) + 1;
   const dup = Object.keys(ids).filter(k => ids[k] > 1); if (dup.length) add('duplicate id', page, dup.slice(0, 6).join(', '));
@@ -75,3 +77,7 @@ for (const r of rules) {
   for (const l of found[r].slice(0, MAX)) console.log('  ' + l);
 }
 if (args.json) fs.writeFileSync(args.json, JSON.stringify(found, null, 1));
+// --strict (the deploy workflow): exit 1 when any rule but stray spacing found something; spacing is listed for reading
+// (credits keep a few spaced dots of their sources) but never blocks a deploy
+const SOFT = ['text: stray spacing'];
+if (args.strict) { const hard = rules.filter(r => !SOFT.includes(r)); if (hard.length) { console.log('\nstrict: ' + hard.join(', ')); process.exit(1); } }

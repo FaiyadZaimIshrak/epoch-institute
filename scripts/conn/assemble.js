@@ -12,7 +12,7 @@
 // themes and regions mix. edits.json (optional): {"drop": [group names], "keep": {group name: [slugs to prefer]},
 // "rename": {old: new}, "label": {slug: label}, "dropTile": {group name: [slugs]}, "level": {group name: level}, "apart": [[group, group], …]: groups whose
 // categories overlap without sharing a tile (Mamluk sultans / Slave soldiers who became rulers), never in one puzzle}.
-//   node scripts/conn/assemble.js <count> <out.tsv> [--edits=edits.json] [--write] <proposals.json> [...]
+//   node scripts/conn/assemble.js <count> <out.tsv> [--edits=edits.json] [--seed=N] [--spread] [--write] <proposals.json> [...]
 // Without --write it only writes <out.tsv> (the new puzzles, for reading); with --write it also appends them.
 const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..', '..');
 const args = process.argv.slice(2), opt = k => (args.find(a => a.startsWith('--' + k + '=')) || '').split('=').slice(1).join('=');
@@ -30,6 +30,9 @@ const past = []; for (const l of text.split(/\r?\n/)) { if (l.startsWith('@')) p
 const usedNames = new Set(); for (const l of text.split(/\r?\n/)) { const c = l.split('\t'); if (/^[1-4]$/.test(c[0])) usedNames.add(c[1]); }
 // the pool, interleaved by file
 const lists = files.map(f => JSON.parse(fs.readFileSync(f, 'utf8')));
+// --seed=N: shuffle each file's groups first (a proposer writes them by topic: gods after gods, years after years)
+if (opt('seed')) { let s = +opt('seed') || 1; const rnd = () => (s = (s * 1103515245 + 12345) % 2147483648) / 2147483648;
+  for (const L of lists) for (let i = L.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [L[i], L[j]] = [L[j], L[i]]; } }
 const pool = []; for (let i = 0; lists.some(L => i < L.length); i++) for (const L of lists) if (i < L.length) pool.push(L[i]);
 const groups = pool.filter(g => !drop.has(g.name) && !usedNames.has(rename[g.name] || g.name)).map(g => ({ ...g, level: (ed.level || {})[g.name] || g.level, name: rename[g.name] || g.name, tiles: g.tiles.filter(t => bySlug.has(t.slug) && !(dropTile[g.name] || []).includes(t.slug)) })).filter(g => g.tiles.length >= 4)
   .filter((g, i, a) => a.findIndex(h => h.name === g.name) === i);   // a name proposed twice: the first proposal wins
@@ -37,10 +40,12 @@ const yearOf = g => g.kind === 'year' ? +(g.name.match(/\d{3,4}/) || [])[0] : nu
 const datesHold = (s, y) => { const e = bySlug.get(s); return !!(e && y && new RegExp('(^|\\D)' + y + '(\\D|$)').test((e.dates || '') + ' ' + e.name)); };
 const out = []; const recent = past.slice(-30);
 const blocked = () => { const b = new Set(); for (const p of recent.slice(-30)) for (const s of p) b.add(s); return b; };
+const l4kinds = [];   // --spread: no third level-4 group of the same kind in a row while another kind can be dealt
 for (let n = 0; n < count; n++) {
   const B = blocked(), chosen = [];
   for (const lv of [1, 2, 3, 4]) {
-    for (const g of groups) {
+    const same = args.includes('--spread') && lv === 4 && l4kinds.length >= 2 && l4kinds[l4kinds.length - 1] === l4kinds[l4kinds.length - 2] ? l4kinds[l4kinds.length - 1] : null;
+    for (const g of same ? [...groups.filter(h => h.kind !== same), ...groups.filter(h => h.kind === same)] : groups) {
       if (g.used || g.level !== lv) continue;
       if (g.kind === 'year' && chosen.some(c => c.g.kind === 'year')) continue;
       if (g.kind === 'wordplay' && chosen.some(c => c.g.kind === 'wordplay')) continue;
@@ -61,6 +66,7 @@ for (let n = 0; n < count; n++) {
   }
   if (chosen.length < 4) { console.log(`stopped at puzzle ${past.length + 1}: no group of level ${[1, 2, 3, 4].find(l => !chosen.some(c => c.g.level === l))} fits`); break; }
   for (const c of chosen) c.g.used = true;
+  l4kinds.push(chosen.find(c => c.g.level === 4).g.kind);
   const set = new Set(chosen.flatMap(c => c.tiles.map(t => t.slug))); past.push(set); recent.push(set);
   out.push('@ ' + past.length + '\n' + chosen.map(c => c.g.level + '\t' + c.g.name + '\t' + c.tiles.map(t => (relabel[t.slug] || t.label).replace(/[=\t]/g, ' ') + '=' + t.slug).join('\t')).join('\n'));
 }

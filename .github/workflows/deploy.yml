@@ -37,7 +37,35 @@ permissions:
   contents: read
 
 jobs:
+  # The site's own checks before anything is sent (since 7 Nov 2026): scripts/check-site.ps1 (every internal link, one
+  # h1, title, description, canonical and JSON-LD per page, every page served as HTML, css/ current) and
+  # scripts/tools/crawl-static.js --strict (missing pictures and files, template leftovers, notes to the editor, bad
+  # JSON-LD). check-site needs Windows PowerShell 5.1, so this job runs on Windows; a fault stops the deploy.
+  check:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    steps:
+      - name: Keep line endings as committed
+        run: git config --global core.autocrlf false
+
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.commit || github.sha }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: check-site
+        shell: powershell
+        run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts\check-site.ps1
+
+      - name: crawl-static
+        run: node scripts/tools/crawl-static.js --strict --max=5
+
   deploy:
+    needs: check
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:

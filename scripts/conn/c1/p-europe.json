@@ -1,0 +1,2832 @@
+[
+ {
+  "name": "Anglo-Saxon kings",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alfred",
+    "slug": "alfred-the-great",
+    "quote": "Alfred the Great was king of Wessex from 871 to 899"
+   },
+   {
+    "label": "Æthelstan",
+    "slug": "aethelstan",
+    "quote": "Æthelstan was king of the Anglo-Saxons from 924 and the first king of all England from"
+   },
+   {
+    "label": "Offa",
+    "slug": "offa-of-mercia",
+    "quote": "in central England from 757 to 796 and the most powerful Anglo-Saxon king before Alfred"
+   },
+   {
+    "label": "Egbert",
+    "slug": "egbert-of-wessex",
+    "quote": "Egbert was king of Wessex from 802 to 839"
+   },
+   {
+    "label": "Edward the Confessor",
+    "slug": "edward-the-confessor",
+    "quote": "Edward the Confessor was king of the English from 1042 to 1066, the son of Æthelred the Unready and"
+   },
+   {
+    "label": "Harold II",
+    "slug": "harold-godwinson",
+    "quote": "Harold Godwinson was the last crowned Anglo-Saxon King of England, reigning as Harold II from January to"
+   }
+  ]
+ },
+ {
+  "name": "Kings and queens of Spain",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Philip III",
+    "slug": "philip-iii-of-spain",
+    "quote": "Philip III was king of Spain and, as Philip II, king of Portugal from 1598 to 1621, during the Iberian Union"
+   },
+   {
+    "label": "Philip IV",
+    "slug": "philip-iv-of-spain",
+    "quote": "Philip IV of Spain was king of Spain and Portugal from 1621 to 1665"
+   },
+   {
+    "label": "Charles II",
+    "slug": "charles-ii-of-spain",
+    "quote": "Charles II of Spain was the last Habsburg king of Spain, reigning from 1665 to 1700"
+   },
+   {
+    "label": "Philip V",
+    "slug": "philip-v-of-spain",
+    "quote": "Philip V was king of Spain from 1700 to 1746, the first of the Bourbon dynasty"
+   },
+   {
+    "label": "Ferdinand VII",
+    "slug": "ferdinand-vii-of-spain",
+    "quote": "Ferdinand VII was King of Spain in 1808 and again from 1813 to 1833"
+   },
+   {
+    "label": "Isabella II",
+    "slug": "isabella-ii-of-spain",
+    "quote": "Isabella II of Spain became queen as an infant in 1833, and her succession set off the Carlist Wars"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Prussia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Frederick I",
+    "slug": "frederick-i-of-prussia",
+    "quote": "In 1701, with the emperor's consent, he crowned himself King in Prussia at Königsberg, raising the status of the Hohenzollern"
+   },
+   {
+    "label": "Frederick William I",
+    "slug": "frederick-william-i-of-prussia",
+    "quote": "Frederick William I was King in Prussia from 1713 to 1740, known as the Soldier King"
+   },
+   {
+    "label": "Frederick II",
+    "slug": "frederick-the-great",
+    "quote": "Frederick the Great, Frederick II of Prussia, was king from 1740"
+   },
+   {
+    "label": "Frederick William II",
+    "slug": "frederick-william-ii-of-prussia",
+    "quote": "Frederick William II was King of Prussia from 1786 to 1797, nephew and successor of Frederick the Great"
+   },
+   {
+    "label": "Frederick William IV",
+    "slug": "frederick-william-iv-of-prussia",
+    "quote": "Frederick William IV was king of Prussia from 1840 to 1861"
+   },
+   {
+    "label": "Wilhelm I",
+    "slug": "wilhelm-i",
+    "quote": "Wilhelm I was King of Prussia from 1861 and the first emperor of the German"
+   }
+  ],
+  "note": "Frederick the Great shown as Frederick II to keep the set uniform"
+ },
+ {
+  "name": "Romanov tsars and empresses",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Michael",
+    "slug": "michael-of-russia",
+    "quote": "of Russia (Mikhail Fyodorovich Romanov) was the first tsar of the Romanov dynasty, elected by an assembly of the land in"
+   },
+   {
+    "label": "Alexis",
+    "slug": "alexis-of-russia",
+    "quote": "Alexis of Russia was the second Romanov tsar, ruling from 1645 to 1676"
+   },
+   {
+    "label": "Anna Ioannovna",
+    "slug": "anna-of-russia",
+    "quote": "Anna Ioannovna was Empress of Russia from 1730 to 1740, a niece of Peter the Great"
+   },
+   {
+    "label": "Peter III",
+    "slug": "peter-iii-of-russia",
+    "quote": "Peter III was emperor of Russia for six months in 1762, a grandson of Peter the Great raised"
+   },
+   {
+    "label": "Paul I",
+    "slug": "paul-i-of-russia",
+    "quote": "Paul I of Russia, son of Catherine the Great, reigned as emperor from 1796 to 1801"
+   },
+   {
+    "label": "Nicholas I",
+    "slug": "nicholas-i-of-russia",
+    "quote": "Nicholas I was Emperor of Russia, King of Poland and Grand Duke of Finland from 1825 to 1855, the third son of"
+   }
+  ],
+  "note": "avoids the four of the published Rulers of Russia"
+ },
+ {
+  "name": "Uprisings in Europe, 1789–1871",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Brabant Revolution",
+    "slug": "brabant-revolution",
+    "quote": "The Brabant Revolution was an uprising in the Austrian Netherlands against the centralising and church"
+   },
+   {
+    "label": "Porto, 1820",
+    "slug": "liberal-revolution-of-1820",
+    "quote": "The Liberal Revolution of 1820 was a constitutionalist uprising in Portugal, beginning in Porto"
+   },
+   {
+    "label": "Decembrists",
+    "slug": "decembrists",
+    "quote": "were Russian army officers and nobles who staged a revolt in St Petersburg on 14 December 1825 (Old Style), refusing to swear"
+   },
+   {
+    "label": "Springtime of the peoples",
+    "slug": "revolutions-of-1848",
+    "quote": "called the springtime of the peoples, were a wave of uprisings across Europe between January 1848 and October 1849"
+   },
+   {
+    "label": "January Uprising",
+    "slug": "january-uprising",
+    "quote": "The January Uprising was a Polish and Lithuanian insurrection against Russian rule, beginning in January 1863 in Congress"
+   },
+   {
+    "label": "Paris Commune",
+    "slug": "paris-commune",
+    "quote": "The Paris Commune was a French revolutionary government that seized power in Paris on 18 March 1871 and controlled parts"
+   }
+  ]
+ },
+ {
+  "name": "Napoleon's Europe",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Civil code of 1804",
+    "slug": "napoleonic-code",
+    "quote": "The Napoleonic Code is the French civil code issued under Napoleon in 1804, codifying law on persons, property and"
+   },
+   {
+    "label": "Continental System",
+    "slug": "continental-system",
+    "quote": "The Continental System was Napoleon's embargo on British trade, decreed in Berlin in 1806 and Milan in"
+   },
+   {
+    "label": "Confederation of the Rhine",
+    "slug": "confederation-of-the-rhine",
+    "quote": "was a union of German states formed in 1806 under the protection of Napoleon"
+   },
+   {
+    "label": "Grande Armée",
+    "slug": "grande-armee",
+    "quote": "The Grande Armée was the main army of Napoleonic France"
+   },
+   {
+    "label": "Kingdom of Holland",
+    "slug": "kingdom-of-holland",
+    "quote": "The Kingdom of Holland was a monarchy created by Napoleon in 1806 to replace the Batavian Republic, with"
+   },
+   {
+    "label": "18 Brumaire",
+    "slug": "coup-of-18-brumaire",
+    "quote": "The Coup of 18 Brumaire was the seizure of power in France by Napoleon Bonaparte on 9–10 November 1799 (18–19 Brumaire"
+   }
+  ]
+ },
+ {
+  "name": "Wars of succession",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Spanish",
+    "slug": "war-of-the-spanish-succession",
+    "quote": "European conflict fought from 1701 to 1714 over who should inherit the Spanish throne after the death of the childless Charles II"
+   },
+   {
+    "label": "Austrian",
+    "slug": "war-of-the-austrian-succession",
+    "quote": "was a European war fought from 1740 to 1748 over Maria Theresa's right to inherit the Habsburg lands after the death of Emperor Charles VI"
+   },
+   {
+    "label": "Polish",
+    "slug": "war-of-the-polish-succession",
+    "quote": "Succession was fought from 1733 to 1735 over the succession to Augustus II of Poland"
+   },
+   {
+    "label": "Breton",
+    "slug": "war-of-the-breton-succession",
+    "quote": "Succession was fought from 1341 to 1364 for the Duchy of Brittany between Charles of Blois, backed by France, and John of Montfort"
+   },
+   {
+    "label": "Castilian",
+    "slug": "war-of-the-castilian-succession",
+    "quote": "Succession was fought from 1475 to 1479 over the crown of Castile after the death of Henry IV"
+   },
+   {
+    "label": "Mantuan",
+    "slug": "war-of-the-mantuan-succession",
+    "quote": "The War of the Mantuan Succession was fought after the main Gonzaga line died out in 1627"
+   }
+  ],
+  "note": "labels are bare adjectives; the group is the war each names"
+ },
+ {
+  "name": "In Venice",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rialto",
+    "slug": "rialto",
+    "quote": "The Rialto is the central island group and district of Venice on the Grand Canal, where the seat of"
+   },
+   {
+    "label": "Murano",
+    "slug": "murano",
+    "quote": "Murano is a group of islands in the Venetian lagoon, about 1.5 kilometres north of Venice"
+   },
+   {
+    "label": "Lido",
+    "slug": "lido-di-venezia",
+    "quote": "The Lido di Venezia is a long, narrow barrier island separating the Venetian lagoon from the Adriatic Sea"
+   },
+   {
+    "label": "Arsenal",
+    "slug": "venetian-arsenal",
+    "quote": "The Venetian Arsenal is a complex of former state shipyards and armouries in the Castello district of Venice that built most of the Venetian"
+   },
+   {
+    "label": "Ghetto",
+    "slug": "venetian-ghetto",
+    "quote": "The Venetian Ghetto was the area of Venice's Cannaregio district in which the government of the Venetian"
+   },
+   {
+    "label": "Bucentaur",
+    "slug": "bucentaur",
+    "quote": "The bucentaur was the ceremonial barge of the doges of Venice, used every year on Ascension Day up to"
+   }
+  ]
+ },
+ {
+  "name": "Governing the Venetian Republic",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Great Council",
+    "slug": "great-council-of-venice",
+    "quote": "The Great Council was the chief political assembly of the Republic of Venice from 1172 to 1797, electing most"
+   },
+   {
+    "label": "Council of Ten",
+    "slug": "council-of-ten",
+    "quote": "The Council of Ten was one of the major governing bodies of the Republic of Venice from 1310 to 1797, created by Doge"
+   },
+   {
+    "label": "Collegio",
+    "slug": "collegio-venice",
+    "quote": "or Full College (Pien Collegio), was the steering committee of the government of the Republic of Venice"
+   },
+   {
+    "label": "Signoria",
+    "slug": "signoria-of-venice",
+    "quote": "The Signoria of Venice was the supreme governing body of the Republic of Venice, replacing the older Commune of Venice"
+   },
+   {
+    "label": "Doge",
+    "slug": "doge-of-venice",
+    "quote": "The doge of Venice was the highest authority of the Republic of Venice (697–1797), head of state and of the"
+   },
+   {
+    "label": "Stato da Mar",
+    "slug": "stato-da-mar",
+    "quote": "of the Sea') was the collective name for the overseas possessions of the Republic of Venice, as distinct from its Italian mainland"
+   }
+  ]
+ },
+ {
+  "name": "In the Dutch Republic",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Regenten",
+    "slug": "regenten",
+    "quote": "The regenten were the ruling elite of the Dutch Republic from the 16th to the 18th century: the"
+   },
+   {
+    "label": "Stadtholder",
+    "slug": "stadtholder",
+    "quote": "After the Act of Abjuration of 1581 the office survived in the Dutch Republic as the highest executive official of each province, appointed by its"
+   },
+   {
+    "label": "Vroedschap",
+    "slug": "vroedschap",
+    "quote": "The vroedschap was the all-male city council of the early modern Netherlands, its members called vroedmannen, wise men"
+   },
+   {
+    "label": "Schutterij",
+    "slug": "schutterij",
+    "quote": "A schutterij was a voluntary city guard or citizen militia of the medieval and early modern Netherlands, meant to defend a town against attack"
+   },
+   {
+    "label": "Grand Pensionary",
+    "slug": "grand-pensionary",
+    "quote": "The Grand Pensionary was the leading official of the province of Holland in the Dutch Republic, its chief legal adviser and spokesman"
+   },
+   {
+    "label": "States General",
+    "slug": "states-general-of-the-netherlands",
+    "quote": "The States General of the Netherlands was the assembly of the provinces of the Dutch Republic"
+   }
+  ]
+ },
+ {
+  "name": "Words of Kievan Rus'",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Boyar",
+    "slug": "boyar",
+    "quote": "in many Eastern European states, among them Bulgaria, Kievan Rus' and later Russia, Moldavia, Wallachia and Lithuania"
+   },
+   {
+    "label": "Druzhina",
+    "slug": "druzhina",
+    "quote": "In Kievan Rus' the word meant at its core the prince's permanent bodyguard and more widely his extended household"
+   },
+   {
+    "label": "Kholop",
+    "slug": "kholop",
+    "quote": "A kholop was an unfree dependant in Kievan Rus' and later Muscovy; in the 11th and 12th centuries the"
+   },
+   {
+    "label": "Smerd",
+    "slug": "smerd",
+    "quote": "recorded in 11th- and 12th-century sources such as the Russkaya Pravda in Kievan Rus' and, as smerdones, in Poland"
+   },
+   {
+    "label": "Poliudie",
+    "slug": "poliudie",
+    "quote": "The poliudie was the practice by which the rulers of Kievan Rus' collected tribute from their East Slavic subjects"
+   },
+   {
+    "label": "Varangians",
+    "slug": "varangians",
+    "quote": "to the Primary Chronicle their leader Rurik founded the ruling dynasty of the Rus'"
+   }
+  ]
+ },
+ {
+  "name": "Battles between Scotland and England",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Stirling Bridge",
+    "slug": "battle-of-stirling-bridge",
+    "quote": "was fought on 11 September 1297, when Scottish forces under William Wallace and Andrew Moray destroyed an English army under the"
+   },
+   {
+    "label": "Bannockburn",
+    "slug": "battle-of-bannockburn",
+    "quote": "on 23–24 June 1314 near Stirling, Scotland, between the army of Robert the Bruce and a much larger English army under Edward II"
+   },
+   {
+    "label": "Falkirk",
+    "slug": "battle-of-falkirk-1298",
+    "quote": "of Falkirk was fought on 22 July 1298, when Edward I of England defeated the Scottish army of William Wallace"
+   },
+   {
+    "label": "Neville's Cross",
+    "slug": "battle-of-nevilles-cross",
+    "quote": "fought on 17 October 1346 near Durham, when David II of Scotland invaded England in support of France after the English"
+   },
+   {
+    "label": "Flodden",
+    "slug": "battle-of-flodden",
+    "quote": "an English army under the Earl of Surrey destroyed the invading Scottish army of James IV, who had attacked England in support of"
+   },
+   {
+    "label": "Solway Moss",
+    "slug": "battle-of-solway-moss",
+    "quote": "the River Esk on the English border, where a small English force routed a larger Scottish army sent by James V"
+   }
+  ]
+ },
+ {
+  "name": "Battles of the Franks",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tolbiac",
+    "slug": "battle-of-tolbiac",
+    "quote": "near Tolbiacum (Zülpich), west of Cologne, between the Franks under Clovis I and the Alemanni"
+   },
+   {
+    "label": "Tertry",
+    "slug": "battle-of-tertry",
+    "quote": "Pippin's victory made him master of all the Frankish kingdoms and"
+   },
+   {
+    "label": "Vincy",
+    "slug": "battle-of-vincy",
+    "quote": "Charles Martel, leader of the Austrasians, defeated the Neustrian king Chilperic"
+   },
+   {
+    "label": "Roncevaux Pass",
+    "slug": "battle-of-roncevaux-pass",
+    "quote": "was fought in 778 in the Pyrenees, where Charlemagne's rearguard was ambushed and destroyed by Basques during the"
+   },
+   {
+    "label": "Fontenoy",
+    "slug": "battle-of-fontenoy",
+    "quote": "Fontenoy was fought in 841 CE in Burgundy between the Carolingian emperor Lothair I and his brothers Louis the German and Charles the Bald"
+   },
+   {
+    "label": "Süntel",
+    "slug": "battle-of-the-suntel",
+    "quote": "when a Saxon army raised by Widukind destroyed a Frankish force that had been sent against the Sorbs"
+   }
+  ],
+  "note": "Vouillé and Tours left out: both in published groups"
+ },
+ {
+  "name": "Battles of the dukes of Normandy",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Val-ès-Dunes",
+    "slug": "battle-of-val-es-dunes",
+    "quote": "was fought in 1047 near Caen, where the young Duke William of Normandy and his overlord King Henry I of France"
+   },
+   {
+    "label": "Mortemer",
+    "slug": "battle-of-mortemer",
+    "quote": "in February 1054 in upper Normandy, when forces of Duke William of Normandy surprised and destroyed one of two French armies"
+   },
+   {
+    "label": "Varaville",
+    "slug": "battle-of-varaville",
+    "quote": "Duke William attacked the invading army of Henry I of France and Geoffrey"
+   },
+   {
+    "label": "Hastings",
+    "slug": "battle-of-hastings",
+    "quote": "October 1066 near Hastings in Sussex, where Duke William of Normandy defeated and killed King Harold Godwinson of England"
+   },
+   {
+    "label": "Tinchebray",
+    "slug": "battle-of-tinchebray",
+    "quote": "Henry I of England and his elder brother Robert Curthose, duke of Normandy"
+   },
+   {
+    "label": "Brémule",
+    "slug": "battle-of-bremule",
+    "quote": "20 August 1119 in the Norman Vexin between Henry I of England, duke of Normandy, and Louis VI of France, who supported"
+   }
+  ]
+ },
+ {
+  "name": "Battles of Italian unification",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Solferino",
+    "slug": "battle-of-solferino",
+    "quote": "fought on 24 June 1859 in Lombardy between the French and Sardinian armies under Napoleon III and Victor Emmanuel II and the Austrian army under Emperor"
+   },
+   {
+    "label": "Magenta",
+    "slug": "battle-of-magenta",
+    "quote": "on 4 June 1859 near Magenta in Lombardy, in the Second Italian War of Independence"
+   },
+   {
+    "label": "Castelfidardo",
+    "slug": "battle-of-castelfidardo",
+    "quote": "was fought on 18 September 1860 near Ancona between the army of the Kingdom of Sardinia under Enrico Cialdini and the papal army under the French general Lamoricière"
+   },
+   {
+    "label": "Custoza",
+    "slug": "battle-of-custoza-1848",
+    "quote": "was fought on 24–25 July 1848 near Verona during the First Italian War of Independence, between the Austrian army of Field"
+   },
+   {
+    "label": "Curtatone",
+    "slug": "battle-of-curtatone-and-montanara",
+    "quote": "was fought on 29 May 1848 near Mantua, during the First Italian War of Independence"
+   },
+   {
+    "label": "Lissa",
+    "slug": "battle-of-lissa-1866",
+    "quote": "the island of Vis (Lissa) in the Adriatic during the Third Italian War of Independence"
+   }
+  ],
+  "note": "Magenta and Solferino are also colours (decoy)"
+ },
+ {
+  "name": "Battles of the Hohenstaufen age in Italy",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Legnano",
+    "slug": "battle-of-legnano",
+    "quote": "was fought in 1176 in northern Italy, where the forces of the Lombard League defeated the Holy Roman Emperor Frederick I Barbarossa"
+   },
+   {
+    "label": "Cortenuova",
+    "slug": "battle-of-cortenuova",
+    "quote": "on 27 November 1237 in Lombardy, when the emperor Frederick II defeated the army of the revived Lombard League led by Milan"
+   },
+   {
+    "label": "Fossalta",
+    "slug": "battle-of-fossalta",
+    "quote": "between Guelph Bologna and its allies and the Ghibelline forces of Modena and the Emperor Frederick II"
+   },
+   {
+    "label": "Montaperti",
+    "slug": "battle-of-montaperti",
+    "quote": "was fought on 4 September 1260 near Siena between the Guelph army of Florence and a Ghibelline force of Siena, Florentine exiles under Farinata degli"
+   },
+   {
+    "label": "Benevento",
+    "slug": "battle-of-benevento",
+    "quote": "1266 near Benevento in southern Italy between the army of Charles of Anjou and that of Manfred, King of Sicily"
+   },
+   {
+    "label": "Tagliacozzo",
+    "slug": "battle-of-tagliacozzo",
+    "quote": "using a hidden reserve, defeated Conradin, the sixteen-year-old last heir of the Hohenstaufen dynasty, who had come to reclaim the Kingdom of"
+   }
+  ]
+ },
+ {
+  "name": "Battles of Norway's kings",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hafrsfjord",
+    "slug": "battle-of-hafrsfjord",
+    "quote": "According to the sagas, Harald Fairhair defeated an alliance of western Norwegian kings there"
+   },
+   {
+    "label": "Svolder",
+    "slug": "battle-of-svolder",
+    "quote": "King Olaf Tryggvason of Norway was defeated and killed by an alliance of Sweyn Forkbeard of"
+   },
+   {
+    "label": "Nesjar",
+    "slug": "battle-of-nesjar",
+    "quote": "Olaf Haraldsson, who had returned to Norway to claim the throne, defeated Sweyn Haakonsson, jarl of"
+   },
+   {
+    "label": "Stiklestad",
+    "slug": "battle-of-stiklestad",
+    "quote": "on 29 July 1030 in Trøndelag, Norway, where King Olaf Haraldsson, returning from exile to reclaim his throne, was killed by an army of Norwegian"
+   },
+   {
+    "label": "Fimreite",
+    "slug": "battle-of-fimreite",
+    "quote": "King Sverre and his Birkebeiner defeated the fleet of the crowned king Magnus Erlingsson"
+   },
+   {
+    "label": "Largs",
+    "slug": "battle-of-largs",
+    "quote": "Ayrshire coast between Scots and part of the Norwegian fleet of King Haakon IV, which had been battered by storms"
+   }
+  ]
+ },
+ {
+  "name": "Battles of the Baltic crusades",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lindanise",
+    "slug": "battle-of-lindanise",
+    "quote": "at the site of present-day Tallinn, when the crusading army of King Valdemar II of Denmark defeated the Estonians of Rävala"
+   },
+   {
+    "label": "Saule",
+    "slug": "battle-of-saule",
+    "quote": "when Samogitian and Semigallian forces destroyed an army of the Livonian Brothers of the Sword returning from a raid, killing the"
+   },
+   {
+    "label": "Lake Peipus",
+    "slug": "battle-on-the-ice",
+    "quote": "Republic under Prince Alexander Nevsky and an army of the Livonian Order and the Bishopric of Dorpat"
+   },
+   {
+    "label": "Durbe",
+    "slug": "battle-of-durbe",
+    "quote": "western Latvia, where Samogitian forces routed the combined army of the Livonian Order and the Teutonic Order"
+   },
+   {
+    "label": "Rudau",
+    "slug": "battle-of-rudau",
+    "quote": "The Teutonic Knights under Grand Master Winrich von Kniprode defeated a Lithuanian army led by the grand duke Algirdas and his"
+   },
+   {
+    "label": "Grunwald",
+    "slug": "battle-of-grunwald",
+    "quote": "An allied army of the Kingdom of Poland and the Grand Duchy of Lithuania under Władysław II Jagiełło and"
+   }
+  ]
+ },
+ {
+  "name": "Battles fought by Portugal",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "São Mamede",
+    "slug": "battle-of-sao-mamede",
+    "quote": "Afonso's victory gave him control of the County of Portugal, and"
+   },
+   {
+    "label": "Ourique",
+    "slug": "battle-of-ourique",
+    "quote": "The victory became the traditional founding moment of the independent Kingdom of Portugal"
+   },
+   {
+    "label": "Aljubarrota",
+    "slug": "battle-of-aljubarrota",
+    "quote": "on 14 August 1385 in central Portugal, between the army of John I of Portugal, with English archers, and the larger army of John I of Castile"
+   },
+   {
+    "label": "Ameixial",
+    "slug": "battle-of-ameixial",
+    "quote": "8 June 1663 near Estremoz in the Alentejo, during the Portuguese Restoration War"
+   },
+   {
+    "label": "Montes Claros",
+    "slug": "battle-of-montes-claros",
+    "quote": "June 1665 near Vila Viçosa in the Alentejo, the last major battle of the Portuguese Restoration War"
+   },
+   {
+    "label": "Alcácer Quibir",
+    "slug": "battle-of-alcacer-quibir",
+    "quote": "A Portuguese army under King Sebastian was destroyed by Moroccan forces, and Sebastian was"
+   }
+  ]
+ },
+ {
+  "name": "Battles fought in Ireland",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Clontarf",
+    "slug": "battle-of-clontarf",
+    "quote": "The army of Brian Bóruma, high king of Ireland, defeated the king of Leinster, the"
+   },
+   {
+    "label": "Callann",
+    "slug": "battle-of-callann",
+    "quote": "The Battle of Callann was fought in 1261 near Kilgarvan in County Kerry, Ireland, where Fínghin Mac Carthaigh, king of"
+   },
+   {
+    "label": "Yellow Ford",
+    "slug": "battle-of-the-yellow-ford",
+    "quote": "1598 on the Callan river near Armagh, where the Irish forces of Hugh O'Neill, Earl of Tyrone, and Red Hugh O'Donnell routed an"
+   },
+   {
+    "label": "Kinsale",
+    "slug": "battle-of-kinsale",
+    "quote": "of Kinsale was fought on 24 December 1601 near Kinsale in County Cork, Ireland"
+   },
+   {
+    "label": "Benburb",
+    "slug": "battle-of-benburb",
+    "quote": "on 5 June 1646 in County Tyrone, where the Ulster army of Confederate Ireland under Owen Roe O'Neill routed a Scottish Covenanter army led"
+   },
+   {
+    "label": "Aughrim",
+    "slug": "battle-of-aughrim",
+    "quote": "The Battle of Aughrim was fought on 12 July 1691 near Aughrim in County Galway, between the Jacobite army of the"
+   }
+  ],
+  "note": "the Boyne left out: it is in the published Battles named after rivers"
+ },
+ {
+  "name": "Battles of the French Revolutionary Wars",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jemappes",
+    "slug": "battle-of-jemappes",
+    "quote": "A French revolutionary army under General Dumouriez defeated the Austrians under Duke Albert of Saxe-Teschen, one"
+   },
+   {
+    "label": "Fleurus",
+    "slug": "battle-of-fleurus-1794",
+    "quote": "in the Austrian Netherlands between the French Army of the Sambre-et-Meuse under Jean-Baptiste Jourdan and the Coalition army of the Prince of"
+   },
+   {
+    "label": "Lodi",
+    "slug": "battle-of-lodi",
+    "quote": "over the Adda at Lodi in Lombardy, when Napoleon Bonaparte's French army stormed the crossing against the rearguard of the retreating"
+   },
+   {
+    "label": "Pyramids",
+    "slug": "battle-of-the-pyramids",
+    "quote": "on the west bank of the Nile, near Cairo, during the French campaign in Egypt"
+   },
+   {
+    "label": "Camperdown",
+    "slug": "battle-of-camperdown",
+    "quote": "Sea Fleet under Admiral Adam Duncan and the fleet of the Batavian Republic under Vice-Admiral Jan de Winter"
+   },
+   {
+    "label": "Hohenlinden",
+    "slug": "battle-of-hohenlinden",
+    "quote": "3 December 1800 in Bavaria, east of Munich, between a French army under Jean Moreau and an Austrian and Bavarian army under Archduke John"
+   }
+  ]
+ },
+ {
+  "name": "Kings of the Lombards",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alboin",
+    "slug": "alboin",
+    "quote": "Alboin was king of the Lombards from about 560 and led them out of Pannonia into Italy"
+   },
+   {
+    "label": "Agilulf",
+    "slug": "agilulf",
+    "quote": "Agilulf was king of the Lombards in Italy from 590 to 616"
+   },
+   {
+    "label": "Authari",
+    "slug": "authari",
+    "quote": "Authari was king of the Lombards from 584 to 590, chosen after a ten-year interregnum"
+   },
+   {
+    "label": "Liutprand",
+    "slug": "liutprand-king-of-the-lombards",
+    "quote": "Liutprand was king of the Lombards from 712 to 744 and the most powerful of their kings"
+   },
+   {
+    "label": "Aistulf",
+    "slug": "aistulf",
+    "quote": "Aistulf was king of the Lombards from 749 to 756, previously duke of Friuli"
+   },
+   {
+    "label": "Desiderius",
+    "slug": "desiderius",
+    "quote": "Desiderius was the last king of the Lombards in Italy"
+   }
+  ]
+ },
+ {
+  "name": "Kings of the Visigoths",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alaric II",
+    "slug": "alaric-ii",
+    "quote": "Alaric II was king of the Visigoths from 484 to 507, ruling much of Gaul and Hispania from"
+   },
+   {
+    "label": "Liuvigild",
+    "slug": "liuvigild",
+    "quote": "Liuvigild (Leovigild) was king of the Visigoths from about 568 to 586 and the main architect of their kingdom"
+   },
+   {
+    "label": "Reccared I",
+    "slug": "reccared-i",
+    "quote": "Reccared I was king of the Visigoths from 586 to 601, the son of Liuvigild"
+   },
+   {
+    "label": "Sisebut",
+    "slug": "sisebut",
+    "quote": "Sisebut was king of the Visigoths from 612 to 621"
+   },
+   {
+    "label": "Recceswinth",
+    "slug": "recceswinth",
+    "quote": "Recceswinth was king of the Visigoths from 649 to 672, first as co-ruler with his father"
+   },
+   {
+    "label": "Roderic",
+    "slug": "roderic",
+    "quote": "Roderic was the last king of the Visigoths in Hispania, who seized the throne around 710 amid"
+   }
+  ]
+ },
+ {
+  "name": "Rulers of medieval Serbia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Stefan Nemanja",
+    "slug": "stefan-nemanja",
+    "quote": "Stefan Nemanja was Grand Prince of Serbia from about 1166 to 1196 and founder of the Nemanjić dynasty"
+   },
+   {
+    "label": "Milutin",
+    "slug": "stefan-milutin",
+    "quote": "Stefan Milutin was King of Serbia from 1282 to 1321, after his brother Stefan Dragutin gave"
+   },
+   {
+    "label": "Stefan Dušan",
+    "slug": "stefan-dusan",
+    "quote": "Stefan Dušan was King of Serbia from 1331 and was crowned Emperor of the Serbs and Greeks in 1346"
+   },
+   {
+    "label": "Prince Lazar",
+    "slug": "lazar-of-serbia",
+    "quote": "Lazar Hrebeljanović, known as Prince Lazar, was the most powerful Serbian ruler after the collapse of the Serbian Empire, governing Moravian Serbia from about 1371"
+   },
+   {
+    "label": "Princess Milica",
+    "slug": "princess-milica-of-serbia",
+    "quote": "his death at the Battle of Kosovo in 1389, regent for their son Stefan Lazarević"
+   },
+   {
+    "label": "Stefan Lazarević",
+    "slug": "stefan-lazarevic",
+    "quote": "He ruled Moravian Serbia as an Ottoman vassal and fought for the sultan at Ankara in"
+   }
+  ]
+ },
+ {
+  "name": "Princes of Wallachia and Moldavia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Vlad III",
+    "slug": "vlad-the-impaler",
+    "quote": "known as Vlad the Impaler or Dracula, was voivode of Wallachia in 1448, from 1456 to 1462 and in 1476"
+   },
+   {
+    "label": "Stephen the Great",
+    "slug": "stephen-the-great",
+    "quote": "Stephen the Great was Prince of Moldavia from 1457 to 1504, the principality's outstanding ruler"
+   },
+   {
+    "label": "Michael the Brave",
+    "slug": "michael-the-brave",
+    "quote": "Michael the Brave (Mihai Viteazul) was prince of Wallachia from 1593 to 1601"
+   },
+   {
+    "label": "Mircea the Elder",
+    "slug": "mircea-the-elder",
+    "quote": "Mircea the Elder was prince of Wallachia from 1386 to 1418, with a short interruption in the 1390s"
+   },
+   {
+    "label": "Dimitrie Cantemir",
+    "slug": "dimitrie-cantemir",
+    "quote": "Dimitrie Cantemir was prince of Moldavia in 1693 and from 1710 to 1711, and a leading scholar"
+   },
+   {
+    "label": "Alexandru Ioan Cuza",
+    "slug": "alexandru-ioan-cuza",
+    "quote": "Alexandru Ioan Cuza was elected Prince of Moldavia and then of Wallachia in 1859, uniting the two principalities in a"
+   }
+  ]
+ },
+ {
+  "name": "Ottonian and Salian kings of Germany",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Henry the Fowler",
+    "slug": "henry-the-fowler",
+    "quote": "was elected king of East Francia in 919, the first of the Ottonian dynasty"
+   },
+   {
+    "label": "Otto II",
+    "slug": "otto-ii-holy-roman-emperor",
+    "quote": "Otto II was Holy Roman Emperor from 973, son of Otto I and husband of the Byzantine princess"
+   },
+   {
+    "label": "Otto III",
+    "slug": "otto-iii-holy-roman-emperor",
+    "quote": "Otto III became King of Germany at the age of three in 983 and Holy Roman Emperor in 996"
+   },
+   {
+    "label": "Henry II",
+    "slug": "henry-ii-holy-roman-emperor",
+    "quote": "Henry II, Holy Roman Emperor, was the last Ottonian ruler, king of Germany from 1002 and emperor"
+   },
+   {
+    "label": "Conrad II",
+    "slug": "conrad-ii-holy-roman-emperor",
+    "quote": "Conrad II was the first Salian king of Germany, elected in 1024 and crowned emperor in"
+   },
+   {
+    "label": "Henry IV",
+    "slug": "henry-iv-holy-roman-emperor",
+    "quote": "His clash with Pope Gregory VII over the appointment of bishops began"
+   }
+  ]
+ },
+ {
+  "name": "In the Byzantine Empire",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Theme system",
+    "slug": "theme-system",
+    "quote": "The theme system was the military and administrative organisation of the Byzantine Empire from around the seventh century, in"
+   },
+   {
+    "label": "Porphyrogennetos",
+    "slug": "born-in-the-purple",
+    "quote": "In the Byzantine Empire the honorific porphyrogennetos, Latinized"
+   },
+   {
+    "label": "Varangian Guard",
+    "slug": "varangian-guard",
+    "quote": "The Varangian Guard was the elite bodyguard of the Byzantine emperors, formed around 988 when Basil II"
+   },
+   {
+    "label": "Greek fire",
+    "slug": "greek-fire",
+    "quote": "Greek fire was an incendiary weapon used by the Byzantine Empire, typically projected from siphons on"
+   },
+   {
+    "label": "Solidus",
+    "slug": "solidus",
+    "quote": "in weight and purity for centuries and became the standard coin of the Byzantine Empire"
+   },
+   {
+    "label": "Ecumenical Patriarch",
+    "slug": "ecumenical-patriarch-of-constantinople",
+    "quote": "styled Ecumenical Patriarch, is the archbishop of Constantinople and senior bishop of the Eastern Orthodox Church"
+   }
+  ],
+  "note": "Greek fire is also in the published Weapons of war"
+ },
+ {
+  "name": "Tsarist Russia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Serfs",
+    "slug": "serfdom-in-russia",
+    "quote": "In tsarist Russia a serf was an unfree peasant who originally could be sold only"
+   },
+   {
+    "label": "Emancipation of 1861",
+    "slug": "emancipation-reform-of-1861",
+    "quote": "The emancipation reform of 1861 was the decree of Tsar Alexander II abolishing serfdom in the Russian Empire"
+   },
+   {
+    "label": "Russification",
+    "slug": "russification",
+    "quote": "language, culture and administration among the non-Russian peoples of the Russian Empire and later the Soviet Union"
+   },
+   {
+    "label": "Military settlements",
+    "slug": "military-settlement",
+    "quote": "combined military service with farming, introduced by Alexander I to create an inexpensive reserve of"
+   },
+   {
+    "label": "Kulak",
+    "slug": "kulak",
+    "quote": "a peasant who owned over 3 hectares of land at the end of the Russian Empire, a pejorative term from the 19th"
+   },
+   {
+    "label": "State Duma",
+    "slug": "state-duma",
+    "quote": "The State Duma was the elected legislative assembly of the Russian Empire, created after the Revolution of 1905"
+   }
+  ]
+ },
+ {
+  "name": "Institutions of the Holy Roman Empire",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Prince-elector",
+    "slug": "prince-elector",
+    "quote": "A prince-elector was one of the princes entitled to elect the King of the Romans, the future Holy Roman Emperor"
+   },
+   {
+    "label": "Imperial Diet",
+    "slug": "imperial-diet",
+    "quote": "The Imperial Diet, or Reichstag, was the assembly of the estates of the Holy Roman Empire, including princes, ecclesiastical"
+   },
+   {
+    "label": "Free imperial city",
+    "slug": "free-imperial-city",
+    "quote": "A free imperial city was a city in the Holy Roman Empire that was subject only to the emperor rather than a territorial prince"
+   },
+   {
+    "label": "Imperial Chamber Court",
+    "slug": "imperial-chamber-court",
+    "quote": "The Imperial Chamber Court was one of the two supreme courts of the Holy Roman Empire, established in 1495 as part of"
+   },
+   {
+    "label": "Aulic Council",
+    "slug": "aulic-council",
+    "quote": "The Aulic Council, or Reichshofrat, was one of the two supreme courts of the Holy Roman Empire, alongside the Imperial Chamber Court"
+   },
+   {
+    "label": "Swabian Circle",
+    "slug": "swabian-circle",
+    "quote": "The Swabian Circle was one of the Imperial Circles into which the Holy Roman Empire was divided from 1500 to organise defence, coinage"
+   }
+  ]
+ },
+ {
+  "name": "The Polish-Lithuanian Commonwealth",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sejm",
+    "slug": "sejm",
+    "quote": "The Sejm was the parliament of the Kingdom of Poland and later of the Polish-Lithuanian Commonwealth, made up of the king, the senate and"
+   },
+   {
+    "label": "Liberum veto",
+    "slug": "liberum-veto",
+    "quote": "The liberum veto was a parliamentary rule of the Polish-Lithuanian Commonwealth allowing any single deputy of the Sejm"
+   },
+   {
+    "label": "Winged hussars",
+    "slug": "polish-hussars",
+    "quote": "The Polish hussars, or husaria, were heavily armoured lancers of the Polish-Lithuanian Commonwealth, active from the sixteenth to the"
+   },
+   {
+    "label": "Szlachta",
+    "slug": "szlachta",
+    "quote": "The szlachta was the hereditary noble class of Poland and later of the Polish-Lithuanian"
+   },
+   {
+    "label": "Warsaw Confederation",
+    "slug": "warsaw-confederation",
+    "quote": "The Warsaw Confederation was an act adopted by the nobility of the Polish-Lithuanian Commonwealth in 1573 that guaranteed religious peace and"
+   },
+   {
+    "label": "Sarmatism",
+    "slug": "sarmatism",
+    "quote": "Sarmatism was the ideology and culture of the nobility of the Polish–Lithuanian Commonwealth from the sixteenth to the eighteenth"
+   }
+  ]
+ },
+ {
+  "name": "Under the Ancien Régime",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Parlement of Paris",
+    "slug": "parlement-of-paris",
+    "quote": "The Parlement of Paris was the highest court of justice of the Kingdom of France, developed from the king's court in the"
+   },
+   {
+    "label": "Estates General",
+    "slug": "estates-general-france",
+    "quote": "The Estates General was the assembly of the three orders of the Kingdom of France, clergy, nobility and commoners, first"
+   },
+   {
+    "label": "Lettres de cachet",
+    "slug": "lettres-de-cachet",
+    "quote": "Lettres de cachet were letters signed by the king of France, countersigned by one of his ministers"
+   },
+   {
+    "label": "Taille",
+    "slug": "taille",
+    "quote": "direct land tax on the peasantry and other non-nobles of the Third Estate in Ancien Régime France, levied on each household according to"
+   },
+   {
+    "label": "Gabelle",
+    "slug": "gabelle",
+    "quote": "The gabelle was the French state monopoly of the salt trade, in some regions a salt tax, and one of"
+   },
+   {
+    "label": "Dauphin",
+    "slug": "dauphin-of-france",
+    "quote": "Dauphin of France was the title of the heir apparent to the French throne from 1350 to 1830"
+   }
+  ]
+ },
+ {
+  "name": "Jewish history in Europe",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sephardim",
+    "slug": "sephardic-jews",
+    "quote": "Sephardic Jews are the Jewish communities descended from those of medieval Spain and Portugal, expelled in 1492 and 1497"
+   },
+   {
+    "label": "Ashkenazim",
+    "slug": "ashkenazi-jews",
+    "quote": "The Ashkenazi Jews are Jewish communities originating in medieval Central Europe"
+   },
+   {
+    "label": "Haskalah",
+    "slug": "haskalah",
+    "quote": "The Haskalah, often called the Jewish Enlightenment, was an intellectual movement among the"
+   },
+   {
+    "label": "Yiddish",
+    "slug": "yiddish",
+    "quote": "Yiddish is a language of the Ashkenazi Jews, based on medieval German with Hebrew"
+   },
+   {
+    "label": "Edict of Expulsion",
+    "slug": "edict-of-expulsion",
+    "quote": "issued by Edward I on 18 July 1290 that expelled all Jews from the Kingdom of England, the first time a European state is"
+   },
+   {
+    "label": "Pope's Jews",
+    "slug": "comtadin-jews",
+    "quote": "The Comtadin Jews, or Pope's Jews, were the Jewish communities of the papal territories of Avignon and the Comtat Venaissin, where they"
+   }
+  ],
+  "note": "the Venetian Ghetto would fit too; it is used in In Venice"
+ },
+ {
+  "name": "Royal favourites",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Potemkin",
+    "slug": "grigory-potemkin",
+    "quote": "was a Russian statesman and field marshal, the favourite and close partner in government of Catherine the Great"
+   },
+   {
+    "label": "Struensee",
+    "slug": "johann-friedrich-struensee",
+    "quote": "mentally ill Christian VII of Denmark and the lover of Queen Caroline Matilda"
+   },
+   {
+    "label": "Robert Dudley",
+    "slug": "robert-dudley-1st-earl-of-leicester",
+    "quote": "of Leicester, was an English courtier and favourite of Elizabeth I"
+   },
+   {
+    "label": "Diane de Poitiers",
+    "slug": "diane-de-poitiers",
+    "quote": "Diane de Poitiers was a French noblewoman and the mistress of King Henry II, who was nearly twenty years her junior"
+   },
+   {
+    "label": "Lola Montez",
+    "slug": "lola-montez",
+    "quote": "In 1846 she became the favourite of King Ludwig I of Bavaria, who made her Countess of Landsfeld"
+   },
+   {
+    "label": "Pompadour",
+    "slug": "madame-de-pompadour",
+    "quote": "was a member of the French court who was the official chief mistress of King Louis XV from 1745 to 1751 and remained"
+   }
+  ]
+ },
+ {
+  "name": "Charters wrung from rulers",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Magna Carta",
+    "slug": "magna-carta",
+    "quote": "Magna Carta is the charter of liberties that rebellious barons forced King John of England to accept at Runnymede in"
+   },
+   {
+    "label": "Golden Bull of 1222",
+    "slug": "golden-bull-of-1222",
+    "quote": "The Golden Bull of 1222 was a charter issued by King Andrew II of Hungary under pressure from the lesser nobility and royal"
+   },
+   {
+    "label": "Henrician Articles",
+    "slug": "henrician-articles",
+    "quote": "principles adopted in 1573 and sworn by each newly elected king of the Polish-Lithuanian Commonwealth"
+   },
+   {
+    "label": "Letter of Majesty",
+    "slug": "letter-of-majesty",
+    "quote": "July 1609 by Rudolf II, as king of Bohemia, under pressure from the Protestant estates"
+   },
+   {
+    "label": "Bill of Rights",
+    "slug": "bill-of-rights-1689",
+    "quote": "Act of the English Parliament that set out the terms on which William III and Mary II took the throne after the Glorious Revolution"
+   },
+   {
+    "label": "Statuto Albertino",
+    "slug": "statuto-albertino",
+    "quote": "The Statuto Albertino was the constitution granted by King Charles Albert of Sardinia in March 1848"
+   }
+  ],
+  "note": "Magna Carta is in the published Founding charters; the other five are new"
+ },
+ {
+  "name": "Unions of crowns and kingdoms",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kalmar",
+    "slug": "kalmar-union",
+    "quote": "The Kalmar Union was the personal union of Denmark, Norway and Sweden under a single monarch, created through the work of Queen"
+   },
+   {
+    "label": "Krewo",
+    "slug": "union-of-krewo",
+    "quote": "Krewo was an agreement of 1385 under which Grand Duke Jogaila of Lithuania agreed to accept Catholic Christianity and marry Queen Jadwiga of Poland"
+   },
+   {
+    "label": "Horodło",
+    "slug": "union-of-horodlo",
+    "quote": "It renewed the union of Poland and Lithuania while keeping a separate Lithuanian"
+   },
+   {
+    "label": "Lublin",
+    "slug": "union-of-lublin",
+    "quote": "of Lublin was the agreement of 1569 that transformed the personal union of Poland and Lithuania into a single state, the Polish-Lithuanian Commonwealth"
+   },
+   {
+    "label": "Iberian",
+    "slug": "iberian-union",
+    "quote": "The Iberian Union was the dynastic union of the crowns of Portugal and Spain under the Spanish Habsburg kings"
+   },
+   {
+    "label": "1707",
+    "slug": "acts-of-union-1707",
+    "quote": "Union 1707 were the parliamentary acts that united the Kingdom of England and the Kingdom of Scotland into the Kingdom of Great Britain in 1707"
+   }
+  ],
+  "note": "labels are the places or year each union is named by"
+ },
+ {
+  "name": "Parliaments of old Europe",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Riksdag",
+    "slug": "riksdag",
+    "quote": "The Riksdag is the national assembly of Sweden, whose origins lie in the late medieval"
+   },
+   {
+    "label": "Cortes",
+    "slug": "cortes",
+    "quote": "The Cortes were the representative assemblies of the Iberian kingdoms, in which the king met the clergy"
+   },
+   {
+    "label": "House of Commons",
+    "slug": "house-of-commons-of-england",
+    "quote": "The House of Commons of England was the lower house of the Parliament of England, made up of knights of the shire and"
+   },
+   {
+    "label": "Folketing",
+    "slug": "folketing",
+    "quote": "The Folketing is the parliament of Denmark"
+   },
+   {
+    "label": "Tagsatzung",
+    "slug": "tagsatzung",
+    "quote": "The Tagsatzung, or Federal Diet, was the assembly of envoys of the cantons of the Old Swiss Confederacy and its successors until 1848"
+   },
+   {
+    "label": "Parliament of Scotland",
+    "slug": "parliament-of-scotland",
+    "quote": "The Parliament of Scotland was the national legislature of the Kingdom of Scotland from the thirteenth century until 1707"
+   }
+  ],
+  "note": "Sejm, Estates General, Althing and Storting are used in other groups"
+ },
+ {
+  "name": "Histories written in the Middle Ages",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tale of Bygone Years",
+    "slug": "primary-chronicle",
+    "quote": "Chronicle, or Tale of Bygone Years, is a history of Kievan Rus from the earliest times to the early 12th century, compiled in"
+   },
+   {
+    "label": "Anglo-Saxon Chronicle",
+    "slug": "anglo-saxon-chronicle",
+    "quote": "The Anglo-Saxon Chronicle is a collection of annals in Old English recording the history of the English"
+   },
+   {
+    "label": "Fredegar",
+    "slug": "chronicle-of-fredegar",
+    "quote": "The Chronicle of Fredegar is a Latin chronicle compiled in Frankish Gaul, probably in Burgundy, around 660, and"
+   },
+   {
+    "label": "Annals of Ulster",
+    "slug": "annals-of-ulster",
+    "quote": "The Annals of Ulster are a chronicle of Irish history from the fifth century to the sixteenth, compiled in the late"
+   },
+   {
+    "label": "Gesta Hungarorum",
+    "slug": "gesta-hungarorum",
+    "quote": "The Gesta Hungarorum is a Latin chronicle of the Hungarian conquest of the Carpathian Basin, written around"
+   },
+   {
+    "label": "Heimskringla",
+    "slug": "heimskringla",
+    "quote": "Heimskringla is a collection of sagas of the kings of Norway written in Old Norse around 1230"
+   }
+  ]
+ },
+ {
+  "name": "Kings of France, 1589–1848",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Henry IV",
+    "slug": "henry-iv-of-france",
+    "quote": "of France was king of Navarre from 1572 and the first Bourbon king of France from 1589"
+   },
+   {
+    "label": "Louis XIII",
+    "slug": "louis-xiii-of-france",
+    "quote": "Louis XIII, son of Henry IV, was king of France from 1610"
+   },
+   {
+    "label": "Louis XV",
+    "slug": "louis-xv",
+    "quote": "Louis XV was king of France from 1715 to 1774, succeeding his great-grandfather Louis"
+   },
+   {
+    "label": "Louis XVI",
+    "slug": "louis-xvi",
+    "quote": "Louis XVI was King of France from 1774"
+   },
+   {
+    "label": "Louis XVIII",
+    "slug": "louis-xviii",
+    "quote": "Louis XVIII, brother of Louis XVI, was king of France from 1814 to 1824, apart from the Hundred Days of 1815"
+   },
+   {
+    "label": "Louis Philippe",
+    "slug": "louis-philippe-i",
+    "quote": "Louis Philippe I was King of the French from 1830 to 1848"
+   }
+  ],
+  "note": "Louis XIV left out: in published groups"
+ },
+ {
+  "name": "Slavic peoples",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Czechs",
+    "slug": "czechs",
+    "quote": "The Czechs are a West Slavic people of Bohemia and Moravia, in the present-day Czech Republic"
+   },
+   {
+    "label": "Croats",
+    "slug": "croats",
+    "quote": "The Croats are a South Slavic people whose homeland lies in present-day Croatia"
+   },
+   {
+    "label": "Slovenes",
+    "slug": "slovenes",
+    "quote": "The Slovenes are a South Slavic people living mainly in modern Slovenia"
+   },
+   {
+    "label": "Serbs",
+    "slug": "serbs",
+    "quote": "The Serbs are a South Slavic people of the Balkans, predominantly Orthodox Christian"
+   },
+   {
+    "label": "Poles",
+    "slug": "poles",
+    "quote": "The Poles are a West Slavic people whose homeland is Poland"
+   },
+   {
+    "label": "Sorbs",
+    "slug": "sorbs",
+    "quote": "The Sorbs are a West Slavic people of Lusatia in eastern Germany, living in Saxony and Brandenburg"
+   }
+  ]
+ },
+ {
+  "name": "Foes of Napoleon",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Wellington",
+    "slug": "arthur-wellesley-1st-duke-of-wellington",
+    "quote": "In 1815 he defeated Napoleon at Waterloo with the Prussians, and he later served twice as prime"
+   },
+   {
+    "label": "Blücher",
+    "slug": "gebhard-leberecht-von-blucher",
+    "quote": "his arrival on the field at Waterloo was decisive in the final defeat of Napoleon."
+   },
+   {
+    "label": "Nelson",
+    "slug": "horatio-nelson",
+    "quote": "Horatio Nelson was a British admiral, the most celebrated naval commander of the Revolutionary and Napoleonic Wars"
+   },
+   {
+    "label": "Pitt the Younger",
+    "slug": "william-pitt-the-younger",
+    "quote": "the American war, introduced income tax and led Britain against revolutionary and Napoleonic France"
+   },
+   {
+    "label": "Schwarzenberg",
+    "slug": "karl-philipp-prince-of-schwarzenberg",
+    "quote": "commander-in-chief of the allied armies, which defeated Napoleon at the Battle of Leipzig in October 1813 and entered Paris in 1814."
+   },
+   {
+    "label": "Alexander I",
+    "slug": "alexander-i-of-russia",
+    "quote": "through the Napoleonic Wars, including the defeat of Napoleon's invasion in 1812, and Russian armies reached Paris in 1814"
+   }
+  ]
+ },
+ {
+  "name": "Revolutionary France, 1789–1799",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Women's March",
+    "slug": "womens-march-on-versailles",
+    "quote": "On 5 October 1789 market women in Paris, rioting over the"
+   },
+   {
+    "label": "Flight to Varennes",
+    "slug": "flight-to-varennes",
+    "quote": "The Flight to Varennes was the attempted escape of King Louis XVI, Marie Antoinette and their children"
+   },
+   {
+    "label": "Committee of Public Safety",
+    "slug": "committee-of-public-safety",
+    "quote": "of Public Safety was the executive body set up by the French National Convention in April 1793 to direct the war and suppress internal"
+   },
+   {
+    "label": "Reign of Terror",
+    "slug": "reign-of-terror",
+    "quote": "was the period of the French Revolution, from September 1793 to July 1794, in which the revolutionary government"
+   },
+   {
+    "label": "Thermidor",
+    "slug": "thermidorian-reaction",
+    "quote": "was the turn in the French Revolution that began on 9 Thermidor Year II (27 July 1794), when the National"
+   },
+   {
+    "label": "Directory",
+    "slug": "french-directory",
+    "quote": "The French Directory was the five-member executive that governed the French First Republic from November 1795 to November 1799"
+   }
+  ],
+  "note": "published French Revolution used Bastille, Rights of Man, Jacobins, Robespierre"
+ },
+ {
+  "name": "Vikings in Britain",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lindisfarne",
+    "slug": "lindisfarne",
+    "quote": "The Viking raid on the monastery in 793 is often taken as the start of the"
+   },
+   {
+    "label": "Great Heathen Army",
+    "slug": "great-heathen-army",
+    "quote": "The Great Heathen Army was a large coalition of Scandinavian warriors that invaded England in 865"
+   },
+   {
+    "label": "Ashdown",
+    "slug": "battle-of-ashdown",
+    "quote": "King Æthelred I and his brother Alfred, and the Great Heathen Army of the Danes"
+   },
+   {
+    "label": "Edington",
+    "slug": "battle-of-edington",
+    "quote": "the West Saxons under Alfred the Great and the Viking army of Guthrum"
+   },
+   {
+    "label": "Danelaw",
+    "slug": "danelaw",
+    "quote": "The Danelaw was the part of England settled and ruled by Scandinavians in the late 9th and 10th centuries"
+   },
+   {
+    "label": "Danegeld",
+    "slug": "danegeld",
+    "quote": "Danegeld was a tax raised in Anglo-Saxon England to pay tribute to Viking raiders, above all from 991 under Æthelred the"
+   }
+  ]
+ },
+ {
+  "name": "Milestones of the Reformation",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Diet of Worms",
+    "slug": "diet-of-worms",
+    "quote": "Martin Luther appeared before it and refused to recant his writings"
+   },
+   {
+    "label": "Marburg Colloquy",
+    "slug": "marburg-colloquy",
+    "quote": "October 1529, called by Philip I of Hesse to unite the German and Swiss Reformers in a common Protestant alliance"
+   },
+   {
+    "label": "Schmalkaldic League",
+    "slug": "schmalkaldic-league",
+    "quote": "The Schmalkaldic League was a defensive alliance of Lutheran princes and imperial cities of the Holy Roman"
+   },
+   {
+    "label": "Act of Supremacy",
+    "slug": "act-of-supremacy-1534",
+    "quote": "declaring Henry VIII and his successors the Supreme Head of the Church of England"
+   },
+   {
+    "label": "Peace of Augsburg",
+    "slug": "peace-of-augsburg",
+    "quote": "of Augsburg was a settlement agreed in 1555 between Emperor Charles V's government and the Lutheran princes of the Holy Roman Empire"
+   },
+   {
+    "label": "Protestant Union",
+    "slug": "protestant-union",
+    "quote": "The Protestant Union was a defensive alliance of Protestant German princes and cities formed at Auhausen in 1608 under the"
+   }
+  ]
+ },
+ {
+  "name": "In the Hundred Years' War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Edward III",
+    "slug": "edward-iii-of-england",
+    "quote": "Claiming the French crown, he began the Hundred Years' War, won the battles of Sluys and Crécy"
+   },
+   {
+    "label": "Black Prince",
+    "slug": "edward-the-black-prince",
+    "quote": "the eldest son of Edward III of England and a celebrated commander of the Hundred Years' War"
+   },
+   {
+    "label": "John II",
+    "slug": "john-ii-of-france",
+    "quote": "Good, was King of France from 1350 to 1364, during the Hundred Years' War"
+   },
+   {
+    "label": "Du Guesclin",
+    "slug": "bertrand-du-guesclin",
+    "quote": "who became constable of France in 1370 and the leading French commander of the Hundred Years' War under Charles V"
+   },
+   {
+    "label": "Charles VII",
+    "slug": "charles-vii-of-france",
+    "quote": "Helped by Joan of Arc, who raised the siege of Orléans and"
+   },
+   {
+    "label": "John Talbot",
+    "slug": "john-talbot-1st-earl-of-shrewsbury",
+    "quote": "of Shrewsbury, was an English soldier and the most famous English commander of the later Hundred Years' War"
+   }
+  ]
+ },
+ {
+  "name": "Kings of England, 1216–1483",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Henry III",
+    "slug": "henry-iii-of-england",
+    "quote": "Henry III was king of England from 1216, succeeding his father John as a"
+   },
+   {
+    "label": "Edward I",
+    "slug": "edward-i-of-england",
+    "quote": "Edward I was king of England from 1272 to 1307"
+   },
+   {
+    "label": "Edward II",
+    "slug": "edward-ii-of-england",
+    "quote": "Edward II was king of England from 1307 to 1327, the son of Edward I"
+   },
+   {
+    "label": "Richard II",
+    "slug": "richard-ii-of-england",
+    "quote": "Richard II was King of England from 1377 to 1399, succeeding his grandfather Edward III"
+   },
+   {
+    "label": "Henry IV",
+    "slug": "henry-iv-of-england",
+    "quote": "Henry IV of England, Henry Bolingbroke, deposed his cousin Richard II in 1399 and founded the Lancastrian dynasty"
+   },
+   {
+    "label": "Edward IV",
+    "slug": "edward-iv-of-england",
+    "quote": "Edward IV was King of England from 1461 to 1470 and again from 1471 to 1483, the first"
+   }
+  ],
+  "note": "Edward III kept for In the Hundred Years' War"
+ },
+ {
+  "name": "Napoleon's family",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lucien",
+    "slug": "lucien-bonaparte",
+    "quote": "Lucien Bonaparte was a younger brother of Napoleon"
+   },
+   {
+    "label": "Jérôme",
+    "slug": "jerome-bonaparte",
+    "quote": "Jérôme Bonaparte was the youngest brother of Napoleon, who made him king of Westphalia from"
+   },
+   {
+    "label": "Elisa",
+    "slug": "elisa-bonaparte",
+    "quote": "Elisa Bonaparte, Napoleon's eldest surviving sister, was made Princess of Lucca and"
+   },
+   {
+    "label": "Joséphine",
+    "slug": "josephine-de-beauharnais",
+    "quote": "de Beauharnais was guillotined in 1794, she married Napoleon Bonaparte in 1796 and became Empress of the French in"
+   },
+   {
+    "label": "Marie Louise",
+    "slug": "marie-louise-duchess-of-parma",
+    "quote": "archduchess, daughter of Emperor Francis I, who married Napoleon in 1810 and bore his son, Napoleon II"
+   },
+   {
+    "label": "Eugène de Beauharnais",
+    "slug": "eugene-de-beauharnais",
+    "quote": "de Beauharnais was the son of Joséphine and the adopted stepson of Napoleon"
+   }
+  ],
+  "note": "Joseph and Louis Bonaparte left out: in the published Given a throne by Napoleon"
+ },
+ {
+  "name": "Catastrophes in Europe",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Black Death",
+    "slug": "black-death",
+    "quote": "The Black Death was the pandemic of plague that swept across Eurasia and North"
+   },
+   {
+    "label": "Sicily, 1693",
+    "slug": "1693-sicily-earthquake",
+    "quote": "after a foreshock two days earlier, and is the most destructive in Italian history"
+   },
+   {
+    "label": "Lisbon, 1755",
+    "slug": "1755-lisbon-earthquake",
+    "quote": "The 1755 Lisbon earthquake was a catastrophic earthquake, followed by a tsunami and fires, that destroyed much of the Portuguese"
+   },
+   {
+    "label": "Moscow, 1812",
+    "slug": "fire-of-moscow-1812",
+    "quote": "Much of Moscow was destroyed, depriving the French of shelter and"
+   },
+   {
+    "label": "Hamburg, 1842",
+    "slug": "great-fire-of-hamburg",
+    "quote": "Fire of Hamburg broke out on 5 May 1842 and burned for four days, destroying about a quarter of the old"
+   },
+   {
+    "label": "Irish famine",
+    "slug": "great-famine-ireland",
+    "quote": "The Great Famine was a period of mass starvation and disease in Ireland from 1845 to 1852, caused by a potato"
+   }
+  ]
+ },
+ {
+  "name": "The end of Poland-Lithuania",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "First Partition",
+    "slug": "first-partition-of-poland",
+    "quote": "The First Partition of Poland in 1772 was the annexation of large parts of the Polish-Lithuanian Commonwealth by Russia, Prussia and Austria"
+   },
+   {
+    "label": "Targowica",
+    "slug": "targowica-confederation",
+    "quote": "Polish-Lithuanian magnates formed in 1792 to overturn the reformist Constitution of 3 May 1791"
+   },
+   {
+    "label": "Second Partition",
+    "slug": "second-partition-of-poland",
+    "quote": "parts of the Polish-Lithuanian Commonwealth by Russia and Prussia in 1793"
+   },
+   {
+    "label": "Kościuszko Uprising",
+    "slug": "kosciuszko-uprising",
+    "quote": "of the Polish-Lithuanian Commonwealth following the Second Partition"
+   },
+   {
+    "label": "Third Partition",
+    "slug": "third-partition-of-poland",
+    "quote": "The Third Partition of Poland was the final division of the remaining territory of the Polish-Lithuanian Commonwealth"
+   },
+   {
+    "label": "Stanisław August",
+    "slug": "stanislaw-august-poniatowski",
+    "quote": "Stanisław August Poniatowski was the last king of the Polish-Lithuanian Commonwealth, elected in 1764 with the backing of"
+   }
+  ]
+ },
+ {
+  "name": "Leaders in the Thirty Years' War",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Wallenstein",
+    "slug": "albrecht-von-wallenstein",
+    "quote": "was a Bohemian nobleman who raised and commanded the imperial armies in the Thirty Years' War"
+   },
+   {
+    "label": "Bernhard of Saxe-Weimar",
+    "slug": "bernhard-of-saxe-weimar",
+    "quote": "Bernhard of Saxe-Weimar was a German prince and one of the leading Protestant generals of the Thirty Years' War"
+   },
+   {
+    "label": "Christian IV",
+    "slug": "christian-iv-of-denmark",
+    "quote": "Christian IV was King of Denmark and Norway from 1588 to 1648"
+   },
+   {
+    "label": "Maximilian of Bavaria",
+    "slug": "maximilian-i-elector-of-bavaria",
+    "quote": "of Bavaria, ruled Bavaria from 1597 and founded the Catholic League in 1609"
+   },
+   {
+    "label": "John George I",
+    "slug": "john-george-i-elector-of-saxony",
+    "quote": "A Lutheran loyal to the emperor, he helped crush the Bohemian revolt and gained Lusatia, but later joined"
+   },
+   {
+    "label": "Ferdinand II",
+    "slug": "ferdinand-ii-holy-roman-emperor",
+    "quote": "of Inner Austria and ruled from Graz before becoming emperor in 1619"
+   }
+  ],
+  "note": "Tilly and Gustavus Adolphus kept for Died in 1632"
+ },
+ {
+  "name": "Called enlightened rulers",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Joseph II",
+    "slug": "joseph-ii-holy-roman-emperor",
+    "quote": "An enlightened absolutist, he abolished serfdom, granted"
+   },
+   {
+    "label": "Charles III of Spain",
+    "slug": "charles-iii-of-spain",
+    "quote": "An enlightened reformer, he promoted roads, trade, academies"
+   },
+   {
+    "label": "Leopold II",
+    "slug": "leopold-ii-holy-roman-emperor",
+    "quote": "An enlightened reformer, he freed the grain trade, reorganised"
+   },
+   {
+    "label": "Charles Frederick of Baden",
+    "slug": "charles-frederick-grand-duke-of-baden",
+    "quote": "An enlightened ruler, he abolished serfdom in 1783"
+   },
+   {
+    "label": "Colloredo",
+    "slug": "hieronymus-von-colloredo",
+    "quote": "An enlightened reformer, he is best remembered as the employer"
+   },
+   {
+    "label": "Velbruck",
+    "slug": "francois-charles-de-velbruck",
+    "quote": "An enlightened ruler, he promoted education, public health"
+   }
+  ]
+ },
+ {
+  "name": "Cossack leaders",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Khmelnytsky",
+    "slug": "bohdan-khmelnytsky",
+    "quote": "Bohdan Khmelnytsky was a Cossack leader who led a major uprising in Ukraine against the Polish-Lithuanian"
+   },
+   {
+    "label": "Yermak",
+    "slug": "yermak-timofeyevich",
+    "quote": "Yermak Timofeyevich was a Cossack leader who led an expedition across the Ural Mountains into Siberia in the 1580s, defeating"
+   },
+   {
+    "label": "Mazepa",
+    "slug": "ivan-mazepa",
+    "quote": "Ivan Mazepa was hetman of the Cossack Hetmanate from 1687 to 1708 and a generous patron of Orthodox"
+   },
+   {
+    "label": "Stepan Razin",
+    "slug": "stepan-razin",
+    "quote": "Stepan Razin was a Don Cossack leader who raided the Caspian coasts of"
+   },
+   {
+    "label": "Pugachev",
+    "slug": "yemelyan-pugachev",
+    "quote": "be the murdered Emperor Peter III and led the largest Cossack and peasant rising in Russian history against Catherine the Great"
+   },
+   {
+    "label": "Platov",
+    "slug": "matvei-platov",
+    "quote": "Matvei Platov was a Cossack general who served as ataman of the Don Cossack Host from 1801 until his death"
+   }
+  ]
+ },
+ {
+  "name": "Rulers from the House of Savoy",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Charles Emmanuel I",
+    "slug": "charles-emmanuel-i-duke-of-savoy",
+    "quote": "Charles Emmanuel I was Duke of Savoy from 1580 to 1630, an ambitious ruler who sought to"
+   },
+   {
+    "label": "Victor Amadeus II",
+    "slug": "victor-amadeus-ii",
+    "quote": "Victor Amadeus II was duke of Savoy from 1675"
+   },
+   {
+    "label": "Charles Emmanuel III",
+    "slug": "charles-emmanuel-iii-of-sardinia",
+    "quote": "Charles Emmanuel III was duke of Savoy and king of Sardinia from 1730, when his father Victor Amadeus II"
+   },
+   {
+    "label": "Charles Albert",
+    "slug": "charles-albert-of-sardinia",
+    "quote": "Charles Albert was King of Sardinia from 1831"
+   },
+   {
+    "label": "Victor Emmanuel II",
+    "slug": "victor-emmanuel-ii",
+    "quote": "II was King of Sardinia from 1849 and the first King of Italy from 1861"
+   },
+   {
+    "label": "Umberto I",
+    "slug": "umberto-i",
+    "quote": "Umberto I was King of Italy from 1878 to 1900, the son of Victor Emmanuel II"
+   }
+  ],
+  "note": "Charles Albert also granted the Statuto Albertino (Charters group)"
+ },
+ {
+  "name": "Once ruled by Venice",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Padua",
+    "slug": "padua",
+    "quote": "in 1222, is one of the oldest in Europe, the city came under Venetian rule in 1405, and Giotto's frescoes in the Scrovegni"
+   },
+   {
+    "label": "Brescia",
+    "slug": "brescia",
+    "quote": "A free commune in the Middle Ages, it was ruled by Venice from 1426 to 1797 and became an important centre of arms"
+   },
+   {
+    "label": "Zadar",
+    "slug": "zadar",
+    "quote": "Ruled by Venice from 1409 to 1797, it then served as capital of the"
+   },
+   {
+    "label": "Zakynthos",
+    "slug": "zakynthos",
+    "quote": "ruled with Cephalonia by counts palatine, came under Venice in 1485 and grew so prosperous that it was"
+   },
+   {
+    "label": "Heraklion",
+    "slug": "heraklion",
+    "quote": "Under Venice it was called Candia and withstood an Ottoman siege from"
+   },
+   {
+    "label": "Chalcis",
+    "slug": "chalcis",
+    "quote": "In the Middle Ages, as Negroponte, it was the seat of the Lombard triarchs and of Venetian rule from the 13th century until the Ottoman"
+   }
+  ]
+ },
+ {
+  "name": "Made by Revolutionary and Napoleonic France",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Batavian Republic",
+    "slug": "batavian-republic",
+    "quote": "It was a French client state, and during this period the Dutch East"
+   },
+   {
+    "label": "Helvetic Republic",
+    "slug": "helvetic-republic",
+    "quote": "The Helvetic Republic was a unitary state established in Switzerland after the French invasion of 1798 and proclaimed at Aarau on 12 April 1798"
+   },
+   {
+    "label": "Ligurian Republic",
+    "slug": "ligurian-republic",
+    "quote": "The Ligurian Republic was a French client state that replaced the aristocratic Republic of Genoa in 1797, after Napoleon Bonaparte"
+   },
+   {
+    "label": "Transpadane Republic",
+    "slug": "transpadane-republic",
+    "quote": "The Transpadane Republic was a sister republic of revolutionary France set up in Lombardy, north of the Po"
+   },
+   {
+    "label": "Lucca and Piombino",
+    "slug": "principality-of-lucca-and-piombino",
+    "quote": "The Principality of Lucca and Piombino was a Napoleonic state in Tuscany created in 1805 for Napoleon's sister"
+   },
+   {
+    "label": "Illyrian Provinces",
+    "slug": "illyrian-provinces",
+    "quote": "The Illyrian Provinces were a region of the French Empire created by Napoleon in 1809, after the Treaty of Schönbrunn, from"
+   }
+  ]
+ },
+ {
+  "name": "All in 1356",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Golden Bull",
+    "slug": "golden-bull-of-1356",
+    "quote": "The Golden Bull of 1356 was a decree issued by Emperor Charles"
+   },
+   {
+    "label": "Poitiers",
+    "slug": "battle-of-poitiers-1356",
+    "quote": "The Battle of Poitiers was fought on 19 September 1356 near Poitiers in western France during"
+   },
+   {
+    "label": "Joyous Entry",
+    "slug": "joyous-entry-of-1356",
+    "quote": "The Joyous Entry was a charter of liberties granted in January 1356 by Duchess Joanna and Duke Wenceslaus"
+   },
+   {
+    "label": "First Hansetag",
+    "slug": "hansetag",
+    "quote": "The first is usually dated to 1356 at Lübeck, which hosted most later meetings"
+   },
+   {
+    "label": "Brabantine Succession",
+    "slug": "war-of-the-brabantine-succession",
+    "quote": "The War of the Brabantine Succession was fought in 1356–1357 over the inheritance of Duke John III"
+   },
+   {
+    "label": "Boccanegra's return",
+    "slug": "simone-boccanegra",
+    "quote": "He abdicated in 1344, returned as doge in 1356 and died, reputedly poisoned, in 1363"
+   }
+  ]
+ },
+ {
+  "name": "All in 1525",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Pavia",
+    "slug": "battle-of-pavia",
+    "quote": "The Battle of Pavia was fought in 1525 in northern Italy during the Italian Wars, between the"
+   },
+   {
+    "label": "Duchy of Prussia",
+    "slug": "duchy-of-prussia",
+    "quote": "The Duchy of Prussia was the state created in 1525 when Albert of Brandenburg-Ansbach, the"
+   },
+   {
+    "label": "Twelve Articles",
+    "slug": "twelve-articles",
+    "quote": "demands of the peasants of Upper Swabia, drawn up at Memmingen in March 1525 during the German Peasants' War"
+   },
+   {
+    "label": "Treaty of Kraków",
+    "slug": "treaty-of-krakow",
+    "quote": "The Treaty of Kraków of 8 April 1525 ended the Polish–Teutonic War of 1519–1521"
+   },
+   {
+    "label": "Frankenhausen",
+    "slug": "battle-of-frankenhausen",
+    "quote": "The Battle of Frankenhausen, fought on 15 May 1525 in Thuringia, was one of the decisive defeats of the"
+   },
+   {
+    "label": "Prophezei",
+    "slug": "prophezei",
+    "quote": "The Prophezei was a school of biblical study founded in Zürich in 1525 by Huldrych Zwingli in place of the old"
+   }
+  ]
+ },
+ {
+  "name": "All in 1814",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Treaty of Kiel",
+    "slug": "treaty-of-kiel",
+    "quote": "The Treaty of Kiel was signed on 14 January 1814 by Frederick VI of Denmark-Norway"
+   },
+   {
+    "label": "Convention of Moss",
+    "slug": "convention-of-moss",
+    "quote": "of Moss was the ceasefire agreement signed on 14 August 1814 at Moss, south of Christiania, that"
+   },
+   {
+    "label": "Storting",
+    "slug": "storting",
+    "quote": "is the parliament of Norway, established by the Eidsvoll Constitution of 17 May 1814"
+   },
+   {
+    "label": "Elba",
+    "slug": "elba",
+    "quote": "partly to Spain's State of the Presidi, and Napoleon was exiled there as its sovereign from 1814 to 1815."
+   },
+   {
+    "label": "Treaty of Paris",
+    "slug": "treaty-of-paris-1814",
+    "quote": "The Treaty of Paris of 1814 made peace between France and the"
+   },
+   {
+    "label": "Kingdom of Hanover",
+    "slug": "hanover",
+    "quote": "It was the capital of the Kingdom of Hanover from 1814 until Prussia annexed it in 1866, and"
+   }
+  ]
+ },
+ {
+  "name": "All in 1830",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "July Revolution",
+    "slug": "july-revolution",
+    "quote": "The July Revolution of 1830, also called the Three Glorious Days"
+   },
+   {
+    "label": "Belgian Revolution",
+    "slug": "belgian-revolution",
+    "quote": "The Belgian Revolution was the uprising of 1830–1831 in which the southern provinces of the"
+   },
+   {
+    "label": "November Uprising",
+    "slug": "november-uprising",
+    "quote": "Russian rule in Congress Poland that began in Warsaw on 29 November 1830 with an attack by officer cadets on the"
+   },
+   {
+    "label": "Algiers",
+    "slug": "algiers",
+    "quote": "The French capture of Algiers in 1830 began the conquest of Algeria and the"
+   },
+   {
+    "label": "Greek independence",
+    "slug": "greek-war-of-independence",
+    "quote": "ended with international recognition of an independent Greek state in 1830"
+   },
+   {
+    "label": "Cultivation System",
+    "slug": "cultivation-system",
+    "quote": "The Cultivation System was a policy introduced by the Dutch colonial government in Java from 1830, requiring villagers to devote part of"
+   }
+  ]
+ },
+ {
+  "name": "All in 1859",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "On the Origin of Species",
+    "slug": "on-the-origin-of-species",
+    "quote": "of Species is the book by Charles Darwin, published in London in November 1859, that set out the theory of evolution"
+   },
+   {
+    "label": "On Liberty",
+    "slug": "on-liberty",
+    "quote": "Harriet Taylor Mill and John Stuart Mill, published in 1859 under the latter's name"
+   },
+   {
+    "label": "Liberal Party",
+    "slug": "liberal-party-uk",
+    "quote": "the two major parties of the United Kingdom from its formation in 1859, out of the Whigs, Radicals and"
+   },
+   {
+    "label": "Second Italian War",
+    "slug": "second-italian-war-of-independence",
+    "quote": "The Second Italian War of Independence was fought in 1859 by France and the Kingdom of Sardinia against the Austrian Empire"
+   },
+   {
+    "label": "Villafranca",
+    "slug": "armistice-of-villafranca",
+    "quote": "The Armistice of Villafranca was agreed on 11 July 1859 by Napoleon III and Emperor Franz"
+   },
+   {
+    "label": "Treaty of Zürich",
+    "slug": "treaty-of-zurich",
+    "quote": "The Treaty of Zürich, signed on 10 November 1859 by Austria, France and the Kingdom of"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1478",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Thomas More",
+    "slug": "thomas-more",
+    "quote": "1478–1535"
+   },
+   {
+    "label": "Francisco Pizarro",
+    "slug": "francisco-pizarro",
+    "quote": "c. 1478–1541"
+   },
+   {
+    "label": "Hayreddin Barbarossa",
+    "slug": "hayreddin-barbarossa",
+    "quote": "c. 1478–1546"
+   },
+   {
+    "label": "Philip the Handsome",
+    "slug": "philip-the-handsome",
+    "quote": "1478–1506"
+   },
+   {
+    "label": "Clement VII",
+    "slug": "pope-clement-vii",
+    "quote": "1478–1534"
+   },
+   {
+    "label": "Duke of Buckingham",
+    "slug": "edward-stafford-3rd-duke-of-buckingham",
+    "quote": "1478–1521"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1491",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Henry VIII",
+    "slug": "henry-viii-of-england",
+    "quote": "1491–1547"
+   },
+   {
+    "label": "Ignatius of Loyola",
+    "slug": "ignatius-of-loyola",
+    "quote": "1491–1556"
+   },
+   {
+    "label": "Jacques Cartier",
+    "slug": "jacques-cartier",
+    "quote": "1491–1557"
+   },
+   {
+    "label": "Antonio Pigafetta",
+    "slug": "antonio-pigafetta",
+    "quote": "c. 1491–c. 1531"
+   },
+   {
+    "label": "Martin Bucer",
+    "slug": "martin-bucer",
+    "quote": "1491–1551"
+   },
+   {
+    "label": "Franz von Waldeck",
+    "slug": "franz-von-waldeck",
+    "quote": "1491–1553"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1767",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Joachim Murat",
+    "slug": "joachim-murat",
+    "quote": "1767–1815"
+   },
+   {
+    "label": "John VI of Portugal",
+    "slug": "john-vi-of-portugal",
+    "quote": "1767–1826"
+   },
+   {
+    "label": "Andreas Hofer",
+    "slug": "andreas-hofer",
+    "quote": "1767–1810"
+   },
+   {
+    "label": "Benjamin Constant",
+    "slug": "benjamin-constant",
+    "quote": "1767–1830"
+   },
+   {
+    "label": "Wilhelm von Humboldt",
+    "slug": "wilhelm-von-humboldt",
+    "quote": "1767–1835"
+   },
+   {
+    "label": "Wrede",
+    "slug": "karl-philipp-von-wrede",
+    "quote": "1767–1838"
+   }
+  ],
+  "note": "Andrew Jackson (also 1767) could stand in"
+ },
+ {
+  "name": "Died in 1632",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Gustavus Adolphus",
+    "slug": "gustavus-adolphus",
+    "quote": "War, winning notable victories before being killed at the Battle of Lützen in 1632"
+   },
+   {
+    "label": "Tilly",
+    "slug": "johann-tserclaes-count-of-tilly",
+    "quote": "1559–1632"
+   },
+   {
+    "label": "Frederick V",
+    "slug": "frederick-v-of-the-palatinate",
+    "quote": "1596–1632"
+   },
+   {
+    "label": "Sigismund III",
+    "slug": "sigismund-iii-vasa",
+    "quote": "1566–1632"
+   },
+   {
+    "label": "Pappenheim",
+    "slug": "gottfried-heinrich-graf-zu-pappenheim",
+    "quote": "1594–1632"
+   },
+   {
+    "label": "Tokugawa Hidetada",
+    "slug": "tokugawa-hidetada",
+    "quote": "1579–1632"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1872",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mazzini",
+    "slug": "giuseppe-mazzini",
+    "quote": "1805–1872"
+   },
+   {
+    "label": "Thorbecke",
+    "slug": "johan-rudolf-thorbecke",
+    "quote": "1798–1872"
+   },
+   {
+    "label": "Grillparzer",
+    "slug": "franz-grillparzer",
+    "quote": "1791–1872"
+   },
+   {
+    "label": "Grundtvig",
+    "slug": "n-f-s-grundtvig",
+    "quote": "1783–1872"
+   },
+   {
+    "label": "Ljudevit Gaj",
+    "slug": "ljudevit-gaj",
+    "quote": "1809–1872"
+   },
+   {
+    "label": "Benito Juárez",
+    "slug": "benito-juarez",
+    "quote": "1806–1872"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1881",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Alexander II",
+    "slug": "alexander-ii-of-russia",
+    "quote": "1818–1881"
+   },
+   {
+    "label": "Disraeli",
+    "slug": "benjamin-disraeli",
+    "quote": "1804–1881"
+   },
+   {
+    "label": "Dostoevsky",
+    "slug": "fyodor-dostoevsky",
+    "quote": "1821–1881"
+   },
+   {
+    "label": "Mussorgsky",
+    "slug": "modest-mussorgsky",
+    "quote": "1839–1881"
+   },
+   {
+    "label": "Friedrich Hecker",
+    "slug": "friedrich-hecker",
+    "quote": "1811–1881"
+   },
+   {
+    "label": "Blanqui",
+    "slug": "louis-auguste-blanqui",
+    "quote": "1805–1881"
+   }
+  ]
+ },
+ {
+  "name": "Peace of ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Constance",
+    "slug": "peace-of-constance",
+    "quote": "The Peace of Constance of 1183 ended the long war between the Emperor Frederick Barbarossa and the Lombard League"
+   },
+   {
+    "label": "Caltabellotta",
+    "slug": "peace-of-caltabellotta",
+    "quote": "31 August 1302 at Caltabellotta in Sicily, ended the War of the Sicilian Vespers between the Angevins of Naples and the"
+   },
+   {
+    "label": "Cambrai",
+    "slug": "peace-of-cambrai",
+    "quote": "The Peace of Cambrai, called the Ladies' Peace, was signed on 3 August 1529 between"
+   },
+   {
+    "label": "Cateau-Cambrésis",
+    "slug": "peace-of-cateau-cambresis",
+    "quote": "and England and between France and Spain, ending more than sixty years of Italian Wars"
+   },
+   {
+    "label": "Vervins",
+    "slug": "peace-of-vervins",
+    "quote": "The Peace of Vervins was signed on 2 May 1598 between Henry IV of France and Philip II of Spain, ending the war Spain had waged in"
+   },
+   {
+    "label": "Prague",
+    "slug": "peace-of-prague-1635",
+    "quote": "The Peace of Prague was concluded on 30 May 1635 between Emperor Ferdinand II and Elector John George I of Saxony during the Thirty Years' War, and most"
+   }
+  ],
+  "note": "a peace, not a treaty, in each name; decoy against treaty groups"
+ },
+ {
+  "name": "End in -burg",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Hamburg",
+    "slug": "hamburg",
+    "quote": "Hamburg is a major port city in northern Germany on the River Elbe"
+   },
+   {
+    "label": "Magdeburg",
+    "slug": "magdeburg",
+    "quote": "Magdeburg is a city on the Elbe and the capital of Saxony-Anhalt, Germany"
+   },
+   {
+    "label": "Augsburg",
+    "slug": "augsburg",
+    "quote": "city in Bavaria, southern Germany, and was a free imperial city of the Holy Roman Empire"
+   },
+   {
+    "label": "Brandenburg",
+    "slug": "brandenburg",
+    "quote": "Brandenburg is a historical region of northeastern Germany around Berlin"
+   },
+   {
+    "label": "Salzburg",
+    "slug": "salzburg",
+    "quote": "Salzburg is a city in western Austria on the Salzach river, near the German border"
+   },
+   {
+    "label": "Gothenburg",
+    "slug": "gothenburg",
+    "quote": "Founded by King Gustavus Adolphus in 1621, it gave Sweden an outlet to the North"
+   }
+  ],
+  "note": "-berg decoys: Nuremberg, Wittenberg, Heidelberg"
+ },
+ {
+  "name": "Gave their names to dog breeds",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Pomerania",
+    "slug": "pomerania",
+    "quote": "Pomerania is a historical region on the southern Baltic coast, today divided between Germany and Poland"
+   },
+   {
+    "label": "Dalmatia",
+    "slug": "dalmatia",
+    "quote": "Dalmatia is a historical region along the eastern Adriatic coast, in present-day Croatia"
+   },
+   {
+    "label": "Malta",
+    "slug": "malta",
+    "quote": "Malta is an island country in the central Mediterranean, south of Sicily, made up of Malta"
+   },
+   {
+    "label": "Newfoundland",
+    "slug": "newfoundland",
+    "quote": "Newfoundland is a large island off the east coast of North America"
+   },
+   {
+    "label": "Labrador",
+    "slug": "labrador",
+    "quote": "Labrador is the mainland part of the Canadian province of Newfoundland and Labrador, a"
+   },
+   {
+    "label": "Great St Bernard",
+    "slug": "great-st-bernard-pass",
+    "quote": "The Great St Bernard Pass is an Alpine pass at about 2,470 metres linking the Swiss canton of Valais with"
+   }
+  ],
+  "note": "Pomeranian, Dalmatian, Maltese, Newfoundland, Labrador, St Bernard"
+ },
+ {
+  "name": "Linked to a Christmas Day",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Charlemagne crowned",
+    "slug": "coronation-of-charlemagne",
+    "quote": "The coronation of Charlemagne took place in Rome on Christmas Day 800 CE, when Pope Leo III crowned the Frankish"
+   },
+   {
+    "label": "Westminster Abbey",
+    "slug": "westminster-abbey",
+    "quote": "monarch since William the Conqueror, crowned there on Christmas Day 1066, has been crowned in the abbey, except"
+   },
+   {
+    "label": "Palermo Cathedral",
+    "slug": "palermo-cathedral",
+    "quote": "Roger II was crowned in the earlier building on Christmas Day 1130, and the present cathedral holds the"
+   },
+   {
+    "label": "Santa María",
+    "slug": "santa-maria-ship",
+    "quote": "aground off the north coast of Hispaniola on Christmas Day 1492"
+   },
+   {
+    "label": "Pendulum clock",
+    "slug": "pendulum-clock",
+    "quote": "as its timekeeping element; it was invented on 25 December 1656 by the Dutch scientist Christiaan"
+   },
+   {
+    "label": "Kesselsdorf",
+    "slug": "battle-of-kesselsdorf",
+    "quote": "The defeat forced Saxony and Austria to accept the Peace of Dresden on 25 December, confirming Prussia's possession of Silesia."
+   }
+  ]
+ },
+ {
+  "name": "Sold or pledged",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Orkney",
+    "slug": "orkney",
+    "quote": "Pledged by the Danish-Norwegian crown to Scotland in 1468, it passed to the Scottish crown in 1472."
+   },
+   {
+    "label": "Avignon",
+    "slug": "avignon",
+    "quote": "building the vast Palace of the Popes, and Pope Clement VI bought the city in 1348; it remained papal territory until"
+   },
+   {
+    "label": "Livorno",
+    "slug": "livorno",
+    "quote": "A small village bought by Florence from Genoa in 1421, it was developed by the Medici grand"
+   },
+   {
+    "label": "Nafpaktos",
+    "slug": "nafpaktos",
+    "quote": "naval base in the Peloponnesian War, was sold to Venice in 1407 and taken by the Ottomans in 1499"
+   },
+   {
+    "label": "Dunkirk",
+    "slug": "dunkirk",
+    "quote": "between Spain, France and England until Louis XIV bought it from Charles II of England in 1662"
+   },
+   {
+    "label": "Alaska",
+    "slug": "alaska",
+    "quote": "Russia sold it to the United States in 1867."
+   }
+  ]
+ },
+ {
+  "name": "Married two kings",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Theodelinda",
+    "slug": "theodelinda",
+    "quote": "princess who became queen of the Lombards by marrying King Authari in 589 and, after his death, King Agilulf"
+   },
+   {
+    "label": "Judith of France",
+    "slug": "judith-of-france",
+    "quote": "of the Frankish king Charles the Bald who married two kings of Wessex, Æthelwulf in 856 and then his son Æthelbald"
+   },
+   {
+    "label": "Adelaide of Italy",
+    "slug": "adelaide-of-italy",
+    "quote": "she was imprisoned by Berengar II, and her rescue led to her marriage in 951 to Otto I, with whom she was crowned empress in 962"
+   },
+   {
+    "label": "Emma of Normandy",
+    "slug": "emma-of-normandy",
+    "quote": "of Duke Richard I of Normandy who was twice queen of England, first as wife of Æthelred the Unready"
+   },
+   {
+    "label": "Eleanor of Aquitaine",
+    "slug": "eleanor-of-aquitaine",
+    "quote": "and after the annulment of that marriage she married Henry of Anjou in 1152, bringing Aquitaine into the Angevin Empire"
+   },
+   {
+    "label": "Anne of Brittany",
+    "slug": "anne-of-brittany",
+    "quote": "was duchess of Brittany from 1488 and twice queen of France, through marriage to Charles VIII in"
+   }
+  ]
+ },
+ {
+  "name": "Assemblies of Norse origin",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Althing",
+    "slug": "althing",
+    "quote": "The Althing is the parliament of Iceland, founded around 930 as an open-air general assembly at Þingvellir"
+   },
+   {
+    "label": "Gulating",
+    "slug": "gulating",
+    "quote": "The Gulating was the law assembly of western Norway, which met at Gulen near the mouth of"
+   },
+   {
+    "label": "Frostating",
+    "slug": "frostating",
+    "quote": "The Frostating was the medieval law assembly for Trøndelag in central Norway, meeting on the"
+   },
+   {
+    "label": "Eidsivating",
+    "slug": "eidsivating",
+    "quote": "The Eidsivating was the law assembly (thing) of the inland Upplands of eastern Norway in the Middle Ages"
+   },
+   {
+    "label": "Løgting",
+    "slug": "logting",
+    "quote": "It descends from the Alting, the assembly of free men that met at Tinganes in Tórshavn from the Viking Age and is"
+   },
+   {
+    "label": "Tynwald",
+    "slug": "tynwald",
+    "quote": "is the parliament of the Isle of Man, which descends from the Norse assembly, or thing, of the Kingdom of Mann and the Isles"
+   }
+  ]
+ },
+ {
+  "name": "Risings named after a holy day or prayer hour",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sicilian Vespers",
+    "slug": "sicilian-vespers",
+    "quote": "The Sicilian Vespers was the uprising that began in Palermo at Easter 1282 against the rule of Charles I of Anjou"
+   },
+   {
+    "label": "Matins of Bruges",
+    "slug": "matins-of-bruges",
+    "quote": "The Matins of Bruges was the uprising in Bruges before dawn on 18 May 1302 in which Flemish townsmen led by Pieter"
+   },
+   {
+    "label": "St George's Night",
+    "slug": "st-georges-night-uprising",
+    "quote": "against their German and Danish lords, begun on the night of 23 April 1343"
+   },
+   {
+    "label": "Corpus de Sang",
+    "slug": "corpus-de-sang",
+    "quote": "The Corpus de Sang ('Bloody Corpus') was the riot of 7 June 1640 in Barcelona, when reapers and townspeople, angered"
+   },
+   {
+    "label": "Christmas Rebellion",
+    "slug": "baptist-war",
+    "quote": "The Baptist War, or Christmas Rebellion, was a rising of up to 60,000 enslaved"
+   },
+   {
+    "label": "Easter Rising",
+    "slug": "easter-rising",
+    "quote": "The Easter Rising was an armed insurrection in Dublin in April 1916, launched by Irish republicans of the"
+   }
+  ]
+ },
+ {
+  "name": "Nicknamed after beasts",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Henry the Lion",
+    "slug": "henry-the-lion",
+    "quote": "Henry the Lion was a Welf prince, Duke of Saxony from 1142 and Duke of"
+   },
+   {
+    "label": "Albert the Bear",
+    "slug": "albert-the-bear",
+    "quote": "Albert the Bear was a prince of the Ascanian house who received the Northern March from"
+   },
+   {
+    "label": "William the Lion",
+    "slug": "william-the-lion",
+    "quote": "William the Lion was King of Scots from 1165 to 1214, one of the longest"
+   },
+   {
+    "label": "Richard I",
+    "slug": "richard-i-of-england",
+    "quote": "Richard I of England, known as Richard the Lionheart, was King of England from 1189 to 1199"
+   },
+   {
+    "label": "Louis VIII",
+    "slug": "louis-viii-of-france",
+    "quote": "Louis VIII, called the Lion, was king of France from 1223 to 1226"
+   }
+  ],
+  "note": "five tiles only; Richard and Louis hide their nickname"
+ },
+ {
+  "name": "Treaties signed in palaces",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nonsuch",
+    "slug": "treaty-of-nonsuch",
+    "quote": "The Treaty of Nonsuch was signed on 10 August 1585 at Nonsuch Palace in Surrey between Elizabeth I of"
+   },
+   {
+    "label": "San Ildefonso",
+    "slug": "first-treaty-of-san-ildefonso",
+    "quote": "on 1 October 1777 by Spain and Portugal at the royal palace of La Granja de San Ildefonso, ending their war over the Río de la Plata"
+   },
+   {
+    "label": "Hubertusburg",
+    "slug": "treaty-of-hubertusburg",
+    "quote": "The Treaty of Hubertusburg was signed on 15 February 1763 at a Saxon hunting lodge by Prussia, Austria and Saxony, ending"
+   },
+   {
+    "label": "Schönbrunn",
+    "slug": "treaty-of-schonbrunn",
+    "quote": "The Treaty of Schönbrunn was signed at Schönbrunn Palace in Vienna on 14 October 1809, ending the War of"
+   },
+   {
+    "label": "Valençay",
+    "slug": "treaty-of-valencay",
+    "quote": "of Valençay was signed on 11 December 1813 at the château of Valençay in France, where Napoleon held the"
+   },
+   {
+    "label": "Bardo",
+    "slug": "treaty-of-bardo",
+    "quote": "The Treaty of Bardo was signed on 12 May 1881 at the Ksar Saïd palace near Tunis by Muhammad as-Sadiq Bey, under"
+   }
+  ],
+  "note": "Hubertusburg is a hunting lodge"
+ },
+ {
+  "name": "Died after a hunt",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Favila of Asturias",
+    "slug": "favila-of-asturias",
+    "quote": "According to the Asturian chronicles he was killed by a bear while hunting, after only two years on the throne"
+   },
+   {
+    "label": "Lambert of Italy",
+    "slug": "lambert-of-italy",
+    "quote": "of Friuli and Arnulf of Carinthia, until he died in a hunting accident in 898."
+   },
+   {
+    "label": "Saint Emeric",
+    "slug": "saint-emeric-of-hungary",
+    "quote": "He was killed by a boar while hunting in 1031, which left Stephen without a surviving"
+   },
+   {
+    "label": "William Rufus",
+    "slug": "william-ii-of-england",
+    "quote": "He was killed by an arrow while hunting in the New Forest in 1100 and was succeeded by his"
+   },
+   {
+    "label": "John II Komnenos",
+    "slug": "john-ii-komnenos",
+    "quote": "Admired for his justice and piety, he died after a hunting accident."
+   },
+   {
+    "label": "Fulk of Jerusalem",
+    "slug": "fulk-king-of-jerusalem",
+    "quote": "He died in a hunting accident in 1143."
+   }
+  ]
+ }
+]

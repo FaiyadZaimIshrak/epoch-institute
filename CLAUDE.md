@@ -272,6 +272,10 @@ removed first: /paths was a file until Oct 2026); nothing else in public_html is
 there. css/ is one of DIRS and goes out before the pages, which link it. The script deploys only a clean checkout of a commit (no changed, untracked or ignored deployed files, no CRLF
 from core.autocrlf), stops before sending anything if a listed file or folder is missing, and fails loudly on any
 SSH or rsync error; the workflow then checks that the home page answers.
+Before anything is sent (since 7 Nov 2026) the workflow's `check` job runs on a Windows runner (check-site.ps1 needs
+Windows PowerShell 5.1: System.Web's JSON parser, backslash paths; autocrlf off so css/ compares byte for byte):
+scripts/check-site.ps1 and scripts/tools/crawl-static.js --strict (every rule but stray spacing fails it); the deploy job
+needs it, so a broken build never goes live.
 After deploying, run scripts/ping-indexnow.ps1: it submits the pages the last build changed
 (scripts/changed-urls.txt, written by build-pages.ps1; gitignored) to IndexNow. The key file
 7887eeb120e9bc53cc20304b26431942.txt at the root proves ownership — keep it deployed.
@@ -627,7 +631,13 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   characters, cut where a part or sentence ends (the source link carries the rest). scripts/credit-overrides.tsv
   gives the full Commons text for the 191 cut short at import (`File:<title>` TAB author). Run it after every
   enc-merge (which starts from the originals). build-pages.ps1 and generator.html also decode a credit before
-  escaping it, so an entity can never show twice escaped again.
+  escaping it, so an entity can never show twice escaped again. The crawl of 7 Nov 2026 added rules: "( talk )" and
+  "(Uploads)" with spaces, spaces before commas and inside brackets, the SVG templates' boilerplate ("This W3C-unspecified
+  vector image was created with Inkscape by X ." keeps X), a full stop left alone by a removed link (". Ray in Manila",
+  "coins. ."; never "16..-17..", the BnF's unknown digits); a Commons userbox printed as CSS (".mw-parser-output …")
+  takes the uploader by override. scripts/tools/credit-full.js [--list] looks the credits cut with "..." up again on
+  Commons and appends their full text to credit-overrides.tsv (one request every 2.5 s; Commons answers "You are making
+  too many requests" when other tools read it at the same time: 54 were left for a quieter day).
 - `images/encyclopedia/thumbs/<slug>.jpg`, `images/states/thumbs/<id>.jpg` — 112 px (shorter side) JPEG copies, about
   a quarter of the bytes, for pictures shown at 56 px or less: list tiles (44 px), result thumbnails (.enc-thumb, 56),
   speech portraits on /speeches/ (56), the people chart (28). scripts/make-thumbs.ps1 makes them (only new or changed
@@ -883,6 +893,14 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   [--from=N], which re-checks the whole file (#1-#129 carry 59 faults from before the 30-puzzle rule). Eight agents
   proposed 560 groups by region and era (scripts/conn/b1: p-*.json, edits.json written by make-edits.js); 29 dropped as loose or as another file's theme,
   9 tiles dropped, one level-3 group moved up (the level-4 pool is the one that runs short: propose more hard groups).
+  C1 (7 Nov 2026): #250-#369, to 29 Oct 2027, the same way: eight agents, 76 groups each with 22 at level 4
+  (scripts/conn/c1: p-*.json; c1/make-edits.js writes edits.json: 25 groups dropped, among them the "In X's story" groups
+  (a tile belongs to a story only by the editor's reading), approximate-year groups (546, 587, 509 BCE) and grim ones; 15
+  trimmed: tiles telling one story twice, births dated "c."; 18 pairs kept apart). assemble.js gained --seed=N (shuffles
+  each file's groups first: a proposer writes them by topic, gods after gods) and --spread (no third level-4 group of
+  the same kind in a row: year groups are about two thirds of the level-4 pool); run as `assemble.js 120 out.tsv
+  --edits=scripts/conn/c1/edits.json --seed=2 --spread --write scripts/conn/c1/p-*.json`. Left over: L1 9, L2 17, L3 18,
+  L4 40 (mostly year groups).
 - History Crossword (#cross): a 12 x 12 criss-cross crossword a day for everyone (UTC; #1 = 27 Oct 2026; the puzzles in
   order, repeated after the last), plain clues, 13-17 answers. Tap a square (again to turn), type (keyboard: letters,
   Backspace, arrows, Tab / Shift+Tab to the next clue, Space turns; on touch screens the letters on screen, #cw-kb, so
@@ -939,6 +957,13 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   a speaker's rows spread over the season, a cap of six each, exact repeats and the editor's drop list left out); the
   agents' files and drop.txt are in scripts/quotes/b2/. Translator years a page does not print are left off the credit
   rather than given from memory.
+  C2 (7 Nov 2026): 707 more, to 21 Nov 2027 (1,954 in all), by six agents (Greece and Rome, ancient and classical Asia
+  and the Bible, the medieval world, the early modern world, the 19th century, the Americas and Africa), every quotation
+  read: 13 left out (scripts/quotes/c2/drop.txt: lines about a rape, contempt for a people, a faith or women, a
+  justification of terror, a doubtful date, a display flaw) and 23 credits and notes set right by c2/edit-rows.js (credits
+  the agents gave from memory cut to what the page prints; notes for the parliamentary reconstructions of Walpole's and
+  Pitt's speeches and for Kierkegaard's pseudonym). Jesus, Mary and the prophets speak "as the Gospel records it", as the
+  Hebrew prophets already did.
 
 - Six Degrees (#six, Nov 2026): one puzzle a day (UTC; #1 = 6 Nov 2026): from one entry to another by the gold links of
   each entry's description (the links LinkDesc makes). build-pages.ps1 writes data/sixdeg/<c>.json ({slug: [name, dates,
@@ -949,6 +974,8 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   (SIXD {v, p: [[start, target, shortest, route]], n: names}; SIXD_SRC stamped into /games). games.js SixD: the current
   entry with its links as buttons, Back (the click still counts), Show a route; epoch-games sixd-<n> {p, c, done, gave},
   sixd-streak; stars 3 at the shortest, 2 within two more; Share. Counted on My Passport (13 games) and My Week.
+  Since 7 Nov 2026 make-six-degrees.js deals to 31 October 2027 by default (360 puzzles), in step with Connections (29 Oct
+  2027), the Crossword (365 puzzles, to 26 Oct 2027) and Who Said It? (21 Nov 2027).
 
 ## Kids mode and the Kids corner (/kids)
 - Kids mode is site-wide: html[data-kids="1"], set before first paint by the head snippet from localStorage

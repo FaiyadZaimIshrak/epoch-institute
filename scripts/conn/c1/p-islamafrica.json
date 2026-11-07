@@ -1,0 +1,2877 @@
+[
+ {
+  "name": "Cities on the Nile",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cairo",
+    "slug": "cairo",
+    "quote": "Cairo is a city on the Nile in Egypt, founded in 969 by"
+   },
+   {
+    "label": "Luxor",
+    "slug": "luxor",
+    "quote": "Luxor is a city on the Nile in Upper Egypt, built on the"
+   },
+   {
+    "label": "Giza",
+    "slug": "giza",
+    "quote": "is a city on the west bank of the Nile opposite Cairo, now part of Greater"
+   },
+   {
+    "label": "Thebes",
+    "slug": "thebes",
+    "quote": "Thebes was an ancient city in Upper Egypt on the Nile, the site of present-day Luxor"
+   },
+   {
+    "label": "Memphis",
+    "slug": "memphis-egypt",
+    "quote": "history, founded around 3100 BCE where the Nile valley meets the Delta, south of modern Cairo"
+   },
+   {
+    "label": "Khartoum",
+    "slug": "khartoum",
+    "quote": "capital of Sudan, at the meeting of the Blue and White Niles"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Iraq",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Baghdad",
+    "slug": "baghdad",
+    "quote": "Baghdad is a city on the Tigris in Iraq, founded in 762 by the Abbasid"
+   },
+   {
+    "label": "Basra",
+    "slug": "basra",
+    "quote": "Basra is a port city in southern Iraq, founded around 636 as a garrison"
+   },
+   {
+    "label": "Mosul",
+    "slug": "mosul",
+    "quote": "a city on the Tigris in northern Iraq, opposite the ruins of ancient Nineveh"
+   },
+   {
+    "label": "Kirkuk",
+    "slug": "kirkuk",
+    "quote": "Kirkuk is a city in northern Iraq, east of the Tigris, on the"
+   },
+   {
+    "label": "Najaf",
+    "slug": "najaf",
+    "quote": "Najaf is a city in central Iraq, south of Kufa, built around the"
+   },
+   {
+    "label": "Erbil",
+    "slug": "erbil",
+    "quote": "is the capital of the Kurdistan Region of Iraq"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of the Middle East",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kurds",
+    "slug": "kurds",
+    "quote": "an Iranian-speaking people of the mountainous region of Kurdistan in the Middle East"
+   },
+   {
+    "label": "Persians",
+    "slug": "persians",
+    "quote": "The Persians are an Iranian people whose homeland lay in Pars in"
+   },
+   {
+    "label": "Arabs",
+    "slug": "arabs",
+    "quote": "The Arabs are a people originating in the Arabian Peninsula who speak Arabic"
+   },
+   {
+    "label": "Armenians",
+    "slug": "armenians",
+    "quote": "The Armenians are a people of the Armenian highlands with their own language and Christian"
+   },
+   {
+    "label": "Druze",
+    "slug": "druze",
+    "quote": "The Druze are an Arabic-speaking religious community whose faith arose from Ismaili Islam"
+   },
+   {
+    "label": "Copts",
+    "slug": "copts",
+    "quote": "The Copts are the native Christians of Egypt, whose church traces its origins to"
+   }
+  ]
+ },
+ {
+  "name": "Waters around Turkey",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Black Sea",
+    "slug": "black-sea",
+    "quote": "Sea is an inland sea between southeastern Europe and Anatolia, connected to the Mediterranean through the"
+   },
+   {
+    "label": "Aegean",
+    "slug": "aegean",
+    "quote": "arm of the Mediterranean Sea between Greece and Anatolia, scattered with numerous islands"
+   },
+   {
+    "label": "Marmara",
+    "slug": "sea-of-marmara",
+    "quote": "Marmara, the ancient Propontis, is an inland sea in north-western Turkey linking the Black Sea through the"
+   },
+   {
+    "label": "Bosphorus",
+    "slug": "bosphorus",
+    "quote": "The Bosphorus is a narrow strait in northwestern Turkey connecting the Black Sea to the"
+   },
+   {
+    "label": "Golden Horn",
+    "slug": "golden-horn",
+    "quote": "The Golden Horn is an inlet of the Bosporus in Istanbul that forms a deep natural harbour"
+   },
+   {
+    "label": "Hellespont",
+    "slug": "hellespont",
+    "quote": "known as the Dardanelles, is the narrow strait linking the Aegean Sea to the Sea of Marmara and separating Europe from Asia"
+   }
+  ]
+ },
+ {
+  "name": "Rivers of the Middle East",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tigris",
+    "slug": "tigris",
+    "quote": "flowing from eastern Anatolia south-east through Iraq to join the Euphrates near the"
+   },
+   {
+    "label": "Euphrates",
+    "slug": "euphrates",
+    "quote": "of Mesopotamia, flowing from Anatolia through Syria and Iraq to the Persian Gulf"
+   },
+   {
+    "label": "Orontes",
+    "slug": "orontes-river",
+    "quote": "The Orontes is a river of the northern Levant, flowing north through Lebanon, Syria and"
+   },
+   {
+    "label": "Karun",
+    "slug": "karun-river",
+    "quote": "The Karun River is the largest river in Iran, flowing through Khuzestan into the Shatt"
+   },
+   {
+    "label": "Litani",
+    "slug": "litani-river",
+    "quote": "Litani is the longest river wholly within Lebanon, about 140 kilometres long"
+   },
+   {
+    "label": "Great Zab",
+    "slug": "great-zab",
+    "quote": "mountains of south-eastern Turkey and flowing through Iraqi Kurdistan to join the Tigris south of"
+   }
+  ]
+ },
+ {
+  "name": "Mountains of the Middle East",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Zagros",
+    "slug": "zagros-mountains",
+    "quote": "The Zagros Mountains are a long mountain range in western Iran, stretching from the borders of Turkey"
+   },
+   {
+    "label": "Taurus",
+    "slug": "taurus-mountains",
+    "quote": "The Taurus Mountains are a mountain range in southern Anatolia, separating the Anatolian plateau from the"
+   },
+   {
+    "label": "Ararat",
+    "slug": "mount-ararat",
+    "quote": "Mount Ararat is a high volcanic mountain in eastern Anatolia, near the borders of present-day Turkey"
+   },
+   {
+    "label": "Damavand",
+    "slug": "mount-damavand",
+    "quote": "about 5,610 metres high and the highest peak in Iran"
+   },
+   {
+    "label": "Alborz",
+    "slug": "alborz",
+    "quote": "The Alborz is a mountain range in northern Iran, running along the southern side of"
+   },
+   {
+    "label": "Sinai",
+    "slug": "mount-sinai",
+    "quote": "mountain of about 2,285 metres in the south of the Sinai Peninsula in Egypt, traditionally identified as the biblical mountain"
+   }
+  ]
+ },
+ {
+  "name": "Family of the Prophet Muhammad",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fatima",
+    "slug": "fatima",
+    "quote": "Fatima was the daughter of the Prophet Muhammad and wife of Ali"
+   },
+   {
+    "label": "Aisha",
+    "slug": "aisha",
+    "quote": "Aisha bint Abi Bakr was a wife of the Prophet Muhammad and daughter of the first caliph"
+   },
+   {
+    "label": "Ali",
+    "slug": "ali-ibn-abi-talib",
+    "quote": "Ali ibn Abi Talib was the cousin and son-in-law of the Prophet Muhammad and the fourth caliph of the"
+   },
+   {
+    "label": "Hasan",
+    "slug": "hasan-ibn-ali",
+    "quote": "Hasan ibn Ali was a grandson of the Prophet Muhammad and the elder son of Ali"
+   },
+   {
+    "label": "Husayn",
+    "slug": "husayn-ibn-ali",
+    "quote": "Husayn ibn Ali was a grandson of the Prophet Muhammad and the son of Ali, the"
+   },
+   {
+    "label": "Banu Hashim",
+    "slug": "banu-hashim",
+    "quote": "after Hashim ibn Abd Manaf, the great-grandfather of the Prophet Muhammad"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of East Africa and the Horn",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Somalis",
+    "slug": "somalis",
+    "quote": "The Somalis are a Cushitic-speaking people of the Horn of Africa, predominantly Muslim"
+   },
+   {
+    "label": "Oromo",
+    "slug": "oromo",
+    "quote": "The Oromo are a Cushitic-speaking people of the Horn of Africa, today one of the largest ethnic"
+   },
+   {
+    "label": "Afar",
+    "slug": "afar",
+    "quote": "The Afar are a Cushitic-speaking people of the Horn of Africa, living mainly in the arid lowlands"
+   },
+   {
+    "label": "Baganda",
+    "slug": "baganda",
+    "quote": "The Baganda, or Ganda, are a Bantu-speaking people of central Uganda, the country's largest ethnic group, whose"
+   },
+   {
+    "label": "Kikuyu",
+    "slug": "kikuyu-people",
+    "quote": "The Kikuyu are a Bantu-speaking people of central Kenya, living around Mount Kenya, and the"
+   },
+   {
+    "label": "Maasai",
+    "slug": "maasai-people",
+    "quote": "The Maasai are a Nilotic people of southern Kenya and northern Tanzania who speak Maa"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Tunisia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tunis",
+    "slug": "tunis",
+    "quote": "Tunis is the capital of Tunisia, located near the site of ancient"
+   },
+   {
+    "label": "Kairouan",
+    "slug": "kairouan",
+    "quote": "Kairouan is a city in present-day Tunisia, founded in the seventh century as"
+   },
+   {
+    "label": "Sfax",
+    "slug": "sfax",
+    "quote": "on the Gulf of Gabès in eastern Tunisia and the country's second-largest city"
+   },
+   {
+    "label": "Sousse",
+    "slug": "sousse",
+    "quote": "Sousse is a city on the eastern coast of Tunisia, founded by Phoenicians as Hadrumetum and"
+   },
+   {
+    "label": "Mahdia",
+    "slug": "mahdia",
+    "quote": "Mahdia is a port city on the east coast of Tunisia, built on a narrow peninsula"
+   },
+   {
+    "label": "Carthage",
+    "slug": "carthage",
+    "quote": "was a Phoenician city founded on the coast of present-day Tunisia, traditionally in the ninth century BCE"
+   }
+  ]
+ },
+ {
+  "name": "Capitals of Arab countries",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Damascus",
+    "slug": "damascus",
+    "quote": "inhabited cities in the world, now the capital of Syria"
+   },
+   {
+    "label": "Beirut",
+    "slug": "beirut",
+    "quote": "on the eastern Mediterranean coast, now the capital of Lebanon"
+   },
+   {
+    "label": "Amman",
+    "slug": "amman",
+    "quote": "Amman is the capital and largest city of Jordan"
+   },
+   {
+    "label": "Algiers",
+    "slug": "algiers",
+    "quote": "Algiers is the capital of Algeria and a major Mediterranean port"
+   },
+   {
+    "label": "Riyadh",
+    "slug": "riyadh",
+    "quote": "Riyadh is the capital and largest city of Saudi Arabia, in the Najd region of central"
+   },
+   {
+    "label": "Khartoum",
+    "slug": "khartoum",
+    "quote": "Khartoum is the capital of Sudan, at the meeting of the Blue"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Yemen",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Marib",
+    "slug": "marib",
+    "quote": "Marib is a town in central Yemen on the edge of the Ramlat"
+   },
+   {
+    "label": "Aden",
+    "slug": "aden",
+    "quote": "Aden is a port city in southern Yemen, built in the crater of an"
+   },
+   {
+    "label": "Sana'a",
+    "slug": "sanaa",
+    "quote": "Sana'a is an ancient city in the highlands of Yemen and an important centre of South"
+   },
+   {
+    "label": "Shibam",
+    "slug": "shibam",
+    "quote": "Shibam is a walled town in the Wadi Hadramawt of eastern Yemen, famous for its densely packed mud-brick"
+   },
+   {
+    "label": "Zabid",
+    "slug": "zabid",
+    "quote": "the Tihama coastal plain of western Yemen, founded around 820 by Muhammad ibn"
+   },
+   {
+    "label": "Taiz",
+    "slug": "taiz",
+    "quote": "Taiz is a city in the southern highlands of Yemen, at the foot of Mount Sabir"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Mali",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Timbuktu",
+    "slug": "timbuktu",
+    "quote": "city near the Niger River in present-day Mali, at the southern edge of the"
+   },
+   {
+    "label": "Gao",
+    "slug": "gao",
+    "quote": "Gao is a city on the Niger River in present-day Mali"
+   },
+   {
+    "label": "Djenné",
+    "slug": "djenne",
+    "quote": "in the inland Niger Delta of present-day Mali, famous for its mud-brick Great Mosque"
+   },
+   {
+    "label": "Bamako",
+    "slug": "bamako",
+    "quote": "Bamako is the capital and largest city of Mali, on the Niger River in the"
+   },
+   {
+    "label": "Ségou",
+    "slug": "segou",
+    "quote": "Ségou is a city on the Niger in southern Mali, north-east of Bamako"
+   },
+   {
+    "label": "Kidal",
+    "slug": "kidal",
+    "quote": "Kidal is a town in north-eastern Mali, in the Adrar des Ifoghas mountains"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Ghana",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kumasi",
+    "slug": "kumasi",
+    "quote": "Kumasi is a city in present-day Ghana and was the capital of the"
+   },
+   {
+    "label": "Accra",
+    "slug": "accra",
+    "quote": "Accra is the capital of Ghana, on the Gulf of Guinea"
+   },
+   {
+    "label": "Elmina",
+    "slug": "elmina",
+    "quote": "Elmina is a town on the coast of present-day Ghana, site of São Jorge da Mina"
+   },
+   {
+    "label": "Cape Coast",
+    "slug": "cape-coast",
+    "quote": "Cape Coast is a port town on the coast of present-day Ghana, in the lands of the Akan"
+   },
+   {
+    "label": "Tamale",
+    "slug": "tamale",
+    "quote": "Northern Region of Ghana and the largest city of northern Ghana"
+   },
+   {
+    "label": "Salaga",
+    "slug": "salaga",
+    "quote": "in the Savannah Region of northern Ghana, in the kingdom of Gonja"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Sudan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Omdurman",
+    "slug": "omdurman",
+    "quote": "west bank of the Nile opposite Khartoum, part of Sudan's largest urban area"
+   },
+   {
+    "label": "Suakin",
+    "slug": "suakin",
+    "quote": "Suakin is a port town on the Red Sea coast of Sudan, built largely on a small coral"
+   },
+   {
+    "label": "El Fasher",
+    "slug": "el-fasher",
+    "quote": "El Fasher is a city in western Sudan that became the capital of the"
+   },
+   {
+    "label": "Kerma",
+    "slug": "kerma",
+    "quote": "archaeological site and ancient city in northern Sudan, the centre of a major Nubian"
+   },
+   {
+    "label": "Merowe",
+    "slug": "merowe-sudan",
+    "quote": "Merowe is a town on the Nile in northern Sudan, near the fourth cataract and the"
+   },
+   {
+    "label": "El Geneina",
+    "slug": "el-geneina",
+    "quote": "El Geneina is a city in western Sudan, the capital of West Darfur state"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Lebanon",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tyre",
+    "slug": "tyre",
+    "quote": "city on the coast of southern Lebanon, once an island stronghold and a"
+   },
+   {
+    "label": "Sidon",
+    "slug": "sidon",
+    "quote": "on the Mediterranean coast of southern Lebanon, about 40 km south of Beirut"
+   },
+   {
+    "label": "Byblos",
+    "slug": "byblos",
+    "quote": "Byblos is an ancient port city on the coast of Lebanon, north of Beirut, known in Arabic"
+   },
+   {
+    "label": "Beirut",
+    "slug": "beirut",
+    "quote": "on the eastern Mediterranean coast, now the capital of Lebanon"
+   },
+   {
+    "label": "Baalbek",
+    "slug": "baalbek",
+    "quote": "Baalbek is a town in the Beqaa valley of Lebanon, known in antiquity as Heliopolis"
+   },
+   {
+    "label": "Deir al-Qamar",
+    "slug": "deir-al-qamar",
+    "quote": "Deir al-Qamar is a town in the Chouf mountains of Lebanon, south-east of Beirut"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of Nigeria",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yoruba",
+    "slug": "yoruba",
+    "quote": "major West African people of south-western Nigeria and neighbouring Benin, with a long"
+   },
+   {
+    "label": "Igbo",
+    "slug": "igbo-people",
+    "quote": "of Africa, living mainly in south-eastern Nigeria and speaking the Igbo language"
+   },
+   {
+    "label": "Hausa",
+    "slug": "hausa",
+    "quote": "The Hausa are a people of northern Nigeria and southern Niger, whose city-states such"
+   },
+   {
+    "label": "Edo",
+    "slug": "edo-people",
+    "quote": "also called the Bini, are an ethnic group of southern Nigeria"
+   },
+   {
+    "label": "Ijaw",
+    "slug": "ijaw-people",
+    "quote": "The Ijaw are a people of the Niger delta in southern Nigeria, living mostly in Bayelsa, Rivers and"
+   },
+   {
+    "label": "Ibibio",
+    "slug": "ibibio-people",
+    "quote": "The Ibibio are a people of south-eastern Nigeria, living mainly in Akwa Ibom State"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Libya",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tripoli",
+    "slug": "tripoli",
+    "quote": "Tripoli is a port city on the Mediterranean coast of Libya and historically a major northern terminus"
+   },
+   {
+    "label": "Tobruk",
+    "slug": "tobruk",
+    "quote": "Tobruk is a port city in Cyrenaica in eastern Libya"
+   },
+   {
+    "label": "Sabratha",
+    "slug": "sabratha",
+    "quote": "Sabratha was an ancient city on the coast of western Libya, founded as a Phoenician trading post"
+   },
+   {
+    "label": "Ghadames",
+    "slug": "ghadames",
+    "quote": "Ghadames is an oasis town in western Libya near the borders of Tunisia and"
+   },
+   {
+    "label": "Ghat",
+    "slug": "ghat",
+    "quote": "Ghat is an oasis town in south-western Libya, near the Algerian border"
+   },
+   {
+    "label": "Awjila",
+    "slug": "awjila",
+    "quote": "Awjila is an oasis town in the Libyan Desert of eastern Libya, some 250 km inland from the"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Tanzania",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Dar es Salaam",
+    "slug": "dar-es-salaam",
+    "quote": "Dar es Salaam is the largest city and chief port of Tanzania, on the Indian Ocean coast"
+   },
+   {
+    "label": "Arusha",
+    "slug": "arusha",
+    "quote": "Arusha is a city in northern Tanzania at the foot of Mount Meru"
+   },
+   {
+    "label": "Morogoro",
+    "slug": "morogoro",
+    "quote": "Morogoro is a city in eastern Tanzania at the foot of the Uluguru"
+   },
+   {
+    "label": "Tabora",
+    "slug": "tabora",
+    "quote": "Tabora is a city in west-central Tanzania, in the land of the Nyamwezi"
+   },
+   {
+    "label": "Ujiji",
+    "slug": "ujiji",
+    "quote": "shore of Lake Tanganyika in western Tanzania, one of the oldest market towns"
+   },
+   {
+    "label": "Songea",
+    "slug": "songea",
+    "quote": "Songea is a town in southern Tanzania and the capital of Ruvuma Region"
+   }
+  ]
+ },
+ {
+  "name": "Landmarks of Cairo",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "al-Azhar",
+    "slug": "al-azhar",
+    "quote": "Al-Azhar is a mosque in Cairo begun in 970 under the Fatimid"
+   },
+   {
+    "label": "Ibn Tulun",
+    "slug": "mosque-of-ibn-tulun",
+    "quote": "Mosque of Ibn Tulun is a congregational mosque in Cairo, built by Ahmad ibn Tulun for"
+   },
+   {
+    "label": "Bab Zuwayla",
+    "slug": "bab-zuwayla",
+    "quote": "Bab Zuwayla is the southern gate of Fatimid Cairo, built in the late eleventh century"
+   },
+   {
+    "label": "Bab al-Futuh",
+    "slug": "bab-al-futuh",
+    "quote": "the monumental gates in the northern wall of Fatimid Cairo, built in the late eleventh"
+   },
+   {
+    "label": "The Citadel",
+    "slug": "cairo-citadel",
+    "quote": "The Cairo Citadel is a medieval Islamic fortress on the Muqattam hills in Cairo"
+   },
+   {
+    "label": "Abdeen Palace",
+    "slug": "abdeen-palace",
+    "quote": "Abdeen Palace is a royal palace in central Cairo, built for Khedive Ismail and completed"
+   }
+  ]
+ },
+ {
+  "name": "Landmarks of Marrakesh and Fez",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Koutoubia",
+    "slug": "koutoubia-mosque",
+    "quote": "The Koutoubia Mosque is the principal mosque of Marrakesh, built under the Almohad Caliphate in"
+   },
+   {
+    "label": "Saadian Tombs",
+    "slug": "saadian-tombs",
+    "quote": "beside the Kasbah Mosque in Marrakesh"
+   },
+   {
+    "label": "El Badi",
+    "slug": "el-badi-palace",
+    "quote": "The El Badi Palace is a ruined palace in Marrakesh built by the Saadi sultan Ahmad"
+   },
+   {
+    "label": "Qarawiyyin",
+    "slug": "qarawiyyin-mosque",
+    "quote": "The Qarawiyyin Mosque is a mosque and centre of learning in Fez, Morocco, founded in 857 or 859"
+   },
+   {
+    "label": "Bou Inania",
+    "slug": "bou-inania-madrasa-fez",
+    "quote": "The Bou Inania Madrasa in Fez, Morocco, was built between 1350 and 1355"
+   },
+   {
+    "label": "Ben Youssef",
+    "slug": "ben-youssef-madrasa",
+    "quote": "Madrasa is an Islamic college in the medina of Marrakesh, founded in the fourteenth century under"
+   }
+  ]
+ },
+ {
+  "name": "Nasrid Granada",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alhambra",
+    "slug": "alhambra",
+    "quote": "complex on the Sabika hill above Granada, in southern Spain"
+   },
+   {
+    "label": "Generalife",
+    "slug": "generalife",
+    "quote": "The Generalife is the summer palace and garden estate of the Nasrid emirs of Granada, on the hill beside"
+   },
+   {
+    "label": "Albaicín",
+    "slug": "albaicin",
+    "quote": "The Albaicín is the old Moorish quarter of Granada, Spain, on a hill facing the"
+   },
+   {
+    "label": "Comares Palace",
+    "slug": "comares-palace",
+    "quote": "is the official part of the Nasrid palaces of the Alhambra in Granada, built mainly under Yusuf"
+   },
+   {
+    "label": "Abencerrajes",
+    "slug": "abencerrajes",
+    "quote": "The Abencerrajes (Banu Sarraj) were a noble family of the Nasrid Emirate of Granada who were influential"
+   },
+   {
+    "label": "Ibn al-Ahmar",
+    "slug": "muhammad-i-of-granada",
+    "quote": "known as Ibn al-Ahmar, was the founder of the Nasrid dynasty and the Emirate of Granada"
+   },
+   {
+    "label": "Ibn al-Khatib",
+    "slug": "ibn-al-khatib",
+    "quote": "a poet, historian, physician and vizier of the Nasrid Emirate of Granada under Yusuf"
+   }
+  ]
+ },
+ {
+  "name": "The Asante kingdom",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Golden Stool",
+    "slug": "golden-stool",
+    "quote": "The Golden Stool is the sacred royal throne and symbol of the Ashanti Empire, believed to contain the soul"
+   },
+   {
+    "label": "Asantehene",
+    "slug": "asantehene",
+    "quote": "The Asantehene is the title of the king of the Asante, the ruler of the Ashanti Empire"
+   },
+   {
+    "label": "Okomfo Anokye",
+    "slug": "okomfo-anokye",
+    "quote": "priest who, with Osei Tutu, founded the Ashanti Empire around 1700"
+   },
+   {
+    "label": "Osei Tutu",
+    "slug": "osei-tutu-i",
+    "quote": "was the founder of the Ashanti Empire, uniting the Akan chiefdoms of"
+   },
+   {
+    "label": "Prempeh I",
+    "slug": "prempeh-i",
+    "quote": "I was the Asantehene, or ruler of the Ashanti Empire, at the end of the nineteenth"
+   },
+   {
+    "label": "War of the Golden Stool",
+    "slug": "war-of-the-golden-stool",
+    "quote": "of the Golden Stool was an Ashanti uprising against British rule in 1900, also known as the"
+   }
+  ]
+ },
+ {
+  "name": "The Mali Empire",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sundiata",
+    "slug": "sundiata-keita",
+    "quote": "Sundiata Keita was the founder of the Mali Empire, who died c"
+   },
+   {
+    "label": "Mansa Musa",
+    "slug": "mansa-musa",
+    "quote": "Mansa Musa was ruler of the Mali Empire from 1312 to 1337, under whom"
+   },
+   {
+    "label": "Kouroukan Fouga",
+    "slug": "kouroukan-fouga",
+    "quote": "The Kouroukan Fouga is the founding charter traditionally attributed to the assembly convened"
+   },
+   {
+    "label": "Kirina",
+    "slug": "battle-of-kirina",
+    "quote": "victory is traditionally regarded as the foundation of the Mali Empire"
+   },
+   {
+    "label": "Mansa Sulayman",
+    "slug": "mansa-sulayman",
+    "quote": "Mansa Sulayman was ruler of the Mali Empire from about 1341 to 1360, the"
+   },
+   {
+    "label": "Kangaba",
+    "slug": "kangaba",
+    "quote": "upper Niger in present-day Mali, the original heartland of the Keita dynasty"
+   }
+  ]
+ },
+ {
+  "name": "Orishas of the Yoruba",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shango",
+    "slug": "shango",
+    "quote": "Shango is the orisha of fire, thunder, lightning, drumming, dance, strength and justice in"
+   },
+   {
+    "label": "Ogun",
+    "slug": "ogun",
+    "quote": "Ogun is the deity of iron, metalworking and war in the traditional religions of several"
+   },
+   {
+    "label": "Oshun",
+    "slug": "oshun",
+    "quote": "Oshun is the orisha of love, fertility, water, divination, wealth and beauty in the"
+   },
+   {
+    "label": "Yemoja",
+    "slug": "yemoja",
+    "quote": "Yemọja is a major water deity of the Yoruba religion, the patron spirit of rivers, above"
+   },
+   {
+    "label": "Eshu",
+    "slug": "eshu",
+    "quote": "Eshu is the orisha of trickery, chance, crossroads, judgement and languages in the Yoruba"
+   },
+   {
+    "label": "Obatala",
+    "slug": "obatala",
+    "quote": "White Cloth, also called Oriṣanla, the Great Orisha, is the king of the orishas"
+   },
+   {
+    "label": "Olorun",
+    "slug": "olorun",
+    "quote": "Olorun, also called Olodumare, is the supreme being of the Yoruba religion and of related religions, the ruler"
+   }
+  ]
+ },
+ {
+  "name": "The Mahdist war in Sudan",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Muhammad Ahmad",
+    "slug": "muhammad-ahmad",
+    "quote": "Sufi teacher who in 1881 declared himself the Mahdi and led a revolt"
+   },
+   {
+    "label": "The Khalifa",
+    "slug": "abdallahi-ibn-muhammad",
+    "quote": "known as the Khalifa, was ruler of the Mahdist State in Sudan from 1885 to"
+   },
+   {
+    "label": "Ansar",
+    "slug": "ansar-sudan",
+    "quote": "The Ansar ('helpers') were the followers of Muhammad Ahmad, the Mahdi of Sudan, who rose"
+   },
+   {
+    "label": "Aba Island",
+    "slug": "aba-island",
+    "quote": "teacher Muhammad Ahmad, living there, declared himself the Mahdi and defeated the first government force"
+   },
+   {
+    "label": "Shaykan",
+    "slug": "battle-of-shaykan",
+    "quote": "The Mahdi's Ansar surrounded and destroyed an Egyptian army under"
+   },
+   {
+    "label": "Gordon",
+    "slug": "charles-george-gordon",
+    "quote": "back in 1884 to evacuate Khartoum, he was besieged by the Mahdist"
+   },
+   {
+    "label": "Kitchener",
+    "slug": "herbert-kitchener",
+    "quote": "British army officer who, as Sirdar of the Egyptian army, led the reconquest of Sudan"
+   }
+  ]
+ },
+ {
+  "name": "The Algerian War",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "FLN",
+    "slug": "national-liberation-front-algeria",
+    "quote": "National Liberation Front (FLN) is an Algerian nationalist party founded in 1954"
+   },
+   {
+    "label": "Évian Accords",
+    "slug": "evian-accords",
+    "quote": "Évian Accords were the agreements signed in 1962 between France and the Algerian National Liberation Front, ending the"
+   },
+   {
+    "label": "Battle of Algiers",
+    "slug": "battle-of-algiers",
+    "quote": "was the campaign of 1956–1957 in which the FLN waged a bombing and assassination offensive in"
+   },
+   {
+    "label": "Morice Line",
+    "slug": "morice-line",
+    "quote": "The Morice Line was a fortified barrier built by France from 1956 along Algeria's border with"
+   },
+   {
+    "label": "Massu",
+    "slug": "jacques-massu",
+    "quote": "was given police powers in Algiers in 1957 and broke the FLN"
+   },
+   {
+    "label": "ALN",
+    "slug": "national-liberation-army-algeria",
+    "quote": "National Liberation Army (ALN) was the armed wing of the Algerian FLN during the war of independence of"
+   }
+  ]
+ },
+ {
+  "name": "The Arab Revolt",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sharif Hussein",
+    "slug": "hussein-bin-ali-king-of-hejaz",
+    "quote": "Encouraged by the Hussein–McMahon correspondence, he launched the Arab Revolt in June 1916 and proclaimed himself King of the"
+   },
+   {
+    "label": "Faisal I",
+    "slug": "faisal-i-of-iraq",
+    "quote": "Sharif Hussein of Mecca and a commander of the Arab Revolt against the Ottomans"
+   },
+   {
+    "label": "Abdullah I",
+    "slug": "abdullah-i-of-jordan",
+    "quote": "Sharif Hussein of Mecca, was a leader of the Arab Revolt and became emir of Transjordan under"
+   },
+   {
+    "label": "T. E. Lawrence",
+    "slug": "t-e-lawrence",
+    "quote": "a liaison officer with the Arab Revolt against the Ottoman Empire, which"
+   },
+   {
+    "label": "McMahon letters",
+    "slug": "mcmahon-hussein-correspondence",
+    "quote": "The McMahon–Hussein Correspondence was an exchange of letters in 1915–1916 between Sir Henry McMahon, British High"
+   },
+   {
+    "label": "Sultan al-Atrash",
+    "slug": "sultan-al-atrash",
+    "quote": "He fought in the Arab Revolt against the Ottomans and in 1925"
+   },
+   {
+    "label": "Nuri al-Said",
+    "slug": "nuri-al-said",
+    "quote": "A veteran of the Arab Revolt, he favoured close ties with Britain"
+   }
+  ]
+ },
+ {
+  "name": "Fought the Crusaders",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Saladin",
+    "slug": "saladin",
+    "quote": "of Hattin in 1187 and recapture of Jerusalem made him a celebrated figure, though"
+   },
+   {
+    "label": "Nur al-Din",
+    "slug": "nur-al-din",
+    "quote": "and led opposition to the Crusader states"
+   },
+   {
+    "label": "Zengi",
+    "slug": "imad-al-din-zengi",
+    "quote": "dynasty, and in 1144 captured Edessa, destroying the first of the crusader"
+   },
+   {
+    "label": "Baybars",
+    "slug": "baybars",
+    "quote": "the Ilkhanate and capturing many Crusader strongholds"
+   },
+   {
+    "label": "Kilij Arslan I",
+    "slug": "kilij-arslan-i",
+    "quote": "He destroyed the People's Crusade in 1096 but lost his capital"
+   },
+   {
+    "label": "Qalawun",
+    "slug": "qalawun",
+    "quote": "work of Baybars against the Crusader states and the Mongols"
+   }
+  ]
+ },
+ {
+  "name": "Ports of the Red Sea",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jeddah",
+    "slug": "jeddah",
+    "quote": "Jeddah is a port city on the Red Sea coast of the Hejaz in Saudi Arabia"
+   },
+   {
+    "label": "Massawa",
+    "slug": "massawa",
+    "quote": "Massawa is a port city on the Red Sea coast of present-day Eritrea"
+   },
+   {
+    "label": "Adulis",
+    "slug": "adulis",
+    "quote": "Adulis was an ancient port on the Red Sea coast of present-day Eritrea"
+   },
+   {
+    "label": "Berenice",
+    "slug": "berenice-troglodytica",
+    "quote": "Berenice Troglodytica, or Berenike, was a port on the Red Sea coast of Egypt"
+   },
+   {
+    "label": "Hodeidah",
+    "slug": "hodeidah",
+    "quote": "Hodeidah is a port city on the Red Sea coast of Yemen, in the coastal plain of the"
+   },
+   {
+    "label": "Suakin",
+    "slug": "suakin",
+    "quote": "Suakin is a port town on the Red Sea coast of Sudan, built largely on a small coral"
+   }
+  ]
+ },
+ {
+  "name": "Umayyad caliphs of Damascus",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Muawiya I",
+    "slug": "muawiya-i",
+    "quote": "Muawiya I was the founder of the Umayyad Caliphate, ruling from 661 to 680"
+   },
+   {
+    "label": "Yazid I",
+    "slug": "yazid-i",
+    "quote": "Yazid I was the second Umayyad caliph, reigning from 680 to 683, the"
+   },
+   {
+    "label": "Abd al-Malik",
+    "slug": "abd-al-malik-ibn-marwan",
+    "quote": "Abd al-Malik ibn Marwan was an Umayyad caliph who reigned from 685 to 705"
+   },
+   {
+    "label": "al-Walid I",
+    "slug": "al-walid-i",
+    "quote": "Al-Walid I was an Umayyad caliph who reigned from 705 to 715"
+   },
+   {
+    "label": "Umar II",
+    "slug": "umar-ibn-abd-al-aziz",
+    "quote": "known as Umar II, was the Umayyad caliph from 717 to 720"
+   },
+   {
+    "label": "Marwan II",
+    "slug": "marwan-ii",
+    "quote": "Marwan II was the last Umayyad caliph, reigning from 744 until his death"
+   }
+  ]
+ },
+ {
+  "name": "Physicians of the Islamic world",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Avicenna",
+    "slug": "avicenna",
+    "quote": "Avicenna, Ibn Sina, was a Persian philosopher and physician born near Bukhara under the Samanids"
+   },
+   {
+    "label": "al-Zahrawi",
+    "slug": "al-zahrawi",
+    "quote": "known in Latin as Abulcasis, was a physician of al-Andalus who worked at Córdoba and is"
+   },
+   {
+    "label": "Maimonides",
+    "slug": "maimonides",
+    "quote": "Jewish philosopher, legal scholar and physician born in Cordoba in the twelfth"
+   },
+   {
+    "label": "Rashid al-Din",
+    "slug": "rashid-al-din-hamadani",
+    "quote": "Rashid al-Din Hamadani was a Persian physician, statesman and historian who served as"
+   },
+   {
+    "label": "Ibn Tufayl",
+    "slug": "ibn-tufayl",
+    "quote": "Ibn Tufayl was an Andalusian philosopher, physician and court official of the Almohad"
+   },
+   {
+    "label": "Hunayn ibn Ishaq",
+    "slug": "hunayn-ibn-ishaq",
+    "quote": "Arab Nestorian Christian translator and physician of the Abbasid period, his era's"
+   }
+  ]
+ },
+ {
+  "name": "Travellers and geographers of the Islamic world",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ibn Battuta",
+    "slug": "ibn-battuta",
+    "quote": "Ibn Battuta was a fourteenth-century Moroccan traveller whose account of his journeys across"
+   },
+   {
+    "label": "Ibn Fadlan",
+    "slug": "ahmad-ibn-fadlan",
+    "quote": "ibn Fadlan was an Arab member of the embassy sent by the Abbasid caliph al-Muqtadir to the king of the"
+   },
+   {
+    "label": "al-Idrisi",
+    "slug": "muhammad-al-idrisi",
+    "quote": "Muhammad al-Idrisi was an Arab geographer and cartographer, born probably in Ceuta"
+   },
+   {
+    "label": "Leo Africanus",
+    "slug": "leo-africanus",
+    "quote": "Leo Africanus was a Moroccan-born traveller and writer who visited West Africa in the"
+   },
+   {
+    "label": "Evliya Çelebi",
+    "slug": "evliya-celebi",
+    "quote": "Evliya Çelebi was an Ottoman traveller and writer from Istanbul who spent some forty"
+   },
+   {
+    "label": "Ibn Hawqal",
+    "slug": "ibn-hawqal",
+    "quote": "Ibn Hawqal was a tenth-century Arab geographer and traveller"
+   },
+   {
+    "label": "al-Masudi",
+    "slug": "al-masudi",
+    "quote": "Al-Masudi was an Arab historian and geographer from Baghdad, often called the Herodotus"
+   }
+  ]
+ },
+ {
+  "name": "Liberation movements of Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "ANC",
+    "slug": "african-national-congress",
+    "quote": "It led opposition to apartheid, was banned in 1960 and turned"
+   },
+   {
+    "label": "FRELIMO",
+    "slug": "frelimo",
+    "quote": "FRELIMO, the Mozambique Liberation Front, was founded in Dar es Salaam"
+   },
+   {
+    "label": "MPLA",
+    "slug": "mpla",
+    "quote": "founded in the 1950s, which fought Portuguese rule from 1961 under Agostinho Neto"
+   },
+   {
+    "label": "SWAPO",
+    "slug": "swapo",
+    "quote": "West Africa People's Organisation, is the Namibian liberation movement founded in 1960"
+   },
+   {
+    "label": "PAIGC",
+    "slug": "paigc",
+    "quote": "The African Party for the Independence of Guinea and Cape Verde (PAIGC) was founded in 1956 by"
+   },
+   {
+    "label": "TANU",
+    "slug": "tanganyika-african-national-union",
+    "quote": "African National Union (TANU) was the nationalist party that led Tanganyika to independence in"
+   },
+   {
+    "label": "CPP",
+    "slug": "convention-peoples-party",
+    "quote": "of 1951, 1954 and 1956, led the Gold Coast to independence as Ghana in 1957 and became the only legal party"
+   }
+  ]
+ },
+ {
+  "name": "Turkey's war of independence",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Atatürk",
+    "slug": "mustafa-kemal-ataturk",
+    "quote": "an Ottoman army officer who led the Turkish national movement after the First World"
+   },
+   {
+    "label": "İnönü",
+    "slug": "ismet-inonu",
+    "quote": "general and statesman, Mustafa Kemal Atatürk's closest ally. He won the battles of İnönü against"
+   },
+   {
+    "label": "Sakarya",
+    "slug": "battle-of-sakarya",
+    "quote": "The Turkish nationalist army under Mustafa Kemal halted the Greek advance on Ankara"
+   },
+   {
+    "label": "Dumlupınar",
+    "slug": "battle-of-dumlupinar",
+    "quote": "In the Great Offensive, Turkish forces under Mustafa Kemal broke the Greek lines near Afyonkarahisar"
+   },
+   {
+    "label": "Lausanne",
+    "slug": "treaty-of-lausanne",
+    "quote": "conflict between the Allies and the Turkish nationalist government, replacing the Treaty of Sèvres"
+   },
+   {
+    "label": "Erzurum",
+    "slug": "erzurum",
+    "quote": "of Erzurum of 1919 was an early step in the Turkish War of Independence"
+   }
+  ]
+ },
+ {
+  "name": "The Scramble for Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Berlin Conference",
+    "slug": "berlin-conference",
+    "quote": "The Berlin Conference was a meeting of European powers and the United States convened by"
+   },
+   {
+    "label": "Heligoland–Zanzibar",
+    "slug": "heligoland-zanzibar-treaty",
+    "quote": "over Zanzibar and Pemba and British interests in East Africa and gave up claims in Witu"
+   },
+   {
+    "label": "Maxim gun",
+    "slug": "maxim-gun",
+    "quote": "heavily in the Scramble for Africa, and British forces used it in"
+   },
+   {
+    "label": "Adwa",
+    "slug": "battle-of-adwa",
+    "quote": "Italian Empire and became a symbol of African resistance to colonialism"
+   },
+   {
+    "label": "Anglo-French Convention",
+    "slug": "anglo-french-convention-of-1898",
+    "quote": "on 14 June 1898 that settled the frontier between British and French territories in West Africa, especially along the"
+   },
+   {
+    "label": "Carl Peters",
+    "slug": "carl-peters",
+    "quote": "a German colonial explorer and the founder of the German East Africa Company"
+   }
+  ]
+ },
+ {
+  "name": "Corsairs of North Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Barbary Coast",
+    "slug": "barbary-coast",
+    "quote": "The Barbary Coast was the name used by Europeans from the sixteenth to the nineteenth"
+   },
+   {
+    "label": "Hayreddin Barbarossa",
+    "slug": "hayreddin-barbarossa",
+    "quote": "Hayreddin Barbarossa was a sixteenth-century corsair who became grand admiral of the"
+   },
+   {
+    "label": "Oruç Reis",
+    "slug": "oruc-reis",
+    "quote": "Oruç Reis, called Barbarossa, was an Ottoman corsair from Lesbos who, with his brother"
+   },
+   {
+    "label": "Salé",
+    "slug": "sale",
+    "quote": "a base of the Barbary corsairs known as the Salé Rovers, whose"
+   },
+   {
+    "label": "Yusuf Karamanli",
+    "slug": "yusuf-karamanli",
+    "quote": "He drew wealth from corsairing and tribute from European states, and"
+   },
+   {
+    "label": "Stephen Decatur",
+    "slug": "stephen-decatur",
+    "quote": "of the United States Navy, famous for burning the captured frigate Philadelphia in Tripoli"
+   }
+  ]
+ },
+ {
+  "name": "Sultans of Rum",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Suleiman ibn Qutalmish",
+    "slug": "suleiman-ibn-qutalmish",
+    "quote": "was a Seljuk prince who founded the Sultanate of Rum in Anatolia"
+   },
+   {
+    "label": "Kilij Arslan II",
+    "slug": "kilij-arslan-ii",
+    "quote": "Kilij Arslan II was sultan of the Seljuk Sultanate of Rum from 1156 to 1192"
+   },
+   {
+    "label": "Kayqubad I",
+    "slug": "kayqubad-i",
+    "quote": "Kayqubad I was sultan of the Seljuk Sultanate of Rum in Anatolia from 1220 to 1237"
+   },
+   {
+    "label": "Kaykaus I",
+    "slug": "kaykaus-i",
+    "quote": "Kaykaus I was sultan of the Seljuk Sultanate of Rum from 1211 to 1220"
+   },
+   {
+    "label": "Kaykhusraw II",
+    "slug": "kaykhusraw-ii",
+    "quote": "Kaykhusraw II was sultan of the Seljuk Sultanate of Rum from 1237 to 1246, succeeding his"
+   },
+   {
+    "label": "Mesud I",
+    "slug": "mesud-i",
+    "quote": "Mesud I was sultan of the Seljuk Sultanate of Rum from 1116 to 1156, the son"
+   }
+  ]
+ },
+ {
+  "name": "The Nizari Ismailis",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hasan-i Sabbah",
+    "slug": "hasan-i-sabbah",
+    "quote": "was an Ismaili missionary who founded the Nizari branch after the succession crisis of"
+   },
+   {
+    "label": "Alamut",
+    "slug": "alamut",
+    "quote": "was the headquarters of the Nizari Ismailis, sometimes called the Assassins, who"
+   },
+   {
+    "label": "Rashid al-Din Sinan",
+    "slug": "rashid-al-din-sinan",
+    "quote": "Rashid al-Din Sinan was the leader of the Nizari Ismailis in Syria from about 1162 to 1193, known"
+   },
+   {
+    "label": "Rudbar",
+    "slug": "rudbar-of-alamut",
+    "quote": "formed the core of the Nizari Ismaili state, until the Mongols took"
+   },
+   {
+    "label": "Nizar",
+    "slug": "nizar-ibn-al-mustansir",
+    "quote": "and his line as imams, founding the Nizari branch of Ismailism"
+   },
+   {
+    "label": "Order of Assassins",
+    "slug": "order-of-assassins",
+    "quote": "The Order of Assassins is the popular name for the Nizari Ismailis of Iran and Syria in the"
+   }
+  ],
+  "note": "popularly the Assassins"
+ },
+ {
+  "name": "The Kingdom of Kongo",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Afonso I",
+    "slug": "afonso-i-of-kongo",
+    "quote": "known as Nzinga Mbemba, was king of the Kongo Empire from 1509 to 1543"
+   },
+   {
+    "label": "Nsundi",
+    "slug": "nsundi",
+    "quote": "Nsundi was a province of the Kingdom of Kongo, located in the north of the"
+   },
+   {
+    "label": "Mbwila",
+    "slug": "battle-of-mbwila",
+    "quote": "Mbwila was fought in 1665 between the Kingdom of Kongo and Portuguese forces from Angola with"
+   },
+   {
+    "label": "Manikongo",
+    "slug": "manikongo",
+    "quote": "Manikongo was the title of the king of the Kingdom of Kongo"
+   },
+   {
+    "label": "Nzinga a Nkuwu",
+    "slug": "nzinga-a-nkuwu",
+    "quote": "was a king, or manikongo, of the Kingdom of Kongo in the late fifteenth century"
+   },
+   {
+    "label": "Lukeni lua Nimi",
+    "slug": "lukeni-lua-nimi",
+    "quote": "Lukeni lua Nimi is the traditional founder of the Kingdom of Kongo in the late fourteenth century"
+   }
+  ]
+ },
+ {
+  "name": "The Hausa kingdoms",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kano",
+    "slug": "kano",
+    "quote": "city in northern Nigeria and one of the historic Hausa city-states"
+   },
+   {
+    "label": "Zaria",
+    "slug": "zaria",
+    "quote": "a city in northern Nigeria, historically the capital of the Hausa state of Zazzau"
+   },
+   {
+    "label": "Gobir",
+    "slug": "gobir",
+    "quote": "Gobir was a Hausa kingdom in present-day north-western Nigeria and southern"
+   },
+   {
+    "label": "Birnin Kebbi",
+    "slug": "birnin-kebbi",
+    "quote": "Nigeria, a capital of the Hausa Kingdom of Kebbi from the 16th"
+   },
+   {
+    "label": "Queen Amina",
+    "slug": "queen-amina",
+    "quote": "Amina is remembered in Hausa tradition as a warrior queen of Zazzau"
+   },
+   {
+    "label": "Muhammad Rumfa",
+    "slug": "muhammad-rumfa",
+    "quote": "Muhammad Rumfa was ruler of the Hausa kingdom of Kano from about 1463 to 1499"
+   }
+  ]
+ },
+ {
+  "name": "Kanem and Bornu",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sayfawa",
+    "slug": "sayfawa-dynasty",
+    "quote": "The Sayfawa dynasty was the ruling house of Kanem and later Bornu around Lake Chad, which claimed descent"
+   },
+   {
+    "label": "Duguwa",
+    "slug": "duguwa-dynasty",
+    "quote": "The Duguwa were the first ruling dynasty of the Kingdom of Kanem, north-east of Lake Chad"
+   },
+   {
+    "label": "Idris Alooma",
+    "slug": "idris-alooma",
+    "quote": "Idris Alooma was a mai, or king, of Bornu who reigned c"
+   },
+   {
+    "label": "Ibrahim Zaki",
+    "slug": "ibrahim-zaki",
+    "quote": "joined other Fulani leaders in capturing the Bornu capital, Birni Ngazargamu"
+   },
+   {
+    "label": "Bulala",
+    "slug": "bulala",
+    "quote": "forced the Sayfawa dynasty of Kanem to move westward to Bornu, where"
+   },
+   {
+    "label": "Dikwa",
+    "slug": "dikwa",
+    "quote": "it his capital after conquering Bornu in 1893"
+   }
+  ]
+ },
+ {
+  "name": "The Sokoto Caliphate",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Usman dan Fodio",
+    "slug": "usman-dan-fodio",
+    "quote": "in 1804 and founded the Sokoto Caliphate"
+   },
+   {
+    "label": "Muhammad Bello",
+    "slug": "muhammad-bello",
+    "quote": "of Usman dan Fodio and the first sultan of Sokoto, ruling from 1817"
+   },
+   {
+    "label": "Abdullahi dan Fodio",
+    "slug": "abdullahi-dan-fodio",
+    "quote": "Abdullahi dan Fodio was the younger brother of Usman dan Fodio and a leading scholar, poet and"
+   },
+   {
+    "label": "Nana Asma'u",
+    "slug": "nana-asmau",
+    "quote": "Nana Asma'u was a scholar, poet and teacher of the Sokoto Caliphate, a daughter of Usman dan Fodio"
+   },
+   {
+    "label": "Gwandu",
+    "slug": "gwandu-emirate",
+    "quote": "The Gwandu Emirate was the western half of the Sokoto Caliphate, governed by Abdullahi dan Fodio and"
+   },
+   {
+    "label": "Gudu",
+    "slug": "gudu",
+    "quote": "in north-western Nigeria to which Usman dan Fodio and his followers migrated in February 1804"
+   }
+  ]
+ },
+ {
+  "name": "Christian Nubia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alodia",
+    "slug": "alodia",
+    "quote": "Alodia, or Alwa, was the southernmost of the medieval Christian kingdoms of Nubia, centred on the"
+   },
+   {
+    "label": "Soba",
+    "slug": "soba",
+    "quote": "Soba was the capital of the medieval Nubian kingdom of Alodia, on the east bank of the"
+   },
+   {
+    "label": "Baqt",
+    "slug": "baqt",
+    "quote": "the agreement made in 652 between the Nubian kingdom of Makuria and the Arab rulers"
+   },
+   {
+    "label": "Old Nubian",
+    "slug": "old-nubian",
+    "quote": "Old Nubian is the medieval written form of the Nubian language, used in the Christian kingdoms of"
+   },
+   {
+    "label": "Old Dongola",
+    "slug": "old-dongola",
+    "quote": "of the Christian kingdom of Makuria from about the 6th to the"
+   },
+   {
+    "label": "Faras",
+    "slug": "faras",
+    "quote": "kingdom of Nobadia and later the seat of a bishop under Makuria"
+   },
+   {
+    "label": "Qasr Ibrim",
+    "slug": "qasr-ibrim",
+    "quote": "and Nobadian power and later a Christian cathedral town of Makuria"
+   }
+  ]
+ },
+ {
+  "name": "The Kingdom of Aksum",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ezana",
+    "slug": "ezana",
+    "quote": "Ezana was a king of Aksum who reigned c"
+   },
+   {
+    "label": "Kaleb",
+    "slug": "kaleb",
+    "quote": "Kaleb was a king of Aksum who reigned c"
+   },
+   {
+    "label": "Endubis",
+    "slug": "endubis",
+    "quote": "Endubis was a king of Aksum who reigned around 270 CE"
+   },
+   {
+    "label": "Ezana Stone",
+    "slug": "ezana-stone",
+    "quote": "The Ezana Stone is an inscribed stela at Aksum recording the deeds of King Ezana"
+   },
+   {
+    "label": "Frumentius",
+    "slug": "frumentius",
+    "quote": "to tradition, was brought to Aksum as a captive and rose to"
+   },
+   {
+    "label": "Ousanas",
+    "slug": "ousanas",
+    "quote": "Ousanas was the ruler of the Kingdom of Aksum in the 320s CE, known in"
+   },
+   {
+    "label": "Kubar",
+    "slug": "kubar",
+    "quote": "Kubar was a later capital of the Aksumite kingdom, to which the court relocated in"
+   }
+  ]
+ },
+ {
+  "name": "States of the Zimbabwean plateau",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Great Zimbabwe",
+    "slug": "great-zimbabwe",
+    "quote": "Great Zimbabwe is a ruined city of monumental dry-stone enclosures on the Zimbabwean plateau in southern"
+   },
+   {
+    "label": "Khami",
+    "slug": "khami",
+    "quote": "Khami is an archaeological site in south-western Zimbabwe, known for its terraced dry-stone walls"
+   },
+   {
+    "label": "Mutapa",
+    "slug": "mutapa-empire",
+    "quote": "the Mwene Mutapa state, was a Shona kingdom that emerged in the mid-fifteenth century"
+   },
+   {
+    "label": "Rozvi",
+    "slug": "rozvi-empire",
+    "quote": "The Rozvi Empire was a state on the Zimbabwean plateau that emerged in the late seventeenth"
+   },
+   {
+    "label": "Torwa",
+    "slug": "torwa-dynasty",
+    "quote": "The Torwa dynasty ruled the kingdom of Butua on the south-western plateau of present-day"
+   },
+   {
+    "label": "Mwene Mutapa",
+    "slug": "mwene-mutapa",
+    "quote": "Mwene Mutapa was the title of the king of the Mutapa Empire, a term from which the state"
+   }
+  ]
+ },
+ {
+  "name": "The Sultanate of Zanzibar",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Said bin Sultan",
+    "slug": "said-bin-sultan",
+    "quote": "and moved his court to Zanzibar, where he developed clove plantations and"
+   },
+   {
+    "label": "Barghash",
+    "slug": "barghash-bin-said",
+    "quote": "Barghash bin Said was Sultan of Zanzibar from 1870 to 1888, a son of Said bin Sultan"
+   },
+   {
+    "label": "House of Wonders",
+    "slug": "house-of-wonders",
+    "quote": "of Wonders, Beit al-Ajaib, is a ceremonial palace in Stone Town, Zanzibar, built for Sultan Barghash bin Said"
+   },
+   {
+    "label": "Emily Ruete",
+    "slug": "emily-ruete",
+    "quote": "daughter of Said bin Sultan, ruler of Oman and Zanzibar"
+   },
+   {
+    "label": "Jamshid",
+    "slug": "jamshid-bin-abdullah",
+    "quote": "Jamshid bin Abdullah was the last sultan of Zanzibar"
+   },
+   {
+    "label": "Tippu Tip",
+    "slug": "tippu-tip",
+    "quote": "Tippu Tip was a Swahili-Arab trader from Zanzibar who built a commercial empire in"
+   }
+  ]
+ },
+ {
+  "name": "Boer generals",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Louis Botha",
+    "slug": "louis-botha",
+    "quote": "Louis Botha was a Boer general and statesman"
+   },
+   {
+    "label": "Jan Smuts",
+    "slug": "jan-smuts",
+    "quote": "African statesman who fought as a Boer general and then, with Louis Botha, led"
+   },
+   {
+    "label": "Piet Cronjé",
+    "slug": "piet-cronje",
+    "quote": "Piet Cronjé was a Boer general of the South African Republic"
+   },
+   {
+    "label": "Koos de la Rey",
+    "slug": "koos-de-la-rey",
+    "quote": "Koos de la Rey was a Boer general of the South African Republic and"
+   },
+   {
+    "label": "Manie Maritz",
+    "slug": "manie-maritz",
+    "quote": "Manie Maritz was a Boer general who led the Maritz Rebellion of"
+   },
+   {
+    "label": "J. B. M. Hertzog",
+    "slug": "j-b-m-hertzog",
+    "quote": "was a South African lawyer, Boer general and politician"
+   }
+  ]
+ },
+ {
+  "name": "The Congo Free State",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Leopold II",
+    "slug": "leopold-ii",
+    "quote": "from 1865 to 1909 and personal ruler of the Congo Free State, a regime notorious for its"
+   },
+   {
+    "label": "Force Publique",
+    "slug": "force-publique",
+    "quote": "The Force Publique was the army and police force of the Congo Free State and the Belgian Congo, created in"
+   },
+   {
+    "label": "Roger Casement",
+    "slug": "roger-casement",
+    "quote": "Irish-born British consul whose 1904 report on atrocities in the Congo Free State, and later on the Putumayo region"
+   },
+   {
+    "label": "ABIR",
+    "slug": "anglo-belgian-india-rubber-company",
+    "quote": "India Rubber Company, known as ABIR, was a company founded in 1892"
+   },
+   {
+    "label": "Alice Seeley Harris",
+    "slug": "alice-seeley-harris",
+    "quote": "Harris was an English Baptist missionary in the Congo Free State whose photographs of mutilated Congolese, taken"
+   },
+   {
+    "label": "Stanley",
+    "slug": "henry-morton-stanley",
+    "quote": "with Congolese chiefs that became the basis of the Congo Free State"
+   }
+  ]
+ },
+ {
+  "name": "Ottoman grand viziers",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pargalı Ibrahim",
+    "slug": "pargali-ibrahim-pasha",
+    "quote": "was the boyhood friend and grand vizier of Sultan Suleiman the Magnificent from 1523"
+   },
+   {
+    "label": "Sokollu Mehmed",
+    "slug": "sokollu-mehmed-pasha",
+    "quote": "Pasha was an Ottoman statesman, grand vizier from 1565 to 1579 under Suleiman the Magnificent, Selim II"
+   },
+   {
+    "label": "Kara Mustafa",
+    "slug": "kara-mustafa-pasha",
+    "quote": "Kara Mustafa Pasha was an Ottoman grand vizier of the late seventeenth century"
+   },
+   {
+    "label": "Gedik Ahmed",
+    "slug": "gedik-ahmed-pasha",
+    "quote": "Gedik Ahmed Pasha was an Ottoman grand vizier and admiral under Mehmed II"
+   },
+   {
+    "label": "Koca Sinan",
+    "slug": "koca-sinan-pasha",
+    "quote": "later served five times as grand vizier and led campaigns in the Long"
+   },
+   {
+    "label": "Reşid Mehmed",
+    "slug": "resid-mehmed-pasha",
+    "quote": "was an Ottoman general and grand vizier under Mahmud II"
+   },
+   {
+    "label": "Mustafa Reşid",
+    "slug": "mustafa-resid-pasha",
+    "quote": "Between 1845 and 1857 he held the office of Grand Vizier six times, setting up commercial courts and codes"
+   },
+   {
+    "label": "Midhat Pasha",
+    "slug": "midhat-pasha",
+    "quote": "As grand vizier he was the main author of the Ottoman constitution of 1876"
+   }
+  ]
+ },
+ {
+  "name": "Qajar Iran",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Golestan Palace",
+    "slug": "golestan-palace",
+    "quote": "the chief residence of the Qajar shahs after Tehran became the capital"
+   },
+   {
+    "label": "Constitutional Revolution",
+    "slug": "persian-constitutional-revolution",
+    "quote": "Persian Constitutional Revolution (1905–1911) was a movement of merchants, clergy and reformers that"
+   },
+   {
+    "label": "Turkmenchay",
+    "slug": "treaty-of-turkmenchay",
+    "quote": "Qajar Iran ceded the khanates of Erivan and Nakhichevan to Russia"
+   },
+   {
+    "label": "Gulistan",
+    "slug": "treaty-of-gulistan",
+    "quote": "between the Russian Empire and Qajar Iran, ending the Russo-Persian War of"
+   },
+   {
+    "label": "Amir Kabir",
+    "slug": "amir-kabir",
+    "quote": "Mirza Taqi Khan Farahani) was chief minister of Iran under Naser al-Din Shah from"
+   },
+   {
+    "label": "Abbas Mirza",
+    "slug": "abbas-mirza",
+    "quote": "Abbas Mirza was the crown prince of Qajar Iran and governor of Azerbaijan, based at"
+   },
+   {
+    "label": "Tekyeh Dowlat",
+    "slug": "tekyeh-dowlat",
+    "quote": "thousands of spectators, it was the grandest venue of Qajar religious theatre"
+   }
+  ]
+ },
+ {
+  "name": "The Kingdom of Dahomey",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Abomey",
+    "slug": "abomey",
+    "quote": "a town in southern Benin, the capital of the Kingdom of Dahomey from the seventeenth century until 1894"
+   },
+   {
+    "label": "Royal Palaces of Abomey",
+    "slug": "royal-palaces-of-abomey",
+    "quote": "the complex of earthen palaces built by the kings of Dahomey at Abomey, in present-day Benin, from"
+   },
+   {
+    "label": "Fon",
+    "slug": "fon-people",
+    "quote": "the core population of the Kingdom of Dahomey, which rose from the early 17th"
+   },
+   {
+    "label": "Annual Customs",
+    "slug": "annual-customs-of-dahomey",
+    "quote": "Annual Customs of Dahomey were the main yearly celebration of the Kingdom of Dahomey, held at its capital, Abomey, and"
+   },
+   {
+    "label": "Amazons",
+    "slug": "dahomey-amazons",
+    "quote": "The Dahomey Amazons were the corps of women soldiers of the Kingdom of Dahomey, known locally as ahosi, \"king's wives\""
+   },
+   {
+    "label": "Francisco Félix de Souza",
+    "slug": "francisco-felix-de-souza",
+    "quote": "most powerful merchant at Ouidah, the main port of the Kingdom of Dahomey"
+   }
+  ]
+ },
+ {
+  "name": "Ethiopia's war with Adal",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ahmad Gragn",
+    "slug": "ahmad-ibn-ibrahim-al-ghazi",
+    "quote": "Ahmad ibn Ibrahim al-Ghazi, known as Ahmad Gragn, was the imam and military leader"
+   },
+   {
+    "label": "Lebna Dengel",
+    "slug": "dawit-ii",
+    "quote": "Dawit II, also known as Lebna Dengel, was emperor of Ethiopia in the"
+   },
+   {
+    "label": "Shimbra Kure",
+    "slug": "battle-of-shimbra-kure",
+    "quote": "The Battle of Shimbra Kure was fought in March 1529 in"
+   },
+   {
+    "label": "Wayna Daga",
+    "slug": "battle-of-wayna-daga",
+    "quote": "The Battle of Wayna Daga was fought on 21 February 1543"
+   },
+   {
+    "label": "Cristóvão da Gama",
+    "slug": "cristovao-da-gama",
+    "quote": "Gama was a Portuguese commander, a son of Vasco da Gama, who led about 400"
+   },
+   {
+    "label": "Galawdewos",
+    "slug": "galawdewos",
+    "quote": "Galawdewos was emperor of Ethiopia in the mid-sixteenth century, the son of Dawit II"
+   }
+  ]
+ },
+ {
+  "name": "In Abbasid Baghdad",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "House of Wisdom",
+    "slug": "house-of-wisdom",
+    "quote": "a major intellectual institution in Baghdad under the Abbasid Caliphate"
+   },
+   {
+    "label": "Barmakids",
+    "slug": "barmakids",
+    "quote": "and administrators to the early Abbasid caliphs"
+   },
+   {
+    "label": "Hunayn ibn Ishaq",
+    "slug": "hunayn-ibn-ishaq",
+    "quote": "translator and physician of the Abbasid period, his era's most productive translator"
+   },
+   {
+    "label": "Bukhtishu",
+    "slug": "bukhtishu",
+    "quote": "its hospital, was called to Baghdad in 765 to treat the caliph"
+   },
+   {
+    "label": "Ziryab",
+    "slug": "ziryab",
+    "quote": "a musician and singer from Baghdad who settled at the court of"
+   },
+   {
+    "label": "al-Ma'mun",
+    "slug": "al-mamun",
+    "quote": "Al-Mamun was an Abbasid caliph who reigned from 813 to 833"
+   }
+  ]
+ },
+ {
+  "name": "Saadi sultans of Morocco",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mohammed al-Shaykh",
+    "slug": "mohammed-al-shaykh",
+    "quote": "Mohammed al-Shaykh was the Saadi sultan who united Morocco under his dynasty"
+   },
+   {
+    "label": "Ahmad al-Araj",
+    "slug": "ahmad-al-araj",
+    "quote": "Ahmad al-Araj was the first Saadi sultan of Morocco"
+   },
+   {
+    "label": "Abdallah al-Ghalib",
+    "slug": "abdallah-al-ghalib",
+    "quote": "Abdallah al-Ghalib was sultan of Morocco from 1557 to 1574, the son and successor of Muhammad"
+   },
+   {
+    "label": "Abd al-Malik I",
+    "slug": "abd-al-malik-i-saadi-sultan",
+    "quote": "Abd al-Malik I was a sultan of the Saadi dynasty of Morocco in the 1570s"
+   },
+   {
+    "label": "Ahmad al-Mansur",
+    "slug": "ahmad-al-mansur",
+    "quote": "Ahmad al-Mansur was the Saadi sultan of Morocco from 1578 to 1603, enriched by"
+   },
+   {
+    "label": "Zidan",
+    "slug": "zidan-abu-maali",
+    "quote": "son of Ahmad al-Mansur and Saadi sultan of Morocco from 1603 to 1627"
+   }
+  ]
+ },
+ {
+  "name": "All in 1260",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Ain Jalut",
+    "slug": "battle-of-ain-jalut",
+    "quote": "Ain Jalut was fought in 1260 in Palestine between the Mamluk Sultanate"
+   },
+   {
+    "label": "Qutuz",
+    "slug": "qutuz",
+    "quote": "of the Mamluk Sultanate in 1259–1260"
+   },
+   {
+    "label": "Kitbuqa",
+    "slug": "kitbuqa",
+    "quote": "Battle of Ain Jalut in 1260"
+   },
+   {
+    "label": "Montaperti",
+    "slug": "battle-of-montaperti",
+    "quote": "was fought on 4 September 1260 near Siena between the Guelph army"
+   },
+   {
+    "label": "Kressenbrunn",
+    "slug": "battle-of-kressenbrunn",
+    "quote": "Kressenbrunn was fought in July 1260 on the March River east of"
+   },
+   {
+    "label": "Durbe",
+    "slug": "battle-of-durbe",
+    "quote": "was fought on 13 July 1260 near Durbe in present-day western Latvia"
+   }
+  ]
+ },
+ {
+  "name": "All in 1529",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Shimbra Kure",
+    "slug": "battle-of-shimbra-kure",
+    "quote": "Kure was fought in March 1529 in the Ethiopian highlands, where the"
+   },
+   {
+    "label": "Siege of Vienna",
+    "slug": "siege-of-vienna-1529",
+    "quote": "The Siege of Vienna in 1529 was the first Ottoman attempt to"
+   },
+   {
+    "label": "Marburg Colloquy",
+    "slug": "marburg-colloquy",
+    "quote": "at Marburg Castle in October 1529, called by Philip I of Hesse"
+   },
+   {
+    "label": "Ghaghra",
+    "slug": "battle-of-ghaghra",
+    "quote": "was fought on 6 May 1529 near the confluence of the Ghaghra"
+   },
+   {
+    "label": "Peace of Cambrai",
+    "slug": "peace-of-cambrai",
+    "quote": "was signed on 3 August 1529 between Francis I of France and"
+   },
+   {
+    "label": "Treaty of Grimnitz",
+    "slug": "treaty-of-grimnitz",
+    "quote": "was concluded on 26 August 1529 at the Grimnitz hunting lodge between"
+   }
+  ]
+ },
+ {
+  "name": "All in 1683",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Battle of Vienna",
+    "slug": "battle-of-vienna-1683",
+    "quote": "of Vienna was fought in 1683, when a relief army led by"
+   },
+   {
+    "label": "Kara Mustafa",
+    "slug": "kara-mustafa-pasha",
+    "quote": "c. 1634–1683"
+   },
+   {
+    "label": "Gross Friedrichsburg",
+    "slug": "gross-friedrichsburg",
+    "quote": "was a fort founded in 1683 by Brandenburg at Pokesu, now Princes"
+   },
+   {
+    "label": "Qing takes Taiwan",
+    "slug": "qing-conquest-of-taiwan",
+    "quote": "of Taiwan took place in 1683, when Qing naval forces under Shi"
+   },
+   {
+    "label": "Danish Code",
+    "slug": "danish-code",
+    "quote": "Christian V of Denmark in 1683, replacing the medieval provincial laws with"
+   },
+   {
+    "label": "Society of Suriname",
+    "slug": "society-of-suriname",
+    "quote": "a chartered company formed in 1683 by the Dutch West India Company"
+   }
+  ],
+  "note": "Kara Mustafa is also a candidate of Ottoman grand viziers"
+ },
+ {
+  "name": "All in 1830",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Invasion of Algiers",
+    "slug": "french-invasion-of-algiers",
+    "quote": "of Algiers took place in 1830, when a French expedition captured the"
+   },
+   {
+    "label": "July Revolution",
+    "slug": "july-revolution",
+    "quote": "The July Revolution of 1830, also called the Three Glorious Days"
+   },
+   {
+    "label": "Belgian Revolution",
+    "slug": "belgian-revolution",
+    "quote": "Revolution was the uprising of 1830–1831 in which the southern provinces of"
+   },
+   {
+    "label": "November Uprising",
+    "slug": "november-uprising",
+    "quote": "in Warsaw on 29 November 1830 with an attack by officer cadets"
+   },
+   {
+    "label": "Greek independence",
+    "slug": "greek-war-of-independence",
+    "quote": "an independent Greek state in 1830"
+   },
+   {
+    "label": "Zouaves",
+    "slug": "zouaves",
+    "quote": "first raised in Algeria in 1830 and named after the Zwawa, a"
+   }
+  ]
+ },
+ {
+  "name": "All in 1896",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Adwa",
+    "slug": "battle-of-adwa",
+    "quote": "of Adwa was fought in 1896 in northern Ethiopia between the forces"
+   },
+   {
+    "label": "First Chimurenga",
+    "slug": "first-chimurenga",
+    "quote": "British South Africa Company in 1896–1897, in what is now Zimbabwe"
+   },
+   {
+    "label": "First Italo-Ethiopian War",
+    "slug": "first-italo-ethiopian-war",
+    "quote": "Italo-Ethiopian War was fought in 1895–1896 between Italy and the Ethiopian Empire"
+   },
+   {
+    "label": "Uganda Railway",
+    "slug": "uganda-railway",
+    "quote": "built by the British from 1896 to 1901 from Mombasa on the"
+   },
+   {
+    "label": "Naser al-Din Shah",
+    "slug": "naser-al-din-shah-qajar",
+    "quote": "of Iran from 1848 to 1896, the longest reign of the dynasty"
+   },
+   {
+    "label": "Paulette Nardal",
+    "slug": "paulette-nardal",
+    "quote": "1896–1985"
+   }
+  ]
+ },
+ {
+  "name": "All in 1956",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Suez Crisis",
+    "slug": "suez-crisis",
+    "quote": "was the international crisis of 1956 in which Britain, France and Israel"
+   },
+   {
+    "label": "MPLA",
+    "slug": "mpla",
+    "quote": "1956"
+   },
+   {
+    "label": "Morice Line",
+    "slug": "morice-line",
+    "quote": "barrier built by France from 1956 along Algeria's border with Tunisia, named"
+   },
+   {
+    "label": "Loi Cadre",
+    "slug": "loi-cadre-defferre",
+    "quote": "framework law of 23 June 1956, named after the overseas minister Gaston"
+   },
+   {
+    "label": "UN Emergency Force",
+    "slug": "united-nations-emergency-force",
+    "quote": "United Nations, created in November 1956 on the proposal of Lester B"
+   },
+   {
+    "label": "PAIGC",
+    "slug": "paigc",
+    "quote": "Verde (PAIGC) was founded in 1956 by Amílcar Cabral and others to"
+   }
+  ]
+ },
+ {
+  "name": "All in 1962",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "FRELIMO",
+    "slug": "frelimo",
+    "quote": "Dar es Salaam in June 1962 under Eduardo Mondlane by the union"
+   },
+   {
+    "label": "Évian Accords",
+    "slug": "evian-accords",
+    "quote": "were the agreements signed in 1962 between France and the Algerian National"
+   },
+   {
+    "label": "Cuban Missile Crisis",
+    "slug": "cuban-missile-crisis",
+    "quote": "Cuban Missile Crisis of October 1962 was the closest the Cold War"
+   },
+   {
+    "label": "Sino-Indian War",
+    "slug": "sino-indian-war",
+    "quote": "India in October and November 1962 over disputed Himalayan territory in Aksai"
+   },
+   {
+    "label": "Rhodesian Front",
+    "slug": "rhodesian-front",
+    "quote": "in Southern Rhodesia, founded in 1962, which won that year's election on"
+   },
+   {
+    "label": "Cobbold Commission",
+    "slug": "cobbold-commission",
+    "quote": "by Britain and Malaya in 1962, chaired by Lord Cobbold, to find"
+   }
+  ]
+ },
+ {
+  "name": "All in 1258",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Siege of Baghdad",
+    "slug": "siege-of-baghdad-1258",
+    "quote": "The Siege of Baghdad in 1258 was the capture and sack of"
+   },
+   {
+    "label": "al-Musta'sim",
+    "slug": "al-mustasim",
+    "quote": "captured the city in February 1258, he was executed and the House"
+   },
+   {
+    "label": "Karydi",
+    "slug": "battle-of-karydi",
+    "quote": "of Karydi was fought in 1258 at the Karydi pass between Megara"
+   },
+   {
+    "label": "Treaty of Corbeil",
+    "slug": "treaty-of-corbeil-1258",
+    "quote": "Corbeil was signed in May 1258 between Louis IX of France and"
+   },
+   {
+    "label": "Euboeote Succession",
+    "slug": "war-of-the-euboeote-succession",
+    "quote": "was fought from 1256 to 1258 between William II of Villehardouin, prince"
+   },
+   {
+    "label": "Ssangseong",
+    "slug": "ssangseong-prefecture",
+    "quote": "up by the Mongols in 1258 in north-eastern Korea, around modern Kumya"
+   }
+  ]
+ },
+ {
+  "name": "All in 1514",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Chaldiran",
+    "slug": "battle-of-chaldiran",
+    "quote": "of Chaldiran was fought in 1514 in north-western Iran between the Ottoman"
+   },
+   {
+    "label": "Orsha",
+    "slug": "battle-of-orsha",
+    "quote": "was fought on 8 September 1514 on the Dnieper near Orsha in"
+   },
+   {
+    "label": "Tripartitum",
+    "slug": "tripartitum",
+    "quote": "presented to the diet in 1514"
+   },
+   {
+    "label": "Nemequene",
+    "slug": "nemequene",
+    "quote": "He died in 1514 of wounds received in war against"
+   },
+   {
+    "label": "Tahmasp I",
+    "slug": "tahmasp-i",
+    "quote": "1514–1576"
+   },
+   {
+    "label": "Vesalius",
+    "slug": "andreas-vesalius",
+    "quote": "1514–1564"
+   }
+  ]
+ },
+ {
+  "name": "All in 1652",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Cape Town",
+    "slug": "cape-town",
+    "quote": "It was founded in 1652 by Jan van Riebeeck as a"
+   },
+   {
+    "label": "Cape Colony",
+    "slug": "cape-colony",
+    "quote": "of Good Hope established in 1652 by the Dutch East India Company"
+   },
+   {
+    "label": "First Anglo-Dutch War",
+    "slug": "first-anglo-dutch-war",
+    "quote": "The First Anglo-Dutch War of 1652–1654 was a naval war between the"
+   },
+   {
+    "label": "Leopoldina",
+    "slug": "leopoldina",
+    "quote": "It was founded in 1652 in the imperial city of Schweinfurt"
+   },
+   {
+    "label": "Guo Huaiyi rebellion",
+    "slug": "guo-huaiyi-rebellion",
+    "quote": "in Dutch Formosa in September 1652, led by the village head Guo"
+   },
+   {
+    "label": "Siciński",
+    "slug": "w-adys-aw-sicinski",
+    "quote": "In 1652 he dissolved the entire Sejm by"
+   }
+  ]
+ },
+ {
+  "name": "All in 1591",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Tondibi",
+    "slug": "battle-of-tondibi",
+    "quote": "was fought on 12 March 1591 near the Niger River, where a"
+   },
+   {
+    "label": "Moroccan invasion of Songhai",
+    "slug": "moroccan-invasion-of-songhai",
+    "quote": "sent across the Sahara in 1591 by Sultan Ahmad al-Mansur of Morocco"
+   },
+   {
+    "label": "Charminar",
+    "slug": "charminar",
+    "quote": "of Hyderabad, India, built in 1591 by Muhammad Quli Qutb Shah of"
+   },
+   {
+    "label": "Bhuchar Mori",
+    "slug": "battle-of-bhuchar-mori",
+    "quote": "Bhuchar Mori was fought in 1591 near Dhrol in Saurashtra, Gujarat, between"
+   },
+   {
+    "label": "Juan de Lanuza",
+    "slug": "juan-de-lanuza-y-urrea",
+    "quote": "Antonio Pérez in Zaragoza in 1591, Lanuza called the Aragonese to resist"
+   },
+   {
+    "label": "Anne Hutchinson",
+    "slug": "anne-hutchinson",
+    "quote": "1591–1643"
+   }
+  ],
+  "note": "Tondibi and the Moroccan invasion tell one story: keep at most one"
+ },
+ {
+  "name": "Born in 1922",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Nyerere",
+    "slug": "julius-nyerere",
+    "quote": "1922–1999"
+   },
+   {
+    "label": "Sékou Touré",
+    "slug": "ahmed-sekou-toure",
+    "quote": "1922–1984"
+   },
+   {
+    "label": "Sihanouk",
+    "slug": "norodom-sihanouk",
+    "quote": "1922–2012"
+   },
+   {
+    "label": "Michael Ventris",
+    "slug": "michael-ventris",
+    "quote": "1922–1956"
+   },
+   {
+    "label": "Tun Abdul Razak",
+    "slug": "abdul-razak-hussein",
+    "quote": "1922–1976"
+   },
+   {
+    "label": "Lipset",
+    "slug": "seymour-martin-lipset",
+    "quote": "1922–2006"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1924",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Kenneth Kaunda",
+    "slug": "kenneth-kaunda",
+    "quote": "1924–2021"
+   },
+   {
+    "label": "Mutesa II",
+    "slug": "mutesa-ii-of-buganda",
+    "quote": "1924–1969"
+   },
+   {
+    "label": "Robert Mugabe",
+    "slug": "robert-mugabe",
+    "quote": "1924–2019"
+   },
+   {
+    "label": "Robert Sobukwe",
+    "slug": "robert-sobukwe",
+    "quote": "1924–1978"
+   },
+   {
+    "label": "Aman Andom",
+    "slug": "aman-andom",
+    "quote": "1924–1974"
+   },
+   {
+    "label": "Zia-ul-Haq",
+    "slug": "muhammad-zia-ul-haq",
+    "quote": "1924–1988"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1882",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Abd el-Krim",
+    "slug": "abd-el-krim",
+    "quote": "1882–1963"
+   },
+   {
+    "label": "Abdullah I of Jordan",
+    "slug": "abdullah-i-of-jordan",
+    "quote": "1882–1951"
+   },
+   {
+    "label": "Mosaddegh",
+    "slug": "mohammad-mosaddegh",
+    "quote": "1882–1967"
+   },
+   {
+    "label": "Franklin D. Roosevelt",
+    "slug": "franklin-d-roosevelt",
+    "quote": "1882–1945"
+   },
+   {
+    "label": "James Joyce",
+    "slug": "james-joyce",
+    "quote": "1882–1941"
+   },
+   {
+    "label": "Getúlio Vargas",
+    "slug": "getulio-vargas",
+    "quote": "1882–1954"
+   }
+  ]
+ },
+ {
+  "name": "Hide a tool",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Marrakesh",
+    "slug": "marrakesh",
+    "quote": "Marrakesh is a city in Morocco founded by the"
+   },
+   {
+    "label": "Massawa",
+    "slug": "massawa",
+    "quote": "Massawa is a port city on the Red Sea"
+   },
+   {
+    "label": "Avicenna",
+    "slug": "avicenna",
+    "quote": "Avicenna, Ibn Sina, was a Persian philosopher and physician born"
+   },
+   {
+    "label": "Mawlid",
+    "slug": "mawlid",
+    "quote": "Mawlid is the celebration of the birthday of the"
+   },
+   {
+    "label": "Khoekhoe",
+    "slug": "khoekhoe",
+    "quote": "The Khoekhoe, formerly called Khoikhoi, are the indigenous"
+   },
+   {
+    "label": "Artaxerxes III",
+    "slug": "artaxerxes-iii",
+    "quote": "Artaxerxes III was an Achaemenid king who reigned from"
+   }
+  ],
+  "note": "rake, saw, vice, awl, hoe, axe"
+ },
+ {
+  "name": "Hide a Greek letter",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Topkapı",
+    "slug": "topkapi-palace",
+    "quote": "Topkapı Palace in Istanbul was the main residence and administrative centre"
+   },
+   {
+    "label": "Philae",
+    "slug": "philae",
+    "quote": "Philae is an island in the Nile near Aswan"
+   },
+   {
+    "label": "Modibo Keïta",
+    "slug": "modibo-keita",
+    "quote": "Modibo Keïta was the first president of Mali, from"
+   },
+   {
+    "label": "Chinguetti",
+    "slug": "chinguetti",
+    "quote": "Chinguetti is a desert town in the Adrar region"
+   },
+   {
+    "label": "Taurus",
+    "slug": "taurus-mountains",
+    "quote": "The Taurus Mountains are a mountain range in"
+   },
+   {
+    "label": "Hagia Sophia",
+    "slug": "hagia-sophia",
+    "quote": "The Hagia Sophia is a great domed church in Constantinople completed"
+   }
+  ],
+  "note": "kappa, phi, eta, chi, tau, phi"
+ },
+ {
+  "name": "Hide a kind of weather",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Bahrain",
+    "slug": "bahrain",
+    "quote": "Bahrain is an island in the Persian Gulf"
+   },
+   {
+    "label": "Haile Selassie",
+    "slug": "haile-selassie",
+    "quote": "Haile Selassie was the last Emperor of Ethiopia, who"
+   },
+   {
+    "label": "Windhoek",
+    "slug": "windhoek",
+    "quote": "Windhoek is the capital and largest city of Namibia"
+   },
+   {
+    "label": "Foggara",
+    "slug": "foggara",
+    "quote": "A foggara is an underground irrigation tunnel that taps groundwater"
+   },
+   {
+    "label": "Kgalema Motlanthe",
+    "slug": "kgalema-motlanthe",
+    "quote": "Kgalema Motlanthe is a South African politician who was president"
+   },
+   {
+    "label": "Adrar des Ifoghas",
+    "slug": "adrar-des-ifoghas",
+    "quote": "The Adrar des Ifoghas is a sandstone massif in the Kidal region"
+   }
+  ],
+  "note": "rain, hail, wind, fog, gale, fog"
+ },
+ {
+  "name": "Hide a colour",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Sublime Porte",
+    "slug": "sublime-porte",
+    "quote": "The Sublime Porte was the name given to the central"
+   },
+   {
+    "label": "Rosetta Stone",
+    "slug": "rosetta-stone",
+    "quote": "The Rosetta Stone is a granodiorite slab inscribed with a decree"
+   },
+   {
+    "label": "Hayreddin",
+    "slug": "hayreddin-barbarossa",
+    "quote": "Hayreddin Barbarossa was a sixteenth-century corsair who became grand"
+   },
+   {
+    "label": "Tanzimat",
+    "slug": "tanzimat",
+    "quote": "The Tanzimat was a period of reform in the"
+   },
+   {
+    "label": "Zeerust",
+    "slug": "zeerust",
+    "quote": "Zeerust is a town in the Marico district of"
+   },
+   {
+    "label": "Afghanistan",
+    "slug": "afghanistan",
+    "quote": "Afghanistan is a mountainous region of Central and South"
+   }
+  ],
+  "note": "lime, rose, red, tan, rust, tan"
+ },
+ {
+  "name": "Visited by Ibn Battuta",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kilwa Kisiwani",
+    "slug": "kilwa-kisiwani",
+    "quote": "Ibn Battuta visited in 1331 and praised it as one of"
+   },
+   {
+    "label": "Qatif",
+    "slug": "qatif",
+    "quote": "Ibn Battuta described its Shi'a Arab population around 1331, and it remains a"
+   },
+   {
+    "label": "Denizli",
+    "slug": "denizli",
+    "quote": "the late 13th century, and Ibn Battuta visited it around 1333, praising its gold-embroidered cotton cloth"
+   },
+   {
+    "label": "Milas",
+    "slug": "milas",
+    "quote": "Ibn Battuta visited it in the 1330s and praised its ruler Orhan Bey"
+   },
+   {
+    "label": "Takedda",
+    "slug": "takedda",
+    "quote": "Ibn Battuta visited it in 1353 on his return from the Mali"
+   },
+   {
+    "label": "Sonargaon",
+    "slug": "sonargaon",
+    "quote": "Visitors such as Ibn Battuta described its trade, and in the late 16th century"
+   }
+  ]
+ },
+ {
+  "name": "Built of mud brick",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yazd",
+    "slug": "yazd",
+    "quote": "central Iran, famed for its mud-brick old town, windcatchers and underground qanat water channels"
+   },
+   {
+    "label": "Shibam",
+    "slug": "shibam",
+    "quote": "eastern Yemen, famous for its densely packed mud-brick tower houses, many of them five"
+   },
+   {
+    "label": "Western Deffufa",
+    "slug": "western-deffufa",
+    "quote": "The Western Deffufa is a massive mud-brick structure at Kerma in northern Sudan, the"
+   },
+   {
+    "label": "Djinguereber",
+    "slug": "djinguereber-mosque",
+    "quote": "mosque of Timbuktu in Mali, a landmark of earthen Sudano-Sahelian architecture"
+   },
+   {
+    "label": "Diriyah",
+    "slug": "diriyah",
+    "quote": "Its mud-brick district of at-Turaif is a UNESCO World Heritage Site"
+   },
+   {
+    "label": "Chan Chan",
+    "slug": "chan-chan",
+    "quote": "Peru, near modern Trujillo, and the largest adobe city of the pre-Columbian Americas"
+   }
+  ],
+  "note": "Chan Chan is a decoy from the Americas"
+ },
+ {
+  "name": "Names that come from Arabic",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Algarve",
+    "slug": "algarve",
+    "quote": "Its name comes from the Arabic al-Gharb, 'the west', from the centuries of"
+   },
+   {
+    "label": "Guadalajara",
+    "slug": "guadalajara-spain",
+    "quote": "Its name comes from the Arabic for 'valley of stones', from its time as a Muslim"
+   },
+   {
+    "label": "Almodóvar del Río",
+    "slug": "almodovar-del-rio",
+    "quote": "a hill above the river; its name comes from the Arabic al-Mudawwar, 'the round one'"
+   },
+   {
+    "label": "Marsala",
+    "slug": "marsala",
+    "quote": "Motya in 397 BCE, and its present name comes from the Arabic Marsa Allah or Marsa Ali, 'port of God'"
+   },
+   {
+    "label": "Algebra",
+    "slug": "algebra",
+    "quote": "Its name comes from the Arabic al-jabr in the title of a treatise"
+   },
+   {
+    "label": "Alkali",
+    "slug": "alkali",
+    "quote": "Alkali, from the Arabic al-qadi, was the title of an Islamic"
+   }
+  ]
+ },
+ {
+  "name": "Sacked by Timur",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Delhi",
+    "slug": "delhi",
+    "quote": "of the Mughal Empire, and was sacked by Timur in 1398 and by Nader Shah of the"
+   },
+   {
+    "label": "Sivas",
+    "slug": "sivas",
+    "quote": "Timur sacked it in 1400, and in 1919 it hosted the"
+   },
+   {
+    "label": "Sarai",
+    "slug": "sarai",
+    "quote": "Timur sacked it in 1395, and the Crimean khan destroyed what"
+   },
+   {
+    "label": "Zaranj",
+    "slug": "zaranj",
+    "quote": "The medieval city was sacked by Timur in 1383"
+   },
+   {
+    "label": "Tana",
+    "slug": "tana-azov",
+    "quote": "Timur sacked it in 1395, and the Ottomans took it in"
+   },
+   {
+    "label": "Saraychik",
+    "slug": "saraychik",
+    "quote": "from the Volga to Khwarazm, was sacked by Timur in 1395, and later became the seat of"
+   }
+  ]
+ }
+]

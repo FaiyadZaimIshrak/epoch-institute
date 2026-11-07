@@ -459,7 +459,7 @@ var SECTION_IMAGES = {
     military:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Cordanrad; derivative work by Rani nurmai",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
     governance:{slug:"fatawa-i-alamgiri",name:"Fatawa-i-Alamgiri",img:"/images/encyclopedia/fatawa-i-alamgiri.jpg",artist:"British Library Blog",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Manuscript_copy_of_al-Fatawa_al-%27Alamgiriyyah.jpg"},
     impact:{slug:"taj-mahal",name:"Taj Mahal",img:"/images/encyclopedia/taj-mahal.jpg",artist:"Yann; edited by Jim Carter",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Taj_Mahal_(Edited).jpeg"},
-    decline:{slug:"indian-rebellion-of-1857",name:"Indian Rebellion of 1857",img:"/images/encyclopedia/indian-rebellion-of-1857.jpg",artist:"Unknown author Cambridge University Press; Stanford's Geogl. Estabt..",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_Rebellion_of_1857.jpg"}
+    decline:{slug:"indian-rebellion-of-1857",name:"Indian Rebellion of 1857",img:"/images/encyclopedia/indian-rebellion-of-1857.jpg",artist:"Unknown author Cambridge University Press; Stanford's Geogl. Estabt.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_Rebellion_of_1857.jpg"}
   },
   "Mutapa Empire": {
     foundation:{slug:"kingdom-of-zimbabwe",name:"Kingdom of Zimbabwe",img:"/images/encyclopedia/kingdom-of-zimbabwe.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Cefala_Manich_Simbaoe.png"},
@@ -1154,7 +1154,7 @@ var SECTION_IMAGES = {
     socioeconomy:{slug:"shenzhen",name:"Shenzhen",img:"/images/encyclopedia/shenzhen.jpg",artist:"Charlie fong",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Commercial_area_of_futian_to_east2020.jpg"},
     military:{slug:"korean-war",name:"Korean War",img:"/images/encyclopedia/korean-war.jpg",artist:"Photo by Corporal Peter McDonald, USMC",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chosin.jpg"},
     governance:{slug:"liu-shaoqi",name:"Liu Shaoqi",img:"/images/encyclopedia/liu-shaoqi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liu_Shaoqi_in_1959.jpg"},
-    impact:{slug:"zhou-enlai",name:"Zhou Enlai",img:"/images/encyclopedia/zhou-enlai.jpg",artist:"President (1969-1974 : Nixon). White House Photo Office. 1969-1974; General Services Administration. National Archive...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Premier_Chou_En-Lai_in_the_Great_Hall_of_the_People%27s_Banquet_Hall_-_DPLA_-_a40021a8100507bc7a244420481bf488.jpg"},
+    impact:{slug:"zhou-enlai",name:"Zhou Enlai",img:"/images/encyclopedia/zhou-enlai.jpg",artist:"President (1969-1974 : Nixon). White House Photo Office. 1969-1974 …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Premier_Chou_En-Lai_in_the_Great_Hall_of_the_People%27s_Banquet_Hall_-_DPLA_-_a40021a8100507bc7a244420481bf488.jpg"},
     decline:{slug:"xi-jinping",name:"Xi Jinping",img:"/images/encyclopedia/xi-jinping.jpg",artist:"Simon Dawson / No 10 Downing Street",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Prime_Minister_Keir_Starmer_visits_China_(55066713683)_(cropped%2Bangle).jpg"}
   },
   "Middle Kingdom of Egypt": {
@@ -1827,7 +1827,7 @@ var SECTION_IMAGES = {
     military:{slug:"battle-of-halmyros",name:"Battle of Halmyros",img:"/images/encyclopedia/battle-of-halmyros.jpg",artist:"Cplakidas",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Greece_in_1278.svg"},
     governance:{slug:"usatges-of-barcelona",name:"Usatges of Barcelona",img:"/images/encyclopedia/usatges-of-barcelona.jpg",artist:"Alfons II d'Aragó",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Usatici-Barchinone-usalia-Cathalonie.jpg"},
     impact:{slug:"consulate-of-the-sea",name:"Consulate of the Sea",img:"/images/encyclopedia/consulate-of-the-sea.jpg",artist:"Kent Wang from Barcelona, Spain",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Llotja_de_la_Seda_(52042949244).jpg"},
-    decline:{slug:"corpus-de-sang",name:"Corpus de Sang",img:"/images/encyclopedia/corpus-de-sang.jpg",artist:"Hermenegildo Miralles - (print in the public domain... is more than 100 years old & author died more then 70 year...",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Els_segadors.jpg"}
+    decline:{slug:"corpus-de-sang",name:"Corpus de Sang",img:"/images/encyclopedia/corpus-de-sang.jpg",artist:"Hermenegildo Miralles - (print in the public domain... is more than 100 years old & author died more then 70 years ago)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Els_segadors.jpg"}
   },
   "Crown of Aragon": {
     foundation:{slug:"alfonso-i-of-aragon",name:"Alfonso I of Aragon",img:"/images/encyclopedia/alfonso-i-of-aragon.jpg",artist:"Willtron",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Dinero_chaqu%C3%A9s_cara_Alifonso_I.png"},
@@ -2281,7 +2281,7 @@ var SECTION_IMAGES = {
     foundation:{slug:"tomas-garrigue-masaryk",name:"Tomáš Garrigue Masaryk",img:"/images/encyclopedia/tomas-garrigue-masaryk.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tom%C3%A1%C5%A1_Garrigue_Masaryk_1925.PNG"},
     socioeconomy:{slug:"plzen",name:"Plzeň",img:"/images/encyclopedia/plzen.jpg",artist:"Isiwal Ra...",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Plze%C5%88_Montage_I.png"},
     military:{slug:"zb-vz-26",name:"ZB vz. 26",img:"/images/encyclopedia/zb-vz-26.jpg",artist:"Vitaly V. Kuzmin",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:ZB_vz._26_at_Great_Patriotic_War_museum_in_Smolensk.jpg"},
-    governance:{slug:"edvard-benes",name:"Edvard Beneš",img:"/images/encyclopedia/edvard-benes.jpg",artist:"Unknown . Transfer; United States. Office of War Information. Overseas Picture Division. Washington Division; 1944.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edvard_Bene%C5%A1.jpg"},
+    governance:{slug:"edvard-benes",name:"Edvard Beneš",img:"/images/encyclopedia/edvard-benes.jpg",artist:"Unknown. Transfer; United States. Office of War Information. Overseas Picture Division. Washington Division; 1944.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edvard_Bene%C5%A1.jpg"},
     impact:{slug:"lidice",name:"Lidice",img:"/images/encyclopedia/lidice.jpg",artist:"Miaow Miaow",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lidice_CZ_new_Lidice_municipal_office.JPG"},
     decline:{slug:"gustav-husak",name:"Gustáv Husák",img:"/images/encyclopedia/gustav-husak.jpg",artist:"kalendarakcii.bratislava.sk",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Gust%C3%A1v_Hus%C3%A1k_-_o%C5%99%C3%ADznuto.JPG"}
   },
@@ -3142,7 +3142,7 @@ var SECTION_IMAGES = {
   },
   "Bahá'í Faith": {
     origins:{slug:"shiraz",name:"Shiraz",img:"/images/encyclopedia/shiraz.jpg",artist:"آرش (Arche)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Darvaze_Ghoran11.jpg"},
-    community:{slug:"haifa",name:"Haifa",img:"/images/encyclopedia/haifa.jpg",artist:". Ray in Manila",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Hanging_Gardens_of_Haifa,_Israel_(50099173503)_(cropped).jpg"}
+    community:{slug:"haifa",name:"Haifa",img:"/images/encyclopedia/haifa.jpg",artist:"Ray in Manila",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Hanging_Gardens_of_Haifa,_Israel_(50099173503)_(cropped).jpg"}
   },
   "Buddhism": {
     origins:{slug:"bodh-gaya",name:"Bodh Gaya",img:"/images/encyclopedia/bodh-gaya.jpg",artist:"Amitabha Gupta",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Mahabodhi_temple_at_Bodhgaya_in_Bihar_21.jpg"},
@@ -4515,7 +4515,7 @@ var SECTION_IMAGES = {
     military:{slug:"jaffa",name:"Jaffa",img:"/images/encyclopedia/jaffa.jpg",artist:"Godot13",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg"},
     governance:{slug:"colonial-office",name:"Colonial Office",img:"/images/encyclopedia/colonial-office.jpg",artist:"Illustrated London News",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Foreign_and_India_Offices,_London,_1866_ILN.jpg"},
     impact:{slug:"holocaust",name:"Holocaust",img:"/images/encyclopedia/holocaust.jpg",artist:"Bernhard Walter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Selection_on_the_ramp_at_Auschwitz-Birkenau,_1944_(Auschwitz_Album)_1b.jpg"},
-    decline:{slug:"haifa",name:"Haifa",img:"/images/encyclopedia/haifa.jpg",artist:". Ray in Manila",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Hanging_Gardens_of_Haifa,_Israel_(50099173503)_(cropped).jpg"},
+    decline:{slug:"haifa",name:"Haifa",img:"/images/encyclopedia/haifa.jpg",artist:"Ray in Manila",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Hanging_Gardens_of_Haifa,_Israel_(50099173503)_(cropped).jpg"},
     summary:{slug:"jerusalem",name:"Jerusalem",img:"/images/encyclopedia/jerusalem.jpg",artist:"Godot13",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Temple_Mount_(Aerial_view,_2007)_07.jpg"}
   },
   "Qara Qoyunlu": {
@@ -4561,7 +4561,7 @@ var SECTION_IMAGES = {
     governance:{slug:"antialcidas",name:"Antialcidas",img:"/images/encyclopedia/antialcidas.jpg",artist:"CNG coins",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Antialcidas_portrait.jpg"},
     impact:{slug:"nagasena",name:"Nagasena",img:"/images/encyclopedia/nagasena.jpg",artist:"Horace van Ruith",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Milinda_ask_questions.jpg"},
     decline:{slug:"azes-i",name:"Azes I",img:"/images/encyclopedia/azes-i.jpg",artist:"Uploadalt",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_Azes_I.jpg"},
-    summary:{slug:"hermaeus",name:"Hermaeus",img:"/images/encyclopedia/hermaeus.jpg",artist:"CNG coins. . Used with permission (CNG coin [1]).",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hermaeus_profile.jpg"}
+    summary:{slug:"hermaeus",name:"Hermaeus",img:"/images/encyclopedia/hermaeus.jpg",artist:"CNG coins. Used with permission (CNG coin [1]).",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hermaeus_profile.jpg"}
   },
   "Travancore": {
     foundation:{slug:"marthanda-varma",name:"Marthanda Varma",img:"/images/encyclopedia/marthanda-varma.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Anizham_Thirunal_Marthanda_Varma.jpg"},

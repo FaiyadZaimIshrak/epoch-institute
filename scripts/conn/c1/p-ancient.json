@@ -1,0 +1,2825 @@
+[
+ {
+  "name": "A myth of Minoan Crete",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Theseus",
+    "slug": "theseus",
+    "quote": "Myths credit him with killing the Minotaur in Crete and with the synoecism, the union of the villages of Attica under Athens"
+   },
+   {
+    "label": "Minotaur",
+    "slug": "minotaur",
+    "quote": "The Minotaur is a creature of Greek mythology with the head of a bull and the body of a man, born to Pasiphaë, the wife of King Minos of Crete, and a bull"
+   },
+   {
+    "label": "Labyrinth",
+    "slug": "labyrinth",
+    "quote": "The Labyrinth, in Greek mythology, was the maze built by the craftsman Daedalus for King Minos of Crete to hold the Minotaur"
+   },
+   {
+    "label": "Ariadne",
+    "slug": "ariadne",
+    "quote": "Ariadne is a figure of Greek mythology, daughter of King Minos of Crete, who gave Theseus the thread that guided him out of the Labyrinth after he killed the Minotaur"
+   },
+   {
+    "label": "Daedalus",
+    "slug": "daedalus",
+    "quote": "Daedalus is a craftsman and inventor of Greek mythology, said to have built the Labyrinth at Knossos for King Minos to hold the Minotaur"
+   },
+   {
+    "label": "Minos",
+    "slug": "minos",
+    "quote": "Minos is a legendary king of Crete in Greek mythology, son of Zeus and Europa, said to have ruled from Knossos"
+   }
+  ]
+ },
+ {
+  "name": "Pharaohs who built pyramids",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Khufu",
+    "slug": "khufu",
+    "quote": "He built the Great Pyramid at Giza, the largest of the Egyptian pyramids and one of the Seven Wonders of the Ancient World"
+   },
+   {
+    "label": "Khafre",
+    "slug": "khafre",
+    "quote": "He built the second pyramid at Giza, and the Great Sphinx is generally attributed to his reign"
+   },
+   {
+    "label": "Menkaure",
+    "slug": "menkaure",
+    "quote": "He built the third and smallest of the main pyramids at Giza"
+   },
+   {
+    "label": "Djoser",
+    "slug": "djoser",
+    "quote": "Djoser was a king of ancient Egypt's Third Dynasty who reigned in the 27th century BCE. His Step Pyramid at Saqqara, designed according to tradition by his official Imhotep, was the first monumental stone building in Egypt"
+   },
+   {
+    "label": "Sneferu",
+    "slug": "sneferu",
+    "quote": "Sneferu was the founder of Egypt's Fourth Dynasty, reigning in the 26th century BCE. He built the Bent Pyramid and the Red Pyramid at Dahshur and completed the pyramid at Meidum, developing the first true pyramids"
+   },
+   {
+    "label": "Sahure",
+    "slug": "sahure",
+    "quote": "He built his pyramid at Abusir, whose causeway and temple reliefs show seagoing ships returning from an expedition, and the Palermo Stone"
+   }
+  ]
+ },
+ {
+  "name": "In Hannibal's story",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hamilcar Barca",
+    "slug": "hamilcar-barca",
+    "quote": "He drowned in 228 BCE; his son-in-law Hasdrubal and his son Hannibal continued his work"
+   },
+   {
+    "label": "Sagunto",
+    "slug": "sagunto",
+    "quote": "As Iberian and Roman Saguntum it was besieged and taken by Hannibal in 219 BCE, an event that led to the Second Punic War"
+   },
+   {
+    "label": "Alps",
+    "slug": "alps",
+    "quote": "Hannibal's crossing of the Alps with an army and elephants in 218 BCE is one of the most famous episodes of the Punic Empire's wars with Rome"
+   },
+   {
+    "label": "Prusias I",
+    "slug": "prusias-i-of-bithynia",
+    "quote": "He founded the city of Prusa, modern Bursa, and gave refuge to the Carthaginian general Hannibal, who served him as a commander before taking poison to avoid being handed over to Rome"
+   },
+   {
+    "label": "Zama",
+    "slug": "battle-of-zama",
+    "quote": "A Roman army under Publius Cornelius Scipio, strengthened by the Numidian cavalry of Masinissa, defeated Hannibal"
+   },
+   {
+    "label": "Scipio Africanus",
+    "slug": "scipio-africanus",
+    "quote": "His victory over Hannibal at Zama in 202 BCE ended the war"
+   }
+  ]
+ },
+ {
+  "name": "In Cleopatra's story",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ptolemy XII",
+    "slug": "ptolemy-xii-auletes",
+    "quote": "Ptolemy XII Auletes was king of Ptolemaic Egypt from 80 to 58 BCE and again from 55 to 51 BCE, and father of Cleopatra VII. Dependent on Roman goodwill, he paid huge sums to Roman politicians for recognition, was driven out by the"
+   },
+   {
+    "label": "Actium",
+    "slug": "battle-of-actium",
+    "quote": "The Battle of Actium was a naval battle fought in 31 BCE off western Greece between Octavian and the combined forces of Mark Antony and Cleopatra VII. Octavian's fleet under Agrippa won decisively"
+   },
+   {
+    "label": "Caesarion",
+    "slug": "caesarion",
+    "quote": "Caesarion, formally Ptolemy XV, was the son of Cleopatra VII and, by her account, of Julius Caesar"
+   },
+   {
+    "label": "Dendera",
+    "slug": "dendera-temple-complex",
+    "quote": "It is one of the best-preserved temples in Egypt, famous for its painted ceilings, a relief of Cleopatra VII and the Dendera zodiac"
+   },
+   {
+    "label": "Julius Caesar",
+    "slug": "julius-caesar",
+    "quote": "whose victory in civil war made him dictator, before his assassination in 44 BCE. His intervention in Egypt supported Cleopatra VII, and their relationship drew the Ptolemaic Empire into Roman politics"
+   },
+   {
+    "label": "Mark Antony",
+    "slug": "mark-antony",
+    "quote": "His alliance and relationship with Cleopatra VII bound him to the Ptolemaic Empire"
+   }
+  ]
+ },
+ {
+  "name": "In Attila's story",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ellac",
+    "slug": "ellac",
+    "quote": "Ellac was the eldest son of Attila"
+   },
+   {
+    "label": "Catalaunian Plains",
+    "slug": "battle-of-the-catalaunian-plains",
+    "quote": "The Battle of the Catalaunian Plains was fought in 451 in north-eastern Gaul between the Hunnic army of Attila and a coalition led by the Roman general Aetius and the Visigothic king Theodoric I. Theodoric was killed"
+   },
+   {
+    "label": "Aetius",
+    "slug": "flavius-aetius",
+    "quote": "Using Hunnic and other allies, he fought the Visigoths, Franks, Burgundians and Juthungi in Gaul, and in 451 halted Attila at the Battle of the Catalaunian Plains"
+   },
+   {
+    "label": "Aquileia",
+    "slug": "aquileia",
+    "quote": "Sacked by Attila in 452, it gave its name to the powerful Patriarchate of Aquileia"
+   },
+   {
+    "label": "Priscus",
+    "slug": "priscus",
+    "quote": "In 449 he accompanied an embassy to the court of Attila and wrote a vivid account of the Huns, describing their wooden palaces, banquets and the mixed peoples of the court"
+   },
+   {
+    "label": "Theodosius II",
+    "slug": "theodosius-ii",
+    "quote": "He paid large tributes to Attila's Huns and died after a riding accident"
+   }
+  ]
+ },
+ {
+  "name": "In the life of Socrates",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Xenophon",
+    "slug": "xenophon",
+    "quote": "Xenophon was an Athenian soldier, historian and philosopher of the late fifth and fourth centuries BCE, a pupil of Socrates"
+   },
+   {
+    "label": "Alcibiades",
+    "slug": "alcibiades",
+    "quote": "Alcibiades was an Athenian statesman and general and an associate of Socrates"
+   },
+   {
+    "label": "Aristophanes",
+    "slug": "aristophanes",
+    "quote": "Written largely during the Peloponnesian War, they mocked politicians such as Cleon, intellectuals including Socrates and the poet Euripides, and remain the main evidence for Athenian comic drama"
+   },
+   {
+    "label": "Delium",
+    "slug": "battle-of-delium",
+    "quote": "The philosopher Socrates fought on the Athenian side, and the battle ended Athenian plans to take Boeotia"
+   },
+   {
+    "label": "Aristippus",
+    "slug": "aristippus-of-cyrene",
+    "quote": "Aristippus of Cyrene was a Greek philosopher and pupil of Socrates who founded the Cyrenaic school"
+   },
+   {
+    "label": "Apology",
+    "slug": "apology-of-socrates",
+    "quote": "The Apology of Socrates is Plato's version of the speech Socrates gave in his own defence at his trial in Athens in 399 BCE on charges of impiety and corrupting the young"
+   }
+  ]
+ },
+ {
+  "name": "In the story of Moses",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ten Commandments",
+    "slug": "ten-commandments",
+    "quote": "The Ten Commandments, or Decalogue, are religious and ethical directives which according to the Hebrew Bible God gave to Moses"
+   },
+   {
+    "label": "Mount Sinai",
+    "slug": "mount-sinai",
+    "quote": "Mount Sinai is a mountain of about 2,285 metres in the south of the Sinai Peninsula in Egypt, traditionally identified as the biblical mountain where Moses received the Law"
+   },
+   {
+    "label": "Ark of the Covenant",
+    "slug": "ark-of-the-covenant",
+    "quote": "The Ark of the Covenant is, in the Hebrew Bible, a gilded wooden chest holding the tablets of the Law given to Moses"
+   },
+   {
+    "label": "The Exodus",
+    "slug": "the-exodus",
+    "quote": "It tells of the Israelites' bondage in Egypt, the plagues, their departure through a passage in the Red Sea under the leadership of Moses and the wanderings in the wilderness up to the borders of Canaan"
+   },
+   {
+    "label": "Deuteronomy",
+    "slug": "book-of-deuteronomy",
+    "quote": "Deuteronomy is the fifth book of the Torah and the Hebrew Bible, presented as the farewell speeches of Moses to the Israelites before they enter Canaan"
+   },
+   {
+    "label": "Joshua",
+    "slug": "book-of-joshua",
+    "quote": "The Book of Joshua is the sixth book of the Hebrew Bible, describing the Israelite conquest and division of Canaan under Moses' successor Joshua"
+   }
+  ]
+ },
+ {
+  "name": "In Augustus's story",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Agrippa",
+    "slug": "marcus-vipsanius-agrippa",
+    "quote": "Marcus Vipsanius Agrippa was a Roman general and statesman, the closest friend, son-in-law and chief lieutenant of Augustus"
+   },
+   {
+    "label": "Maecenas",
+    "slug": "gaius-maecenas",
+    "quote": "Gaius Maecenas was a Roman statesman and friend of Augustus, descended from an Etruscan noble family of Arretium"
+   },
+   {
+    "label": "Princeps",
+    "slug": "princeps",
+    "quote": "Princeps, meaning first citizen, was the title adopted by Augustus to describe his position after the end of the Roman Republic"
+   },
+   {
+    "label": "Cursus publicus",
+    "slug": "cursus-publicus",
+    "quote": "The cursus publicus was the state courier and transport service of the Roman Empire, established by Augustus, with relay stations along the main roads"
+   },
+   {
+    "label": "Juba II",
+    "slug": "juba-ii",
+    "quote": "Augustus made him client king of Mauretania in 25 BCE, and he married Cleopatra Selene, daughter of Cleopatra and Mark Antony"
+   },
+   {
+    "label": "Nicopolis",
+    "slug": "nicopolis-epirus",
+    "quote": "Nicopolis was a city in Epirus, on the peninsula north of modern Preveza in western Greece, founded by Octavian (Augustus) to commemorate his victory over Antony and Cleopatra at Actium in 31 BCE. Augustus moved the"
+   }
+  ]
+ },
+ {
+  "name": "In Nero's reign",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Poppaea Sabina",
+    "slug": "poppaea-sabina",
+    "quote": "Poppaea Sabina was a Roman noblewoman, wife of Otho and then, from 62 CE, of the emperor Nero"
+   },
+   {
+    "label": "Seneca",
+    "slug": "seneca-the-younger",
+    "quote": "Exiled to Corsica under the emperor Claudius in 41 CE, he was recalled in 49 to tutor the young Nero, and after Nero became emperor in 54 he served as his adviser, with the praetorian prefect Burrus"
+   },
+   {
+    "label": "Otho",
+    "slug": "otho",
+    "quote": "A friend of Nero, he was sent to govern Lusitania in 58 after Nero took his wife Poppaea Sabina, and ruled the province for ten years"
+   },
+   {
+    "label": "Galba",
+    "slug": "galba",
+    "quote": "Galba was a Roman senator who, as governor of Hispania Tarraconensis, was proclaimed emperor by his troops in 68 CE during the revolt against Nero"
+   },
+   {
+    "label": "Tiridates I",
+    "slug": "tiridates-i-of-armenia",
+    "quote": "Under the peace that followed, he travelled to Rome and was crowned by Nero in 66, so that both empires claimed a stake in Armenia"
+   },
+   {
+    "label": "Corinth Canal",
+    "slug": "corinth-canal",
+    "quote": "Projects to cut it date back to antiquity, including Nero's attempt in 67 CE. Built between 1881 and 1893, it is about 6.4 kilometres long but only around 21 metres wide, too narrow for most modern ships"
+   }
+  ]
+ },
+ {
+  "name": "Boudica's revolt",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Suetonius Paulinus",
+    "slug": "gaius-suetonius-paulinus",
+    "quote": "such as the Ordovices and attacked the druid centre on Anglesey in 60 CE. He then returned to defeat the revolt of Boudica and the Iceni, after which he was recalled"
+   },
+   {
+    "label": "Verulamium",
+    "slug": "verulamium",
+    "quote": "It became a self-governing municipium, was sacked by Boudica's rebels in 60 or 61, and was rebuilt with a forum and theatre"
+   },
+   {
+    "label": "Colchester",
+    "slug": "colchester",
+    "quote": "Boudica's rebels destroyed it in 60 or 61; it was rebuilt and walled, and its Norman castle stands on the temple's foundations"
+   },
+   {
+    "label": "Londinium",
+    "slug": "londinium",
+    "quote": "Destroyed by Boudica's revolt in 60 or 61, it was rebuilt and became the largest city and probable capital of Roman Britain, with a forum, basilica, amphitheatre and, from around 200, a defensive wall"
+   },
+   {
+    "label": "Classicianus",
+    "slug": "julius-classicianus",
+    "quote": "Gaius Julius Alpinus Classicianus was the Roman procurator, or chief financial officer, of Britain appointed after Boudica's revolt of 60 or 61"
+   },
+   {
+    "label": "Nero",
+    "slug": "nero",
+    "quote": "His reign saw the revolt of Boudica in Britain, the settlement with Parthia that placed Tiridates on the Armenian throne, the Great Fire of Rome in 64 and the persecution of Christians"
+   }
+  ]
+ },
+ {
+  "name": "In the reign of Ramesses II",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kadesh",
+    "slug": "battle-of-kadesh",
+    "quote": "of Kadesh was fought in 1274 BCE near Kadesh on the Orontes River in Syria between the Egyptian pharaoh Ramesses II and the Hittite king Muwatalli II. It is one of the best-documented chariot battles of antiquity and ended without a decisive"
+   },
+   {
+    "label": "Treaty of Kadesh",
+    "slug": "treaty-of-kadesh",
+    "quote": "The Treaty of Kadesh, also known as the Egyptian–Hittite peace treaty, was concluded in 1258 BCE between Ramesses II of Egypt and the Hittite king Hattusili III. It followed years of rivalry after the Battle of Kadesh and"
+   },
+   {
+    "label": "Ramesseum",
+    "slug": "ramesseum",
+    "quote": "The Ramesseum is the mortuary temple of the pharaoh Ramesses II on the west bank of the Nile at Thebes, near modern Luxor"
+   },
+   {
+    "label": "Abu Simbel",
+    "slug": "abu-simbel",
+    "quote": "Abu Simbel is a site on the Nile in Lower Nubia, southern Egypt, with two rock-cut temples built by Ramesses II in the 13th century BCE; the larger is fronted by four colossal seated statues of the king"
+   },
+   {
+    "label": "Merneptah",
+    "slug": "merneptah",
+    "quote": "Merneptah was the fourth king of the 19th Dynasty of Egypt, son and successor of Ramesses II. In his fifth year he defeated a Libyan invasion, joined by contingents of the Sea Peoples, at Perire in the western Delta"
+   },
+   {
+    "label": "Turin King List",
+    "slug": "turin-king-list",
+    "quote": "The Turin King List, or Turin Royal Canon, is an Egyptian papyrus written in hieratic in the reign of Ramesses II and now in the Museo Egizio in Turin"
+   }
+  ]
+ },
+ {
+  "name": "In Cyrus the Great's story",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Astyages",
+    "slug": "astyages",
+    "quote": "Astyages was the last king of the Median Empire in the sixth century BCE. According to tradition he was the grandfather of Cyrus the Great, who revolted against him"
+   },
+   {
+    "label": "Tomyris",
+    "slug": "tomyris",
+    "quote": "a nomadic Iranian people east of the Caspian Sea, in the 6th century BCE. According to Herodotus, after Cyrus the Great of Persia captured her son by a trick, she defeated the Persian army in 530 BCE, killed Cyrus and had his"
+   },
+   {
+    "label": "Anshan",
+    "slug": "anshan",
+    "quote": "Later the early Achaemenid rulers, including Cyrus the Great, used the title King of Anshan"
+   },
+   {
+    "label": "Cambyses II",
+    "slug": "cambyses-ii",
+    "quote": "Cambyses II was the second king of the Achaemenid Empire, the son and successor of Cyrus the Great, who ruled in the late sixth century BCE. He conquered Egypt after defeating Pharaoh Psamtik III at the"
+   },
+   {
+    "label": "Ecbatana",
+    "slug": "ecbatana",
+    "quote": "After Cyrus the Great conquered Media, it became one of the royal residences and administrative centres of the Achaemenid Empire, used especially as a summer capital"
+   },
+   {
+    "label": "Median Empire",
+    "slug": "median-empire",
+    "quote": "BCE. In alliance with Babylon, the Medes destroyed the Assyrian Empire, capturing Nineveh in 612 BCE. It was conquered by Cyrus the Great around 550 BCE, forming the basis of the Achaemenid Empire"
+   }
+  ]
+ },
+ {
+  "name": "In Hammurabi's story",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Law code",
+    "slug": "code-of-hammurabi",
+    "quote": "The Code of Hammurabi is a Babylonian law code issued around 1754 BCE by Hammurabi, king of the Babylonian Empire, inscribed on a basalt stele"
+   },
+   {
+    "label": "Sin-muballit",
+    "slug": "sin-muballit",
+    "quote": "Sin-muballit was a king of Babylon and the father of Hammurabi"
+   },
+   {
+    "label": "Samsu-iluna",
+    "slug": "samsu-iluna",
+    "quote": "Samsu-iluna was king of Babylon and the son and successor of Hammurabi"
+   },
+   {
+    "label": "Rim-Sin I",
+    "slug": "rim-sin-i",
+    "quote": "second millennium BCE. A contemporary letter quoted in accounts of the Babylonian Empire name him alongside Hammurabi as one of several kings of comparable strength"
+   },
+   {
+    "label": "Larsa",
+    "slug": "larsa",
+    "quote": "Under its king Rim-Sin it was one of the main rivals of Babylon in the early second millennium BCE. Hammurabi conquered Larsa in 1762 BCE, bringing southern Mesopotamia under the Babylonian Empire"
+   },
+   {
+    "label": "Eshnunna",
+    "slug": "eshnunna",
+    "quote": "It was a rival of Babylon and was finally destroyed by Hammurabi of the Babylonian Empire around 1755 BCE. Its location near Elam also tied it to the politics of the Elamite Confederation"
+   }
+  ]
+ },
+ {
+  "name": "Linked to Gilgamesh",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Uruk",
+    "slug": "uruk",
+    "quote": "It was the city of the legendary king Gilgamesh"
+   },
+   {
+    "label": "Ziusudra",
+    "slug": "ziusudra",
+    "quote": "In the Akkadian Epic of Gilgamesh the same figure appears as Utnapishtim, whom Gilgamesh visits in search of immortality"
+   },
+   {
+    "label": "Eanna",
+    "slug": "eanna",
+    "quote": "Kings rebuilt it for some three thousand years, and the Epic of Gilgamesh praises Uruk's walls and Eanna"
+   },
+   {
+    "label": "Aga of Kish",
+    "slug": "aga-of-kish",
+    "quote": "He is known chiefly from the Sumerian poem Gilgamesh and Aga, which tells how he besieged Uruk and was captured and then released by Gilgamesh"
+   },
+   {
+    "label": "Lugalbanda",
+    "slug": "lugalbanda",
+    "quote": "Lugalbanda was a legendary king of Uruk named in the Sumerian King List, said to be the father of Gilgamesh and the husband of the goddess Ninsun"
+   },
+   {
+    "label": "Kullaba",
+    "slug": "kullaba",
+    "quote": "In Sumerian poetry Kullaba is used as a name for Uruk itself, and Gilgamesh is called lord of Kullaba"
+   }
+  ]
+ },
+ {
+  "name": "Linked to Pericles",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lysias",
+    "slug": "lysias",
+    "quote": "His father Cephalus, a native of Syracuse, had settled at Athens at the invitation of Pericles; Lysias went to the colony of Thurii and was driven out in 412 BCE, returning to Athens, where he and his"
+   },
+   {
+    "label": "Second Sacred War",
+    "slug": "second-sacred-war",
+    "quote": "Sparta sent an army that took the sanctuary from the Phocians and handed it to the Delphians, after which Athens under Pericles marched in and returned it to the Phocians"
+   },
+   {
+    "label": "Alcmaeonidae",
+    "slug": "alcmaeonidae",
+    "quote": "Their members included the reformer Cleisthenes, and Pericles was an Alcmaeonid through his mother"
+   },
+   {
+    "label": "Sophocles",
+    "slug": "sophocles",
+    "quote": "Sophocles also served Athens as a treasurer of the Delian League and as a general alongside Pericles"
+   },
+   {
+    "label": "Phidias",
+    "slug": "phidias",
+    "quote": "Phidias was an Athenian sculptor, regarded in antiquity as the greatest of the Greeks, who supervised the sculpture of the Parthenon under Pericles"
+   },
+   {
+    "label": "Parthenon",
+    "slug": "parthenon",
+    "quote": "The Parthenon is the temple of Athena Parthenos on the Acropolis of Athens, built between 447 and 432 BCE under Pericles by the architects Ictinus and Callicrates, with sculpture supervised by Phidias"
+   }
+  ]
+ },
+ {
+  "name": "Egyptian writing",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hieroglyphs",
+    "slug": "egyptian-hieroglyphs",
+    "quote": "Egyptian hieroglyphs were the formal writing system of ancient Egypt, using pictorial signs for sounds and words"
+   },
+   {
+    "label": "Rosetta Stone",
+    "slug": "rosetta-stone",
+    "quote": "The Rosetta Stone is a granodiorite slab inscribed with a decree issued at Memphis in 196 BCE in the name of the Ptolemaic king Ptolemy V, written in Egyptian hieroglyphs, Demotic script and ancient Greek"
+   },
+   {
+    "label": "Champollion",
+    "slug": "jean-francois-champollion",
+    "quote": "Jean-François Champollion was a French philologist and orientalist, known as the decipherer of Egyptian hieroglyphs and a founding figure of Egyptology"
+   },
+   {
+    "label": "Thoth",
+    "slug": "thoth",
+    "quote": "He was believed to have invented hieroglyphs, kept the records of the gods and written down the verdict when the hearts of the dead were weighed"
+   },
+   {
+    "label": "Proto-Sinaitic",
+    "slug": "proto-sinaitic-script",
+    "quote": "in Middle Egypt dated to between 1900 and 1800 BCE. By the common theory, speakers of a Canaanite language made it from Egyptian hieroglyphs, using the sign for 'house' to write b, the first consonant of the Semitic baytu"
+   },
+   {
+    "label": "Meroitic script",
+    "slug": "meroitic-script",
+    "quote": "The Meroitic script was the writing system of the Kingdom of Kush in its Meroitic period, used from about the second century BCE. It existed in hieroglyphic and cursive forms derived from Egyptian writing"
+   }
+  ]
+ },
+ {
+  "name": "The ancient Olympics",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Milo of Croton",
+    "slug": "milo-of-croton",
+    "quote": "Milo of Croton was the most famous wrestler of ancient Greece, winning at the Olympic Games six times in the later 6th century BCE, as well as many victories at the other panhellenic games"
+   },
+   {
+    "label": "Cynisca",
+    "slug": "cynisca",
+    "quote": "Cynisca was a Spartan princess of the Eurypontid dynasty, daughter of King Archidamus II and sister of Agesilaus II, and the first woman to win at the Olympic Games"
+   },
+   {
+    "label": "Antikythera mechanism",
+    "slug": "antikythera-mechanism",
+    "quote": "The oldest known example of an analogue computer, it could predict astronomical positions and eclipses decades in advance and track the four-year cycle of the ancient Olympic Games"
+   },
+   {
+    "label": "Pindar",
+    "slug": "pindar",
+    "quote": "His victory odes for winners at the Olympic, Pythian, Isthmian and Nemean games, written for rulers and aristocrats across the Greek world from Sicily to Cyrene and Rhodes, survive in four books"
+   },
+   {
+    "label": "Cylon",
+    "slug": "cylon-of-athens",
+    "quote": "Cylon was an Athenian noble and Olympic victor who tried to make himself tyrant of Athens, probably in 632 BCE, with help from his father-in-law Theagenes, tyrant of Megara"
+   },
+   {
+    "label": "Olympia",
+    "slug": "olympia",
+    "quote": "Olympia was a sanctuary of Zeus in the western Peloponnese, in the valley of the Alpheios in Elis, where the Olympic Games were held, traditionally from 776 BCE. Its sacred precinct, the Altis, contained the Temple of Zeus with Phidias's gold"
+   }
+  ]
+ },
+ {
+  "name": "Legends of early Rome",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Aeneas",
+    "slug": "aeneas",
+    "quote": "Aeneas is a Trojan hero of Greek and Roman legend, son of the prince Anchises and the goddess Venus (Aphrodite)"
+   },
+   {
+    "label": "Cincinnatus",
+    "slug": "cincinnatus",
+    "quote": "Lucius Quinctius Cincinnatus was a Roman statesman of the 5th century BCE. According to tradition he was called from ploughing his farm in 458 BCE to"
+   },
+   {
+    "label": "Lake Regillus",
+    "slug": "battle-of-lake-regillus",
+    "quote": "The Battle of Lake Regillus was a legendary victory of the early Roman Republic over the Latin League, traditionally dated around 496 BCE, near Tusculum in the Alban Hills"
+   },
+   {
+    "label": "Camillus",
+    "slug": "marcus-furius-camillus",
+    "quote": "the Etruscan city of Veii in 396 BCE after a long siege, and Roman tradition credited him with saving Rome after the Gallic sack of about 390 BCE. He was celebrated as a second founder of Rome, though much of his"
+   },
+   {
+    "label": "Lars Porsenna",
+    "slug": "lars-porsenna",
+    "quote": "Lars Porsenna was an Etruscan king of Clusium (modern Chiusi) who, in Roman tradition, attacked Rome around 508 BCE after the expulsion of its last king, Tarquinius Superbus"
+   },
+   {
+    "label": "Coriolanus",
+    "slug": "gnaeus-marcius-coriolanus",
+    "quote": "Gnaeus Marcius Coriolanus was a legendary Roman hero of the early 5th century BCE, said to have earned his name by capturing the Volscian town of Corioli"
+   }
+  ]
+ },
+ {
+  "name": "Egypt's sun-disc revolution",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Akhenaten",
+    "slug": "akhenaten",
+    "quote": "Akhenaten was an Egyptian pharaoh of the Eighteenth Dynasty who reigned c. 1353–1336 BCE. He promoted the exclusive worship of the sun disc, the Aten, and moved the capital to a new city, Akhetaten (Amarna)"
+   },
+   {
+    "label": "Akhetaten",
+    "slug": "akhetaten",
+    "quote": "Akhetaten, known today as Amarna, was the capital city founded by the pharaoh Akhenaten in Middle Egypt in the fourteenth century BCE. It was abandoned soon after his death"
+   },
+   {
+    "label": "Aten",
+    "slug": "aten",
+    "quote": "Already honoured under Amenhotep III, it was raised by his son Akhenaten in the fourteenth century BCE above all other gods, whose cults, especially that of Amun, were suppressed"
+   },
+   {
+    "label": "Amarna letters",
+    "slug": "amarna-letters",
+    "quote": "The Amarna letters are a set of clay tablets from the 14th century BCE, discovered at Amarna in Egypt, recording diplomatic correspondence between Egyptian pharaohs and other rulers"
+   },
+   {
+    "label": "Great Hymn",
+    "slug": "great-hymn-to-the-aten",
+    "quote": "The Great Hymn to the Aten is the longest of several hymn-poems addressed to the Aten, the sun-disk worshipped as the supreme god under the 18th Dynasty pharaoh Akhenaten"
+   },
+   {
+    "label": "Tutankhamun",
+    "slug": "tutankhamun",
+    "quote": "Born Tutankhaten in the reign of Akhenaten, he restored the traditional religion after Atenism, restoring the cult of Amun at Thebes, changing his name and moving the court from Amarna back to Memphis"
+   }
+  ]
+ },
+ {
+  "name": "Caesar's conquest of Gaul",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alesia",
+    "slug": "battle-of-alesia",
+    "quote": "The Battle of Alesia was the decisive siege of the Gallic Wars, fought in 52 BCE at the hill-fort of the Mandubii, probably at Alise-Sainte-Reine in Burgundy"
+   },
+   {
+    "label": "Gergovia",
+    "slug": "gergovia",
+    "quote": "In 52 BCE Vercingetorix defended it against Julius Caesar, whose assault was repulsed with heavy losses, one of Caesar's rare defeats"
+   },
+   {
+    "label": "Sabis",
+    "slug": "battle-of-the-sabis",
+    "quote": "The Nervii, with the Atrebates and Viromandui, surprised Julius Caesar's legions while they were making camp"
+   },
+   {
+    "label": "Avaricum",
+    "slug": "avaricum",
+    "quote": "In 52 BCE, during the revolt of Vercingetorix, Julius Caesar besieged and stormed it, and according to Caesar almost all its 40,000 inhabitants were killed"
+   },
+   {
+    "label": "Bibracte",
+    "slug": "bibracte",
+    "quote": "In 58 BCE Caesar defeated the Helvetii nearby, and in 52 BCE a Gallic assembly there confirmed Vercingetorix as leader of the revolt"
+   },
+   {
+    "label": "Ariovistus",
+    "slug": "ariovistus",
+    "quote": "In 58 BCE Julius Caesar defeated him in Alsace and drove his army back across the Rhine"
+   }
+  ]
+ },
+ {
+  "name": "Ptolemaic Alexandria",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Great Library",
+    "slug": "library-of-alexandria",
+    "quote": "The Library of Alexandria was the great library founded under the Ptolemaic kings in Alexandria in the third century BCE, part of the Mouseion research institution"
+   },
+   {
+    "label": "Mouseion",
+    "slug": "mouseion",
+    "quote": "The Mouseion was a research institution founded in Alexandria under the early Ptolemaic kings, dedicated to the Muses"
+   },
+   {
+    "label": "Pharos",
+    "slug": "lighthouse-of-alexandria",
+    "quote": "The Lighthouse of Alexandria, or Pharos, was a tower built on the island of Pharos at Alexandria in Egypt under the first Ptolemaic kings and"
+   },
+   {
+    "label": "Serapeum",
+    "slug": "serapeum-of-alexandria",
+    "quote": "The Serapeum of Alexandria was the great temple of the god Serapis, founded under Ptolemy III in the third century BCE and rebuilt in Roman times"
+   },
+   {
+    "label": "Euclid",
+    "slug": "euclid",
+    "quote": "Euclid was a Greek mathematician of Alexandria, active around 300 BCE, whose Elements became the foundational textbook of geometry"
+   },
+   {
+    "label": "Callimachus",
+    "slug": "callimachus",
+    "quote": "Callimachus was a Greek poet, scholar and librarian of the 3rd century BCE, born into a prominent family of Cyrene and active in Alexandria under the Ptolemies"
+   }
+  ]
+ },
+ {
+  "name": "Rulers of Ptolemaic Egypt",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ptolemy I",
+    "slug": "ptolemy-i-soter",
+    "quote": "Ptolemy I Soter was a Macedonian general of Alexander the Great who became ruler of Egypt after Alexander's death"
+   },
+   {
+    "label": "Ptolemy II",
+    "slug": "ptolemy-ii-philadelphus",
+    "quote": "Ptolemy II Philadelphus was king of Egypt from 283 to 246 BCE, born on Kos"
+   },
+   {
+    "label": "Arsinoe II",
+    "slug": "arsinoe-ii",
+    "quote": "Arsinoe II was a Hellenistic queen, daughter of Ptolemy I Soter, who was successively the wife of King Lysimachus of Thrace, of her half-brother Ptolemy Keraunos and of her brother Ptolemy II Philadelphus of Egypt"
+   },
+   {
+    "label": "Ptolemy III",
+    "slug": "ptolemy-iii-euergetes",
+    "quote": "Ptolemy III Euergetes was king of Ptolemaic Egypt from 246 to 222 BCE. His marriage to Berenice II, daughter of Magas of Cyrene, reunited Cyrenaica with Egypt, and the city of Euesperides was refounded as Berenice in her honour"
+   },
+   {
+    "label": "Berenice II",
+    "slug": "berenice-ii",
+    "quote": "Berenice II was the daughter of Magas, king of Cyrene, and queen of Ptolemaic Egypt"
+   },
+   {
+    "label": "Ptolemy VIII",
+    "slug": "ptolemy-viii-physcon",
+    "quote": "Ptolemy VIII, nicknamed Physcon, was a Ptolemaic king who quarrelled for decades with his brother Ptolemy VI. In 163 BCE Rome settled the dispute by giving him Cyrenaica as a separate kingdom"
+   }
+  ]
+ },
+ {
+  "name": "Athenian democracy",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ecclesia",
+    "slug": "ecclesia-ancient-greece",
+    "quote": "The ecclesia, or ekklesia, was the assembly of the citizens in the city-states of ancient Greece, best known from Athens, where it was open to all male citizens; in 594"
+   },
+   {
+    "label": "Boule",
+    "slug": "boule-ancient-greece",
+    "quote": "Athens is the best documented: under Solon it had 400 members, 100 from each of the four tribes, and after 508 BCE Cleisthenes made it a council of 500, 50 from each of his ten new tribes, chosen by lot from male citizens aged 30 or more"
+   },
+   {
+    "label": "Ostracism",
+    "slug": "ostracism",
+    "quote": "Ostracism was an Athenian procedure by which the Assembly could exile a leading citizen for ten years without loss of property, by writing his name on potsherds, ostraka"
+   },
+   {
+    "label": "Solon's laws",
+    "slug": "solonian-constitution",
+    "quote": "The Solonian constitution was the body of laws and reforms given to Athens by Solon in the early 6th century BCE, when the state was close to falling apart through quarrels between its parties"
+   },
+   {
+    "label": "Cleisthenes",
+    "slug": "cleisthenes",
+    "quote": "Cleisthenes was an Athenian statesman of the Alcmaeonid family, regarded as the founder of Athenian democracy"
+   },
+   {
+    "label": "Ephialtes",
+    "slug": "ephialtes-athenian-statesman",
+    "quote": "democratic politician who in 462/461 BCE carried reforms that stripped the aristocratic Council of the Areopagus of most of its political and judicial powers, transferring them to the Council of Five Hundred, the Assembly"
+   }
+  ]
+ },
+ {
+  "name": "Britain against Rome",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Caratacus",
+    "slug": "caratacus",
+    "quote": "Caratacus was a British chieftain, son of Cunobelinus of the Catuvellauni, who led resistance to the Roman invasion of 43 CE. After the fall of his homeland he continued the war among the Silures and Ordovices of"
+   },
+   {
+    "label": "Cartimandua",
+    "slug": "cartimandua",
+    "quote": "In 51 she handed over the fugitive British leader Caratacus to the Romans"
+   },
+   {
+    "label": "Calgacus",
+    "slug": "calgacus",
+    "quote": "Calgacus was a Caledonian leader who, according to Tacitus, led the peoples of northern Britain against the Roman governor Agricola at the Battle of Mons Graupius in 83 or 84 CE. Tacitus gives him a famous speech against"
+   },
+   {
+    "label": "Cassivellaunus",
+    "slug": "cassivellaunus",
+    "quote": "Cassivellaunus was a British war leader who led the resistance to Julius Caesar's second invasion of Britain in 54 BCE. Ruling north of the Thames, he harassed the Romans with chariot"
+   },
+   {
+    "label": "Venutius",
+    "slug": "venutius",
+    "quote": "After their divorce he led the anti-Roman faction against her, and in 69 he drove her out of the kingdom, taking advantage of Rome's civil war"
+   },
+   {
+    "label": "Mons Graupius",
+    "slug": "battle-of-mons-graupius",
+    "quote": "The Battle of Mons Graupius was fought in 83 or 84 CE in north-eastern Scotland between a Roman army under Gnaeus Julius Agricola and the Caledonians, whose leader Tacitus names as Calgacus"
+   }
+  ]
+ },
+ {
+  "name": "In Mithridates VI's story",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Panticapaeum",
+    "slug": "panticapaeum",
+    "quote": "Mithridates VI of Pontus died there in 63 BCE. The remains of its acropolis lie on Mount Mithridates in the centre of Kerch"
+   },
+   {
+    "label": "Asiatic Vespers",
+    "slug": "asiatic-vespers",
+    "quote": "The Asiatic Vespers was the massacre of Romans and Italians in the province of Asia and neighbouring regions ordered by Mithridates VI of Pontus in 88 BCE, during the First Mithridatic War"
+   },
+   {
+    "label": "Lex Manilia",
+    "slug": "lex-manilia",
+    "quote": "The Lex Manilia was a Roman law proposed by the tribune Gaius Manilius in 66 BCE that gave Pompey command of the war against Mithridates VI of Pontus and Tigranes of Armenia, with very wide powers in the east"
+   },
+   {
+    "label": "Sulla",
+    "slug": "sulla",
+    "quote": "After serving in the Jugurthine War and the Social War, he fought the First Mithridatic War against Mithridates VI, sacking Athens in 86 BCE. He then marched on Rome, won the civil war against the followers of Marius, and as"
+   },
+   {
+    "label": "Pharnaces II",
+    "slug": "pharnaces-ii-of-pontus",
+    "quote": "Pharnaces II was a son of Mithridates VI of Pontus"
+   },
+   {
+    "label": "Mozart's opera",
+    "slug": "mitridate-re-di-ponto",
+    "quote": "It tells of Mithridates VI of Pontus and his two sons' rivalry for his betrothed, Aspasia, and was Mozart's first great success in Italy"
+   }
+  ]
+ },
+ {
+  "name": "In Diocletian's reign",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Maximian",
+    "slug": "maximian",
+    "quote": "Maximian was a Roman emperor, raised by Diocletian to be his colleague and ruler of the west, as Caesar in 285 and Augustus in 286"
+   },
+   {
+    "label": "Galerius",
+    "slug": "galerius",
+    "quote": "Galerius was a Roman emperor of the Tetrarchy, made Caesar under Diocletian in 293 and senior emperor in the east from 305 to 311"
+   },
+   {
+    "label": "Nicomedia",
+    "slug": "nicomedia",
+    "quote": "Under Rome it became the chief city of the province of Bithynia, and Diocletian made it his main residence and an eastern imperial capital in the late 3rd century"
+   },
+   {
+    "label": "Januarius",
+    "slug": "januarius",
+    "quote": "Januarius (San Gennaro) was a bishop of Benevento martyred around 305, probably in the persecution of Diocletian"
+   },
+   {
+    "label": "Brač",
+    "slug": "brac",
+    "quote": "It is famous for its white limestone, quarried since Roman times and used in Diocletian's Palace in Split"
+   },
+   {
+    "label": "Eulalia",
+    "slug": "eulalia-of-merida",
+    "quote": "Eulalia of Mérida was a young Christian martyred at Emerita Augusta, capital of Roman Lusitania, in 304 during the persecution of Diocletian"
+   }
+  ]
+ },
+ {
+  "name": "Minoan Crete",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Knossos",
+    "slug": "knossos",
+    "quote": "Knossos is an archaeological site on Kephala hill near Heraklion in Crete, Greece, occupied from about 7000 BCE into the early Byzantine period and the largest centre of the Minoan civilisation"
+   },
+   {
+    "label": "Phaistos",
+    "slug": "phaistos",
+    "quote": "Phaistos is a Bronze Age archaeological site in south-central Crete, Greece, with the remains of a Minoan palace and the town around it, one of the largest cities of Minoan Crete"
+   },
+   {
+    "label": "Malia",
+    "slug": "palace-of-malia",
+    "quote": "The Palace of Malia is a Minoan palace and settlement site 3 kilometres east of the town of Malia in Crete, Greece"
+   },
+   {
+    "label": "Phaistos Disc",
+    "slug": "phaistos-disc",
+    "quote": "The Phaistos Disc is a clay disc found by the Italian archaeologist Luigi Pernier in the Minoan palace of Phaistos on Crete in 1908"
+   },
+   {
+    "label": "Linear A",
+    "slug": "linear-a",
+    "quote": "Linear A is the undeciphered script used by the Minoans of Crete for administration and religious inscriptions from about 1800 to 1450 BCE. Written on clay tablets, sealings and stone vessels, it records an unknown language"
+   },
+   {
+    "label": "Kamares ware",
+    "slug": "kamares-ware",
+    "quote": "Kamares ware is a fine Minoan pottery of the Protopalatial period on Crete, named after the Kamares cave on Mount Ida where it was first found"
+   }
+  ]
+ },
+ {
+  "name": "Mycenaean Greece",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lion Gate",
+    "slug": "lion-gate",
+    "quote": "The Lion Gate is the main entrance to the citadel of Mycenae in southern Greece, built around 1250 BCE. Above its lintel a triangular relief shows two lions facing a"
+   },
+   {
+    "label": "Treasury of Atreus",
+    "slug": "treasury-of-atreus",
+    "quote": "The Treasury of Atreus is a monumental tholos tomb at Mycenae in southern Greece, built around 1250 BCE. Its corbelled stone dome, over 13 metres high, was the largest in the world for more than a thousand years"
+   },
+   {
+    "label": "Mask of Agamemnon",
+    "slug": "mask-of-agamemnon",
+    "quote": "The Mask of Agamemnon is a gold funerary mask found by Heinrich Schliemann in 1876 in Grave V of Grave Circle A at Mycenae, now in the National Archaeological Museum in Athens"
+   },
+   {
+    "label": "Grave Circle A",
+    "slug": "grave-circle-a",
+    "quote": "Grave Circle A is a royal cemetery just south of the Lion Gate of Mycenae in southern Greece, a circle 27.5 metres across with six shaft graves used from about 1600 to 1500 BCE. Its"
+   },
+   {
+    "label": "Tiryns",
+    "slug": "tiryns",
+    "quote": "Tiryns is a Mycenaean archaeological site in the Argolis, in the Peloponnese of Greece, a hill fort that was at its most important between about 1400"
+   },
+   {
+    "label": "Palace of Nestor",
+    "slug": "palace-of-nestor",
+    "quote": "The Palace of Nestor is a Mycenaean palace site on the hill of Epano Englianos in Messenia, Greece, about 17 kilometres north of Pylos, traditionally identified with the palace of Homer's King Nestor at \"sandy Pylos\""
+   }
+  ]
+ },
+ {
+  "name": "Ancient Ephesus",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Temple of Artemis",
+    "slug": "temple-of-artemis",
+    "quote": "The Temple of Artemis at Ephesus, the Artemision, was a great sanctuary of the goddess and one of the Seven Wonders of the ancient world"
+   },
+   {
+    "label": "Chersiphron",
+    "slug": "chersiphron",
+    "quote": "Chersiphron of Knossos was a Cretan architect of the sixth century BCE who, with his son Metagenes, designed and began the archaic Temple of Artemis at Ephesus, one of the first great marble temples of the Ionic order"
+   },
+   {
+    "label": "Herostratus",
+    "slug": "herostratus",
+    "quote": "Herostratus was a man of Ephesus who in 356 BCE set fire to the Temple of Artemis, traditionally on the night Alexander the Great was born, in order to win lasting fame"
+   },
+   {
+    "label": "Heraclitus",
+    "slug": "heraclitus",
+    "quote": "Heraclitus was a Greek philosopher of Ephesus who lived around 500 BCE. His book of sayings, known only from fragments, taught that the world is in"
+   },
+   {
+    "label": "Androclus",
+    "slug": "androclus",
+    "quote": "Androclus was the legendary founder of Ephesus, said to be a son of King Codrus of Athens who led Ionian settlers across the Aegean"
+   },
+   {
+    "label": "Hipponax",
+    "slug": "hipponax",
+    "quote": "Hipponax of Ephesus was a Greek iambic poet of the sixth century BCE who was expelled from Ephesus by its tyrants and lived at Clazomenae"
+   }
+  ]
+ },
+ {
+  "name": "From ancient Samos",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Polycrates",
+    "slug": "polycrates",
+    "quote": "Polycrates was tyrant of Samos from about 538 to 522 BCE. With a fleet of a hundred penteconters and a thousand archers he made Samos the"
+   },
+   {
+    "label": "Eupalinos",
+    "slug": "eupalinos",
+    "quote": "Eupalinos of Megara was a Greek engineer of the sixth century BCE who built the aqueduct tunnel on Samos for the tyrant Polycrates"
+   },
+   {
+    "label": "Heraion",
+    "slug": "heraion-of-samos",
+    "quote": "The Heraion of Samos was the great sanctuary of the goddess Hera on Samos, near the mouth of the Imbrasos river, where tradition placed her birth"
+   },
+   {
+    "label": "Aristarchus",
+    "slug": "aristarchus-of-samos",
+    "quote": "Aristarchus of Samos was a Greek astronomer and mathematician of the third century BCE. He was the first known thinker to propose that the Earth and planets revolve around the Sun, an idea that found little acceptance in antiquity"
+   },
+   {
+    "label": "Syloson",
+    "slug": "syloson",
+    "quote": "Syloson was a brother of Polycrates, tyrant of Samos, who banished him"
+   },
+   {
+    "label": "Epicurus",
+    "slug": "epicurus",
+    "quote": "Epicurus was a Greek philosopher, born on Samos to Athenian settlers, who founded the Epicurean school"
+   }
+  ]
+ },
+ {
+  "name": "Ancient Syracuse",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Dionysius I",
+    "slug": "dionysius-i-of-syracuse",
+    "quote": "Dionysius I was tyrant of Syracuse from 405 to 367 BCE and the most powerful Greek ruler in the west of his time"
+   },
+   {
+    "label": "Hiero II",
+    "slug": "hiero-ii-of-syracuse",
+    "quote": "Hiero II of Syracuse was a general who seized power in Syracuse and took the title of king after defeating the Mamertines at the"
+   },
+   {
+    "label": "Marcellus",
+    "slug": "marcus-claudius-marcellus",
+    "quote": "In the Second Punic War he besieged Syracuse from 214 BCE and took it in 212 BCE, when Archimedes was killed and the city's art was carried to Rome"
+   },
+   {
+    "label": "Archimedes",
+    "slug": "archimedes",
+    "quote": "Archimedes of Syracuse was the greatest mathematician and engineer of the ancient Greek world"
+   },
+   {
+    "label": "Arethusa",
+    "slug": "fountain-of-arethusa",
+    "quote": "The Fountain of Arethusa is a freshwater spring on the island of Ortygia in Syracuse, Sicily, rising a few metres from the sea"
+   },
+   {
+    "label": "Ortygia",
+    "slug": "ortygia",
+    "quote": "Ortygia is a small island forming the historic centre of Syracuse in Sicily, joined to the mainland by bridges"
+   }
+  ]
+ },
+ {
+  "name": "Greek lyric poets",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alcaeus",
+    "slug": "alcaeus",
+    "quote": "Alcaeus was a Greek lyric poet of Mytilene on Lesbos and a contemporary of Sappho"
+   },
+   {
+    "label": "Anacreon",
+    "slug": "anacreon",
+    "quote": "Anacreon was a Greek lyric poet from Teos in Ionia, famous for short songs about love and wine"
+   },
+   {
+    "label": "Simonides",
+    "slug": "simonides-of-ceos",
+    "quote": "Simonides of Ceos was a Greek lyric poet from Ioulis on the island of Keos"
+   },
+   {
+    "label": "Bacchylides",
+    "slug": "bacchylides",
+    "quote": "Bacchylides was a Greek lyric poet from Ioulis on the island of Keos and the nephew of Simonides"
+   },
+   {
+    "label": "Archilochus",
+    "slug": "archilochus",
+    "quote": "Archilochus was a Greek lyric poet from the island of Paros, active in the 7th century BCE and regarded in antiquity as the master of iambic verse"
+   },
+   {
+    "label": "Stesichorus",
+    "slug": "stesichorus",
+    "quote": "Stesichorus was a Greek lyric poet of the late 7th and 6th centuries BCE, associated with Himera in Sicily"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Macedon",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Perdiccas II",
+    "slug": "perdiccas-ii-of-macedon",
+    "quote": "Perdiccas II was king of Macedon from about 448 to about 413 BCE, who repeatedly changed sides between Athens and Sparta in the Peloponnesian War"
+   },
+   {
+    "label": "Amyntas III",
+    "slug": "amyntas-iii-of-macedon",
+    "quote": "Amyntas III was king of Macedon from about 393 to 370 BCE and father of Philip II. His reign was beset by Illyrian invasions and rival"
+   },
+   {
+    "label": "Philip V",
+    "slug": "philip-v-of-macedon",
+    "quote": "Philip V of Macedon was Antigonid king of Macedonia from 221 to 179 BCE. He expanded Macedonian power in Greece, Crete and the Aegean, allied with Hannibal and took Bylazora in Paeonia"
+   },
+   {
+    "label": "Perseus",
+    "slug": "perseus-of-macedon",
+    "quote": "Perseus was the last king of the Antigonid dynasty of Macedonia, son of Philip V, reigning from 179 to 168 BCE. Rome went to war with him in the Third"
+   },
+   {
+    "label": "Antigonus II",
+    "slug": "antigonus-ii-gonatas",
+    "quote": "Antigonus II Gonatas was king of Macedon and son of Demetrius Poliorcetes"
+   },
+   {
+    "label": "Antigonus III",
+    "slug": "antigonus-iii-doson",
+    "quote": "Antigonus III Doson was king of Macedon from 229 BCE. Called in by the Achaean League against Cleomenes III of Sparta, he took cities in Arcadia"
+   }
+  ]
+ },
+ {
+  "name": "Stories told by Herodotus",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Candaules",
+    "slug": "candaules",
+    "quote": "Herodotus tells how Candaules, proud of his wife's beauty, made his bodyguard Gyges see her naked, and how the queen then forced Gyges to kill the king and marry her"
+   },
+   {
+    "label": "Gyges",
+    "slug": "gyges-of-lydia",
+    "quote": "Herodotus tells how he killed the last Heraclid king, Candaules, and took his throne and queen"
+   },
+   {
+    "label": "Harpagus",
+    "slug": "harpagus",
+    "quote": "Harpagus was a Median noble who, according to Herodotus, saved the infant Cyrus from death ordered by King Astyages and later helped Cyrus overthrow him around 550"
+   },
+   {
+    "label": "Democedes",
+    "slug": "democedes",
+    "quote": "Democedes of Croton was a Greek physician of the 6th century BCE. According to Herodotus he practised at Aegina, Athens and the court of Polycrates of Samos, was taken to Persia as a captive and"
+   },
+   {
+    "label": "Histiaeus",
+    "slug": "histiaeus",
+    "quote": "Histiaeus was the tyrant of Miletus under the Persian king Darius I in the late 6th century BCE. According to Herodotus he guarded Darius's bridge over the Danube during the Scythian campaign and was later kept at the Persian"
+   },
+   {
+    "label": "Thrasybulus",
+    "slug": "thrasybulus-of-miletus",
+    "quote": "Thrasybulus was the tyrant of Miletus in the late 7th and early 6th centuries BCE. Herodotus relates that during a long Lydian war he deceived King Alyattes by heaping up grain and holding feasts while the"
+   }
+  ]
+ },
+ {
+  "name": "Institutions of the Roman Republic",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Consul",
+    "slug": "consul",
+    "quote": "A consul was the highest elected magistrate of the Roman Republic, two being elected annually to command armies and preside over the government"
+   },
+   {
+    "label": "Senate",
+    "slug": "roman-senate",
+    "quote": "Under the Roman Republic it directed foreign policy, finance and war, while under the emperors its authority became largely formal"
+   },
+   {
+    "label": "Plebeians",
+    "slug": "plebeians",
+    "quote": "The plebeians were the body of ordinary Roman citizens, as distinct from the aristocratic patricians in the early Republic"
+   },
+   {
+    "label": "Equites",
+    "slug": "equites",
+    "quote": "The equites, or equestrian order, were the second rank of the Roman aristocracy below the senators"
+   },
+   {
+    "label": "Tributum",
+    "slug": "tributum",
+    "quote": "Tributum was a direct tax in ancient Rome"
+   },
+   {
+    "label": "Dictator",
+    "slug": "dictatorship",
+    "quote": "Dictatorship began as a lawful Roman office, supreme power granted for a single emergency and surrendered when it passed"
+   }
+  ]
+ },
+ {
+  "name": "Early Christianity in the Caucasus",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gregory the Illuminator",
+    "slug": "gregory-the-illuminator",
+    "quote": "Gregory the Illuminator was the founder and first head of the Armenian Church"
+   },
+   {
+    "label": "Mirian III",
+    "slug": "mirian-iii-of-iberia",
+    "quote": "Mirian III was king of Iberia, or Kartli, in eastern Georgia in the early 4th century and the first Christian ruler of the country"
+   },
+   {
+    "label": "Saint Nino",
+    "slug": "saint-nino",
+    "quote": "Saint Nino was a woman, traditionally from Cappadocia, who brought Christianity to the Kingdom of Iberia in eastern Georgia in the early 4th century"
+   },
+   {
+    "label": "Mesrop Mashtots",
+    "slug": "mesrop-mashtots",
+    "quote": "Mesrop Mashtots was an Armenian monk and scholar who created the Armenian alphabet around 405 with the support of King Vramshapuh and the Catholicos Sahak"
+   },
+   {
+    "label": "Etchmiadzin",
+    "slug": "etchmiadzin-cathedral",
+    "quote": "Etchmiadzin Cathedral, in the city of Vagharshapat in Armenia, is the mother church of the Armenian Apostolic Church and the seat of its Catholicos"
+   },
+   {
+    "label": "Bolnisi Sioni",
+    "slug": "bolnisi-sioni",
+    "quote": "Bolnisi Sioni is a basilica church in the Kvemo Kartli region of southern Georgia, built between 478 and 493 and the oldest surviving dated church in Georgia"
+   }
+  ]
+ },
+ {
+  "name": "Written in Luwian hieroglyphs",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Karatepe",
+    "slug": "karatepe",
+    "quote": "Excavated from 1947 by Helmuth Bossert and Halet Çambel, its gate reliefs carry long bilingual inscriptions in Phoenician and Luwian hieroglyphs that proved key to deciphering hieroglyphic Luwian"
+   },
+   {
+    "label": "Çineköy inscription",
+    "slug": "cinekoy-inscription",
+    "quote": "The Çineköy inscription is a bilingual text in Luwian hieroglyphs and Phoenician carved on the base of a statue of the storm god found in 1997 at Çineköy, south of Adana in Turkey"
+   },
+   {
+    "label": "Karabel relief",
+    "slug": "karabel-relief",
+    "quote": "The Karabel relief is a Late Bronze Age rock carving at the Karabel pass near Izmir in western Turkey, showing a warrior with bow and spear accompanied by a Luwian hieroglyphic inscription"
+   },
+   {
+    "label": "Hartapu",
+    "slug": "hartapu",
+    "quote": "Hartapu was a great king who ruled in south-central Anatolia after the fall of the Hittite Empire, known from Luwian hieroglyphic inscriptions at Kızıldağ, Karadağ and Burunkaya"
+   },
+   {
+    "label": "Warpalawa",
+    "slug": "warpalawa",
+    "quote": "name him as Urballa among the rulers who paid tribute to Tiglath-Pileser III. He left inscriptions in Luwian hieroglyphs and is shown on the famous rock relief at İvriz worshipping the storm god Tarhunza"
+   },
+   {
+    "label": "Wasusarma",
+    "slug": "wasusarma",
+    "quote": "He is known from Assyrian records and from Luwian hieroglyphic inscriptions, in which he styles himself great king"
+   }
+  ]
+ },
+ {
+  "name": "From ancient Thrace",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Seuthes III",
+    "slug": "seuthes-iii",
+    "quote": "Seuthes III was a king of the Odrysian Kingdom in Thrace in the late 4th century BCE. He resisted Lysimachus, Alexander's successor in Thrace, but eventually accepted his overlordship"
+   },
+   {
+    "label": "Teres I",
+    "slug": "teres-i",
+    "quote": "Teres I was the founder of the Odrysian kingdom of Thrace in the 5th century BCE. After the Persian withdrawal from Europe following 479 BCE he united Thracian tribes"
+   },
+   {
+    "label": "Kazanlak Tomb",
+    "slug": "kazanlak-tomb",
+    "quote": "The Thracian Tomb of Kazanlak is a beehive-shaped brick tomb near Kazanlak in central Bulgaria, discovered in 1944 and dated to"
+   },
+   {
+    "label": "Panagyurishte",
+    "slug": "panagyurishte-treasure",
+    "quote": "The Panagyurishte Treasure is a Thracian hoard of nine gold vessels found in 1949 near Panagyurishte in central Bulgaria"
+   },
+   {
+    "label": "Rogozen",
+    "slug": "rogozen-treasure",
+    "quote": "The Rogozen Treasure is a hoard of 165 Thracian silver vessels, many partly gilded, found in 1985–1986 near the village of Rogozen in north-western Bulgaria"
+   },
+   {
+    "label": "Darzalas",
+    "slug": "darzalas",
+    "quote": "Darzalas was a Thracian god worshipped as the Great God at the Greek colony of Odessos, modern Varna on the Black Sea coast of Bulgaria"
+   }
+  ]
+ },
+ {
+  "name": "Scythians of the Black Sea steppe",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Scyles",
+    "slug": "scyles",
+    "quote": "Scyles was a Scythian king of the 5th century BCE whose story is told by Herodotus"
+   },
+   {
+    "label": "Skilurus",
+    "slug": "skilurus",
+    "quote": "Skilurus was a king of the Scythians in the Crimea in the 2nd century BCE who ruled from Scythian Neapolis near modern Simferopol"
+   },
+   {
+    "label": "Palacus",
+    "slug": "palakus",
+    "quote": "Palacus was a king of the Scythians in the Crimea in the late 2nd century BCE, a son of Scilurus"
+   },
+   {
+    "label": "Solokha",
+    "slug": "solokha",
+    "quote": "Solokha is a royal Scythian burial mound of the late 5th or early 4th century BCE near the lower Dnieper in southern Ukraine"
+   },
+   {
+    "label": "Tovsta Mohyla",
+    "slug": "tovsta-mohyla",
+    "quote": "Tovsta Mohyla is a Scythian royal burial mound of the 4th century BCE near the town of Pokrov in Dnipropetrovsk region, Ukraine"
+   },
+   {
+    "label": "Kul-Oba",
+    "slug": "kul-oba",
+    "quote": "Kul-Oba is a Scythian burial mound near Kerch in eastern Crimea, raised in the fourth century BCE. Excavated in 1830, it contained the stone"
+   }
+  ]
+ },
+ {
+  "name": "The Bosporan Kingdom",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Asander",
+    "slug": "asander-bosporan-king",
+    "quote": "Asander was ruler of the Bosporan Kingdom from 47 BCE until about 17 BCE. Left in charge of the Bosporus by Pharnaces II, he rebelled against him, and"
+   },
+   {
+    "label": "Dynamis",
+    "slug": "dynamis-bosporan-queen",
+    "quote": "Dynamis was queen of the Bosporan Kingdom in the late first century BCE, a daughter of Pharnaces II and granddaughter of Mithridates VI of Pontus"
+   },
+   {
+    "label": "Aspurgus",
+    "slug": "aspurgus",
+    "quote": "Aspurgus was king of the Bosporan Kingdom in the early 1st century CE, until his death in 37 or 38 CE. A client of Rome, he received Roman citizenship"
+   },
+   {
+    "label": "Phanagoria",
+    "slug": "phanagoria",
+    "quote": "of the Cimmerian Bosporus, founded by settlers from Teos around 540 BCE. It became the second city of the Bosporan Kingdom and an important port for the grain trade"
+   },
+   {
+    "label": "Gorgippia",
+    "slug": "gorgippia",
+    "quote": "It developed from an earlier port of the Sindi and was renamed after Gorgippus, a member of the ruling Spartocid family, in the fourth century BCE. A city of the Bosporan Kingdom, it prospered from the grain trade into the Roman period"
+   },
+   {
+    "label": "Spartocids",
+    "slug": "spartocid-dynasty",
+    "quote": "The Spartocid dynasty ruled the Bosporan Kingdom on both sides of the Kerch Strait from 438 BCE until about 108 BCE. Founded by Spartocus I, its rulers called themselves archons of the Greek cities and kings of the native peoples"
+   }
+  ]
+ },
+ {
+  "name": "Kings of Urartu",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Arame",
+    "slug": "arame-of-urartu",
+    "quote": "Arame was the first known king of Urartu, ruling in the mid-ninth century BCE. He is known only from Assyrian sources: the annals of Shalmaneser III"
+   },
+   {
+    "label": "Ishpuini",
+    "slug": "ishpuini",
+    "quote": "Ishpuini was king of Urartu in the late ninth century BCE, the son of Sarduri I. With his son Menua as co-ruler he introduced"
+   },
+   {
+    "label": "Menua",
+    "slug": "menua",
+    "quote": "Menua was king of Urartu from about 810 to 786 BCE, the son of Ishpuini"
+   },
+   {
+    "label": "Argishti I",
+    "slug": "argishti-i",
+    "quote": "Argishti I was king of Urartu from about 786 to 764 BCE, the son and successor of Menua"
+   },
+   {
+    "label": "Rusa I",
+    "slug": "rusa-i",
+    "quote": "Rusa I was king of Urartu in the later 8th century BCE, ruling from about 735 to 714 BCE. He faced attacks from the Cimmerians in the north and the Assyrian Empire in the south"
+   },
+   {
+    "label": "Rusa II",
+    "slug": "rusa-ii",
+    "quote": "Rusa II was king of Urartu in the first half of the 7th century BCE. After the Assyrian defeat of Rusa I in 714 BCE, he restored the"
+   }
+  ]
+ },
+ {
+  "name": "Rulers of Elam",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kutik-Inshushinak",
+    "slug": "kutik-inshushinak",
+    "quote": "Kutik-Inshushinak (also read Puzur-Inshushinak) was the last king of the Awan dynasty of Elam, ruling around 2100 BCE. After the collapse of Akkadian power he freed Susa, brought"
+   },
+   {
+    "label": "Shutruk-Nahhunte",
+    "slug": "shutruk-nahhunte",
+    "quote": "Shutruk-Nahhunte was a king of Elam of the Shutrukid dynasty in the twelfth century BCE. Together with his son Kutir-Nahhunte he defeated the"
+   },
+   {
+    "label": "Shilhak-Inshushinak",
+    "slug": "shilhak-inshushinak",
+    "quote": "Shilhak-Inshushinak was a king of Elam in the twelfth century BCE of the Shutrukid dynasty"
+   },
+   {
+    "label": "Humban-haltash III",
+    "slug": "humban-haltash-iii",
+    "quote": "Humban-haltash III was the last known king of Elam"
+   },
+   {
+    "label": "Kindattu",
+    "slug": "kindattu",
+    "quote": "Kindattu was a king of the Shimashki dynasty of Elam"
+   },
+   {
+    "label": "Napir-Asu",
+    "slug": "napir-asu",
+    "quote": "Napir-Asu was a queen of Elam in the fourteenth century BCE, wife of King Untash-Napirisha"
+   }
+  ]
+ },
+ {
+  "name": "The royal house of Akkad",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sargon",
+    "slug": "sargon-of-akkad",
+    "quote": "Sargon of Akkad was the founder of the Akkadian Empire, whose reign is conventionally dated from c. 2334 BCE. Rising from obscure origins, he conquered the Sumerian"
+   },
+   {
+    "label": "Rimush",
+    "slug": "rimush",
+    "quote": "Rimush was a king of the Akkadian Empire and a son and successor of Sargon of Akkad"
+   },
+   {
+    "label": "Manishtushu",
+    "slug": "manishtushu",
+    "quote": "Manishtushu was a king of the Akkadian Empire in the twenty-third century BCE, a son of Sargon of Akkad"
+   },
+   {
+    "label": "Naram-Sin",
+    "slug": "naram-sin",
+    "quote": "Naram-Sin was a king of the Akkadian Empire who reigned from 2254 to 2218 BCE and was the grandson of Sargon"
+   },
+   {
+    "label": "Shar-Kali-Sharri",
+    "slug": "shar-kali-sharri",
+    "quote": "Shar-Kali-Sharri was the last powerful king of the Akkadian Empire and a son of Naram-Sin"
+   },
+   {
+    "label": "Enheduanna",
+    "slug": "enheduanna",
+    "quote": "Enheduanna was the daughter of Sargon of Akkad, appointed high priestess of the moon god Nanna at Ur"
+   }
+  ]
+ },
+ {
+  "name": "Sumer's last great age",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Utu-hengal",
+    "slug": "utu-hengal",
+    "quote": "Utu-hengal was a king of Uruk in the late 22nd century BCE who led the Sumerian cities against the Gutians"
+   },
+   {
+    "label": "Ur-Nammu",
+    "slug": "ur-nammu",
+    "quote": "Ur-Nammu was the founder of the Third Dynasty of Ur, or Neo-Sumerian Empire, who established his rule around 2112 BCE after the collapse of the Akkadian Empire"
+   },
+   {
+    "label": "Shulgi",
+    "slug": "shulgi",
+    "quote": "Shulgi was the second king of the Third Dynasty of Ur, reigning c. 2094–2047 BCE. He reorganised the administration, created standard weights and measures and a provincial system, and expanded the realm through military campaigns"
+   },
+   {
+    "label": "Shu-Sin",
+    "slug": "shu-sin",
+    "quote": "Shu-Sin was the fourth king of the Third Dynasty of Ur, who reigned for about nine years in the late 21st century BCE. He campaigned in the Zagros and against"
+   },
+   {
+    "label": "Ibbi-Sin",
+    "slug": "ibbi-sin",
+    "quote": "Ibbi-Sin was the last king of the Third Dynasty of Ur, reigning about 2028–2004 BCE. His reign saw the empire break apart as provinces broke away, Amorite"
+   },
+   {
+    "label": "Ziggurat of Ur",
+    "slug": "ziggurat-of-ur",
+    "quote": "It was built by Ur-Nammu and completed by his son Shulgi in the twenty-first century BCE. Partially restored in modern times, it is one of the best-preserved ziggurats and a lasting monument of the Neo-Sumerian Empire"
+   }
+  ]
+ },
+ {
+  "name": "Pharaohs of the Middle Kingdom",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mentuhotep II",
+    "slug": "mentuhotep-ii",
+    "quote": "Mentuhotep II was a king of the Theban Eleventh Dynasty of Egypt"
+   },
+   {
+    "label": "Amenemhat I",
+    "slug": "amenemhat-i",
+    "quote": "Amenemhat I was the founder of Egypt's Twelfth Dynasty, reigning for about thirty years from around 1985 BCE. Probably the vizier of the same name who served"
+   },
+   {
+    "label": "Senusret I",
+    "slug": "senusret-i",
+    "quote": "Senusret I was the second king of the Twelfth Dynasty of Egypt, son of Amenemhat I, reigning about 45 years in the twentieth century BCE. He conquered Lower Nubia"
+   },
+   {
+    "label": "Senusret III",
+    "slug": "senusret-iii",
+    "quote": "Senusret III was a pharaoh of the Twelfth Dynasty of Middle Kingdom Egypt, reigning in the 19th century BCE. He curbed the power of the provincial nomarchs and campaigned"
+   },
+   {
+    "label": "Amenemhat III",
+    "slug": "amenemhat-iii",
+    "quote": "Amenemhat III was a pharaoh of the Twelfth Dynasty who reigned for about 45 years in the 19th century BCE, the height of the Middle Kingdom"
+   },
+   {
+    "label": "Amenemhat IV",
+    "slug": "amenemhat-iv",
+    "quote": "Amenemhat IV was the penultimate king of the Twelfth Dynasty of Egypt, reigning for about nine years in the late nineteenth century BCE. He continued the works of"
+   }
+  ]
+ },
+ {
+  "name": "Seleucid kings",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Antiochus III",
+    "slug": "antiochus-iii-the-great",
+    "quote": "Antiochus III the Great was a Seleucid king who reigned from 222 to 187 BCE. He restored Seleucid power in the east through his anabasis and took Coele-Syria from the Ptolemies"
+   },
+   {
+    "label": "Antiochus IV",
+    "slug": "antiochus-iv-epiphanes",
+    "quote": "Antiochus IV Epiphanes was a Seleucid king who reigned from 175 to 164 BCE. He invaded Egypt but was forced by Rome to withdraw"
+   },
+   {
+    "label": "Antiochus VII",
+    "slug": "antiochus-vii-sidetes",
+    "quote": "Antiochus VII Sidetes was a Seleucid king who attempted to restore the dynasty's power in the second century BCE. He launched a major campaign to"
+   },
+   {
+    "label": "Demetrius II",
+    "slug": "demetrius-ii-nicator",
+    "quote": "Demetrius II Nicator was a king of the Seleucid Empire in the second century BCE. His reign was disrupted by dynastic rivals and by a war against the Parthians, who captured him and held him prisoner for years"
+   },
+   {
+    "label": "Seleucus II",
+    "slug": "seleucus-ii-callinicus",
+    "quote": "Seleucus II Callinicus was king of the Seleucid Empire from 246 to 225 BCE. His reign began with the Third Syrian War against Ptolemy III, and he then fought his"
+   },
+   {
+    "label": "Antiochus II",
+    "slug": "antiochus-ii-theos",
+    "quote": "Antiochus II Theos was king of the Seleucid Empire from 261 to 246 BCE. He fought the Second Syrian War against Ptolemy II of Egypt, which ended with his marriage to Ptolemy's daughter Berenice, and recovered cities in Asia Minor and Thrace"
+   }
+  ]
+ },
+ {
+  "name": "Ancient Byblos",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ahiram",
+    "slug": "ahiram",
+    "quote": "Ahiram was a king of Byblos, known from his stone sarcophagus found in the city's royal necropolis in 1923"
+   },
+   {
+    "label": "Zakar-Baal",
+    "slug": "zakar-baal",
+    "quote": "Zakar-Baal was a king of Byblos around 1075 BCE, known from the Egyptian Story of Wenamun"
+   },
+   {
+    "label": "Philo",
+    "slug": "philo-of-byblos",
+    "quote": "Philo of Byblos was a Greek-language writer of the Roman period, born in Byblos"
+   },
+   {
+    "label": "Baalat Gebal",
+    "slug": "baalat-gebal",
+    "quote": "Baalat Gebal, 'the Lady of Byblos', was the chief goddess of the Phoenician city of Byblos"
+   },
+   {
+    "label": "Rib-Hadda",
+    "slug": "rib-hadda",
+    "quote": "Rib-Hadda was king of Byblos in the mid-14th century BCE and the most prolific author among the Amarna letters, writing dozens of appeals to the Egyptian pharaohs Amenhotep III and Akhenaten"
+   },
+   {
+    "label": "Wenamun",
+    "slug": "story-of-wenamun",
+    "quote": "The Story of Wenamun is an ancient Egyptian text, preserved on a papyrus found at el-Hiba and now in Moscow, describing the journey of Wenamun, an official of the temple of Amun at Karnak, to Byblos to buy cedar for the god's sacred barque"
+   }
+  ]
+ },
+ {
+  "name": "Gods of the Gauls",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Taranis",
+    "slug": "taranis",
+    "quote": "Taranis, sometimes Taranus or Tanarus, was a Celtic thunder god known from literary sources and from inscriptions dating between the 4th century BCE and the 3rd century CE; his name comes from Proto-Celtic *torano-, thunder"
+   },
+   {
+    "label": "Epona",
+    "slug": "epona",
+    "quote": "Epona was the goddess of horses and ponies in Gallo-Roman religion, and also a fertility and mother goddess"
+   },
+   {
+    "label": "Esus",
+    "slug": "esus",
+    "quote": "Esus was a Gaulish god named by the Roman poet Lucan, together with Teutates and Taranis, as receiving human sacrifice"
+   },
+   {
+    "label": "Lugus",
+    "slug": "lugus",
+    "quote": "Lugus was a god of the ancient Celts, known from inscriptions in Spain, Gaul and elsewhere, sometimes in the plural form Lugoves"
+   },
+   {
+    "label": "Smertrios",
+    "slug": "smertrios",
+    "quote": "Smertrios was a Celtic god known from Roman-period inscriptions in Gaul and the Rhineland, including the Pillar of the Boatmen in Paris, where he is shown as a bearded figure raising a club against a serpent"
+   },
+   {
+    "label": "Grannus",
+    "slug": "apollo-grannus",
+    "quote": "Apollo Grannus was a Gallo-Roman healing god, the Celtic deity Grannus identified with the Roman Apollo and worshipped especially at springs"
+   }
+  ]
+ },
+ {
+  "name": "Iron Age Celtic treasures",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Torc",
+    "slug": "torc",
+    "quote": "A torc is a large rigid neck ring of metal, made as a single piece or from twisted strands and usually open at the front, worn in the Scythian"
+   },
+   {
+    "label": "Battersea Shield",
+    "slug": "battersea-shield",
+    "quote": "The Battersea Shield is the bronze facing of a vanished wooden shield, decorated in the Celtic La Tène style and now in the British Museum, which dates"
+   },
+   {
+    "label": "Waterloo Helmet",
+    "slug": "waterloo-helmet",
+    "quote": "The Waterloo Helmet is a Celtic bronze horned helmet of about 150–50 BCE, dredged from the River Thames near Waterloo Bridge in London in 1868 and now in the British Museum"
+   },
+   {
+    "label": "Gundestrup",
+    "slug": "gundestrup-cauldron",
+    "quote": "The Gundestrup cauldron is a richly decorated silver vessel thought to date from between 200 BCE and 300 CE, or more narrowly 150–1 BCE, found dismantled in a peat bog near Gundestrup in Himmerland, Denmark, in 1891"
+   },
+   {
+    "label": "Snettisham",
+    "slug": "snettisham-hoard",
+    "quote": "The Snettisham Hoard is a series of Iron Age treasure deposits found at Snettisham in Norfolk, England, from 1948 onwards"
+   },
+   {
+    "label": "Grouville",
+    "slug": "grouville-hoard",
+    "quote": "The Grouville Hoard, also called the Le Câtillon II hoard, is a large Iron Age coin hoard found in 2012 at Grouville in Jersey by two metal detectorists"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of Gaul",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Aedui",
+    "slug": "aedui",
+    "quote": "The Aedui or Haedui were a Gallic people of central-eastern Gaul, living between the Loire and the Saône in modern Burgundy during the Iron Age and the Roman period"
+   },
+   {
+    "label": "Arverni",
+    "slug": "arverni",
+    "quote": "The Arverni were a Gallic people of the late Iron Age and the Roman period whose territory lay in the Massif Central, the later Auvergne"
+   },
+   {
+    "label": "Remi",
+    "slug": "remi",
+    "quote": "The Remi were a Belgic tribe of the Iron Age and Roman period in the valleys of the Aisne, Vesle and Suippe, roughly the modern Marne and Ardennes"
+   },
+   {
+    "label": "Helvetii",
+    "slug": "helvetii",
+    "quote": "The Helvetii were a Celtic tribe or tribal confederation that occupied most of the Swiss Plateau when they came into contact with the Roman"
+   },
+   {
+    "label": "Volcae",
+    "slug": "volcae",
+    "quote": "The Volcae were a Celtic people known in ancient sources from the 3rd century BCE in southern Gaul, where their two branches, the Arecomici around Nîmes and the Tectosages around Toulouse, held much of Languedoc"
+   },
+   {
+    "label": "Carnutes",
+    "slug": "carnutes",
+    "quote": "The Carnutes were a Gallic people of the middle Loire basin, in what is now the Centre-Val de Loire region of France, whose two chief centres were Cenabum (Orléans) and Autricum (Chartres), the city named after them"
+   }
+  ]
+ },
+ {
+  "name": "Kings of the Visigoths",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alaric I",
+    "slug": "alaric-i",
+    "quote": "Alaric I was a king of the Visigoths who led his people in conflicts with the Roman Empire in the late fourth and early fifth centuries"
+   },
+   {
+    "label": "Wallia",
+    "slug": "wallia",
+    "quote": "Wallia was king of the Visigoths from 415 to 418"
+   },
+   {
+    "label": "Theodoric I",
+    "slug": "theodoric-i",
+    "quote": "Theodoric I was king of the Visigoths from 418 to 451, ruling the federate kingdom that Rome had settled in Aquitaine, with Toulouse as its capital"
+   },
+   {
+    "label": "Theodoric II",
+    "slug": "theodoric-ii",
+    "quote": "Theodoric II was king of the Visigoths from 453 to 466, having taken power by killing his brother Thorismund"
+   },
+   {
+    "label": "Euric",
+    "slug": "euric",
+    "quote": "Euric was king of the Visigoths from 466 to 484, having taken the throne by murdering his brother Theodoric II. Breaking with Rome, he"
+   },
+   {
+    "label": "Alaric II",
+    "slug": "alaric-ii",
+    "quote": "Alaric II was king of the Visigoths from 484 to 507, ruling much of Gaul and Hispania from Toulouse"
+   }
+  ]
+ },
+ {
+  "name": "Ancient Nubia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kerma",
+    "slug": "kerma",
+    "quote": "Kerma is an archaeological site and ancient city in northern Sudan, the centre of a major Nubian kingdom from"
+   },
+   {
+    "label": "Western Deffufa",
+    "slug": "western-deffufa",
+    "quote": "The Western Deffufa is a massive mud-brick structure at Kerma in northern Sudan, the main temple of the Kerma kingdom"
+   },
+   {
+    "label": "Napata",
+    "slug": "napata",
+    "quote": "It became a principal centre of the Kushite Empire after Kerma and before Meroë, and housed an important cult of Amun that legitimised royal power"
+   },
+   {
+    "label": "Jebel Barkal",
+    "slug": "jebel-barkal",
+    "quote": "Egyptian kings of the New Kingdom built a temple at its foot, and the Kushite kings of Napata enlarged it as the religious centre of their state; Piye set up his victory stela there"
+   },
+   {
+    "label": "Meroë",
+    "slug": "meroe",
+    "quote": "Meroe was an ancient city on the east bank of the Nile in present-day Sudan, the capital of the Kushite Empire from around the sixth century BCE. It was a centre of iron production and trade, famous for its pyramids"
+   },
+   {
+    "label": "Qasr Ibrim",
+    "slug": "qasr-ibrim",
+    "quote": "Qasr Ibrim is a fortified hilltop site in Lower Nubia, now an island in Lake Nasser, occupied for some three thousand years until the early 19th century"
+   }
+  ]
+ },
+ {
+  "name": "Ancient Iberia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lady of Elche",
+    "slug": "lady-of-elche",
+    "quote": "is a limestone bust of a woman wearing elaborate jewellery and large wheel-shaped headdresses, carved by Iberian artists probably in the 4th century BCE. It was found in 1897 at La Alcudia near Elche, taken to the Louvre"
+   },
+   {
+    "label": "Lady of Baza",
+    "slug": "lady-of-baza",
+    "quote": "The Lady of Baza is an Iberian limestone sculpture of a seated woman on a winged throne, painted in bright colours and dated to the first"
+   },
+   {
+    "label": "Viriathus",
+    "slug": "viriathus",
+    "quote": "Viriathus was the leader of the Lusitanians in their war against Rome from about 147 to 139 BCE. A survivor of Servius Sulpicius Galba's massacre of"
+   },
+   {
+    "label": "Cantabrian Wars",
+    "slug": "cantabrian-wars",
+    "quote": "The Cantabrian Wars were Rome's final conquest of the Iberian Peninsula, fought from 29 to 19 BCE against the Cantabri and Astures of the northern mountains"
+   },
+   {
+    "label": "Castellet de Banyoles",
+    "slug": "castellet-de-banyoles",
+    "quote": "The Castellet de Banyoles is an ancient Iberian city and archaeological site near the River Ebro in Tivissa, in the Ribera d'Ebre region of Catalonia"
+   },
+   {
+    "label": "Iberians",
+    "slug": "iberians",
+    "quote": "The Iberians were the pre-Roman peoples of the eastern and southern Iberian Peninsula, among them the Turdetani, Edetani and Ilergetes"
+   }
+  ]
+ },
+ {
+  "name": "Emperors of the third-century crisis",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Maximinus Thrax",
+    "slug": "maximinus-thrax",
+    "quote": "Maximinus Thrax was Roman emperor from 235 to 238, a soldier of humble Thracian origin proclaimed by the army after the murder of Severus Alexander"
+   },
+   {
+    "label": "Gordian I",
+    "slug": "gordian-i",
+    "quote": "Gordian I was a Roman emperor in 238"
+   },
+   {
+    "label": "Gordian III",
+    "slug": "gordian-iii",
+    "quote": "Gordian III was Roman emperor from 238 to 244, raised to the throne at thirteen after the deaths of his grandfather Gordian I, his uncle Gordian II and the senatorial emperors Pupienus and Balbinus"
+   },
+   {
+    "label": "Philip the Arab",
+    "slug": "philip-the-arab",
+    "quote": "Philip the Arab was Roman emperor from 244 to 249, born in the province of Arabia in southern Syria"
+   },
+   {
+    "label": "Gallienus",
+    "slug": "gallienus",
+    "quote": "His reign saw the worst of the 3rd-century crisis: the Gallic and Palmyrene regions broke away, and Alemanni, Goths and others invaded"
+   },
+   {
+    "label": "Probus",
+    "slug": "probus-emperor",
+    "quote": "Marcus Aurelius Probus was Roman emperor from 276 to 282, a soldier from Sirmium in Pannonia"
+   }
+  ],
+  "note": "The crisis is dated 235-284 CE"
+ },
+ {
+  "name": "All in 546 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Thymbra",
+    "slug": "battle-of-thymbra",
+    "quote": "The Battle of Thymbra was fought in 546 BCE in western Anatolia, where Cyrus the Great defeated Croesus of Lydia"
+   },
+   {
+    "label": "Croesus",
+    "slug": "croesus",
+    "quote": "He was defeated by Cyrus the Great at the Battle of Thymbra in 546 BCE, after which Sardis was captured"
+   },
+   {
+    "label": "Sardis",
+    "slug": "sardis",
+    "quote": "Cyrus the Great captured it in 546 BCE after defeating King Croesus, and it became a major Achaemenid administrative centre"
+   },
+   {
+    "label": "Thales",
+    "slug": "thales-of-miletus",
+    "quote": "c. 624–546 BCE"
+   },
+   {
+    "label": "Anaximander",
+    "slug": "anaximander",
+    "quote": "c. 610–546 BCE"
+   },
+   {
+    "label": "Battle of the Champions",
+    "slug": "battle-of-the-champions",
+    "quote": "The Battle of the Champions was fought about 546 BCE between Sparta and Argos for the border district of Thyreatis"
+   }
+  ],
+  "note": "Lydia falls to Cyrus; two Milesian philosophers die; Sparta wins the Thyreatis"
+ },
+ {
+  "name": "All in 323 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Alexander the Great",
+    "slug": "alexander-the-great",
+    "quote": "Alexander the Great, Alexander III of Macedon, was king of Macedon from 336 to 323 BCE. He conquered the Achaemenid Empire and led his army as far as the Indus valley, creating the Macedonian Empire"
+   },
+   {
+    "label": "Diogenes the Cynic",
+    "slug": "diogenes-the-cynic",
+    "quote": "Diogenes the Cynic (c. 412–323 BCE) was a Greek philosopher born in Sinope on the Black Sea, and the best-known figure of the Cynic school"
+   },
+   {
+    "label": "Lamian War",
+    "slug": "lamian-war",
+    "quote": "the Aetolian League and other Greek states against Macedonian rule after the death of Alexander the Great in 323 BCE. The Greeks besieged the regent Antipater in Lamia, but Macedonian reinforcements arrived, the Athenian fleet"
+   },
+   {
+    "label": "Hellenistic period",
+    "slug": "hellenistic-period",
+    "quote": "The Hellenistic period is the era from the death of Alexander the Great in 323 BCE to the late first century BCE, when Greek culture spread across the eastern Mediterranean and western Asia"
+   },
+   {
+    "label": "Classical Greece",
+    "slug": "classical-greece",
+    "quote": "Greek history from the Persian Wars of the early fifth century BCE to the death of Alexander the Great in 323 BCE. It saw the rivalry of Athens and Sparta, Athenian democracy and the Peloponnesian War, and the rise of"
+   },
+   {
+    "label": "Alexander IV",
+    "slug": "alexander-iv-of-macedon",
+    "quote": "Alexander IV was the son of Alexander the Great and Roxane, born after his father's death in 323 BCE. He was proclaimed joint king with his uncle Philip III Arrhidaeus, but real power lay with the generals who fought over the empire"
+   }
+  ]
+ },
+ {
+  "name": "All in 312 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Gaza",
+    "slug": "battle-of-gaza-312-bce",
+    "quote": "The Battle of Gaza was fought in 312 BCE between Demetrius, son of Antigonus I, and the forces of Ptolemy I and Seleucus"
+   },
+   {
+    "label": "Cassander",
+    "slug": "cassander",
+    "quote": "He joined Ptolemy and Lysimachus in a coalition against Antigonus I. Their victory at Gaza in 312 BCE allowed Seleucus to retake Babylon, the event from which the Seleucid Empire dated its era"
+   },
+   {
+    "label": "Zeno of Citium",
+    "slug": "zeno-of-citium",
+    "quote": "Arriving in Athens around 312 BCE, he studied with the Cynic Crates and others, and from about 300 BCE taught in the Stoa Poikile, the painted colonnade that gave the school its name"
+   },
+   {
+    "label": "Marion",
+    "slug": "polis-chrysochous",
+    "quote": "ancient city-kingdom of Marion, which grew rich from nearby copper mines and was destroyed by Ptolemy I in 312 BCE, and of its successor Arsinoe, founded by Ptolemy II. Today it is a market town and resort near the Akamas"
+   },
+   {
+    "label": "Nicocreon",
+    "slug": "nicocreon",
+    "quote": "the Great and then Ptolemy I in the wars of the Successors, and Ptolemy made him general of Cyprus in 312 BCE. After his death around 311 BCE, Salamis came under direct Ptolemaic rule"
+   },
+   {
+    "label": "Appian Way",
+    "slug": "appian-way",
+    "quote": "The Appian Way (Via Appia) was a Roman road begun in 312 BCE by the censor Appius Claudius Caecus, first from Rome to Capua and later extended to Brundisium on the Adriatic"
+   }
+  ]
+ },
+ {
+  "name": "All in 133 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Attalus III",
+    "slug": "attalus-iii",
+    "quote": "Attalus III was the last Attalid king of Pergamon, reigning from 138 BCE. On his death in 133 BCE he left his kingdom to Rome in his will"
+   },
+   {
+    "label": "Numantia",
+    "slug": "numantia",
+    "quote": "It resisted Roman armies for two decades during the Celtiberian Wars until Scipio Aemilianus surrounded it with siege works in 134–133 BCE; starving, its defenders surrendered or took their own lives, and the town was destroyed"
+   },
+   {
+    "label": "Province of Asia",
+    "slug": "asia-roman-province",
+    "quote": "province in western Anatolia, formed from the Kingdom of Pergamon, which Attalus III bequeathed to Rome in 133 BCE. Organised by 129 BCE, it was among the richest provinces of the empire, with cities such as Ephesus, its"
+   },
+   {
+    "label": "Tiberius Gracchus",
+    "slug": "tiberius-gracchus",
+    "quote": "Tiberius Gracchus, in full Tiberius Sempronius Gracchus, was a Roman tribune of the plebs in 133 BCE. He passed a law to redistribute public land to poor citizens over the Senate's opposition and then sought a second term"
+   },
+   {
+    "label": "Attalids",
+    "slug": "attalid-dynasty",
+    "quote": "The Attalid dynasty ruled the Hellenistic kingdom of Pergamon in western Asia Minor from 282 to 133 BCE. Founded by Philetaerus and named after his father Attalus, it included Eumenes I, Attalus I and Eumenes II."
+   },
+   {
+    "label": "Aristonicus",
+    "slug": "aristonicus",
+    "quote": "Pergamon who claimed to be a son of Eumenes II and took the royal name Eumenes III. When Attalus III died in 133 BCE leaving his kingdom to Rome, Aristonicus led a revolt that drew support from slaves and the poor of western"
+   }
+  ]
+ },
+ {
+  "name": "All in 217 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Lake Trasimene",
+    "slug": "battle-of-lake-trasimene",
+    "quote": "The Battle of Lake Trasimene was fought in 217 BCE in central Italy during the Second Punic War"
+   },
+   {
+    "label": "Raphia",
+    "slug": "battle-of-raphia",
+    "quote": "The Battle of Raphia was fought in 217 BCE near Gaza during the Fourth Syrian War, between Ptolemy IV of Egypt and the Seleucid king Antiochus III. The Ptolemaic army won, with native Egyptian troops playing a significant role"
+   },
+   {
+    "label": "Raphia Decree",
+    "slug": "raphia-decree",
+    "quote": "Dated to 217 BCE, it celebrates the king's victory at the Battle of Raphia"
+   },
+   {
+    "label": "Arsaces I",
+    "slug": "arsaces-i",
+    "quote": "r. c. 247–217 BCE"
+   },
+   {
+    "label": "Ptolemy IV",
+    "slug": "ptolemy-iv-philopator",
+    "quote": "Ptolemy IV Philopator was king of Ptolemaic Egypt from 221 to 204 BCE. In the Fourth Syrian War he defeated the Seleucid king Antiochus III at the Battle of Raphia in 217 BCE, with the help of native Egyptians trained as phalanx soldiers"
+   },
+   {
+    "label": "Social War",
+    "slug": "social-war-220-217-bce",
+    "quote": "The Social War of 220–217 BCE was fought between the Hellenic League led by Philip V of Macedon and the Aetolian League, joined by Sparta and Elis"
+   }
+  ]
+ },
+ {
+  "name": "All in 399 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Socrates",
+    "slug": "socrates",
+    "quote": "In 399 BCE he was tried for impiety and corrupting the young, condemned and executed by drinking hemlock"
+   },
+   {
+    "label": "Amyrtaeus",
+    "slug": "amyrtaeus",
+    "quote": "He was overthrown in 399 BCE by Nepherites I, founder of the Twenty-ninth Dynasty"
+   },
+   {
+    "label": "Archelaus I",
+    "slug": "archelaus-i-of-macedon",
+    "quote": "Archelaus I was king of Macedon from about 413 to 399 BCE. He built roads and fortresses, strengthened the army and moved the royal seat from Aegae to Pella"
+   },
+   {
+    "label": "Ten Thousand",
+    "slug": "ten-thousand",
+    "quote": "401–399 BCE"
+   },
+   {
+    "label": "Mendes",
+    "slug": "mendes",
+    "quote": "In the Third Intermediate Period it was ruled by Libyan chiefs, and around 399 BCE Nepherites I of Mendes founded the Twenty-ninth Dynasty, which ruled Egypt from the city"
+   },
+   {
+    "label": "Seuthes II",
+    "slug": "seuthes-ii",
+    "quote": "In 400–399 BCE he hired the survivors of the Ten Thousand, as Xenophon, their commander, describes in the Anabasis, to subdue tribes in south-eastern Thrace"
+   }
+  ]
+ },
+ {
+  "name": "All in 587 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Periander",
+    "slug": "periander",
+    "quote": "Periander was tyrant of Corinth from about 627 to 587 BCE, son and successor of Cypselus"
+   },
+   {
+    "label": "Zedekiah",
+    "slug": "zedekiah",
+    "quote": "reigned 597–587 BCE"
+   },
+   {
+    "label": "Jeremiah",
+    "slug": "jeremiah",
+    "quote": "Hebrew prophet in Jerusalem from the late 7th century BCE until after its destruction by the Babylonians in 587 BCE. He warned that Judah would fall for its unfaithfulness and urged submission to Babylon, which led to his"
+   },
+   {
+    "label": "Tisha B'Av",
+    "slug": "tisha-bav",
+    "quote": "Av, is the annual fast day in Judaism that mourns the destruction of the First Temple by the Babylonians in 587 or 586 BCE and of the Second Temple by the Romans in 70 CE. Other disasters of Jewish history are also remembered on"
+   },
+   {
+    "label": "House of David",
+    "slug": "house-of-david",
+    "quote": "and ruled the Kingdom of Judah from Jerusalem for about four centuries, until the Babylonian conquest of 587/586 BCE. The phrase appears in the Tel Dan stele of the 9th century BCE, its earliest known mention outside the"
+   },
+   {
+    "label": "Mizpah",
+    "slug": "mizpah-in-benjamin",
+    "quote": "After the Babylonians destroyed Jerusalem in 587 or 586 BCE it became the seat of the governor Gedaliah, and excavations show that it continued to flourish while Jerusalem lay in ruins"
+   }
+  ],
+  "note": "Jerusalem's fall is dated 587 or 586 BCE; Periander's reign ends"
+ },
+ {
+  "name": "All in 605 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Carchemish",
+    "slug": "battle-of-carchemish",
+    "quote": "The Battle of Carchemish was fought in 605 BCE at Carchemish on the Euphrates"
+   },
+   {
+    "label": "Nabopolassar",
+    "slug": "nabopolassar",
+    "quote": "r. 626–605 BCE"
+   },
+   {
+    "label": "Nebuchadnezzar II",
+    "slug": "nebuchadnezzar-ii",
+    "quote": "Nebuchadnezzar II was the most famous king of the Chaldean or Neo-Babylonian Empire, who died in 562 BCE. As crown prince he defeated Egypt at Carchemish in 605 BCE, securing the Levant"
+   },
+   {
+    "label": "Necho II",
+    "slug": "necho-ii",
+    "quote": "His defeat by Nebuchadnezzar II at the Battle of Carchemish in 605 BCE secured the Levant for the Chaldean Empire"
+   },
+   {
+    "label": "Jehoiakim",
+    "slug": "jehoiakim",
+    "quote": "The pharaoh Necho II installed him in place of his brother Jehoahaz, and after Nebuchadnezzar II defeated Egypt at Carchemish in 605 BCE he submitted to Babylon"
+   },
+   {
+    "label": "King Zhuang of Chu",
+    "slug": "king-zhuang-of-chu",
+    "quote": "He crushed the powerful Ruo'ao lineage in 605 BCE, is said to have asked a Zhou envoy about the weight of the royal cauldrons, a sign of his ambition, and defeated Jin at the Battle of Bi in 597 BCE, making Chu the leading power"
+   }
+  ],
+  "note": "Decoy: a king of Chu in China"
+ },
+ {
+  "name": "All in 264 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Nicomedes I",
+    "slug": "nicomedes-i-of-bithynia",
+    "quote": "In 264 BCE he founded Nicomedia as his capital, which became one of the great cities of Asia Minor"
+   },
+   {
+    "label": "Bolsena",
+    "slug": "bolsena",
+    "quote": "Novi, the new town where Rome resettled the people of Etruscan Volsinii after destroying their city in 264 BCE. A Eucharistic miracle reported in its church of Santa Cristina in 1263 was linked to the institution of the"
+   },
+   {
+    "label": "Vertumnus",
+    "slug": "vertumnus",
+    "quote": "After Rome captured Volsinii in 264 BCE his cult was brought to Rome, where a statue of him stood in the Vicus Tuscus"
+   },
+   {
+    "label": "Messina",
+    "slug": "messina",
+    "quote": "and renamed Messana, it was seized by the Mamertines, whose appeal to Rome triggered the First Punic War in 264 BCE. Taken by the Normans in 1061, it rebelled against Spain in 1674 and was largely destroyed by an earthquake in"
+   },
+   {
+    "label": "Aventine",
+    "slug": "aventine-hill",
+    "quote": "Outside the sacred boundary of the early city until the reign of Claudius, it was associated with the plebeians and housed temples of Diana, Ceres and Juno Regina, as well as the cult of Vertumnus brought from Volsinii after 264 BCE"
+   },
+   {
+    "label": "First Punic War",
+    "slug": "first-punic-war",
+    "quote": "The First Punic War was fought in 264–241 BCE between Carthage and Rome, mainly over Sicily"
+   }
+  ]
+ },
+ {
+  "name": "All in 509 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Roman Republic",
+    "slug": "roman-republic",
+    "quote": "was the system of government of ancient Rome from the expulsion of the kings, traditionally dated to 509 BCE, until the rise of Augustus in the late first century BCE. Governed by elected magistrates and the Senate, it"
+   },
+   {
+    "label": "First Rome–Carthage treaty",
+    "slug": "treaties-between-rome-and-carthage",
+    "quote": "The earliest is traditionally dated to 509 BCE and a later one to 348 BCE. Accounts of the Punic Empire use them to illustrate Carthage's efforts to protect its commercial monopolies in the western Mediterranean before the Punic Wars"
+   },
+   {
+    "label": "Tarquinius Superbus",
+    "slug": "tarquinius-superbus",
+    "quote": "His expulsion around 509 BCE was held to mark the founding of the Roman Republic"
+   },
+   {
+    "label": "Capitoline Hill",
+    "slug": "capitoline-hill",
+    "quote": "It held the city's chief temple, that of Jupiter Optimus Maximus, traditionally begun under the Tarquin kings and dedicated in 509 BCE, and served as Rome's religious and symbolic centre, where generals ended their triumphs"
+   },
+   {
+    "label": "Lucius Junius Brutus",
+    "slug": "lucius-junius-brutus",
+    "quote": "According to Roman tradition he led the revolt that expelled the last king, Tarquinius Superbus, in 509 BCE and became one of the first two consuls"
+   },
+   {
+    "label": "Lucretia",
+    "slug": "lucretia",
+    "quote": "Tarquinius, son of the king, and her subsequent suicide provoked the overthrow of the Roman monarchy in 509 BCE. Her story, told by Livy, became a celebrated subject of later literature and art, though historians regard"
+   }
+  ],
+  "note": "Rome's traditional date for the end of its kings"
+ },
+ {
+  "name": "All in 331 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Alexandria",
+    "slug": "alexandria",
+    "quote": "Alexandria is a city on the Mediterranean coast of Egypt, founded by Alexander the Great in 331 BCE. Under the Ptolemaic Empire it became the capital, a major port and a centre of learning, home to the Library and the Pharos lighthouse"
+   },
+   {
+    "label": "Gaugamela",
+    "slug": "battle-of-gaugamela",
+    "quote": "The Battle of Gaugamela was fought in 331 BCE in northern Mesopotamia between Alexander the Great and the Achaemenid king Darius III. Despite being outnumbered, Alexander won a decisive victory and Darius fled"
+   },
+   {
+    "label": "Paraetonium",
+    "slug": "paraetonium",
+    "quote": "Alexander the Great passed through it on his way to the oracle of Siwa in 331 BCE, and Mark Antony stayed there after his defeat at Actium in 31 BCE. It traded with the Libyan peoples of the interior"
+   },
+   {
+    "label": "Zopyrion",
+    "slug": "zopyrion",
+    "quote": "Probably around 331 BCE he led a large army against the Getae and Scythians and besieged the Greek city of Olbia on the Black Sea"
+   },
+   {
+    "label": "Agis III",
+    "slug": "agis-iii",
+    "quote": "Agis III was a Eurypontid king of Sparta from 338 to 331 BCE. While Alexander the Great was campaigning in Asia, he organised a Greek revolt against Macedonian rule with"
+   },
+   {
+    "label": "Alexander I of Epirus",
+    "slug": "alexander-i-of-epirus",
+    "quote": "Invited by Taras to fight the Italic peoples of southern Italy, he campaigned against the Lucanians, Bruttii and Samnites from 334 BCE. He was killed near Pandosia in 331 BCE, a model for his relative Pyrrhus's later expedition"
+   }
+  ]
+ },
+ {
+  "name": "All in 197 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Cynoscephalae",
+    "slug": "battle-of-cynoscephalae",
+    "quote": "The Battle of Cynoscephalae was fought in 197 BCE in Thessaly between the Roman army of Titus Quinctius Flamininus and the Macedonian army of Philip V. In"
+   },
+   {
+    "label": "Attalus I",
+    "slug": "attalus-i",
+    "quote": "Attalus I Soter ruled Pergamon from 241 to 197 BCE. After defeating the Galatians, he took the title of king, the first of his dynasty to do so, and celebrated the victory with monuments that included statues of dying Gauls"
+   },
+   {
+    "label": "Hispania Citerior",
+    "slug": "hispania-citerior",
+    "quote": "Hispania Citerior, \"Nearer Spain\", was the Roman province created in 197 BCE from Rome's conquests along the Mediterranean coast of eastern Iberia after the Second Punic War"
+   },
+   {
+    "label": "Hispania Ulterior",
+    "slug": "hispania-ulterior",
+    "quote": "Hispania Ulterior ('Further Spain') was a Roman province created in 197 BCE in the south and west of the Iberian Peninsula, centred on the Baetis (Guadalquivir) valley, with Corduba as its main city"
+   },
+   {
+    "label": "Flamininus",
+    "slug": "titus-quinctius-flamininus",
+    "quote": "Titus Quinctius Flamininus was a Roman general and politician who defeated Philip V of Macedon at Cynoscephalae in 197 BCE, ending the Second Macedonian War"
+   },
+   {
+    "label": "Second Macedonian War",
+    "slug": "second-macedonian-war",
+    "quote": "The Second Macedonian War was fought between Rome and Philip V of Macedon from 200 to 197 BCE. Rome, joined by Pergamon, Rhodes, the Aetolians and from 198 BCE the Achaean League, won it when Titus"
+   }
+  ]
+ },
+ {
+  "name": "All in 281 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Corupedium",
+    "slug": "battle-of-corupedium",
+    "quote": "The Battle of Corupedium was fought in 281 BCE in western Anatolia between Seleucus I and Lysimachus, two of Alexander's successors"
+   },
+   {
+    "label": "Lysimachus",
+    "slug": "lysimachus",
+    "quote": "He was defeated and killed by Seleucus I at the Battle of Corupedium in 281 BCE. The victory brought much of Anatolia under the Seleucid Empire"
+   },
+   {
+    "label": "Seleucus I",
+    "slug": "seleucus-i-nicator",
+    "quote": "c. 358–281 BCE"
+   },
+   {
+    "label": "Wars of the Diadochi",
+    "slug": "wars-of-the-diadochi",
+    "quote": "The Wars of the Diadochi were the conflicts fought between Alexander the Great's generals, the Diadochi or successors, for control of his empire after his death, lasting from 323 to 281 BCE. They ended the unity of the Macedonian Empire"
+   },
+   {
+    "label": "Ptolemy Keraunos",
+    "slug": "ptolemy-keraunos",
+    "quote": "After Seleucus I defeated Lysimachus at Corupedium in 281 BCE, Ptolemy Keraunos assassinated him"
+   },
+   {
+    "label": "Duris of Samos",
+    "slug": "duris-of-samos",
+    "quote": "c. 350–after 281 BCE"
+   }
+  ]
+ },
+ {
+  "name": "All in 334 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Granicus",
+    "slug": "battle-of-the-granicus",
+    "quote": "The Battle of the Granicus was fought in 334 BCE at the Granicus River in northwestern Anatolia, the first major victory of Alexander the Great over the Persian satraps"
+   },
+   {
+    "label": "Hellespont",
+    "slug": "hellespont",
+    "quote": "Alexander the Great crossed it in 334 BCE to begin his campaign that brought down the Achaemenid Empire"
+   },
+   {
+    "label": "Timoleon",
+    "slug": "timoleon",
+    "quote": "He resettled ruined cities such as Gela and Acragas with new colonists, then retired and died in Syracuse around 334 BCE"
+   },
+   {
+    "label": "Ada of Caria",
+    "slug": "ada-of-caria",
+    "quote": "In 334 BCE she adopted Alexander the Great as her son, and he restored her as ruler of Caria"
+   },
+   {
+    "label": "Sparda",
+    "slug": "sparda",
+    "quote": "The satrapy lasted until Alexander the Great took Sardis in 334 BCE"
+   },
+   {
+    "label": "Cales",
+    "slug": "cales",
+    "quote": "Originally an Ausonian town, it was captured by Rome, which founded a Latin colony there in 334 BCE on land taken from the Sidicini and Aurunci"
+   }
+  ]
+ },
+ {
+  "name": "All in 479 BCE",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Plataea",
+    "slug": "battle-of-plataea",
+    "quote": "The Battle of Plataea was fought in 479 BCE in Boeotia, where an allied Greek army led by Sparta defeated the Persian land forces under Mardonius"
+   },
+   {
+    "label": "Mycale",
+    "slug": "battle-of-mycale",
+    "quote": "The Battle of Mycale was fought in 479 BCE at Mount Mycale on the coast of Ionia, opposite Samos"
+   },
+   {
+    "label": "Serpent Column",
+    "slug": "serpent-column",
+    "quote": "The Serpent Column is a bronze column of three intertwined snakes that once supported a golden tripod dedicated at Delphi by the Greek states that defeated Persia at Plataea in 479 BCE. Its coils bear the names of 31 allied states"
+   },
+   {
+    "label": "Mardonius",
+    "slug": "mardonius",
+    "quote": "BCE and commanded the land forces left in Greece by Xerxes after Salamis in 480 BCE. He reoccupied Athens in 479 BCE but was defeated and killed by the allied Greeks under the Spartan Pausanias at the Battle of Plataea, ending"
+   },
+   {
+    "label": "Confucius",
+    "slug": "confucius",
+    "quote": "551–479 BCE"
+   },
+   {
+    "label": "Pausanias",
+    "slug": "pausanias-general",
+    "quote": "He commanded the Greek army that defeated the Persians at Plataea in 479 BCE and in 478 BCE took Byzantium"
+   }
+  ],
+  "note": "Decoy: Confucius died in 479 BCE"
+ },
+ {
+  "name": "Their Roman names ended in -dunum",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lyon",
+    "slug": "lyon",
+    "quote": "Founded in 43 BCE as the Roman colony of Lugdunum, it became the capital of the Three Gauls and later a seat of the Burgundian kings"
+   },
+   {
+    "label": "Tours",
+    "slug": "tours",
+    "quote": "Founded by the Romans as Caesarodunum, the chief town of the Turones, it became a great pilgrimage centre after the death of its bishop Saint Martin in 397"
+   },
+   {
+    "label": "Autun",
+    "slug": "autun",
+    "quote": "Autun is a town in Burgundy, eastern France, founded under Augustus as Augustodunum to replace Bibracte as the chief town of the Aedui"
+   },
+   {
+    "label": "Carmarthen",
+    "slug": "carmarthen",
+    "quote": "It began as Moridunum, the Roman town of the Demetae, which had an amphitheatre and is among the westernmost Roman towns in Britain"
+   },
+   {
+    "label": "Kempten",
+    "slug": "kempten",
+    "quote": "Kempten is a city on the Iller in the Allgäu, Bavaria, and one of the oldest towns in Germany, on the site of Roman Cambodunum"
+   },
+   {
+    "label": "Rodez",
+    "slug": "rodez",
+    "quote": "As Segodunum it was the chief town of the Gallic Ruteni, and in the Middle Ages it was the seat of a bishop and of the counts of Rodez"
+   }
+  ],
+  "note": "Celtic dunon, fort: Lugdunum, Caesarodunum, Augustodunum, Moridunum, Cambodunum, Segodunum"
+ },
+ {
+  "name": "A horse (hippos) in the name",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Philip II",
+    "slug": "philip-ii-of-macedon",
+    "quote": "Philip II was king of Macedon from 359 to 336 BCE and the father of Alexander the Great"
+   },
+   {
+    "label": "Hippocrates",
+    "slug": "hippocrates",
+    "quote": "Hippocrates was a Greek physician from the island of Kos, born around 460 BCE, who is traditionally called the father of medicine"
+   },
+   {
+    "label": "Hippias",
+    "slug": "hippias-tyrant",
+    "quote": "Hippias was tyrant of Athens from 527 to 510 BCE, the eldest son of Peisistratos"
+   },
+   {
+    "label": "Lysippus",
+    "slug": "lysippus",
+    "quote": "Lysippus was a Greek sculptor from Sicyon, active in the 4th century BCE and one of the most prolific bronze-workers of antiquity"
+   },
+   {
+    "label": "Hippodamus",
+    "slug": "hippodamus-of-miletus",
+    "quote": "His name became attached to the grid plan of straight streets crossing at right angles, used in the rebuilding of Miletus after 479 BCE. He laid out the"
+   },
+   {
+    "label": "Xanthippus",
+    "slug": "xanthippus-father-of-pericles",
+    "quote": "Xanthippus was an Athenian statesman and general, the father of Pericles"
+   }
+  ],
+  "note": "Philip = lover of horses"
+ },
+ {
+  "name": "End in -agoras",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Pythagoras",
+    "slug": "pythagoras",
+    "quote": "Pythagoras was a Greek philosopher from Samos who, by tradition to escape the tyranny of Polycrates, settled at Croton in southern Italy around 530 BCE."
+   },
+   {
+    "label": "Anaxagoras",
+    "slug": "anaxagoras",
+    "quote": "Anaxagoras was a Greek philosopher from Clazomenae in Ionia who brought philosophy to Athens, where he lived for about 30 years in the circle of Pericles"
+   },
+   {
+    "label": "Protagoras",
+    "slug": "protagoras",
+    "quote": "He is known for the saying that 'man is the measure of all things'"
+   },
+   {
+    "label": "Aristagoras",
+    "slug": "aristagoras-of-miletus",
+    "quote": "Aristagoras was tyrant of Miletus, ruling in place of his father-in-law Histiaeus under Persian authority"
+   },
+   {
+    "label": "Diagoras",
+    "slug": "diagoras-of-rhodes",
+    "quote": "Diagoras of Rhodes was a celebrated boxer from Ialysos, whose victory at the Olympic Games of 464 BCE was praised by Pindar in his seventh Olympian ode"
+   },
+   {
+    "label": "Evagoras I",
+    "slug": "evagoras-i",
+    "quote": "Evagoras I was king of Salamis in Cyprus from 411 to 374 BCE. He promoted Greek culture, extended his rule over much of the island and allied with Athens and with Egypt against the Achaemenid Empire"
+   }
+  ]
+ },
+ {
+  "name": "A god (theos) in the name",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Theodosius I",
+    "slug": "theodosius-i",
+    "quote": "Theodosius I was a Roman emperor who died in 395 CE, the last to rule both the eastern and western halves of the empire"
+   },
+   {
+    "label": "Theodora",
+    "slug": "theodora-wife-of-justinian-i",
+    "quote": "Theodora was a Byzantine empress, wife of Emperor Justinian I and one of the most influential women in Byzantine history"
+   },
+   {
+    "label": "Theocritus",
+    "slug": "theocritus",
+    "quote": "Theocritus was a Greek poet from Sicily, in Magna Graecia, and the creator of ancient Greek pastoral poetry"
+   },
+   {
+    "label": "Theopompus",
+    "slug": "theopompus",
+    "quote": "Theopompus of Chios was a Greek historian and rhetorician, said to have studied under Isocrates"
+   },
+   {
+    "label": "Timotheus",
+    "slug": "timotheus-general",
+    "quote": "Timotheus was an Athenian general and statesman of the fourth century BCE, son of the admiral Conon"
+   },
+   {
+    "label": "Theognis",
+    "slug": "theognis-of-megara",
+    "quote": "Theognis of Megara was a Greek elegiac poet of the sixth century BCE. A collection of about 1,400 lines survives under his name, though much of it is by other poets"
+   }
+  ]
+ },
+ {
+  "name": "A Greek or Latin number inside",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Tetrarchy",
+    "slug": "tetrarchy",
+    "quote": "The Tetrarchy was the system of imperial government established by Diocletian in 293 CE, under which the Roman Empire was ruled by four emperors: two senior Augusti and two junior Caesars"
+   },
+   {
+    "label": "Septuagint",
+    "slug": "septuagint",
+    "quote": "The Septuagint is the earliest Greek translation of the Hebrew scriptures, begun with the Torah in Alexandria in the third century BCE and completed over the following two centuries"
+   },
+   {
+    "label": "Trireme",
+    "slug": "trireme",
+    "quote": "The trireme was an ancient Mediterranean galley driven by three banks of oars with one man to each oar, first referred to at the end of the 8th century BCE; scholars are divided on whether it came from Greece or Phoenicia"
+   },
+   {
+    "label": "Quinquereme",
+    "slug": "quinquereme",
+    "quote": "A quinquereme was a large ancient warship powered by oarsmen arranged in groups of five per vertical unit"
+   },
+   {
+    "label": "Triumvirate",
+    "slug": "second-triumvirate",
+    "quote": "The Second Triumvirate was the political alliance formed in 43 BCE by Octavian, Mark Antony and Lepidus to rule the Roman state after the assassination of Julius Caesar"
+   },
+   {
+    "label": "Pentapolis",
+    "slug": "pentapolis-cyrenaica",
+    "quote": "The Pentapolis was the group of five leading Greek cities of Cyrenaica in eastern Libya: Cyrene, its port Apollonia, Taucheira, Barca or its successor Ptolemais, and Euesperides, later refounded as Berenice"
+   }
+  ],
+  "note": "tetra- four, septua- seventy, tri- three, quinque- five, penta- five"
+ },
+ {
+  "name": "Gave a word to English",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mausolus",
+    "slug": "mausolus",
+    "quote": "His monumental tomb, completed by his wife Artemisia II, gave the word mausoleum and was a Wonder of the World"
+   },
+   {
+    "label": "Draco",
+    "slug": "draco-lawgiver",
+    "quote": "The laws were remembered for their severity, prescribing death for many offences, which gave rise to the word draconian"
+   },
+   {
+    "label": "Büyük Menderes",
+    "slug": "buyuk-menderes-river",
+    "quote": "Its winding course gave the word 'meander' to English, and its valley was a major route from the coast into Anatolia"
+   },
+   {
+    "label": "Pyrrhus",
+    "slug": "pyrrhus-of-epirus",
+    "quote": "Invited by Taras in 280 BCE, he defeated Rome at Heraclea and Asculum at such cost that a 'Pyrrhic victory' became proverbial"
+   },
+   {
+    "label": "Sybaris",
+    "slug": "sybaris",
+    "quote": "Sybaris was a Greek city on the Gulf of Taranto in southern Italy, founded by Achaean colonists around 720 BCE and so wealthy that its name became a byword for luxury"
+   },
+   {
+    "label": "Sappho",
+    "slug": "sappho",
+    "quote": "Ancient writers called her the tenth Muse, and the Sapphic stanza is named after her"
+   }
+  ],
+  "note": "mausoleum, draconian, meander, Pyrrhic, sybarite, Sapphic"
+ },
+ {
+  "name": "Named after Greek and Macedonian kings",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Seleucia",
+    "slug": "seleucia",
+    "quote": "Seleucia, or Seleucia-on-Tigris, was a city founded by Seleucus I Nicator in Mesopotamia around the end of the fourth century BCE. It served as one of the twin capitals of the"
+   },
+   {
+    "label": "Lysimachia",
+    "slug": "lysimachia",
+    "quote": "Lysimachia was a Greek city on the isthmus of the Gallipoli peninsula in Thrace, founded by Lysimachus in 309 BCE as his capital"
+   },
+   {
+    "label": "Demetrias",
+    "slug": "demetrias",
+    "quote": "Demetrias was a Greek city on the Pagasetic Gulf in Thessaly, near modern Volos, founded by Demetrius Poliorcetes around 293 BCE by merging the populations of nearby towns"
+   },
+   {
+    "label": "Antalya",
+    "slug": "antalya",
+    "quote": "Founded as Attalia by Attalus II of Pergamon in the 2nd century BCE, it became a Roman and Byzantine port and was captured by the Seljuk Sultanate of Rum in 1207"
+   },
+   {
+    "label": "Plovdiv",
+    "slug": "plovdiv",
+    "quote": "Inhabited since prehistoric times, it was the Thracian Eumolpias, Philip II of Macedon's Philippopolis and the Roman capital of Thrace, with a well-preserved Roman theatre"
+   },
+   {
+    "label": "Alexandria Eschate",
+    "slug": "alexandria-eschate",
+    "quote": "Alexandria Eschate, 'Alexandria the Furthest', was a city founded by Alexander the Great in 329 BCE on the Syr Darya (Jaxartes) at the entrance to the Fergana Valley, at or near modern Khujand in Tajikistan"
+   }
+  ],
+  "note": "Antalya was Attalia (Attalus II of Pergamon), Plovdiv was Philippopolis (Philip II)"
+ }
+]

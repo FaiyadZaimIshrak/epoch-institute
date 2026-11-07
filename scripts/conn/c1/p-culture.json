@@ -1,0 +1,2748 @@
+[
+ {
+  "name": "Monasteries",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Samye",
+    "slug": "samye",
+    "quote": "is the first Buddhist monastery founded in Tibet, built"
+   },
+   {
+    "label": "Debre Libanos",
+    "slug": "debre-libanos",
+    "quote": "Debre Libanos is a monastery in the Shewa highlands north of Addis"
+   },
+   {
+    "label": "Pechersk Lavra",
+    "slug": "kyiv-pechersk-lavra",
+    "quote": "the Caves, is an Orthodox monastery in Kyiv founded in"
+   },
+   {
+    "label": "Mount Athos",
+    "slug": "mount-athos",
+    "quote": "of an Orthodox monastic community governed as a self-administering"
+   },
+   {
+    "label": "Cluny",
+    "slug": "cluny-abbey",
+    "quote": "Cluny Abbey was a Benedictine monastery at Cluny in Burgundy"
+   },
+   {
+    "label": "St Catherine's",
+    "slug": "saint-catherines-monastery",
+    "quote": "is an Eastern Orthodox monastery at the foot of"
+   }
+  ]
+ },
+ {
+  "name": "Buddhist temples",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Borobudur",
+    "slug": "borobudur",
+    "quote": "a monumental Mahayana Buddhist temple in central Java, built"
+   },
+   {
+    "label": "Tōdai-ji",
+    "slug": "todai-ji",
+    "quote": "Tōdai-ji is a Buddhist temple in Nara, Japan, built on"
+   },
+   {
+    "label": "Jokhang",
+    "slug": "jokhang",
+    "quote": "is the most sacred temple of Tibetan Buddhism, in the centre"
+   },
+   {
+    "label": "Bulguksa",
+    "slug": "bulguksa",
+    "quote": "Bulguksa is a Buddhist temple on the slopes of Mount"
+   },
+   {
+    "label": "Ananda",
+    "slug": "ananda-temple",
+    "quote": "Ananda Temple is a Buddhist temple at Bagan in Myanmar, completed around"
+   },
+   {
+    "label": "Haeinsa",
+    "slug": "haeinsa",
+    "quote": "is a major Buddhist temple on Mount Gaya in"
+   }
+  ],
+  "note": "Wat Pho and Wat Arun left out: they are in the published Landmarks of Bangkok."
+ },
+ {
+  "name": "Hindu goddesses",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Durga",
+    "slug": "durga",
+    "quote": "Durga is a major Hindu goddess, a warrior form"
+   },
+   {
+    "label": "Lakshmi",
+    "slug": "lakshmi",
+    "quote": "Lakshmi is the Hindu goddess of wealth, fortune and prosperity"
+   },
+   {
+    "label": "Saraswati",
+    "slug": "saraswati",
+    "quote": "Saraswati is the Hindu goddess of knowledge, learning, music and"
+   },
+   {
+    "label": "Danteshwari",
+    "slug": "danteshwari",
+    "quote": "Danteshwari is a Hindu goddess, a form of Durga, worshipped as"
+   },
+   {
+    "label": "Samaleswari",
+    "slug": "samaleswari",
+    "quote": "or Samalei, is a Hindu goddess, the presiding deity of Sambalpur in"
+   }
+  ]
+ },
+ {
+  "name": "Inventions of the 20th century",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Radar",
+    "slug": "radar",
+    "quote": "1904"
+   },
+   {
+    "label": "Personal computer",
+    "slug": "personal-computer",
+    "quote": "1972"
+   },
+   {
+    "label": "Jet engine",
+    "slug": "jet-engine",
+    "quote": "1937"
+   },
+   {
+    "label": "Television",
+    "slug": "television",
+    "quote": "1909"
+   },
+   {
+    "label": "World Wide Web",
+    "slug": "world-wide-web",
+    "quote": "1989"
+   },
+   {
+    "label": "Helicopter",
+    "slug": "helicopter",
+    "quote": "1907"
+   }
+  ],
+  "note": "Each tile's dates field gives the year of the first working example or patent."
+ },
+ {
+  "name": "Drinks",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tea",
+    "slug": "tea",
+    "quote": "Tea is a beverage made from the leaves"
+   },
+   {
+    "label": "Wine",
+    "slug": "wine",
+    "quote": "Wine is an alcoholic drink made by fermenting grapes"
+   },
+   {
+    "label": "Beer",
+    "slug": "beer",
+    "quote": "of the oldest human-produced drinks, made by fermenting"
+   },
+   {
+    "label": "Cacao",
+    "slug": "cacao",
+    "quote": "beans were drunk by the elite as a frothy beverage and also served as"
+   },
+   {
+    "label": "Yerba mate",
+    "slug": "yerba-mate",
+    "quote": "are steeped to make the caffeinated drink mate"
+   },
+   {
+    "label": "Coffee",
+    "slug": "coffee-economy",
+    "quote": "Coffee is a drink made from the roasted"
+   }
+  ]
+ },
+ {
+  "name": "Festivals",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hanukkah",
+    "slug": "hanukkah",
+    "quote": "is an eight-day Jewish festival beginning on 25 Kislev"
+   },
+   {
+    "label": "Vaisakhi",
+    "slug": "vaisakhi",
+    "quote": "is a spring harvest festival of the Punjab and one of the"
+   },
+   {
+    "label": "Oktoberfest",
+    "slug": "oktoberfest",
+    "quote": "is the annual folk festival held on the Theresienwiese"
+   },
+   {
+    "label": "Oruro",
+    "slug": "carnival-of-oruro",
+    "quote": "is an annual religious and folk festival in the Bolivian mining"
+   },
+   {
+    "label": "Mysore Dasara",
+    "slug": "mysore-dasara",
+    "quote": "is the ten-day festival of Navaratri and Vijayadashami celebrated at"
+   },
+   {
+    "label": "Trinidad Carnival",
+    "slug": "trinidad-and-tobago-carnival",
+    "quote": "Tobago Carnival is an annual festival held on the Monday and"
+   }
+  ],
+  "note": "Passover left out: it is in the published Ancient festivals."
+ },
+ {
+  "name": "Orishas of the Yoruba",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shango",
+    "slug": "shango",
+    "quote": "Shango is the orisha of fire, thunder, lightning, drumming"
+   },
+   {
+    "label": "Oshun",
+    "slug": "oshun",
+    "quote": "Oshun is the orisha of love, fertility, water, divination"
+   },
+   {
+    "label": "Ogun",
+    "slug": "ogun",
+    "quote": "is a primordial orisha who, in some traditions"
+   },
+   {
+    "label": "Eshu",
+    "slug": "eshu",
+    "quote": "Eshu is the orisha of trickery, chance, crossroads, judgement"
+   },
+   {
+    "label": "Obatala",
+    "slug": "obatala",
+    "quote": "Great Orisha, is the king of the orishas in the Yoruba religion"
+   },
+   {
+    "label": "Yemọja",
+    "slug": "yemoja",
+    "quote": "a major water deity of the Yoruba religion, the patron spirit"
+   }
+  ],
+  "note": "Oshun and Yemoja are also in Gods of the waters."
+ },
+ {
+  "name": "Gods of the waters",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Poseidon",
+    "slug": "poseidon",
+    "quote": "was the Greek god of the sea, earthquakes and horses"
+   },
+   {
+    "label": "Neptune",
+    "slug": "neptune",
+    "quote": "was the Roman god of fresh water and the sea, identified with the"
+   },
+   {
+    "label": "Enki",
+    "slug": "enki",
+    "quote": "was the Sumerian god of fresh water, crafts, wisdom and"
+   },
+   {
+    "label": "Anahita",
+    "slug": "anahita",
+    "quote": "an ancient Iranian goddess of waters, fertility and healing"
+   },
+   {
+    "label": "Yemọja",
+    "slug": "yemoja",
+    "quote": "religion, the patron spirit of rivers, above all the"
+   },
+   {
+    "label": "Oshun",
+    "slug": "oshun",
+    "quote": "and the patron of the Osun River in Nigeria, which bears"
+   }
+  ],
+  "note": "Yemoja and Oshun are also orishas (Orishas of the Yoruba)."
+ },
+ {
+  "name": "Gods of love",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Inanna",
+    "slug": "inanna",
+    "quote": "was the Sumerian goddess of love, war and fertility"
+   },
+   {
+    "label": "Astarte",
+    "slug": "astarte",
+    "quote": "as a deity of love, fertility and war"
+   },
+   {
+    "label": "Nanaya",
+    "slug": "nanaya",
+    "quote": "was a Mesopotamian goddess of love and war, worshipped from the"
+   },
+   {
+    "label": "Eros",
+    "slug": "eros",
+    "quote": "was the Greek god of love and desire, in early myth"
+   },
+   {
+    "label": "Oshun",
+    "slug": "oshun",
+    "quote": "Oshun is the orisha of love, fertility, water, divination"
+   }
+  ],
+  "note": "Oshun is also in the orisha group."
+ },
+ {
+  "name": "Gods of death and the underworld",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Osiris",
+    "slug": "osiris",
+    "quote": "the ancient Egyptian god of the dead, the afterlife and"
+   },
+   {
+    "label": "Mot",
+    "slug": "mot-god",
+    "quote": "Mot is the god of death in the religion of"
+   },
+   {
+    "label": "Resheph",
+    "slug": "resheph",
+    "quote": "and Canaanite god of plague, war and the underworld, worshipped from the"
+   },
+   {
+    "label": "Persephone",
+    "slug": "persephone",
+    "quote": "by Hades to be queen of the underworld"
+   },
+   {
+    "label": "Inshushinak",
+    "slug": "inshushinak",
+    "quote": "A god of oaths and of the dead, he became from"
+   },
+   {
+    "label": "Hermes",
+    "slug": "hermes",
+    "quote": "gods and the guide of souls to the underworld"
+   }
+  ]
+ },
+ {
+  "name": "Moon deities",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Nanna",
+    "slug": "nanna",
+    "quote": "Nanna was the Sumerian moon god, known in Akkadian"
+   },
+   {
+    "label": "Thoth",
+    "slug": "thoth",
+    "quote": "ancient Egyptian god of writing, wisdom, the moon and reckoning, shown as"
+   },
+   {
+    "label": "Ix Chel",
+    "slug": "ix-chel",
+    "quote": "a Maya goddess associated with the moon, childbirth, weaving and"
+   },
+   {
+    "label": "Hecate",
+    "slug": "hecate",
+    "quote": "entrances, night, magic and the moon, often shown with"
+   },
+   {
+    "label": "Men",
+    "slug": "men-deity",
+    "quote": "Men was a moon god worshipped widely in Anatolia"
+   },
+   {
+    "label": "Diana",
+    "slug": "diana-mythology",
+    "quote": "of hunting, wild animals, the moon and childbirth, later identified with"
+   }
+  ]
+ },
+ {
+  "name": "Buddhist scriptures",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lotus Sutra",
+    "slug": "lotus-sutra",
+    "quote": "the most influential scriptures of Mahayana Buddhism, composed in India"
+   },
+   {
+    "label": "Perfection of Wisdom",
+    "slug": "prajnaparamita",
+    "quote": "are a group of Mahayana Buddhist scriptures on the emptiness of"
+   },
+   {
+    "label": "Diamond Sutra",
+    "slug": "diamond-sutra-of-dunhuang",
+    "quote": "Diamond Sutra, a Mahayana Buddhist scripture, dated to 868"
+   },
+   {
+    "label": "Nirvana Sutra",
+    "slug": "mahaparinirvana-sutra",
+    "quote": "Nirvana Sutra, is a Mahayana Buddhist scripture set during the last"
+   },
+   {
+    "label": "Jataka tales",
+    "slug": "jataka-tales",
+    "quote": "about the previous births of the Buddha, in which he"
+   },
+   {
+    "label": "Sutta Nipata",
+    "slug": "sutta-nipata",
+    "quote": "is a collection of Buddhist discourses in verse and prose"
+   }
+  ]
+ },
+ {
+  "name": "Scientific instruments",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Compass",
+    "slug": "magnetic-compass",
+    "quote": "magnetic compass is a navigational instrument that uses a magnetised"
+   },
+   {
+    "label": "Barometer",
+    "slug": "barometer",
+    "quote": "A barometer is an instrument that measures air pressure, from which changes"
+   },
+   {
+    "label": "Thermometer",
+    "slug": "thermometer",
+    "quote": "A thermometer measures temperature through a change in a"
+   },
+   {
+    "label": "Astrolabe",
+    "slug": "astrolabe",
+    "quote": "An astrolabe is an astronomical instrument that serves as a"
+   },
+   {
+    "label": "Eyeglasses",
+    "slug": "eyeglasses",
+    "quote": "spectacles, are lenses held in a frame in front of the"
+   },
+   {
+    "label": "Water clock",
+    "slug": "water-clock",
+    "quote": "or clepsydra, measures time by the regulated flow of water into or"
+   }
+  ],
+  "note": "Telescope and microscope left out: they are in the published Invented in the 1600s."
+ },
+ {
+  "name": "Museums",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "British Museum",
+    "slug": "british-museum",
+    "quote": "British Museum is a public museum in London founded in 1753, holding"
+   },
+   {
+    "label": "V&A",
+    "slug": "victoria-and-albert-museum",
+    "quote": "the world's largest museum of decorative arts and design, founded in"
+   },
+   {
+    "label": "Tretyakov",
+    "slug": "tretyakov-gallery",
+    "quote": "Tretyakov Gallery is an art museum in Moscow holding the world's foremost"
+   },
+   {
+    "label": "Alte Pinakothek",
+    "slug": "alte-pinakothek",
+    "quote": "Alte Pinakothek is an art museum in Munich, commissioned by Ludwig"
+   },
+   {
+    "label": "Iraq Museum",
+    "slug": "national-museum-of-iraq",
+    "quote": "the world's most important collections of Mesopotamian antiquities from Sumerian, Akkadian, Babylonian"
+   },
+   {
+    "label": "Penn Museum",
+    "slug": "penn-museum",
+    "quote": "and Anthropology, is a museum and research institution in Philadelphia founded in"
+   }
+  ]
+ },
+ {
+  "name": "Universities",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Harvard",
+    "slug": "harvard-university",
+    "quote": "is the oldest institution of higher learning in the United"
+   },
+   {
+    "label": "Yale",
+    "slug": "yale-university",
+    "quote": "Yale University is a private research university in New Haven, Connecticut"
+   },
+   {
+    "label": "Columbia",
+    "slug": "columbia-university",
+    "quote": "Columbia University is a private research university in New York City"
+   },
+   {
+    "label": "Tartu",
+    "slug": "university-of-tartu",
+    "quote": "is the oldest and most prestigious university in Estonia, founded in"
+   },
+   {
+    "label": "San Marcos",
+    "slug": "national-university-of-san-marcos",
+    "quote": "as the oldest officially established university in the"
+   },
+   {
+    "label": "Heidelberg",
+    "slug": "heidelberg-university",
+    "quote": "is the oldest university in present-day Germany"
+   }
+  ],
+  "note": "Founded 1386-1754; none of them in the published Universities older than 1300."
+ },
+ {
+  "name": "Mausoleums",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Taj Mahal",
+    "slug": "taj-mahal",
+    "quote": "is a white marble mausoleum in Agra, northern India"
+   },
+   {
+    "label": "Gol Gumbaz",
+    "slug": "gol-gumbaz",
+    "quote": "Gol Gumbaz is the mausoleum of Sultan Muhammad Adil Shah of"
+   },
+   {
+    "label": "Soltaniyeh",
+    "slug": "dome-of-soltaniyeh",
+    "quote": "of Soltaniyeh is the mausoleum of the Ilkhanid ruler Öljaitü at Sultaniyya"
+   },
+   {
+    "label": "Medracen",
+    "slug": "medracen",
+    "quote": "is a royal mausoleum of the Numidian kings near Batna in"
+   },
+   {
+    "label": "Qianling",
+    "slug": "qianling-mausoleum",
+    "quote": "Qianling Mausoleum is the tomb complex of the Tang emperor"
+   },
+   {
+    "label": "Castel Sant'Angelo",
+    "slug": "castel-santangelo",
+    "quote": "second century as the mausoleum of the emperor Hadrian"
+   }
+  ]
+ },
+ {
+  "name": "Opera houses",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "San Carlo",
+    "slug": "teatro-di-san-carlo",
+    "quote": "San Carlo is the opera house of Naples, opened on 4"
+   },
+   {
+    "label": "La Scala",
+    "slug": "la-scala",
+    "quote": "is the principal opera house of Milan"
+   },
+   {
+    "label": "Teatro Regio",
+    "slug": "teatro-regio-parma",
+    "quote": "Teatro Regio is an opera house in Parma built for Duchess Marie"
+   },
+   {
+    "label": "Gänsemarkt",
+    "slug": "oper-am-gansemarkt",
+    "quote": "as the first public opera house in Germany"
+   },
+   {
+    "label": "San Cassiano",
+    "slug": "teatro-san-cassiano",
+    "quote": "was the first public opera house in the world, opened in 1637"
+   }
+  ]
+ },
+ {
+  "name": "Philosophers of the 1900s",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Russell",
+    "slug": "bertrand-russell",
+    "quote": "and a founder of analytic philosophy, who did pioneering"
+   },
+   {
+    "label": "Sartre",
+    "slug": "jean-paul-sartre",
+    "quote": "writer, a key figure of existentialism and a leading figure"
+   },
+   {
+    "label": "Arendt",
+    "slug": "hannah-arendt",
+    "quote": "political theorist, one of the most influential of the twentieth century"
+   },
+   {
+    "label": "Wittgenstein",
+    "slug": "ludwig-wittgenstein",
+    "quote": "Ludwig Wittgenstein was a philosopher born in Vienna in"
+   },
+   {
+    "label": "Isaiah Berlin",
+    "slug": "isaiah-berlin",
+    "quote": "political theorist, philosopher and historian of ideas, born into a"
+   },
+   {
+    "label": "Gramsci",
+    "slug": "antonio-gramsci",
+    "quote": "was an Italian Marxist philosopher, journalist and politician"
+   }
+  ]
+ },
+ {
+  "name": "Painters of the 1900s",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Picasso",
+    "slug": "pablo-picasso",
+    "quote": "a Spanish painter and sculptor of the twentieth century, a founder of"
+   },
+   {
+    "label": "Matisse",
+    "slug": "henri-matisse",
+    "quote": "of the leading figures of modern art in the twentieth century"
+   },
+   {
+    "label": "Mondrian",
+    "slug": "piet-mondrian",
+    "quote": "and a pioneer of abstract art"
+   },
+   {
+    "label": "Magritte",
+    "slug": "rene-magritte",
+    "quote": "was a Belgian surrealist painter whose witty images questioned"
+   },
+   {
+    "label": "Kandinsky",
+    "slug": "wassily-kandinsky",
+    "quote": "of the pioneers of abstract art"
+   }
+  ]
+ },
+ {
+  "name": "Expressionists",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kokoschka",
+    "slug": "oskar-kokoschka",
+    "quote": "was an Austrian expressionist painter, printmaker and writer"
+   },
+   {
+    "label": "Schiele",
+    "slug": "egon-schiele",
+    "quote": "was an Austrian expressionist painter active in Vienna in"
+   },
+   {
+    "label": "Franz Marc",
+    "slug": "franz-marc",
+    "quote": "and a leading figure of German Expressionism"
+   },
+   {
+    "label": "Ensor",
+    "slug": "james-ensor",
+    "quote": "from Ostend, a forerunner of expressionism"
+   },
+   {
+    "label": "Munch",
+    "slug": "edvard-munch",
+    "quote": "printmaker and a pioneer of Expressionism"
+   }
+  ],
+  "note": "Schiele is also in the published Vienna around 1900."
+ },
+ {
+  "name": "Latin American painting",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Diego Rivera",
+    "slug": "diego-rivera",
+    "quote": "and a leading figure of the Mexican mural movement"
+   },
+   {
+    "label": "Orozco",
+    "slug": "jose-clemente-orozco",
+    "quote": "of the three leading artists of the Mexican mural movement"
+   },
+   {
+    "label": "Siqueiros",
+    "slug": "david-alfaro-siqueiros",
+    "quote": "of the three great artists of the Mexican mural movement with Diego Rivera and"
+   },
+   {
+    "label": "Guayasamín",
+    "slug": "oswaldo-guayasamin",
+    "quote": "was an Ecuadorian painter and sculptor of indigenous and mestizo"
+   },
+   {
+    "label": "Cusco School",
+    "slug": "cusco-school",
+    "quote": "was a tradition of Catholic religious painting centred on Cusco in"
+   },
+   {
+    "label": "Quito School",
+    "slug": "quito-school",
+    "quote": "was a tradition of painting and sculpture that flourished in Quito"
+   }
+  ]
+ },
+ {
+  "name": "Composers of the 1900s",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Prokofiev",
+    "slug": "sergei-prokofiev",
+    "quote": "was a Russian composer and pianist who left Russia after"
+   },
+   {
+    "label": "Shostakovich",
+    "slug": "dmitri-shostakovich",
+    "quote": "Russian composer, among the most important of the twentieth century, best known for"
+   },
+   {
+    "label": "Sibelius",
+    "slug": "jean-sibelius",
+    "quote": "Sibelius (1865–1957) was a Finnish composer whose seven symphonies, tone"
+   },
+   {
+    "label": "Kodály",
+    "slug": "zoltan-kodaly",
+    "quote": "was a Hungarian composer, ethnomusicologist and music educator, born"
+   },
+   {
+    "label": "Bernstein",
+    "slug": "leonard-bernstein",
+    "quote": "was an American conductor, composer, pianist and music"
+   },
+   {
+    "label": "Elgar",
+    "slug": "edward-elgar",
+    "quote": "Edward Elgar was an English composer, born at Lower"
+   }
+  ]
+ },
+ {
+  "name": "Figures of Romanticism",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Victor Hugo",
+    "slug": "victor-hugo",
+    "quote": "dramatist, a leading figure of Romanticism and author of Notre-Dame"
+   },
+   {
+    "label": "William Blake",
+    "slug": "william-blake",
+    "quote": "of the great figures of Romanticism"
+   },
+   {
+    "label": "Byron",
+    "slug": "lord-byron",
+    "quote": "was an English Romantic poet, author of Childe"
+   },
+   {
+    "label": "Delacroix",
+    "slug": "eugene-delacroix",
+    "quote": "as the leader of the French Romantic school"
+   },
+   {
+    "label": "C. D. Friedrich",
+    "slug": "caspar-david-friedrich",
+    "quote": "was a German Romantic landscape painter, generally considered the"
+   },
+   {
+    "label": "Berlioz",
+    "slug": "hector-berlioz",
+    "quote": "was a French Romantic composer, conductor and critic"
+   }
+  ]
+ },
+ {
+  "name": "Created a writing system",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mesrop Mashtots",
+    "slug": "mesrop-mashtots",
+    "quote": "scholar who created the Armenian alphabet around 405 with the"
+   },
+   {
+    "label": "Sequoyah",
+    "slug": "sequoyah",
+    "quote": "silversmith who created the Cherokee syllabary, a writing system"
+   },
+   {
+    "label": "Thonmi Sambhota",
+    "slug": "thonmi-sambhota",
+    "quote": "century and devised the Tibetan script"
+   },
+   {
+    "label": "Stephen of Perm",
+    "slug": "stephen-of-perm",
+    "quote": "Old Permic alphabet for the Komi language"
+   },
+   {
+    "label": "Sejong",
+    "slug": "sejong-the-great",
+    "quote": "created the Hangul alphabet, rain gauges, water"
+   },
+   {
+    "label": "Njoya",
+    "slug": "ibrahim-njoya",
+    "quote": "curiosity, he invented the Bamum script around 1896 and refined"
+   }
+  ]
+ },
+ {
+  "name": "Founded schools of Japanese Buddhism",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kūkai",
+    "slug": "kukai",
+    "quote": "poet who founded the esoteric Shingon school"
+   },
+   {
+    "label": "Saichō",
+    "slug": "saicho",
+    "quote": "Buddhist monk credited with founding the Tendai school, posthumously titled Dengyō"
+   },
+   {
+    "label": "Hōnen",
+    "slug": "honen",
+    "quote": "monk who founded the Jōdo-shū, the Pure Land"
+   },
+   {
+    "label": "Shinran",
+    "slug": "shinran",
+    "quote": "Hōnen and founder of the Jōdo Shinshū, or True Pure"
+   },
+   {
+    "label": "Nichiren",
+    "slug": "nichiren",
+    "quote": "monk who taught that the Lotus Sutra alone held the truth and that chanting its"
+   }
+  ],
+  "note": "Kūkai is also in Famed as calligraphers."
+ },
+ {
+  "name": "Famed as calligraphers",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Wang Xizhi",
+    "slug": "wang-xizhi",
+    "quote": "revered as the 'Sage of Calligraphy'"
+   },
+   {
+    "label": "Huizong",
+    "slug": "emperor-huizong",
+    "quote": "as a painter, calligrapher and patron of the arts but"
+   },
+   {
+    "label": "Reza Abbasi",
+    "slug": "reza-abbasi",
+    "quote": "a leading Persian painter and calligrapher active at the court"
+   },
+   {
+    "label": "Zheng Xiaoxu",
+    "slug": "zheng-xiaoxu",
+    "quote": "Chinese official, poet and calligrapher who served the Qing"
+   },
+   {
+    "label": "Cai Yong",
+    "slug": "cai-yong",
+    "quote": "was a scholar, calligrapher, musician and official of the"
+   },
+   {
+    "label": "Kūkai",
+    "slug": "kukai",
+    "quote": "a Japanese Buddhist monk, calligrapher and poet who founded the esoteric"
+   }
+  ],
+  "note": "Kūkai is also in Founded schools of Japanese Buddhism."
+ },
+ {
+  "name": "Writers and works in Kannada",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pampa",
+    "slug": "adikavi-pampa",
+    "quote": "was a 10th-century Kannada poet at the court of"
+   },
+   {
+    "label": "Ponna",
+    "slug": "ponna",
+    "quote": "was a Jain poet of the tenth century at the court of"
+   },
+   {
+    "label": "Basava",
+    "slug": "basava",
+    "quote": "a 12th-century Kannada poet, philosopher and social reformer and a minister at"
+   },
+   {
+    "label": "Purandara Dasa",
+    "slug": "purandara-dasa",
+    "quote": "was a Kannada poet-saint and composer of the"
+   },
+   {
+    "label": "Kavirajamarga",
+    "slug": "kavirajamarga",
+    "quote": "is the earliest surviving literary work in Kannada, a treatise on"
+   },
+   {
+    "label": "Shabdamanidarpana",
+    "slug": "shabdamanidarpana",
+    "quote": "is a grammar of the Kannada language written by the poet"
+   }
+  ]
+ },
+ {
+  "name": "Sacred to the Jains",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shravanabelagola",
+    "slug": "shravanabelagola",
+    "quote": "most important pilgrimage centres of Digambara Jainism"
+   },
+   {
+    "label": "Shatrunjaya",
+    "slug": "shatrunjaya",
+    "quote": "of the holiest pilgrimage sites of the Jains"
+   },
+   {
+    "label": "Girnar",
+    "slug": "girnar",
+    "quote": "Gujarat, India, sacred to Jains and Hindus"
+   },
+   {
+    "label": "Pavapuri",
+    "slug": "pavapuri",
+    "quote": "Bihar, India, revered by Jains as the place where"
+   },
+   {
+    "label": "Sittanavasal",
+    "slug": "sittanavasal",
+    "quote": "for its rock-cut Jain cave temple, the Arivar Koil"
+   },
+   {
+    "label": "Gommateshwara",
+    "slug": "gommateshwara-statue",
+    "quote": "monolithic stone statue of the Jain figure Bahubali, about 17 metres"
+   }
+  ]
+ },
+ {
+  "name": "Cathedrals of Georgia and Armenia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bagrati",
+    "slug": "bagrati-cathedral",
+    "quote": "an eleventh-century cathedral in Kutaisi, western Georgia, built under Bagrat"
+   },
+   {
+    "label": "Svetitskhoveli",
+    "slug": "svetitskhoveli-cathedral",
+    "quote": "is the principal Orthodox cathedral of Mtskheta, the ancient capital"
+   },
+   {
+    "label": "Etchmiadzin",
+    "slug": "etchmiadzin-cathedral",
+    "quote": "is the mother church of the Armenian Apostolic Church and the seat of"
+   },
+   {
+    "label": "Ani",
+    "slug": "ani-cathedral",
+    "quote": "is the ruined cathedral of the medieval Armenian capital Ani, in present-day eastern"
+   },
+   {
+    "label": "Aghtamar",
+    "slug": "cathedral-of-the-holy-cross-aghtamar",
+    "quote": "Cathedral of the Holy Cross, Aghtamar"
+   },
+   {
+    "label": "Nikortsminda",
+    "slug": "nikortsminda-cathedral",
+    "quote": "Nikortsminda Cathedral"
+   }
+  ]
+ },
+ {
+  "name": "Stupas of Myanmar",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shwezigon",
+    "slug": "shwezigon-pagoda",
+    "quote": "is a gilded Buddhist stupa at Nyaung-U near Bagan in Myanmar"
+   },
+   {
+    "label": "Kuthodaw",
+    "slug": "kuthodaw-pagoda",
+    "quote": "is a Buddhist stupa at the foot of Mandalay Hill in Myanmar, built by"
+   },
+   {
+    "label": "Mingun",
+    "slug": "mingun-pahtodawgyi",
+    "quote": "is a huge unfinished brick stupa at Mingun, on the"
+   },
+   {
+    "label": "Kaunghmudaw",
+    "slug": "kaunghmudaw-pagoda",
+    "quote": "is a large Buddhist stupa near Sagaing in Myanmar, built by"
+   },
+   {
+    "label": "Bawbawgyi",
+    "slug": "bawbawgyi-pagoda",
+    "quote": "is a Buddhist stupa at Sri Ksetra, the ancient Pyu"
+   }
+  ]
+ },
+ {
+  "name": "Temples of northern Thailand",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chet Yot",
+    "slug": "wat-chet-yot",
+    "quote": "Mai, Thailand, founded by King Tilokarat of Lan Na in 1455"
+   },
+   {
+    "label": "Chedi Luang",
+    "slug": "wat-chedi-luang",
+    "quote": "is a Buddhist temple in the centre of Chiang Mai, Thailand, whose great"
+   },
+   {
+    "label": "Phra Singh",
+    "slug": "wat-phra-singh",
+    "quote": "Mai, Thailand, founded in 1345 by King Phayu of Lan Na to hold the ashes"
+   },
+   {
+    "label": "Suan Dok",
+    "slug": "wat-suan-dok",
+    "quote": "Mai, Thailand, built around 1371 by King Kue Na in his flower garden"
+   },
+   {
+    "label": "Hariphunchai",
+    "slug": "wat-phra-that-hariphunchai",
+    "quote": "That Hariphunchai is a Buddhist temple in Lamphun, northern Thailand, centred"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1759",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Wollstonecraft",
+    "slug": "mary-wollstonecraft",
+    "quote": "1759–1797"
+   },
+   {
+    "label": "Schiller",
+    "slug": "friedrich-schiller",
+    "quote": "1759–1805"
+   },
+   {
+    "label": "Wilberforce",
+    "slug": "william-wilberforce",
+    "quote": "1759–1833"
+   },
+   {
+    "label": "Pitt the Younger",
+    "slug": "william-pitt-the-younger",
+    "quote": "1759–1806"
+   },
+   {
+    "label": "Montgelas",
+    "slug": "maximilian-von-montgelas",
+    "quote": "1759–1838"
+   },
+   {
+    "label": "William Thornton",
+    "slug": "william-thornton",
+    "quote": "1759–1828"
+   }
+  ],
+  "note": "Wollstonecraft also died in 1797 (Died in 1797)."
+ },
+ {
+  "name": "Born in 1856",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Woodrow Wilson",
+    "slug": "woodrow-wilson",
+    "quote": "1856–1924"
+   },
+   {
+    "label": "Tilak",
+    "slug": "bal-gangadhar-tilak",
+    "quote": "1856–1920"
+   },
+   {
+    "label": "Max Uhle",
+    "slug": "max-uhle",
+    "quote": "1856–1944"
+   },
+   {
+    "label": "Pétain",
+    "slug": "philippe-petain",
+    "quote": "1856–1951"
+   },
+   {
+    "label": "Batlle y Ordóñez",
+    "slug": "jose-batlle-y-ordonez",
+    "quote": "1856–1929"
+   },
+   {
+    "label": "John Redmond",
+    "slug": "john-redmond",
+    "quote": "1856–1918"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1869",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Gandhi",
+    "slug": "mahatma-gandhi",
+    "quote": "1869–1948"
+   },
+   {
+    "label": "Matisse",
+    "slug": "henri-matisse",
+    "quote": "1869–1954"
+   },
+   {
+    "label": "Lutyens",
+    "slug": "edwin-lutyens",
+    "quote": "1869–1944"
+   },
+   {
+    "label": "Emma Goldman",
+    "slug": "emma-goldman",
+    "quote": "1869–1940"
+   },
+   {
+    "label": "Rasputin",
+    "slug": "grigori-rasputin",
+    "quote": "1869–1916"
+   },
+   {
+    "label": "Victor Emmanuel III",
+    "slug": "victor-emmanuel-iii",
+    "quote": "1869–1947"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1723",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Adam Smith",
+    "slug": "adam-smith",
+    "quote": "1723–1790"
+   },
+   {
+    "label": "Adam Ferguson",
+    "slug": "adam-ferguson",
+    "quote": "1723–1816"
+   },
+   {
+    "label": "Prithvi Narayan Shah",
+    "slug": "prithvi-narayan-shah",
+    "quote": "1723–1775"
+   },
+   {
+    "label": "Iyasu II",
+    "slug": "iyasu-ii",
+    "quote": "1723–1755"
+   },
+   {
+    "label": "Amursana",
+    "slug": "amursana",
+    "quote": "1723–1757"
+   },
+   {
+    "label": "Alejandro O'Reilly",
+    "slug": "alejandro-oreilly",
+    "quote": "1723–1794"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1689",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Montesquieu",
+    "slug": "montesquieu",
+    "quote": "1689–1755"
+   },
+   {
+    "label": "Samuel Richardson",
+    "slug": "samuel-richardson",
+    "quote": "1689–1761"
+   },
+   {
+    "label": "Shah Abdul Latif",
+    "slug": "shah-abdul-latif-bhittai",
+    "quote": "1689–1752"
+   },
+   {
+    "label": "John V of Portugal",
+    "slug": "john-v-of-portugal",
+    "quote": "1689–1750"
+   },
+   {
+    "label": "Blas de Lezo",
+    "slug": "blas-de-lezo",
+    "quote": "1689–1741"
+   },
+   {
+    "label": "Black Sam Bellamy",
+    "slug": "sam-bellamy",
+    "quote": "1689–1717"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1909",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Nkrumah",
+    "slug": "kwame-nkrumah",
+    "quote": "1909–1972"
+   },
+   {
+    "label": "Isaiah Berlin",
+    "slug": "isaiah-berlin",
+    "quote": "1909–1997"
+   },
+   {
+    "label": "Proskouriakoff",
+    "slug": "tatiana-proskouriakoff",
+    "quote": "1909–1985"
+   },
+   {
+    "label": "U Thant",
+    "slug": "u-thant",
+    "quote": "1909–1974"
+   },
+   {
+    "label": "Awolowo",
+    "slug": "obafemi-awolowo",
+    "quote": "1909–1987"
+   },
+   {
+    "label": "Queen Juliana",
+    "slug": "juliana-of-the-netherlands",
+    "quote": "1909–2004"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1882",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "James Joyce",
+    "slug": "james-joyce",
+    "quote": "1882–1941"
+   },
+   {
+    "label": "Kodály",
+    "slug": "zoltan-kodaly",
+    "quote": "1882–1967"
+   },
+   {
+    "label": "Vasconcelos",
+    "slug": "jose-vasconcelos",
+    "quote": "1882–1959"
+   },
+   {
+    "label": "Mosaddegh",
+    "slug": "mohammad-mosaddegh",
+    "quote": "1882–1967"
+   },
+   {
+    "label": "Abd el-Krim",
+    "slug": "abd-el-krim",
+    "quote": "1882–1963"
+   },
+   {
+    "label": "Getúlio Vargas",
+    "slug": "getulio-vargas",
+    "quote": "1882–1954"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1797",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Edmund Burke",
+    "slug": "edmund-burke",
+    "quote": "1729–1797"
+   },
+   {
+    "label": "Wollstonecraft",
+    "slug": "mary-wollstonecraft",
+    "quote": "1759–1797"
+   },
+   {
+    "label": "Vilna Gaon",
+    "slug": "vilna-gaon",
+    "quote": "1720–1797"
+   },
+   {
+    "label": "Pietro Verri",
+    "slug": "pietro-verri",
+    "quote": "1728–1797"
+   },
+   {
+    "label": "Agha Mohammad Khan",
+    "slug": "agha-mohammad-khan-qajar",
+    "quote": "1742–1797"
+   },
+   {
+    "label": "John Gabriel Stedman",
+    "slug": "john-gabriel-stedman",
+    "quote": "1744–1797"
+   }
+  ],
+  "note": "Wollstonecraft was also born in 1759 (Born in 1759)."
+ },
+ {
+  "name": "Died in 1873",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "John Stuart Mill",
+    "slug": "john-stuart-mill",
+    "quote": "1806–1873"
+   },
+   {
+    "label": "Livingstone",
+    "slug": "david-livingstone",
+    "quote": "1813–1873"
+   },
+   {
+    "label": "Manzoni",
+    "slug": "alessandro-manzoni",
+    "quote": "1785–1873"
+   },
+   {
+    "label": "Napoleon III",
+    "slug": "napoleon-iii",
+    "quote": "1808–1873"
+   },
+   {
+    "label": "Páez",
+    "slug": "jose-antonio-paez",
+    "quote": "1790–1873"
+   },
+   {
+    "label": "Cuza",
+    "slug": "alexandru-ioan-cuza",
+    "quote": "1820–1873"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1882",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Darwin",
+    "slug": "charles-darwin",
+    "quote": "1809–1882"
+   },
+   {
+    "label": "Garibaldi",
+    "slug": "giuseppe-garibaldi",
+    "quote": "1807–1882"
+   },
+   {
+    "label": "Longfellow",
+    "slug": "henry-wadsworth-longfellow",
+    "quote": "1807–1882"
+   },
+   {
+    "label": "Matsuda Michiyuki",
+    "slug": "matsuda-michiyuki",
+    "quote": "1839–1882"
+   },
+   {
+    "label": "Estanislao Figueras",
+    "slug": "estanislao-figueras",
+    "quote": "1819–1882"
+   },
+   {
+    "label": "Muhammad as-Sadiq",
+    "slug": "muhammad-iii-as-sadiq",
+    "quote": "1813–1882"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1902",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Vivekananda",
+    "slug": "swami-vivekananda",
+    "quote": "1863–1902"
+   },
+   {
+    "label": "Cecil Rhodes",
+    "slug": "cecil-rhodes",
+    "quote": "1853–1902"
+   },
+   {
+    "label": "Elizabeth Cady Stanton",
+    "slug": "elizabeth-cady-stanton",
+    "quote": "1815–1902"
+   },
+   {
+    "label": "Mariano Escobedo",
+    "slug": "mariano-escobedo",
+    "quote": "1826–1902"
+   },
+   {
+    "label": "Kálmán Tisza",
+    "slug": "kalman-tisza",
+    "quote": "1830–1902"
+   },
+   {
+    "label": "Noël Ballay",
+    "slug": "noel-ballay",
+    "quote": "1847–1902"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1980",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Sartre",
+    "slug": "jean-paul-sartre",
+    "quote": "1905–1980"
+   },
+   {
+    "label": "Kokoschka",
+    "slug": "oskar-kokoschka",
+    "quote": "1886–1980"
+   },
+   {
+    "label": "Walter Rodney",
+    "slug": "walter-rodney",
+    "quote": "1942–1980"
+   },
+   {
+    "label": "Tito",
+    "slug": "josip-broz-tito",
+    "quote": "1892–1980"
+   },
+   {
+    "label": "The last Shah",
+    "slug": "mohammad-reza-pahlavi",
+    "quote": "1919–1980"
+   },
+   {
+    "label": "Mohammad Hatta",
+    "slug": "mohammad-hatta",
+    "quote": "1902–1980"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1970",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Bertrand Russell",
+    "slug": "bertrand-russell",
+    "quote": "1872–1970"
+   },
+   {
+    "label": "Nasser",
+    "slug": "gamal-abdel-nasser",
+    "quote": "1918–1970"
+   },
+   {
+    "label": "De Gaulle",
+    "slug": "charles-de-gaulle",
+    "quote": "1890–1970"
+   },
+   {
+    "label": "Sukarno",
+    "slug": "sukarno",
+    "quote": "1901–1970"
+   },
+   {
+    "label": "Salazar",
+    "slug": "antonio-de-oliveira-salazar",
+    "quote": "1889–1970"
+   },
+   {
+    "label": "Lázaro Cárdenas",
+    "slug": "lazaro-cardenas",
+    "quote": "1895–1970"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1939",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Freud",
+    "slug": "sigmund-freud",
+    "quote": "1856–1939"
+   },
+   {
+    "label": "W. B. Yeats",
+    "slug": "w-b-yeats",
+    "quote": "1865–1939"
+   },
+   {
+    "label": "Gerardo Machado",
+    "slug": "gerardo-machado",
+    "quote": "1871–1939"
+   },
+   {
+    "label": "Scheidemann",
+    "slug": "philipp-scheidemann",
+    "quote": "1865–1939"
+   },
+   {
+    "label": "Daudi Chwa II",
+    "slug": "daudi-chwa-ii",
+    "quote": "1896–1939"
+   },
+   {
+    "label": "Germán Busch",
+    "slug": "german-busch",
+    "quote": "1904–1939"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1937",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Marconi",
+    "slug": "guglielmo-marconi",
+    "quote": "1874–1937"
+   },
+   {
+    "label": "Gramsci",
+    "slug": "antonio-gramsci",
+    "quote": "1891–1937"
+   },
+   {
+    "label": "Masaryk",
+    "slug": "tomas-garrigue-masaryk",
+    "quote": "1850–1937"
+   },
+   {
+    "label": "Walter Burley Griffin",
+    "slug": "walter-burley-griffin",
+    "quote": "1876–1937"
+   },
+   {
+    "label": "Tukhachevsky",
+    "slug": "mikhail-tukhachevsky",
+    "quote": "1893–1937"
+   },
+   {
+    "label": "Afonso Costa",
+    "slug": "afonso-costa",
+    "quote": "1871–1937"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1872",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mazzini",
+    "slug": "giuseppe-mazzini",
+    "quote": "1805–1872"
+   },
+   {
+    "label": "Benito Juárez",
+    "slug": "benito-juarez",
+    "quote": "1806–1872"
+   },
+   {
+    "label": "Zeng Guofan",
+    "slug": "zeng-guofan",
+    "quote": "1811–1872"
+   },
+   {
+    "label": "Grillparzer",
+    "slug": "franz-grillparzer",
+    "quote": "1791–1872"
+   },
+   {
+    "label": "Grundtvig",
+    "slug": "n-f-s-grundtvig",
+    "quote": "1783–1872"
+   },
+   {
+    "label": "Thorbecke",
+    "slug": "johan-rudolf-thorbecke",
+    "quote": "1798–1872"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1374",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Petrarch",
+    "slug": "petrarch",
+    "quote": "1304–1374"
+   },
+   {
+    "label": "Ibn al-Khatib",
+    "slug": "ibn-al-khatib",
+    "quote": "1313–1374"
+   },
+   {
+    "label": "Gongmin of Goryeo",
+    "slug": "gongmin-of-goryeo",
+    "quote": "1330–1374"
+   },
+   {
+    "label": "Magnus Eriksson",
+    "slug": "magnus-eriksson",
+    "quote": "1316–1374"
+   },
+   {
+    "label": "Emperor Go-Kōgon",
+    "slug": "emperor-go-kogon",
+    "quote": "1338–1374"
+   }
+  ]
+ },
+ {
+  "name": "Hide a tool",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Warsaw",
+    "slug": "warsaw",
+    "quote": "Warsaw is the capital of"
+   },
+   {
+    "label": "Marrakesh",
+    "slug": "marrakesh",
+    "quote": "Marrakesh is a city in"
+   },
+   {
+    "label": "Avicenna",
+    "slug": "avicenna",
+    "quote": "Avicenna, Ibn Sina, was"
+   },
+   {
+    "label": "Artaxerxes III",
+    "slug": "artaxerxes-iii",
+    "quote": "Artaxerxes III"
+   },
+   {
+    "label": "Schoenberg",
+    "slug": "arnold-schoenberg",
+    "quote": "Arnold Schoenberg"
+   },
+   {
+    "label": "Leeuwenhoek",
+    "slug": "antonie-van-leeuwenhoek",
+    "quote": "Antonie van Leeuwenhoek"
+   }
+  ],
+  "note": "SAW, RAKE, VICE, AXE, HOE inside the names."
+ },
+ {
+  "name": "The Tale of ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Sinuhe",
+    "slug": "tale-of-sinuhe",
+    "quote": "Tale of Sinuhe"
+   },
+   {
+    "label": "Genji",
+    "slug": "the-tale-of-genji",
+    "quote": "The Tale of Genji"
+   },
+   {
+    "label": "Kieu",
+    "slug": "the-tale-of-kieu",
+    "quote": "The Tale of Kieu"
+   },
+   {
+    "label": "Igor's Campaign",
+    "slug": "the-tale-of-igors-campaign",
+    "quote": "The Tale of Igor's Campaign"
+   },
+   {
+    "label": "Aqhat",
+    "slug": "tale-of-aqhat",
+    "quote": "Tale of Aqhat"
+   },
+   {
+    "label": "The Shipwrecked Sailor",
+    "slug": "tale-of-the-shipwrecked-sailor",
+    "quote": "Tale of the Shipwrecked Sailor"
+   }
+  ],
+  "note": "Each is a work whose title is The Tale of ..."
+ },
+ {
+  "name": "Codex ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Mendoza",
+    "slug": "codex-mendoza",
+    "quote": "Codex Mendoza"
+   },
+   {
+    "label": "Justinianus",
+    "slug": "codex-justinianus",
+    "quote": "Codex Justinianus"
+   },
+   {
+    "label": "Amiatinus",
+    "slug": "codex-amiatinus",
+    "quote": "Codex Amiatinus"
+   },
+   {
+    "label": "Cumanicus",
+    "slug": "codex-cumanicus",
+    "quote": "Codex Cumanicus"
+   },
+   {
+    "label": "Bodley",
+    "slug": "codex-bodley",
+    "quote": "Codex Bodley"
+   },
+   {
+    "label": "Zouche-Nuttall",
+    "slug": "codex-zouche-nuttall",
+    "quote": "Codex Zouche-Nuttall"
+   }
+  ],
+  "note": "Manesse and Argenteus left out: they are in the earlier Medieval manuscripts proposal."
+ },
+ {
+  "name": "Temple of ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Artemis",
+    "slug": "temple-of-artemis",
+    "quote": "Temple of Artemis"
+   },
+   {
+    "label": "Literature",
+    "slug": "temple-of-literature-hanoi",
+    "quote": "Temple of Literature, Hanoi"
+   },
+   {
+    "label": "the Inscriptions",
+    "slug": "temple-of-the-inscriptions",
+    "quote": "Temple of the Inscriptions"
+   },
+   {
+    "label": "the Feathered Serpent",
+    "slug": "temple-of-the-feathered-serpent",
+    "quote": "Temple of the Feathered Serpent"
+   },
+   {
+    "label": "Edfu",
+    "slug": "temple-of-edfu",
+    "quote": "Temple of Edfu"
+   },
+   {
+    "label": "Mencius",
+    "slug": "temple-of-mencius",
+    "quote": "Temple of Mencius"
+   }
+  ],
+  "note": "Labels are what follows 'Temple of'; Artemis and Mencius are decoys for gods and philosophers."
+ },
+ {
+  "name": "Gardens",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Babylon",
+    "slug": "hanging-gardens-of-babylon",
+    "quote": "were a legendary terraced garden listed among the Seven"
+   },
+   {
+    "label": "Generalife",
+    "slug": "generalife",
+    "quote": "is the summer palace and garden estate of the Nasrid emirs"
+   },
+   {
+    "label": "Boboli",
+    "slug": "boboli-gardens",
+    "quote": "Boboli Gardens are the park behind the Pitti Palace in Florence, laid out"
+   },
+   {
+    "label": "Kenroku-en",
+    "slug": "kenroku-en",
+    "quote": "Kenroku-en is a landscape garden in Kanazawa, Japan, counted among"
+   },
+   {
+    "label": "Kōraku-en",
+    "slug": "koraku-en",
+    "quote": "Kōraku-en is a landscape garden in Okayama, Japan, built for"
+   }
+  ]
+ },
+ {
+  "name": "Bridges",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lugou",
+    "slug": "lugou-bridge",
+    "quote": "is a granite bridge of eleven arches over the Yongding River"
+   },
+   {
+    "label": "Anji",
+    "slug": "anji-bridge",
+    "quote": "Zhaozhou Bridge, is a stone bridge over the Xiaohe River in Zhao County"
+   },
+   {
+    "label": "Charles",
+    "slug": "charles-bridge",
+    "quote": "Charles Bridge is a stone bridge across the Vltava in Prague, linking the"
+   },
+   {
+    "label": "Pont du Gard",
+    "slug": "pont-du-gard",
+    "quote": "a three-tiered Roman aqueduct bridge over the Gardon river"
+   },
+   {
+    "label": "Long Biên",
+    "slug": "long-bien-bridge",
+    "quote": "a cantilever railway and road bridge across the Red River in Hanoi, built by"
+   },
+   {
+    "label": "Ravning",
+    "slug": "ravning-bridge",
+    "quote": "Ravning Bridge was a wooden bridge across the meadows of"
+   }
+  ]
+ },
+ {
+  "name": "Epics of Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mahabharata",
+    "slug": "mahabharata",
+    "quote": "of the two great Sanskrit epics of ancient India, traditionally"
+   },
+   {
+    "label": "Ramayana",
+    "slug": "ramayana",
+    "quote": "The Ramayana is a Sanskrit epic attributed to the poet"
+   },
+   {
+    "label": "Gilgamesh",
+    "slug": "epic-of-gilgamesh",
+    "quote": "is an ancient Mesopotamian poem about the legendary king"
+   },
+   {
+    "label": "Shahnameh",
+    "slug": "shahnameh",
+    "quote": "Kings, is the national epic of Iran, completed by the"
+   },
+   {
+    "label": "Padmavat",
+    "slug": "padmavat",
+    "quote": "Padmavat is an epic poem in Awadhi by the Sufi poet"
+   },
+   {
+    "label": "Phra Aphai Mani",
+    "slug": "phra-aphai-mani",
+    "quote": "is an epic verse romance by the Thai poet Sunthorn Phu, composed in"
+   }
+  ],
+  "note": "The published Epic poems (Iliad, Odyssey, Aeneid, Beowulf) are all European."
+ },
+ {
+  "name": "Translations of the Bible",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Septuagint",
+    "slug": "septuagint",
+    "quote": "is the earliest Greek translation of the Hebrew scriptures, begun with the"
+   },
+   {
+    "label": "King James Version",
+    "slug": "king-james-version",
+    "quote": "is the English translation of the Bible commissioned by James I"
+   },
+   {
+    "label": "Kralice",
+    "slug": "kralice-bible",
+    "quote": "is the first complete Czech translation of the Bible from"
+   },
+   {
+    "label": "Luther's",
+    "slug": "luther-bible",
+    "quote": "Martin Luther's translation of the Bible into German, from the Hebrew"
+   },
+   {
+    "label": "Zürich",
+    "slug": "zurich-bible",
+    "quote": "is the German translation of the Bible produced by Huldrych Zwingli, Leo"
+   },
+   {
+    "label": "Codex Argenteus",
+    "slug": "codex-argenteus",
+    "quote": "the Gospels in the Gothic translation made by Bishop Wulfila, written in silver"
+   }
+  ]
+ },
+ {
+  "name": "African writers",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Senghor",
+    "slug": "leopold-sedar-senghor",
+    "quote": "was a Senegalese poet, philosopher and statesman, the first president"
+   },
+   {
+    "label": "Soyinka",
+    "slug": "wole-soyinka",
+    "quote": "is a Nigerian writer, playwright and poet, born in 1934"
+   },
+   {
+    "label": "Taha Hussein",
+    "slug": "taha-hussein",
+    "quote": "Taha Hussein was an Egyptian writer, a leading figure"
+   },
+   {
+    "label": "Assia Djebar",
+    "slug": "assia-djebar",
+    "quote": "was an Algerian novelist, historian and film-maker, the pen name"
+   },
+   {
+    "label": "Kateb Yacine",
+    "slug": "kateb-yacine",
+    "quote": "was an Algerian writer and dramatist"
+   },
+   {
+    "label": "Nadine Gordimer",
+    "slug": "nadine-gordimer",
+    "quote": "was a South African novelist and short-story writer whose work, including The"
+   }
+  ]
+ },
+ {
+  "name": "Sufi poets",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rumi",
+    "slug": "rumi",
+    "quote": "was a Persian poet, Sufi mystic and scholar born in"
+   },
+   {
+    "label": "Ahmad Yasawi",
+    "slug": "ahmad-yasawi",
+    "quote": "was a Turkic Sufi poet and teacher of the"
+   },
+   {
+    "label": "Jayasi",
+    "slug": "malik-muhammad-jayasi",
+    "quote": "Muhammad Jayasi was a Sufi poet from Jais in Awadh who wrote"
+   },
+   {
+    "label": "Ibn Arabi",
+    "slug": "ibn-arabi",
+    "quote": "was an Andalusian Sufi mystic, philosopher and poet, born in Murcia"
+   },
+   {
+    "label": "Amir Khusrau",
+    "slug": "amir-khusrau",
+    "quote": "was a disciple of the Sufi saint Nizamuddin Auliya"
+   },
+   {
+    "label": "Shah Abdul Latif",
+    "slug": "shah-abdul-latif-bhittai",
+    "quote": "was a Sufi poet of Sindh and"
+   }
+  ],
+  "note": "Shah Abdul Latif is also in Born in 1689."
+ },
+ {
+  "name": "Figures of the Arab Nahda",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Muhammad Abduh",
+    "slug": "muhammad-abduh",
+    "quote": "reformer, a central figure of the Nahda and of Islamic modernism"
+   },
+   {
+    "label": "Jurji Zaydan",
+    "slug": "jurji-zaydan",
+    "quote": "journalist and teacher of the Nahda who settled in Cairo"
+   },
+   {
+    "label": "Rifa'a al-Tahtawi",
+    "slug": "rifaa-al-tahtawi",
+    "quote": "translator, an early figure of the Nahda, the Arab renaissance"
+   },
+   {
+    "label": "Butrus al-Bustani",
+    "slug": "butrus-al-bustani",
+    "quote": "Lebanon, a major figure of the Nahda, the Arab renaissance"
+   },
+   {
+    "label": "al-Shidyaq",
+    "slug": "ahmad-faris-al-shidyaq",
+    "quote": "of the founding fathers of modern Arabic literature"
+   }
+  ],
+  "note": "Taha Hussein (Arab Renaissance) is in African writers."
+ },
+ {
+  "name": "Churches of Eastern Christianity",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Church of the East",
+    "slug": "church-of-the-east",
+    "quote": "is an ancient Christian church centred in Mesopotamia, often called Nestorian"
+   },
+   {
+    "label": "Coptic",
+    "slug": "coptic-orthodox-church",
+    "quote": "is the main Christian church of Egypt, headed by the"
+   },
+   {
+    "label": "Georgian Orthodox",
+    "slug": "georgian-orthodox-church",
+    "quote": "is the Eastern Orthodox church of Georgia, dating from the"
+   },
+   {
+    "label": "Maronites",
+    "slug": "maronites",
+    "quote": "Maronites are Eastern Catholic Christians of the Syriac tradition, named after the"
+   },
+   {
+    "label": "Russian Orthodox",
+    "slug": "russian-orthodox-church",
+    "quote": "is the branch of Eastern Orthodox Christianity that developed after the"
+   },
+   {
+    "label": "Ethiopian Tewahedo",
+    "slug": "ethiopian-orthodox-church",
+    "quote": "is the ancient Christian church of Ethiopia, belonging to the"
+   }
+  ]
+ },
+ {
+  "name": "Translators of Buddhist texts",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kumarajiva",
+    "slug": "kumarajiva",
+    "quote": "was a Buddhist monk and translator from the oasis kingdom"
+   },
+   {
+    "label": "Xuanzang",
+    "slug": "xuanzang",
+    "quote": "his return translated many texts into Chinese"
+   },
+   {
+    "label": "Lokaksema",
+    "slug": "lokaksema",
+    "quote": "of the earliest Chinese translations of Mahayana"
+   },
+   {
+    "label": "Dharmakshema",
+    "slug": "dharmakshema",
+    "quote": "an Indian Buddhist monk and translator who worked in China"
+   },
+   {
+    "label": "Rinchen Zangpo",
+    "slug": "rinchen-zangpo",
+    "quote": "was a Tibetan translator and teacher who led the revival"
+   }
+  ]
+ },
+ {
+  "name": "Painters of East Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gu Kaizhi",
+    "slug": "gu-kaizhi",
+    "quote": "of the founders of Chinese figure painting"
+   },
+   {
+    "label": "Kim Hong-do",
+    "slug": "kim-hong-do",
+    "quote": "was a Korean court painter of the late Joseon"
+   },
+   {
+    "label": "Sesshū",
+    "slug": "sesshu-toyo",
+    "quote": "painter, the foremost master of ink painting of the Muromachi period"
+   },
+   {
+    "label": "Hokusai",
+    "slug": "katsushika-hokusai",
+    "quote": "was a Japanese painter and ukiyo-e printmaker of the late Edo"
+   },
+   {
+    "label": "Hiroshige",
+    "slug": "utagawa-hiroshige",
+    "quote": "artist, the last great master of the woodblock print in the Edo period"
+   }
+  ],
+  "note": "Huizong left out: he is in Famed as calligraphers."
+ },
+ {
+  "name": "Lyric poets of ancient Greece",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sappho",
+    "slug": "sappho",
+    "quote": "was a Greek lyric poet of Lesbos, active in Mytilene"
+   },
+   {
+    "label": "Alcaeus",
+    "slug": "alcaeus",
+    "quote": "was a Greek lyric poet of Mytilene on Lesbos and a"
+   },
+   {
+    "label": "Anacreon",
+    "slug": "anacreon",
+    "quote": "was a Greek lyric poet from Teos in Ionia, famous for"
+   },
+   {
+    "label": "Pindar",
+    "slug": "pindar",
+    "quote": "was a Greek lyric poet from Thebes, the most admired"
+   },
+   {
+    "label": "Simonides",
+    "slug": "simonides-of-ceos",
+    "quote": "was a Greek lyric poet from Ioulis on the island of"
+   },
+   {
+    "label": "Stesichorus",
+    "slug": "stesichorus",
+    "quote": "was a Greek lyric poet of the late 7th and 6th centuries BCE"
+   }
+  ],
+  "note": "Pindar is in the published Poets of the ancient world, Sappho in Women writers."
+ },
+ {
+  "name": "Historians of the Islamic world",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rashid al-Din",
+    "slug": "rashid-al-din-hamadani",
+    "quote": "a Persian physician, statesman and historian who served as vizier"
+   },
+   {
+    "label": "al-Masudi",
+    "slug": "al-masudi",
+    "quote": "called the Herodotus of the Arabs"
+   },
+   {
+    "label": "Miskawayh",
+    "slug": "miskawayh",
+    "quote": "was a Persian philosopher and historian who served as secretary"
+   },
+   {
+    "label": "Firishta",
+    "slug": "firishta",
+    "quote": "Hindu Shah, was a Persian historian born in Astarabad who"
+   },
+   {
+    "label": "al-Maqrizi",
+    "slug": "al-maqrizi",
+    "quote": "was an Egyptian historian of the Mamluk period and a pupil of"
+   },
+   {
+    "label": "Wassaf",
+    "slug": "wassaf",
+    "quote": "was a Persian historian and official of the Ilkhanate"
+   }
+  ],
+  "note": "Ibn Khaldun left out: he is in the published Scholars of the Islamic world."
+ },
+ {
+  "name": "Kinds of pottery",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Northern Black Polished",
+    "slug": "northern-black-polished-ware",
+    "quote": "a fine, glossy black or grey pottery of the Iron Age"
+   },
+   {
+    "label": "Lapita",
+    "slug": "lapita-pottery",
+    "quote": "is the dentate-stamped earthenware that defines the Lapita"
+   },
+   {
+    "label": "Sancai",
+    "slug": "sancai",
+    "quote": "type of Chinese lead-glazed pottery decorated mainly in amber"
+   },
+   {
+    "label": "Xing",
+    "slug": "xing-ware",
+    "quote": "is a type of white porcelain produced at kilns in"
+   },
+   {
+    "label": "Kamares",
+    "slug": "kamares-ware",
+    "quote": "is a fine Minoan pottery of the Protopalatial period"
+   },
+   {
+    "label": "Bizen",
+    "slug": "bizen-ware",
+    "quote": "Bizen ware is a Japanese stoneware made around Imbe in"
+   }
+  ]
+ },
+ {
+  "name": "Dyes and pigments",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Indigo",
+    "slug": "indigo",
+    "quote": "Indigo is a blue dye obtained from plants, widely used to"
+   },
+   {
+    "label": "Tyrian purple",
+    "slug": "tyrian-purple",
+    "quote": "is a deep purple dye produced from murex sea snails, named after"
+   },
+   {
+    "label": "Brazilwood",
+    "slug": "brazilwood",
+    "quote": "as the source of a red dye for textiles"
+   },
+   {
+    "label": "Maya blue",
+    "slug": "maya-blue",
+    "quote": "turquoise or azure blue pigment made by cultures of"
+   },
+   {
+    "label": "Egyptian blue",
+    "slug": "egyptian-blue",
+    "quote": "copper silicate, is a pigment made by heating silica, lime, a copper"
+   }
+  ]
+ },
+ {
+  "name": "Operas",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tristan und Isolde",
+    "slug": "tristan-und-isolde",
+    "quote": "und Isolde is an opera by Richard Wagner, composed between 1857"
+   },
+   {
+    "label": "La Muette de Portici",
+    "slug": "la-muette-de-portici",
+    "quote": "is a French grand opera by Daniel Auber, first performed in"
+   },
+   {
+    "label": "Mitridate",
+    "slug": "mitridate-re-di-ponto",
+    "quote": "is an opera seria in three acts by Wolfgang Amadeus Mozart"
+   },
+   {
+    "label": "L'Orfeo",
+    "slug": "l-orfeo",
+    "quote": "L'Orfeo is an opera by Claudio Monteverdi to a libretto by"
+   },
+   {
+    "label": "Euridice",
+    "slug": "euridice-peri",
+    "quote": "Euridice is an opera by Jacopo Peri to a libretto by"
+   }
+  ]
+ },
+ {
+  "name": "German engineers",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Daimler",
+    "slug": "gottlieb-daimler",
+    "quote": "was a German engineer and industrialist from Württemberg and a pioneer of the motor car"
+   },
+   {
+    "label": "Maybach",
+    "slug": "wilhelm-maybach",
+    "quote": "was a German engineer from Heilbronn who, with Gottlieb Daimler"
+   },
+   {
+    "label": "Bosch",
+    "slug": "robert-bosch",
+    "quote": "was a German engineer and industrialist from Württemberg"
+   },
+   {
+    "label": "Diesel",
+    "slug": "rudolf-diesel",
+    "quote": "engineer who invented the diesel engine, a compression-ignition engine"
+   },
+   {
+    "label": "Junkers",
+    "slug": "hugo-junkers",
+    "quote": "industrialist who pioneered all-metal aircraft"
+   }
+  ]
+ },
+ {
+  "name": "Wrote or set a national anthem",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tagore",
+    "slug": "rabindranath-tagore",
+    "quote": "at Santiniketan, wrote the national anthems of India and Bangladesh, and had close"
+   },
+   {
+    "label": "Haydn",
+    "slug": "joseph-haydn",
+    "quote": "of 1797, now the German national anthem"
+   },
+   {
+    "label": "Hoffmann von Fallersleben",
+    "slug": "hoffmann-von-fallersleben",
+    "quote": "Deutschen', whose third stanza is the national anthem of Germany"
+   },
+   {
+    "label": "Tian Han",
+    "slug": "tian-han",
+    "quote": "1934 he wrote the lyrics of March of the Volunteers, set to music"
+   },
+   {
+    "label": "Sayed Darwish",
+    "slug": "sayed-darwish",
+    "quote": "song that became Egypt's national anthem"
+   },
+   {
+    "label": "Prešeren",
+    "slug": "france-preseren",
+    "quote": "'A Toast' is the national anthem of Slovenia."
+   }
+  ],
+  "note": "Haydn's melody, Fallersleben's words: both for the German anthem."
+ },
+ {
+  "name": "Writers of France",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Voltaire",
+    "slug": "voltaire",
+    "quote": "François-Marie Arouet, was a French writer and philosopher and the most famous"
+   },
+   {
+    "label": "Flaubert",
+    "slug": "gustave-flaubert",
+    "quote": "a nineteenth-century French novelist, best known for"
+   },
+   {
+    "label": "Molière",
+    "slug": "moliere",
+    "quote": "was a French playwright and actor, regarded as the"
+   },
+   {
+    "label": "Racine",
+    "slug": "jean-racine",
+    "quote": "Jean Racine was a French dramatist, the leading writer"
+   },
+   {
+    "label": "Corneille",
+    "slug": "pierre-corneille",
+    "quote": "Pierre Corneille was a French dramatist, one of the"
+   },
+   {
+    "label": "Camus",
+    "slug": "albert-camus",
+    "quote": "Camus (1913–1960) was a French writer and philosopher born in Algeria to"
+   }
+  ],
+  "note": "Victor Hugo left out: he is in Figures of Romanticism."
+ },
+ {
+  "name": "English novelists",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jane Austen",
+    "slug": "jane-austen",
+    "quote": "Jane Austen was an English novelist whose six major novels"
+   },
+   {
+    "label": "Dickens",
+    "slug": "charles-dickens",
+    "quote": "was the most popular English novelist of the Victorian era"
+   },
+   {
+    "label": "Defoe",
+    "slug": "daniel-defoe",
+    "quote": "His novels Robinson Crusoe (1719)"
+   },
+   {
+    "label": "Fielding",
+    "slug": "henry-fielding",
+    "quote": "Henry Fielding was an English novelist, playwright and magistrate"
+   },
+   {
+    "label": "Orwell",
+    "slug": "george-orwell",
+    "quote": "Arthur Blair, was an English novelist, essayist, journalist and"
+   },
+   {
+    "label": "Mary Shelley",
+    "slug": "mary-shelley",
+    "quote": "Mary Shelley was an English novelist who wrote the Gothic"
+   }
+  ]
+ },
+ {
+  "name": "Poets in English",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shakespeare",
+    "slug": "william-shakespeare",
+    "quote": "was an English playwright, poet and actor, widely regarded as"
+   },
+   {
+    "label": "Chaucer",
+    "slug": "geoffrey-chaucer",
+    "quote": "Geoffrey Chaucer was an English poet and royal official, often"
+   },
+   {
+    "label": "Wordsworth",
+    "slug": "william-wordsworth",
+    "quote": "was an English Romantic poet who, with Samuel Taylor"
+   },
+   {
+    "label": "Longfellow",
+    "slug": "henry-wadsworth-longfellow",
+    "quote": "a nineteenth-century American poet, author of works"
+   },
+   {
+    "label": "Langston Hughes",
+    "slug": "langston-hughes",
+    "quote": "Langston Hughes was an American poet, social activist, novelist"
+   },
+   {
+    "label": "W. B. Yeats",
+    "slug": "w-b-yeats",
+    "quote": "Yeats was an Irish poet and dramatist, a leading figure"
+   }
+  ],
+  "note": "Yeats is also in Died in 1939, Longfellow in Died in 1882."
+ },
+ {
+  "name": "Modern architects",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Le Corbusier",
+    "slug": "le-corbusier",
+    "quote": "of the pioneers of modern architecture"
+   },
+   {
+    "label": "Gropius",
+    "slug": "walter-gropius",
+    "quote": "architect who founded the Bauhaus school in Weimar in 1919"
+   },
+   {
+    "label": "Alvar Aalto",
+    "slug": "alvar-aalto",
+    "quote": "of the leading figures of modern architecture"
+   },
+   {
+    "label": "Lutyens",
+    "slug": "edwin-lutyens",
+    "quote": "Edwin Lutyens was an English architect known for country houses"
+   },
+   {
+    "label": "Burley Griffin",
+    "slug": "walter-burley-griffin",
+    "quote": "was an American architect of the Prairie School who, with his wife"
+   }
+  ],
+  "note": "Lutyens is also in Born in 1869, Burley Griffin in Died in 1937."
+ },
+ {
+  "name": "Landmarks of Cairo",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Al-Azhar",
+    "slug": "al-azhar",
+    "quote": "Al-Azhar is a mosque in Cairo begun in 970 under the Fatimid Caliphate"
+   },
+   {
+    "label": "Bab al-Futuh",
+    "slug": "bab-al-futuh",
+    "quote": "in the northern wall of Fatimid Cairo, built in the"
+   },
+   {
+    "label": "Bab Zuwayla",
+    "slug": "bab-zuwayla",
+    "quote": "is the southern gate of Fatimid Cairo, built in the"
+   },
+   {
+    "label": "Citadel",
+    "slug": "cairo-citadel",
+    "quote": "is a medieval Islamic fortress on the Muqattam hills in Cairo"
+   },
+   {
+    "label": "Ibn Tulun",
+    "slug": "mosque-of-ibn-tulun",
+    "quote": "is a congregational mosque in Cairo, built by Ahmad"
+   }
+  ]
+ },
+ {
+  "name": "Classics of Japanese literature",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kojiki",
+    "slug": "kojiki",
+    "quote": "is the oldest surviving Japanese chronicle, compiled by Ō"
+   },
+   {
+    "label": "Nihon Shoki",
+    "slug": "nihon-shoki",
+    "quote": "is the second-oldest book of Japanese history after the Kojiki"
+   },
+   {
+    "label": "The Pillow Book",
+    "slug": "the-pillow-book",
+    "quote": "no Teishi in Heian Japan, completed in 1002"
+   },
+   {
+    "label": "Kagerō Nikki",
+    "slug": "kagero-nikki",
+    "quote": "work of classical Japanese diary literature written around 974 by"
+   },
+   {
+    "label": "Genji",
+    "slug": "the-tale-of-genji",
+    "quote": "of Genji, attributed to the lady-in-waiting Murasaki Shikibu and finished by about"
+   }
+  ],
+  "note": "The Tale of Genji is also in the wordplay group The Tale of ___."
+ },
+ {
+  "name": "Reformers in 19th-century India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ram Mohan Roy",
+    "slug": "ram-mohan-roy",
+    "quote": "was a Bengali scholar and social reformer, often called the"
+   },
+   {
+    "label": "Keshab Chandra Sen",
+    "slug": "keshab-chandra-sen",
+    "quote": "was a Bengali religious and social reformer who led the Brahmo"
+   },
+   {
+    "label": "Brahmo Samaj",
+    "slug": "brahmo-samaj",
+    "quote": "Brahmoism, a monotheistic reform movement begun in Calcutta in"
+   },
+   {
+    "label": "Satyashodhak Samaj",
+    "slug": "satyashodhak-samaj",
+    "quote": "was a social reform movement founded in Pune in 1873 by Jyotirao"
+   },
+   {
+    "label": "Pandita Ramabai",
+    "slug": "pandita-ramabai",
+    "quote": "was an Indian social reformer and Christian missionary, born"
+   },
+   {
+    "label": "Vivekananda",
+    "slug": "swami-vivekananda",
+    "quote": "much to introduce Vedanta and yoga to the West"
+   }
+  ],
+  "note": "Vivekananda is also in Died in 1902."
+ }
+]

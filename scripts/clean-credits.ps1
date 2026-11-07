@@ -22,6 +22,13 @@ function CleanAuthor([string]$s) {
   $a = $a -replace "\s*\(\s*(?:talk|discussion|disc|contribs?|uploads)(?:\s*[$([char]0xB7)|]\s*contribs?\.?)?[^)]{0,12}(?:\)|\.\.\.|$)", ''
   # the spaces flattened HTML leaves inside brackets and before commas ("JMCC1 ( talk )", "USACE HQ , JIM GORDAN")
   $a = ($a -replace '\(\s+', '(' -replace '\s+\)', ')') -replace '\s+([,;])', '$1'
+  # the SVG templates' boilerplate ("This W3C-unspecified vector image was created with Inkscape by X .", "The SVG code is
+  # valid."): it names a tool, not an author; "by X" keeps X
+  $a = $a -replace '(?i)\s*(?:The source code of this SVG is valid|The SVG code is valid)\.?\s*', ' '
+  $a = $a -replace '(?i)\s*This (?:W3C-[a-z]+ )?vector image was created with Inkscape(?:-default)?\s+by\s+', ' '
+  $a = $a -replace '(?i)\s*This (?:W3C-[a-z]+ )?vector image was created with (?:Inkscape(?:-default)?|a text editor)\s*\.?', ''
+  # a full stop left alone by a removed link or template ("Unknown . Transfer", ". Ray in Manila", "Wikipedia .", "coins. .")
+  $a = (($a -replace '^\s*\.\s*', '') -replace '\s+\.(?=\s|$)', '.') -replace '(?<=[A-Za-z)])\.\.(?![.0-9])', '.' -replace ':\.', ':'   # not "16..-17..", the BnF's unknown digits
   # Commons' own wording when the uploader is taken to be the author
   $a = $a -replace '^No machine-readable author provided\.\s*(.+?)\s+assumed\s*\(based on copyright claims\)\.?$', '$1'
   # derivative works: "Map.svg: Author derivative work: Other" -> "Author; derivative work by Other"

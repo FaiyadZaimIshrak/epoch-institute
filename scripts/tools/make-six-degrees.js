@@ -7,11 +7,11 @@
 // MINPROF profiles), neither a war, battle or atrocity, the target 3 or 4 clicks from the start, no entry used again
 // within 60 puzzles. Writes sixdeg-data.js: SIXD = {v: the link files' version, p: [[start, target, shortest, [a
 // shortest route]], …], n: {slug: [name, dates, picture]} for every start and target}.
-//   node scripts/tools/make-six-degrees.js [--count=N]   (N puzzles at least; default: to 31 July 2027)
+//   node scripts/tools/make-six-degrees.js [--count=N]   (N puzzles at least; default: to 31 October 2027)
 const fs = require('fs'), path = require('path'), crypto = require('crypto'), R = path.join(__dirname, '..', '..');
 const D = path.join(R, 'data', 'sixdeg'), TSV = path.join(R, 'scripts', 'six-degrees.tsv');
 const DAY0 = Date.UTC(2026, 10, 6), MINPROF = 3, GAP = 60;
-const want = +((process.argv.find(a => a.startsWith('--count=')) || '').slice(8)) || Math.floor((Date.UTC(2027, 6, 31) - DAY0) / 864e5) + 1;
+const want = +((process.argv.find(a => a.startsWith('--count=')) || '').slice(8)) || Math.floor((Date.UTC(2027, 9, 31) - DAY0) / 864e5) + 1;
 const G = {}, hash = crypto.createHash('sha1');
 for (const f of fs.readdirSync(D).filter(f => f.endsWith('.json')).sort()) { const t = fs.readFileSync(path.join(D, f), 'utf8'); hash.update(t); Object.assign(G, JSON.parse(t)); }
 const V = hash.digest('hex').slice(0, 10);

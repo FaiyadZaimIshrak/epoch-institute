@@ -1,0 +1,2860 @@
+[
+ {
+  "name": "Cities of Afghanistan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kabul",
+    "slug": "kabul",
+    "quote": "Kabul is a city in present-day Afghanistan"
+   },
+   {
+    "label": "Herat",
+    "slug": "herat",
+    "quote": "Herat is a city in western Afghanistan"
+   },
+   {
+    "label": "Balkh",
+    "slug": "balkh",
+    "quote": "an ancient city in northern Afghanistan"
+   },
+   {
+    "label": "Kandahar",
+    "slug": "kandahar",
+    "quote": "Kandahar is a city in southern Afghanistan"
+   },
+   {
+    "label": "Ghazni",
+    "slug": "ghazni",
+    "quote": "Ghazni is a city in eastern Afghanistan"
+   },
+   {
+    "label": "Kunduz",
+    "slug": "kunduz",
+    "quote": "Kunduz is a city in northern Afghanistan"
+   }
+  ]
+ },
+ {
+  "name": "Cities of Uzbekistan",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Samarkand",
+    "slug": "samarkand",
+    "quote": "Samarkand is an ancient city in modern Uzbekistan"
+   },
+   {
+    "label": "Bukhara",
+    "slug": "bukhara",
+    "quote": "Bukhara is a city in present-day Uzbekistan"
+   },
+   {
+    "label": "Khiva",
+    "slug": "khiva",
+    "quote": "Khiva is a city in the Khwarazm region of present-day Uzbekistan"
+   },
+   {
+    "label": "Kokand",
+    "slug": "kokand",
+    "quote": "Kokand is a city in the Fergana Valley of present-day Uzbekistan"
+   },
+   {
+    "label": "Termez",
+    "slug": "termez",
+    "quote": "Termez is a city in southern Uzbekistan"
+   },
+   {
+    "label": "Andijan",
+    "slug": "andijan",
+    "quote": "Andijan is a city in the eastern Fergana valley of Uzbekistan"
+   }
+  ],
+  "note": "Samarkand and Bukhara were in the published 'Silk Road cities'; Termez or Andijan keep it fresh."
+ },
+ {
+  "name": "States of India",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Karnataka",
+    "slug": "karnataka",
+    "quote": "Karnataka is a state of south-western India"
+   },
+   {
+    "label": "Tamil Nadu",
+    "slug": "tamil-nadu",
+    "quote": "Tamil Nadu is a state of south-eastern India"
+   },
+   {
+    "label": "Kerala",
+    "slug": "kerala",
+    "quote": "Kerala is a state on the Malabar Coast of south-western India"
+   },
+   {
+    "label": "Rajasthan",
+    "slug": "rajasthan",
+    "quote": "Rajasthan is the largest state of India by area"
+   },
+   {
+    "label": "Odisha",
+    "slug": "odisha",
+    "quote": "is a state on the Bay of Bengal in eastern India"
+   },
+   {
+    "label": "Telangana",
+    "slug": "telangana",
+    "quote": "Telangana is a state of southern India"
+   }
+  ]
+ },
+ {
+  "name": "Capitals of South Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Kathmandu",
+    "slug": "kathmandu",
+    "quote": "Kathmandu is the capital and largest city of Nepal"
+   },
+   {
+    "label": "Thimphu",
+    "slug": "thimphu",
+    "quote": "Thimphu is the capital and largest city of Bhutan"
+   },
+   {
+    "label": "Dhaka",
+    "slug": "dhaka",
+    "quote": "Dhaka is the capital and largest city of Bangladesh"
+   },
+   {
+    "label": "Islamabad",
+    "slug": "islamabad",
+    "quote": "Islamabad is the capital of Pakistan"
+   },
+   {
+    "label": "New Delhi",
+    "slug": "new-delhi",
+    "quote": "New Delhi is the capital of India"
+   },
+   {
+    "label": "Kotte",
+    "slug": "sri-jayawardenepura-kotte",
+    "quote": "Sri Jayawardenepura Kotte is the legislative capital of Sri Lanka"
+   }
+  ],
+  "note": "Colombo is a decoy elsewhere (the commercial capital, not this list)."
+ },
+ {
+  "name": "Rivers of India",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yamuna",
+    "slug": "yamuna",
+    "quote": "The Yamuna is a major river of northern India"
+   },
+   {
+    "label": "Brahmaputra",
+    "slug": "brahmaputra",
+    "quote": "flows west through the Assam valley in India"
+   },
+   {
+    "label": "Narmada",
+    "slug": "narmada-river",
+    "quote": "The Narmada is a river of central India"
+   },
+   {
+    "label": "Krishna",
+    "slug": "krishna-river",
+    "quote": "The Krishna is one of the major rivers of peninsular India"
+   },
+   {
+    "label": "Mahanadi",
+    "slug": "mahanadi",
+    "quote": "The Mahanadi is a major river of east-central India"
+   },
+   {
+    "label": "Tungabhadra",
+    "slug": "tungabhadra-river",
+    "quote": "The Tungabhadra is a river of southern India"
+   }
+  ],
+  "note": "Krishna doubles as the god: a decoy for a Hindu-gods group."
+ },
+ {
+  "name": "Mountains of South and Central Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Himalayas",
+    "slug": "himalayas",
+    "quote": "The Himalayas are the highest mountain range on Earth"
+   },
+   {
+    "label": "Western Ghats",
+    "slug": "western-ghats",
+    "quote": "The Western Ghats are a mountain range running parallel to the western coast of the Indian peninsula"
+   },
+   {
+    "label": "Pamirs",
+    "slug": "pamir-mountains",
+    "quote": "The Pamir Mountains are a high mountain system of Central Asia"
+   },
+   {
+    "label": "Everest",
+    "slug": "mount-everest",
+    "quote": "Mount Everest is the highest mountain on Earth"
+   },
+   {
+    "label": "Vindhyas",
+    "slug": "vindhya-range",
+    "quote": "The Vindhya Range is a broken chain of hills and plateau scarps across west-central India"
+   },
+   {
+    "label": "Satpuras",
+    "slug": "satpura-range",
+    "quote": "The Satpura Range is a range of hills in central India"
+   }
+  ],
+  "note": "The Hindu Kush was in the published 'Mountain ranges of Asia': left out."
+ },
+ {
+  "name": "Seas and straits around India",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Arabian Sea",
+    "slug": "arabian-sea",
+    "quote": "The Arabian Sea is the part of the northern Indian Ocean between Arabia and the Indian subcontinent"
+   },
+   {
+    "label": "Bay of Bengal",
+    "slug": "bay-of-bengal",
+    "quote": "The Bay of Bengal is the north-eastern arm of the Indian Ocean, bordered by eastern India"
+   },
+   {
+    "label": "Indian Ocean",
+    "slug": "indian-ocean",
+    "quote": "The Indian Ocean is the world's third-largest ocean"
+   },
+   {
+    "label": "Gulf of Mannar",
+    "slug": "gulf-of-mannar",
+    "quote": "a shallow bay of the Indian Ocean between south-eastern India and north-western Sri Lanka"
+   },
+   {
+    "label": "Palk Strait",
+    "slug": "palk-strait",
+    "quote": "The Palk Strait is a shallow strait between Tamil Nadu in India and the Jaffna peninsula"
+   },
+   {
+    "label": "Gulf of Khambhat",
+    "slug": "gulf-of-khambhat",
+    "quote": "The Gulf of Khambhat is an inlet of the Arabian Sea in Gujarat, western India"
+   }
+  ]
+ },
+ {
+  "name": "Peoples of South Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pashtuns",
+    "slug": "pashtuns",
+    "quote": "an Iranian-speaking people of southern and eastern Afghanistan and north-western Pakistan"
+   },
+   {
+    "label": "Baloch",
+    "slug": "baloch",
+    "quote": "The Baloch are an Iranian people living mainly in Balochistan"
+   },
+   {
+    "label": "Tamils",
+    "slug": "tamils",
+    "quote": "The Tamils are a people of South Asia"
+   },
+   {
+    "label": "Gurkhas",
+    "slug": "gurkhas",
+    "quote": "originally the soldiers of the Gorkha kingdom"
+   },
+   {
+    "label": "Rajputs",
+    "slug": "rajputs",
+    "quote": "The Rajputs are a group of warrior clans of northern and western India"
+   },
+   {
+    "label": "Jats",
+    "slug": "jats",
+    "quote": "The Jats are an agricultural community of north-western India and Pakistan"
+   }
+  ]
+ },
+ {
+  "name": "Colonial rule over the subcontinent",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "East India Company",
+    "slug": "east-india-company",
+    "quote": "it became a military and governing power in India"
+   },
+   {
+    "label": "British Raj",
+    "slug": "british-raj",
+    "quote": "the system of direct British crown rule over the Indian subcontinent from 1858 to 1947"
+   },
+   {
+    "label": "Viceroy",
+    "slug": "viceroy-of-india",
+    "quote": "the head of British government in India after 1858"
+   },
+   {
+    "label": "Princely states",
+    "slug": "princely-state",
+    "quote": "a nominally sovereign state in British India ruled by an Indian prince under British paramountcy"
+   },
+   {
+    "label": "Indian Civil Service",
+    "slug": "indian-civil-service",
+    "quote": "the elite administrative service of British India"
+   },
+   {
+    "label": "British India",
+    "slug": "british-india",
+    "quote": "the territories of the Indian subcontinent ruled directly by Britain"
+   }
+  ]
+ },
+ {
+  "name": "Hindu holy cities",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Varanasi",
+    "slug": "varanasi",
+    "quote": "one of the holiest cities of Hinduism"
+   },
+   {
+    "label": "Mathura",
+    "slug": "mathura",
+    "quote": "revered by Hindus as the birthplace of Krishna"
+   },
+   {
+    "label": "Ayodhya",
+    "slug": "ayodhya",
+    "quote": "revered by Hindus as the birthplace and capital of Rama"
+   },
+   {
+    "label": "Kanchipuram",
+    "slug": "kanchipuram",
+    "quote": "counted among the seven sacred cities of Hinduism"
+   },
+   {
+    "label": "Ujjain",
+    "slug": "ujjain",
+    "quote": "one of the seven sacred cities of Hinduism"
+   },
+   {
+    "label": "Rameswaram",
+    "slug": "rameswaram",
+    "quote": "It is one of the holiest Hindu pilgrimage centres"
+   }
+  ]
+ },
+ {
+  "name": "Gandhi's campaigns",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Salt March",
+    "slug": "salt-march",
+    "quote": "a campaign of civil disobedience led by Mahatma Gandhi"
+   },
+   {
+    "label": "Non-cooperation",
+    "slug": "non-cooperation-movement",
+    "quote": "a mass campaign led by Mahatma Gandhi and the Indian National Congress"
+   },
+   {
+    "label": "Civil disobedience",
+    "slug": "civil-disobedience",
+    "quote": "It was used on a mass scale by Mahatma Gandhi's Indian National Congress movement"
+   },
+   {
+    "label": "Quit India",
+    "slug": "quit-india-movement",
+    "quote": "The British arrested Gandhi and the Congress leadership at once"
+   },
+   {
+    "label": "Poona Pact",
+    "slug": "poona-pact",
+    "quote": "an agreement of 24 September 1932 between Mahatma Gandhi and B. R. Ambedkar"
+   },
+   {
+    "label": "Chauri Chaura",
+    "slug": "chauri-chaura-incident",
+    "quote": "Mahatma Gandhi called off the nationwide Non-cooperation movement"
+   }
+  ],
+  "note": "Salt March was in the published 'Road to Indian independence'. Chauri Chaura is where Gandhi called a campaign off."
+ },
+ {
+  "name": "Caste in India",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Brahmins",
+    "slug": "brahmins",
+    "quote": "the priestly and learned class at the top of the traditional Hindu social hierarchy"
+   },
+   {
+    "label": "Kshatriya",
+    "slug": "kshatriya",
+    "quote": "the second of the four varnas of the traditional Hindu social order"
+   },
+   {
+    "label": "Vaishya",
+    "slug": "vaishya",
+    "quote": "the third of the four varnas of the Vedic Hindu social order in India"
+   },
+   {
+    "label": "Shudra",
+    "slug": "shudra",
+    "quote": "Shudra is the fourth of the four varnas"
+   },
+   {
+    "label": "Dalits",
+    "slug": "dalit",
+    "quote": "the lowest stratum of the castes of the Indian subcontinent"
+   },
+   {
+    "label": "Jati",
+    "slug": "jati",
+    "quote": "a cohesive group such as a caste, sub-caste, clan, tribe or religious sect"
+   }
+  ]
+ },
+ {
+  "name": "Languages of South and Central Asia",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pashto",
+    "slug": "pashto",
+    "quote": "Pashto is an Eastern Iranian language spoken by the Pashtuns"
+   },
+   {
+    "label": "Persian",
+    "slug": "persian-language",
+    "quote": "Persian is an Iranian language spoken mainly in Iran, Afghanistan and Tajikistan"
+   },
+   {
+    "label": "Sinhala",
+    "slug": "sinhala-language",
+    "quote": "Sinhala is the Indo-Aryan language of the Sinhalese people"
+   },
+   {
+    "label": "Prakrit",
+    "slug": "prakrit",
+    "quote": "the vernacular Middle Indo-Aryan languages of ancient India"
+   },
+   {
+    "label": "Chagatai",
+    "slug": "chagatai-language",
+    "quote": "Chagatai is an extinct Turkic literary language of Central Asia"
+   },
+   {
+    "label": "Urdu",
+    "slug": "urdu",
+    "quote": "Urdu is an Indo-Aryan language closely related to Hindi"
+   }
+  ],
+  "note": "Urdu was in the published 'Languages of India'."
+ },
+ {
+  "name": "Jainism",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mahavira",
+    "slug": "mahavira",
+    "quote": "the 24th and last tirthankara of Jainism"
+   },
+   {
+    "label": "Digambara",
+    "slug": "digambara",
+    "quote": "one of the two main traditions of Jainism"
+   },
+   {
+    "label": "Parshvanatha",
+    "slug": "parshvanatha",
+    "quote": "Parshvanatha is the 23rd tirthankara of Jainism"
+   },
+   {
+    "label": "Gommateshwara",
+    "slug": "gommateshwara-statue",
+    "quote": "a monolithic stone statue of the Jain figure Bahubali"
+   },
+   {
+    "label": "Shravanabelagola",
+    "slug": "shravanabelagola",
+    "quote": "one of the most important pilgrimage centres of Digambara Jainism"
+   },
+   {
+    "label": "Dilwara Temples",
+    "slug": "dilwara-temples",
+    "quote": "a group of five Jain temples at Mount Abu in Rajasthan"
+   }
+  ]
+ },
+ {
+  "name": "Sikh history",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "The ten Gurus",
+    "slug": "sikh-gurus",
+    "quote": "the ten spiritual masters who founded and led Sikhism"
+   },
+   {
+    "label": "Vaisakhi",
+    "slug": "vaisakhi",
+    "quote": "one of the most important festivals of the Sikh calendar"
+   },
+   {
+    "label": "Akali movement",
+    "slug": "akali-movement",
+    "quote": "a campaign by Sikh reformers in the Punjab from 1920 to 1925"
+   },
+   {
+    "label": "Misls",
+    "slug": "misl",
+    "quote": "one of the Sikh confederacies that controlled parts of the Punjab in the eighteenth century"
+   },
+   {
+    "label": "Banda Singh Bahadur",
+    "slug": "banda-singh-bahadur",
+    "quote": "a Sikh military leader who, after meeting Guru Gobind Singh in 1708"
+   },
+   {
+    "label": "Hari Singh Nalwa",
+    "slug": "hari-singh-nalwa",
+    "quote": "a commander of the Sikh Empire under Maharaja Ranjit Singh"
+   }
+  ],
+  "note": "Not the published 'Sikhism' (Amritsar, Golden Temple, Khalsa, Guru Granth Sahib)."
+ },
+ {
+  "name": "Hindu goddesses",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Durga",
+    "slug": "durga",
+    "quote": "Durga is a major Hindu goddess"
+   },
+   {
+    "label": "Lakshmi",
+    "slug": "lakshmi",
+    "quote": "Lakshmi is the Hindu goddess of wealth, fortune and prosperity"
+   },
+   {
+    "label": "Saraswati",
+    "slug": "saraswati",
+    "quote": "Saraswati is the Hindu goddess of knowledge, learning, music and the arts"
+   },
+   {
+    "label": "Danteshwari",
+    "slug": "danteshwari",
+    "quote": "Danteshwari is a Hindu goddess, a form of Durga"
+   },
+   {
+    "label": "Samaleswari",
+    "slug": "samaleswari",
+    "quote": "is a Hindu goddess, the presiding deity of Sambalpur"
+   },
+   {
+    "label": "Draupadi",
+    "slug": "draupadi",
+    "quote": "She is venerated as a goddess in parts of southern India"
+   }
+  ],
+  "note": "Draupadi is first the heroine of the Mahabharata: a decoy for an epics group."
+ },
+ {
+  "name": "Leaders of Bangladesh",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sheikh Mujibur Rahman",
+    "slug": "sheikh-mujibur-rahman",
+    "quote": "the founding leader of Bangladesh"
+   },
+   {
+    "label": "Ziaur Rahman",
+    "slug": "ziaur-rahman",
+    "quote": "a Bangladeshi army officer who announced the declaration of independence"
+   },
+   {
+    "label": "Sheikh Hasina",
+    "slug": "sheikh-hasina",
+    "quote": "She was prime minister from 1996 to 2001 and again from 2009 to 2024"
+   },
+   {
+    "label": "Khaleda Zia",
+    "slug": "khaleda-zia",
+    "quote": "became leader of the Bangladesh Nationalist Party in 1984"
+   },
+   {
+    "label": "Ershad",
+    "slug": "hussain-muhammad-ershad",
+    "quote": "ruled as chief martial law administrator and then president until 1990"
+   },
+   {
+    "label": "Muhammad Yunus",
+    "slug": "muhammad-yunus",
+    "quote": "Muhammad Yunus is a Bangladeshi economist"
+   }
+  ],
+  "note": "Hasina and Khaleda Zia were in the published 'Women who led their country's government'."
+ },
+ {
+  "name": "Buddhist ideas and texts",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bodhisattva",
+    "slug": "bodhisattva",
+    "quote": "a central ideal of Mahayana Buddhism"
+   },
+   {
+    "label": "Sangha",
+    "slug": "sangha",
+    "quote": "In Buddhism it refers above all to the monastic communities of monks"
+   },
+   {
+    "label": "Jataka tales",
+    "slug": "jataka-tales",
+    "quote": "stories about the previous births of the Buddha"
+   },
+   {
+    "label": "Dharma",
+    "slug": "dharma",
+    "quote": "Dharma is a central concept in Indian religions"
+   },
+   {
+    "label": "Prajnaparamita",
+    "slug": "prajnaparamita",
+    "quote": "a group of Mahayana Buddhist scriptures"
+   },
+   {
+    "label": "Lotus Sutra",
+    "slug": "lotus-sutra",
+    "quote": "one of the most influential scriptures of Mahayana Buddhism"
+   }
+  ]
+ },
+ {
+  "name": "Leaders of Sri Lanka",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sirimavo Bandaranaike",
+    "slug": "sirimavo-bandaranaike",
+    "quote": "became the world's first woman prime minister"
+   },
+   {
+    "label": "D. S. Senanayake",
+    "slug": "d-s-senanayake",
+    "quote": "led Ceylon to independence and served as its first prime minister"
+   },
+   {
+    "label": "S. W. R. D. Bandaranaike",
+    "slug": "s-w-r-d-bandaranaike",
+    "quote": "Prime Minister of Ceylon from 1956 until his assassination in 1959"
+   },
+   {
+    "label": "William Gopallawa",
+    "slug": "william-gopallawa",
+    "quote": "the first President of Sri Lanka, from 1972 to 1978"
+   },
+   {
+    "label": "J. R. Jayewardene",
+    "slug": "j-r-jayewardene",
+    "quote": "a Sri Lankan statesman of the United National Party who became prime minister in 1977"
+   },
+   {
+    "label": "Gotabaya Rajapaksa",
+    "slug": "gotabaya-rajapaksa",
+    "quote": "was president of Sri Lanka from 2019 to 2022"
+   }
+  ],
+  "note": "Sirimavo was in the published 'Women who led their country's government'."
+ },
+ {
+  "name": "Took up arms against British rule",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bhagat Singh",
+    "slug": "bhagat-singh",
+    "quote": "Bhagat Singh was an Indian anti-colonial revolutionary"
+   },
+   {
+    "label": "Chandra Shekhar Azad",
+    "slug": "chandra-shekhar-azad",
+    "quote": "Chandra Shekhar Azad was an Indian revolutionary"
+   },
+   {
+    "label": "Ram Prasad Bismil",
+    "slug": "ram-prasad-bismil",
+    "quote": "revolutionary against British rule"
+   },
+   {
+    "label": "Subhas Chandra Bose",
+    "slug": "subhas-chandra-bose",
+    "quote": "Seeking foreign help against British rule"
+   },
+   {
+    "label": "Azad Hind Fauj",
+    "slug": "indian-national-army",
+    "quote": "to fight British rule in India"
+   },
+   {
+    "label": "Tatya Tope",
+    "slug": "tatya-tope",
+    "quote": "one of the leading commanders of the Indian Rebellion of 1857"
+   }
+  ],
+  "note": "Gandhi's non-violent campaigns are the natural decoy."
+ },
+ {
+  "name": "Social reformers of British India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Ram Mohan Roy",
+    "slug": "ram-mohan-roy",
+    "quote": "a Bengali scholar and social reformer"
+   },
+   {
+    "label": "Keshab Chandra Sen",
+    "slug": "keshab-chandra-sen",
+    "quote": "a Bengali religious and social reformer who led the Brahmo Samaj"
+   },
+   {
+    "label": "Jyotirao Phule",
+    "slug": "jyotirao-phule",
+    "quote": "anti-caste reformer and writer from Maharashtra"
+   },
+   {
+    "label": "Pandita Ramabai",
+    "slug": "pandita-ramabai",
+    "quote": "an Indian social reformer and Christian missionary"
+   },
+   {
+    "label": "Shahu of Kolhapur",
+    "slug": "shahu-of-kolhapur",
+    "quote": "A social reformer, he founded schools"
+   },
+   {
+    "label": "Gokhale",
+    "slug": "gopal-krishna-gokhale",
+    "quote": "an Indian political leader and social reformer of the independence movement"
+   }
+  ],
+  "note": "Ambedkar (born 1891) is kept for a year group."
+ },
+ {
+  "name": "Historic regions of Central Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Transoxiana",
+    "slug": "transoxiana",
+    "quote": "the historical name for the region of Central Asia between the Amu Darya and Syr Darya rivers"
+   },
+   {
+    "label": "Khwarazm",
+    "slug": "khwarazm",
+    "quote": "Khwarazm is a historical region around the lower Amu Darya river"
+   },
+   {
+    "label": "Bactria",
+    "slug": "bactria",
+    "quote": "Bactria was a region of Central Asia between the Hindu Kush and the Amu Darya"
+   },
+   {
+    "label": "Fergana",
+    "slug": "fergana-valley",
+    "quote": "The Fergana Valley is a fertile basin in Central Asia"
+   },
+   {
+    "label": "Semirechye",
+    "slug": "semirechye",
+    "quote": "a region of steppe and river valleys south-east of Lake Balkhash"
+   },
+   {
+    "label": "Margiana",
+    "slug": "margiana",
+    "quote": "Margiana was a historical region centred on the oasis of the Murghab river"
+   }
+  ]
+ },
+ {
+  "name": "Historic regions of India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Deccan",
+    "slug": "deccan",
+    "quote": "The Deccan is the large plateau region of peninsular India"
+   },
+   {
+    "label": "Malwa",
+    "slug": "malwa",
+    "quote": "Malwa is a region of west-central India"
+   },
+   {
+    "label": "Kalinga",
+    "slug": "kalinga",
+    "quote": "Kalinga was an ancient region on the eastern coast of India"
+   },
+   {
+    "label": "Saurashtra",
+    "slug": "kathiawar",
+    "quote": "a large peninsula of western India in the state of Gujarat"
+   },
+   {
+    "label": "Bundelkhand",
+    "slug": "bundelkhand",
+    "quote": "Bundelkhand is a hilly region of central India"
+   },
+   {
+    "label": "Konkan",
+    "slug": "konkan-coast",
+    "quote": "the strip of land along the western coast of India between the Western Ghats and the Arabian Sea"
+   }
+  ]
+ },
+ {
+  "name": "Hill forts of India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Golconda",
+    "slug": "golconda-fort",
+    "quote": "a fortress on a granite hill west of Hyderabad"
+   },
+   {
+    "label": "Chittorgarh",
+    "slug": "chittor-fort",
+    "quote": "a hill fort above the Berach River in southern Rajasthan"
+   },
+   {
+    "label": "Kumbhalgarh",
+    "slug": "kumbhalgarh",
+    "quote": "Kumbhalgarh is a hill fort in the Aravalli Range"
+   },
+   {
+    "label": "Kalinjar",
+    "slug": "kalinjar-fort",
+    "quote": "Kalinjar Fort is a hill fortress in Banda district"
+   },
+   {
+    "label": "Gwalior",
+    "slug": "gwalior-fort",
+    "quote": "Gwalior Fort is a hill fort above the city of Gwalior"
+   },
+   {
+    "label": "Ranthambore",
+    "slug": "ranthambore-fort",
+    "quote": "Ranthambore Fort is a hill fortress in Sawai Madhopur district"
+   }
+  ],
+  "note": "Mehrangarh (Jodhpur) also fits."
+ },
+ {
+  "name": "Peoples of ancient Central Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Yuezhi",
+    "slug": "yuezhi",
+    "quote": "The Yuezhi were a nomadic people"
+   },
+   {
+    "label": "Wusun",
+    "slug": "wusun",
+    "quote": "The Wusun were a nomadic people of Central Asia"
+   },
+   {
+    "label": "Sogdians",
+    "slug": "sogdians",
+    "quote": "The Sogdians were an Iranian people of Central Asia"
+   },
+   {
+    "label": "Hephthalites",
+    "slug": "hephthalites",
+    "quote": "The Hephthalites were a people of Central Asia"
+   },
+   {
+    "label": "Indo-Scythians",
+    "slug": "indo-scythians",
+    "quote": "Saka groups who moved from Central Asia"
+   },
+   {
+    "label": "Massagetae",
+    "slug": "massagetae",
+    "quote": "an ancient Iranian nomadic people of the steppes east of the Caspian Sea"
+   }
+  ],
+  "note": "The Sogdians were the subject of the published 'Sogdian people and places'."
+ },
+ {
+  "name": "Women leaders of Indian history",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chand Bibi",
+    "slug": "chand-bibi",
+    "quote": "best known for defending the city of Ahmadnagar against the Mughal army"
+   },
+   {
+    "label": "Begum Hazrat Mahal",
+    "slug": "begum-hazrat-mahal",
+    "quote": "a leader of the Indian Rebellion of 1857"
+   },
+   {
+    "label": "Ahilyabai Holkar",
+    "slug": "ahilyabai-holkar",
+    "quote": "the Maratha queen who ruled the Holkar domains of Malwa"
+   },
+   {
+    "label": "Tarabai",
+    "slug": "tarabai",
+    "quote": "led the Maratha resistance against the Mughal emperor"
+   },
+   {
+    "label": "Kittur Chennamma",
+    "slug": "kittur-chennamma",
+    "quote": "she led an armed revolt in 1824"
+   },
+   {
+    "label": "Lakshmibai",
+    "slug": "lakshmibai",
+    "quote": "the Rani of Jhansi"
+   }
+  ]
+ },
+ {
+  "name": "In the Kathmandu Valley",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bhaktapur",
+    "slug": "bhaktapur",
+    "quote": "Bhaktapur is a city in the Kathmandu Valley of Nepal"
+   },
+   {
+    "label": "Lalitpur",
+    "slug": "lalitpur",
+    "quote": "is a city in the Kathmandu Valley of Nepal"
+   },
+   {
+    "label": "Pashupatinath",
+    "slug": "pashupatinath-temple",
+    "quote": "on the Bagmati river in Kathmandu, Nepal"
+   },
+   {
+    "label": "Hanuman Dhoka",
+    "slug": "hanuman-dhoka",
+    "quote": "the old royal palace complex on Kathmandu Durbar Square in Nepal"
+   },
+   {
+    "label": "Changu Narayan",
+    "slug": "changu-narayan-temple",
+    "quote": "near Bhaktapur in the Kathmandu Valley, Nepal"
+   },
+   {
+    "label": "Patan Durbar Square",
+    "slug": "patan-durbar-square",
+    "quote": "the old royal square of Lalitpur (Patan) in the Kathmandu Valley"
+   }
+  ],
+  "note": "Lalitpur and Patan Durbar Square are one city: keep one of them."
+ },
+ {
+  "name": "Rivers of Central Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Amu Darya",
+    "slug": "oxus",
+    "quote": "a major river of Central Asia flowing from the Pamirs towards the Aral Sea"
+   },
+   {
+    "label": "Syr Darya",
+    "slug": "syr-darya",
+    "quote": "The Syr Darya is a major river of Central Asia"
+   },
+   {
+    "label": "Zerafshan",
+    "slug": "zerafshan",
+    "quote": "The Zerafshan is a river of Central Asia"
+   },
+   {
+    "label": "Ili",
+    "slug": "ili-river",
+    "quote": "The Ili River flows from the Tian Shan mountains into Lake Balkhash in Central Asia"
+   },
+   {
+    "label": "Irtysh",
+    "slug": "irtysh",
+    "quote": "The Irtysh is a river of Central Asia and Siberia"
+   },
+   {
+    "label": "Chirchiq",
+    "slug": "chirchiq-river",
+    "quote": "The Chirchiq is a river in Uzbekistan and southern Kazakhstan"
+   }
+  ],
+  "note": "Syr Darya was in the published 'Rivers of Asia'."
+ },
+ {
+  "name": "Vedic literature",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Rigveda",
+    "slug": "rigveda",
+    "quote": "The Rigveda is the oldest of the four Vedas"
+   },
+   {
+    "label": "Samaveda",
+    "slug": "samaveda",
+    "quote": "The Samaveda is one of the four Vedas"
+   },
+   {
+    "label": "Yajurveda",
+    "slug": "yajurveda",
+    "quote": "The Yajurveda is one of the four Vedas"
+   },
+   {
+    "label": "Atharvaveda",
+    "slug": "atharvaveda",
+    "quote": "The Atharvaveda is the fourth of the Vedas"
+   },
+   {
+    "label": "Brahmanas",
+    "slug": "brahmanas",
+    "quote": "The Brahmanas are Vedic prose texts"
+   },
+   {
+    "label": "Upanishads",
+    "slug": "upanishads",
+    "quote": "form the latest layer of the Vedas"
+   }
+  ],
+  "note": "Rigveda and Upanishads were in the published 'Sacred texts in Sanskrit'; prefer the other four."
+ },
+ {
+  "name": "Old ports of western India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Surat",
+    "slug": "surat",
+    "quote": "Surat is a port city in Gujarat in western India"
+   },
+   {
+    "label": "Bharuch",
+    "slug": "bharuch",
+    "quote": "one of the oldest ports of the subcontinent"
+   },
+   {
+    "label": "Khambhat",
+    "slug": "khambhat",
+    "quote": "one of the great ports of western India"
+   },
+   {
+    "label": "Dabhol",
+    "slug": "dabhol",
+    "quote": "Dabhol is a historic port on the Konkan coast of western India"
+   },
+   {
+    "label": "Sopara",
+    "slug": "sopara",
+    "quote": "It was one of the chief ports of the Konkan coast"
+   },
+   {
+    "label": "Diu",
+    "slug": "diu",
+    "quote": "A port of the Gujarat Sultanate"
+   }
+  ]
+ },
+ {
+  "name": "Temple towns of Tamil Nadu",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Thanjavur",
+    "slug": "thanjavur",
+    "quote": "when Rajaraja I built the great Brihadisvara Temple"
+   },
+   {
+    "label": "Chidambaram",
+    "slug": "chidambaram",
+    "quote": "Chidambaram is a temple town in Tamil Nadu"
+   },
+   {
+    "label": "Kumbakonam",
+    "slug": "kumbakonam",
+    "quote": "Kumbakonam is a temple town in the Thanjavur district of Tamil Nadu"
+   },
+   {
+    "label": "Tiruvannamalai",
+    "slug": "tiruvannamalai",
+    "quote": "Tiruvannamalai is a temple town in northern Tamil Nadu"
+   },
+   {
+    "label": "Srirangam",
+    "slug": "srirangam",
+    "quote": "a river island and temple town between the Kaveri and Kollidam rivers"
+   },
+   {
+    "label": "Madurai",
+    "slug": "madurai",
+    "quote": "Madurai is an ancient city in southern India, the capital of the Pandya kingdom"
+   }
+  ],
+  "note": "Madurai's entry does not name its temple (the Meenakshi Temple was published): keep it last."
+ },
+ {
+  "name": "Sri Lanka's past",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mahavamsa",
+    "slug": "mahavamsa",
+    "quote": "a Pali chronicle of Sri Lanka"
+   },
+   {
+    "label": "Dipavamsa",
+    "slug": "dipavamsa",
+    "quote": "the oldest surviving historical chronicle of Sri Lanka"
+   },
+   {
+    "label": "Polonnaruwa",
+    "slug": "polonnaruwa",
+    "quote": "served as the island's capital from the 11th to the 13th century"
+   },
+   {
+    "label": "Temple of the Tooth",
+    "slug": "temple-of-the-tooth",
+    "quote": "houses the relic of the Buddha's tooth"
+   },
+   {
+    "label": "Jaffna Kingdom",
+    "slug": "jaffna-kingdom",
+    "quote": "a Tamil kingdom in northern Sri Lanka"
+   },
+   {
+    "label": "Kandyan Convention",
+    "slug": "kandyan-convention",
+    "quote": "It transferred sovereignty over Kandy to the British Crown"
+   }
+  ]
+ },
+ {
+  "name": "The Maurya age",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bindusara",
+    "slug": "bindusara",
+    "quote": "the second emperor of the Maurya Empire"
+   },
+   {
+    "label": "Kalinga War",
+    "slug": "kalinga-war",
+    "quote": "the Maurya Empire's conquest of Kalinga under Ashoka"
+   },
+   {
+    "label": "Edicts of Ashoka",
+    "slug": "edicts-of-ashoka",
+    "quote": "issued by the Maurya emperor Ashoka in the third century BCE"
+   },
+   {
+    "label": "Chanakya",
+    "slug": "chanakya",
+    "quote": "the chief adviser to Chandragupta Maurya"
+   },
+   {
+    "label": "Pataliputra",
+    "slug": "pataliputra",
+    "quote": "It served as the capital of the Maurya Empire"
+   },
+   {
+    "label": "Arthashastra",
+    "slug": "arthashastra",
+    "quote": "adviser to Chandragupta Maurya"
+   }
+  ],
+  "note": "Ashoka and Chandragupta themselves are left out (published twice)."
+ },
+ {
+  "name": "Founding a separate homeland",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lahore Resolution",
+    "slug": "lahore-resolution",
+    "quote": "became the basis of the demand for Pakistan"
+   },
+   {
+    "label": "Muslim League",
+    "slug": "all-india-muslim-league",
+    "quote": "a political party founded at Dhaka in 1906 to represent the interests of Muslims in British India"
+   },
+   {
+    "label": "Muhammad Iqbal",
+    "slug": "muhammad-iqbal",
+    "quote": "honours him as its national poet"
+   },
+   {
+    "label": "East Pakistan",
+    "slug": "east-pakistan",
+    "quote": "East Pakistan was the eastern wing of Pakistan from 1955"
+   },
+   {
+    "label": "Radcliffe Line",
+    "slug": "radcliffe-line",
+    "quote": "the boundary drawn in 1947 between India and Pakistan"
+   },
+   {
+    "label": "Liaquat Ali Khan",
+    "slug": "liaquat-ali-khan",
+    "quote": "became the first prime minister of Pakistan in 1947"
+   }
+  ],
+  "note": "Jinnah and Liaquat were in the published 'Leaders of Pakistan'."
+ },
+ {
+  "name": "Sultanates of India",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Delhi",
+    "slug": "delhi-sultanate",
+    "quote": "a series of Muslim dynasties that ruled much of northern India from Delhi"
+   },
+   {
+    "label": "Deccan",
+    "slug": "deccan-sultanates",
+    "quote": "a group of Muslim kingdoms, including Bijapur, Golconda and Ahmadnagar"
+   },
+   {
+    "label": "Madurai",
+    "slug": "madurai-sultanate",
+    "quote": "a Muslim kingdom in the southern Tamil country"
+   },
+   {
+    "label": "Bahmanis",
+    "slug": "bahmani-sultanate",
+    "quote": "a Muslim state in the Deccan founded in 1347"
+   },
+   {
+    "label": "Carnatic",
+    "slug": "carnatic-sultanate",
+    "quote": "ruled by the Nawabs of the Carnatic, or of Arcot"
+   },
+   {
+    "label": "Kashmir",
+    "slug": "shah-mir",
+    "quote": "the founder of the Shah Mir dynasty and of the Kashmir Sultanate"
+   }
+  ],
+  "note": "Labels are the place names alone; 'Deccan' also fits a regions group."
+ },
+ {
+  "name": "Cities of the Buddha's time",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Vaishali",
+    "slug": "vaishali",
+    "quote": "associated with the early Buddhist and Jain traditions"
+   },
+   {
+    "label": "Rajgir",
+    "slug": "rajgir",
+    "quote": "the first capital of the kingdom of Magadha under Bimbisara and Ajatashatru"
+   },
+   {
+    "label": "Shravasti",
+    "slug": "shravasti",
+    "quote": "one of the largest cities of the Buddha's time"
+   },
+   {
+    "label": "Kapilavastu",
+    "slug": "kapilavastu",
+    "quote": "in whose territory the Buddha grew up"
+   },
+   {
+    "label": "Kaushambi",
+    "slug": "kausambi",
+    "quote": "One of the great cities of the Buddha's time"
+   },
+   {
+    "label": "Kushinagar",
+    "slug": "kushinagar",
+    "quote": "where according to Buddhist tradition the Buddha died"
+   }
+  ],
+  "note": "Kushinagar was in the published 'Places in the life of the Buddha'."
+ },
+ {
+  "name": "Gupta emperors",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sri Gupta",
+    "slug": "sri-gupta",
+    "quote": "Sri Gupta was the founder of the Gupta dynasty"
+   },
+   {
+    "label": "Chandragupta I",
+    "slug": "chandragupta-i",
+    "quote": "the ruler who established the Gupta Empire as a major power in northern India"
+   },
+   {
+    "label": "Samudragupta",
+    "slug": "samudragupta",
+    "quote": "Samudragupta was an emperor of the Gupta Empire"
+   },
+   {
+    "label": "Chandragupta II",
+    "slug": "chandragupta-ii",
+    "quote": "was a ruler of the Gupta Empire who reigned from about 375 to"
+   },
+   {
+    "label": "Skandagupta",
+    "slug": "skandagupta",
+    "quote": "Skandagupta was an emperor of the Gupta Empire"
+   },
+   {
+    "label": "Vishnugupta",
+    "slug": "vishnugupta",
+    "quote": "the last recognised emperor of the Gupta dynasty"
+   }
+  ],
+  "note": "Sri Gupta carries the word in its label: keep it last. Chandragupta Maurya is the decoy (the Maurya founder). Samudragupta was in the published 'Emperors of early India'."
+ },
+ {
+  "name": "Pallava kings",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Simhavishnu",
+    "slug": "simhavishnu",
+    "quote": "a king of the Pallava dynasty of Kanchipuram"
+   },
+   {
+    "label": "Mahendravarman I",
+    "slug": "mahendravarman-i",
+    "quote": "king of the Pallava dynasty of Kanchipuram in the early 7th century"
+   },
+   {
+    "label": "Narasimhavarman I",
+    "slug": "narasimhavarman-i",
+    "quote": "was king of the Pallava dynasty from about 630 to 668"
+   },
+   {
+    "label": "Rajasimha",
+    "slug": "narasimhavarman-ii",
+    "quote": "was a Pallava king of south India"
+   },
+   {
+    "label": "Nandivarman II",
+    "slug": "nandivarman-ii",
+    "quote": "was king of the Pallava dynasty from about 731 to 796"
+   },
+   {
+    "label": "Nandivarman III",
+    "slug": "nandivarman-iii",
+    "quote": "Nandivarman III was king of the Pallava dynasty"
+   }
+  ]
+ },
+ {
+  "name": "Rashtrakuta kings",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Dantidurga",
+    "slug": "dantidurga",
+    "quote": "Dantidurga was the founder of the Rashtrakuta dynasty"
+   },
+   {
+    "label": "Dhruva Dharavarsha",
+    "slug": "dhruva-dharavarsha",
+    "quote": "was a king of the Rashtrakuta dynasty of the Deccan"
+   },
+   {
+    "label": "Govinda III",
+    "slug": "govinda-iii",
+    "quote": "Govinda III was a king of the Rashtrakuta dynasty of the Deccan"
+   },
+   {
+    "label": "Amoghavarsha I",
+    "slug": "amoghavarsha-i",
+    "quote": "Amoghavarsha I was the longest-reigning Rashtrakuta emperor"
+   },
+   {
+    "label": "Krishna III",
+    "slug": "krishna-iii",
+    "quote": "the last great emperor of the Rashtrakuta dynasty"
+   },
+   {
+    "label": "Khottiga",
+    "slug": "khottiga",
+    "quote": "Khottiga was Rashtrakuta emperor of the Deccan from 967 to 972"
+   }
+  ],
+  "note": "Krishna III shares a name with the god and the river."
+ },
+ {
+  "name": "Chalukya kings of Badami",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Pulakeshin I",
+    "slug": "pulakeshin-i",
+    "quote": "the founder of the Chalukya dynasty of Badami"
+   },
+   {
+    "label": "Kirtivarman I",
+    "slug": "kirtivarman-i",
+    "quote": "king of the Chalukyas of Badami from about 566 to 597"
+   },
+   {
+    "label": "Pulakeshin II",
+    "slug": "pulakeshin-ii",
+    "quote": "the greatest king of the Chalukyas of Badami"
+   },
+   {
+    "label": "Vikramaditya I",
+    "slug": "vikramaditya-i",
+    "quote": "king of the Chalukyas of Badami from about 655 to 680"
+   },
+   {
+    "label": "Vikramaditya II",
+    "slug": "vikramaditya-ii",
+    "quote": "a king of the Chalukyas of Badami in the western Deccan"
+   },
+   {
+    "label": "Kirtivarman II",
+    "slug": "kirtivarman-ii",
+    "quote": "the last king of the Chalukya dynasty of Badami"
+   }
+  ],
+  "note": "Vikramaditya was also a title of Chandragupta II: a decoy for the Gupta group."
+ },
+ {
+  "name": "Leaders of the Vijayanagara Empire",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Harihara I",
+    "slug": "harihara-i",
+    "quote": "the founder, with his brother Bukka I, of the Vijayanagara Empire"
+   },
+   {
+    "label": "Bukka Raya I",
+    "slug": "bukka-raya-i",
+    "quote": "a co-founder and ruler of the Vijayanagara Empire"
+   },
+   {
+    "label": "Kumara Kampana",
+    "slug": "kumara-kampana",
+    "quote": "a prince and general of the Vijayanagara Empire"
+   },
+   {
+    "label": "Krishnadevaraya",
+    "slug": "krishnadevaraya",
+    "quote": "the most celebrated ruler of the empire"
+   },
+   {
+    "label": "Achyuta Deva Raya",
+    "slug": "achyuta-deva-raya",
+    "quote": "Achyuta Deva Raya was emperor of Vijayanagara from 1529 to 1542"
+   },
+   {
+    "label": "Aliya Rama Raya",
+    "slug": "aliya-rama-raya",
+    "quote": "who dominated the Vijayanagara Empire as regent"
+   }
+  ]
+ },
+ {
+  "name": "Bengal under the nawabs",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Murshid Quli Khan",
+    "slug": "murshid-quli-khan",
+    "quote": "his rule laid the foundations of the hereditary Nawabs of Be"
+   },
+   {
+    "label": "Alivardi Khan",
+    "slug": "alivardi-khan",
+    "quote": "Alivardi Khan was Nawab of Bengal, Bihar and Orissa from 1740 to 1756"
+   },
+   {
+    "label": "Siraj ud-Daulah",
+    "slug": "siraj-ud-daulah",
+    "quote": "the last independent Nawab of Bengal"
+   },
+   {
+    "label": "Mir Jafar",
+    "slug": "mir-jafar",
+    "quote": "Installed by Robert Clive as nawab"
+   },
+   {
+    "label": "Mir Qasim",
+    "slug": "mir-qasim",
+    "quote": "Mir Qasim was Nawab of Bengal from 1760 to 1763"
+   },
+   {
+    "label": "Murshidabad",
+    "slug": "murshidabad",
+    "quote": "the capital of the Nawabs of Bengal for most of that century"
+   }
+  ],
+  "note": "Five nawabs and their capital."
+ },
+ {
+  "name": "Rulers of Awadh",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Saadat Ali Khan I",
+    "slug": "saadat-ali-khan-i",
+    "quote": "became the first Nawab of Awadh"
+   },
+   {
+    "label": "Safdar Jang",
+    "slug": "safdar-jang",
+    "quote": "Safdar Jang was the second Nawab of Awadh"
+   },
+   {
+    "label": "Shuja-ud-Daula",
+    "slug": "shuja-ud-daula",
+    "quote": "Shuja-ud-Daula was Nawab of Awadh from 1754 to 1775"
+   },
+   {
+    "label": "Asaf-ud-Daula",
+    "slug": "asaf-ud-daula",
+    "quote": "Asaf-ud-Daula was Nawab of Awadh from 1775 until his death in 1797"
+   },
+   {
+    "label": "Wajid Ali Shah",
+    "slug": "wajid-ali-shah",
+    "quote": "Wajid Ali Shah was the last King of Awadh"
+   },
+   {
+    "label": "Ghazi-ud-Din Haidar",
+    "slug": "ghazi-ud-din-haidar-shah",
+    "quote": "the ruler of Awadh from 1814 and its first king"
+   }
+  ],
+  "note": "Shuja-ud-Daula against Siraj ud-Daulah of Bengal is a neat decoy."
+ },
+ {
+  "name": "Rulers of Afghanistan",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Zaman Shah",
+    "slug": "zaman-shah-durrani",
+    "quote": "ruler of the Durrani Empire of Afghanistan in the 1790s"
+   },
+   {
+    "label": "Dost Mohammad Khan",
+    "slug": "dost-mohammad-khan",
+    "quote": "the founder of the Barakzai dynasty of Afghanistan"
+   },
+   {
+    "label": "Abdur Rahman Khan",
+    "slug": "abdur-rahman-khan",
+    "quote": "ruled Afghanistan from 1880 to 1901"
+   },
+   {
+    "label": "Amanullah Khan",
+    "slug": "amanullah-khan",
+    "quote": "Amanullah Khan ruled Afghanistan from 1919 to 1929"
+   },
+   {
+    "label": "Zahir Shah",
+    "slug": "mohammad-zahir-shah",
+    "quote": "the last king of Afghanistan"
+   },
+   {
+    "label": "Daoud Khan",
+    "slug": "mohammad-daoud-khan",
+    "quote": "In 1973 he overthrew the monarchy"
+   }
+  ]
+ },
+ {
+  "name": "Battles of the Mughals",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Khanwa",
+    "slug": "battle-of-khanwa",
+    "quote": "between Babur and a Rajput confederacy led by Rana Sanga of Mewar"
+   },
+   {
+    "label": "Ghaghra",
+    "slug": "battle-of-ghaghra",
+    "quote": "The Mughal emperor Babur defeated the Afgha"
+   },
+   {
+    "label": "Chausa",
+    "slug": "battle-of-chausa",
+    "quote": "routed the army of the Mughal emperor Hum"
+   },
+   {
+    "label": "Tukaroi",
+    "slug": "battle-of-tukaroi",
+    "quote": "between the Mughal army of Akbar"
+   },
+   {
+    "label": "Samugarh",
+    "slug": "battle-of-samugarh",
+    "quote": "between Dara Shikoh, heir of the ailing Mughal emperor Shah Jahan"
+   },
+   {
+    "label": "Karnal",
+    "slug": "battle-of-karnal",
+    "quote": "between Nader Shah of Iran and the Mughal emperor Muhammad Shah"
+   }
+  ],
+  "note": "Panipat and Haldighati were in the published 'Battles in India'; these are other Mughal fields."
+ },
+ {
+  "name": "Won by the East India Company's armies",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Buxar",
+    "slug": "battle-of-buxar",
+    "quote": "between the East India Company army under Hector Munro"
+   },
+   {
+    "label": "Assaye",
+    "slug": "battle-of-assaye",
+    "quote": "A British force under Arthur Wellesley"
+   },
+   {
+    "label": "Sobraon",
+    "slug": "battle-of-sobraon",
+    "quote": "The British East India Company's forces defeated"
+   },
+   {
+    "label": "Miani",
+    "slug": "battle-of-miani",
+    "quote": "a small British-Indian army under General Sir Charles Napier defeated"
+   },
+   {
+    "label": "Mahidpur",
+    "slug": "battle-of-mahidpur",
+    "quote": "between the army of the Holkar state of Indore and British forces"
+   },
+   {
+    "label": "Aliwal",
+    "slug": "battle-of-aliwal",
+    "quote": "A British force under Sir Harry Smith defeated a Sikh"
+   }
+  ],
+  "note": "Plassey (published in 'Battles in India') is the famous decoy."
+ },
+ {
+  "name": "Laws that governed British India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Regulating Act",
+    "slug": "regulating-act-of-1773",
+    "quote": "the first act of the British Parliament"
+   },
+   {
+    "label": "Act of 1858",
+    "slug": "government-of-india-act-1858",
+    "quote": "an act of the British Parliament"
+   },
+   {
+    "label": "Morley-Minto reforms",
+    "slug": "indian-councils-act-1909",
+    "quote": "known as the Morley–Minto reforms"
+   },
+   {
+    "label": "Rowlatt Act",
+    "slug": "rowlatt-act",
+    "quote": "a law passed by the Imperial Legislative Council"
+   },
+   {
+    "label": "Act of 1935",
+    "slug": "government-of-india-act-1935",
+    "quote": "the longest act passed by the British"
+   },
+   {
+    "label": "Independence Act",
+    "slug": "indian-independence-act-1947",
+    "quote": "an act of the British Parliament"
+   }
+  ]
+ },
+ {
+  "name": "Figures of the Great Game",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Alexander Burnes",
+    "slug": "alexander-burnes",
+    "quote": "His journey through Afghanistan to Bukhara in 1831–1833"
+   },
+   {
+    "label": "Arthur Conolly",
+    "slug": "arthur-conolly",
+    "quote": "credited with coining the phrase 'the Great Game'"
+   },
+   {
+    "label": "Francis Younghusband",
+    "slug": "francis-younghusband",
+    "quote": "In 1903 and 1904 he led the British expedition to Tibet"
+   },
+   {
+    "label": "Mikhail Skobelev",
+    "slug": "mikhail-skobelev",
+    "quote": "a Russian general famous for his campaigns in Central Asia"
+   },
+   {
+    "label": "Konstantin von Kaufmann",
+    "slug": "konstantin-von-kaufmann",
+    "quote": "the first governor-general of Russian Turkestan"
+   },
+   {
+    "label": "Eldred Pottinger",
+    "slug": "eldred-pottinger",
+    "quote": "was in Herat when Persia besieged it in 1837–1838"
+   }
+  ]
+ },
+ {
+  "name": "Took or ruled Bukhara",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Qutayba ibn Muslim",
+    "slug": "qutayba-ibn-muslim",
+    "quote": "took Bukhara in 709"
+   },
+   {
+    "label": "Samanids",
+    "slug": "samanid-empire",
+    "quote": "Its capital Bukhara became a centre"
+   },
+   {
+    "label": "Kara-Khanids",
+    "slug": "kara-khanid-khanate",
+    "quote": "In 999 it took Bukhara"
+   },
+   {
+    "label": "Shaybanids",
+    "slug": "shaybanids",
+    "quote": "they captured Samarkand, Bukhara and Herat between 1500 and 1507"
+   },
+   {
+    "label": "Janids",
+    "slug": "janid-dynasty",
+    "quote": "ruled the Khanate of Bukhara from 1599 to 1785"
+   },
+   {
+    "label": "Mikhail Frunze",
+    "slug": "mikhail-frunze",
+    "quote": "captured Bukhara in 1920"
+   }
+  ],
+  "note": "Timur and the Timurids (Samarkand) are the decoy."
+ },
+ {
+  "name": "Afghans who ruled in India",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Lodi dynasty",
+    "slug": "lodi-dynasty",
+    "quote": "The Lodi dynasty was an Afghan dynasty that ruled the Delhi Sultanate"
+   },
+   {
+    "label": "Bahlul Lodi",
+    "slug": "bahlul-lodi",
+    "quote": "Bahlul Lodi was an Afghan noble who founded the Lodi dynasty"
+   },
+   {
+    "label": "Sher Shah Suri",
+    "slug": "sher-shah-suri",
+    "quote": "Sher Shah Suri was an Afghan ruler who founded the Sur Empire in northern India"
+   },
+   {
+    "label": "Sur Empire",
+    "slug": "sur-empire",
+    "quote": "The Sur Empire was an Afghan state founded in northern India"
+   },
+   {
+    "label": "Dost Mohammad Khan of Bhopal",
+    "slug": "dost-mohammad-khan-of-bhopal",
+    "quote": "Dost Mohammad Khan was an Afghan soldier from Tirah"
+   },
+   {
+    "label": "Malerkotla",
+    "slug": "malerkotla",
+    "quote": "ruled by Afghan nawabs"
+   }
+  ],
+  "note": "Two pairs (Lodi, Sur): the editor keeps one of each pair at most."
+ },
+ {
+  "name": "Capitals of Bengal",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gaur",
+    "slug": "gaur",
+    "quote": "It was a capital of the Sena kings"
+   },
+   {
+    "label": "Pandua",
+    "slug": "pandua-malda",
+    "quote": "the capital of the Bengal Sultanate"
+   },
+   {
+    "label": "Tanda",
+    "slug": "tanda-bengal",
+    "quote": "made it the capital of the Bengal Sultanate in the 1560s"
+   },
+   {
+    "label": "Rajmahal",
+    "slug": "rajmahal",
+    "quote": "Man Singh made it the capital of Mughal Bengal in 1595"
+   },
+   {
+    "label": "Sonargaon",
+    "slug": "sonargaon",
+    "quote": "It was a capital of eastern Bengal under the Deva dynasty"
+   },
+   {
+    "label": "Munger",
+    "slug": "munger",
+    "quote": "the Nawab of Bengal Mir Qasim made it his capital"
+   }
+  ],
+  "note": "Dhaka and Kolkata are the well-known decoys."
+ },
+ {
+  "name": "Scripts that grew from Brahmi",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Devanagari",
+    "slug": "devanagari",
+    "quote": "It developed from the Brahmi script"
+   },
+   {
+    "label": "Tamil-Brahmi",
+    "slug": "tamil-brahmi",
+    "quote": "a variant of the Brahmi script"
+   },
+   {
+    "label": "Grantha",
+    "slug": "grantha-script",
+    "quote": "a South Indian script derived from Brahmi"
+   },
+   {
+    "label": "Pallava script",
+    "slug": "pallava-script",
+    "quote": "The Pallava script is a Brahmic script"
+   },
+   {
+    "label": "Telugu",
+    "slug": "telugu-language",
+    "quote": "It is written in its own script, derived from Brahmi"
+   },
+   {
+    "label": "Malayalam",
+    "slug": "malayalam-language",
+    "quote": "It is written in its own script, derived from Grantha"
+   }
+  ],
+  "note": "Malayalam descends from Brahmi through Grantha. Tamil-Brahmi carries the word in its label: drop it if that gives the group away."
+ },
+ {
+  "name": "Hyderabad State",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Asaf Jah I",
+    "slug": "asaf-jah-i",
+    "quote": "a Mughal noble who founded Hyderabad State"
+   },
+   {
+    "label": "Nizam Ali Khan",
+    "slug": "nizam-ali-khan",
+    "quote": "was Nizam of Hyderabad from 1762 to 1803"
+   },
+   {
+    "label": "Mahbub Ali Khan",
+    "slug": "mahbub-ali-khan",
+    "quote": "the sixth Nizam of Hyderabad"
+   },
+   {
+    "label": "Mir Osman Ali Khan",
+    "slug": "mir-osman-ali-khan",
+    "quote": "the seventh and last Nizam of Hyderabad"
+   },
+   {
+    "label": "Salar Jung I",
+    "slug": "salar-jung-i",
+    "quote": "chief minister of Hyderabad State from 1853 until his death in 1883"
+   },
+   {
+    "label": "Operation Polo",
+    "slug": "operation-polo",
+    "quote": "ended the independence of Hyderabad State"
+   }
+  ],
+  "note": "Operation Polo was in the published Wars fought by independent India."
+ },
+ {
+  "name": "The Kingdom of Mysore",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hyder Ali",
+    "slug": "hyder-ali",
+    "quote": "rose to command the army of the Kingdom of Mysore"
+   },
+   {
+    "label": "Tipu Sultan",
+    "slug": "tipu-sultan",
+    "quote": "Tipu Sultan was ruler of Mysore from 1782"
+   },
+   {
+    "label": "Krishnaraja Wodeyar III",
+    "slug": "krishnaraja-wodeyar-iii",
+    "quote": "was maharaja of Mysore from 1799 to 1868"
+   },
+   {
+    "label": "Jayachamarajendra Wodeyar",
+    "slug": "jayachamarajendra-wodeyar",
+    "quote": "the last maharaja of Mysore"
+   },
+   {
+    "label": "Treaty of Seringapatam",
+    "slug": "treaty-of-seringapatam",
+    "quote": "signed in March 1792 by Tipu Sultan of Mysore"
+   },
+   {
+    "label": "Srirangapatna",
+    "slug": "srirangapatna",
+    "quote": "the capital of the Wodeyar kings of Mysore from 1610"
+   }
+  ],
+  "note": "Tipu was in the published Died in 1799."
+ },
+ {
+  "name": "Born in 1869",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Gandhi",
+    "slug": "mahatma-gandhi",
+    "quote": "1869–1948"
+   },
+   {
+    "label": "Victor Emmanuel III",
+    "slug": "victor-emmanuel-iii",
+    "quote": "1869–1947"
+   },
+   {
+    "label": "Rasputin",
+    "slug": "grigori-rasputin",
+    "quote": "1869–1916"
+   },
+   {
+    "label": "Matisse",
+    "slug": "henri-matisse",
+    "quote": "1869–1954"
+   },
+   {
+    "label": "Edwin Lutyens",
+    "slug": "edwin-lutyens",
+    "quote": "1869–1944"
+   },
+   {
+    "label": "Emma Goldman",
+    "slug": "emma-goldman",
+    "quote": "1869–1940"
+   }
+  ],
+  "note": "Lutyens designed New Delhi; Gandhi died in 1948 (a published group)."
+ },
+ {
+  "name": "Born in 1876",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Jinnah",
+    "slug": "muhammad-ali-jinnah",
+    "quote": "1876–1948"
+   },
+   {
+    "label": "Konrad Adenauer",
+    "slug": "konrad-adenauer",
+    "quote": "1876–1967"
+   },
+   {
+    "label": "Ziya Gökalp",
+    "slug": "ziya-gokalp",
+    "quote": "1876–1924"
+   },
+   {
+    "label": "Tomáš Baťa",
+    "slug": "tomas-bata",
+    "quote": "1876–1932"
+   },
+   {
+    "label": "Sol Plaatje",
+    "slug": "sol-plaatje",
+    "quote": "1876–1932"
+   },
+   {
+    "label": "Walter Burley Griffin",
+    "slug": "walter-burley-griffin",
+    "quote": "1876–1937"
+   }
+  ],
+  "note": "Griffin planned Canberra: a decoy for a planned-capitals group."
+ },
+ {
+  "name": "Born in 1861",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Tagore",
+    "slug": "rabindranath-tagore",
+    "quote": "1861–1941"
+   },
+   {
+    "label": "José Rizal",
+    "slug": "jose-rizal",
+    "quote": "1861–1896"
+   },
+   {
+    "label": "Fridtjof Nansen",
+    "slug": "fridtjof-nansen",
+    "quote": "1861–1930"
+   },
+   {
+    "label": "Robert Bosch",
+    "slug": "robert-bosch",
+    "quote": "1861–1942"
+   },
+   {
+    "label": "Victor Horta",
+    "slug": "victor-horta",
+    "quote": "1861–1947"
+   },
+   {
+    "label": "Ranavalona III",
+    "slug": "ranavalona-iii",
+    "quote": "1861–1917"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1891",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Ambedkar",
+    "slug": "b-r-ambedkar",
+    "quote": "1891–1956"
+   },
+   {
+    "label": "Prokofiev",
+    "slug": "sergei-prokofiev",
+    "quote": "1891–1953"
+   },
+   {
+    "label": "Gramsci",
+    "slug": "antonio-gramsci",
+    "quote": "1891–1937"
+   },
+   {
+    "label": "Frederick Banting",
+    "slug": "frederick-banting",
+    "quote": "1891–1941"
+   },
+   {
+    "label": "Hu Shih",
+    "slug": "hu-shih",
+    "quote": "1891–1962"
+   },
+   {
+    "label": "Sultan al-Atrash",
+    "slug": "sultan-al-atrash",
+    "quote": "1891–1982"
+   }
+  ],
+  "note": "The encyclopedia also has hu-shi (same man): use hu-shih only."
+ },
+ {
+  "name": "Born in 1856",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Tilak",
+    "slug": "bal-gangadhar-tilak",
+    "quote": "1856–1920"
+   },
+   {
+    "label": "Woodrow Wilson",
+    "slug": "woodrow-wilson",
+    "quote": "1856–1924"
+   },
+   {
+    "label": "Sigmund Freud",
+    "slug": "sigmund-freud",
+    "quote": "1856–1939"
+   },
+   {
+    "label": "Philippe Pétain",
+    "slug": "philippe-petain",
+    "quote": "1856–1951"
+   },
+   {
+    "label": "Keir Hardie",
+    "slug": "keir-hardie",
+    "quote": "1856–1915"
+   },
+   {
+    "label": "Max Uhle",
+    "slug": "max-uhle",
+    "quote": "1856–1944"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1797",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mirza Ghalib",
+    "slug": "mirza-ghalib",
+    "quote": "1797–1869"
+   },
+   {
+    "label": "Schubert",
+    "slug": "franz-schubert",
+    "quote": "1797–1828"
+   },
+   {
+    "label": "Sojourner Truth",
+    "slug": "sojourner-truth",
+    "quote": "c. 1797–1883"
+   },
+   {
+    "label": "Mary Shelley",
+    "slug": "mary-shelley",
+    "quote": "1797–1851"
+   },
+   {
+    "label": "Imam Shamil",
+    "slug": "imam-shamil",
+    "quote": "1797–1871"
+   },
+   {
+    "label": "Hiroshige",
+    "slug": "utagawa-hiroshige",
+    "quote": "1797–1858"
+   }
+  ],
+  "note": "Sojourner Truth's year is 'c. 1797': keep her last."
+ },
+ {
+  "name": "Born in 1920",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Ravi Shankar",
+    "slug": "ravi-shankar",
+    "quote": "1920–2012"
+   },
+   {
+    "label": "King Mahendra",
+    "slug": "mahendra-of-nepal",
+    "quote": "1920–1972"
+   },
+   {
+    "label": "John Paul II",
+    "slug": "pope-john-paul-ii",
+    "quote": "1920–2005"
+   },
+   {
+    "label": "King Farouk",
+    "slug": "farouk-of-egypt",
+    "quote": "1920–1965"
+   },
+   {
+    "label": "Pérez de Cuéllar",
+    "slug": "javier-perez-de-cuellar",
+    "quote": "1920–2020"
+   },
+   {
+    "label": "Qahtan al-Shaabi",
+    "slug": "qahtan-al-shaabi",
+    "quote": "1920–1981"
+   }
+  ],
+  "note": "Sheikh Mujibur Rahman (1920) is in Leaders of Bangladesh, so left out here."
+ },
+ {
+  "name": "Died in 1839",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Ranjit Singh",
+    "slug": "ranjit-singh",
+    "quote": "1780–1839"
+   },
+   {
+    "label": "Mahmud II",
+    "slug": "mahmud-ii",
+    "quote": "1785–1839"
+   },
+   {
+    "label": "Speransky",
+    "slug": "mikhail-speransky",
+    "quote": "1772–1839"
+   },
+   {
+    "label": "Bhimsen Thapa",
+    "slug": "bhimsen-thapa",
+    "quote": "1775–1839"
+   },
+   {
+    "label": "Lord William Bentinck",
+    "slug": "lord-william-bentinck",
+    "quote": "1774–1839"
+   },
+   {
+    "label": "Frederick VI",
+    "slug": "frederick-vi-of-denmark",
+    "quote": "1768–1839"
+   }
+  ],
+  "note": "Allard, Ranjit Singh's French general, also died in 1839 (he is in another group)."
+ },
+ {
+  "name": "Died in 1950",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Sardar Patel",
+    "slug": "vallabhbhai-patel",
+    "quote": "1875–1950"
+   },
+   {
+    "label": "Jan Smuts",
+    "slug": "jan-smuts",
+    "quote": "1870–1950"
+   },
+   {
+    "label": "George Orwell",
+    "slug": "george-orwell",
+    "quote": "1903–1950"
+   },
+   {
+    "label": "Léon Blum",
+    "slug": "leon-blum",
+    "quote": "1872–1950"
+   },
+   {
+    "label": "Karl Renner",
+    "slug": "karl-renner",
+    "quote": "1870–1950"
+   },
+   {
+    "label": "Sudirman",
+    "slug": "sudirman",
+    "quote": "1916–1950"
+   }
+  ],
+  "note": "Orwell was born in India (Motihari), if the editor wants a second link."
+ },
+ {
+  "name": "Died in 1984",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Indira Gandhi",
+    "slug": "indira-gandhi",
+    "quote": "1917–1984"
+   },
+   {
+    "label": "Sékou Touré",
+    "slug": "ahmed-sekou-toure",
+    "quote": "1922–1984"
+   },
+   {
+    "label": "Muhammad Naguib",
+    "slug": "muhammad-naguib",
+    "quote": "1901–1984"
+   },
+   {
+    "label": "Julio Cortázar",
+    "slug": "julio-cortazar",
+    "quote": "1914–1984"
+   },
+   {
+    "label": "Souvanna Phouma",
+    "slug": "souvanna-phouma",
+    "quote": "1901–1984"
+   },
+   {
+    "label": "Yigael Yadin",
+    "slug": "yigael-yadin",
+    "quote": "1917–1984"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1680",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Shivaji",
+    "slug": "shivaji",
+    "quote": "1630–1680"
+   },
+   {
+    "label": "Bernini",
+    "slug": "gian-lorenzo-bernini",
+    "quote": "1598–1680"
+   },
+   {
+    "label": "Kateri Tekakwitha",
+    "slug": "kateri-tekakwitha",
+    "quote": "1656–1680"
+   },
+   {
+    "label": "Trunajaya",
+    "slug": "trunajaya",
+    "quote": "c. 1649–1680"
+   },
+   {
+    "label": "Raj Singh I",
+    "slug": "raj-singh-i",
+    "quote": "1629–1680"
+   },
+   {
+    "label": "Frans Post",
+    "slug": "frans-post",
+    "quote": "1612–1680"
+   }
+  ]
+ },
+ {
+  "name": "All in 1739",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Sack of Delhi",
+    "slug": "sack-of-delhi",
+    "quote": "The sack of Delhi in 1739"
+   },
+   {
+    "label": "Treaty of Belgrade",
+    "slug": "treaty-of-belgrade",
+    "quote": "signed in September 1739"
+   },
+   {
+    "label": "Peacock Throne",
+    "slug": "peacock-throne",
+    "quote": "Nader Shah carried it off from Delhi in 1739"
+   },
+   {
+    "label": "Jamaican Maroons",
+    "slug": "jamaican-maroons",
+    "quote": "the British signed treaties with them in 1739"
+   },
+   {
+    "label": "New Granada",
+    "slug": "new-granada",
+    "quote": "re-established permanently in 1739"
+   },
+   {
+    "label": "Koh-i-Noor",
+    "slug": "koh-i-noor",
+    "quote": "after his invasion of Mughal India in 1739"
+   }
+  ],
+  "note": "The Peacock Throne and the Koh-i-Noor left Delhi together: keep one."
+ },
+ {
+  "name": "All in 1498",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Vasco da Gama",
+    "slug": "vasco-da-gama",
+    "quote": "arriving at Calicut in 1498"
+   },
+   {
+    "label": "Trinidad",
+    "slug": "trinidad",
+    "quote": "Sighted by Columbus in 1498"
+   },
+   {
+    "label": "Louis XII",
+    "slug": "louis-xii-of-france",
+    "quote": "became king of France in 1498"
+   },
+   {
+    "label": "Savonarola",
+    "slug": "girolamo-savonarola",
+    "quote": "in the Piazza della Signoria in 1498"
+   },
+   {
+    "label": "Machiavelli",
+    "slug": "niccolo-machiavelli",
+    "quote": "from 1498 to 1512"
+   },
+   {
+    "label": "Cesare Borgia",
+    "slug": "cesare-borgia",
+    "quote": "by Louis XII of France in 1498"
+   }
+  ],
+  "note": "Cesare Borgia's 1498 is his French dukedom from Louis XII: keep only one of the two."
+ },
+ {
+  "name": "All in 1857",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Indian Rebellion",
+    "slug": "indian-rebellion-of-1857",
+    "quote": "1857"
+   },
+   {
+    "label": "Mandalay",
+    "slug": "mandalay",
+    "quote": "It was founded by King Mindon in 1857"
+   },
+   {
+    "label": "Öresund",
+    "slug": "oresund",
+    "quote": "from 1429 until 1857"
+   },
+   {
+    "label": "Kabylia",
+    "slug": "kabylia",
+    "quote": "France conquered it only in 1857"
+   },
+   {
+    "label": "Louis Faidherbe",
+    "slug": "louis-faidherbe",
+    "quote": "founded the port of Dakar in 1857"
+   },
+   {
+    "label": "Bahadur Shah Zafar",
+    "slug": "bahadur-shah-ii",
+    "quote": "deposed 1857"
+   }
+  ],
+  "note": "The rebellion and Bahadur Shah's deposition are one event: keep one."
+ },
+ {
+  "name": "All in 1510",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Goa",
+    "slug": "goa",
+    "quote": "Captured by Afonso de Albuquerque in 1510"
+   },
+   {
+    "label": "Pskov",
+    "slug": "pskov",
+    "quote": "Vasily III annexed it to Muscovy in 1510"
+   },
+   {
+    "label": "Muhammad Shaybani",
+    "slug": "muhammad-shaybani",
+    "quote": "He was defeated and killed by the Safavid shah Ismail I in 1510"
+   },
+   {
+    "label": "Custom of Paris",
+    "slug": "custom-of-paris",
+    "quote": "first written down in 1510"
+   },
+   {
+    "label": "Bejaia",
+    "slug": "bejaia",
+    "quote": "Spain held it from 1510 to 1555"
+   },
+   {
+    "label": "John Zápolya",
+    "slug": "john-zapolya",
+    "quote": "Voivode of Transylvania from 1510"
+   }
+  ]
+ },
+ {
+  "name": "All in 1885",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Indian National Congress",
+    "slug": "indian-national-congress",
+    "quote": "a political party founded in 1885"
+   },
+   {
+    "label": "Congo Free State",
+    "slug": "congo-free-state",
+    "quote": "from 1885 to 1908"
+   },
+   {
+    "label": "Botswana",
+    "slug": "botswana",
+    "quote": "as the Bechuanaland Protectorate in 1885"
+   },
+   {
+    "label": "Khartoum",
+    "slug": "khartoum",
+    "quote": "In January 1885 Mahdist forces took it"
+   },
+   {
+    "label": "Upper Burma",
+    "slug": "upper-burma",
+    "quote": "Britain annexed it after the Third Anglo-Burmese War in 1885"
+   },
+   {
+    "label": "Chalchuapa",
+    "slug": "battle-of-chalchuapa",
+    "quote": "fought on 2 April 1885"
+   }
+  ]
+ },
+ {
+  "name": "___ Shah",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Nader",
+    "slug": "nader-shah",
+    "quote": "Nader Shah was a military commander"
+   },
+   {
+    "label": "Reza",
+    "slug": "reza-shah",
+    "quote": "Reza Shah was an officer of the Persian Cossack Brigade"
+   },
+   {
+    "label": "Prithvi Narayan",
+    "slug": "prithvi-narayan-shah",
+    "quote": "Prithvi Narayan Shah was king of Gorkha"
+   },
+   {
+    "label": "Hoshang",
+    "slug": "hoshang-shah",
+    "quote": "Hoshang Shah was the second Sultan of Malwa"
+   },
+   {
+    "label": "Ala-ud-Din Bahman",
+    "slug": "ala-ud-din-bahman-shah",
+    "quote": "Ala-ud-Din Bahman Shah, born Hasan"
+   },
+   {
+    "label": "Alauddin Husain",
+    "slug": "alauddin-husain-shah",
+    "quote": "Alauddin Husain Shah was sultan of Bengal"
+   }
+  ],
+  "note": "The name is the answer; Wajid Ali Shah and Zahir Shah are in other groups."
+ },
+ {
+  "name": "End in -abad",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Hyderabad",
+    "slug": "hyderabad",
+    "quote": "Hyderabad is a city on the Musi River in the Deccan"
+   },
+   {
+    "label": "Ahmedabad",
+    "slug": "ahmedabad",
+    "quote": "Ahmedabad is the largest city of Gujarat"
+   },
+   {
+    "label": "Aurangabad",
+    "slug": "aurangabad",
+    "quote": "Aurangabad is a city in Maharashtra, western India"
+   },
+   {
+    "label": "Daulatabad",
+    "slug": "daulatabad",
+    "quote": "Daulatabad is a historic fortress city in the Deccan"
+   },
+   {
+    "label": "Farrukhabad",
+    "slug": "farrukhabad",
+    "quote": "Farrukhabad is a city on the Ganges in Uttar Pradesh"
+   },
+   {
+    "label": "Brahmanabad",
+    "slug": "brahmanabad",
+    "quote": "Brahmanabad was an ancient city in lower Sindh"
+   }
+  ],
+  "note": "Islamabad and Murshidabad are in other groups."
+ },
+ {
+  "name": "Hide a container",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Deccan Plateau",
+    "slug": "deccan-plateau",
+    "quote": "The Deccan Plateau is the elevated tableland"
+   },
+   {
+    "label": "Gujarat",
+    "slug": "gujarat",
+    "quote": "Gujarat is a region in western India"
+   },
+   {
+    "label": "Mughals",
+    "slug": "mughal-empire",
+    "quote": "The Mughal Empire was a dynasty of Timurid descent"
+   },
+   {
+    "label": "Panipat",
+    "slug": "third-battle-of-panipat",
+    "quote": "The Third Battle of Panipat was fought in 1761"
+   },
+   {
+    "label": "Hastinapura",
+    "slug": "hastinapura",
+    "quote": "Hastinapura is an ancient town in Meerut district"
+   },
+   {
+    "label": "Vatsaraja",
+    "slug": "vatsaraja",
+    "quote": "Vatsaraja was a king of the Gurjara-Pratihara dynasty"
+   }
+  ],
+  "note": "can, jar, mug, pan, tin, vat."
+ },
+ {
+  "name": "Began as Russian forts",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Almaty",
+    "slug": "almaty",
+    "quote": "Founded as the Russian fort of Verny in 1854"
+   },
+   {
+    "label": "Ashgabat",
+    "slug": "ashgabat",
+    "quote": "Founded as a Russian fort in 1881"
+   },
+   {
+    "label": "Astana",
+    "slug": "astana",
+    "quote": "Founded as the Russian fort of Akmolinsk in 1830"
+   },
+   {
+    "label": "Semey",
+    "slug": "semey",
+    "quote": "founded as a Russian fort in 1718"
+   },
+   {
+    "label": "Türkmenbaşy",
+    "slug": "turkmenbasy",
+    "quote": "Founded as a Russian fort in 1869"
+   },
+   {
+    "label": "Ufa",
+    "slug": "ufa",
+    "quote": "It was founded as a Russian fortress in 1574"
+   }
+  ],
+  "note": "Two capitals today (Ashgabat, Astana) and a former one (Almaty)."
+ },
+ {
+  "name": "Made of red sandstone",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Qutb Minar",
+    "slug": "qutb-minar",
+    "quote": "a tall minaret of red sandstone in Delhi"
+   },
+   {
+    "label": "Fatehpur Sikri",
+    "slug": "fatehpur-sikri",
+    "quote": "Built of red sandstone"
+   },
+   {
+    "label": "Stone of Scone",
+    "slug": "stone-of-scone",
+    "quote": "a block of red sandstone on which Scottish kings were inaugurated"
+   },
+   {
+    "label": "Quiriguá",
+    "slug": "quirigua",
+    "quote": "its sculpture in hard red sandstone"
+   },
+   {
+    "label": "Johannisburg Palace",
+    "slug": "johannisburg-palace",
+    "quote": "a Renaissance palace of red sandstone"
+   },
+   {
+    "label": "Jama Masjid, Mandu",
+    "slug": "jama-masjid-mandu",
+    "quote": "Built of red sandstone on a high plinth"
+   }
+  ],
+  "note": "The Red Fort (red sandstone too) is the obvious decoy elsewhere."
+ },
+ {
+  "name": "Foreigners in Ranjit Singh's service",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Jean-François Allard",
+    "slug": "jean-francois-allard",
+    "quote": "who entered the service of Ranjit Singh"
+   },
+   {
+    "label": "Johann Honigberger",
+    "slug": "johann-martin-honigberger",
+    "quote": "served at the court of Ranjit Singh in Lahore"
+   },
+   {
+    "label": "Josiah Harlan",
+    "slug": "josiah-harlan",
+    "quote": "He was among the foreign officers employed by Ranjit Singh"
+   },
+   {
+    "label": "Jean-Baptiste Ventura",
+    "slug": "jean-baptiste-ventura",
+    "quote": "who entered the service of Ranjit Singh"
+   },
+   {
+    "label": "Claude-Auguste Court",
+    "slug": "claude-auguste-court",
+    "quote": "a French soldier who served Maharaja Ranjit Singh"
+   }
+  ],
+  "note": "Only five such officers have entries."
+ }
+]

@@ -1,0 +1,2805 @@
+[
+ {
+  "name": "Spaceflight",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sputnik 1",
+    "slug": "sputnik-1",
+    "quote": "Sputnik 1 was the first artificial Earth satellite, launched by the Soviet Union from Baikonur"
+   },
+   {
+    "label": "Gagarin",
+    "slug": "yuri-gagarin",
+    "quote": "Soviet pilot and cosmonaut who became the first human in space on 12 April 1961"
+   },
+   {
+    "label": "John Glenn",
+    "slug": "john-glenn",
+    "quote": "the capsule Friendship 7, he became the first American to orbit the Earth, circling it"
+   },
+   {
+    "label": "Chandrayaan-3",
+    "slug": "chandrayaan-3",
+    "quote": "Chandrayaan-3 was a lunar mission of the Indian Space Research Organisation launched in July 2023"
+   },
+   {
+    "label": "Mangalyaan",
+    "slug": "mars-orbiter-mission",
+    "quote": "Orbiter Mission, also called Mangalyaan, was India's first interplanetary mission, launched by the Indian Space"
+   },
+   {
+    "label": "Hope",
+    "slug": "emirates-mars-mission",
+    "quote": "The Emirates Mars Mission is the United Arab Emirates' space probe to Mars, known as Hope (Al-Amal)"
+   }
+  ]
+ },
+ {
+  "name": "International organisations",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "United Nations",
+    "slug": "united-nations",
+    "quote": "The United Nations is an international organisation founded in 1945 to maintain peace and promote"
+   },
+   {
+    "label": "League of Nations",
+    "slug": "league-of-nations",
+    "quote": "The League of Nations was the international organisation founded after the First World War to"
+   },
+   {
+    "label": "IMF",
+    "slug": "international-monetary-fund",
+    "quote": "The International Monetary Fund (IMF) is an international financial institution founded in 1944 to support"
+   },
+   {
+    "label": "WTO",
+    "slug": "world-trade-organization",
+    "quote": "The World Trade Organization is an international body founded in 1995 to succeed the General"
+   },
+   {
+    "label": "OPEC",
+    "slug": "opec",
+    "quote": "the Petroleum Exporting Countries (OPEC) is an intergovernmental organisation of oil-producing states founded at Baghdad"
+   },
+   {
+    "label": "Commonwealth",
+    "slug": "commonwealth-of-nations",
+    "quote": "The Commonwealth of Nations is a voluntary association of independent states, most of them former"
+   }
+  ]
+ },
+ {
+  "name": "Inventions of the 20th century",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Television",
+    "slug": "television",
+    "quote": "for transmitting moving images and sound; the first demonstration of the live transmission of images"
+   },
+   {
+    "label": "Helicopter",
+    "slug": "helicopter",
+    "quote": "1 lifted its pilot about 0"
+   },
+   {
+    "label": "Radar",
+    "slug": "radar",
+    "quote": "In 1904 the German inventor Christian Hülsmeyer detected a ship in dense fog with his"
+   },
+   {
+    "label": "Jet engine",
+    "slug": "jet-engine",
+    "quote": "Frank Whittle applied for a turbojet patent in England in 1930, and in Germany Hans"
+   },
+   {
+    "label": "Nylon",
+    "slug": "nylon",
+    "quote": "of synthetic polymers joined by amide links, first made as nylon 66 by Wallace Hume"
+   },
+   {
+    "label": "Mobile phone",
+    "slug": "mobile-phone",
+    "quote": "link while its user moves about; the first handheld mobile phone was demonstrated by Martin"
+   }
+  ]
+ },
+ {
+  "name": "Milestones of computing",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "ENIAC",
+    "slug": "eniac",
+    "quote": "Electronic Numerical Integrator and Computer) was the first programmable, electronic, general-purpose digital computer, completed in"
+   },
+   {
+    "label": "Alan Turing",
+    "slug": "alan-turing",
+    "quote": "1936 paper on computable numbers laid the theoretical foundations of computing, and during the Second"
+   },
+   {
+    "label": "Microchip",
+    "slug": "integrated-circuit",
+    "quote": "a thin piece of semiconductor, usually silicon; Jack Kilby demonstrated the first working example at"
+   },
+   {
+    "label": "Personal computer",
+    "slug": "personal-computer",
+    "quote": "A personal computer is a computer designed to be operated directly by one user, rather"
+   },
+   {
+    "label": "World Wide Web",
+    "slug": "world-wide-web",
+    "quote": "and other resources shared over the Internet, invented at CERN in 1989 by the English"
+   },
+   {
+    "label": "Email",
+    "slug": "email",
+    "quote": "is a method of sending and receiving digital messages over a computer network, on a"
+   }
+  ]
+ },
+ {
+  "name": "The nuclear age",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Manhattan Project",
+    "slug": "manhattan-project",
+    "quote": "States, with British and Canadian participation, that developed the first atomic bombs during the Second"
+   },
+   {
+    "label": "Hiroshima and Nagasaki",
+    "slug": "atomic-bombings-of-hiroshima-and-nagasaki",
+    "quote": "on two Japanese cities in August 1945, the only uses of nuclear weapons in war"
+   },
+   {
+    "label": "Chernobyl",
+    "slug": "chernobyl-disaster",
+    "quote": "Ukrainian SSR on 26 April 1986, the worst accident in the history of nuclear power"
+   },
+   {
+    "label": "Fission",
+    "slug": "nuclear-fission",
+    "quote": "very large amount of energy; it was discovered in Berlin in December 1938, when the"
+   },
+   {
+    "label": "Enrico Fermi",
+    "slug": "enrico-fermi",
+    "quote": "Enrico Fermi was an Italian physicist who built the first nuclear reactor"
+   },
+   {
+    "label": "Chicago Pile-1",
+    "slug": "chicago-pile-1",
+    "quote": "Chicago Pile-1 (CP-1) was the first artificial nuclear reactor, built under the west stands of Stagg"
+   }
+  ]
+ },
+ {
+  "name": "Summer Olympic Games",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Berlin 1936",
+    "slug": "1936-summer-olympics",
+    "quote": "The 1936 Summer Olympics were held in Berlin in August 1936"
+   },
+   {
+    "label": "Barcelona 1992",
+    "slug": "1992-summer-olympics",
+    "quote": "The 1992 Summer Olympics were held in Barcelona, Spain, from 25 July to 9 August 1992"
+   },
+   {
+    "label": "Sydney 2000",
+    "slug": "2000-summer-olympics",
+    "quote": "The 2000 Summer Olympics were held in Sydney, Australia, from 15 September to 1 October"
+   },
+   {
+    "label": "Athens 2004",
+    "slug": "2004-summer-olympics",
+    "quote": "The 2004 Summer Olympics were held in Athens from 13 to 29 August 2004, bringing"
+   },
+   {
+    "label": "Beijing 2008",
+    "slug": "2008-summer-olympics",
+    "quote": "The 2008 Summer Olympics were held in Beijing from 8 to 24 August 2008, the"
+   }
+  ],
+  "note": "all weight 0-1; well known all the same"
+ },
+ {
+  "name": "The fall of communism in Europe",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Baltic Way",
+    "slug": "baltic-way",
+    "quote": "two million people joined hands in a human chain some 675 kilometres long across Estonia"
+   },
+   {
+    "label": "Velvet Revolution",
+    "slug": "velvet-revolution",
+    "quote": "The Velvet Revolution was the peaceful overthrow of communist rule in Czechoslovakia in November and December 1989"
+   },
+   {
+    "label": "1989",
+    "slug": "revolutions-of-1989",
+    "quote": "the wave of largely peaceful uprisings that overthrew the communist regimes of Central and Eastern"
+   },
+   {
+    "label": "Singing Revolution",
+    "slug": "singing-revolution",
+    "quote": "1987 to 1991 that led to the restoration of independence of Estonia, Latvia and Lithuania"
+   },
+   {
+    "label": "Fall of the Berlin Wall",
+    "slug": "fall-of-the-berlin-wall",
+    "quote": "The fall of the Berlin Wall on the night of 9 November 1989 was the moment"
+   },
+   {
+    "label": "Lech Wałęsa",
+    "slug": "lech-walesa",
+    "quote": "trade unionist and statesman who led the Solidarity movement and was president of Poland from"
+   }
+  ]
+ },
+ {
+  "name": "Campaigns of the First World War",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Western Front",
+    "slug": "western-front-world-war-i",
+    "quote": "The Western Front was the main theatre of the First World War in western Europe"
+   },
+   {
+    "label": "Salonika",
+    "slug": "macedonian-front",
+    "quote": "also called the Salonika front, was a theatre of the First World War in northern"
+   },
+   {
+    "label": "Caucasus",
+    "slug": "caucasus-campaign",
+    "quote": "The Caucasus campaign was the First World War theatre in which the Ottoman Empire fought"
+   },
+   {
+    "label": "Brusilov Offensive",
+    "slug": "brusilov-offensive",
+    "quote": "Eastern Front from June to September 1916 during the First World War, led by General"
+   },
+   {
+    "label": "Jutland",
+    "slug": "battle-of-jutland",
+    "quote": "the North Sea off Denmark, was the largest naval battle of the First World War"
+   },
+   {
+    "label": "Caporetto",
+    "slug": "battle-of-caporetto",
+    "quote": "an Austro-Hungarian and German offensive on the Isonzo front, launched on 24 October 1917 near"
+   }
+  ],
+  "note": "avoids the published Somme, Verdun, Marne, Gallipoli"
+ },
+ {
+  "name": "The Second World War in Europe",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Battle of Britain",
+    "slug": "battle-of-britain",
+    "quote": "1940, in which the Royal Air Force defended the United Kingdom against the German Luftwaffe"
+   },
+   {
+    "label": "D-Day",
+    "slug": "normandy-landings",
+    "quote": "D-Day, were the Allied amphibious and airborne invasion of German-occupied France that opened Operation Overlord"
+   },
+   {
+    "label": "Battle of the Bulge",
+    "slug": "battle-of-the-bulge",
+    "quote": "The Battle of the Bulge was the last major German offensive on the Western Front"
+   },
+   {
+    "label": "Stalingrad",
+    "slug": "battle-of-stalingrad",
+    "quote": "Operation Uranus in November 1942 encircled the Sixth Army, whose remnants surrendered under Friedrich Paulus"
+   },
+   {
+    "label": "The Blitz",
+    "slug": "the-blitz",
+    "quote": "The Blitz was the German bombing campaign against British cities from September 1940 to May 1941"
+   },
+   {
+    "label": "Sicily 1943",
+    "slug": "allied-invasion-of-sicily",
+    "quote": "The Allied invasion of Sicily was the Second World War campaign in 1943 in which"
+   }
+  ]
+ },
+ {
+  "name": "Named after a political leader",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Stalinism",
+    "slug": "stalinism",
+    "quote": "the system of rule and the policies associated with Joseph Stalin, leader of the Soviet"
+   },
+   {
+    "label": "Maoism",
+    "slug": "maoism",
+    "quote": "Maoism, officially Mao Zedong Thought, is Mao Zedong’s adaptation of Marxism–Leninism to agrarian China, built"
+   },
+   {
+    "label": "Peronism",
+    "slug": "peronism",
+    "quote": "or Justicialism, is the Argentine political movement formed around Juan Perón in the 1940s, resting"
+   },
+   {
+    "label": "Kemalism",
+    "slug": "kemalism",
+    "quote": "Kemalism is the ideology of Mustafa Kemal Atatürk, founder of the Republic of Turkey in"
+   },
+   {
+    "label": "Gaullism",
+    "slug": "gaullism",
+    "quote": "Gaullism is the French political current that follows the ideas of Charles de Gaulle, stressing"
+   },
+   {
+    "label": "McCarthyism",
+    "slug": "mccarthyism",
+    "quote": "McCarthyism was the practice of accusing and investigating left-wing Americans for communist and Soviet influence"
+   }
+  ]
+ },
+ {
+  "name": "Weapons of the world wars",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tank",
+    "slug": "tank",
+    "quote": "A tank is an armoured fighting vehicle combining heavy firepower, strong armour and the mobility"
+   },
+   {
+    "label": "U-boat",
+    "slug": "u-boat",
+    "quote": "U-boat is the English name for German military submarines, from the German Unterseeboot"
+   },
+   {
+    "label": "Spitfire",
+    "slug": "supermarine-spitfire",
+    "quote": "Hawker Hurricane it defended Britain in the Battle of Britain in 1940, and in successive"
+   },
+   {
+    "label": "Poison gas",
+    "slug": "poison-gas",
+    "quote": "It was used on a large scale in the First World War and later banned by international agreement"
+   },
+   {
+    "label": "Bren gun",
+    "slug": "bren-light-machine-gun",
+    "quote": "The Bren light machine gun was the standard light machine gun of the British and"
+   },
+   {
+    "label": "Aircraft carrier",
+    "slug": "aircraft-carrier",
+    "quote": "in the interwar years and used it in the attack on Pearl Harbor in 1941"
+   }
+  ]
+ },
+ {
+  "name": "Great dams",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Aswan High",
+    "slug": "aswan-high-dam",
+    "quote": "The Aswan High Dam is a rock-fill dam across the Nile at Aswan in southern"
+   },
+   {
+    "label": "Itaipu",
+    "slug": "itaipu-dam",
+    "quote": "The Itaipu Dam is a hydroelectric dam on the Paraná River on the border between"
+   },
+   {
+    "label": "Kariba",
+    "slug": "kariba-dam",
+    "quote": "The Kariba Dam is a concrete arch dam on the Zambezi river between Zambia and"
+   },
+   {
+    "label": "Tarbela",
+    "slug": "tarbela-dam",
+    "quote": "Tarbela Dam is an earth-fill dam on the Indus river in Khyber Pakhtunkhwa, Pakistan, completed"
+   },
+   {
+    "label": "Bhakra",
+    "slug": "bhakra-dam",
+    "quote": "The Bhakra Dam is a concrete gravity dam on the Sutlej in the Bilaspur district"
+   },
+   {
+    "label": "Kainji",
+    "slug": "kainji-dam",
+    "quote": "The Kainji Dam is a hydroelectric dam on the Niger River in western Nigeria, completed in 1968"
+   }
+  ]
+ },
+ {
+  "name": "Building the European Union",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Treaty of Rome",
+    "slug": "treaty-of-rome",
+    "quote": "by Belgium, France, Italy, Luxembourg, the Netherlands and West Germany, founded the European Economic Community"
+   },
+   {
+    "label": "Maastricht",
+    "slug": "maastricht-treaty",
+    "quote": "It created the European Union, introduced European citizenship and set out the path to economic"
+   },
+   {
+    "label": "Schengen",
+    "slug": "schengen-agreement",
+    "quote": "France, West Germany, Luxembourg and the Netherlands to abolish checks at their common borders gradually"
+   },
+   {
+    "label": "Brexit",
+    "slug": "brexit",
+    "quote": "Brexit was the withdrawal of the United Kingdom from the European Union, decided by a"
+   },
+   {
+    "label": "1972 enlargement",
+    "slug": "treaty-of-accession-1972",
+    "quote": "which the United Kingdom, Ireland and Denmark joined the European Economic Community on 1 January"
+   },
+   {
+    "label": "EEA",
+    "slug": "european-economic-area",
+    "quote": "The European Economic Area is an agreement that came into force in 1994, extending the European"
+   }
+  ]
+ },
+ {
+  "name": "Parts of the United Nations",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "General Assembly",
+    "slug": "united-nations-general-assembly",
+    "quote": "The United Nations General Assembly is the main deliberative body of the United Nations, in which"
+   },
+   {
+    "label": "Security Council",
+    "slug": "united-nations-security-council",
+    "quote": "The United Nations Security Council is the organ of the United Nations responsible for international peace"
+   },
+   {
+    "label": "International Court of Justice",
+    "slug": "international-court-of-justice",
+    "quote": "The International Court of Justice is the principal judicial organ of the United Nations, set up"
+   },
+   {
+    "label": "UN Charter",
+    "slug": "united-nations-charter",
+    "quote": "The United Nations Charter is the founding treaty of the United Nations, signed at San Francisco"
+   },
+   {
+    "label": "Secretary-General",
+    "slug": "secretary-general-of-the-united-nations",
+    "quote": "The Secretary-General of the United Nations is the chief administrative officer of the United Nations and"
+   },
+   {
+    "label": "UNESCO",
+    "slug": "unesco",
+    "quote": "UNESCO, the United Nations Educational, Scientific and Cultural Organization, is a specialised agency of the"
+   }
+  ]
+ },
+ {
+  "name": "The Soviet system",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gulag",
+    "slug": "gulag",
+    "quote": "The Gulag was the Soviet system of forced labour camps, named from the acronym of"
+   },
+   {
+    "label": "Politburo",
+    "slug": "politburo",
+    "quote": "First created by the Russian Bolsheviks in 1917 and made permanent in 1919, the model"
+   },
+   {
+    "label": "Kolkhoz",
+    "slug": "kolkhoz",
+    "quote": "A kolkhoz was a collective farm in the Soviet Union, the main form of Soviet"
+   },
+   {
+    "label": "Nomenklatura",
+    "slug": "nomenklatura",
+    "quote": "The nomenklatura were the elite of the Soviet Union and other Eastern Bloc countries who"
+   },
+   {
+    "label": "Collectivization",
+    "slug": "collectivization-in-the-soviet-union",
+    "quote": "Collectivization was the Soviet policy, carried out between 1928 and 1940 as part of the"
+   },
+   {
+    "label": "People's commissar",
+    "slug": "peoples-commissar",
+    "quote": "A people's commissar was a minister of the Soviet government between 1917 and 1946, a"
+   }
+  ]
+ },
+ {
+  "name": "Medical advances of the 20th century",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Polio vaccine",
+    "slug": "polio-vaccine",
+    "quote": "weakened virus given by mouth; Hilary Koprowski first tested a live, attenuated oral vaccine successfully"
+   },
+   {
+    "label": "Oral rehydration",
+    "slug": "oral-rehydration-therapy",
+    "quote": "Oral rehydration therapy treats dehydration, especially from diarrhoea, with water containing modest amounts of sugar"
+   },
+   {
+    "label": "Pacemaker",
+    "slug": "artificial-cardiac-pacemaker",
+    "quote": "An artificial cardiac pacemaker is a medical device that sends electrical pulses through electrodes to"
+   },
+   {
+    "label": "Artemisinin",
+    "slug": "artemisinin",
+    "quote": "Artemisinin is a drug against malaria caused by Plasmodium falciparum, discovered in China in 1972"
+   },
+   {
+    "label": "Blood groups",
+    "slug": "abo-blood-group-system",
+    "quote": "on red blood cells; the Austrian physician Karl Landsteiner discovered it at the University of"
+   },
+   {
+    "label": "DNA double helix",
+    "slug": "dna-double-helix",
+    "quote": "paired bases; James Watson and Francis Crick first published the model in the journal Nature"
+   }
+  ],
+  "note": "insulin and penicillin are in the published \"Breakthroughs in medicine\""
+ },
+ {
+  "name": "Famous companies",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Samsung",
+    "slug": "samsung",
+    "quote": "Samsung is a South Korean business group founded in 1938 by Lee Byung-chul as a"
+   },
+   {
+    "label": "TSMC",
+    "slug": "taiwan-semiconductor-manufacturing-company",
+    "quote": "Taiwan Semiconductor Manufacturing Company (TSMC) is a Taiwanese chipmaker founded in 1987 by Morris Chang"
+   },
+   {
+    "label": "Unilever",
+    "slug": "unilever",
+    "quote": "Unilever is a multinational consumer goods company formed in 1929 by the merger of the"
+   },
+   {
+    "label": "Philips",
+    "slug": "philips",
+    "quote": "Philips is a Dutch multinational company founded in Eindhoven in 1891 by Gerard Philips and"
+   },
+   {
+    "label": "Fiat",
+    "slug": "fiat",
+    "quote": "Fiat (Fabbrica Italiana Automobili Torino) is an Italian car maker founded in Turin in 1899"
+   },
+   {
+    "label": "Michelin",
+    "slug": "michelin",
+    "quote": "Michelin is a French tyre manufacturer founded in 1889 by the brothers André and Édouard Michelin in Clermont-Ferrand"
+   }
+  ],
+  "note": "Roche, Steiff, Firestone and Krupp are in the published \"Companies named after their founders\""
+ },
+ {
+  "name": "British monarchs since 1910",
+  "level": 1,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "George V",
+    "slug": "george-v",
+    "quote": "George V was King of the United Kingdom and emperor of India from 1910 to 1936"
+   },
+   {
+    "label": "Edward VIII",
+    "slug": "edward-viii",
+    "quote": "Edward VIII was king of the United Kingdom and the British Dominions and emperor of"
+   },
+   {
+    "label": "George VI",
+    "slug": "george-vi",
+    "quote": "George VI was king of the United Kingdom and the Dominions from 1936 to 1952"
+   },
+   {
+    "label": "Elizabeth II",
+    "slug": "elizabeth-ii",
+    "quote": "Elizabeth II was Queen of the United Kingdom from 1952 to 2022, the longest reign"
+   },
+   {
+    "label": "Charles III",
+    "slug": "charles-iii-of-the-united-kingdom",
+    "quote": "Charles III is King of the United Kingdom and of fourteen other Commonwealth realms, including"
+   }
+  ],
+  "note": "only five such entries"
+ },
+ {
+  "name": "Secret police",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Cheka",
+    "slug": "cheka",
+    "quote": "Cheka, the All-Russian Extraordinary Commission, was the first Soviet secret police, founded in December 1917"
+   },
+   {
+    "label": "Gestapo",
+    "slug": "gestapo",
+    "quote": "The Gestapo was the secret state police of Nazi Germany, created in Prussia by Hermann"
+   },
+   {
+    "label": "SAVAK",
+    "slug": "savak",
+    "quote": "SAVAK was the secret police and intelligence service of Iran under Mohammad Reza Shah Pahlavi"
+   },
+   {
+    "label": "OVRA",
+    "slug": "ovra",
+    "quote": "The OVRA was the secret political police of Fascist Italy, organised from 1927 under the"
+   },
+   {
+    "label": "State Research Bureau",
+    "slug": "state-research-bureau",
+    "quote": "The State Research Bureau was the secret police and intelligence agency of Idi Amin's regime"
+   },
+   {
+    "label": "KGB",
+    "slug": "kgb",
+    "quote": "KGB (Committee for State Security) was the main security agency of the Soviet Union from"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Brazil",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Vargas",
+    "slug": "getulio-vargas",
+    "quote": "He ruled as provisional and then constitutional president, and in 1937 proclaimed the authoritarian Estado"
+   },
+   {
+    "label": "Kubitschek",
+    "slug": "juscelino-kubitschek",
+    "quote": "politician, governor of Minas Gerais, who served as president of Brazil from 1956 to 1961"
+   },
+   {
+    "label": "Lula",
+    "slug": "luiz-inacio-lula-da-silva",
+    "quote": "of the Workers' Party who served as president of Brazil from 2003 to 2010 and"
+   },
+   {
+    "label": "Bolsonaro",
+    "slug": "jair-bolsonaro",
+    "quote": "right-wing politician and former army captain who was president of Brazil from 2019 to 2022"
+   },
+   {
+    "label": "Cardoso",
+    "slug": "fernando-henrique-cardoso",
+    "quote": "Fernando Henrique Cardoso is a Brazilian sociologist and politician who was president of Brazil from 1995 to 2002"
+   },
+   {
+    "label": "Dilma Rousseff",
+    "slug": "dilma-rousseff",
+    "quote": "a Brazilian economist and politician who was president of Brazil from 2011 to 2016, the"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Indonesia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sukarno",
+    "slug": "sukarno",
+    "quote": "Sukarno was the leader of the Indonesian independence movement and the first president of Indonesia"
+   },
+   {
+    "label": "Suharto",
+    "slug": "suharto",
+    "quote": "of 1965, during mass killings of alleged communists, and was president from 1967 to 1998"
+   },
+   {
+    "label": "Habibie",
+    "slug": "b-j-habibie",
+    "quote": "and politician who served as the country's third president from May 1998 to October 1999"
+   },
+   {
+    "label": "Jokowi",
+    "slug": "joko-widodo",
+    "quote": "Joko Widodo, known as Jokowi, is an Indonesian politician who served as president from 2014 to 2024"
+   },
+   {
+    "label": "Yudhoyono",
+    "slug": "susilo-bambang-yudhoyono",
+    "quote": "Susilo Bambang Yudhoyono is a retired Indonesian general and politician who served as president from 2004 to 2014"
+   }
+  ],
+  "note": "only five such entries"
+ },
+ {
+  "name": "The Chinese Civil War",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Long March",
+    "slug": "long-march",
+    "quote": "The Long March was the retreat of the Chinese Communist Red Army from its bases"
+   },
+   {
+    "label": "Northern Expedition",
+    "slug": "northern-expedition",
+    "quote": "Expedition was the military campaign of the Kuomintang's National Revolutionary Army, led by Chiang Kai-shek"
+   },
+   {
+    "label": "Huaihai",
+    "slug": "huaihai-campaign",
+    "quote": "Huaihai campaign was one of the three decisive campaigns of the Chinese Civil War, fought"
+   },
+   {
+    "label": "Pingjin",
+    "slug": "pingjin-campaign",
+    "quote": "campaign was the last of the three great campaigns of the Chinese Civil War, fought"
+   },
+   {
+    "label": "Liaoshen",
+    "slug": "liaoshen-campaign",
+    "quote": "campaign was the first of the three great campaigns of the Chinese Civil War, fought"
+   },
+   {
+    "label": "Guningtou",
+    "slug": "battle-of-guningtou",
+    "quote": "Nationalist forces destroyed a Communist landing force of about 9,000 men, most of whom were killed or captured"
+   }
+  ]
+ },
+ {
+  "name": "The birth of modern Turkey",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Atatürk's reforms",
+    "slug": "ataturks-reforms",
+    "quote": "Mustafa Kemal Atatürk between 1923 and 1938 to build a secular, national and modern state"
+   },
+   {
+    "label": "War of Independence",
+    "slug": "turkish-war-of-independence",
+    "quote": "War of Independence was fought by the Turkish nationalist movement under Mustafa Kemal against the"
+   },
+   {
+    "label": "Sakarya",
+    "slug": "battle-of-sakarya",
+    "quote": "The Turkish nationalist army under Mustafa Kemal halted the Greek advance on Ankara after three"
+   },
+   {
+    "label": "Dumlupınar",
+    "slug": "battle-of-dumlupinar",
+    "quote": "The Battle of Dumlupınar was the decisive battle of the Greco-Turkish War, fought from 26"
+   },
+   {
+    "label": "Lausanne",
+    "slug": "treaty-of-lausanne",
+    "quote": "the conflict between the Allies and the Turkish nationalist government, replacing the Treaty of Sèvres"
+   },
+   {
+    "label": "Grand National Assembly",
+    "slug": "grand-national-assembly-of-turkey",
+    "quote": "The Grand National Assembly of Turkey was opened by nationalist deputies in Ankara on 23"
+   }
+  ]
+ },
+ {
+  "name": "Oil companies",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Anglo-Persian",
+    "slug": "bp",
+    "quote": "was a British company founded in 1909 to exploit oil discovered at Masjed Soleyman in"
+   },
+   {
+    "label": "Aramco",
+    "slug": "saudi-aramco",
+    "quote": "Saudi Aramco is the state oil company of Saudi Arabia and one of the largest"
+   },
+   {
+    "label": "Pemex",
+    "slug": "pemex",
+    "quote": "Pemex (Petróleos Mexicanos) is Mexico's state oil company, created in 1938 after President Lázaro Cárdenas"
+   },
+   {
+    "label": "PDVSA",
+    "slug": "petroleos-de-venezuela",
+    "quote": "(PDVSA) is Venezuela's state oil company, created on 1 January 1976 when the government nationalised the oil industry"
+   },
+   {
+    "label": "Petrobras",
+    "slug": "petrobras",
+    "quote": " is Brazil's state-controlled oil company, created in 1953 by Getúlio Vargas after a nationalist"
+   },
+   {
+    "label": "Petronas",
+    "slug": "petronas",
+    "quote": "Petronas (Petroliam Nasional Berhad) is Malaysia's state-owned oil and gas company, founded in 1974 and"
+   }
+  ]
+ },
+ {
+  "name": "Ruling parties of Marxist–Leninist states",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chinese Communist Party",
+    "slug": "chinese-communist-party",
+    "quote": "The Chinese Communist Party is the founding and ruling party of the People's Republic of China"
+   },
+   {
+    "label": "CPSU",
+    "slug": "communist-party-of-the-soviet-union",
+    "quote": "grew out of Lenin's Bolshevik faction and took power in the October Revolution of 1917"
+   },
+   {
+    "label": "Communist Party of Vietnam",
+    "slug": "communist-party-of-vietnam",
+    "quote": "The Communist Party of Vietnam is the ruling and only legal party of Vietnam"
+   },
+   {
+    "label": "Lao People's Revolutionary Party",
+    "slug": "lao-peoples-revolutionary-party",
+    "quote": "The Lao People's Revolutionary Party is the communist party that has ruled Laos as the only"
+   },
+   {
+    "label": "Party of Labour of Albania",
+    "slug": "party-of-labour-of-albania",
+    "quote": "The Party of Labour of Albania was the ruling communist party of Albania"
+   },
+   {
+    "label": "Hungarian Working People's Party",
+    "slug": "hungarian-working-peoples-party",
+    "quote": "The Hungarian Working People's Party was the ruling communist party of Hungary from 1948 to"
+   }
+  ]
+ },
+ {
+  "name": "Equality milestones in the United States",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Civil Rights Act",
+    "slug": "civil-rights-act-of-1964",
+    "quote": "The Civil Rights Act of 1964 is a landmark law of the United States, signed by"
+   },
+   {
+    "label": "Voting Rights Act",
+    "slug": "voting-rights-act-of-1965",
+    "quote": "The Voting Rights Act of 1965 is a United States law, signed by President Lyndon B"
+   },
+   {
+    "label": "Brown v. Board",
+    "slug": "brown-v-board-of-education",
+    "quote": "Board of Education was a unanimous ruling of the United States Supreme Court on 17"
+   },
+   {
+    "label": "19th Amendment",
+    "slug": "nineteenth-amendment-to-the-united-states-constitution",
+    "quote": "The Nineteenth Amendment to the United States Constitution, ratified in August 1920, prohibits the federal government"
+   },
+   {
+    "label": "Montgomery bus boycott",
+    "slug": "montgomery-bus-boycott",
+    "quote": "The Montgomery bus boycott was a protest campaign against racial segregation on the buses of"
+   },
+   {
+    "label": "NAACP",
+    "slug": "naacp",
+    "quote": "Advancement of Colored People is an American civil rights organisation founded in 1909 by an"
+   }
+  ],
+  "note": "laws, rulings and campaigns rather than the people of the published \"The American civil rights movement\""
+ },
+ {
+  "name": "Wars fought in the 1990s",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Gulf War",
+    "slug": "gulf-war",
+    "quote": "The Gulf War was the conflict that followed Iraq's invasion and annexation of Kuwait in August 1990"
+   },
+   {
+    "label": "Bosnian War",
+    "slug": "bosnian-war",
+    "quote": "The Bosnian War was fought from 1992 to 1995 in Bosnia and Herzegovina after its"
+   },
+   {
+    "label": "Kargil War",
+    "slug": "kargil-war",
+    "quote": "an armed conflict between India and Pakistan from May to July 1999 in the Kargil"
+   },
+   {
+    "label": "Cenepa War",
+    "slug": "cenepa-war",
+    "quote": "conflict between Ecuador and Peru fought in January and February 1995 over outposts in the"
+   },
+   {
+    "label": "Nagorno-Karabakh",
+    "slug": "first-nagorno-karabakh-war",
+    "quote": "1988–1994"
+   },
+   {
+    "label": "Nepalese Civil War",
+    "slug": "nepalese-civil-war",
+    "quote": "Nepalese Civil War was an armed conflict from 1996 to 2006 between the Communist Party"
+   }
+  ]
+ },
+ {
+  "name": "The Cold War in Latin America",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Guatemala 1954",
+    "slug": "1954-guatemalan-coup-detat",
+    "quote": "The 1954 Guatemalan coup d'état overthrew the elected president Jacobo Árbenz, whose land reform had"
+   },
+   {
+    "label": "Contras",
+    "slug": "contras",
+    "quote": "The Contras were right-wing rebel groups that fought the Sandinista government of Nicaragua in the 1980s"
+   },
+   {
+    "label": "Sandinistas",
+    "slug": "sandinista-national-liberation-front",
+    "quote": "Front (FSLN) is a Nicaraguan political party founded in 1961 as a guerrilla movement named"
+   },
+   {
+    "label": "Invasion of Panama",
+    "slug": "united-states-invasion-of-panama",
+    "quote": "The United States invasion of Panama, code-named Operation Just Cause, began on 20 December 1989"
+   },
+   {
+    "label": "Dirty War",
+    "slug": "dirty-war",
+    "quote": "the campaign of state terror waged by Argentina's military dictatorship between 1976 and 1983 against"
+   },
+   {
+    "label": "Bay of Pigs",
+    "slug": "bay-of-pigs-invasion",
+    "quote": "The Bay of Pigs invasion was a failed landing in southern Cuba on 17–20 April 1961"
+   }
+  ]
+ },
+ {
+  "name": "Civil wars since 1945",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Greece",
+    "slug": "greek-civil-war",
+    "quote": "The Greek Civil War was fought from 1946 to 1949 between the government army, supported"
+   },
+   {
+    "label": "Lebanon",
+    "slug": "lebanese-civil-war",
+    "quote": "The Lebanese Civil War was fought from 1975 to 1990 among Lebanon's sectarian militias, Palestinian"
+   },
+   {
+    "label": "El Salvador",
+    "slug": "salvadoran-civil-war",
+    "quote": "The Salvadoran Civil War was fought from 1979 to 1992 between the military-led government of"
+   },
+   {
+    "label": "Burundi",
+    "slug": "burundian-civil-war",
+    "quote": "The Burundian Civil War was fought from 1993 to 2005 between the Tutsi-dominated army and Hutu rebel groups"
+   },
+   {
+    "label": "Yemen",
+    "slug": "yemeni-civil-war-2014-present",
+    "quote": "The Yemeni civil war began in 2014 when the Houthi movement seized Sanaa and then forced"
+   },
+   {
+    "label": "Myanmar",
+    "slug": "myanmar-civil-war-2021-present",
+    "quote": "The Myanmar civil war is the armed conflict that followed the military coup of February 2021"
+   }
+  ],
+  "note": "the published \"___ Civil War\" holds the American, Spanish, Russian and Chinese"
+ },
+ {
+  "name": "Wars of independence in Asia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "First Indochina War",
+    "slug": "first-indochina-war",
+    "quote": "The First Indochina War was fought between France and the Viet Minh, led by Ho"
+   },
+   {
+    "label": "Indonesian Revolution",
+    "slug": "indonesian-national-revolution",
+    "quote": "National Revolution was the armed and diplomatic struggle for independence from Dutch rule, fought from"
+   },
+   {
+    "label": "Bangladesh 1971",
+    "slug": "bangladesh-liberation-war",
+    "quote": "The Bangladesh Liberation War was the conflict of 1971 in which East Pakistan won independence as Bangladesh"
+   },
+   {
+    "label": "Aden Emergency",
+    "slug": "aden-emergency",
+    "quote": "The Aden Emergency was an insurgency against British rule in Aden and the Federation of"
+   },
+   {
+    "label": "Philippine Revolution",
+    "slug": "philippine-revolution",
+    "quote": "The Philippine Revolution was the armed struggle against Spanish rule launched by the Katipunan secret society"
+   }
+  ]
+ },
+ {
+  "name": "Communist leaders of Eastern Europe",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tito",
+    "slug": "josip-broz-tito",
+    "quote": "Josip Broz Tito led the Communist Partisans against the Axis occupation of Yugoslavia, setting up"
+   },
+   {
+    "label": "Enver Hoxha",
+    "slug": "enver-hoxha",
+    "quote": "Enver Hoxha was the communist ruler of Albania from 1944 until his death in 1985"
+   },
+   {
+    "label": "Gottwald",
+    "slug": "klement-gottwald",
+    "quote": "Klement Gottwald was leader of the Communist Party of Czechoslovakia from 1929"
+   },
+   {
+    "label": "Husák",
+    "slug": "gustav-husak",
+    "quote": "Gustáv Husák was a Slovak communist who was imprisoned in the 1950s but rehabilitated in the 1960s"
+   },
+   {
+    "label": "Rákosi",
+    "slug": "matyas-rakosi",
+    "quote": "Mátyás Rákosi was the leader of the Hungarian communists who dominated Hungary after the Second World War"
+   },
+   {
+    "label": "Zhivkov",
+    "slug": "todor-zhivkov",
+    "quote": "Todor Zhivkov was the communist leader of Bulgaria for 35 years, first secretary of the"
+   }
+  ]
+ },
+ {
+  "name": "Guerrilla movements of Latin America",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Shining Path",
+    "slug": "shining-path",
+    "quote": "The Shining Path is a Maoist insurgent organisation in Peru, founded around 1969 by the"
+   },
+   {
+    "label": "Tupamaros",
+    "slug": "tupamaros",
+    "quote": "The Tupamaros, formally the National Liberation Movement, were a Marxist urban guerrilla group in Uruguay active"
+   },
+   {
+    "label": "Zapatistas",
+    "slug": "zapatista-army-of-national-liberation",
+    "quote": "The Zapatista Army of National Liberation (EZLN) is a mainly indigenous revolutionary movement in Chiapas, southern"
+   },
+   {
+    "label": "FMLN",
+    "slug": "farabundo-marti-national-liberation-front",
+    "quote": "The Farabundo Martí National Liberation Front (FMLN) was formed in October 1980 as a coalition of"
+   },
+   {
+    "label": "FARC",
+    "slug": "revolutionary-armed-forces-of-colombia",
+    "quote": "The Revolutionary Armed Forces of Colombia (FARC) was a Marxist guerrilla group founded in 1964 by"
+   },
+   {
+    "label": "Túpac Amaru movement",
+    "slug": "tupac-amaru-revolutionary-movement",
+    "quote": "The Túpac Amaru Revolutionary Movement (MRTA) was a Marxist–Leninist guerrilla group active in Peru from the"
+   }
+  ]
+ },
+ {
+  "name": "Fought Portuguese rule in Africa",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "FRELIMO",
+    "slug": "frelimo",
+    "quote": "From bases in Tanzania it fought a guerrilla war against Portuguese rule from 1964 until"
+   },
+   {
+    "label": "MPLA",
+    "slug": "mpla",
+    "quote": "political party founded in the 1950s, which fought Portuguese rule from 1961 under Agostinho Neto"
+   },
+   {
+    "label": "PAIGC",
+    "slug": "paigc",
+    "quote": "PAIGC) was founded in 1956 by Amílcar Cabral and others to free both Portuguese colonies"
+   },
+   {
+    "label": "FNLA",
+    "slug": "national-liberation-front-of-angola",
+    "quote": "The National Liberation Front of Angola (FNLA) is an Angolan nationalist movement led for decades by"
+   },
+   {
+    "label": "UNITA",
+    "slug": "unita",
+    "quote": "It fought the Portuguese and then, with South African and United States support, the MPLA"
+   },
+   {
+    "label": "Samora Machel",
+    "slug": "samora-machel",
+    "quote": "Samora Machel was a Mozambican revolutionary who commanded FRELIMO's guerrilla army and became its leader"
+   }
+  ]
+ },
+ {
+  "name": "Islamist movements",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Muslim Brotherhood",
+    "slug": "muslim-brotherhood",
+    "quote": "The Muslim Brotherhood is a transnational Sunni Islamist organization founded in Egypt in 1928 by the"
+   },
+   {
+    "label": "Al-Qaeda",
+    "slug": "al-qaeda",
+    "quote": "Al-Qaeda is a Sunni jihadist organisation founded in 1988 by Osama bin Laden and other veterans"
+   },
+   {
+    "label": "Hezbollah",
+    "slug": "hezbollah",
+    "quote": "Hezbollah is a Lebanese Shia Islamist political party and armed group founded in 1982 with Iranian"
+   },
+   {
+    "label": "Houthis",
+    "slug": "houthi-movement",
+    "quote": "The Houthi movement, officially Ansar Allah, is a Zaydi Shia political and armed movement from the"
+   },
+   {
+    "label": "Islamic Movement of Uzbekistan",
+    "slug": "islamic-movement-of-uzbekistan",
+    "quote": "The Islamic Movement of Uzbekistan was a militant Islamist group founded in 1998 by Tahir Yuldashev"
+   },
+   {
+    "label": "Hayat Tahrir al-Sham",
+    "slug": "hayat-tahrir-al-sham",
+    "quote": "Hayat Tahrir al-Sham was a Sunni Islamist armed group in the Syrian civil war, formed in"
+   }
+  ]
+ },
+ {
+  "name": "Peacekeeping forces",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "UNEF",
+    "slug": "united-nations-emergency-force",
+    "quote": "The United Nations Emergency Force was the first armed peacekeeping force of the United Nations"
+   },
+   {
+    "label": "UNMIL",
+    "slug": "united-nations-mission-in-liberia",
+    "quote": "Nations Mission in Liberia (UNMIL) was a peacekeeping operation established by the UN Security Council"
+   },
+   {
+    "label": "AMISOM",
+    "slug": "african-union-mission-to-somalia",
+    "quote": "Union Mission to Somalia (AMISOM) was a peacekeeping force authorised by the African Union and"
+   },
+   {
+    "label": "INTERFET",
+    "slug": "international-force-east-timor",
+    "quote": "International Force East Timor (INTERFET) was a multinational peacekeeping force led by Australia and authorised"
+   },
+   {
+    "label": "ECOMOG",
+    "slug": "ecomog",
+    "quote": "West African States Monitoring Group, was a multinational West African armed force led by Nigeria"
+   },
+   {
+    "label": "Force Intervention Brigade",
+    "slug": "force-intervention-brigade",
+    "quote": "Brigade is a combat unit of the United Nations peacekeeping mission in the Democratic Republic"
+   }
+  ]
+ },
+ {
+  "name": "Leaders of Cambodia",
+  "level": 2,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Sihanouk",
+    "slug": "norodom-sihanouk",
+    "quote": "Norodom Sihanouk was King of Cambodia, placed on the throne by the French in 1941"
+   },
+   {
+    "label": "Lon Nol",
+    "slug": "lon-nol",
+    "quote": "Cambodian general and politician who served as defence minister and prime minister under Norodom Sihanouk"
+   },
+   {
+    "label": "Pol Pot",
+    "slug": "pol-pot",
+    "quote": "Pol Pot was the leader of the Khmer Rouge and of Democratic Kampuchea from 1975 to 1979"
+   },
+   {
+    "label": "Heng Samrin",
+    "slug": "heng-samrin",
+    "quote": "Vietnamese invasion of January 1979 he became head of state of the People's Republic of"
+   },
+   {
+    "label": "Hun Sen",
+    "slug": "hun-sen",
+    "quote": "He became foreign minister and in 1985 prime minister of the People's Republic of Kampuchea"
+   },
+   {
+    "label": "Ranariddh",
+    "slug": "norodom-ranariddh",
+    "quote": "won the UN-supervised elections of 1993 he became first prime minister, sharing power with Hun"
+   }
+  ]
+ },
+ {
+  "name": "Hosted the Winter Olympics",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Innsbruck",
+    "slug": "innsbruck",
+    "quote": "A university town, it hosted the Winter Olympics in 1964 and 1976"
+   },
+   {
+    "label": "Grenoble",
+    "slug": "grenoble",
+    "quote": "It hosted the Winter Olympic Games in 1968"
+   },
+   {
+    "label": "Sochi",
+    "slug": "sochi",
+    "quote": "and grew into a major Soviet and Russian resort, host of the 2014 Winter Olympics"
+   },
+   {
+    "label": "Zhangjiakou",
+    "slug": "zhangjiakou",
+    "quote": "of the Mengjiang government from 1939 to 1945, and it co-hosted the 2022 Winter Olympics"
+   },
+   {
+    "label": "Krasnaya Polyana",
+    "slug": "krasnaya-polyana",
+    "quote": "Today it is a ski resort that hosted the mountain events of the 2014 Winter Olympics"
+   },
+   {
+    "label": "Gangwon",
+    "slug": "gangwon-province",
+    "quote": "to the Dongye people, and the southern part hosted the 2018 Winter Olympics at Pyeongchang"
+   }
+  ]
+ },
+ {
+  "name": "Hashemite kings",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Hussein bin Ali",
+    "slug": "hussein-bin-ali-king-of-hejaz",
+    "quote": "Hussein bin Ali, a Hashemite, was appointed Sharif and Emir of Mecca by the Ottomans in 1908"
+   },
+   {
+    "label": "Faisal I",
+    "slug": "faisal-i-of-iraq",
+    "quote": "Faisal I of Iraq was a son of Sharif Hussein of Mecca and a commander"
+   },
+   {
+    "label": "Faisal II",
+    "slug": "faisal-ii-of-iraq",
+    "quote": "Faisal II was the last King of Iraq, succeeding his father Ghazi as a child"
+   },
+   {
+    "label": "Abdullah I",
+    "slug": "abdullah-i-of-jordan",
+    "quote": "Abdullah I of Jordan, a son of Sharif Hussein of Mecca, was a leader of"
+   },
+   {
+    "label": "King Hussein",
+    "slug": "hussein-of-jordan",
+    "quote": "Hussein of Jordan (Hussein bin Talal) was King of Jordan from 1952, when his father"
+   },
+   {
+    "label": "Abdullah II",
+    "slug": "abdullah-ii-of-jordan",
+    "quote": "as a soldier, he has kept the Hashemite monarchy stable through regional wars and the"
+   }
+  ]
+ },
+ {
+  "name": "Rulers of Afghanistan, 1919–1978",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Amanullah Khan",
+    "slug": "amanullah-khan",
+    "quote": "Amanullah Khan ruled Afghanistan from 1919 to 1929, first as emir and from 1926 as king"
+   },
+   {
+    "label": "Habibullah Kalakani",
+    "slug": "habibullah-kalakani",
+    "quote": "Habibullah Kalakani, nicknamed Bacha-i Saqao ('son of the water carrier'), was a Tajik rebel from"
+   },
+   {
+    "label": "Nadir Shah",
+    "slug": "mohammad-nadir-shah",
+    "quote": "Mohammad Nadir Shah was king of Afghanistan from 1929 to 1933"
+   },
+   {
+    "label": "Zahir Shah",
+    "slug": "mohammad-zahir-shah",
+    "quote": "Mohammad Zahir Shah was the last king of Afghanistan, reigning from 1933, after the assassination"
+   },
+   {
+    "label": "Daoud Khan",
+    "slug": "mohammad-daoud-khan",
+    "quote": "In 1973 he overthrew the monarchy and founded the Republic of Afghanistan, ruling as its president"
+   }
+  ]
+ },
+ {
+  "name": "Ruling parties of Africa",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "CCM",
+    "slug": "chama-cha-mapinduzi",
+    "quote": "the Party of the Revolution, is the ruling party of Tanzania, formed on 5 February"
+   },
+   {
+    "label": "ZANU-PF",
+    "slug": "zanu-pf",
+    "quote": "ZANU-PF, the Zimbabwe African National Union – Patriotic Front, is the ruling party of Zimbabwe"
+   },
+   {
+    "label": "FLN",
+    "slug": "national-liberation-front-algeria",
+    "quote": "in 1962 it governed Algeria as the sole legal party until multi-party politics was introduced"
+   },
+   {
+    "label": "TANU",
+    "slug": "tanganyika-african-national-union",
+    "quote": "the elections of 1958–1960 and became the sole legal party on the mainland in 1965"
+   },
+   {
+    "label": "Malawi Congress Party",
+    "slug": "malawi-congress-party",
+    "quote": "Malawi in 1964 and ruled as the sole legal party from 1966 until multiparty elections"
+   },
+   {
+    "label": "Workers' Party of Ethiopia",
+    "slug": "workers-party-of-ethiopia",
+    "quote": "Workers' Party of Ethiopia was the Marxist–Leninist ruling party founded by the Derg military regime"
+   }
+  ]
+ },
+ {
+  "name": "Indonesia's road to independence",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Youth Pledge",
+    "slug": "youth-pledge",
+    "quote": "the declaration made on 28 October 1928 at the Second Indonesian Youth Congress in Batavia"
+   },
+   {
+    "label": "Linggadjati",
+    "slug": "linggadjati-agreement",
+    "quote": "at Linggadjati near Cirebon in West Java between the Netherlands and the Republic of Indonesia"
+   },
+   {
+    "label": "Madiun",
+    "slug": "madiun-affair",
+    "quote": "the town of Madiun in East Java, during Indonesia's war of independence against the Netherlands"
+   },
+   {
+    "label": "Round Table Conference",
+    "slug": "dutch-indonesian-round-table-conference",
+    "quote": "The Dutch–Indonesian Round Table Conference met in The Hague from August to November 1949, bringing"
+   },
+   {
+    "label": "Surabaya 1945",
+    "slug": "battle-of-surabaya",
+    "quote": "the East Javanese port of Surabaya between Indonesian nationalist fighters and British and British Indian"
+   },
+   {
+    "label": "Pancasila",
+    "slug": "pancasila",
+    "quote": "Pancasila is the official philosophy of the Indonesian state, set out by Sukarno in a"
+   }
+  ]
+ },
+ {
+  "name": "Finland at war, 1939–1945",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Winter War",
+    "slug": "winter-war",
+    "quote": "The Winter War was fought between the Soviet Union and Finland from November 1939 to"
+   },
+   {
+    "label": "Continuation War",
+    "slug": "continuation-war",
+    "quote": "The Continuation War was the conflict between Finland and the Soviet Union from June 1941"
+   },
+   {
+    "label": "Lapland War",
+    "slug": "lapland-war",
+    "quote": "The Lapland War was fought between Finland and Germany in northern Finland from September 1944 to April 1945"
+   },
+   {
+    "label": "Suomussalmi",
+    "slug": "battle-of-suomussalmi",
+    "quote": "Finnish ski troops under Colonel Hjalmar Siilasvuo cut the road-bound Soviet 163rd and 44th Divisions"
+   },
+   {
+    "label": "Tali-Ihantala",
+    "slug": "battle-of-tali-ihantala",
+    "quote": "July 1944 north-east of Viipuri, was the largest battle ever fought in the Nordic countries"
+   },
+   {
+    "label": "Moscow Peace Treaty",
+    "slug": "moscow-peace-treaty",
+    "quote": "Peace Treaty, signed on 12 March 1940, ended the Winter War between Finland and the"
+   }
+  ]
+ },
+ {
+  "name": "Treaties that drew the map of Arabia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Uqair",
+    "slug": "uqair-protocol",
+    "quote": "The Uqair Protocol of 1922 set the borders between the Sultanate of Nejd under Ibn"
+   },
+   {
+    "label": "Darin",
+    "slug": "treaty-of-darin",
+    "quote": "Britain recognised his rule over Najd and al-Hasa and placed his lands under its protection"
+   },
+   {
+    "label": "Jeddah 1927",
+    "slug": "treaty-of-jeddah-1927",
+    "quote": "May 1927 between Britain and Ibn Saud, recognised the full independence of his Kingdom of"
+   },
+   {
+    "label": "Seeb",
+    "slug": "treaty-of-seeb",
+    "quote": "agreement concluded in 1920, through British mediation, between the Sultan of Muscat and the tribal"
+   },
+   {
+    "label": "Anglo-Qatari",
+    "slug": "anglo-qatari-treaty",
+    "quote": "Anglo-Qatari Treaty of 3 November 1916 was signed by Britain and Abdullah bin Jassim Al"
+   },
+   {
+    "label": "Jeddah 2000",
+    "slug": "treaty-of-jeddah-2000",
+    "quote": "of Jeddah, signed on 12 June 2000, settled the land and sea border between Saudi"
+   }
+  ]
+ },
+ {
+  "name": "Treaties of Latin America since 1900",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Chapultepec",
+    "slug": "chapultepec-peace-accords",
+    "quote": "City on 16 January 1992 by the government of El Salvador and the FMLN, after"
+   },
+   {
+    "label": "Rio Protocol",
+    "slug": "rio-protocol",
+    "quote": "Protocol was signed on 29 January 1942 by Ecuador and Peru after Peru's victory in"
+   },
+   {
+    "label": "Torrijos–Carter",
+    "slug": "torrijos-carter-treaties",
+    "quote": "agreements signed on 7 September 1977 by Panama's leader Omar Torrijos and US President Jimmy"
+   },
+   {
+    "label": "Tlatelolco",
+    "slug": "treaty-of-tlatelolco",
+    "quote": "City on 14 February 1967, created a nuclear-weapon-free zone in Latin America and the Caribbean"
+   },
+   {
+    "label": "Lima 1929",
+    "slug": "treaty-of-lima-1929",
+    "quote": "mediation of the United States, settled the Tacna–Arica dispute left by the War of the"
+   },
+   {
+    "label": "Petrópolis",
+    "slug": "treaty-of-petropolis",
+    "quote": "on 17 November 1903, ended the dispute between Bolivia and Brazil over Acre, a rubber-rich"
+   }
+  ]
+ },
+ {
+  "name": "Soviet secret police chiefs and officers",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Dzerzhinsky",
+    "slug": "felix-dzerzhinsky",
+    "quote": "Dzerzhinsky was a Polish-born Bolshevik revolutionary who founded and led the Cheka, the Soviet secret"
+   },
+   {
+    "label": "Yagoda",
+    "slug": "genrikh-yagoda",
+    "quote": "was a Soviet secret police official who headed the NKVD, the Soviet Union's security and"
+   },
+   {
+    "label": "Yezhov",
+    "slug": "nikolai-yezhov",
+    "quote": "official who served under Joseph Stalin as head of the NKVD from 1936 to 1938"
+   },
+   {
+    "label": "Beria",
+    "slug": "lavrentiy-beria",
+    "quote": "the purges there, and in 1938 became head of the NKVD under Stalin, running the"
+   },
+   {
+    "label": "Frenkel",
+    "slug": "naftaly-frenkel",
+    "quote": "Naftaly Frenkel was a Soviet security officer of the secret police, best known for organising"
+   },
+   {
+    "label": "Heydar Aliyev",
+    "slug": "heydar-aliyev",
+    "quote": "Heydar Aliyev was a KGB officer who led the Communist Party of the Azerbaijan SSR"
+   }
+  ]
+ },
+ {
+  "name": "American rule in the Philippines",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Thomasites",
+    "slug": "thomasites",
+    "quote": "The Thomasites were American teachers sent to the Philippines in the early years of United"
+   },
+   {
+    "label": "Moro Rebellion",
+    "slug": "moro-rebellion",
+    "quote": "an armed conflict from 1899 to 1913 between the United States Army and the Muslim"
+   },
+   {
+    "label": "Bud Bagsak",
+    "slug": "battle-of-bud-bagsak",
+    "quote": "the island of Jolo in the southern Philippines between American troops under General John J"
+   },
+   {
+    "label": "Kiram–Bates Treaty",
+    "slug": "kiram-bates-treaty",
+    "quote": "was an agreement signed in August 1899 between the United States, represented by General John"
+   },
+   {
+    "label": "War of 1899–1902",
+    "slug": "philippine-american-war",
+    "quote": "The Philippine–American War was fought between the United States and the First Philippine Republic after"
+   },
+   {
+    "label": "Tydings–McDuffie Act",
+    "slug": "tydings-mcduffie-act",
+    "quote": "was a United States law of 1934 providing for Philippine independence after a ten-year transition"
+   }
+  ]
+ },
+ {
+  "name": "Nuclear testing and protest in the Pacific",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Treaty of Rarotonga",
+    "slug": "south-pacific-nuclear-free-zone-treaty",
+    "quote": "It bans the manufacture, possession, stationing and testing of nuclear explosive devices in the zone"
+   },
+   {
+    "label": "New Zealand 1987 act",
+    "slug": "new-zealand-nuclear-free-zone-disarmament-and-arms-control-act-1987",
+    "quote": "Control Act 1987 established New Zealand, its territorial waters and airspace as a nuclear-free zone"
+   },
+   {
+    "label": "Rainbow Warrior",
+    "slug": "sinking-of-the-rainbow-warrior",
+    "quote": "The Greenpeace ship was preparing to protest against French nuclear tests at Moruroa, and the"
+   },
+   {
+    "label": "Greenpeace",
+    "slug": "greenpeace",
+    "quote": "grew out of a 1971 protest voyage from Vancouver against American nuclear tests in Alaska"
+   },
+   {
+    "label": "Moruroa",
+    "slug": "moruroa",
+    "quote": "France conducted most of its nuclear weapons tests there between 1966 and 1996, in the"
+   },
+   {
+    "label": "Bikini Atoll",
+    "slug": "bikini-atoll",
+    "quote": "moved its inhabitants to other atolls and began nuclear testing there with Operation Crossroads, followed"
+   }
+  ]
+ },
+ {
+  "name": "Afghanistan since 1978",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Saur Revolution",
+    "slug": "saur-revolution",
+    "quote": "in which army units loyal to the People's Democratic Party of Afghanistan overthrew and killed"
+   },
+   {
+    "label": "PDPA",
+    "slug": "peoples-democratic-party-of-afghanistan",
+    "quote": "People's Democratic Party of Afghanistan was a Marxist-Leninist party founded in Kabul in 1965 by"
+   },
+   {
+    "label": "Najibullah",
+    "slug": "mohammad-najibullah",
+    "quote": "Mohammad Najibullah was leader of the Democratic Republic of Afghanistan from 1986 to 1992, having"
+   },
+   {
+    "label": "Hezb-e Islami",
+    "slug": "hezb-e-islami",
+    "quote": "Hezb-e Islami is an Afghan Islamist party founded in the 1970s and led by Gulbuddin Hekmatyar"
+   },
+   {
+    "label": "2001–2021 war",
+    "slug": "war-in-afghanistan-2001-2021",
+    "quote": "after the United States and its allies invaded Afghanistan following the attacks of 11 September"
+   },
+   {
+    "label": "Doha Agreement",
+    "slug": "doha-agreement-2020",
+    "quote": "signed on 29 February 2020 in Doha, Qatar, between the United States and the Taliban"
+   }
+  ]
+ },
+ {
+  "name": "Revolutions named after flowers and colours",
+  "level": 3,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Rose",
+    "slug": "rose-revolution",
+    "quote": "The Rose Revolution was the peaceful change of power in Georgia in November 2003"
+   },
+   {
+    "label": "Orange",
+    "slug": "orange-revolution",
+    "quote": "The Orange Revolution was a series of protests in Ukraine from late November 2004 to"
+   },
+   {
+    "label": "Tulip",
+    "slug": "tulip-revolution",
+    "quote": "The Tulip Revolution was a wave of protests in Kyrgyzstan in March 2005 that overthrew President Askar Akayev"
+   },
+   {
+    "label": "Saffron",
+    "slug": "saffron-revolution",
+    "quote": "of protests in Myanmar in August–October 2007, named after the robes of the Buddhist monks"
+   },
+   {
+    "label": "Aster",
+    "slug": "aster-revolution",
+    "quote": "Soldiers and civilians wearing asters as their emblem forced the appointment of Count Mihály Károlyi"
+   },
+   {
+    "label": "Carnation",
+    "slug": "carnation-revolution",
+    "quote": "The Carnation Revolution was a largely bloodless military coup in Lisbon on 25 April 1974"
+   }
+  ],
+  "note": "Carnation is also in the published \"___ Revolution\" (level 1)"
+ },
+ {
+  "name": "Marches",
+  "level": 3,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Salt",
+    "slug": "salt-march",
+    "quote": "The Salt March was a campaign of civil disobedience led by Mahatma Gandhi in British India in 1930"
+   },
+   {
+    "label": "Green",
+    "slug": "green-march",
+    "quote": "The Green March was a mass demonstration organised by King Hassan II of Morocco in"
+   },
+   {
+    "label": "Jarrow",
+    "slug": "jarrow-march",
+    "quote": "Jarrow March, or Jarrow Crusade, was a protest march in October 1936 by about 200"
+   },
+   {
+    "label": "On Rome",
+    "slug": "march-on-rome",
+    "quote": "the mass mobilisation by which Benito Mussolini's National Fascist Party came to power in Italy"
+   },
+   {
+    "label": "On Washington",
+    "slug": "march-on-washington",
+    "quote": "28 August 1963, was one of the largest political demonstrations in American history: some 250,000"
+   },
+   {
+    "label": "Selma",
+    "slug": "selma-to-montgomery-marches",
+    "quote": "were three protest marches for African American voting rights, held in 1965 along the 54-mile"
+   }
+  ],
+  "note": "the Long March is in \"The Chinese Civil War\" of this file"
+ },
+ {
+  "name": "___ Pact",
+  "level": 3,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Molotov–Ribbentrop",
+    "slug": "molotov-ribbentrop-pact",
+    "quote": "The Molotov–Ribbentrop Pact was the non-aggression treaty signed by Nazi Germany and the Soviet Union"
+   },
+   {
+    "label": "Tripartite",
+    "slug": "tripartite-pact",
+    "quote": "in Berlin on 27 September 1940 by Germany, Italy and Japan, who pledged to assist"
+   },
+   {
+    "label": "Steel",
+    "slug": "pact-of-steel",
+    "quote": "of Steel was a military and political alliance between Fascist Italy and Nazi Germany, signed"
+   },
+   {
+    "label": "Balkan",
+    "slug": "balkan-pact",
+    "quote": "an agreement signed in Athens on 9 February 1934 by Greece, Romania, Turkey and Yugoslavia"
+   },
+   {
+    "label": "Baghdad",
+    "slug": "baghdad-pact",
+    "quote": "The Baghdad Pact was a Cold War defensive alliance formed in 1955 by Iraq, Turkey"
+   },
+   {
+    "label": "Poona",
+    "slug": "poona-pact",
+    "quote": "Ambedkar on the political representation of the depressed classes of British India, now known as the Scheduled Castes"
+   }
+  ]
+ },
+ {
+  "name": "Prime ministers of Malaysia",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Tunku Abdul Rahman",
+    "slug": "tunku-abdul-rahman",
+    "quote": "He negotiated Malaya's independence from Britain, proclaiming it in 1957, and became the first prime"
+   },
+   {
+    "label": "Tun Abdul Razak",
+    "slug": "abdul-razak-hussein",
+    "quote": "known as Tun Abdul Razak, was the second prime minister of Malaysia, from 1970 until"
+   },
+   {
+    "label": "Mahathir",
+    "slug": "mahathir-mohamad",
+    "quote": "Mohamad is a Malaysian politician who was prime minister from 1981 to 2003 and again"
+   },
+   {
+    "label": "Badawi",
+    "slug": "abdullah-ahmad-badawi",
+    "quote": "Abdullah Ahmad Badawi was the fifth prime minister of Malaysia, from 2003 to 2009, succeeding Mahathir Mohamad"
+   },
+   {
+    "label": "Najib Razak",
+    "slug": "najib-razak",
+    "quote": "of Tun Abdul Razak, who was the sixth prime minister of Malaysia from 2009 to"
+   },
+   {
+    "label": "Anwar Ibrahim",
+    "slug": "anwar-ibrahim",
+    "quote": "coalition for more than two decades and became prime minister of Malaysia in November 2022"
+   }
+  ]
+ },
+ {
+  "name": "Presidents of Peru",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Fujimori",
+    "slug": "alberto-fujimori",
+    "quote": "Alberto Fujimori was president of Peru from 1990 to 2000"
+   },
+   {
+    "label": "Alan García",
+    "slug": "alan-garcia",
+    "quote": "a Peruvian politician of APRA who was president of Peru from 1985 to 1990 and"
+   },
+   {
+    "label": "Leguía",
+    "slug": "augusto-b-leguia",
+    "quote": "a Peruvian businessman and politician who was president of Peru from 1908 to 1912 and"
+   },
+   {
+    "label": "Belaúnde",
+    "slug": "fernando-belaunde-terry",
+    "quote": "of the Popular Action party, who was president of Peru from 1963 to 1968 and"
+   },
+   {
+    "label": "Pedro Castillo",
+    "slug": "pedro-castillo",
+    "quote": "rural schoolteacher and trade unionist who was president of Peru from July 2021 to December"
+   },
+   {
+    "label": "Dina Boluarte",
+    "slug": "dina-boluarte",
+    "quote": "Peruvian lawyer and politician who became Peru's first woman president in December 2022, when as"
+   }
+  ]
+ },
+ {
+  "name": "Revolutions in Latin America",
+  "level": 3,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Bolivia 1952",
+    "slug": "bolivian-national-revolution",
+    "quote": "Revolution began in April 1952, when the Revolutionary Nationalist Movement (MNR) of Víctor Paz Estenssoro"
+   },
+   {
+    "label": "São Paulo 1932",
+    "slug": "constitutionalist-revolution",
+    "quote": "The Constitutionalist Revolution was an armed uprising of the state of São Paulo against the"
+   },
+   {
+    "label": "Ecuador 1925",
+    "slug": "julian-revolution",
+    "quote": "carried out on 9 July 1925 by young officers of the Ecuadorian army who overthrew"
+   },
+   {
+    "label": "Ecuador 1895",
+    "slug": "liberal-revolution-of-1895",
+    "quote": "with a rising in Guayaquil on 5 June 1895 that proclaimed Eloy Alfaro supreme chief"
+   },
+   {
+    "label": "Argentina 1955",
+    "slug": "revolucion-libertadora",
+    "quote": "the military coup of September 1955 that overthrew Juan Perón and the military government that"
+   },
+   {
+    "label": "Mexico 1910",
+    "slug": "mexican-revolution",
+    "quote": "The Mexican Revolution was the series of revolts and civil wars that began in November"
+   }
+  ]
+ },
+ {
+  "name": "All in 1914",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Panama Canal",
+    "slug": "panama-canal",
+    "quote": "by the United States between 1904 and 1914 and opened on 15 August 1914, using"
+   },
+   {
+    "label": "Simla Convention",
+    "slug": "simla-convention",
+    "quote": "was a treaty negotiated at Simla in 1913–1914 by representatives of Britain, China and Tibet"
+   },
+   {
+    "label": "UNIA",
+    "slug": "universal-negro-improvement-association",
+    "quote": "fraternal organisation founded by Marcus Garvey and Amy Ashwood Garvey in Kingston, Jamaica, in 1914"
+   },
+   {
+    "label": "Battle of Cer",
+    "slug": "battle-of-cer",
+    "quote": "of Cer was fought on 15–24 August 1914 on and around Mount Cer in western"
+   },
+   {
+    "label": "War Measures Act",
+    "slug": "war-measures-act",
+    "quote": "Measures Act was a Canadian law of 1914 that gave the federal government emergency powers"
+   },
+   {
+    "label": "July Crisis",
+    "slug": "july-crisis",
+    "quote": "The July Crisis was the diplomatic crisis of 1914 following the assassination of Archduke Franz Ferdinand in Sarajevo"
+   }
+  ]
+ },
+ {
+  "name": "All in 1917",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Balfour Declaration",
+    "slug": "balfour-declaration",
+    "quote": "by the British government on 2 November 1917, in a letter from Foreign Secretary Arthur"
+   },
+   {
+    "label": "Vimy Ridge",
+    "slug": "battle-of-vimy-ridge",
+    "quote": "of Vimy Ridge, fought on 9–12 April 1917 in northern France as part of the"
+   },
+   {
+    "label": "Passchendaele",
+    "slug": "battle-of-passchendaele",
+    "quote": "was a British-led offensive on the Western Front in Belgium from July to November 1917"
+   },
+   {
+    "label": "Corfu Declaration",
+    "slug": "corfu-declaration",
+    "quote": "was an agreement signed on 20 July 1917 on the Greek island of Corfu by"
+   },
+   {
+    "label": "Lenin's Imperialism",
+    "slug": "imperialism-the-highest-stage-of-capitalism",
+    "quote": "in 1916 and published in Petrograd in 1917, originally as Imperialism, the Newest Stage of"
+   },
+   {
+    "label": "Jones–Shafroth Act",
+    "slug": "jones-shafroth-act",
+    "quote": "Act was a United States law of 1917 that granted United States citizenship to the"
+   }
+  ],
+  "note": "Russia's own 1917 is the published \"Russia in 1917\""
+ },
+ {
+  "name": "All in 1922",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Washington Naval Treaty",
+    "slug": "washington-naval-treaty",
+    "quote": "was an arms-limitation agreement signed in February 1922 by the United States, the United Kingdom"
+   },
+   {
+    "label": "Creation of the USSR",
+    "slug": "treaty-on-the-creation-of-the-ussr",
+    "quote": "of the USSR, approved on 30 December 1922 by the First All-Union Congress of Soviets"
+   },
+   {
+    "label": "Makerere",
+    "slug": "makerere-university",
+    "quote": "Founded in 1922 as a technical school, it became Makerere College, the leading centre of"
+   },
+   {
+    "label": "End of the Ottoman sultanate",
+    "slug": "abolition-of-the-ottoman-sultanate",
+    "quote": "of the Grand National Assembly in Ankara in 1922 to end the office of sultan"
+   },
+   {
+    "label": "Rand Revolt",
+    "slug": "rand-revolt",
+    "quote": "of white mineworkers on the Witwatersrand in 1922, sparked by mine owners' plans to cut"
+   },
+   {
+    "label": "Garda Síochána",
+    "slug": "garda-siochana",
+    "quote": "national police force of Ireland, founded in 1922 to replace the Royal Irish Constabulary in"
+   }
+  ]
+ },
+ {
+  "name": "All in 1942",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Quit India",
+    "slug": "quit-india-movement",
+    "quote": "the Indian National Congress on 8 August 1942, demanding an immediate end to British rule"
+   },
+   {
+    "label": "El Alamein",
+    "slug": "second-battle-of-el-alamein",
+    "quote": "El Alamein was fought in Egypt in 1942 between British Commonwealth forces under Bernard Montgomery"
+   },
+   {
+    "label": "Beveridge Report",
+    "slug": "beveridge-report",
+    "quote": "a British government report written by the economist William Beveridge and published in December 1942"
+   },
+   {
+    "label": "Kokoda Track",
+    "slug": "kokoda-track-campaign",
+    "quote": "campaign was fought between July and November 1942 in the Owen Stanley Range of Papua"
+   },
+   {
+    "label": "Bataan",
+    "slug": "battle-of-bataan",
+    "quote": "Bataan was fought from January to April 1942 on the Bataan Peninsula of Luzon, where"
+   },
+   {
+    "label": "Madagascar",
+    "slug": "battle-of-madagascar",
+    "quote": "of Madagascar was the Allied campaign of 1942 to take Vichy French Madagascar and deny"
+   }
+  ],
+  "note": "Midway and the fall of Singapore are in the published \"Battles of the Pacific War\""
+ },
+ {
+  "name": "All in 1954",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Dien Bien Phu",
+    "slug": "battle-of-dien-bien-phu",
+    "quote": "of Dien Bien Phu was fought in 1954 in northern Vietnam between the French army"
+   },
+   {
+    "label": "Geneva Accords",
+    "slug": "geneva-accords-1954",
+    "quote": "agreements concluded at the Geneva Conference in July 1954 that ended the First Indochina War"
+   },
+   {
+    "label": "CERN",
+    "slug": "cern",
+    "quote": "is an intergovernmental particle physics laboratory founded in 1954 on the Franco-Swiss border near Geneva"
+   },
+   {
+    "label": "Castle Bravo",
+    "slug": "castle-bravo",
+    "quote": "test of a deliverable dry-fuel hydrogen bomb, exploded at Bikini Atoll on 1 March 1954"
+   },
+   {
+    "label": "People's Action Party",
+    "slug": "peoples-action-party",
+    "quote": "a political party in Singapore, founded in 1954 by Lee Kuan Yew and others, at"
+   },
+   {
+    "label": "Democratic Party (Uganda)",
+    "slug": "democratic-party-uganda",
+    "quote": "is a Ugandan political party founded in 1954, which drew much of its support from"
+   }
+  ]
+ },
+ {
+  "name": "All in 1958",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "European Commission",
+    "slug": "european-commission",
+    "quote": "1958"
+   },
+   {
+    "label": "Hanyu Pinyin",
+    "slug": "hanyu-pinyin",
+    "quote": "by the People's Republic of China in 1958 and developed by a committee that included"
+   },
+   {
+    "label": "Atomium",
+    "slug": "atomium",
+    "quote": "The Atomium is a monument in Brussels built for the 1958 world's fair, Expo 58"
+   },
+   {
+    "label": "French Community",
+    "slug": "french-community",
+    "quote": "association created by de Gaulle's constitution of 1958 to replace the French Union, offering colonies"
+   },
+   {
+    "label": "Punto Fijo Pact",
+    "slug": "punto-fijo-pact",
+    "quote": "was an agreement signed on 31 October 1958 by Venezuela's main democratic parties, Democratic Action"
+   },
+   {
+    "label": "Omar Ali Saifuddien Mosque",
+    "slug": "omar-ali-saifuddien-mosque",
+    "quote": "Begawan, the capital of Brunei, completed in 1958 and named after Sultan Omar Ali Saifuddien"
+   }
+  ]
+ },
+ {
+  "name": "All in 1963",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "OAU",
+    "slug": "organisation-of-african-unity",
+    "quote": "Unity was an intergovernmental body of independent African states founded in Addis Ababa in 1963"
+   },
+   {
+    "label": "Malaysia Agreement",
+    "slug": "malaysia-agreement",
+    "quote": "treaty signed in London on 9 July 1963 by Britain, the Federation of Malaya, North"
+   },
+   {
+    "label": "White Revolution",
+    "slug": "white-revolution",
+    "quote": "launched by Mohammad Reza Shah Pahlavi of Iran and approved by referendum in January 1963"
+   },
+   {
+    "label": "The Feminine Mystique",
+    "slug": "the-feminine-mystique",
+    "quote": "Norton in 1963 and widely credited with sparking second-wave feminism in the United States"
+   },
+   {
+    "label": "Nagaland",
+    "slug": "nagaland",
+    "quote": "peoples, it became a separate state in 1963 after an armed Naga nationalist movement led"
+   },
+   {
+    "label": "Gobind Sagar",
+    "slug": "gobind-sagar",
+    "quote": "and Una districts of Himachal Pradesh, India, formed by the Bhakra Dam, completed in 1963"
+   }
+  ]
+ },
+ {
+  "name": "All in 1989",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Tiananmen",
+    "slug": "1989-tiananmen-square-protests-and-massacre",
+    "quote": "The 1989 Tiananmen Square protests were student-led demonstrations in Beijing and other Chinese cities from"
+   },
+   {
+    "label": "Caracazo",
+    "slug": "caracazo",
+    "quote": "and looting that began on 27 February 1989 in Guarenas and Caracas, Venezuela, after President"
+   },
+   {
+    "label": "APEC",
+    "slug": "asia-pacific-economic-cooperation",
+    "quote": "Pacific Rim economies founded in Canberra in 1989 at the initiative of the Australian prime"
+   },
+   {
+    "label": "PRD (Mexico)",
+    "slug": "party-of-the-democratic-revolution",
+    "quote": "a left-wing Mexican political party founded in 1989 by Cuauhtémoc Cárdenas and other dissidents from"
+   },
+   {
+    "label": "Brussels-Capital Region",
+    "slug": "brussels-capital-region",
+    "quote": "with its own parliament and government in 1989, it comprises the City of Brussels and"
+   },
+   {
+    "label": "Taif Agreement",
+    "slug": "taif-agreement",
+    "quote": "Taif in Saudi Arabia and signed in October 1989 to end the Lebanese Civil War"
+   }
+  ]
+ },
+ {
+  "name": "All in 1991",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mercosur",
+    "slug": "mercosur",
+    "quote": "bloc founded by Argentina, Brazil, Paraguay and Uruguay through the Treaty of Asunción in 1991"
+   },
+   {
+    "label": "Visegrád Group",
+    "slug": "visegrad-group",
+    "quote": "and Slovakia, founded at Visegrád in Hungary in February 1991 by Czechoslovakia, Hungary and Poland"
+   },
+   {
+    "label": "CIS",
+    "slug": "commonwealth-of-independent-states",
+    "quote": "in the Belovezha Accords of 8 December 1991 and joined by most other republics at"
+   },
+   {
+    "label": "Linux",
+    "slug": "linux",
+    "quote": "built on the Linux kernel, first released in 1991 by the Finnish student Linus Torvalds"
+   },
+   {
+    "label": "Paris Agreements (Cambodia)",
+    "slug": "paris-peace-agreements",
+    "quote": "Peace Agreements were signed on 23 October 1991 by Cambodia's Supreme National Council, representing the"
+   },
+   {
+    "label": "Dissolution of the USSR",
+    "slug": "dissolution-of-the-soviet-union",
+    "quote": "The dissolution of the Soviet Union was the breakup of the USSR into fifteen independent states in 1991"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1890",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "De Gaulle",
+    "slug": "charles-de-gaulle",
+    "quote": "1890–1970"
+   },
+   {
+    "label": "Eisenhower",
+    "slug": "dwight-d-eisenhower",
+    "quote": "1890–1969"
+   },
+   {
+    "label": "Ho Chi Minh",
+    "slug": "ho-chi-minh",
+    "quote": "1890–1969"
+   },
+   {
+    "label": "Idris of Libya",
+    "slug": "idris-of-libya",
+    "quote": "1890–1983"
+   },
+   {
+    "label": "Pasternak",
+    "slug": "boris-pasternak",
+    "quote": "1890–1960"
+   },
+   {
+    "label": "Claude McKay",
+    "slug": "claude-mckay",
+    "quote": "1890–1948"
+   }
+  ],
+  "note": "de Gaulle also died in 1970"
+ },
+ {
+  "name": "Born in 1909",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Nkrumah",
+    "slug": "kwame-nkrumah",
+    "quote": "1909–1972"
+   },
+   {
+    "label": "U Thant",
+    "slug": "u-thant",
+    "quote": "1909–1974"
+   },
+   {
+    "label": "Mohammed V",
+    "slug": "mohammed-v-of-morocco",
+    "quote": "1909–1961"
+   },
+   {
+    "label": "Awolowo",
+    "slug": "obafemi-awolowo",
+    "quote": "1909–1987"
+   },
+   {
+    "label": "Isaiah Berlin",
+    "slug": "isaiah-berlin",
+    "quote": "theorist, philosopher and historian of ideas, born into a Russian-Jewish family in Riga in 1909"
+   },
+   {
+    "label": "Sutan Sjahrir",
+    "slug": "sutan-sjahrir",
+    "quote": "1909–1966"
+   }
+  ]
+ },
+ {
+  "name": "Born in 1922",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Sékou Touré",
+    "slug": "ahmed-sekou-toure",
+    "quote": "1922–1984"
+   },
+   {
+    "label": "Nyerere",
+    "slug": "julius-nyerere",
+    "quote": "1922–1999"
+   },
+   {
+    "label": "Michael Ventris",
+    "slug": "michael-ventris",
+    "quote": "1922–1956"
+   },
+   {
+    "label": "Carlos Andrés Pérez",
+    "slug": "carlos-andres-perez",
+    "quote": "1922–2010"
+   },
+   {
+    "label": "Kiwanuka",
+    "slug": "benedicto-kiwanuka",
+    "quote": "1922–1972"
+   },
+   {
+    "label": "Luis Somoza",
+    "slug": "luis-somoza-debayle",
+    "quote": "1922–1967"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1945",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Mussolini",
+    "slug": "benito-mussolini",
+    "quote": "1883–1945"
+   },
+   {
+    "label": "Roosevelt",
+    "slug": "franklin-d-roosevelt",
+    "quote": "United States from 1933 until his death in 1945, the only president elected four times"
+   },
+   {
+    "label": "Subhas Chandra Bose",
+    "slug": "subhas-chandra-bose",
+    "quote": "He died after a plane crash in Taiwan in 1945"
+   },
+   {
+    "label": "Lugard",
+    "slug": "frederick-lugard",
+    "quote": "1858–1945"
+   },
+   {
+    "label": "John Curtin",
+    "slug": "john-curtin",
+    "quote": "John Curtin was an Australian Labor politician and prime minister from 1941 until his death in 1945"
+   },
+   {
+    "label": "Lloyd George",
+    "slug": "david-lloyd-george",
+    "quote": "1863–1945"
+   }
+  ]
+ },
+ {
+  "name": "Died in 1970",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Salazar",
+    "slug": "antonio-de-oliveira-salazar",
+    "quote": "1889–1970"
+   },
+   {
+    "label": "Nasser",
+    "slug": "gamal-abdel-nasser",
+    "quote": "1918–1970"
+   },
+   {
+    "label": "Lázaro Cárdenas",
+    "slug": "lazaro-cardenas",
+    "quote": "1895–1970"
+   },
+   {
+    "label": "Kerensky",
+    "slug": "alexander-kerensky",
+    "quote": "1881–1970"
+   },
+   {
+    "label": "Bertrand Russell",
+    "slug": "bertrand-russell",
+    "quote": "1872–1970"
+   },
+   {
+    "label": "Prempeh II",
+    "slug": "prempeh-ii",
+    "quote": "1892–1970"
+   }
+  ],
+  "note": "de Gaulle (also died 1970) is in \"Born in 1890\""
+ },
+ {
+  "name": "Died in 1980",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "The last Shah",
+    "slug": "mohammad-reza-pahlavi",
+    "quote": "1919–1980"
+   },
+   {
+    "label": "Hatta",
+    "slug": "mohammad-hatta",
+    "quote": "1902–1980"
+   },
+   {
+    "label": "Sartre",
+    "slug": "jean-paul-sartre",
+    "quote": "1905–1980"
+   },
+   {
+    "label": "Seretse Khama",
+    "slug": "seretse-khama",
+    "quote": "the Bangwato and the first President of Botswana, from 1966 until his death in 1980"
+   },
+   {
+    "label": "Óscar Romero",
+    "slug": "oscar-romero",
+    "quote": "Óscar Romero was Archbishop of San Salvador from 1977 to 1980"
+   },
+   {
+    "label": "Caetano",
+    "slug": "marcelo-caetano",
+    "quote": "1906–1980"
+   }
+  ]
+ },
+ {
+  "name": "Died in 2006",
+  "level": 4,
+  "kind": "year",
+  "tiles": [
+   {
+    "label": "Pinochet",
+    "slug": "augusto-pinochet",
+    "quote": "1915–2006"
+   },
+   {
+    "label": "Stroessner",
+    "slug": "alfredo-stroessner",
+    "quote": "1912–2006"
+   },
+   {
+    "label": "Saddam Hussein",
+    "slug": "saddam-hussein",
+    "quote": "He was overthrown by the US-led invasion of 2003 and executed in 2006"
+   },
+   {
+    "label": "Milton Friedman",
+    "slug": "milton-friedman",
+    "quote": "1912–2006"
+   },
+   {
+    "label": "Milošević",
+    "slug": "slobodan-milosevic",
+    "quote": "1941–2006"
+   },
+   {
+    "label": "Betty Friedan",
+    "slug": "betty-friedan",
+    "quote": "1921–2006"
+   }
+  ]
+ },
+ {
+  "name": "___ Accords",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Évian",
+    "slug": "evian-accords",
+    "quote": "signed in 1962 between France and the Algerian National Liberation Front, ending the Algerian War"
+   },
+   {
+    "label": "Oslo",
+    "slug": "oslo-accords",
+    "quote": "were the agreements of 1993 and 1995 between Israel and the Palestine Liberation Organization, negotiated"
+   },
+   {
+    "label": "Paris",
+    "slug": "paris-peace-accords",
+    "quote": "27 January 1973 by the United States, North Vietnam, South Vietnam and the Viet Cong's"
+   },
+   {
+    "label": "Abraham",
+    "slug": "abraham-accords",
+    "quote": "brokered by the United States, by which Israel established diplomatic relations with Arab states, beginning"
+   },
+   {
+    "label": "New York",
+    "slug": "new-york-accords",
+    "quote": "signed at the United Nations on 22 December 1988 by Angola, Cuba and South Africa"
+   },
+   {
+    "label": "Belovezha",
+    "slug": "belovezha-accords",
+    "quote": "the Belovezha Forest of Belarus by the leaders of Russia, Ukraine and Belarus: Boris Yeltsin"
+   }
+  ]
+ },
+ {
+  "name": "Operation ___",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Barbarossa",
+    "slug": "operation-barbarossa",
+    "quote": "Operation Barbarossa was the German invasion of the Soviet Union, launched on 22 June 1941"
+   },
+   {
+    "label": "Bagration",
+    "slug": "operation-bagration",
+    "quote": "Operation Bagration was the Soviet summer offensive of 1944 in Belarus, launched on 22–23 June"
+   },
+   {
+    "label": "Gomorrah",
+    "slug": "operation-gomorrah",
+    "quote": "was a series of British and American air raids on Hamburg in late July and"
+   },
+   {
+    "label": "Polo",
+    "slug": "operation-polo",
+    "quote": "military operation of 13-18 September 1948 that ended the independence of Hyderabad State, whose Nizam"
+   },
+   {
+    "label": "Blue Star",
+    "slug": "operation-blue-star",
+    "quote": "Army's assault in June 1984 on the Golden Temple complex at Amritsar, the holiest shrine"
+   },
+   {
+    "label": "Car Wash",
+    "slug": "operation-car-wash",
+    "quote": "Car Wash, or Lava Jato, was a Brazilian criminal investigation launched in 2014 that uncovered"
+   }
+  ]
+ },
+ {
+  "name": "___ Incident",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Mukden",
+    "slug": "mukden-incident",
+    "quote": "The Mukden Incident was a staged explosion on a Japanese-owned railway near Mukden in Manchuria in 1931"
+   },
+   {
+    "label": "Marco Polo Bridge",
+    "slug": "marco-polo-bridge-incident",
+    "quote": "The Marco Polo Bridge Incident was a clash between Chinese and Japanese troops near the"
+   },
+   {
+    "label": "Xi'an",
+    "slug": "xian-incident",
+    "quote": "The Xi'an Incident was the detention of Chiang Kai-shek in Xi'an in December 1936 by"
+   },
+   {
+    "label": "Walwal",
+    "slug": "walwal-incident",
+    "quote": "the wells of Walwal in the Ogaden, between Ethiopian troops and the Italian colonial garrison"
+   },
+   {
+    "label": "Wushe",
+    "slug": "wushe-incident",
+    "quote": "The Wushe Incident (Musha Incident) was an uprising of Seediq people against Japanese colonial rule"
+   },
+   {
+    "label": "Chauri Chaura",
+    "slug": "chauri-chaura-incident",
+    "quote": "The Chauri Chaura incident took place on 4 February 1922 at Chauri Chaura in the"
+   }
+  ]
+ },
+ {
+  "name": "___ Line",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "Oder–Neisse",
+    "slug": "oder-neisse-line",
+    "quote": "The Oder–Neisse line is the border between Germany and Poland, following the Oder and Lusatian Neisse rivers"
+   },
+   {
+    "label": "Durand",
+    "slug": "durand-line",
+    "quote": "The Durand Line is the border of about 2,640 kilometres between Afghanistan and Pakistan, fixed"
+   },
+   {
+    "label": "Radcliffe",
+    "slug": "radcliffe-line",
+    "quote": "The Radcliffe Line is the boundary drawn in 1947 between India and Pakistan in Punjab"
+   },
+   {
+    "label": "McMahon",
+    "slug": "mcmahon-line",
+    "quote": "The McMahon Line is the boundary between Tibet and British India drawn by the British"
+   },
+   {
+    "label": "Morice",
+    "slug": "morice-line",
+    "quote": "The Morice Line was a fortified barrier built by France from 1956 along Algeria's border"
+   },
+   {
+    "label": "Hamburg America",
+    "slug": "hamburg-america-line",
+    "quote": "The Hamburg America Line (HAPAG) was a shipping company founded in Hamburg in 1847 to"
+   }
+  ]
+ },
+ {
+  "name": "Follow \"Black\"",
+  "level": 4,
+  "kind": "wordplay",
+  "tiles": [
+   {
+    "label": "September",
+    "slug": "black-september",
+    "quote": "Black September was the armed conflict of September 1970 in which the Jordanian army of"
+   },
+   {
+    "label": "Consciousness Movement",
+    "slug": "black-consciousness-movement",
+    "quote": "Black Consciousness Movement was a South African anti-apartheid movement of the late 1960s and 1970s"
+   },
+   {
+    "label": "Power movement",
+    "slug": "black-power-movement",
+    "quote": "movement emerged in the 1960s from the civil rights movement in the United States, reacting"
+   },
+   {
+    "label": "Economic Empowerment",
+    "slug": "black-economic-empowerment",
+    "quote": "Black Economic Empowerment is a South African government policy, given legal form by the Broad-Based"
+   },
+   {
+    "label": "Saturday",
+    "slug": "black-saturday-1929",
+    "quote": "peaceful Mau procession by New Zealand police in Apia, Western Samoa, on 28 December 1929"
+   },
+   {
+    "label": "Sea",
+    "slug": "black-sea",
+    "quote": "The Black Sea is an inland sea between southeastern Europe and Anatolia, connected to the Mediterranean"
+   }
+  ],
+  "note": "the published \"Follow \"Red\"\" and \"Follow \"White\"\" have the same shape"
+ },
+ {
+  "name": "Hurricanes",
+  "level": 4,
+  "kind": "plain",
+  "tiles": [
+   {
+    "label": "Mitch",
+    "slug": "hurricane-mitch",
+    "quote": "Hurricane Mitch was one of the deadliest Atlantic hurricanes on record, striking Central America in"
+   },
+   {
+    "label": "Hattie",
+    "slug": "hurricane-hattie",
+    "quote": "Hurricane Hattie was a powerful hurricane that struck British Honduras on 31 October 1961"
+   },
+   {
+    "label": "Fifi",
+    "slug": "hurricane-fifi",
+    "quote": "Hurricane Fifi was a tropical cyclone that skirted the north coast of Honduras in September"
+   },
+   {
+    "label": "Dorian",
+    "slug": "hurricane-dorian",
+    "quote": "Hurricane Dorian was an Atlantic hurricane that struck the northern Bahamas as a Category 5"
+   },
+   {
+    "label": "Ivan",
+    "slug": "hurricane-ivan",
+    "quote": "Hurricane Ivan was a powerful Atlantic hurricane that struck the Caribbean and the United States in September 2004"
+   },
+   {
+    "label": "David",
+    "slug": "hurricane-david",
+    "quote": "Hurricane David was a Category 5 Atlantic hurricane that struck Dominica on 29 August 1979"
+   }
+  ],
+  "note": "the labels read as first names"
+ }
+]
