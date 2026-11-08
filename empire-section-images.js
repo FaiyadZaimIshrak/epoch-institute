@@ -1839,7 +1839,7 @@ var SECTION_IMAGES = {
   },
   "Margraviate of Moravia": {
     foundation:{slug:"frederick-barbarossa",name:"Frederick Barbarossa",img:"/images/encyclopedia/frederick-barbarossa.jpg",artist:"Montecappio",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Friedrich_I._Barbarossa.jpg"},
-    socioeconomy:{slug:"brno",name:"Brno",img:"/images/encyclopedia/brno.jpg",artist:"JRodSilva Brn...",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Brno_Montage_IV.png"},
+    socioeconomy:{slug:"brno",name:"Brno",img:"/images/encyclopedia/brno.jpg",artist:"Doronenko",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Brno_Montage_IV.png"},
     military:{slug:"battle-on-the-marchfeld",name:"Battle on the Marchfeld",img:"/images/encyclopedia/battle-on-the-marchfeld.jpg",artist:"Mór Than",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:IV_L%C3%A1szl%C3%B3_%C3%A9s_Rudolf.jpg"},
     governance:{slug:"john-henry-margrave-of-moravia",name:"John Henry, Margrave of Moravia",img:"/images/encyclopedia/john-henry-margrave-of-moravia.jpg",artist:"Packare",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Busta_Jan_Jindrich_face.jpg"},
     impact:{slug:"kralice-bible",name:"Kralice Bible",img:"/images/encyclopedia/kralice-bible.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kralice.jpg"},
@@ -3081,7 +3081,7 @@ var SECTION_IMAGES = {
   "Republic of South Africa": {
     foundation:{slug:"hendrik-verwoerd",name:"Hendrik Verwoerd",img:"/images/encyclopedia/hendrik-verwoerd.jpg",artist:"Snikkers / Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Zuid_Afrikaanse_premier_dr._H._Verwoerd,_Bestanddeelnr_911-1297_(cropped).jpg"},
     socioeconomy:{slug:"sasol",name:"Sasol",img:"/images/encyclopedia/sasol.jpg",artist:"Tom Corser",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Sasol_Corporate_Office_Johannesburg.jpg"},
-    military:{slug:"south-african-border-war",name:"South African Border War",img:"/images/encyclopedia/south-african-border-war.jpg",artist:"Collage: Katangais. Individual constituent images used in the collage: Smikect, Chris Lofting, Allen Herweg...",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:SABorder_War_Montage2.jpg"},
+    military:{slug:"south-african-border-war",name:"South African Border War",img:"/images/encyclopedia/south-african-border-war.jpg",artist:"Collage: Katangais. Individual constituent images used in the collage: Smikect, Chris Lofting, Allen Herweg, Sam van den Berg and …",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:SABorder_War_Montage2.jpg"},
     governance:{slug:"john-vorster",name:"John Vorster",img:"/images/encyclopedia/john-vorster.jpg",artist:"Unknown author",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:John-Vorster_(cropped).jpg"},
     impact:{slug:"ronald-reagan",name:"Ronald Reagan",img:"/images/encyclopedia/ronald-reagan.jpg",artist:"Michael Evans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg"},
     decline:{slug:"f-w-de-klerk",name:"F. W. de Klerk",img:"/images/encyclopedia/f-w-de-klerk.jpg",artist:"Carol M. Highsmith",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:F.W._de_Klerk_wait_to_speak_in_Philadelphia,_Pennsylvania_LCCN2011634246_(cropped).tif"}

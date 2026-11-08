@@ -57,7 +57,7 @@ local: -
 share: est 0.5-1.5
 sharenote: Estimate: no count survives; the range is the one estimated for the priests of pharaonic Egypt, since the Ptolemies kept the temples and their priesthoods in their old privileged place.
 firm: no
-terms: rosetta-stone, edfu, serapis, memphis-egypt, decree-of-canopus, temple-of-edfu
+terms: rosetta-stone, edfu, serapis, memphis-egypt, decree-of-canopus, temple-of-edfu, demotic-egyptian-script
 people: manetho
 picture: rosetta-stone
 text: Priests and other religious officials remained overwhelmingly Egyptian and kept much of their old privilege and prestige, because the Ptolemies relied on Egyptian religion to legitimise their rule. The first three kings built and restored temples on a large scale: Ptolemy III began the Temple of Horus at Edfu in 237 BCE. The kings called the priests of all Egypt to synods, at Canopus in 238 BCE and at Memphis in 217 BCE; the decree of 217 BCE, in hieroglyphs, Demotic and Greek, presented the king as Horus and set up his statue in every temple. The High Priests of Ptah at Memphis had great influence, even with the kings, yet the crown taxed temple property heavily.
@@ -75,7 +75,7 @@ share: est 3-7
 sharenote: Estimate: tens of thousands of Greek soldiers and mercenaries settled with their families, beginning with Ptolemy I's roughly 6,500 Macedonians and the 8,000 prisoners settled after Gaza in 312 BCE, besides the Greeks of Alexandria, Naucratis and Ptolemais; in the Faiyum cleruchs and their descendants made up as much as 29 per cent of the adults in the mid-3rd century BCE.
 firm: yes
 terms: karanis, faiyum, naucratis, alexandria, gymnasium, koine-greek, philadelphia, cleruchy
-people:
+people: zenon-of-kaunos
 picture: karanis
 text: Macedonians and other Greeks were the kingdom's privileged minority. Some lived in its three Greek cities, Alexandria, Naucratis and Ptolemais; most were soldiers settled on land grants (kleroi) across the country, the cleruchs, who farmed in peacetime and could be called to war at any time. A grant's size followed the soldier's rank: in the 3rd century BCE a cavalryman received 100 arouras and an infantryman 30. Many were settled in the Faiyum, which the Ptolemies drained and colonised with Greeks and Egyptians, founding villages such as Philadelphia and Karanis. Greeks lived under Greek law and were tried in Greek courts; their young men trained in the gymnasium, and their dialects merged into the common Koine Greek.
 rise: Greek immigrants, mercenaries and even prisoners of war entered by joining the army, and the cleruchs' descendants, the epigonoi, kept their status. In time many people counted as Greeks were of Egyptian descent.
@@ -169,4 +169,4 @@ NOTE: Hölbl's place of publication is not given in the article (only "Routledge
 NOTE: The army section says Ptolemy V's reforms were "in the early third century BC", which cannot be right (he reigned 204–180 BCE); the tier says only "under the reforms of Ptolemy V".
 NOTE: The enslaved tier's "rise" rests on "Documentary evidence of escape from slavery is virtually nonexistent before the Ptolemaic Period" (Slavery in ancient Egypt).
 NOTE: The priests' share borrows the New Kingdom ladder's estimate (0.5–1.5 per cent); the articles give no count of Ptolemaic priests.
-MISSING: Ankhwennefer, politeuma, Zeno of Caunus and the Zenon papyri, Heracleopolis, komarches, Demotic, aroura
+MISSING: politeuma, komarches, aroura

@@ -1833,8 +1833,18 @@ Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their
   ranks' terms and people lines (the rank whose own words name them; people only as members of the rank, a ruler
   only on the ruler's rank), and the names that now have an entry taken out of MISSING (553 of 777). What is left there has
-  no entry yet, or only a namesake (mehu, jige, otrok, Halayudha, Li Zhi, the maroon palenque, the Yuan minister Sangha,
-  Nandi, Allahverdi Khan): 224 names, mostly rank words of their own language (bandaka, horon, kpojito, sajal …).
+  no entry yet, or only a namesake (mehu, jige, otrok, Halayudha, the maroon palenque, the Yuan minister Sangha, Nandi):
+  167 names, mostly rank words of their own language (bandaka, horon, sajal, nkwansrafo …) that have no English article.
+  Wave b1 (8 Nov 2026): scripts/entries/resolve-titles.js searched Wikipedia for all 224 (Wikipedia throttled it to an
+  hour and a half); 61 titles chosen, of which 25 already had entries under another spelling (Bukhtishu, Hydarnes, the
+  Satire of the Trades, Chungin, Russkaya Pravda …) and 34 became entries (the kpojito, the paroikoi, Sesshō and Kampaku,
+  ryōmin and senmin, the propiska, the Soviet special settlements, coartación, Gracias al Sacar, sati, the Yakoyaner,
+  Li Zhi the philosopher, Allahverdi Khan the Safavid general …; five stubs left out); "Allahverdi Khan" had linked the
+  Nawab of Bengal (alivardi-khan): the name was dropped from his row, and the Kingdom of Lar's state text and
+  data/enc-states.json moved to the new entry. "Kallar", "Li Zhi", "Three Sisters", "bard" and "clan mother" get no
+  pattern (namesakes: the 9th-century minister, the Tang emperor Gaozong, Irish rivers, Shakespeare, other peoples'
+  clan mothers). 48 placed on ranks, 57 names out of MISSING. Ancient Greek and Ottoman Turkish exclude the Demotic
+  script (their "Demotic" is Greek).
 - The 185 entries added on 31 Oct 2026 (the inventions tree and the rank terms): the profiles were scanned for them on
   4 Nov 2026 (scripts/kinds/link-scan.js --entries over every kind, the 104 that had patterns and no profile mention):
   no profile names any of them, so nothing changed. The state texts were relinked on 4 Nov 2026 (C2:
