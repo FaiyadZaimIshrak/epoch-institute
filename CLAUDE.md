@@ -210,7 +210,11 @@ contributors, subscribeNewsletter in shared-nav.js) or XMLHttpRequest (/communit
 and on failure show the handler's reason and the mailbox to write to. Tests: scratchpad mail/test-send.js (the
 handler under PHP 7.4 and 8.3, with EPOCH_MAIL_TEST: .eml files instead of mail(); portable PHP in
 %LOCALAPPDATA%\epoch-tools\php74 and php83) and mail/test-forms.js (every form in the browser, /send.php routed to
-the local PHP). docs/MAIL.md is the owner's guide. Until 29 Oct 2026 the forms went to Formspree (formspree.io/f/
+the local PHP). docs/MAIL.md is the owner's guide. The newsletter itself (D2, 8 Nov 2026) is drafted, never sent, by
+scripts/newsletter/make-issue.js [--week=<Monday>] [--since=] [--max=6]: the newest release notes of whats-new.tsv (the
+rest as "And N more" to /new), each day's anniversary (data/days hero), the first day's Song of the Day and the week's
+numbers of the daily games, as issue-<date>.html (inline styles) and .txt in scripts/newsletter/drafts/ (git-ignored);
+the owner sends it from info@ with the subscribers in Bcc (docs/NEWSLETTER.md). Until 29 Oct 2026 the forms went to Formspree (formspree.io/f/
 mpqkezdj; its old newsletter sign-ups and the Research Series "Notify me" sign-ups are still there: the owner copies
 them, then deletes the form). Do not bring a third-party form service back.
 No Google service but Analytics: until 29 Oct 2026 two Google Apps Scripts (not in this repo, run from the owner's
