@@ -69,13 +69,14 @@ Once a month (and once now, for the baseline), export these files into one folde
 Then ask Claude to "read the Search Console export in <folder>", or run:
 
 ```
-node scripts/tools/gsc-report.js <folder> --out=docs/SEO-BASELINE.md
+node scripts/tools/gsc-report.js <folder> --out=<folder>/report.md
 ```
 
 It shows impressions, clicks, click rate and position for each kind of page (encyclopedia, profiles, day pages, songs
 …). It also lists the searches that show the site often but are rarely clicked, whose page titles are reworked first,
-and which kinds of page Google declines to index.
+and which kinds of page Google declines to index. Keep the report in your own export folder, not in the repository: it
+lists the searches people made, and the repository is public.
 
-Since November 2026, encyclopedia entries with little text are marked "noindex" on purpose. They stay on the site for
-readers, but are kept out of Google, so Google rates the site by its stronger pages. Search Console lists them under
-"Excluded by 'noindex' tag"; that is expected.
+On 8 November 2026, about 18,000 short encyclopedia entries were marked "noindex" for about two hours, then indexable
+again: the first export showed they bring more than half the encyclopedia's clicks. If Search Console briefly lists
+some under "Excluded by 'noindex' tag", they return as Google reads them again.

@@ -1067,8 +1067,11 @@ function LinkedNear($e) {   # the entries that mention this one, then those its 
 # "Across the Institute" (Nov 2026): the sentences on other pages that name the entry, quoted with their page
 # (scripts/tools/entry-mentions.js reads the built profiles, essays, ladders, speeches, songs, days and states: the last
 # build's, which is what readers see). An entry whose own text and quotes stay under $THINW words is "noindex, follow"
-# and out of the sitemap: it stays on the site and in its links, but Google is not offered thousands of short pages.
-$THINW = 100
+# and out of the sitemap. OFF since 8 Nov 2026 ($THINW = 0, $THINY = 0): Search Console's first export showed the short
+# entries are what brings readers (316 of the pages marked noindex that morning had 665 clicks and 204,217 impressions
+# in three months, more than half the encyclopedia's clicks), so every entry and year page is indexable again. The
+# switch stays for a later decision made on Search Console's figures, never on word counts alone.
+$THINW = 0; $THINY = 0
 $emExe = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $emExe) { $emExe = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
 foreach ($emL in (& $emExe "$PSScriptRoot\tools\entry-mentions.js")) { Say $emL }
 if ($LASTEXITCODE) { throw 'scripts/tools/entry-mentions.js failed' }
@@ -3357,8 +3360,8 @@ for ($yi = 0; $yi -lt $YEARLIST.Count; $yi++) {
   $desc = [EpochBuild.W]::Summary("$label in world history: " + $(if ($top.Count) { ($top -join '; ') + '. ' } else { '' }) + 'The events, births and deaths of the year, the states founded and ended, and a map of the world.', 155)
   $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"temporalCoverage":' + (Js (IsoY $yv)) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
   $yw = WordsIn ([regex]::Replace($sb.ToString(), '(?s)<nav.*?</nav>|<script.*?</script>|<details class="ref-cite">.*?</details>', ' '))   # a year with little on it: noindex (as the thin entries)
-  if ($yw -lt 150) { $nYThin++ }
-  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'years'; noindex = ($yw -lt 150); body = $sb.ToString() })
+  if ($yw -lt $THINY) { $nYThin++ }
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'years'; noindex = ($yw -lt $THINY); body = $sb.ToString() })
 }
 # index: the years by century, and a box that goes to the nearest year with a page
 $byCent = [ordered]@{}; foreach ($z in $YEARLIST) { $c = Century ([int]$z); if (-not $byCent.Contains($c)) { $byCent[$c] = New-Object Collections.Generic.List[int] }; $byCent[$c].Add([int]$z) }
@@ -3397,7 +3400,7 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\data\songs-by-country.json", $sbcText)
 $SBCV = [EpochBuild.W]::Sha1($sbcText).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\atlas", $U8); $t2 = [regex]::Replace($t, 'data/songs-by-country\.json\?v=[0-9a-f]*', "data/songs-by-country.json?v=$SBCV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\atlas", $t2)) { $NWRITE++ }
 Say "songs on the atlas: $sbcN songs in $($sbc.Count) countries"
-Say "year pages: $($YEARLIST.Count), events on them: $nYrEv, under 150 words (noindex): $nYThin"
+Say "year pages: $($YEARLIST.Count), events on them: $nYrEv, under $THINY words (noindex): $nYThin"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # People: /people/<century>, /people/, and people-data.js for the "who lived when" chart on /people/

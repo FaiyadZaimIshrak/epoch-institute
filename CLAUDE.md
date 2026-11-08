@@ -442,10 +442,13 @@ indexed addresses thin, snippets that did not say what a page offers):
   quotes, for each entry, the sentence on each page that links it (one per page, at most six, profiles first; a long
   sentence cut to 48 words around the name), into scripts/entry-mentions.tsv (git-ignored), which the builder runs before
   the entry pages: 66,914 quotes for 31,785 entries. A full build therefore quotes the previous build's pages.
-- **Thin pages out of the index:** an entry whose description and quotes come to under $THINW = 100 words (18,109) and a
-  year page under 150 words (273) are written `noindex, follow` (Page @{ noindex }) and left out of the sitemaps ($NOIDX;
-  a -SkipEntries build reads the mark back from the kept pages). They stay on the site, in its links, search and games.
-  check-site fails on a noindex page in a sitemap. The user's choice (enrich, then noindex the rest).
+- **Noindex switch, OFF:** an entry under $THINW words and a year page under $THINY would be written `noindex, follow`
+  (Page @{ noindex }) and left out of the sitemaps ($NOIDX; a -SkipEntries build reads the mark back from kept pages;
+  check-site fails on a noindex page in a sitemap). Set to 100 and 150 on 8 Nov 2026 (18,109 entries, 273 years: the
+  plan's choice before any data), then set to 0 two hours later: the first Search Console export (3 months to 6 Nov:
+  about 2.4 million impressions and 3,641 clicks, from about 30 impressions a day to 200,000-300,000 a day since 22 Oct)
+  showed 316 of those pages had 665 clicks, more than half the encyclopedia's. Short entries on niche subjects are what
+  the site is found by. Decide any noindex from Search Console's figures, never from word counts.
 - **Snippets that say what the page offers:** an entry's title takes the "is a / was a" phrase of its first sentence
   (EntryLabel: 2-6 words, "Bamako: Capital and largest city of Mali") where it fits 70 characters; day pages lead their
   description with the three events whose subjects are best known (the entries the title links, else the text's; places
@@ -459,7 +462,7 @@ indexed addresses thin, snippets that did not say what a page offers):
 - **sameAs:** scripts/profile-sameas.js (PROFILE_SAMEAS, from each profile's own entry when entry-wikidata.tsv says
   "same": 253 profiles) into the profiles' JSON-LD "about". The image sitemap also carries the country, century, day,
   path and speech posters.
-- **Measuring:** scripts/tools/gsc-report.js <Search Console export folder> [--out=docs/SEO-BASELINE.md] (impressions,
+- **Measuring:** scripts/tools/gsc-report.js <Search Console export folder> [--out=<that folder>/report.md: never in the public repository] (impressions,
   clicks, CTR and position per kind of page; queries shown often and rarely clicked; indexing reasons by kind);
   docs/SEARCH-CONSOLE.md section 6 tells the owner how to export; docs/OUTREACH.md the steps outside the site
   (Cloudflare, Bing, teaching-resource collections, the states register on Zenodo and Kaggle, the embeddable card).

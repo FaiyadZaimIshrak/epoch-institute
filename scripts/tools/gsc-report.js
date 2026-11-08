@@ -1,7 +1,7 @@
 // Search Console, read by kind of page (Nov 2026, the impressions plan): point it at a folder holding the CSV files of
 // Search Console's exports (Performance > Export > CSV gives Queries.csv, Pages.csv, Dates.csv …; Indexing > Pages and each
 // reason's own page give Table.csv / Chart.csv / "Critical issues.csv"; files may be renamed and kept in subfolders).
-//   node scripts/tools/gsc-report.js <export folder> [--out=docs/SEO-BASELINE.md]
+//   node scripts/tools/gsc-report.js <export folder> [--out=<export folder>/report.md]   (not in the repository: it is public)
 // Prints and writes: impressions, clicks, CTR and average position per kind of page (the first folder of the address:
 // encyclopedia, empire, today-in-history, songs …; the root pages by name); the queries with the most impressions whose
 // CTR is under 2% (their pages' titles and descriptions come first in the rewrites); the pages with most impressions;
