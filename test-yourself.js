@@ -60,6 +60,32 @@
       else if (b.classList.contains('ty-again')) { qs = base.map(shuffle); i = 0; right = 0; done = false; ask(); }
     });
     ask();
+    // Print as a worksheet (8 Nov 2026): every question with its options lettered, a line for the name, and the answer key
+    // with the reasons on a page of its own. The sheet is built on the press and printed alone (html.ty-printing hides
+    // the rest of the page); the options keep the order the data gives them.
+    el.insertAdjacentHTML('afterend', '<p class="ty-print-row"><button type="button" class="ty-print">Print as a worksheet</button></p>');
+    el.parentNode.querySelector('.ty-print').addEventListener('click', function () { printSheet(base); });
   }
-  window.TestYourself = { mount: mount };
+  var L = 'ABCDEFGH';
+  function printSheet(qs) {
+    var old = document.querySelector('body > .ty-sheet'); if (old) old.remove();
+    var h1 = document.querySelector('h1'), title = h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : document.title;
+    var url = location.origin + location.pathname;
+    var sh = document.createElement('div'); sh.className = 'ty-sheet'; sh.setAttribute('aria-hidden', 'true');
+    sh.innerHTML = '<p class="ty-sheet-kicker">The Epoch Institute &middot; Test yourself</p><h1 class="ty-sheet-title">' + esc(title) + '</h1>' +
+      '<p class="ty-sheet-who"><span>Name</span><span>Date</span></p>' +
+      '<p class="ty-sheet-how">Circle the letter of the right answer. The answers are on the last page.</p>' +
+      '<ol class="ty-sheet-qs">' + qs.map(function (q) {
+        return '<li><p class="ty-sheet-p">' + esc(q.p) + (q.q ? ' <span>' + esc(q.q) + '</span>' : '') + '</p><ol class="ty-sheet-opts">' +
+          q.o.map(function (o, k) { return '<li><b>' + L[k] + '</b> ' + esc(o) + '</li>'; }).join('') + '</ol></li>';
+      }).join('') + '</ol>' +
+      '<section class="ty-sheet-key"><h2>Answers</h2><ol>' + qs.map(function (q) { return '<li><b>' + L[q.a] + '</b> ' + esc(q.w) + '</li>'; }).join('') + '</ol>' +
+      '<p class="ty-sheet-src">From ' + esc(url) + ', where every answer is explained on the page.</p></section>';
+    document.body.appendChild(sh);
+    var root = document.documentElement; root.classList.add('ty-printing');
+    var done = function () { root.classList.remove('ty-printing'); window.removeEventListener('afterprint', done); };
+    window.addEventListener('afterprint', done);
+    window.print();
+  }
+  window.TestYourself = { mount: mount, sheet: printSheet };
 })();

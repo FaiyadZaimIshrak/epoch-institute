@@ -5595,6 +5595,32 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .ty-best { font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin: 0; }
 .ty-actions { font-family: var(--font-ui); font-size: 14px; display: flex; gap: 16px; justify-content: center; align-items: baseline; flex-wrap: wrap; margin: 6px 0 0; }
 @media (max-width: 560px) { .ty-opts { grid-template-columns: minmax(0, 1fr); } .ty-card { padding: 14px 14px 16px; } }
+/* Print as a worksheet (test-yourself.js printSheet): the questions alone on paper, the answer key on its own page */
+.ty-print-row { margin: 10px 0 0; text-align: right; }
+.ty-print { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); background: transparent; border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; min-height: 36px; cursor: pointer; }
+.ty-print:hover, .ty-print:focus-visible { border-color: var(--gold); }
+[data-kids="1"] .ty-print-row { display: none; }
+.ty-sheet { display: none; }
+@media print {
+  html.ty-printing body > * { display: none !important; }
+  html.ty-printing body > .ty-sheet { display: block !important; color: #111; font-family: var(--font-text); font-size: 12pt; line-height: 1.45; }
+  .ty-sheet-kicker { font-family: var(--font-ui); font-size: 9pt; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin: 0 0 4px; }
+  .ty-sheet-title { font-family: var(--font-display); font-size: 20pt; margin: 0 0 12px; }
+  .ty-sheet-who { display: flex; gap: 32px; margin: 0 0 10px; font-family: var(--font-ui); font-size: 10pt; }
+  .ty-sheet-who span { flex: 1; border-bottom: 1px solid #999; padding-bottom: 14px; }
+  .ty-sheet-how { font-size: 10.5pt; color: #333; margin: 0 0 14px; }
+  .ty-sheet-qs { margin: 0; padding-left: 22px; }
+  .ty-sheet-qs > li { break-inside: avoid; margin: 0 0 14px; }
+  .ty-sheet-p { margin: 0 0 6px; font-weight: 600; }
+  .ty-sheet-p span { font-weight: 400; }
+  .ty-sheet-opts { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  .ty-sheet-opts b { display: inline-block; width: 18px; height: 18px; line-height: 18px; text-align: center; border: 1px solid #777; border-radius: 50%; font-family: var(--font-ui); font-size: 9pt; margin-right: 6px; }
+  .ty-sheet-key { break-before: page; }
+  .ty-sheet-key h2 { font-family: var(--font-display); font-size: 15pt; margin: 0 0 10px; }
+  .ty-sheet-key ol { padding-left: 22px; margin: 0; }
+  .ty-sheet-key li { margin: 0 0 8px; }
+  .ty-sheet-src { margin: 16px 0 0; font-size: 9.5pt; color: #555; }
+}
 
 /* Four categorical colour slots (--cat-0..3: blue, gold, magenta, green), validated all-pairs on both themes and
    Kids mode's surfaces (the dataviz check; the light gold and magenta sit under 3:1, so whatever uses them also names

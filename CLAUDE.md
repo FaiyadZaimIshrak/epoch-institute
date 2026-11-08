@@ -1436,6 +1436,12 @@ localStorage epoch-tests {path: {b best, t questions, n tries, d last day}}; My 
   nor another option: ClueOwnFault), who was born / which began / which came first, who lived these dates. 32 of 38.
 Orders come from a seeded shuffle (TyShuffle, which may keep the given order: WsShuffle never does, and two options
 would always swap). Hidden in print; outside the Kids-mode fold.
+Print as a worksheet (8 Nov 2026, D4, instead of 445 thin /teachers/profile-* pages): a button under the questions
+(.ty-print, hidden in Kids mode) builds div.ty-sheet at the end of body (the page's h1, Name and Date lines, the
+questions with options lettered A-D in the data's order, already shuffled at build: answers spread A 866, B 873, C 505,
+D 521; the key with each reason on a page of its own, the page's address) and prints it alone: html.ty-printing hides
+every other child of body in print (afterprint takes the class off). TestYourself.sheet(questions) for tests (scratchpad
+d1/sheet.js prints a profile and a century to PDF). The Teachers' Corner guide names it ("Test yourself, printed").
 
 ## Flashcards (/flashcards)
 Hand page + flashcards.js. build-pages.ps1 ("Flashcards") writes the decks as data/cards/<deck>.json ({id, t, ask, pf
