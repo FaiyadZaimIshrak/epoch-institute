@@ -452,7 +452,7 @@ indexed addresses thin, snippets that did not say what a page offers):
   and states left out; weighed by Wikipedia editions, the 7th column of entry-wikidata.tsv that entry-wikidata.js now
   writes from Wikidata's sitelinks: George Washington 275, Ulpian 54; profile mentions had favoured Rome and Europe;
   an event whose own entry its text does not link, as D-Day or Hastings, still ranks low: a follow-up could match each
-  event to its Wikipedia article through the cached On this day feed, %LOCALAPPDATA%epoch-toolsotd-cache) and their title
+  event to its Wikipedia article through the cached On this day feed, %LOCALAPPDATA%\epoch-tools\otd-cache) and their title
   says "Events, Births and Deaths"; songs ("La Marseillaise: the story, what it means, the French lyrics with an English
   translation and a performance.") and speeches ("…: the key passage, its setting and what followed, with the full
   text.") name only what the page has; profiles add what they hold where it fits 160 characters.
