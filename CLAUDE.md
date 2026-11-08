@@ -23,7 +23,7 @@ Profiles · Encyclopedia · Maps & Time ▾ · Themes ▾ · Play ▾ · Today i
 - Maps & Time: Maps (Atlas, Faith Maps, Connections, States Register) | Time (World Timeline, Centuries, Year by Year, Country
   Histories, Rise and Fall Race, Power Curves). "States Register" and "Power Curves" (/state/ and /explorer; the page titles
   kept) since 4 Nov 2026.
-- Themes: Societies and ideas (People, Forms of Government, Social Ladders, Inventions Tree, Great Speeches, Songs in History) | Read and discover (Reading
+- Themes: Societies and ideas (People, Ruling Houses (/encyclopedia/dynasties, 8 Nov 2026), Forms of Government, Social Ladders, Inventions Tree, Great Speeches, Songs in History) | Read and discover (Reading
   Paths, Research Series, Glossary, Find Your Way In).
 - Play: History Quiz, History Games, Flashcards, Write in Ancient Scripts, Kids Corner, My Passport, and "Surprise me" (also a dice
   button in the header since 4 Nov 2026, #nav-surprise-btn [data-surprise]: hidden at 480 px and below, where the phone
@@ -42,7 +42,7 @@ panel at the right. The phone menu: the Display row, Profiles, Encyclopedia, Tod
 Time / Themes & Play / Institute) and the newsletter; the footer of every page except /contact starts with "Spotted a
 mistake on this page? Suggest a correction" (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, songs, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, songs, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, dynasties, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -290,7 +290,7 @@ Europe). The owner's PC also has Avast's HTTPS scanning in every connection, whi
 counts on that line: hence css/ (above). The domain's DNS is at
 Cloudflare (name servers clara/cesar.ns.cloudflare.com), and since 8 Nov 2026 the site and www are PROXIED (Full (strict),
 `mail` DNS only, Bot Fight Mode off for the workflows' checks; answered from Stockholm here, pictures cf-cache-status HIT,
-pages still DYNAMIC from Singapore). Next, docs/CLOUDFLARE.md "Pages at the edge": a purge-only API token and the zone ID as
+pages still DYNAMIC from Singapore). Cloudflare also served a robots.txt of its own (Security → Bots, "Manage robots.txt"), which put a block before the site's that disallowed Baiduspider and PetalBot (search engines) with the AI training crawlers; "Block AI bots" answers GPTBot with 403. Since 8 Nov 2026 the repository's robots.txt says it all itself (training crawlers out, search engines and AI search in, ai-input=yes, ai-train=no), and the owner is to switch the managed file off. Next, docs/CLOUDFLARE.md "Pages at the edge": a purge-only API token and the zone ID as
 the secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ZONE_ID (the deploy's step "Purge Cloudflare's copies" purges everything
 after each deploy, and is skipped without them), then a Cache Rule keeping pages 4 hours at the edge (not send.php,
 /feeds/, sw.js, offline.html). docs/DEPLOY.md has the setup, dry
@@ -500,6 +500,17 @@ indexed addresses thin, snippets that did not say what a page offers):
 - **sameAs:** scripts/profile-sameas.js (PROFILE_SAMEAS, from each profile's own entry when entry-wikidata.tsv says
   "same": 253 profiles) into the profiles' JSON-LD "about". The image sitemap also carries the country, century, day,
   path and speech posters.
+- **Titles from Wikidata's descriptions** (8 Nov 2026: of the 300 entry pages with most impressions only 79 had a label
+  in the title): scripts/tools/entry-wddesc.js reads the English description (CC0) of every "same" item of
+  entry-wikidata.tsv and of the states' items in geo-qids.tsv (not geo-rejected.tsv's) into scripts/entry-wddesc.tsv
+  (e:<slug> / s:<id>). It refuses:
+  - a description that is only a kind (KIND: "human", "historical country", "protected area" …);
+  - one that holds the subject's own name, or is over 60 characters;
+  - one that names years the dates do not reach;
+  - one with a lower-case word the encyclopedia's own texts never use (Wikidata's slips, "fhe Utkala", and US spellings).
+  It drops bracketed years. 20,300 kept. build-pages.ps1 WdLabel: an entry whose sentence gives no EntryLabel takes it
+  ("Elchingen: Municipality of Germany"); a state takes it only where " — States" still fits 70 characters, so no state
+  title equals an entry's. Compare these pages' CTR in Search Console from about 6 Dec 2026.
 - **Measuring:** scripts/tools/gsc-report.js <Search Console export folder> [--out=<that folder>/report.md: never in the public repository] (impressions,
   clicks, CTR and position per kind of page; queries shown often and rarely clicked; indexing reasons by kind);
   docs/SEARCH-CONSOLE.md section 6 tells the owner how to export; docs/OUTREACH.md the steps outside the site
@@ -530,6 +541,20 @@ PowerShell 5.1 traps met in this script: variable names ignore case ($POS = $pos
 tables distinct names); @($list) fails on New-Object generic lists (use foreach); ForEach-Object unrolls arrays it
 outputs (write `, $point`); the comma binds tighter than arithmetic (`@((a + b) / 2, c)` needs parentheses); "$rr:" in a
 double-quoted string is read as a drive-qualified variable and stops the parse (write "${rr}:").
+
+Ruling houses and "On the map" (8 Nov 2026; dynasties were the largest group of searches: 283,000 impressions, 12 clicks):
+- **The data:** scripts/tools/entry-wd-claims.js reads two Wikidata claims of the "same" items and writes two files.
+  - scripts/entry-houses.tsv: the person entries whose family (P53) is another entry's item; a house needs 3 or more.
+    159 houses, 1,308 people. Some are state entries whose item is also the dynasty: Ayyubid, Timurid, Zhou.
+  - scripts/entry-coords.tsv: the coordinates (P625) of the place, event and polity entries, 7,597 of them. An item
+    with points more than half a degree apart is left out (371).
+- **On a house's entry:** "Rulers and members", LifeChart (the people pages' chart, moved above the entry loop) with
+  the members sorted by Span, and a link to the hub. Each member's meta line reads "Of the <house>".
+- **On a place, event or polity entry:** "On the map" (EntryLocator: the point on world.svg, its degrees, "What was
+  here in <year>?" to /atlas?at=lat,lng&year=).
+- **The hub, /encyclopedia/dynasties:** houses by the region most of their people belong to (PersonRegion), oldest
+  first, each with its own picture (else its best-known member's). It is in the pages sitemap, the Themes menu (Societies and ideas),
+  the footer's Collections, SEARCH_PAGES and llms.txt; nav key dynasties.
 
 ## Atlas and maps
 - `data/land.json` — present-day country outlines (Natural Earth 1:50m, public domain) projected with Equal Earth to a
@@ -1947,6 +1972,7 @@ Institute and its register are still named where they are defined and credited (
 - Next to read (shared-nav.js, every reading page): three unread pages the page links, by See-also lists, the reader's
   kinds (epoch-seen) and frequency; after idle, at the foot. window.epochNextRead.
 - Find a line (/songs/): data/song-lines.json, every printed line of the 187 songs with words, fetched on first use.
+- /songs/ on a slow phone (8 Nov 2026): its 406 cards (.sg-index .sg-card) have content-visibility: auto with contain-intrinsic-size auto 150px, so only those near the screen are laid out and painted. Measured at 4x CPU: first paint 1.0 s to 0.45 s, main-thread work 4.3 s to 1.8 s. CLS while scrolling is 0 on phones; on desktop the type chips still re-wrap when the fonts arrive (0.038; 0.090 before).
 - Encyclopedia filters: With a picture, Era (ancient to 499, medieval, early modern 1500–1799, modern, undated); ?pic=1&era=.
 - Passport levels: a point a page read, ten a stamp; eight levels Visitor to Sage of the Ages (window.epochPassportLevel).
 - Listen on reading paths: TYPES entry for main.paths-page; each stop read as "Stop n. Name. Why".

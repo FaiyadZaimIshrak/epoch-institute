@@ -1,4 +1,28 @@
+# The Epoch Institute. Search engines and AI search tools that link back to the page they quote are welcome; crawlers
+# that gather pages only to train AI models are not (the texts are CC BY-SA 4.0 and the data CC BY 4.0: see /terms).
+
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: Google-CloudVertexBot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: omgili
+User-agent: MistralAI-Training
+User-agent: KimiBot
+Disallow: /
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
+Disallow: /send.php
 
 Sitemap: https://the-epoch-institute.org/sitemap.xml

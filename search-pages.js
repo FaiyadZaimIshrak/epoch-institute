@@ -30,6 +30,7 @@ var SEARCH_PAGES = [
 ["Who Said It?","/games#said","page","who said it|quotes|famous quotes|quotations|sayings"],
 ["Kids Corner","/kids","page","kids|children|for kids|kids mode"],
 ["Glossary","/encyclopedia/glossary","page","glossary|terms|definitions"],
+["Ruling Houses and Dynasties","/encyclopedia/dynasties","page","dynasties|ruling houses|royal houses|royal families|dynasty|house of"],
 ["Find Your Way In","/start","page","start|where to begin|beginners|what kind of reader"],
 ["My Week of Games","/weekly","page","my week|weekly|week of games|daily games results"],
 ["My Passport","/passport","page","passport|my history|stamps|my reading|my timeline|reading history"],

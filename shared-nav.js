@@ -518,7 +518,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=81eaca4ad1';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=b0d5a5bacd';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=1af3f88e5d';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -716,7 +716,7 @@ function initNav(activePage) {
         ['years', '/years/', 'Year by Year', 'What happened in any year'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
-      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
+      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
         ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]],
       ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history'], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
@@ -808,6 +808,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/state/">States Register</a>
         <a class="footer-link" href="/countries/">Country Histories</a>
         <a class="footer-link" href="/people/">People</a>
+        <a class="footer-link" href="/encyclopedia/dynasties">Ruling Houses</a>
         <a class="footer-link" href="/today-in-history/">Today in History</a>
         <a class="footer-link" href="/encyclopedia/glossary">Glossary</a>
       </div>

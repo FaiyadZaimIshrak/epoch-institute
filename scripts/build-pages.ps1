@@ -1095,6 +1095,56 @@ function EntryLabel([string]$d) {
   $w = @($l -split ' ').Count; if ($w -lt 2 -or $w -gt 6) { return $null }
   return $l.Substring(0, 1).ToUpperInvariant() + $l.Substring(1)
 }
+# (the people pages and the houses on the entry pages share these)
+# what a person's years are: 0 a lifespan, 1 a reign, 2 years of activity, 3 the death, 4 the birth, 5 a century
+function SpanKind([string]$d) { if ($d -match '^\s*(r\.|reigned|ruled)') { 1 } elseif ($d -match '^\s*fl\.') { 2 } elseif ($d -match '^\s*d\.') { 3 } elseif ($d -match '^\s*b\.') { 4 } elseif ($d -match 'centur') { 5 } else { 0 } }
+function ScaleLbl([int]$yv) { if ($yv -lt 0) { "$(-$yv) BCE" } elseif ($yv -lt 1000) { "$yv CE" } else { "$yv" } }
+# a lifespan chart on one scale (as the country timelines): rows of [person record]; dim bars: reigns and years of activity
+function LifeChart($rows, [string]$caption) {
+  $lo0 = ($rows | ForEach-Object { $_.sp[0] } | Measure-Object -Minimum).Minimum; $hi0 = ($rows | ForEach-Object { $_.sp[1] } | Measure-Object -Maximum).Maximum
+  $t0 = [Math]::Floor($lo0 / 25) * 25; $t1 = [Math]::Ceiling($hi0 / 25) * 25; if ($t1 -le $t0) { $t1 = $t0 + 25 }
+  if ((($t1 - $t0) % 50) -ne 0) { $t1 += 25 }; $tw = $t1 - $t0   # the middle mark falls on a round year
+  $h = '<figure class="pp-chart"><p class="cty-scale" aria-hidden="true"><span>' + (Hx (ScaleLbl $t0)) + '</span><span>' + (Hx (ScaleLbl ([int][Math]::Round(($t0 + $t1) / 2)))) + '</span><span>' + (Hx (ScaleLbl $t1)) + '</span></p><ol class="cty-tl pp-tl">'
+  foreach ($rw in $rows) {
+    $a = $rw.sp[0]; $b = $rw.sp[1]
+    $h += '<li><a href="/encyclopedia/' + $rw.e.slug + '">' + $(if ($rw.e.img) { '<img class="pp-av" src="' + (ThumbOf $rw.e.img) + '" alt="" loading="lazy" width="28" height="28">' } else { '<span class="pp-av"></span>' }) + '<span class="pp-nm"><span class="cty-n">' + (Hx $rw.e.name) + '</span><span class="cty-y">' + (Hx $rw.e.dates) + '</span></span></a><span class="cty-track" aria-hidden="true"><span class="cty-bar ' + $(if ($rw.k -ne 0) { 'pp-dim' } else { 'pp-life' }) + '" style="left:' + (($a - $t0) / $tw * 100).ToString('0.0', $INV) + '%;width:' + ([Math]::Max(0.8, ($b - $a) / $tw * 100)).ToString('0.0', $INV) + '%"></span></span></li>'
+  }
+  return $h + '</ol><figcaption>' + $caption + '</figcaption></figure>'
+}
+# where the entry's own sentence gives no label, Wikidata's short description of the same item does (Nov 2026; CC0,
+# written to tell namesakes apart: "Elchingen: Municipality in Bavaria, Germany"), from scripts/entry-wddesc.tsv
+# (scripts/tools/entry-wddesc.js: e:<slug> for entries, s:<id> for states; kinds, own names and wrong years refused)
+$WDDESC = @{}
+if (Test-Path "$Repo\scripts\entry-wddesc.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-wddesc.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $i = $l.IndexOf("`t"); if ($i -gt 0) { $WDDESC[$l.Substring(0, $i)] = $l.Substring($i + 1) } } } }
+# ruling houses (Nov 2026): the people of the encyclopedia whose Wikidata item names the house's item as their family (P53),
+# scripts/entry-houses.tsv (scripts/tools/entry-wd-claims.js); "Rulers and members" on the house's entry page, oldest first
+$HOUSE = @{}; $HOUSEOF = @{}
+if (Test-Path "$Repo\scripts\entry-houses.tsv") {
+  foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-houses.tsv", $U8)) {
+    if (-not $l -or $l[0] -eq '#') { continue }; $hf = $l.Split("`t"); if (-not $BY.ContainsKey($hf[0])) { continue }
+    $hm = @($hf[1].Split('|') | Where-Object { $BY.ContainsKey($_) -and $EYRS.ContainsKey($_) } | Sort-Object @{ e = { $EYRS[$_][0] } }, @{ e = { $_ } })
+    if ($hm.Count -lt 3) { continue }; $HOUSE[$hf[0]] = $hm
+    foreach ($m in $hm) { if (-not $HOUSEOF.ContainsKey($m)) { $HOUSEOF[$m] = New-Object Collections.Generic.List[string] }; $HOUSEOF[$m].Add($hf[0]) }
+  }
+}
+# an entry's own point (Wikidata P625 of the same item; a battle's field, a town, a state's seat): "On the map"
+$ECOORD = @{}
+if (Test-Path "$Repo\scripts\entry-coords.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-coords.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $cf = $l.Split("`t"); $ECOORD[$cf[0]] = @([double]::Parse($cf[1], $INV), [double]::Parse($cf[2], $INV)) } } }
+function EntryLocator($e) {
+  $ll = $ECOORD[$e.slug]; if (-not $ll -or $ll[0] -lt -57) { return '' }
+  $pxy = [EpochGeo.G]::P($ll[1], $ll[0]); $vw = 90; $view = [double[]]@(($pxy[0] - $vw / 2), ($pxy[1] - $vw * 0.3), $vw, ($vw * 0.6))
+  if ($view[1] -lt 0) { $view[1] = 0 }; if ($view[0] -lt 0) { $view[0] = 0 }; if ($view[0] + $vw -gt 1000) { $view[0] = 1000 - $vw }
+  $inner = (DotPath 'map-dot-halo' @(, $pxy)) + (DotPath 'map-dot-me' @(, $pxy))
+  $yr = if ($EAT.ContainsKey($e.slug)) { '&amp;year=' + $EAT[$e.slug] } else { '' }
+  $href = '/atlas?at=' + (Fd $ll[0]) + ',' + (Fd $ll[1]) + $yr
+  return '<section class="enc-where"><h2 class="enc-section-title">On the map</h2><figure class="st-locator enc-loc"><a href="' + $href + '" aria-label="' + (Hx "$($e.name) on the atlas") + '">' + (MapSvg $view $inner "Map: where $($e.name) lies" 'map-loc') + '</a><figcaption>' +
+    (Fd $ll[0]).TrimStart('-') + '&#176;' + $(if ($ll[0] -lt 0) { 'S' } else { 'N' }) + ', ' + (Fd $ll[1]).TrimStart('-') + '&#176;' + $(if ($ll[1] -lt 0) { 'W' } else { 'E' }) +
+    ' (Wikidata). <a href="' + $href + '">What was here' + $(if ($yr) { ' in ' + (Hx (ScaleLbl $EAT[$e.slug])) } else { '' }) + '? &rarr;</a></figcaption></figure></section>' + "`n"
+}
+function WdLabel([string]$key) {
+  $wl = $WDDESC[$key]; if (-not $wl) { return $null }
+  return $wl.Substring(0, 1).ToUpperInvariant() + $wl.Substring(1)
+}
 function WordsIn([string]$html) { ([regex]::Matches(([regex]::Replace($html, '<[^>]+>', ' ')), '[A-Za-z][^\s]*')).Count }
 $nThin = 0
 foreach ($e in $ENT) {
@@ -1119,6 +1169,7 @@ foreach ($e in $ENT) {
   if ($e.dates -match '^(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)(?: \d{1,4}(?: BCE)?)?$' -and -not ($Matches[2] -eq 'February' -and $Matches[1] -eq '29') -and [int]$Matches[1] -ge 1 -and [int]$Matches[1] -le 31) { $meta += '<a href="/today-in-history/' + $Matches[2].ToLowerInvariant() + '-' + [int]$Matches[1] + '">On this day: ' + [int]$Matches[1] + ' ' + $Matches[2] + '</a>' }
   if ($e.aka.Count) { $meta += 'Also known as ' + (($e.aka | ForEach-Object { Hx ([string]$_) }) -join ', ') }
   if ($e.war -and $BY.ContainsKey($e.war)) { $meta += 'Part of the <a class="enc-link" href="/encyclopedia/' + $e.war + '">' + (Hx $BY[$e.war].name) + '</a>' }
+  if ($HOUSEOF.ContainsKey($e.slug)) { $meta += 'Of the ' + (($HOUSEOF[$e.slug] | ForEach-Object { '<a class="enc-link" href="/encyclopedia/' + $_ + '">' + (Hx $BY[$_].name) + '</a>' }) -join ' and the ') }
   $fig = ''; $imgLd = $null; $sz = $null
   if ($e.img) {
     $sz = ImgSize $e.img; $artist = if ($e.cr) { [string]$e.cr['artist'] } else { '' }; $lic = if ($e.cr) { [string]$e.cr['licence'] } else { '' }; $src = if ($e.cr) { [string]$e.cr['source'] } else { '' }
@@ -1134,6 +1185,11 @@ foreach ($e in $ENT) {
   [void]$body.Append('<div class="enc-body"><p class="enc-desc">' + $descHtml + '</p>' + $fig + "</div>`n")
   $eQuotes = $EMQ[$e.slug]
   if ($eQuotes) { [void]$body.Append('<section class="enc-quotes"><h2 class="enc-section-title">Across the Institute</h2><ul>' + $eQuotes + "</ul></section>`n") }
+  if ($HOUSE.ContainsKey($e.slug)) {   # the house's people, on one scale of years
+    $hRows = @($HOUSE[$e.slug] | ForEach-Object { [pscustomobject]@{ e = $BY[$_]; sp = $EYRS[$_]; k = (SpanKind $BY[$_].dates) } })
+    [void]$body.Append('<section class="enc-house"><h2 class="enc-section-title">Rulers and members</h2>' + (LifeChart $hRows ($hRows.Count.ToString() + ' people of the encyclopedia whose Wikidata record names this house as their family. Bright bars are lifespans; pale bars reigns or years of activity.')) + '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/dynasties">All ruling houses &rarr;</a></p>' + "</section>`n")
+  }
+  [void]$body.Append((EntryLocator $e))
   $thin = ((WordsIn $e.desc) + $(if ($eQuotes) { WordsIn ([regex]::Replace($eQuotes, '<a [^>]*>.*?</a>', ' ')) } else { 0 })) -lt $THINW
   if ($thin) { $nThin++ }
   if ($invNd) {   # its place on the inventions tree: when, where, who, and the inventions before and after it
@@ -1206,6 +1262,7 @@ foreach ($e in $ENT) {
   $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { $e.dates } else { '' }
   $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd $wdSame)
   $eNY = NameYears $e.name $tDates; $eLab = EntryLabel ([string]$e.desc)
+  if (-not $eLab -or ($eNY + ": " + $eLab).Length -gt 70) { $eLab = WdLabel ('e:' + $e.slug) }
   $eTitle = if ($eLab -and ($eNY + ": " + $eLab).Length -le 70) { "${eNY}: $eLab — The Epoch Institute" } else { "$eNY — Encyclopedia — The Epoch Institute" }
   Emit $path (Page @{ title = $eTitle; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; noindex = $thin; body = $body.ToString() })
   if (($e.i % 2000) -eq 1999) { Say "  $($e.i + 1) entries" }
@@ -1417,7 +1474,10 @@ foreach ($n in $POL['nodes']) {
   if ($teaser.IndexOf($stCore, [StringComparison]::OrdinalIgnoreCase) -lt 0) { $teaser = (NameYears $name $tYears) + ': ' + $(if ($teaser -cmatch '^(A|An|The) ') { $teaser.Substring(0, 1).ToLowerInvariant() + $teaser.Substring(1) } else { $teaser }) }
   $desc = [EpochBuild.W]::Summary($teaser, 155)
   $ld = $crumb[1] + ',' + (ArticleLd $name $desc $path 'Country' $name @($n['a'] | Where-Object { $_ }) $imgLd)
-  Emit $path (Page @{ title = "$(NameYears $name $tYears) — States — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'states'; body = $body })
+  # with Wikidata's description where the title still keeps " — States" (so it never equals an entry's title)
+  $stNY = NameYears $name $tYears; $stLab = WdLabel ('s:' + $id)
+  $stTitle = if ($stLab -and ("${stNY}: $stLab — States").Length -le 70) { "${stNY}: $stLab — States — The Epoch Institute" } else { "$stNY — States — The Epoch Institute" }
+  Emit $path (Page @{ title = $stTitle; desc = $desc; path = $path; type = 'article'; img = $img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'states'; body = $body })
   $nState++; if (($nState % 1000) -eq 0) { Say "  $nState states" }
 }
 Say "state pages: $nState, redirects to profiles: $($redirects.Count)"
@@ -3437,25 +3497,10 @@ function PersonRegion($e) {
   }
   return $null
 }
-# what a person's years are: 0 a lifespan, 1 a reign, 2 years of activity, 3 the death, 4 the birth, 5 a century
-function SpanKind([string]$d) { if ($d -match '^\s*(r\.|reigned|ruled)') { 1 } elseif ($d -match '^\s*fl\.') { 2 } elseif ($d -match '^\s*d\.') { 3 } elseif ($d -match '^\s*b\.') { 4 } elseif ($d -match 'centur') { 5 } else { 0 } }
 $PPL = New-Object Collections.Generic.List[object]
 foreach ($e in $ENT) { if ($e.type -eq 'person') { $PPL.Add([pscustomobject]@{ e = $e; sp = $EYRS[$e.slug]; c = $ENTCENT[$e.slug]; r = (PersonRegion $e); k = (SpanKind $e.dates); sc = $ESCORE[$e.slug] }) } }
 $PBYC = @{}; foreach ($pp in $PPL) { if ($pp.c -and $CENTSET.ContainsKey($pp.c)) { if (-not $PBYC.ContainsKey($pp.c)) { $PBYC[$pp.c] = New-Object Collections.Generic.List[object] }; $PBYC[$pp.c].Add($pp) } }
 $PCENTS = @($CENTPAGES | Where-Object { $PBYC.ContainsKey($_) -and $PBYC[$_].Count -ge 5 })
-function ScaleLbl([int]$yv) { if ($yv -lt 0) { "$(-$yv) BCE" } elseif ($yv -lt 1000) { "$yv CE" } else { "$yv" } }
-# a lifespan chart on one scale (as the country timelines): rows of [person record]; dim bars: reigns and years of activity
-function LifeChart($rows, [string]$caption) {
-  $lo0 = ($rows | ForEach-Object { $_.sp[0] } | Measure-Object -Minimum).Minimum; $hi0 = ($rows | ForEach-Object { $_.sp[1] } | Measure-Object -Maximum).Maximum
-  $t0 = [Math]::Floor($lo0 / 25) * 25; $t1 = [Math]::Ceiling($hi0 / 25) * 25; if ($t1 -le $t0) { $t1 = $t0 + 25 }
-  if ((($t1 - $t0) % 50) -ne 0) { $t1 += 25 }; $tw = $t1 - $t0   # the middle mark falls on a round year
-  $h = '<figure class="pp-chart"><p class="cty-scale" aria-hidden="true"><span>' + (Hx (ScaleLbl $t0)) + '</span><span>' + (Hx (ScaleLbl ([int][Math]::Round(($t0 + $t1) / 2)))) + '</span><span>' + (Hx (ScaleLbl $t1)) + '</span></p><ol class="cty-tl pp-tl">'
-  foreach ($rw in $rows) {
-    $a = $rw.sp[0]; $b = $rw.sp[1]
-    $h += '<li><a href="/encyclopedia/' + $rw.e.slug + '">' + $(if ($rw.e.img) { '<img class="pp-av" src="' + (ThumbOf $rw.e.img) + '" alt="" loading="lazy" width="28" height="28">' } else { '<span class="pp-av"></span>' }) + '<span class="pp-nm"><span class="cty-n">' + (Hx $rw.e.name) + '</span><span class="cty-y">' + (Hx $rw.e.dates) + '</span></span></a><span class="cty-track" aria-hidden="true"><span class="cty-bar ' + $(if ($rw.k -ne 0) { 'pp-dim' } else { 'pp-life' }) + '" style="left:' + (($a - $t0) / $tw * 100).ToString('0.0', $INV) + '%;width:' + ([Math]::Max(0.8, ($b - $a) / $tw * 100)).ToString('0.0', $INV) + '%"></span></span></li>'
-  }
-  return $h + '</ol><figcaption>' + $caption + '</figcaption></figure>'
-}
 $PCINFO = @{}
 # the regions with a people page (/people/<region>, below), so the century pages can link them
 $PREGS = @($BREG | Where-Object { $rr = $_; @($PPL | Where-Object { $_.r -eq $rr -and $_.c }).Count -ge 20 })
@@ -3730,6 +3775,38 @@ if ($INVN.Count) {
   if ([EpochBuild.W]::WriteIfChanged("$Repo\scripts\invention-links.js", $invLkJs)) { $NWRITE++ }
   Say ("inventions: {0} on the tree, {1} links, {2} profiles credited; data/inventions.json {3:N0} KB" -f $INVN.Count, (($INVN.Values | ForEach-Object { $_.built.Count } | Measure-Object -Sum).Sum), $invLk.Count, ($invJs.Length / 1KB))
 }
+
+# ══════════════════════════════════════════════════════════════════
+# Ruling houses: /encyclopedia/dynasties (Nov 2026), every house of scripts/entry-houses.tsv (its people from Wikidata's
+# P53) by the region most of its people belong to (PersonRegion), oldest first, each with its own picture, else its best-known member's
+# ══════════════════════════════════════════════════════════════════
+Say 'ruling houses'
+$hsByReg = [ordered]@{}; foreach ($rr in $BREG) { $hsByReg[$rr] = New-Object Collections.Generic.List[object] }; $hsByReg['Other'] = New-Object Collections.Generic.List[object]
+foreach ($hsK in @($HOUSE.Keys | Sort-Object)) {
+  $hsM = $HOUSE[$hsK]; $hsC = @{}; foreach ($m in $hsM) { $rr = PersonRegion $BY[$m]; if ($rr) { $hsC[$rr] = 1 + [int]$hsC[$rr] } }
+  $hsR = if ($hsC.Count) { @($hsC.GetEnumerator() | Sort-Object @{ e = { $_.Value }; Descending = $true }, @{ e = { $BREGIX[$_.Key] } })[0].Key } else { 'Other' }
+  $hsLo = ($hsM | ForEach-Object { $EYRS[$_][0] } | Measure-Object -Minimum).Minimum; $hsHi = ($hsM | ForEach-Object { $EYRS[$_][1] } | Measure-Object -Maximum).Maximum
+  $hsTop = @($hsM | Where-Object { $BY[$_].img } | Sort-Object @{ e = { $ESCORE[$_] }; Descending = $true } | Select-Object -First 1)
+  $hsByReg[$hsR].Add([pscustomobject]@{ e = $BY[$hsK]; n = $hsM.Count; lo = $hsLo; hi = $hsHi; pic = $(if ($BY[$hsK].img) { $BY[$hsK] } elseif ($hsTop.Count) { $BY[$hsTop[0]] } else { $null }) })
+}
+$crumb = Crumbs @(@('Home', '/'), @('Encyclopedia', '/encyclopedia/'), @('Ruling houses', $null))
+$sb = New-Object Text.StringBuilder(80000); $hsN = $HOUSE.Count; $hsP = ($HOUSE.Values | ForEach-Object { $_.Count } | Measure-Object -Sum).Sum
+[void]$sb.Append('<main id="main" class="enc-page ref-page">' + "`n<div class=`"enc-wrap`">`n" + $crumb[0] + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Ruling Houses and Dynasties</h1><p class="ref-lede">' + $hsN + ' dynasties, royal houses and great families, and the ' + $hsP.ToString('N0') + ' people of the encyclopedia who belonged to them, region by region. Each house&#8217;s page draws its members on one scale of years.</p></header>' + "`n")
+[void]$sb.Append('<nav class="ref-letters hs-regions" aria-label="Regions">' + (($hsByReg.Keys | Where-Object { $hsByReg[$_].Count } | ForEach-Object { '<a href="#' + (PRegSlug $_) + '">' + (Hx $_) + '</a>' }) -join '') + "</nav>`n")
+foreach ($rr in $hsByReg.Keys) {
+  $hsG = @($hsByReg[$rr] | Sort-Object @{ e = { $_.lo } }); if (-not $hsG.Count) { continue }
+  [void]$sb.Append('<section class="ref-group" id="' + (PRegSlug $rr) + '"><h2>' + (Hx $rr) + ' <span class="n">' + $hsG.Count + '</span></h2><ul class="enc-seealso">')
+  foreach ($hsO in $hsG) { [void]$sb.Append('<li><a href="/encyclopedia/' + $hsO.e.slug + '">' + $(if ($hsO.pic) { '<img src="' + (ThumbOf $hsO.pic.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $hsO.e) }) + '<span><span class="nm">' + (Hx $hsO.e.name) + '</span><span class="tp">' + (Hx ((ScaleLbl $hsO.lo) + ' – ' + (ScaleLbl $hsO.hi) + ' · ' + $hsO.n + ' people')) + '</span></span></a></li>') }
+  [void]$sb.Append("</ul></section>`n")
+}
+[void]$sb.Append('<p class="ref-note">A house&#8217;s people are those whose Wikidata record names it as their family. Its years run from the earliest member&#8217;s first recorded year to the latest member&#8217;s last. Houses with fewer than three dated people in the encyclopedia are not listed.</p>' + "`n</div>`n</main>`n")
+$hsAll = @($hsByReg.Values | ForEach-Object { $_ } | Sort-Object @{ e = { $_.n }; Descending = $true })
+$title = "Ruling Houses and Dynasties: $hsN Families of History — The Epoch Institute"
+$desc = [EpochBuild.W]::Summary("$hsN dynasties and royal houses, from the $($hsAll[0].e.name) and the $($hsAll[1].e.name) to the $($hsAll[2].e.name), each with its members in the encyclopedia on one scale of years.", 155)
+$ld = $crumb[1] + ',{"@type":"CollectionPage","name":"Ruling Houses and Dynasties","url":' + (Js "$SITE/encyclopedia/dynasties") + ',"description":' + (Js $desc) + '}'
+Emit '/encyclopedia/dynasties' (Page @{ title = $title; desc = $desc; path = '/encyclopedia/dynasties'; type = 'website'; ld = $ld; nav = 'dynasties'; body = $sb.ToString() })
+Say "ruling houses: $hsN, $hsP people"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Flashcards (/flashcards, flashcards.js): decks made from the data, written as data/cards/<deck>.json and listed in the
@@ -4421,7 +4498,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Social Ladders', '/societies/', 'social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks'),
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
-  @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'),
+  @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'), @('Ruling Houses and Dynasties', '/encyclopedia/dynasties', 'dynasties|ruling houses|royal houses|royal families|dynasty|house of'),
   @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
   @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
   @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
@@ -4648,7 +4725,7 @@ function WriteSitemap([string]$name, $urls) {
 }
 function SitemapOf([string]$p) {
   if ($p -like '/empire/*' -or $p -like '/religion/*' -or $p -like '/language/*' -or $p -like '/culture/*' -or $p -like '/government/*' -or $p -like '/movement/*' -or $p -like '/ideology/*' -or $p -like '/work/*') { return 'profiles' }
-  if ($p -like '/encyclopedia/browse/*' -or $p -like '/encyclopedia/conflicts/*' -or $p -eq '/encyclopedia/' -or $p -eq '/encyclopedia/glossary') { return 'pages' }
+  if ($p -like '/encyclopedia/browse/*' -or $p -like '/encyclopedia/conflicts/*' -or $p -eq '/encyclopedia/' -or $p -eq '/encyclopedia/glossary' -or $p -eq '/encyclopedia/dynasties') { return 'pages' }
   if ($p -like '/encyclopedia/*') { return 'encyclopedia' }
   if ($p -like '/state/browse/*' -or $p -eq '/state/') { return 'pages' }
   if ($p -like '/state/*') { return 'states' }
