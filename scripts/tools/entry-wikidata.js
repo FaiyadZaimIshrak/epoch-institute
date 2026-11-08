@@ -106,6 +106,16 @@ const stem = w => w.replace(/(ians|ian|ese|ish|ic|ical|s)$/, '');
     }
     if (i % 5000 === 0) console.error('items ' + i);
   }
+  // 2b. how widely known each item is: the number of Wikipedia language editions with an article on it (sitelinks).
+  // The builder ranks a day's events by it (the best-known first in the snippet); the editor's items are counted too.
+  const SL = {}, mf0 = path.join(ROOT, 'scripts', 'entry-wikidata-manual.tsv');
+  const slIds = new Set(ids); if (fs.existsSync(mf0)) for (const l of fs.readFileSync(mf0, 'utf8').split(/\r?\n/)) { const q = (l.split('\t')[2] || ''); if (/^Q\d+$/.test(q)) slIds.add(q); }
+  const slList = [...slIds];
+  for (let i = 0; i < slList.length; i += 400) {
+    const sp = 'SELECT ?item ?n WHERE { VALUES ?item {' + slList.slice(i, i + 400).map(x => 'wd:' + x).join(' ') + '} ?item wikibase:sitelinks ?n }';
+    const j = await get('https://query.wikidata.org/sparql', 'format=json&query=' + encodeURIComponent(sp));
+    for (const b of j.results.bindings) SL[b.item.value.split('/').pop()] = +b.n.value;
+  }
   // 3. the articles' opening sentences, for the entries that neither picture nor years confirm
   const pending = E.filter(e => {
     const a = art[e.slug]; if (!a || a.dis || !a.q) return false;
@@ -181,10 +191,10 @@ const stem = w => w.replace(/(ians|ian|ese|ish|ic|ical|s)$/, '');
     return 1 - lev(fa, fb) / Math.max(fa.length, fb.length) >= 0.6 ? 'same' : 'redirect';
   }
   const rows = [];
-  for (const r of out) if (keep.has(r[0]) && !(r[0] in man)) rows.push([r[0], r[1], r[2], r[3], scope(r), r[6] || ''].join('\t'));
-  for (const [s, [t, q, sc]] of Object.entries(man)) if (t !== '-') rows.push([s, t, q, 'editor', sc || 'same', ''].join('\t'));
+  for (const r of out) if (keep.has(r[0]) && !(r[0] in man)) rows.push([r[0], r[1], r[2], r[3], scope(r), r[6] || '', SL[r[2]] || ''].join('\t'));
+  for (const [s, [t, q, sc]] of Object.entries(man)) if (t !== '-') rows.push([s, t, q, 'editor', sc || 'same', '', SL[q] || ''].join('\t'));
   rows.sort();
-  fs.writeFileSync(path.join(ROOT, 'scripts', 'entry-wikidata.tsv'), '# slug\tWikipedia title\tWikidata item\thow\tscope (same: sameAs; section, redirect: read further only)\tsection (written by scripts/tools/entry-wikidata.js)\n' + rows.join('\n') + '\n');
+  fs.writeFileSync(path.join(ROOT, 'scripts', 'entry-wikidata.tsv'), '# slug\tWikipedia title\tWikidata item\thow\tscope (same: sameAs; section, redirect: read further only)\tsection\tWikipedia editions (sitelinks) (written by scripts/tools/entry-wikidata.js)\n' + rows.join('\n') + '\n');
   if (REPORT) fs.writeFileSync(REPORT.replace(/(\.\w+)?$/, '-text$1'), tx.sort().join('\n') + '\n');
   // picture matches where one is a human and the other not: a person entry with a place's picture, for the editor to read
   if (REPORT) fs.writeFileSync(REPORT.replace(/(\.\w+)?$/, '-kind$1'), kind.join('\n') + '\n');

@@ -35,7 +35,7 @@ function Exists([string]$path) {
   }
   $exists[$path] = $ok; return $ok
 }
-$bad = New-Object System.Collections.Generic.List[string]; $nLinks = 0; $nPages = 0; $noLogo = @{}
+$bad = New-Object System.Collections.Generic.List[string]; $nLinks = 0; $nPages = 0; $noLogo = @{}; $NOIX = @{}
 $rxRef = New-Object Text.RegularExpressions.Regex('(?:href|src)="(/[^"]*)"')
 foreach ($f in $pages) {
   $h = [IO.File]::ReadAllText($f.FullName, $U8); $nPages++
@@ -54,6 +54,7 @@ foreach ($f in $pages) {
   if ($h -notmatch '<title>[^<]+</title>') { $bad.Add("$self : no <title>") }
   $dm = [regex]::Match($h, '<meta name="description" content="([^"]*)"'); if (-not $dm.Success) { $bad.Add("$self : no description") } elseif ([Web.HttpUtility]::HtmlDecode($dm.Groups[1].Value).Length -gt 160) { $bad.Add("$self : description longer than 160") }
   $cm = [regex]::Match($h, '<link rel="canonical" href="([^"]*)"'); if (-not $cm.Success) { $bad.Add("$self : no canonical") } elseif ($cm.Groups[1].Value -ne ($SITE + $self)) { $bad.Add("$self : canonical is $($cm.Groups[1].Value)") }
+  if ($h -match '<meta name="robots" content="noindex') { $NOIX[$self] = 1 }
   if ($h -notmatch 'property="og:title"' -or $h -notmatch 'property="og:url"') { $bad.Add("$self : og:title/og:url missing") }
   foreach ($j in [regex]::Matches($h, '(?s)<script type="application/ld\+json">(.*?)</script>')) { try { [void]$JSS.DeserializeObject($j.Groups[1].Value) } catch { $bad.Add("$self : JSON-LD does not parse ($($_.Exception.Message.Substring(0, 60)))") } }
 }
@@ -85,6 +86,8 @@ foreach ($d in $FOLDERS) {
   if (-not $rxHtml) { $bad.Add("$web : no .htaccess forcing text/html"); continue }
   foreach ($f in Get-ChildItem -LiteralPath $dir -File) { if (-not $f.Extension -and $f.Name -notmatch '^\.' -and $f.Name -cnotmatch $rxHtml) { $bad.Add("$web$($f.Name) : not served as text/html (outside $rxHtml)") } }
 }
+# a page marked noindex (the thin entries and year pages, Nov 2026) is offered in no sitemap
+foreach ($smf in Get-ChildItem "$Repo\sitemaps" -Filter *.xml) { foreach ($m in [regex]::Matches([IO.File]::ReadAllText($smf.FullName), "<loc>" + [regex]::Escape($SITE) + "([^<]*)</loc>")) { $lp = [Web.HttpUtility]::HtmlDecode($m.Groups[1].Value); if ($NOIX.ContainsKey($lp)) { $bad.Add("$lp : noindex but in sitemaps/$($smf.Name)") } } }
 # the stylesheets in css/ must be what scripts/split-css.js cuts from shared.css and the pages as they are now
 $NODE = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $NODE) { $NODE = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
 if (Test-Path $NODE) { $cssOut = & $NODE --max-old-space-size=6000 "$Repo\scripts\split-css.js" --check; if ($LASTEXITCODE) { $bad.Add("css/ : $cssOut") } }

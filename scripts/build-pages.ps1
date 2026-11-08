@@ -452,6 +452,7 @@ function NameYears([string]$nm, [string]$yrs) {
   if ($y1 -and $nm -match ('(?<!\d)' + $y1 + '(?!\d)')) { return $nm }
   return "$nm ($yrs)"
 }
+$NOIDX = @{}   # the paths written with "noindex, follow" (thin entries and year pages): left out of the sitemaps
 function Page($p) {
   $url = $SITE + $p.path; $img = if ($p.img) { $SITE + $p.img } else { "$SITE/images/og/default.jpg" }
   $p.title = FitTitle $p.title
@@ -464,7 +465,8 @@ function Page($p) {
   if ($p.path -like '/today-in-history/*') { [void]$sb.Append("<link rel=`"alternate`" type=`"application/rss+xml`" title=`"The Epoch Institute — Today in History`" href=`"/feeds/today.xml`">`n") }
   [void]$sb.Append('<title>' + (Hx $p.title) + "</title>`n")
   [void]$sb.Append("<link rel=`"icon`" href=`"/favicon.svg`" type=`"image/svg+xml`">`n<link rel=`"icon`" href=`"/favicon.ico`" sizes=`"48x48`">`n<link rel=`"apple-touch-icon`" href=`"/apple-touch-icon.png`">`n")
-  [void]$sb.Append('<meta name="description" content="' + (Hx $p.desc) + "`">`n<meta name=`"robots`" content=`"index, follow, max-image-preview:large`">`n<link rel=`"canonical`" href=`"$url`">`n")
+  $robots = if ($p.noindex) { $script:NOIDX[$p.path] = 1; 'noindex, follow' } else { 'index, follow, max-image-preview:large' }
+  [void]$sb.Append('<meta name="description" content="' + (Hx $p.desc) + "`">`n<meta name=`"robots`" content=`"$robots`">`n<link rel=`"canonical`" href=`"$url`">`n")
   [void]$sb.Append('<meta property="og:type" content="' + $p.type + "`">`n<meta property=`"og:title`" content=`"" + (Hx $p.title) + "`">`n<meta property=`"og:description`" content=`"" + (Hx $p.desc) + "`">`n")
   [void]$sb.Append("<meta property=`"og:url`" content=`"$url`">`n<meta property=`"og:site_name`" content=`"The Epoch Institute`">`n<meta property=`"og:locale`" content=`"en_GB`">`n")
   [void]$sb.Append("<meta property=`"og:image`" content=`"$img`">`n")
@@ -597,9 +599,15 @@ $Y = @{}; foreach ($kv in $EL['y'].GetEnumerator()) { $Y[$kv.Key] = $kv.Value }
 # a profile's own entry (ENC_LINKS.self: profile name -> entry slug), so the entry page can link "Full profile"
 # each entry's Wikipedia article and Wikidata item (scripts/entry-wikidata.tsv, written by scripts/tools/entry-wikidata.js: kept only where
 # something besides the name agrees): the "Read further" line and the sameAs of the JSON-LD
-$EWD = @{}; if (Test-Path "$Repo\scripts\entry-wikidata.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-wikidata.tsv", $U8)) { if ($l -and -not $l.StartsWith('#')) { $c = $l.Split("`t"); if ($c.Count -ge 3 -and $c[1] -and $c[2] -match '^Q\d+$') { $EWD[$c[0]] = @($c[1], $c[2], $(if ($c.Count -ge 5 -and $c[4]) { $c[4] } else { 'same' }), $(if ($c.Count -ge 6) { $c[5] } else { '' })) } } } }
+$EWD = @{}; if (Test-Path "$Repo\scripts\entry-wikidata.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-wikidata.tsv", $U8)) { if ($l -and -not $l.StartsWith('#')) { $c = $l.Split("`t"); if ($c.Count -ge 3 -and $c[1] -and $c[2] -match '^Q\d+$') { $EWD[$c[0]] = @($c[1], $c[2], $(if ($c.Count -ge 5 -and $c[4]) { $c[4] } else { 'same' }), $(if ($c.Count -ge 6) { $c[5] } else { '' }), $(if ($c.Count -ge 7 -and $c[6] -match '^\d+$') { [int]$c[6] } else { 0 })) } } } }
 function WpUrl([string]$t) { 'https://en.wikipedia.org/wiki/' + ([Uri]::EscapeDataString($t.Replace(' ', '_')) -replace '%2C', ',' -replace '%28', '(' -replace '%29', ')' -replace '%3A', ':' -replace '%27', "'" -replace '%2F', '/') }
 $SELFP = @{}; if ($EL.ContainsKey('self')) { foreach ($kv in $EL['self'].GetEnumerator()) { $SELFP[[string]$kv.Value] = [string]$kv.Key } }
+# scripts/profile-sameas.js (Nov 2026): a profile's Wikipedia article and Wikidata item, from its own entry
+# (ENC_LINKS.self) where that entry is the same subject (entry-wikidata.tsv scope "same"); generator.html puts them in the
+# profile's JSON-LD "about" as sameAs: regenerate the profiles after it changes
+$psaRows = New-Object Collections.Generic.List[string]
+foreach ($kv in ($SELFP.GetEnumerator() | Sort-Object Value)) { $w = $EWD[[string]$kv.Key]; if ($w -and $w[2] -eq 'same') { $psaRows.Add('  ' + (Js ([string]$kv.Value)) + ': [' + (Js (WpUrl $w[0])) + ', ' + (Js ('https://www.wikidata.org/wiki/' + $w[1])) + ']') } }
+if ([EpochBuild.W]::WriteIfChanged("$Repo\scripts\profile-sameas.js", "// scripts/profile-sameas.js - written by scripts/build-pages.ps1. Do not edit. Read by generator.html: each profile's Wikipedia and Wikidata (sameAs).`nvar PROFILE_SAMEAS = {`n" + ($psaRows -join ",`n") + "`n};`n")) { $NWRITE++ }
 $KW = New-Object 'System.Collections.Generic.Dictionary[string,System.Collections.Generic.List[object]]'; $nPat = 0; $ALWAYS = New-Object System.Collections.Generic.List[object]
 for ($ri = 0; $ri -lt $(if ($SkipEntries) { 0 } else { $FS }); $ri++) {
   $row = $ROWS[$ri]; $rs = [string]$row[0]; $grp = $null
@@ -1056,9 +1064,41 @@ function LinkedNear($e) {   # the entries that mention this one, then those its 
   $k = 0
   @($c | ForEach-Object { [pscustomobject]@{ i = $_; k = $k++ } } | Sort-Object @{ e = { if ($ENT[$_.i].img) { 0 } else { 1 } } }, @{ e = { -$ENT[$_.i].emp.Count } }, @{ e = { $_.k } } | Select-Object -First 8 | ForEach-Object { $_.i })
 }
+# "Across the Institute" (Nov 2026): the sentences on other pages that name the entry, quoted with their page
+# (scripts/tools/entry-mentions.js reads the built profiles, essays, ladders, speeches, songs, days and states: the last
+# build's, which is what readers see). An entry whose own text and quotes stay under $THINW words is "noindex, follow"
+# and out of the sitemap: it stays on the site and in its links, but Google is not offered thousands of short pages.
+$THINW = 100
+$emExe = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $emExe) { $emExe = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
+foreach ($emL in (& $emExe "$PSScriptRoot\tools\entry-mentions.js")) { Say $emL }
+if ($LASTEXITCODE) { throw 'scripts/tools/entry-mentions.js failed' }
+$EMQ = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-mentions.tsv", $U8)) { $i = $l.IndexOf("`t"); if ($i -gt 0) { $EMQ[$l.Substring(0, $i)] = $l.Substring($i + 1) } }
+# an entry's title says what it is (Nov 2026): the words after "was a / is an" in its first sentence, up to the first
+# clause ("Bamako: Capital and largest city of Mali"); only 2-6 words, never cut inside a list of names or after an
+# adjective ("large, ocean-going"); none when the sentence has no such phrase (the title stays "Name — Encyclopedia")
+$ELB = @(',', ';', ' who ', ' which ', ' that ', ' where ', ' whose ', ' but ', ' from about ', ' between ', ' during ', ' under ', ' (', ' c. ', ' known as ', ' called ', ' founded ', ' built ', ' made ', ' used ', ' led by ', ' ruled ')
+function EntryLabel([string]$d) {
+  $first = ([regex]::Split($d, '(?<=[a-z0-9)]\.)\s+(?=[A-Z])'))[0] -replace '\.$', ''
+  $m = [regex]::Match($first, '^[^,]{0,90}?\b(?:was|is|were|are) (?:an? |the )(.+)$'); if (-not $m.Success) { return $null }
+  $rest = $m.Groups[1].Value; $cut = $rest.Length
+  foreach ($b in $ELB) { $i = $rest.IndexOf($b, [StringComparison]::Ordinal); if ($i -ge 0 -and $i -lt $cut) { $cut = $i } }
+  $l = $rest.Substring(0, $cut).Trim(); $after = $rest.Substring($cut)
+  if ($after -cmatch '^,\s*[A-Z]') { return $null }
+  $last = @($l -split ' ')[-1]
+  if ($after -cmatch '^,\s*[a-z-]+\s' -and $after -cnotmatch '^, (?:a|an|the|one|which|who|where|whose|founded|built|and)\b' -and $last -cmatch '^[a-z-]+$' -and $last -cnotmatch '(?:er|or|ist|ian|ess|man|men|ite|ism|ty|ion|ate|ry|ure|ce|ship|dom|hood|ment|ness|al|ary|ery|ic)$') { return $null }
+  $l = (($l -creplace '\s+(?:of|in|on|at|for|from|to|by|with|and|or)$', '') -replace '\.$', '').Trim()
+  $w = @($l -split ' ').Count; if ($w -lt 2 -or $w -gt 6) { return $null }
+  return $l.Substring(0, 1).ToUpperInvariant() + $l.Substring(1)
+}
+function WordsIn([string]$html) { ([regex]::Matches(([regex]::Replace($html, '<[^>]+>', ' ')), '[A-Za-z][^\s]*')).Count }
+$nThin = 0
 foreach ($e in $ENT) {
   $path = '/encyclopedia/' + $e.slug; $url = $SITE + $path
-  if ($SkipEntries) { $WROTE[(Join-Path $Repo ('encyclopedia\' + $e.slug)).ToLowerInvariant()] = 1; $SMNEW[$path] = if ($SM.ContainsKey($path)) { $SM[$path] } else { @('', $TODAY) }; continue }
+  if ($SkipEntries) {
+    $ef = Join-Path $Repo ('encyclopedia\' + $e.slug); $WROTE[$ef.ToLowerInvariant()] = 1; $SMNEW[$path] = if ($SM.ContainsKey($path)) { $SM[$path] } else { @('', $TODAY) }
+    if ((Test-Path $ef) -and [IO.File]::ReadAllText($ef).Contains('content="noindex')) { $NOIDX[$path] = 1 }   # a kept thin entry stays out of the sitemap
+    continue
+  }
   $ctx = EncYears $e.dates
   $descHtml = $DESCH[$e.slug]
   $nLinks += ([regex]::Matches($descHtml, 'class="enc-link"')).Count
@@ -1087,6 +1127,10 @@ foreach ($e in $ENT) {
   [void]$body.Append('<main id="main" class="enc-page ref-page">' + "`n" + '<div class="enc-wrap">' + "`n" + $crumb[0] + "`n" + '<article class="enc-article">' + "`n")
   [void]$body.Append('<header><p class="enc-kicker">' + $kicker + '</p><h1 class="enc-title">' + (Hx $e.name) + '</h1>' + $(if ($meta.Count) { '<p class="enc-meta">' + ($meta -join ' · ') + '</p>' } else { '' }) + "</header>`n")
   [void]$body.Append('<div class="enc-body"><p class="enc-desc">' + $descHtml + '</p>' + $fig + "</div>`n")
+  $eQuotes = $EMQ[$e.slug]
+  if ($eQuotes) { [void]$body.Append('<section class="enc-quotes"><h2 class="enc-section-title">Across the Institute</h2><ul>' + $eQuotes + "</ul></section>`n") }
+  $thin = ((WordsIn $e.desc) + $(if ($eQuotes) { WordsIn ([regex]::Replace($eQuotes, '<a [^>]*>.*?</a>', ' ')) } else { 0 })) -lt $THINW
+  if ($thin) { $nThin++ }
   if ($invNd) {   # its place on the inventions tree: when, where, who, and the inventions before and after it
     $invCr = InvCredits $invNd
     [void]$body.Append('<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>' + (Hx $invNd.date) + '</dd></div>' +
@@ -1156,10 +1200,12 @@ foreach ($e in $ENT) {
   if ($e.sub -eq 'song' -and $e.desc) { $desc = [EpochBuild.W]::Summary("$($e.name)" + $(if ($e.dates) { " ($($e.dates))" } else { '' }) + ', a song: ' + $e.desc, 155) }
   $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { $e.dates } else { '' }
   $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd $wdSame)
-  Emit $path (Page @{ title = "$(NameYears $e.name $tDates) — Encyclopedia — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; body = $body.ToString() })
+  $eNY = NameYears $e.name $tDates; $eLab = EntryLabel ([string]$e.desc)
+  $eTitle = if ($eLab -and ($eNY + ": " + $eLab).Length -le 70) { "${eNY}: $eLab — The Epoch Institute" } else { "$eNY — Encyclopedia — The Epoch Institute" }
+  Emit $path (Page @{ title = $eTitle; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; noindex = $thin; body = $body.ToString() })
   if (($e.i % 2000) -eq 1999) { Say "  $($e.i + 1) entries" }
 }
-Say "entry pages: $NENT, gold links in descriptions: $nLinks"
+Say "entry pages: $NENT, gold links in descriptions: $nLinks, under $THINW words (noindex): $nThin"
 
 # A-Z browse pages
 $LETTERBAR = '<nav class="ref-letters" aria-label="Letters">' + (($LETTERS | ForEach-Object { if ($byLetter[$_].Count) { '<a href="/encyclopedia/browse/' + $_ + '">' + (LetterLabel $_) + '</a>' } else { '<span>' + (LetterLabel $_) + '</span>' } }) -join '') + '</nav>'
@@ -1505,8 +1551,21 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
   [void]$daysAll.Append($dayJs)
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring days"><a class="prev" rel="prev" href="/today-in-history/' + (DaySlug $pk) + '"><span class="lbl">&larr; Previous day</span><span class="nm">' + (DayLabel $pk) + '</span></a><a class="next" rel="next" href="/today-in-history/' + (DaySlug $nk) + '"><span class="lbl">Next day &rarr;</span><span class="nm">' + (DayLabel $nk) + "</span></a></nav>`n")
   [void]$sb.Append('<section class="day-cal-wrap" aria-label="Other days of ' + $MONTHS[[int]$k.Substring(0, 2) - 1] + '">' + (MonthCal ([int]$k.Substring(0, 2)) $k) + '<p><a class="enc-random-link" href="/today-in-history/">All days of the year &rarr;</a></p></section>' + "`n</div>`n</main>`n")
-  $title = "What Happened on $lbl in History — The Epoch Institute"
-  $desc = [EpochBuild.W]::Summary("On this day, $lbl" + ': ' + ((@($evs | Select-Object -First 3 | ForEach-Object { [string]$_['yearDisplay'] + ', ' + [string]$_['title'] })) -join '; ') + '.', 155)
+  $dHasPpl = $DAYPPL.ContainsKey($k)
+  $title = "What Happened on $lbl in History" + $(if ($dHasPpl) { ": Events, Births and Deaths" } else { "" }) + " — The Epoch Institute"
+  # the snippet leads with the day's best-known events (Nov 2026; until then the first three in year order, often the
+  # most obscure): an event weighs what its best-known subject weighs, by the Wikipedia editions with an article on it
+  # (entry-wikidata.tsv sitelinks): the entries its title links, else those of its text; places and states are not
+  # subjects (Rome or Europe in a sentence says nothing of the event's fame); the three heaviest shown in year order
+  $evW = @(for ($ei = 0; $ei -lt $evs.Count; $ei++) {
+    # a place or state the title names counts half (Hiroshima, Hastings: the event's own place); in the text, only people,
+    # events, works and the like count (a passing "Rome" or "Europe" says nothing of the event)
+    $evWt = 0
+    foreach ($evSl in @($TS[$ei] | Where-Object { $_ })) { $evO = $BY[[string]$evSl]; if ($evO -and $EWD[[string]$evSl]) { $evF = [int]$EWD[[string]$evSl][4]; if ($evO.type -eq 'place' -or $evO.type -eq 'polity') { $evF = [int]($evF / 2) }; $evWt = [Math]::Max($evWt, $evF) } }
+    foreach ($evM in [regex]::Matches($DH[$ei], 'href="/encyclopedia/([a-z0-9-]+)"')) { $evSl = $evM.Groups[1].Value; $evO = $BY[$evSl]; if ($evO -and $evO.type -ne 'place' -and $evO.type -ne 'polity' -and $EWD[$evSl]) { $evWt = [Math]::Max($evWt, [int]$EWD[$evSl][4]) } }
+    [pscustomobject]@{ i = $ei; w = $evWt } })
+  $evTop = @($evW | Sort-Object @{ e = { -$_.w } }, @{ e = { $_.i } } | Select-Object -First 3 | Sort-Object i | ForEach-Object { $evs[$_.i] })
+  $desc = [EpochBuild.W]::Summary("On $lbl in history: " + ((@($evTop | ForEach-Object { [string]$_['yearDisplay'] + ', ' + [string]$_['title'] })) -join '; ') + $(if ($dHasPpl) { '; and the births and deaths of the day.' } else { '.' }), 155)
   $ogD = '/images/og/day-' + (DaySlug $k) + '.jpg'
   Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; img = $(if (Test-Path (Join-Path $Repo ($ogD.TrimStart('/') -replace '/', '\'))) { $ogD }); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + '}'); nav = 'today'; body = $sb.ToString() })
 }
@@ -2129,7 +2188,10 @@ for ($si = 0; $si -lt $SPS.Count; $si++) {
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other speeches"><a class="prev" rel="prev" href="/speeches/' + $pv['slug'] + '"><span class="lbl">&larr; Earlier speech</span><span class="nm">' + (Hx ([string]$pv['title'])) + '</span></a><a class="next" rel="next" href="/speeches/' + $nx['slug'] + '"><span class="lbl">Later speech &rarr;</span><span class="nm">' + (Hx ([string]$nx['title'])) + "</span></a></nav>`n")
   [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/speeches/">All great speeches &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n")
   $title = [string]$s['title'] + ' (' + [string]$s['display'] + ') — Great Speeches — The Epoch Institute'
-  $desc = [EpochBuild.W]::Summary([string]$s['before'], 155)
+  # the snippet says what the page offers first (Nov 2026): the key passage, its setting and what followed, and the text
+  # when the page carries it (in full, or in part), then the setting's first sentence
+  $spOffer = 'the key passage, its setting and what followed' + $(if ($ft -and -not $ftPart) { ', with the full text' } elseif ($ft) { ', with the text' } else { '' })
+  $desc = [EpochBuild.W]::Summary([string]$s['speaker'] + ', ' + [string]$s['display'] + ': ' + $spOffer + '. ' + [string]$s['before'], 155)
   $ld = $crumb[1] + ',' + (ArticleLd ([string]$s['title']) $desc $path 'Event' ([string]$s['title']) $null $null)
   $srcUrl = if ($ft) { [string]$ft['url'] } elseif ($full) { $full[0] } else { $null }
   if (-not $isPara) { $ld += ',{"@type":"Quotation","text":' + (Js ([string]$s['excerpt'])) + ',"creator":{"@type":"Person","name":' + (Js ([string]$s['speaker'])) + '}' + $(if ($srcUrl) { ',"isPartOf":{"@type":"CreativeWork","name":' + (Js ([string]$s['title'])) + ',"url":' + (Js $srcUrl) + '}' } else { '' }) + '}' }
@@ -2686,7 +2748,14 @@ for ($songI = 0; $songI -lt $SONGS.Count; $songI++) {
   $ptName = $title + $(if ($loc -and $loc -ne $title -and ($title.Length + $loc.Length) -lt 40) { ' (' + $loc + ')' } else { '' })
   $ptSub = @($(if ($hasWords) { ': Story, Meaning and Lyrics'; ': History and Lyrics' } else { ': Story and Meaning'; ': History' }) | Where-Object { ($ptName + $_).Length -le 70 })
   $pt = $ptName + $(if ($ptSub.Count) { $ptSub[0] } else { '' }) + ' — Songs in History — The Epoch Institute'
-  $desc = [EpochBuild.W]::Summary(([string]@($sg['story'])[0]), 155)
+  # the snippet says what the page offers (Nov 2026; until then the story's first sentence, which began mid-history),
+  # each part only where the page has it, then the song in one line (the kid line, else the story's first sentence)
+  $sgParts = $(if ($sg['text']) { $sgP = $sg['text']['parts']; $sgL = if ($sg['langs'] -and @($sg['langs']).Count) { [string]@($sg['langs'])[0]['name'] } else { '' }
+      if ($sgP['orig'] -and $sgP['en'] -and $sgL -and $sgL -ne 'English') { "the $sgL lyrics with an English translation" } else { 'the lyrics' } } elseif ($sg['genius']) { 'the lyrics from Genius' } else { $null })
+  $sgOffer = @('the story', 'what it means') + @($sgParts | Where-Object { $_ }) + @($(if ($sg['video']) { 'a performance' }) | Where-Object { $_ })
+  $sgOfferS = ($sgOffer[0..($sgOffer.Count - 2)] -join ', ') + ' and ' + $sgOffer[-1]
+  $sgLine = if ($sg['kid']) { [string]$sg['kid'] } else { [string]@($sg['story'])[0] }
+  $desc = [EpochBuild.W]::Summary($title + ': ' + $sgOfferS + '. ' + $sgLine, 155)
   $ld = $crumb[1] + ',{"@type":"MusicComposition","name":' + (Js $title) + $(if ($loc) { ',"alternateName":' + (Js $loc) } else { '' }) + ',"url":' + (Js ($SITE + $path)) + ',"description":' + (Js $desc) +
     ',"genre":[' + ((@($sg['types']) | ForEach-Object { Js $SONGTYPE[[string]$_] }) -join ',') + ']' + $(if (@($sg['langs']).Count) { ',"inLanguage":[' + ((@($sg['langs']) | ForEach-Object { Js ([string]$_['code']) }) -join ',') + ']' } else { '' }) +
     $(if (SongPerson ([string]$sg['lyricist'])) { ',"lyricist":{"@type":"Person","name":' + (Js ([string]$sg['lyricist'])) + '}' } else { '' }) + $(if (SongPerson ([string]$sg['composer'])) { ',"composer":{"@type":"Person","name":' + (Js ([string]$sg['composer'])) + '}' } else { '' }) +
@@ -3219,7 +3288,7 @@ function StateList($lst) {
 }
 function IsoY([int]$yv) { if ($yv -gt 0) { $yv.ToString('0000') } elseif ($yv -eq -1) { '0000' } else { '-' + ((-$yv) - 1).ToString('0000') } }
 function Plural([int]$n, [string]$one, [string]$many) { if ($n -eq 1) { "1 $one" } else { "$($n.ToString('N0')) $many" } }
-$nYrEv = 0
+$nYrEv = 0; $nYThin = 0
 for ($yi = 0; $yi -lt $YEARLIST.Count; $yi++) {
   $yv = [int]$YEARLIST[$yi]; $yb = $YEARB[$yv]; $label = YearLabel $yv; $slug = [EpochBuild.W]::YearSlug($yv); $path = '/years/' + $slug; $cy = Century $yv
   # events: the day events and the entries dated to the year, by month and day where known, then the best known
@@ -3287,7 +3356,9 @@ for ($yi = 0; $yi -lt $YEARLIST.Count; $yi++) {
   $title = "What Happened in $label`? Events, Births and Deaths — The Epoch Institute"
   $desc = [EpochBuild.W]::Summary("$label in world history: " + $(if ($top.Count) { ($top -join '; ') + '. ' } else { '' }) + 'The events, births and deaths of the year, the states founded and ended, and a map of the world.', 155)
   $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"temporalCoverage":' + (Js (IsoY $yv)) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
-  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'years'; body = $sb.ToString() })
+  $yw = WordsIn ([regex]::Replace($sb.ToString(), '(?s)<nav.*?</nav>|<script.*?</script>|<details class="ref-cite">.*?</details>', ' '))   # a year with little on it: noindex (as the thin entries)
+  if ($yw -lt 150) { $nYThin++ }
+  Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; ld = $ld; nav = 'years'; noindex = ($yw -lt 150); body = $sb.ToString() })
 }
 # index: the years by century, and a box that goes to the nearest year with a page
 $byCent = [ordered]@{}; foreach ($z in $YEARLIST) { $c = Century ([int]$z); if (-not $byCent.Contains($c)) { $byCent[$c] = New-Object Collections.Generic.List[int] }; $byCent[$c].Add([int]$z) }
@@ -3326,7 +3397,7 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\data\songs-by-country.json", $sbcText)
 $SBCV = [EpochBuild.W]::Sha1($sbcText).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\atlas", $U8); $t2 = [regex]::Replace($t, 'data/songs-by-country\.json\?v=[0-9a-f]*', "data/songs-by-country.json?v=$SBCV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\atlas", $t2)) { $NWRITE++ }
 Say "songs on the atlas: $sbcN songs in $($sbc.Count) countries"
-Say "year pages: $($YEARLIST.Count), events on them: $nYrEv"
+Say "year pages: $($YEARLIST.Count), events on them: $nYrEv, under 150 words (noindex): $nYThin"
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # People: /people/<century>, /people/, and people-data.js for the "who lived when" chart on /people/
@@ -4580,10 +4651,20 @@ foreach ($p in $PROF) { $og = '/images/og/' + $p.Substring($p.LastIndexOf('/') +
 foreach ($ey in $ESSAYS) { if ($ey.pic) { $IMGOF['/essays/' + $ey.slug] = $ey.pic } }
 foreach ($so in $SOCS) { $og = Poster ('society-' + $so.slug); if ($og) { $IMGOF['/societies/' + $so.slug] = $og } elseif ($so.pic -and $so.pic.img) { $IMGOF['/societies/' + $so.slug] = $so.pic.img } }
 foreach ($sg in $SONGS) { $og = Poster ('song-' + [string]$sg['slug']); if ($og) { $IMGOF['/songs/' + [string]$sg['slug']] = $og } }
+# the posters of the country, century, day, path and speech pages (1200 px, with their maps and pictures) in the image
+# sitemap too (Nov 2026: Google Images had no image of these pages)
+foreach ($p in @($SMNEW.Keys)) {
+  $pk = $null
+  if ($p -match '^/countries/([a-z0-9-]+)$') { $pk = 'country-' + $Matches[1] } elseif ($p -match '^/centuries/([a-z0-9-]+)$') { $pk = 'century-' + $Matches[1] }
+  elseif ($p -match '^/today-in-history/([a-z]+-\d+)$') { $pk = 'day-' + $Matches[1] } elseif ($p -match '^/paths/([a-z0-9-]+)$') { $pk = 'path-' + $Matches[1] }
+  elseif ($p -match '^/speeches/([a-z0-9-]+)$') { $pk = 'speech-' + $Matches[1] }
+  if ($pk -and -not $IMGOF.ContainsKey($p)) { $og = Poster $pk; if ($og) { $IMGOF[$p] = $og } }
+}
 foreach ($kv in $STX.GetEnumerator()) { $im = [string]$kv.Value['img']; if ($im -and (Test-Path (Join-Path $Repo ($im.TrimStart('/') -replace '/', '\')))) { $IMGOF['/state/' + $kv.Key] = $im } }
 $SMG = [ordered]@{ pages = New-Object System.Collections.Generic.List[string]; profiles = New-Object System.Collections.Generic.List[string]; encyclopedia = New-Object System.Collections.Generic.List[string]; states = New-Object System.Collections.Generic.List[string]; years = New-Object System.Collections.Generic.List[string] }
 $LATEST = @{}
 foreach ($p in ($SMNEW.Keys | Sort-Object)) {
+  if ($NOIDX.ContainsKey($p)) { continue }   # a page marked noindex is offered to no search engine
   $grp = SitemapOf $p; $SMG[$grp].Add((UrlXml $p $IMGOF[$p]))
   if (-not $LATEST.ContainsKey($grp) -or [string]::CompareOrdinal($SMNEW[$p][1], $LATEST[$grp]) -gt 0) { $LATEST[$grp] = $SMNEW[$p][1] }
 }

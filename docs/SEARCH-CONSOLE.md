@@ -54,3 +54,28 @@ indexing**.
 
 At Bing Webmaster Tools (https://www.bing.com/webmasters) you can import the site from Search Console. The site
 already tells Bing of every change it publishes, through IndexNow.
+
+## 6. Export the figures for the monthly report
+
+Once a month (and once now, for the baseline), export these files into one folder, for example
+`Documents/search-export/2026-11`:
+
+1. **Performance:** open **Performance > Search results**, set the date to **Last 3 months**, then **Export > Download
+   CSV**. Unzip it: it holds `Queries.csv`, `Pages.csv` and others.
+2. **Indexing:** open **Indexing > Pages**, then **Export > Download CSV** (top right). Then click each reason in the
+   table "Why pages aren't indexed", for example "Crawled - currently not indexed", and export that page too. Put each in a
+   subfolder named after the reason.
+
+Then ask Claude to "read the Search Console export in <folder>", or run:
+
+```
+node scripts/tools/gsc-report.js <folder> --out=docs/SEO-BASELINE.md
+```
+
+It shows impressions, clicks, click rate and position for each kind of page (encyclopedia, profiles, day pages, songs
+…). It also lists the searches that show the site often but are rarely clicked, whose page titles are reworked first,
+and which kinds of page Google declines to index.
+
+Since November 2026, encyclopedia entries with little text are marked "noindex" on purpose. They stay on the site for
+readers, but are kept out of Google, so Google rates the site by its stronger pages. Search Console lists them under
+"Excluded by 'noindex' tag"; that is expected.

@@ -1194,7 +1194,7 @@ function initNav(activePage) {
     var synth = window.speechSynthesis;
     if (!synth || typeof SpeechSynthesisUtterance === 'undefined') return;   // Android in-app browsers have none
     var TYPES = [
-      ['article.enc-article', 'h1.enc-title, .enc-meta, .enc-desc'],
+      ['article.enc-article', 'h1.enc-title, .enc-meta, .enc-desc, .enc-quotes blockquote'],
       ['article.st-article', 'h1.st-title, .st-meta, .st-teaser, .st-text h2, .st-text h3, .st-text p'],
       ['main.empire-page', 'h1.profile-detail-name, .kid-tale-title, .kid-tale-pages p, .profile-summary, .profile-section-block > h2.profile-section-title, .profile-section-body p, .profile-section-body li'],
       ['article.sp-view', 'h1.sp-title, .sp-by, .sp-sec > h2, .sp-sec > p:not(.sp-source), blockquote.sp-quote, .sp-ft-body p, .sp-ft-body > div > p'],

@@ -1348,6 +1348,12 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .enc-fig figcaption { font-size: 12px; line-height: 1.45; color: var(--muted); margin-top: 8px; overflow-wrap: anywhere; }
 .enc-fig figcaption a { color: var(--muted); }
 .enc-section-title { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+.enc-quotes ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.enc-quotes li { margin: 0; padding: 2px 0 2px 14px; border-left: 3px solid rgba(var(--gold-rgb), 0.55); }
+.enc-quotes blockquote { margin: 0 0 4px; font-size: 17px; line-height: 1.55; color: var(--text); }
+.enc-quotes blockquote b { font-weight: 600; }
+.enc-quotes li > a { font-family: var(--font-ui); font-size: 13px; color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+[data-kids="1"] .enc-quotes { display: none; }
 .enc-mentions { display: flex; flex-wrap: wrap; gap: 8px; }
 .enc-mentions a { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em; color: var(--gold); text-decoration: none; border: 0.5px solid var(--border); padding: 6px 10px; border-radius: 2px; }
 .enc-mentions a:hover { border-color: var(--gold); }

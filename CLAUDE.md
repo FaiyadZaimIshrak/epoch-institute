@@ -435,6 +435,34 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   `sitemap.xml` (an index) + `sitemaps/{pages,profiles,encyclopedia,states,years}.xml` with image entries; lastmod changes
   only when a page's content changes (scripts/sitemap-state.tsv); `search-profiles.js` (the profiles for the header
   search: the generated pages load it instead of shared-data.js); `scripts/changed-urls.txt` (for ping-indexnow.ps1).
+Impressions and clicks (8 Nov 2026; plan: no page of the site in public search results yet, three quarters of the
+indexed addresses thin, snippets that did not say what a page offers):
+- **Across the Institute** on entry pages (.enc-quotes, after the description; hidden in Kids mode, read by Listen):
+  scripts/tools/entry-mentions.js reads the BUILT profiles, essays, ladders, speeches, songs, day and state pages and
+  quotes, for each entry, the sentence on each page that links it (one per page, at most six, profiles first; a long
+  sentence cut to 48 words around the name), into scripts/entry-mentions.tsv (git-ignored), which the builder runs before
+  the entry pages: 66,914 quotes for 31,785 entries. A full build therefore quotes the previous build's pages.
+- **Thin pages out of the index:** an entry whose description and quotes come to under $THINW = 100 words (18,109) and a
+  year page under 150 words (273) are written `noindex, follow` (Page @{ noindex }) and left out of the sitemaps ($NOIDX;
+  a -SkipEntries build reads the mark back from the kept pages). They stay on the site, in its links, search and games.
+  check-site fails on a noindex page in a sitemap. The user's choice (enrich, then noindex the rest).
+- **Snippets that say what the page offers:** an entry's title takes the "is a / was a" phrase of its first sentence
+  (EntryLabel: 2-6 words, "Bamako: Capital and largest city of Mali") where it fits 70 characters; day pages lead their
+  description with the three events whose subjects are best known (the entries the title links, else the text's; places
+  and states left out; weighed by Wikipedia editions, the 7th column of entry-wikidata.tsv that entry-wikidata.js now
+  writes from Wikidata's sitelinks: George Washington 275, Ulpian 54; profile mentions had favoured Rome and Europe;
+  an event whose own entry its text does not link, as D-Day or Hastings, still ranks low: a follow-up could match each
+  event to its Wikipedia article through the cached On this day feed, %LOCALAPPDATA%epoch-toolsotd-cache) and their title
+  says "Events, Births and Deaths"; songs ("La Marseillaise: the story, what it means, the French lyrics with an English
+  translation and a performance.") and speeches ("…: the key passage, its setting and what followed, with the full
+  text.") name only what the page has; profiles add what they hold where it fits 160 characters.
+- **sameAs:** scripts/profile-sameas.js (PROFILE_SAMEAS, from each profile's own entry when entry-wikidata.tsv says
+  "same": 253 profiles) into the profiles' JSON-LD "about". The image sitemap also carries the country, century, day,
+  path and speech posters.
+- **Measuring:** scripts/tools/gsc-report.js <Search Console export folder> [--out=docs/SEO-BASELINE.md] (impressions,
+  clicks, CTR and position per kind of page; queries shown often and rarely clicked; indexing reasons by kind);
+  docs/SEARCH-CONSOLE.md section 6 tells the owner how to export; docs/OUTREACH.md the steps outside the site
+  (Cloudflare, Bing, teaching-resource collections, the states register on Zenodo and Kaggle, the embeddable card).
 SEO rules (31 Oct 2026, scratchpad nav/seo-audit.js checks all 40,235 pages: titles, descriptions, thin pages,
 canonicals, JSON-LD, h1, sitemap coverage):
 - Titles: Page() runs FitTitle: over 70 characters a title loses " — The Epoch Institute" (Google shows the site name

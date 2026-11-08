@@ -877,6 +877,12 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .enc-meta { font-size: 16px; color: var(--muted); }
 .enc-meta .dates { color: var(--text); }
 .enc-desc { font-size: 20px; line-height: 1.7; color: var(--text); max-width: 65ch; }
+.enc-quotes ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.enc-quotes li { margin: 0; padding: 2px 0 2px 14px; border-left: 3px solid rgba(var(--gold-rgb), 0.55); }
+.enc-quotes blockquote { margin: 0 0 4px; font-size: 17px; line-height: 1.55; color: var(--text); }
+.enc-quotes blockquote b { font-weight: 600; }
+.enc-quotes li > a { font-family: var(--font-ui); font-size: 13px; color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+[data-kids="1"] .enc-quotes { display: none; }
 .enc-seealso { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
 .enc-seealso a { display: flex; align-items: center; gap: 10px; padding: 8px; border: 1px solid var(--border); border-radius: 2px; text-decoration: none; color: var(--text); }
 .enc-seealso a:hover { border-color: var(--gold); }
