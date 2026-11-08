@@ -17,15 +17,57 @@ function kidsGentle(title, desc) {
 function subscribeNewsletter(email, source) {
   var fd = new FormData(); fd.append('kind', 'newsletter'); fd.append('email', email); fd.append('source', source);
   return fetch('/send.php', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd })
-    .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { if (!res.ok || !j.ok) throw new Error(j.error || 'HTTP ' + res.status); return j; }); });
+    .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { if (!res.ok || !j.ok) throw new Error(j.error || 'HTTP ' + res.status); gaEvent('newsletter_signup', { source: source }); return j; }); });
 }
 
 // After a daily challenge: the weekly newsletter in one line (none once this browser has signed up). The form is
 // handled by initNav (form[data-nl]); the source names where it was shown.
 function newsletterPrompt(source) {
-  try { if (localStorage.getItem('epoch-nl')) return ''; } catch (e) {}
-  return '<form class="gm-nl" data-nl="' + escHtml(source) + '" novalidate><p class="gm-nl-t">A new puzzle and a story from history, every week by email</p><span class="gm-nl-row"><input type="email" required placeholder="your@email.com" aria-label="Your email address"><button type="submit">Sign up</button></span><p class="gm-nl-msg" aria-live="polite"></p></form>';
+  var sup = supportLine(source);
+  try { if (localStorage.getItem('epoch-nl')) return sup; } catch (e) {}
+  return '<form class="gm-nl" data-nl="' + escHtml(source) + '" novalidate><p class="gm-nl-t">A new puzzle and a story from history, every week by email</p><span class="gm-nl-row"><input type="email" required placeholder="your@email.com" aria-label="Your email address"><button type="submit">Sign up</button></span><p class="gm-nl-msg" aria-live="polite"></p></form>' + sup;
 }
+// Reader support (Nov 2026): one quiet line after a daily challenge, at most once a day, never in Kids mode
+// (localStorage epoch-support-day holds the UTC day it was last shown); /support has the rest.
+function supportLine(source) {
+  if (document.documentElement.getAttribute('data-kids') === '1') return '';
+  var day = Math.floor(Date.now() / 864e5);
+  try { if (+localStorage.getItem('epoch-support-day') === day) return ''; localStorage.setItem('epoch-support-day', String(day)); } catch (e) {}
+  return '<p class="gm-support">The games and the Institute are free and run by readers&#8217; support. <a href="/support" data-ga="support_click" data-ga-src="' + escHtml(source) + '">Support the Institute</a></p>';
+}
+// Cookies (Nov 2026): Google Analytics runs in consent mode (the head line sets analytics storage denied unless
+// localStorage epoch-consent is 'yes'); this bar asks once, at the foot of the page, and a [data-consent-open] button
+// (the footer's "Cookie settings", /privacy) asks again. Never shown in Kids mode, where storage stays denied.
+function initConsent() {
+  var html = document.documentElement, stored = null;
+  try { stored = localStorage.getItem('epoch-consent'); } catch (e) {}
+  function close() { var b = document.getElementById('consent-bar'); if (b) b.remove(); }
+  function choose(yes) {
+    try { localStorage.setItem('epoch-consent', yes ? 'yes' : 'no'); } catch (e) {}
+    try { if (typeof gtag === 'function') gtag('consent', 'update', { analytics_storage: yes && html.getAttribute('data-kids') !== '1' ? 'granted' : 'denied' }); } catch (e) {}
+    close();
+  }
+  function open() {
+    if (html.getAttribute('data-kids') === '1' || document.getElementById('consent-bar')) return;
+    var b = document.createElement('div'); b.id = 'consent-bar'; b.className = 'consent-bar'; b.setAttribute('role', 'region'); b.setAttribute('aria-label', 'Cookies');
+    b.innerHTML = '<p>The Institute counts its readers with Google Analytics. May it set cookies to do so? <a href="/privacy#cookies">How the Institute uses data</a></p>' +
+      '<span class="consent-btns"><button type="button" data-consent="yes">Allow</button><button type="button" data-consent="no">No thanks</button></span>';
+    b.addEventListener('click', function (e) { var c = e.target.closest('[data-consent]'); if (c) choose(c.getAttribute('data-consent') === 'yes'); });
+    document.body.appendChild(b);
+  }
+  document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('[data-consent-open]')) { close(); open(); } });
+  if (stored !== 'yes' && stored !== 'no') open();
+  window.epochConsent = { open: open, choose: choose };
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initConsent); else initConsent();
+
+// Analytics events: a click on anything with data-ga sends that event (data-ga-src: where it was), only where the page
+// loaded Analytics and the reader allowed it (Google's consent mode drops it otherwise)
+function gaEvent(name, params) { try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {} }
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('[data-ga]'); if (!a) return;
+  gaEvent(a.getAttribute('data-ga'), { source: a.getAttribute('data-ga-src') || location.pathname, link_url: a.href || '' });
+}, true);
 
 // ── In-app browsers ───────────────────────────────────────────────────────────────────────────────────────────────
 // A link tapped in Instagram, Facebook or Messenger opens in the app's own browser: on Android it has no share sheet
@@ -476,7 +518,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=81eaca4ad1';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=b91b2c4982';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=b0d5a5bacd';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -686,7 +728,7 @@ function initNav(activePage) {
         ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games']]]]]];
   const MORE = [['about', '/about', 'About the Institute'], ['new', '/new', 'What&#8217;s New'], ['research', '/research', 'Research Hub'], ['dataset', '/dataset', 'Open Data'],
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
-    ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['contact', '/contact', 'Contact']];
+    ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
   const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}</a>`;
@@ -802,6 +844,7 @@ function initNav(activePage) {
       <div class="footer-col">
         <span class="footer-col-title">Institute</span>
         <a class="footer-link" href="/about">About the Institute</a>
+        <a class="footer-link" href="/support" data-ga="support_click" data-ga-src="footer">Support the Institute</a>
         <a class="footer-link" href="/about#methodology">Methodology</a>
         <a class="footer-link" href="/new">What&#8217;s New</a>
         <a class="footer-link" href="/research">Research Hub</a>
@@ -827,6 +870,7 @@ function initNav(activePage) {
   </div>
   <div class="footer-bottom">
     <span data-i18n="footer_copy">© ${new Date().getFullYear()} The Epoch Institute</span>
+    <span class="footer-legal"><a href="/privacy">Privacy</a> · <a href="/terms">Terms and licences</a> · <button type="button" class="footer-cookies" data-consent-open>Cookie settings</button></span>
     <button type="button" class="footer-quote-btn" id="footer-quote-btn" aria-expanded="false" aria-label="A word from the past" title="A word from the past">✦</button>
   </div>
   <p class="footer-quote" id="footer-quote" hidden></p>

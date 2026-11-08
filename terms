@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>Terms and Licences: Using the Institute’s Work — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="How you may use The Epoch Institute’s texts (CC BY-SA 4.0), data (CC BY 4.0), maps and pictures, and the terms for reading, writing for and supporting the site.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Terms and Licences: Using the Institute’s Work — The Epoch Institute">
+<meta property="og:description" content="How you may use The Epoch Institute’s texts (CC BY-SA 4.0), data (CC BY 4.0), maps and pictures, and the terms for reading, writing for and supporting the site.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/terms">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/terms">
+<link rel="stylesheet" href="/css/terms.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Terms and Licences"}]},{"@type":"WebPage","name":"Terms and Licences: Using the Institute’s Work — The Epoch Institute","description":"How you may use The Epoch Institute’s texts (CC BY-SA 4.0), data (CC BY 4.0), maps and pictures, and the terms for reading, writing for and supporting the site.","url":"https://the-epoch-institute.org/terms","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"publisher":{"@type":"Organization","@id":"https://the-epoch-institute.org/#org","name":"The Epoch Institute"},"dateModified":"2026-11-08"}]}</script>
+<!-- Google tag (gtag.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="terms">
+<main id="main" class="ws-page ref-page legal-page">
+<div class="ws-wrap ws-guide">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Terms and Licences</li></ol></nav>
+<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Terms and Licences</h1><p class="ref-lede">The Institute&#8217;s work is free to read and, under the licences below, free to reuse with credit. Last updated 8 November 2026.</p></header>
+<section class="ws-guide-sec"><h2 class="ref-sec-title">Using the site</h2><p>The site is free to read. It is made with care and its sources are named, but it is offered as it is, without any guarantee that every detail is correct or complete. If you find a mistake, please <a href="/contact?topic=correction">tell us</a>.</p></section>
+<section class="ws-guide-sec"><h2 class="ref-sec-title">Licences</h2><ul class="ws-guide-list-plain"><li><b>Texts</b> written by the Institute (profiles, encyclopedia entries, state histories, essays, paths): <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">Creative Commons Attribution-ShareAlike 4.0</a>. Credit &#8220;The Epoch Institute, the-epoch-institute.org&#8221; with a link to the page. Many encyclopedia entries are adapted from Wikipedia articles, which are under the same kind of licence; each entry links the article it rests on under &#8220;Read further&#8221;.</li><li><b>Data</b> on <a href="/dataset">Open Data</a> (the states register, the power curves): <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">Creative Commons Attribution 4.0</a>.</li><li><b>Maps</b> are drawn by the Institute on Natural Earth outlines (public domain), with places from Wikidata (CC0): CC BY-SA 4.0, as the texts.</li><li><b>Pictures</b> come from Wikimedia Commons, each under the licence shown in its credit. Reuse them under that licence, with that credit.</li><li><b>Song words and speeches</b> are printed only where they are in the public domain or under the licence named with them. The Sumerian texts from the Electronic Text Corpus of Sumerian Literature are licensed for non-commercial use only (CC BY-NC-SA 3.0). Lyrics shown from Genius and performances from YouTube belong to their owners.</li><li><b>The name and emblem</b> of The Epoch Institute are not covered by these licences.</li></ul></section>
+<section class="ws-guide-sec"><h2 class="ref-sec-title">Writing for the Institute</h2><p>When you submit an article or an opinion, you keep your copyright and allow the Institute to publish, edit for length and layout, and keep it online. Articles published in the Community pages are the authors&#8217; own views.</p></section>
+<section class="ws-guide-sec"><h2 class="ref-sec-title">Supporting the Institute</h2><p>Support is paid through <a href="https://ko-fi.com/the_epoch_institute" rel="noopener">Ko-fi</a> under Ko-fi&#8217;s terms; refunds are made through Ko-fi. The Epoch Institute is run by an individual, not a registered charity, so support is not a charitable donation and carries no tax relief.</p></section>
+<section class="ws-guide-sec"><h2 class="ref-sec-title">Links, books and advertising</h2><p>Links to other sites are given for further reading; the Institute does not answer for their content. If the Institute later earns a commission on books or shows advertising, this page and the pages concerned will say so, and Kids mode and the Kids Corner will never show advertising.</p></section>
+<section class="ws-guide-sec"><h2 class="ref-sec-title">Contact</h2><p><a href="/contact">Contact the Institute</a> &middot; <a href="/privacy">Privacy</a></p></section>
+</div>
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>
+initNav('terms');
+</script>
+
+</body>
+</html>

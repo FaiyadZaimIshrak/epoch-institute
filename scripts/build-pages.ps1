@@ -421,7 +421,7 @@ $THEME0 = "<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(
 # cost 250-310 ms of main thread on a phone when it loaded with the page). $GTAG0 is the snippet before Oct 2026:
 # pages are hashed with it (Stamp), so changing the snippet dates no page.
 $GTAG0 = "<script async src=`"https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4`"></script>`n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');</script>"
-$GTAG = "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>"
+$GTAG = "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>"
 $ORG = '{"@type":"Organization","name":"The Epoch Institute","url":"' + $SITE + '/","logo":{"@type":"ImageObject","url":"' + $SITE + '/logo.png","width":512,"height":512}}'
 function Crumbs($items) {   # items: @(@(name, path or $null), ...); returns @(html, jsonld)
   $li = New-Object Text.StringBuilder; $ld = New-Object Text.StringBuilder; $i = 0
@@ -452,6 +452,8 @@ function NameYears([string]$nm, [string]$yrs) {
   if ($y1 -and $nm -match ('(?<!\d)' + $y1 + '(?!\d)')) { return $nm }
   return "$nm ($yrs)"
 }
+# readers' support (Nov 2026): one quiet line at the foot of essays and reading paths (hidden in Kids mode)
+$SUPFOOT = '<p class="sup-foot">The Institute is free, independent and without ads. If this was worth your time, <a href="/support" data-ga="support_click" data-ga-src="@@SRC@@">support the Institute</a>.</p>'
 $NOIDX = @{}   # the paths written with "noindex, follow" (thin entries and year pages): left out of the sitemaps
 function Page($p) {
   $url = $SITE + $p.path; $img = if ($p.img) { $SITE + $p.img } else { "$SITE/images/og/default.jpg" }
@@ -2104,6 +2106,7 @@ for ($pi2 = 0; $pi2 -lt $RP.Count; $pi2++) {
   $tyH = TySection @((TyWhy $tySt ($tyS + '-w1') $tyU), (TyFirst $tySt 20 ($tyS + '-f1') $tyU), (TyLived $tySt ($tyS + '-l') $tyU), (TyWhy $tySt ($tyS + '-w2') $tyU), (TyFirst $tySt 20 ($tyS + '-f2') $tyU)) 'this path and its stops'
   if ($tyH) { $TYN.path++ }; [void]$sb.Append($tyH)
   $pv = $RP[($pi2 - 1 + $RP.Count) % $RP.Count]; $nx = $RP[($pi2 + 1) % $RP.Count]
+  [void]$sb.Append($SUPFOOT.Replace('@@SRC@@', 'path') + "`n")
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other reading paths"><a class="prev" rel="prev" href="/paths/' + $pv['slug'] + '"><span class="lbl">&larr; Previous path</span><span class="nm">' + (Hx ([string]$pv['title'])) + '</span></a><a class="next" rel="next" href="/paths/' + $nx['slug'] + '"><span class="lbl">Next path &rarr;</span><span class="nm">' + (Hx ([string]$nx['title'])) + "</span></a></nav>`n")
   [void]$sb.Append('<p class="enc-article-foot"><a class="enc-random-link" href="/paths/">All reading paths &rarr;</a></p>' + "`n</article>`n</div>`n</main>`n")
   $title = [string]$p['title'] + ': A Reading Path — The Epoch Institute'
@@ -2938,6 +2941,7 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
   foreach ($ps in $profs) { foreach ($pre in '/empire/', '/religion/', '/language/', '/culture/', '/movement/', '/government/', '/ideology/', '/work/') { if ($EMPURL.ContainsKey($pre + $ps)) { $esPr.Add([string]$EMPURL[$pre + $ps]['name']); break } } }
   foreach ($m in [regex]::Matches($ey.html, 'href="(/(?:empire|religion|language|culture|movement|government|ideology|work)/[^"#]+)"')) { if ($EMPURL.ContainsKey($m.Groups[1].Value)) { $esPr.Add([string]$EMPURL[$m.Groups[1].Value]['name']) } }
   $esSeen = @{}; foreach ($pn in $esPr) { if ($esSeen.ContainsKey($pn)) { continue }; $esSeen[$pn] = 1; if (-not $ESSLK.Contains($pn)) { $ESSLK[$pn] = New-Object Collections.Generic.List[string] }; $ESSLK[$pn].Add('[' + (Js $path) + ',' + (Js $title) + ']') }
+  [void]$sb.Append($SUPFOOT.Replace('@@SRC@@', 'essay') + "`n")
   [void]$sb.Append((CiteBox $title $url 'Research Series') + "`n")
   $pv = if ($ei -gt 0) { $ESSAYS[$ei - 1] } else { $null }; $nx = if ($ei -lt $ESSAYS.Count - 1) { $ESSAYS[$ei + 1] } else { $null }
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Other essays">' + $(if ($pv) { '<a class="prev" rel="prev" href="/essays/' + $pv.slug + '"><span class="lbl">&larr; Essay ' + $pv.num + '</span><span class="nm">' + (Hx $pv.hd['title']) + '</span></a>' } else { '' }) +
@@ -4411,6 +4415,9 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Faith Maps', '/faiths', 'faith maps|spread of religions|religion maps'), @('History Quiz', '/quiz', 'quiz|daily quiz|trivia'),
   @('Inventions Tree', '/inventions', 'inventions|inventions tree|history of inventions|timeline of inventions|inventions and discoveries|discoveries|history of technology|who invented|first invented|history of science|history of medicine'),
   @('Forms of Government', '/governance', 'forms of government|types of government|systems of government|political systems|government|governments|who should rule|six forms of government|kinds of government'),
+  @('Support the Institute', '/support', 'support|support the institute|donate|donation|ko-fi|friends of the institute|help the institute'),
+  @('Privacy', '/privacy', 'privacy|cookies|cookie settings|data|gdpr|analytics'),
+  @('Terms and Licences', '/terms', 'terms|licence|license|licences|copyright|reuse|cc by-sa|attribution'),
   @('Social Ladders', '/societies/', 'social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks'),
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
@@ -4627,7 +4634,7 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\whats-new.xml", $wx.ToString())) { $NW
 Say ("what's new: {0} release notes, {1} new pages in 30 days" -f $wnNotes.Count, $wnTotal)
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/support', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

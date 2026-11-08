@@ -17,7 +17,7 @@
 const fs = require('fs'), path = require('path'), zlib = require('zlib');
 const R = path.resolve(__dirname, '..'), CHECK = process.argv.includes('--check');
 const HAND = ['index', 'research', 'research-series', 'about', 'contributors', 'dataset', 'explorer', 'profiles', 'community', 'connections', 'atlas', 'quiz',
-  'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'weekly', 'write', 'faiths', 'flashcards', 'race', 'inventions', 'governance', 'compare', '404.html'];
+  'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'weekly', 'write', 'faiths', 'flashcards', 'race', 'inventions', 'governance', 'compare', 'privacy', 'terms', 'support', '404.html'];
 const GENERATED = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers', 'societies', 'songs'];
 // generated pages at the root (build-pages.ps1 writes them like the folders' pages; they link css/pages.css)
 const GENERATED_ROOT = ['new'];

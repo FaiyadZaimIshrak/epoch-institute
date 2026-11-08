@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card · privacy · terms · support
 A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
@@ -183,6 +183,39 @@ loaded them with `?v=`, a second address: a reader going from the home page to a
 10 minutes (css/.htaccess) and are linked without `?v=` too. Every other script tag carries a `?v=N`
 cache-buster: when you change such a file, bump its `?v=` on every page that loads it. data/*.json are sent as
 text/javascript (data/.htaccess) because the server does not compress application/json.
+
+## Earning from the Institute (plan of 8 Nov 2026; docs/REVENUE.md is the owner's checklist and log)
+The user's answers: all four streams (reader support, teaching packs, prints and book links, advertising), run by the user
+as an individual (so "support", never "donate"; no personal name on the site: "run by its editor"), paid out in the UK.
+Principles: the site stays free with no paywall; products are made only of the Institute's own work (maps on Natural
+Earth, data, timelines, quizzes, essays), never the Wikipedia-derived encyclopedia text or Commons pictures; the three ETCSL
+song pages (CC BY-NC-SA: Gilgamesh, Ninkasi, Kesh) and Kids mode / the Kids Corner never carry ads or prompts to pay.
+- **Phase 1 (shipped 8 Nov 2026):**
+  - **Pages:** /privacy, /terms (texts CC BY-SA 4.0, data CC BY 4.0, maps CC BY-SA, pictures per credit, ETCSL
+    non-commercial, the name and emblem excluded) and /support (Ko-fi https://ko-fi.com/the_epoch_institute, both buttons
+    to its main page, which offers monthly; Friends of the Institute wall, empty until a supporter agrees to be named).
+    All three are hand pages written by scratchpad d3/legal.js from /about's head, class legal-page; registered in
+    .htaccess, deploy.sh PAGES, split-css HAND, the sitemap list and SEARCH_PAGES.
+  - **Consent:** every analytics line (build-pages.ps1 $GTAG, generator.html, the hand pages; $GTAG0 unchanged, so no
+    page is dated) sets Google consent mode before config: analytics_storage granted only when localStorage
+    epoch-consent is 'yes' and the page is not in Kids mode; ad storage always denied.
+  - **The cookie bar:** shared-nav.js initConsent shows .consent-bar at the foot until a choice (Allow / No thanks), never
+    in Kids mode; [data-consent-open] reopens it (the footer's "Cookie settings", /privacy); window.epochConsent.
+  - **The footer:** Privacy · Terms and licences · Cookie settings; Support in the Institute column and the More menu.
+  - **Support prompts:**
+    - supportLine() in newsletterPrompt: one line after a daily game, at most once a UTC day (epoch-support-day);
+    - $SUPFOOT at the foot of essays and reading paths (.sup-foot);
+    - both hidden in Kids mode and print.
+  - **About:** "How we work" says drafts are written with AI help from the named sources and read against them, and who
+    runs the Institute.
+  - **Measuring:** a click on any [data-ga] element sends that GA4 event (support_click with data-ga-src;
+    newsletter_signup from subscribeNewsletter).
+- **Next:**
+  - phase 2: classroom packs (make-packs.js, own questions, maps and timelines only), book links (Open Library ISBNs to
+    Bookshop.org UK and Amazon UK, rel="sponsored", with a disclosure), /shop, the newsletter's welcome gift;
+  - phase 3: print designs (make-prints.js, A2 at 300 dpi from own data) and the essays as an ebook;
+  - phase 4: Journey by Mediavine ads, with slots only on reference pages, height reserved, after consent, never on the
+    excluded pages, and a check-site rule.
 
 ## The site's mail (send.php)
 Every form posts to /send.php, the Institute's own PHP mail handler on the hosting (PHP 8.2 there, written for 7.4+;

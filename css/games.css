@@ -1214,6 +1214,26 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .gm-nl-row button:disabled { opacity: 0.6; cursor: default; }
 .gm-nl-msg { font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin: 6px 0 0; min-height: 1em; }
 .gm-nl-ok { font-family: var(--font-text); font-size: 15px; color: var(--success); margin: 0; }
+.gm-support { max-width: 420px; margin: 14px auto 0; font-family: var(--font-text); font-size: 15px; line-height: 1.5; color: var(--muted); }
+.gm-support a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+[data-kids="1"] .gm-support { display: none; }
+@media print {
+.sup-foot, .gm-support { display: none !important; }
+}
+.footer-legal { font-style: normal; letter-spacing: 0; }
+.footer-legal a, .footer-cookies { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.footer-cookies { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.footer-legal a:hover, .footer-cookies:hover { color: var(--text); }
+.consent-bar { position: fixed; z-index: 1200; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); max-width: 760px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 12px 16px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35); font-family: var(--font-ui); font-size: 14px; line-height: 1.45; }
+.consent-bar p { margin: 0; flex: 1 1 320px; min-width: 0; }
+.consent-bar a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+.consent-btns { display: flex; gap: 8px; }
+.consent-btns button { font: 600 14px var(--font-ui); border-radius: 999px; padding: 8px 18px; min-height: 40px; cursor: pointer; border: 1px solid var(--gold); }
+.consent-btns [data-consent="yes"] { background: var(--gold); color: var(--bg); }
+.consent-btns [data-consent="no"] { background: transparent; color: var(--text); }
+@media print {
+.consent-bar { display: none !important; }
+}
 .gm-conf { position: absolute; left: 50%; top: 55%; width: 7px; height: 11px; border-radius: 2px; background: var(--gold); opacity: 0; animation: gm-conf 1.5s cubic-bezier(0.15, 0.7, 0.4, 1) var(--d) forwards; pointer-events: none; }
 .gm-conf:nth-child(3n) { background: var(--gold-light); width: 6px; height: 6px; border-radius: 50%; }
 .gm-conf:nth-child(4n) { background: var(--text); }
