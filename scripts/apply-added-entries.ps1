@@ -58,6 +58,21 @@ foreach ($x in @($A.pictures | Where-Object { $_ })) {
   if ($line2 -eq $line) { $d = [regex]::Match($line, ',desc:"(?:[^"\\]|\\.)*"'); $line2 = $line.Substring(0, $d.Index + $d.Length) + $cr + $line.Substring($d.Index + $d.Length) }
   $text = $text.Substring(0, $m.Index) + $line2 + $text.Substring($m.Index + $m.Length); $nPic++
 }
+# "nopicture" ([slug, why]; 8 Nov 2026): a picture the merge took from a namesake's article (the village of Kanye had
+# Kanye West, the Mongol prince Duden the German dictionary) comes off the entry and its preview card, and the files go
+$nNoPic = 0
+foreach ($x in @($A.nopicture | Where-Object { $_ })) {
+  $s = [string]$x[0]
+  $m = [regex]::Match($text, '(?m)^  \{slug:"' + [regex]::Escape($s) + '".*$'); if (-not $m.Success) { Write-Warning "nopicture: no entry $s"; continue }
+  $line2 = [regex]::Replace($m.Value, ',img:"(?:[^"\\]|\\.)*",credit:\{artist:"(?:[^"\\]|\\.)*",licence:"(?:[^"\\]|\\.)*",source:"(?:[^"\\]|\\.)*"\}', '')
+  if ($line2 -ne $m.Value) { $text = $text.Substring(0, $m.Index) + $line2 + $text.Substring($m.Index + $m.Length); $nNoPic++ }
+  $pf = "$Repo\data\enc-preview\$($s.Substring(0, 1)).json"
+  if (Test-Path $pf) {
+    $pt = [IO.File]::ReadAllText($pf, $u8); $pt2 = $pt.Replace('"i":"/images/encyclopedia/' + $s + '.jpg"', '"i":""')
+    if ($pt2 -ne $pt) { [IO.File]::WriteAllText($pf, $pt2, $u8) }
+  }
+  foreach ($f in "images\encyclopedia\$s.jpg", "images\encyclopedia\thumbs\$s.jpg", "images\games\$s.jpg") { if (Test-Path "$Repo\$f") { Remove-Item -LiteralPath "$Repo\$f" } }
+}
 $nFix = 0
 foreach ($x in @($A.fixes | Where-Object { $_ })) {
   $m = [regex]::Match($text, '(?m)^  \{slug:"' + [regex]::Escape([string]$x[0]) + '".*$'); if (-not $m.Success) { Write-Warning "fixes: no entry $($x[0])"; continue }
@@ -204,4 +219,4 @@ foreach ($x in @($A.exclude | Where-Object { $_ })) {
 if ($ins.Count -or $nY -or $nPat -or $nSet -or $nForm -or $nFirst -or $nDrop -or $nEx) {
   [IO.File]::WriteAllText("$Repo\encyclopedia-links.js", $el.Substring(0, $i0) + (EncJson $L) + $el.Substring($i1 + 1), $u8)
 }
-"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  exclusions: $nEx  pictures replaced: $nPic  descriptions fixed: $nFix  dates set: $nDate (preview cards: $nPrevD)  entries without a link row: $nBare"
+"entries added: $($add.Count)  empty empires lists added: $nEmp  link rows added: $($ins.Count)  rows set back: $nSet  names added to rows: $nPat  names taken out: $nDrop  event years: $nY  forms added: $nForm  forms put first: $nFirst  profiles named: $nMen  exclusions: $nEx  pictures replaced: $nPic  pictures taken off: $nNoPic  descriptions fixed: $nFix  dates set: $nDate (preview cards: $nPrevD)  entries without a link row: $nBare"

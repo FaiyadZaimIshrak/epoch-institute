@@ -480,8 +480,9 @@ function Page($p) {
 }
 # a page's share poster (images/og/<name>.jpg, drawn by scripts/make-posters.js), when it has been drawn
 function Poster([string]$name) { $f = '/images/og/' + $name + '.jpg'; if (Test-Path (Join-Path $Repo ($f.TrimStart('/') -replace '/', '\'))) { $f } else { $null } }
-function ArticleLd([string]$headline, [string]$desc, [string]$path, [string]$aboutType, [string]$aboutName, $aka, $image) {
-  $about = '{"@type":"' + $aboutType + '","name":' + (Js $aboutName) + $(if ($aka -and @($aka).Count) { ',"alternateName":[' + ((@($aka) | ForEach-Object { Js ([string]$_) }) -join ',') + ']' } else { '' }) + '}'
+function ArticleLd([string]$headline, [string]$desc, [string]$path, [string]$aboutType, [string]$aboutName, $aka, $image, $same) {
+  $about = '{"@type":"' + $aboutType + '","name":' + (Js $aboutName) + $(if ($aka -and @($aka).Count) { ',"alternateName":[' + ((@($aka) | ForEach-Object { Js ([string]$_) }) -join ',') + ']' } else { '' }) +
+    $(if ($same -and @($same).Count) { ',"sameAs":[' + ((@($same) | ForEach-Object { Js ([string]$_) }) -join ',') + ']' } else { '' }) + '}'
   return '{"@type":"Article","headline":' + (Js $headline) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + ',"mainEntityOfPage":' + (Js ($SITE + $path)) +
     ',"inLanguage":"en-GB","dateModified":"@@MOD@@","author":' + $ORG + ',"publisher":' + $ORG + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"},"about":' + $about +
     $(if ($image) { ',"image":' + $image } else { '' }) + '}'
@@ -594,6 +595,10 @@ $EL = $JSS.DeserializeObject($elText.Substring($i0, $i1 - $i0 + 1)); $elText = $
 $ROWS = $EL['e']; $FS = if ($EL.ContainsKey('fs')) { [int]$EL['fs'] } else { $ROWS.Count }
 $Y = @{}; foreach ($kv in $EL['y'].GetEnumerator()) { $Y[$kv.Key] = $kv.Value }
 # a profile's own entry (ENC_LINKS.self: profile name -> entry slug), so the entry page can link "Full profile"
+# each entry's Wikipedia article and Wikidata item (scripts/entry-wikidata.tsv, written by scripts/tools/entry-wikidata.js: kept only where
+# something besides the name agrees): the "Read further" line and the sameAs of the JSON-LD
+$EWD = @{}; if (Test-Path "$Repo\scripts\entry-wikidata.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-wikidata.tsv", $U8)) { if ($l -and -not $l.StartsWith('#')) { $c = $l.Split("`t"); if ($c.Count -ge 3 -and $c[1] -and $c[2] -match '^Q\d+$') { $EWD[$c[0]] = @($c[1], $c[2], $(if ($c.Count -ge 5 -and $c[4]) { $c[4] } else { 'same' }), $(if ($c.Count -ge 6) { $c[5] } else { '' })) } } } }
+function WpUrl([string]$t) { 'https://en.wikipedia.org/wiki/' + ([Uri]::EscapeDataString($t.Replace(' ', '_')) -replace '%2C', ',' -replace '%28', '(' -replace '%29', ')' -replace '%3A', ':' -replace '%27', "'" -replace '%2F', '/') }
 $SELFP = @{}; if ($EL.ContainsKey('self')) { foreach ($kv in $EL['self'].GetEnumerator()) { $SELFP[[string]$kv.Value] = [string]$kv.Key } }
 $KW = New-Object 'System.Collections.Generic.Dictionary[string,System.Collections.Generic.List[object]]'; $nPat = 0; $ALWAYS = New-Object System.Collections.Generic.List[object]
 for ($ri = 0; $ri -lt $(if ($SkipEntries) { 0 } else { $FS }); $ri++) {
@@ -1065,6 +1070,8 @@ foreach ($e in $ENT) {
             else { (Hx $SING[$e.type]) + $(if ($e.sub -and $e.sub -ne 'other' -and $e.type -ne 'polity' -and $e.type -ne 'factor') { ' · ' + (Hx $e.sub) } else { '' }) }
   $meta = @(); if ($e.dates) { $meta += '<span class="dates">' + [EpochBuild.W]::LinkYears($e.dates, $YEARSET) + '</span>' }
   $ec = $ENTCENT[$e.slug]; if ($ec -and $CENTSET.ContainsKey($ec)) { $meta += CentLink $ec }
+  # an entry dated to one day ("14 October 1066", "17 March") links that day's page in Today in History (there is none for 29 February)
+  if ($e.dates -match '^(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)(?: \d{1,4}(?: BCE)?)?$' -and -not ($Matches[2] -eq 'February' -and $Matches[1] -eq '29') -and [int]$Matches[1] -ge 1 -and [int]$Matches[1] -le 31) { $meta += '<a href="/today-in-history/' + $Matches[2].ToLowerInvariant() + '-' + [int]$Matches[1] + '">On this day: ' + [int]$Matches[1] + ' ' + $Matches[2] + '</a>' }
   if ($e.aka.Count) { $meta += 'Also known as ' + (($e.aka | ForEach-Object { Hx ([string]$_) }) -join ', ') }
   if ($e.war -and $BY.ContainsKey($e.war)) { $meta += 'Part of the <a class="enc-link" href="/encyclopedia/' + $e.war + '">' + (Hx $BY[$e.war].name) + '</a>' }
   $fig = ''; $imgLd = $null; $sz = $null
@@ -1133,13 +1140,22 @@ foreach ($e in $ENT) {
   $pv = if ($e.i -gt 0) { $ENT[$e.i - 1] } else { $null }; $nx = if ($e.i -lt $NENT - 1) { $ENT[$e.i + 1] } else { $null }
   [void]$body.Append('<nav class="ref-prevnext" aria-label="Neighbouring entries">' + $(if ($pv) { '<a class="prev" rel="prev" href="/encyclopedia/' + $pv.slug + '"><span class="lbl">&larr; Previous entry</span><span class="nm">' + (Hx $pv.name) + '</span></a>' } else { '' }) +
     $(if ($nx) { '<a class="next" rel="next" href="/encyclopedia/' + $nx.slug + '"><span class="lbl">Next entry &rarr;</span><span class="nm">' + (Hx $nx.name) + '</span></a>' } else { '' }) + "</nav>`n")
+  # Read further: the entry's Wikipedia article and Wikidata item (sameAs in the JSON-LD); where Wikipedia sends the name to
+  # a section of a broader article or to a broader one (a battle to its campaign), only the article, and no sameAs
+  $wdx = $EWD[$e.slug]; $wdSame = $null
+  if ($wdx) {
+    $wpu = (WpUrl $wdx[0]) + $(if ($wdx[3]) { '#' + [Uri]::EscapeDataString($wdx[3].Replace(' ', '_')) } else { '' })
+    if ($wdx[2] -eq 'same') { $wdSame = @($wpu, ('https://www.wikidata.org/wiki/' + $wdx[1])) }
+    [void]$body.Append('<p class="enc-further"><span class="lbl">Read further</span> <a href="' + (Hx $wpu) + '" rel="noopener">' + (Hx $wdx[0]) + ' on Wikipedia</a>' +
+      $(if ($wdSame) { ' <a href="' + $wdSame[1] + '" rel="noopener">Wikidata ' + $wdx[1] + '</a>' } else { '' }) + '</p>' + "`n")
+  }
   [void]$body.Append((CiteBox $e.name $url 'The Epoch Institute Encyclopedia') + "`n")
   [void]$body.Append('<p class="ref-updated"><span>Last reviewed ' + $Reviewed + '</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>' + "`n</article>`n</div>`n</main>`n")
   $kind = KindOf $e; $desc = [EpochBuild.W]::Summary($(if ($e.desc) { $e.desc } else { "$($e.name): an entry in The Epoch Institute Encyclopedia." }), 155)
   # a song's entry and its page in Songs in History start from the same story: the entry's description says what it is first
   if ($e.sub -eq 'song' -and $e.desc) { $desc = [EpochBuild.W]::Summary("$($e.name)" + $(if ($e.dates) { " ($($e.dates))" } else { '' }) + ', a song: ' + $e.desc, 155) }
   $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { $e.dates } else { '' }
-  $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd)
+  $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd $wdSame)
   Emit $path (Page @{ title = "$(NameYears $e.name $tDates) — Encyclopedia — The Epoch Institute"; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; body = $body.ToString() })
   if (($e.i % 2000) -eq 1999) { Say "  $($e.i + 1) entries" }
 }
@@ -4447,7 +4463,9 @@ for ($siI = 0; $siI -lt $siFcL.Count; $siI++) {
   for ($siJ = 0; $siJ -lt $siRows.Count; $siJ++) {
     $siG = $siRows[$siJ].Groups; $siRi = [int]$siG[3].Value; $siSl = $siRowSlugs[$siJ]
     if ($BY.ContainsKey($siSl) -and $BY[$siSl].type -eq 'person') { $siRg = PersonRegion $BY[$siSl]; $siNr = if ($siRg -and $siFcRI.ContainsKey([string]$siRg)) { $siFcRI[[string]$siRg] } else { -1 }; if ($siNr -ne $siRi) { $siRi = $siNr; $siRgFix++ } }
-    $siParts.Add('[' + $siG[1].Value + ',' + $siG[2].Value + ',' + $siRi + ',' + $siG[4].Value + ']')
+    # the picture flag follows the entry too (8 Nov 2026: pictures taken off namesake entries)
+    $siPf = if ($BY.ContainsKey($siSl)) { if ($BY[$siSl].img) { '1' } else { '0' } } else { $siG[4].Value }; if ($siPf -ne $siG[4].Value) { $siRgFix++ }
+    $siParts.Add('[' + $siG[1].Value + ',' + $siG[2].Value + ',' + $siRi + ',' + $siPf + ']')
   }
   if ($siRgFix) {
     $siFcL[$siI] = 'e:[' + ($siParts -join ',') + '],'; $siFcNew = $siFcL -join "`n"

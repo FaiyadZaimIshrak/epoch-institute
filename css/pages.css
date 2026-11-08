@@ -1532,6 +1532,9 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .ref-cite dd { margin: 0; font-size: 16px; line-height: 1.55; overflow-wrap: anywhere; }
 .ref-copy { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 2px; padding: 2px 8px; margin-left: 6px; cursor: pointer; }
 .ref-copy:hover { border-color: var(--gold); }
+.enc-further { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-family: var(--font-ui); font-size: 14px; margin: 0; }
+.enc-further .lbl { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.enc-further a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
 .ref-updated { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin: 0; }
 .ref-az { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
 .ref-az a { display: grid; justify-items: center; gap: 2px; padding: 12px 6px; border: 1px solid var(--border); border-radius: 2px; text-decoration: none; background: var(--surface); }
@@ -2788,7 +2791,7 @@ p.soc-term { font-size: 15px; line-height: 1.4; }
 [data-kids="1"] .soc-kd-open { margin: 18px 0 0; }
 [data-kids="1"].kd-open .kd-story, [data-kids="1"].kd-open .kd-short { display: none; }
 [data-kids="1"] .kd-short .kd-story { display: flex; width: fit-content; margin: 12px 0 0; }
-[data-kids="1"] .ref-cite, [data-kids="1"] .ref-updated { display: none; }
+[data-kids="1"] .ref-cite, [data-kids="1"] .ref-updated, [data-kids="1"] .enc-further { display: none; }
 .nav-kids-btn svg { display: block; }
 .nav-kids-btn[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); background: rgba(var(--gold-rgb), 0.16); }
 [data-kids="1"] .nav-kids-btn { animation: kd-wiggle 0.6s 0.4s; }

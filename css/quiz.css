@@ -1211,7 +1211,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 [data-kids="1"]:not(.kd-open) .kd-rough { display: none; }
 [data-kids="1"].kd-open .kd-story, [data-kids="1"].kd-open .kd-short { display: none; }
 [data-kids="1"] .kd-short .kd-story { display: flex; width: fit-content; margin: 12px 0 0; }
-[data-kids="1"] .ref-cite, [data-kids="1"] .ref-updated { display: none; }
+[data-kids="1"] .ref-cite, [data-kids="1"] .ref-updated, [data-kids="1"] .enc-further { display: none; }
 .nav-kids-btn svg { display: block; }
 .nav-kids-btn[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); background: rgba(var(--gold-rgb), 0.16); }
 [data-kids="1"] .nav-kids-btn { animation: kd-wiggle 0.6s 0.4s; }

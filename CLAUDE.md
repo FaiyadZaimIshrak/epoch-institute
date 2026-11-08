@@ -98,7 +98,9 @@ it cost a phone 250-310 ms of main thread). Pages are hashed with the old snippe
   maps holding links are role="group" not "img" (MapSvg, connections-map.js), picture credit links 24 px tall, essay
   tables focusable regions named by their caption, Galician-Portuguese tagged gl. Left as they are: the /centuries/ bar
   (narrow columns; the same centuries are linked full size below it, the 2.5.8 equivalent exception) and lang="wdt"
-  (Wendat: a registered subtag that axe's list lacks). The block is the "WCAG 2.2 AA" section near the end of shared.css.
+  (Wendat: a registered subtag that axe's list lacks). Re-run 8 Nov 2026 over the pages since (work/ profiles, Six
+  Degrees, Who Said It?, people by region, the newest ladders, songs and entries, /weekly, /new; three modes): only Six
+  Degrees' links in running text ("You are at <entry>", the route) were told by colour alone; now underlined. The block is the "WCAG 2.2 AA" section near the end of shared.css.
   Form fields take --field-border (3:1 against the page in both themes and Kids mode; --border, 1.4-1.7:1, is for
   cards and rules): one rule at the end of the file sets it on every bordered input, select and textarea not focused.
   Layout shift (CLS) fixed Oct 2026, keep it so: nothing above content may arrive late. The atlas's region buttons are
@@ -298,6 +300,27 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   chips show ENC_COUNTS, the counts by type the builder writes into the page's `build:enc-counts` block).
   Entry pages link their century (/centuries/<c>, from the dates: an event's first year; a person's working life,
   two thirds from birth to death) and term entries link the glossary.
+  Read further (8 Nov 2026, D1): an entry links its Wikipedia article and Wikidata item (.enc-further above the cite box,
+  hidden in Kids mode; "sameAs" on the Article's "about" in the JSON-LD) from scripts/entry-wikidata.tsv, written by
+  scripts/tools/entry-wikidata.js [--report=f.tsv]: the name's article (redirects followed, disambiguation pages refused)
+  is kept only where something besides the name agrees: the entry's picture is the article's lead image or the item's
+  P18 (pic, 22,657), the item's own years meet the entry's dates (years, 3,631: a person must be a human, P31 Q5, within
+  30 years; anything else within 50 and not a human), or with no years the entry and the article's first four sentences
+  share six content words and a third of the shorter (text, 1,439; samples read at each step: below that the Nzakara
+  people matched the Nzakara language, "Indian Army" the present-day army). 27,335 of 33,715; an item two entries claim
+  stays with the one named exactly as the article. Scope: "same" (the article, or a spelling of it: 26,609) gets sameAs
+  and the Wikidata link; "section" (Wikipedia sends the name to a section of a broader article: 95, linked to the
+  section) and "redirect" (to a broader or other article, a battle to its campaign, Burma to Myanmar: 631) only the
+  Wikipedia link. scripts/entry-wikidata-manual.tsv is the editor's (wins; "-" for none). Responses cached in
+  %LOCALAPPDATA%\epoch-tools\wd-cache (the query service in batches of 250, the extracts 20 at a time).
+  The check found 25 entries whose picture came from a namesake's article at the merges (the village of Kanye had
+  Kanye West, the Mongol prince Duden the German dictionary, Ferns the plant, Panduranga the god Vithoba, Valuk an
+  armoured vehicle, Gajayana a train): taken off by scripts/added-entries.json "nopicture" ([slug, what it showed];
+  apply-added-entries.ps1 clears the entry, its preview card and the files), Champa's governance section picture
+  (Vithoba) went with them and home-data.js's Phaenomena puzzle lost its picture (home-data.js?v=28). Its report-kind
+  list (picture matches across the human line) is where they show: legendary figures fill most of it. The build now
+  also sets search-facets.js's picture flags from the entries. An entry dated to one day ("14 January 1526", "17
+  March") links that day in Today in History beside its dates ("On this day: 14 January"; none for 29 February).
 - `/state/<id>` — 4,961 state pages (the 507 states with a profile are redirected to it by state/.htaccess, also
   written by the builder); `/state/browse/<region>`. Key facts link the centuries and the present-day countries;
   the sidebar has a locator map (the state, its connected states, a link to the atlas at its middle year).

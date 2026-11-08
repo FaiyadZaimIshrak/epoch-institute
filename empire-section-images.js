@@ -4549,7 +4549,6 @@ var SECTION_IMAGES = {
     foundation:{slug:"my-son",name:"Mỹ Sơn",img:"/images/encyclopedia/my-son.jpg",artist:"Nguyenthuanduc",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:X%C3%A3_M%E1%BB%B9_S%C6%A1n,_Ninh_S%C6%A1n.jpg"},
     socioeconomy:{slug:"incense",name:"Incense",img:"/images/encyclopedia/incense.jpg",artist:"nakimusi",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Incense_burner_at_Yakuo-in.jpg"},
     military:{slug:"jayavarman-vii",name:"Jayavarman VII",img:"/images/encyclopedia/jayavarman-vii.jpg",artist:"Suzan Black",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg"},
-    governance:{slug:"panduranga",name:"Panduranga",img:"/images/encyclopedia/panduranga.jpg",artist:"Balkrishna Kulkarni.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Syayambhuvithoba.jpg"},
     impact:{slug:"kublai-khan",name:"Kublai Khan",img:"/images/encyclopedia/kublai-khan.jpg",artist:"Araniko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg"},
     decline:{slug:"kauthara",name:"Kauthara",img:"/images/encyclopedia/kauthara.jpg",artist:"wileypics",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:PonNagarChamTowers.jpg"},
     summary:{slug:"le-thanh-tong",name:"Lê Thánh Tông",img:"/images/encyclopedia/le-thanh-tong.jpg",artist:"Ngoisao.vn",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:L%C3%AA_Th%C3%A1nh_T%C3%B4ng.jpg"}
