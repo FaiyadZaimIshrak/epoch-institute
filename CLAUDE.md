@@ -1280,6 +1280,18 @@ pictures on 6 Nov 2026 from fifteen new entries of the peoples' own things, wave
 art, Clovis point, sumatralith, nuraghe, Nuragic bronzes, Su Nuraxi, Heuneburg, the Korean dolmens, the Ain Sakhri figurine,
 dogū, the Dong Son drum, Makassan contact and the Amesbury Archer, whose grave is not shown to children). Regenerate the
 profiles after a story changes.
+Religions and movements (8 Nov 2026, D3): 61 more stories, the 30 religions and 31 of the 35 movements (not Zionism, the
+Young Turks, the Taiping Rebellion or the Arab Spring: a contested present, a genocide, one of the deadliest wars and civil
+wars still going on, which ten sentences for children cannot tell fairly). kids-packs.js --kind=religion|movement writes
+their packs (the profile's own folder, "a LIVING faith, practised today"); the guide's last section is their brief (beliefs
+told as what believers hold, "In the stories of the Greeks …", no ranking of faiths, a movement's opponents and failures
+as the pack tells them). Six writers; scripts/kinds/kids-src-check.js <stories> <packs> [--faults] checks every sentence's
+quoted source is in its pack and its numbers in that source, and prints each sentence beside its source; the editor read
+them all with their pictures on contact sheets: 38 pictures were left out (modern city views of Rome, Budapest, Cairo,
+Carthage and Kyiv, maps, flags, logos, coats of arms, another faith's manuscript or papyrus, "New Delhi" for the Lotus
+Temple), so those pages show their words alone ("pic": "-", several allowed in one story), and the Yazidi page says IS
+"carried off" thousands of women and girls. kids-stories-merge.js takes the three kinds; /kids's "Stories of the peoples"
+still lists the cultures only.
 
 ## Write in ancient scripts (/write, the language profiles' #write)
 scribe.js: a keyboard for the 12 languages with scripts of their own (Latin, Nahuatl, Swahili and Quechua, written in

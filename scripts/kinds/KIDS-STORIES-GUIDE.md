@@ -42,3 +42,19 @@ twice in one story. The page's sentences should fit its picture.
 ```
 "src" has one entry per sentence: the exact phrase (or phrases, joined with " / ") from the pack it rests on. Count:
 4-6 pages, 8-12 sentences, each at most 22 words. Check every file parses as JSON.
+
+## Religions and movements (8 Nov 2026)
+The same rules, with these for the two other kinds whose packs say "kind: religion" or "kind: movement":
+- Title: "The story of Buddhism", "The story of the Bhakti movement", "The story of Impressionism".
+- A religion's beliefs, gods and sacred stories are told as what its believers hold, never as fact and never as error:
+  "Buddhists believe that…", "In the stories of the Greeks, Zeus…", "Sikhs follow the teachings of ten Gurus". Its
+  founders' lives are told as the pack tells them, with "according to tradition" where the pack says so.
+- A LIVING faith is written in the present tense where it speaks of believers today ("Today about … people follow it",
+  only with the pack's own figure, rounded down). An ancient religion that ended is told in the past tense, with what
+  remains of it: temples, texts, festivals, words.
+- No ranking of faiths, no "the true", "the first real", "superstition", "pagan" as an insult, "cult" or "sect" unless
+  the pack names it so. Persecution of believers is told plainly and gently, by whom the pack says.
+- A movement's pages follow it: the world before it (what people wanted to change), its people and what they did, what
+  it changed, and what remains today. Its opponents and its failures are told as the pack tells them.
+- Pictures: for a religion, the pack's section pictures and "home" first; from "More pictures" only the faith's own
+  places, objects and art (a temple, a scripture, a sculpture, a festival), never a battle, a map or a flag.
