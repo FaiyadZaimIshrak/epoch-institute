@@ -131,6 +131,22 @@ jobs:
           fi
           SSH_KEY_FILE=~/.ssh/deploy_key bash scripts/deploy.sh
 
+      # Cloudflare keeps the pages near the readers (a Cache Rule, docs/CLOUDFLARE.md "Pages at the edge"): after every
+      # deploy it is told to forget them, so nobody sees a page older than the deploy. Skipped while the two secrets
+      # are not set (then Cloudflare does not keep pages either, so there is nothing to forget).
+      - name: Purge Cloudflare's copies
+        if: env.DRY_RUN != '1'
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          if [ -z "$CF_TOKEN" ] || [ -z "$CF_ZONE" ]; then echo "No Cloudflare secrets: nothing to purge"; exit 0; fi
+          zone=$(printf '%s' "$CF_ZONE" | tr -d '[:space:]')
+          out=$(curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/$zone/purge_cache" \
+            -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data '{"purge_everything":true}')
+          echo "$out" | grep -q '"success":true' || { echo "::error::Cloudflare purge failed: $out"; exit 1; }
+          echo "Cloudflare's copies purged"
+
       - name: Check the site answers
         if: env.DRY_RUN != '1'
         run: |

@@ -31,10 +31,12 @@ themselves (HTML) still come fresh from the server, as now.
 ## What is already done
 
 The domain already uses Cloudflare's name servers (`clara.ns.cloudflare.com`, `cesar.ns.cloudflare.com`), so
-**nothing changes at Namecheap**. In Cloudflare, though, the records are "DNS only" (grey cloud): Cloudflare only tells
-browsers the server's address, and visitors still go straight to the server.
+**nothing changes at Namecheap**.
 
-Turning the cloud orange ("Proxied") on two records sends visitors through Cloudflare. A grey cloud undoes it.
+**Done on 8 November 2026:** steps 1 to 5 below. The site and `www` are proxied (orange cloud): Cloudflare answers from
+the reader's nearest data centre (Stockholm, from the office) and keeps the pictures, scripts and styles. `mail` stays
+"DNS only", as it must. The next step is **Pages at the edge**, at the end. Steps 1 to 5 are kept here for reference,
+and for undoing them.
 
 ## Before you start
 
@@ -110,11 +112,68 @@ Nothing to do.
 
 If something ever looks stale, use **Caching → Configuration → Purge Everything**.
 
-## Later (optional)
+## Pages at the edge (the next step, about 15 minutes)
 
-Cloudflare can also keep the pages themselves for a few minutes (a Cache Rule for HTML). The deploy would then purge
-them after every push, so visitors anywhere get pages in a fraction of a second, without the trip to Singapore. This
-needs a Cloudflare API token
-saved as a GitHub secret, and a purge step added to `.github/workflows/deploy.yml`. Claude can add the step.
+The proxy is on since 8 November 2026: pictures, scripts, styles and fonts come from Cloudflare's copy near the reader,
+but every page still makes the trip to Singapore. Cloudflare can keep the pages too. The deploy then tells it to forget
+them after every push (the step "Purge Cloudflare's copies" in `.github/workflows/deploy.yml`, already in place), so a
+reader never sees a page older than the last deploy. Do the steps in this order.
+
+### 1. A token that may only purge the cache
+
+1. Cloudflare: click your profile icon (top right) → **My Profile → API Tokens → Create Token**.
+2. At the bottom, **Create Custom Token → Get started**.
+3. **Token name:** `GitHub deploy purge`.
+4. **Permissions:** `Zone` · `Cache Purge` · `Purge`. Nothing else.
+5. **Zone Resources:** `Include` · `Specific zone` · `the-epoch-institute.org`.
+6. **Continue to summary → Create Token.** Copy the token now: Cloudflare shows it only once.
+
+### 2. The zone's ID
+
+Cloudflare → the-epoch-institute.org → **Overview**. In the right-hand column, under **API**, copy the **Zone ID**.
+
+### 3. Two GitHub secrets
+
+GitHub → the repository → **Settings → Secrets and variables → Actions → New repository secret**:
+
+- `CLOUDFLARE_API_TOKEN`: the token from step 1.
+- `CLOUDFLARE_ZONE_ID`: the ID from step 2.
+
+Then **Actions → Deploy → Run workflow**, untick **Dry run**, and **Run**. Its step "Purge Cloudflare's copies" must end
+green with "Cloudflare's copies purged". If it fails, the message says why; the most common cause is a token for the wrong
+zone.
+
+### 4. The Cache Rule (only once step 3 ran green)
+
+Cloudflare → the-epoch-institute.org → **Caching → Cache Rules → Create rule**:
+
+- **Rule name:** `Pages at the edge`.
+- **If incoming requests match… → Custom filter expression → Edit expression**, and paste:
+
+  ```
+  (http.host eq "the-epoch-institute.org" and not starts_with(http.request.uri.path, "/send.php") and not starts_with(http.request.uri.path, "/feeds/") and http.request.uri.path ne "/sw.js" and http.request.uri.path ne "/offline.html")
+  ```
+
+- **Then… Cache eligibility:** **Eligible for cache**.
+- **Edge TTL:** **Ignore cache-control header and use this TTL** → **4 hours**.
+- **Browser TTL:** **Respect origin TTL** (browsers keep checking with Cloudflare, as now).
+- **Deploy.**
+
+What the rule leaves alone:
+- `send.php`, the forms' mail handler: it must always run.
+- `/feeds/`, which the daily feed rewrites each morning.
+- `sw.js` and `offline.html`, the offline helper, which must never be stale.
+
+Everything else (pages, pictures, data) is kept for up to 4 hours, and forgotten at every deploy.
+
+### 5. Check
+
+1. Open a page twice, for example /empire/roman-empire. In the browser's developer tools (F12 → Network → the page →
+   Headers), the second time should say `cf-cache-status: HIT`. Or ask Claude to check.
+2. Send a message from /contact: it must still arrive.
+
+### Undo
+
+Delete or turn off the rule (Caching → Cache Rules). The two secrets can stay: the purge is harmless without the rule.
 
 Note: the server's address stays public through the `mail` record. That is normal for shared hosting.

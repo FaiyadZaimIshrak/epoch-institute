@@ -253,9 +253,12 @@ same size from Vultr's Singapore server 1.7 s (max 3.1 s), over the same line; p
 later under 2 s (scratchpad speed2/probe.tsv, pw/waterfall.js; check-host.net: 0.09 s from Jakarta, 0.7-2.8 s from
 Europe). The owner's PC also has Avast's HTTPS scanning in every connection, which queues the files further. Every KB
 counts on that line: hence css/ (above). The domain's DNS is at
-Cloudflare (name servers clara/cesar.ns.cloudflare.com) with the records DNS only, so visitors reach the server
-directly; docs/CLOUDFLARE.md is the owner's guide to turning the proxy on, the real cure for that distance (Full (strict) first, `mail` stays DNS only,
-Bot Fight Mode off for the workflows' checks). docs/DEPLOY.md has the setup, dry
+Cloudflare (name servers clara/cesar.ns.cloudflare.com), and since 8 Nov 2026 the site and www are PROXIED (Full (strict),
+`mail` DNS only, Bot Fight Mode off for the workflows' checks; answered from Stockholm here, pictures cf-cache-status HIT,
+pages still DYNAMIC from Singapore). Next, docs/CLOUDFLARE.md "Pages at the edge": a purge-only API token and the zone ID as
+the secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ZONE_ID (the deploy's step "Purge Cloudflare's copies" purges everything
+after each deploy, and is skipped without them), then a Cache Rule keeping pages 4 hours at the edge (not send.php,
+/feeds/, sw.js, offline.html). docs/DEPLOY.md has the setup, dry
 runs (Run workflow with "Dry run", the default; runs from any branch but master are always dry; DRY_RUN=1 by hand),
 deploys by hand (Linux, macOS or WSL: Git Bash has no rsync) and rollbacks (revert and push, or Run workflow with a
 Commit). Until 27 Oct 2026 cPanel deployed from its own clone of the repository by running .cpanel.yml; the clone
