@@ -67,6 +67,12 @@ function span(d) {
   if (!ys.length) return null;
   return [Math.min(...ys), Math.max(...ys)];
 }
+// the years a description names: four-digit years, and any number written with BCE/CE
+function descSpan(t) {
+  const ys = []; let m; const re = /\b(\d{1,4})\s*(BCE|BC|CE|AD)\b|\b(1\d{3}|20[0-2]\d)\b/g;
+  while ((m = re.exec(String(t || '')))) ys.push(m[1] ? (/^B/.test(m[2]) ? -m[1] : +m[1]) : +m[3]);
+  return ys.length ? [Math.min(...ys), Math.max(...ys)] : null;
+}
 const STOP = new Set('the a an of and in on at to for by from with as or was is were are be his her its their which that this who whom also first one two three born died known best most part into during after before under over between city town river state kingdom empire people person'.split(' '));
 const words = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/[^a-z]+/).filter(w => w.length > 3 && !STOP.has(w));
 const stem = w => w.replace(/(ians|ian|ese|ish|ic|ical|s)$/, '');
@@ -123,7 +129,14 @@ const stem = w => w.replace(/(ians|ian|ese|ish|ic|ical|s)$/, '');
       const x = it[a.q] || { human: false, life: [], other: [] }, f = fileOf(e.credit && e.credit.source), sp = span(e.dates);
       const person = e.type === 'person';
       const yrs = person ? x.life : x.other.concat(x.human ? [] : x.life), tol = person ? 30 : 50;
-      if (f && (f === a.img || f === x.img)) { how = 'pic'; if (person !== x.human) kind.push([e.slug, e.name, e.type, a.title, a.q, a.sd].join('\t')); }
+      // a person matched by the picture whose item lived far from every year the entry gives (its dates, else the years in
+      // its description) is a namesake whose picture the entry took: Ibrahim Zaki of Katagum (1808) had the Maldivian
+      // envoy born in 1947
+      // (a description may name only a later find, Nefertari's tomb in 1904: its years flag only an item that lived after them)
+      const dsp = descSpan(e.desc), ds = sp || dsp, ptol = sp && sp[0] < 0 ? 300 : 100;
+      const far = person && x.human && x.life.length > 0 && (sp ? !x.life.some(y => y >= sp[0] - ptol && y <= sp[1] + ptol) : !!dsp && x.life.every(y => y > dsp[1] + 100));
+      if (f && (f === a.img || f === x.img) && far) { why = 'picture, but lived ' + x.life.join(',') + ' vs ' + ds.join('..'); kind.push([e.slug, e.name, e.type, a.title, a.q, a.sd, why].join('\t')); }
+      else if (f && (f === a.img || f === x.img)) { how = 'pic'; if (person !== x.human) kind.push([e.slug, e.name, e.type, a.title, a.q, a.sd].join('\t')); }
       else if (person !== x.human) why = person ? 'not a human' : 'a human';
       else if (sp && yrs.length) { if (yrs.some(y => y >= sp[0] - tol && y <= sp[1] + tol)) how = 'years'; else why = 'years ' + yrs.slice(0, 4).join(',') + ' vs ' + sp.join('..'); }
       else {

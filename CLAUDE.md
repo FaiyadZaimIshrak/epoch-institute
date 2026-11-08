@@ -313,9 +313,11 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   section) and "redirect" (to a broader or other article, a battle to its campaign, Burma to Myanmar: 631) only the
   Wikipedia link. scripts/entry-wikidata-manual.tsv is the editor's (wins; "-" for none). Responses cached in
   %LOCALAPPDATA%\epoch-tools\wd-cache (the query service in batches of 250, the extracts 20 at a time).
-  The check found 25 entries whose picture came from a namesake's article at the merges (the village of Kanye had
+  The check found 44 entries whose picture came from a namesake's article at the merges (the village of Kanye had
   Kanye West, the Mongol prince Duden the German dictionary, Ferns the plant, Panduranga the god Vithoba, Valuk an
-  armoured vehicle, Gajayana a train): taken off by scripts/added-entries.json "nopicture" ([slug, what it showed];
+  armoured vehicle, Gajayana a train; and 19 found by a second rule: a person matched by the picture whose item lived
+  far from the entry's dates, or after every year its description names, as the Han princess Liu Xijun had a present-day
+  singer and Jean Lamour the ironworker a French politician): taken off by scripts/added-entries.json "nopicture" ([slug, what it showed];
   apply-added-entries.ps1 clears the entry, its preview card and the files), Champa's governance section picture
   (Vithoba) went with them and home-data.js's Phaenomena puzzle lost its picture (home-data.js?v=28). Its report-kind
   list (picture matches across the human line) is where they show: legendary figures fill most of it. The build now
@@ -589,6 +591,11 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   Same day: 564 of the 1,019 people who had no dates at all got them (Napoleon, Charlemagne, Timur, Kublai Khan …;
   Wikidata's dates read by eye against each entry, a reign where the birth is unknown; scratchpad r6/dates-decisions.tsv
   says why the other 455 stay undated: legendary or biblical, no reliable item, or dates too uncertain).
+  8 Nov 2026 (B4): of the 463 undated people, 147 got dates: "fl." or "r." with the years their own description gives
+  for their acts (each description read: not the years of a later find, a descendant or a translation), and two from
+  Wikidata's year-precision values (Ulpian c. 170 – 223 or 228, Nefertari d. c. 1255 BCE); all with birth "-", so they
+  stay out of the dated games. The 316 left are legendary or biblical figures, people whose descriptions name no year
+  of their own, and the century-only (Wikidata's values for them are century precision).
 - New entries since Nov 2026 (A7, scripts/entries/): candidates from what the site names and lacks
   (harvest-names.js: proper names in the profiles of the newer kinds; the ladders' MISSING lines; the speeches' gaps),
   prepare-list.js (titles through redirects, a slug as toSlug makes it, subjects that have an entry dropped),
@@ -1891,7 +1898,7 @@ with the English beside them (never a withheld song's or one under a caution not
 lines and the song's own name in its script, large and faint, at the right, no drawn melody; types, languages and region
 as chips; a long name is drawn faint only up to 8 characters), and the words of Ninkasi and the Kesh Temple Hymn (ETCSL).
 (Done 7 Nov 2026) Yoruba religion has section pictures in five sections now, from the orisha entries of wave a7y.
-455 people of the encyclopedia still have no dates (legendary and biblical figures, and people whose Wikidata dates are
+316 people of the encyclopedia still have no dates (8 Nov 2026: 147 dated from their own descriptions; legendary and biblical figures, and people whose Wikidata dates are
 missing or doubtful; scratchpad r6/dates-decisions.tsv): an undated person is on no century or people page and in no
 year's births and deaths.
 Found in the R9 checks (29 Oct 2026), not fixed yet:
