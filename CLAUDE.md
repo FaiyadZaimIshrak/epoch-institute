@@ -179,7 +179,9 @@ shared-nav.js and enc-page.js are kept only 10 minutes (then stale-while-revalid
 `?v=`, so changing them needs no rebuild and one cached copy serves the whole site (so are scribe.js and faith-map.js,
 which the language and religion profiles load without `?v=`, and test-yourself.js). Until 29 Oct 2026 the hand pages
 loaded them with `?v=`, a second address: a reader going from the home page to an entry downloaded 102-169 KB again
-(+0.25-0.45 s first paint from Stockholm). Never give them a `?v=` again. The stylesheets in css/ are kept the same
+(+0.25-0.45 s first paint from Stockholm). Never give them a `?v=` again. For Cloudflare they and css/ also carry
+`Cloudflare-CDN-Cache-Control: max-age=120` (no stale copies): on 8 Nov 2026 its edge, honouring stale-while-revalidate,
+served the pre-deploy shared-nav.js and css/ for over an hour, so /support's menu and footer and the cookie bar were missing. The stylesheets in css/ are kept the same
 10 minutes (css/.htaccess) and are linked without `?v=` too. Every other script tag carries a `?v=N`
 cache-buster: when you change such a file, bump its `?v=` on every page that loads it. data/*.json are sent as
 text/javascript (data/.htaccess) because the server does not compress application/json.

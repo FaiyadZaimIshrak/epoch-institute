@@ -3,6 +3,9 @@
 <IfModule mod_headers.c>
   <FilesMatch "\.css$">
     Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
+    # Cloudflare keeps its copy 2 minutes and never serves a stale one: under stale-while-revalidate its edge served the
+    # files of before a deploy for over an hour (8 Nov 2026), so pages came with an old menu and footer
+    Header set Cloudflare-CDN-Cache-Control "max-age=120"
     Header unset Expires
   </FilesMatch>
 </IfModule>
