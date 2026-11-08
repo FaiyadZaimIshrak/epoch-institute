@@ -860,6 +860,11 @@ data/spans/<c>.json ({key: [first, (last,) name]}, one file per first character 
 in all, only the files a reader's pages need, fetched when the section nears the screen; build-pages.ps1 "My timeline"
 writes them, deploy.sh DATA carries them, SPANS_V in passport.js). Hover or a first tap names a line, a click or a
 second tap opens it. window.epochPassport.timeline() / timelineCard() for tests (scratchpad pw/r5-tl.js).
+The axis (8 Nov 2026, after the user's screenshot of 33 overlapping labels: a reader with Aboriginal Australians, from
+63,000 BCE, got a tick every 2,000 years and everything else crushed at the right): a span over 3,000 years is drawn on a
+scale of years before the present (tlScale: log(200 + now - year), as /profiles' timeline), a shorter one evenly; ticks
+(tlTicks) are round years at least 72 px apart, the most recent kept first (desktop: 50000 BCE … 1800, 2000; phone four).
+The poster gets positions already on that scale (from 0, to 1), so share-card.js draws it unchanged. passport.js?v=10.
 
 ## /weekly — My Week of Daily Games (4 Nov 2026)
 Hand page (noindex, not in the sitemap, like /passport): the last seven UTC days of the daily games side by side, read

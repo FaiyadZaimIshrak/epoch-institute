@@ -172,11 +172,28 @@
       TLD = [items, off]; drawTl(items, off);
     });
   }
-  function tlTicks(from, to, w) {
-    var span = to - from, steps = [10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000], st = steps[steps.length - 1], most = w < 500 ? 4 : 7, out = [];
-    for (var i = 0; i < steps.length; i++) if (span / steps[i] <= most) { st = steps[i]; break; }
-    for (var t = Math.ceil(from / st) * st; t <= to; t += st) out.push(t);
-    return out;
+  // The axis (Nov 2026): a span of a few thousand years is drawn evenly; a longer one (a culture from 63,000 BCE beside
+  // the 20th century) on a scale of years before the present, as /profiles' timeline, so recent centuries keep their
+  // room instead of being crushed against the right edge. U(year) gives 0..1 across the axis.
+  var TL_NOW = 2025, TL_LOGB = 200;
+  function tlScale(from, to) {
+    if (to - from <= 3000) return { log: false, U: function (y) { return (y - from) / (to - from); } };
+    var now = Math.max(to, TL_NOW), L = function (y) { return Math.log(TL_LOGB + now - y); }, l0 = L(from), l1 = L(to);
+    return { log: true, U: function (y) { return (l0 - L(Math.max(from, Math.min(to, y)))) / (l0 - l1); } };
+  }
+  // ticks: round years, never closer than a label's width (about 72 px), the most recent kept first
+  function tlTicks(from, to, w, sc, X) {
+    var out = [], cand;
+    if (sc.log) cand = [2000, 1900, 1800, 1500, 1000, 500, 1, -500, -1000, -2000, -3000, -5000, -10000, -20000, -50000, -100000, -200000];
+    else {
+      var span = to - from, steps = [10, 20, 25, 50, 100, 200, 250, 500, 1000], most = Math.max(3, Math.min(8, Math.floor(w / 90))), st = 1000;
+      for (var i = 0; i < steps.length; i++) if (span / steps[i] <= most) { st = steps[i]; break; }
+      cand = []; for (var t = Math.ceil(from / st) * st; t <= to; t += st) cand.push(t);
+      cand.reverse();
+    }
+    var last = Infinity;
+    cand.forEach(function (t) { if (t < from || t > to) return; var x = X(t); if (last - x >= 72) { out.push(t); last = x; } });
+    return out.reverse();
   }
   function drawTl(items, off) {
     var svg = $('pass-tl-svg'), n = items.length;
@@ -191,16 +208,16 @@
     $('pass-tl-lede').textContent = (n === 1 ? 'One page placed in time, about ' + yl(items[0].a) + ' (' + items[0].n + ')' : num(n) + ' pages placed in time, the earliest about ' + yl(items[0].a) + ' (' + items[0].n + '), the latest about ' + yl(late.a) + ' (' + late.n + ')') + '. Hover or tap a line for its name; tap it again to open it.';
     $('pass-tl-key').innerHTML = TLK.map(function (k, j) { return count[j] ? '<li><i class="pass-tl-sw pass-tl-s' + k[1] + '" aria-hidden="true"></i>' + esc(k[0]) + ' <b>' + num(count[j]) + '</b></li>' : ''; }).join('');
     var W = Math.max(280, Math.round(svg.getBoundingClientRect().width) || 600), PL = 10, PR = 10, PT = 6, PB = 30;
-    var span = Math.max(40, hi - lo), from = lo - span * 0.03, to = hi + span * 0.03;
-    var X = function (y) { return PL + (y - from) / (to - from) * (W - PL - PR); }, lanes = [];
+    var span = Math.max(40, hi - lo), from = lo - span * 0.03, to = hi + Math.min(span * 0.03, 30);
+    var sc = tlScale(from, to), X = function (y) { return PL + sc.U(y) * (W - PL - PR); }, lanes = [];
     items.forEach(function (it) { it.x1 = X(it.a); it.x2 = Math.max(X(it.b), it.x1 + 5); var ln = 0; while (ln < lanes.length && lanes[ln] + 3 > it.x1) ln++; lanes[ln] = it.x2; it.ln = ln; });
-    var nl = lanes.length, pitch = nl <= 16 ? 14 : Math.max(3, Math.floor(280 / nl)), bh = Math.max(2, Math.round(pitch * 0.64)), H = PT + nl * pitch + PB, ticks = tlTicks(from, to, W), h = '';
+    var nl = lanes.length, pitch = nl <= 16 ? 14 : Math.max(3, Math.floor(280 / nl)), bh = Math.max(2, Math.round(pitch * 0.64)), H = PT + nl * pitch + PB, ticks = tlTicks(from, to, W, sc, X), h = '';
     ticks.forEach(function (t) { var x = X(t).toFixed(1); h += '<line class="pass-tl-grid" x1="' + x + '" x2="' + x + '" y1="' + PT + '" y2="' + (H - PB + 4) + '"/><text class="pass-tl-ax" x="' + x + '" y="' + (H - 9) + '" text-anchor="middle">' + esc(yl(t === 0 ? 1 : t)) + '</text>'; });
     items.forEach(function (it) { h += '<rect class="pass-tl-k' + TLK[it.k][1] + '" x="' + it.x1.toFixed(1) + '" y="' + (PT + it.ln * pitch + (pitch - bh) / 2).toFixed(1) + '" width="' + (it.x2 - it.x1).toFixed(1) + '" height="' + bh + '" rx="' + Math.min(3, bh / 2) + '"/>'; });
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.style.height = H + 'px'; svg.innerHTML = h;
     svg.setAttribute('aria-label', 'Your reading on one line of years: ' + num(n) + ' pages from ' + yl(lo) + ' to ' + yl(Math.min(hi, 2025)) + '. The list below holds the same.');
     $('pass-tl-ol').innerHTML = items.map(function (it) { return '<li><i class="pass-tl-sw pass-tl-s' + TLK[it.k][1] + '" aria-hidden="true"></i><span class="pass-tl-y">' + esc(spanText(it.a, it.b)) + '</span> <a href="' + esc(it.u) + '">' + esc(it.n) + '</a></li>'; }).join('');
-    TL = { items: items, W: W, PT: PT, pitch: pitch, from: from, to: to, ticks: ticks, lo: lo, late: late.a, count: count, sel: null };
+    TL = { items: items, W: W, PT: PT, pitch: pitch, from: from, to: to, sc: sc, ticks: ticks, lo: lo, late: late.a, count: count, sel: null };
   }
   function tlHit(ev) {
     if (!TL) return null;
@@ -234,7 +251,8 @@
   function tlCard() {
     if (!TL || tlPoster || typeof scoreCard !== 'function') return tlPoster;
     tlPoster = scoreCard({ title: 'My timeline', score: num(TL.items.length), unit: TL.items.length === 1 ? 'page placed in time' : 'pages placed in time',
-      timeline: { from: TL.from, to: TL.to, items: TL.items.slice(0, 1500).map(function (it) { return [it.a, it.b, TLK[it.k][1]]; }), ticks: TL.ticks.map(function (t) { return [t, yl(t === 0 ? 1 : t)]; }),
+      // the poster (share-card.js) draws positions evenly between from and to: it gets them already on the page's scale (0..1)
+      timeline: { from: 0, to: 1, items: TL.items.slice(0, 1500).map(function (it) { return [TL.sc.U(it.a), TL.sc.U(it.b), TLK[it.k][1]]; }), ticks: TL.ticks.map(function (t) { return [TL.sc.U(t), yl(t === 0 ? 1 : t)]; }),
         legend: TLK.map(function (k, j) { return [k[2], TL.count[j], k[1]]; }).filter(function (l) { return l[1]; }) },
       note: 'From ' + yl(TL.lo) + ' to ' + yl(TL.late), cta: 'Make your own timeline', url: 'the-epoch-institute.org/passport', kids: document.documentElement.getAttribute('data-kids') === '1' });
     return tlPoster;
