@@ -11,7 +11,7 @@
 const fs = require('fs'), path = require('path'), cp = require('child_process');
 const R = path.join(__dirname, '..', '..');
 const UA = { 'User-Agent': 'EpochInstitute/1.0 (the-epoch-institute.org; encyclopedia pictures)' }, sleep = ms => new Promise(r => setTimeout(r, ms));
-const [cmd, ...a] = process.argv.slice(2);
+const [cmd, ...a] = process.argv.slice(2); const pictures = {};
 async function getJson(u) {
   for (let i = 0; i < 8; i++) {
     try { const r = await fetch(u, { headers: UA }); if (r.status === 429) { await sleep(1000 * (+r.headers.get('retry-after') || 30)); continue; } if (r.ok) return await r.json(); } catch (e) {}
@@ -82,12 +82,19 @@ if (cmd === 'cands') {
   const by = {}; for (const e of A.entries) by[e.slug] = e; let n = 0; const miss = [];
   for (const l of fs.readFileSync(pf, 'utf8').split(/\r?\n/)) {
     if (!l.trim() || l.startsWith('#')) continue; const [slug, k] = l.split('\t'); if (!k || k === '-') continue;
-    const e = by[slug]; if (!e) { miss.push(slug + ' (not in added-entries.json)'); continue; } if (e.img) continue;
+    // an entry of the merges (not in "entries") gets a "pictures" row, which replaces its picture (8 Nov 2026: the right
+    // pictures for entries whose namesake's picture "nopicture" took off)
+    const ENC = by[slug] ? null : (pictures.ENC || (pictures.ENC = new Set(new Function(fs.readFileSync(path.join(R, 'encyclopedia-data.js'), 'utf8') + ';return ENCYCLOPEDIA')().map(x => x.slug))));
+    if (!by[slug] && !ENC.has(slug)) { miss.push(slug + ' (no such entry)'); continue; }
+    if (!by[slug] && (A.pictures || []).some(p => p[0] === slug)) continue;
+    const e = by[slug] || { slug, merged: true }; if (e.img) continue;
     const b = path.join(dir, slug + '.' + k), ext = ['jpg', 'png', 'gif'].find(x => fs.existsSync(b + '.' + x)); if (!ext) { miss.push(slug + '.' + k + ' (no file)'); continue; }
     const meta = JSON.parse(fs.readFileSync(b + '.json', 'utf8')), dest = path.join(R, 'images', 'encyclopedia', slug + '.jpg');
     if (ext === 'jpg') fs.copyFileSync(b + '.jpg', dest);
     else cp.execFileSync('powershell', ['-NoProfile', '-Command', `Add-Type -AssemblyName System.Drawing; $s=[Drawing.Image]::FromFile('${(b + '.' + ext).replace(/'/g, "''")}'); $c=New-Object Drawing.Bitmap $s.Width,$s.Height; $g=[Drawing.Graphics]::FromImage($c); $g.Clear([Drawing.Color]::White); $g.DrawImage($s,0,0,$s.Width,$s.Height); $c.Save('${dest.replace(/'/g, "''")}',[Drawing.Imaging.ImageFormat]::Jpeg); $g.Dispose(); $c.Dispose(); $s.Dispose()`]);
-    e.img = '/images/encyclopedia/' + slug + '.jpg'; e.credit = { artist: meta.artist.slice(0, 140), licence: meta.licence, source: meta.source }; n++;
+    if (e.merged) (A.pictures = A.pictures || []).push([slug, meta.artist.slice(0, 140), meta.licence, meta.source]);
+    else { e.img = '/images/encyclopedia/' + slug + '.jpg'; e.credit = { artist: meta.artist.slice(0, 140), licence: meta.licence, source: meta.source }; }
+    n++;
   }
   fs.writeFileSync(AE, JSON.stringify(A, null, 1) + '\n');
   console.log(n + ' pictures applied' + (miss.length ? '\n  ' + miss.join('\n  ') : ''));

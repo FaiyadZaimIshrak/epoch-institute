@@ -323,7 +323,13 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   far from the entry's dates, or after every year its description names, as the Han princess Liu Xijun had a present-day
   singer and Jean Lamour the ironworker a French politician): taken off by scripts/added-entries.json "nopicture" ([slug, what it showed];
   apply-added-entries.ps1 clears the entry, its preview card and the files), Champa's governance section picture
-  (Vithoba) went with them and home-data.js's Phaenomena puzzle lost its picture (home-data.js?v=28). Its report-kind
+  (Vithoba) went with them and home-data.js's Phaenomena puzzle lost its picture (home-data.js?v=28). Ten got the right
+  picture from their own article (Ferns, the Erzberg mine, the Deluge's map, Kanye, Türkmenbaşy, Taksony in the Chronicon
+  Pictum, Kgosi Galeshewe, Cranach's George of Saxony, Jacob Sturm, Zulfiqar Khan), chosen by eye on a contact sheet
+  with scripts/entries/pictures.js, whose apply now writes a "pictures" row for an entry of the merges; such a row wins
+  over "nopicture", and apply-added-entries.ps1 also puts the picture back on the preview card. 18 of them link their
+  own article in entry-wikidata-manual.tsv (Kanye, Botswana; Taksony of Hungary; Muhammad Kudarat …). Left without a
+  picture: no free picture of the subject (Panduranga's 1801 map was too general, Jahangir Khan's portrait modern). Its report-kind
   list (picture matches across the human line) is where they show: legendary figures fill most of it. The build now
   also sets search-facets.js's picture flags from the entries. An entry dated to one day ("14 January 1526", "17
   March") links that day in Today in History beside its dates ("On this day: 14 January"; none for 29 February).

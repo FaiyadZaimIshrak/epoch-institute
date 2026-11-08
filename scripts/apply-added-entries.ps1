@@ -57,12 +57,20 @@ foreach ($x in @($A.pictures | Where-Object { $_ })) {
   $line2 = [regex]::Replace($line, ',img:"(?:[^"\\]|\\.)*",credit:\{artist:"(?:[^"\\]|\\.)*",licence:"(?:[^"\\]|\\.)*",source:"(?:[^"\\]|\\.)*"\}', { param($q) $cr })
   if ($line2 -eq $line) { $d = [regex]::Match($line, ',desc:"(?:[^"\\]|\\.)*"'); $line2 = $line.Substring(0, $d.Index + $d.Length) + $cr + $line.Substring($d.Index + $d.Length) }
   $text = $text.Substring(0, $m.Index) + $line2 + $text.Substring($m.Index + $m.Length); $nPic++
+  # its preview card shows the picture too (a card emptied by "nopicture" before the right picture was found)
+  $s = [string]$x[0]; $pf = "$Repo\data\enc-preview\$($s.Substring(0, 1)).json"
+  if (Test-Path $pf) {
+    $pt = [IO.File]::ReadAllText($pf, $u8)
+    $pt2 = [regex]::Replace($pt, '("' + [regex]::Escape($s) + '":\{"n":"(?:[^"\\]|\\.)*","t":"(?:[^"\\]|\\.)*","d":"(?:[^"\\]|\\.)*","s":"(?:[^"\\]|\\.)*","i":)""', { param($q) $q.Groups[1].Value + '"/images/encyclopedia/' + $s + '.jpg"' })
+    if ($pt2 -ne $pt) { [IO.File]::WriteAllText($pf, $pt2, $u8) }
+  }
 }
 # "nopicture" ([slug, why]; 8 Nov 2026): a picture the merge took from a namesake's article (the village of Kanye had
 # Kanye West, the Mongol prince Duden the German dictionary) comes off the entry and its preview card, and the files go
-$nNoPic = 0
+$nNoPic = 0; $rePic = @{}; foreach ($x in @($A.pictures | Where-Object { $_ })) { $rePic[[string]$x[0]] = 1 }
 foreach ($x in @($A.nopicture | Where-Object { $_ })) {
   $s = [string]$x[0]
+  if ($rePic.ContainsKey($s)) { continue }   # a right picture found since ("pictures") replaces the namesake's: keep it
   $m = [regex]::Match($text, '(?m)^  \{slug:"' + [regex]::Escape($s) + '".*$'); if (-not $m.Success) { Write-Warning "nopicture: no entry $s"; continue }
   $line2 = [regex]::Replace($m.Value, ',img:"(?:[^"\\]|\\.)*",credit:\{artist:"(?:[^"\\]|\\.)*",licence:"(?:[^"\\]|\\.)*",source:"(?:[^"\\]|\\.)*"\}', '')
   if ($line2 -ne $m.Value) { $text = $text.Substring(0, $m.Index) + $line2 + $text.Substring($m.Index + $m.Length); $nNoPic++ }
