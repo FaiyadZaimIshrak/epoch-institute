@@ -46,7 +46,7 @@ li a:hover .tc-t { color: var(--gold-light); text-decoration: underline; }
 </main>
 <script>
 (function () {
-  var DAYS_V = 'a4d20a62da';
+  var DAYS_V = 'c7d86b848d';
   var SITE = 'https://the-epoch-institute.org';
   var P = new URLSearchParams(location.search);
   if (P.get('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');

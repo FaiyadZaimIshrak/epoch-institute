@@ -1,0 +1,67 @@
+# entry	latitude	longitude	why: the editor's lines for scripts/tools/entry-wd-claims.js, which win over Wikidata's P625. "-" for
+# no point: a continent, ocean or broad region (a dot in its middle says nothing), a war or campaign fought across a
+# region, or an item whose point is wrong. A point given here comes from the Wikipedia article named (9 Nov 2026).
+africa	-	-	a continent
+americas	-	-	two continents
+asia	-	-	a continent
+europe	-	-	a continent
+eurasia	-	-	a landmass
+north-america	-	-	a continent
+south-america	-	-	a continent
+latin-america	-	-	a cultural region of two continents
+central-america	-	-	a broad region
+atlantic-ocean	-	-	an ocean
+pacific-ocean	-	-	an ocean
+indian-ocean	-	-	an ocean
+arctic-ocean	-	-	an ocean
+mediterranean	-	-	a sea and its shores
+caribbean	-	-	a sea and its islands
+west-indies	-	-	an island region
+east-indies	-	-	an island region
+polynesia	-	-	an ocean region
+micronesia	-	-	an ocean region
+north-africa	-	-	a broad region
+west-africa	-	-	a broad region
+east-africa	-	-	a broad region (the point is Nairobi)
+central-africa	-	-	a broad region
+sub-saharan-africa	-	-	most of a continent
+sahara	-	-	a desert across a continent
+sahel	-	-	a belt across a continent
+central-asia	-	-	a broad region
+east-asia	-	-	a broad region (the point is in Mongolia)
+south-asia	-	-	a broad region
+southeast-asia	-	-	a broad region
+indian-subcontinent	-	-	a broad region
+middle-east	-	-	a broad region
+near-east	-	-	a broad region
+siberia	-	-	a broad region
+eastern-europe	-	-	a broad region
+central-europe	-	-	a broad region
+european-russia	-	-	a broad region
+early-muslim-conquests	-	-	conquests from Iberia to Central Asia
+mongol-invasions-of-anatolia	-	-	campaigns across Anatolia
+mithridatic-wars	-	-	three wars across Anatolia and Greece
+anglo-mysore-wars	-	-	four wars across southern India
+anfal-campaign	-	-	a campaign across Iraqi Kurdistan (the point is the middle of Iraq)
+anglo-soviet-invasion-of-iran	-	-	an invasion from north and south (the point is the middle of Iran)
+caucasus-campaign	-	-	a theatre of war
+austro-turkish-war-1716-1718	-	-	a war in Hungary, the Banat and Serbia
+polish-muscovite-war-1605-1618	-	-	a war across Muscovy (the point is Kraków)
+russo-crimean-wars	-	-	a century of raids and campaigns (the point is Moscow)
+war-of-the-league-of-cognac	-	-	a war across Italy
+war-of-the-portuguese-succession	-	-	a war across Portugal and the Azores
+the-anarchy	-	-	a civil war in England and Normandy
+norman-conquest	-	-	the conquest of a kingdom (the point is the middle of England)
+operation-torch	-	-	landings at Casablanca, Oran and Algiers
+tecumsehs-war	-	-	a war across the Old Northwest
+northwest-indian-war	-	-	a war across the Old Northwest
+july-crisis	-	-	a diplomatic crisis among the powers (the point is Stuttgart)
+dissolution-of-the-soviet-union	-	-	the end of a union (the point is the middle of Siberia)
+the-californias	-	-	the point is in central Mexico, not on the Pacific coast
+parthia	-	-	the point is Ctesiphon in Iraq, not the region south-east of the Caspian
+battle-of-miani	-	-	Wikidata and Wikipedia give a point some 350 km from Hyderabad in Sindh, where the battle was fought
+tackys-revolt	-	-	the point is in the Brazilian Amazon, not Jamaica
+battle-of-nihawand	34.193	48.373	the town of Nahavand, whose name the battle takes (Wikipedia: Nahavand); the item's point was in Iraq
+umayyad-caliphate	33.513	36.309	Damascus, its capital (Wikipedia: Damascus); the item's point was Baghdad
+french-colonial-empire	48.857	2.352	Paris (Wikipedia: Paris); the item's point had the longitude's sign reversed
+italian-empire	41.893	12.483	Rome (Wikipedia: Rome); the item's point was in the Red Sea

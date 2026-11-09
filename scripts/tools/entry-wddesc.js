@@ -53,7 +53,7 @@ const fold = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase
 // or a word nobody would know never reaches a title
 const VOCAB = new Set(); for (const e of E) for (const w of fold((e.desc || '') + ' ' + e.name).split(/[^a-z0-9'-]+/)) if (w) VOCAB.add(w);
 // years in brackets or after a comma say again what the title's own years say: "German prince (1851–1928)"
-const clean = d => d.replace(/\s*\((?:[^()]*\d{3,4}[^()]*)\)/g, '').replace(/,\s*(?:c\.\s*)?\d{1,4}\s*[–-]\s*\d{1,4}\s*$/, '').replace(/\s+/g, ' ').trim();
+const clean = d => d.replace(/\s*\((?:[^()]*\d{3,4}[^()]*)\)/g, '').replace(/,\s*(?:c\.\s*)?\d{1,4}\s*[–-]\s*\d{1,4}\s*$/, '').replace(/,\s*[A-Z]\w+ national heritage site$/, '').replace(/\s+/g, ' ').trim();
 // years and centuries the entry's dates reach, as a span (BCE negative); null when undated
 function span(d) {
   d = String(d || ''); if (!/\d/.test(d)) return null; const ys = [];
@@ -84,6 +84,9 @@ function verdict(desc, name, dates, sp0) {
   const d = desc.trim(), f = fold(d);
   if (d.length > 60) return 'long';
   if (KIND.has(f) || /^wikimedia /.test(f) || /^(family name|surname|given name)/.test(f)) return 'kind';
+  // heritage registers' wording ("cultural property in Zaragoza, Spain", "material cultural heritage site in Ghana") says
+  // only that a register lists it
+  if (/^(material )?(cultural (property|heritage( site)?)|heritage site)\b/.test(f) || /^\S+ (national |cultural )+heritage site$/.test(f)) return 'kind';
   if (d.split(/\s+/).length < 2) return 'kind';
   for (const w of d.split(/[\s,;:()]+/)) { if (!w || /^[A-Z0-9]/.test(w)) continue; const lw = fold(w).replace(/^[^a-z0-9]+|[^a-z0-9]+$/g, ''); if (lw && !VOCAB.has(lw)) return 'word ' + lw; }
   const nm = fold(name).replace(/\s*\(.*?\)\s*/g, ' ').trim();

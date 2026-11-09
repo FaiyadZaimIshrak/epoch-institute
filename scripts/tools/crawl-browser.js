@@ -2,13 +2,13 @@
 // script errors, console errors, requests that fail or answer 4xx/5xx (same site), pictures that do not decode, and
 // layout wider than the screen. Each page is scrolled to the end so lazy sections (Test yourself, maps, Next to read)
 // load too. Pages: lib.js KINDS plus a seeded sample of each generated folder.
-//   node scripts/tools/crawl-browser.js [--per=4] [--phone] [--kids] [--dark] [--json=out.json] [paths…]
+//   node scripts/tools/crawl-browser.js [--per=4] [--seed=7] [--phone] [--kids] [--dark] [--json=out.json] [paths…]
 const fs = require('fs'), path = require('path');
 const { serve, edge, ROOT, KINDS } = require('./lib');
 const args = process.argv.slice(2), opt = {}, only = [];
 for (const a of args) { const m = a.match(/^--([^=]+)=?(.*)$/); if (m) opt[m[1]] = m[2] || true; else only.push(a); }
 const PER = +opt.per || 4, PORT = 8790 + Math.floor(Math.random() * 100);
-let seed = 7; const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
+let seed = +opt.seed || 7; const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
 function sample(dir, n) {
   const d = path.join(ROOT, dir); if (!fs.existsSync(d)) return [];
   const all = fs.readdirSync(d).filter(f => !f.startsWith('.') && f !== 'index' && !path.extname(f) && fs.statSync(path.join(d, f)).isFile());

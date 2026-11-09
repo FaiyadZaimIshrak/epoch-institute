@@ -118,7 +118,7 @@
 }
 .opinion-item-date {
   font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.02em;
-  color: var(--muted); opacity: 0.6;
+  color: var(--muted);
 }
 
 /* ── Newsletter ── */
@@ -213,7 +213,7 @@
   <div class="community-share-band" id="newsletter-band">
     <div class="share-band-text">
       <h3 class="community-section-title">Stay Informed</h3>
-      <p class="community-section-sub">Receive our monthly digest — new profiles, research updates, and historical analysis.</p>
+      <p class="community-section-sub">A weekly letter: what is new on the site, the anniversaries of the week and the daily puzzles.</p>
     </div>
     <div id="newsletter-form-wrap">
       <form class="newsletter-form" id="newsletter-form" novalidate>

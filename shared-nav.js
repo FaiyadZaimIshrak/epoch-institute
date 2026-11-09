@@ -517,7 +517,7 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=81eaca4ad1';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_INDEX_SRC = '/search-index.js?v=d3f0e9997b';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
 var SEARCH_PAGES_SRC = '/search-pages.js?v=1af3f88e5d';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
@@ -1181,8 +1181,8 @@ function initNav(activePage) {
   })();
 
   // ── Next to read (Nov 2026): three pages this page links to that this reader has not read yet ──────────────────
-  // Chosen in the browser from epoch-seen alone: links in the page's "See also" and related lists count most, then the
-  // kinds of page the reader opens most, then how often the page links them. Shown at the foot of reading pages,
+  // Chosen in the browser from epoch-seen alone: pages the reader cannot already see as cards in the page's "See also"
+  // and related lists come first, then the kinds of page the reader opens most, then how often the page links them. Shown at the foot of reading pages,
   // after an idle moment (it moves nothing above it).
   (function () {
     var READ = /^\/(empire|religion|language|culture|movement|government|ideology|work|encyclopedia|state|speeches|countries|centuries|years|people|paths|essays|societies|songs)\/[^/?#]+$/;
@@ -1193,18 +1193,22 @@ function initNav(activePage) {
       var seen; try { seen = JSON.parse(localStorage.getItem('epoch-seen') || '[]'); } catch (e) { seen = []; } if (!Array.isArray(seen)) seen = [];
       var seenSet = {}, kindN = {}; seen.forEach(function (p) { seenSet[p] = 1; var k = String(p).split('/')[1]; kindN[k] = (kindN[k] || 0) + 1; });
       var total = seen.length || 1, cand = {};
+      var h1 = main.querySelector('h1'), own = h1 ? h1.textContent.replace(/\s+/g, ' ').trim().toLowerCase() : '';   // the song's own entry is no next step
       [].forEach.call(main.querySelectorAll('a[href^="/"]'), function (a) {
         if (a.closest('.ref-crumbs, .ref-prevnext, .ref-centuries, .ref-cite, .path-journey, nav, .listen-row, .next-read')) return;
         var h = a.getAttribute('href').replace(/[?#].*$/, '').replace(/\/+$/, '');
         if (h === here || seenSet[h] || !READ.test(h) || /^\/encyclopedia\/(browse|conflicts)\//.test(h)) return;
         var name = ((a.querySelector('.nm, .name, .path-step-name, .disc-t, .sg-card-t') || a).textContent || '').replace(/\s+/g, ' ').trim();
-        if (!name || name.length > 90 || /^(previous|next|read more|see all)/i.test(name)) return;
+        if (!name || name.length > 90 || /^(previous|next|read more|see all)/i.test(name) || name.toLowerCase() === own) return;
         var c = cand[h] || (cand[h] = { h: h, name: name, n: 0, rel: 0, img: '' });
         c.n++; if (a.closest('.enc-seealso, [class*="related"], [class*="seealso"], .profile-related, .sp-chips, .sg-chips')) c.rel = 1;
         var im = a.querySelector('img'); if (im && !c.img) c.img = im.getAttribute('src') || '';
         if (name.length < c.name.length && name.length > 2) c.name = name;
       });
-      var list = Object.keys(cand).map(function (k) { var c = cand[k], kind = k.split('/')[1]; c.score = c.rel * 3 + Math.min(c.n, 3) * 0.5 + 2 * (kindN[kind] || 0) / total + (c.img ? 0.5 : 0); return c; })
+      // pages shown as cards in the See-also or related lists just above come last (until 9 Nov 2026 they came first,
+      // so the box repeated three of the cards over it); a page of another kind than this one gets a little weight
+      var hereKind = here.split('/')[1];
+      var list = Object.keys(cand).map(function (k) { var c = cand[k], kind = k.split('/')[1]; c.score = (c.rel ? 0 : 3) + Math.min(c.n, 3) * 0.5 + 2 * (kindN[kind] || 0) / total + (c.img ? 0.5 : 0) + (kind !== hereKind ? 0.5 : 0); return c; })
         .sort(function (a, b) { return b.score - a.score || a.name.localeCompare(b.name); }).slice(0, 3);
       if (list.length < 2) return;
       var KIND = { empire: 'Profile', religion: 'Religion', language: 'Language', culture: 'Culture', movement: 'Movement', government: 'Form of government', ideology: 'Ideology', work: 'Great work', encyclopedia: 'Encyclopedia', state: 'State', speeches: 'Speech', countries: 'Country history', centuries: 'Century', years: 'Year', people: 'People', paths: 'Reading path', essays: 'Essay', societies: 'Social ladder', songs: 'Song' };

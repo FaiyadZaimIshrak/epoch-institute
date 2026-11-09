@@ -1127,7 +1127,6 @@ var SECTION_IMAGES = {
   },
   "Kazakh Khanate": {
     foundation:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
-    socioeconomy:{slug:"turkistan-city",name:"Turkistan",img:"/images/encyclopedia/turkistan-city.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1914_map_of_Asia.jpg"},
     military:{slug:"muhammad-haidar-dughlat",name:"Muhammad Haidar Dughlat",img:"/images/encyclopedia/muhammad-haidar-dughlat.jpg",artist:"Rani nurmai",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Silver_coin_of_Haidar_Dughlat_in_name_of_Humayun.jpg"},
     governance:{slug:"esim-khan",name:"Esim Khan",img:"/images/encyclopedia/esim-khan.jpg",artist:"naturalearthdata.com, offered to the Public Domain per Terms of Use",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Map_of_the_Kazakh_Khanate.png"},
     impact:{slug:"abylai-khan",name:"Abylai Khan",img:"/images/encyclopedia/abylai-khan.jpg",artist:"Kazpost",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:2000_Stamp_of_Kazakhstan_-_Abylai_Khan_(cropped).jpg"},
@@ -1206,10 +1205,8 @@ var SECTION_IMAGES = {
     decline:{slug:"oruc-reis",name:"Oruç Reis",img:"/images/encyclopedia/oruc-reis.jpg",artist:"Johann Theodor de Bry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arolsen_Klebeband_01_465_4.jpg"}
   },
   "Funj Sultanate": {
-    foundation:{slug:"soba",name:"Soba",img:"/images/encyclopedia/soba.jpg",artist:"FotoosVanRobin",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Dried_soba_noodles_by_FotoosVanRobin.jpg"},
     socioeconomy:{slug:"suakin",name:"Suakin",img:"/images/encyclopedia/suakin.jpg",artist:"Bertramz",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Suakin,el-Geyf_mosque.jpg"},
     military:{slug:"iyasu-ii",name:"Iyasu II",img:"/images/encyclopedia/iyasu-ii.jpg",artist:"Unnamed",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Iyasu_II_of_Ethiopia_and_Mentewab.png"},
-    governance:{slug:"halfaya",name:"Halfaya",img:"/images/encyclopedia/halfaya.jpg",artist:"Ayham.Alkasim",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%AD%D9%84%D9%81%D8%A7%D9%8A%D8%A7.jpg"},
     impact:{slug:"khartoum",name:"Khartoum",img:"/images/encyclopedia/khartoum.jpg",artist:"Evon2023",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%C2%A9Nile-Project_-Sari_Omer_0025.jpg"},
     decline:{slug:"muhammad-ali-of-egypt",name:"Muhammad Ali of Egypt",img:"/images/encyclopedia/muhammad-ali-of-egypt.jpg",artist:"Auguste Couder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ModernEgypt,_Muhammad_Ali_by_Auguste_Couder,_BAP_17996.jpg"}
   },
@@ -1615,7 +1612,6 @@ var SECTION_IMAGES = {
   },
   "Duchy of Aquitaine": {
     foundation:{slug:"charlemagne",name:"Charlemagne",img:"/images/encyclopedia/charlemagne.jpg",artist:"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg"},
-    socioeconomy:{slug:"saint-hilaire-le-grand",name:"Saint-Hilaire-le-Grand",img:"/images/encyclopedia/saint-hilaire-le-grand.jpg",artist:"Garitan",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mairie_st-Hilaire.jpg"},
     military:{slug:"battle-of-taillebourg",name:"Battle of Taillebourg",img:"/images/encyclopedia/battle-of-taillebourg.jpg",artist:"Chroniques de Saint-Denis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis9_vs_Henri3.jpg"},
     governance:{slug:"louis-vii-of-france",name:"Louis VII of France",img:"/images/encyclopedia/louis-vii-of-france.jpg",artist:"Natalis de Wailly (1805-1886)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_7.jpg"},
     impact:{slug:"bordeaux",name:"Bordeaux",img:"/images/encyclopedia/bordeaux.jpg",artist:"Mariette",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bordeaux_Place_de_la_Bourse_de_nuit.jpg"},

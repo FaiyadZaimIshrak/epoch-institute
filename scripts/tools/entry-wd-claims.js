@@ -3,7 +3,9 @@
 //     item as their family ("Rulers and members"); a house is any entry whose item at least three person entries name,
 //     whatever its slug ("Bourbon dynasty", "House of Habsburg", "Medici family" …)
 //   coordinates (P625) of the place, event and polity entries: the entry's own point ("On the map"), for an event the
-//     place it happened (a battle's field), never a war's: an event whose item has more than one point is left out
+//     place it happened (a battle's field), never a war's: an event whose item has more than one point is left out, and
+//     scripts/entry-coords-manual.tsv (the editor's) takes away the points of continents, oceans, broad regions and wars
+//     fought across a region, and sets those Wikidata has wrong
 //   node scripts/tools/entry-wd-claims.js
 // Writes scripts/entry-houses.tsv (house slug, member slugs by birth year, |-separated) and scripts/entry-coords.tsv
 // (slug, latitude, longitude to 3 decimals). The query service is asked 250 items at a time; responses are cached in
@@ -63,7 +65,12 @@ const firstYear = d => { const m = String(d || '').match(/(\d{1,4})(\s*BCE?)?/);
     if (Math.abs(ps[0][0]) > 90 || Math.abs(ps[0][1]) > 180) continue;
     rows.push(s + '\t' + ps[0][0].toFixed(3) + '\t' + ps[0][1].toFixed(3));
   }
+  // the editor's lines (scripts/entry-coords-manual.tsv) win: "-" takes a point away, a pair sets it
+  const man = {}; let nMan = 0;
+  for (const r of tsv('scripts/entry-coords-manual.tsv')) if (!bySlug[r[0]]) console.warn('entry-coords-manual.tsv: no entry ' + r[0]); else man[r[0]] = r[1] === '-' ? null : [+r[1], +r[2]];
+  for (let i = rows.length - 1; i >= 0; i--) { const s = rows[i].split('\t')[0]; if (s in man) { rows.splice(i, 1); nMan++; } }
+  for (const [s, p] of Object.entries(man)) if (p) rows.push(s + '\t' + p[0].toFixed(3) + '\t' + p[1].toFixed(3));
   rows.sort();
   fs.writeFileSync(path.join(ROOT, 'scripts', 'entry-coords.tsv'), '# entry\tlatitude\tlongitude (Wikidata P625, written by scripts/tools/entry-wd-claims.js)\n' + rows.join('\n') + '\n');
-  console.log('houses ' + houses.length + ' (members ' + houses.reduce((n, h) => n + h[1].length, 0) + '), points ' + rows.length + ' of ' + placed.length + ' (' + multi + ' with points far apart left out)');
+  console.log('houses ' + houses.length + ' (members ' + houses.reduce((n, h) => n + h[1].length, 0) + '), points ' + rows.length + ' of ' + placed.length + ' (' + multi + ' with points far apart left out, ' + nMan + ' set by the editor)');
 })().catch(e => { console.error(e); process.exit(1); });

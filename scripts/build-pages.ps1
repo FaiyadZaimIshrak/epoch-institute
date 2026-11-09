@@ -2082,7 +2082,7 @@ $sb = New-Object Text.StringBuilder(30000)
 [void]$sb.Append('<ul class="cen-cards">')
 foreach ($c in $CENTPAGES) {
   $ii = $CENTINFO[$c]
-  [void]$sb.Append('<li><a href="/centuries/' + $ii.slug + '"><span class="cen-c-t">' + (Hx (CentTitle $c)) + '</span><span class="cen-c-d">' + (Hx (CentDecades $c)) + '</span><span class="cen-c-n">' + $ii.alive.ToString('N0') + ' states · ' + $ii.founded + ' founded · ' + $ii.ents.ToString('N0') + ' entries</span>' +
+  [void]$sb.Append('<li><a href="/centuries/' + $ii.slug + '"><span class="cen-c-t">' + (Hx (CentTitle $c)) + '</span><span class="cen-c-d">' + (Hx (CentDecades $c)) + '</span><span class="cen-c-n">' + $ii.alive.ToString('N0') + ' states · ' + $ii.founded + ' founded · ' + $ii.ents.ToString('N0') + $(if ($ii.ents -eq 1) { ' entry' } else { ' entries' }) + '</span>' +
     $(if ($ii.powers.Count) { '<span class="cen-c-p">' + (Hx ($ii.powers -join ' · ')) + '</span>' } else { '' }) + '</a></li>')
 }
 [void]$sb.Append("</ul>`n</div>`n</main>`n")
@@ -2099,7 +2099,7 @@ $glL = [ordered]@{}; foreach ($e in $TERMS) { if (-not $glL.Contains($e.L)) { $g
 $crumb = Crumbs @(@('Home', '/'), @('Encyclopedia', '/encyclopedia/'), @('Glossary', $null))
 $sb = New-Object Text.StringBuilder(200000)
 [void]$sb.Append('<main id="main" class="enc-page ref-page">' + "`n<div class=`"enc-wrap gl-wrap`">`n" + $crumb[0] + "`n")
-[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Glossary of Historical Terms</h1><p class="ref-lede">' + $TERMS.Count + ' terms of government, war, faith, law and society that appear in the profiles and the encyclopedia, each with a short definition and a link to its full entry.</p></header>' + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Glossary of Historical Terms</h1><p class="ref-lede">' + $TERMS.Count.ToString('N0') + ' terms of government, war, faith, law and society that appear in the profiles and the encyclopedia, each with a short definition and a link to its full entry.</p></header>' + "`n")
 [void]$sb.Append('<nav class="ref-letters gl-letters" aria-label="Letters">' + (($LETTERS | ForEach-Object { if ($glL.Contains($_)) { '<a href="#gl-' + $_ + '">' + (LetterLabel $_) + '</a>' } else { '<span>' + (LetterLabel $_) + '</span>' } }) -join '') + "</nav>`n")
 foreach ($L in $glL.Keys) {
   [void]$sb.Append('<section class="gl-letter" id="gl-' + $L + '"><h2>' + (LetterLabel $L) + '</h2><dl class="gl-list">')
@@ -4187,7 +4187,7 @@ $SECTIONS = [ordered]@{
   years        = @{ t = 'Year by Year'; h = '/years/'; k = $YEARLIST.Count.ToString('N0') + ' years'; d = 'What happened in a single year: its events, the people born and the people who died, the states founded and ended.'; pic = @('primary-chronicle') }
   people       = @{ t = 'People'; s = 'Rulers, thinkers and explorers, century by century.'; h = '/people/'; k = $PPL.Count.ToString('N0') + ' people'; d = 'Rulers, thinkers, artists and explorers, century by century and region by region, with a chart of who lived when.'; pic = @('las-meninas') }
   timeline     = @{ t = 'World Timeline'; h = '/timeline'; k = 'Every state'; d = 'Five thousand years of states and empires on one line, region by region: see who lived alongside whom.'; pic = @('standard-of-ur') }
-  explorer     = @{ t = 'Power Curves'; h = '/explorer'; k = 'Rise and fall charts'; d = 'Compare the rise and fall of nearly four hundred states and empires on one timeline.'; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
+  explorer     = @{ t = 'Power Curves'; h = '/explorer'; k = 'Rise and fall charts'; d = "Compare the rise and fall of $($POLS.Count) states and empires on one timeline."; pic = @('pax-romana', 'trajans-column', 'roman-legion') }
   race         = @{ t = 'Rise and Fall Race'; h = '/race'; k = "$($POLS.Count) to race"; d = 'Up to four states and empires race year by year: who led, when they overtook each other and how long each held on.'; pic = @('charioteer-of-delphi') }
   compare      = @{ t = 'Compare Two Profiles'; h = '/compare'; k = "$($EMPS.Count) profiles"; d = 'Any two side by side, cultures, states, religions or movements: when each lived, their facts and their key events on one line of time.'; pic = @('rosetta-stone') }
   new          = @{ t = 'What' + [char]0x2019 + 's New'; h = '/new'; k = 'Release notes'; d = 'What the Institute has added and changed, newest first, and every page that appeared in the last thirty days.'; pic = @('printing-press') }
@@ -4210,7 +4210,7 @@ $SECTIONS = [ordered]@{
   start        = @{ t = 'Find Your Way In'; h = '/start'; k = 'Four questions'; d = 'Tell us what draws you to history and get the reading paths and tools that suit you.'; pic = @('piri-reis-map', 'cantino-planisphere', 'tabula-rogeriana') }
   community    = @{ t = 'Community'; h = '/community'; k = 'Readers and writers'; d = 'Essays and opinions from the Institute''s readers, and a place to share your own.'; pic = @('althing', 'roman-forum') }
   contributors = @{ t = 'Write for Us'; h = '/contributors'; k = 'Contribute'; d = 'Research, write or check facts with the Institute: three ways to take part.'; pic = @('book-of-kells', 'johannes-gutenberg') }
-  series       = @{ t = 'Research Series'; h = '/research-series'; k = "$($ESSAYS.Count) essays"; d = 'Thematic essays on the forces behind the rise and collapse of civilisations.'; pic = @('thucydides', 'ibn-khaldun', 'edward-gibbon') }
+  series       = @{ t = 'Research Series'; h = '/research-series'; k = "$($ESSAYS.Count) essays"; d = 'Essays on how states rose and fell, and how people ruled, ranked, worshipped, wrote, invented and sang.'; pic = @('thucydides', 'ibn-khaldun', 'edward-gibbon') }
   teachers     = @{ t = "Teachers' Corner"; h = '/teachers/'; k = "$($wsN.path + $wsN.century) worksheets"; d = 'Printable worksheets with answer keys on the reading paths and the centuries, and ideas for teaching with the site.'; pic = @('john-amos-comenius', 'sankore-madrasah') }
   dataset      = @{ t = 'Open Data'; h = '/dataset'; k = 'CC BY 4.0'; d = "The states register ($($POL['nodes'].Count.ToString('N0')) states, $($POL['links'].Count.ToString('N0')) relations) and the power curves, free to reuse."; pic = @('rhind-mathematical-papyrus', 'moscow-mathematical-papyrus', 'domesday-book') }
 }

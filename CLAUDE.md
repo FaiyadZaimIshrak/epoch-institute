@@ -369,7 +369,23 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   own article in entry-wikidata-manual.tsv (Kanye, Botswana; Taksony of Hungary; Muhammad Kudarat …). Left without a
   picture: no free picture of the subject (Panduranga's 1801 map was too general, Jahangir Khan's portrait modern). Its report-kind
   list (picture matches across the human line) is where they show: legendary figures fill most of it. The build now
-  also sets search-facets.js's picture flags from the entries. An entry dated to one day ("14 January 1526", "17
+  also sets search-facets.js's picture flags from the entries.
+  9 Nov 2026: eleven more found through their map points ("On the map" put them in the namesake's country): Tarom had
+  a TAROM airliner, Gorey an aerial view of Gorey in Wexford, James Fort the fort at Kinsale, Magdala the town on the Sea
+  of Galilee, Monterado an Italian castle, Sevilla la Nueva the Madrid town hall, Halfaya the Syrian town, Dahra a highway
+  in Senegal, Mwembe a Tanzanian ward, Turkistan a 1914 map of Asia, Fengjing a Shanghai locator map. The picture rule
+  had confirmed them, the entry's picture being the namesake article's lead image. Taken off ("nopicture"), with
+  their own articles in entry-wikidata-manual.tsv (Gorey, Jersey; Fort James, Ghana; Tarom County; Turkistan (city) …;
+  "-" for Halfaya and Mwembe, which have none; Magdala to the Battle of Magdala and Fengjing to Fenghao as "redirect").
+  Kazakh Khanate's society and Funj Sultanate's governance section pictures went with them. Then 42 more by the text
+  of the articles (41 pictures taken off: Soba, Alodia's capital, had Japanese noodles, Neptune the planet,
+  Proton a quark diagram, Tamale a Mexican tamal, Tết's river the Vietnamese New Year, Badh a crow, Vanga a bird of
+  Madagascar, Zhang Er a present-day poet, John Clarkson a baseball player; 28 now link their own articles, 14 none;
+  Eurotas kept its picture, the river's, and now links the river), and the Funj Sultanate's foundation (the noodles) and
+  Aquitaine's society section pictures. scripts/tools/namesake-check.js country|seats|text finds such matches: a map
+  point in a country the entry's first sentences do not name while they name others; a point more than 1,200 km from
+  the seat of every state whose history names the entry; a picture match whose article opening shares at most one word
+  with the entry's. Most of what it lists is right: read every line. An entry dated to one day ("14 January 1526", "17
   March") links that day in Today in History beside its dates ("On this day: 14 January"; none for 29 February).
 - `/state/<id>` — 4,961 state pages (the 507 states with a profile are redirected to it by state/.htaccess, also
   written by the builder); `/state/browse/<region>`. Key facts link the centuries and the present-day countries;
@@ -400,7 +416,8 @@ scripts/build-pages.ps1 (Windows PowerShell 5.1; keep the file saved with a UTF-
   `data/days/<mm-dd>.json` ({k, events [{year, yearDisplay, title, description, html (linked), links, profile}],
   hero, pic [img, slug], intl}, ~4 KB): the home strip and the Today in History index read only today's file instead
   of history.json (1.1 MB); its DAYS_V is stamped into both pages. With -SkipEntries (no linker) the day pages and
-  data/days are left as they are. (data/tih-thumbs.json is gone.)
+  data/days are left as they are. (data/tih-thumbs.json is gone.) The index puts the day's hero first, as the day page
+  and the home page do (9 Nov 2026: in year order an older event, often a grim one, stood above it).
 - `/countries/<slug>` + `/countries/` — 190 country histories (present-day countries with at least 3 states): map
   with the states' seats (inline outlines, the country lit up), a share poster of its own (images/og/country-<slug>.jpg;
   centuries likewise century-<slug>.jpg — drawn from these pages by scripts/make-posters.js: re-draw them after a
@@ -507,8 +524,9 @@ indexed addresses thin, snippets that did not say what a page offers):
   - a description that is only a kind (KIND: "human", "historical country", "protected area" …);
   - one that holds the subject's own name, or is over 60 characters;
   - one that names years the dates do not reach;
-  - one with a lower-case word the encyclopedia's own texts never use (Wikidata's slips, "fhe Utkala", and US spellings).
-  It drops bracketed years. 20,300 kept. build-pages.ps1 WdLabel: an entry whose sentence gives no EntryLabel takes it
+  - one with a lower-case word the encyclopedia's own texts never use (Wikidata's slips, "fhe Utkala", and US spellings);
+  - heritage registers' wording ("cultural property in Zaragoza, Spain", "Moroccan cultural heritage site": 9 Nov 2026).
+  It drops bracketed years and a trailing ", Iranian national heritage site". 19,837 kept. build-pages.ps1 WdLabel: an entry whose sentence gives no EntryLabel takes it
   ("Elchingen: Municipality of Germany"); a state takes it only where " — States" still fits 70 characters, so no state
   title equals an entry's. Compare these pages' CTR in Search Console from about 6 Dec 2026.
 - **Measuring:** scripts/tools/gsc-report.js <Search Console export folder> [--out=<that folder>/report.md: never in the public repository] (impressions,
@@ -546,8 +564,14 @@ Ruling houses and "On the map" (8 Nov 2026; dynasties were the largest group of 
 - **The data:** scripts/tools/entry-wd-claims.js reads two Wikidata claims of the "same" items and writes two files.
   - scripts/entry-houses.tsv: the person entries whose family (P53) is another entry's item; a house needs 3 or more.
     159 houses, 1,308 people. Some are state entries whose item is also the dynasty: Ayyubid, Timurid, Zhou.
-  - scripts/entry-coords.tsv: the coordinates (P625) of the place, event and polity entries, 7,597 of them. An item
+  - scripts/entry-coords.tsv: the coordinates (P625) of the place, event and polity entries, 7,533 of them. An item
     with points more than half a degree apart is left out (371).
+  - scripts/entry-coords-manual.tsv (the editor's, 9 Nov 2026) wins. "-" takes a point away: 37 continents, oceans
+    and broad regions (a dot in the middle of Africa says nothing), 18 wars and campaigns fought across a region (the
+    early Muslim conquests, the Anglo-Mysore Wars, the July Crisis at Stuttgart), and items whose point is wrong (the
+    Battle of Miani, about 350 km from Hyderabad, as Wikipedia also has it). A pair sets a point from a named Wikipedia
+    article: the Umayyads at Damascus (their item said Baghdad), the French colonial empire at Paris (its longitude's
+    sign was reversed), the Italian Empire at Rome (in the Red Sea), Nihawand at the town of Nahavand.
 - **On a house's entry:** "Rulers and members", LifeChart (the people pages' chart, moved above the entry loop) with
   the members sorted by Span, and a link to the hub. Each member's meta line reads "Of the <house>".
 - **On a place, event or polity entry:** "On the map" (EntryLocator: the point on world.svg, its degrees, "What was
@@ -1915,7 +1939,7 @@ Institute and its register are still named where they are defined and credited (
   every built page (root pages and all the generated and profile folders) for missing local resources (img, srcset,
   script, link, svg image, og:image posters), text left over from templates or data ("undefined", NaN, [object …],
   "[[e:", "{{", a stray null), mojibake, entities escaped twice, stray spacing, JSON-LD that does not parse, duplicate
-  ids, empty links and pictures without alt; scripts/tools/crawl-browser.js [--per=N] [--phone] [--kids] [--dark]
+  ids, empty links and pictures without alt; scripts/tools/crawl-browser.js [--per=N] [--seed=N] [--phone] [--kids] [--dark]
   [paths] opens lib.js KINDS and a seeded sample of each folder in headless Edge, scrolled to the end, for script and
   console errors, same-site requests that fail, pictures that do not decode and pages wider than the screen (paths from
   Git Bash need MSYS_NO_PATHCONV=1); scripts/tools/crawl-live.js [--per=N] asks the live host for every root page,
@@ -1969,8 +1993,9 @@ Institute and its register are still named where they are defined and credited (
   stanza n mod its count; choruses sung again and one-line stanzas left out). node scripts/tools/songq-test.js [day] deals
   every day to 30 June 2027 for both pools: 428 dealings still repeat lines, those of the 33 songs with one stanza.
 - Born on This Day (home page): data/days "born" [slug, name, dates, thumb, year], the four best known with a picture.
-- Next to read (shared-nav.js, every reading page): three unread pages the page links, by See-also lists, the reader's
-  kinds (epoch-seen) and frequency; after idle, at the foot. window.epochNextRead.
+- Next to read (shared-nav.js, every reading page): three unread pages the page links, by the reader's kinds (epoch-seen),
+  frequency and a page of another kind; after idle, at the foot. window.epochNextRead. Pages shown as cards in the See-also or
+  related lists just above come last (until 9 Nov 2026 they came first, so the box repeated three of the cards over it).
 - Find a line (/songs/): data/song-lines.json, every printed line of the 187 songs with words, fetched on first use.
 - /songs/ on a slow phone (8 Nov 2026): its 406 cards (.sg-index .sg-card) have content-visibility: auto with contain-intrinsic-size auto 150px, so only those near the screen are laid out and painted. Measured at 4x CPU: first paint 1.0 s to 0.45 s, main-thread work 4.3 s to 1.8 s. CLS while scrolling is 0 on phones; on desktop the type chips still re-wrap when the fonts arrive (0.038; 0.090 before).
 - Encyclopedia filters: With a picture, Era (ancient to 499, medieval, early modern 1500–1799, modern, undated); ?pic=1&era=.

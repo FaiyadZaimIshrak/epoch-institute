@@ -6,13 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
-<title>Research Series: Essays on Rise and Collapse — The Epoch Institute</title>
+<title>Research Series: Essays on History — The Epoch Institute</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Essays from The Epoch Institute on the forces behind the rise and collapse of civilisations: power, trade, collapse, exchange and war.">
-<meta property="og:title" content="Research Series: Essays on Rise and Collapse — The Epoch Institute">
-<meta property="og:description" content="Thematic essays on administrative architecture, economic networks, military innovation, cultural exchange, and civilisational collapse.">
+<meta name="description" content="Essays from The Epoch Institute on how states rose and fell, how peoples lived without them, and how they ruled, ranked, worshipped, wrote, invented and sang.">
+<meta property="og:title" content="Research Series: Essays on History — The Epoch Institute">
+<meta property="og:description" content="Essays on power and collapse, government and social rank, faiths, languages, inventions and songs, drawn from the Institute&#8217;s own profiles and data.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://the-epoch-institute.org/research-series">
 <meta property="og:site_name" content="The Epoch Institute">
@@ -34,7 +34,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Research Series — The Epoch Institute",
-  "description": "Thematic essays examining the structural forces behind civilisational rise and collapse.",
+  "description": "Essays on how states rose and fell, how peoples lived without them, and how they ruled, ranked, worshipped, wrote, invented and sang.",
   "url": "https://the-epoch-institute.org/research-series",
   "isPartOf": { "@type": "WebSite", "name": "The Epoch Institute", "url": "https://the-epoch-institute.org" }
 }
@@ -46,7 +46,7 @@
 <header class="ref-head">
   <span class="hero-ornament"></span>
   <h1 class="research-title">Research Series</h1>
-  <p class="ref-lede">Thematic essays on the structural forces behind the rise and collapse of civilisations. Each one compares empires across continents and ages, and ends with what the Institute&#8217;s own data shows.</p>
+  <p class="ref-lede">Essays on how states rose and fell, how peoples lived without them, and how they ruled, ranked, worshipped, wrote, invented and sang. Each one compares societies across continents and ages and draws on the Institute&#8217;s own profiles and data.</p>
 </header>
 <!-- build:essays -->
 <script>(function(){var s={"01":"the-architecture-of-power","02":"trade-and-territory","03":"the-collapse-problem","04":"cross-cultural-exchange","05":"the-military-revolution","06":"who-should-rule","07":"before-the-state","08":"how-songs-travel","09":"faiths-on-the-move","10":"who-invented-it-first","11":"from-ruler-to-enslaved","12":"the-written-word"},m=/^#series-(\d\d)$/.exec(location.hash);if(m&&s[m[1]])location.replace("/essays/"+s[m[1]]);})();</script>

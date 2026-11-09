@@ -83,7 +83,7 @@
 initNav('today');
 
 var cachedDays    = {};     // day key -> data/days/<mm-dd>.json: { events, hero, pic, intl }
-var DAYS_V        = 'a4d20a62da';    // stamped by scripts/build-pages.ps1
+var DAYS_V        = 'c7d86b848d';    // stamped by scripts/build-pages.ps1
 var dayHero       = -1;
 var dayPic        = null;
 var currentDay    = null;
@@ -273,6 +273,11 @@ function renderDay(key) {
   dayEvents   = day.events || [];
   dayHero     = typeof day.hero === 'number' ? day.hero : -1;
   dayPic      = day.pic || null;
+  // the anniversary piece leads, as on the day's own page and the home page (in year order an older event, often a grim
+  // one, stood above it); the rest keep their year order
+  if (dayPic && dayHero > 0 && dayHero < dayEvents.length) {
+    dayEvents = [dayEvents[dayHero]].concat(dayEvents.slice(0, dayHero), dayEvents.slice(dayHero + 1)); dayHero = 0;
+  }
 
   var labels = getDayLabels();
   document.getElementById('tih-subheading').innerHTML =

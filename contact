@@ -104,7 +104,7 @@
         <li><a href="/today-in-history/"><b>On this day</b><span>What happened today in history</span></a></li>
       </ul>
       <form class="ct-nl" id="ct-nl" novalidate>
-        <label class="form-label" for="ct-nl-email">Get the monthly digest</label>
+        <label class="form-label" for="ct-nl-email">Get the weekly newsletter</label>
         <div class="ct-nl-row"><input class="form-input" id="ct-nl-email" type="email" placeholder="your@email.com" autocomplete="email"><button type="submit" class="form-submit">Subscribe</button></div>
         <p class="ct-status" id="ct-nl-status" role="status" aria-live="polite"></p>
       </form>
