@@ -2,13 +2,14 @@
 // theme, the dark theme and Kids mode, at 1280 px (and --phone: 390 px). Prints each rule that fails with its WCAG
 // criteria, how many pages and nodes, and a few example selectors; --json=<file> writes everything. axe-core comes from
 // EPOCH_AXE (a folder whose node_modules has it) or scripts/node_modules.
-//   node scripts/tools/a11y-audit.js [--modes=light,dark,kids] [--phone] [--json=out.json] [path …]
+//   node scripts/tools/a11y-audit.js [--modes=light,dark,kids] [--skin=winter|illuminated|marble|contrast] [--phone] [--json=out.json] [path …]
+// --skin: the look (html[data-skin], localStorage epoch-skin; "classic" when not given, so the season never decides)
 const fs = require('fs'), path = require('path');
 const { serve, edge, ROOT, KINDS } = require('./lib');
 const AXE = require.resolve('axe-core/axe.min.js', { paths: [process.env.EPOCH_AXE || '', process.env.EPOCH_PW || '', path.join(ROOT, 'scripts')].filter(Boolean) });
 const args = process.argv.slice(2), opt = k => (args.find(a => a.startsWith('--' + k + '=')) || '').slice(k.length + 3);
 const modes = (opt('modes') || 'light,dark,kids').split(','), paths = args.filter(a => !a.startsWith('--'));
-const pages = paths.length ? paths : KINDS, phone = args.includes('--phone');
+const pages = paths.length ? paths : KINDS, phone = args.includes('--phone'), skin = opt('skin') || 'classic';
 const TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 (async () => {
   const srv = await serve(); const b = await edge(), ctx = b.contexts()[0] || await b.newContext(), pg = await ctx.newPage();
@@ -17,7 +18,7 @@ const TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
   for (const mode of modes) {
     // the theme and Kids mode are read by each page's head snippet from localStorage
     await pg.goto('http://localhost:8765/about', { waitUntil: 'load' });
-    await pg.evaluate(m => { try { localStorage.setItem('epoch-theme', m === 'dark' ? 'dark' : 'light'); if (m === 'kids') localStorage.setItem('epoch-kids', '1'); else localStorage.removeItem('epoch-kids'); } catch (e) {} }, mode);
+    await pg.evaluate(([m, sk]) => { try { localStorage.setItem('epoch-skin', sk); localStorage.setItem('epoch-snow', 'off'); localStorage.setItem('epoch-theme', m === 'dark' ? 'dark' : 'light'); if (m === 'kids') localStorage.setItem('epoch-kids', '1'); else localStorage.removeItem('epoch-kids'); } catch (e) {} }, [mode, skin]);
     for (const p of pages) {
       try {
         await pg.goto('http://localhost:8765' + p, { waitUntil: 'load', timeout: 60000 }); await pg.waitForTimeout(700);

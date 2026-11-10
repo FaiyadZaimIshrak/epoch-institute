@@ -1140,6 +1140,36 @@ Every finish card's Share sends a score poster (share(), see "Sharing").
   Since 7 Nov 2026 make-six-degrees.js deals to 31 October 2027 by default (360 puzzles), in step with Connections (29 Oct
   2027), the Crossword (365 puzzles, to 26 Oct 2027) and Who Said It? (21 Nov 2027).
 
+## Looks (html[data-skin], 10 Nov 2026; release W1 of the winter round)
+The user asked for more themes and a required winter one for Christmas. A look is a second attribute beside data-theme
+that only redefines the colour tokens ("Looks" block of shared.css, just before Kids mode), so each has a dark and a
+light side and every [data-theme] rule still holds: winter (midnight blue / frost, a holly sprig on the name, snow),
+illuminated (lapis night / vellum with red-ink links), marble (umber and bronze / marble with verdigris links),
+contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids="1"])); print stays white.
+- The head snippet ($THEME in build-pages.ps1, generator.html, the hand pages, offline.html) sets data-skin before first
+  paint from localStorage epoch-skin; with nothing stored the look is Seasonal: winter from 1 December to 6 January
+  (UTC). "classic" stored = never seasonal. The snippet went into the 42,545 existing pages by one byte-exact replace
+  (a full build was not needed: Stamp hashes pages without $THEME, so no lastmod moved).
+- shared-nav.js: the header's sun/moon button (#theme-toggle) opens the Display panel (#look-menu: Light / Dark, the
+  six choices with Seasonal first, "Falling snow" while winter is on: epoch-snow 'off'); the phone menu's Display row
+  has "Look", which opens it. After a change it sets data-theme again, so every canvas that watches data-theme (atlas,
+  globes, timeline, faith maps, Globe Hunt) repaints, fires 'epoch:skin', and sets the theme-color metas to the page's
+  --bg. Snow: one fixed canvas (.snow-canvas, z-index 150, under the header), 14-46 large faint flakes at 30 frames a
+  second (small bright ones over text read as full stops); never under reduced motion, Save-Data, in a hidden tab or
+  in print. window.epochLook {looks, stored, active, set, theme, snow}.
+- Checks: scripts/tools/look-contrast.js (every palette's text, muted and gold on page and surface 4.5:1 or more,
+  field borders 3:1; keep its table in step with shared.css), a11y-audit.js --skin=<look> (18 kinds of page, light and
+  dark: no contrast failure in any look; the marble bronze was brightened to #dfa867 after labels drawn at partial
+  opacity fell under 4.5:1), and the scratchpad's look-test.js (29 checks: the snippet, the season's first and last
+  days, the panel, snow, Kids mode, the atlas repainting, the phone row and panel). The chart colours (--cat-*, --rc-*,
+  --fm-*, --gv-*) stay the theme's: a new look's page must keep close to the lightness of the classic one.
+- Ideas kept for later, not built: Papyrus, Silk Road (indigo and saffron), Lapis Night, Terracotta, and seasonal
+  Spring (Nowruz to Easter) and Harvest looks, which would reuse the date switch.
+- The rest of the round (plan of 10 Nov 2026): W2 month pages, winter entries, essays, paths and carols by 28 Nov; W3
+  an Advent calendar, Quote Cipher, Longer or Shorter?, Finish the Line and /birthday; W4 a "Now" card (history
+  headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
+  public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
+
 ## Kids mode and the Kids corner (/kids)
 - Kids mode is site-wide: html[data-kids="1"], set before first paint by the head snippet from localStorage
   epoch-kids, switched by the star button in the header (shared-nav.js: window.setKidsMode(on), kidsModeOn(), the

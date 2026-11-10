@@ -947,24 +947,130 @@ function initNav(activePage) {
 
   // ── Theme toggle (on phones it lives in the menu's Display row: the bar has room for search, shelf and menu only) ──
   (function() {
+    // Since Nov 2026 the header's button opens the Display panel: Light / Dark, and the look (html[data-skin], the
+    // "Looks" block of shared.css): Seasonal (nothing stored: winter from 1 December to 6 January, UTC, as the head
+    // snippet decides before first paint), Classic, Winter, Illuminated, Marble and Bronze, High contrast
+    // (localStorage epoch-skin), and the winter look's snow (epoch-snow 'off'). window.epochLook for tests.
+    const html = document.documentElement;
     const btn = document.getElementById('theme-toggle'), dd = document.getElementById('nav-dd-theme');
-    function applyTheme(isDark) {
-      btn.textContent    = isDark ? '☀' : '🌙';
-      btn.title          = isDark ? 'Switch to light mode' : 'Switch to dark mode';
-      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-      dd.textContent = isDark ? '☀ Light theme' : '🌙 Dark theme';
-      // pin the browser chrome's colour to the chosen theme (the metas' media rules covered only the system theme)
-      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', isDark ? '#0b0c10' : '#f4efe4'); m.removeAttribute('media'); });
+    const LOOKS = [['', 'Seasonal', 'Winter from 1 December to 6 January', 'auto'], ['classic', 'Classic', 'Night and parchment', 'classic'],
+      ['winter', 'Winter', 'Midnight blue and frost', 'winter'], ['illuminated', 'Illuminated', 'Lapis, vellum and red ink', 'illuminated'],
+      ['marble', 'Marble and Bronze', 'Stone, bronze and verdigris', 'marble'], ['contrast', 'High contrast', 'Pure black and white', 'contrast']];
+    function stored() { var s = ''; try { s = localStorage.getItem('epoch-skin') || ''; } catch (e) {} return LOOKS.some(function (l) { return l[0] === s; }) ? s : ''; }
+    function seasonal() { var d = new Date(), m = d.getUTCMonth(); return m === 11 || (m === 0 && d.getUTCDate() < 7) ? 'winter' : ''; }
+    function active() { var s = stored() || seasonal(); return s === 'classic' ? '' : s; }
+    function isDark() { return html.getAttribute('data-theme') !== 'light'; }
+    function chrome() {   // the browser chrome's colour follows the page (the metas' media rules knew only the system theme)
+      var bg = getComputedStyle(html).getPropertyValue('--bg').trim() || (isDark() ? '#0b0c10' : '#f4efe4');
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', bg); m.removeAttribute('media'); });
     }
-    applyTheme(document.documentElement.getAttribute('data-theme') !== 'light');
-    btn.addEventListener('click', () => {
-      const html   = document.documentElement;
-      const isDark = html.getAttribute('data-theme') !== 'light';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      try { localStorage.setItem('epoch-theme', isDark ? 'light' : 'dark'); } catch (e) {}
-      applyTheme(!isDark);
+    function applySkin() {
+      var s = active();
+      if (s) html.setAttribute('data-skin', s); else html.removeAttribute('data-skin');
+      // canvases (atlas, globes, timeline, faith maps) repaint on a data-theme change: tell them the colours moved
+      html.setAttribute('data-theme', isDark() ? 'dark' : 'light');
+      chrome(); snow(); paint();
+      document.dispatchEvent(new CustomEvent('epoch:skin', { detail: { skin: s } }));
+    }
+    function setTheme(dark) {
+      html.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('epoch-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      chrome(); snow(); paint();
+    }
+    function setSkin(s) { try { if (s) localStorage.setItem('epoch-skin', s); else localStorage.removeItem('epoch-skin'); } catch (e) {} applySkin(); }
+
+    // snow for the winter look: a few slow flakes on one fixed canvas; never under reduced motion or Save-Data, in a
+    // hidden tab, in print (CSS), or once switched off in the panel
+    var SN = null;
+    function snowWanted() {
+      var off = false; try { off = localStorage.getItem('epoch-snow') === 'off'; } catch (e) {}
+      return html.getAttribute('data-skin') === 'winter' && !off && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) &&
+        !(navigator.connection && navigator.connection.saveData);
+    }
+    function snow() {
+      if (!snowWanted()) { if (SN) { cancelAnimationFrame(SN.raf); SN.cv.remove(); window.removeEventListener('resize', SN.size); SN = null; } return; }
+      if (SN) { SN.col = isDark() ? '236,244,250' : '110,140,165'; return; }
+      var cv = document.createElement('canvas'); cv.className = 'snow-canvas'; cv.setAttribute('aria-hidden', 'true');
+      var c = cv.getContext && cv.getContext('2d'); if (!c) return;
+      document.body.appendChild(cv);
+      var S = SN = { cv: cv, raf: 0, col: isDark() ? '236,244,250' : '110,140,165', flakes: [], w: 0, h: 0, last: 0 };
+      S.size = function () {
+        var r = Math.min(window.devicePixelRatio || 1, 1.5); S.w = window.innerWidth; S.h = window.innerHeight;
+        cv.width = Math.round(S.w * r); cv.height = Math.round(S.h * r); c.setTransform(r, 0, 0, r, 0, 0);
+        var n = Math.max(14, Math.min(46, Math.round(S.w * S.h / 30000)));
+        while (S.flakes.length < n) S.flakes.push({ x: Math.random() * S.w, y: Math.random() * S.h, r: 1.5 + Math.random() * 2.1, v: 12 + Math.random() * 22, p: Math.random() * 6.3, a: 0.16 + Math.random() * 0.3 });   // large and faint: a small bright flake over text reads as a full stop
+        S.flakes.length = n;
+      };
+      S.size(); window.addEventListener('resize', S.size);
+      (function tick(t) {
+        if (SN !== S) return;
+        S.raf = requestAnimationFrame(tick);
+        if (document.hidden || t - S.last < 33) return;   // about 30 frames a second
+        var dt = Math.min(0.1, (t - S.last) / 1000 || 0.033); S.last = t;
+        c.clearRect(0, 0, S.w, S.h);
+        for (var i = 0; i < S.flakes.length; i++) {
+          var f = S.flakes[i]; f.y += f.v * dt; f.p += dt * 0.9; f.x += Math.sin(f.p) * 9 * dt;
+          if (f.y > S.h + 4) { f.y = -4; f.x = Math.random() * S.w; }
+          c.beginPath(); c.arc(f.x, f.y, f.r, 0, 6.2832); c.fillStyle = 'rgba(' + S.col + ',' + f.a + ')'; c.fill();
+        }
+      })(0);
+    }
+
+    // the panel
+    var tog = document.querySelector('.nav-toggles');
+    var panel = document.createElement('div'); panel.className = 'shelf-menu look-menu'; panel.id = 'look-menu'; panel.hidden = true;
+    panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', 'Display');
+    panel.innerHTML = '<p class="look-h">Brightness</p><div class="look-seg" role="group" aria-label="Brightness">' +
+      '<button type="button" data-th="light">☀ Light</button><button type="button" data-th="dark">🌙 Dark</button></div>' +
+      '<p class="look-h" id="look-h2">Look</p><div role="radiogroup" aria-labelledby="look-h2">' + LOOKS.map(function (l) {
+        return '<button type="button" class="look-opt" role="radio" data-skin="' + l[0] + '"><span class="look-sw look-sw-' + l[3] + '" aria-hidden="true"></span><span>' + l[1] + '<small>' + l[2] + '</small></span></button>';
+      }).join('') + '</div><label class="look-snow"><input type="checkbox" id="look-snow"> Falling snow</label>' +
+      '<p class="look-note" id="look-kids">Kids mode has its own colours: the look shows again when it is switched off.</p>';
+    tog.appendChild(panel);
+    function paint() {
+      var dark = isDark(), s = stored(), kids = html.getAttribute('data-kids') === '1';
+      btn.textContent = dark ? '🌙' : '☀';
+      btn.title = 'Display: light or dark, and the look'; btn.setAttribute('aria-label', 'Display: light or dark, and the look');
+      dd.textContent = dark ? '☀ Light theme' : '🌙 Dark theme';
+      panel.querySelectorAll('[data-th]').forEach(function (b) { b.setAttribute('aria-pressed', String((b.getAttribute('data-th') === 'dark') === dark)); });
+      panel.querySelectorAll('[data-skin]').forEach(function (b) { b.setAttribute('aria-checked', String(b.getAttribute('data-skin') === s)); });
+      var off = false; try { off = localStorage.getItem('epoch-snow') === 'off'; } catch (e) {}
+      panel.querySelector('.look-snow').hidden = html.getAttribute('data-skin') !== 'winter';
+      document.getElementById('look-snow').checked = !off;
+      document.getElementById('look-kids').hidden = !kids;
+    }
+    function open(on) {
+      panel.hidden = !on; btn.setAttribute('aria-expanded', String(on));
+      if (on) { var sh = document.getElementById('shelf-menu'), sb = document.getElementById('nav-shelf-btn'); if (sh && !sh.hidden) { sh.hidden = true; if (sb) sb.setAttribute('aria-expanded', 'false'); } paint(); }
+    }
+    btn.setAttribute('aria-haspopup', 'true'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-controls', 'look-menu');
+    btn.addEventListener('click', function (e) { e.stopPropagation(); open(panel.hidden); });
+    panel.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var b = e.target.closest && e.target.closest('button'); if (!b) return;
+      if (b.hasAttribute('data-th')) setTheme(b.getAttribute('data-th') === 'dark');
+      else if (b.hasAttribute('data-skin')) setSkin(b.getAttribute('data-skin'));
     });
-    dd.addEventListener('click', function () { btn.click(); });
+    document.getElementById('look-snow').addEventListener('change', function () {
+      try { if (this.checked) localStorage.removeItem('epoch-snow'); else localStorage.setItem('epoch-snow', 'off'); } catch (e) {}
+      snow();
+    });
+    document.addEventListener('click', function () { if (!panel.hidden) open(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { open(false); btn.focus(); } });
+    document.addEventListener('epoch:kids', function () { paint(); chrome(); });
+    // the phone menu's Display row: its first button still switches light and dark; "Look" opens the panel
+    dd.addEventListener('click', function () { setTheme(!isDark()); });
+    var row = dd.parentNode, lk = document.createElement('button');
+    lk.type = 'button'; lk.className = 'nav-dd-btn'; lk.id = 'nav-dd-look'; lk.textContent = '◐ Look';
+    row.appendChild(lk);
+    lk.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var hb = document.getElementById('nav-hamburger'); if (hb && hb.getAttribute('aria-expanded') === 'true') hb.click();
+      open(true); var f = panel.querySelector('[aria-checked="true"]'); if (f) f.focus();
+    });
+    window.epochLook = { looks: LOOKS.map(function (l) { return l[0]; }), stored: stored, active: active, set: setSkin, theme: setTheme, snow: function () { return !!SN; } };
+    // a page kept from before the looks (the service worker's copy) has no data-skin yet
+    if ((html.getAttribute('data-skin') || '') !== active()) applySkin(); else { chrome(); paint(); snow(); }
   })();
 
   // ── My shelf: pages saved for later and recently viewed (kept in this browser only) ──
