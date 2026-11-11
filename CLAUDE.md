@@ -1362,8 +1362,16 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   - scripts/tools/make-open-data.js (run by the builder after its own open data) writes epoch-institute-people.csv,
     -songs.csv, -inventions.csv and -encyclopedia-wikidata.csv and /dataset's build:open-data-more block (Datasets 3-6).
     Only the Institute's tables and Wikidata's facts: no entry description (Wikipedia-derived), picture or song text.
-  Still to do from that plan: S4 speed (owner: purge + cache rule), then W6b: rulers of states and state facts
-  (languages, religion, currency, area) from Wikidata, which need reading state by state.
+- **W6b, measured and not built (11 Nov 2026): rulers and state facts from Wikidata.** Of the 4,452 states with an item,
+  Wikidata names a head of state or government (P35, P6) for about 300, almost all present-day countries, 55 with a
+  source: no base for ruler lists. With references that name a work or an address (not "imported from Wikipedia"),
+  264 states have any of official language (95), religion (33), currency (24) or area (181), 172 of them without a
+  profile; and a sample of 70 showed the figures are often the present-day place's (a medieval county or free city
+  with its modern municipality's area of 2017, Rhegion with Reggio's) or lists of every faith in a modern country. The
+  state pages already carry rulers, religion and language from their own texts (data/states: ru, re, la). Do not add
+  Wikidata's state facts without a far stricter rule (the figure's year inside the state's years) and a read of each.
+  A ruler list would have to come from the people instead: entries whose text and dates give a reign over the state.
+  Still to do from that plan: S4 speed (owner: purge + cache rule). The winter round's own work is done.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
