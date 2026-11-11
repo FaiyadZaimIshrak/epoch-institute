@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card · privacy · terms · support · advent
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card · privacy · terms · support · advent · now
 A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
@@ -1311,7 +1311,30 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   own tab and lobby card (New until 9 Dec), a column on My Week (a dash before its first day), the 16th game of My
   Passport. A button holding block spans shrinks them to their text and centres them: .gm-line-o .gm-line-l is
   width 100%. games.js?v=19, passport.js?v=13; scripts/tests/finish-the-line.js.
-  Still to do from that plan: S4 speed (owner: purge + cache rule), then W4-W6.
+- **History Now** (/now and the home page's Now card, W4): three lists.
+  - **In the news:** scripts/news/make-news.js reads the feeds of scripts/news/feeds.tsv (Archaeology Magazine, Smithsonian
+    Magazine's history, Phys.org's archaeology category, Archaeology News, Medievalists.net, The History Blog; UNESCO's was
+    workshops, The Past book reviews) and keeps the headline, link, source and day only, never a summary or picture. A
+    headline is kept only when it names a page of the site, its "Background": a profile, an entry of weight 3 or more (a
+    one-word name only when the encyclopedia's texts hardly ever use the word in lower case, so "Study" never matches),
+    a country history, or a word of scripts/news/terms.tsv (Maya, Roman, Scythian …; rank 1 words such as Medieval give
+    way to any place named). Left out: grim headlines, present-day politics, offers, items over 21 days old, a second
+    headline of one story or background, more than three of a source; ten, newest first. --all prints every item with
+    why it was kept or not, --from/--save work on saved feeds. .github/workflows/news.yml runs it at 05:20 and 17:20
+    UTC and writes public_html/feeds/news.json through cPanel's UAPI (as the daily feed: never deployed; fewer than four
+    headlines write nothing, so the last good file stays; the pages ignore a file over ten days old). Never in Kids
+    mode (the file is not even asked for). The Institute does not write or check the headlines, and the page says so.
+  - **Coming anniversaries** and **New here:** scripts/tools/make-now.js (run by build-pages.ps1 before the sitemaps)
+    writes data/now.json: the round anniversaries of 400 days from the first of the build's month (multiples of 100,
+    50, of 25 up to 300 years and of 10 under 100; two events a day from data/days, one birth or death of
+    day-people.tsv for people of weight 5 or more), of which the page shows the next thirty days, and the six newest
+    notes of whats-new.tsv. It also writes the hand page /now from /weekly's head (as make-advent.js) and stamps
+    NOW_SRC and now.js?v= into /now and index: re-run it after editing now.js. A build in a new month changes the file.
+  - now.js fills every [data-now] list; the home card (.now-card, after On This Day) has three tabs and lists of a
+    fixed height (--now-row: 4 rows on phones, 3 x 2 from 700 px, 2 x 3 from 1100 px), loaded after idle, so nothing
+    moves; without headlines it opens on the anniversaries. ?nowday=yyyy-mm-dd previews a day. window.epochNow.
+    Menu Maps & Time (Time), footer, search, sitemap; scripts/tests/history-now.js (a stand-in news.json).
+  Still to do from that plan: S4 speed (owner: purge + cache rule), then W5-W6.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

@@ -130,6 +130,32 @@
   </div>
 </section>
 
+<!-- History Now (Nov 2026): headlines of the week, the coming round anniversaries, what is new. now.js fills the lists
+     after load and an idle moment; each list keeps a fixed height (.now-card in shared.css), so nothing moves -->
+<section class="home-section now-card" aria-labelledby="now-title">
+  <div class="home-section-hd">
+    <h2 class="home-section-title" id="now-title">History Now</h2>
+    <a class="home-section-more" href="/now">All of it &rarr;</a>
+  </div>
+  <div class="now-tabs" role="tablist" aria-label="History Now">
+    <button type="button" role="tab" class="now-tab now-tab-news" id="now-t-news" data-now-tab="news" aria-controls="now-p-news" aria-selected="true">In the news</button>
+    <button type="button" role="tab" class="now-tab" id="now-t-ann" data-now-tab="ann" aria-controls="now-p-ann" aria-selected="false" tabindex="-1">Coming anniversaries</button>
+    <button type="button" role="tab" class="now-tab" id="now-t-new" data-now-tab="new" aria-controls="now-p-new" aria-selected="false" tabindex="-1">New here</button>
+  </div>
+  <div role="tabpanel" id="now-p-news" aria-labelledby="now-t-news"><ol class="now-list" data-now="news" data-max="6"></ol></div>
+  <div role="tabpanel" id="now-p-ann" aria-labelledby="now-t-ann" hidden><ol class="now-list" data-now="ann" data-max="6"></ol></div>
+  <div role="tabpanel" id="now-p-new" aria-labelledby="now-t-new" hidden><ol class="now-list" data-now="new" data-max="6"></ol></div>
+</section>
+<script>
+var NOW_SRC = '/data/now.json?v=233c56fdf3';
+(function () {
+  function start() { var s = document.createElement('script'); s.src = '/now.js?v=6454b6d70d'; document.body.appendChild(s); }
+  var idle = window.requestIdleCallback || function (f) { setTimeout(f, 800); };
+  if (document.readyState === 'complete') idle(start, { timeout: 3000 });
+  else window.addEventListener('load', function () { idle(start, { timeout: 3000 }); }, { once: true });
+})();
+</script>
+
 <!-- Try it yourself: the interactive tools, with big pictures (build:home-try) -->
 <section class="home-section" aria-labelledby="try-title">
   <div class="home-section-hd">

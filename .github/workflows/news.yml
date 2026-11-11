@@ -1,0 +1,86 @@
+# History Now's headlines, https://the-epoch-institute.org/feeds/news.json (shown on /now and the home page's Now card).
+# Twice a day, and after a push that changes its sources, scripts/news/make-news.js reads the feeds of
+# scripts/news/feeds.tsv and keeps the headlines that name a page of the site (headline, link, source and day only);
+# cPanel's UAPI writes the file into public_html/feeds, as daily-feed.yml does: no commit and no deploy. When a run
+# fails or finds fewer than four headlines nothing is written and the last good file stays (the pages stop showing a
+# file over ten days old). Uses the cPanel API secrets CPANEL_HOST, CPANEL_USER and CPANEL_API_TOKEN.
+
+name: History news
+
+on:
+  schedule:
+    - cron: '20 5,17 * * *'
+  push:
+    branches: [master]
+    paths: ['scripts/news/**', '.github/workflows/news.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: history-news
+  cancel-in-progress: true
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      RAW_HOST: ${{ secrets.CPANEL_HOST }}
+      USER: ${{ secrets.CPANEL_USER }}
+      TOKEN: ${{ secrets.CPANEL_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            scripts/news
+            search-index.js
+            search-profiles.js
+            search-pages.js
+            encyclopedia-data.js
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check secrets
+        run: |
+          HOST=$(printf '%s' "$RAW_HOST" | tr -d '[:space:]')
+          HOST="${HOST#http://}"; HOST="${HOST#https://}"; HOST="${HOST%%/*}"; HOST="${HOST%%:*}"
+          echo "HOST=$HOST" >> "$GITHUB_ENV"
+          for v in HOST USER TOKEN; do
+            [ -n "${!v}" ] || { echo "::error::Missing secret for $v"; exit 1; }
+          done
+
+      - name: Read the feeds
+        run: node scripts/news/make-news.js --out=news.json
+
+      - name: Check the file
+        run: python3 -c "import json; d = json.load(open('news.json')); n = len(d['items']); print(n, 'headlines'); assert n >= 4 and all(i[1].startswith('https://') and i[4].startswith('/') for i in d['items'])"
+
+      # public_html/feeds is made by the deploy (scripts/deploy.sh); after a push the deploy may still be running: retry
+      - name: Write it to public_html/feeds
+        run: |
+          for i in $(seq 1 8); do
+            res=$(curl -sS -X POST "https://$HOST:2083/execute/Fileman/save_file_content" \
+              -H "Authorization: cpanel $USER:$TOKEN" \
+              --data-urlencode "dir=public_html/feeds" \
+              --data-urlencode "file=news.json" \
+              --data-urlencode "from_charset=UTF-8" \
+              --data-urlencode "to_charset=UTF-8" \
+              --data-urlencode "content@news.json")
+            echo "$res" | jq -c '{status, errors}'
+            [ "$(echo "$res" | jq -r .status)" = "1" ] && exit 0
+            res=$(curl -sS "https://$HOST:2083/execute/Fileman/upload_files" \
+              -H "Authorization: cpanel $USER:$TOKEN" \
+              -F "dir=public_html/feeds" -F "overwrite=1" -F "file-1=@news.json")
+            echo "$res" | jq -c '{status, errors}'
+            [ "$(echo "$res" | jq -r .status)" = "1" ] && exit 0
+            sleep 30
+          done
+          echo "::error::cPanel did not take the headlines"; exit 1
+
+      - name: Check it is live
+        run: |
+          sleep 5
+          curl -sS "https://the-epoch-institute.org/feeds/news.json" | head -c 300; echo

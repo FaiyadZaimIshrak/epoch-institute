@@ -1,8 +1,12 @@
 # The daily RSS feed, today.xml, is written here every morning by .github/workflows/daily-feed.yml (not by deploys:
 # scripts/deploy.sh copies only this file). Served as RSS and kept for an hour.
 AddType application/rss+xml .xml
+# news.json: the headlines of /now and the home page's Now card, written twice a day by .github/workflows/news.yml
 <IfModule mod_headers.c>
   <FilesMatch "\.xml$">
     Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+  <FilesMatch "\.json$">
+    Header set Cache-Control "public, max-age=1800"
   </FilesMatch>
 </IfModule>

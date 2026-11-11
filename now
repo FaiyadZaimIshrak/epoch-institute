@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>History Now: In the News, Coming Anniversaries, What Is New — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="History and archaeology in the news, each headline beside its background at the Institute; the round anniversaries of the next thirty days; what is new.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/now">
+<meta property="og:type" content="website">
+<meta property="og:title" content="History Now — The Epoch Institute">
+<meta property="og:description" content="History and archaeology in the news, each headline beside its background at the Institute; the round anniversaries of the next thirty days; what is new.">
+<meta property="og:url" content="https://the-epoch-institute.org/now">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/now.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"History Now"}]},{"@type":"CollectionPage","name":"History Now","url":"https://the-epoch-institute.org/now","description":"History and archaeology in the news, each headline beside its background at the Institute; the round anniversaries of the next thirty days; what is new."}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<main id="main" class="now-page ref-page">
+<div class="now-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">History Now</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">History Now</h1>
+  <p class="ref-lede">What is being found and written about the past this week, the round anniversaries of the next thirty days, and what is new at the Institute.</p>
+</header>
+
+<section class="now-sec now-sec-news" id="news" aria-labelledby="now-news-t">
+  <h2 class="ref-sec-title" id="now-news-t">In the news</h2>
+  <p class="now-note">Headlines from other publications, newest first, each with the Institute&rsquo;s page on its subject. The headlines and the articles belong to their publishers: the Institute has not written or checked them. The list is refreshed twice a day.</p>
+  <ol class="now-list" data-now="news" data-max="10"><li class="now-wait">The headlines need JavaScript.</li></ol>
+  <p class="now-note now-src">From the news pages of <a href="https://archaeology.org/news/" rel="noopener">Archaeology Magazine</a>, <a href="https://www.smithsonianmag.com/history/" rel="noopener">Smithsonian Magazine</a>, <a href="https://phys.org/science-news/archaeology/" rel="noopener">Phys.org</a>, <a href="https://archaeologymag.com/" rel="noopener">Archaeology News</a>, <a href="https://www.medievalists.net/" rel="noopener">Medievalists.net</a>, <a href="https://www.thehistoryblog.com/" rel="noopener">The History Blog</a>. A headline is listed only when it names a page of the Institute.</p>
+</section>
+
+<section class="now-sec" id="anniversaries" aria-labelledby="now-ann-t">
+  <h2 class="ref-sec-title" id="now-ann-t">Coming anniversaries</h2>
+  <p class="now-note">Round anniversaries in the next thirty days: centuries, half-centuries, quarter-centuries of the last three hundred years and the decades of the last hundred. Every day has its own page in <a href="/today-in-history/">Today in History</a>.</p>
+  <ol class="now-list" data-now="ann" data-max="40"><li class="now-wait">The anniversaries need JavaScript.</li></ol>
+</section>
+
+<section class="now-sec" id="new" aria-labelledby="now-new-t">
+  <h2 class="ref-sec-title" id="now-new-t">New at the Institute</h2>
+  <ol class="wn-list">
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-16">16 November 2026</time></p><h3 class="wn-t">History Now: the past in this week’s news</h3><p class="wn-s">A new page and a card on the home page: history and archaeology headlines from six publications, each beside the Institute’s page on its subject; the round anniversaries of the next thirty days; and what is new here. The headlines are refreshed twice a day and are not shown in Kids mode.</p><p class="wn-links"><a href="/now">History Now</a></p></li>
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-15">15 November 2026</time></p><h3 class="wn-t">Finish the Line: a new daily game</h3><p class="wn-s">A few lines of a song from history, and four lines to choose from: which one comes next? Five songs a day, the same for everyone, from carols and anthems to hymns and sea shanties; songs in other languages have their English under every line.</p><p class="wn-links"><a href="/games#line">Finish the Line</a></p></li>
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-14">14 November 2026</time></p><h3 class="wn-t">Quote Cipher: a new daily game</h3><p class="wn-s">A quotation from history with every letter swapped for another: work out the words square by square, then learn who said them and where. One cipher a day, the same for everyone, with a letter to reveal when you are stuck; Kids mode starts with three letters given.</p><p class="wn-links"><a href="/games#cipher">Quote Cipher</a></p></li>
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-13">13 November 2026</time></p><h3 class="wn-t">A front page for the games</h3><p class="wn-s">History Games now opens on a card for each of the fourteen games, with today’s daily games first and your result on each once you have played. New things are marked New in the menus, your birthday in history has its own place in the Play menu, and My Passport has two new stamps.</p><p class="wn-links"><a href="/games">History Games</a> <a href="/passport">My Passport</a></p></li>
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-13">13 November 2026</time></p><h3 class="wn-t">Longer or Shorter? A new game</h3><p class="wn-s">Two states or empires of the past, each with its emblem: which lasted longer? The gaps narrow as your streak grows, from centuries to a couple of decades, and you have three lives. It has its own tab among the History Games.</p><p class="wn-links"><a href="/games#first-lasted">Longer or Shorter?</a></p></li>
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-13">13 November 2026</time></p><h3 class="wn-t">An Advent calendar of history, and your birthday in history</h3><p class="wn-s">Twenty-four doors for the days of December: behind each a festival of the dark season, a carol or something that happened on that day, opening one a day from 1 December. And on Today in History you can now choose your birthday, or any day, to see what happened on it, who was born and died on it, and share its poster.</p><p class="wn-links"><a href="/advent">Advent calendar</a> <a href="/today-in-history/">Today in History</a></p></li>
+  </ol>
+  <p class="now-note"><a href="/new">Everything that is new, and every page added in the last thirty days &rarr;</a></p>
+</section>
+</div>
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>initNav('today');</script>
+<script>var NOW_SRC = '/data/now.json?v=233c56fdf3';</script>
+<script src="/now.js?v=6454b6d70d"></script>
+</body>
+</html>

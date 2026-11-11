@@ -1,0 +1,19 @@
+# Words in headlines that name a page of the site without being its title (scripts/news/make-news.js): the words, |
+# between, matched whole and with this case TAB the page TAB its label TAB rank (3 as a profile, 1 only when nothing
+# else in the headline matches). The tool STOPS on a page that is neither a profile nor an entry.
+Maya|Mayan	/culture/maya-civilisation	Maya civilisation	3
+Scythian	/culture/scythians	Scythians	3
+Viking	/culture/vikings	Vikings	3
+Celtic	/culture/celts	Celts	3
+Etruscan	/culture/etruscans	Etruscans	3
+Minoan|Minoans	/culture/minoan-civilisation	Minoan civilisation	3
+Mycenaean|Mycenaeans	/culture/mycenaean-civilisation	Mycenaean civilisation	3
+Roman|Romans|Roman-era	/empire/roman-empire	Roman Empire	3
+Mongol|Mongols	/empire/mongol-empire	Mongol Empire	3
+Inca|Incas|Incan	/empire/inca-empire	Inca Empire	3
+Aztec|Aztecs	/empire/aztec-empire	Aztec Empire	3
+Byzantine|Byzantines	/empire/byzantine-empire	Byzantine Empire	3
+Ottoman|Ottomans	/empire/ottoman-empire	Ottoman Empire	3
+Tudor|Tudors	/encyclopedia/house-of-tudor	House of Tudor	2
+Greek|Greeks	/encyclopedia/greece	Greece	1
+Medieval|medieval	/encyclopedia/middle-ages	Middle Ages	1

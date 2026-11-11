@@ -518,7 +518,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=ab6ba4c105';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=7af679dd05';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=1161e0b096';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -715,7 +715,7 @@ function initNav(activePage) {
       ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
         ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States Register', 'Every state on record']]],
       ['Time', [['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
-        ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
+        ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/now', 'History Now', 'In the news, coming anniversaries'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
       ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
@@ -732,7 +732,7 @@ function initNav(activePage) {
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -825,6 +825,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/centuries/">Centuries</a>
         <a class="footer-link" href="/years/">Year by Year</a>
         <a class="footer-link" href="${MONTH_URL}">This Month in History</a>
+        <a class="footer-link" href="/now">History Now</a>
         <a class="footer-link" href="/race">Rise and Fall Race</a>
         <a class="footer-link" href="/explorer">Power Curves</a>
         <a class="footer-link" href="/connections">Connections</a>
