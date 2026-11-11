@@ -336,6 +336,22 @@ section { scroll-margin-top: 60px; }
     opacity: 0.6;
     margin: 0 auto 20px;
   }
+.hero-cta {
+    display: inline-block;
+    margin-top: 48px;
+    padding: 12px 36px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    font-family: var(--font-ui);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s; font-weight: 600;}
+.hero-cta:hover { background: var(--gold); color: var(--bg); }
 @keyframes scrollPulse {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
@@ -2868,6 +2884,12 @@ html.ty-printing body > .ty-sheet { display: block !important; color: #111; font
 .look-snow input { width: 18px; height: 18px; accent-color: var(--gold); }
 .look-note { font-family: var(--font-ui); font-size: 12.5px; color: var(--muted); margin: 8px 2px 0; }
 .look-note[hidden] { display: none; }
+.tih-bday { max-width: 1100px; margin: 34px auto 0; padding: 0 20px; }
+.tih-bday-form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 14px; margin: 14px 0 10px; }
+.tih-bday-form label { display: block; font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+.tih-bday-form select { font-family: var(--font-ui); font-size: 16px; color: var(--text); background: var(--surface); border: 1px solid var(--field-border); border-radius: var(--radius); padding: 9px 12px; min-height: 44px; }
+.tih-bday-form .hero-cta { margin: 0; min-height: 44px; cursor: pointer; }
+.tih-bday .pass-note a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 :root[data-kids="1"] {
   --bg: #17123a; --surface: #221b4f; --border: #3d3480; --field-border: #7a6fc0; --text: #f6f1ff; --muted: #b9addf;
   --gold: #ffc247; --gold-light: #ffd97a; --gold-rgb: 255,194,71; --gold-light-rgb: 255,217,122;
@@ -2888,6 +2910,9 @@ html.ty-printing body > .ty-sheet { display: block !important; color: #111; font
 [data-kids="1"][data-theme="light"] body { background-image: radial-gradient(rgba(234,88,12,0.08) 1.2px, transparent 1.8px); background-size: 30px 30px; }
 [data-kids="1"] :is(h1, h2, h3, .research-title, .enc-title, .sp-title, .st-title, .profile-detail-name, .gm-done-t, .ref-sec-title) { text-transform: none; letter-spacing: 0.005em; }
 [data-kids="1"] .research-title, [data-kids="1"] .enc-title, [data-kids="1"] .sp-title, [data-kids="1"] .st-title { font-weight: 800; }
+[data-kids="1"] .hero-cta { border: 0; border-radius: 999px; background: var(--gold); color: var(--bg); font-size: 14px; letter-spacing: 0.02em; text-transform: none; font-weight: 800; padding: 12px 26px; box-shadow: 0 4px 0 rgba(0,0,0,0.22); transition: transform 0.15s, box-shadow 0.15s; }
+[data-kids="1"] .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(0,0,0,0.22); background: var(--gold-light); }
+[data-kids="1"] .hero-cta:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(0,0,0,0.22); }
 [data-kids="1"] .enc-link { text-decoration-thickness: 2px; }
 [data-kids="1"] .enc-desc, [data-kids="1"] .st-teaser, [data-kids="1"] .sp-sec p:not(.sp-source):not(.sp-ft-credit), [data-kids="1"] .profile-section-body p { font-size: 20px; line-height: 1.75; }
 .kd-short, .kd-note, .kd-story { display: none; }

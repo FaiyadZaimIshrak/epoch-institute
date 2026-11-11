@@ -1226,8 +1226,16 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   entry's door shows its picture, a song's a note; the chosen door's line and link stand under the grid (.adv-detail),
   so the grid never moves. window.epochAdvent. Tested by the scratchpad's advent-test.js (12 checks: 5 December, the
   first day, after Christmas, January, out of season, a phone with all 24 open, Kids mode).
-- The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Longer or Shorter?, Finish the Line and
-  /birthday); W4 a "Now" card (history
+- W3b (13 Nov 2026), **Your birthday in history**: not a page of its own (a day page already has the events, the
+  people born and died, the poster and Share) but a day picker on /today-in-history/ (section#birthday, before the
+  calendar; .tih-bday): Day and Month selects, a day that does not exist refused in words, 29 February offered its
+  neighbours (the calendar has no page for it), the choice kept in localStorage epoch-birthday and shown as "Your
+  day: … →" on the next visit. In the site search as "Your Birthday in History". Scratchpad bday-test.js (11 checks).
+- **Consent, found the same day:** encyclopedia/index, state/index and today-in-history/index still carried the
+  analytics line of before 8 Nov (no consent default), so Analytics could set cookies there whatever the reader chose,
+  Kids mode included. They are hand pages with build blocks, which the 8 Nov replace had missed; now the standard
+  line. To check: every file with gtag('config' must also hold gtag('consent','default' (0 without, 13 Nov).
+- The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Longer or Shorter?, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
 
