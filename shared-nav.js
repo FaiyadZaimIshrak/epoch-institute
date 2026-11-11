@@ -1338,6 +1338,60 @@ function initNav(activePage) {
     }, { timeout: 2500 });
   })();
 
+  // ── On this page (Nov 2026): on a long page with four or more sections, a row of them slides in under the header once
+  // the reader is past the first one, marks the section in view and jumps to any. Built from the page's own visible h2s
+  // (ids given where a heading has none); fixed, so it moves nothing. Not on the home page, not where a profile's side
+  // list shows (1300 px and up), not on a page whose main has data-no-toc. window.epochPageToc for tests.
+  (function () {
+    var main = document.getElementById('main') || document.querySelector('main');
+    if (!main || main.hasAttribute('data-no-toc') || location.pathname === '/' || !window.requestAnimationFrame) return;
+    var nav = null, heads = [], cur = -1, on = false, ticking = false, built = false;
+    function label(h) {
+      var c = h.cloneNode(true); [].forEach.call(c.querySelectorAll('.n, button, sup, small'), function (x) { x.parentNode.removeChild(x); });
+      var t = c.textContent.replace(/\s+/g, ' ').trim(); return t.length > 30 ? t.slice(0, 29).replace(/\s+\S*$/, '') + '…' : t;
+    }
+    function build() {
+      built = true; cur = -1;
+      var side = document.querySelector('.empire-toc'); if (side && window.innerWidth >= 1300) { heads = []; if (nav) nav.hidden = true; return; }
+      heads = [].filter.call(main.querySelectorAll('h2'), function (h) { return h.offsetParent !== null && !(h.closest && h.closest('.next-read, nav, aside, details:not([open]), .gm-game, .ty-sheet')) && label(h); });
+      if (heads.length < 4 || document.documentElement.scrollHeight < window.innerHeight * 3.5) { heads = []; if (nav) nav.hidden = true; return; }
+      heads.forEach(function (h, i) { if (!h.id) h.id = 'sec-' + (i + 1); });
+      if (!nav) {
+        nav = document.createElement('nav'); nav.className = 'page-toc'; nav.setAttribute('aria-label', 'On this page'); document.body.appendChild(nav);
+        nav.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a'); if (!a) return; e.preventDefault(); e.stopPropagation();
+          if (a.hasAttribute('data-top')) { window.scrollTo({ top: 0, behavior: 'instant' }); return; }
+          var t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) return;
+          // at once, not gliding through a long page; and once more when pictures above have taken their room
+          var go = function () { t.scrollIntoView({ behavior: 'instant', block: 'start' }); };
+          go(); setTimeout(function () { if (Math.abs(t.getBoundingClientRect().top - 124) > 30) go(); }, 500);
+          try { history.replaceState(null, '', '#' + t.id); } catch (err) {}
+        });
+      }
+      var bar = document.getElementById('site-nav'); nav.style.top = (bar ? Math.round(bar.getBoundingClientRect().bottom) : 64) + 'px';
+      nav.hidden = false;
+      nav.innerHTML = '<ul><li><a href="#main" data-top>&uarr; Top</a></li>' + heads.map(function (h) { return '<li><a href="#' + escHtml(h.id) + '">' + escHtml(label(h)) + '</a></li>'; }).join('') + '</ul>';
+    }
+    function set() {
+      ticking = false; if (!built) build(); if (!heads.length) return;
+      var edge = parseInt(nav.style.top, 10) + 70, now = -1;
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top < edge) now = i; else break; }
+      var show = now >= 0;
+      if (show !== on) { on = show; nav.classList.toggle('is-on', on); document.body.classList.toggle('has-page-toc', on); }
+      if (now !== cur) {
+        cur = now; var links = nav.querySelectorAll('a[href^="#"]:not([data-top])');
+        [].forEach.call(links, function (a, k) { if (k === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+        var a = links[cur], ul = nav.firstChild; if (a && ul) { var l = a.offsetLeft - (ul.clientWidth - a.offsetWidth) / 2; ul.scrollLeft = Math.max(0, l); }
+      }
+    }
+    function ask() { if (!ticking) { ticking = true; requestAnimationFrame(set); } }
+    window.addEventListener('scroll', ask, { passive: true });
+    window.addEventListener('resize', function () { built = false; ask(); });
+    // Kids mode's "Read the whole story" and its switch show or hide sections: read the headings again
+    if (window.MutationObserver) new MutationObserver(function () { built = false; ask(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-kids'] });
+    window.epochPageToc = { rebuild: function () { built = false; set(); }, state: function () { return { heads: heads.map(function (h) { return h.id; }), on: on, cur: cur }; } };
+  })();
+
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
   (function () {
     if (!/^\/(empire|religion|language|culture|movement|government|ideology|work|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;

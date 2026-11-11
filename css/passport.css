@@ -667,6 +667,20 @@ button.nav-dropdown-link { background: none; border: none; border-bottom: 1px so
 h2.profile-section-title { font-weight: 400; }
 .profile-section-block, .profile-summary, #empire-stats-panel, #detail-references { scroll-margin-top: 84px; }
 .empire-meta { font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+.empire-toc { margin: 0 0 28px; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.empire-toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.empire-toc a { font-family: var(--font-ui); font-size: 14px; color: var(--text); text-decoration: none; }
+.empire-toc a:hover, .empire-toc a[aria-current] { color: var(--gold); }
+@media (min-width: 1300px) {
+.empire-toc { position: absolute; top: 0; bottom: 0; left: -210px; width: 180px; margin: 0; padding: 0; border: 0; }
+.empire-toc > * { position: sticky; }
+.empire-toc ul { top: 116px; flex-direction: column; gap: 2px; border-left: 1px solid var(--border); }
+.empire-toc a { display: block; padding: 5px 0 5px 14px; margin-left: -1px; border-left: 2px solid transparent; font-size: 14px; }
+.empire-toc a[aria-current] { border-left-color: var(--gold); }
+}
+@media (max-width: 1299px) {
+.empire-toc { border-top: 0; padding-top: 0; }
+}
 .nav-search-btn {
   display: flex; align-items: center; justify-content: center; width: 34px; height: 30px;
   background: transparent; border: 1px solid var(--border); border-radius: 2px; color: var(--muted); cursor: pointer;
@@ -766,6 +780,7 @@ html, body { overflow-x: clip; }
 .nav-logo { padding: 10px 0; }
 .tab, .enc-chip { min-height: 40px; }
 .footer-social-link { min-height: 40px; display: inline-flex; align-items: center; }
+.empire-toc a { display: inline-flex; align-items: center; min-height: 40px; }
 #about a[href^="mailto:"] { display: inline-block; padding: 10px 0; }
 }
 @media (max-width: 420px) {
@@ -1252,6 +1267,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 :root[data-kids="1"] { --fm-a: #ffc247; --fm-b: #7fd6ff; }
 :root[data-kids="1"][data-theme="light"] { --fm-a: #ea580c; --fm-b: #0e7490; }
 .ty { max-width: 760px; min-height: 220px; }
+.ty-sheet { display: none; }
 :root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; --cat-4: #8a7be8; }
 [data-theme="light"] { --cat-0: #2a78d6; --cat-1: #eda100; --cat-2: #e87ba4; --cat-3: #008300; --cat-4: #6250d6; }
 @keyframes fm-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
@@ -1267,6 +1283,21 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 }
 :root { --gv-other: #6f6a60; }
 [data-theme="light"] { --gv-other: #a7a092; }
+.page-toc { position: fixed; left: 0; right: 0; top: 64px; z-index: 880; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); visibility: hidden; transition: transform 0.2s ease, visibility 0s linear 0.2s; }
+.page-toc.is-on { transform: none; visibility: visible; transition: transform 0.2s ease; }
+.page-toc[hidden] { display: none; }
+.page-toc ul { list-style: none; display: flex; gap: 4px; max-width: 1180px; margin: 0 auto; padding: 6px max(12px, env(safe-area-inset-left, 0px)); overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.page-toc ul::-webkit-scrollbar { display: none; }
+.page-toc a { display: flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; white-space: nowrap; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; }
+.page-toc a:hover { color: var(--gold-light); }
+.page-toc a[aria-current] { background: var(--gold); color: var(--bg); }
+.ref-page h2, .empire-page h2 { scroll-margin-top: 124px; }
+@media (prefers-reduced-motion: reduce) {
+.page-toc, .page-toc.is-on { transition: none; }
+}
+@media print {
+.page-toc { display: none; }
+}
 :root[data-skin="winter"]:not([data-kids="1"]) {
   --bg: #0a1320; --surface: #101c2c; --border: #24384e; --field-border: #5f7a94; --text: #e6edf3; --muted: #94a6b8;
   --gold: #d4b55c; --gold-light: #efd48c; --gold-rgb: 212,181,92; --gold-light-rgb: 239,212,140;

@@ -3180,7 +3180,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .enc-article-foot { margin: 0; }
 @media (max-width: 720px) {
   .enc-body { grid-template-columns: 1fr; }
-  .enc-fig { width: 100%; max-width: 360px; order: -1; }
+  .enc-fig { width: 100%; max-width: 360px; }   /* after the text (Nov 2026): placed first, a tall portrait pushed every word of the entry off a phone's first screen */
   .enc-desc { font-size: 18px; }
   .enc-controls { position: static; }   /* on a phone the search and its rows of chips filled half the screen above the results */
   .enc-sort { margin-left: 0; }
@@ -6155,6 +6155,20 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
   .gv-wiz-q { font-size: 19px; }
   .gv-wiz-res img { width: 56px; height: 56px; }
 }
+
+/* ── On this page (shared-nav.js, Nov 2026): the sections of a long page as a row under the header; fixed, slid away
+   until the reader is past the first section ── */
+.page-toc { position: fixed; left: 0; right: 0; top: 64px; z-index: 880; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); visibility: hidden; transition: transform 0.2s ease, visibility 0s linear 0.2s; }
+.page-toc.is-on { transform: none; visibility: visible; transition: transform 0.2s ease; }
+.page-toc[hidden] { display: none; }
+.page-toc ul { list-style: none; display: flex; gap: 4px; max-width: 1180px; margin: 0 auto; padding: 6px max(12px, env(safe-area-inset-left, 0px)); overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.page-toc ul::-webkit-scrollbar { display: none; }
+.page-toc a { display: flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; white-space: nowrap; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; }
+.page-toc a:hover { color: var(--gold-light); }
+.page-toc a[aria-current] { background: var(--gold); color: var(--bg); }
+.ref-page h2, .empire-page h2 { scroll-margin-top: 124px; }
+@media (prefers-reduced-motion: reduce) { .page-toc, .page-toc.is-on { transition: none; } }
+@media print { .page-toc { display: none; } }
 
 /* ── History Now (/now and the home page's Now card, Nov 2026): headlines, coming anniversaries, what is new ── */
 .now-wrap { max-width: 900px; }
