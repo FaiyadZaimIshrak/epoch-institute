@@ -12,14 +12,14 @@ const TYPES = ['sacred', 'lament', 'celebration', 'love', 'lullaby', 'work', 'wa
 const REGIONS = ['Ancient Near East', 'Egypt & North Africa', 'Sub-Saharan Africa', 'Europe', 'Islamic Caliphates & Middle East', 'Central & East Asia', 'South & Southeast Asia', 'Americas', 'Oceania'];
 const KEYS = ['title', 'local', 'status', 'lyricist', 'composer', 'culture', 'language', 'place', 'date', 'year', 'region', 'types', 'kids', 'kid'];
 // songs in the public domain whose words no free, reliable edition holds yet (their pages say so)
-const GAPS = ["we-wish-you-a-merry-christmas", "japji-sahib", "taba-naba", "santa-lucia", "ganggangsullae", "odes-of-solomon", "hymn-of-the-pearl", "ive-been-working-on-the-railroad", "the-wearing-of-the-green", "deep-river", "sometimes-i-feel-like-a-motherless-child", "enuma-elis", "akathist", "kyrie", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "red-river-valley", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
+const GAPS = ["we-wish-you-a-merry-christmas", "taba-naba", "santa-lucia", "ganggangsullae", "odes-of-solomon", "ive-been-working-on-the-railroad", "the-wearing-of-the-green", "deep-river", "sometimes-i-feel-like-a-motherless-child", "enuma-elis", "saint-louis-blues", "joshua-fit-the-battle-of-jericho", "epic-of-sundiata", 'delphic-hymns', 'dle-yaman', 'hanuman-chalisa', 'hurrian-songs', 'kumbaya',
   'raghupati-raghava-raja-ram', 'tizita',
   // second wave (Nov 2026)
   'chakrulo', 'cherubikon', 'day-o', 'fengyang-flower-drum',
-  'harpers-songs', 'himno-de-riego', 'john-henry', 'la-adelita', 'la-bamba', 'la-llorona', 'lament-for-ur',
+  'harpers-songs', 'john-henry', 'la-adelita', 'la-bamba', 'la-llorona', 'lament-for-ur',
   'om-jai-jagdish-hare', 'soran-bushi',
   // third wave (Nov 2026): no edition holds the words (Heil dir: only parodies are quoted; Battotai: none found)
-  'heil-dir-im-siegerkranz', 'battotai'];
+  ];
 // public-domain songs whose words are not printed for another reason, given on the page (third wave, Nov 2026)
 const CAUTION = {
   "horst-wessel-lied": "These are the words of the anthem of the Nazi Party, printed as the historical record for study. They glorify the SA, the party's paramilitary force, and call for the Nazi flag to fly over every street. Since 1945 the song and its tune have been banned in Germany and Austria, outside teaching, research and the arts.",

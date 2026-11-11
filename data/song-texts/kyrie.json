@@ -1,0 +1,41 @@
+{
+ "slug": "kyrie",
+ "parts": {
+  "orig": {
+   "stanzas": [
+    [
+     "Kyrie eleison",
+     "Christe eleison",
+     "Kyrie eleison"
+    ]
+   ],
+   "credit": "Anonymous; the Kyrie of the Ordinary of the Mass, as Latin Wikisource gives it",
+   "url": "https://la.wikisource.org/wiki/Ordinarium_missae",
+   "licence": "",
+   "source": "la",
+   "page": "Ordinarium missae",
+   "own": false,
+   "also": []
+  },
+  "en": {
+   "stanzas": [
+    [
+     "Lord, have mercy",
+     "Christ, have mercy",
+     "Lord, have mercy"
+    ]
+   ],
+   "credit": "Translation: The Epoch Institute",
+   "own": true
+  }
+ },
+ "aligned": true,
+ "tentative": false,
+ "heads": null,
+ "label": null,
+ "lang": null,
+ "scheme": null,
+ "notes": [
+  "The words are Greek, written here in Latin letters as the Western liturgy writes them (Κύριε ἐλέησον, Χριστὲ ἐλέησον)."
+ ]
+}

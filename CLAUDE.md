@@ -1334,7 +1334,20 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
     fixed height (--now-row: 4 rows on phones, 3 x 2 from 700 px, 2 x 3 from 1100 px), loaded after idle, so nothing
     moves; without headlines it opens on the anniversaries. ?nowday=yyyy-mm-dd previews a day. window.epochNow.
     Menu Maps & Time (Time), footer, search, sitemap; scripts/tests/history-now.js (a stand-in news.json).
-  Still to do from that plan: S4 speed (owner: purge + cache rule), then W5-W6.
+- **Lyrics sources (W5):** scripts/songs/LYRICS-SOURCES.md is the survey (each provider's terms read on 11 Nov 2026):
+  Genius stays the only provider (Musixmatch's API licence is non-commercial and by contract, LyricFind paid only, LRCLIB,
+  AZLyrics, Lyrics.com and Letras grant nothing; Hymnary.org and CPDL answer 403 to scripts, so no adapter was written).
+  Eight of the 40 songs without words got them from editions a title search of each language's Wikisource and Wikipedia
+  found (Wikisource throttles after about fifteen searches: one every seven seconds): Heil dir im Siegerkranz (the imperial
+  version, German Wikipedia), the Himno de Riego (Spanish Wikipedia), the Akathist's kontakion and first oikos (Greek
+  Wikisource), Battōtai's first stanza (Shintaishi-shō, Japanese Wikisource), the Kyrie (Latin Wikisource), all five with
+  the Institute's own English; two stanzas of Red River Valley; the opening lines of the Japji Sahib (Macauliffe 1909;
+  only the lines before his first footnote) and of the Hymn of the Pearl (Wright 1871), English only. Their four rows
+  left genius.tsv (make-data.js refuses a Genius embed beside printed words). Looked at and left: the Levee Song of 1894
+  (I've Been Working on the Railroad: its minstrel text has a slur), St. Louis Blues (Handy d. 1958: free in the United
+  States only; it has Genius), Santa Lucia (the Neapolitan Wikisource page keeps its first stanza inside the score),
+  Sōran Bushi (a page of mixed line breaks), Om Jai Jagdish Hare (Wikipedia has only a romanization). 32 gaps left.
+  Still to do from that plan: S4 speed (owner: purge + cache rule), then W6.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
