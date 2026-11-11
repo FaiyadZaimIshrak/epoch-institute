@@ -35,7 +35,8 @@
 </head>
 <body>
 
-<main class="gm-page" id="main">
+<main class="gm-page is-lobby" id="main">
+<script>if(/^#(pairs|order|ranks|hunt|first|puzzle|words|year|conn|cross|said|songq|six)(-|$)/.test(location.hash))document.getElementById('main').classList.remove('is-lobby');</script>
   <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">History Games</li></ol></nav>
   <header class="ref-head">
     <span class="hero-ornament"></span>
@@ -45,6 +46,29 @@
   </header>
 
   <p class="wk-link"><a href="/weekly">Your week of daily games, side by side &rarr;</a></p>
+  <section class="gm-lobby" id="gm-lobby" aria-label="All the games">
+    <h2 class="gm-lobby-h">Today&rsquo;s games <span>the same for everyone, new every day</span></h2>
+    <ul class="gm-lcs">
+      <li><a class="gm-lc" href="#first" data-g="first"><span class="gm-lc-ic" aria-hidden="true">&#9878;</span><span class="gm-lc-t">Which Came First?</span><span class="gm-lc-d">Two pictures from history: tap the earlier one. Ten pairs a day, or play for a streak.</span><span class="gm-lc-s">The Daily Ten is waiting</span></a></li>
+      <li><a class="gm-lc" href="#conn" data-g="conn"><span class="gm-lc-ic" aria-hidden="true">&#9638;</span><span class="gm-lc-t">Connections</span><span class="gm-lc-d">Sixteen tiles, four hidden groups of four. Four mistakes allowed.</span><span class="gm-lc-s">Today&rsquo;s puzzle is waiting</span></a></li>
+      <li><a class="gm-lc" href="#cross" data-g="cross"><span class="gm-lc-ic" aria-hidden="true">&#9636;</span><span class="gm-lc-t">Crossword</span><span class="gm-lc-d">A history crossword with plain clues, new each day.</span><span class="gm-lc-s">Today&rsquo;s puzzle is waiting</span></a></li>
+      <li><a class="gm-lc" href="#said" data-g="said"><span class="gm-lc-ic" aria-hidden="true">&#10077;</span><span class="gm-lc-t">Who Said It?</span><span class="gm-lc-d">Five quotations, four portraits each: who spoke the words?</span><span class="gm-lc-s">Today&rsquo;s five are waiting</span></a></li>
+      <li><a class="gm-lc" href="#songq" data-g="songq"><span class="gm-lc-ic" aria-hidden="true">&#9835;</span><span class="gm-lc-t">Where Is This Song From?</span><span class="gm-lc-d">Four lines of a song in its own language: which part of the world?</span><span class="gm-lc-s">Today&rsquo;s five are waiting</span></a></li>
+      <li><a class="gm-lc" href="#six" data-g="six"><span class="gm-lc-ic" aria-hidden="true">&#8644;</span><span class="gm-lc-t">Six Degrees</span><span class="gm-lc-d">Get from one encyclopedia entry to another by following its links.</span><span class="gm-lc-s">Today&rsquo;s puzzle is waiting</span></a></li>
+    </ul>
+    <h2 class="gm-lobby-h">Play any time</h2>
+    <ul class="gm-lcs">
+      <li><a class="gm-lc" href="#first-lasted" data-g="lasted" data-new="2026-12-01"><span class="gm-lc-ic" aria-hidden="true">&#8596;</span><span class="gm-lc-t">Longer or Shorter?</span><span class="gm-lc-d">Two states or empires of the past: which one lasted longer?</span><span class="gm-lc-s"></span></a></li>
+      <li><a class="gm-lc" href="#pairs" data-g="pairs"><span class="gm-lc-ic" aria-hidden="true">&#10022;</span><span class="gm-lc-t">Emblem Pairs</span><span class="gm-lc-d">Turn the cards and match the flags and arms of states and empires.</span><span class="gm-lc-s"></span></a></li>
+      <li><a class="gm-lc" href="#order" data-g="order"><span class="gm-lc-ic" aria-hidden="true">&#8645;</span><span class="gm-lc-t">Order the Ages</span><span class="gm-lc-d">Put dated pictures in order, from the oldest to the newest.</span><span class="gm-lc-s"></span></a></li>
+      <li><a class="gm-lc" href="#ranks" data-g="ranks"><span class="gm-lc-ic" aria-hidden="true">&#9650;</span><span class="gm-lc-t">Order the Ranks</span><span class="gm-lc-d">The ranks of one past society, from the ruler down: put them in order.</span><span class="gm-lc-s"></span></a></li>
+      <li><a class="gm-lc" href="#hunt" data-g="hunt"><span class="gm-lc-ic" aria-hidden="true">&#9673;</span><span class="gm-lc-t">Globe Hunt</span><span class="gm-lc-d">Turn the globe and drop a pin where a state had its seat.</span><span class="gm-lc-s"></span></a></li>
+      <li><a class="gm-lc" href="#puzzle" data-g="puzzle"><span class="gm-lc-ic" aria-hidden="true">&#10070;</span><span class="gm-lc-t">Picture Puzzle</span><span class="gm-lc-d">Swap the tiles to put a famous picture back together.</span><span class="gm-lc-s"></span></a></li>
+      <li><a class="gm-lc" href="#words" data-g="words"><span class="gm-lc-ic" aria-hidden="true">&#9998;</span><span class="gm-lc-t">Word Hunt</span><span class="gm-lc-d">Find the hidden words of Egypt, Rome, the Vikings and more.</span><span class="gm-lc-s"></span></a></li>
+      <li><a class="gm-lc" href="#year" data-g="year"><span class="gm-lc-ic" aria-hidden="true">&#10710;</span><span class="gm-lc-t">Guess the Year</span><span class="gm-lc-d">Look at a picture and guess the year it belongs to.</span><span class="gm-lc-s"></span></a></li>
+    </ul>
+  </section>
+  <button type="button" class="gm-back" id="gm-back">&larr; All games</button>
   <div class="gm-tabs" role="tablist" aria-label="Choose a game">
     <span class="gm-tab-ink" aria-hidden="true"></span>
     <button class="gm-tab" id="tab-pairs" role="tab" aria-selected="true" aria-controls="game-pairs"><span class="gm-tab-ic" aria-hidden="true">&#10022;</span><span class="gm-tab-t">Emblem Pairs</span></button>
@@ -316,7 +340,7 @@
 <script src="/shared-nav.js"></script>
 <script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=f4a7fd9d4a', SONGQ_SRC = '/songq-data.js?v=caba97d4a0', SIXD_SRC = '/sixdeg-data.js?v=478b3dd303';</script>
 <script>var RANKS_SRC = '/ranks-data.js?v=84033731ac';</script>
-<script src="/games.js?v=16"></script>
+<script src="/games.js?v=17"></script>
 
 </body>
 </html>

@@ -2617,6 +2617,9 @@ body.shr-open { overflow: hidden; }
 .home-section-title { font-family: var(--font-display); font-size: clamp(20px, 2.4vw, 26px); font-weight: 400; color: var(--gold-light); letter-spacing: 0.04em; margin: 0; }
 .home-section-more { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); text-decoration: none; }
 .home-section-more:hover { color: var(--gold-light); }
+.born-yours { margin: 12px 0 0; font-family: var(--font-ui); font-size: 14px; }
+.born-yours a { color: var(--gold); font-weight: 600; text-decoration: none; }
+.born-yours a:hover { color: var(--gold-light); }
 .featured-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .featured-card, .enc-day-card {
   display: flex; flex-direction: column; text-decoration: none; color: var(--text);
@@ -4978,6 +4981,28 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .gm-card, .gm-fc, .gm-orow, .gm-pz, .gm-wh-grid { -webkit-touch-callout: none; }
 .gm-sound-hint { max-width: 520px; margin: 10px auto 0; font-family: var(--font-ui); font-size: 13px; line-height: 1.5; color: var(--muted); text-align: center; }
 .gm-sound-hint[hidden] { display: none; }
+/* the lobby (Nov 2026): a card for every game; main.is-lobby shows it and hides the tabs and the games */
+.gm-page.is-lobby .gm-tabs, .gm-page.is-lobby .gm-game, .gm-page.is-lobby .gm-back, .gm-page:not(.is-lobby) .gm-lobby { display: none; }
+.gm-lobby-h { font-family: var(--font-display); font-size: 17px; font-weight: 600; letter-spacing: 0.06em; color: var(--gold); margin: 6px 0 12px; }
+.gm-lobby-h span { font-family: var(--font-ui); font-size: 13px; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-left: 8px; }
+.gm-lcs { list-style: none; margin: 0 0 30px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.gm-lc { position: relative; display: flex; flex-direction: column; gap: 5px; height: 100%; box-sizing: border-box; padding: 15px 16px 12px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
+.gm-lc:hover { border-color: rgba(var(--gold-rgb), 0.7); transform: translateY(-2px); }
+.gm-lc:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.gm-lc-ic { font-size: 22px; line-height: 1; color: var(--gold); }
+.gm-lc-t { font-family: var(--font-ui); font-size: 15.5px; font-weight: 700; line-height: 1.25; }
+.gm-lc-d { font-size: 15px; line-height: 1.35; color: var(--muted); }
+.gm-lc-s { margin-top: auto; padding-top: 6px; min-height: 17px; font-family: var(--font-ui); font-size: 12.5px; font-weight: 600; line-height: 17px; color: var(--gold); }
+.gm-lc.is-done .gm-lc-s::before { content: '\2713\00a0'; }
+.gm-lc.is-new::after, .new-tag { font-family: var(--font-ui); font-size: 10.5px; font-weight: 700; font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1; color: var(--bg); background: var(--gold); border-radius: 999px; padding: 3px 8px; }
+.gm-lc.is-new::after { content: 'New'; position: absolute; top: 12px; right: 12px; }
+.new-tag { display: inline-block; margin-left: 8px; vertical-align: 2px; }
+.gm-back { display: inline-block; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 0; padding: 6px 0; margin: 0 0 10px; cursor: pointer; scroll-margin-top: 84px; }
+.gm-back:hover { color: var(--gold-light); }
+.gm-back:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+@media (max-width: 860px) { .gm-lcs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .gm-lcs { gap: 10px; } .gm-lc { padding: 13px 12px 10px; } .gm-lc-d { font-size: 14px; } .gm-lobby-h span { display: block; margin: 4px 0 0; } }
+@media (prefers-reduced-motion: reduce) { .gm-lc { transition: none; } .gm-lc:hover { transform: none; } }
 /* seven tabs: one row of tiles on wide screens, two rows in between, a scrolling strip on phones */
 .gm-tabs { position: relative; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 4px; padding: 5px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); margin: 0 0 24px; }
 .gm-tab-ink { position: absolute; top: 0; left: 0; width: 0; height: 0; border-radius: 12px; background: rgba(var(--gold-rgb), 0.14); box-shadow: inset 0 0 0 1px rgba(var(--gold-rgb), 0.55); transition: transform 0.38s cubic-bezier(0.3, 0.9, 0.3, 1), width 0.38s cubic-bezier(0.3, 0.9, 0.3, 1), height 0.38s; pointer-events: none; }

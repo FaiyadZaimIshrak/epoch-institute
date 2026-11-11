@@ -1248,6 +1248,24 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   (games.js TABS, markTab, openTab; First returns lasted). The page says fourteen games; My Passport still counts thirteen.
   A new game or mode goes into the bar, never only into another game's switches. The tab marker is also set again when the
   fonts arrive (it stood up to 11 px off its tab on phones). games.js?v=16; scratchpad lasted-tab-test.js (23 checks).
+- S1, "make things findable" (the user asked for improvement suggestions; plan approved the same day):
+  - **The games lobby:** /games opens on a card for every game (section#gm-lobby, static markup: "Today's games", the six
+    daily ones, then "Play any time"; a.gm-lc with data-g; the class gm-card was taken by the games' own cards), no longer
+    on the last game played. main.is-lobby hides the tabs and games; an inline script right after <main> takes the class
+    off when the address names a game, so a deep link never flashes the lobby. games.js: showLobby, openHash (address
+    -> game or lobby; plain #first leaves Longer or Shorter?), paintLobby/cardStatus (today's result of each daily game
+    from epoch-games, as /weekly reads them; a tick when done), "All games" (#gm-back) and the browser's Back return to
+    it. A card's data-new="yyyy-mm-dd" shows a New tag until that day. games.js?v=17.
+  - **New tags in the menus:** shared-nav.js NEW_UNTIL {address: the day the tag comes off} (.new-tag); a release adds a
+    line. The birthday picker has its own Play menu entry ("Your Birthday") and a line under the home page's Born on
+    This Day (.born-yours).
+  - **My Passport:** 14 games (first-lasted counted on its own), stamps "The long view" (10 in a row in Longer or
+    Shorter?) and "Advent" (24 doors in one year; epoch-advent is in the backup code); 30 stamps. passport.js?v=11.
+    My Week is unchanged: it shows the daily games only.
+  - Scratchpad lobby-test.js (30 checks: every card opens its game, Back/Forward, statuses, deep links, Kids mode).
+  Still to do from that plan: S2 the code review's fixes (service worker pictures, send.php's sender address and
+  formula cells, the "constructor" crash), S3 the tests kept in scripts/tests and run by the deploy's check job, S4
+  speed (owner: purge + cache rule), S5 posters for the winter pages and month pages in the menu.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

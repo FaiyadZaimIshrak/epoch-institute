@@ -144,8 +144,48 @@ initNav('games');
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
   var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
+  // The lobby (Nov 2026): /games opens on a card for every game (a bar of fourteen tabs hid most of them on phones, and a new
+  // game was not found); a card, a tab or an address with a game's name opens it, "All games" and Back return here.
+  var PAGE = $('main'), started0 = false, QD = Math.floor(Date.now() / 864e5);
+  function dayNo(m, d) { return QD - Math.floor(Date.UTC(2026, m, d) / 864e5) + 1; }
+  function ones(m) { return (String(m).match(/1/g) || []).length; }
+  function cardStatus(g, G) {   // [line, done] from the games' own records (epoch-games), as /weekly reads them
+    var r;
+    if (g === 'first') { r = G['daily-' + QD]; return r && r.m ? ['Daily Ten: ' + ones(r.m) + '/10' + (r.m.length < 10 ? ' so far' : ''), r.m.length >= 10] : null; }
+    if (g === 'conn') { r = G['conn-' + dayNo(9, 26)]; return r ? [r.done ? ((r.s || []).length === 4 ? 'Solved today' : 'Played today: ' + (r.s || []).length + ' of 4 groups') : 'In progress', !!r.done] : null; }
+    if (g === 'cross') { r = G['cw-' + dayNo(9, 27)]; return r ? [r.gave ? 'Answers shown today' : r.done ? 'Solved today' : 'In progress', !!(r.done || r.gave)] : null; }
+    if (g === 'said') { r = G['said-' + dayNo(9, 28)]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
+    if (g === 'songq') { r = G['songq-' + (kids() ? 'k' : '') + dayNo(10, 3)]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
+    if (g === 'six') { r = G['sixd-' + dayNo(10, 6)]; return r ? [r.gave ? 'Route shown today' : r.done ? 'Solved today in ' + r.c + ' clicks' : 'In progress', !!(r.done || r.gave)] : null; }
+    if (g === 'lasted') return G['first-lasted'] ? ['Your best: ' + G['first-lasted'] + ' in a row', false] : null;
+    return null;
+  }
+  function paintLobby() {
+    var G = store();
+    Array.prototype.forEach.call(document.querySelectorAll('.gm-lc'), function (a) {
+      var s = cardStatus(a.getAttribute('data-g'), G), el = a.querySelector('.gm-lc-s'), nw = a.getAttribute('data-new');
+      if (el.getAttribute('data-0') == null) el.setAttribute('data-0', el.textContent);
+      el.textContent = s ? s[0] : el.getAttribute('data-0'); a.classList.toggle('is-done', !!(s && s[1]));
+      a.classList.toggle('is-new', !!nw && Date.now() < Date.parse(nw));
+    });
+  }
+  function showLobby(push) {
+    PAGE.classList.add('is-lobby'); current = null;
+    GAMES.forEach(function (o) { $('game-' + o).hidden = true; });
+    if (push) { try { history.pushState(null, '', location.pathname + location.search); } catch (e) {} window.scrollTo(0, 0); }
+    paintLobby();
+  }
+  function openHash() {   // the address names a game (#words-egypt, #first-lasted), else the lobby
+    var h = location.hash.slice(1).split('-'), sub = h.slice(1).join('-');
+    if (GAMES.indexOf(h[0]) < 0) { showLobby(false); return; }
+    if (h[0] === 'first' && !sub && isLasted()) sub = 'daily';   // the plain address leaves Longer or Shorter?
+    showGame(h[0], false, sub); markTab();
+  }
+  $('gm-back').addEventListener('click', function () { showLobby(true); });
   function showGame(g, focus, sub) {
     if (GAMES.indexOf(g) < 0) g = 'pairs';
+    var wasLobby = PAGE.classList.contains('is-lobby'); PAGE.classList.remove('is-lobby');
+    if (wasLobby && started0) { var bk = $('gm-back'); if (bk.scrollIntoView) bk.scrollIntoView({ block: 'start', behavior: 'instant' }); }   // a card far down the list: the game opens at its top
     if (g === current) { if (sub && MODS[g] && MODS[g].sub) MODS[g].sub(sub); return; }
     current = g;
     GAMES.forEach(function (o) {
@@ -188,7 +228,7 @@ initNav('games');
   window.addEventListener('resize', function () { if (current) moveInk($('tab-' + tabNow())); });
   // the tabs' widths change when the fonts arrive: until Nov 2026 the marker then stood a few pixels off its tab on phones
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (current) moveInk($('tab-' + tabNow())); });
-  window.addEventListener('hashchange', function () { var h = location.hash.slice(1).split('-'); if (GAMES.indexOf(h[0]) >= 0) showGame(h[0], false, h.slice(1).join('-')); });
+  window.addEventListener('hashchange', openHash);
 
   // ── Emblem Pairs ─────────────────────────────────────────────────────────────
   var EM = typeof GAME_EMBLEMS !== 'undefined' ? GAME_EMBLEMS : [];
@@ -1870,8 +1910,6 @@ initNav('games');
   MODS.six = SixD;
   window.epochSixD = SixD;
 
-  // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the last one played
-  var hp = location.hash.slice(1).split('-'), startGame = hp[0], startSub = hp.slice(1).join('-');
-  if (GAMES.indexOf(startGame) < 0) { startSub = ''; try { startGame = localStorage.getItem('epoch-games-tab'); } catch (e) {} }
-  showGame(GAMES.indexOf(startGame) >= 0 ? startGame : 'pairs', false, startSub);
+  // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the lobby with a card for each
+  openHash(); started0 = true;
 })();

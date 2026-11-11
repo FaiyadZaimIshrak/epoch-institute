@@ -725,19 +725,22 @@ function initNav(activePage) {
     ['play', 'Play', [
       ['', [['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
         ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'], ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
-        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games'], ['advent', '/advent', 'Advent Calendar', 'A door of history for each day of December']]]]]];
+        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games'], ['', '/today-in-history/#birthday', 'Your Birthday', 'Your own day in history'], ['advent', '/advent', 'Advent Calendar', 'A door of history for each day of December']]]]]];
   const MORE = [['about', '/about', 'About the Institute'], ['new', '/new', 'What&#8217;s New'], ['research', '/research', 'Research Hub'], ['dataset', '/dataset', 'Open Data'],
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
+  // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
+  const NEW_UNTIL = { '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
-  const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}</a>`;
+  const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}${newTag(x[1])}</a>`;
   const surprise = '<a href="#" id="nav-surprise" class="nav-surprise"><b>Surprise me</b><span>A random leap into history</span></a>';
   const menuHtml = m => `
     <div class="nav-group-wrap" id="nav-${m[0]}-wrap">
       <button class="nav-parent-btn${inMenu(m) ? ' active-group' : ''}" id="nav-${m[0]}-btn" aria-haspopup="true" aria-expanded="false">${m[1]} ▾</button>
       <div class="nav-group-menu nav-mega" id="nav-${m[0]}-menu">
-        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}</div>`).join('\n        ')}
+        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}${newTag(x[1])}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}</div>`).join('\n        ')}
       </div>
     </div>`;
   const ddSec = (label, open, links) => `<details class="nav-dd-sec"${open ? ' open' : ''}><summary class="nav-dd-sum">${label}</summary><div class="nav-dd-list">${links}</div></details>`;
