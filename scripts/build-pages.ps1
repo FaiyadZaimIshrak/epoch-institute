@@ -2991,6 +2991,10 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\songq-data.js", $sqJs)) { $NWRITE++ }
 $sqV = [EpochBuild.W]::Sha1($sqJs).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, "SONGQ_SRC = '[^']*'", "SONGQ_SRC = '/songq-data.js?v=$sqV'"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
 if ([EpochBuild.W]::WriteIfChanged("$Repo\data\song-lines.json", $slJson)) { $NWRITE++ }
+# Finish the Line (Nov 2026): five songs a day, the next line of a song to choose; dealt by scripts/tools/make-finish-line.js from
+# scripts/songs/songs.json (scripts/finish-line.tsv, append only), which writes line-data.js and stamps its ?v= into /games (LINE_SRC)
+foreach ($flL in (& $songExe "$PSScriptRoot\tools\make-finish-line.js")) { Say $flL }
+if ($LASTEXITCODE) { throw 'Finish the Line: scripts/tools/make-finish-line.js failed (above)' }
 $slV = [EpochBuild.W]::Sha1($slJson).Substring(0, 8)
 [void]$ib.Append('<section class="sg-sec sg-lines" aria-labelledby="sg-lines-t"><h2 class="ref-sec-title" id="sg-lines-t">Find a line</h2><p>Remember a line but not the song? Search the words of the ' + $slRows.Count + ' songs that carry them, in the original, romanized or in English.</p>' +
   '<label class="sg-f-q"><span class="sr-only">A line or a few words</span><input type="search" id="sg-line" data-src="/data/song-lines.json?v=' + $slV + '" placeholder="A line or a few words…" autocomplete="off"></label><ol class="sg-line-res" id="sg-line-res" aria-live="polite"></ol></section>' + "`n")
@@ -4575,6 +4579,8 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Compare Two Profiles', '/compare', 'compare|compare cultures|compare civilisations|compare civilizations|compare religions|side by side|versus|vs'),
   @("What's New", '/new', "what's new|whats new|new pages|recent additions|updates|release notes|changelog"),
   @('Where Is This Song From?', '/games#songq', 'song game|where is this song from|guess the song|song quiz'),
+  @('Finish the Line', '/games#line', 'finish the line|finish the lyric|next line|lyrics game|song lines'),
+  @('Quote Cipher', '/games#cipher', 'quote cipher|cipher|cryptogram|code puzzle|secret code'),
   @('Connections Map', '/connections', 'connections map|relations|network of states'), @('Reading Paths', '/paths/', 'paths|reading paths|where to start reading'),
   @('Great Speeches', '/speeches/', 'speeches|famous speeches'), @('Songs in History', '/songs/', 'songs|song|music|folk songs|hymns|anthems|national anthems|lyrics|song lyrics|protest songs|laments|lullabies|work songs|spirituals|history of music|old songs|ancient songs'),
 @('Write in Ancient Scripts', '/write', 'write|scripts|cuneiform|hieroglyphs|runes|ancient alphabets|scribe'),

@@ -142,7 +142,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six', 'cipher'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six', 'line', 'cipher'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   // The lobby (Nov 2026): /games opens on a card for every game (a bar of fourteen tabs hid most of them on phones, and a new
   // game was not found); a card, a tab or an address with a game's name opens it, "All games" and Back return here.
@@ -157,6 +157,7 @@ initNav('games');
     if (g === 'said') { r = G['said-' + dayNo(9, 28)]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'songq') { r = G['songq-' + (kids() ? 'k' : '') + dayNo(10, 3)]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'six') { r = G['sixd-' + dayNo(10, 6)]; return r ? [r.gave ? 'Route shown today' : r.done ? 'Solved today in ' + r.c + ' clicks' : 'In progress', !!(r.done || r.gave)] : null; }
+    if (g === 'line') { r = G['line-' + Math.max(1, dayNo(10, 15))]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'cipher') { r = G['cipher-' + Math.max(1, dayNo(10, 14))]; return r ? [r.gave ? 'Answer shown today' : r.done ? 'Solved today' : 'In progress', !!(r.done || r.gave)] : null; }
     if (g === 'lasted') return G['first-lasted'] ? ['Your best: ' + G['first-lasted'] + ' in a row', false] : null;
     return null;
@@ -2036,6 +2037,95 @@ initNav('games');
   })();
   MODS.cipher = Cipher;
   window.epochCipher = Cipher;
+
+  // ── Finish the Line (#line, Nov 2026): five songs a day, the same for everyone (UTC; #1 = 15 Nov 2026), from
+  // line-data.js (LINEQ, by scripts/tools/make-finish-line.js: songs whose printed words suit every reader, in English
+  // or with an English translation line for line). Up to three lines of a stanza are shown and four lines of the same
+  // song offered: which comes next? epoch-games line-<number> {m: '10110', done}, line-streak {n, last, b}.
+  var Line = (function () {
+    var D = null, N = 5, QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 10, 15) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var K = { num: 0, qs: [], i: 0, m: '', done: false, practice: false, answered: false }, board = $('line-board');
+    function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+    function round(num) { var out = []; for (var k = 0; k < N; k++) out.push(D.p[((num - 1) * N + k) % D.p.length]); return out; }
+    function key(num) { return 'line-' + num; }
+    function save() { if (!K.practice) setBest(key(K.num), { m: K.m, done: K.done }); }
+    function load(num, practice) {
+      K.num = num; K.practice = practice; K.qs = round(num);
+      var sv = practice ? null : best(key(num));
+      K.m = sv && sv.m ? String(sv.m) : ''; K.done = !!(sv && sv.done); K.i = K.m.length; K.answered = false;
+      $('line-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Finish the Line <b>#' + num + '</b>';
+      var sk = best('line-streak'); $('line-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+      $('line-done').hidden = true; $('line-done').innerHTML = '';
+      if (K.done || K.i >= N) finish(true); else ask();
+    }
+    function dots() { return '<ol class="gm-said-dots" aria-hidden="true">' + K.qs.map(function (q, k) { return '<li class="' + (k < K.m.length ? (K.m.charAt(k) === '1' ? 'ok' : 'no') : k === K.i && !K.done ? 'now' : '') + '"></li>'; }).join('') + '</ol>'; }
+    function options(q, k) {   // the line and the three wrong ones, in the same order for everyone
+      var r = rng(K.num * 131 + k * 17 + 5), a = [q[1], q[3], q[4], q[5]];
+      for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; }
+      return a;
+    }
+    // a line in its own words, its English under it where the song is not in English
+    function line(s, i) { return '<span class="gm-line-l"><span' + (s[6] && s[7] ? ' lang="' + escHtml(s[7]) + '"' : '') + '>' + escHtml(s[5][i]) + '</span>' + (s[6] ? '<i>' + escHtml(s[6][i]) + '</i>' : '') + '</span>'; }
+    function shown(q) { var s = D.s[q[0]], h = ''; for (var k = q[2]; k > 0; k--) h += line(s, q[1] - k); return h; }
+    function ask() {
+      var q = K.qs[K.i], s = D.s[q[0]]; K.answered = false;
+      board.innerHTML = dots() + '<figure class="gm-said-q gm-line-q"><blockquote><p class="gm-line-ls">' + shown(q) + '<span class="gm-line-l gm-line-gap" aria-hidden="true">&hellip;</span></p></blockquote>' +
+        '<figcaption>Song ' + (K.i + 1) + ' of ' + N + ' &middot; ' + (s[6] ? 'sung in ' + escHtml(s[4]) : 'a song in English') + ': which line comes next?</figcaption></figure>' +
+        '<div class="gm-said-opts gm-line-opts" role="group" aria-label="Which line comes next?">' + options(q, K.i).map(function (i) { return '<button type="button" class="gm-said-o gm-line-o" data-i="' + i + '">' + line(s, i) + '</button>'; }).join('') + '</div>' +
+        '<div class="gm-said-res" aria-live="polite"></div>';
+    }
+    function pick(i) {
+      if (K.answered || K.done) return; K.answered = true;
+      var q = K.qs[K.i], s = D.s[q[0]], ok = i === q[1];
+      K.m += ok ? '1' : '0'; save(); Sfx.play(ok ? 'good' : 'bad');
+      [].forEach.call(board.querySelectorAll('.gm-line-o'), function (b) { var v = +b.getAttribute('data-i'); b.disabled = true; if (v === q[1]) b.classList.add('is-right'); else if (v === i) b.classList.add('is-wrong'); });
+      board.querySelector('.gm-said-dots').outerHTML = dots();
+      var gap = board.querySelector('.gm-line-gap'); if (gap) gap.outerHTML = line(s, q[1]).replace('gm-line-l', 'gm-line-l gm-line-ans');
+      board.querySelector('.gm-said-res').innerHTML = '<p class="gm-said-who"><b>' + (ok ? 'Right!' : 'Not this time.') + '</b> ' + escHtml(s[1]) + ' <span>(' + escHtml(s[2]) + ')</span></p>' +
+        '<p class="gm-said-src">' + escHtml(s[3]) + ' &middot; ' + escHtml(s[4]) + '</p>' +
+        '<p class="gm-said-acts"><a href="/songs/' + encodeURIComponent(s[0]) + '">Its story and all its words &rarr;</a><button type="button" class="hero-cta" data-next>' + (K.i + 1 < N ? 'Next song &rarr;' : 'See your score') + '</button></p>';
+      var nb = board.querySelector('[data-next]'); if (nb) nb.focus({ preventScroll: true });
+    }
+    board.addEventListener('click', function (e) {
+      var b = e.target.closest('.gm-line-o'); if (b) { pick(+b.getAttribute('data-i')); return; }
+      if (e.target.closest('[data-next]')) { K.i++; if (K.i < N) { ask(); var f = board.querySelector('.gm-line-o'); if (f) f.focus({ preventScroll: true }); } else finish(); }
+    });
+    function finish(again) {
+      K.done = true; save();
+      var n = K.m.split('').filter(function (x) { return x === '1'; }).length, st = n === N ? 3 : n >= 4 ? 2 : n >= 2 ? 1 : 0;
+      var squares = K.m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join(''), sk = best('line-streak') || { n: 0, last: 0 };
+      if (!K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('line-streak', sk); }
+      board.innerHTML = dots() + '<ol class="gm-said-rev gm-songq-rev">' + K.qs.map(function (q, k) { var s = D.s[q[0]]; return '<li class="' + (K.m.charAt(k) === '1' ? 'ok' : 'no') + '"><span class="gm-said-img gm-said-mono" aria-hidden="true">&#9834;</span><div><p class="gm-said-rq gm-line-ls">' + line(s, q[1] - 1) + line(s, q[1]) + '</p><p class="gm-said-who"><a href="/songs/' + encodeURIComponent(s[0]) + '">' + escHtml(s[1]) + '</a> <span>(' + escHtml(s[2]) + ')</span></p><p class="gm-said-src">' + escHtml(s[3]) + ' &middot; ' + escHtml(s[4]) + '</p></div></li>'; }).join('') + '</ol>';
+      var dn = $('line-done');
+      dn.innerHTML = '<div class="gm-done-card">' + stars(st) + '<p class="gm-done-t">' + (n === N ? 'All five lines!' : n + ' of ' + N + ' right') + '</p>' +
+        '<p class="gm-daily-sq" aria-label="Your answers: ' + n + ' right">' + squares + '</p>' +
+        '<p class="gm-done-s">Finish the Line #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new songs in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('line')) + '</div>';
+      share(dn, 'Epoch Finish the Line #' + K.num + ': ' + n + '/' + N + '\n' + squares, 'line', { title: 'Finish the Line #' + K.num, score: n + '/' + N, unit: 'lines today', stars: st, squares: K.m,
+        note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'Five songs every day', url: 'the-epoch-institute.org/games#line' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && n >= 4) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    var pickEl = $('line-pick');
+    function opts() {
+      var n = Math.min(TODAY - 1, 60), h = '<option value="' + TODAY + '">Today&rsquo;s songs (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best(key(i)) && best(key(i)).done ? ' (played)' : '') + '</option>';
+      pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
+    }
+    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best(key(n)) && best(key(n)).done)); });
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      var s = document.createElement('script'); s.src = typeof LINE_SRC !== 'undefined' ? LINE_SRC : '/line-data.js';
+      s.onload = function () { D = typeof LINEQ !== 'undefined' ? LINEQ : null; if (!D || !D.p || !D.p.length) { board.innerHTML = '<p class="gm-howto">The songs are on their way.</p>'; return; } opts(); load(TODAY, false); };
+      s.onerror = function () { board.innerHTML = '<p class="gm-howto">The songs could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    }, state: function () { return { num: K.num, i: K.i, m: K.m, done: K.done, answer: K.qs[K.i] ? K.qs[K.i][1] : null }; } };
+  })();
+  MODS.line = Line;
+  window.epochLine = Line;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the lobby with a card for each
   openHash(); started0 = true;

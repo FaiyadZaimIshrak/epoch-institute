@@ -12,6 +12,8 @@ var SEARCH_PAGES = [
 ["Compare Two Profiles","/compare","page","compare|compare cultures|compare civilisations|compare civilizations|compare religions|side by side|versus|vs"],
 ["What's New","/new","page","what's new|whats new|new pages|recent additions|updates|release notes|changelog"],
 ["Where Is This Song From?","/games#songq","page","song game|where is this song from|guess the song|song quiz"],
+["Finish the Line","/games#line","page","finish the line|finish the lyric|next line|lyrics game|song lines"],
+["Quote Cipher","/games#cipher","page","quote cipher|cipher|cryptogram|code puzzle|secret code"],
 ["Connections Map","/connections","page","connections map|relations|network of states"],
 ["Reading Paths","/paths/","page","paths|reading paths|where to start reading"],
 ["Great Speeches","/speeches/","page","speeches|famous speeches"],

@@ -1296,7 +1296,22 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   answer (asks twice). epoch-games cipher-<n> {g, v, h, c, done, gave}, cipher-streak; stars 3 no help, 2 up to two
   letters revealed, 1 more. Kids mode starts with the three commonest letters. Its own tab, a lobby card (New until 8
   Dec), a column on My Week, the 15th game of My Passport. games.js?v=18, passport.js?v=12; scripts/tests/quote-cipher.js.
-  Still to do from that plan: S4 speed (owner: purge + cache rule), then Finish the Line and W4-W6.
+- **Finish the Line** (/games#line, W3e): five songs a day (#1 = 15 Nov 2026, UTC; before that day the page shows #1): up to
+  three lines of a stanza and four lines of the same song, which comes next? scripts/tools/make-finish-line.js (run by
+  build-pages.ps1 after songq-data.js) deals from scripts/songs/songs.json: only songs with printed words that suit Kids
+  mode (one pool for everyone, so no regime's song), no caution note, no licence asking for credit (ETCSL), no tentative
+  translation, sung in English or with an English translation line for line (shown under every line); the first 48
+  lines of each; never a line with an editor's mark ([?], a folio or verse number) or over 90 characters. The line asked
+  for stands once in its song; a wrong line never follows the last line shown anywhere in the song. The first and third
+  song of a day are in English; no song again within 30 puzzles, no line twice. scripts/finish-line.tsv (slug, line
+  number, a hash of the line; APPEND only, 1,755 to 31 Oct 2027; a row whose line a text fix changed is dealt again in
+  place and reported). It writes line-data.js (LINEQ {d0, s: [slug, title, date, culture, language, lines, English or 0,
+  code], p: [song, line, lines shown, three wrong]}; 366 KB, loaded when the tab opens) and stamps LINE_SRC. games.js
+  Line (the song is named only after the answer; epoch-games line-<n> {m, done}, line-streak; window.epochLine), its
+  own tab and lobby card (New until 9 Dec), a column on My Week (a dash before its first day), the 16th game of My
+  Passport. A button holding block spans shrinks them to their text and centres them: .gm-line-o .gm-line-l is
+  width 100%. games.js?v=19, passport.js?v=13; scripts/tests/finish-the-line.js.
+  Still to do from that plan: S4 speed (owner: purge + cache rule), then W4-W6.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

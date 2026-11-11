@@ -3794,6 +3794,17 @@ svg.map-here { cursor: crosshair; }
 .gm-songq-opts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .gm-said-o.gm-songq-o { grid-template-columns: minmax(0, 1fr); min-height: 56px; justify-items: center; text-align: center; }
 .gm-songq-rev .gm-said-mono { font-size: 22px; }
+/* Finish the Line (/games#line, Nov 2026): the lines shown, each with its English under it, and four lines to choose from */
+.gm-line-l { display: block; }
+.gm-line-l i { display: block; margin: 0 0 6px; font-family: var(--font-ui); font-size: 14px; font-style: normal; line-height: 1.4; color: var(--muted); }
+.gm-line-q blockquote p { font-size: 21px; }
+.gm-line-q .gm-line-gap { color: var(--gold); font-style: normal; letter-spacing: 0.2em; }
+.gm-line-q .gm-line-ans > span { color: var(--gold-light); }
+.gm-line .gm-said-opts.gm-line-opts { grid-template-columns: minmax(0, 1fr); }
+.gm-line .gm-said-o.gm-line-o { display: block; text-align: left; min-height: 52px; padding: 10px 14px; font-family: var(--font-text); font-size: 19px; line-height: 1.4; }
+.gm-line-o .gm-line-l { width: 100%; }
+.gm-line-o .gm-line-l i { margin: 2px 0 0; }
+.gm-said-rq.gm-line-ls i { font-size: 13px; }
 /* /profiles' timeline view (Nov 2026): a bar per profile on a deep-time scale, by region; colours by kind */
 .tl-view { position: relative; margin: 0 40px; }
 @media (max-width: 700px) { .tl-view { margin: 0 16px; } }
