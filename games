@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://the-epoch-institute.org/games">
 <meta property="og:type" content="website">
 <meta property="og:title" content="History Games — The Epoch Institute">
-<meta property="og:description" content="Fourteen games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
+<meta property="og:description" content="Fifteen games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -36,12 +36,12 @@
 <body>
 
 <main class="gm-page is-lobby" id="main">
-<script>if(/^#(pairs|order|ranks|hunt|first|puzzle|words|year|conn|cross|said|songq|six)(-|$)/.test(location.hash))document.getElementById('main').classList.remove('is-lobby');</script>
+<script>if(/^#(pairs|order|ranks|hunt|first|puzzle|words|year|conn|cross|said|songq|six|cipher)(-|$)/.test(location.hash))document.getElementById('main').classList.remove('is-lobby');</script>
   <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">History Games</li></ol></nav>
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Fourteen games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Fifteen games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
@@ -55,6 +55,7 @@
       <li><a class="gm-lc" href="#said" data-g="said"><span class="gm-lc-ic" aria-hidden="true">&#10077;</span><span class="gm-lc-t">Who Said It?</span><span class="gm-lc-d">Five quotations, four portraits each: who spoke the words?</span><span class="gm-lc-s">Today&rsquo;s five are waiting</span></a></li>
       <li><a class="gm-lc" href="#songq" data-g="songq"><span class="gm-lc-ic" aria-hidden="true">&#9835;</span><span class="gm-lc-t">Where Is This Song From?</span><span class="gm-lc-d">Four lines of a song in its own language: which part of the world?</span><span class="gm-lc-s">Today&rsquo;s five are waiting</span></a></li>
       <li><a class="gm-lc" href="#six" data-g="six"><span class="gm-lc-ic" aria-hidden="true">&#8644;</span><span class="gm-lc-t">Six Degrees</span><span class="gm-lc-d">Get from one encyclopedia entry to another by following its links.</span><span class="gm-lc-s">Today&rsquo;s puzzle is waiting</span></a></li>
+      <li><a class="gm-lc" href="#cipher" data-g="cipher" data-new="2026-12-08"><span class="gm-lc-ic" aria-hidden="true">&#9919;</span><span class="gm-lc-t">Quote Cipher</span><span class="gm-lc-d">A quotation with its letters swapped for others: work out the words and who said them.</span><span class="gm-lc-s">Today&rsquo;s cipher is waiting</span></a></li>
     </ul>
     <h2 class="gm-lobby-h">Play any time</h2>
     <ul class="gm-lcs">
@@ -85,6 +86,7 @@
     <button class="gm-tab" id="tab-said" role="tab" aria-selected="false" aria-controls="game-said" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10077;</span><span class="gm-tab-t">Who Said It?</span></button>
     <button class="gm-tab" id="tab-songq" role="tab" aria-selected="false" aria-controls="game-songq" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9835;</span><span class="gm-tab-t">Where Is This Song From?</span></button>
     <button class="gm-tab" id="tab-six" role="tab" aria-selected="false" aria-controls="game-six" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#8644;</span><span class="gm-tab-t">Six Degrees</span></button>
+    <button class="gm-tab" id="tab-cipher" role="tab" aria-selected="false" aria-controls="game-cipher" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9919;</span><span class="gm-tab-t">Quote Cipher</span></button>
   </div>
 
   <!-- Emblem Pairs -->
@@ -331,6 +333,23 @@
     </div>
     <p class="gm-conn-more"><label>Play another <select id="six-pick"></select></label></p>
   </section>
+  <!-- Quote Cipher -->
+  <section class="gm-game" id="game-cipher" role="tabpanel" aria-labelledby="tab-cipher" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">A quotation from history with its letters swapped: each letter stands for another, the same one all the way through. Choose a square and type the letter you think it is; every square with the same sign fills in with it. One a day, the same for everyone.</p>
+    </div>
+    <div class="gm-stats">
+      <span class="gm-stat" id="cp-num"></span>
+      <span class="gm-stat gm-stat-best" id="cp-best"></span>
+    </div>
+    <div class="gm-board gm-cp">
+      <div class="gm-cp-text" id="cp-text" role="group" aria-label="The quotation in cipher: choose a square and type a letter"><p class="gm-howto">The cipher is loading&hellip;</p></div>
+      <p class="gm-live gm-cp-msg" id="cp-msg" aria-live="polite"></p>
+      <div class="gm-cw-kb" id="cp-kb" aria-label="Letters" hidden></div>
+      <div class="gm-cw-acts gm-cp-acts"><button type="button" class="gm-again" id="cp-hint">Reveal a letter</button><button type="button" class="gm-again" id="cp-check">Check</button><button type="button" class="gm-again" id="cp-clear">Start again</button><button type="button" class="gm-again" id="cp-give">Show the answer</button></div>
+      <div class="gm-done" id="cp-done" hidden></div>
+    </div>
+  </section>
 </main>
 
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=fe84e9163d' };</script>
@@ -338,9 +357,9 @@
 <script src="/games-data.js?v=d8f525460d"></script>
 <script src="/connections-data.js?v=e98dd2000f"></script>
 <script src="/shared-nav.js"></script>
-<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=f4a7fd9d4a', SONGQ_SRC = '/songq-data.js?v=caba97d4a0', SIXD_SRC = '/sixdeg-data.js?v=478b3dd303';</script>
+<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=f4a7fd9d4a', SONGQ_SRC = '/songq-data.js?v=caba97d4a0', CIPHER_SRC = '/cipher-data.js?v=c651335308', SIXD_SRC = '/sixdeg-data.js?v=478b3dd303';</script>
 <script>var RANKS_SRC = '/ranks-data.js?v=84033731ac';</script>
-<script src="/games.js?v=17"></script>
+<script src="/games.js?v=18"></script>
 
 </body>
 </html>

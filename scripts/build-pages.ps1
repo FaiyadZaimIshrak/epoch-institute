@@ -4200,6 +4200,10 @@ if (Test-Path "$Repo\data\quotes.json") {
   if ([EpochBuild.W]::WriteIfChanged("$Repo\said-data.js", $sdJs)) { $NWRITE++ }; $SAIDV = [EpochBuild.W]::Sha1($sdJs).Substring(0, 10)
   $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'said-data\.js\?v=[0-9a-f]*', "said-data.js?v=$SAIDV"); if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }
   Say ("who said it: {0} quotations by {1} people, {2} days before the first comes back" -f $QTS.Count, $sdSpk.Count, [Math]::Floor($QTS.Count / 5))
+  # Quote Cipher (Nov 2026): a quotation a day as a letter-substitution puzzle, dealt by scripts/tools/make-cipher.js from the same
+  # quotations (scripts/cipher.tsv, append only), which writes cipher-data.js and stamps its ?v= into /games (CIPHER_SRC)
+  foreach ($cphL in (& $songExe "$PSScriptRoot\tools\make-cipher.js")) { Say $cphL }
+  if ($LASTEXITCODE) { throw 'Quote Cipher: scripts/tools/make-cipher.js failed (above)' }
 }
 # The Kids corner: scripts/kids-corner.tsv (@theme lines, entry lines with a line for young readers, ! facts)
 $kdThemes = New-Object Collections.Generic.List[object]; $kdFacts = New-Object Collections.Generic.List[string]; $kdBad = New-Object Collections.Generic.List[string]; $kdT = $null

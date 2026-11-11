@@ -142,7 +142,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six', 'cipher'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   // The lobby (Nov 2026): /games opens on a card for every game (a bar of fourteen tabs hid most of them on phones, and a new
   // game was not found); a card, a tab or an address with a game's name opens it, "All games" and Back return here.
@@ -157,6 +157,7 @@ initNav('games');
     if (g === 'said') { r = G['said-' + dayNo(9, 28)]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'songq') { r = G['songq-' + (kids() ? 'k' : '') + dayNo(10, 3)]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'six') { r = G['sixd-' + dayNo(10, 6)]; return r ? [r.gave ? 'Route shown today' : r.done ? 'Solved today in ' + r.c + ' clicks' : 'In progress', !!(r.done || r.gave)] : null; }
+    if (g === 'cipher') { r = G['cipher-' + Math.max(1, dayNo(10, 14))]; return r ? [r.gave ? 'Answer shown today' : r.done ? 'Solved today' : 'In progress', !!(r.done || r.gave)] : null; }
     if (g === 'lasted') return G['first-lasted'] ? ['Your best: ' + G['first-lasted'] + ' in a row', false] : null;
     return null;
   }
@@ -1909,6 +1910,132 @@ initNav('games');
   })();
   MODS.six = SixD;
   window.epochSixD = SixD;
+
+  // ── Quote Cipher ─────────────────────────────────────────────────────────────
+  // A quotation a day as a letter-substitution puzzle, the same for everyone (UTC; #1 is 14 November 2026), from
+  // cipher-data.js (scripts/tools/make-cipher.js: the quotations of Who Said It?, imported from their sources). The key
+  // is a shuffle of the alphabet seeded by the puzzle's number, in which no letter stands for itself. A square is a
+  // button showing the reader's letter over the cipher's; a letter typed fills every square of that sign. Kept in
+  // epoch-games: cipher-<number> {g: the 26 guesses by cipher letter ('.' none), v: the cipher letters revealed, h: hints,
+  // c: checks, done, gave}, cipher-streak {n, last, b} for days solved without showing the answer. Kids mode starts with
+  // the three commonest letters given.
+  var Cipher = (function () {
+    var D = null, A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', QDAY = Math.floor(Date.now() / 864e5), TODAY = 1;
+    var K = { id: 0, num: 0, q: null, enc: {}, dec: {}, g: {}, v: {}, h: 0, c: 0, done: false, gave: false, sel: '', wrong: {} };
+    var text = $('cp-text'), msg = $('cp-msg'), askGive = 0, touchKb = false;
+    function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+    function makeKey(num) {   // plain letter -> cipher letter; never itself
+      var r = rng(num * 7919 + 13), a = A.split(''), i, j, t, ok = false;
+      while (!ok) { for (i = 25; i > 0; i--) { j = Math.floor(r() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; } ok = a.every(function (c, k) { return c !== A.charAt(k); }); }
+      K.enc = {}; K.dec = {}; a.forEach(function (c, k) { K.enc[A.charAt(k)] = c; K.dec[c] = A.charAt(k); });
+    }
+    function signs() { var seen = {}, out = []; K.q[0].toUpperCase().replace(/[A-Z]/g, function (p) { var c = K.enc[p]; if (!seen[c]) { seen[c] = 1; out.push(c); } return p; }); return out; }   // the cipher letters, in reading order
+    function save() { setBest('cipher-' + K.num, { g: A.split('').map(function (c) { return K.g[c] || '.'; }).join(''), v: Object.keys(K.v).join(''), h: K.h, c: K.c, done: K.done, gave: K.gave }); }
+    function solved() { return signs().every(function (c) { return K.g[c] === K.dec[c]; }); }
+    function render() {
+      var used = {}; Object.keys(K.g).forEach(function (c) { if (K.g[c]) used[K.g[c]] = (used[K.g[c]] || 0) + 1; });
+      text.innerHTML = K.q[0].split(/(\s+)/).map(function (w) {
+        if (!w.trim()) return ' ';
+        return '<span class="gm-cp-w">' + w.split('').map(function (ch) {
+          var up = ch.toUpperCase(); if (up < 'A' || up > 'Z' || up.length !== 1) return '<span class="gm-cp-p">' + escHtml(ch) + '</span>';
+          var c = K.enc[up], g = K.g[c] || '';
+          return '<button type="button" class="gm-cp-c' + (c === K.sel ? ' is-sel' : '') + (K.v[c] ? ' is-given' : '') + (K.wrong[c] ? ' is-wrong' : '') + (g && used[g] > 1 ? ' is-twice' : '') + '" data-c="' + c + '"' + (K.done ? ' disabled' : '') +
+            ' aria-label="Sign ' + c + (g ? ', your letter ' + g : ', empty') + '"><b>' + (g || '&nbsp;') + '</b><i>' + c + '</i></button>';
+        }).join('') + '</span>';
+      }).join('');
+      Array.prototype.forEach.call($('cp-kb').querySelectorAll('button[data-k]'), function (b) { b.classList.toggle('is-used', !!used[b.getAttribute('data-k')]); });
+      ['cp-hint', 'cp-check', 'cp-clear', 'cp-give'].forEach(function (id) { $(id).disabled = K.done; });
+      $('cp-kb').hidden = K.done || !touchKb;   // the letters on screen leave with the last square
+    }
+    function select(c, focus) { K.sel = c; render(); if (focus) { var b = text.querySelector('.gm-cp-c[data-c="' + c + '"]'); if (b) b.focus({ preventScroll: true }); } }
+    function next(dir) {   // the next sign in reading order, an empty one first
+      var s = signs(), i = s.indexOf(K.sel), n = s.length, k, c;
+      for (k = 1; k <= n; k++) { c = s[((i + dir * k) % n + n) % n]; if (!K.g[c]) return c; }
+      return s[((i + dir) % n + n) % n];
+    }
+    function type(L) {
+      if (K.done || !K.sel || K.v[K.sel]) { if (K.sel && K.v[K.sel]) select(next(1), true); return; }
+      K.g[K.sel] = L; delete K.wrong[K.sel]; askGive = 0; Sfx.play('flip');
+      var s = signs(), full = s.every(function (c) { return K.g[c]; });
+      if (full && solved()) { finish(false); return; }
+      msg.textContent = full ? 'Every square is filled, but it does not read right yet. Look for a word that is not a word.' : '';
+      save(); select(full ? K.sel : next(1), true);
+    }
+    function erase() { if (K.done || !K.sel || K.v[K.sel]) return; delete K.g[K.sel]; delete K.wrong[K.sel]; msg.textContent = ''; save(); select(K.sel, true); }
+    function hint() {
+      if (K.done) return; var c = K.sel && K.g[K.sel] !== K.dec[K.sel] ? K.sel : signs().filter(function (x) { return K.g[x] !== K.dec[x]; })[0]; if (!c) return;
+      K.g[c] = K.dec[c]; K.v[c] = 1; delete K.wrong[c]; K.h++; askGive = 0;
+      if (solved()) { finish(false); return; }
+      msg.textContent = 'The sign ' + c + ' is the letter ' + K.dec[c] + '.'; save(); K.sel = c; select(next(1), true);
+    }
+    function check() {
+      if (K.done) return; var bad = signs().filter(function (c) { return K.g[c] && K.g[c] !== K.dec[c]; });
+      K.c++; K.wrong = {}; bad.forEach(function (c) { K.wrong[c] = 1; });
+      msg.textContent = bad.length ? bad.length + (bad.length === 1 ? ' letter is' : ' letters are') + ' not right (marked).' : 'Every letter you have placed is right.';
+      save(); render();
+    }
+    function clear() { if (K.done) return; signs().forEach(function (c) { if (!K.v[c]) delete K.g[c]; }); K.wrong = {}; msg.textContent = ''; save(); select(next(1), true); }
+    function give() {
+      if (K.done) return;
+      if (!askGive) { askGive = 1; msg.textContent = 'Show the whole answer? Press “Show the answer” once more to end today’s cipher.'; return; }
+      K.gave = true; signs().forEach(function (c) { K.g[c] = K.dec[c]; }); finish(false);
+    }
+    function load(num) {
+      K.id++; K.num = num; K.q = D.q[(num - 1) % D.q.length]; makeKey(num); K.g = {}; K.v = {}; K.wrong = {}; K.h = 0; K.c = 0; K.done = false; K.gave = false; askGive = 0; msg.textContent = '';
+      var sv = best('cipher-' + num);
+      if (sv && sv.g) { String(sv.g).split('').forEach(function (L, i) { if (L !== '.') K.g[A.charAt(i)] = L; }); String(sv.v || '').split('').forEach(function (c) { if (c) K.v[c] = 1; }); K.h = sv.h || 0; K.c = sv.c || 0; K.done = !!sv.done; K.gave = !!sv.gave; }
+      else if (kids()) {   // Kids mode: the three commonest letters are given
+        var n = {}; K.q[0].toUpperCase().replace(/[A-Z]/g, function (p) { n[p] = (n[p] || 0) + 1; return p; });
+        Object.keys(n).sort(function (a, b) { return n[b] - n[a] || (a < b ? -1 : 1); }).slice(0, 3).forEach(function (p) { var c = K.enc[p]; K.g[c] = p; K.v[c] = 1; });
+      }
+      $('cp-num').innerHTML = 'Today: Quote Cipher <b>#' + num + '</b>';
+      var sk = best('cipher-streak'); $('cp-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Solved ' + sk.n + ' days in a row' : '';
+      $('cp-done').hidden = true; $('cp-done').innerHTML = '';
+      if (K.done) finish(true); else { K.sel = ''; K.sel = next(1); render(); }
+    }
+    function finish(again) {
+      K.done = true; K.sel = ''; K.wrong = {}; save(); render(); msg.textContent = '';
+      var q = K.q, s = K.gave ? 0 : !K.h && !K.c ? 3 : K.h <= 2 ? 2 : 1, sk = best('cipher-streak') || { n: 0, last: 0 };
+      if (!K.gave && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('cipher-streak', sk); }
+      var help = K.gave ? 'answer shown' : !K.h && !K.c ? 'no help' : (K.h ? K.h + (K.h === 1 ? ' letter' : ' letters') + ' revealed' : '') + (K.h && K.c ? ', ' : '') + (K.c ? K.c + (K.c === 1 ? ' check' : ' checks') : '');
+      var dn = $('cp-done');
+      dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (K.gave ? 'Here is the answer' : 'Solved!') + '</p>' +
+        '<blockquote class="gm-cp-q">&ldquo;' + escHtml(q[0]) + '&rdquo;</blockquote>' +
+        '<p class="gm-said-who"><a href="/encyclopedia/' + encodeURIComponent(q[2]) + '">' + escHtml(q[1]) + '</a></p>' +
+        '<p class="gm-said-src">' + escHtml(q[3]) + (q[4] && q[4] !== 'original' ? ', ' + escHtml(q[4]) : '') + (q[7] ? '; ' + escHtml(q[7]) : '') + '. <a href="' + escHtml(q[5]) + '" target="_blank" rel="noopener">' + escHtml(q[6]) + '</a>' + (q[8] ? ' &middot; ' + escHtml(q[8]) : '') + '</p>' +
+        '<p class="gm-done-s">Quote Cipher #' + K.num + ' · ' + help + (sk.n > 1 && !K.gave ? ' · solved ' + sk.n + ' days in a row' : '') + ' · a new cipher in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' + newsletterPrompt('cipher') + '</div>';
+      share(dn, 'Epoch Quote Cipher #' + K.num + ': ' + (K.gave ? 'answer shown' : 'solved, ' + help), 'cipher', { title: 'Quote Cipher #' + K.num, score: K.gave ? '–' : 'Solved', unit: help, stars: s,
+        note: sk.n > 1 && !K.gave ? 'Solved ' + sk.n + ' days in a row' : '', cta: 'A quotation in cipher every day', url: 'the-epoch-institute.org/games#cipher' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && !K.gave) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    text.addEventListener('click', function (e) { var b = e.target.closest('.gm-cp-c'); if (b && !K.done) select(b.getAttribute('data-c'), true); });
+    text.addEventListener('keydown', function (e) {
+      if (K.done || e.ctrlKey || e.metaKey || e.altKey) return;
+      if (/^[a-zA-Z]$/.test(e.key)) { e.preventDefault(); type(e.key.toUpperCase()); }
+      else if (e.key === 'Backspace' || e.key === 'Delete') { e.preventDefault(); erase(); }
+      else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); var s = signs(), i = s.indexOf(K.sel), d = e.key === 'ArrowRight' ? 1 : -1; select(s[((i + d) % s.length + s.length) % s.length], true); }
+    });
+    $('cp-kb').innerHTML = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'].map(function (row, i) {
+      return '<div>' + row.split('').map(function (c) { return '<button type="button" data-k="' + c + '">' + c + '</button>'; }).join('') + (i === 2 ? '<button type="button" class="gm-cw-del" data-k="del" aria-label="Delete">&#9003;</button>' : '') + '</div>';
+    }).join('');
+    $('cp-kb').addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; var k = b.getAttribute('data-k'); if (k === 'del') erase(); else type(k); });
+    $('cp-hint').addEventListener('click', hint); $('cp-check').addEventListener('click', check); $('cp-clear').addEventListener('click', clear); $('cp-give').addEventListener('click', give);
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      touchKb = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches); $('cp-kb').hidden = !touchKb;
+      var s = document.createElement('script'); s.src = typeof CIPHER_SRC !== 'undefined' ? CIPHER_SRC : '/cipher-data.js';
+      s.onload = function () { D = typeof CIPHER !== 'undefined' ? CIPHER : null; if (!D || !D.q.length) { text.innerHTML = '<p class="gm-howto">The cipher is on its way.</p>'; return; } TODAY = Math.max(1, QDAY - D.d0 + 1); load(TODAY); };
+      s.onerror = function () { text.innerHTML = '<p class="gm-howto">The cipher could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    }, state: function () { return K; }, type: type, select: select };
+  })();
+  MODS.cipher = Cipher;
+  window.epochCipher = Cipher;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the lobby with a card for each
   openHash(); started0 = true;

@@ -9,7 +9,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     await p.goto(base + '/games'); await p.waitForTimeout(1500);
     let s = await st(p); ok(W + 'opens on the lobby', s.lobby && !s.tabs && !s.back && !s.shown.length && s.wide <= 0, s);
     const cards = await p.$$eval('.gm-lc', e => e.map(a => [a.getAttribute('href'), a.querySelector('.gm-lc-t').textContent, a.classList.contains('is-new'), a.querySelector('.gm-lc-s').textContent]));
-    ok(W + 'fourteen cards, Longer or Shorter? marked new', cards.length === 14 && cards.filter(c => c[2]).map(c => c[1]).join() === 'Longer or Shorter?', cards.map(c => c[1]));
+    ok(W + 'a card for each game (a tab each too), the new ones marked', cards.length === (await p.$$eval('.gm-tab', t => t.length)) && cards.filter(c => c[2]).length <= 3, cards.map(c => c[1]));
     const clip = await p.$$eval('.gm-lc', e => e.filter(a => a.scrollWidth > a.clientWidth + 1 || [...a.children].some(c => c.getBoundingClientRect().right > a.getBoundingClientRect().right + 1)).length); ok(W + 'no card text spills', clip === 0, clip);
     await p.screenshot({ path: path.join(out, 'lobby-' + vp.width + '.png'), fullPage: true });
     for (const c of cards) {   // every card opens its game
@@ -57,7 +57,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
   await p.goto(base + '/'); await p.waitForTimeout(1500); const by = await p.evaluate(() => { const a = document.querySelector('.born-yours a'); a.scrollIntoView({ block: 'center', behavior: 'instant' }); return a.getAttribute('href'); }); ok('home: your birthday line', by === '/today-in-history/#birthday'); await p.waitForTimeout(600); await p.screenshot({ path: path.join(out, 'home-born.png') });
   await p.goto(base + '/passport'); await p.waitForTimeout(1500);
   const pass = await p.evaluate(() => ({ games: [...document.querySelectorAll('#pass-play li')].map(x => x.textContent).filter(t => /^Games/.test(t)), text: document.body.innerText.match(/The long view[^\n]*|Advent[^\n]*/g) }));
-  ok('passport: 2 of 14 games, the two stamps', /2 of 14 played/.test(pass.games.join()) && pass.text && pass.text.length >= 2, pass);
+  ok('passport: 2 games played, the two stamps', /2 of 1\d played/.test(pass.games.join()) && pass.text && pass.text.length >= 2, pass);
   await ctx.close();
   ok('no script errors', errs.length === 0, errs.slice(0, 3));
   await b.close(); srv.close(); console.log(fails ? fails + ' FAILED' : 'all passed'); process.exit(fails ? 1 : 0);

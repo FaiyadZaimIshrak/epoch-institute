@@ -1283,7 +1283,20 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   texts: a poster has no room for the credit line; Ninkasi's and Kesh's had been drawn with them). The menu (Maps & Time,
   Time) and the footer link "This Month in History": shared-nav.js MONTH_URL, the current month's page (UTC), as the
   month pages have no index. Essays and month pages still have no poster kind of their own.
-  Still to do from that plan: S4 speed (owner: purge + cache rule), then the rest of the winter round.
+- **Quote Cipher** (/games#cipher, W3d): a quotation a day as a letter-substitution puzzle (#1 = 14 Nov 2026, UTC; before that
+  day the page shows #1). scripts/tools/make-cipher.js (run by build-pages.ps1 after said-data.js) deals from
+  data/quotes.json: 60-120 letters of plain A-Z, 10 words, 14 different letters; a seeded shuffle, no speaker again within
+  21 puzzles, never within 30 days of the day Who Said It? asks the same words; scripts/cipher.tsv (ids, APPEND only, 352 to
+  31 Oct 2027) and scripts/cipher-drop.txt (the editor's: Chaucer and other old spellings, which cannot be worked out
+  letter by letter, and lines about killing). It writes cipher-data.js (CIPHER {d0, q: [text, speaker, entry, work,
+  credit, address, source, note, licence]}) and stamps CIPHER_SRC in /games. games.js Cipher: the key is a shuffle of
+  the alphabet seeded by the number, no letter itself; a square is a button (the reader's letter over the sign), a
+  letter fills every square of its sign and a letter used for two signs is underlined; keys, arrows, Backspace, the
+  letters on screen on touch devices (#cp-kb, the crossword's styles); Check, Reveal a letter, Start again, Show the
+  answer (asks twice). epoch-games cipher-<n> {g, v, h, c, done, gave}, cipher-streak; stars 3 no help, 2 up to two
+  letters revealed, 1 more. Kids mode starts with the three commonest letters. Its own tab, a lobby card (New until 8
+  Dec), a column on My Week, the 15th game of My Passport. games.js?v=18, passport.js?v=12; scripts/tests/quote-cipher.js.
+  Still to do from that plan: S4 speed (owner: purge + cache rule), then Finish the Line and W4-W6.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
