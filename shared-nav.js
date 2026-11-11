@@ -517,8 +517,8 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=d3f0e9997b';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=1af3f88e5d';
+var SEARCH_INDEX_SRC = '/search-index.js?v=ab6ba4c105';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_PAGES_SRC = '/search-pages.js?v=8eebd587ae';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -1218,14 +1218,16 @@ function initNav(activePage) {
     var ft = location.hash && folded(location.hash.slice(1));
     if (ft) { openAll(); requestAnimationFrame(function () { ft.scrollIntoView(); }); }
     // a day page: the wars and killings of the day wait behind a button (unless they are all there is)
-    var evs = Array.prototype.slice.call(document.querySelectorAll('li.tih-event-card')), rough = evs.filter(function (li) {
-      var t = li.querySelector('.tih-event-title'), d = li.querySelector('.tih-event-desc');
+    // (a month page's best-known events likewise: section[aria-labelledby=mon-ev], titles only)
+    var monEv = document.querySelector('section[aria-labelledby="mon-ev"]');
+    var evs = Array.prototype.slice.call(document.querySelectorAll('li.tih-event-card, section[aria-labelledby="mon-ev"] li')), rough = evs.filter(function (li) {
+      var t = li.querySelector('.tih-event-title, .nm'), d = li.querySelector('.tih-event-desc');
       return !kidsGentle(t ? t.textContent : li.textContent, d ? d.textContent : '');
     });
     if (rough.length && rough.length < evs.length) {
       rough.forEach(function (li) { li.classList.add('kd-rough'); });
       var rb = document.createElement('button'); rb.type = 'button'; rb.className = 'kd-story';
-      rb.textContent = 'Show the battles and wars of this ' + (document.querySelector('main.yr-year') ? 'year' : 'day') + ' too (' + rough.length + ')';
+      rb.textContent = 'Show the battles and wars of this ' + (document.querySelector('main.yr-year') ? 'year' : monEv ? 'month' : 'day') + ' too (' + rough.length + ')';
       rb.addEventListener('click', openAll);
       evs[evs.length - 1].parentNode.parentNode.insertBefore(rb, evs[evs.length - 1].parentNode.nextSibling);
     }

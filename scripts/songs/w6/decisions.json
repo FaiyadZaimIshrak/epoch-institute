@@ -1,0 +1,28 @@
+{
+ "label": "W2 of the winter round (11 Nov 2026): the carols of scripts/songs/LIST6.tsv (merge-wave.js; decisions in scripts/songs/w6/decisions.json)",
+ "drop": {
+  "god-rest-you-merry-gentlemen": "the site has it already (god-rest-ye-merry-gentlemen)"
+ },
+ "nowords": {
+  "we-wish-you-a-merry-christmas": "the words sung today first appear in a 1935 arrangement: their free status is not beyond doubt"
+ },
+ "withheld": {},
+ "edits": [
+  [
+   "wexford-carol",
+   "local: Carúl Loch Garman\n",
+   "local: Wexford Carol\n"
+  ],
+  [
+   "wexford-carol",
+   "language: en | English ; ga | Irish\n",
+   "language: en | English\n"
+  ],
+  [
+   "we-wish-you-a-merry-christmas",
+   "status: pd | traditional West Country words of unknown date; the famous version first published in 1935, in the arrangement of Arthur Warrell (d. 1939), so the status is in doubt\n",
+   "status: pd | traditional West Country words of unknown date; the version sung today was first published in 1935, in the arrangement of Arthur Warrell (d. 1939)\n"
+  ]
+ ],
+ "fixes": {}
+}

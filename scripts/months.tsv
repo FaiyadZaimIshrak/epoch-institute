@@ -1,0 +1,17 @@
+# The month pages' hand lists (/today-in-history/<month>, build-pages.ps1 "The months in history"): month (01-12) TAB
+# fest (encyclopedia entries: festivals and observances kept in that month every year; feasts that move through the
+# year with a lunar calendar - Passover, Ramadan, the Hajj - are left out) or song (songs sung for the month's feasts)
+# TAB slugs, comma-separated, in the order shown. The build stops on a slug without an entry or a song.
+01	fest	epiphany-holiday, twelfth-night-holiday, lohri, makar-sankranti, chinese-new-year
+01	song	auld-lang-syne
+02	fest	candlemas, chinese-new-year, maslenitsa
+03	fest	saint-patricks-day
+04	fest	vaisakhi, anzac-day
+06	fest	inti-raymi
+06	song	sumer-is-icumen-in
+07	song	la-marseillaise
+09	fest	oktoberfest
+10	fest	oktoberfest, diwali, thanksgiving
+11	fest	day-of-the-dead, guy-fawkes-night, armistice-day, diwali, thanksgiving
+12	fest	advent, saint-nicholas, sinterklaas, krampus, hanukkah, saint-lucys-day, saturnalia, winter-solstice, dongzhi, yalda-night, yule, sol-invictus, christmas, nativity-of-jesus, nativity-scene, christmas-tree, christmas-carol, santa-claus, ded-moroz, koliada, wassail, boxing-day, kwanzaa, hogmanay, omisoka
+12	song	o-come-o-come-emmanuel, gaudete, in-dulci-jubilo, es-ist-ein-ros-entsprungen, coventry-carol, riu-riu-chiu, huron-carol, o-come-all-ye-faithful, joy-to-the-world, silent-night, good-king-wenceslas, the-holly-and-the-ivy, hark-the-herald-angels-sing, the-first-nowell, the-twelve-days-of-christmas, tu-scendi-dalle-stelle, wexford-carol, i-saw-three-ships, personent-hodie, deck-the-halls, here-we-come-a-wassailing, we-wish-you-a-merry-christmas, white-christmas, god-rest-ye-merry-gentlemen, o-tannenbaum, o-holy-night, jingle-bells, shchedryk, maoz-tzur, auld-lang-syne

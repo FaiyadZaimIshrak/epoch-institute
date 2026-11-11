@@ -1165,7 +1165,45 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   --fm-*, --gv-*) stay the theme's: a new look's page must keep close to the lightness of the classic one.
 - Ideas kept for later, not built: Papyrus, Silk Road (indigo and saffron), Lapis Night, Terracotta, and seasonal
   Spring (Nowruz to Easter) and Harvest looks, which would reuse the date switch.
-- The rest of the round (plan of 10 Nov 2026): W2 month pages, winter entries, essays, paths and carols by 28 Nov; W3
+- Cloudflare (11 Nov 2026): after the looks' deploy, entry and profile pages showed no look: the edge still served
+  css/pages.css, shared.css and enc-page.js as of 8 Nov, through two deploys. With Cloudflare-CDN-Cache-Control
+  max-age=120 a copy in use is revalidated every two minutes and never replaced (cf-cache-status REVALIDATED with the
+  old Last-Modified), though the origin answers every conditional request rightly (200 to an If-Modified-Since older
+  than the file, with every encoding, also with Cloudflare's headers). The header is now "no-store" (root .htaccess,
+  css/.htaccess): these few files come from the origin. The copies already stuck go only with a purge (dashboard →
+  Caching → Purge Everything; the owner's, or the deploy's purge step once its two secrets are set). To test: compare
+  `curl -sI https://the-epoch-institute.org/css/pages.css` (Last-Modified) with the same address plus `?x=1`.
+- W2 (11 Nov 2026), seasonal content:
+  - **Months in history**, /today-in-history/<month> (build-pages.ps1 "The months in history"; names start with mon):
+    the 30 best-known events of the month (the day pages' weights, two a day at most), festivals and songs from
+    scripts/months.tsv (by hand; feasts that move with a lunar calendar left out; the build stops on an unknown slug),
+    international days, the 12 best-known people born and died, the calendar. Each day's calendar heading links its
+    month. A tile's picture is a person, event or work the event's TITLE names (MonImg: a place named in passing gave
+    Mozart's death a modern view of Vienna). Kids mode folds the grim ones (shared-nav.js, with the day pages).
+    Built only in full builds; a -SkipEntries build keeps them.
+  - **Wave w1, 49 entries** (scripts/entries/w1: titles.txt, list.tsv, out/, edit.js, links.json, picks.txt): the
+    festivals of the dark season (Saturnalia, Yule, Dongzhi, Yalda Night, Christmas, Advent, Epiphany, Koliada, Sol
+    Invictus, Hogmanay, the Chinese New Year, Diwali, the Day of the Dead …) and events of November and December (the
+    Gunpowder Plot, the Christmas truce, Valley Forge, the crossing of the Delaware, the Siege of Leningrad, the
+    Thames frost fairs, Apollo 8 …), four agents with ENTRIES-GUIDE.md, every draft read; edit.js turned the drafts'
+    month-first dates day-first, as the encyclopedia writes them. scripts/entries/name-count.js <out.json …> counts a
+    draft's names in the existing texts BEFORE the merge. 47 pictures by eye (none for Boxing Day or the Great Frost:
+    a shopping mall, a modern temperature map). Folklore figures (Santa Claus, Sinterklaas, Ded Moroz, Krampus) are
+    idea/concept entries. Three profile links excluded (the Church of the Epiphany, Shinto's Great Thanksgiving
+    Festival, "Sol Invictus Mithras"); the day event of 2 January 1777 now says "a second battle at Trenton", so the
+    Battle of Trenton (1776) is not linked there.
+  - **Wave w6, 13 carols** (scripts/songs/LIST6.tsv, w6/: drafts, rows.tsv, videos.tsv, decisions.json, the agents'
+    notes): Good King Wenceslas, The Holly and the Ivy, Deck the Halls, Personent hodie, Hark! The Herald Angels Sing,
+    The Twelve Days of Christmas, The First Nowell, We Wish You a Merry Christmas (without words: the text sung today
+    first appears in a 1935 arrangement), Tu scendi dalle stelle, the Wexford Carol, I Saw Three Ships, Here We Come
+    A-wassailing, White Christmas (copyright). God Rest Ye Merry, Gentlemen was drafted again and dropped (the site had
+    it); Il est né and Lulajże, Jezuniu had too thin or no article. Institute translations of Personent hodie and Tu
+    scendi dalle stelle. Hark is the 1861 Hymns Ancient and Modern text (the Wikisource hymnal page lacked a word).
+    audit-videos.js could not read YouTube's watch pages on 11 Nov (every row UNREAD) and rewrites videos-audit.tsv
+    with only the slugs given: restore the file after such a run; the thirteen were checked by oEmbed title and channel.
+    find-sources.js skips a song without scripts/songs/<slug>.txt, so it finds nothing for drafts in a wave folder.
+- The rest of the round (plan of 10 Nov 2026): W2b two essays (Midwinter; Christmas Day in history), three reading
+  paths and the Kids winter theme, by 28 Nov; W3
   an Advent calendar, Quote Cipher, Longer or Shorter?, Finish the Line and /birthday; W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

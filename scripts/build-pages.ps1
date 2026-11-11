@@ -1515,7 +1515,7 @@ $DAYS = @($HIST.Keys | Sort-Object)
 function DaySlug([string]$k) { $MONTHS[[int]$k.Substring(0, 2) - 1].ToLowerInvariant() + '-' + [int]$k.Substring(3, 2) }
 function DayLabel([string]$k) { "$([int]$k.Substring(3, 2)) $($MONTHS[[int]$k.Substring(0, 2) - 1])" }
 function MonthCal([int]$mo, [string]$curKey) {
-  $sb = New-Object Text.StringBuilder; [void]$sb.Append('<div class="day-cal-month"><h3>' + $MONTHS[$mo - 1] + '</h3><ol class="day-cal">')
+  $sb = New-Object Text.StringBuilder; [void]$sb.Append('<div class="day-cal-month"><h3><a href="/today-in-history/' + $MONTHS[$mo - 1].ToLowerInvariant() + '">' + $MONTHS[$mo - 1] + '</a></h3><ol class="day-cal">')
   foreach ($k in ($DAYS | Where-Object { [int]$_.Substring(0, 2) -eq $mo })) { $dn = [int]$k.Substring(3, 2); if ($k -eq $curKey) { [void]$sb.Append('<li><span aria-current="page">' + $dn + '</span></li>') } else { [void]$sb.Append('<li><a href="/today-in-history/' + (DaySlug $k) + '">' + $dn + '</a></li>') } }
   return $sb.Append('</ol></div>').ToString()
 }
@@ -1549,6 +1549,10 @@ function DayPplList($rows) {
 }
 New-Item -ItemType Directory -Force "$Repo\data\days" | Out-Null
 $daysAll = New-Object Text.StringBuilder; $nDayPics = 0; $nDayLinks = 0
+# a month tile's picture: a person, event or work the event's TITLE names (a place or state named in passing gave a
+# modern view of Vienna to Mozart's death and a flag to Pearl Harbor)
+function MonImg($monSlugs) { foreach ($monSl in @($monSlugs)) { if ($monSl -and $BY.ContainsKey([string]$monSl)) { $monO = $BY[[string]$monSl]; if ($monO.img -and @('person', 'event', 'work') -contains [string]$monO.type) { return , @([string]$monO.img, [string]$monSl) } } }; return $null }
+$MONEV = @{}; foreach ($monI in 1..12) { $MONEV[$monI] = New-Object Collections.Generic.List[object] }   # each month's events with their weight, for the month pages
 for ($di = 0; $di -lt $DAYS.Count; $di++) {
   $k = $DAYS[$di]; $evs = @($HIST[$k] | Sort-Object @{ e = { [double]$_['year'] } }); $lbl = DayLabel $k; $path = '/today-in-history/' + (DaySlug $k)
   # the descriptions are linked with the encyclopedia's patterns, compiled only in full builds: -SkipEntries keeps the
@@ -1630,10 +1634,81 @@ for ($di = 0; $di -lt $DAYS.Count; $di++) {
     foreach ($evM in [regex]::Matches($DH[$ei], 'href="/encyclopedia/([a-z0-9-]+)"')) { $evSl = $evM.Groups[1].Value; $evO = $BY[$evSl]; if ($evO -and $evO.type -ne 'place' -and $evO.type -ne 'polity' -and $EWD[$evSl]) { $evWt = [Math]::Max($evWt, [int]$EWD[$evSl][4]) } }
     [pscustomobject]@{ i = $ei; w = $evWt } })
   $evTop = @($evW | Sort-Object @{ e = { -$_.w } }, @{ e = { $_.i } } | Select-Object -First 3 | Sort-Object i | ForEach-Object { $evs[$_.i] })
+  foreach ($evWi in $evW) { $MONEV[[int]$k.Substring(0, 2)].Add([pscustomobject]@{ k = $k; ev = $evs[$evWi.i]; w = $evWi.w; im = (MonImg $TS[$evWi.i]) }) }
   $desc = [EpochBuild.W]::Summary("On $lbl in history: " + ((@($evTop | ForEach-Object { [string]$_['yearDisplay'] + ', ' + [string]$_['title'] })) -join '; ') + $(if ($dHasPpl) { '; and the births and deaths of the day.' } else { '.' }), 155)
   $ogD = '/images/og/day-' + (DaySlug $k) + '.jpg'
   Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; img = $(if (Test-Path (Join-Path $Repo ($ogD.TrimStart('/') -replace '/', '\'))) { $ogD }); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + '}'); nav = 'today'; body = $sb.ToString() })
 }
+# ── The months in history (/today-in-history/<month>, Nov 2026): the month's best-known events (the weights the day
+# pages' descriptions use, two a day at most, thirty in all, in day order), the best-known people born and died in it,
+# its festivals and songs (scripts/months.tsv, chosen by hand: mm TAB fest|song TAB slugs; the build STOPS on a slug
+# without an entry or a song), the international days, and the month's calendar. Linked from every day's calendar.
+# Script-level names start with mon. Built only with the day pages (a -SkipEntries build keeps them).
+$MONNOTE = @{}
+foreach ($monL in [IO.File]::ReadAllLines("$PSScriptRoot\months.tsv", $U8)) {
+  if (-not $monL.Trim() -or $monL.StartsWith('#')) { continue }; $monC = $monL.Split("`t"); if ($monC.Count -lt 3 -or $monC[1] -notmatch '^(fest|song)$') { throw "months.tsv: cannot read '$monL'" }
+  $MONNOTE[$monC[0] + ':' + $monC[1]] = @($monC[2].Split(',') | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+}
+$MONSONG = @{}; foreach ($sg in $SONGS) { $MONSONG[[string]$sg['slug']] = $sg }
+function MonYear([double]$monY) { if ($monY -lt 0) { "$([int](-$monY)) BCE" } else { "$([int]$monY)" } }
+function MonTile([string]$monHref, [string]$monImg, [string]$monPh, [string]$monNm, [string]$monTp) {
+  '<li><a href="' + $monHref + '">' + $(if ($monImg) { '<img src="' + (ThumbOf $monImg) + '" alt="" loading="lazy" width="44" height="44">' } else { '<span class="ph ph-' + $monPh + '" aria-hidden="true"></span>' }) + '<span><span class="nm">' + (Hx $monNm) + '</span><span class="tp">' + (Hx $monTp) + '</span></span></a></li>'
+}
+for ($monI = 1; $monI -le 12; $monI++) {
+  $monName = $MONTHS[$monI - 1]; $monPath = '/today-in-history/' + $monName.ToLowerInvariant(); $monKey = $monI.ToString('00')
+  if ($SkipEntries) {
+    $monFile = Join-Path $Repo ('today-in-history\' + $monName.ToLowerInvariant())
+    if (Test-Path $monFile) { $WROTE[$monFile.ToLowerInvariant()] = 1; $SMNEW[$monPath] = if ($SM.ContainsKey($monPath)) { $SM[$monPath] } else { @('', $TODAY) } }
+    continue
+  }
+  $monDays = @($DAYS | Where-Object { $_.StartsWith("$monKey-") })
+  # the events: heaviest first, two a day at most, then in day and year order
+  $monSeen = @{}; $monTop = New-Object Collections.Generic.List[object]
+  foreach ($monE in @($MONEV[$monI] | Sort-Object @{ e = { -$_.w } }, @{ e = { $_.k } }, @{ e = { [double]$_.ev['year'] } })) {
+    if ($monTop.Count -ge 30) { break }; if ([int]$monSeen[$monE.k] -ge 2) { continue }; $monSeen[$monE.k] = [int]$monSeen[$monE.k] + 1; $monTop.Add($monE)
+  }
+  $monLead = @($monTop | Select-Object -First 3)
+  $monShow = @($monTop | Sort-Object @{ e = { $_.k } }, @{ e = { [double]$_.ev['year'] } })
+  $monPpl = New-Object Collections.Generic.List[object]
+  foreach ($monD in $monDays) { if ($DAYPPL.ContainsKey($monD)) { foreach ($monR in $DAYPPL[$monD]) { $monPpl.Add([pscustomobject]@{ d = $monD; r = $monR }) } } }
+  $monBest = { param($monKind) @($monPpl | Where-Object { $_.r.k -eq $monKind } | Sort-Object @{ e = { $_.r.o.emp.Count * 3 + $(if ($_.r.o.img) { 4 } else { 0 }) }; Descending = $true }, @{ e = { $_.r.y } } | Select-Object -First 12 | Sort-Object @{ e = { $_.d } }, @{ e = { $_.r.y } }) }
+  $monBorn = & $monBest 'b'; $monDied = & $monBest 'd'
+  $monCrumb = Crumbs @(@('Home', '/'), @('Today in History', '/today-in-history/'), @($monName, $null))
+  $monAll = $MONEV[$monI].ToArray(); $monYears = @($monAll | ForEach-Object { [double]$_.ev['year'] } | Sort-Object)
+  $sb = New-Object Text.StringBuilder(12000)
+  [void]$sb.Append('<main id="main" class="day-page ref-page">' + "`n<div class=`"day-wrap`">`n" + $monCrumb[0] + "`n")
+  [void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">' + $monName + ' in history</h1><p class="ref-lede">' + $monAll.Count.ToString('N0', $INV) + ' events on the ' + $monDays.Count + ' days of ' + $monName + ', from ' + (MonYear $monYears[0]) + ' to ' + (MonYear $monYears[-1]) + ': the best known of them, the people born and died in the month, its festivals and its songs.</p></header>' + "`n")
+  [void]$sb.Append('<section class="day-ppl" aria-labelledby="mon-ev"><h2 class="ref-sec-title" id="mon-ev">The best-known events of ' + $monName + '</h2><ul class="enc-seealso">')
+  foreach ($monE in $monShow) { [void]$sb.Append((MonTile ('/today-in-history/' + (DaySlug $monE.k)) $(if ($monE.im) { [string]$monE.im[0] } else { '' }) 'event' ([string]$monE.ev['title']) ((DayLabel $monE.k) + ' ' + (MonYear ([double]$monE.ev['year']))))) }
+  [void]$sb.Append("</ul></section>`n")
+  $monFest = @($MONNOTE["${monKey}:fest"]); $monSongs = @($MONNOTE["${monKey}:song"])
+  if ($monFest.Count -and $monFest[0]) {
+    [void]$sb.Append('<section class="day-ppl" aria-labelledby="mon-fest"><h2 class="ref-sec-title" id="mon-fest">Festivals and observances</h2><ul class="enc-seealso">')
+    foreach ($monS in $monFest) { if (-not $BY.ContainsKey($monS)) { throw "months.tsv: no entry '$monS' ($monName)" }; $monO = $BY[$monS]; [void]$sb.Append((MonTile ('/encyclopedia/' + $monS) ([string]$monO.img) ([string]$monO.type) ([string]$monO.name) ([EpochBuild.W]::Summary([string](@([EpochBuild.W]::Sentences([string]$monO.desc)) | Select-Object -First 1), 110)))) }
+    [void]$sb.Append("</ul></section>`n")
+  }
+  $monIntl = @($INTL.Keys | Where-Object { $_.StartsWith("$monKey-") } | Sort-Object)
+  if ($monIntl.Count) {
+    [void]$sb.Append('<section class="day-ppl" aria-labelledby="mon-intl"><h2 class="ref-sec-title" id="mon-intl">International days</h2><ul class="enc-seealso">')
+    foreach ($monD in $monIntl) { [void]$sb.Append((MonTile ('/today-in-history/' + (DaySlug $monD)) '' 'idea' ([string]$INTL[$monD]['name']) (DayLabel $monD))) }
+    [void]$sb.Append("</ul></section>`n")
+  }
+  if ($monBorn.Count) { [void]$sb.Append('<section class="day-ppl" aria-labelledby="mon-born"><h2 class="ref-sec-title" id="mon-born">Born in ' + $monName + '</h2><ul class="enc-seealso">' + (($monBorn | ForEach-Object { MonTile ('/encyclopedia/' + $_.r.o.slug) ([string]$_.r.o.img) 'person' ([string]$_.r.o.name) ((DayLabel $_.d) + ' ' + (MonYear $_.r.y)) }) -join '') + "</ul></section>`n") }
+  if ($monDied.Count) { [void]$sb.Append('<section class="day-ppl" aria-labelledby="mon-died"><h2 class="ref-sec-title" id="mon-died">Died in ' + $monName + '</h2><ul class="enc-seealso">' + (($monDied | ForEach-Object { MonTile ('/encyclopedia/' + $_.r.o.slug) ([string]$_.r.o.img) 'person' ([string]$_.r.o.name) ((DayLabel $_.d) + ' ' + (MonYear $_.r.y)) }) -join '') + "</ul></section>`n") }
+  if ($monSongs.Count -and $monSongs[0]) {
+    [void]$sb.Append('<section class="day-ppl" aria-labelledby="mon-songs"><h2 class="ref-sec-title" id="mon-songs">Songs of the month</h2><ul class="enc-seealso">')
+    foreach ($monS in $monSongs) { if (-not $MONSONG.ContainsKey($monS)) { throw "months.tsv: no song '$monS' ($monName)" }; $monG = $MONSONG[$monS]; [void]$sb.Append((MonTile ('/songs/' + $monS) '' 'work' ([string]$monG['title']) ((SongYear $monG) + ' · ' + [string]$monG['culture']))) }
+    [void]$sb.Append("</ul></section>`n")
+  }
+  $monP = (($monI + 10) % 12) + 1; $monN = ($monI % 12) + 1
+  [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring months"><a class="prev" rel="prev" href="/today-in-history/' + $MONTHS[$monP - 1].ToLowerInvariant() + '"><span class="lbl">&larr; Previous month</span><span class="nm">' + $MONTHS[$monP - 1] + '</span></a><a class="next" rel="next" href="/today-in-history/' + $MONTHS[$monN - 1].ToLowerInvariant() + '"><span class="lbl">Next month &rarr;</span><span class="nm">' + $MONTHS[$monN - 1] + "</span></a></nav>`n")
+  [void]$sb.Append('<section class="day-cal-wrap" aria-label="The days of ' + $monName + '">' + (MonthCal $monI '') + '<p><a class="enc-random-link" href="/today-in-history/">All days of the year &rarr;</a></p></section>' + "`n</div>`n</main>`n")
+  $monTitle = "$monName in History: Events, Births, Deaths and Festivals — The Epoch Institute"
+  $monDesc = [EpochBuild.W]::Summary("$monName in history: " + ((@($monLead | Sort-Object @{ e = { $_.k } } | ForEach-Object { [string]$_.ev['title'] + ' (' + (DayLabel $_.k) + ' ' + (MonYear ([double]$_.ev['year'])) + ')' })) -join '; ') + '; and the people, festivals and songs of the month.', 155)
+  Emit $monPath (Page @{ title = $monTitle; desc = $monDesc; path = $monPath; type = 'website'; ld = ($monCrumb[1] + ',{"@type":"CollectionPage","name":' + (Js $monTitle) + ',"description":' + (Js $monDesc) + ',"url":' + (Js ($SITE + $monPath)) + '}'); nav = 'today'; body = $sb.ToString() })
+}
+if (-not $SkipEntries) { Say 'month pages: 12' }
+
 # the day files' version, stamped into the two pages that read them (var DAYS_V = '...')
 if (-not $SkipEntries) {
   $DAYSV = [EpochBuild.W]::Sha1($daysAll.ToString()).Substring(0, 10)
