@@ -1202,8 +1202,21 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
     audit-videos.js could not read YouTube's watch pages on 11 Nov (every row UNREAD) and rewrites videos-audit.tsv
     with only the slugs given: restore the file after such a run; the thirteen were checked by oEmbed title and channel.
     find-sources.js skips a song without scripts/songs/<slug>.txt, so it finds nothing for drafts in a wave folder.
-- The rest of the round (plan of 10 Nov 2026): W2b two essays (Midwinter; Christmas Day in history), three reading
-  paths and the Kids winter theme, by 28 Nov; W3
+- W2b (12 Nov 2026):
+  - **Essays 13 Midwinter and 14 Christmas Day in History** (ESSAYS-GUIDE.md, two agents, from the site's own pages;
+    figures from scripts/tools/essay-numbers-3.js 13|14, which stands alone; paragraph maps in scripts/essays/notes/).
+    Each says where a reading is the Institute's own (why Christmas suited coronations: no page says it) and keeps the
+    entries' hedges (the winter-solstice entry states Aurelian's festival flatly, sol-invictus "according to some
+    scholars": the essays follow the hedge). Further Reading gives initials where the profiles print only initials.
+  - **Three reading paths** (scripts/paths/w2/p-winter.json): Midwinter Festivals, The Story of Christmas, Winter at
+    War; 65 in all. Profiles are on them only where their pages carry the theme (the Christianity profile does not
+    name Christmas; its stop gives the faith's origin).
+  - **Kids corner theme "Winter Festivals"** (@winter in kids-corner.tsv and word-hunt.tsv; 25 themes): every line
+    from its entry's text; no Krampus, no sieges.
+  - **The season's row on the home page** (#home-season, .home-season-links): static markup shown by the inline script
+    right after it from 1 December to 6 January (UTC), so nothing moves; links December, the two essays, The Story of
+    Christmas and the Kids theme.
+- The rest of the round (plan of 10 Nov 2026): W3
   an Advent calendar, Quote Cipher, Longer or Shorter?, Finish the Line and /birthday; W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

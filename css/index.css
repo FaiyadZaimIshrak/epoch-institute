@@ -1556,6 +1556,9 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .home-start-banner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; max-width: var(--container); margin: 26px auto 0; padding: 16px 20px; border: 1px solid rgba(var(--gold-rgb), 0.5); border-radius: var(--radius); background: linear-gradient(120deg, rgba(var(--gold-rgb), 0.1), transparent 65%), var(--surface); }
 .home-start-banner p { font-family: var(--font-text); font-size: 17px; color: var(--text); margin: 0; flex: 1 1 260px; }
 .home-start-banner .hero-cta { margin: 0; }
+.home-season-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; flex: 1 1 100%; font-family: var(--font-ui); font-size: 14.5px; }
+.home-season-links a:not(.hero-cta) { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.home-season-links a:not(.hero-cta):hover { color: var(--gold-light); }
 .home-banner-x { background: none; border: 0; color: var(--muted); font-size: 15px; cursor: pointer; padding: 6px 8px; min-height: 36px; }
 .home-banner-x:hover { color: var(--gold); }
 .home-continue-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
