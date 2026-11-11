@@ -1141,6 +1141,42 @@ function EntryLocator($e) {
     (Fd $ll[0]).TrimStart('-') + '&#176;' + $(if ($ll[0] -lt 0) { 'S' } else { 'N' }) + ', ' + (Fd $ll[1]).TrimStart('-') + '&#176;' + $(if ($ll[1] -lt 0) { 'W' } else { 'E' }) +
     ' (Wikidata). <a href="' + $href + '">What was here' + $(if ($yr) { ' in ' + (Hx (ScaleLbl $EAT[$e.slug])) } else { '' }) + '? &rarr;</a></figcaption></figure></section>' + "`n"
 }
+# where a person was born and died (Wikidata P19 and P20 of the same item; scripts/entry-places.tsv, written by
+# scripts/tools/entry-wd-places.js): "Born and died" on the person's page, with a dot at the birthplace (else at the place
+# of death), and "Born here" on the country histories. Script-level names start with EPL / BORN (names ignore case).
+$EPLACE = @{}; $BORNCTY = @{}; $CPNAME = @{}; foreach ($cpk in $CPAGE.Keys) { $CPNAME[$CPAGE[$cpk]] = $cpk }
+if (Test-Path "$Repo\scripts\entry-places.tsv") {
+  foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-places.tsv", $U8)) {
+    if (-not $l -or $l[0] -eq '#') { continue }; $epf = $l.Split("`t"); if ($epf.Count -lt 8 -or -not $BY.ContainsKey($epf[0])) { continue }
+    if (-not $EPLACE.ContainsKey($epf[0])) { $EPLACE[$epf[0]] = @{} }; $EPLACE[$epf[0]][$epf[1]] = $epf
+    if ($epf[1] -eq 'b' -and $epf[6] -and $CPNAME.ContainsKey($epf[6])) { if (-not $BORNCTY.ContainsKey($epf[6])) { $BORNCTY[$epf[6]] = New-Object Collections.Generic.List[object] }; $BORNCTY[$epf[6]].Add($BY[$epf[0]]) }
+  }
+}
+function PlaceHtml($epf) {   # the place, linked to its entry where it has one, and its present-day country
+  $pt = if ($epf[7] -and $BY.ContainsKey($epf[7])) { '<a class="enc-link" href="/encyclopedia/' + $epf[7] + '">' + (Hx $epf[3]) + '</a>' } else { Hx $epf[3] }
+  if (-not $epf[4]) { $pthe = StateThe @{ n = $epf[3]; t = '' }; if ($pthe -ne $epf[3]) { $pt = 'the ' + $pt } }   # a state named as the place: "born in the Mali Empire"
+  if ($epf[6] -and $CPNAME.ContainsKey($epf[6])) { $cn = $CPNAME[$epf[6]]; if ($epf[3] -ne $cn -and -not $epf[3].EndsWith(', ' + $cn)) { $pt += ', in what is now <a href="/countries/' + $epf[6] + '">' + (Hx (TheCountry $cn)) + '</a>' } }
+  return $pt
+}
+function PersonPlaces($e) {
+  $pp = $EPLACE[$e.slug]; if (-not $pp) { return '' }
+  $pb = $pp['b']; $pdd = $pp['d']; $pdot = if ($pb -and $pb[4]) { $pb } elseif ($pdd -and $pdd[4]) { $pdd } else { $null }
+  $txt = ''; if ($pb) { $txt += 'Born in ' + (PlaceHtml $pb) + '. ' }; if ($pdd) { $txt += 'Died in ' + (PlaceHtml $pdd) + '. ' }
+  $fig = ''
+  if ($pdot) {
+    $plat = [double]::Parse($pdot[4], $INV); $plng = [double]::Parse($pdot[5], $INV)
+    if ($plat -ge -57) {
+      $pxy = [EpochGeo.G]::P($plng, $plat); $vw = 90; $view = [double[]]@(($pxy[0] - $vw / 2), ($pxy[1] - $vw * 0.3), $vw, ($vw * 0.6))
+      if ($view[1] -lt 0) { $view[1] = 0 }; if ($view[0] -lt 0) { $view[0] = 0 }; if ($view[0] + $vw -gt 1000) { $view[0] = 1000 - $vw }
+      $inner = (DotPath 'map-dot-halo' @(, $pxy)) + (DotPath 'map-dot-me' @(, $pxy))
+      $yr = if ($EAT.ContainsKey($e.slug)) { '&amp;year=' + $EAT[$e.slug] } else { '' }
+      $href = '/atlas?at=' + (Fd $plat) + ',' + (Fd $plng) + $yr
+      $what = if ($pdot[1] -eq 'b') { 'the birthplace' } else { 'the place of death' }
+      $fig = '<figure class="st-locator enc-loc"><a href="' + $href + '" aria-label="' + (Hx "$($pdot[3]) on the atlas") + '">' + (MapSvg $view $inner "Map: $what of $($e.name)" 'map-loc') + '</a><figcaption>The dot marks ' + $what + '. <a href="' + $href + '">What was here' + $(if ($yr) { ' in ' + (Hx (ScaleLbl $EAT[$e.slug])) } else { '' }) + '? &rarr;</a></figcaption></figure>'
+    }
+  }
+  return '<section class="enc-where enc-born"><h2 class="enc-section-title">Born and died</h2><p class="enc-born-p">' + $txt + '<span class="enc-born-src">Places as Wikidata records them.</span></p>' + $fig + "</section>`n"
+}
 function WdLabel([string]$key) {
   $wl = $WDDESC[$key]; if (-not $wl) { return $null }
   return $wl.Substring(0, 1).ToUpperInvariant() + $wl.Substring(1)
@@ -1190,6 +1226,7 @@ foreach ($e in $ENT) {
     [void]$body.Append('<section class="enc-house"><h2 class="enc-section-title">Rulers and members</h2>' + (LifeChart $hRows ($hRows.Count.ToString() + ' people of the encyclopedia whose Wikidata record names this house as their family. Bright bars are lifespans; pale bars reigns or years of activity.')) + '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/dynasties">All ruling houses &rarr;</a></p>' + "</section>`n")
   }
   [void]$body.Append((EntryLocator $e))
+  if ($e.type -eq 'person') { [void]$body.Append((PersonPlaces $e)) }
   $thin = ((WordsIn $e.desc) + $(if ($eQuotes) { WordsIn ([regex]::Replace($eQuotes, '<a [^>]*>.*?</a>', ' ')) } else { 0 })) -lt $THINW
   if ($thin) { $nThin++ }
   if ($invNd) {   # its place on the inventions tree: when, where, who, and the inventions before and after it
@@ -1897,6 +1934,7 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
   [void]$sb.Append("</ol></section>`n")
   $ents = if ($CTENT.ContainsKey($m)) { TopEntries $CTENT[$m] 12 } else { @() }
   if ($ents.Count) { [void]$sb.Append('<section><h2 class="ref-sec-title">In the encyclopedia</h2><ul class="enc-seealso">' + (($ents | ForEach-Object { EntTile $_ }) -join '') + "</ul></section>`n") }
+  if ($BORNCTY.ContainsKey($slug)) { $bornL = $BORNCTY[$slug]; [void]$sb.Append('<section><h2 class="ref-sec-title">Born here <span class="n">' + $bornL.Count.ToString('N0', $INV) + '</span></h2><p class="cty-note">People of the encyclopedia born in what is now ' + (Hx (TheCountry $m)) + ', the best known first; birthplaces as Wikidata records them.</p><ul class="enc-seealso">' + ((TopEntries $bornL 12 | ForEach-Object { EntTile $_ }) -join '') + "</ul></section>`n") }
   if ($SOCCTY.ContainsKey($m)) { [void]$sb.Append('<section><h2 class="ref-sec-title">Social ladders</h2><p class="cty-note">How societies here ranked their people, from the ruler to the enslaved:</p><ul class="cty-chips">' + (($SOCCTY[$m].ToArray() | Sort-Object { $_[2] } | ForEach-Object { '<li><a href="/societies/' + $_[0] + '">' + (Hx ([string]$_[1])) + '</a></li>' }) -join '') + "</ul></section>`n") }
   if ($SONGCTY.ContainsKey($m)) { [void]$sb.Append('<section><h2 class="ref-sec-title">Songs from here</h2><ul class="cty-chips">' + (($SONGCTY[$m].ToArray() | ForEach-Object { '<li><a href="/songs/' + $_['slug'] + '">' + (Hx ([string]$_['title'])) + ' <span>' + (Hx (SongYear $_)) + '</span></a></li>' }) -join '') + "</ul></section>`n") }
   $nb = @{}; foreach ($n in $CLIST) { foreach ($o in @($n['mo'])) { $o = [string]$o; if ($o -and $o -ne $m -and $CPAGE.ContainsKey($o)) { $nb[$o] = 1 + [int]$nb[$o] } } }
@@ -4546,6 +4584,10 @@ $odHtml = '<script type="application/ld+json">{"@context":"https://schema.org","
   (($sampleP | ForEach-Object { $p0 = $_['points']; '<tr><td><a href="/empire/' + [EpochBuild.W]::ToSlug([string]$_['name']) + '">' + (Hx ([string]$_['name'])) + '</a></td><td>' + (Hx (SpanShort $p0[0][0] $p0[-1][0])) + '</td><td>' + (Hx (Yr (PeakYear $_))) + '</td><td>' + $p0.Count + '</td><td>' + (Spark $_) + '</td></tr>' }) -join '') + '</tbody></table></div>' +
   '<details class="od-cols"><summary>The columns</summary><dl><dt>CSV</dt><dd>One row per point: name, region, profile_url, year (negative = BCE), score (0&#8211;10).</dd><dt>JSON</dt><dd>One object per profile: name, region, profile_url, start_year, end_year, peak_year and points as [year, score] pairs.</dd></dl></details></section>'
 SetBlock "$Repo\dataset" 'open-data' $odHtml
+# four more tables (people, songs, inventions, the entries and Wikidata): scripts/tools/make-open-data.js writes the files
+# and the page's build:open-data-more block
+foreach ($odL in (& $songExe "$PSScriptRoot\tools\make-open-data.js")) { Say $odL }
+if ($LASTEXITCODE) { throw 'open data: scripts/tools/make-open-data.js failed (above)' }
 Say ("open data: {0} states ({1} placed), {2} relations, {3} curve points" -f $odNodes.Count, $nPlaced, $nRel, $nPts)
 
 # stale generated pages (entries, states or days that no longer exist)

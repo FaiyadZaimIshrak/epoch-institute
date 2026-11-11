@@ -56,12 +56,12 @@
 <section class="now-sec" id="new" aria-labelledby="now-new-t">
   <h2 class="ref-sec-title" id="now-new-t">New at the Institute</h2>
   <ol class="wn-list">
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-18">18 November 2026</time></p><h3 class="wn-t">Where people were born, and four new open data tables</h3><p class="wn-s">The pages of some 7,500 people now say where they were born and died, with a dot on the map, and each country history lists the best-known people born there; the places are Wikidata’s. Open Data gains four tables to download: the people, the songs, the inventions, and the encyclopedia’s entries matched to Wikipedia and Wikidata.</p><p class="wn-links"><a href="/dataset">Open Data</a> <a href="/people/">People in History</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-17">17 November 2026</time></p><h3 class="wn-t">Words for eight more songs</h3><p class="wn-s">Eight songs that had no words now have them, each from a public-domain edition: the Akathist hymn’s opening, Heil dir im Siegerkranz, the Himno de Riego, Battōtai, the Kyrie, Red River Valley and the opening lines of the Japji Sahib and the Hymn of the Pearl, five of them with the Institute’s own line-by-line English.</p><p class="wn-links"><a href="/songs/akathist">Akathist</a> <a href="/songs/himno-de-riego">Himno de Riego</a> <a href="/songs/">Songs in History</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-16">16 November 2026</time></p><h3 class="wn-t">History Now: the past in this week’s news</h3><p class="wn-s">A new page and a card on the home page: history and archaeology headlines from six publications, each beside the Institute’s page on its subject; the round anniversaries of the next thirty days; and what is new here. The headlines are refreshed twice a day and are not shown in Kids mode.</p><p class="wn-links"><a href="/now">History Now</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-15">15 November 2026</time></p><h3 class="wn-t">Finish the Line: a new daily game</h3><p class="wn-s">A few lines of a song from history, and four lines to choose from: which one comes next? Five songs a day, the same for everyone, from carols and anthems to hymns and sea shanties; songs in other languages have their English under every line.</p><p class="wn-links"><a href="/games#line">Finish the Line</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-14">14 November 2026</time></p><h3 class="wn-t">Quote Cipher: a new daily game</h3><p class="wn-s">A quotation from history with every letter swapped for another: work out the words square by square, then learn who said them and where. One cipher a day, the same for everyone, with a letter to reveal when you are stuck; Kids mode starts with three letters given.</p><p class="wn-links"><a href="/games#cipher">Quote Cipher</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-13">13 November 2026</time></p><h3 class="wn-t">A front page for the games</h3><p class="wn-s">History Games now opens on a card for each of the fourteen games, with today’s daily games first and your result on each once you have played. New things are marked New in the menus, your birthday in history has its own place in the Play menu, and My Passport has two new stamps.</p><p class="wn-links"><a href="/games">History Games</a> <a href="/passport">My Passport</a></p></li>
-    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-13">13 November 2026</time></p><h3 class="wn-t">Longer or Shorter? A new game</h3><p class="wn-s">Two states or empires of the past, each with its emblem: which lasted longer? The gaps narrow as your streak grows, from centuries to a couple of decades, and you have three lives. It has its own tab among the History Games.</p><p class="wn-links"><a href="/games#first-lasted">Longer or Shorter?</a></p></li>
   </ol>
   <p class="now-note"><a href="/new">Everything that is new, and every page added in the last thirty days &rarr;</a></p>
 </section>
@@ -70,7 +70,7 @@
 
 <script src="/shared-nav.js"></script>
 <script>initNav('today');</script>
-<script>var NOW_SRC = '/data/now.json?v=21eb0541f7';</script>
+<script>var NOW_SRC = '/data/now.json?v=a49834b945';</script>
 <script src="/now.js?v=6454b6d70d"></script>
 </body>
 </html>

@@ -1347,7 +1347,23 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   (I've Been Working on the Railroad: its minstrel text has a slur), St. Louis Blues (Handy d. 1958: free in the United
   States only; it has Genius), Santa Lucia (the Neapolitan Wikisource page keeps its first stanza inside the score),
   Sōran Bushi (a page of mixed line breaks), Om Jai Jagdish Hare (Wikipedia has only a romanization). 32 gaps left.
-  Still to do from that plan: S4 speed (owner: purge + cache rule), then W6.
+- **W6a, places of birth and death, and more open data:**
+  - scripts/tools/entry-wd-places.js reads Wikidata's P19 and P20 for the person entries whose item is "same" (10,753;
+    cached like entry-wd-claims.js) into scripts/entry-places.tsv (slug, b|d, item, label, latitude, longitude, country
+    page, the place's own entry): 7,573 birthplaces and 7,639 places of death. Kept only where the best-ranked
+    statements name one place with an English label (254 with several left out). The country is the country page whose
+    outline on maps/globe-land.js holds the place's point (the smallest outline first; a port off the simplified coast
+    takes the only country a sixth of a degree away). A place that is a state of the register gets no point ("born in
+    the Mali Empire"), unless the item is a town with a place entry (Athens, Venice). scripts/entry-places-manual.tsv
+    (slug, b|d, "-") takes a place away. A sample of 45 was read against the entries.
+  - build-pages.ps1: PersonPlaces ("Born and died" on a person's page, after On the map: the places linked to their
+    entries and country histories, a dot at the birthplace, else the place of death, "What was here in <year>?";
+    "Places as Wikidata records them") and "Born here" on the country histories ($BORNCTY: the twelve best known).
+  - scripts/tools/make-open-data.js (run by the builder after its own open data) writes epoch-institute-people.csv,
+    -songs.csv, -inventions.csv and -encyclopedia-wikidata.csv and /dataset's build:open-data-more block (Datasets 3-6).
+    Only the Institute's tables and Wikidata's facts: no entry description (Wikipedia-derived), picture or song text.
+  Still to do from that plan: S4 speed (owner: purge + cache rule), then W6b: rulers of states and state facts
+  (languages, religion, currency, area) from Wikidata, which need reading state by state.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
