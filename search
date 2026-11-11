@@ -79,7 +79,7 @@ initNav('search');
     ['group', 'Peoples & groups', function (r) { return r.k === 'group'; }], ['institution', 'Institutions', function (r) { return r.k === 'institution'; }],
     ['term', 'Terms', function (r) { return r.k === 'term' || r.k === 'factor'; }],
     ['pages', 'Site pages', function (r) { return r.src === 'g' || r.src === 'y'; }]];   // countries, centuries, years, speeches, paths, tools
-  var KIND = {}; KINDS.forEach(function (k) { KIND[k[0]] = k; });
+  var KIND = Object.create(null); KINDS.forEach(function (k) { KIND[k[0]] = k; });
   var GLYPH = { person: 'person', event: 'event', place: 'place', work: 'work', idea: 'idea', group: 'group', institution: 'institution', polity: 'polity', state: 'polity', profile: 'polity',
     country: 'place', century: 'event', year: 'event', speech: 'work', path: 'idea', essay: 'work', ladder: 'group', song: 'work', page: 'term', term: 'term', factor: 'factor' };
   function ord(n) { var a = n % 100, b = n % 10; return n + ((a > 10 && a < 14) ? 'th' : b === 1 ? 'st' : b === 2 ? 'nd' : b === 3 ? 'rd' : 'th'); }

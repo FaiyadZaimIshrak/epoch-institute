@@ -156,8 +156,9 @@ initNav('contact');
   };
   var form = document.getElementById('ct-form'), msg = document.getElementById('ct-message'), pageRow = document.getElementById('ct-page-row'), page = document.getElementById('ct-page');
   var topic = 'other';
+  function hasTopic(t) { return Object.prototype.hasOwnProperty.call(TOPICS, t); }   // ?topic=constructor is no topic
   function setTopic(t, focus) {
-    if (!TOPICS[t]) return; topic = t; var d = TOPICS[t];
+    if (!hasTopic(t)) return; topic = t; var d = TOPICS[t];
     document.getElementById('ct-step2').textContent = d.step;
     document.getElementById('ct-hint').innerHTML = d.hint;
     msg.placeholder = d.ph;
@@ -169,7 +170,7 @@ initNav('contact');
   // ?topic=correction&page=/state/x (the "Suggest a correction" link in every page's footer)
   var q = new URLSearchParams(location.search);
   if (q.get('page')) page.value = q.get('page').replace(/[^\w\-\/.#?=&%]/g, '');
-  if (TOPICS[q.get('topic')]) setTopic(q.get('topic'), false);
+  if (hasTopic(q.get('topic'))) setTopic(q.get('topic'), false);
 
   function err(id, bad) { document.getElementById(id + '-err').hidden = !bad; var el = document.getElementById(id); el.classList.toggle('form-input-error', bad); bad ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid'); return bad; }
   ['ct-name', 'ct-email', 'ct-message'].forEach(function (id) { document.getElementById(id).addEventListener('input', function () { err(id, false); }); });

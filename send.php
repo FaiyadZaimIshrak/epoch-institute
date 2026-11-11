@@ -103,7 +103,28 @@ function ini_bytes(string $v): int {
 }
 
 // ── Senders: rate limits (by address, hashed with a salt kept in the private folder) ─────────────────────────────────
-function client_ip(): string { return (string) ($_SERVER['HTTP_CF_CONNECTING_IP'] ?? $_SERVER['REMOTE_ADDR'] ?? ''); }   // behind Cloudflare, the reader's
+// Behind Cloudflare the reader's address comes in CF-Connecting-IP. It is believed only when the request itself comes
+// from Cloudflare (its published ranges, cloudflare.com/ips-v4 and ips-v6, read 13 Nov 2026): the host also answers
+// directly, where anyone could send the header with a new address each time and never meet a limit.
+const CF_RANGES = ['173.245.48.0/20', '103.21.244.0/22', '103.22.200.0/22', '103.31.4.0/22', '141.101.64.0/18', '108.162.192.0/18', '190.93.240.0/20',
+  '188.114.96.0/20', '197.234.240.0/22', '198.41.128.0/17', '162.158.0.0/15', '104.16.0.0/13', '104.24.0.0/14', '172.64.0.0/13', '131.0.72.0/22',
+  '2400:cb00::/32', '2606:4700::/32', '2803:f800::/32', '2405:b500::/32', '2405:8100::/32', '2a06:98c0::/29', '2c0f:f248::/32'];
+function ip_in(string $ip, string $cidr): bool {
+  [$net, $bits] = explode('/', $cidr); $a = @inet_pton($ip); $b = @inet_pton($net); $bits = (int) $bits;
+  if ($a === false || $b === false || strlen($a) !== strlen($b)) return false;
+  $full = intdiv($bits, 8); $rest = $bits % 8;
+  if ($full && substr($a, 0, $full) !== substr($b, 0, $full)) return false;
+  if (!$rest) return true;
+  $mask = (0xff << (8 - $rest)) & 0xff;
+  return (ord($a[$full]) & $mask) === (ord($b[$full]) & $mask);
+}
+function client_ip(): string {
+  $peer = (string) ($_SERVER['REMOTE_ADDR'] ?? ''); $cf = trim((string) ($_SERVER['HTTP_CF_CONNECTING_IP'] ?? ''));
+  if ($cf !== '' && @inet_pton($cf) !== false) { foreach (CF_RANGES as $r) { if (ip_in($peer, $r)) return $cf; } }
+  return $peer;
+}
+// a cell of subscribers.csv never starts a formula when the list is opened in a spreadsheet
+function csv_cell(string $s): string { return preg_match('/^[=+\-@\t\r]/', $s) ? "'" . $s : $s; }
 
 function salt(string $dir): string {
   $f = $dir . '/salt';
@@ -237,11 +258,6 @@ $logLine = function (string $result, int $bytes = 0) use ($dir, $key, $to) {
 
 // the field people do not see: filled in, it was a robot (thanked, and nothing is sent)
 if (trim(field('_gotcha')) !== '') { $logLine('honeypot'); done(200); }
-if ($dir !== '' && !rate_ok($dir)) {
-  $logLine('rate limit');
-  done(429, 'Too many messages have come from here today. Please try again later, or write to ' . $to . '.');
-}
-
 $v = []; $missing = []; $errors = [];
 foreach (FIELDS[$kind] as $f => [$name, $required, $max, $lines]) {
   $x = clean(field($f), $lines);
@@ -260,6 +276,11 @@ if ($kind === 'article') {
 }
 if ($missing) array_unshift($errors, 'Please fill in: ' . implode(', ', $missing) . '.');
 if ($errors) { $logLine('refused'); done(400, implode(' ', $errors)); }
+// the limits count messages that would be sent: a form sent back for a missing field uses none up
+if ($dir !== '' && !rate_ok($dir)) {
+  $logLine('rate limit');
+  done(429, 'Too many messages have come from here today. Please try again later, or write to ' . $to . '.');
+}
 
 // the subject: what it is, and the page, title or name
 $detail = $kind === 'article' ? $v['title'] : ($key === 'contact:correction' && $v['page'] !== '' ? $v['page'] : ($v['name'] ?? $v['email']));
@@ -323,11 +344,11 @@ if ($dir !== '') {
     if ($h) {
       flock($h, LOCK_EX);
       $known = false; $email = strtolower($v['email']);
-      while (($row = fgetcsv($h, 0, ',', '"', '')) !== false) { if (isset($row[1]) && strtolower((string) $row[1]) === $email) { $known = true; break; } }
+      while (($row = fgetcsv($h, 0, ',', '"', '')) !== false) { if (isset($row[1]) && ltrim(strtolower((string) $row[1]), "'") === ltrim($email, "'")) { $known = true; break; } }
       if (!$known) {
         fseek($h, 0, SEEK_END);
         if (ftell($h) === 0) fputcsv($h, ['date', 'email', 'source'], ',', '"', '');
-        fputcsv($h, [gmdate('Y-m-d H:i'), $v['email'], $v['source']], ',', '"', '');
+        fputcsv($h, [gmdate('Y-m-d H:i'), csv_cell($v['email']), csv_cell($v['source'])], ',', '"', '');
       }
       fflush($h); flock($h, LOCK_UN); fclose($h);
     }

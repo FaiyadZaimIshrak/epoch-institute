@@ -1263,9 +1263,23 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
     Shorter?) and "Advent" (24 doors in one year; epoch-advent is in the backup code); 30 stamps. passport.js?v=11.
     My Week is unchanged: it shows the daily games only.
   - Scratchpad lobby-test.js (30 checks: every card opens its game, Back/Forward, statuses, deep links, Kids mode).
-  Still to do from that plan: S2 the code review's fixes (service worker pictures, send.php's sender address and
-  formula cells, the "constructor" crash), S3 the tests kept in scripts/tests and run by the deploy's check job, S4
-  speed (owner: purge + cache rule), S5 posters for the winter pages and month pages in the menu.
+- S2, the code review's fixes:
+  - **sw.js** (VERSION 2026-11-13a): pictures, emblems and /data/ files (the preview cards, whose ?v= never changes) are
+    served from the kept copy and refreshed behind it; until then they were kept for good, so a picture replaced at the
+    same address stayed in a reader's browser. Only ?v= files and fonts are cache-first. A redirected answer is never kept.
+  - **send.php:** CF-Connecting-IP is believed only when the peer is in Cloudflare's published ranges (CF_RANGES, ip_in;
+    the host also answers directly, where a made-up header gave a new sender each time): re-read cloudflare.com/ips-v4
+    and ips-v6 if Cloudflare announces new ranges. The limits are counted after validation (a form sent back for a
+    missing field used one up). A cell of subscribers.csv that would start a formula gets an apostrophe (csv_cell).
+  - **/search and /contact:** ?k=constructor and ?topic=constructor named an inherited property of a plain object and
+    threw; KIND is Object.create(null), TOPICS is asked with hasOwnProperty (hasTopic).
+- S3, the tests are kept: scripts/tests/ (run.js runs them all, or those named: looks, advent, birthday, games-lobby,
+  games-tabs, longer-or-shorter, safe-keys, mail; 128 checks; EPOCH_PW for the browser, EPOCH_PHP = php.exe for mail,
+  skipped without it). Run it before a release that touches shared-nav.js, games.js or send.php, and add a new
+  feature's test there, not in a scratch folder. Not yet run by the deploy's check job: the runner would need
+  playwright-core installed, and a flaky browser test would then stop a deploy.
+  Still to do from that plan: S4 speed (owner: purge + cache rule), S5 posters for the winter pages and month pages in
+  the menu, then the rest of the winter round.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
