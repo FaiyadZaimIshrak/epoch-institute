@@ -1,0 +1,27 @@
+# The Advent calendar (/advent, scripts/tools/make-advent.js): day (1-24), title, a line taken from the linked page's
+# own text (at most 170 characters), address (/encyclopedia/<slug> or /songs/<slug>). Chosen and read by hand: a
+# festival of the dark season, a carol, or something that happened on that day; nothing grim (children open these doors).
+1	Advent	The season of waiting before Christmas opens the church's year. Its name comes from the Latin adventus, "coming".	/encyclopedia/advent
+2	Saturnalia	In ancient Rome December was the month of Saturn's festival, with a public banquet, gifts and masters serving their slaves at table.	/encyclopedia/saturnalia
+3	Dongzhi	In China the winter solstice is a festival: families gather to eat tangyuan, balls of glutinous rice that stand for reunion.	/encyclopedia/dongzhi
+4	Yalda Night	On the longest night of the year, families in Iran gather to eat, read the poems of Hafez and share pomegranates and watermelons.	/encyclopedia/yalda-night
+5	Sinterklaas	Tonight is St. Nicholas' Eve, when gifts are given in the Netherlands. Sinterklaas arrives by steamboat and rides a white horse.	/encyclopedia/sinterklaas
+6	Saint Nicholas	A 4th-century bishop of Myra, patron of sailors and children. In Belgium and nearby lands his gifts come this morning.	/encyclopedia/saint-nicholas
+7	Hanukkah	An eight-day Jewish festival, usually in December, when one more candle or lamp is lit each night.	/encyclopedia/hanukkah
+8	Ma'oz Tzur	A Hebrew hymn sung on Hanukkah after the candles are lit, written in the 13th century or a little earlier.	/songs/maoz-tzur
+9	The Christmas tree	The custom grew up in Germany and Livonia. Records tell of a tree in the Cathedral of Strasbourg in 1539.	/encyclopedia/christmas-tree
+10	The nativity scene	Francis of Assisi is said to have staged the first one at Christmas 1223, in a cave near Greccio.	/encyclopedia/nativity-scene
+11	Personent hodie	A Latin Christmas song for children's voices, first printed in a Finnish school songbook in 1582.	/songs/personent-hodie
+12	The Huron Carol	Canada's oldest Christmas song, written around 1642 in the language of the Wendat (Huron) people.	/songs/huron-carol
+13	Saint Lucy's Day	A festival of light. In the legend, Lucy wore a wreath of candles on her head to light her way.	/encyclopedia/saint-lucys-day
+14	To the South Pole	On this day in 1911 Roald Amundsen and four companions became the first people to reach the South Pole.	/encyclopedia/amundsens-south-pole-expedition
+15	Koliada	Among the Slavs, singers called koledari go from house to house on Christmas Eve and receive gifts for their carols.	/encyclopedia/koliada
+16	Wassail	An English custom of Christmastide: a hot spiced drink, and songs sung from door to door.	/encyclopedia/wassail
+17	The first flight	On this day in 1903 Orville Wright flew the Wright Flyer for 12 seconds, the first of four flights that day.	/encyclopedia/wright-flyer
+18	The Nutcracker	The ballet set on Christmas Eve was first performed on this day in 1892, in Saint Petersburg.	/encyclopedia/the-nutcracker
+19	A Christmas Carol	Charles Dickens's story of the miser Scrooge was published on this day in 1843 and sold out by Christmas Eve.	/encyclopedia/a-christmas-carol
+20	The Holly and the Ivy	An old English folk carol. The tune sung today was written down from a woman's singing in 1909.	/songs/the-holly-and-the-ivy
+21	The winter solstice	The shortest day of the year in the north. Stonehenge and Newgrange are aligned with its sunrise or sunset.	/encyclopedia/winter-solstice
+22	Yule	The winter festival of the old Germanic peoples. Its name still means Christmas in English and other northern languages.	/encyclopedia/yule
+23	Tu scendi dalle stelle	A widely sung carol from Italy, written in 1744 by a Neapolitan priest and often played on the zampogna, a big bagpipe.	/songs/tu-scendi-dalle-stelle
+24	Silent Night	First sung with a guitar in a village church in Austria on Christmas Eve 1818, and now sung in about 300 languages.	/songs/silent-night

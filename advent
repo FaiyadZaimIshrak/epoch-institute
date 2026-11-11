@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>An Advent Calendar of History — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Twenty-four doors for the days of December: behind each a festival, a carol or something that happened on that day in history.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/advent">
+<meta property="og:type" content="website">
+<meta property="og:title" content="An Advent Calendar of History — The Epoch Institute">
+<meta property="og:description" content="Twenty-four doors for the days of December: behind each a festival, a carol or something that happened on that day in history.">
+<meta property="og:url" content="https://the-epoch-institute.org/advent">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/advent.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Today in History","item":"https://the-epoch-institute.org/today-in-history/"},{"@type":"ListItem","position":3,"name":"An Advent Calendar of History"}]},{"@type":"CollectionPage","name":"An Advent Calendar of History","url":"https://the-epoch-institute.org/advent","description":"Twenty-four doors for the days of December: behind each a festival, a carol or something that happened on that day in history."}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<main id="main" class="wk-page adv-page ref-page">
+<div class="wk-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/today-in-history/">Today in History</a></li><li aria-current="page">Advent Calendar</li></ol></nav>
+<header class="ref-head">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">An Advent Calendar of History</h1>
+  <p class="ref-lede">Twenty-four doors for the days of December. Behind each is a festival of the dark season, a carol, or something that happened on that day. A door opens on its own day and stays open.</p>
+</header>
+
+<section aria-labelledby="adv-t">
+  <h2 class="ref-sec-title" id="adv-t">The doors <span class="n" id="adv-n"></span></h2>
+  <p class="pass-note" id="adv-note">The calendar needs JavaScript. Without it, <a href="/today-in-history/december">December in history</a> has the month's events, festivals and songs.</p>
+  <ol class="adv-grid" id="adv-grid"></ol>
+  <div class="adv-detail" id="adv-detail" aria-live="polite" hidden></div>
+  <p class="pass-note">Days are counted in UTC. The doors you have opened are kept in this browser only. More of the season: <a href="/today-in-history/december">December in history</a>, the essay <a href="/essays/midwinter">Midwinter</a> and the reading path <a href="/paths/the-story-of-christmas">The Story of Christmas</a>.</p>
+</section>
+</div>
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>initNav('today');</script>
+<script>
+(function () {
+  // [title, line, address, picture] for the days 1-24 (scripts/advent.tsv through scripts/tools/make-advent.js)
+  var DOORS = [["Advent","The season of waiting before Christmas opens the church's year. Its name comes from the Latin adventus, \"coming\".","/encyclopedia/advent","/images/encyclopedia/advent.jpg"],["Saturnalia","In ancient Rome December was the month of Saturn's festival, with a public banquet, gifts and masters serving their slaves at table.","/encyclopedia/saturnalia","/images/encyclopedia/saturnalia.jpg"],["Dongzhi","In China the winter solstice is a festival: families gather to eat tangyuan, balls of glutinous rice that stand for reunion.","/encyclopedia/dongzhi","/images/encyclopedia/dongzhi.jpg"],["Yalda Night","On the longest night of the year, families in Iran gather to eat, read the poems of Hafez and share pomegranates and watermelons.","/encyclopedia/yalda-night","/images/encyclopedia/yalda-night.jpg"],["Sinterklaas","Tonight is St. Nicholas' Eve, when gifts are given in the Netherlands. Sinterklaas arrives by steamboat and rides a white horse.","/encyclopedia/sinterklaas","/images/encyclopedia/sinterklaas.jpg"],["Saint Nicholas","A 4th-century bishop of Myra, patron of sailors and children. In Belgium and nearby lands his gifts come this morning.","/encyclopedia/saint-nicholas","/images/encyclopedia/saint-nicholas.jpg"],["Hanukkah","An eight-day Jewish festival, usually in December, when one more candle or lamp is lit each night.","/encyclopedia/hanukkah","/images/encyclopedia/hanukkah.jpg"],["Ma'oz Tzur","A Hebrew hymn sung on Hanukkah after the candles are lit, written in the 13th century or a little earlier.","/songs/maoz-tzur",""],["The Christmas tree","The custom grew up in Germany and Livonia. Records tell of a tree in the Cathedral of Strasbourg in 1539.","/encyclopedia/christmas-tree","/images/encyclopedia/christmas-tree.jpg"],["The nativity scene","Francis of Assisi is said to have staged the first one at Christmas 1223, in a cave near Greccio.","/encyclopedia/nativity-scene","/images/encyclopedia/nativity-scene.jpg"],["Personent hodie","A Latin Christmas song for children's voices, first printed in a Finnish school songbook in 1582.","/songs/personent-hodie",""],["The Huron Carol","Canada's oldest Christmas song, written around 1642 in the language of the Wendat (Huron) people.","/songs/huron-carol",""],["Saint Lucy's Day","A festival of light. In the legend, Lucy wore a wreath of candles on her head to light her way.","/encyclopedia/saint-lucys-day","/images/encyclopedia/saint-lucys-day.jpg"],["To the South Pole","On this day in 1911 Roald Amundsen and four companions became the first people to reach the South Pole.","/encyclopedia/amundsens-south-pole-expedition","/images/encyclopedia/amundsens-south-pole-expedition.jpg"],["Koliada","Among the Slavs, singers called koledari go from house to house on Christmas Eve and receive gifts for their carols.","/encyclopedia/koliada","/images/encyclopedia/koliada.jpg"],["Wassail","An English custom of Christmastide: a hot spiced drink, and songs sung from door to door.","/encyclopedia/wassail","/images/encyclopedia/wassail.jpg"],["The first flight","On this day in 1903 Orville Wright flew the Wright Flyer for 12 seconds, the first of four flights that day.","/encyclopedia/wright-flyer","/images/encyclopedia/wright-flyer.jpg"],["The Nutcracker","The ballet set on Christmas Eve was first performed on this day in 1892, in Saint Petersburg.","/encyclopedia/the-nutcracker","/images/encyclopedia/the-nutcracker.jpg"],["A Christmas Carol","Charles Dickens's story of the miser Scrooge was published on this day in 1843 and sold out by Christmas Eve.","/encyclopedia/a-christmas-carol","/images/encyclopedia/a-christmas-carol.jpg"],["The Holly and the Ivy","An old English folk carol. The tune sung today was written down from a woman's singing in 1909.","/songs/the-holly-and-the-ivy",""],["The winter solstice","The shortest day of the year in the north. Stonehenge and Newgrange are aligned with its sunrise or sunset.","/encyclopedia/winter-solstice","/images/encyclopedia/winter-solstice.jpg"],["Yule","The winter festival of the old Germanic peoples. Its name still means Christmas in English and other northern languages.","/encyclopedia/yule","/images/encyclopedia/yule.jpg"],["Tu scendi dalle stelle","A widely sung carol from Italy, written in 1744 by a Neapolitan priest and often played on the zampogna, a big bagpipe.","/songs/tu-scendi-dalle-stelle",""],["Silent Night","First sung with a guitar in a village church in Austria on Christmas Eve 1818, and now sung in about 300 languages.","/songs/silent-night",""]];
+  var now = new Date(), q = /[?&]day=(\d+)/.exec(location.search);   // ?day=N previews the calendar as on N December
+  var m = now.getUTCMonth(), d = now.getUTCDate(), year = m === 0 ? now.getUTCFullYear() - 1 : now.getUTCFullYear();
+  var inDec = m === 11, after = m === 0 && d < 7, season = inDec || after;
+  var upto = q ? Math.min(24, +q[1]) : inDec ? Math.min(24, d) : 24;   // out of season every door may be opened
+  if (q) { inDec = true; season = true; }
+  var all = {}; try { all = JSON.parse(localStorage.getItem('epoch-advent') || '{}') || {}; } catch (e) {}
+  var open = Array.isArray(all[year]) ? all[year] : [];
+  function save() { all = {}; all[year] = open; try { localStorage.setItem('epoch-advent', JSON.stringify(all)); } catch (e) {} }
+  var grid = document.getElementById('adv-grid'), det = document.getElementById('adv-detail'), note = document.getElementById('adv-note');
+  note.textContent = season ? (inDec && upto < 24 ? 'Today is ' + upto + ' December: ' + (upto === 1 ? 'the first door is' : 'doors 1 to ' + upto + ' are') + ' ready to open.' : 'Every door is ready to open.')
+    : 'The calendar runs from 1 to 24 December. Out of season every door may be opened.';
+  function count() { document.getElementById('adv-n').textContent = open.length + ' of 24 opened'; }
+  function show(i) {
+    var D = DOORS[i];
+    det.innerHTML = '<p class="adv-d-day">' + (i + 1) + ' December</p><h3 class="adv-d-title">' + escHtml(D[0]) + '</h3><p class="adv-d-line">' + escHtml(D[1]) + '</p><a class="hero-cta" href="' + D[2] + '">' + (D[2].indexOf('/songs/') === 0 ? 'Hear it and read its story' : 'Read more') + ' &rarr;</a>';
+    det.hidden = false;
+  }
+  function paint(li, i, isOpen) {
+    var D = DOORS[i], b = li.firstChild;
+    b.className = 'adv-door' + (isOpen ? ' is-open' : '') + (inDec && i + 1 === upto ? ' is-today' : '');
+    b.setAttribute('aria-label', isOpen ? (i + 1) + ' December: ' + D[0] : i < upto ? 'Open the door of ' + (i + 1) + ' December' : (i + 1) + ' December: opens on its day');
+    b.innerHTML = isOpen ? (D[3] ? '<img src="' + D[3] + '" alt="" loading="lazy">' : '<span class="adv-note-ic" aria-hidden="true">&#9834;</span>') + '<span class="adv-num">' + (i + 1) + '</span><span class="adv-name">' + escHtml(D[0]) + '</span>'
+      : '<span class="adv-big">' + (i + 1) + '</span>';
+  }
+  DOORS.forEach(function (D, i) {
+    var li = document.createElement('li'), b = document.createElement('button'); b.type = 'button'; li.appendChild(b); grid.appendChild(li);
+    if (i >= upto) b.disabled = true;
+    paint(li, i, open.indexOf(i + 1) >= 0);
+    b.addEventListener('click', function () {
+      if (open.indexOf(i + 1) < 0) { open.push(i + 1); save(); paint(li, i, true); count(); }
+      show(i); det.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    });
+  });
+  count();
+  window.epochAdvent = { doors: DOORS, upto: upto, open: open, year: year, season: season };
+})();
+</script>
+</body>
+</html>

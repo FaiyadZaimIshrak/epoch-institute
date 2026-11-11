@@ -518,7 +518,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=ab6ba4c105';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=cd9753172a';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=9d38ec32ca';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -725,7 +725,7 @@ function initNav(activePage) {
     ['play', 'Play', [
       ['', [['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
         ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'], ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
-        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games']]]]]];
+        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games'], ['advent', '/advent', 'Advent Calendar', 'A door of history for each day of December']]]]]];
   const MORE = [['about', '/about', 'About the Institute'], ['new', '/new', 'What&#8217;s New'], ['research', '/research', 'Research Hub'], ['dataset', '/dataset', 'Open Data'],
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
@@ -839,6 +839,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/kids">Kids Corner</a>
         <a class="footer-link" href="/passport">My Passport</a>
         <a class="footer-link" href="/weekly">My Week of Games</a>
+        <a class="footer-link" href="/advent">Advent Calendar</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
         <a class="footer-link" href="/compare">Compare Two Profiles</a>
       </div>

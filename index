@@ -112,7 +112,7 @@
      inline script right after it, so it is there or not before the first paint and nothing moves -->
 <div class="home-start-banner home-season" id="home-season" hidden>
   <p><b>The season in history.</b> How the world has marked the darkest days, from Saturnalia and Yule to Dongzhi and Yalda Night; what was done on Christmas Day through the centuries; and thirty carols with their stories.</p>
-  <span class="home-season-links"><a class="hero-cta" href="/today-in-history/december">December in history &rarr;</a><a href="/essays/midwinter">Midwinter</a><a href="/essays/christmas-day-in-history">Christmas Day in history</a><a href="/paths/the-story-of-christmas">The story of Christmas</a><a href="/kids#t-winter">For children</a></span>
+  <span class="home-season-links"><a class="hero-cta" href="/today-in-history/december">December in history &rarr;</a><a href="/essays/midwinter">Midwinter</a><a href="/essays/christmas-day-in-history">Christmas Day in history</a><a href="/paths/the-story-of-christmas">The story of Christmas</a><a href="/advent">Advent calendar</a><a href="/kids#t-winter">For children</a></span>
 </div>
 <script>(function(){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))document.getElementById('home-season').hidden=false})()</script>
 

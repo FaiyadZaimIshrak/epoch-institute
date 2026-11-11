@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card · privacy · terms · support
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card · privacy · terms · support · advent
 A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
@@ -1216,8 +1216,18 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   - **The season's row on the home page** (#home-season, .home-season-links): static markup shown by the inline script
     right after it from 1 December to 6 January (UTC), so nothing moves; links December, the two essays, The Story of
     Christmas and the Kids theme.
-- The rest of the round (plan of 10 Nov 2026): W3
-  an Advent calendar, Quote Cipher, Longer or Shorter?, Finish the Line and /birthday; W4 a "Now" card (history
+- W3a (12 Nov 2026), **the Advent calendar, /advent** (hand page, in .htaccess, deploy.sh PAGES, split-css HAND, the
+  sitemap list, SEARCH_PAGES, the Play menu, the footer and the home season row; nav key today): 24 doors from
+  scripts/advent.tsv (day, title, a line from the linked page's own text, an entry or song address; chosen by hand,
+  nothing grim), written into the page by scripts/tools/make-advent.js, which takes the head from /weekly so the
+  snippets are the site's own and STOPS on a missing day or page: re-run it after editing the tsv or the head
+  snippets. In December a door opens on its day (UTC) and stays open; from 25 December to 6 January and out of season
+  every door may be opened; ?day=N previews N December. Opened doors: localStorage epoch-advent {year: [days]}. An
+  entry's door shows its picture, a song's a note; the chosen door's line and link stand under the grid (.adv-detail),
+  so the grid never moves. window.epochAdvent. Tested by the scratchpad's advent-test.js (12 checks: 5 December, the
+  first day, after Christmas, January, out of season, a phone with all 24 open, Kids mode).
+- The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Longer or Shorter?, Finish the Line and
+  /birthday); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
 

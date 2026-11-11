@@ -4574,7 +4574,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
   @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'), @('Ruling Houses and Dynasties', '/encyclopedia/dynasties', 'dynasties|ruling houses|royal houses|royal families|dynasty|house of'),
-  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
+  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('Advent Calendar of History', '/advent', 'advent|advent calendar|christmas calendar|december doors|24 doors'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
   @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
   @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
   @('Research Series', '/research-series', 'research series|essays'), @('Open Data', '/dataset', 'open data|dataset|download|csv'),
@@ -4786,7 +4786,7 @@ if ([EpochBuild.W]::WriteIfChanged("$Repo\whats-new.xml", $wx.ToString())) { $NW
 Say ("what's new: {0} release notes, {1} new pages in 30 days" -f $wnNotes.Count, $wnTotal)
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/support', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/support', '/advent', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }
