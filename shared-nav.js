@@ -708,12 +708,14 @@ function initNav(activePage) {
   // The menu (31 Oct 2026, the user: Explore was too cramped; "themed menus" chosen): Profiles, Encyclopedia and Today
   // in History as links; three menus of headed columns (Maps & Time, Themes, Play), each item [page key, address, name,
   // line]; and More, the Institute's pages. The phone menu has the same groups, folded, the group of the page open.
+  // the month pages (/today-in-history/<month>) have no index: the menu and footer link the current month (UTC)
+  const MONTH_URL = '/today-in-history/' + ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'][new Date().getUTCMonth()];
   const MENUS = [
     ['maps', 'Maps &amp; Time', [
       ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
         ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States Register', 'Every state on record']]],
       ['Time', [['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
-        ['years', '/years/', 'Year by Year', 'What happened in any year'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
+        ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
       ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
@@ -822,6 +824,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/faiths">Faith Maps</a>
         <a class="footer-link" href="/centuries/">Centuries</a>
         <a class="footer-link" href="/years/">Year by Year</a>
+        <a class="footer-link" href="${MONTH_URL}">This Month in History</a>
         <a class="footer-link" href="/race">Rise and Fall Race</a>
         <a class="footer-link" href="/explorer">Power Curves</a>
         <a class="footer-link" href="/connections">Connections</a>

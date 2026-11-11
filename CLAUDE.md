@@ -1278,8 +1278,12 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   skipped without it). Run it before a release that touches shared-nav.js, games.js or send.php, and add a new
   feature's test there, not in a scratch folder. Not yet run by the deploy's check job: the runner would need
   playwright-core installed, and a flaky browser test would then stop a deploy.
-  Still to do from that plan: S4 speed (owner: purge + cache rule), S5 posters for the winter pages and month pages in
-  the menu, then the rest of the winter round.
+- S5: posters for the three winter paths and the thirteen carols (make-posters.js paths songs; song pages take theirs
+  only in a full build). make-posters.js prints no words that sit under a licence asking for credit (the three ETCSL
+  texts: a poster has no room for the credit line; Ninkasi's and Kesh's had been drawn with them). The menu (Maps & Time,
+  Time) and the footer link "This Month in History": shared-nav.js MONTH_URL, the current month's page (UTC), as the
+  month pages have no index. Essays and month pages still have no poster kind of their own.
+  Still to do from that plan: S4 speed (owner: purge + cache rule), then the rest of the winter round.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

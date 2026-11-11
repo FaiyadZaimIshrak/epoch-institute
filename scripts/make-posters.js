@@ -163,7 +163,9 @@ SONGS.forEach(s => {
   const when = s.undated ? 'date unknown' : d0.length <= 40 ? d0 : d1.length <= 44 ? d1 : (s.year < 0 ? 'c. ' + (-s.year) + ' BCE' : 'c. ' + s.year);
   const chips = [...(s.types || []).slice(0, 2), ...(s.langs || []).map(l => l.name).slice(0, 2), s.region].filter(Boolean);
   let lines = [], en = [];
-  const t = s.text && !s.withheld && !s.caution ? s.text.parts : null;
+  // nor words under a licence that asks for credit (the three ETCSL texts, CC BY-NC-SA): a poster has no room for the credit line
+  const lic = s.text && s.text.parts ? Object.keys(s.text.parts).some(k => /CC BY/i.test(String(s.text.parts[k].licence || ''))) : false;
+  const t = s.text && !s.withheld && !s.caution && !lic ? s.text.parts : null;
   if (t && t.orig) {
     lines = t.orig.stanzas.flat().filter(l => l.trim()).slice(0, 4);
     if (lang !== 'en' && s.text.aligned && t.en) en = t.en.stanzas.flat().filter(l => l.trim()).slice(0, 4);
