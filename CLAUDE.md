@@ -1235,7 +1235,14 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   analytics line of before 8 Nov (no consent default), so Analytics could set cookies there whatever the reader chose,
   Kids mode included. They are hand pages with build blocks, which the 8 Nov replace had missed; now the standard
   line. To check: every file with gtag('config' must also hold gtag('consent','default' (0 without, 13 Nov).
-- The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Longer or Shorter?, Finish the Line); W4 a "Now" card (history
+- W3c (13 Nov 2026), **Longer or shorter**, a mode of Which Came First? (/games#first-lasted; the seg button "Longer or
+  shorter"; best streak first-lasted): two ended states or empires with a profile and an emblem, tap the one that lasted
+  longer; three lives, gaps of 200, then 75, 30 and 20 years as the streak grows. games.js First compares a pair by
+  key(c): the first year, or minus the lifespan in this mode; the duel gets .is-lasted (emblems shown whole, the winner
+  marked "longer"). GAME_SPANS [profile address, name, first year, last year, emblem] in games-data.js (the builder,
+  from the power curves’ first and last years; 423 states: not the living, those under ten years, those without an
+  emblem or marked hide in home-pictures.tsv). games.js?v=15. Scratchpad lasted-test.js plays it on desktop and phone.
+- The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.
 

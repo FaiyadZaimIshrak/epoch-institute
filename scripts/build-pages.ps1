@@ -4077,10 +4077,20 @@ foreach ($em in $EMPS) {
   $gy = [int][Math]::Round([double]$em['start']); $gd = $(if ($em['circa']) { 'c. ' } else { '' }) + (Yr $gy)
   $gIdeas.Add('[' + (Js (ProfUrl $gn)) + ',' + (Js $gn) + ',' + (Js $gKindL[$gk]) + ',' + $gy + ',' + (Js $gd) + ',' + (Js $gpe.img) + ',' + (Js (GameCredit $gpe)) + ',' + (Js $(if ($gpe.cr) { [string]$gpe.cr['source'] } else { '' })) + ',' + $(if ($gk -eq 'ideology') { 0 } else { 1 }) + ']')
 }
-Say "games: $($gIdeas.Count) cultures and ideas for Which Came First?"
+# Which Came First? "Longer or shorter" (winter round W3, Nov 2026): the states and empires with a profile and an emblem
+# that have ended, compared by how long they lasted: GAME_SPANS [profile address, name, first year, last year, emblem].
+# The profiles marked hide in home-pictures.tsv stay out, and a state under ten years or still existing.
+$gHide = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\home-pictures.tsv", $U8)) { if (-not $l -or $l.StartsWith('#')) { continue }; $c = $l.Split("`t"); if ($c.Count -ge 3 -and (($c | Select-Object -Skip 2) -join ' ') -match '\bhide\b') { $gHide[$c[0]] = 1 } }
+$gSpans = New-Object Collections.Generic.List[string]
+foreach ($em in $POLS) {
+  $gn = [string]$em['name']; if ($gHide.ContainsKey($gn) -or -not $LOGO.ContainsKey($gn)) { continue }
+  $gs0 = [int][Math]::Round([double]$em['points'][0][0]); $gs1 = [int][Math]::Round([double]$em['points'][-1][0]); if ($gs1 -ge 2025 -or $gs1 - $gs0 -lt 10) { continue }
+  $gSpans.Add('[' + (Js (ProfUrl $gn)) + ',' + (Js $gn) + ',' + $gs0 + ',' + $gs1 + ',' + (Js ('/logos/' + [Uri]::EscapeDataString($gn) + '.png')) + ']')
+}
+Say "games: $($gIdeas.Count) cultures and ideas for Which Came First?, $($gSpans.Count) states for Longer or shorter"
 $gameJs = "// games-data.js - built by scripts/build-pages.ps1 from scripts/game-pictures.tsv and scripts/word-hunt.tsv. Do not edit.`n" +
   "var GAME_CARDS = [`n" + ($gCards -join ",`n") + "`n];`nvar GAME_PUZZLES = [" + $gPuzJs + "];`nvar GAME_WORDS = [`n" + ($gWords -join ",`n") + "`n];`n" +
-  "var GAME_IDEAS = [`n" + ($gIdeas -join ",`n") + "`n];`n"
+  "var GAME_IDEAS = [`n" + ($gIdeas -join ",`n") + "`n];`nvar GAME_SPANS = [`n" + ($gSpans -join ",`n") + "`n];`n"
 [void][EpochBuild.W]::WriteIfChanged("$Repo\games-data.js", $gameJs); $GAMESV = [EpochBuild.W]::Sha1($gameJs).Substring(0, 10)
 $t = [IO.File]::ReadAllText("$Repo\games", $U8); $t2 = [regex]::Replace($t, 'games-data\.js\?v=[0-9a-f]*', "games-data.js?v=$GAMESV")
 if ($t2 -ne $t -and [EpochBuild.W]::WriteIfChanged("$Repo\games", $t2)) { $NWRITE++ }

@@ -135,7 +135,7 @@
   <section class="gm-game" id="game-first" role="tabpanel" aria-labelledby="tab-first" hidden>
     <div class="gm-head">
       <p class="gm-howto" id="first-howto">Two moments from history: tap the one that came first (for a person, the year they were born). Every right answer grows your streak, and the gaps get closer as you go. You have three lives.</p>
-      <div class="gm-seg" data-for="first" role="group" aria-label="Which game"><button type="button" data-v="daily">Daily Ten</button><button type="button" data-v="all">Everything</button><button type="button" data-v="people">People</button><button type="button" data-v="ideas">Cultures and ideas</button><button type="button" data-v="events">Events and works</button></div>
+      <div class="gm-seg" data-for="first" role="group" aria-label="Which game"><button type="button" data-v="daily">Daily Ten</button><button type="button" data-v="all">Everything</button><button type="button" data-v="people">People</button><button type="button" data-v="ideas">Cultures and ideas</button><button type="button" data-v="events">Events and works</button><button type="button" data-v="lasted">Longer or shorter</button></div>
     </div>
     <div class="gm-stats">
       <span class="gm-lives" id="first-lives" aria-label="3 lives left"></span>
@@ -310,12 +310,12 @@
 
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=47369e946f', data: '/maps/atlas-data.js?v=fe84e9163d' };</script>
 <script src="/games-emblems.js?v=1"></script>
-<script src="/games-data.js?v=de7b2688ac"></script>
+<script src="/games-data.js?v=d8f525460d"></script>
 <script src="/connections-data.js?v=e98dd2000f"></script>
 <script src="/shared-nav.js"></script>
 <script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=f4a7fd9d4a', SONGQ_SRC = '/songq-data.js?v=caba97d4a0', SIXD_SRC = '/sixdeg-data.js?v=478b3dd303';</script>
 <script>var RANKS_SRC = '/ranks-data.js?v=84033731ac';</script>
-<script src="/games.js?v=14"></script>
+<script src="/games.js?v=15"></script>
 
 </body>
 </html>

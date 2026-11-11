@@ -67,6 +67,12 @@ initNav('games');
   var IDEAS = (typeof GAME_IDEAS !== 'undefined' ? GAME_IDEAS : []).map(function (c) {
     return { slug: 'p' + c[0], url: c[0], name: c[1], kind: c[2], lo: c[3], hi: c[3], dates: c[4], img: c[5], credit: c[6], src: c[7], kid: c[8] };
   });
+  // Longer or shorter (a mode of Which Came First?, Nov 2026): the ended states and empires with a profile and an emblem,
+  // by how long they lasted (GAME_SPANS [profile address, name, first year, last year, emblem]; no year 0)
+  var SPANS = (typeof GAME_SPANS !== 'undefined' ? GAME_SPANS : []).map(function (c) {
+    return { slug: 's' + c[0], url: c[0], name: c[1], kind: /Empire|Caliphate|Khanate|Khaganate|Sultanate/.test(c[1]) ? 'Empire' : 'State', lo: c[2], hi: c[3], dur: c[3] - c[2] - (c[2] < 0 && c[3] > 0 ? 1 : 0),
+      dates: fmtYear(c[2]) + ' – ' + fmtYear(c[3]), img: c[4], kid: 1 };
+  });
   function fmtYear(y) { y = Math.round(y); var a = Math.abs(y) || 1, s = a >= 10000 ? a.toLocaleString('en-GB') : String(a); return s + (y < 0 ? ' BCE' : ' CE'); }
   function credit(c) {
     if (!c || (!c.credit && !c.src)) return '';
@@ -721,6 +727,8 @@ initNav('games');
       return out;
     }
     function isDaily() { return level() === 'daily'; }
+    function lasted() { return level() === 'lasted'; }
+    function key(c) { return lasted() ? -c.dur : c.lo; }   // what a pair is compared by: the first year, or how long it lasted (the longer first)
     function dailySaved() { return best('daily-' + QDAY) || { m: '' }; }
     function paintMode() {
       var d = isDaily();
@@ -728,24 +736,28 @@ initNav('games');
       $('first-unit').textContent = d ? 'of 10 right' : 'in a row';
       $('first-howto').textContent = d
         ? 'Today’s ten pairs, the same for everyone: tap the one that came first (for a person, the year they were born). The gaps close as you go. One go a day: share your score, and come back tomorrow for a new ten.'
+        : lasted() ? 'Two states or empires of the past: tap the one that lasted longer. Every right answer grows your streak, and the gaps get closer as you go. You have three lives.'
         : 'Two moments from history: tap the one that came first (for a person, the year they were born). Every right answer grows your streak, and the gaps get closer as you go. You have three lives.';
+      $('first-duel').classList.toggle('is-lasted', lasted());
     }
     var LADDER = [[3, 800, 0], [6, 300, 2200], [10, 120, 900], [15, 50, 400], [1e9, 15, 180]];   // [while the streak is below, nearest gap, widest gap (0: any)]
     function pool() {
       var lv = level(), k = kids();
       if (lv === 'ideas') return IDEAS.filter(function (c) { return !k || c.kid; });
+      if (lv === 'lasted') return SPANS;
       return DATED.filter(function (c) { return (!k || c.kid) && (lv === 'all' || (lv === 'people' ? c.kind === 'Person' : c.kind !== 'Person')); });
     }
     function band() { for (var i = 0; i < LADDER.length; i++) if (F.streak < LADDER[i][0]) return kids() ? [Math.max(300, LADDER[i][1]), 0] : [LADDER[i][1], LADDER[i][2]]; return [15, 0]; }
     function pick() {
       var all = pool(), p = all.filter(function (c) { return !F.used[c.slug]; }), b = band();
       if (level() === 'ideas') b = [Math.max(b[0], 100), b[1] ? Math.max(b[1], 1500) : 0];   // a culture's first year is often approximate
+      if (lasted()) b = [Math.max(20, Math.round(b[0] / 4)), 0];   // lifespans lie closer together than first years: 200 years apart, then 75, 30, 20
       if (p.length < 12) { F.used = {}; p = all; }
       if (p.length < 2) return null;
       for (var t = 0; t < 800; t++) {
         var a = p[Math.floor(Math.random() * p.length)], c = p[Math.floor(Math.random() * p.length)];
-        if (a === c || a.lo === c.lo || related(a, c)) continue;
-        var d = Math.abs(a.lo - c.lo);
+        if (a === c || key(a) === key(c) || related(a, c)) continue;
+        var d = Math.abs(key(a) - key(c));
         if (d < b[0] && t < 700) continue;
         if (b[1] && d > b[1] && t < 500) continue;
         var kk = [a.kind, c.kind].sort().join('|'); if (kk === F.kinds && t < 300) continue;
@@ -783,14 +795,16 @@ initNav('games');
     }
     function answer(i) {
       if (F.busy || F.done || !F.pair) return; F.busy = true;
-      var pr = F.pair, first = pr[0].lo < pr[1].lo ? 0 : 1, ok = i === first, id = F.id;
+      var pr = F.pair, first = key(pr[0]) < key(pr[1]) ? 0 : 1, ok = i === first, id = F.id;
       Array.prototype.forEach.call($('first-duel').querySelectorAll('.gm-fc'), function (b, k) {
         b.disabled = true; b.classList.add(k === first ? 'is-first' : 'is-second'); if (k === i) b.classList.add(ok ? 'is-right' : 'is-wrong');
-        var y = b.querySelector('.gm-fc-y'); y.textContent = pr[k].dates; y.classList.add('is-on');
+        var y = b.querySelector('.gm-fc-y'); y.textContent = lasted() ? pr[k].dur.toLocaleString('en-GB') + ' years · ' + pr[k].dates : pr[k].dates; y.classList.add('is-on');
       });
-      var d = Math.abs(pr[0].lo - pr[1].lo), a = pr[first], c = pr[1 - first];
+      var d = Math.abs(key(pr[0]) - key(pr[1])), a = pr[first], c = pr[1 - first];
       function born(x) { return x.kind === 'Person' ? ' (born ' + fmtYear(x.lo) + ')' : ''; }
-      var why = '<p class="gm-fc-v">' + (ok ? 'Right!' : 'Not this time.') + ' <span>' + entryLink(a) + born(a) + ' came ' + d.toLocaleString('en-GB') + ' year' + (d === 1 ? '' : 's') + ' before ' + entryLink(c) + born(c) + '.</span></p>' +
+      var why = '<p class="gm-fc-v">' + (ok ? 'Right!' : 'Not this time.') + ' <span>' + (lasted()
+        ? entryLink(a) + ' lasted ' + a.dur.toLocaleString('en-GB') + ' years, ' + d.toLocaleString('en-GB') + ' more than ' + entryLink(c) + ' (' + c.dur.toLocaleString('en-GB') + ').'
+        : entryLink(a) + born(a) + ' came ' + d.toLocaleString('en-GB') + ' year' + (d === 1 ? '' : 's') + ' before ' + entryLink(c) + born(c) + '.') + '</span></p>' +
         '<p class="gm-credit">' + [credit(pr[0]), credit(pr[1])].filter(function (x) { return x; }).join('<br>') + '</p>';
       if (F.daily) {   // no lives: every answer counts, saved at once
         F.daily.m += ok ? '1' : '0'; setBest('daily-' + QDAY, { m: F.daily.m });
@@ -816,8 +830,9 @@ initNav('games');
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + F.streak + ' in a row</p><p class="gm-done-s">' + (F.streak >= 12 ? 'A true time traveller!' : F.streak >= 6 ? 'A fine sense of time.' : 'Every game teaches a few dates.') + '</p>' +
         (isBest ? '<p class="gm-newbest">New best!</p>' : '') + '<div class="gm-done-row">' + shareBtn() + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div>' +
         '<p class="gm-done-more"><a href="#first-daily" data-daily>Try today&rsquo;s Daily Ten &rarr;</a></p></div>';
-      share(dn, 'Which Came First? ' + F.streak + ' in a row at The Epoch Institute', 'first', { title: 'Which Came First?', score: String(F.streak), unit: 'right in a row', stars: s,
-        pics: F.trail.slice(-6).map(function (c) { return { src: c.img, label: c.name, sub: shortDates(c) }; }), note: F.trail.length ? 'The last ones I got right' : '' });
+      var gn = lv === 'lasted' ? 'Longer or Shorter?' : 'Which Came First?';
+      share(dn, gn + ' ' + F.streak + ' in a row at The Epoch Institute', lv === 'lasted' ? 'first-lasted' : 'first', { title: gn, score: String(F.streak), unit: 'right in a row', stars: s,
+        pics: F.trail.slice(-6).map(function (c) { return { src: c.img, label: c.name, sub: lv === 'lasted' ? c.dur.toLocaleString('en-GB') + ' years' : shortDates(c) }; }), note: F.trail.length ? 'The last ones I got right' : '' });
       dn.hidden = false; confetti(dn); Sfx.play('win');
       dn.querySelector('.gm-done-btn').addEventListener('click', newGame); dn.querySelector('.gm-done-btn').focus({ preventScroll: true });
       dn.querySelector('[data-daily]').addEventListener('click', function (e) { e.preventDefault(); level.set('daily'); });
@@ -849,6 +864,7 @@ initNav('games');
     var started = false;
     function show(sub) {
       if (sub === 'daily' && !isDaily()) { started = true; level.set('daily'); return; }   // #first-daily
+      if (sub === 'lasted' && !lasted()) { started = true; level.set('lasted'); return; }   // #first-lasted
       if (!started) { started = true; newGame(); }
     }
     return { show: show, sub: show };
