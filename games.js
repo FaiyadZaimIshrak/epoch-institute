@@ -153,22 +153,41 @@ initNav('games');
       t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1;
       if (on) { p.hidden = false; p.classList.remove('gm-enter'); void p.offsetWidth; p.classList.add('gm-enter'); } else p.hidden = true;
     });
-    moveInk($('tab-' + g));
-    var tb = $('tab-' + g); if (tb.scrollIntoView && tb.parentNode.scrollWidth > tb.parentNode.clientWidth) tb.parentNode.scrollTo({ left: tb.offsetLeft - (tb.parentNode.clientWidth - tb.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' });
+    var tb = $('tab-' + g); moveInk(tb); if (tb.scrollIntoView && tb.parentNode.scrollWidth > tb.parentNode.clientWidth) tb.parentNode.scrollTo({ left: tb.offsetLeft - (tb.parentNode.clientWidth - tb.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' });
     if (focus) tb.focus();
     try { history.replaceState(null, '', '#' + g + (sub ? '-' + sub : '')); localStorage.setItem('epoch-games-tab', g); } catch (e) {}
     if (g === 'hunt') { Hunt.start(); Hunt.refresh(); }
     if (MODS[g] && MODS[g].show) MODS[g].show(sub);
+    markTab(focus);
   }
-  GAMES.forEach(function (g, i) {
+  // "Longer or Shorter?" has a tab of its own, though it is a mode of Which Came First? (tab-lasted opens game-first in
+  // that mode; a mode among six buttons inside another game was not found). The marked tab follows the mode.
+  var TABS = GAMES.slice(); TABS.splice(GAMES.indexOf('first') + 1, 0, 'lasted');
+  function isLasted() { return !!(MODS.first && MODS.first.lasted && MODS.first.lasted()); }
+  function tabNow() { return current === 'first' && isLasted() ? 'lasted' : current; }
+  function markTab(focus) {
+    if (!current) return; var on = tabNow(), f = $('tab-first'), l = $('tab-lasted'), tb = $('tab-' + on);
+    if (current === 'first') { f.setAttribute('aria-selected', String(on === 'first')); f.tabIndex = on === 'first' ? 0 : -1; }
+    l.setAttribute('aria-selected', String(on === 'lasted')); l.tabIndex = on === 'lasted' ? 0 : -1;
+    moveInk(tb); if (focus) tb.focus();
+    if (on === 'lasted' || on === 'first') { if (tb.parentNode.scrollWidth > tb.parentNode.clientWidth) tb.parentNode.scrollTo({ left: tb.offsetLeft - (tb.parentNode.clientWidth - tb.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' }); try { history.replaceState(null, '', '#first' + (on === 'lasted' ? '-lasted' : '')); } catch (e) {} }
+  }
+  function openTab(id, focus) {
+    if (id === 'lasted') showGame('first', focus, 'lasted');
+    else showGame(id, focus, id === 'first' && isLasted() ? 'daily' : undefined);   // the plain tab leaves the mode
+    markTab(focus);
+  }
+  TABS.forEach(function (g, i) {
     var t = $('tab-' + g);
-    t.addEventListener('click', function () { showGame(g); });
+    t.addEventListener('click', function () { openTab(g); });
     t.addEventListener('keydown', function (e) {
       var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-      if (k) { e.preventDefault(); showGame(GAMES[(i + k + GAMES.length) % GAMES.length], true); }
+      if (k) { e.preventDefault(); openTab(TABS[(i + k + TABS.length) % TABS.length], true); }
     });
   });
-  window.addEventListener('resize', function () { if (current) moveInk($('tab-' + current)); });
+  window.addEventListener('resize', function () { if (current) moveInk($('tab-' + tabNow())); });
+  // the tabs' widths change when the fonts arrive: until Nov 2026 the marker then stood a few pixels off its tab on phones
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (current) moveInk($('tab-' + tabNow())); });
   window.addEventListener('hashchange', function () { var h = location.hash.slice(1).split('-'); if (GAMES.indexOf(h[0]) >= 0) showGame(h[0], false, h.slice(1).join('-')); });
 
   // ── Emblem Pairs ─────────────────────────────────────────────────────────────
@@ -738,7 +757,7 @@ initNav('games');
         ? 'Today’s ten pairs, the same for everyone: tap the one that came first (for a person, the year they were born). The gaps close as you go. One go a day: share your score, and come back tomorrow for a new ten.'
         : lasted() ? 'Two states or empires of the past: tap the one that lasted longer. Every right answer grows your streak, and the gaps get closer as you go. You have three lives.'
         : 'Two moments from history: tap the one that came first (for a person, the year they were born). Every right answer grows your streak, and the gaps get closer as you go. You have three lives.';
-      $('first-duel').classList.toggle('is-lasted', lasted());
+      $('first-duel').classList.toggle('is-lasted', lasted()); markTab();
     }
     var LADDER = [[3, 800, 0], [6, 300, 2200], [10, 120, 900], [15, 50, 400], [1e9, 15, 180]];   // [while the streak is below, nearest gap, widest gap (0: any)]
     function pool() {
@@ -867,7 +886,7 @@ initNav('games');
       if (sub === 'lasted' && !lasted()) { started = true; level.set('lasted'); return; }   // #first-lasted
       if (!started) { started = true; newGame(); }
     }
-    return { show: show, sub: show };
+    return { show: show, sub: show, lasted: lasted };
   })();
   MODS.first = First;
 

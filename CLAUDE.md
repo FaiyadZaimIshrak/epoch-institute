@@ -1242,6 +1242,12 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   marked "longer"). GAME_SPANS [profile address, name, first year, last year, emblem] in games-data.js (the builder,
   from the power curves’ first and last years; 423 states: not the living, those under ten years, those without an
   emblem or marked hide in home-pictures.tsv). games.js?v=15. Scratchpad lasted-test.js plays it on desktop and phone.
+  The same day the user wrote "there is no longer or shorter": a sixth button inside another game was not found. It now has
+  a tab of its own in the games bar (#tab-lasted, after Which Came First?; aria-controls game-first): the tab opens that game in
+  the mode, the plain tab leaves it for the Daily Ten, and the marked tab follows the mode whichever way it is chosen
+  (games.js TABS, markTab, openTab; First returns lasted). The page says fourteen games; My Passport still counts thirteen.
+  A new game or mode goes into the bar, never only into another game's switches. The tab marker is also set again when the
+  fonts arrive (it stood up to 11 px off its tab on phones). games.js?v=16; scratchpad lasted-tab-test.js (23 checks).
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

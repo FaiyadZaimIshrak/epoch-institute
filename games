@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://the-epoch-institute.org/games">
 <meta property="og:type" content="website">
 <meta property="og:title" content="History Games — The Epoch Institute">
-<meta property="og:description" content="Thirteen games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
+<meta property="og:description" content="Fourteen games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -40,7 +40,7 @@
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Thirteen games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Fourteen games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
@@ -52,6 +52,7 @@
     <button class="gm-tab" id="tab-ranks" role="tab" aria-selected="false" aria-controls="game-ranks" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9650;</span><span class="gm-tab-t">Order the Ranks</span></button>
     <button class="gm-tab" id="tab-hunt" role="tab" aria-selected="false" aria-controls="game-hunt" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9673;</span><span class="gm-tab-t">Globe Hunt</span></button>
     <button class="gm-tab" id="tab-first" role="tab" aria-selected="false" aria-controls="game-first" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9878;</span><span class="gm-tab-t">Which Came First?</span></button>
+    <button class="gm-tab" id="tab-lasted" role="tab" aria-selected="false" aria-controls="game-first" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#8596;</span><span class="gm-tab-t">Longer or Shorter?</span></button>
     <button class="gm-tab" id="tab-puzzle" role="tab" aria-selected="false" aria-controls="game-puzzle" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10070;</span><span class="gm-tab-t">Picture Puzzle</span></button>
     <button class="gm-tab" id="tab-words" role="tab" aria-selected="false" aria-controls="game-words" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9998;</span><span class="gm-tab-t">Word Hunt</span></button>
     <button class="gm-tab" id="tab-year" role="tab" aria-selected="false" aria-controls="game-year" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#10710;</span><span class="gm-tab-t">Guess the Year</span></button>
@@ -315,7 +316,7 @@
 <script src="/shared-nav.js"></script>
 <script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=f4a7fd9d4a', SONGQ_SRC = '/songq-data.js?v=caba97d4a0', SIXD_SRC = '/sixdeg-data.js?v=478b3dd303';</script>
 <script>var RANKS_SRC = '/ranks-data.js?v=84033731ac';</script>
-<script src="/games.js?v=15"></script>
+<script src="/games.js?v=16"></script>
 
 </body>
 </html>
