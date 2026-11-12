@@ -724,6 +724,11 @@ description cut at a sentence, canonical, Open Graph, BreadcrumbList + Article J
   Wikidata's year-precision values (Ulpian c. 170 – 223 or 228, Nefertari d. c. 1255 BCE); all with birth "-", so they
   stay out of the dated games. The 316 left are legendary or biblical figures, people whose descriptions name no year
   of their own, and the century-only (Wikidata's values for them are century precision).
+  12 Nov 2026 (R5): 41 more, the historical people whose own description gives the decade or century of their acts
+  ("fl. 1480s", "fl. 1340s–1350s", "fl. early 11th century", "fl. 13th century BCE"; Span reads these, and a decade
+  or century is never a firm year, so they join the century and people pages but no year page). Left undated on
+  purpose: founders and rulers dated only by tradition or a chronicle (Cerdic, Yadega, Queen Amina, Tuanku Gocah
+  Pahlawan), people whose dates scholars dispute (Hartapu, Salim Suwari) and the legendary. 275 left.
 - New entries since Nov 2026 (A7, scripts/entries/): candidates from what the site names and lacks
   (harvest-names.js: proper names in the profiles of the newer kinds; the ladders' MISSING lines; the speeches' gaps),
   prepare-list.js (titles through redirects, a slug as toSlug makes it, subjects that have an entry dropped),
@@ -2394,7 +2399,7 @@ with the English beside them (never a withheld song's or one under a caution not
 lines and the song's own name in its script, large and faint, at the right, no drawn melody; types, languages and region
 as chips; a long name is drawn faint only up to 8 characters), and the words of Ninkasi and the Kesh Temple Hymn (ETCSL).
 (Done 7 Nov 2026) Yoruba religion has section pictures in five sections now, from the orisha entries of wave a7y.
-316 people of the encyclopedia still have no dates (8 Nov 2026: 147 dated from their own descriptions; legendary and biblical figures, and people whose Wikidata dates are
+275 people of the encyclopedia still have no dates (8 Nov 2026: 147 dated from their own descriptions, 12 Nov: 41 more by decade or century; legendary and biblical figures, and people whose Wikidata dates are
 missing or doubtful; scratchpad r6/dates-decisions.tsv): an undated person is on no century or people page and in no
 year's births and deaths.
 Found in the R9 checks (29 Oct 2026), not fixed yet:
