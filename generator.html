@@ -433,7 +433,7 @@ function buildPage(emp) {
   // then what the page holds, where it fits in 160 characters (Nov 2026: a search snippet that says what a click gives)
   var OFFER = { polity: 'Its rise and fall, key events and a timeline.', religion: 'Its history, beliefs and spread, with key events.',
     culture: 'Its history, society and legacy, with key events.', movement: 'Its aims, course and legacy, with key events.',
-    ideology: 'Its origins, ideas and legacy, with key events.', work: 'Its history, meaning and legacy, with key events.',
+    ideology: 'Its origins, ideas and legacy, with key events.', work: 'Its history, meaning and legacy, with key events.', life: 'The life, its deeds, critics and legacy, with key events.',
     government: 'How it works, its strengths and weaknesses, and examples.', language: 'Its script, speakers and spread, with key events.' };
   var offer = OFFER[isPolity ? 'polity' : emp.kind];
   if (offer && metaDesc.length + 1 + offer.length <= 160 && !/…$/.test(metaDesc)) metaDesc += ' ' + offer;

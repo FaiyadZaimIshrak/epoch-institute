@@ -707,7 +707,27 @@ var HOME_PICS = {
   "Borobudur": {"img":"/images/encyclopedia/borobudur.jpg","name":"Borobudur","slug":"borobudur","credit":"Heri nugroho, CC BY-SA 4.0"},
   "Rock-hewn churches of Lalibela": {"img":"/images/encyclopedia/rock-hewn-churches-of-lalibela.jpg","name":"Rock-hewn churches of Lalibela","slug":"rock-hewn-churches-of-lalibela","credit":"Sailko, CC BY 3.0"},
   "Machu Picchu": {"img":"/images/encyclopedia/machu-picchu.jpg","name":"Machu Picchu","slug":"machu-picchu","credit":"Draceane, CC BY-SA 4.0"},
-  "Taj Mahal": {"img":"/images/encyclopedia/taj-mahal.jpg","name":"Taj Mahal","slug":"taj-mahal","credit":"Yann; edited by Jim Carter, CC BY-SA 4.0"}
+  "Taj Mahal": {"img":"/images/encyclopedia/taj-mahal.jpg","name":"Taj Mahal","slug":"taj-mahal","credit":"Yann; edited by Jim Carter, CC BY-SA 4.0"},
+  "Alexander the Great": {"img":"/images/encyclopedia/alexander-the-great.jpg","name":"Alexander the Great","slug":"alexander-the-great","credit":"Unknown author, Public domain"},
+  "Julius Caesar": {"img":"/images/encyclopedia/julius-caesar.jpg","name":"Julius Caesar","slug":"julius-caesar","credit":"Ángel M. Felicísimo from Mérida, España, Public domain"},
+  "Leonardo da Vinci": {"img":"/images/encyclopedia/leonardo-da-vinci.jpg","name":"Leonardo da Vinci","slug":"leonardo-da-vinci","credit":"Attributed to Francesco Melzi, Public domain"},
+  "Elizabeth I": {"img":"/images/encyclopedia/elizabeth-i.jpg","name":"Elizabeth I","slug":"elizabeth-i","credit":"Unidentified painter, Public domain"},
+  "Napoleon": {"img":"/images/encyclopedia/napoleon.jpg","name":"Napoleon","slug":"napoleon","credit":"Jacques-Louis David, Public domain"},
+  "Confucius": {"img":"/images/encyclopedia/confucius.jpg","name":"Confucius","slug":"confucius","credit":"Anonymous Chinese painter of the Western Han period, Public domain"},
+  "Genghis Khan": {"img":"/images/encyclopedia/genghis-khan.jpg","name":"Genghis Khan","slug":"genghis-khan","credit":"Unknown author, Public domain"},
+  "Wu Zetian": {"img":"/images/encyclopedia/wu-zetian.jpg","name":"Wu Zetian","slug":"wu-zetian","credit":"Likely to be Zhang Xuan (张萱), Public domain"},
+  "Ashoka": {"img":"/images/encyclopedia/ashoka.jpg","name":"Ashoka","slug":"ashoka","credit":"Photo Dharma from Sadao, Thailand, CC BY 2.0"},
+  "Akbar": {"img":"/images/encyclopedia/akbar.jpg","name":"Akbar","slug":"akbar","credit":"Govardhan / Mir Ali Heravi, Public domain"},
+  "Mahatma Gandhi": {"img":"/images/encyclopedia/mahatma-gandhi.jpg","name":"Mahatma Gandhi","slug":"mahatma-gandhi","credit":"Elliott & Fry, Public domain"},
+  "Cyrus the Great": {"img":"/images/encyclopedia/cyrus-the-great.jpg","name":"Cyrus the Great","slug":"cyrus-the-great","credit":"Surenae, CC BY-SA 4.0"},
+  "Saladin": {"img":"/images/encyclopedia/saladin.jpg","name":"Saladin","slug":"saladin","credit":"Classical Numismatic Group (CNG), CC BY-SA 2.5"},
+  "Ibn Khaldun": {"img":"/images/encyclopedia/ibn-khaldun.jpg","name":"Ibn Khaldun","slug":"ibn-khaldun","credit":"Reda Kerbush, CC BY-SA 4.0"},
+  "Cleopatra": {"img":"/images/encyclopedia/cleopatra-vii.jpg","name":"Cleopatra VII","slug":"cleopatra-vii","credit":"Louis le Grand, Public domain"},
+  "Mansa Musa": {"img":"/images/encyclopedia/mansa-musa.jpg","name":"Mansa Musa","slug":"mansa-musa","credit":"attributed to Abraham Cresques, Public domain"},
+  "Nelson Mandela": {"img":"/images/encyclopedia/nelson-mandela.jpg","name":"Nelson Mandela","slug":"nelson-mandela","credit":"Kingkongphoto & www.celebrity-photos.com from Laurel, CC BY-SA 2.0"},
+  "Abraham Lincoln": {"img":"/images/encyclopedia/abraham-lincoln.jpg","name":"Abraham Lincoln","slug":"abraham-lincoln","credit":"Alexander Gardner, Public domain"},
+  "Simón Bolívar": {"img":"/images/encyclopedia/simon-bolivar.jpg","name":"Simón Bolívar","slug":"simon-bolivar","credit":"Luis Enrique Toro Moreno (1897-1933), Public domain"},
+  "Kamehameha I": {"img":"/images/encyclopedia/kamehameha-i.jpg","name":"Kamehameha I","slug":"kamehameha-i","credit":"Louis Choris, Public domain"}
 };
 
 var HOME_ENTRIES = [

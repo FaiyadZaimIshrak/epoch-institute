@@ -13,7 +13,7 @@ const SITE = 'https://the-epoch-institute.org';
 const HAND = ['index', 'research', 'research-series', 'about', 'contributors', 'dataset', 'explorer', 'profiles', 'community', 'connections', 'atlas', 'quiz',
   'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'write', 'faiths', 'flashcards', 'race', 'inventions', 'governance'];
 const FOLDERS = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'essays', 'articles', 'teachers',
-  'societies', 'songs', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work'];
+  'societies', 'songs', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work', 'life'];
 const files = HAND.map(f => [f, f === 'index' ? '/' : '/' + f]);
 const walk = (dir, url) => { for (const e of fs.readdirSync(path.join(R, dir), { withFileTypes: true })) {
   if (e.isDirectory()) walk(dir + '/' + e.name, url + '/' + e.name);

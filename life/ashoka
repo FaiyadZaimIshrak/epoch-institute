@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Ashoka: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Ashoka (c. 304 – 232 BCE) was the third ruler of the Maurya Empire, Emperor of Magadha from c. 268 BCE, who conquered Kalinga and then propagated dhamma…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Ashoka: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Ashoka (c. 304 – 232 BCE) was the third ruler of the Maurya Empire, Emperor of Magadha from c. 268 BCE, who conquered Kalinga and then propagated dhamma…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/ashoka">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/ashoka.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/ashoka.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/ashoka">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Ashoka"}]},{"@type":"Article","headline":"Ashoka","description":"Ashoka (c. 304 – 232 BCE) was the third ruler of the Maurya Empire, Emperor of Magadha from c. 268 BCE, who conquered Kalinga and then propagated dhamma…","url":"https://the-epoch-institute.org/life/ashoka","mainEntityOfPage":"https://the-epoch-institute.org/life/ashoka","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Ashoka"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/ashoka.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Ashoka</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Ashoka.png" alt="Ashoka" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Ashoka</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 304 BCE – c. 232 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">c. 304 BCE (the exact date is not certain); son of the Mauryan emperor <a class="enc-link" href="/encyclopedia/bindusara">Bindusara</a> and grandson of Chandragupta, according to the <a class="enc-link" href="/encyclopedia/puranas">Puranas</a> and the <a class="enc-link" href="/encyclopedia/mahavamsa">Mahavamsa</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">Around 232 BCE, in his 37th regnal year according to the Sri Lankan tradition; the Ashokavadana says he fell severely ill in his last days</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Viceroy at <a class="enc-link" href="/encyclopedia/ujjain">Ujjain</a> as a prince, according to the Sri Lankan tradition; Emperor of <a class="enc-link" href="/encyclopedia/magadha">Magadha</a> and third ruler of the <a class="enc-link" href="/encyclopedia/maurya-empire">Maurya Empire</a>, c. 268 – 232 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The conquest of <a class="enc-link" href="/encyclopedia/kalinga">Kalinga</a> and his stated remorse for it; the <a class="enc-link" href="/encyclopedia/edicts-of-ashoka">Edicts of Ashoka</a>, on rocks and pillars; the propagation of dhamma; patronage of <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>; tolerance of all sects; welfare measures for people and animals; the Lion Capital, now the State Emblem of <a class="enc-link" href="/encyclopedia/india">India</a></span></div>
+        </div>
+        <p class="empire-meta">7 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Legends suggest that Ashoka was not the crown prince and took the Maurya throne around 268 BCE after a disputed succession in which he killed one or more of his brothers.</li><li>His edicts state that the conquest of <a class="enc-link" href="/encyclopedia/kalinga">Kalinga</a> in his eighth regnal year, with its dead and deported, made him repent violence and devote himself to dhamma, or righteous conduct.</li><li>Almost forgotten until the <a class="enc-link" href="/encyclopedia/brahmi-script">Brahmi script</a> was deciphered in the 19th century, he is known from his own inscriptions and from Buddhist legends that often contradict each other.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The edict in which Ashoka confesses his remorse for the conquest of <a class="enc-link" href="/encyclopedia/kalinga">Kalinga</a> was inscribed at several places across his empire, but it is omitted from his inscriptions found in the Kalinga region itself.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 304 BCE</span><span class="rf-text">Ashoka is born, the son of the Mauryan emperor <a class="enc-link" href="/encyclopedia/bindusara">Bindusara</a> according to the <a class="enc-link" href="/encyclopedia/puranas">Puranas</a> and the <a class="enc-link" href="/encyclopedia/mahavamsa">Mahavamsa</a></span></li><li><span class="rf-year">c. 268 BCE</span><span class="rf-text">He ascends the throne of the <a class="enc-link" href="/encyclopedia/maurya-empire">Maurya Empire</a> after a succession that legends describe as disputed</span></li><li><span class="rf-year">c. 260 BCE</span><span class="rf-text">In his eighth regnal year he conquers <a class="enc-link" href="/encyclopedia/kalinga">Kalinga</a> after a brutal war</span></li><li><span class="rf-year">c. 250 BCE</span><span class="rf-text">In the Sri Lankan tradition, the monk Moggaliputta-Tissa, whom Ashoka patronises, sends out nine Buddhist missions</span></li><li><span class="rf-year">c. 232 BCE</span><span class="rf-text">He dies in his 37th regnal year, according to the Sri Lankan tradition</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Ashoka's own inscriptions say nothing of his ancestors or his early life, and the exact date of his birth is not certain. Because his inscriptions name contemporary rulers whose dates are better known, he must have been born in the late 4th or early 3rd century BCE, about 304 BCE. The <a class="enc-link" href="/encyclopedia/puranas">Puranas</a> and the Sri Lankan chronicle <a class="enc-link" href="/encyclopedia/mahavamsa">Mahavamsa</a> state that his father was the Mauryan emperor <a class="enc-link" href="/encyclopedia/bindusara">Bindusara</a> and his grandfather Chandragupta, the founder of the empire. The Ashokavadana, a Buddhist legend of the north Indian tradition, says his mother was the daughter of a <a class="enc-link" href="/encyclopedia/brahmins">Brahmin</a> from <a class="enc-link" href="/encyclopedia/champa">Champa</a> who became Bindusara's chief empress.</p><p>Much of what is told of his youth comes from apocryphal legends written hundreds of years after him by Buddhist authors; modern scholars' opinions range from dismissing them as mythological to accepting the portions that seem plausible. According to the Ashokavadana, his father disliked him for his rough skin, yet sent him to suppress a rebellion in Takshashila, where the citizens welcomed him. No contemporary source mentions the rebellion, though an <a class="enc-link" href="/encyclopedia/aramaic">Aramaic</a> inscription found at <a class="enc-link" href="/encyclopedia/sirkap">Sirkap</a> near <a class="enc-link" href="/encyclopedia/taxila">Taxila</a>, which most scholars restore as bearing his title Priyadarshi, may corroborate a connection.</p><p>The Sri Lankan tradition instead has Bindusara appoint him viceroy at <a class="enc-link" href="/encyclopedia/ujjain">Ujjain</a>, and this is corroborated by the Saru Maru inscription, which states that he visited the place as a prince. On the way to Ujjain, the tradition says, he fell in love at <a class="enc-link" href="/encyclopedia/vidisha">Vidisha</a> with Devi, a merchant's daughter, who bore him a son, Mahinda, and a daughter, <a class="enc-link" href="/encyclopedia/sanghamitta">Sanghamitta</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <div class="profile-section-body"><p>Legends suggest that Ashoka was not the crown prince and that his accession was disputed. In the Ashokavadana, ministers offended by <a class="enc-link" href="/encyclopedia/bindusara">Bindusara</a>'s eldest son Susima backed Ashoka; when Bindusara died the gods crowned him, and his prime minister Radhagupta tricked Susima into a pit of <a class="enc-link" href="/encyclopedia/charcoal">charcoal</a>, where he died. The <a class="enc-link" href="/encyclopedia/mahavamsa">Mahavamsa</a> states that when Bindusara fell sick Ashoka returned from <a class="enc-link" href="/encyclopedia/ujjain">Ujjain</a> to <a class="enc-link" href="/encyclopedia/pataliputra">Pataliputra</a> and gained control of the capital, had his eldest brother killed after his father's death, and killed ninety-nine of his half-brothers, sparing only his uterine brother Tissa; the <a class="enc-link" href="/encyclopedia/dipavamsa">Dipavamsa</a> says he killed a hundred brothers and was crowned four years later.</p><p>Such figures are exaggerated and seem to be a way of saying that he killed several brothers. It is possible that he was not the rightful heir and killed a brother or brothers to gain the throne, and the four years before his consecration can be explained by a war of succession. His own Rock Edict 5, however, mentions officers charged with the welfare of the families of his brothers and sisters, which suggests that more than one brother survived, though some scholars oppose this reading.</p><p>He ascended the throne around 269–268 BCE. Both Buddhist traditions call the early king Chandashoka, "Ashoka the fierce": the Ashokavadana has him behead 500 ministers, burn 500 concubines to death and build a prison of torture called Ashoka's Hell. Such descriptions appear to be a fabrication of the Buddhist authors, who exaggerated his wickedness before his conversion and his piety after it.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <div class="profile-section-body"><p>Ashoka's inscriptions state that he conquered <a class="enc-link" href="/encyclopedia/kalinga">Kalinga</a> in his eighth regnal year, about 260 BCE. Major Rock Edict 13 says that 100,000 men and animals were killed in action, that many times that number perished, and that 150,000 were carried away as captives, and it declares the king's remorse at the slaughter, death and <a class="enc-link" href="/encyclopedia/deportation">deportation</a>. He thereafter devoted himself to the propagation of dhamma (<a class="enc-link" href="/encyclopedia/dharma">dharma</a>), a word generally translated as law, duty or righteousness. Epigraphic evidence suggests that his conversion to <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> was a gradual process rather than a dramatic event.</p><p>The edicts record what dhamma meant in practice: medical treatment for humans and animals, <a class="enc-link" href="/encyclopedia/well">wells</a> and trees along the roads, restrictions on the killing of animals and an end to the imperial hunt, officers to work for the welfare of the poor and aged, and tolerance of all sects. By his 12th regnal year he had begun inscribing edicts; by the next year he had created the dhamma-mahamattas, officers charged with the welfare of the aged, the infirm, women and children and the religious sects.</p><p>The 33 inscriptions, on pillars, boulders and cave walls, mostly in <a class="enc-link" href="/encyclopedia/prakrit">Prakrit</a> dialects in the <a class="enc-link" href="/encyclopedia/brahmi-script">Brahmi script</a>, are the earliest corpus of royal inscriptions in the <a class="enc-link" href="/encyclopedia/indian-subcontinent">Indian subcontinent</a>. Their distribution suggests an empire covering almost the whole subcontinent except its southernmost parts and reaching into <a class="enc-link" href="/encyclopedia/afghanistan">Afghanistan</a>. Buddhist legends credit him with 84,000 stupas or viharas; the Sri Lankan tradition adds the Third Buddhist council in his 17th regnal year and missions, among them that of his son Mahinda to <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>The record of Ashoka's rule comes largely from himself and from Buddhist admirers, and both are questioned. In the words of the American academic John S. Strong, it is sometimes helpful to think of his messages as propaganda by a politician whose aim is to present a favourable image of himself and his administration. Rock Edict 13, with its confession of remorse, is omitted from the inscriptions found in <a class="enc-link" href="/encyclopedia/kalinga">Kalinga</a> itself. One possibility is that he did not think such a confession politically appropriate there; another is that the war and its consequences as described are "more imaginary than real", meant to impress those too far away to verify them.</p><p>The 5th-century Ashokavadana says that he resorted to violence even after becoming a Buddhist: that he had around 18,000 <a class="enc-link" href="/encyclopedia/ajivika">Ajivikas</a> of Pundravardhana executed for a picture drawn by one man, and offered a reward for the head of any Nirgrantha heretic until his own brother was killed by mistake. These stories of persecution appear to be fabrications arising from sectarian propaganda. His own edicts stress tolerance, and there is no evidence that <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> was a state religion under him.</p><p>His dhamma has been read as a Buddhist lay ethic, as a set of politico-moral ideas and as an essentially political ideology meant to knit together a vast and diverse empire. Some historians, such as H. C. Raychaudhuri, have argued that his pacifism undermined the "military backbone" of the Maurya empire; others, such as Thapar, have suggested that the extent and impact of that pacifism have been "grossly exaggerated".</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <div class="profile-section-body"><p>Ashoka's last dated inscription, Pillar Edict 4, is from his 26th regnal year, and the only sources for his later years are the Buddhist legends. The Sri Lankan tradition states that his empress Asandhamitta died in his 29th regnal year and that in his 32nd his wife Tissarakkha was given the title of empress. Both the <a class="enc-link" href="/encyclopedia/mahavamsa">Mahavamsa</a> and the Ashokavadana tell that she, jealous of his attention to the Bodhi Tree, used black magic to make it wither; in the Ashokavadana she has it healed, in the Mahavamsa she destroys it in his 34th regnal year. The Ashokavadana adds that she made advances to his son Kunala, was rejected, and had him tortured and blinded; Kunala miraculously regained his sight and pleaded for her, but Ashoka had her executed.</p><p>According to the Sri Lankan tradition he died during his 37th regnal year, which suggests a date around 232 BCE. The Ashokavadana tells that he fell severely ill in his last days and began giving state funds to the Buddhist sangha until his ministers denied him access to the treasury; on his deathbed his only possession was half a myrobalan fruit, which he offered to the sangha as his final donation.</p><p>After his death the Maurya dynasty declined rapidly. The <a class="enc-link" href="/encyclopedia/puranas">Puranas</a> give differing details of his successors but agree that their reigns were relatively short, and the empire seems to have weakened, fragmented and suffered an invasion from the Bactrian <a class="enc-link" href="/encyclopedia/greeks">Greeks</a>. Of his sons, only Tivara, son of the queen Karuvaki, is named in the inscriptions; north Indian tradition names Kunala and his son Samprati.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Ashoka's existence as a historical emperor had almost been forgotten. The <a class="enc-link" href="/encyclopedia/brahmi-script">Brahmi script</a> of his edicts was soon forgotten too, and his image in Buddhist circles rested on legends such as the Ashokavadana. In the 19th century James Prinsep deciphered Brahmi; he first identified the "Priyadasi" of the inscriptions with a king of <a class="enc-link" href="/encyclopedia/ceylon">Ceylon</a>, until in 1837 George Turnour found a Sri Lankan <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, the <a class="enc-link" href="/encyclopedia/dipavamsa">Dipavamsa</a>, that associated Piyadasi with Ashoka.</p><p>He is credited with an important role in the spread of <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> across ancient <a class="enc-link" href="/encyclopedia/asia">Asia</a>, though epigraphic evidence suggests that in north-western <a class="enc-link" href="/encyclopedia/india">India</a> and the <a class="enc-link" href="/encyclopedia/deccan">Deccan</a> it spread less through his missions than through merchants, traders, landowners and artisan <a class="enc-link" href="/encyclopedia/guild">guilds</a>. He is often credited with the beginning of stone architecture in India, and most later South Asian scripts derive from the Ashokan Brahmi; whether the script was invented in his reign remains unresolved.</p><p>Early scholars, building on the traditional accounts, regarded him as primarily a Buddhist monarch; some have questioned this. Thapar writes that he should be seen both as a statesman inheriting and sustaining an empire and as a person with a strong commitment to changing society through the propagation of social ethics. A theory of Christopher I. Beckwith that Ashoka and the Piyadasi of the major edicts were different kings is not accepted by mainstream scholarship. The State Emblem of the Republic of India is an adaptation of the <a class="enc-link" href="/encyclopedia/lion-capital-of-ashoka">Lion Capital of Ashoka</a>, and his wheel, the Ashoka Chakra, stands at the centre of the national flag.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Ashoka (c. 304 – 232 BCE), third ruler of the <a class="enc-link" href="/encyclopedia/maurya-empire">Maurya Empire</a>, ruled most of the <a class="enc-link" href="/encyclopedia/indian-subcontinent">Indian subcontinent</a> from <a class="enc-link" href="/encyclopedia/pataliputra">Pataliputra</a>. After conquering <a class="enc-link" href="/encyclopedia/kalinga">Kalinga</a> he proclaimed dhamma, righteous conduct, in edicts cut on rocks and pillars, and favoured <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>. Much of his life is known only from later Buddhist legends, which scholars treat with caution.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Charles Allen, Ashoka: The Search for India's Lost Emperor (The Overlook Press, 2012)</li>
+        <li>Ananda W. P. Guruge, Aśoka, the Righteous: A Definitive Biography (Central Cultural Fund, 1993)</li>
+        <li>E. Hultzsch, Inscriptions of Asoka: New Edition (Government of India, 1925)</li>
+        <li>Nayanjot Lahiri, Ashoka in Ancient India (Harvard University Press, 2015)</li>
+        <li>Radhakumud Mookerji, Aśoka (Motilal Banarsidass, 1995)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/alexander-the-great"><img src="/logos/thumbs/Alexander%20the%20Great.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Alexander the Great</span><span class="related-card-dates">356 BCE – 323 BCE</span></a><a class="related-card" href="/life/julius-caesar"><img src="/logos/thumbs/Julius%20Caesar.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Julius Caesar</span><span class="related-card-dates">100 BCE – 44 BCE</span></a><a class="related-card" href="/life/cleopatra"><img src="/logos/thumbs/Cleopatra.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cleopatra</span><span class="related-card-dates">c. 69 BCE – 30 BCE</span></a><a class="related-card" href="/life/confucius"><img src="/logos/thumbs/Confucius.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Confucius</span><span class="related-card-dates">c. 551 BCE – c. 479 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/alexander-the-great"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Alexander%20the%20Great.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Alexander the Great</span><span class="related-card-dates">356 BCE – 323 BCE</span></a><a class="related-card" href="/life/julius-caesar"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Julius%20Caesar.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Julius Caesar</span><span class="related-card-dates">100 BCE – 44 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Ashoka",slug="ashoka",url="https://the-epoch-institute.org/life/ashoka";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Ashoka on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/ashoka #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/ashoka"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Ashoka",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Ashoka",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

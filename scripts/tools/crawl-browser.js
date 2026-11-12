@@ -16,7 +16,7 @@ function sample(dir, n) {
   return out;
 }
 const FOLDERS = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'teachers',
-  'societies', 'songs', 'essays', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work'];
+  'societies', 'songs', 'essays', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work', 'life'];
 const pages = only.length ? only : [...new Set([...KINDS, '/weekly', '/compare?a=roman-empire&b=han-dynasty', '/new', '/today-card', '/404-test-page', ...FOLDERS.flatMap(f => sample(f, PER))])];
 (async () => {
   const srv = await serve(PORT), b = await edge(), base = 'http://localhost:' + PORT;

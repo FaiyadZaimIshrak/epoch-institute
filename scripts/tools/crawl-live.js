@@ -11,7 +11,7 @@ const ROOTP = fs.readFileSync(path.join(R, 'scripts', 'deploy.sh'), 'utf8').matc
 const checks = [];
 for (const p of ROOTP) checks.push([p === 'index' ? '/' : '/' + p, 200, /text\/html/]);
 const FOLDERS = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'teachers',
-  'societies', 'songs', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work', 'essays'];
+  'societies', 'songs', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work', 'life', 'essays'];
 let seed = 11; const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
 for (const f of FOLDERS) {
   const d = path.join(R, f); if (!fs.existsSync(d)) continue;

@@ -1441,7 +1441,26 @@ A walk of the local build at 1366 and 390 px (scratchpad audit.js: screens per p
   generator.html: "Rulers and leaders in the encyclopedia" chips after the governance section): run it and
   regen-profiles.ps1 after the entries or profiles change. The lists are what the encyclopedia holds, not complete
   king lists; state pages (not profiles) have none yet.
-  Still to do: E4, E5, R1, R3, R5.
+- **R1 Great lives** (a new kind, PROFILE_KINDS life; /life/<slug>, since /people/ is the people-by-century pages):
+  sections early, rise, deeds "What They Did", opponents "Opponents & Critics", last "Last Years", legacy; facts born,
+  died, role "Who they were", known; start and end are birth and death. Wired as work was (.htaccess and life/.htaccess,
+  deploy.sh, the builder's kind lists, check-site, split-css, shared-nav, passport, the crawl and audit tools,
+  update-counts, llms.txt, generator.html's teaser, .tl-k-life); a life places no person (PersonRegion). First wave,
+  20 (scripts/kinds/lives1: list.tsv, wp/, out/, refs-all.json): Alexander, Caesar, Leonardo, Elizabeth I, Napoleon,
+  Confucius, Genghis Khan, Wu Zetian, Ashoka, Akbar, Gandhi, Cyrus, Saladin, Ibn Khaldun, Cleopatra, Mansa Musa,
+  Mandela, Lincoln, Bolívar, Kamehameha I; chosen by Wikipedia editions and mentions on the site with regional floors
+  (no living people; founders of religions left to the religions' profiles). Four agents with LIVES-GUIDE.md, one
+  saved article each (harm told in the article's measure, critics attributed, late or partisan sources named);
+  check-drafts.js life found no number or name outside the articles; the editor read every profile's facts, takeaways
+  and critics section in full, not every section against its article. The saved articles keep their reference
+  headings but not the lists: scripts/kinds/article-refs.js reads each article's bibliography sections (cite book
+  templates) and the references are the books about the person among them. self.tsv names each life's own entry;
+  the link audit (caps, period) gave 27 exclusions (Nancy Hanks as the city of Nancy, "the Liberators" and "The
+  Liberator" as Bolívar, Roxane the daughter of Cyrus as Alexander's wife, First Consul as the Roman consul, David A.
+  Bell as King David …). Emblems are the portraits: scripts/kinds/life-emblems.ps1 crops each life's own entry
+  picture square (Wu Zetian from the top). No section pictures yet. Menu Themes (Societies and ideas): Great Lives.
+  Still to do: E4, E5 (judged of little value), R3 pictures by eye, R5 the undated people, section pictures and a
+  second wave of lives.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

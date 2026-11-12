@@ -518,7 +518,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=ab6ba4c105';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=345b7e7436';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=9cca772b0b';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -718,7 +718,7 @@ function initNav(activePage) {
         ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/today', 'Today at the Institute', 'The day in one place'], ['', '/now', 'History Now', 'In the news, coming anniversaries'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
-      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
+      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['', '/profiles?kind=life', 'Great Lives', 'Twenty lives told in full'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
         ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]],
       ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history'], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
@@ -732,7 +732,7 @@ function initNav(activePage) {
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -1091,7 +1091,7 @@ function initNav(activePage) {
     var KINDS = [[/^\/empire\/[a-z0-9-]+$/, 'profile'], [/^\/encyclopedia\/[a-z0-9-]+$/, 'entry'], [/^\/state\/[a-z0-9.-]+$/, 'state'],
       [/^\/countries\/[a-z-]+$/, 'country history'], [/^\/centuries\/[a-z0-9-]+$/, 'century'], [/^\/today-in-history\/[a-z]+-\d+$/, 'day'], [/^\/paths\/[a-z0-9-]+$/, 'reading path'],
       [/^\/years\/[a-z0-9-]+$/, 'year'], [/^\/people\/[a-z0-9-]+$/, 'people'], [/^\/speeches\/[a-z0-9-]+$/, 'speech'], [/^\/essays\/[a-z0-9-]+$/, 'essay'],
-      [/^\/(religion|language|culture|movement|government|ideology|work)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article'], [/^\/societies\/[a-z0-9-]+$/, 'social ladder'], [/^\/songs\/[a-z0-9-]+$/, 'song']];
+      [/^\/(religion|language|culture|movement|government|ideology|work|life)\/[a-z0-9-]+$/, 'profile'], [/^\/articles\/[a-z0-9-]+$/, 'article'], [/^\/societies\/[a-z0-9-]+$/, 'social ladder'], [/^\/songs\/[a-z0-9-]+$/, 'song']];
     var kind = null;
     if (!/^\/encyclopedia\/(browse|conflicts)\//.test(location.pathname) && location.pathname !== '/encyclopedia/glossary')
       KINDS.some(function (k) { if (k[0].test(location.pathname)) { kind = k[1]; return true; } return false; });
@@ -1252,7 +1252,7 @@ function initNav(activePage) {
     var here = location.pathname.replace(/\/+$/, '') || '/', seen = get('epoch-seen', []);
     if (!Array.isArray(seen)) seen = [];
     // every reading page counts (the passport at /passport reads epoch-seen); epoch-visits: the UTC days with a visit
-    if (/^\/(empire|religion|language|culture|movement|government|ideology|work|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles|societies|songs)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
+    if (/^\/(empire|religion|language|culture|movement|government|ideology|work|life|encyclopedia|state|speeches|countries|centuries|years|people|today-in-history|paths|essays|articles|societies|songs)\/[^/]+$/.test(here) && here !== '/encyclopedia/glossary' && seen.indexOf(here) < 0) { seen.push(here); if (seen.length > 3000) seen = seen.slice(-3000); put('epoch-seen', seen); }
     var vday = Math.floor(Date.now() / 864e5), visits = get('epoch-visits', []);
     if (Array.isArray(visits) && visits[visits.length - 1] !== vday) { visits.push(vday); put('epoch-visits', visits.slice(-400)); }
     function isSeen(h) { return seen.indexOf(String(h || '').replace(/\/+$/, '')) >= 0; }
@@ -1303,7 +1303,7 @@ function initNav(activePage) {
   // and related lists come first, then the kinds of page the reader opens most, then how often the page links them. Shown at the foot of reading pages,
   // after an idle moment (it moves nothing above it).
   (function () {
-    var READ = /^\/(empire|religion|language|culture|movement|government|ideology|work|encyclopedia|state|speeches|countries|centuries|years|people|paths|essays|societies|songs)\/[^/?#]+$/;
+    var READ = /^\/(empire|religion|language|culture|movement|government|ideology|work|life|encyclopedia|state|speeches|countries|centuries|years|people|paths|essays|societies|songs)\/[^/?#]+$/;
     var here = location.pathname.replace(/\/+$/, '');
     if (!READ.test(here) || here === '/encyclopedia/glossary' || /^\/encyclopedia\/(browse|conflicts)\//.test(here)) return;
     var main = document.getElementById('main'); if (!main) return;
@@ -1329,7 +1329,7 @@ function initNav(activePage) {
       var list = Object.keys(cand).map(function (k) { var c = cand[k], kind = k.split('/')[1]; c.score = (c.rel ? 0 : 3) + Math.min(c.n, 3) * 0.5 + 2 * (kindN[kind] || 0) / total + (c.img ? 0.5 : 0) + (kind !== hereKind ? 0.5 : 0); return c; })
         .sort(function (a, b) { return b.score - a.score || a.name.localeCompare(b.name); }).slice(0, 3);
       if (list.length < 2) return;
-      var KIND = { empire: 'Profile', religion: 'Religion', language: 'Language', culture: 'Culture', movement: 'Movement', government: 'Form of government', ideology: 'Ideology', work: 'Great work', encyclopedia: 'Encyclopedia', state: 'State', speeches: 'Speech', countries: 'Country history', centuries: 'Century', years: 'Year', people: 'People', paths: 'Reading path', essays: 'Essay', societies: 'Social ladder', songs: 'Song' };
+      var KIND = { empire: 'Profile', religion: 'Religion', language: 'Language', culture: 'Culture', movement: 'Movement', government: 'Form of government', ideology: 'Ideology', work: 'Great work', life: 'Life', encyclopedia: 'Encyclopedia', state: 'State', speeches: 'Speech', countries: 'Country history', centuries: 'Century', years: 'Year', people: 'People', paths: 'Reading path', essays: 'Essay', societies: 'Social ladder', songs: 'Song' };
       var box = document.createElement('section'); box.className = 'next-read'; box.setAttribute('aria-labelledby', 'next-read-t');
       box.innerHTML = '<h2 class="ref-sec-title" id="next-read-t">Next to read</h2><p class="next-read-d">' + (seen.length > 3 ? 'Pages this one leads to that you have not read yet.' : 'Where this page leads.') + '</p><ul>' + list.map(function (c) {
         return '<li><a href="' + escHtml(c.h) + '">' + (c.img ? '<img src="' + escHtml(c.img) + '" alt="" loading="lazy" width="48" height="48">' : '<span class="nr-ph" aria-hidden="true">&#10022;</span>') + '<span class="nr-b"><span class="nr-k">' + escHtml(KIND[c.h.split('/')[1]] || '') + '</span><span class="nr-t">' + escHtml(c.name) + '</span></span></a></li>';
@@ -1424,7 +1424,7 @@ function initNav(activePage) {
 
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
   (function () {
-    if (!/^\/(empire|religion|language|culture|movement|government|ideology|work|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
+    if (!/^\/(empire|religion|language|culture|movement|government|ideology|work|life|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
     var bar = document.createElement('div'); bar.className = 'read-progress'; bar.setAttribute('aria-hidden', 'true');
     document.body.appendChild(bar);
     var ticking = false;

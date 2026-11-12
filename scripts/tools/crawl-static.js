@@ -11,7 +11,7 @@ const ROOTPAGES = ['index', 'research', 'research-series', 'about', 'contributor
   'atlas', 'quiz', 'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'weekly', 'write', 'faiths', 'flashcards', 'race',
   'inventions', 'governance', 'compare', 'new', 'today-card', '404.html', 'offline.html'];
 const FOLDERS = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'teachers',
-  'societies', 'songs', 'essays', 'articles', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work'];
+  'societies', 'songs', 'essays', 'articles', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work', 'life'];
 const files = [];
 for (const p of ROOTPAGES) if (fs.existsSync(path.join(R, p))) files.push(p);
 function walk(d) {

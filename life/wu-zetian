@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Wu Zetian: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Wu Zetian (624–705), personal name Wu Zhao, was empress consort and empress dowager of the Tang dynasty and, from 690 to 705, emperor of her own Zhou…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Wu Zetian: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Wu Zetian (624–705), personal name Wu Zhao, was empress consort and empress dowager of the Tang dynasty and, from 690 to 705, emperor of her own Zhou…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/wu-zetian">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/wu-zetian.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/wu-zetian.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/wu-zetian">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Wu Zetian"}]},{"@type":"Article","headline":"Wu Zetian","description":"Wu Zetian (624–705), personal name Wu Zhao, was empress consort and empress dowager of the Tang dynasty and, from 690 to 705, emperor of her own Zhou…","url":"https://the-epoch-institute.org/life/wu-zetian","mainEntityOfPage":"https://the-epoch-institute.org/life/wu-zetian","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Wu Zetian"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/wu-zetian.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Wu Zetian</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Wu%20Zetian.png" alt="Wu Zetian" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Wu Zetian</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">624 CE – 705 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">17 February 624; birthplace disputed (Wenshui, Lizhou or <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>); daughter of Wu Shiyue, a <a class="enc-link" href="/encyclopedia/timber">timber</a> merchant who became a senior Tang official, and Lady Yang of the Yang family</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">16 December 705, a few months after she was removed from power in the Shenlong Coup; buried in 706 with Emperor Gaozong at the <a class="enc-link" href="/encyclopedia/qianling-mausoleum">Qianling Mausoleum</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Concubine of Emperor Taizong; empress consort of <a class="enc-link" href="/encyclopedia/emperor-gaozong-of-tang">Emperor Gaozong of Tang</a>, 655–683; empress dowager and regent, 683–690; emperor (huangdi) of the <a class="enc-link" href="/encyclopedia/zhou-dynasty">Zhou dynasty</a>, 690–705</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The only woman to take the title huangdi; founding the <a class="enc-link" href="/encyclopedia/zhou-dynasty">Zhou dynasty</a> in place of the Tang; rule through informants and secret police; purges of the Tang imperial house and of officials; reform of the imperial examinations; patronage of <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a></span></div>
+        </div>
+        <p class="empire-meta">7 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Taken to the palace at 14 as a concubine of Emperor Taizong, Wu became the favourite of his successor Gaozong and, in 655, his empress.</li><li>After Gaozong fell ill in 660 she made the daily decisions of government, and after his death in 683 she deposed one son and ruled through another before taking the throne herself in 690.</li><li>Her rule joined secret police terror and the killing of rivals, including members of her own family, with reform of the examinations and the promotion of officials from less privileged families.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In 690 Wu adopted a set of modified Chinese characters and took one of them, Zhao, as her formal name. It was made of the characters for light and sky, with the implication, it appeared, that she would be like the light shining from the sky.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">624</span><span class="rf-text">Wu is born to Wu Shiyue and Lady Yang, in the seventh year of the reign of <a class="enc-link" href="/encyclopedia/emperor-gaozu-of-tang">Emperor Gaozu of Tang</a></span></li><li><span class="rf-year">649</span><span class="rf-text">Emperor Taizong dies and Wu, his childless concubine, is consigned to Ganye Temple as a Buddhist nun</span></li><li><span class="rf-year">655</span><span class="rf-text">Emperor Gaozong deposes Empress Wang and makes Wu empress</span></li><li><span class="rf-year">660</span><span class="rf-text">Gaozong falls ill and has Wu rule on the daily petitions of officials</span></li><li><span class="rf-year">683</span><span class="rf-text">Gaozong dies at <a class="enc-link" href="/encyclopedia/luoyang">Luoyang</a>; Wu keeps real authority as empress dowager and regent</span></li><li><span class="rf-year">690</span><span class="rf-text">She changes the state's name to Zhou and takes the throne as emperor</span></li><li><span class="rf-year">698</span><span class="rf-text">She recalls her son <a class="enc-link" href="/encyclopedia/emperor-zhongzong-of-tang">Li Zhe</a> from exile and makes him crown prince</span></li><li><span class="rf-year">705</span><span class="rf-text">A coup in February forces her to yield the throne and restores the Tang; she dies in December</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Wu Zetian, whose personal name was Wu Zhao, was born on 17 February 624, in the seventh year of the reign of <a class="enc-link" href="/encyclopedia/emperor-gaozu-of-tang">Emperor Gaozu of Tang</a>. Her birthplace is not documented and remains disputed: some scholars argue for Wenshui, the home of the Wu clan, some for Lizhou (modern-day Guangyuan, <a class="enc-link" href="/encyclopedia/sichuan">Sichuan</a>), and others for the imperial capital <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>. Her father, Wu Shiyue, worked in the <a class="enc-link" href="/encyclopedia/timber">timber</a> business, and the family was relatively well-off; her mother was from the powerful Yang family, distant relatives of the imperial family of the <a class="enc-link" href="/encyclopedia/sui-dynasty">Sui dynasty</a>. Li Yuan, the future Emperor Gaozu, had stayed in the Wu household many times, and after he founded the <a class="enc-link" href="/encyclopedia/tang-dynasty">Tang dynasty</a> her father held a succession of senior posts.</p><p>Her parents encouraged her to read and to pursue her education, which was uncommon for women at the time. At age 14 she was taken to be an imperial concubine of <a class="enc-link" href="/encyclopedia/emperor-taizong-of-tang">Emperor Taizong of Tang</a>, with the title of cairen, a consort of the fifth rank, and took on a secretarial role at the palace. When her mother wept at parting, she answered, "How do you know that it is not my fortune to meet the <a class="enc-link" href="/encyclopedia/son-of-heaven">Son of Heaven</a>?" She does not appear to have been much favoured by Taizong. By her own later account, she once told him she could master an unridable horse with an iron whip, an iron hammer and a sharp dagger, and he praised her bravery.</p><p>Taizong died in 649 and was succeeded by his youngest son, <a class="enc-link" href="/encyclopedia/emperor-gaozong-of-tang">Li Zhi</a>, as Emperor Gaozong. As a consort who had borne the dead emperor no children, Wu was consigned to Ganye Temple, where she was expected to serve as a Buddhist nun for the rest of her life.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <div class="profile-section-body"><p>In the traditional account, Gaozong met Wu at Ganye Temple when he offered <a class="enc-link" href="/encyclopedia/incense">incense</a> on the anniversary of Taizong's death, and his wife, Empress Wang, had Wu brought back to the palace in the hope of drawing the emperor away from her rival, Pure Consort Xiao. Some modern historians dispute this and think that Wu never left the palace. By early 650 she was Gaozong's concubine. She soon overtook Xiao as his favourite, and gave birth to sons, Li Hong in 652 and Li Xián in 653.</p><p>In 654 she bore a daughter who died shortly after birth, and she accused Empress Wang of murder; Wang could not clear her name. Traditional accounts hold that Wu killed the child herself in order to accuse Wang; others argue that Wang did kill it, or that it died of asphyxiation or crib death, and scholars lack concrete evidence. Gaozong now wished to depose Wang, but his uncle Zhangsun Wuji, the head chancellor, would not be drawn, and the chancellor Chu Suiliang opposed it vehemently. In 655 Wu accused Wang and her mother of witchcraft, and Gaozong demoted Chu, deposed and arrested Wang and Xiao, and made Wu empress. Later that year, when he seemed to consider releasing them, the two women were killed on her orders.</p><p>In 656 her son Li Hong replaced Gaozong's eldest son, Li Zhong, as crown prince. In 659 Zhangsun Wuji, accused of treason by her ally Xu Jingzong, was exiled and forced to commit suicide. In 660 Gaozong fell ill with painful headaches and loss of vision and began to have her rule on the daily petitions of officials; thereafter her authority rivalled his.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <div class="profile-section-body"><p>From 664 Wu and Gaozong were called the "Two Saints"; according to the Old Book of Tang she sat behind a curtain at court and settled all political affairs. When Gaozong died in late 683 she kept real authority as empress dowager and regent. In 684, six weeks after his accession, she deposed her son Emperor Zhongzong and replaced him with her youngest son, Emperor Ruizong, who remained a virtual prisoner in the inner quarters.</p><p>In October 690, after waves of petitions, she changed the state's name to Zhou and took the throne as huangdi, the only woman in the history of <a class="enc-link" href="/encyclopedia/china">China</a> to assume that title. Buddhist supporters had prepared the way with a commentary on the <a class="enc-link" href="/encyclopedia/great-cloud-sutra">Great Cloud Sutra</a>, in which the Buddha foretells a bodhisattva reincarnated in a woman's body to rule a country. She raised <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> above <a class="enc-link" href="/encyclopedia/taoism">Taoism</a> and built Dayun temples in the prefectures of the two capital regions.</p><p>Needing a base of power outside the Li family, she reformed the imperial examinations, admitting commoners and <a class="enc-link" href="/encyclopedia/gentry">gentry</a> previously disqualified by their background and, in 693, expanding the system; palace and military examinations were created under her. She favoured less privileged families, many from the <a class="enc-link" href="/encyclopedia/north-china-plain">North China Plain</a>, over the aristocracy of the north-west. She used the <a class="enc-link" href="/encyclopedia/equal-field-system">equal-field</a> system and updated <a class="enc-link" href="/encyclopedia/census">census</a> figures to keep land allocations fair. In 692 her general Wang Xiaojie recaptured from the Tibetan Empire the four garrisons of the <a class="enc-link" href="/encyclopedia/western-regions">Western Regions</a>, which had fallen in 670. Forty-six of her poems are collected in the Complete Tang Poems.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>Wu removed real, potential or perceived rivals by execution, forced suicide, demotion and exile. In 664 the chancellor Shangguan Yi drafted an edict to depose her at Gaozong's wish; she had him executed on a false charge of treason, and Li Zhong forced to kill himself. Traditional historians generally believed that she poisoned her eldest son, Li Hong, who died suddenly in 675 after urging her to wield less authority; her second son, Li Xián, was deposed in 680 and later forced to commit suicide. When Li Jingye rebelled at Yang Prefecture, the chancellor Pei Yan advised her to return authority to the emperor; she had him executed, and the rebellion was crushed.</p><p>She set <a class="enc-link" href="/encyclopedia/copper">copper</a> mailboxes outside government buildings for secret reports, and secret police officials carried out systematic false accusations, torture and executions. After princes of the Li clan rose against her in 688, she forced many members of the clan to commit suicide. The massacres lessened from about 692, and the secret police's reign largely ended with the execution of the secret police official <a class="enc-link" href="/encyclopedia/lai-junchen">Lai Junchen</a> in 697. Her army was soundly defeated by the Tibetan Empire in 696.</p><p>The traditional Chinese view admired her ability in governing and vilified her seizure of power. Liu Xu, lead editor of the Old Book of Tang, wrote that she strangled her own infant daughter, yet allowed that she "accepted the words of righteousness and honored the upright". Jonathan Clements writes that many alleged poisonings, and her daughter's death, may have rational explanations twisted by later opponents.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <div class="profile-section-body"><p>In spring 698, on the advice of the chancellor Di Renjie and against the wishes of her nephews Wu Chengsi and Wu Sansi, Wu recalled her son <a class="enc-link" href="/encyclopedia/emperor-zhongzong-of-tang">Li Zhe</a> from exile and made him crown prince. As she aged she relied increasingly on two lovers, the brothers Zhang Yizhi and Zhang Changzong, to handle affairs of state. When her grandson Li Chongrun, her granddaughter Li Xianhui and the latter's husband were reported to have criticised this, she ordered the three to commit suicide.</p><p>From autumn 704 the Zhang brothers were accused of corruption and, when she fell seriously ill that winter and only they were admitted to her, of treason; she pardoned Zhang Yizhi before an investigation was completed. By spring 705 she was seriously ill again. The officials <a class="enc-link" href="/encyclopedia/zhang-jianzhi">Zhang Jianzhi</a>, Jing Hui and Yuan Shuji, with several generals and the agreement of Li Xian, acted on 20 February: they killed the Zhang brothers, surrounded Changsheng Hall, where she was residing, and forced her to yield the throne. Li Xian formally retook the throne on 23 February as Emperor Zhongzong; the next day she was moved under heavy guard to Shangyang Palace, and on 3 March the restoration of the <a class="enc-link" href="/encyclopedia/tang-dynasty">Tang dynasty</a> was celebrated, ending the Zhou.</p><p>Wu died on 16 December 705. By a final edict issued in her name she was no longer called empress regnant but "Empress Consort Zetian Dasheng". In 706 Zhongzong had her interred with Emperor Gaozong in a joint burial at the <a class="enc-link" href="/encyclopedia/qianling-mausoleum">Qianling Mausoleum</a>, near <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>, where he also buried his brother Li Xián, his son Li Chongrun and his daughter Li Xianhui, victims of her wrath.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Zhou that Wu proclaimed has traditionally not been regarded as a dynasty in its own right, since it began and ended with her; it is seen as a brief interruption of the Li family's <a class="enc-link" href="/encyclopedia/tang-dynasty">Tang dynasty</a>. Her fifteen years as emperor were the culmination of nearly half a century of de facto and de jure rule, part of the High Tang period, a peak of <a class="enc-link" href="/encyclopedia/china">China</a>'s political power and cultural influence. Her repression of the old aristocracy of <a class="enc-link" href="/encyclopedia/guanzhong">Guanzhong</a> and her promotion, often through the examinations, of talented men from less privileged families made social changes that historians are still evaluating, and her ability to select capable officials was admired for the rest of the Tang dynasty and in later dynasties.</p><p>In the early Tang, when the emperors were her direct descendants, she was evaluated favourably; later commentary, especially Sima Guang's Zizhi Tongjian, criticised her harshly, and by the <a class="enc-link" href="/encyclopedia/song-dynasty">Southern Song</a>, when <a class="enc-link" href="/encyclopedia/neo-confucianism">Neo-Confucianism</a> was established as the mainstream political ideology, it determined the evaluation of her. In the 20th century <a class="enc-link" href="/encyclopedia/mao-zedong">Mao Zedong</a>'s wife <a class="enc-link" href="/encyclopedia/jiang-qing">Jiang Qing</a> rehabilitated Wu as part of a propaganda campaign to suggest herself as his successor.</p><p>Modern authors differ. One calls her politically astute and an excellent judge of men, whose rise to power was "steeped in blood"; another holds that the period of her ascendancy was a good one for China, with sound government; a third notes that her murderous and illicit methods fostered overstaffing and many kinds of corruption. She remains the only woman to have reigned over China as emperor.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Wu Zetian (624–705) rose from concubine to empress of the Tang emperor Gaozong, governed for him and then for her sons, and in 690 proclaimed her own <a class="enc-link" href="/encyclopedia/zhou-dynasty">Zhou dynasty</a>, the only woman to rule <a class="enc-link" href="/encyclopedia/china">China</a> as emperor. She purged rivals through secret police, widened the examinations and patronised <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>, and was removed by a coup in 705.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="wu-zetian"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"She changes the state's name to Zhou and takes the throne as emperor","o":["698","660","649","690"],"a":3,"w":"690: She changes the state's name to Zhou and takes the throne as emperor."},{"p":"Which came first?","q":"","o":["Gaozong dies at Luoyang; Wu keeps real authority as empress dowager and regent","A coup in February forces her to yield the throne and restores the Tang; she dies in December"],"a":0,"w":"683: Gaozong dies at Luoyang; Wu keeps real authority as empress dowager and regent · 705: A coup in February forces her to yield the throne and restores the Tang; she dies in December."},{"p":"In which year?","q":"Wu is born to Wu Shiyue and Lady Yang, in the seventh year of the reign of Emperor Gaozu of Tang","o":["705","655","624","660"],"a":2,"w":"624: Wu is born to Wu Shiyue and Lady Yang, in the seventh year of the reign of Emperor Gaozu of Tang."},{"p":"Which came first?","q":"","o":["A coup in February forces her to yield the throne and restores the Tang; she dies in December","Emperor Taizong dies and Wu, his childless concubine, is consigned to Ganye Temple as a Buddhist nun"],"a":1,"w":"705: A coup in February forces her to yield the throne and restores the Tang; she dies in December · 649: Emperor Taizong dies and Wu, his childless concubine, is consigned to Ganye Temple as a Buddhist nun."},{"p":"In which year?","q":"Gaozong falls ill and has Wu rule on the daily petitions of officials","o":["624","649","660","698"],"a":2,"w":"660: Gaozong falls ill and has Wu rule on the daily petitions of officials."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Harry Rothschild, N. Harry, Emperor Wu Zhao and Her Pantheon of Devis, Divinities, and Dynastic Mothers (Columbia, UP, 2015)</li>
+        <li>Jonathan Clements, Wu: The Chinese Empress Who Schemed, Seduced and Murdered Her Way to Become a Living God (Sutton, 2007)</li>
+        <li>Richard W. L. Guisso, Wu Tse-t'ien and the Politics of Legitimation in T'ang China (Western Washington, 1978)</li>
+        <li>Cheng An Jiang, Empress of China: Wu Ze Tian (Victory Press, 1998)</li>
+        <li>N. Harry Rothschild, Wu Zhao: China's Only Woman Emperor (Pearson Education, 2008)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/saladin"><img src="/logos/thumbs/Saladin.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Saladin</span><span class="related-card-dates">c. 1137 CE – 1193 CE</span></a><a class="related-card" href="/life/genghis-khan"><img src="/logos/thumbs/Genghis%20Khan.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Genghis Khan</span><span class="related-card-dates">c. 1162 CE – 1227 CE</span></a><a class="related-card" href="/life/mansa-musa"><img src="/logos/thumbs/Mansa%20Musa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mansa Musa</span><span class="related-card-dates">c. 1280 CE – c. 1337 CE</span></a><a class="related-card" href="/life/cleopatra"><img src="/logos/thumbs/Cleopatra.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cleopatra</span><span class="related-card-dates">c. 69 BCE – 30 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/cleopatra"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Cleopatra.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cleopatra</span><span class="related-card-dates">c. 69 BCE – 30 BCE</span></a><a class="related-card" href="/life/saladin"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Saladin.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Saladin</span><span class="related-card-dates">c. 1137 CE – 1193 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Wu Zetian",slug="wu-zetian",url="https://the-epoch-institute.org/life/wu-zetian";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Wu Zetian on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/wu-zetian #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/wu-zetian"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Wu Zetian",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Wu Zetian",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>
