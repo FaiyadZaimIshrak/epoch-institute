@@ -12,7 +12,7 @@
 // Never: other sites, anything but GET, /send.php, /feeds/, search addresses with a query. To retire it, deploy a sw.js
 // that unregisters itself (self.registration.unregister() in activate) - a browser checks this file at least daily.
 'use strict';
-const VERSION = '2026-11-13a';
+const VERSION = '2026-11-13b';
 const PAGES = 'pages-' + VERSION, FILES = 'files-' + VERSION, OFFLINE = '/offline.html';
 const MAX_PAGES = 200, MAX_FILES = 600;
 
@@ -47,16 +47,22 @@ async function page(req) {
     try { return await net; } catch (e2) { return (await c.match(OFFLINE)) || Response.error(); }
   }
 }
+// a file asked for again when the connection failed (the host drops one now and then): twice more, a little apart
+async function fetchAgain(req) {
+  for (let i = 0; ; i++) {
+    try { return await fetch(req); } catch (err) { if (i >= 2) throw err; await new Promise(ok => setTimeout(ok, 400 * (i + 1))); }
+  }
+}
 async function cacheFirst(req) {
   const c = await caches.open(FILES), hit = await c.match(req);
   if (hit) return hit;
-  const r = await fetch(req);
+  const r = await fetchAgain(req);
   if (r.ok && !r.redirected && r.type === 'basic') { c.put(req, r.clone()); trim(FILES, MAX_FILES); }
   return r;
 }
 async function staleWhileRevalidate(e, req) {
   const c = await caches.open(FILES), hit = await c.match(req);
-  const fresh = fetch(req).then(r => { if (r.ok && !r.redirected && r.type === 'basic') { c.put(req, r.clone()); trim(FILES, MAX_FILES); } return r; });
+  const fresh = fetchAgain(req).then(r => { if (r.ok && !r.redirected && r.type === 'basic') { c.put(req, r.clone()); trim(FILES, MAX_FILES); } return r; });
   if (hit) { e.waitUntil(fresh.catch(() => {})); return hit; }
   return fresh;
 }

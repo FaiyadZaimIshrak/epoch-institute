@@ -153,8 +153,9 @@ var NOW_SRC = '/data/now.json?v=8cacf8ab90';
 (function () {
   function start() { var s = document.createElement('script'); s.src = '/now.js?v=6454b6d70d'; document.body.appendChild(s); }
   var idle = window.requestIdleCallback || function (f) { setTimeout(f, 800); };
-  if (document.readyState === 'complete') idle(start, { timeout: 3000 });
-  else window.addEventListener('load', function () { idle(start, { timeout: 3000 }); }, { once: true });
+  var begun = false; function once() { if (begun) return; begun = true; idle(start, { timeout: 3000 }); }
+  if (document.readyState === 'complete') once();
+  else { window.addEventListener('load', once, { once: true }); setTimeout(once, 6000); }
 })();
 </script>
 
@@ -305,6 +306,7 @@ var NOW_SRC = '/data/now.json?v=8cacf8ab90';
 <script src="/reading-paths.js?v=4"></script>
 <script src="/quiz.js?v=6"></script>
 <script>
+function homeMain() {
 initNav('home');
 
 // ── Homepage: featured profiles (daily), browse chips, entry of the day, paths, quiz, search ──
@@ -700,8 +702,33 @@ initNav('home');
     load(D3, function () { (window.ATLAS_GLOBE ? function (f) { f(); } : function (f) { load(HOME_GLOBE_SRC, f); })(function () { load(GLOBE_JS, go); }); });
   }
   var idle = window.requestIdleCallback || function (f) { setTimeout(f, 1200); };
-  if (document.readyState === 'complete') idle(start, { timeout: 4000 });
-  else window.addEventListener('load', function () { idle(start, { timeout: 4000 }); }, { once: true });
+  // after the page has loaded, or after six seconds if something is still on its way (a picture hanging on a slow line
+  // kept the load event, and with it the globe, from ever coming)
+  var begun = false; function once() { if (begun) return; begun = true; idle(start, { timeout: 4000 }); }
+  if (document.readyState === 'complete') once();
+  else { window.addEventListener('load', once, { once: true }); setTimeout(once, 6000); }
+})();
+}
+// A file that did not arrive (the host drops a connection now and then, and shared-data.js comes from it on every
+// visit) is asked for again, in order, up to three times: without it the page showed no quiz, no globe and empty
+// tiles (12 Nov 2026). The files and their versions are read from the script tags above.
+(function () {
+  var TEST = { 'shared-data.js': function () { return typeof EMPIRES !== 'undefined'; }, 'shared-nav.js': function () { return typeof initNav === 'function'; },
+    'home-data.js': function () { return typeof HOME_QUIZ !== 'undefined'; }, 'reading-paths.js': function () { return typeof READING_PATHS !== 'undefined'; },
+    'quiz.js': function () { return typeof EpochQuiz !== 'undefined'; } };
+  var need = [].map.call(document.querySelectorAll('script[src]'), function (s) { var src = s.getAttribute('src'), m = /^\/([a-z-]+\.js)/.exec(src); return m && TEST[m[1]] ? [src, TEST[m[1]]] : null; }).filter(Boolean);
+  var tries = 0;
+  function run() { try { homeMain(); } catch (e) { if (window.console) console.error(e); } }
+  function go() {
+    var miss = need.filter(function (n) { return !n[1](); });
+    if (!miss.length || tries >= 3) { run(); return; }
+    tries++; var left = miss.length;
+    miss.forEach(function (n) {
+      var s = document.createElement('script'); s.async = false; s.src = n[0] + (n[0].indexOf('?') < 0 ? '?' : '&') + 'again=' + tries;
+      s.onload = s.onerror = function () { if (!--left) setTimeout(go, tries * 500); }; document.head.appendChild(s);
+    });
+  }
+  go();
 })();
 </script>
 
