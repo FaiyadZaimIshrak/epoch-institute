@@ -1377,7 +1377,7 @@ function initNav(activePage) {
     function set() {
       ticking = false; if (!built) build(); if (!heads.length) return;
       var edge = parseInt(nav.style.top, 10) + 70, now = -1;
-      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top < edge + 8) now = i; else break;   // + 8: a heading jumped to stands exactly at its scroll margin }
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top < edge + 8) now = i; else break; }
       var show = now >= 0;
       if (show !== on) { on = show; nav.classList.toggle('is-on', on); document.body.classList.toggle('has-page-toc', on); }
       if (now !== cur) {
