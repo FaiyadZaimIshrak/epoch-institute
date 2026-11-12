@@ -2474,6 +2474,29 @@ and the host drops a connection now and then, more so while a deploy reads the w
 - Not done: the 413 state profiles and other kinds beyond their flagged sentences (rates 0.2-0.6), "one of the most"
   where it is praise and not a measure (about 950 entries: each needs reading), essays 03-05's few phrases.
 
+## Release-note dates, search snippets and a crawl (12 Nov 2026)
+- **Release notes carry their real day.** The notes of 11-12 Nov had each been dated the day after the one before and ran
+  to 27 November, which "New here" (home, /now, /new, whats-new.xml) showed. scripts/tools/whats-new-dates.js [--write]
+  sets a note dated after today to the day its row was first committed; check-site.ps1 fails on a future-dated note.
+  The copy-edit round has no note (the user: "don't include this edit as a note").
+- **Snippets:** scripts/tools/snippet-audit.js reads every built page's title and description for stock phrases and
+  dashes as punctuation (after the copy-edit: none but literal uses). scripts/tools/title-audit.js fails on a title with
+  an unclosed bracket or ending in punctuation: eight entry titles took such a label from Wikidata's description
+  ("King of Qi (", "Scottish philosopher and historian;"), now trimmed where the builder picks the label. A song entry's
+  description gives the song's date only up to its first bracket or semicolon (eight carried an editor's note there).
+  /games' and /about's descriptions rewritten (the first still said twelve games); /research's title fits 70 characters.
+  Google shows the new texts as it re-crawls; Search Console's Request indexing hurries a page.
+- **Essay 01's picture** is the Behistun Inscription (picture: line, as every other essay); the square poster it had
+  as a cover (images/series-01-cover.jpg, the only cover: line) is deleted. Essay 04's subtitle lost its dashes.
+- **Crawl:** crawl-static --strict, crawl-browser (146 desktop, 124 phone, 103 Kids pages), crawl-live (204 addresses),
+  seo-audit: nothing failing. Fixed from their lists: three credits left as Commons boilerplate (Cape Cod, Gawilgarh,
+  Johan Ferrier), a doubled user name on a ladder picture, "Soldiers are we ," in Amhrán na bhFiann (text-fixes.json),
+  empty brackets left round a dropped repeat sign in La Borinqueña (fetch-texts.js now drops the brackets too). What
+  crawl-static still lists as stray spacing is the sources' own print (the BnF's "16..-17..", Budge's "land..").
+  /feeds/news.json answers 404 on a local server only: the news workflow writes it on the host.
+- A JavaScript replacement string holding `$'` or `$&` inserts the text round the match (it once blew up
+  build-pages.ps1 during this round): pass a function as the replacement.
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their

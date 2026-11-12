@@ -60,7 +60,7 @@ function pick(st, sel) {
   // flags after the range: " /N" regroups the lines into stanzas of N lines (pages that put every line in a block of
   // its own), " nonum" drops a stanza's leading verse number ("1 Amazing grace" -> "Amazing grace")
   const sm = (sel || 'all').match(/^(L?"[^"]*"\.\."[^"]*"|\S+)\s*(.*)$/), range = sm[1], fl = sm[2] ? sm[2].split(' ') : [];
-  let out = range0(st, range).map(s => s.map(l => l.replace(/\s*[𝄆𝄇]\s*/gu, ' ').trim()).filter(Boolean)).filter(s => s.length);   // repeat signs are notation, not words
+  let out = range0(st, range).map(s => s.map(l => l.replace(/\s*\(?\s*[𝄆𝄇]\s*\)?\s*/gu, ' ').trim()).filter(Boolean)).filter(s => s.length);   // repeat signs are notation, not words
   const ev = fl.find(f => /^every\d+:\d+$/.test(f));   // columns read across: keep block k of every n (Arabic | pronunciation | English)
   if (ev) { const [n, k] = ev.slice(5).split(':').map(Number); out = out.filter((s, i) => i % n === k); }
   if (fl.includes('splitdanda')) out = out.map(s => s.flatMap(l => l.split(/(?<=।)\s+/)));   // a verse printed as one line: its halves end at the danda

@@ -1381,12 +1381,13 @@ foreach ($e in $ENT) {
   [void]$body.Append('<p class="ref-updated"><span>Last reviewed ' + $Reviewed + '</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>' + "`n</article>`n</div>`n</main>`n")
   $kind = KindOf $e; $desc = [EpochBuild.W]::Summary($(if ($e.desc) { $e.desc } else { "$($e.name): an entry in The Epoch Institute Encyclopedia." }), 155)
   # a song's entry and its page in Songs in History start from the same story: the entry's description says what it is first
-  if ($e.sub -eq 'song' -and $e.desc) { $desc = [EpochBuild.W]::Summary("$($e.name)" + $(if ($e.dates) { " ($($e.dates))" } else { '' }) + ', a song: ' + $e.desc, 155) }
+  if ($e.sub -eq 'song' -and $e.desc) { $desc = [EpochBuild.W]::Summary("$($e.name)" + $(if ($e.dates) { " ($(([string]$e.dates) -replace '\s*[;(].*$', ''))" } else { '' }) + ', a song: ' + $e.desc, 155) }
   $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { $e.dates } else { '' }
   $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd $wdSame)
   $eNY = NameYears $e.name $tDates; $eLab = EntryLabel ([string]$e.desc)
   if (-not $eLab -or ($eNY + ": " + $eLab).Length -gt 70) { $eLab = WdLabel ('e:' + $e.slug) }
   if (-not $eLab -or ($eNY + ": " + $eLab).Length -gt 70) { $eLab = $ELAB2[[string]$e.slug] }
+  if ($eLab) { $eLab = ($eLab -replace '\s*\([^)]*$', '') -replace '[\s;,:]+$', '' }   # a label cut inside a bracket, or ending in the source's own semicolon (title-audit.js)
   $eTitle = if ($eLab -and ($eNY + ": " + $eLab).Length -le 70) { "${eNY}: $eLab — The Epoch Institute" } else { "$eNY — Encyclopedia — The Epoch Institute" }
   Emit $path (Page @{ title = $eTitle; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; noindex = $thin; body = $body.ToString() })
   if (($e.i % 2000) -eq 1999) { Say "  $($e.i + 1) entries" }
