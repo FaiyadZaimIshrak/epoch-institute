@@ -727,7 +727,27 @@ var HOME_PICS = {
   "Nelson Mandela": {"img":"/images/encyclopedia/nelson-mandela.jpg","name":"Nelson Mandela","slug":"nelson-mandela","credit":"Kingkongphoto & www.celebrity-photos.com from Laurel, CC BY-SA 2.0"},
   "Abraham Lincoln": {"img":"/images/encyclopedia/abraham-lincoln.jpg","name":"Abraham Lincoln","slug":"abraham-lincoln","credit":"Alexander Gardner, Public domain"},
   "Simón Bolívar": {"img":"/images/encyclopedia/simon-bolivar.jpg","name":"Simón Bolívar","slug":"simon-bolivar","credit":"Luis Enrique Toro Moreno (1897-1933), Public domain"},
-  "Kamehameha I": {"img":"/images/encyclopedia/kamehameha-i.jpg","name":"Kamehameha I","slug":"kamehameha-i","credit":"Louis Choris, Public domain"}
+  "Kamehameha I": {"img":"/images/encyclopedia/kamehameha-i.jpg","name":"Kamehameha I","slug":"kamehameha-i","credit":"Louis Choris, Public domain"},
+  "Aristotle": {"img":"/images/encyclopedia/aristotle.jpg","name":"Aristotle","slug":"aristotle","credit":"After Lysippos, Public domain"},
+  "Charlemagne": {"img":"/images/encyclopedia/charlemagne.jpg","name":"Charlemagne","slug":"charlemagne","credit":"Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur, Public domain"},
+  "Joan of Arc": {"img":"/images/encyclopedia/joan-of-arc.jpg","name":"Joan of Arc","slug":"joan-of-arc","credit":"Public domain"},
+  "Martin Luther": {"img":"/images/encyclopedia/martin-luther.jpg","name":"Martin Luther","slug":"martin-luther","credit":"Lucas Cranach the Elder, Public domain"},
+  "Isaac Newton": {"img":"/images/encyclopedia/isaac-newton.jpg","name":"Isaac Newton","slug":"isaac-newton","credit":"Godfrey Kneller, Public domain"},
+  "Catherine the Great": {"img":"/images/encyclopedia/catherine-the-great.jpg","name":"Catherine the Great","slug":"catherine-the-great","credit":"After Alexander Roslin, Public domain"},
+  "Qin Shi Huang": {"img":"/images/encyclopedia/qin-shi-huang.jpg","name":"Qin Shi Huang","slug":"qin-shi-huang","credit":"Unknown (18??–18??), Public domain"},
+  "Kublai Khan": {"img":"/images/encyclopedia/kublai-khan.jpg","name":"Kublai Khan","slug":"kublai-khan","credit":"Araniko, Public domain"},
+  "Tokugawa Ieyasu": {"img":"/images/encyclopedia/tokugawa-ieyasu.jpg","name":"Tokugawa Ieyasu","slug":"tokugawa-ieyasu","credit":"Kanō Tan'yū, Public domain"},
+  "Hammurabi": {"img":"/images/encyclopedia/hammurabi.jpg","name":"Hammurabi","slug":"hammurabi","credit":"Mbzt, CC BY 3.0"},
+  "Ramesses II": {"img":"/images/encyclopedia/ramesses-ii.jpg","name":"Ramesses II","slug":"ramesses-ii","credit":"Pbuergler, CC BY-SA 3.0"},
+  "Suleiman the Magnificent": {"img":"/images/encyclopedia/suleiman-the-magnificent.jpg","name":"Suleiman the Magnificent","slug":"suleiman-the-magnificent","credit":"Circle of Titian, Public domain"},
+  "Harun al-Rashid": {"img":"/images/encyclopedia/harun-al-rashid.jpg","name":"Harun al-Rashid","slug":"harun-al-rashid","credit":"8/9th-century master(s), CC BY-SA 2.5"},
+  "Rumi": {"img":"/images/encyclopedia/rumi.jpg","name":"Rumi","slug":"rumi","credit":"Hossein Behzad, Public domain"},
+  "Hannibal": {"img":"/images/encyclopedia/hannibal.jpg","name":"Hannibal","slug":"hannibal","credit":"Fratelli Alinari, Public domain"},
+  "Haile Selassie": {"img":"/images/encyclopedia/haile-selassie.jpg","name":"Haile Selassie","slug":"haile-selassie","credit":"unknown; according to [1] and [2] an official portrait of which b/w copies were distributed by the Ethiopian government, Public domain"},
+  "Toussaint Louverture": {"img":"/images/encyclopedia/toussaint-louverture.jpg","name":"Toussaint Louverture","slug":"toussaint-louverture","credit":"Pierre-Charles Baquoy (1759-1829), Public domain"},
+  "George Washington": {"img":"/images/encyclopedia/george-washington.jpg","name":"George Washington","slug":"george-washington","credit":"Gilbert Stuart, Public domain"},
+  "Pachacuti": {"img":"/images/encyclopedia/pachacuti.jpg","name":"Pachacuti","slug":"pachacuti","credit":"Public domain"},
+  "Liliʻuokalani": {"img":"/images/encyclopedia/lili-uokalani.jpg","name":"Liliʻuokalani","slug":"lili-uokalani","credit":"James J. Williams / Adam Cuerden, Public domain"}
 };
 
 var HOME_ENTRIES = [

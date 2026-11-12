@@ -46,14 +46,14 @@ first mention; give a person's own name beside a title or epithet where the arti
                  used and disputed the person; how historians assess them</p>"
  },
  "summary": "Two or three sentences (250-450 characters).",
- "references": ["Author, Title (Publisher, year)", …],   3-6 real works copied from the ARTICLE's reference lists,
-        bibliography or further reading; [] if it names none
+ "references": [],   leave this empty: the saved articles keep their reference headings but not the lists, and the
+        editor fills it from the article's own bibliography (scripts/kinds/article-refs.js)
  "notes": ["for the editor: doubts, conflicting dates, what you left out and why"]
 }
 ```
 No other keys. Every string plain text except the sections' <p> tags.
 
-Before you finish, count: six sections of 1,100-1,600 characters each; 5-8 events in date order; three takeaways;
-3-6 references copied from the article. Validate the JSON
+Before you finish, count: six sections of 1,100-1,600 characters each; 5-8 events in date order; three takeaways.
+Validate the JSON
 (`node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" out/<slug>.json`). Report the counts and
 your doubts, and list any fact you wanted to include but could not find in the article.

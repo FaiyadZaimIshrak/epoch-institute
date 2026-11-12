@@ -4,7 +4,8 @@
 //   node scripts/kinds/section-pictures.js sheet <out.html> <profile> …   candidates per section (open it from the local
 //        server: the pictures are /images/… addresses; scripts/tools/shots.js can photograph it), (the pictured entries
 //        its page links there, from link-scan.js's report) as an HTML contact sheet, numbered "<section>.<n>"
-//   node scripts/kinds/section-pictures.js write                           writes the choices in scripts/kinds/pick.txt
+//   node scripts/kinds/section-pictures.js write [profile …]               writes the choices in scripts/kinds/pick.txt
+//        (all of them, or only the profiles named)
 // pick.txt: "profile<TAB>section<TAB>entry slug" ("-" = no picture); a profile's rows replace all its sections. Needs
 // the --report of link-scan.js for the profiles: node scripts/kinds/link-scan.js --report=<file> … (pass it as REPORT=).
 const fs = require('fs'), path = require('path');
@@ -35,6 +36,7 @@ if (cmd === 'sheet') {
   }
   let t = fs.readFileSync(path.join(R, 'empire-section-images.js'), 'utf8');
   for (const [n, ps] of Object.entries(picks)) {
+    if (rest.length && !rest.includes(n)) continue;   // write <profile> …: only those (an older row may name a picture taken off since)
     const body = ps.filter(p => p[1] !== '-').map(([s, slug]) => { const e = ent(slug); if (!e || !e.img) throw new Error(n + ' ' + s + ': no picture for ' + slug);
       return '    ' + s + ':{slug:' + JSON.stringify(e.slug) + ',name:' + JSON.stringify(e.name) + ',img:' + JSON.stringify(e.img) + ',artist:' + JSON.stringify(e.artist) + ',licence:' + JSON.stringify(e.licence) + ',source:' + JSON.stringify(e.source) + '}'; });
     const block = '  ' + JSON.stringify(n) + ': {\n' + body.join(',\n') + '\n  }';

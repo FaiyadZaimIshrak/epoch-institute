@@ -5305,5 +5305,269 @@ var SECTION_IMAGES = {
     reception:{slug:"aurangzeb",name:"Aurangzeb",img:"/images/encyclopedia/aurangzeb.jpg",artist:"Cordanrad; derivative work by Rani nurmai",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aurangzeb-portrait.jpg"},
     survival:{slug:"george-curzon",name:"George Curzon",img:"/images/encyclopedia/george-curzon.jpg",artist:"George Grantham Bain Collection (Library of Congress)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:George_Curzon2.jpg"},
     legacy:{slug:"caravanserai",name:"Caravanserai",img:"/images/encyclopedia/caravanserai.jpg",artist:"Bernard Gagnon",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Izadkhvast_Caravanserai_01.jpg"}
+  },
+  "Abraham Lincoln": {
+    rise:{slug:"mexican-american-war",name:"Mexican–American War",img:"/images/encyclopedia/mexican-american-war.jpg",artist:"Adolphe Jean-Baptiste Bayot / Carl Nebel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nebel_Mexican_War_12_Scott_in_Mexico_City_(cropped).jpg"},
+    deeds:{slug:"ulysses-s-grant",name:"Ulysses S. Grant",img:"/images/encyclopedia/ulysses-s-grant.jpg",artist:"Brady-Handy Photograph Collection, Library of Congress",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880_(cropped).jpg"},
+    opponents:{slug:"emancipation-proclamation",name:"Emancipation Proclamation",img:"/images/encyclopedia/emancipation-proclamation.jpg",artist:"W. Roberts",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Emancipation_Proclamation.jpg"},
+    last:{slug:"robert-e-lee",name:"Robert E. Lee",img:"/images/encyclopedia/robert-e-lee.jpg",artist:"Julian Vannerson",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Robert_Edward_Lee_(3x4_cropped).jpg"},
+    legacy:{slug:"frederick-douglass",name:"Frederick Douglass",img:"/images/encyclopedia/frederick-douglass.jpg",artist:"George Kendall Warren",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(circa_1879)_(cropped).jpg"}
+  },
+  "Akbar": {
+    early:{slug:"humayun",name:"Humayun",img:"/images/encyclopedia/humayun.jpg",artist:"Circa 1550-55 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Humayun_seated_(made_in_Kabul_in_1550-1555).jpg"},
+    rise:{slug:"second-battle-of-panipat",name:"Second Battle of Panipat",img:"/images/encyclopedia/second-battle-of-panipat.jpg",artist:"Kankar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_defeat_of_Hemu,_Akbarnama.jpg"},
+    deeds:{slug:"fatehpur-sikri",name:"Fatehpur Sikri",img:"/images/encyclopedia/fatehpur-sikri.jpg",artist:"Marcin Białek",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg"},
+    opponents:{slug:"maharana-pratap",name:"Maharana Pratap",img:"/images/encyclopedia/maharana-pratap.jpg",artist:"Surendra Singh Shaktawat (Semliyaheera)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Maharana_Pratap_By_Surendra_Singh_Shaktawat.jpg"},
+    last:{slug:"jahangir",name:"Jahangir",img:"/images/encyclopedia/jahangir.jpg",artist:"Abu al-Hasan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jahangircrop.jpeg"},
+    legacy:{slug:"abul-fazl-ibn-mubarak",name:"Abu'l-Fazl ibn Mubarak",img:"/images/encyclopedia/abul-fazl-ibn-mubarak.jpg",artist:"Govardhan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abul_Fazl_cropped.png"}
+  },
+  "Alexander the Great": {
+    early:{slug:"aristotle",name:"Aristotle",img:"/images/encyclopedia/aristotle.jpg",artist:"After Lysippos",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg"},
+    deeds:{slug:"battle-of-issus",name:"Battle of Issus",img:"/images/encyclopedia/battle-of-issus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Issus_mosaic_-_Museo_Archeologico_Nazionale_-_Naples_2013-05-16_16-25-06_BW.jpg"},
+    opponents:{slug:"persepolis",name:"Persepolis",img:"/images/encyclopedia/persepolis.jpg",artist:"Laurens R. Krol",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:2018-09-21_Iran,_Persepolis,_Tachara_(from_the_southeast).jpg"},
+    last:{slug:"roxana",name:"Roxana",img:"/images/encyclopedia/roxana.jpg",artist:"Pietro Rotari",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_The_Greate_and_Roxane_by_Rotari_1756.jpg"},
+    legacy:{slug:"alexander-romance",name:"Alexander Romance",img:"/images/encyclopedia/alexander-romance.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_romance._Armenian_illuminated_manuscript_of_XIV_century_(Venice,_San_Lazzaro,_424).jpg"}
+  },
+  "Ashoka": {
+    deeds:{slug:"brahmi-script",name:"Brahmi script",img:"/images/encyclopedia/brahmi-script.jpg",artist:"Unknown author",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Brahmi_pillar_inscription_in_Sarnath.jpg"},
+    opponents:{slug:"ajivika",name:"Ajivika",img:"/images/encyclopedia/ajivika.jpg",artist:"Daderot",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Four_Scenes_from_the_Life_of_the_Buddha_-_Parinirvana_-_Kushan_dynasty,_late_2nd_to_early_3rd_century_AD,_Gandhara,_schist_-_Freer_Gallery_of_Art_-_DSC05119.JPG"},
+    legacy:{slug:"lion-capital-of-ashoka",name:"Lion Capital of Ashoka",img:"/images/encyclopedia/lion-capital-of-ashoka.jpg",artist:"Chrisi1964",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Sarnath_capital.jpg"}
+  },
+  "Cleopatra": {
+    early:{slug:"ptolemy-xii-auletes",name:"Ptolemy XII Auletes",img:"/images/encyclopedia/ptolemy-xii-auletes.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ptolemy_XII_Auletes_Louvre_Ma3449.jpg"},
+    rise:{slug:"caesarion",name:"Caesarion",img:"/images/encyclopedia/caesarion.jpg",artist:"carolemage (Flickr)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Caesarion_granite_head.jpg"},
+    deeds:{slug:"mark-antony",name:"Mark Antony",img:"/images/encyclopedia/mark-antony.jpg",artist:"Byzantium565",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Octavian_and_Antony_denarius_(obverse).jpg"},
+    opponents:{slug:"cicero",name:"Cicero",img:"/images/encyclopedia/cicero.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"},
+    last:{slug:"marcus-vipsanius-agrippa",name:"Marcus Vipsanius Agrippa",img:"/images/encyclopedia/marcus-vipsanius-agrippa.jpg",artist:"",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Agrippa_Gabii_Louvre_Ma1208.jpg"},
+    legacy:{slug:"cleopatra-selene-ii",name:"Cleopatra Selene II",img:"/images/encyclopedia/cleopatra-selene-ii.jpg",artist:"Hichem algerino",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cleopatra_Selene_II.jpg"}
+  },
+  "Confucius": {
+    early:{slug:"qufu",name:"Qufu",img:"/images/encyclopedia/qufu.jpg",artist:"호고호",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Zhou_Gong_Miao_3.jpg"},
+    deeds:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"},
+    opponents:{slug:"cultural-revolution",name:"Cultural Revolution",img:"/images/encyclopedia/cultural-revolution.jpg",artist:"China Pictorial, 1967",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1967-02_1967%E5%B9%B4%E7%9A%84%E7%BA%A2%E5%8D%AB%E5%85%B5.jpg"},
+    last:{slug:"records-of-the-grand-historian",name:"Records of the Grand Historian",img:"/images/encyclopedia/records-of-the-grand-historian.jpg",artist:"Zhonghua Book Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%8F%B2%E8%AE%B0.jpg"},
+    legacy:{slug:"mencius",name:"Mencius",img:"/images/encyclopedia/mencius.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_(%E5%AD%9F%E8%BB%BB).jpg"}
+  },
+  "Cyrus the Great": {
+    early:{slug:"astyages",name:"Astyages",img:"/images/encyclopedia/astyages.jpg",artist:"Designed by Maximilien de Haese, Woven by Jac. van der Borght (1771-1775)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Astyages_submitting_to_Cyrus.jpg"},
+    rise:{slug:"croesus",name:"Croesus",img:"/images/encyclopedia/croesus.jpg",artist:"Marco Prins",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Croesus_portrait.jpg"},
+    deeds:{slug:"cyrus-cylinder",name:"Cyrus Cylinder",img:"/images/encyclopedia/cyrus-cylinder.jpg",artist:"Prioryman",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Cyrus_Cylinder_front.jpg"},
+    opponents:{slug:"tomyris",name:"Tomyris",img:"/images/encyclopedia/tomyris.jpg",artist:"Andrea del Castagno",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tomyris-Castagno.jpg"},
+    last:{slug:"cambyses-ii",name:"Cambyses II",img:"/images/encyclopedia/cambyses-ii.jpg",artist:"Jona Lendering",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stela_Cambyses_Apis_closeup.jpg"},
+    legacy:{slug:"xenophon",name:"Xenophon",img:"/images/encyclopedia/xenophon.jpg",artist:"Carole Raddato",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Xenophon.jpg"}
+  },
+  "Elizabeth I": {
+    early:{slug:"henry-viii-of-england",name:"Henry VIII of England",img:"/images/encyclopedia/henry-viii-of-england.jpg",artist:"Workshop of Hans Holbein the Younger",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:After_Hans_Holbein_the_Younger_-_Portrait_of_Henry_VIII_-_Google_Art_Project.jpg"},
+    rise:{slug:"westminster-abbey",name:"Westminster Abbey",img:"/images/encyclopedia/westminster-abbey.jpg",artist:"Antiquary",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Westminster_Abbey,_Westminster.jpg"},
+    deeds:{slug:"francis-drake",name:"Francis Drake",img:"/images/encyclopedia/francis-drake.jpg",artist:"Marcus Gheeraerts the Younger",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gheeraerts_Francis_Drake_1591.jpg"},
+    opponents:{slug:"pope-pius-v",name:"Pope Pius V",img:"/images/encyclopedia/pope-pius-v.jpg",artist:"Bartolomeo Passarotti and workshop",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bartolomeo_Passarotti_-_Pius_V.jpg"},
+    last:{slug:"james-vi-and-i",name:"James VI and I",img:"/images/encyclopedia/james-vi-and-i.jpg",artist:"Attributed to John de Critz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JamesIEngland_(cropped_2).jpg"}
+  },
+  "Genghis Khan": {
+    early:{slug:"secret-history-of-the-mongols",name:"Secret History of the Mongols",img:"/images/encyclopedia/secret-history-of-the-mongols.jpg",artist:"Цэндийн Дамдинсүрэн",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SecretHistoryMongols1947.jpg"},
+    rise:{slug:"ong-khan",name:"Ong Khan",img:"/images/encyclopedia/ong-khan.jpg",artist:"Maître d'Egerton",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:WangKhan.JPG"},
+    opponents:{slug:"merv",name:"Merv",img:"/images/encyclopedia/merv.jpg",artist:"Kalpak Travel",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Turkmenistan_Merv_city.jpg"},
+    legacy:{slug:"kublai-khan",name:"Kublai Khan",img:"/images/encyclopedia/kublai-khan.jpg",artist:"Araniko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg"}
+  },
+  "Ibn Khaldun": {
+    rise:{slug:"ibn-al-khatib",name:"Lisan al-Din ibn al-Khatib",img:"/images/encyclopedia/ibn-al-khatib.jpg",artist:"Schluchtenbummler",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Alhambra_104.JPG"},
+    deeds:{slug:"muqaddimah",name:"Muqaddimah",img:"/images/encyclopedia/muqaddimah.jpg",artist:"Riad Salih",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:La_Muqaddima_d%27Ibn_Khaldoun.jpg"},
+    opponents:{slug:"barquq",name:"Barquq",img:"/images/encyclopedia/barquq.jpg",artist:"Moh hakem",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Barqouqy_mosque_-_Moez_street.jpg"},
+    last:{slug:"timur",name:"Timur",img:"/images/encyclopedia/timur.jpg",artist:"shakko",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Timur_reconstruction03.jpg"},
+    legacy:{slug:"niccolo-machiavelli",name:"Niccolò Machiavelli",img:"/images/encyclopedia/niccolo-machiavelli.jpg",artist:"Santi di Tito",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg"}
+  },
+  "Julius Caesar": {
+    early:{slug:"gaius-marius",name:"Gaius Marius",img:"/images/encyclopedia/gaius-marius.jpg",artist:"American Numismatic Society",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:RRC_326.1_Gaius_Fundanius_depicting_Gaius_Marius_triumphator.png"},
+    rise:{slug:"marcus-licinius-crassus",name:"Marcus Licinius Crassus",img:"/images/encyclopedia/marcus-licinius-crassus.jpg",artist:"Sergey Sosnovskiy",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_a_Roman,_Ny_Carlsberg_Glyptotek.jpg"},
+    deeds:{slug:"vercingetorix",name:"Vercingetorix",img:"/images/encyclopedia/vercingetorix.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vercing%C3%A9torix_stat%C3%A8re_Gallica_avers.jpg"},
+    opponents:{slug:"cato-the-younger",name:"Cato the Younger",img:"/images/encyclopedia/cato-the-younger.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Cat%C3%B3n_(52340687524).jpg"},
+    last:{slug:"marcus-junius-brutus",name:"Marcus Junius Brutus",img:"/images/encyclopedia/marcus-junius-brutus.jpg",artist:"CNG",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Brutusidesobv.gif"},
+    legacy:{slug:"gallic-wars",name:"Gallic Wars",img:"/images/encyclopedia/gallic-wars.jpg",artist:"Lionel Royer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lionel_Royer_-_Vercingetorix_Throwing_down_His_Weapons_at_the_feet_of_Julius_Caesar.jpg"}
+  },
+  "Kamehameha I": {
+    early:{slug:"kalaniopuu",name:"Kalaniʻōpuʻu",img:"/images/encyclopedia/kalaniopuu.jpg",artist:"Mark Miller",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kalani%CA%BB%C5%8Dpu%CA%BBu_%CA%BBAhu_%CA%BBula_and_mahiole.jpg"},
+    rise:{slug:"ka-ahumanu",name:"Kaʻahumanu",img:"/images/encyclopedia/ka-ahumanu.jpg",artist:"Louis Choris / Jean-Pierre Norblin de La Gourdaine",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kaahumanu_with_servant.jpg"},
+    opponents:{slug:"pu-ukohola-heiau-national-historic-site",name:"Puʻukoholā Heiau National Historic Site",img:"/images/encyclopedia/pu-ukohola-heiau-national-historic-site.jpg",artist:"Bamse",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Pu'ukohola_Heiau_temple2.jpg"},
+    last:{slug:"keopuolani",name:"Keōpūolani",img:"/images/encyclopedia/keopuolani.jpg",artist:"The American Tract Society",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Christian_Queen,_page_2_(1855)_(cropped).jpg"},
+    legacy:{slug:"kamehameha-iii",name:"Kamehameha III",img:"/images/encyclopedia/kamehameha-iii.jpg",artist:"Hugo Stangenwald",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Photo_of_Kamehameha_III_(PP-97-7-003).jpg"}
+  },
+  "Leonardo da Vinci": {
+    early:{slug:"giorgio-vasari",name:"Giorgio Vasari",img:"/images/encyclopedia/giorgio-vasari.jpg",artist:"Attributed to Jacopo Zucchi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zucchi,_Jacopo_-_Vasari,_Giorgio_-_Uffizi_ICCD.jpg"},
+    rise:{slug:"ludovico-sforza",name:"Ludovico Sforza",img:"/images/encyclopedia/ludovico-sforza.jpg",artist:"Unknown Master, Italian (active 1490-1520 in Lombardy)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pala_Sforzesca_-_detail_01.jpg"},
+    deeds:{slug:"cesare-borgia",name:"Cesare Borgia",img:"/images/encyclopedia/cesare-borgia.jpg",artist:"After Bartolomeo Veneto",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cesare_Borgia,_Duke_of_Valentinois.jpg"},
+    opponents:{slug:"charles-viii-of-france",name:"Charles VIII of France",img:"/images/encyclopedia/charles-viii-of-france.jpg",artist:"anonymous / After Jean Perréal",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_King_Charles_VIII_of_France_(1470%E2%80%931498),_by_anonymous_artist,_16th_century_(cropped)_2.jpg"},
+    last:{slug:"pope-leo-x",name:"Pope Leo X",img:"/images/encyclopedia/pope-leo-x.jpg",artist:"Francesco Bini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Raffaello,_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de'_rossi_e_giulio_de'_medici,_1518,_03.jpg"},
+    legacy:{slug:"raphael",name:"Raphael",img:"/images/encyclopedia/raphael.jpg",artist:"Raphael",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio.jpg"}
+  },
+  "Mahatma Gandhi": {
+    early:{slug:"karamchand-gandhi",name:"Karamchand Gandhi",img:"/images/encyclopedia/karamchand-gandhi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karamchand_Gandhi.jpg"},
+    rise:{slug:"gopal-krishna-gokhale",name:"Gopal Krishna Gokhale",img:"/images/encyclopedia/gopal-krishna-gokhale.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:GKGokhale.jpg"},
+    opponents:{slug:"muhammad-ali-jinnah",name:"Muhammad Ali Jinnah",img:"/images/encyclopedia/muhammad-ali-jinnah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jinnah1945c.jpg"},
+    legacy:{slug:"martin-luther-king-jr",name:"Martin Luther King Jr.",img:"/images/encyclopedia/martin-luther-king-jr.jpg",artist:"Yoichi Okamoto",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Martin_Luther_King,_Jr._and_Lyndon_Johnson_(cropped).jpg"}
+  },
+  "Mansa Musa": {
+    early:{slug:"ibn-battuta",name:"Ibn Battuta",img:"/images/encyclopedia/ibn-battuta.jpg",artist:"Léon Benett",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Handmade_oil_painting_reproduction_of_Ibn_Battuta_in_Egypt,_a_painting_by_Hippolyte_Leon_Benett..jpg"},
+    deeds:{slug:"djinguereber-mosque",name:"Djinguereber Mosque",img:"/images/encyclopedia/djinguereber-mosque.jpg",artist:"KaTeznik",licence:"CC BY-SA 2.0 fr",source:"https://commons.wikimedia.org/wiki/File:Djingareiber_cour.jpg"},
+    opponents:{slug:"griots",name:"Griots",img:"/images/encyclopedia/griots.jpg",artist:"Jeanniot (grav.)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:GriotF%C3%AAte.jpg"},
+    legacy:{slug:"catalan-atlas",name:"Catalan Atlas",img:"/images/encyclopedia/catalan-atlas.jpg",artist:"Cresques Abraham",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Compass_rose_from_Catalan_Atlas_(1375).jpg"}
+  },
+  "Napoleon": {
+    early:{slug:"pasquale-paoli",name:"Pasquale Paoli",img:"/images/encyclopedia/pasquale-paoli.jpg",artist:"William BEECHEY",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_de_Pascal_Paoli_-_William_BEECHEY.jpg"},
+    rise:{slug:"battle-of-the-pyramids",name:"Battle of the Pyramids",img:"/images/encyclopedia/battle-of-the-pyramids.jpg",artist:"François-Louis-Joseph Watteau",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francois-Louis-Joseph_Watteau_001.jpg"},
+    deeds:{slug:"napoleonic-code",name:"Napoleonic Code",img:"/images/encyclopedia/napoleonic-code.jpg",artist:"DerHexer",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Speyer,_Historical_Museum_of_the_Palatinate_-_Code_civil_des_Fran%C3%A7ais.jpg"},
+    opponents:{slug:"pope-pius-vii",name:"Pope Pius VII",img:"/images/encyclopedia/pope-pius-vii.jpg",artist:"Thomas Lawrence",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Thomas_Lawrence_-_Portrait_of_Pope_Pius_VII.jpg"},
+    last:{slug:"battle-of-waterloo",name:"Battle of Waterloo",img:"/images/encyclopedia/battle-of-waterloo.jpg",artist:"William Sadler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Waterloo_1815.PNG"},
+    legacy:{slug:"napoleon-iii",name:"Napoleon III",img:"/images/encyclopedia/napoleon-iii.jpg",artist:"Alexandre Cabanel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexandre_Cabanel_002.jpg"}
+  },
+  "Nelson Mandela": {
+    early:{slug:"oliver-tambo",name:"Oliver Tambo",img:"/images/encyclopedia/oliver-tambo.jpg",artist:"Rob Croes for Anefo",licence:"CC BY-SA 3.0 nl",source:"https://commons.wikimedia.org/wiki/File:Oliver_Tambo_(1981).jpg"},
+    deeds:{slug:"f-w-de-klerk",name:"F. W. de Klerk",img:"/images/encyclopedia/f-w-de-klerk.jpg",artist:"Carol M. Highsmith",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:F.W._de_Klerk_wait_to_speak_in_Philadelphia,_Pennsylvania_LCCN2011634246_(cropped).tif"},
+    opponents:{slug:"freedom-charter",name:"Freedom Charter",img:"/images/encyclopedia/freedom-charter.jpg",artist:"Joonasl",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kliptown_Freedom_Charter_Memorial_2.jpg"},
+    last:{slug:"thabo-mbeki",name:"Thabo Mbeki",img:"/images/encyclopedia/thabo-mbeki.jpg",artist:"Lula Oficial",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Thabo_Mbeki,_August_2023.jpg"},
+    legacy:{slug:"martin-luther-king-jr",name:"Martin Luther King Jr.",img:"/images/encyclopedia/martin-luther-king-jr.jpg",artist:"Yoichi Okamoto",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Martin_Luther_King,_Jr._and_Lyndon_Johnson_(cropped).jpg"}
+  },
+  "Saladin": {
+    early:{slug:"imad-al-din-zengi",name:"Imad al-Din Zengi",img:"/images/encyclopedia/imad-al-din-zengi.jpg",artist:"Unknown author, 1237 CE",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ruler_in_Turkic_dress_(long_braids,_fur_hat,_boots,_fitting_coat),_in_the_Maqamat_of_al-Hariri,_1237_CE,_probably_Baghdad.jpg"},
+    rise:{slug:"amalric-i-of-jerusalem",name:"Amalric I of Jerusalem",img:"/images/encyclopedia/amalric-i-of-jerusalem.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amalric_receives_a_message_(cropped).jpg"},
+    deeds:{slug:"battle-of-hattin",name:"Battle of Hattin",img:"/images/encyclopedia/battle-of-hattin.jpg",artist:"Matthew Paris",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saladin_Guy.jpg"},
+    opponents:{slug:"baldwin-iv-of-jerusalem",name:"Baldwin IV of Jerusalem",img:"/images/encyclopedia/baldwin-iv-of-jerusalem.jpg",artist:"Guillermo de Tiro",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Baldwin_IV.png"},
+    last:{slug:"richard-i-of-england",name:"Richard I of England",img:"/images/encyclopedia/richard-i-of-england.jpg",artist:"Adam Bishop",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Church_of_Fontevraud_Abbey_Richard_I_effigy.jpg"},
+    legacy:{slug:"dante-alighieri",name:"Dante Alighieri",img:"/images/encyclopedia/dante-alighieri.jpg",artist:"Wolfgang Sauber",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bargello_-_Kapelle_Fresko_2a.jpg"}
+  },
+  "Simón Bolívar": {
+    early:{slug:"andres-bello",name:"Andrés Bello",img:"/images/encyclopedia/andres-bello.jpg",artist:"Raymond Monvoisin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AndresBello.jpg"},
+    rise:{slug:"francisco-de-miranda",name:"Francisco de Miranda",img:"/images/encyclopedia/francisco-de-miranda.jpg",artist:"Martin Tovar y Tovar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francisco_de_Miranda_by_Tovar_y_Tovar.jpg"},
+    deeds:{slug:"battle-of-boyaca",name:"Battle of Boyacá",img:"/images/encyclopedia/battle-of-boyaca.jpg",artist:"Martin Tovar y Tovar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batalla_de_Boyaca_de_Martin_Tovar_y_Tovar.jpg"},
+    opponents:{slug:"manuel-piar",name:"Manuel Piar",img:"/images/encyclopedia/manuel-piar.jpg",artist:"Pablo W. Hernández (1890-1928)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manuel_Carlos_Piar_2012_000.jpg"},
+    last:{slug:"francisco-de-paula-santander",name:"Francisco de Paula Santander",img:"/images/encyclopedia/francisco-de-paula-santander.jpg",artist:"Ricardo Acevedo Bernal",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Santander_by_Acevedo_Bernal.jpg"}
+  },
+  "Wu Zetian": {
+    early:{slug:"emperor-taizong-of-tang",name:"Emperor Taizong of Tang",img:"/images/encyclopedia/emperor-taizong-of-tang.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TangTaizong.jpg"},
+    last:{slug:"qianling-mausoleum",name:"Qianling Mausoleum",img:"/images/encyclopedia/qianling-mausoleum.jpg",artist:"Bairuilong",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Naitou-topparna.JPG"}
+  },
+  "Aristotle": {
+    early:{slug:"plato",name:"Plato",img:"/images/encyclopedia/plato.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Plato_Silanion_Musei_Capitolini_MC1377.png"},
+    rise:{slug:"philip-ii-of-macedon",name:"Philip II of Macedon",img:"/images/encyclopedia/philip-ii-of-macedon.jpg",artist:"Richard Mortel from Riyadh, Saudi Arabia",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Phillip_II,_king_of_Macedonia,_Roman_copy_of_Greek_original,_Ny_Carlsberg_Glyptotek,_Copenhagen_(36420294055).jpg"},
+    opponents:{slug:"galileo-galilei",name:"Galileo Galilei",img:"/images/encyclopedia/galileo-galilei.jpg",artist:"Justus Sustermans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Galileo_Galilei_(1564-1642)_RMG_BHC2700.tiff"},
+    legacy:{slug:"averroes",name:"Averroes",img:"/images/encyclopedia/averroes.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Andrea_di_bonaiuto,_apoteosi_di_san_tommaso_d%27aquino,_11_averro%C3%A8.jpg"}
+  },
+  "Charlemagne": {
+    early:{slug:"pepin-the-short",name:"Pepin the Short",img:"/images/encyclopedia/pepin-the-short.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:PippinImperialChronicleCorpusChristiCollegeMS373Fol14.jpg"},
+    rise:{slug:"desiderius",name:"Desiderius",img:"/images/encyclopedia/desiderius.jpg",artist:"CNG",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Tremisse_di_Re_Desiderio,_Dominio_Longobardo.jpg"},
+    deeds:{slug:"pope-leo-iii",name:"Pope Leo III",img:"/images/encyclopedia/pope-leo-iii.jpg",artist:"Various: Original: Unknown author Restoration: Ferdinando Fuga (1743)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pope_Leo_III_portrait_%E2%80%93_Triclinium_Leoninum.jpg"},
+    opponents:{slug:"widukind",name:"Widukind",img:"/images/encyclopedia/widukind.jpg",artist:"Lucas Cranach the Elder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:K%C3%B6nig_Widukind_von_Sachsen.jpg"},
+    last:{slug:"frederick-barbarossa",name:"Frederick Barbarossa",img:"/images/encyclopedia/frederick-barbarossa.jpg",artist:"Montecappio",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Friedrich_I._Barbarossa.jpg"},
+    legacy:{slug:"carolingian-minuscule",name:"Carolingian minuscule",img:"/images/encyclopedia/carolingian-minuscule.jpg",artist:"CRolker",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Carolina-muster-sw.png"}
+  },
+  "Joan of Arc": {
+    early:{slug:"charles-vi-of-france",name:"Charles VI of France",img:"/images/encyclopedia/charles-vi-of-france.jpg",artist:"Attributed to Mazarine Master",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_VI_de_France_-_Dialogues_de_Pierre_Salmon_-_Bib_de_Gen%C3%A8ve_MsFr165f4.jpg"},
+    opponents:{slug:"crossbow",name:"Crossbow",img:"/images/encyclopedia/crossbow.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Armborst,_1500-tal_-_Livrustkammaren_-_106793.tif"},
+    legacy:{slug:"pope-callixtus-iii",name:"Pope Callixtus III",img:"/images/encyclopedia/pope-callixtus-iii.jpg",artist:"Sano di Pietro",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Calixtus_III.jpg"}
+  },
+  "Martin Luther": {
+    rise:{slug:"albert-of-brandenburg",name:"Albert of Brandenburg",img:"/images/encyclopedia/albert-of-brandenburg.jpg",artist:"Lucas Cranach the Elder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cardinal_Albrecht_of_Brandenburg_(DE_SPSG_GKI10219).jpg"},
+    deeds:{slug:"diet-of-worms",name:"Diet of Worms",img:"/images/encyclopedia/diet-of-worms.jpg",artist:"Anton von Werner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%D0%9B%D1%8E%D1%82%D0%B5%D1%80_%D0%B2_%D0%92%D0%BE%D1%80%D0%BC%D1%81%D0%B5.jpg"},
+    opponents:{slug:"huldrych-zwingli",name:"Huldrych Zwingli",img:"/images/encyclopedia/huldrych-zwingli.jpg",artist:"Hans Asper",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulrich-Zwingli-1.jpg"},
+    last:{slug:"philip-melanchthon",name:"Philip Melanchthon",img:"/images/encyclopedia/philip-melanchthon.jpg",artist:"Lucas Cranach the Elder and workshop",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:PhilippMelanchthon.jpg"},
+    legacy:{slug:"johann-sebastian-bach",name:"Johann Sebastian Bach",img:"/images/encyclopedia/johann-sebastian-bach.jpg",artist:"Elias Gottlob Haussmann",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach.jpg"}
+  },
+  "Isaac Newton": {
+    deeds:{slug:"principia-mathematica-newton",name:"Philosophiæ Naturalis Principia Mathematica",img:"/images/encyclopedia/principia-mathematica-newton.jpg",artist:"The original uploader was Zhaladshar at English Wikisource.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Newton%27s_Principia_title_page.png"},
+    opponents:{slug:"gottfried-wilhelm-leibniz",name:"Gottfried Wilhelm Leibniz",img:"/images/encyclopedia/gottfried-wilhelm-leibniz.jpg",artist:"Christoph Bernhard Francke",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg"},
+    last:{slug:"westminster-abbey",name:"Westminster Abbey",img:"/images/encyclopedia/westminster-abbey.jpg",artist:"Antiquary",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Westminster_Abbey,_Westminster.jpg"},
+    legacy:{slug:"john-maynard-keynes",name:"John Maynard Keynes",img:"/images/encyclopedia/john-maynard-keynes.jpg",artist:"Unknown, dedicated to Bettmann Archive",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Maynard_Keynes_(1929).jpg"}
+  },
+  "Catherine the Great": {
+    early:{slug:"peter-iii-of-russia",name:"Peter III of Russia",img:"/images/encyclopedia/peter-iii-of-russia.jpg",artist:"Lucas Conrad Pfandzelt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Coronation_portrait_of_Peter_III_of_Russia_-1761.JPG"},
+    rise:{slug:"voltaire",name:"Voltaire",img:"/images/encyclopedia/voltaire.jpg",artist:"Nicolas de Largillière",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_(1694-1778)_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_(cropped).jpg"},
+    deeds:{slug:"russo-turkish-war-1768-1774",name:"Russo-Turkish War (1768–1774)",img:"/images/encyclopedia/russo-turkish-war-1768-1774.jpg",artist:"Stefano Torelli",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Torelli2.jpg"},
+    last:{slug:"grigory-potemkin",name:"Grigory Potemkin",img:"/images/encyclopedia/grigory-potemkin.jpg",artist:"After Johann Baptist von Lampi the Elder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Princepotemkin.jpg"},
+    legacy:{slug:"denis-diderot",name:"Denis Diderot",img:"/images/encyclopedia/denis-diderot.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Denis_Diderot_by_Louis-Michel_van_Loo.jpg"}
+  },
+  "Qin Shi Huang": {
+    early:{slug:"lu-buwei",name:"Lü Buwei",img:"/images/encyclopedia/lu-buwei.jpg",artist:"取自清代修《安徽旌德吕氏宗谱》",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%91%82%E4%B8%8D%E9%9F%8B.jpg"},
+    deeds:{slug:"lingqu",name:"Lingqu",img:"/images/encyclopedia/lingqu.jpg",artist:"Farm",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Lingqu_Canal.jpg"},
+    opponents:{slug:"jing-ke",name:"Jing Ke",img:"/images/encyclopedia/jing-ke.jpg",artist:"ReijiYamashina777",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jin_Ke_assassination_attempt_Wu_Family_Shrine.jpg"},
+    legacy:{slug:"sima-qian",name:"Sima Qian",img:"/images/encyclopedia/sima-qian.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Si_maqian.jpg"}
+  },
+  "Kublai Khan": {
+    early:{slug:"sorghaghtani-beki",name:"Sorghaghtani Beki",img:"/images/encyclopedia/sorghaghtani-beki.jpg",artist:"Rashid al-Din",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:TuluiWithQueenSorgaqtani.jpg"},
+    rise:{slug:"mongke",name:"Möngke",img:"/images/encyclopedia/mongke.jpg",artist:"1438 artist, Shiraz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:M%C3%B6ngke_enthroned._Tarikh-i_Jahangushay-i_Juvaini,_1438,_Shiraz.jpg"},
+    deeds:{slug:"marco-polo",name:"Marco Polo",img:"/images/encyclopedia/marco-polo.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frontispice_%C3%A9dition_de_Nuremberg_1477_(cropped).png"},
+    opponents:{slug:"ariq-boke",name:"Ariq Böke",img:"/images/encyclopedia/ariq-boke.jpg",artist:"Miskin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ariq_B%C3%B6ke.jpg"},
+    legacy:{slug:"paper-money",name:"Paper money",img:"/images/encyclopedia/paper-money.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jiao_zi.jpg"}
+  },
+  "Tokugawa Ieyasu": {
+    early:{slug:"imagawa-yoshimoto",name:"Imagawa Yoshimoto",img:"/images/encyclopedia/imagawa-yoshimoto.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ImagawaYoshimoto.jpg"},
+    rise:{slug:"oda-nobunaga",name:"Oda Nobunaga",img:"/images/encyclopedia/oda-nobunaga.jpg",artist:"狩野宗秀 (Kanō Sōshū, 1551 - 1601)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Odanobunaga.jpg"},
+    deeds:{slug:"battle-of-sekigahara",name:"Battle of Sekigahara",img:"/images/encyclopedia/battle-of-sekigahara.jpg",artist:"User LordAmeth on en.wikipediaCollection of The Town of Sekigahara Archive of History and Cultural Anthropology",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sekigaharascreen.jpg"},
+    opponents:{slug:"ikko-ikki",name:"Ikkō-ikki",img:"/images/encyclopedia/ikko-ikki.jpg",artist:"投稿者がファイル作成",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Turumaru_Flags.jpg"},
+    last:{slug:"yodo-dono",name:"Yodo-dono",img:"/images/encyclopedia/yodo-dono.jpg",artist:"奈良県立美術館収蔵『傳 淀殿畫像』 / Nara Museum of Art",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Yodo-dono_cropped.jpg"},
+    legacy:{slug:"hayashi-razan",name:"Hayashi Razan",img:"/images/encyclopedia/hayashi-razan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%9E%97%E7%BE%85%E5%B1%B1_%E5%83%8F.jpg"}
+  },
+  "Hammurabi": {
+    early:{slug:"sin-muballit",name:"Sin-muballit",img:"/images/encyclopedia/sin-muballit.jpg",artist:"Osama Shukir Muhammed Amin FRCP(Glasg)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Clay_tablet_and_its_sealed_clay_envelope._Legal_document,_listing_of_land_and_their_distribution_to_several_sons._From_Sippar,_Iraq._Old-Babylonian_period._Reign_of_Sin-Muballit,_1812-1793_BCE._Vorderasiatisches_Museum,_Berlin,_Germany.jpg"},
+    deeds:{slug:"code-of-hammurabi",name:"Code of Hammurabi",img:"/images/encyclopedia/code-of-hammurabi.jpg",artist:"Mbzt",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:P1050763_Louvre_code_Hammurabi_face_rwk.JPG"},
+    opponents:{slug:"eshnunna",name:"Eshnunna",img:"/images/encyclopedia/eshnunna.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Woman_head_Tell_Asmas_Louvre_AO12434.jpg"},
+    last:{slug:"samsu-iluna",name:"Samsu-iluna",img:"/images/encyclopedia/samsu-iluna.jpg",artist:"Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934; King, L. W. (Leonard William), 1869-1919",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Record_of_the_sale_of_land_in_the_reign_of_Samsu-Iluna.jpg"}
+  },
+  "Ramesses II": {
+    early:{slug:"horemheb",name:"Horemheb",img:"/images/encyclopedia/horemheb.jpg",artist:"Captmondo",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:StatueOfHoremhebAndTheGodHorus-DetailOfHoremheb01_KunsthistorischesMuseum_Nov13-10.jpg"},
+    rise:{slug:"pi-ramesses",name:"Pi-Ramesses",img:"/images/encyclopedia/pi-ramesses.jpg",artist:"Iri-en-achti",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kolossalstatue_Qantir.JPG"},
+    deeds:{slug:"abu-simbel",name:"Abu Simbel",img:"/images/encyclopedia/abu-simbel.jpg",artist:"youssef_alam",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ramsis,_Aswan_Governorate,_Egypt_-_panoramio.jpg"},
+    opponents:{slug:"battle-of-kadesh",name:"Battle of Kadesh",img:"/images/encyclopedia/battle-of-kadesh.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Egypt_Abou_Simbel6.jpg"},
+    last:{slug:"merneptah",name:"Merneptah",img:"/images/encyclopedia/merneptah.jpg",artist:"Hyspaosines",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Ramses_and_the_Pharaohs%27_Gold,_London_2026-03-06_-_149_(cropped).jpg"},
+    legacy:{slug:"johann-ludwig-burckhardt",name:"Johann Ludwig Burckhardt",img:"/images/encyclopedia/johann-ludwig-burckhardt.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Johann_Ludwig_Burckhardt.png"}
+  },
+  "Suleiman the Magnificent": {
+    early:{slug:"selim-i",name:"Selim I",img:"/images/encyclopedia/selim-i.jpg",artist:"Naḳḳāş ʿOs̠mān",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nakka%C5%9F_Selim.jpg"},
+    rise:{slug:"battle-of-mohacs",name:"Battle of Mohács",img:"/images/encyclopedia/battle-of-mohacs.jpg",artist:"unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:A_moh%C3%A1csi_csata_(Des_T%C3%BCrckischen_Keysers_Solymon_schlacht_-_So_mit_dem_K%C3%BCnig_von_Hungern_gethan,_Bamberg,_1526).jpg"},
+    opponents:{slug:"charles-v-holy-roman-emperor",name:"Charles V, Holy Roman Emperor",img:"/images/encyclopedia/charles-v-holy-roman-emperor.jpg",artist:"Attributed to Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Charles_V,_Holy_Roman_Emperor,_seated_(1500%E2%80%931558),_formerly_attributed_to_Titian_(Alte_Pinakothek,_Munich).jpg"},
+    last:{slug:"suleymaniye-mosque",name:"Süleymaniye Mosque",img:"/images/encyclopedia/suleymaniye-mosque.jpg",artist:"Hunanuk",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:S%C3%BCleymaniyeMosqueIstanbul_(cropped).jpg"}
+  },
+  "Harun al-Rashid": {
+    deeds:{slug:"house-of-wisdom",name:"House of Wisdom",img:"/images/encyclopedia/house-of-wisdom.jpg",artist:"Zereshk",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Maqamat_hariri.jpg"},
+    last:{slug:"al-mamun",name:"al-Ma'mun",img:"/images/encyclopedia/al-mamun.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Abbasid_Caliph_al-Ma%27mun.jpg"},
+    legacy:{slug:"one-thousand-and-one-nights",name:"One Thousand and One Nights",img:"/images/encyclopedia/one-thousand-and-one-nights.jpg",artist:"Al-Mubashshir ibn Fatik",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sughrat.jpg"}
+  },
+  "Rumi": {
+    early:{slug:"sanai",name:"Sana'i",img:"/images/encyclopedia/sanai.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%22Hakim_Sanai_addressing_the_Sultan_of_Ghazna%22_Folio_from_Hadiqat_al_Haqiqa_(The_Garden_of_Truth_and_The_Path_to_Trek)_MS_OR._1651,_fol._1b.png"},
+    deeds:{slug:"masnavi",name:"Masnavi",img:"/images/encyclopedia/masnavi.jpg",artist:"Georges Jansoone (JoJan)",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Turkey.Konya049.jpg"}
+  },
+  "Hannibal": {
+    early:{slug:"hamilcar-barca",name:"Hamilcar Barca",img:"/images/encyclopedia/hamilcar-barca.jpg",artist:"Max Karl Baldamus",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amilcare_Barca_(Ritratto).jpg"},
+    deeds:{slug:"battle-of-cannae",name:"Battle of Cannae",img:"/images/encyclopedia/battle-of-cannae.jpg",artist:"John Trumbull",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae_(Yale_University_Art_Gallery_scan).jpg"},
+    opponents:{slug:"cicero",name:"Cicero",img:"/images/encyclopedia/cicero.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"},
+    last:{slug:"scipio-africanus",name:"Scipio Africanus",img:"/images/encyclopedia/scipio-africanus.jpg",artist:"José Luiz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Sulla_(loan_from_Ny_Carlsberg_Glyptotek)_-_Glyptothek_-_Munich_-_Germany_2017.jpg"},
+    legacy:{slug:"libyssa",name:"Libyssa",img:"/images/encyclopedia/libyssa.jpg",artist:"William Neuheisel from DC, US",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Hanibal%27s_Tomb_(7471635270).jpg"}
+  },
+  "Haile Selassie": {
+    early:{slug:"menelik-ii",name:"Menelik II",img:"/images/encyclopedia/menelik-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Menelik_II_in_coronation_garb,_Emperor_of_Ethiopia.jpg"},
+    rise:{slug:"iyasu-v",name:"Iyasu V",img:"/images/encyclopedia/iyasu-v.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lidj_Iyasu.jpg"}
+  },
+  "Toussaint Louverture": {
+    deeds:{slug:"andre-rigaud",name:"André Rigaud",img:"/images/encyclopedia/andre-rigaud.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Andr%C3%A9_Rigaud.gif"},
+    opponents:{slug:"atlantic-slave-trade",name:"Atlantic slave trade",img:"/images/encyclopedia/atlantic-slave-trade.jpg",artist:"Plymouth Chapter of the Society for Effecting the Abolition of the Slave Trade",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Slaveshipposter.jpg"},
+    last:{slug:"henri-christophe",name:"Henri Christophe",img:"/images/encyclopedia/henri-christophe.jpg",artist:"Richard Evans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henri_Christophe.jpg"},
+    legacy:{slug:"haitian-revolution",name:"Haitian Revolution",img:"/images/encyclopedia/haitian-revolution.jpg",artist:"Aaron Martinet / Alphonse-Charles Masson",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Incendie_de_la_Plaine_du_Cap._Massacre_des_Blancs_par_les_esclaves_noirs_r%C3%A9volt%C3%A9s._France_militaire._Martinet_et_Masson.jpg"}
+  },
+  "George Washington": {
+    rise:{slug:"battle-of-the-monongahela",name:"Battle of the Monongahela",img:"/images/encyclopedia/battle-of-the-monongahela.jpg",artist:"Jacques Auguste Regnier",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Washington_the_soldier.jpg"},
+    deeds:{slug:"valley-forge",name:"Valley Forge",img:"/images/encyclopedia/valley-forge.jpg",artist:"John Ward Dunsmore",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Washington_and_Lafayette_at_Valley_Forge.jpg"},
+    opponents:{slug:"james-madison",name:"James Madison",img:"/images/encyclopedia/james-madison.jpg",artist:"John Vanderlyn",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:James_Madison.jpg"},
+    last:{slug:"john-adams",name:"John Adams",img:"/images/encyclopedia/john-adams.jpg",artist:"Gilbert Stuart",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Gilbert_Stuart,_John_Adams,_c._1800-1815,_NGA_42933.jpg"}
+  },
+  "Pachacuti": {
+    early:{slug:"manco-capac",name:"Manco Capac",img:"/images/encyclopedia/manco-capac.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Manco_Capac,_First_Inca,_1_of_14_Portraits_of_Inca_Kings.jpg"},
+    rise:{slug:"viracocha-inca",name:"Viracocha Inca",img:"/images/encyclopedia/viracocha-inca.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Viracocha,_Eighth_Inca,_1_of_14_Portraits_of_Inca_Kings_-_overall.jpg"},
+    deeds:{slug:"machu-picchu",name:"Machu Picchu",img:"/images/encyclopedia/machu-picchu.jpg",artist:"Draceane",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Machu_Picchu,_2023_(012).jpg"},
+    opponents:{slug:"tupac-inca-yupanqui",name:"Túpac Inca Yupanqui",img:"/images/encyclopedia/tupac-inca-yupanqui.jpg",artist:"Felipe Huaman Puma de Ayala",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tupac-inca-yupanqui-small.png"},
+    legacy:{slug:"quipu",name:"Quipu",img:"/images/encyclopedia/quipu.jpg",artist:"Lyndsaruell at English Wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Inca_Quipu.jpg"}
+  },
+  "Liliʻuokalani": {
+    early:{slug:"kamehameha-iii",name:"Kamehameha III",img:"/images/encyclopedia/kamehameha-iii.jpg",artist:"Hugo Stangenwald",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Photo_of_Kamehameha_III_(PP-97-7-003).jpg"},
+    rise:{slug:"kalakaua",name:"Kalākaua",img:"/images/encyclopedia/kalakaua.jpg",artist:"James J. Williams",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kingdavidkalakaua_dust.jpg"},
+    opponents:{slug:"lorrin-a-thurston",name:"Lorrin A. Thurston",img:"/images/encyclopedia/lorrin-a-thurston.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lorrin_A._Thurston,_1892.jpg"},
+    last:{slug:"iolani-palace",name:"ʻIolani Palace",img:"/images/encyclopedia/iolani-palace.jpg",artist:"Gage Skidmore from Surprise, AZ, United States of America",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Iolani_Palace_(51872681413).jpg"}
   }
 };
