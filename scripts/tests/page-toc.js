@@ -10,7 +10,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     const open = async (url, kids) => {
       const ctx = await b.newContext({ viewport: vp, isMobile: phone, hasTouch: phone });
       await ctx.addInitScript("try{localStorage.setItem('epoch-consent','no');localStorage.setItem('epoch-skin','classic');" + (kids ? "localStorage.setItem('epoch-kids','1');" : '') + "}catch(e){} window.__cls=0; try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(!e.hadRecentInput)window.__cls+=e.value})}).observe({type:'layout-shift',buffered:true})}catch(e){}");
-      const p = await ctx.newPage(); p.on('pageerror', e => errs.push(url + ' ' + e)); await p.goto(base + url); await p.waitForTimeout(1500); return p;
+      const p = await ctx.newPage(); p.on('pageerror', e => errs.push(url + ' ' + e)); await p.goto(base + url, { waitUntil: 'domcontentloaded' }); await p.waitForTimeout(1500); return p;
     };
     const st = p => p.evaluate(() => { const n = document.querySelector('.page-toc'), s = window.epochPageToc ? epochPageToc.state() : null; return { nav: !!n && !n.hidden, on: !!n && n.classList.contains('is-on'), vis: n ? getComputedStyle(n).visibility : '', links: n ? n.querySelectorAll('a').length : 0, cur: n && n.querySelector('[aria-current]') ? n.querySelector('[aria-current]').textContent : '', top: n ? Math.round(n.getBoundingClientRect().top) : null, navBottom: Math.round(document.getElementById('site-nav').getBoundingClientRect().bottom), heads: s ? s.heads.length : 0, wide: document.documentElement.scrollWidth - innerWidth, cls: +window.__cls.toFixed(4) }; });
     // a long entry

@@ -1396,7 +1396,13 @@ A walk of the local build at 1366 and 390 px (scratchpad audit.js: screens per p
   "Find a section" box (#hub-q: cards whose words begin with what is typed).
 - **N7** The home hero's three links became four tiles (.hero-ways: Read, Explore, Play, Today) and "Everything on one
   page" / About (.hero-more; /about must stay linked from the home page: it is drawn nowhere else in static markup).
-- Tests: scripts/tests/page-toc.js, long-lists.js. Still to do: N6 (a bottom bar on phones), E1-E5, R1-R5.
+- **N6 The phone bar** (shared-nav.js, .tab-bar; 600 px and below): Home, Search (openSiteSearch), Today, Play, Menu (clicks
+  #nav-hamburger after a tick, its own click stopped: a click outside the header closes the menu). Not on the tool
+  pages (games, quiz, atlas, timeline, write, flashcards, race, inventions, explorer, connections, faiths, compare,
+  governance). It steps aside while a field has the focus (the keyboard). body.has-tab-bar: 56 px of padding at the
+  foot, Back to top hidden (the row under the header has Top), the Listen, journey and cookie bars stand above it.
+- Tests: scripts/tests/page-toc.js, long-lists.js, phone-bar.js (their page loads wait for domcontentloaded: the home
+  page's load event sometimes never came in a test). Still to do: E1-E5, R1-R5.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

@@ -1392,6 +1392,34 @@ function initNav(activePage) {
     window.epochPageToc = { rebuild: function () { built = false; set(); }, state: function () { return { heads: heads.map(function (h) { return h.id; }), on: on, cur: cur }; } };
   })();
 
+  // ── The phone bar (Nov 2026): Home, Search, Today, Play and Menu at the thumb, on screens of 600 px and below (the
+  // styles show it only there). Not on the pages that are tools with controls of their own at the foot (the games, the
+  // atlas, the timeline …). It gives way to the keyboard while a field is being typed in. The other bars at the foot
+  // (Listen, a path's journey, the cookie question) stand above it: body.has-tab-bar in shared.css.
+  (function () {
+    var p = location.pathname;
+    if (/^\/(games|quiz|atlas|timeline|write|flashcards|race|inventions|explorer|connections|faiths|compare|governance|today-card)$/.test(p) || !document.getElementById('site-nav')) return;
+    var ic = function (d) { return '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>'; };
+    var here = p === '/' ? 'home' : /^\/(today-in-history|now|advent)/.test(p) ? 'today' : /^\/(kids|weekly|passport)/.test(p) ? 'play' : '';
+    var item = function (k, href, label, d) { return '<a href="' + href + '"' + (here === k ? ' aria-current="page"' : '') + '>' + ic(d) + '<span>' + label + '</span></a>'; };
+    var bar = document.createElement('nav'); bar.className = 'tab-bar'; bar.setAttribute('aria-label', 'Quick links');
+    bar.innerHTML = item('home', '/', 'Home', '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>') +
+      '<button type="button" data-tab="search">' + ic('<circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>') + '<span>Search</span></button>' +
+      item('today', '/today-in-history/', 'Today', '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/>') +
+      item('play', '/games', 'Play', '<rect x="3" y="7" width="18" height="11" rx="4"/><path d="M8 11v3M6.5 12.5h3M15.5 12h.01M18 13.5h.01"/>') +
+      '<button type="button" data-tab="menu" aria-controls="nav-dropdown">' + ic('<path d="M4 7h16M4 12h16M4 17h16"/>') + '<span>Menu</span></button>';
+    document.body.appendChild(bar); document.body.classList.add('has-tab-bar');
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('[data-tab]'); if (!b) return;
+      e.stopPropagation();   // a click outside the header closes the menu: this one must not reach that listener
+      if (b.getAttribute('data-tab') === 'search') { if (window.openSiteSearch) window.openSiteSearch(); }
+      else { var hb = document.getElementById('nav-hamburger'); if (hb) setTimeout(function () { hb.click(); }, 0); }
+    });
+    // a field in use: the keyboard takes the foot of the screen, the bar steps aside
+    document.addEventListener('focusin', function (e) { if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) && !/^(checkbox|radio|button|range)$/.test(e.target.type || '')) bar.classList.add('is-away'); });
+    document.addEventListener('focusout', function () { bar.classList.remove('is-away'); });
+  })();
+
   // ── Reading progress: a thin gold line on the long reading pages ─────────────
   (function () {
     if (!/^\/(empire|religion|language|culture|movement|government|ideology|work|encyclopedia|essays|articles)\/[a-z0-9-]+$/.test(location.pathname) || location.pathname === '/encyclopedia/glossary') return;
