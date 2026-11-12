@@ -2417,6 +2417,21 @@ So the work is to rank higher, not only to be clicked more:
 - To measure: in the next export compare position and click rate of these 131 pages with the entries of the same band
   that were not deepened (the 19 skipped and the 58 without a confirmed article).
 
+## A script that does not arrive (12 Nov 2026)
+The user's screenshots showed the home page with its menu but no globe, an empty Daily Quiz and empty Born on This Day
+tiles: exactly the page with shared-data.js missing (EMPIRES undefined, the page's one big inline script stops at its
+first use). shared-data.js, shared-nav.js and css/ come from the origin on every visit (Cloudflare no-store since 11 Nov),
+and the host drops a connection now and then, more so while a deploy reads the whole site. Since then:
+- index: the page's script is homeMain(), run by a small loader after it has asked again (in order, up to three
+  times, "?again=N") for any of its five files that did not define what it should (the files and versions are read
+  from the script tags). The globe and History Now start after the load event or after six seconds, whichever comes
+  first (a hanging picture kept the load event from coming). Sections hidden for the scroll reveal are all shown after
+  five seconds.
+- sw.js (2026-11-13b): fetchAgain asks twice more for a file whose connection failed.
+- scripts/tests/home-recovers.js (8 checks). The other hand pages that need shared-data.js (profiles, explorer, quiz,
+  faiths, passport, search, compare, race) and every generated page (shared-nav.js, enc-page.js) have no such loader yet.
+- The lasting cure is the owner's: the Cloudflare purge secrets, so that these files can be kept at the edge again.
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their
