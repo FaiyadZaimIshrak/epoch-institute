@@ -160,6 +160,7 @@ initNav('games');
     if (g === 'line') { r = G['line-' + Math.max(1, dayNo(10, 15))]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'cipher') { r = G['cipher-' + Math.max(1, dayNo(10, 14))]; return r ? [r.gave ? 'Answer shown today' : r.done ? 'Solved today' : 'In progress', !!(r.done || r.gave)] : null; }
     if (g === 'lasted') return G['first-lasted'] ? ['Your best: ' + G['first-lasted'] + ' in a row', false] : null;
+    if (g === 'born') return G['hunt-born'] ? ['Your best: ' + G['hunt-born'] + ' of 500', false] : null;
     return null;
   }
   function paintLobby() {
@@ -180,7 +181,7 @@ initNav('games');
   function openHash() {   // the address names a game (#words-egypt, #first-lasted), else the lobby
     var h = location.hash.slice(1).split('-'), sub = h.slice(1).join('-');
     if (GAMES.indexOf(h[0]) < 0) { showLobby(false); return; }
-    if (h[0] === 'first' && !sub && isLasted()) sub = 'daily';   // the plain address leaves Longer or Shorter?
+    if (!sub) Object.keys(MODE_TABS).forEach(function (k) { if (MODE_TABS[k][0] === h[0] && MODE_TABS[k][1]()) sub = MODE_TABS[k][2]; });   // the plain address leaves Longer or Shorter? or Born Where?
     showGame(h[0], false, sub); markTab();
   }
   $('gm-back').addEventListener('click', function () { showLobby(true); });
@@ -204,19 +205,27 @@ initNav('games');
   }
   // "Longer or Shorter?" has a tab of its own, though it is a mode of Which Came First? (tab-lasted opens game-first in
   // that mode; a mode among six buttons inside another game was not found). The marked tab follows the mode.
-  var TABS = GAMES.slice(); TABS.splice(GAMES.indexOf('first') + 1, 0, 'lasted');
+  // Born Where? likewise is Globe Hunt's third pool with tab-born. MODE_TABS: tab -> [its game, is the mode on?, the
+  // game's own mode to go back to].
+  var TABS = GAMES.slice(); TABS.splice(GAMES.indexOf('first') + 1, 0, 'lasted'); TABS.splice(TABS.indexOf('hunt') + 1, 0, 'born');
   function isLasted() { return !!(MODS.first && MODS.first.lasted && MODS.first.lasted()); }
-  function tabNow() { return current === 'first' && isLasted() ? 'lasted' : current; }
+  var MODE_TABS = { lasted: ['first', isLasted, 'daily'], born: ['hunt', function () { return Hunt.born(); }, 'famous'] };
+  function tabNow() { for (var k in MODE_TABS) { if (current === MODE_TABS[k][0] && MODE_TABS[k][1]()) return k; } return current; }
   function markTab(focus) {
-    if (!current) return; var on = tabNow(), f = $('tab-first'), l = $('tab-lasted'), tb = $('tab-' + on);
-    if (current === 'first') { f.setAttribute('aria-selected', String(on === 'first')); f.tabIndex = on === 'first' ? 0 : -1; }
-    l.setAttribute('aria-selected', String(on === 'lasted')); l.tabIndex = on === 'lasted' ? 0 : -1;
+    if (!current) return; var on = tabNow(), tb = $('tab-' + on), host = false;
+    Object.keys(MODE_TABS).forEach(function (k) {
+      var m = MODE_TABS[k], l = $('tab-' + k); l.setAttribute('aria-selected', String(on === k)); l.tabIndex = on === k ? 0 : -1;
+      if (current === m[0]) { host = true; var f = $('tab-' + m[0]); f.setAttribute('aria-selected', String(on === m[0])); f.tabIndex = on === m[0] ? 0 : -1; }
+    });
     moveInk(tb); if (focus) tb.focus();
-    if (on === 'lasted' || on === 'first') { if (tb.parentNode.scrollWidth > tb.parentNode.clientWidth) tb.parentNode.scrollTo({ left: tb.offsetLeft - (tb.parentNode.clientWidth - tb.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' }); try { history.replaceState(null, '', '#first' + (on === 'lasted' ? '-lasted' : '')); } catch (e) {} }
+    if (host) {
+      if (tb.parentNode.scrollWidth > tb.parentNode.clientWidth) tb.parentNode.scrollTo({ left: tb.offsetLeft - (tb.parentNode.clientWidth - tb.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' });
+      try { history.replaceState(null, '', '#' + (MODE_TABS[on] ? MODE_TABS[on][0] + '-' + on : on)); } catch (e) {}
+    }
   }
   function openTab(id, focus) {
-    if (id === 'lasted') showGame('first', focus, 'lasted');
-    else showGame(id, focus, id === 'first' && isLasted() ? 'daily' : undefined);   // the plain tab leaves the mode
+    if (MODE_TABS[id]) showGame(MODE_TABS[id][0], focus, id);
+    else { var back; Object.keys(MODE_TABS).forEach(function (k) { if (MODE_TABS[k][0] === id && MODE_TABS[k][1]()) back = MODE_TABS[k][2]; }); showGame(id, focus, back); }   // the plain tab leaves the mode
     markTab(focus);
   }
   TABS.forEach(function (g, i) {
@@ -480,6 +489,18 @@ initNav('games');
     var H = { ready: false, loading: false, round: 0, score: 0, results: [], target: null, answered: false, hint: false,
       rot: [-15, -20], k: 1, vel: [0, 0], dpr: 1, R: 100 };
     var pools = { famous: [], all: [] }, regions = [], view = null, anim = null, raf = null, ptrs = {}, drag = null, level = null, good = [-15, -20, 1], used = {};
+    // Born Where? (Nov 2026): a third pool, the birthplaces of well-known people (born-data.js, loaded when first chosen);
+    // it has a tab and a card of its own (MODE_TABS below). pend: a level asked for before the globe is ready.
+    var pend = null, HOW0 = null;
+    function isBorn() { return level ? level() === 'born' : (pend || best('lvl-hunt')) === 'born'; }
+    function ask(t) { return t.born ? 'where was <b>' + escHtml(t.n) + '</b> <span class="gm-hunt-d">(' + escHtml(t.d) + ')</span> born?' : 'where was the <b>' + escHtml(t.n) + '</b>?'; }
+    function loadBorn() {
+      $('hunt-q').textContent = 'Loading the people…';
+      (window.BORN ? Promise.resolve() : loadScript(BORN_SRC)).then(function () {
+        pools.born = BORN.map(function (r) { return { n: r[0], d: r[1], lat: r[2], lng: r[3], g: r[4], gn: r[4], place: r[5], slug: r[6], born: 1 }; });
+        if (isBorn()) newGame();
+      }).catch(function () { $('hunt-q').textContent = 'The people could not load. Check your connection and try again.'; });
+    }
     function loadScript(src) { return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
     function start() {
       if (H.ready || H.loading) return;
@@ -505,7 +526,8 @@ initNav('games');
       grat = d3.geoGraticule().step([20, 20])();
       proj = d3.geoOrthographic().clipAngle(90);
       ctx = cv.getContext('2d'); path = d3.geoPath(proj, ctx);
-      level = seg('hunt', 'famous', function () { newGame(); });
+      level = seg('hunt', 'famous', function () { newGame(); markTab(); });
+      if (pend) { var pv = pend; pend = null; level.set(pv); }
       size(); window.addEventListener('resize', size);
       wire();
       new MutationObserver(function () { draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
@@ -656,8 +678,8 @@ initNav('games');
       $('hunt-hint').addEventListener('click', function () {
         if (H.hint || H.answered || !H.target) return;
         H.hint = true; $('hunt-hint').disabled = true;
-        var reg = regions[H.target.g];
-        $('hunt-q').innerHTML = 'Round ' + H.round + ' of 5: where was the <b>' + escHtml(H.target.n) + '</b>? <span class="gm-hint-text">Hint: ' + (reg ? 'somewhere in ' + escHtml(reg) : 'no region recorded') + '</span>';
+        var reg = H.target.gn || regions[H.target.g];
+        $('hunt-q').innerHTML = 'Round ' + H.round + ' of 5: ' + ask(H.target) + ' <span class="gm-hint-text">Hint: ' + (reg ? 'somewhere in ' + escHtml(reg) : 'no region recorded') + '</span>';
       });
       $('hunt-new').addEventListener('click', function () { if (H.ready) newGame(); });
     }
@@ -680,6 +702,9 @@ initNav('games');
     }
     // a game visits five different regions of the world, in a fresh order, and never asks for a state twice
     function newGame() {
+      var how = $('game-hunt').querySelector('.gm-howto'); if (HOW0 === null) HOW0 = how.textContent;
+      how.textContent = isBorn() ? 'A person of history is named: find where they were born. Drag to turn the globe, zoom with the wheel or the buttons, and tap to place your guess. Five people from five parts of the world, up to 100 points each.' : HOW0;
+      if (isBorn() && !pools.born) { loadBorn(); return; }
       H.round = 0; H.score = 0; H.results = []; view = null; used = {};
       var pool = pools[level()] || pools.famous, byReg = {};
       pool.forEach(function (p) { byReg[p.g] = (byReg[p.g] || 0) + 1; });
@@ -696,7 +721,7 @@ initNav('games');
       H.target = left[Math.floor(Math.random() * left.length)]; used[H.target.n] = 1;
       $('hunt-res').hidden = true; $('hunt-hint').hidden = false; $('hunt-hint').disabled = false;
       var q = $('hunt-q'); q.classList.remove('gm-enter'); void q.offsetWidth; q.classList.add('gm-enter');
-      q.innerHTML = 'Round ' + H.round + ' of 5: where was the <b>' + escHtml(H.target.n) + '</b>?';
+      q.innerHTML = 'Round ' + H.round + ' of 5: ' + ask(H.target);
       paintRounds();
       // a fresh view that does not give the answer away
       turnTo(Math.random() * 360 - 180, Math.random() * 50 - 10, 1, 900);
@@ -722,7 +747,7 @@ initNav('games');
       var verdict = km <= 300 ? 'Bullseye!' : km <= 1000 ? 'Very close!' : km <= 2500 ? 'Warm.' : 'A long way off.';
       Sfx.play(pts >= 40 ? 'good' : 'bad');
       var res = $('hunt-res');
-      res.innerHTML = '<p class="gm-res-v">' + verdict + '</p><p class="gm-res-d"><b>' + escHtml(H.target.n) + '</b> lay <b class="gm-res-km">0</b> km from your pin · <b class="gm-res-pts">+0</b> points' + (H.hint ? ' <span class="gm-res-hint">(hint −20)</span>' : '') + '</p>' +
+      res.innerHTML = '<p class="gm-res-v">' + verdict + '</p><p class="gm-res-d">' + (H.target.born ? '<a href="/encyclopedia/' + escHtml(H.target.slug) + '"><b>' + escHtml(H.target.n) + '</b></a> was born in <b>' + escHtml(H.target.place) + '</b>, ' : '<b>' + escHtml(H.target.n) + '</b> lay ') + '<b class="gm-res-km">0</b> km from your pin · <b class="gm-res-pts">+0</b> points' + (H.hint ? ' <span class="gm-res-hint">(hint −20)</span>' : '') + '</p>' +
         '<button type="button" class="hero-cta gm-res-next">' + (H.round < 5 ? 'Next round &rarr;' : 'See your score') + '</button>';
       res.hidden = false; res.classList.remove('gm-enter'); void res.offsetWidth; res.classList.add('gm-enter');
       countUp(res.querySelector('.gm-res-km'), km, 800);
@@ -742,14 +767,17 @@ initNav('games');
       d.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + H.score + ' of 500 points</p>' + (isBest ? '<p class="gm-newbest">New best!</p>' : '') +
         '<ol class="gm-sum">' + H.results.map(function (r) { return '<li><span>' + escHtml(r.n) + '</span><span>' + r.km.toLocaleString('en-GB') + ' km</span><b>+' + r.pts + '</b></li>'; }).join('') + '</ol>' +
         '<div class="gm-done-row">' + shareBtn() + '<button type="button" class="hero-cta gm-done-btn">Play again</button></div></div>';
-      share(d, 'Globe Hunt: ' + H.score + ' of 500 points at The Epoch Institute', 'hunt', { title: 'Globe Hunt', score: String(H.score), unit: 'of 500 points', stars: s,
-        rows: H.results.map(function (r) { return [r.n, r.km.toLocaleString('en-GB') + ' km', '+' + r.pts]; }), note: lvl === 'all' ? 'All states' : 'Famous states' });
+      var gname = lvl === 'born' ? 'Born Where?' : 'Globe Hunt';
+      share(d, gname + ': ' + H.score + ' of 500 points at The Epoch Institute', lvl === 'born' ? 'hunt-born' : 'hunt', { title: gname, score: String(H.score), unit: 'of 500 points', stars: s,
+        rows: H.results.map(function (r) { return [r.n, r.km.toLocaleString('en-GB') + ' km', '+' + r.pts]; }), note: lvl === 'born' ? 'Where they were born' : lvl === 'all' ? 'All states' : 'Famous states' });
       d.hidden = false; confetti(d);
       d.querySelector('.gm-done-btn').addEventListener('click', newGame);
       view = null; draw();
     }
-    return { start: start, refresh: function () { if (H.ready) size(); } };
+    function show(sub) { if (!sub) return; if (level) level.set(sub); else pend = sub; }   // #hunt-born, or the plain tab leaving it (famous)
+    return { start: start, refresh: function () { if (H.ready) size(); }, show: show, sub: show, born: isBorn };
   })();
+  MODS.hunt = Hunt;
 
   // ── Which Came First? ────────────────────────────────────────────────────────
   // two curated pictures; tap the earlier one. The gaps narrow as the streak grows (a ladder, not a lottery), no

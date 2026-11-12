@@ -1774,6 +1774,8 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 @media print {
 .tab-bar { display: none; }
 }
+.gm-hunt-d { font-weight: 400; color: var(--muted); white-space: nowrap; }
+.gm-res-d a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--gold); }
 .page-toc { position: fixed; left: 0; right: 0; top: 64px; z-index: 880; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); visibility: hidden; transition: transform 0.2s ease, visibility 0s linear 0.2s; }
 .page-toc.is-on { transform: none; visibility: visible; transition: transform 0.2s ease; }
 .page-toc[hidden] { display: none; }

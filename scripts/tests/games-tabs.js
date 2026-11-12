@@ -8,7 +8,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     const p = await ctx.newPage(); p.on('pageerror', e => errs.push(String(e))); const W = vp.width + ': ';
     await p.goto(base + '/games#pairs'); await p.waitForTimeout(1500);
     let s = await st(p); ok(W + 'opens on Emblem Pairs', s.sel.join() === 'tab-pairs' && s.inkOn && s.wide <= 0, s);
-    const names = await p.$$eval('.gm-tab .gm-tab-t', e => e.map(x => x.textContent)); ok(W + 'the bar names Longer or Shorter? after Which Came First?', names.length >= 14 && names[5] === 'Longer or Shorter?' && names[4] === 'Which Came First?', names);
+    const names = await p.$$eval('.gm-tab .gm-tab-t', e => e.map(x => x.textContent)); ok(W + 'the bar names Longer or Shorter? after Which Came First?', names.length >= 14 && names[names.indexOf('Which Came First?') + 1] === 'Longer or Shorter?' && names[names.indexOf('Globe Hunt') + 1] === 'Born Where?', names);
     await p.click('#tab-lasted'); await p.waitForTimeout(900);
     s = await st(p); ok(W + 'its tab opens the game', s.sel.join() === 'tab-lasted' && s.inkOn && s.shown.join() === 'game-first' && s.lasted && s.cards === 2 && s.pressed === 'Longer or shorter' && s.hash === '#first-lasted', s);
     await p.screenshot({ path: path.join(out, 'lasted-tab-' + vp.width + '.png') });

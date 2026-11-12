@@ -1416,7 +1416,16 @@ A walk of the local build at 1366 and 390 px (scratchpad audit.js: screens per p
   /encyclopedia/quotations lists the speakers by age ($EAT: before 500, 1500, 1800, after) and links that section; Themes
   menu (Societies and ideas), footer, search. The words are the games' pool: adding quotations (fetch-quotes.ps1) adds
   them here at the next full build.
-  Still to do: E2, E4, E5, R1-R5.
+- **E2 Born Where?** (/games#hunt-born): Globe Hunt's third pool (the seg's "Born where?"), with a tab (#tab-born,
+  aria-controls game-hunt) and a lobby card of its own. games.js: MODE_TABS {tab: [its game, is the mode on?, the game's
+  own mode to go back to]} now carries both lasted and born (tabNow, markTab, openTab, openHash read it: a further mode
+  with its own tab is one more line); Hunt has isBorn, ask ("where was X (dates) born?"), loadBorn (born-data.js when
+  first chosen), show/sub (a level asked for before the globe is ready waits in pend) and MODS.hunt. The answer names
+  the birthplace and links the entry; best score hunt-born; the 17th game of My Passport. scripts/tools/make-born-game.js
+  (run by the builder before make-today.js) writes born-data.js (BORN [name, dates, lat, lng, region, place, slug]: 494
+  people of weight 6 or more whose birthplace has a point and is not a country or broad land, LANDS) and stamps
+  BORN_SRC. games.js?v=20, passport.js?v=14; scripts/tests/born-where.js.
+  Still to do: E4, E5, R1-R5.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

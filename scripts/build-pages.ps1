@@ -4906,6 +4906,9 @@ Say ("what's new: {0} release notes, {1} new pages in 30 days" -f $wnNotes.Count
 # .github/workflows/news.yml writes /feeds/news.json twice a day.
 foreach ($nwL in (& $songExe "$PSScriptRoot\tools\make-now.js")) { Say $nwL }
 if ($LASTEXITCODE) { throw 'History Now: scripts/tools/make-now.js failed (above)' }
+# Born Where? (a mode of Globe Hunt): born-data.js from people-data.js and scripts/entry-places.tsv
+foreach ($bwL in (& $songExe "$PSScriptRoot\tools\make-born-game.js")) { Say $bwL }
+if ($LASTEXITCODE) { throw 'Born Where?: scripts/tools/make-born-game.js failed (above)' }
 # Today at the Institute (/today): the day's things in one place, written by scripts/tools/make-today.js
 foreach ($tdL in (& $songExe "$PSScriptRoot\tools\make-today.js")) { Say $tdL }
 if ($LASTEXITCODE) { throw 'Today: scripts/tools/make-today.js failed (above)' }
