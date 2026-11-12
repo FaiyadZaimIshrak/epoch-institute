@@ -1177,6 +1177,30 @@ function PersonPlaces($e) {
   }
   return '<section class="enc-where enc-born"><h2 class="enc-section-title">Born and died</h2><p class="enc-born-p">' + $txt + '<span class="enc-born-src">Places as Wikidata records them.</span></p>' + $fig + "</section>`n"
 }
+# In their words (Nov 2026): the quotations of data/quotes.json (imported word for word by scripts/fetch-quotes.ps1 for
+# Who Said It? and Quote Cipher; public-domain texts and translations) on their speakers' entry pages: three, the rest
+# folded, each with its work, translator, the note on how the words reach us, and its source. /encyclopedia/quotations
+# lists the speakers by age. Script-level names start with QB / qq (names ignore case).
+$QBY = @{}
+if (Test-Path "$Repo\data\quotes.json") {
+  foreach ($qq in @($JSS.DeserializeObject([IO.File]::ReadAllText("$Repo\data\quotes.json", $U8)))) {
+    $qqs = [string]$qq['speaker']; if (-not $BY.ContainsKey($qqs)) { continue }
+    if (-not $QBY.ContainsKey($qqs)) { $QBY[$qqs] = New-Object Collections.Generic.List[object] }; $QBY[$qqs].Add($qq)
+  }
+}
+function QuoteHtml($qq) {
+  $qf = Hx ([string]$qq['work']); if ($qq['credit']) { $qf += ' &#183; ' + (Hx ([string]$qq['credit'])) }
+  if ($qq['note']) { $qf += ' &#183; ' + (Hx ([string]$qq['note'])) }
+  if ($qq['url']) { $qf += ' &#183; <a href="' + (Hx ([string]$qq['url'])) + '" rel="noopener">' + (Hx $(if ($qq['source']) { [string]$qq['source'] } else { 'Source' })) + '</a>' }
+  return '<blockquote class="enc-q"><p>&#8220;' + (Hx ([string]$qq['text'])) + '&#8221;</p><footer>' + $qf + '</footer></blockquote>'
+}
+function EntryQuotes($e) {
+  $ql = $QBY[$e.slug]; if (-not $ql) { return '' }
+  $qa = $ql.ToArray(); $qn = $qa.Count; $qh = ''
+  for ($qi = 0; $qi -lt [Math]::Min(3, $qn); $qi++) { $qh += QuoteHtml $qa[$qi] }
+  if ($qn -gt 3) { $qm = ''; for ($qi = 3; $qi -lt $qn; $qi++) { $qm += QuoteHtml $qa[$qi] }; $qh += '<details class="enc-q-more"><summary>' + ($qn - 3) + ' more</summary>' + $qm + '</details>' }
+  return '<section class="enc-words" id="in-their-words"><h2 class="enc-section-title">In their words</h2>' + $qh + '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/quotations">Quotations from ' + $QBY.Count + ' people &rarr;</a></p>' + "</section>`n"
+}
 function WdLabel([string]$key) {
   $wl = $WDDESC[$key]; if (-not $wl) { return $null }
   return $wl.Substring(0, 1).ToUpperInvariant() + $wl.Substring(1)
@@ -1227,6 +1251,7 @@ foreach ($e in $ENT) {
   }
   [void]$body.Append((EntryLocator $e))
   if ($e.type -eq 'person') { [void]$body.Append((PersonPlaces $e)) }
+  [void]$body.Append((EntryQuotes $e))
   $thin = ((WordsIn $e.desc) + $(if ($eQuotes) { WordsIn ([regex]::Replace($eQuotes, '<a [^>]*>.*?</a>', ' ')) } else { 0 })) -lt $THINW
   if ($thin) { $nThin++ }
   if ($invNd) {   # its place on the inventions tree: when, where, who, and the inventions before and after it
@@ -3894,6 +3919,35 @@ if ($INVN.Count) {
 }
 
 # ══════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════
+# Quotations: /encyclopedia/quotations (Nov 2026), the speakers of data/quotes.json by age, each linking the "In their
+# words" section of the speaker's entry
+# ══════════════════════════════════════════════════════════════════
+Say 'quotations'
+$qbAges = [ordered]@{ 'The ancient world' = New-Object Collections.Generic.List[object]; 'The medieval world' = New-Object Collections.Generic.List[object]; 'The early modern world' = New-Object Collections.Generic.List[object]; 'The modern world' = New-Object Collections.Generic.List[object] }
+$qbTotal = 0
+foreach ($qbK in @($QBY.Keys | Sort-Object)) {
+  $qbY = if ($EAT.ContainsKey($qbK)) { $EAT[$qbK] } else { 99999 }
+  $qbA = if ($qbY -lt 500) { 'The ancient world' } elseif ($qbY -lt 1500) { 'The medieval world' } elseif ($qbY -lt 1800) { 'The early modern world' } else { 'The modern world' }
+  $qbAges[$qbA].Add([pscustomobject]@{ e = $BY[$qbK]; n = $QBY[$qbK].Count; y = $qbY }); $qbTotal += $QBY[$qbK].Count
+}
+$crumb = Crumbs @(@('Home', '/'), @('Encyclopedia', '/encyclopedia/'), @('Quotations', $null))
+$sb = New-Object Text.StringBuilder(120000)
+[void]$sb.Append('<main id="main" class="enc-page ref-page">' + "`n<div class=`"enc-wrap`">`n" + $crumb[0] + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Quotations</h1><p class="ref-lede">' + $qbTotal.ToString('N0', $INV) + ' quotations from ' + $QBY.Count + ' people of history, each in words taken from a named edition, with its work, its translator and its source. Choose a speaker to read them.</p></header>' + "`n")
+foreach ($qbA in $qbAges.Keys) {
+  $qbG = @($qbAges[$qbA] | Sort-Object @{ e = { $_.y } }, @{ e = { $_.e.name } }); if (-not $qbG.Count) { continue }
+  [void]$sb.Append('<section class="ref-group" id="' + ([EpochBuild.W]::ToSlug($qbA)) + '"><h2>' + (Hx $qbA) + ' <span class="n">' + $qbG.Count + '</span></h2><ul class="enc-seealso">')
+  foreach ($qbO in $qbG) { [void]$sb.Append('<li><a href="/encyclopedia/' + $qbO.e.slug + '#in-their-words">' + $(if ($qbO.e.img) { '<img src="' + (ThumbOf $qbO.e.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $qbO.e) }) + '<span><span class="nm">' + (Hx $qbO.e.name) + '</span><span class="tp">' + (Hx ($(if ($qbO.e.dates) { $qbO.e.dates + ' · ' } else { '' }) + $qbO.n + $(if ($qbO.n -eq 1) { ' quotation' } else { ' quotations' }))) + '</span></span></a></li>') }
+  [void]$sb.Append("</ul></section>`n")
+}
+[void]$sb.Append('<p class="ref-note">The words are never typed from memory: each quotation is imported from a public-domain text or translation, named under it. Where the words reach us through another writer (a historian&#8217;s account, a character in a dialogue), the note says so. The same quotations are the pool of the daily games <a href="/games#said">Who Said It?</a> and <a href="/games#cipher">Quote Cipher</a>.</p>' + "`n</div>`n</main>`n")
+$title = "Quotations: " + $qbTotal.ToString('N0', $INV) + " Lines from History, with Their Sources — The Epoch Institute"
+$desc = [EpochBuild.W]::Summary("$($qbTotal.ToString('N0', $INV)) quotations from $($QBY.Count) people of history, from the ancient world to the twentieth century, each from a named public-domain edition with its work, translator and source.", 155)
+$ld = $crumb[1] + ',{"@type":"CollectionPage","name":"Quotations","url":' + (Js "$SITE/encyclopedia/quotations") + ',"description":' + (Js $desc) + '}'
+Emit '/encyclopedia/quotations' (Page @{ title = $title; desc = $desc; path = '/encyclopedia/quotations'; type = 'website'; ld = $ld; nav = 'encyclopedia'; body = $sb.ToString() })
+Say "quotations: $qbTotal by $($QBY.Count) people"
+
 # Ruling houses: /encyclopedia/dynasties (Nov 2026), every house of scripts/entry-houses.tsv (its people from Wikidata's
 # P53) by the region most of its people belong to (PersonRegion), oldest first, each with its own picture, else its best-known member's
 # ══════════════════════════════════════════════════════════════════
@@ -4636,7 +4690,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
   @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'), @('Ruling Houses and Dynasties', '/encyclopedia/dynasties', 'dynasties|ruling houses|royal houses|royal families|dynasty|house of'),
-  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('History Now', '/now', 'now|history now|news|history news|archaeology news|headlines|in the news|anniversaries|coming anniversaries|upcoming anniversaries'), @('Your Birthday in History', '/today-in-history/#birthday', 'birthday|my birthday|born on this day|what happened on my birthday|day i was born'), @('Advent Calendar of History', '/advent', 'advent|advent calendar|christmas calendar|december doors|24 doors'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
+  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('Quotations', '/encyclopedia/quotations', 'quotations|quotes|famous quotes|sayings|in their words|who said'), @('Today at the Institute', '/today', 'today|today at the institute|daily|my day|what is on today|todays games'), @('History Now', '/now', 'now|history now|news|history news|archaeology news|headlines|in the news|anniversaries|coming anniversaries|upcoming anniversaries'), @('Your Birthday in History', '/today-in-history/#birthday', 'birthday|my birthday|born on this day|what happened on my birthday|day i was born'), @('Advent Calendar of History', '/advent', 'advent|advent calendar|christmas calendar|december doors|24 doors'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
   @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
   @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
   @('Research Series', '/research-series', 'research series|essays'), @('Open Data', '/dataset', 'open data|dataset|download|csv'),
@@ -4852,6 +4906,9 @@ Say ("what's new: {0} release notes, {1} new pages in 30 days" -f $wnNotes.Count
 # .github/workflows/news.yml writes /feeds/news.json twice a day.
 foreach ($nwL in (& $songExe "$PSScriptRoot\tools\make-now.js")) { Say $nwL }
 if ($LASTEXITCODE) { throw 'History Now: scripts/tools/make-now.js failed (above)' }
+# Today at the Institute (/today): the day's things in one place, written by scripts/tools/make-today.js
+foreach ($tdL in (& $songExe "$PSScriptRoot\tools\make-today.js")) { Say $tdL }
+if ($LASTEXITCODE) { throw 'Today: scripts/tools/make-today.js failed (above)' }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
 foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {

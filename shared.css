@@ -3370,6 +3370,13 @@ svg.map-here { cursor: crosshair; }
 .st-locator figcaption { font-family: var(--font-ui); font-size: 12px; line-height: 1.45; color: var(--muted); margin: 6px 2px 2px; }
 .st-locator figcaption a { color: var(--gold); font-weight: 600; text-decoration: none; white-space: nowrap; }
 .enc-loc { max-width: 520px; }
+/* In their words: a speaker's quotations on the entry page (build-pages.ps1 EntryQuotes) */
+.enc-q { margin: 0 0 16px; padding: 4px 0 4px 16px; border-left: 3px solid var(--gold); }
+.enc-q p { margin: 0 0 6px; font-size: 19px; line-height: 1.55; font-style: italic; }
+.enc-q footer { font-family: var(--font-ui); font-size: 13px; line-height: 1.45; color: var(--muted); }
+.enc-q footer a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.enc-q-more { margin: 0 0 14px; }
+.enc-q-more summary { cursor: pointer; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); margin-bottom: 14px; min-height: 40px; display: flex; align-items: center; }
 .enc-born-p { margin: 0 0 12px; }
 .enc-born-p a:not(.enc-link) { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .enc-born-src { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
@@ -6200,6 +6207,40 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
   body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
 }
 @media print { .tab-bar { display: none; } }
+
+/* ── Today at the Institute (/today, today.js; Nov 2026) ── */
+.td-hero, .td-songc { display: flex; gap: 16px; align-items: flex-start; padding: 14px 16px; border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: var(--radius); background: var(--surface); color: var(--text); text-decoration: none; }
+.td-songc { flex-direction: column; gap: 4px; }
+.td-hero:hover, .td-songc:hover, .td-game:hover { border-color: var(--gold); }
+.td-hero img { flex: none; width: 150px; height: 110px; object-fit: cover; object-position: center 25%; border-radius: var(--radius); }
+.td-hero-b { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.td-k { font-family: var(--font-ui); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.td-hero-t { font-family: var(--font-display); font-size: 21px; line-height: 1.25; color: var(--gold-light); }
+.td-hero-d { font-size: 17px; line-height: 1.5; }
+.td-evs { list-style: none; margin: 12px 0; padding: 0; display: grid; gap: 8px; }
+.td-evs a { display: block; padding: 8px 2px; border-bottom: 1px solid var(--border); color: var(--text); text-decoration: none; font-size: 17px; line-height: 1.4; }
+.td-evs a:hover { color: var(--gold-light); }
+.td-evs b { font-family: var(--font-ui); font-size: 13px; color: var(--gold); margin-right: 6px; white-space: nowrap; }
+.td-games { list-style: none; margin: 0 0 14px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.td-game { display: flex; flex-direction: column; gap: 2px; height: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); text-decoration: none; }
+.td-game-n { font-family: var(--font-display); font-size: 16px; color: var(--gold-light); }
+.td-game-d { font-family: var(--font-ui); font-size: 13px; line-height: 1.35; color: var(--muted); }
+.td-game-s { margin-top: 6px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); }
+.td-game.is-done { border-left: 3px solid var(--gold); }
+.td-game.is-done .td-game-s::before { content: "\2713\00a0"; }
+.td-born { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.td-born a { display: flex; align-items: center; gap: 12px; padding: 8px 10px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); text-decoration: none; }
+.td-born a:hover { border-color: var(--gold); }
+.td-born img { flex: none; width: 56px; height: 56px; object-fit: cover; object-position: center 25%; border-radius: 50%; }
+.td-born span { display: flex; flex-direction: column; min-width: 0; }
+.td-born i { font-family: var(--font-ui); font-style: normal; font-size: 13px; color: var(--muted); }
+.td-page .now-note a { margin-right: 14px; }
+@media (max-width: 700px) {
+  .td-games { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .td-born { grid-template-columns: minmax(0, 1fr); }
+  .td-hero { flex-direction: column; }
+  .td-hero img { width: 100%; height: 170px; }
+}
 
 /* ── On this page (shared-nav.js, Nov 2026): the sections of a long page as a row under the header; fixed, slid away
    until the reader is past the first section ── */

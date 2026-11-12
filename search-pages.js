@@ -34,6 +34,8 @@ var SEARCH_PAGES = [
 ["Glossary","/encyclopedia/glossary","page","glossary|terms|definitions"],
 ["Ruling Houses and Dynasties","/encyclopedia/dynasties","page","dynasties|ruling houses|royal houses|royal families|dynasty|house of"],
 ["Find Your Way In","/start","page","start|where to begin|beginners|what kind of reader"],
+["Quotations","/encyclopedia/quotations","page","quotations|quotes|famous quotes|sayings|in their words|who said"],
+["Today at the Institute","/today","page","today|today at the institute|daily|my day|what is on today|todays games"],
 ["History Now","/now","page","now|history now|news|history news|archaeology news|headlines|in the news|anniversaries|coming anniversaries|upcoming anniversaries"],
 ["Your Birthday in History","/today-in-history/#birthday","page","birthday|my birthday|born on this day|what happened on my birthday|day i was born"],
 ["Advent Calendar of History","/advent","page","advent|advent calendar|christmas calendar|december doors|24 doors"],

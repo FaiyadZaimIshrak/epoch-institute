@@ -1402,7 +1402,21 @@ A walk of the local build at 1366 and 390 px (scratchpad audit.js: screens per p
   governance). It steps aside while a field has the focus (the keyboard). body.has-tab-bar: 56 px of padding at the
   foot, Back to top hidden (the row under the header has Top), the Listen, journey and cookie bars stand above it.
 - Tests: scripts/tests/page-toc.js, long-lists.js, phone-bar.js (their page loads wait for domcontentloaded: the home
-  page's load event sometimes never came in a test). Still to do: E1-E5, R1-R5.
+  page's load event sometimes never came in a test).
+- **E1 Today at the Institute** (/today, hand page, noindex like /weekly; scripts/tools/make-today.js writes it from /weekly's
+  head after make-now.js and stamps today.js?v=, now.js?v=, NOW_SRC and TODAY_DAYS_V, read from index): today.js shows the
+  day file's hero and three more events (the roundest anniversaries first), four people born, the Song of the Day, and the
+  daily quiz (epoch-quiz) and eight daily games (epoch-games, each game's day number as games.js: add a row to GAMES
+  there when a daily game is added) with "N of 9 done today" and the run of days (epoch-visits); now.js fills three
+  headlines and four anniversaries. main has data-no-toc. ?day=mm-dd previews. The phone bar's Today and the home
+  hero's Today tile go to it; Maps & Time menu, footer, search. scripts/tests/today-page.js.
+- **E3 In their words:** build-pages.ps1 loads data/quotes.json early ($QBY, speaker -> quotations) and EntryQuotes puts
+  "In their words" (#in-their-words) on the speaker's entry after Born and died: three quotations, the rest in a folded
+  details, each with work, credit, the note on how the words reach us and its source link (.enc-q). The hub
+  /encyclopedia/quotations lists the speakers by age ($EAT: before 500, 1500, 1800, after) and links that section; Themes
+  menu (Societies and ideas), footer, search. The words are the games' pool: adding quotations (fetch-quotes.ps1) adds
+  them here at the next full build.
+  Still to do: E2, E4, E5, R1-R5.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

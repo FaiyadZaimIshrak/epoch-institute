@@ -518,7 +518,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=ab6ba4c105';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=e39c3c7fff';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=345b7e7436';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -715,10 +715,10 @@ function initNav(activePage) {
       ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
         ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States Register', 'Every state on record']]],
       ['Time', [['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
-        ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/now', 'History Now', 'In the news, coming anniversaries'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
+        ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/today', 'Today at the Institute', 'The day in one place'], ['', '/now', 'History Now', 'In the news, coming anniversaries'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
-      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
+      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
         ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]],
       ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history'], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
@@ -732,7 +732,7 @@ function initNav(activePage) {
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -814,6 +814,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/countries/">Country Histories</a>
         <a class="footer-link" href="/people/">People</a>
         <a class="footer-link" href="/encyclopedia/dynasties">Ruling Houses</a>
+        <a class="footer-link" href="/encyclopedia/quotations">Quotations</a>
         <a class="footer-link" href="/today-in-history/">Today in History</a>
         <a class="footer-link" href="/encyclopedia/glossary">Glossary</a>
       </div>
@@ -825,6 +826,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/centuries/">Centuries</a>
         <a class="footer-link" href="/years/">Year by Year</a>
         <a class="footer-link" href="${MONTH_URL}">This Month in History</a>
+        <a class="footer-link" href="/today">Today at the Institute</a>
         <a class="footer-link" href="/now">History Now</a>
         <a class="footer-link" href="/race">Rise and Fall Race</a>
         <a class="footer-link" href="/explorer">Power Curves</a>
@@ -1400,12 +1402,12 @@ function initNav(activePage) {
     var p = location.pathname;
     if (/^\/(games|quiz|atlas|timeline|write|flashcards|race|inventions|explorer|connections|faiths|compare|governance|today-card)$/.test(p) || !document.getElementById('site-nav')) return;
     var ic = function (d) { return '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>'; };
-    var here = p === '/' ? 'home' : /^\/(today-in-history|now|advent)/.test(p) ? 'today' : /^\/(kids|weekly|passport)/.test(p) ? 'play' : '';
+    var here = p === '/' ? 'home' : /^\/(today|now|advent)/.test(p) ? 'today' : /^\/(kids|weekly|passport)/.test(p) ? 'play' : '';
     var item = function (k, href, label, d) { return '<a href="' + href + '"' + (here === k ? ' aria-current="page"' : '') + '>' + ic(d) + '<span>' + label + '</span></a>'; };
     var bar = document.createElement('nav'); bar.className = 'tab-bar'; bar.setAttribute('aria-label', 'Quick links');
     bar.innerHTML = item('home', '/', 'Home', '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>') +
       '<button type="button" data-tab="search">' + ic('<circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>') + '<span>Search</span></button>' +
-      item('today', '/today-in-history/', 'Today', '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/>') +
+      item('today', '/today', 'Today', '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/>') +
       item('play', '/games', 'Play', '<rect x="3" y="7" width="18" height="11" rx="4"/><path d="M8 11v3M6.5 12.5h3M15.5 12h.01M18 13.5h.01"/>') +
       '<button type="button" data-tab="menu" aria-controls="nav-dropdown">' + ic('<path d="M4 7h16M4 12h16M4 17h16"/>') + '<span>Menu</span></button>';
     document.body.appendChild(bar); document.body.classList.add('has-tab-bar');

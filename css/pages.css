@@ -1619,6 +1619,12 @@ svg.map-here { cursor: crosshair; }
 .st-locator figcaption { font-family: var(--font-ui); font-size: 12px; line-height: 1.45; color: var(--muted); margin: 6px 2px 2px; }
 .st-locator figcaption a { color: var(--gold); font-weight: 600; text-decoration: none; white-space: nowrap; }
 .enc-loc { max-width: 520px; }
+.enc-q { margin: 0 0 16px; padding: 4px 0 4px 16px; border-left: 3px solid var(--gold); }
+.enc-q p { margin: 0 0 6px; font-size: 19px; line-height: 1.55; font-style: italic; }
+.enc-q footer { font-family: var(--font-ui); font-size: 13px; line-height: 1.45; color: var(--muted); }
+.enc-q footer a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.enc-q-more { margin: 0 0 14px; }
+.enc-q-more summary { cursor: pointer; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); margin-bottom: 14px; min-height: 40px; display: flex; align-items: center; }
 .enc-born-p { margin: 0 0 12px; }
 .enc-born-p a:not(.enc-link) { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .enc-born-src { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }

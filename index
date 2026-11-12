@@ -87,7 +87,7 @@
       <li><a href="/profiles"><b>Read</b><span>Profiles of states, faiths and peoples</span></a></li>
       <li><a href="/atlas"><b>Explore</b><span>The world map in any year</span></a></li>
       <li><a href="/games"><b>Play</b><span>Today&rsquo;s history games</span></a></li>
-      <li><a href="/today-in-history/"><b>Today</b><span>What happened on this day</span></a></li>
+      <li><a href="/today"><b>Today</b><span>This day in history, and today&rsquo;s games</span></a></li>
     </ul>
     <p class="hero-more"><a href="/research">Everything on one page →</a> <a href="/about">About the Institute →</a></p>
   </div>
@@ -149,7 +149,7 @@
   <div role="tabpanel" id="now-p-new" aria-labelledby="now-t-new" hidden><ol class="now-list" data-now="new" data-max="6"></ol></div>
 </section>
 <script>
-var NOW_SRC = '/data/now.json?v=f0e2a21793';
+var NOW_SRC = '/data/now.json?v=e592a3e4f8';
 (function () {
   function start() { var s = document.createElement('script'); s.src = '/now.js?v=6454b6d70d'; document.body.appendChild(s); }
   var idle = window.requestIdleCallback || function (f) { setTimeout(f, 800); };
