@@ -92,6 +92,9 @@ foreach ($smf in Get-ChildItem "$Repo\sitemaps" -Filter *.xml) { foreach ($m in 
 $NODE = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $NODE) { $NODE = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
 if (Test-Path $NODE) { $cssOut = & $NODE --max-old-space-size=6000 "$Repo\scripts\split-css.js" --check; if ($LASTEXITCODE) { $bad.Add("css/ : $cssOut") } }
 else { $bad.Add('css/ : node not found, so the stylesheets cut from shared.css could not be checked') }
+# no release note is dated after today (12 Nov 2026: "New here" showed notes dated up to 27 November; scripts/tools/whats-new-dates.js --write sets them right)
+$wnToday = [DateTime]::UtcNow.AddDays(1).ToString('yyyy-MM-dd')   # a day's grace for a runner's clock
+foreach ($wnL in [IO.File]::ReadAllLines("$Repo\scripts\whats-new.tsv")) { if ($wnL -match '^(\d{4}-\d\d-\d\d)\t([^\t]*)' -and [string]::CompareOrdinal($Matches[1], $wnToday) -gt 0) { $bad.Add("whats-new.tsv : dated in the future: $($Matches[1]) $($Matches[2])") } }
 "pages: $nPages  internal links checked: $nLinks  problems: $($bad.Count)  ($([int]$clock.Elapsed.TotalSeconds) s)"
 if ($noLogo.Count) { "profiles without an emblem file (image hidden on the page): " + (@($noLogo.Keys | ForEach-Object { [Uri]::UnescapeDataString(($_ -replace '^/logos/(thumbs/)?', '' -replace '\.png$', '')) } | Sort-Object -Unique) -join ', ') }
 $bad | Group-Object { $_ -replace '^.*? : ', '' -replace '/[a-z0-9-]+(\?|#|$)', '/*$1' } | Sort-Object Count -Descending | Select-Object -First 10 | ForEach-Object { "  {0,6} x {1}" -f $_.Count, $_.Name }

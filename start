@@ -198,7 +198,7 @@ initNav('start');
           shelf.unshift({ u: '/paths/' + s, n: p.title, t: 'reading path' });
         });
         localStorage.setItem('epoch-shelf', JSON.stringify(shelf.slice(0, 100)));
-        save.textContent = '✓ Saved — open the bookmark in the menu'; save.disabled = true;
+        save.textContent = '✓ Saved: open the bookmark in the menu'; save.disabled = true;
       } catch (err) {}
     };
   });

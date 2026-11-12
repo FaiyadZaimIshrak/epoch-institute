@@ -2446,6 +2446,34 @@ and the host drops a connection now and then, more so while a deploy reads the w
 - The user also asked to fix "misattribution errors" without an example: namesake-check.js text|country|seats lists
   only what was read on 9 Nov. Ask which page when it comes up again.
 
+## Plainer prose (a copy-edit round, 12 Nov 2026; it has no release note and gets none)
+- **Measuring:** scripts/tools/style-audit.js [--list=<source>] [--top=N] [--tsv=file] counts stock phrases (TELLS: testament
+  to, tapestry, pivotal, played a … role, stands as, paired dashes, "remarkable" and its kin …) per 1,000 words in every
+  kind of text. Before: the 94 empire profiles 4.69 (the oldest texts: grand openings, paired dashes, "The fundamental
+  cause was structural:"), everything else 1.1 or less. After: empires 0.66, nearly all of it "one of the largest", which
+  is a claim of fact and stays. "legendary", "the Magnificent", real tapestries, foster children, inscriptions that boast,
+  UNESCO's "cultural landscape" and the Communist party's "leading role" are literal, not tells.
+- **The 94 empire profiles rewritten** (sections, summary, teaser, takeaways, did-you-know): scripts/style/STYLE-GUIDE.md,
+  pack.js make|apply (in/<slug>.json with the names the page links, out/<slug>.json; apply finds each field as it stands
+  in empire-profiles.js, empire-glance.js and shared-data.js), check.js (every number and proper name kept and none
+  added, quotations and link names unchanged, the same paragraphs and tags, length 75-105%, no dash as punctuation, no
+  stock phrase). Twelve writers; 711 fields changed; scripts/style/links-kept.js compared every regenerated page's gold
+  links with the committed page (1 lost, 3 gained in 315 pages; those four profiles rescanned).
+- **Single sentences elsewhere:** lines.js make|check|apply with LINES-GUIDE.md: 776 texts with a stock phrase (280
+  entries, 302 fields of the other profiles, 146 state-history fields, 30 day events, 18 songs), only the sentence with
+  the phrase reworded, 664 changed and 112 left as literal. Entry changes are "fixes" rows of added-entries.json (a fix
+  whose new text the entry's line already holds is skipped by apply-added-entries.ps1, so such a fix is written as the
+  whole description) and the preview cards are patched.
+- **Essays 01 and 02** (May 2026) restyled section by section (essays-apply.js): the staccato sentences, rhetorical
+  questions and aphoristic closers became ordinary exposition; arguments, examples and links unchanged.
+- **The explorer's point notes:** note-dashes.js turned the dash of 527 notes into a comma, colon or semicolon; four
+  sentences citing Grokipedia were removed (point-descs.js?v=5). The notes still name Britannica, EBSCO, Wikipedia and
+  New World Encyclopedia in running text: a later round could move those into a sources line.
+- /community's form messages, the home newsletter line and /start's Saved line lost their dashes. Page titles keep
+  " — The Epoch Institute".
+- Not done: the 413 state profiles and other kinds beyond their flagged sentences (rates 0.2-0.6), "one of the most"
+  where it is praise and not a measure (about 950 entries: each needs reading), essays 03-05's few phrases.
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their

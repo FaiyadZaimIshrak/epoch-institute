@@ -11,7 +11,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="The Epoch Community — read articles, share opinions, and contribute to the study of civilisational history.">
+<meta name="description" content="The Epoch Community: read articles, share opinions, and contribute to the study of civilisational history.">
 <meta property="og:title" content="Community: Articles and Opinions — The Epoch Institute">
 <meta property="og:description" content="A space for readers, researchers, and thinkers to read, write, and reflect on history and its implications.">
 <meta property="og:type" content="website">
@@ -190,7 +190,7 @@
   .newsletter-form { flex-direction: column; }
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"The Epoch Community"}]},{"@type":"CollectionPage","name":"The Epoch Community","url":"https://the-epoch-institute.org/community","description":"The Epoch Community — read articles, share opinions, and contribute to the study of civilisational history.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"The Epoch Community"}]},{"@type":"CollectionPage","name":"The Epoch Community","url":"https://the-epoch-institute.org/community","description":"The Epoch Community: read articles, share opinions, and contribute to the study of civilisational history.","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
 <!-- Google tag (gtag.js) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
@@ -220,7 +220,7 @@
         <input class="form-input" id="nl-email" type="email" placeholder="your@email.com" autocomplete="email" aria-label="Your email address">
         <button type="submit" class="form-submit" style="white-space:nowrap;">Subscribe →</button>
       </form>
-      <p class="form-success" id="nl-success" style="display:none;">Thank you — we'll be in touch.</p>
+      <p class="form-success" id="nl-success" style="display:none;">Thank you. We'll be in touch.</p>
     </div>
   </div>
 
@@ -262,7 +262,7 @@
   <div class="community-section" id="community-opinion" style="padding-bottom:60px;">
     <div class="community-section-hd" style="margin-top:40px;">
       <h3 class="community-section-title">Your Opinion</h3>
-      <p class="community-section-sub">Share a quick thought — no article needed. It appears on this page once the Institute has read it.</p>
+      <p class="community-section-sub">Share a quick thought. No article needed. It appears on this page once the Institute has read it.</p>
     </div>
     <form class="modal-form" id="opinion-form" novalidate style="max-width:600px;">
       <div class="form-row">
@@ -275,8 +275,8 @@
       </div>
       <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="form-submit">Submit Opinion</button>
-      <p class="form-success" id="op-success" style="display:none;">Thank you — your opinion has been received. It will appear here once the Institute has read it.</p>
-      <p id="op-error" aria-live="polite" style="display:none;font-family:var(--font-text);font-size:15px;color:var(--error);margin-top:4px;">Couldn't send — please check your connection and try again.</p>
+      <p class="form-success" id="op-success" style="display:none;">Thank you. Your opinion has been received. It will appear here once the Institute has read it.</p>
+      <p id="op-error" aria-live="polite" style="display:none;font-family:var(--font-text);font-size:15px;color:var(--error);margin-top:4px;">Couldn't send. Please check your connection and try again.</p>
     </form>
   </div>
 
@@ -364,7 +364,7 @@
       <input type="text" name="_gotcha" class="ct-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="form-submit">Submit →</button>
       <p class="form-success" id="sf-success" style="display:none;">Thank you! We'll read your article and reply by email.</p>
-      <p id="sf-error" aria-live="polite" style="display:none;font-family:var(--font-text);font-size:15px;color:var(--error);margin-top:4px;">Couldn't send — please check your connection and try again.</p>
+      <p id="sf-error" aria-live="polite" style="display:none;font-family:var(--font-text);font-size:15px;color:var(--error);margin-top:4px;">Couldn't send. Please check your connection and try again.</p>
     </form>
   </div>
 </div>
@@ -624,7 +624,7 @@ document.getElementById('share-form').addEventListener('submit', function(e) {
     document.getElementById('sf-profession').dispatchEvent(new Event('change'));
     setTimeout(closeShareModal, 2500);
   }).catch(function(x) {
-    errEl.textContent = (x.message || 'Couldn’t send — please check your connection and try again.') + ' You can also email it to research@the-epoch-institute.org.';
+    errEl.textContent = (x.message || 'Couldn’t send. Please check your connection and try again.') + ' You can also email it to research@the-epoch-institute.org.';
     errEl.style.display = 'block';
     submitBtn.disabled = false;
     submitBtn.textContent = 'Submit →';
@@ -654,7 +654,7 @@ document.getElementById('opinion-form').addEventListener('submit', function(e) {
     document.getElementById('op-success').style.display = 'block';
     form.reset();
   }).catch(function(x) {
-    errEl.textContent = x.message || 'Couldn’t send — please check your connection and try again.';
+    errEl.textContent = x.message || 'Couldn’t send. Please check your connection and try again.';
     errEl.style.display = 'block';
   }).then(function() {
     submitBtn.disabled = false;
