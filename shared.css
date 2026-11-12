@@ -3104,6 +3104,13 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .enc-quotes blockquote b { font-weight: 600; }
 .enc-quotes li > a { font-family: var(--font-ui); font-size: 13px; color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 [data-kids="1"] .enc-quotes { display: none; }
+/* an entry told in more detail (scripts/entry-more.json): three short sections under the description */
+.enc-more { max-width: 720px; margin: 0 0 8px; }
+.enc-more-h { font-family: var(--font-display); font-size: 19px; font-weight: 600; letter-spacing: 0.02em; color: var(--gold); margin: 26px 0 8px; scroll-margin-top: 124px; }
+.enc-more p { font-family: var(--font-text); font-size: 19px; line-height: 1.7; color: var(--text); margin: 0 0 14px; }
+.enc-more p.enc-more-src { font-family: var(--font-ui); font-size: 13px; line-height: 1.5; color: var(--muted); margin-top: 18px; }
+[data-kids="1"] .enc-more { display: none; }
+@media print { .enc-more-src { display: none; } }
 .enc-mentions { display: flex; flex-wrap: wrap; gap: 8px; }
 .enc-mentions a { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em; color: var(--gold); text-decoration: none; border: 0.5px solid var(--border); padding: 6px 10px; border-radius: 2px; }
 .enc-mentions a:hover { border-color: var(--gold); }

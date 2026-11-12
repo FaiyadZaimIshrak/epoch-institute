@@ -1210,6 +1210,48 @@ $ELAB2 = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-labels
 # [[heading, [paragraphs]]], shown under the description
 $EMORE = @{}; if (Test-Path "$Repo\scripts\entry-more.json") { $emJ = ReadJson "$Repo\scripts\entry-more.json"; foreach ($emK in $emJ.Keys) { $EMORE[[string]$emK] = $emJ[$emK] } }
 Say "entries told in more detail: $($EMORE.Count)"
+# These texts name many people and places the encyclopedia does not have, so a name inside a longer name would link a
+# namesake ("Ali [Adil Shah] II" an 18th-century shah, "[Rumi] Darwaza" the poet, "Free [Democratic Party] of
+# Switzerland" the American party, "[Alexander I] of Macedon" the tsar: about one link in twenty, 12 Nov 2026). A link
+# is taken off when a capitalised word follows it directly, when one stands directly before it that is neither the
+# first word of its sentence nor a title, or when "of X" follows and the entry is "<the same name> of Y".
+$MOREANCH = New-Object Text.RegularExpressions.Regex('<a class="enc-link" href="/encyclopedia/([^"]+)">([^<]*)</a>')
+$MORETAG = New-Object Text.RegularExpressions.Regex('<[^>]+>')
+$MORETITLE = '^(?:King|Queen|Emperor|Empress|Sultan|Sultana|Prince|Princess|President|Pope|Saint|St\.?|General|Lord|Lady|Duke|Duchess|Count|Countess|Caliph|Shah|Tsar|Tsarina|Governor|Bishop|Archbishop|Captain|Colonel|Admiral|Raja|Maharaja|Nawab|Imam|Sheikh|Chief|Chancellor|Minister|Marshal|Viceroy|Pharaoh|Khan|Emir|Consul|Senator|Cardinal|Abbot|Rabbi|Guru|Peshwa|Rani|Begum|Sir|Dr\.?|Professor)$'
+$MOREQ = @([string][char]0x201C, [string][char]0x201D, [string][char]0x2019)   # curly quotes, by number: PowerShell reads them as quote marks in a script
+# also off: a person linked by a form that is not the entry's own name whose years lie more than 50 from the host
+# entry's ("Otto I" on the Ottonian dynasty linked a 12th-century duke of Bavaria), and the pairs of
+# scripts/entry-more-nolink.tsv (host entry TAB the entry never linked from its longer text TAB why)
+$MORENO = @{}; if (Test-Path "$Repo\scripts\entry-more-nolink.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-more-nolink.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $c = $l.Split("`t"); if ($c.Count -ge 2) { $MORENO[$c[0] + '|' + $c[1]] = 1 } } } }
+function MoreUnlink([string]$html, [string]$hostSlug) {
+  $ms = $MOREANCH.Matches($html); if ($ms.Count -eq 0) { return $html }
+  $hostSp = $EYRS[$hostSlug]
+  $sbU = New-Object Text.StringBuilder; $pos = 0
+  foreach ($m in $ms) {
+    $bef = $MORETAG.Replace($html.Substring(0, $m.Index), ''); $aft = $MORETAG.Replace($html.Substring($m.Index + $m.Length), '')
+    $txt = $m.Groups[2].Value; $off = $false; $tgt = $m.Groups[1].Value
+    if ($MORENO.ContainsKey($hostSlug + '|' + $tgt)) { $off = $true }
+    if (-not $off -and $hostSp -and $BY[$tgt] -and $BY[$tgt].type -eq 'person' -and $EYRS[$tgt] -and ([Net.WebUtility]::HtmlDecode($txt) -ne [string]$BY[$tgt].name)) {
+      if ($EYRS[$tgt][0] - $hostSp[1] -gt 50 -or $hostSp[0] - $EYRS[$tgt][1] -gt 50) { $off = $true }
+    }
+    if (-not $off -and $aft -cmatch '^[ -]\p{Lu}') { $off = $true }
+    if (-not $off) {
+      $w = [regex]::Match($bef, ('(^|.*[\s(' + $MOREQ[0] + '"])(\p{Lu}[\p{L}''' + $MOREQ[2] + '.-]*)\s$'), 'Singleline')
+      if ($w.Success) {
+        $word = $w.Groups[2].Value; $lead = $w.Groups[1].Value.TrimEnd()
+        $first = ($lead.Length -eq 0) -or ($lead -match ('[.!?:;]["' + $MOREQ[1] + $MOREQ[2] + ')]?$')) -or ($lead -match ('[(' + $MOREQ[0] + '"]$'))
+        if ($word -cmatch '^\p{Lu}\.$') { $off = $true }
+        elseif (-not $first -and $word -cnotmatch $MORETITLE) { $off = $true }
+      }
+    }
+    if (-not $off) {
+      $ofm = [regex]::Match($aft, ('^ of (\p{Lu}[\p{L}''' + $MOREQ[2] + '-]+)')); $tn = $BY[$m.Groups[1].Value]
+      if ($ofm.Success -and $tn) { $tm = [regex]::Match([string]$tn.name, '^' + [regex]::Escape([Net.WebUtility]::HtmlDecode($txt)) + ' of (.+)$'); if ($tm.Success -and -not $tm.Groups[1].Value.StartsWith($ofm.Groups[1].Value)) { $off = $true } }
+    }
+    [void]$sbU.Append($html.Substring($pos, $m.Index - $pos)); [void]$sbU.Append($(if ($off) { $txt } else { $m.Value })); $pos = $m.Index + $m.Length
+  }
+  [void]$sbU.Append($html.Substring($pos)); $sbU.ToString()
+}
 function WdLabel([string]$key) {
   $wl = $WDDESC[$key]; if (-not $wl) { return $null }
   return $wl.Substring(0, 1).ToUpperInvariant() + $wl.Substring(1)
@@ -1256,7 +1298,7 @@ foreach ($e in $ENT) {
     $emH = New-Object Text.StringBuilder
     foreach ($emS in $EMORE[[string]$e.slug]) {
       [void]$emH.Append('<h2 class="enc-more-h">' + (Hx ([string]$emS[0])) + '</h2>')
-      foreach ($emP in $emS[1]) { [void]$emH.Append('<p>' + (LinkDesc ([string]$emP) $e.slug (EncYears $e.dates)) + '</p>') }
+      foreach ($emP in $emS[1]) { [void]$emH.Append('<p>' + (MoreUnlink (LinkDesc ([string]$emP) $e.slug (EncYears $e.dates)) ([string]$e.slug)) + '</p>') }
     }
     $emW = $EWD[[string]$e.slug]
     if ($emW) { [void]$emH.Append('<p class="enc-more-src">This account follows the Wikipedia article “' + (Hx $emW[0]) + '” (CC BY-SA 4.0), linked under Read further below.</p>') }

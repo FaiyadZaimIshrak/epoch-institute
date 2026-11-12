@@ -149,7 +149,7 @@
   <div role="tabpanel" id="now-p-new" aria-labelledby="now-t-new" hidden><ol class="now-list" data-now="new" data-max="6"></ol></div>
 </section>
 <script>
-var NOW_SRC = '/data/now.json?v=9f8cf9daca';
+var NOW_SRC = '/data/now.json?v=8cacf8ab90';
 (function () {
   function start() { var s = document.createElement('script'); s.src = '/now.js?v=6454b6d70d'; document.body.appendChild(s); }
   var idle = window.requestIdleCallback || function (f) { setTimeout(f, 800); };

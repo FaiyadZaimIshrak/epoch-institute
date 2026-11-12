@@ -2370,6 +2370,53 @@ Institute and its register are still named where they are defined and credited (
 - Home hero: on wide screens the globe is a square as tall as the text beside it (the figure a size container, the square
   min(100cqw, 100cqh − caption)); phones keep 25:14.
 
+## Search: titles, snippets and longer entries (12 Nov 2026, after the second Search Console export)
+The export of 12 Nov (28 days to 10 Nov; kept in the owner's Documents\search-export, never in the repository) showed:
+impressions fell from 200,000-300,000 a day to about 70,000 from 6 Nov while clicks stayed at 250-300 a day, because
+the lost impressions were exact-name desktop searches with no clicks at all ("lithuanian crusade" 2,500 a day to 0, its
+position unchanged: rank trackers or the like, the group of about 40 pages noted on 8 Nov). Setting those aside, 952
+pages had 272,000 impressions and 2,479 clicks, and the click rate follows the position: 8.6% at 1-3, 5.3% at 3-5,
+1.7% at 5-7, 0.6% at 7-10, where two thirds of the impressions are. The entries Google shows have a median of 61 words.
+So the work is to rank higher, not only to be clicked more:
+- **Title labels:** scripts/tools/entry-labels.js (run by the builder before the entry pages; scripts/entry-labels.tsv)
+  labels the entries the builder's EntryLabel and Wikidata's description leave as "Name — Encyclopedia": a subject with
+  one aside before the verb, a place's country after a comma ("Town in eastern Rajasthan, India"), a list of three,
+  a phrase over seven words cut before a preposition, a participle or adverb after the comma, "was king of …" and
+  plurals without an article, one word and its clause ("Dynasty that ruled north-eastern China"), and a conflict told
+  with a verb ("Battle in south-western Ethiopia", "Treaty between Ladakh and Tibet"). A cut never leaves a participle
+  or the start of a date range hanging (tidy). 62% of the entries had a label, 83% have one now (6,910 more); the
+  builder uses a wider label only where it has none of its own, so no existing title changed. Read a sample
+  (--sample=N) after changing a rule.
+- **Century pages:** the title gives the years and what the page holds ("The 14th Century (1300–1399): Events, People,
+  Empires and Map"), the description the three best-known events and people of the page.
+- **Entries told in more detail:** scripts/entry-more.json {slug: [[heading, [paragraphs]]]}, shown under the
+  description (section.enc-more, h2.enc-more-h; gold-linked by LinkDesc; a line naming the Wikipedia article; hidden in
+  Kids mode; read by Listen). Round 1 (scripts/entries/more1): the 150 entries with a confirmed article that had 150 or
+  more impressions at positions 3.5-12 (more-list in the scratchpad; list.tsv holds slugs and titles only). Six
+  writers with scripts/entries/MORE-GUIDE.md (three sections of 260-420 words from the saved article, headings from a
+  fixed list, never repeating the description; "skip" where the article has under about 250 words: 19 skipped),
+  scripts/entries/check-more.js <round> [--write] (headings, lengths, month-first dates, BC/AD, hype, a sentence copied
+  from the description, numbers and names not in the article; --write gathers the round into entry-more.json), and the
+  editor's edit.js: the flags traced to the articles were date forms and possessives; four entries read in full; every
+  place the writers reported the article disagreeing with the entry looked at, and two hedged so that no page
+  contradicts itself (Pandara Vanniyan's end, Kakusthavarma's Gupta marriage). 131 entries, 50,900 words.
+  NOT yet done: the writers' reports list where an article disagrees with the entry's own description or dates
+  (Sepúlveda born 1490 or 1494, Altan Khan 1507 or 1508, Chavundaraya's statue 981 or 983, the Sandžak garrison to 1908
+  or 1909, Liu Bei's death at Baidicheng, Gorgan and Old Gorgan, Yusuf Adil Shah killed at Koilkonda): each needs a
+  second source before the entry is changed. The reports are in the session only; the notes field of each out/*.json
+  keeps the detail.
+- **Links in the longer texts:** they name many people and places the encyclopedia lacks, so about one link in twenty
+  went to a namesake ("Ali [Adil Shah] II", "[Rumi] Darwaza", "Free [Democratic Party] of Switzerland", "[Otto I]" a
+  12th-century duke). build-pages.ps1 MoreUnlink takes a link off when a capitalised word follows it directly, when
+  one stands directly before it that is neither the first word of its sentence nor a title, when "of X" follows and
+  the entry is "<the same name> of Y", when a person is linked by a form that is not the entry's name and lived more
+  than 50 years from the host entry, and for the pairs of scripts/entry-more-nolink.tsv. 266 of 2,342 links came off.
+  scripts/entries/more-links.js lists the links of the built pages for reading (run it after every round). In a
+  PowerShell script a curly quote is a quote mark: write it as [char]0x2019. Site-wide the row "armistice" links the
+  Armistice of 11 November 1918 wherever the word stands: a drop for a later round.
+- To measure: in the next export compare position and click rate of these 131 pages with the entries of the same band
+  that were not deepened (the 19 skipped and the 58 without a confirmed article).
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their

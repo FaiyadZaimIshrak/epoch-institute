@@ -56,12 +56,12 @@
 <section class="now-sec" id="new" aria-labelledby="now-new-t">
   <h2 class="ref-sec-title" id="now-new-t">New at the Institute</h2>
   <ol class="wn-list">
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-27">27 November 2026</time></p><h3 class="wn-t">131 entries told in more detail</h3><p class="wn-s">The entries readers reach most often from search now go further than a paragraph: background, the course of events and what followed for wars and treaties, early life, career and legacy for people, setting and history for places, each written from its Wikipedia article and linked like the rest. Among them the Sonderbund War, the Ottonian dynasty, Dara Shikoh, Hoelun, the Gortyn Code and the Bodleian Library.</p><p class="wn-links"><a href="/encyclopedia/">The encyclopedia</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-26">26 November 2026</time></p><h3 class="wn-t">Pictures for 230 more entries, and dates for 41 people</h3><p class="wn-s">Margaret Thatcher, David Ben-Gurion, the Beatles, the Battle of Stalingrad, the Six-Day War, Shostakovich, national anthems in their first prints and some 220 more entries now have a picture, each chosen by eye. Forty-one people who had no dates are placed by the decade or century their own entries give, and so appear on the century and people pages.</p><p class="wn-links"><a href="/encyclopedia/">The encyclopedia</a> <a href="/people/">People</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-25">25 November 2026</time></p><h3 class="wn-t">Twenty more great lives, and pictures in the first twenty</h3><p class="wn-s">Twenty more lives told in full: Hammurabi, Ramesses II, Aristotle, Hannibal, Qin Shi Huang, Charlemagne, Harun al-Rashid, Rumi, Kublai Khan, Pachacuti, Joan of Arc, Martin Luther, Suleiman the Magnificent, Tokugawa Ieyasu, Isaac Newton, Catherine the Great, George Washington, Toussaint Louverture, Liliʻuokalani and Haile Selassie. The sections of all forty lives now carry pictures.</p><p class="wn-links"><a href="/profiles?kind=life">Great lives</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-24">24 November 2026</time></p><h3 class="wn-t">Great lives: twenty people told in full</h3><p class="wn-s">A new kind of profile: twenty lives from Cyrus the Great, Confucius and Ashoka to Elizabeth I, Simón Bolívar and Nelson Mandela, each with its early life, rise, deeds, opponents and critics, last years and legacy, key events and references.</p><p class="wn-links"><a href="/profiles?kind=life">Great lives</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-23">23 November 2026</time></p><h3 class="wn-t">Rulers on the profiles, and who was born near any place</h3><p class="wn-s">The profiles of 174 states and empires now list their rulers and leaders among the people of the encyclopedia, each a person whose own entry names them as that state’s ruler. On the atlas, “What was here?” also lists the people born within 250 km of the place you choose.</p><p class="wn-links"><a href="/atlas">The atlas</a> <a href="/profiles">Profiles</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-22">22 November 2026</time></p><h3 class="wn-t">Born Where? A new game on the globe</h3><p class="wn-s">A person of history is named: turn the globe and drop your pin where they were born. Five people from five parts of the world, with the birthplace and the distance shown after each guess.</p><p class="wn-links"><a href="/games#hunt-born">Born Where?</a></p></li>
-    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-21">21 November 2026</time></p><h3 class="wn-t">In their words: quotations on the pages of those who spoke them</h3><p class="wn-s">The pages of more than five hundred people now carry their own words: some two thousand quotations, each taken from a named public-domain edition, with its work, translator and source. A new page lists the speakers by age.</p><p class="wn-links"><a href="/encyclopedia/quotations">Quotations</a></p></li>
   </ol>
   <p class="now-note"><a href="/new">Everything that is new, and every page added in the last thirty days &rarr;</a></p>
 </section>
@@ -70,7 +70,7 @@
 
 <script src="/shared-nav.js"></script>
 <script>initNav('today');</script>
-<script>var NOW_SRC = '/data/now.json?v=9f8cf9daca';</script>
+<script>var NOW_SRC = '/data/now.json?v=8cacf8ab90';</script>
 <script src="/now.js?v=6454b6d70d"></script>
 </body>
 </html>
