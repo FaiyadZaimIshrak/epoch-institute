@@ -2432,6 +2432,20 @@ and the host drops a connection now and then, more so while a deploy reads the w
   faiths, passport, search, compare, race) and every generated page (shared-nav.js, enc-page.js) have no such loader yet.
 - The lasting cure is the owner's: the Cloudflare purge secrets, so that these files can be kept at the edge again.
 
+## Escapes showing, and the home page's alignment (12 Nov 2026)
+- The daily quiz printed "Germany's": home-data.js held 72 apostrophes and an ampersand escaped twice in the
+  profile puzzles (49 clue texts, from the old make-home-data). scripts/tools/escape-check.js [--fix] evaluates every
+  data file as the pages do and lists strings that would show a backslash-u code, an entity escaped twice or a
+  quoted quote; only home-data.js had any (home-data.js?v=31). Run it after a tool writes a data file.
+- Home page: the On This Day picture keeps a 4:3 box and fills its row (.home-section .tih-strip-pic: a tall portrait
+  had set the row's height and left the two cards beside it empty); the Play buttons of Today's Puzzles stand at the
+  foot of their cards (grid-template-rows: auto 1fr auto). The Write keyboard's sign hints take three lines.
+- scripts/tools/layout-audit.js at 390/768/1280 in three modes over KINDS and 35 newer pages: what it still lists is by
+  design (a country's folded timeline under its fade, the Write keys scrolling behind their action row, /race's
+  screen-reader label).
+- The user also asked to fix "misattribution errors" without an example: namesake-check.js text|country|seats lists
+  only what was read on 9 Nov. Ask which page when it comes up again.
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their
