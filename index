@@ -149,7 +149,7 @@
   <div role="tabpanel" id="now-p-new" aria-labelledby="now-t-new" hidden><ol class="now-list" data-now="new" data-max="6"></ol></div>
 </section>
 <script>
-var NOW_SRC = '/data/now.json?v=b2f558ff8a';
+var NOW_SRC = '/data/now.json?v=9f8cf9daca';
 (function () {
   function start() { var s = document.createElement('script'); s.src = '/now.js?v=6454b6d70d'; document.body.appendChild(s); }
   var idle = window.requestIdleCallback || function (f) { setTimeout(f, 800); };
@@ -524,7 +524,7 @@ initNav('home');
   })();
 
   // today's events, international day and picture: one small file per day (data/days, written by the builder)
-  var DAYS_V = 'db550e425d';
+  var DAYS_V = '650e7d4494';
   fetch('/data/days/' + key + '.json?v=' + DAYS_V).then(function(r) { if (!r.ok) throw new Error(); return r.json(); }).then(function(d) {
     var evs = d.events || [], pic = d.pic ? d.pic[0] : null, hero = evs[d.hero];
     // Kids mode: no picture from a battle or a killing

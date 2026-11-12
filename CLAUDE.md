@@ -1481,9 +1481,20 @@ A walk of the local build at 1366 and 390 px (scratchpad audit.js: screens per p
   Section pictures of all forty (lives1/picks.tsv, lives2/picks.tsv; pick.txt): an entry the section links whose
   picture shows a person, event, work or object of the time, looked at on contact sheets as the profile crops them; no
   present-day city views, maps, flags, logos or modern statues. section-pictures.js write <profile …> writes only the
-  profiles named. An image file can exist for an entry that has no picture (Vincent Ogé, Sonthonax: candidates turned
-  down earlier): choose from the entries' img, not from the files.
-  Still to do: E4, E5 (judged of little value), R3 pictures by eye, R5 the undated people.
+  profiles named. section-pictures.js takes a picture from the entry's img, not from the image files.
+  **R3 pictures (12 Nov 2026):** 152 pictures for well-known entries that had none (scripts/entries/r3: picks.txt,
+  cands.json): the entries without a picture whose confirmed article ("same" in entry-wikidata.tsv) has 40 or more
+  Wikipedia editions, the top 296 (not Muhammad, Aisha, Uthman or Husayn: no depiction); pictures.js cands and fetch
+  (about an hour and a half; cands is resumable), the sheet photographed in slices, chosen by eye: portraits of the
+  person's time or photographs, period paintings of events, manuscripts and first prints of songs, views of places;
+  no collages, no maps for peoples or ideas, no modern imagined portraits or statues (Avicenna, Hypatia, Anna Komnene,
+  Mieszko I, Cleisthenes, Crazy Horse). pictures.js apply gives an entry of added-entries.json its img there, which
+  apply-added-entries.ps1 does not carry to an entry already applied: such an entry needs a "pictures" row as well.
+  That gap had lost 82 pictures chosen by eye in earlier waves (Vincent Ogé, Sonthonax, Nur Jahan, Kamehameha II,
+  Sokollu Mehmed Pasha, the Women's March on Versailles …: img in added-entries.json and the file in place, the entry
+  without it): all 82 looked at again on a sheet and given their rows, with 16 of this round's. To check: an entry of
+  added-entries.json with img whose encyclopedia entry has none and is not under "nopicture" (0 now).
+  Still to do: E4, E5 (judged of little value). The other 280 of the list of 580 were not fetched.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

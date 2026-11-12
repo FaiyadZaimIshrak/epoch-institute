@@ -5546,7 +5546,8 @@ var SECTION_IMAGES = {
     rise:{slug:"iyasu-v",name:"Iyasu V",img:"/images/encyclopedia/iyasu-v.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lidj_Iyasu.jpg"}
   },
   "Toussaint Louverture": {
-    deeds:{slug:"andre-rigaud",name:"André Rigaud",img:"/images/encyclopedia/andre-rigaud.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Andr%C3%A9_Rigaud.gif"},
+    rise:{slug:"vincent-oge",name:"Vincent Ogé",img:"/images/encyclopedia/vincent-oge.jpg",artist:"Fouquet - The Louvre project",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_drawing_of_Vincent_Ogé_(1790).jpg"},
+    deeds:{slug:"leger-felicite-sonthonax",name:"Léger-Félicité Sonthonax",img:"/images/encyclopedia/leger-felicite-sonthonax.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sonthonax.jpg"},
     opponents:{slug:"atlantic-slave-trade",name:"Atlantic slave trade",img:"/images/encyclopedia/atlantic-slave-trade.jpg",artist:"Plymouth Chapter of the Society for Effecting the Abolition of the Slave Trade",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Slaveshipposter.jpg"},
     last:{slug:"henri-christophe",name:"Henri Christophe",img:"/images/encyclopedia/henri-christophe.jpg",artist:"Richard Evans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henri_Christophe.jpg"},
     legacy:{slug:"haitian-revolution",name:"Haitian Revolution",img:"/images/encyclopedia/haitian-revolution.jpg",artist:"Aaron Martinet / Alphonse-Charles Masson",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Incendie_de_la_Plaine_du_Cap._Massacre_des_Blancs_par_les_esclaves_noirs_r%C3%A9volt%C3%A9s._France_militaire._Martinet_et_Masson.jpg"}

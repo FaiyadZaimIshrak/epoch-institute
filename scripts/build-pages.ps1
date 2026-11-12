@@ -1201,6 +1201,15 @@ function EntryQuotes($e) {
   if ($qn -gt 3) { $qm = ''; for ($qi = 3; $qi -lt $qn; $qi++) { $qm += QuoteHtml $qa[$qi] }; $qh += '<details class="enc-q-more"><summary>' + ($qn - 3) + ' more</summary>' + $qm + '</details>' }
   return '<section class="enc-words" id="in-their-words"><h2 class="enc-section-title">In their words</h2>' + $qh + '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/quotations">Quotations from ' + $QBY.Count + ' people &rarr;</a></p>' + "</section>`n"
 }
+# labels the two rules above do not give (12 Nov 2026): scripts/tools/entry-labels.js reads each entry's first sentence
+# more widely (a place's country, a list of three, a phrase cut before a preposition, a conflict told with a verb)
+foreach ($elL in (& $emExe "$PSScriptRoot\tools\entry-labels.js")) { Say $elL }
+if ($LASTEXITCODE) { throw 'scripts/tools/entry-labels.js failed' }
+$ELAB2 = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-labels.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $i = $l.IndexOf("`t"); if ($i -gt 0) { $ELAB2[$l.Substring(0, $i)] = $l.Substring($i + 1) } } }
+# entries told in more detail (scripts/entry-more.json, gathered by scripts/entries/check-more.js --write): slug ->
+# [[heading, [paragraphs]]], shown under the description
+$EMORE = @{}; if (Test-Path "$Repo\scripts\entry-more.json") { $emJ = ReadJson "$Repo\scripts\entry-more.json"; foreach ($emK in $emJ.Keys) { $EMORE[[string]$emK] = $emJ[$emK] } }
+Say "entries told in more detail: $($EMORE.Count)"
 function WdLabel([string]$key) {
   $wl = $WDDESC[$key]; if (-not $wl) { return $null }
   return $wl.Substring(0, 1).ToUpperInvariant() + $wl.Substring(1)
@@ -1243,6 +1252,16 @@ foreach ($e in $ENT) {
   [void]$body.Append('<main id="main" class="enc-page ref-page">' + "`n" + '<div class="enc-wrap">' + "`n" + $crumb[0] + "`n" + '<article class="enc-article">' + "`n")
   [void]$body.Append('<header><p class="enc-kicker">' + $kicker + '</p><h1 class="enc-title">' + (Hx $e.name) + '</h1>' + $(if ($meta.Count) { '<p class="enc-meta">' + ($meta -join ' · ') + '</p>' } else { '' }) + "</header>`n")
   [void]$body.Append('<div class="enc-body"><p class="enc-desc">' + $descHtml + '</p>' + $fig + "</div>`n")
+  if ($EMORE.ContainsKey([string]$e.slug)) {   # the entry told in more detail (scripts/entry-more.json), gold-linked like the description
+    $emH = New-Object Text.StringBuilder
+    foreach ($emS in $EMORE[[string]$e.slug]) {
+      [void]$emH.Append('<h2 class="enc-more-h">' + (Hx ([string]$emS[0])) + '</h2>')
+      foreach ($emP in $emS[1]) { [void]$emH.Append('<p>' + (LinkDesc ([string]$emP) $e.slug (EncYears $e.dates)) + '</p>') }
+    }
+    $emW = $EWD[[string]$e.slug]
+    if ($emW) { [void]$emH.Append('<p class="enc-more-src">This account follows the Wikipedia article “' + (Hx $emW[0]) + '” (CC BY-SA 4.0), linked under Read further below.</p>') }
+    [void]$body.Append('<section class="enc-more">' + $emH.ToString() + "</section>`n")
+  }
   $eQuotes = $EMQ[$e.slug]
   if ($eQuotes) { [void]$body.Append('<section class="enc-quotes"><h2 class="enc-section-title">Across the Institute</h2><ul>' + $eQuotes + "</ul></section>`n") }
   if ($HOUSE.ContainsKey($e.slug)) {   # the house's people, on one scale of years
@@ -1325,6 +1344,7 @@ foreach ($e in $ENT) {
   $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd $wdSame)
   $eNY = NameYears $e.name $tDates; $eLab = EntryLabel ([string]$e.desc)
   if (-not $eLab -or ($eNY + ": " + $eLab).Length -gt 70) { $eLab = WdLabel ('e:' + $e.slug) }
+  if (-not $eLab -or ($eNY + ": " + $eLab).Length -gt 70) { $eLab = $ELAB2[[string]$e.slug] }
   $eTitle = if ($eLab -and ($eNY + ": " + $eLab).Length -le 70) { "${eNY}: $eLab — The Epoch Institute" } else { "$eNY — Encyclopedia — The Epoch Institute" }
   Emit $path (Page @{ title = $eTitle; desc = $desc; path = $path; type = 'article'; img = $e.img; imgW = $(if ($sz) { $sz[0] }); imgH = $(if ($sz) { $sz[1] }); ld = $ld; nav = 'encyclopedia'; noindex = $thin; body = $body.ToString() })
   if (($e.i % 2000) -eq 1999) { Say "  $($e.i + 1) entries" }
@@ -2203,8 +2223,13 @@ for ($ci = 0; $ci -lt $CENTPAGES.Count; $ci++) {
   [void]$sb.Append('<nav class="ref-prevnext" aria-label="Neighbouring centuries">' + $(if ($pv) { '<a class="prev" rel="prev" href="/centuries/' + (CenturySlug $pv) + '"><span class="lbl">&larr; Previous century</span><span class="nm">' + (Hx (CentTitle $pv)) + '</span></a>' } else { '' }) +
     $(if ($nx) { '<a class="next" rel="next" href="/centuries/' + (CenturySlug $nx) + '"><span class="lbl">Next century &rarr;</span><span class="nm">' + (Hx (CentTitle $nx)) + '</span></a>' } else { '' }) + "</nav>`n")
   [void]$sb.Append((CiteBox "The $ct" ($SITE + $path) 'The Epoch Institute') + "`n</div>`n</main>`n")
-  $title = "The $($ct -replace ' century', ' Century'): States, Empires and Events — The Epoch Institute"
-  $desc = [EpochBuild.W]::Summary("The $c ($dec) in world history: $($cs.alive.Count.ToString('N0')) states, the great powers of the age, key events and people, and a map of the world in $midLbl.", 155)
+  # the title gives the century's years and what the page holds, the description its best-known events and people
+  # (12 Nov 2026: century pages were shown for "14th century" at position 7-9 and clicked 3 times in 1,000)
+  $cenN = [int]([regex]::Match($c, '^\d+').Value); $cenRange = if ($c -match 'BCE') { "$($cenN * 100 - 1)–$(($cenN - 1) * 100) BCE" } elseif ($cenN -eq 1) { '1–99' } else { "$(($cenN - 1) * 100)–$($cenN * 100 - 1)" }
+  $title = "The $($ct -replace ' century', ' Century') ($cenRange): Events, People, Empires and Map — The Epoch Institute"
+  $cenEv = @($evs | Select-Object -First 3 | ForEach-Object { [string]$_.name }); $cenPp = @($ppl | Select-Object -First 3 | ForEach-Object { [string]$_.name })
+  $desc = if ($cenEv.Count -ge 2 -and $cenPp.Count -ge 2) { [EpochBuild.W]::Summary("The $c ($cenRange): $($cenEv -join ', '); $($cenPp -join ', '); $($cs.alive.Count.ToString('N0')) states, the great powers and a world map of $midLbl.", 158) }
+    else { [EpochBuild.W]::Summary("The $c ($dec) in world history: $($cs.alive.Count.ToString('N0')) states, the great powers of the age, key events and people, and a map of the world in $midLbl.", 155) }
   $ld = $crumb[1] + ',{"@type":"CollectionPage","name":' + (Js $title) + ',"description":' + (Js $desc) + ',"url":' + (Js ($SITE + $path)) + $(if ($rg[0] -ge 0) { ',"temporalCoverage":' + (Js ($rg[0].ToString('0000') + '/' + $rg[1].ToString('0000'))) } else { '' }) + ',"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"' + $SITE + '/"}}'
   $ogY = '/images/og/century-' + $slug + '.jpg'
   Emit $path (Page @{ title = $title; desc = $desc; path = $path; type = 'website'; img = $(if (Test-Path (Join-Path $Repo ($ogY.TrimStart('/') -replace '/', '\'))) { $ogY }); imgW = 1200; imgH = 630; ld = $ld; nav = 'centuries'; body = $sb.ToString() })
@@ -2545,7 +2570,7 @@ foreach ($socF in @(Get-ChildItem "$Repo\scripts\societies\*.txt" -ErrorAction S
     if (-not $socTp -and -not $socNoPic) { foreach ($socE in $socPpl) { if ($socE.img) { $socTp = $socE; break } } }
     if (-not $socTp -and -not $socNoPic) { foreach ($socE in $socTrm) { if ($socE.img) { $socTp = $socE; break } } }
     $socPk = $socF.BaseName + '-' + $socN
-    if ($SOCPICS.ContainsKey($socPk)) { if ($socTp) { $socBad.Add("$socTw`: an entry picture and one in society-pictures.tsv") } else { $socTp = $SOCPICS[$socPk]; $socPicUsed[$socPk] = 1 } }
+    if ($SOCPICS.ContainsKey($socPk)) { $socTp = $SOCPICS[$socPk]; $socPicUsed[$socPk] = 1 }   # the rank's own picture, chosen for it, wins over a term's or person's (12 Nov 2026: entries gained pictures)
     if (-not $socTp) { $socBad.Add("$socTw`: no picture (an entry's, or a row of scripts/society-pictures.tsv)") }
     # local: the rank's own name, shown first with the English name in brackets ("-": none attested; 31 Oct 2026)
     $socLoc = ([string]$socTi['local']).Trim(); if (-not $socTi.ContainsKey('local')) { $socBad.Add("$socTw`: no 'local' line") }; if ($socLoc -eq '-') { $socLoc = '' }
