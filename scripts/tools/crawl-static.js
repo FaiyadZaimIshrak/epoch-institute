@@ -70,6 +70,9 @@ for (const rel of files) {
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) { try { JSON.parse(m[1]); } catch (e) { add('JSON-LD does not parse', page, e.message); } }
   if (!/<html[^>]*\blang="/.test(html)) add('no lang on html', page, '');
 }
+// every script at the root must parse (12 Nov 2026: a comment that swallowed a brace in shared-nav.js went live and took the
+// menu, the search and every page's script with it for some minutes)
+for (const jf of fs.readdirSync(R).filter(x => /.js$/.test(x))) { try { new (require('vm').Script)(fs.readFileSync(path.join(R, jf), 'utf8'), { filename: jf }); } catch (e) { add('script does not parse', '/' + jf, e.message); } }
 const rules = Object.keys(found).sort((a, b) => found[b].length - found[a].length);
 console.log(pages + ' pages read');
 for (const r of rules) {
