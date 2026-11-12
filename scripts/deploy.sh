@@ -41,7 +41,7 @@ GENERATED=(encyclopedia state today-in-history countries centuries paths speeche
 DIRS=(sitemaps fonts css)                                          # line 12 (css/: scripts/split-css.js, Oct 2026)
 DATA=(data/.htaccess data/history.json data/international-days.json data/polities.json data/enc-states.json
   data/years.json data/songs-by-country.json data/sixdeg data/days data/enc-preview data/states data/scribe data/faiths data/cards data/spans data/societies data/inventions.json data/meanwhile.json
-  data/compare data/song-lines.json data/now.json)  # line 14 (compare, song-lines: Nov 2026)
+  data/compare data/song-lines.json data/now.json data/born-near.json)  # line 14 (compare, song-lines: Nov 2026)
 PROFILES=(empire religion language culture movement government ideology work logos images maps)              # line 15
 KINDS=(culture ideology movement work)                                  # line 16: copied when present
 

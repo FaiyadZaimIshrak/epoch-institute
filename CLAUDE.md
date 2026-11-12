@@ -1425,7 +1425,23 @@ A walk of the local build at 1366 and 390 px (scratchpad audit.js: screens per p
   (run by the builder before make-today.js) writes born-data.js (BORN [name, dates, lat, lng, region, place, slug]: 494
   people of weight 6 or more whose birthplace has a point and is not a country or broad land, LANDS) and stamps
   BORN_SRC. games.js?v=20, passport.js?v=14; scripts/tests/born-where.js.
-  Still to do: E4, E5, R1-R5.
+- **R4 The atlas knows people:** "What was here?" lists the people born within 250 km (atlas.js bornReady, paintBorn,
+  #atl-here-born; data/born-near.json [slug, name, dates, lat, lng], 5,567 people of weight 3 or more, the best known
+  first, written by make-born-game.js with ATLAS_BORN_SRC stamped into /atlas; deploy.sh DATA). atlas.js?v=10;
+  scripts/tests/atlas-born.js.
+- **R2 Rulers on the profiles:** scripts/tools/state-rulers.js proposes, for each state and empire profile, the people
+  the profile names whose own entry calls them its ruler: the first sentence's predicate (what the person "was", up to
+  the first comma or relative clause) holds a ruler's title next to the state's name or core word ("Roman emperor",
+  "king of France", "ruler of the Mali Empire", "king of Umma and Uruk"; ADJ maps France/French, Spanish/Spain …),
+  the title being the person's own (not after "of the", "under the": "minister of the Mughal emperor Akbar"), or the
+  sentence says they founded the state; a queen by marriage is left out; their years must meet the state's (a
+  lifespan from the age of fifteen). Tuned by reading the report (--report=file) until a sample of 80 showed one
+  doubtful line. 174 profiles with three or more, 948 rulers. scripts/state-rulers-manual.tsv (profile, entry, - or +)
+  is the editor's. It writes scripts/state-rulers.tsv and scripts/state-rulers.js (STATE_RULERS, read by
+  generator.html: "Rulers and leaders in the encyclopedia" chips after the governance section): run it and
+  regen-profiles.ps1 after the entries or profiles change. The lists are what the encyclopedia holds, not complete
+  king lists; state pages (not profiles) have none yet.
+  Still to do: E4, E5, R1, R3, R5.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

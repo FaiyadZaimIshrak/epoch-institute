@@ -47,6 +47,7 @@
 <script src="scripts/society-links.js"></script>
 <script src="scripts/invention-links.js"></script>
 <script src="scripts/song-links.js"></script>
+<script src="scripts/state-rulers.js"></script>
 <script src="scripts/essay-links.js"></script>
 <script src="scripts/kids-stories.js"></script>
 <script src="scripts/profile-sameas.js"></script>
@@ -458,7 +459,11 @@ function buildPage(emp) {
       // the Research Series essays that list or link it (scripts/essay-links.js, written by build-pages.ps1), with the songs
       var essays = key === invKey && typeof ESSAY_LINKS !== 'undefined' && ESSAY_LINKS[name]
         ? '<div class="profile-inv"><p class="profile-inv-k">In the Research Series</p><p class="profile-inv-l">' + ESSAY_LINKS[name].map(function (l) { return '<a href="' + l[0] + '">' + esc(l[1]) + '<span>Essay</span></a>'; }).join('') + '</p></div>' : '';
-      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + ladder + inv + songs + essays + '\n      </div>';
+      // the people of the encyclopedia whose own entries name them as its rulers (scripts/state-rulers.js, written by
+      // scripts/tools/state-rulers.js), after the governance section; not a complete list of its rulers
+      var rulers = key === 'governance' && typeof STATE_RULERS !== 'undefined' && STATE_RULERS[name]
+        ? '<div class="profile-inv"><p class="profile-inv-k">Rulers and leaders in the encyclopedia</p><p class="profile-inv-l">' + STATE_RULERS[name].map(function (l) { return '<a href="/encyclopedia/' + l[0] + '">' + esc(l[1]) + '<span>' + esc(l[2]) + '</span></a>'; }).join('') + '</p></div>' : '';
+      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + ladder + rulers + inv + songs + essays + '\n      </div>';
     }).join('\n      ');
   }
 

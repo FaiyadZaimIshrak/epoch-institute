@@ -746,6 +746,26 @@
         (L.length > 24 ? ' <a href="/songs/">and ' + (L.length - 24) + ' more</a>' : '') + '</p>';
     });
   }
+  // the people of the encyclopedia born within HERE_KM of the place (data/born-near.json: [slug, name, dates, latitude,
+  // longitude], the best known first; Wikidata's birthplaces, scripts/tools/make-born-game.js), fetched once
+  var bornAll = null, bornWait = [];
+  function bornReady(cb) {
+    if (bornAll) return cb(bornAll); bornWait.push(cb); if (bornWait.length > 1) return;
+    if (!window.fetch || typeof ATLAS_BORN_SRC !== 'string') { bornAll = []; return cb(bornAll); }
+    fetch(ATLAS_BORN_SRC).then(function (r) { return r.json(); }).catch(function () { return []; }).then(function (j) { bornAll = j || []; bornWait.splice(0).forEach(function (f) { f(bornAll); }); });
+  }
+  function paintBorn() {
+    var box = $('atl-here-born'); if (!box) { box = document.createElement('div'); box.id = 'atl-here-born'; $('atl-here-more').insertAdjacentElement('afterend', box); }
+    box.innerHTML = ''; if (!HERE) return; var at = HERE;
+    bornReady(function (B) {
+      if (HERE !== at) return;
+      var L = B.filter(function (p) { return Math.abs(p[3] - at.lat) < 3 && km(at.lng, at.lat, p[4], p[3]) <= HERE_KM; });
+      if (!L.length) return;
+      box.innerHTML = '<p class="atl-here-note">Born within ' + HERE_KM + ' km of this place (' + L.length.toLocaleString('en-GB') + ' people of the encyclopedia; birthplaces as Wikidata records them):</p><p class="atl-here-chips">' +
+        L.slice(0, 18).map(function (p) { return '<a href="/encyclopedia/' + encodeURIComponent(p[0]) + '">' + escHtml(p[1]) + ' <span>' + escHtml(p[2]) + '</span></a>'; }).join('') +
+        (L.length > 18 ? ' <span class="atl-here-and">and ' + (L.length - 18) + ' more</span>' : '') + '</p>';
+    });
+  }
   function paintCountry(slug, cname, approx) {
     hereAt(slug, cname);
     paintSongs(slug, cname);
@@ -767,7 +787,7 @@
         '<span class="atl-here-d">' + (d < 1 ? 'here' : d + ' km') + '</span><span class="atl-here-bar" aria-hidden="true"><i style="left:' + l.toFixed(2) + '%;width:' + w.toFixed(2) + '%"></i></span></li>';
     }).join('');
     hereRows = near.map(function (x) { return x.r; });
-    hereBox.hidden = false; hereNow();
+    hereBox.hidden = false; hereNow(); paintBorn();
     var top = scroll ? hereBox.getBoundingClientRect().top : 0;
     if (top > innerHeight - 90) hereBox.scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'nearest' });
   }

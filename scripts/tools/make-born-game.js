@@ -20,5 +20,10 @@ const js = '// born-data.js - written by scripts/tools/make-born-game.js from pe
 const out = path.join(R, 'born-data.js'); if (!fs.existsSync(out) || fs.readFileSync(out, 'utf8') !== js) fs.writeFileSync(out, js);
 const v = crypto.createHash('sha1').update(js).digest('hex').slice(0, 10), gp = path.join(R, 'games'), g0 = fs.readFileSync(gp, 'utf8'), g1 = g0.replace(/born-data\.js\?v=[0-9a-f]*/, 'born-data.js?v=' + v);
 if (g1 !== g0) fs.writeFileSync(gp, g1);
+// the atlas's "What was here?": everyone with a birthplace on the map and a weight of 3 or more, the best known first
+const near = box.PEOPLE.filter(p => born[p[0]] && !LANDS.has(born[p[0]][3]) && (w[p[0]] || 0) >= 3).sort((a, b) => (w[b[0]] || 0) - (w[a[0]] || 0) || a[0].localeCompare(b[0])).map(p => [p[0], p[1], p[2], +(+born[p[0]][4]).toFixed(2), +(+born[p[0]][5]).toFixed(2)]);
+const nj = JSON.stringify(near) + '\n', nf = path.join(R, 'data', 'born-near.json'); if (!fs.existsSync(nf) || fs.readFileSync(nf, 'utf8') !== nj) fs.writeFileSync(nf, nj);
+const ap = path.join(R, 'atlas'), a0 = fs.readFileSync(ap, 'utf8'), a1 = a0.replace(/born-near\.json\?v=[0-9a-f]*/, 'born-near.json?v=' + crypto.createHash('sha1').update(nj).digest('hex').slice(0, 10)); if (a1 !== a0) fs.writeFileSync(ap, a1);
 const by = {}; rows.forEach(r => { by[r[4]] = (by[r[4]] || 0) + 1; });
+console.log('Born near (atlas): ' + near.length + ' people, ' + Math.round(nj.length / 1024) + ' KB');
 console.log('Born Where?: ' + rows.length + ' people (' + Object.entries(by).map(e => e[0] + ' ' + e[1]).join(', ') + '), ' + Math.round(js.length / 1024) + ' KB');

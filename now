@@ -56,12 +56,12 @@
 <section class="now-sec" id="new" aria-labelledby="now-new-t">
   <h2 class="ref-sec-title" id="now-new-t">New at the Institute</h2>
   <ol class="wn-list">
+    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-23">23 November 2026</time></p><h3 class="wn-t">Rulers on the profiles, and who was born near any place</h3><p class="wn-s">The profiles of 174 states and empires now list their rulers and leaders among the people of the encyclopedia, each a person whose own entry names them as that state’s ruler. On the atlas, “What was here?” also lists the people born within 250 km of the place you choose.</p><p class="wn-links"><a href="/atlas">The atlas</a> <a href="/profiles">Profiles</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-22">22 November 2026</time></p><h3 class="wn-t">Born Where? A new game on the globe</h3><p class="wn-s">A person of history is named: turn the globe and drop your pin where they were born. Five people from five parts of the world, with the birthplace and the distance shown after each guess.</p><p class="wn-links"><a href="/games#hunt-born">Born Where?</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-21">21 November 2026</time></p><h3 class="wn-t">In their words: quotations on the pages of those who spoke them</h3><p class="wn-s">The pages of more than five hundred people now carry their own words: some two thousand quotations, each taken from a named public-domain edition, with its work, translator and source. A new page lists the speakers by age.</p><p class="wn-links"><a href="/encyclopedia/quotations">Quotations</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-20">20 November 2026</time></p><h3 class="wn-t">Today at the Institute, and a bar for phones</h3><p class="wn-s">One page for the day: what happened on this day, who was born, the song of the day, the daily quiz and the eight daily games with your results, and history in the news. On phones a bar at the foot of the screen keeps Home, Search, Today, Play and the menu under your thumb.</p><p class="wn-links"><a href="/today">Today at the Institute</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-19">19 November 2026</time></p><h3 class="wn-t">Easier to find your way</h3><p class="wn-s">Long pages now carry a row of their sections under the header, so any part is one tap away. The profiles, the songs, the Kids themes and the longest country timelines open on a first screenful with “Show all”. On phones an entry begins with its text, not its picture. The home page has four ways in under the search, and one page, Explore Everything, shows every section with a box to find one.</p><p class="wn-links"><a href="/research">Explore Everything</a> <a href="/profiles">Profiles</a></p></li>
     <li class="wn-note"><p class="wn-d"><time datetime="2026-11-18">18 November 2026</time></p><h3 class="wn-t">Where people were born, and four new open data tables</h3><p class="wn-s">The pages of some 7,500 people now say where they were born and died, with a dot on the map, and each country history lists the best-known people born there; the places are Wikidata’s. Open Data gains four tables to download: the people, the songs, the inventions, and the encyclopedia’s entries matched to Wikipedia and Wikidata.</p><p class="wn-links"><a href="/dataset">Open Data</a> <a href="/people/">People in History</a></p></li>
-    <li class="wn-note"><p class="wn-d"><time datetime="2026-11-17">17 November 2026</time></p><h3 class="wn-t">Words for eight more songs</h3><p class="wn-s">Eight songs that had no words now have them, each from a public-domain edition: the Akathist hymn’s opening, Heil dir im Siegerkranz, the Himno de Riego, Battōtai, the Kyrie, Red River Valley and the opening lines of the Japji Sahib and the Hymn of the Pearl, five of them with the Institute’s own line-by-line English.</p><p class="wn-links"><a href="/songs/akathist">Akathist</a> <a href="/songs/himno-de-riego">Himno de Riego</a> <a href="/songs/">Songs in History</a></p></li>
   </ol>
   <p class="now-note"><a href="/new">Everything that is new, and every page added in the last thirty days &rarr;</a></p>
 </section>
@@ -70,7 +70,7 @@
 
 <script src="/shared-nav.js"></script>
 <script>initNav('today');</script>
-<script>var NOW_SRC = '/data/now.json?v=04c4367227';</script>
+<script>var NOW_SRC = '/data/now.json?v=d7a48670f4';</script>
 <script src="/now.js?v=6454b6d70d"></script>
 </body>
 </html>
