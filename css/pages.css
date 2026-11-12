@@ -2563,7 +2563,7 @@ p.soc-term { font-size: 15px; line-height: 1.4; }
 .scr-kg { font-size: 28px; line-height: 1.25; min-height: 1.25em; }
 .scr[data-engine="hiero"] .scr-kg, .scr[data-engine="syllabic"] .scr-kg { line-height: 1.6; min-height: 1.6em; }
 .scr-kv { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); line-height: 1.2; }
-.scr-kh { font-family: var(--font-ui); font-size: 11px; color: var(--muted); line-height: 1.25; text-align: center; max-width: 100%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.scr-kh { font-family: var(--font-ui); font-size: 11px; color: var(--muted); line-height: 1.25; text-align: center; max-width: 100%; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .scr-kb-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
 .scr-act { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; min-height: 38px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
 .scr-act:hover { border-color: var(--gold); }

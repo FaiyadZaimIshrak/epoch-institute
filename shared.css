@@ -4204,7 +4204,8 @@ svg.map-here { cursor: crosshair; }
    quiz's column, the puzzles had left a long empty stretch beside the entry */
 .home-challenges-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .home-entry { margin-top: 40px; }
-.home-challenges-row .home-daily-ten { grid-template-columns: minmax(0, 1fr); align-content: start; height: 100%; margin: 0; }
+.home-challenges-row .home-daily-ten { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr auto; align-content: stretch; height: 100%; margin: 0; }   /* the Play buttons stand on one line at the foot of each row of cards */
+.home-challenges-row .hdt-d { align-self: start; }
 .home-challenges-row .home-daily-ten + .home-daily-ten { margin-top: 0; }
 .home-challenges-row .home-daily-ten b { font-size: 18px; }
 .home-challenges-row .hdt-d { font-size: 14.5px; }
@@ -5570,6 +5571,10 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .tih-strip-cap b { display: block; margin-bottom: 3px; font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #e3c37a; }
 .tih-strip-pic:hover .tih-strip-cap, .tih-strip-pic:focus-visible .tih-strip-cap { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .tih-strip-pic img { display: block; width: 100%; height: 100%; object-fit: cover; min-height: 120px; }
+/* the picture keeps a landscape box and fills its row: a tall portrait had set the height of the whole row, leaving the
+   cards beside it mostly empty (12 Nov 2026) */
+.home-section .tih-strip-pic { aspect-ratio: 4 / 3; min-height: 220px; }
+.home-section .tih-strip-pic img { position: absolute; inset: 0; min-height: 0; }
 .home-reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .home-reveal.is-in { opacity: 1; transform: none; }
 
@@ -5625,7 +5630,7 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 /* hieroglyphs and cuneiform: tall signs (the foot, the reed) get room above their value instead of running into it */
 .scr[data-engine="hiero"] .scr-kg, .scr[data-engine="syllabic"] .scr-kg { line-height: 1.6; min-height: 1.6em; }
 .scr-kv { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--gold); line-height: 1.2; }
-.scr-kh { font-family: var(--font-ui); font-size: 11px; color: var(--muted); line-height: 1.25; text-align: center; max-width: 100%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.scr-kh { font-family: var(--font-ui); font-size: 11px; color: var(--muted); line-height: 1.25; text-align: center; max-width: 100%; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .scr-kb-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
 .scr-act { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; min-height: 38px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
 .scr-act:hover { border-color: var(--gold); }
