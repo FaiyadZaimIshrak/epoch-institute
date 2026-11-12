@@ -6156,6 +6156,35 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
   .gv-wiz-res img { width: 56px; height: 56px; }
 }
 
+/* the home page's four ways in under the search, and the hub's "Find a section" (Nov 2026) */
+.hero-ways { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 560px; }
+.hero-ways a { display: flex; flex-direction: column; gap: 2px; height: 100%; padding: 12px 14px; border: 1px solid var(--gold); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+.hero-ways a:hover { background: var(--surface); border-color: var(--gold-light); }
+.hero-ways b { font-family: var(--font-display); font-size: 17px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-light); }
+.hero-ways span { font-family: var(--font-ui); font-size: 13px; line-height: 1.35; color: var(--muted); }
+.hero-more { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; }
+.hero-more a { color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; min-height: 40px; }
+.hero-more a:hover { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+.hub-find { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; margin: 0 auto 28px; font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
+.hub-find input { width: min(320px, 100%); min-height: 44px; padding: 8px 14px; border: 1px solid var(--field-border); border-radius: 999px; background: var(--surface); color: var(--text); font-family: var(--font-ui); font-size: 16px; }
+.hub-find a { color: var(--gold); }
+/* a section of many screens cut short until asked for (enc-page.js: a country's timeline) */
+.fold-long { max-height: 150vh; overflow: hidden; position: relative; }
+.fold-long::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none; }
+.kd-cards.is-cut > li:nth-child(n+5) { display: none; }
+@media (max-width: 560px) {   /* the hubs' cards two to a row on phones: /research ran to seventeen screens */
+  .hub-group .hub-grid, .hub-group .hub-grid.hub-5, .hub-group .hub-grid.hub-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .hub-group .hub-card-b { padding: 10px 10px 12px; }
+  .hub-group .hub-card-t { font-size: 15px; }
+  .hub-group .hub-card-d { font-size: 13.5px; line-height: 1.4; }
+}
+@media print { .fold-long { max-height: none; } .fold-long::after { display: none; } .kd-cards.is-cut > li:nth-child(n+5) { display: list-item; } .profile-more-row { display: none; } }
+/* "Show all N" under a list cut to its first rows (/profiles' ages, /songs/, Nov 2026) */
+.profile-more-row { margin: 18px 0 0; text-align: center; }
+.profile-more { min-height: 44px; padding: 8px 22px; border: 1px solid var(--gold); border-radius: 999px; background: none; color: var(--gold); font-family: var(--font-ui); font-size: 14px; font-weight: 600; cursor: pointer; }
+.profile-more:hover { background: var(--gold); color: var(--bg); }
+.profile-era-n { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: 0; margin-left: 6px; }
+
 /* ── On this page (shared-nav.js, Nov 2026): the sections of a long page as a row under the header; fixed, slid away
    until the reader is past the first section ── */
 .page-toc { position: fixed; left: 0; right: 0; top: 64px; z-index: 880; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); visibility: hidden; transition: transform 0.2s ease, visibility 0s linear 0.2s; }

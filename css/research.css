@@ -1203,6 +1203,15 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 }
 :root { --gv-other: #6f6a60; }
 [data-theme="light"] { --gv-other: #a7a092; }
+.hub-find { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; margin: 0 auto 28px; font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
+.hub-find input { width: min(320px, 100%); min-height: 44px; padding: 8px 14px; border: 1px solid var(--field-border); border-radius: 999px; background: var(--surface); color: var(--text); font-family: var(--font-ui); font-size: 16px; }
+.hub-find a { color: var(--gold); }
+@media (max-width: 560px) {
+.hub-group .hub-grid, .hub-group .hub-grid.hub-5, .hub-group .hub-grid.hub-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.hub-group .hub-card-b { padding: 10px 10px 12px; }
+.hub-group .hub-card-t { font-size: 15px; }
+.hub-group .hub-card-d { font-size: 13.5px; line-height: 1.4; }
+}
 .page-toc { position: fixed; left: 0; right: 0; top: 64px; z-index: 880; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); visibility: hidden; transition: transform 0.2s ease, visibility 0s linear 0.2s; }
 .page-toc.is-on { transform: none; visibility: visible; transition: transform 0.2s ease; }
 .page-toc[hidden] { display: none; }

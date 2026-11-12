@@ -84,7 +84,7 @@
   if (!cards.length) { window.epochSongs = {}; return; }
   var q = document.getElementById('sg-q'), era = document.getElementById('sg-era'), reg = document.getElementById('sg-region');
   var w = document.getElementById('sg-w'), v = document.getElementById('sg-v'), count = document.getElementById('sg-count'), none = document.getElementById('sg-none');
-  var types = $$('.sg-f-type'), type = '';
+  var types = $$('.sg-f-type'), type = '', CAP = 12, OPEN = {};
   var text = cards.map(function (c) { return ' ' + fold(c.getAttribute('data-q')) + ' '; });
   function setType(t) { type = t; types.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-t') === t ? 'true' : 'false'); }); }
   function run(keep) {
@@ -96,7 +96,17 @@
         words.every(function (x) { return text[i].indexOf(' ' + x) >= 0; });
       c.hidden = !ok; if (ok) n++;
     });
-    $$('.sg-era').forEach(function (s) { s.hidden = !s.querySelector('.sg-card:not([hidden])'); });
+    // with no search or filter an age shows its first twelve songs until asked for the rest (Nov 2026: the list ran to
+    // 108 phone screens); a narrowed list is shown whole
+    var narrowed = !!(words.length || type || era.value || reg.value || w.checked || v.checked);
+    $$('.sg-era').forEach(function (s) {
+      var live = [].filter.call(s.querySelectorAll('.sg-card'), function (c) { return !c.hidden; }), key = s.getAttribute('data-era'), more = s.querySelector('.profile-more-row');
+      s.hidden = !live.length;
+      var cut = !narrowed && !OPEN[key] && live.length > CAP + 3;
+      if (cut) live.slice(CAP).forEach(function (c) { c.hidden = true; });
+      if (cut && !more) { more = document.createElement('p'); more.className = 'profile-more-row'; more.innerHTML = '<button type="button" class="profile-more"></button>'; s.appendChild(more); more.firstChild.addEventListener('click', function () { OPEN[key] = true; run(true); var c = s.querySelectorAll('.sg-card:not([hidden])')[CAP]; if (c) c.focus({ preventScroll: true }); }); }
+      if (more) { more.hidden = !cut; if (cut) more.firstChild.innerHTML = 'Show all ' + live.length + ' <span aria-hidden="true">&darr;</span>'; }
+    });
     var total = kids ? cards.filter(function (c) { return c.getAttribute('data-k') === '1'; }).length : cards.length;
     count.textContent = n === total ? total + ' songs' : 'Showing ' + n + ' of ' + total + ' songs';
     none.hidden = n > 0;

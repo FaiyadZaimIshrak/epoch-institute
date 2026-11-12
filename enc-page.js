@@ -65,6 +65,17 @@
     });
   })();
 
+  // country histories: a timeline of many screens (France's ran to twenty on a phone) is cut at a screen and a half
+  // until asked for; not when the address points into it. Below the first screen, so nothing in view moves.
+  [].forEach.call(document.querySelectorAll('.cty-page section'), function (sec) {
+    if (!sec.querySelector('.cty-scale') || sec.scrollHeight < window.innerHeight * 2.5) return;
+    if (location.hash.length > 1) { try { var t = document.querySelector(location.hash); if (t && sec.contains(t)) return; } catch (e) {} }
+    var n = sec.querySelectorAll('.cty-tl li').length, row = document.createElement('p'); row.className = 'profile-more-row';
+    row.innerHTML = '<button type="button" class="profile-more">Show the whole timeline' + (n ? ' (' + n + ' states)' : '') + ' <span aria-hidden="true">&darr;</span></button>';
+    sec.classList.add('fold-long'); sec.parentNode.insertBefore(row, sec.nextSibling);
+    row.firstChild.addEventListener('click', function () { sec.classList.remove('fold-long'); row.parentNode.removeChild(row); });
+  });
+
   // random entry / random state
   function loadScript(src) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
   document.addEventListener('click', function (ev) {

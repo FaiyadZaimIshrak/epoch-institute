@@ -4640,7 +4640,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
   @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
   @('Research Series', '/research-series', 'research series|essays'), @('Open Data', '/dataset', 'open data|dataset|download|csv'),
-  @('Research Hub', '/research', 'research hub'), @("Teachers' Corner", '/teachers/', 'teachers|worksheets|classroom|lessons'),
+  @('Explore Everything', '/research', 'research hub|explore|explore everything|everything|all sections|site map|sitemap|contents|overview'), @("Teachers' Corner", '/teachers/', 'teachers|worksheets|classroom|lessons'),
   @('Community', '/community', 'community|articles by readers'), @('About the Institute', '/about', 'about|mission|who we are'),
   @('Write for the Institute', '/contributors', 'write for us|contributors|contribute'), @('Contact', '/contact', 'contact|email|suggest a correction'))
 foreach ($hp in $HANDP) { SgRow $hp[0] $hp[1] 'page' $hp[2] }

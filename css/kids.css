@@ -1161,6 +1161,14 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 [data-theme="light"] { --gv-other: #a7a092; }
 .gv-p a, .kd-sub a { color: var(--gold); text-decoration-color: rgba(var(--gold-rgb), 0.45); }
 .gv-p a:hover, .kd-sub a:hover { color: var(--gold-light); }
+.kd-cards.is-cut > li:nth-child(n+5) { display: none; }
+@media print {
+.kd-cards.is-cut > li:nth-child(n+5) { display: list-item; }
+.profile-more-row { display: none; }
+}
+.profile-more-row { margin: 18px 0 0; text-align: center; }
+.profile-more { min-height: 44px; padding: 8px 22px; border: 1px solid var(--gold); border-radius: 999px; background: none; color: var(--gold); font-family: var(--font-ui); font-size: 14px; font-weight: 600; cursor: pointer; }
+.profile-more:hover { background: var(--gold); color: var(--bg); }
 .page-toc { position: fixed; left: 0; right: 0; top: 64px; z-index: 880; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); visibility: hidden; transition: transform 0.2s ease, visibility 0s linear 0.2s; }
 .page-toc.is-on { transform: none; visibility: visible; transition: transform 0.2s ease; }
 .page-toc[hidden] { display: none; }

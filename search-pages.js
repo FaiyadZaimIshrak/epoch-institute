@@ -45,7 +45,7 @@ var SEARCH_PAGES = [
 ["Profiles","/profiles","page","profiles|empires|civilisations|civilizations"],
 ["Research Series","/research-series","page","research series|essays"],
 ["Open Data","/dataset","page","open data|dataset|download|csv"],
-["Research Hub","/research","page","research hub"],
+["Explore Everything","/research","page","research hub|explore|explore everything|everything|all sections|site map|sitemap|contents|overview"],
 ["Teachers' Corner","/teachers/","page","teachers|worksheets|classroom|lessons"],
 ["Community","/community","page","community|articles by readers"],
 ["About the Institute","/about","page","about|mission|who we are"],

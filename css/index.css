@@ -437,13 +437,6 @@ section { scroll-margin-top: 54px; }
     75%  { transform: translateX(4px); }
     100% { opacity: 1; transform: translateX(0); }
   }
-.hero-secondary-cta {
-    display: block; margin-top: 12px;
-    font-family: var(--font-ui); font-size: 14px; letter-spacing: 0.02em;
-    color: var(--muted); text-decoration: none; transition: color 0.2s;
-    background: none; border: 0; cursor: pointer; padding: 0;   /* also usable on a <button> */
-  }
-.hero-secondary-cta:hover { color: var(--gold); }
 .tih-card {
     border: 1px solid var(--border);
     border-left: 2px solid var(--gold);
@@ -1046,7 +1039,6 @@ html, body { overflow-x: clip; }
 .home-section-more { display: inline-flex; align-items: center; min-height: 40px; }
 .footer-social-link { min-height: 40px; display: inline-flex; align-items: center; }
 .empire-toc a { display: inline-flex; align-items: center; min-height: 40px; }
-.hero-secondary-cta { display: inline-flex; align-items: center; min-height: 40px; }
 #about a[href^="mailto:"] { display: inline-block; padding: 10px 0; }
 }
 @media (max-width: 420px) {
@@ -1625,6 +1617,14 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 }
 :root { --gv-other: #6f6a60; }
 [data-theme="light"] { --gv-other: #a7a092; }
+.hero-ways { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 560px; }
+.hero-ways a { display: flex; flex-direction: column; gap: 2px; height: 100%; padding: 12px 14px; border: 1px solid var(--gold); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+.hero-ways a:hover { background: var(--surface); border-color: var(--gold-light); }
+.hero-ways b { font-family: var(--font-display); font-size: 17px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-light); }
+.hero-ways span { font-family: var(--font-ui); font-size: 13px; line-height: 1.35; color: var(--muted); }
+.hero-more { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; }
+.hero-more a { color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; min-height: 40px; }
+.hero-more a:hover { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
 .page-toc { position: fixed; left: 0; right: 0; top: 64px; z-index: 880; background: var(--bg); border-bottom: 1px solid var(--border); transform: translateY(-120%); visibility: hidden; transition: transform 0.2s ease, visibility 0s linear 0.2s; }
 .page-toc.is-on { transform: none; visibility: visible; transition: transform 0.2s ease; }
 .page-toc[hidden] { display: none; }

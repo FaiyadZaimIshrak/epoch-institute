@@ -1372,6 +1372,31 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   Wikidata's state facts without a far stricter rule (the figure's year inside the state's years) and a read of each.
   A ruler list would have to come from the people instead: entries whose text and dates give a reign over the state.
   Still to do from that plan: S4 speed (owner: purge + cache rule). The winter round's own work is done.
+
+## Structure round (12 Nov 2026; plan file: N navigation, E engagement, R resources; the user: "work on all of them one by one")
+A walk of the local build at 1366 and 390 px (scratchpad audit.js: screens per page) found /profiles 163 phone screens long,
+/songs/ 108, /kids 80, France's history 32, and no way to jump within a long page on a phone.
+- **N1 On this page** (shared-nav.js, .page-toc): on any page but the home page whose main has four or more visible h2s
+  and is over 3.5 screens long, a fixed row of the sections slides in under #site-nav once the reader is past the first
+  heading; the section in view is marked (aria-current) and scrolled into the row's middle; a tap jumps at once
+  (behavior instant, and once more after 500 ms when pictures above have taken their room); "Top". Headings without
+  an id get sec-N. Not where a profile's side list shows (1300 px and up), not inside closed details, games or
+  "Next to read"; main[data-no-toc] opts a page out. Rebuilt on resize and when Kids mode or its fold changes. Fixed,
+  so it moves nothing (CLS 0 in the test). .ref-page h2 and .empire-page h2 have scroll-margin-top 124px.
+- **N2 Long lists:** /profiles shows twelve cards an age (PF_CAP, PF_OPEN; a search, filter or ?kind= shows all);
+  /songs/ twelve songs an age (songs.js CAP, OPEN; the count stays the whole list); /kids four cards a theme (inline
+  script right after build:kids-themes, so before first paint; a theme named in the address is whole); a country
+  history's timeline over 2.5 screens is cut at 150vh (enc-page.js, .fold-long) until "Show the whole timeline"; the
+  hub's cards stand two to a row on phones. All use .profile-more-row / .profile-more. After: /profiles 17 phone
+  screens, /songs/ 30, /kids 56, France 13.
+- **N3** On phones an entry's picture comes after its text (.enc-fig lost order: -1 at 720 px and below).
+  N4 (a facts box on entries) was dropped: the meta line under the title already gives dates, century, names, war and
+  house, and the box would only have repeated it.
+- **N5** /research is "Explore Everything" (title, h1, the More menu, footer, search; the address stays), with a
+  "Find a section" box (#hub-q: cards whose words begin with what is typed).
+- **N7** The home hero's three links became four tiles (.hero-ways: Read, Explore, Play, Today) and "Everything on one
+  page" / About (.hero-more; /about must stay linked from the home page: it is drawn nowhere else in static markup).
+- Tests: scripts/tests/page-toc.js, long-lists.js. Still to do: N6 (a bottom bar on phones), E1-E5, R1-R5.
 - The rest of the round (plan of 10 Nov 2026): the rest of W3 (Quote Cipher, Finish the Line); W4 a "Now" card (history
   headlines by a scheduled workflow, coming anniversaries, what is new); W5 lyrics sources beyond Genius and
   public-domain editions for the songs without words; W6 rulers, birthplaces and state facts from Wikidata.

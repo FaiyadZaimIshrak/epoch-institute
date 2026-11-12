@@ -177,7 +177,7 @@ function openEmpireDetail(name) {
 }
 
 // ── Gallery: search, era/region filters (?era= / ?region=), sort ──────────────
-var PF = { q: '', era: '', region: '', sort: 'chrono', kind: '' };
+var PF = { q: '', era: '', region: '', sort: 'chrono', kind: '' }, PF_CAP = 12, PF_OPEN = {};
 function pfYears(e) { return profileSpan(e); }
 function pfYear(y) { y = Math.round(y); return y < 0 ? Math.abs(y) + ' BCE' : y + ' CE'; }
 function pfCard(emp) {
@@ -210,6 +210,11 @@ function tlHtml(list) {
     }).join('') + '</ul></section>';
   }).join('') + '</div>';
 }
+document.addEventListener('click', function (e) {   // "Show all" of an age: the rest of its cards, the first new one focused
+  var b = e.target.closest && e.target.closest('[data-more]'); if (!b) return;
+  var k = b.getAttribute('data-more'); PF_OPEN[k] = true; buildProfileGallery();
+  var c = document.querySelectorAll('.profile-era-group[data-era="' + k + '"] .empire-thumb')[PF_CAP]; if (c) c.focus({ preventScroll: true });
+});
 function buildProfileGallery() {
   var gallery = document.getElementById('profile-gallery'), q = PF.q.toLowerCase().trim();
   var list = EMPIRES.filter(function (e) {
@@ -221,8 +226,12 @@ function buildProfileGallery() {
     html = ERA_ORDER.map(function (eraKey) {
       var emps = list.filter(function (e) { return getEmpireEra(e) === eraKey; }).sort(function (a, b) { return pfYears(a)[0] - pfYears(b)[0]; });   // oldest first
       if (!emps.length) return '';
-      return '<div class="profile-era-group" data-era="' + eraKey + '"><h2 class="profile-era-title">' + ERA_LABELS[eraKey] + '</h2>' +
-        '<div class="profile-thumb-grid">' + emps.map(pfCard).join('') + '</div></div>';
+      // an age shows its first twelve until asked for the rest (Nov 2026: the page ran to 163 phone screens); a search or
+      // a filter has already narrowed the list, so then every match is shown
+      var all = PF.q || PF.era || PF.region || PF.kind || PF_OPEN[eraKey] || emps.length <= PF_CAP + 3, shown = all ? emps : emps.slice(0, PF_CAP);
+      return '<div class="profile-era-group" data-era="' + eraKey + '"><h2 class="profile-era-title" id="era-' + eraKey + '">' + ERA_LABELS[eraKey] + ' <span class="profile-era-n">' + emps.length + '</span></h2>' +
+        '<div class="profile-thumb-grid">' + shown.map(pfCard).join('') + '</div>' +
+        (all ? '' : '<p class="profile-more-row"><button type="button" class="profile-more" data-more="' + eraKey + '">Show all ' + emps.length + ' <span aria-hidden="true">&darr;</span></button></p>') + '</div>';
     }).join('');
   } else {
     var sorted = list.slice().sort(function (a, b) {
