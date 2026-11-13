@@ -29,6 +29,10 @@ async function edge() {
   const exe = path.join(process.env['ProgramFiles(x86)'] || 'C:\\Program Files (x86)', 'Microsoft', 'Edge', 'Application', 'msedge.exe');
   const port = 9400 + Math.floor(Math.random() * 500), ud = path.join(require('os').tmpdir(), 'pw-edge-' + port);
   require('child_process').spawn(exe, ['--headless', '--no-first-run', '--disable-sync', '--hide-scrollbars', '--remote-debugging-port=' + port, '--user-data-dir=' + ud, 'about:blank'], { stdio: 'ignore' });
+  // a run that is stopped or times out never reaches close(): its profile (about 0.5 GB) then stayed in the Temp folder
+  // (91 such folders, 7 GB, by 13 Nov 2026). The process removes its own profile when it ends, however it ends.
+  process.once('exit', () => { try { fs.rmSync(ud, { recursive: true, force: true }); } catch (e) {} });
+  for (const sig of ['SIGINT', 'SIGTERM', 'SIGBREAK']) process.once(sig, () => process.exit(1));
   for (let i = 0; i < 60; i++) {
     await new Promise(r => setTimeout(r, 250));
     try {
