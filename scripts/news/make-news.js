@@ -6,13 +6,20 @@
 // ever use the word in lower case, so "Study" or "Cards" never match), a country history, or a word of
 // scripts/news/terms.tsv. Left out: grim headlines, present-day politics, quizzes and offers, items older than 21 days,
 // a second headline of the same story or with the same background, more than three of one source. Newest first, ten.
-// It writes {t: when, items: [[headline, link, source, yyyy-mm-dd, background address, background label]]} and exits 1
-// (writing nothing) when fewer than four headlines are left, so the workflow keeps the last good file.
+// It writes {t: when, items: [[headline, link, source, yyyy-mm-dd, background address, background label, picture, 1 when
+// the picture is the publisher's, the background's own picture]]} and exits 1 (writing nothing) when fewer than four
+// headlines are left, so the workflow keeps the last good file.
+// Pictures (13 Nov 2026, the owner's choice): only a thumbnail a feed itself offers for syndication (media:thumbnail,
+// media:content or an image enclosure: Smithsonian, Phys.org), never a photograph taken from an article's text or page.
+// With --img=<dir> it downloads each into <dir>/n-<id>.src; the workflow makes them 240 px JPEGs and puts them into
+// public_html/feeds beside news.json, so readers' browsers ask no other site. Every other headline, and one whose
+// thumbnail did not arrive, shows the picture of the Institute page it links: the entry's thumbnail or the profile's
+// emblem (a country history has none).
 // Needs search-index.js, search-profiles.js, search-pages.js and encyclopedia-data.js beside the scripts folder.
 'use strict';
 const fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..'), arg = k => { const a = process.argv.find(x => x.startsWith('--' + k + '=')); return a ? a.slice(k.length + 3) : ''; };
-const OUT = arg('out') || 'news.json', FROM = arg('from'), SAVE = arg('save'), ALL = process.argv.includes('--all');
+const OUT = arg('out') || 'news.json', FROM = arg('from'), SAVE = arg('save'), IMG = arg('img'), ALL = process.argv.includes('--all');
 const DAYS = 21, PER = 3, MAX = 10, MIN = 4;
 const tsv = f => fs.readFileSync(path.join(__dirname, f), 'utf8').split(/\r?\n/).filter(l => l.trim() && !l.startsWith('#')).map(l => l.split('\t'));
 const load = (f, v) => new Function(fs.readFileSync(path.join(ROOT, f), 'utf8') + '; return ' + v + ';')();
@@ -40,6 +47,11 @@ for (const [words, address, label, rank] of tsv('terms.tsv')) {
   if (!known.has(address)) { console.error('terms.tsv: no profile or entry ' + address); process.exit(2); }
   for (const w of words.split('|')) names.set(w.trim(), [address, label, +rank, +rank > 1 ? 10 : 0]);   // a rank 1 word gives way to any place named
 }
+// the Institute's own picture of a background page: an entry's 112 px thumbnail, a profile's emblem; never a flag (a
+// present-day country's entry shows its flag, which says nothing of a find: Egypt's beside mummified cats)
+const OWN = {};
+for (const e of load('encyclopedia-data.js', 'ENCYCLOPEDIA')) if (e.img && !/\bFlag_of|Flag%20of|\bflag\b/i.test(String((e.credit || {}).source || '') + ' ' + e.img)) OWN['/encyclopedia/' + e.slug] = '/images/encyclopedia/thumbs/' + e.slug + '.jpg';
+for (const p of PROF) OWN[p[1]] = '/logos/thumbs/' + encodeURIComponent(p[0]) + '.png';
 const byFirst = {}; for (const [t, v] of names) { const k = t.split(/[\s-]/)[0]; (byFirst[k] = byFirst[k] || []).push([t, v]); }
 function background(h) {   // the best page a headline names: the highest rank, then the longest name, then the best known
   const out = [];
@@ -61,6 +73,26 @@ const tag = (it, n) => { const m = it.match(new RegExp('<' + n + '(?:\\s[^>]*)?>
 const GRIM = /\b(massacr\w*|genocide|murder\w*|rap(e|ed|es|ist)|suicide|behead\w*|tortur\w*|slaughter\w*|execut\w*|kill(s|ed|er|ing|ings)?|burned at the stake|crematori\w*|holocaust|sacrific\w*|abduct\w*|sexual\w*|sex|pogroms?|terror\w*|lynch\w*|death camps?|hanged|human remains|cannibal\w*|slasher|porn\w*)\b/i;
 const NOW = /\b(Trump|Biden|Putin|Netanyahu|Hamas|Gaza|Zelensk\w*|election|elections|Republicans?|Democrats?|Congress|MAGA)\b/;
 const PROMO = /\b(quiz|podcast|webinar|subscribe|giveaway|newsletter|book review|sponsored|call for (papers|applications))\b|^review:/i;
+// a thumbnail the feed offers: media:thumbnail, media:content of an image, or an image enclosure (never an <img> of the text)
+function feedPic(it) {
+  for (const m of it.matchAll(/<(media:thumbnail|media:content|enclosure)\b([^>]*)>/g)) {
+    const at = n => { const a = m[2].match(new RegExp('\\b' + n + '\\s*=\\s*"([^"]*)"')); return a ? dec(a[1]) : ''; };
+    const u = at('url'), ty = at('type'), md = at('medium');
+    if (!/^https:\/\/[^\s"<>]+$/.test(u)) continue;
+    if (m[1] === 'media:thumbnail' || md === 'image' || /^image\/(jpeg|png|webp|gif)$/.test(ty) || (m[1] === 'media:content' && !ty && !md && /\.(jpe?g|png|webp)(\?|$)/i.test(u))) return u;
+  }
+  return '';
+}
+async function fetchPic(u, file) {   // the publisher's thumbnail, at most 3 MB and an image
+  const c = new AbortController(), timer = setTimeout(() => c.abort(), 20000);
+  try {
+    const r = await fetch(u, { signal: c.signal, redirect: 'follow', headers: { 'User-Agent': 'Mozilla/5.0 (compatible; feed-reader)' } });
+    const ty = (r.headers.get('content-type') || '').split(';')[0].trim();
+    if (!r.ok || !/^image\/(jpeg|png|webp|gif)$/.test(ty)) throw new Error('HTTP ' + r.status + ' ' + ty);
+    const b = Buffer.from(await r.arrayBuffer()); if (b.length < 500 || b.length > 3e6) throw new Error(b.length + ' bytes');
+    fs.writeFileSync(file, b); return true;
+  } catch (e) { console.log('  picture ' + u.slice(0, 90) + ': ' + (e.message || e)); return false; } finally { clearTimeout(timer); }
+}
 const words = h => new Set(h.toLowerCase().match(/[\p{L}\p{N}]{4,}/gu) || []);
 const same = (a, b) => { let n = 0; for (const w of a) if (b.has(w)) n++; return n >= 3 && n / Math.min(a.size, b.size) >= 0.5; };
 
@@ -87,7 +119,7 @@ async function read(url, i) {
         : GRIM.test(h) ? 'grim' : NOW.test(h) ? 'politics' : PROMO.test(h) ? 'promo' : '';
       const b = why ? null : background(h);
       if (ALL) console.log((why ? '  - ' + why.padEnd(9) : b ? '  + ' + b[1].slice(0, 28).padEnd(29) : '  . no name   ') + ' ' + h.slice(0, 130));
-      if (!why && b) { got.push({ h, link, name, when, b, w: words(h) }); kept++; }
+      if (!why && b) { got.push({ h, link, name, when, b, w: words(h), fp: feedPic(it) }); kept++; }
     }
     console.log(name + ': ' + items.length + ' items, ' + kept + ' name a page of the site');
   }
@@ -101,5 +133,14 @@ async function read(url, i) {
   console.log(out.length + ' headlines');
   for (const o of out) console.log('  ' + new Date(o.when).toISOString().slice(0, 10) + '  ' + o.name.padEnd(22) + o.h.slice(0, 100) + '\n' + ' '.repeat(36) + '→ ' + o.b[1] + '  ' + o.b[0]);
   if (out.length < MIN) { console.error('Too few headlines (' + out.length + '): nothing written'); process.exit(1); }
-  fs.writeFileSync(OUT, JSON.stringify({ t: new Date(now).toISOString().slice(0, 16) + 'Z', items: out.map(o => [o.h, o.link, o.name, new Date(o.when).toISOString().slice(0, 10), o.b[0], o.b[1]]) }) + '\n');
+  if (IMG) fs.mkdirSync(IMG, { recursive: true });
+  let np = 0;
+  for (const o of out) {   // the picture: the feed's own thumbnail on our host, else the background page's picture
+    o.own = OWN[o.b[0]] || ''; o.pic = o.own; o.pub = 0;
+    if (!IMG || !o.fp) continue;
+    const id = require('crypto').createHash('sha1').update(o.link).digest('hex').slice(0, 12);
+    if (await fetchPic(o.fp, path.join(IMG, 'n-' + id + '.src'))) { o.pic = '/feeds/n-' + id + '.jpg'; o.pub = 1; np++; }
+  }
+  console.log('pictures: ' + np + ' from the feeds, ' + out.filter(o => !o.pub && o.pic).length + ' of the Institute, ' + out.filter(o => !o.pic).length + ' none');
+  fs.writeFileSync(OUT, JSON.stringify({ t: new Date(now).toISOString().slice(0, 16) + 'Z', items: out.map(o => [o.h, o.link, o.name, new Date(o.when).toISOString().slice(0, 10), o.b[0], o.b[1], o.pic, o.pub, o.own]) }) + '\n');
 })().catch(e => { console.error(e); process.exit(2); });

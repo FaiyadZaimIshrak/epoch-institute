@@ -1,6 +1,7 @@
 # The feeds read for "In the news" on /now and the home page's Now card (scripts/news/make-news.js, run by
 # .github/workflows/news.yml): name as shown TAB the site TAB the feed TAB a category an item must carry (optional).
-# Only the headline, its link, the source's name and the date are taken: never a summary or a picture.
+# Only the headline, its link, the source's name, the date and a thumbnail the feed itself offers (media:thumbnail,
+# media:content or an image enclosure; since 13 Nov 2026) are taken: never a summary or a picture from the text.
 # History and archaeology news only; a mixed feed needs its category. Checked 11 Nov 2026.
 Archaeology Magazine	https://archaeology.org/news/	https://www.archaeology.org/feed/
 Smithsonian Magazine	https://www.smithsonianmag.com/history/	https://www.smithsonianmag.com/rss/history/

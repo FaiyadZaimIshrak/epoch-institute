@@ -1335,6 +1335,16 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
     day-people.tsv for people of weight 5 or more), of which the page shows the next thirty days, and the six newest
     notes of whats-new.tsv. It also writes the hand page /now from /weekly's head (as make-advent.js) and stamps
     NOW_SRC and now.js?v= into /now and index: re-run it after editing now.js. A build in a new month changes the file.
+  - **Thumbnails** (13 Nov 2026, the owner's choice of three: feed thumbnails with a fallback, not publishers' article
+    photos, not the Institute's pictures only): make-news.js takes only a thumbnail the feed itself offers
+    (media:thumbnail, media:content, an image enclosure: Smithsonian's 420x240, Phys.org's 90x90; never an <img> of the
+    text or the article page's share image), downloads it with --img=<dir> (n-<sha1 of the link>.src), and the workflow
+    makes it a 240 px square JPEG with ImageMagick and uploads it to public_html/feeds BEFORE news.json (feeds/.htaccess
+    keeps .jpg a week). Items gained [6] picture, [7] 1 = the publisher's, [8] the Institute's own: the background
+    entry's 112 px thumbnail (never a flag: present-day countries' entries show theirs) or the profile's emblem.
+    now.js draws a 72 px square (64 on the home card), "picture <source>" after the date for a publisher's, a failed
+    one falls back to [8] (the credit goes with it), and an address that is not this site's is never used: readers'
+    browsers ask no other site. Old n-*.jpg files stay in feeds/ (about 10 KB each; a few a day).
   - now.js fills every [data-now] list; the home card (.now-card, after On This Day) has three tabs and lists of a
     fixed height (--now-row: 4 rows on phones, 3 x 2 from 700 px, 2 x 3 from 1100 px), loaded after idle, so nothing
     moves; without headlines it opens on the anniversaries. ?nowday=yyyy-mm-dd previews a day. window.epochNow.

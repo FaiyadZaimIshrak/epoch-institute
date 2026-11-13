@@ -1250,6 +1250,11 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .now-n b { display: block; font-family: var(--font-display); font-size: 23px; font-weight: 400; line-height: 1.15; letter-spacing: 0; color: var(--gold-light); }
 .now-b { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .now-wait { font-family: var(--font-ui); font-size: 14px; color: var(--muted); padding: 10px 0; }
+.now-nw { gap: 14px; }
+.now-pic { flex: none; display: block; width: 72px; height: 72px; border-radius: calc(var(--radius) - 2px); object-fit: cover; object-position: center 25%; background: var(--surface-2, rgba(127,127,127,0.12)); border: 1px solid var(--border); }
+.now-pic-em { object-fit: contain; object-position: center; padding: 6px; }
+.now-pic-none { background: linear-gradient(135deg, rgba(201,168,76,0.18), rgba(201,168,76,0.04)); }
+.now-card .now-pic { width: 64px; height: 64px; }
 html[data-kids="1"] .now-tab-news, html[data-kids="1"] .now-sec-news { display: none; }
 .now-card .now-list { --now-row: 118px; grid-auto-rows: var(--now-row); height: calc(4 * var(--now-row) + 36px); overflow: hidden; }
 html[data-kids="1"] .now-card .now-list { --now-row: 132px; }

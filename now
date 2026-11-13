@@ -42,7 +42,7 @@
 
 <section class="now-sec now-sec-news" id="news" aria-labelledby="now-news-t">
   <h2 class="ref-sec-title" id="now-news-t">In the news</h2>
-  <p class="now-note">Headlines from other publications, newest first, each with the Institute&rsquo;s page on its subject. The headlines and the articles belong to their publishers: the Institute has not written or checked them. The list is refreshed twice a day.</p>
+  <p class="now-note">Headlines from other publications, newest first, each with the Institute&rsquo;s page on its subject. The headlines, the articles and the thumbnails their feeds offer belong to their publishers: the Institute has not written or checked them. A headline without a publisher&rsquo;s thumbnail shows the picture of the Institute&rsquo;s page instead. The list is refreshed twice a day.</p>
   <ol class="now-list" data-now="news" data-max="10"><li class="now-wait">The headlines need JavaScript.</li></ol>
   <p class="now-note now-src">From the news pages of <a href="https://archaeology.org/news/" rel="noopener">Archaeology Magazine</a>, <a href="https://www.smithsonianmag.com/history/" rel="noopener">Smithsonian Magazine</a>, <a href="https://phys.org/science-news/archaeology/" rel="noopener">Phys.org</a>, <a href="https://archaeologymag.com/" rel="noopener">Archaeology News</a>, <a href="https://www.medievalists.net/" rel="noopener">Medievalists.net</a>, <a href="https://www.thehistoryblog.com/" rel="noopener">The History Blog</a>. A headline is listed only when it names a page of the Institute.</p>
 </section>
@@ -71,6 +71,6 @@
 <script src="/shared-nav.js"></script>
 <script>initNav('today');</script>
 <script>var NOW_SRC = '/data/now.json?v=c176f50481';</script>
-<script src="/now.js?v=6454b6d70d"></script>
+<script src="/now.js?v=c2dd4fc8be"></script>
 </body>
 </html>

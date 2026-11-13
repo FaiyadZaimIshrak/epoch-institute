@@ -9,4 +9,8 @@ AddType application/rss+xml .xml
   <FilesMatch "\.json$">
     Header set Cache-Control "public, max-age=1800"
   </FilesMatch>
+  # n-<id>.jpg: the thumbnails of the headlines (a new name for each article, so they may be kept a week)
+  <FilesMatch "\.jpg$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
 </IfModule>

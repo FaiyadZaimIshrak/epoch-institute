@@ -21,8 +21,13 @@
     if (!d || !d.items || !(Date.parse(d.t) > t - 10 * 864e5)) return out;
     d.items.forEach(function (r) {
       if (out.length >= max || !r || !/^https:\/\/[^\s"<>]+$/.test(r[1]) || !/^\/[a-z]/.test(r[4]) || !(Date.parse(r[3]) > t - 22 * 864e5)) return;
-      out.push('<li class="now-it"><a class="now-h" href="' + esc(r[1]) + '" rel="noopener external">' + esc(r[0]) + '</a><span class="now-m">' + esc(r[2]) + ' &middot; ' + day(r[3], true) + '</span>' +
-        '<span class="now-m now-bg">Background: <a href="' + esc(r[4]) + '">' + esc(r[5]) + '</a></span></li>');
+      // the picture: the publisher's own feed thumbnail (kept on our host, /feeds/n-<id>.jpg) or the Institute's picture
+      // of the background page; only addresses of this site are used, so the page asks no other site for anything
+      var own = function (u) { return /^\/[a-z][^\s"<>]*$/.test(u || '') ? u : ''; }, fb = own(r[8]), pub = r[7] === 1 && !!own(r[6]), pic = own(r[6]) || fb;
+      var img = pic ? '<img class="now-pic' + (/^\/logos\//.test(pic) ? ' now-pic-em' : '') + '" src="' + esc(pic) + '" alt="" width="72" height="72" loading="lazy" decoding="async"' +
+        (pub && fb && fb !== pic ? ' data-fb="' + esc(fb) + '"' : '') + (pub ? ' title="Picture: ' + esc(r[2]) + '"' : '') + '>' : '<span class="now-pic now-pic-none" aria-hidden="true"></span>';
+      out.push('<li class="now-it now-an now-nw">' + img + '<span class="now-b"><a class="now-h" href="' + esc(r[1]) + '" rel="noopener external">' + esc(r[0]) + '</a><span class="now-m">' + esc(r[2]) + ' &middot; ' + day(r[3], true) + (pub ? '<span class="now-pcr"> &middot; picture ' + esc(r[2]) + '</span>' : '') + '</span>' +
+        '<span class="now-m now-bg">Background: <a href="' + esc(r[4]) + '">' + esc(r[5]) + '</a></span></span></li>');
     });
     return out;
   }
@@ -59,6 +64,14 @@
     [].forEach.call(card.querySelectorAll('[data-now-tab]'), function (b) { var on = b.getAttribute('data-now-tab') === kind; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
     [].forEach.call(card.querySelectorAll('[data-now]'), function (l) { (l.parentNode.getAttribute('role') === 'tabpanel' ? l.parentNode : l).hidden = l.getAttribute('data-now') !== kind; });
   }
+  // a thumbnail that does not load: the background page's picture, else the empty frame
+  document.addEventListener('error', function (e) {
+    var im = e.target; if (!im || im.tagName !== 'IMG' || !/\bnow-pic\b/.test(im.className)) return;
+    var fb = im.getAttribute('data-fb'), li = im.closest && im.closest('li'), cr = li && li.querySelector('.now-pcr');
+    if (cr) cr.parentNode.removeChild(cr);   // the credit goes with the publisher's picture
+    if (fb) { im.removeAttribute('data-fb'); im.removeAttribute('title'); im.className = 'now-pic' + (/^\/logos\//.test(fb) ? ' now-pic-em' : ''); im.src = fb; }
+    else { var s = document.createElement('span'); s.className = 'now-pic now-pic-none'; s.setAttribute('aria-hidden', 'true'); im.parentNode.replaceChild(s, im); }
+  }, true);
   function start() {
     var card = document.querySelector('.now-card');
     if (card) {

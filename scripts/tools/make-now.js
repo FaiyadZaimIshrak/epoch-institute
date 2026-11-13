@@ -70,7 +70,7 @@ const body = `</head>
 
 <section class="now-sec now-sec-news" id="news" aria-labelledby="now-news-t">
   <h2 class="ref-sec-title" id="now-news-t">In the news</h2>
-  <p class="now-note">Headlines from other publications, newest first, each with the Institute&rsquo;s page on its subject. The headlines and the articles belong to their publishers: the Institute has not written or checked them. The list is refreshed twice a day.</p>
+  <p class="now-note">Headlines from other publications, newest first, each with the Institute&rsquo;s page on its subject. The headlines, the articles and the thumbnails their feeds offer belong to their publishers: the Institute has not written or checked them. A headline without a publisher&rsquo;s thumbnail shows the picture of the Institute&rsquo;s page instead. The list is refreshed twice a day.</p>
   <ol class="now-list" data-now="news" data-max="10"><li class="now-wait">The headlines need JavaScript.</li></ol>
   <p class="now-note now-src">From the news pages of ${feeds.map(f => '<a href="' + esc(f[1]) + '" rel="noopener">' + esc(f[0]) + '</a>').join(', ')}. A headline is listed only when it names a page of the Institute.</p>
 </section>
