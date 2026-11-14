@@ -1208,6 +1208,10 @@ if ($LASTEXITCODE) { throw 'scripts/tools/entry-labels.js failed' }
 $ELAB2 = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-labels.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $i = $l.IndexOf("`t"); if ($i -gt 0) { $ELAB2[$l.Substring(0, $i)] = $l.Substring($i + 1) } } }
 # entries told in more detail (scripts/entry-more.json, gathered by scripts/entries/check-more.js --write): slug ->
 # [[heading, [paragraphs]]], shown under the description
+# the works behind an entry's Wikipedia article (scripts/entry-sources.json, written by scripts/tools/entry-sources.js):
+# slug -> {t article, d day read, k b listed | c cited, w works}; such an entry shows "Sources" where the others show
+# the one line "Read further"
+$ESRC = @{}; if (Test-Path "$Repo\scripts\entry-sources.json") { $esJ = ReadJson "$Repo\scripts\entry-sources.json"; foreach ($esK in $esJ.Keys) { $ESRC[[string]$esK] = $esJ[$esK] } }
 $EMORE = @{}; if (Test-Path "$Repo\scripts\entry-more.json") { $emJ = ReadJson "$Repo\scripts\entry-more.json"; foreach ($emK in $emJ.Keys) { $EMORE[[string]$emK] = $emJ[$emK] } }
 Say "entries told in more detail: $($EMORE.Count)"
 # These texts name many people and places the encyclopedia does not have, so a name inside a longer name would link a
@@ -1370,12 +1374,22 @@ foreach ($e in $ENT) {
     $(if ($nx) { '<a class="next" rel="next" href="/encyclopedia/' + $nx.slug + '"><span class="lbl">Next entry &rarr;</span><span class="nm">' + (Hx $nx.name) + '</span></a>' } else { '' }) + "</nav>`n")
   # Read further: the entry's Wikipedia article and Wikidata item (sameAs in the JSON-LD); where Wikipedia sends the name to
   # a section of a broader article or to a broader one (a battle to its campaign), only the article, and no sameAs
-  $wdx = $EWD[$e.slug]; $wdSame = $null
+  $wdx = $EWD[$e.slug]; $wdSame = $null; $esX = $null
   if ($wdx) {
     $wpu = (WpUrl $wdx[0]) + $(if ($wdx[3]) { '#' + [Uri]::EscapeDataString($wdx[3].Replace(' ', '_')) } else { '' })
     if ($wdx[2] -eq 'same') { $wdSame = @($wpu, ('https://www.wikidata.org/wiki/' + $wdx[1])) }
+    $esX = if ($wdSame) { $ESRC[[string]$e.slug] } else { $null }
+    if ($esX) {
+      # Sources (the growth plan's C1): the article the entry is written from and the works that article names
+      $esW = @($esX['w'] | Where-Object { $_ }); $esDay = ([datetime]::ParseExact([string]$esX['d'], 'yyyy-MM-dd', $INV)).ToString('d MMMM yyyy', $INV)
+      [void]$body.Append('<section class="enc-src" id="sources" aria-labelledby="enc-src-t"><h2 class="ref-sec-title" id="enc-src-t">Sources</h2>' +
+        '<p>This entry is written from the Wikipedia article <a href="' + (Hx $wpu) + '" rel="noopener">' + (Hx $wdx[0]) + '</a> (<a href="' + $wdSame[1] + '" rel="noopener">Wikidata ' + $wdx[1] + '</a>).' +
+        $(if ($esW.Count) { ' ' + $(if ($esX['k'] -eq 'b') { 'That article lists these works' } else { 'That article cites these works' }) + ' (as of ' + $esDay + '):</p><ul class="enc-src-list">' + (($esW | ForEach-Object { '<li>' + (Hx ([string]$_)) + '</li>' }) -join '') + '</ul>' } else { '</p>' }) +
+        '<p class="enc-src-m"><a href="/method">How entries are written and checked</a> · <a href="/corrections">Corrections</a></p></section>' + "`n")
+    } else {
     [void]$body.Append('<p class="enc-further"><span class="lbl">Read further</span> <a href="' + (Hx $wpu) + '" rel="noopener">' + (Hx $wdx[0]) + ' on Wikipedia</a>' +
       $(if ($wdSame) { ' <a href="' + $wdSame[1] + '" rel="noopener">Wikidata ' + $wdx[1] + '</a>' } else { '' }) + '</p>' + "`n")
+    }
   }
   [void]$body.Append((CiteBox $e.name $url 'The Epoch Institute Encyclopedia') + "`n")
   [void]$body.Append('<p class="ref-updated"><span>Last reviewed ' + $Reviewed + '</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>' + "`n</article>`n</div>`n</main>`n")
@@ -1383,7 +1397,9 @@ foreach ($e in $ENT) {
   # a song's entry and its page in Songs in History start from the same story: the entry's description says what it is first
   if ($e.sub -eq 'song' -and $e.desc) { $desc = [EpochBuild.W]::Summary("$($e.name)" + $(if ($e.dates) { " ($(([string]$e.dates) -replace '\s*[;(].*$', ''))" } else { '' }) + ', a song: ' + $e.desc, 155) }
   $tDates = if ($e.dates -and $e.dates.Length -le 16 -and $e.dates -match '^[\dc.r\s–\-BCEAD]+$' -and ($e.name.Length + $e.dates.Length) -le 48) { $e.dates } else { '' }
-  $ld = $crumb[1] + ',' + (ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd $wdSame)
+  $eArt = ArticleLd $e.name $desc $path $ABOUT[$kind] $e.name $e.aka $imgLd $wdSame
+  if ($esX) { $eArt = $eArt.Substring(0, $eArt.Length - 1) + ',"citation":[' + ((@($wpu) + @($esX['w'] | Where-Object { $_ }) | ForEach-Object { Js ([string]$_) }) -join ',') + ']}' }
+  $ld = $crumb[1] + ',' + $eArt
   $eNY = NameYears $e.name $tDates; $eLab = EntryLabel ([string]$e.desc)
   if (-not $eLab -or ($eNY + ": " + $eLab).Length -gt 70) { $eLab = WdLabel ('e:' + $e.slug) }
   if (-not $eLab -or ($eNY + ": " + $eLab).Length -gt 70) { $eLab = $ELAB2[[string]$e.slug] }

@@ -2539,7 +2539,16 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   0.54-1.14 s. A page nobody opened since the last deploy or for four hours still makes the trip to Singapore once.
   Anything written to the host without a deploy must sit under /feeds/ (the daily feed, news.json and its pictures) or
   it stays stale for up to four hours.
-- Still to come, in the plan's order: V4-V7, C1 Sources block,
+- **C1, Sources on entries (14 Nov 2026):** scripts/tools/entry-sources.js [--export=<Search Console export>] [--more]
+  [slugs] reads the wikitext of an entry's confirmed article (cached in %LOCALAPPDATA%epoch-toolsefs-cache, one
+  request every 2 s) and keeps up to five works the article lists (Bibliography, Sources, Works cited, Further reading:
+  k "b") or, failing that, cites in its notes outside the sections on fiction and popular culture (k "c"): an author,
+  a title, a publisher and a year, no chapters or journal articles, and ONLY scholarly publishers (the SCHOLARLY list:
+  a first pass printed four novels from Jahangir's bibliography). scripts/entry-sources.json {slug: {t, d, k, w}};
+  build-pages.ps1 () writes section.enc-src#sources in place of the "Read further" line (hidden in Kids mode)
+  and adds the works to the Article's JSON-LD "citation". First round: the entries of the 14 Nov export and the 131
+  told in more detail: 418 entries, 278 with works, 689 works. The other 26,000 confirmed entries keep "Read further".
+- Still to come, in the plan's order: V4-V7, C1 for more entries, C1 Sources block,
   C4 the known disagreements, C5 DOIs, C6 coverage report (not under /method/: that is a file), E1-E5, R1-R5.
 
 ## Roadmap (not built yet)

@@ -1565,6 +1565,14 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .enc-further { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-family: var(--font-ui); font-size: 14px; margin: 0; }
 .enc-further .lbl { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .enc-further a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+.enc-src { margin: 36px 0 8px; max-width: 720px; }
+.enc-src p { font-family: var(--font-text); font-size: 17px; line-height: 1.55; color: var(--text); margin: 0 0 10px; }
+.enc-src a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.enc-src a:hover { color: var(--gold-light); }
+.enc-src-list { margin: 0 0 12px; padding-left: 22px; }
+.enc-src-list li { font-family: var(--font-text); font-size: 16px; line-height: 1.5; color: var(--text); margin: 0 0 6px; }
+.enc-src .enc-src-m { font-family: var(--font-ui); font-size: 13px; color: var(--muted); }
+[data-kids="1"] .enc-src { display: none; }
 .ref-updated { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin: 0; }
 .ref-az { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
 .ref-az a { display: grid; justify-items: center; gap: 2px; padding: 12px 6px; border: 1px solid var(--border); border-radius: 2px; text-decoration: none; background: var(--surface); }
