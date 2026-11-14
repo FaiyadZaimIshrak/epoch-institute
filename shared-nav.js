@@ -68,6 +68,18 @@ document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('[data-ga]'); if (!a) return;
   gaEvent(a.getAttribute('data-ga'), { source: a.getAttribute('data-ga-src') || location.pathname, link_url: a.href || '' });
 }, true);
+// The growth plan's scoreboard (14 Nov 2026): what readers do after arriving. next_read_click (a card of "Next to
+// read"), source_click (a link out to a source: Wikipedia, Wikidata, a credit, a cited work), listen_start, share,
+// and game_finish (games.js, when a finish card appears).
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+  if (a.closest('.next-read')) { gaEvent('next_read_click', { source: location.pathname, link_url: a.getAttribute('href') }); return; }
+  var h = a.getAttribute('href') || '';
+  if (/^https?:\/\//.test(h) && h.indexOf('//' + location.host) < 0 && a.closest('main, article')) gaEvent('source_click', { source: location.pathname, link_url: h.slice(0, 200) });
+}, true);
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('.listen-btn, [data-listen]'); if (b) gaEvent('listen_start', { source: location.pathname });
+}, true);
 
 // ── In-app browsers ───────────────────────────────────────────────────────────────────────────────────────────────
 // A link tapped in Instagram, Facebook or Messenger opens in the app's own browser: on Android it has no share sheet
@@ -134,6 +146,7 @@ function shareFiles(blob, name) {   // [File] when this browser can hand a pictu
   try { var f = [new File([blob], name || 'the-epoch-institute.jpg', { type: blob.type || 'image/jpeg' })]; return navigator.canShare({ files: f }) ? f : null; } catch (e) { return null; }
 }
 function sharePoster(o) {
+  gaEvent('share', { source: location.pathname + (location.hash && /^#[a-z-]+$/.test(location.hash) ? location.hash : '') });
   var url = o.url || location.href.split('#')[0], all = (o.text ? o.text + '\n' : '') + url, img = o.image;
   var phone = window.matchMedia && matchMedia('(pointer: coarse)').matches;
   function fail(e) { if (!e || e.name !== 'AbortError') shareSheet(o); }

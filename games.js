@@ -50,7 +50,9 @@ initNav('games');
   // appears so the picture is ready when Share is tapped (phones: the share sheet; elsewhere a panel to save or send it)
   function shareBtn() { return '<button type="button" class="gm-share">Share your score</button>'; }
   function share(box, text, hash, card) {
-    var b = box.querySelector('.gm-share'), h = hash || current; if (!b) return;
+    var b = box.querySelector('.gm-share'), h = hash || current;
+    try { if (typeof gaEvent === 'function') gaEvent('game_finish', { game: h }); } catch (e) {}   // a finish card has appeared
+    if (!b) return;
     card.kids = kids(); card.url = card.url || 'the-epoch-institute.org/games';
     var poster = typeof scoreCard === 'function' ? scoreCard(card) : null;
     b.addEventListener('click', function () { sharePoster({ text: text, url: 'https://the-epoch-institute.org/games#' + h, title: card.title, heading: 'Share your score', image: poster, file: 'epoch-' + h + '.jpg', alt: card.title + ': ' + card.score + ' ' + (card.unit || ''), btn: b }); });
