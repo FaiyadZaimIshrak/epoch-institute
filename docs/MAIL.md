@@ -50,6 +50,9 @@ Manager** it is in your home folder, beside `public_html`. It holds:
   the message is still here.
 - **`subscribers.csv`:** every newsletter sign-up (date, email, where on the site), one line each. It opens in Excel.
   To remove someone who asks to unsubscribe, delete their line.
+- **`feedback/<year-month>.tsv`:** the answers to "Was this page useful?" at the foot of entries, profiles and state
+  pages: the time, the page, and yes or no, one line each. They are never emailed and hold nothing about the reader.
+  It opens in Excel: sort by page to see which pages readers mark "no" most; those are the ones to improve first.
 - **`log/<year-month>.log`:** one line per message: the time, the form, the mailbox, its size, and "sent" or
   "NOT SENT, kept". It holds no names or contents.
 - **`rate/` and `salt`:** the bookkeeping for the spam limits. Leave them alone.

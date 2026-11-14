@@ -2548,8 +2548,31 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   build-pages.ps1 () writes section.enc-src#sources in place of the "Read further" line (hidden in Kids mode)
   and adds the works to the Article's JSON-LD "citation". First round: the entries of the 14 Nov export and the 131
   told in more detail: 418 entries, 278 with works, 689 works. The other 26,000 confirmed entries keep "Read further".
-- Still to come, in the plan's order: V4-V7, C1 for more entries, C1 Sources block,
-  C4 the known disagreements, C5 DOIs, C6 coverage report (not under /method/: that is a file), E1-E5, R1-R5.
+  Second round the same day: the 700 best-known entries not yet done (search weight 5 and up, the highest first).
+- **V5 (a Questions block) dropped, 14 Nov 2026:** of the 1,000 most-shown queries of the 14 Nov export, those that
+  begin with what, when, who, where, why or how are 0.07% of the impressions (221 of 315,852). Readers search by
+  name. Do not build question blocks without new evidence.
+- **C4, the known disagreements (14 Nov 2026):** the writers' notes of the first deepening round
+  (scripts/entries/more1/out/*.json "notes") list where an article disagrees with its entry; each was read against a
+  second source (Wikidata's referenced values, other articles and language editions of Wikipedia). Corrected:
+  Sepúlveda born 1490, not 1494 (his article and Wikidata's preferred value with four references); Altan Khan's birth
+  marked "c. 1507" (1507 on Wikidata and German Wikipedia, 2 January 1508 on the English and Chinese); Jimena Díaz
+  "took her husband's body" to Cardeña became "She and the Cid were buried" there (the article treats her stay as the
+  monastery's legend). The entry stands: the Sandžak garrison left in 1908 (the Sanjak of Novi Pazar article, against
+  its sister article's lead), the Bahubali statue "around 983" (the statue's own article), Liu Bei, Yusuf Adil Shah,
+  Nuno da Cunha, the Palk Strait and Cudjoe (no contradiction, or the entry's wording is the broader one). Open: Gorgan
+  (its article says medieval Gurgan was another place; no second source read yet). Date corrections of people go in
+  person-dates.tsv AND as a "fixes" row of added-entries.json, so /corrections lists them.
+- **C5, begun:** CITATION.cff at the repository's root (version 2026.11, CC BY 4.0, the Institute as author; not
+  deployed). DOIs wait for the owner's deposits (Zenodo, Kaggle).
+- **E3, "Was this page useful?" (14 Nov 2026):** shared-nav.js puts .page-useful (Yes / No) at the foot of entries,
+  profiles of every kind and state pages, after idle, above Next to read; never in Kids mode or print; one answer a
+  page (localStorage epoch-useful, 300 pages). It posts kind=feedback, useful, page to send.php, which appends the
+  time, page and answer to feedback/<year-month>.tsv in the private folder: never mailed, outside the mail limits, 30
+  a day from one sender, nothing about the reader (docs/MAIL.md; /privacy says so). With consent also the event
+  page_useful. "No" links the correction form. scripts/tests/page-useful.js, and a check in tests/mail.js.
+- Still to come, in the plan's order: V4, V6, V7, C1 for the remaining entries, C5 DOIs, C6 coverage report (not
+  under /method/: that is a file; done as the table of /method#coverage, make-method.js), C7, E1, E2, E4, E5, R1-R5.
 
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:

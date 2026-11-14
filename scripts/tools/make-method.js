@@ -56,6 +56,25 @@ page('corrections', 'Corrections: What the Institute Has Set Right', 'Correction
 
 // ── the method ─────────────────────────────────────────────────────────────────────────────────────────────────
 const n = v => v.toLocaleString('en-GB');
+// What the encyclopedia and the register cover, by region and age (the plan's C6): counted from search-facets.js, the
+// rows the search filters use (first century of each entry or state; region by the people pages' rule), and EMPIRES.
+const coverage = (() => {
+  const SF = new Function(read('search-facets.js') + ';return SEARCH_FACETS')(), EM = new Function(read('shared-data.js') + '\n;return EMPIRES')();
+  const era = f => f === 0 ? 4 : f <= 5 ? 0 : f <= 15 ? 1 : f <= 18 ? 2 : 3, ERA = ['Before 500', '500–1499', '1500–1799', 'Since 1800', 'No date'];
+  const rows = SF.R.map(r => ({ r, e: [0, 0, 0, 0, 0], s: 0, p: 0 })).concat([{ r: 'No single region', e: [0, 0, 0, 0, 0], s: 0, p: 0 }]);
+  const at = i => rows[i < 0 || i >= SF.R.length ? SF.R.length : i];
+  for (const x of SF.e) at(x[2]).e[era(x[0])]++;
+  for (const x of SF.s) at(x[2]).s++;
+  for (const x of EM) at(SF.R.indexOf(x.region)).p++;
+  const sum = a => a.reduce((x, y) => x + y, 0), tot = sum(rows.map(x => sum(x.e))), pct = v => (Math.round(v / tot * 1000) / 10) + '%';
+  const by = rows.slice(0, SF.R.length).map(x => [x.r, sum(x.e)]).sort((a, b) => b[1] - a[1]), eraTot = ERA.map((_, i) => sum(rows.map(x => x.e[i])));
+  const esc = t => t.replace(/&/g, '&amp;');
+  return sec('coverage', 'What is covered, and where it is thin', '<p>The table counts the encyclopedia’s entries by the region and the age each belongs to, with the states of the register and the profiles beside them. It is made from the same data as the search filters, at every release.</p>' +
+    '<div class="essay-table-wrap" role="region" tabindex="0" aria-label="Coverage by region and age"><table class="essay-table"><caption>Entries, states and profiles by region</caption><thead><tr><th scope="col">Region</th>' + ERA.map(e => '<th scope="col">' + e + '</th>').join('') + '<th scope="col">Entries</th><th scope="col">States</th><th scope="col">Profiles</th></tr></thead><tbody>' +
+    rows.filter(x => sum(x.e) + x.s + x.p).map(x => '<tr><th scope="row">' + esc(x.r) + '</th>' + x.e.map(v => '<td>' + n(v) + '</td>').join('') + '<td>' + n(sum(x.e)) + '</td><td>' + n(x.s) + '</td><td>' + n(x.p) + '</td></tr>').join('') +
+    '</tbody></table></div>' +
+    '<p>The coverage is uneven. ' + esc(by[0][0]) + ' has ' + pct(by[0][1]) + ' of the entries; ' + esc(by[by.length - 1][0]) + ' has ' + pct(by[by.length - 1][1]) + ' and ' + esc(by[by.length - 2][0]) + ' ' + pct(by[by.length - 2][1]) + '. ' + pct(eraTot[3]) + ' of the entries belong to the years since 1800 and ' + pct(eraTot[0]) + ' to the time before 500. Entries without a date are mostly places, peoples and terms. The balance follows the sources the encyclopedia is written from. New entries and profiles are chosen with the thin regions first.</p>');
+})();
 const methodMain = wrap('How we work', 'How the Institute works', 'What the Institute publishes, where each kind of page comes from, how it is written and checked, and what to do when you think a page is wrong. Last updated 14 November 2026.', [
   sec('what', 'What this is', '<p>The Epoch Institute is an independent reference work on the history of states, peoples and ideas, free to read and run by its editor. It is not a university or a learned society, and it does not publish original research in the scholarly sense: it compiles, orders and explains what published sources say, and adds its own maps, charts and data tables. Where a page gives the Institute\'s own reading or estimate, it says so.</p>'),
   sec('sources', 'Where each kind of page comes from', '<ul>' +
@@ -83,6 +102,7 @@ const methodMain = wrap('How we work', 'How the Institute works', 'What the Inst
     '<li><b>Living peoples</b> are written about in the present tense.</li>' +
     '<li><b>Children.</b> Kids mode shows shorter texts and folds accounts of war and killing behind a choice. It changes what is shown first, not what is true.</li></ul>'),
   sec('limits', 'What the Institute does not claim', '<p>The encyclopedia depends heavily on Wikipedia, which is uneven: fuller for Europe and for recent centuries than for much of Africa, Oceania and the early Americas, and so is this site. A short entry is a summary of one article, not a survey of the scholarship. The register of states is a working list, not a complete census of every polity that existed. Lists of rulers show the people the encyclopedia holds, not every ruler. Where coverage is thin the Institute would rather say less than fill the gap with guesses.</p>'),
+  coverage,
   sec('wrong', 'If you think a page is wrong', '<p>Use <b>Suggest a correction</b> at the foot of any page, or the <a href="/contact?topic=correction">contact form</a>. Corrections are checked against a source, made, and listed on the <a href="/corrections">Corrections</a> page with what changed. Scholars and teachers who would like to review pages in their field are welcome to <a href="/contributors">write to the Institute</a>.</p>'),
   sec('reuse', 'Citing and reusing', '<p>Each entry, essay and profile carries a ready citation. The Institute\'s texts are licensed CC BY-SA 4.0 and its data CC BY 4.0; pictures keep the licence in their credit. The data tables can be downloaded from <a href="/dataset">Open Data</a>. Details are on <a href="/terms">Terms and licences</a>.</p>'),
 ]);

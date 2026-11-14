@@ -1353,6 +1353,35 @@ function initNav(activePage) {
     }, { timeout: 2500 });
   })();
 
+  // ── Was this page useful? (14 Nov 2026, the growth plan's E3): two buttons at the foot of entries, profiles and state
+  // pages, after an idle moment (it moves nothing above it). The answer goes to /send.php as kind "feedback" (counted
+  // there by page, never mailed, nothing kept about the reader) and, with consent, to Analytics as page_useful. One
+  // answer a page (localStorage epoch-useful); "No" offers the correction form. Never in Kids mode or print.
+  (function () {
+    var here = location.pathname.replace(/\/+$/, '');
+    if (!/^\/(empire|religion|language|culture|movement|government|ideology|work|life|encyclopedia|state)\/[a-z0-9-]+$/.test(here) || here === '/encyclopedia/glossary' || here === '/encyclopedia/dynasties' || here === '/encyclopedia/quotations') return;
+    var main = document.getElementById('main'); if (!main) return;
+    var done; try { done = JSON.parse(localStorage.getItem('epoch-useful') || '{}'); } catch (e) { done = {}; } if (!done || typeof done !== 'object') done = {};
+    if (Object.prototype.hasOwnProperty.call(done, here)) return;
+    (window.requestIdleCallback || function (f) { setTimeout(f, 600); })(function () {
+      var box = document.createElement('div'); box.className = 'page-useful'; box.setAttribute('role', 'group'); box.setAttribute('aria-label', 'Was this page useful?');
+      box.innerHTML = '<span class="pu-q">Was this page useful?</span><button type="button" class="pu-b" data-u="yes">Yes</button><button type="button" class="pu-b" data-u="no">No</button>';
+      var before = main.querySelector('.next-read') || main.querySelector('.ref-prevnext');
+      if (before) before.parentNode.insertBefore(box, before); else (main.querySelector('article') || main.querySelector('.profile-detail, .enc-wrap, .st-wrap') || main).appendChild(box);
+      box.addEventListener('click', function (ev) {
+        var b = ev.target.closest && ev.target.closest('.pu-b'); if (!b) return;
+        var u = b.getAttribute('data-u') === 'yes' ? 'yes' : 'no';
+        var keys = Object.keys(done); if (keys.length >= 300) delete done[keys[0]];
+        done[here] = u === 'yes' ? 'y' : 'n'; try { localStorage.setItem('epoch-useful', JSON.stringify(done)); } catch (e) {}
+        try { fetch('/send.php', { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'kind=feedback&useful=' + u + '&page=' + encodeURIComponent(here) }).catch(function () {}); } catch (e) {}
+        gaEvent('page_useful', { useful: u, source: here });
+        box.setAttribute('role', 'status');
+        box.innerHTML = u === 'yes' ? '<span class="pu-q">Thank you.</span>' : '<span class="pu-q">Thank you. <a href="/contact?topic=correction&amp;page=' + encodeURIComponent(here) + '">Tell us what is missing or wrong</a></span>';
+        window.epochUseful = u;
+      });
+    }, { timeout: 3000 });
+  })();
+
   // ── On this page (Nov 2026): on a long page with four or more sections, a row of them slides in under the header once
   // the reader is past the first one, marks the section in view and jumps to any. Built from the page's own visible h2s
   // (ids given where a heading has none); fixed, so it moves nothing. Not on the home page, not where a profile's side

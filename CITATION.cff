@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use the Institute's open data, please cite it as below."
+type: dataset
+title: "The Epoch Institute Open Data: the states register, power curves, people, songs and inventions"
+authors:
+  - name: "The Epoch Institute"
+    website: "https://the-epoch-institute.org/"
+url: "https://the-epoch-institute.org/dataset"
+version: "2026.11"
+date-released: "2026-11-14"
+license: CC-BY-4.0
+keywords:
+  - history
+  - historical states
+  - empires
+  - world history
+  - open data
+abstract: >-
+  Tables compiled by The Epoch Institute, a free historical research site: a register of recorded states with their
+  years, regions, capitals and dated relations to one another; power curves of states and empires; the people of the
+  encyclopedia with their dates, regions and places of birth and death as Wikidata records them; songs in history;
+  and inventions with what each built on. The files and their columns are described at
+  https://the-epoch-institute.org/dataset. How the Institute works is set out at
+  https://the-epoch-institute.org/method, and its corrections at https://the-epoch-institute.org/corrections.

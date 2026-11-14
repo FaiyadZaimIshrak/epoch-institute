@@ -25,6 +25,11 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
         const s1 = await post({ kind: 'newsletter', email: '=cmd@example.org', source: '=HYPERLINK("http://x")' }), s2 = await post({ kind: 'newsletter', email: '=cmd@example.org', source: 'again' }), s3 = await post({ kind: 'newsletter', email: 'plain@example.org', source: 'home' });
         const csv = fs.readFileSync(path.join(dir, 'private', 'subscribers.csv'), 'utf8').trim().split(/\r?\n/);
         ok('newsletter cells never start a formula, and no address twice', s1 === 200 && s2 === 200 && s3 === 200 && csv.length === 3 && /,'=cmd@example\.org,"'=HYPERLINK/.test(csv[1]) && /,plain@example\.org,home$/.test(csv[2]), csv);
+        // "Was this page useful?": counted in feedback/<month>.tsv, never mailed, 30 a day from one sender, odd pages refused
+        const before = fs.readdirSync(dir).length, fb = [await post({ kind: 'feedback', page: '/encyclopedia/battle-of-hastings', useful: 'yes' }), await post({ kind: 'feedback', page: '/empire/roman-empire', useful: 'no' }), await post({ kind: 'feedback', page: '/x\ty', useful: 'yes' }), await post({ kind: 'feedback', page: 'https://elsewhere.example/', useful: 'yes' }), await post({ kind: 'feedback', page: '/state/x', useful: 'maybe' })];
+        for (let i = 0; i < 32; i++) await post({ kind: 'feedback', page: '/state/n' + i, useful: 'yes' });
+        const fd = path.join(dir, 'private', 'feedback'), tsv = fs.readFileSync(path.join(fd, fs.readdirSync(fd)[0]), 'utf8').trim().split('\n');
+        ok('page feedback is counted, not mailed, and limited', fb.join() === '200,200,400,400,400' && tsv.length === 30 && /\t\/encyclopedia\/battle-of-hastings\tyes$/.test(tsv[0]) && /\t\/empire\/roman-empire\tno$/.test(tsv[1]) && tsv.every(l => l.split('\t').length === 3) && fs.readdirSync(dir).length === before, [fb, tsv.length, tsv.slice(0, 2)]);
       }
     } finally { srv.kill(); await new Promise(r => setTimeout(r, 400)); }
   }

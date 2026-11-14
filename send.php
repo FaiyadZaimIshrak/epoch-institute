@@ -246,6 +246,23 @@ $from = $origin !== '' ? $origin : (string) preg_replace('#^(https?://[^/]+).*$#
 if (!($from === SITE || ($TEST !== '' && preg_match('#^http://localhost(:\d+)?$#', $from)))) done(403, 'Please use the form on the-epoch-institute.org.');
 
 $kind = clean(field('kind'), false);
+// "Was this page useful?" (shared-nav.js): counted in the private folder (feedback/<year-month>.tsv: time, page, yes or
+// no), never mailed and outside the mail limits; at most 30 a day from one sender. Nothing about the sender is kept.
+if ($kind === 'feedback') {
+  $page = clean(field('page'), false); $u = clean(field('useful'), false);
+  if (trim(field('_gotcha')) !== '') done(200);
+  if (!preg_match('#^/[A-Za-z0-9/_\-]{0,200}$#', $page) || ($u !== 'yes' && $u !== 'no')) done(400, 'This form is not known.');
+  [$fdir] = private_dir();
+  if ($fdir !== '' && ensure_dir($fdir . '/feedback') && ensure_dir($fdir . '/rate')) {
+    $ff = $fdir . '/rate/fb-' . substr(hash('sha256', salt($fdir) . client_ip()), 0, 24) . '-' . gmdate('Ymd') . '.txt';
+    $fn = (int) @file_get_contents($ff);
+    if ($fn < 30) {
+      @file_put_contents($ff, (string) ($fn + 1), LOCK_EX);
+      @file_put_contents($fdir . '/feedback/' . gmdate('Y-m') . '.tsv', gmdate('c') . "\t$page\t$u\n", FILE_APPEND | LOCK_EX);
+    }
+  }
+  done(200);
+}
 $key = $kind === 'contact' ? 'contact:' . (clean(field('topic'), false) ?: 'other') : $kind;
 if (!isset(ROUTES[$key], FIELDS[$kind])) done(400, 'This form is not known.');
 [$box, $label] = ROUTES[$key];
