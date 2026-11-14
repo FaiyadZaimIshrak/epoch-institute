@@ -3,7 +3,7 @@
 // them, had no robots meta at all. Adds it after the description; a page that has one (also "noindex") is left alone.
 //   node scripts/tools/robots-meta.js [--write]      exits 1 when a page lacks it (without --write)
 const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..', '..');
-const PAGES = 'index research research-series about contributors dataset explorer profiles community connections atlas quiz contact start games kids search timeline passport weekly write faiths flashcards race inventions governance compare privacy terms support advent now today encyclopedia/index state/index today-in-history/index'.split(' ');
+const PAGES = 'index research research-series about contributors dataset explorer profiles community connections atlas quiz contact start games kids search timeline passport weekly write faiths flashcards race inventions governance compare privacy terms method corrections support advent now today encyclopedia/index state/index today-in-history/index'.split(' ');
 const TAG = '<meta name="robots" content="index, follow, max-image-preview:large">'; let n = 0;
 for (const p of PAGES) { const f = path.join(R, p); if (!fs.existsSync(f)) continue; const t = fs.readFileSync(f, 'utf8'); if (/<meta name="robots"/.test(t)) continue;
   const m = t.match(/<meta name="description" content="[^"]*">(\r?\n)/); if (!m) { console.log(p + ': no description line'); n++; continue; }

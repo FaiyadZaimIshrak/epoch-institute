@@ -2507,6 +2507,30 @@ and the host drops a connection now and then, more so while a deploy reads the w
 - A JavaScript replacement string holding `$'` or `$&` inserts the text round the match (it once blew up
   build-pages.ps1 during this round): pass a function as the replacement.
 
+## Growth plan (approved 14 Nov 2026: reach, credibility, engagement, visibility)
+The owner's choices: about an hour a week of their own time for off-site work (a ready-to-paste pack each Monday in
+their Documents\epoch-weekly folder, never in the repository), the site stays anonymous and earns trust by showing its
+method, English only. Search position is the lever (click rate 0.6% at positions 7-10, 5-9% at 1-5). Five phases:
+unblock and measure; rank higher (deepen by evidence, Questions blocks, hubs, snippets); show the method; bring readers
+back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be found elsewhere. Shipped so far:
+- **Large previews:** scripts/tools/robots-meta.js [--write] gives every indexable hand page "index, follow,
+  max-image-preview:large" (twelve, the home page among them, had no robots meta; generated pages and profiles had it).
+- **Events** (shared-nav.js, with consent only; /privacy lists them): next_read_click, source_click (a link out of
+  main to another site), listen_start, share (sharePoster), game_finish (games.js share(), when a finish card appears;
+  games.js?v=21), beside support_click and newsletter_signup.
+- **The scoreboard:** scripts/tools/gsc-compare.js <older export> <newer export> [--out=] compares two Search Console
+  exports per day (their lengths differ): the site and each kind of page, the entries told in more detail against
+  those listed and left short, click rate by position, the pages that rose and fell, new and lost queries. It refuses
+  to write its report inside the repository.
+- **/method and /corrections** (hand pages; .htaccess, deploy.sh PAGES, split-css HAND, the sitemap list, SEARCH_PAGES,
+  the footer, About): scripts/tools/make-method.js writes both from /privacy's head and foot. /method ("How the
+  Institute works") holds the editorial policy; its text lives in the tool. /corrections lists every correction of
+  fact from the records already kept: the FACT lines of profile-changes.md (folded per profile), the "fixes" of
+  added-entries.json (not the plain-wording edits, told apart by scripts/style/lines) and its "nopicture" rows:
+  774 on 14 Nov 2026. Re-run the tool after a correction is recorded.
+- Still to come, in the plan's order: V1 edge caching back (after the owner's purge secrets), V4-V7, C1 Sources block,
+  C4 the known disagreements, C5 DOIs, C6 coverage report (not under /method/: that is a file), E1-E5, R1-R5.
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their

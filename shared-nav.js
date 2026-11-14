@@ -531,7 +531,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=1d5d3e5d2f';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=ea5575e0e4';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=5a4370aea7';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -894,7 +894,7 @@ function initNav(activePage) {
   </div>
   <div class="footer-bottom">
     <span data-i18n="footer_copy">© ${new Date().getFullYear()} The Epoch Institute</span>
-    <span class="footer-legal"><a href="/privacy">Privacy</a> · <a href="/terms">Terms and licences</a> · <button type="button" class="footer-cookies" data-consent-open>Cookie settings</button></span>
+    <span class="footer-legal"><a href="/method">How we work</a> · <a href="/corrections">Corrections</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms and licences</a> · <button type="button" class="footer-cookies" data-consent-open>Cookie settings</button></span>
     <button type="button" class="footer-quote-btn" id="footer-quote-btn" aria-expanded="false" aria-label="A word from the past" title="A word from the past">✦</button>
   </div>
   <p class="footer-quote" id="footer-quote" hidden></p>

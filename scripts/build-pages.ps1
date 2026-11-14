@@ -4754,6 +4754,8 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Support the Institute', '/support', 'support|support the institute|donate|donation|ko-fi|friends of the institute|help the institute'),
   @('Privacy', '/privacy', 'privacy|cookies|cookie settings|data|gdpr|analytics'),
   @('Terms and Licences', '/terms', 'terms|licence|license|licences|copyright|reuse|cc by-sa|attribution'),
+  @('How the Institute Works', '/method', 'method|methodology|sources|editorial policy|how we work|fact checking|reliability|ai'),
+  @('Corrections', '/corrections', 'corrections|errata|mistakes|errors|fact check'),
   @('Social Ladders', '/societies/', 'social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks'),
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
@@ -4982,7 +4984,7 @@ foreach ($tdL in (& $songExe "$PSScriptRoot\tools\make-today.js")) { Say $tdL }
 if ($LASTEXITCODE) { throw 'Today: scripts/tools/make-today.js failed (above)' }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/method', '/corrections', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

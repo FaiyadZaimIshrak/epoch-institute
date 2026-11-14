@@ -1169,6 +1169,7 @@ body.has-journey #site-footer { padding-bottom: 90px; }
 .legal-page .ws-guide-sec ul { margin: 0 0 12px; padding-left: 22px; }
 .legal-page .ws-guide-sec li { font-family: var(--font-text); font-size: 17px; line-height: 1.6; color: var(--text); margin: 0 0 8px; }
 .legal-page .ws-guide-sec code { font-size: 15px; }
+.legal-page .ws-guide-sec ol { margin: 0 0 12px; padding-left: 24px; }
 .sup-note { font-family: var(--font-ui); font-size: 14px; color: var(--muted); margin: 0; }
 .sup-friends { font-family: var(--font-text); font-style: italic; color: var(--muted); }
 @media print {

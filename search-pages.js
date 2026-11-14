@@ -26,6 +26,8 @@ var SEARCH_PAGES = [
 ["Support the Institute","/support","page","support|support the institute|donate|donation|ko-fi|friends of the institute|help the institute"],
 ["Privacy","/privacy","page","privacy|cookies|cookie settings|data|gdpr|analytics"],
 ["Terms and Licences","/terms","page","terms|licence|license|licences|copyright|reuse|cc by-sa|attribution"],
+["How the Institute Works","/method","page","method|methodology|sources|editorial policy|how we work|fact checking|reliability|ai"],
+["Corrections","/corrections","page","corrections|errata|mistakes|errors|fact check"],
 ["Social Ladders","/societies/","page","social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks"],
 ["Flashcards","/flashcards","page","flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition"],
 ["History Games","/games","page","games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages"],
