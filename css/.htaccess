@@ -3,9 +3,8 @@
 <IfModule mod_headers.c>
   <FilesMatch "\.css$">
     Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
-    # Cloudflare does not keep them at all (11 Nov 2026: see the root .htaccess; kept 2 minutes, css/pages.css stayed
-    # at its 8 Nov version through two deploys)
-    Header set Cloudflare-CDN-Cache-Control "no-store"
+    # Cloudflare keeps them 4 hours and forgets them at every deploy (14 Nov 2026: see the root .htaccess)
+    Header set Cloudflare-CDN-Cache-Control "max-age=14400"
     Header unset Expires
   </FilesMatch>
 </IfModule>

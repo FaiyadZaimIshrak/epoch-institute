@@ -82,12 +82,12 @@ AddType font/woff2 .woff2
   Header always set Strict-Transport-Security "max-age=31536000"
   <FilesMatch "^(shared\.css|shared-data\.js|shared-nav\.js|enc-page\.js|scribe\.js|faith-map\.js|test-yourself\.js)$">
     Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
-    # Cloudflare does not keep these at all (11 Nov 2026). Under stale-while-revalidate its edge served the files of
-    # before a deploy for over an hour (8 Nov); kept 2 minutes instead (max-age=120), a copy in use was revalidated
-    # every 2 minutes and never replaced: enc-page.js and css/pages.css stayed at their 8 Nov versions through two
-    # deploys, though this server answers every conditional request rightly. Until the deploy purges Cloudflare
-    # (docs/CLOUDFLARE.md), they come from here, as before the site was proxied.
-    Header set Cloudflare-CDN-Cache-Control "no-store"
+    # Cloudflare keeps these 4 hours and forgets them at every deploy (since 14 Nov 2026 the deploy purges Cloudflare:
+    # the owner's token and zone secrets). Before that it could not be trusted with them: under
+    # stale-while-revalidate its edge served the files of before a deploy for over an hour (8 Nov), and kept 2
+    # minutes (max-age=120) a copy in use was revalidated and never replaced (11 Nov), so they were "no-store" for
+    # three days and every reader fetched them from Singapore. Never stale-while-revalidate for Cloudflare.
+    Header set Cloudflare-CDN-Cache-Control "max-age=14400"
     Header unset Expires
   </FilesMatch>
   # the service worker and the pages it falls back on are always checked with the server (a stale sw.js would keep its
