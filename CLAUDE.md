@@ -2578,6 +2578,12 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   time, page and answer to feedback/<year-month>.tsv in the private folder: never mailed, outside the mail limits, 30
   a day from one sender, nothing about the reader (docs/MAIL.md; /privacy says so). With consent also the event
   page_useful. "No" links the correction form. scripts/tests/page-useful.js, and a check in tests/mail.js.
+- **E1/E2, "Come back tomorrow" on /today (14 Nov 2026):** section#td-keep (make-today.js markup, today.js), hidden
+  until it has something to show and never in Kids mode: the newsletter form (data-nl="today") for a reader not signed
+  up, and from the second day with a visit (epoch-visits) a home-screen line: a button calling the browser's own
+  install prompt where beforeinstallprompt fires (Chrome, Edge; event install_prompt), the Share menu's steps on
+  iPhones and iPads; not when already installed. manifest.json has shortcuts to /today and /games. The newsletter
+  itself is still the owner's to send each week (docs/NEWSLETTER.md): the form promises a weekly email.
 - Still to come, in the plan's order: V4, V6, V7, C1 for the remaining entries, C5 DOIs, C6 coverage report (not
   under /method/: that is a file; done as the table of /method#coverage, make-method.js), C7, E1, E2, E4, E5, R1-R5.
 

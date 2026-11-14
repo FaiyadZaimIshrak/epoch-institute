@@ -62,5 +62,22 @@
       '<span class="td-game-s">' + (d.song[6] ? 'Its story, and a performance to hear &rarr;' : 'Its story &rarr;') + '</span></a>';
     else $('td-song-sec').hidden = true;
   }).catch(function () {});
+  // ── Come back tomorrow (14 Nov 2026, the growth plan's E1 and E2): the newsletter line for readers who have not signed
+  // up (never in Kids mode), and from the second day with a visit a way to keep this page on the home screen: the
+  // browser's own install prompt where it offers one (Chrome, Edge), the Share menu's steps on iPhones and iPads.
+  var keep = $('td-keep'), inst = $('td-install'), shown = function () { if (keep) keep.hidden = false; };
+  if (keep && !kids) {
+    var signed = false; try { signed = !!localStorage.getItem('epoch-nl'); } catch (e) {}
+    if (!signed && typeof newsletterPrompt === 'function') { $('td-nl').innerHTML = '<form class="gm-nl" data-nl="today" novalidate><p class="gm-nl-t">Today in history, the week&#8217;s puzzles and what is new, once a week by email</p><span class="gm-nl-row"><input type="email" required placeholder="your@email.com" aria-label="Your email address"><button type="submit">Sign up</button></span><p class="gm-nl-msg" aria-live="polite"></p></form>'; shown(); }
+    var alone = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+    if (inst && !alone && visits.length >= 2) {
+      if (/iPhone|iPad|iPod/.test(navigator.userAgent) && !window.EPOCH_INAPP) { inst.textContent = 'To keep Today one tap away: press Share in your browser, then “Add to Home Screen”.'; inst.hidden = false; shown(); }
+      window.addEventListener('beforeinstallprompt', function (ev) {
+        ev.preventDefault(); S.install = ev;
+        inst.innerHTML = 'Keep Today one tap away. <button type="button" class="td-install-b">Add it to your home screen</button>'; inst.hidden = false; shown();
+        inst.querySelector('button').addEventListener('click', function () { try { ev.prompt(); } catch (e) {} if (typeof gaEvent === 'function') gaEvent('install_prompt', { source: '/today' }); inst.hidden = true; });
+      });
+    }
+  }
   window.epochToday = { rows: rows, done: done, run: run, state: S };
 })();

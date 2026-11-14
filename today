@@ -73,13 +73,19 @@
   <ol class="now-list" data-now="ann" data-max="4"></ol>
   <p class="now-note"><a href="/now#anniversaries">All of the next thirty days &rarr;</a></p>
 </section>
+
+<section class="now-sec td-keep" id="td-keep" aria-labelledby="td-keep-t" hidden>
+  <h2 class="ref-sec-title" id="td-keep-t">Come back tomorrow</h2>
+  <p class="now-note" id="td-install" hidden></p>
+  <div id="td-nl"></div>
+</section>
 </div>
 </main>
 
 <script src="/shared-nav.js"></script>
 <script>initNav('today');</script>
 <script>var TODAY_DAYS_V = '1993a82ccc', NOW_SRC = '/data/now.json?v=94be4f647e';</script>
-<script src="/today.js?v=58e88a545b"></script>
+<script src="/today.js?v=5fa77d3657"></script>
 <script src="/now.js?v=c2dd4fc8be"></script>
 </body>
 </html>

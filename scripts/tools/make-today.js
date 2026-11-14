@@ -69,6 +69,12 @@ const body = `</head>
   <ol class="now-list" data-now="ann" data-max="4"></ol>
   <p class="now-note"><a href="/now#anniversaries">All of the next thirty days &rarr;</a></p>
 </section>
+
+<section class="now-sec td-keep" id="td-keep" aria-labelledby="td-keep-t" hidden>
+  <h2 class="ref-sec-title" id="td-keep-t">Come back tomorrow</h2>
+  <p class="now-note" id="td-install" hidden></p>
+  <div id="td-nl"></div>
+</section>
 </div>
 </main>
 

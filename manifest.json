@@ -5,6 +5,10 @@
  "start_url": "/",
  "scope": "/",
  "display": "standalone",
+ "shortcuts": [
+  { "name": "Today at the Institute", "short_name": "Today", "url": "/today" },
+  { "name": "History Games", "short_name": "Games", "url": "/games" }
+ ],
  "background_color": "#0b0c10",
  "theme_color": "#0b0c10",
  "icons": [

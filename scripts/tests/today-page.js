@@ -34,6 +34,14 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     p = await open('/today', true); s = await st(p);
     ok(W + 'Kids mode: no headlines, the rest there', !s.newsShown && s.games.length === 9 && s.wide <= 0, [s.newsShown, s.hero]); await p.context().close();
     p = await open('/today?day=01-01'); s = await st(p); ok(W + '?day= shows another day’s events', s.hero.length > 5, s.hero); await p.context().close();
+    // Come back tomorrow: the newsletter line for a reader not signed up; from the second day a home-screen prompt
+    const keep = p => p.evaluate(() => { const k = document.getElementById('td-keep'), i = document.getElementById('td-install'); return { shown: !k.hidden, form: !!k.querySelector('form[data-nl="today"]'), inst: !i.hidden, btn: !!i.querySelector('button'), wide: document.documentElement.scrollWidth - innerWidth }; });
+    p = await open('/today'); let k = await keep(p); await p.evaluate(() => window.dispatchEvent(new Event('beforeinstallprompt'))); const k0 = await keep(p);
+    ok(W + 'a first visit: the newsletter line, no home-screen prompt', k.shown && k.form && !k.inst && !k0.inst && k.wide <= 0, [k, k0]); await p.context().close();
+    p = await open('/today', false, true); await p.evaluate(() => window.dispatchEvent(new Event('beforeinstallprompt'))); k = await keep(p);
+    ok(W + 'a returning reader is offered the home screen when the browser allows it', k.shown && k.inst && k.btn && k.wide <= 0, k); await p.context().close();
+    p = await open('/today', true, true); await p.evaluate(() => window.dispatchEvent(new Event('beforeinstallprompt'))); k = await keep(p);
+    ok(W + 'Kids mode: neither', !k.shown && !k.form && !k.inst, k); await p.context().close();
   }
   ok('no script errors', errs.length === 0, errs.slice(0, 3));
   await b.close(); srv.close(); console.log(fails ? fails + ' FAILED' : 'all passed'); process.exit(fails ? 1 : 0);
