@@ -2548,7 +2548,14 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   build-pages.ps1 () writes section.enc-src#sources in place of the "Read further" line (hidden in Kids mode)
   and adds the works to the Article's JSON-LD "citation". First round: the entries of the 14 Nov export and the 131
   told in more detail: 418 entries, 278 with works, 689 works. The other 26,000 confirmed entries keep "Read further".
-  Second round the same day: the 700 best-known entries not yet done (search weight 5 and up, the highest first).
+  Second round the same day: the best-known entries not yet done (search weight 5 and up, the highest first: 588 with
+  a confirmed article), 1,006 in the file. Reading the sample showed a long article's list runs from A and its first
+  five works may be about anything the article touches (Afghanistan's began with an encyclopedia of American
+  folklore, the Song dynasty's with a book on the Tang, Aristotle's with Aesop): a work is now kept only when its
+  title holds a word of the entry's name or other names (first five letters; generic words such as battle, empire,
+  river left out); where no title does, a person's or event's listed works are kept and a place, people or idea gets
+  none. 587 entries with works, 1,601 works. --again re-applies the rules to every entry of the file from the cache.
+  Wikipedia throttles the wikitext fetch after bursts of other requests; left alone it reads about 30 a minute.
 - **V5 (a Questions block) dropped, 14 Nov 2026:** of the 1,000 most-shown queries of the 14 Nov export, those that
   begin with what, when, who, where, why or how are 0.07% of the impressions (221 of 315,852). Readers search by
   name. Do not build question blocks without new evidence.

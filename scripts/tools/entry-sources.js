@@ -5,6 +5,7 @@
 //   node scripts/tools/entry-sources.js [--export=<Search Console export folder>] [--more] [--max=N] [slug …]
 //     --export  the entries among that export's pages (the ones search sends readers to); read only, never copied
 //     --more    the entries told in more detail (scripts/entry-more.json)
+//     --again   every entry already in the file, from the cache (after a rule changes)
 // Only entries whose article is confirmed ("same" in scripts/entry-wikidata.tsv). The wikitext is cached in
 // %LOCALAPPDATA%\epoch-tools\refs-cache (one request every 2 s; a run can be stopped and started again). It writes
 // scripts/entry-sources.json {slug: {t: article title, d: yyyy-mm-dd read, k: "b" listed by the article | "c" cited in
@@ -14,7 +15,7 @@ const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..',
 const arg = k => { const a = process.argv.find(x => x.startsWith('--' + k + '=')); return a ? a.slice(k.length + 3) : ''; };
 const UA = { 'User-Agent': 'EpochInstitute/1.0 (the-epoch-institute.org)' }, CACHE = path.join(process.env.LOCALAPPDATA || require('os').tmpdir(), 'epoch-tools', 'refs-cache'), OUT = path.join(R, 'scripts', 'entry-sources.json');
 fs.mkdirSync(CACHE, { recursive: true });
-const clean = s => String(s || '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/\{\{[^{}]*\}\}/g, '').replace(/<[^>]+>/g, '').replace(/''+/g, '').replace(/&nbsp;/g, ' ').replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, '$1').replace(/\s+/g, ' ').trim();
+const clean = s => String(s || '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/\{\{[^{}]*\}\}/g, '').replace(/<[^>]+>/g, '').replace(/''+/g, '').replace(/&nbsp;/g, ' ').replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, '$1').replace(/&#(\d+);/g, (m, d) => String.fromCharCode(+d)).replace(/\s*\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();   // "&#91;2 volumes&#93;" goes
 function templates(text) { const out = []; let d = 0, st = -1; for (let i = 0; i < text.length - 1; i++) { if (text[i] === '{' && text[i + 1] === '{') { if (d === 0) st = i; d++; i++; } else if (text[i] === '}' && text[i + 1] === '}') { d--; i++; if (d === 0 && st >= 0) out.push(text.slice(st + 2, i - 1)); if (d < 0) d = 0; } } return out; }
 function fields(t) { const f = {}; let d = 0, cur = ''; const parts = []; for (let i = 0; i < t.length; i++) { const c = t[i], n = t[i + 1]; if ((c === '{' && n === '{') || (c === '[' && n === '[')) { d++; cur += c + n; i++; } else if ((c === '}' && n === '}') || (c === ']' && n === ']')) { d--; cur += c + n; i++; } else if (c === '|' && d === 0) { parts.push(cur); cur = ''; } else cur += c; } parts.push(cur); f._name = parts[0].trim().toLowerCase(); for (const p of parts.slice(1)) { const k = p.indexOf('='); if (k > 0) f[p.slice(0, k).trim().toLowerCase()] = p.slice(k + 1).trim(); } return f; }
 function books(text, max) {
@@ -30,6 +31,11 @@ function books(text, max) {
 }
 (async () => {
   const same = {}; for (const l of fs.readFileSync(path.join(R, 'scripts', 'entry-wikidata.tsv'), 'utf8').split(/\r?\n/)) { const c = l.split('\t'); if (c[0] && c[0][0] !== '#' && c[4] === 'same' && c[1]) same[c[0]] = c[1]; }
+  const fold = t => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const GENERIC = new Set('battle siege treaty kingdom empire dynasty river lake republic sultanate caliphate first second third north south east west northern southern eastern western great saint city state states united people peoples council house order king queen emperor prince duke count john william charles henry louis mount island islands sea ocean war wars revolution league union company church temple history ancient medieval modern movement party army peace campaign conquest'.split(' '));
+  const NAMES = {}, TYPE = {};
+  for (const l of fs.readFileSync(path.join(R, 'encyclopedia-data.js'), 'utf8').split('\n')) { const m = l.match(/slug:"([^"]+)",name:"((?:[^"\\]|\\.)*)",type:"([^"]*)"(?:,aka:\[([^\]]*)\])?/); if (!m) continue; TYPE[m[1]] = m[3]; NAMES[m[1]] = [...new Set(fold(m[2] + ' ' + (m[4] || '')).split(/[^a-z0-9]+/).filter(x => x.length >= 4 && !GENERIC.has(x) && !/^\d+$/.test(x)))]; }
+  if (process.argv.includes('--again')) process.argv.push(...Object.keys(fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {}));
   let slugs = process.argv.slice(2).filter(a => !a.startsWith('--'));
   if (process.argv.includes('--more')) slugs = slugs.concat(Object.keys(JSON.parse(fs.readFileSync(path.join(R, 'scripts', 'entry-more.json'), 'utf8'))));
   if (arg('export')) for (const l of fs.readFileSync(path.join(arg('export'), 'Pages.csv'), 'utf8').split(/\r?\n/)) { const m = l.match(/\/encyclopedia\/([a-z0-9-]+),/); if (m) slugs.push(m[1]); }
@@ -50,7 +56,16 @@ function books(text, max) {
     // four), and nothing here can tell them apart but the publisher. Precision over completeness.
     const SCHOLARLY = /Universit|Univ\.|\bUP\b|Brill|Routledge|De Gruyter|Springer|Palgrave|Wiley|Blackwell|Eisenbrauns|Harrassowitz|Peeters|Academic|Akademi|Institut|Society|Museum|Longman|Clarendon|Macmillan|Motilal|Asiatic|Variorum|Ashgate|Boydell|Brepols|Scholars|Curzon|Hakluyt|Thames (&|and) Hudson|Smithsonian|Dumbarton|School of|College|Académie|Accademia|Verlag|Böhlau|Franz Steiner|Archaeopress|Oxbow|Equinox|ABC-CLIO|Greenwood|Praeger|Westview|Rowman|Scarecrow|M\.? ?E\.? Sharpe|Hackett|Mouton|Benjamins|Otto|Presses|Editions du CNRS|Publications de|Manohar|Munshiram|Orient (Longman|Blackswan)|Sage\b|Zed Books|Hurst|I\.? ?B\.? ?Tauris|Bloomsbury|Continuum|Berghahn|Karthala|Maisonneuve|Geuthner|Mohr|Vandenhoeck|Reichert|Aris (&|and) Phillips|Osprey|Tempus|Pen (&|and) Sword|Sutton|Batsford|Weidenfeld|Faber|Allen (&|and) Unwin|Methuen|Edward Arnold|Duckworth|Kegan Paul|John Murray|Norton|Knopf|Basic Books|Free Press|Viking|Penguin Classics|Loeb|Library of|Archaeological Survey|Government|UNESCO/;
     const good = x => { const pub = (x.match(/\(([^()]*), \d{4}\)$/) || [])[1] || ''; return SCHOLARLY.test(pub) && !/Cancer|Britannica/i.test(pub) && !/\bnovel\b|\(PhD\)|\bthesis\b|dissertation|Wikipedia|Journal of|^Society,|, \d{4}, \d{4}\)/i.test(x); };
-    let w = books(secs.join('\n'), 12).filter(good).slice(0, 5), k = 'b'; if (!w.length) { w = books(body, 12).filter(good).slice(0, 5); k = 'c'; }
+    // and only works about the subject: a long article's list runs from A, so its first five may be on anything the
+    // article touches (Afghanistan's began with an encyclopedia of American folklore, the Song dynasty's with a book
+    // on the Tang). A work is kept when its title holds a word of the entry's name or other names (the first five
+    // letters, so "Zoroastrians" serves Zoroastrianism); where no title does, the listed works of a person or an
+    // event are kept (a life's sources are seldom named after it), and nothing for a place, people or idea.
+    const about = x => { const t = fold(x.slice(x.indexOf(', ') + 2)).split(/[^a-z0-9]+/); return (NAMES[slug] || []).some(nw => t.some(tw => nw.length < 5 ? tw === nw : tw.startsWith(nw.slice(0, 5)))); };
+    const pick = list => { const a = list.filter(about); return a.length ? a.slice(0, 5) : null; };
+    const listed = books(secs.join('\n'), 40).filter(good), cited = books(body, 40).filter(good);
+    let w = pick(listed), k = 'b'; if (!w) { w = pick(cited); k = 'c'; }
+    if (!w) { w = /^(person|event)$/.test(TYPE[slug] || '') ? listed.slice(0, 5) : []; k = 'b'; }
     out[slug] = { t: c.t, d: c.d, k, w }; n++; if (w.length) withBooks++;
     if (n % 25 === 0) { fs.writeFileSync(OUT, JSON.stringify(out, null, 0).replace(/\},"/g, '},\n"') + '\n'); console.log(n + ' / ' + slugs.length + ' (' + got + ' fetched, ' + withBooks + ' with works)'); }
   }
