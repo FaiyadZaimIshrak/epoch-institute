@@ -2528,6 +2528,8 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   fact from the records already kept: the FACT lines of profile-changes.md (folded per profile), the "fixes" of
   added-entries.json (not the plain-wording edits, told apart by scripts/style/lines) and its "nopicture" rows:
   774 on 14 Nov 2026. Re-run the tool after a correction is recorded.
+- 14 Nov 2026: the owner set the repository secrets CLOUDFLARE_API_TOKEN (a token for Cache Purge on this zone only)
+  and CLOUDFLARE_ZONE_ID, so every deploy now purges Cloudflare (the step "Purge Cloudflare's copies").
 - Still to come, in the plan's order: V1 edge caching back (after the owner's purge secrets), V4-V7, C1 Sources block,
   C4 the known disagreements, C5 DOIs, C6 coverage report (not under /method/: that is a file), E1-E5, R1-R5.
 
