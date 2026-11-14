@@ -2530,7 +2530,16 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   774 on 14 Nov 2026. Re-run the tool after a correction is recorded.
 - 14 Nov 2026: the owner set the repository secrets CLOUDFLARE_API_TOKEN (a token for Cache Purge on this zone only)
   and CLOUDFLARE_ZONE_ID, so every deploy now purges Cloudflare (the step "Purge Cloudflare's copies").
-- Still to come, in the plan's order: V1 edge caching back (after the owner's purge secrets), V4-V7, C1 Sources block,
+- **V1, pages at the edge (14 Nov 2026):** the owner made the Cache Rule "Pages at the edge" (everything but send.php,
+  /feeds/, sw.js and offline.html eligible, edge TTL 4 hours ignoring cache-control, browser TTL as the origin says,
+  status codes 400-599 not cached), and the shared files and css/ went from "no-store" to
+  Cloudflare-CDN-Cache-Control max-age=14400 (root .htaccess, css/.htaccess). Checked from outside: pages HIT on the
+  second request, the four exclusions DYNAMIC or revalidated, a 404 never served from the copy. First visit from
+  Europe (live-speed.js --net=none, five pages): first byte 0.87-1.10 s to 0.07-0.10 s, first paint 1.5-2.3 s to
+  0.54-1.14 s. A page nobody opened since the last deploy or for four hours still makes the trip to Singapore once.
+  Anything written to the host without a deploy must sit under /feeds/ (the daily feed, news.json and its pictures) or
+  it stays stale for up to four hours.
+- Still to come, in the plan's order: V4-V7, C1 Sources block,
   C4 the known disagreements, C5 DOIs, C6 coverage report (not under /method/: that is a file), E1-E5, R1-R5.
 
 ## Roadmap (not built yet)
