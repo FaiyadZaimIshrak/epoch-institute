@@ -2584,6 +2584,17 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   install prompt where beforeinstallprompt fires (Chrome, Edge; event install_prompt), the Share menu's steps on
   iPhones and iPads; not when already installed. manifest.json has shortcuts to /today and /games. The newsletter
   itself is still the owner's to send each week (docs/NEWSLETTER.md): the form promises a weekly email.
+- **Quotations, set right (14 Nov 2026; the user: "it shows 0 quotations … why did you skip Jesus and Muhammad"):**
+  /encyclopedia/quotations had said "0 quotations from 1 people" since it shipped: the hub's loop variable $qbY was
+  $QBY itself (PowerShell names ignore case) and overwrote the table; now $qbYr. Jesus had been there all along (six
+  quotations). Muhammad, the Buddha, Laozi and Moses were missing because the pool was gathered for Who Said It?,
+  which needs a portrait and dates. scripts/quote-sources-words.tsv (same columns) holds words shown only on the
+  speakers' entries and the hub, imported by fetch-quotes.ps1 -Words into data/quotes-words.json (build input, not
+  deployed; the picture rule is waived): Muhammad's sayings from Lane-Poole's Table-Talk of 1882 (hadith; never the
+  Qur'an as his words), the Dhammapada (Max Müller 1881), the Tao Te Ching (Legge 1891), Deuteronomy (KJV), each
+  with a note on how the words reach us. An undated speaker stands first in the ancient world. The games never read
+  that file. scripts/tests/quotations.js checks the hub's counts against the data. More founders (Guru Nanak,
+  Zoroaster, Mahavira, Paul) wait for clean editions.
 - Still to come, in the plan's order: V4, V6, V7, C1 for the remaining entries, C5 DOIs, C6 coverage report (not
   under /method/: that is a file; done as the table of /method#coverage, make-method.js), C7, E1, E2, E4, E5, R1-R5.
 

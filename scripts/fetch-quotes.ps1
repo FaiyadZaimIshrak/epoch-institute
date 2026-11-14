@@ -13,7 +13,10 @@
 #       its number, to copy start and end phrases from exactly the text this script will read
 #   ... -Test <file.tsv>                 imports the rows of another file (same columns) and prints each quotation
 #       with its checks, writing nothing: to try rows before they go into quote-sources.tsv
-param([string[]]$Only, [switch]$Refresh, [string]$Cache = (Join-Path $env:TEMP 'epoch-quote-cache'), [string]$Peek, [string[]]$Find, [string]$Test)
+#   ... -Words                           reads scripts\quote-sources-words.tsv and writes data\quotes-words.json: words
+#       shown only on the speakers' entries and /encyclopedia/quotations, of people the games cannot ask about (no
+#       portrait or no firm dates: Muhammad, the Buddha, Laozi, Moses)
+param([string[]]$Only, [switch]$Refresh, [string]$Cache = (Join-Path $env:TEMP 'epoch-quote-cache'), [string]$Peek, [string[]]$Find, [string]$Test, [switch]$Words)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Web.Extensions
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -52,7 +55,7 @@ $fold = { param($t) ($t.Normalize([Text.NormalizationForm]::FormD) -replace '\p{
 function Import-Row($c) {
   $slug = $c[0].Trim(); $p = $PEOPLE[$slug]
   if (-not $p) { throw "no person entry $slug" }
-  if (-not $p.img) { throw "$slug has no picture" }
+  if (-not $p.img -and -not $Words) { throw "$slug has no picture" }
   $paras = Select-Part (Get-PageHtml $c[1].Trim()) $c[2].Trim()
   $t = (($paras | ForEach-Object { $_ -replace "`n", ' ' }) -join ' ') -replace '\s+', ' '
   # the quotation marks around a speech in the source are the game's to add
@@ -81,7 +84,7 @@ function Import-Row($c) {
 }
 
 $rows = @()
-foreach ($line in [IO.File]::ReadAllLines($(if ($Test) { (Resolve-Path $Test).Path } else { Join-Path $PSScriptRoot 'quote-sources.tsv' }), $U8)) {
+foreach ($line in [IO.File]::ReadAllLines($(if ($Test) { (Resolve-Path $Test).Path } elseif ($Words) { Join-Path $PSScriptRoot 'quote-sources-words.tsv' } else { Join-Path $PSScriptRoot 'quote-sources.tsv' }), $U8)) {
   if (-not $line.Trim() -or $line.StartsWith('#')) { continue }
   $c = $line.Split("`t"); if ($c.Count -lt 5) { throw "quote-sources.tsv: 5 columns expected: $line" }
   $rows += , $c
@@ -101,5 +104,5 @@ foreach ($c in $rows) {
     "{0,-34} {1,3} words  {2}" -f $slug, $r.words, $r.text
   } catch { "{0,-34} FAILED: {1}" -f $slug, $_.Exception.Message; $nBad++ }
 }
-if (-not $Only -and -not $Test) { [IO.File]::WriteAllText((Join-Path $Repo 'data\quotes.json'), $J.Serialize($out.ToArray()), $U8) }
+if (-not $Only -and -not $Test) { [IO.File]::WriteAllText((Join-Path $Repo $(if ($Words) { 'data\quotes-words.json' } else { 'data\quotes.json' })), $J.Serialize($out.ToArray()), $U8) }
 "done: $($out.Count) quotations from $($count.Count) people, $nBad problems" + $(if ($Only -or $Test) { ' (nothing written)' } else { '' })

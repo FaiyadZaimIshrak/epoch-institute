@@ -1182,8 +1182,9 @@ function PersonPlaces($e) {
 # folded, each with its work, translator, the note on how the words reach us, and its source. /encyclopedia/quotations
 # lists the speakers by age. Script-level names start with QB / qq (names ignore case).
 $QBY = @{}
-if (Test-Path "$Repo\data\quotes.json") {
-  foreach ($qq in @($JSS.DeserializeObject([IO.File]::ReadAllText("$Repo\data\quotes.json", $U8)))) {
+# data/quotes-words.json (fetch-quotes.ps1 -Words): the same, for people the games cannot ask about; shown here only
+foreach ($qqF in @('quotes.json', 'quotes-words.json')) { if (-not (Test-Path "$Repo\data\$qqF")) { continue }
+  foreach ($qq in @($JSS.DeserializeObject([IO.File]::ReadAllText("$Repo\data\$qqF", $U8)))) {
     $qqs = [string]$qq['speaker']; if (-not $BY.ContainsKey($qqs)) { continue }
     if (-not $QBY.ContainsKey($qqs)) { $QBY[$qqs] = New-Object Collections.Generic.List[object] }; $QBY[$qqs].Add($qq)
   }
@@ -4011,9 +4012,9 @@ Say 'quotations'
 $qbAges = [ordered]@{ 'The ancient world' = New-Object Collections.Generic.List[object]; 'The medieval world' = New-Object Collections.Generic.List[object]; 'The early modern world' = New-Object Collections.Generic.List[object]; 'The modern world' = New-Object Collections.Generic.List[object] }
 $qbTotal = 0
 foreach ($qbK in @($QBY.Keys | Sort-Object)) {
-  $qbY = if ($EAT.ContainsKey($qbK)) { $EAT[$qbK] } else { 99999 }
-  $qbA = if ($qbY -lt 500) { 'The ancient world' } elseif ($qbY -lt 1500) { 'The medieval world' } elseif ($qbY -lt 1800) { 'The early modern world' } else { 'The modern world' }
-  $qbAges[$qbA].Add([pscustomobject]@{ e = $BY[$qbK]; n = $QBY[$qbK].Count; y = $qbY }); $qbTotal += $QBY[$qbK].Count
+  $qbYr = if ($EAT.ContainsKey($qbK)) { $EAT[$qbK] } else { -99999 }   # no date: only the undated ancients of quotes-words.json (the Buddha, Moses)
+  $qbA = if ($qbYr -lt 500) { 'The ancient world' } elseif ($qbYr -lt 1500) { 'The medieval world' } elseif ($qbYr -lt 1800) { 'The early modern world' } else { 'The modern world' }
+  $qbAges[$qbA].Add([pscustomobject]@{ e = $BY[$qbK]; n = $QBY[$qbK].Count; y = $qbYr }); $qbTotal += $QBY[$qbK].Count
 }
 $crumb = Crumbs @(@('Home', '/'), @('Encyclopedia', '/encyclopedia/'), @('Quotations', $null))
 $sb = New-Object Text.StringBuilder(120000)
