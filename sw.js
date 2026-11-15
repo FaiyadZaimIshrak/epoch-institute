@@ -7,12 +7,14 @@
 //   pictures, emblems and data files (preview cards): the kept copy at once, refreshed behind it. Until Nov 2026 they
 //     were kept for good, so a picture replaced at the same address (or taken off a namesake) stayed in the reader's
 //     browser, and so did the preview cards, whose ?v= does not change with them
-//   the files loaded without ?v= (shared.css, css/, shared-nav.js, enc-page.js …): the kept copy at once, refreshed
-//     behind it for the next page (as their own 10-minute cache did)
+//   the files loaded without ?v= (shared.css, css/, shared-nav.js, enc-page.js …): checked with the network every time
+//     (a 304 from Cloudflare), the kept copy only when the network fails or takes over 3 seconds. Until 15 Nov 2026
+//     the kept copy came first and was refreshed behind it: after every deploy a new page was drawn with the
+//     stylesheet and scripts of before it, the home page worst, and stayed so for two or three visits
 // Never: other sites, anything but GET, /send.php, /feeds/, search addresses with a query. To retire it, deploy a sw.js
 // that unregisters itself (self.registration.unregister() in activate) - a browser checks this file at least daily.
 'use strict';
-const VERSION = '2026-11-13b';
+const VERSION = '2026-11-15a';
 const PAGES = 'pages-' + VERSION, FILES = 'files-' + VERSION, OFFLINE = '/offline.html';
 const MAX_PAGES = 200, MAX_FILES = 600;
 
@@ -32,7 +34,7 @@ function timeout(ms) { return new Promise((_, no) => setTimeout(() => no(new Err
 async function page(req) {
   const c = await caches.open(PAGES);
   const net = fetch(req).then(async r => {
-    if (r.ok && !r.redirected && r.type === 'basic' && (r.headers.get('content-type') || '').includes('text/html')) {   // a redirected answer may not be given to a later navigation
+    if (r.ok && !r.redirected && r.type === 'basic' && (r.headers.get('content-type') || '').includes('text/html') && !/private|no-store/.test(r.headers.get('cache-control') || '')) {   // never the host's bot-check page;   // a redirected answer may not be given to a later navigation
       const key = new URL(req.url); key.search = ''; key.hash = '';
       await c.put(key.href, r.clone()); trim(PAGES, MAX_PAGES);
     }
@@ -67,6 +69,19 @@ async function staleWhileRevalidate(e, req) {
   return fresh;
 }
 
+// the unversioned stylesheets and scripts: always the server's present copy (a conditional request, whatever the
+// browser's own cache holds), so a page and its files are of one deploy
+async function networkFirst(req) {
+  const c = await caches.open(FILES);
+  const net = fetchAgain(new Request(req.url, { cache: 'no-cache', credentials: 'same-origin' })).then(r => {
+    if (r.ok && !r.redirected && r.type === 'basic') { c.put(req.url, r.clone()); trim(FILES, MAX_FILES); }
+    return r;
+  });
+  net.catch(() => {});
+  try { return await Promise.race([net, timeout(3000)]); }
+  catch (err) { const kept = await c.match(req.url); if (kept) return kept; return net; }
+}
+
 self.addEventListener('fetch', e => {
   const req = e.request; if (req.method !== 'GET') return;
   const u = new URL(req.url); if (u.origin !== self.location.origin) return;
@@ -75,5 +90,5 @@ self.addEventListener('fetch', e => {
   const pic = /^\/(images|logos)\//.test(u.pathname) || /\.(png|jpe?g|svg|ico)$/.test(u.pathname);
   if (pic || u.pathname.startsWith('/data/')) { e.respondWith(staleWhileRevalidate(e, req)); return; }
   if (u.search.includes('v=') || u.pathname.startsWith('/fonts/') || /\.woff2$/.test(u.pathname)) { e.respondWith(cacheFirst(req)); return; }
-  if (/\.(js|css)$/.test(u.pathname)) { e.respondWith(staleWhileRevalidate(e, req)); return; }
+  if (/\.(js|css)$/.test(u.pathname)) { e.respondWith(networkFirst(req)); return; }
 });

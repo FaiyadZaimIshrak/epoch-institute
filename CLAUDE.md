@@ -2571,6 +2571,15 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   Cloudflare-CDN-Cache-Control max-age=14400 (root .htaccess) and the rule's edge TTL must be "Use cache-control header
   if present, bypass cache if not" (docs/CLOUDFLARE.md; the owner's switch). NEVER poll the live site in a loop or with
   cache-busting query strings: one request at a time, minutes apart; to see whether a deploy is live, ask once.
+- **A page and its files are of one deploy (15 Nov 2026; the user: "every time you push something, the homepage gets
+  messed up, I have to clear cache"):** the unversioned files (shared.css, css/, shared-nav.js, shared-data.js,
+  enc-page.js …) went out with "max-age=600, stale-while-revalidate=86400" and sw.js served its kept copy first, so
+  after a deploy a new page was drawn with the old stylesheet and scripts for two or three visits. Now they are
+  Cache-Control "no-cache" (a 304 from Cloudflare each use; the edge still keeps them four hours and is purged by the
+  deploy) and sw.js (2026-11-15a) asks the network first for them with cache: 'no-cache', the kept copy only after 3 s
+  or offline; it also never keeps a page sent "private" or "no-store" (the host's bot check). sw-test.js checks that a
+  changed stylesheet shows on the next load. This replaces the "10 minutes" described under Caching above. Never
+  stale-while-revalidate for these files again, in headers or in the service worker.
 - **C1, Sources on entries (14 Nov 2026):** scripts/tools/entry-sources.js [--export=<Search Console export>] [--more]
   [slugs] reads the wikitext of an entry's confirmed article (cached in %LOCALAPPDATA%epoch-toolsefs-cache, one
   request every 2 s) and keeps up to five works the article lists (Bibliography, Sources, Works cited, Further reading:

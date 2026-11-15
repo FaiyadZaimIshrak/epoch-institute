@@ -37,6 +37,13 @@ let pass = 0, fail = 0; const ok = (c, m) => { if (c) pass++; else { fail++; con
     await pg.goto(base + '/songs/arirang', { waitUntil: 'domcontentloaded' });
     ok((await pg.title()).startsWith('FRESH'), 'online, the page comes from the network, not the kept copy');
   } finally { fs.writeFileSync(f, orig); }
+  // and so does an unversioned stylesheet: a deploy's page must never be drawn with the stylesheet of before it
+  const cf = path.join(require('./lib').ROOT, 'css', 'pages.css'), corig = fs.readFileSync(cf, 'utf8');
+  try {
+    fs.writeFileSync(cf, corig + '\nbody{outline:7px solid rgb(1,2,3)}');
+    await pg.goto(base + '/songs/arirang', { waitUntil: 'load' });
+    ok(await pg.evaluate(() => getComputedStyle(document.body).outlineWidth === '7px'), 'a changed stylesheet shows on the next page load');
+  } finally { fs.writeFileSync(cf, corig); }
   await pg.evaluate(() => navigator.serviceWorker.getRegistrations().then(rs => Promise.all(rs.map(r => r.unregister()))));
   console.log(pass + ' passed, ' + fail + ' failed');
   await b.close(); srv.close(); process.exit(fail ? 1 : 0);

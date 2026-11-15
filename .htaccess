@@ -91,7 +91,9 @@ AddType font/woff2 .woff2
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000"
   <FilesMatch "^(shared\.css|shared-data\.js|shared-nav\.js|enc-page\.js|scribe\.js|faith-map\.js|test-yourself\.js)$">
-    Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
+    # checked with Cloudflare on every use (a 304): until 15 Nov 2026 browsers used them for 10 minutes and then for a
+    # day while checking behind, so after a deploy new pages were drawn with the old stylesheet and scripts
+    Header set Cache-Control "no-cache"
     # Cloudflare keeps these 4 hours and forgets them at every deploy (since 14 Nov 2026 the deploy purges Cloudflare:
     # the owner's token and zone secrets). Before that it could not be trusted with them: under
     # stale-while-revalidate its edge served the files of before a deploy for over an hour (8 Nov), and kept 2

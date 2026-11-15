@@ -2,7 +2,8 @@
 # shared.css they are kept 10 minutes, then used while they are checked again in the background.
 <IfModule mod_headers.c>
   <FilesMatch "\.css$">
-    Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
+    # checked with Cloudflare on every use (15 Nov 2026: see the root .htaccess); no longer 10 minutes and a stale day
+    Header set Cache-Control "no-cache"
     # Cloudflare keeps them 4 hours and forgets them at every deploy (14 Nov 2026: see the root .htaccess)
     Header set Cloudflare-CDN-Cache-Control "max-age=14400"
     Header unset Expires
