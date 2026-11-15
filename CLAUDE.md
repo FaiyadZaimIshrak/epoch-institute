@@ -2629,7 +2629,8 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   what belongs to a war link it in their meta line ("All wars"); footer (Collections), search, llms.txt, the pages
   sitemap. Next hubs by the same pattern, if the export shows them shown and not clicked: treaties, capitals.
 - **C1, the rest:** entry-sources.js --list=<file of slugs> for a long run (weight 4 and up started 14 Nov, about
-  8,000 candidates); it saves through a temporary file, so a build may run meanwhile.
+  8,000 candidates); it saves through a temporary file, so a build may run meanwhile. Finished 15 Nov 2026: 8,340
+  entries in the file, 3,933 with works (9,518 works). Entries of weight 3 and below are not done.
 - Still to come, in the plan's order: V4, V6, V7, C1 for the remaining entries, C5 DOIs, C6 coverage report (not
   under /method/: that is a file; done as the table of /method#coverage, make-method.js), C7, E1, E2, E4, E5, R1-R5.
 
