@@ -2593,8 +2593,18 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   deployed; the picture rule is waived): Muhammad's sayings from Lane-Poole's Table-Talk of 1882 (hadith; never the
   Qur'an as his words), the Dhammapada (Max Müller 1881), the Tao Te Ching (Legge 1891), Deuteronomy (KJV), each
   with a note on how the words reach us. An undated speaker stands first in the ancient world. The games never read
-  that file. scripts/tests/quotations.js checks the hub's counts against the data. More founders (Guru Nanak,
-  Zoroaster, Mahavira, Paul) wait for clean editions.
+  that file. scripts/tests/quotations.js checks the hub's counts against the data. Guru Nanak's Japji (Macauliffe 1909, Wikisource) joined them the same day; lines holding "Nanak" or "Guru"
+  are refused by the import's own-name rule. Still without: Zoroaster (Mills's Gathas on Wikisource have no text layer),
+  Mahavira (no edition looked for yet), Paul (no entry).
+- **V6, the wars hub (15 Nov 2026):** /encyclopedia/wars (build-pages.ps1 "Wars", names start with warh): every entry
+  tagged war with years, by region and oldest first, each with the count of its battles, sieges and treaties ($KIDS)
+  and its own picture, else its best-known battle's. Region: PersonRegion, else the region of most of the entries its
+  description links and of its battles when one leads clearly, else "Across regions" (the first build left 224 of 571
+  there). The description links exist only in full builds, so a -SkipEntries build keeps the page. War entries and
+  what belongs to a war link it in their meta line ("All wars"); footer (Collections), search, llms.txt, the pages
+  sitemap. Next hubs by the same pattern, if the export shows them shown and not clicked: treaties, capitals.
+- **C1, the rest:** entry-sources.js --list=<file of slugs> for a long run (weight 4 and up started 14 Nov, about
+  8,000 candidates); it saves through a temporary file, so a build may run meanwhile.
 - Still to come, in the plan's order: V4, V6, V7, C1 for the remaining entries, C5 DOIs, C6 coverage report (not
   under /method/: that is a file; done as the table of /method#coverage, make-method.js), C7, E1, E2, E4, E5, R1-R5.
 

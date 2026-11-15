@@ -1,6 +1,6 @@
 # In their words, beyond the games: quotations shown only on the speakers' entries and /encyclopedia/quotations, of
 # people Who Said It? and Quote Cipher cannot ask about (no portrait: Muhammad, Laozi; no firm dates: the Buddha,
-# Moses). Same columns and rules as quote-sources.tsv; imported by scripts/fetch-quotes.ps1 -Words into
+# Moses; Guru Nanak's hymn has his name in most stanzas, which the game's rule refuses). Same columns and rules as quote-sources.tsv; imported by scripts/fetch-quotes.ps1 -Words into
 # data/quotes-words.json. Nothing here is typed from memory. Words that reach us through a tradition or a later text
 # say so in the note; the Qur'an is not quoted as Muhammad's words (Muslims hold it to be God's).
 muhammad	https://www.gutenberg.org/cache/epub/58426/pg58426-images.html	"Think not that any good act is contemptible".."an open countenance and good humour"	Table-Talk	tr. in Stanley Lane-Poole, The Speeches and Table-Talk of the Prophet Mohammad, 1882	a saying handed down by tradition (hadith), from Lane-Poole’s selection
@@ -18,3 +18,6 @@ laozi	https://www.gutenberg.org/cache/epub/216/pg216-images.html	"The tree which
 moses	https://en.wikisource.org/wiki/Bible_(King_James)/Deuteronomy	"Hear, O Israel: The LORD our God".."is one LORD"	Deuteronomy 6:4	King James Version, 1611	as the Book of Deuteronomy records his words to Israel
 moses	https://en.wikisource.org/wiki/Bible_(King_James)/Deuteronomy	"I have set before you life and death".."that both thou and thy seed may live"	Deuteronomy 30:19	King James Version, 1611	as the Book of Deuteronomy records his words to Israel
 moses	https://en.wikisource.org/wiki/Bible_(King_James)/Deuteronomy	"Be strong and of a good courage".."he will not fail thee, nor forsake thee"	Deuteronomy 31:6	King James Version, 1611	as the Book of Deuteronomy records his words to Israel
+guru-nanak	https://en.wikisource.org/wiki/The_Sikh_Religion/Volume_1/Japji	"His seat and His storehouses are in every world".."The Creator beholdeth His creation"	Japji	tr. Max Arthur Macauliffe, The Sikh Religion, 1909	from the Japji, the hymn that opens the Guru Granth Sahib
+guru-nanak	https://en.wikisource.org/wiki/The_Sikh_Religion/Volume_1/Japji	"The True One was in the beginning".."in the primal age"	Japji	tr. Max Arthur Macauliffe, The Sikh Religion, 1909	from the Japji, the hymn that opens the Guru Granth Sahib
+guru-nanak	https://en.wikisource.org/wiki/The_Sikh_Religion/Volume_1/Japji	"Kings and emperors who possess".."forgetteth not God in its heart"	Japji	tr. Max Arthur Macauliffe, The Sikh Religion, 1909	from the Japji, the hymn that opens the Guru Granth Sahib

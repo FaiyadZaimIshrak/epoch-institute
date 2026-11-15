@@ -13,7 +13,7 @@ const listed = [...page.matchAll(/href="\/encyclopedia\/([a-z0-9-]+)#in-their-wo
 ok('every speaker is listed once', listed.length === speakers.size && new Set(listed).size === listed.length && listed.every(s => speakers.has(s)), [listed.length, speakers.size]);
 const missing = listed.filter(s => !/id="in-their-words"/.test(fs.readFileSync(path.join(R, 'encyclopedia', s), 'utf8')));
 ok('each speaker’s entry has In their words', !missing.length, missing.slice(0, 5));
-const want = ['jesus', 'muhammad', 'gautama-buddha', 'laozi', 'moses', 'confucius'];
+const want = ['jesus', 'guru-nanak', 'muhammad', 'gautama-buddha', 'laozi', 'moses', 'confucius'];
 ok('the founders of faiths are among them', want.every(s => listed.includes(s)), want.filter(s => !listed.includes(s)));
 const sum = [...page.matchAll(/<span class="tp">[^<]*?(\d+) quotations?<\/span>/g)].reduce((a, m) => a + +m[1], 0);
 ok('the speakers’ counts add up to the total', sum === total, [sum, total]);

@@ -35,6 +35,7 @@ var SEARCH_PAGES = [
 ["Kids Corner","/kids","page","kids|children|for kids|kids mode"],
 ["Glossary","/encyclopedia/glossary","page","glossary|terms|definitions"],
 ["Ruling Houses and Dynasties","/encyclopedia/dynasties","page","dynasties|ruling houses|royal houses|royal families|dynasty|house of"],
+["Wars and Their Battles","/encyclopedia/wars","page","wars|battles|list of wars|wars of history|battles by war"],
 ["Find Your Way In","/start","page","start|where to begin|beginners|what kind of reader"],
 ["Quotations","/encyclopedia/quotations","page","quotations|quotes|famous quotes|sayings|in their words|who said"],
 ["Today at the Institute","/today","page","today|today at the institute|daily|my day|what is on today|todays games"],

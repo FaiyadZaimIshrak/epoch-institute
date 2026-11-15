@@ -15,6 +15,7 @@ const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..',
 const arg = k => { const a = process.argv.find(x => x.startsWith('--' + k + '=')); return a ? a.slice(k.length + 3) : ''; };
 const UA = { 'User-Agent': 'EpochInstitute/1.0 (the-epoch-institute.org)' }, CACHE = path.join(process.env.LOCALAPPDATA || require('os').tmpdir(), 'epoch-tools', 'refs-cache'), OUT = path.join(R, 'scripts', 'entry-sources.json');
 fs.mkdirSync(CACHE, { recursive: true });
+const save = text => { fs.writeFileSync(OUT + '.tmp', text); fs.renameSync(OUT + '.tmp', OUT); };   // never a half-written file: a build may read it while a long run goes on
 const clean = s => String(s || '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/\{\{[^{}]*\}\}/g, '').replace(/<[^>]+>/g, '').replace(/''+/g, '').replace(/&nbsp;/g, ' ').replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, '$1').replace(/&#(\d+);/g, (m, d) => String.fromCharCode(+d)).replace(/\s*\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();   // "&#91;2 volumes&#93;" goes
 function templates(text) { const out = []; let d = 0, st = -1; for (let i = 0; i < text.length - 1; i++) { if (text[i] === '{' && text[i + 1] === '{') { if (d === 0) st = i; d++; i++; } else if (text[i] === '}' && text[i + 1] === '}') { d--; i++; if (d === 0 && st >= 0) out.push(text.slice(st + 2, i - 1)); if (d < 0) d = 0; } } return out; }
 function fields(t) { const f = {}; let d = 0, cur = ''; const parts = []; for (let i = 0; i < t.length; i++) { const c = t[i], n = t[i + 1]; if ((c === '{' && n === '{') || (c === '[' && n === '[')) { d++; cur += c + n; i++; } else if ((c === '}' && n === '}') || (c === ']' && n === ']')) { d--; cur += c + n; i++; } else if (c === '|' && d === 0) { parts.push(cur); cur = ''; } else cur += c; } parts.push(cur); f._name = parts[0].trim().toLowerCase(); for (const p of parts.slice(1)) { const k = p.indexOf('='); if (k > 0) f[p.slice(0, k).trim().toLowerCase()] = p.slice(k + 1).trim(); } return f; }
@@ -37,6 +38,7 @@ function books(text, max) {
   for (const l of fs.readFileSync(path.join(R, 'encyclopedia-data.js'), 'utf8').split('\n')) { const m = l.match(/slug:"([^"]+)",name:"((?:[^"\\]|\\.)*)",type:"([^"]*)"(?:,aka:\[([^\]]*)\])?/); if (!m) continue; TYPE[m[1]] = m[3]; NAMES[m[1]] = [...new Set(fold(m[2] + ' ' + (m[4] || '')).split(/[^a-z0-9]+/).filter(x => x.length >= 4 && !GENERIC.has(x) && !/^\d+$/.test(x)))]; }
   if (process.argv.includes('--again')) process.argv.push(...Object.keys(fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {}));
   let slugs = process.argv.slice(2).filter(a => !a.startsWith('--'));
+  if (arg('list')) slugs = slugs.concat(fs.readFileSync(arg('list'), 'utf8').split(/\s+/).filter(Boolean));   // --list=<file of slugs>: a long run
   if (process.argv.includes('--more')) slugs = slugs.concat(Object.keys(JSON.parse(fs.readFileSync(path.join(R, 'scripts', 'entry-more.json'), 'utf8'))));
   if (arg('export')) for (const l of fs.readFileSync(path.join(arg('export'), 'Pages.csv'), 'utf8').split(/\r?\n/)) { const m = l.match(/\/encyclopedia\/([a-z0-9-]+),/); if (m) slugs.push(m[1]); }
   slugs = [...new Set(slugs)].filter(s => same[s]); if (arg('max')) slugs = slugs.slice(0, +arg('max'));
@@ -67,8 +69,8 @@ function books(text, max) {
     let w = pick(listed), k = 'b'; if (!w) { w = pick(cited); k = 'c'; }
     if (!w) { w = /^(person|event)$/.test(TYPE[slug] || '') ? listed.slice(0, 5) : []; k = 'b'; }
     out[slug] = { t: c.t, d: c.d, k, w }; n++; if (w.length) withBooks++;
-    if (n % 25 === 0) { fs.writeFileSync(OUT, JSON.stringify(out, null, 0).replace(/\},"/g, '},\n"') + '\n'); console.log(n + ' / ' + slugs.length + ' (' + got + ' fetched, ' + withBooks + ' with works)'); }
+    if (n % 25 === 0) { save(JSON.stringify(out, null, 0).replace(/\},"/g, '},\n"') + '\n'); console.log(n + ' / ' + slugs.length + ' (' + got + ' fetched, ' + withBooks + ' with works)'); }
   }
-  fs.writeFileSync(OUT, JSON.stringify(out, null, 0).replace(/\},"/g, '},\n"') + '\n');
+  save(JSON.stringify(out, null, 0).replace(/\},"/g, '},\n"') + '\n');
   console.log(n + ' entries, ' + withBooks + ' with works, ' + Object.keys(out).length + ' in the file');
 })().catch(e => { console.error(e); process.exit(1); });

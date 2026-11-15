@@ -531,7 +531,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=1d5d3e5d2f';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=5a4370aea7';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=6dd7a60c59';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -827,6 +827,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/countries/">Country Histories</a>
         <a class="footer-link" href="/people/">People</a>
         <a class="footer-link" href="/encyclopedia/dynasties">Ruling Houses</a>
+        <a class="footer-link" href="/encyclopedia/wars">Wars and Battles</a>
         <a class="footer-link" href="/encyclopedia/quotations">Quotations</a>
         <a class="footer-link" href="/today-in-history/">Today in History</a>
         <a class="footer-link" href="/encyclopedia/glossary">Glossary</a>
@@ -1359,7 +1360,7 @@ function initNav(activePage) {
   // answer a page (localStorage epoch-useful); "No" offers the correction form. Never in Kids mode or print.
   (function () {
     var here = location.pathname.replace(/\/+$/, '');
-    if (!/^\/(empire|religion|language|culture|movement|government|ideology|work|life|encyclopedia|state)\/[a-z0-9-]+$/.test(here) || here === '/encyclopedia/glossary' || here === '/encyclopedia/dynasties' || here === '/encyclopedia/quotations') return;
+    if (!/^\/(empire|religion|language|culture|movement|government|ideology|work|life|encyclopedia|state)\/[a-z0-9-]+$/.test(here) || here === '/encyclopedia/glossary' || here === '/encyclopedia/dynasties' || here === '/encyclopedia/quotations' || here === '/encyclopedia/wars') return;
     var main = document.getElementById('main'); if (!main) return;
     var done; try { done = JSON.parse(localStorage.getItem('epoch-useful') || '{}'); } catch (e) { done = {}; } if (!done || typeof done !== 'object') done = {};
     if (Object.prototype.hasOwnProperty.call(done, here)) return;

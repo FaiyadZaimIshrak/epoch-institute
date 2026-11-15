@@ -1285,6 +1285,7 @@ foreach ($e in $ENT) {
   if ($e.dates -match '^(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)(?: \d{1,4}(?: BCE)?)?$' -and -not ($Matches[2] -eq 'February' -and $Matches[1] -eq '29') -and [int]$Matches[1] -ge 1 -and [int]$Matches[1] -le 31) { $meta += '<a href="/today-in-history/' + $Matches[2].ToLowerInvariant() + '-' + [int]$Matches[1] + '">On this day: ' + [int]$Matches[1] + ' ' + $Matches[2] + '</a>' }
   if ($e.aka.Count) { $meta += 'Also known as ' + (($e.aka | ForEach-Object { Hx ([string]$_) }) -join ', ') }
   if ($e.war -and $BY.ContainsKey($e.war)) { $meta += 'Part of the <a class="enc-link" href="/encyclopedia/' + $e.war + '">' + (Hx $BY[$e.war].name) + '</a>' }
+  if (($e.tags -contains 'war' -and $e.dates) -or ($e.war -and $BY.ContainsKey($e.war))) { $meta += '<a href="/encyclopedia/wars">All wars</a>' }
   if ($HOUSEOF.ContainsKey($e.slug)) { $meta += 'Of the ' + (($HOUSEOF[$e.slug] | ForEach-Object { '<a class="enc-link" href="/encyclopedia/' + $_ + '">' + (Hx $BY[$_].name) + '</a>' }) -join ' and the ') }
   $fig = ''; $imgLd = $null; $sz = $null
   if ($e.img) {
@@ -4064,6 +4065,60 @@ $ld = $crumb[1] + ',{"@type":"CollectionPage","name":"Ruling Houses and Dynastie
 Emit '/encyclopedia/dynasties' (Page @{ title = $title; desc = $desc; path = '/encyclopedia/dynasties'; type = 'website'; ld = $ld; nav = 'dynasties'; body = $sb.ToString() })
 Say "ruling houses: $hsN, $hsP people"
 
+# ══════════════════════════════════════════════════════════════════
+# Wars: /encyclopedia/wars (14 Nov 2026, the growth plan's V6), every entry tagged war with years, by region
+# (PersonRegion: the hand-set region, else that of most profiles and state histories that name it), oldest first, with
+# the count of its battles, sieges and treaties in the encyclopedia ($KIDS) and its own picture, else its best-known
+# battle's. War and battle entries link it in their meta line. Script-level names start with warh.
+# ══════════════════════════════════════════════════════════════════
+Say 'wars'
+# a war no profile or state history places takes the region of most of the entries its own description links and of
+# its battles (the first build left 224 of 571 under "Across regions": the Second Messenian War, the Bishops' Wars).
+# The descriptions are linked only in full builds, so a -SkipEntries build keeps the page as it is.
+if ($SkipEntries -and (Test-Path "$Repo\encyclopedia\wars")) {
+  $WROTE[(Join-Path $Repo 'encyclopedia\wars').ToLowerInvariant()] = 1; $SMNEW['/encyclopedia/wars'] = if ($SM.ContainsKey('/encyclopedia/wars')) { $SM['/encyclopedia/wars'] } else { @('', $TODAY) }
+  Say 'wars: kept (-SkipEntries)'
+} else {
+$warhByReg = [ordered]@{}; foreach ($rr in $BREG) { $warhByReg[$rr] = New-Object Collections.Generic.List[object] }; $warhByReg['Across regions'] = New-Object Collections.Generic.List[object]
+$warhN = 0; $warhKids = 0
+foreach ($e in $ENT) {
+  if (-not ($e.tags -contains 'war') -or -not $EYRS.ContainsKey($e.slug) -or -not $EYRS[$e.slug]) { continue }
+  $warhR = PersonRegion $e
+  if (-not $warhR) {
+    $warhC = @{}; $warhSeen = @{}
+    $warhNear = New-Object Collections.Generic.List[object]
+    if ($KIDS.ContainsKey($e.slug)) { foreach ($warhKid in $KIDS[$e.slug]) { $warhNear.Add($warhKid) } }
+    if ($DESCH.ContainsKey($e.slug)) { foreach ($m in [regex]::Matches($DESCH[$e.slug], 'href="/encyclopedia/([a-z0-9-]+)"')) { $warhL = $m.Groups[1].Value; if ($BY.ContainsKey($warhL)) { $warhNear.Add($BY[$warhL]) } } }
+    foreach ($warhE in $warhNear) { if ($warhE.slug -eq $e.slug -or $warhSeen.ContainsKey($warhE.slug)) { continue }; $warhSeen[$warhE.slug] = 1; $rr = PersonRegion $warhE; if ($rr) { $warhC[$rr] = 1 + [int]$warhC[$rr] } }
+    $warhBest = @($warhC.GetEnumerator() | Sort-Object @{ e = { $_.Value }; Descending = $true }, @{ e = { $BREGIX[$_.Key] } })
+    # a clear lead only: two regions level (a war between them) stays across regions
+    if ($warhBest.Count -and ($warhBest.Count -eq 1 -or $warhBest[0].Value -gt $warhBest[1].Value)) { $warhR = $warhBest[0].Key } else { $warhR = 'Across regions' }
+  }
+  $warhK = if ($KIDS.ContainsKey($e.slug)) { $KIDS[$e.slug].Count } else { 0 }
+  $warhTop = if ($warhK) { @($KIDS[$e.slug] | Where-Object { $_.img } | Sort-Object @{ e = { $ESCORE[$_.slug] }; Descending = $true } | Select-Object -First 1) } else { @() }
+  $warhByReg[$warhR].Add([pscustomobject]@{ e = $e; n = $warhK; lo = $EYRS[$e.slug][0]; pic = $(if ($e.img) { $e } elseif ($warhTop.Count) { $warhTop[0] } else { $null }) })
+  $warhN++; $warhKids += $warhK
+}
+$crumb = Crumbs @(@('Home', '/'), @('Encyclopedia', '/encyclopedia/'), @('Wars', $null))
+$sb = New-Object Text.StringBuilder(160000)
+[void]$sb.Append('<main id="main" class="enc-page ref-page">' + "`n<div class=`"enc-wrap`">`n" + $crumb[0] + "`n")
+[void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Wars and Their Battles</h1><p class="ref-lede">' + $warhN + ' wars of history, region by region and oldest first, with the ' + $warhKids.ToString('N0', $INV) + ' battles, sieges and treaties of the encyclopedia that belong to them. A war&#8217;s page lists its battles in order.</p></header>' + "`n")
+[void]$sb.Append('<nav class="ref-letters hs-regions" aria-label="Regions">' + (($warhByReg.Keys | Where-Object { $warhByReg[$_].Count } | ForEach-Object { '<a href="#' + (PRegSlug $_) + '">' + (Hx $_) + '</a>' }) -join '') + "</nav>`n")
+foreach ($rr in $warhByReg.Keys) {
+  $warhG = @($warhByReg[$rr] | Sort-Object @{ e = { $_.lo } }, @{ e = { $_.e.name } }); if (-not $warhG.Count) { continue }
+  [void]$sb.Append('<section class="ref-group" id="' + (PRegSlug $rr) + '"><h2>' + (Hx $rr) + ' <span class="n">' + $warhG.Count + '</span></h2><ul class="enc-seealso">')
+  foreach ($warhO in $warhG) { [void]$sb.Append('<li><a href="/encyclopedia/' + $warhO.e.slug + '">' + $(if ($warhO.pic) { '<img src="' + (ThumbOf $warhO.pic.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $warhO.e) }) + '<span><span class="nm">' + (Hx $warhO.e.name) + '</span><span class="tp">' + (Hx ($warhO.e.dates + $(if ($warhO.n -eq 1) { ' · 1 battle or treaty' } elseif ($warhO.n) { ' · ' + $warhO.n + ' battles and treaties' } else { '' }))) + '</span></span></a></li>') }
+  [void]$sb.Append("</ul></section>`n")
+}
+[void]$sb.Append('<p class="ref-note">A war is listed under the region of most of the states and profiles whose histories name it, else of most of the people, places and battles its own entry names, and under &#8220;Across regions&#8221; where none stands out. Wars without years in the encyclopedia are not listed. Every conflict, with revolts, crises and treaties, is also listed <a href="/encyclopedia/conflicts/' + (CenturySlug $CENTORDER[0]) + '">century by century</a>.</p>' + "`n</div>`n</main>`n")
+$warhAll = @($warhByReg.Values | ForEach-Object { $_ } | Sort-Object @{ e = { $_.n }; Descending = $true })
+$title = "Wars of History: $warhN Wars with Their Battles and Treaties"
+$desc = [EpochBuild.W]::Summary("$warhN wars by region, oldest first, from the $($warhAll[0].e.name) and the $($warhAll[1].e.name) to the $($warhAll[2].e.name), each with its battles and treaties.", 155)
+$ld = $crumb[1] + ',{"@type":"CollectionPage","name":"Wars and Their Battles","url":' + (Js "$SITE/encyclopedia/wars") + ',"description":' + (Js $desc) + '}'
+Emit '/encyclopedia/wars' (Page @{ title = $title; desc = $desc; path = '/encyclopedia/wars'; type = 'website'; ld = $ld; nav = 'encyclopedia'; body = $sb.ToString() })
+Say "wars: $warhN, $warhKids battles and treaties, $($warhByReg['Across regions'].Count) across regions"
+}
+
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Flashcards (/flashcards, flashcards.js): decks made from the data, written as data/cards/<deck>.json and listed in the
 # page's build:fc-decks block with each file's ?v=. A card is [id, front, back, picture, link, hint]; a deck {id, t
@@ -4776,7 +4831,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Social Ladders', '/societies/', 'social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks'),
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
-  @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'), @('Ruling Houses and Dynasties', '/encyclopedia/dynasties', 'dynasties|ruling houses|royal houses|royal families|dynasty|house of'),
+  @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'), @('Ruling Houses and Dynasties', '/encyclopedia/dynasties', 'dynasties|ruling houses|royal houses|royal families|dynasty|house of'), @('Wars and Their Battles', '/encyclopedia/wars', 'wars|battles|list of wars|wars of history|battles by war'),
   @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('Quotations', '/encyclopedia/quotations', 'quotations|quotes|famous quotes|sayings|in their words|who said'), @('Today at the Institute', '/today', 'today|today at the institute|daily|my day|what is on today|todays games'), @('History Now', '/now', 'now|history now|news|history news|archaeology news|headlines|in the news|anniversaries|coming anniversaries|upcoming anniversaries'), @('Your Birthday in History', '/today-in-history/#birthday', 'birthday|my birthday|born on this day|what happened on my birthday|day i was born'), @('Advent Calendar of History', '/advent', 'advent|advent calendar|christmas calendar|december doors|24 doors'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
   @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
   @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
@@ -5015,7 +5070,7 @@ function WriteSitemap([string]$name, $urls) {
 }
 function SitemapOf([string]$p) {
   if ($p -like '/empire/*' -or $p -like '/religion/*' -or $p -like '/language/*' -or $p -like '/culture/*' -or $p -like '/government/*' -or $p -like '/movement/*' -or $p -like '/ideology/*' -or $p -like '/work/*' -or $p -like '/life/*') { return 'profiles' }
-  if ($p -like '/encyclopedia/browse/*' -or $p -like '/encyclopedia/conflicts/*' -or $p -eq '/encyclopedia/' -or $p -eq '/encyclopedia/glossary' -or $p -eq '/encyclopedia/dynasties') { return 'pages' }
+  if ($p -like '/encyclopedia/browse/*' -or $p -like '/encyclopedia/conflicts/*' -or $p -eq '/encyclopedia/' -or $p -eq '/encyclopedia/glossary' -or $p -eq '/encyclopedia/dynasties' -or $p -eq '/encyclopedia/wars') { return 'pages' }
   if ($p -like '/encyclopedia/*') { return 'encyclopedia' }
   if ($p -like '/state/browse/*' -or $p -eq '/state/') { return 'pages' }
   if ($p -like '/state/*') { return 'states' }
