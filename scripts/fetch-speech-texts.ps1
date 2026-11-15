@@ -43,7 +43,23 @@ if ($Peek) {
 
 # ── the sources ─────────────────────────────────────────────────────────────────────────────────────────────────────
 $MD = [string][char]0x2014
+# a licence line of its own, where "in the public domain" alone would not say enough
+$LICENCES = @{
+  'churchill-we-shall-fight' = 'The speech as Hansard records it: Parliamentary information licensed under the Open Parliament Licence v3.0. The Wikisource transcription is shared under CC BY-SA 4.0.'
+  'jinnah-to-the-constituent-assembly' = 'Spoken in the Constituent Assembly of Pakistan in 1947 and printed in its debates; in the public domain in Pakistan.'
+}
 $FIXES = @{
+  # England's Black Tribunal: the drop cap, the printer's unclear marks, and the margin notes and speakers' names that the
+  # transcription runs into the sentences (the note "Strafford" stood beside "an unjust Sentence that I suffered")
+  'charles-i-on-the-scaffold' = @(
+    @('I Shall be very little', 'I shall be very little'), @(('clear me of' + [char]0x25AA + ' I will not'), 'clear me of, I will not'), @(('before you all' + [char]0x25AA + ' That'), 'before you all, That'),
+    @('an unjust Sentence * that I suffered for to take effect is * Strafford, punished now', 'an unjust Sentence that I suffered for to take effect is punished now'),
+    @('* Pointing to Dr. Juxod. ', ''), @('* Turning to some Gentlemen that wrote. ', ''), @('* Meaning if he did blunt the edge. ', ''), @('* Pointing to Dr. Juxon. ', ''),
+    @('your own salvations. Dr. Juxon.', 'your own salvations.'), @('Will your Majesty (though', '[Dr. Juxon:] Will your Majesty (though'), @('the world''s satisfaction. King.', 'the world''s satisfaction.'),
+    @('I thank you very heartily (my Lord', '[The King:] I thank you very heartily (my Lord'), @('Then turning to the Officers, said, Sirs, excuse me', '[Then, turning to the officers:] Sirs, excuse me'))
+  'mandela-statement-from-the-dock' = @(, @('Liliesleaf 5[farm, Rivonia,]', 'Liliesleaf [farm, Rivonia,]'))   # a footnote figure
+  'hajjaj-at-kufa' = @(, @(('shoots against you.' + [char]0x201D), 'shoots against you.'))   # the quotation's closing mark
+  'jinnah-to-the-constituent-assembly' = @(, @(' [=corrupt employment practices]', ''))   # the transcriber's gloss
   'cicero-against-catiline' = @(, @('do you mean to ease abusing', 'do you mean to cease abusing'))   # an OCR slip in the Wikisource copy
   'urban-ii-at-clermont'    = @(@('beloved by Godas shines', ('beloved by God' + $MD + 'as shines')), @('your works set apart from all nations', ('your works' + $MD + 'set apart from all nations')))   # dashes lost in the Sourcebook copy (Munro 1895 has them)
   'xerxes-to-the-persian-nobles' = @(, @('as rich as our own nay', 'as rich as our own - nay'))   # the transcription's dash lost
@@ -69,7 +85,24 @@ $FIXES = @{
 }
 # paragraphs split by a page break or a plate in the scanned book: the paragraph that ends with the given words is
 # joined to the next one (after $FIXES)
+$AUTOJOIN = @('john-ball-at-blackheath', 'lloyd-george-limehouse', 'charles-i-on-the-scaffold', 'cixi-reform-edict')
+# the name of a source that is not one of the libraries above (address pattern, name, a licence line where the page has its own)
+$PASSAGE = 'Quoted in part, for comment; the speech itself is still in copyright.'
+$LICENCES['de-gaulle-appeal-of-18-june'] = $PASSAGE; $LICENCES['churchill-iron-curtain'] = $PASSAGE
+$LICENCES['macmillan-wind-of-change'] = 'Spoken as Prime Minister in 1960: Crown copyright, which has expired. Quoted as Wikipedia gives it (CC BY-SA 4.0).'
+$SRCNAMES = @(
+  @('franpritchett\.com', 'Frances Pritchett, Columbia University'), @('nps\.gov', 'National Park Service'),
+  @('wikipedia\.org', 'Wikipedia', 'Quoted as Wikipedia gives it; the article is shared under CC BY-SA 4.0.'),
+  @('wikiquote\.org', 'Wikiquote', 'Quoted as Wikiquote gives it; the page is shared under CC BY-SA 4.0.'),
+  @('distantreader\.org/stacks/earlyprint', 'EarlyPrint (EEBO-TCP)', 'The text is in the public domain; the EEBO-TCP transcription is released under CC0.'),
+  @('etc\.usf\.edu/lit2go', 'Lit2Go, University of South Florida'), @('progress\.org', 'progress.org'),
+  @('mkgandhi\.org', 'mkgandhi.org, Bombay Sarvodaya Mandal', 'Gandhi''s writings and speeches have been in the public domain in India since 2009.'),
+  @('un\.org', 'United Nations', 'A statement made in court: South African law (Copyright Act 1978, section 12(8)) gives no copyright in speeches delivered in legal proceedings.'),
+  @('history\.state\.gov', 'Office of the Historian, US Department of State', 'A work of the United States government, in the public domain.'),
+  @('marxists\.org', 'Marxists Internet Archive', $PASSAGE), @('bbc\.co\.uk', 'BBC World Service', $PASSAGE), @('avalon\.law\.yale\.edu', 'The Avalon Project, Yale Law School', $PASSAGE)
+)
 $JOINS = @{
+  'charles-i-on-the-scaffold' = @('that may hurt me.', 'and this honest man')   # a margin note stood between the halves
   'mazzini-to-the-young-men-of-italy' = @('Could Attilio and Emilio')   # the plate of Mazzini stands between the halves
   'richard-ii-at-smithfield'          = @('a great outrage;', "the king's draper,")   # page breaks of the Harvard Classics
 }
@@ -94,6 +127,13 @@ foreach ($slug in $slugs) {
     if (-not $paras.Count) { throw 'no text' }
     # obvious slips of the scanned copies, corrected (old -> new, matched exactly)
     if ($FIXES.ContainsKey($slug)) { for ($x = 0; $x -lt $paras.Count; $x++) { foreach ($fx in $FIXES[$slug]) { $paras[$x] = $paras[$x].Replace($fx[0], $fx[1]) } } }
+    # a scanned book's page breaks cut paragraphs in two: one that starts in lower case goes back to the one before it,
+    # and footnote numbers ([55]) are dropped
+    if ($AUTOJOIN -contains $slug) {
+      # (and the spaces a scan leaves before ; ! ? : and its raised footnote figures)
+      for ($x = 0; $x -lt $paras.Count; $x++) { $paras[$x] = [regex]::Replace([regex]::Replace($paras[$x], '\s*\[\d+\]', ''), ' ([;!?:])', '$1').Replace([string][char]0xB9, '') }
+      for ($x = $paras.Count - 1; $x -gt 0; $x--) { if ($paras[$x] -cmatch '^[a-z]') { $paras[$x - 1] = $paras[$x - 1].TrimEnd() + ' ' + $paras[$x]; $paras.RemoveAt($x) } }
+    }
     if ($JOINS.ContainsKey($slug)) {
       foreach ($jn in $JOINS[$slug]) {
         $x = -1; for ($k = 0; $k -lt $paras.Count - 1; $k++) { if ($paras[$k].TrimEnd().EndsWith($jn)) { $x = $k; break } }
@@ -104,9 +144,13 @@ foreach ($slug in $slugs) {
     # paragraph numbers some translations print at the start of a paragraph ("2 In the first place ...")
     $oq = [string][char]0x201C   # an opening curly quote may stand between the number and the text: 36"I shall ...
     for ($x = 0; $x -lt $paras.Count; $x++) { $paras[$x] = [regex]::Replace($paras[$x], ('^\d{1,2} ?(?=["' + $oq + ']?[A-Z])'), '') }
+    # paragraph markers a transcriber added: [[3]] The second thing ...
+    for ($x = 0; $x -lt $paras.Count; $x++) { $paras[$x] = [regex]::Replace($paras[$x], '\s*\[\[\d+\]\]\s*', ' ').Trim() }
     $words = 0; foreach ($t in $paras) { $words += ($t -split '\s+' | Where-Object { $_ }).Count }
     $url = $parts[0][1]; $src = if ($url -match 'wikisource\.org') { 'Wikisource' } elseif ($url -match 'gutenberg\.org') { 'Project Gutenberg' } elseif ($url -match 'fordham\.edu') { 'Internet History Sourcebooks, Fordham University' } elseif ($url -match 'reaganlibrary\.gov') { 'Ronald Reagan Presidential Library' } else { ([Uri]$url).Host }
     $lic = if ($src -eq 'Wikisource') { 'The text is in the public domain; the Wikisource transcription is shared under CC BY-SA 4.0.' } else { 'The text is in the public domain.' }
+    if ($LICENCES.ContainsKey($slug)) { $lic = $LICENCES[$slug] }
+    foreach ($sn in $SRCNAMES) { if ($url -match $sn[0]) { $src = $sn[1]; if ($sn.Count -gt 2 -and -not $LICENCES.ContainsKey($slug)) { $lic = $sn[2] } } }
     $o = New-Object 'Collections.Generic.Dictionary[string,object]'
     $o['slug'] = [string]$slug; $o['title'] = [string]$titles[$slug]; $o['url'] = [string]$url; $o['source'] = [string]$src; $o['credit'] = [string]$parts[0][3]
     $o['licence'] = [string]$lic; $o['lang'] = [string]$parts[0][4]; $o['words'] = [int]$words; $o['fetched'] = $today; $o['paras'] = [string[]]$paras.ToArray()

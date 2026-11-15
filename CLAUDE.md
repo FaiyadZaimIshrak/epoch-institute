@@ -1552,7 +1552,32 @@ paragraph numbers); a paragraph split by a plate or page break of the scanned bo
 The script prints only counts and the first and last words: check the boundaries there.
 Excluded on purpose: copyrighted or estate-held texts (Churchill ×2, King, Mandela, de Gaulle, Mao, Nkrumah) and
 speeches with no free full text (Gandhi's Quit India, Jinnah, Nasser, Lumumba, Macmillan, Bismarck, Genghis Khan, Tariq, Muhammad,
-Charles I, Cromwell, Garibaldi, Joan of Arc, Cixi, Toussaint, John Ball). The builder reads SPEECHES before
+Charles I, Cromwell, Garibaldi, Joan of Arc, Cixi, Toussaint, John Ball). 15 Nov 2026 (the user: "some speeches don't have the complete form"): the 27 without a text were
+looked at again. Printed now: Churchill's We Shall Fight (Hansard's record, under the Open Parliament Licence, through
+Wikisource; its copyright flag removed; Iron Curtain stays out), Tariq (Horne 1917, from al-Maqqari) and Jinnah (G. Allana's
+1969 print on Frances Pritchett's page; public domain in Pakistan; $LICENCES in fetch-speech-texts.ps1 gives such texts a
+licence line of their own, and [[n]] paragraph markers are dropped). Muhammad's farewell sermon has the passages Lane-Poole gives in The Speeches and Table-Talk (1882, Gutenberg 58426), headed
+"From the speech" (its credit says passages): no free translation of a whole version was found. A full link only (in copyright or no clean text):
+Mao and Lumumba (Marxists Internet Archive), Nkrumah (BBC World Service), Stanton (the National Park Service's copy of
+the 1915 reprint: every copy found carries the same slips, "good form forbide either in speak"). Looked at and left:
+Charles I (the EEBO-TCP text has the margin notes run into the sentences), Lloyd George (only OCR of Better Times),
+Macmillan (no clean copy), Bismarck (the record is indirect speech; only extracts), Cromwell (the text on Wikisource is a
+later invention), Gandhi's Quit India (the English is a later translation still protected). -Only takes one slug when
+the script is run through powershell -File.
+Later the same day (the user: "look for all unfinished speeches in secondary sources, and use them; don't leave any
+empty") all 115 got a text (rows from "# 15 Nov 2026" in speech-sources.tsv). Complete: Mandela's statement from the dock
+(the UN's copy; South African law gives no copyright in speeches made in legal proceedings, so its copyright flag went),
+Lloyd George (Better Times 1910, progress.org's scan), Stanton (the National Park Service's copy, slips and all), Charles I
+(England's Black Tribunal 1660 from EarlyPrint's EEBO-TCP text, its margin notes and speakers' labels taken out by $FIXES
+and $JOINS), Cixi's decree (Bland and Backhouse 1910, who date it 28 January). Passages only, headed "From the speech"
+because the credit says passages, extracts or reported: John Ball (Froissart, Berners), Joan (Murray 1902), al-Hajjaj
+(de Goeje, EB 1911), Ito (Foster 1903), Garibaldi (Trevelyan through Wikiquote), Cromwell (the version on Wikisource),
+Nasser (the State Department's editorial note in FRUS), Gandhi (the Do or Die passage and the part he spoke in English,
+mkgandhi.org), and through Wikipedia's articles Genghis Khan, Bismarck, Toussaint and Macmillan. Speeches still in copyright
+carry a few paragraphs only, with the licence line $PASSAGE ("Quoted in part, for comment"): King (Avalon), Churchill's
+Iron Curtain and de Gaulle (Wikipedia), Mao and Lumumba (Marxists Internet Archive), Nkrumah (BBC). Never print these whole.
+fetch-speech-texts.ps1 gained $SRCNAMES (a source's name and licence line by address), $AUTOJOIN (a scan's paragraphs cut
+at page breaks rejoined, footnote figures dropped) and plain-text sources (.txt: a line is a paragraph). The builder reads SPEECHES before
 the entry pages, and every entry named as speaker, in links or in led lists those speeches ("Great speeches",
 above See also). copyright:true (Churchill, King,
 Mandela, de Gaulle, Mao, Nkrumah) adds a note; kind:"paraphrase" (Cixi, Moctezuma, Nasser) renders as "In substance"

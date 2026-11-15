@@ -31,7 +31,11 @@ function Get-PageHtml([string]$url) {
     $d = $J.DeserializeObject((Get-Url $api))
     if ($d['error']) { throw "Wikisource: $($d['error']['info']) ($title)" }
     $html = [string]$d['parse']['text']
-  } else { $html = Get-Url ($url.Split('#')[0]) }
+  } else {
+    $html = Get-Url ($url.Split('#')[0])
+    # a plain-text source (EarlyPrint's EEBO-TCP texts): every line is a paragraph
+    if ($url -match '\.txt$') { $html = (($html -split "\r?\n") | Where-Object { $_.Trim() } | ForEach-Object { '<p>' + [Net.WebUtility]::HtmlEncode($_.Trim()) + '</p>' }) -join "`n" }
+  }
   [IO.File]::WriteAllText($file, $html, $U8)
   return $html
 }
