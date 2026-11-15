@@ -15,6 +15,16 @@ ErrorDocument 410 /404.html
     Header set Cache-Control "public, max-age=0"
   </IfModule>
 </FilesMatch>
+# Every page of the site (an extensionless file, here and in the folders) tells Cloudflare itself to keep it four
+# hours. The Cache Rule "Pages at the edge" must take its edge time from this header and NOT set one of its own: on
+# 15 Nov 2026 the host's bot check ("One moment, please... your request is being verified", sent with status 200 and
+# Cache-Control: private, no-store) was kept as /profiles, /games and /about for every reader, because the rule kept
+# anything for four hours whatever its headers said. The host's own pages carry no such header, so they are not kept.
+<FilesMatch "^[a-z0-9-]+$">
+  <IfModule mod_headers.c>
+    Header set Cloudflare-CDN-Cache-Control "max-age=14400"
+  </IfModule>
+</FilesMatch>
 DirectoryIndex index
 AddType font/woff2 .woff2
 

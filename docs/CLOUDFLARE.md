@@ -155,7 +155,10 @@ Cloudflare → the-epoch-institute.org → **Caching → Cache Rules → Create 
   ```
 
 - **Then… Cache eligibility:** **Eligible for cache**.
-- **Edge TTL:** **Ignore cache-control header and use this TTL** → **4 hours**.
+- **Edge TTL:** **Use cache-control header if present, bypass cache if not**. (Changed 15 Nov 2026. It was "Ignore
+  cache-control header and use this TTL, 4 hours", which also kept the host's bot-check page, "One moment, please...",
+  as /profiles, /games and /about for every reader. The site's pages now ask for their four hours themselves, in a
+  `Cloudflare-CDN-Cache-Control` header; the host's own pages do not, so they are never kept.)
 - **Browser TTL:** **Respect origin TTL** (browsers keep checking with Cloudflare, as now).
 - **Deploy.**
 

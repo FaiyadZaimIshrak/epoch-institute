@@ -2564,6 +2564,13 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
   0.54-1.14 s. A page nobody opened since the last deploy or for four hours still makes the trip to Singapore once.
   Anything written to the host without a deploy must sit under /feeds/ (the daily feed, news.json and its pictures) or
   it stays stale for up to four hours.
+- **The host's bot check kept at the edge (15 Nov 2026):** the user could open no page: Cloudflare served the host's
+  "One moment, please... your request is being verified" page (status 200, Cache-Control private, no-store) as /profiles,
+  /games and /about to everyone, since the rule ignored cache-control. The host had challenged this PC after a wait
+  loop asked it for a page every 30 seconds with a new query string each time. Now every extensionless file sends
+  Cloudflare-CDN-Cache-Control max-age=14400 (root .htaccess) and the rule's edge TTL must be "Use cache-control header
+  if present, bypass cache if not" (docs/CLOUDFLARE.md; the owner's switch). NEVER poll the live site in a loop or with
+  cache-busting query strings: one request at a time, minutes apart; to see whether a deploy is live, ask once.
 - **C1, Sources on entries (14 Nov 2026):** scripts/tools/entry-sources.js [--export=<Search Console export>] [--more]
   [slugs] reads the wikitext of an entry's confirmed article (cached in %LOCALAPPDATA%epoch-toolsefs-cache, one
   request every 2 s) and keeps up to five works the article lists (Bibliography, Sources, Works cited, Further reading:
