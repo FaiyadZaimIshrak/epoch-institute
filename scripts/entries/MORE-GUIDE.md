@@ -18,6 +18,23 @@ line): write from what you are given, and do not fill the gaps from memory. For 
 choose what an encyclopedia reader most needs after the description (how it came to be, its main ages, what it is
 now), not a full history.
 
+## The present day (rule of 16 November 2026; the pilot wave showed why)
+This is a history site, and what it prints must still be true in five years.
+- "The place today" holds only lasting facts: the capital and largest city, the official language, the form of state as
+  its constitution names it, the population rounded as the article gives it ("about 86 million"), what survives of the
+  past (monuments, World Heritage Sites), which larger bodies it belongs to. Two to four sentences are enough.
+- Never: an assessment of a present government or leader ("authoritarian", "widely described as a dictator", "not
+  free"), indices and rankings (GDP rank, freedom or corruption scores, approval ratings), court cases, elections,
+  wars and crises of the last ten years, anything introduced by "as of".
+- History ends where the article's settled past ends. For events after about 2010 give at most the bare fact and its
+  year (a revolution, a change of constitution), without judging it.
+- Living people have no longer text in this campaign: if the subject of an entry is alive, write
+  `{"slug": "…", "skip": "living person"}`.
+
+## Touch only your own files
+Write and edit only the `out/<slug>.json` files of the slugs in your batch. Never run a script over the whole `out`
+folder: other writers are working in it at the same time.
+
 ## What you write: out/<slug>.json (UTF-8)
 ```
 {

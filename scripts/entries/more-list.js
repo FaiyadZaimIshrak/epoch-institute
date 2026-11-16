@@ -66,6 +66,9 @@ if (cmd === 'ledger') {
     if (list.length >= count) break; if (r.state || r.wave) continue; const f = path.join(WP, s + '.txt'), e = by[s]; if (!e || !fs.existsSync(f)) continue;
     const art = fs.readFileSync(f, 'utf8'), body = art.split('\n').slice(3).join('\n');
     if (words(body) < 250) { r.state = 'thin'; r.wave = name; thin++; continue; }
+    // a living person gets no longer text (MORE-GUIDE.md "The present day"): no year of death in the dates, and the
+    // article opens in the present tense
+    if (e.type === 'person' && /^(?:b\.|born)\s|\bpresent\b|[–-]\s*$/.test(String(e.dates || '').trim()) || (e.type === 'person' && /\((?:born|b\.) [^)]*\d{4}\)\s+is (?:an?|the) /.test(body.slice(0, 600)))) { r.state = 'thin'; r.wave = name; r.words = 'living'; thin++; continue; }
     fs.writeFileSync(path.join(dir, 'wp', s + '.txt'), excerpt(art));
     fs.writeFileSync(path.join(dir, 'desc', s + '.txt'), 'Name: ' + e.name + '\nType: ' + e.type + (e.dates ? '\nDates: ' + e.dates : '') + (e.aka && e.aka.length ? '\nAlso: ' + [].concat(e.aka).join('; ') : '') + '\n\n' + e.desc + '\n');
     r.wave = name; list.push([s, r.title]);

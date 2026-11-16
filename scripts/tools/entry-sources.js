@@ -39,7 +39,7 @@ function books(text, max) {
   if (process.argv.includes('--again')) process.argv.push(...Object.keys(fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {}));
   let slugs = process.argv.slice(2).filter(a => !a.startsWith('--'));
   if (arg('list')) slugs = slugs.concat(fs.readFileSync(arg('list'), 'utf8').split(/\s+/).filter(Boolean));   // --list=<file of slugs>: a long run
-  if (process.argv.includes('--more')) slugs = slugs.concat(Object.keys(JSON.parse(fs.readFileSync(path.join(R, 'scripts', 'entry-more.json'), 'utf8'))));
+  if (process.argv.includes('--more')) slugs = slugs.concat(Object.keys(require('../entries/more-store').readAll()));
   if (arg('export')) for (const l of fs.readFileSync(path.join(arg('export'), 'Pages.csv'), 'utf8').split(/\r?\n/)) { const m = l.match(/\/encyclopedia\/([a-z0-9-]+),/); if (m) slugs.push(m[1]); }
   slugs = [...new Set(slugs)].filter(s => same[s]); if (arg('max')) slugs = slugs.slice(0, +arg('max'));
   const out = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {}; let n = 0, got = 0, withBooks = 0;

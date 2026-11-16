@@ -32,7 +32,7 @@ say('## The site and each kind of page\n\n' + HEAD); say(row('**All pages**', su
 const kinds = {}; for (const [s, rows] of [['a', a.pages], ['b', b.pages]]) for (const r of rows) { const k = kindOf(r.k); (kinds[k] = kinds[k] || { a: [], b: [] })[s].push(r); }
 for (const [k, v] of Object.entries(kinds).sort((x, y) => sum(y[1].b).i + sum(y[1].a).i - sum(x[1].b).i - sum(x[1].a).i).slice(0, 18)) say(row(k, sum(v.a), sum(v.b)));
 // the deepened entries and their control group
-let more = {}; try { more = JSON.parse(fs.readFileSync(path.join(R, 'scripts', 'entry-more.json'), 'utf8')); } catch (e) {}
+let more = {}; try { more = require('../entries/more-store').readAll(); } catch (e) {}
 const listed = new Set(); const ed = path.join(R, 'scripts', 'entries'); if (fs.existsSync(ed)) for (const d of fs.readdirSync(ed)) { const f = path.join(ed, d, 'list.tsv'); if (/^more\d/.test(d) && fs.existsSync(f)) for (const l of fs.readFileSync(f, 'utf8').split(/\r?\n/)) { const s = l.split('\t')[0].trim(); if (s && !s.startsWith('#')) listed.add(s); } }
 const slugOf = u => (u.match(/\/encyclopedia\/([a-z0-9-]+)$/) || [])[1];
 const pick = (rows, set) => rows.filter(r => set.has(slugOf(r.k)));

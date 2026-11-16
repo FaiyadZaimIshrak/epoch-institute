@@ -6366,7 +6366,7 @@ html[data-kids="1"] .now-card .now-list { --now-row: 132px; }
    longest fact, 215 px short on the Roman Empire), the emblem stands level with the title, and At a glance and Did you
    know? are one height */
 .empire-page .profile-detail-header { align-items: flex-start; }
-.empire-page .profile-detail-header > div { flex: 1 1 auto; min-width: 0; }
+.empire-page .profile-detail-header > div { flex: 1 1 auto; min-width: 0; align-self: stretch; }   /* stretch: on phones the block is a column */
 @media (min-width: 821px) { .empire-glance > .empire-dyk { align-self: stretch; } }
 /* home, Born on This Day: two or three tiles fill the row (they stood at the left of four columns) */
 @media (min-width: 701px) { .born-day { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); } }

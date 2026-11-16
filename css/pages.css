@@ -2882,7 +2882,7 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .page-toc { display: none; }
 }
 .empire-page .profile-detail-header { align-items: flex-start; }
-.empire-page .profile-detail-header > div { flex: 1 1 auto; min-width: 0; }
+.empire-page .profile-detail-header > div { flex: 1 1 auto; min-width: 0; align-self: stretch; }
 @media (min-width: 821px) {
 .empire-glance > .empire-dyk { align-self: stretch; }
 }

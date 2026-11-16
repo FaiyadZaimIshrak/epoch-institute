@@ -1214,6 +1214,8 @@ $ELAB2 = @{}; foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-labels
 # the one line "Read further"
 $ESRC = @{}; if (Test-Path "$Repo\scripts\entry-sources.json") { $esJ = ReadJson "$Repo\scripts\entry-sources.json"; foreach ($esK in $esJ.Keys) { $ESRC[[string]$esK] = $esJ[$esK] } }
 $EMORE = @{}; if (Test-Path "$Repo\scripts\entry-more.json") { $emJ = ReadJson "$Repo\scripts\entry-more.json"; foreach ($emK in $emJ.Keys) { $EMORE[[string]$emK] = $emJ[$emK] } }
+# since 16 Nov 2026 (every entry, in waves) they are kept as scripts/entry-more/<first character>.json (more-store.js)
+if (Test-Path "$Repo\scripts\entry-more") { foreach ($emF in (Get-ChildItem "$Repo\scripts\entry-more" -Filter *.json | Sort-Object Name)) { $emJ = ReadJson $emF.FullName; foreach ($emK in $emJ.Keys) { $EMORE[[string]$emK] = $emJ[$emK] } } }
 Say "entries told in more detail: $($EMORE.Count)"
 # These texts name many people and places the encyclopedia does not have, so a name inside a longer name would link a
 # namesake ("Ali [Adil Shah] II" an 18th-century shah, "[Rumi] Darwaza" the poet, "Free [Democratic Party] of

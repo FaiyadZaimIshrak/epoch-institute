@@ -2674,6 +2674,29 @@ entries with a confirmed article (about 26,600) told in more detail, in waves; e
   it keeps only today's round and a previewed day (?quizday=) would overwrite it. games.js?v=22;
   scripts/tests/past-games.js (41 checks).
 
+- **Every entry told in more detail (C, the campaign; started 16 Nov 2026):**
+  - **Store:** scripts/entry-more/<first character>.json (scripts/entries/more-store.js readAll / merge; the builder reads
+    the folder; the first round's entry-more.json was moved in). Every reader of the texts goes through more-store.js.
+  - **Ledger:** scripts/entries/more-ledger.tsv (more-list.js ledger): the 26,587 entries with a confirmed article, best
+    known first, state done / thin (article under 250 words, a writer's skip, or a LIVING person) / held / open.
+  - **Articles:** scripts/entries/fetch-html.js <list> <dir> saves them as text from Wikipedia's REST HTML endpoint into
+    %LOCALAPPDATA%\epoch-tools\more-wp (the action API's whole-article extracts are limited to about one a minute; the
+    REST endpoint answers 429 with Retry-After too once three downloads run at once: about eight articles a minute in
+    all, so the whole set takes about two days). more-list.js fetch <n> prints the next list.
+  - **A wave:** more-list.js wave <dir> <n> --batch=20 makes a working folder OUTSIDE the repository
+    (%LOCALAPPDATA%\epoch-tools\more-waves\wNN: list.tsv, batch-N.tsv, desc/, wp/, out/); a long article is given as its
+    lead and the opening of each section (3,500 words at most), and the checks compare with that same copy. One writer
+    agent per batch of 20 (about five minutes and 350,000 tokens each) with MORE-GUIDE.md, checking its own batch with
+    check-more.js <dir> --batch=batch-N.tsv until clean. Then check-more.js <dir> --write --clean (only texts with no
+    flag are gathered; the rest go to held.tsv), more-list.js close <dir>, a full build, more-links.js.
+  - **Rules the pilot wave taught (in MORE-GUIDE.md):** this is a history site: no assessment of present governments or
+    leaders, no indices or rankings, nothing "as of", no events of the last ten years beyond a bare dated fact; "The
+    place today" is two to four sentences of lasting facts; living people get no longer text (the pilot had written
+    Trump and Obama with a "Death and legacy" section: removed); a writer edits only its own batch's files (one ran a
+    fixer over the whole out folder and cut other writers' sentences at decimal points). check-more.js flags
+    present-day judgements, rankings and more than two years after 2015.
+  - **Done:** more1 (131, 12 Nov), w01 (98 of the 100 best known: countries, capitals, Aristotle, Einstein …).
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their

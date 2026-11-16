@@ -5,7 +5,7 @@
 // A wrong link is stopped by putting the whole name between ⟦ and ⟧ in the round's out/<slug>.json (edit.js): the
 // builder prints what stands between them unlinked.
 const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..', '..');
-const M = JSON.parse(fs.readFileSync(path.join(R, 'scripts', 'entry-more.json'), 'utf8')), ALL = process.argv.includes('--all');
+const M = require('./more-store').readAll(), ALL = process.argv.includes('--all');
 const E = new Function(fs.readFileSync(path.join(R, 'encyclopedia-data.js'), 'utf8') + ';return ENCYCLOPEDIA')(), by = {}; for (const e of E) by[e.slug] = e;
 let n = 0, shown = 0;
 for (const slug of Object.keys(M)) {

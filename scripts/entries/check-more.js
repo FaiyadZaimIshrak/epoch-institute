@@ -36,7 +36,11 @@ for (const f of fs.readdirSync(path.join(dir, 'out')).filter(x => x.endsWith('.j
   }
   const t = txt.join(' '); if (w < 220 || w > 460) out.push(w + ' words'); words += w;
   if (/\b(BC|AD)\b/.test(t)) out.push('BC/AD'); const mf = t.match(new RegExp('\\b(?:' + MONTH + ') \\d{1,2}(?:,| \\d{4})')); if (mf) out.push('month-first date: ' + mf[0]);
-  const h = t.match(HYPE); if (h) out.push('hype: ' + h[0]);
+  const h = (e ? t.split(e.name).join(' ') : t).match(HYPE); if (h) out.push('hype: ' + h[0]);   // the entry's own name may hold such a word ("Amazing Grace")
+  // the present day (MORE-GUIDE.md): no judgement of present governments, no indices and rankings, no "as of"
+  const pd = t.match(/\bas of\b|\bauthoritarian (?:regime|system|state|government)|\bdictator(?:ship)?\b(?=[^.]*\b(?:is|remains|current|today)\b)|Freedom House|\bnot free\b|democratic backsliding|approval rating|by nominal GDP|\b(?:largest|biggest) economy\b|\b(?:ranked|ranks) \w+(?:-\w+)? (?:in|on|by|among)\b|\b(?:corruption|democracy|press freedom|human development) index\b/i); if (pd) out.push('present-day judgement or ranking: ' + pd[0]);
+  const meta = t.match(/\b(?:the|this|its) (?:Wikipedia )?(?:article|entry|source file|excerpt)\b|\bWikipedia\b/i); if (meta) out.push('speaks of its source: ' + meta[0]);
+  const late = [...t.matchAll(/\b20(1[6-9]|[2-9]\d)\b/g)].length; if (late > 2) out.push(late + ' years after 2015: is this history?');
   if (e) for (const sen of e.desc.split(/(?<=[a-z0-9)]\.)\s+(?=[A-Z])/)) if (sen.length > 60 && t.includes(sen)) out.push('repeats the description: ' + sen.slice(0, 50));
   const af = path.join(dir, 'wp', slug + '.txt');
   if (!fs.existsSync(af)) out.push('NO ARTICLE');

@@ -31,7 +31,7 @@ const strip = s => String(s || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&
 const src = {};   // name -> [[key, text]]
 const add = (n, k, t) => { t = strip(t); if (t) (src[n] = src[n] || []).push([k, t]); };
 for (const e of ev('encyclopedia-data.js', 'ENCYCLOPEDIA')) add('entries', e.slug, e.desc);
-try { const M = JSON.parse(rd('scripts/entry-more.json')); for (const k in M) add('entries, longer texts', k, M[k].map(s => s[1].join(' ')).join(' ')); } catch (e) {}
+try { const M = require('../entries/more-store').readAll(); for (const k in M) add('entries, longer texts', k, M[k].map(s => s[1].join(' ')).join(' ')); } catch (e) {}
 const P = ev('empire-profiles.js', 'EMPIRE_PROFILES'), G = ev('empire-glance.js', 'GLANCE'), SD = ev('shared-data.js', '{EMPIRES,EMPIRE_INFO}'), kind = {}; for (const e of SD.EMPIRES) kind[e.name] = e.kind || (e.id ? 'state' : 'empire');
 for (const n in P) { const k = 'profiles: ' + (kind[n] || '?'); for (const s in P[n]) if (s !== 'references' && typeof P[n][s] === 'string') add(k, n + ' / ' + s, P[n][s]); }
 for (const n in G) { const k = 'profiles: ' + (kind[n] || '?'); add(k, n + ' / takeaways', (G[n].t || []).join(' ')); add(k, n + ' / dyk', G[n].dyk); add(k, n + ' / events', (G[n].ev || []).map(x => x[1]).join('. ')); }
