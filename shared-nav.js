@@ -531,7 +531,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=1d5d3e5d2f';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=6dd7a60c59';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=d659746b05';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -740,12 +740,12 @@ function initNav(activePage) {
     ['play', 'Play', [
       ['', [['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
         ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'], ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
-        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games'], ['', '/today-in-history/#birthday', 'Your Birthday', 'Your own day in history'], ['advent', '/advent', 'Advent Calendar', 'A door of history for each day of December']]]]]];
+        ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games'], ['past-games', '/past-games', 'Past Games', 'Every earlier day of the daily games'], ['', '/today-in-history/#birthday', 'Your Birthday', 'Your own day in history'], ['advent', '/advent', 'Advent Calendar', 'A door of history for each day of December']]]]]];
   const MORE = [['about', '/about', 'About the Institute'], ['new', '/new', 'What&#8217;s New'], ['research', '/research', 'Explore Everything'], ['dataset', '/dataset', 'Open Data'],
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -862,6 +862,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/kids">Kids Corner</a>
         <a class="footer-link" href="/passport">My Passport</a>
         <a class="footer-link" href="/weekly">My Week of Games</a>
+        <a class="footer-link" href="/past-games">Past Games</a>
         <a class="footer-link" href="/advent">Advent Calendar</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
         <a class="footer-link" href="/compare">Compare Two Profiles</a>

@@ -52,7 +52,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
   const p = await ctx.newPage(); p.on('pageerror', e => errs.push(String(e)));
   await p.goto(base + '/about'); await p.waitForTimeout(1000); await p.click('#nav-play-btn'); await p.waitForTimeout(400);
   const menu = await p.$$eval('#nav-play-menu a', a => a.map(x => [x.getAttribute('href'), x.querySelector('b') ? x.querySelector('b').textContent : '']));
-  ok('Play menu: birthday entry, New on it and on Advent', menu.some(m => m[0] === '/today-in-history/#birthday' && /New$/.test(m[1])) && menu.some(m => m[0] === '/advent' && /New$/.test(m[1])) && menu.filter(m => /New$/.test(m[1])).length === 2, menu);
+  ok('Play menu: birthday entry, New on it and on Advent', menu.some(m => m[0] === '/today-in-history/#birthday' && /New$/.test(m[1])) && menu.some(m => m[0] === '/advent' && /New$/.test(m[1])) && menu.some(m => m[0] === '/past-games') && menu.filter(m => /New$/.test(m[1])).length === 3, menu);
   await p.screenshot({ path: path.join(out, 'menu-new.png') });
   await p.goto(base + '/'); await p.waitForTimeout(1500); const by = await p.evaluate(() => { const a = document.querySelector('.born-yours a'); a.scrollIntoView({ block: 'center', behavior: 'instant' }); return a.getAttribute('href'); }); ok('home: your birthday line', by === '/today-in-history/#birthday'); await p.waitForTimeout(600); await p.screenshot({ path: path.join(out, 'home-born.png') });
   await p.goto(base + '/passport'); await p.waitForTimeout(1500);

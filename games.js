@@ -149,6 +149,16 @@ initNav('games');
   // The lobby (Nov 2026): /games opens on a card for every game (a bar of fourteen tabs hid most of them on phones, and a new
   // game was not found); a card, a tab or an address with a game's name opens it, "All games" and Back return here.
   var PAGE = $('main'), started0 = false, QD = Math.floor(Date.now() / 864e5);
+  // A past puzzle asked for by its number (/games#conn-12, from /past-games): WANT[game] holds it until the game's data
+  // is there. pastFirst deals it (or today's): an earlier puzzle is kept under its own number like today's, so the
+  // archive can show it as played, but only today's counts for a run of days.
+  var WANT = {}, EARLIER = {};   // EARLIER[game]: today's number while an earlier puzzle is on the board
+  function pastFirst(g, pick, today, load) {
+    var n = WANT[g]; delete WANT[g]; n = n ? Math.max(1, Math.min(today, n)) : today; EARLIER[g] = n !== today ? today : 0;
+    if (pick && n === today) pick.value = String(today);
+    if (pick && n !== today) { if (!pick.querySelector('option[value="' + n + '"]')) pick.insertAdjacentHTML('beforeend', '<option value="' + n + '">#' + n + '</option>'); pick.value = String(n); }
+    load(n, n !== today);
+  }
   function dayNo(m, d) { return QD - Math.floor(Date.UTC(2026, m, d) / 864e5) + 1; }
   function ones(m) { return (String(m).match(/1/g) || []).length; }
   function cardStatus(g, G) {   // [line, done] from the games' own records (epoch-games), as /weekly reads them
@@ -183,8 +193,13 @@ initNav('games');
   function openHash() {   // the address names a game (#words-egypt, #first-lasted), else the lobby
     var h = location.hash.slice(1).split('-'), sub = h.slice(1).join('-');
     if (GAMES.indexOf(h[0]) < 0) { showLobby(false); return; }
+    var past = /^(daily-)?(\d{1,4})$/.exec(sub);   // a past puzzle by its number
+    if (past) { WANT[h[0]] = +past[2]; sub = past[1] ? 'daily' : ''; }
+    else if (!sub && EARLIER[h[0]]) WANT[h[0]] = EARLIER[h[0]];   // the plain address leaves an earlier puzzle for today's
     if (!sub) Object.keys(MODE_TABS).forEach(function (k) { if (MODE_TABS[k][0] === h[0] && MODE_TABS[k][1]()) sub = MODE_TABS[k][2]; });   // the plain address leaves Longer or Shorter? or Born Where?
-    showGame(h[0], false, sub); markTab();
+    showGame(h[0], false, sub);
+    if (WANT[h[0]] && MODS[h[0]] && MODS[h[0]].open) MODS[h[0]].open();   // the game was open already, or its data is in: deal the number now
+    markTab();
   }
   $('gm-back').addEventListener('click', function () { showLobby(true); });
   function showGame(g, focus, sub) {
@@ -820,7 +835,8 @@ initNav('games');
     function isDaily() { return level() === 'daily'; }
     function lasted() { return level() === 'lasted'; }
     function key(c) { return lasted() ? -c.dur : c.lo; }   // what a pair is compared by: the first year, or how long it lasted (the longer first)
-    function dailySaved() { return best('daily-' + QDAY) || { m: '' }; }
+    var DDAY = QDAY;   // the day whose ten is dealt: today, or an earlier day asked for from /past-games
+    function dailySaved() { return best('daily-' + DDAY) || { m: '' }; }
     function paintMode() {
       var d = isDaily();
       $('first-lives').hidden = d; $('first-new').hidden = d;
@@ -865,7 +881,7 @@ initNav('games');
       paintMode();
       $('first-streak').textContent = '0'; $('first-done').hidden = true; $('first-done').classList.remove('gm-done-inline'); lives();
       if (isDaily()) {   // today's ten, resumed where it was left (one go a day)
-        F.daily = { pairs: dailyPairs(QDAY), m: String(dailySaved().m || '') };
+        F.daily = { pairs: dailyPairs(DDAY), m: String(dailySaved().m || '') };
         F.streak = (F.daily.m.match(/1/g) || []).length; $('first-streak').textContent = F.streak;
         var sk = best('daily-streak'); $('first-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
         if (F.daily.m.length >= F.daily.pairs.length) { finishDaily(); return; }
@@ -898,7 +914,7 @@ initNav('games');
         : entryLink(a) + born(a) + ' came ' + d.toLocaleString('en-GB') + ' year' + (d === 1 ? '' : 's') + ' before ' + entryLink(c) + born(c) + '.') + '</span></p>' +
         '<p class="gm-credit">' + [credit(pr[0]), credit(pr[1])].filter(function (x) { return x; }).join('<br>') + '</p>';
       if (F.daily) {   // no lives: every answer counts, saved at once
-        F.daily.m += ok ? '1' : '0'; setBest('daily-' + QDAY, { m: F.daily.m });
+        F.daily.m += ok ? '1' : '0'; setBest('daily-' + DDAY, { m: F.daily.m });
         if (ok) { F.streak++; $('first-streak').textContent = F.streak; bump($('first-streak')); }
         Sfx.play(ok ? 'good' : 'bad');
         var last = F.daily.m.length >= F.daily.pairs.length;
@@ -931,17 +947,17 @@ initNav('games');
     // the Daily Ten's score: the day's squares to share, the streak of days played, the time to the next ten
     function finishDaily() {
       F.done = true;
-      var m = F.daily.m, n = (m.match(/1/g) || []).length, tot = F.daily.pairs.length, num = Math.max(1, QDAY - DAY0 + 1);
+      var m = F.daily.m, n = (m.match(/1/g) || []).length, tot = F.daily.pairs.length, num = Math.max(1, DDAY - DAY0 + 1);
       var sk = best('daily-streak') || { n: 0, last: 0 };
-      if (sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('daily-streak', sk); }
+      if (DDAY === QDAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('daily-streak', sk); }
       var squares = m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join('');
       var dn = $('first-done'), s = n >= 9 ? 3 : n >= 6 ? 2 : 1;
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + n + ' of ' + tot + ' right</p>' +
         '<p class="gm-daily-sq" aria-label="' + n + ' right, ' + (tot - n) + ' wrong">' + squares + '</p>' +
-        '<p class="gm-done-s">Daily Ten #' + num + (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '') + ' · a new ten in <span data-countdown></span></p>' +
+        '<p class="gm-done-s">Daily Ten #' + num + (DDAY !== QDAY ? ' (an earlier one)' : sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '') + ' · a new ten in <span data-countdown></span></p>' +
         '<div class="gm-done-row">' + shareBtn() + '<button type="button" class="hero-cta gm-done-btn">Play the endless game</button></div>' + newsletterPrompt('daily-ten') + '</div>';
       share(dn, 'Epoch Daily Ten #' + num + ': ' + n + '/' + tot + '\n' + squares, 'first-daily', { title: 'Daily Ten #' + num, score: n + '/' + tot, unit: 'right today', stars: s, squares: m,
-        note: sk.n > 1 ? 'Played ' + sk.n + ' days in a row' : new Date(QDAY * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }), cta: 'Ten new pairs every day', url: 'the-epoch-institute.org/games#first-daily' });
+        note: sk.n > 1 && DDAY === QDAY ? 'Played ' + sk.n + ' days in a row' : new Date(DDAY * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }), cta: 'Ten new pairs every day', url: 'the-epoch-institute.org/games#first-daily' });
       // the board is emptied, so the card stands in its place instead of over it (an overlay of an empty board clipped it)
       dn.classList.add('gm-done-inline'); dn.hidden = false; $('first-duel').innerHTML = ''; $('first-res').innerHTML = '';
       if (!dailyShown) { confetti(dn); Sfx.play('win'); }
@@ -954,11 +970,15 @@ initNav('games');
     $('first-new').addEventListener('click', newGame);
     var started = false;
     function show(sub) {
+      if (sub === 'daily' || (!sub && isDaily() && DDAY !== QDAY)) {   // #first-daily, or an earlier day's ten (#first-daily-9)
+        var w = WANT.first, d = w ? Math.max(DAY0, Math.min(QDAY, DAY0 + w - 1)) : QDAY; delete WANT.first;
+        if (d !== DDAY) { DDAY = d; if (isDaily()) { started = true; newGame(); return; } }
+      }
       if (sub === 'daily' && !isDaily()) { started = true; level.set('daily'); return; }   // #first-daily
       if (sub === 'lasted' && !lasted()) { started = true; level.set('lasted'); return; }   // #first-lasted
       if (!started) { started = true; newGame(); }
     }
-    return { show: show, sub: show, lasted: lasted };
+    return { show: show, sub: show, lasted: lasted, open: function () { show('daily'); } };
   })();
   MODS.first = First;
 
@@ -1367,11 +1387,11 @@ initNav('games');
     function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
     function puzzle(num) { return PZ.length ? PZ[(num - 1) % PZ.length] : null; }
     function live(t) { $('conn-live').textContent = t; }
-    function save() { if (!K.practice) setBest('conn-' + K.num, { s: K.s, m: K.m, h: K.h, k: K.k, done: K.done }); }
+    function save() { setBest('conn-' + K.num, { s: K.s, m: K.m, h: K.h, k: K.k, done: K.done }); }
     function load(num, practice) {
       K.id++; K.num = num; K.practice = practice; K.pz = puzzle(num); K.sel = []; K.busy = false;
       if (!K.pz) { $('conn-grid').innerHTML = '<p class="gm-howto">The puzzles are on their way.</p>'; return; }
-      var sv = practice ? null : best('conn-' + num);
+      var sv = best('conn-' + num);
       K.s = sv && sv.s ? sv.s.slice() : []; K.m = sv ? sv.m || 0 : 0; K.h = sv && sv.h ? sv.h.slice() : []; K.k = sv && sv.k ? sv.k.slice() : []; K.done = !!(sv && sv.done);
       K.items = []; K.pz.g.forEach(function (g, gi) { g[2].forEach(function (it) { K.items.push({ t: it[0], slug: it[1], g: gi }); }); });
       var r = rng(num * 7907 + 3); K.order = K.items.map(function (_, i) { return i; });   // the day's tile order is the same for everyone
@@ -1391,7 +1411,7 @@ initNav('games');
     }
     function buttons() { $('conn-go').disabled = K.sel.length !== 4 || K.done; $('conn-clear').disabled = !K.sel.length || K.done; $('conn-shuffle').disabled = K.done; }
     function render() {
-      $('conn-num').innerHTML = (K.practice ? 'Practice: ' : 'Today: ') + 'Connections <b>#' + K.num + '</b>';
+      $('conn-num').innerHTML = (K.practice ? 'Earlier: ' : 'Today: ') + 'Connections <b>#' + K.num + '</b>';
       var sk = best('conn-streak'); $('conn-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
       dots();
       $('conn-solved').innerHTML = K.s.map(function (gi) { return band(gi); }).join('');
@@ -1443,7 +1463,7 @@ initNav('games');
       var s = won ? (K.m === 0 ? 3 : K.m <= 2 ? 2 : 1) : 0, dn = $('conn-done');
       dn.innerHTML = '<div class="gm-done-card">' + (won ? stars(s) : '') + '<p class="gm-done-t">' + (won ? (K.m ? 'Solved, with ' + K.m + (K.m === 1 ? ' mistake' : ' mistakes') : 'Solved without a mistake!') : 'Out of guesses: ' + K.s.length + ' of 4 groups') + '</p>' +
         '<p class="gm-daily-sq gm-conn-sq" aria-label="Your guesses, in colours of the groups">' + squares.replace(/\n/g, '<br>') + '</p>' +
-        '<p class="gm-done-s">Connections #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new puzzle in <span data-countdown></span></p>' +
+        '<p class="gm-done-s">Connections #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new puzzle in <span data-countdown></span></p>' +
         '<div class="gm-done-row">' + shareBtn() + '</div>' +
         '<div class="gm-conn-links">' + [0, 1, 2, 3].sort(function (a, b) { return K.pz.g[a][1] - K.pz.g[b][1]; }).map(function (gi) { var g = K.pz.g[gi]; return '<p><i class="gm-cdot gm-cl' + g[1] + '"></i><b>' + escHtml(g[0]) + ':</b> ' + g[2].map(function (it) { return '<a href="' + escHtml(it[1].charAt(0) === '/' ? it[1] : '/encyclopedia/' + encodeURIComponent(it[1])) + '">' + escHtml(it[0]) + '</a>'; }).join(', ') + '</p>'; }).join('') + '</div>' +
         (K.practice ? '' : newsletterPrompt('connections')) + '</div>';
@@ -1461,9 +1481,9 @@ initNav('games');
       for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best('conn-' + i) && best('conn-' + i).done ? ' (played)' : '') + '</option>';
       pick.innerHTML = h; pick.parentNode.hidden = TODAY < 2 || !PZ.length;
     }
-    pick.addEventListener('change', function () { var n = +pick.value; load(n, n !== TODAY && !(best('conn-' + n) && best('conn-' + n).done)); });
+    pick.addEventListener('change', function () { WANT.conn = +pick.value; pastFirst('conn', pick, TODAY, load); });
     var started = false;
-    return { show: function () { if (!started) { started = true; options(); load(TODAY, false); } } };
+    return { show: function () { if (!started) { started = true; options(); pastFirst('conn', pick, TODAY, load); } }, open: function () { if (started && WANT.conn) pastFirst('conn', pick, TODAY, load); } };
   })();
   MODS.conn = Conn;
 
@@ -1484,7 +1504,7 @@ initNav('games');
     function clock(s) { return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
     function enumOf(a) { return '(' + a.split(/[ -]/).map(function (w) { return w.length; }).join(',') + ')'; }
     function save() {
-      if (K.practice || !K.num) return;
+      if (!K.num) return;
       setBest('cw-' + K.num, { g: K.g.map(function (ch) { return ch || '.'; }).join(''), t: K.t, c: K.c, r: K.r, w: Object.keys(K.wrong).map(Number), s: Object.keys(K.shown).map(Number), done: K.done, gave: K.gave });
     }
     // the answers, their cells and numbers (a number for every cell that starts an answer, row by row)
@@ -1501,7 +1521,7 @@ initNav('games');
       var starts = K.ws.map(function (w) { return w.start; }).filter(function (v, j, a) { return a.indexOf(v) === j; }).sort(function (a, b) { return a - b; });
       K.ws.forEach(function (w) { w.num = starts.indexOf(w.start) + 1; });
       K.order = K.ws.map(function (_, j) { return j; }).sort(function (a, b) { return K.ws[a].d - K.ws[b].d || K.ws[a].num - K.ws[b].num; });
-      var sv = practice ? null : best('cw-' + num);
+      var sv = best('cw-' + num);
       K.g = sv && sv.g ? sv.g.split('').map(function (ch) { return ch === '.' ? '' : ch; }) : new Array(N * N).fill('');
       K.t = sv ? sv.t || 0 : 0; K.c = sv ? sv.c || 0 : 0; K.r = sv ? sv.r || 0 : 0; K.done = !!(sv && sv.done); K.gave = !!(sv && sv.gave);
       K.wrong = {}; (sv && sv.w || []).forEach(function (ix) { K.wrong[ix] = 1; }); K.shown = {}; (sv && sv.s || []).forEach(function (ix) { K.shown[ix] = 1; });
@@ -1546,7 +1566,7 @@ initNav('games');
       $('cw-clue').innerHTML = w && !K.done ? '<b>' + w.num + ' ' + (w.d ? 'Down' : 'Across') + '</b> ' + escHtml(w.clue) + ' <span>' + enumOf(w.ans) + '</span>' : '';
     }
     function stats() {
-      $('cw-num').innerHTML = (K.practice ? 'Practice: ' : K.num === TODAY ? 'Today: ' : '') + 'Crossword <b>#' + K.num + '</b>';
+      $('cw-num').innerHTML = (K.practice ? 'Earlier: ' : K.num === TODAY ? 'Today: ' : '') + 'Crossword <b>#' + K.num + '</b>';
       $('cw-time').textContent = kids() ? '' : clock(K.t);
       var sk = best('cw-streak'); $('cw-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Solved ' + sk.n + ' days in a row' : '';
     }
@@ -1634,7 +1654,7 @@ initNav('games');
       var ans = function (d) { return K.order.filter(function (j) { return K.ws[j].d === d; }).map(function (j) { var w = K.ws[j]; return '<li><b>' + w.num + '</b> <a href="/encyclopedia/' + encodeURIComponent(w.slug) + '">' + escHtml(w.ans) + '</a></li>'; }).join(''); };
       var dn = $('cw-done');
       dn.innerHTML = '<div class="gm-done-card">' + (solved ? stars(s) : '') + '<p class="gm-done-t">' + escHtml(title) + '</p>' +
-        '<p class="gm-done-s">Crossword #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 && solved ? ' · solved ' + sk.n + ' days in a row' : '')) + ' · a new crossword in <span data-countdown></span></p>' +
+        '<p class="gm-done-s">Crossword #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 && solved ? ' · solved ' + sk.n + ' days in a row' : '')) + ' · a new crossword in <span data-countdown></span></p>' +
         '<div class="gm-done-row">' + shareBtn() + '</div>' +
         '<div class="gm-cw-ans"><div><p class="gm-cw-h">Across</p><ol>' + ans(0) + '</ol></div><div><p class="gm-cw-h">Down</p><ol>' + ans(1) + '</ol></div></div>' +
         (K.practice ? '' : newsletterPrompt('crossword')) + '</div>';
@@ -1653,16 +1673,16 @@ initNav('games');
       for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best('cw-' + i) && best('cw-' + i).done ? ' (played)' : '') + '</option>';
       pick.innerHTML = h; pick.parentNode.hidden = TODAY < 2;
     }
-    pick.addEventListener('change', function () { var n = +pick.value; load(n, n !== TODAY && !(best('cw-' + n) && best('cw-' + n).done)); });
+    pick.addEventListener('change', function () { WANT.cross = +pick.value; pastFirst('cross', pick, TODAY, load); });
     var started = false;
     return { show: function () {
       if (started) return; started = true;
       $('cw-kb').hidden = !touch;
       var s = document.createElement('script'); s.src = typeof CW_SRC !== 'undefined' ? CW_SRC : '/crossword-data.js';
-      s.onload = function () { D = typeof CW_DATA !== 'undefined' ? CW_DATA : null; if (!D) return; options(); load(TODAY, false); };
+      s.onload = function () { D = typeof CW_DATA !== 'undefined' ? CW_DATA : null; if (!D) return; options(); pastFirst('cross', pick, TODAY, load); };
       s.onerror = function () { grid.innerHTML = '<p class="gm-howto">The crossword could not be loaded. Please try again later.</p>'; };
       document.head.appendChild(s);
-    } };
+    }, open: function () { if (D && WANT.cross) pastFirst('cross', pick, TODAY, load); } };
   })();
   MODS.cross = Cross;
 
@@ -1678,12 +1698,12 @@ initNav('games');
     function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
     function round(num) { var out = []; for (var k = 0; k < N; k++) out.push(D.q[((num - 1) * N + k) % D.q.length]); return out; }
     function person(i) { var p = D.p[i]; return { slug: p[0], name: p[1], dates: p[2], img: p[3] }; }
-    function save() { if (!K.practice) setBest('said-' + K.num, { m: K.m, done: K.done }); }
+    function save() { setBest('said-' + K.num, { m: K.m, done: K.done }); }
     function load(num, practice) {
       K.id++; K.num = num; K.practice = practice; K.qs = round(num);
-      var sv = practice ? null : best('said-' + num);
+      var sv = best('said-' + num);
       K.m = sv && sv.m ? String(sv.m) : ''; K.done = !!(sv && sv.done); K.i = K.m.length; K.answered = false;
-      $('said-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Who Said It? <b>#' + num + '</b>';
+      $('said-num').innerHTML = (practice ? 'Earlier: ' : 'Today: ') + 'Who Said It? <b>#' + num + '</b>';
       var sk = best('said-streak'); $('said-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
       $('said-done').hidden = true; $('said-done').innerHTML = '';
       if (K.done || K.i >= N) finish(true); else ask();
@@ -1728,7 +1748,7 @@ initNav('games');
       var dn = $('said-done');
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (n === N ? 'All five right!' : n + ' of ' + N + ' right') + '</p>' +
         '<p class="gm-daily-sq" aria-label="Your answers: ' + n + ' right">' + squares + '</p>' +
-        '<p class="gm-done-s">Who Said It? #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new quotations in <span data-countdown></span></p>' +
+        '<p class="gm-done-s">Who Said It? #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new quotations in <span data-countdown></span></p>' +
         '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('said')) + '</div>';
       share(dn, 'Epoch Who Said It? #' + K.num + ': ' + n + '/' + N + '\n' + squares, 'said', { title: 'Who Said It? #' + K.num, score: n + '/' + N, unit: 'right today', stars: s, squares: K.m,
         note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'Five quotations every day', url: 'the-epoch-institute.org/games#said' });
@@ -1744,15 +1764,15 @@ initNav('games');
       for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best('said-' + i) && best('said-' + i).done ? ' (played)' : '') + '</option>';
       pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
     }
-    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best('said-' + n) && best('said-' + n).done)); });
+    pickEl.addEventListener('change', function () { WANT.said = +pickEl.value; pastFirst('said', pickEl, TODAY, load); });
     var started = false;
     return { show: function () {
       if (started) return; started = true;
       var s = document.createElement('script'); s.src = typeof SAID_SRC !== 'undefined' ? SAID_SRC : '/said-data.js';
-      s.onload = function () { D = typeof SAID !== 'undefined' ? SAID : null; if (!D || !D.q.length) { board.innerHTML = '<p class="gm-howto">The quotations are on their way.</p>'; return; } options(); load(TODAY, false); };
+      s.onload = function () { D = typeof SAID !== 'undefined' ? SAID : null; if (!D || !D.q.length) { board.innerHTML = '<p class="gm-howto">The quotations are on their way.</p>'; return; } options(); pastFirst('said', pickEl, TODAY, load); };
       s.onerror = function () { board.innerHTML = '<p class="gm-howto">The quotations could not be loaded. Please try again later.</p>'; };
       document.head.appendChild(s);
-    } };
+    }, open: function () { if (D && WANT.said) pastFirst('said', pickEl, TODAY, load); } };
   })();
   MODS.said = Said;
 
@@ -1770,12 +1790,12 @@ initNav('games');
     function stanza(s, pass) { var o = s[6]; if (!o.length || typeof o[0] === 'string') return s; var j = pass % o.length, q = s.slice(); q[6] = o[j]; q[7] = s[7][j] || []; return q; }
     function round(num) { var P = pool(), out = []; for (var k = 0; k < N && P.length; k++) { var i = (num - 1) * N + k; out.push(stanza(P[i % P.length], Math.floor(i / P.length))); } return out; }
     function key(num) { return 'songq-' + (kids() ? 'k' : '') + num; }
-    function save() { if (!K.practice) setBest(key(K.num), { m: K.m, done: K.done }); }
+    function save() { setBest(key(K.num), { m: K.m, done: K.done }); }
     function load(num, practice) {
       K.num = num; K.practice = practice; K.qs = round(num);
-      var sv = practice ? null : best(key(num));
+      var sv = best(key(num));
       K.m = sv && sv.m ? String(sv.m) : ''; K.done = !!(sv && sv.done); K.i = K.m.length; K.answered = false;
-      $('songq-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Where Is This Song From? <b>#' + num + '</b>';
+      $('songq-num').innerHTML = (practice ? 'Earlier: ' : 'Today: ') + 'Where Is This Song From? <b>#' + num + '</b>';
       var sk = best('songq-streak'); $('songq-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
       $('songq-done').hidden = true; $('songq-done').innerHTML = '';
       if (K.done || K.i >= N) finish(true); else ask();
@@ -1821,7 +1841,7 @@ initNav('games');
       var dn = $('songq-done');
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (n === N ? 'All five placed!' : n + ' of ' + N + ' right') + '</p>' +
         '<p class="gm-daily-sq" aria-label="Your answers: ' + n + ' right">' + squares + '</p>' +
-        '<p class="gm-done-s">Where Is This Song From? #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new songs in <span data-countdown></span></p>' +
+        '<p class="gm-done-s">Where Is This Song From? #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new songs in <span data-countdown></span></p>' +
         '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('songq')) + '</div>';
       share(dn, 'Epoch Where Is This Song From? #' + K.num + ': ' + n + '/' + N + '\n' + squares, 'songq', { title: 'Where Is This Song From? #' + K.num, score: n + '/' + N, unit: 'placed today', stars: s, squares: K.m,
         note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'Five songs every day', url: 'the-epoch-institute.org/games#songq' });
@@ -1836,15 +1856,15 @@ initNav('games');
       for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best(key(i)) && best(key(i)).done ? ' (played)' : '') + '</option>';
       pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
     }
-    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best(key(n)) && best(key(n)).done)); });
+    pickEl.addEventListener('change', function () { WANT.songq = +pickEl.value; pastFirst('songq', pickEl, TODAY, load); });
     var started = false;
     return { show: function () {
       if (started) return; started = true;
       var s = document.createElement('script'); s.src = typeof SONGQ_SRC !== 'undefined' ? SONGQ_SRC : '/songq-data.js';
-      s.onload = function () { D = typeof SONGQ !== 'undefined' ? SONGQ : null; if (!D || !D.length) { board.innerHTML = '<p class="gm-howto">The songs are on their way.</p>'; return; } opts(); load(TODAY, false); };
+      s.onload = function () { D = typeof SONGQ !== 'undefined' ? SONGQ : null; if (!D || !D.length) { board.innerHTML = '<p class="gm-howto">The songs are on their way.</p>'; return; } opts(); pastFirst('songq', pickEl, TODAY, load); };
       s.onerror = function () { board.innerHTML = '<p class="gm-howto">The songs could not be loaded. Please try again later.</p>'; };
       document.head.appendChild(s);
-    }, round: function (n) { return round(n); } };
+    }, round: function (n) { return round(n); }, open: function () { if (D && WANT.songq) pastFirst('songq', pickEl, TODAY, load); } };
   })();
   MODS.songq = SongQ;
   window.epochSongQ = SongQ;
@@ -1872,12 +1892,12 @@ initNav('games');
     function end(s) { var n = D.n[s]; return '<span class="gm-six-end">' + pic(s, n[2], 'gm-six-img') + '<span><b>' + escHtml(n[0]) + '</b>' + (n[1] ? '<i>' + escHtml(n[1]) + '</i>' : '') + '</span></span>'; }
     function goal() { return '<div class="gm-six-goal"><span class="gm-six-pair"><span class="gm-six-lbl">From</span>' + end(K.pz[0]) + '</span><span class="gm-six-pair"><span class="gm-six-lbl">to</span>' + end(K.pz[1]) + '</span></div>'; }
     function trail(route, links) { return '<ol class="gm-six-trail' + (links ? ' gm-six-best' : '') + '">' + route.map(function (s) { return '<li>' + (links ? '<a href="/encyclopedia/' + encodeURIComponent(s) + '">' + escHtml(name(s)) + '</a>' : escHtml(name(s))) + '</li>'; }).join('') + '</ol>'; }
-    function save() { if (!K.practice) setBest('sixd-' + K.num, { p: K.p, c: K.c, done: K.done, gave: K.gave }); }
+    function save() { setBest('sixd-' + K.num, { p: K.p, c: K.c, done: K.done, gave: K.gave }); }
     function load(num, practice) {
       K.num = num; K.pz = D.p[(num - 1) % D.p.length]; K.practice = practice;
-      var sv = practice ? null : best('sixd-' + num);
+      var sv = best('sixd-' + num);
       K.p = sv && sv.p && sv.p.length ? sv.p.slice() : [K.pz[0]]; K.c = sv ? +sv.c || 0 : 0; K.done = !!(sv && sv.done); K.gave = !!(sv && sv.gave);
-      $('six-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Six Degrees <b>#' + num + '</b>';
+      $('six-num').innerHTML = (practice ? 'Earlier: ' : 'Today: ') + 'Six Degrees <b>#' + num + '</b>';
       var sk = best('sixd-streak'); $('six-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
       $('six-done').hidden = true; $('six-done').innerHTML = '';
       // the names of a saved route come back with its entries' files
@@ -1914,7 +1934,7 @@ initNav('games');
         '<p class="gm-six-count">A shortest route, in ' + par + ' clicks:</p>' + trail(K.pz[3], true);
       var dn = $('six-done');
       dn.innerHTML = '<div class="gm-done-card">' + stars(s) + '<p class="gm-done-t">' + (won ? (K.c <= par ? 'The shortest route!' : 'You got there in ' + K.c + ' clicks') : 'A route is shown above') + '</p>' +
-        '<p class="gm-done-s">Six Degrees #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 && won ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new puzzle in <span data-countdown></span></p>' +
+        '<p class="gm-done-s">Six Degrees #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 && won ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new puzzle in <span data-countdown></span></p>' +
         '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('six')) + '</div>';
       share(dn, 'Epoch Six Degrees #' + K.num + ': ' + (won ? name(K.pz[0]) + ' to ' + name(K.pz[1]) + ' in ' + K.c + ' clicks (shortest ' + par + ')' : 'not this time'), 'six',
         { title: 'Six Degrees #' + K.num, score: won ? String(K.c) : '-', unit: won ? (K.c === 1 ? 'click' : 'clicks') + ' (shortest ' + par + ')' : 'route shown', stars: s, cta: 'From one entry to another, a new pair every day', url: 'the-epoch-institute.org/games#six' });
@@ -1929,15 +1949,15 @@ initNav('games');
       for (var i = TODAY - 1; i >= Math.max(1, TODAY - 60); i--) h += '<option value="' + i + '">#' + i + (best('sixd-' + i) && best('sixd-' + i).done ? ' (played)' : '') + '</option>';
       pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
     }
-    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best('sixd-' + n) && best('sixd-' + n).done)); });
+    pickEl.addEventListener('change', function () { WANT.six = +pickEl.value; pastFirst('six', pickEl, TODAY, load); });
     var started = false;
     return { show: function () {
       if (started) return; started = true;
       var s = document.createElement('script'); s.src = typeof SIXD_SRC !== 'undefined' ? SIXD_SRC : '/sixdeg-data.js';
-      s.onload = function () { D = typeof SIXD !== 'undefined' ? SIXD : null; if (!D || !D.p.length) { board.innerHTML = '<p class="gm-howto">The puzzles are on their way.</p>'; return; } options(); load(TODAY, false); };
+      s.onload = function () { D = typeof SIXD !== 'undefined' ? SIXD : null; if (!D || !D.p.length) { board.innerHTML = '<p class="gm-howto">The puzzles are on their way.</p>'; return; } options(); pastFirst('six', pickEl, TODAY, load); };
       s.onerror = function () { board.innerHTML = '<p class="gm-howto">The puzzle could not be loaded. Please try again later.</p>'; };
       document.head.appendChild(s);
-    }, state: function () { return K; } };
+    }, state: function () { return K; }, open: function () { if (D && WANT.six) pastFirst('six', pickEl, TODAY, load); } };
   })();
   MODS.six = SixD;
   window.epochSixD = SixD;
@@ -2019,7 +2039,7 @@ initNav('games');
         var n = {}; K.q[0].toUpperCase().replace(/[A-Z]/g, function (p) { n[p] = (n[p] || 0) + 1; return p; });
         Object.keys(n).sort(function (a, b) { return n[b] - n[a] || (a < b ? -1 : 1); }).slice(0, 3).forEach(function (p) { var c = K.enc[p]; K.g[c] = p; K.v[c] = 1; });
       }
-      $('cp-num').innerHTML = 'Today: Quote Cipher <b>#' + num + '</b>';
+      $('cp-num').innerHTML = (num === TODAY ? 'Today: ' : 'Earlier: ') + 'Quote Cipher <b>#' + num + '</b>';
       var sk = best('cipher-streak'); $('cp-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Solved ' + sk.n + ' days in a row' : '';
       $('cp-done').hidden = true; $('cp-done').innerHTML = '';
       if (K.done) finish(true); else { K.sel = ''; K.sel = next(1); render(); }
@@ -2060,10 +2080,10 @@ initNav('games');
       if (started) return; started = true;
       touchKb = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches); $('cp-kb').hidden = !touchKb;
       var s = document.createElement('script'); s.src = typeof CIPHER_SRC !== 'undefined' ? CIPHER_SRC : '/cipher-data.js';
-      s.onload = function () { D = typeof CIPHER !== 'undefined' ? CIPHER : null; if (!D || !D.q.length) { text.innerHTML = '<p class="gm-howto">The cipher is on its way.</p>'; return; } TODAY = Math.max(1, QDAY - D.d0 + 1); load(TODAY); };
+      s.onload = function () { D = typeof CIPHER !== 'undefined' ? CIPHER : null; if (!D || !D.q.length) { text.innerHTML = '<p class="gm-howto">The cipher is on its way.</p>'; return; } TODAY = Math.max(1, QDAY - D.d0 + 1); pastFirst('cipher', null, TODAY, load); };
       s.onerror = function () { text.innerHTML = '<p class="gm-howto">The cipher could not be loaded. Please try again later.</p>'; };
       document.head.appendChild(s);
-    }, state: function () { return K; }, type: type, select: select };
+    }, state: function () { return K; }, type: type, select: select, open: function () { if (D && WANT.cipher) pastFirst('cipher', null, TODAY, load); } };
   })();
   MODS.cipher = Cipher;
   window.epochCipher = Cipher;
@@ -2078,12 +2098,12 @@ initNav('games');
     function rng(seed) { return function () { seed = (seed + 0x6D2B79F5) | 0; var t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
     function round(num) { var out = []; for (var k = 0; k < N; k++) out.push(D.p[((num - 1) * N + k) % D.p.length]); return out; }
     function key(num) { return 'line-' + num; }
-    function save() { if (!K.practice) setBest(key(K.num), { m: K.m, done: K.done }); }
+    function save() { setBest(key(K.num), { m: K.m, done: K.done }); }
     function load(num, practice) {
       K.num = num; K.practice = practice; K.qs = round(num);
-      var sv = practice ? null : best(key(num));
+      var sv = best(key(num));
       K.m = sv && sv.m ? String(sv.m) : ''; K.done = !!(sv && sv.done); K.i = K.m.length; K.answered = false;
-      $('line-num').innerHTML = (practice ? 'Practice: ' : 'Today: ') + 'Finish the Line <b>#' + num + '</b>';
+      $('line-num').innerHTML = (practice ? 'Earlier: ' : 'Today: ') + 'Finish the Line <b>#' + num + '</b>';
       var sk = best('line-streak'); $('line-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
       $('line-done').hidden = true; $('line-done').innerHTML = '';
       if (K.done || K.i >= N) finish(true); else ask();
@@ -2129,7 +2149,7 @@ initNav('games');
       var dn = $('line-done');
       dn.innerHTML = '<div class="gm-done-card">' + stars(st) + '<p class="gm-done-t">' + (n === N ? 'All five lines!' : n + ' of ' + N + ' right') + '</p>' +
         '<p class="gm-daily-sq" aria-label="Your answers: ' + n + ' right">' + squares + '</p>' +
-        '<p class="gm-done-s">Finish the Line #' + K.num + (K.practice ? ' (practice)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new songs in <span data-countdown></span></p>' +
+        '<p class="gm-done-s">Finish the Line #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · five new songs in <span data-countdown></span></p>' +
         '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('line')) + '</div>';
       share(dn, 'Epoch Finish the Line #' + K.num + ': ' + n + '/' + N + '\n' + squares, 'line', { title: 'Finish the Line #' + K.num, score: n + '/' + N, unit: 'lines today', stars: st, squares: K.m,
         note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'Five songs every day', url: 'the-epoch-institute.org/games#line' });
@@ -2144,15 +2164,15 @@ initNav('games');
       for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best(key(i)) && best(key(i)).done ? ' (played)' : '') + '</option>';
       pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
     }
-    pickEl.addEventListener('change', function () { var n = +pickEl.value; load(n, n !== TODAY && !(best(key(n)) && best(key(n)).done)); });
+    pickEl.addEventListener('change', function () { WANT.line = +pickEl.value; pastFirst('line', pickEl, TODAY, load); });
     var started = false;
     return { show: function () {
       if (started) return; started = true;
       var s = document.createElement('script'); s.src = typeof LINE_SRC !== 'undefined' ? LINE_SRC : '/line-data.js';
-      s.onload = function () { D = typeof LINEQ !== 'undefined' ? LINEQ : null; if (!D || !D.p || !D.p.length) { board.innerHTML = '<p class="gm-howto">The songs are on their way.</p>'; return; } opts(); load(TODAY, false); };
+      s.onload = function () { D = typeof LINEQ !== 'undefined' ? LINEQ : null; if (!D || !D.p || !D.p.length) { board.innerHTML = '<p class="gm-howto">The songs are on their way.</p>'; return; } opts(); pastFirst('line', pickEl, TODAY, load); };
       s.onerror = function () { board.innerHTML = '<p class="gm-howto">The songs could not be loaded. Please try again later.</p>'; };
       document.head.appendChild(s);
-    }, state: function () { return { num: K.num, i: K.i, m: K.m, done: K.done, answer: K.qs[K.i] ? K.qs[K.i][1] : null }; } };
+    }, open: function () { if (D && WANT.line) pastFirst('line', pickEl, TODAY, load); }, state: function () { return { num: K.num, i: K.i, m: K.m, done: K.done, answer: K.qs[K.i] ? K.qs[K.i][1] : null }; } };
   })();
   MODS.line = Line;
   window.epochLine = Line;

@@ -45,7 +45,7 @@
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
-  <p class="wk-link"><a href="/weekly">Your week of daily games, side by side &rarr;</a></p>
+  <p class="wk-link"><a href="/weekly">Your week of daily games, side by side &rarr;</a> <a href="/past-games">Past games: play any earlier day &rarr;</a></p>
   <section class="gm-lobby" id="gm-lobby" aria-label="All the games">
     <h2 class="gm-lobby-h">Today&rsquo;s games <span>the same for everyone, new every day</span></h2>
     <ul class="gm-lcs">
@@ -378,7 +378,7 @@
 <script src="/shared-nav.js"></script>
 <script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=2d4a6a60a9', SONGQ_SRC = '/songq-data.js?v=b29491c186', LINE_SRC = '/line-data.js?v=51b7e13096', CIPHER_SRC = '/cipher-data.js?v=c651335308', SIXD_SRC = '/sixdeg-data.js?v=26a8eb9f06';</script>
 <script>var RANKS_SRC = '/ranks-data.js?v=db155300ca';</script>
-<script src="/games.js?v=21"></script>
+<script src="/games.js?v=22"></script>
 
 </body>
 </html>

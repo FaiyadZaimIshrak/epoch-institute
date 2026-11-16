@@ -47,7 +47,7 @@
     <tbody id="wk-body"><tr><td colspan="9">The week needs JavaScript.</td></tr></tbody>
   </table></div>
   <p class="pass-note" id="wk-sum"></p>
-  <div class="pass-acts"><button type="button" class="gm-share" id="wk-share" hidden>Share my week</button><a class="gm-again" href="/games">Play today&rsquo;s games &rarr;</a></div>
+  <div class="pass-acts"><button type="button" class="gm-share" id="wk-share" hidden>Share my week</button><a class="gm-again" href="/games">Play today&rsquo;s games &rarr;</a><a class="gm-again" href="/past-games">Past games &rarr;</a></div>
   <p class="pass-note">Days are counted in UTC, as the games count them. Your stamps and streaks are in <a href="/passport">My Passport</a>.</p>
 </section>
 </div>

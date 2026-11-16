@@ -12,6 +12,12 @@ fact that is not in it is taken out.
 - `desc/<slug>.txt`: the entry as it stands (name, type, dates, description). Do NOT repeat it: the reader has just
   read it. Add what it leaves out.
 
+In the campaign of November 2026 (every entry, in waves) you are given one `batch-N.tsv` of the wave's folder: write
+only its entries. A long article is given as its lead and the opening of each section (the file says so in its last
+line): write from what you are given, and do not fill the gaps from memory. For a country, people or long-lived state
+choose what an encyclopedia reader most needs after the description (how it came to be, its main ages, what it is
+now), not a full history.
+
 ## What you write: out/<slug>.json (UTF-8)
 ```
 {

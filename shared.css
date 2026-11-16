@@ -6350,6 +6350,26 @@ html[data-kids="1"] .now-card .now-list { --now-row: 132px; }
 }
 @media print { .now-tabs { display: none; } }
 
+/* ── Level pass (16 Nov 2026; the user: "alignment issues, they should look on level"): things of one row share their
+   edges. Found on tall screenshots of every kind of page and by layout-audit.js LEVEL. ── */
+/* home: the hero is as wide as the sections under it (it was 40 px wider on each side) */
+.home-hero { max-width: 1100px; }
+@media (max-width: 600px) { .home-hero { padding-left: 16px; padding-right: 16px; } }   /* phones: the sections' 16 px, not 24 */
+/* … and the globe's caption stands right under its square (it lay at the foot of the column, 130 px under the globe) */
+@media (min-width: 901px) { .home-globe-on .home-map figcaption { bottom: auto; top: calc(min(100cqw, 100cqh - 30px) + 10px); } }
+@media (min-width: 901px) and (max-width: 1099px) { .home-globe-on .home-map figcaption { top: calc(min(100cqw, 100cqh - 48px) + 10px); } }
+/* home, On This Day: the picture is as tall as the two cards beside it (it stopped 90 px short) */
+@media (min-width: 601px) { .home-section .tih-strip-pic { aspect-ratio: auto; height: 100%; min-height: 252px; } }
+/* home, Song of the Day: the play button stands inside the card, on the line of its link (it hung under the card) */
+@media (min-width: 601px) { .song-day { position: relative; } .song-day > .sd-listen { position: absolute; right: 26px; bottom: 20px; margin: 0; max-width: 46%; background: var(--surface); } }
+/* profiles: the title's rule and the facts reach the page's right edge like everything under them (they stopped at the
+   longest fact, 215 px short on the Roman Empire), the emblem stands level with the title, and At a glance and Did you
+   know? are one height */
+.empire-page .profile-detail-header { align-items: flex-start; }
+.empire-page .profile-detail-header > div { flex: 1 1 auto; min-width: 0; }
+@media (min-width: 821px) { .empire-glance > .empire-dyk { align-self: stretch; } }
+/* home, Born on This Day: two or three tiles fill the row (they stood at the left of four columns) */
+@media (min-width: 701px) { .born-day { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); } }
 /* ── Looks (html[data-skin], Nov 2026): a second attribute beside data-theme that only redefines the colour tokens, so
    every look has a dark and a light side and every [data-theme] rule keeps working. Set before first paint by the head
    snippet from localStorage epoch-skin; with nothing stored the look is seasonal: "winter" from 1 December to 6 January
@@ -6672,7 +6692,33 @@ html[data-kids="1"] .now-card .now-list { --now-row: 132px; }
 .wk-na, .wk-none { color: var(--muted); }
 .wk-sq { display: block; font-size: 11px; letter-spacing: 1px; line-height: 1.4; }
 .wk-link { margin: -6px 0 18px; font-family: var(--font-ui); font-size: 14px; }
-.wk-link a { color: var(--gold); font-weight: 600; text-decoration: none; }
+.wk-link a { color: var(--gold); font-weight: 600; text-decoration: none; display: inline-block; margin-right: 22px; }
+/* Past games (/past-games, 16 Nov 2026): a game picker and a calendar of every day of the chosen daily game */
+.pg-games { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 14px 0 6px; }
+.pg-game { display: grid; grid-template-rows: auto 1fr auto; gap: 3px; min-height: 96px; padding: 12px 14px; text-align: left; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; transition: border-color 0.2s; }
+.pg-game b { font-family: var(--font-ui); font-size: 15px; font-weight: 600; }
+.pg-game span { font-family: var(--font-text); font-size: 15px; line-height: 1.35; color: var(--muted); }
+.pg-game i { font-family: var(--font-ui); font-size: 12px; font-style: normal; font-weight: 600; color: var(--gold); }
+.pg-game:hover, .pg-game:focus-visible { border-color: var(--gold); }
+.pg-game[aria-pressed="true"] { border-color: var(--gold); box-shadow: inset 0 0 0 1px var(--gold); background: rgba(var(--gold-rgb), 0.1); }
+.pg-month { font-family: var(--font-display); font-size: 18px; font-weight: 400; letter-spacing: 0.04em; color: var(--gold-light); margin: 28px 0 10px; }
+.pg-grid { list-style: none; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; margin: 0; padding: 0; }
+.pg-grid li { min-width: 0; }
+.pg-wd { font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: center; padding-bottom: 2px; }
+.pg-day, .pg-off { display: grid; grid-template-rows: auto auto 1fr; align-content: start; gap: 1px; height: 100%; min-height: 76px; padding: 8px 10px; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-ui); text-decoration: none; color: var(--text); }
+.pg-off { border-style: dashed; color: var(--muted); opacity: 0.55; }
+.pg-day { background: var(--surface); transition: border-color 0.2s, transform 0.2s; }
+.pg-day:hover, .pg-day:focus-visible { border-color: var(--gold); transform: translateY(-1px); }
+.pg-d { font-size: 15px; font-weight: 600; }
+.pg-num { font-size: 11px; color: var(--muted); }
+.pg-r { align-self: end; font-size: 13px; font-weight: 600; color: var(--gold); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pg-day.is-done { background: rgba(var(--gold-rgb), 0.14); border-color: rgba(var(--gold-rgb), 0.55); }
+.pg-day.is-done .pg-r::before { content: '\2713\00a0'; }
+.pg-day.is-part { border-style: dashed; border-color: var(--gold); }
+.pg-day.is-today { box-shadow: inset 0 0 0 2px var(--gold); }
+@media (max-width: 900px) { .pg-games { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .pg-grid { gap: 4px; } .pg-day, .pg-off { min-height: 64px; padding: 6px 5px; } .pg-d { font-size: 14px; } .pg-num { font-size: 10px; } .pg-r { font-size: 11px; } .pg-wd { font-size: 10px; letter-spacing: 0; }
+  .pg-game { min-height: 0; padding: 10px 12px; } .pg-game span { display: none; } }
 /* "Print this path": a booklet of the stops, each with its reason and the first sentence of its page (print only) */
 .path-step-lede { display: none; }
 .path-print-row { margin: 14px 0 0; }

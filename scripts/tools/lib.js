@@ -50,5 +50,8 @@ const KINDS = ['/', '/profiles', '/empire/roman-empire', '/culture/nok-culture',
   '/people/', '/people/15th-century', '/paths/', '/paths/silk-road', '/speeches/', '/speeches/lincoln-gettysburg-address', '/songs/',
   '/songs/arirang', '/societies/', '/societies/ancient-rome', '/teachers/', '/research-series', '/essays/who-should-rule',
   '/atlas', '/timeline', '/explorer', '/connections', '/quiz', '/games', '/flashcards', '/race', '/inventions', '/governance', '/faiths',
-  '/write', '/kids', '/passport', '/start', '/search?q=rome', '/about', '/research', '/dataset', '/community', '/contributors', '/contact'];
+  '/write', '/kids', '/passport', '/start', '/search?q=rome', '/about', '/research', '/dataset', '/community', '/contributors', '/contact',
+  '/life/akbar', '/work/angkor-wat', '/ideology/anarchism', '/language/akkadian', '/movement/abolitionism', '/today', '/now', '/advent',
+  '/weekly', '/new', '/compare', '/method', '/corrections', '/support', '/privacy', '/encyclopedia/wars', '/encyclopedia/quotations',
+  '/encyclopedia/dynasties', '/today-in-history/november', '/people/europe', '/teachers/century-10th-century'];
 module.exports = { serve, edge, pw, ROOT, KINDS };

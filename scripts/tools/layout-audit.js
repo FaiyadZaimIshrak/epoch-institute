@@ -41,6 +41,34 @@ const PATHS = argv.filter(a => !a.startsWith('--')); const pages = PATHS.length 
           const ox = Math.min(ra.right, rc.right) - Math.max(ra.left, rc.left), oy = Math.min(ra.bottom, rc.bottom) - Math.max(ra.top, rc.top);
           if (ox > 4 && oy > 4) { out.push('OVERLAP ' + name(a) + ' / ' + name(c) + ' "' + a.textContent.trim().slice(0, 30) + '"'); if (out.length > 40) return out; }
         }
+        // LEVEL: the items of one row (a grid's or a flex row's children) that sit a few pixels off each other, and
+        // cards of one row whose first heading or last line (a button, a link) stand at different heights
+        const kids = c => [...c.children].filter(k => vis(k) && getComputedStyle(k).position !== 'absolute' && getComputedStyle(k).position !== 'fixed');
+        const seen = new Set();
+        for (const c of document.querySelectorAll('main *, footer *, header *, nav *')) {
+          if (!vis(c)) continue; const cs = getComputedStyle(c), grid = /grid/.test(cs.display), flex = /flex/.test(cs.display) && !/column/.test(cs.flexDirection);
+          if (!grid && !flex) continue; const ks = kids(c); if (ks.length < 2) continue;
+          const rs2 = ks.map(k => [k, k.getBoundingClientRect()]).filter(x => !clipped(x[0], x[1]));
+          // rows: items whose vertical extents overlap by more than half of the smaller one
+          const rows = []; for (const x of rs2) { const row = rows.find(r => { const y = r[0][1]; const ov = Math.min(y.bottom, x[1].bottom) - Math.max(y.top, x[1].top); return ov > 0.5 * Math.min(y.height, x[1].height); }); if (row) row.push(x); else rows.push([x]); }
+          for (const row of rows) { if (row.length < 2) continue;
+            const tops = row.map(x => x[1].top), bots = row.map(x => x[1].bottom), hs = row.map(x => x[1].height);
+            const dT = Math.max(...tops) - Math.min(...tops), dB = Math.max(...bots) - Math.min(...bots), dH = Math.max(...hs) - Math.min(...hs);
+            const key = name(c);
+            if (dT >= 1.5 && dT <= 8 && dH < 3 && !seen.has('T' + key)) { seen.add('T' + key); out.push('LEVEL tops ' + dT.toFixed(1) + 'px in ' + key + ' (' + name(row[0][0]) + ')'); }
+            const centred = /center/.test(cs.alignItems);
+            if (!centred && cs.alignItems !== 'baseline' && dT < 1.5 && dB >= 1.5 && dB <= 8 && !seen.has('B' + key)) { seen.add('B' + key); out.push('LEVEL feet ' + dB.toFixed(1) + 'px in ' + key + ' (' + name(row[0][0]) + ')'); }
+            if (centred && dH >= 3) { const mids = row.map(x => (x[1].top + x[1].bottom) / 2), dM = Math.max(...mids) - Math.min(...mids); if (dM >= 1.5 && dM <= 8 && !seen.has('M' + key)) { seen.add('M' + key); out.push('LEVEL middles ' + dM.toFixed(1) + 'px in ' + key + ' (' + name(row[0][0]) + ')'); } }
+            // cards: the same kind of box side by side
+            const cls = row[0][0].className; if (typeof cls !== 'string' || !cls || !row.every(x => x[0].className === cls && x[0].children.length > 1) || row[0][1].height < 60) continue;
+            if (dH >= 3 && dT < 1.5 && grid && !seen.has('H' + key)) { seen.add('H' + key); out.push('LEVEL card heights ' + dH.toFixed(0) + 'px in ' + key + ' (' + name(row[0][0]) + ')'); }
+            const hOff = row.map(x => { const h = x[0].querySelector('h1,h2,h3,h4,strong,b'); return h && vis(h) ? h.getBoundingClientRect().top - x[1].top : null; }).filter(v => v !== null);
+            if (hOff.length === row.length) { const d = Math.max(...hOff) - Math.min(...hOff); if (d >= 2 && !seen.has('h' + key)) { seen.add('h' + key); out.push('LEVEL headings ' + d.toFixed(0) + 'px apart in ' + key + ' (' + name(row[0][0]) + ')'); } }
+            const fOff = row.map(x => { const l = [...x[0].querySelectorAll('a,button,.btn')].filter(e => vis(e) && e !== x[0]).pop() || (vis(x[0].lastElementChild || x[0]) ? x[0].lastElementChild : null); return l ? x[1].bottom - l.getBoundingClientRect().bottom : null; }).filter(v => v !== null);
+            if (fOff.length === row.length && dH < 3) { const d = Math.max(...fOff) - Math.min(...fOff); if (d >= 3 && !seen.has('f' + key)) { seen.add('f' + key); out.push('LEVEL last lines ' + d.toFixed(0) + 'px apart in ' + key + ' (' + name(row[0][0]) + ')'); } }
+          }
+          if (out.length > 60) break;
+        }
         for (const im of document.images) if (im.complete && im.naturalWidth === 0 && im.getAttribute('src') && vis(im)) out.push('IMG ' + im.getAttribute('src').slice(0, 80));
         return out;
       });

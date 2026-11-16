@@ -1956,7 +1956,7 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 }
 :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="submit"], [type="button"], [type="reset"], [type="color"], [type="hidden"], [type="image"], [type="file"]), select, textarea):not(:focus) { border-color: var(--field-border); }
 .wk-link { margin: -6px 0 18px; font-family: var(--font-ui); font-size: 14px; }
-.wk-link a { color: var(--gold); font-weight: 600; text-decoration: none; }
+.wk-link a { color: var(--gold); font-weight: 600; text-decoration: none; display: inline-block; margin-right: 22px; }
 @media print {
 .path-print-row, .paths-page .ref-crumbs, .paths-page .enc-article-foot, .paths-page .page-share-row, .paths-page .next-read { display: none !important; }
 .path-step { break-inside: avoid; border-color: #ccc !important; background: #fff !important; }

@@ -2650,6 +2650,30 @@ back (the newsletter sent weekly, /today as the habit, "Was this useful?"); be f
 - Still to come, in the plan's order: V4, V6, V7, C1 for the remaining entries, C5 DOIs, C6 coverage report (not
   under /method/: that is a file; done as the table of /method#coverage, make-method.js), C7, E1, E2, E4, E5, R1-R5.
 
+## Site round of 16 Nov 2026 (plan file: level layout, past games, every entry in full, more of everything, verified)
+The user: "check the whole website; fix alignment issues, they should look on level; make a separate path to access past
+games; expand the texts of all entries; expand the database overall; verify the data; other beautification". Answers: ALL
+entries with a confirmed article (about 26,600) told in more detail, in waves; every wing grown; past games as a calendar.
+- **Level pass (A):** layout-audit.js gained LEVEL lines (items of one grid or flex row a few pixels off each other;
+  cards of a row whose headings or last lines stand at different heights; most of what it lists is columns of unequal
+  content, so read it, do not chase zero) and lib.js KINDS the newer kinds of page. Tall screenshots are taken with the
+  scratchpad's snap.js (consent answered, reveals shown; paths from Git Bash need MSYS_NO_PATHCONV=1). Fixed in the
+  "Level pass" block of shared.css (before Looks): the home hero is as wide as the sections under it (1100 px; 16 px
+  sides on phones), the globe's caption stands right under its square, the On This Day picture is as tall as its row, the
+  Song of the Day's play button sits inside the card, Born on This Day's tiles fill the row; on profiles the title's rule
+  and the facts reach the right edge, the emblem stands level with the title, At a glance and Did you know? are one height.
+- **Past games (B):** /past-games (hand page, noindex; scripts/tools/make-past-games.js writes it from /weekly's head:
+  re-run it when the head snippets change; .htaccess, deploy.sh PAGES, split-css HAND, SEARCH_PAGES, Play menu, footer,
+  lobby, /weekly, /today): pick one of the eight daily games, then a day of its calendar (Monday first, newest month
+  first; a played day shows its result from epoch-games, as /weekly reads it). A day opens /games#<game>-<n>
+  (#first-daily-9, #conn-12, #cross-3, #said-5, #songq-2, #six-4, #cipher-1, #line-1): games.js openHash puts the number
+  in WANT[game] and each game deals through pastFirst(game, picker, today's number, load), also from its own "earlier
+  puzzles" picker; EARLIER[game] lets the plain address go back to today's. An earlier puzzle is now KEPT under its own
+  number like today's (it was "practice", never saved), so the calendar, My Week and My Passport see it; only today's
+  counts for a run of days. The Daily Ten deals DDAY (today or the day asked for). The daily quiz is not in the archive:
+  it keeps only today's round and a previewed day (?quizday=) would overwrite it. games.js?v=22;
+  scripts/tests/past-games.js (41 checks).
+
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
 - (Done 7 Nov 2026) The ladders' MISSING lines: entries written (A7 waves 3-4 and a7m), then 327 of them put on their

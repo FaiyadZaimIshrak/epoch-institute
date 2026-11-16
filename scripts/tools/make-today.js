@@ -45,7 +45,7 @@ const body = `</head>
   <h2 class="ref-sec-title" id="td-games-t">Today&rsquo;s quiz and games <span class="n" id="td-done"></span></h2>
   <p class="now-note">The same for everyone, new each day (UTC). Your results are kept in this browser only. <span id="td-run"></span>.</p>
   <ul class="td-games" id="td-games"><li><a class="td-game" href="/games"><span class="td-game-n">History Games</span><span class="td-game-d">The daily games and the rest</span><span class="td-game-s">Play &rarr;</span></a></li></ul>
-  <p class="now-note"><a href="/weekly">Your week of daily games &rarr;</a> <a href="/passport">My Passport &rarr;</a></p>
+  <p class="now-note"><a href="/weekly">Your week of daily games &rarr;</a> <a href="/past-games">Past games &rarr;</a> <a href="/passport">My Passport &rarr;</a></p>
 </section>
 
 <section class="now-sec" id="td-song-sec" aria-labelledby="td-song-t">

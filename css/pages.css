@@ -2881,6 +2881,11 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 @media print {
 .page-toc { display: none; }
 }
+.empire-page .profile-detail-header { align-items: flex-start; }
+.empire-page .profile-detail-header > div { flex: 1 1 auto; min-width: 0; }
+@media (min-width: 821px) {
+.empire-glance > .empire-dyk { align-self: stretch; }
+}
 :root[data-skin="winter"]:not([data-kids="1"]) {
   --bg: #0a1320; --surface: #101c2c; --border: #24384e; --field-border: #5f7a94; --text: #e6edf3; --muted: #94a6b8;
   --gold: #d4b55c; --gold-light: #efd48c; --gold-rgb: 212,181,92; --gold-light-rgb: 239,212,140;

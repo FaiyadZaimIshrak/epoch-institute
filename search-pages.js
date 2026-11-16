@@ -43,6 +43,7 @@ var SEARCH_PAGES = [
 ["Your Birthday in History","/today-in-history/#birthday","page","birthday|my birthday|born on this day|what happened on my birthday|day i was born"],
 ["Advent Calendar of History","/advent","page","advent|advent calendar|christmas calendar|december doors|24 doors"],
 ["My Week of Games","/weekly","page","my week|weekly|week of games|daily games results"],
+["Past Games","/past-games","page","past games|earlier puzzles|previous puzzles|archive|games archive|yesterday's puzzle|old puzzles|play past days"],
 ["My Passport","/passport","page","passport|my history|stamps|my reading|my timeline|reading history"],
 ["Today in History","/today-in-history/","page","today in history|on this day|this day in history|anniversaries"],
 ["Encyclopedia","/encyclopedia/","page","encyclopedia|a-z|entries"],
