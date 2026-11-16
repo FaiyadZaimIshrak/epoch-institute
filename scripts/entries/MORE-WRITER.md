@@ -15,7 +15,9 @@ What matters most:
   different subject than the entry (a namesake, a broader thing, the modern country for a historical region), skip and
   say so.
 - 260-420 words in all (aim for 380; do not draft long and trim), two or three sections, headings only from the guide's
-  list (never "Death and legacy" unless the person's death is told), each paragraph 40-110 words.
+  list (never "Death and legacy" unless the person's death is told; "Reign" only for a monarch, "In office" for a
+  president, prime minister or party leader), each paragraph 40-110 words. No doubled punctuation ("U.S..", ",,") and
+  not the bare words "undefined" or "NaN": the site's crawl reads them as slips.
 - History, not current affairs: no assessment of present governments or leaders, no rankings or indices, nothing "as
   of", no events of the last ten years beyond a bare dated fact. "The place today" is two to four sentences of lasting
   facts.

@@ -49,7 +49,8 @@ folder: other writers are working in it at the same time.
 ```
 - Three sections (two if the article supports no more), 260-420 words in all, each paragraph 40-110 words.
 - Headings ONLY from this list, chosen to fit the subject, each at most once:
-  - a person: "Early life and background", "Career", "Reign", "Works and ideas", "Death and legacy"
+  - a person: "Early life and background", "Career", "Reign" (monarchs only), "In office" (a president, prime
+    minister, party leader or dictator: never "Reign" for them), "Works and ideas", "Death and legacy"
   - an event, war, battle or treaty: "Background", "Course of events", "Terms", "Aftermath and significance"
   - a place: "Setting", "History", "The place today"
   - a people, family, state, army or institution: "Origins", "History", "Organisation and way of life", "Legacy"

@@ -11,7 +11,7 @@ const argv = process.argv.slice(2), dir = argv.find(a => !a.startsWith('--')), W
 const held = [];
 const DROP = new Set(((argv.find(a => a.startsWith('--drop=')) || '').slice(7)).split(',').filter(Boolean));
 if (!dir) { console.error('usage: check-more.js <round dir> [--write] [--drop=…]'); process.exit(1); }
-const HEADS = ['Early life and background', 'Career', 'Reign', 'Works and ideas', 'Death and legacy', 'Background', 'Course of events', 'Terms', 'Aftermath and significance', 'Setting', 'History', 'The place today', 'Origins', 'Organisation and way of life', 'Legacy', 'Contents', 'What it is', 'How it was used', 'Reception and legacy', 'Discovery and study'];
+const HEADS = ['Early life and background', 'Career', 'Reign', 'In office', 'Works and ideas', 'Death and legacy', 'Background', 'Course of events', 'Terms', 'Aftermath and significance', 'Setting', 'History', 'The place today', 'Origins', 'Organisation and way of life', 'Legacy', 'Contents', 'What it is', 'How it was used', 'Reception and legacy', 'Discovery and study'];
 const HYPE = /\b(famous|famously|iconic|fascinating|legendary|renowned|celebrated|remarkable|stunning|magnificent|greatest|incredible|amazing)\b/i;
 const MONTH = 'January|February|March|April|May|June|July|August|September|October|November|December';
 const NOTNAME = new RegExp('^(?:' + MONTH + '|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|BCE|CE|The|In|On|At|By|After|Before|During|Under|From|When|His|Her|Its|Their|This|These|Those|Some|Many|Most|Both|Among|Although|While|Since|Later|Early|Modern|Western|Eastern|Northern|Southern)$');
@@ -40,6 +40,9 @@ for (const f of fs.readdirSync(path.join(dir, 'out')).filter(x => x.endsWith('.j
   // the present day (MORE-GUIDE.md): no judgement of present governments, no indices and rankings, no "as of"
   const pd = t.match(/\bas of\b|\bauthoritarian (?:regime|system|state|government)|\bdictator(?:ship)?\b(?=[^.]*\b(?:is|remains|current|today)\b)|Freedom House|\bnot free\b|democratic backsliding|approval rating|by nominal GDP|\b(?:largest|biggest) economy\b|\b(?:ranked|ranks) \w+(?:-\w+)? (?:in|on|by|among)\b|\b(?:corruption|democracy|press freedom|human development) index\b/i); if (pd) out.push('present-day judgement or ranking: ' + pd[0]);
   const meta = t.match(/\b(?:the|this|its) (?:Wikipedia )?(?:article|entry|source file|excerpt)\b|\bWikipedia\b/i); if (meta) out.push('speaks of its source: ' + meta[0]);
+  // what the site's strict crawl stops a deploy on (a template's leftovers) or lists (doubled punctuation): "Its boundaries
+  // were undefined" passed here and failed there (wave 17)
+  const lo = txt.map(p => (p.match(/\b(?:undefined|NaN)\b|\[object |[^.]\.\.(?!\.)|,,|\s[,;:](?:\s|$)|\s\.(?:\s|$)|\s{2,}/) || [])[0]).filter(Boolean); if (lo.length) out.push('reword (the crawl reads it as a slip): "' + lo[0].trim() + '"');
   const late = [...t.matchAll(/\b20(1[6-9]|[2-9]\d)\b/g)].length; if (late > 2) out.push(late + ' years after 2015: is this history?');
   if (e) for (const sen of e.desc.split(/(?<=[a-z0-9)]\.)\s+(?=[A-Z])/)) if (sen.length > 60 && t.includes(sen)) out.push('repeats the description: ' + sen.slice(0, 50));
   const af = path.join(dir, 'wp', slug + '.txt');
