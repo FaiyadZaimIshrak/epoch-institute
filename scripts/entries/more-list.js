@@ -38,13 +38,18 @@ const words = t => (t.match(/\S+/g) || []).length;
 const SKIPSEC = /^(see also|references|notes|footnotes|citations|sources|bibliography|further reading|external links|gallery|works cited|explanatory notes|in popular culture|in fiction|filmography|discography)$/i;
 function excerpt(art) {
   const lines = art.split('\n'), head = lines.slice(0, 3).join('\n'), body = lines.slice(3).join('\n');
-  if (words(body) <= 3500) return art;
-  const parts = body.split(/\n(?=== [^=])/), out = []; let total = 0;
+  if (words(body) <= 4500) return art;
+  // sections AND sub-sections each give their opening (until 16 Nov 2026 only the top-level ones did: a History of
+  // seven sub-sections came through as its first sub-section alone, and the writers had the later ages from the lead only)
+  const CAP = 4500, parts = body.split(/\n(?====? [^=])/), out = []; let total = 0;
   const take = (text, max) => { const ps = text.split(/\n+/).filter(p => p.trim()); let n = 0, keep = []; for (const p of ps) { if (/^=+ .* =+$/.test(p.trim())) { keep.push(p); continue; } const w = words(p); if (n && n + w > max) break; keep.push(p); n += w; if (n >= max) break; } return [keep.join('\n\n'), n]; };
   const lead = take(parts[0], 800); out.push(lead[0]); total += lead[1];
-  const secs = parts.slice(1).filter(s => !SKIPSEC.test((s.match(/^== (.*?) ==/) || [])[1] || ''));
-  const each = Math.max(120, Math.min(450, Math.floor((3500 - total) / Math.max(1, secs.length))));
-  for (const s of secs) { if (total >= 3500) break; const t = take(s, each); out.push(t[0]); total += t[1]; }
+  let skipping = false; const secs = [];
+  for (const s of parts.slice(1)) { const m = s.match(/^(===?) (.*?) ===?/); if (m && m[1] === '==') skipping = SKIPSEC.test(m[2]); if (!skipping) secs.push(s); }
+  // every section gives at least its first paragraph, however many there are: an article of sixty sections once lost
+  // its History, which stood after the cap
+  const each = Math.max(40, Math.min(400, Math.floor((CAP - total) / Math.max(1, secs.length))));
+  for (const s of secs) { const t = take(s, each); out.push(t[0]); total += t[1]; }
   return head + '\n' + out.join('\n\n') + '\n\n[The article continues: this is its lead and the opening of each section.]\n';
 }
 if (cmd === 'ledger') {

@@ -2695,7 +2695,22 @@ entries with a confirmed article (about 26,600) told in more detail, in waves; e
     Trump and Obama with a "Death and legacy" section: removed); a writer edits only its own batch's files (one ran a
     fixer over the whole out folder and cut other writers' sentences at decimal points). check-more.js flags
     present-day judgements, rankings and more than two years after 2015.
-  - **Done:** more1 (131, 12 Nov), w01 (98 of the 100 best known: countries, capitals, Aristotle, Einstein …).
+  - **A page never contradicts itself (16 Nov):** Wikipedia's article on the Anglo-Saxons had Augustine landing in 595;
+    the entry's 597 was right, and the writer had followed the article. Where an article and the entry (or the article
+    and itself) disagree, the longer text leaves the point out and the notes keep both versions (MORE-WRITER.md, the
+    writers' standing brief; a writer's prompt only names the wave folder and batch). An editing pass over the first
+    five waves took 96 such points out of about 990 texts. The writers' notes are kept in scripts/entries/more-notes/
+    <wave>.tsv ("EDITOR: removed disputed …" lines are the disagreements): the list to work through in the data check,
+    since some of them are the ENTRY's mistake (Christiansborg built by Swedes or Danes; Florida ceded 1819 or 1821).
+    scripts/entries/more-mismatch.tsv lists entries whose confirmed article is another subject (the river Aisne and the
+    department, Quebec City and the province, the Swahili people and the language, French Louisiana and the state,
+    the Ellice Islands and Tuvalu): to go into entry-wikidata-manual.tsv.
+  - **Also learnt:** the checker flags a text that speaks of its source ("the article describes …": 43 of the first 300
+    did); the excerpt gives the opening of every section and sub-section (4,500 words; it had dropped most of a long
+    History); about one text in a hundred is held by the checks and stays short; a build that is stopped must have its
+    powershell process stopped too.
+  - **Done:** more1 (131, 12 Nov), w01-w05 (885: countries, capitals, the best-known people, then A-B of the next
+    rank). 1,016 entries on 16 Nov.
 
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:
