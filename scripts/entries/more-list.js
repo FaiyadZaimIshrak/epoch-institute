@@ -87,4 +87,9 @@ if (cmd === 'ledger') {
     if (have.has(s)) { r.state = 'done'; r.words = o && o.sections ? words(o.sections.map(x => x.p.join(' ')).join(' ')) : r.words; } else if (o && o.skip) r.state = 'thin'; else r.state = 'held';
     r.wave = name; c[r.state]++; }
   writeLedger(m); console.log(name + ': done ' + c.done + ', thin ' + c.thin + ', held ' + c.held);
-} else { console.error('usage: more-list.js ledger | fetch <count> | wave <dir> <count> | close <dir>'); process.exit(1); }
+} else if (cmd === 'notes') {   // the writers' notes of a wave into scripts/entries/more-notes/<wave>.tsv, for the data check
+  const dir = a1, name = path.basename(dir), L = ['# slug\tthe writer\'s notes (doubts; where the article disagrees with the entry): for the data check'];
+  for (const [s] of rows(path.join(dir, 'list.tsv'))) { let o = null; try { o = JSON.parse(fs.readFileSync(path.join(dir, 'out', s + '.json'), 'utf8')); } catch (e) { continue; }
+    const t = [].concat(o.skip ? 'SKIPPED: ' + o.skip : [], o.notes || []).join(' ').replace(/\s+/g, ' ').trim(); if (t) L.push(s + '\t' + t); }
+  fs.writeFileSync(path.join(R, 'scripts', 'entries', 'more-notes', name + '.tsv'), L.join('\n') + '\n'); console.log(name + ': ' + (L.length - 1) + ' notes');
+} else { console.error('usage: more-list.js ledger | fetch <count> | wave <dir> <count> | close <dir> | notes <dir>'); process.exit(1); }
