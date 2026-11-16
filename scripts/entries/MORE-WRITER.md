@@ -28,7 +28,9 @@ What matters most:
   The same where the article contradicts itself.
 - Dates day-first, BCE/CE, no hype words, plain prose, no lists or Markdown. Hedge where the article hedges.
 - Edit ONLY the out files of your own 20 slugs, one at a time with your file tools. Never run a script over the whole
-  out folder, and stop no process you did not start.
+  out folder, and stop no process you did not start. If you write a helper script, name it after your wave and batch
+  (`w09-b3-fix.js`): other writers share the scratch folder, and a script called `fix.js` has been overwritten by
+  another writer's.
 
 When all are written, check your batch and fix what is flagged, repeating until clean (never with --write):
 
