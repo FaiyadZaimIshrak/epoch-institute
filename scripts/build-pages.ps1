@@ -5019,14 +5019,14 @@ $wb = New-Object Text.StringBuilder(30000)
 [void]$wb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">What&#8217;s new</h1><p class="ref-lede">What the Institute has added and changed, newest first, with the smaller changes of each week in a line, and how many pages appeared in the last 30 days. Follow it with the <a href="/whats-new.xml">feed</a>.</p></header>' + "`n")
 if ($wnNotes.Count) {
   [void]$wb.Append('<section class="wn-notes" aria-labelledby="wn-notes-t"><h2 class="ref-sec-title" id="wn-notes-t">Release notes</h2><ol class="wn-list">')
-  $wnSmall = @{}; foreach ($n in $wnNotes) { if ($n.k -ne 'feature') { $wk = WnWeek $n.d; if (-not $wnSmall.ContainsKey($wk)) { $wnSmall[$wk] = @{} }; $wnSmall[$wk][$n.k] = 1 } }
+  $wnSmall = @{}; foreach ($n in $wnNotes) { if ($n.k -ne 'feature') { $wnWk = WnWeek $n.d; if (-not $wnSmall.ContainsKey($wnWk)) { $wnSmall[$wnWk] = @{} }; $wnSmall[$wnWk][$n.k] = 1 } }
   $wnDone = @{}
   foreach ($n in $wnNotes) {
     if ($n.k -ne 'feature') {   # the week's one general line, where its newest smaller change stands
-      $wk = WnWeek $n.d; if ($wnDone.ContainsKey($wk)) { continue }; $wnDone[$wk] = 1
-      $parts = @(); if ($wnSmall[$wk].ContainsKey('minor')) { $parts += 'content additions and improvements across the site' }; if ($wnSmall[$wk].ContainsKey('fix')) { $parts += 'corrections and bug fixes' }
-      $sm = ($parts -join '; '); $sm = $sm.Substring(0, 1).ToUpper() + $sm.Substring(1) + '.'
-      [void]$wb.Append('<li class="wn-note wn-small"><p class="wn-d">Week of <time datetime="' + $wk + '">' + (WnDate $wk) + '</time></p><h3 class="wn-t">Smaller changes</h3><p class="wn-s">' + (Hx $sm) + '</p></li>')
+      $wnWk = WnWeek $n.d; if ($wnDone.ContainsKey($wnWk)) { continue }; $wnDone[$wnWk] = 1
+      $wnParts = @(); if ($wnSmall[$wnWk].ContainsKey('minor')) { $wnParts += 'content additions and improvements across the site' }; if ($wnSmall[$wnWk].ContainsKey('fix')) { $wnParts += 'corrections and bug fixes' }
+      $wnSmTxt = ($wnParts -join '; '); $wnSmTxt = $wnSmTxt.Substring(0, 1).ToUpper() + $wnSmTxt.Substring(1) + '.'
+      [void]$wb.Append('<li class="wn-note wn-small"><p class="wn-d">Week of <time datetime="' + $wnWk + '">' + (WnDate $wnWk) + '</time></p><h3 class="wn-t">Smaller changes</h3><p class="wn-s">' + (Hx $wnSmTxt) + '</p></li>')
       continue
     }
     $lk = @(($n.l -split ' ; ') | Where-Object { $_ -match '\|' } | ForEach-Object { $q = $_ -split '\|', 2; '<a href="' + (Hx $q[1].Trim()) + '">' + (Hx $q[0].Trim()) + '</a>' })

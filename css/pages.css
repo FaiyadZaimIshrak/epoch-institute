@@ -1813,13 +1813,11 @@ html[data-kids="1"] .page-useful { display: none; }
 .wn-s { margin: 0; font-family: var(--font-text); font-size: 17px; line-height: 1.6; }
 .wn-links { margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; }
 .wn-links a { color: var(--gold); }
-.wn-sec { font-family: var(--font-display); font-size: 19px; color: var(--gold-light); margin: 22px 0 8px; }
-.wn-plist { margin: 0; padding: 0 0 0 18px; columns: 2 300px; column-gap: 32px; font-family: var(--font-text); font-size: 16px; line-height: 1.7; }
-.wn-plist li { break-inside: avoid; }
-.wn-plist a { color: var(--gold); text-decoration-color: rgba(var(--gold-rgb), 0.45); }
-.wn-plist a:hover { color: var(--gold-light); }
-.wn-plist span { font-family: var(--font-ui); font-size: 12px; color: var(--muted); }
-.wn-more { font-family: var(--font-ui); font-size: 14px; color: var(--muted); }
+.wn-note.wn-small { border-left-color: var(--border); background: transparent; padding: 10px 20px; }
+.wn-small .wn-t { font-size: 16px; color: var(--muted); margin: 2px 0 2px; }
+.wn-small .wn-s { font-size: 15px; color: var(--muted); }
+.wn-counts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: var(--font-ui); font-size: 15px; }
+.wn-counts .n { font-weight: 700; color: var(--gold); }
 .paths-wrap > .ref-crumbs { max-width: 860px; margin-left: auto; margin-right: auto; }
 .path-tagline { font-family: var(--font-text); font-size: 20px; font-style: italic; color: var(--muted); margin: 0 0 10px; }
 .atl-viewtog { display: inline-flex; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
