@@ -42,7 +42,7 @@ for (const f of fs.readdirSync(path.join(dir, 'out')).filter(x => x.endsWith('.j
   const meta = t.match(/\b(?:the|this|its) (?:Wikipedia )?(?:article|entry|source file|excerpt)\b|\bWikipedia\b/i); if (meta) out.push('speaks of its source: ' + meta[0]);
   // what the site's strict crawl stops a deploy on (a template's leftovers) or lists (doubled punctuation): "Its boundaries
   // were undefined" passed here and failed there (wave 17)
-  const lo = txt.map(p => (p.match(/\b(?:undefined|NaN)\b|\[object |[^.]\.\.(?!\.)|,,|\s[,;:](?:\s|$)|\s\.(?:\s|$)|\s{2,}/) || [])[0]).filter(Boolean); if (lo.length) out.push('reword (the crawl reads it as a slip): "' + lo[0].trim() + '"');
+  const lo = txt.map(p => (p.match(/\b(?:undefined|NaN)\b|\[object |[^.]\.\.(?!\.)|,,|,\.|\s[,;:](?:\s|$)|\s\.(?:\s|$)|\s{2,}/) || [])[0]).filter(Boolean); if (lo.length) out.push('reword (the crawl reads it as a slip): "' + lo[0].trim() + '"');
   const late = [...t.matchAll(/\b20(1[6-9]|[2-9]\d)\b/g)].length; if (late > 2) out.push(late + ' years after 2015: is this history?');
   if (e) for (const sen of e.desc.split(/(?<=[a-z0-9)]\.)\s+(?=[A-Z])/)) if (sen.length > 60 && t.includes(sen)) out.push('repeats the description: ' + sen.slice(0, 50));
   const af = path.join(dir, 'wp', slug + '.txt');
