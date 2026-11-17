@@ -5020,18 +5020,22 @@ $wb = New-Object Text.StringBuilder(30000)
 if ($wnNotes.Count) {
   [void]$wb.Append('<section class="wn-notes" aria-labelledby="wn-notes-t"><h2 class="ref-sec-title" id="wn-notes-t">Release notes</h2><ol class="wn-list">')
   $wnSmall = @{}; foreach ($n in $wnNotes) { if ($n.k -ne 'feature') { $wnWk = WnWeek $n.d; if (-not $wnSmall.ContainsKey($wnWk)) { $wnSmall[$wnWk] = @{} }; $wnSmall[$wnWk][$n.k] = 1 } }
-  $wnDone = @{}
+  $wnDone = @{}; $wnCur = ''
+  # the week's one general line stands after that week's features (when the list moves on to an older week, and at the end)
+  function WnSmallLine([string]$wk) {
+    if (-not $wk -or -not $wnSmall.ContainsKey($wk) -or $wnDone.ContainsKey($wk)) { return '' }; $wnDone[$wk] = 1
+    $pp = @(); if ($wnSmall[$wk].ContainsKey('minor')) { $pp += 'content additions and improvements across the site' }; if ($wnSmall[$wk].ContainsKey('fix')) { $pp += 'corrections and bug fixes' }
+    $tx = ($pp -join '; '); $tx = $tx.Substring(0, 1).ToUpper() + $tx.Substring(1) + '.'
+    '<li class="wn-note wn-small"><p class="wn-d">Week of <time datetime="' + $wk + '">' + (WnDate $wk) + '</time></p><h3 class="wn-t">Smaller changes</h3><p class="wn-s">' + (Hx $tx) + '</p></li>'
+  }
   foreach ($n in $wnNotes) {
-    if ($n.k -ne 'feature') {   # the week's one general line, where its newest smaller change stands
-      $wnWk = WnWeek $n.d; if ($wnDone.ContainsKey($wnWk)) { continue }; $wnDone[$wnWk] = 1
-      $wnParts = @(); if ($wnSmall[$wnWk].ContainsKey('minor')) { $wnParts += 'content additions and improvements across the site' }; if ($wnSmall[$wnWk].ContainsKey('fix')) { $wnParts += 'corrections and bug fixes' }
-      $wnSmTxt = ($wnParts -join '; '); $wnSmTxt = $wnSmTxt.Substring(0, 1).ToUpper() + $wnSmTxt.Substring(1) + '.'
-      [void]$wb.Append('<li class="wn-note wn-small"><p class="wn-d">Week of <time datetime="' + $wnWk + '">' + (WnDate $wnWk) + '</time></p><h3 class="wn-t">Smaller changes</h3><p class="wn-s">' + (Hx $wnSmTxt) + '</p></li>')
-      continue
-    }
+    $wnWk = WnWeek $n.d; if ($wnCur -and $wnWk -lt $wnCur) { [void]$wb.Append((WnSmallLine $wnCur)) }; if (-not $wnCur -or $wnWk -lt $wnCur) { $wnCur = $wnWk }
+    if ($n.k -ne 'feature') { continue }
     $lk = @(($n.l -split ' ; ') | Where-Object { $_ -match '\|' } | ForEach-Object { $q = $_ -split '\|', 2; '<a href="' + (Hx $q[1].Trim()) + '">' + (Hx $q[0].Trim()) + '</a>' })
     [void]$wb.Append('<li class="wn-note"><p class="wn-d"><time datetime="' + $n.d + '">' + (WnDate $n.d) + '</time></p><h3 class="wn-t">' + (Hx $n.t) + '</h3><p class="wn-s">' + (Hx $n.s) + '</p>' + $(if ($lk.Count) { '<p class="wn-links">' + ($lk -join ' ') + '</p>' } else { '' }) + '</li>')
   }
+  [void]$wb.Append((WnSmallLine $wnCur))
+  foreach ($wnWk2 in @($wnSmall.Keys | Sort-Object -Descending)) { [void]$wb.Append((WnSmallLine $wnWk2)) }   # a week left out by notes out of order
   [void]$wb.Append("</ol></section>`n")
 }
 $wnTotal = 0; foreach ($g in $wnGrp.Values) { $wnTotal += $g.Count }
