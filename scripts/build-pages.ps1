@@ -4993,7 +4993,10 @@ $fsFile = "$PSScriptRoot\first-seen.tsv"; $FSEEN = @{}; $fsSeed = -not (Test-Pat
 if (-not $fsSeed) { foreach ($l in [IO.File]::ReadAllLines($fsFile, $U8)) { $c = $l -split "`t"; if ($c.Count -ge 2) { $FSEEN[$c[0]] = $c[1] } } }
 foreach ($p in $SMNEW.Keys) { if (-not $FSEEN.ContainsKey($p)) { $FSEEN[$p] = $(if ($fsSeed) { '' } else { $TODAY }) } }
 [IO.File]::WriteAllLines($fsFile, [string[]]@($FSEEN.Keys | Sort-Object | ForEach-Object { $_ + "`t" + $FSEEN[$_] }), $U8)
-$wnNotes = @(); if (Test-Path "$PSScriptRoot\whats-new.tsv") { foreach ($l in [IO.File]::ReadAllLines("$PSScriptRoot\whats-new.tsv", $U8)) { if (-not $l -or $l.StartsWith('#')) { continue }; $c = $l -split "`t"; if ($c.Count -ge 3) { $wnNotes += [pscustomobject]@{ d = $c[0]; t = $c[1]; s = $c[2]; l = $(if ($c.Count -ge 4) { $c[3] } else { '' }) } } } }
+$wnNotes = @(); if (Test-Path "$PSScriptRoot\whats-new.tsv") { foreach ($l in [IO.File]::ReadAllLines("$PSScriptRoot\whats-new.tsv", $U8)) { if (-not $l -or $l.StartsWith('#')) { continue }; $c = $l -split "`t"; if ($c.Count -ge 3) { $wnNotes += [pscustomobject]@{ d = $c[0]; t = $c[1]; s = $c[2]; l = $(if ($c.Count -ge 4) { $c[3] } else { '' }); k = $(if ($c.Count -ge 5 -and $c[4].Trim()) { $c[4].Trim() } else { 'feature' }) } } } }
+# 17 Nov 2026 (the user: the slightest changes not reported, or only in general terms): a "minor" (content added to or
+# improved in what exists) or "fix" note is never shown on its own; each week with any gets one general line instead
+function WnWeek([string]$d) { $x = [datetime]::ParseExact($d, 'yyyy-MM-dd', $INV); $x.AddDays(-(([int]$x.DayOfWeek + 6) % 7)).ToString('yyyy-MM-dd') }
 $wnCut = ([datetime]::ParseExact($TODAY, 'yyyy-MM-dd', $INV)).AddDays(-30).ToString('yyyy-MM-dd')
 $WNSEC = [ordered]@{ '/encyclopedia/' = 'Encyclopedia entries'; '/songs/' = 'Songs'; '/empire/' = 'Profiles'; '/culture/' = 'Profiles'; '/religion/' = 'Profiles'; '/language/' = 'Profiles'; '/movement/' = 'Profiles'; '/government/' = 'Profiles'; '/ideology/' = 'Profiles'; '/work/' = 'Profiles'; '/life/' = 'Profiles'; '/state/' = 'States'; '/years/' = 'Years'; '/teachers/' = "Teachers' Corner"; '/essays/' = 'Essays'; '/paths/' = 'Reading paths'; '/speeches/' = 'Speeches'; '/societies/' = 'Social ladders' }
 $wnGrp = [ordered]@{}
@@ -5013,10 +5016,19 @@ function WnDate([string]$d) { ([datetime]::ParseExact($d, 'yyyy-MM-dd', $INV)).T
 $crumb = Crumbs @(@('Home', '/'), @("What's new", $null))
 $wb = New-Object Text.StringBuilder(30000)
 [void]$wb.Append('<main id="main" class="wn-page ref-page">' + "`n<div class=`"wn-wrap`">`n" + $crumb[0] + "`n")
-[void]$wb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">What&#8217;s new</h1><p class="ref-lede">What the Institute has added and changed, newest first, and every page that appeared in the last 30 days. Follow it with the <a href="/whats-new.xml">feed</a>.</p></header>' + "`n")
+[void]$wb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">What&#8217;s new</h1><p class="ref-lede">What the Institute has added and changed, newest first, with the smaller changes of each week in a line, and how many pages appeared in the last 30 days. Follow it with the <a href="/whats-new.xml">feed</a>.</p></header>' + "`n")
 if ($wnNotes.Count) {
   [void]$wb.Append('<section class="wn-notes" aria-labelledby="wn-notes-t"><h2 class="ref-sec-title" id="wn-notes-t">Release notes</h2><ol class="wn-list">')
+  $wnSmall = @{}; foreach ($n in $wnNotes) { if ($n.k -ne 'feature') { $wk = WnWeek $n.d; if (-not $wnSmall.ContainsKey($wk)) { $wnSmall[$wk] = @{} }; $wnSmall[$wk][$n.k] = 1 } }
+  $wnDone = @{}
   foreach ($n in $wnNotes) {
+    if ($n.k -ne 'feature') {   # the week's one general line, where its newest smaller change stands
+      $wk = WnWeek $n.d; if ($wnDone.ContainsKey($wk)) { continue }; $wnDone[$wk] = 1
+      $parts = @(); if ($wnSmall[$wk].ContainsKey('minor')) { $parts += 'content additions and improvements across the site' }; if ($wnSmall[$wk].ContainsKey('fix')) { $parts += 'corrections and bug fixes' }
+      $sm = ($parts -join '; '); $sm = $sm.Substring(0, 1).ToUpper() + $sm.Substring(1) + '.'
+      [void]$wb.Append('<li class="wn-note wn-small"><p class="wn-d">Week of <time datetime="' + $wk + '">' + (WnDate $wk) + '</time></p><h3 class="wn-t">Smaller changes</h3><p class="wn-s">' + (Hx $sm) + '</p></li>')
+      continue
+    }
     $lk = @(($n.l -split ' ; ') | Where-Object { $_ -match '\|' } | ForEach-Object { $q = $_ -split '\|', 2; '<a href="' + (Hx $q[1].Trim()) + '">' + (Hx $q[0].Trim()) + '</a>' })
     [void]$wb.Append('<li class="wn-note"><p class="wn-d"><time datetime="' + $n.d + '">' + (WnDate $n.d) + '</time></p><h3 class="wn-t">' + (Hx $n.t) + '</h3><p class="wn-s">' + (Hx $n.s) + '</p>' + $(if ($lk.Count) { '<p class="wn-links">' + ($lk -join ' ') + '</p>' } else { '' }) + '</li>')
   }
@@ -5025,17 +5037,16 @@ if ($wnNotes.Count) {
 $wnTotal = 0; foreach ($g in $wnGrp.Values) { $wnTotal += $g.Count }
 [void]$wb.Append('<section class="wn-pages" aria-labelledby="wn-pages-t"><h2 class="ref-sec-title" id="wn-pages-t">New pages in the last 30 days <span class="n">' + $wnTotal.ToString('N0', $INV) + '</span></h2>')
 if (-not $wnTotal) { [void]$wb.Append('<p>The list starts with the next pages to appear: the Institute began keeping the day each page first appeared on ' + (WnDate '2026-11-02') + '.</p>') }
-foreach ($sec in $wnGrp.Keys) {
-  $ps = $wnGrp[$sec]; $show = @($ps | Select-Object -First 60)
-  [void]$wb.Append('<h3 class="wn-sec">' + (Hx $sec) + ' <span class="n">' + $ps.Count.ToString('N0', $INV) + '</span></h3><ul class="wn-plist">' + (($show | ForEach-Object { '<li><a href="' + (Hx $_) + '">' + (Hx (WnTitle $_)) + '</a> <span>' + (WnDate $FSEEN[$_]) + '</span></li>' }) -join '') + '</ul>' + $(if ($ps.Count -gt 60) { '<p class="wn-more">and ' + ($ps.Count - 60).ToString('N0', $INV) + ' more</p>' } else { '' }))
-}
+# counts by section only (17 Nov 2026: single new pages are not announced one by one)
+if ($wnTotal) { [void]$wb.Append('<ul class="wn-counts">' + (($wnGrp.Keys | ForEach-Object { '<li><span class="n">' + $wnGrp[$_].Count.ToString('N0', $INV) + '</span> ' + (Hx $_) + '</li>' }) -join '') + '</ul>') }
 [void]$wb.Append("</section>`n</div>`n</main>`n")
-$wnDesc = 'What is new at The Epoch Institute: release notes, newest first, and every page added in the last 30 days, from encyclopedia entries to songs and profiles.'
+$wnDesc = 'What is new at The Epoch Institute: new features and major additions, newest first, with the smaller changes of each week in brief.'
 Emit '/new' (Page @{ title = "What's New — The Epoch Institute"; desc = $wnDesc; path = '/new'; type = 'website'; img = (Poster 'default'); imgW = 1200; imgH = 630; ld = ($crumb[1] + ',{"@type":"WebPage","name":"What' + "'" + 's new","description":' + (Js $wnDesc) + ',"url":' + (Js "$SITE/new") + '}'); nav = 'new'; body = $wb.ToString() })
 # whats-new.xml: the release notes as a feed (guid = the date and title)
 $wx = New-Object Text.StringBuilder
 [void]$wx.Append('<?xml version="1.0" encoding="UTF-8"?>' + "`n" + '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">' + "`n  <channel>`n    <title>The Epoch Institute — What's new</title>`n    <link>$SITE/new</link>`n    <description>What the Institute has added and changed.</description>`n    <language>en-gb</language>`n    <atom:link href=`"$SITE/whats-new.xml`" rel=`"self`" type=`"application/rss+xml`"/>`n")
 foreach ($n in $wnNotes) {
+  if ($n.k -ne 'feature') { continue }   # the feed carries the features only
   $first = @(($n.l -split ' ; ') | Where-Object { $_ -match '\|' } | ForEach-Object { ($_ -split '\|', 2)[1].Trim() })
   $lnk = if ($first.Count) { $SITE + $first[0] } else { "$SITE/new" }
   $pub = ([datetime]::ParseExact($n.d, 'yyyy-MM-dd', $INV)).ToString('ddd, dd MMM yyyy 08:00:00 +0000', $INV)

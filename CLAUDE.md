@@ -2510,6 +2510,14 @@ and the host drops a connection now and then, more so while a deploy reads the w
   where it is praise and not a measure (about 950 entries: each needs reading), essays 03-05's few phrases.
 
 ## Release-note dates, search snippets and a crawl (12 Nov 2026)
+- **Only features are announced (17 Nov 2026; the user: "the slightest changes do not get reported, or if they do, in
+  generalized terms … describe a bit if new features are added … major additions can be reported").** whats-new.tsv has a
+  fifth column, kind: feature (a new page, tool, game, kind of profile or a major addition: shown in full on /new, in the
+  feed and in "New here") | minor (content added to or improved in what exists: a batch of entries, pictures, dates,
+  translations, links, game puzzles) | fix (corrections, bug fixes). Minor and fix notes are folded into one quiet line per
+  week on /new ("Smaller changes: content additions and improvements across the site; corrections and bug fixes."), never
+  in the feed or "New here" (make-now.js). The new-pages section of /new shows counts by section, no list of single pages.
+  A wave of the entry campaign updates the count in its one feature note; it gets no note of its own.
 - **Release notes carry their real day.** The notes of 11-12 Nov had each been dated the day after the one before and ran
   to 27 November, which "New here" (home, /now, /new, whats-new.xml) showed. scripts/tools/whats-new-dates.js [--write]
   sets a note dated after today to the day its row was first committed; check-site.ps1 fails on a future-dated note.

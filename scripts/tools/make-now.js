@@ -31,7 +31,8 @@ for (let i = 0; i < 400; i++) {
   const pp = (people[k] || []).map(p => [round(ago(p[1])), p]).filter(x => x[0]).sort((a, b) => b[0] - a[0] || who[b[1][2]][1] - who[a[1][2]][1]).slice(0, 1);
   for (const [w, p] of pp) if (!ev.some(x => x[1].title.includes(who[p[2]][0]))) A.push([iso, ago(p[1]), (p[1] < 0 ? -p[1] + ' BCE' : String(p[1])), who[p[2]][0], '/encyclopedia/' + p[2], p[0], w]);
 }
-const notes = rows('scripts/whats-new.tsv').filter(c => c.length >= 3).map(c => { const l = (c[3] || '').split(' ; ').map(x => x.split('|')).filter(x => x.length === 2 && x[1].trim().startsWith('/')).map(x => [x[0].trim(), x[1].trim()]); return { d: c[0], t: c[1], s: c[2], l }; });
+// "New here" shows only the features (whats-new.tsv kind: smaller changes and fixes are never announced one by one)
+const notes = rows('scripts/whats-new.tsv').filter(c => c.length >= 3 && !['minor', 'fix'].includes((c[4] || '').trim())).map(c => { const l = (c[3] || '').split(' ; ').map(x => x.split('|')).filter(x => x.length === 2 && x[1].trim().startsWith('/')).map(x => [x[0].trim(), x[1].trim()]); return { d: c[0], t: c[1], s: c[2], l }; });
 const N = notes.slice(0, 6).map(n => [n.d, n.t, n.l.length ? n.l[0][1] : '/new']);
 const json = JSON.stringify({ a: A, n: N }) + '\n', jf = path.join(R, 'data', 'now.json');
 if (!fs.existsSync(jf) || fs.readFileSync(jf, 'utf8') !== json) fs.writeFileSync(jf, json);
