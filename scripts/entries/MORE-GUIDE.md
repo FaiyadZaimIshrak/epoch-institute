@@ -24,10 +24,11 @@ This is a history site, and what it prints must still be true in five years.
   its constitution names it, the population rounded as the article gives it ("about 86 million"), what survives of the
   past (monuments, World Heritage Sites), which larger bodies it belongs to. Two to four sentences are enough.
 - Never: an assessment of a present government or leader ("authoritarian", "widely described as a dictator", "not
-  free"), indices and rankings (GDP rank, freedom or corruption scores, approval ratings), court cases, elections,
-  wars and crises of the last ten years, anything introduced by "as of".
-- History ends where the article's settled past ends. For events after about 2010 give at most the bare fact and its
-  year (a revolution, a change of constitution), without judging it.
+  free"), indices and rankings (GDP rank, freedom or corruption scores, approval ratings), anything introduced by "as
+  of", and nothing written as if it were still going on when the article only reports it up to a date.
+- Recent events are history too (the editor, 17 November 2026: "history is history"): a war, crisis, election, treaty
+  or movement of the last ten years is told like any other, dated, as the article tells it, with each side's claims
+  attributed, and in the past tense up to the last date the article gives ("by March 2025 the war had …").
 - Living people have no longer text in this campaign: if the subject of an entry is alive, write
   `{"slug": "…", "skip": "living person"}`.
 

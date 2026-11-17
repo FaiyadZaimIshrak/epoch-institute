@@ -2710,7 +2710,24 @@ entries with a confirmed article (about 26,600) told in more detail, in waves; e
     History); about one text in a hundred is held by the checks and stays short; a build that is stopped must have its
     powershell process stopped too.
   - **Done:** more1 (131, 12 Nov), w01-w05 (885: countries, capitals, the best-known people, then A-B of the next
-    rank). 1,016 entries on 16 Nov.
+    rank). 1,016 entries on 16 Nov; w06-w32 by 17 Nov (8,815 entries, a third of the 26,587).
+  - **Gathering a wave (since w10):** `more-list.js notes <dir>` writes the writers' notes to more-notes/<wave>.tsv. Dropped
+    by hand at gather (`--drop=`): mismatched subjects and texts padded from thin articles (weather figures, notable
+    residents). Recent subjects are NOT dropped (the user, 17 Nov 2026: "history is history"): the 23 texts held or
+    dropped until then for being recent (AUKUS, the Abraham Accords, the Houthi movement, Syriza, Brexit, HTS, the
+    Yemeni civil war, El Fasher's siege …) were gathered again, and the checker's "years after 2015" hold is gone.
+    Still out: verdicts on present governments, rankings, "as of", and longer texts for living people.
+    check-more.js also flags what the strict crawl stops on (a bare "undefined", doubled punctuation) and takes "In
+    office" (presidents, party leaders: "Reign" is for monarchs) and "Legacy" (where no death is told).
+  - **Wrong articles (E1, 17 Nov):** writers list in scripts/entries/more-mismatch.tsv the entries whose confirmed
+    article is another subject (a river linked to its department, Quebec City to the province, the Swahili people to
+    the language). The "pic" rule had confirmed them, so their pictures were often the namesake's too. 31 now point at
+    their own article (entry-wikidata-manual.tsv, written into entry-wikidata.tsv), 17 have a picture chosen by eye
+    (scripts/entries/e1: list.tsv, cands.json; "pictures" rows), 5 lost theirs ("nopicture"), and 16 lost the works
+    entry-sources.js had read from the wrong article. Left: hill-fort, corruption, deforestation, protective-tariff,
+    latin-christendom, north-china (general articles for entries that name one case), first-geneva-convention and
+    corinthia (the article covers the subject only in part). A rewrite of added-entries.json must insert rows as text:
+    JSON.stringify re-formats the one-line "fixes" rows of the plain-prose round.
 
 ## Roadmap (not built yet)
 Found while building the social ladders (30 Oct 2026), not done yet:

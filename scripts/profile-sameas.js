@@ -260,7 +260,7 @@ var PROFILE_SAMEAS = {
   "Suleiman the Magnificent": ["https://en.wikipedia.org/wiki/Suleiman_the_Magnificent", "https://www.wikidata.org/wiki/Q8474"],
   "Sultanate of Rum": ["https://en.wikipedia.org/wiki/Sultanate_of_Rum", "https://www.wikidata.org/wiki/Q975405"],
   "Sumerian": ["https://en.wikipedia.org/wiki/Sumerian_language", "https://www.wikidata.org/wiki/Q36790"],
-  "Swahili": ["https://en.wikipedia.org/wiki/Swahili", "https://www.wikidata.org/wiki/Q7838"],
+  "Swahili": ["https://en.wikipedia.org/wiki/Swahili_people", "https://www.wikidata.org/wiki/Q721854"],
   "Swedish Empire": ["https://en.wikipedia.org/wiki/Swedish_Empire", "https://www.wikidata.org/wiki/Q215443"],
   "Taíno": ["https://en.wikipedia.org/wiki/Ta%C3%ADno", "https://www.wikidata.org/wiki/Q210623"],
   "Taiping Rebellion": ["https://en.wikipedia.org/wiki/Taiping_Rebellion", "https://www.wikidata.org/wiki/Q192408"],

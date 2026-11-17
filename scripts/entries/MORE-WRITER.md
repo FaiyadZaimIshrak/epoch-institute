@@ -18,9 +18,9 @@ What matters most:
   list (never "Death and legacy" unless the person's death is told: use "Legacy" then; "Reign" only for a monarch, "In office" for a
   president, prime minister or party leader), each paragraph 40-110 words. No doubled punctuation ("U.S..", ",,") and
   not the bare words "undefined" or "NaN": the site's crawl reads them as slips.
-- History, not current affairs: no assessment of present governments or leaders, no rankings or indices, nothing "as
-  of", no events of the last ten years beyond a bare dated fact. "The place today" is two to four sentences of lasting
-  facts.
+- Recent events are history too: tell them like any other, dated and in the past tense up to the last date the
+  article gives, each side's claims attributed. But no assessment of present governments or leaders, no rankings or
+  indices, nothing "as of". "The place today" is two to four sentences of lasting facts.
 - Never mention your source in the text: no "the article", "the entry", "Wikipedia". State the matter directly;
   attribute a judgement to those who hold it ("historians", "tradition"). Do not add a hedge the article does not have.
 - NEVER contradict the entry. Where the article gives a date, number or fact that differs from the entry's own
