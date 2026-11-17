@@ -39,7 +39,7 @@ for (const f of fs.readdirSync(path.join(dir, 'out')).filter(x => x.endsWith('.j
   const h = (e ? t.split(e.name).join(' ') : t).match(HYPE); if (h) out.push('hype: ' + h[0]);   // the entry's own name may hold such a word ("Amazing Grace")
   // the present day (MORE-GUIDE.md): no judgement of present governments, no indices and rankings, no "as of"
   const pd = t.match(/\bas of\b|\bauthoritarian (?:regime|system|state|government)|\bdictator(?:ship)?\b(?=[^.]*\b(?:is|remains|current|today)\b)|Freedom House|\bnot free\b|democratic backsliding|approval rating|by nominal GDP|\b(?:largest|biggest) economy\b|\b(?:ranked|ranks) \w+(?:-\w+)? (?:in|on|by|among)\b|\b(?:corruption|democracy|press freedom|human development) index\b/i); if (pd) out.push('present-day judgement or ranking: ' + pd[0]);
-  const meta = t.match(/\b(?:the|this|its) (?:Wikipedia )?(?:article|entry|source file|excerpt)\b|\bWikipedia\b/i); if (meta) out.push('speaks of its source: ' + meta[0]);
+  const meta = t.match(/\b(?:the|this|its) (?:Wikipedia )?(?:article|entry|source file|excerpt)\b|\bWikipedia\b|\bthe lead (?:gives|giving|says|section|paragraph)\b/i); if (meta) out.push('speaks of its source: ' + meta[0]);
   // what the site's strict crawl stops a deploy on (a template's leftovers) or lists (doubled punctuation): "Its boundaries
   // were undefined" passed here and failed there (wave 17)
   const lo = txt.map(p => (p.match(/\b(?:undefined|NaN)\b|\[object |[^.]\.\.(?!\.)|,,|,\.|\s[,;:](?:\s|$)|\s\.(?:\s|$)|\s{2,}/) || [])[0]).filter(Boolean); if (lo.length) out.push('reword (the crawl reads it as a slip): "' + lo[0].trim() + '"');
