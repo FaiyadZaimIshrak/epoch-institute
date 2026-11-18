@@ -30577,7 +30577,7 @@ var SEARCH_INDEX = [
 [0,"Namri Songtsen","person","Namri Löntsen",3],
 [0,"Samye","place","Samye Monastery",6,1],
 ["hadrians-villa","Hadrian's Villa","work","Villa Adriana",3,1],
-[0,"Sanctuary of Hercules Victor","work","",3,1],
+[0,"Sanctuary of Hercules Victor","work","",3],
 [0,"Raja Ampat Islands","place","",3,1],
 [0,"Nuku of Tidore","person","Sultan Nuku|Nuku Muhammad Amiruddin",3,1],
 [0,"Zainal Abidin Syah","person","",3,1],

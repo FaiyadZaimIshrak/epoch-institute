@@ -26776,7 +26776,7 @@ rows:[
 ["sanctuary-of-artemis-orthia","Sanctuary of Artemis Orthia",3,"","",1,""],
 ["sanctuary-of-asclepius-at-epidaurus","Sanctuary of Asclepius at Epidaurus",3,"","",0,"Asclepieion of Epidaurus"],
 ["sanctuary-of-fortuna-primigenia","Sanctuary of Fortuna Primigenia",9,"","",1,""],
-["sanctuary-of-hercules-victor","Sanctuary of Hercules Victor",9,"2nd–1st century BCE","",1,""],
+["sanctuary-of-hercules-victor","Sanctuary of Hercules Victor",9,"2nd–1st century BCE","",0,""],
 ["sand-river-convention","Sand River Convention",1,"1852","treaty",1,""],
 ["sandakan","Sandakan",3,"","",1,"Elopura"],
 ["sandalj-hranic-kosaca","Sandalj Hranić Kosača",0,"c. 1370–1435","",0,"Sandalj Hranić"],
