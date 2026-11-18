@@ -15,7 +15,7 @@ const HEADS = ['Early life and background', 'Career', 'Reign', 'In office', 'Wor
 const HYPE = /\b(famous|famously|iconic|fascinating|legendary|renowned|celebrated|remarkable|stunning|magnificent|greatest|incredible|amazing)\b/i;
 const MONTH = 'January|February|March|April|May|June|July|August|September|October|November|December';
 const NOTNAME = new RegExp('^(?:' + MONTH + '|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|BCE|CE|The|In|On|At|By|After|Before|During|Under|From|When|His|Her|Its|Their|This|These|Those|Some|Many|Most|Both|Among|Although|While|Since|Later|Early|Modern|Western|Eastern|Northern|Southern)$');
-const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[ʻʼ’‘'`]/g, "'").replace(/[–—]/g, '-').toLowerCase();
+const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[ʻʼ’‘'`]/g, "'").replace(/[–—‑]/g, '-').toLowerCase();
 const E = new Function(fs.readFileSync(path.join(R, 'encyclopedia-data.js'), 'utf8') + ';return ENCYCLOPEDIA')(), by = {}; for (const e of E) by[e.slug] = e;
 const all = {}; let n = 0, bad = 0, skipped = 0, words = 0;
 // --batch=batch-3.tsv: only that batch's entries (a writer checking its own work), and those of them not yet written
