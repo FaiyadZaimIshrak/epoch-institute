@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Thomas Newcomen (1664–1729): English inventor — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Thomas Newcomen was an English inventor, ironmonger and Baptist preacher who created the atmospheric engine in 1712.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/thomas-newcomen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thomas Newcomen (1664–1729): English inventor — The Epoch Institute">
+<meta property="og:description" content="Thomas Newcomen was an English inventor, ironmonger and Baptist preacher who created the atmospheric engine in 1712.">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/thomas-newcomen">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"T","item":"https://the-epoch-institute.org/encyclopedia/browse/t-9"},{"@type":"ListItem","position":4,"name":"Thomas Newcomen"}]},{"@type":"Article","headline":"Thomas Newcomen","description":"Thomas Newcomen was an English inventor, ironmonger and Baptist preacher who created the atmospheric engine in 1712.","url":"https://the-epoch-institute.org/encyclopedia/thomas-newcomen","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/thomas-newcomen","inLanguage":"en-GB","dateModified":"2026-11-19","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Person","name":"Thomas Newcomen"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/t-9">T</a></li><li aria-current="page">Thomas Newcomen</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker">Person</p><h1 class="enc-title">Thomas Newcomen</h1><p class="enc-meta"><span class="dates"><a href="/years/1664">1664</a>–<a href="/years/1729">1729</a></span> · <a href="/centuries/18th-century">18th century</a></p></header>
+<div class="enc-body"><p class="enc-desc">Thomas Newcomen was an English inventor, ironmonger and Baptist preacher who created the atmospheric engine in 1712. Born in Dartmouth, <a class="enc-link" href="/encyclopedia/devon">Devon</a>, he made and sold tools for the mining industry at a time when flooding in <a class="enc-link" href="/encyclopedia/coal">coal</a> and <a class="enc-link" href="/encyclopedia/tin">tin</a> mines was a major problem. Combining the ideas of Thomas Savery and Denis Papin, he used steam condensed in a cylinder to draw down a piston that worked a beam engine and pump, and with his partner John Calley built the first successful engine of this type at the Conygree Coalworks, Tipton. He died in 1729 and was buried at Bunhill Fields; by 1733 about 125 of his engines were operating.</p></div>
+<section class="meanwhile" data-y="1706" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/tin"><img src="/images/encyclopedia/thumbs/tin.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Tin</span><span class="tp">Term</span></span></a></li><li><a href="/encyclopedia/coal"><img src="/images/encyclopedia/thumbs/coal.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Coal</span><span class="tp">Term</span></span></a></li><li><a href="/encyclopedia/devon"><img src="/images/encyclopedia/thumbs/devon.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Devon</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/steam-engine"><img src="/images/encyclopedia/thumbs/steam-engine.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Steam engine</span><span class="tp">Term</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/thomas-muntzer"><span class="lbl">&larr; Previous entry</span><span class="nm">Thomas Müntzer</span></a><a class="next" rel="next" href="/encyclopedia/thomas-paine"><span class="lbl">Next entry &rarr;</span><span class="nm">Thomas Paine</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Thomas Newcomen. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/thomas-newcomen</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Thomas Newcomen.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/thomas-newcomen. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Thomas Newcomen.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/thomas-newcomen.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Thomas Newcomen&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/thomas-newcomen (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

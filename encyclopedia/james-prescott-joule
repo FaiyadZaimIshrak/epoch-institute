@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>James Prescott Joule (1818–1889): English physicist from Salford</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="James Prescott Joule was an English physicist from Salford who studied the nature of heat and discovered its relationship to mechanical work.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/james-prescott-joule">
+<meta property="og:type" content="article">
+<meta property="og:title" content="James Prescott Joule (1818–1889): English physicist from Salford">
+<meta property="og:description" content="James Prescott Joule was an English physicist from Salford who studied the nature of heat and discovered its relationship to mechanical work.">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/james-prescott-joule">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"J","item":"https://the-epoch-institute.org/encyclopedia/browse/j-3"},{"@type":"ListItem","position":4,"name":"James Prescott Joule"}]},{"@type":"Article","headline":"James Prescott Joule","description":"James Prescott Joule was an English physicist from Salford who studied the nature of heat and discovered its relationship to mechanical work.","url":"https://the-epoch-institute.org/encyclopedia/james-prescott-joule","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/james-prescott-joule","inLanguage":"en-GB","dateModified":"2026-11-19","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Person","name":"James Prescott Joule","alternateName":["Joule"]}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/j-3">J</a></li><li aria-current="page">James Prescott Joule</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker">Person</p><h1 class="enc-title">James Prescott Joule</h1><p class="enc-meta"><span class="dates"><a href="/years/1818">1818</a>–<a href="/years/1889">1889</a></span> · <a href="/centuries/19th-century">19th century</a> · Also known as Joule</p></header>
+<div class="enc-body"><p class="enc-desc">James Prescott Joule was an English physicist from Salford who studied the nature of heat and discovered its relationship to mechanical work. The son of a wealthy brewer, he managed the family brewery and pursued science as a serious hobby, discovering Joule's first law in 1841. In 1843 he estimated the mechanical equivalent of heat, a direct challenge to the caloric theory, and his work led to the law of conservation of energy and the first law of thermodynamics. With <a class="enc-link" href="/encyclopedia/lord-kelvin">Lord Kelvin</a> he developed an absolute temperature scale. He died at home in Sale, and the SI unit of energy, the joule, is named after him.</p></div>
+<section class="meanwhile" data-y="1864" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/lord-kelvin"><span class="ph ph-person" aria-hidden="true"></span><span><span class="nm">Lord Kelvin</span><span class="tp">Person</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/james-oglethorpe"><span class="lbl">&larr; Previous entry</span><span class="nm">James Oglethorpe</span></a><a class="next" rel="next" href="/encyclopedia/james-river"><span class="lbl">Next entry &rarr;</span><span class="nm">James River</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). James Prescott Joule. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/james-prescott-joule</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;James Prescott Joule.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/james-prescott-joule. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;James Prescott Joule.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/james-prescott-joule.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;James Prescott Joule&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/james-prescott-joule (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>
