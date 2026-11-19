@@ -1,7 +1,7 @@
 /	5689bcce4d36c457b2cd969d675a6915d257a160	2026-11-17
 /about	8e40807a4b52d2876ba193709462087072c6fda3	2026-11-14
 /advent	c50ec2bbecb58b1b9771741bb261451833568996	2026-11-11
-/atlas	f01151f68fdfdcee49c99a3eb17f13747e4a117b	2026-11-14
+/atlas	9a717271ddfcccda80aa206052b208b2728998c8	2026-11-19
 /centuries/	741bc186e7c29d07757701b4af2b97a29395c102	2026-11-12
 /centuries/10th-century	54e93a856cba0145e0b9bd1dd64937e655ade7ff	2026-11-12
 /centuries/10th-century-bce	20a2fa98e405bb4dc7d6ca9bdb2e85de2f68d1a0	2026-11-12
@@ -59,7 +59,7 @@
 /connections	736af188552faf5ebe22fc6fe0a9f06b3f946b52	2026-11-14
 /contact	f473844f373a1056877c4e08a1b1f2cac626c7ff	2026-11-11
 /contributors	fe3f255ed4b2a9ebbd75b08d44faa8df8c18cab8	2026-11-14
-/corrections	8e5f8b22a9af752dbdc65e929d7e9bff7cadda90	2026-11-18
+/corrections	5a28e35bd9009565a56ac3e9d777e18ec619cc92	2026-11-19
 /countries/	28f59e6bc6cbf148c4bfefee6eed9f9f1f90f3df	2026-11-05
 /countries/afghanistan	3960415971999f2901daf7732c0abffce5a63f12	2026-11-12
 /countries/albania	780560f914fc9a2553f9f923daab316bf6596dfe	2026-11-11
@@ -75,7 +75,7 @@
 /countries/azerbaijan	7e91fbd2f2c750274f93b90df27e132a27553e61	2026-11-11
 /countries/bahamas	cafcaaa5265b687f55e3ef18fbfdcde48582c4aa	2026-11-11
 /countries/bahrain	2588ae2e3a3a6c4ea665d4d1fc08d71cd0d490b6	2026-11-11
-/countries/bangladesh	95f84b3dbfdb81f8d43c9ea9da2e53afd3e8df37	2026-11-12
+/countries/bangladesh	1d1fffe305dae31b64da2470c54893a3a0e26db3	2026-11-19
 /countries/barbados	5fc34cf84cf2be653a0d8ae76b371a750c707c08	2026-11-04
 /countries/belarus	f735b0f0f4d498cfe40a634b4abff4c0f26f4bdb	2026-11-12
 /countries/belgium	efb881264dc6290625bb1339a93f3cd6b50bbba1	2026-11-12
@@ -316,7 +316,7 @@
 /culture/yamnaya-culture	96c5f9ac14ff368f7169d709d3f94bcec68b5019	2026-11-05
 /culture/yangshao-culture	c90463c8881afab43b83f2550d687bc8f7a27a65	2026-11-12
 /culture/yayoi-culture	ab3aa1613406919377b73c045e46b383d11a5eca	2026-11-05
-/dataset	8c9002e7db710d6a40a892e0360f4195b3cb7098	2026-11-18
+/dataset	dfc82b50f4fe06e3b61f88f0a6fbb6c0e59f207f	2026-11-19
 /empire/abbasid-caliphate	203e9a5edf9f3d74d363788f7cd6997120b3d771	2026-11-12
 /empire/aceh-sultanate	00bb822cdb600e6009474145ef86ba2ae3a826b0	2026-11-12
 /empire/achaean-league	574c2a2e1419c8bbe78b2e53187d341baee35e3c	2026-11-12
@@ -824,7 +824,7 @@
 /empire/zand-empire	14d9d2e6b3c8643d9d382c6ddf7c816e234f59b7	2026-11-12
 /empire/zengid-dynasty	16421f01bfe5873cdd3e2c1412390e5b89aa9b96	2026-11-11
 /empire/zulu-kingdom	681d09a6fdcc4843e9ea6ea93acd41dd8cb4404a	2026-11-12
-/encyclopedia/	5d2d2e943c14f5a14b3734f55ed4a4c2789af69e	2026-11-18
+/encyclopedia/	6e2c4b76c7b8262aaca202d3aa8d8e54aa27eb55	2026-11-19
 /encyclopedia/1383-1385-portuguese-interregnum	319a39124303ba08ad277e813611c03111da7c9f	2026-11-18
 /encyclopedia/14th-dalai-lama	624b1df978da82003cded9d5781b4544291fbb1d	2026-11-15
 /encyclopedia/1527-election-in-cetin	8caa81d7628cbb283641eae5e22ac12b1f0d0e86	2026-11-19
@@ -979,7 +979,7 @@
 /encyclopedia/abdullah-of-pahang	f8c707380be7f370b8b9ca944a51507838f2315b	2026-11-11
 /encyclopedia/abdul-qawi-mackawee	0abc79994650ca86fb7bff006ae50657d3595fbb	2026-11-12
 /encyclopedia/abdul-rahim-khan-i-khanan	1fcd636c70a9cf1b3dedaf8bf3fece3af969c10f	2026-11-18
-/encyclopedia/abdul-rahman-muazzam-shah	fc454844318e49bc44002629a1c49665d4756b65	2026-11-08
+/encyclopedia/abdul-rahman-muazzam-shah	b36e1386db7cb92661ec8de00fbc798767d4327d	2026-11-19
 /encyclopedia/abdul-rashid-dostum	0c0d1856fa3791205a501810e998aa0147f28545	2026-11-11
 /encyclopedia/abdul-rauf-khan	e5240bb87d74522be8969bfab7df1fc80c1198d9	2026-11-12
 /encyclopedia/abdul-razak-hussein	a4e63514922fc2aadcc92910b0cead8a42c3166b	2026-11-17
@@ -1133,7 +1133,7 @@
 /encyclopedia/abu-musa	26271331757da7d97ba827d8f16e6b3478356730	2026-11-17
 /encyclopedia/abu-muslim	c40108787c972e85a1821feed922b33cac53af6d	2026-11-16
 /encyclopedia/abu-nasr-mansur	45d85daf425a1bf061253b5687d8103fb88b6821	2026-11-11
-/encyclopedia/abu-numayy-ii	fc7178646850380d53361ac31d5e4a53ccb08bde	2026-11-11
+/encyclopedia/abu-numayy-ii	7baaca831ce6f26ad043ed84f49a878dcc5d357e	2026-11-19
 /encyclopedia/abu-nur-hilal-ibn-abi-qurra	a9a34f0226b4f0d607dbb91306512cc466410f1d	2026-11-08
 /encyclopedia/abu-qurra	07c2fcc349f69c24ad3e6610338080a2072f4b38	2026-11-19
 /encyclopedia/abu-rakwa	ad04f0524f70226a2bec207d7235e1c174f435be	2026-11-11
@@ -1291,7 +1291,7 @@
 /encyclopedia/adipurana-pampa	15e0b2df9b316c7e41ddd01fea0d679fdc53ed16	2026-11-08
 /encyclopedia/aditya-i	b53deaaaf563ebb1a5afb81ed311f8ee4dc0242a	2026-11-18
 /encyclopedia/adityasena	6a17ecadcdf8df678814179bd6be0f72dc6bd405	2026-11-08
-/encyclopedia/adityawarman	512de5ce0259b91e6b776346c7f01e9e065a4533	2026-11-18
+/encyclopedia/adityawarman	0fe4c16c08b15aaccc462bde0626a63baff94979	2026-11-19
 /encyclopedia/adlan-i	15101e2fe8fec9780e5cf1717260233283c22602	2026-11-12
 /encyclopedia/admirable-campaign	7deb75d522705615183f7c1d467c8754ccd6d974	2026-11-19
 /encyclopedia/admirable-congress	de9ac0630205809adaf9ace2f70bbfa0bf0e0edb	2026-11-08
@@ -1763,7 +1763,7 @@
 /encyclopedia/al-amjad-bahramshah	399b94a6446bac16ba54d7f320a28b82eac79eda	2026-11-12
 /encyclopedia/alam-khan-lodi	2c4c76963649c0df3b4e69f4f9b9fc0ad00cabc1	2026-11-12
 /encyclopedia/alamo-mission	578c33ae85bec7e99fa809273cee389194e9b0a6	2026-11-17
-/encyclopedia/alamut	2d1ffb98fb90bb81d5a36fe145f7eeac00c4f0fb	2026-11-15
+/encyclopedia/alamut	1336fe339a375ec63c26442c8cb4bcdd0534bf4d	2026-11-19
 /encyclopedia/al-andalus	466d32063e4177de4944407b3b6868e23f9fa417	2026-11-16
 /encyclopedia/alan-garcia	9909c556436106cbbf7d4186353236cd1bba8007	2026-11-16
 /encyclopedia/alanic-language	2b252fbae1aac5cf3076ad16d7d156e2a43abc47	2026-11-08
@@ -2101,7 +2101,7 @@
 /encyclopedia/alimirah-hanfare	f9b145a592ff7ab0f5e5b3814b5ac0aa3c0444e1	2026-11-19
 /encyclopedia/ali-mirza-karkiya	90b289dafc6b28652537e5a0e50e944c9a4c4e5e	2026-11-08
 /encyclopedia/alim-khan-of-kokand	019b3dcc7b48dbcd4e09f1ad5b24c09087d5b9a6	2026-11-19
-/encyclopedia/ali-mohammed-khan	0295660a46254c3b579ce0313f32d9ac1dcb996e	2026-11-19
+/encyclopedia/ali-mohammed-khan	c705f3ebf47e18e0f7cb52237e4c0af875057931	2026-11-19
 /encyclopedia/ali-mohsen-al-ahmar	3028c9fabfab9e102f5eb64d4cc11777be02fd50	2026-11-11
 /encyclopedia/ali-mughayat-syah	95e41144637555aca477d22bdfe076a9349c407d	2026-11-19
 /encyclopedia/alimuly	72e8e2808fa1929c23880b82acb772f4145d598e	2026-11-08
@@ -2188,7 +2188,7 @@
 /encyclopedia/almohad-caliphate	9ef2661d47f88a18415191649df8dc09de301939	2026-11-17
 /encyclopedia/almohad-conquest-of-marrakesh	6bf3dff8b73ba750a61ca0c6bdae677259f8c300	2026-11-12
 /encyclopedia/almora	98825f5247b1b47d4050f8eb258804bc46bc7858	2026-11-16
-/encyclopedia/almoravid-capture-of-awdaghast	6ddf53fd78783a11638d6862a27644f162129716	2026-11-12
+/encyclopedia/almoravid-capture-of-awdaghast	db5c02432cebc85815ec9d8566cc7a5c62a72d32	2026-11-19
 /encyclopedia/almoravid-empire	31d0f29eb23dde74523782048065304dd369405c	2026-11-16
 /encyclopedia/almoravid-qubba	3223375253e2f0a38f558e0acd6c8fff466bc378	2026-11-18
 /encyclopedia/almos	9c6f30936f76c766569b3a8ad51fed927209908d	2026-11-17
@@ -2422,7 +2422,7 @@
 /encyclopedia/amenhotep-huy	ffab12e84013e175ca0ba64c050a1ef441fc9d52	2026-11-12
 /encyclopedia/amenhotep-iii	e0873fbcbff72e9f333f779e9c1ee5d58a51ad26	2026-11-16
 /encyclopedia/amenirdis-i	278551d1188a7b947f1b1581a381dbe6542f2abb	2026-11-18
-/encyclopedia/ame-pal	6675c22d31188cfe9b0a18912eb46b954351965a	2026-11-08
+/encyclopedia/ame-pal	a1bf01d079ac90108fd28a68e7f56645577d89f8	2026-11-19
 /encyclopedia/american-civil-war	d7efd3ce3c42084f49846d39112f9b667a7d9ae4	2026-11-16
 /encyclopedia/american-colonization-society	d13437291a6882031724ee04ffefccbbcd8679a8	2026-11-18
 /encyclopedia/american-popular-revolutionary-alliance	847b2c9b430f37097d90bdcfd01a5744f8d12cd6	2026-11-18
@@ -3067,7 +3067,7 @@
 /encyclopedia/archdiocese-of-munich-and-freising	489b20530eee31958bfc02eee88b5583cb0fa58f	2026-11-12
 /encyclopedia/archdiocese-of-olomouc	0464571f702c94ea15e7fea50aabc35695f21155	2026-11-18
 /encyclopedia/archdiocese-of-trento	8d6b64abe8f775cbc0e8955445dbd2f34162a776	2026-11-18
-/encyclopedia/archduke-ferdinand-karl-of-austria	57a18fe38007c2f8f65441e475aca638824a83b2	2026-11-12
+/encyclopedia/archduke-ferdinand-karl-of-austria	45c8a790cd3e9bda59819702b0b4fafa84ecd6fb	2026-11-19
 /encyclopedia/archduke-franz-ferdinand-of-austria	d3111abe9378ae3dc1b4af1861d3fa5fcf3bb1a3	2026-11-16
 /encyclopedia/archduke-john-of-austria	fad2108751cd0c4082cdca79c1b30ac8447311a9	2026-11-17
 /encyclopedia/archduke-rainer-joseph-of-austria	559644612237d9368de0d4a1028ad0c49bd91571	2026-11-08
@@ -3155,7 +3155,7 @@
 /encyclopedia/ariarathes-v-of-cappadocia	d25aac915610ac2417d051caf6fd7dbb8fcf72ae	2026-11-18
 /encyclopedia/ariarathid-dynasty	da2aa6ebbe8d8a1332a9977dd4a650bfae50ec85	2026-11-08
 /encyclopedia/arib-al-mamuniyya	fc16bcd589c31b18382631d4b33e472a9cf6554f	2026-11-18
-/encyclopedia/arica	5419089af59d437a2c050ccbad07e9112844a715	2026-11-16
+/encyclopedia/arica	a295450892e9d809107ebbb257a97a13fd53c399	2026-11-19
 /encyclopedia/aricia	032b8339671a473bb4e781bdf6dcd49122139bcd	2026-11-17
 /encyclopedia/ariconium	f3643f51561b662ff225d72a40ebb40423002082	2026-11-19
 /encyclopedia/ariege-department	012e76304ddc6b3471b195090b659fbf71cceee0	2026-11-16
@@ -3528,7 +3528,7 @@
 /encyclopedia/athaliah	997428ba522e2ed66e15a014189400694bb32cca	2026-11-16
 /encyclopedia/athamanians	94cad0e18e2f00facac90fdc747b9301c2c99a55	2026-11-08
 /encyclopedia/athanagild	45e6fdead34d7f5512b404eb79eeee2983a27bf0	2026-11-17
-/encyclopedia/athanasios-the-athonite	586b407a2d76a1d31588c53e591affd006504b26	2026-11-18
+/encyclopedia/athanasios-the-athonite	606204df527333cd3adea02fdd4b72034c6e5d04	2026-11-19
 /encyclopedia/athanasius-of-alexandria	9e9313ae936566d8f47ffc9e28cb2b114f0be79f	2026-11-16
 /encyclopedia/atharvaveda	c891fff7e274d7685dea1cd5a3c4afe027b68a62	2026-11-16
 /encyclopedia/athelney	7e4b68e5732fd4351a336b1f75fbb8b69842a038	2026-11-19
@@ -3904,7 +3904,7 @@
 /encyclopedia/baghdadi-jews	35f526572b4f4891f223673943b2eedf29b801d0	2026-11-18
 /encyclopedia/baghdad-pact	d09a5e40625e8063653e2bef0b13e8c4a76ed042	2026-11-17
 /encyclopedia/baghel	68470d14991d113fefa9717e5252b7f5989767c4	2026-11-14
-/encyclopedia/baghelkhand-agency	dfe1c01152647e974f5aa07c3b42325dc8eb06f6	2026-11-08
+/encyclopedia/baghelkhand-agency	9954d985bfff9788f1498a1749fdb80a2cc48ed2	2026-11-19
 /encyclopedia/baginda-omar	6aee6f35596c12d33074ce462532d6548915fa30	2026-11-08
 /encyclopedia/bagirmi	d62a11316aea5f613089c21582483ac1d7bd8432	2026-11-12
 /encyclopedia/bagler	cab8ac16c5f61fa768115e498c9a17ef1f3078df	2026-11-18
@@ -3927,7 +3927,7 @@
 /encyclopedia/bahadur-shah-of-nepal	0a22d2528b7ff13ed4f893492c0a2023e82c3dd4	2026-11-19
 /encyclopedia/bahauddin-zakariya	b257ab96bbf1ebb8db7984f6950286c0f60f8d8f	2026-11-19
 /encyclopedia/bahawal-khan-i	4abdbc312c2acb6edb5a26a2e71a189bc9adcf04	2026-11-08
-/encyclopedia/bahay-kubo	20690341c92e2e9d1c1e7d7be7203e1b8e32d147	2026-11-08
+/encyclopedia/bahay-kubo	bb576f9cee720d9dd3e2984a6908fb02f7b5de6f	2026-11-19
 /encyclopedia/bahia	954c04fceac700e275e606b3b598537c01a21ccd	2026-11-16
 /encyclopedia/bahima	52414d719cf7ad2a34c3b40a0cb5b14bd36e7019	2026-11-08
 /encyclopedia/bahla	550d457ac94561b2d97bdafffe59e50fb3469201	2026-11-18
@@ -4257,7 +4257,7 @@
 /encyclopedia/barmakids	c1bda24940238790ee61893e4b0da533cd980b21	2026-11-17
 /encyclopedia/barmen	e2e526420c444440a77c9f717e115c8b50be9bc9	2026-11-08
 /encyclopedia/bar-montenegro	d43b48caa908af5c591df353b0170b7baed8c312	2026-11-16
-/encyclopedia/barmstedt	de32b434a847192d20d92fa77661bc9b578c363f	2026-11-08
+/encyclopedia/barmstedt	093a9702efa4989d466803f8517cb200bd8b71a6	2026-11-19
 /encyclopedia/barnim-i-duke-of-pomerania	28372bd6dd42e2f939b69a9d7a3de31f62d40461	2026-11-18
 /encyclopedia/barolong	ee2e0152b1af4d3189912e803297e77a2f40c52c	2026-11-08
 /encyclopedia/barometer	65ec90dee0c197bf4d2f0c39177f18575db6b8b3	2026-11-16
@@ -4664,7 +4664,7 @@
 /encyclopedia/battle-of-gingindlovu	1030ca0041523a01e2039fb91823b4982536b6e8	2026-11-19
 /encyclopedia/battle-of-golpejera	d99a343da607aadb9aa19841fc6a390fd4e1726d	2026-11-19
 /encyclopedia/battle-of-gomit	6b528cc9d2932b63bba8bcd1d68d244d67aa579b	2026-11-19
-/encyclopedia/battle-of-gqokli-hill	3185fc0a07ee8547b93503e2a107c8a79e9e6cb8	2026-11-15
+/encyclopedia/battle-of-gqokli-hill	b4d04b7e26ad7817f3945d955ec3cb8a26dd1659	2026-11-19
 /encyclopedia/battle-of-grahovac	509ff0be2b195274b2a7f663b58e8b2783b1d991	2026-11-19
 /encyclopedia/battle-of-grandson	d62e73838504928aa288086b84317c788ae87147	2026-11-18
 /encyclopedia/battle-of-grathe-heath	a7a92fdf66d45414fb032f50f4610ced20808097	2026-11-19
@@ -6321,7 +6321,7 @@
 /encyclopedia/breda	5ea300b40995cb5df3ec8ad6a9e4e3070bd37c48	2026-11-16
 /encyclopedia/breech-loading-rifle	41bc072285205efb911f486cd6a690453215f0c2	2026-11-17
 /encyclopedia/breedon-on-the-hill	e60624b30ffcaf088b1e6e190e748b9036236086	2026-11-18
-/encyclopedia/bregaglia	56381af7e4ff834315124621b33dfa06d2948afe	2026-11-08
+/encyclopedia/bregaglia	56ef5d74ea7bec5c658778f86f8ad5604c33cfbb	2026-11-19
 /encyclopedia/bregenz	c05268ae04bf9f199220c94533f3143cd8b9543c	2026-11-16
 /encyclopedia/breiddin	ee4308b1a2eede6bab74f78a6f04028d9d7f9e57	2026-11-12
 /encyclopedia/breisgau	12b3aba15e25cbe4c35239f337f0217deb42a560	2026-11-18
@@ -6442,7 +6442,7 @@
 /encyclopedia/browse/a-27	e80ebe4c4468a98ae5eeb6b24728fc0bcfe6229e	2026-11-11
 /encyclopedia/browse/a-28	0aa62762641405c492d4831cc859fe915d74e4b9	2026-11-11
 /encyclopedia/browse/a-29	a3c84bc6efdc55874a76cc53ad78456f8d1e994b	2026-11-11
-/encyclopedia/browse/a-3	5320a4c1be0030b51ed7cf1b5c6ca8c9e9662181	2026-11-12
+/encyclopedia/browse/a-3	a1bf0a1f3112bfd81c813a301ae2664363e01e80	2026-11-19
 /encyclopedia/browse/a-4	edcd86d8dfada1ed4a7c277b56e5610e79a5083e	2026-11-11
 /encyclopedia/browse/a-5	b95cb86b8d8ab6d7e4eca2c7b46e073921e6a444	2026-11-11
 /encyclopedia/browse/a-6	36be3d527cae3ce9984662dedbe33df39023de20	2026-11-12
@@ -6477,11 +6477,11 @@
 /encyclopedia/browse/b-6	ac97e4a1005f3f4b7a294d50be2dd80107e6e135	2026-11-12
 /encyclopedia/browse/b-7	19e215393baf8df920ba351feec49c54ac211295	2026-11-11
 /encyclopedia/browse/b-8	4885f45c390d46aad9293309ce008cd309b80cd7	2026-11-11
-/encyclopedia/browse/b-9	87bf347a1d266efcbb832e752b8e3b62f1983fbe	2026-11-12
+/encyclopedia/browse/b-9	88c69480046cdbd56b2482cd0030aff7dca5294c	2026-11-19
 /encyclopedia/browse/c	4dd4019ec4147c6c94bd23acff8b5bf5e305f00b	2026-11-12
 /encyclopedia/browse/c-10	d502c977b1cbef4702841fcfac4fc68ef0ba74bd	2026-11-12
 /encyclopedia/browse/c-11	33410b8d1993bc159120d0ac0f42c3ecf0f4902b	2026-11-11
-/encyclopedia/browse/c-12	006b98e5ecb57c669a71cd028a145c7d4bd76197	2026-11-11
+/encyclopedia/browse/c-12	71e5e36ae39a06ef80d49207731509d965b88647	2026-11-19
 /encyclopedia/browse/c-13	e2b376f9276edcd58bf5558b5b8e4a7b36ec2a35	2026-11-12
 /encyclopedia/browse/c-14	b495988085576e6ca4e02939e028830a03d8131c	2026-11-11
 /encyclopedia/browse/c-15	4727e0010f2faa39f192941e149e32be417f1013	2026-11-11
@@ -6490,7 +6490,7 @@
 /encyclopedia/browse/c-18	d3212ff94640e87644225a459b2d2dd7137258c0	2026-11-11
 /encyclopedia/browse/c-19	b57ddec53bb45b2aba81173feeee3ce3a46af64c	2026-11-12
 /encyclopedia/browse/c-2	e282b99b578c68feac9d64531f797bbf1d60e708	2026-11-17
-/encyclopedia/browse/c-20	6a7b917bde26b1a2f333aab7c40479ffcfc9363d	2026-11-11
+/encyclopedia/browse/c-20	19ab127d2c1aab8ecb9fac26711edb198e1b445c	2026-11-19
 /encyclopedia/browse/c-21	4170e393cc879c99f7d49dbb2fda93f0d600bf88	2026-11-11
 /encyclopedia/browse/c-22	94ea6ff7637966cc526d7946e16a47ede84c7ed9	2026-11-17
 /encyclopedia/browse/c-3	97d9e54ccbf1f804b6a72a9c9dbdc80f6275bec3	2026-11-11
@@ -6514,7 +6514,7 @@
 /encyclopedia/browse/d-9	783b17b7181dffb2e621852fbc61f0ef2d4e1802	2026-11-11
 /encyclopedia/browse/e	6ee9191ee348e099b6fa4cf0cc5732bde6a140be	2026-11-12
 /encyclopedia/browse/e-10	26e5987556ccb214dccb49e259ec38ec7da06b52	2026-11-11
-/encyclopedia/browse/e-2	e3b36606fde1aba18cd207fdc9729a95db5a2880	2026-11-12
+/encyclopedia/browse/e-2	bbd11626266bca2ee1854c0733535c3d834aa2a9	2026-11-19
 /encyclopedia/browse/e-3	87113bf3994da94cec5de0ff826957d0105f159c	2026-11-11
 /encyclopedia/browse/e-4	78d9b4867d56995911acc93d16c10766d75d1db7	2026-11-17
 /encyclopedia/browse/e-5	c924e9d52bfa391c3cf1dc422c96e4c1e1773d31	2026-11-12
@@ -6543,10 +6543,10 @@
 /encyclopedia/browse/g-3	5e4cb1fd0a5f0eb0e437d16a9bff9f3bd5bf6185	2026-11-11
 /encyclopedia/browse/g-4	ff0aa6bb5e40ac283b90b43ad352e5613a1044aa	2026-11-11
 /encyclopedia/browse/g-5	9a936617c1ada5d59d5aba399b0ac364516f38ba	2026-11-12
-/encyclopedia/browse/g-6	470ca16571638ece3838b105185498489b6394d2	2026-11-11
+/encyclopedia/browse/g-6	6646551524d24ff745f695c6b4aa630bdd1f843c	2026-11-19
 /encyclopedia/browse/g-7	2fa6663260e67b4b9e68a216c6b6da7a85b14f26	2026-11-11
-/encyclopedia/browse/g-8	f7f8fa584171cc7674ad7026269a62b98f01d0aa	2026-11-12
-/encyclopedia/browse/g-9	c4783059f92d61cf315798897dc32317ba9e65d6	2026-11-11
+/encyclopedia/browse/g-8	b99f9a869f5e72698bac5d670e1b6a0d86f5e44f	2026-11-19
+/encyclopedia/browse/g-9	2ddd0fe57f38984d582462522278e89dff2670ae	2026-11-19
 /encyclopedia/browse/h	2cead7808e26c923b857086b1e98ddd03b2d7bcc	2026-11-11
 /encyclopedia/browse/h-10	124a21d9bd2406110ad39e20f7024a9888672f31	2026-11-12
 /encyclopedia/browse/h-11	34b7fa5bbefc999a8e7d537ba9f58371b808d551	2026-11-12
@@ -6554,7 +6554,7 @@
 /encyclopedia/browse/h-13	6e5df57986e8032af43c2f44892cd786323e350e	2026-11-12
 /encyclopedia/browse/h-14	f800dfa07c8bd954afd6e26a7764c4e215e8f3d6	2026-11-12
 /encyclopedia/browse/h-15	7ab12948c80181089700e7a07a9de5db13bbe640	2026-11-12
-/encyclopedia/browse/h-2	7b3950bf9c4e0b92a7d43a694a698d45383420a3	2026-11-11
+/encyclopedia/browse/h-2	1e15ed6f4f5a1809c1f73b25b813323e3bbe77d2	2026-11-19
 /encyclopedia/browse/h-3	05a8095d09adbaab057545f689fb02fbfdf80712	2026-11-12
 /encyclopedia/browse/h-4	da07651a50a6ce1d1eade151f906ad2ed7bb505b	2026-11-12
 /encyclopedia/browse/h-5	58d2272853bfe1d95934115566a7e47c0e368464	2026-11-11
@@ -6577,7 +6577,7 @@
 /encyclopedia/browse/j-12	d37466b2797437b84a4e2d5fb843aa83d3168d14	2026-11-07
 /encyclopedia/browse/j-13	48bef7e2aaa1bb0ec79a7e298db598ec35a4af2b	2026-11-07
 /encyclopedia/browse/j-2	ada0e83d486ab8ce12e41e364b1c2416c80a1878	2026-11-12
-/encyclopedia/browse/j-3	6dd8a407e164065b4382da3b75fac22aceb58929	2026-11-12
+/encyclopedia/browse/j-3	8b4bd3d8c524a9844c1f2ace4a29e6d3729e3472	2026-11-19
 /encyclopedia/browse/j-4	a11ed893308a9c88178a9a60bb282148e0d9a1ee	2026-11-12
 /encyclopedia/browse/j-5	a2eeea6e1f00ab4e728464c03f4db126b5c5f847	2026-11-08
 /encyclopedia/browse/j-6	788ddaaaf291a7b89ab09eab90dab114a7c2102e	2026-11-12
@@ -6593,7 +6593,7 @@
 /encyclopedia/browse/k-15	ca5e7a31308469e2625aeff0a5a8665901a91423	2026-11-11
 /encyclopedia/browse/k-2	dacf897d917294f550e0aee838f31bf59eb71baa	2026-11-12
 /encyclopedia/browse/k-3	6d80384b4dc4fe2c18529be682a8c5c53b8f290a	2026-11-11
-/encyclopedia/browse/k-4	615163605ce2de961b6a1e50aeabd355c9eb5af3	2026-11-11
+/encyclopedia/browse/k-4	df1415ab54916d8e55f4e1e1c3f7fb1353d58d82	2026-11-19
 /encyclopedia/browse/k-5	3eca909bbbfcb310346a4604a485001d1f41a1c7	2026-11-12
 /encyclopedia/browse/k-6	261ccee19bd297e391206a9d3f3bc4a6e4857ad5	2026-11-12
 /encyclopedia/browse/k-7	32a0221a2519538c12707c328b593b0bea27aa81	2026-11-12
@@ -6633,7 +6633,7 @@
 /encyclopedia/browse/m-24	c1961c8309c7a2f79336f5581f37b2bfe999f962	2026-11-12
 /encyclopedia/browse/m-25	c4a8fb4db8c84346a8f4a2f080d15f03ac13499a	2026-11-11
 /encyclopedia/browse/m-26	925dc97771d8bf2b0cb8cc4be1d9b59c9cb45121	2026-11-11
-/encyclopedia/browse/m-3	62b5ca7dae0230d68702409be4e87caddad3fa30	2026-11-11
+/encyclopedia/browse/m-3	13fcf125d6055649544e7f54916ea9e82101dd40	2026-11-19
 /encyclopedia/browse/m-4	3ebdc18fcab068f701949ceb1e9fa2f7d089cc04	2026-11-12
 /encyclopedia/browse/m-5	6e7c362d14826ea80dab4bc12c8a4a72157f7ccb	2026-11-11
 /encyclopedia/browse/m-6	490d5caa426dd8ef54752f96c25c0bebda8a2e1b	2026-11-12
@@ -6644,7 +6644,7 @@
 /encyclopedia/browse/n-10	2833fae090fcbc84b90202ef108d2a6b2ba2d4f7	2026-11-12
 /encyclopedia/browse/n-11	efc5ac9cca61345aac27cf725f0b9e318398e213	2026-11-11
 /encyclopedia/browse/n-2	a31aebc76e6ab717eab1fb05b7a2bdb63dfc6e10	2026-11-11
-/encyclopedia/browse/n-3	70f3533cc7acc108a4bb5f8ed7cc0c1b3a6de4e3	2026-11-11
+/encyclopedia/browse/n-3	062dfe7420f15647a027fc84fd0e2d6793a378af	2026-11-19
 /encyclopedia/browse/n-4	2604dcc94c0f0fb8af9b61b65f3622ac9f11fc0d	2026-11-11
 /encyclopedia/browse/n-5	f041c5878a92f06163cb28364b465495e39761fe	2026-11-11
 /encyclopedia/browse/n-6	b782c9d48843ecd17380b2f31316ecbe37b64816	2026-11-12
@@ -6666,10 +6666,10 @@
 /encyclopedia/browse/p-14	df790dbd8e627dd02cdd15c650d5bc6dfed8addb	2026-11-11
 /encyclopedia/browse/p-15	079e8ce74033ede9be3bcc181080806a8c4ecaa9	2026-11-12
 /encyclopedia/browse/p-16	92bb7cce14fdddd3470092001d1e59408649e509	2026-11-11
-/encyclopedia/browse/p-17	c4c2db57bf3f99b4b4bbd09da081787a3fce8d4d	2026-11-11
+/encyclopedia/browse/p-17	cd24ca96f37cd4c6cae62b040e68c8feb794c293	2026-11-19
 /encyclopedia/browse/p-18	c9cdced2c7a56f04b0932c34af87a503cd13641f	2026-11-11
 /encyclopedia/browse/p-19	1fd69eda9fa8ca11e958f10c1d81366fcf5315f6	2026-11-11
-/encyclopedia/browse/p-2	5a0ce575a96b9d1ebda1ebe5072673712ea9c9ed	2026-11-11
+/encyclopedia/browse/p-2	f92ff4fca9a14cf59623e30b550fec8705b50247	2026-11-19
 /encyclopedia/browse/p-3	51dbb0553a01434cdcb714ce7cfdeca6f66d395f	2026-11-11
 /encyclopedia/browse/p-4	2b26b9cbac516c23dc142f2a526cb04e11310a81	2026-11-11
 /encyclopedia/browse/p-5	4c49d520968d2d391d3fe26391e84a12ca5a1fdc	2026-11-12
@@ -6678,7 +6678,7 @@
 /encyclopedia/browse/p-8	3c1f5bc5df5119c6b78aa4011a11de8a46ca3ebe	2026-11-11
 /encyclopedia/browse/p-9	42fac5dde0729741346967005226037d76b3cae6	2026-11-12
 /encyclopedia/browse/q	12db7c9baa2ae4b0aa6454be39e9a483a8e96508	2026-11-08
-/encyclopedia/browse/q-2	7f473c786a668476ae7547e6239b004eae12194e	2026-11-12
+/encyclopedia/browse/q-2	8384f4cba638147b26a96218c63e33778d7de94f	2026-11-19
 /encyclopedia/browse/q-3	38e826c7c91ae6656ed156a16cb9b8bf59b175d1	2026-11-07
 /encyclopedia/browse/r	a8e9bd9a124a2eb9f3e518b9ab91c3ae8b165c1e	2026-11-11
 /encyclopedia/browse/r-10	68c9291c243c089c97159422087487e087744a24	2026-11-12
@@ -6689,7 +6689,7 @@
 /encyclopedia/browse/r-4	3c51c13b5a553aed71dd02137f02039fc0482103	2026-11-11
 /encyclopedia/browse/r-5	ffe613d524b8b18906c673cfe71ea2f3afc8086e	2026-11-12
 /encyclopedia/browse/r-6	e3869f1b4110b944525f7f0a030dfc560ab06036	2026-11-12
-/encyclopedia/browse/r-7	aa4b5c974d97a121d66ce3fcbdf0dbfadb408649	2026-11-12
+/encyclopedia/browse/r-7	b80950dd58d8548080e2b7ac63528209c4ef7a1e	2026-11-19
 /encyclopedia/browse/r-8	1a8f2fb934d69de92d0cc09cd99f622b46e04410	2026-11-11
 /encyclopedia/browse/r-9	a8debee12ecd8e28f089df868a7196a1d6aa1042	2026-11-11
 /encyclopedia/browse/s	d350eee5d21b5f7d8ec8d6223e403412cb6cf26c	2026-11-11
@@ -6698,15 +6698,15 @@
 /encyclopedia/browse/s-12	9cade17828fba5aa6551266a4e9d91ef52ae6de1	2026-11-12
 /encyclopedia/browse/s-13	b7b31fe86acabb469123fe2612951cdb6d550c02	2026-11-12
 /encyclopedia/browse/s-14	04f7b6273030b128efce4aceadb4e6fa95e16636	2026-11-11
-/encyclopedia/browse/s-15	77842088d3e733183303d890357517e3cd32b28a	2026-11-11
+/encyclopedia/browse/s-15	77842088d3e733183303d890357517e3cd32b28a	2026-11-19
 /encyclopedia/browse/s-16	90d71c112bcb3dd2448ca5e5d6dab3cf94ceff0f	2026-11-11
 /encyclopedia/browse/s-17	23b4257b01a0912f7e3d77351fd525589b56a78a	2026-11-12
 /encyclopedia/browse/s-18	2abf164deb92cf9a74d007a502e8cda0d1554233	2026-11-12
 /encyclopedia/browse/s-19	e96ad3b20381258e8346b33add90390295bf4c34	2026-11-12
-/encyclopedia/browse/s-2	7a8fad83f1b8d2b2e67d764b8b2c7f5e749fbc8b	2026-11-11
+/encyclopedia/browse/s-2	482c15b7e4616489169f6bd6e01707449f79544c	2026-11-19
 /encyclopedia/browse/s-20	a47f7a71c2b4c65e69333c40b538a3f263260f26	2026-11-17
 /encyclopedia/browse/s-21	67717011c79e4f71335ca00b7dc9223bad6703d6	2026-11-12
-/encyclopedia/browse/s-22	5d001c1a6c84f0d03aae568264253737d7f6c842	2026-11-12
+/encyclopedia/browse/s-22	04bd33dd7d88f809e978e8b461dc07da7457ee8e	2026-11-19
 /encyclopedia/browse/s-23	eb30a8f8c7e3458e813a6abafefe097f1c1b2808	2026-11-12
 /encyclopedia/browse/s-24	f2801eb15bc9c61be347ff306b249924d711f5b3	2026-11-12
 /encyclopedia/browse/s-25	95df7e4e16b95857573c1fe9427d34781e4106ca	2026-11-12
@@ -6714,7 +6714,7 @@
 /encyclopedia/browse/s-27	f88356d19113aee63b9dc32fa47d1310af5fc94b	2026-11-11
 /encyclopedia/browse/s-28	3636b450f6e1e09eae6578497a70812993e20b9e	2026-11-11
 /encyclopedia/browse/s-29	66177f75f12ae342a60c56d36d60ebd44e9d326f	2026-11-12
-/encyclopedia/browse/s-3	6ef92a9034fdbd3a7b19181b23aa9ce83b083e99	2026-11-12
+/encyclopedia/browse/s-3	73b6651e4afce18a3f715eb0f1f30aaaebd397ad	2026-11-19
 /encyclopedia/browse/s-30	50f7b7d93d937f6f971d039eb2d0e968b9938c8f	2026-11-11
 /encyclopedia/browse/s-4	f2059d9b9ebfc601c370026172b623dccbf66a93	2026-11-11
 /encyclopedia/browse/s-5	50156e54d9a9657145435aaf239b0d364e54480a	2026-11-18
@@ -6735,12 +6735,12 @@
 /encyclopedia/browse/t-19	93c3440dd4d926cb317aabd607279cbc32cac5c5	2026-11-11
 /encyclopedia/browse/t-2	fdbfa255a44f69f1ca95a053c87dc37eb0d33ba9	2026-11-11
 /encyclopedia/browse/t-20	01213577053cd7b216e5a6431f4f0d0ac061a16e	2026-11-11
-/encyclopedia/browse/t-3	bf8d2b32c2a08d24c548219720728ea5241ea592	2026-11-12
+/encyclopedia/browse/t-3	c03cc2d7d350e13e7bfdaf9ccd4d33bbe0abb664	2026-11-19
 /encyclopedia/browse/t-4	69383830fb026f04845d67eebb1580f800407c98	2026-11-12
 /encyclopedia/browse/t-5	21b9970cc9bbf4a44863321802b760e1e32ab4ea	2026-11-17
 /encyclopedia/browse/t-6	104aa6ccd178a05f6241b758223da0c021ebecbe	2026-11-12
 /encyclopedia/browse/t-7	1024b95b4fde21569ca02d1022a9f91c0074fc18	2026-11-12
-/encyclopedia/browse/t-8	16b5375097d78d6aae54c49e71d88a65c6d5039d	2026-11-12
+/encyclopedia/browse/t-8	94af0aa9d1cc47bf4bb38121e00260444d5e897b	2026-11-19
 /encyclopedia/browse/t-9	1e9452da550ec0e8d1e416bad942de6bf02daf1b	2026-11-11
 /encyclopedia/browse/u	c84929a6a6a95c9f2b597e84ed4457747f172894	2026-11-12
 /encyclopedia/browse/u-2	0fdb5b52180db371e73e69f227a8d6716717e2c3	2026-11-07
@@ -6777,7 +6777,7 @@
 /encyclopedia/bruhl-rhineland	51caa8cb9ef79bc39116b7e3bf18c7cf7be9a210	2026-11-08
 /encyclopedia/brumath	42b399d7046ecda0196fbd9547a880122d23e3fc	2026-11-08
 /encyclopedia/bruneck	a242ad3ebb5beeaec31ea19630b95639e5a5bcd6	2026-11-16
-/encyclopedia/brunei-peoples-party	10b0f1e38ba966fc855d8667c3623bf591fd92dc	2026-11-19
+/encyclopedia/brunei-peoples-party	a4188efd4a17dba6a7a28f27787c3800c56f8223	2026-11-19
 /encyclopedia/brunei-shell-petroleum	dd4c3196074465ea57bd48949eb7a4142c84596d	2026-11-19
 /encyclopedia/brunhilda-of-austrasia	af56ae073443f2ebd7b44cb7e6681a99f1c86f5f	2026-11-17
 /encyclopedia/bruno-mauricio-de-zabala	f8aeb082415387051d076f095ff722401444b386	2026-11-11
@@ -7187,7 +7187,7 @@
 /encyclopedia/cao-wei	4a2377d3210900bec13f8024bf8066fa9eeaba38	2026-11-17
 /encyclopedia/capacocha	da35cefce6b3c006b72537a27c35b9e2873b8320	2026-11-19
 /encyclopedia/caparra	6849b45181ef309cfaefac6d465d3e28688f1fc7	2026-11-08
-/encyclopedia/cape-araxos	39d949fd6fde015788a61a869de788ac59a934a7	2026-11-12
+/encyclopedia/cape-araxos	45ff6dcb8fdb625f27cf9093d8636612386833d7	2026-11-19
 /encyclopedia/cape-bojador	97082eb30a1a17fcc287581d811e07e08dc69e01	2026-11-08
 /encyclopedia/cape-coast	ad63d9c8accbb3b89ebf92f5134b86e45cc73483	2026-11-16
 /encyclopedia/cape-coast-castle	2e216ad80114845777f9484cbb007eb935321a38	2026-11-18
@@ -7672,7 +7672,7 @@
 /encyclopedia/chand-bibi	3130c2dcedc150fabc608830af6d1f5a5911ad2f	2026-11-18
 /encyclopedia/chand-dynasty	a47bddef5551f5edb388fe3768c908de89fe3115	2026-11-14
 /encyclopedia/chandela-dynasty	980a8bf362ceae204150263a3a7de7d25ad2bcee	2026-11-08
-/encyclopedia/chandor	c48eb606b66373420c1905572e5330088ec6a644	2026-11-08
+/encyclopedia/chandor	109344febd62badb72cc2ad41ef620022fb3e2ad	2026-11-19
 /encyclopedia/chandrabhanu	b5f189679e0a857125bca397a39eb87f60e86180	2026-11-19
 /encyclopedia/chandradeva	2cd6942496442d8c5a1e4b5ab88fe12b9bd7b58f	2026-11-08
 /encyclopedia/chandragiri	07165dce327bca957bc3869fdc40ab1a64c91a94	2026-11-18
@@ -8157,7 +8157,7 @@
 /encyclopedia/christianity	01e730e747845ba213e5ae9289c5280d9c03cf28	2026-11-12
 /encyclopedia/christian-iv-of-denmark	67477d12cec32044464746fc386969e3f574d15d	2026-11-16
 /encyclopedia/christian-knorr-von-rosenroth	0bdff83d99449ec801de3857ae8e6090ec8fbcc5	2026-11-18
-/encyclopedia/christian-rantzau	46d41501ae657f75ef32548c93d601c1079659e3	2026-11-11
+/encyclopedia/christian-rantzau	e0a5549e47dfcc549bcddf2111cb3eaa7cc160bb	2026-11-19
 /encyclopedia/christian-social-party-austria	f1982c0ceed48acb89320a1aec4759373a9b6123	2026-11-18
 /encyclopedia/christian-social-union-in-bavaria	cc6919517d009f57725ad8cb9b8e92a4565f064e	2026-11-16
 /encyclopedia/christiansted	b02ad1d8a71efadcf33a528bec7f7770627e4d8a	2026-11-17
@@ -8593,7 +8593,7 @@
 /encyclopedia/conflicts/17th-century-bce	c06fa337fb99f2277327e0c414c481b75b12ab72	2026-10-31
 /encyclopedia/conflicts/18th-century	5d0c6489fce58f9a2efc22fed36b75ae775f562b	2026-11-04
 /encyclopedia/conflicts/18th-century-bce	465b906a14ba152f5921acbfc0cc594b91e3532f	2026-10-31
-/encyclopedia/conflicts/19th-century	67ef53f1a7ad20bdaf63d290f3f854202963a966	2026-11-12
+/encyclopedia/conflicts/19th-century	cf164d55e5336d383de9f36f009ebf06dadb40ab	2026-11-19
 /encyclopedia/conflicts/1st-century	bfc6ccd8be71d5e0e4a29edb55e9b77609b30bbe	2026-11-04
 /encyclopedia/conflicts/1st-century-bce	e652f877da8e75f95ec3385e4b1584e3900d6fc1	2026-11-04
 /encyclopedia/conflicts/20th-century	f5640e0027f741c355a3297ec090454ff09b7b7d	2026-11-12
@@ -8954,7 +8954,7 @@
 /encyclopedia/cowal	ae70bc438190756eb2460305dcf39e3abb44cfd4	2026-11-18
 /encyclopedia/cowkeeper	8c27be927e3b440369e65b357d2908453195f591	2026-11-19
 /encyclopedia/cowrie-shell	dc979bde138feab246689cf3759f433fa8814647	2026-11-12
-/encyclopedia/coxcox	dc1085f6ab567101b68c5b55cd2a6ec0a5a62419	2026-11-08
+/encyclopedia/coxcox	565ff68e473251c1a0ac412a394fb9f688bbf766	2026-11-19
 /encyclopedia/coxen-hole	fa3d35a73392b947fcee34509a0419b5b2154d87	2026-11-18
 /encyclopedia/coxs-bazar	8666683d990141c38660dd5555444a9a8ca19e8e	2026-11-16
 /encyclopedia/coyotlatelco	7dc273aa0c967d6cc2a4960ec5eb34468cc2c9f2	2026-11-08
@@ -9179,7 +9179,7 @@
 /encyclopedia/dai	777573e950523b95ff633dd4f145b75e79ed4b9b	2026-11-17
 /encyclopedia/daifang-commandery	83026b292053c9383139135a424251fc5f95af05	2026-11-15
 /encyclopedia/daijo-kan	1c31803c6264a6dde5a6ad1d0f2e338d36443015	2026-11-18
-/encyclopedia/daik	bb207147ec96bb00424a4112cc255c651756a9f1	2026-11-12
+/encyclopedia/daik	f2fdd552ece107a0764e0f92497ac2a689c2e3ea	2026-11-19
 /encyclopedia/dai-la	03ce1fb5430d297a0c9c44404fb9036760818c25	2026-11-12
 /encyclopedia/dail-eireann	df707111f3d29fe9920634bd687d9cabd35d1dc0	2026-11-17
 /encyclopedia/daimler-motoren-gesellschaft	747abbf9f3fac637eb14374667cfef91da8e5a96	2026-11-18
@@ -9340,7 +9340,7 @@
 /encyclopedia/datong	57ad4a71d442c9c7580192096dcee10eed82feec	2026-11-16
 /encyclopedia/datu-pagbuaya	7653cf947fcb41e9f821226f5ab67758c8a38eb1	2026-11-12
 /encyclopedia/datu-puti	f2568bd4aee6c2a256fffe89e5ac328be6a03e1f	2026-11-12
-/encyclopedia/datu-uto	bfb3bb2df340c1e7a9ae8ce21aa27dc7675c6e9a	2026-11-19
+/encyclopedia/datu-uto	16291fd3e0b047ad863ef842b72d91adc8f6715e	2026-11-19
 /encyclopedia/daud-al-fatani	26100be5aa54ad07a9a93b6ade560370a5361bcc	2026-11-08
 /encyclopedia/daudi-chwa-ii	f35f9eebb494bc7c7477cc0534bc260560c53785	2026-11-08
 /encyclopedia/daud-khan-karrani	6f91b48ce503cda3419a1bf8a9ca63cfc662f01d	2026-11-18
@@ -9682,7 +9682,7 @@
 /encyclopedia/diawara	e038fe10a8032610f4862896633fbf1f93ba1fe5	2026-11-08
 /encyclopedia/diber	d21d339ff1f6fd5c9e5ba1b28b0dec9ca2eabcce	2026-11-12
 /encyclopedia/dicalydones	14762a0080f0c8673ed32ca54892b23dc5f03e12	2026-11-08
-/encyclopedia/dick-king	96d850f4bd15260af3cc30b32f31341ff6096911	2026-11-19
+/encyclopedia/dick-king	1e34d2e8ffde5399a69a296c0eac3e0454c2457a	2026-11-19
 /encyclopedia/dickon-mitchell	9b27aa53f0885f0f7a5d85e057a512e2d2ddc53d	2026-11-11
 /encyclopedia/dictatorship	2791d0fac0ee1c91c7da1ecfed573fa1f8d73840	2026-11-12
 /encyclopedia/dictionnaire-de-trevoux	53277520f8429fa8c83ea0e9cec9b70ec43f4510	2026-11-19
@@ -10033,7 +10033,7 @@
 /encyclopedia/dositej-obradovic	321681eb6a5329638794339a8befbf6d9d4843b7	2026-11-17
 /encyclopedia/dos-pilas	f60016ef155dc94e6e57d90edff886e854a81875	2026-11-18
 /encyclopedia/dost-mohammad-khan	53dcaa4bc1349139d45e32e007c1cfdb499a4968	2026-11-17
-/encyclopedia/dost-mohammad-khan-of-bhopal	f4836115f1af56cff7a0a7df94dc8b9379a2b95d	2026-11-19
+/encyclopedia/dost-mohammad-khan-of-bhopal	7e9aaa4631dbec515aebae01a78b0217a15a8a25	2026-11-19
 /encyclopedia/dosunmu	351a9e14d898cbcf639c3bf883da9e66e2116983	2026-11-19
 /encyclopedia/douai	ce6e21406d24b846781512fcbc89fed40bb73f92	2026-11-16
 /encyclopedia/douala	0f788b21274378492ab41595d0900b019a374a4d	2026-11-16
@@ -10354,7 +10354,7 @@
 /encyclopedia/east-punjab	7cfa88e84a74143e7b0a2aa604c2961937d3ebce	2026-11-18
 /encyclopedia/east-semitic-languages	800c64a2d0ec44e6e48d5996f95b6d360e8de562	2026-11-17
 /encyclopedia/east-slavs	054b8eaa6306250e9e405ad5cfc51a9dcae1649e	2026-11-16
-/encyclopedia/east-sumatra	f18b1772dfed575bc9898e276b4f2558eb441286	2026-11-08
+/encyclopedia/east-sumatra	7c8b6c3edb0ae643ce5b14b82833c443f62bb3d4	2026-11-19
 /encyclopedia/east-sumatra-revolution	1af85d9997d57d32c0a5c9a49fb0d213d3a70fba	2026-11-19
 /encyclopedia/east-timor	19cc479031c0b52d77ebf43b0e35224f5efea6b1	2026-11-12
 /encyclopedia/east-tyrol	bc1c7df5c0c0c0e71127f495a9ceaf7da8f35519	2026-11-18
@@ -10462,7 +10462,7 @@
 /encyclopedia/edward-gent	407b90e61c56acf0d2129c7d580191276fac241c	2026-11-19
 /encyclopedia/edward-gibbon-wakefield	980c10f943c496e586962e8d9f6b7081e15db867	2026-11-18
 /encyclopedia/edward-heath	06e0ca0bb1cc6bb9c24b07390e8f7d81de15e6f6	2026-11-16
-/encyclopedia/edward-hewett	676d4db607129e66b47926eef0a657d1e3e0d51f	2026-11-12
+/encyclopedia/edward-hewett	774f330e9930aeea0180cc463a9f97ac962b7855	2026-11-19
 /encyclopedia/edward-hincks	f9fde42ff98028637dcb709354f86b4e444023ec	2026-11-18
 /encyclopedia/edward-hyde-1st-earl-of-clarendon	215a90cf54609d05c24203a8441fb21b1c3d4c33	2026-11-18
 /encyclopedia/edward-hyde-governor	2e706d3687fad1734f7b467581a46fa1d4f748b9	2026-11-08
@@ -10677,7 +10677,7 @@
 /encyclopedia/elmina-note	1767f30b5ed367505f314b843dbde6e860897055	2026-11-12
 /encyclopedia/el-mirador	3dd7144f990d84db8fdeb7993d2ceaa24720d410	2026-11-18
 /encyclopedia/el-mozote-massacre	87db81baeb10d05e92e95249958c52b3b8817801	2026-11-18
-/encyclopedia/elmshorn	905b394e9084b8091d396f2be0b8e178f2a3eaae	2026-11-12
+/encyclopedia/elmshorn	4f70d6fb5d2b57da946f49abb8e75811bdc8fbf1	2026-11-19
 /encyclopedia/el-nino	aecfa640d9c71d4e6970f0fb4049186225c53fbb	2026-11-17
 /encyclopedia/el-oro-province	82d259cb5a2bf94f84e0cdf993628e60ee820f89	2026-11-16
 /encyclopedia/eloy-alfaro	06f6ed3f0dd8a52faed9d4cf62ed02e20459920a	2026-11-17
@@ -11284,7 +11284,7 @@
 /encyclopedia/faiyum	3d9b2d8133c022ff468e2be85238f75a63330763	2026-11-17
 /encyclopedia/faizabad	e01104159ed908a9ed93360e331a54a2ad1ab8ed	2026-11-17
 /encyclopedia/faiz-talab-khan	0ebf78ed8459dcb5136b2b303b9c62e660fb9d01	2026-11-08
-/encyclopedia/faizullah-khan	c7d5b1758fafe5ba9f5772e55847c4ffe022c541	2026-11-19
+/encyclopedia/faizullah-khan	283270f9c47fcc3cf547fcb7449e57f775c316b4	2026-11-19
 /encyclopedia/fakhr-al-dawla-hasan	db6c34892123b61c75883041b934f700d1bd6918	2026-11-08
 /encyclopedia/fakhr-al-dawla-ibn-jahir	8b4979fbb06fac6eb06fcd5c1f9209433e2bdc3c	2026-11-19
 /encyclopedia/fakhr-al-din-bahramshah	78cd0651b56110c0996a9ff10ccf6678a7044f74	2026-11-08
@@ -11478,7 +11478,7 @@
 /encyclopedia/ferdinand-of-bavaria-archbishop-of-cologne	eb07a3ce0de6c5ed0dfc7921d2010e03b76d148d	2026-11-08
 /encyclopedia/ferdinand-of-brunswick-wolfenbuttel	308dc4d7b8b5ade7b00b72c9123532f28e21be1c	2026-11-18
 /encyclopedia/ferdinand-of-majorca	5a919a431e494cd5dd3500e7870de8ed3b5e6b28	2026-11-18
-/encyclopedia/ferdinando-gorges	75c102ed9e780a70e98a13b36411b5265db767ca	2026-11-19
+/encyclopedia/ferdinando-gorges	0e974a39f999e55a366e4cae8931ad6e8687a365	2026-11-19
 /encyclopedia/ferdinando-i-de-medici	e419f54c70c304107c11020a3eeb3d3130d18f90	2026-11-17
 /encyclopedia/ferdinando-ii-de-medici	6ef9552d6c6dae84ce853c3b92b5e3cc1f7ee960	2026-11-17
 /encyclopedia/ferdinando-martini	a4c0b9a8ca231d99d09db2d98405b30d407868fd	2026-11-18
@@ -11494,7 +11494,7 @@
 /encyclopedia/fergana-valley	5c0a1fcaede081ae706e4c504d997a4badab6a3e	2026-11-16
 /encyclopedia/ferghana-valley	f528aa16293e1bdfcf0c4e8c364e7126a6d2a451	2026-11-08
 /encyclopedia/fergus-mor	365ae92f01eecd28f0189528c5939e44e240ef48	2026-11-18
-/encyclopedia/fergus-of-galloway	66cc485907b331e59933124554504c8278fac818	2026-11-19
+/encyclopedia/fergus-of-galloway	ee81cd53d9a0e3c4b485417cd6e5164720058443	2026-11-19
 /encyclopedia/ferhat-abbas	278716fea1a2cfa8541ef8f5a5ddee48fdff665a	2026-11-16
 /encyclopedia/feriae-latinae	627bcda4f32ef8ff4052fa2eeac4f37aef3ec2ce	2026-11-08
 /encyclopedia/fernand-braudel	60f657e322f2ff4ad94cf38d486120dcbb466291	2026-11-16
@@ -11519,7 +11519,7 @@
 /encyclopedia/feudalism	3d521a88739fb1ce64629794b2e403406a5fadc3	2026-11-16
 /encyclopedia/feurs	e4d8835c43be99d28579cd713c35812efb6d7d92	2026-11-17
 /encyclopedia/fez	a945222b18986bc34e54fc5676d9e374a5f18bc4	2026-11-12
-/encyclopedia/fezensac	be2a5dc3a5a7cdb8c3a11aa531243a75ede4ed32	2026-11-19
+/encyclopedia/fezensac	f1cedbd70e46d18bcf83a555d641b1f2d3b9484d	2026-11-19
 /encyclopedia/fezzan	d9637737d3067fdedd8ab5df457e1a033bc64a30	2026-11-16
 /encyclopedia/fiachnae-mac-baetain	51ea364b376681193362e82ebc493fb063631bba	2026-11-19
 /encyclopedia/fiachnae-mac-demmain	1eedc21312f5d05061a083ba6f9ac7052d74ae1f	2026-11-19
@@ -11611,7 +11611,7 @@
 /encyclopedia/first-fitna	0aad7849896b26b886365d3a1e74701cf5adc9dd	2026-11-17
 /encyclopedia/first-franco-dahomean-war	22073ef791d6ecf9d7336ef634961a2f144c57fb	2026-11-18
 /encyclopedia/first-french-empire	2ac0a51b00c8e93fe3f2bed6e675bfd9c337404a	2026-11-16
-/encyclopedia/first-geneva-convention	b128bc1270e8b7acb6fd30e7c5b09d3953c62ff3	2026-11-08
+/encyclopedia/first-geneva-convention	171804e0511ac4c63033edf6f0d8ae7a6203dc7a	2026-11-19
 /encyclopedia/first-indochina-war	b8af2d2cf838b07a2395dacb2f4ff94ee3a64e59	2026-11-16
 /encyclopedia/first-intermediate-period	3e01b75d2073b1e31e79f8b24783b6afaa169370	2026-11-16
 /encyclopedia/first-intifada	d354dec15db765114493270cd95fb3a2725cfe5c	2026-11-16
@@ -11638,7 +11638,7 @@
 /encyclopedia/first-sea-lord	814f75a3b9c7dd615c95fd41110c6c92eff07a3c	2026-11-18
 /encyclopedia/first-seminole-war	b46c55fcb3c8c4518dafe0fe411fa1d73202a76e	2026-11-14
 /encyclopedia/first-serbian-uprising	cb2997fa5aa2eb28a2bee5929c46e8fc03f25dbb	2026-11-17
-/encyclopedia/first-sho-dynasty	7cf577593b05e61228d2cdc17f3376ee0e7b0d60	2026-11-08
+/encyclopedia/first-sho-dynasty	b133b5512522c70a9e808f3f07b13570b448ea6e	2026-11-19
 /encyclopedia/first-silesian-war	2b49b3270d33c087551bbca1e6a2b6fd930e2f3c	2026-11-18
 /encyclopedia/first-sino-japanese-war	77653cfb9f81f1b8cceb8d6acb95d32bb33c9233	2026-11-16
 /encyclopedia/first-stadtholderless-period	a5bdf3818ae15cbbbe67b39ec66b422b48ff5ad6	2026-11-19
@@ -12569,7 +12569,7 @@
 /encyclopedia/gens-de-couleur-libres	62bbd6fc34ea6bf62f5a2a766a8cb42044f6c48e	2026-11-08
 /encyclopedia/gentile-da-varano	a4aa997bed8d460387d6f7a12b4ad195666b96f0	2026-11-12
 /encyclopedia/gentius	fc11ec7a0d93260278c176a52cbe8ed3db98ee55	2026-11-17
-/encyclopedia/gentry	af4bffef9bf04bcc9092867447a5c86eb2c4e50e	2026-11-14
+/encyclopedia/gentry	9f1d38e64f95c4ec0794282d379a5aa613cfc924	2026-11-19
 /encyclopedia/geoffrey-bibby	85d455081680702166a68b8a08d58bcf8de9953f	2026-11-19
 /encyclopedia/geoffrey-chaucer	73c2ff9eda971fc97d0610bff03dcf92782287d7	2026-11-16
 /encyclopedia/geoffrey-ii-count-of-anjou	d0085dae89b795403fc250ecb92a86aa8f656ced	2026-11-18
@@ -12816,7 +12816,7 @@
 /encyclopedia/giacomo-iv-crispo	e47a1489400a52b4d6f67cdeec23444083942c76	2026-11-12
 /encyclopedia/giacomo-matteotti	89e45bf50da19100570a91a84f6393a080cefaaf	2026-11-17
 /encyclopedia/giacomo-puccini	89149e9e9e6baf06bc5694eb754fb7209c836036	2026-11-16
-/encyclopedia/gia-dinh	6b4fc38d590d8534bedf76f74cd16c0133387684	2026-11-08
+/encyclopedia/gia-dinh	5051be447f250a18fd2810e4b5a51e676da7187d	2026-11-19
 /encyclopedia/gia-long	655f01a51a9995467319621ef30f2931c281cd9c	2026-11-17
 /encyclopedia/gia-long-code	ba7ff1e3ed798fc585470b91dab59b4309adf4fc	2026-11-12
 /encyclopedia/giambattista-bodoni	ce2aac73088509be2dfc50bf5e82b3df1b9dd203	2026-11-18
@@ -12936,7 +12936,7 @@
 /encyclopedia/giuseppe-mazzini	0cb37beedcb0ea755e7f392f76d9c48868c0d8d1	2026-11-16
 /encyclopedia/giuseppe-prina	8db4fbbba113502484496e79bbecef179e1e7116	2026-11-19
 /encyclopedia/giuseppe-verdi	3bf91783b9580b247b17d98c19fb5616ef3ed197	2026-11-16
-/encyclopedia/giustiniani-family	69de97d93285f4635ddc97c3627f6137e4f3e46f	2026-11-12
+/encyclopedia/giustiniani-family	362a3d772ae16b6d3a6baf645d1aef0ac14127a9	2026-11-19
 /encyclopedia/giusto-de-menabuoi	ef68c6075e23acddd5582b00585550c3ab5beaad	2026-11-11
 /encyclopedia/giza	7a6f19282acdc4a471e11ce40e12ca58e3264c85	2026-11-12
 /encyclopedia/gjakova	594ddace839d68021e59c7ffe0d7fe141598074c	2026-11-12
@@ -12988,7 +12988,7 @@
 /encyclopedia/gniezno	e3efd497d22c9e799a8e78cccbeb1770ae4dddd4	2026-11-16
 /encyclopedia/goa	e6768fae29944e75a7bd014d866518773c2f3a05	2026-11-16
 /encyclopedia/goa-gajah	2be95be2d136ad96f7095c76c323604a9329eff7	2026-11-18
-/encyclopedia/goa-velha	a8655bb9e24165126202bb0f51258571c517390c	2026-11-12
+/encyclopedia/goa-velha	cebf0338d8736f417fbab248b142d29a6eb702b9	2026-11-19
 /encyclopedia/gobarau-minaret	48384c1c52f7880c8aa1d537a79ece07eee444df	2026-11-19
 /encyclopedia/gobelins-manufactory	29f4d2ffc184744eca2e30cc19f3bf7728edcd70	2026-11-18
 /encyclopedia/gobi-desert	6cca90d8c1dee4853e046ae4c25d035a039ecc14	2026-11-16
@@ -13070,7 +13070,7 @@
 /encyclopedia/gomani-i	53bb27f5c2aac46e18b868d4eb6cdbb4f18efe46	2026-11-08
 /encyclopedia/gomba	5157406fd56a23c54446b8717cb7865584a4714b	2026-11-12
 /encyclopedia/gombodorj	75d608f7a6395f208fc78dc792adb46ad1f67644	2026-11-08
-/encyclopedia/gomes-freire-de-andrade	c5cefe6c48daef2ec3632256cce612838fd2243f	2026-11-11
+/encyclopedia/gomes-freire-de-andrade	9781371c33c90a149cd0c7cfd650643d519929d3	2026-11-19
 /encyclopedia/gommateshwara-statue	7502c1eb2e02d208e72f0f8f08393a3476343ff9	2026-11-18
 /encyclopedia/goms	3c6288991e84e3afe1ada85f010ea8cd864a2aa8	2026-11-12
 /encyclopedia/gomti-river	4e9ecf494709443058d7f11953ad15d49dc9a0ff	2026-11-17
@@ -13291,7 +13291,7 @@
 /encyclopedia/great-king	d5cf7077779ee79c0a90d61589fa795bbb41bbad	2026-11-12
 /encyclopedia/great-lakes	bf91c9465b88b68fa0e5532c6be8b357573b5b16	2026-11-16
 /encyclopedia/great-lakes-twa	8b61275c28831ba2098f438ea623c714333d4e34	2026-11-17
-/encyclopedia/great-lavra	1e5c1e18d3456ff37586b15967ed782a40e8f69a	2026-11-17
+/encyclopedia/great-lavra	de40628a37624fb1d3d6d469a9b2cdef96a8e77a	2026-11-19
 /encyclopedia/great-law-of-peace	805824d225ffee187dc35a6d3a977449ef8d07e0	2026-11-19
 /encyclopedia/great-leap-forward	af4912620d46ca497143bfcaa52663ade7d2cf5a	2026-11-16
 /encyclopedia/great-mahele	b5ff06fd2a302ce55b76cf90901e349a09a1ad57	2026-11-19
@@ -13622,7 +13622,7 @@
 /encyclopedia/gurgenes	141ca0516cff5f66ad72c3f46bdc25c8e4fbd224	2026-11-12
 /encyclopedia/gurgen-i-of-lori	ec0c30f8d9521c07941dc5ad75fa7b4c8809e063	2026-11-18
 /encyclopedia/gurgen-king-of-the-iberians	df4d5e62c8ca2e9beaa1d5f06603083abee461fd	2026-11-08
-/encyclopedia/gurindam-dua-belas	867c0e955c1ba8da191fb2359a126e6aa802da3c	2026-11-12
+/encyclopedia/gurindam-dua-belas	e78d8f9d07b0fe2e394627edae839a22df64b8c6	2026-11-19
 /encyclopedia/gurjars	e9b7f6998b7522455b5ce1b6da4ba4b0652d2655	2026-11-08
 /encyclopedia/gurkhas	a70b0a21986046ab7dc78feaefa1ba0d59913668	2026-11-16
 /encyclopedia/gurma-people	115a289975cd23bea02b20ac38a2e38eda121a65	2026-11-08
@@ -13873,11 +13873,11 @@
 /encyclopedia/hamengkubuwono-ix	34279768c2f8fc703a015273bf6fba443b325798	2026-11-18
 /encyclopedia/hamgyong-province	659d226c5e7e0635055869ef4975a11e3eddca00	2026-11-08
 /encyclopedia/hami	c3101436a22c8e62068fe81974a70c8bf8d65d9c	2026-11-17
-/encyclopedia/hamid-ali-khan-of-rampur	4837f8ef6570f7081d531d51d1fc82a601797a18	2026-11-11
+/encyclopedia/hamid-ali-khan-of-rampur	8874e803cc09cc3d662f2557f42d4475defc2d64	2026-11-19
 /encyclopedia/hamid-idris-awate	a58a0e3dc8c78006fded2d97ad2a15a3153d827f	2026-11-19
 /encyclopedia/hamid-ii-of-pontianak	5c2f969683cfaf3ef0cd7693ced6f40c5b4a198b	2026-11-12
 /encyclopedia/hamid-karzai	1e01e4bc5c0c28d0aac817e4850c5c65561f635f	2026-11-11
-/encyclopedia/hamidullah-khan	fde3c4ea1ad6d57df440904ea72c1e2a14a2024f	2026-11-19
+/encyclopedia/hamidullah-khan	314bff512fa1f69648f5f038b232a522f04915ca	2026-11-19
 /encyclopedia/hamilcar-barca	d2e9b952a5e09dc4d09e72d3b082b9c45c187801	2026-11-16
 /encyclopedia/hamilcar-i-of-carthage	31e94833f1cc68f37f571e4a5d48b7c150e224ad	2026-11-18
 /encyclopedia/hamirpur-district-uttar-pradesh	9b2a5f919089b458d90883b9469a662db57b531b	2026-11-08
@@ -14091,7 +14091,7 @@
 /encyclopedia/hateg-country	8a2e637a3591c9cf8c81b2afa754200e93f761ad	2026-11-12
 /encyclopedia/hathigumpha-inscription	e0f2c8dfa6cf062eb5afcf9bb01a9ec2b87ce5fc	2026-11-18
 /encyclopedia/hathor	927abb086f2ab54ab7835b1a16bfe026cc7dc2cc	2026-11-16
-/encyclopedia/hathumod	81488eb265e3cac11ebb07ab462ba59c51298c76	2026-11-19
+/encyclopedia/hathumod	f48f4750137a1c01bbd2c4e8030777e521e20e67	2026-11-19
 /encyclopedia/ha-tien	ce8f09bd133cd0e3d2387aec81c824e49c9d5f16	2026-11-08
 /encyclopedia/hatikvah	2951c61144b9822480d7edb4b10057201a133b9f	2026-11-16
 /encyclopedia/hatshepsut	9efed2aea28cd443739cad507c9a32283e7be3f0	2026-11-16
@@ -14216,7 +14216,7 @@
 /encyclopedia/heitersheim	9db9993936d11e9d3a3a76190aa95429158c6806	2026-11-08
 /encyclopedia/hejaz	3ef2420835a568a0e6f845df470db6d6ca424333	2026-11-16
 /encyclopedia/helena-dragas	5d3b7164f49e39cabc141d227b5f6533bee92ce5	2026-11-17
-/encyclopedia/helena-kantakouzene	ea1d3842f7d248554628d11a4a088a64e2130a4f	2026-11-11
+/encyclopedia/helena-kantakouzene	0db4865b60ae4b99df8b97f0871993cb0084208c	2026-11-19
 /encyclopedia/helena-of-adiabene	b25110d405628ff2a4c65733086ff6184a783561	2026-11-18
 /encyclopedia/helena-of-bulgaria-empress-of-serbia	9e4f759b51ca43fa6c5f8b829ccc66afe82232bc	2026-11-18
 /encyclopedia/helen-clark	03dcc16e94fa650fd76c57a07a4b09d725afc472	2026-11-11
@@ -14265,7 +14265,7 @@
 /encyclopedia/henan	cafe0800ef4318a099d1632e93772228c80f7ddb	2026-11-16
 /encyclopedia/henck-arron	d80d9e1c0890f1b320ea781e4e80de3f77fd2dc3	2026-11-18
 /encyclopedia/hendrick-theyanoguin	0b693df650bd5183a1c8cdc4b231ff3a45ab6990	2026-11-19
-/encyclopedia/hendrik-carloff	e9dc0f91c08716bbbfe718d19a146f98ddd53ced	2026-11-19
+/encyclopedia/hendrik-carloff	bf8e5fce171658c6a523d3cd175e7ec16924f669	2026-11-19
 /encyclopedia/hendrik-van-rheede	29ce2d48e19f3312938cd7d8c72c2f015c954558	2026-11-18
 /encyclopedia/hendrik-verwoerd	2528140d6e5eebf6c00fe69e1b2ad676e07c235f	2026-11-17
 /encyclopedia/hendrik-witbooi	07c19142f979e030151ff8f56690ad39f1f26e29	2026-11-12
@@ -14525,7 +14525,7 @@
 /encyclopedia/hikayat-raja-pasai	879fd864256cc44188eaa04f1e1098492201ed98	2026-11-08
 /encyclopedia/hikayat-tanah-hitu	9c58ccb4cb3c5c8fb09ac08680381a3ca48cbc1a	2026-11-12
 /encyclopedia/hikone	c2ca5a44e73854ba39913982d3768dd98b9bfb37	2026-11-16
-/encyclopedia/hilandar	c875151d95bc51a8dd230e8a1e53201767c64950	2026-11-17
+/encyclopedia/hilandar	06052e3fc3b3e1a1599cad80ff5b4b85c0c918f3	2026-11-19
 /encyclopedia/hilarion-of-kiev	66955c864bac1ee7dcf35478aa8aefe63e7c4b03	2026-11-18
 /encyclopedia/hilary-of-poitiers	f1e73de9b1715517588de366a708b7074a250bab	2026-11-16
 /encyclopedia/hilda-kuper	dbfc37e38ded2a6fa4a337b446c944c5a8232ada	2026-11-19
@@ -14712,11 +14712,11 @@
 /encyclopedia/holy-roman-empire	549219942bf1af640680fdaa95fea580b55cb482	2026-11-16
 /encyclopedia/holyrood-abbey	ccc042bef984bc330ccbd36c39d5afed8ac6cc5e	2026-11-18
 /encyclopedia/holy-spirit-movement	cb98b9a282355675b5b5c1e4771b2ae45bad6002	2026-11-19
-/encyclopedia/holy-synod	fbba92f3637fa522cd0b6d58c03f3f5e8113a178	2026-11-15
+/encyclopedia/holy-synod	44a500648258eccd3c3e239b0fdf0bb80d199431	2026-11-19
 /encyclopedia/home-on-the-range	c6800b8c32c27444d089736ffb72fac1799cc8be	2026-11-18
 /encyclopedia/homer	73a29e3ca335611c40be1af6071e0850257ad218	2026-11-16
 /encyclopedia/homeridae	92ae266f6e2b806518621ba33a3281d2e1077231	2026-11-19
-/encyclopedia/homma-family	d375e15d2d50056c291510f10014901161b297f7	2026-11-12
+/encyclopedia/homma-family	9d16ece94d7f4204aee61808daba1157b0b5f133	2026-11-19
 /encyclopedia/homs	c10b6f338006fdf04962ae65848e9b6ac34b678b	2026-11-16
 /encyclopedia/homun	c2684b60c83a6cf36c7a858315e2205b4b754ab1	2026-11-12
 /encyclopedia/honaine	7aadfb55304842ab46ce04efcac310948c8076fc	2026-11-18
@@ -15057,7 +15057,7 @@
 /encyclopedia/humbert-ii-of-viennois	944abfdb842589c61e02a790c2cfdb253de1f358	2026-11-18
 /encyclopedia/humberto-castelo-branco	03a688daffc3ccfee962c4df0dbd6e081f80614f	2026-11-17
 /encyclopedia/humboldt-university-of-berlin	ee0e44b45422e0d7d772df0c2c42aff0b63b0503	2026-11-16
-/encyclopedia/hummay	0be59a800fe4480429f491f7de6b925e5fb08b6d	2026-11-19
+/encyclopedia/hummay	7a8b92a4eda772819b8351116b200d62c1ba3b7e	2026-11-19
 /encyclopedia/humor-monastery	e64ae2fb6eb99939cf0a90b490a871874a9fc74f	2026-11-12
 /encyclopedia/humphrey-gilbert	308184dfb19f4431297d501ede0ec918cdc673bc	2026-11-18
 /encyclopedia/humphrey-ii-of-toron	47510cdfffbbea80e117e23651e8d5cdc370e56b	2026-11-19
@@ -15236,7 +15236,7 @@
 /encyclopedia/ibn-maymun	16c7f2a3869d3c0a62840418d5766a33b1020d98	2026-11-12
 /encyclopedia/ibn-muljam	873709bab7c0d2f52168b9a47ede0d1a0737836d	2026-11-18
 /encyclopedia/ibn-qasi	98b392fc91b72d75826def7c687297d4db6a41a9	2026-11-18
-/encyclopedia/ibn-rashiq	78af0dc9c7ee7520b255f3e1ab4b9e5c04c677ef	2026-11-11
+/encyclopedia/ibn-rashiq	397f3222c00582e06ce1a933df63b40fb7049237	2026-11-19
 /encyclopedia/ibn-rusta	40f9feeaafc8bb93b108d87fe7aec41c7e605946	2026-11-17
 /encyclopedia/ibn-salim-al-aswani	d2578787f213d77f8ece9daa0ea6612df68beffc	2026-11-08
 /encyclopedia/ibn-saud	d703c176232b9b70474f0a95cec2bdef3233642a	2026-11-16
@@ -16066,7 +16066,7 @@
 /encyclopedia/jaffna-kingdom	2e664e94d4a5cf3141cb04d5d3952988985b8d50	2026-11-18
 /encyclopedia/jaga	b3c6f7a5e69a07a65cbaa8b59d5c3fcaa89352e5	2026-11-08
 /encyclopedia/jagaddipendra-narayan	5a8fb6d3b6160c244ab8fb8575610e0f58c3c0f1	2026-11-19
-/encyclopedia/jagadhekamalla-ii	d3d5dbb71cd4c401be6d42cbab6cffcd9cc33f30	2026-11-08
+/encyclopedia/jagadhekamalla-ii	c192a12a8923d67e4a04186d72f91a464ecfbdc9	2026-11-19
 /encyclopedia/jagannath	047c960e931aa2324c239a6a071b2a9d638f2eb5	2026-11-17
 /encyclopedia/jagatjit-palace	8d6744d7b52b634438cb70203b978a1565665871	2026-11-08
 /encyclopedia/jagatjit-singh	32c6298d127e312eda6ad42afd0eb5d895752095	2026-11-19
@@ -16094,7 +16094,7 @@
 /encyclopedia/jahangir-mirza	59a98579c9f1c13e994b93735e8f5a1c1c1fd995	2026-11-09
 /encyclopedia/jahan-pahlavan	fd76c65aba2dfd982b9b8bdb63603ea9cc82a907	2026-11-12
 /encyclopedia/jahan-shah-qara-qoyunlu	3535fd1b3641ead22728bf882253853e6c1a3eab	2026-11-08
-/encyclopedia/jahaz-mahal	2043dc65236f1276874152c99eeb3c586c629cbb	2026-11-08
+/encyclopedia/jahaz-mahal	35f20e1e6e9e4531ecb1d3364c8e3deae3ab9120	2026-11-19
 /encyclopedia/jahriyya-revolt	27db492d1e247d55731a92fc4822baa499515640	2026-11-08
 /encyclopedia/jahwarid-dynasty	ea6915988e7db9c03584e80cd68d276944f6f50c	2026-11-08
 /encyclopedia/jai-jai-garavi-gujarat	b97ce5071147ccb216b4ecf7cf1be393b2604876	2026-11-12
@@ -16233,7 +16233,7 @@
 /encyclopedia/jamil-mahuad	54e71feb3198535d5f9159b38add5c8bb9517c48	2026-11-11
 /encyclopedia/jammu	7f9a6398aa9b9eadf0474b9f3803e3d8f65351a0	2026-11-16
 /encyclopedia/jam-nizam-al-din-ii	3707e025af0a4d7d8e035705b9f09b7f307612cb	2026-11-08
-/encyclopedia/jampa-lhakhang	0909980f924e61323d70a7d2dae28a9cd51d270e	2026-11-08
+/encyclopedia/jampa-lhakhang	b66bc787cd5933015aad3ba8ed91fda8ba3b62dc	2026-11-19
 /encyclopedia/jam-rawal	3c14e176d95b682681546df3a0a434fcb726233c	2026-11-19
 /encyclopedia/jam-sataji	40da1ca12703aef91b2faddd313d5caa3cd6d3de	2026-11-12
 /encyclopedia/jamsetji-tata	fe0e24e773260eb36eaf955f0a1abd5949e35e2a	2026-11-16
@@ -16364,7 +16364,7 @@
 /encyclopedia/jayadhwaj-singha	c947a7f115cbb5f820fce20091b06d94c4e323bd	2026-11-19
 /encyclopedia/jayajirao-scindia	02a02d07dabc8bca79603bfcdc3d68c6c643ce36	2026-11-19
 /encyclopedia/jayakatwang	bed2f5cdbaff486c4f7fe2423894d53b76bc4310	2026-11-19
-/encyclopedia/jayakeshi-i	e01578defa6b4b25c98043e6cc0b689d77f4b37a	2026-11-12
+/encyclopedia/jayakeshi-i	eb2d54376a2e7c282aad8c594c3fef0711a369a3	2026-11-19
 /encyclopedia/jayanegara	4309dd6e8e494377f8a3913151ff3df07b598f1f	2026-11-18
 /encyclopedia/jayapala	885b36b6169ea3603da6afac362c5a84f5693a40	2026-11-18
 /encyclopedia/jayapida	d1b532cbaf26f75fd7977bdc3995070b2bb625eb	2026-11-12
@@ -16547,7 +16547,7 @@
 /encyclopedia/jie-people	8c03956f8a7709fc5828bc99eae4ffc3e87a5299	2026-11-18
 /encyclopedia/jigawa-state	cbd736b67431a1be67536e7723bfd6fdd1b4ae21	2026-11-16
 /encyclopedia/jige	fc85dfee8d0ff79d10d26fc2024349eca47c8c78	2026-11-19
-/encyclopedia/jigme-dorje-palbar-bista	239a9c4ab68aaba01a19c08daf825b6d8fa554d4	2026-11-19
+/encyclopedia/jigme-dorje-palbar-bista	5f5f4d92bab00705593a683c852d1dbbb9249466	2026-11-19
 /encyclopedia/jigme-dorji-wangchuck	f68ecc4bfc16dc60bbf6cfb2fe76d4b6b493bacb	2026-11-17
 /encyclopedia/jigme-khesar-namgyel-wangchuck	7015b919d1133b22cdb5cd1d86cabfc9eb5d6849	2026-11-11
 /encyclopedia/jigme-singye-wangchuck	617b2e1570298aa713542f635bad7773d2504b19	2026-11-11
@@ -16839,7 +16839,7 @@
 /encyclopedia/john-margrave-of-brandenburg-kustrin	66de3a45bacda4cfa853259107bb3dffca4c6d07	2026-11-18
 /encyclopedia/john-marshall	70fe2469a22206b95be8c4149398ee00e0d94512	2026-11-16
 /encyclopedia/john-mason-connecticut	31e09b69e96bc5c89b39d91e85abedb6562d2712	2026-11-08
-/encyclopedia/john-mason-governor	a50424e81b87e384aeb0fc9ccd350eedc9204603	2026-11-19
+/encyclopedia/john-mason-governor	ce3a46638acd8c4f87dc2ef96c9f364ef17e3116	2026-11-19
 /encyclopedia/john-maynard-keynes	e61a20fc369ca7d1de900d1aae47bb5f4711c2d7	2026-11-16
 /encyclopedia/john-molteno	a689dc4339246dfb4e5598c1d536050d8dadd8b2	2026-11-19
 /encyclopedia/john-monash	147a69b337c06ccced843b4e2f5ca370870f865d	2026-11-18
@@ -17353,7 +17353,7 @@
 /encyclopedia/kakupakal	6a577520bb0331762b2cc5005a3037ba158c599e	2026-11-12
 /encyclopedia/kakusthavarma	7b07bf0b460c457d3125c4a7a3164bcaec0cff23	2026-11-14
 /encyclopedia/kakuyids	0e9ad009ba7ff54fadc7f82a9e9d514840a91733	2026-11-18
-/encyclopedia/kalabsha	58ed1e9cd0e04cd26eb8c05ef98c9c2393cbbf17	2026-11-08
+/encyclopedia/kalabsha	7e287c08d0b270f39ba6b1bbef977dec829a1134	2026-11-19
 /encyclopedia/kalaburagi	644e4610480efd69fe8e6c23544e59bdb1278779	2026-11-17
 /encyclopedia/kalachuri-chedi-era	f5ac0b39aba67b736c320435d74d5cd7e83c0bda	2026-11-08
 /encyclopedia/kalahom	1e5db6a8905180ed14b6712af7290b277014e3b9	2026-11-08
@@ -17370,7 +17370,7 @@
 /encyclopedia/kalashoka	78f3539f19cbbbf89d5cdc6b8fcd471eb04cfbbc	2026-11-12
 /encyclopedia/kala-wewa	8bc60db364f39d7cb40a55f75ddfc4beb823b5c9	2026-11-19
 /encyclopedia/kalbali-khan	4cd857fa4a405a351bc7dce97961fcd2a0189cd0	2026-11-12
-/encyclopedia/kalb-ali-khan	3a0af7efd712214dc01b601467f260e9a212943d	2026-11-11
+/encyclopedia/kalb-ali-khan	41d7e2e7866c0593831af11a1ba43ef1269abf68	2026-11-19
 /encyclopedia/kalbid-dynasty	6edc003375057c16d9179a5dbf8d894ea14359e5	2026-11-18
 /encyclopedia/kale-akte	afe06d8a3f5a65239ea486b0a0575bd676d29b22	2026-11-08
 /encyclopedia/kaleb	c10fc1323c986d0bb9cd1933d2baebc30de9a901	2026-11-18
@@ -17385,7 +17385,7 @@
 /encyclopedia/kalhora-dynasty	9ea1a5f4bdc239582ea3a072c9f94702cdec92a7	2026-11-18
 /encyclopedia/kaliakra	c71231da6aa1b7778f0523050e1e0c35c2e8cfa2	2026-11-18
 /encyclopedia/kalidasa	8c18c2dfde5068520eea5d9d5703c95242c11822	2026-11-16
-/encyclopedia/kali-gandaki-river	358b9975c5c3cef2b0269d4b475e6c1ebd5a4eaf	2026-11-08
+/encyclopedia/kali-gandaki-river	117f470cd629ac579c86b067083da5252175b1f8	2026-11-19
 /encyclopedia/kalijati	5a81eec3d89c3640cbc5f412245404b65742d683	2026-11-08
 /encyclopedia/kaliman-asen-i	d0bfd8bcf5ced922fb947beb3de2f889ab16a6ae	2026-11-08
 /encyclopedia/kalimullah-shah	235394895f6322f9def45d2f66f3f219960ad007	2026-11-08
@@ -17479,7 +17479,7 @@
 /encyclopedia/kanhadade-prabandha	6f10dd717caf384310cae6d2a09243023b391fde	2026-11-19
 /encyclopedia/kanhadadeva	7a9ae0a14b5d2771c66779d884b42568d48a260c	2026-11-19
 /encyclopedia/kanhoji-angre	4cc7031d4fcba2d5265b2fdd6d8fca76c2afcbcc	2026-11-18
-/encyclopedia/kaniaga	dc12ddd1c000edc1017b0130c19f6f4df81ffd81	2026-11-08
+/encyclopedia/kaniaga	c57848483a291a7292b5651e513e18bba9c4c120	2026-11-19
 /encyclopedia/kan-ii	36e8fee45d4863f196c9344ff31066c5e3b3a902	2026-11-19
 /encyclopedia/kanine	264f2651e25a02beb8d564b63c04a35357771994	2026-11-19
 /encyclopedia/kanishka	4c09c7c46d5779ef2d826be0ea17241ffc8511dd	2026-11-16
@@ -17639,7 +17639,7 @@
 /encyclopedia/karum	7e489417e7bbf4ee764ecb35132bcb9c4affe7e5	2026-11-12
 /encyclopedia/karun-river	9b1536f325c27c2dca4450383d018bab609ca002	2026-11-16
 /encyclopedia/karur	5118b3f4a951d5b831446d1d11254f1e0420d6f0	2026-11-17
-/encyclopedia/karyes	dce61cabc8892c1a1cc975b7586ce6e299ac92b2	2026-11-08
+/encyclopedia/karyes	a17fd8b06ba9c464624077e971461b504b8c4ddb	2026-11-19
 /encyclopedia/karytaina	34b4efac4d3a3ab59a953663fddc25f5b75a52e3	2026-11-18
 /encyclopedia/kasagama-kyebambe-iv	9d7815fbd7a089869d0ab0a4795af8c6c7fc89bf	2026-11-08
 /encyclopedia/kasai	490c06c4d1a8ef924780d7dfbd01c39bf7afa270	2026-11-08
@@ -17800,7 +17800,7 @@
 /encyclopedia/kenesary-kasymov	881115ecb3a1174bbafc75d1ca5e49dca83c9043	2026-11-18
 /encyclopedia/kengtung	1af5fec97dcf72139d23c7b50c8378def781ac9a	2026-11-18
 /encyclopedia/kenjutsu	1dc9c3a7e40f5c19e5f2c4c21288d4a5831bdb2a	2026-11-18
-/encyclopedia/kennebec-river	b41dfe3ea625f9e5a6158eba85d52f96b7e39510	2026-11-18
+/encyclopedia/kennebec-river	7ef8c6550c1ede7fbcfe69ebfa9ed3a4cb0b1634	2026-11-19
 /encyclopedia/kennedy-simmonds	0cc9c38ccc4dbabcb582276338b08da1a5832808	2026-11-11
 /encyclopedia/kenneth-kaunda	6ac208fa2ac2f3db2d6c47a1508a56e41a2842c0	2026-11-16
 /encyclopedia/kenneth-macalpin	ed633035b8f08135566a1b0bbe150da51d207c92	2026-11-16
@@ -18205,7 +18205,7 @@
 /encyclopedia/kit-carson	0f04d80fe92d5849a12cfa81cbd8dfef3fb92005	2026-11-17
 /encyclopedia/kite	81dd243b2a9afa87d7fc22dd70e95712be0b0047	2026-11-16
 /encyclopedia/kitob	e6bc706b68725927dacca1f8f5a255370763dd78	2026-11-08
-/encyclopedia/kittery-maine	6bc63e54ab558b5734e6bf624d783751822d2dc2	2026-11-17
+/encyclopedia/kittery-maine	d3f89f17898b5362ff5dd8affe7333b77cc4dce1	2026-11-19
 /encyclopedia/kittur-chennamma	c58d62261be58dd8e5c72a8eb555b7a441fa8fe0	2026-11-17
 /encyclopedia/kiurikian-dynasty	564c79fd84fc844b92d0ae68cd1213d17d4319cc	2026-11-19
 /encyclopedia/kiva	b411ee0b2dc18c237b2c6b90931a8a77cfde58a9	2026-11-18
@@ -18290,7 +18290,7 @@
 /encyclopedia/kolar	9c908a2a571e2e5d4c83ae2c0f43a5582f0a133f	2026-11-12
 /encyclopedia/kolbacz-abbey	b4a32e19f9142752a2a7a893d954d79615fe36d6	2026-11-08
 /encyclopedia/koliada	3f17829c26af525d72c1b5eab5c6ee759d194625	2026-11-12
-/encyclopedia/koli-tenguella	b55dc3b5cfeeb4cd6bb3f50258d6def50587d011	2026-11-12
+/encyclopedia/koli-tenguella	36a9d8619c0efcbde41c761235f24d19a9e1383a	2026-11-19
 /encyclopedia/kolkata	95aa9a36bec12d77c96a5177f512772732019503	2026-11-16
 /encyclopedia/kolkhoz	57a6b594722520f54f85c9d8d458b537e3015011	2026-11-16
 /encyclopedia/kollam	4a7cca6f53d589509258900948732cf9579fc297	2026-11-16
@@ -19055,7 +19055,7 @@
 /encyclopedia/latifundium	53fa593eabe81c3cfa27f16cf104f2c32c0613e1	2026-11-17
 /encyclopedia/latin	c152f2b3457d2089e8047064a1569fa6668ad505	2026-11-16
 /encyclopedia/latin-america	ee464f273f088097979d4ed28ebc04ce48892750	2026-11-16
-/encyclopedia/latin-christendom	c35374115b837851b3595652c8996aff479a2f23	2026-11-17
+/encyclopedia/latin-christendom	ba4cb928afcce2aa60da8b7097ee9825768715b1	2026-11-19
 /encyclopedia/latins	7f5551508f924a3fa2efaebb05dff31b1eebabe9	2026-11-12
 /encyclopedia/latin-war	f02d69369d755ac79ee04485bebcf1c2722ec2b3	2026-11-17
 /encyclopedia/latium	fbdc084cb69301ca460f795b952abe5f3a6fac8d	2026-11-17
@@ -19113,7 +19113,7 @@
 /encyclopedia/league-of-lezhe	e5863f053a14ae3b9e7bd22847bc2562c14d6a24	2026-11-17
 /encyclopedia/league-of-nations	bf661ea6c20e779c4d777e6a040336d7d0933e87	2026-11-16
 /encyclopedia/league-of-nations-mandate	5fdf9deac580686415877896643933e713fc7b0d	2026-11-17
-/encyclopedia/league-of-san-genesio	6fa49c1550ebd92d0fbfe37cc376adede8fdfd05	2026-11-12
+/encyclopedia/league-of-san-genesio	91386c45f8011a6fef46b44302bcdccaff5d39ff	2026-11-19
 /encyclopedia/league-of-the-public-weal	2df003a5b6ef749f5e93576e0a69d9aa2604ba55	2026-11-19
 /encyclopedia/league-of-the-ten-jurisdictions	5ff2c2e3a68eb4c9703a412d4ba7e712b87665d5	2026-11-18
 /encyclopedia/lealui	a85c1658c2dfb6b9109514e05c4add00101e23e1	2026-11-08
@@ -19951,7 +19951,7 @@
 /encyclopedia/luc-en-diois	533a72f9b11148d7df3870a11bf6ce76da4eede0	2026-11-17
 /encyclopedia/lucentum	7c958019c0333df8d9f9c1725a8749e19d3175e3	2026-11-19
 /encyclopedia/lucera	804d0b33d7c4d016991538bf7dfd6d62708b47c9	2026-11-16
-/encyclopedia/luchino-dal-verme	cb15463c1887c5d6a1be40371e1a68e6a58b30ab	2026-11-11
+/encyclopedia/luchino-dal-verme	d2ed3d178ec4cf67ec7db44ba8899aca522bd879	2026-11-19
 /encyclopedia/luchino-visconti-lord-of-milan	fb938e8a73252a6a526ff19f374207c581047587	2026-11-12
 /encyclopedia/luchuan-pingmian-campaigns	08007b503e2d88d4c16ada19d1e681f93c3754ee	2026-11-19
 /encyclopedia/lucien-bonaparte	25ed74188640dcb8a3bdd9eb70f16fd0ffe96ac2	2026-11-17
@@ -20124,7 +20124,7 @@
 /encyclopedia/lygdamis-i	7763085b7bdd2ce893f6b55d17b3047b5800edc3	2026-11-12
 /encyclopedia/lygdamis-ii	472b3c3e56cc5d7e98754e5930a6928f05de7da5	2026-11-08
 /encyclopedia/lygdamis-of-naxos	fcc7f7cc85e5c88aa38cf5360de7d50dbcca8261	2026-11-08
-/encyclopedia/lygonia	bfd252e1de372b08edab2da5575c113821c16199	2026-11-19
+/encyclopedia/lygonia	a85245729f27da49025357c8306ba5c05a5b1e43	2026-11-19
 /encyclopedia/lykhny	53e0b6d140055f604ad7b3f095c3a12bd209c688	2026-11-08
 /encyclopedia/lyna	102029079b4c09231efe60047f32f656967c0a94	2026-11-12
 /encyclopedia/ly-nam-de	2c6e5713ad3f4a82038f113ad15de1c2bc153a7c	2026-11-18
@@ -20355,7 +20355,7 @@
 /encyclopedia/mahavyutpatti	7d4329740724fe29d74ec1cd9e68390f254bc9a2	2026-11-19
 /encyclopedia/mahayana-buddhism	863300f79a7385683a474ca51396dc51d603455e	2026-11-16
 /encyclopedia/maha-yazawin	aaa406326a5dcedebe7659841c73cf1141222662	2026-11-19
-/encyclopedia/mahbub-ali-khan	8b3cd96af9d78c4c6d7a8448b4d3922dd0a54baf	2026-11-11
+/encyclopedia/mahbub-ali-khan	d85a0b5dc11bfed0b780af6c3fd4e7be5a38a8f1	2026-11-19
 /encyclopedia/mahdi	782cc3e3577f5e1da6b12c4e87ef371807fe04e5	2026-11-16
 /encyclopedia/mahdia	55a5fcfb9b51093f8af88b65509d0db29eaab7e9	2026-11-17
 /encyclopedia/mahdist-state	cfcc2fb07fd51a5603a40c42db4aae6b37fe0f4e	2026-11-18
@@ -20365,7 +20365,7 @@
 /encyclopedia/mahe-india	51e43062f1f3ec6595e33329ac1001b8ad92feac	2026-11-17
 /encyclopedia/mahendradatta	648849d40aef778ab5d0a9440271fb4cdfb6a39a	2026-11-19
 /encyclopedia/mahendra-of-nepal	9bd2ed409ea98d9f43706ef92edd6d55bb73b7b9	2026-11-17
-/encyclopedia/mahendrapala-i	f1f3e5e2e3972d68933f4cde0689de4754858631	2026-11-15
+/encyclopedia/mahendrapala-i	270de1bf993f26399df67d6fac421e27e19994ce	2026-11-19
 /encyclopedia/mahendravarman-chenla	c105e7e04553d5d0fdc955cc19679e0d5c7156b5	2026-11-08
 /encyclopedia/mahendravarman-i	07efead1242b8b6cf8a149c24fadbd7798faf1bd	2026-11-18
 /encyclopedia/mahendravarman-ii	f94af47bfdcae8060183dbace419a95fcc2d1971	2026-11-08
@@ -20726,7 +20726,7 @@
 /encyclopedia/manusmriti	637d3b336e099bd3610e350d93874512385bbb33	2026-11-16
 /encyclopedia/manx-language	7101234f4ecad1f2f308ecd9ba0824c464b2572b	2026-11-16
 /encyclopedia/manyakheta	f13be8aeb437e18768ee8f44c84d540ecbc3a542	2026-11-12
-/encyclopedia/manyema	69494333bb9b5b57d96497124a55f337c677f03b	2026-11-15
+/encyclopedia/manyema	a528b114c8c7ffcd228e6e78b4b498b5449055c1	2026-11-19
 /encyclopedia/mao-gong-ding	b7e766dd640e9ccd0ea22799ad3012ca1423676c	2026-11-19
 /encyclopedia/maoism	f700ca9fda8052bc22496d7504a42f20705ace01	2026-11-16
 /encyclopedia/maori-language-act-1987	9caf51d40b54b1ac24938692175b81372a4b4006	2026-11-19
@@ -20940,7 +20940,7 @@
 /encyclopedia/marquis-de-lafayette	b5a100982f3604bb66044ca73df1ffb999893364	2026-11-16
 /encyclopedia/marquis-de-tracy	d7804f4c225be3dfb815b03cab88f258395c9a4f	2026-11-12
 /encyclopedia/marquis-lie-of-zhao	6272cb5408eb4a551aac7292dbfca65d0ed44535	2026-11-08
-/encyclopedia/marquis-of-pombal	f7141482798dd50ca4af9dce1e2d274a5f9a2bc7	2026-11-15
+/encyclopedia/marquis-of-pombal	d6bdae98c93c7ada2a891474589e7da0f722f027	2026-11-19
 /encyclopedia/marquis-wen-of-wei	69410d55c20e06c9ab5d61f3ded8b44b161d51cb	2026-11-18
 /encyclopedia/marquis-yi-of-zeng	10135fce6ca9c38a1a835271ddf71e530e2760dc	2026-11-18
 /encyclopedia/marquis-zhao-of-cai	46c2365b52c16c7a3476245496558e477aa33f2d	2026-11-12
@@ -20966,7 +20966,7 @@
 /encyclopedia/marta-river	85cf28f08c53ced55a2817b0c852c598470fa07f	2026-11-08
 /encyclopedia/marthanda-varma	072308239c1d76e77aedbba6317de5d8f23274e6	2026-11-18
 /encyclopedia/marthas-vineyard	3b45eb2d13fd397eb61c7e55038372649fec4414	2026-11-17
-/encyclopedia/marthinus-prinsloo	b5f59c8f85b18299e5e0ea7b8ad07c151acbb693	2026-11-12
+/encyclopedia/marthinus-prinsloo	35aa4739b1ebf6cbbce1d9f3f1fba29487fa8b34	2026-11-19
 /encyclopedia/marthinus-wessel-pretorius	3cedd9a4e9cdb5bcc36d7a809b1cc12c70177bc1	2026-11-18
 /encyclopedia/martim-afonso-de-sousa	e5ab112577cc946d249fe2a278fc207d0ecc8846	2026-11-18
 /encyclopedia/martin-behaim	2fd9783ffe9149ff98ff1c25b767e365dc282bc7	2026-11-17
@@ -21198,7 +21198,7 @@
 /encyclopedia/ma-xie	c9c234cf1e2538cab3f84bc5268c1bcd9667f76d	2026-11-19
 /encyclopedia/ma-xiguang	609a5e4dd3598a455aabaaf0a6263e985e45bca3	2026-11-19
 /encyclopedia/maxima-caesariensis	4c40ebfcec483fd0c7695d542fa1fea00e1c1cff	2026-11-18
-/encyclopedia/maxima-sequanorum	b0eb3d00711ced16b1e21191cad02ae99541f99c	2026-11-08
+/encyclopedia/maxima-sequanorum	f54ae87e6df92cbf047b8c1792e9635ba8ccce5d	2026-11-19
 /encyclopedia/maxim-gun	52aa31b54d8898447137ed0de49bae28d1917d57	2026-11-17
 /encyclopedia/maximian	9eaf472a1f8e228d4b6d21e894dfb6a27316e0a7	2026-11-16
 /encyclopedia/maximilian-friedrich-von-konigsegg-rothenfels	279a2059227ce08bfded345b8408f4cadd75cba7	2026-11-11
@@ -21844,7 +21844,7 @@
 /encyclopedia/mixe	a3fa2ceb17d65ba92869dca77c0d5e9d8473efff	2026-11-08
 /encyclopedia/mixed-constitution	7cc49b888891d1bcd21d311c82f97f30a903dd8a	2026-11-12
 /encyclopedia/mixed-member-proportional-representation	8c6cbb249be54a974b1123aa515614f98e1f649d	2026-11-18
-/encyclopedia/mixteca-alta	8410e87fbf5563d5c500b5ea882e140ef477605f	2026-11-14
+/encyclopedia/mixteca-alta	cdd9c4c3aa2c9325fb5bdd065c6887568d3300e6	2026-11-19
 /encyclopedia/mixteca-costa	933d34f49b3cf9d446daa0555ba7eb493218c9a3	2026-11-12
 /encyclopedia/mixtecs	06449b2fe2cb5be5a28aac0be9967a059922a31b	2026-11-17
 /encyclopedia/mixton-war	4f46263ba6a79babad605cb370d844846876f74f	2026-11-18
@@ -22391,7 +22391,7 @@
 /encyclopedia/muhammad-v-of-granada	c07c4c3eb3d9d6491af8133db277cb63f7f530e7	2026-11-18
 /encyclopedia/muhammad-v-of-kelantan	30074d8f0b26b5c5bf2bac18ea614f7bd004071e	2026-11-11
 /encyclopedia/muhammad-xiii-of-granada	84d0f32e65894912de9431b34a5b87433205d61d	2026-11-08
-/encyclopedia/muhammad-xii-of-granada	29ff8181478c77d81f5f1a40b35deef5c4caadb7	2026-11-12
+/encyclopedia/muhammad-xii-of-granada	9aa41f7823a9830146bf83a97f0daf76a208df88	2026-11-19
 /encyclopedia/muhammad-yunus	13cb661905fff35a766f36c18e44f26f93cbc6e5	2026-11-12
 /encyclopedia/muhammad-zia-ul-haq	cd036c25dcbb0c7ee62f66c5ca96ae9cb85c8049	2026-11-17
 /encyclopedia/muhanga	77617f38995c974ee3dda28f6c82395b6fefbc74	2026-11-17
@@ -22843,7 +22843,7 @@
 /encyclopedia/narseh	df058dc141fd9bed15b0314d2fc62f3b70168241	2026-11-17
 /encyclopedia/narses	5b33087defdcbcc051dd0c057ce25fb2a046abb6	2026-11-17
 /encyclopedia/narshakhi	132f5e57574369bbcca6972c0bf41fac472eda0f	2026-11-18
-/encyclopedia/nartiang	e501bd617212b04332aa29bb55d19b9bf8e6dd25	2026-11-19
+/encyclopedia/nartiang	9d81c7f6796f7bfa4e2421070fe0420024b017af	2026-11-19
 /encyclopedia/nart-sagas	482e7c22aa13d43d27712cf5ef1135250a5f0a0a	2026-11-18
 /encyclopedia/narva	4383395aa8770100d13e859bbdc9579263d2cb68	2026-11-17
 /encyclopedia/narwar	27f95d4df3f83dd86206022e1a23d84151eef8b7	2026-11-18
@@ -23474,7 +23474,7 @@
 /encyclopedia/north-cape	2018de24f91d96d598d4fdb0bda5eb065d3ce8a7	2026-11-12
 /encyclopedia/north-caucasus	f3ba9ac16631daa9e6f6f52375d5ddc47d9eae43	2026-11-17
 /encyclopedia/north-channel	122779160370393152b2a8392570598434a06b8d	2026-11-08
-/encyclopedia/north-china	88a32e6218e951b8d02ae485eacdb03c8f6e783e	2026-11-15
+/encyclopedia/north-china	17bb9cedf97a20e6ba30305d5a2c756ff2dc4971	2026-11-19
 /encyclopedia/north-china-plain	40f1f068ace664e32894c6a994e1b44e5d95f9cc	2026-11-17
 /encyclopedia/northcote-trevelyan-report	ccf855763e19424e556332d2d517dea3964464a0	2026-11-08
 /encyclopedia/north-east-frontier-agency	e909d3f7557e9ed668da97464dcec975981ae149	2026-11-18
@@ -24456,7 +24456,7 @@
 /encyclopedia/palgwanhoe	33e339d8d3afdd1f2d898d13404408e56d1fb2e1	2026-11-08
 /encyclopedia/palici	fb3f61852fe7f506ad335ef7a6add3e24473a465	2026-11-08
 /encyclopedia/palio-of-asti	97ee330bec303072723a967fd84dd94c729aa2b4	2026-11-19
-/encyclopedia/pal-kastrioti	8453e7afa19816ef2c350336af96a8b36e8ba640	2026-11-19
+/encyclopedia/pal-kastrioti	121ca4af82190c22b5a2ef320326b18d961b46f1	2026-11-19
 /encyclopedia/palk-strait	aed9cb50998599cfd1d20002cbe621649c442a82	2026-11-14
 /encyclopedia/pallantia	21197ad09a14971ba24d8267737f7a82f26be8b8	2026-11-08
 /encyclopedia/pallars	4bd588792534a5d9188ffb7aa74a765e231f6490	2026-11-15
@@ -24516,7 +24516,7 @@
 /encyclopedia/panduranga	2868fee33ed7a734aba229d854da11c522286bc9	2026-11-18
 /encyclopedia/panduvasudeva	4383a8aa04ea1f7bc6573c88f3d55a3997240dc6	2026-11-08
 /encyclopedia/pandya-dynasty	082aae8252a874254f81ee388b310c52f1440acb	2026-11-17
-/encyclopedia/panehesy	b181c2cfa0eeea8fce50fea5672ae79d337f9593	2026-11-08
+/encyclopedia/panehesy	5250e9f52180a6105bc6137183eba56a6b70bcdf	2026-11-19
 /encyclopedia/panembahan-girilaya	86eeb5c148cf5443f8d454d41d6147d19af88f21	2026-11-12
 /encyclopedia/panembahan-hanyakrawati	9cfa22e6c385de4d38a8756ee03d4ad4964f8b88	2026-11-08
 /encyclopedia/panembahan-senapati	834f6ffa0801fccc326e6406340ea50451c9c4bd	2026-11-12
@@ -24935,7 +24935,7 @@
 /encyclopedia/pentri	a1bfaf968a9c4b9907d51cfa304524006f22f9c4	2026-11-08
 /encyclopedia/penukonda	079a5bfec9a41aad3f6711b1110870755b756d01	2026-11-18
 /encyclopedia/penycloddiau	fbfa09905490c8559db82c1916490e7e856fef94	2026-11-12
-/encyclopedia/penyengat	06f7eacc341d83500b72ad9a39e118c601014e20	2026-11-12
+/encyclopedia/penyengat	28a7ec2b76d41fd72c700966f0df55043a751723	2026-11-19
 /encyclopedia/people-power-revolution	629e14af9688b42627d617a30edffdef0068bae3	2026-11-17
 /encyclopedia/peoples-action-party	491588195a53f705836ee99a991b7a443b936b0c	2026-11-17
 /encyclopedia/peoples-army-of-vietnam	418a3bf885938e210b1ac80c8460722060a749bd	2026-11-17
@@ -25265,7 +25265,7 @@
 /encyclopedia/phocaeans	d0c43fd3b2221edf2414f8fbba7b83d612833f15	2026-11-12
 /encyclopedia/phocas	7439b05e0721ea9a32a6c218ed76366b8f3210c9	2026-11-17
 /encyclopedia/phocion	166b805ddbeb85b7b0c7e0566aeaa680e5218c40	2026-11-17
-/encyclopedia/phocis	7f564cf81ecdbff3edc7460018b8ba980483a9d7	2026-11-15
+/encyclopedia/phocis	614eb696ee7b5abf3a93256e8851e3b0aedbdc96	2026-11-19
 /encyclopedia/phoebidas	a91365d4b9e8e361e1d1e56b0d3eb9f18878a37a	2026-11-11
 /encyclopedia/phoenice	244bd8d150714f401a349bc966f63ae502df3378	2026-11-18
 /encyclopedia/phoenicia	690f820070179edf996a35c7a4baa497c3dc0d3f	2026-11-17
@@ -25291,7 +25291,7 @@
 /encyclopedia/phra-ong-mahawangsa	0cc77e7af86d319cb223dfab69d3c3ad396c8b8c	2026-11-11
 /encyclopedia/phraortes	9358056e17fc5f04dd72f965aa5cfba72fc39830	2026-11-17
 /encyclopedia/phra-phuttha-chinnarat	be7c5b5d695581735429bd9b33283e70d36d4118	2026-11-12
-/encyclopedia/phra-prang-sam-yot	165479f461bd6516b537f861a13f60c1418391d1	2026-11-12
+/encyclopedia/phra-prang-sam-yot	48eee824954797b9da877d40fa8a09ea2b6cd7d5	2026-11-19
 /encyclopedia/phra-ruang-dynasty	45a19997e61db9c212bc0318614470d374157e83	2026-11-08
 /encyclopedia/phra-that-si-song-rak	2eea9e819de666b61ca5138adab02192bbd335aa	2026-11-19
 /encyclopedia/phraya-phahon-phonphayuhasena	435fec4a769131a9081dae696cea2841763e696a	2026-11-18
@@ -25314,7 +25314,7 @@
 /encyclopedia/picts	1eadf552dea5308d1b6757e354d7584b398373fc	2026-11-17
 /encyclopedia/pide	1cebce178d3c53ae5abc4fb045f84b73090afbac	2026-11-18
 /encyclopedia/piedmont	b6573cc9db5c6675b2c9d63ed66bc248aac3c904	2026-11-16
-/encyclopedia/piedmontese-easter	182ec3374b8cc271b2aa170f48d4a986e16a848b	2026-11-19
+/encyclopedia/piedmontese-easter	93a7d7c45437df5b5c559521c031f3bda26cebb2	2026-11-19
 /encyclopedia/pieds-noirs	4d89d4917f7d118e29e6af9aaf87e8c8cd33c1a1	2026-11-17
 /encyclopedia/pieria	2dd4e60ebf2d6de2c1b1f65ca4dab7515c677b68	2026-11-12
 /encyclopedia/pier-luigi-farnese	8f383ef2ef4c006e7688bfaf1921befe1c6a3c39	2026-11-17
@@ -25485,7 +25485,7 @@
 /encyclopedia/plymouth-montserrat	8dbb3c8ebd6d2282ea4163b7644aff89dded91b5	2026-11-17
 /encyclopedia/plymouth-sound	c55c51f873f066a3d0ec7b19e0c945d437802201	2026-11-18
 /encyclopedia/plzen	1262e968a65df2bbe7b3f5ac256d23d2d490c737	2026-11-16
-/encyclopedia/pnar-people	cbbd6c0ceeff8474ed97d75adae73537358004be	2026-11-19
+/encyclopedia/pnar-people	74c721310c615ec0e179a54557a9a4cf11173251	2026-11-19
 /encyclopedia/pocahontas	36af5f95572cb6408229694c6780e6ffcde113e6	2026-11-17
 /encyclopedia/pochteca	44e0a6187ae4f8bedf186814e6594fccb24eaed5	2026-11-19
 /encyclopedia/podgorica	cc31ea7263f2ecda7d615ebed958c31a06f36e8a	2026-11-16
@@ -25907,7 +25907,7 @@
 /encyclopedia/prokhorovka-culture	3655ab8423f7bb91777bb20394a473fdd178ce8b	2026-11-08
 /encyclopedia/prokop-of-moravia	2332bb9bc60e08c1a234ed80a6af4155dfd25acf	2026-11-12
 /encyclopedia/prokop-the-great	83f38be3fcdfd3b7b620be9e25a58ccbcd9e4ff7	2026-11-17
-/encyclopedia/prola-ii	1fbf6e5f0df5a9a602d0dd5a1dc6bb9666f9b0fb	2026-11-19
+/encyclopedia/prola-ii	5affc0996246c1211d1038a99324803030f97e3e	2026-11-19
 /encyclopedia/prolaya-nayaka	97bdc67b43ddb8d53868f364c3af827fd656253a	2026-11-08
 /encyclopedia/prolaya-vema-reddi	42657cc652d1b4c37dbe7fc6efd7126acedb97be	2026-11-12
 /encyclopedia/proletariat	8f2f310c6cc4262e33864eb7b8c21cc1ba978f29	2026-11-17
@@ -25962,7 +25962,7 @@
 /encyclopedia/prussian-crusade	f6d8f724c6863f891fc392d4c5ae62757eeed770	2026-11-18
 /encyclopedia/prussian-war-academy	58b1a9d4e69396bc743839af3de5afa8b4f96ee4	2026-11-08
 /encyclopedia/prut	cac8235db7f01e6c45b1a80874f5fbe72bdd5fc8	2026-11-17
-/encyclopedia/przemko-of-scinawa	c6a9299023adf7b728f73c93bc67c853cfdafa3b	2026-11-08
+/encyclopedia/przemko-of-scinawa	e0a3a36952923113ad64d2fd6a444fd1404652c1	2026-11-19
 /encyclopedia/przemysl	a402d2c496b8c022c24fa4d598617df531d6a211	2026-11-17
 /encyclopedia/przemyslaw-of-raciborz	136f578035449d1857f03667097b36c27e53c764	2026-11-19
 /encyclopedia/przemysl-ii	69a849aaf08723fe82fa56274fa4276d49e6c9df	2026-11-17
@@ -26243,7 +26243,7 @@
 /encyclopedia/quchan	b8df553604e224c69e7ca8462549d4080d983930	2026-11-17
 /encyclopedia/qudaa	3871cfd19897069e643f2b266442b58faa51b707	2026-11-18
 /encyclopedia/qudshanis	4f9fcdcbb4ec66b5d3dbaddf9a814af65b9005d3	2026-11-18
-/encyclopedia/qudsia-begum	066ce54c7b02cfd387075efd542249843eeacc16	2026-11-11
+/encyclopedia/qudsia-begum	182ef65102a0554bf32b02b0fc28a00987976dc0	2026-11-19
 /encyclopedia/queau-de-quinssy	6da91003a7bc5bf1affeab42b2a9359f8e147589	2026-11-08
 /encyclopedia/quebec	828ba041253e85cbe95b9f939c33e2fd827c20ce	2026-11-17
 /encyclopedia/quebec-act	9a552a65905142d0a83ce72e99cefe3df21fa35a	2026-11-18
@@ -26455,7 +26455,7 @@
 /encyclopedia/rajendra-chola-iii	c5a6c76879e713579c5424a12bd21840db873717	2026-11-19
 /encyclopedia/rajendra-narayan-singh-deo	5dae38e66347b5fde38594903207200a0a025005	2026-11-19
 /encyclopedia/rajendra-prasad	4b1376b5f3bc4231ec658a345e954477e2f80b5e	2026-11-17
-/encyclopedia/rajendra-singh-of-jaintia	f2fe2a5dc5588d969a96867daf7d85c23693e379	2026-11-12
+/encyclopedia/rajendra-singh-of-jaintia	759228bef0b91fe1fefb503a2251fe3b91d19197	2026-11-19
 /encyclopedia/rajgad	6686165893104fc24fc5f58877a3d9f8d724c44b	2026-11-18
 /encyclopedia/rajgir	1c3ff05f8d16bc22429c10a9c9ff110b04b85e07	2026-11-17
 /encyclopedia/raj-gond	9dc613a23335beff1f90f815ef2e00c6e46ba4e7	2026-11-08
@@ -26544,7 +26544,7 @@
 /encyclopedia/ramon-berenguer-iv-count-of-provence	2ecba22a0a4b1dc07ccaeee0a565f747f53bf1ac	2026-11-18
 /encyclopedia/ramon-bonifaz	cd8572eb72f6cf1eb88cb01194faac5781dee540	2026-11-19
 /encyclopedia/ramon-caceres	3efed89114eab54a71347cab55b5d9e95a5c8ff5	2026-11-18
-/encyclopedia/ramon-castilla	21b825d634285bb37e26b1af2cd1cf68d84355d6	2026-11-18
+/encyclopedia/ramon-castilla	7b3695b770a4fc827830f10003ae1ce44ce01691	2026-11-19
 /encyclopedia/ramon-grau-san-martin	3713b52a343ca14c2310813b9ce0122b66302c89	2026-11-17
 /encyclopedia/ramon-herrera	2a5f79be3fd3d3255cc89a118df95cb39eca2c2e	2026-11-08
 /encyclopedia/ramon-iii-of-pallars-jussa	1ddadd3237d588799a8cd9a93be72ce87cf8b9e6	2026-11-08
@@ -26692,10 +26692,10 @@
 /encyclopedia/raymond-westerling	58f1a5529b1f9d081771363d84848755b2ead995	2026-11-19
 /encyclopedia/raynald-of-chatillon	47fd9d021c3357cb13c0cba52439f48253502b03	2026-11-17
 /encyclopedia/rayy	12be417d61061e5566a44fe77f8e4b0728d8e6a2	2026-11-12
-/encyclopedia/raza-ali-khan	155d80198887bb4ecf8e2fa07faf81af8dda3267	2026-11-19
+/encyclopedia/raza-ali-khan	52252a45c7335986803027fb75154f2f482a1e12	2026-11-19
 /encyclopedia/razadarit	274e38705cf74a79da75e81fa8def0a59ededdbf	2026-11-19
 /encyclopedia/razakars-hyderabad	2bb891ac9ea81b0ab5da0ae91cd6185571d9ad2f	2026-11-18
-/encyclopedia/raza-library	9e86a09f335796190f49ebc064b2396e777954ca	2026-11-18
+/encyclopedia/raza-library	8a38a3a2502b73396fb1e4e7151b0b1c447dd631	2026-11-19
 /encyclopedia/razes	82ad622ff7a923862a6a25c81a818148915c9b53	2026-11-08
 /encyclopedia/razia-sultan	ebd80cb312ad8e1f85d1068e7f332125e4ce5a50	2026-11-17
 /encyclopedia/real-audiencia-of-lima	0cc558e0e7d582985bd457bc5c25a1faf528d40a	2026-11-19
@@ -26954,7 +26954,7 @@
 /encyclopedia/rialto	2c9bdc3f6bea8d3cad0691635275620698fa77dd	2026-11-18
 /encyclopedia/riau	472ee7c8a1b5afa51422b21df49ae5317f0b7852	2026-11-17
 /encyclopedia/riau-archipelago	5e735261f11ccf17a35f58f193b554b82ab68401	2026-11-18
-/encyclopedia/riau-malay	38dcd001e89cb1011c31fdbc654c9518f999582f	2026-11-12
+/encyclopedia/riau-malay	80ae08ffe7bc8757c849a51a7d6a15ab13be3806	2026-11-19
 /encyclopedia/ribagorza	3ce0ddad2e29c32b6b75f9f348f2c90c45065829	2026-11-08
 /encyclopedia/ribat	d53735454e178c23d8ccab6428cefeb515d207d1	2026-11-18
 /encyclopedia/ribchester	237fc6c4b9d86b996b95a00e4c5fe64ee336f466	2026-11-18
@@ -27217,7 +27217,7 @@
 /encyclopedia/rogvolod	c81720a557921174399604bc21ad03afbbac967a	2026-11-11
 /encyclopedia/rohida-fort	bd5591cb83f4856aa25117e9fdb9bcdefa9316eb	2026-11-12
 /encyclopedia/rohilkhand	415abedac255a4c879996887813775d01f481718	2026-11-18
-/encyclopedia/rohillas	29306215f1a7e3bb3127b423f8b8f8bdaa4ad8bf	2026-11-18
+/encyclopedia/rohillas	dd1387fcea2a0a48394778c1a88e5b2137fcfde7	2026-11-19
 /encyclopedia/rohilla-war	f539b3bb344639028b26297f4f7df1c577d1372b	2026-11-19
 /encyclopedia/rohingya	93a5f4050d3254380b0952e14eccc5dde73694b1	2026-11-17
 /encyclopedia/rohtak	dd29927e579192f60f580c2f57ed3303d291cbdc	2026-11-17
@@ -27289,7 +27289,7 @@
 /encyclopedia/roossenekal	db24231c48fa13166eaf2bfb24e789633b82f830	2026-11-08
 /encyclopedia/roquebrune-cap-martin	b90e90668b0a265729a32d1a0a7125c784cca21d	2026-11-17
 /encyclopedia/roque-dalton	52933c863310713fba99ef24da7c95fb7d772700	2026-11-18
-/encyclopedia/roque-lopez	ddf6f984c5d9098dd7b5a48c1aca83ca47d7d489	2026-11-11
+/encyclopedia/roque-lopez	3ab1f5b3272979cad2eb932c60c46d0652931b24	2026-11-19
 /encyclopedia/roros	2cdd87026fc5cc7eefa566418d7378acbb7f48f8	2026-11-08
 /encyclopedia/rory-odonnell-1st-earl-of-tyrconnell	e869aff800ba56af12bfa6c3e026a14a48fb9e1d	2026-11-19
 /encyclopedia/rory-og-omore	52f4c6948e4a6ad7defb5fe119e55c2fa37d3380	2026-11-19
@@ -27541,11 +27541,11 @@
 /encyclopedia/sack-of-constantinople-1204	b9e5bc32f6f4b34b5e222007f4e4ace01ec8f866	2026-11-17
 /encyclopedia/sack-of-delhi	c96dea38af3c64be2e214ba7570b7f72dee784ed	2026-11-12
 /encyclopedia/sack-of-delhi-1398	15885b3859483fb644b80f8df4122a68f3c13571	2026-11-19
-/encyclopedia/sack-of-koumbi-saleh	3a40f84137edbcca5c2a47c08bd1d4f8afdafac3	2026-11-12
+/encyclopedia/sack-of-koumbi-saleh	4be6e790f9094e96a86ca8a126b50c3176cb1d2e	2026-11-19
 /encyclopedia/sack-of-rome-1527	d21493b3b97b7cd284e469afafd96d21284b90a0	2026-11-17
 /encyclopedia/sack-of-rome-410	425de8d795b49cef2b7bbefa1b205a49365afa10	2026-11-17
 /encyclopedia/sack-of-surat	1c5d4b8ae9a3867fb962bff73f38451d755b1743	2026-11-19
-/encyclopedia/saco-maine	4195d83ef5bba5690835a9fa9d4796efb9886300	2026-11-17
+/encyclopedia/saco-maine	fd7cf57f1087294c66b2c5b9e5030f7e57c5354a	2026-11-19
 /encyclopedia/sacra-infermeria	5f927c319b2cc42fb0bf4dfdc237b1eecb4daebb	2026-11-12
 /encyclopedia/sacramento-valley	684d78e8c407601dc9becb6cda1db4964454d66a	2026-11-18
 /encyclopedia/sacred-cenote	805bc5481e80760a0d1463d554ef54482ead2512	2026-11-18
@@ -27605,7 +27605,7 @@
 /encyclopedia/sahagun	91596ee04924476e467a307a221da23e657ca3c8	2026-11-15
 /encyclopedia/sahara	b0e8484f906720108b9dfb7e6874c7060627b4b2	2026-11-16
 /encyclopedia/sahel	da3bf6b2bc5d825e82e67f2c7551ab547e5f1e9c	2026-11-16
-/encyclopedia/sahel-drought	3c4d4c3f9a006102041cdf2eb7b3a66af23b9c8f	2026-11-08
+/encyclopedia/sahel-drought	ae6c0a8ac898019cee0a56de3215c46b6d72345e	2026-11-19
 /encyclopedia/sahib-ata-fakhr-al-din-ali	41d6cee1c3f05e3e5d4263db63b0b18c3428e296	2026-11-08
 /encyclopedia/sahibdin	3e28121a523839e8eb007f5e1c6ec051498ca601	2026-11-11
 /encyclopedia/sahib-i-giray	6bc98f5549224bef3dd90d5a647fffad9411928d	2026-11-18
@@ -27723,13 +27723,13 @@
 /encyclopedia/sajudis	a50101dd8cc6f01c5c743276089b7a2f7b6f5a3a	2026-11-17
 /encyclopedia/saka-era	a5474df427e0f7227f1f5832138ce3b03c99bae7	2026-11-17
 /encyclopedia/saka-haumavarga	5e1058c13218d32e56984433198ee3aec37ae945	2026-11-12
-/encyclopedia/sakai-tadakatsu	865f5b9132dbfe1e914933f53cfbb45d4a495729	2026-11-11
+/encyclopedia/sakai-tadakatsu	0d49fbad976bfbc894f6e4aec275746dee22712a	2026-11-19
 /encyclopedia/sakai-tadashige	4d4c60c8a1f52571b12bb6bfd978d2402c279c6d	2026-11-08
 /encyclopedia/sakalava	0cb9f74a338ca02e314c1373c4aec2cef2b3d537	2026-11-18
 /encyclopedia/sakamoto-ryoma	d5609b134c383d8070af406e3ac8022b55c14f35	2026-11-17
 /encyclopedia/sakanoue-no-tamuramaro	0363cdc442120fe03097021ed8e96197257ce4d3	2026-11-18
 /encyclopedia/sakarya-river	4715d7745c94ffd976471ce7d6a3107ffb2cac91	2026-11-17
-/encyclopedia/sakata	f9eef7acb0c5d8f49a33e8e8f1d8a6dab8d2ab28	2026-11-12
+/encyclopedia/sakata	824a2ffb7e475ec073472651fe23eaf0ca6e5756	2026-11-19
 /encyclopedia/saka-tigraxauda	bb3ac88b3cb171946ad2d9fa56c2dd2468d1ab1f	2026-11-12
 /encyclopedia/sakdina	01bffaed7a8938dd47942652b22df3f9db81a717	2026-11-12
 /encyclopedia/saketa	1121b5904a876a555282f4afb87e4c97a45585f4	2026-11-08
@@ -27794,7 +27794,7 @@
 /encyclopedia/salomon-gessner	57c7c45eac9473c70f73f9f6cd36e8aacb55891f	2026-11-17
 /encyclopedia/salomon-of-brittany	17833a4b139d4c52d4a913f642099ce8b44c8044	2026-11-18
 /encyclopedia/saloninus	f7414319836fd54ca1afe5170b1accfcba7ca9f5	2026-11-17
-/encyclopedia/salote-tupou-iii	d6c224a1ce2c7964a682854872da122786ecc100	2026-11-17
+/encyclopedia/salote-tupou-iii	d6c224a1ce2c7964a682854872da122786ecc100	2026-11-19
 /encyclopedia/salta	c8f42535b4e647ef2d11c88cfa48084bdaa33d49	2026-11-17
 /encyclopedia/salt-and-iron-monopoly	886d782bc888b7428e3fb19765e300badf32e156	2026-11-12
 /encyclopedia/saltes	e9fc09a60b8b043c55e4066dfe39a49c9c32d023	2026-11-19
@@ -28608,7 +28608,7 @@
 /encyclopedia/serpent-column	244b27cdfa5178e61c2013987a6d3482b7827c63	2026-11-18
 /encyclopedia/serpukhov	b445cb41fbbd66bd80633c0d2ecd168866cbdf39	2026-11-12
 /encyclopedia/serra-di-vaglio	56903cd2cfa37f34775cc1de32df9b5a7363648c	2026-11-12
-/encyclopedia/serrania-de-ronda	b5ed4d23e4b5793746228b5a429979bfe88799c8	2026-11-08
+/encyclopedia/serrania-de-ronda	b84a25cb89e7368bc714586b94d84a1c56b7e197	2026-11-19
 /encyclopedia/serrata-del-maggior-consiglio	1a387578e524b423e032ab5ad4cedff545d2d17b	2026-11-19
 /encyclopedia/serres	cbf9b31777078af5ecd2b86904b31344e02a16b6	2026-11-17
 /encyclopedia/sertorian-war	dcbdfbd1fa0647391500f0d2e18a76ab1386785a	2026-11-18
@@ -28728,7 +28728,7 @@
 /encyclopedia/shaktism	d5760eb15d2c79325a6d6b7d7f0936a77f5973a2	2026-11-17
 /encyclopedia/shakushain	a3860aed4fe34ff5c7fbd47bf4c13bfb4cc95e2c	2026-11-18
 /encyclopedia/shakya-zangpo	806132b4965b95694f28c9b0aec4da8889530de0	2026-11-12
-/encyclopedia/shalfak	0de5c3cf586ff2d5dd44ff26932bc4bfd9be3bb2	2026-11-08
+/encyclopedia/shalfak	ae270122ea7bb978c0dc465b78189bac099b2003	2026-11-19
 /encyclopedia/shallum-of-israel	76544f9f7866c3bc46c1854c39d09b8e7383aef2	2026-11-17
 /encyclopedia/shall-we-gather-at-the-river	b969d10c4ed0968ac867a5bf19f455595c49ecce	2026-11-19
 /encyclopedia/shalmaneser-i	76e2a4e56f619237b27c91b4d4d3c78c89f79a57	2026-11-08
@@ -28929,7 +28929,7 @@
 /encyclopedia/shire-highlands	b5276dc06475282e0af125e8cc1cb10102cdbd21	2026-11-18
 /encyclopedia/shirikti-shuqamuna	5bb1e29f092b73de849deb625e3324187532ef2b	2026-11-08
 /encyclopedia/shirkuh	59a3197b0fd236ffca0b9e85cfc551b5b95cefe0	2026-11-17
-/encyclopedia/shirley-baker	6e8c4004532ce65a6d720bf4367e2e5b28c13552	2026-11-15
+/encyclopedia/shirley-baker	1da6d9500a28ecf5f5514e31a6add5d999b60b1b	2026-11-19
 /encyclopedia/shiroishi-miyagi	1e69b1c503ada92a00320e463a95e2480f88f834	2026-11-12
 /encyclopedia/shirvanshah	cff1701949bf522f6eeec63e99859c91c03d684a	2026-11-18
 /encyclopedia/shishunaga	550db0cd102b0522050c10949819ceeffacd57d8	2026-11-12
@@ -29654,7 +29654,7 @@
 /encyclopedia/southold-new-york	46f0d0f553e6f0c7de818e6e0917756b038cf3be	2026-11-18
 /encyclopedia/south-ossetia	b7daad3cbf191f1ba09fd48c9bc2b0b68047c4d6	2026-11-16
 /encyclopedia/south-pacific-nuclear-free-zone-treaty	ef1e03dec3e68fac82ddda8b98da8d87c1b3d8a1	2026-11-18
-/encyclopedia/south-palace	5dda1708e6d24bbffdbcf23abb28411d36f8f9f2	2026-11-12
+/encyclopedia/south-palace	0534eeacf4e50160f6305d5c8ec0fc7117f42aae	2026-11-19
 /encyclopedia/south-persia-rifles	2adb6379cccdeebe7e0b1e86e7a7434584ad4753	2026-11-19
 /encyclopedia/south-picene-language	951abd9afa7a4152e2090bb93ed9bc65b453736c	2026-11-12
 /encyclopedia/south-saskatchewan-river	98bbb22b026aa77bbb410c62653e4170f0d197ba	2026-11-17
@@ -29980,7 +29980,7 @@
 /encyclopedia/storting	6183e10eb059825ef0fe933f829e89e484b970ad	2026-11-17
 /encyclopedia/story-of-wenamun	c7eeed543fd9b52509feccad9838b5e1fb989c1e	2026-11-18
 /encyclopedia/stotzas	702ef043ec51af7ccc275939f8ba0018087ae422	2026-11-18
-/encyclopedia/st-panteleimon-monastery	c69bf3370445168a0c56df6392c67413c9c188c1	2026-11-18
+/encyclopedia/st-panteleimon-monastery	5728039fcd5159e16f37e130642970d0ac0a3a26	2026-11-19
 /encyclopedia/st-pauls-church-frankfurt	dec81eb67a4f6ee2083fd9c4cfab7548623fe237	2026-11-17
 /encyclopedia/st-peters-basilica	1073704311b5b341a17be95c0d4a6343dfd133af	2026-11-16
 /encyclopedia/strabo	6cec5c90d14adec330de9c17f77926669fab883d	2026-11-16
@@ -30367,7 +30367,7 @@
 /encyclopedia/syed-hussain-jamalullail	dad67ae2603cd11d448435d9c001906a572b454a	2026-11-08
 /encyclopedia/syennesis	cbe3ab2b932674326183e468aeb115c62afd8273	2026-11-08
 /encyclopedia/syiem	06d2a68a0dddec7d274b0dce7d3f1afe3ec9c1f1	2026-11-08
-/encyclopedia/sylhet	a8e29d19d5b7aaf256401e57b4ec5d703c5baabf	2026-11-17
+/encyclopedia/sylhet	4f70f2a8ebee783842085ef352fdc55643b5aa63	2026-11-19
 /encyclopedia/syloson	da9b4a761c54c15f8a692707a7f16b271af58f9f	2026-11-19
 /encyclopedia/sylvain-roux	d432d7ebaeec6537b77bdccd575a60e0055084be	2026-11-11
 /encyclopedia/sylvanus-olympio	cf0df710b8acbaf0a4c824256b738c09009f5a4a	2026-11-17
@@ -30427,7 +30427,7 @@
 /encyclopedia/tachira	d85c964ab19cdc3c401c800f53a008603eeee9db	2026-11-17
 /encyclopedia/tacitus	7ebc6299ba7435ed676401d1ffcee2a2643b679e	2026-11-16
 /encyclopedia/tackys-revolt	4f5763019c2d7e59c661eb2fed34ffb642bbfcf3	2026-11-19
-/encyclopedia/tacna	5327fb8ed13c29ae548d3712fd377f85558c138f	2026-11-17
+/encyclopedia/tacna	31762a15cfc66adadb34ba0e62e322c593a65f3e	2026-11-19
 /encyclopedia/tadeusz-kosciuszko	373d06c0af87bb9157907333227afb1088746c47	2026-11-17
 /encyclopedia/tadhg-mor-ua-cellaig	be3c3450edf42420d18ce0fdd6ae26ea0cd73814	2026-11-12
 /encyclopedia/tadhg-ocarroll-baron-of-ely	0ae6b2d04b03df2be3c595a235a9561cc8034113	2026-11-12
@@ -30562,7 +30562,7 @@
 /encyclopedia/tamar-of-georgia	de798fdc5f3c0287a55b8f325ef12529d587ac5d	2026-11-17
 /encyclopedia/tamaudun	2bd9da783351d02d267f82a9a0e61e24ccddbad0	2026-11-18
 /encyclopedia/tamaulipas	29fe0ba3fca52ae1eb5ea1a410dbbcf660a85f89	2026-11-17
-/encyclopedia/tambdi-surla-mahadeva-temple	e4c9bd7fa9189cb020ae369c478de895f81b1d59	2026-11-12
+/encyclopedia/tambdi-surla-mahadeva-temple	dc51aa8bb4e493f8a70f9bcef9ad67e0a60a5399	2026-11-19
 /encyclopedia/tambor-de-mina	3a1f6cbbbc9af30c57f35608fa0b4ed9b31885e8	2026-11-19
 /encyclopedia/tambov-rebellion	ab625f7b0b11cc34bb360a1875041db230707eb9	2026-11-17
 /encyclopedia/tamesna	8a04e20ce314a99a43937a8803ac3b56958292b4	2026-11-19
@@ -30646,7 +30646,7 @@
 /encyclopedia/taranatha	28fab935e3a5da0596b19241993b67ac9decde29	2026-11-18
 /encyclopedia/taranchi	c7088ef139820720962cc7f04c4281e24ad86c97	2026-11-18
 /encyclopedia/taranis	c37b628c723758163b24c707ab956413937bd3b8	2026-11-17
-/encyclopedia/tarapaca	bc474c835155eb15e88dab9a661e2064cd0a1560	2026-11-15
+/encyclopedia/tarapaca	431745b26c146742b9124de17fe92787324a1d5f	2026-11-19
 /encyclopedia/taras-shevchenko	04612fde197cb050c1ff9b296a2aabce083d2c07	2026-11-16
 /encyclopedia/taraz	7f1f160db5f70925ed5203271de820dcb954b4f9	2026-11-17
 /encyclopedia/tarazona	366623d8b86751cef0398533a0403b162cba32dc	2026-11-15
@@ -30684,7 +30684,7 @@
 /encyclopedia/tarnovo-constitution	7f96a7a8b68613df52e71f5d9bdd8bdef92de11d	2026-11-18
 /encyclopedia/tarnowskie-gory	3849168e83ec8b901cdb4548251d10495850b89a	2026-11-17
 /encyclopedia/tarom	d87182a96c89e034badf748cd121f8f7adc30b99	2026-11-18
-/encyclopedia/taromai	43071344dec772fabdb1de57ede477bf2e6e2af1	2026-11-19
+/encyclopedia/taromai	ded75d6ab4b96fdae6edd1a334b70ecd49c5df4c	2026-11-19
 /encyclopedia/tarquinius-priscus	3dc7c4d3b6ed34e8a24fb8816d96b35218b7e989	2026-11-17
 /encyclopedia/tarquinius-superbus	ac84468b048460833d91c03206c04c227444fd84	2026-11-17
 /encyclopedia/tarraco	26f80ffa324091b2ca861289a92c4771faaa72b3	2026-11-17
@@ -30826,7 +30826,7 @@
 /encyclopedia/tell-khaiber	8815d4340503afaff84d19f18ec0357500022339	2026-11-08
 /encyclopedia/tell-leilan	9b434ce45b14f667f7c5f8b72d04cb2a117cbe77	2026-11-18
 /encyclopedia/tell-nebi-mend	e17f323b7bbf41abc214ff380f3efa08bfa0f0de	2026-11-12
-/encyclopedia/tell-rifaat	fb2e93d8e18f48de84b247bc977edc6e16004007	2026-11-08
+/encyclopedia/tell-rifaat	2ce76ad9fe714879cab50fdcf514f6f6282c0351	2026-11-19
 /encyclopedia/tell-siran-bottle	290859b29e9e8524954fb1533a78b2558ac4ff6a	2026-11-12
 /encyclopedia/tell-tayinat	2526f73d6f7227a6f09cd3c86eaac49d583ee78a	2026-11-18
 /encyclopedia/tellumpoccoe	7006be282be540f93cc12ecad3b2c3cd197f61ab	2026-11-08
@@ -30919,7 +30919,7 @@
 /encyclopedia/terebovlia	edc1a6e9a726a4f757acbb1a2b3dcb0dc7635d36	2026-11-08
 /encyclopedia/terek-river	1bc384086fe075555a449effe4c27ef646a3c5ee	2026-11-17
 /encyclopedia/terence	020b4ac092aeed1a52c4c62c8e48b34704448841	2026-11-17
-/encyclopedia/terengganu-inscription-stone	e0b0f7bfb0132816098ad25a5ca992b71acd8f52	2026-11-18
+/encyclopedia/terengganu-inscription-stone	d69fdc859aa15426ab2c7bff6c34960e9b1c55c7	2026-11-19
 /encyclopedia/terentii-shtykov	3da08cf591f2586f3395d683b91ed215ae0b0451	2026-11-19
 /encyclopedia/teresa-countess-of-portugal	afa36ae50182790ec15a2de30f2258e0aae626b9	2026-11-17
 /encyclopedia/teresa-of-avila	40c921a4cb241efea649e68ea8c2b94e0d05d4b5	2026-11-17
@@ -31267,7 +31267,7 @@
 /encyclopedia/thomas-fitzgerald-10th-earl-of-kildare	eb119a81629109f1d9d05936bde718d593346e4f	2026-11-18
 /encyclopedia/thomas-francois-burgers	954f86a7a1fb227ee882b4ee1035d0fe148d600a	2026-11-18
 /encyclopedia/thomas-gage	47ec54a078f71af18bbc241b2d2e6d7f22176194	2026-11-18
-/encyclopedia/thomas-gorges	d30109f32c84187db58164ea804ddfa293699d85	2026-11-12
+/encyclopedia/thomas-gorges	6ee63c1f8782d62e7e7dcb3015ac7bbaec7123a3	2026-11-19
 /encyclopedia/thomas-hobbes	9b73983b9c30266886d0e38d102d7e15c01095d0	2026-11-16
 /encyclopedia/thomas-hooker	ca0a20cf5a98f33ae9721d46d9744ca546076f3c	2026-11-18
 /encyclopedia/thomas-hutchinson-governor	d0d7f2a722a4cc72415ad7dca4540ab2b7c5992a	2026-11-18
@@ -31331,7 +31331,7 @@
 /encyclopedia/thrimalo	524ec2614fdce43572ee650e87c3659ec47e6c35	2026-11-08
 /encyclopedia/thrissur	d029538e55737382b54c0bc5f27a820842f9d8a5	2026-11-17
 /encyclopedia/thuan-hoa	5edf8e347aa7c053ac1f88e2bbf4115330f6b093	2026-11-19
-/encyclopedia/thubchen-monastery	191fa9e056635c9c737845038ebc108c2a44d555	2026-11-12
+/encyclopedia/thubchen-monastery	76e52ca350cd6b0db9909754838a915f7f474c9c	2026-11-19
 /encyclopedia/thubten-gyatso	90270758627537ee5c47fb48c5eebaf8b9e24f51	2026-11-17
 /encyclopedia/thuburbo-maius	1233613ab3e2a2821c73faade79851ae244416e9	2026-11-18
 /encyclopedia/thucydides	5a788759f9557712e70a88710d4cea358dff5e06	2026-11-16
@@ -31436,7 +31436,7 @@
 /encyclopedia/timotheus-general	21b80e84fc11776839e9dd8c015d9985b99b7a25	2026-11-18
 /encyclopedia/timucua	566a3e35bf548873d025de707dd34ba4fbf3fcca	2026-11-08
 /encyclopedia/timur	77b20e6a1500e6bda3af9251873b8a1ff4ebb76c	2026-11-16
-/encyclopedia/timurid-empire	3aa70c01c7668a25e674f5def44c52d6e40aee40	2026-11-17
+/encyclopedia/timurid-empire	719ad703ca5b032690b663c6d7ced17073a520a4	2026-11-19
 /encyclopedia/timurtash-chupanid	3371e0e69d756fed8f74d690dbb55e732cfb35f5	2026-11-08
 /encyclopedia/tin	387090a625132747c566e8d030e6bbf7b7ac0748	2026-11-16
 /encyclopedia/tincomarus	2523b65cb5089b71ab523fe0cfa031f20f123a51	2026-11-19
@@ -31894,7 +31894,7 @@
 /encyclopedia/treaty-of-kurekchay	cbe08b672a376027a45d0b68801a39507fff0284	2026-11-14
 /encyclopedia/treaty-of-kyakhta-1915	d4a88dfc9541fb05dd44407fe5ca45b1b95ab416	2026-11-08
 /encyclopedia/treaty-of-lahore	714ebc47155d6ce5f46b5ef245bd82d0f5a86499	2026-11-19
-/encyclopedia/treaty-of-lal-dhang	156b5d1b109e97da023f32fa4a0fe428c2b70051	2026-11-14
+/encyclopedia/treaty-of-lal-dhang	5a86f3f82d1c070fe73d092866c1e40314550399	2026-11-19
 /encyclopedia/treaty-of-landin	51d0d0fde31fea781a0baa789fa2d081f76fedec	2026-11-08
 /encyclopedia/treaty-of-lausanne	8d3fa2483f7ea30168916d77cdadd0f739e87ba4	2026-11-17
 /encyclopedia/treaty-of-le-goulet	fae2ffe3aa226aa2f3a341e4e298b59e7d7ad858	2026-11-19
@@ -32199,7 +32199,7 @@
 /encyclopedia/tsugaru-tamenobu	b352e0424757ec2f6fcedccfa3d8825989fadc11	2026-11-19
 /encyclopedia/tsu-mie	59c2b112cf13a2c5ea3c5663d36307bec4fdd5ba	2026-11-17
 /encyclopedia/tsuruga-castle	fb3913ba0a1e756ee4a286894327112eb2475fb2	2026-11-18
-/encyclopedia/tsuruoka	dc29a3f6e2f40b01bf428219b8c66980c0625823	2026-11-17
+/encyclopedia/tsuruoka	89058301875cf562c8adb218289af6d4775615df	2026-11-19
 /encyclopedia/tsushima-island	6cc61b3da6e5c43d561ddadf3dee309ba6c00a0a	2026-11-17
 /encyclopedia/tsutsujigasaki-castle	8f8989de1e1a0f4a2d374d086378257cfd48ca5d	2026-11-19
 /encyclopedia/tswana-people	f9c03b84526e7b4af2b7e50a68b82cd0f47348e6	2026-11-17
@@ -32524,7 +32524,7 @@
 /encyclopedia/umar-sanda-kyarimi	2ccc1d97026d47dada03c3268d68a3b3e4ef3967	2026-11-08
 /encyclopedia/umaru-dallaji	e1afaa3ed9201c4dab00931868cd54d2adb456be	2026-11-08
 /encyclopedia/umaru-nagwamatse	55ffc78ab6193b7c1426b5fc7d11c0f43afb9a3b	2026-11-19
-/encyclopedia/umar-walasma	390ecd9316810bcecea1e4e7c146663f6b507509	2026-11-19
+/encyclopedia/umar-walasma	0772b707089782fc3e922e339dfd13c75127ec71	2026-11-19
 /encyclopedia/umayyad-caliphate	43edcc494198e53d32e2ae9c6a7f890a5a72a1bb	2026-11-17
 /encyclopedia/umayyad-conquest-of-hispania	b933202b6557caab17ef00123a536f3dc5221c6c	2026-11-12
 /encyclopedia/umayyad-conquest-of-sind	78a1924741ba9b5411b2a4ec15cf46f0e3b64166	2026-11-08
@@ -32698,7 +32698,7 @@
 /encyclopedia/upper-mesopotamia	471d8b694d88fbe66b1319daab8d22071d824093	2026-11-17
 /encyclopedia/upper-navarre	1703491eaaa0126c398c84ac9432c18e7cca3536	2026-11-12
 /encyclopedia/upper-nubia	aba1dae409f3f5f242abe24ac02d5d990d734055	2026-11-08
-/encyclopedia/upper-ossory	3d6366a93d31131a859b89fcaff85e5f38a7158e	2026-11-19
+/encyclopedia/upper-ossory	0f472f94878c71952734dfde66352ed4f8195ba1	2026-11-19
 /encyclopedia/upper-peru	7ecb30e0f5d78bbd9622814d942c29399519934a	2026-11-18
 /encyclopedia/upper-rhenish-circle	0eb21e783c45b8576a5871a10705c3d669059c86	2026-11-08
 /encyclopedia/upper-silesia	d65fa082627c5fde1a5c127a6c108cb6676d0b20	2026-11-17
@@ -32948,7 +32948,7 @@
 /encyclopedia/var-river	7361382d7ab8def0d3919ed3668754afb3ff0843	2026-11-08
 /encyclopedia/varuna-river	ab479802ffdca91b8b847ce1adaab7008d2cd541	2026-11-08
 /encyclopedia/vasai	e0beeb7ab1abc2fabdbb9015d4a83fd9fda56452	2026-11-18
-/encyclopedia/vasavadatta	25cb51b448c3e23d8c23eacc086b849e5611995b	2026-11-08
+/encyclopedia/vasavadatta	e280ed762d19d68c4f4e35f008f055ccdd410667	2026-11-19
 /encyclopedia/vasco-da-gama	2f4b7a527eeb560110f077fed782b16bb2e060f2	2026-11-16
 /encyclopedia/vasco-de-quiroga	7903cafed3eaa01e58d1bdc063ae7ec3252ffcad	2026-11-18
 /encyclopedia/vasco-fernandes-coutinho	6fb15a41027f18c8be8838067d8e8725dfead972	2026-11-08
@@ -33877,7 +33877,7 @@
 /encyclopedia/wilfrid-laurier	8571085fe4d6a702cfba56722da3f24b19f5399e	2026-11-17
 /encyclopedia/wilfrid-malleson	0759b457dcaa5589bc46a0574af2629d3e1636ef	2026-11-19
 /encyclopedia/wilge-river	8783005584ce19ddbcffe39105dde41cf16f5c01	2026-11-08
-/encyclopedia/wilhelm-adolf-count-of-rantzau	03fb0fc1bc5c78725fb08a71b42556dd0c3dec78	2026-11-08
+/encyclopedia/wilhelm-adolf-count-of-rantzau	7a3c8959d81b887498d37660c437576a1270fe6e	2026-11-19
 /encyclopedia/wilhelm-frick	8988bd7eacc266d6dd7b61e7184a08399383c56a	2026-11-17
 /encyclopedia/wilhelm-hartwig-beseler	84878c173df6be77640733f065d5213c79c7ce1a	2026-11-08
 /encyclopedia/wilhelm-i	62ddf71e2e79e73638b7d6fc8e282e805576364d	2026-11-17
@@ -34536,7 +34536,7 @@
 /encyclopedia/yom-river	34c4a357205db1f17ccfac1ac2e8b9126c291707	2026-11-08
 /encyclopedia/yonago	e30781768520552afd0b1f4629369c4b334074bc	2026-11-17
 /encyclopedia/yonezawa	bb70fc4cac58fac1d106849e805d4993ffaba315	2026-11-17
-/encyclopedia/yongcheng	491949e1f47799e8562daad633beb063e3abb673	2026-11-08
+/encyclopedia/yongcheng	84d81ec7650d35eaaf98657180a8095857f84d6f	2026-11-19
 /encyclopedia/yongle-emperor	e27b73dbcc0f3edbd33783984b3d5e9bd727e848	2026-11-17
 /encyclopedia/yongle-encyclopedia	10cb4a949cf87cace89a02f29087b18f3b198f27	2026-11-17
 /encyclopedia/yongli-emperor	5f29c255c5545b1174d58996b5eb5318b438e0ab	2026-11-18
@@ -34930,7 +34930,7 @@
 /encyclopedia/znojmo	d8ec64112e5c71564a8011a3036e8169a7fea0d2	2026-11-17
 /encyclopedia/zoe-porphyrogenita	020c753e610d2613d955f26be436a7dbba410e0c	2026-11-17
 /encyclopedia/zog-i	8de872d08415e4ef03795a6ebd48959186423369	2026-11-17
-/encyclopedia/zograf-monastery	9402d3f389e680152fb38feeab197df92128a9a0	2026-11-18
+/encyclopedia/zograf-monastery	abe51319f1231037f1ba37dfdc5dff73876d36bb	2026-11-19
 /encyclopedia/zollfeld	398431910596457e4f372b97baa1e91e8dbcb028	2026-11-19
 /encyclopedia/zollverein	dd672c10c567c63118e8bf31bafbe46f7c5bf625	2026-11-17
 /encyclopedia/zolta	bdf448fa95a413e2de16ebbe33a22d7b25b4ec34	2026-11-17
@@ -35013,8 +35013,8 @@
 /essays/who-should-rule	ac4da3d65e63e0feae00346df4b6905e305b594c	2026-11-08
 /explorer	fdeb89a60bc1230c0d955a2df0872c7fb680da1b	2026-11-14
 /faiths	8f93d1405a47ea126af8fe9277392c77d9f2dacc	2026-11-03
-/flashcards	599674660926af5d1da37f4f88ce47834e4fb5f2	2026-11-17
-/games	dcbb2d2c777511a0ab5de4b2517e5bcff5d9198a	2026-11-18
+/flashcards	b0a888898d5004a198c62e82f94751e67db50654	2026-11-19
+/games	0ee367bbe00797b401b8642f708729c2819c3e55	2026-11-19
 /governance	eab0534c1a225c676c4fd5a8316838b2c9fb341f	2026-10-31
 /government/absolute-monarchy	20ea2d6e73b0aa24e261d9c384475a4303e872ef	2026-11-04
 /government/aristocracy	19ec0961835ab66acb22a52acac2becab5762cf5	2026-11-07
@@ -35234,30 +35234,30 @@
 /paths/winter-at-war	e58713beacef2040b05a24ba04531a9c552e2984	2026-11-12
 /paths/women-who-ruled	a7beb4783dde2bd91e33367bb9c7170058047fa1	2026-11-08
 /paths/wonders-and-monuments	16fea842bf701963860bc476def5df1a8ed81282	2026-11-08
-/people/	f3e0df2b20c006bcb942a9afa627fb363c3fb7bd	2026-11-14
+/people/	673d5603292de9774843e8fde320af893075ae35	2026-11-19
 /people/10th-century	d78515c4785fb726582d997e9e628e4dbbee080f	2026-11-12
 /people/10th-century-bce	c220168d2e333f5dbabecc468f6a65065cc190b7	2026-11-06
 /people/11th-century	c598e57782c8ef98d902286270fb44e1ca9cfc4d	2026-11-12
-/people/11th-century-bce	89a2fd58503f92aef967c33cbe66b0ccd20fd686	2026-11-12
+/people/11th-century-bce	c83437ea01ad86a6c690ca585484d030ebb54fa5	2026-11-19
 /people/12th-century	740e3b45611212c6a1a1eff1258610827adfcab7	2026-11-12
 /people/12th-century-bce	5e97ae531e0ec5d9828e3b68a79b96b868dec654	2026-11-05
 /people/13th-century	b91a66cf1b7c04b22abef07c55cfd3209dbda529	2026-11-12
 /people/13th-century-bce	e83a7e7cfbe22817322cec2fd24b9e90416a6ec0	2026-11-12
-/people/14th-century	5d9e2c7c732f46bf4b40896bd879ab4597432ac0	2026-11-12
+/people/14th-century	4bd7834381de6be16a3111f8bf68997b0d67b948	2026-11-19
 /people/14th-century-bce	07e5a8a5c0ee4f6b38f10c8621bdb149926ac6fa	2026-11-12
 /people/15th-century	bfc95a39e1d718cbf905969e01beb97c0b5d4853	2026-11-12
 /people/15th-century-bce	36ce765a5b768d7ecd415d188ad76e57eed32d12	2026-11-12
-/people/16th-century	6d95ad52f0586293aea002f5407b093aa7b4b863	2026-11-14
+/people/16th-century	e3c8140c4d6dfa4ae2cb55462dc151db05dea001	2026-11-19
 /people/16th-century-bce	1363f5ad421fec66bdae9a6f4373f9e80cc097aa	2026-11-05
-/people/17th-century	3557f66f8f351887a5ef06d3b660130f683bb7bc	2026-11-12
+/people/17th-century	06d3f64c530cb5752dba40d1c6207797e67721cc	2026-11-19
 /people/17th-century-bce	65bae9ddab124711c8913952ab4b95b1c0c05850	2026-11-08
-/people/18th-century	c3c430201c4f5722f1ce4a3495537130eea554ba	2026-11-12
+/people/18th-century	89582d707cbf1297e8e104f07bd32975b6c46a0c	2026-11-19
 /people/18th-century-bce	cb584c3197524467c9bc77649875f76259e30266	2026-11-12
-/people/19th-century	a6197d65eb1cfbf7935c86860141f367cabcbe35	2026-11-12
+/people/19th-century	20bae87f5e5607df62df7b9ab563000ad3fe5bf8	2026-11-19
 /people/19th-century-bce	0a82f27514f1e7cd9bf11b33461a04afe5eda698	2026-11-12
 /people/1st-century	662df6be4eb54fcbbb1e21f77f0f6d8aa75b861a	2026-11-12
 /people/1st-century-bce	ea63b178cc980f56be8cce47399d46f1c5c8f964	2026-11-12
-/people/20th-century	4f0e9f7d4b8f96e741f665a880c87f44497d2167	2026-11-12
+/people/20th-century	aa27a22a1b03a137e27837903e01b4e65749f943	2026-11-19
 /people/20th-century-bce	259763ebb58237d17c5d7d018004fb6b180511b8	2026-11-05
 /people/21st-century	da40f25033bdc3787e396ef10ecf82a86a45add6	2026-11-12
 /people/21st-century-bce	7c62d763d75202db0bbd664566a16482fcd3077a	2026-11-05
@@ -35282,15 +35282,15 @@
 /people/8th-century-bce	da21ba3361c23eff9718caeb1f35015f95e8dd26	2026-11-12
 /people/9th-century	0bfe911b800f0112f0b3e70f0c9852e776774db6	2026-11-12
 /people/9th-century-bce	62a385bbd01ee96e21a74857df7feaf3211b2a5b	2026-11-06
-/people/americas	92ca716ba9664cb2ac3df3c73cd79182c6f116e0	2026-11-12
+/people/americas	01a16cda586b40ced3d9214013d12cc7628cfd33	2026-11-19
 /people/ancient-near-east	53778b268030302dc94637c593077b1e54730202	2026-11-12
-/people/central-and-east-asia	69fd7dd36300e5e5d09c9b0d5ca90aa9b8dc99d4	2026-11-14
-/people/egypt-and-north-africa	9feb4768a5a2ffcf82a0130e3f63aae2f55e2af2	2026-11-12
-/people/europe	116782a4773bef94e5fa54d33c0edf1132bf0693	2026-11-14
+/people/central-and-east-asia	d463ff96e2d5dc61a1ac8446502c010f5204b751	2026-11-19
+/people/egypt-and-north-africa	3217b47549a644b5d846208e6a5d7e37e8f82fcd	2026-11-19
+/people/europe	7eca0b09f16b35adc7cb7020a14a08612d20e70d	2026-11-19
 /people/islamic-caliphates-and-middle-east	f3c2ce2f8118674b80322dd00217024441c567b4	2026-11-12
-/people/oceania	76dce5bc70ab403f884315d24c3d8117723aef70	2026-11-12
-/people/south-and-southeast-asia	9a9368fd78dcf0d283ab69f0995461c385670e01	2026-11-12
-/people/sub-saharan-africa	cce694c5e35f97b661c769730f6ff14f4a8ad5fc	2026-11-12
+/people/oceania	76dce5bc70ab403f884315d24c3d8117723aef70	2026-11-19
+/people/south-and-southeast-asia	3adfcd7ea0fe8f8681358d037461671ed06786bc	2026-11-19
+/people/sub-saharan-africa	8d2af5607f46acb0683fb1cbcaa0cdc4959886a3	2026-11-19
 /privacy	ac63238eaf88224c1a70cc0e656d4ec49c4ee925	2026-11-14
 /profiles	cf36aa44f4d343c373b09611e8a79bf29501beb6	2026-11-14
 /quiz	67280b172da4e8e8d8ec5b22f2db8799c30dd2c5	2026-11-12
@@ -35325,7 +35325,7 @@
 /religion/yazidism	c131ffeef2cd51ea5ac37484e9cbff9c1bd74222	2026-11-08
 /religion/yoruba-religion	45be91ce79724dab6992eadd33a5f4f6c136f86a	2026-11-12
 /religion/zoroastrianism	48f76a7c92141802853747f541cd6f74193e6b2b	2026-11-11
-/research	cab544687b70f2cc8f1ec34418b64461556c8acf	2026-11-18
+/research	3b83e588f0e25126527fd31ec47de306250f3e5c	2026-11-19
 /research-series	94968b43de20464753ce8eb24808a3e9d2feb588	2026-11-14
 /societies/	23b1b2cc3f1375a90dac1f98e777f475fd5609eb	2026-11-08
 /societies/abbasid-caliphate	1003fae4e89b3197c91f4c1d0493b9011b009da5	2026-11-08
@@ -41699,7 +41699,7 @@
 /years/1363	5dcc72c3cf6b6301a877a69a44b30511cc2f1219	2026-11-03
 /years/1364	f67ae311e0c394c5ebff6ceb2e5ec8d6db3785c9	2026-11-12
 /years/1365	f00cf6ed17cab6e53f9ba851800f0ffdb226385e	2026-11-03
-/years/1367	d53b00d82a9ecfb173959b74e7cf23e64c47582a	2026-11-12
+/years/1367	ac708d5f1de7d25e697a15512b81650569be2a53	2026-11-19
 /years/1368	439f7a3ba81c2f672c2c03c0e39074f847bca361	2026-11-12
 /years/1369	6c33091aba5b74b5fbf1d104aefd68b3e212fd62	2026-11-12
 /years/1370	10b53e4ec0dbfc298ecd37bfcc213ca05bc40399	2026-11-07
@@ -41856,7 +41856,7 @@
 /years/1534	29f1dd2d079681caaced1f071de138d602e78105	2026-11-12
 /years/1535	954a79810219b91d3b50fec6c7aae7b8abc840fb	2026-11-12
 /years/1536	ae0c384c080168c634b4519c6edc007777f075db	2026-11-07
-/years/1537	7c7f5fe65ce820c14735be3c476147557078f17e	2026-11-06
+/years/1537	ddcd5cb53d814a00e1332de7225c1603e7cdf258	2026-11-19
 /years/1538	47b3a822045852db5234a1ec938a76e1d1b3d728	2026-11-07
 /years/1539	e9df2df36e0627ed7b02f52785922c04f070eb7c	2026-11-12
 /years/1540	d58f67c4f7c9da548532d2a87d94a2a7d683dc27	2026-11-12
@@ -41911,7 +41911,7 @@
 /years/1591	d7b72fe0b7d5f14669514d560636859ef4bdf0cf	2026-11-12
 /years/1592	30b99d5bf1011635b0045076241594110725bf64	2026-11-06
 /years/1593	0b10c2b2a95be6734ce384f40843c0701c7b4a0a	2026-11-03
-/years/1594	745bbd66a9302ec763ab409d57631087b021182f	2026-11-04
+/years/1594	5a46620ec9b265ee1c018a2f6bf558521107ad29	2026-11-19
 /years/1595	d81ac64cb2d7cbaecc60c05cddd5a9693f79f281	2026-11-12
 /years/1596	c5eeaa3d6dd7617ed1aadf4bdcd1e42e2c71286b	2026-11-12
 /years/1597	8c4ef1c19106c5ddfdd3bcd2f8c5761723f92bf2	2026-11-12
@@ -41931,11 +41931,11 @@
 /years/1611	3dbac3e56d6bd282f795c4989b1a483b658b7188	2026-11-07
 /years/1612	65c205e25b2f2adef3fe98566c9fd30470bca672	2026-11-06
 /years/1613	1be462a89e4ebadfad8ca0d196c8333c2a1e811c	2026-11-08
-/years/1614	57caffad8b25611be50eef23ab1e1e173ae6e7f2	2026-11-12
+/years/1614	236e8ba4fba759b2d1601879ae82be185a477e5f	2026-11-19
 /years/1615	76b4cccadbc80d1a8c6cbffc42a1e4876044853d	2026-11-12
 /years/1616	c166af3ab5e99b17f0b69afe93b3a96850efa776	2026-11-12
 /years/1617	c991f0adc2c7a78b9b3ea800893055717c08461b	2026-11-03
-/years/1618	29f607fe0865bf6be023ec76a896041edfcbcf43	2026-11-12
+/years/1618	6675a90ac83c85f0f578e399dc539924d137c762	2026-11-19
 /years/1619	ab422f1afadfaebca6e2ede06958619528626774	2026-11-07
 /years/1620	c87c2c92f195d9bfeb60e2b66337d7fa1c200429	2026-11-08
 /years/1621	fe9d229eb7063dc6104cf4975ae4fe5560cb05c0	2026-11-07
@@ -41962,7 +41962,7 @@
 /years/1644	8805ff14aeead5728d8422fe5fafcacf1ca1ad98	2026-11-07
 /years/1645	d6e1e472f428638a800a63082dc3ff1d4167c7d5	2026-11-12
 /years/1646	aecb4e6fa386da39f73997efc95b0feeadf878c7	2026-11-06
-/years/1647	4e31fe4dd2c324604964c1c761fe215fd6ddd7d9	2026-11-06
+/years/1647	dfedebd7240257097c6b7304834c7d461d80cf5f	2026-11-19
 /years/1648	fa8392f9291a057d3fbc97d311ec543f5105491b	2026-11-05
 /years/1649	987244a9a7cbed9eb226611660414b2222bdd8ef	2026-11-06
 /years/1650	ddc30a68438f3378e68fe407c3723770a1bac753	2026-11-06
@@ -41978,14 +41978,14 @@
 /years/1660	026df1cda1b31047aba86dc6468d64437c4daf08	2026-11-08
 /years/1661	33d626e9f08b969071cac1f04e6e6d2c5f67474c	2026-11-12
 /years/1662	e334044dfbad818220bb54aa428ecc55126625b0	2026-11-06
-/years/1663	f36e6cb255f46b5a29c7e03a2472ed67d8a73ca7	2026-11-06
+/years/1663	0a2e9a490097d517a9f88761257f6f198dd5447b	2026-11-19
 /years/1664	f7616f202ce9d42194902eb45754a064c771c7af	2026-11-03
 /years/1665	056d79e3814a8f09999e5bec48fdd60fcd96befd	2026-11-12
 /years/1666	90de9a2dd4daa2bfab432f5fe2da88dbef9dd313	2026-11-12
 /years/1667	3573b84be81ee52c9967001785707315cda8704b	2026-11-06
 /years/1668	2383e147e9744fd4668fd7c907180318869210cb	2026-11-06
 /years/1669	2e45fb1aa6b4bc6d6a0741e07753d74e48dfadf5	2026-11-12
-/years/1670	3e489409f749e47fd1758f3ef20398596539c4ae	2026-11-06
+/years/1670	7f06f4251aa8ac466ce978a65c029fd7800bcaaf	2026-11-19
 /years/1671	45e00a728c2ef00593013701dd9aa4b1f17239ec	2026-11-08
 /years/1672	3799a8b5ae5701b4a5619bfc8de6c6a492732ce8	2026-11-06
 /years/1673	f62e53d203711fdaed8444a5a6335fed792555be	2026-11-08
@@ -42000,7 +42000,7 @@
 /years/1682	6f71167c48621be888483356fc6159428ebfc403	2026-11-09
 /years/1683	e16ace44a92431b7e1174b601a4118739a73a34a	2026-11-12
 /years/1684	fc33d6d39eb92d11106cfcd345dc44baac156dee	2026-11-04
-/years/1685	674be8289603c68bebb0eb812a9a6d1d878a2e7f	2026-11-12
+/years/1685	be2411a77c38ada1c7251f355e6eb5cb875f78df	2026-11-19
 /years/1686	e667112026ce1dbd62c84f0c9650386e476ade42	2026-11-08
 /years/1687	355aeaa8a460b31f6208aa9c5e248157dab703a8	2026-11-12
 /years/1688	921ac5a6d4269e407664f39eda9269eac54073d1	2026-11-07
@@ -42077,7 +42077,7 @@
 /years/1760	b8f2e51f799e446c67bb3a38c9f8cdae3cf102e2	2026-11-12
 /years/1761	c80dc650ecf9a56026398e690f28be2ca502ed41	2026-11-03
 /years/1762	0fbdcdf43d7c5e49fa1aa324124a9c61fddf263d	2026-11-12
-/years/1763	877a73ba563f12f0f42963c613d531b5f3c491fd	2026-11-12
+/years/1763	08d55fa07f9f1d2b1d406da140f51e37558ef4f4	2026-11-19
 /years/1764	f9a6a9eaff6128b802669c24564b99528631dca8	2026-11-12
 /years/1765	b5bd22892f2587885773ab278fb053846b60deb0	2026-11-06
 /years/1766	edec744f82a3d5f592ba3508192397ad2766033d	2026-11-04
@@ -42117,7 +42117,7 @@
 /years/179-bce	645c7d326589ef0c81c6ca4f632eeda029721d11	2026-11-08
 /years/180	2c90e42d33b82eba0676ffeb0660e9cbb530fd0d	2026-11-04
 /years/1800	ed52d3d6efcf8de502ce9b57dd17acd371671eab	2026-11-12
-/years/1801	d43afb0aa0a166c59b560e91a2606478805723cf	2026-11-12
+/years/1801	776d663b3edae17131418e9690cb66c95ec69ccb	2026-11-19
 /years/1802	c8e228e2694bddb78d8e5c0f0a55f228a5a2ef39	2026-11-12
 /years/1803	67cef26b5a97137db2711dabd545920a174fe06d	2026-11-12
 /years/1804	4b573f1386a987e0090860139cf587eb64c76404	2026-11-12
@@ -42127,9 +42127,9 @@
 /years/1808	592325d9fad80010e52cecc5eb7030768adec7c7	2026-11-07
 /years/1809	ecb9f8660215161c6d0b3b23eeb11c32e822b8d4	2026-11-12
 /years/1810	c3940a719590b7da238afaac1013d11174721df5	2026-11-12
-/years/1811	12dc4c9cbd20015341a3f0d0804ae8f9c5c44bae	2026-11-06
+/years/1811	6f8966b2457ac86ae5dac91d43acfce1df619d78	2026-11-19
 /years/1812	de00b5e11dedbbe2811e1fa12d2a23c0b974ba43	2026-11-12
-/years/1813	0ca75fc46761985c2f71c9b2413fff3642c6eb39	2026-11-12
+/years/1813	184e2ffb95bd49e9b37fd1144b539cea2fec11c2	2026-11-19
 /years/1814	229a2a6370423195e1acf05eec69a0a898b1cf4f	2026-11-12
 /years/1815	fa2c5fa3940add956cef5160f922c6722cfdc550	2026-11-12
 /years/1816	ca84c2a5e7a24b58155741276ae2abf1dc1f18a9	2026-11-12
@@ -42146,13 +42146,13 @@
 /years/1827	e7e8a0017227b6a526f75086dcc94830c4f9bfa5	2026-11-12
 /years/1828	18248ea03c64816f96cddda3b7e44e72e4f1f086	2026-11-12
 /years/1829	b84dfd037a346df8acff6ec3b0b5a4f5c0a48b50	2026-11-12
-/years/1830	6c56139c079bcfe39e46b4fe66b3ed175aa6965f	2026-11-12
+/years/1830	b92a53bbb380d883136e4334bf9e29dff22dc660	2026-11-19
 /years/1831	02a462bb3c692a2000cb63356b728e97a47bd90c	2026-11-06
 /years/1832	272ef0d50384ba0e276c382ec5e2a6b9565841d8	2026-11-12
 /years/1833	306c0380d878c2fc1f696b80a3e66f786dbbe8a5	2026-11-04
 /years/1834	30d4186c2ba955067299aeefea9a6a102e03fe0f	2026-11-12
 /years/1835	f00be36d3689c008d11fb39920aa02cbf64ce757	2026-11-12
-/years/1836	e53066220033f09d89b8d3d8246ece8d40005958	2026-11-12
+/years/1836	e53066220033f09d89b8d3d8246ece8d40005958	2026-11-19
 /years/1837	dea0f33441984bb393ae9d4c7a312b8aba7eee59	2026-11-12
 /years/1838	16456cd566813ba93809ad306da193da75252034	2026-11-12
 /years/1839	4b787c6fb9c6a15f1e6a4660c0013505274d16fd	2026-11-07
@@ -42183,24 +42183,24 @@
 /years/1863	a601eb1e31d51336a9a3f67efa92a54f0ccf3771	2026-11-12
 /years/1864	a510c974cc21015a385615d2bb8eeb46fd1ff910	2026-11-12
 /years/1865	1d222bd3000144f16b3e6540c816b418a43b2995	2026-11-12
-/years/1866	7cf5c0c26a01e4a66bbdf64610c3fa0147c42478	2026-11-12
+/years/1866	7b693e4b521f3caed55416a66d8a3876eda8b979	2026-11-19
 /years/1867	013ccb468dac608c6863625a4ab5a97f15e421d2	2026-11-12
 /years/1868	5fba65ea0b68a87668727702b21b77e916a5ccc7	2026-11-17
 /years/1869	457abf42d3974dc5a5f5f600819943967a45257c	2026-11-12
 /years/1870	2507948189601177283fa8038a51884b7a0f752d	2026-11-12
-/years/1871	f673c96179eaeafa5fb1fcb9a5d8c2081fed5fd5	2026-11-06
+/years/1871	74884b711a7866b016604274ee597626f83e7348	2026-11-19
 /years/1872	bb6b07a202f47e20603e252994a5b1e420268c07	2026-11-12
 /years/1873	540b2542cd12b445671eea3937f638ff91229c13	2026-11-06
 /years/1874	6fe82ff88db112e42bbe965f3c8c188663a3cfc2	2026-11-06
-/years/1875	c471c398ce3e90065267188138839c333b3e1c76	2026-11-12
+/years/1875	1625ec7720c488e437eaf2cf66a8545170a98082	2026-11-19
 /years/1876	64110fdbf805ca1e51406ad3e8fc0a49121f4e5a	2026-11-12
 /years/1877	11cc68787c5fd6bf695b21688cbdfe1d408386fe	2026-11-12
 /years/1878	52a9c0386cf3f4b6e8a4e57bcd0910e93c261d0c	2026-11-06
 /years/1879	7affa2e4604e820bc5e2b1f5eb1cf30428207c66	2026-11-06
 /years/1880	e67dc21142fab30bed1ced28a52e226f750d1b4a	2026-11-07
-/years/1881	ff5a64ed9b6c9f2e70dd735722d11d12ea3ce62f	2026-11-12
+/years/1881	25541c71ee66d4fb1786a5ea6726172fef660746	2026-11-19
 /years/1882	4fd86f6193f83283cf00300f5c8ffac25771fbef	2026-11-05
-/years/1883	1f92ac66a1977e0be482481c48f26147ec44f21a	2026-11-12
+/years/1883	8cbf8c6366084957a408e18f9b4475d5cfd600c5	2026-11-19
 /years/1884	554f165007b4a15df96549bd2081362fbf5f5954	2026-11-07
 /years/1885	e7804f06a068cc82d88eb71d3388e5b99f9d72f2	2026-11-12
 /years/1886	80bcee69d8319a3e3f51f66d30659ff877ee4427	2026-11-12
@@ -42209,7 +42209,7 @@
 /years/1889	c6235f4d21e206f057dec5b224c9a9b955a8b91a	2026-11-09
 /years/188-bce	cc566868fc461c22e87c6555e6a98f4474b0073c	2026-11-08
 /years/1890	5d664fd3078fe0dbdbb24d6c2ba3264118d327c5	2026-11-07
-/years/1891	7d4b50cd46cbb0b9efa84d3db1001abbc7396d28	2026-11-12
+/years/1891	3d752a57904c21be63bc267e2cacf7e646295737	2026-11-19
 /years/1892	863434fdd0001f521a1b41171ceb3cd79859edf4	2026-11-12
 /years/1893	d64769897473d683fe6bf55c57f6684dc43207e5	2026-11-12
 /years/1894	3454195a42fbf5243045d717d5148ea0a9a2ad48	2026-11-07
@@ -42221,7 +42221,7 @@
 /years/1900	8e12ced2cf8d8d881aed82c69e8ea94e9f07a165	2026-11-12
 /years/1901	7dc464ffbbe79fc0ef7b50bfbdccb6f15fd68a30	2026-11-17
 /years/1902	6174596946884e49a836ec7209c74448ce54fda0	2026-11-05
-/years/1903	5695ab8c954f8f94bb0154545e552d5bc25bebb4	2026-11-11
+/years/1903	5695ab8c954f8f94bb0154545e552d5bc25bebb4	2026-11-19
 /years/1904	4eee3fcb2e11d32ca1e7f18f183d80a80aea80e9	2026-11-12
 /years/1905	18ba9d80cc030d0603c2bfa5cae587be295a0381	2026-11-12
 /years/1906	062aeacb7c12c2398f89f8d2d1737a1a6ebb095f	2026-11-12
@@ -42230,7 +42230,7 @@
 /years/1909	b1e1457c2c5a790dc316a0c07cf0a7aa832e15e8	2026-11-06
 /years/190-bce	ab13b5a99218c78fd5922caa09e37493de70886a	2026-11-12
 /years/1910	d82d582a3ebb6a028d4cdf2621f2083ea7c3206e	2026-11-12
-/years/1911	36463f220bd5a7341c712ce290392bdef0aaf6d5	2026-11-12
+/years/1911	b438935c90ffea0345debc0ea333c9227cf73946	2026-11-19
 /years/1912	a3fef9105acb1906d26fce2420227362f2454ec7	2026-11-17
 /years/1913	abb80cd2a43b448c2dd05d41a9e7835d62404744	2026-11-06
 /years/1914	4703149df7be8b47a894a31b50e2b31902acc325	2026-11-12
@@ -42251,7 +42251,7 @@
 /years/1928	51537b8418f25f35c059888e4af21284fb35f577	2026-11-07
 /years/1929	c64e99b1e2444c819ba0fc911c27a0e10903d1e8	2026-11-12
 /years/192-bce	9a75db34629d02ca806b57b1a25f5e0c585656e4	2026-11-08
-/years/1930	d904d7075318158b786f817980da27f9c5d7111d	2026-11-12
+/years/1930	835d8143d7f02a49049adca08545ecab9280bc84	2026-11-19
 /years/1931	7214b17c7d8a1387518dc791556628b666cd82a7	2026-11-12
 /years/1932	ec94e0dffde888462bcb49eabebbbb6eee28c327	2026-11-17
 /years/1933	30ab014207e74d22f76452cd200de60b52ae1059	2026-11-12
