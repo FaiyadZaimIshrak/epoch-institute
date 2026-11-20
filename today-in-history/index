@@ -116,7 +116,7 @@
 initNav('today');
 
 var cachedDays    = {};     // day key -> data/days/<mm-dd>.json: { events, hero, pic, intl }
-var DAYS_V        = '48ffea4d8a';    // stamped by scripts/build-pages.ps1
+var DAYS_V        = '9f4c88c4d6';    // stamped by scripts/build-pages.ps1
 var dayHero       = -1;
 var dayPic        = null;
 var currentDay    = null;
