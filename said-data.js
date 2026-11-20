@@ -556,7 +556,7 @@ var SAID = {p:[
 ["ahmed-urabi","Ahmed Urabi","1841–1911","/images/encyclopedia/thumbs/ahmed-urabi.jpg"],
 ["cyrus-the-younger","Cyrus the Younger","d. 401 BCE","/images/encyclopedia/thumbs/cyrus-the-younger.jpg"],
 ["darius-iii","Darius III","r. 336–330 BCE","/images/encyclopedia/thumbs/darius-iii.jpg"],
-["tiridates-iii-of-armenia","Tiridates III of Armenia","d. c. 330","/images/encyclopedia/thumbs/tiridates-iii-of-armenia.jpg"],
+["john-chrysostom","John Chrysostom","c. 347–407","/images/encyclopedia/thumbs/john-chrysostom.jpg"],
 ["mirian-iii-of-iberia","Mirian III of Iberia","4th century","/images/encyclopedia/thumbs/mirian-iii-of-iberia.jpg"],
 ["aphra-behn","Aphra Behn","1640–1689","/images/encyclopedia/thumbs/aphra-behn.jpg"],
 ["john-a-macdonald","John A. Macdonald","1815–1891","/images/encyclopedia/thumbs/john-a-macdonald.jpg"],
