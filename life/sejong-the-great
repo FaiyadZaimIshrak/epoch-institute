@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Sejong the Great: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Sejong (1397–1450), known as Sejong the Great, was the fourth king of Joseon, reigning from 1418 to 1450, remembered above all for the creation of Hangul…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Sejong the Great: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Sejong (1397–1450), known as Sejong the Great, was the fourth king of Joseon, reigning from 1418 to 1450, remembered above all for the creation of Hangul…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/sejong-the-great">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/sejong-the-great.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/sejong-the-great.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/sejong-the-great">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Sejong the Great"}]},{"@type":"Article","headline":"Sejong the Great","description":"Sejong (1397–1450), known as Sejong the Great, was the fourth king of Joseon, reigning from 1418 to 1450, remembered above all for the creation of Hangul…","url":"https://the-epoch-institute.org/life/sejong-the-great","mainEntityOfPage":"https://the-epoch-institute.org/life/sejong-the-great","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Sejong the Great"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/sejong-the-great.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Sejong the Great</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Sejong%20the%20Great.png" alt="Sejong the Great" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Sejong the Great</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1397 CE – 1450 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">15 May 1397 (the 10th day, 4th month) in Chunsubang, <a class="enc-link" href="/encyclopedia/seoul">Hanyang</a> (Seoul); born Yi To, third son of Grand Prince Chŏngan, the future King Taejong, and Princess Chŏngnyŏng</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">8 April 1450 (the 17th day, 2nd month), aged 52, after long illness, in the residence of Grand Prince Yŏngŭng in <a class="enc-link" href="/encyclopedia/gyeongbokgung">Gyeongbokgung</a>; buried at Yeongneung</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Prince Ch'ungnyŏng (1408), Grand Prince (1413), crown prince (1418); fourth king of Joseon, 1418–1450</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The creation of <a class="enc-link" href="/encyclopedia/hangul">Hangul</a> and the <a class="enc-link" href="/encyclopedia/hunminjeongeum">Hunminjeongeum</a> (1446); the <a class="enc-link" href="/encyclopedia/hall-of-worthies">Hall of Worthies</a>; the rain gauge, <a class="enc-link" href="/encyclopedia/water-clock">water clock</a> and Ch'ilchŏngsan calendar; the medical texts Hyangyakchipsŏngbang and Ŭibangyuch'wi; the kongpŏp tax reform; the Ōei Invasion of Tsushima and the northern frontier</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Sejong, the fourth king of Joseon, reigned from 1418 to 1450 and is widely regarded as the greatest king in Korean history.</li><li>He is remembered above all for <a class="enc-link" href="/encyclopedia/hangul">Hangul</a>, the Korean alphabet published in 1446, and for a reign in which his court produced a native calendar, a rain gauge, vast medical and agricultural texts and new <a class="enc-link" href="/encyclopedia/movable-type">movable type</a>.</li><li>He governed by Confucian principles and restricted Buddhist institutions while privately practising <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>, and North Korean histories stress the feudal burdens on the peasantry under his rule.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In 1430 Sejong had over 170,000 people polled on a proposed tax reform; the debate that followed lasted 17 years.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1418</span><span class="rf-text">Sejong's elder brother Yangnyŏng is deposed; Sejong becomes crown prince and then king when Taejong abdicates</span></li><li><span class="rf-year">1419</span><span class="rf-text">Sejong launches the Ōei Invasion against <a class="enc-link" href="/encyclopedia/tsushima-island">Tsushima Island</a></span></li><li><span class="rf-year">1420</span><span class="rf-text">Sejong re-establishes the <a class="enc-link" href="/encyclopedia/hall-of-worthies">Hall of Worthies</a></span></li><li><span class="rf-year">1437</span><span class="rf-text">A campaign under Kim Chongsŏ against the <a class="enc-link" href="/encyclopedia/jurchens">Jurchens</a> leads to six garrisons on the northern frontier</span></li><li><span class="rf-year">1441</span><span class="rf-text">The rain gauge ch'ŭgugi is invented at court</span></li><li><span class="rf-year">1444</span><span class="rf-text">The kongpŏp tax system is completed, lowering the land tax from 10% of the harvest to 5%</span></li><li><span class="rf-year">1446</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/hangul">Hangul</a> is published in the <a class="enc-link" href="/encyclopedia/hunminjeongeum">Hunminjeongeum</a> and its commentary, the Hunminjeongeum Haerye</span></li><li><span class="rf-year">1450</span><span class="rf-text">Sejong dies, the first Joseon king to die in office, and is succeeded by Munjong</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Sejong was born Yi To on the 10th day of the 4th month of 1397 in Chunsubang, <a class="enc-link" href="/encyclopedia/seoul">Hanyang</a> (Seoul), five years after the founding of Joseon. He was the third son of Grand Prince Chŏngan, the fifth son of the founding king Taejo, and of Princess Chŏngnyŏng. His father had played a major role in founding the dynasty, launched the First Strife of the Princes in 1398 and took the throne in 1400 as King Taejong.</p><p>Very little is known of his early life, as it long seemed unlikely that he would rule. One anecdote, which several historians judge possibly fanciful and Gari Ledyard plausible, tells that he read so much that his father took away his books, and that he read the one book left behind several times over. In 1408 he was made Prince Ch'ungnyŏng, and in 1413 Grand Prince. By then he was considered bright and skilled at <a class="enc-link" href="/encyclopedia/calligraphy">calligraphy</a>, the gayageum and painting, and he began to be tutored by the scholar-official Yi Su. Taejong told him that year that he had "nothing to do in particular" and should enjoy his life in peace. In early 1418 his younger brother, Grand Prince Sŏngnyŏng, fell deathly ill, and Ch'ungnyŏng reportedly stayed by his bed day and night, reading medical texts and helping with the treatment.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <div class="profile-section-body"><p>Taejong had designated his eldest son, Grand Prince Yangnyŏng, as heir, but anecdotes record that Yangnyŏng disobeyed the king, neglected his studies and womanized, while the Veritable Records of Taejong show Ch'ungnyŏng praised as intelligent and studious. The brothers developed a bitter rivalry. In 1417 Yangnyŏng's affair with Ŏri, a concubine of the official Kwak Sŏn, enraged Taejong, and in 1418 Yangnyŏng brought her back into the palace, where she bore his child. After a letter in which Yangnyŏng questioned his father's judgement, Taejong and his ministers met on the 3rd day of the 6th month of 1418 and, overriding <a class="enc-link" href="/encyclopedia/primogeniture">primogeniture</a>, demoted and exiled him.</p><p>Taejong then nominated Ch'ungnyŏng as the more able of his sons, and the court reportedly agreed with enthusiasm. On the 10th day of the 8th month of 1418 Taejong abdicated, and the 21-year-old prince took the throne at <a class="enc-link" href="/encyclopedia/gyeongbokgung">Gyeongbokgung</a>. As king emeritus, Taejong kept a veto over all decisions and tight control of the military until his death in 1422. Several historians argue that Sejong's reign rested on the stability his father's statecraft had created.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <div class="profile-section-body"><p>In 1420 Sejong re-established the <a class="enc-link" href="/encyclopedia/hall-of-worthies">Hall of Worthies</a>, likened by modern historians to a think tank, which oversaw the court's great projects. Under his reign an <a class="enc-link" href="/encyclopedia/armillary-sphere">armillary sphere</a> (1433), a <a class="enc-link" href="/encyclopedia/water-clock">water clock</a> designed by Chang Yŏngsil (1434), the rain gauge ch'ŭgugi (1441) and a stream gauge were made, and in 1444 the court devised <a class="enc-link" href="/encyclopedia/korea">Korea</a>'s first native calendar, Ch'ilchŏngsan, with <a class="enc-link" href="/encyclopedia/seoul">Seoul</a> as its reference point. The 56-volume Hyangyakchipsŏngbang (1433) described over 10,000 treatments, and the 365-volume Ŭibangyuch'wi followed. In 1434 more than 200,000 <a class="enc-link" href="/encyclopedia/copper">copper</a> kabin types were cast, and the 1429 Nongsa chiksŏl adapted farming knowledge to Korea.</p><p>His tax reform, kongpŏp, was designed from 1427, put to a survey of over 170,000 people in 1430 and completed in 1444, lowering the land tax from 10% of the harvest to 5%. He granted government serf women 100 days of maternity leave in 1426, later adding paternity leave for their husbands, and set rules for clean prisons. Abroad, the 1419 Ōei Invasion against Tsushima, with 227 ships and some 17,000 soldiers, was followed by decades of peace and trade with <a class="enc-link" href="/encyclopedia/japan">Japan</a>, and campaigns against the <a class="enc-link" href="/encyclopedia/jurchens">Jurchens</a> in 1433 and 1437 brought the northern border to roughly its present line. In the 12th month of 1443 he revealed <a class="enc-link" href="/encyclopedia/hangul">Hangul</a> to his court.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>Sejong's chief critics were Confucian officials of his own court. In 1444 a faction of the <a class="enc-link" href="/encyclopedia/hall-of-worthies">Hall of Worthies</a> led by Ch'oe Malli rebuked <a class="enc-link" href="/encyclopedia/hangul">Hangul</a> as anti-Confucian and too far a departure from Chinese civilization; anti-Hangul sentiment was also partly elitist, as literacy in Hanja marked status. Sejong had Ch'oe and several others imprisoned for a single day. His private <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> set him against officials who, like Yun Hoe in 1424, called Buddhism the worst of heterodox teachings; in 1439 a petition signed by 648 Confucian students and scholars protested his repair of the temple Heungcheonsa, and he assured them he "had never worshipped the Buddha".</p><p>Yet his own policies weighed heavily on others. He cut the Buddhist schools from seven to two in 1424, closed all but 18 temples of each, melted down bells and statues for weapons and barred monks from the capital, a ban that lasted until the late 19th century. In 1427 he forced the Huihui, <a class="enc-link" href="/encyclopedia/korea">Korea</a>'s Muslim community, to abandon their headgear and close their mosque in <a class="enc-link" href="/encyclopedia/kaesong">Kaesong</a>. His attempts to raise the marginalized <a class="enc-link" href="/encyclopedia/cheonmin">ch'ŏnmin</a> failed, and his northern settlements had mixed success, as Korean settlers often abandoned the land. North Korean histories hold that his rule brought heightened feudal subjugation and heavier taxes for the peasantry.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <div class="profile-section-body"><p>Sejong suffered recurring and worsening ill health for much of his life: back and knee pain from his early twenties, then problems with his vision, excess thirst and excess urination. Most scholars suppose he had diabetes, though the medical researcher JiHwan Lee argues his symptoms better fit ankylosing spondylitis. From 1437 he asked to delegate lesser affairs to the crown prince, and in 1439 he stopped attending the royal lectures. His ministers resisted, and after an edict of 1443 met furious protest, the crown prince began to handle routine government only in 1445. Historian Kim Jongmyung argues that Sejong then devoted himself to <a class="enc-link" href="/encyclopedia/hangul">Hangul</a>.</p><p>The deaths of his sons Grand Prince Kwangp'yŏng in 1444 and Grand Prince P'yŏngwŏn in 1445, and of Queen Sohŏn in 1446, deepened his <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>; he practised Buddhist vegetarianism, built a shrine on the palace grounds and in 1449 invited the monk Sinmi to hold services. He died on the 17th day of the 2nd month of 1450, aged 52, the first Joseon king to die in office. He was buried at Yeongneung beside Queen Sohŏn, and his son Munjong succeeded him.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Sejong has been judged by a number of historians the greatest monarch in Korean history, and his reign is often called a golden age; his name appears in the Veritable Records over 2,000 times, more than any other Joseon king's. <a class="enc-link" href="/encyclopedia/hangul">Hangul</a>, however, was long looked down upon and was officially adopted by the government only in 1894, during the Kabo Reform. His practice of making extra copies of the Veritable Records saved them for later historians, since most copies were destroyed by the Japanese in 1592.</p><p>In <a class="enc-link" href="/encyclopedia/south-korea">South Korea</a> he is an icon of national culture: Hangul Day, every 9 October, celebrates his alphabet; Sejong City, Sejong Street and King Sejong Station in Antarctica bear his name; a 9.5-metre bronze statue stands in Gwanghwamun Square; and his portrait has been on the 10,000-won note since 1973. James Palais argued that he was no despot but bested his critics "at their own game". North Korean writings discuss him less and more negatively: one history praises Hangul's linguistic features but credits its development to the intellect of the masses, and another says that everything he did served to consolidate feudalism.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Sejong ruled Joseon from 1418 to 1450, overseeing advances in astronomy, medicine, <a class="enc-link" href="/encyclopedia/printing-press">printing</a>, agriculture and law, a lighter land tax, peace with <a class="enc-link" href="/encyclopedia/japan">Japan</a> and an expanded northern frontier. He created <a class="enc-link" href="/encyclopedia/hangul">Hangul</a>, published in 1446, against opposition at his court, and is widely regarded as <a class="enc-link" href="/encyclopedia/korea">Korea</a>'s greatest king.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="sejong-the-great"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Sejong's elder brother Yangnyŏng is deposed; Sejong becomes crown prince and then king when Taejong abdicates","o":["1437","1446","1450","1418"],"a":3,"w":"1418: Sejong's elder brother Yangnyŏng is deposed; Sejong becomes crown prince and then king when Taejong abdicates."},{"p":"Which came first?","q":"","o":["Sejong's elder brother Yangnyŏng is deposed; Sejong becomes crown prince and then king when Taejong abdicates","Sejong dies, the first Joseon king to die in office, and is succeeded by Munjong"],"a":0,"w":"1418: Sejong's elder brother Yangnyŏng is deposed; Sejong becomes crown prince and then king when Taejong abdicates · 1450: Sejong dies, the first Joseon king to die in office, and is succeeded by Munjong."},{"p":"In which year?","q":"The kongpŏp tax system is completed, lowering the land tax from 10% of the harvest to 5%","o":["1446","1444","1418","1437"],"a":1,"w":"1444: The kongpŏp tax system is completed, lowering the land tax from 10% of the harvest to 5%."},{"p":"Which came first?","q":"","o":["Sejong re-establishes the Hall of Worthies","Sejong dies, the first Joseon king to die in office, and is succeeded by Munjong"],"a":0,"w":"1420: Sejong re-establishes the Hall of Worthies · 1450: Sejong dies, the first Joseon king to die in office, and is succeeded by Munjong."},{"p":"In which year?","q":"Sejong dies, the first Joseon king to die in office, and is succeeded by Munjong","o":["1419","1418","1450","1437"],"a":2,"w":"1450: Sejong dies, the first Joseon king to die in office, and is succeeded by Munjong."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Adam Bohnet, Turning toward Edification: Foreigners in Chosŏn Korea (University of Hawaiʻi Press, 2020)</li>
+        <li>Martina Deuchler, The Confucian Transformation of Korea: A Study of Society and Ideology (Harvard University Asia Center, 1992)</li>
+        <li>Martina Deuchler, Under the Ancestors' Eyes: Kinship, Status, and Locality in Premodern Korea (Harvard University Asia Center, 2015)</li>
+        <li>John B. Duncan, The Origins of the Chosŏn Dynasty (University of Washington Press, 2000)</li>
+        <li>James Huntley Grayson, Korea: A Religious History (Routledge, 2002)</li>
+        <li>Sang-woon Jeon, A History of Korean Science and Technology (NUS Press, 2011)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/pachacuti"><img src="/logos/thumbs/Pachacuti.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pachacuti</span><span class="related-card-dates">c. 1403 CE – c. 1471 CE</span></a><a class="related-card" href="/life/joan-of-arc"><img src="/logos/thumbs/Joan%20of%20Arc.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Joan of Arc</span><span class="related-card-dates">c. 1412 CE – 1431 CE</span></a><a class="related-card" href="/life/zheng-he"><img src="/logos/thumbs/Zheng%20He.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Zheng He</span><span class="related-card-dates">1371 CE – c. 1433 CE</span></a><a class="related-card" href="/life/leonardo-da-vinci"><img src="/logos/thumbs/Leonardo%20da%20Vinci.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Leonardo da Vinci</span><span class="related-card-dates">1452 CE – 1519 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/zheng-he"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Zheng%20He.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Zheng He</span><span class="related-card-dates">1371 CE – c. 1433 CE</span></a><a class="related-card" href="/life/pachacuti"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Pachacuti.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pachacuti</span><span class="related-card-dates">c. 1403 CE – c. 1471 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Sejong the Great",slug="sejong-the-great",url="https://the-epoch-institute.org/life/sejong-the-great";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Sejong the Great on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/sejong-the-great #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/sejong-the-great"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Sejong the Great",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Sejong the Great",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

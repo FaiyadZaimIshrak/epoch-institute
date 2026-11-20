@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Shaka: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Shaka kaSenzangakhona (c. 1787 – 1828) was king of the Zulu Kingdom from 1816 to 1828, remembered for reorganising the Zulu army and for wars whose part…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Shaka: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Shaka kaSenzangakhona (c. 1787 – 1828) was king of the Zulu Kingdom from 1816 to 1828, remembered for reorganising the Zulu army and for wars whose part…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/shaka">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/shaka.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/shaka.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/shaka">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Shaka"}]},{"@type":"Article","headline":"Shaka","description":"Shaka kaSenzangakhona (c. 1787 – 1828) was king of the Zulu Kingdom from 1816 to 1828, remembered for reorganising the Zulu army and for wars whose part…","url":"https://the-epoch-institute.org/life/shaka","mainEntityOfPage":"https://the-epoch-institute.org/life/shaka","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Shaka"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/shaka.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Shaka</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Shaka.png" alt="Shaka" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · Sub-Saharan Africa</p>
+        <h1 class="profile-detail-name">Shaka</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1787 CE – 1828 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">July 1787 (the lunar month of uNtulikazi) at Mthonjaneni, in present-day <a class="enc-link" href="/encyclopedia/kwazulu-natal">KwaZulu-Natal</a>; son of the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> king <a class="enc-link" href="/encyclopedia/senzangakhona">Senzangakhona kaJama</a> and Nandi, spurned as illegitimate</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">24 September 1828, assassinated by his half-brothers <a class="enc-link" href="/encyclopedia/dingane">Dingane</a> and <a class="enc-link" href="/encyclopedia/mhlangana">Mhlangana</a> with the iNduna Mbopa; his body was left in an empty grain pit</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Warrior and regiment commander under <a class="enc-link" href="/encyclopedia/dingiswayo">Dingiswayo</a> of the Mthethwa; king of the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu Kingdom</a>, 1816–1828</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Reorganising the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> army; the iklwa stabbing spear; the &quot;bull horn&quot; formation; the age-grade regiments; wars against <a class="enc-link" href="/encyclopedia/zwide">Zwide</a> of the <a class="enc-link" href="/encyclopedia/ndwandwe">Ndwandwe</a>; the disputed role in the <a class="enc-link" href="/encyclopedia/mfecane">Mfecane</a></span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Shaka turned the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> from a small regional <a class="enc-link" href="/encyclopedia/chiefdom">chiefdom</a> into the leading power of southern <a class="enc-link" href="/encyclopedia/africa">Africa</a>, ruling over 250,000 people and able to muster more than 50,000 warriors by his death in 1828.</li><li>He is credited with the iklwa stabbing spear, the &quot;bull horn&quot; formation and the age-grade regiments, though scholars dispute how far these were his inventions and how far he drew on existing practice.</li><li>His reign brought a massive number of deaths and coincided with the <a class="enc-link" href="/encyclopedia/mfecane">Mfecane</a>, and how far he was to blame, and how far his image as a monster was made by European traders and later historians, is still argued.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Shaka's name is roughly translated as &quot;intestinal beetle&quot;.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1787</span><span class="rf-text">Shaka is born at Mthonjaneni, son of the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> king <a class="enc-link" href="/encyclopedia/senzangakhona">Senzangakhona kaJama</a></span></li><li><span class="rf-year">1816</span><span class="rf-text">Shaka becomes king of the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a></span></li><li><span class="rf-year">1820s</span><span class="rf-text">Shaka defeats <a class="enc-link" href="/encyclopedia/zwide">Zwide</a>'s <a class="enc-link" href="/encyclopedia/ndwandwe">Ndwandwe</a> at Gqokli Hill and on the <a class="enc-link" href="/encyclopedia/mhlatuze-river">Mhlatuze River</a> and destroys Zwide's royal kraal</span></li><li><span class="rf-year">1826</span><span class="rf-text">Shaka contends again with <a class="enc-link" href="/encyclopedia/zwide">Zwide</a>'s son Sikhunyane</span></li><li><span class="rf-year">1827</span><span class="rf-text">His mother Nandi dies; Shaka's mourning decrees bring mass executions</span></li><li><span class="rf-year">1828</span><span class="rf-text">Shaka is assassinated by his half-brothers <a class="enc-link" href="/encyclopedia/dingane">Dingane</a> and <a class="enc-link" href="/encyclopedia/mhlangana">Mhlangana</a>, and Dingane takes power</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Shaka kaSenzangakhona was born in the lunar month of uNtulikazi (July) in 1787, at Mthonjaneni in present-day <a class="enc-link" href="/encyclopedia/kwazulu-natal">KwaZulu-Natal</a>. He was the son of the reigning <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> king, <a class="enc-link" href="/encyclopedia/senzangakhona">Senzangakhona kaJama</a>, and the eldest of many sons, but he was regarded as illegitimate and sent away to live with his mother Nandi's people, the Elangeni, while a half-brother was left to rule. The Zulu of the time were a regional people living on livestock, <a class="enc-link" href="/encyclopedia/sorghum">sorghum</a> and milk.</p><p>When he was old enough, Shaka and his mother were sent to the Mthethwa, the most powerful people of the region. There he grew up and was initiated into an ibutho lempi, a fighting regiment, serving as a warrior under Jobe and then under <a class="enc-link" href="/encyclopedia/dingiswayo">Dingiswayo</a>, the respected chief of the Mthethwa. When Dingiswayo learned that Shaka was of royal birth he put him in charge of a regiment, which helped him develop his tactics and strategy. By this time Shaka was known for using the short stabbing spear, the iklwa. Sources tend to agree that he was tall and strongly built; his enemies called him ugly in some respects, and many said that he spoke with a speech impediment.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <div class="profile-section-body"><p>Shaka became king of the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> in 1816 and refined the ibutho military system over the following years with the support of the <a class="enc-link" href="/encyclopedia/mthethwa-paramountcy">Mthethwa Paramountcy</a>, whom he still recognised as overlord. In his first years he had neither the influence nor the reputation to make any but the smallest groups join him. He forged alliances with smaller neighbours against raids by the <a class="enc-link" href="/encyclopedia/ndwandwe">Ndwandwe</a> from the north, the most aggressive power of the region, and the Zulu's early moves were mainly defensive; he preferred to apply pressure through diplomacy, with an occasional strategic assassination.</p><p>Some years later <a class="enc-link" href="/encyclopedia/dingiswayo">Dingiswayo</a> was ambushed and killed by <a class="enc-link" href="/encyclopedia/zwide">Zwide</a>'s Ndwandwe; there is no evidence that Shaka betrayed him. Shaka then moved south across the <a class="enc-link" href="/encyclopedia/thukela-river">Thukela River</a> and set up his capital, <a class="enc-link" href="/encyclopedia/bulawayo">Bulawayo</a>, in Qwabe territory, where he may have intervened in a succession dispute to bring his own choice, Nqetho, to power. With the support of the Qwabe, Hlubi and Mkhize he was at last able to raise a force that could resist the Ndwandwe, and he won over friendly chiefs such as Zihlandlo of the Mkhize, Jobe of the Sithole and Mathubane of the Thuli through patronage and reward rather than battle.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <div class="profile-section-body"><p>Shaka's first major battle against <a class="enc-link" href="/encyclopedia/zwide">Zwide</a> was at Gqokli Hill on the Mfolozi River, where his troops held the crest against a frontal assault and his reserves swept round the hill to strike the enemy's rear. Losses were high, but the new methods were proven. In a two-day running battle on the <a class="enc-link" href="/encyclopedia/mhlatuze-river">Mhlatuze River</a> the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> defeated the <a class="enc-link" href="/encyclopedia/ndwandwe">Ndwandwe</a>, and Shaka led a fresh reserve some 110 kilometres to Zwide's royal kraal and destroyed it. Zwide escaped, and his general <a class="enc-link" href="/encyclopedia/soshangane">Soshangane</a> moved north towards present-day <a class="enc-link" href="/encyclopedia/mozambique">Mozambique</a>.</p><p>Shaka is credited with introducing the iklwa, a short stabbing spear with a broad blade, though he likely did not invent it; Zulu scholar John Laband says the training with it gave his warriors a "terrifying advantage". He is also thought to have introduced a larger shield, owned by the king and coloured by regiment. He organised the age grades into regiments quartered in military kraals, and most historians credit him with the "bull horn" formation, in which the veteran "chest" pinned the enemy, the young "horns" encircled it and the "loins" waited in reserve. Boys of six and over served as carriers. At his death he ruled over 250,000 people and could muster more than 50,000 warriors.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>Shaka's chief enemy was <a class="enc-link" href="/encyclopedia/zwide">Zwide</a>, king of the <a class="enc-link" href="/encyclopedia/ndwandwe">Ndwandwe</a>, who had killed <a class="enc-link" href="/encyclopedia/dingiswayo">Dingiswayo</a>. Shaka is said to have killed Zwide's mother, Ntombazi, a sangoma, by locking her in a house with jackals or hyenas and burning it afterwards. His discipline was brutal: men who refused to go without sandals were killed, and according to the account <a class="enc-link" href="/encyclopedia/h-rider-haggard">H. Rider Haggard</a> had from the later king <a class="enc-link" href="/encyclopedia/cetshwayo">Cetshwayo</a>, a warrior who hesitated was executed after the fight and the wives and children of a defeated regiment were beaten to death. Laband dismisses the stories of sandals and of marches of 80 kilometres a day as myth, though other historians affirm that pace.</p><p>Historians are divided over Shaka himself. Some older histories denied his innovations or credited them to Europeans; some scholars hold that he was a borrower of methods and ruler-lineages already in place, citing J.H. Soga and A.T. Bryant on the short <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> line beside the long pedigrees of the Hlubi, Ndwandwe and Swazi. The earliest accounts, by the traders <a class="enc-link" href="/encyclopedia/nathaniel-isaacs">Nathaniel Isaacs</a> and <a class="enc-link" href="/encyclopedia/henry-francis-fynn">Henry Francis Fynn</a>, drew him as a pathological monster; Dan Wylie quotes Isaacs urging Fynn to make him "as bloodthirsty as you can", and Carolyn Hamilton argues that his image has been "invented" to suit later agendas.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <div class="profile-section-body"><p>Shaka's last year followed the death of his mother, Nandi, in October 1827. According to Donald Morris, he ordered that no crops be planted in the year of mourning, that no milk be used, and that any woman who became pregnant be killed with her husband; at least 7,000 people thought insufficiently grief-stricken were executed. Oral sources tell that a man named Gala finally objected that Nandi was not the first person to die in Zululand, and that Shaka called off the edicts and rewarded him with <a class="enc-link" href="/encyclopedia/cattle">cattle</a>.</p><p>His half-brothers <a class="enc-link" href="/encyclopedia/dingane">Dingane</a> and <a class="enc-link" href="/encyclopedia/mhlangana">Mhlangana</a> appear to have tried at least twice to kill him, with support from <a class="enc-link" href="/encyclopedia/mpondo">Mpondo</a> elements and some disaffected iziYendane. In 1828, most often dated to September, when nearly all the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> fighting men had been sent on a sweep to the north, the iNduna Mbopa created a diversion and Dingane and Mhlangana struck the fatal blows. Shaka's body was dumped in an empty grain pit filled with stones and mud; Morris holds that the site lies on Couper Street in <a class="enc-link" href="/encyclopedia/dukuza">KwaDukuza</a>. Dingane took power and purged Shaka's supporters over several years.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Shaka's reign coincided with the start of the <a class="enc-link" href="/encyclopedia/mfecane">Mfecane</a> or Difaqane, the devastating warfare and migrations in southern <a class="enc-link" href="/encyclopedia/africa">Africa</a> between 1815 and 1840 that depopulated the region. Peoples fled out of reach of his impis, and his general <a class="enc-link" href="/encyclopedia/mzilikazi">Mzilikazi</a> broke away to found the <a class="enc-link" href="/encyclopedia/ndebele-kingdom">Ndebele</a> state in present-day <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a>; <a class="enc-link" href="/encyclopedia/soshangane">Soshangane</a> and <a class="enc-link" href="/encyclopedia/zwangendaba">Zwangendaba</a> also rose from the upheaval. Estimates of the Mfecane's dead usually range from 1 million to 2 million, but they are controversial, and some scholars warn that the theory neglects European encroachment and the <a class="enc-link" href="/encyclopedia/atlantic-slave-trade">slave trade</a>. Julian Cobbing argues that the view of Shaka as the monster behind it served apartheid-era historians; others answer that the accounts of hundreds of victims and refugees, and sites such as the underground village of Lepalong, show the violence was real.</p><p>Military historians have compared his spear and formation to the Roman legion, and John Keegan, while noting myths, calls him "the greatest commander to have come out of Africa". In <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> tradition he remains ambiguous, revered in praise songs and criticised in oral history. King Shaka International Airport near <a class="enc-link" href="/encyclopedia/durban">Durban</a>, opened in 2010, bears his name.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Shaka kaSenzangakhona ruled the <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu Kingdom</a> from 1816 to 1828, defeating <a class="enc-link" href="/encyclopedia/zwide">Zwide</a>'s <a class="enc-link" href="/encyclopedia/ndwandwe">Ndwandwe</a> and building an army of regiments armed with the stabbing spear. His rule brought many deaths and harsh discipline, and his part in the <a class="enc-link" href="/encyclopedia/mfecane">Mfecane</a> is still disputed; he was assassinated by his half-brothers in 1828.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="shaka"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Shaka is born at Mthonjaneni, son of the Zulu king Senzangakhona kaJama","o":["1826","1787","1827","1816"],"a":1,"w":"1787: Shaka is born at Mthonjaneni, son of the Zulu king Senzangakhona kaJama."},{"p":"Which came first?","q":"","o":["Shaka is born at Mthonjaneni, son of the Zulu king Senzangakhona kaJama","His mother Nandi dies; Shaka's mourning decrees bring mass executions"],"a":0,"w":"1787: Shaka is born at Mthonjaneni, son of the Zulu king Senzangakhona kaJama · 1827: His mother Nandi dies; Shaka's mourning decrees bring mass executions."},{"p":"In which year?","q":"His mother Nandi dies; Shaka's mourning decrees bring mass executions","o":["1826","1827","1816","1828"],"a":1,"w":"1827: His mother Nandi dies; Shaka's mourning decrees bring mass executions."},{"p":"Which came first?","q":"","o":["Shaka becomes king of the Zulu","Shaka is born at Mthonjaneni, son of the Zulu king Senzangakhona kaJama"],"a":1,"w":"1816: Shaka becomes king of the Zulu · 1787: Shaka is born at Mthonjaneni, son of the Zulu king Senzangakhona kaJama."},{"p":"In which year?","q":"Shaka contends again with Zwide's son Sikhunyane","o":["1826","1827","1787","1816"],"a":0,"w":"1826: Shaka contends again with Zwide's son Sikhunyane."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Alfred T. Bryant, Olden Times in Zululand and Natal: Containing Earlier Political History of the Eastern-Ngu̇ni Clans (Longmans, Green and Company, 1929)</li>
+        <li>John Langalibalele Dube, Jeqe, the Bodyservant of King Tshaka: (Insila Ka Tshaka) (Lovedale Press, 1951)</li>
+        <li>Robert B. Edgerton, Like Lions They Fought: The Zulu War and the Last Black Empire in South Africa (Free Press, 1988)</li>
+        <li>Henry Francis Fynn, The Diary of Henry Francis Fynn (Shuter and Shooter, 1986)</li>
+        <li>Henry Rider Haggard, Cetywayo and His White Neighbours: Or, Remarks on Recent Events in Zululand, Natal, and the Transvaal (AMS Press, 1882)</li>
+        <li>Carolyn Hamilton, Terrific Majesty: The Powers of Shaka Zulu and the Limits of Historical Invention (D. Philip, 1998)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/simon-bolivar"><img src="/logos/thumbs/Sim%C3%B3n%20Bol%C3%ADvar.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Simón Bolívar</span><span class="related-card-dates">1783 CE – 1830 CE</span></a><a class="related-card" href="/life/napoleon"><img src="/logos/thumbs/Napoleon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Napoleon</span><span class="related-card-dates">1769 CE – 1821 CE</span></a><a class="related-card" href="/life/abraham-lincoln"><img src="/logos/thumbs/Abraham%20Lincoln.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Abraham Lincoln</span><span class="related-card-dates">1809 CE – 1865 CE</span></a><a class="related-card" href="/life/charles-darwin"><img src="/logos/thumbs/Charles%20Darwin.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Charles Darwin</span><span class="related-card-dates">1809 CE – 1882 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/simon-bolivar"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Sim%C3%B3n%20Bol%C3%ADvar.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Simón Bolívar</span><span class="related-card-dates">1783 CE – 1830 CE</span></a><a class="related-card" href="/life/abraham-lincoln"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Abraham%20Lincoln.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Abraham Lincoln</span><span class="related-card-dates">1809 CE – 1865 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Shaka",slug="shaka",url="https://the-epoch-institute.org/life/shaka";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Shaka on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/shaka #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/shaka"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Shaka",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Shaka",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

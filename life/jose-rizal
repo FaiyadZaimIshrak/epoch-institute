@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>José Rizal: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="José Rizal (1861-1896) was a Filipino ophthalmologist, writer and reformer of the late Spanish colonial period whose novels Noli Me Tángere and El…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="José Rizal: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="José Rizal (1861-1896) was a Filipino ophthalmologist, writer and reformer of the late Spanish colonial period whose novels Noli Me Tángere and El…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/jose-rizal">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/jose-rizal.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/jose-rizal.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/jose-rizal">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"José Rizal"}]},{"@type":"Article","headline":"José Rizal","description":"José Rizal (1861-1896) was a Filipino ophthalmologist, writer and reformer of the late Spanish colonial period whose novels Noli Me Tángere and El…","url":"https://the-epoch-institute.org/life/jose-rizal","mainEntityOfPage":"https://the-epoch-institute.org/life/jose-rizal","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"José Rizal"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/jose-rizal.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">José Rizal</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Jos%C3%A9%20Rizal.png" alt="José Rizal" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">José Rizal</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1861 CE – 1896 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">19 June 1861 in Calamba, Laguna; seventh child of Francisco Rizal Mercado and Teodora Alonso Realonda, leaseholders of land owned by the <a class="enc-link" href="/encyclopedia/dominican-order">Dominican Order</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">30 December 1896 at Bagumbayan, <a class="enc-link" href="/encyclopedia/manila">Manila</a>, shot by a firing squad after conviction by a court-martial for rebellion, sedition and conspiracy</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Ophthalmologist; writer and leading member of the Propaganda Movement in the 1880s; founder of La Liga Filipina, 1892; exile at Dapitan, 1892-1896</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Noli Me Tángere (1887); El filibusterismo (1891); La Solidaridad; La Liga Filipina; exile in Dapitan; Mi último adiós; execution in 1896</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Educated at the Ateneo, Santo <a class="enc-link" href="/encyclopedia/loma-people">Tomas</a>, <a class="enc-link" href="/encyclopedia/madrid">Madrid</a> and <a class="enc-link" href="/encyclopedia/heidelberg">Heidelberg</a>, Rizal became the best-known writer of the Filipino Propaganda Movement, which sought reforms for the colony under <a class="enc-link" href="/encyclopedia/spain">Spain</a>.</li><li>His novels Noli Me Tángere and El filibusterismo, critical of the friars and colonial government, angered the Spanish authorities and are taken together as a national epic.</li><li>Though he condemned the Katipunan's uprising, he was tried for rebellion and shot in 1896, and his standing as national hero and his attitude to the revolution remain debated.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Rizal's farewell poem, now called Mi último adiós, was hidden in an alcohol stove handed to his family after his execution; he had told his sisters in English, &quot;There is something inside it&quot;.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1861</span><span class="rf-text">José Rizal is born in Calamba, Laguna</span></li><li><span class="rf-year">1882</span><span class="rf-text">He leaves secretly for <a class="enc-link" href="/encyclopedia/spain">Spain</a> to study at the Universidad Central de <a class="enc-link" href="/encyclopedia/madrid">Madrid</a></span></li><li><span class="rf-year">1887</span><span class="rf-text">Noli Me Tángere is published in <a class="enc-link" href="/encyclopedia/berlin">Berlin</a>, the year he completes his eye specialisation at <a class="enc-link" href="/encyclopedia/heidelberg">Heidelberg</a></span></li><li><span class="rf-year">1891</span><span class="rf-text">El filibusterismo is published in <a class="enc-link" href="/encyclopedia/ghent">Ghent</a></span></li><li><span class="rf-year">1892</span><span class="rf-text">He founds La Liga Filipina in <a class="enc-link" href="/encyclopedia/manila">Manila</a>, is arrested and is banished to Dapitan</span></li><li><span class="rf-year">1896</span><span class="rf-text">Arrested at <a class="enc-link" href="/encyclopedia/barcelona">Barcelona</a> after the <a class="enc-link" href="/encyclopedia/philippine-revolution">Philippine Revolution</a> breaks out, he is sent back to <a class="enc-link" href="/encyclopedia/manila">Manila</a> for trial</span></li><li><span class="rf-year">1896</span><span class="rf-text">Rizal is executed at Bagumbayan</span></li><li><span class="rf-year">1913</span><span class="rf-text">The Rizal Monument by Richard Kissling is inaugurated over his remains in <a class="enc-link" href="/encyclopedia/manila">Manila</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>José Rizal was born on 19 June 1861 in Calamba, Laguna, the seventh child of Francisco Rizal Mercado and Teodora Alonso Realonda y Quintos. The family name was Mercado; Rizal had been added as a second surname under Governor-General <a class="enc-link" href="/encyclopedia/narciso-claveria">Narciso Clavería</a>'s decree of 1849 requiring Filipinos to take Spanish surnames. His father's line went back to Lam-co, a Chinese merchant from <a class="enc-link" href="/encyclopedia/fujian">Fujian</a> who settled in Calamba in 1697, and his mother's included Chinese <a class="enc-link" href="/encyclopedia/mestizo">mestizo</a>, Spanish, Japanese and <a class="enc-link" href="/encyclopedia/tagalog-language">Tagalog</a> ancestry. His parents leased a <a class="enc-link" href="/encyclopedia/hacienda">hacienda</a> and <a class="enc-link" href="/encyclopedia/rice">rice</a> farm from the <a class="enc-link" href="/encyclopedia/dominican-order">Dominican Order</a>. His mother taught him the alphabet at three, and the parish priest Leoncio Lopez and his elder brother Paciano, who had lived with Father José <a class="enc-link" href="/encyclopedia/burgos">Burgos</a>, also shaped him.</p><p>He studied first in Biñan and from 1872 at the Ateneo Municipal de <a class="enc-link" href="/encyclopedia/manila">Manila</a>, where he graduated as Bachelor in Arts in 1877 with many prizes. In 1872 the Gomburza priests were executed, and in these years his mother was imprisoned for two and a half years on a relative's charge that she had tried to poison him. At the University of Santo <a class="enc-link" href="/encyclopedia/loma-people">Tomas</a> he studied philosophy and letters, then medicine after learning his mother was going blind. In May 1882, with Paciano's secret support, he left for <a class="enc-link" href="/encyclopedia/spain">Spain</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <div class="profile-section-body"><p>In <a class="enc-link" href="/encyclopedia/madrid">Madrid</a> Rizal enrolled in medicine and philosophy and letters at the Universidad Central, took lessons in French, German and English, and lived on a tight allowance from Paciano. He joined the Circulo Hispano-Filipino and became a Freemason, a Master Mason in 1884. That year his toast to the painters Juan Luna and Félix Resurrección Hidalgo, saying greatness was not bounded by skin colour or place of birth, made him well known. In 1887 he completed his eye specialisation at <a class="enc-link" href="/encyclopedia/heidelberg">Heidelberg</a> under Otto Becker and finished his first novel, Noli Me Tángere, published in <a class="enc-link" href="/encyclopedia/berlin">Berlin</a> that year.</p><p>Back in the <a class="enc-link" href="/encyclopedia/philippines">Philippines</a> in 1887, he was already labelled a filibustero, a subversive, by the criollo elite. He wrote a petition for the tenants of Calamba against the friars' rent rises; the litigation that followed ended with the Dominicans evicting the tenants and his family, and General Valeriano Weyler had the tenant buildings torn down. Returning to <a class="enc-link" href="/encyclopedia/europe">Europe</a>, he annotated Antonio de Morga's Sucesos de las Islas Filipinas, wrote for La Solidaridad under pen names such as Dimasalang and Laong Laan, and in 1890 contested the leadership of the reform movement with Marcelo H. del Pilar, whom most expatriates supported.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <div class="profile-section-body"><p>Rizal's writings for the reform movement called for the <a class="enc-link" href="/encyclopedia/philippines">Philippines</a> to be made a province of <a class="enc-link" href="/encyclopedia/spain">Spain</a>, for representation in the <a class="enc-link" href="/encyclopedia/corte">Cortes</a>, Filipino priests in place of Spanish friars, freedom of assembly and speech, and equal rights before the law; he wrote that Filipinos fought "a double-faced <a class="enc-link" href="/encyclopedia/goliath">Goliath</a>" of corrupt friars and bad government. El filibusterismo, the sequel to the Noli, was published in <a class="enc-link" href="/encyclopedia/ghent">Ghent</a> in 1891 with borrowed money. Both novels attacked the friars and the power of the Church; his friend Ferdinand Blumentritt, born in <a class="enc-link" href="/encyclopedia/austro-hungarian-empire">Austria-Hungary</a>, wrote that every episode could happen any day in the Philippines. He also wrote essays such as The Philippines a Century Hence and The Indolence of Filipinos, poems and plays, and made about 56 sculptures.</p><p>Returning to <a class="enc-link" href="/encyclopedia/manila">Manila</a> in 1892, he founded La Liga Filipina, a civic league for moderate reform by legal means, and was arrested on 6 July 1892 and banished to Dapitan in <a class="enc-link" href="/encyclopedia/mindanao">Mindanao</a>. There, in four years of exile, he built a school, a hospital and a water supply, practised medicine, farmed and collected specimens for European museums; a flying lizard, a beetle and a frog were later named rizali after him. He lived in a common-law marriage with Josephine Bracken, an Irish woman from <a class="enc-link" href="/encyclopedia/hong-kong">Hong Kong</a>; their son lived only a few hours.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>The colonial authorities and the friars were Rizal's chief opponents: the authorities rejected the reforms he sought, which Spanish intellectuals such as Morayta, Unamuno and Pi y Margall endorsed, and the <a class="enc-link" href="/encyclopedia/bishop">Bishop</a> of <a class="enc-link" href="/encyclopedia/cebu">Cebu</a> refused him a church marriage because he would not return to Catholic practice. The political writer Wenceslao Retana insulted his family in La Epoca, then apologised when challenged to a duel and later wrote his most important biography. On the Filipino side, <a class="enc-link" href="/encyclopedia/andres-bonifacio">Andrés Bonifacio</a> denounced him as a coward after he refused to back an armed rising.</p><p>His stance on the revolution is disputed. Pío Valenzuela, who consulted him for the Katipunan in 1895, told a Spanish court that Rizal condemned armed struggle, but later said Rizal favoured a rising once Filipinos were well armed, and that he had lied to exculpate him. Miguel de Unamuno called him "the <a class="enc-link" href="/encyclopedia/tagalog-language">Tagalog</a> Hamlet", a soul that dreaded the revolution while desiring it. Renato Constantino called him a "United States-sponsored hero", promoted by the American colonial government as a peaceful figure over Bonifacio and <a class="enc-link" href="/encyclopedia/apolinario-mabini">Apolinario Mabini</a>; Constantino's analysis has itself been criticised for polemicism and inaccuracies.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <div class="profile-section-body"><p>In 1896, with the Katipunan's rising now a revolution, Rizal left Dapitan on 1 August with Governor-General Ramón Blanco's leave to serve as a doctor to yellow fever victims in <a class="enc-link" href="/encyclopedia/cuba">Cuba</a>. He was arrested on the way and imprisoned in <a class="enc-link" href="/encyclopedia/barcelona">Barcelona</a> on 6 October, then sent back to <a class="enc-link" href="/encyclopedia/manila">Manila</a> for trial. In Fort <a class="enc-link" href="/encyclopedia/santiago">Santiago</a> he issued a manifesto disavowing the revolution in its present state, saying education and national identity must come before freedom. A court-martial convicted him of rebellion, sedition and conspiracy. Blanco, sympathetic to him, had been replaced by Camilo de Polavieja after pressure from the friars led by Archbishop Bernardino Nozaleda.</p><p>On 30 December 1896 he was shot by Filipino soldiers of the Spanish Army, with Spanish troops behind them ready to fire on the executioners if they failed; his last words were reported as "consummatum est". He was buried secretly in Paco Cemetery in an unmarked grave. His sister Narcisa found it and had it marked "RPJ", his initials reversed, and in August 1898 his remains were exhumed. Several historians report that he signed a retraction of his anti-Catholic ideas; others, including Ricardo Pascual and Rafael <a class="enc-link" href="/encyclopedia/palma">Palma</a>, judge the document not his or a "pious fraud", and the question remains disputed.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Italian anarchist Michele Angiolillo invoked Rizal's execution when he assassinated the Spanish prime minister <a class="enc-link" href="/encyclopedia/antonio-canovas-del-castillo">Antonio Cánovas del Castillo</a>. La Liga Filipina gave rise to the Katipunan, and Rizal's farewell poem, first printed in <a class="enc-link" href="/encyclopedia/hong-kong">Hong Kong</a> in 1897, was quoted in the <a class="enc-link" href="/encyclopedia/united-states-congress">United States Congress</a> during the debate on the Philippine Organic Act of 1902 and recited by Indonesian soldiers of independence. On 30 December 1912 his remains were placed at Bagumbayan, now Luneta, where Richard Kissling's Rizal Monument was inaugurated a year later. <a class="enc-link" href="/encyclopedia/emilio-aguinaldo">Emilio Aguinaldo</a> had declared 30 December a day of mourning, and the American <a class="enc-link" href="/encyclopedia/philippine-commission">Philippine Commission</a> made it a day of observance.</p><p>No law or proclamation has officially named any Filipino a national hero, but Rizal is popularly held as one. The Rizal Law of 1956 requires schools and colleges to teach his life and works, and the province of Rizal is named after him. Austin Coates and Benedict Anderson believe he gave the revolution a genuinely national character, while Teodoro Agoncillo argued that Bonifacio should be honoured beside him. Rizalista religious movements venerate him, and the Philippine Independent Church canonised him in 1903, revoking it in the 1950s. Monuments stand from <a class="enc-link" href="/encyclopedia/madrid">Madrid</a> and <a class="enc-link" href="/encyclopedia/heidelberg">Heidelberg</a> to Tokyo, <a class="enc-link" href="/encyclopedia/lima">Lima</a> and <a class="enc-link" href="/encyclopedia/toronto">Toronto</a>.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>José Rizal, a doctor and writer from Calamba, became the leading voice of Filipino reform under <a class="enc-link" href="/encyclopedia/spain">Spain</a> with Noli Me Tángere and El filibusterismo. Exiled to Dapitan in 1892 and shot for rebellion in 1896 although he disavowed the rising, he became the <a class="enc-link" href="/encyclopedia/philippines">Philippines</a>' best-known national figure, while his views on revolution and his alleged retraction remain disputed.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="jose-rizal"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"José Rizal is born in Calamba, Laguna","o":["1887","1861","1913","1891"],"a":1,"w":"1861: José Rizal is born in Calamba, Laguna."},{"p":"Which came first?","q":"","o":["The Rizal Monument by Richard Kissling is inaugurated over his remains in Manila","Noli Me Tángere is published in Berlin, the year he completes his eye specialisation at Heidelberg"],"a":1,"w":"1913: The Rizal Monument by Richard Kissling is inaugurated over his remains in Manila · 1887: Noli Me Tángere is published in Berlin, the year he completes his eye specialisation at Heidelberg."},{"p":"In which year?","q":"El filibusterismo is published in Ghent","o":["1913","1896","1891","1861"],"a":2,"w":"1891: El filibusterismo is published in Ghent."},{"p":"Which came first?","q":"","o":["Rizal is executed at Bagumbayan","José Rizal is born in Calamba, Laguna"],"a":1,"w":"1896: Rizal is executed at Bagumbayan · 1861: José Rizal is born in Calamba, Laguna."},{"p":"In which year?","q":"The Rizal Monument by Richard Kissling is inaugurated over his remains in Manila","o":["1861","1913","1891","1882"],"a":1,"w":"1913: The Rizal Monument by Richard Kissling is inaugurated over his remains in Manila."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Austin Craig, Lineage, Life and Labors of Jose Rizal, Philippine Patriot (World Book Co., 1913)</li>
+        <li>León Ma. Guerrero, The First Filipino: A Biography of José Rizal (National Historical Commission, 1974)</li>
+        <li>Anacoreta P. Purino, Rizal, The Greatest Filipino Hero (Rex Bookstore, 2008)</li>
+        <li>John Ray Ramos, Jose Rizal (Saint Matthew's Publishing, 2018)</li>
+        <li>Maria Stella S. Valdez, Doctor Jose Rizal and the Writing of His Story (Rex Bookstore, Inc., 2007)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/sun-yat-sen"><img src="/logos/thumbs/Sun%20Yat-sen.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sun Yat-sen</span><span class="related-card-dates">1866 CE – 1925 CE</span></a><a class="related-card" href="/life/mahatma-gandhi"><img src="/logos/thumbs/Mahatma%20Gandhi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mahatma Gandhi</span><span class="related-card-dates">1869 CE – 1948 CE</span></a><a class="related-card" href="/life/emperor-meiji"><img src="/logos/thumbs/Emperor%20Meiji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Emperor Meiji</span><span class="related-card-dates">1852 CE – 1912 CE</span></a><a class="related-card" href="/life/lili-uokalani"><img src="/logos/thumbs/Lili%CA%BBuokalani.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liliʻuokalani</span><span class="related-card-dates">1838 CE – 1917 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/emperor-meiji"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Emperor%20Meiji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Emperor Meiji</span><span class="related-card-dates">1852 CE – 1912 CE</span></a><a class="related-card" href="/life/sun-yat-sen"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Sun%20Yat-sen.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sun Yat-sen</span><span class="related-card-dates">1866 CE – 1925 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="José Rizal",slug="jose-rizal",url="https://the-epoch-institute.org/life/jose-rizal";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring José Rizal on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/jose-rizal #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/jose-rizal"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"José Rizal",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"José Rizal",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

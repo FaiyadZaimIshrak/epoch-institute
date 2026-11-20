@@ -44,6 +44,8 @@ var SONG_LINKS = {
 "Rwanda":[["independance-cha-cha","Indépendance Cha Cha","1960"]],
 "Samos":[["carmagnole","La Carmagnole","1792"]],
 "Singapore":[["rule-britannia","Rule, Britannia!","1740"],["sansoen-phra-barami","Sansoen Phra Barami","1888"],["rasa-sayang","Rasa Sayang","c. 1930"],["the-moon-represents-my-heart","The Moon Represents My Heart","1973"],["tian-mi-mi","Tian Mi Mi","1979"],["e-ipo","E Ipo","1982"]],
+"Sun Yat-sen":[["abide-with-me","Abide with Me","1847"],["three-principles-of-the-people","National Anthem of the Republic of China","1924"]],
+"Sundiata Keita":[["epic-of-sundiata","Epic of Sundiata","c. 1255"]],
 "Tanzania":[["nkosi-sikelel-iafrika","Nkosi Sikelel' iAfrika","1897"],["jambo-bwana","Jambo Bwana","1982"]],
 "Thebes":[["great-hymn-to-the-aten","Great Hymn to the Aten","c. 1350 BCE"]],
 "Uganda":[["oh-uganda-land-of-beauty","Oh Uganda, Land of Beauty","1962"]],

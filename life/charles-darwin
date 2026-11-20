@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Charles Darwin: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Charles Darwin, an English naturalist and geologist whose voyage on HMS Beagle and decades of research led to On the Origin of Species (1859) and the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Charles Darwin: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Charles Darwin, an English naturalist and geologist whose voyage on HMS Beagle and decades of research led to On the Origin of Species (1859) and the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/charles-darwin">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/charles-darwin.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/charles-darwin.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/charles-darwin">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Charles Darwin"}]},{"@type":"Article","headline":"Charles Darwin","description":"Charles Darwin, an English naturalist and geologist whose voyage on HMS Beagle and decades of research led to On the Origin of Species (1859) and the…","url":"https://the-epoch-institute.org/life/charles-darwin","mainEntityOfPage":"https://the-epoch-institute.org/life/charles-darwin","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Charles Darwin"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/charles-darwin.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Charles Darwin</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Charles%20Darwin.png" alt="Charles Darwin" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · Europe</p>
+        <h1 class="profile-detail-name">Charles Darwin</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1809 CE – 1882 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">12 February 1809, at The Mount, <a class="enc-link" href="/encyclopedia/shrewsbury">Shrewsbury</a>, <a class="enc-link" href="/encyclopedia/shropshire">Shropshire</a>; fifth of six children of the doctor and financier Robert Darwin and Susannah Darwin (née Wedgwood)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">19 April 1882, at Down House, Kent, aged 73, of what his physicians called anginal attacks and heart failure; buried in <a class="enc-link" href="/encyclopedia/westminster-abbey">Westminster Abbey</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Naturalist on <a class="enc-link" href="/encyclopedia/hms-beagle">HMS Beagle</a> (1831–1836); Secretary of the Geological Society (from 1838); Fellow of the <a class="enc-link" href="/encyclopedia/royal-society">Royal Society</a> (1839); self-funded gentleman scientist at Down House (from 1842)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the voyage of <a class="enc-link" href="/encyclopedia/hms-beagle">HMS Beagle</a>; the theory of evolution by natural selection, presented with <a class="enc-link" href="/encyclopedia/alfred-russel-wallace">Alfred Russel Wallace</a> in 1858; <a class="enc-link" href="/encyclopedia/on-the-origin-of-species">On the Origin of Species</a> (1859); The Descent of Man (1871); The Expression of the Emotions (1872); studies of coral reefs, barnacles, orchids and earthworms</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Darwin's five-year voyage on <a class="enc-link" href="/encyclopedia/hms-beagle">HMS Beagle</a>, from 1831 to 1836, made his name as a geologist and gave him the fossils, finches, mockingbirds and tortoises that puzzled him into asking how species arise.</li><li>He devised the theory of natural selection in 1838 but published it only after <a class="enc-link" href="/encyclopedia/alfred-russel-wallace">Alfred Russel Wallace</a> sent him the same idea in 1858; <a class="enc-link" href="/encyclopedia/on-the-origin-of-species">On the Origin of Species</a> followed in 1859.</li><li>Evolution was widely accepted by the 1870s, but natural selection as its main mechanism won broad agreement only with the modern evolutionary synthesis of the 1930s to 1950s.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Seeing a <a class="enc-link" href="/encyclopedia/madagascar">Madagascar</a> orchid with a sixteen-inch nectary, Darwin predicted a moth with a proboscis long enough to pollinate it; explorers found it, Xanthopan, in 1903.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1831</span><span class="rf-text">Darwin sails on <a class="enc-link" href="/encyclopedia/hms-beagle">HMS Beagle</a> as a self-funded naturalist on a survey voyage that lasts almost five years</span></li><li><span class="rf-year">1838</span><span class="rf-text">After reading Malthus on population, Darwin conceives the theory of natural selection</span></li><li><span class="rf-year">1839</span><span class="rf-text">Darwin marries his cousin Emma Wedgwood, is elected a Fellow of the <a class="enc-link" href="/encyclopedia/royal-society">Royal Society</a> and publishes his Beagle Journal</span></li><li><span class="rf-year">1842</span><span class="rf-text">The Structure and Distribution of Coral Reefs appears, and the family moves to Down House in Kent</span></li><li><span class="rf-year">1858</span><span class="rf-text">Darwin's and Wallace's papers on natural selection are presented together at the Linnean Society</span></li><li><span class="rf-year">1859</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/on-the-origin-of-species">On the Origin of Species</a> is published, and its first <a class="enc-link" href="/encyclopedia/printing-press">printing</a> is oversubscribed</span></li><li><span class="rf-year">1871</span><span class="rf-text">The Descent of Man sets out the evidence that humans descend from earlier animals</span></li><li><span class="rf-year">1882</span><span class="rf-text">Darwin dies at Down House and is buried in <a class="enc-link" href="/encyclopedia/westminster-abbey">Westminster Abbey</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Charles Robert Darwin was born on 12 February 1809 at The Mount in <a class="enc-link" href="/encyclopedia/shrewsbury">Shrewsbury</a>, the fifth of six children of the wealthy doctor and financier Robert Darwin and Susannah Darwin, née Wedgwood. Both his grandfathers, Erasmus Darwin and <a class="enc-link" href="/encyclopedia/josiah-wedgwood">Josiah Wedgwood</a>, were prominent abolitionists, and Erasmus had written in his Zoonomia (1794) of evolution and common descent. The family was largely Unitarian; Charles attended the Unitarian chapel with his mother, who died in July 1817, and from 1818 boarded at Shrewsbury School.</p><p>In October 1825 he went to the University of <a class="enc-link" href="/encyclopedia/edinburgh">Edinburgh</a> to study medicine, but found the lectures dull and surgery distressing. He learned taxidermy from John Edmonstone, a Black man from Demerara freed from <a class="enc-link" href="/encyclopedia/slavery">slavery</a>, joined the student Plinian Society and helped Robert Edmond Grant study marine invertebrates. Grant praised Lamarck's evolutionary ideas, which astonished him.</p><p>His father, annoyed, sent him to Christ's College, <a class="enc-link" href="/encyclopedia/cambridge">Cambridge</a>, in January 1828 to prepare to become an Anglican country parson. There he collected beetles, became a close follower of the botanist John Stevens Henslow and admired William Paley's arguments for divine design in nature. He came tenth of 178 candidates for the ordinary degree in January 1831, then read John Herschel and <a class="enc-link" href="/encyclopedia/alexander-von-humboldt">Alexander von Humboldt</a> and went mapping rock strata in <a class="enc-link" href="/encyclopedia/wales">Wales</a> with Adam Sedgwick.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <div class="profile-section-body"><p>On his return from <a class="enc-link" href="/encyclopedia/wales">Wales</a> in August 1831 Darwin found a letter from Henslow proposing him for a self-funded place as a gentleman naturalist on <a class="enc-link" href="/encyclopedia/hms-beagle">HMS Beagle</a>, under Captain Robert FitzRoy, to chart the coast of <a class="enc-link" href="/encyclopedia/south-america">South America</a>. His father objected but was persuaded by <a class="enc-link" href="/encyclopedia/josiah-wedgwood">Josiah Wedgwood</a> II. The voyage began on 27 December 1831 and lasted almost five years. Darwin spent most of it ashore studying geology and collecting, read Charles Lyell's Principles of Geology and came to see land rising and falling slowly over immense periods.</p><p>In <a class="enc-link" href="/encyclopedia/patagonia">Patagonia</a> he found fossil bones of huge extinct mammals beside modern shells; in Chile he felt the earthquake of 1835 and saw land newly raised; on the <a class="enc-link" href="/encyclopedia/galapagos-islands">Galápagos Islands</a> he noticed that the mockingbirds differed from island to island. He detested the <a class="enc-link" href="/encyclopedia/slavery">slavery</a> he saw in <a class="enc-link" href="/encyclopedia/brazil">Brazil</a> and disputed it with FitzRoy. Extracts of his letters were read to scientific societies while he was away, and Sedgwick predicted he would 'have a great name among the Naturalists of <a class="enc-link" href="/encyclopedia/europe">Europe</a>'.</p><p>The Beagle reached Falmouth on 2 October 1836. Lyell introduced him to the anatomist Richard Owen, who described the fossils, and the ornithologist John Gould showed that his Galápagos birds included twelve species of finches and that the mockingbirds were separate species. In 1837 Darwin read papers to the Geological Society and joined its Council; in 1838 he became its Secretary.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <div class="profile-section-body"><p>By March 1837 Darwin was writing in his notebooks that 'one species does change into another', and he sketched a branching tree of descent. On 28 September 1838 he read Malthus's Essay on the Principle of Population and saw that, as species breed beyond their resources, favourable variations would be preserved and unfavourable ones destroyed, forming new species. He called the process natural selection, by analogy with the 'artificial selection' of breeders.</p><p>For fifteen years the theory stayed in the background while he wrote on geology: The Structure and Distribution of Coral Reefs (1842) explained atoll formation, and eight years on barnacles won him the Royal Medal in 1853. He shared the idea only with friends such as Joseph Dalton Hooker. On 18 June 1858 <a class="enc-link" href="/encyclopedia/alfred-russel-wallace">Alfred Russel Wallace</a>, who had been sending him specimens from <a class="enc-link" href="/encyclopedia/borneo">Borneo</a>, sent him a paper describing natural selection; Lyell and Hooker arranged a joint presentation at the Linnean Society on 1 July. Darwin then wrote an abstract of his 'big book', and <a class="enc-link" href="/encyclopedia/on-the-origin-of-species">On the Origin of Species</a> went on sale on 22 November 1859, its 1,250 copies oversubscribed.</p><p>Later books carried the work on. Fertilisation of Orchids (1862) made testable predictions about pollination; The Descent of Man (1871) argued that humans are animals and are all one species, and introduced sexual selection; The Expression of the Emotions (1872) was among the first books with printed photographs. Studies of climbing and insect-eating plants and of earthworms followed, the last in 1881.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>The Origin met fierce argument. Richard Owen's review dismissed Darwin's ideas, his old <a class="enc-link" href="/encyclopedia/cambridge">Cambridge</a> teachers Sedgwick and Henslow rejected them, and at the <a class="enc-link" href="/encyclopedia/oxford">Oxford</a> debate of 1860 Bishop Samuel Wilberforce argued against human descent from apes; <a class="enc-link" href="/encyclopedia/thomas-henry-huxley">Thomas Henry Huxley</a>'s reply came to symbolise a triumph of science over religion. Other clergy, such as Charles Kingsley, read natural selection as an instrument of God's design. By the end of the 1860s most scientists agreed that evolution occurred, but only a minority accepted natural selection as its chief mechanism. Darwin's hypothesis of heredity, pangenesis, was unsuccessful, and he had to accept that the Glen Roy 'roads' he had called raised beaches were lake shorelines.</p><p>His views of other peoples were those of his time and class. He called the people he met in <a class="enc-link" href="/encyclopedia/tierra-del-fuego">Tierra del Fuego</a> 'miserable, degraded savages', though he held that all humans shared one origin and later concluded that the Yaghans' emotions and mental abilities were roughly those of Europeans. He was passionately opposed to <a class="enc-link" href="/encyclopedia/slavery">slavery</a> and to ranking human races as separate species, yet he tried to fit colonialism into an evolutionary history of civilisation. His view that men's eminence over women came from sexual selection was disputed by Antoinette Brown Blackwell in 1875.</p><p>Critics soon called his struggle for existence a Malthusian justification of industrial <a class="enc-link" href="/encyclopedia/capitalism">capitalism</a>, and his name was attached to <a class="enc-link" href="/encyclopedia/herbert-spencer">Herbert Spencer</a>'s 'survival of the fittest', to <a class="enc-link" href="/encyclopedia/imperialism">imperialism</a> and to eugenics, sometimes against his own stated views.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <div class="profile-section-body"><p>From 1838 Darwin was repeatedly laid low by stomach pains, vomiting, boils, palpitations and trembling, especially at times of stress; the cause remained unknown, and he tried treatments such as hydrotherapy at Malvern in 1849. He worked from Down House in Kent, where he and Emma Wedgwood, his cousin, whom he married on 29 January 1839, raised their family. They had ten children; two died in infancy, and the death of their daughter Annie in 1851 at the age of ten devastated them. Their last child, Charles Waring, died of scarlet fever on 28 June 1858.</p><p>Brought up Unitarian and once intending to be a clergyman, Darwin was increasingly troubled by the problem of evil, and from about 1849 walked on Sundays while his family went to church. In 1879 he wrote that he had never been an atheist and that 'an agnostic would be the most correct description of my state of mind'. The 'Lady Hope Story' of 1915, that he returned to <a class="enc-link" href="/encyclopedia/christianity">Christianity</a> on his deathbed, was repudiated by his children and is dismissed as false by historians.</p><p>In 1882 he was diagnosed with what was then called angina pectoris, and he died at Down House on 19 April 1882, aged 73. He had expected to lie in the churchyard at Downe, but after public and parliamentary petitions he was buried in <a class="enc-link" href="/encyclopedia/westminster-abbey">Westminster Abbey</a> near John Herschel and <a class="enc-link" href="/encyclopedia/isaac-newton">Isaac Newton</a> on 26 April, before thousands of mourners.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Darwin's work established descent with modification as the scientific explanation of the diversity of life, and evolution is the unifying theory of the life sciences. After the 'eclipse of Darwinism', when scientists explored other mechanisms, Ronald Fisher joined Mendelian genetics to natural selection, leading to population genetics and the modern evolutionary synthesis. Theodosius Dobzhansky wrote that 'nothing in biology makes sense except in the light of evolution'. Wallace said Darwin had 'wrought a greater revolution in human thought within a quarter of a century than any man of our time', and Ernst Mayr ranked the Origin second only to the <a class="enc-link" href="/encyclopedia/bible">Bible</a> in its influence on human thought.</p><p>His name was also used for movements he did not share. Galton, his half-cousin, coined 'eugenics' in 1883 after Darwin's death, and Darwin's theories were cited to promote eugenic policies, including compulsory sterilisation laws in the <a class="enc-link" href="/encyclopedia/united-states">United States</a> and later Nazi eugenics. Pacifists, socialists and anarchists such as <a class="enc-link" href="/encyclopedia/peter-kropotkin">Peter Kropotkin</a> drew instead on his idea of the 'dependence of one being on another'. 'Social Darwinism' became a common term of abuse in the 1940s through Richard Hofstadter.</p><p>His sons George, Francis and <a class="enc-link" href="/encyclopedia/horace">Horace</a> became Fellows of the <a class="enc-link" href="/encyclopedia/royal-society">Royal Society</a>. Darwin Sound, Mount Darwin and the city of Darwin in <a class="enc-link" href="/encyclopedia/australia">Australia</a> bear his name, the Linnean Society has awarded the Darwin–Wallace Medal since 1908, and from 2000 to 2017 his portrait was on the <a class="enc-link" href="/encyclopedia/bank-of-england">Bank of England</a>'s £10 note.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Charles Darwin was an English naturalist whose Beagle voyage of 1831 to 1836 led him to the theory of evolution by natural selection, published with <a class="enc-link" href="/encyclopedia/alfred-russel-wallace">Alfred Russel Wallace</a> in 1858 and set out in <a class="enc-link" href="/encyclopedia/on-the-origin-of-species">On the Origin of Species</a> in 1859. Contested in his lifetime and invoked for causes he did not share, his theory became the foundation of modern biology.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="charles-darwin"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Descent of Man sets out the evidence that humans descend from earlier animals","o":["1839","1831","1871","1859"],"a":2,"w":"1871: The Descent of Man sets out the evidence that humans descend from earlier animals."},{"p":"Which came first?","q":"","o":["On the Origin of Species is published, and its first printing is oversubscribed","Darwin dies at Down House and is buried in Westminster Abbey"],"a":0,"w":"1859: On the Origin of Species is published, and its first printing is oversubscribed · 1882: Darwin dies at Down House and is buried in Westminster Abbey."},{"p":"In which year?","q":"Darwin's and Wallace's papers on natural selection are presented together at the Linnean Society","o":["1838","1859","1858","1871"],"a":2,"w":"1858: Darwin's and Wallace's papers on natural selection are presented together at the Linnean Society."},{"p":"Which came first?","q":"","o":["The Structure and Distribution of Coral Reefs appears, and the family moves to Down House in Kent","Darwin dies at Down House and is buried in Westminster Abbey"],"a":0,"w":"1842: The Structure and Distribution of Coral Reefs appears, and the family moves to Down House in Kent · 1882: Darwin dies at Down House and is buried in Westminster Abbey."},{"p":"In which year?","q":"Darwin marries his cousin Emma Wedgwood, is elected a Fellow of the Royal Society and publishes his Beagle Journal","o":["1831","1871","1838","1839"],"a":3,"w":"1839: Darwin marries his cousin Emma Wedgwood, is elected a Fellow of the Royal Society and publishes his Beagle Journal."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Robert C. Bannister, Social Darwinism: Science and Myth in Anglo-American Social Thought. (Temple University Press, 1989)</li>
+        <li>Peter J. Bowler, Evolution: The History of an Idea (University of California Press, 2003)</li>
+        <li>E. Janet Browne, Charles Darwin: vol. 1 Voyaging (Jonathan Cape, 1995)</li>
+        <li>E. Janet Browne, Charles Darwin: vol. 2 The Power of Place (Jonathan Cape, 2002)</li>
+        <li>E. Janet Browne, Darwin: A Biography (Princeton University Press, 2026)</li>
+        <li>E. Janet Browne, Darwin's Origin of Species: A Biography (Atlantic, 2006)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/abraham-lincoln"><img src="/logos/thumbs/Abraham%20Lincoln.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Abraham Lincoln</span><span class="related-card-dates">1809 CE – 1865 CE</span></a><a class="related-card" href="/life/shaka"><img src="/logos/thumbs/Shaka.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shaka</span><span class="related-card-dates">c. 1787 CE – 1828 CE</span></a><a class="related-card" href="/life/simon-bolivar"><img src="/logos/thumbs/Sim%C3%B3n%20Bol%C3%ADvar.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Simón Bolívar</span><span class="related-card-dates">1783 CE – 1830 CE</span></a><a class="related-card" href="/life/lili-uokalani"><img src="/logos/thumbs/Lili%CA%BBuokalani.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liliʻuokalani</span><span class="related-card-dates">1838 CE – 1917 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/abraham-lincoln"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Abraham%20Lincoln.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Abraham Lincoln</span><span class="related-card-dates">1809 CE – 1865 CE</span></a><a class="related-card" href="/life/lili-uokalani"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Lili%CA%BBuokalani.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liliʻuokalani</span><span class="related-card-dates">1838 CE – 1917 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Charles Darwin",slug="charles-darwin",url="https://the-epoch-institute.org/life/charles-darwin";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Charles Darwin on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/charles-darwin #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/charles-darwin"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Charles Darwin",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Charles Darwin",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

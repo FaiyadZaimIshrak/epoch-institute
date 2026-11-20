@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Emperor Meiji: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Emperor Meiji (1852-1912), personal name Mutsuhito, reigned over Japan from 1867 to 1912, the years in which the Meiji Restoration ended the Tokugawa…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Emperor Meiji: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Emperor Meiji (1852-1912), personal name Mutsuhito, reigned over Japan from 1867 to 1912, the years in which the Meiji Restoration ended the Tokugawa…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/emperor-meiji">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/emperor-meiji.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/emperor-meiji.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/emperor-meiji">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Emperor Meiji"}]},{"@type":"Article","headline":"Emperor Meiji","description":"Emperor Meiji (1852-1912), personal name Mutsuhito, reigned over Japan from 1867 to 1912, the years in which the Meiji Restoration ended the Tokugawa…","url":"https://the-epoch-institute.org/life/emperor-meiji","mainEntityOfPage":"https://the-epoch-institute.org/life/emperor-meiji","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Emperor Meiji"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/emperor-meiji.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Emperor Meiji</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Emperor%20Meiji.png" alt="Emperor Meiji" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Emperor Meiji</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1852 CE – 1912 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">3 November 1852 in a house on his maternal grandfather's property at the north end of the Gosho, <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>; son of Emperor Kōmei and his concubine Nakayama Yoshiko</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">29 July 1912 at Meiji Palace, Tokyo, aged 59, of uremia, suffering from diabetes, nephritis and gastroenteritis</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Crown prince from 1860; Emperor of <a class="enc-link" href="/encyclopedia/japan">Japan</a> from 1867 until his death in 1912</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the <a class="enc-link" href="/encyclopedia/meiji-restoration">Meiji Restoration</a>; the <a class="enc-link" href="/encyclopedia/charter-oath">Charter Oath</a> (1868); moving the capital to Tokyo; the <a class="enc-link" href="/encyclopedia/meiji-constitution">Meiji Constitution</a> (1889); the Imperial Rescript on Education (1890); the Sino-Japanese and Russo-Japanese wars</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Mutsuhito came to the throne as a boy in 1867, and in his name the <a class="enc-link" href="/encyclopedia/satsuma-domain">Satsuma</a> and Chōshū <a class="enc-link" href="/encyclopedia/samurai">samurai</a> overthrew the <a class="enc-link" href="/encyclopedia/tokugawa-shogunate">Tokugawa shogunate</a> and proclaimed the restoration of imperial rule in 1868.</li><li>His reign saw the domains abolished, the <a class="enc-link" href="/encyclopedia/samurai">samurai</a>'s privileges ended, a cabinet, constitution and Diet created, and victories over <a class="enc-link" href="/encyclopedia/china">China</a> and <a class="enc-link" href="/encyclopedia/russia">Russia</a>, with the annexation of <a class="enc-link" href="/encyclopedia/taiwan">Taiwan</a> in 1895 and <a class="enc-link" href="/encyclopedia/korea">Korea</a> in 1910.</li><li>How much power he held himself is disputed: he kept no diary and wrote almost no letters, and historians call him anything from a figurehead to an autocrat.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Meiji's waka asking why wind and waves rise in discord when the seas of the four directions are all born of one womb was recited by his grandson Emperor Shōwa at an <a class="enc-link" href="/encyclopedia/imperial-conference">Imperial Conference</a> in September 1941, before the attack on <a class="enc-link" href="/encyclopedia/attack-on-pearl-harbor">Pearl Harbor</a>.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1852</span><span class="rf-text">Prince Mutsuhito is born in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a></span></li><li><span class="rf-year">1867</span><span class="rf-text">On the death of Emperor Kōmei he becomes emperor at fourteen</span></li><li><span class="rf-year">1868</span><span class="rf-text">The restoration of imperial rule is proclaimed, the <a class="enc-link" href="/encyclopedia/charter-oath">Charter Oath</a> is issued and Edo is renamed Tokyo</span></li><li><span class="rf-year">1871</span><span class="rf-text">The domains are abolished and <a class="enc-link" href="/encyclopedia/japan">Japan</a> is organised into prefectures</span></li><li><span class="rf-year">1889</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/meiji-constitution">Meiji Constitution</a> is promulgated</span></li><li><span class="rf-year">1895</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/japan">Japan</a> annexes <a class="enc-link" href="/encyclopedia/taiwan">Taiwan</a> after its victory in the <a class="enc-link" href="/encyclopedia/first-sino-japanese-war">First Sino-Japanese War</a></span></li><li><span class="rf-year">1910</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/korea">Korea</a> is annexed by the <a class="enc-link" href="/encyclopedia/empire-of-japan">Empire of Japan</a></span></li><li><span class="rf-year">1912</span><span class="rf-text">The emperor dies in Tokyo and is succeeded by Yoshihito</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Prince Mutsuhito was born on 3 November 1852 in a small house on his maternal grandfather's property at the north end of the Gosho, the imperial palace compound in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>, since birth was then held to be a source of pollution. His mother, Nakayama Yoshiko, was a concubine of Emperor Kōmei and daughter of the acting major counsellor Nakayama Tadayasu, and he was first called Sachi-no-miya. Under the <a class="enc-link" href="/encyclopedia/tokugawa-shogunate">Tokugawa shogunate</a>, the shōgun governed <a class="enc-link" href="/encyclopedia/japan">Japan</a> and about 180 daimyōs ruled their own realms, while the emperor, confined to the palace, was expected to devote himself to scholarship and the arts. The imperial family suffered very high infant mortality: all five of his brothers and sisters died as infants.</p><p>In July 1853 Commodore <a class="enc-link" href="/encyclopedia/matthew-c-perry">Matthew C. Perry</a>'s squadron sailed into the harbour at Edo, and Japan was forced into what it called the "<a class="enc-link" href="/encyclopedia/unequal-treaties">Unequal Treaties</a>". His boyhood is known only from later accounts, which his biographer Donald Keene notes are often contradictory: one describes him as healthy, a bully and skilled at sumo, another as delicate and often ill. In 1860 he was proclaimed heir and crown prince and given the name Mutsuhito. He began his education at seven and was an indifferent student, later writing poems regretting it.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <div class="profile-section-body"><p>By the early 1860s the <a class="enc-link" href="/encyclopedia/shogun">shogunate</a> was threatened by foreign powers, discontented daimyōs and young <a class="enc-link" href="/encyclopedia/samurai">samurai</a> known as shishi, who revered Emperor Kōmei and in 1863 persuaded him to issue an "Order to expel barbarians". The prince's own awareness of the turmoil is uncertain; he studied waka poetry with his father and the court poets. Kōmei died on 30 January 1867, and the British diplomat Ernest Satow wrote that his disappearance, leaving a boy as successor, was "most opportune". Mutsuhito formally ascended the throne in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a> on 13 February 1867 and went on with a classical education that did not include politics.</p><p>The last shōgun, <a class="enc-link" href="/encyclopedia/tokugawa-yoshinobu">Tokugawa Yoshinobu</a>, resigned in November 1867, and rebels took control of the palace. On 4 January 1868 the emperor read out a document proclaiming the restoration of imperial rule. On 7 April he was presented with the <a class="enc-link" href="/encyclopedia/charter-oath">Charter Oath</a>, a five-point statement of the new government, and in mid-May he left the imperial precincts for the first time since childhood. In the <a class="enc-link" href="/encyclopedia/boshin-war">Boshin War</a> the shogunate's last holdouts were defeated by late 1869. The era was renamed Meiji, "enlightened rule", beginning the custom of one era name per reign, and on 19 September 1868 he renamed Edo as Tokyo, "eastern capital".</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <div class="profile-section-body"><p>In 1869 daimyōs who had backed the revolution gave their lands to the emperor and were reappointed as governors, and others followed. In 1871, as <a class="enc-link" href="/encyclopedia/japan">Japan</a> was organised into 72 prefectures, the emperor abolished the domains; the daimyōs received a tenth of their former revenues and were required to move to Tokyo. Most privileges of the <a class="enc-link" href="/encyclopedia/samurai">samurai</a>, including their stipends, were abolished, and many suffered financially. Most other class distinctions were ended, among them the legal discrimination against the <a class="enc-link" href="/encyclopedia/burakumin">burakumin</a>, though they continue to face discrimination. In 1869 he married Ichijō Haruko, the first imperial consort in centuries to hold the title of kōgō.</p><p>The government was led by a council and three chief ministers until a prime minister and cabinet were created in 1885, followed by the Privy Council in 1888, the <a class="enc-link" href="/encyclopedia/meiji-constitution">Meiji Constitution</a> of 1889 and the <a class="enc-link" href="/encyclopedia/imperial-diet">Imperial Diet</a> in 1890. Documents issued in his name included the Imperial Rescript to Soldiers and Sailors of 1882 and the Imperial Rescript on Education of 1890. He attended cabinet meetings and countless functions, though rarely speaking, almost until his death. In 1881 he received the first state visit of a foreign monarch, King <a class="enc-link" href="/encyclopedia/kalakaua">Kalākaua</a> of <a class="enc-link" href="/encyclopedia/hawaii">Hawaii</a>. Japan defeated <a class="enc-link" href="/encyclopedia/china">China</a> in 1894-1895 and <a class="enc-link" href="/encyclopedia/russia">Russia</a> in 1904-1905, and annexed <a class="enc-link" href="/encyclopedia/taiwan">Taiwan</a> in 1895 and <a class="enc-link" href="/encyclopedia/korea">Korea</a> in 1910.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>The Restoration was opposed by the followers of <a class="enc-link" href="/encyclopedia/tokugawa-yoshinobu">Tokugawa Yoshinobu</a>, defeated in the Boshin War, and the period from the late 1860s to 1881 was one of rebellion and assassination, including the <a class="enc-link" href="/encyclopedia/satsuma-rebellion">Satsuma Rebellion</a> of 1877 and the assassination of <a class="enc-link" href="/encyclopedia/okubo-toshimichi">Ōkubo Toshimichi</a> in 1878. At first not even the throne was secure: the revolutionary Gotō Shōjirō later said some officials feared extremists might abolish the Mikado. The 1889 constitution created a parliament without real power, and the country was controlled by the genrō, an <a class="enc-link" href="/encyclopedia/oligarchy">oligarchy</a> of the most powerful men of the military, political and economic spheres.</p><p>Near the end of his reign several leftists, among them Shūsui Kōtoku, were executed in 1911 on charges of having conspired to murder the sovereign, in what became known as the High Treason Incident. The emperor's own role is a matter of historical dispute because the sources are so thin. James C. Baxter argues he was a figurehead who rarely interfered with what the oligarchs had agreed; Herbert Bix describes a powerful autocrat whom the genrō struggled to restrain while accommodating his anti-democratic inclinations; Roy Starrs sees him as forthright and no one's puppet, progressive but not liberal or democratic. Other historians are divided on how near to absolutism his power came.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <div class="profile-section-body"><p>Meiji ruled longer than his recent predecessors: he was the first Japanese monarch to stay on the throne past the age of 50 since Emperor Ōgimachi abdicated in 1586. Of his fifteen children by five ladies-in-waiting, only five reached adulthood, among them Prince Yoshihito, born in 1879, his only surviving son. In 1901 he became a grandfather with the birth of the future Emperor Shōwa. Empress Haruko, though the first empress consort to play a public role, had no children. Meiji was the last emperor to have concubines, though the function was not officially abolished until 1924. In his last decades foreign courts honoured him with their highest orders, among them the Garter, conferred by the United Kingdom in 1906.</p><p>Suffering from diabetes, nephritis and gastroenteritis, the emperor died of uremia at 10:40 pm on 29 July 1912 at Meiji Palace in Tokyo, aged 59. Crown Prince Yoshihito succeeded at once as Emperor Taishō. The state funeral was held on 13 September at the army's Aoyama Drill Court, the first imperial funeral held in Tokyo, and The <a class="enc-link" href="/encyclopedia/new-york">New York</a> Times wrote that before the funeral car went old <a class="enc-link" href="/encyclopedia/japan">Japan</a> and after it came new Japan. His grave is at Fushimi-Momoyama in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>By 1912 <a class="enc-link" href="/encyclopedia/japan">Japan</a> had gone through a political, economic and social revolution and emerged as one of the great powers; the Restoration and industrialisation made it within a generation the preeminent power in the Pacific, a change in which the Japanese take pride. The <a class="enc-link" href="/encyclopedia/charter-oath">Charter Oath</a> was later cited by Emperor Shōwa in the Humanity Declaration in support of the changes made after the <a class="enc-link" href="/encyclopedia/second-world-war">Second World War</a>. After his death the <a class="enc-link" href="/encyclopedia/imperial-diet">Imperial Diet</a> resolved to commemorate his role in the Restoration, and the <a class="enc-link" href="/encyclopedia/shinto">Shinto</a> shrine Meiji Jingū was built in Tokyo on an iris garden he and the empress had visited.</p><p>His posthumous name, from the era, began the custom of naming emperors after their reigns. In his lifetime the Illustrated <a class="enc-link" href="/encyclopedia/london">London</a> News called him "the most practical of modern monarchs". Yet he left "no more than three or four" photographs, no diary and almost no letters, and the accounts of those who knew him contain little substance or contradict each other, so the extent of his personal authority remains debated. He has been portrayed on film by Toshirō Mifune in The Battle of Port Arthur (1980) and, as a weak young ruler, in The Last <a class="enc-link" href="/encyclopedia/samurai">Samurai</a> (2003).</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Emperor Meiji came to the throne as a boy in 1867, and in his name the <a class="enc-link" href="/encyclopedia/shogun">shogunate</a> was overthrown, the domains and <a class="enc-link" href="/encyclopedia/samurai">samurai</a> privileges abolished and a constitutional state built under the oligarchs of the genrō. <a class="enc-link" href="/encyclopedia/japan">Japan</a> defeated <a class="enc-link" href="/encyclopedia/china">China</a> and <a class="enc-link" href="/encyclopedia/russia">Russia</a> and annexed <a class="enc-link" href="/encyclopedia/taiwan">Taiwan</a> and <a class="enc-link" href="/encyclopedia/korea">Korea</a> during his reign, though how far he directed these changes himself remains disputed.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="emperor-meiji"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Meiji Constitution is promulgated","o":["1867","1895","1889","1868"],"a":2,"w":"1889: The Meiji Constitution is promulgated."},{"p":"Which came first?","q":"","o":["The Meiji Constitution is promulgated","Korea is annexed by the Empire of Japan"],"a":0,"w":"1889: The Meiji Constitution is promulgated · 1910: Korea is annexed by the Empire of Japan."},{"p":"In which year?","q":"The restoration of imperial rule is proclaimed, the Charter Oath is issued and Edo is renamed Tokyo","o":["1868","1889","1871","1912"],"a":0,"w":"1868: The restoration of imperial rule is proclaimed, the Charter Oath is issued and Edo is renamed Tokyo."},{"p":"Which came first?","q":"","o":["Korea is annexed by the Empire of Japan","On the death of Emperor Kōmei he becomes emperor at fourteen"],"a":1,"w":"1910: Korea is annexed by the Empire of Japan · 1867: On the death of Emperor Kōmei he becomes emperor at fourteen."},{"p":"In which year?","q":"The domains are abolished and Japan is organised into prefectures","o":["1867","1871","1852","1895"],"a":1,"w":"1871: The domains are abolished and Japan is organised into prefectures."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Andrew Gordon, A Modern History of Japan: From Tokugawa Times to the Present (Oxford University Press, 2009)</li>
+        <li>Marius Jansen, Sakamoto Ryoma and the Meiji Restoration (Columbia University Press, 1994)</li>
+        <li>Marius Jansen, The Emergence of Meiji Japan (Cambridge University Press, 1995)</li>
+        <li>Donald Keene, Emperor of Japan: Meiji and His World, 1852–1912 (Columbia University Press, 2002)</li>
+        <li>George M. Wilson, Patriots and Redeemers: Motives in the Meiji Restoration (University of Chicago Press, 1992)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/jose-rizal"><img src="/logos/thumbs/Jos%C3%A9%20Rizal.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">José Rizal</span><span class="related-card-dates">1861 CE – 1896 CE</span></a><a class="related-card" href="/life/lili-uokalani"><img src="/logos/thumbs/Lili%CA%BBuokalani.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liliʻuokalani</span><span class="related-card-dates">1838 CE – 1917 CE</span></a><a class="related-card" href="/life/sun-yat-sen"><img src="/logos/thumbs/Sun%20Yat-sen.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sun Yat-sen</span><span class="related-card-dates">1866 CE – 1925 CE</span></a><a class="related-card" href="/life/mahatma-gandhi"><img src="/logos/thumbs/Mahatma%20Gandhi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mahatma Gandhi</span><span class="related-card-dates">1869 CE – 1948 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/lili-uokalani"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Lili%CA%BBuokalani.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liliʻuokalani</span><span class="related-card-dates">1838 CE – 1917 CE</span></a><a class="related-card" href="/life/jose-rizal"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Jos%C3%A9%20Rizal.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">José Rizal</span><span class="related-card-dates">1861 CE – 1896 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Emperor Meiji",slug="emperor-meiji",url="https://the-epoch-institute.org/life/emperor-meiji";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Emperor Meiji on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/emperor-meiji #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/emperor-meiji"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Emperor Meiji",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Emperor Meiji",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>
